@@ -217,6 +217,12 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
 - `RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
+- `abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)
+  rules via Martin Lackner's `abcvoting` (optional `pip install abcvoting`;
+  everything guards on it). `av` doubles as an independent cross-check of the
+  LH bloc-Approval count; `seqpav` / `pav` / `seqphragmen` add the proportional
+  rules the LH engine doesn't have. Tested by `tests/test_abcvoting_crosscheck.py`
+  (skips if the library is absent).
 - Quick checks can use system `python3` (engines are vendored); the user runs via
   their `.venv` / `uv`.
 - The engine errors *clearly* (no tracebacks) for the common mistakes: bad YAML,
@@ -245,6 +251,13 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 - Run: `pytest tests/test_single_winner_positive.py tests/test_negative_validation.py`
   from the engine dir. A repo pre-commit hook (`scripts/git-hooks/`, wired via
   `git config core.hooksPath scripts/git-hooks`) runs these on every commit.
+
+## Git
+- **Commit after every significant addition or completed piece of work** (Adam's
+  standing rule) — don't leave finished work sitting uncommitted. Write a real
+  commit message: short imperative summary line, then a body listing what
+  changed and why. Include regenerated `_tabulated`/`_pages`/index files in the
+  same commit as their source changes.
 
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention

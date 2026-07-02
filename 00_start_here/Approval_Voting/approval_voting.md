@@ -9,8 +9,8 @@ It's Score voting at **one-bit resolution** — a big jump in expressiveness ove
 ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) ·
 the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in
 [`method_comparisons/black_curtain/`](../../method_comparisons/black_curtain/README_black_curtain.md)
-(Approval flips the winner in election 1). · Companion: [honest limits](approval_honest_limits.md) ·
-Curriculum: [301.4](../CURRICULUM.md).
+(Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) ·
+[multi-winner Approval](approval_multiwinner.md) · Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
@@ -72,10 +72,54 @@ set makes the trade-off concrete: on identical ballots, Approval elects the
 broadly-approved consensus candidate while STAR's runoff hands the seat to the
 majority's favorite — same voters, different question.
 
+## Practical strengths (beyond the ballot)
+
+Several of Approval's advantages are logistical rather than mathematical —
+they're what make it the *cheapest* reform to actually adopt
+(the [Equal Vote Coalition's Approval page](https://www.equal.vote/approval)
+makes this case at length):
+
+- **Nothing to spoil.** There is essentially no way to mis-mark an Approval
+  ballot: no overvotes, no invalid rankings, no skipped-rank rules. Every
+  combination of marks is a valid ballot.
+- **Works with existing infrastructure.** An Approval ballot can look
+  identical to a traditional one, is tallied the same way (add the votes), and
+  is precinct-summable — so it's highly compatible with existing election
+  codes and equipment. RCV-IRV, by contrast, often requires new equipment,
+  central tabulation, or statutory changes.
+- **Campaign incentives.** Because candidates benefit from being *acceptable*
+  to rivals' supporters, Approval rewards consensus-seeking and positive
+  campaigning over base-only polarization.
+- **Pairs well with a top-two general.** An Approval primary feeding a top-two
+  general election is a minimal-change package that yields notably
+  representative results.
+- **Scales to multiple seats.** The same ballot handles multi-winner races
+  (bloc counting) and can be adapted for proportional representation —
+  see [multi-winner Approval](approval_multiwinner.md).
+
+## The stepping-stone argument
+
+Equal Vote's case for Approval is worth stating in its own terms: for a
+jurisdiction on Choose-One (or a Choose-One primary + top-two runoff), there is
+little reason *not* to switch to Approval immediately — the logistical change
+is near zero and the improvement is real. In their assessment, with expected
+voter behavior Approval also outperforms RCV-IRV at electing representative
+winners, especially in large or competitive fields. And because Approval is
+transparent about what it does and doesn't offer (no strength, no order — see
+[honest limits](approval_honest_limits.md)), voters who live with it learn
+firsthand that vote-splitting isn't a necessary evil — which builds the
+appetite to upgrade to a fuller method like STAR later. A good stepping stone
+is easy to reach, stable in its own right, and on the way to the next step.
+The counterpoint, which Equal Vote also concedes: education-and-adoption work
+is expensive even for Approval, so in many places going *directly* to STAR is
+the quicker path. Either way, the urgent step is off Choose-One.
+
 ## See also
 
 - [Approval — Honest Limits](approval_honest_limits.md) — the critique companion
+- [Approval — Multi-Winner](approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [`04_Approval/`](../../04_Approval/README_04_Approval.md) — the method's example folder
+- [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Black Curtain](../../method_comparisons/black_curtain/README_black_curtain.md) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
 - Glossary: **Approval voting** — [`GLOSSARY.md`](../GLOSSARY.md)

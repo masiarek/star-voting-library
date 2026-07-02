@@ -33,7 +33,9 @@ makes the voter do the strategic work that STAR's 0–5 scale and runoff absorb.
 Two opposite pressures pull on every ballot: approve **only** your favorite (so you don't
 help a rival you also approve), or approve **widely** (to block a worse candidate). Both are
 rational depending on the polls, so Approval outcomes can hinge on how strategically the
-electorate reads the race rather than on sincere opinion.
+electorate reads the race rather than on sincere opinion. A related wrinkle: voters whose
+favorite *is* a front-runner have little incentive to approve anyone else — and if that
+behavior is widespread, candidates already seen as "electable" gain a built-in edge.
 
 ## 4. Can miss a majority favorite (lowest-common-denominator)
 
@@ -46,6 +48,16 @@ majority's passionate first choice," because it never sees the difference.
 
 Approving a second choice can help that candidate beat your favorite. (STAR and Ranked Robin
 share this tradeoff; RCV-IRV is the one that keeps Later-No-Harm.)
+
+## 6. A ballot-security wrinkle
+
+Because *every* combination of marks is a valid Approval ballot, filling in **extra**
+bubbles on someone else's ballot is undetectable — there's no overvote to flag. (On a
+Choose-One ballot the same tampering voids the ballot, which is at least visible.) Poll
+workers should never be alone with ballots under any method, but Approval warrants extra
+chain-of-custody care. A known mitigation, noted on the
+[Equal Vote Approval page](https://www.equal.vote/approval): print an explicit **Yes / No**
+bubble pair per candidate, so a blank is distinguishable from a deliberate "No."
 
 ## Keep it in perspective
 

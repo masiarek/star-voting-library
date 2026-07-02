@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_04_c4_b5_four-candidates.yaml
 SOURCE MODIFIED: 2026-07-02 12:49:11
 TABULATED FILE:  Black_Curtain_04_c4_b5_four-candidates_tabulated.txt
-TABULATED AT:    2026-07-02 19:08:26
+TABULATED AT:    2026-07-02 19:30:11
 ======================================================================
 
 election_title: The Black Curtain #4 — four candidates, same curtain

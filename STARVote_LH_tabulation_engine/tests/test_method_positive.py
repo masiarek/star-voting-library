@@ -131,7 +131,10 @@ def _elected(stdout):
             break
         if not ln.startswith((" ", "\t")):
             break
-        names.append(ln.strip())
+        # Multi-winner Approval prints its winners on ONE line ("Amy, Ben").
+        # Candidate names come from CSV headers, so they can never contain a
+        # comma — splitting here is always safe.
+        names.extend(part.strip() for part in ln.split(",") if part.strip())
     return names
 
 

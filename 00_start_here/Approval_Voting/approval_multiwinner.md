@@ -1,0 +1,112 @@
+# Approval Voting — Multi-Winner
+
+*The same 0/1 ballot fills more than one seat. The simple version — **bloc
+(at-large) Approval**, the `seats` most-approved candidates win — is exactly as
+easy as single-winner Approval, and exactly as **majoritarian**: a cohesive
+majority can sweep every seat. Proportional adaptations (SPAV, PAV) exist and
+trade that simplicity for fair minority representation.*
+
+→ **Run it / examples:** [`04_Approval/multiwinner/`](../../04_Approval/multiwinner/README_approval_multiwinner.md)
+([`approval_bloc_2seats_c4_b6.yaml`](../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml)) ·
+Overview: [Approval Voting](approval_voting.md) ·
+The same majoritarian-vs-proportional fork for score ballots:
+[`02_STAR_Bloc/`](../../02_STAR_Bloc/README_02_STAR_Bloc.md) vs
+[`03_STAR_PR/`](../../03_STAR_PR/README_03_STAR_PR.md) ·
+Concepts: [proportional representation](../proportional_representation/README_proportional_representation.md).
+
+---
+
+Many boards, councils, and committees already elect several seats at once from
+one pool of candidates — usually with **"vote for up to N"** (block plurality).
+That rule inherits Choose-One's vote-splitting problem *and* adds a cap: run
+more candidates than seats on your side and you split your own votes.
+
+**Bloc Approval** removes the cap: approve **any number** of candidates, and
+the **N most-approved win**. Within a faction, vote-splitting disappears — you
+approve your whole slate. Tabulation stays a single addition pass,
+precinct-summable, trivial to hand-count.
+
+## Bloc Approval is majoritarian — the sweep
+
+What bloc Approval does *not* do is represent minorities. Every voter
+influences every seat with full weight, so 51% of voters who agree on a slate
+take 100% of the seats. The worked example makes it concrete — 6 voters, 4
+candidates, 2 seats; a 4-voter majority approves Amy/Ben, a 2-voter minority
+approves Cora/Doug:
+
+```text
+--- Approval Voting (2 winners) ---
+ Tabulating 6 ballots (any non-zero score = approval).
+   Amy  -- 4 -- Elected
+   Ben  -- 3 -- Elected
+   Cora -- 2
+   Doug -- 1
+
+Winners — Approval Voting (2 winners)
+  Amy, Ben
+```
+
+One third of the electorate ends up with zero seats. Sometimes that's the
+design goal (an executive slate that should reflect the majority); for a
+representative body it usually isn't. This is the **same trade-off** as Bloc
+STAR vs Proportional STAR — see
+[`02_STAR_Bloc/`](../../02_STAR_Bloc/README_02_STAR_Bloc.md) and
+[`03_STAR_PR/`](../../03_STAR_PR/README_03_STAR_PR.md).
+
+## Proportional adaptations: SPAV and PAV
+
+The approval ballot itself carries enough information for proportionality; you
+change the *tabulation*, not the ballot:
+
+- **SPAV — Sequentially Proportional Approval Voting.** Seats are filled one at
+  a time. After each seat, a ballot's weight drops to **1 / (1 + s)**, where
+  *s* is how many of that ballot's approved candidates have already been
+  elected (1 → 1/2 → 1/3 …, the Jefferson/D'Hondt divisors). A majority that
+  wins the first seat votes at half weight for the second, so minorities earn
+  seats roughly in proportion to their size. Invented by Thorvald Thiele;
+  briefly used in Swedish elections in the early 1900s. Sequential, easy to
+  audit, and the same reweighting spirit as Reweighted Range Voting (RRV) for
+  score ballots.
+- **PAV — Proportional Approval Voting.** Thiele's optimizing version: pick the
+  seat-set maximizing total voter satisfaction, where a voter with *k* elected
+  approvals contributes 1 + 1/2 + … + 1/*k* (harmonic weighting). Stronger
+  proportionality guarantees than SPAV, but finding the exact winner set is
+  computationally hard (NP-hard), so it's mostly of theoretical and
+  small-election interest.
+
+This ladder — *same ballot, majoritarian bloc count vs proportional
+reweighting* — is why the [Equal Vote Coalition's Approval page](https://www.equal.vote/approval)
+lists "can be used for single-winner or multi-winner elections and can be
+adapted for proportional representation" among Approval's advantages.
+
+**Engine note:** the LH engine tabulates **bloc Approval only**
+(`voting_method: Approval_Multi_Winner`, `num_winners: ≥ 2`). The proportional
+rules are runnable too, via the
+[`abcvoting_tabulation_engine/`](../../abcvoting_tabulation_engine/README_abcvoting_tabulation_engine.md)
+wrapper around Martin Lackner's peer-reviewed
+[`abcvoting`](https://github.com/martinlackner/abcvoting) library. On the
+sweep example above, the proportional rules all break the sweep and seat the
+minority's Cora:
+
+```text
+--- abcvoting: approval-based committee rules (2 seats) ---
+ approval_bloc_2seats_c4_b6.yaml: 6 ballots, candidates: Amy, Ben, Cora, Doug
+   av           Approval Voting (AV)                       ->  Amy, Ben
+   seqpav       Sequential Proportional Approval Voting (seq-PAV) ->  Amy, Cora
+   pav          Proportional Approval Voting (PAV)         ->  Amy, Cora
+   seqphragmen  Phragmén's Sequential Rule (seq-Phragmén)  ->  Amy, Cora
+```
+
+The repo's other runnable proportional methods are the STAR-PR family
+([`03_STAR_PR/`](../../03_STAR_PR/README_03_STAR_PR.md)) and STV
+([`other_methods/`](../../other_methods/README_other_methods.md)).
+
+## See also
+
+- [Approval Voting](approval_voting.md) — the single-winner overview
+- [Approval — Honest Limits](approval_honest_limits.md) — the threshold dilemma carries over to every seat
+- [`04_Approval/multiwinner/`](../../04_Approval/multiwinner/README_approval_multiwinner.md) — the runnable sweep example
+- [Proportional representation](../proportional_representation/README_proportional_representation.md) — why and how minorities earn seats
+- [Equal Vote: Approval Voting](https://www.equal.vote/approval) — source for the advantages/adaptability framing
+
+# file: approval_multiwinner.md

@@ -7,7 +7,9 @@ resolution: enormous gain in expressiveness over choose-one, for near-zero
 ballot complexity.
 
 Cases live in [`_main/`](_main/), starting with
-[`approval_101_c3_b5.yaml`](_main/approval_101_c3_b5.yaml).
+[`approval_101_c3_b5.yaml`](_main/approval_101_c3_b5.yaml). Multi-winner (bloc)
+Approval has its own folder: [`multiwinner/`](multiwinner/README_approval_multiwinner.md)
+— the same ballot, top-`N` approved win, and a worked majority-sweep example.
 
 Approval also appears throughout the comparison sets — that's where its
 character shows best:
@@ -17,7 +19,7 @@ character shows best:
   (Approval flips the winner in election 1)
 - [`../method_comparisons/BV_Library/`](../method_comparisons/BV_Library/) —
   a real BetterVoting approval election
-- Concept docs: [`../00_start_here/Approval_Voting/`](../00_start_here/Approval_Voting/) — the [method overview](../00_start_here/Approval_Voting/approval_voting.md) and its [honest limits](../00_start_here/Approval_Voting/approval_honest_limits.md)
+- Concept docs: [`../00_start_here/Approval_Voting/`](../00_start_here/Approval_Voting/) — the [method overview](../00_start_here/Approval_Voting/approval_voting.md), its [honest limits](../00_start_here/Approval_Voting/approval_honest_limits.md), and [multi-winner Approval](../00_start_here/Approval_Voting/approval_multiwinner.md)
 
 House rule: Approval ballots accept only `0`/`1` (blank / markers = not
 approved); the engine errors on 0–5 scores under `voting_method: Approval`.
