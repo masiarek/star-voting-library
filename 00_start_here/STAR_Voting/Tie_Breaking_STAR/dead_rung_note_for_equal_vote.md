@@ -1,7 +1,6 @@
 # The "dead rung" in STAR's official tiebreaker ladder
 
-*A note for the Equal Vote Coalition, from the STAR Voting education & test-case
-library. All examples below are engine-verified and reproducible;
+All examples below are engine-verified and reproducible;
 the runnable files are listed at the end.*
 
 ## Summary
