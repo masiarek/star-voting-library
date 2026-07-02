@@ -21,7 +21,7 @@ a **cycle** — which is a separate, rarer problem.)
 
 When there's **no** Condorcet winner (a cycle), methods differ in how they resolve it —
 see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's
-[divergence ledger](../../../divergence_review/INDEX.md) catalogs real library elections
+[divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections
 where STAR, IRV, and the Condorcet winner disagree.
 
 > **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a

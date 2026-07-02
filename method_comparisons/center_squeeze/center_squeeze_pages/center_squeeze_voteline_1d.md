@@ -104,7 +104,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README_center_squeeze.md)
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)

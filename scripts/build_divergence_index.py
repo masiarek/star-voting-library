@@ -29,8 +29,8 @@ tied-ballot count, so a tie-break-driven IRV result is flagged rather than sold
 as a deep method difference.
 
 Outputs (generated — safe to delete and rebuild):
-  divergence_review/INDEX.md       human review surface, grouped by bucket
-  divergence_review/divergence.csv  one row per election, all winners + flags
+  method_comparisons/divergence_review/INDEX.md       human review surface, grouped by bucket
+  method_comparisons/divergence_review/divergence.csv  one row per election, all winners + flags
 
 Run from the repo root:   python3 scripts/build_divergence_index.py
 """
@@ -56,7 +56,7 @@ import starvote_larry_hastings as w  # noqa: E402
 # Folders that hold real, curated single-winner STAR elections (per CLAUDE.md).
 SCAN_DIRS = ["01_STAR", "method_comparisons", "YAML_library/1_positive"]
 
-OUT_DIR = REPO / "divergence_review"
+OUT_DIR = REPO / "method_comparisons" / "divergence_review"
 
 
 # --------------------------------------------------------------------------- #
@@ -389,11 +389,15 @@ def case_md(r, dupes):
     src = REPO / r["file"]
     candidates, ballots, ballots_text, order, title = _load_case(src)
     tab = w.tabulated_output_path(src)
+    # Case files live in OUT_DIR/cases/<BUCKET>/ — compute the hop back to the
+    # repo root instead of hardcoding it (the ledger has moved before).
+    depth = len((OUT_DIR / "cases" / "BUCKET").relative_to(REPO).parts)
+    up = "../" * depth
     try:
-        tab_rel = "../../../" + str(tab.relative_to(REPO))
+        tab_rel = up + str(tab.relative_to(REPO))
     except ValueError:
         tab_rel = str(tab)
-    src_rel = "../../../" + r["file"]
+    src_rel = up + r["file"]
 
     M = []
     M.append(f"# {title}\n")

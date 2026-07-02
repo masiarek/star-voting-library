@@ -167,7 +167,7 @@ def _folder_readme(folder):
 
 
 def _divergence_case(stem):
-    root = os.path.join(REPO, "divergence_review", "cases")
+    root = os.path.join(REPO, "method_comparisons", "divergence_review", "cases")
     if not os.path.isdir(root):
         return None
     for dirpath, _dirs, files in os.walk(root):

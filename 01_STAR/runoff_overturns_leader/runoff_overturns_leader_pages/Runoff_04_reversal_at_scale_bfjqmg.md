@@ -106,7 +106,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_o
 ## See also
 
 - [This set's lesson (README)](../README_runoff_overturns_leader.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/Runoff_04_reversal_at_scale_bfjqmg.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/Runoff_04_reversal_at_scale_bfjqmg.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
 - [Runoff reversal (worked set)](../README_runoff_overturns_leader.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)

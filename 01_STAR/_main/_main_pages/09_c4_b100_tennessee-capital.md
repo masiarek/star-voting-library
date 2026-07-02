@@ -102,7 +102,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/09
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README_runoff_overturns_leader.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 

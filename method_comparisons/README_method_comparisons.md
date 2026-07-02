@@ -14,6 +14,7 @@ per-method folders would destroy the pedagogy.
 | [`paradoxes_and_whoops/`](paradoxes_and_whoops/) | the classics — Tennessee, Condorcet cycles, Ossipoff's centrist, Brams' many-pathologies election |
 | [`BV_Library/`](BV_Library/) | real BetterVoting elections across methods (STAR, Approval, Ranked Robin, plurality), imported and verified |
 | [`_main/`](_main/) | loose comparison files (e.g. STAR-vs-IRV count simplicity) |
+| [`divergence_review/`](divergence_review/INDEX.md) | the GENERATED ledger: every curated STAR election re-counted under RCV-IRV / Ranked Robin / Approval, grouped by why they disagree (refreshed by pre-commit) |
 
 The by-method view of every file in the repo is auto-generated at
 [`../00_start_here/YAML_test_case_index/`](../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md).

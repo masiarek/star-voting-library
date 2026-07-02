@@ -103,7 +103,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/monotonicity_star_before.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../divergence_review/cases/CYCLE_OR_THREE_WAY/monotonicity_star_before.md) — its entry in the divergence review ledger
 - [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README_monotonicity.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 

@@ -99,7 +99,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README_black_curtain.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md) — its entry in the divergence review ledger
 - [The Black Curtain (worked set)](../README_black_curtain.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 
