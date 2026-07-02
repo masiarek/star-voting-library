@@ -1,0 +1,8 @@
+# NEGATIVE: num_winners: 0 — a race elects at least one winner.
+# expect: num_winners must be at least 1
+voting_method: STAR
+num_winners: 0
+ballots: |-
+  Austin, Boston
+  5, 4
+  4, 5

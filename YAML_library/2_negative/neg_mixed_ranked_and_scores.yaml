@@ -1,0 +1,9 @@
+# NEGATIVE: one ranked row mixed into a score grid — would otherwise route to
+# RCV-IRV and read '5,4,2' as a phantom candidate name.
+# expect: mixed ballot styles
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  Austin,Boston,Cairo
+  5,4,2
+  Austin>Boston>Cairo

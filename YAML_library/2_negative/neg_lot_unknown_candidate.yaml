@@ -1,0 +1,10 @@
+# NEGATIVE: lot_numbers names a candidate ('Zed') that is not on the ballot —
+# a typo here would silently corrupt the official tie-break order.
+# expect: lot_numbers name(s) not on the ballot: Zed
+voting_method: STAR
+num_winners: 1
+lot_numbers: [Zed, Austin, Boston]
+ballots: |-
+  Austin, Boston
+  5, 5
+  4, 4

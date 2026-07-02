@@ -1,3 +1,4 @@
+# expect: has 2 value(s), expected 3
 # NEGATIVE — wrong number of columns (3 candidates, a 2-value row).
 # Original intent (BV20_neg1): number_of_races: 2 but only race_1 defined.
 #   The current engine is single-race (flat schema), so multi-race can't be

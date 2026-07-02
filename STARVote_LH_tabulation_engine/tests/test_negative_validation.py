@@ -87,43 +87,45 @@ def test_old_nested_schema_gives_friendly_error_not_traceback():
     assert "Minimal example (copy & paste):" in out   # the key-components template
 
 
-# --- The migrated legacy YAML_library/2_negative fixtures ---------------------
-# Each was converted from the old nested schema to the current flat schema while
-# preserving (or, where a feature no longer exists, repurposing) its defect.
-LIB_CASES = {
-    "bv10_neg1.yaml": ["has 3 value(s), expected 2"],
-    "bv10_neg2.yaml": ["elects a single winner", "seats=2"],
-    "bv15_neg1.yaml": ["Approval ballots may only use scores {0, 1}", "invalid: Blake=5"],
-    "bv15_neg2.yaml": ["invalid: Blake=x"],
-    "bv20_neg1.yaml": ["has 2 value(s), expected 3"],
-    "bv20_neg2.yaml": ["STAR ballots use scores 0..5", "invalid: Blake=a"],
-    # Runoff-set negatives (derived from Runoff_02 Austin/Boston/Cairo).
-    "runoff_neg_out_of_range.yaml":   ["STAR ballots use scores 0..5", "invalid: Boston=7"],
-    "runoff_neg_wrong_columns.yaml":  ["has 2 value(s), expected 3"],
-    "runoff_neg_ranked_in_star.yaml": ["is a score-ballot method, but the ballots are ranked"],
-}
+# --- The YAML_library/2_negative fixtures (SELF-DESCRIBING) -------------------
+# Every fixture carries its own expected-message contract as comments:
+#
+#     # expect: <substring that must appear in the error output>
+#
+# Adding a new negative case = drop in one .yaml with '# expect:' lines.
+# No test edit needed; this parametrization discovers it automatically.
+def _lib_fixtures():
+    cases = []
+    for p in sorted(LIB_NEG_DIR.glob("*.yaml")):
+        needles = []
+        for ln in p.read_text(encoding="utf-8").splitlines():
+            m = ln.strip()
+            if m.startswith("# expect:"):
+                needles.append(m[len("# expect:"):].strip())
+        cases.append((p.name, needles))
+    return cases
 
 
-@pytest.mark.parametrize("fname,needles", list(LIB_CASES.items()), ids=list(LIB_CASES))
+LIB_FIXTURES = _lib_fixtures()
+
+
+def test_library_discovery_not_vacuous():
+    assert len(LIB_FIXTURES) >= 20, "negative library shrank unexpectedly"
+    with_expect = [f for f, n in LIB_FIXTURES if n]
+    assert len(with_expect) >= 20, "most fixtures should declare '# expect:' lines"
+
+
+@pytest.mark.parametrize("fname,needles", LIB_FIXTURES,
+                         ids=[f for f, _ in LIB_FIXTURES])
 def test_yaml_library_negative(fname, needles):
+    """Every fixture must exit non-zero, with no traceback, a clear Error, and
+    every message substring its '# expect:' lines declare."""
     proc = _run_cli(LIB_NEG_DIR / fname)
-    assert proc.returncode == 1, (
-        f"{fname}: expected exit 1, got {proc.returncode}\n{proc.stdout}\n{proc.stderr}"
-    )
     out = proc.stdout + proc.stderr
+    assert proc.returncode != 0, (
+        f"{fname}: expected non-zero exit (file must be REJECTED)\n{out}"
+    )
     assert "Traceback" not in out, f"{fname}: leaked a traceback:\n{out}"
+    assert "Error" in out or "error" in out, f"{fname}: no error message:\n{out}"
     for needle in needles:
         assert needle in out, f"{fname}: expected {needle!r} in:\n{out}"
-
-
-def test_every_yaml_library_negative_fails_cleanly():
-    """Inventory guard: EVERY file under YAML_library/2_negative must exit non-zero
-    with a clear error and no traceback (no silent pass, no crash)."""
-    files = sorted(LIB_NEG_DIR.glob("*.yaml"))
-    assert files, "no YAML_library/2_negative fixtures found"
-    for p in files:
-        proc = _run_cli(p)
-        out = proc.stdout + proc.stderr
-        assert proc.returncode != 0, f"{p.name}: expected non-zero exit\n{out}"
-        assert "Traceback" not in out, f"{p.name}: leaked a traceback:\n{out}"
-        assert "Error" in out, f"{p.name}: no 'Error' message:\n{out}"

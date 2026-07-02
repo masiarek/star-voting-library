@@ -1,0 +1,7 @@
+# NEGATIVE: ranked ballots ('A>B') under Approval, a 0/1 score method.
+# expect: is a score-ballot method, but the ballots are ranked
+voting_method: Approval
+num_winners: 1
+ballots: |-
+  Austin>Boston>Cairo
+  Boston>Austin

@@ -1,3 +1,4 @@
+# expect: has 3 value(s), expected 2
 # NEGATIVE — wrong number of columns.
 # 2 candidates (Andre, Blake) but each ballot row has 3 values.
 # Original intent (BV10_neg1): "Mismatch between number of candidates and ballot data".

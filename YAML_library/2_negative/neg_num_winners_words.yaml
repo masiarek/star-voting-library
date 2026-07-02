@@ -1,0 +1,8 @@
+# NEGATIVE: num_winners written as a word ('two') instead of a number.
+# expect: num_winners must be a whole number
+voting_method: STAR
+num_winners: two
+ballots: |-
+  Austin, Boston
+  5, 4
+  4, 5

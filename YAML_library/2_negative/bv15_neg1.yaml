@@ -1,3 +1,5 @@
+# expect: Approval ballots may only use scores {0, 1}
+# expect: invalid: Blake=5
 # NEGATIVE — Approval ballot with a non-0/1 value.
 # Approval allows only 0 or 1; one cell is 5.
 # Original intent (BV15_neg1): Plurality with a 5 in the ballots (only 0/1 allowed).

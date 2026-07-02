@@ -1,3 +1,4 @@
+# expect: has 2 value(s), expected 3
 # NEGATIVE (Runoff set): a ballot row with the wrong number of columns.
 # Three candidates, but the second ballot has only two values.
 # Expected error: "has 2 value(s), expected 3"

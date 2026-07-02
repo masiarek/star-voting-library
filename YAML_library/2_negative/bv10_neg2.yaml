@@ -1,3 +1,5 @@
+# expect: elects a single winner
+# expect: seats=2
 # NEGATIVE — method / winner-count mismatch.
 # STAR is single-winner, but this race asks for multiple winners.
 # Original intent (BV10_neg2): STAR declared single_or_multi_winner: "multi".

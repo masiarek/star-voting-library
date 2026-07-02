@@ -1,3 +1,4 @@
+# expect: invalid: Blake=x
 # NEGATIVE — wrong character in an Approval ballot.
 # A cell contains the letter 'x' (not 0, 1, blank, or a marker).
 # Original intent (BV15_neg2): race_abstention_allowed: false with "~" in ballots.

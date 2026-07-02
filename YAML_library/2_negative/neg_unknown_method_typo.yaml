@@ -1,0 +1,10 @@
+# NEGATIVE: typo in voting_method ('STARR'). Must error with a suggestion —
+# silently counting as STAR would hide the typo.
+# expect: unknown voting_method 'STARR'
+# expect: Did you mean 'STAR'?
+voting_method: STARR
+num_winners: 1
+ballots: |-
+  Austin, Boston
+  5, 4
+  4, 5

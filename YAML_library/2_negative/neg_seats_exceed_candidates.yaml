@@ -1,0 +1,8 @@
+# NEGATIVE: Bloc STAR asked for 5 seats with only 3 candidates.
+# expect: cannot fill 5 seats from 3 candidate(s)
+voting_method: bloc
+num_winners: 5
+ballots: |-
+  Austin, Boston, Cairo
+  5, 4, 2
+  9:4, 5, 0

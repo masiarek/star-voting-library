@@ -1,3 +1,4 @@
+# expect: is a score-ballot method, but the ballots are ranked
 # NEGATIVE (Runoff set): ranked ballots (A>B>C) under a score method (STAR).
 # Expected error: "is a score-ballot method, but the ballots are ranked"
 voting_method: STAR

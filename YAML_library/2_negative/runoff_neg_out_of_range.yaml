@@ -1,3 +1,5 @@
+# expect: STAR ballots use scores 0..5
+# expect: invalid: Boston=7
 # NEGATIVE (Runoff set): a score above 5 (STAR scores are 0..5).
 # Derived from Runoff_02 (Austin/Boston/Cairo); Boston gets an illegal 7.
 # Expected error: "invalid: Boston=7"

@@ -314,7 +314,33 @@ def load_election(path, race_index=0):
                 + KEY_COMPONENTS_HELP
             )
             sys.exit(1)
-        seats = int(race["num_winners"]) if "num_winners" in race else None
+        if not isinstance(ballots_text, str):
+            print(
+                f"Error: 'ballots:' in '{p.name}' is not a text block "
+                f"(got a YAML {type(ballots_text).__name__}).\n"
+                "       Write it as a literal block — 'ballots: |-' on its own line,\n"
+                "       then one indented row per line:\n\n"
+                "  ballots: |-\n"
+                "    Ann,Bob,Cal\n"
+                "    5,4,0\n"
+                "    3,5,2"
+            )
+            sys.exit(1)
+        seats = None
+        if "num_winners" in race:
+            try:
+                seats = int(race["num_winners"])
+            except (TypeError, ValueError):
+                print(
+                    f"Error: num_winners must be a whole number, got "
+                    f"{race['num_winners']!r}.\n"
+                    "       Example: num_winners: 1"
+                )
+                sys.exit(1)
+            if seats < 1:
+                print(f"Error: num_winners must be at least 1, got {seats}.\n"
+                      "       A race elects at least one winner.")
+                sys.exit(1)
         method_name = race.get("voting_method")
         # Collect options from every level, most-specific last so it wins:
         # top-level  <  `election:` wrapper  <  the race itself. (BetterVoting-style
@@ -2629,6 +2655,32 @@ Memphis,Nashville,Chattanooga,Knoxville
             "copeland", "consensus", "consensus_voting", "consensus_choice",
         }
 
+        # Choose-One (Plurality): an honest label for 0/1 single-mark ballots,
+        # tabulated via the STAR path (equivalent for single-mark ballots).
+        _is_plurality = _norm in {"plurality", "choose_one", "chooseone",
+                                  "choose1", "fptp", "first_past_the_post"}
+
+        # An EXPLICIT voting_method must be one we recognize. Silently falling
+        # back to STAR turned typos ("STARR", "Aproval") into wrong counts.
+        _known_score_names = {k.replace(" ", "_") for k in METHOD_BY_NAME}
+        if _mname and not (_is_rcv or _is_approval or _is_rr or _is_plurality
+                           or _norm in _known_score_names):
+            _valid = ["STAR", "Approval", "RankedRobin", "RCV_IRV", "STV",
+                      "Plurality", "bloc", "sss", "rrv", "allocated"]
+            _close = difflib.get_close_matches(
+                _norm, [v.lower() for v in _valid], n=1, cutoff=0.6)
+            _hint = ""
+            if _close:
+                _hint = ("  Did you mean '"
+                         + next(v for v in _valid if v.lower() == _close[0])
+                         + "'?\n")
+            print(
+                f"{COLOR_RED}Error: unknown voting_method "
+                f"'{election.get('method_name')}'.{COLOR_RESET}\n" + _hint +
+                f"  Valid values: {' | '.join(_valid)}"
+            )
+            sys.exit(1)
+
         # Ranked ballots ("A>C>B") can only be RCV-IRV, regardless of the label.
         # Check for ">" only in the ballot data, NOT in trailing "# comments"
         # (which may legitimately contain "->" arrows).
@@ -2636,6 +2688,68 @@ Memphis,Nashville,Chattanooga,Knoxville
             ln.split("#")[0] for ln in (csv_input or "").splitlines()
         )
         _ranked_ballots = ">" in _ballot_body
+
+        # --- ballot-shape sanity (catches common hand-authoring mistakes) ----
+        _body_rows = [r.strip() for r in _ballot_body.splitlines() if r.strip()]
+        if _ranked_ballots:
+            # Mixed styles: ranked rows alongside comma-separated score rows
+            # would otherwise route to RCV-IRV and invent phantom "candidates".
+            _mixed = [r for r in _body_rows if ">" not in r and "," in r]
+            if _mixed:
+                print(
+                    f"{COLOR_RED}Error: mixed ballot styles — this file has ranked "
+                    f"rows ('A>B>C') AND comma-separated rows.{COLOR_RESET}\n"
+                    "  Offending row(s):"
+                )
+                for r in _mixed[:5]:
+                    print(f"    {r}")
+                print("  Use ONE style: either every row ranked (RCV-IRV / Ranked "
+                      "Robin),\n  or a score grid (header row of names, then 0..5 "
+                      "scores) under a score method.")
+                sys.exit(1)
+            _cand_pool = set()
+            for r in _body_rows:
+                r = re.sub(r"^\d+\s*[:xX×]\s*", "", r)
+                for grp in r.split(">"):
+                    for nm in grp.split("="):
+                        if nm.strip():
+                            _cand_pool.add(nm.strip())
+        else:
+            _hdr = re.sub(r"(?i)^count\s*[:xX×]\s*", "", _body_rows[0]) if _body_rows else ""
+            _hdr_names = [n.strip() for n in _hdr.split(",") if n.strip()]
+            _cand_pool = set(_hdr_names)
+            _dupes = sorted({n for n in _hdr_names if _hdr_names.count(n) > 1})
+            if _dupes:
+                print(
+                    f"{COLOR_RED}Error: duplicate candidate name(s) in the ballot "
+                    f"header: {', '.join(_dupes)}.{COLOR_RESET}\n"
+                    f"  Header: {_body_rows[0]}\n"
+                    "  Every column needs a unique candidate name."
+                )
+                sys.exit(1)
+            # Only for genuinely multi-winner methods — a single-winner method
+            # with num_winners > 1 gets its own, more specific mismatch error.
+            _seats_eff = election["seats"] or 1
+            _multi_method = election["method"] is not None and \
+                election["method"] is not starvote.star
+            if _multi_method and _seats_eff > 1 and _seats_eff >= len(_hdr_names):
+                print(
+                    f"{COLOR_RED}Error: cannot fill {_seats_eff} seats from "
+                    f"{len(_hdr_names)} candidate(s).{COLOR_RESET}\n"
+                    "  num_winners must be smaller than the number of candidates."
+                )
+                sys.exit(1)
+        _lot = election.get("lot_numbers") or []
+        _lot_unknown = [n for n in _lot if n not in _cand_pool]
+        if _lot and _lot_unknown:
+            print(
+                f"{COLOR_RED}Error: lot_numbers name(s) not on the ballot: "
+                f"{', '.join(_lot_unknown)}.{COLOR_RESET}\n"
+                f"  Ballot candidates: {', '.join(sorted(_cand_pool))}\n"
+                "  A typo here would silently corrupt the official tie-break "
+                "order, so it is an error."
+            )
+            sys.exit(1)
 
         # A file that EXPLICITLY declares a score method (STAR, Approval, Bloc /
         # Proportional STAR, …) but supplies RANKED ballots ("A>C>B") is self-
@@ -2732,6 +2846,10 @@ Memphis,Nashville,Chattanooga,Knoxville
             except Exception:
                 pass
             sys.exit(0)
+
+        if _is_plurality:
+            print(f"{COLOR_DIM}(Choose-one / Plurality ballots: tabulated via the "
+                  f"STAR path — equivalent for single-mark 0/1 ballots.){COLOR_RESET}")
 
         if election["seats"] is not None:
             SEATS = election["seats"]

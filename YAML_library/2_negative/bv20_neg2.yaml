@@ -1,3 +1,5 @@
+# expect: STAR ballots use scores 0..5
+# expect: invalid: Blake=a
 # NEGATIVE — wrong character in a STAR ballot.
 # A cell contains the letter 'a' (not 0..5, blank, or a marker).
 # Original intent (BV20_neg2): a custom abstention character "a" mismatched with
