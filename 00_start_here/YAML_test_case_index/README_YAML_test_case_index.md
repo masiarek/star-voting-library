@@ -49,12 +49,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`06a_c9_b3_large-field-equal-support.yaml`](../../01_STAR/_main/06a_c9_b3_large-field-equal-support.yaml) | `01_STAR/_main/` | 1 | Large field (9 candidates) — STAR scales, and Equal Support decides → _Carmen_ |
 | [`06b_c9_runoff-overturns-leader.yaml`](../../01_STAR/_main/06b_c9_runoff-overturns-leader.yaml) | `01_STAR/_main/` | 1 | Large field (9 candidates) — the runoff OVERTURNS the score leader → _Carmen_ |
 | [`09_c4_b100_tennessee-capital.yaml`](../../01_STAR/_main/09_c4_b100_tennessee-capital.yaml) | `01_STAR/_main/` | 1 | Tennessee Capital — classic STAR example → _Nashville_ |
-| [`Approval_ballot.yaml`](../../01_STAR/_main/Approval_ballot.yaml) | `01_STAR/_main/` | 1 | Approval-style & marker ballots (0/1, blanks, abstentions) under STAR → _D_ |
 | [`abstentions.yaml`](../../01_STAR/_main/abstentions.yaml) | `01_STAR/_main/` | 1 | Abstentions — blank and abstaining ballots in STAR → _Dog_ |
 | [`display_options_demo.yaml`](../../01_STAR/_main/display_options_demo.yaml) | `01_STAR/_main/` | 1 | Display options demo → _Don_ |
 | [`equal_support_runoff_demo.yaml`](../../01_STAR/_main/equal_support_runoff_demo.yaml) | `01_STAR/_main/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ |
 | [`quorum_demo_c3_b6.yaml`](../../01_STAR/_main/quorum_demo_c3_b6.yaml) | `01_STAR/_main/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ |
 | [`quorum_fail_demo_c3_b6.yaml`](../../01_STAR/_main/quorum_fail_demo_c3_b6.yaml) | `01_STAR/_main/` | 1 | Quorum FAILS — won the count, but not elected |
+| [`star_ala_approval.yaml`](../../01_STAR/_main/star_ala_approval.yaml) | `01_STAR/_main/` | 1 | STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot → _D_ |
 | [`three_winners_cw_score_runoff.yaml`](../../01_STAR/_main/three_winners_cw_score_runoff.yaml) | `01_STAR/_main/` | 1 | Three notions of "winner" disagree — Condorcet, Score, and Runoff → _Bob_ |
 | [`vote_splitting.yaml`](../../01_STAR/_main/vote_splitting.yaml) | `01_STAR/_main/` | 1 | Vote splitting — two chocolates split the majority → _DarkChoco_ |
 | [`vote_splitting2.yaml`](../../01_STAR/_main/vote_splitting2.yaml) | `01_STAR/_main/` | 1 | Vote splitting — two chocolates split the majority → _DarkChoco_ |

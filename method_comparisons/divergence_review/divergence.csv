@@ -80,8 +80,8 @@ CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/BV_Library_star_runoff_tie_scor
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,3,34,X,Z,Z,X,X,X,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml,3,100,Ada,Ada,Bruno,Cleo,Cleo,Ada,Cleo,Cleo,25,True,False,False
-IRV_DIFFERS_ARTIFACT,01_STAR/_main/Approval_ballot.yaml,4,8,D,A,D,D,A,A,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Don,,2,True,True,True
+IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ann,Cara,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml,3,5,Ann,Cara,Ben,Ann,Cara,Ann,,,2,True,True,True
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False

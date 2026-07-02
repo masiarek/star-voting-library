@@ -39,7 +39,7 @@ Almond (highest priority). Deterministic and fully explained.
 ## View 1 — BetterVoting (bug pending)
 
 BV should report a clean two-way tie resolved by lot; instead watch for **`NaN`** in the
-runoff display (#1035).
+runoff display ([#1035](https://github.com/Equal-Vote/bettervoting/issues/1035)).
 
 > 📷 _Paste the BetterVoting result screenshot here — capture the `NaN` / equal-tie
 > display — and append `_<bvid>` to the filenames._

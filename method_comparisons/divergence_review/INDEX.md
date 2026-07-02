@@ -1,6 +1,6 @@
 # Cross-method divergence review
 
-_Generated 2026-07-02 14:16 by `scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-02 19:05 by `scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
@@ -54,12 +54,12 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
-- **[Approval_ballot](cases/IRV_DIFFERS_ARTIFACT/Approval_ballot.md)** — `01_STAR/_main/Approval_ballot.yaml` (4c/8b)  
-    STAR=**D** · IRV=A · RR=D · Approval=A · Condorcet=D  
-    _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=D, strict=A)_
 - **[display_options_demo](cases/IRV_DIFFERS_ARTIFACT/display_options_demo.md)** — `01_STAR/_main/display_options_demo.yaml` (4c/4b)  
     STAR=**Don** · IRV=Bob · RR=Don · Approval=Ann · Condorcet=Don  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Don, strict=Bob)_
+- **[star_ala_approval](cases/IRV_DIFFERS_ARTIFACT/star_ala_approval.md)** — `01_STAR/_main/star_ala_approval.yaml` (4c/8b)  
+    STAR=**D** · IRV=A · RR=D · Approval=A · Condorcet=D  
+    _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=D, strict=A)_
 - **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ben** · IRV=Cara · RR=Ann · Approval=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_

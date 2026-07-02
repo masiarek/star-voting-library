@@ -1,7 +1,7 @@
-election_title: "Approval-style & marker ballots (0/1, blanks, abstentions) under STAR"
+election_title: "STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot"
 
 scenario_description: |-
-  Despite the name, this is a STAR file: it shows that approval-style 0/1
+  A STAR file (voting_method: STAR): it shows that approval-style 0/1
   scoring and every ballot marker are LEGAL on a STAR ballot. Eight ballots
   exercise the whole marker set — blanks (-), a race abstention (~), an
   all-zero ballot, and a max-everything 5,5,5,5 — all tabulating as documented
@@ -24,4 +24,4 @@ ballots: |-
 expected_winners:
   - D
 
-# file: Approval_ballot.yaml
+# file: star_ala_approval.yaml

@@ -61,7 +61,7 @@ the test-case YAML (demo) and/or the interview episode that show the term in act
 
 ## Other methods (for contrast)
 
-- **Approval voting** — score each candidate 0 or 1 (approve / not); most approvals wins. → demo [`Approval_ballot.yaml`](../01_STAR/_main/Approval_ballot.yaml)
+- **Approval voting** — score each candidate 0 or 1 (approve / not); most approvals wins. → demo [`approval_101_c3_b5.yaml`](../04_Approval/_main/approval_101_c3_b5.yaml) (0/1 marks are also legal on a STAR ballot — [`star_ala_approval.yaml`](../01_STAR/_main/star_ala_approval.yaml))
 - **Score voting (pure)** — score 0–5; highest total/average wins, with no runoff (more manipulable than STAR).
 - **RCV (Ranked-Choice Voting)** — a ranked *ballot* type (rank candidates 1st, 2nd, 3rd). A **family**, not one method; in the US it's commonly (loosely) used to mean IRV specifically. → [`TIPS_terminology.md`](TIPS_terminology.md); episode [`RCV_or_IRV_whats_the_right_word.md`](../interviews_conversations/RCV_or_IRV_whats_the_right_word.md)
 - **IRV (Instant-Runoff Voting)** — *one tabulation* of a ranked ballot: eliminate the lowest, transfer, repeat until a majority. The single-winner method usually meant by "RCV."
