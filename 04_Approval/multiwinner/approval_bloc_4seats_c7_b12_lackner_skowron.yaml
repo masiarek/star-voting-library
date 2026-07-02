@@ -1,0 +1,46 @@
+election_title: Bloc Approval — Lackner & Skowron's running example (k=4)
+
+scenario_description: |-
+  The running example (Example 2.1) from Lackner & Skowron, "Multi-Winner
+  Voting with Approval Preferences" (SpringerBriefs, 2023, open access,
+  doi:10.1007/978-3-031-09016-5): an academic society elects a k=4
+  steering committee from seven candidates; 12 approval ballots:
+  3 x {A,B} . 3 x {A,C} . 2 x {A,D} . 1 x {B,C,F} . 1 x {E} . 1 x {F} . 1 x {G}.
+  Approval counts: A=8, B=4, C=4, D=2, E=1, F=2, G=1. Bloc Approval (AV)
+  seats A, B, C, then TIES D and F for the last seat (2-2) - this engine's
+  priority order breaks it for D. The book (Example 2.4) shows PAV instead
+  elects {A,B,C,F} outright, the tied committee that leaves FEWER voters
+  with no representative at all (2 instead of 3). Run the proportional
+  rules on this file via abcvoting_tabulation_engine/ to see it.
+
+options:
+  show_description: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+voting_method: Approval_Multi_Winner
+num_winners: 4
+
+ballots: |-
+  A,B,C,D,E,F,G
+  1,1,0,0,0,0,0   # 3 voters — {A,B}
+  1,1,0,0,0,0,0
+  1,1,0,0,0,0,0
+  1,0,1,0,0,0,0   # 3 voters — {A,C}
+  1,0,1,0,0,0,0
+  1,0,1,0,0,0,0
+  1,0,0,1,0,0,0   # 2 voters — {A,D}
+  1,0,0,1,0,0,0
+  0,1,1,0,0,1,0   # 1 voter — {B,C,F}
+  0,0,0,0,1,0,0   # 1 voter — {E}
+  0,0,0,0,0,1,0   # 1 voter — {F}
+  0,0,0,0,0,0,1   # 1 voter — {G}
+
+expected_winners:
+  - A
+  - B
+  - C
+  - D
+
+# file: approval_bloc_4seats_c7_b12_lackner_skowron.yaml

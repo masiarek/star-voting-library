@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**119 election files** (112 single-winner, 7 multi-winner) across 12 method(s).
+**121 election files** (112 single-winner, 9 multi-winner) across 12 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -19,7 +19,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 1 |
 | Allocated Score (STAR-PR) | 1 |
-| APPROVAL_MULTI_WINNER | 1 |
+| APPROVAL_MULTI_WINNER | 3 |
 | PLURALITY | 1 |
 | RR | 1 |
 
@@ -184,11 +184,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|
 | [`02a_c5_b63_proportional-allocated-score.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ |
 
-## APPROVAL_MULTI_WINNER  (1)
+## APPROVAL_MULTI_WINNER  (3)
 
 | File | Folder | Winners | Title / expected |
 |------|--------|:------:|------------------|
 | [`approval_bloc_2seats_c4_b6.yaml`](../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml) | `04_Approval/multiwinner/` | 2 | Bloc Approval — 2 seats, majority sweep → _Amy, Ben_ |
+| [`approval_bloc_3seats_c6_b5.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ |
+| [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ |
 
 ## PLURALITY  (1)
 

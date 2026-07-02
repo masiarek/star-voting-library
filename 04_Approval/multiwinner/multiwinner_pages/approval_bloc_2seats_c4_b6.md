@@ -72,3 +72,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/mult
 - [This set's lesson (README)](../README_approval_multiwinner.md) — the hand-written teaching context for every case in this folder
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README_ties.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+
+More cases in this set: [approval_bloc_3seats_c6_b5](approval_bloc_3seats_c6_b5.md) · [approval_bloc_4seats_c7_b12_lackner_skowron](approval_bloc_4seats_c7_b12_lackner_skowron.md)

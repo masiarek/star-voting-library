@@ -2,7 +2,7 @@
 SOURCE FILE:     monotonicity_irv_before.yaml
 SOURCE MODIFIED: 2026-07-02 13:00:37
 TABULATED FILE:  monotonicity_irv_before_tabulated.txt
-TABULATED AT:    2026-07-02 19:37:44
+TABULATED AT:    2026-07-02 19:58:39
 ======================================================================
 
 election_title: "Non-monotonicity (RCV-IRV) — part 1: baseline, X wins"

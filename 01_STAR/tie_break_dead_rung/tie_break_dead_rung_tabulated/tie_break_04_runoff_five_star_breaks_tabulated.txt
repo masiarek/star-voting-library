@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_04_runoff_five_star_breaks.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:45
 TABULATED FILE:  tie_break_04_runoff_five_star_breaks_tabulated.txt
-TABULATED AT:    2026-07-02 19:37:40
+TABULATED AT:    2026-07-02 19:58:34
 ======================================================================
 
 election_title: "Tie-break 04 — runoff tie, score tied, FIVE-STAR breaks it (a 5 exists)"

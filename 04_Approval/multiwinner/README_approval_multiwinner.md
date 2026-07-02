@@ -2,9 +2,23 @@
 
 Multi-winner Approval with the same 0/1 ballot: the `num_winners`
 most-approved candidates win (bloc / at-large counting). Declared as
-`voting_method: Approval_Multi_Winner` with `num_winners: ≥ 2`.
+`voting_method: Approval_Multi_Winner` with `num_winners: ≥ 2`. Ballot mockup:
+[3-seat council ballot](../../00_start_here/Approval_Voting/img/approval_ballot_multiwinner_3seats.png).
 
-The case here, [`approval_bloc_2seats_c4_b6.yaml`](approval_bloc_2seats_c4_b6.yaml),
+Three cases, in teaching order:
+
+1. [`approval_bloc_3seats_c6_b5.yaml`](approval_bloc_3seats_c6_b5.yaml) — the
+   plain mechanics: 3-seat council, six candidates, five voters; sum the
+   columns, top three win (Adams, Brown, Clark). Matches the ballot mockup.
+2. [`approval_bloc_2seats_c4_b6.yaml`](approval_bloc_2seats_c4_b6.yaml) — the
+   majority sweep + priority tie-break (below).
+3. [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](approval_bloc_4seats_c7_b12_lackner_skowron.yaml)
+   — the running example from Lackner & Skowron's *Multi-Winner Voting with
+   Approval Preferences* ([open access](https://doi.org/10.1007/978-3-031-09016-5)):
+   AV ties {A,B,C,D} with {A,B,C,F}; PAV elects {A,B,C,F} outright — the
+   committee that leaves fewer voters wholly unrepresented.
+
+The flagship case, [`approval_bloc_2seats_c4_b6.yaml`](approval_bloc_2seats_c4_b6.yaml),
 teaches the one thing that matters about bloc counting: it is **majoritarian**.
 Six voters, four candidates, two seats — a 4-voter majority (all approve Amy,
 two also Ben) takes **both** seats; the 2-voter minority behind Cora and Doug
