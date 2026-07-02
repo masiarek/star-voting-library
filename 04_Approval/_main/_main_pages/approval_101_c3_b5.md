@@ -34,6 +34,15 @@ Full report from the [`_tabulated` mirror](../_main_tabulated/approval_101_c3_b5
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 5 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   1,1,0
+   0,1,1
+   1,1,0
+   0,1,0
+   1,0,1
+
    Bob -- 4 -- Elected
    Ann -- 3
    Cal -- 2

@@ -3,13 +3,16 @@ election_title: Bloc Approval — 2 seats, majority sweep
 scenario_description: |-
   Multi-winner (bloc / at-large) Approval: same 0/1 ballot, but the TWO
   most-approved candidates win. Six voters, four candidates, two seats.
-  A cohesive majority (4 of 6 voters, approving Amy and mostly Ben) takes
-  BOTH seats; the minority's candidates (Cora, Doug) win nothing. That's
-  the lesson: bloc Approval is majoritarian, not proportional — same
-  trade-off as Bloc STAR (02_STAR_Bloc). Proportional rules on the SAME
-  ballots (SPAV, PAV, seq-Phragmén — run them via
-  abcvoting_tabulation_engine/) instead elect Amy + Cora, giving the
-  minority its seat; see 00_start_here/Approval_Voting/approval_multiwinner.md.
+  A cohesive majority (4 of 6 voters — all approve Amy, two also Ben)
+  takes BOTH seats; the minority's candidates (Cora, Doug) win nothing.
+  Ben and Cora tie 2–2 for the last seat, and candidate priority order
+  (left-to-right columns) breaks it for Ben — watch the engine's tie
+  note. The lesson: bloc Approval is majoritarian, not proportional —
+  same trade-off as Bloc STAR (02_STAR_Bloc). Proportional rules on the
+  SAME ballots (SPAV, PAV, seq-Phragmén — run them via
+  abcvoting_tabulation_engine/) instead elect Amy + Cora decisively,
+  giving the minority its seat; see
+  00_start_here/Approval_Voting/approval_multiwinner.md.
 
 options:
   show_description: false
@@ -22,7 +25,7 @@ num_winners: 2
 
 ballots: |-
   Amy,Ben,Cora,Doug
-  1,1,0,0   # voter 1 — majority faction: Amy and Ben
+  1,0,0,0   # voter 1 — majority faction: bullet-approves Amy
   1,1,0,0   # voter 2 — majority faction: Amy and Ben
   1,1,0,0   # voter 3 — majority faction: Amy and Ben
   1,0,0,0   # voter 4 — majority faction: bullet-approves Amy

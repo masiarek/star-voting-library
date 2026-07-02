@@ -68,11 +68,13 @@ def test_av_matches_lh_expected_winners(path, expected):
 
 
 def test_proportional_rules_break_the_sweep():
-    """The multiwinner demo: av sweeps Amy+Ben; every proportional rule must
-    instead seat the minority's Cora alongside Amy."""
+    """The multiwinner demo: av ties {Amy,Ben} with {Amy,Cora} (the LH engine
+    breaks that tie for Ben by priority order); every proportional rule must
+    DECISIVELY seat the minority's Cora alongside Amy."""
     path = REPO_ROOT / "04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml"
     result = tabulate_abc(path, rules=("av", "seqpav", "pav", "seqphragmen"))
-    assert result["av"] == [["Amy", "Ben"]]
+    assert {frozenset(c) for c in result["av"]} == {
+        frozenset({"Amy", "Ben"}), frozenset({"Amy", "Cora"})}
     for rule in ("seqpav", "pav", "seqphragmen"):
         assert result[rule] == [["Amy", "Cora"]], (
             f"{rule} returned {result[rule]}, expected [['Amy', 'Cora']]")

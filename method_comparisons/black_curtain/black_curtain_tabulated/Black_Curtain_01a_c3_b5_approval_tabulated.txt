@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_01a_c3_b5_approval.yaml
 SOURCE MODIFIED: 2026-07-02 12:49:11
 TABULATED FILE:  Black_Curtain_01a_c3_b5_approval_tabulated.txt
-TABULATED AT:    2026-07-02 19:30:10
+TABULATED AT:    2026-07-02 19:37:43
 ======================================================================
 
 election_title: The Black Curtain #1 as Approval — the consensus candidate wins
@@ -51,6 +51,15 @@ TABULATION RESULTS
 
 --- Approval Voting (single winner) ---
  Tabulating 5 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   0,1,1
+   0,1,1
+   0,1,1
+   1,1,0
+   1,1,0
+
    Bob -- 5 -- Elected
    Cal -- 3
    Ann -- 2

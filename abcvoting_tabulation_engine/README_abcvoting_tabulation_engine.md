@@ -28,20 +28,23 @@ python abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav
 ```
 
 On the repo's majority-sweep case (6 voters, 2 seats: a 4-voter majority
-behind Amy/Ben, a 2-voter minority behind Cora/Doug) it prints:
+behind Amy — two of them also approving Ben — and a 2-voter minority behind
+Cora/Doug) it prints:
 
 ```text
 --- abcvoting: approval-based committee rules (2 seats) ---
  approval_bloc_2seats_c4_b6.yaml: 6 ballots, candidates: Amy, Ben, Cora, Doug
-   av           Approval Voting (AV)                       ->  Amy, Ben
+   av           Approval Voting (AV)                       ->  Amy, Ben  |  Amy, Cora  [2 tied committees]
    seqpav       Sequential Proportional Approval Voting (seq-PAV) ->  Amy, Cora
    pav          Proportional Approval Voting (PAV)         ->  Amy, Cora
    seqphragmen  Phragmén's Sequential Rule (seq-Phragmén)  ->  Amy, Cora
    (av = bloc Approval, the LH engine's method; seqpav/pav/seqphragmen are proportional.)
 ```
 
-Same ballots, two philosophies: bloc `av` lets the majority **sweep**;
-every proportional rule gives the minority its seat.
+Same ballots, two philosophies: bloc `av` ties the majority's second
+candidate with the minority's first (the LH engine breaks that tie for the
+majority by priority order); every proportional rule gives the minority its
+seat **decisively**.
 
 Notes:
 

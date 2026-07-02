@@ -31,16 +31,28 @@ precinct-summable, trivial to hand-count.
 What bloc Approval does *not* do is represent minorities. Every voter
 influences every seat with full weight, so 51% of voters who agree on a slate
 take 100% of the seats. The worked example makes it concrete — 6 voters, 4
-candidates, 2 seats; a 4-voter majority approves Amy/Ben, a 2-voter minority
-approves Cora/Doug:
+candidates, 2 seats; a 4-voter majority (all approve Amy, two also Ben), a
+2-voter minority behind Cora (one also Doug):
 
 ```text
 --- Approval Voting (2 winners) ---
  Tabulating 6 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+   1,0,0,0
+   1,1,0,0
+   1,1,0,0
+   1,0,0,0
+   0,0,1,1
+   0,0,1,0
+
    Amy  -- 4 -- Elected
-   Ben  -- 3 -- Elected
+   Ben  -- 2 -- Elected
    Cora -- 2
    Doug -- 1
+  Note: Ben, Cora each have 2 approvals and tie for the last 1 seat.
+        Candidate priority order (Ben > Cora) broke the tie: Ben elected, Cora not elected.
 
 Winners — Approval Voting (2 winners)
   Amy, Ben
@@ -85,13 +97,13 @@ rules are runnable too, via the
 [`abcvoting_tabulation_engine/`](../../abcvoting_tabulation_engine/README_abcvoting_tabulation_engine.md)
 wrapper around Martin Lackner's peer-reviewed
 [`abcvoting`](https://github.com/martinlackner/abcvoting) library. On the
-sweep example above, the proportional rules all break the sweep and seat the
-minority's Cora:
+sweep example above, plain `av` sees the same 2–2 tie the LH engine breaks by
+priority — but every proportional rule seats the minority's Cora *decisively*:
 
 ```text
 --- abcvoting: approval-based committee rules (2 seats) ---
  approval_bloc_2seats_c4_b6.yaml: 6 ballots, candidates: Amy, Ben, Cora, Doug
-   av           Approval Voting (AV)                       ->  Amy, Ben
+   av           Approval Voting (AV)                       ->  Amy, Ben  |  Amy, Cora  [2 tied committees]
    seqpav       Sequential Proportional Approval Voting (seq-PAV) ->  Amy, Cora
    pav          Proportional Approval Voting (PAV)         ->  Amy, Cora
    seqphragmen  Phragmén's Sequential Rule (seq-Phragmén)  ->  Amy, Cora

@@ -39,6 +39,15 @@ Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_ap
 --- Approval Voting (single winner) ---
  Tabulating 10 ballots (any non-zero score = approval).
  Abstentions: 3 of 10 ballots approved no one (7 ballots cast an approval).
+
+Ballots:
+   columns = Alice, Bob, Carol, Dave      (1 = approve; 0 / blank / marker = not approved)
+     1 × 1,1,1,1
+     2 × 0,1,1,1
+     3 × 0,0,1,1
+     1 × 0,0,0,1
+     3 × 0,0,0,0
+
    Dave  -- 7 -- Elected
    Carol -- 6
    Bob   -- 3

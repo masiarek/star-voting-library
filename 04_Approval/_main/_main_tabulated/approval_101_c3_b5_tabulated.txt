@@ -2,7 +2,7 @@
 SOURCE FILE:     approval_101_c3_b5.yaml
 SOURCE MODIFIED: 2026-07-02 12:15:18
 TABULATED FILE:  approval_101_c3_b5_tabulated.txt
-TABULATED AT:    2026-07-02 19:30:09
+TABULATED AT:    2026-07-02 19:37:41
 ======================================================================
 
 election_title: Approval 101 — most approvals wins
@@ -44,6 +44,15 @@ TABULATION RESULTS
 
 --- Approval Voting (single winner) ---
  Tabulating 5 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   1,1,0
+   0,1,1
+   1,1,0
+   0,1,0
+   1,0,1
+
    Bob -- 4 -- Elected
    Ann -- 3
    Cal -- 2

@@ -6,17 +6,30 @@ most-approved candidates win (bloc / at-large counting). Declared as
 
 The case here, [`approval_bloc_2seats_c4_b6.yaml`](approval_bloc_2seats_c4_b6.yaml),
 teaches the one thing that matters about bloc counting: it is **majoritarian**.
-Six voters, four candidates, two seats — a 4-voter majority approving Amy (and
-mostly Ben) takes **both** seats; the 2-voter minority behind Cora and Doug
-gets nothing:
+Six voters, four candidates, two seats — a 4-voter majority (all approve Amy,
+two also Ben) takes **both** seats; the 2-voter minority behind Cora and Doug
+gets nothing. Bonus lesson: Ben and Cora tie 2–2 for the last seat, and the
+engine's tie note shows candidate priority order breaking it for Ben:
 
 ```text
 --- Approval Voting (2 winners) ---
  Tabulating 6 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+   1,0,0,0
+   1,1,0,0
+   1,1,0,0
+   1,0,0,0
+   0,0,1,1
+   0,0,1,0
+
    Amy  -- 4 -- Elected
-   Ben  -- 3 -- Elected
+   Ben  -- 2 -- Elected
    Cora -- 2
    Doug -- 1
+  Note: Ben, Cora each have 2 approvals and tie for the last 1 seat.
+        Candidate priority order (Ben > Cora) broke the tie: Ben elected, Cora not elected.
 
 Winners — Approval Voting (2 winners)
   Amy, Ben

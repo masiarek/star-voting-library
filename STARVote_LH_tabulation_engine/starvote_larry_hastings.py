@@ -1069,7 +1069,7 @@ def _approval_raw_problems(ballots_text):
     return headers, problems
 
 
-def tabulate_approval(ballots_text, seats=1, priority=None):
+def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     """
     Tabulate an Approval Voting election. Ballots are approvals, so ANY non-zero
     score counts as one approval (unlike the 3+ stars threshold the STAR
@@ -1078,6 +1078,9 @@ def tabulate_approval(ballots_text, seats=1, priority=None):
     Single-winner: the most-approved candidate wins. Multi-winner (seats >= 2)
     uses block/at-large approval: the `seats` most-approved candidates win.
     Ties are broken by candidate priority order (left-to-right CSV columns).
+
+    `options` honors the shared echo flags: `collapse_ballots` (default ON —
+    "N × ballot"; OFF — one row per voter) and `count_separator` (default ×).
     """
     # Validate raw rows first, so malformed ballots error instead of being
     # silently dropped by the shared parser.
@@ -1122,6 +1125,33 @@ def tabulate_approval(ballots_text, seats=1, priority=None):
         cast = total - abstentions
         print(f" Abstentions: {abstentions} of {total} ballots approved no one "
               f"({cast} ballot{'' if cast == 1 else 's'} cast an approval).")
+
+    # Echo the ballots (same options the STAR / Ranked Robin paths honor):
+    # collapse_ballots — default ON, "N × ballot"; OFF — one row per voter.
+    _opts = options or {}
+    def _truthy(v, default=True):
+        if isinstance(v, str):
+            return v.strip().lower() not in {"false", "f", "no", "n", "0", "off"}
+        return default if v is None else bool(v)
+    _collapse = _truthy(_opts.get("collapse_ballots"))
+    _sep = str(_opts.get("count_separator", "×")) or "×"
+    rows = [",".join("1" if b.get(c, 0) > 0 else "0" for c in candidates)
+            for b in ballots]
+    print("\nBallots:")
+    print(f"   columns = {', '.join(candidates)}"
+          "      (1 = approve; 0 / blank / marker = not approved)")
+    if _collapse:
+        seen = []
+        for r in rows:
+            if r not in seen:
+                seen.append(r)
+        cnt = {r: rows.count(r) for r in seen}
+        for r in seen:
+            print(f"   {cnt[r]:>3} {_sep} {r}")
+    else:
+        for r in rows:
+            print(f"   {r}")
+    print()
     name_w = max(len(c) for c in candidates)
     for i, c in enumerate(ranked):
         tag = " -- Elected" if i < seats else ""
@@ -2876,7 +2906,8 @@ Memphis,Nashville,Chattanooga,Knoxville
             _buf = _io.StringIO()
             try:
                 with _ctx.redirect_stdout(_buf):
-                    tabulate_approval(csv_input, seats=_seats)
+                    tabulate_approval(csv_input, seats=_seats,
+                                      options=election.get("options"))
             except SystemExit:
                 sys.stdout.write(_buf.getvalue())  # don't swallow error text
                 raise
