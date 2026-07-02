@@ -1,0 +1,7 @@
+# NEGATIVE: the 'ballots: |-' block is present but EMPTY — keys without data.
+# expect: No valid ballots found in input
+voting_method: STAR
+num_winners: 1
+ballots: |-
+
+# file: neg_empty_ballots_block.yaml

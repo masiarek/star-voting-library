@@ -1,0 +1,22 @@
+# NEGATIVE: two races in one YAML. House rule: ONE election per file —
+# the engine used to silently count only the first race and ignore the rest.
+# (Multi-race BetterVoting JSON exports are fine: the converter splits them.)
+# expect: contains 2 races
+# expect: ONE election per file
+election:
+  election_title: Two races in one file
+  races:
+  - race_id: '0'
+    voting_method: STAR
+    num_winners: 1
+    ballots: |-
+      Ann,Bob
+      5,4
+      4,5
+  - race_id: '1'
+    voting_method: STAR
+    num_winners: 1
+    ballots: |-
+      Cal,Dee
+      5,1
+      0,4

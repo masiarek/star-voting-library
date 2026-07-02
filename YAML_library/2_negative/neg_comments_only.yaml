@@ -1,0 +1,4 @@
+# NEGATIVE: a file containing nothing but comments — no keys, no ballots.
+# (These very '# expect:' lines are the file's only content, which is the point.)
+# expect: no 'ballots:' block found
+# expect: An election file (in YAML format) needs three things

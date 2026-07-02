@@ -1,0 +1,14 @@
+# NEGATIVE: two YAML documents ('---' separator) in one file — two elections
+# pasted together. One election per file.
+# expect: but found another document
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Ann,Bob
+  5,4
+---
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Cal,Dee
+  1,5

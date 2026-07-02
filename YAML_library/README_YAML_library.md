@@ -48,7 +48,11 @@ Approval · unknown `voting_method` (typos get a "did you mean" suggestion) ·
 `num_winners` zero / non-numeric / exceeding the candidate count ·
 single-winner method asked for multiple seats · duplicate candidate names ·
 `lot_numbers` naming a candidate not on the ballot · header with no voter
-rows · a completely blank file · multiple errors reported together.
+rows · a completely blank file, comments-only file, and empty ballots block ·
+multiple races in one YAML (one election per file; multi-race BV *JSON*
+exports are legitimate — the converter splits them into one YAML per race) ·
+duplicate top-level keys (YAML silently keeps the last!) · two `---` YAML
+documents in one file · multiple errors reported together.
 
 ## History note
 

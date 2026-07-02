@@ -303,6 +303,47 @@ def load_election(path, race_index=0):
                 "       the block early). Move candidate-legend comments ABOVE `ballots:`."
             )
             sys.exit(1)
+        # Duplicate top-level keys: YAML silently keeps only the LAST one, so
+        # an earlier ballots:/voting_method: block would vanish without a trace.
+        _dups = []
+        for _key in ("ballots", "voting_method", "num_winners",
+                     "expected_winners", "lot_numbers", "options"):
+            _n = len(re.findall(rf"(?m)^{_key}\s*:", text))
+            if _n > 1:
+                _dups.append(f"'{_key}:' appears {_n} times")
+        if _dups:
+            print(
+                f"Error: duplicate top-level key(s) in '{p.name}': "
+                f"{'; '.join(_dups)}.\n"
+                "       YAML keeps only the LAST occurrence — the earlier data\n"
+                "       would be silently dropped. Keep exactly one of each key:\n"
+                "       one election per file."
+            )
+            sys.exit(1)
+
+        # ONE election per file (house rule). A multi-race file would be
+        # silently truncated to its first race, so it is an error instead.
+        # (Multi-race BetterVoting JSON exports are fine — the converter,
+        # YAML_library/1_positive/01_convert_json_yaml.py, splits them.)
+        _races = None
+        if isinstance(data, dict):
+            if isinstance(data.get("election"), dict) and \
+                    isinstance(data["election"].get("races"), list):
+                _races = data["election"]["races"]
+            elif isinstance(data.get("races"), list):
+                _races = data["races"]
+        if _races is not None and len(_races) > 1 and race_index == 0:
+            _titles = ", ".join(
+                str((r or {}).get("title") or (r or {}).get("race_id")
+                    or f"race {i + 1}")
+                for i, r in enumerate(_races))
+            print(
+                f"Error: '{p.name}' contains {len(_races)} races ({_titles}).\n"
+                "       This library counts ONE election per file — split each\n"
+                "       race into its own YAML file."
+            )
+            sys.exit(1)
+
         try:
             race = _find_race(data, race_index)
             ballots_text = race["ballots"]

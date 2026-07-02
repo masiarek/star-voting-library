@@ -1,0 +1,12 @@
+# NEGATIVE: the 'ballots:' key appears twice. YAML silently keeps only the
+# LAST one — the first election would vanish without a trace.
+# expect: duplicate top-level key(s)
+# expect: 'ballots:' appears 2 times
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Ann,Bob
+  5,4
+ballots: |-
+  Cal,Dee
+  1,5

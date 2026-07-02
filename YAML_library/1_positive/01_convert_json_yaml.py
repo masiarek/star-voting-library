@@ -402,17 +402,29 @@ def convert_election_data(input_json_path, engine_module, embed_report=True,
     # overwrite hand-refined test-case YAML living alongside the JSON sources.
     out_dir = Path(input_json_path).parent / "_generated"
     out_dir.mkdir(parents=True, exist_ok=True)
-    output_yaml_path = out_dir / yaml_filename
 
-    with open(output_yaml_path, 'w') as file:
-        # allow_unicode=True is required so non-ASCII characters in the report
-        # (e.g. the em-dash in "Winner — STAR…") are written literally. Without
-        # it PyYAML must escape them, which forces the whole `report` scalar into
-        # an ugly escaped double-quoted blob instead of a clean `|-` block.
-        yaml.dump(minimal_data, file, default_flow_style=False, sort_keys=False,
-                  allow_unicode=True)
-
-    print(f"Generated: _generated/{yaml_filename}")
+    # ONE election per YAML (house rule — the engine rejects multi-race files).
+    # BetterVoting exports may carry several races: emit one YAML per race, the
+    # race number + title slugged into the filename. A single-race export keeps
+    # the exact filename it always had.
+    races_list = minimal_data["election"]["races"]
+    for ridx, one_race in enumerate(races_list, 1):
+        doc = {"election": dict(minimal_data["election"])}
+        doc["election"]["races"] = [one_race]
+        if len(races_list) > 1:
+            rtitle = str(one_race.get("race_title") or f"Race{ridx}")
+            slug = "".join(w.capitalize() for w in re.split(r"[^A-Za-z0-9]+", rtitle) if w) or f"Race{ridx}"
+            out_name = f"{base_filename}_r{ridx}{slug}.yaml"
+        else:
+            out_name = yaml_filename
+        with open(out_dir / out_name, 'w') as file:
+            # allow_unicode=True is required so non-ASCII characters in the report
+            # (e.g. the em-dash in "Winner — STAR…") are written literally. Without
+            # it PyYAML must escape them, which forces the whole `report` scalar into
+            # an ugly escaped double-quoted blob instead of a clean `|-` block.
+            yaml.dump(doc, file, default_flow_style=False, sort_keys=False,
+                      allow_unicode=True)
+        print(f"Generated: _generated/{out_name}")
 
     original_json_path = Path(input_json_path)
     new_json_path = original_json_path.parent / json_filename
