@@ -20,6 +20,23 @@ approval is worth one point. Add up the checkmarks; **whoever has the most
 wins.** No ranking, no scores, no runoff: a normal ballot with the "vote for
 only one" restriction removed.
 
+## The ballot
+
+![Approval ballot: one bubble per candidate — "Vote for ALL candidates you approve of"; this voter approves Andre, Carmen, and David](img/approval_ballot_single_bubble.png)
+
+A standard Approval ballot (mockups from the
+[Equal Vote Approval page](https://www.equal.vote/approval)): one bubble per
+candidate, mark everyone you approve. It can look identical to a traditional
+ballot — only the "vote for one" instruction changes.
+
+![Approval ballot, Yes/No variant: an explicit Yes and No bubble per candidate; this voter marks Yes for Andre, Carmen, David and No for Blake, Erin](img/approval_ballot_yes_no_double_bubble.png)
+
+The **Yes / No ("double bubble") variant**: every candidate gets an explicit
+Yes and No bubble, so a blank is distinguishable from a deliberate "No." This
+is the ballot-security hardening discussed in
+[honest limits §6](approval_honest_limits.md) — with single bubbles, filling
+in *extra* bubbles on someone else's ballot would be undetectable.
+
 That one change fixes Choose-One's core failure. Under Choose-One, approving your
 sincere favorite (a long shot) *costs* you a vote against the front-runner you'd
 settle for — the **spoiler / vote-splitting** trap. Under Approval you simply

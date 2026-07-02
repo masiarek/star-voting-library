@@ -57,7 +57,9 @@ Choose-One ballot the same tampering voids the ballot, which is at least visible
 workers should never be alone with ballots under any method, but Approval warrants extra
 chain-of-custody care. A known mitigation, noted on the
 [Equal Vote Approval page](https://www.equal.vote/approval): print an explicit **Yes / No**
-bubble pair per candidate, so a blank is distinguishable from a deliberate "No."
+bubble pair per candidate, so a blank is distinguishable from a deliberate "No" —
+see the [ballot mockups](approval_voting.md#the-ballot) on the overview page
+([double-bubble image](img/approval_ballot_yes_no_double_bubble.png)).
 
 ## Keep it in perspective
 
