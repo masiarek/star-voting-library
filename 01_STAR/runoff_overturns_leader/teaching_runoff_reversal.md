@@ -32,6 +32,16 @@ A bonus: because your runoff vote is set by the scores you already gave, you **n
 have to lowball** a rival to protect your favorite. Honest scoring is also optimal
 strategy.
 
+Two reassurances worth saying out loud. First, when the second-highest scorer wins the
+runoff it's because they had the stronger **base of preference** — and in practice that
+only happens when the two finalists' *totals are close*, so **both are broadly-supported
+candidates who'd make good winners**; the runoff just picks the majority-preferred one.
+Second, the deeper framing: the Scoring Round is **utilitarian** (total support) and the
+runoff is **majoritarian** (whom more voters prefer). Rather than force a choice between
+those values, STAR answers **"both"** — a winner with broad support *and* a head-to-head
+majority. (Notably, STAR tends to score *better* on utility in simulations than plain
+Score voting, which has only the utilitarian half.)
+
 ## The two voter patterns that cause a reversal
 
 Almost every reversal is one of these (both are the same lesson — stars measure

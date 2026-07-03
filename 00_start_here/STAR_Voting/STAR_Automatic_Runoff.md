@@ -103,6 +103,24 @@ in doubt. Full treatment, including how BetterVoting shows the same number two w
 [Runoff percentages — two denominators](runoff_percentages.md). What an Equal
 Support ballot is (and that it isn't an abstention): [`GLOSSARY`](../GLOSSARY.md).
 
+### Why this differs from RCV-IRV — no exhausted ballots
+
+This is the runoff's quiet "ah-ha," and the cleanest way to teach it is as a **three-way
+sort**: every ballot lands in one of three buckets — *prefers finalist A*, *prefers
+finalist B*, or *Equal Support* (scored the two the same). Crucially, **all three buckets
+are counted** — the Equal-Support ballots stay in the total; they simply don't tip the
+A-vs-B margin.
+
+Contrast RCV-IRV. If your ballot ranks *neither* of the final two candidates, it's
+**[exhausted](../RCV_IRV/RCV_IRV_exhausted_ballots.md)** — dropped from the denominator
+entirely, so the winner needs only a majority of the *surviving* ballots (on average
+over 10% of RCV-IRV ballots exhaust). In STAR the equivalent voter — no preference between
+the finalists — is **not** discarded: their scores were fully counted in the Scoring
+Round, and in the runoff they're recorded as an explicit *"no preference between these
+two"* rather than made to disappear. So STAR's winner is "the finalist **more voters
+prefer**," never "a majority of whoever's left." Every ballot keeps a voice —
+[one person, one vote](equally_weighted_vote.md).
+
 ## Variation 1 — Runoff Reversal (the score leader loses)
 
 Usually the score leader also wins the runoff. **Sometimes it doesn't** — and that's
