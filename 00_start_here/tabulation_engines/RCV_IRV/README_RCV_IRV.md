@@ -11,8 +11,8 @@ ballots, non-monotonicity — none of which are STAR's. In this repo, ranked bal
 tabulated by a **separate** engine; STAR / score files never touch it, and vice versa.
 
 This folder is the RCV-IRV slot in the tabulation-engines hub, next to
-[`../BV/`](../BV/README_BV.md) (BetterVoting's display) and
-[`../LH_starvote/`](../LH_starvote/reading_a_star_report.md) (the LH STAR report). The
+[the BetterVoting reader](../BV/README_BV.md) (BetterVoting's display) and
+[reading a STAR report](../LH_starvote/reading_a_star_report.md) (the LH STAR report). The
 substantive RCV-IRV explainers live with the other concept pages:
 
 - [RCV is a confusing name](../../RCV_IRV/RCV-IRV-confusing-name.md)

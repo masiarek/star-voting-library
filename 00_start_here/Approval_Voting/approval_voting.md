@@ -5,10 +5,10 @@ approve (**1**) and leave the rest (**0**); the most-approved candidate wins.
 It's Score voting at **one-bit resolution** — a big jump in expressiveness over
 "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case [`04_Approval/`](../../04_Approval/README_04_Approval.md)
+→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/README_04_Approval.md)
 ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) ·
 the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in
-[`method_comparisons/black_curtain/`](../../method_comparisons/black_curtain/README_black_curtain.md)
+[the Black Curtain set](../../method_comparisons/black_curtain/README_black_curtain.md)
 (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) ·
 [multi-winner Approval](approval_multiwinner.md) · Curriculum: [301.4](../CURRICULUM.md).
 
@@ -135,7 +135,7 @@ the quicker path. Either way, the urgent step is off Choose-One.
 
 - [Approval — Honest Limits](approval_honest_limits.md) — the critique companion
 - [Approval — Multi-Winner](approval_multiwinner.md) — bloc counting, SPAV/PAV
-- [`04_Approval/`](../../04_Approval/README_04_Approval.md) — the method's example folder
+- [the Approval examples](../../04_Approval/README_04_Approval.md) — the method's example folder
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Black Curtain](../../method_comparisons/black_curtain/README_black_curtain.md) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)

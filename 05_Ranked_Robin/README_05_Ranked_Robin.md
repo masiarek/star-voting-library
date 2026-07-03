@@ -11,7 +11,7 @@ center squeeze — and elects the Condorcet winner whenever one exists.
 | [`condorcet_vs_ranked_robin/`](condorcet_vs_ranked_robin/README_condorcet_vs_ranked_robin.md) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 
 Same ballot, different count: RCV-IRV (elimination rounds) lives in
-[`../other_methods/`](../other_methods/README_other_methods.md) and inside the comparison sets.
-Concept docs: [`../00_start_here/RCV_Ranked_Robin/`](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).
+[other methods](../other_methods/README_other_methods.md) and inside the comparison sets.
+Concept docs: [Ranked Robin](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).
 
 # file: README_05_Ranked_Robin.md

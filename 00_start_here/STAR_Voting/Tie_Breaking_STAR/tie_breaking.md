@@ -110,7 +110,7 @@ you build or read a close example, check whether the tied candidates actually ha
 max-score votes before crediting the outcome to five-star.
 
 Runnable cases (all four verified in the test suite):
-[`01_STAR/tie_break_dead_rung/`](../../../01_STAR/tie_break_dead_rung/README_tie_break_dead_rung.md)
+[the dead-rung tie-break cases](../../../01_STAR/tie_break_dead_rung/README_tie_break_dead_rung.md)
 — five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff.
 
 ---

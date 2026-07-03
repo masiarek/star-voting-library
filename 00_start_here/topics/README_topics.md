@@ -1,6 +1,6 @@
 # Concepts — by topic (cross-method view)
 
-The concept pages (now directly under [`00_start_here/`](../README_00_start_here.md)) are organized
+The concept pages (now directly under [00_start_here](../README_00_start_here.md)) are organized
 **by method** (RCV-IRV, STAR, Ranked Robin…), because that's how most people arrive. But
 several ideas cut *across* methods, and are easier to compare side by side. This folder holds
 **topic hubs**: thin index pages that gather one cross-method idea and link out to each

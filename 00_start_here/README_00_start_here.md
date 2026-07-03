@@ -14,7 +14,7 @@ the top level, IRV-specific problems live in [`RCV_IRV/`](RCV_IRV/), and STAR's 
 properties live in [`STAR_Voting/`](STAR_Voting/).
 
 **Two ways to browse.** The authoritative pages are organized **by method** (below). Ideas
-that cut across methods also have a **by-topic** view in [`topics/`](topics/README_topics.md) —
+that cut across methods also have a **by-topic** view in [the topics index](topics/README_topics.md) —
 thin hubs that link to each method's treatment of one idea (so you can browse by topic in
 the GitHub file tree, not just by method). First hub: [Summability](topics/summability/README_summability.md).
 

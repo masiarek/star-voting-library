@@ -15,5 +15,5 @@ For the worked pets example, BetterVoting's own screenshots live in
 [`../../STAR_Voting/runoff_percentages.md`](../../STAR_Voting/runoff_percentages.md).
 
 The matching **text** report — the same election counted by Larry Hastings' `starvote`
-engine — is in [`../LH_starvote/`](../LH_starvote/reading_a_star_report.md). Same
+engine — is in [reading a STAR report](../LH_starvote/reading_a_star_report.md). Same
 election, same winner, two reports.

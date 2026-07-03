@@ -65,8 +65,8 @@ python abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/app
 ```
 
 Same trade-off, score-ballot edition: Bloc STAR sweeps too
-([`02_STAR_Bloc/`](../../02_STAR_Bloc/README_02_STAR_Bloc.md)); the
-proportional STAR methods fix it ([`03_STAR_PR/`](../../03_STAR_PR/README_03_STAR_PR.md)).
+([Bloc STAR](../../02_STAR_Bloc/README_02_STAR_Bloc.md)); the
+proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md)).
 Concepts: [Approval — Multi-Winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
 
 # file: README_approval_multiwinner.md

@@ -7,7 +7,7 @@ total score wins, no runoff. Watch Range and STAR **part ways** exactly where th
 runoff matters.*
 
 → Method overview: [Range / Score voting](../../00_start_here/Range_Voting/range_voting.md) ·
-Engine: [`Range_tabulation_engine/`](../../Range_tabulation_engine/README_range_tabulation_engine.md) ·
+Engine: [the Range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md) ·
 The set's STAR write-up: [`README_black_curtain.md`](README_black_curtain.md).
 
 ---

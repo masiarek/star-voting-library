@@ -8,7 +8,7 @@ ballot complexity.
 
 Cases live in [`_main/`](_main/), starting with
 [`approval_101_c3_b5.yaml`](_main/approval_101_c3_b5.yaml). Multi-winner (bloc)
-Approval has its own folder: [`multiwinner/`](multiwinner/README_approval_multiwinner.md)
+Approval has its own folder: [multi-winner Approval](multiwinner/README_approval_multiwinner.md)
 — the same ballot, top-`N` approved win, and a worked majority-sweep example.
 
 Approval also appears throughout the comparison sets — that's where its

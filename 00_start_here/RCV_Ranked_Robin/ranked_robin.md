@@ -79,7 +79,7 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 
 ## Now you can tabulate it — the `pref_voting` engine
 
-The repo's new [`pref_voting_tabulation_engine/`](../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
+The repo's new [the pref_voting engine](../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
 computes this method on any example election, under its **academic name, Copeland**.
 
 > **The LH engine now tabulates Ranked Robin first-class.** Set

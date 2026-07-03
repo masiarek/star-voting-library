@@ -8,13 +8,13 @@ than one bit, and STAR without the runoff.*
 → **Run it:** the 101 case [`other_methods/_main/range_101_c3_b5.yaml`](../../other_methods/_main/range_101_c3_b5.yaml)
 ([tabulated](../../other_methods/_main/_main_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) ·
 the **Black Curtain, read as Range** → [`black_curtain_range.md`](../../method_comparisons/black_curtain/black_curtain_range.md) ·
-Engine: [`Range_tabulation_engine/`](../../Range_tabulation_engine/README_range_tabulation_engine.md)
+Engine: [the Range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md)
 (pref_voting). · Family: [Approval](../Approval_Voting/approval_voting.md) ·
 [STAR](../STAR_Voting) · [fidelity ladder](../scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches
 > *about* it rather than promoting it — it lives in
-> [`other_methods/`](../../other_methods/README_other_methods.md), not the
+> [other methods](../../other_methods/README_other_methods.md), not the
 > numbered root folders. The honest comparison is the point.
 
 ---

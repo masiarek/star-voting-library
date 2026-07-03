@@ -9,7 +9,7 @@ elimination — just sum the grades.
 This wraps **[pref_voting](https://pref-voting.readthedocs.io)** (Eric Pacuit)
 via its native `grade_methods.score_voting`. pref_voting was chosen over Votelib
 and VoteKit because it is **already this repo's independent cross-check engine**
-(see [`../pref_voting_tabulation_engine/`](../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md))
+(see [the pref_voting engine](../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md))
 — so range tabulation adds **no new dependency** and reuses an actively-maintained,
 well-tested library. Range itself is trivial ("sum the scores"), so we also
 compute the totals **by hand and assert the two agree**: the result is
@@ -42,7 +42,7 @@ See the teaching page [`00_start_here/Range_Voting/range_voting.md`](../00_start
 for the method overview, pros/cons, and ballot examples, and the
 [Black Curtain read as Range](../method_comparisons/black_curtain/black_curtain_range.md).
 Range is a **non-EVC** method, so its examples live in
-[`../other_methods/`](../other_methods/README_other_methods.md), not a numbered
+[other methods](../other_methods/README_other_methods.md), not a numbered
 root folder.
 
 # file: README_range_tabulation_engine.md

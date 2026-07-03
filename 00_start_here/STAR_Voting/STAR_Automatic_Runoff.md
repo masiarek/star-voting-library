@@ -132,7 +132,7 @@ candidate different from the winner?"* here.)
 the plain phrasing "**the runoff overturns the score leader**" (it avoids colliding
 with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-candidate
 progression, plus a voter-facing explanation:
-[`runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
+[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
 Teaching it (step-by-step, why it's good, devil's-advocate Q&A):
 [`teaching_runoff_reversal.md`](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) ·
