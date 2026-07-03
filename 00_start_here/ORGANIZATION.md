@@ -64,7 +64,10 @@ the numbered, front-rank folders**; other methods appear mainly as contrast
 material.
 
 ```
-00_start_here/        lessons, glossary, curriculum, tips, conventions (Markdown)
+00_start_here/        lessons, glossary, curriculum, tips, conventions (Markdown);
+                      also the concept pages by method (STAR_Voting/, RCV_IRV/, …)
+                      and the Larry↔Adam conversation scripts, indexed in
+                      conversation_scripts.md
 01_STAR/              single-winner STAR — the headline method
   _main/              loose files that belong to no themed set
   _main/_main_tabulated/          their generated _tabulated.txt mirrors
@@ -74,14 +77,20 @@ material.
 03_STAR_PR/           proportional STAR (sss / allocated / rrv)
 04_Approval/          Approval Voting
 05_Ranked_Robin/      Ranked Robin (RCV-RR / Copeland)
+06_Other/             non-EVC reference methods, each in its own subfolder —
+  RCV_IRV/            RCV-IRV example + its engine (RCV_IRV_tabulation_engine/)
+  STV/                STV example
+  Range/              Range example + its engine (Range_tabulation_engine/)
 method_comparisons/   SAME ballots, DIFFERENT methods — black_curtain,
                       center_squeeze, monotonicity, split_voting, summability,
-                      paradoxes_and_whoops, BV_Library (matched sets stay together)
-06_Other/        standalone non-EVC reference cases (RCV-IRV, STV…)
-00_start_here/…          Larry↔Adam conversation scripts now live beside their topics
-                      (STAR_Voting/, RCV_IRV/, 00_start_here/), indexed in conversation_scripts.md
-STARVote_LH_tabulation_engine/   the engine + tools
-06_Other/RCV_IRV/RCV_IRV_tabulation_engine/       the RCV-IRV engine
+                      paradoxes_and_whoops, BV_Library, divergence_review
+YAML_library/         BetterVoting JSON→YAML converter + positive/negative fixtures
+simulations/          Monte-Carlo scripts (favorite-betrayal / runoff-reversal rates)
+_demo_dropbox/        watch-folder demo (drop a BV export, get YAML + tabulation)
+STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
+  tools_adam/         Adam's tooling — the build scripts (scripts/), the
+                      pref_voting cross-check engine, find_*divergence.py
+abcvoting_tabulation_engine/     multi-winner Approval (ABC) cross-check (optional)
 ```
 
 - **`_tabulated` output nests INSIDE the source file's own folder** as
