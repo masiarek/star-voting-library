@@ -6,7 +6,7 @@
 
 "Ranked voting" is not one ballot rule. Ranked ballots differ along two independent axes, and the differences change both what you can say and who wins:
 
-- **Strict vs. weak.** A **strict** ranking forbids ties — every candidate must get a distinct place (1, 2, 3…). A **weak** ranking allows **equal ranks** — you can say "I like these two the same." (Formally: a weak order / "order with ties.")
+- **Strict vs. weak.** A **[strict](strict_ranks.md)** ranking forbids ties — every candidate must get a distinct place (1, 2, 3…). A **[weak](weak_ranks.md)** ranking allows **equal ranks** — you can say "I like these two the same." (Formally: a weak order / "order with ties.")
 - **Complete vs. incomplete.** A **complete** ballot ranks everyone; an **incomplete** (truncated) ballot ranks only some. Whether you may *skip* a rank, and what happens if you do, is a per-method rule.
 
 The standard data taxonomy (PrefLib) names the four combinations: **SOC/SOI** (strict, complete/incomplete) and **TOC/TOI** (ties allowed, complete/incomplete).
@@ -48,6 +48,7 @@ Forcing a **strict** order makes voters invent distinctions they don't feel — 
 
 ## Related concepts in this library
 
+- [Strict ranks](strict_ranks.md) and [weak ranks](weak_ranks.md) — the two on their own pages
 - [Scores vs. ranks — don't confuse ranks and ratings](scores_vs_ranks.md)
 - [Scoring methods vs. ranked voting](../scoring-methods-vs-ranked-voting.md)
 - [RCV vs. IRV vs. RCV-IRV — terminology](../RCV_IRV/RCV-IRV-confusing-name.md)
