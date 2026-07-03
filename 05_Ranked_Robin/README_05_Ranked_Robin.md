@@ -7,7 +7,7 @@ center squeeze — and elects the Condorcet winner whenever one exists.
 
 | Where | What |
 |---|---|
-| [`_main/`](_main/_main_pages/ranked_robin_consensus_center.md) | the worked intro: RR elects the consensus candidate IRV eliminates |
+| [`_main/`](_main/README_main.md) | the worked intro: RR elects the consensus candidate IRV eliminates |
 | [`condorcet_vs_ranked_robin/`](condorcet_vs_ranked_robin/README_condorcet_vs_ranked_robin.md) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 
 Same ballot, different count: RCV-IRV (elimination rounds) lives in
