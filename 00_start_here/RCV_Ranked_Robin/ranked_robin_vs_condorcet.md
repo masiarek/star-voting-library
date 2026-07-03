@@ -3,7 +3,7 @@
 *A question that trips up almost everyone: aren't **Ranked Robin (RCV-RR)** and **Condorcet**
 the same thing? Almost — and the gap between them is the whole lesson.*
 
-→ Topic hub: [Condorcet efficiency](../topics/condorcet/README_condorcet.md) · cycles in depth:
+→ Topic hub: [Condorcet efficiency](../topics/condorcet/README.md) · cycles in depth:
 [`cycle_resolution.md`](cycle_resolution.md) · the method: [`ranked_robin.md`](ranked_robin.md)
 · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md)
 · **Level: Voting 301** — Curriculum [301.6](../CURRICULUM.md)
@@ -157,7 +157,7 @@ wasn't given.
 
 ## Related
 
-- [Condorcet efficiency — topic hub](../topics/condorcet/README_condorcet.md)
+- [Condorcet efficiency — topic hub](../topics/condorcet/README.md)
 - [Ranked Robin (the method)](ranked_robin.md) · [Cycle resolution](cycle_resolution.md)
 - [Which RCV-IRV?](../RCV_IRV/RCV_IRV_variants.md) — the BTR/Baldwin/Nanson variants are also Condorcet methods
 - Generator: `STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py`

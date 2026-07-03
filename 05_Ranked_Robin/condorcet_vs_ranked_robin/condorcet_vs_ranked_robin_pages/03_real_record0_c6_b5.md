@@ -90,9 +90,9 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 ## See also
 
-- [This set's lesson (README)](../README_condorcet_vs_ranked_robin.md) — the hand-written teaching context for every case in this folder
-- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [01_condorcet_winner](01_condorcet_winner.md) · [02_cycle_no_condorcet](02_cycle_no_condorcet.md)

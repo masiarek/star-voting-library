@@ -58,8 +58,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [This set's lesson (README)](../README_monotonicity.md) — the hand-written teaching context for every case in this folder
-- [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README_monotonicity.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [monotonicity_irv_after](monotonicity_irv_after.md) · [monotonicity_star_after](monotonicity_star_after.md) · [monotonicity_star_before](monotonicity_star_before.md)

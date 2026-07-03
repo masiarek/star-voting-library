@@ -7,7 +7,7 @@ glob specific folders, so we DON'T move files; we index them in place), reads ea
 file's `voting_method` and `num_winners`, and writes a Markdown catalog grouped by
 method to:
 
-    00_start_here/YAML_test_case_index/README_YAML_test_case_index.md
+    00_start_here/YAML_test_case_index/README.md
 
 Run from the repo root:   python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py
 A pytest (test_yaml_index_current.py) regenerates this and fails if the committed
@@ -26,7 +26,7 @@ def _find_repo(start):
         p = os.path.dirname(p)
     return os.path.dirname(os.path.abspath(start))
 REPO = _find_repo(__file__)  # robust: search upward for the repo root
-OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "README_YAML_test_case_index.md")
+OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "README.md")
 
 # Exclude generated mirrors, raw drops, and deliberately-malformed fixtures.
 EXCLUDE = ("/.venv/", "/.git/", "node_modules", "_tabulated", "_tabulation_engine",

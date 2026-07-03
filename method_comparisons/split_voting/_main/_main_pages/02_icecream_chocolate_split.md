@@ -110,8 +110,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Vote splitting (worked set)](../../README_split_voting.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Vote splitting (worked set)](../../README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [00_plurality_vs_majority](00_plurality_vs_majority.md) · [01_political_left_split](01_political_left_split.md) · [03_lunch_veggie_vs_meat](03_lunch_veggie_vs_meat.md) · [04_star_wars_vote_split](04_star_wars_vote_split.md) · [05a_residual_split_bullet-voting](05a_residual_split_bullet-voting.md) · [05b_residual_split_expressive-fix](05b_residual_split_expressive-fix.md)

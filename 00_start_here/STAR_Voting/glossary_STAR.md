@@ -19,7 +19,7 @@ criterion, spoiler / vote-splitting…) lives in the
 - **Runoff Reversal** — the Scoring-Round leader **loses** the Automatic Runoff to
   the finalist more voters prefer (the *score* winner ≠ the *STAR* winner). Not a
   malfunction — the runoff enforces majority preference. House term: "the runoff
-  overturns the score leader." → walkthrough [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)
+  overturns the score leader." → walkthrough [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md)
 - **Majority finish** — STAR's runoff guarantees the winner beats the runner-up
   among voters who expressed a preference between them.
 - **Three notions of "winner"** — Condorcet / Score / Runoff can name three

@@ -4,7 +4,7 @@
 reasonable definitions can point at **three different candidates** — and STAR's job
 is to choose among them on purpose, not by accident.
 
-→ Related: the simpler two-way case, [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)
+→ Related: the simpler two-way case, [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md)
 (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../GLOSSARY.md).
 
 ---

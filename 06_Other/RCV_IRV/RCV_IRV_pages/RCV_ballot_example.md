@@ -59,7 +59,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/RCV_IRV
 
 ## See also
 
-- [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README_center_squeeze.md)
-- [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README_monotonicity.md)
-- [Summability (topic hub)](../../../00_start_here/topics/summability/README_summability.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
+- [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README.md)
+- [Summability (topic hub)](../../../00_start_here/topics/summability/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

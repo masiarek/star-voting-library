@@ -9,7 +9,7 @@ of STAR (**S**core **T**hen **A**utomatic **R**unoff).
 → Round 1: [The Scoring Round](STAR_Scoring_Round.md)
 · the whole report, section by section: [Reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md)
 · the two-step count vs IRV: [Tabulation, step by step](../tabulation_star_vs_irv.md)
-· how it's displayed: [STAR Reporting](../STAR_reporting/README_STAR_reporting.md).
+· how it's displayed: [STAR Reporting](../STAR_reporting/README.md).
 
 ---
 
@@ -42,7 +42,7 @@ A **Runoff Reversal** is just *how much* and *how many* pointing at different
 candidates: the leader had more total support, but fewer voters prefer them
 head-to-head. It's the safeguard working, not a glitch. Worked examples, the voter
 patterns behind it, and how to teach it:
-[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
+[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md).
 
 ## What the round does
 
@@ -169,7 +169,7 @@ candidate different from the winner?"* here.)
 the plain phrasing "**the runoff overturns the score leader**" (it avoids colliding
 with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-candidate
 progression, plus a voter-facing explanation:
-[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
+[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md).
 Teaching it (step-by-step, why it's good, devil's-advocate Q&A):
 [`teaching_runoff_reversal.md`](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) ·
@@ -257,7 +257,7 @@ here honestly but explored calmly in **201/301**, not in a learner's first lesso
 
 | Variation | What happens | Page |
 |---|---|---|
-| Runoff Reversal | score leader loses the runoff | [`runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md) |
+| Runoff Reversal | score leader loses the runoff | [`runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/README.md) |
 | Exact tie | even split → tie-break ladder | [Tie-Breaking](Tie_Breaking_STAR/tie_breaking.md) |
 | Two candidates | runoff *is* the election | — |
 | Percentages | decided-voters denominator | [runoff percentages](runoff_percentages.md) |

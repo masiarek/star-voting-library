@@ -41,4 +41,4 @@ Want to *see* the ballots rather than read about them? [Alternate ballot styles]
 
 These four are the *vocabulary*. For what the choices actually do to outcomes, see the mechanism pages: [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md), [monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md), [summability](STAR_Voting/STAR_summability.md), [exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md), [residual vote-splitting](STAR_Voting/residual_vote_splitting.md), and [tabulation step by step](tabulation_star_vs_irv.md). For the two methods compared head-to-head, see [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
 
-And the *problem* all these methods are trying to fix: the [spoiler effect](spoiler_effect.md) and the [plurality (choose-one)](plurality.md) status quo it comes from. Front door & full index: [00_START_HERE](00_START_HERE.md) · [`README`](README_00_start_here.md).
+And the *problem* all these methods are trying to fix: the [spoiler effect](spoiler_effect.md) and the [plurality (choose-one)](plurality.md) status quo it comes from. Front door & full index: [00_START_HERE](00_START_HERE.md) · [`README`](README.md).

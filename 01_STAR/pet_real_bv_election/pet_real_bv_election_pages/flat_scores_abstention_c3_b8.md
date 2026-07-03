@@ -118,10 +118,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/pet_real
 
 ## See also
 
-- [This set's lesson (README)](../README_pet_real_bv_election.md) — the hand-written teaching context for every case in this folder
-- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README_ties.md)
-- [Runoff reversal (worked set)](../../runoff_overturns_leader/README_runoff_overturns_leader.md)
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
+- [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)

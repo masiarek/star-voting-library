@@ -92,9 +92,9 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [This set's lesson (README)](../README_paradoxes_and_whoops.md) — the hand-written teaching context for every case in this folder
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/Whoops_03_condorcet_cycle_rps.md) — its entry in the divergence review ledger
-- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [Whoops_01_tennessee_three_winners](Whoops_01_tennessee_three_winners.md) · [Whoops_02_star_misses_condorcet](Whoops_02_star_misses_condorcet.md) · [Whoops_04_ossipoff_centrist_irv](Whoops_04_ossipoff_centrist_irv.md) · [Whoops_05_brams_many_pathologies_irv](Whoops_05_brams_many_pathologies_irv.md)

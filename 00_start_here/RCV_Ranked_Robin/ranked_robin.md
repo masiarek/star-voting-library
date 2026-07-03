@@ -4,9 +4,9 @@
 
 → **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo)
 shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*;
-the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md) reports the
+the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the
 **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`).
-· Topic hub: [Summability](../topics/summability/README_summability.md).
+· Topic hub: [Summability](../topics/summability/README.md).
 
 ---
 
@@ -79,7 +79,7 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 
 ## Now you can tabulate it — the `pref_voting` engine
 
-The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
+The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md)
 computes this method on any example election, under its **academic name, Copeland**.
 
 > **The LH engine now tabulates Ranked Robin first-class.** Set
@@ -222,7 +222,7 @@ for STAR and RCV-IRV. Details:
 
 ## Related concept pages
 
-- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../topics/summability/README_summability.md))
+- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../topics/summability/README.md))
 - [Cycle resolution](cycle_resolution.md) — why Copeland is tie-prone, and why Minimax / Ranked Pairs / Schulze exist (they differ only on cycles)
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't

@@ -145,7 +145,7 @@ End Lesson 0 with a promise and a map:
 | **Edge case** | [unanimous ballots](../../01_STAR/_main/_main_pages/05a_c5_b3_unanimous-ballots.md) | Unanimous ballots — everyone agrees. |
 | **The payoff** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The classic Tennessee capital example. |
 
-Then [Bloc STAR](../../02_STAR_Bloc/README_02_STAR_Bloc.md) and [proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md) for the multi-winner methods.
+Then [Bloc STAR](../../02_STAR_Bloc/README.md) and [proportional STAR](../../03_STAR_PR/README.md) for the multi-winner methods.
 
 ---
 

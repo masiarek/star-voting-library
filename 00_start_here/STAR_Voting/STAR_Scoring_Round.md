@@ -102,7 +102,7 @@ crown the highest total, because a big total can come from a passionate minority
 **[Automatic Runoff](STAR_Automatic_Runoff.md)** then asks the majority-protecting
 question the total can't — *between these two, which do more voters prefer?* When the
 score leader also wins the runoff (the usual case) the rounds agree; when they don't,
-that's a [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
+that's a [Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md).
 Why STAR is built as this two-step hybrid: [STAR's hybrid nature](STAR_hybrid_nature.md);
 the three different "winners" a report can name: [three winner notions](STAR_three_winner_notions.md).
 
@@ -143,7 +143,7 @@ favorite.)
 come from a passionate **minority** (lots of 5s) while most voters rated that candidate
 low. That's the whole reason for the second step — see
 [Why a second step at all?](STAR_Automatic_Runoff.md#why-a-second-step-at-all) and
-[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md).
+[Runoff Reversal](../../01_STAR/runoff_overturns_leader/README.md).
 
 **"Can precincts add up their own subtotals?"** Yes — scoring-round totals are plain
 sums, so they're **summable**: precinct subtotals add to the statewide total, unlike

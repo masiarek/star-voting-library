@@ -89,8 +89,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [This set's lesson (README)](../README_summability_demo.md) — the hand-written teaching context for every case in this folder
-- [Summability (topic hub)](../../../00_start_here/topics/summability/README_summability.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Summability (topic hub)](../../../00_start_here/topics/summability/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [irv_combined](irv_combined.md) · [irv_district_A](irv_district_A.md) · [irv_district_B](irv_district_B.md) · [star_combined](star_combined.md) · [star_district_B](star_district_B.md)

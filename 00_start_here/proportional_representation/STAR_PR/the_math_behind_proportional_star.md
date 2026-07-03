@@ -1,13 +1,13 @@
 # The Math Behind Proportional STAR — Quotas, Apportionment, and Fair Division
 
-*The "graduate seminar" companion to [STAR-PR](README_STAR_PR.md). None of this is needed
+*The "graduate seminar" companion to [STAR-PR](README.md). None of this is needed
 to run or advocate for proportional STAR — you mainly need the **quota** and the
 **spend-a-quota / reweighting** intuition. But if you want to know **why** it's provably
 fair, you walk into apportionment theory, optimization, and fair-division (cooperative game)
 theory. This is a different branch of math than [Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md)
 — that's graph theory; this is apportionment + optimization.*
 
-→ The method pages: [STAR-PR](README_STAR_PR.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) ·
+→ The method pages: [STAR-PR](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) ·
 Glossary: [`Proportional STAR`](../../GLOSSARY.md) ·
 **Level: Voting 301** — Curriculum [301.1](../../CURRICULUM.md) (proportional STAR),
 [301.4](../../CURRICULUM.md) (limits & theory)
@@ -102,7 +102,7 @@ Remove the diminishing returns and the majority sweeps everything.
 
 To *use or advocate* STAR-PR you need **(a) the quota** and **(b) the spend-a-quota /
 deweighting intuition** — both already covered, with worked numbers, in
-[the STAR-PR page](README_STAR_PR.md). The JR/EJR/core/Thiele/Phragmén machinery is the
+[the STAR-PR page](README.md). The JR/EJR/core/Thiele/Phragmén machinery is the
 graduate seminar: it proves *why* the method is fair, but you can run and explain
 `allocated` / `sss` / `rrv` without it.
 
@@ -111,6 +111,6 @@ supported them — that one move is what turns scoring into *proportional* scori
 
 ## Related
 
-- [STAR-PR (the methods)](README_STAR_PR.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../README_proportional_representation.md)
+- [STAR-PR (the methods)](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../README.md)
 - Parallel deep-dive for single-winner: [The Math Behind Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md)
 - Glossary: [`Proportional STAR`](../../GLOSSARY.md)

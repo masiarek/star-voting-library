@@ -96,4 +96,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/03a
 
 ## See also
 
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

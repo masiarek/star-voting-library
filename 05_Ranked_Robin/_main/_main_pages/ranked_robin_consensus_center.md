@@ -70,6 +70,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 ## See also
 
-- [This set's lesson (README)](../README_main.md) — the hand-written teaching context for every case in this folder
-- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

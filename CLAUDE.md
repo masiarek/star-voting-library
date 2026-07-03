@@ -168,6 +168,13 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   printable, `video_script` = notes, never echoed); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
   see next bullet). See `ORGANIZATION.md`.
+- **Folder overview pages are named exactly `README.md`** (not `README_<folder>.md`).
+  GitHub only auto-renders a file named `README.md` in a folder's tree view, so each
+  folder's landing/overview page **must** be `README.md` — that's what makes the folder
+  show a friendly page instead of a bare file list. Keep the descriptive title in the
+  file's `# H1` (e.g. `# 01_STAR — single-winner STAR`). A folder may keep *secondary*
+  docs under descriptive names (e.g. `README_larry_hastings.md`, `FORK_NOTES.md`), but
+  the one overview is always `README.md`.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by

@@ -59,5 +59,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/_mai
 
 ## See also
 
-- [The Black Curtain (worked set)](../../../method_comparisons/black_curtain/README_black_curtain.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [The Black Curtain (worked set)](../../../method_comparisons/black_curtain/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

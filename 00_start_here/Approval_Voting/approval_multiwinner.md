@@ -6,13 +6,13 @@ easy as single-winner Approval, and exactly as **majoritarian**: a cohesive
 majority can sweep every seat. Proportional adaptations (SPAV, PAV) exist and
 trade that simplicity for fair minority representation.*
 
-→ **Run it / examples:** [multi-winner Approval](../../04_Approval/multiwinner/README_approval_multiwinner.md)
+→ **Run it / examples:** [multi-winner Approval](../../04_Approval/multiwinner/README.md)
 ([`approval_bloc_2seats_c4_b6.yaml`](../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml)) ·
 Overview: [Approval Voting](approval_voting.md) ·
 The same majoritarian-vs-proportional fork for score ballots:
-[Bloc STAR](../../02_STAR_Bloc/README_02_STAR_Bloc.md) vs
-[proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md) ·
-Concepts: [proportional representation](../proportional_representation/README_proportional_representation.md).
+[Bloc STAR](../../02_STAR_Bloc/README.md) vs
+[proportional STAR](../../03_STAR_PR/README.md) ·
+Concepts: [proportional representation](../proportional_representation/README.md).
 
 ---
 
@@ -88,8 +88,8 @@ One third of the electorate ends up with zero seats. Sometimes that's the
 design goal (an executive slate that should reflect the majority); for a
 representative body it usually isn't. This is the **same trade-off** as Bloc
 STAR vs Proportional STAR — see
-[Bloc STAR](../../02_STAR_Bloc/README_02_STAR_Bloc.md) and
-[proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md).
+[Bloc STAR](../../02_STAR_Bloc/README.md) and
+[proportional STAR](../../03_STAR_PR/README.md).
 
 ## Proportional adaptations: SPAV and PAV
 
@@ -120,7 +120,7 @@ adapted for proportional representation" among Approval's advantages.
 **Engine note:** the LH engine tabulates **bloc Approval only**
 (`voting_method: Approval_Multi_Winner`, `num_winners: ≥ 2`). The proportional
 rules are runnable too, via the
-[the abcvoting engine](../../abcvoting_tabulation_engine/README_abcvoting_tabulation_engine.md)
+[the abcvoting engine](../../abcvoting_tabulation_engine/README.md)
 wrapper around Martin Lackner's peer-reviewed
 [`abcvoting`](https://github.com/martinlackner/abcvoting) library. On the
 sweep example above, plain `av` sees the same 2–2 tie the LH engine breaks by
@@ -136,8 +136,8 @@ priority — but every proportional rule seats the minority's Cora *decisively*:
 ```
 
 The repo's other runnable proportional methods are the STAR-PR family
-([proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md)) and STV
-([other methods](../../06_Other/README_06_Other.md)).
+([proportional STAR](../../03_STAR_PR/README.md)) and STV
+([other methods](../../06_Other/README.md)).
 
 ## The literature's running example (Lackner & Skowron)
 
@@ -177,8 +177,8 @@ Ch. 4) if you want the theory under the demo.
 
 - [Approval Voting](approval_voting.md) — the single-winner overview
 - [Approval — Honest Limits](approval_honest_limits.md) — the threshold dilemma carries over to every seat
-- [multi-winner Approval](../../04_Approval/multiwinner/README_approval_multiwinner.md) — the runnable sweep example
-- [Proportional representation](../proportional_representation/README_proportional_representation.md) — why and how minorities earn seats
+- [multi-winner Approval](../../04_Approval/multiwinner/README.md) — the runnable sweep example
+- [Proportional representation](../proportional_representation/README.md) — why and how minorities earn seats
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — source for the advantages/adaptability framing
 - Lackner & Skowron, *Multi-Winner Voting with Approval Preferences* — [open access](https://doi.org/10.1007/978-3-031-09016-5); [`abcvoting`](https://github.com/martinlackner/abcvoting) is its companion library
 

@@ -105,10 +105,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [This set's lesson (README)](../README_black_curtain.md) — the hand-written teaching context for every case in this folder
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_03_c3_b5_polarized-on-cal.md) — its entry in the divergence review ledger
-- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)
-- [The Black Curtain (worked set)](../README_black_curtain.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [The Black Curtain (worked set)](../README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [Black_Curtain_01_c3_b5_hidden-consensus](Black_Curtain_01_c3_b5_hidden-consensus.md) · [Black_Curtain_01a_c3_b5_approval](Black_Curtain_01a_c3_b5_approval.md) · [Black_Curtain_02_c3_b5_near-clones](Black_Curtain_02_c3_b5_near-clones.md) · [Black_Curtain_04_c4_b5_four-candidates](Black_Curtain_04_c4_b5_four-candidates.md)

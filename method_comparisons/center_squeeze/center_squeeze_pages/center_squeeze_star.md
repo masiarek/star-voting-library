@@ -104,11 +104,11 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [This set's lesson (README)](../README_center_squeeze.md) — the hand-written teaching context for every case in this folder
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_star.md) — its entry in the divergence review ledger
-- [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README_center_squeeze.md)
-- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
-- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
+- [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [center_squeeze_irv](center_squeeze_irv.md) · [center_squeeze_voteline_1d](center_squeeze_voteline_1d.md)

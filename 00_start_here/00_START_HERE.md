@@ -24,7 +24,7 @@ result.
 
 ## Go deeper
 
-- **Same ballots, different methods** → [method_comparisons/](../method_comparisons/README_method_comparisons.md)
+- **Same ballots, different methods** → [method_comparisons/](../method_comparisons/README.md)
   (the Black Curtain, center squeeze, monotonicity, and the auto-generated
   cross-method divergence ledger).
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
