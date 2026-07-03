@@ -6,7 +6,7 @@ vote-splitting, monotonicity, summability, the Equal Vote criterion…) lives in
 
 - **Approval voting** — mark each candidate 0 or 1 (approve / not); the most
   approvals wins. Score voting at 1-bit resolution. → [`approval_voting.md`](approval_voting.md);
-  demo [`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)
+  demo [`approval_101_c3_b5`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md)
 - **Approval threshold ("where's my line?")** — the one hard choice an Approval
   ballot forces: how good must a candidate be to earn your approval. Shift the line
   and the result can change — Approval's central limitation.
