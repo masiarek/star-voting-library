@@ -109,9 +109,17 @@ nothing, and the **lot decides more often than the ladder's length suggests**. W
 you build or read a close example, check whether the tied candidates actually have
 max-score votes before crediting the outcome to five-star.
 
-Runnable cases (all four verified in the test suite):
+Mnemonic worth keeping: **"it counts fives, not fours"** — an equal or absent
+five-star count never steps down to the 4s, it drops to the lot. (akas for the
+term: broken / missing / empty / phantom rung.)
+
+Runnable cases (all verified in the test suite):
 [the dead-rung tie-break cases](../../../01_STAR/tie_break_dead_rung/)
-— five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff.
+— five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff,
+including the **cap ladder** (the same tie at cap 4 / 3 / 2, all falling to the
+lot). Spin up more with the
+[dead-rung scenario generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md)
+(`--rung alive|dead|tied`, `--cap`, `--adversarial-lot`).
 
 ---
 

@@ -28,6 +28,15 @@ criterion, spoiler / vote-splitting…) lives in the
 - **Tiebreak ladder** — resolves ties in each round: Scoring Round *pairwise →
   five-star → lot*; Runoff *score → five-star → lot*. "Five-star" counts votes of
   the scale maximum. Full detail: [STAR Tie-Breaking — The Full Chain](Tie_Breaking_STAR/tie_breaking.md).
+- **Five-star rung** — the ladder's second step: "most votes of score **5** (the
+  scale maximum)." It counts *only* 5s — it does **not** step down to 4s.
+- **Dead rung** — the five-star rung when no tied candidate scored a 5 (e.g. all
+  scores capped at 4): it reads `0–0`, separates nobody, and the tie **falls
+  through to the lot**. Equal *non-zero* five-star counts do the same. Mnemonics:
+  *"no fives, no rung — drop to the lot"* / *"it counts fives, not fours."* akas:
+  broken / missing / empty / phantom rung. → cases
+  [The "dead rung"](../../01_STAR/tie_break_dead_rung/) · generator
+  [`generate_dead_rung_scenarios.py`](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md)
 - **Quorum** — an opt-in *turnout* threshold (`eligible_voters` + `quorum`):
   enough of the eligible electorate must participate or no winner is declared.
   → [Quorum — did enough of the electorate show up?](../quorum.md)
