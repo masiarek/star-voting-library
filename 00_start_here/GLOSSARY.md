@@ -1,8 +1,30 @@
-# STAR Voting — Glossary
+# Glossary — voting methods & criteria
 
-One-line definitions for the keywords used across these lessons. Grouped from
-beginner vocabulary to advanced theory. Most entries end with **→** quick jumps to
-the test-case YAML (demo) and/or the interview episode that show the term in action.
+One-line definitions for the keywords used across these lessons — STAR and every
+method it's compared against. Grouped from beginner vocabulary to advanced theory.
+Most entries end with **→** quick jumps to the test-case YAML (demo) and/or the
+interview episode that show the term in action.
+
+> **Why one glossary?** Most of the vocabulary below — monotonicity, Condorcet,
+> summability, center squeeze, vote-splitting, the Equal Vote criterion — is the
+> *shared* language used to *compare* methods, so it doesn't belong to any single
+> method. Method-specific terms are grouped by method (STAR mechanics; Other
+> methods) with stable anchors, so a method page can deep-link to just its slice.
+
+## Per-method glossaries
+
+Method-specific terms also live next to each method, cross-referencing the shared
+vocabulary here:
+
+- [**STAR**](STAR_Voting/glossary_STAR.md) — scoring round, finalists, automatic runoff, Equal Support, runoff reversal, Bloc / Proportional STAR
+- [**Approval**](Approval_Voting/glossary_approval.md) — the approval line, double-bubble, SPAV/PAV
+- [**Range / Score**](Range_Voting/glossary_range.md) — total-score win, exaggeration strategy, scale granularity
+- [**Ranked Robin & Condorcet**](RCV_Ranked_Robin/glossary_ranked_robin.md) — Copeland, cycles, Ranked Pairs / Schulze / Minimax
+- [**RCV-IRV**](RCV_IRV/glossary_rcv_irv.md) — IRV, exhausted ballots, center squeeze, STV, Hare
+
+The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, the
+Equal Vote criterion, spoiler / vote-splitting…) stay below — they're the language
+for *comparing* methods, so they belong to no single one.
 
 ## Core vocabulary
 

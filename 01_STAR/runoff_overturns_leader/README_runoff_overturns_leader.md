@@ -89,22 +89,27 @@ Each file is a tiny, self-contained election you can run through the engine. The
 built so the score-round leader **loses** the runoff — except the last one, which is
 the control case where the leader **wins** (so you can see the runoff isn't rigged).
 
-| File | Field | What happens |
-|------|-------|--------------|
-| [`01a_c3_b3_more-stars-fewer-voters`](01a_c3_b3_more-stars-fewer-voters.yaml) | 3 cand, 3 voters | The atom: Almond leads 13 stars, **Brownie** wins the runoff 2–1 |
-| [`01b_c3_b9_overturn-holds-at-scale`](01b_c3_b9_overturn-holds-at-scale.yaml) | 3 cand, 9 voters | Same election, bigger crowd: Almond leads 39–33, **Brownie** wins 6–3 (67/33) |
-| [`02_c5_b5_leader-overturned`](02_c5_b5_leader-overturned.yaml) | 5 cand, 5 voters | Austin leads 22 stars, **Boston** (the broad compromise) wins the runoff 3–2 |
-| [`03_c7_b3_ice-cream-live`](03_c7_b3_ice-cream-live.yaml) | 7 cand, 3 voters | The real race: ChocoDrk leads 9, **ChocoAlm** wins 2–1 |
-| [`04_c4_b3_runoff-confirms-leader`](04_c4_b3_runoff-confirms-leader.yaml) | 4 cand, 3 voters | **Control:** Blue leads *and* wins — the runoff confirms the leader |
-| [`05_c3_b5_low-scores-bv1265`](05_c3_b5_low-scores-bv1265.yaml) | 3 cand, 5 voters | A *real* BetterVoting election with all-low scores: C leads (7), **A** wins the runoff 3–2 |
+The **Page** (left) is the readable write-up with ballots + full results; the raw
+**`.yaml`** (right) is the tabulatable source.
+
+| Page (read this) | Field | What happens | src |
+|------|-------|--------------|:--:|
+| [01a — more stars, fewer voters](runoff_overturns_leader_pages/01a_c3_b3_more-stars-fewer-voters.md) | 3 cand, 3 voters | The atom: Almond leads 13 stars, **Brownie** wins the runoff 2–1 | [`.yaml`](01a_c3_b3_more-stars-fewer-voters.yaml) |
+| [01b — overturn holds at scale](runoff_overturns_leader_pages/01b_c3_b9_overturn-holds-at-scale.md) | 3 cand, 9 voters | Same election, bigger crowd: Almond leads 39–33, **Brownie** wins 6–3 (67/33) | [`.yaml`](01b_c3_b9_overturn-holds-at-scale.yaml) |
+| [02 — leader overturned](runoff_overturns_leader_pages/02_c5_b5_leader-overturned.md) | 5 cand, 5 voters | Austin leads 22 stars, **Boston** (the broad compromise) wins the runoff 3–2 | [`.yaml`](02_c5_b5_leader-overturned.yaml) |
+| [03 — ice-cream, live](runoff_overturns_leader_pages/03_c7_b3_ice-cream-live.md) | 7 cand, 3 voters | The real race: ChocoDrk leads 9, **ChocoAlm** wins 2–1 | [`.yaml`](03_c7_b3_ice-cream-live.yaml) |
+| [04 — runoff confirms leader](runoff_overturns_leader_pages/04_c4_b3_runoff-confirms-leader.md) | 4 cand, 3 voters | **Control:** Blue leads *and* wins — the runoff confirms the leader | [`.yaml`](04_c4_b3_runoff-confirms-leader.yaml) |
+| [05 — low scores (BV1265)](runoff_overturns_leader_pages/05_c3_b5_low-scores-bv1265.md) | 3 cand, 5 voters | A *real* BetterVoting election with all-low scores: C leads (7), **A** wins the runoff 3–2 | [`.yaml`](05_c3_b5_low-scores-bv1265.yaml) |
 
 Two more, in the main folder, push the field even wider:
 
-- [`../06b_c9_runoff-overturns-leader.yaml`](../_main/06b_c9_runoff-overturns-leader.yaml) —
-  nine candidates: Andre leads with 9 stars, **Carmen** wins the runoff (Carmen is also
-  the candidate who beats every other one-on-one).
-- [`../06a_c9_b3_large-field-equal-support.yaml`](../_main/06a_c9_b3_large-field-equal-support.yaml) —
-  another nine-candidate field where the runoff **confirms** the leader.
+- [**06b — nine-candidate overturn**](../_main/_main_pages/06b_c9_runoff-overturns-leader.md)
+  ([`.yaml`](../_main/06b_c9_runoff-overturns-leader.yaml)) — nine candidates: Andre leads
+  with 9 stars, **Carmen** wins the runoff (Carmen is also the candidate who beats every
+  other one-on-one).
+- [**06a — nine-candidate confirm**](../_main/_main_pages/06a_c9_b3_large-field-equal-support.md)
+  ([`.yaml`](../_main/06a_c9_b3_large-field-equal-support.yaml)) — another nine-candidate
+  field where the runoff **confirms** the leader.
 
 ## Why it starts at three candidates
 

@@ -157,14 +157,25 @@ def render(rows):
     for m in seen:
         items = sorted(by_method[m], key=lambda r: (r["nw"], r["dir"], r["name"]))
         out.append(f"## {METHOD_LABEL.get(m, m)}  ({len(items)})\n")
-        out.append("| File | Folder | Winners | Title / expected |")
-        out.append("|------|--------|:------:|------------------|")
+        out.append("| Case (page) | Folder | Winners | Title / expected | src |")
+        out.append("|------|--------|:------:|------------------|:--:|")
         for r in items:
-            link = f"[`{r['name']}`](../../{r['rel']})"
+            # House rule: lead with the generated .md page (reader-friendly);
+            # demote the raw .yaml to a secondary 'src' link. Fall back to the
+            # yaml as the primary link for files that have no generated page.
+            stem = r["name"].rsplit(".", 1)[0]
+            pdir = r["dir"].split("/")[-1] + "_pages"
+            page_rel = f"{r['dir']}/{pdir}/{stem}.md"
+            if os.path.exists(os.path.join(REPO, page_rel)):
+                link = f"[`{stem}`](../../{page_rel})"
+                src = f"[`.yaml`](../../{r['rel']})"
+            else:
+                link = f"[`{r['name']}`](../../{r['rel']})"
+                src = "—"
             note = r["title"] or ""
             if r["expected"]:
                 note = (note + " " if note else "") + f"→ _{r['expected']}_"
-            out.append(f"| {link} | `{r['dir']}/` | {r['nw']} | {note} |")
+            out.append(f"| {link} | `{r['dir']}/` | {r['nw']} | {note} | {src} |")
         out.append("")
     return "\n".join(out).rstrip() + "\n"
 
