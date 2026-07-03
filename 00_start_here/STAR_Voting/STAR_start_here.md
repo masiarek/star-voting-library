@@ -79,6 +79,10 @@ counts as **"no preference"** (what this tool labels **Equal Support**) — a
 5/5 means "either is great," a 0/0 means "I dislike both equally." If you do
 have a preference, it's best to show it.
 
+→ The STAR ballot itself, and the eight ways you can honestly fill it out:
+[the STAR ballot & voting styles](STAR_ballot_voting_styles.md). See all three ballot
+styles (ranking / yes-no / scoring) side by side: [alternate ballot styles](../ballot_styles.md).
+
 ---
 
 ## Why TWO rounds and not just the scores? (the conceptual heart)
