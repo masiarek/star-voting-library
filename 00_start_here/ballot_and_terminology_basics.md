@@ -1,10 +1,12 @@
-# Ballot & Terminology Basics — Start Here
+# Ballot & Terminology Basics
 
-*A short reading path through the four ideas people most often get wrong about voting methods. Read in order, or jump to whichever myth you're trying to clear up.*
+*The four ideas people most often get wrong about voting methods — a short reading path. Read in order, or jump to whichever myth you're clearing up.*
+
+→ New to the library? The front door is [**00_START_HERE**](00_START_HERE.md). This page is the **ballot-types & terminology primer** — the cluster of confusion hiding behind the word "RCV." For the deeper "what is a ballot vs. a count" foundation, see [What is a voting method?](what_is_a_voting_method.md).
 
 ![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](img/star_ballot_example.png)
 
-*That's a **score** ballot — you rate each candidate 0–5 (order **and** strength), equal scores are allowed, and a blank counts as 0. It is **not** a ranked ballot. Keeping those straight is exactly what myths 2 and 3 below are about.*
+*That's a **[score ballot](scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), [equal scores are allowed](GLOSSARY.md) (both a 5 = [Equal Support](GLOSSARY.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](STAR_Voting/STAR_Automatic_Runoff.md)).*
 
 ---
 
@@ -19,10 +21,10 @@ Most confusion about "RCV" comes from four mix-ups: a slippery name, mistaking s
 The core ballot distinction. A **rank** captures order only ("which do you prefer?"); a **score/rating** captures order *and* strength ("how much?"). Relative vs. absolute preference — and why they can crown different winners.
 
 **3. [Scoring methods aren't RCV](scoring-methods-vs-ranked-voting.md)**
-Approval and STAR are often lumped under "RCV," but they don't use ranked ballots at all — they're scoring (cardinal) methods, outside the ranked-voting family entirely.
+[Approval](Approval_Voting/approval_voting.md) and [STAR](STAR_Voting/STAR_start_here.md) are often lumped under "RCV," but they don't use ranked ballots at all — they're scoring (cardinal) methods, outside the ranked-voting family entirely.
 
 **4. [Strict vs. weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)**
-Even among ranked methods, the rules differ. Many allow **equal ranks** and compare candidates **head-to-head** — RCV-IRV does **neither**. Clears up the most common false assumptions about RCV ballots.
+Even among ranked methods, the rules differ. Many allow **[equal ranks](scores_and_ranks/weak_ranks.md)** and compare candidates **[head-to-head](RCV_Ranked_Robin/ranked_robin.md)** (that's [Ranked Robin](RCV_Ranked_Robin/ranked_robin.md) / Condorcet) — [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md) does **neither**. Clears up the most common false assumptions about RCV ballots.
 
 ## One-screen summary
 
@@ -37,4 +39,6 @@ Even among ranked methods, the rules differ. Many allow **equal ranks** and comp
 
 Want to *see* the ballots rather than read about them? [Alternate ballot styles](ballot_styles.md) puts this same cast (Andre, Blake, Carmen, David, Ella) on a ranking, a yes/no, and a scoring ballot side by side, so you can watch what each style keeps and drops.
 
-These four are the *vocabulary*. For what the choices actually do to outcomes, see the mechanism pages: [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md), [monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md), [summability](STAR_Voting/STAR_summability.md), [exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md), [residual vote-splitting](STAR_Voting/residual_vote_splitting.md), and [tabulation step by step](tabulation_star_vs_irv.md). For the two methods compared head-to-head, see [RCV-IRV vs. STAR](rcv_irv_vs_star.md). Full index: [`README.md`](README_00_start_here.md).
+These four are the *vocabulary*. For what the choices actually do to outcomes, see the mechanism pages: [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md), [monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md), [summability](STAR_Voting/STAR_summability.md), [exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md), [residual vote-splitting](STAR_Voting/residual_vote_splitting.md), and [tabulation step by step](tabulation_star_vs_irv.md). For the two methods compared head-to-head, see [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
+
+And the *problem* all these methods are trying to fix: the [spoiler effect](spoiler_effect.md) and the [plurality (choose-one)](plurality.md) status quo it comes from. Front door & full index: [00_START_HERE](00_START_HERE.md) · [`README`](README_00_start_here.md).

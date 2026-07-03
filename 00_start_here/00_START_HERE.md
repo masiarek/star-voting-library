@@ -29,6 +29,7 @@ result.
   cross-method divergence ledger).
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
+- **Ballot & terminology basics (the "RCV" confusions)** → [the four things people get wrong](ballot_and_terminology_basics.md).
 - **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
 - **The three ballot styles, side by side** → [alternate ballot styles](ballot_styles.md) (ranking vs. yes/no vs. scoring).
 - **The spoiler effect (and how each method handles it)** → [spoiler effect](spoiler_effect.md).
