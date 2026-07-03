@@ -7,11 +7,11 @@ center squeeze — and elects the Condorcet winner whenever one exists.
 
 | Where | What |
 |---|---|
-| [`_main/`](_main/) | `ranked_robin_consensus_center.yaml` — the worked intro: RR elects the consensus candidate IRV eliminates |
-| [`condorcet_vs_ranked_robin/`](condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
+| [`_main/`](_main/_main_pages/ranked_robin_consensus_center.md) | the worked intro: RR elects the consensus candidate IRV eliminates |
+| [`condorcet_vs_ranked_robin/`](condorcet_vs_ranked_robin/README_condorcet_vs_ranked_robin.md) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 
 Same ballot, different count: RCV-IRV (elimination rounds) lives in
-[`../other_methods/`](../other_methods/) and inside the comparison sets.
-Concept docs: [`../00_start_here/RCV_Ranked_Robin/`](../00_start_here/RCV_Ranked_Robin/).
+[`../other_methods/`](../other_methods/README_other_methods.md) and inside the comparison sets.
+Concept docs: [`../00_start_here/RCV_Ranked_Robin/`](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).
 
 # file: README_05_Ranked_Robin.md

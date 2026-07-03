@@ -16,11 +16,11 @@ result.
 
 | Method | Ballot | Page |
 |---|---|---|
-| **STAR** | score 0–5, then automatic runoff | [STAR_Voting/](STAR_Voting/) |
+| **STAR** | score 0–5, then automatic runoff | [STAR_Voting/](STAR_Voting/STAR_start_here.md) |
 | **Approval** | approve any number (0/1) | [Approval_Voting/](Approval_Voting/approval_voting.md) |
 | **Range / Score** | grade each; highest total wins | [Range_Voting/](Range_Voting/range_voting.md) |
 | **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [RCV_Ranked_Robin/](RCV_Ranked_Robin/ranked_robin.md) |
-| **RCV-IRV** | rank; instant runoff | [RCV_IRV/](RCV_IRV/) |
+| **RCV-IRV** | rank; instant runoff | [RCV_IRV/](RCV_IRV/RCV-IRV-Hare.md) |
 
 ## Go deeper
 
@@ -29,7 +29,7 @@ result.
   cross-method divergence ledger).
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
-- **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/).
+- **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
 
 > This page is the method-neutral front door. The STAR-specific "why" lives in
 > [STAR_Voting/STAR_start_here.md](STAR_Voting/STAR_start_here.md).
