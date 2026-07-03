@@ -12,7 +12,7 @@ Because they use a fundamentally different ballot, scoring methods sit **outside
 
 | | Ballot | What it captures | Examples |
 |---|---|---|---|
-| **[Ranked (ordinal)](scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only | [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md), [STV](proportional_representation/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](RCV_Ranked_Robin/ranked_robin.md), [Schulze](RCV_Ranked_Robin/cycle_resolution.md), [Ranked Pairs](RCV_Ranked_Robin/cycle_resolution.md)), [Borda](other_ranked_methods/borda.md), [Bucklin](RCV_Ranked_Robin/glossary_ranked_robin.md) |
+| **[Ranked (ordinal)](scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md), [STV](proportional_representation/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](RCV_Ranked_Robin/ranked_robin.md), [Schulze](RCV_Ranked_Robin/cycle_resolution.md), [Ranked Pairs](RCV_Ranked_Robin/cycle_resolution.md)), [Borda](other_ranked_methods/borda.md), [Bucklin](RCV_Ranked_Robin/glossary_ranked_robin.md) |
 | **[Scored (cardinal)](scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](Approval_Voting/approval_voting.md), [Score](Range_Voting/range_voting.md), **[STAR](STAR_Voting/STAR_start_here.md)** |
 
 ## Approval Voting
