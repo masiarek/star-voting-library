@@ -1,0 +1,37 @@
+election_title: 'Lot tiebreak — following BetterVoting''s drawn order'
+
+scenario_description: |-
+  A perfectly symmetric two-candidate dead-rung tie: Ada and Ben each score 4 on
+  one ballot and 0 on the other, so every deterministic rung ties — equal totals
+  (4-4), pairwise 1-1, and (capped at 4) NO score-5 votes, so the five-star rung
+  is a DEAD RUNG reading 0-0. The winner is decided ONLY by the lot order.
+  This case follows the BetterVoting APPROACH: the tie-break order is whatever BV
+  drew at count time (here Ben first), and the file reproduces BV's winner (Ben).
+  Its twin lot_tiebreak_published_order.yaml uses the pre-published order (Ada
+  first) instead and elects Ada — same ballots, different winner, purely from the
+  lot. That divergence is the point of BetterVoting issue #1063 (deterministic,
+  pre-published lot numbers). See 01_STAR/tie_break_dead_rung/README.md.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [Ben, Ada]   # the order BetterVoting's random draw produced
+ballots: |-
+  Ada,Ben
+  4,0
+  0,4
+
+expected_winners:
+  - Ben
+
+# file: lot_tiebreak_bv_order.yaml

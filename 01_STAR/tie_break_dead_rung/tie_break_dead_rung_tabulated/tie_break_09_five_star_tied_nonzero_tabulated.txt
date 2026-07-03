@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_09_five_star_tied_nonzero.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_09_five_star_tied_nonzero_tabulated.txt
-TABULATED AT:    2026-07-03 09:44:53
+TABULATED AT:    2026-07-03 18:32:44
 ======================================================================
 
 election_title: Dead rung 05 — five-star rung alive but non-separating
@@ -115,6 +115,14 @@ Ben  1  0  0  0  0  1  |     5   2.5
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Ann', 'Ben']
   Resolved: ['Ben'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
 
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ben

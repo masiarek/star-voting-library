@@ -6,11 +6,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**122 election files** (113 single-winner, 9 multi-winner) across 13 method(s).
+**124 election files** (115 single-winner, 9 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 93 |
+| STAR | 95 |
 | RCV-IRV (Hare) | 9 |
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
@@ -24,7 +24,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (93)
+## STAR  (95)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -94,6 +94,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`tie_break_08_runoff_dead_rung_adversarial_lot`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/tie_break_08_runoff_dead_rung_adversarial_lot.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung 04 — runoff tie, nobody scored a 5, lot decides → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adversarial_lot.yaml) |
 | [`tie_break_09_five_star_tied_nonzero`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/tie_break_09_five_star_tied_nonzero.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung 05 — five-star rung alive but non-separating → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/tie_break_09_five_star_tied_nonzero.yaml) |
 | [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/_main_pages/rrv_sample_c15_b13_three-parties.md) | `03_STAR_PR/_main/` | 1 | RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow) → _Orange5_ | [`.yaml`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) |
+| [`lot_tiebreak_bv_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_bv_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following BetterVoting's drawn order → _Ben_ | — |
+| [`lot_tiebreak_published_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_published_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following the new published-lot approach → _Ada_ | — |
 | [`BV_Library_star_condorcet_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_condorcet_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: highest-scoring Condorcet winner → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml) |
 | [`BV_Library_star_runnerup_tie`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_runnerup_tie.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: runner-up tie, Allison wins → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_runnerup_tie.yaml) |
 | [`BV_Library_star_runoff`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_runoff.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: runoff, lower total wins the runoff → _Bill_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_runoff.yaml) |

@@ -84,6 +84,14 @@ Cairo   0  0  0  0  0  2  |     0   0.0
   Tie among: ['Athens', 'Berlin']
   Resolved: ['Athens'] (selected by lot-number priority).
 
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Athens
 ```

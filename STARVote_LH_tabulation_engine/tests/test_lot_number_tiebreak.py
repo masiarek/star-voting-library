@@ -273,3 +273,74 @@ def test_yaml_lot_numbers_override_column_order(tmp_path):
     with_lot = _write(tmp_path, "cols_lot.yaml",
                       SYMMETRIC_TIE_YAML.format(order="Ben, Ada"))
     assert scenario_winners(with_lot)[0] == ["Ben"]
+
+
+# --- 4. The "lot-decided tie" echo flag ------------------------------------
+
+FLAG = "[Lot-decided tie — rare]"
+
+
+def _run_cli(path):
+    import subprocess
+    return subprocess.run(
+        [sys.executable, str(ENGINE_DIR / "starvote_larry_hastings.py"), str(path)],
+        cwd=str(ENGINE_DIR), capture_output=True, text=True,
+    )
+
+
+def test_flag_fires_when_the_lot_decides(tmp_path):
+    """A tie that falls all the way to the lot must be flagged in the echo — the
+    rare, audit-worthy event that the ballots did not decide the result."""
+    lot_case = _write(tmp_path, "lot.yaml",
+                      SYMMETRIC_TIE_YAML.format(order="Ada, Ben"))
+    proc = _run_cli(lot_case)
+    assert proc.returncode == 0, proc.stderr
+    assert FLAG in proc.stdout, (
+        "lot-decided tie was not flagged in the engine output:\n" + proc.stdout)
+    # The flag names the mechanism (five-star counts 5s, not 4s).
+    assert "five-star" in proc.stdout and "not fours" in proc.stdout
+
+
+def test_flag_absent_when_ballots_decide(tmp_path):
+    """A clean election that never reaches the lot must NOT print the flag (no
+    false alarms) — guards against the flag becoming noise on normal results."""
+    clean = _write(tmp_path, "clean.yaml", """\
+election:
+  races:
+  - num_winners: 1
+    voting_method: STAR
+    candidates:
+    - {cand_id: Ada, candidate_name: Ada}
+    - {cand_id: Ben, candidate_name: Ben}
+    ballots: |-
+      Ada, Ben
+        5,   0
+        4,   1
+""")
+    proc = _run_cli(clean)
+    assert proc.returncode == 0, proc.stderr
+    assert FLAG not in proc.stdout, (
+        "flag printed on an election the ballots resolved cleanly:\n" + proc.stdout)
+
+
+# --- 5. Library pair: the BV-drawn order vs the new published order ---------
+
+LIB_POS = REPO_ROOT / "YAML_library" / "1_positive"
+
+
+def test_bv_order_and_published_order_diverge():
+    """The two library fixtures share identical ballots (a symmetric dead-rung
+    tie) and differ ONLY in lot order: the BV-drawn order elects Ben, the
+    pre-published order elects Ada. This is the whole argument for deterministic
+    lot numbers (BV #1063) — captured as a runnable positive pair."""
+    bv = LIB_POS / "lot_tiebreak_bv_order.yaml"
+    pub = LIB_POS / "lot_tiebreak_published_order.yaml"
+    assert bv.exists() and pub.exists()
+
+    bv_winners = scenario_winners(bv)[0]
+    pub_winners = scenario_winners(pub)[0]
+
+    assert bv_winners == ["Ben"], bv_winners
+    assert pub_winners == ["Ada"], pub_winners
+    # Non-vacuous: same ballots, different winner, purely from the lot order.
+    assert bv_winners != pub_winners

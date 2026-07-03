@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_03_runoff_no_fives_to_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:42
 TABULATED FILE:  tie_break_03_runoff_no_fives_to_lot_tabulated.txt
-TABULATED AT:    2026-07-03 09:44:52
+TABULATED AT:    2026-07-03 18:32:43
 ======================================================================
 
 election_title: "Tie-break 03 — runoff tie, score tied, NO fives → LOT"
@@ -107,6 +107,14 @@ Ben    0  1  0  0  0  1  |     4   2.0
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Alice', 'Ben']
   Resolved: ['Alice'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
 
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Alice

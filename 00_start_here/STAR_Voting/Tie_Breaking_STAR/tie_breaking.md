@@ -113,6 +113,11 @@ Mnemonic worth keeping: **"it counts fives, not fours"** — an equal or absent
 five-star count never steps down to the 4s, it drops to the lot. (akas for the
 term: broken / missing / empty / phantom rung.)
 
+**The engine flags it.** When a tie falls all the way to the lot, the LH engine
+prints a `[Lot-decided tie — rare]` callout — the same spirit as the
+`[Divergence from STAR]` flag — so this uncommon "the ballots didn't decide, the
+lot did" event is named, not buried in the tiebreak trace.
+
 Runnable cases (all verified in the test suite):
 [the dead-rung tie-break cases](../../../01_STAR/tie_break_dead_rung/)
 — five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff,

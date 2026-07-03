@@ -140,6 +140,17 @@ class LotNumberTiebreaker(Tiebreaker):
             print("\n[Tiebreaker: Lot Number Priority]")
             print(f"  Tie among: {tie}")
             print(f"  Resolved: {winners} (selected by lot-number priority).")
+            # Rare, audit-worthy event: the ballots could not break this tie, so
+            # the pre-published lot order chose among the tied candidates. Flag it
+            # the way method divergences are flagged — a strange phenomenon worth
+            # naming rather than burying in the tiebreak trace.
+            print("\n[Lot-decided tie — rare]")
+            print("  ⚠ The ballots did not break this tie: the deterministic rungs")
+            print("    (pairwise / score, then five-star) all came back equal, so the")
+            print("    pre-published LOT order chose among the tied candidates — the")
+            print("    result here was set by lot, not by the votes. Usually the")
+            print('    "dead rung": no tied candidate held a score-5 vote (five-star')
+            print("    counts fives, not fours). Verify the tied candidates' 5-counts.")
 
         return winners
 

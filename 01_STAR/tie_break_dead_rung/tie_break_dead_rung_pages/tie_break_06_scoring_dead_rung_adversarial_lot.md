@@ -104,6 +104,14 @@ Cara  0  1  1  0  2  1  |     9   1.8
   Tie among: ['Ben', 'Cara']
   Resolved: ['Cara'] (selected by lot-number priority).
 
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
    Ann           -- 3 -- First place

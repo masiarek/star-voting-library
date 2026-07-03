@@ -1,0 +1,21 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Lot tiebreak — following BetterVoting's drawn order
+ Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Ben
+     1 ×   Ada      (4, 0)
+     1 ×   Ben      (0, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ada                1  Elected
+Ben                1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ada
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

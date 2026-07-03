@@ -2,7 +2,7 @@
 SOURCE FILE:     01_c4_b2_bloc-star-2-seats.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  01_c4_b2_bloc-star-2-seats_tabulated.txt
-TABULATED AT:    2026-07-03 09:44:53
+TABULATED AT:    2026-07-03 18:32:44
 ======================================================================
 
 election_title: "Bloc STAR Voting: 2-Seat Committee Election"
@@ -140,6 +140,14 @@ Don  2  0  0  0  0  0  |    10   5.0
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Ann', 'Bob']
   Resolved: ['Ann'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
 
 [Bloc STAR: Round 2: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.

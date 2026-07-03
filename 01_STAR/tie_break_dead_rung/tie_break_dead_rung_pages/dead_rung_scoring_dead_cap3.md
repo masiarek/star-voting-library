@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ann
 
+**Official tie-break (lot) order:** Ann > Ben > Cara — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+
 ## Scenario
 
 Generated dead-rung scenario (scoring round, 'dead' five-star rung). no 5 anywhere (capped at 3) -> five-star 0-0 -> the LOT picks the 2nd finalist. STAR's second rung counts only score-5 votes and never steps down to 4s; when it can't separate the tied candidates the lot decides. See 01_STAR/tie_break_dead_rung/README.md and 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
@@ -75,6 +77,14 @@ Cara  0  0  0  1  1  0  |     3   1.5
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Ben', 'Cara']
   Resolved: ['Ben'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
 
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.

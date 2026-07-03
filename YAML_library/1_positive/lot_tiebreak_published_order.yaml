@@ -1,0 +1,36 @@
+election_title: 'Lot tiebreak — following the new published-lot approach'
+
+scenario_description: |-
+  The SAME symmetric two-candidate dead-rung tie as lot_tiebreak_bv_order.yaml:
+  Ada and Ben each score 4 then 0, so totals (4-4), pairwise (1-1), and five-star
+  (0-0, a DEAD RUNG — no 5s exist) all tie, and only the lot order decides.
+  This case follows the NEW APPROACH: a deterministic, PRE-PUBLISHED lot order
+  (Ada first), so the tie resolves the same way on every run and is auditable in
+  advance. It elects Ada — whereas the BV-order twin elects Ben from the same
+  ballots. Same votes, different winner, decided entirely by which lot order you
+  follow. See 01_STAR/tie_break_dead_rung/README.md and
+  00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [Ada, Ben]   # the pre-published, deterministic order
+ballots: |-
+  Ada,Ben
+  4,0
+  0,4
+
+expected_winners:
+  - Ada
+
+# file: lot_tiebreak_published_order.yaml

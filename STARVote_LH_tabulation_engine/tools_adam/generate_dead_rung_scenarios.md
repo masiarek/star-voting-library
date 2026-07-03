@@ -50,10 +50,11 @@ step itself) and **falling through to the lot** (what happens when it's dead).
 
 ## What it produces
 
-A single YAML election in the `tie_break_dead_rung/` house schema, with a
-`lot_numbers:` line (when the lot is involved) and an `expected_results.winners:`
-assertion, so each file doubles as a positive test. By default it prints to the
-**screen only** — pass `--out` to save.
+A single YAML election in the `tie_break_dead_rung/` house **flat schema**
+(top-level keys, matching cases 01–09), with a `lot_numbers:` line (when the lot
+is involved) and an `expected_winners:` assertion — so each file is auto-discovered
+by `test_single_winner_positive.py` and doubles as a positive test. By default it
+prints to the **screen only** — pass `--out` to save.
 
 ---
 
@@ -96,14 +97,14 @@ Generated ballots (Ann leads and wins; Ben and Cara tie for the second finalist
 slot; every score capped at 4 so **no 5 exists**):
 
 ```yaml
-    ballots: |-
-      Ann,Ben,Cara
-      4,4,1
-      4,0,3
-    lot_numbers: [Ann, Ben, Cara]
-    expected_results:
-      winners:
-      - Ann
+lot_numbers: [Ann, Ben, Cara]
+ballots: |-
+  Ann,Ben,Cara
+  4,4,1
+  4,0,3
+
+expected_winners:
+  - Ann
 ```
 
 The engine's report shows the rung firing and finding nothing, then falling to
@@ -186,7 +187,7 @@ python generate_dead_rung_scenarios.py --round runoff --rung dead --adversarial-
 
 Same two voters, **one point of enthusiasm** (a 5 vs a 4) flips the winner from
 Ann to Ben. If an engine ever consulted the lot early, or stepped down to 4s, the
-`alive` case would elect Ben and its `expected_results` assertion would fail —
+`alive` case would elect Ben and its `expected_winners` assertion would fail —
 which is exactly what makes these good regression tests.
 
 ---
