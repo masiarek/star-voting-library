@@ -15,10 +15,11 @@ Everything here orbits a single, human-readable **YAML election file** as the
 source of truth. The pieces fit together as a pipeline:
 
 ```
- author ──▶ validate ──▶ tabulate ──▶ verify
-   │                         │
-   │                         └─▶ screen echo  +  _tabulated.txt
-   │
+ author ──▶ validate ──▶ tabulate ──▶ verify ──▶ publish
+   │                         │                       │
+   │                         ├─▶ screen echo         └─▶ a browsable <name>.md page
+   │                         └─▶ _tabulated.txt          (the friendly, linkable surface)
+   │                             (the full record)
    ├─ hand-write the YAML, or
    └─ import a BetterVoting JSON export (converter → canonical YAML)
 ```
@@ -41,6 +42,17 @@ source of truth. The pieces fit together as a pipeline:
    and a **pytest** suite checks them (positive winners, negative errors,
    JSON→YAML conversion, tie-break logic, Ranked Robin, plus non-vacuous
    self-checks), wired into a pre-commit hook.
+5. **Publish.** `scripts/build_yaml_pages.py` renders each election into a
+   **browsable Markdown page** (`<folder>/<folder>_pages/<name>.md`) — title, method,
+   the scenario description, the ballots, and the full tabulation report, with
+   auto cross-references. A pytest keeps these pages in sync with their YAML, so
+   they're always current. This `.md` page — not the raw `.yaml` — is the
+   reader-facing surface.
+
+> **House rule — link the `.md` page, not the raw `.yaml`.** The generated pages are
+> the friendly, reader-first surface: lead with them in tables, navs, and
+> cross-references; link a `.yaml` only when the *runnable source* is genuinely the
+> point (e.g. a "run this file" command), and demote it. See `CLAUDE.md`.
 
 This is *not* a black box that just prints a winner — the whole point is that the
 count is **legible and reproducible**, so it can be taught and audited.
