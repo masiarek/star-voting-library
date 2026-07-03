@@ -40,7 +40,7 @@ the problem, STAR stops looking clever and starts looking obvious.
 **Adam:** Our Choose-One ballot is only accurate when there are exactly two
 candidates. The moment a third shows up, votes split. Two similar candidates can
 divide the people who like both of them, and a candidate the *majority* didn't
-want slips through the middle. That's the spoiler effect.
+want slips through the middle. That's the [spoiler effect](../00_start_here/spoiler_effect.md).
 
 **Larry:** Give me the cartoon version.
 
@@ -79,7 +79,7 @@ expressive than picking one?
 
 **Adam:** It's more expressive than Choose-One, yes. But there's a deeper fork in
 the road here, and it's the thing most people never get told: there are two
-*families* of better ballots — **ranked** and **scored** — and they're not the
+*families* of better ballots — **ranked** and **scored** ([the core distinction](../00_start_here/scores_and_ranks/scores_vs_ranks.md)) — and they're not the
 same tool.
 
 **Larry:** What's the difference, concretely?
@@ -116,7 +116,7 @@ ballot as its raw material.
 **Adam:** Four rules, that's it:
 - Give your favorite(s) **5 stars**.
 - Give your last choice(s) **0**, or leave them blank.
-- **Equal scores are allowed** — rate two candidates the same if you feel the
+- **[Equal scores are allowed](../00_start_here/STAR_Voting/STAR_Scoring_Round.md)** — rate two candidates the same if you feel the
   same.
 - Score everyone else anywhere from 0 to 5, however you like.
 
@@ -142,9 +142,9 @@ and nothing gets thrown away.
 **Larry:** STAR stands for Score Then Automatic Runoff. What are the two steps?
 
 **Adam:** You vote once; the count happens in two rounds.
-- **Scoring Round:** add up all the stars. The two highest-scoring candidates
+- **[Scoring Round](../00_start_here/STAR_Voting/STAR_Scoring_Round.md):** add up all the stars. The two highest-scoring candidates
   become finalists.
-- **Automatic Runoff:** for those two finalists, your ballot counts as a full
+- **[Automatic Runoff](../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md):** for those two finalists, your ballot counts as a full
   vote for whichever one you scored higher. Whoever more voters preferred wins.
 
 **Larry:** Why two rounds? Why not just elect the highest total score?
@@ -157,7 +157,7 @@ doesn't matter, only which finalist you put higher. So exaggerating can backfire
 
 **Larry:** So the two rounds are doing two different jobs.
 
-**Adam:** Exactly — that's the dual nature. The Scoring Round measures **how much**
+**Adam:** Exactly — that's the [dual nature](../00_start_here/STAR_Voting/STAR_hybrid_nature.md). The Scoring Round measures **how much**
 support there is — candidate quality, strength. The runoff measures **how many**
 supporters — number of people, a real majority. One finds the genuine
 contenders; the other decides between them by majority. Strength, then numbers.
@@ -200,7 +200,7 @@ Equal — and STAR is built to hit all five:
 
 **Larry:** And counting?
 
-**Adam:** This is the sleeper feature. STAR is **precinct-summable** — each
+**Adam:** This is the sleeper feature. STAR is **[precinct-summable](../00_start_here/STAR_Voting/STAR_summability.md)** — each
 precinct reports its score totals and a small for/equal/against table, and you
 just add precincts together. No shipping every ballot to one central computer.
 That means fast results, easy audits, and it works with paper ballots and vote-
@@ -218,7 +218,7 @@ by-mail. Any citizen can re-add the numbers.
 **Larry:** Ranked Choice Voting is the one people have heard of. How is STAR
 different — and be fair, what does RCV do *well*?
 
-**Adam:** Fair is the right instinct. RCV-IRV is a real improvement over Choose-One,
+**Adam:** Fair is the right instinct. [RCV-IRV](../00_start_here/RCV_IRV/RCV-IRV-Hare.md) is a real improvement over Choose-One,
 and where there are only two viable candidates it cleanly kills the old "Nader"
 spoiler. Credit where due. But it has structural problems that STAR doesn't, and
 they show up exactly in the competitive races that matter most.
@@ -230,22 +230,22 @@ they show up exactly in the competitive races that matter most.
    *remaining* choice each round. If your favorite is eliminated, your next
    choice is counted — but only sometimes, depending on the order of
    elimination. Lots of marked rankings are simply never read.
-2. **Exhausted ballots.** When your ranked candidates are all eliminated, your
+2. **[Exhausted ballots](../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md).** When your ranked candidates are all eliminated, your
    ballot is discarded. On average around 10–11% of ballots aren't counted in the
    deciding round of competitive races, so the "majority winner" is often a
    majority of *remaining* ballots, not of voters.
-3. **Center squeeze.** A broadly-liked moderate can be eliminated early precisely
+3. **[Center squeeze](../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md).** A broadly-liked moderate can be eliminated early precisely
    because few people rank them *first* — and the polarizing candidate the
    majority actually opposed wins. That's the spoiler effect sneaking back in.
 
 **Larry:** Do you have a real election, not a thought experiment?
 
 **Adam:** Two famous ones.
-- **Burlington, Vermont, 2009:** Montroll was preferred head-to-head over *both*
+- **[Burlington, Vermont, 2009](../00_start_here/spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both*
   opponents — the candidate the majority actually wanted — but he had fewer
   first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed
   RCV-IRV afterward.
-- **Alaska 2022 special:** Begich would have beaten either opponent head-to-head,
+- **[Alaska 2022 special](../00_start_here/RCV_IRV/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head,
   but the two Republicans split and Begich was eliminated; Peltola won and the
   seat flipped. Voters who ranked Palin first effectively helped elect their last
   choice — favorite betrayal, live.
@@ -277,7 +277,7 @@ results.
 isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally
 Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it
 diverges, it's choosing a candidate with broad, strong support over a
-weakly-liked compromise — and that's a defensible philosophical call, not a bug.
+weakly-liked compromise ([three notions of "winner"](../00_start_here/STAR_Voting/STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug.
 Saying that out loud is what earns you the room.
 
 > [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009",

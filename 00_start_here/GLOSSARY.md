@@ -28,7 +28,7 @@ for *comparing* methods, so they belong to no single one.
 
 ## Core vocabulary
 
-- **STAR** — Score Then Automatic Runoff: score every candidate 0–5; the two highest totals advance to an automatic head-to-head runoff. → main page [`STAR — start here`](STAR_Voting/STAR_start_here.md); the two rounds: [`Scoring Round`](STAR_Voting/STAR_Scoring_Round.md) + [`Automatic Runoff`](STAR_Voting/STAR_Automatic_Runoff.md); episode [`whats_so_good_about_STAR_Voting.md`](../interviews_conversations/whats_so_good_about_STAR_Voting.md)
+- **STAR** — Score Then Automatic Runoff: score every candidate 0–5; the two highest totals advance to an automatic head-to-head runoff. → main page [`STAR — start here`](STAR_Voting/STAR_start_here.md); the two rounds: [`Scoring Round`](STAR_Voting/STAR_Scoring_Round.md) + [`Automatic Runoff`](STAR_Voting/STAR_Automatic_Runoff.md)
 - **Score / star rating** — a 0–5 value expressing *how much* you support a candidate (like a five-star review).
 - **Scoring round** — STAR's first round: add up each candidate's scores; the top two become finalists. → demo [`equal_support_runoff_demo`](../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
 - **Finalists** — the two highest-scoring candidates, who advance to the runoff.
