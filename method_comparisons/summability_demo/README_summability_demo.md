@@ -28,7 +28,7 @@ python starvote_larry_hastings.py ../01_Single_winner/summability_demo/star_comb
 python starvote_larry_hastings.py ../01_Single_winner/summability_demo/irv_combined.yaml
 
 # Ranked Robin / Copeland on the SAME irv_* ballots (pairwise matrix winner)
-cd ../pref_voting_tabulation_engine
+cd tools_adam/pref_voting_tabulation_engine
 python pref_voting_tabulation.py ../01_Single_winner/summability_demo/irv_combined.yaml
 ```
 

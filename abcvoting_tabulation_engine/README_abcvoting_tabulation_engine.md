@@ -17,7 +17,7 @@ It does two jobs:
 2. **Independent cross-check.** abcvoting's plain `av` rule must elect the
    same committee as the LH engine's bloc-Approval count — an outside witness
    that the LH approval tally is correct, in the same spirit as the
-   [`pref_voting` cross-check](../pref_voting_tabulation_engine/) for ranked
+   [`pref_voting` cross-check](../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine) for ranked
    methods.
 
 ```bash

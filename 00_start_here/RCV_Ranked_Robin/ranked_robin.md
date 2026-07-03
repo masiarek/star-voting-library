@@ -4,7 +4,7 @@
 
 → **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo)
 shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*;
-the [`pref_voting` engine](../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md) reports the
+the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md) reports the
 **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`).
 · Topic hub: [Summability](../topics/summability/README_summability.md).
 
@@ -79,7 +79,7 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 
 ## Now you can tabulate it — the `pref_voting` engine
 
-The repo's new [the pref_voting engine](../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
+The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
 computes this method on any example election, under its **academic name, Copeland**.
 
 > **The LH engine now tabulates Ranked Robin first-class.** Set
@@ -91,7 +91,7 @@ computes this method on any example election, under its **academic name, Copelan
 > ```
 > It flags a **cycle** (when the top candidates tie on wins) and points to
 > [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check,
-> [`ranked_robin_report.py`](../../pref_voting_tabulation_engine/ranked_robin_report.py)
+> [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py)
 > (in the `pref_voting` engine) computes the same result a second way.
 
 ### Options for an RCV-RR YAML file — and what shows where
@@ -208,7 +208,7 @@ treat them as one method with several brands, not byte-identical algorithms.
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:
-cd pref_voting_tabulation_engine
+cd STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine
 python pref_voting_tabulation.py example_tennessee.yaml
 #   Copeland   pref_voting=Nashville   (= the Ranked Robin / Consensus winner)
 ```

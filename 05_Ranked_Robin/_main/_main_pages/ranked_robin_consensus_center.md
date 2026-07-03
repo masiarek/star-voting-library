@@ -6,7 +6,7 @@
 
 ## Scenario
 
-13 ranked ballots, 4 candidates. Ben beats every rival head-to-head (the Condorcet / Copeland winner) and wins Ranked Robin 3-0 — even though Ada and Dan each have more first-choices. Tabulate with pref_voting_tabulation_engine/ranked_robin_report.py.
+13 ranked ballots, 4 candidates. Ben beats every rival head-to-head (the Condorcet / Copeland winner) and wins Ranked Robin 3-0 — even though Ada and Dan each have more first-choices. Tabulate with STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py.
 
 ## Ballots
 

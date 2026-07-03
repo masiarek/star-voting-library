@@ -5,7 +5,7 @@
 Python social-choice library), so we know the LH engine's ranked-ballot machinery —
 **Condorcet, RCV-IRV, Plurality** — is correct, not just internally consistent.
 
-→ engine: [the pref_voting engine](../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
+→ engine: [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md)
 · test: [`tests/test_pref_voting_crosscheck.py`](../../STARVote_LH_tabulation_engine/tests/test_pref_voting_crosscheck.py).
 
 ---
@@ -52,7 +52,7 @@ Plurality winner the LH engine reports is confirmed by `pref_voting`.
 
 ```
 pip install pref_voting            # optional dev dependency
-cd pref_voting_tabulation_engine
+cd STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine
 python pref_voting_tabulation.py --all                     # full repo
 python pref_voting_tabulation.py ../path/to/election.yaml
 # the guard (from the LH engine dir):

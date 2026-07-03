@@ -30,7 +30,14 @@ import glob
 # This engine lives at <repo>/pref_voting_tabulation_engine/. The LH engine it
 # cross-checks against is the sibling <repo>/STARVote_LH_tabulation_engine/.
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_REPO = os.path.dirname(_HERE)
+def _find_repo(start):
+    p = os.path.dirname(os.path.abspath(start))
+    while p != os.path.dirname(p):
+        if os.path.isdir(os.path.join(p, '01_STAR')) and os.path.isdir(os.path.join(p, 'STARVote_LH_tabulation_engine')):
+            return p
+        p = os.path.dirname(p)
+    return os.path.dirname(_HERE)
+_REPO = _find_repo(__file__)  # robust: search upward for repo root
 sys.path.insert(0, os.path.join(_REPO, "STARVote_LH_tabulation_engine"))
 import yaml  # noqa: E402
 import starvote_larry_hastings as LH  # noqa: E402

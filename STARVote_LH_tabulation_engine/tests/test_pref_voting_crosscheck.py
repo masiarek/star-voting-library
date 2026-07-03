@@ -28,7 +28,7 @@ pytest.importorskip("pref_voting",
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
-sys.path.insert(0, str(REPO_ROOT / "pref_voting_tabulation_engine"))
+sys.path.insert(0, str(REPO_ROOT / "STARVote_LH_tabulation_engine" / "tools_adam" / "pref_voting_tabulation_engine"))
 
 from pref_voting_tabulation import crosscheck, discover  # noqa: E402
 
