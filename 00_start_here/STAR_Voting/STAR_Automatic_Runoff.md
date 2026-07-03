@@ -105,21 +105,37 @@ Support ballot is (and that it isn't an abstention): [`GLOSSARY`](../GLOSSARY.md
 
 ### Why this differs from RCV-IRV — no exhausted ballots
 
-This is the runoff's quiet "ah-ha," and the cleanest way to teach it is as a **three-way
-sort**: every ballot lands in one of three buckets — *prefers finalist A*, *prefers
-finalist B*, or *Equal Support* (scored the two the same). Crucially, **all three buckets
-are counted** — the Equal-Support ballots stay in the total; they simply don't tip the
-A-vs-B margin.
+The cleanest way to teach the runoff is as a **three-way sort**: every ballot lands in
+one of three buckets — *prefers finalist A*, *prefers finalist B*, or **Equal Support**
+(scored the two finalists the same). **All three buckets are counted and reported.** An
+Equal Support ballot doesn't move the A-vs-B margin — that voter said these two are equal
+*to them* — but it is never thrown away: its scores were fully counted in the Scoring
+Round (they helped *choose* the finalists), and it shows up as an explicit **Equal
+Support** tally in the runoff.
 
-Contrast RCV-IRV. If your ballot ranks *neither* of the final two candidates, it's
-**[exhausted](../RCV_IRV/RCV_IRV_exhausted_ballots.md)** — dropped from the denominator
-entirely, so the winner needs only a majority of the *surviving* ballots (on average
-over 10% of RCV-IRV ballots exhaust). In STAR the equivalent voter — no preference between
-the finalists — is **not** discarded: their scores were fully counted in the Scoring
-Round, and in the runoff they're recorded as an explicit *"no preference between these
-two"* rather than made to disappear. So STAR's winner is "the finalist **more voters
-prefer**," never "a majority of whoever's left." Every ballot keeps a voice —
+Now contrast **RCV-IRV**. A ballot that ranks *neither* finalist is
+**[exhausted](../RCV_IRV/RCV_IRV_exhausted_ballots.md)** — removed from the deciding round
+**entirely**, so the winner needs only a majority of the *surviving* ballots (over 10% of
+RCV-IRV ballots exhaust on average). Those voters simply vanish from the result.
+
+**The precise version (this is the part that trips people up).** STAR measures the runoff
+majority among the voters who *expressed a preference* between the finalists — Equal
+Support is set aside **from that percentage** (the "decided-voters" denominator; see
+[two denominators](runoff_percentages.md)). That is **not** the same as RCV-IRV
+exhaustion: the Equal Support ballots are still **counted**, still **reported**, and still
+**shaped who the finalists were**. STAR's winner is "the finalist **more voters prefer**,"
+never "a majority of whoever's left." So the shorthand "STAR keeps the ballots and RCV
+throws them away" is right in spirit; stated exactly, it's that STAR never *exhausts* a
+ballot, while RCV-IRV does. Every ballot keeps a voice —
 [one person, one vote](equally_weighted_vote.md).
+
+This is exactly why the common criticism that STAR "**discounts**" equal-score ballots is
+misleading — the ballot is counted in full, it just isn't forced to invent a preference
+between two candidates the voter rated the same. Objection handled in depth:
+[Aren't equal-score votes just discounted?](../../interviews_conversations/are_equal_score_votes_discounted.md).
+See it on one small election: [Equal Support demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
+(the 40 "love both finalists" ballots *chose* the finalists, then register as Equal
+Support in the runoff).
 
 ## Variation 1 — Runoff Reversal (the score leader loses)
 
