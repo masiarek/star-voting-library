@@ -48,7 +48,7 @@ years** of real-world experience (the Senate uses STV, the multi-winner cousin).
 - **Local:** San Francisco (2004), Minneapolis, and New York City (2021 primaries),
   plus dozens of other cities.
 - **Statewide:** Maine (the first state, 2018) and Alaska (2022, paired with a
-  top-four primary).
+  top-four primary — whose first race became a [textbook IRV failure](RCV_IRV_alaska_2022.md)).
 
 Adoption has continued to expand city by city; check
 [FairVote's "where it's used"](https://fairvote.org/our-reforms/ranked-choice-voting-information/)

@@ -75,7 +75,7 @@ engine: X elected with 22 before, Z elected with 18 after.)
 
 Per a study of US RCV-IRV elections 2004–2022 (Graham-Squire & McCune, arXiv 2301.12075):
 
-- **Upward paradox — Alaska 2022 (US House special).** Had ~6,000 Palin-only voters
+- **Upward paradox — [Alaska 2022 (US House special)](RCV_IRV_alaska_2022.md).** Had ~6,000 Palin-only voters
   instead ranked the *winner* Peltola first, Peltola would have **lost** — those
   extra first-place votes eliminate Palin first, and Begich then beats Peltola.
   Raising the winner defeats the winner.

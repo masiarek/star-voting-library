@@ -138,7 +138,7 @@ candidates. Electing squeezed moderates is how a method lowers the temperature.
 - **Burlington, VT 2009 (mayor).** Montroll was the Condorcet winner — preferred
   over Wright 56–44 and over Kiss 54–46 — but had too few first-choices, was
   eliminated, and **Kiss won**. IRV was repealed there in 2010.
-- **Alaska 2022 (US House special).** Begich beat both Peltola and Palin
+- **[Alaska 2022 (US House special)](RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin
   head-to-head, but was eliminated first; **Peltola won.** (Worked through in
   [`favorite_betrayal_voting_301.md`](../../interviews_conversations/favorite_betrayal_voting_301.md).)
 

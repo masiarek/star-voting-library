@@ -32,6 +32,8 @@ result.
 - **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
 - **The three ballot styles, side by side** → [alternate ballot styles](ballot_styles.md) (ranking vs. yes/no vs. scoring).
 - **The spoiler effect (and how each method handles it)** → [spoiler effect](spoiler_effect.md).
+- **The status quo we're improving on** → [plurality (choose-one / FPTP)](plurality.md).
+- **A real RCV-IRV failure** → [Alaska 2022](RCV_IRV/RCV_IRV_alaska_2022.md) (center squeeze + spoiler + non-monotonicity in one race).
 - **Who champions each method** → [advocacy organizations](advocacy_organizations.md) (FairVote, CES, Equal Vote Coalition).
 
 > This page is the method-neutral front door. The STAR-specific "why" lives in
