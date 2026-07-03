@@ -66,7 +66,7 @@ scratch. (Contrast STAR below, where the precinct subtotals *do* add up.)
 
 (This is one row on the method scorecard: *Summable / local tally? — STAR: yes,
 RCV-IRV: no.* See the flagship Segment 6 in
-[`whats_so_good_about_STAR_Voting.md`](../../interviews_conversations/whats_so_good_about_STAR_Voting.md).)
+[`whats_so_good_about_STAR_Voting.md`](../STAR_Voting/whats_so_good_about_STAR_Voting.md).)
 
 ## The nuance — it's IRV's count, not ranked ballots
 

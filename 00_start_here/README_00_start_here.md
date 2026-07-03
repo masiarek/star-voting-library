@@ -69,7 +69,8 @@ the GitHub file tree, not just by method). First hub: [Summability](topics/summa
 | **Tie-breaking — the full chain** | ties fall through pairwise → five-star → lot order, in both rounds | [Tie_Breaking_STAR/tie_breaking.md](STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) |
 | **Tie-breaking in BetterVoting JSON** | how a BV export pre-draws the official lot order, and its YAML mapping | [Tie_Breaking_STAR/tie_breaking_JSON.md](STAR_Voting/Tie_Breaking_STAR/tie_breaking_JSON.md) |
 
-Deeper conversation/debate scripts live in
-[`../../interviews_conversations/`](../interviews_conversations/) (e.g.
-`favorite_betrayal_voting_301.md`, `exhausted_ballots_301.md`); these pages are the
+Deeper conversation/debate scripts live beside their topics, indexed in
+[`conversation_scripts.md`](conversation_scripts.md) (e.g.
+[`favorite_betrayal_voting_301.md`](STAR_Voting/favorite_betrayal_voting_301.md),
+[`exhausted_ballots_301.md`](RCV_IRV/exhausted_ballots_301.md)); these pages are the
 shorter, reference-style explainers the glossary links to.

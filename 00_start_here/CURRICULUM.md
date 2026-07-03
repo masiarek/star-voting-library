@@ -9,7 +9,7 @@ the "curriculum map, keep folders" approach; see
 Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md)),
 the **files/episodes** to use, and **what to emphasize**. Example YAMLs stay in
 their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
-`split_voting/`); conversation scripts live in `interviews_conversations/`.
+`split_voting/`); conversation scripts live beside their topics, indexed in [`conversation_scripts.md`](conversation_scripts.md).
 
 ---
 
@@ -39,7 +39,7 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
 - **Page:** [`STAR_Voting/STAR_ballot_voting_styles.md`](STAR_Voting/STAR_ballot_voting_styles.md) — the style gallery (traditional / backup / partisan / ranked-style / nuanced / "anyone but…" / protest), why the 5-star ballot is hard to spoil, and the expressiveness case.
 - **Files:** `01_Single_winner/03*` (`03c` is the eight-style gallery in one election); large field (9 candidates) `06a` (STAR scales; Equal Support decides the runoff) and `06b` (the runoff overturns the score leader).
 - **The headline lesson — top scorer ≠ winner:** the dedicated walkthrough [Runoff Reversal](../01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md) collects this as an approachable 3→9-candidate progression (with a confirm-case control), answering BetterVoting's *"why is the top-scoring candidate different from the winner?"*
-- **Ballot note:** the ballot's own line *"equal scores indicate no preference"* means no preference *in the runoff* — those ballots still count in the scoring round. (That's the Equal Support point; see `interviews_conversations/are_equal_score_votes_discounted.md`.)
+- **Ballot note:** the ballot's own line *"equal scores indicate no preference"* means no preference *in the runoff* — those ballots still count in the scoring round. (That's the Equal Support point; see `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md`.)
 
 ## 101.4 — The payoff: the spoiler, in numbers
 - **Objective:** Land the whole case in one race.

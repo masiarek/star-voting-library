@@ -15,7 +15,7 @@ criterion, spoiler / vote-splitting…) lives in the
 - **Equal Support** — scoring the two finalists the same; counts as "no preference"
   between them in the runoff (still fully counted in the scoring round). The aka is
   documented once in the [main glossary](../GLOSSARY.md).
-  → [`are_equal_score_votes_discounted.md`](../../interviews_conversations/are_equal_score_votes_discounted.md)
+  → [`are_equal_score_votes_discounted.md`](are_equal_score_votes_discounted.md)
 - **Runoff Reversal** — the Scoring-Round leader **loses** the Automatic Runoff to
   the finalist more voters prefer (the *score* winner ≠ the *STAR* winner). Not a
   malfunction — the runoff enforces majority preference. House term: "the runoff

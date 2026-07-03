@@ -30,7 +30,7 @@ The single mark is the root of a whole family of problems:
   than half** the vote — a *plurality/minority winner* a majority actively voted against.
 - **Lesser-evil voting & favorite betrayal.** Because backing your true favorite can
   "waste" your vote or help your worst choice, voters are pressured to abandon their
-  favorite for a viable front-runner — the [favorite-betrayal](../interviews_conversations/favorite_betrayal_voting_301.md)
+  favorite for a viable front-runner — the [favorite-betrayal](STAR_Voting/favorite_betrayal_voting_301.md)
   incentive.
 - **No expression.** One mark captures neither *order* (who's your second choice?) nor
   *strength* (how much do you like them?) — see [ballot styles](ballot_styles.md).

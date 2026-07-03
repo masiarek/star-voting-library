@@ -283,7 +283,7 @@ able to help them win."
 ## Cross-references
 - Slide 4 in `00_start_here/Why_STAR_Voting.md` (the claim this defends) and its
   Part 2 talking point **#12**.
-- `interviews_conversations/are_equal_score_votes_discounted.md` — the runoff /
+- `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the runoff /
   Equal-Support sibling of this concede-then-reframe argument.
 - `LINKS.md` → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22",
   "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.

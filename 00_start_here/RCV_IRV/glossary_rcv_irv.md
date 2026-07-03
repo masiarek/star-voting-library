@@ -18,7 +18,7 @@ lives in the [main glossary](../GLOSSARY.md).
   is *how it's counted*. "RCV" names a ballot; "IRV" names a tabulation.
 - **Exhausted ballot** — an **IRV-specific** term: a ballot set aside mid-count
   because all its ranked candidates were eliminated (Ranked Robin reads every
-  rank, so it doesn't exhaust). → [`../interviews_conversations/exhausted_ballots_301.md`](../../interviews_conversations/exhausted_ballots_301.md)
+  rank, so it doesn't exhaust). → [`exhausted_ballots_301.md`](exhausted_ballots_301.md)
 - **Center squeeze** — a broadly-liked moderate eliminated early for lacking
   first-choice support; an IRV failure STAR and Ranked Robin avoid.
   → [`RCV_IRV_center_squeeze.md`](RCV_IRV_center_squeeze.md)

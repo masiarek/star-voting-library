@@ -127,7 +127,7 @@ one real federal race.
   — a compact worked example (Skywalker & Leia split the Rebel vote).
 - [Plurality vs. majority](../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md)
   — where the minority winner comes from.
-- Debate framing: [what's so good about STAR — Segment 1](../interviews_conversations/whats_so_good_about_STAR_Voting.md)
+- Debate framing: [what's so good about STAR — Segment 1](STAR_Voting/whats_so_good_about_STAR_Voting.md)
 
 Sources: [Spoiler effect — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect),
 [Spoiler effect rhetoric — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect_rhetoric),

@@ -103,10 +103,10 @@ flowchart TD
     class F claim;
 ```
 
-*Static version for slides:* [`../00_start_here/RCV_IRV/inactive_ballot_taxonomy.svg`](../00_start_here/RCV_IRV/inactive_ballot_taxonomy.svg)
+*Static version for slides:* [`../00_start_here/RCV_IRV/inactive_ballot_taxonomy.svg`](inactive_ballot_taxonomy.svg)
 
 > [SLIDE] **Exhausted Ballots** (deck) — the red-box / blue-box flow chart (see
-> `interviews_conversations/LINKS.md`).
+> `00_start_here/LINKS.md`).
 > [REPO] full source notes: **Exhausted Ballots (doc)** in `LINKS.md`.
 
 ---
@@ -130,7 +130,7 @@ The honest version is: *which* of your rankings get counted depends on the
 ### A concrete example — *which* ranks IRV threw away
 
 27 voters, three candidates on a spectrum
-([`01_Single_winner/center_squeeze_star.yaml`](../method_comparisons/center_squeeze/center_squeeze_star.yaml)):
+([`01_Single_winner/center_squeeze_star.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml)):
 
 | Voters | Their ballot (full ranking) | What IRV did with it | Rank IRV **never read** |
 |---|---|---|---|
@@ -207,7 +207,7 @@ away; it's information that says "I'm equally happy with either."
 That distinction — *declared tie* (STAR) vs *lost voice* (IRV exhaustion) — is the
 hinge, and it's developed in full in the companion episode.
 
-> [REPO] `interviews_conversations/are_equal_score_votes_discounted.md` — the
+> [REPO] `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the
 > STAR-side of this same contrast (Segment B: "declared tie vs lost voice").
 > [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — no-preference ballots
 > that *picked the finalists*, then stayed neutral in the runoff.

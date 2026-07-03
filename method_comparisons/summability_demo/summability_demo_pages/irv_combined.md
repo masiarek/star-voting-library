@@ -67,7 +67,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [This set's lesson (README)](../README_summability_demo.md) — the hand-written teaching context for every case in this folder
 - [Summability (topic hub)](../../../00_start_here/topics/summability/README_summability.md)
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README_ties.md)
-- [Exhausted ballots (conversation)](../../../interviews_conversations/exhausted_ballots_301.md)
+- [Exhausted ballots (conversation)](../../../00_start_here/RCV_IRV/exhausted_ballots_301.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 
 More cases in this set: [irv_district_A](irv_district_A.md) · [irv_district_B](irv_district_B.md) · [star_combined](star_combined.md) · [star_district_A](star_district_A.md) · [star_district_B](star_district_B.md)

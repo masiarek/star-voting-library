@@ -7,7 +7,7 @@ runoff: a faction can still split itself if it refuses to use the score ballot, 
 tries to game which ally claims the second finalist slot.
 
 → Glossary: [`spoiler effect`](../GLOSSARY.md) · related: [`RCV_IRV_center_squeeze.md`](../RCV_IRV/RCV_IRV_center_squeeze.md)
-· debate version: [`favorite_betrayal_voting_301.md`](../../interviews_conversations/favorite_betrayal_voting_301.md)
+· debate version: [`favorite_betrayal_voting_301.md`](favorite_betrayal_voting_301.md)
 
 ---
 
@@ -69,7 +69,7 @@ side.
   changes the result — it backfires ~98% of the time. So honest, expressive scoring
   stays your safest ballot.
 
-Same root cause as STAR's [favorite-betrayal](../../interviews_conversations/favorite_betrayal_voting_301.md)
+Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md)
 and [center-squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) edge cases: all three come from "only the
 top two advance."
 

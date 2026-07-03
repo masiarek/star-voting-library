@@ -32,7 +32,7 @@ reversal: C leads the Scoring Round with just 7 stars, but A wins the runoff 3�
    preference (a full vote for the 5). It is **not** "equal." The intended point is
    that it counts as the *same single vote* as a 5-vs-4 — but the word **equal**
    collides with **Equal Support**, STAR's term for a genuine *no-preference* tie
-   ([what that actually means](../../interviews_conversations/are_equal_score_votes_discounted.md)).
+   ([what that actually means](../../00_start_here/STAR_Voting/are_equal_score_votes_discounted.md)).
    Telling a voter "5 vs 0 is equal" states the opposite of the truth.
 3. **The good sentence is buried.** "More voters prefer them over the runner-up" is the
    whole answer — it should lead, not trail.

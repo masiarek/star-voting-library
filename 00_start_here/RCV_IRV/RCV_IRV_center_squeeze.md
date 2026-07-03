@@ -7,7 +7,7 @@ property of the *eliminate-the-fewest-first-choices* rule specifically, not of r
 ballots in general (and not of every instant-runoff variant); STAR avoids it.
 
 → Glossary: [`center squeeze`](../GLOSSARY.md) · deeper debate version:
-[`favorite_betrayal_voting_301.md`](../../interviews_conversations/favorite_betrayal_voting_301.md)
+[`favorite_betrayal_voting_301.md`](../STAR_Voting/favorite_betrayal_voting_301.md)
 
 ---
 
@@ -140,7 +140,7 @@ candidates. Electing squeezed moderates is how a method lowers the temperature.
   eliminated, and **Kiss won**. IRV was repealed there in 2010.
 - **[Alaska 2022 (US House special)](RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin
   head-to-head, but was eliminated first; **Peltola won.** (Worked through in
-  [`favorite_betrayal_voting_301.md`](../../interviews_conversations/favorite_betrayal_voting_301.md).)
+  [`favorite_betrayal_voting_301.md`](../STAR_Voting/favorite_betrayal_voting_301.md).)
 
 ## How STAR avoids it
 
@@ -150,7 +150,7 @@ first-place counts — exactly the support a moderate has and IRV ignores. STAR 
 highly **Condorcet-efficient**: it usually elects the head-to-head winner.
 
 → More source notes: **RCV-IRV center-squeeze & polarization** group in
-[`LINKS.md`](../../interviews_conversations/LINKS.md).
+[`LINKS.md`](../LINKS.md).
 
 **Watch it happen (simulation).** endolith's *elsim* has animated 2-D spatial
 simulations of the worst-case **"core collapse"** center squeeze. As its write-up puts it:

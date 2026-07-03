@@ -78,7 +78,8 @@ method_comparisons/   SAME ballots, DIFFERENT methods — black_curtain,
                       center_squeeze, monotonicity, split_voting, summability,
                       paradoxes_and_whoops, BV_Library (matched sets stay together)
 other_methods/        standalone non-EVC reference cases (RCV-IRV, STV…)
-interviews_conversations/   Larry↔Adam scripts + LINKS registry (Markdown)
+00_start_here/…          Larry↔Adam conversation scripts now live beside their topics
+                      (STAR_Voting/, RCV_IRV/, 00_start_here/), indexed in conversation_scripts.md
 STARVote_LH_tabulation_engine/   the engine + tools
 RCV_IRV_tabulation_engine/       the RCV-IRV engine
 ```

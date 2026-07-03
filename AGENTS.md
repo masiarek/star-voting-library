@@ -64,7 +64,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   lead term.
 - **Favorite Betrayal Criterion ≠ Later-No-Harm** — keep distinct. Neither STAR
   nor IRV is FBC-compliant; RCV-IRV fails it structurally (center squeeze), STAR
-  only in rare constructions. See `interviews_conversations/favorite_betrayal_voting_301.md`.
+  only in rare constructions. See `00_start_here/STAR_Voting/favorite_betrayal_voting_301.md`.
 - Spelling: **Bucklin** (not "Buckling"). **Hare ≈ IRV** single-winner, **STV**
   multi-winner. Borda & Bucklin are ranked but **not** Condorcet.
 
@@ -213,7 +213,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   tabulatable `…_<bvid>.yaml`, and the frozen `…_<bvid>_bv_export.json`. Filenames carry
   the order/meaning; the BV id lives on the images, in the filename suffix, and in the
   YAML (`election_description` + the results URL).
-- **Cross-reference slides by title** via `interviews_conversations/LINKS.md`
+- **Cross-reference slides by title** via `00_start_here/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
 
 ## Engines

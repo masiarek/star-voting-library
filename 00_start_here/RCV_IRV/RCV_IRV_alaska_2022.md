@@ -49,7 +49,7 @@ it's marketed as.
 The result was also a documented [monotonicity](RCV_IRV_non_monotonicity.md) failure:
 a bloc of Palin-first voters would have gotten a **preferred** outcome (Begich instead of
 Peltola) by ranking Peltola *higher* — i.e. by **not** putting their favorite first. IRV
-punished sincere voting, exactly the [favorite-betrayal](../../interviews_conversations/favorite_betrayal_voting_301.md)
+punished sincere voting, exactly the [favorite-betrayal](../STAR_Voting/favorite_betrayal_voting_301.md)
 incentive reform is supposed to remove.
 
 ## Why it matters

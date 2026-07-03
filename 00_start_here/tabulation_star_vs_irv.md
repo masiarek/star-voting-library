@@ -96,7 +96,7 @@ electorate. Every ballot has to be in one place.
 > *continuing* ballots, not of everyone who voted. A faithful display should show the
 > exhausted pile each round. STAR has no equivalent: every ballot's full score is read
 > in the scoring round, and every ballot counts in the runoff. (See
-> [`../../interviews_conversations/exhausted_ballots_301.md`](../interviews_conversations/exhausted_ballots_301.md).)
+> [`../../00_start_here/RCV_IRV/exhausted_ballots_301.md`](RCV_IRV/exhausted_ballots_301.md).)
 
 ---
 
@@ -129,7 +129,7 @@ results have to be read to the *final* round, never reported from first choices 
 > written explanation, name the majority threshold, and treat the final round — not the
 > first-choice lead — as the result. We deliberately show *all* the rounds rather than
 > de-emphasizing the eliminations, because the whole point here is to see how the count
-> works. See `interviews_conversations/LINKS.md` → "FairVote: displaying RCV results."
+> works. See `00_start_here/LINKS.md` → "FairVote: displaying RCV results."
 
 ## Run it yourself
 
@@ -144,5 +144,5 @@ python3 RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/coun
 - [`RCV_IRV_is_simple.md`](RCV_IRV/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
 - [`summability.md`](STAR_Voting/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
 - [`RCV_IRV_center_squeeze.md`](RCV_IRV/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
-- [`../../interviews_conversations/what_is_a_voting_method.md`](../interviews_conversations/what_is_a_voting_method.md)
+- [`../../00_start_here/what_is_a_voting_method.md`](what_is_a_voting_method.md)
   — ballot vs count, the 101 foundation.

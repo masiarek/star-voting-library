@@ -135,7 +135,7 @@ ballot, while RCV-IRV does. Every ballot keeps a voice —
 This is exactly why the common criticism that STAR "**discounts**" equal-score ballots is
 misleading — the ballot is counted in full, it just isn't forced to invent a preference
 between two candidates the voter rated the same. Objection handled in depth:
-[Aren't equal-score votes just discounted?](../../interviews_conversations/are_equal_score_votes_discounted.md).
+[Aren't equal-score votes just discounted?](are_equal_score_votes_discounted.md).
 See it on one small election: [Equal Support demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
 (the 40 "love both finalists" ballots *chose* the finalists, then register as Equal
 Support in the runoff).

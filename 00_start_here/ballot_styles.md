@@ -82,7 +82,7 @@ Line them up and the trade-offs jump out:
 
 The ballot is *what the voter marks*; the **tabulation** is *how it's counted* — and
 the same ballot can be counted more than one way (a ranked ballot by IRV, Ranked Robin,
-or STV). See [ballot vs tabulation](../interviews_conversations/what_is_a_voting_method.md)
+or STV). See [ballot vs tabulation](what_is_a_voting_method.md)
 and the [glossary](GLOSSARY.md).
 
 # file: ballot_styles.md

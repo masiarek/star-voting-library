@@ -66,7 +66,7 @@ TOPIC_LINKS = [
     (r"runoff",              "Runoff reversal (worked set)", "01_STAR/runoff_overturns_leader/README_runoff_overturns_leader.md"),
     (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "00_start_here/ballot_and_terminology_basics.md"),
     (r"black[ _]curtain",    "The Black Curtain (worked set)", "method_comparisons/black_curtain/README_black_curtain.md"),
-    (r"exhaust",             "Exhausted ballots (conversation)", "interviews_conversations/exhausted_ballots_301.md"),
+    (r"exhaust",             "Exhausted ballots (conversation)", "00_start_here/RCV_IRV/exhausted_ballots_301.md"),
 ]
 
 GLOSSARY = "00_start_here/GLOSSARY.md"

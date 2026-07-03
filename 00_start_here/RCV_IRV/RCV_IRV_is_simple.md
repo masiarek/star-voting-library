@@ -9,7 +9,7 @@ order.
 > ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is
 > simple, the *tabulation* isn't. See [Which RCV-IRV?](RCV_IRV_variants.md).
 
-→ Builds on [`what_is_a_voting_method.md`](../../interviews_conversations/what_is_a_voting_method.md)
+→ Builds on [`what_is_a_voting_method.md`](../what_is_a_voting_method.md)
 (a method = ballot **+** count) · related: [`summability.md`](RCV_IRV_lack_of_summability.md),
 [`monotonicity.md`](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts:
 [`tabulation_star_vs_irv.md`](../tabulation_star_vs_irv.md) · Level **201**.
@@ -113,7 +113,7 @@ unfair.
 ---
 
 ## Cross-references
-- [`what_is_a_voting_method.md`](../../interviews_conversations/what_is_a_voting_method.md)
+- [`what_is_a_voting_method.md`](../what_is_a_voting_method.md)
   — the 101 ballot-vs-count distinction this stands on.
 - [`summability.md`](RCV_IRV_lack_of_summability.md) — why the IRV count can't be done locally.
 - [`monotonicity.md`](RCV_IRV_non_monotonicity.md) — why the IRV count can also be counterintuitive.

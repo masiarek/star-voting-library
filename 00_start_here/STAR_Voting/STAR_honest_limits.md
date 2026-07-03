@@ -30,7 +30,7 @@ constructions a voter can do better by scoring a front-runner above their true f
 **How much it matters:** it takes precise knowledge and coordination, and honest scoring is
 almost always the best strategy — but "eliminates favorite betrayal" would be an overclaim.
 Neither STAR nor RCV-IRV is FBC-proof (they fail it in different ways). See
-[favorite betrayal](../../interviews_conversations/favorite_betrayal_voting_301.md).
+[favorite betrayal](favorite_betrayal_voting_301.md).
 
 ## 3. Gives up Later-No-Harm (by design)
 
