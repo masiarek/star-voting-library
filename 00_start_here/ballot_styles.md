@@ -1,13 +1,11 @@
 # Alternate ballot styles — one voter, three ballots
 
-![img.png](img.png)
-
 *The same voter's opinion, expressed on three different ballots: **Ranking**,
 **Yes/No** (Approval), and **Scoring**. Seeing them side by side is the clearest way
 to grasp what each ballot **captures** and what it **throws away**.*
 
-→ The deeper distinction: [scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) ·
-why scoring methods aren't "RCV": [scoring vs. ranked](scoring-methods-vs-ranked-voting.md)
+→ The core distinction — order vs. strength: [scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) ·
+why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md)
 
 ![Three ballot styles side by side for the same five candidates (Andre, Blake, Carmen, David, Ella): a Ranking ballot with a 1st–5th grid, a Yes/No (Approval) ballot with one filled or open bubble per candidate, and a Scoring ballot rating each candidate 0 (Worst) to 5 (Best)](img/ballot_styles_ranking_yesno_scoring.png)
 

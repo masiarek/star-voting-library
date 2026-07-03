@@ -14,7 +14,7 @@ Because they use a fundamentally different ballot, scoring methods sit **outside
 |---|---|---|---|
 | **[Ranked (ordinal)](scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md), [STV](proportional_representation/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](RCV_Ranked_Robin/ranked_robin.md), [Schulze](RCV_Ranked_Robin/cycle_resolution.md), [Ranked Pairs](RCV_Ranked_Robin/cycle_resolution.md)), [Borda](other_ranked_methods/borda.md), [Bucklin](RCV_Ranked_Robin/glossary_ranked_robin.md) |
 | **[Scored (cardinal)](scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](Approval_Voting/approval_voting.md), [Score](Range_Voting/range_voting.md) |
-| **[Hybrid](STAR_Voting/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5, then an automatic runoff between the top two | Strength of support **and** a majority check | **[STAR](STAR_Voting/STAR_start_here.md)** |
+| **[Hybrid](STAR_Voting/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5 ([scoring round](STAR_Voting/STAR_Scoring_Round.md)), then an [automatic runoff](STAR_Voting/STAR_Automatic_Runoff.md) between the top two | Strength of support **and** a majority check | **[STAR](STAR_Voting/STAR_start_here.md)** |
 
 ## Approval Voting
 
