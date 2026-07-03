@@ -1,0 +1,36 @@
+--- Range / Score Voting (single winner) ---
+  The Black Curtain
+ Tabulating 5 ballots on a 0–5 scale (range/score: highest total wins, no runoff).
+
+[Scenario]
+  Election 4 of 4 from "The Black Curtain". Four candidates now, but behind
+  the curtain (first choices only) it looks identical to the other three:
+  Cal 3, Ann 2. Choose-One, RCV-IRV, and STAR elect Cal. Approval ("approve"
+  = video score 5+) is a 3–3 coin toss between Cal and Dee. Pure Score on the
+  video's 0–9 ballots elects Bob by a hair (avg 5.6 vs Cal's 5.4) — a margin
+  too fine to survive the 0–5 rescale (totals here: Cal 15, Bob 14). Scale
+  granularity is part of the lesson; see README_black_curtain.md.
+  Source video: https://www.youtube.com/watch?v=5_ZMruwOZgw
+  Notes doc: https://docs.google.com/document/d/1ntOS5PQ_kkPnaZpDeqLShGv2pz_k6Zom9LnTEdjjd4o
+  BetterVoting template: https://bettervoting.com/p9gwc3/vote
+  This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
+  Original 0–9 video scores mapped to 0–5: 0→0, 1→1, 4→2, 5→3, 8→4, 9→5.
+
+Ballots:
+  Ann, Bob, Cal, Dee
+  0, 2, 5, 3
+  0, 2, 5, 3
+  0, 2, 5, 3
+  5, 4, 0, 1
+  5, 4, 0, 1
+
+Total score (sum of all grades):
+  Cal            15  ← winner
+  Bob            14
+  Dee            11
+  Ann            10
+
+Cross-check — pref_voting score_voting: Cal  (✓ agrees with the hand count)
+
+Winner — Range / Score Voting (single winner)
+  Cal

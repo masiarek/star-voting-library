@@ -110,6 +110,19 @@ def _copeland_winner(candidates, score_ballots, order):
     return ranked[0], is_cycle
 
 
+def _score_winner(candidates, score_ballots, order):
+    """Range / Score voting: highest TOTAL score wins (no runoff); ties broken by
+    priority/lot order — the same order STAR uses. It's Approval's fuller-resolution
+    cousin, and STAR's score round without the automatic runoff."""
+    totals = {c: 0 for c in candidates}
+    for b in score_ballots:
+        for c in candidates:
+            totals[c] += b.get(c, 0) or 0
+    top = max(totals.values())
+    leaders = [c for c in candidates if totals[c] == top]
+    return min(leaders, key=order.index)
+
+
 def _irv_stable(candidates, ballots, order, samples=9):
     """compute_irv_winner via pyrankvote is nondeterministic on a PERFECT tie
     (it returns whichever tied candidate the internal set yields). For a
@@ -173,6 +186,7 @@ def analyze(path):
     cond_strict = w.condorcet_winner(candidates, strict)
 
     approval = w.approval_winner(candidates, ballots, order)
+    score = _score_winner(candidates, ballots, order)
 
     rr_conv_sensitive = rr_weak != rr_strict
 
@@ -186,6 +200,7 @@ def analyze(path):
         "RR_weak": rr_weak,
         "RR_strict": rr_strict,
         "Approval": approval,
+        "Score": score,
         "Condorcet_weak": cond_weak,
         "Condorcet_strict": cond_strict,
         "tie_ballots": tie_ballots,
@@ -413,6 +428,7 @@ def case_md(r, dupes):
     M.append(f"| RCV-IRV | {r['IRV']} |")
     M.append(f"| Ranked Robin (RCV-RR) | {r['RR_weak']} |")
     M.append(f"| Approval | {r['Approval']} |")
+    M.append(f"| Range / Score | {r['Score']} |")
     M.append(f"| Condorcet | {r['Condorcet_weak'] or 'none (cycle)'} |")
     M.append("")
     M.append(f"**Flags:** {_flag_line(r)}\n")
@@ -502,7 +518,7 @@ def main():
 
     # --- CSV (machine-readable) ---
     cols = ["bucket", "file", "candidates", "ballots", "STAR", "IRV", "IRV_rev",
-            "RR_weak", "RR_strict", "Approval", "Condorcet_weak",
+            "RR_weak", "RR_strict", "Approval", "Score", "Condorcet_weak",
             "Condorcet_strict", "tie_ballots", "irv_fragile",
             "rr_conv_sensitive", "cycle"]
     with (OUT_DIR / "divergence.csv").open("w", newline="") as fh:
@@ -589,6 +605,7 @@ def main():
                 f"({r['candidates']}c/{r['ballots']}b)  \n"
                 f"    STAR=**{r['STAR']}** · IRV={r['IRV']} · "
                 f"RR={r['RR_weak']} · Approval={r['Approval']} · "
+                f"Score={r['Score']} · "
                 f"Condorcet={r['Condorcet_weak'] or 'none'}{flagtxt}{duptxt}")
 
     L.append("## Cases by bucket\n")

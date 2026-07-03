@@ -1,0 +1,34 @@
+--- Range / Score Voting (single winner) ---
+  The Black Curtain
+ Tabulating 5 ballots on a 0–5 scale (range/score: highest total wins, no runoff).
+
+[Scenario]
+  Election 3 of 4 from "The Black Curtain". Same five voters, same first
+  choices as before — but now the MINORITY bloc's favorite Ann is everyone's
+  strong pick (8 or 9 from all five voters), while 3-voter favorite Cal is
+  hated by the other bloc. Choose-One, RCV-IRV, and STAR still elect Cal
+  (runoff 3 to 2); Approval and pure Score elect Ann (approved 5×, avg 8.4).
+  Original 0–9 video scores mapped to 0–5: 0→0, 1→1, 4→2, 5→3, 8→4, 9→5.
+  See README_black_curtain.md.
+  Source video: https://www.youtube.com/watch?v=5_ZMruwOZgw
+  Notes doc: https://docs.google.com/document/d/1ntOS5PQ_kkPnaZpDeqLShGv2pz_k6Zom9LnTEdjjd4o
+  BetterVoting template: https://bettervoting.com/p9gwc3/vote
+  This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
+
+Ballots:
+  Ann, Bob, Cal
+  4, 0, 5
+  4, 0, 5
+  4, 0, 5
+  5, 1, 0
+  5, 1, 0
+
+Total score (sum of all grades):
+  Ann            22  ← winner
+  Cal            15
+  Bob            2
+
+Cross-check — pref_voting score_voting: Ann  (✓ agrees with the hand count)
+
+Winner — Range / Score Voting (single winner)
+  Ann

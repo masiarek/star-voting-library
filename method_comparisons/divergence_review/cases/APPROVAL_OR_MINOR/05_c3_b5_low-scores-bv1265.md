@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **A**. Only **Approval** differs, el
 | RCV-IRV | A |
 | Ranked Robin (RCV-RR) | A |
 | Approval | C |
+| Range / Score | C |
 | Condorcet | A |
 
 **Flags:** 1 tied-score ballot(s)

@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Carmen**. Only **Approval** differ
 | RCV-IRV | Carmen |
 | Ranked Robin (RCV-RR) | Carmen |
 | Approval | Andre |
+| Range / Score | Carmen |
 | Condorcet | Carmen |
 
 **Flags:** none

@@ -168,7 +168,8 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   printable, `video_script` = notes, never echoed); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
   see next bullet). See `ORGANIZATION.md`.
-- **Prefer linking the `.md` page over the raw `.yaml` — and MD/links in general.**
+- **When creating education pages or cross-referencing, prefer the `.md` page over
+  the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by
   `scripts/build_yaml_pages.py`) are the reader-friendly surface: **lead with them**
   in tables, navs, and cross-references (left-most / primary link). Link a `.yaml`

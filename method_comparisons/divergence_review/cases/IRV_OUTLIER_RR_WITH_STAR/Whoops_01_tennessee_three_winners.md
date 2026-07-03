@@ -16,6 +16,7 @@ STAR elects **Nashville** — and so do Ranked Robin and Condorcet, because **Na
 | RCV-IRV | Knoxville |
 | Ranked Robin (RCV-RR) | Nashville |
 | Approval | Nashville |
+| Range / Score | Nashville |
 | Condorcet | Nashville |
 
 **Flags:** none

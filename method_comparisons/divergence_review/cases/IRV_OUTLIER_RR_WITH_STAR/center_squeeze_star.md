@@ -16,6 +16,7 @@ STAR elects **Center** — and so do Ranked Robin and Condorcet, because **Cente
 | RCV-IRV | Left |
 | Ranked Robin (RCV-RR) | Center |
 | Approval | Left |
+| Range / Score | Center |
 | Condorcet | Center |
 
 **Flags:** none

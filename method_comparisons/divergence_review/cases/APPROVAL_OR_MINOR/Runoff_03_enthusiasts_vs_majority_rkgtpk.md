@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Eden**. Only **Approval** differs,
 | RCV-IRV | Eden |
 | Ranked Robin (RCV-RR) | Eden |
 | Approval | Dakota |
+| Range / Score | Dakota |
 | Condorcet | Eden |
 
 **Flags:** none

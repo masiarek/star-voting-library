@@ -77,12 +77,17 @@ Score 0–9 → **B** (avg 5.6 vs C 5.4, A 3.6, D 3.4)
 
 ## Results at a glance
 
-| Election | Choose-One | RCV-IRV | STAR | Approval (5+) | Score 0–9 |
-|---|---|---|---|---|---|
-| 1 | C | C | **C** | **B** | **B** |
-| 2 | C | C | **C** | tie A/C | C |
-| 3 | C | C | **C** | **A** | **A** |
-| 4 | C | C | **C** | tie C/D | **B** |
+| Election | Choose-One | RCV-IRV | STAR | Approval (5+) | Score 0–9 | All methods |
+|---|---|---|---|---|---|---|
+| 1 | C | C | **C** | **B** | **B** | [compare →](../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_01_c3_b5_hidden-consensus.md) |
+| 2 | C | C | **C** | tie A/C | C | [compare →](../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md) |
+| 3 | C | C | **C** | **A** | **A** | [compare →](../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_03_c3_b5_polarized-on-cal.md) |
+| 4 | C | C | **C** | tie C/D | **B** | ranked & approval agree; only Score differs |
+
+The **All methods** page for each election is the generated cross-method write-up —
+STAR · RCV-IRV · Ranked Robin · Approval · **Range / Score** · Condorcet — with every
+method's tabulation and links back here. (Election 4 agrees across the ranked and
+approval methods, so the divergence ledger doesn't page it; its Score result is above.)
 
 ## Lessons learned
 
@@ -162,6 +167,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## Related
 
+- [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md) (pref_voting); Range and STAR part ways in elections 1 and 3
 - [`../../00_start_here/scores_and_ranks/`](../../00_start_here/scores_and_ranks/) — scores vs ranks, the fidelity ladder
 - [`../../00_start_here/rcv_irv_vs_star.md`](../../00_start_here/rcv_irv_vs_star.md) — method comparison
 - [`../runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader) — when STAR's runoff agrees/disagrees with the score leader

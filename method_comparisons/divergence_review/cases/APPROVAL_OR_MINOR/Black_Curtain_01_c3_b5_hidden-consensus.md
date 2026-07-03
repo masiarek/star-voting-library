@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Cal**. Only **Approval** differs, 
 | RCV-IRV | Cal |
 | Ranked Robin (RCV-RR) | Cal |
 | Approval | Bob |
+| Range / Score | Bob |
 | Condorcet | Cal |
 
 **Flags:** none

@@ -16,6 +16,7 @@ On these ballots RCV-IRV reports **A** rather than STAR's **D**, but this is an 
 | RCV-IRV | A |
 | Ranked Robin (RCV-RR) | D |
 | Approval | A |
+| Range / Score | D |
 | Condorcet | D |
 
 **Flags:** 4 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=D, strict=A)

@@ -16,6 +16,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 | RCV-IRV | Z |
 | Ranked Robin (RCV-RR) | X |
 | Approval | X |
+| Range / Score | X |
 | Condorcet | none (cycle) |
 
 **Flags:** none

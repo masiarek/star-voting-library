@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**121 election files** (112 single-winner, 9 multi-winner) across 12 method(s).
+**122 election files** (113 single-winner, 9 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -21,6 +21,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 1 |
 | APPROVAL_MULTI_WINNER | 3 |
 | PLURALITY | 1 |
+| RANGE | 1 |
 | RR | 1 |
 
 ## STAR  (92)
@@ -197,6 +198,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | File | Folder | Winners | Title / expected |
 |------|--------|:------:|------------------|
 | [`BV_Library_plurality_single_winner.yaml`](../../method_comparisons/BV_Library/BV_Library_plurality_single_winner.yaml) | `method_comparisons/BV_Library/` | 1 | BV parity — Plurality (choose-one): most first-marks wins → _Dave_ |
+
+## RANGE  (1)
+
+| File | Folder | Winners | Title / expected |
+|------|--------|:------:|------------------|
+| [`range_101_c3_b5.yaml`](../../other_methods/_main/range_101_c3_b5.yaml) | `other_methods/_main/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ |
 
 ## RR  (1)
 

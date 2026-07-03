@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Brownie**. Only **Approval** diffe
 | RCV-IRV | Brownie |
 | Ranked Robin (RCV-RR) | Brownie |
 | Approval | Almond |
+| Range / Score | Almond |
 | Condorcet | Brownie |
 
 **Flags:** none

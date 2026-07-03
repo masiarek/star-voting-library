@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Strawberry**. Only **Approval** di
 | RCV-IRV | Strawberry |
 | Ranked Robin (RCV-RR) | Strawberry |
 | Approval | Vanilla |
+| Range / Score | Strawberry |
 | Condorcet | Strawberry |
 
 **Flags:** none

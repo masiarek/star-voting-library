@@ -1,0 +1,27 @@
+election_title: "Range / Score Voting 101 — highest total score wins"
+
+scenario_description: |-
+  The simplest score election. Three candidates, five voters grading 0–5.
+  Range (Score) voting just SUMS the grades — highest total wins, no runoff and
+  no elimination. Beth has broad, strong support across both camps and wins on
+  total score (21), ahead of Cole (15) and Amy (11). Tabulated by the range
+  engine (pref_voting score_voting, cross-checked against a hand sum).
+
+# Range is a non-EVC method (see other_methods/README). It is tabulated by
+# Range_tabulation_engine/range_tabulation.py (pref_voting), NOT the STAR engine.
+# Any score ballot can be read as Range.
+voting_method: Range
+num_winners: 1
+
+ballots: |-
+  Amy,Beth,Cole
+  5,4,0
+  5,3,1
+  0,4,5
+  1,5,4
+  0,5,5
+
+expected_winners:
+  - Beth
+
+# file: range_101_c3_b5.yaml

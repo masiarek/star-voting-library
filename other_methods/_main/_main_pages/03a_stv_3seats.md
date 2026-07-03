@@ -98,4 +98,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py other_methods/_m
 
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 
-More cases in this set: [RCV_ballot_example](RCV_ballot_example.md)
+More cases in this set: [RCV_ballot_example](RCV_ballot_example.md) · [range_101_c3_b5](range_101_c3_b5.md)

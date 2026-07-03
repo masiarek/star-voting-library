@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Oak**. Only **Approval** differs, 
 | RCV-IRV | Oak |
 | Ranked Robin (RCV-RR) | Oak |
 | Approval | Pine |
+| Range / Score | Pine |
 | Condorcet | Oak |
 
 **Flags:** none

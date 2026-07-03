@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Almond**. Only **Approval** differ
 | RCV-IRV | Almond |
 | Ranked Robin (RCV-RR) | Almond |
 | Approval | Choco |
+| Range / Score | Almond |
 | Condorcet | Almond |
 
 **Flags:** none

@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Olive**. Only **Approval** differs
 | RCV-IRV | Olive |
 | Ranked Robin (RCV-RR) | Olive |
 | Approval | Maple |
+| Range / Score | Maple |
 | Condorcet | Olive |
 
 **Flags:** none

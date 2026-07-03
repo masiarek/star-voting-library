@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Sage**. Only **Approval** differs,
 | RCV-IRV | Sage |
 | Ranked Robin (RCV-RR) | Sage |
 | Approval | Rosa |
+| Range / Score | Rosa |
 | Condorcet | Sage |
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)

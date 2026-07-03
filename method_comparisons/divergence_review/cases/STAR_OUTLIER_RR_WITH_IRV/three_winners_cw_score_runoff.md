@@ -16,6 +16,7 @@ RCV-IRV and Ranked Robin both elect **Ann**, the Condorcet (pairwise) winner. ST
 | RCV-IRV | Ann |
 | Ranked Robin (RCV-RR) | Ann |
 | Approval | Bob |
+| Range / Score | Carl |
 | Condorcet | Ann |
 
 **Flags:** none

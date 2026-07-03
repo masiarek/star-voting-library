@@ -93,6 +93,10 @@ def _cases():
                 continue
             method = (_find_method(data) or "STAR").strip().lower()
             seats = data.get("num_winners", 1)
+            # Range / Score is tabulated by the separate range engine
+            # (test_range_tabulation.py, pref_voting), not the LH engine — skip.
+            if method in ("range", "score"):
+                continue
             # Leave plain single-winner STAR files in the covered folders to
             # test_single_winner_positive.py.
             if method == "star" and seats in (1, None) and p.parent in STAR_COVERED:

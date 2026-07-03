@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Boston**. Only **Approval** differ
 | RCV-IRV | Boston |
 | Ranked Robin (RCV-RR) | Boston |
 | Approval | Austin |
+| Range / Score | Austin |
 | Condorcet | Boston |
 
 **Flags:** none

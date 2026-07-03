@@ -16,6 +16,7 @@ STAR elects **Leia** — and so do Ranked Robin and Condorcet, because **Leia is
 | RCV-IRV | Skywalker |
 | Ranked Robin (RCV-RR) | Leia |
 | Approval | Skywalker |
+| Range / Score | Leia |
 | Condorcet | Leia |
 
 **Flags:** none

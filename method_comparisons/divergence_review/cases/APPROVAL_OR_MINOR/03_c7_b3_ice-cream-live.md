@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **ChocoAlm**. Only **Approval** diff
 | RCV-IRV | ChocoAlm |
 | Ranked Robin (RCV-RR) | ChocoAlm |
 | Approval | ChocoDrk |
+| Range / Score | ChocoDrk |
 | Condorcet | ChocoAlm |
 
 **Flags:** none

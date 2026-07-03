@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Allison**. Only **Approval** diffe
 | RCV-IRV | Allison |
 | Ranked Robin (RCV-RR) | Allison |
 | Approval | Bill |
+| Range / Score | Allison |
 | Condorcet | none (cycle) |
 
 **Flags:** none

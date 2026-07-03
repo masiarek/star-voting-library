@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Blair**. Only **Approval** differs
 | RCV-IRV | Blair |
 | Ranked Robin (RCV-RR) | Blair |
 | Approval | Alex |
+| Range / Score | Alex |
 | Condorcet | Blair |
 
 **Flags:** 1 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)

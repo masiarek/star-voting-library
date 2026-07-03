@@ -16,6 +16,7 @@ On these ballots RCV-IRV reports **Cara** rather than STAR's **Ann**, but this i
 | RCV-IRV | Cara |
 | Ranked Robin (RCV-RR) | Ann |
 | Approval | Ann |
+| Range / Score | Ann |
 | Condorcet | none (cycle) |
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Ann, strict=Cara)

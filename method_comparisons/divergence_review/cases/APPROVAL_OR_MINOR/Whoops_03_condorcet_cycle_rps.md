@@ -16,6 +16,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Rock**. Only **Approval** differs,
 | RCV-IRV | Rock |
 | Ranked Robin (RCV-RR) | Rock |
 | Approval | Paper |
+| Range / Score | Rock |
 | Condorcet | none (cycle) |
 
 **Flags:** none

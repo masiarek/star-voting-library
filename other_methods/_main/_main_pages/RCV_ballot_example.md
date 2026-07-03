@@ -64,4 +64,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py other_methods/_m
 - [Summability (topic hub)](../../../00_start_here/topics/summability/README_summability.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 
-More cases in this set: [03a_stv_3seats](03a_stv_3seats.md)
+More cases in this set: [03a_stv_3seats](03a_stv_3seats.md) · [range_101_c3_b5](range_101_c3_b5.md)

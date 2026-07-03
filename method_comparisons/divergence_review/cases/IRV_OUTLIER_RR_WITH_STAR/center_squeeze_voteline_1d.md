@@ -16,6 +16,7 @@ STAR elects **Green** — and so do Ranked Robin and Condorcet, because **Green 
 | RCV-IRV | Yellow |
 | Ranked Robin (RCV-RR) | Green |
 | Approval | Green |
+| Range / Score | Green |
 | Condorcet | Green |
 
 **Flags:** none

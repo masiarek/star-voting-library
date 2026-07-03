@@ -16,6 +16,7 @@ On these ballots RCV-IRV reports **Bob** rather than STAR's **Don**, but this is
 | RCV-IRV | Bob |
 | Ranked Robin (RCV-RR) | Don |
 | Approval | Ann |
+| Range / Score | Bob |
 | Condorcet | Don |
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Don, strict=Bob)

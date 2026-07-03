@@ -16,6 +16,7 @@ The methods split: STAR=Ada, RCV-IRV=Ada, Ranked Robin=Cleo; the Condorcet (pair
 | RCV-IRV | Ada |
 | Ranked Robin (RCV-RR) | Cleo |
 | Approval | Ada |
+| Range / Score | Ada |
 | Condorcet | Cleo |
 
 **Flags:** 25 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
