@@ -30,10 +30,10 @@ Even among ranked methods, the rules differ. Many allow **[equal ranks](scores_a
 
 | Idea | The myth | The reality | Page |
 |---|---|---|---|
-| Terminology | "RCV = one method" | RCV is a family; US "RCV" = RCV-IRV (Hare) | [1](RCV_IRV/RCV-IRV-confusing-name.md) |
-| Scores vs. ranks | "Rating ≈ ranking" | Rank = order only; score = order **+ strength** | [2](scores_and_ranks/scores_vs_ranks.md) |
-| What's even ranked | "STAR/Approval are RCV" | They're scoring methods, not ranked | [3](scoring-methods-vs-ranked-voting.md) |
-| Strict vs. weak | "All ranked ballots act alike" | IRV forbids equal ranks & isn't pairwise; others allow/are | [4](scores_and_ranks/strict_vs_weak_ranks.md) |
+| Terminology | "RCV = one method" | RCV is a family; US "RCV" = RCV-IRV (Hare) | [the naming problem](RCV_IRV/RCV-IRV-confusing-name.md) |
+| Scores vs. ranks | "Rating ≈ ranking" | Rank = order only; score = order **+ strength** | [scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) |
+| What's even ranked | "STAR/Approval are RCV" | They're scoring methods, not ranked | [scoring ≠ RCV](scoring-methods-vs-ranked-voting.md) |
+| Strict vs. weak | "All ranked ballots act alike" | IRV forbids equal ranks & isn't pairwise; others allow/are | [strict vs. weak ranks](scores_and_ranks/strict_vs_weak_ranks.md) |
 
 ## Where to go next
 
