@@ -2,7 +2,7 @@
 
 A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach
 STAR Voting through Q&A plus live demos run from this repo. The scripts now live
-**beside their topics** — STAR episodes in [`STAR_Voting/`](STAR_Voting/), RCV-IRV
+**beside their topics** — STAR episodes in [STAR Voting — concept pages](STAR_Voting/), RCV-IRV
 episodes in [`RCV_IRV/`](RCV_IRV/), and the foundational ones here in `00_start_here/`
 — and this page indexes them. The demos come from `00_start_here/`,
 `01_Single_winner/`, and `split_voting/`.

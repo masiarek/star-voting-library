@@ -9,10 +9,10 @@ order.
 > ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is
 > simple, the *tabulation* isn't. See [Which RCV-IRV?](RCV_IRV_variants.md).
 
-→ Builds on [`what_is_a_voting_method.md`](../what_is_a_voting_method.md)
-(a method = ballot **+** count) · related: [`summability.md`](RCV_IRV_lack_of_summability.md),
-[`monotonicity.md`](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts:
-[`tabulation_star_vs_irv.md`](../tabulation_star_vs_irv.md) · Level **201**.
+→ Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../what_is_a_voting_method.md)
+(a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md),
+[IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts:
+[How the Count Works — STAR vs RCV-IRV, Step by Step](../tabulation_star_vs_irv.md) · Level **201**.
 
 ---
 
@@ -47,7 +47,7 @@ all working against "simple":
 
 - **Not summable.** A precinct's IRV result doesn't compose with another's — you can't
   add subtotals, because who's eliminated depends on the *whole* electorate. So every
-  ballot has to travel to **one central count.** (See [`summability.md`](RCV_IRV_lack_of_summability.md).)
+  ballot has to travel to **one central count.** (See [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md).)
 - **Software-dependent and hard to hand-audit.** Rounds of transfers are not something
   poll workers reconcile on a precinct table; a recount means re-running the algorithm
   on all ballots at once.
@@ -62,7 +62,7 @@ tally.* That's the half "look how simple it is" leaves out.
 
 **The ballot — at least as easy to mark:**
 - 0–5 is the familiar **five-star** mental model (every rating app you already use).
-  (Why a score ballot differs from a rank ballot: [`scores_vs_ranks.md`](../scores_and_ranks/scores_vs_ranks.md).)
+  (Why a score ballot differs from a rank ballot: [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../scores_and_ranks/scores_vs_ranks.md).)
 - You **rate each candidate on their own** — no forcing a complete strict order among a
   field of strangers ("is she my 4th or my 5th?").
 - **Equal scores are allowed** — you can say "I like these two the same" (the repo's
@@ -113,9 +113,9 @@ unfair.
 ---
 
 ## Cross-references
-- [`what_is_a_voting_method.md`](../what_is_a_voting_method.md)
+- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../what_is_a_voting_method.md)
   — the 101 ballot-vs-count distinction this stands on.
-- [`summability.md`](RCV_IRV_lack_of_summability.md) — why the IRV count can't be done locally.
-- [`monotonicity.md`](RCV_IRV_non_monotonicity.md) — why the IRV count can also be counterintuitive.
+- [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md) — why the IRV count can't be done locally.
+- [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) — why the IRV count can also be counterintuitive.
 - Roadmap: pairs with **Episode 6** (Benefits — *Simple*) and **Episode 8** (Counting &
   trust). Glossary: "Summability," "Tabulation," "Equal Support."

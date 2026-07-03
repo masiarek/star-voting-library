@@ -58,7 +58,7 @@ tabulatable source, and the always-full audit copy is in `_main_tabulated/`.
 
 ---
 
-Up: [`../README_01_STAR.md`](../) · Concept docs:
+Up: [01_STAR — single-winner STAR Voting](../) · Concept docs:
 [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)
 
 # file: README.md

@@ -17,7 +17,7 @@ nothing is ever "exhausted."**
 
 Cues: **[DEMO]** run a file · **[SLIDE]** show a slide · **[REPO]** lesson file.
 
-→ This is one entry in the broader [`rcv_irv_false_claims.md`](rcv_irv_false_claims.md)
+→ This is one entry in the broader [RCV-IRV Misconceptions & False Claims — an index](rcv_irv_false_claims.md)
 index (which routes every common "RCV" claim to its rebuttal).
 
 ---
@@ -130,7 +130,7 @@ The honest version is: *which* of your rankings get counted depends on the
 ### A concrete example — *which* ranks IRV threw away
 
 27 voters, three candidates on a spectrum
-([`01_Single_winner/center_squeeze_star.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml)):
+([`center_squeeze_star.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml)):
 
 | Voters | Their ballot (full ranking) | What IRV did with it | Rank IRV **never read** |
 |---|---|---|---|

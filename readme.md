@@ -72,7 +72,7 @@ count is **legible and reproducible**, so it can be taught and audited.
 
 | Area | What's there |
 |---|---|
-| [**STAR engine** (LH `starvote` fork)](STARVote_LH_tabulation_engine/) | The STAR engine (single-winner STAR, Bloc / proportional STAR, Approval, **Ranked Robin**), reporting options, the preference matrix, the `[Divergence from STAR]` comparison, the optional `show_runoff_percent` runoff summary, and the `lot_numbers` tie-break. Vendored fork of `starvote`; see [`FORK_NOTES.md`](STARVote_LH_tabulation_engine/FORK_NOTES.md). |
+| [**STAR engine** (LH `starvote` fork)](STARVote_LH_tabulation_engine/) | The STAR engine (single-winner STAR, Bloc / proportional STAR, Approval, **Ranked Robin**), reporting options, the preference matrix, the `[Divergence from STAR]` comparison, the optional `show_runoff_percent` runoff summary, and the `lot_numbers` tie-break. Vendored fork of `starvote`; see [Fork Notes — starvote (vendored fork)](STARVote_LH_tabulation_engine/FORK_NOTES.md). |
 | [**RCV-IRV engine** (pyrankvote)](06_Other/RCV_IRV/RCV_IRV_tabulation_engine/) | Vendored RCV-IRV engine. Ranked ballots (`A>B>C`) route here automatically. Concept pages: [RCV-IRV (Hare)](00_start_here/RCV_IRV/RCV-IRV-Hare.md). |
 | [**pref_voting cross-check engine**](STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) | Independent cross-check engine — wraps Eric Pacuit's `pref_voting` to verify the LH engine's Condorcet / IRV / Plurality (and report Copeland = Ranked Robin). Optional dep. |
 | [**abcvoting engine**](abcvoting_tabulation_engine/) | Multi-winner **Approval / ABC** rules (Martin Lackner's `abcvoting`) — SPAV / PAV / Phragmén and an AV cross-check of the LH bloc-Approval count. Optional dep. |
@@ -88,15 +88,15 @@ count is **legible and reproducible**, so it can be taught and audited.
 | [**Conversation scripts**](00_start_here/conversation_scripts.md) | Larry ↔ Adam debate / teaching scripts — index; episodes live beside their topics. |
 | Test suite (`…/tests/`) | The [pytest suite + pre-commit hook](STARVote_LH_tabulation_engine/tests/). |
 
-> Start with [`00_start_here/00_START_HERE.md`](00_start_here/00_START_HERE.md)
-> for the guided tour, and [`CLAUDE.md`](CLAUDE.md) for the house conventions.
+> Start with [Start Here](00_start_here/00_START_HERE.md)
+> for the guided tour, and [CLAUDE.md — working guidance for this repo](CLAUDE.md) for the house conventions.
 
 ---
 
 ## The YAML election file
 
 Want to author a case? The fill-in guide is
-[`00_start_here/YAML_authoring_template.md`](00_start_here/YAML_authoring_template.md).
+[YAML Test Case — Authoring Template](00_start_here/YAML_authoring_template.md).
 
 The schema is **flat**. The only required pieces are a voting method, a seat
 count, and a ballot grid (a header row of candidate names, then one row of 0–5
@@ -180,7 +180,7 @@ ballots: |-
 
 (House style keeps examples **small** — prefer a handful of individual ballots
 that make the point over big weighted blocs. See
-[`00_start_here/TIPS_choosing_voter_counts.md`](00_start_here/TIPS_choosing_voter_counts.md).)
+[Tips — Choosing the Number of Voters in STAR Examples](00_start_here/TIPS_choosing_voter_counts.md).)
 
 ### Tie-breaking and `lot_numbers`
 
@@ -189,7 +189,7 @@ priority first) used only when STAR's deterministic tiebreakers can't separate
 the candidates. Imported BetterVoting files carry it automatically; hand-written
 files usually omit it (the engine then assumes CSV column order). The full
 ladder — and what JSON provides vs. what you may set by hand — is documented in
-[`tie_breaking.md`](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+[STAR Tie-Breaking — The Full Chain](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
 
 ---
 
@@ -268,7 +268,7 @@ style — ranked `A>B>C` always routes to RCV-IRV):
 > Terminology: this repo says **RCV-IRV** (or **IRV**) for the instant-runoff
 > count, reserving bare **RCV** for the ranked-ballot family. "RCV" loosely means
 > IRV in US usage; we clarify once, then use the precise term. See
-> [`00_start_here/TIPS_terminology.md`](00_start_here/TIPS_terminology.md).
+> [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](00_start_here/TIPS_terminology.md).
 
 ---
 
@@ -289,7 +289,7 @@ produces the right message with no traceback, so the error UX itself is tested.
 in-tree so the examples and tests pin a known-good engine. Local additions
 (extra reporting, the preference matrix, the `[Divergence from STAR]` block, the
 `lot_numbers` tie-break wiring, clearer errors) are documented in
-[`STARVote_LH_tabulation_engine/FORK_NOTES.md`](STARVote_LH_tabulation_engine/FORK_NOTES.md).
+[Fork Notes — starvote (vendored fork)](STARVote_LH_tabulation_engine/FORK_NOTES.md).
 Quick checks can use the system `python3`; the engines are vendored, not pip
 dependencies.
 
@@ -297,8 +297,8 @@ dependencies.
 
 ## Learn more
 
-- [`00_start_here/00_START_HERE.md`](00_start_here/00_START_HERE.md) — guided entry point
-- [`00_start_here/CURRICULUM.md`](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
-- [`00_start_here/GLOSSARY.md`](00_start_here/GLOSSARY.md) — terms, precisely defined
-- [`00_start_here/`](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
-- [`CLAUDE.md`](CLAUDE.md) — house conventions for contributing consistently
+- [Start Here](00_start_here/00_START_HERE.md) — guided entry point
+- [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
+- [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
+- [Concepts — deep-dive pages for the important terms](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
+- [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently

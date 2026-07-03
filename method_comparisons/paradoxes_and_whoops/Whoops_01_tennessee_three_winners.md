@@ -5,7 +5,7 @@ cities, one set of sincere ballots — and **three different methods crown three
 cities.** It's the cleanest demonstration that "the winner" isn't a property of the
 voters; it's a property of the *rule*.
 
-→ fairness test: [`reading_these_fairly.md`](reading_these_fairly.md)
+→ fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md)
 · the set: [`README`](README.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
 ↔ BV QA tracker: **BV150** (Lanphier — STAR/IRV/Condorcet give different winners; [ABIF Tennessee example](https://abif.electorama.com/id/TNexampleSTAR)).
 

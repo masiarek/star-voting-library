@@ -8,7 +8,7 @@ many*. (Eden is also the Condorcet winner — a calm case.)
 
 Where [Runoff 02](Runoff_02_atom_reversal_yx9447.md) had a *broadly-liked* leader,
 this one has an *intense-minority* leader — the other face of the same reversal.
-→ teaching guide: [`teaching_runoff_reversal.md`](teaching_runoff_reversal.md)
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
 · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 

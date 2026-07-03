@@ -10,7 +10,7 @@ The contrast: in [Runoff 01](Runoff_01_confirms_leader_r2pvc9.md) the same machi
 preference point at different candidates.
 
 Two views of the **same election** (BV id [`yx9447`](https://bettervoting.com/yx9447/results)).
-→ teaching guide: [`teaching_runoff_reversal.md`](teaching_runoff_reversal.md)
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
 · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 

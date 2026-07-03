@@ -5,7 +5,7 @@ report shows** — it changes the *display*, never the result. (The saved
 `_tabulated.txt` ignores these and always renders everything; house default on
 screen is "less is more.")
 
-→ Up: [How the LH engine reports](README.md) · hub: [STAR Reporting](../) · house defaults: [`CLAUDE.md`](../../../CLAUDE.md).
+→ Up: [How the LH engine reports](README.md) · hub: [STAR Reporting](../) · house defaults: [CLAUDE.md — working guidance for this repo](../../../CLAUDE.md).
 
 ---
 
@@ -55,5 +55,5 @@ lean teaching echo and a fuller study render.
    complete regardless of what the on-screen echo chose to show.
 
 The recommended minimal block and the per-option house defaults live in
-[`CLAUDE.md`](../../../CLAUDE.md); the full report section-by-section is
+[CLAUDE.md — working guidance for this repo](../../../CLAUDE.md); the full report section-by-section is
 [Reading a STAR report](../../tabulation_engines/LH_starvote/reading_a_star_report.md).

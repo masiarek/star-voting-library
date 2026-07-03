@@ -29,7 +29,7 @@ belongs upstream.
 
 We use it as a **vendored fork** (a copy committed into this repo) only so the
 teaching examples are reproducible against a known version; we don't patch the
-algorithm. See [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md)
+algorithm. See [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md)
 for the exact upstream baseline (tag `starvote-upstream-2.1.6`) and how to re-pull a
 future release.
 
@@ -45,7 +45,7 @@ algorithm:
 | **Our wrapper** | `starvote_larry_hastings.py` | How elections are **loaded, run, displayed, and saved** — the reporting, the matrix, the colors, multi-method dispatch, error handling. |
 
 So when we say the LH engine "reports better than upstream," we almost always mean
-the **wrapper** ([`README_larry_hastings.md`](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md)) —
+the **wrapper** ([starvote_larry_hastings.py — presentation wrapper](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md)) —
 not edits to Larry's code.
 
 ### Exactly what we changed in the vendored engine
@@ -170,4 +170,4 @@ whole library (currently **0 mismatches**):
 - [Reading a STAR report](reading_a_star_report.md) — the section-by-section walkthrough.
 - [BetterVoting and the LH engine](../bettervoting_and_the_engine.md) — the visual half of the same race.
 - [Runoff Reversal](../../../01_STAR/runoff_overturns_leader/) — the phenomenon the report is built to expose.
-- [`README_larry_hastings.md`](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md) · [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) — the engine docs themselves.
+- [starvote_larry_hastings.py — presentation wrapper](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md) · [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) — the engine docs themselves.

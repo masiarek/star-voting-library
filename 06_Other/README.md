@@ -10,8 +10,8 @@ gets its own subfolder.
 | **[STV/](STV)** | [STV — 3 seats](STV/STV_pages/03a_stv_3seats.md) | proportional seats from ranked ballots (compare [proportional STAR](../03_STAR_PR/) on score ballots) | [`.yaml`](STV/03a_stv_3seats.yaml) |
 | **[Range/](Range)** | [Range / Score 101](Range/Range_pages/range_101_c3_b5.md) | highest total score wins — STAR without the runoff | [`.yaml`](Range/range_101_c3_b5.yaml) |
 
-Range overview: [`range_voting.md`](../00_start_here/Range_Voting/range_voting.md);
-engine: [`Range_tabulation_engine`](Range/Range_tabulation_engine/) (pref_voting).
+Range overview: [Range / Score Voting](../00_start_here/Range_Voting/range_voting.md);
+engine: [Range / Score voting tabulation engine](Range/Range_tabulation_engine/) (pref_voting).
 
 Most non-EVC material lives where it teaches best: inside
 [method comparisons](../method_comparisons/), where RCV-IRV and

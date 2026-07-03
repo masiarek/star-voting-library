@@ -38,7 +38,7 @@ same election).
   **strategy-exposed**: a voter's rational play is often to give max/min only
   (which collapses Range toward Approval). STAR's runoff is the standard answer.
 
-See the teaching page [`00_start_here/Range_Voting/range_voting.md`](../../../00_start_here/Range_Voting/range_voting.md)
+See the teaching page [Range / Score Voting](../../../00_start_here/Range_Voting/range_voting.md)
 for the method overview, pros/cons, and ballot examples, and the
 [Black Curtain read as Range](../../../method_comparisons/black_curtain/black_curtain_range.md).
 Range is a **non-EVC** method, so its examples live in

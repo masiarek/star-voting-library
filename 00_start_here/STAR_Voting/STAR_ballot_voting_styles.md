@@ -105,7 +105,7 @@ the rest of the ballot. In this library's YAML files a blank is written `-`,
 and there are markers for the other real-world cases (race abstention `~`,
 candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all
 tabulate as 0 but are reported honestly. See
-[`ballot_and_terminology_basics.md`](../ballot_and_terminology_basics.md) and
+[Ballot & Terminology Basics](../ballot_and_terminology_basics.md) and
 the [GLOSSARY](../GLOSSARY.md).
 
 Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions,

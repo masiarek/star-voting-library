@@ -7,7 +7,7 @@ than one bit, and STAR without the runoff.*
 
 → **Run it:** the 101 case [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml)
 ([tabulated](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) ·
-the **Black Curtain, read as Range** → [`black_curtain_range.md`](../../method_comparisons/black_curtain/black_curtain_range.md) ·
+the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md) ·
 Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/)
 (pref_voting). · Family: [Approval](../Approval_Voting/approval_voting.md) ·
 [STAR](../STAR_Voting) · [fidelity ladder](../scores_and_ranks/fidelity_ladder.md).
@@ -63,7 +63,7 @@ honesty safer. Which trade-off you want is the whole debate.
 
 - [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
 - **Black Curtain, read as Range** — the four Black Curtain elections tabulated by
-  the range engine: [`black_curtain_range.md`](../../method_comparisons/black_curtain/black_curtain_range.md).
+  the range engine: [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md).
   Range elects the broadly-liked candidate (Bob, Cal, Ann…) where STAR's runoff
   hands the seat to the majority's favorite — the sharpest illustration of the
   Range-vs-STAR trade-off.
@@ -75,12 +75,12 @@ honesty safer. Which trade-off you want is the whole debate.
   simulations, and strong advocacy — read it as an *advocate's* case, alongside
   the cons above).
 - [Equal Vote Coalition](https://www.equal.vote/) — STAR and the scored family.
-- Glossary: **Score / Range voting** — [`../GLOSSARY.md`](../GLOSSARY.md).
+- Glossary: **Score / Range voting** — [Glossary — voting methods & criteria](../GLOSSARY.md).
 
 ## Tabulation (the details)
 
 Range files here are tabulated by
-[`06_Other/Range/Range_tabulation_engine/range_tabulation.py`](../../06_Other/Range/Range_tabulation_engine/),
+[Range / Score voting tabulation engine](../../06_Other/Range/Range_tabulation_engine/),
 which wraps **pref_voting**'s `score_voting` and cross-checks it against a hand
 sum. Full report for the 101 case:
 [`range_101_c3_b5_RANGE_tabulated.txt`](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt).

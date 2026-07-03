@@ -76,6 +76,6 @@ Finalists (67%)`, in one line that says what it's dividing by.
 
 ## Evidence & the filed issue
 
-- Frozen BetterVoting result + raw export: [`BV_result_snapshot.md`](../../01_STAR/pet_real_bv_election/BV_result_snapshot.md)
+- Frozen BetterVoting result + raw export: [BetterVoting result — frozen snapshot (pet race)](../../01_STAR/pet_real_bv_election/BV_result_snapshot.md)
 - Minimal cases: [3-candidate](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md) (a flat `3,3,3` dropped) · [2-candidate](../../01_STAR/pet_real_bv_election/small_abstention_c2_b5_lesson.md) (a `5,5` dropped)
-- Write-up filed with BetterVoting: [`LH_BV_reconciliation_issue.md`](../../01_STAR/pet_real_bv_election/LH_BV_reconciliation_issue.md) → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)
+- Write-up filed with BetterVoting: [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](../../01_STAR/pet_real_bv_election/LH_BV_reconciliation_issue.md) → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)

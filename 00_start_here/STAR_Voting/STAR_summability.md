@@ -76,4 +76,4 @@ Summability is a property of the **count**, not the ballot. A *ranked* ballot co
 by a **Condorcet** method (Ranked Robin) is also summable, via the very same pairwise
 matrix. So "ranked ballots aren't summable" is wrong — it's **IRV's elimination
 count** specifically that isn't (see the [IRV page](../RCV_IRV/RCV_IRV_lack_of_summability.md)).
-More on keeping the terms straight: [`TIPS_terminology.md`](../TIPS_terminology.md).
+More on keeping the terms straight: [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md).

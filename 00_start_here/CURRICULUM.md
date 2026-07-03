@@ -9,7 +9,7 @@ the "curriculum map, keep folders" approach; see
 Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md)),
 the **files/episodes** to use, and **what to emphasize**. Example YAMLs stay in
 their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
-`split_voting/`); conversation scripts live beside their topics, indexed in [`conversation_scripts.md`](conversation_scripts.md).
+`split_voting/`); conversation scripts live beside their topics, indexed in [Conversation scripts — index](conversation_scripts.md).
 
 ---
 
@@ -36,7 +36,7 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
 ## 101.3 — How you're allowed to vote
 - **Objective:** Remove the fear of "voting wrong."
 - **Key terms:** bullet vote, equal scores, partial ballot, blank vs explicit 0, voting style, expressiveness.
-- **Page:** [`STAR_Voting/STAR_ballot_voting_styles.md`](STAR_Voting/STAR_ballot_voting_styles.md) — the style gallery (traditional / backup / partisan / ranked-style / nuanced / "anyone but…" / protest), why the 5-star ballot is hard to spoil, and the expressiveness case.
+- **Page:** [Filling Out the 5-Star Ballot — Voting Styles](STAR_Voting/STAR_ballot_voting_styles.md) — the style gallery (traditional / backup / partisan / ranked-style / nuanced / "anyone but…" / protest), why the 5-star ballot is hard to spoil, and the expressiveness case.
 - **Files:** `01_Single_winner/03*` (`03c` is the eight-style gallery in one election); large field (9 candidates) `06a` (STAR scales; Equal Support decides the runoff) and `06b` (the runoff overturns the score leader).
 - **The headline lesson — top scorer ≠ winner:** the dedicated walkthrough [Runoff Reversal](../01_STAR/runoff_overturns_leader/) collects this as an approachable 3→9-candidate progression (with a confirm-case control), answering BetterVoting's *"why is the top-scoring candidate different from the winner?"*
 - **Ballot note:** the ballot's own line *"equal scores indicate no preference"* means no preference *in the runoff* — those ballots still count in the scoring round. (That's the Equal Support point; see `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md`.)
@@ -64,17 +64,17 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
 - **Emphasize:** the pairwise matrix is the auditable, precinct-summable heart.
 - **Two reports, one count:** an election appears both as BetterVoting's visual display and
   the LH engine's text report; why there are two, how they map, and the convert→validate→test
-  pipeline are in [`tabulation_engines/bettervoting_and_the_engine.md`](tabulation_engines/bettervoting_and_the_engine.md).
+  pipeline are in [BetterVoting and the LH Engine — One Election, Two Reports](tabulation_engines/bettervoting_and_the_engine.md).
 - **The full audit report:** the generated `_tabulated.txt` siblings carry the complete
   engine report (matrix + score distribution + the plain-English *Majority Preference*
   block). The Runoff Reversal lesson (101.3) shows the *minimal* on-screen view; reading
   the **full** report of those same elections (e.g.
   `01_Single_winner/runoff_overturns_leader_tabulated/`) is the 201 skill — and *why* the
   on-screen echo is minimal by default (don't overwhelm a beginner).
-- **Worked walkthrough:** [`tabulation_engines/LH_starvote/reading_a_star_report.md`](tabulation_engines/LH_starvote/reading_a_star_report.md)
+- **Worked walkthrough:** [How to Read a STAR Result Report (201)](tabulation_engines/LH_starvote/reading_a_star_report.md)
   — a full LH report (BV1265) annotated section by section, with a "show which parts to
   101 / 201 / 301" table.
-- **Reading the runoff percentages:** [`STAR_Voting/runoff_percentages.md`](STAR_Voting/runoff_percentages.md)
+- **Reading the runoff percentages:** [Reading the Runoff Percentages — Two Denominators, One Winner](STAR_Voting/runoff_percentages.md)
   — the BetterVoting runoff shown two ways: % of *all* voters vs % of those *with a
   preference* (the two denominators), and why the majority bar is half of the decided
   voters, not half of everyone. The LH engine prints this same decided-voters share as
@@ -129,7 +129,7 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
 ## 301.3 — "Are equal-score votes discounted?"
 - **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
 - **Episode:** `are_equal_score_votes_discounted.md`; demo `01_Single_winner/equal_support_runoff_demo.yaml`.
-- **In the result display:** [`STAR_Voting/runoff_percentages.md`](STAR_Voting/runoff_percentages.md)
+- **In the result display:** [Reading the Runoff Percentages — Two Denominators, One Winner](STAR_Voting/runoff_percentages.md)
   shows exactly where Equal Support lands in BetterVoting's runoff — counted in full in
   the score round, then set aside to form the "voters with a preference" denominator (so
   the winner's majority is of the decided voters, not of everyone).
@@ -137,9 +137,9 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
 ## 301.4 — The honest limits & theory
 - **Key terms:** Gibbard / Gibbard–Satterthwaite, strategy resistance vs proofness, Condorcet efficiency, Test of Balance.
 - **Material:** `Why_STAR_Voting.md` Part 2 Tier 2–3; "resistant, not proof."
-- **The Equal Vote / Test of Balance:** [`STAR_Voting/equally_weighted_vote.md`](STAR_Voting/equally_weighted_vote.md)
+- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](STAR_Voting/equally_weighted_vote.md)
   (why STAR passes — any ballot has an exact opposite that cancels) and
-  [`RCV_IRV/RCV_IRV_equal_vote.md`](RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails —
+  [RCV-IRV Fails the Equal Vote (Equality) Criterion](RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails —
   stated fairly, with the honest caveats on the criticism).
 - **Deeper math:** [the math behind Condorcet](RCV_Ranked_Robin/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite) · [the math behind proportional STAR](proportional_representation/STAR_PR/the_math_behind_proportional_star.md) (apportionment, Balinski–Young).
 
@@ -176,7 +176,7 @@ their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`,
   top contenders are bunched, compressing the scale can move a **finalist** and flip the
   **STAR** winner — even though rescaling never reorders any voter's own preferences.
 - **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
-- **Material:** [`scores_and_ranks/scale_granularity_flips_the_winner.md`](scores_and_ranks/scale_granularity_flips_the_winner.md);
+- **Material:** [Scale granularity can flip the winner (a 301 case)](scores_and_ranks/scale_granularity_flips_the_winner.md);
   case `01_Single_winner/_main/rrv_sample_c15_b13_three-parties.yaml` (BetterVoting's RRV
   sample run as single-winner STAR: 0–5 → Orange5, 0–9 → Orange1).
 - **Emphasize:** a *fragile, mapping-dependent* divergence (a 2nd-place tie on one scale, a

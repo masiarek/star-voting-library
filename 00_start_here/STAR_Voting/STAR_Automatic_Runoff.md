@@ -171,7 +171,7 @@ with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-c
 progression, plus a voter-facing explanation:
 [Runoff Reversal](../../01_STAR/runoff_overturns_leader/).
 Teaching it (step-by-step, why it's good, devil's-advocate Q&A):
-[`teaching_runoff_reversal.md`](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
+[Teaching Runoff Reversal — a step-by-step guide](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) ·
 the three different "winners" (score / runoff / Condorcet): [three winner notions](STAR_three_winner_notions.md).
 
@@ -257,7 +257,7 @@ here honestly but explored calmly in **201/301**, not in a learner's first lesso
 
 | Variation | What happens | Page |
 |---|---|---|
-| Runoff Reversal | score leader loses the runoff | [`runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/) |
+| Runoff Reversal | score leader loses the runoff | [When the top-scoring candidate isn't the winner](../../01_STAR/runoff_overturns_leader/) |
 | Exact tie | even split → tie-break ladder | [Tie-Breaking](Tie_Breaking_STAR/tie_breaking.md) |
 | Two candidates | runoff *is* the election | — |
 | Percentages | decided-voters denominator | [runoff percentages](runoff_percentages.md) |

@@ -6,7 +6,7 @@ Paper over Scissors, and Scissors over Rock** — a loop with no top. When that 
 there is **no Condorcet winner at all**, so Condorcet / Ranked Robin can't name one
 without an extra cycle-breaking rule. This is *their* whoops.
 
-→ fairness test: [`reading_these_fairly.md`](reading_these_fairly.md)
+→ fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md)
 · [`GLOSSARY` (Condorcet cycle)](../../00_start_here/GLOSSARY.md) · the set: [`README`](README.md)
 · how Condorcet methods break cycles: [Cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
 ↔ BV QA tracker: **BV147 / BV188** (Condorcet cycle / paradox — BV: [w7y3wv](https://bettervoting.com/w7y3wv/results), [6mbvhg](https://bettervoting.com/6mbvhg/results)).

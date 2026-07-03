@@ -8,7 +8,7 @@ runoff matters.*
 
 → Method overview: [Range / Score voting](../../00_start_here/Range_Voting/range_voting.md) ·
 Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) ·
-The set's STAR write-up: [`README_black_curtain.md`](README.md).
+The set's STAR write-up: [The Black Curtain — one electorate, four "identical" landslides](README.md).
 
 ---
 

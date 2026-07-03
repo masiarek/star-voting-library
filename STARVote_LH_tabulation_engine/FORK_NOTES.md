@@ -20,7 +20,7 @@ in our script/tools.
 
 > Our wrapper script (`starvote_larry_hastings.py`), its display options, the
 > `_tabulated` output format, and the `tools_adam/tabulate_all.py` batch runner
-> are documented in **[`README_larry_hastings.md`](README_larry_hastings.md)**.
+> are documented in **[starvote_larry_hastings.py — presentation wrapper](README_larry_hastings.md)**.
 
 ## Upstream baseline
 

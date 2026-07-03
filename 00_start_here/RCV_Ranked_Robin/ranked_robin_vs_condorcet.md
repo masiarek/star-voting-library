@@ -4,7 +4,7 @@
 the same thing? Almost — and the gap between them is the whole lesson.*
 
 → Topic hub: [Condorcet efficiency](../topics/condorcet/) · cycles in depth:
-[`cycle_resolution.md`](cycle_resolution.md) · the method: [`ranked_robin.md`](ranked_robin.md)
+[Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md) · the method: [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md)
 · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md)
 · **Level: Voting 301** — Curriculum [301.6](../CURRICULUM.md)
 
@@ -82,7 +82,7 @@ Winner — Ranked Robin (RCV-RR): Ada
 
 This is the whole distinction in one election: **Condorcet = (blank), Ranked Robin = Ada.**
 (*How a cycle gets resolved is itself a design choice — Minimax, Ranked Pairs, and Schulze
-each break it differently. See [`cycle_resolution.md`](cycle_resolution.md).*)
+each break it differently. See [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md).*)
 
 ## In the wild — record 0 from the random sweep
 

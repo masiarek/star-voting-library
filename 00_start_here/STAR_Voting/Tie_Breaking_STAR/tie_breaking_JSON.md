@@ -5,7 +5,7 @@ and ships it inside the results JSON; the converter reads it and writes it into
 the YAML as `lot_numbers:`, so our re-tabulation reproduces BetterVoting's exact
 winner — even when a tie comes down to the lot.
 
-→ Companion to [`tie_breaking.md`](tie_breaking.md) (the tiebreak *ladder* and
+→ Companion to [STAR Tie-Breaking — The Full Chain](tie_breaking.md) (the tiebreak *ladder* and
 the hand-written-YAML side). This page is the **JSON-side reference**: where the
 order lives in the export, and exactly how it maps to YAML. Implemented in the
 converter
@@ -24,7 +24,7 @@ this up front and records the drawn order in the results, so the count is
 **reproducible**: anyone re-tabulating the same ballots gets the same winner. Our
 job in conversion is simply to **carry that order across** into the YAML, not to
 re-draw it. (For *when* the order actually gets used — almost never — see the
-ladder in [`tie_breaking.md`](tie_breaking.md).)
+ladder in [STAR Tie-Breaking — The Full Chain](tie_breaking.md).)
 
 ---
 
@@ -122,7 +122,7 @@ lot_numbers: [Strawberry, Fudge Brownie, Mango, Chocolate Chip, Vanilla, Chocola
 (In this particular election the lot is never actually consulted — five-star and
 score settle both ties first. The order is carried anyway, so the file stays
 faithful and reproducible if the ballots ever change. See the full trace in
-[`tie_breaking.md`](tie_breaking.md).)
+[STAR Tie-Breaking — The Full Chain](tie_breaking.md).)
 
 ---
 
@@ -164,7 +164,7 @@ exercises all three shapes against a perfect symmetric tie (where the lot is the
   carried in the export (their "Random Tie-breakers" section describes the
   candidate shuffle that becomes `perm`):
   <https://docs.bettervoting.com/help/ties.html>
-- [`tie_breaking.md`](tie_breaking.md) — the tiebreak ladder (both rounds) and
+- [STAR Tie-Breaking — The Full Chain](tie_breaking.md) — the tiebreak ladder (both rounds) and
   what you may set in a **hand-written** YAML.
-- [`../../readme.md`](../../../readme.md) — the converter in the overall pipeline.
-- Glossary: **Tiebreaker** — [`../GLOSSARY.md`](../../GLOSSARY.md)
+- [STAR Voting — Education & Test-Case Library](../../../readme.md) — the converter in the overall pipeline.
+- Glossary: **Tiebreaker** — [Glossary — voting methods & criteria](../../GLOSSARY.md)

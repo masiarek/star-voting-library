@@ -108,4 +108,4 @@ nomenclature snaps into place — and so does why "RCV" alone is ambiguous.
 
 See also: [GLOSSARY.md](GLOSSARY.md) (precise definitions) ·
 [CURRICULUM.md](CURRICULUM.md) · the nomenclature episode
-[`RCV_or_IRV_whats_the_right_word.md`](RCV_IRV/RCV_or_IRV_whats_the_right_word.md).
+["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](RCV_IRV/RCV_or_IRV_whats_the_right_word.md).

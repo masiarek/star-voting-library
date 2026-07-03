@@ -42,7 +42,7 @@ The headline: **allowing equal ranks and using pairwise comparisons are features
 
 Forcing a **strict** order makes voters invent distinctions they don't feel — "is she my 4th or my 5th?" — and **studies suggest** this adds noise and may raise ballot-spoilage rates (the evidence is real but contested). Allowing **equal ranks** lets a voter honestly express indifference, and it adds real expressive power: on a strict ballot a second choice "could be as good as your favorite or almost as bad as your last choice," and the ballot can't tell the difference. In reform-advocate **simulations (e.g., voter-satisfaction-efficiency work)**, good weak-ranked Condorcet methods tend to perform on par with good score methods, while strict-rank IRV lags — a finding worth citing as such, not as settled fact.
 
-(Scores go one step further: they carry order *and* strength. See [`scores_vs_ranks.md`](scores_vs_ranks.md).)
+(Scores go one step further: they carry order *and* strength. See [Scores vs. Ranks — Don't Confuse Ranks and Ratings](scores_vs_ranks.md).)
 
 ---
 

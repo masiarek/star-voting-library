@@ -6,9 +6,9 @@
 elections never reach the lot.
 
 → Builds on the **Automatic Runoff** and **Head-to-head / pairwise** glossary
-entries · JSON-side companion: [`tie_breaking_JSON.md`](tie_breaking_JSON.md)
+entries · JSON-side companion: [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md)
 (format & mapping) · related:
-[`tabulation_star_vs_irv.md`](../../tabulation_star_vs_irv.md) ·
+[How the Count Works — STAR vs RCV-IRV, Step by Step](../../tabulation_star_vs_irv.md) ·
 operational companions: the JSON→YAML converter
 ([`YAML_library/1_positive/01_convert_json_yaml.py`](../../../YAML_library/1_positive/01_convert_json_yaml.py))
 and its tests
@@ -201,7 +201,7 @@ lot_numbers: [Strawberry, Fudge Brownie, Mango, Chocolate Chip, Vanilla, Chocola
 
 The exact JSON fields, the field-by-field mapping, the fallbacks, and the worked
 Ice Cream mapping are in the companion page:
-**[`tie_breaking_JSON.md`](tie_breaking_JSON.md)**.
+**[Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md)**.
 
 ---
 
@@ -264,9 +264,9 @@ column-order fallback is exactly what you want.
   the ladder above, and the "shuffle the candidates" random order our
   `lot_numbers` carries): <https://docs.bettervoting.com/help/ties.html>
 - Glossary: **Tiebreaker**, **Head-to-head / pairwise**, **Automatic runoff**,
-  **Equal Support** — [`GLOSSARY.md`](../../GLOSSARY.md)
+  **Equal Support** — [Glossary — voting methods & criteria](../../GLOSSARY.md)
 - Equal-score handling in the runoff:
-  [`are_equal_score_votes_discounted.md`](../are_equal_score_votes_discounted.md)
+  ["Aren't Equal-Score Votes Just Discounted?"](../are_equal_score_votes_discounted.md)
   · demo [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml)
 - Converter + engine wiring and the full test matrix (perm, `tieBreakOrder`,
   no-sequence, manual override, column-order fallback, and the non-vacuous

@@ -6,8 +6,8 @@ support. What survives is a **narrow, self-inflicted** residual in the top-two
 runoff: a faction can still split itself if it refuses to use the score ballot, or
 tries to game which ally claims the second finalist slot.
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · related: [`RCV_IRV_center_squeeze.md`](../RCV_IRV/RCV_IRV_center_squeeze.md)
-· debate version: [`favorite_betrayal_voting_301.md`](favorite_betrayal_voting_301.md)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · related: [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)
+· debate version: [Favorite Betrayal — Does *Only* RCV Avoid It?](favorite_betrayal_voting_301.md)
 
 ---
 

@@ -10,7 +10,7 @@ BetterVoting's display and the LH engine's text report. Same ballots, same resul
 
 → The reversal that contrasts with this: [S2 — the atom](teaching_runoff_reversal.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
-· teaching guide: [`teaching_runoff_reversal.md`](teaching_runoff_reversal.md).
+· teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md).
 
 ---
 

@@ -6,8 +6,8 @@ it in, the examples to use, **why a reversal is a good thing**, and the hard
 ("devil's advocate") questions with answers.
 
 - Concept hub: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) (has the flow diagram)
-- The concept lesson + all cases: [`README.md`](README.md)
-- Voter-facing one-paragraph version (and a BetterVoting popover fix): [`explaining_to_voters.md`](explaining_to_voters.md)
+- The concept lesson + all cases: [When the top-scoring candidate isn't the winner](README.md)
+- Voter-facing one-paragraph version (and a BetterVoting popover fix): [Explaining Runoff Reversal to Voters](explaining_to_voters.md)
 - Glossary: [`Runoff Reversal`](../../00_start_here/GLOSSARY.md)
 
 ---
@@ -153,7 +153,7 @@ split; see [the flow](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md#t
 
 **"Voters will be confused/angry when their leader loses."**
 That's the real risk — so name it and explain it in one breath, the way
-[`explaining_to_voters.md`](explaining_to_voters.md) does. Confusion comes from an
+[Explaining Runoff Reversal to Voters](explaining_to_voters.md) does. Confusion comes from an
 *unexplained* reversal, not the reversal itself.
 
 ## Two views of the real cases (BV + LH) — assets to add

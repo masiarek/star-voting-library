@@ -69,7 +69,7 @@ Every lesson in this folder ends with this block, filled in honestly:
 > and you should go build the one that embarrasses your favorite, too.
 
 → Standing house policy on terminology and not-being-a-purist:
-[`TIPS_terminology.md`](../../00_start_here/TIPS_terminology.md). The even-handedness
+[Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../00_start_here/TIPS_terminology.md). The even-handedness
 duty is also why STAR's own limits are documented as peers, not footnotes:
 [STAR's limits](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md#what-the-runoff-buys-you--and-its-limits)
 · [three winner notions](../../00_start_here/STAR_Voting/STAR_three_winner_notions.md).

@@ -9,7 +9,7 @@ voters, not all five — the bridge to the two-denominator idea.
 → what an Equal Support ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md)
 · the two denominators: [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
-· teaching guide: [`teaching_runoff_reversal.md`](teaching_runoff_reversal.md).
+· teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md).
 
 ---
 

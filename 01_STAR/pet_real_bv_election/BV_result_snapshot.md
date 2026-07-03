@@ -57,10 +57,10 @@ gap. The winner and runoff margin are identical.
 
 ## See also
 
-- The correctness/reconciliation write-up: [`LH_BV_reconciliation_issue.md`](LH_BV_reconciliation_issue.md) → filed as [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)
-- **Canonical small case (a lesson in itself): [`small_case_abstention_lesson.md`](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) as abstentions
-- Even-simpler 2-candidate capture (BV calls a `5,5` an abstention): [`small_abstention_c2_b5_lesson.md`](small_abstention_c2_b5_lesson.md)
+- The correctness/reconciliation write-up: [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md) → filed as [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)
+- **Canonical small case (a lesson in itself): [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) as abstentions
+- Even-simpler 2-candidate capture (BV calls a `5,5` an abstention): [The minimal case](small_abstention_c2_b5_lesson.md)
 - Minimal synthetic illustration (LH-correct behavior): [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
-- How that small case was reproduced on BetterVoting: [`SMALL_CASE_reproduce_on_BV.md`](SMALL_CASE_reproduce_on_BV.md)
-- Worked lesson: [`README.md`](README.md)
+- How that small case was reproduced on BetterVoting: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
+- Worked lesson: [A real BetterVoting election, end to end — "What Makes the Best Pet?"](README.md)
 - Concept: [BetterVoting and the LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) · [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md)

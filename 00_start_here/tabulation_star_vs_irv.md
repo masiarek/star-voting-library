@@ -5,12 +5,12 @@ runoff — **two steps.** **RCV-IRV** runs rounds of eliminate-and-transfer — 
 **three.** In this example both elect **Carmen**, so the page isolates the *process*
 (how each count works and what it costs), not the winner.
 
-→ Companion to [`RCV_IRV_is_simple.md`](RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?"
-argument) and [`summability.md`](STAR_Voting/STAR_summability.md). When the two counts elect
-*different* people, see [`RCV_IRV_center_squeeze.md`](RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**.
+→ Companion to [Is RCV "Simple"? — Which Half?](RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?"
+argument) and [STAR Is Summable — Add Up Precinct Totals](STAR_Voting/STAR_summability.md). When the two counts elect
+*different* people, see [Center Squeeze](RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**.
 
 Worked on one shared file:
-[`01_Single_winner/count_simplicity_star_vs_irv.yaml`](../method_comparisons/_main/count_simplicity_star_vs_irv.yaml)
+[`count_simplicity_star_vs_irv.yaml`](../method_comparisons/_main/count_simplicity_star_vs_irv.yaml)
 — 45 voters, 5 candidates (Andre, Blake, Carmen, Dana, Evan).
 
 ---
@@ -96,7 +96,7 @@ electorate. Every ballot has to be in one place.
 > *continuing* ballots, not of everyone who voted. A faithful display should show the
 > exhausted pile each round. STAR has no equivalent: every ballot's full score is read
 > in the scoring round, and every ballot counts in the runoff. (See
-> [`../../00_start_here/RCV_IRV/exhausted_ballots_301.md`](RCV_IRV/exhausted_ballots_301.md).)
+> ["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md).)
 
 ---
 
@@ -120,7 +120,7 @@ Here the methods agree, and Carmen even led the first round — but **the first-
 leader is not always the winner.** In a **center squeeze**, the consensus candidate is
 almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while
 STAR's scoring round keeps her in and she wins. Same ballots, different count,
-**different winner** — traced in [`RCV_IRV_center_squeeze.md`](RCV_IRV/RCV_IRV_center_squeeze.md) (demos
+**different winner** — traced in [Center Squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) (demos
 `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV
 results have to be read to the *final* round, never reported from first choices alone.
 
@@ -141,8 +141,8 @@ python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_S
 ---
 
 ## Cross-references
-- [`RCV_IRV_is_simple.md`](RCV_IRV/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
-- [`summability.md`](STAR_Voting/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
-- [`RCV_IRV_center_squeeze.md`](RCV_IRV/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
-- [`../../00_start_here/what_is_a_voting_method.md`](what_is_a_voting_method.md)
+- [Is RCV "Simple"? — Which Half?](RCV_IRV/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
+- [STAR Is Summable — Add Up Precinct Totals](STAR_Voting/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
+- [Center Squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
+- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](what_is_a_voting_method.md)
   — ballot vs count, the 101 foundation.

@@ -101,11 +101,11 @@ lower per candidate (`5 + 4 = 9`) and its Equal Support 92 instead of 98 (`92 + 
 The winner, finalists, and runoff margin are identical. This is documented as a
 reconciliation/correctness issue:
 
-- **Canonical small case (a lesson in itself): [`small_case_abstention_lesson.md`](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) under "abstention"
-- Frozen BetterVoting result + raw export (this 461-ballot race): [`BV_result_snapshot.md`](BV_result_snapshot.md)
-- Write-up & GitHub issue → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [`LH_BV_reconciliation_issue.md`](LH_BV_reconciliation_issue.md)
-- Even-simpler 2-candidate lesson + synthetic illustration: [`small_abstention_c2_b5_lesson.md`](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
-- Reproduce it on BetterVoting yourself: [`SMALL_CASE_reproduce_on_BV.md`](SMALL_CASE_reproduce_on_BV.md)
+- **Canonical small case (a lesson in itself): [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) under "abstention"
+- Frozen BetterVoting result + raw export (this 461-ballot race): [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md)
+- Write-up & GitHub issue → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
+- Even-simpler 2-candidate lesson + synthetic illustration: [The minimal case](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
+- Reproduce it on BetterVoting yourself: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
 - Concept: [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support)
 
 ## Run it yourself

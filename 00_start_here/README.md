@@ -5,7 +5,7 @@
 what counts as "ranked," and strict vs. weak ranks).
 
 Not every glossary term needs its own page — most are fine as a one-liner in
-[`../GLOSSARY.md`](GLOSSARY.md). This folder holds the handful of concepts that
+[Glossary — voting methods & criteria](GLOSSARY.md). This folder holds the handful of concepts that
 are **load-bearing in debates** and worth a focused page with a worked example and
 **links to the test-case YAMLs** that demonstrate them.
 
@@ -70,7 +70,7 @@ the GitHub file tree, not just by method). First hub: [Summability](topics/summa
 | **Tie-breaking in BetterVoting JSON** | how a BV export pre-draws the official lot order, and its YAML mapping | [Tie_Breaking_STAR/tie_breaking_JSON.md](STAR_Voting/Tie_Breaking_STAR/tie_breaking_JSON.md) |
 
 Deeper conversation/debate scripts live beside their topics, indexed in
-[`conversation_scripts.md`](conversation_scripts.md) (e.g.
-[`favorite_betrayal_voting_301.md`](STAR_Voting/favorite_betrayal_voting_301.md),
-[`exhausted_ballots_301.md`](RCV_IRV/exhausted_ballots_301.md)); these pages are the
+[Conversation scripts — index](conversation_scripts.md) (e.g.
+[Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/favorite_betrayal_voting_301.md),
+["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)); these pages are the
 shorter, reference-style explainers the glossary links to.

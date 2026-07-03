@@ -11,7 +11,7 @@ A reversal (Alex leads the scoring round, **Blair** wins the runoff) that *also*
 contains a **flat ballot** (`3,3,3` — every candidate equal). That one ballot is where
 the two engines part ways.
 
-→ the bug, in full: [`small_case_abstention_lesson.md`](../pet_real_bv_election/small_case_abstention_lesson.md)
+→ the bug, in full: [When "no preference" gets called an "abstention"](../pet_real_bv_election/small_case_abstention_lesson.md)
 · why "Equal Support" ≠ "abstention": [`GLOSSARY`](../../00_start_here/GLOSSARY.md)
 · where the reports differ: [reporting_diff_BV_LH](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md).

@@ -7,7 +7,7 @@ kills that defense: candidate **C has the *most* first choices of anyone *and* b
 rival head-to-head — and IRV eliminates C anyway**, electing D.
 
 A ranked-ballot case (no scores invented). → fairness test:
-[`reading_these_fairly.md`](reading_these_fairly.md) · cousin:
+[Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · cousin:
 [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) · [`README`](README.md).
 
 ---

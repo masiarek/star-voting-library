@@ -16,7 +16,7 @@ The confusion is largely a **naming problem**. The same method goes by different
 - **Alternative Vote (AV)** in the UK
 - **Preferential Voting** in Australia
 
-> **"Preferential Voting" is itself a misnomer.** *Every* voting method lets voters express preferences — approval, score, and STAR included — so the name claims a broad, general word for one specific method. Worse, in the everyday sense a "preference" includes *strength of feeling*, which a **score** captures but a strict **rank** discards — so the label attaches the wider concept to the narrower mechanism. See [`preference.md`](../preference.md).
+> **"Preferential Voting" is itself a misnomer.** *Every* voting method lets voters express preferences — approval, score, and STAR included — so the name claims a broad, general word for one specific method. Worse, in the everyday sense a "preference" includes *strength of feeling*, which a **score** captures but a strict **rank** discards — so the label attaches the wider concept to the narrower mechanism. See ["Preference" — the Word That Causes Half the Confusion](../preference.md).
 
 In the US specifically, the advocacy group FairVote popularized "Ranked Choice Voting" as an accessible brand for IRV starting in the early 2000s, and the label stuck — in journalism, legislation, and everyday speech, "RCV" now almost always means IRV. That's a misnomer, since IRV is just one of many ranked methods. (For how the method itself arose — whole-ballot counting came first, IRV was the hand-countable workaround ~150 years ago — see [origins & spread](RCV_IRV_history.md).)
 

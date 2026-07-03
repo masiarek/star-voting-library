@@ -2,12 +2,12 @@
 
 This is STAR's single most important lesson — the one BetterVoting itself asks about
 when it pops up *"Why is the top-scoring candidate different from the winner?"*
-(Presenting with BetterVoting? [`explaining_to_voters.md`](explaining_to_voters.md)
+(Presenting with BetterVoting? [Explaining Runoff Reversal to Voters](explaining_to_voters.md)
 has a corrected, plain-language version of that popover.)
 
 **Teaching this?** The step-by-step presenter's guide — the order to teach it in,
 why it's a *good* thing, and the devil's-advocate questions with answers — is
-[`teaching_runoff_reversal.md`](teaching_runoff_reversal.md).
+[Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md).
 
 **The teaching set — `Runoff_01`–`Runoff_06`.** Six real BetterVoting elections, each a
 **two-view lesson** (BetterVoting screenshots beside the LH report) on the *how much vs
@@ -156,7 +156,7 @@ Reversal happens in roughly **1 election in 11**; under white-noise *Impartial
 Culture* it's higher, and at tiny electorates the figure is dominated by ties. The
 takeaway for a debate: never quote a bare percentage without naming the model, the
 electorate size, and how ties were counted. Full writeup:
-[`simulations/README.md`](../../simulations/README.md#runoff-reversal-frequency-simulation).
+[Simulations — measure it, don't guess it](../../simulations/README.md#runoff-reversal-frequency-simulation).
 
 ## Run them yourself
 

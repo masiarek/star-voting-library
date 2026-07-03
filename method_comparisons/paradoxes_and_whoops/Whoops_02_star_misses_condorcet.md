@@ -9,7 +9,7 @@ excluded *before* the decisive comparison.
 → the three "winners" STAR can name: [`STAR_three_winner_notions`](../../00_start_here/STAR_Voting/STAR_three_winner_notions.md)
 · STAR's limits: [AR hub](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md#what-the-runoff-buys-you--and-its-limits)
 · the ranked cousin: [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)
-· fairness test: [`reading_these_fairly.md`](reading_these_fairly.md).
+· fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md).
 ↔ BV QA tracker: **BV149** (STAR fails to elect the Condorcet winner).
 
 ---

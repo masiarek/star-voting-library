@@ -97,7 +97,7 @@ splits. (Outside cycles — i.e. almost always — they're identical.)
 - **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak** — a
   pragmatic choice: cycles are rare, so the simple win-loss count plus a sum-of-margins
   fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins,
-  Smallest Loss" — same family, different cycle rule.) See [`ranked_robin.md`](ranked_robin.md).
+  Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md).
 - **STAR is *not* a Condorcet method** and doesn't try to resolve cycles at all. Its
   score-then-runoff just produces a winner, which *can* differ from the Condorcet winner
   ([Whoops_02](../../method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.md)).

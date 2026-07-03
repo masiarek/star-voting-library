@@ -6,7 +6,7 @@
 prefer **Olive**, who wins the Automatic Runoff **6–3** — a clean **2-to-1 majority**
 (67 / 33). Proof a reversal isn't a small-numbers fluke. (Olive is the Condorcet winner.)
 
-→ teaching guide: [`teaching_runoff_reversal.md`](teaching_runoff_reversal.md)
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md)
 · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
 · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 

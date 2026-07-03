@@ -102,7 +102,7 @@ approval methods, so the divergence ledger doesn't page it; its Score result is 
 2. **The ballot decides what you can even know.** A choose-one ballot records
    only the top of each voter's mind. A ranked ballot records order but not
    intensity — 9-vs-8 and 9-vs-0 both flatten to "1st > 2nd" (see
-   [`../../00_start_here/scores_and_ranks/scores_vs_ranks.md`](../../00_start_here/scores_and_ranks/scores_vs_ranks.md)).
+   [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../../00_start_here/scores_and_ranks/scores_vs_ranks.md)).
    Only the score ballot distinguishes these four electorates. And because C
    has an outright first-choice majority, RCV-IRV's count ends in round one —
    the published result is *identical* in all four elections. Election 1's
@@ -122,7 +122,7 @@ approval methods, so the divergence ledger doesn't page it; its Score result is 
    threshold (here: video score 5+) collapses the near-clones of Election 2
    into a coin toss and manufactures a C/D tie in Election 4. More resolution,
    more information, finer distinctions — the fidelity ladder
-   ([`../../00_start_here/scores_and_ranks/fidelity_ladder.md`](../../00_start_here/scores_and_ranks/fidelity_ladder.md)).
+   ([The Fidelity Ladder — converting between scores and ranks](../../00_start_here/scores_and_ranks/fidelity_ladder.md)).
 
 5. **Scale granularity matters (the 0–9 → 0–5 problem).** The video uses six
    distinct scores — 0, 1, 4, 5, 8, 9 — which map one-to-one onto this repo's
@@ -136,7 +136,7 @@ approval methods, so the divergence ledger doesn't page it; its Score result is 
    itself a teaching point: the finer the scale, the more of the electorate's
    mind survives the count. For a case where rescaling flips not just a pure-Score
    near-tie but the **STAR winner itself**, see
-   [`../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md`](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)
+   [Scale granularity can flip the winner (a 301 case)](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)
    (Curriculum 301.8).
 
 6. **Verify, don't trust — even friendly sources.** Two on-screen averages in
@@ -169,7 +169,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting); Range and STAR part ways in elections 1 and 3
 - [`../../00_start_here/scores_and_ranks/`](../../00_start_here/scores_and_ranks) — scores vs ranks, the fidelity ladder
-- [`../../00_start_here/rcv_irv_vs_star.md`](../../00_start_here/rcv_irv_vs_star.md) — method comparison
+- [RCV-IRV vs. STAR — A Side-by-Side](../../00_start_here/rcv_irv_vs_star.md) — method comparison
 - [`../runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader) — when STAR's runoff agrees/disagrees with the score leader
 - Source video: [The Black Curtain](https://www.youtube.com/watch?v=5_ZMruwOZgw) · playlist: [Common Sense for Uniting America](https://www.youtube.com/watch?v=5_ZMruwOZgw&list=PLQod5if9cV9hiWml-4ZyQQNWvys8vlYHM)
 

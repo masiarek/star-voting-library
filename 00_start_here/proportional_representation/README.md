@@ -11,6 +11,6 @@ ballots and machinery:
   methods (Allocated Score, Sequentially Spent Score, Reweighted Range Voting) and
   the majoritarian **Bloc STAR** contrast.
 
-Both are **Voting 301** material — see [`CURRICULUM.md`](../CURRICULUM.md) (301.1).
+Both are **Voting 301** material — see [STAR Voting — Curriculum (Voting 101 / 201 / 301)](../CURRICULUM.md) (301.1).
 For the single-winner methods, stay in [STAR_Voting](../STAR_Voting) and
 [RCV_IRV](../RCV_IRV).

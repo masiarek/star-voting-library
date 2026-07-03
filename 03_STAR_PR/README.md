@@ -19,6 +19,6 @@ Concept docs:
 [`../00_start_here/proportional_representation/`](../00_start_here/proportional_representation).
 
 **Conversation scripts:** the Larry ↔ Adam STAR series is indexed in
-[`conversation_scripts.md`](../00_start_here/conversation_scripts.md).
+[Conversation scripts — index](../00_start_here/conversation_scripts.md).
 
 # file: README.md

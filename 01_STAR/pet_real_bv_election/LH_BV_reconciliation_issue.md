@@ -29,8 +29,8 @@ A real BetterVoting STAR race, id `pet` ("What Makes the Best Pet?"), 7 candidat
 - Live result (**may change** if recounted): <https://bettervoting.com/pet/results>
 - **Frozen snapshot** of the result + raw export this issue is based on (so the
   numbers below stay reproducible even if the live page changes):
-  [`BV_result_snapshot.md`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election/BV_result_snapshot.md)
-  · [`best_pet_c7_b461_bv_export.json`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election/best_pet_c7_b461_bv_export.json)
+  [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md)
+  · [the frozen BetterVoting JSON export](best_pet_c7_b461_bv_export.json)
 
 ## Evidence
 
@@ -97,7 +97,7 @@ The correct STAR treatment (and what the other tabulator does): a flat ballot is
 ## Minimal reproduction
 
 Two candidates, and a single `5,5` ballot shows it
-([file](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml)):
+([the tabulatable YAML](abstention_reconciliation_min_c2_b6.yaml)):
 
 ```
 A,B
@@ -138,9 +138,9 @@ Worked write-up + the engine's **full report** for each (the `_tabulated.txt` sh
 the ballots, the runoff, the "1 abstention" note, and the "Runoff math" funnel — i.e.
 exactly the counts to compare against BetterVoting):
 
-- **3 candidates** — lesson: [`small_case_abstention_lesson.md`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election/small_case_abstention_lesson.md)
+- **3 candidates** — lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)
   · engine report: [`flat_scores_abstention_c3_b8_tabulated.txt`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt)
-- **2 candidates** — lesson: [`small_abstention_c2_b5_lesson.md`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election/small_abstention_c2_b5_lesson.md)
+- **2 candidates** — lesson: [The minimal 2-candidate abstention case](small_abstention_c2_b5_lesson.md)
   · engine report: [`small_abstention_c2_b5_tabulated.txt`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt)
 
 ## The ask

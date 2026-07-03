@@ -177,15 +177,15 @@ A ballot that scores everyone the same is a **vote**, not a missing one:
 The full [pet race](README.md) (461 ballots) shows the identical rule at size:
 BetterVoting reports **6 abstentions**, all flat ballots — including one voter who
 scored **all seven** candidates **5** and another **all 4**. Frozen evidence:
-[`BV_result_snapshot.md`](BV_result_snapshot.md).
+[BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md).
 
 ## Variants & reproduction
 
-- **Even simpler (2 candidates):** [`small_abstention_c2_b5_lesson.md`](small_abstention_c2_b5_lesson.md)
+- **Even simpler (2 candidates):** [The minimal case](small_abstention_c2_b5_lesson.md)
   — with only two candidates a `5,5` *is* flat, so BetterVoting flags it directly
   (2 abstentions / 3 tallied). Good for the tightest one-ballot statement of the bug;
   this 3-candidate case is better for showing *why* flat ≠ no-preference.
 - **Synthetic illustration:** [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
-- **Reproduce on BetterVoting:** [`SMALL_CASE_reproduce_on_BV.md`](SMALL_CASE_reproduce_on_BV.md)
-- **The reconciliation / issue write-up:** [`LH_BV_reconciliation_issue.md`](LH_BV_reconciliation_issue.md)
+- **Reproduce on BetterVoting:** [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
+- **The reconciliation / issue write-up:** [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
   (→ [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407))

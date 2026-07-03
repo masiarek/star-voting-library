@@ -10,7 +10,7 @@ read with care — they keep us **honest**.
 > escapes), so this folder makes a point of letting **each camp take a turn as the
 > punchline**. If you catch yourself only collecting IRV's faults, that's the bias to
 > resist — add the matching STAR, Approval, and Condorcet whoopses too. Read
-> **[`reading_these_fairly.md`](reading_these_fairly.md)** before adding any case.
+> **[Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md)** before adding any case.
 
 ## The cases
 
@@ -47,7 +47,7 @@ non-monotonicity construction. *Don't add another IRV whoops until this evens ou
 ## How to read these (the short version)
 
 A "whoops" is only worth teaching if it's an **honest** one. The full test is in
-[`reading_these_fairly.md`](reading_these_fairly.md), but the gist:
+[Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md), but the gist:
 
 - **Structural, not contrived** — happens across a region of realistic electorates, not at
   one knife-edge with absurd weights.
@@ -100,7 +100,7 @@ Voting theory is rife with mathematical anomalies, and several books catalogue t
 - **rangevoting.org** (Warren Smith, the Center for Range Voting) — a deep trove of
   method-failure constructions and paradoxes.
 - Burlington 2009, Alaska 2022 (real center-squeeze elections — see
-  [`RCV_IRV_center_squeeze.md`](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)).
+  [Center Squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)).
 - Classic social-choice paradoxes (Condorcet, Arrow, no-show, monotonicity).
 
 > Adding one? Run it through the engine, write the fairness box, and make sure the camp it

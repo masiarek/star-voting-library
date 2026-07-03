@@ -97,10 +97,10 @@ A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt th
 **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?"
 They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity;
 STAR is the opposite shape. (Worked out in
-[`favorite_betrayal_voting_301.md`](../STAR_Voting/favorite_betrayal_voting_301.md).)
+[Favorite Betrayal — Does *Only* RCV Avoid It?](../STAR_Voting/favorite_betrayal_voting_301.md).)
 
 → More source notes: **RCV-IRV monotonicity** group in
-[`LINKS.md`](../LINKS.md).
+[LINKS — source-of-truth registry](../LINKS.md).
 
 Sources: [Ornstein & Norman 2014 (Public Choice)](https://link.springer.com/article/10.1007/s11127-013-0118-2),
 [Graham-Squire & McCune, RCV in the US 2004–2022 (arXiv)](https://arxiv.org/pdf/2301.12075.pdf),

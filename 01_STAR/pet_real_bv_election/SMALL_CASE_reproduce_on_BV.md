@@ -4,7 +4,7 @@
 > [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407).
 > - **Canonical (3 candidates, `dq2dmm`):** BV reported **3 abstentions / 5 tallied**
 >   — it filed three *flat* ballots (the blank, `0,0,0`, and an engaged `3,3,3`) as
->   abstentions. Full lesson: [`small_case_abstention_lesson.md`](small_case_abstention_lesson.md)
+>   abstentions. Full lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)
 >   · [`flat_scores_abstention_c3_b8.yaml`](flat_scores_abstention_c3_b8.yaml).
 > - **Even simpler (2 candidates, `3w6v4b`):** BV reported **2 abstentions / 3
 >   tallied** — it filed the `5,5` *and* the blank. [`small_abstention_c2_b5.yaml`](small_abstention_c2_b5.yaml).
@@ -48,7 +48,7 @@ This file is the recipe to get BetterVoting's (incorrect) version next to it.
    (6 cast, 1 abstention, 3 Equal Support, A wins 2–1) — i.e. it matches the
    synthetic file above. The contrast between the two reports is the lesson.
 6. **Freeze + document:** add the BV numbers to a snapshot (like
-   [`BV_result_snapshot.md`](BV_result_snapshot.md)) and cross-link from the
+   [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md)) and cross-link from the
    lessons. Update the GitHub issue with the real small-case screenshot.
 
 ## Expected contrast (the teaching point)

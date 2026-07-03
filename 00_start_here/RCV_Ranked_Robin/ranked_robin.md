@@ -204,7 +204,7 @@ treat them as one method with several brands, not byte-identical algorithms.
 > parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to
 > the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus
 > Voting / Consensus Choice** once as the advocacy brand, then move on. (Same
-> meet-them-where-they-are rule as [`TIPS_terminology.md`](../TIPS_terminology.md).)
+> meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md).)
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:
@@ -216,7 +216,7 @@ python pref_voting_tabulation.py example_tennessee.yaml
 Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **independent
 Python reference** to reconcile BV's RCV-RR results against — the same cross-checking we do
 for STAR and RCV-IRV. Details:
-[`cross_checking_with_pref_voting.md`](../tabulation_engines/cross_checking_with_pref_voting.md).
+[Cross-checking the LH engine with pref_voting](../tabulation_engines/cross_checking_with_pref_voting.md).
 
 ---
 

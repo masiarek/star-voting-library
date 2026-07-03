@@ -7,19 +7,19 @@ family. Shared, cross-method vocabulary lives in the
 - **Ranked Robin (RCV-RR / "Consensus")** — a Condorcet tabulation of a ranked
   ballot: compare every pair head-to-head, elect the most head-to-head wins
   (Copeland-style; ties broken by total margin). No center squeeze — do **not**
-  lump it with IRV. → [`ranked_robin.md`](ranked_robin.md)
+  lump it with IRV. → [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md)
 - **Ranked (ordinal) ballot** — the ballot Ranked Robin reads: order over degree of
   support, shared with RCV-IRV and STV (the term is defined once in the
   [main glossary](../GLOSSARY.md)). Unlike IRV's strict ballot, Ranked Robin
   naturally allows **equal ranks** (weak ranks) — see
-  [`strict_vs_weak_ranks.md`](../scores_and_ranks/strict_vs_weak_ranks.md) and
-  scored vs ranked [`scores_vs_ranks.md`](../scores_and_ranks/scores_vs_ranks.md).
+  [Strict vs. Weak Ranks — Not All Ranked Ballots Are the Same](../scores_and_ranks/strict_vs_weak_ranks.md) and
+  scored vs ranked [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../scores_and_ranks/scores_vs_ranks.md).
 - **Condorcet method** — any ranked method that *always* elects the candidate who
   beats every other head-to-head (the Condorcet winner) when one exists. A
   **family**: Ranked Robin, Ranked Pairs, Schulze, Minimax, Copeland.
 - **Condorcet cycle** — a rock-paper-scissors situation (A beats B beats C beats
   A) with no Condorcet winner; each Condorcet method resolves it differently.
-  → [`cycle_resolution.md`](cycle_resolution.md)
+  → [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md)
 - **Copeland** — score = (pairwise wins − losses); Ranked Robin's tabulation.
 - **Ranked Pairs (Tideman)** — lock in the strongest pairwise victories first,
   skipping any that would create a cycle.

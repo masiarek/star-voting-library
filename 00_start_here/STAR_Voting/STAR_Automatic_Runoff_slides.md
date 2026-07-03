@@ -11,7 +11,7 @@ two denominators) for a technical/debate crowd. Stop wherever your audience is.
   LH text report).
 - **Concept hub backing this deck:** [The Automatic Runoff Round](STAR_Automatic_Runoff.md)
   · the worked teaching set: [Runoff Reversal](../../01_STAR/runoff_overturns_leader/)
-  · presenter's guide: [`teaching_runoff_reversal.md`](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
+  · presenter's guide: [Teaching Runoff Reversal — a step-by-step guide](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -303,7 +303,7 @@ two denominators) for a technical/debate crowd. Stop wherever your audience is.
 > Equal-Support vs abstention distinction (slide 13) actually matters in practice.
 > Live result: <https://bettervoting.com/tf73v9/results>
 > Lesson: [Runoff 07 — flat ballot / BV bug (WIP)](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)
-> · the bug in full: [`small_case_abstention_lesson.md`](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md).
+> · the bug in full: [When "no preference" gets called an "abstention"](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md).
 
 ---
 
@@ -317,7 +317,7 @@ two denominators) for a technical/debate crowd. Stop wherever your audience is.
 > Notes: End on the promise you opened with (slide 1). If you only had three sentences,
 > these are them.
 > Concept hub: [The Automatic Runoff Round](STAR_Automatic_Runoff.md)
-> · teaching guide: [`teaching_runoff_reversal.md`](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
+> · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 

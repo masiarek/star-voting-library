@@ -139,6 +139,6 @@ the quicker path. Either way, the urgent step is off Choose-One.
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
-- Glossary: **Approval voting** — [`GLOSSARY.md`](../GLOSSARY.md)
+- Glossary: **Approval voting** — [Glossary — voting methods & criteria](../GLOSSARY.md)
 
 # file: approval_voting.md

@@ -7,8 +7,8 @@ lives in the [main glossary](../GLOSSARY.md).
 - **RCV (Ranked-Choice Voting)** — a ranked (**ordinal**) *ballot* type (rank 1st,
   2nd, 3rd…): conveys order, not degree of support — the contrast with a *scored
   (cardinal)* ballot. A **family**, not one method; in US usage it's loosely used to
-  mean IRV. → [`../TIPS_terminology.md`](../TIPS_terminology.md); scored vs ranked
-  [`scores_vs_ranks.md`](../scores_and_ranks/scores_vs_ranks.md)
+  mean IRV. → [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md); scored vs ranked
+  [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../scores_and_ranks/scores_vs_ranks.md)
 - **IRV (Instant-Runoff Voting)** — *one tabulation* of a ranked ballot: eliminate
   the lowest first-choice, transfer, repeat until a majority. The single-winner
   method usually meant by "RCV."
@@ -18,10 +18,10 @@ lives in the [main glossary](../GLOSSARY.md).
   is *how it's counted*. "RCV" names a ballot; "IRV" names a tabulation.
 - **Exhausted ballot** — an **IRV-specific** term: a ballot set aside mid-count
   because all its ranked candidates were eliminated (Ranked Robin reads every
-  rank, so it doesn't exhaust). → [`exhausted_ballots_301.md`](exhausted_ballots_301.md)
+  rank, so it doesn't exhaust). → ["Exhausted Ballots" — What FairVote's Word Actually Hides](exhausted_ballots_301.md)
 - **Center squeeze** — a broadly-liked moderate eliminated early for lacking
   first-choice support; an IRV failure STAR and Ranked Robin avoid.
-  → [`RCV_IRV_center_squeeze.md`](RCV_IRV_center_squeeze.md)
+  → [Center Squeeze](RCV_IRV_center_squeeze.md)
 - **STV (Single Transferable Vote)** — the proportional, multi-winner tabulation of
   ranked ballots (the proportional cousin of IRV, not IRV itself).
 - **Hare** — the ranked-transfer idea; single-winner = IRV, multi-winner = STV.

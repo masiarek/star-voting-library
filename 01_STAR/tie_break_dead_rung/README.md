@@ -6,7 +6,7 @@ candidates earned a 5, the rung reads `0–0` and the tie falls through to the
 **lot** — in **both** rounds.*
 
 Backs the "dead rung" section of the canonical
-[`tie_breaking.md`](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+[STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
 (Level 301). Run any file:
 
 ```bash
@@ -37,7 +37,7 @@ Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/0
 likewise. Note the eventual **winner is Alice in all four** — the point isn't who
 wins these toy races, it's **which rung decides**. In a closer election that
 difference chooses the winner (see the scale-granularity case in
-[`scale_granularity_flips_the_winner.md`](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)).
+[Scale granularity can flip the winner (a 301 case)](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)).
 
 ## The adversarial set (05–09): the rung must CHANGE the winner
 

@@ -7,7 +7,7 @@ Condorcet winner** — and the same ballots demonstrate a no-show paradox, a tru
 incentive, favorite-betrayal, and non-monotonicity.
 
 A ranked-ballot case (no scores invented). → fairness test:
-[`reading_these_fairly.md`](reading_these_fairly.md) · [`README`](README.md)
+[Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · [`README`](README.md)
 · (the repo's standalone monotonicity demo: [`monotonicity_irv_before.yaml`](../monotonicity/monotonicity_irv_before.yaml)).
 
 ---
