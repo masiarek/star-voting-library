@@ -49,7 +49,11 @@ the engine advances on.
 
 You may give two candidates the **same** score; you are never forced to invent a
 preference you don't feel ([equal ranks / weak orders are a ranked-ballot problem STAR
-doesn't have](../scores_and_ranks/scores_vs_ranks.md)). And you never need to
+doesn't have](../scores_and_ranks/scores_vs_ranks.md)). This is also what makes the
+scoring round **resist vote-splitting**: because you can give two similar candidates
+*both* a 5, running an ally no longer bleeds your favorite's total — the two don't split
+a shared pool of support the way they would under choose-one. → [the spoiler
+effect](../spoiler_effect.md). And you never need to
 **exaggerate**: in a pure score election the smart move is to give your favorite 5 and
 everyone else 0 (any in-between score just helps a rival's total), which collapses the
 ballot into [Approval](../Approval_Voting/approval_voting.md). STAR's **runoff** removes
@@ -124,6 +128,16 @@ scoring is also the strong strategy.
 
 **"Does a candidate need a majority to advance?"** No. The **two highest totals** advance,
 full stop — majority only matters in the runoff.
+
+**"Does scoring my second choice hurt my favorite?"** In the *scoring round*, a little —
+and STAR accepts this **by design.** Giving a second choice a positive score adds to
+*their* total, which could in principle help them out-total your favorite. That means the
+scoring round is **not** [Later-No-Harm](STAR_honest_limits.md#3-gives-up-later-no-harm-by-design)
+compliant (RCV-IRV is; STAR trades it away). The upside is bigger: if your favorite
+*doesn't* reach the top two, that honest support keeps you a **voice** in the runoff, and
+scoring an ally doesn't let a rival split your side. (Note: Later-No-Harm is a *different*
+criterion from favorite-betrayal — STAR never rewards ranking someone *above* your true
+favorite.)
 
 **"Why not just crown the highest total and skip the runoff?"** Because a big total can
 come from a passionate **minority** (lots of 5s) while most voters rated that candidate
