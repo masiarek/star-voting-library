@@ -31,6 +31,7 @@ result.
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
 - **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
 - **The three ballot styles, side by side** → [alternate ballot styles](ballot_styles.md) (ranking vs. yes/no vs. scoring).
+- **The spoiler effect (and how each method handles it)** → [spoiler effect](spoiler_effect.md).
 - **Who champions each method** → [advocacy organizations](advocacy_organizations.md) (FairVote, CES, Equal Vote Coalition).
 
 > This page is the method-neutral front door. The STAR-specific "why" lives in
