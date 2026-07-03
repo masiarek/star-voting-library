@@ -36,7 +36,7 @@ detail that makes the two counts behave so differently.
 
 ## STAR — two steps
 
-**Step 1 — Scoring Round.** Add each candidate's scores (a column sum). The two
+**Step 1 — [Scoring Round](STAR_Voting/STAR_Scoring_Round.md).** Add each candidate's scores (a column sum). The two
 highest advance.
 
 ```
@@ -48,7 +48,7 @@ Evan    --  65
  Carmen and Andre advance.
 ```
 
-**Step 2 — Automatic Runoff.** On every ballot, see which *finalist* it scored
+**Step 2 — [Automatic Runoff](STAR_Voting/STAR_Automatic_Runoff.md).** On every ballot, see which *finalist* it scored
 higher. That's one head-to-head tally.
 
 ```

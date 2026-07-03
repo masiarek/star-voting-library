@@ -56,9 +56,9 @@ that quietly decide who you even get to choose from in November.
 
 **STAR does both jobs on one ballot:**
 
-- **Round 1 — Scoring Round** (this is the "primary"): add up everyone's
+- **Round 1 — [Scoring Round](STAR_Scoring_Round.md)** (this is the "primary"): add up everyone's
   scores; the **top two** advance.
-- **Round 2 — Automatic Runoff** (this is the "runoff"): of those two
+- **Round 2 — [Automatic Runoff](STAR_Automatic_Runoff.md)** (this is the "runoff"): of those two
   finalists, whoever is preferred on **more ballots** wins.
 
 One ballot. One election. Two rounds of logic — done automatically.

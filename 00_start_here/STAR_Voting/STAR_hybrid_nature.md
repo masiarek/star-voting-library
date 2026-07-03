@@ -16,10 +16,10 @@ Glossary: [`STAR`](../GLOSSARY.md).
 
 **STAR = Score Then Automatic Runoff.**
 
-1. **Scoring Round.** Score each candidate from **0 to 5 stars**, like rating products
+1. **[Scoring Round](STAR_Scoring_Round.md).** Score each candidate from **0 to 5 stars**, like rating products
    online. Add up everyone's stars. The **two highest-scoring candidates** become the
    **Finalists**.
-2. **Automatic Runoff.** Now compare *only* those two finalists. Each ballot counts as
+2. **[Automatic Runoff](STAR_Automatic_Runoff.md).** Now compare *only* those two finalists. Each ballot counts as
    one full vote for whichever finalist it scored higher. The finalist preferred by
    **more voters wins**.
 

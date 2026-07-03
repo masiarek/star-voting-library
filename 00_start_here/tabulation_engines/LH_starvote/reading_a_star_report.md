@@ -89,11 +89,11 @@ one sentence to quote: *"C earned the highest total score, but A won the automat
 runoff by being the head-to-head majority favorite."* This is the whole lesson in two
 lines — score leader ≠ winner, because the runoff applies a majority check.
 
-**4. Scoring Round.** Add every candidate's stars: **C 7, A 6, B 4**. The two highest
+**4. [Scoring Round](../../STAR_Voting/STAR_Scoring_Round.md).** Add every candidate's stars: **C 7, A 6, B 4**. The two highest
 — **C and A** — become the Finalists; **B is out**. (This is one of the only three
 lines a first-time voter needs.)
 
-**5. Automatic Runoff Round.** Now compare *only* the two finalists. Each ballot is one
+**5. [Automatic Runoff Round](../../STAR_Voting/STAR_Automatic_Runoff.md).** Now compare *only* the two finalists. Each ballot is one
 full vote for whichever of C/A it scored higher: **A 3, C 2**, and **Equal Support 0**
 (no ballot scored A and C the same). **A wins.** Note the engine uses *Equal Support* —
 the house term for a genuine no-preference ballot, **not** "equal" in the loose sense.

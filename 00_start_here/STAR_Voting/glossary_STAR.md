@@ -8,7 +8,7 @@ criterion, spoiler / vote-splitting…) lives in the
 - **STAR** — Score Then Automatic Runoff: score every candidate 0–5; the two
   highest totals advance to an automatic head-to-head runoff.
 - **Scoring round** — STAR's first round: add up each candidate's scores; the top
-  two become finalists. → demo [`equal_support_runoff_demo`](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
+  two become finalists. → concept [`STAR_Scoring_Round.md`](STAR_Scoring_Round.md); demo [`equal_support_runoff_demo`](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
 - **Finalists** — the two highest-scoring candidates, who advance to the runoff.
 - **Automatic runoff** — STAR's second round: each ballot counts as a full vote
   for whichever finalist it scored higher; the preferred finalist wins.

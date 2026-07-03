@@ -16,8 +16,8 @@ is to choose among them on purpose, not by accident.
 - **Score (utility) winner** — the candidate with the **most total stars**. The
   "highest overall enthusiasm" winner.
 - **Runoff winner (= the STAR winner)** — the candidate the **majority prefers
-  between the two finalists**. STAR uses the Scoring Round to pick the two finalists,
-  then the Automatic Runoff to choose between them.
+  between the two finalists**. STAR uses the [Scoring Round](STAR_Scoring_Round.md) to pick the two finalists,
+  then the [Automatic Runoff](STAR_Automatic_Runoff.md) to choose between them.
 
 When these three agree — which is common — STAR, score, and Condorcet all name the
 same person and there's nothing to discuss. The lesson is what happens when they
