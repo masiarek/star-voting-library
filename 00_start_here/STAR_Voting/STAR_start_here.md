@@ -132,16 +132,16 @@ End Lesson 0 with a promise and a map:
 
 **Roadmap (single-winner):**
 
-| Step | Folder file | Purpose |
+| Step | Pages (read in order) | Purpose |
 |------|-------------|---------|
-| 01a–c | `01_STAR/_main/01*` | **The mechanics.** 2 candidates — watch the two rounds turn. |
-| 02a–b | `01_STAR/_main/02*` | **Why it matters.** Add a 3rd candidate; the winner becomes the broad compromise. |
-| 03a–c | `01_STAR/_main/03*` | **How you're allowed to vote** — bullet votes, equal scores, low-score ballots, and the eight-style gallery (traditional / backup / partisan / ranked-style / "anyone but…"). Lesson: [`STAR_ballot_voting_styles.md`](STAR_ballot_voting_styles.md). |
-| 04a–b | `01_STAR/_main/04*` | Display/analysis options (matrix, Condorcet). |
-| 05a | `01_STAR/_main/05*` | Edge case: unanimous ballots. |
-| 09 | `01_STAR/_main/09*` | The classic Tennessee capital example — the payoff. |
+| **Two candidates** | [simplest example](../../01_STAR/_main/_main_pages/01a_c2_b1_two-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) · [a 5-and-0 ballot](../../01_STAR/_main/_main_pages/01b_c2_b2_two-candidates.md) · [equal support](../../01_STAR/_main/_main_pages/01c_c2_b3_two-candidates.md) | **The mechanics.** 2 candidates — watch the two rounds turn. |
+| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | **Why it matters.** Add a 3rd candidate; the winner becomes the broad compromise. |
+| **Ballot styles** | [bullet vote](../../01_STAR/_main/_main_pages/03a_c3_b3_style-bullet-vote.md) · [low-score ballots](../../01_STAR/_main/_main_pages/03b_c3_b3_1_style-protest-vote.md) · [low-score (cont.)](../../01_STAR/_main/_main_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | **How you're allowed to vote** — bullet votes, equal scores, low-score ballots, and the eight-style gallery (traditional / backup / partisan / ranked-style / "anyone but…"). Lesson: [`STAR_ballot_voting_styles.md`](STAR_ballot_voting_styles.md). |
+| **Display options** | [all options demo](../../01_STAR/_main/_main_pages/04b_c4_b3_display-options-all.md) | Display/analysis options (matrix, Condorcet). |
+| **Edge case** | [unanimous ballots](../../01_STAR/_main/_main_pages/05a_c5_b3_unanimous-ballots.md) | Unanimous ballots — everyone agrees. |
+| **The payoff** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The classic Tennessee capital example. |
 
-Then `02_STAR_Bloc/` and `03_STAR_PR/` for Bloc STAR and the proportional methods.
+Then [Bloc STAR](../../02_STAR_Bloc/README_02_STAR_Bloc.md) and [proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md) for the multi-winner methods.
 
 ---
 
