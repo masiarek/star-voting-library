@@ -21,9 +21,9 @@ Here is how that *same* opinion looks on each ballot style (● = the mark the v
 | Candidate | 1st | 2nd | 3rd | 4th | 5th |
 |---|:--:|:--:|:--:|:--:|:--:|
 | Andre | ● | ○ | ○ | ○ | ○ |
+| Blake | ○ | ○ | ○ | ● | ○ |
 | Carmen | ○ | ● | ○ | ○ | ○ |
 | David | ○ | ○ | ● | ○ | ○ |
-| Blake | ○ | ○ | ○ | ● | ○ |
 | Ella | ○ | ○ | ○ | ○ | ● |
 
 **Yes/No** — approve each candidate, or don't. One bit per candidate.
@@ -53,9 +53,9 @@ Line them up and the trade-offs jump out:
 | Candidate | Ranking | Yes/No | Score 0–5 |
 |---|:--:|:--:|:--:|
 | Andre | 1st | ● | 5 |
+| Blake | 4th | ○ | 1 |
 | Carmen | 2nd | ● | 4 |
 | David | 3rd | ● | 4 |
-| Blake | 4th | ○ | 1 |
 | Ella | 5th | ○ | 0 |
 
 - **Ranking** records *order* but not *distance*. It's forced to call Carmen "2nd" and
