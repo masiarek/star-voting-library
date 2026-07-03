@@ -66,8 +66,9 @@ Line them up and the trade-offs jump out:
 - **Yes/No** is a single **threshold**: one bit per candidate. It cleanly separates the
   three the voter likes from the two they don't, but it loses *all* order and strength
   *within* each group — Andre and David read identical, and so do Blake and Ella.
-- **Scoring** keeps both **order and strength**, and **allows ties**: Carmen = David = 4,
-  Andre a clear 5, Blake a grudging 1, Ella a 0. It's the most expressive of the three,
+- **Scoring** keeps both **order and strength**, and **[allows ties](scores_and_ranks/strict_vs_weak_ranks.md)**: Carmen = David = 4,
+  Andre a clear 5, Blake a grudging 1, Ella a 0 — and if a tied pair turn out to be the two
+  finalists, that tie counts as [Equal Support](GLOSSARY.md) in STAR's runoff. It's the most expressive of the three,
   and Yes/No is just scoring at 1-bit resolution (the [fidelity ladder](scores_and_ranks/fidelity_ladder.md):
   **Approval → Range → STAR**).
 
