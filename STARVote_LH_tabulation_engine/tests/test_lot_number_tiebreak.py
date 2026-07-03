@@ -344,3 +344,27 @@ def test_bv_order_and_published_order_diverge():
     assert pub_winners == ["Ada"], pub_winners
     # Non-vacuous: same ballots, different winner, purely from the lot order.
     assert bv_winners != pub_winners
+
+
+# --- 6. two_way_import.py: BV export -> two winners via LH ------------------
+
+@pytest.mark.skipif(not CONVERTER.exists(), reason="converter not present")
+def test_two_way_import_diverges(tmp_path):
+    """two_way_import.py imports one lot-decided BV export two ways: BV's drawn
+    order reproduces BV's winner (Ben); a published order (default: reverse)
+    flips it to Ada. Same ballots, two winners — the tool's whole purpose."""
+    sys.path.insert(0, str(ENGINE_DIR / "tools_adam"))
+    import two_way_import as twi
+
+    export = _bv_export(perm=["u-ben", "u-ada"], elected_id="u-ben")
+    jp = tmp_path / "crazy.json"
+    jp.write_text(json.dumps(export), encoding="utf-8")
+
+    assert twi.main([str(jp)]) == 0
+    bv = tmp_path / "crazy_bv_order.yaml"
+    pub = tmp_path / "crazy_published_order.yaml"
+    assert bv.exists() and pub.exists()
+
+    assert scenario_winners(bv)[0] == ["Ben"]     # reproduces BV's elected
+    assert scenario_winners(pub)[0] == ["Ada"]    # published order flips it
+    assert scenario_winners(bv)[0] != scenario_winners(pub)[0]
