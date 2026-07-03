@@ -13,7 +13,8 @@ Because they use a fundamentally different ballot, scoring methods sit **outside
 | | Ballot | What it captures | Examples |
 |---|---|---|---|
 | **[Ranked (ordinal)](scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md), [STV](proportional_representation/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](RCV_Ranked_Robin/ranked_robin.md), [Schulze](RCV_Ranked_Robin/cycle_resolution.md), [Ranked Pairs](RCV_Ranked_Robin/cycle_resolution.md)), [Borda](other_ranked_methods/borda.md), [Bucklin](RCV_Ranked_Robin/glossary_ranked_robin.md) |
-| **[Scored (cardinal)](scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](Approval_Voting/approval_voting.md), [Score](Range_Voting/range_voting.md), **[STAR](STAR_Voting/STAR_start_here.md)** |
+| **[Scored (cardinal)](scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](Approval_Voting/approval_voting.md), [Score](Range_Voting/range_voting.md) |
+| **[Hybrid](STAR_Voting/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5, then an automatic runoff between the top two | Strength of support **and** a majority check | **[STAR](STAR_Voting/STAR_start_here.md)** |
 
 ## Approval Voting
 
@@ -21,7 +22,7 @@ Voters simply mark every candidate they approve of — no ranking, no scoring be
 
 ## STAR Voting (Score Then Automatic Runoff)
 
-Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check.
+Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check — a deliberate **hybrid** of a scored ballot and a majority runoff, which is why it sits in its own row above. Full explanation: [STAR's hybrid nature](STAR_Voting/STAR_hybrid_nature.md).
 
 ## Where scoring methods are weak (for balance)
 
