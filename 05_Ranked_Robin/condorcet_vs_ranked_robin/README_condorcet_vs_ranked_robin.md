@@ -8,11 +8,11 @@ there's a cycle.** Same three candidates, two electorates, plus a real 6-candida
 [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) ·
 deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
 
-| File | What it shows | Condorcet winner | Ranked Robin |
-|------|---------------|:---:|:---:|
-| [`01_condorcet_winner.yaml`](01_condorcet_winner.yaml) | a Condorcet winner exists → they **agree** | Ada | **Ada** |
-| [`02_cycle_no_condorcet.yaml`](02_cycle_no_condorcet.yaml) | a rock-paper-scissors **cycle** → they part ways | *(none)* | **Ada** |
-| [`03_real_record0_c6_b5.yaml`](03_real_record0_c6_b5.yaml) | real 6-cand sweep case — no Condorcet winner | *(none)* | **B** |
+| Case (page) | What it shows | Condorcet winner | Ranked Robin | src |
+|------|---------------|:---:|:---:|:--:|
+| [01 — Condorcet winner](condorcet_vs_ranked_robin_pages/01_condorcet_winner.md) | a Condorcet winner exists → they **agree** | Ada | **Ada** | [`.yaml`](01_condorcet_winner.yaml) |
+| [02 — cycle, no Condorcet](condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) | a rock-paper-scissors **cycle** → they part ways | *(none)* | **Ada** | [`.yaml`](02_cycle_no_condorcet.yaml) |
+| [03 — real 6-cand sweep](condorcet_vs_ranked_robin_pages/03_real_record0_c6_b5.md) | real 6-cand sweep case — no Condorcet winner | *(none)* | **B** | [`.yaml`](03_real_record0_c6_b5.yaml) |
 
 ---
 
