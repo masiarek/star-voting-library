@@ -35,6 +35,9 @@ AGREE,01_STAR/pet_real_bv_election/small_abstention_c2_b5.yaml,2,5,A,A,A,A,A,A,A
 AGREE,01_STAR/runoff_overturns_leader/04_c4_b3_runoff-confirms-leader.yaml,4,3,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,0,False,False,False
 AGREE,01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.yaml,3,3,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False
 AGREE,01_STAR/runoff_overturns_leader/Runoff_06_confirms_at_scale_d664xw.yaml,3,5,Wren,Wren,Wren,Wren,Wren,Wren,Wren,Wren,Wren,0,False,False,False
+AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap2.yaml,3,2,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,1,False,False,False
+AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap3.yaml,3,2,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,1,False,False,False
+AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap4.yaml,3,2,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_01_scoring_five_star_breaks.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_02_scoring_no_fives_to_lot.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_03_runoff_no_fives_to_lot.yaml,2,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,,,0,False,False,True

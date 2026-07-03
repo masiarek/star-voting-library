@@ -64,6 +64,29 @@ like `0–0` does.
 All nine files carry `expected_winners:` and are auto-discovered by
 `test_single_winner_positive.py`.
 
+## The cap ladder — "so what about the 4s?"
+
+The most common confusion: *if the 5s tie, doesn't STAR then look at the 4s?*
+**No** — the second rung counts **only score-5 votes** and jumps straight to the
+lot. These three generated files make that concrete by lowering the score
+**cap** while keeping the exact same tie shape. In every one, the tied pair
+(Ben, Cara) still ties on points and pairwise, the five-star rung reads `0–0`,
+and the lot advances the second finalist — the 4s (or 3s, or 2s) never get a
+say:
+
+| Cap | Ballots (Ann, Ben, Cara) | Five-star rung | Decided by | Page |
+|:--:|--------------------------|:--:|---|---|
+| 4 | `4,4,1` / `4,0,3` | 0–0 | lot | [cap 4](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap4.md) |
+| 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap3.md) |
+| 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap2.md) |
+
+Only an actual **5** revives the rung (that's the `alive` case). These were built
+with
+[`generate_dead_rung_scenarios.py`](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.py)
+(`--round scoring --rung dead --cap {4,3,2}`); see its
+[write-up](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md)
+for the alive/tied/adversarial variants.
+
 ## Why it matters
 
 The usual framing — "deterministic tests settle almost everything; the lot is
