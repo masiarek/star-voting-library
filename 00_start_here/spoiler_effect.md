@@ -36,7 +36,7 @@ argument starts from.
 
 | Method | Spoiler behavior |
 |---|---|
-| **Choose-One / Plurality** | Full spoiler effect — the classic case above. |
+| **[Choose-One / Plurality](RCV_IRV/RCV_IRV_and_plurality.md)** | Full spoiler effect — the classic case above. |
 | **[RCV-IRV](RCV_IRV/RCV-IRV-Hare.md)** | Reduces the *classic* spoiler: a trailing similar candidate is eliminated and their ballots transfer, instead of splitting the vote outright. But elimination on first-choices creates its **own** failure — [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — and can still spoil in some configurations. |
 | **[Ranked Robin / RCV-RR](RCV_Ranked_Robin/ranked_robin.md)** | Reads the whole ballot and elects the head-to-head (Condorcet) winner — no elimination rounds, so no vote splitting or center squeeze. Only a rare **Condorcet cycle** can produce a spoiler. |
 | **[Approval](Approval_Voting/approval_voting.md)** | Approve *both* similar candidates — they no longer split, since a supporter can back all of them. |
@@ -73,10 +73,10 @@ Susceptibility depends heavily on the method (Wikipedia's summary):
 
 | Electoral system | Spoiler effect |
 |---|:--:|
-| Plurality | **High** |
-| Runoffs / RCV-IRV | **Medium** |
+| [Plurality](RCV_IRV/RCV_IRV_and_plurality.md) | **High** |
+| Runoffs / [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md) | **Medium** |
 | Condorcet methods ([Ranked Robin / RCV-RR](RCV_Ranked_Robin/ranked_robin.md), Schulze, Ranked Pairs) | **Low** (only in a cyclic tie) |
-| Score / median (Approval, Score, STAR) | **None** (on an absolute scale) |
+| Score / median ([Approval](Approval_Voting/approval_voting.md), [Score](Range_Voting/range_voting.md), [STAR](STAR_Voting/STAR_start_here.md)) | **None** (on an absolute scale) |
 
 Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked*
 method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they
