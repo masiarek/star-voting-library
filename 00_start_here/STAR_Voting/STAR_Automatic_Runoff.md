@@ -107,7 +107,9 @@ Support ballot is (and that it isn't an abstention): [`GLOSSARY`](../GLOSSARY.md
 
 The cleanest way to teach the runoff is as a **three-way sort**: every ballot lands in
 one of three buckets — *prefers finalist A*, *prefers finalist B*, or **Equal Support**
-(scored the two finalists the same). **All three buckets are counted and reported.** An
+(scored the two finalists the same — whether *loved both* or, in the both-low case,
+*equal opposition*; the term family is in the [glossary](../GLOSSARY.md)). **All three
+buckets are counted and reported.** An
 Equal Support ballot doesn't move the A-vs-B margin — that voter said these two are equal
 *to them* — but it is never thrown away: its scores were fully counted in the Scoring
 Round (they helped *choose* the finalists), and it shows up as an explicit **Equal
