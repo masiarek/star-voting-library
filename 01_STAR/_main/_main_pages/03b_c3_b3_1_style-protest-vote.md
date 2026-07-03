@@ -88,6 +88,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/03
 
 ## See also
 
+- [This set's lesson (README)](../README_main.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/03b_c3_b3_1_style-protest-vote.md) — its entry in the divergence review ledger
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
 

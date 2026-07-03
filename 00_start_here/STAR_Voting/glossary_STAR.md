@@ -12,9 +12,10 @@ criterion, spoiler / vote-splitting…) lives in the
 - **Finalists** — the two highest-scoring candidates, who advance to the runoff.
 - **Automatic runoff** — STAR's second round: each ballot counts as a full vote
   for whichever finalist it scored higher; the preferred finalist wins.
-- **Equal Support / Equal Preference** — scoring the two finalists the same;
-  counts as "no preference" between them in the runoff (still fully counted in the
-  scoring round). → [`are_equal_score_votes_discounted.md`](../../interviews_conversations/are_equal_score_votes_discounted.md)
+- **Equal Support** — scoring the two finalists the same; counts as "no preference"
+  between them in the runoff (still fully counted in the scoring round). The aka is
+  documented once in the [main glossary](../GLOSSARY.md).
+  → [`are_equal_score_votes_discounted.md`](../../interviews_conversations/are_equal_score_votes_discounted.md)
 - **Runoff Reversal** — the Scoring-Round leader **loses** the Automatic Runoff to
   the finalist more voters prefer (the *score* winner ≠ the *STAR* winner). Not a
   malfunction — the runoff enforces majority preference. House term: "the runoff

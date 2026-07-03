@@ -50,6 +50,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Maple, Olive, Pine      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     6 × 4, 5, 0   →   Olive > Maple
+     3 × 5, 1, 2   →   Maple > Pine > Olive
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

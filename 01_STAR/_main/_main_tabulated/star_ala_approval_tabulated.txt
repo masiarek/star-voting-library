@@ -2,7 +2,7 @@
 SOURCE FILE:     star_ala_approval.yaml
 SOURCE MODIFIED: 2026-07-02 19:05:00
 TABULATED FILE:  star_ala_approval_tabulated.txt
-TABULATED AT:    2026-07-02 19:37:24
+TABULATED AT:    2026-07-02 22:39:46
 ======================================================================
 
 election_title: "STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot"
@@ -72,7 +72,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
-     file:///sessions/laughing-clever-clarke/mnt/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

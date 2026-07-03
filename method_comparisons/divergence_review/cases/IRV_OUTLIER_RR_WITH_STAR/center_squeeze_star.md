@@ -51,6 +51,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 27 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Left, Center, Right      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+    12 × 5, 4, 3   →   Left > Center > Right
+     9 × 3, 4, 5   →   Right > Center > Left
+     6 × 4, 5, 3   →   Center > Left > Right
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

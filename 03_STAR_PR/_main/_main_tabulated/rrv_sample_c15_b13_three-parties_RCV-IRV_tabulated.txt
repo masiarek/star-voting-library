@@ -2,6 +2,22 @@
   RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow)
  Tabulating 13 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Purple1, Purple2, Purple3, Purple4, Purple5, Orange1, Orange2, Orange3, Orange4, Orange5, Yellow1, Yellow2, Yellow3, Yellow4, Yellow5      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 4, 5, 4, 5, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0   →   Purple1 > Purple3 > Purple5 > Purple2 > Purple4 > Orange1 > Orange2 > Orange3 > Orange4 > Orange5
+     1 × 5, 4, 4, 5, 5, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0   →   Purple1 > Purple4 > Purple5 > Purple2 > Purple3 > Orange1 > Orange3 > Orange5 > Yellow2 > Yellow4
+     1 × 4, 5, 5, 2, 4, 1, 1, 1, 1, 2, 1, 0, 0, 1, 0   →   Purple2 > Purple3 > Purple1 > Purple5 > Purple4 > Orange5 > Orange1 > Orange2 > Orange3 > Orange4 > Yellow1 > Yellow4
+     1 × 0, 0, 0, 0, 0, 5, 5, 4, 5, 5, 0, 0, 0, 0, 0   →   Orange1 > Orange2 > Orange4 > Orange5 > Orange3
+     1 × 0, 0, 0, 0, 0, 5, 1, 4, 4, 4, 0, 0, 1, 0, 0   →   Orange1 > Orange3 > Orange4 > Orange5 > Orange2 > Yellow3
+     1 × 0, 0, 0, 0, 0, 5, 3, 4, 4, 2, 0, 1, 0, 0, 1   →   Orange1 > Orange3 > Orange4 > Orange2 > Orange5 > Yellow2 > Yellow5
+     1 × 0, 0, 0, 0, 0, 5, 4, 4, 4, 4, 0, 0, 0, 0, 0   →   Orange1 > Orange2 > Orange3 > Orange4 > Orange5
+     1 × 0, 0, 0, 0, 0, 4, 5, 5, 5, 5, 0, 1, 0, 0, 1   →   Orange2 > Orange3 > Orange4 > Orange5 > Orange1 > Yellow2 > Yellow5
+     1 × 0, 0, 0, 0, 0, 4, 5, 5, 5, 5, 0, 0, 0, 0, 0   →   Orange2 > Orange3 > Orange4 > Orange5 > Orange1
+     1 × 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 5, 5, 2, 5, 5   →   Yellow1 > Yellow2 > Yellow4 > Yellow5 > Yellow3 > Purple1 > Purple2 > Purple3 > Purple4 > Purple5
+     1 × 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4   →   Yellow1 > Yellow2 > Yellow3 > Yellow4 > Yellow5 > Purple1 > Purple2 > Purple3 > Purple4
+     1 × 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 5, 4, 4, 5, 4   →   Yellow1 > Yellow4 > Yellow2 > Yellow3 > Yellow5 > Purple1 > Purple2 > Purple3 > Purple4 > Purple5 > Orange5
+     1 × 2, 0, 2, 2, 1, 0, 0, 0, 0, 0, 5, 5, 4, 4, 5   →   Yellow1 > Yellow2 > Yellow5 > Yellow3 > Yellow4 > Purple1 > Purple3 > Purple4 > Purple5
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

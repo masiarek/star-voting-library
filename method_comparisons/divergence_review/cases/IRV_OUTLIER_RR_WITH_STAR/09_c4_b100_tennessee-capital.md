@@ -52,6 +52,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Memphis, Nashville, Chattanooga, Knoxville      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+    42 × 5, 4, 3, 2   →   Memphis > Nashville > Chattanooga > Knoxville
+    26 × 2, 5, 4, 3   →   Nashville > Chattanooga > Knoxville > Memphis
+    15 × 2, 3, 5, 4   →   Chattanooga > Knoxville > Nashville > Memphis
+    17 × 2, 3, 4, 5   →   Knoxville > Chattanooga > Nashville > Memphis
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

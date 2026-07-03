@@ -2,6 +2,11 @@
   Dead rung 04 — runoff tie, nobody scored a 5, lot decides
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Ann, Ben      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 4, 0   →   Ann
+     1 × 0, 4   →   Ben
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

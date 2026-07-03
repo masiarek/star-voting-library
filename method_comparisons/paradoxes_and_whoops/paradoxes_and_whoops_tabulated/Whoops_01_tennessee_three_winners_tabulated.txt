@@ -2,7 +2,7 @@
 SOURCE FILE:     Whoops_01_tennessee_three_winners.yaml
 SOURCE MODIFIED: 2026-06-28 23:04:47
 TABULATED FILE:  Whoops_01_tennessee_three_winners_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:25
+TABULATED AT:    2026-07-02 22:39:48
 ======================================================================
 
 election:
@@ -74,7 +74,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_RCV-IRV_tabulated.txt
-     file:///sessions/upbeat-gracious-keller/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

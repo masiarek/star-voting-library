@@ -108,6 +108,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/vo
 
 ## See also
 
+- [This set's lesson (README)](../README_main.md) — the hand-written teaching context for every case in this folder
 - [Vote splitting (worked set)](../../../method_comparisons/split_voting/README_split_voting.md)
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README_runoff_overturns_leader.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)

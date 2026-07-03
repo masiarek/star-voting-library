@@ -52,6 +52,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 998 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Red, Green, Yellow      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+   332 × 5, 3, 0   →   Red > Green
+   138 × 3, 5, 1   →   Green > Red > Yellow
+   175 × 1, 5, 3   →   Green > Yellow > Red
+   353 × 0, 3, 5   →   Yellow > Green
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

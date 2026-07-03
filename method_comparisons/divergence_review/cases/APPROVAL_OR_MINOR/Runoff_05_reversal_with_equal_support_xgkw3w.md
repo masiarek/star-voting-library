@@ -54,6 +54,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Rosa, Sage, Tulip      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 1, 0   →   Rosa > Sage
+     2 × 4, 5, 0   →   Sage > Rosa
+     1 × 3, 3, 1   →   Sage > Rosa > Tulip
+     1 × 5, 5, 2   →   Sage > Rosa > Tulip
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

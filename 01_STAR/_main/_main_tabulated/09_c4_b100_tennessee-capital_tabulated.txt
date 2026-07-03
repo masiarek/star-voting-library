@@ -2,7 +2,7 @@
 SOURCE FILE:     09_c4_b100_tennessee-capital.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  09_c4_b100_tennessee-capital_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:15
+TABULATED AT:    2026-07-02 22:39:46
 ======================================================================
 
 election_title: Tennessee Capital — classic STAR example
@@ -87,7 +87,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/09_c4_b100_tennessee-capital_RCV-IRV_tabulated.txt
-     file:///sessions/upbeat-gracious-keller/mnt/YAML/01_STAR/_main/_main_tabulated/09_c4_b100_tennessee-capital_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/09_c4_b100_tennessee-capital_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

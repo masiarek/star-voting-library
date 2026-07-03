@@ -53,6 +53,14 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Dakota, Eden, Flynn, Gale, Hazel      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 0, 1, 0, 0   →   Dakota > Flynn
+     1 × 5, 0, 0, 1, 0   →   Dakota > Gale
+     1 × 4, 5, 0, 0, 1   →   Eden > Dakota > Hazel
+     1 × 4, 5, 1, 0, 0   →   Eden > Dakota > Flynn
+     1 × 4, 5, 0, 1, 0   →   Eden > Dakota > Gale
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_08_runoff_dead_rung_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_08_runoff_dead_rung_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-02 20:54:43
+TABULATED AT:    2026-07-02 22:42:39
 ======================================================================
 
 election_title: Dead rung 04 — runoff tie, nobody scored a 5, lot decides

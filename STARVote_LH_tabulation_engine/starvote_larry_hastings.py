@@ -646,6 +646,27 @@ def build_irv_report(candidates, ballots, priority, title=None):
              "(converted from score ballots; 0 = unranked, equal scores broken "
              "by candidate priority).")
     L.append("")
+    # Ballots: show how each score ballot becomes the STRICT ranking IRV reads
+    # (0-scores are unranked/dropped; equal non-zero scores broken by priority),
+    # mirroring the Ranked Robin report's ballot block so a reader can follow the
+    # elimination — e.g. see which candidate falls off the low ballots.
+    L.append("Ballots:")
+    L.append(f"   columns = {', '.join(candidates)}"
+             "      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)")
+    seen_rows, counts = [], {}
+    for b in ballots:
+        scores = tuple(b.get(c, 0) for c in candidates)
+        if scores not in counts:
+            counts[scores] = 0
+            seen_rows.append(scores)
+        counts[scores] += 1
+    for scores in seen_rows:
+        b = dict(zip(candidates, scores))
+        ranking = _score_to_rank(b, order)      # 0s dropped, ties by priority
+        rank_txt = " > ".join(ranking) if ranking else "(all unranked)"
+        score_txt = ", ".join(str(s) for s in scores)
+        L.append(f"   {counts[scores]:>3} × {score_txt}   →   {rank_txt}")
+    L.append("")
     L.append(str(result))
     L.append("")
     L.append(f"Winner(s) — {label}")

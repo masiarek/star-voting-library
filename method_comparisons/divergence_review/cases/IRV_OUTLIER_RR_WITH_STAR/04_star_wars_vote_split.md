@@ -51,6 +51,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Skywalker, Leia, Vader      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+    33 × 5, 4, 0   →   Skywalker > Leia
+    27 × 4, 5, 0   →   Leia > Skywalker
+    40 × 0, 1, 5   →   Vader > Leia
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

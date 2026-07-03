@@ -50,6 +50,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Choco, Almond, Vanilla, Strawberry      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     2 × 0, 2, 3, 5   →   Strawberry > Vanilla > Almond
+     1 × 0, 2, 5, 3   →   Vanilla > Strawberry > Almond
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

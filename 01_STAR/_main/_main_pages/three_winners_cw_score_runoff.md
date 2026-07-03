@@ -118,6 +118,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/th
 
 ## See also
 
+- [This set's lesson (README)](../README_main.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/three_winners_cw_score_runoff.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README_condorcet.md)
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README_runoff_overturns_leader.md)

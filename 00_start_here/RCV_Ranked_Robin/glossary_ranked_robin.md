@@ -23,7 +23,8 @@ family. Shared, cross-method vocabulary lives in the
 - **Borda** — a positional ranked method (points by rank); ranked but **not**
   Condorcet-compliant.
 - **Bucklin (Grand Junction)** — a ranked, median-style method; ranked but **not**
-  Condorcet. (Spelled *Bucklin*, not "Buckling".)
+  Condorcet. (Spelled *Bucklin*, not "Buckling".) <!-- terminology-ok: teaches the correct spelling -->
+
 
 *The shared criterion terms — **Condorcet winner / loser / efficiency /
 compliance**, **monotonicity**, **summability** — are defined in the

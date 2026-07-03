@@ -105,6 +105,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/qu
 
 ## See also
 
+- [This set's lesson (README)](../README_main.md) — the hand-written teaching context for every case in this folder
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README_ties.md)
 - [Quorum](../../../00_start_here/quorum.md)
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)

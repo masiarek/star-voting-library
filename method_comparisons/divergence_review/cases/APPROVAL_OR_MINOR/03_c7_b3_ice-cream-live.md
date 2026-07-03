@@ -51,6 +51,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 4, 5, 3, 0, 1, 2, 0   →   ChocoAlm > ChocoDrk > ChocoHzn > Mango > VanillaFrnch
+     1 × 0, 3, 0, 0, 0, 0, 0   →   ChocoAlm
+     1 × 5, 0, 0, 0, 0, 0, 0   →   ChocoDrk
+
 FINAL RESULT
 Candidate       Votes  Status
 ------------  -------  --------

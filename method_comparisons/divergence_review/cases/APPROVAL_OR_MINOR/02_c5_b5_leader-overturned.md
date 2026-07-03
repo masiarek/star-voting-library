@@ -53,6 +53,14 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Austin, Boston, Chicago, Denver, Erie      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 0, 1, 0, 2   →   Austin > Erie > Chicago
+     1 × 5, 0, 0, 1, 0   →   Austin > Denver
+     1 × 4, 5, 1, 0, 0   →   Boston > Austin > Chicago
+     1 × 4, 5, 0, 2, 0   →   Boston > Austin > Denver
+     1 × 4, 5, 0, 0, 1   →   Boston > Austin > Erie
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

@@ -2,7 +2,7 @@
 SOURCE FILE:     options_examples.yaml
 SOURCE MODIFIED: 2026-06-29 08:51:30
 TABULATED FILE:  options_examples_tabulated.txt
-TABULATED AT:    2026-07-02 12:04:10
+TABULATED AT:    2026-07-02 22:39:47
 ======================================================================
 
 election_title: "Display-options reference — every reporting toggle (STAR)"
@@ -75,7 +75,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: STARVote_LH_tabulation_engine_tabulated/options_examples_RCV-IRV_tabulated.txt
-     file:///sessions/upbeat-gracious-keller/mnt/YAML/STARVote_LH_tabulation_engine/STARVote_LH_tabulation_engine_tabulated/options_examples_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/STARVote_LH_tabulation_engine/STARVote_LH_tabulation_engine_tabulated/options_examples_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

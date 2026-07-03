@@ -2,6 +2,11 @@
   Dead rung 03 — runoff tie broken by five-star
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Ann, Ben      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 1   →   Ann > Ben
+     1 × 0, 4   →   Ben
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

@@ -2,6 +2,12 @@
   Monotonicity — STAR counterpart (AFTER — X still wins)
  Tabulating 34 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = X, Y, Z      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+    16 × 5, 3, 0   →   X > Y
+     8 × 0, 5, 3   →   Y > Z
+    10 × 3, 0, 5   →   Z > X
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

@@ -50,6 +50,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Ann, Bob, Carl      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     3 × 5, 4, 3   →   Ann > Bob > Carl
+     2 × 0, 3, 5   →   Carl > Bob
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------

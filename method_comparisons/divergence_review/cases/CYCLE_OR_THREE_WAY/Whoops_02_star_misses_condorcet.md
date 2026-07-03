@@ -53,6 +53,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 --- RCV / Instant-Runoff Voting (single winner) ---
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Ada, Bruno, Cleo      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+    40 × 5, 1, 2   →   Ada > Cleo > Bruno
+    35 × 1, 5, 2   →   Bruno > Cleo > Ada
+    25 × 3, 3, 5   →   Cleo > Ada > Bruno
+
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------

@@ -2,6 +2,11 @@
   Dead rung 05 — five-star rung alive but non-separating
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
+Ballots:
+   columns = Ann, Ben      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
+     1 × 5, 0   →   Ann
+     1 × 0, 5   →   Ben
+
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------
