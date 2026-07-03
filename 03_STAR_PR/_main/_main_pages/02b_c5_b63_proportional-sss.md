@@ -1,6 +1,6 @@
 # Proportional STAR — Sequentially Spent Score
 
-*Generated from [`02b_c5_b63_proportional-sss.yaml`](../02b_c5_b63_proportional-sss.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`02b_c5_b63_proportional-sss.yaml`](../02b_c5_b63_proportional-sss.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Sequentially Spent Score (proportional STAR)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Alice, Ben, Dan
 

@@ -1,6 +1,6 @@
 # BV parity — STAR: highest-scoring Condorcet winner
 
-*Generated from [`BV_Library_star_condorcet_winner.yaml`](../BV_Library_star_condorcet_winner.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`BV_Library_star_condorcet_winner.yaml`](../BV_Library_star_condorcet_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Allison
 

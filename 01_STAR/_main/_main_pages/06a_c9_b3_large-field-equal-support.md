@@ -1,6 +1,6 @@
 # Large field (9 candidates) — STAR scales, and Equal Support decides
 
-*Generated from [`06a_c9_b3_large-field-equal-support.yaml`](../06a_c9_b3_large-field-equal-support.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`06a_c9_b3_large-field-equal-support.yaml`](../06a_c9_b3_large-field-equal-support.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Carmen
 

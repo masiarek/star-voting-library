@@ -1,6 +1,6 @@
 # Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)
 
-*Generated from [`Whoops_03_condorcet_cycle_rps.yaml`](../Whoops_03_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`Whoops_03_condorcet_cycle_rps.yaml`](../Whoops_03_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Rock
 

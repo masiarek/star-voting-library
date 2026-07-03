@@ -1,6 +1,6 @@
 # Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated)
 
-*Generated from [`center_squeeze_irv.yaml`](../center_squeeze_irv.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`center_squeeze_irv.yaml`](../center_squeeze_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Left
 

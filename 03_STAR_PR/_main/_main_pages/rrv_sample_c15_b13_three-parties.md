@@ -1,6 +1,6 @@
 # RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow)
 
-*Generated from [`rrv_sample_c15_b13_three-parties.yaml`](../rrv_sample_c15_b13_three-parties.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`rrv_sample_c15_b13_three-parties.yaml`](../rrv_sample_c15_b13_three-parties.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Orange5
 

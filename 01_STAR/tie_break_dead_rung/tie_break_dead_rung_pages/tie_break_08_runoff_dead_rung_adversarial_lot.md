@@ -1,6 +1,6 @@
 # Dead rung 04 — runoff tie, nobody scored a 5, lot decides
 
-*Generated from [`tie_break_08_runoff_dead_rung_adversarial_lot.yaml`](../tie_break_08_runoff_dead_rung_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`tie_break_08_runoff_dead_rung_adversarial_lot.yaml`](../tie_break_08_runoff_dead_rung_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ben
 

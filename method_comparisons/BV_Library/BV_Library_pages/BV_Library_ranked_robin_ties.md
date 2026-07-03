@@ -1,6 +1,6 @@
 # BV parity — Ranked Robin: Copeland tie broken by tiebreak order
 
-*Generated from [`BV_Library_ranked_robin_ties.yaml`](../BV_Library_ranked_robin_ties.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`BV_Library_ranked_robin_ties.yaml`](../BV_Library_ranked_robin_ties.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Alice
 

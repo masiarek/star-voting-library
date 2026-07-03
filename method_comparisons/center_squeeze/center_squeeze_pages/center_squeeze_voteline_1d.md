@@ -1,6 +1,6 @@
 # Center squeeze — the voteline 1D spectrum (Red / Green / Yellow)
 
-*Generated from [`center_squeeze_voteline_1d.yaml`](../center_squeeze_voteline_1d.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`center_squeeze_voteline_1d.yaml`](../center_squeeze_voteline_1d.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Green
 

@@ -1,6 +1,6 @@
 # Equal Support vs Abstention — minimal STAR test (A/B, 5 ballots)
 
-*Generated from [`small_abstention_c2_b5.yaml`](../small_abstention_c2_b5.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`small_abstention_c2_b5.yaml`](../small_abstention_c2_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** A
 

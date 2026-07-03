@@ -171,7 +171,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by
-  `scripts/build_yaml_pages.py`) are the reader-friendly surface: **lead with them**
+  `STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`) are the reader-friendly surface: **lead with them**
   in tables, navs, and cross-references (left-most / primary link). Link a `.yaml`
   only when the *tabulatable source* is genuinely the point (e.g. a "run this file"
   command), and **demote** it (right-most column / secondary link). Page structure is
@@ -251,8 +251,8 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   **and** the migrated `YAML_library/2_negative/`) must exit 1 with the right
   message and no traceback; covers single messages and multiple-errors-in-one-file.
 - Run: `pytest tests/test_single_winner_positive.py tests/test_negative_validation.py`
-  from the engine dir. A repo pre-commit hook (`scripts/git-hooks/`, wired via
-  `git config core.hooksPath scripts/git-hooks`) runs these on every commit.
+  from the engine dir. A repo pre-commit hook (`STARVote_LH_tabulation_engine/tools_adam/scripts/git-hooks/`, wired via
+  `git config core.hooksPath STARVote_LH_tabulation_engine/tools_adam/scripts/git-hooks`) runs these on every commit.
 
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention

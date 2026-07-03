@@ -1,6 +1,6 @@
 # Bloc STAR Voting: 2-Seat Committee Election
 
-*Generated from [`01_c4_b2_bloc-star-2-seats.yaml`](../01_c4_b2_bloc-star-2-seats.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`01_c4_b2_bloc-star-2-seats.yaml`](../01_c4_b2_bloc-star-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Don, Cal
 

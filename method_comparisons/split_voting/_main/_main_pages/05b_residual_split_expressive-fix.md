@@ -1,6 +1,6 @@
 # The cure — score your ally, and STAR's split disappears
 
-*Generated from [`05b_residual_split_expressive-fix.yaml`](../05b_residual_split_expressive-fix.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`05b_residual_split_expressive-fix.yaml`](../05b_residual_split_expressive-fix.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 

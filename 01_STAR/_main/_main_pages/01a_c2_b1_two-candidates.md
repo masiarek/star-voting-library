@@ -1,6 +1,6 @@
 # The simplest possible STAR Voting example
 
-*Generated from [`01a_c2_b1_two-candidates.yaml`](../01a_c2_b1_two-candidates.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`01a_c2_b1_two-candidates.yaml`](../01a_c2_b1_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Chocolate
 

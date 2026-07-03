@@ -1,6 +1,6 @@
 # Proportional STAR — Allocated Score Voting
 
-*Generated from [`02a_c5_b63_proportional-allocated-score.yaml`](../02a_c5_b63_proportional-allocated-score.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`02a_c5_b63_proportional-allocated-score.yaml`](../02a_c5_b63_proportional-allocated-score.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Allocated Score (proportional STAR)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Alice, Ben, Dan
 

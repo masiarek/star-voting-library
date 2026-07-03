@@ -7,7 +7,7 @@
 # an error, git cancels the commit. So it's a safety net: it runs the STAR
 # YAML test suite and stops you from committing if something is broken.
 #
-# It is wired up via:   git config core.hooksPath scripts/git-hooks
+# It is wired up via:   git config core.hooksPath STARVote_LH_tabulation_engine/tools_adam/scripts/git-hooks
 # (so the hook lives in the repo and is version-controlled, unlike .git/hooks).
 # ---------------------------------------------------------------------------
 set -u
@@ -22,8 +22,8 @@ PY="python3"
 # Repo hygiene: WARN (never block) about misplaced/junk pastes — generic img_N.png,
 # raw "Ballot Data*.json" drops, etc. — so a real file in the wrong place/name gets
 # noticed instead of silently ignored by .gitignore. Does not abort the commit.
-if [ -f "$ROOT/scripts/check_repo_hygiene.py" ]; then
-  "$PY" "$ROOT/scripts/check_repo_hygiene.py" || true
+if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py" ]; then
+  "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py" || true
 fi
 
 # Refresh the cross-method divergence ledger (generated; never blocks the commit).
@@ -31,8 +31,8 @@ fi
 # Approval and rewrites method_comparisons/divergence_review/ (INDEX.md, divergence.csv, and the
 # per-case teaching cases/*.md), then stages the whole folder so the review
 # surface always matches the committed elections.
-if [ -f "$ROOT/scripts/build_divergence_index.py" ]; then
-  if "$PY" "$ROOT/scripts/build_divergence_index.py" >/dev/null 2>&1; then
+if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" ]; then
+  if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" >/dev/null 2>&1; then
     git add "$ROOT/method_comparisons/divergence_review" 2>/dev/null || true
   else
     echo "pre-commit: divergence ledger refresh failed — skipping (commit not blocked)."

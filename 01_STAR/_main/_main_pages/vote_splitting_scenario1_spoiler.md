@@ -1,6 +1,6 @@
 # Vote splitting — scenario 1 of 3 — the spoiler strikes
 
-*Generated from [`vote_splitting_scenario1_spoiler.yaml`](../vote_splitting_scenario1_spoiler.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`vote_splitting_scenario1_spoiler.yaml`](../vote_splitting_scenario1_spoiler.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** DarkChoco
 

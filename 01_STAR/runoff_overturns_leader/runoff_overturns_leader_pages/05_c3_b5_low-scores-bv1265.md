@@ -1,6 +1,6 @@
 # Low scores, switched winner — the popover example (BetterVoting BV1265)
 
-*Generated from [`05_c3_b5_low-scores-bv1265.yaml`](../05_c3_b5_low-scores-bv1265.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`05_c3_b5_low-scores-bv1265.yaml`](../05_c3_b5_low-scores-bv1265.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** A
 

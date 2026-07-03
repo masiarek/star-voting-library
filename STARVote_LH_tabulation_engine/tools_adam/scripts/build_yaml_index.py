@@ -9,7 +9,7 @@ method to:
 
     00_start_here/YAML_test_case_index/README_YAML_test_case_index.md
 
-Run from the repo root:   python scripts/build_yaml_index.py
+Run from the repo root:   python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py
 A pytest (test_yaml_index_current.py) regenerates this and fails if the committed
 file is stale, so the index can't silently drift out of date.
 """
@@ -18,7 +18,14 @@ import sys
 import glob
 import yaml
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def _find_repo(start):
+    p = os.path.dirname(os.path.abspath(start))
+    while p != os.path.dirname(p):
+        if os.path.isdir(os.path.join(p, "01_STAR")) and os.path.isdir(os.path.join(p, "STARVote_LH_tabulation_engine")):
+            return p
+        p = os.path.dirname(p)
+    return os.path.dirname(os.path.abspath(start))
+REPO = _find_repo(__file__)  # robust: search upward for the repo root
 OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "README_YAML_test_case_index.md")
 
 # Exclude generated mirrors, raw drops, and deliberately-malformed fixtures.
@@ -122,7 +129,7 @@ def render(rows):
     out = []
     out.append("# YAML test-case index — by voting method\n")
     out.append("**Auto-generated — do not edit by hand.** "
-               "Run `python scripts/build_yaml_index.py` to refresh "
+               "Run `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py` to refresh "
                "(a pytest fails if it's stale).\n")
     out.append("Election YAMLs live in many folders (the test harnesses glob specific "
                "ones, so they're indexed *in place*, not moved). Each file declares a "

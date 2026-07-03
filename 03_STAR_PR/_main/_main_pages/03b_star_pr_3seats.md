@@ -1,6 +1,6 @@
 # Proportional STAR — same 3-seat electorate as the STV demo
 
-*Generated from [`03b_star_pr_3seats.yaml`](../03b_star_pr_3seats.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`03b_star_pr_3seats.yaml`](../03b_star_pr_3seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Sequentially Spent Score (proportional STAR)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Housing, Schools, SmallBiz
 

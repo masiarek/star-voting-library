@@ -1,6 +1,6 @@
 # Abstention vs Equal Support — the minimal reconciliation case
 
-*Generated from [`abstention_reconciliation_min_c2_b6.yaml`](../abstention_reconciliation_min_c2_b6.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`abstention_reconciliation_min_c2_b6.yaml`](../abstention_reconciliation_min_c2_b6.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Dog
 

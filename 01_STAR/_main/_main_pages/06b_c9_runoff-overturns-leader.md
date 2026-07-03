@@ -1,6 +1,6 @@
 # Large field (9 candidates) — the runoff OVERTURNS the score leader
 
-*Generated from [`06b_c9_runoff-overturns-leader.yaml`](../06b_c9_runoff-overturns-leader.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`06b_c9_runoff-overturns-leader.yaml`](../06b_c9_runoff-overturns-leader.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Carmen
 

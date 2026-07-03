@@ -1,6 +1,6 @@
 # Runoff 01 — Runoff confirms the leader (control)
 
-*Generated from [`Runoff_01_confirms_leader_r2pvc9.yaml`](../Runoff_01_confirms_leader_r2pvc9.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`Runoff_01_confirms_leader_r2pvc9.yaml`](../Runoff_01_confirms_leader_r2pvc9.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Aspen
 

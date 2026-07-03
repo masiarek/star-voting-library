@@ -5,7 +5,7 @@ Every relative link in a tracked Markdown file must resolve to a real file or
 folder. Folder reorganizations silently break these (a 2026-07 reorg left 85+
 dangling links); this test makes that class of breakage impossible to commit.
 
-The scan itself lives in scripts/check_repo_hygiene.py (`check_links`) so the
+The scan itself lives in STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py (`check_links`) so the
 warn-only pre-commit report and this blocking test can never disagree.
 
 Deliberate placeholders — link a screenshot you haven't captured yet as
@@ -17,7 +17,7 @@ from pathlib import Path
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
-HYGIENE = REPO_ROOT / "scripts" / "check_repo_hygiene.py"
+HYGIENE = REPO_ROOT / "STARVote_LH_tabulation_engine" / "tools_adam" / "scripts" / "check_repo_hygiene.py"
 
 
 def _load_hygiene():

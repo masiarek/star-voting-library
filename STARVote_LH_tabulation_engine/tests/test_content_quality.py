@@ -2,7 +2,7 @@
 test_content_quality.py
 =======================
 Blocking gates for the two content-quality scans in
-scripts/check_repo_hygiene.py (the pre-commit run of that script is
+STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py (the pre-commit run of that script is
 warn-only; these tests make the standards enforceable):
 
 1. DESCRIPTIONS — every teaching YAML must carry a real
@@ -22,7 +22,7 @@ from pathlib import Path
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
-HYGIENE = REPO_ROOT / "scripts" / "check_repo_hygiene.py"
+HYGIENE = REPO_ROOT / "STARVote_LH_tabulation_engine" / "tools_adam" / "scripts" / "check_repo_hygiene.py"
 
 
 def _load():

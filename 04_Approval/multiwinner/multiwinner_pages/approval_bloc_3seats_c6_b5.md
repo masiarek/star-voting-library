@@ -1,6 +1,6 @@
 # Bloc Approval — 3-seat city council at-large
 
-*Generated from [`approval_bloc_3seats_c6_b5.yaml`](../approval_bloc_3seats_c6_b5.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`approval_bloc_3seats_c6_b5.yaml`](../approval_bloc_3seats_c6_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **3 seats** · **Expected winners:** Adams, Brown, Clark
 

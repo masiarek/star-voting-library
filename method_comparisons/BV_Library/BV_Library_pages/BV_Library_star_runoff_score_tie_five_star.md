@@ -1,6 +1,6 @@
 # BV parity — STAR: runoff & score tie, five-star tiebreaker
 
-*Generated from [`BV_Library_star_runoff_score_tie_five_star.yaml`](../BV_Library_star_runoff_score_tie_five_star.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`BV_Library_star_runoff_score_tie_five_star.yaml`](../BV_Library_star_runoff_score_tie_five_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Allison
 

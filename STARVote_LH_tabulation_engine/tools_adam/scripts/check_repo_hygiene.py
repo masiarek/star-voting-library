@@ -12,13 +12,20 @@ unnoticed. So this script scans the working tree (ignored files included) and
 It does NOT delete or move anything — it just tells you. Run it directly, or let
 the pre-commit hook run it (warn-only; it never blocks a commit).
 
-    python scripts/check_repo_hygiene.py
+    python STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py
 """
 import os
 import re
 import sys
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def _find_repo(start):
+    p = os.path.dirname(os.path.abspath(start))
+    while p != os.path.dirname(p):
+        if os.path.isdir(os.path.join(p, "01_STAR")) and os.path.isdir(os.path.join(p, "STARVote_LH_tabulation_engine")):
+            return p
+        p = os.path.dirname(p)
+    return os.path.dirname(os.path.abspath(start))
+REPO = _find_repo(__file__)  # robust: search upward for the repo root
 
 # Directories we never police (raw staging, generated, vendored, caches).
 SKIP_DIRS = {".git", ".venv", "node_modules", "__pycache__",

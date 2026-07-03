@@ -1,6 +1,6 @@
 # Three candidates, two ballots - single-winner STAR
 
-*Generated from [`02b_c3_b2_three-candidates.yaml`](../02b_c3_b2_three-candidates.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`02b_c3_b2_three-candidates.yaml`](../02b_c3_b2_three-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Vanilla
 

@@ -1,6 +1,6 @@
 # BV Abstentions and flat scores (Apple/Banana/Cherry, 8 ballots)
 
-*Generated from [`flat_scores_abstention_c3_b8.yaml`](../flat_scores_abstention_c3_b8.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`flat_scores_abstention_c3_b8.yaml`](../flat_scores_abstention_c3_b8.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Banana
 

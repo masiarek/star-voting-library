@@ -1,6 +1,6 @@
 # Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops)
 
-*Generated from [`Whoops_02_star_misses_condorcet.yaml`](../Whoops_02_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`Whoops_02_star_misses_condorcet.yaml`](../Whoops_02_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 

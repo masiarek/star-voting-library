@@ -1,6 +1,6 @@
 # Bloc Approval — Lackner & Skowron's running example (k=4)
 
-*Generated from [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../approval_bloc_4seats_c7_b12_lackner_skowron.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../approval_bloc_4seats_c7_b12_lackner_skowron.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **4 seats** · **Expected winners:** A, B, C, D
 

@@ -16,7 +16,7 @@ cases in the same set, the glossary, and the by-method index.
 Pages are GENERATED — do not edit by hand. `tests/test_yaml_pages_current.py`
 fails if a page drifts from its YAML/mirror. Regenerate with:
 
-    python scripts/build_yaml_pages.py
+    python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py
 """
 import os
 import re
@@ -27,7 +27,14 @@ try:
 except ImportError:  # pragma: no cover
     sys.exit("PyYAML is required: pip install pyyaml")
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def _find_repo(start):
+    p = os.path.dirname(os.path.abspath(start))
+    while p != os.path.dirname(p):
+        if os.path.isdir(os.path.join(p, "01_STAR")) and os.path.isdir(os.path.join(p, "STARVote_LH_tabulation_engine")):
+            return p
+        p = os.path.dirname(p)
+    return os.path.dirname(os.path.abspath(start))
+REPO = _find_repo(__file__)  # robust: search upward for the repo root
 
 ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",
          "05_Ranked_Robin", "method_comparisons", "06_Other"]
@@ -216,7 +223,7 @@ def render(yaml_path, siblings):
     L.append(f"# {title}")
     L.append("")
     L.append(f"*Generated from [`{os.path.basename(yaml_path)}`](../{os.path.basename(yaml_path)}) "
-             f"— do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*")
+             f"— do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*")
     L.append("")
     seat_txt = "1 seat" if str(seats) == "1" else f"{seats} seats"
     L.append(f"**Method:** [{disp}]({_rel(docs, page_dir)}) · **{seat_txt}**"

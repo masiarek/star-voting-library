@@ -1,6 +1,6 @@
 # Flat scores 06 — scoring-round 4-way tie (ties at every step)
 
-*Generated from [`Flat_scores_ties_06_scoring_tie_4way.yaml`](../Flat_scores_ties_06_scoring_tie_4way.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`Flat_scores_ties_06_scoring_tie_4way.yaml`](../Flat_scores_ties_06_scoring_tie_4way.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ava
 

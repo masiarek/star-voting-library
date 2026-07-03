@@ -1,6 +1,6 @@
 # Three notions of "winner" disagree — Condorcet, Score, and Runoff
 
-*Generated from [`three_winners_cw_score_runoff.yaml`](../three_winners_cw_score_runoff.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`three_winners_cw_score_runoff.yaml`](../three_winners_cw_score_runoff.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bob
 

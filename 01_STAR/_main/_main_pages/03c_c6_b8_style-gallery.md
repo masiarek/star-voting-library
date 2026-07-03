@@ -1,6 +1,6 @@
 # Voting styles — eight ways to fill out one 5-star ballot
 
-*Generated from [`03c_c6_b8_style-gallery.yaml`](../03c_c6_b8_style-gallery.yaml) — do not edit by hand. Regenerate: `python scripts/build_yaml_pages.py`.*
+*Generated from [`03c_c6_b8_style-gallery.yaml`](../03c_c6_b8_style-gallery.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bianca
 

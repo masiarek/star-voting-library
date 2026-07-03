@@ -33,7 +33,7 @@ about how several examples fit together, it belongs in an `.md`.
 ## Generated pages: a browsable `.md` per YAML — but never hand-written
 
 Every election YAML also gets a **generated** Markdown page in
-`<folder>/<folder>_pages/<stem>.md` (`scripts/build_yaml_pages.py`): title,
+`<folder>/<folder>_pages/<stem>.md` (`STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`): title,
 method (linked to its concept docs), the file's own scenario description, the
 ballots with a how-to-read line, the engine's full report (from the
 `_tabulated` mirror), and auto cross-references (folder README, topic hubs,

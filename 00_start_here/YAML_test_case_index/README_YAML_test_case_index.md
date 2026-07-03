@@ -1,6 +1,6 @@
 # YAML test-case index — by voting method
 
-**Auto-generated — do not edit by hand.** Run `python scripts/build_yaml_index.py` to refresh (a pytest fails if it's stale).
+**Auto-generated — do not edit by hand.** Run `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py` to refresh (a pytest fails if it's stale).
 
 Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
 
