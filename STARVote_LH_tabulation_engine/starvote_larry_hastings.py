@@ -2138,16 +2138,35 @@ def run_election(
     # wrong column counts error instead of being silently dropped.
     _hdrs, _star_problems = validate_star_rows(csv_input, max_score=5)
     if _star_problems:
-        print(
-            f"{COLOR_RED}Error: STAR ballots use scores 0..5 "
-            f"(blank or a marker counts as 0).{COLOR_RESET}\n"
-            f"  Offending ballot(s)  [{','.join(_hdrs)}]:"
-        )
+        # Lead with the message that matches the ACTUAL defect: a column-count
+        # mismatch (candidates ≠ scores-per-ballot) is a different problem from
+        # an out-of-range score, so don't headline "scores 0..5" for the former.
+        _n = len(_hdrs)
+        _has_col = any("value(s), expected" in _r for _, _, _r in _star_problems)
+        _has_mark = any(_r.startswith("invalid:") for _, _, _r in _star_problems)
+        if _has_col and not _has_mark:
+            _headline = (
+                f"Error: the number of scores per ballot doesn't match the number "
+                f"of candidates. There are {_n} candidate(s) ({', '.join(_hdrs)}), "
+                f"so each ballot row needs exactly {_n} comma-separated score(s)."
+            )
+        elif _has_col and _has_mark:
+            _headline = (
+                f"Error: some ballots have the wrong number of scores (expected "
+                f"{_n}, one per candidate — {', '.join(_hdrs)}) and/or use scores "
+                f"outside 0..5 (blank or a marker counts as 0)."
+            )
+        else:
+            _headline = ("Error: STAR ballots use scores 0..5 "
+                         "(blank or a marker counts as 0).")
+        print(f"{COLOR_RED}{_headline}{COLOR_RESET}\n"
+              f"  Offending ballot(s)  [{','.join(_hdrs)}]:")
         for _i, _line, _reason in _star_problems:
             print(f"    ballot {_i}: {_line}   ({_reason})")
-        print(f"  Accepted marks: 0..5, blank, or a marker "
-              f"({', '.join(MARKER_MEANINGS)}).")
-        if any("value(s), expected" in _r for _, _, _r in _star_problems):
+        if _has_mark:
+            print(f"  Accepted marks: 0..5, blank, or a marker "
+                  f"({', '.join(MARKER_MEANINGS)}).")
+        if _has_col:
             print("  Tip: use the SAME separator for the header and every row — commas\n"
                   "       (or tabs), e.g. 'A, B, C' then '5, 4, 0'. Mixing commas and\n"
                   "       spaces is the usual cause of a wrong value count.")

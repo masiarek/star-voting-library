@@ -38,7 +38,7 @@ def _run_cli(path):
 
 # fixture filename -> substrings that MUST appear in the error output
 SINGLE_ERROR_CASES = {
-    "neg_wrong_columns.yaml":  ["Error: STAR ballots use scores 0..5",
+    "neg_wrong_columns.yaml":  ["the number of scores per ballot doesn't match the number of candidates",
                                 "has 2 value(s), expected 3"],
     "neg_extra_columns.yaml":  ["has 4 value(s), expected 3"],
     "neg_bad_characters.yaml": ["invalid: Bob=x"],
