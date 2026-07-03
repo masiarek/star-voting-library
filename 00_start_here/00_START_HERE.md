@@ -30,6 +30,7 @@ result.
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
 - **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
+- **Who champions each method** → [advocacy organizations](advocacy_organizations.md) (FairVote, CES, Equal Vote Coalition).
 
 > This page is the method-neutral front door. The STAR-specific "why" lives in
 > [STAR_Voting/STAR_start_here.md](STAR_Voting/STAR_start_here.md).
