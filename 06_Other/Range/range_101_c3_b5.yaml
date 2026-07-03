@@ -8,7 +8,7 @@ scenario_description: |-
   engine (pref_voting score_voting, cross-checked against a hand sum).
 
 # Range is a non-EVC method (see 06_Other/README_06_Other.md). It is tabulated by
-# Range_tabulation_engine/range_tabulation.py (pref_voting), NOT the STAR engine.
+# 06_Other/Range/Range_tabulation_engine/range_tabulation.py (pref_voting), NOT the STAR engine.
 # Any score ballot can be read as Range.
 voting_method: Range
 num_winners: 1

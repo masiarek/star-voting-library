@@ -15,7 +15,7 @@ from pathlib import Path
 import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-ENGINE = REPO_ROOT / "Range_tabulation_engine" / "range_tabulation.py"
+ENGINE = REPO_ROOT / "06_Other" / "Range" / "Range_tabulation_engine" / "range_tabulation.py"
 
 # The engine wires its own path to the vendored RCV score-grid parser and only
 # needs the stdlib for the hand count (pref_voting is an optional cross-check),

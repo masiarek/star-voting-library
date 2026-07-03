@@ -7,7 +7,7 @@ total score wins, no runoff. Watch Range and STAR **part ways** exactly where th
 runoff matters.*
 
 → Method overview: [Range / Score voting](../../00_start_here/Range_Voting/range_voting.md) ·
-Engine: [the Range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md) ·
+Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/README_range_tabulation_engine.md) ·
 The set's STAR write-up: [`README_black_curtain.md`](README_black_curtain.md).
 
 ---
@@ -114,7 +114,7 @@ Total score:  Cal 15 ← winner · Bob 14 · Dee 11 · Ann 10   (pref_voting ✓
 
 ---
 
-*Tabulated by [`Range_tabulation_engine/range_tabulation.py`](../../Range_tabulation_engine/range_tabulation.py)
+*Tabulated by [`06_Other/Range/Range_tabulation_engine/range_tabulation.py`](../../06_Other/Range/Range_tabulation_engine/range_tabulation.py)
 (pref_voting `score_voting` + hand-sum cross-check). The full per-election
 `_RANGE_tabulated.txt` mirrors live in [`black_curtain_tabulated/`](black_curtain_tabulated/).*
 

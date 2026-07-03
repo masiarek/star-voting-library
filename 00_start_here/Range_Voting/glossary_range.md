@@ -7,7 +7,7 @@ vocabulary lives in the [main glossary](../GLOSSARY.md).
   the highest **total score** wins. No runoff, no elimination. STAR's score round
   without the automatic runoff; Approval at more than 1 bit.
   → [`range_voting.md`](range_voting.md); engine
-  [the Range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md)
+  [the Range engine](../../06_Other/Range/Range_tabulation_engine/README_range_tabulation_engine.md)
 - **Exaggeration / min-max strategy** — Range's central weakness: a voter often
   does best giving only max/min, which collapses Range toward Approval. STAR adds
   the runoff specifically to make honest scoring safer.

@@ -11,7 +11,7 @@ gets its own subfolder.
 | **[Range/](Range/)** | [Range / Score 101](Range/Range_pages/range_101_c3_b5.md) | highest total score wins — STAR without the runoff | [`.yaml`](Range/range_101_c3_b5.yaml) |
 
 Range overview: [`range_voting.md`](../00_start_here/Range_Voting/range_voting.md);
-engine: [`Range_tabulation_engine`](../Range_tabulation_engine/README_range_tabulation_engine.md) (pref_voting).
+engine: [`Range_tabulation_engine`](Range/Range_tabulation_engine/README_range_tabulation_engine.md) (pref_voting).
 
 Most non-EVC material lives where it teaches best: inside
 [method comparisons](../method_comparisons/README_method_comparisons.md), where RCV-IRV and

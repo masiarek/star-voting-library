@@ -9,7 +9,7 @@ elimination — just sum the grades.
 This wraps **[pref_voting](https://pref-voting.readthedocs.io)** (Eric Pacuit)
 via its native `grade_methods.score_voting`. pref_voting was chosen over Votelib
 and VoteKit because it is **already this repo's independent cross-check engine**
-(see [the pref_voting engine](../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md))
+(see [the pref_voting engine](../../../pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md))
 — so range tabulation adds **no new dependency** and reuses an actively-maintained,
 well-tested library. Range itself is trivial ("sum the scores"), so we also
 compute the totals **by hand and assert the two agree**: the result is
@@ -19,7 +19,7 @@ hand count still runs (the cross-check is skipped with a note).
 ## Usage
 
 ```bash
-python Range_tabulation_engine/range_tabulation.py <election.yaml>
+python 06_Other/Range/Range_tabulation_engine/range_tabulation.py <election.yaml>
 ```
 
 Reads the library's usual score grid (header row of names, then one 0–max row
@@ -38,11 +38,11 @@ same election).
   **strategy-exposed**: a voter's rational play is often to give max/min only
   (which collapses Range toward Approval). STAR's runoff is the standard answer.
 
-See the teaching page [`00_start_here/Range_Voting/range_voting.md`](../00_start_here/Range_Voting/range_voting.md)
+See the teaching page [`00_start_here/Range_Voting/range_voting.md`](../../../00_start_here/Range_Voting/range_voting.md)
 for the method overview, pros/cons, and ballot examples, and the
-[Black Curtain read as Range](../method_comparisons/black_curtain/black_curtain_range.md).
+[Black Curtain read as Range](../../../method_comparisons/black_curtain/black_curtain_range.md).
 Range is a **non-EVC** method, so its examples live in
-[other methods](../06_Other/README_06_Other.md), not a numbered
+[other methods](../../README_06_Other.md), not a numbered
 root folder.
 
 # file: README_range_tabulation_engine.md
