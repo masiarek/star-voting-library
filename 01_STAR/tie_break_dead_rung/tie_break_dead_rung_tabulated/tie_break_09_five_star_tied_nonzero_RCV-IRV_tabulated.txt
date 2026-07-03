@@ -3,9 +3,10 @@
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Ann, Ben      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 0   →   Ann
-     1 × 0, 5   →   Ben
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ann, Ben
+     1 ×   Ann      (5, 0)
+     1 ×   Ben      (0, 5)
 
 FINAL RESULT
 Candidate      Votes  Status

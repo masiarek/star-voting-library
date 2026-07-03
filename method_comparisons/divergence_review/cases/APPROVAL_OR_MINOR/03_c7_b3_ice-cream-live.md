@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 4, 5, 3, 0, 1, 2, 0   →   ChocoAlm > ChocoDrk > ChocoHzn > Mango > VanillaFrnch
-     1 × 0, 3, 0, 0, 0, 0, 0   →   ChocoAlm
-     1 × 5, 0, 0, 0, 0, 0, 0   →   ChocoDrk
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach
+     1 ×   ChocoAlm > ChocoDrk > ChocoHzn > Mango > VanillaFrnch      (4, 5, 3, 0, 1, 2, 0)
+     1 ×   ChocoAlm      (0, 3, 0, 0, 0, 0, 0)
+     1 ×   ChocoDrk      (5, 0, 0, 0, 0, 0, 0)
 
 FINAL RESULT
 Candidate       Votes  Status
@@ -82,10 +83,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 3 ballots (score ballots).
 
 Ballots:
-   columns = ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 4, 5, 3, 0, 1, 2, 0   →   ChocoAlm > ChocoDrk > ChocoHzn > Mango > VanillaFrnch > VanillaClssc=Peach
-     1 × 0, 3, 0, 0, 0, 0, 0   →   ChocoAlm > ChocoDrk=ChocoHzn=VanillaClssc=VanillaFrnch=Mango=Peach
-     1 × 5, 0, 0, 0, 0, 0, 0   →   ChocoDrk > ChocoAlm=ChocoHzn=VanillaClssc=VanillaFrnch=Mango=Peach
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach
+     1 × ChocoAlm > ChocoDrk > ChocoHzn > Mango > VanillaFrnch > VanillaClssc=Peach      (4, 5, 3, 0, 1, 2, 0)
+     1 × ChocoAlm > ChocoDrk=ChocoHzn=VanillaClssc=VanillaFrnch=Mango=Peach      (0, 3, 0, 0, 0, 0, 0)
+     1 × ChocoDrk > ChocoAlm=ChocoHzn=VanillaClssc=VanillaFrnch=Mango=Peach      (5, 0, 0, 0, 0, 0, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
    ChocoAlm      beats ChocoDrk       2 – 1

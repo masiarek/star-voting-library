@@ -2,7 +2,7 @@
 SOURCE FILE:     options_examples.yaml
 SOURCE MODIFIED: 2026-06-29 08:51:30
 TABULATED FILE:  options_examples_tabulated.txt
-TABULATED AT:    2026-07-02 22:39:47
+TABULATED AT:    2026-07-02 22:49:08
 ======================================================================
 
 election_title: "Display-options reference — every reporting toggle (STAR)"

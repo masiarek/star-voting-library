@@ -651,8 +651,9 @@ def build_irv_report(candidates, ballots, priority, title=None):
     # mirroring the Ranked Robin report's ballot block so a reader can follow the
     # elimination — e.g. see which candidate falls off the low ballots.
     L.append("Ballots:")
-    L.append(f"   columns = {', '.join(candidates)}"
-             "      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)")
+    L.append("   the ranking RCV-IRV reads (0 = unranked, equal scores broken by "
+             "priority);")
+    L.append(f"   the source score ballot follows in () per column: {', '.join(candidates)}")
     seen_rows, counts = [], {}
     for b in ballots:
         scores = tuple(b.get(c, 0) for c in candidates)
@@ -665,7 +666,7 @@ def build_irv_report(candidates, ballots, priority, title=None):
         ranking = _score_to_rank(b, order)      # 0s dropped, ties by priority
         rank_txt = " > ".join(ranking) if ranking else "(all unranked)"
         score_txt = ", ".join(str(s) for s in scores)
-        L.append(f"   {counts[scores]:>3} × {score_txt}   →   {rank_txt}")
+        L.append(f"   {counts[scores]:>3} ×   {rank_txt}      ({score_txt})")
     L.append("")
     L.append(str(result))
     L.append("")
@@ -1255,8 +1256,9 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 groups.setdefault(b.get(c, 0), []).append(c)
             return " > ".join("=".join(groups[s]) for s in sorted(groups, reverse=True))
 
-        display_rows = [", ".join(str(b.get(c, 0)) for c in candidates)
-                        + "   →   " + _weak_rank(b) for b in ballots]
+        display_rows = [_weak_rank(b)
+                        + "      (" + ", ".join(str(b.get(c, 0)) for c in candidates) + ")"
+                        for b in ballots]
 
     n = len(ballots)
     priority = [c for c in (lot_numbers or candidates) if c in candidates]
@@ -1369,8 +1371,8 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
              f"({'ranked' if '>' in clean else 'score'} ballots).", ""]
         L.append("Ballots:")
         if ">" not in clean:        # score input: show how scores become RR's ranking
-            L.append(f"   columns = {', '.join(candidates)}"
-                     "      (scores  →  the ranking Ranked Robin reads;  \"=\" = tied)")
+            L.append("   the ranking Ranked Robin reads (\"=\" = tied);"
+                     f" source scores follow in () per column: {', '.join(candidates)}")
         if _collapse:
             cnt, seenr = _Counter(display_rows), []
             for r in display_rows:

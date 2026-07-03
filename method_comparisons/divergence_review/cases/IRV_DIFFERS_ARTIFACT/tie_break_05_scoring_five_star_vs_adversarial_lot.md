@@ -56,12 +56,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Ann, Ben, Cara      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 3, 5, 1   →   Ben > Ann > Cara
-     1 × 3, 5, 0   →   Ben > Ann
-     1 × 4, 0, 3   →   Ann > Cara
-     1 × 4, 0, 4   →   Cara > Ann
-     1 × 0, 1, 1   →   Cara > Ben
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ann, Ben, Cara
+     1 ×   Ben > Ann > Cara      (3, 5, 1)
+     1 ×   Ben > Ann      (3, 5, 0)
+     1 ×   Ann > Cara      (4, 0, 3)
+     1 ×   Cara > Ann      (4, 0, 4)
+     1 ×   Cara > Ben      (0, 1, 1)
 
 ROUND 1
 Candidate      Votes  Status
@@ -91,12 +92,12 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 5 ballots (score ballots).
 
 Ballots:
-   columns = Ann, Ben, Cara      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 3, 5, 1   →   Ben > Ann > Cara
-     1 × 3, 5, 0   →   Ben > Ann > Cara
-     1 × 4, 0, 3   →   Ann > Cara > Ben
-     1 × 4, 0, 4   →   Ann=Cara > Ben
-     1 × 0, 1, 1   →   Ben=Cara > Ann
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ann, Ben, Cara
+     1 × Ben > Ann > Cara      (3, 5, 1)
+     1 × Ben > Ann > Cara      (3, 5, 0)
+     1 × Ann > Cara > Ben      (4, 0, 3)
+     1 × Ann=Cara > Ben      (4, 0, 4)
+     1 × Ben=Cara > Ann      (0, 1, 1)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ben   beats Ann    3 – 2

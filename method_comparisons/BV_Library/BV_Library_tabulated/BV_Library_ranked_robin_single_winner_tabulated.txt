@@ -2,15 +2,15 @@
  Tabulating 11 ballots (score ballots).
 
 Ballots:
-   columns = Alice, Bob, Carol, Dave      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 4, 3, 2, 0   →   Alice > Bob > Carol > Dave
-     2 × 4, 3, 2, 1   →   Alice > Bob > Carol > Dave
-     2 × 4, 4, 3, 2   →   Alice=Bob > Carol > Dave
-     2 × 3, 4, 2, 1   →   Bob > Alice > Carol > Dave
-     1 × 3, 2, 4, 1   →   Carol > Alice > Bob > Dave
-     1 × 3, 2, 1, 4   →   Dave > Alice > Bob > Carol
-     1 × 0, 0, 0, 0   →   Alice=Bob=Carol=Dave
-     1 × 3, 2, 1, 0   →   Alice > Bob > Carol > Dave
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alice, Bob, Carol, Dave
+     1 × Alice > Bob > Carol > Dave      (4, 3, 2, 0)
+     2 × Alice > Bob > Carol > Dave      (4, 3, 2, 1)
+     2 × Alice=Bob > Carol > Dave      (4, 4, 3, 2)
+     2 × Bob > Alice > Carol > Dave      (3, 4, 2, 1)
+     1 × Carol > Alice > Bob > Dave      (3, 2, 4, 1)
+     1 × Dave > Alice > Bob > Carol      (3, 2, 1, 4)
+     1 × Alice=Bob=Carol=Dave      (0, 0, 0, 0)
+     1 × Alice > Bob > Carol > Dave      (3, 2, 1, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Alice  beats Bob     6 – 2

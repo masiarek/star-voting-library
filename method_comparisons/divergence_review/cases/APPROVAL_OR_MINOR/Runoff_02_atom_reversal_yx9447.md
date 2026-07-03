@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Austin, Boston, Cairo      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 1, 2   →   Austin > Cairo > Boston
-     2 × 4, 5, 0   →   Boston > Austin
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Austin, Boston, Cairo
+     1 ×   Austin > Cairo > Boston      (5, 1, 2)
+     2 ×   Boston > Austin      (4, 5, 0)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -76,9 +77,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 3 ballots (score ballots).
 
 Ballots:
-   columns = Austin, Boston, Cairo      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1, 2   →   Austin > Cairo > Boston
-     2 × 4, 5, 0   →   Boston > Austin > Cairo
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Austin, Boston, Cairo
+     1 × Austin > Cairo > Boston      (5, 1, 2)
+     2 × Boston > Austin > Cairo      (4, 5, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Boston  beats Austin   2 – 1

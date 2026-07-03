@@ -54,10 +54,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 4 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Ann, Bob, Cal, Don      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     2 × 3, 4, 2, 5   →   Don > Bob > Ann > Cal
-     1 × 3, 4, 2, 4   →   Bob > Don > Ann > Cal
-     1 × 3, 5, 2, 3   →   Bob > Ann > Don > Cal
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ann, Bob, Cal, Don
+     2 ×   Don > Bob > Ann > Cal      (3, 4, 2, 5)
+     1 ×   Bob > Don > Ann > Cal      (3, 4, 2, 4)
+     1 ×   Bob > Ann > Don > Cal      (3, 5, 2, 3)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -81,10 +82,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 4 ballots (score ballots).
 
 Ballots:
-   columns = Ann, Bob, Cal, Don      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     2 × 3, 4, 2, 5   →   Don > Bob > Ann > Cal
-     1 × 3, 4, 2, 4   →   Bob=Don > Ann > Cal
-     1 × 3, 5, 2, 3   →   Bob > Ann=Don > Cal
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ann, Bob, Cal, Don
+     2 × Don > Bob > Ann > Cal      (3, 4, 2, 5)
+     1 × Bob=Don > Ann > Cal      (3, 4, 2, 4)
+     1 × Bob > Ann=Don > Cal      (3, 5, 2, 3)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Bob  beats Ann   4 – 0

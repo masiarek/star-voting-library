@@ -54,10 +54,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Ada, Bruno, Cleo      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    40 × 5, 1, 2   →   Ada > Cleo > Bruno
-    35 × 1, 5, 2   →   Bruno > Cleo > Ada
-    25 × 3, 3, 5   →   Cleo > Ada > Bruno
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Bruno, Cleo
+    40 ×   Ada > Cleo > Bruno      (5, 1, 2)
+    35 ×   Bruno > Cleo > Ada      (1, 5, 2)
+    25 ×   Cleo > Ada > Bruno      (3, 3, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -87,10 +88,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 100 ballots (score ballots).
 
 Ballots:
-   columns = Ada, Bruno, Cleo      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    40 × 5, 1, 2   →   Ada > Cleo > Bruno
-    35 × 1, 5, 2   →   Bruno > Cleo > Ada
-    25 × 3, 3, 5   →   Cleo > Ada=Bruno
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ada, Bruno, Cleo
+    40 × Ada > Cleo > Bruno      (5, 1, 2)
+    35 × Bruno > Cleo > Ada      (1, 5, 2)
+    25 × Cleo > Ada=Bruno      (3, 3, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ada    beats Bruno   40 – 35

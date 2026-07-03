@@ -2,10 +2,10 @@
  Tabulating 100 ballots (score ballots).
 
 Ballots:
-   columns = Ada, Bruno, Cleo      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    40 × 5, 1, 2   →   Ada > Cleo > Bruno
-    35 × 1, 5, 2   →   Bruno > Cleo > Ada
-    25 × 3, 3, 5   →   Cleo > Ada=Bruno
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ada, Bruno, Cleo
+    40 × Ada > Cleo > Bruno      (5, 1, 2)
+    35 × Bruno > Cleo > Ada      (1, 5, 2)
+    25 × Cleo > Ada=Bruno      (3, 3, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ada    beats Bruno   40 – 35

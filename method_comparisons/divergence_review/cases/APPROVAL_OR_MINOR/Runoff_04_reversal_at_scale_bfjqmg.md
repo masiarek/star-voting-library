@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Maple, Olive, Pine      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     6 × 4, 5, 0   →   Olive > Maple
-     3 × 5, 1, 2   →   Maple > Pine > Olive
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Maple, Olive, Pine
+     6 ×   Olive > Maple      (4, 5, 0)
+     3 ×   Maple > Pine > Olive      (5, 1, 2)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -76,9 +77,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 9 ballots (score ballots).
 
 Ballots:
-   columns = Maple, Olive, Pine      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     6 × 4, 5, 0   →   Olive > Maple > Pine
-     3 × 5, 1, 2   →   Maple > Pine > Olive
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Maple, Olive, Pine
+     6 × Olive > Maple > Pine      (4, 5, 0)
+     3 × Maple > Pine > Olive      (5, 1, 2)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Olive  beats Maple   6 – 3

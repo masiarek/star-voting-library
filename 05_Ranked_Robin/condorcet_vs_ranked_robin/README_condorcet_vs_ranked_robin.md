@@ -70,12 +70,12 @@ Condorcet winner is blank — yet B has the best record (3 wins), so Ranked Robi
 
 ```text
 Ballots:
-   columns = A, B, C, D, E, F   (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 3, 3, 0, 2, 4, 3   →   E > A=B=F > D > C
-     1 × 3, 2, 3, 2, 4, 1   →   E > A=C > B=D > F
-     1 × 4, 1, 2, 1, 0, 4   →   A=F > C > B=D > E
-     1 × 2, 4, 5, 4, 1, 2   →   C > B=D > A=F > E
-     1 × 0, 5, 0, 5, 2, 3   →   B=D > F > E > A=C
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F
+     1 × E > A=B=F > D > C      (3, 3, 0, 2, 4, 3)
+     1 × E > A=C > B=D > F      (3, 2, 3, 2, 4, 1)
+     1 × A=F > C > B=D > E      (4, 1, 2, 1, 0, 4)
+     1 × C > B=D > A=F > E      (2, 4, 5, 4, 1, 2)
+     1 × B=D > F > E > A=C      (0, 5, 0, 5, 2, 3)
 
 Win–loss record (top rows):
     #  Candidate  W–L–T  Copeland  Margin  Beats

@@ -54,10 +54,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 4 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Alex, Blair, Cleo      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 1, 2   →   Alex > Cleo > Blair
-     2 × 4, 5, 0   →   Blair > Alex
-     1 × 3, 3, 3   →   Cleo > Blair > Alex
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alex, Blair, Cleo
+     1 ×   Alex > Cleo > Blair      (5, 1, 2)
+     2 ×   Blair > Alex      (4, 5, 0)
+     1 ×   Cleo > Blair > Alex      (3, 3, 3)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -80,10 +81,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 4 ballots (score ballots).
 
 Ballots:
-   columns = Alex, Blair, Cleo      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1, 2   →   Alex > Cleo > Blair
-     2 × 4, 5, 0   →   Blair > Alex > Cleo
-     1 × 3, 3, 3   →   Alex=Blair=Cleo
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alex, Blair, Cleo
+     1 × Alex > Cleo > Blair      (5, 1, 2)
+     2 × Blair > Alex > Cleo      (4, 5, 0)
+     1 × Alex=Blair=Cleo      (3, 3, 3)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Blair  beats Alex    2 – 1

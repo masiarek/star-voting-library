@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Allison, Bill      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 0, 5   →   Bill
-     1 × 3, 2   →   Allison > Bill
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Allison, Bill
+     1 ×   Bill      (0, 5)
+     1 ×   Allison > Bill      (3, 2)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -75,9 +76,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 2 ballots (score ballots).
 
 Ballots:
-   columns = Allison, Bill      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 0, 5   →   Bill > Allison
-     1 × 3, 2   →   Allison > Bill
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Allison, Bill
+     1 × Bill > Allison      (0, 5)
+     1 × Allison > Bill      (3, 2)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Allison  ties  Bill      1 – 1

@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Rock, Paper, Scissors      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    35 × 5, 3, 0   →   Rock > Paper
-    33 × 0, 5, 3   →   Paper > Scissors
-    32 × 3, 0, 5   →   Scissors > Rock
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Rock, Paper, Scissors
+    35 ×   Rock > Paper      (5, 3, 0)
+    33 ×   Paper > Scissors      (0, 5, 3)
+    32 ×   Scissors > Rock      (3, 0, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -85,10 +86,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 100 ballots (score ballots).
 
 Ballots:
-   columns = Rock, Paper, Scissors      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    35 × 5, 3, 0   →   Rock > Paper > Scissors
-    33 × 0, 5, 3   →   Paper > Scissors > Rock
-    32 × 3, 0, 5   →   Scissors > Rock > Paper
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Rock, Paper, Scissors
+    35 × Rock > Paper > Scissors      (5, 3, 0)
+    33 × Paper > Scissors > Rock      (0, 5, 3)
+    32 × Scissors > Rock > Paper      (3, 0, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Rock      beats Paper      67 – 33

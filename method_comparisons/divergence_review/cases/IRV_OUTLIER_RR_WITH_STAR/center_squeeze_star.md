@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 27 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Left, Center, Right      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    12 × 5, 4, 3   →   Left > Center > Right
-     9 × 3, 4, 5   →   Right > Center > Left
-     6 × 4, 5, 3   →   Center > Left > Right
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Left, Center, Right
+    12 ×   Left > Center > Right      (5, 4, 3)
+     9 ×   Right > Center > Left      (3, 4, 5)
+     6 ×   Center > Left > Right      (4, 5, 3)
 
 ROUND 1
 Candidate      Votes  Status
@@ -85,10 +86,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 27 ballots (score ballots).
 
 Ballots:
-   columns = Left, Center, Right      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    12 × 5, 4, 3   →   Left > Center > Right
-     9 × 3, 4, 5   →   Right > Center > Left
-     6 × 4, 5, 3   →   Center > Left > Right
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Left, Center, Right
+    12 × Left > Center > Right      (5, 4, 3)
+     9 × Right > Center > Left      (3, 4, 5)
+     6 × Center > Left > Right      (4, 5, 3)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Center  beats Left     15 – 12

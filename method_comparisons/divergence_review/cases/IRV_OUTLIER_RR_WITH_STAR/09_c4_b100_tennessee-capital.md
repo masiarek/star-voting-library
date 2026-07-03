@@ -53,11 +53,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Memphis, Nashville, Chattanooga, Knoxville      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    42 × 5, 4, 3, 2   →   Memphis > Nashville > Chattanooga > Knoxville
-    26 × 2, 5, 4, 3   →   Nashville > Chattanooga > Knoxville > Memphis
-    15 × 2, 3, 5, 4   →   Chattanooga > Knoxville > Nashville > Memphis
-    17 × 2, 3, 4, 5   →   Knoxville > Chattanooga > Nashville > Memphis
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Memphis, Nashville, Chattanooga, Knoxville
+    42 ×   Memphis > Nashville > Chattanooga > Knoxville      (5, 4, 3, 2)
+    26 ×   Nashville > Chattanooga > Knoxville > Memphis      (2, 5, 4, 3)
+    15 ×   Chattanooga > Knoxville > Nashville > Memphis      (2, 3, 5, 4)
+    17 ×   Knoxville > Chattanooga > Nashville > Memphis      (2, 3, 4, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -97,11 +98,11 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 100 ballots (score ballots).
 
 Ballots:
-   columns = Memphis, Nashville, Chattanooga, Knoxville      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    42 × 5, 4, 3, 2   →   Memphis > Nashville > Chattanooga > Knoxville
-    26 × 2, 5, 4, 3   →   Nashville > Chattanooga > Knoxville > Memphis
-    15 × 2, 3, 5, 4   →   Chattanooga > Knoxville > Nashville > Memphis
-    17 × 2, 3, 4, 5   →   Knoxville > Chattanooga > Nashville > Memphis
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Memphis, Nashville, Chattanooga, Knoxville
+    42 × Memphis > Nashville > Chattanooga > Knoxville      (5, 4, 3, 2)
+    26 × Nashville > Chattanooga > Knoxville > Memphis      (2, 5, 4, 3)
+    15 × Chattanooga > Knoxville > Nashville > Memphis      (2, 3, 5, 4)
+    17 × Knoxville > Chattanooga > Nashville > Memphis      (2, 3, 4, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Nashville    beats Memphis       58 – 42

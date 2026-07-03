@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Maple, Oak, Pine      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 1, 5, 4   →   Oak > Pine > Maple
-     1 × 0, 5, 3   →   Oak > Pine
-     1 × 4, 0, 5   →   Pine > Maple
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Maple, Oak, Pine
+     1 ×   Oak > Pine > Maple      (1, 5, 4)
+     1 ×   Oak > Pine      (0, 5, 3)
+     1 ×   Pine > Maple      (4, 0, 5)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -78,10 +79,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 3 ballots (score ballots).
 
 Ballots:
-   columns = Maple, Oak, Pine      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 1, 5, 4   →   Oak > Pine > Maple
-     1 × 0, 5, 3   →   Oak > Pine > Maple
-     1 × 4, 0, 5   →   Pine > Maple > Oak
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Maple, Oak, Pine
+     1 × Oak > Pine > Maple      (1, 5, 4)
+     1 × Oak > Pine > Maple      (0, 5, 3)
+     1 × Pine > Maple > Oak      (4, 0, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Oak    beats Maple   2 – 1

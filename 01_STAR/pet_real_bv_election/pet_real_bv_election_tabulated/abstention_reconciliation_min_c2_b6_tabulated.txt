@@ -2,7 +2,7 @@
 SOURCE FILE:     abstention_reconciliation_min_c2_b6.yaml
 SOURCE MODIFIED: 2026-06-28 08:35:23
 TABULATED FILE:  abstention_reconciliation_min_c2_b6_tabulated.txt
-TABULATED AT:    2026-07-02 22:42:38
+TABULATED AT:    2026-07-02 22:51:11
 ======================================================================
 
 election_title: Abstention vs Equal Support — the minimal reconciliation case

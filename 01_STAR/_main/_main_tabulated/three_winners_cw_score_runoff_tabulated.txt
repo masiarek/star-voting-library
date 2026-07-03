@@ -2,7 +2,7 @@
 SOURCE FILE:     three_winners_cw_score_runoff.yaml
 SOURCE MODIFIED: 2026-06-26 20:07:51
 TABULATED FILE:  three_winners_cw_score_runoff_tabulated.txt
-TABULATED AT:    2026-07-02 22:39:46
+TABULATED AT:    2026-07-02 22:49:02
 ======================================================================
 
 election_title: Three notions of "winner" disagree — Condorcet, Score, and Runoff

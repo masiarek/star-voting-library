@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Almond, Brownie, Cocoa      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 1, 2   →   Almond > Cocoa > Brownie
-     2 × 4, 5, 0   →   Brownie > Almond
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Almond, Brownie, Cocoa
+     1 ×   Almond > Cocoa > Brownie      (5, 1, 2)
+     2 ×   Brownie > Almond      (4, 5, 0)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -76,9 +77,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 3 ballots (score ballots).
 
 Ballots:
-   columns = Almond, Brownie, Cocoa      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1, 2   →   Almond > Cocoa > Brownie
-     2 × 4, 5, 0   →   Brownie > Almond > Cocoa
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Almond, Brownie, Cocoa
+     1 × Almond > Cocoa > Brownie      (5, 1, 2)
+     2 × Brownie > Almond > Cocoa      (4, 5, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Brownie  beats Almond    2 – 1

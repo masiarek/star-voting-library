@@ -34,9 +34,9 @@ Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_ra
  Tabulating 6 ballots (score ballots).
 
 Ballots:
-   columns = Alice, Bob, Carol, Dave      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     3 × 4, 3, 2, 1   →   Alice > Bob > Carol > Dave
-     3 × 3, 4, 2, 1   →   Bob > Alice > Carol > Dave
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alice, Bob, Carol, Dave
+     3 × Alice > Bob > Carol > Dave      (4, 3, 2, 1)
+     3 × Bob > Alice > Carol > Dave      (3, 4, 2, 1)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Alice  ties  Bob     3 – 3

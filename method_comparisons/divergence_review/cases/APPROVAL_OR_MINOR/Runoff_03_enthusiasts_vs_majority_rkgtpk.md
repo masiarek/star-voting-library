@@ -54,12 +54,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Dakota, Eden, Flynn, Gale, Hazel      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 0, 1, 0, 0   →   Dakota > Flynn
-     1 × 5, 0, 0, 1, 0   →   Dakota > Gale
-     1 × 4, 5, 0, 0, 1   →   Eden > Dakota > Hazel
-     1 × 4, 5, 1, 0, 0   →   Eden > Dakota > Flynn
-     1 × 4, 5, 0, 1, 0   →   Eden > Dakota > Gale
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Dakota, Eden, Flynn, Gale, Hazel
+     1 ×   Dakota > Flynn      (5, 0, 1, 0, 0)
+     1 ×   Dakota > Gale      (5, 0, 0, 1, 0)
+     1 ×   Eden > Dakota > Hazel      (4, 5, 0, 0, 1)
+     1 ×   Eden > Dakota > Flynn      (4, 5, 1, 0, 0)
+     1 ×   Eden > Dakota > Gale      (4, 5, 0, 1, 0)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -84,12 +85,12 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 5 ballots (score ballots).
 
 Ballots:
-   columns = Dakota, Eden, Flynn, Gale, Hazel      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 0, 1, 0, 0   →   Dakota > Flynn > Eden=Gale=Hazel
-     1 × 5, 0, 0, 1, 0   →   Dakota > Gale > Eden=Flynn=Hazel
-     1 × 4, 5, 0, 0, 1   →   Eden > Dakota > Hazel > Flynn=Gale
-     1 × 4, 5, 1, 0, 0   →   Eden > Dakota > Flynn > Gale=Hazel
-     1 × 4, 5, 0, 1, 0   →   Eden > Dakota > Gale > Flynn=Hazel
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Dakota, Eden, Flynn, Gale, Hazel
+     1 × Dakota > Flynn > Eden=Gale=Hazel      (5, 0, 1, 0, 0)
+     1 × Dakota > Gale > Eden=Flynn=Hazel      (5, 0, 0, 1, 0)
+     1 × Eden > Dakota > Hazel > Flynn=Gale      (4, 5, 0, 0, 1)
+     1 × Eden > Dakota > Flynn > Gale=Hazel      (4, 5, 1, 0, 0)
+     1 × Eden > Dakota > Gale > Flynn=Hazel      (4, 5, 0, 1, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Eden    beats Dakota   3 – 2

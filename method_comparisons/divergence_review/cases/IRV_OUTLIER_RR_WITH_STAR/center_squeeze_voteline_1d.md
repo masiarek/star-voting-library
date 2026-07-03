@@ -53,11 +53,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 998 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Red, Green, Yellow      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-   332 × 5, 3, 0   →   Red > Green
-   138 × 3, 5, 1   →   Green > Red > Yellow
-   175 × 1, 5, 3   →   Green > Yellow > Red
-   353 × 0, 3, 5   →   Yellow > Green
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Red, Green, Yellow
+   332 ×   Red > Green      (5, 3, 0)
+   138 ×   Green > Red > Yellow      (3, 5, 1)
+   175 ×   Green > Yellow > Red      (1, 5, 3)
+   353 ×   Yellow > Green      (0, 3, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -87,11 +88,11 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 998 ballots (score ballots).
 
 Ballots:
-   columns = Red, Green, Yellow      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-   332 × 5, 3, 0   →   Red > Green > Yellow
-   138 × 3, 5, 1   →   Green > Red > Yellow
-   175 × 1, 5, 3   →   Green > Yellow > Red
-   353 × 0, 3, 5   →   Yellow > Green > Red
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Red, Green, Yellow
+   332 × Red > Green > Yellow      (5, 3, 0)
+   138 × Green > Red > Yellow      (3, 5, 1)
+   175 × Green > Yellow > Red      (1, 5, 3)
+   353 × Yellow > Green > Red      (0, 3, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Green   beats Red      666 – 332

@@ -54,12 +54,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Austin, Boston, Chicago, Denver, Erie      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 0, 1, 0, 2   →   Austin > Erie > Chicago
-     1 × 5, 0, 0, 1, 0   →   Austin > Denver
-     1 × 4, 5, 1, 0, 0   →   Boston > Austin > Chicago
-     1 × 4, 5, 0, 2, 0   →   Boston > Austin > Denver
-     1 × 4, 5, 0, 0, 1   →   Boston > Austin > Erie
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Austin, Boston, Chicago, Denver, Erie
+     1 ×   Austin > Erie > Chicago      (5, 0, 1, 0, 2)
+     1 ×   Austin > Denver      (5, 0, 0, 1, 0)
+     1 ×   Boston > Austin > Chicago      (4, 5, 1, 0, 0)
+     1 ×   Boston > Austin > Denver      (4, 5, 0, 2, 0)
+     1 ×   Boston > Austin > Erie      (4, 5, 0, 0, 1)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -84,12 +85,12 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 5 ballots (score ballots).
 
 Ballots:
-   columns = Austin, Boston, Chicago, Denver, Erie      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 0, 1, 0, 2   →   Austin > Erie > Chicago > Boston=Denver
-     1 × 5, 0, 0, 1, 0   →   Austin > Denver > Boston=Chicago=Erie
-     1 × 4, 5, 1, 0, 0   →   Boston > Austin > Chicago > Denver=Erie
-     1 × 4, 5, 0, 2, 0   →   Boston > Austin > Denver > Chicago=Erie
-     1 × 4, 5, 0, 0, 1   →   Boston > Austin > Erie > Chicago=Denver
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Austin, Boston, Chicago, Denver, Erie
+     1 × Austin > Erie > Chicago > Boston=Denver      (5, 0, 1, 0, 2)
+     1 × Austin > Denver > Boston=Chicago=Erie      (5, 0, 0, 1, 0)
+     1 × Boston > Austin > Chicago > Denver=Erie      (4, 5, 1, 0, 0)
+     1 × Boston > Austin > Denver > Chicago=Erie      (4, 5, 0, 2, 0)
+     1 × Boston > Austin > Erie > Chicago=Denver      (4, 5, 0, 0, 1)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Boston   beats Austin    3 – 2

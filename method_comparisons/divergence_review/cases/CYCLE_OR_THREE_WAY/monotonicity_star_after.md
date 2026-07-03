@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 34 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = X, Y, Z      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    16 × 5, 3, 0   →   X > Y
-     8 × 0, 5, 3   →   Y > Z
-    10 × 3, 0, 5   →   Z > X
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: X, Y, Z
+    16 ×   X > Y      (5, 3, 0)
+     8 ×   Y > Z      (0, 5, 3)
+    10 ×   Z > X      (3, 0, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -85,10 +86,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 34 ballots (score ballots).
 
 Ballots:
-   columns = X, Y, Z      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    16 × 5, 3, 0   →   X > Y > Z
-     8 × 0, 5, 3   →   Y > Z > X
-    10 × 3, 0, 5   →   Z > X > Y
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: X, Y, Z
+    16 × X > Y > Z      (5, 3, 0)
+     8 × Y > Z > X      (0, 5, 3)
+    10 × Z > X > Y      (3, 0, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    X  beats Y   26 –  8

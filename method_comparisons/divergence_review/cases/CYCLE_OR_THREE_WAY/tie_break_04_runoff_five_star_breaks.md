@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 2 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Alice, Ben      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 1   →   Alice > Ben
-     1 × 0, 4   →   Ben
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alice, Ben
+     1 ×   Alice > Ben      (5, 1)
+     1 ×   Ben      (0, 4)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -75,9 +76,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 2 ballots (score ballots).
 
 Ballots:
-   columns = Alice, Ben      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1   →   Alice > Ben
-     1 × 0, 4   →   Ben > Alice
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alice, Ben
+     1 × Alice > Ben      (5, 1)
+     1 × Ben > Alice      (0, 4)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Alice  ties  Ben     1 – 1

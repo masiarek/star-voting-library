@@ -54,12 +54,13 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 40 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Andre, Blake, Carmen, Dana, Evan      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    10 × 4, 3, 5, 2, 1   →   Carmen > Andre > Blake > Dana > Evan
-     9 × 5, 3, 4, 2, 1   →   Andre > Carmen > Blake > Dana > Evan
-     8 × 3, 5, 4, 2, 1   →   Blake > Carmen > Andre > Dana > Evan
-     7 × 3, 2, 4, 5, 1   →   Dana > Carmen > Andre > Blake > Evan
-     6 × 3, 2, 4, 1, 5   →   Evan > Carmen > Andre > Blake > Dana
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Andre, Blake, Carmen, Dana, Evan
+    10 ×   Carmen > Andre > Blake > Dana > Evan      (4, 3, 5, 2, 1)
+     9 ×   Andre > Carmen > Blake > Dana > Evan      (5, 3, 4, 2, 1)
+     8 ×   Blake > Carmen > Andre > Dana > Evan      (3, 5, 4, 2, 1)
+     7 ×   Dana > Carmen > Andre > Blake > Evan      (3, 2, 4, 5, 1)
+     6 ×   Evan > Carmen > Andre > Blake > Dana      (3, 2, 4, 1, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -102,12 +103,12 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 40 ballots (score ballots).
 
 Ballots:
-   columns = Andre, Blake, Carmen, Dana, Evan      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    10 × 4, 3, 5, 2, 1   →   Carmen > Andre > Blake > Dana > Evan
-     9 × 5, 3, 4, 2, 1   →   Andre > Carmen > Blake > Dana > Evan
-     8 × 3, 5, 4, 2, 1   →   Blake > Carmen > Andre > Dana > Evan
-     7 × 3, 2, 4, 5, 1   →   Dana > Carmen > Andre > Blake > Evan
-     6 × 3, 2, 4, 1, 5   →   Evan > Carmen > Andre > Blake > Dana
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Andre, Blake, Carmen, Dana, Evan
+    10 × Carmen > Andre > Blake > Dana > Evan      (4, 3, 5, 2, 1)
+     9 × Andre > Carmen > Blake > Dana > Evan      (5, 3, 4, 2, 1)
+     8 × Blake > Carmen > Andre > Dana > Evan      (3, 5, 4, 2, 1)
+     7 × Dana > Carmen > Andre > Blake > Evan      (3, 2, 4, 5, 1)
+     6 × Evan > Carmen > Andre > Blake > Dana      (3, 2, 4, 1, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Andre   beats Blake    32 –  8

@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Ann, Bob, Carl      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     3 × 5, 4, 3   →   Ann > Bob > Carl
-     2 × 0, 3, 5   →   Carl > Bob
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ann, Bob, Carl
+     3 ×   Ann > Bob > Carl      (5, 4, 3)
+     2 ×   Carl > Bob      (0, 3, 5)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -76,9 +77,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 5 ballots (score ballots).
 
 Ballots:
-   columns = Ann, Bob, Carl      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     3 × 5, 4, 3   →   Ann > Bob > Carl
-     2 × 0, 3, 5   →   Carl > Bob > Ann
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ann, Bob, Carl
+     3 × Ann > Bob > Carl      (5, 4, 3)
+     2 × Carl > Bob > Ann      (0, 3, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ann   beats Bob    3 – 2

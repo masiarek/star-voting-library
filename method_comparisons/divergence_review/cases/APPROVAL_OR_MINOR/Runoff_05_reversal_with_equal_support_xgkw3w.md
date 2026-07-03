@@ -55,11 +55,12 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Rosa, Sage, Tulip      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     1 × 5, 1, 0   →   Rosa > Sage
-     2 × 4, 5, 0   →   Sage > Rosa
-     1 × 3, 3, 1   →   Sage > Rosa > Tulip
-     1 × 5, 5, 2   →   Sage > Rosa > Tulip
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Rosa, Sage, Tulip
+     1 ×   Rosa > Sage      (5, 1, 0)
+     2 ×   Sage > Rosa      (4, 5, 0)
+     1 ×   Sage > Rosa > Tulip      (3, 3, 1)
+     1 ×   Sage > Rosa > Tulip      (5, 5, 2)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -82,11 +83,11 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 5 ballots (score ballots).
 
 Ballots:
-   columns = Rosa, Sage, Tulip      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1, 0   →   Rosa > Sage > Tulip
-     2 × 4, 5, 0   →   Sage > Rosa > Tulip
-     1 × 3, 3, 1   →   Rosa=Sage > Tulip
-     1 × 5, 5, 2   →   Rosa=Sage > Tulip
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Rosa, Sage, Tulip
+     1 × Rosa > Sage > Tulip      (5, 1, 0)
+     2 × Sage > Rosa > Tulip      (4, 5, 0)
+     1 × Rosa=Sage > Tulip      (3, 3, 1)
+     1 × Rosa=Sage > Tulip      (5, 5, 2)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Sage   beats Rosa    2 – 1

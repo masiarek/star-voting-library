@@ -51,9 +51,10 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Choco, Almond, Vanilla      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-     2 × 0, 1, 0   →   Almond
-     1 × 0, 0, 1   →   Vanilla
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Choco, Almond, Vanilla
+     2 ×   Almond      (0, 1, 0)
+     1 ×   Vanilla      (0, 0, 1)
 
 FINAL RESULT
 Candidate      Votes  Status
@@ -76,9 +77,9 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 3 ballots (score ballots).
 
 Ballots:
-   columns = Choco, Almond, Vanilla      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     2 × 0, 1, 0   →   Almond > Choco=Vanilla
-     1 × 0, 0, 1   →   Vanilla > Choco=Almond
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Choco, Almond, Vanilla
+     2 × Almond > Choco=Vanilla      (0, 1, 0)
+     1 × Vanilla > Choco=Almond      (0, 0, 1)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Almond   beats Choco     2 – 0

@@ -2,7 +2,7 @@
 SOURCE FILE:     Whoops_02_star_misses_condorcet.yaml
 SOURCE MODIFIED: 2026-06-28 23:04:47
 TABULATED FILE:  Whoops_02_star_misses_condorcet_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:25
+TABULATED AT:    2026-07-02 22:50:12
 ======================================================================
 
 election:
@@ -68,7 +68,7 @@ Legend: For - Equal Support - Against
   RCV-RR (Condorcet) = Cleo   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_RCV-RR_tabulated.txt
-     file:///sessions/upbeat-gracious-keller/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_RCV-RR_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

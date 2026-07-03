@@ -52,10 +52,11 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
-   columns = Skywalker, Leia, Vader      (scores  →  the ranking RCV-IRV reads;  0 = unranked, ties by priority)
-    33 × 5, 4, 0   →   Skywalker > Leia
-    27 × 4, 5, 0   →   Leia > Skywalker
-    40 × 0, 1, 5   →   Vader > Leia
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Skywalker, Leia, Vader
+    33 ×   Skywalker > Leia      (5, 4, 0)
+    27 ×   Leia > Skywalker      (4, 5, 0)
+    40 ×   Vader > Leia      (0, 1, 5)
 
 ROUND 1
 Candidate      Votes  Status
@@ -85,10 +86,10 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
  Tabulating 100 ballots (score ballots).
 
 Ballots:
-   columns = Skywalker, Leia, Vader      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-    33 × 5, 4, 0   →   Skywalker > Leia > Vader
-    27 × 4, 5, 0   →   Leia > Skywalker > Vader
-    40 × 0, 1, 5   →   Vader > Leia > Skywalker
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Skywalker, Leia, Vader
+    33 × Skywalker > Leia > Vader      (5, 4, 0)
+    27 × Leia > Skywalker > Vader      (4, 5, 0)
+    40 × Vader > Leia > Skywalker      (0, 1, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Leia       beats Skywalker   67 – 33

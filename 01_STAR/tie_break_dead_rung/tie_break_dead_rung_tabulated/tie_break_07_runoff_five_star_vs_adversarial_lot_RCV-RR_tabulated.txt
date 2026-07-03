@@ -2,9 +2,9 @@
  Tabulating 2 ballots (score ballots).
 
 Ballots:
-   columns = Ann, Ben      (scores  →  the ranking Ranked Robin reads;  "=" = tied)
-     1 × 5, 1   →   Ann > Ben
-     1 × 0, 4   →   Ben > Ann
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ann, Ben
+     1 × Ann > Ben      (5, 1)
+     1 × Ben > Ann      (0, 4)
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ann  ties  Ben   1 – 1

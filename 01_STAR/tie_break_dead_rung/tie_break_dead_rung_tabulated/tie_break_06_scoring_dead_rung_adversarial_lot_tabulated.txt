@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_06_scoring_dead_rung_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_06_scoring_dead_rung_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-02 22:42:39
+TABULATED AT:    2026-07-02 22:51:12
 ======================================================================
 
 election_title: Dead rung 02 — same tie, but nobody scored a 5
