@@ -59,6 +59,60 @@ survives in the top-two runoff — a faction can still split itself if it refuse
 the score ballot honestly. That edge case (and why it's minor) is
 [STAR's residual vote-splitting](STAR_Voting/residual_vote_splitting.md).
 
+## How social choice theory frames it
+
+A method is **spoilerproof** when it satisfies **Independence of Irrelevant
+Alternatives (IIA)**: whether the winner is A or B should not depend on some losing
+third candidate C. Sidney Morgenbesser's joke captures the principle — a diner picks
+apple pie over blueberry and cherry; told the cherry is sold out, he says "in that
+case I'll have the blueberry." Condorcet was the first to study the spoiler effect, in
+the 1780s.
+
+Susceptibility depends heavily on the method (Wikipedia's summary):
+
+| Electoral system | Spoiler effect |
+|---|:--:|
+| Plurality | **High** |
+| Runoffs / RCV-IRV | **Medium** |
+| Condorcet methods | **Low** (only in a cyclic tie) |
+| Score / median (Approval, Score, STAR) | **None** (on an absolute scale) |
+
+Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked*
+method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they
+*can* be spoilerproof — with one caveat: only if voters score on an **absolute** scale.
+If voters rescale their scores around who's running (a *relative* scale), a spoiler can
+reappear — which is exactly STAR's [narrow residual](STAR_Voting/residual_vote_splitting.md).
+
+Methods that fail IIA can be gamed by **strategic nomination**. The Borda count has a
+severe *entry* incentive — a faction can "clone their way to victory" by running many
+candidates, which made Borda himself concede "my system is meant only for honest men."
+Plurality has the opposite, an *exit* incentive: similar candidates get pressured to
+drop out or merge so they don't split the vote. (Theory suggests **90–99% of real
+elections have a Condorcet winner**, so cyclic-tie spoilers are rare; the first
+Condorcet cycle found in a ranked US election was in 2021.)
+
+## The rhetoric: "a vote for X is a vote for Y"
+
+The spoiler effect has its own political vocabulary, all of it aimed at pressuring
+voters not to "split the vote": **"a vote for X is a vote for Y."** The line recurs
+across decades — "a vote for Perot is a vote for Clinton" (1992); Al Gore's campaign on
+"a vote for Nader is a vote for Bush" (2000, and again in 2004); "a vote for Cruz is a
+vote for Trump" in the 2016 GOP primary; and a 2024 Democratic ad branding Jill Stein a
+spoiler for Trump. This is **lesser-evil / strategic-voting** pressure — the human cost
+of a spoiler-prone ballot — and defusing it is much of the point of reform: on an
+Approval, Score, or STAR ballot you can honestly support your favorite *and* a viable
+compromise, so "a vote for X is a vote for Y" stops being true.
+
+## A real IRV spoiler — Burlington 2009
+
+The 2009 Burlington, Vermont mayoral election (run by RCV-IRV) is the textbook proof
+that instant runoff does **not** remove spoilers. **Andy Montroll was the Condorcet
+winner** — he beat every other candidate head-to-head — but he was eliminated in an
+early round for too few first choices. Republican **Kurt Wright** acted as the spoiler,
+and the seat went to **Bob Kiss**, even though most voters preferred Montroll to Kiss.
+That's a [center-squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) spoiler, and it's why IRV
+rates "Medium," not "None," in the table above.
+
 ## See it happen
 
 - [The split-voting set](../method_comparisons/split_voting/README_split_voting.md) — the
@@ -68,5 +122,10 @@ the score ballot honestly. That edge case (and why it's minor) is
 - [Plurality vs. majority](../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md)
   — where the minority winner comes from.
 - Debate framing: [what's so good about STAR — Segment 1](../interviews_conversations/whats_so_good_about_STAR_Voting.md)
+
+Sources: [Spoiler effect — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect),
+[Spoiler effect rhetoric — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect_rhetoric),
+[Independence of irrelevant alternatives — Wikipedia](https://en.wikipedia.org/wiki/Independence_of_irrelevant_alternatives),
+[2009 Burlington mayoral election — Wikipedia](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election)
 
 # file: spoiler_effect.md
