@@ -31,6 +31,7 @@ Scoring isn't free of trade-offs, and an honest case names them. **STAR and Scor
 
 ## Related concepts in this library
 
+- [Alternate ballot styles — one voter, three ballots](ballot_styles.md) — ranking vs. yes/no vs. scoring, side by side on the same opinion
 - [Scores vs. ranks — don't confuse ranks and ratings](scores_and_ranks/scores_vs_ranks.md) — the core ballot distinction: order vs. strength
 - [Is RCV "simple"? (201)](RCV_IRV/RCV_IRV_is_simple.md) — the five-star/scoring mental model vs. ranking a field of strangers
 - [Tabulation, step by step](tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
