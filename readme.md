@@ -7,6 +7,15 @@ pairs a real counting engine with a library of example elections, plain-language
 tabulation output, a BetterVoting import path, and a test suite — for voters,
 presenters, and debaters learning and teaching STAR.
 
+**Why this exists.** Most voting-method debates run on hand-waving and toy examples.
+The goal here is to make STAR (and the methods it's compared against) *legible*: every
+claim is backed by a runnable election and a transparent, auditable count. The
+**BetterVoting import path** is the bridge to reality — take a genuine election run on
+[BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform),
+convert its JSON export into a canonical YAML, re-tabulate it with an engine whose every
+step is legible, and confirm the result matches BetterVoting's official tally. Real
+elections become teachable, reproducible cases — not just textbook constructions.
+
 ---
 
 ## The big picture: one YAML file, a pipeline around it
