@@ -5,7 +5,8 @@ candidate with the **fewest first choices**, transfer, repeat. When an American
 ballot or statute says "Ranked Choice Voting," **this** is almost always it.*
 
 → Family overview: [Which RCV-IRV?](RCV_IRV_variants.md) · why the name confuses:
-[RCV vs. IRV vs. RCV-IRV](RCV-IRV-confusing-name.md)
+[RCV vs. IRV vs. RCV-IRV](RCV-IRV-confusing-name.md) · where it came from:
+[origins & spread](RCV_IRV_history.md)
 
 ---
 
@@ -92,6 +93,7 @@ and was the UK's 2011 AV referendum proposal. The multi-winner relative is
 
 - [Which RCV-IRV? — Hare and the other variants](RCV_IRV_variants.md)
 - [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md)
+- [Origins & spread — where IRV came from](RCV_IRV_history.md)
 - [Center squeeze](RCV_IRV_center_squeeze.md) · [Non-monotonicity](RCV_IRV_non_monotonicity.md) · [Exhausted ballots](RCV_IRV_exhausted_ballots.md) · [Lack of summability](RCV_IRV_lack_of_summability.md)
 
 Sources: [Instant-runoff voting — Wikipedia](https://en.wikipedia.org/wiki/Instant-runoff_voting),
