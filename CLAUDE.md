@@ -166,7 +166,18 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `other_methods/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never echoed); cross-file teaching in
-  Markdown. No `.md` per YAML. See `ORGANIZATION.md`.
+  Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
+  see next bullet). See `ORGANIZATION.md`.
+- **Prefer linking the `.md` page over the raw `.yaml` — and MD/links in general.**
+  The generated per-election pages (`<set>_pages/<name>.md`, built by
+  `scripts/build_yaml_pages.py`) are the reader-friendly surface: **lead with them**
+  in tables, navs, and cross-references (left-most / primary link). Link a `.yaml`
+  only when the *tabulatable source* is genuinely the point (e.g. a "run this file"
+  command), and **demote** it (right-most column / secondary link). Page structure is
+  **teaching first, raw tally last**: the `scenario_description` and educational value
+  up top, then the **ballots**, then the **results** — with the full engine detail (the
+  same content as the `_tabulated` mirror, or the mirror embedded) at the **bottom** of
+  the page, so the reader gets the lesson before the numbers.
 - **`_tabulated`** files are generated into a `<folder>_tabulated/` subfolder
   **nested inside the source file's own folder** (e.g.
   `01_Single_winner/black_curtain/black_curtain_tabulated/`); regenerate by

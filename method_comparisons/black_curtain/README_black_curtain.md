@@ -143,15 +143,17 @@ Score 0–9 → **B** (avg 5.6 vs C 5.4, A 3.6, D 3.4)
 
 ## Files in this folder
 
-| File | Method | Winner | Shows | Results page |
-|---|---|---|---|---|
-| [`Black_Curtain_01_c3_b5_hidden-consensus.yaml`](Black_Curtain_01_c3_b5_hidden-consensus.yaml) | STAR | Cal | Majority favorite beats the everyone's-second consensus | [page](black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) |
-| [`Black_Curtain_01a_c3_b5_approval.yaml`](Black_Curtain_01a_c3_b5_approval.yaml) | Approval | **Bob** | Same 5 voters, different method, different winner | [page](black_curtain_pages/Black_Curtain_01a_c3_b5_approval.md) |
-| [`Black_Curtain_02_c3_b5_near-clones.yaml`](Black_Curtain_02_c3_b5_near-clones.yaml) | STAR | Cal | Two loved near-clones; approval can't tell them apart | [page](black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md) |
-| [`Black_Curtain_03_c3_b5_polarized-on-cal.yaml`](Black_Curtain_03_c3_b5_polarized-on-cal.yaml) | STAR | Cal | The "landslide" winner is zeroed by 40% of voters | [page](black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) |
-| [`Black_Curtain_04_c4_b5_four-candidates.yaml`](Black_Curtain_04_c4_b5_four-candidates.yaml) | STAR | Cal | Four candidates, same curtain; score near-tie lost at 0–5 | [page](black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md) |
+The **Results page** (left) is the friendly, readable write-up — start there; the raw **`.yaml`** (right) is the tabulatable source.
 
-Each **Results page** carries the full tabulation (scoring round, runoff, matrix, winner). Candidate names follow the BetterVoting template cast: Ann, Bob, Cal (+ Dee).
+| Results page (read this) | Method | Winner | Shows | Source |
+|---|---|---|---|---|
+| [**01** — hidden consensus](black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | STAR | Cal | Majority favorite beats the everyone's-second consensus | [`.yaml`](Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
+| [**01a** — approval variant](black_curtain_pages/Black_Curtain_01a_c3_b5_approval.md) | Approval | **Bob** | Same 5 voters, different method, different winner | [`.yaml`](Black_Curtain_01a_c3_b5_approval.yaml) |
+| [**02** — near-clones](black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md) | STAR | Cal | Two loved near-clones; approval can't tell them apart | [`.yaml`](Black_Curtain_02_c3_b5_near-clones.yaml) |
+| [**03** — polarized on Cal](black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | STAR | Cal | The "landslide" winner is zeroed by 40% of voters | [`.yaml`](Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
+| [**04** — four candidates](black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md) | STAR | Cal | Four candidates, same curtain; score near-tie lost at 0–5 | [`.yaml`](Black_Curtain_04_c4_b5_four-candidates.yaml) |
+
+Each Results page carries the full tabulation (scoring round, runoff, matrix, winner). Candidate names follow the BetterVoting template cast: Ann, Bob, Cal (+ Dee).
 Run any file:
 
 ```bash
