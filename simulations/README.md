@@ -111,7 +111,7 @@ favorite betrayal; ratio = help : hurt over all betrayal ballots.)
 
 `runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the
 Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in
-[Runoff Reversal](../01_STAR/runoff_overturns_leader/README.md)).
+[Runoff Reversal](../01_STAR/runoff_overturns_leader/)).
 
 ### Why this exists
 

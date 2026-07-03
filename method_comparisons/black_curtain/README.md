@@ -167,7 +167,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## Related
 
-- [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../06_Other/Range/Range_tabulation_engine/README.md) (pref_voting); Range and STAR part ways in elections 1 and 3
+- [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting); Range and STAR part ways in elections 1 and 3
 - [`../../00_start_here/scores_and_ranks/`](../../00_start_here/scores_and_ranks) — scores vs ranks, the fidelity ladder
 - [`../../00_start_here/rcv_irv_vs_star.md`](../../00_start_here/rcv_irv_vs_star.md) — method comparison
 - [`../runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader) — when STAR's runoff agrees/disagrees with the score leader

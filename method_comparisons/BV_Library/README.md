@@ -27,6 +27,6 @@ the tabulatable source.
 | [Ranked Robin](BV_Library_pages/BV_Library_ranked_robin_single_winner.md) | Condorcet winner, equal ranks allowed | [`.yaml`](BV_Library_ranked_robin_single_winner.yaml) |
 | [Ranked Robin — tie](BV_Library_pages/BV_Library_ranked_robin_ties.md) | a Copeland tie broken by tiebreak order | [`.yaml`](BV_Library_ranked_robin_ties.yaml) |
 
-Up: [`../README_method_comparisons.md`](../README.md)
+Up: [`../README_method_comparisons.md`](../)
 
 # file: README.md

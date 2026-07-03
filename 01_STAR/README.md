@@ -6,10 +6,10 @@ automatic runoff decided by which of the two each ballot prefers.
 
 | Where | What |
 |---|---|
-| [`_main/`](_main/README.md) | the teaching progression — two-candidate intros, ballot styles, abstentions, quorum, vote-splitting scenarios, display options |
-| [`runoff_overturns_leader/`](runoff_overturns_leader/README.md) | the Runoff Reversal set — real BetterVoting elections where the runoff confirms or overturns the score leader |
-| [`Flat_scores_ties/`](Flat_scores_ties/README.md) | ties and flat-score edge cases, and how the tiebreakers resolve them |
-| [`pet_real_bv_election/`](pet_real_bv_election/README.md) | a real 461-ballot BetterVoting race, imported and reconciled line by line |
+| [`_main/`](_main/) | the teaching progression — two-candidate intros, ballot styles, abstentions, quorum, vote-splitting scenarios, display options |
+| [`runoff_overturns_leader/`](runoff_overturns_leader/) | the Runoff Reversal set — real BetterVoting elections where the runoff confirms or overturns the score leader |
+| [`Flat_scores_ties/`](Flat_scores_ties/) | ties and flat-score edge cases, and how the tiebreakers resolve them |
+| [`pet_real_bv_election/`](pet_real_bv_election/) | a real 461-ballot BetterVoting race, imported and reconciled line by line |
 
 Cross-method contrasts featuring STAR (vs RCV-IRV, Approval, Score) live in
 [`../method_comparisons/`](../method_comparisons). Multi-winner STAR:

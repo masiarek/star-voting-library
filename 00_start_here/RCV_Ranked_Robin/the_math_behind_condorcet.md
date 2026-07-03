@@ -7,7 +7,7 @@ the pairwise results**, you walk straight into graph theory, game theory, and a 
 impossibility theorems. Here's the map.*
 
 → Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) ·
-[cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../topics/condorcet/README.md)
+[cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../topics/condorcet/)
 · **Level: Voting 301** — Curriculum [301.4](../CURRICULUM.md) (limits & theory),
 [301.6](../CURRICULUM.md) (Condorcet/Score/Runoff disagree)
 
@@ -98,5 +98,5 @@ fun — but it's the graduate seminar, not the voter pamphlet.
 ## Related
 
 - [Ranked Robin (the method)](ranked_robin.md) · [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md)
-- [Condorcet efficiency — topic hub](../topics/condorcet/README.md)
+- [Condorcet efficiency — topic hub](../topics/condorcet/)
 - Glossary: [`Condorcet`](../GLOSSARY.md)

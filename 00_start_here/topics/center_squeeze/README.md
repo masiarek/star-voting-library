@@ -24,10 +24,10 @@ The same 27-voter election runs through every method on the
 [RCV-IRV-Hare page](../../RCV_IRV/RCV-IRV-Hare.md): Hare elects Left, everyone who reads the
 whole ballot elects the Condorcet winner, Center.
 
-Closely related: [monotonicity](../monotonicity/README.md) and
-[Condorcet efficiency](../condorcet/README.md). Glossary: [`center squeeze`](../../GLOSSARY.md).
+Closely related: [monotonicity](../monotonicity/) and
+[Condorcet efficiency](../condorcet/). Glossary: [`center squeeze`](../../GLOSSARY.md).
 
 ---
 
 *This is a **topic hub** (cross-method index). The authoritative write-ups live in the
-per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*
+per-method folders linked above. See [the topics index](../) for the other topic hubs.*

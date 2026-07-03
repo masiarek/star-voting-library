@@ -16,6 +16,6 @@ is the tabulatable source.
 | [STAR — after](monotonicity_pages/monotonicity_star_after.md) | raising X keeps X winning — no paradox | [`.yaml`](monotonicity_star_after.yaml) |
 
 The lesson: read the two IRV pages back to back, then confirm STAR is unmoved by the
-same change. Up: [`../README_method_comparisons.md`](../README.md)
+same change. Up: [`../README_method_comparisons.md`](../)
 
 # file: README.md

@@ -17,7 +17,7 @@ how many* arc. Read them in order:
 > where the two **diverge** (the discrepancy is the lesson, e.g. `Runoff_07`) or where
 > reading **BV's own UI** is the point (this set — the screenshots teach how a STAR result
 > *looks*). When BV and LH simply agree and there's no UI to teach, LH-only is enough (see
-> the [vote-splitting set](../../method_comparisons/split_voting/README.md)).
+> the [vote-splitting set](../../method_comparisons/split_voting/)).
 
 | # | Lesson | Level | What it shows |
 |---|--------|:---:|---------------|

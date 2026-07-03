@@ -7,7 +7,7 @@ a **cycle** — which is a separate, rarer problem.)
 
 > **The one idea to take away:** *the Condorcet winner is the "majority's head-to-head
 > choice."* Some methods guarantee it, some get it almost always, and RCV-IRV (Hare) can
-> miss it precisely because of [center squeeze](../center_squeeze/README.md).
+> miss it precisely because of [center squeeze](../center_squeeze/).
 
 ## Which methods elect the Condorcet winner — and where each is treated
 
@@ -34,4 +34,4 @@ Glossary: [`Condorcet`](../../GLOSSARY.md).
 ---
 
 *This is a **topic hub** (cross-method index). The authoritative write-ups live in the
-per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*
+per-method folders linked above. See [the topics index](../) for the other topic hubs.*

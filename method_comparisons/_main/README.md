@@ -8,6 +8,6 @@ the count-simplicity contrast — the same election where STAR and RCV-IRV pick 
 |---|---|:--:|
 | [STAR adds, IRV eliminates](_main_pages/count_simplicity_star_vs_irv.md) | same winner, very different counts | [`.yaml`](count_simplicity_star_vs_irv.yaml) |
 
-Up: [`../README_method_comparisons.md`](../README.md)
+Up: [`../README_method_comparisons.md`](../)
 
 # file: README.md

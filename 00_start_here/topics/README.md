@@ -1,6 +1,6 @@
 # Concepts — by topic (cross-method view)
 
-The concept pages (now directly under [00_start_here](../README.md)) are organized
+The concept pages (now directly under [00_start_here](../)) are organized
 **by method** (RCV-IRV, STAR, Ranked Robin…), because that's how most people arrive. But
 several ideas cut *across* methods, and are easier to compare side by side. This folder holds
 **topic hubs**: thin index pages that gather one cross-method idea and link out to each
@@ -14,11 +14,11 @@ there's almost nothing to keep in sync. Browse by method *or* by topic, whicheve
 
 | Topic | What it compares | Hub |
 |-------|------------------|-----|
-| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [summability/](summability/README.md) |
-| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [monotonicity/](monotonicity/README.md) |
-| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [center_squeeze/](center_squeeze/README.md) |
-| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/README.md) |
-| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/README.md) |
+| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [summability/](summability/) |
+| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [monotonicity/](monotonicity/) |
+| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [center_squeeze/](center_squeeze/) |
+| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/) |
+| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/) |
 
 *(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still
 open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked

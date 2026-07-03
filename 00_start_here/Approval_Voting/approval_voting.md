@@ -5,10 +5,10 @@ approve (**1**) and leave the rest (**0**); the most-approved candidate wins.
 It's Score voting at **one-bit resolution** — a big jump in expressiveness over
 "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/README.md)
+→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/)
 ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) ·
 the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in
-[the Black Curtain set](../../method_comparisons/black_curtain/README.md)
+[the Black Curtain set](../../method_comparisons/black_curtain/)
 (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) ·
 [multi-winner Approval](approval_multiwinner.md) · Curriculum: [301.4](../CURRICULUM.md).
 
@@ -84,7 +84,7 @@ zero ballot redesign, trivial hand count — which makes it a strong first step 
 an organization leaving plurality behind. Its ceiling is the binary ballot:
 where a group wants to express *how strongly* or *in what order* it prefers
 candidates, **STAR** is the fuller expression of the same idea. The
-[Black Curtain](../../method_comparisons/black_curtain/README.md)
+[Black Curtain](../../method_comparisons/black_curtain/)
 set makes the trade-off concrete: on identical ballots, Approval elects the
 broadly-approved consensus candidate while STAR's runoff hands the seat to the
 majority's favorite — same voters, different question.
@@ -135,9 +135,9 @@ the quicker path. Either way, the urgent step is off Choose-One.
 
 - [Approval — Honest Limits](approval_honest_limits.md) — the critique companion
 - [Approval — Multi-Winner](approval_multiwinner.md) — bloc counting, SPAV/PAV
-- [the Approval examples](../../04_Approval/README.md) — the method's example folder
+- [the Approval examples](../../04_Approval/) — the method's example folder
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
-- [Black Curtain](../../method_comparisons/black_curtain/README.md) — Approval vs STAR vs RCV-IRV vs Score
+- [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
 - Glossary: **Approval voting** — [`GLOSSARY.md`](../GLOSSARY.md)
 

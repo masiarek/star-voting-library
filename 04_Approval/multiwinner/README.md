@@ -56,7 +56,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/mult
 ```
 
 The **proportional** Approval rules (SPAV, PAV, seq-Phragmén) run on the same
-file via the [`abcvoting` engine](../../abcvoting_tabulation_engine/README.md)
+file via the [`abcvoting` engine](../../abcvoting_tabulation_engine/)
 — all of them break the sweep and give the minority its seat (Amy + Cora):
 
 ```bash
@@ -65,8 +65,8 @@ python abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/app
 ```
 
 Same trade-off, score-ballot edition: Bloc STAR sweeps too
-([Bloc STAR](../../02_STAR_Bloc/README.md)); the
-proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/README.md)).
+([Bloc STAR](../../02_STAR_Bloc/)); the
+proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/)).
 Concepts: [Approval — Multi-Winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
 
 # file: README.md

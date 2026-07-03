@@ -20,7 +20,7 @@ never make them win). It's the property that makes "vote your honest favorite fi
 | **RCV-IRV (Hare)** | ❌ | added first-choices can change the elimination order and flip the winner | [IRV non-monotonicity](../../RCV_IRV/RCV_IRV_non_monotonicity.md) |
 | **Other IRV variants** (BTR, Coombs, Baldwin, Nanson) | ❌ | same cause — they still eliminate round by round | [Which RCV-IRV?](../../RCV_IRV/RCV_IRV_variants.md) |
 
-So unlike [center squeeze](../center_squeeze/README.md) (which is *Hare-specific*),
+So unlike [center squeeze](../center_squeeze/) (which is *Hare-specific*),
 non-monotonicity is shared by **all** the sequential-elimination methods — only the
 non-eliminating methods (STAR, Ranked Robin) escape it.
 
@@ -29,4 +29,4 @@ Glossary: [`monotonicity`](../../GLOSSARY.md).
 ---
 
 *This is a **topic hub** (cross-method index). The authoritative write-ups live in the
-per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*
+per-method folders linked above. See [the topics index](../) for the other topic hubs.*

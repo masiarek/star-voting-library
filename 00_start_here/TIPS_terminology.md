@@ -71,11 +71,12 @@ insist STAR critics distinguish "the ballot" from "the runoff."
 
 | Situation | Use | Why |
 |-----------|-----|-----|
-| US public audience, naming the thing they know | **RCV-IRV** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
-| Technical / comparison / criticism of the method | **IRV** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
-| Talking about the *ballot* / the ranked family | **ranked ballots** / **ranked methods** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
-| A Condorcet count of a ranked ballot | **Ranked Robin** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
-| Proportional multi-winner ranked | **STV** | the proportional RCV tabulation |
+| US public audience, naming the thing they know | **[RCV-IRV](RCV_IRV/RCV-IRV-Hare.md)** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
+| Technical / comparison / criticism of the method | **[IRV](RCV_IRV/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
+| Naming the elimination *rule* itself | **[Hare](RCV_IRV/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
+| Talking about the *ballot* / the ranked family | **[ranked ballots](scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](RCV_IRV/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
+| A Condorcet count of a ranked ballot | **[Ranked Robin](RCV_Ranked_Robin/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
+| Proportional multi-winner ranked | **[STV](proportional_representation/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
 
 ## House style for this repo
 

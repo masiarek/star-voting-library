@@ -15,6 +15,6 @@ each is the tabulatable source.
 | [STAR elects the center](center_squeeze_pages/center_squeeze_star.md) | the same electorate — STAR's runoff picks the consensus | [`.yaml`](center_squeeze_star.yaml) |
 
 Concept hub: [center squeeze](../../00_start_here/RCV_IRV/glossary_rcv_irv.md) ·
-up: [`../README_method_comparisons.md`](../README.md)
+up: [`../README_method_comparisons.md`](../)
 
 # file: README.md

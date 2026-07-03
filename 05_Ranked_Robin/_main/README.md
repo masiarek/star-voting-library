@@ -8,6 +8,6 @@ head-to-head instead of dropping low-first-choice candidates.
 |---|---|:--:|
 | [the consensus center wins](_main_pages/ranked_robin_consensus_center.md) | RR elects the broadly-preferred center that IRV squeezes out | [`.yaml`](ranked_robin_consensus_center.yaml) |
 
-Up: [`../README_05_Ranked_Robin.md`](../README.md)
+Up: [`../README_05_Ranked_Robin.md`](../)
 
 # file: README.md

@@ -7,7 +7,7 @@ reform on this site is partly trying to fix.*
 
 → Glossary: [`spoiler effect`](GLOSSARY.md) · the root cause:
 [vote splitting & the equally-weighted vote](STAR_Voting/equally_weighted_vote.md) ·
-runnable demos: [the split-voting set](../method_comparisons/split_voting/README.md)
+runnable demos: [the split-voting set](../method_comparisons/split_voting/)
 
 ---
 
@@ -121,7 +121,7 @@ one real federal race.
 
 ## See it happen
 
-- [The split-voting set](../method_comparisons/split_voting/README.md) — the
+- [The split-voting set](../method_comparisons/split_voting/) — the
   spoiler progression from plurality through each reform, on the same ballots.
 - [Star Wars vote split](../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md)
   — a compact worked example (Skywalker & Leia split the Rebel vote).

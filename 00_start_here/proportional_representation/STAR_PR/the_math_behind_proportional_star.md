@@ -111,6 +111,6 @@ supported them — that one move is what turns scoring into *proportional* scori
 
 ## Related
 
-- [STAR-PR (the methods)](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../README.md)
+- [STAR-PR (the methods)](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../)
 - Parallel deep-dive for single-winner: [The Math Behind Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md)
 - Glossary: [`Proportional STAR`](../../GLOSSARY.md)

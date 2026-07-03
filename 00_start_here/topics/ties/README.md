@@ -27,4 +27,4 @@ Glossary: [`lot numbers`](../../GLOSSARY.md).
 ---
 
 *This is a **topic hub** (cross-method index). The authoritative write-ups live in the
-per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*
+per-method folders linked above. See [the topics index](../) for the other topic hubs.*
