@@ -179,7 +179,7 @@ def _init_engine():
     import contextlib
     here = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, here + "/..")
-    sys.path.insert(0, here + "/../../RCV_IRV_tabulation_engine")
+    sys.path.insert(0, here + "/../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine")
     import starvote
     from starvote import Tiebreaker
     from starvote_larry_hastings import (
@@ -224,7 +224,7 @@ def validate():
     import io
     import contextlib
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/..")
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/../../RCV_IRV_tabulation_engine")
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine")
     import starvote
     from starvote import Tiebreaker
     import pyrankvote

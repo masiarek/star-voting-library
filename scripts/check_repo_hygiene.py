@@ -27,7 +27,7 @@ SKIP_DIRS = {".git", ".venv", "node_modules", "__pycache__",
 
 def _skip(rel):
     parts = rel.split(os.sep)
-    return any(p in SKIP_DIRS for p in parts) or "_tabulated" in rel or "_generated" in rel
+    return any(p in SKIP_DIRS for p in parts) or "_tabulated" in rel or "_generated" in rel or "_tabulation_engine" in rel
 
 
 # Each rule: (compiled regex on the basename, human message with where it belongs).
@@ -134,7 +134,7 @@ def _yaml_teaching_files():
         base = os.path.join(REPO, root)
         for dirpath, dirnames, filenames in os.walk(base):
             dirnames[:] = [d for d in dirnames
-                           if not d.endswith(("_tabulated", "_generated", "_pages"))]
+                           if not d.endswith(("_tabulated", "_generated", "_pages", "_tabulation_engine"))]
             for fn in sorted(filenames):
                 if fn.endswith((".yaml", ".yml")):
                     yield os.path.join(dirpath, fn)

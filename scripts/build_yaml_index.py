@@ -22,7 +22,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "README_YAML_test_case_index.md")
 
 # Exclude generated mirrors, raw drops, and deliberately-malformed fixtures.
-EXCLUDE = ("/.venv/", "/.git/", "node_modules", "_tabulated",
+EXCLUDE = ("/.venv/", "/.git/", "node_modules", "_tabulated", "_tabulation_engine",
            "_demo_dropbox", "/_generated", "/negative_cases/",
            "/harness_cases/", "/2_negative/", "/tests/")
 

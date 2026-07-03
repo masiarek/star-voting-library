@@ -7,7 +7,7 @@ Python social-choice package) and runs it on the *same* YAML elections as the LH
 RCV-IRV engines, then **compares the results** so we know our winners are right, not just
 self-consistent.
 
-Unlike the [RCV-IRV engine](../RCV_IRV_tabulation_engine/), `pref_voting` is **not
+Unlike the [RCV-IRV engine](../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/), `pref_voting` is **not
 vendored** — it's a large, actively-maintained PyPI package, so it's an optional
 dependency:
 

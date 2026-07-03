@@ -21,6 +21,8 @@ try:
     _IRV_ENGINE = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         "..",
+        "06_Other",
+        "RCV_IRV",
         "RCV_IRV_tabulation_engine",
     )
     if _IRV_ENGINE not in sys.path:
@@ -2207,7 +2209,7 @@ def run_election(
                 "Error: this file contains RANKED ballots (e.g. 'A>C>B'), which "
                 "the STAR engine cannot tabulate — STAR needs score ballots.\n"
                 "  Run it through the RCV-IRV engine instead:\n"
-                "    python RCV_IRV_tabulation_engine/rcv_irv_tabulation.py "
+                "    python 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py "
                 "<this_file>.yaml"
             )
         else:

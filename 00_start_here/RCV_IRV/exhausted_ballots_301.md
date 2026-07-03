@@ -159,7 +159,7 @@ STAR (and Ranked Robin) read every ballot: STAR elects **Center**, and the engin
 `[Condorcet Winner] = Center`. Run both to see it:
 
 ```
-python3 RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/center_squeeze_star.yaml   # Left wins; Center out in round 1
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/center_squeeze_star.yaml   # Left wins; Center out in round 1
 python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_Single_winner/center_squeeze_star.yaml   # Center wins; Condorcet = Center
 ```
 

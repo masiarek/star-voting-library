@@ -309,7 +309,8 @@ def expected_pages():
             continue
         for dirpath, dirnames, filenames in os.walk(base):
             dirnames[:] = [d for d in dirnames
-                           if not d.endswith(GENERATED_SUFFIXES) and d != "img"]
+                           if not d.endswith(GENERATED_SUFFIXES) and d != "img"
+                           and not d.endswith("_tabulation_engine")]
             ymls = sorted(f for f in filenames if f.endswith((".yaml", ".yml")))
             for fn in ymls:
                 path = os.path.join(dirpath, fn)

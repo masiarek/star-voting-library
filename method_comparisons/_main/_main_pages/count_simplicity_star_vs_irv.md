@@ -14,7 +14,7 @@ STAR: add each candidate's scores (one column sum you can do on a napkin), take 
 top two, hold one automatic runoff. Two transparent steps, summable from precinct
 totals.
 
-RCV-IRV (run this same file through RCV_IRV_tabulation_engine/): no first-round
+RCV-IRV (run this same file through 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/): no first-round
 majority, so it eliminates the lowest, transfers those ballots to their next choice,
 rechecks, and repeats — round after round — until someone clears half. To follow it
 you must track every transfer, and you need every ballot in one place. Same winner,

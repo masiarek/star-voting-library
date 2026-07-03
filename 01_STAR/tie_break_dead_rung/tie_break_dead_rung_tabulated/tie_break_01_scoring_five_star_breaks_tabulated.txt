@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_01_scoring_five_star_breaks.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:31
 TABULATED FILE:  tie_break_01_scoring_five_star_breaks_tabulated.txt
-TABULATED AT:    2026-07-03 08:39:24
+TABULATED AT:    2026-07-03 08:53:13
 ======================================================================
 
 election_title: "Tie-break 01 — scoring-round tie, FIVE-STAR breaks it (a 5 exists)"

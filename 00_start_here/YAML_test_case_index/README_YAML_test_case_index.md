@@ -6,12 +6,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**122 election files** (113 single-winner, 9 multi-winner) across 13 method(s).
+**119 election files** (110 single-winner, 9 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 92 |
-| RCV-IRV (Hare) | 10 |
+| STAR | 90 |
+| RCV-IRV (Hare) | 9 |
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
 | STV (proportional RCV) | 1 |
@@ -24,7 +24,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (92)
+## STAR  (90)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -91,7 +91,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`tie_break_08_runoff_dead_rung_adversarial_lot`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/tie_break_08_runoff_dead_rung_adversarial_lot.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung 04 — runoff tie, nobody scored a 5, lot decides → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adversarial_lot.yaml) |
 | [`tie_break_09_five_star_tied_nonzero`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/tie_break_09_five_star_tied_nonzero.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung 05 — five-star rung alive but non-separating → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/tie_break_09_five_star_tied_nonzero.yaml) |
 | [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/_main_pages/rrv_sample_c15_b13_three-parties.md) | `03_STAR_PR/_main/` | 1 | RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow) → _Orange5_ | [`.yaml`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) |
-| [`options_examples.yaml`](../../STARVote_LH_tabulation_engine/options_examples.yaml) | `STARVote_LH_tabulation_engine/` | 1 | Display-options reference — every reporting toggle (STAR) | — |
 | [`BV_Library_star_condorcet_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_condorcet_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: highest-scoring Condorcet winner → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml) |
 | [`BV_Library_star_runnerup_tie`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_runnerup_tie.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: runner-up tie, Allison wins → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_runnerup_tie.yaml) |
 | [`BV_Library_star_runoff`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_runoff.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: runoff, lower total wins the runoff → _Bill_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_runoff.yaml) |
@@ -119,14 +118,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`star_combined`](../../method_comparisons/summability_demo/summability_demo_pages/star_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR combined A+B (Oak; precinct subtotals add up) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_combined.yaml) |
 | [`star_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district A (Maple wins outright) → _Maple_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_A.yaml) |
 | [`star_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district B (Oak wins — a runoff reversal) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_B.yaml) |
-| [`example_tennessee.yaml`](../../pref_voting_tabulation_engine/example_tennessee.yaml) | `pref_voting_tabulation_engine/` | 1 | Tennessee capital — cross-check demo (same ballots, three winners) | — |
 
-## RCV-IRV (Hare)  (10)
+## RCV-IRV (Hare)  (9)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`RCV_ballot_example`](../../06_Other/RCV_IRV/RCV_IRV_pages/RCV_ballot_example.md) | `06_Other/RCV_IRV/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../06_Other/RCV_IRV/RCV_ballot_example.yaml) |
-| [`example_tennessee.yaml`](../../RCV_IRV_tabulation_engine/example_tennessee.yaml) | `RCV_IRV_tabulation_engine/` | 1 | Tennessee capital — RCV-IRV engine demo | — |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_irv.yaml) |
 | [`monotonicity_irv_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_after.yaml) |
 | [`monotonicity_irv_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_before.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_before.yaml) |

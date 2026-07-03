@@ -1,4 +1,4 @@
-``# STAR Voting — Education & Test-Case Library
+# STAR Voting — Education & Test-Case Library
 
 A teaching repository for **STAR Voting** 
 built around a vendored, lightly-tweaked fork of Larry Hastings'
@@ -52,7 +52,7 @@ count is **legible and reproducible**, so it can be taught and audited.
 | Area | What's there |
 |---|---|
 | [`STARVote_LH_tabulation_engine/`](STARVote_LH_tabulation_engine/README_STARVote_LH_tabulation_engine.md) | The STAR engine (single-winner STAR, Bloc / proportional STAR, Approval, **Ranked Robin**), reporting options, the preference matrix, the `[Divergence from STAR]` comparison, the optional `show_runoff_percent` runoff summary, and the `lot_numbers` tie-break. Vendored fork of `starvote`; see `FORK_NOTES.md`. |
-| [`RCV_IRV_tabulation_engine/`](RCV_IRV_tabulation_engine/README_RCV_IRV_tabulation_engine.md) | Vendored RCV-IRV engine (pyrankvote). Ranked ballots (`A>B>C`) route here automatically. |
+| [`06_Other/RCV_IRV/RCV_IRV_tabulation_engine/`](06_Other/RCV_IRV/RCV_IRV_tabulation_engine/README_RCV_IRV_tabulation_engine.md) | Vendored RCV-IRV engine (pyrankvote). Ranked ballots (`A>B>C`) route here automatically. |
 | [`pref_voting_tabulation_engine/`](pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md) | Independent cross-check engine — wraps Eric Pacuit's `pref_voting` to verify the LH engine's Condorcet / IRV / Plurality (and report Copeland = Ranked Robin). Optional dep. |
 | `YAML_library/1_positive/` | BetterVoting JSON → YAML converter (`01_convert_json_yaml.py`) and imported elections. |
 | `YAML_library/2_negative/` | Malformed fixtures — every one must fail with the right plain-language error (see Validation philosophy below). |

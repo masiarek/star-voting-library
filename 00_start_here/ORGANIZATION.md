@@ -81,7 +81,7 @@ method_comparisons/   SAME ballots, DIFFERENT methods — black_curtain,
 00_start_here/…          Larry↔Adam conversation scripts now live beside their topics
                       (STAR_Voting/, RCV_IRV/, 00_start_here/), indexed in conversation_scripts.md
 STARVote_LH_tabulation_engine/   the engine + tools
-RCV_IRV_tabulation_engine/       the RCV-IRV engine
+06_Other/RCV_IRV/RCV_IRV_tabulation_engine/       the RCV-IRV engine
 ```
 
 - **`_tabulated` output nests INSIDE the source file's own folder** as

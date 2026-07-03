@@ -46,7 +46,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 ENGINE = REPO / "STARVote_LH_tabulation_engine"
-RCV = REPO / "RCV_IRV_tabulation_engine"
+RCV = REPO / "06_Other" / "RCV_IRV" / "RCV_IRV_tabulation_engine"
 for p in (ENGINE, RCV):
     sys.path.insert(0, str(p))
 

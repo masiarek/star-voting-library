@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 # Reuse the vendored RCV engine's robust score-grid parser + block loader.
-_RCV = Path(__file__).resolve().parent.parent / "RCV_IRV_tabulation_engine"
+_RCV = Path(__file__).resolve().parent.parent / "06_Other" / "RCV_IRV" / "RCV_IRV_tabulation_engine"
 if str(_RCV) not in sys.path:
     sys.path.insert(0, str(_RCV))
 from rcv_irv_tabulation import load_ballots_block, parse_score_ballots  # noqa: E402

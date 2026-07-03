@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     count_simplicity_star_vs_irv.yaml
-SOURCE MODIFIED: 2026-06-29 14:09:58
+SOURCE MODIFIED: 2026-07-03 08:51:30
 TABULATED FILE:  count_simplicity_star_vs_irv_tabulated.txt
-TABULATED AT:    2026-07-03 08:39:28
+TABULATED AT:    2026-07-03 08:53:16
 ======================================================================
 
 election_title: Same winner, very different counts — STAR adds, IRV eliminates
@@ -15,7 +15,7 @@ scenario_description: |-
   top two, hold one automatic runoff. Two transparent steps, summable from precinct
   totals.
 
-  RCV-IRV (run this same file through RCV_IRV_tabulation_engine/): no first-round
+  RCV-IRV (run this same file through 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/): no first-round
   majority, so it eliminates the lowest, transfers those ballots to their next choice,
   rechecks, and repeats — round after round — until someone clears half. To follow it
   you must track every transfer, and you need every ballot in one place. Same winner,
@@ -63,7 +63,7 @@ TABULATION RESULTS
   top two, hold one automatic runoff. Two transparent steps, summable from precinct
   totals.
 
-  RCV-IRV (run this same file through RCV_IRV_tabulation_engine/): no first-round
+  RCV-IRV (run this same file through 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/): no first-round
   majority, so it eliminates the lowest, transfers those ballots to their next choice,
   rechecks, and repeats — round after round — until someone clears half. To follow it
   you must track every transfer, and you need every ballot in one place. Same winner,

@@ -223,7 +223,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   summary line (decided-voters denominator; forced on in `_tabulated`).
   Auto-dispatches to RCV-IRV / Approval by `voting_method`, or to RCV-IRV when
   ballots contain ranked `>` (comments with `->` are ignored).
-- `RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
+- `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - Quick checks can use system `python3` (engines are vendored); the user runs via
   their `.venv` / `uv`.

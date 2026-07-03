@@ -80,7 +80,7 @@ def _cases():
         if not root.is_dir():
             continue
         for p in sorted(root.rglob("*.yaml")):
-            if any(part.endswith("_tabulated") for part in p.parts):
+            if any(part.endswith(("_tabulated", "_tabulation_engine")) for part in p.parts):
                 continue
             try:
                 data = yaml.safe_load(p.read_text(encoding="utf-8"))

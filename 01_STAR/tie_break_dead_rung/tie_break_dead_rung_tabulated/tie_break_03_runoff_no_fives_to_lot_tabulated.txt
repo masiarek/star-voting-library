@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_03_runoff_no_fives_to_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:42
 TABULATED FILE:  tie_break_03_runoff_no_fives_to_lot_tabulated.txt
-TABULATED AT:    2026-07-03 08:39:25
+TABULATED AT:    2026-07-03 08:53:13
 ======================================================================
 
 election_title: "Tie-break 03 — runoff tie, score tied, NO fives → LOT"

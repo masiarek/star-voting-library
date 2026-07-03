@@ -60,7 +60,7 @@ preferred over each rival, because Center was too few voters' *first* pick. That
 [BTR](RCV-IRV-BTR.md), [Coombs](RCV-IRV-Coombs.md), and
 [Baldwin/Nanson](RCV-IRV-Baldwin-Nanson.md) all elect Center on these very ballots.
 
-*(Verified on the engine: `RCV_IRV_tabulation_engine` elects Left; STAR and Ranked
+*(Verified on the engine: `06_Other/RCV_IRV/RCV_IRV_tabulation_engine` elects Left; STAR and Ranked
 Robin elect Center.)*
 
 ## Strengths

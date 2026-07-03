@@ -227,7 +227,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report
   (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
-- `RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
+- `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)
   rules via Martin Lackner's `abcvoting` (optional `pip install abcvoting`;
