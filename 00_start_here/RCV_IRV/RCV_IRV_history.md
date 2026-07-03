@@ -49,6 +49,9 @@ years** of real-world experience (the Senate uses STV, the multi-winner cousin).
   plus dozens of other cities.
 - **Statewide:** Maine (the first state, 2018) and Alaska (2022, paired with a
   top-four primary — whose first race became a [textbook IRV failure](RCV_IRV_alaska_2022.md)).
+- **Adopted then repealed:** North Carolina piloted IRV (2007–2013), including the
+  **first statewide general election ever decided by IRV** (a 2010 Court of Appeals seat),
+  before repealing the program — see [RCV-IRV in North Carolina](RCV_IRV_north_carolina.md).
 
 Adoption has continued to expand city by city; check
 [FairVote's "where it's used"](https://fairvote.org/our-reforms/ranked-choice-voting-information/)
