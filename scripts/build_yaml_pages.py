@@ -30,7 +30,7 @@ except ImportError:  # pragma: no cover
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",
-         "05_Ranked_Robin", "method_comparisons", "other_methods"]
+         "05_Ranked_Robin", "method_comparisons", "06_Other"]
 
 GENERATED_SUFFIXES = ("_tabulated", "_generated", "_pages")
 

@@ -25,7 +25,7 @@ sys.path.insert(0, str(REPO_ROOT / "abcvoting_tabulation_engine"))
 from abc_tabulation import tabulate_abc  # noqa: E402
 
 ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",
-         "05_Ranked_Robin", "method_comparisons", "other_methods"]
+         "05_Ranked_Robin", "method_comparisons", "06_Other"]
 SKIP_DIR_SUFFIXES = ("_tabulated", "_generated", "_pages")
 
 

@@ -29,7 +29,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/03a_stv_3seats_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../STV_tabulated/03a_stv_3seats_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- STV / Single Transferable Vote (multi-winner — 3 seats) ---
@@ -91,11 +91,9 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 3 seats)
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py other_methods/_main/03a_stv_3seats.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/03a_stv_3seats.yaml
 ```
 
 ## See also
 
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
-
-More cases in this set: [RCV_ballot_example](RCV_ballot_example.md) · [range_101_c3_b5](range_101_c3_b5.md)

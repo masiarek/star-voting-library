@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_04_runoff_five_star_breaks.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:45
 TABULATED FILE:  tie_break_04_runoff_five_star_breaks_tabulated.txt
-TABULATED AT:    2026-07-03 08:06:20
+TABULATED AT:    2026-07-03 08:39:25
 ======================================================================
 
 election_title: "Tie-break 04 — runoff tie, score tied, FIVE-STAR breaks it (a 5 exists)"
@@ -70,7 +70,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_04_runoff_five_star_breaks_RCV-IRV_tabulated.txt
-     file:///sessions/sweet-lucid-cori/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_04_runoff_five_star_breaks_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_04_runoff_five_star_breaks_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

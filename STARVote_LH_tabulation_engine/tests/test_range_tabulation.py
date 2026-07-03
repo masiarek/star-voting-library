@@ -23,7 +23,7 @@ ENGINE = REPO_ROOT / "Range_tabulation_engine" / "range_tabulation.py"
 # engine tests.
 
 CASES = [
-    ("other_methods/_main/range_101_c3_b5.yaml", "Beth"),
+    ("06_Other/Range/range_101_c3_b5.yaml", "Beth"),
     ("method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml", "Bob"),
     ("method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml", "Cal"),
     ("method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml", "Ann"),
@@ -53,7 +53,7 @@ def test_range_elects_expected(rel, expected):
 def test_pref_voting_crosscheck_agrees_when_present():
     """When pref_voting is installed, its score_voting must agree with the hand sum."""
     pytest.importorskip("pref_voting")
-    path = REPO_ROOT / "other_methods/_main/range_101_c3_b5.yaml"
+    path = REPO_ROOT / "06_Other/Range/range_101_c3_b5.yaml"
     r = subprocess.run([sys.executable, str(ENGINE), str(path)],
                        capture_output=True, text=True)
     assert r.returncode == 0, r.stderr or r.stdout

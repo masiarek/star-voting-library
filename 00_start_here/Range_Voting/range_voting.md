@@ -5,8 +5,8 @@ with the **highest total score wins**. No runoff, no elimination — just add up
 the grades. Range is the most expressive single-mark method: Approval with more
 than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`other_methods/_main/range_101_c3_b5.yaml`](../../other_methods/_main/range_101_c3_b5.yaml)
-([tabulated](../../other_methods/_main/_main_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) ·
+→ **Run it:** the 101 case [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml)
+([tabulated](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) ·
 the **Black Curtain, read as Range** → [`black_curtain_range.md`](../../method_comparisons/black_curtain/black_curtain_range.md) ·
 Engine: [the Range engine](../../Range_tabulation_engine/README_range_tabulation_engine.md)
 (pref_voting). · Family: [Approval](../Approval_Voting/approval_voting.md) ·
@@ -14,7 +14,7 @@ Engine: [the Range engine](../../Range_tabulation_engine/README_range_tabulation
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches
 > *about* it rather than promoting it — it lives in
-> [other methods](../../other_methods/README_other_methods.md), not the
+> [other methods](../../06_Other/README_06_Other.md), not the
 > numbered root folders. The honest comparison is the point.
 
 ---
@@ -61,7 +61,7 @@ honesty safer. Which trade-off you want is the whole debate.
 
 ## Ballot examples
 
-- [`other_methods/_main/range_101_c3_b5.yaml`](../../other_methods/_main/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
+- [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
 - **Black Curtain, read as Range** — the four Black Curtain elections tabulated by
   the range engine: [`black_curtain_range.md`](../../method_comparisons/black_curtain/black_curtain_range.md).
   Range elects the broadly-liked candidate (Bob, Cal, Ann…) where STAR's runoff
@@ -83,7 +83,7 @@ Range files here are tabulated by
 [`Range_tabulation_engine/range_tabulation.py`](../../Range_tabulation_engine/README_range_tabulation_engine.md),
 which wraps **pref_voting**'s `score_voting` and cross-checks it against a hand
 sum. Full report for the 101 case:
-[`range_101_c3_b5_RANGE_tabulated.txt`](../../other_methods/_main/_main_tabulated/range_101_c3_b5_RANGE_tabulated.txt).
+[`range_101_c3_b5_RANGE_tabulated.txt`](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt).
 
 ```text
 --- Range / Score Voting (single winner) ---

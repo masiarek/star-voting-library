@@ -125,6 +125,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`RCV_ballot_example`](../../06_Other/RCV_IRV/RCV_IRV_pages/RCV_ballot_example.md) | `06_Other/RCV_IRV/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../06_Other/RCV_IRV/RCV_ballot_example.yaml) |
 | [`example_tennessee.yaml`](../../RCV_IRV_tabulation_engine/example_tennessee.yaml) | `RCV_IRV_tabulation_engine/` | 1 | Tennessee capital — RCV-IRV engine demo | — |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_irv.yaml) |
 | [`monotonicity_irv_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_after.yaml) |
@@ -134,7 +135,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_combined`](../../method_comparisons/summability_demo/summability_demo_pages/irv_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV combined A+B (B eliminated; not summable) → _A_ | [`.yaml`](../../method_comparisons/summability_demo/irv_combined.yaml) |
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
-| [`RCV_ballot_example`](../../other_methods/_main/_main_pages/RCV_ballot_example.md) | `other_methods/_main/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../other_methods/_main/RCV_ballot_example.yaml) |
 
 ## Ranked Robin (RCV-RR / Copeland)  (5)
 
@@ -158,7 +158,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`03a_stv_3seats`](../../other_methods/_main/_main_pages/03a_stv_3seats.md) | `other_methods/_main/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../other_methods/_main/03a_stv_3seats.yaml) |
+| [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 
 ## Bloc STAR  (1)
 
@@ -203,7 +203,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`range_101_c3_b5`](../../other_methods/_main/_main_pages/range_101_c3_b5.md) | `other_methods/_main/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../other_methods/_main/range_101_c3_b5.yaml) |
+| [`range_101_c3_b5`](../../06_Other/Range/Range_pages/range_101_c3_b5.md) | `06_Other/Range/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) |
 
 ## RR  (1)
 

@@ -1,4 +1,4 @@
-# STAR Voting — Education & Test-Case Library
+``# STAR Voting — Education & Test-Case Library
 
 A teaching repository for **STAR Voting** 
 built around a vendored, lightly-tweaked fork of Larry Hastings'
@@ -56,7 +56,7 @@ count is **legible and reproducible**, so it can be taught and audited.
 | [`pref_voting_tabulation_engine/`](pref_voting_tabulation_engine/README_pref_voting_tabulation_engine.md) | Independent cross-check engine — wraps Eric Pacuit's `pref_voting` to verify the LH engine's Condorcet / IRV / Plurality (and report Copeland = Ranked Robin). Optional dep. |
 | `YAML_library/1_positive/` | BetterVoting JSON → YAML converter (`01_convert_json_yaml.py`) and imported elections. |
 | `YAML_library/2_negative/` | Malformed fixtures — every one must fail with the right plain-language error (see Validation philosophy below). |
-|  `01_STAR/` … `05_Ranked_Robin/`, `method_comparisons/`, `other_methods/` | Hand-authored example elections, grouped by content type. |
+|  `01_STAR/` … `05_Ranked_Robin/`, `method_comparisons/`, `06_Other/` | Hand-authored example elections, grouped by content type. |
 | [`simulations/`](simulations/README_simulations.md) | Monte-Carlo scripts: Favorite Betrayal frequency and runoff-reversal rates. |
 | [`method_comparisons/divergence_review/`](method_comparisons/divergence_review/INDEX.md) | Case index + CSV of elections where methods disagree (STAR vs IRV vs Condorcet…). |
 | [`_demo_dropbox/`](_demo_dropbox/README_demo_dropbox.md) | Watch-folder demo: drop a BetterVoting JSON export in, get canonical YAML + tabulation out. |

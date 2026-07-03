@@ -14,7 +14,7 @@ switching `voting_method:`:
 Cases live in [`_main/`](_main/) (the `02a/02b/02c` trio counts the SAME
 63-ballot election three ways). Majoritarian multi-winner:
 [`../02_STAR_Bloc/`](../02_STAR_Bloc/). STV, the proportional method for
-*ranked* ballots, lives in [`../other_methods/`](../other_methods/).
+*ranked* ballots, lives in [`../06_Other/`](../06_Other).
 Concept docs:
 [`../00_start_here/proportional_representation/`](../00_start_here/proportional_representation/).
 

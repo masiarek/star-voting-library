@@ -42,7 +42,7 @@ See the teaching page [`00_start_here/Range_Voting/range_voting.md`](../00_start
 for the method overview, pros/cons, and ballot examples, and the
 [Black Curtain read as Range](../method_comparisons/black_curtain/black_curtain_range.md).
 Range is a **non-EVC** method, so its examples live in
-[other methods](../other_methods/README_other_methods.md), not a numbered
+[other methods](../06_Other/README_06_Other.md), not a numbered
 root folder.
 
 # file: README_range_tabulation_engine.md

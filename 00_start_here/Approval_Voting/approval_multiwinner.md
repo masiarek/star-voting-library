@@ -137,7 +137,7 @@ priority — but every proportional rule seats the minority's Cora *decisively*:
 
 The repo's other runnable proportional methods are the STAR-PR family
 ([proportional STAR](../../03_STAR_PR/README_03_STAR_PR.md)) and STV
-([other methods](../../other_methods/README_other_methods.md)).
+([other methods](../../06_Other/README_06_Other.md)).
 
 ## The literature's running example (Lackner & Skowron)
 

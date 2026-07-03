@@ -6,7 +6,7 @@ gap left by test_single_winner_positive.py (which asserts only single-winner
 STAR files in its fixed folder list).
 
 Every *.yaml under the teaching roots (01_STAR through 05_Ranked_Robin,
-method_comparisons, other_methods — recursively, skipping *_tabulated
+method_comparisons, 06_Other — recursively, skipping *_tabulated
 mirrors) that declares a
 top-level `expected_winners:` list is run through the real CLI. The run must
 exit 0 and elect exactly the declared winners — RCV-IRV, Ranked Robin,
@@ -40,7 +40,7 @@ TEACHING_ROOTS = [
     REPO_ROOT / "04_Approval",
     REPO_ROOT / "05_Ranked_Robin",
     REPO_ROOT / "method_comparisons",
-    REPO_ROOT / "other_methods",
+    REPO_ROOT / "06_Other",
 ]
 
 # Folders whose single-winner STAR files test_single_winner_positive.py already

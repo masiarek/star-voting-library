@@ -123,7 +123,7 @@ def check_links():
 # difference between a lesson and a bare data file.
 # --------------------------------------------------------------------------- #
 TEACHING_ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",
-                  "05_Ranked_Robin", "method_comparisons", "other_methods"]
+                  "05_Ranked_Robin", "method_comparisons", "06_Other"]
 MIN_DESCRIPTION_CHARS = 80
 PLACEHOLDER = re.compile(r"^\s*(tbd|todo|fixme|xxx|\?+|self-explanatory\b.*)\s*$",
                          re.I | re.S)

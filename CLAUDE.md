@@ -163,7 +163,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   ballots accept only `0`/`1` (+ blank/marker = not approved).
 - **Levels (101/201/301)** live ONLY in `00_start_here/CURRICULUM.md`
   (authoritative). Don't tag every file. Example folders stay content-typed
-  (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `other_methods/`).
+  (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never echoed); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —

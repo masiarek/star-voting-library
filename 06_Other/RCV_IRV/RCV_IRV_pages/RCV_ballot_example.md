@@ -25,7 +25,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/RCV_ballot_example_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../RCV_IRV_tabulated/RCV_ballot_example_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -54,7 +54,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py other_methods/_main/RCV_ballot_example.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/RCV_IRV/RCV_ballot_example.yaml
 ```
 
 ## See also
@@ -63,5 +63,3 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py other_methods/_m
 - [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README_monotonicity.md)
 - [Summability (topic hub)](../../../00_start_here/topics/summability/README_summability.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README_YAML_test_case_index.md)
-
-More cases in this set: [03a_stv_3seats](03a_stv_3seats.md) · [range_101_c3_b5](range_101_c3_b5.md)
