@@ -16,4 +16,10 @@ Cross-method contrasts featuring STAR (vs RCV-IRV, Approval, Score) live in
 [`../02_STAR_Bloc/`](../02_STAR_Bloc/) and [`../03_STAR_PR/`](../03_STAR_PR/).
 Concept docs: [`../00_start_here/STAR_Voting/`](../00_start_here/STAR_Voting/).
 
+**Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](../00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md) ·
+[Why do you love STAR](../00_start_here/STAR_Voting/why_do_you_love_STAR_Voting.md) ·
+[Aren't equal-score votes discounted?](../00_start_here/STAR_Voting/are_equal_score_votes_discounted.md) ·
+[Favorite betrayal](../00_start_here/STAR_Voting/favorite_betrayal_voting_301.md) — full index:
+[`conversation_scripts.md`](../00_start_here/conversation_scripts.md).
+
 # file: README_01_STAR.md

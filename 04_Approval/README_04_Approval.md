@@ -24,4 +24,7 @@ character shows best:
 House rule: Approval ballots accept only `0`/`1` (blank / markers = not
 approved); the engine errors on 0–5 scores under `voting_method: Approval`.
 
+**Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in
+[`conversation_scripts.md`](../00_start_here/conversation_scripts.md).
+
 # file: README_04_Approval.md

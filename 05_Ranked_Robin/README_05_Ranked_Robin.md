@@ -14,4 +14,7 @@ Same ballot, different count: RCV-IRV (elimination rounds) lives in
 [other methods](../other_methods/README_other_methods.md) and inside the comparison sets.
 Concept docs: [Ranked Robin](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).
 
+**Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in
+[`conversation_scripts.md`](../00_start_here/conversation_scripts.md).
+
 # file: README_05_Ranked_Robin.md
