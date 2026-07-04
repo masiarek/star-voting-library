@@ -1,0 +1,63 @@
+election_title: "BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1)"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV1525 (4 winners, 16 ballots), which
+  reproduces Larry Hastings' own electowiki Bloc-STAR test election
+  (test_election_bloc_star_and_electowiki). Five candidates named for their
+  intended finish — First, Condorcet Loser, Second, Third, Fourth — 16 ballots,
+  4 seats.
+
+  The teaching point (electowiki): a Score co-leader can be a near-CONDORCET
+  LOSER — a candidate who loses every head-to-head runoff. Here "Condorcet
+  Loser" ties "First" for the top score (both 24) and so ties for seat 1's
+  runoff (pairwise 8-8, five-star 0-0). Only the LOT can separate them. With the
+  pre-published permutation [First, Condorcet Loser, Second, Third, Fourth],
+  First takes seat 1; Condorcet Loser then LOSES every subsequent runoff and
+  wins no seat. Winners: First, Second, Third, Fourth.
+
+  The lot matters: if Condorcet Loser had won the seat-1 coin toss, the outcome
+  would be Condorcet Loser, First, Second, Third — the ONLY other valid ordering.
+  A pre-published lot makes which of the two happens reproducible; a random draw
+  (as in STAR Vote 2.0) does not, and picks different winners on each run.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: Bloc STAR
+lot_numbers: [First, Condorcet Loser, Second, Third, Fourth]   # pre-published permutation
+ballots: |-
+  First,Condorcet Loser,Second,Third,Fourth
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  3,0,1,1,1
+  0,4,0,0,0
+  0,4,0,0,0
+  0,4,0,0,0
+  0,4,0,0,0
+  0,4,0,0,0
+  0,1,3,2,1
+  0,1,3,2,1
+  0,2,5,4,3
+
+expected_winners:
+  - First
+  - Second
+  - Third
+  - Fourth
+
+# file: bv1525_condorcet_loser_bloc.yaml

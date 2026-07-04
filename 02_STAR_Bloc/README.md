@@ -19,7 +19,7 @@ In-repo index of the Bloc STAR reference cases (the LH ground truth for the corr
 | BV750 | tie-breaking — all ballots identical (5,5,5) | 2 | lot (both seats) | Failed — every ballot dropped (`nTallyVotes 0`) [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) | [page](_main/bv750_tie_breaking_bloc.md) · [yaml](_main/bv750_tie_breaking_bloc.yaml) |
 | BV130 | 6c/3w — original (clean, no tie) | 3 | none | tabulation OK; reporting fix (tabs → pages) star-server#731 | [page](_main/bv130_bloc_pagination_731.md) · [yaml](_main/bv130_bloc_pagination_731.yaml) |
 | BV130-r2 | 6c/3w — **dead-rung lot tie** (seat 1) | 3 | lot (seat 1) | Passed (`9ff9jk`); lot-decided seat, `tieBreakType` reads `none` | [page](_main/bv130r2_dead_rung_bloc.md) · [yaml](_main/bv130r2_dead_rung_bloc.yaml) |
-| BV1525 | 4 winners, 16 ballots | 4 | — | re-do | *pending* |
+| BV1525 | 5c/4w — **Condorcet-loser ties for seat 1** (electowiki) | 4 | lot (seat 1) | LH reproduces First,Second,Third,Fourth; STAR Vote 2.0 random-tie non-reproducible | [page](_main/bv1525_condorcet_loser_bloc.md) · [yaml](_main/bv1525_condorcet_loser_bloc.yaml) |
 | BV2105 | Favorite ice cream demo | 2 | — | Failed (regression) | *pending* |
 
 The authoritative, cross-method tracker is the Google Sheet *BetterVoting – test cases* (its **YAML File** column links back to these files); this table is just the Bloc slice, kept beside the cases.
