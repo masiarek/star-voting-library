@@ -62,9 +62,10 @@ prints to the **screen only** — pass `--out` to save.
 
 | Flag | Meaning | Default |
 |------|---------|---------|
-| `--round {scoring,runoff}` | where the tie sits: 3-candidate scoring (a leader wins, two tie for the 2nd slot) or a 2-candidate automatic-runoff tie | `scoring` |
-| `--rung {alive,dead,tied}` | what the five-star rung finds (see below) | `alive` |
-| `--cap {4,3,2}` | score ceiling for a **dead** rung — the *"what about the 4s?"* knob | `4` |
+| `--round {scoring,runoff,full}` | where the tie sits: 3-candidate scoring (a leader wins, two tie for the 2nd slot), a 2-candidate automatic-runoff tie, or **`full`** — a fully symmetric `k`-candidate tie (see below) | `scoring` |
+| `--rung {alive,dead,tied}` | what the five-star rung finds (see below); ignored for `--round full` | `alive` |
+| `--candidates N` | number of candidates for `--round full` (≥2); any of the `k` can win by lot | `3` |
+| `--cap {4,3,2}` | score ceiling for a **dead** / **full** rung — the *"what about the 4s?"* knob | `4` |
 | `--adversarial-lot` | pin the lot to favor the *wrong* candidate, so the winner only comes out right if the ladder runs in the correct order (a strict regression test) | off |
 | `--scale N` | duplicate the ballot block N times (bigger electorate, identical result) | `1` |
 | `--theme {letters,classic,fruits,flavors,capitals}` | candidate names (`classic` = Ann/Ben/Cara, matching the case docs) | `letters` |
@@ -84,6 +85,34 @@ prints to the **screen only** — pass `--out` to save.
 That single point is the whole difference between "ballots decide" and "the lot
 decides." `tied` is the subtle third case: the rung *runs and counts real votes*
 and still resolves nothing.
+
+### `--round full` — a fully symmetric `k`-candidate tie
+
+`--round full --candidates k` builds the `k`-candidate generalization of the
+BetterVoting `jfk7pd` case: `k` candidates and `k` ballots forming an identity
+matrix × `--cap`, so ballot *i* gives candidate *i* the cap and everyone else 0:
+
+```
+A,B,C,D
+4,0,0,0
+0,4,0,0
+0,0,4,0
+0,0,0,4
+```
+
+Every candidate totals the same, every pairwise is 1–1, and (cap < 5) nobody has
+a 5 — a **dead rung**. Nothing separates them, so the lot alone decides and **any
+of the `k` can win** (the file asserts the lot favorite, candidate A). This is the
+knob for exploring how the phenomenon scales: a random draw diverges from a
+published order **`(k−1)/k`** of the time — 50% at `k=2`, 67% at 3, 75% at 4, 80%
+at 5 — and the generated `election_description` states that fraction for you.
+
+```
+python generate_dead_rung_scenarios.py --round full --candidates 4 --run   # A wins by lot; reorder → any of A–D
+```
+
+(`--rung` and `--adversarial-lot` don't apply here — a full tie is inherently a
+symmetric dead rung. Use `--theme letters` for more than five candidates.)
 
 ---
 

@@ -24,6 +24,10 @@ Rounds:
 
   --round scoring   3 candidates; a leader wins, two others tie for the 2nd slot
   --round runoff    2 candidates tie in the automatic runoff
+  --round full      a fully symmetric k-candidate tie (--candidates k): every
+                    candidate a rotation of the others, so the lot alone decides
+                    and ANY of the k can win. Divergence from a published order is
+                    (k-1)/k. The k-candidate analog of BV jfk7pd.
 
 Regression mode:
 
@@ -53,9 +57,14 @@ Examples
   # strict regression: the elected winner depends on the ladder order
   python generate_dead_rung_scenarios.py --round runoff --rung alive --adversarial-lot --run
 
+  # a FULL symmetric k-candidate tie: any of the k can win by lot (divergence (k-1)/k)
+  python generate_dead_rung_scenarios.py --round full --candidates 4 --run
+
 Full write-up: see generate_dead_rung_scenarios.md next to this script.
 """
 from __future__ import annotations
+
+import string
 
 import argparse
 import subprocess
@@ -66,7 +75,7 @@ from pathlib import Path
 
 # Candidate name banks, in lot / column order (distinct initials A, B, C, ...).
 NAME_BANKS: dict[str, list[str]] = {
-    "letters": ["A", "B", "C", "D", "E"],
+    "letters": list(string.ascii_uppercase),   # A..Z (26), for large --candidates
     "classic": ["Ann", "Ben", "Cara", "Dan", "Eve"],   # matches the case set
     "fruits":  ["Apple", "Banana", "Cherry", "Date", "Elderberry"],
     "flavors": ["Almond", "Brownie", "Cocoa", "Dulce", "Espresso"],
@@ -99,7 +108,8 @@ class Template:
     teach: str                   # one-line explanation of what the rung does here
 
 
-def build_template(round_: str, rung: str, adversarial: bool, cap: int) -> Template:
+def build_template(round_: str, rung: str, adversarial: bool, cap: int,
+                   candidates: int = 3) -> Template:
     """Return the verified ballot template for a (round, rung, adversarial) case.
 
     Non-adversarial cases teach *which rung decides* (the leader wins either way).
@@ -107,6 +117,20 @@ def build_template(round_: str, rung: str, adversarial: bool, cap: int) -> Templ
     Ballots mirror the checked-in cases in 01_STAR/tie_break_dead_rung/.
     """
     c = cap
+    if round_ == "full":
+        # Full symmetric tie: k candidates, k ballots, ballot i gives candidate i
+        # the score `cap` and everyone else 0 (an identity matrix × cap). Every
+        # candidate totals `cap`, every pairwise is 1-1, and (cap < 5) nobody has a
+        # 5 -> a dead rung. Nothing separates them: the lot alone decides, and any
+        # of the k candidates can win. rung / adversarial do not apply.
+        k = candidates
+        rows = [[c if i == j else 0 for j in range(k)] for i in range(k)]
+        pct = f"{(k - 1)}/{k}"
+        teach = (f"all {k} candidates perfectly symmetric (rotation, capped at {c}); "
+                 f"every rung ties -> the LOT alone decides. {k} winners are reachable; "
+                 f"a random draw diverges from a published order {pct} of the time.")
+        return Template(k, rows, list(range(k)), 0, teach)
+
     if not adversarial:
         table: dict[tuple[str, str], Template] = {
             # SCORING: col0 leads & wins; col1/col2 tie for the 2nd finalist slot.
@@ -176,19 +200,34 @@ def render_yaml(t: Template, names: list[str], scale: int, round_: str, rung: st
         lot_line = "lot_numbers: [" + ", ".join(cols[i] for i in t.lot) + "]\n"
 
     if title is None:
-        adv = " (adversarial lot)" if adversarial else ""
-        capnote = f", cap {cap}" if rung == "dead" else ""
-        title = (f"Dead rung — {round_} round, {rung} five-star rung{capnote}{adv}")
+        if round_ == "full":
+            title = (f"Full symmetric dead-rung tie — {t.ncols} candidates, "
+                     f"cap {cap} ({winner} wins by lot [{', '.join(cols)}])")
+        else:
+            adv = " (adversarial lot)" if adversarial else ""
+            capnote = f", cap {cap}" if rung == "dead" else ""
+            title = (f"Dead rung — {round_} round, {rung} five-star rung{capnote}{adv}")
 
-    description = (
-        f"Generated dead-rung scenario ({round_} round, '{rung}' five-star rung"
-        + (", adversarial lot" if adversarial else "") + "). "
-        + t.teach + " "
-        "STAR's second rung counts only score-5 votes and never steps down to 4s; "
-        "when it can't separate the tied candidates the lot decides. "
-        "See 01_STAR/tie_break_dead_rung/README.md and "
-        "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md."
-    )
+    if round_ == "full":
+        description = (
+            f"Generated FULL symmetric dead-rung tie ({t.ncols} candidates). "
+            + t.teach + " "
+            "Every candidate is a perfect rotation of the others, so no STAR rung "
+            "(pairwise, five-star) can separate them and the pre-published lot order "
+            "picks the winner. This is the k-candidate analog of BV jfk7pd. "
+            "See 01_STAR/tie_break_dead_rung/README.md and "
+            "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md."
+        )
+    else:
+        description = (
+            f"Generated dead-rung scenario ({round_} round, '{rung}' five-star rung"
+            + (", adversarial lot" if adversarial else "") + "). "
+            + t.teach + " "
+            "STAR's second rung counts only score-5 votes and never steps down to 4s; "
+            "when it can't separate the tied candidates the lot decides. "
+            "See 01_STAR/tie_break_dead_rung/README.md and "
+            "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md."
+        )
 
     # Flat schema (top-level keys) to match tie_break_dead_rung/ cases 01-09,
     # so the file is auto-discovered by test_single_winner_positive.
@@ -225,12 +264,16 @@ def main(argv: list[str] | None = None) -> int:
         description="Generate STAR 'dead rung' tie-break scenarios (see module docstring).",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    p.add_argument("--round", choices=["scoring", "runoff"], default="scoring",
-                   help="where the tie sits (default scoring)")
+    p.add_argument("--round", choices=["scoring", "runoff", "full"], default="scoring",
+                   help="where the tie sits: scoring, runoff, or 'full' (a fully "
+                        "symmetric k-candidate tie; use --candidates) (default scoring)")
     p.add_argument("--rung", choices=["alive", "dead", "tied"], default="alive",
-                   help="state of the five-star rung (default alive)")
+                   help="state of the five-star rung (default alive; ignored for --round full)")
+    p.add_argument("--candidates", type=int, default=3,
+                   help="number of candidates for --round full (>=2; default 3). "
+                        "Any of the k can win by lot; divergence is (k-1)/k.")
     p.add_argument("--cap", type=int, choices=[4, 3, 2], default=4,
-                   help="score ceiling for a DEAD rung -- the 'what about 4s?' knob (default 4)")
+                   help="score ceiling for a DEAD / full rung -- the 'what about 4s?' knob (default 4)")
     p.add_argument("--adversarial-lot", action="store_true",
                    help="pin the lot to favor the wrong candidate (strict regression test)")
     p.add_argument("--scale", type=int, default=1,
@@ -246,24 +289,37 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.scale < 1:
         raise SystemExit("error: --scale must be >= 1.")
-    if args.rung != "dead" and args.cap != 4:
-        print("note: --cap only applies to a dead rung; ignored here.", file=sys.stderr)
-    if args.adversarial_lot and args.rung == "dead" and args.cap != 4:
-        print("note: adversarial dead template is fixed at cap 4; --cap ignored.", file=sys.stderr)
-        args.cap = 4
+    if args.round == "full":
+        if args.candidates < 2:
+            raise SystemExit("error: --round full needs --candidates >= 2.")
+        if args.adversarial_lot or args.rung != "alive":
+            print("note: --round full ignores --rung / --adversarial-lot "
+                  "(it's an inherently symmetric dead rung).", file=sys.stderr)
+    else:
+        if args.rung != "dead" and args.cap != 4:
+            print("note: --cap only applies to a dead rung; ignored here.", file=sys.stderr)
+        if args.adversarial_lot and args.rung == "dead" and args.cap != 4:
+            print("note: adversarial dead template is fixed at cap 4; --cap ignored.", file=sys.stderr)
+            args.cap = 4
 
-    t = build_template(args.round, args.rung, args.adversarial_lot, args.cap)
+    t = build_template(args.round, args.rung, args.adversarial_lot, args.cap,
+                       candidates=args.candidates)
     names = NAME_BANKS[args.theme]
     if t.ncols > len(names):
-        raise SystemExit(f"error: theme '{args.theme}' needs {t.ncols} names.")
+        raise SystemExit(
+            f"error: theme '{args.theme}' has {len(names)} names but {t.ncols} are "
+            f"needed. Use --theme letters (26) or fewer --candidates.")
 
     yaml_text = render_yaml(t, names, args.scale, args.round, args.rung,
                             args.adversarial_lot, args.cap, args.title)
 
-    auto_name = (f"dead_rung_{args.round}_{args.rung}"
-                 + (f"_cap{args.cap}" if args.rung == "dead" else "")
-                 + ("_advlot" if args.adversarial_lot else "")
-                 + (f"_x{args.scale}" if args.scale > 1 else "") + ".yaml")
+    if args.round == "full":
+        auto_name = f"dead_rung_full_c{args.candidates}_cap{args.cap}"
+    else:
+        auto_name = (f"dead_rung_{args.round}_{args.rung}"
+                     + (f"_cap{args.cap}" if args.rung == "dead" else ""))
+    auto_name += ("_advlot" if (args.adversarial_lot and args.round != "full") else "")
+    auto_name += (f"_x{args.scale}" if args.scale > 1 else "") + ".yaml"
 
     out: Path | None = None
     if args.out:
