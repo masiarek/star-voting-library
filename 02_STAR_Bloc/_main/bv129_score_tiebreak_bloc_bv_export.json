@@ -1,0 +1,449 @@
+{
+  "Election": {
+    "election_id": "btmydt",
+    "title": "BV129 - 3 cand - 2 winners (Bloc STAR)",
+    "description": "",
+    "frontend_url": "",
+    "start_time": "2025-03-08T16:42:25.969Z",
+    "end_time": "2025-03-08T16:50:00.000Z",
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "closed",
+    "races": [
+      {
+        "title": "BV129 - 3 cand - 2 winners (Bloc STAR)",
+        "description": "",
+        "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb",
+        "num_winners": 2,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a",
+            "candidate_name": "Andre"
+          },
+          {
+            "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54",
+            "candidate_name": "Blake"
+          },
+          {
+            "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce",
+            "candidate_name": "Carmen"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": ""
+    },
+    "auth_key": null,
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-03-08T16:42:23.140Z",
+    "update_date": "1741452892823",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "78aceab3-78dc-4040-80f6-549da92d48ca",
+      "election_id": "btmydt",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 3,
+              "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a"
+            },
+            {
+              "score": 3,
+              "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54"
+            },
+            {
+              "score": 5,
+              "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce"
+            }
+          ],
+          "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb"
+        }
+      ]
+    },
+    {
+      "ballot_id": "c152ad53-4a18-45ea-97c2-a218bb199b69",
+      "election_id": "btmydt",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 4,
+              "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a"
+            },
+            {
+              "score": 4,
+              "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54"
+            },
+            {
+              "score": 5,
+              "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce"
+            }
+          ],
+          "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb"
+        }
+      ]
+    },
+    {
+      "ballot_id": "2867957e-46e1-4439-928d-a53bbdd0af16",
+      "election_id": "btmydt",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 3,
+              "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a"
+            },
+            {
+              "score": 1,
+              "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54"
+            },
+            {
+              "score": 5,
+              "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce"
+            }
+          ],
+          "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb"
+        }
+      ]
+    },
+    {
+      "ballot_id": "43c27806-730a-4078-8efb-e9ed82bea277",
+      "election_id": "btmydt",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 4,
+              "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a"
+            },
+            {
+              "score": 4,
+              "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54"
+            },
+            {
+              "score": 5,
+              "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce"
+            }
+          ],
+          "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb"
+        }
+      ]
+    },
+    {
+      "ballot_id": "462fbfa3-ab7c-4e29-b265-74a7b98d3da1",
+      "election_id": "btmydt",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 3,
+              "candidate_id": "3501b4d3-d289-4930-9a93-f149bc8e023a"
+            },
+            {
+              "score": 4,
+              "candidate_id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54"
+            },
+            {
+              "score": 5,
+              "candidate_id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce"
+            }
+          ],
+          "race_id": "e1c70ab6-293f-4e05-bc5a-a1486bdfe5fb"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce",
+          "name": "Carmen",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 5,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": 5
+          },
+          "winsAgainst": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": true,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": true
+          },
+          "score": 25,
+          "fiveStarCount": 5
+        },
+        {
+          "id": "3501b4d3-d289-4930-9a93-f149bc8e023a",
+          "name": "Andre",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 1,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": 0
+          },
+          "winsAgainst": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+          },
+          "score": 17,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54",
+          "name": "Blake",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 0,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": 1
+          },
+          "winsAgainst": {
+            "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+            "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+            "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+          },
+          "score": 16,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce",
+              "name": "Carmen",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 5,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": 5
+              },
+              "winsAgainst": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": true,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": true
+              },
+              "score": 25,
+              "fiveStarCount": 5
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "3501b4d3-d289-4930-9a93-f149bc8e023a",
+              "name": "Andre",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 1,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": 0
+              },
+              "winsAgainst": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+              },
+              "score": 17,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Carmen",
+                "Andre"
+              ],
+              "stars": [
+                "25",
+                "17"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Carmen",
+              "runner_up": "Andre",
+              "winner_votes": 5,
+              "runner_up_votes": 0,
+              "equal_votes": 0
+            }
+          ]
+        },
+        {
+          "winners": [
+            {
+              "id": "3501b4d3-d289-4930-9a93-f149bc8e023a",
+              "name": "Andre",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 1,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": 0
+              },
+              "winsAgainst": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+              },
+              "score": 17,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54",
+              "name": "Blake",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 0,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": 1
+              },
+              "winsAgainst": {
+                "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+                "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+                "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+              },
+              "score": 16,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "score",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Andre",
+                "Blake"
+              ],
+              "stars": [
+                "17",
+                "16"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Andre",
+                "Blake"
+              ],
+              "votes": 1,
+              "equal_votes": 3
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tiebreak",
+              "winner": "Andre",
+              "runner_up": "Blake",
+              "winner_stars": 17,
+              "runner_up_stars": 16
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Andre",
+              "runner_up": "Blake"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "bb0e361f-a4d0-417f-bec9-08fdc85c78ce",
+            "name": "Carmen",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 5,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": 5
+            },
+            "winsAgainst": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": true,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": true
+            },
+            "score": 25,
+            "fiveStarCount": 5
+          },
+          {
+            "id": "3501b4d3-d289-4930-9a93-f149bc8e023a",
+            "name": "Andre",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 1,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": 0
+            },
+            "winsAgainst": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+            },
+            "score": 17,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54",
+            "name": "Blake",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": 0,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": 0,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": 1
+            },
+            "winsAgainst": {
+              "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54": false,
+              "bb0e361f-a4d0-417f-bec9-08fdc85c78ce": false,
+              "3501b4d3-d289-4930-9a93-f149bc8e023a": false
+            },
+            "score": 16,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 5
+      },
+      "tieBreakType": "score",
+      "perm": [
+        "a74dc2d9-d25b-46c8-adc8-7cb0b517cf54",
+        "bb0e361f-a4d0-417f-bec9-08fdc85c78ce",
+        "3501b4d3-d289-4930-9a93-f149bc8e023a"
+      ]
+    }
+  ]
+}
