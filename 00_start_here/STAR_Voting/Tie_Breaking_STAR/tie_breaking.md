@@ -5,6 +5,15 @@
 *every* rung is still tied does a pre-drawn **lot order** decide it. Most
 elections never reach the lot.
 
+> **Read this first — everything on this page is the *tie* path.** It only runs
+> when a round comes out **exactly tied**. The normal count has no
+> pairwise-vs-score juggling: the **Scoring Round** just adds up the scores (top
+> two advance), and the **Automatic Runoff** is just the head-to-head (the
+> finalist more voters scored higher wins). The ladders below are what happens
+> *only when* one of those two steps is a dead heat — and that context is exactly
+> why each round then borrows the *other* round's measure (see
+> ["Why the swap"](#the-ladder-both-rounds) below).
+
 → Builds on the **Automatic Runoff** and **Head-to-head / pairwise** glossary
 entries · JSON-side companion: [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md)
 (format & mapping) · related:
