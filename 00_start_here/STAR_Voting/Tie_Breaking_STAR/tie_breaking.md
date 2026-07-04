@@ -52,9 +52,20 @@ AUTOMATIC RUNOFF  — choose the winner from the two finalists
 ```
 
 Note the two ladders are **not** identical. In the Scoring Round, pairwise is
-the *first* tiebreaker; in the Runoff, total score is the first tiebreaker
-(pairwise *is* the runoff, so it can't also break the runoff). Five-star is the
-second tiebreaker in both. The lot is the floor of both.
+the *first* tiebreaker; in the Runoff, total score is the first tiebreaker.
+Five-star is the second tiebreaker in both. The lot is the floor of both.
+
+> **Why the swap — the elegant part.** Each round breaks its tie with the *other*
+> round's yardstick, because **the measure that tied can't be the one that
+> separates**. The Scoring Round ranks by *total score*, so a scoring-round tie
+> means the scores are **equal** — score can't break it, so STAR asks the runoff's
+> question instead: *whom do more voters prefer head-to-head?* (**pairwise**). The
+> Runoff decides by *head-to-head preference*, so a runoff tie means the preference
+> is **equal** — preference can't break it, so STAR falls back to the scoring
+> round's measure: *who had the higher total score?* (**score**). (Put differently:
+> pairwise *is* the runoff, so it can't also break the runoff; score *is* the
+> scoring round, so it can't also break the scoring round.) Only after that shared
+> **five-star** rung, and finally the **lot**.
 
 "Five-star" means "votes of the maximum score" (5 on a 0–5 ballot). **Equal
 Support** in the output is not a candidate — it's the no-preference bucket

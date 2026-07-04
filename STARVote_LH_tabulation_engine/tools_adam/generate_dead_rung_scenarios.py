@@ -12,6 +12,15 @@ STAR's two tie-break ladders:
     SCORING ROUND  (which two become finalists):  pairwise  ->  five-star  ->  lot
     AUTOMATIC RUNOFF (which finalist wins):        score     ->  five-star  ->  lot
 
+Why the swap (it looks backwards but isn't): each round breaks its tie with the
+OTHER round's yardstick, because the measure that tied can't be the one that
+separates. The scoring round ranks by total SCORE, so a scoring-round tie means
+scores are equal -> break it by PAIRWISE (the runoff's question). The runoff
+decides by PAIRWISE preference, so a runoff tie means preference is equal ->
+break it by SCORE (the scoring round's measure). Five-star is the shared second
+rung; the lot is the floor of both. (Full write-up:
+00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.)
+
 This script builds a tie that lands on the five-star rung, and lets you set what
 that rung finds:
 
