@@ -17,6 +17,22 @@ The scenario is a perfect symmetric two-candidate tie (one ballot each way), so
 every earlier STAR tiebreaker (score, five-star, pairwise) is ALSO tied and the
 outcome is decided ONLY by the lot order. That is what makes the self-check
 meaningful: in this election, lot order is the whole ballgame.
+
+What these tests guard — and what they don't
+--------------------------------------------
+These are regression tests for OUR side — the LH engine's deterministic
+tie-break, the JSON->YAML converter's `perm` -> `lot_numbers` reproduction, the
+"[Lot-decided tie]" flag, and the two-way import tool. They do NOT (and cannot)
+test BetterVoting: BV is external and its tie-break is `random` by design, so
+there's no deterministic assertion to make against a live BV run. The value is
+independent of any BV fix:
+  * they lock a correct, reproducible reference implementation of STAR
+    tie-breaking (a winner drift is caught immediately);
+  * they prove we can faithfully reconstruct a real BV result from its export
+    (the audit capability) — see the frozen-`jfk7pd` test below;
+  * when BV ships deterministic lot numbers (issue #1063), these become the
+    acceptance test: re-export, convert, confirm the deterministic engine agrees
+    AND reproduces on re-run.
 """
 
 import importlib.util
@@ -367,4 +383,43 @@ def test_two_way_import_diverges(tmp_path):
 
     assert scenario_winners(bv)[0] == ["Ben"]     # reproduces BV's elected
     assert scenario_winners(pub)[0] == ["Ada"]    # published order flips it
+    assert scenario_winners(bv)[0] != scenario_winners(pub)[0]
+
+
+# --- 7. The REAL frozen BetterVoting export (jfk7pd) ------------------------
+
+FROZEN_JFK7PD = (REPO_ROOT / "01_STAR" / "tie_break_dead_rung"
+                 / "lot_random_vs_published_jfk7pd"
+                 / "lot_random_vs_published_jfk7pd_bv_export.json")
+
+
+@pytest.mark.skipif(not (CONVERTER.exists() and FROZEN_JFK7PD.exists()),
+                    reason="converter or frozen jfk7pd export not present")
+def test_frozen_jfk7pd_export_reproduces_and_diverges(tmp_path):
+    """Reproduction fidelity on a REAL, archived BetterVoting export.
+
+    jfk7pd is a live BV election that hit a dead-rung tie and was resolved by a
+    random draw (tieBreakType 'random', perm [Ben, Ada]) electing Ben. Running the
+    frozen export through our two-way pipeline must:
+      * reproduce BV's actual certified winner, Ben, from its drawn `perm`
+        (this is the audit capability — proving we can reconstruct a real BV
+        result from its export); and
+      * elect the other candidate, Ada, under a deterministic published order —
+        the divergence that motivates deterministic lot numbers (BV #1063).
+
+    This guards the real artifact (not a synthetic fixture) against converter or
+    engine drift, and is independent of any future BV fix.
+    """
+    sys.path.insert(0, str(ENGINE_DIR / "tools_adam"))
+    import two_way_import as twi
+
+    # Write outputs into tmp_path so the repo copy is never touched.
+    assert twi.main([str(FROZEN_JFK7PD), "--out-dir", str(tmp_path)]) == 0
+    base = FROZEN_JFK7PD.stem
+    bv = tmp_path / f"{base}_bv_order.yaml"
+    pub = tmp_path / f"{base}_published_order.yaml"
+    assert bv.exists() and pub.exists()
+
+    assert scenario_winners(bv)[0] == ["Ben"], "should reproduce BV's certified winner"
+    assert scenario_winners(pub)[0] == ["Ada"], "published order should elect the other"
     assert scenario_winners(bv)[0] != scenario_winners(pub)[0]
