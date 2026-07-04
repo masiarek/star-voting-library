@@ -251,7 +251,7 @@ def _yaml_lite(text):
 
 KEY_COMPONENTS_HELP = """\
 An election file (in YAML format) needs three things:
-  - voting_method : STAR (default) | Approval | bloc | sss | rrv | allocated | RCV_IRV
+  - voting_method : STAR (default) | Approval | "Bloc STAR" (aka bloc) | sss | rrv | allocated | RCV_IRV
   - num_winners   : how many seats to fill (1 = single-winner)
   - ballots       : a 0-5 score grid -- a header row of candidate names, then one
                     row per voter
@@ -2764,7 +2764,11 @@ Memphis,Nashville,Chattanooga,Knoxville
         # Approval and its explicit single/multi-winner variants, tolerant of
         # typos like "Arroval". A name carrying "multi"/"single" must agree with
         # num_winners (checked below).
-        _norm = _mname.replace("-", "_")
+        # Normalize BOTH hyphens and spaces to underscores so multi-word method
+        # names ("Bloc STAR", "Ranked Robin") match `_known_score_names` below
+        # (which is built with spaces -> underscores). Without the space rule the
+        # validator rejected "Bloc STAR" even though METHOD_BY_NAME resolves it.
+        _norm = _mname.replace("-", "_").replace(" ", "_")
         _is_approval = (
             "approval" in _norm
             or _norm in {"approve", "av"}
@@ -2792,7 +2796,7 @@ Memphis,Nashville,Chattanooga,Knoxville
         if _mname and not (_is_rcv or _is_approval or _is_rr or _is_plurality
                            or _norm in _known_score_names):
             _valid = ["STAR", "Approval", "RankedRobin", "RCV_IRV", "STV",
-                      "Plurality", "bloc", "sss", "rrv", "allocated"]
+                      "Plurality", "Bloc STAR", "sss", "rrv", "allocated"]
             _close = difflib.get_close_matches(
                 _norm, [v.lower() for v in _valid], n=1, cutoff=0.6)
             _hint = ""

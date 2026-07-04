@@ -9,7 +9,7 @@
 # NB: we compare sets, not order — so a mere order difference like [Almond, Vanilla]
 # vs [Vanilla, Almond] is NOT a failure; the key must be wrong as a SET to bite.
 election_title: Deliberate multi-winner mismatch (harness self-test)
-voting_method: bloc
+voting_method: Bloc STAR
 num_winners: 2
 ballots: |-
   Choco,Almond,Vanilla

@@ -37,7 +37,7 @@ options:
   count_separator: "×"
 
 num_winners: 2
-voting_method: bloc
+voting_method: Bloc STAR
 lot_numbers: [Cand2, Cand1, Cand3]   # BV's drawn order (perm) — reproduces Cand2
 ballots: |-
   Cand1,Cand2,Cand3

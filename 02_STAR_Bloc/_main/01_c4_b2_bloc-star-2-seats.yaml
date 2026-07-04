@@ -30,7 +30,7 @@ options:
   count_separator: "×"   # collapsed-count separator: ×, :, or x/X
 
 num_winners: 2
-voting_method: bloc
+voting_method: Bloc STAR
 ballots: |-
   Ann,Bob,Cal,Don
   1,  0,  4,  5

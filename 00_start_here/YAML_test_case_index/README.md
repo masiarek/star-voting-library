@@ -15,11 +15,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
 | STV (proportional RCV) | 1 |
-| Bloc STAR | 5 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 1 |
 | Allocated Score (STAR-PR) | 1 |
 | APPROVAL_MULTI_WINNER | 3 |
+| BLOC STAR | 5 |
 | PLURALITY | 1 |
 | RANGE | 1 |
 | RR | 1 |
@@ -167,16 +167,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 
-## Bloc STAR  (5)
-
-| Case (page) | Folder | Winners | Title / expected | src |
-|------|--------|:------:|------------------|:--:|
-| [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/_main/_main_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/_main/00_c3_b3_bloc-baseline-2-seats.yaml) |
-| [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/_main/01_c4_b2_bloc-star-2-seats.yaml) |
-| [`bv131_guido_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv131_guido_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie → _Cand2, Cand3_ | [`.yaml`](../../02_STAR_Bloc/_main/bv131_guido_bloc.yaml) |
-| [`bv132_verify_votes_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv132_verify_votes_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV132 — verify number of votes cast (Bloc STAR, 2 seats) → _C, B_ | [`.yaml`](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
-| [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/_main/_main_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/_main/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
-
 ## STAR-PR (Sequential Selection)  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
@@ -203,6 +193,16 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_2seats_c4_b6`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_2seats_c4_b6.md) | `04_Approval/multiwinner/` | 2 | Bloc Approval — 2 seats, majority sweep → _Amy, Ben_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml) |
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
+
+## BLOC STAR  (5)
+
+| Case (page) | Folder | Winners | Title / expected | src |
+|------|--------|:------:|------------------|:--:|
+| [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/_main/_main_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/_main/00_c3_b3_bloc-baseline-2-seats.yaml) |
+| [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/_main/01_c4_b2_bloc-star-2-seats.yaml) |
+| [`bv131_guido_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv131_guido_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie → _Cand2, Cand3_ | [`.yaml`](../../02_STAR_Bloc/_main/bv131_guido_bloc.yaml) |
+| [`bv132_verify_votes_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv132_verify_votes_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV132 — verify number of votes cast (Bloc STAR, 2 seats) → _C, B_ | [`.yaml`](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
+| [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/_main/_main_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/_main/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
 
 ## PLURALITY  (1)
 

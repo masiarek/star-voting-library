@@ -27,7 +27,7 @@ options:
   count_separator: "×"
 
 num_winners: 2
-voting_method: bloc
+voting_method: Bloc STAR
 ballots: |-
   A,B,C
   4,1,0

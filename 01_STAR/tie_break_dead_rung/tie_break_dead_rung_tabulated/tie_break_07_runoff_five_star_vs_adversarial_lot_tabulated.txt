@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_07_runoff_five_star_vs_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-04 10:08:33
+TABULATED AT:    2026-07-04 10:18:18
 ======================================================================
 
 election_title: Dead rung 03 — runoff tie broken by five-star
