@@ -1,0 +1,23 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV132 — verify number of votes cast (Bloc STAR, 2 seats)
+ Tabulating 4 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C
+     1 ×   A > B > C      (1, 1, 1)
+     1 ×   A > B > C      (5, 5, 5)
+     2 ×   C > B > A      (1, 2, 3)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                  2  Elected
+C                  2  Rejected
+B                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

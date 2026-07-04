@@ -1,0 +1,56 @@
+election_title: "BV132 — verify number of votes cast (Bloc STAR, 2 seats)"
+
+scenario_description: |-
+  Bloc STAR, 3 candidates, 2 seats, 4 ballots — two of them "flat" (every
+  candidate scored the same: 1,1,1 and 5,5,5). This is the LH reference for
+  BetterVoting test BV132 / issue #1073 ("verify number of votes cast").
+
+  LH counts ALL 4 ballots: totals C=12, B=10, A=8.
+    - Seat 1: C and B advance; in the runoff C is preferred (C 2, B 0, Equal 2),
+      so C takes seat 1.
+    - Seat 2: remove C; B beats A in the runoff (B 2, A 0, Equal 2), so B takes
+      seat 2.
+  Winners: C, B.
+
+  The BV bug (#1073): BetterVoting reports only "2 voters" with totals A=2, B=4,
+  C=6 — which is exactly the two non-flat ballots (1,2,3 and 1,2,3). It has
+  DROPPED the two flat ballots, the same "flat ballot treated as an abstention"
+  family as #1407 / #1035. Note the winners (C, B) are UNAFFECTED — a flat ballot
+  adds equally to every candidate and is Equal in every head-to-head, so it can
+  never change a STAR/Bloc result. The defect is the vote-count / turnout display,
+  not the winner.
+
+  Confirmed from the frozen BV export (election 3494cb, bv132_..._bv_export.json):
+  all 4 ballots ARE stored in the export's Ballots array — so ingestion is fine.
+  The drop happens in TABULATION: summaryData reports nAbstentions=2, nTallyVotes=2,
+  i.e. BV classifies the two flat ballots as abstentions and tallies only the two
+  1,2,3 ballots (A=2, B=4, C=6). Same root cause as #1407 (flat ballot mis-filed
+  as abstention). The export also labels votingMethod "STAR" rather than "Bloc
+  STAR" — cf. #904.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: bloc
+ballots: |-
+  A,B,C
+  1,1,1
+  5,5,5
+  1,2,3
+  1,2,3
+
+expected_winners:
+  - C
+  - B
+
+# file: bv132_verify_votes_bloc.yaml
