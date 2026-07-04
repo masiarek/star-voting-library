@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**136 election files** (121 single-winner, 15 multi-winner) across 13 method(s).
+**137 election files** (121 single-winner, 16 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -17,7 +17,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | STV (proportional RCV) | 1 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 1 |
-| Allocated Score (STAR-PR) | 1 |
+| Allocated Score (STAR-PR) | 2 |
 | APPROVAL_MULTI_WINNER | 3 |
 | BLOC STAR | 7 |
 | PLURALITY | 1 |
@@ -181,11 +181,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/_main/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02c_c5_b63_proportional-rrv.yaml) |
 
-## Allocated Score (STAR-PR)  (1)
+## Allocated Score (STAR-PR)  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
+| [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/_main/_main_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/_main/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |
 
 ## APPROVAL_MULTI_WINNER  (3)
 
