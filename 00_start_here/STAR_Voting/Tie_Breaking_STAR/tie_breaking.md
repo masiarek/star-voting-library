@@ -15,7 +15,8 @@ elections never reach the lot.
 > ["Why the swap"](#the-ladder-both-rounds) below).
 
 → Builds on the **Automatic Runoff** and **Head-to-head / pairwise** glossary
-entries · JSON-side companion: [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md)
+entries · cross-method: [Tie-Breaking: STAR vs. RCV-IRV](../../topics/ties/tiebreaking_star_vs_irv.md)
+(why strict ranks make ties *harder*, not easier) · JSON-side companion: [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md)
 (format & mapping) · related:
 [How the Count Works — STAR vs RCV-IRV, Step by Step](../../tabulation_star_vs_irv.md) ·
 operational companions: the JSON→YAML converter

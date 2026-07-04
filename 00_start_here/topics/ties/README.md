@@ -32,6 +32,10 @@ when each round produces a tie and how the lot order settles it — and the
 (with a [generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md)
 for more).
 
+**Cross-method deep dive:** [Tie-Breaking: STAR vs. RCV-IRV — Fewer Ties, or Easier
+Ties?](tiebreaking_star_vs_irv.md) — why RCV-IRV's strict ranks make a tie *harder*
+to resolve deterministically (fewer signals, bigger consequence), not easier.
+
 Glossary: [`lot numbers`](../../GLOSSARY.md) · [`dead rung`](../../GLOSSARY.md).
 
 ---
