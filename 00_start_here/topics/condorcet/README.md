@@ -1,13 +1,8 @@
 # Topic: Condorcet Efficiency (electing the head-to-head winner)
 
-**Topic hub — a cross-method view.** A **Condorcet winner** is a candidate who beats every
-other candidate one-on-one (by majority). A method is **Condorcet-efficient** if it elects
-that candidate whenever one exists. (Sometimes nobody qualifies — the pairwise results form
-a **cycle** — which is a separate, rarer problem.)
+**Topic hub — a cross-method view.** A **Condorcet winner** is a candidate who beats every other candidate one-on-one (by majority). A method is **Condorcet-efficient** if it elects that candidate whenever one exists. (Sometimes nobody qualifies — the pairwise results form a **cycle** — which is a separate, rarer problem.)
 
-> **The one idea to take away:** *the Condorcet winner is the "majority's head-to-head
-> choice."* Some methods guarantee it, some get it almost always, and RCV-IRV (Hare) can
-> miss it precisely because of [center squeeze](../center_squeeze/).
+> **The one idea to take away:** *the Condorcet winner is the "majority's head-to-head choice."* Some methods guarantee it, some get it almost always, and RCV-IRV (Hare) can miss it precisely because of [center squeeze](../center_squeeze/).
 
 ## Which methods elect the Condorcet winner — and where each is treated
 
@@ -19,19 +14,12 @@ a **cycle** — which is a separate, rarer problem.)
 | **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../../scoring-methods-vs-ranked-voting.md) |
 
-When there's **no** Condorcet winner (a cycle), methods differ in how they resolve it —
-see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's
-[divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections
-where STAR, IRV, and the Condorcet winner disagree.
+When there's **no** Condorcet winner (a cycle), methods differ in how they resolve it — see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections where STAR, IRV, and the Condorcet winner disagree.
 
-> **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a
-> Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked
-> Robin still picks the best record). Worked through with a real example in
-> [Ranked Robin vs. the Condorcet winner](../../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).
+> **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked Robin still picks the best record). Worked through with a real example in [Ranked Robin vs. the Condorcet winner](../../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).
 
 Glossary: [`Condorcet`](../../GLOSSARY.md).
 
 ---
 
-*This is a **topic hub** (cross-method index). The authoritative write-ups live in the
-per-method folders linked above. See [the topics index](../) for the other topic hubs.*
+*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../) for the other topic hubs.*

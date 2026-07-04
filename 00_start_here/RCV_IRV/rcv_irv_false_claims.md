@@ -2,22 +2,13 @@
 
 ### Voting 201/301 · a claim-by-claim index — each common claim mapped to its precise rebuttal
 
-A single place to look up the claims you'll hear about "RCV" and see, for each, **what's
-true, what's oversold, and where the repo rebuts it in detail.** This is an *index*, not
-the argument — follow the links for the worked examples and numbers.
+A single place to look up the claims you'll hear about "RCV" and see, for each, **what's true, what's oversold, and where the repo rebuts it in detail.** This is an *index*, not the argument — follow the links for the worked examples and numbers.
 
 ## Read this first (so you stay fair and precise)
 
-- **"RCV" names a ranked *ballot*; "IRV" names *one tabulation* of it.** Almost every
-  failure below is **IRV-specific** — a Condorcet count of the *same* ballot
-  (**Ranked Robin**) avoids center squeeze, and STAR uses a score ballot entirely. So
-  the target is **IRV**, not ranked ballots in general. (See
-  [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md), or the
-  [conversation version](RCV_or_IRV_whats_the_right_word.md).)
-- **Most of these are *oversold*, not flatly false.** Each has a true core — concede it
-  cleanly, then correct the overreach. That candor is what makes the correction land.
-- **Don't open with this.** It's for when an advocate makes one of these claims; correct
-  once, don't fight the wind.
+- **"RCV" names a ranked *ballot*; "IRV" names *one tabulation* of it.** Almost every failure below is **IRV-specific** — a Condorcet count of the *same* ballot (**Ranked Robin**) avoids center squeeze, and STAR uses a score ballot entirely. So the target is **IRV**, not ranked ballots in general. (See [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md), or the [conversation version](RCV_or_IRV_whats_the_right_word.md).)
+- **Most of these are *oversold*, not flatly false.** Each has a true core — concede it cleanly, then correct the overreach. That candor is what makes the correction land.
+- **Don't open with this.** It's for when an advocate makes one of these claims; correct once, don't fight the wind.
 
 ## The claims
 
@@ -36,34 +27,19 @@ the argument — follow the links for the worked examples and numbers.
 
 ## The umbrella term (so the exhausted-ballot claims stay precise)
 
-"Exhausted" is **too fuzzy** — it bundles unlike cases. Use **inactive ballots** as the
-umbrella, with sub-types: *voter-side* (overvotes, skipped/undervotes, voluntary bullet
-voting — roughly comparable to Choose-One) vs *count-artifact* (involuntary truncation
-from a ranking limit; exhausted-untransferable; non-exhausted-untransferred). The
-count-artifact cases hit voters who ranked **fully and correctly** — that's the asymmetry
-the vague word hides. Full taxonomy: [Exhausted / inactive ballots](exhausted_ballots_301.md) §2.
-*(Coinages like "stalled / stuck ballot" are useful in teaching but aren't standard — flag
-them as your own label.)*
+"Exhausted" is **too fuzzy** — it bundles unlike cases. Use **inactive ballots** as the umbrella, with sub-types: *voter-side* (overvotes, skipped/undervotes, voluntary bullet voting — roughly comparable to Choose-One) vs *count-artifact* (involuntary truncation from a ranking limit; exhausted-untransferable; non-exhausted-untransferred). The count-artifact cases hit voters who ranked **fully and correctly** — that's the asymmetry the vague word hides. Full taxonomy: [Exhausted / inactive ballots](exhausted_ballots_301.md) §2. *(Coinages like "stalled / stuck ballot" are useful in teaching but aren't standard — flag them as your own label.)*
 
 ## How to deploy
 
-- **Look up, don't dump.** Pull the one row that matches what was claimed; give the true
-  core, then the one-line correction, then the link if they want the worked example.
+- **Look up, don't dump.** Pull the one row that matches what was claimed; give the true core, then the one-line correction, then the link if they want the worked example.
 - **Prefer "oversold" to "lie."** You're correcting a sales pitch, not accusing a person.
-- **Keep their word.** If they say "RCV," keep saying "RCV"; clarify *once* that the
-  behavior you're critiquing is the IRV count specifically.
+- **Keep their word.** If they say "RCV," keep saying "RCV"; clarify *once* that the behavior you're critiquing is the IRV count specifically.
 
 ## Cross-references
-- [Exhausted / inactive ballots](exhausted_ballots_301.md) — "next choice will be counted,"
-  "no wasted votes," "true majority."
-- [Favorite betrayal (301)](../STAR_Voting/favorite_betrayal_voting_301.md) — "safe to vote
-  your conscience."
-- [Is RCV "simple"?](RCV_IRV_is_simple.md)
-  · [Tabulation, step by step](../tabulation_star_vs_irv.md)
-  — "easy as 1-2-3."
-- [Center squeeze](RCV_IRV_center_squeeze.md)
-  · [Lack of summability](RCV_IRV_lack_of_summability.md)
-  — "non-polarizing," "ends the spoiler," "easy to count."
+- [Exhausted / inactive ballots](exhausted_ballots_301.md) — "next choice will be counted," "no wasted votes," "true majority."
+- [Favorite betrayal (301)](../STAR_Voting/favorite_betrayal_voting_301.md) — "safe to vote your conscience."
+- [Is RCV "simple"?](RCV_IRV_is_simple.md) · [Tabulation, step by step](../tabulation_star_vs_irv.md) — "easy as 1-2-3."
+- [Center squeeze](RCV_IRV_center_squeeze.md) · [Lack of summability](RCV_IRV_lack_of_summability.md) — "non-polarizing," "ends the spoiler," "easy to count."
 - `LINKS.md` → Full Deck **"RCV Common False Claims"** slide; the RCV-IRV source-note tables.
 
 # file: rcv_irv_false_claims.md

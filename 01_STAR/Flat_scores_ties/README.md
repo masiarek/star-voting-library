@@ -1,54 +1,28 @@
 # Flat scores, ties & tie-breaking — and the BetterVoting bugs
 
-Where **flat / tied scores** meet **tie-breaking** meet **reporting**. STAR resolves
-ties with a deterministic cascade; BetterVoting (BV) currently mishandles or
-under-reports several of these cases. Each lesson is a **two-view** case — BV's display
-beside the LH engine's text report — built to expose exactly one tie behavior.
+Where **flat / tied scores** meet **tie-breaking** meet **reporting**. STAR resolves ties with a deterministic cascade; BetterVoting (BV) currently mishandles or under-reports several of these cases. Each lesson is a **two-view** case — BV's display beside the LH engine's text report — built to expose exactly one tie behavior.
 
-Each scenario has its own friendly themed cast (fruits, flavors, capitals, …) in
-**lot-priority order**, so the first-named (A-initial) candidate is the one the lot
-favors and the cascade stays easy to follow. **Case 05 keeps bare `A–E`** — it matches the
-exact ballots in #1379 and the already-built BV election `xmyf7k`.
+Each scenario has its own friendly themed cast (fruits, flavors, capitals, …) in **lot-priority order**, so the first-named (A-initial) candidate is the one the lot favors and the cascade stays easy to follow. **Case 05 keeps bare `A–E`** — it matches the exact ballots in #1379 and the already-built BV election `xmyf7k`.
 
-↔ **BV QA tracker:** this set covers **BV100** (worst-case STAR tiebreakers), **BV126**
-(ties at every step — [vote on BetterVoting](https://bettervoting.com/8fvd2x/) `8fvd2x`, #1052),
-**BV195** (unrealistic edge case — [vote on BetterVoting](https://bettervoting.com/3xr648/) `3xr648`)
-and **BV200** (equal ties & equal preferences — [vote on BetterVoting](https://bettervoting.com/tk476h/) `tk476h`, #1035).
+↔ **BV QA tracker:** this set covers **BV100** (worst-case STAR tiebreakers), **BV126** (ties at every step — [vote on BetterVoting](https://bettervoting.com/8fvd2x/) `8fvd2x`, #1052), **BV195** (unrealistic edge case — [vote on BetterVoting](https://bettervoting.com/3xr648/) `3xr648`) and **BV200** (equal ties & equal preferences — [vote on BetterVoting](https://bettervoting.com/tk476h/) `tk476h`, #1035).
 
-> **When to use two views (house principle).** Show BetterVoting *beside* the LH report
-> only where the two **diverge** (the discrepancy is the lesson) or where reading **BV's
-> own UI** is the point. When they *agree*, LH-only is enough — don't paste screenshots
-> that just duplicate the LH numbers. This tie/abstention set is two-view *because* BV
-> mishandles these cases; the [vote-splitting set](../../method_comparisons/split_voting/) is
-> LH-only *because* BV and LH agree there.
+> **When to use two views (house principle).** Show BetterVoting *beside* the LH report only where the two **diverge** (the discrepancy is the lesson) or where reading **BV's own UI** is the point. When they *agree*, LH-only is enough — don't paste screenshots that just duplicate the LH numbers. This tie/abstention set is two-view *because* BV mishandles these cases; the [vote-splitting set](../../method_comparisons/split_voting/) is LH-only *because* BV and LH agree there.
 
-> **Workflow / status.** The LH side is complete and verified. The BV side is being
-> reproduced: for each case you build the BV election, drop the export + screenshots, and
-> the `_<bvid>` suffix is appended to the filenames. **Case 05 is already built** (BV id
-> `xmyf7k`, the documented #1379). Cases where BV diverges show BV's *incorrect* result
-> with a **"bug pending"** callout linking the tracking issue (same pattern as
-> [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)).
+> **Workflow / status.** The LH side is complete and verified. The BV side is being reproduced: for each case you build the BV election, drop the export + screenshots, and the `_<bvid>` suffix is appended to the filenames. **Case 05 is already built** (BV id `xmyf7k`, the documented #1379). Cases where BV diverges show BV's *incorrect* result with a **"bug pending"** callout linking the tracking issue (same pattern as [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)).
 
-Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
-· [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
-· [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md)
-· [`GLOSSARY`](../../00_start_here/GLOSSARY.md)
-· [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
+Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
 
 ---
 
 ## The tie-break cascade (what LH does — the reference behavior)
 
-STAR breaks ties **deterministically**, in a fixed order, and the LH engine *prints every
-step*. Two cascades, depending on where the tie is:
+STAR breaks ties **deterministically**, in a fixed order, and the LH engine *prints every step*. Two cascades, depending on where the tie is:
 
 **Scoring Round** (which candidates become the two **Finalists**):
 
 1. **Head-to-head** — the candidate(s) preferred in the most pairwise matchups advance.
 2. **Most 5s** — the candidate(s) with the most top scores advance.
-3. **Lot number** — a fixed, pre-published priority order (here: A, B, C, …). When no
-   official lot numbers are supplied, the engine falls back to ballot-column order and
-   says so.
+3. **Lot number** — a fixed, pre-published priority order (here: A, B, C, …). When no official lot numbers are supplied, the engine falls back to ballot-column order and says so.
 
 **Automatic Runoff** (which finalist **wins**):
 
@@ -56,23 +30,11 @@ step*. Two cascades, depending on where the tie is:
 2. **Most 5s** — the more top scores wins.
 3. **Lot number** — as above.
 
-The point of the lot number is **reproducibility**: any auditor with the same ballots and
-the same lot order gets the same winner. BV has **recently added** its tie-break priority
-sequence to the JSON export ([#1371](https://github.com/Equal-Vote/bettervoting/issues/1371)),
-(now **closed**) so an outside engine can import that order and reproduce BV's result — the
-LH engine already accepts an imported lot order for exactly this. What's still open is a
-**pre-published** lot number (a public draw before the election) rather than a post-hoc
-random shuffle ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)), and the
-finalist/winner divergence + missing human-readable explanation in
-[#1379](https://github.com/Equal-Vote/bettervoting/issues/1379).
+The point of the lot number is **reproducibility**: any auditor with the same ballots and the same lot order gets the same winner. BV has **recently added** its tie-break priority sequence to the JSON export ([#1371](https://github.com/Equal-Vote/bettervoting/issues/1371)), (now **closed**) so an outside engine can import that order and reproduce BV's result — the LH engine already accepts an imported lot order for exactly this. What's still open is a **pre-published** lot number (a public draw before the election) rather than a post-hoc random shuffle ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)), and the finalist/winner divergence + missing human-readable explanation in [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379).
 
 ## The cases
 
-Each scenario has its own friendly cast (fruits, flavors, capitals, lakes, names,
-mountains, pizza); the names are in lot-priority order (the first one — A-initial — wins
-the lot), so the cascade and winner stay easy to read. **Case 05 keeps bare `A–E`** — it's
-the exact ballots in #1379 and the already-built BV election `xmyf7k`, so renaming would
-desync from that screenshot.
+Each scenario has its own friendly cast (fruits, flavors, capitals, lakes, names, mountains, pizza); the names are in lot-priority order (the first one — A-initial — wins the lot), so the cascade and winner stay easy to read. **Case 05 keeps bare `A–E`** — it's the exact ballots in #1379 and the already-built BV election `xmyf7k`, so renaming would desync from that screenshot.
 
 | # | Lesson | Cast | Where the tie is | Level | LH winner | BV status |
 |---|--------|------|------------------|:---:|:---:|---|
@@ -85,12 +47,7 @@ desync from that screenshot.
 | 07 | [fully flat ballots (maximal tie)](Flat_scores_ties_07_fully_flat.md) | mountains | both rounds | 301 | Ararat | abstention mis-file ⚠️ #1407 |
 | 08 | [every ballot flat → BV counts 0](Flat_scores_ties_08_all_flat_zero_count.md) | pizza | both rounds | 301 | Anchovy | **0 ballots** (all abstentions) ⚠️ #1407 |
 
-**"But 5,5,5,0 works fine?"** Worth flagging: `5,5,5,0` does **not** sidestep the problem —
-in STAR it's a genuine **3-way tie** (all three total 10), the same shape as case 05.
-What actually "works fine" — BV and LH agreeing with no tie-break at all — is when the
-scores leave an **unambiguous top two and a decisive runoff** (case **01**). So the honest
-contrast isn't "flat vs not-flat," it's **"tie vs no-tie."** Flat-looking high scores are
-fine *until* they produce an exact tie.
+**"But 5,5,5,0 works fine?"** Worth flagging: `5,5,5,0` does **not** sidestep the problem — in STAR it's a genuine **3-way tie** (all three total 10), the same shape as case 05. What actually "works fine" — BV and LH agreeing with no tie-break at all — is when the scores leave an **unambiguous top two and a decisive runoff** (case **01**). So the honest contrast isn't "flat vs not-flat," it's **"tie vs no-tie."** Flat-looking high scores are fine *until* they produce an exact tie.
 
 ## BetterVoting bug tracker (the reports these cases document)
 
@@ -107,38 +64,21 @@ fine *until* they produce an exact tie.
 | [#906 — BV1805, Average Supporter Profile](https://github.com/Equal-Vote/bettervoting/issues/906) | "Stats for Nerds" profile wrong under pending tie-breaking | reporting note |
 | [#885 — Ranked Robin result counts](https://github.com/Equal-Vote/bettervoting/issues/885) | voter-count / win-count confusion (tangential, RR not STAR) | reporting note |
 
-Design docs: [tie-breaking lot numbers / scenarios](https://docs.google.com/document/d/15NvrJoZ0f_Zhr3vh5uE2LVw-D8EZhBI2PFnTowYgoZM/edit?tab=t.0)
-· [tie scenarios (2)](https://docs.google.com/document/d/1KqWriu7rTduQf1esebH5iMvcgueCdkLvBB02NS9MZ5Y/edit?tab=t.0).
+Design docs: [tie-breaking lot numbers / scenarios](https://docs.google.com/document/d/15NvrJoZ0f_Zhr3vh5uE2LVw-D8EZhBI2PFnTowYgoZM/edit?tab=t.0) · [tie scenarios (2)](https://docs.google.com/document/d/1KqWriu7rTduQf1esebH5iMvcgueCdkLvBB02NS9MZ5Y/edit?tab=t.0).
 
 ## 💡 Proposal (idea — not yet adopted): color-coded coalition casts
 
-> **Status: discussion only.** This is a proposed convention for tie-breaking /
-> coalition examples, recorded here so it isn't lost. It is **not** a house rule yet —
-> don't apply it to existing cases until it's decided. (Today's casts follow the standard
-> rule: a fresh, friendly, distinct-initial set per scenario.)
+> **Status: discussion only.** This is a proposed convention for tie-breaking / coalition examples, recorded here so it isn't lost. It is **not** a house rule yet — don't apply it to existing cases until it's decided. (Today's casts follow the standard rule: a fresh, friendly, distinct-initial set per scenario.)
 
-**The idea.** For examples that turn on *coalitions* or *vote-splitting*, encode the
-coalition structure into the candidate names/colors so the structure is visible at a
-glance:
+**The idea.** For examples that turn on *coalitions* or *vote-splitting*, encode the coalition structure into the candidate names/colors so the structure is visible at a glance:
 
 - **Hue = coalition / faction** — greens together, reds together.
-- **Shade = candidate within the coalition** — *dark green* vs *light green* are two
-  center candidates competing for the **same** voters.
-- **Vote-splitting then looks like what it is:** one big coalition's support sliced into
-  two thinner same-hue bars under Plurality (a spoiler), versus holding together under
-  STAR's runoff. Same colors, opposite outcome.
+- **Shade = candidate within the coalition** — *dark green* vs *light green* are two center candidates competing for the **same** voters.
+- **Vote-splitting then looks like what it is:** one big coalition's support sliced into two thinner same-hue bars under Plurality (a spoiler), versus holding together under STAR's runoff. Same colors, opposite outcome.
 
-**Why it could help tie-breaking examples specifically.** A tie is often *because* two
-near-identical candidates draw equal support; same-hue/different-shade names make "these
-two are basically the same coalition" obvious, which is exactly the intuition behind why
-they tied and how the lot order separates them. Pairs nicely with the engine's existing
-`blocs:` vote-splitting check (see CLAUDE.md → Engines).
+**Why it could help tie-breaking examples specifically.** A tie is often *because* two near-identical candidates draw equal support; same-hue/different-shade names make "these two are basically the same coalition" obvious, which is exactly the intuition behind why they tied and how the lot order separates them. Pairs nicely with the engine's existing `blocs:` vote-splitting check (see CLAUDE.md → Engines).
 
-**Open questions for the vote:** (1) does color/shade naming fight the "distinct initials,
-phonetically distinct" rule? (2) accessibility — names must still work in plain text and
-for color-blind readers (so the *word* "green-dark" carries it, not the color alone);
-(3) scope — coalition/vote-splitting demos only, or any multi-candidate tie? Decide, then
-promote to CLAUDE.md / AGENTS.md if adopted.
+**Open questions for the vote:** (1) does color/shade naming fight the "distinct initials, phonetically distinct" rule? (2) accessibility — names must still work in plain text and for color-blind readers (so the *word* "green-dark" carries it, not the color alone); (3) scope — coalition/vote-splitting demos only, or any multi-candidate tie? Decide, then promote to CLAUDE.md / AGENTS.md if adopted.
 
 ## Run them yourself
 
@@ -147,6 +87,4 @@ cd STARVote_LH_tabulation_engine
 python starvote_larry_hastings.py "../01_Single_winner/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml"
 ```
 
-Every file writes a full audit copy to its `Flat_scores_ties_tabulated/` sibling. All
-seven also live as flat-schema positive test cases in `YAML_library/1_positive/`
-(deterministic winner A via the published lot order).
+Every file writes a full audit copy to its `Flat_scores_ties_tabulated/` sibling. All seven also live as flat-schema positive test cases in `YAML_library/1_positive/` (deterministic winner A via the published lot order).

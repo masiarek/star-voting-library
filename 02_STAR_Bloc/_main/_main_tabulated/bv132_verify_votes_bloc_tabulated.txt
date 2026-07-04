@@ -2,7 +2,7 @@
 SOURCE FILE:     bv132_verify_votes_bloc.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  bv132_verify_votes_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 10:23:00
+TABULATED AT:    2026-07-04 11:27:47
 ======================================================================
 
 election_title: "BV132 — verify number of votes cast (Bloc STAR, 2 seats)"

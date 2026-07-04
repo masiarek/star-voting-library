@@ -1,14 +1,8 @@
 # Concepts — by topic (cross-method view)
 
-The concept pages (now directly under [00_start_here](../)) are organized
-**by method** (RCV-IRV, STAR, Ranked Robin…), because that's how most people arrive. But
-several ideas cut *across* methods, and are easier to compare side by side. This folder holds
-**topic hubs**: thin index pages that gather one cross-method idea and link out to each
-method's authoritative treatment.
+The concept pages (now directly under [00_start_here](../)) are organized **by method** (RCV-IRV, STAR, Ranked Robin…), because that's how most people arrive. But several ideas cut *across* methods, and are easier to compare side by side. This folder holds **topic hubs**: thin index pages that gather one cross-method idea and link out to each method's authoritative treatment.
 
-**These hubs don't duplicate content** — the detailed write-ups stay in the per-method
-folders. A hub is just the shared definition plus a "which methods, and where" table, so
-there's almost nothing to keep in sync. Browse by method *or* by topic, whichever fits.
+**These hubs don't duplicate content** — the detailed write-ups stay in the per-method folders. A hub is just the shared definition plus a "which methods, and where" table, so there's almost nothing to keep in sync. Browse by method *or* by topic, whichever fits.
 
 ## Topic hubs
 
@@ -20,6 +14,4 @@ there's almost nothing to keep in sync. Browse by method *or* by topic, whicheve
 | **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/) |
 | **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/) |
 
-*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still
-open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked
-examples.)*
+*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked examples.)*

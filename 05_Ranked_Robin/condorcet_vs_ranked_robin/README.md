@@ -1,12 +1,8 @@
 # Condorcet vs. Ranked Robin — worked examples
 
-*Three runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that
-trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until
-there's a cycle.** Same three candidates, two electorates, plus a real 6-candidate case.*
+*Three runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, plus a real 6-candidate case.*
 
-→ **Full lesson (the teaching write-up):**
-[ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) ·
-deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
+→ **Full lesson (the teaching write-up):** [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
 
 | Case (page) | What it shows | Condorcet winner | Ranked Robin | src |
 |------|---------------|:---:|:---:|:--:|
@@ -18,8 +14,7 @@ deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/th
 
 ## 1. Condorcet winner exists → Ranked Robin elects it
 
-Ada beats both rivals head-to-head, so Ada is the Condorcet winner *and* the Ranked Robin
-winner. No daylight between them.
+Ada beats both rivals head-to-head, so Ada is the Condorcet winner *and* the Ranked Robin winner. No daylight between them.
 
 ```text
 Ballots:
@@ -39,9 +34,7 @@ Full report: [`…_tabulated/01_condorcet_winner_tabulated.txt`](condorcet_vs_ra
 
 ## 2. A cycle → no Condorcet winner, but Ranked Robin still picks one
 
-Ada beats Ben (5–2), Ben beats Cara (5–2), Cara beats Ada (4–3) — a circle. **No candidate
-beats both others, so there is no Condorcet winner.** Everyone is 1–1; Ranked Robin breaks
-the tie by total margin and elects Ada.
+Ada beats Ben (5–2), Ben beats Cara (5–2), Cara beats Ada (4–3) — a circle. **No candidate beats both others, so there is no Condorcet winner.** Everyone is 1–1; Ranked Robin breaks the tie by total margin and elects Ada.
 
 ```text
 Ballots:
@@ -63,10 +56,7 @@ Full report: [`…_tabulated/02_cycle_no_condorcet_tabulated.txt`](condorcet_vs_
 
 ## 3. The real one — record 0 from the random sweep (6 candidates)
 
-The first divergent election from `tools_adam/random_star_divergence.py`. STAR elects **B**;
-so does Ranked Robin. But these are **score** ballots, so Ranked Robin first reads them as a
-ranking (equal scores stay tied, `=`). **No candidate beats all five rivals**, so the
-Condorcet winner is blank — yet B has the best record (3 wins), so Ranked Robin elects B.
+The first divergent election from `tools_adam/random_star_divergence.py`. STAR elects **B**; so does Ranked Robin. But these are **score** ballots, so Ranked Robin first reads them as a ranking (equal scores stay tied, `=`). **No candidate beats all five rivals**, so the Condorcet winner is blank — yet B has the best record (3 wins), so Ranked Robin elects B.
 
 ```text
 Ballots:
@@ -85,12 +75,8 @@ Win–loss record (top rows):
 Winner — Ranked Robin (RCV-RR): B   (the most head-to-head wins, 3)
 ```
 
-B went **3–1–1, not 5–0** (it loses to C, ties A), so no one beats everyone → Condorcet is
-blank. The full 6×6 pairwise grid is in the mirror:
-[`…_tabulated/03_real_record0_c6_b5_tabulated.txt`](condorcet_vs_ranked_robin_tabulated/03_real_record0_c6_b5_tabulated.txt)
+B went **3–1–1, not 5–0** (it loses to C, ties A), so no one beats everyone → Condorcet is blank. The full 6×6 pairwise grid is in the mirror: [`…_tabulated/03_real_record0_c6_b5_tabulated.txt`](condorcet_vs_ranked_robin_tabulated/03_real_record0_c6_b5_tabulated.txt)
 
 ---
 
-*Regenerate any report by re-running the `.yaml` through the LH engine; the
-`…_tabulated.txt` mirrors are generated siblings. Full teaching write-up:
-[ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).*
+*Regenerate any report by re-running the `.yaml` through the LH engine; the `…_tabulated.txt` mirrors are generated siblings. Full teaching write-up: [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).*

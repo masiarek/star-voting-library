@@ -1,16 +1,8 @@
 # `generate_dead_rung_scenarios.py` — build STAR "dead rung" tie-break elections
 
-A generator for the trickiest STAR tie-break fact, the one that keeps causing
-confusion: **STAR's second tiebreaker counts only score-5 votes — "most
-five-star votes" — and it never steps down to the 4s.** If the tied candidates
-have equal (or zero) 5s, that rung reads `0–0`, can't separate them, and the tie
-falls straight through to the **lot**. Piling up 4s does nothing.
+A generator for the trickiest STAR tie-break fact, the one that keeps causing confusion: **STAR's second tiebreaker counts only score-5 votes — "most five-star votes" — and it never steps down to the 4s.** If the tied candidates have equal (or zero) 5s, that rung reads `0–0`, can't separate them, and the tie falls straight through to the **lot**. Piling up 4s does nothing.
 
-You give it a round, a rung state, and (optionally) a score cap; it prints a
-ready-to-tabulate YAML election that lands on exactly that situation. It
-generalizes the checked-in cases in
-[The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md)
-(cases 01–09).
+You give it a round, a rung state, and (optionally) a score cap; it prints a ready-to-tabulate YAML election that lands on exactly that situation. It generalizes the checked-in cases in [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md) (cases 01–09).
 
 ---
 
@@ -23,38 +15,24 @@ SCORING ROUND   finalists:  pairwise  →  five-star  →  lot
 AUTOMATIC RUNOFF winner:     score     →  five-star  →  lot
 ```
 
-The **five-star rung** is the step that counts votes equal to the scale max (5).
-If nobody scored a 5, there's no one standing on that step — a **dead rung** — so
-you fall through to the lot.
+The **five-star rung** is the step that counts votes equal to the scale max (5). If nobody scored a 5, there's no one standing on that step — a **dead rung** — so you fall through to the lot.
 
 **Mnemonics**
 
 - **"No fives, no rung — drop to the lot."**
 - **"It counts fives, not fours."** — the whole surprise in five words.
-- **"Fives or dice"** — either a 5 decides it, or the lot (the dice) does; the 4s
-  never get a vote.
-- Ladder image: a **rung with nobody standing on it** won't hold your weight — you
-  fall past it to the lot.
+- **"Fives or dice"** — either a 5 decides it, or the lot (the dice) does; the 4s never get a vote.
+- Ladder image: a **rung with nobody standing on it** won't hold your weight — you fall past it to the lot.
 
-**Synonyms / alternate names** (if "dead rung" doesn't stick): *broken rung,
-missing step, empty rung, phantom rung,* or plainly *"the five-star tiebreaker
-that can't fire."* Related jargon you'll see nearby: the **five-star rung** (the
-step itself) and **falling through to the lot** (what happens when it's dead).
+**Synonyms / alternate names** (if "dead rung" doesn't stick): *broken rung, missing step, empty rung, phantom rung,* or plainly *"the five-star tiebreaker that can't fire."* Related jargon you'll see nearby: the **five-star rung** (the step itself) and **falling through to the lot** (what happens when it's dead).
 
-> The deeper point behind all the names: STAR's tiebreak rungs are **discrete
-> tests**, not a smooth countdown. It checks 5s, and if that's inconclusive it
-> does **not** check 4s, then 3s — it jumps to the lot. So a candidate can be
-> buried in 4s and still lose the tiebreak to the lot.
+> The deeper point behind all the names: STAR's tiebreak rungs are **discrete tests**, not a smooth countdown. It checks 5s, and if that's inconclusive it does **not** check 4s, then 3s — it jumps to the lot. So a candidate can be buried in 4s and still lose the tiebreak to the lot.
 
 ---
 
 ## What it produces
 
-A single YAML election in the `tie_break_dead_rung/` house **flat schema**
-(top-level keys, matching cases 01–09), with a `lot_numbers:` line (when the lot
-is involved) and an `expected_winners:` assertion — so each file is auto-discovered
-by `test_single_winner_positive.py` and doubles as a positive test. By default it
-prints to the **screen only** — pass `--out` to save.
+A single YAML election in the `tie_break_dead_rung/` house **flat schema** (top-level keys, matching cases 01–09), with a `lot_numbers:` line (when the lot is involved) and an `expected_winners:` assertion — so each file is auto-discovered by `test_single_winner_positive.py` and doubles as a positive test. By default it prints to the **screen only** — pass `--out` to save.
 
 ---
 
@@ -81,16 +59,11 @@ prints to the **screen only** — pass `--out` to save.
 | `dead` | **nobody** scored a 5 (all capped at `--cap`) → rung reads `0–0` | **the lot** |
 | `tied` | **both** tied candidates have equal, non-zero 5s → rung runs but `1–1` | **the lot** |
 
-`alive` vs `dead` is the same tie **one point apart** (a 5 capped down to a 4).
-That single point is the whole difference between "ballots decide" and "the lot
-decides." `tied` is the subtle third case: the rung *runs and counts real votes*
-and still resolves nothing.
+`alive` vs `dead` is the same tie **one point apart** (a 5 capped down to a 4). That single point is the whole difference between "ballots decide" and "the lot decides." `tied` is the subtle third case: the rung *runs and counts real votes* and still resolves nothing.
 
 ### `--round full` — a fully symmetric `k`-candidate tie
 
-`--round full --candidates k` builds the `k`-candidate generalization of the
-BetterVoting `jfk7pd` case: `k` candidates and `k` ballots forming an identity
-matrix × `--cap`, so ballot *i* gives candidate *i* the cap and everyone else 0:
+`--round full --candidates k` builds the `k`-candidate generalization of the BetterVoting `jfk7pd` case: `k` candidates and `k` ballots forming an identity matrix × `--cap`, so ballot *i* gives candidate *i* the cap and everyone else 0:
 
 ```
 A,B,C,D
@@ -100,42 +73,25 @@ A,B,C,D
 0,0,0,4
 ```
 
-Every candidate totals the same, every pairwise is 1–1, and (cap < 5) nobody has
-a 5 — a **dead rung**. Nothing separates them, so the lot alone decides and **any
-of the `k` can win** (the file asserts the lot favorite, candidate A). This is the
-knob for exploring how the phenomenon scales: a random draw diverges from a
-published order **`(k−1)/k`** of the time — 50% at `k=2`, 67% at 3, 75% at 4, 80%
-at 5 — and the generated `election_description` states that fraction for you.
+Every candidate totals the same, every pairwise is 1–1, and (cap < 5) nobody has a 5 — a **dead rung**. Nothing separates them, so the lot alone decides and **any of the `k` can win** (the file asserts the lot favorite, candidate A). This is the knob for exploring how the phenomenon scales: a random draw diverges from a published order **`(k−1)/k`** of the time — 50% at `k=2`, 67% at 3, 75% at 4, 80% at 5 — and the generated `election_description` states that fraction for you.
 
 ```
 python generate_dead_rung_scenarios.py --round full --candidates 4 --run   # A wins by lot; reorder → any of A–D
 ```
 
-(`--rung` and `--adversarial-lot` don't apply here — a full tie is inherently a
-symmetric dead rung. Use `--theme letters` for more than five candidates.)
+(`--rung` and `--adversarial-lot` don't apply here — a full tie is inherently a symmetric dead rung. Use `--theme letters` for more than five candidates.)
 
 ### `--pad N` — "less obvious" ties (bury it in noise)
 
-By default the full-tie ballots are a tidy identity matrix — obvious at a glance.
-`--pad N` (with `--seed` for reproducibility) makes the tie look like a messy real
-election **without changing the result**. Each pad block appends **every
-permutation** of a random ballot (`k!` ballots); a full permutation orbit treats
-all candidates identically, so totals, pairwise, and five-star all stay exactly
-equal — the tie is preserved — and the rows are then shuffled so the identity
-ballots don't stand out.
+By default the full-tie ballots are a tidy identity matrix — obvious at a glance. `--pad N` (with `--seed` for reproducibility) makes the tie look like a messy real election **without changing the result**. Each pad block appends **every permutation** of a random ballot (`k!` ballots); a full permutation orbit treats all candidates identically, so totals, pairwise, and five-star all stay exactly equal — the tie is preserved — and the rows are then shuffled so the identity ballots don't stand out.
 
 ```
 python generate_dead_rung_scenarios.py --round full --candidates 3 --pad 4 --seed 7
 ```
 
-produces ~27 varied-looking ballots (`3` base + `4 × 3! = 24`) that still tabulate
-to a perfect three-way tie: `[A,B,C]→A`, `[B,C,A]→B`, `[C,A,B]→C`. Each block adds
-`k!` ballots, so keep `k` small (the tool warns past ~1000 ballots). This is the
-knob for demonstrating that a lot-decided tie needn't be an obvious toy — it can
-hide in a normal-looking ballot set.
+produces ~27 varied-looking ballots (`3` base + `4 × 3! = 24`) that still tabulate to a perfect three-way tie: `[A,B,C]→A`, `[B,C,A]→B`, `[C,A,B]→C`. Each block adds `k!` ballots, so keep `k` small (the tool warns past ~1000 ballots). This is the knob for demonstrating that a lot-decided tie needn't be an obvious toy — it can hide in a normal-looking ballot set.
 
-(`--scale N`, by contrast, just *clones* the whole block N times — bigger, but
-still visually obvious. Use `--pad` for genuinely varied ballots.)
+(`--scale N`, by contrast, just *clones* the whole block N times — bigger, but still visually obvious. Use `--pad` for genuinely varied ballots.)
 
 ---
 
@@ -145,8 +101,7 @@ still visually obvious. Use `--pad` for genuinely varied ballots.)
 python generate_dead_rung_scenarios.py --round scoring --rung dead --theme classic --run
 ```
 
-Generated ballots (Ann leads and wins; Ben and Cara tie for the second finalist
-slot; every score capped at 4 so **no 5 exists**):
+Generated ballots (Ann leads and wins; Ben and Cara tie for the second finalist slot; every score capped at 4 so **no 5 exists**):
 
 ```yaml
 lot_numbers: [Ann, Ben, Cara]
@@ -159,8 +114,7 @@ expected_winners:
   - Ann
 ```
 
-The engine's report shows the rung firing and finding nothing, then falling to
-the lot:
+The engine's report shows the rung firing and finding nothing, then falling to the lot:
 
 ```
 Scoring Round
@@ -187,10 +141,7 @@ Winner — STAR Voting Method (single winner)
  Ann
 ```
 
-Note Ben's and Cara's **4s never enter the tiebreak** — the second rung asks only
-"most votes of score 5," gets `0–0`, and hands off to the lot. Run the same
-command with `--rung alive` and Ben (who now holds a 5) advances **by the
-ballots**, no lot needed. Same tie, one point apart.
+Note Ben's and Cara's **4s never enter the tiebreak** — the second rung asks only "most votes of score 5," gets `0–0`, and hands off to the lot. Run the same command with `--rung alive` and Ben (who now holds a 5) advances **by the ballots**, no lot needed. Same tie, one point apart.
 
 **"What about the 4s?"** Lower the cap and nothing changes — it's still dead:
 
@@ -205,11 +156,7 @@ Only an actual **5** revives the rung.
 
 ## Worked example 2 — the winner actually flips (runoff, adversarial lot)
 
-The scoring example above elects the leader (Ann) either way — good for teaching,
-but it can't *catch a bug*, because the winner is the same whether or not the
-engine consults the rung. `--adversarial-lot` fixes that: it pins the lot to the
-"wrong" candidate, so the **elected winner changes** depending on whether the
-five-star rung fires.
+The scoring example above elects the leader (Ann) either way — good for teaching, but it can't *catch a bug*, because the winner is the same whether or not the engine consults the rung. `--adversarial-lot` fixes that: it pins the lot to the "wrong" candidate, so the **elected winner changes** depending on whether the five-star rung fires.
 
 **Rung alive** — five-star must OUTRANK the lot (lot favors Ben; Ann holds a 5):
 
@@ -237,10 +184,7 @@ python generate_dead_rung_scenarios.py --round runoff --rung dead --adversarial-
  Ben wins.                    ← nothing on the ballots separates them; the lot decides
 ```
 
-Same two voters, **one point of enthusiasm** (a 5 vs a 4) flips the winner from
-Ann to Ben. If an engine ever consulted the lot early, or stepped down to 4s, the
-`alive` case would elect Ben and its `expected_winners` assertion would fail —
-which is exactly what makes these good regression tests.
+Same two voters, **one point of enthusiasm** (a 5 vs a 4) flips the winner from Ann to Ben. If an engine ever consulted the lot early, or stepped down to 4s, the `alive` case would elect Ben and its `expected_winners` assertion would fail — which is exactly what makes these good regression tests.
 
 ---
 
@@ -257,41 +201,22 @@ Verified against the engine (exit 0, engine winner == asserted winner):
 | runoff  | dead  | A — lot wins the runoff | **B** (lot wins) |
 | runoff  | tied  | A — lot wins the runoff | *(n/a)* |
 
-The adversarial `scoring/alive` → **B** vs `scoring/dead` → **A**, and
-`runoff/alive` → **A** vs `runoff/dead` → **B**, are the winner-flips that prove
-the cascade order.
+The adversarial `scoring/alive` → **B** vs `scoring/dead` → **A**, and `runoff/alive` → **A** vs `runoff/dead` → **B**, are the winner-flips that prove the cascade order.
 
 ---
 
 ## Implementation notes
 
-- **Verified ballots.** Each `(round, rung, adversarial)` uses a ballot template
-  taken from the checked-in cases 01–09, generalized over the cap, electorate
-  scale, and names. The tied pair's totals and pairwise are exactly equal by
-  construction, so the tie genuinely lands on the five-star rung.
-- **Cap generalization.** For a non-adversarial dead rung the filler adjusts with
-  `--cap` so the two candidates stay tied at any ceiling (4, 3, or 2). The
-  adversarial dead template is fixed at cap 4 (other caps would unbalance the
-  bloc totals); `--cap` is ignored there with a note.
-- **`--scale`** just repeats the ballot block, which preserves every total,
-  pairwise, and 5-count — so the winner is unchanged, the electorate just looks
-  bigger.
-- **Engine discovery for `--run`** walks up from the output file and from this
-  script's own location, so it works even when the YAML is a temp file outside
-  the repo.
+- **Verified ballots.** Each `(round, rung, adversarial)` uses a ballot template taken from the checked-in cases 01–09, generalized over the cap, electorate scale, and names. The tied pair's totals and pairwise are exactly equal by construction, so the tie genuinely lands on the five-star rung.
+- **Cap generalization.** For a non-adversarial dead rung the filler adjusts with `--cap` so the two candidates stay tied at any ceiling (4, 3, or 2). The adversarial dead template is fixed at cap 4 (other caps would unbalance the bloc totals); `--cap` is ignored there with a note.
+- **`--scale`** just repeats the ballot block, which preserves every total, pairwise, and 5-count — so the winner is unchanged, the electorate just looks bigger.
+- **Engine discovery for `--run`** walks up from the output file and from this script's own location, so it works even when the YAML is a temp file outside the repo.
 
 ---
 
 ## Related
 
-- The hand-built case set this generalizes:
-  [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md)
-  (cases 01–09).
-- Canonical concept page:
-  [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
-  (Level 301) — has the "dead rung" section.
-- Why one point of scale can flip a winner:
-  [Scale granularity can flip the winner](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md).
-- The runoff and scoring rounds themselves:
-  [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
-  · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md).
+- The hand-built case set this generalizes: [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md) (cases 01–09).
+- Canonical concept page: [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) (Level 301) — has the "dead rung" section.
+- Why one point of scale can flip a winner: [Scale granularity can flip the winner](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md).
+- The runoff and scoring rounds themselves: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md).

@@ -1,8 +1,6 @@
 # method_comparisons / _main — loose comparison files
 
-Cross-method comparison files that don't belong to one of the curated sets. Today:
-the count-simplicity contrast — the same election where STAR and RCV-IRV pick the
-*same* winner but by very different counts (STAR adds score totals; IRV eliminates).
+Cross-method comparison files that don't belong to one of the curated sets. Today: the count-simplicity contrast — the same election where STAR and RCV-IRV pick the *same* winner but by very different counts (STAR adds score totals; IRV eliminates).
 
 | Case (page) | What it shows | src |
 |---|---|:--:|

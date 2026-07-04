@@ -1,9 +1,6 @@
 # Fork Notes — starvote (vendored fork)
 
-This directory contains a **vendored fork** of Larry Hastings' STAR Voting
-engine, [`larryhastings/starvote`](https://github.com/larryhastings/starvote).
-We do not submit pull requests upstream; we edit the engine directly here and
-keep it as part of this project (the `masiarek/YAML` repo).
+This directory contains a **vendored fork** of Larry Hastings' STAR Voting engine, [`larryhastings/starvote`](https://github.com/larryhastings/starvote). We do not submit pull requests upstream; we edit the engine directly here and keep it as part of this project (the `masiarek/YAML` repo).
 
 ## What is what
 
@@ -14,18 +11,13 @@ keep it as part of this project (the `masiarek/YAML` repo).
 | `tools_adam/` | **Our code** | Helper/automation scripts (conversion, simulation, BetterVoting automation, etc.). |
 | `tests/`, `test_elections/` | Mixed | Upstream tests plus ours. |
 
-**Rule of thumb:** "Would Larry want this in the engine for everyone?" → it goes
-in `starvote/`. "Is this about *my* analysis, display, or workflow?" → it goes
-in our script/tools.
+**Rule of thumb:** "Would Larry want this in the engine for everyone?" → it goes in `starvote/`. "Is this about *my* analysis, display, or workflow?" → it goes in our script/tools.
 
-> Our wrapper script (`starvote_larry_hastings.py`), its display options, the
-> `_tabulated` output format, and the `tools_adam/tabulate_all.py` batch runner
-> are documented in **[starvote_larry_hastings.py — presentation wrapper](README_larry_hastings.md)**.
+> Our wrapper script (`starvote_larry_hastings.py`), its display options, the `_tabulated` output format, and the `tools_adam/tabulate_all.py` batch runner are documented in **[starvote_larry_hastings.py — presentation wrapper](README_larry_hastings.md)**.
 
 ## Upstream baseline
 
-The pristine upstream version is **starvote 2.1.6**, verified byte-identical to
-the PyPI release. It is recorded as the git tag:
+The pristine upstream version is **starvote 2.1.6**, verified byte-identical to the PyPI release. It is recorded as the git tag:
 
 ```
 starvote-upstream-2.1.6   ->  commit daa6bbd
@@ -43,59 +35,29 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 
 ## Current divergence from upstream 2.1.6
 
-**The engine algorithm is essentially unchanged.** `git diff --stat` against the
-tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost
-entirely **line-reflow** (signatures and long calls re-wrapped): the two files are
-~97 % character-identical once whitespace is removed, `__version__` is still
-`2.1.6`, no functions were removed, and exactly **one** helper was added
-(`bool_converter`). The *functional* edits are two optional output toggles plus
-one small tiebreak **bug fix** (see below):
+**The engine algorithm is essentially unchanged.** `git diff --stat` against the tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost entirely **line-reflow** (signatures and long calls re-wrapped): the two files are ~97 % character-identical once whitespace is removed, `__version__` is still `2.1.6`, no functions were removed, and exactly **one** helper was added (`bool_converter`). The *functional* edits are two optional output toggles plus one small tiebreak **bug fix** (see below):
 
-- **`print_averages`** option (default `False`) + CLI flag `-a` / `--print-averages`
-  and config key `print averages = <bool>`. Suppresses the averages line unless asked.
-- **`print_maximum_score`** option (default `False`) + CLI flag `-M` / `--print-maximum-score`
-  and config key `print maximum score = <bool>`. Suppresses the "Maximum score is …" line unless asked.
+- **`print_averages`** option (default `False`) + CLI flag `-a` / `--print-averages` and config key `print averages = <bool>`. Suppresses the averages line unless asked.
+- **`print_maximum_score`** option (default `False`) + CLI flag `-M` / `--print-maximum-score` and config key `print maximum score = <bool>`. Suppresses the "Maximum score is …" line unless asked.
 - `bool_converter` parses those two boolean config keys.
-- Both options are forwarded to method functions only when they differ from the
-  default, so older/reference method implementations don't break.
+- Both options are forwarded to method functions only when they differ from the default, so older/reference method implementations don't break.
 
 ### Bug fix — five-star tiebreak default score (2025)
 
-- **File/location:** `starvote/__init__.py`, `_maximum_score_count_round()`, the
-  2-candidate fast path (the `if len(candidates) == 2:` branch).
-- **What changed:** `ballot_get(candidate1, 1)` → `ballot_get(candidate1, 0)`.
-  The `.get()` default for the *second* candidate was `1` while the first
-  candidate (and the general N-candidate path) correctly used `0`.
-- **Effect:** this function powers the **five-star** tiebreaker (it counts votes
-  equal to `maximum_score`). With the wrong default, a ballot that *omits*
-  candidate1 contributed a phantom score of `1`; that only equals `maximum_score`
-  when `maximum_score == 1` (Approval-style), so the miscount was **dormant for
-  normal 0–5 STAR** (full ballots always include both candidates, and `1 ≠ 5`).
-  It was still a latent correctness bug, now aligned with `candidate0` and the
-  general path so all three agree.
-- **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives
-  in `starvote/` (per the table above), not our wrapper. Consider offering it to
-  Larry.
-- **Regression guard:** the four `01_STAR/tie_break_dead_rung/` cases exercise the
-  five-star rung firing vs. falling through to the lot in both rounds.
+- **File/location:** `starvote/__init__.py`, `_maximum_score_count_round()`, the 2-candidate fast path (the `if len(candidates) == 2:` branch).
+- **What changed:** `ballot_get(candidate1, 1)` → `ballot_get(candidate1, 0)`. The `.get()` default for the *second* candidate was `1` while the first candidate (and the general N-candidate path) correctly used `0`.
+- **Effect:** this function powers the **five-star** tiebreaker (it counts votes equal to `maximum_score`). With the wrong default, a ballot that *omits* candidate1 contributed a phantom score of `1`; that only equals `maximum_score` when `maximum_score == 1` (Approval-style), so the miscount was **dormant for normal 0–5 STAR** (full ballots always include both candidates, and `1 ≠ 5`). It was still a latent correctness bug, now aligned with `candidate0` and the general path so all three agree.
+- **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Consider offering it to Larry.
+- **Regression guard:** the four `01_STAR/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
 
-> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal
-> Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the
-> Majority Preference Enforcement summary, and `show_runoff_percent` are **NOT**
-> engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The
-> vendored `starvote/` package still prints "No Preference" internally. Keeping the
-> engine pristine-but-for-the-two-toggles is deliberate: it makes re-pulling a
-> future upstream release trivial.
+> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the Majority Preference Enforcement summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-the-two-toggles is deliberate: it makes re-pulling a future upstream release trivial.
 
-To regenerate this list precisely at any time, run the `git diff` commands above and
-compare the `def`/`class` inventory of the two versions.
+To regenerate this list precisely at any time, run the `git diff` commands above and compare the `def`/`class` inventory of the two versions.
 
 ## How to pull a future upstream update (if ever wanted)
 
 1. Download the new pristine version (e.g. `pip download starvote==X.Y.Z --no-deps --no-binary :all:`).
 2. Tag it: copy the new `starvote/` over a clean checkout, commit, `git tag starvote-upstream-X.Y.Z`.
-3. Re-apply our diff: `git diff starvote-upstream-2.1.6 starvote-upstream-X.Y.Z` shows what
-   upstream changed; resolve against our edits listed above.
+3. Re-apply our diff: `git diff starvote-upstream-2.1.6 starvote-upstream-X.Y.Z` shows what upstream changed; resolve against our edits listed above.
 
-Because our edits are small and localized, re-applying them by hand is the
-simplest path.
+Because our edits are small and localized, re-applying them by hand is the simplest path.

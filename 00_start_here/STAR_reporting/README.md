@@ -1,13 +1,8 @@
 # STAR Reporting — reading and comparing results
 
-**One line:** how a STAR result is *reported* — the numbers (scores, runoff counts,
-percentages), what a "no preference" ballot means (**Equal Support** vs **abstention**),
-and how the two reports in this repo — **BetterVoting**'s visual display and the **LH
-`starvote` engine**'s text report — present the same election (and where they
-occasionally diverge).
+**One line:** how a STAR result is *reported* — the numbers (scores, runoff counts, percentages), what a "no preference" ballot means (**Equal Support** vs **abstention**), and how the two reports in this repo — **BetterVoting**'s visual display and the **LH `starvote` engine**'s text report — present the same election (and where they occasionally diverge).
 
-This folder is a **hub**: short, reporting-focused pages that link out to the
-canonical deep-dives rather than restate them.
+This folder is a **hub**: short, reporting-focused pages that link out to the canonical deep-dives rather than restate them.
 
 ---
 
@@ -15,15 +10,11 @@ canonical deep-dives rather than restate them.
 
 A STAR result is a short funnel, and every report shows the same stages:
 
-1. **Counts / scores** — add every star; each candidate gets a total. (STAR is
-   *summable*: precinct totals add up. → [STAR summability](../STAR_Voting/STAR_summability.md))
+1. **Counts / scores** — add every star; each candidate gets a total. (STAR is *summable*: precinct totals add up. → [STAR summability](../STAR_Voting/STAR_summability.md))
 2. **Finalists** — the two highest scorers advance.
 3. **Automatic Runoff** — each ballot goes to whichever finalist it scored higher.
-4. **Percentages** — the winner needs a majority of the voters **with a preference**
-   between the two finalists. (→ [Runoff percentages — two denominators](../STAR_Voting/runoff_percentages.md))
-5. **No-preference ballots** — ballots that score the two finalists equally are
-   **Equal Support** (counted in the score round, set aside from the runoff
-   percentage); a fully blank ballot is an **abstention**. (→ [`GLOSSARY`](../GLOSSARY.md))
+4. **Percentages** — the winner needs a majority of the voters **with a preference** between the two finalists. (→ [Runoff percentages — two denominators](../STAR_Voting/runoff_percentages.md))
+5. **No-preference ballots** — ballots that score the two finalists equally are **Equal Support** (counted in the score round, set aside from the runoff percentage); a fully blank ballot is an **abstention**. (→ [`GLOSSARY`](../GLOSSARY.md))
 
 ## The two reports
 
@@ -51,9 +42,7 @@ A STAR result is a short funnel, and every report shows the same stages:
 
 ## Worked examples — always two views
 
-House rule: every reporting example carries **two views of the same election** — the
-**BetterVoting** result (by its BV election ID) and the **LH engine** result (the BV
-JSON tabulated by LH, i.e. the `_tabulated` mirror). Compare them side by side.
+House rule: every reporting example carries **two views of the same election** — the **BetterVoting** result (by its BV election ID) and the **LH engine** result (the BV JSON tabulated by LH, i.e. the `_tabulated` mirror). Compare them side by side.
 
 | Example | BetterVoting (election ID) | LH engine (tabulated mirror) |
 |---|---|---|

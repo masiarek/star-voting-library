@@ -1,8 +1,6 @@
 # YAML Test Case — Authoring Template
 
-*A fill-in guide for contributing an election test case to this library. One
-YAML file = one complete, reproducible test: the ballots, how to count them,
-and the winner(s) the engine must produce.*
+*A fill-in guide for contributing an election test case to this library. One YAML file = one complete, reproducible test: the ballots, how to count them, and the winner(s) the engine must produce.*
 
 ---
 
@@ -28,17 +26,13 @@ Run it:
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py your_file.yaml
 ```
 
-The engine prints the annotated count to the screen and writes a full-detail
-`_tabulated.txt` sibling. If your `expected_winners` matches what the engine
-elects, the file is a valid test case.
+The engine prints the annotated count to the screen and writes a full-detail `_tabulated.txt` sibling. If your `expected_winners` matches what the engine elects, the file is a valid test case.
 
 ---
 
 ## The full template (copy & fill in)
 
-Everything below `ballots:` in the minimal version still applies; this adds
-the optional context and display fields, each with its meaning in a comment.
-Delete any optional block you don't need.
+Everything below `ballots:` in the minimal version still applies; this adds the optional context and display fields, each with its meaning in a comment. Delete any optional block you don't need.
 
 ```yaml
 election_title: "Short human title — what this case shows"
@@ -129,13 +123,11 @@ expected_winners:
 | `rrv` | scores 0–5 | Reweighted Range Voting (proportional) |
 | `allocated` | scores 0–5 | Allocated Score (proportional) |
 
-A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV
-automatically. (Rank notes inside `# comments` are ignored.)
+A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV automatically. (Rank notes inside `# comments` are ignored.)
 
 ## Ballot grid rules
 
-- **Row 1 = candidate names**, comma-separated. Every voter row must have the
-  same number of columns.
+- **Row 1 = candidate names**, comma-separated. Every voter row must have the same number of columns.
 - **Scores are `0`–`5`** (Approval: `0`/`1` only).
 - **Markers** — all tabulate as 0 but are reported honestly:
 
@@ -147,46 +139,26 @@ automatically. (Rank notes inside `# comments` are ignored.)
   | `?` | spoiled ballot |
   | `%` | spoiled **and** re-issued |
 
-- **Weighted (grouped) rows**: prefix a count — `42 × 0,3,5` (separators `×`,
-  `:`, `x`, `X`). House rule: weights must be **≥ 6** so a count is never
-  mistaken for a 0–5 score.
-- **`# comments`** are allowed at the end of any ballot row — use them to say
-  what each ballot demonstrates.
+- **Weighted (grouped) rows**: prefix a count — `42 × 0,3,5` (separators `×`, `:`, `x`, `X`). House rule: weights must be **≥ 6** so a count is never mistaken for a 0–5 score.
+- **`# comments`** are allowed at the end of any ballot row — use them to say what each ballot demonstrates.
 
 ## House style (so your case fits the library)
 
-- **Keep it small.** The fewest ballots that make the point — a handful of
-  individual voters beats 100 weighted ones. Scale up only if percentages or
-  proportional seats genuinely need it. See
-  [TIPS_choosing_voter_counts.md](TIPS_choosing_voter_counts.md).
-- **Candidate names:** common, easy to say, **distinct initials in
-  A, B, C… order** (Ann, Bob, Cal…), phonetically distinct, themed if you
-  like. Use a fresh cast per scenario; keep the same cast across a matched
-  pair of files.
-- **File name:** `NN<letter>_c<candidates>_b<ballots>_short-description.yaml`
-  — e.g. `03c_c6_b8_style-gallery.yaml` (6 candidates, 8 ballots).
+- **Keep it small.** The fewest ballots that make the point — a handful of individual voters beats 100 weighted ones. Scale up only if percentages or proportional seats genuinely need it. See [TIPS_choosing_voter_counts.md](TIPS_choosing_voter_counts.md).
+- **Candidate names:** common, easy to say, **distinct initials in A, B, C… order** (Ann, Bob, Cal…), phonetically distinct, themed if you like. Use a fresh cast per scenario; keep the same cast across a matched pair of files.
+- **File name:** `NN<letter>_c<candidates>_b<ballots>_short-description.yaml` — e.g. `03c_c6_b8_style-gallery.yaml` (6 candidates, 8 ballots).
 - **Booleans** in `options:` are written `true` / `false` (long form).
-- **Only feature the section your case teaches** — start from the options
-  block in the template and flip on just one heavier section
-  (`show_score_counts`, `show_irv`, full matrix…) if the case is *about* it.
+- **Only feature the section your case teaches** — start from the options block in the template and flip on just one heavier section (`show_score_counts`, `show_irv`, full matrix…) if the case is *about* it.
 
 ## What happens when you get it wrong (that's fine)
 
-The engine is the validator — it fails with a plain-language message, never a
-traceback: bad YAML, missing `ballots:`, uneven column counts, out-of-range
-scores, invalid characters, ranked ballots under a score method, method/seat
-mismatches. Fix and re-run. (`expected_winners` itself is checked by the
-pytest suite, not the engine — a wrong answer key shows up as a test failure.)
+The engine is the validator — it fails with a plain-language message, never a traceback: bad YAML, missing `ballots:`, uneven column counts, out-of-range scores, invalid characters, ranked ballots under a score method, method/seat mismatches. Fix and re-run. (`expected_winners` itself is checked by the pytest suite, not the engine — a wrong answer key shows up as a test failure.)
 
 ## Submitting
 
 1. Run the file through the engine; confirm the printed winner(s).
 2. Fill `expected_winners` with exactly what the engine elected.
 3. Re-run — the `_tabulated.txt` sibling regenerates.
-4. From `STARVote_LH_tabulation_engine/`, run
-   `pytest tests/test_single_winner_positive.py` — your file is discovered
-   automatically (single-winner STAR cases with `expected_winners`).
+4. From `STARVote_LH_tabulation_engine/`, run `pytest tests/test_single_winner_positive.py` — your file is discovered automatically (single-winner STAR cases with `expected_winners`).
 
-Live examples to crib from: [01_STAR — single-winner STAR Voting](../01_STAR/) —
-start with `01a_c2_b1_two-candidates.yaml` (simplest) and
-`03c_c6_b8_style-gallery.yaml` (every optional field in use).
+Live examples to crib from: [01_STAR — single-winner STAR Voting](../01_STAR/) — start with `01a_c2_b1_two-candidates.yaml` (simplest) and `03c_c6_b8_style-gallery.yaml` (every optional field in use).

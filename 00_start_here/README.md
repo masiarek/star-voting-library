@@ -1,22 +1,12 @@
 # Concepts — deep-dive pages for the important terms
 
-**New here? Start with [Ballot & Terminology Basics](ballot_and_terminology_basics.md)** — a short
-4-page reading path through the ideas people most often get wrong (terminology, scores vs. ranks,
-what counts as "ranked," and strict vs. weak ranks).
+**New here? Start with [Ballot & Terminology Basics](ballot_and_terminology_basics.md)** — a short 4-page reading path through the ideas people most often get wrong (terminology, scores vs. ranks, what counts as "ranked," and strict vs. weak ranks).
 
-Not every glossary term needs its own page — most are fine as a one-liner in
-[Glossary — voting methods & criteria](GLOSSARY.md). This folder holds the handful of concepts that
-are **load-bearing in debates** and worth a focused page with a worked example and
-**links to the test-case YAMLs** that demonstrate them.
+Not every glossary term needs its own page — most are fine as a one-liner in [Glossary — voting methods & criteria](GLOSSARY.md). This folder holds the handful of concepts that are **load-bearing in debates** and worth a focused page with a worked example and **links to the test-case YAMLs** that demonstrate them.
 
-The pages are grouped to mirror the folders: **general / cross-method** ideas sit at
-the top level, IRV-specific problems live in [`RCV_IRV/`](RCV_IRV), and STAR's own
-properties live in [`STAR_Voting/`](STAR_Voting).
+The pages are grouped to mirror the folders: **general / cross-method** ideas sit at the top level, IRV-specific problems live in [`RCV_IRV/`](RCV_IRV), and STAR's own properties live in [`STAR_Voting/`](STAR_Voting).
 
-**Two ways to browse.** The authoritative pages are organized **by method** (below). Ideas
-that cut across methods also have a **by-topic** view in [the topics index](topics/) —
-thin hubs that link to each method's treatment of one idea (so you can browse by topic in
-the GitHub file tree, not just by method). First hub: [Summability](topics/summability/).
+**Two ways to browse.** The authoritative pages are organized **by method** (below). Ideas that cut across methods also have a **by-topic** view in [the topics index](topics/) — thin hubs that link to each method's treatment of one idea (so you can browse by topic in the GitHub file tree, not just by method). First hub: [Summability](topics/summability/).
 
 ### General & cross-method
 
@@ -69,8 +59,4 @@ the GitHub file tree, not just by method). First hub: [Summability](topics/summa
 | **Tie-breaking — the full chain** | ties fall through pairwise → five-star → lot order, in both rounds | [Tie_Breaking_STAR/tie_breaking.md](STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) |
 | **Tie-breaking in BetterVoting JSON** | how a BV export pre-draws the official lot order, and its YAML mapping | [Tie_Breaking_STAR/tie_breaking_JSON.md](STAR_Voting/Tie_Breaking_STAR/tie_breaking_JSON.md) |
 
-Deeper conversation/debate scripts live beside their topics, indexed in
-[Conversation scripts — index](conversation_scripts.md) (e.g.
-[Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/favorite_betrayal_voting_301.md),
-["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)); these pages are the
-shorter, reference-style explainers the glossary links to.
+Deeper conversation/debate scripts live beside their topics, indexed in [Conversation scripts — index](conversation_scripts.md) (e.g. [Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/favorite_betrayal_voting_301.md), ["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)); these pages are the shorter, reference-style explainers the glossary links to. <!-- terminology-ok: bare RCV is inside linked page titles -->

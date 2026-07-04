@@ -14,17 +14,13 @@ Most confusion about "RCV" comes from four mix-ups: a slippery name, mistaking s
 
 ## The reading path
 
-**1. [RCV vs. IRV vs. RCV-IRV — a note on terminology](RCV_IRV/RCV-IRV-confusing-name.md)**
-"Ranked Choice Voting" is an umbrella term, not one method. In the US it almost always means **RCV-IRV (Hare)**. Start here so the words mean the same thing for everyone.
+**1. [RCV vs. IRV vs. RCV-IRV — a note on terminology](RCV_IRV/RCV-IRV-confusing-name.md)** "Ranked Choice Voting" is an umbrella term, not one method. In the US it almost always means **RCV-IRV (Hare)**. Start here so the words mean the same thing for everyone.
 
-**2. [Scores vs. ranks — don't confuse ranks and ratings](scores_and_ranks/scores_vs_ranks.md)**
-The core ballot distinction. A **rank** captures order only ("which do you prefer?"); a **score/rating** captures order *and* strength ("how much?"). Relative vs. absolute preference — and why they can crown different winners.
+**2. [Scores vs. ranks — don't confuse ranks and ratings](scores_and_ranks/scores_vs_ranks.md)** The core ballot distinction. A **rank** captures order only ("which do you prefer?"); a **score/rating** captures order *and* strength ("how much?"). Relative vs. absolute preference — and why they can crown different winners.
 
-**3. [Scoring methods aren't RCV](scoring-methods-vs-ranked-voting.md)**
-[Approval](Approval_Voting/approval_voting.md) and [STAR](STAR_Voting/STAR_start_here.md) are often lumped under "RCV," but they don't use ranked ballots at all — they're scoring (cardinal) methods, outside the ranked-voting family entirely.
+**3. [Scoring methods aren't RCV](scoring-methods-vs-ranked-voting.md)** [Approval](Approval_Voting/approval_voting.md) and [STAR](STAR_Voting/STAR_start_here.md) are often lumped under "RCV," but they don't use ranked ballots at all — they're scoring (cardinal) methods, outside the ranked-voting family entirely.
 
-**4. [Strict vs. weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)**
-Even among ranked methods, the rules differ. Many allow **[equal ranks](scores_and_ranks/weak_ranks.md)** and compare candidates **[head-to-head](RCV_Ranked_Robin/ranked_robin.md)** (that's [Ranked Robin](RCV_Ranked_Robin/ranked_robin.md) / Condorcet) — [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md) does **neither**. Clears up the most common false assumptions about RCV ballots.
+**4. [Strict vs. weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)** Even among ranked methods, the rules differ. Many allow **[equal ranks](scores_and_ranks/weak_ranks.md)** and compare candidates **[head-to-head](RCV_Ranked_Robin/ranked_robin.md)** (that's [Ranked Robin](RCV_Ranked_Robin/ranked_robin.md) / Condorcet) — [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md) does **neither**. Clears up the most common false assumptions about RCV ballots.
 
 ## One-screen summary
 

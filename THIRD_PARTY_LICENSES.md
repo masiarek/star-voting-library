@@ -5,11 +5,7 @@ This project depends on third-party packages. Their licenses are recorded below.
 ## PyYAML
 
 - **Package:** `pyyaml` (>=6.0.3)
-- **License:** MIT License — a permissive license. It allows use, copying,
-  modification, merging, publishing, distribution, sublicensing, and sale,
-  including in closed-source commercial software. The only obligation is to
-  include the copyright notice and license text in copies or substantial
-  portions of the software. No warranty is provided.
+- **License:** MIT License — a permissive license. It allows use, copying, modification, merging, publishing, distribution, sublicensing, and sale, including in closed-source commercial software. The only obligation is to include the copyright notice and license text in copies or substantial portions of the software. No warranty is provided.
 - **Verdict:** Permissive and safe to use, including commercially.
 
 ```

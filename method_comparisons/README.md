@@ -1,8 +1,6 @@
 # method_comparisons — same ballots, different methods
 
-The library's crown jewels: teaching sets where the *contrast between methods*
-is the lesson. Each set keeps its matched files together — splitting them into
-per-method folders would destroy the pedagogy.
+The library's crown jewels: teaching sets where the *contrast between methods* is the lesson. Each set keeps its matched files together — splitting them into per-method folders would destroy the pedagogy.
 
 | Set | The lesson |
 |---|---|
@@ -16,7 +14,6 @@ per-method folders would destroy the pedagogy.
 | [method_comparisons / _main — loose comparison files](_main/) | loose comparison files (e.g. STAR-vs-IRV count simplicity) |
 | [`divergence_review/`](divergence_review/INDEX.md) | the GENERATED ledger: every curated STAR election re-counted under RCV-IRV / Ranked Robin / Approval, grouped by why they disagree (refreshed by pre-commit) |
 
-The by-method view of every file in the repo is auto-generated at
-[the by-method index](../00_start_here/YAML_test_case_index/).
+The by-method view of every file in the repo is auto-generated at [the by-method index](../00_start_here/YAML_test_case_index/).
 
 # file: README.md

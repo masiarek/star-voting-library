@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_02_scoring_no_fives_to_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:29:37
 TABULATED FILE:  tie_break_02_scoring_no_fives_to_lot_tabulated.txt
-TABULATED AT:    2026-07-04 10:22:59
+TABULATED AT:    2026-07-04 11:27:45
 ======================================================================
 
 election_title: "Tie-break 02 — scoring-round tie, NO fives, five-star is a dead rung → LOT"

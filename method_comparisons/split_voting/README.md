@@ -1,19 +1,10 @@
 # Vote-Splitting / Spoiler Examples
 
-Dramatic single-winner elections where **Choose-One Plurality elects the wrong
-winner** because a majority bloc splits its vote across similar candidates — and
-**STAR elects the candidate the majority actually preferred.**
+Dramatic single-winner elections where **Choose-One Plurality elects the wrong winner** because a majority bloc splits its vote across similar candidates — and **STAR elects the candidate the majority actually preferred.**
 
-Each file declares a `blocs:` group, so the engine's `[Vote-splitting check]`
-confirms the spoiler automatically. Run any of them through the STAR engine:
+Each file declares a `blocs:` group, so the engine's `[Vote-splitting check]` confirms the spoiler automatically. Run any of them through the STAR engine:
 
-> **Why these are LH-only (house principle).** The teaching contrast here is **Plurality
-> vs STAR**, not **BV vs LH** — BetterVoting and the LH engine *agree* on these results, so
-> a BV screenshot would just duplicate the LH numbers. Two-view (BV beside LH) is reserved
-> for cases where the two **diverge** (the bug *is* the lesson — see
-> [Flat scores, ties & tie-breaking — and the BetterVoting bugs](../../01_STAR/Flat_scores_ties/),
-> [`Runoff_07`](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md))
-> or where reading BV's own UI is the point.
+> **Why these are LH-only (house principle).** The teaching contrast here is **Plurality vs STAR**, not **BV vs LH** — BetterVoting and the LH engine *agree* on these results, so a BV screenshot would just duplicate the LH numbers. Two-view (BV beside LH) is reserved for cases where the two **diverge** (the bug *is* the lesson — see [Flat scores, ties & tie-breaking — and the BetterVoting bugs](../../01_STAR/Flat_scores_ties/), [`Runoff_07`](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)) or where reading BV's own UI is the point.
 
 ```
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
@@ -26,10 +17,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
 | `02_icecream_chocolate_split.yaml` | Chocolate lovers (66%) split across 3 chocolates | **Vanilla (34%)** | **MilkChoco** |
 | `03_lunch_veggie_vs_meat.yaml` | A 70% veggie majority splits across 3 dishes | **BeefBurger (30%)** | **VeggieCurry** |
 
-In every case the bloc is an outright majority, yet Choose-One hands the win to
-the lone outsider. STAR lets each voter score every candidate, so the bloc isn't
-split — and the automatic runoff elects the majority's compromise pick.
+In every case the bloc is an outright majority, yet Choose-One hands the win to the lone outsider. STAR lets each voter score every candidate, so the bloc isn't split — and the automatic runoff elects the majority's compromise pick.
 
-> Teaching tip: show the **Choose-One first choices** line first (the wrong
-> winner) and let it sting, then reveal the STAR result. The `[Vote-splitting
-> check]` block states the verdict in numbers.
+> Teaching tip: show the **Choose-One first choices** line first (the wrong winner) and let it sting, then reveal the STAR result. The `[Vote-splitting check]` block states the verdict in numbers.

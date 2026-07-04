@@ -2,11 +2,7 @@
 
 *A ranked method that compares every candidate head-to-head and elects whoever beats the most rivals. Same ranked ballot as IRV, but a completely different — and far more transparent — way of counting it.*
 
-→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo)
-shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*;
-the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the
-**Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`).
-· Topic hub: [Summability](../topics/summability/).
+→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../topics/summability/).
 
 ---
 
@@ -37,9 +33,7 @@ Because it reads every ranking against every opponent, Ranked Robin elects the c
 
 ## A worked example — the consensus center wins the round-robin
 
-Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). Run it:
-[`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml)
-(or paste the `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html)).
+Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). Run it: [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) (or paste the `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html)).
 
 ```
 4 : Ada > Ben > Cara > Dan
@@ -65,13 +59,7 @@ Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). R
 | Ada | 1 | 2 | −1 |
 | Dan | 0 | 3 | −3 |
 
-**Ben wins Ranked Robin** by beating everyone head-to-head (he's the Condorcet winner).
-The kicker: **Ada and Dan each had *more* first-choice votes (4 apiece) than Ben (3)** — under
-Plurality or a first-past-the-post lens, Ben looks like an also-ran. Ranked Robin reads the
-*whole* ballot, so the candidate the majority prefers in every matchup wins, not the one
-with the biggest first-choice pile. (Verified on the engine; the
-[`pref_voting` cross-check](../tabulation_engines/cross_checking_with_pref_voting.md)
-confirms Copeland = Ben, and IRV happens to agree here too.)
+**Ben wins Ranked Robin** by beating everyone head-to-head (he's the Condorcet winner). The kicker: **Ada and Dan each had *more* first-choice votes (4 apiece) than Ben (3)** — under Plurality or a first-past-the-post lens, Ben looks like an also-ran. Ranked Robin reads the *whole* ballot, so the candidate the majority prefers in every matchup wins, not the one with the biggest first-choice pile. (Verified on the engine; the [`pref_voting` cross-check](../tabulation_engines/cross_checking_with_pref_voting.md) confirms Copeland = Ben, and IRV happens to agree here too.)
 
 ## For balance — its limits
 
@@ -79,27 +67,13 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 
 ## Now you can tabulate it — the `pref_voting` engine
 
-The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/)
-computes this method on any example election, under its **academic name, Copeland**.
+The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) computes this method on any example election, under its **academic name, Copeland**.
 
-> **The LH engine now tabulates Ranked Robin first-class.** Set
-> `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) and the
-> engine prints the **round-robin report** — ballots, the full pairwise table, and each
-> candidate's win-loss record — instead of the RCV-IRV elimination rounds:
-> ```
-> python starvote_larry_hastings.py 01_Single_winner/ranked_robin_consensus_center.yaml
-> ```
-> It flags a **cycle** (when the top candidates tie on wins) and points to
-> [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check,
-> [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py)
-> (in the `pref_voting` engine) computes the same result a second way.
+> **The LH engine now tabulates Ranked Robin first-class.** Set `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) and the engine prints the **round-robin report** — ballots, the full pairwise table, and each candidate's win-loss record — instead of the RCV-IRV elimination rounds: ``` python starvote_larry_hastings.py 01_Single_winner/ranked_robin_consensus_center.yaml ``` It flags a **cycle** (when the top candidates tie on wins) and points to [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check, [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py) (in the `pref_voting` engine) computes the same result a second way.
 
 ### Options for an RCV-RR YAML file — and what shows where
 
-The Ranked Robin path follows the same **minimal echo / always-full `_tabulated`**
-discipline as STAR ([reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md)).
-It honors **three** `options:` (the rest of the STAR option block is silently ignored —
-it doesn't error, it just does nothing for RR):
+The Ranked Robin path follows the same **minimal echo / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
 
 | Option | Default | Effect on RCV-RR |
 |--------|:-------:|------------------|
@@ -107,9 +81,7 @@ it doesn't error, it just does nothing for RR):
 | `collapse_ballots` | `true` | `true` → identical ballots shown as `N × ballot`; `false` → one row per voter. |
 | `count_separator` | `×` | The glyph between the count and the ballot (`×`, `:`, or `x`/`X`). |
 
-Everything else — `matrix_finalists_only`, `show_condorcet`, `show_score_counts`,
-`show_runoff_percent`, `brief`, `show_description` — is **STAR-specific** and has no
-effect here (RR has no finalists, no score round, and no automatic runoff).
+Everything else — `matrix_finalists_only`, `show_condorcet`, `show_score_counts`, `show_runoff_percent`, `brief`, `show_description` — is **STAR-specific** and has no effect here (RR has no finalists, no score round, and no automatic runoff).
 
 **What you'll see.** Take this 7-ballot, 3-candidate file:
 
@@ -122,10 +94,7 @@ ballots: |-
   2:Cara>Ben>Ada
 ```
 
-The **on-screen echo** (compact — no `show_matrix`) shows the ballots, the aligned
-head-to-head list, the win-loss record table, and the winner. The record table reports
-the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss
-count and total margin:
+The **on-screen echo** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -151,10 +120,7 @@ Winner — Ranked Robin (RCV-RR): Ben
    beats every opponent head-to-head — the Condorcet winner.
 ```
 
-The **`_tabulated` mirror** is identical *plus* the full N×N pairwise matrix — the
-Ranked Robin tally itself — inserted before the win-loss record (each cell reads
-`For - Equal Support - Against`, row vs column; the middle column is `0` here because
-these are strict ranks with no equal support):
+The **`_tabulated` mirror** is identical *plus* the full N×N pairwise matrix — the Ranked Robin tally itself — inserted before the win-loss record (each cell reads `For - Equal Support - Against`, row vs column; the middle column is `0` here because these are strict ranks with no equal support):
 
 ```text
 --- Pairwise (Round-Robin) Matrix ---
@@ -167,24 +133,11 @@ Legend: For - Equal Support - Against   (row vs column)
   Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |
 ```
 
-Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which
-is what [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml)
-does, since the matrix is the point of that worked example.
+Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which is what [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) does, since the matrix is the point of that worked example.
 
-> **Why this format.** The two conventions every source agrees on are the **preference
-> (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and
-> calls the matrix the tool "for making sense of the ballot data," and the academic
-> [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the
-> outranking matrix as the standard presentation (row = "runner," column = "opponent,"
-> diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`)
-> as an explicit column, since there's no finalized public-facing spec to defer to. Our
-> tie-break is **total margin, then lot order** — a deliberate, fully-reported choice
-> (the record table shows the margin that settles it); it differs from Equal Vote's
-> published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option
-> among several until a standard settles. See [cycle resolution](cycle_resolution.md).
+> **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
 
-**Copeland = Ranked Robin = Consensus Voting = RCV-RR** — *the same core method wearing
-different brand names from different proponent groups:*
+**Copeland = Ranked Robin = Consensus Voting = RCV-RR** — *the same core method wearing different brand names from different proponent groups:*
 
 | Name | Who calls it that |
 |------|-------------------|
@@ -193,18 +146,9 @@ different brand names from different proponent groups:*
 | **Consensus Voting / Consensus Choice** | **Better Choices for Democracy** |
 | **RCV-RR** | this repo's house compound (ranked ballot + Ranked-Robin count) |
 
-They're the **same idea**: elect whoever wins the most head-to-head matchups (the
-Condorcet/Copeland winner). They agree on the winner whenever a Condorcet winner exists —
-i.e. almost always — and differ *only* in the **cycle/tie-break rule** (Ranked Robin: sum
-of margins; Consensus Choice: "Most Wins, Smallest Loss"; textbook Copeland: by score). So
-treat them as one method with several brands, not byte-identical algorithms.
+They're the **same idea**: elect whoever wins the most head-to-head matchups (the Condorcet/Copeland winner). They agree on the winner whenever a Condorcet winner exists — i.e. almost always — and differ *only* in the **cycle/tie-break rule** (Ranked Robin: sum of margins; Consensus Choice: "Most Wins, Smallest Loss"; textbook Copeland: by score). So treat them as one method with several brands, not byte-identical algorithms.
 
-> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the
-> friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly
-> parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to
-> the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus
-> Voting / Consensus Choice** once as the advocacy brand, then move on. (Same
-> meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md).)
+> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md).)
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:
@@ -213,10 +157,7 @@ python pref_voting_tabulation.py example_tennessee.yaml
 #   Copeland   pref_voting=Nashville   (= the Ranked Robin / Consensus winner)
 ```
 
-Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **independent
-Python reference** to reconcile BV's RCV-RR results against — the same cross-checking we do
-for STAR and RCV-IRV. Details:
-[Cross-checking the LH engine with pref_voting](../tabulation_engines/cross_checking_with_pref_voting.md).
+Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **independent Python reference** to reconcile BV's RCV-RR results against — the same cross-checking we do for STAR and RCV-IRV. Details: [Cross-checking the LH engine with pref_voting](../tabulation_engines/cross_checking_with_pref_voting.md).
 
 ---
 

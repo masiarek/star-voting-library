@@ -1,12 +1,8 @@
 # LINKS — source-of-truth registry
 
-The single place that maps a **short name** to a URL. Scripts and READMEs in this
-repo reference resources by short name only (never by raw URL), so when a link
-changes you fix it here once.
+The single place that maps a **short name** to a URL. Scripts and READMEs in this repo reference resources by short name only (never by raw URL), so when a link changes you fix it here once.
 
-Convention: reference slides as `[SLIDE] <Short name> — "slide title"` and docs as
-`<Short name>`. Bump **Last reviewed** whenever you edit a source, then grep the
-scripts for its short name to catch stale references.
+Convention: reference slides as `[SLIDE] <Short name> — "slide title"` and docs as `<Short name>`. Bump **Last reviewed** whenever you edit a source, then grep the scripts for its short name to catch stale references.
 
 _Last full review: 2026-06-21._
 
@@ -14,9 +10,7 @@ _Last full review: 2026-06-21._
 
 ## Master index (start here)
 
-> The full topic-by-topic FAQ for the wider STAR/RCV knowledge base — every
-> Google-doc note, organized. When a source isn't yet pulled into this repo, look
-> here first.
+> The full topic-by-topic FAQ for the wider STAR/RCV knowledge base — every Google-doc note, organized. When a source isn't yet pulled into this repo, look here first.
 
 | Short name | Purpose | URL | Last reviewed |
 |------------|---------|-----|---------------|
@@ -53,8 +47,7 @@ _Last full review: 2026-06-21._
 
 ## RCV-IRV exhausted-ballot source notes (research)
 
-> All **RCV-IRV-specific** — the research behind `exhausted_ballots_301.md`. Not STAR
-> material; kept here so the critique stays sourced and separable.
+> All **RCV-IRV-specific** — the research behind `exhausted_ballots_301.md`. Not STAR material; kept here so the critique stays sourced and separable.
 
 | Short name | Purpose | URL | Last reviewed |
 |------------|---------|-----|---------------|
@@ -141,6 +134,4 @@ These live in this repo and stay exactly in sync (prefer them for live demos):
 | **Spoiler demos** | `split_voting/` |
 | **Two-round demo** | `01_Single_winner/00a_c2_b1_two-candidates.yaml` |
 
-> Note: deep links of the form `…/edit#slide=id.g…` break when a slide is copied
-> or duplicated. Prefer searching the slide **title** inside the deck over saving
-> a deep link.
+> Note: deep links of the form `…/edit#slide=id.g…` break when a slide is copied or duplicated. Prefer searching the slide **title** inside the deck over saving a deep link.

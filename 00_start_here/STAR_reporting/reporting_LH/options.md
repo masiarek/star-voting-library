@@ -1,9 +1,6 @@
 # LH reporting options — what each `options:` flag shows
 
-**One line:** the `options:` block in a YAML election controls **what the on-screen
-report shows** — it changes the *display*, never the result. (The saved
-`_tabulated.txt` ignores these and always renders everything; house default on
-screen is "less is more.")
+**One line:** the `options:` block in a YAML election controls **what the on-screen report shows** — it changes the *display*, never the result. (The saved `_tabulated.txt` ignores these and always renders everything; house default on screen is "less is more.")
 
 → Up: [How the LH engine reports](README.md) · hub: [STAR Reporting](../) · house defaults: [CLAUDE.md — working guidance for this repo](../../../CLAUDE.md).
 
@@ -11,8 +8,7 @@ screen is "less is more.")
 
 ## The block, option by option
 
-This is the block from the 3-candidate demo
-([`flat_scores_abstention_c3_b8.yaml`](../../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml)):
+This is the block from the 3-candidate demo ([`flat_scores_abstention_c3_b8.yaml`](../../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml)):
 
 ```yaml
 options:
@@ -39,21 +35,11 @@ options:
 
 ## What this block produces
 
-With the values above, the on-screen report shows: the **finalists-only matrix**, the
-ballots **one per row**, both rounds (headers collapsed by `brief`), and the
-**runoff-percentage line** — but **no** Score Distribution, **no** Condorcet line, and
-**no** IRV divergence. Turning `show_score_counts` and `show_condorcet` on (as the
-demo file now does) adds those two sections back; that's the only difference between a
-lean teaching echo and a fuller study render.
+With the values above, the on-screen report shows: the **finalists-only matrix**, the ballots **one per row**, both rounds (headers collapsed by `brief`), and the **runoff-percentage line** — but **no** Score Distribution, **no** Condorcet line, and **no** IRV divergence. Turning `show_score_counts` and `show_condorcet` on (as the demo file now does) adds those two sections back; that's the only difference between a lean teaching echo and a fuller study render.
 
 ## Two things that never change with options
 
-1. **The winner and all the numbers** — options only hide or show sections, never alter
-   the tabulation.
-2. **The `_tabulated.txt` mirror** — it always forces every analysis on (full matrix,
-   Condorcet, score counts, IRV, the runoff funnel), so the saved audit copy is
-   complete regardless of what the on-screen echo chose to show.
+1. **The winner and all the numbers** — options only hide or show sections, never alter the tabulation.
+2. **The `_tabulated.txt` mirror** — it always forces every analysis on (full matrix, Condorcet, score counts, IRV, the runoff funnel), so the saved audit copy is complete regardless of what the on-screen echo chose to show.
 
-The recommended minimal block and the per-option house defaults live in
-[CLAUDE.md — working guidance for this repo](../../../CLAUDE.md); the full report section-by-section is
-[Reading a STAR report](../../tabulation_engines/LH_starvote/reading_a_star_report.md).
+The recommended minimal block and the per-option house defaults live in [CLAUDE.md — working guidance for this repo](../../../CLAUDE.md); the full report section-by-section is [Reading a STAR report](../../tabulation_engines/LH_starvote/reading_a_star_report.md).

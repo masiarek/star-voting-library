@@ -1,9 +1,6 @@
 # Where the two reports differ — abstentions vs Equal Support
 
-**One line:** BetterVoting and the LH engine **agree on the winner and the runoff
-margin** on every election. They can differ in one bookkeeping detail — **how a
-"no preference" ballot is classified** — which shifts the abstention count, the tally
-total, and the score totals, but never the result.
+**One line:** BetterVoting and the LH engine **agree on the winner and the runoff margin** on every election. They can differ in one bookkeeping detail — **how a "no preference" ballot is classified** — which shifts the abstention count, the tally total, and the score totals, but never the result.
 
 → Hub: [STAR Reporting](README.md) · canonical write-up: [BetterVoting and the LH engine — when the reports differ](../tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support).
 
@@ -20,20 +17,11 @@ total, and the score totals, but never the result.
 | Runoff Dog / Cat | 190 / 173 | 190 / 173 |
 | **Winner** | **Dog** | **Dog** |
 
-The whole gap is one rule: **BetterVoting files a flat ballot (every candidate scored
-the same) as an *abstention* and drops it; the LH engine counts it as a cast ballot
-and, in the runoff, as Equal Support.** `92 + 6 = 98`; the dropped flat ballots
-included an all-5s and an all-4s vote, whose `5 + 4 = 9` stars are exactly the
-per-candidate score-total gap.
+The whole gap is one rule: **BetterVoting files a flat ballot (every candidate scored the same) as an *abstention* and drops it; the LH engine counts it as a cast ballot and, in the runoff, as Equal Support.** `92 + 6 = 98`; the dropped flat ballots included an all-5s and an all-4s vote, whose `5 + 4 = 9` stars are exactly the per-candidate score-total gap.
 
 ## Why "no preference" ≠ "abstention"
 
-A ballot that scores everyone the same is a **cast vote** with no preference between
-the finalists — that's **Equal Support**, which is correctly *neutral in the runoff
-denominator* but still **counts in the score round**. An **abstention** is a ballot
-with no score recorded at all (a blank). Folding the first into the second mislabels
-engaged voters and makes published score totals miss a hand count. (Terms:
-[`GLOSSARY`](../GLOSSARY.md) · the denominator: [Runoff percentages](../STAR_Voting/runoff_percentages.md).)
+A ballot that scores everyone the same is a **cast vote** with no preference between the finalists — that's **Equal Support**, which is correctly *neutral in the runoff denominator* but still **counts in the score round**. An **abstention** is a ballot with no score recorded at all (a blank). Folding the first into the second mislabels engaged voters and makes published score totals miss a hand count. (Terms: [`GLOSSARY`](../GLOSSARY.md) · the denominator: [Runoff percentages](../STAR_Voting/runoff_percentages.md).)
 
 ## Two views of the same election
 
@@ -48,8 +36,7 @@ The cleanest proof is the 3-candidate case shown both ways:
 
 ## Same numbers, different words
 
-The two reports never disagree on the runoff numbers — they just **name and format**
-them differently, because one is a visual table and the other is a text audit report.
+The two reports never disagree on the runoff numbers — they just **name and format** them differently, because one is a visual table and the other is a text audit report.
 
 | BetterVoting (Race Details column) | LH engine (the runoff line) | What it is |
 |---|---|---|
@@ -58,21 +45,9 @@ them differently, because one is a visual table and the other is a text audit re
 | **% Runoff Votes** | not a separate line; the `_tabulated` "Runoff math" funnel carries the all-ballots total | share of **all** ballots (Equal Support left in the denominator) |
 | *(denominator: a column header)* | **`Voters with a preference: N of TOTAL (E Equal Support)`** | LH states the denominator **inline** instead of in a header |
 
-**Why the words differ.** BetterVoting is a **visual, voter-facing** display: it can
-afford several columns and let you read whichever percentage you want, with the
-denominator implied by the header. The LH engine is a **text audit report**: it can't
-assume you've read a column header, so it folds the decisive count and percentage into
-one **self-reconciling line** and *names* the denominator (`Voters with a preference`)
-— the one thing BetterVoting's two percent columns leave you to infer.
+**Why the words differ.** BetterVoting is a **visual, voter-facing** display: it can afford several columns and let you read whichever percentage you want, with the denominator implied by the header. The LH engine is a **text audit report**: it can't assume you've read a column header, so it folds the decisive count and percentage into one **self-reconciling line** and *names* the denominator (`Voters with a preference`) — the one thing BetterVoting's two percent columns leave you to infer.
 
-**Why there are two percentages at all.** When some voters rate the two finalists
-equally (**Equal Support**), "what fraction did the winner get?" has two honest answers
-— out of *everyone*, or out of only the voters who *picked* between the two finalists.
-BetterVoting prints both; the LH line prints the **decisive** one (decided voters) and
-names it, then expands the full funnel in `_tabulated`. With no Equal Support the two
-percentages are identical; with Equal Support they diverge (e.g. the flat-scores
-`4 of 8` case). So: `LH "Boston 2 (67%)"` = `BV Runoff Votes (2)` + `BV % Between
-Finalists (67%)`, in one line that says what it's dividing by.
+**Why there are two percentages at all.** When some voters rate the two finalists equally (**Equal Support**), "what fraction did the winner get?" has two honest answers — out of *everyone*, or out of only the voters who *picked* between the two finalists. BetterVoting prints both; the LH line prints the **decisive** one (decided voters) and names it, then expands the full funnel in `_tabulated`. With no Equal Support the two percentages are identical; with Equal Support they diverge (e.g. the flat-scores `4 of 8` case). So: `LH "Boston 2 (67%)"` = `BV Runoff Votes (2)` + `BV % Between Finalists (67%)`, in one line that says what it's dividing by.
 
 ## Evidence & the filed issue
 

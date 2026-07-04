@@ -1,15 +1,8 @@
 # pref_voting Tabulation Engine (independent cross-check)
 
-A third tabulation engine for the repo — but with a job the other two don't have:
-it's the **independent referee.** It wraps Eric Pacuit's
-[`pref_voting`](https://github.com/voting-tools/pref_voting) library (a peer-reviewed
-Python social-choice package) and runs it on the *same* YAML elections as the LH and
-RCV-IRV engines, then **compares the results** so we know our winners are right, not just
-self-consistent.
+A third tabulation engine for the repo — but with a job the other two don't have: it's the **independent referee.** It wraps Eric Pacuit's [`pref_voting`](https://github.com/voting-tools/pref_voting) library (a peer-reviewed Python social-choice package) and runs it on the *same* YAML elections as the LH and RCV-IRV engines, then **compares the results** so we know our winners are right, not just self-consistent.
 
-Unlike the [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine), `pref_voting` is **not
-vendored** — it's a large, actively-maintained PyPI package, so it's an optional
-dependency:
+Unlike the [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine), `pref_voting` is **not vendored** — it's a large, actively-maintained PyPI package, so it's an optional dependency:
 
 ```bash
 pip install pref_voting        # or: pip install -e STARVote_LH_tabulation_engine[crosscheck]
@@ -25,8 +18,7 @@ python pref_voting_tabulation.py example_tennessee.yaml
 python pref_voting_tabulation.py --all
 ```
 
-Any STAR-style (score) **or** ranked (`A>B>C`) YAML works — score ballots are converted to
-rankings the same way the engines do (higher score = higher preference, 0 = unranked).
+Any STAR-style (score) **or** ranked (`A>B>C`) YAML works — score ballots are converted to rankings the same way the engines do (higher score = higher preference, 0 = unranked).
 
 ## What it checks
 
@@ -39,32 +31,21 @@ rankings the same way the engines do (higher score = higher preference, 0 = unra
 | **Borda** | bonus |
 | **STAR** | *not available* — `pref_voting` has no STAR; the runoff is covered by the STAR positive tests |
 
-When `pref_voting` reports a **tie** (a set of co-winners), the cross-check only requires
-the LH engine's pick to be *among* them — cross-engine tie-breaking legitimately differs
-(e.g. a 1–1 IRV final round, or bullet/truncated ballots).
+When `pref_voting` reports a **tie** (a set of co-winners), the cross-check only requires the LH engine's pick to be *among* them — cross-engine tie-breaking legitimately differs (e.g. a 1–1 IRV final round, or bullet/truncated ballots).
 
 ## Status
 
-Run across the repo's single-winner elections: **0 mismatches** — the LH engine's
-Condorcet / IRV / Plurality machinery is independently confirmed. Wired into
-[`tests/test_pref_voting_crosscheck.py`](../../tests/test_pref_voting_crosscheck.py)
-(skips cleanly if `pref_voting` isn't installed). Full write-up:
-[Cross-checking the LH engine with pref_voting](../../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
+Run across the repo's single-winner elections: **0 mismatches** — the LH engine's Condorcet / IRV / Plurality machinery is independently confirmed. Wired into [`tests/test_pref_voting_crosscheck.py`](../../tests/test_pref_voting_crosscheck.py) (skips cleanly if `pref_voting` isn't installed). Full write-up: [Cross-checking the LH engine with pref_voting](../../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
 
 ## Ranked Robin report (independent cross-check)
 
-The **LH engine now tabulates Ranked Robin first-class** — set `voting_method: RankedRobin`
-and it prints the round-robin (ballots + pairwise table + win-loss record) itself. This
-script is the **independent second opinion**: a dependency-light Ranked Robin (RCV-RR /
-Copeland) report you can run beside the LH engine to confirm the head-to-heads agree:
+The **LH engine now tabulates Ranked Robin first-class** — set `voting_method: RankedRobin` and it prints the round-robin (ballots + pairwise table + win-loss record) itself. This script is the **independent second opinion**: a dependency-light Ranked Robin (RCV-RR / Copeland) report you can run beside the LH engine to confirm the head-to-heads agree:
 
 ```bash
 python ranked_robin_report.py ../01_Single_winner/ranked_robin_consensus_center.yaml
 ```
 
-It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland
-cross-check) and **flags a cycle** when the leaders tie on wins — pointing to
-[Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
+It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when the leaders tie on wins — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
 
 ## Files
 

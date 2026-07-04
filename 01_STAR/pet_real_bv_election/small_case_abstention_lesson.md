@@ -1,25 +1,16 @@
 # When "no preference" gets called an "abstention" — a real BetterVoting case
 
-**One line:** in a real eight-ballot STAR election, BetterVoting reports **3
-abstentions** — but only **one** ballot is actually blank. The other two are an
-all-zero ballot and a voter who scored **every** candidate **3**. This small case
-(three candidates, so it separates ideas a two-candidate race blurs) is the cleanest
-picture of the [abstention reconciliation](BV_result_snapshot.md) seen at scale in
-the 461-ballot [pet race](README.md).
+**One line:** in a real eight-ballot STAR election, BetterVoting reports **3 abstentions** — but only **one** ballot is actually blank. The other two are an all-zero ballot and a voter who scored **every** candidate **3**. This small case (three candidates, so it separates ideas a two-candidate race blurs) is the cleanest picture of the [abstention reconciliation](BV_result_snapshot.md) seen at scale in the 461-ballot [pet race](README.md).
 
 > Filed with BetterVoting: **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**.
 
-→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine)
-· [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support) (both)
-· [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md)
-· What an "Equal Support" ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
+→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine) · [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support) (both) · [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md) · What an "Equal Support" ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
 
 ---
 
 ## The election
 
-A real BetterVoting STAR election (**BV id `dq2dmm`**, captured 2026-06-28), three
-candidates `Apple` / `Banana` / `Cherry`, eight ballots:
+A real BetterVoting STAR election (**BV id `dq2dmm`**, captured 2026-06-28), three candidates `Apple` / `Banana` / `Cherry`, eight ballots:
 
 | # | Apple | Banana | Cherry | What it is |
 |---|--:|--:|--:|---|
@@ -38,9 +29,7 @@ candidates `Apple` / `Banana` / `Cherry`, eight ballots:
 
 ## Three ideas a third candidate pulls apart
 
-With only two candidates, "no preference," "flat ballot," and "abstention" all
-collapse into the same thing. Add a third candidate and they separate — and you can
-see exactly where BetterVoting's rule sits:
+With only two candidates, "no preference," "flat ballot," and "abstention" all collapse into the same thing. Add a third candidate and they separate — and you can see exactly where BetterVoting's rule sits:
 
 | Ballot | True abstention? (blank) | Flat? (BV "abstention") | Equal Support in runoff? (Apple = Banana) |
 |---|:--:|:--:|:--:|
@@ -50,16 +39,10 @@ see exactly where BetterVoting's rule sits:
 | `5,5,0` | — | — *(Cherry differs)* | ✅ |
 | **Count** | **1** | **3** | **4** |
 
-- **BetterVoting** flags a ballot as an *abstention* when it is **flat** (every
-  candidate equal) → it counts **3** (the blank, `0,0,0`, **and** `3,3,3`) and
-  tallies 5.
-- **STAR / the [LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md)** only calls the **blank** an abstention (**1**); the
-  runoff sets aside the **4** ballots with no preference *between the two finalists*
-  as **Equal Support** — which includes `5,5,0` but counts all of them in the score
-  round.
+- **BetterVoting** flags a ballot as an *abstention* when it is **flat** (every candidate equal) → it counts **3** (the blank, `0,0,0`, **and** `3,3,3`) and tallies 5.
+- **STAR / the [LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md)** only calls the **blank** an abstention (**1**); the runoff sets aside the **4** ballots with no preference *between the two finalists* as **Equal Support** — which includes `5,5,0` but counts all of them in the score round.
 
-So the two notions genuinely disagree on two ballots: `3,3,3` (a real, engaged vote
-BetterVoting drops) and `5,5,0` (Equal Support BetterVoting keeps).
+So the two notions genuinely disagree on two ballots: `3,3,3` (a real, engaged vote BetterVoting drops) and `5,5,0` (Equal Support BetterVoting keeps).
 
 ## Two reports
 
@@ -106,17 +89,11 @@ and in the saved `_tabulated` copy, the same as a funnel that adds up:
            Banana 3 (75%)  ·  Apple 1 (25%)
 ```
 
-Cherry's low scores still **counted** (they're inside the 7) — they just didn't make
-the top two. The 4 Equal Support ballots counted in the score round and are set aside
-only from the runoff percentage; 4 voters had a preference, and Banana takes 3 of
-them (75%), clearing the majority of 3.
+Cherry's low scores still **counted** (they're inside the 7) — they just didn't make the top two. The 4 Equal Support ballots counted in the score round and are set aside only from the runoff percentage; 4 voters had a preference, and Banana takes 3 of them (75%), clearing the majority of 3.
 
 ## The LH report (echo)
 
-This is a small election, so here is the **on-screen echo** in full (the saved
-[`flat_scores_abstention_c3_b8_tabulated.txt`](pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt)
-mirror additionally forces the full N×N matrix, the Condorcet line, and the
-"Runoff math" funnel):
+This is a small election, so here is the **on-screen echo** in full (the saved [`flat_scores_abstention_c3_b8_tabulated.txt`](pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) mirror additionally forces the full N×N matrix, the Condorcet line, and the "Runoff math" funnel):
 
 ```
 --- Runoff (Preference) Matrix ---
@@ -164,28 +141,17 @@ Automatic Runoff Round
 
 A ballot that scores everyone the same is a **vote**, not a missing one:
 
-1. **The `3,3,3` voter participated.** Calling it an "abstention" tells an auditor the
-   ballot was empty. It wasn't — Cherry got a 3 too.
-2. **In STAR the score round adds every star.** Dropping flat ballots lowers the
-   totals and makes BetterVoting's published numbers fail a hand count of the ballots.
-3. **"No preference" already has a correct home: Equal Support** — counted in the
-   score round, neutral only in the runoff denominator. Folding it into "abstention"
-   conflates "no preference between these two" with "didn't vote."
+1. **The `3,3,3` voter participated.** Calling it an "abstention" tells an auditor the ballot was empty. It wasn't — Cherry got a 3 too.
+2. **In STAR the score round adds every star.** Dropping flat ballots lowers the totals and makes BetterVoting's published numbers fail a hand count of the ballots.
+3. **"No preference" already has a correct home: Equal Support** — counted in the score round, neutral only in the runoff denominator. Folding it into "abstention" conflates "no preference between these two" with "didn't vote."
 
 ## How this scales
 
-The full [pet race](README.md) (461 ballots) shows the identical rule at size:
-BetterVoting reports **6 abstentions**, all flat ballots — including one voter who
-scored **all seven** candidates **5** and another **all 4**. Frozen evidence:
-[BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md).
+The full [pet race](README.md) (461 ballots) shows the identical rule at size: BetterVoting reports **6 abstentions**, all flat ballots — including one voter who scored **all seven** candidates **5** and another **all 4**. Frozen evidence: [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md).
 
 ## Variants & reproduction
 
-- **Even simpler (2 candidates):** [The minimal case](small_abstention_c2_b5_lesson.md)
-  — with only two candidates a `5,5` *is* flat, so BetterVoting flags it directly
-  (2 abstentions / 3 tallied). Good for the tightest one-ballot statement of the bug;
-  this 3-candidate case is better for showing *why* flat ≠ no-preference.
+- **Even simpler (2 candidates):** [The minimal case](small_abstention_c2_b5_lesson.md) — with only two candidates a `5,5` *is* flat, so BetterVoting flags it directly (2 abstentions / 3 tallied). Good for the tightest one-ballot statement of the bug; this 3-candidate case is better for showing *why* flat ≠ no-preference.
 - **Synthetic illustration:** [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
 - **Reproduce on BetterVoting:** [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
-- **The reconciliation / issue write-up:** [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
-  (→ [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407))
+- **The reconciliation / issue write-up:** [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md) (→ [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407))

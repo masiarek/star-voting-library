@@ -1,17 +1,11 @@
 # BetterVoting result — frozen snapshot (pet race)
 
-**Why this file exists:** BetterVoting (<https://bettervoting.com/pet/results>) is a
-**live** result that can change if the election is recounted, re-opened, or the
-platform's tabulation is updated. Our lessons cite specific numbers, so we freeze
-BetterVoting's reported result **as captured on the date below**. If the live page
-ever differs from this snapshot, *this file is the version our lessons describe* —
-update the lessons and this snapshot together, deliberately.
+**Why this file exists:** BetterVoting (<https://bettervoting.com/pet/results>) is a **live** result that can change if the election is recounted, re-opened, or the platform's tabulation is updated. Our lessons cite specific numbers, so we freeze BetterVoting's reported result **as captured on the date below**. If the live page ever differs from this snapshot, *this file is the version our lessons describe* — update the lessons and this snapshot together, deliberately.
 
 - **Captured:** 2026-06-28
 - **BetterVoting election id:** `pet` ("What Makes the Best Pet?")
 - **Live result (may change):** <https://bettervoting.com/pet/results>
-- **Frozen raw export (this folder):** [`best_pet_c7_b461_bv_export.json`](best_pet_c7_b461_bv_export.json)
-  — the full BetterVoting JSON (461 ballots + BetterVoting's own `Results`).
+- **Frozen raw export (this folder):** [`best_pet_c7_b461_bv_export.json`](best_pet_c7_b461_bv_export.json) — the full BetterVoting JSON (461 ballots + BetterVoting's own `Results`).
 - **Converted election (tabulated by the LH engine):** [`best_pet_c7_b461.yaml`](best_pet_c7_b461.yaml)
 
 ## BetterVoting's reported result (frozen)
@@ -28,8 +22,7 @@ From the export's `Results[0].summaryData`:
 
 ## The 6 ballots BetterVoting counts as "abstentions"
 
-All six are **flat** ballots (every candidate scored the same). Extracted from the
-frozen JSON (candidate order: Bird, Cat, Python, Dog, Fish, Rabbit, Rat):
+All six are **flat** ballots (every candidate scored the same). Extracted from the frozen JSON (candidate order: Bird, Cat, Python, Dog, Fish, Rabbit, Rat):
 
 ```
 [0,0,0,0,0,0,0]  ×3   all-zero  (cast: rates everyone zero)
@@ -50,10 +43,7 @@ frozen JSON (candidate order: Bird, Cat, Python, Dog, Fish, Rabbit, Rat):
 | Voters with a preference | 363 | 363 |
 | **Winner** | **Dog** | **Dog** |
 
-The whole gap is one classification choice: BetterVoting files **flat / Equal
-Support** ballots under *abstention* and drops their stars. `92 + 6 = 98`; the
-all-5s + all-4s ballots add `5 + 4 = 9` to every candidate — exactly the score-total
-gap. The winner and runoff margin are identical.
+The whole gap is one classification choice: BetterVoting files **flat / Equal Support** ballots under *abstention* and drops their stars. `92 + 6 = 98`; the all-5s + all-4s ballots add `5 + 4 = 9` to every candidate — exactly the score-total gap. The winner and runoff margin are identical.
 
 ## See also
 

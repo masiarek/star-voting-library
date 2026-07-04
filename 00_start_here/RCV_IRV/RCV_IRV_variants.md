@@ -6,9 +6,7 @@
 
 ## How the methods divide (family tree)
 
-Every method below reads the **same ranked ballot**; they differ in *what they do with
-it*. ✅ marks the **Condorcet-safe** methods (always elect the head-to-head winner);
-❌ marks Hare's **center squeeze**.
+Every method below reads the **same ranked ballot**; they differ in *what they do with it*. ✅ marks the **Condorcet-safe** methods (always elect the head-to-head winner); ❌ marks Hare's **center squeeze**.
 
 ```mermaid
 graph TD
@@ -44,11 +42,7 @@ graph TD
     class HARE squeeze;
 ```
 
-*The whole tree is **ranked** voting. Score/rate methods — **STAR**, **Approval**,
-**Score** — sit outside it entirely (voters rate rather than order), which is why they
-aren't on this chart. The single split that matters most: methods that **eliminate on
-first choices** (Hare, Contingent) can squeeze the center; methods that read the
-**whole ballot** (Borda-elim, BTR, and the Condorcet family) don't.*
+*The whole tree is **ranked** voting. Score/rate methods — **STAR**, **Approval**, **Score** — sit outside it entirely (voters rate rather than order), which is why they aren't on this chart. The single split that matters most: methods that **eliminate on first choices** (Hare, Contingent) can squeeze the center; methods that read the **whole ballot** (Borda-elim, BTR, and the Condorcet family) don't.*
 
 ---
 

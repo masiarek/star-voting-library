@@ -1,14 +1,8 @@
 # BV131 — Guido example (Bloc STAR): a hidden lot-decided tie
 
-*Marked "Passed" in the sheet, but seat 1 is a **perfect lot-decided tie** — the
-Bloc analog of [`jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md).
-BetterVoting broke it with a random draw (Cand2), and — the reporting catch — its
-top-level `tieBreakType` says "none" anyway.*
+*Marked "Passed" in the sheet, but seat 1 is a **perfect lot-decided tie** — the Bloc analog of [`jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md). BetterVoting broke it with a random draw (Cand2), and — the reporting catch — its top-level `tieBreakType` says "none" anyway.*
 
-Reference files: [`bv131_guido_bloc.yaml`](bv131_guido_bloc.yaml)
-(`expected_winners: [Cand2, Cand3]`) · frozen export
-[`bv131_guido_bloc_bv_export.json`](bv131_guido_bloc_bv_export.json) (BV `kbh3d9`).
-Backs sheet row **BV131**.
+Reference files: [`bv131_guido_bloc.yaml`](bv131_guido_bloc.yaml) (`expected_winners: [Cand2, Cand3]`) · frozen export [`bv131_guido_bloc_bv_export.json`](bv131_guido_bloc_bv_export.json) (BV `kbh3d9`). Backs sheet row **BV131**.
 
 ## The election
 
@@ -23,8 +17,7 @@ Cand1,Cand2,Cand3
 
 ## View 1 — BetterVoting
 
-Elected **Cand2, Cand3**. BV's own round-0 logs walk the whole ladder and end at a
-coin toss:
+Elected **Cand2, Cand3**. BV's own round-0 logs walk the whole ladder and end at a coin toss:
 
 ```
 advance_to_runoff_same_score   Cand2, Cand1   (both 6)
@@ -34,14 +27,11 @@ runoff_five_star_tie           Cand2, Cand1   (1–1)
 runoff_random                  winner: Cand2          ← coin toss
 ```
 
-`perm` shows the draw put **Cand2** ahead of Cand1. **But the result's top-level
-`tieBreakType` is `"none"`** — even though round 0's own `tieBreakType` is
-`"random"`. A reader of the summary can't tell seat 1 was decided by chance.
+`perm` shows the draw put **Cand2** ahead of Cand1. **But the result's top-level `tieBreakType` is `"none"`** — even though round 0's own `tieBreakType` is `"random"`. A reader of the summary can't tell seat 1 was decided by chance.
 
 ## View 2 — the LH report (reproducing BV's draw)
 
-Pinning the lot order to BV's drawn sequence `[Cand2, Cand1, Cand3]` reproduces
-Cand2. Every deterministic rung ties; the lot decides; the engine flags it:
+Pinning the lot order to BV's drawn sequence `[Cand2, Cand1, Cand3]` reproduces Cand2. Every deterministic rung ties; the lot decides; the engine flags it:
 
 ```
 --- Bloc STAR Voting Method (2 winners) ---
@@ -84,20 +74,12 @@ Winners — Bloc STAR Voting Method (2 winners)
  Cand3
 ```
 
-Full audit copy:
-[`_main_tabulated/bv131_guido_bloc_tabulated.txt`](_main_tabulated/bv131_guido_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](_main_tabulated/bv131_guido_bloc_tabulated.txt).
 
 ## Two findings
 
-1. **Non-reproducible (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417)).**
-   With the column-order fallback (no lot order) LH elects **Cand1** for seat 1,
-   not Cand2 — same ballots, different winner, decided only by the tie-break order.
-   BV's `random` draw happened to pick Cand2.
-2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts
-   round 0's `tieBreakType: "random"`. The summary should surface that a seat was
-   lot-decided (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379)
-   and the results-view transparency ask). So "Passed" is optimistic — the winner
-   was a coin toss, undisclosed at the top level.
+1. **Non-reproducible (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417)).** With the column-order fallback (no lot order) LH elects **Cand1** for seat 1, not Cand2 — same ballots, different winner, decided only by the tie-break order. BV's `random` draw happened to pick Cand2.
+2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts round 0's `tieBreakType: "random"`. The summary should surface that a seat was lot-decided (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379) and the results-view transparency ask). So "Passed" is optimistic — the winner was a coin toss, undisclosed at the top level.
 
 ## Related
 

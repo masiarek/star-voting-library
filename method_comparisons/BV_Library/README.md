@@ -1,12 +1,8 @@
 # BV_Library — real BetterVoting elections, imported and verified
 
-Parity cases: real BetterVoting results re-tabulated by the LH engine to confirm the
-two agree, across every method BetterVoting runs — STAR, Approval, Plurality, and
-Ranked Robin — including the tricky tiebreak paths. Each `expected_winners` is
-guarded by the positive test harness.
+Parity cases: real BetterVoting results re-tabulated by the LH engine to confirm the two agree, across every method BetterVoting runs — STAR, Approval, Plurality, and Ranked Robin — including the tricky tiebreak paths. Each `expected_winners` is guarded by the positive test harness.
 
-Read the reader-friendly **pages** (`BV_Library_pages/`); the `.yaml` beside each is
-the tabulatable source.
+Read the reader-friendly **pages** (`BV_Library_pages/`); the `.yaml` beside each is the tabulatable source.
 
 ## STAR
 

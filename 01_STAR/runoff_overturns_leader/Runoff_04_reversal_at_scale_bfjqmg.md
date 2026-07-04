@@ -1,14 +1,8 @@
 # Runoff 04 — the reversal holds at scale (67/33)
 
-**Level 101 · the atom, blown up to a crowd.** Same shape as
-[Runoff 02](Runoff_02_atom_reversal_yx9447.md), now with nine voters: three love
-**Maple** (5s) and push Maple's total to the top of the Scoring Round (39), but six
-prefer **Olive**, who wins the Automatic Runoff **6–3** — a clean **2-to-1 majority**
-(67 / 33). Proof a reversal isn't a small-numbers fluke. (Olive is the Condorcet winner.)
+**Level 101 · the atom, blown up to a crowd.** Same shape as [Runoff 02](Runoff_02_atom_reversal_yx9447.md), now with nine voters: three love **Maple** (5s) and push Maple's total to the top of the Scoring Round (39), but six prefer **Olive**, who wins the Automatic Runoff **6–3** — a clean **2-to-1 majority** (67 / 33). Proof a reversal isn't a small-numbers fluke. (Olive is the Condorcet winner.)
 
-→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md)
-· concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
-· [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 
 ---
 
@@ -20,23 +14,17 @@ Maple, Olive, Pine
 3 ×  5, 1, 2     # the Maple enthusiasts
 ```
 
-Source: [`Runoff_04_reversal_at_scale_bfjqmg.yaml`](Runoff_04_reversal_at_scale_bfjqmg.yaml)
-· frozen export: [`Runoff_04_reversal_at_scale_bfjqmg_bv_export.json`](Runoff_04_reversal_at_scale_bfjqmg_bv_export.json).
+Source: [`Runoff_04_reversal_at_scale_bfjqmg.yaml`](Runoff_04_reversal_at_scale_bfjqmg.yaml) · frozen export: [`Runoff_04_reversal_at_scale_bfjqmg_bv_export.json`](Runoff_04_reversal_at_scale_bfjqmg_bv_export.json).
 
 ## View 1 — BetterVoting
 
-Maple leads the Scoring Round (39) but **loses** the Automatic Runoff 3–6.
-Source: <https://bettervoting.com/bfjqmg/results>.
+Maple leads the Scoring Round (39) but **loses** the Automatic Runoff 3–6. Source: <https://bettervoting.com/bfjqmg/results>.
 
 **Result — Scoring Round + Automatic Runoff (with BetterVoting's popover):**
 
 ![BetterVoting result for bfjqmg: Olive wins; Scoring Round bars (Maple 39, Olive 33, Pine 6); Automatic Runoff Olive 67% vs Maple 33%; with BetterVoting's "why is the top scoring candidate different from the winner?" popover](img/bfjqmg_result_popover.png)
 
-**Why it scales.** With three voters the reversal was a 2–1 nudge; with nine it's a
-**6–3 landslide** — the same *how much vs how many* split, just louder. The three Maple
-fans pile up stars (their 5s lift Maple to 39), but only three people prefer Maple. Six
-prefer Olive, so the runoff goes 6–3. Adding voters in the same proportions doesn't
-rescue the score leader — it makes the majority's verdict clearer.
+**Why it scales.** With three voters the reversal was a 2–1 nudge; with nine it's a **6–3 landslide** — the same *how much vs how many* split, just louder. The three Maple fans pile up stars (their 5s lift Maple to 39), but only three people prefer Maple. Six prefer Olive, so the runoff goes 6–3. Adding voters in the same proportions doesn't rescue the score leader — it makes the majority's verdict clearer.
 
 **The same runoff, other views (percentage bars, and pie):**
 
@@ -52,9 +40,7 @@ rescue the score leader — it makes the majority's verdict clearer.
 
 ## View 2 — the LH engine
 
-Same ballots (collapsed as `count × scores`), the full text report (the saved
-[`_tabulated`](runoff_overturns_leader_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt)
-mirror adds the funnel):
+Same ballots (collapsed as `count × scores`), the full text report (the saved [`_tabulated`](runoff_overturns_leader_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) mirror adds the funnel):
 
 ```
 [Condorcet Winner]
@@ -85,14 +71,8 @@ Automatic Runoff Round
    Olive 6 (67%) vs Maple 3 (33%); majority = 5.
 ```
 
-> **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's
-> *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line —
-> LH names its denominator (`Voters with a preference`) instead of using table columns.
-> [Why the words differ →](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
+> **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway
 
-The reversal isn't a quirk of tiny examples. Scale the same electorate up and the
-score leader still loses — by *more*, because *how many* is a headcount and headcounts
-grow with the crowd while a few enthusiasts' extra stars don't. BetterVoting and the LH
-engine agree on every number.
+The reversal isn't a quirk of tiny examples. Scale the same electorate up and the score leader still loses — by *more*, because *how many* is a headcount and headcounts grow with the crowd while a few enthusiasts' extra stars don't. BetterVoting and the LH engine agree on every number.
