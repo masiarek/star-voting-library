@@ -87,7 +87,7 @@ Even two elections that both run plain Hare IRV can disagree, because real ballo
 - **Batch vs. one-at-a-time elimination.** Dropping several hopeless candidates at once usually matches single elimination, but not always at the margins.
 - **What "majority" counts against.** A **majority of *continuing* ballots** (exhausted ballots excluded) vs. a **majority of *all* ballots cast** are different thresholds — the first is how most US IRV laws declare a winner.
 - **Equal ranks and skipped rankings.** Pure IRV forbids equal ranks; jurisdictions differ on whether a skipped rank ends the ballot or is passed over.
-- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result.
+- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result. Because ranks carry no strength signal, there's often little to break the tie *with*, so it falls to chance sooner than in a score method — see [Tie-Breaking: STAR vs. RCV-IRV](../topics/ties/tiebreaking_star_vs_irv.md) for why strict ranks make ties *harder* to resolve, not easier.
 
 This is why a precise reference says not just "IRV" but the **whole rule set** — the elimination rule *plus* the ballot rules.
 
