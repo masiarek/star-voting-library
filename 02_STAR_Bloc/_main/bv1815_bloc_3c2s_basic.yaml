@@ -1,0 +1,41 @@
+election_title: "BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak)"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV1815 (a real election, id fk38pk,
+  marked Passed). Labeled "basic/simple", but it quietly exercises the score
+  tiebreaker at the second seat.
+
+  Bloc STAR, 3 candidates, 2 seats. Totals: A=12, B=1, C=2.
+    - Seat 1: A (12) and C (2) advance; A wins the runoff 3-0, taking seat 1.
+    - Seat 2: remove A -> B and C. In the runoff B and C TIE 1-1 (one voter
+      prefers each; one is Equal Support). The tie falls to the SCORE rung:
+      C's total (2) beats B's (1), so C takes seat 2.
+  Winners: A, C. BetterVoting agrees (tieBreakType: "score", elected A, C) — this
+  case Passes; it's the Bloc analog of a runoff decided by the score tiebreaker.
+  (Aside: the BV export labels votingMethod "STAR" rather than "Bloc STAR" — #904.)
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: bloc
+ballots: |-
+  A,B,C
+  4,1,0
+  3,0,2
+  5,0,0
+
+expected_winners:
+  - A
+  - C
+
+# file: bv1815_bloc_3c2s_basic.yaml
