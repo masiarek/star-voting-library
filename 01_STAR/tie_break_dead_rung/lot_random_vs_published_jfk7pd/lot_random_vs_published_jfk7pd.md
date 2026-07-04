@@ -1,5 +1,10 @@
 # A lot-decided STAR tie in BetterVoting (`jfk7pd`) — and why the tie-break must be deterministic
 
+> **Filed upstream as [Equal-Vote/bettervoting#1417](https://github.com/Equal-Vote/bettervoting/issues/1417).**
+> The ready-to-paste text is [`jfk7pd_bv_github_issue.md`](jfk7pd_bv_github_issue.md);
+> a fuller UI-transparency spec (overlaps #1417 rec 3 / #1379) is in
+> [`bv_github_issue_ui_tiebreak_transparency.md`](bv_github_issue_ui_tiebreak_transparency.md).
+
 This is a small, fully-worked real
 election on bettervoting.com whose winner was chosen by a **random** tie-break.
 Re-running the same ballots could elect the *other* candidate. Below is exactly

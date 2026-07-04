@@ -1,10 +1,14 @@
 <!--
-Ready-to-paste GitHub issue for  github.com/Equal-Vote/bettervoting
-A focused, UI-only companion to the deterministic-lot issue (the #1063 report).
-This one is about DISCLOSURE in the results view and can ship independently.
-Overlaps partly with #1379 (human-readable tie-break explanation) — written to
-reference it and scope tightly to the result page, not duplicate it.
-When filing, you can drag-drop the two jfk7pd screenshots into the issue box.
+Ready-to-paste GitHub issue for  github.com/Equal-Vote/bettervoting  — UI only.
+
+STATUS: NOT filed. This overlaps with existing coverage:
+  * #1417 (the deterministic-lot report) already carries this as recommendation
+    #3 ("Surface it in the UI"); and
+  * #1379 mentions a missing human-readable tie-break explanation.
+So this may be redundant. Keep as the fuller UI spec if a DEDICATED results-view
+issue is wanted; otherwise its content can be pasted as a comment on #1379 (or
+#1417 rec #3) rather than filed on its own.
+When filing/commenting, you can drag-drop the two jfk7pd screenshots.
 -->
 
 ---

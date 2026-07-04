@@ -1,8 +1,11 @@
 <!--
 Ready-to-paste GitHub issue for  github.com/Equal-Vote/bettervoting
-How to file: open a NEW issue and paste everything below the line. It cross-
-references #1063 (deterministic lot numbers) — if maintainers prefer, this can
-instead be posted as a comment on #1063 with the worked example as evidence.
+
+STATUS: FILED as Equal-Vote/bettervoting#1417 (Jul 2026).
+  https://github.com/Equal-Vote/bettervoting/issues/1417
+This file is the source/archive copy. Recommendation #3 below (surface the
+tie-break in the UI) is part of #1417 and also tracked in #1379.
+
 The links point at the public masiarek/YAML repo so the ballots, export, and
 independent tabulations are inspectable.
 -->
@@ -148,7 +151,8 @@ Happy to provide additional cases — including 3+ candidate and "less obvious"
 variants where the tie is buried in a realistic-looking ballot set — and the
 fixtures for the acceptance test.
 
-> **Companion issue (UI):** separate from this tabulation fix, the results view
-> doesn't disclose that a winner was decided by a (random) tie-break. Filed
-> separately — see
-> [`bv_github_issue_ui_tiebreak_transparency.md`](https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/bv_github_issue_ui_tiebreak_transparency.md).
+> **UI angle:** recommendation #3 above (disclose in the results view that a
+> winner was decided by a tie-break, and how) overlaps with #1379. A fuller,
+> UI-only spec of it is drafted in
+> [`bv_github_issue_ui_tiebreak_transparency.md`](https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/bv_github_issue_ui_tiebreak_transparency.md)
+> — useful if a dedicated UI issue is wanted rather than folding it into #1379.
