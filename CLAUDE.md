@@ -194,6 +194,8 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   mirrors nest the same way (`.../_main/_main_tabulated/`). The path is computed by
   `tabulated_output_path` / `aux_tabulated_path` in the engine as
   `p.parent / (p.parent.name + "_tabulated")`.
+- **Markdown prose: do NOT hard-wrap paragraphs (Adam's preference).** Write each
+  paragraph as a single unwrapped line (soft wrap) — no fixed ~76/80-char line limit. Hard-wrapping is cosmetic: Markdown collapses single newlines inside a paragraph into spaces, so wrapped and unwrapped prose render identically. Keep real line breaks only where they're semantic: blank lines between paragraphs, fenced code blocks, tables, and list items.
 - **Embed LH output as text in Markdown (Adam's preference), sized to the election.**
   When a teaching/reporting `.md` discusses a result, paste the actual LH output inline
   as a fenced code block (strip ANSI) rather than only linking the `_tabulated` file —
