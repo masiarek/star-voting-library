@@ -83,13 +83,28 @@ python generate_dead_rung_scenarios.py --round full --candidates 4 --run   # A w
 
 ### `--pad N` — "less obvious" ties (bury it in noise)
 
-By default the full-tie ballots are a tidy identity matrix — obvious at a glance. `--pad N` (with `--seed` for reproducibility) makes the tie look like a messy real election **without changing the result**. Each pad block appends **every permutation** of a random ballot (`k!` ballots); a full permutation orbit treats all candidates identically, so totals, pairwise, and five-star all stay exactly equal — the tie is preserved — and the rows are then shuffled so the identity ballots don't stand out.
+By default the full-tie ballots are a tidy identity matrix — obvious at a glance. `--pad N` (with `--seed` for reproducibility) makes the tie look like a messy real election **without changing the result**. Each pad block appends the **orbit** of a noise vector — its distinct permutations under all candidate relabelings. That orbit treats every candidate identically, so totals, pairwise, **and** five-star all stay exactly equal (the tie is preserved), and the rows are shuffled so the identity ballots don't stand out.
 
 ```
 python generate_dead_rung_scenarios.py --round full --candidates 3 --pad 4 --seed 7
 ```
 
-produces ~27 varied-looking ballots (`3` base + `4 × 3! = 24`) that still tabulate to a perfect three-way tie: `[A,B,C]→A`, `[B,C,A]→B`, `[C,A,B]→C`. Each block adds `k!` ballots, so keep `k` small (the tool warns past ~1000 ballots). This is the knob for demonstrating that a lot-decided tie needn't be an obvious toy — it can hide in a normal-looking ballot set.
+**Why "shorter but not obvious" is a real tension — and how to control it.** The orbit has to include *all* relabelings, because the scoring round's first tiebreaker is **pairwise** (head-to-head): a Latin square or a handful of cyclic shifts equalizes totals and five-star counts but can leave one head-to-head tilted, which would break the tie at the pairwise rung and never reach the lot. So the block size is the orbit size — and that is governed entirely by how many **repeated scores** the noise vector has:
+
+| Noise vector (k = 6) | Distinct permutations | Effect |
+|---|---:|---|
+| all-distinct `[0,1,2,3,4,cap]` | `6! = 720` | huge — the old default |
+| `[4,4,4,0,0,0]` | `6!/(3!·3!) = 20` | varied-looking, readable |
+| `[4,0,0,0,0,0]` | `6!/(1!·5!) = 6` | shortest, still non-identity |
+
+The tool now **defaults to a repeated-score vector** (roughly half the candidates at `--cap`, half at 0), so `--candidates 6 --pad 1` produces **12** ballots instead of 726. To dial it yourself use `--pad-vector`:
+
+```
+# 26 ballots (6 identity + 20-permutation orbit), clearly varied but short:
+python generate_dead_rung_scenarios.py --round full --candidates 6 --pad 1 --pad-vector 4,4,4,0,0,0
+```
+
+`--pad-vector` takes comma-separated scores of length `--candidates`, each `0..cap`. Fewer distinct values ⇒ shorter file; more distinct values ⇒ messier but longer. The tool warns past ~1000 ballots and suggests a more-repeated vector. This is the knob for demonstrating that a lot-decided tie needn't be an obvious toy — it can hide in a normal-looking ballot set — while keeping the file short enough to read.
 
 (`--scale N`, by contrast, just *clones* the whole block N times — bigger, but still visually obvious. Use `--pad` for genuinely varied ballots.)
 

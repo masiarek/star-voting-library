@@ -123,7 +123,8 @@ class Template:
 
 
 def build_template(round_: str, rung: str, adversarial: bool, cap: int,
-                   candidates: int = 3, pad: int = 0, seed: int | None = None) -> Template:
+                   candidates: int = 3, pad: int = 0, seed: int | None = None,
+                   pad_vector: list[int] | None = None) -> Template:
     """Return the verified ballot template for a (round, rung, adversarial) case.
 
     Non-adversarial cases teach *which rung decides* (the leader wins either way).
@@ -141,17 +142,31 @@ def build_template(round_: str, rung: str, adversarial: bool, cap: int,
         rows = [[c if i == j else 0 for j in range(k)] for i in range(k)]
         pad_note = ""
         if pad > 0:
-            # "Less obvious" padding: for each block, append EVERY permutation of a
-            # random score vector (entries 0..cap). A full permutation orbit treats
-            # all candidates identically, so it preserves the exact tie (totals,
-            # pairwise, and five-star all stay equal) while burying it in varied-
-            # looking ballots. Then shuffle so the tidy identity rows don't stand out.
+            # "Less obvious" padding: for each block, append the orbit of a noise
+            # score vector under ALL candidate relabelings — i.e. its distinct
+            # permutations. The orbit treats every candidate identically, so it
+            # preserves the exact tie (totals, pairwise, AND five-star all stay
+            # equal) while burying it in varied-looking ballots. Then shuffle so the
+            # tidy identity rows don't stand out.
+            #
+            # KEY: a vector with REPEATED scores has a far smaller orbit. All-distinct
+            # entries give k! ballots (720 at k=6); a half-cap/half-zero vector like
+            # [4,4,4,0,0,0] gives only k!/(m!·(k-m)!) = 20 — same symmetry, readable
+            # file. We dedup with set() so repeats don't re-inflate the count.
             import itertools
             import random as _random
             rng = _random.Random(seed)
-            for _ in range(pad):
-                v = [rng.randint(0, c) for _ in range(k)]
-                rows.extend(list(p) for p in itertools.permutations(v))
+            for b in range(pad):
+                if pad_vector is not None:
+                    v = list(pad_vector)           # explicit --pad-vector (same each block)
+                else:
+                    # Default: block b puts (b+1) candidates at `cap`, the rest at 0
+                    # (clamped to k-1 so it's never all-cap). Repeated scores keep the
+                    # orbit small; distinct block shapes keep multiple blocks varied.
+                    n_cap = min(b + 1, k - 1)
+                    v = [c] * n_cap + [0] * (k - n_cap)
+                orbit = sorted(set(itertools.permutations(v)))
+                rows.extend(list(p) for p in orbit)
             rng.shuffle(rows)
             pad_note = (f" Padded with {pad} symmetric noise block(s) "
                         f"({len(rows)} ballots total) so the tie is non-obvious.")
@@ -309,9 +324,15 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--scale", type=int, default=1,
                    help="duplicate the ballot block N times for a bigger electorate (default 1)")
     p.add_argument("--pad", type=int, default=0,
-                   help="[--round full only] add N symmetric 'noise' blocks (each = k! "
-                        "permutations of a random ballot) to bury the tie in varied-looking "
-                        "ballots. The tie stays mathematically exact. (default 0)")
+                   help="[--round full only] add N symmetric 'noise' blocks (each = the "
+                        "distinct permutations of a repeated-score vector) to bury the tie "
+                        "in varied-looking ballots. The tie stays mathematically exact. "
+                        "Repeated scores keep each block small. (default 0)")
+    p.add_argument("--pad-vector", default=None,
+                   help="[--round full only] explicit noise vector, e.g. '4,4,4,0,0,0' "
+                        "(length must equal --candidates). Its distinct permutations form "
+                        "one balanced block. Fewer distinct values = shorter file. "
+                        "Default: half the candidates at --cap, half at 0.")
     p.add_argument("--seed", type=int, default=None,
                    help="random seed for --pad (reproducible ballots)")
     p.add_argument("--theme", choices=sorted(NAME_BANKS), default="letters",
@@ -333,12 +354,39 @@ def main(argv: list[str] | None = None) -> int:
                   "(it's an inherently symmetric dead rung).", file=sys.stderr)
         if args.pad < 0:
             raise SystemExit("error: --pad must be >= 0.")
-        import math
-        block = math.factorial(args.candidates)
-        if args.pad and block * args.pad > 1000:
-            print(f"note: each --pad block adds {args.candidates}! = {block} ballots; "
-                  f"{args.pad} blocks = {block * args.pad}. Consider fewer candidates "
-                  f"or fewer pad blocks for a readable file.", file=sys.stderr)
+        if args.pad_vector is not None:
+            try:
+                pad_vector = [int(x) for x in args.pad_vector.split(",")]
+            except ValueError:
+                raise SystemExit("error: --pad-vector must be comma-separated integers, "
+                                 "e.g. '4,4,4,0,0,0'.")
+            if len(pad_vector) != args.candidates:
+                raise SystemExit(f"error: --pad-vector has {len(pad_vector)} entries but "
+                                 f"--candidates is {args.candidates}; lengths must match.")
+            if any(x < 0 or x > args.cap for x in pad_vector):
+                raise SystemExit(f"error: --pad-vector entries must be between 0 and "
+                                 f"--cap ({args.cap}).")
+            args.pad_vector = pad_vector
+        # Orbit size = distinct permutations of the (repeated-score) noise vector.
+        from math import factorial
+        from collections import Counter
+        if args.pad:
+            def _orbit(vec):
+                n = factorial(len(vec))
+                for m in Counter(vec).values():
+                    n //= factorial(m)
+                return n
+            if args.pad_vector is not None:
+                total = _orbit(args.pad_vector) * args.pad
+            else:
+                half = args.candidates // 2
+                total = sum(_orbit([1] * min(b + 1, args.candidates - 1) +
+                                   [0] * (args.candidates - min(b + 1, args.candidates - 1)))
+                            for b in range(args.pad))
+            if total > 1000:
+                print(f"note: the noise blocks add {total} ballots. Use a --pad-vector with "
+                      f"more repeated scores (e.g. '{args.cap},0,0,...'), fewer --pad blocks, "
+                      f"or fewer --candidates for a shorter file.", file=sys.stderr)
     else:
         if args.pad:
             print("note: --pad only applies to --round full; ignored here.", file=sys.stderr)
@@ -349,7 +397,8 @@ def main(argv: list[str] | None = None) -> int:
             args.cap = 4
 
     t = build_template(args.round, args.rung, args.adversarial_lot, args.cap,
-                       candidates=args.candidates, pad=args.pad, seed=args.seed)
+                       candidates=args.candidates, pad=args.pad, seed=args.seed,
+                       pad_vector=(args.pad_vector if args.round == "full" else None))
     names = NAME_BANKS[args.theme]
     if t.ncols > len(names):
         raise SystemExit(
