@@ -182,18 +182,58 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
 
 ## View 1 — BetterVoting screenshots
 
-*(Add the `jfk7pd` result screenshots to `img/`, prefixed with the id — e.g.*
-*`img/jfk7pd_result_bars.png`, `img/jfk7pd_race_details.png` — then swap the*
-*`REPLACE_` placeholder below for the real filename.)*
+BetterVoting's result page: the scoring round is 4–4 and the runoff is 50%–50%,
+so the header reads **"Ben won after tiebreaker"** — a random draw, with nothing
+on the page saying the winner was decided by lot rather than by the ballots.
 
-<!--
-![BetterVoting jfk7pd result — Ben elected on a random tie-break](img/REPLACE_jfk7pd_result_bars.png)
--->
+![BetterVoting jfk7pd result — 4–4 scoring, 50–50 runoff, "Ben won after tiebreaker"](img/jfk7pd_result_bars.png)
 
-## View 2 — the LH report
+The Race Details tables confirm the exact tie: both candidates score 4, and each
+gets 1 runoff vote (50% / 50%).
 
-The full engine report is the section-4(a) block above; the complete audit copy
-is regenerated into
+![BetterVoting jfk7pd Race Details — Scores 4/4, Runoff 1/1 (50%/50%)](img/jfk7pd_race_details.png)
+
+## View 2 — the LH report (inline)
+
+The same ballots through the independent engine, following BV's drawn order
+`[Ben, Ada]`. Note how it *shows its work* — every rung comes back tied, then the
+lot decides and it says so explicitly (the `[Lot-decided tie]` callout):
+
+```
+--- STAR Voting Method (single winner) ---
+ Tabulating 2 ballots.
+Ada,Ben
+  4,  0
+  0,  4
+
+Scoring Round
+   Ada  -- 4 -- First place
+   Ben  -- 4 -- Second place
+ Ada and Ben advance.
+
+Automatic Runoff Round            (head-to-head preferred wins)
+   Ada  -- 1 -- Tied for first place
+   Ben  -- 1 -- Tied for first place
+   Equal Support -- 0             ← 1–1, tied
+
+Automatic Runoff Round: First tiebreaker   (highest score)
+   Ada  -- 4 ;  Ben  -- 4         ← 4–4, still tied
+
+Automatic Runoff Round: Second tiebreaker  (most votes of score 5)
+   Ada  -- 0 ;  Ben  -- 0         ← 0–0, DEAD RUNG
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ada', 'Ben']  →  Resolved: ['Ben']   (by lot order [Ben, Ada])
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: pairwise, score, and five-star all came
+    back equal, so the LOT order chose the winner — not the votes.
+
+Winner — STAR Voting Method (single winner)
+ Ben
+```
+
+The complete audit copy is regenerated into
 [`lot_random_vs_published_jfk7pd_tabulated/`](lot_random_vs_published_jfk7pd_tabulated).
 
 ---

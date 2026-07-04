@@ -2,7 +2,7 @@
 SOURCE FILE:     approval_bloc_4seats_c7_b12_lackner_skowron.yaml
 SOURCE MODIFIED: 2026-07-02 19:57:23
 TABULATED FILE:  approval_bloc_4seats_c7_b12_lackner_skowron_tabulated.txt
-TABULATED AT:    2026-07-03 09:44:55
+TABULATED AT:    2026-07-04 08:07:07
 ======================================================================
 
 election_title: Bloc Approval — Lackner & Skowron's running example (k=4)
