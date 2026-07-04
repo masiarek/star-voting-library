@@ -1,0 +1,477 @@
+{
+  "Election": {
+    "election_id": "8fvd2x",
+    "title": "BV126 - “ties every time - every step” - Multiple tiebreakers",
+    "description": "",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "closed",
+    "races": [
+      {
+        "title": "BV126 - “ties every time - every step” - Multiple tiebreakers",
+        "description": "",
+        "race_id": "r-f9d",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-rm3",
+            "candidate_name": "Amy"
+          },
+          {
+            "candidate_id": "c-xy9",
+            "candidate_name": "Brian"
+          },
+          {
+            "candidate_id": "c-46k",
+            "candidate_name": "Chuck"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true,
+      "draggable_ballot": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": ""
+    },
+    "auth_key": null,
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-10-30T21:06:17.524Z",
+    "update_date": "1783179235301",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-jjy882jx",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 3,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 2,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-c8r6qjr7",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-pqwqk763",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-3rwq8vqc",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 1,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 2,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 3,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-gfyf9qmj",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-m2r346pd",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-tdvhcwpq",
+      "election_id": "8fvd2x",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-rm3"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-xy9"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-46k"
+            }
+          ],
+          "race_id": "r-f9d"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-rm3",
+          "name": "Amy",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-rm3": 0,
+            "c-46k": 1,
+            "c-xy9": 1
+          },
+          "winsAgainst": {
+            "c-rm3": false,
+            "c-46k": false,
+            "c-xy9": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-46k",
+          "name": "Chuck",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-rm3": 1,
+            "c-46k": 0,
+            "c-xy9": 1
+          },
+          "winsAgainst": {
+            "c-rm3": false,
+            "c-46k": false,
+            "c-xy9": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "c-xy9",
+          "name": "Brian",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-rm3": 1,
+            "c-46k": 1,
+            "c-xy9": 0
+          },
+          "winsAgainst": {
+            "c-rm3": false,
+            "c-46k": false,
+            "c-xy9": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-rm3",
+              "name": "Amy",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-rm3": 0,
+                "c-46k": 1,
+                "c-xy9": 1
+              },
+              "winsAgainst": {
+                "c-rm3": false,
+                "c-46k": false,
+                "c-xy9": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-46k",
+              "name": "Chuck",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-rm3": 1,
+                "c-46k": 0,
+                "c-xy9": 1
+              },
+              "winsAgainst": {
+                "c-rm3": false,
+                "c-46k": false,
+                "c-xy9": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "Amy",
+                "Chuck",
+                "Brian"
+              ],
+              "score": 4
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_too_many_candidates"
+            },
+            {
+              "key": "tabulation_logs.star.five_star_tied",
+              "names": [
+                "Amy",
+                "Chuck",
+                "Brian"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.random_first",
+              "name": "Amy",
+              "tiebreak_candidate_names": "Amy, Chuck, Brian"
+            },
+            {
+              "key": "tabulation_logs.star.random_second",
+              "name": "Chuck",
+              "tiebreak_candidate_names": "Amy, Chuck, Brian"
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "Amy",
+                "Chuck"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Amy",
+                "Chuck"
+              ],
+              "votes": 1,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "Amy",
+                "Chuck"
+              ],
+              "stars": 4
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "Amy",
+                "Chuck"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "Amy",
+              "runner_up": "Chuck",
+              "tiebreak_candidate_names": "Amy, Chuck, Brian"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Amy",
+              "runner_up": "Chuck"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-rm3",
+            "name": "Amy",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-rm3": 0,
+              "c-46k": 1,
+              "c-xy9": 1
+            },
+            "winsAgainst": {
+              "c-rm3": false,
+              "c-46k": false,
+              "c-xy9": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-46k",
+            "name": "Chuck",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-rm3": 1,
+              "c-46k": 0,
+              "c-xy9": 1
+            },
+            "winsAgainst": {
+              "c-rm3": false,
+              "c-46k": false,
+              "c-xy9": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-xy9",
+            "name": "Brian",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-rm3": 1,
+              "c-46k": 1,
+              "c-xy9": 0
+            },
+            "winsAgainst": {
+              "c-rm3": false,
+              "c-46k": false,
+              "c-xy9": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 5,
+        "nTallyVotes": 2
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "c-rm3",
+        "c-46k",
+        "c-xy9"
+      ]
+    }
+  ]
+}

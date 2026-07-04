@@ -1,0 +1,51 @@
+election_title: "BV126 — ties at every step (single-winner STAR); #1052"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV126 ("ties every time — every step",
+  real election 8fvd2x). Single-winner STAR, 3 candidates, 7 ballots — five of
+  them flat 5,5,5. This is the worst case for the tie-break ladder: Amy, Brian and
+  Chuck tie at EVERY step.
+
+  Totals 29-29-29 (a three-way scoring tie); pairwise 2-2-2 (the two non-flat
+  ballots split evenly, the five flat ones are Equal Support); five-star 5-5-5.
+  Every deterministic rung ties, so the LOT picks the two finalists (Amy, Chuck);
+  the runoff ties too and the lot picks Amy. Lot [Amy, Chuck, Brian] reproduces
+  BetterVoting's drawn result.
+
+  Two BV issues surface together:
+    1. #1052 — flat ballots dropped: the export reports nAbstentions=5,
+       nTallyVotes=2 (only the two non-flat ballots), which is why BV shows a wrong
+       count / "no ballots" style message. LH counts all 7 (Equal Support = 5).
+    2. Random tie-break -> non-reproducible (cf. #1063 / #1417 / jfk7pd): BV drew
+       Amy; a different draw elects Brian or Chuck. The winner is unaffected by the
+       dropped flats (flat ballots never change a STAR result) — it's the lot order
+       that decides.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [Amy, Chuck, Brian]   # BV's drawn order (perm) — reproduces Amy
+ballots: |-
+  Amy,Brian,Chuck
+  3,2,1
+  5,5,5
+  5,5,5
+  1,2,3
+  5,5,5
+  5,5,5
+  5,5,5
+
+expected_winners:
+  - Amy
+
+# file: bv126_ties_every_step_8fvd2x.yaml
