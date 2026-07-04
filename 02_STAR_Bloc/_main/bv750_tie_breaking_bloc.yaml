@@ -1,0 +1,47 @@
+election_title: "BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family)"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV750 (real election 3yr2qd, "Block STAR",
+  2 seats). The extreme flat case: 3 candidates (a, b, c) and 3 ballots that are
+  ALL 5,5,5 — every voter maxes every candidate, so no ballot expresses any
+  preference.
+
+  Everyone ties at 15; pairwise is 0-0-0 (all Equal Support); five-star is 3-3-3.
+  Every deterministic rung ties, so the LOT decides both seats. lot [c, a, b]
+  reproduces BetterVoting's random draw: seat 1 c, seat 2 a.
+
+  Two BV issues together:
+    1. #1052 / #1407 — every ballot dropped: the export reports nAbstentions=3,
+       nTallyVotes=0, so BV shows "0 ballots"/the "no ballots have been cast"
+       message. LH counts all 3 (each is Equal Support). An all-equal ballot is a
+       real vote of no-preference, not an abstention.
+    2. Random tie-break -> non-reproducible (cf. #1063 / #1417): a different draw
+       elects a different pair. The winners are unaffected by the dropped ballots
+       (identical ballots can't separate anyone) — it's the lot order that decides.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+lot_numbers: [c, a, b]   # BV's drawn order (perm) — reproduces c, a
+ballots: |-
+  a,b,c
+  5,5,5
+  5,5,5
+  5,5,5
+
+expected_winners:
+  - c
+  - a
+
+# file: bv750_tie_breaking_bloc.yaml

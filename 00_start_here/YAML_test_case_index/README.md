@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**135 election files** (121 single-winner, 14 multi-winner) across 13 method(s).
+**136 election files** (121 single-winner, 15 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -19,7 +19,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Reweighted Range | 1 |
 | Allocated Score (STAR-PR) | 1 |
 | APPROVAL_MULTI_WINNER | 3 |
-| BLOC STAR | 6 |
+| BLOC STAR | 7 |
 | PLURALITY | 1 |
 | RANGE | 1 |
 | RR | 1 |
@@ -195,7 +195,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (6)
+## BLOC STAR  (7)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -205,6 +205,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv131_guido_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv131_guido_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie → _Cand2, Cand3_ | [`.yaml`](../../02_STAR_Bloc/_main/bv131_guido_bloc.yaml) |
 | [`bv132_verify_votes_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv132_verify_votes_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV132 — verify number of votes cast (Bloc STAR, 2 seats) → _C, B_ | [`.yaml`](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
 | [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/_main/_main_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/_main/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
+| [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
 
 ## PLURALITY  (1)
 

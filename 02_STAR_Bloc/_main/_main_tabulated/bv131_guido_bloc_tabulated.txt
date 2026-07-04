@@ -2,7 +2,7 @@
 SOURCE FILE:     bv131_guido_bloc.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  bv131_guido_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 11:27:47
+TABULATED AT:    2026-07-04 11:51:20
 ======================================================================
 
 election_title: "BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie"

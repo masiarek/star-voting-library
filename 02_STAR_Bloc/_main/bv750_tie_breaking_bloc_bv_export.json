@@ -1,0 +1,469 @@
+{
+  "Election": {
+    "election_id": "3yr2qd",
+    "title": "Block STAR",
+    "description": "",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "closed",
+    "races": [
+      {
+        "title": "Block STAR",
+        "description": "",
+        "race_id": "r-d2y",
+        "num_winners": 2,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-qc7",
+            "candidate_name": "a"
+          },
+          {
+            "candidate_id": "c-f9d",
+            "candidate_name": "b"
+          },
+          {
+            "candidate_id": "c-g4q",
+            "candidate_name": "c"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true,
+      "draggable_ballot": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": ""
+    },
+    "auth_key": null,
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-11-03T15:47:56.898Z",
+    "update_date": "1783180097602",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-c64cgdfv",
+      "election_id": "3yr2qd",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-qc7"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-f9d"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-g4q"
+            }
+          ],
+          "race_id": "r-d2y"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-86j88ff9",
+      "election_id": "3yr2qd",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-qc7"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-f9d"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-g4q"
+            }
+          ],
+          "race_id": "r-d2y"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-g6r9pkm8",
+      "election_id": "3yr2qd",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-qc7"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-f9d"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-g4q"
+            }
+          ],
+          "race_id": "r-d2y"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-g4q",
+          "name": "c",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-g4q": 0,
+            "c-qc7": 0,
+            "c-f9d": 0
+          },
+          "winsAgainst": {
+            "c-g4q": false,
+            "c-qc7": false,
+            "c-f9d": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "c-qc7",
+          "name": "a",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-g4q": 0,
+            "c-qc7": 0,
+            "c-f9d": 0
+          },
+          "winsAgainst": {
+            "c-g4q": false,
+            "c-qc7": false,
+            "c-f9d": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-f9d",
+          "name": "b",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-g4q": 0,
+            "c-qc7": 0,
+            "c-f9d": 0
+          },
+          "winsAgainst": {
+            "c-g4q": false,
+            "c-qc7": false,
+            "c-f9d": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-g4q",
+              "name": "c",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-g4q": 0,
+                "c-qc7": 0,
+                "c-f9d": 0
+              },
+              "winsAgainst": {
+                "c-g4q": false,
+                "c-qc7": false,
+                "c-f9d": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-qc7",
+              "name": "a",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-g4q": 0,
+                "c-qc7": 0,
+                "c-f9d": 0
+              },
+              "winsAgainst": {
+                "c-g4q": false,
+                "c-qc7": false,
+                "c-f9d": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "c",
+                "a",
+                "b"
+              ],
+              "score": 0
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_too_many_candidates"
+            },
+            {
+              "key": "tabulation_logs.star.five_star_tied",
+              "names": [
+                "c",
+                "a",
+                "b"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.random_first",
+              "name": "c",
+              "tiebreak_candidate_names": "c, a, b"
+            },
+            {
+              "key": "tabulation_logs.star.random_second",
+              "name": "a",
+              "tiebreak_candidate_names": "c, a, b"
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "c",
+                "a"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "c",
+                "a"
+              ],
+              "votes": 0,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "c",
+                "a"
+              ],
+              "stars": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "c",
+                "a"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "c",
+              "runner_up": "a",
+              "tiebreak_candidate_names": "c, a, b"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "c",
+              "runner_up": "a"
+            }
+          ]
+        },
+        {
+          "winners": [
+            {
+              "id": "c-qc7",
+              "name": "a",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-g4q": 0,
+                "c-qc7": 0,
+                "c-f9d": 0
+              },
+              "winsAgainst": {
+                "c-g4q": false,
+                "c-qc7": false,
+                "c-f9d": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-f9d",
+              "name": "b",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "c-g4q": 0,
+                "c-qc7": 0,
+                "c-f9d": 0
+              },
+              "winsAgainst": {
+                "c-g4q": false,
+                "c-qc7": false,
+                "c-f9d": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_same_score",
+              "names": [
+                "a",
+                "b"
+              ],
+              "star": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "a",
+                "b"
+              ],
+              "votes": 0,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "a",
+                "b"
+              ],
+              "stars": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "a",
+                "b"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "a",
+              "runner_up": "b",
+              "tiebreak_candidate_names": "c, a, b"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "a",
+              "runner_up": "b"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-g4q",
+            "name": "c",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-g4q": 0,
+              "c-qc7": 0,
+              "c-f9d": 0
+            },
+            "winsAgainst": {
+              "c-g4q": false,
+              "c-qc7": false,
+              "c-f9d": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-qc7",
+            "name": "a",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-g4q": 0,
+              "c-qc7": 0,
+              "c-f9d": 0
+            },
+            "winsAgainst": {
+              "c-g4q": false,
+              "c-qc7": false,
+              "c-f9d": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-f9d",
+            "name": "b",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-g4q": 0,
+              "c-qc7": 0,
+              "c-f9d": 0
+            },
+            "winsAgainst": {
+              "c-g4q": false,
+              "c-qc7": false,
+              "c-f9d": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 3,
+        "nTallyVotes": 0
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "c-g4q",
+        "c-qc7",
+        "c-f9d"
+      ]
+    }
+  ]
+}

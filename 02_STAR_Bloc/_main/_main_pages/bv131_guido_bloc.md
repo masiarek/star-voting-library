@@ -167,4 +167,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/_ma
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [00_c3_b3_bloc-baseline-2-seats](00_c3_b3_bloc-baseline-2-seats.md) · [01_c4_b2_bloc-star-2-seats](01_c4_b2_bloc-star-2-seats.md) · [bv129_score_tiebreak_bloc](bv129_score_tiebreak_bloc.md) · [bv132_verify_votes_bloc](bv132_verify_votes_bloc.md) · [bv1815_bloc_3c2s_basic](bv1815_bloc_3c2s_basic.md)
+More cases in this set: [00_c3_b3_bloc-baseline-2-seats](00_c3_b3_bloc-baseline-2-seats.md) · [01_c4_b2_bloc-star-2-seats](01_c4_b2_bloc-star-2-seats.md) · [bv129_score_tiebreak_bloc](bv129_score_tiebreak_bloc.md) · [bv132_verify_votes_bloc](bv132_verify_votes_bloc.md) · [bv1815_bloc_3c2s_basic](bv1815_bloc_3c2s_basic.md) · [bv750_tie_breaking_bloc](bv750_tie_breaking_bloc.md)

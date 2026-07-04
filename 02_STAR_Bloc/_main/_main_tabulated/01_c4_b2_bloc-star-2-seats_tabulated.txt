@@ -2,7 +2,7 @@
 SOURCE FILE:     01_c4_b2_bloc-star-2-seats.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  01_c4_b2_bloc-star-2-seats_tabulated.txt
-TABULATED AT:    2026-07-04 11:27:46
+TABULATED AT:    2026-07-04 11:51:20
 ======================================================================
 
 election_title: "Bloc STAR Voting: 2-Seat Committee Election"
