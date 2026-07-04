@@ -1,0 +1,34 @@
+election_title: 'Lot-decided tie (BV jfk7pd) — following a deterministic published order'
+
+scenario_description: |-
+  The SAME real BetterVoting ballots as …_bv_order.yaml (jfk7pd: Ada 4 / Ben 0,
+  and Ada 0 / Ben 4 — a dead-rung tie at every STAR rung). This file follows the
+  NEW approach: a deterministic, PRE-PUBLISHED lot order (Ada first), so the tie
+  resolves the same way on every run and is auditable in advance. It elects Ada,
+  whereas BetterVoting's random draw elected Ben from the identical ballots. Same
+  votes, different winner, decided entirely by which lot order you follow — the
+  argument for deterministic lot numbers (BV #1063). See the lesson md.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [Ada, Ben]   # a deterministic, pre-published order
+ballots: |-
+  Ada,Ben
+  4,0
+  0,4
+
+expected_winners:
+  - Ada
+
+# file: lot_random_vs_published_jfk7pd_published_order.yaml

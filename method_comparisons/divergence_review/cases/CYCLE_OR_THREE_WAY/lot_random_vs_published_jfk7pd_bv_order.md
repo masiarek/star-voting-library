@@ -1,4 +1,4 @@
-# Lot tiebreak — following BetterVoting's drawn order
+# Lot-decided tie (BV jfk7pd) — following BetterVoting's random draw
 
 **Bucket — CYCLE_OR_THREE_WAY:** Cycle / three-way split
 
@@ -21,7 +21,9 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`YAML_library/1_positive/lot_tiebreak_bv_order.yaml`](../../../../YAML_library/1_positive/lot_tiebreak_bv_order.yaml)  ·  **STAR tabulated mirror:** [`lot_tiebreak_bv_order_tabulated.txt`](../../../../YAML_library/1_positive/1_positive_tabulated/lot_tiebreak_bv_order_tabulated.txt)
+**Source election:** [`01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml`](../../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml)  ·  **STAR tabulated mirror:** [`lot_random_vs_published_jfk7pd_bv_order_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_tabulated.txt)
+
+_Also present (identical ballots) at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`._
 
 _2 candidates, 2 ballots._
 

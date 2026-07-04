@@ -87,6 +87,18 @@ with
 [write-up](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md)
 for the alive/tied/adversarial variants.
 
+## A real one from BetterVoting — `jfk7pd` (random vs. published lot)
+
+A live BetterVoting election that hit exactly this: two candidates, two ballots
+(Ada 4/0, Ben 0/4), tied at every rung with **no 5s** (a dead rung), which BV
+resolved by a **random** draw (`tieBreakType: random`) and elected Ben. Import
+the same ballots with a deterministic **published** lot order and Ada wins — same
+votes, different winner. Written up as a shareable brief for the BV team:
+[A lot-decided STAR tie in BetterVoting (jfk7pd)](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md)
+— with the frozen export and both tabulatable YAMLs
+([BV-order → Ben](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml),
+[published → Ada](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml)).
+
 ## Why it matters
 
 The usual framing — "deterministic tests settle almost everything; the lot is

@@ -1,20 +1,20 @@
 # Cross-method divergence review
 
-_Generated 2026-07-03 18:40 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-03 23:03 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **96** single-winner STAR elections (skipped 13 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **39** (41%) diverge from STAR under at least one method; **57** agree across the board.
+- Scanned **98** single-winner STAR elections (skipped 13 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **40** (41%) diverge from STAR under at least one method; **58** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 5 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 4 |
-| CYCLE_OR_THREE_WAY | 9 |
+| CYCLE_OR_THREE_WAY | 10 |
 | APPROVAL_OR_MINOR | 20 |
 
 ## Score→rank conversion (recorded both ways)
@@ -71,6 +71,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
+- **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  
+    STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none  
+    _also at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`_
 - **[tie_break_04_runoff_five_star_breaks](cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md)** — `01_STAR/tie_break_dead_rung/tie_break_04_runoff_five_star_breaks.yaml` (2c/2b)  
     STAR=**Alice** · IRV=Ben · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[tie_break_07_runoff_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_07_runoff_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml` (2c/2b)  
@@ -79,8 +82,6 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Ben** · IRV=Ann · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
 - **[tie_break_09_five_star_tied_nonzero](cases/CYCLE_OR_THREE_WAY/tie_break_09_five_star_tied_nonzero.md)** — `01_STAR/tie_break_dead_rung/tie_break_09_five_star_tied_nonzero.yaml` (2c/2b)  
     STAR=**Ben** · IRV=Ann · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
-- **[lot_tiebreak_bv_order](cases/CYCLE_OR_THREE_WAY/lot_tiebreak_bv_order.md)** — `YAML_library/1_positive/lot_tiebreak_bv_order.yaml` (2c/2b)  
-    STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
 - **[BV_Library_star_runoff_tie_score_resolves](cases/CYCLE_OR_THREE_WAY/BV_Library_star_runoff_tie_score_resolves.md)** — `method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml` (2c/2b)  
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
 - **[monotonicity_star_after](cases/CYCLE_OR_THREE_WAY/monotonicity_star_after.md)** — `method_comparisons/monotonicity/monotonicity_star_after.yaml` (3c/34b)  

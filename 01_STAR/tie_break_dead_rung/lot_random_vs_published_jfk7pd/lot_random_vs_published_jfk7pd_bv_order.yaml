@@ -1,0 +1,36 @@
+election_title: 'Lot-decided tie (BV jfk7pd) — following BetterVoting''s random draw'
+
+scenario_description: |-
+  Real BetterVoting election jfk7pd ("The BV recipe — the crazy scenario"): two
+  candidates (Ada, Ben), two ballots (Ada 4 / Ben 0, and Ada 0 / Ben 4). Every
+  STAR rung ties — both total 4, pairwise 1-1, and NEITHER holds a score-5 vote
+  (fiveStarCount 0), so the five-star rung is a DEAD RUNG reading 0-0. BetterVoting
+  resolved it with a RANDOM draw (tieBreakType: random; perm [Ben, Ada]) and
+  elected Ben. This file follows that drawn order (lot_numbers [Ben, Ada]) so the
+  LH engine reproduces BV's winner, Ben. Its twin (…published_order) uses a
+  deterministic pre-published order and elects Ada instead — same ballots, other
+  winner, decided only by the lot. See the lesson md and BV #1063.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [Ben, Ada]   # the order BetterVoting's random draw produced (perm)
+ballots: |-
+  Ada,Ben
+  4,0
+  0,4
+
+expected_winners:
+  - Ben
+
+# file: lot_random_vs_published_jfk7pd_bv_order.yaml

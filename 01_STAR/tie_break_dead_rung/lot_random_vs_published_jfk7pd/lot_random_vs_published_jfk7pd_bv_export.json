@@ -1,0 +1,262 @@
+{
+  "Election": {
+    "election_id": "jfk7pd",
+    "title": "The BV recipe (the \"crazy\" scenario)",
+    "description": null,
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "draft",
+    "races": [
+      {
+        "title": "The BV recipe (the \"crazy\" scenario)",
+        "race_id": "0",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-63w",
+            "candidate_name": "Ada"
+          },
+          {
+            "candidate_id": "c-h28",
+            "candidate_name": "Ben"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {},
+      "ballot_updates": false,
+      "public_results": true,
+      "random_candidate_order": true,
+      "require_instruction_confirmation": true,
+      "draggable_ballot": false,
+      "term_type": "election",
+      "contact_email": ""
+    },
+    "auth_key": null,
+    "claim_key_hash": "7cc77127e3e30dd59eb53e98df395965663a6e9bc3dd75c29a1beffbde19fded",
+    "is_public": false,
+    "create_date": "2026-07-04T02:52:44.535Z",
+    "update_date": "1783133564535",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-cp66hr6m",
+      "election_id": "jfk7pd",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0",
+          "scores": [
+            {
+              "candidate_id": "c-63w",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-h28",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-wqyc4w6m",
+      "election_id": "jfk7pd",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0",
+          "scores": [
+            {
+              "candidate_id": "c-63w",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-h28",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-h28",
+          "name": "Ben",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-h28": 0,
+            "c-63w": 1
+          },
+          "winsAgainst": {
+            "c-h28": false,
+            "c-63w": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-63w",
+          "name": "Ada",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-h28": 1,
+            "c-63w": 0
+          },
+          "winsAgainst": {
+            "c-h28": false,
+            "c-63w": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-h28",
+              "name": "Ben",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-h28": 0,
+                "c-63w": 1
+              },
+              "winsAgainst": {
+                "c-h28": false,
+                "c-63w": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-63w",
+              "name": "Ada",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-h28": 1,
+                "c-63w": 0
+              },
+              "winsAgainst": {
+                "c-h28": false,
+                "c-63w": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_same_score",
+              "names": [
+                "Ben",
+                "Ada"
+              ],
+              "star": 4
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Ben",
+                "Ada"
+              ],
+              "votes": 1,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "Ben",
+                "Ada"
+              ],
+              "stars": 4
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "Ben",
+                "Ada"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "Ben",
+              "runner_up": "Ada",
+              "tiebreak_candidate_names": "Ben, Ada"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Ben",
+              "runner_up": "Ada"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-h28",
+            "name": "Ben",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-h28": 0,
+              "c-63w": 1
+            },
+            "winsAgainst": {
+              "c-h28": false,
+              "c-63w": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-63w",
+            "name": "Ada",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-h28": 1,
+              "c-63w": 0
+            },
+            "winsAgainst": {
+              "c-h28": false,
+              "c-63w": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 2
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "c-h28",
+        "c-63w"
+      ]
+    }
+  ]
+}
