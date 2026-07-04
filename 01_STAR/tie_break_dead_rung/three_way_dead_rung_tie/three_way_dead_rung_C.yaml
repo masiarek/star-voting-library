@@ -1,0 +1,35 @@
+election_title: 'Three-way dead-rung tie — published order C,A,B elects C'
+
+scenario_description: |-
+  The SAME rotationally-symmetric three-candidate dead-rung tie as
+  three_way_dead_rung_A.yaml (A 4/0/0, B 0/4/0, C 0/0/4 — totals 4-4-4, all
+  pairwise 1-1, no 5s so the five-star rung is dead). Only the lot order changes:
+  here it is [C, A, B], so C wins. Same ballots as _A (elects A) and _B (elects
+  B): three candidates, three possible winners, chosen entirely by the lot order.
+  A random tie-break would pick one at 1-in-3; a published lot fixes it. See the
+  lesson md and BV #1063.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [C, A, B]
+ballots: |-
+  A,B,C
+  4,0,0
+  0,4,0
+  0,0,4
+
+expected_winners:
+  - C
+
+# file: three_way_dead_rung_C.yaml

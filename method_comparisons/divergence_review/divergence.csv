@@ -39,6 +39,7 @@ AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap2.yaml,3,2,Ann,Ann,A
 AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap3.yaml,3,2,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap4.yaml,3,2,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,Ann,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
+AGREE,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml,3,3,B,B,B,B,B,B,B,,,0,False,False,True
 AGREE,01_STAR/tie_break_dead_rung/tie_break_01_scoring_five_star_breaks.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_02_scoring_no_fives_to_lot.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_03_runoff_no_fives_to_lot.yaml,2,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,,,0,False,False,True
@@ -78,6 +79,8 @@ APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polari
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
+CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True
+CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml,3,3,C,B,B,C,C,C,C,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/tie_break_04_runoff_five_star_breaks.yaml,2,2,Alice,Ben,Ben,Alice,Alice,Alice,Alice,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml,2,2,Ann,Ben,Ben,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adversarial_lot.yaml,2,2,Ben,Ann,Ann,Ben,Ben,Ben,Ben,,,0,False,False,True

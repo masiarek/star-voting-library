@@ -6,11 +6,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**126 election files** (117 single-winner, 9 multi-winner) across 13 method(s).
+**129 election files** (120 single-winner, 9 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 97 |
+| STAR | 100 |
 | RCV-IRV (Hare) | 9 |
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
@@ -24,7 +24,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (97)
+## STAR  (100)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -95,6 +95,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`tie_break_09_five_star_tied_nonzero`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/tie_break_09_five_star_tied_nonzero.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung 05 — five-star rung alive but non-separating → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/tie_break_09_five_star_tied_nonzero.yaml) |
 | [`lot_random_vs_published_jfk7pd_bv_order`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_pages/lot_random_vs_published_jfk7pd_bv_order.md) | `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/` | 1 | Lot-decided tie (BV jfk7pd) — following BetterVoting's random draw → _Ben_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml) |
 | [`lot_random_vs_published_jfk7pd_published_order`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_pages/lot_random_vs_published_jfk7pd_published_order.md) | `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/` | 1 | Lot-decided tie (BV jfk7pd) — following a deterministic published order → _Ada_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml) |
+| [`three_way_dead_rung_A`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_A.md) | `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order A,B,C elects A → _A_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml) |
+| [`three_way_dead_rung_B`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_B.md) | `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order B,C,A elects B → _B_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml) |
+| [`three_way_dead_rung_C`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_C.md) | `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order C,A,B elects C → _C_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml) |
 | [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/_main_pages/rrv_sample_c15_b13_three-parties.md) | `03_STAR_PR/_main/` | 1 | RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow) → _Orange5_ | [`.yaml`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) |
 | [`lot_tiebreak_bv_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_bv_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following BetterVoting's drawn order → _Ben_ | — |
 | [`lot_tiebreak_published_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_published_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following the new published-lot approach → _Ada_ | — |

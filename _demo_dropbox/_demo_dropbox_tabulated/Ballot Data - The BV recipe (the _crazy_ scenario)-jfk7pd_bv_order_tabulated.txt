@@ -2,7 +2,7 @@
 SOURCE FILE:     Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order.yaml
 SOURCE MODIFIED: 2026-07-03 22:57:20
 TABULATED FILE:  Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order_tabulated.txt
-TABULATED AT:    2026-07-03 22:57:34
+TABULATED AT:    2026-07-03 23:07:03
 ======================================================================
 
 election:
@@ -53,7 +53,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _demo_dropbox_tabulated/Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/_demo_dropbox/_demo_dropbox_tabulated/Ballot%20Data%20-%20The%20BV%20recipe%20%28the%20_crazy_%20scenario%29-jfk7pd_bv_order_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/_demo_dropbox/_demo_dropbox_tabulated/Ballot%20Data%20-%20The%20BV%20recipe%20%28the%20_crazy_%20scenario%29-jfk7pd_bv_order_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

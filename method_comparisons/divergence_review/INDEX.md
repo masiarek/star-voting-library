@@ -1,20 +1,20 @@
 # Cross-method divergence review
 
-_Generated 2026-07-03 23:03 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-04 07:08 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **98** single-winner STAR elections (skipped 13 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **40** (41%) diverge from STAR under at least one method; **58** agree across the board.
+- Scanned **101** single-winner STAR elections (skipped 13 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **42** (42%) diverge from STAR under at least one method; **59** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 5 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 4 |
-| CYCLE_OR_THREE_WAY | 10 |
+| CYCLE_OR_THREE_WAY | 12 |
 | APPROVAL_OR_MINOR | 20 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (39 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (40 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 5
 
@@ -67,13 +67,16 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
 
-### CYCLE_OR_THREE_WAY — 9
+### CYCLE_OR_THREE_WAY — 10
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
 - **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  
     STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none  
     _also at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`_
+- **[three_way_dead_rung_A](cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md)** — `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml` (3c/3b)  
+    STAR=**A** · IRV=B · RR=A · Approval=A · Score=A · Condorcet=none  
+    _also at: `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`_
 - **[tie_break_04_runoff_five_star_breaks](cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md)** — `01_STAR/tie_break_dead_rung/tie_break_04_runoff_five_star_breaks.yaml` (2c/2b)  
     STAR=**Alice** · IRV=Ben · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[tie_break_07_runoff_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_07_runoff_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml` (2c/2b)  

@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Three-way dead-rung tie — published order A,B,C elects A
+ Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C
+     1 ×   A      (4, 0, 0)
+     1 ×   B      (0, 4, 0)
+     1 ×   C      (0, 0, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                  1  Hopeful
+B                  1  Hopeful
+C                  1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+B                  1  Elected
+A                  1  Rejected
+C                  0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  B
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

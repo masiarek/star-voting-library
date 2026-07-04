@@ -1,0 +1,37 @@
+election_title: 'Three-way dead-rung tie — published order A,B,C elects A'
+
+scenario_description: |-
+  A perfectly symmetric THREE-candidate dead-rung tie (the 3-candidate analog of
+  BV jfk7pd). Three ballots, each a rotation: A 4/0/0, B 0/4/0, C 0/0/4. Every
+  candidate totals 4, every pairwise is 1-1, and nobody scored a 5, so the
+  five-star rung is a DEAD RUNG (0-0-0). Nothing on the ballots separates the
+  three — the winner is decided ONLY by the lot order. This file pins the
+  published order [A, B, C], so A wins. Its siblings (_B, _C) use rotated orders
+  and elect B and C from the identical ballots: three candidates, three possible
+  winners. A random tie-break (BetterVoting's tieBreakType) would pick one of the
+  three; a deterministic published lot fixes it. See the lesson md and BV #1063.
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+lot_numbers: [A, B, C]
+ballots: |-
+  A,B,C
+  4,0,0
+  0,4,0
+  0,0,4
+
+expected_winners:
+  - A
+
+# file: three_way_dead_rung_A.yaml

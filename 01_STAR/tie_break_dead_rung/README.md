@@ -99,6 +99,14 @@ votes, different winner. Written up as a shareable brief for the BV team:
 ([BV-order → Ben](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml),
 [published → Ada](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml)).
 
+**Does it scale past two candidates?** Yes — the phenomenon is about *symmetry*,
+not candidate count. The [three-way dead-rung tie](three_way_dead_rung_tie/three_way_dead_rung_tie.md)
+(A 4/0/0, B 0/4/0, C 0/0/4) is the 3-candidate analog: three candidates, **three**
+possible winners by lot, and a random draw now diverges from a published order
+**2/3** of the time — `(k−1)/k` for a `k`-way tie. More candidates never fix it;
+they can make the divergence worse and add a second place (the finalist choice)
+for the lot to bite.
+
 ## Why it matters
 
 The usual framing — "deterministic tests settle almost everything; the lot is

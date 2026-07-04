@@ -1,6 +1,6 @@
 # A lot-decided STAR tie in BetterVoting (`jfk7pd`) — and why the tie-break must be deterministic
 
-**For the BetterVoting engineering team.** This is a small, fully-worked real
+This is a small, fully-worked real
 election on bettervoting.com whose winner was chosen by a **random** tie-break.
 Re-running the same ballots could elect the *other* candidate. Below is exactly
 what happened, why, a side-by-side reproduction with an independent engine, and a
