@@ -1,17 +1,21 @@
 ======================================================================
-SOURCE FILE:     bv130_dead_rung_bloc.yaml
-SOURCE MODIFIED: 2026-07-04 17:45:44
-TABULATED FILE:  bv130_dead_rung_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 17:47:16
+SOURCE FILE:     bv130r2_dead_rung_bloc.yaml
+SOURCE MODIFIED: 2026-07-04 17:59:15
+TABULATED FILE:  bv130r2_dead_rung_bloc_tabulated.txt
+TABULATED AT:    2026-07-04 18:01:02
 ======================================================================
 
-election_title: "BV130 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie)"
+election_title: "BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk)"
 
 scenario_description: |-
-  The LH reference for BetterVoting test BV130 (real election 9ff9jk, "Bloc
-  STAR", 3 seats). Six candidates (Ada, Ben, Cara, Dan, Eve, Finn), 4 ballots,
-  and — deliberately — no candidate ever scores a 5 (the whole election is
-  capped at 4).
+  The LH reference for BetterVoting test BV130-r2 (real election 9ff9jk, "Bloc
+  STAR", 3 seats), marked "Passed" in the tracker. Six candidates (Ada, Ben,
+  Cara, Dan, Eve, Finn), 4 ballots, and — deliberately — no candidate ever
+  scores a 5 (the whole election is capped at 4).
+
+  NOTE: this is the r2 RETEST, a DISTINCT election from the original BV130 (a
+  9-ballot "Someone I Like / Santa Claus / The Lesser Evil" case backing the
+  star-server#731 reporting issue) — see bv130_bloc_pagination_731.yaml.
 
   Seat 1 is a perfect Ada/Dan tie that survives EVERY deterministic rung: both
   total 15, pairwise 1-1 (2 Equal Support), and — because nothing reaches 5 —
@@ -53,17 +57,21 @@ expected_winners:
   - Ada
   - Eve
 
-# file: bv130_dead_rung_bloc.yaml
+# file: bv130r2_dead_rung_bloc.yaml
 
 ======================================================================
 TABULATION RESULTS
 ======================================================================
 
-=== BV130 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie) ===
-  The LH reference for BetterVoting test BV130 (real election 9ff9jk, "Bloc
-  STAR", 3 seats). Six candidates (Ada, Ben, Cara, Dan, Eve, Finn), 4 ballots,
-  and — deliberately — no candidate ever scores a 5 (the whole election is
-  capped at 4).
+=== BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) ===
+  The LH reference for BetterVoting test BV130-r2 (real election 9ff9jk, "Bloc
+  STAR", 3 seats), marked "Passed" in the tracker. Six candidates (Ada, Ben,
+  Cara, Dan, Eve, Finn), 4 ballots, and — deliberately — no candidate ever
+  scores a 5 (the whole election is capped at 4).
+
+  NOTE: this is the r2 RETEST, a DISTINCT election from the original BV130 (a
+  9-ballot "Someone I Like / Santa Claus / The Lesser Evil" case backing the
+  star-server#731 reporting issue) — see bv130_bloc_pagination_731.yaml.
 
   Seat 1 is a perfect Ada/Dan tie that survives EVERY deterministic rung: both
   total 15, pairwise 1-1 (2 Equal Support), and — because nothing reaches 5 —
