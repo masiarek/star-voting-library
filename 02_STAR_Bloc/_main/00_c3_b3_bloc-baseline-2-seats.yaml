@@ -1,0 +1,43 @@
+election_title: "Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)"
+
+scenario_description: |-
+  The smallest Bloc STAR election that actually decides something: 3 candidates,
+  2 seats, so exactly one candidate is excluded. (A 2-candidate / 2-seat race
+  would be a non-election — both win no matter how anyone votes.)
+
+  Bloc STAR fills seats by running single-winner STAR once per seat: elect a
+  winner, remove them, re-run on the same ballots.
+    - Seat 1: score all three. Alice (14) and Bruno (12) are the top two and
+      advance; in the runoff Alice is preferred 2-1, so Alice takes seat 1.
+    - Seat 2: remove Alice and re-run on the remaining two. Bruno (12) beats
+      Clara (3) in the runoff 3-0 and takes seat 2.
+  Clara (total 3) is excluded. Both seats are decided cleanly by the ballots —
+  no rung of the tie-break ladder is ever consulted. This is the control the
+  Bloc tie probes vary from. Bloc is majoritarian: a cohesive majority can take
+  every seat.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: bloc
+ballots: |-
+  Alice,Bruno,Clara
+  5,3,1
+  4,5,2
+  5,4,0
+
+expected_winners:
+  - Alice
+  - Bruno
+
+# file: 00_c3_b3_bloc-baseline-2-seats.yaml

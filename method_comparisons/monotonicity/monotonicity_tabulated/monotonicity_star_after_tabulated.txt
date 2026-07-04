@@ -2,7 +2,7 @@
 SOURCE FILE:     monotonicity_star_after.yaml
 SOURCE MODIFIED: 2026-06-29 14:09:58
 TABULATED FILE:  monotonicity_star_after_tabulated.txt
-TABULATED AT:    2026-07-04 08:07:10
+TABULATED AT:    2026-07-04 09:05:03
 ======================================================================
 
 election_title: Monotonicity — STAR counterpart (AFTER — X still wins)
@@ -77,7 +77,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: monotonicity_tabulated/monotonicity_star_after_RCV-IRV_tabulated.txt
-     file:///sessions/exciting-bold-curie/mnt/YAML/method_comparisons/monotonicity/monotonicity_tabulated/monotonicity_star_after_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/method_comparisons/monotonicity/monotonicity_tabulated/monotonicity_star_after_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

@@ -1,0 +1,142 @@
+======================================================================
+SOURCE FILE:     00_c3_b3_bloc-baseline-2-seats.yaml
+SOURCE MODIFIED: 2026-07-04 09:04:46
+TABULATED FILE:  00_c3_b3_bloc-baseline-2-seats_tabulated.txt
+TABULATED AT:    2026-07-04 09:04:59
+======================================================================
+
+election_title: "Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)"
+
+scenario_description: |-
+  The smallest Bloc STAR election that actually decides something: 3 candidates,
+  2 seats, so exactly one candidate is excluded. (A 2-candidate / 2-seat race
+  would be a non-election — both win no matter how anyone votes.)
+
+  Bloc STAR fills seats by running single-winner STAR once per seat: elect a
+  winner, remove them, re-run on the same ballots.
+    - Seat 1: score all three. Alice (14) and Bruno (12) are the top two and
+      advance; in the runoff Alice is preferred 2-1, so Alice takes seat 1.
+    - Seat 2: remove Alice and re-run on the remaining two. Bruno (12) beats
+      Clara (3) in the runoff 3-0 and takes seat 2.
+  Clara (total 3) is excluded. Both seats are decided cleanly by the ballots —
+  no rung of the tie-break ladder is ever consulted. This is the control the
+  Bloc tie probes vary from. Bloc is majoritarian: a cohesive majority can take
+  every seat.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: bloc
+ballots: |-
+  Alice,Bruno,Clara
+  5,3,1
+  4,5,2
+  5,4,0
+
+expected_winners:
+  - Alice
+  - Bruno
+
+# file: 00_c3_b3_bloc-baseline-2-seats.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) ===
+  The smallest Bloc STAR election that actually decides something: 3 candidates,
+  2 seats, so exactly one candidate is excluded. (A 2-candidate / 2-seat race
+  would be a non-election — both win no matter how anyone votes.)
+
+  Bloc STAR fills seats by running single-winner STAR once per seat: elect a
+  winner, remove them, re-run on the same ballots.
+    - Seat 1: score all three. Alice (14) and Bruno (12) are the top two and
+      advance; in the runoff Alice is preferred 2-1, so Alice takes seat 1.
+    - Seat 2: remove Alice and re-run on the remaining two. Bruno (12) beats
+      Clara (3) in the runoff 3-0 and takes seat 2.
+  Clara (total 3) is excluded. Both seats are decided cleanly by the ballots —
+  no rung of the tie-break ladder is ever consulted. This is the control the
+  Bloc tie probes vary from. Bloc is majoritarian: a cohesive majority can take
+  every seat.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Alice   | * Bruno   |   Clara   |
+-----------------------------------------------------
+     * Alice > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
+     * Bruno > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
+       Clara > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Alice — matches the STAR winner
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 3 ballots.
+Alice,Bruno,Clara
+    5,    3,    1
+    4,    5,    2
+    5,    4,    0
+
+[Score Distribution] (number of ballots giving each score)
+       5  4  3  2  1  0  | Total   Avg
+Alice  2  1  0  0  0  0  |    14   4.7
+Bruno  1  1  1  0  0  0  |    12   4.0
+Clara  0  0  0  1  1  1  |     3   1.0
+ Want to fill 2 seats.
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alice         -- 14 -- First place
+   Bruno         -- 12 -- Second place
+   Clara         --  3
+ Alice and Bruno advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alice         -- 2 -- First place
+   Bruno         -- 1
+   Equal Support -- 0
+ Alice wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Alice 2 (67%)  ·  Bruno 1 (33%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 12 -- First place
+   Clara         --  3 -- Second place
+ Bruno and Clara advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 3 -- First place
+   Clara         -- 0
+   Equal Support -- 0
+ Bruno wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Bruno 3 (100%)  ·  Clara 0 (0%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Alice
+ Bruno
