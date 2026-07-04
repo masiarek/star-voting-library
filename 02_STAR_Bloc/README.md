@@ -17,7 +17,7 @@ In-repo index of the Bloc STAR reference cases (the LH ground truth for the corr
 | BV129 | 3c/2w — seat 2 by **score** tiebreak | 2 | runoff (seat 2) | count OK; "Failed" = method-name label [#1086](https://github.com/Equal-Vote/bettervoting/issues/1086) | [page](_main/bv129_score_tiebreak_bloc.md) · [yaml](_main/bv129_score_tiebreak_bloc.yaml) |
 | BV126 | "ties every step" | — | yes | Failed · [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) | *pending* |
 | BV750 | tie-breaking — all ballots identical (5,5,5) | 2 | lot (both seats) | Failed — every ballot dropped (`nTallyVotes 0`) [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) | [page](_main/bv750_tie_breaking_bloc.md) · [yaml](_main/bv750_tie_breaking_bloc.yaml) |
-| BV130 | 6c/3w | 3 | — | Failed · star-server#731 | *pending* |
+| BV130 | 6c/3w — **dead-rung lot tie** (seat 1) | 3 | lot (seat 1) | Failed · star-server#731; `tieBreakType` mislabeled `none` | [page](_main/bv130_dead_rung_bloc.md) · [yaml](_main/bv130_dead_rung_bloc.yaml) |
 | BV1525 | 4 winners, 16 ballots | 4 | — | re-do | *pending* |
 | BV2105 | Favorite ice cream demo | 2 | — | Failed (regression) | *pending* |
 
