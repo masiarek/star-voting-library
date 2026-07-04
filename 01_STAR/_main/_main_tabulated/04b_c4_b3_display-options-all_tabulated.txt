@@ -2,7 +2,7 @@
 SOURCE FILE:     04b_c4_b3_display-options-all.yaml
 SOURCE MODIFIED: 2026-06-21 07:07:40
 TABULATED FILE:  04b_c4_b3_display-options-all_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:16
+TABULATED AT:    2026-07-04 16:45:59
 ======================================================================
 
 # Single-race demo exercising EVERY supported field and `options:` flag.
@@ -93,8 +93,9 @@ Count × Choco,Almond,Vanilla,Strawberry
     2 ×     0,     2,      3,         5
     1 ×     0,     2,      5,         3
 
-[Score Distribution] (number of ballots giving each score)
-            5  4  3  2  1  0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  | Total   Avg
 Choco       0  0  0  0  0  3  |     0   0.0
 Almond      0  0  0  3  0  0  |     6   2.0
 Vanilla     1  0  2  0  0  0  |    11   3.7

@@ -2,7 +2,7 @@
 SOURCE FILE:     Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml
 SOURCE MODIFIED: 2026-06-28 18:58:15
 TABULATED FILE:  Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:12
+TABULATED AT:    2026-07-04 16:45:54
 ======================================================================
 
 election:
@@ -88,13 +88,14 @@ Dakota,Eden,Flynn,Gale,Hazel
      4,   5,    1,   0,    0
      4,   5,    0,   1,    0
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Dakota  2  3  0  0  0  0  |    22   4.4
-Eden    3  0  0  0  0  2  |    15   3.0
-Flynn   0  0  0  0  2  3  |     2   0.4
-Gale    0  0  0  0  2  3  |     2   0.4
-Hazel   0  0  0  0  1  4  |     1   0.2
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Dakota     2  3  0  0  0  0  |    22   4.4
+Eden       3  0  0  0  0  2  |    15   3.0
+Flynn      0  0  0  0  2  3  |     2   0.4
+Gale       0  0  0  0  2  3  |     2   0.4
+Hazel      0  0  0  0  1  4  |     1   0.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

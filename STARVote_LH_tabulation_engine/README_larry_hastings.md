@@ -73,6 +73,16 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 - **Runoff colors** mirror the matrix legend: the winner's count is green (For), the other finalist's is red (Against), and Equal Support is blue (Equal Support). A tie is left neutral until it resolves; tiebreaker rounds (raw scores) are uncolored.
 - **Round separators**: in multi-round methods (e.g. Bloc STAR) a faint rule is drawn before each new round after the first, grouping the output into blocks.
 - **Winner line** restates the method and winner count, e.g. `Winner (STAR Voting Method — single winner)` or `Winners (Bloc STAR Method — 3 winners)`.
+- **Setup line** (multiwinner): the base engine's standalone `Want to fill N seats.` is folded into the ballot-count line, so the two "size of this election" facts sit together — `Tabulating 4 ballots to fill 3 seats.` Single-winner output is unchanged. (Done in the wrapper's `custom_print`; the vendored engine is untouched.)
+- **`[Score Distribution]`** (with `show_score_counts`): a per-candidate star histogram, captioned `(how many ballots gave each star rating)`, with a `Score` corner label and a `===` rule row so the `5 4 3 2 1 0` header reads unmistakably as star values. The **Avg** column is computed from an *exact rational* and rounded **half-up** to one decimal (not float `/` + `{:.1f}`, which rounds half-to-even and would print an exact `1.25` as `1.2`). See [Score Distribution & averages](../00_start_here/STAR_reporting/score_distribution_and_averages.md).
+
+## Change log — wrapper display (this is *our* code, not the vendored engine)
+
+Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendored `starvote/` core stays pristine (see [`FORK_NOTES.md`](FORK_NOTES.md)); these never touch it.
+
+- **`[Score Distribution]` header + exact-rational half-up average** — `Score` corner label, `===` rule row, star-rating caption, and the Avg float→`Decimal`/`ROUND_HALF_UP` fix. ([full write-up](../00_start_here/STAR_reporting/score_distribution_and_averages.md))
+- **Multiwinner setup line** — merged `Want to fill N seats.` into `Tabulating N ballots to fill N seats.`
+- Earlier: `[Lot-decided tie — rare]` callout; validator accepts `voting_method: Bloc STAR`.
 
 ## Saved `_tabulated` files
 

@@ -2,7 +2,7 @@
 SOURCE FILE:     03_lunch_veggie_vs_meat.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  03_lunch_veggie_vs_meat_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:23
+TABULATED AT:    2026-07-04 16:46:08
 ======================================================================
 
 election_title: Spoiler — the veggie majority splits, the burger wins the lunch vote
@@ -102,8 +102,9 @@ Count × VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
    26 ×           5,          4,          4,         0
    16 ×           4,          2,          5,         0
 
-[Score Distribution] (number of ballots giving each score)
-              5   4   3   2   1   0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate     5   4   3   2   1   0  | Total   Avg
 VeggieCurry  26  44   0   0   0  30  |   306   3.1
 TofuStirFry  28  26   0  16   0  30  |   276   2.8
 GardenSalad  16  26   0  28   0  30  |   240   2.4

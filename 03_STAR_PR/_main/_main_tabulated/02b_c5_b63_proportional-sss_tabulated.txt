@@ -2,7 +2,7 @@
 SOURCE FILE:     02b_c5_b63_proportional-sss.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  02b_c5_b63_proportional-sss_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:28
+TABULATED AT:    2026-07-04 16:46:03
 ======================================================================
 
 # Proportional multi-winner example: Sequentially Spent Score (SSS).
@@ -93,7 +93,7 @@ Legend: For - Equal Support - Against
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
 [Sequentially Spent Score]
- Tabulating 63 ballots.
+ Tabulating 63 ballots to fill 3 seats.
 Count × Alice,Ben,Cara,Dan,Eve
    18 ×     5,  4,   3,  0,  0
    15 ×     0,  0,   0,  5,  4
@@ -101,14 +101,14 @@ Count × Alice,Ben,Cara,Dan,Eve
     9 ×     3,  4,   5,  0,  0
     9 ×     0,  0,   0,  4,  5
 
-[Score Distribution] (number of ballots giving each score)
-        5   4   3   2   1   0  | Total   Avg
-Alice  18  12   9   0   0  24  |   165   2.6
-Ben    12  27   0   0   0  24  |   168   2.7
-Cara    9   0  30   0   0  24  |   135   2.1
-Dan    15   9   0   0   0  39  |   111   1.8
-Eve     9  15   0   0   0  39  |   105   1.7
- Want to fill 3 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alice      18  12   9   0   0  24  |   165   2.6
+Ben        12  27   0   0   0  24  |   168   2.7
+Cara        9   0  30   0   0  24  |   135   2.1
+Dan        15   9   0   0   0  39  |   111   1.8
+Eve         9  15   0   0   0  39  |   105   1.7
  Hare score quota is 105.
 
 [Sequentially Spent Score: Round 1]

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2130_presidential_board_star_pr.yaml
 SOURCE MODIFIED: 2026-07-04 12:40:10
 TABULATED FILE:  bv2130_presidential_board_star_pr_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:29
+TABULATED AT:    2026-07-04 16:46:04
 ======================================================================
 
 election_title: "BV2130 — Presidential Board Election (Proportional STAR = Allocated Score)"
@@ -231,7 +231,7 @@ Legend: For - Equal Support - Against
 
 --- Allocated Score Voting Method (7 winners) ---
 [Allocated Score Voting]
- Tabulating 102 ballots. Note: 1 of 102 ballots is marked as an abstention.
+ Tabulating 102 ballots to fill 7 seats. Note: 1 of 102 ballots is marked as an abstention.
 Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Clinton (Democrat),Joe Biden (Democrat),John Kerry (Democrat),Kamala Harris (Democrat),Donald Trump (Republican),George W. Bush Jr. (Republican),J.D. Vance (Republican),Mike Pence (Republican),Nikki Haley (Republican),Ted Cruz (Republican),Vivek Ramaswamy (Republican),Bob Barr (Libertarian),Chase Oliver (Libertarian),Gary Johnson (Libertarian),Harry Browne (Libertarian),Jo Jorgensen (Libertarian),Michael Badnarik (Libertarian),Mike ter Maat (Libertarian),Ajamu Baraka (Green),Angela Walker (Green),Cynthia McKinney (Green),David Cobb (Green),Howie Hawkins (Green),Jill Stein (Green),Rudolph "Butch" Ware (Green),Chuck Baldwin (Constitution),Darrell castle (Constitution),Don Blankenship (Constitution),Howard Phillips (Constitution),Michael Peroutka (Constitution),Randall Terry (Constitution),Virgil Goode (Constitution),Claudia De La Cruz (Socialism and Liberation),Eugene Puryear (Socialism and Liberation),Gloria La Riva (Socialism and Liberation),Karina Garcia (Socialism and Liberation),Peta Lindsay (Socialism and Liberation),Sunil Freeman (Socialism and Liberation),Yari Osorio (Socialism and Liberation),Amar Patel (Solidarity),Brian Carroll (Solidarity),Joseph "Joe" Charles Schriner (Solidarity),Juan Muñoz (Solidarity),Lauren Onak (Solidarity),Mike Maturen (Solidarity),Peter Sonski (Solidarity),Robert F. Kennedy Jr. (Independent),Cornel West (Independent)
                  5,                      3,                        5,                         3,                   1,                    2,                       2,                        0,                              1,                      0,                      2,                       -,                    0,                           1,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 2,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  0,                        4
                  -,                      5,                        -,                         -,                   -,                    -,                       -,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
@@ -337,8 +337,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
@@ -390,7 +391,6 @@ Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |   
 Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
 Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
 Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
- Want to fill 7 seats.
  Hare quota is 102/7.
 
 [Allocated Score Voting: Round 1]
@@ -637,8 +637,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
@@ -875,8 +876,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
@@ -1104,8 +1106,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
@@ -1340,8 +1343,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
@@ -1563,8 +1567,9 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
                  5,                      5,                        5,                         5,                   5,                    5,                       5,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-                                                5   4   3   2   1   0  Abs  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                                                       Score
+Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
 Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
 Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
 Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8

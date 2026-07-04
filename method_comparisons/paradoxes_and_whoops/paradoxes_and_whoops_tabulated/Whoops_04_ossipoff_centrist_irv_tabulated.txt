@@ -2,7 +2,7 @@
 SOURCE FILE:     Whoops_04_ossipoff_centrist_irv.yaml
 SOURCE MODIFIED: 2026-07-02 11:56:34
 TABULATED FILE:  Whoops_04_ossipoff_centrist_irv_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:32
+TABULATED AT:    2026-07-04 16:46:10
 ======================================================================
 
 election:

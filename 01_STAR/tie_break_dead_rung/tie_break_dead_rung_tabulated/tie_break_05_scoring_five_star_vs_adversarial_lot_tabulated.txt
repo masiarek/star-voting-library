@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_05_scoring_five_star_vs_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:26
+TABULATED AT:    2026-07-04 16:45:56
 ======================================================================
 
 election_title: Dead rung 01 — scoring tie, five-star rung ALIVE
@@ -103,11 +103,12 @@ Ann,Ben,Cara
   4,  0,   4
   0,  1,   1
 
-[Score Distribution] (number of ballots giving each score)
-      5  4  3  2  1  0  | Total   Avg
-Ann   0  2  2  0  0  1  |    14   2.8
-Ben   2  0  0  0  1  2  |    11   2.2
-Cara  0  1  1  0  2  1  |     9   1.8
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  2  2  0  0  1  |    14   2.8
+Ben        2  0  0  0  1  2  |    11   2.2
+Cara       0  1  1  0  2  1  |     9   1.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

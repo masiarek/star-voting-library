@@ -2,7 +2,7 @@
 SOURCE FILE:     vote_splitting.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  vote_splitting_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:15
+TABULATED AT:    2026-07-04 16:45:58
 ======================================================================
 
 election_title: Vote splitting — two chocolates split the majority
@@ -114,8 +114,9 @@ Count × DarkChoco,MilkChoco,Vanilla
    12 ×         5,        4,      0
    10 ×         4,        5,      0
 
-[Score Distribution] (number of ballots giving each score)
-            5   4   3   2   1   0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
 DarkChoco  12  10   0  14   0   0  |   128   3.6
 MilkChoco  10  12   0   0  14   0  |   112   3.1
 Vanilla    14   0   0   0   0  22  |    70   1.9

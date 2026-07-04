@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     S_W1_N_TestTestTestElection_kgbf8w.yaml
-SOURCE MODIFIED: 2026-06-26 04:47:36
+SOURCE MODIFIED: 2026-06-26 00:47:36
 TABULATED FILE:  S_W1_N_TestTestTestElection_kgbf8w_tabulated.txt
-TABULATED AT:    2026-06-28 12:09:23
+TABULATED AT:    2026-07-04 16:46:12
 ======================================================================
 
 election:
@@ -64,8 +64,9 @@ Legend: For - Equal Support - Against
 Plain Choco (CPn),Almond Choco (CAm),Hazelnut Choco (CHz),Classic Vanilla (VCs),French Vanilla (VFr),Mango (Mgo),Peach (Pch)
                 3,                 5,                   4,                    2,                   2,          0,          1
 
-[Score Distribution] (number of ballots giving each score)
-                       5  4  3  2  1  0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                            Score
+Candidate              5  4  3  2  1  0  | Total   Avg
 Plain Choco (CPn)      0  0  1  0  0  0  |     3   3.0
 Almond Choco (CAm)     1  0  0  0  0  0  |     5   5.0
 Hazelnut Choco (CHz)   0  1  0  0  0  0  |     4   4.0

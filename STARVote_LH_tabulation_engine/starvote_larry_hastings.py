@@ -9,6 +9,7 @@ import re
 import sys
 import textwrap
 from collections import defaultdict
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 import starvote
@@ -1848,7 +1849,9 @@ def format_score_counts(candidates, ballots, max_score=5, display_rows=None):
 
     scores = list(range(max_score, -1, -1))  # high to low, e.g. 5..0
     n = len(ballots)
-    name_w = max((len(c) for c in candidates), default=4)
+    # Corner cell is labeled "Score" so the 5..0 header row is unmistakably the
+    # star values (not candidate numbers / ranks); widen the name column to fit it.
+    name_w = max([len("Candidate")] + [len(c) for c in candidates])
     show_abs = any(abstain[c] for c in candidates)
 
     # Size every column to its widest value so the headers line up with the data —
@@ -1858,8 +1861,11 @@ def format_score_counts(candidates, ballots, max_score=5, display_rows=None):
     abs_w = max([len("Abs")] + [len(str(abstain[c])) for c in candidates])
     total_w = max([len("Total")] + [len(str(totals[c])) for c in candidates])
 
-    lines = ["[Score Distribution] (number of ballots giving each score)"]
-    header = f"{'':<{name_w}}  " + "  ".join(f"{s:>{cell_w}}" for s in scores)
+    lines = ["[Score Distribution] (how many ballots gave each star rating)"]
+    score_cells = "  ".join(f"{s:>{cell_w}}" for s in scores)
+    # Group header: "Score" centered over just the star-value columns (not Abs).
+    lines.append(f"{'':<{name_w}}  {'Score'.center(len(score_cells))}".rstrip())
+    header = f"{'Candidate':<{name_w}}  {score_cells}"
     if show_abs:
         header += f"  {'Abs':>{abs_w}}"
     lines.append(f"{header}  | {'Total':>{total_w}}  {'Avg':>4}")
@@ -1868,8 +1874,16 @@ def format_score_counts(candidates, ballots, max_score=5, display_rows=None):
         if show_abs:
             cells += f"  {abstain[c]:>{abs_w}}"
         scored = n - abstain[c]
-        avg = totals[c] / scored if scored else 0.0
-        lines.append(f"{c:<{name_w}}  {cells}  | {totals[c]:>{total_w}}  {avg:>4.1f}")
+        # Average from an EXACT rational (totals and scored are ints), then round
+        # half-up to one decimal — not float division + {:.1f}, which uses
+        # round-half-to-EVEN and would print an exact 1.25 as a surprising "1.2".
+        # See STAR_reporting/score_distribution_and_averages.md.
+        if scored:
+            avg = (Decimal(totals[c]) / Decimal(scored)).quantize(
+                Decimal("0.1"), rounding=ROUND_HALF_UP)
+        else:
+            avg = Decimal("0.0")
+        lines.append(f"{c:<{name_w}}  {cells}  | {totals[c]:>{total_w}}  {avg:>4}")
     return "\n".join(lines)
 
 
@@ -2433,6 +2447,14 @@ def run_election(
             #    (also works for "[Bloc STAR: Round 1: ...]")
             stripped = text.strip()
 
+            # Relocate the multiwinner "Want to fill N seats." line: suppress it
+            # here and fold the seat count into the "Tabulating N ballots." line
+            # below, so the two "size of this election" facts sit together at the
+            # top instead of orphaning this line just before Round 1.
+            if (seats and seats > 1 and stripped.startswith("Want to fill ")
+                    and stripped.endswith("seats.")):
+                return
+
             # Round separator: before each main "Scoring Round" header after the
             # first, emit a faint rule to visually group each round.
             if stripped.startswith("[") and stripped.endswith("]"):
@@ -2484,6 +2506,14 @@ def run_election(
 
             # 1. Fix the singular/plural grammar.
             text = text.replace("Tabulating 1 ballots.", "Tabulating 1 ballot.")
+
+            # 1a. Multiwinner: fold the seat count into the setup line (the base
+            #     engine's standalone "Want to fill N seats." is suppressed above).
+            #     Only the initial tabulation, not per-round "remaining ballots".
+            if (seats and seats > 1 and text.lstrip().startswith("Tabulating ")
+                    and "remaining" not in text):
+                text = re.sub(r"(ballots?)\.", rf"\1 to fill {seats} seats.",
+                              text, count=1)
 
             # 1b. After the "Tabulating N ballot(s)." line, list the
             #     normalized ballots as Standard CSV.

@@ -2,7 +2,7 @@
 SOURCE FILE:     01b_c3_b9_overturn-holds-at-scale.yaml
 SOURCE MODIFIED: 2026-06-26 18:42:52
 TABULATED FILE:  01b_c3_b9_overturn-holds-at-scale_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:12
+TABULATED AT:    2026-07-04 16:45:54
 ======================================================================
 
 election_title: The same overturn at scale — 67% to 33%
@@ -80,11 +80,12 @@ Count × Almond,Brownie,Cocoa
     6 ×      4,      5,    0
     3 ×      5,      1,    0
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Almond   3  6  0  0  0  0  |    39   4.3
-Brownie  6  0  0  0  3  0  |    33   3.7
-Cocoa    0  0  0  0  0  9  |     0   0.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     3  6  0  0  0  0  |    39   4.3
+Brownie    6  0  0  0  3  0  |    33   3.7
+Cocoa      0  0  0  0  0  9  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

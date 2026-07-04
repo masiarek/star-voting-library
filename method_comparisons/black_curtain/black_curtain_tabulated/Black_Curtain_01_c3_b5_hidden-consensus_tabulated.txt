@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_01_c3_b5_hidden-consensus.yaml
 SOURCE MODIFIED: 2026-07-02 12:49:11
 TABULATED FILE:  Black_Curtain_01_c3_b5_hidden-consensus_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:31
+TABULATED AT:    2026-07-04 16:46:11
 ======================================================================
 
 election_title: The Black Curtain #1 — the hidden consensus candidate
@@ -102,11 +102,12 @@ Count × Ann,Bob,Cal
     3 ×   0,  4,  5
     2 ×   5,  4,  0
 
-[Score Distribution] (number of ballots giving each score)
-     5  4  3  2  1  0  | Total   Avg
-Ann  2  0  0  0  0  3  |    10   2.0
-Bob  0  5  0  0  0  0  |    20   4.0
-Cal  3  0  0  0  0  2  |    15   3.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        2  0  0  0  0  3  |    10   2.0
+Bob        0  5  0  0  0  0  |    20   4.0
+Cal        3  0  0  0  0  2  |    15   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

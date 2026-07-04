@@ -2,7 +2,7 @@
 SOURCE FILE:     small_abstention_c2_b5.yaml
 SOURCE MODIFIED: 2026-06-29 14:09:58
 TABULATED FILE:  small_abstention_c2_b5_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:19
+TABULATED AT:    2026-07-04 16:46:02
 ======================================================================
 
 election:
@@ -110,10 +110,11 @@ A,B
 -,-
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-   5  4  3  2  1  0  Abs  | Total   Avg
-A  2  1  0  0  0  1    1  |    14   3.5
-B  2  0  0  0  0  2    1  |    10   2.5
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          2  1  0  0  0  1    1  |    14   3.5
+B          2  0  0  0  0  2    1  |    10   2.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv131_guido_bloc.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  bv131_guido_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:27
+TABULATED AT:    2026-07-04 16:46:02
 ======================================================================
 
 election_title: "BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie"
@@ -115,18 +115,18 @@ Legend: For - Equal Support - Against
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]
- Tabulating 3 ballots.
+ Tabulating 3 ballots to fill 2 seats.
 Cand1,Cand2,Cand3
     1,    5,    2
     0,    0,    1
     5,    1,    2
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Cand1  1  0  0  0  1  1  |     6   2.0
-Cand2  1  0  0  0  1  1  |     6   2.0
-Cand3  0  0  0  2  1  0  |     5   1.7
- Want to fill 2 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Cand1      1  0  0  0  1  1  |     6   2.0
+Cand2      1  0  0  0  1  1  |     6   2.0
+Cand3      0  0  0  2  1  0  |     5   1.7
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.

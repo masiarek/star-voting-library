@@ -2,7 +2,7 @@
 SOURCE FILE:     bv750_tie_breaking_bloc.yaml
 SOURCE MODIFIED: 2026-07-04 11:50:26
 TABULATED FILE:  bv750_tie_breaking_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:28
+TABULATED AT:    2026-07-04 16:46:02
 ======================================================================
 
 election_title: "BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family)"
@@ -91,16 +91,16 @@ Legend: For - Equal Support - Against
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]
- Tabulating 3 ballots.
+ Tabulating 3 ballots to fill 2 seats.
 Count × a,b,c
     3 × 5,5,5
 
-[Score Distribution] (number of ballots giving each score)
-   5  4  3  2  1  0  | Total   Avg
-a  3  0  0  0  0  0  |    15   5.0
-b  3  0  0  0  0  0  |    15   5.0
-c  3  0  0  0  0  0  |    15   5.0
- Want to fill 2 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+a          3  0  0  0  0  0  |    15   5.0
+b          3  0  0  0  0  0  |    15   5.0
+c          3  0  0  0  0  0  |    15   5.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.

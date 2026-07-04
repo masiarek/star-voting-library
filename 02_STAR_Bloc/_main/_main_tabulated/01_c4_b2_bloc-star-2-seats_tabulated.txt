@@ -2,7 +2,7 @@
 SOURCE FILE:     01_c4_b2_bloc-star-2-seats.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  01_c4_b2_bloc-star-2-seats_tabulated.txt
-TABULATED AT:    2026-07-04 12:41:27
+TABULATED AT:    2026-07-04 16:46:02
 ======================================================================
 
 election_title: "Bloc STAR Voting: 2-Seat Committee Election"
@@ -78,18 +78,18 @@ Legend: For - Equal Support - Against
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]
- Tabulating 2 ballots.
+ Tabulating 2 ballots to fill 2 seats.
 Ann,Bob,Cal,Don
   1,  0,  4,  5
   1,  2,  4,  5
 
-[Score Distribution] (number of ballots giving each score)
-     5  4  3  2  1  0  | Total   Avg
-Ann  0  0  0  0  2  0  |     2   1.0
-Bob  0  0  0  1  0  1  |     2   1.0
-Cal  0  2  0  0  0  0  |     8   4.0
-Don  2  0  0  0  0  0  |    10   5.0
- Want to fill 2 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  0  0  0  2  0  |     2   1.0
+Bob        0  0  0  1  0  1  |     2   1.0
+Cal        0  2  0  0  0  0  |     8   4.0
+Don        2  0  0  0  0  0  |    10   5.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.

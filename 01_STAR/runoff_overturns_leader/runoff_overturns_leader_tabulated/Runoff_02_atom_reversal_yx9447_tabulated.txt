@@ -2,7 +2,7 @@
 SOURCE FILE:     Runoff_02_atom_reversal_yx9447.yaml
 SOURCE MODIFIED: 2026-06-28 16:05:01
 TABULATED FILE:  Runoff_02_atom_reversal_yx9447_tabulated.txt
-TABULATED AT:    2026-07-02 12:52:12
+TABULATED AT:    2026-07-04 16:45:54
 ======================================================================
 
 election:
@@ -80,11 +80,12 @@ Count × Austin,Boston,Cairo
     2 ×      4,     5,    0
     1 ×      5,     1,    2
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Austin  1  2  0  0  0  0  |    13   4.3
-Boston  2  0  0  0  1  0  |    11   3.7
-Cairo   0  0  0  1  0  2  |     2   0.7
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Austin     1  2  0  0  0  0  |    13   4.3
+Boston     2  0  0  0  1  0  |    11   3.7
+Cairo      0  0  0  1  0  2  |     2   0.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
