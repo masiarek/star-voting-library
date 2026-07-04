@@ -32,7 +32,8 @@ and **BV200** (equal ties & equal preferences — [vote on BetterVoting](https:/
 Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md)
 · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
 · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md)
-· [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
+· [`GLOSSARY`](../../00_start_here/GLOSSARY.md)
+· [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
 
 ---
 

@@ -36,6 +36,10 @@ for more).
 Ties?](tiebreaking_star_vs_irv.md) — why RCV-IRV's strict ranks make a tie *harder*
 to resolve deterministically (fewer signals, bigger consequence), not easier.
 
+**Why the contrived cases?** [Why Build "Silly" Tie Elections?](why_contrived_tie_cases.md)
+— the value of deliberately-degenerate probes (`5,5,5 / 4,4,4`, rotations), plus a
+flow-chart map of every single-winner STAR tie case and the test that covers it.
+
 Glossary: [`lot numbers`](../../GLOSSARY.md) · [`dead rung`](../../GLOSSARY.md).
 
 ---

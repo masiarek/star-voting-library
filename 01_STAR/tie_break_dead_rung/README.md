@@ -107,6 +107,12 @@ possible winners by lot, and a random draw now diverges from a published order
 they can make the divergence worse and add a second place (the finalist choice)
 for the lot to bite.
 
+> **Why build these deliberately-degenerate elections at all?** They're *probes*,
+> not forecasts — the fastest way to isolate one tie behavior, make a real bug
+> reproducible, pin the spec, and lock a regression test. See
+> [Why Build "Silly" Tie Elections?](../../00_start_here/topics/ties/why_contrived_tie_cases.md)
+> (with a flow-chart map of every tie case).
+
 ## Why it matters
 
 The usual framing — "deterministic tests settle almost everything; the lot is
