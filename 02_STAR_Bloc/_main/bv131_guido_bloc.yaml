@@ -1,0 +1,52 @@
+election_title: "BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV131 ("Guido example", real election
+  kbh3d9). The sheet marks it Passed, but seat 1 is actually a PERFECT lot-decided
+  tie — the Bloc analog of jfk7pd.
+
+  Bloc STAR, 3 candidates, 2 seats. Totals: Cand1=6, Cand2=6, Cand3=5.
+    - Seat 1: Cand1 and Cand2 tie at 6 and advance. In the runoff they tie 1-1;
+      score is 6-6; five-star is 1-1 each. Every deterministic rung ties, so the
+      LOT decides. BetterVoting drew Cand2 at random (its round-0 logs:
+      runoff_tied -> runoff_score_tie -> runoff_five_star_tie -> runoff_random ->
+      Cand2). This file pins the lot order [Cand2, Cand1, Cand3] to REPRODUCE
+      BV's Cand2.
+    - Seat 2: remove Cand2 -> Cand1 (6) and Cand3 (5) advance; Cand3 wins the
+      runoff 2-1.
+  Winners: Cand2, Cand3 (reproducing BV).
+
+  Two findings worth flagging:
+    1. Non-reproducible, like jfk7pd: with the column-order fallback (no lot
+       order) LH would elect Cand1 for seat 1, not Cand2 — same ballots, different
+       winner, decided only by the tie-break order (cf. #1063).
+    2. Reporting mislabel: BV's top-level `tieBreakType` is "none", even though its
+       own round-0 `tieBreakType` is "random". A reader of the summary can't tell
+       that seat 1 was a coin toss.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: bloc
+lot_numbers: [Cand2, Cand1, Cand3]   # BV's drawn order (perm) — reproduces Cand2
+ballots: |-
+  Cand1,Cand2,Cand3
+  1,5,2
+  0,0,1
+  5,1,2
+
+expected_winners:
+  - Cand2
+  - Cand3
+
+# file: bv131_guido_bloc.yaml

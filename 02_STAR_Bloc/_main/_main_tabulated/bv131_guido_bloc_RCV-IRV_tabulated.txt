@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie
+ Tabulating 3 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Cand1, Cand2, Cand3
+     1 ×   Cand2 > Cand3 > Cand1      (1, 5, 2)
+     1 ×   Cand3      (0, 0, 1)
+     1 ×   Cand1 > Cand3 > Cand2      (5, 1, 2)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cand3              1  Hopeful
+Cand1              1  Hopeful
+Cand2              1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cand3              2  Elected
+Cand1              1  Rejected
+Cand2              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cand3
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**132 election files** (120 single-winner, 12 multi-winner) across 13 method(s).
+**133 election files** (120 single-winner, 13 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -15,7 +15,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
 | STV (proportional RCV) | 1 |
-| Bloc STAR | 4 |
+| Bloc STAR | 5 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 1 |
 | Allocated Score (STAR-PR) | 1 |
@@ -167,12 +167,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 
-## Bloc STAR  (4)
+## Bloc STAR  (5)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/_main/_main_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/_main/00_c3_b3_bloc-baseline-2-seats.yaml) |
 | [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/_main/01_c4_b2_bloc-star-2-seats.yaml) |
+| [`bv131_guido_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv131_guido_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie → _Cand2, Cand3_ | [`.yaml`](../../02_STAR_Bloc/_main/bv131_guido_bloc.yaml) |
 | [`bv132_verify_votes_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv132_verify_votes_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV132 — verify number of votes cast (Bloc STAR, 2 seats) → _C, B_ | [`.yaml`](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
 | [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/_main/_main_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/_main/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
 

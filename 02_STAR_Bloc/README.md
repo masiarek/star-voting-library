@@ -22,7 +22,7 @@ BV-backed cases also keep a frozen `_bv_export.json` and a two-view `.md`.
 | — | Pure baseline (no tiebreak) | 2 | none | — | [`00_c3_b3_bloc-baseline-2-seats.yaml`](_main/00_c3_b3_bloc-baseline-2-seats.yaml) |
 | BV1815 | 3c/2s — seat 2 by **score** tiebreak | 2 | runoff (seat 2) | Passed | [page](_main/bv1815_bloc_3c2s_basic.md) · [yaml](_main/bv1815_bloc_3c2s_basic.yaml) |
 | BV132 | verify votes cast — flat ballots dropped | 2 | flat/no-pref | Failed · [#1073](https://github.com/Equal-Vote/bettervoting/issues/1073) | [page](_main/bv132_verify_votes_bloc.md) · [yaml](_main/bv132_verify_votes_bloc.yaml) |
-| BV131 | Guido example | 2 | — | Passed | *pending* |
+| BV131 | Guido example — **hidden lot-decided tie** (seat 1) | 2 | lot (seat 1) | "Passed" (but a coin toss; `tieBreakType` mislabeled `none`) | [page](_main/bv131_guido_bloc.md) · [yaml](_main/bv131_guido_bloc.yaml) |
 | BV129 | 3c/2w — score tiebreaker | 2 | yes | Failed · [#1086](https://github.com/Equal-Vote/bettervoting/issues/1086) | *pending* |
 | BV126 | "ties every step" | — | yes | Failed · [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) | *pending* |
 | BV750 | tie-breaking | — | yes | Failed | *pending* |
