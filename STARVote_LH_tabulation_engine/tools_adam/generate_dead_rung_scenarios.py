@@ -27,7 +27,9 @@ Rounds:
   --round full      a fully symmetric k-candidate tie (--candidates k): every
                     candidate a rotation of the others, so the lot alone decides
                     and ANY of the k can win. Divergence from a published order is
-                    (k-1)/k. The k-candidate analog of BV jfk7pd.
+                    (k-1)/k. The k-candidate analog of BV jfk7pd. Add --pad N to
+                    bury the tie in symmetric noise ballots (a "less obvious" case
+                    that still tabulates to an exact tie).
 
 Regression mode:
 
@@ -59,6 +61,9 @@ Examples
 
   # a FULL symmetric k-candidate tie: any of the k can win by lot (divergence (k-1)/k)
   python generate_dead_rung_scenarios.py --round full --candidates 4 --run
+
+  # a "less obvious" tie: bury it in symmetric noise ballots (still an exact tie)
+  python generate_dead_rung_scenarios.py --round full --candidates 3 --pad 4 --seed 7 --run
 
 Full write-up: see generate_dead_rung_scenarios.md next to this script.
 """
@@ -109,7 +114,7 @@ class Template:
 
 
 def build_template(round_: str, rung: str, adversarial: bool, cap: int,
-                   candidates: int = 3) -> Template:
+                   candidates: int = 3, pad: int = 0, seed: int | None = None) -> Template:
     """Return the verified ballot template for a (round, rung, adversarial) case.
 
     Non-adversarial cases teach *which rung decides* (the leader wins either way).
@@ -125,10 +130,26 @@ def build_template(round_: str, rung: str, adversarial: bool, cap: int,
         # of the k candidates can win. rung / adversarial do not apply.
         k = candidates
         rows = [[c if i == j else 0 for j in range(k)] for i in range(k)]
+        pad_note = ""
+        if pad > 0:
+            # "Less obvious" padding: for each block, append EVERY permutation of a
+            # random score vector (entries 0..cap). A full permutation orbit treats
+            # all candidates identically, so it preserves the exact tie (totals,
+            # pairwise, and five-star all stay equal) while burying it in varied-
+            # looking ballots. Then shuffle so the tidy identity rows don't stand out.
+            import itertools
+            import random as _random
+            rng = _random.Random(seed)
+            for _ in range(pad):
+                v = [rng.randint(0, c) for _ in range(k)]
+                rows.extend(list(p) for p in itertools.permutations(v))
+            rng.shuffle(rows)
+            pad_note = (f" Padded with {pad} symmetric noise block(s) "
+                        f"({len(rows)} ballots total) so the tie is non-obvious.")
         pct = f"{(k - 1)}/{k}"
-        teach = (f"all {k} candidates perfectly symmetric (rotation, capped at {c}); "
+        teach = (f"all {k} candidates perfectly symmetric (capped at {c}); "
                  f"every rung ties -> the LOT alone decides. {k} winners are reachable; "
-                 f"a random draw diverges from a published order {pct} of the time.")
+                 f"a random draw diverges from a published order {pct} of the time." + pad_note)
         return Template(k, rows, list(range(k)), 0, teach)
 
     if not adversarial:
@@ -278,6 +299,12 @@ def main(argv: list[str] | None = None) -> int:
                    help="pin the lot to favor the wrong candidate (strict regression test)")
     p.add_argument("--scale", type=int, default=1,
                    help="duplicate the ballot block N times for a bigger electorate (default 1)")
+    p.add_argument("--pad", type=int, default=0,
+                   help="[--round full only] add N symmetric 'noise' blocks (each = k! "
+                        "permutations of a random ballot) to bury the tie in varied-looking "
+                        "ballots. The tie stays mathematically exact. (default 0)")
+    p.add_argument("--seed", type=int, default=None,
+                   help="random seed for --pad (reproducible ballots)")
     p.add_argument("--theme", choices=sorted(NAME_BANKS), default="letters",
                    help="candidate name bank (default letters)")
     p.add_argument("--title", default=None, help="override the election_title")
@@ -295,7 +322,17 @@ def main(argv: list[str] | None = None) -> int:
         if args.adversarial_lot or args.rung != "alive":
             print("note: --round full ignores --rung / --adversarial-lot "
                   "(it's an inherently symmetric dead rung).", file=sys.stderr)
+        if args.pad < 0:
+            raise SystemExit("error: --pad must be >= 0.")
+        import math
+        block = math.factorial(args.candidates)
+        if args.pad and block * args.pad > 1000:
+            print(f"note: each --pad block adds {args.candidates}! = {block} ballots; "
+                  f"{args.pad} blocks = {block * args.pad}. Consider fewer candidates "
+                  f"or fewer pad blocks for a readable file.", file=sys.stderr)
     else:
+        if args.pad:
+            print("note: --pad only applies to --round full; ignored here.", file=sys.stderr)
         if args.rung != "dead" and args.cap != 4:
             print("note: --cap only applies to a dead rung; ignored here.", file=sys.stderr)
         if args.adversarial_lot and args.rung == "dead" and args.cap != 4:
@@ -303,7 +340,7 @@ def main(argv: list[str] | None = None) -> int:
             args.cap = 4
 
     t = build_template(args.round, args.rung, args.adversarial_lot, args.cap,
-                       candidates=args.candidates)
+                       candidates=args.candidates, pad=args.pad, seed=args.seed)
     names = NAME_BANKS[args.theme]
     if t.ncols > len(names):
         raise SystemExit(
@@ -315,6 +352,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.round == "full":
         auto_name = f"dead_rung_full_c{args.candidates}_cap{args.cap}"
+        if args.pad:
+            auto_name += f"_pad{args.pad}" + (f"_s{args.seed}" if args.seed is not None else "")
     else:
         auto_name = (f"dead_rung_{args.round}_{args.rung}"
                      + (f"_cap{args.cap}" if args.rung == "dead" else ""))

@@ -114,6 +114,29 @@ python generate_dead_rung_scenarios.py --round full --candidates 4 --run   # A w
 (`--rung` and `--adversarial-lot` don't apply here — a full tie is inherently a
 symmetric dead rung. Use `--theme letters` for more than five candidates.)
 
+### `--pad N` — "less obvious" ties (bury it in noise)
+
+By default the full-tie ballots are a tidy identity matrix — obvious at a glance.
+`--pad N` (with `--seed` for reproducibility) makes the tie look like a messy real
+election **without changing the result**. Each pad block appends **every
+permutation** of a random ballot (`k!` ballots); a full permutation orbit treats
+all candidates identically, so totals, pairwise, and five-star all stay exactly
+equal — the tie is preserved — and the rows are then shuffled so the identity
+ballots don't stand out.
+
+```
+python generate_dead_rung_scenarios.py --round full --candidates 3 --pad 4 --seed 7
+```
+
+produces ~27 varied-looking ballots (`3` base + `4 × 3! = 24`) that still tabulate
+to a perfect three-way tie: `[A,B,C]→A`, `[B,C,A]→B`, `[C,A,B]→C`. Each block adds
+`k!` ballots, so keep `k` small (the tool warns past ~1000 ballots). This is the
+knob for demonstrating that a lot-decided tie needn't be an obvious toy — it can
+hide in a normal-looking ballot set.
+
+(`--scale N`, by contrast, just *clones* the whole block N times — bigger, but
+still visually obvious. Use `--pad` for genuinely varied ballots.)
+
 ---
 
 ## Worked example 1 — the core lesson (scoring, dead rung → lot)
