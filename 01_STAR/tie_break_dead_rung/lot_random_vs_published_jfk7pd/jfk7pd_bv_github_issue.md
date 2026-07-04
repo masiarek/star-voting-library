@@ -147,3 +147,8 @@ Fuller write-ups behind this report, in case they're useful:
 Happy to provide additional cases — including 3+ candidate and "less obvious"
 variants where the tie is buried in a realistic-looking ballot set — and the
 fixtures for the acceptance test.
+
+> **Companion issue (UI):** separate from this tabulation fix, the results view
+> doesn't disclose that a winner was decided by a (random) tie-break. Filed
+> separately — see
+> [`bv_github_issue_ui_tiebreak_transparency.md`](https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/bv_github_issue_ui_tiebreak_transparency.md).
