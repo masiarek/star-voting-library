@@ -110,36 +110,25 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # --------------------------------------------------------------------------
 ELECTIONS = [
     {
-        # Retro-fill: BV1525 had no BV election. Bloc STAR = STAR + num_winners>1 on
-        # BV. Seat 1 is a First/Condorcet-Loser tie (both 24) -> BV's random draw
-        # decides it, so this also tests BV's multi-seat STAR tie handling.
-        "title": "BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",
-        "description": "Bloc STAR, 4 seats, 16 ballots. Larry's electowiki example: "
-                       "First and Condorcet Loser tie at 24 for the top score; seat 1 "
-                       "is decided by BV's random draw. Expected: First, Second, Third, "
-                       "Fourth (or Condorcet-Loser-first if the draw favors it).",
-        "method": "STAR",
-        "num_winners": 4,
-        "candidates": ["First", "Condorcet Loser", "Second", "Third", "Fourth"],
-        "ballots": ([[3, 0, 1, 1, 1]] * 8 + [[0, 4, 0, 0, 0]] * 5
-                    + [[0, 1, 3, 2, 1]] * 2 + [[0, 2, 5, 4, 3]] * 1),
-        "expected": "First, Second, Third, Fourth (seat 1 by random draw)",
+        # BV135 — Approval 101: single-winner Approval, "most approvals wins."
+        # Approval ballots are 0/1 only. Clean, no tie: Bob 4, Ann 3, Cal 2.
+        "title": "BV135 - Approval 101 — most approvals wins",
+        "description": "Approval Voting, 1 winner, 3 candidates, 5 ballots. The "
+                       "textbook Approval intro: each voter approves any number of "
+                       "candidates, and whoever collects the most approvals wins. "
+                       "Bob 4, Ann 3, Cal 2 -> Bob wins.",
+        "method": "Approval",
+        "num_winners": 1,
+        "candidates": ["Ann", "Bob", "Cal"],
+        "ballots": [[1, 1, 0],   # voter 1 — approves Ann and Bob
+                    [0, 1, 1],   # voter 2 — approves Bob and Cal
+                    [1, 1, 0],   # voter 3 — approves Ann and Bob
+                    [0, 1, 0],   # voter 4 — approves only Bob
+                    [1, 0, 1]],  # voter 5 — approves Ann and Cal
+        "expected": "Bob (4 approvals; Ann 3, Cal 2)",
     },
-    {
-        # Retro-fill: the ORIGINAL BV130 (star-server#731) had no captured export.
-        # Bloc STAR, 3 seats, clean (no tie).
-        "title": "BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",
-        "description": "Bloc STAR, 3 seats, 9 ballots. The ORIGINAL BV130 (reporting "
-                       "issue #731, tabs->pages). Clean, no tie. Winners: Someone I "
-                       "Like, Santa Claus, The Lesser Evil.",
-        "method": "STAR",
-        "num_winners": 3,
-        "candidates": ["Johnny Cash", "Elvis Presley", "Santa Claus",
-                       "The Lesser Evil", "Someone I Like", "Apocalypse Now"],
-        "ballots": ([[0, 2, 4, 3, 5, 0]] * 3 + [[2, 1, 3, 4, 3, 2]] * 4
-                    + [[1, 1, 5, 2, 5, 0]] * 2),
-        "expected": "Someone I Like, Santa Claus, The Lesser Evil",
-    },
+    # (BV1525 dkj9dx and BV130-original yhxy7q are already created & promoted —
+    #  don't recreate them. Add new elections above and re-run.)
 ]
 
 
