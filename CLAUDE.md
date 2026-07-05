@@ -234,6 +234,15 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   mirror. Example: `bv95a_9m6rxr_favorite_survives.yaml`. (Older cases predating
   this — `bv131_guido_bloc`, the `Runoff_NN_…_<bvid>` set — keep their names;
   re-align only if you're already touching them.)
+- **Every BV-backed case `.md` links the live BetterVoting results — clickably.**
+  When a case has a real BV election, its page must carry a prominent, clickable
+  link to the **results** page near the top (not just the bare election id, and
+  not only the vote page). House form is a lead line right under the H1/summary:
+  `**▶ Live on BetterVoting:** [vote](https://bettervoting.com/<bvid>) ·
+  **[results ↗](https://bettervoting.com/<bvid>/results)** (election \`<bvid>\`).`
+  Always link `/<bvid>/results` (the tabulated outcome), and mirror it in the YAML
+  (`election_description` / a `Live results:` line pointing at the same
+  `/results` URL). LH-only references with no BV election skip this.
 - **Creating BetterVoting elections — DON'T do it by hand.** No need to click
   through the BV builder UI (it's slow and fiddly). Use
   `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a
