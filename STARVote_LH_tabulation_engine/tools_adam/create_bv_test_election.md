@@ -2,7 +2,7 @@
 
 **Purpose.** Spin up a real [BetterVoting](https://bettervoting.com) election **and cast its ballots** straight through the REST API — no clicking through the builder UI. It's the first half of the repo's BV-backed test-case pipeline: create on BV → export → reproduce in the LH engine → freeze. Driving the API instead of the UI makes case creation fast, scriptable, and reproducible (define the election once, re-run any time).
 
-Script: [`create_bv_test_election.py`](create_bv_test_election.py). It supersedes the older, browser-driving `automate_create_election_BV.py` (Playwright + saved `auth_state.json`), which is slower and depends on a live login session.
+Script: [`create_bv_test_election.py`](create_bv_test_election.py). (It replaced an earlier approach that drove the BV builder UI with Playwright and a saved login session — the API path is faster and needs no stored login.)
 
 ## How to run it
 
