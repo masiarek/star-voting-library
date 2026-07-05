@@ -116,7 +116,65 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #    "num_winners": 1, "candidates": [...], "ballots": [[...], ...],
 #    "expected": "free text"}
 # (Score range: Approval = 0/1 ; STAR / Bloc / STAR_PR = 0-5.)
-ELECTIONS = []
+ELECTIONS = [
+    # BV_Library STAR_PR (Allocated Score) parity cases — mirror of
+    # method_comparisons/BV_Library/BV_Library_star_pr_*.yaml
+    # (ported from BetterVoting's AllocatedScore.test.ts). Score range 0-5.
+    {
+        "title": "BV_Library STAR_PR — basic two-seat allocation",
+        "description": "AllocatedScore.test.ts :: Basic Example. Elect top scorer, spend a Hare quota, second seat follows.",
+        "method": "STAR_PR",
+        "num_winners": 2,
+        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
+        "ballots": [
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 4, 4, 0],
+            [0, 0, 0, 3],
+            [0, 0, 4, 5],
+            [0, 0, 4, 5],
+            [0, 0, 4, 5],
+            [0, 0, 4, 5],
+        ],
+        "expected": "Allison, Doug",
+    },
+    {
+        "title": "BV_Library STAR_PR — fewer voters than seats",
+        "description": "AllocatedScore.test.ts :: Voters < Winners. 3 seats, 2 ballots; all seats fill in score order.",
+        "method": "STAR_PR",
+        "num_winners": 3,
+        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
+        "ballots": [
+            [5, 5, 0, 0],
+            [5, 4, 3, 0],
+        ],
+        "expected": "Allison, Bill, Carmen",
+    },
+    {
+        "title": "BV_Library STAR_PR — fractional surplus",
+        "description": "AllocatedScore.test.ts :: Fractional surplus. 8 supporters vs quota 6 -> ballots reweighted to 0.25.",
+        "method": "STAR_PR",
+        "num_winners": 2,
+        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
+        "ballots": [
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 5, 1, 0],
+            [5, 4, 4, 0],
+            [0, 0, 0, 3],
+            [0, 0, 4, 5],
+            [0, 0, 4, 5],
+            [0, 0, 4, 5],
+        ],
+        "expected": "Allison, Doug",
+    },
+]
 
 
 def _pp(resp):
