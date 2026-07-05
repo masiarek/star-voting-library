@@ -3,9 +3,7 @@
 Reverse-engineered from the source of [Equal-Vote/bettervoting](https://github.com/Equal-Vote/bettervoting)
 (local clone: `/Volumes/T7/Voting/BetterVoting/BV/bettervoting`). This folder documents **how
 BetterVoting.com actually counts ballots** — the same engine behind the live site and the
-sandbox. The structured, machine-readable version is
-[`bettervoting_tabulation_engine.yaml`](./bettervoting_tabulation_engine.yaml); this README is
-the narrative.
+sandbox. All paths below are relative to that repo root.
 
 ## Where it lives
 
@@ -38,6 +36,29 @@ Every tabulator has the same signature and is **pure** — no DB, no IO:
 (candidates, votes, nWinners?, electionSettings?) => ResultsType
 ```
 
+The full production pipeline in `getElectionResultsController.ts`:
+
+1. **Authorize** — an open election with `public_results: false` throws `Forbidden`; otherwise the caller needs `canViewPreliminaryResults`.
+2. **Load ballots** — `BallotModel.getBallotsByElectionID(id)`.
+3. **Build candidates** per race — `race.candidates` plus any *approved* write-ins (ids from `makeWriteInCandidateId`).
+4. **Build the CVR** — each ballot's vote for the race becomes a `rawVote` (`marks: candidateId -> score/rank`); write-ins are resolved to candidates by alias (`trimLower`), duplicates keep the first and warn, `overvote_rank`/`has_duplicate_rank` are carried along.
+5. **Shuffle** — `shuffleCandidatesForRandomTiebreak(...)` fixes a reproducible `tieBreakOrder`; the resulting id order is returned as `perm`.
+6. **Tabulate** — `VotingMethods[voting_method](candidates, cvr, num_winners, settings)`.
+7. **Respond** — random-tie logs get `tiebreak_candidate_names` attached, `writeInDiagnostics` is added, and the response is `{ election, results }` (one entry per race).
+
+The **sandbox** (`sandboxController.ts`) calls the same `VotingMethods` map with no persistence or auth gating.
+
+## Type contract (`ITabulators.ts`)
+
+Inputs and outputs are shared types, so the engine emits the exact objects the UI renders:
+
+- **`rawVote`** `{ marks: candidateId -> number|null, overvote_rank?, has_duplicate_rank? }`
+- **`candidate`** `{ id, name, tieBreakOrder, votesPreferredOver, winsAgainst }`
+- **`genericResults`** `{ votingMethod, elected, tied, other, roundResults[], summaryData, tieBreakType }`
+- **`roundResults`** `{ winners, runner_up, tied, tieBreakType, logs[] }`
+- **`summaryData`** always carries `nOutOfBoundsVotes`, `nAbstentions`, `nTallyVotes` (where `nVotes = nOutOfBoundsVotes + nAbstentions + nTallyVotes`), plus method-specific fields.
+- **`tieBreakType`** ∈ `none | score | head_to_head | five_star | random`.
+
 ## The shared core (`Util.ts`)
 
 Most methods lean on three helpers:
@@ -67,6 +88,12 @@ Most methods lean on three helpers:
 IRV/STV/STAR_PR use **`fraction.js`** (exact rationals) so surplus and weight transfers never
 drift on floating point. Every round emits `logs` (i18n keys) that become the human-readable
 count narrative in the results UI.
+
+A few method specifics worth keeping:
+
+- **IRV/STV ballot exhaustion** is tracked as `nExhaustedViaOvervote`, `nExhaustedViaSkippedRank`, and `nExhaustedViaDuplicateRank`. Skipped-rank exhaustion is governed by `exhaust_on_N_repeated_skipped_marks` in `ElectionSettings`; a ballot also exhausts when its top remaining rank equals its `overvote_rank`.
+- **STV surplus transfer** — on election, surplus fraction `= (maxVotes − quota) / maxVotes`; each of the winner's ballots is down-weighted by that fraction (floored to 5 dp) and redistributed. If the remaining candidates can fill every remaining seat, they are all elected.
+- **STAR tie-breaks** escalate to the most "extreme" protocol reached, reported via `setTieBreak` in priority order `none → score → head_to_head → five_star → random`.
 
 ## Deterministic "random" tie-breaks
 
