@@ -1,0 +1,22 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Bruno, Cleo
+     3 ×   Ada > Bruno > Cleo      (5, 4, 3)
+     2 ×   Bruno > Cleo      (0, 5, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ada                3  Elected
+Bruno              2  Rejected
+Cleo               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ada
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

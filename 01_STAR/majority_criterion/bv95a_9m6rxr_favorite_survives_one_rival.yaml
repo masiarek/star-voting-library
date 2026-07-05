@@ -11,7 +11,7 @@ scenario_description: |-
 
   Reproduced on BetterVoting (election 9m6rxr): BV also elects Ada
   (nTallyVotes 5), confirming the LH result. Frozen export:
-  mc_01_favorite_survives_one_rival_bv_export.json. Live:
+  bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json. Live:
   https://bettervoting.com/9m6rxr
 
 options:
@@ -39,4 +39,4 @@ ballots: |-
 expected_winners:
   - Ada
 
-# file: mc_01_favorite_survives_one_rival.yaml
+# file: bv95a_9m6rxr_favorite_survives_one_rival.yaml

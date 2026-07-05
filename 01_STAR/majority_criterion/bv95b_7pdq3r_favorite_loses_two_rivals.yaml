@@ -17,7 +17,7 @@ scenario_description: |-
 
   Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
   (nTallyVotes 5), confirming the LH result. Frozen export:
-  mc_02_favorite_loses_two_rivals_bv_export.json. Live:
+  bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
   https://bettervoting.com/7pdq3r
 
 options:
@@ -45,4 +45,4 @@ ballots: |-
 expected_winners:
   - Bruno
 
-# file: mc_02_favorite_loses_two_rivals.yaml
+# file: bv95b_7pdq3r_favorite_loses_two_rivals.yaml

@@ -224,6 +224,16 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   YAML (`election_description` + the results URL).
 - **Cross-reference slides by title** via `00_start_here/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
+- **Case-file naming → `bv<testid>_<bvid>_<short_descriptor>.<ext>`.** Lead with
+  the sheet **Test ID** (lowercased — `bv95a`, `bv130`, `bv1525`) so files sort
+  with the tracker and are findable by ID (GitHub's file finder matches *names*,
+  not contents); then the **BetterVoting election id** when one exists (`9m6rxr`)
+  for traceability — **omit that segment** for an LH-only reference with no BV
+  election; then a short descriptive name. Applies to the whole case group — the
+  `.yaml`, the two-view `.md`, the frozen `_bv_export.json`, and the `_tabulated`
+  mirror. Example: `bv95a_9m6rxr_favorite_survives.yaml`. (Older cases predating
+  this — `bv131_guido_bloc`, the `Runoff_NN_…_<bvid>` set — keep their names;
+  re-align only if you're already touching them.)
 - **Creating BetterVoting elections — DON'T do it by hand.** No need to click
   through the BV builder UI (it's slow and fiddly). Use
   `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a

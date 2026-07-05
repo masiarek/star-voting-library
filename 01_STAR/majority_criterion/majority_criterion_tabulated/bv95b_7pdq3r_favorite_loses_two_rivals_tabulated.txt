@@ -1,8 +1,8 @@
 ======================================================================
-SOURCE FILE:     mc_02_favorite_loses_two_rivals.yaml
-SOURCE MODIFIED: 2026-07-04 21:56:42
-TABULATED FILE:  mc_02_favorite_loses_two_rivals_tabulated.txt
-TABULATED AT:    2026-07-04 21:58:02
+SOURCE FILE:     bv95b_7pdq3r_favorite_loses_two_rivals.yaml
+SOURCE MODIFIED: 2026-07-04 23:13:13
+TABULATED FILE:  bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt
+TABULATED AT:    2026-07-04 23:14:15
 ======================================================================
 
 election_title: "BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals"
@@ -21,6 +21,11 @@ scenario_description: |-
   and Approval can drop the favorite on just ONE). That is the point of the
   Relaxed Majority Criterion, which STAR passes. See
   ../../00_start_here/topics/majority_criterion/README.md.
+
+  Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
+  (nTallyVotes 5), confirming the LH result. Frozen export:
+  bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
+  https://bettervoting.com/7pdq3r
 
 options:
   show_description: false
@@ -47,7 +52,7 @@ ballots: |-
 expected_winners:
   - Bruno
 
-# file: mc_02_favorite_loses_two_rivals.yaml
+# file: bv95b_7pdq3r_favorite_loses_two_rivals.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -68,6 +73,11 @@ TABULATION RESULTS
   and Approval can drop the favorite on just ONE). That is the point of the
   Relaxed Majority Criterion, which STAR passes. See
   ../../00_start_here/topics/majority_criterion/README.md.
+
+  Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
+  (nTallyVotes 5), confirming the LH result. Frozen export:
+  bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
+  https://bettervoting.com/7pdq3r
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
@@ -94,10 +104,10 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: majority_criterion_tabulated/mc_02_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/mc_02_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: majority_criterion_tabulated/mc_02_favorite_loses_two_rivals_RCV-RR_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/mc_02_favorite_loses_two_rivals_RCV-RR_tabulated.txt
+  RCV-IRV rounds: majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-RR_tabulated.txt
+     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
