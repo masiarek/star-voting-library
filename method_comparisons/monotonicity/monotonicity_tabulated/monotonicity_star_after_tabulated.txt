@@ -2,7 +2,7 @@
 SOURCE FILE:     monotonicity_star_after.yaml
 SOURCE MODIFIED: 2026-06-29 14:09:58
 TABULATED FILE:  monotonicity_star_after_tabulated.txt
-TABULATED AT:    2026-07-05 08:45:33
+TABULATED AT:    2026-07-05 09:01:24
 ======================================================================
 
 election_title: Monotonicity — STAR counterpart (AFTER — X still wins)

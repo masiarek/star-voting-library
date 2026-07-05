@@ -1,0 +1,25 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention
+ Tabulating 4 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Vanilla, Chocolate, Strawberry
+     1 ×   Vanilla > Chocolate > Strawberry      (5, 5, 5)
+     1 ×   (all unranked)      (0, 0, 0)
+     1 ×   Vanilla      (1, 0, 0)
+     1 ×   Chocolate > Strawberry > Vanilla      (2, 5, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Vanilla            2  Elected
+Chocolate          1  Rejected
+Strawberry         0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Vanilla
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
