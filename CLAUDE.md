@@ -270,6 +270,14 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   from the BV UI (Election + Ballots + Results). Proven end-to-end (BV95a `9m6rxr`,
   BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
   the backend now demands RS256.
+  - **Set `owner_id` to your real BV account** (the script default is Adam's
+    `ea09e7c7-…`/Admin1) so the elections show up in `/manage`. **But** API-created
+    elections are public, listable, and exportable **only** — they are **NOT
+    UI-administrable** (you can't edit/close/**delete** them from `/admin`): BV
+    authorizes admin off a server-side role binding written only by the
+    authenticated create flow, not off `owner_id`/`admin_ids` (setting `admin_ids`
+    is a proven no-op). Full write-up + a ready-to-file BV issue:
+    `00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md`.
 
 ## Workflow — building a BV-backed test case
 

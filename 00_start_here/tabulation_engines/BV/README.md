@@ -7,3 +7,5 @@
 For the worked pets example, BetterVoting's own screenshots live in [`../../STAR_Voting/img/`](../../STAR_Voting/img) — `pets_rounds_bars.png`, `pets_rounds_pie.png`, `pets_race_details_tables.png` — and are walked through in the overview, [BetterVoting and the LH Engine — One Election, Two Reports](../bettervoting_and_the_engine.md), and in [Reading the Runoff Percentages — Two Denominators, One Winner](../../STAR_Voting/runoff_percentages.md).
 
 The matching **text** report — the same election counted by Larry Hastings' `starvote` engine — is in [reading a STAR report](../LH_starvote/reading_a_star_report.md). Same election, same winner, two reports.
+
+**Creating BV elections via the API** (for test cases) — what works and the one thing that doesn't (API-created elections are public and listable but not UI-administrable): [Creating BetterVoting elections via the API](bv_api_election_creation_notes.md).
