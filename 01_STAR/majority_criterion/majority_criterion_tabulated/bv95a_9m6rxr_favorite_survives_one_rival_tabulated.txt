@@ -2,7 +2,7 @@
 SOURCE FILE:     bv95a_9m6rxr_favorite_survives_one_rival.yaml
 SOURCE MODIFIED: 2026-07-04 23:28:47
 TABULATED FILE:  bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt
-TABULATED AT:    2026-07-05 09:01:14
+TABULATED AT:    2026-07-05 09:13:08
 ======================================================================
 
 election_title: "BV95a — Majority Criterion: favorite survives when the majority backs ONE rival"

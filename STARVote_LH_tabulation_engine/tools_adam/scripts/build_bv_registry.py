@@ -147,8 +147,15 @@ def collect():
             er = race.get("expected_results")
             exp = er.get("winners") if isinstance(er, dict) else None
         expected = ", ".join(map(str, exp)) if isinstance(exp, list) else ""
-        md = rel[:-5] + ".md"
-        md_rel = md if os.path.exists(os.path.join(REPO, md)) else ""
+        # Write-up page: a same-stem sibling `<stem>.md`, else the folder's
+        # generated page `<folder>_pages/<stem>.md`.
+        stem = os.path.basename(rel)[:-5]
+        folder = os.path.dirname(rel)
+        sib = rel[:-5] + ".md"
+        pages = f"{folder}/{os.path.basename(folder)}_pages/{stem}.md" if folder else ""
+        md_rel = (sib if os.path.exists(os.path.join(REPO, sib))
+                  else pages if pages and os.path.exists(os.path.join(REPO, pages))
+                  else "")
 
         rows.append({
             "TestID": str(test_id), "Case": name[:-5], "ElectionID": str(election_id),

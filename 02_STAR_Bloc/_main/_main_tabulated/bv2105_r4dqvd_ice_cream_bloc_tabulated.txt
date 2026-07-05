@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2105_r4dqvd_ice_cream_bloc.yaml
 SOURCE MODIFIED: 2026-07-05 09:00:15
 TABULATED FILE:  bv2105_r4dqvd_ice_cream_bloc_tabulated.txt
-TABULATED AT:    2026-07-05 09:01:18
+TABULATED AT:    2026-07-05 09:13:13
 ======================================================================
 
 election_title: "BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention"

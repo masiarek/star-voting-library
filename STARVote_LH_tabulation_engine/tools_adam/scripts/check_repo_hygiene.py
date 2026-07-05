@@ -250,6 +250,59 @@ def check_terminology():
     return sorted(hits)
 
 
+# --------------------------------------------------------------------------- #
+# BV-case completeness: every BV-backed election YAML should have a sibling .md
+# (its write-up page). The registry TRACKS the md path but leaves it blank when
+# absent — this gate makes that self-verifying, so a promoted case can't ship
+# without its page. "BV-backed" mirrors build_bv_registry.py's qualification:
+# a `bv_test_id`/`bv_election_id` field, a `bv…` filename, or a frozen
+# `_bv_export.json` sibling.
+# --------------------------------------------------------------------------- #
+_BV_FN = re.compile(r"^bv\d", re.I)
+
+
+def check_bv_case_md():
+    """Return [(yaml_rel, why)] for BV-backed YAMLs missing their sibling .md."""
+    try:
+        import yaml as _yaml
+    except ImportError:  # pragma: no cover
+        return []
+    missing = []
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        rel_dir = os.path.relpath(dirpath, REPO)
+        if rel_dir != "." and _skip(rel_dir):
+            continue
+        if "2_negative" in rel_dir or "negative" in rel_dir:
+            continue                       # negative fixtures aren't cases
+        for fn in filenames:
+            if not fn.endswith((".yaml", ".yml")):
+                continue
+            stem = os.path.join(dirpath, fn.rsplit(".", 1)[0])
+            has_field = False
+            try:
+                data = _yaml.safe_load(open(os.path.join(dirpath, fn), encoding="utf-8"))
+                has_field = isinstance(data, dict) and bool(
+                    data.get("bv_test_id") or data.get("bv_election_id"))
+            except Exception:
+                pass
+            bv_backed = (has_field or _BV_FN.match(fn)
+                         or os.path.exists(stem + "_bv_export.json"))
+            if not bv_backed:
+                continue
+            # A case is documented by a same-stem sibling `<stem>.md`, OR the
+            # folder's generated page `<folder>_pages/<stem>.md`.
+            base = fn.rsplit(".", 1)[0]
+            pages_md = os.path.join(dirpath,
+                                    os.path.basename(dirpath) + "_pages", base + ".md")
+            if not (os.path.exists(stem + ".md") or os.path.exists(pages_md)):
+                rel = os.path.relpath(os.path.join(dirpath, fn), REPO)
+                missing.append((rel, "BV-backed case has no write-up page "
+                                     f"(neither {base}.md nor {os.path.basename(dirpath)}"
+                                     f"_pages/{base}.md)"))
+    return sorted(missing)
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -289,6 +342,14 @@ def main(argv):
         print(f"repo-hygiene: ⚠️  terminology violations ({len(terms)}):")
         for rel, ln, msg in terms:
             print(f"   • {rel}:{ln}  {msg}")
+    no_md = check_bv_case_md()
+    if not no_md:
+        print("repo-hygiene: ✓ every BV-backed case has a sibling .md page.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  BV cases missing their .md page ({len(no_md)}):")
+        for rel, msg in no_md:
+            print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.
     return rc

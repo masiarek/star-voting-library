@@ -2,7 +2,7 @@
 SOURCE FILE:     approval_bloc_3seats_c6_b5.yaml
 SOURCE MODIFIED: 2026-07-02 19:57:14
 TABULATED FILE:  approval_bloc_3seats_c6_b5_tabulated.txt
-TABULATED AT:    2026-07-05 09:01:21
+TABULATED AT:    2026-07-05 09:13:15
 ======================================================================
 
 election_title: Bloc Approval — 3-seat city council at-large
