@@ -116,63 +116,34 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #    "num_winners": 1, "candidates": [...], "ballots": [[...], ...],
 #    "expected": "free text"}
 # (Score range: Approval = 0/1 ; STAR / Bloc / STAR_PR = 0-5.)
+# Already created (do NOT re-run — would duplicate):
+#   BV_Library STAR_PR — basic two-seat allocation   -> jwxr3j
+#   BV_Library STAR_PR — fewer voters than seats      -> hk27tk
+#   BV_Library STAR_PR — fractional surplus           -> kk2gxj
+# Their specs live in git history / method_comparisons/BV_Library/BV_Library_star_pr_*.yaml.
+
 ELECTIONS = [
-    # BV_Library STAR_PR (Allocated Score) parity cases — mirror of
-    # method_comparisons/BV_Library/BV_Library_star_pr_*.yaml
-    # (ported from BetterVoting's AllocatedScore.test.ts). Score range 0-5.
+    # NOTA feature test — "None of the Above" as a real (c-nota) candidate, plus a
+    # null abstention. Candidate order: [Ada, Bruno, None of the Above].
+    #   - Ada gets 10, Bruno 2, None-of-the-Above 20 -> NOTA is a finalist and WINS
+    #     the runoff (NOTA preferred 4-2 over Ada). Observe how BV displays a NOTA win.
+    #   - Ballot 2 leaves None-of-the-Above as `null` (abstained on NOTA), distinct
+    #     from an explicit 0 — check the export keeps null != 0.
     {
-        "title": "BV_Library STAR_PR — basic two-seat allocation",
-        "description": "AllocatedScore.test.ts :: Basic Example. Elect top scorer, spend a Hare quota, second seat follows.",
-        "method": "STAR_PR",
-        "num_winners": 2,
-        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
+        "title": "NOTA test — None of the Above wins (with a null abstention)",
+        "description": "STAR, 1 winner. Candidates Ada, Bruno, None of the Above (c-nota). Protest voters push None of the Above to a runoff win; ballot 2 abstains (null) on NOTA. Tests the NOTA feature and the flat-0 vs null vs NOTA distinction.",
+        "method": "STAR",
+        "num_winners": 1,
+        "candidates": ["Ada", "Bruno", "None of the Above"],
         "ballots": [
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 4, 4, 0],
-            [0, 0, 0, 3],
-            [0, 0, 4, 5],
-            [0, 0, 4, 5],
-            [0, 0, 4, 5],
-            [0, 0, 4, 5],
+            [5, 1, 0],
+            [5, 1, None],   # abstains (null) on None of the Above
+            [0, 0, 5],
+            [0, 0, 5],
+            [0, 0, 5],
+            [0, 0, 5],
         ],
-        "expected": "Allison, Doug",
-    },
-    {
-        "title": "BV_Library STAR_PR — fewer voters than seats",
-        "description": "AllocatedScore.test.ts :: Voters < Winners. 3 seats, 2 ballots; all seats fill in score order.",
-        "method": "STAR_PR",
-        "num_winners": 3,
-        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
-        "ballots": [
-            [5, 5, 0, 0],
-            [5, 4, 3, 0],
-        ],
-        "expected": "Allison, Bill, Carmen",
-    },
-    {
-        "title": "BV_Library STAR_PR — fractional surplus",
-        "description": "AllocatedScore.test.ts :: Fractional surplus. 8 supporters vs quota 6 -> ballots reweighted to 0.25.",
-        "method": "STAR_PR",
-        "num_winners": 2,
-        "candidates": ["Allison", "Bill", "Carmen", "Doug"],
-        "ballots": [
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 5, 1, 0],
-            [5, 4, 4, 0],
-            [0, 0, 0, 3],
-            [0, 0, 4, 5],
-            [0, 0, 4, 5],
-            [0, 0, 4, 5],
-        ],
-        "expected": "Allison, Doug",
+        "expected": "None of the Above",
     },
 ]
 
@@ -204,7 +175,11 @@ def build_payload(template, spec):
     r["num_winners"] = spec.get("num_winners", 1)
     r["race_id"] = str(uuid.uuid4())               # fresh race id (don't reuse template's)
     # Fresh candidates, each with a UNIQUE id (backend rejects duplicate/empty ids).
-    r["candidates"] = [{"candidate_id": str(uuid.uuid4()), "candidate_name": n}
+    # SPECIAL CASE: "None of the Above" must use the fixed id 'c-nota' (NOTA_ID in
+    # star-vote-shared/utils/makeID) — the frontend recognizes NOTA by id, not name.
+    def _cid(name):
+        return 'c-nota' if name.strip().lower() == 'none of the above' else str(uuid.uuid4())
+    r["candidates"] = [{"candidate_id": _cid(n), "candidate_name": n}
                        for n in spec["candidates"]]
     elec["races"] = [r]
     # NOTE: owner_id makes the election appear in /manage, but it does NOT grant
