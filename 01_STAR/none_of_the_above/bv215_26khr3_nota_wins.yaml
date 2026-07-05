@@ -9,6 +9,7 @@ election_description: |-
 bv_test_id: BV215
 bv_election_id: 26khr3
 bv_results_url: https://bettervoting.com/26khr3/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/1421  # NOTA-win handling question
 
 scenario_description: |-
   A protest electorate. Four voters reject both real candidates and give the full
