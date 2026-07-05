@@ -100,31 +100,34 @@ ID_TOKEN = jwt.encode({"email": f"{USER_ID}@example.com", "sub": USER_ID},
 CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 
 # --------------------------------------------------------------------------
-# The two elections. Candidates in a fixed order; ballots are (scores-in-order)
-# rows, one per voter. Both are STAR, single-winner.
+# Elections to create. Each entry is SELF-CONTAINED:
+#   title, description, method (BV voting_method), num_winners,
+#   candidates (names, fixed order), ballots (one row per voter, scores aligned
+#   to `candidates`), expected (free text). Score range depends on the method:
+#   Approval = 0/1 ; STAR / STAR_PR / Bloc STAR = 0-5.
+# (Older runs used STAR single-winner; the BV95a/BV95b elections already exist —
+#  don't recreate them. Add new elections here and re-run.)
 # --------------------------------------------------------------------------
-CANDIDATES = ["Ada", "Bruno", "Cleo"]
-
 ELECTIONS = [
     {
-        "title": "BV95a - Majority Criterion: favorite survives (backs one rival)",
-        "description": "STAR, 1 winner. Majority backs ONE rival -> favorite Ada "
-                       "still wins. Demonstrates Relaxed-Majority-Criterion safety.",
+        "title": "BV27 - Lackner & Skowron steering committee (Approval, k=4)",
+        "description": "Multi-Winner Approval (bloc). Example 2.1 from Lackner & "
+                       "Skowron, Multi-Winner Voting with Approval Preferences. "
+                       "7 candidates, 12 approval ballots, 4 seats. AV seats "
+                       "A, B, C then TIES D and F for the 4th seat.",
+        "method": "Approval",
+        "num_winners": 4,
+        "candidates": ["A", "B", "C", "D", "E", "F", "G"],
         "ballots": [
-            [5, 4, 0], [5, 4, 0], [5, 4, 0],   # 3-voter majority
-            [0, 5, 5], [0, 5, 5],              # 2-voter minority
+            [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0],  # 3× {A,B}
+            [1, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0],  # 3× {A,C}
+            [1, 0, 0, 1, 0, 0, 0], [1, 0, 0, 1, 0, 0, 0],                          # 2× {A,D}
+            [0, 1, 1, 0, 0, 1, 0],                                                 # 1× {B,C,F}
+            [0, 0, 0, 0, 1, 0, 0],                                                 # 1× {E}
+            [0, 0, 0, 0, 0, 1, 0],                                                 # 1× {F}
+            [0, 0, 0, 0, 0, 0, 1],                                                 # 1× {G}
         ],
-        "expected_winner": "Ada",
-    },
-    {
-        "title": "BV95b - Majority Criterion: favorite loses (backs two rivals)",
-        "description": "STAR, 1 winner. Majority backs TWO rivals -> favorite Ada "
-                       "LOSES (majority-criterion failure). Winner: Bruno.",
-        "ballots": [
-            [5, 4, 3], [5, 4, 3], [5, 4, 3],   # 3-voter majority
-            [0, 5, 5], [0, 5, 5],              # 2-voter minority
-        ],
-        "expected_winner": "Bruno",
+        "expected": "A, B, C, and {D or F} — AV ties for the 4th seat",
     },
 ]
 
@@ -152,12 +155,12 @@ def build_payload(template, spec):
         sys.exit("Template has no races[] — pick a different BV_TEMPLATE_ID.")
     r = races[0]
     r["title"] = spec["title"]
-    r["voting_method"] = "STAR"
-    r["num_winners"] = 1
+    r["voting_method"] = spec.get("method", "STAR")
+    r["num_winners"] = spec.get("num_winners", 1)
     r["race_id"] = str(uuid.uuid4())               # fresh race id (don't reuse template's)
     # Fresh candidates, each with a UNIQUE id (backend rejects duplicate/empty ids).
     r["candidates"] = [{"candidate_id": str(uuid.uuid4()), "candidate_name": n}
-                       for n in CANDIDATES]
+                       for n in spec["candidates"]]
     elec["races"] = [r]
     return {"Election": elec}                      # API expects capital "Election"
 
@@ -189,9 +192,10 @@ def create(spec):
     name_to_cid = {c["candidate_name"]: c["candidate_id"] for c in race["candidates"]}
 
     # Cast the ballots, one temp voter each.
+    cands = spec["candidates"]
     for i, row in enumerate(spec["ballots"], start=1):
-        scores = [{"candidate_id": name_to_cid[CANDIDATES[j]], "score": row[j]}
-                  for j in range(len(CANDIDATES))]
+        scores = [{"candidate_id": name_to_cid[cands[j]], "score": row[j]}
+                  for j in range(len(cands))]
         body = {"ballot": {
             "election_id": eid,
             "votes": [{"race_id": race_id, "scores": scores}],
@@ -210,7 +214,7 @@ def create(spec):
     with open(out, "w") as fh:
         fh.write(final.text)
     print(f"  saved -> {out}")
-    print(f"  expected winner: {spec['expected_winner']}  |  URL: "
+    print(f"  expected: {spec.get('expected', '?')}  |  URL: "
           f"https://bettervoting.com/{eid}")
     return eid
 
