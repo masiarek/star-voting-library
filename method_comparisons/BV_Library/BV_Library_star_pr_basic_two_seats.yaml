@@ -1,0 +1,31 @@
+election_title: "BV parity — STAR_PR (Allocated Score): basic two-seat allocation"
+scenario_description: |-
+  Ported from BetterVoting's tabulator unit tests (AllocatedScore.test.ts :: "Basic Example").
+  Two seats, two main blocs. Allison wins the first seat with the highest score (25); one
+  Hare quota of her supporters is then spent, dropping Bill's remaining weight to zero and
+  reducing Carmen's, which lets Doug win the second seat.
+
+  This is the core Allocated Score mechanic: elect the top scorer, then allocate up to a
+  quota of the ballots that supported them before the next round. LH's `allocated` method
+  reproduces BetterVoting's committee {Allison, Doug}.
+
+num_winners: 2
+voting_method: allocated
+ballots: |-
+  Allison,Bill,Carmen,Doug
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,4,4,0
+  0,0,0,3
+  0,0,4,5
+  0,0,4,5
+  0,0,4,5
+  0,0,4,5
+
+expected_winners:
+  - Allison
+  - Doug
+
+# file: BV_Library_star_pr_basic_two_seats.yaml

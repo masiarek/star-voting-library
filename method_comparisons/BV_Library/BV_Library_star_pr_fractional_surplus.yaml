@@ -1,0 +1,32 @@
+election_title: "BV parity — STAR_PR (Allocated Score): fractional surplus reweighting"
+scenario_description: |-
+  Ported from BetterVoting's tabulator unit tests (AllocatedScore.test.ts :: "Fractional surplus").
+  Allison has 8 top-level supporters but the Hare quota is only 6, so her surplus is spread
+  fractionally: each of her supporters' ballots is reweighted to (1 − 6/8) = 0.25 rather than
+  fully spent. That leftover weight keeps her bloc partly active, but Doug still takes the
+  second seat. Represents the fractional-surplus family of BetterVoting's AllocatedScore tests
+  (the "single vote" and "lower split" variants elect the same committee, {Allison, Doug}).
+  LH's `allocated` method matches BetterVoting.
+
+num_winners: 2
+voting_method: allocated
+ballots: |-
+  Allison,Bill,Carmen,Doug
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,4,4,0
+  0,0,0,3
+  0,0,4,5
+  0,0,4,5
+  0,0,4,5
+
+expected_winners:
+  - Allison
+  - Doug
+
+# file: BV_Library_star_pr_fractional_surplus.yaml

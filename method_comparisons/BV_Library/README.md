@@ -14,6 +14,16 @@ Read the reader-friendly **pages** (`BV_Library_pages/`); the `.yaml` beside eac
 | [runoff tie → score](BV_Library_pages/BV_Library_star_runoff_tie_score_resolves.md) | a tied runoff broken by score total | [`.yaml`](BV_Library_star_runoff_tie_score_resolves.yaml) |
 | [runoff & score tie → five-star](BV_Library_pages/BV_Library_star_runoff_score_tie_five_star.md) | both tied, resolved by the five-star tiebreaker | [`.yaml`](BV_Library_star_runoff_score_tie_five_star.yaml) |
 
+## STAR_PR (Allocated Score) — multi-winner
+
+Ported from BetterVoting's `AllocatedScore.test.ts`. LH's `allocated` method reproduces BetterVoting's elected committee in each case. (BetterVoting's four fractional-surplus variants all elect the same committee, {Allison, Doug}; one representative is included. Random-tiebreak and vote-count-sanitization cases are omitted.)
+
+| What it shows | src |
+|---|:--:|
+| basic two-seat allocation — elect top scorer, spend a quota, second seat follows | [`.yaml`](BV_Library_star_pr_basic_two_seats.yaml) |
+| fewer voters than seats — every seat still fills, in score order | [`.yaml`](BV_Library_star_pr_voters_fewer_than_seats.yaml) |
+| fractional surplus — 8 supporters vs a quota of 6 → ballots reweighted to 0.25 | [`.yaml`](BV_Library_star_pr_fractional_surplus.yaml) |
+
 ## Approval · Plurality · Ranked Robin
 
 | Page (read this) | What it shows | src |

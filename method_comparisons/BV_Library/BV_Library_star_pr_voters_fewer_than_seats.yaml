@@ -1,0 +1,20 @@
+election_title: "BV parity — STAR_PR (Allocated Score): fewer voters than seats"
+scenario_description: |-
+  Ported from BetterVoting's tabulator unit tests (AllocatedScore.test.ts :: "Voters < Winners").
+  A degenerate but important edge case: 3 seats but only 2 ballots. The method still fills
+  every seat, electing in score order — Allison, then Bill, then Carmen — rather than erroring
+  or leaving seats empty. LH's `allocated` method agrees with BetterVoting.
+
+num_winners: 3
+voting_method: allocated
+ballots: |-
+  Allison,Bill,Carmen,Doug
+  5,5,0,0
+  5,4,3,0
+
+expected_winners:
+  - Allison
+  - Bill
+  - Carmen
+
+# file: BV_Library_star_pr_voters_fewer_than_seats.yaml
