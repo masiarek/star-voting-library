@@ -78,8 +78,11 @@ API = "https://bettervoting.com/API"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "_demo_dropbox")
 
 # Defaults so it runs from PyCharm's green button with NO env setup. Override via
-# environment if you like. BV_USER_ID is just a throwaway self-signed identity.
-USER_ID = os.environ.get("BV_USER_ID", "masiarek_mc_demo")
+# environment if you like. BV_USER_ID becomes the election's owner_id — set it to
+# your REAL BetterVoting account id so script-made elections show up in /manage
+# (the manage list is filtered by owner_id). Adam's account (Admin1) is the id
+# below; it's not a secret (it's the owner_id in the frozen _bv_export.json files).
+USER_ID = os.environ.get("BV_USER_ID", "ea09e7c7-b00d-427a-bef8-32ade437d49d")
 TEMPLATE_ID = os.environ.get("BV_TEMPLATE_ID", "pet")
 
 # The backend now requires ASYMMETRIC auth: the election's `auth_key` must be a
@@ -108,28 +111,12 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # (Older runs used STAR single-winner; the BV95a/BV95b elections already exist —
 #  don't recreate them. Add new elections here and re-run.)
 # --------------------------------------------------------------------------
-ELECTIONS = [
-    {
-        # BV135 — Approval 101: single-winner Approval, "most approvals wins."
-        # Approval ballots are 0/1 only. Clean, no tie: Bob 4, Ann 3, Cal 2.
-        "title": "BV135 - Approval 101 — most approvals wins",
-        "description": "Approval Voting, 1 winner, 3 candidates, 5 ballots. The "
-                       "textbook Approval intro: each voter approves any number of "
-                       "candidates, and whoever collects the most approvals wins. "
-                       "Bob 4, Ann 3, Cal 2 -> Bob wins.",
-        "method": "Approval",
-        "num_winners": 1,
-        "candidates": ["Ann", "Bob", "Cal"],
-        "ballots": [[1, 1, 0],   # voter 1 — approves Ann and Bob
-                    [0, 1, 1],   # voter 2 — approves Bob and Cal
-                    [1, 1, 0],   # voter 3 — approves Ann and Bob
-                    [0, 1, 0],   # voter 4 — approves only Bob
-                    [1, 0, 1]],  # voter 5 — approves Ann and Cal
-        "expected": "Bob (4 approvals; Ann 3, Cal 2)",
-    },
-    # (BV1525 dkj9dx and BV130-original yhxy7q are already created & promoted —
-    #  don't recreate them. Add new elections above and re-run.)
-]
+# Add the election(s) to create here, then run the script. Entry shape:
+#   {"title": ..., "description": ..., "method": "STAR"|"Approval"|...,
+#    "num_winners": 1, "candidates": [...], "ballots": [[...], ...],
+#    "expected": "free text"}
+# (Score range: Approval = 0/1 ; STAR / Bloc / STAR_PR = 0-5.)
+ELECTIONS = []
 
 
 def _pp(resp):
@@ -162,6 +149,14 @@ def build_payload(template, spec):
     r["candidates"] = [{"candidate_id": str(uuid.uuid4()), "candidate_name": n}
                        for n in spec["candidates"]]
     elec["races"] = [r]
+    # NOTE: owner_id makes the election appear in /manage, but it does NOT grant
+    # UI admin access — BV's /admin page authorizes off a server-side role binding
+    # that only the authenticated (Keycloak) create flow writes, not off the
+    # election's owner_id/admin_ids. Setting admin_ids here was tested and IGNORED
+    # (xb8r6v had admin_ids=[owner] and was still denied; the working manual
+    # election had admin_ids=null). So API-created elections are public, listable,
+    # and exportable, but not UI-administrable from your real login. Don't bother
+    # setting admin_ids — it has no effect. (See the BV issue draft in git log.)
     return {"Election": elec}                      # API expects capital "Election"
 
 
