@@ -4,8 +4,8 @@ Two 5-voter STAR elections that isolate STAR's **Majority-Criterion** behavior �
 
 | Case (sheet id) | The majority backs… | Winner | Shows |
 |---|---|:--:|---|
-| [`bv95a`](bv95a_9m6rxr_favorite_survives_one_rival.yaml) · **BV95a** | one rival (Bruno 4, Cleo 0) | **Ada** ✓ | the majority's favorite *survives* — RMC safety |
-| [`bv95b`](bv95b_7pdq3r_favorite_loses_two_rivals.yaml) · **BV95b** | two rivals (Bruno 4, Cleo 3) | **Bruno** ✗ | the Majority-Criterion *failure* |
+| **BV95a** — [page](bv95a_9m6rxr_favorite_survives_one_rival.md) · [yaml](bv95a_9m6rxr_favorite_survives_one_rival.yaml) | one rival (Bruno 4, Cleo 0) | **Ada** ✓ | the majority's favorite *survives* — RMC safety |
+| **BV95b** — [page](bv95b_7pdq3r_favorite_loses_two_rivals.md) · [yaml](bv95b_7pdq3r_favorite_loses_two_rivals.yaml) | two rivals (Bruno 4, Cleo 3) | **Bruno** ✗ | the Majority-Criterion *failure* |
 
 Full concept, the Relaxed Majority Criterion, the Later-No-Harm connection, and references: **[Majority Criterion topic hub](../../00_start_here/topics/majority_criterion/README.md)**.
 

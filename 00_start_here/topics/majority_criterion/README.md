@@ -18,7 +18,7 @@ Choose-One (plurality) and RCV-IRV always obey this rule. **STAR does not always
 
 Five voters. Three of them (a **60% majority**) love **Ada** — they give her the top score, 5. The other two can't stand Ada (they give her 0) but love **Bruno** and **Cleo** (5 each). The only thing we change between the two elections is *how generous Ada's own supporters are to everyone else.*
 
-**Election A — Ada's majority backs only ONE other candidate** ([`bv95a`](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml)). They give Bruno a 4 and Cleo a 0:
+**Election A — Ada's majority backs only ONE other candidate** ([`bv95a`](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md)). They give Bruno a 4 and Cleo a 0:
 
 ```
 Ada,Bruno,Cleo
@@ -31,7 +31,7 @@ Finalists (top two by score): Bruno & Ada  →  runoff: Ada beats Bruno  →  AD
 
 Ada's majority got their favorite. Supporting *one* compromise candidate cost them nothing.
 
-**Election B — the same majority also backs a SECOND candidate** ([`bv95b`](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)). Everything identical except they now give Cleo a 3 instead of 0:
+**Election B — the same majority also backs a SECOND candidate** ([`bv95b`](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md)). Everything identical except they now give Cleo a 3 instead of 0:
 
 ```
 Ada,Bruno,Cleo
@@ -88,7 +88,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../Range_Voting/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../Approval_Voting/) |
 
-Worked demonstrations in this repo: the pair [`bv95a`](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) / [`bv95b`](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) above, and the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus). Both BV95 elections were also reproduced live on BetterVoting — [`9m6rxr`](https://bettervoting.com/9m6rxr) elects Ada, [`7pdq3r`](https://bettervoting.com/7pdq3r) elects Bruno — so the demo is verified on the real platform, not just the LH engine.
+Worked demonstrations in this repo — each with its own per-election page: [BV95a — favorite survives](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) / [BV95b — favorite loses](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md), plus the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus). Both BV95 elections were also reproduced live on BetterVoting — [`9m6rxr`](https://bettervoting.com/9m6rxr) elects Ada, [`7pdq3r`](https://bettervoting.com/7pdq3r) elects Bruno — so the demo is verified on the real platform, not just the LH engine.
 
 ---
 
