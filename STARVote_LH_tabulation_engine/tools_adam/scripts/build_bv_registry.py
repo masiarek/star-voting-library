@@ -98,8 +98,9 @@ def _ballot_shape(race):
 
 
 def _test_num(test_id):
-    """BV27 -> 27 ; BV95a -> 95 ; BV130-r2 -> 130 (for sorting / gap-finding)."""
-    m = re.search(r"(\d+)", test_id or "")
+    """BV27 -> 27 ; BV95a -> 95 ; BV130-r2 -> 130. Only BV-numbered ids (a leading
+    'BV<n>'); returns None for non-numbered case ids like 'Runoff_01' or 'pet'."""
+    m = re.match(r"\s*BV\s*(\d+)", test_id or "", re.IGNORECASE)
     return int(m.group(1)) if m else None
 
 
@@ -124,9 +125,10 @@ def collect():
 
         fn = FN_RE.match(name)
         test_id = d.get("bv_test_id") or (f"BV{fn.group(1)}" if fn else "")
-        if not test_id:
-            continue                                  # not a BV-tracked case
         election_id = d.get("bv_election_id") or _export_election_id(p)
+        if not test_id and not election_id:
+            continue                    # neither a BV number nor a BV election id
+
         results_url = d.get("bv_results_url") or (
             f"https://bettervoting.com/{election_id}/results" if election_id else "")
         method = str(race.get("voting_method", "STAR")).strip()
@@ -141,17 +143,19 @@ def collect():
         md_rel = md if os.path.exists(os.path.join(REPO, md)) else ""
 
         rows.append({
-            "TestID": str(test_id), "ElectionID": str(election_id),
+            "TestID": str(test_id), "Case": name[:-5], "ElectionID": str(election_id),
             "Method": method, "Winners": nw, "Candidates": n_cand,
             "Ballots": n_ballots, "Expected": expected,
             "YAML": rel, "MD": md_rel, "ResultsURL": results_url,
         })
-    rows.sort(key=lambda r: (_test_num(r["TestID"]) or 0, r["TestID"]))
+    # BV-numbered cases first (by number), then export-only cases (no BV number).
+    rows.sort(key=lambda r: (_test_num(r["TestID"]) is None,
+                             _test_num(r["TestID"]) or 0, r["Case"]))
     return rows
 
 
-COLS = ["TestID", "ElectionID", "Method", "Winners", "Candidates", "Ballots",
-        "Expected", "YAML", "MD", "ResultsURL"]
+COLS = ["TestID", "Case", "ElectionID", "Method", "Winners", "Candidates",
+        "Ballots", "Expected", "YAML", "MD", "ResultsURL"]
 
 
 def write_csv(rows):
@@ -172,27 +176,33 @@ def write_md(rows):
     out = ["# BetterVoting test-case registry (repo subset)\n",
            "**Auto-generated — do not edit by hand.** Run "
            "`python STARVote_LH_tabulation_engine/tools_adam/scripts/build_bv_registry.py`.\n",
-           "Every BV-tracked case in this repo (a file with a `bv_test_id:` field or a "
-           "`bv…` filename). Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) "
+           "Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, "
+           "or a frozen `_bv_export.json`). Cases with a real BetterVoting election but "
+           "no assigned BV number (e.g. the `Runoff_NN` set) appear under their case "
+           "name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) "
            "(GitHub sorts CSV columns on click). **The master Google Sheet stays "
            "authoritative for the full BV numbering** — it also tracks non-tabulation "
            "QA (UI, roles, archive…) that has no YAML here.\n"]
     out.append(f"**{len(rows)} cases** · methods: "
                + ", ".join(f"{m} ({c})" for m, c in sorted(methods.items())) + ".\n")
-    out.append(f"**Test IDs in the repo:** {', '.join(r['TestID'] for r in rows)}.\n")
+    numbered = [r['TestID'] for r in rows if _test_num(r['TestID']) is not None]
+    unnumbered = sum(1 for r in rows if _test_num(r['TestID']) is None)
+    out.append(f"**BV-numbered Test IDs:** {', '.join(numbered)}."
+               + (f"  (+{unnumbered} export-backed cases with no BV number.)" if unnumbered else "")
+               + "\n")
     if nums:
         out.append(f"Highest number here is **BV{nums[-1]}** → the next free number above "
                    f"the repo is **BV{nums[-1] + 1}**. (Numbering is sparse and the master "
                    f"Google Sheet is authoritative for choosing the next number; this list "
                    f"only avoids collisions with existing repo files.)\n")
 
-    out.append("| Test ID | BV id | Method | W | Cand | Ballots | Winners | Page | YAML |")
-    out.append("|---------|-------|--------|:-:|:-:|:-:|---------|------|------|")
+    out.append("| Test ID | Case | BV id | Method | W | Cand | Ballots | Winners | Page | YAML |")
+    out.append("|---------|------|-------|--------|:-:|:-:|:-:|---------|------|------|")
     for r in rows:
         page = f"[page]({os.path.relpath(os.path.join(REPO, r['MD']), OUT_DIR).replace(os.sep,'/')})" if r["MD"] else "—"
         yl = f"[yaml]({os.path.relpath(os.path.join(REPO, r['YAML']), OUT_DIR).replace(os.sep,'/')})"
         bv = f"[`{r['ElectionID']}`]({r['ResultsURL']})" if r["ElectionID"] and r["ResultsURL"] else (r["ElectionID"] or "—")
-        out.append(f"| {r['TestID']} | {bv} | {r['Method']} | {r['Winners']} | "
+        out.append(f"| {r['TestID'] or '—'} | {r['Case']} | {bv} | {r['Method']} | {r['Winners']} | "
                    f"{r['Candidates']} | {r['Ballots']} | {r['Expected']} | {page} | {yl} |")
     path = os.path.join(OUT_DIR, "BV_registry.md")
     open(path, "w").write("\n".join(out) + "\n")

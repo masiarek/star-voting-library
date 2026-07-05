@@ -110,24 +110,35 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # --------------------------------------------------------------------------
 ELECTIONS = [
     {
-        "title": "BV27 - Lackner & Skowron steering committee (Approval, k=4)",
-        "description": "Multi-Winner Approval (bloc). Example 2.1 from Lackner & "
-                       "Skowron, Multi-Winner Voting with Approval Preferences. "
-                       "7 candidates, 12 approval ballots, 4 seats. AV seats "
-                       "A, B, C then TIES D and F for the 4th seat.",
-        "method": "Approval",
+        # Retro-fill: BV1525 had no BV election. Bloc STAR = STAR + num_winners>1 on
+        # BV. Seat 1 is a First/Condorcet-Loser tie (both 24) -> BV's random draw
+        # decides it, so this also tests BV's multi-seat STAR tie handling.
+        "title": "BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",
+        "description": "Bloc STAR, 4 seats, 16 ballots. Larry's electowiki example: "
+                       "First and Condorcet Loser tie at 24 for the top score; seat 1 "
+                       "is decided by BV's random draw. Expected: First, Second, Third, "
+                       "Fourth (or Condorcet-Loser-first if the draw favors it).",
+        "method": "STAR",
         "num_winners": 4,
-        "candidates": ["A", "B", "C", "D", "E", "F", "G"],
-        "ballots": [
-            [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0],  # 3× {A,B}
-            [1, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0],  # 3× {A,C}
-            [1, 0, 0, 1, 0, 0, 0], [1, 0, 0, 1, 0, 0, 0],                          # 2× {A,D}
-            [0, 1, 1, 0, 0, 1, 0],                                                 # 1× {B,C,F}
-            [0, 0, 0, 0, 1, 0, 0],                                                 # 1× {E}
-            [0, 0, 0, 0, 0, 1, 0],                                                 # 1× {F}
-            [0, 0, 0, 0, 0, 0, 1],                                                 # 1× {G}
-        ],
-        "expected": "A, B, C, and {D or F} — AV ties for the 4th seat",
+        "candidates": ["First", "Condorcet Loser", "Second", "Third", "Fourth"],
+        "ballots": ([[3, 0, 1, 1, 1]] * 8 + [[0, 4, 0, 0, 0]] * 5
+                    + [[0, 1, 3, 2, 1]] * 2 + [[0, 2, 5, 4, 3]] * 1),
+        "expected": "First, Second, Third, Fourth (seat 1 by random draw)",
+    },
+    {
+        # Retro-fill: the ORIGINAL BV130 (star-server#731) had no captured export.
+        # Bloc STAR, 3 seats, clean (no tie).
+        "title": "BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",
+        "description": "Bloc STAR, 3 seats, 9 ballots. The ORIGINAL BV130 (reporting "
+                       "issue #731, tabs->pages). Clean, no tie. Winners: Someone I "
+                       "Like, Santa Claus, The Lesser Evil.",
+        "method": "STAR",
+        "num_winners": 3,
+        "candidates": ["Johnny Cash", "Elvis Presley", "Santa Claus",
+                       "The Lesser Evil", "Someone I Like", "Apocalypse Now"],
+        "ballots": ([[0, 2, 4, 3, 5, 0]] * 3 + [[2, 1, 3, 4, 3, 2]] * 4
+                    + [[1, 1, 5, 2, 5, 0]] * 2),
+        "expected": "Someone I Like, Santa Claus, The Lesser Evil",
     },
 ]
 
