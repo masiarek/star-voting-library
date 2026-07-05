@@ -47,3 +47,23 @@ Worked examples in [`03_STAR_PR/`](../../../03_STAR_PR):
 - [`01_c4_b2_bloc-star-2-seats.yaml`](../../../02_STAR_Bloc/_main/01_c4_b2_bloc-star-2-seats.yaml) — Bloc STAR (majoritarian contrast)
 
 The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../stv/proportional_stv_vs_star.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
+
+## Why proportional representation? (pros & cons)
+
+Proportional representation elects candidates *in proportion to their support*: if a faction is a fifth of the electorate and votes together, it earns roughly one of five seats. The goal is a "round table" where any faction with enough support has a seat — in direct contrast to Bloc STAR, which lets the majority take **every** seat. This mirrors the public-facing framing on [starvoting.org/star-pr](https://www.starvoting.org/star-pr), condensed for reference.
+
+**Pros:**
+
+- **Diversity of representation** — smaller factions win seats even without a majority, so more voters end up genuinely represented.
+- **Coalition-building** — factions must band together to pass anything, which rewards negotiation over winner-take-all.
+- **Breaks two-party lock-in** — minor parties can gain a foothold where they'd never win a single-winner seat.
+- **Mitigates gerrymandering** — multi-member districts are far harder to draw for advantage (though solving districting directly is better where possible).
+
+**Cons:**
+
+- **Less accountability over a specific incumbent** — with *k* seats, it can take roughly `k/(k+1)` of voters opposing someone to unseat them; smaller districts (fewer seats each) raise that bar back up. STAR-PR's expressive ballot softens this by surfacing less-polarizing candidates.
+- **More complex to tally and less transparent** than single-winner or Bloc — voters may not fully follow how winners are determined (STAR-PR is still simpler than STV, but it's not trivial).
+- **Possible stagnation** — hard-line factions can refuse to coalition and block legislation as leverage.
+- **Not batch-summable** — STAR-PR ballots can't be tallied precinct-by-precinct and summed; they must be **centrally tabulated and audited** per election. That makes it best suited to local elections, or to regional multi-member districts at larger scale.
+
+**The case for STAR-PR specifically:** the same 0–5 ballot works for single-winner, Bloc, and proportional races, so voters learn one ballot. The expressive scores give the method more to work with — it can favor broadly-supported candidates over polarizing ones — while keeping the tally simpler than ranked proportional methods like STV. It's non-partisan by default, though it can back a party-list system if desired, and pairs well with small/local districts to preserve accountability.
