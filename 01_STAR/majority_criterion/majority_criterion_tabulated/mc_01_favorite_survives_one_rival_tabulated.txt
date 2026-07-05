@@ -1,0 +1,119 @@
+======================================================================
+SOURCE FILE:     mc_01_favorite_survives_one_rival.yaml
+SOURCE MODIFIED: 2026-07-04 21:55:58
+TABULATED FILE:  mc_01_favorite_survives_one_rival_tabulated.txt
+TABULATED AT:    2026-07-04 21:58:02
+======================================================================
+
+election_title: "BV95a — Majority Criterion: favorite survives when the majority backs ONE rival"
+scenario_description: |-
+  Backs sheet row BV95a (pair with BV95b / mc_02). A 5-voter STAR election. A 3-voter MAJORITY gives Ada their top score (5). The
+  question: can Ada still win once those voters honestly support other candidates
+  too? Here they back only ONE other candidate (Bruno = 4) and leave Cleo at 0.
+
+  Ada 15, Bruno 22, Cleo 10. Ada still reaches the runoff (top two by score are
+  Bruno and Ada), and in the runoff the 3-voter majority prefers Ada over Bruno,
+  so ADA WINS. Supporting a single second choice did NOT cost the majority their
+  favorite. Pair this with mc_02 (they back TWO rivals) to see when it flips.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+ballots: |-
+  Ada,Bruno,Cleo
+  5,4,0
+  5,4,0
+  5,4,0
+  0,5,5
+  0,5,5
+
+expected_winners:
+  - Ada
+
+# file: mc_01_favorite_survives_one_rival.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV95a — Majority Criterion: favorite survives when the majority backs ONE rival ===
+  Backs sheet row BV95a (pair with BV95b / mc_02). A 5-voter STAR election. A 3-voter MAJORITY gives Ada their top score (5). The
+  question: can Ada still win once those voters honestly support other candidates
+  too? Here they back only ONE other candidate (Bruno = 4) and leave Cleo at 0.
+
+  Ada 15, Bruno 22, Cleo 10. Ada still reaches the runoff (top two by score are
+  Bruno and Ada), and in the runoff the 3-voter majority prefers Ada over Bruno,
+  so ADA WINS. Supporting a single second choice did NOT cost the majority their
+  favorite. Pair this with mc_02 (they back TWO rivals) to see when it flips.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    | * Bruno   |    Cleo   |
+-----------------------------------------------------
+       * Ada > |    ---     |3 - 0 - 2  |3 - 0 - 2  |
+     * Bruno > | 2 - 0 - 3  |   ---     |3 - 2 - 0  |
+        Cleo > | 2 - 0 - 3  |0 - 2 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = Ada
+  Approval = Bruno   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Bruno)
+ - Runoff Round Winner   = (Ada)
+  Candidate Bruno earned the highest total score,
+  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Ada,Bruno,Cleo
+    3 ×   5,    4,   0
+    2 ×   0,    5,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        3  0  0  0  0  2  |    15   3.0
+Bruno      2  3  0  0  0  0  |    22   4.4
+Cleo       2  0  0  0  0  3  |    10   2.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 22 -- First place
+   Ada           -- 15 -- Second place
+   Cleo          -- 10
+ Bruno and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 3 -- First place
+   Bruno         -- 2
+   Equal Support -- 0
+ Ada wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Ada 3 (60%)  ·  Bruno 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ada

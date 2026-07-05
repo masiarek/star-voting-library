@@ -1,0 +1,43 @@
+election_title: "BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals"
+scenario_description: |-
+  Backs sheet row BV95b (pair with BV95a / mc_01).
+  The same 5-voter election as mc_01, changed in ONE spot: the 3-voter majority
+  that top-scores Ada now also gives Cleo a 3 (they honestly like a SECOND other
+  candidate), instead of 0.
+
+  Ada 15, Bruno 22, Cleo 19. Now BOTH Bruno and Cleo out-score Ada, so the top
+  two by score are Bruno and Cleo — Ada never reaches the runoff and LOSES,
+  despite being the top choice of a 3-of-5 majority. Bruno wins the runoff.
+
+  This is STAR's Majority-Criterion failure, and it shows exactly why it is mild:
+  the majority had to support TWO other candidates to lose their favorite (Score
+  and Approval can drop the favorite on just ONE). That is the point of the
+  Relaxed Majority Criterion, which STAR passes. See
+  ../../00_start_here/topics/majority_criterion/README.md.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+ballots: |-
+  Ada,Bruno,Cleo
+  5,4,3
+  5,4,3
+  5,4,3
+  0,5,5
+  0,5,5
+
+expected_winners:
+  - Bruno
+
+# file: mc_02_favorite_loses_two_rivals.yaml

@@ -13,5 +13,6 @@ The concept pages (now directly under [00_start_here](../)) are organized **by m
 | **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [center_squeeze/](center_squeeze/) |
 | **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/) |
 | **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/) |
+| **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [majority_criterion/](majority_criterion/) |
 
 *(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked examples.)*
