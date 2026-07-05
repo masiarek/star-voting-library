@@ -2,6 +2,8 @@
 
 *Larry Hastings' electowiki Bloc-STAR test election, reproduced as the LH reference for BetterVoting test BV1525 (4 winners, 16 ballots). The candidates are named for their intended finish — First, Condorcet Loser, Second, Third, Fourth. The twist: a **Score co-leader can be a near-Condorcet loser** (loses every head-to-head). Here "Condorcet Loser" ties "First" for the top score and so ties for the seat-1 runoff; the lot alone separates them. Winners: **First, Second, Third, Fourth**.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx`). On this run BetterVoting drew **First** for seat 1 — matching this file's published-lot outcome. Note the reporting quirk: BV flags the seat-1 round `tieBreakType: random` (correct — its logs walk `runoff_tied → runoff_score_tie → runoff_five_star_tie → runoff_random`), but the **top-level summary still reads `tieBreakType: none`**, the same under-report seen in [BV130-r2](bv130r2_dead_rung_bloc.md) and [BV131](bv131_guido_bloc.md).
+
 Reference file: [`bv1525_condorcet_loser_bloc.yaml`](bv1525_condorcet_loser_bloc.yaml) (`expected_winners: [First, Second, Third, Fourth]`). Backs sheet row **BV1525**. Source: Larry's [`test_election_bloc_star_and_electowiki.starvote`](https://github.com/larryhastings/starvote/blob/main/test_elections/test_election_bloc_star_and_electowiki.starvote).
 
 ## The election
@@ -63,7 +65,7 @@ Full audit copy: [`_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt`](_
 - lot favors First → **First, Second, Third, Fourth** (this file)
 - lot favors Condorcet Loser → **Condorcet Loser, First, Second, Third**
 
-A **pre-published permutation** makes which one occurs reproducible. A **random** draw (as in STAR Vote 2.0 / BetterVoting) does not — it "picks a different list of winners with each run," which is why comparing engines on this ballot set is hard until the tiebreak order is pinned (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417); [star-server#358](https://github.com/Equal-Vote/star-server/issues/358)).
+A **pre-published permutation** makes which one occurs reproducible. A **random** draw (BetterVoting) does not — it "picks a different list of winners with each run," which is why comparing engines on this ballot set is hard until the tiebreak order is pinned (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417); [star-server#358](https://github.com/Equal-Vote/star-server/issues/358)).
 
 ## Related
 

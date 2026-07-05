@@ -1,11 +1,16 @@
 ======================================================================
 SOURCE FILE:     bv130r2_dead_rung_bloc.yaml
-SOURCE MODIFIED: 2026-07-04 17:59:15
+SOURCE MODIFIED: 2026-07-05 07:58:26
 TABULATED FILE:  bv130r2_dead_rung_bloc_tabulated.txt
-TABULATED AT:    2026-07-04 18:01:02
+TABULATED AT:    2026-07-05 08:28:01
 ======================================================================
 
 election_title: "BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk)"
+
+# BV tracker fields (read by tools_adam/scripts/build_bv_registry.py; engine ignores).
+bv_test_id: BV130-r2
+bv_election_id: 9ff9jk
+bv_results_url: https://bettervoting.com/9ff9jk/results
 
 scenario_description: |-
   The LH reference for BetterVoting test BV130-r2 (real election 9ff9jk, "Bloc

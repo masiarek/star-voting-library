@@ -4,6 +4,8 @@
 
 > **Which BV130 is this?** The **original** BV130 (this page). Not to be confused with **BV130-r2** (election `9ff9jk`), a separate 4-ballot retest built around a dead-rung lot tie — see [`bv130r2_dead_rung_bloc.md`](bv130r2_dead_rung_bloc.md). Same family name, different elections; keep them apart.
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q`). Recreated via the API so the reporting bug has a live election to point at; BV agrees with LH — Someone I Like, Santa Claus, The Lesser Evil — and reports `tieBreakType: none` correctly (there is no tie here).
+
 Reference file: [`bv130_bloc_pagination_731.yaml`](bv130_bloc_pagination_731.yaml) (`expected_winners: [Someone I Like, Santa Claus, The Lesser Evil]`). Backs sheet row **BV130**.
 
 ## The election
@@ -21,7 +23,7 @@ Scores separate everyone cleanly — Someone I Like 37, Santa Claus 34, The Less
 
 ## What star-server#731 is (and isn't)
 
-[#731](https://github.com/Equal-Vote/star-server/issues/731) asks BetterVoting to stop rendering the Bloc rounds as **tabs** and use the **Pagination** component (numbered pages at the bottom, as the proportional viewer already does). It is a **presentation** change to the results view — the winners and the round-by-round numbers are already correct. So this case's job is to pin the *correct* tabulation as the reference the UI must keep matching; there is no LH↔BV result divergence to show (LH-only, no screenshots needed).
+[#731](https://github.com/Equal-Vote/star-server/issues/731) asks BetterVoting to stop rendering the Bloc rounds as **tabs** and use the **Pagination** component (numbered pages at the bottom, as the proportional viewer already does). It is a **presentation** change to the results view — the winners and the round-by-round numbers are already correct. So this case's job is to pin the *correct* tabulation as the reference the UI must keep matching; there is no LH↔BV result divergence to show — LH and the live BV election (`yhxy7q`) agree on all three winners.
 
 ## The LH report (the correct tabulation)
 

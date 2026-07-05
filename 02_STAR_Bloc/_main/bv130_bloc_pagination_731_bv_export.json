@@ -1,0 +1,925 @@
+{
+  "Election": {
+    "election_id": "yhxy7q",
+    "title": "BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",
+    "description": "Bloc STAR, 3 seats, 9 ballots. The ORIGINAL BV130 (reporting issue #731, tabs->pages). Clean, no tie. Winners: Someone I Like, Santa Claus, The Lesser Evil.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "masiarek_mc_demo",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",
+        "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+        "num_winners": 3,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+            "candidate_name": "Johnny Cash"
+          },
+          {
+            "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+            "candidate_name": "Elvis Presley"
+          },
+          {
+            "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+            "candidate_name": "Santa Claus"
+          },
+          {
+            "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+            "candidate_name": "The Lesser Evil"
+          },
+          {
+            "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+            "candidate_name": "Someone I Like"
+          },
+          {
+            "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+            "candidate_name": "Apocalypse Now"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-05T12:20:04.098Z",
+    "update_date": "1783254004098",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-4kmh9rtb",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 5
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 2
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 5
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-twvbtc86",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 0
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 2
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 4
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 3
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 5
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-dvpc92b4",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 2
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 3
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 4
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 3
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-g79ywq9c",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 2
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 3
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 4
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 3
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-3j7ccffd",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 2
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 3
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 4
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 3
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-x62vghfv",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 0
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 2
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 4
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 3
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 5
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ttxkbpvq",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 2
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 3
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 4
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 3
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-dcgy39ym",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 1
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 5
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 2
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 5
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-w6g8mmmc",
+      "election_id": "yhxy7q",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "1ebe244d-a5bf-42eb-b8d4-c0f71ae21033",
+          "scores": [
+            {
+              "candidate_id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+              "score": 0
+            },
+            {
+              "candidate_id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "score": 2
+            },
+            {
+              "candidate_id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "score": 4
+            },
+            {
+              "candidate_id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "score": 3
+            },
+            {
+              "candidate_id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "score": 5
+            },
+            {
+              "candidate_id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+          "name": "Someone I Like",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 3,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+            "57439f45-800a-43af-bea2-bc538f3382c6": true,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+          },
+          "score": 37,
+          "fiveStarCount": 5
+        },
+        {
+          "id": "57439f45-800a-43af-bea2-bc538f3382c6",
+          "name": "Santa Claus",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+            "57439f45-800a-43af-bea2-bc538f3382c6": false,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+          },
+          "score": 34,
+          "fiveStarCount": 2
+        },
+        {
+          "id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+          "name": "The Lesser Evil",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 4,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 4,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+            "57439f45-800a-43af-bea2-bc538f3382c6": false,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+          },
+          "score": 29,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+          "name": "Elvis Presley",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 0,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 3,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 5
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": false,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+            "57439f45-800a-43af-bea2-bc538f3382c6": false,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+          },
+          "score": 12,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+          "name": "Johnny Cash",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 4,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 0,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 2
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+            "57439f45-800a-43af-bea2-bc538f3382c6": false,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+          },
+          "score": 10,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+          "name": "Apocalypse Now",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": 4,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": 0,
+            "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 0
+          },
+          "winsAgainst": {
+            "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+            "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+            "c7d86b97-ab20-4400-98cf-be2aad9fc103": false,
+            "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+            "57439f45-800a-43af-bea2-bc538f3382c6": false,
+            "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": false
+          },
+          "score": 8,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+              "name": "Someone I Like",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 3,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+                "57439f45-800a-43af-bea2-bc538f3382c6": true,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 37,
+              "fiveStarCount": 5
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "name": "Santa Claus",
+              "tieBreakOrder": 4,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+                "57439f45-800a-43af-bea2-bc538f3382c6": false,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 34,
+              "fiveStarCount": 2
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Someone I Like",
+                "Santa Claus"
+              ],
+              "stars": [
+                "37",
+                "34"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Someone I Like",
+              "runner_up": "Santa Claus",
+              "winner_votes": 3,
+              "runner_up_votes": 0,
+              "equal_votes": 6
+            }
+          ]
+        },
+        {
+          "winners": [
+            {
+              "id": "57439f45-800a-43af-bea2-bc538f3382c6",
+              "name": "Santa Claus",
+              "tieBreakOrder": 4,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+                "57439f45-800a-43af-bea2-bc538f3382c6": false,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 34,
+              "fiveStarCount": 2
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "name": "The Lesser Evil",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 4,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 4,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+                "57439f45-800a-43af-bea2-bc538f3382c6": false,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 29,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Santa Claus",
+                "The Lesser Evil"
+              ],
+              "stars": [
+                "34",
+                "29"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Santa Claus",
+              "runner_up": "The Lesser Evil",
+              "winner_votes": 5,
+              "runner_up_votes": 4,
+              "equal_votes": 0
+            }
+          ]
+        },
+        {
+          "winners": [
+            {
+              "id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+              "name": "The Lesser Evil",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 4,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 4,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+                "57439f45-800a-43af-bea2-bc538f3382c6": false,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 29,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+              "name": "Elvis Presley",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": 0,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": 3,
+                "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 5
+              },
+              "winsAgainst": {
+                "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+                "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+                "c7d86b97-ab20-4400-98cf-be2aad9fc103": false,
+                "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+                "57439f45-800a-43af-bea2-bc538f3382c6": false,
+                "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+              },
+              "score": 12,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "The Lesser Evil",
+                "Elvis Presley"
+              ],
+              "stars": [
+                "29",
+                "12"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "The Lesser Evil",
+              "runner_up": "Elvis Presley",
+              "winner_votes": 9,
+              "runner_up_votes": 0,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "858d1a2f-e587-4975-8076-2ace9de0c956",
+            "name": "Someone I Like",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 3,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+              "57439f45-800a-43af-bea2-bc538f3382c6": true,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+            },
+            "score": 37,
+            "fiveStarCount": 5
+          },
+          {
+            "id": "57439f45-800a-43af-bea2-bc538f3382c6",
+            "name": "Santa Claus",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 5,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": true,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+              "57439f45-800a-43af-bea2-bc538f3382c6": false,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+            },
+            "score": 34,
+            "fiveStarCount": 2
+          },
+          {
+            "id": "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+            "name": "The Lesser Evil",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 4,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 9,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 9,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 4,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 9
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": true,
+              "57439f45-800a-43af-bea2-bc538f3382c6": false,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+            },
+            "score": 29,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+            "name": "Elvis Presley",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 0,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 3,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 5
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": false,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+              "57439f45-800a-43af-bea2-bc538f3382c6": false,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+            },
+            "score": 12,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "2a28941c-4153-42d1-bb49-7ad067acafbe",
+            "name": "Johnny Cash",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 4,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 0,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 2
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": true,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+              "57439f45-800a-43af-bea2-bc538f3382c6": false,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": true
+            },
+            "score": 10,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "7b2a804c-ba6a-411f-af3b-6886f8b47ea9",
+            "name": "Apocalypse Now",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": 0,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": 0,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": 4,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": 0,
+              "57439f45-800a-43af-bea2-bc538f3382c6": 0,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": 0
+            },
+            "winsAgainst": {
+              "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce": false,
+              "858d1a2f-e587-4975-8076-2ace9de0c956": false,
+              "c7d86b97-ab20-4400-98cf-be2aad9fc103": false,
+              "2a28941c-4153-42d1-bb49-7ad067acafbe": false,
+              "57439f45-800a-43af-bea2-bc538f3382c6": false,
+              "7b2a804c-ba6a-411f-af3b-6886f8b47ea9": false
+            },
+            "score": 8,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 9
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "85fdb0a7-73b8-4da3-8ac4-2873ce7142ce",
+        "858d1a2f-e587-4975-8076-2ace9de0c956",
+        "c7d86b97-ab20-4400-98cf-be2aad9fc103",
+        "2a28941c-4153-42d1-bb49-7ad067acafbe",
+        "57439f45-800a-43af-bea2-bc538f3382c6",
+        "7b2a804c-ba6a-411f-af3b-6886f8b47ea9"
+      ]
+    }
+  ]
+}

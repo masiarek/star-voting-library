@@ -1,11 +1,17 @@
 ======================================================================
 SOURCE FILE:     approval_bloc_4seats_c7_b12_lackner_skowron.yaml
-SOURCE MODIFIED: 2026-07-02 19:57:23
+SOURCE MODIFIED: 2026-07-05 07:52:31
 TABULATED FILE:  approval_bloc_4seats_c7_b12_lackner_skowron_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:05
+TABULATED AT:    2026-07-05 08:28:05
 ======================================================================
 
 election_title: Bloc Approval — Lackner & Skowron's running example (k=4)
+
+# Machine-readable BV tracker fields (ignored by the tabulation engine; read by
+# tools_adam/scripts/build_bv_registry.py to generate the index + number registry).
+bv_test_id: BV27
+bv_election_id: jt6r76
+bv_results_url: https://bettervoting.com/jt6r76/results
 
 scenario_description: |-
   The running example (Example 2.1) from Lackner & Skowron, "Multi-Winner
@@ -19,6 +25,11 @@ scenario_description: |-
   elects {A,B,C,F} outright, the tied committee that leaves FEWER voters
   with no representative at all (2 instead of 3). Run the proportional
   rules on this file via abcvoting_tabulation_engine/ to see it.
+
+  Live on BetterVoting (BV27, election jt6r76): BV's Approval engine seats
+  A,B,C,F — its random draw broke the D/F tie for F, the book's other AV
+  committee. Two-view page: bv27_jt6r76_lackner_approval_committee.md.
+  Live results: https://bettervoting.com/jt6r76/results
 
 options:
   show_description: false

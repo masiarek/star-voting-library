@@ -28,6 +28,13 @@ options:
 
 num_winners: 3
 voting_method: Bloc STAR
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV130
+bv_election_id: yhxy7q
+bv_results_url: https://bettervoting.com/yhxy7q/results
+# Live results: https://bettervoting.com/yhxy7q/results  (Bloc STAR, k=3; clean, no tie)
+
 ballots: |-
   Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse Now
   0,2,4,3,5,0

@@ -1,0 +1,42 @@
+election_title: 'BV130 — 6 candidates / 3 winners, Bloc STAR'
+
+scenario_description: |-
+  BV130 shape — 6 candidates / 3 winners, Bloc STAR, tuned into a clean
+  dead-rung teaching case (no candidate scores a 5 anywhere — the whole
+  election is capped at 4).
+
+  Seat 1 is a perfect Ada/Dan tie that survives EVERY deterministic rung:
+  both total 15, pairwise 1-1 (2 Equal Support), and — because the ceiling
+  is 4 — five-star is 0-0 (the dead rung). The pre-published lot [Ada, ...]
+  breaks it in Ada's favor, and the engine flags it. Seats 2 and 3 then
+  resolve cleanly on the ballots (Dan, then Eve), so one lot-decided seat
+  sits beside two ballot-decided seats. Ben, Cara, Finn are genuine
+  also-rans (present, never advancing).
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 3
+voting_method: Bloc STAR
+lot_numbers: [Ada,Ben,Cara,Dan,Eve,Finn]
+ballots: |-
+  Ada,Ben,Cara,Dan,Eve,Finn
+  3,2,1,4,2,1
+  4,1,2,3,2,0
+  4,2,1,4,3,1
+  4,2,1,4,3,2
+expected_winners:
+  - Ada
+  - Dan
+  - Eve
+
+# file: trash_delete.yaml

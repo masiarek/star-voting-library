@@ -35,6 +35,15 @@ options:
 num_winners: 4
 voting_method: Bloc STAR
 lot_numbers: [First, Condorcet Loser, Second, Third, Fourth]   # pre-published permutation
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV1525
+bv_election_id: dkj9dx
+bv_results_url: https://bettervoting.com/dkj9dx/results
+# Live results: https://bettervoting.com/dkj9dx/results  (Bloc STAR, k=4)
+# BV drew First for seat 1: round-level tieBreakType=random (correct), but the
+# top-level summary still reads tieBreakType=none (the under-report we track).
+
 ballots: |-
   First,Condorcet Loser,Second,Third,Fourth
   3,0,1,1,1
