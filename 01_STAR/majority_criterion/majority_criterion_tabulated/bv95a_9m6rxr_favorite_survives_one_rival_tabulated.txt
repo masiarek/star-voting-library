@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv95a_9m6rxr_favorite_survives_one_rival.yaml
-SOURCE MODIFIED: 2026-07-04 23:13:13
+SOURCE MODIFIED: 2026-07-04 23:28:47
 TABULATED FILE:  bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt
-TABULATED AT:    2026-07-04 23:14:15
+TABULATED AT:    2026-07-04 23:28:47
 ======================================================================
 
 election_title: "BV95a — Majority Criterion: favorite survives when the majority backs ONE rival"
@@ -19,7 +19,7 @@ scenario_description: |-
   Reproduced on BetterVoting (election 9m6rxr): BV also elects Ada
   (nTallyVotes 5), confirming the LH result. Frozen export:
   bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json. Live:
-  https://bettervoting.com/9m6rxr
+  https://bettervoting.com/9m6rxr/results
 
 options:
   show_description: false
@@ -65,7 +65,7 @@ TABULATION RESULTS
   Reproduced on BetterVoting (election 9m6rxr): BV also elects Ada
   (nTallyVotes 5), confirming the LH result. Frozen export:
   bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json. Live:
-  https://bettervoting.com/9m6rxr
+  https://bettervoting.com/9m6rxr/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

@@ -2,7 +2,9 @@
 
 *A 5-voter STAR election. A 3-voter majority scores **Ada** highest (5). They also honestly support **one** other candidate — Bruno gets a 4 — and leave Cleo at 0. Question: does supporting a compromise candidate cost the majority their favorite? **No — Ada wins.** This is the "safe" half of the [Majority Criterion](../../00_start_here/topics/majority_criterion/README.md) pair; its twin [BV95b](bv95b_7pdq3r_favorite_loses_two_rivals.md) shows what tips it over.*
 
-Reference files: [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](bv95a_9m6rxr_favorite_survives_one_rival.yaml) (`expected_winners: [Ada]`) · frozen export [`bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json`](bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json) (BV `9m6rxr`). Backs sheet row **BV95a**.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr`).
+
+Reference files: [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](bv95a_9m6rxr_favorite_survives_one_rival.yaml) (`expected_winners: [Ada]`) · frozen export [`bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json`](bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json). Backs sheet row **BV95a**.
 
 ## The ballots
 
@@ -45,7 +47,7 @@ Bruno leads the *scoring* round (22 — nearly everyone rates him highly), and A
 
 ## Confirmed on BetterVoting
 
-Reproduced live at [`bettervoting.com/9m6rxr`](https://bettervoting.com/9m6rxr): BV also elects **Ada** (`nTallyVotes 5`), matching LH. Election created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py).
+Reproduced live at [**bettervoting.com/9m6rxr/results**](https://bettervoting.com/9m6rxr/results): BV also elects **Ada** (`nTallyVotes 5`), matching LH. Election created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py).
 
 ## See also
 

@@ -2,7 +2,9 @@
 
 *The same 5-voter STAR election as [BV95a](bv95a_9m6rxr_favorite_survives_one_rival.md), changed in one spot: the 3-voter majority that scores **Ada** highest now *also* gives **Cleo** a 3 (a second honestly-liked candidate) instead of 0. That one change makes **Ada — the top choice of a clear majority — lose.** This is STAR's [Majority-Criterion](../../00_start_here/topics/majority_criterion/README.md) failure, and it shows exactly how narrow it is.*
 
-Reference files: [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](bv95b_7pdq3r_favorite_loses_two_rivals.yaml) (`expected_winners: [Bruno]`) · frozen export [`bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json`](bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json) (BV `7pdq3r`). Backs sheet row **BV95b**.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r`).
+
+Reference files: [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](bv95b_7pdq3r_favorite_loses_two_rivals.yaml) (`expected_winners: [Bruno]`) · frozen export [`bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json`](bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json). Backs sheet row **BV95b**.
 
 ## The ballots
 

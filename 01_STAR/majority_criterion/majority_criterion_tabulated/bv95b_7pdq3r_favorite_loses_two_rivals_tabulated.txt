@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv95b_7pdq3r_favorite_loses_two_rivals.yaml
-SOURCE MODIFIED: 2026-07-04 23:13:13
+SOURCE MODIFIED: 2026-07-04 23:28:47
 TABULATED FILE:  bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt
-TABULATED AT:    2026-07-04 23:14:15
+TABULATED AT:    2026-07-04 23:28:48
 ======================================================================
 
 election_title: "BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals"
@@ -25,7 +25,7 @@ scenario_description: |-
   Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
   (nTallyVotes 5), confirming the LH result. Frozen export:
   bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
-  https://bettervoting.com/7pdq3r
+  https://bettervoting.com/7pdq3r/results
 
 options:
   show_description: false
@@ -77,7 +77,7 @@ TABULATION RESULTS
   Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
   (nTallyVotes 5), confirming the LH result. Frozen export:
   bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
-  https://bettervoting.com/7pdq3r
+  https://bettervoting.com/7pdq3r/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
