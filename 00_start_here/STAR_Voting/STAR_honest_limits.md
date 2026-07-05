@@ -1,6 +1,6 @@
 # STAR Voting — Honest Limits
 
-**One line:** STAR is strong but **not perfect**. It is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-Harm by design, leaves a narrow residual of vote-splitting, and — like *every* method (Gibbard) — can be gamed at the margins. None of these are secret; conceding them honestly is why the rest of the case is trustworthy.
+**One line:** STAR is strong but **not perfect**. It is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-Harm by design, can fail the strict Majority Criterion (favoring a broad-consensus winner over a polarizing majority-favorite), leaves a narrow residual of vote-splitting, and — like *every* method (Gibbard) — can be gamed at the margins. None of these are secret; conceding them honestly is why the rest of the case is trustworthy.
 
 → Companion critical pages so every method gets the same treatment: [Approval's limits](../Approval_Voting/approval_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). Curriculum: [301.4 — honest limits](../CURRICULUM.md).
 
@@ -33,6 +33,12 @@ A 0–5 grid is more to explain than "pick one," and some voters under-use the s
 ## 7. Tie-breaking is more machinery
 
 Resolving ties runs a chain (pairwise → most five-star scores → lot), which is more moving parts than "most votes wins." Rare in large electorates, but real complexity to specify and explain. See [tie-breaking](./Tie_Breaking_STAR/).
+
+## 8. Fails the (strict) Majority Criterion
+
+STAR can fail to elect a candidate that an outright **majority scored highest**. This is the objection FairVote raises most often. It happens only in a specific shape: the majority's favorite is **polarizing** (a significant minority scores them near-zero), while a rival is scored highly by *nearly everyone* — so the broadly-liked rival outscores the polarizing favorite (or beats them in the runoff), and the majority-favorite can even miss the top-two entirely. **How much it matters:** this is really the same mechanism as limit #1 — the runoff is between the *top two by score*, so a divisive majority-favorite can lose to a consensus candidate. STAR's designers consider that the *right* outcome (a candidate 40% of voters reject is a weaker representative than one almost everyone likes), but "the majority always wins" is a genuinely intuitive rule that STAR does **not** guarantee, so it's an honest concession, not a bug.
+
+**The defenders' reply.** Equal Vote argues the *strict* criterion over-weights a bare 50.1%-first-choice while ignoring how strongly the other half feels, and proposes a weaker **[Relaxed Majority Criterion](https://www.equal.vote/rmc)** — which STAR *does* satisfy, because its automatic runoff guarantees the winner is the majority-preferred of the two finalists. Whether the strict or relaxed version is the better yardstick is a value judgment, not a settled fact — and the strict criterion is provably incompatible with some other desirable properties, so *some* method must fail it. Worked demonstration of the polarizing-favorite-vs-consensus case: the [Black Curtain set](../../method_comparisons/black_curtain/README.md) (esp. "a polarizing winner" and "a hidden consensus"). Comparison context: [RCV-IRV vs STAR](../rcv_irv_vs_star.md).
 
 ## Keep it in perspective
 
