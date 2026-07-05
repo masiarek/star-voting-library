@@ -1,5 +1,11 @@
 election_title: Bloc Approval — Lackner & Skowron's running example (k=4)
 
+# Machine-readable BV tracker fields (ignored by the tabulation engine; read by
+# tools_adam/scripts/build_bv_registry.py to generate the index + number registry).
+bv_test_id: BV27
+bv_election_id: jt6r76
+bv_results_url: https://bettervoting.com/jt6r76/results
+
 scenario_description: |-
   The running example (Example 2.1) from Lackner & Skowron, "Multi-Winner
   Voting with Approval Preferences" (SpringerBriefs, 2023, open access,

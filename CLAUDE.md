@@ -243,6 +243,18 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   Always link `/<bvid>/results` (the tabulated outcome), and mirror it in the YAML
   (`election_description` / a `Live results:` line pointing at the same
   `/results` URL). LH-only references with no BV election skip this.
+- **Machine-readable BV fields + the repo registry.** A case `.yaml` may carry
+  `bv_test_id`, `bv_election_id`, and `bv_results_url` as top-level fields — the
+  tabulation engine ignores them; `tools_adam/scripts/build_bv_registry.py` reads
+  them (falling back to the frozen `_bv_export.json` for the true election id, and
+  the `bv…` filename for the Test ID) and regenerates
+  `00_start_here/YAML_test_case_index/BV_registry.md` + `bv_cases.csv` — a
+  sortable, repo-native index (method / winners / candidates / ballots / bvid /
+  page / yaml). **The Google Sheet is now a *thin* registry**: it owns Test-ID
+  assignment and the non-tabulation QA (UI, roles, archive…) that has no YAML; the
+  `.yaml` (source of truth) + `.md` (writeup, replaces the old per-case Google
+  Docs) are canonical for tabulation cases. Regenerate the registry when adding a
+  BV case.
 - **Creating BetterVoting elections — DON'T do it by hand.** No need to click
   through the BV builder UI (it's slow and fiddly). Use
   `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a
