@@ -1,0 +1,56 @@
+election_title: "Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV"
+
+scenario_description: |-
+  Lackner & Skowron's Example 2.1 (k=4 steering committee, 7 candidates, 12
+  ballots), approval profile read as STAR ballots (approved = 5, else 0),
+  tabulated with Reweighted Range Voting (RRV) — one of STAR's proportional
+  variants.
+
+  Unlike the other STAR-family rules on this profile (Bloc STAR, Allocated Score,
+  and SSS all seat A,B,C,D), RRV seats A,B,C,F — the SAME committee the book's
+  PAV elects (Example 2.4). Seating F gives the two {*,F} voters representation
+  the majoritarian committee denies them; the 4th seat (D vs F) is exactly where
+  loosely- vs fully-proportional rules diverge.
+
+  Companions: majoritarian shadow (Bloc STAR) and the Allocated Score shadow both
+  give A,B,C,D — see lackner_skowron_shadow_star_pr_c7_b12.yaml and
+  ../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml. Approval
+  original: ../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: rrv
+lot_numbers: [A, B, C, D, E, F, G]
+ballots: |-
+  A,B,C,D,E,F,G
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,0,5,0,0,0
+  5,0,0,5,0,0,0
+  0,5,5,0,0,5,0
+  0,0,0,0,5,0,0
+  0,0,0,0,0,5,0
+  0,0,0,0,0,0,5
+
+expected_winners:
+  - A
+  - B
+  - C
+  - F
+
+# file: lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml

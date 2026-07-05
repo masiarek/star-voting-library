@@ -1,0 +1,59 @@
+election_title: "Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4)"
+
+scenario_description: |-
+  The PROPORTIONAL shadow STAR of Lackner & Skowron's Example 2.1 (k=4
+  steering committee, 7 candidates, 12 ballots). Same approval profile, read as
+  STAR ballots (approved = 5, else 0), but tabulated with Proportional STAR
+  (Allocated Score / STAR-PR) instead of the majoritarian Bloc STAR.
+
+  This is the STAR-family parallel to the book's PAV: after a faction helps elect
+  a candidate, its ballots are spent/reweighted, so later seats go to
+  under-represented voters. Where Bloc STAR / AV seat A, B, C, D (the big
+  A-approving bloc takes 3 of 4 seats and D fills the 4th), the proportional rule
+  is expected to seat someone for the small factions instead — compare against
+  PAV's {A,B,C,F} in the book (Example 2.4).
+
+  Approval original: 04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml
+  Majoritarian shadow (Bloc STAR): 02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: allocated
+lot_numbers: [A, B, C, D, E, F, G]
+ballots: |-
+  A,B,C,D,E,F,G
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,0,5,0,0,0
+  5,0,0,5,0,0,0
+  0,5,5,0,0,5,0
+  0,0,0,0,5,0,0
+  0,0,0,0,0,5,0
+  0,0,0,0,0,0,5
+
+expected_winners:
+  - A
+  - B
+  - C
+  - D
+
+# NOTE: Allocated Score seats D (like the majoritarian rules) — it does NOT match
+# the book's PAV committee {A,B,C,F}. Among STAR-PR variants, only RRV recovers F
+# (see lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml). SSS also gives A,B,C,D.
+
+# file: lackner_skowron_shadow_star_pr_c7_b12.yaml

@@ -6,7 +6,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**142 election files** (123 single-winner, 19 multi-winner) across 13 method(s).
+**145 election files** (123 single-winner, 22 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -16,10 +16,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Approval | 3 |
 | STV (proportional RCV) | 1 |
 | STAR-PR (Sequential Selection) | 2 |
-| Reweighted Range | 1 |
-| Allocated Score (STAR-PR) | 2 |
+| Reweighted Range | 2 |
+| Allocated Score (STAR-PR) | 3 |
 | APPROVAL_MULTI_WINNER | 3 |
-| BLOC STAR | 10 |
+| BLOC STAR | 11 |
 | PLURALITY | 1 |
 | RANGE | 1 |
 | RR | 1 |
@@ -177,17 +177,19 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02b_c5_b63_proportional-sss`](../../03_STAR_PR/_main/_main_pages/02b_c5_b63_proportional-sss.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Sequentially Spent Score → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02b_c5_b63_proportional-sss.yaml) |
 | [`03b_star_pr_3seats`](../../03_STAR_PR/_main/_main_pages/03b_star_pr_3seats.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — same 3-seat electorate as the STV demo → _Housing, Schools, SmallBiz_ | [`.yaml`](../../03_STAR_PR/_main/03b_star_pr_3seats.yaml) |
 
-## Reweighted Range  (1)
+## Reweighted Range  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/_main/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02c_c5_b63_proportional-rrv.yaml) |
+| [`lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | — |
 
-## Allocated Score (STAR-PR)  (2)
+## Allocated Score (STAR-PR)  (3)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
+| [`lackner_skowron_shadow_star_pr_c7_b12.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | — |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/_main/_main_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/_main/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |
 
 ## APPROVAL_MULTI_WINNER  (3)
@@ -198,7 +200,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (10)
+## BLOC STAR  (11)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -212,6 +214,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv130_bloc_pagination_731.yaml`](../../02_STAR_Bloc/_main/bv130_bloc_pagination_731.yaml) | `02_STAR_Bloc/_main/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | — |
 | [`bv130r2_dead_rung_bloc.yaml`](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.yaml) | `02_STAR_Bloc/_main/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | — |
 | [`bv1525_condorcet_loser_bloc.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | — |
+| [`lackner_skowron_shadow_bloc_star_c7_b12.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | — |
 
 ## PLURALITY  (1)
 

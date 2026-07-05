@@ -1,0 +1,54 @@
+election_title: "Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4)"
+
+scenario_description: |-
+  A "shadow STAR" of Lackner & Skowron's Example 2.1 (the k=4 steering-committee
+  approval profile, 7 candidates, 12 ballots) — see the approval original at
+  04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml.
+
+  The approval ballots are read as STAR ballots: an APPROVED candidate scores 5,
+  an unapproved one scores 0. This asks "what committee would Bloc STAR pick from
+  the very same voters, if approve/not-approve were the only two scores used?"
+
+  Bloc STAR is majoritarian (like Bloc Approval / AV), so it favors the big
+  A-approving bloc. Compare with the proportional STAR analog (STAR-PR /
+  Allocated Score) at 03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml,
+  which is the STAR-family parallel to the book's PAV. lot_numbers [A..G] pins any
+  ties to alphabetical priority (matching the approval file's D-over-F choice).
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: Bloc STAR
+lot_numbers: [A, B, C, D, E, F, G]
+ballots: |-
+  A,B,C,D,E,F,G
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,5,0,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,5,0,0,0,0
+  5,0,0,5,0,0,0
+  5,0,0,5,0,0,0
+  0,5,5,0,0,5,0
+  0,0,0,0,5,0,0
+  0,0,0,0,0,5,0
+  0,0,0,0,0,0,5
+
+expected_winners:
+  - A
+  - B
+  - C
+  - D
+
+# file: lackner_skowron_shadow_bloc_star_c7_b12.yaml
