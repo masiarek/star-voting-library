@@ -88,7 +88,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../Range_Voting/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../Approval_Voting/) |
 
-Worked demonstrations in this repo: the pair [`mc_01`](../../../01_STAR/majority_criterion/mc_01_favorite_survives_one_rival.yaml) / [`mc_02`](../../../01_STAR/majority_criterion/mc_02_favorite_loses_two_rivals.yaml) above, and the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus).
+Worked demonstrations in this repo: the pair [`mc_01`](../../../01_STAR/majority_criterion/mc_01_favorite_survives_one_rival.yaml) / [`mc_02`](../../../01_STAR/majority_criterion/mc_02_favorite_loses_two_rivals.yaml) above, and the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus). Both `mc_` elections were also reproduced live on BetterVoting — [`9m6rxr`](https://bettervoting.com/9m6rxr) elects Ada, [`7pdq3r`](https://bettervoting.com/7pdq3r) elects Bruno — so the demo is verified on the real platform, not just the LH engine.
 
 ---
 

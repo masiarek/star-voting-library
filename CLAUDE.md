@@ -224,6 +224,21 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   YAML (`election_description` + the results URL).
 - **Cross-reference slides by title** via `00_start_here/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
+- **Creating BetterVoting elections — DON'T do it by hand.** No need to click
+  through the BV builder UI (it's slow and fiddly). Use
+  `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a
+  uv-run (PEP 723) script that creates elections **and casts ballots** via the BV
+  REST API (`POST /API/Elections`, `POST /API/Election/{id}/vote`). Define the
+  election(s) — title, candidates, ballots, method, seats — in the script's
+  `ELECTIONS` list and run `uv run …/create_bv_test_election.py`; it prints the new
+  `bettervoting.com/<id>` URLs. Auth is asymmetric **RS256** (the API requires a
+  PEM public key in `auth_key`; the script mints a fresh keypair and signs the
+  `custom_id_token` with the private key — no real account credential needed). It
+  saves the election object to `_demo_dropbox/`, but that plain GET lacks
+  `Ballots`/`Results`; for the **frozen `_bv_export.json`** grab the full export
+  from the BV UI (Election + Ballots + Results). Proven end-to-end (BV95a `9m6rxr`,
+  BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
+  the backend now demands RS256.
 
 ## Engines
 - `STARVote_LH_tabulation_engine/starvote_larry_hastings.py` — STAR + Bloc/
