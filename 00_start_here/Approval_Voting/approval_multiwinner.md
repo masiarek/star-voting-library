@@ -101,6 +101,7 @@ The same book is the reference for the fairness axioms behind these rules (justi
 - [Approval Voting](approval_voting.md) — the single-winner overview
 - [Approval — Honest Limits](approval_honest_limits.md) — the threshold dilemma carries over to every seat
 - [multi-winner Approval](../../04_Approval/multiwinner/) — the runnable sweep example
+- **ABC rules (approval committees), two levels:** [committees & coverage — a gentle intro (101)](abc_rules_intro.md) · [ABC rules & the utilitarian–egalitarian spectrum (301)](abc_rules_spectrum.md) — AV vs Chamberlin–Courant vs PAV on Lackner & Skowron's steering-committee example, with the shadow-STAR bridge.
 - [Proportional representation](../proportional_representation/) — why and how minorities earn seats
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — source for the advantages/adaptability framing
 - Lackner & Skowron, *Multi-Winner Voting with Approval Preferences* — [open access](https://doi.org/10.1007/978-3-031-09016-5); [`abcvoting`](https://github.com/martinlackner/abcvoting) is its companion library

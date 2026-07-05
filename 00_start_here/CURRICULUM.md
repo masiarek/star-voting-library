@@ -79,6 +79,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Key terms:** Bloc STAR, seats, at-large.
 - **Files:** `02_Multi_winner/01_c4_b2_bloc-star-2-seats.yaml`.
 - **Emphasize:** a cohesive majority can sweep all seats — which motivates 301's proportional methods.
+- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](Approval_Voting/abc_rules_intro.md) — counting-only walkthrough of AV vs "cover everyone" (CC) vs proportional, on Lackner & Skowron's steering-committee example. No math beyond addition; motivates why multi-winner has several right answers.
 
 ---
 
@@ -93,6 +94,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **STV comparison:** `02_Multi_winner/03a_stv_3seats.yaml` (STV) vs `03b_star_pr_3seats.yaml` (STAR-PR) — same electorate, same proportional slate; Bloc STAR differs. Page: `proportional_representation/` (STV vs STAR-PR + STAR-PR methods).
 - **Emphasize:** STV is the proportional multi-winner *cousin of IRV*, not IRV; proportional methods seat coalitions in proportion, Bloc STAR lets a majority sweep.
 - **Deeper math:** [the math behind proportional STAR](proportional_representation/STAR_PR/the_math_behind_proportional_star.md) — quotas, D'Hondt reweighting, JR/EJR, fair division.
+- **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules and the utilitarian–egalitarian spectrum](Approval_Voting/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén), one election laid on the utilitarian↔egalitarian axis, and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV). Verified with Lackner's `abcvoting`.
 
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.

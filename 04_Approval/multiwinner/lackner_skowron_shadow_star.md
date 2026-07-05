@@ -49,5 +49,6 @@ The approval **PAV / seqPAV / Phragmén** results come from Lackner's own [`abcv
 
 ## See also
 
+- **The ABC-rules education built on this same example:** [committees & coverage — a gentle intro (101)](../../00_start_here/Approval_Voting/abc_rules_intro.md) · [ABC rules & the utilitarian–egalitarian spectrum (301)](../../00_start_here/Approval_Voting/abc_rules_spectrum.md).
 - [Bloc STAR vs proportional STAR](../../00_start_here/proportional_representation/) — the majoritarian/proportional split in the STAR family.
 - [Approval multi-winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
