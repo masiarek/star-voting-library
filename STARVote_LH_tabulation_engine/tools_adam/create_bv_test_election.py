@@ -275,10 +275,29 @@ def create(spec):
 if __name__ == "__main__":
     print(f"BetterVoting API @ {API}")
     print(f"identity BV_USER_ID={USER_ID}  template={TEMPLATE_ID}")
+    print(f"Creating {len(ELECTIONS)} election(s)...\n")
+
+    summary = []  # (title, eid_or_None, expected)
     for spec in ELECTIONS:
         try:
-            create(spec)
-        except Exception as ex:            # keep going to the second election
+            eid = create(spec)
+            summary.append((spec["title"], eid, spec.get("expected", "?")))
+        except Exception as ex:            # keep going to the next election
             print(f"  !! failed: {ex!r}")
+            summary.append((spec["title"], None, spec.get("expected", "?")))
+
+    created = [s for s in summary if s[1]]
+    print("\n" + "=" * 72)
+    print(f"SUMMARY — {len(created)} of {len(ELECTIONS)} election(s) created")
+    print("=" * 72)
+    for title, eid, expected in summary:
+        if eid:
+            print(f"  [OK]   {title}")
+            print(f"           vote:     https://bettervoting.com/{eid}")
+            print(f"           results:  https://bettervoting.com/{eid}/results")
+            print(f"           expected: {expected}")
+        else:
+            print(f"  [FAIL] {title}")
+    print("=" * 72)
     print("\nDone. If a JSON lacks Results, close the election in the UI once, "
           "then re-run the final GET (or export from the URL above).")
