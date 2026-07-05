@@ -4,9 +4,9 @@
 
 Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, or a frozen `_bv_export.json`). Cases with a real BetterVoting election but no assigned BV number (e.g. the `Runoff_NN` set) appear under their case name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) (GitHub sorts CSV columns on click). **The master Google Sheet stays authoritative for the full BV numbering** — it also tracks non-tabulation QA (UI, roles, archive…) that has no YAML here.
 
-**25 cases** · methods: Approval_Multi_Winner (1), Bloc STAR (9), STAR (14), allocated (1).
+**26 cases** · methods: Approval (1), Approval_Multi_Winner (1), Bloc STAR (9), STAR (14), allocated (1).
 
-**BV-numbered Test IDs:** BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV750, BV1525, BV1815, BV2105, BV2130.  (+10 export-backed cases with no BV number.)
+**BV-numbered Test IDs:** BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV750, BV1525, BV1815, BV2105, BV2130.  (+10 export-backed cases with no BV number.)
 
 Highest number here is **BV2130** → the next free number above the repo is **BV2131**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
 
@@ -22,6 +22,7 @@ Highest number here is **BV2130** → the next free number above the repo is **B
 | BV130-r2 | bv130r2_dead_rung_bloc | [`9ff9jk`](https://bettervoting.com/9ff9jk/results) | Bloc STAR | 3 | 6 | 4 | Dan, Ada, Eve | [page](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.yaml) |
 | BV131 | bv131_guido_bloc | [`kbh3d9`](https://bettervoting.com/kbh3d9/results) | Bloc STAR | 2 | 3 | 3 | Cand2, Cand3 | [page](../../02_STAR_Bloc/_main/bv131_guido_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv131_guido_bloc.yaml) |
 | BV132 | bv132_verify_votes_bloc | [`3494cb`](https://bettervoting.com/3494cb/results) | Bloc STAR | 2 | 3 | 4 | C, B | [page](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
+| BV135 | approval_101_c3_b5 | [`ff6mk3`](https://bettervoting.com/ff6mk3/results) | Approval | 1 | 3 | 5 | Bob | [page](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) | [yaml](../../04_Approval/_main/approval_101_c3_b5.yaml) |
 | BV750 | bv750_tie_breaking_bloc | [`3yr2qd`](https://bettervoting.com/3yr2qd/results) | Bloc STAR | 2 | 3 | 3 | c, a | [page](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
 | BV1525 | bv1525_condorcet_loser_bloc | [`dkj9dx`](https://bettervoting.com/dkj9dx/results) | Bloc STAR | 4 | 5 | 16 | First, Second, Third, Fourth | [page](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | BV1815 | bv1815_bloc_3c2s_basic | [`fk38pk`](https://bettervoting.com/fk38pk/results) | Bloc STAR | 2 | 3 | 3 | A, C | [page](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.md) | [yaml](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |

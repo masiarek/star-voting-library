@@ -50,11 +50,12 @@ Choco,Almond,Vanilla
     0,     5,      5
     0,     0,      5
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Choco    0  0  0  0  1  2  |     1   0.3
-Almond   1  0  0  1  0  1  |     7   2.3
-Vanilla  3  0  0  0  0  0  |    15   5.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Choco      0  0  0  0  1  2  |     1   0.3
+Almond     1  0  0  1  0  1  |     7   2.3
+Vanilla    3  0  0  0  0  0  |    15   5.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

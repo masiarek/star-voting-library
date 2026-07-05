@@ -47,13 +47,14 @@ Legend: For - Equal Support - Against
 Count × Andre,Blake,Carmen,David,Ella
     3 ×     5,    1,     4,    3,   0
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Andre   3  0  0  0  0  0  |    15   5.0
-Blake   0  0  0  0  3  0  |     3   1.0
-Carmen  0  3  0  0  0  0  |    12   4.0
-David   0  0  3  0  0  0  |     9   3.0
-Ella    0  0  0  0  0  3  |     0   0.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      3  0  0  0  0  0  |    15   5.0
+Blake      0  0  0  0  3  0  |     3   1.0
+Carmen     0  3  0  0  0  0  |    12   4.0
+David      0  0  3  0  0  0  |     9   3.0
+Ella       0  0  0  0  0  3  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

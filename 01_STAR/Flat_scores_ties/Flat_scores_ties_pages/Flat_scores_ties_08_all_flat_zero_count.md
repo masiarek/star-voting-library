@@ -52,11 +52,12 @@ Anchovy,Basil,Caper
       4,    4,    4
       5,    5,    5
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Anchovy  1  1  1  1  1  0  |    15   3.0
-Basil    1  1  1  1  1  0  |    15   3.0
-Caper    1  1  1  1  1  0  |    15   3.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Anchovy    1  1  1  1  1  0  |    15   3.0
+Basil      1  1  1  1  1  0  |    15   3.0
+Caper      1  1  1  1  1  0  |    15   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

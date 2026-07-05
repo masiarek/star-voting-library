@@ -52,12 +52,13 @@ Amber,Blue,Coral,Dune
     2,   5,    0,   1
     5,   4,    0,   0
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Amber  1  0  0  2  0  0  |     9   3.0
-Blue   2  1  0  0  0  0  |    14   4.7
-Coral  0  0  0  0  1  2  |     1   0.3
-Dune   0  0  0  0  1  2  |     1   0.3
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Amber      1  0  0  2  0  0  |     9   3.0
+Blue       2  1  0  0  0  0  |    14   4.7
+Coral      0  0  0  0  1  2  |     1   0.3
+Dune       0  0  0  0  1  2  |     1   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

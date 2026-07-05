@@ -51,11 +51,12 @@ Legend: For - Equal Support - Against
 Choco,Vanilla,Almond
     5,      3,     0
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Choco    1  0  0  0  0  0  |     5   5.0
-Vanilla  0  0  1  0  0  0  |     3   3.0
-Almond   0  0  0  0  0  1  |     0   0.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Choco      1  0  0  0  0  0  |     5   5.0
+Vanilla    0  0  1  0  0  0  |     3   3.0
+Almond     0  0  0  0  0  1  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

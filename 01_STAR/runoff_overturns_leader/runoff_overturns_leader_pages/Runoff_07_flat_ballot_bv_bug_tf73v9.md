@@ -65,11 +65,12 @@ Count × Alex,Blair,Cleo
     1 ×    5,    1,   2
     1 ×    3,    3,   3
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Alex   1  2  1  0  0  0  |    16   4.0
-Blair  2  0  1  0  1  0  |    14   3.5
-Cleo   0  0  1  1  0  2  |     5   1.2
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alex       1  2  1  0  0  0  |    16   4.0
+Blair      2  0  1  0  1  0  |    14   3.5
+Cleo       0  0  1  1  0  2  |     5   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

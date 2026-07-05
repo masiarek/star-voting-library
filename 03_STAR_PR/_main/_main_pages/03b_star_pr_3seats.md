@@ -55,7 +55,7 @@ Legend: For - Equal Support - Against
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
 [Sequentially Spent Score]
- Tabulating 100 ballots.
+ Tabulating 100 ballots to fill 3 seats.
 Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
    29 ×       5,      4,    3,      2,       1,     0,      0
    22 ×       2,      1,    0,      0,       5,     4,      3
@@ -65,16 +65,16 @@ Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
     3 ×       2,      1,    0,      0,       4,     3,      5
     1 ×       3,      4,    2,      5,       1,     0,      0
 
-[Score Distribution] (number of ballots giving each score)
-           5   4   3   2   1   0  | Total   Avg
-Housing   29  15  14  42   0   0  |   331   3.3
-Schools   15  43   0   0  42   0  |   289   2.9
-Parks     13   0  44   1   0  42  |   199   2.0
-Transit    1   0   0  57   0  42  |   119   1.2
-SmallBiz  22  20   0   0  58   0  |   248   2.5
-BigBiz    17  22   3   0   0  58  |   182   1.8
-TaxCuts    3   0  39   0   0  58  |   132   1.3
- Want to fill 3 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Housing    29  15  14  42   0   0  |   331   3.3
+Schools    15  43   0   0  42   0  |   289   2.9
+Parks      13   0  44   1   0  42  |   199   2.0
+Transit     1   0   0  57   0  42  |   119   1.2
+SmallBiz   22  20   0   0  58   0  |   248   2.5
+BigBiz     17  22   3   0   0  58  |   182   1.8
+TaxCuts     3   0  39   0   0  58  |   132   1.3
  Hare score quota is 166+2/3.
 
 [Sequentially Spent Score: Round 1]
@@ -142,4 +142,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/_main
 
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [rrv_sample_c15_b13_three-parties](rrv_sample_c15_b13_three-parties.md)
+More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [lackner_skowron_shadow_star_pr_c7_b12](lackner_skowron_shadow_star_pr_c7_b12.md) · [lackner_skowron_shadow_star_pr_rrv_c7_b12](lackner_skowron_shadow_star_pr_rrv_c7_b12.md) · [rrv_sample_c15_b13_three-parties](rrv_sample_c15_b13_three-parties.md)

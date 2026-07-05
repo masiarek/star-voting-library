@@ -45,11 +45,12 @@ Legend: For - Equal Support - Against
 Count × Ararat,Blanc,Cook
     2 ×      5,    5,   5
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Ararat  2  0  0  0  0  0  |    10   5.0
-Blanc   2  0  0  0  0  0  |    10   5.0
-Cook    2  0  0  0  0  0  |    10   5.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ararat     2  0  0  0  0  0  |    10   5.0
+Blanc      2  0  0  0  0  0  |    10   5.0
+Cook       2  0  0  0  0  0  |    10   5.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

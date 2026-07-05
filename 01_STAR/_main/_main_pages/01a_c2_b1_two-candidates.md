@@ -45,8 +45,9 @@ Legend: For - Equal Support - Against
 Chocolate,Vanilla
         5,      3
 
-[Score Distribution] (number of ballots giving each score)
-           5  4  3  2  1  0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
 Chocolate  1  0  0  0  0  0  |     5   5.0
 Vanilla    0  0  1  0  0  0  |     3   3.0
 

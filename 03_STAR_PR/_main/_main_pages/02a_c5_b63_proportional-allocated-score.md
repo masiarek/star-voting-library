@@ -51,7 +51,7 @@ Legend: For - Equal Support - Against
 
 --- Allocated Score Voting Method (3 winners) ---
 [Allocated Score Voting]
- Tabulating 63 ballots.
+ Tabulating 63 ballots to fill 3 seats.
 Count × Alice,Ben,Cara,Dan,Eve
    18 ×     5,  4,   3,  0,  0
    15 ×     0,  0,   0,  5,  4
@@ -59,14 +59,14 @@ Count × Alice,Ben,Cara,Dan,Eve
     9 ×     3,  4,   5,  0,  0
     9 ×     0,  0,   0,  4,  5
 
-[Score Distribution] (number of ballots giving each score)
-        5   4   3   2   1   0  | Total   Avg
-Alice  18  12   9   0   0  24  |   165   2.6
-Ben    12  27   0   0   0  24  |   168   2.7
-Cara    9   0  30   0   0  24  |   135   2.1
-Dan    15   9   0   0   0  39  |   111   1.8
-Eve     9  15   0   0   0  39  |   105   1.7
- Want to fill 3 seats.
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alice      18  12   9   0   0  24  |   165   2.6
+Ben        12  27   0   0   0  24  |   168   2.7
+Cara        9   0  30   0   0  24  |   135   2.1
+Dan        15   9   0   0   0  39  |   111   1.8
+Eve         9  15   0   0   0  39  |   105   1.7
  Hare quota is 21.
 
 [Allocated Score Voting: Round 1]
@@ -101,13 +101,14 @@ Count × Alice,Ben,Cara,Dan,Eve
     9 ×     3,  4,   5,  0,  0
     9 ×     0,  0,   0,  4,  5
 
-[Score Distribution] (number of ballots giving each score)
-        5   4   3   2   1   0  | Total   Avg
-Alice  18  12   9   0   0  24  |   165   2.6
-Ben    12  27   0   0   0  24  |   168   2.7
-Cara    9   0  30   0   0  24  |   135   2.1
-Dan    15   9   0   0   0  39  |   111   1.8
-Eve     9  15   0   0   0  39  |   105   1.7
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alice      18  12   9   0   0  24  |   165   2.6
+Ben        12  27   0   0   0  24  |   168   2.7
+Cara        9   0  30   0   0  24  |   135   2.1
+Dan        15   9   0   0   0  39  |   111   1.8
+Eve         9  15   0   0   0  39  |   105   1.7
  The highest-scoring candidate wins a seat.
    Dan           -- 111 -- First place
    Eve           -- 105
@@ -138,13 +139,14 @@ Count × Alice,Ben,Cara,Dan,Eve
     9 ×     3,  4,   5,  0,  0
     9 ×     0,  0,   0,  4,  5
 
-[Score Distribution] (number of ballots giving each score)
-        5   4   3   2   1   0  | Total   Avg
-Alice  18  12   9   0   0  24  |   165   2.6
-Ben    12  27   0   0   0  24  |   168   2.7
-Cara    9   0  30   0   0  24  |   135   2.1
-Dan    15   9   0   0   0  39  |   111   1.8
-Eve     9  15   0   0   0  39  |   105   1.7
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alice      18  12   9   0   0  24  |   165   2.6
+Ben        12  27   0   0   0  24  |   168   2.7
+Cara        9   0  30   0   0  24  |   135   2.1
+Dan        15   9   0   0   0  39  |   111   1.8
+Eve         9  15   0   0   0  39  |   105   1.7
  The highest-scoring candidate wins a seat.
    Alice         -- 78 -- First place
    Cara          -- 66
@@ -167,4 +169,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/_main
 
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [03b_star_pr_3seats](03b_star_pr_3seats.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [rrv_sample_c15_b13_three-parties](rrv_sample_c15_b13_three-parties.md)
+More cases in this set: [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [03b_star_pr_3seats](03b_star_pr_3seats.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [lackner_skowron_shadow_star_pr_c7_b12](lackner_skowron_shadow_star_pr_c7_b12.md) · [lackner_skowron_shadow_star_pr_rrv_c7_b12](lackner_skowron_shadow_star_pr_rrv_c7_b12.md) · [rrv_sample_c15_b13_three-parties](rrv_sample_c15_b13_three-parties.md)

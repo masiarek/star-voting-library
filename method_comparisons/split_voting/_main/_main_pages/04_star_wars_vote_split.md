@@ -78,8 +78,9 @@ Count × Skywalker,Leia,Vader
    33 ×         5,   4,    0
    27 ×         4,   5,    0
 
-[Score Distribution] (number of ballots giving each score)
-            5   4   3   2   1   0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
 Skywalker  33  27   0   0   0  40  |   273   2.7
 Leia       27  33   0   0  40   0  |   307   3.1
 Vader      40   0   0   0   0  60  |   200   2.0

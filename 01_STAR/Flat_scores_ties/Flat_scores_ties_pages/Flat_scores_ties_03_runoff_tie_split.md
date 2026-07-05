@@ -45,11 +45,12 @@ Athens,Berlin,Cairo
      5,     4,    0
      4,     5,    0
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Athens  1  1  0  0  0  0  |     9   4.5
-Berlin  1  1  0  0  0  0  |     9   4.5
-Cairo   0  0  0  0  0  2  |     0   0.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Athens     1  1  0  0  0  0  |     9   4.5
+Berlin     1  1  0  0  0  0  |     9   4.5
+Cairo      0  0  0  0  0  2  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

@@ -66,11 +66,12 @@ Count × Left,Center,Right
     9 ×    3,     4,    5
     6 ×    4,     5,    3
 
-[Score Distribution] (number of ballots giving each score)
-         5   4   3   2   1   0  | Total   Avg
-Left    12   6   9   0   0   0  |   111   4.1
-Center   6  21   0   0   0   0  |   114   4.2
-Right    9   0  18   0   0   0  |    99   3.7
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Left       12   6   9   0   0   0  |   111   4.1
+Center      6  21   0   0   0   0  |   114   4.2
+Right       9   0  18   0   0   0  |    99   3.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

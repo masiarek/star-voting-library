@@ -49,11 +49,12 @@ Aspen,Birch,Cedar
     2,    5,    0
     5,    3,    0
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Aspen  2  0  0  1  0  0  |    12   4.0
-Birch  1  0  1  1  0  0  |    10   3.3
-Cedar  0  0  0  0  1  2  |     1   0.3
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Aspen      2  0  0  1  0  0  |    12   4.0
+Birch      1  0  1  1  0  0  |    10   3.3
+Cedar      0  0  0  0  1  2  |     1   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

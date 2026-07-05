@@ -116,23 +116,24 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
       1,      1,      1,      1,      1,      0,      0,      0,      0,      1,      5,      4,      4,      5,      4
       2,      0,      2,      2,      1,      0,      0,      0,      0,      0,      5,      5,      4,      4,      5
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Purple1  2  1  0  1  3  6  |    19   1.5
-Purple2  1  2  0  0  3  7  |    16   1.2
-Purple3  2  1  0  1  3  6  |    19   1.5
-Purple4  1  1  0  2  3  6  |    16   1.2
-Purple5  2  1  0  0  3  7  |    17   1.3
-Orange1  4  2  0  0  3  4  |    31   2.4
-Orange2  3  1  1  0  3  5  |    25   1.9
-Orange3  2  4  0  0  3  4  |    29   2.2
-Orange4  3  3  0  0  2  5  |    29   2.2
-Orange5  3  2  0  2  3  3  |    30   2.3
-Yellow1  3  1  0  0  1  8  |    20   1.5
-Yellow2  2  2  0  0  3  6  |    21   1.6
-Yellow3  0  3  0  1  1  8  |    15   1.2
-Yellow4  2  2  0  0  2  7  |    20   1.5
-Yellow5  2  2  0  0  2  7  |    20   1.5
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Purple1    2  1  0  1  3  6  |    19   1.5
+Purple2    1  2  0  0  3  7  |    16   1.2
+Purple3    2  1  0  1  3  6  |    19   1.5
+Purple4    1  1  0  2  3  6  |    16   1.2
+Purple5    2  1  0  0  3  7  |    17   1.3
+Orange1    4  2  0  0  3  4  |    31   2.4
+Orange2    3  1  1  0  3  5  |    25   1.9
+Orange3    2  4  0  0  3  4  |    29   2.2
+Orange4    3  3  0  0  2  5  |    29   2.2
+Orange5    3  2  0  2  3  3  |    30   2.3
+Yellow1    3  1  0  0  1  8  |    20   1.5
+Yellow2    2  2  0  0  3  6  |    21   1.6
+Yellow3    0  3  0  1  1  8  |    15   1.2
+Yellow4    2  2  0  0  2  7  |    20   1.5
+Yellow5    2  2  0  0  2  7  |    20   1.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -180,4 +181,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/_main
 
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [03b_star_pr_3seats](03b_star_pr_3seats.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md)
+More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [03b_star_pr_3seats](03b_star_pr_3seats.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [lackner_skowron_shadow_star_pr_c7_b12](lackner_skowron_shadow_star_pr_c7_b12.md) · [lackner_skowron_shadow_star_pr_rrv_c7_b12](lackner_skowron_shadow_star_pr_rrv_c7_b12.md)

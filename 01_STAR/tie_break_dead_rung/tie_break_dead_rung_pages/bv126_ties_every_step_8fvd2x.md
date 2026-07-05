@@ -69,11 +69,12 @@ Count × Amy,Brian,Chuck
     1 ×   3,    2,    1
     1 ×   1,    2,    3
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Amy    5  0  1  0  1  0  |    29   4.1
-Brian  5  0  0  2  0  0  |    29   4.1
-Chuck  5  0  1  0  1  0  |    29   4.1
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Amy        5  0  1  0  1  0  |    29   4.1
+Brian      5  0  0  2  0  0  |    29   4.1
+Chuck      5  0  1  0  1  0  |    29   4.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

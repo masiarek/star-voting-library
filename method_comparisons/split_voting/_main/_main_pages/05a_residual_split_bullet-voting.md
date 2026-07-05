@@ -65,11 +65,12 @@ Count × Ada,Ben,Cara
    35 ×   5,  0,   0
    25 ×   0,  5,   0
 
-[Score Distribution] (number of ballots giving each score)
-       5   4   3   2   1   0  | Total   Avg
-Ada   35   0   0   0   0  65  |   175   1.8
-Ben   25   0   0   0   0  75  |   125   1.2
-Cara  40   0   0   0   0  60  |   200   2.0
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ada        35   0   0   0   0  65  |   175   1.8
+Ben        25   0   0   0   0  75  |   125   1.3
+Cara       40   0   0   0   0  60  |   200   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

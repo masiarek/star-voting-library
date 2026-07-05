@@ -63,11 +63,12 @@ Maple,Oak,Pine
     0,  5,   3
     4,  0,   5
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Maple  0  1  0  0  1  1  |     5   1.7
-Oak    2  0  0  0  0  1  |    10   3.3
-Pine   1  1  1  0  0  0  |    12   4.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Maple      0  1  0  0  1  1  |     5   1.7
+Oak        2  0  0  0  0  1  |    10   3.3
+Pine       1  1  1  0  0  0  |    12   4.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

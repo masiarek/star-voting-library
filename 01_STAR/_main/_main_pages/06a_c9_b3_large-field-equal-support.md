@@ -66,17 +66,18 @@ Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
     4,    3,     5,    5,   1,       3,   5,     4,  1
     1,    0,     5,    4,   1,       3,   1,     4,  0
 
-[Score Distribution] (number of ballots giving each score)
-          5  4  3  2  1  0  | Total   Avg
-Andre     0  2  0  0  1  0  |     9   3.0
-Blake     0  0  1  0  0  2  |     3   1.0
-Carmen    3  0  0  0  0  0  |    15   5.0
-David     2  1  0  0  0  0  |    14   4.7
-Ella      0  0  0  0  3  0  |     3   1.0
-Fernando  0  0  3  0  0  0  |     9   3.0
-Gabe      2  0  0  0  1  0  |    11   3.7
-Helena    0  3  0  0  0  0  |    12   4.0
-Ira       0  0  0  0  1  2  |     1   0.3
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      0  2  0  0  1  0  |     9   3.0
+Blake      0  0  1  0  0  2  |     3   1.0
+Carmen     3  0  0  0  0  0  |    15   5.0
+David      2  1  0  0  0  0  |    14   4.7
+Ella       0  0  0  0  3  0  |     3   1.0
+Fernando   0  0  3  0  0  0  |     9   3.0
+Gabe       2  0  0  0  1  0  |    11   3.7
+Helena     0  3  0  0  0  0  |    12   4.0
+Ira        0  0  0  0  1  2  |     1   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

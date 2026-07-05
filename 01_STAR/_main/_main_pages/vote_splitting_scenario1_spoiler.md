@@ -66,8 +66,9 @@ Count × DarkChoco,MilkChoco,Vanilla
    30 ×         5,        4,      0
    25 ×         4,        5,      0
 
-[Score Distribution] (number of ballots giving each score)
-            5   4   3   2   1   0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
 DarkChoco  30  25   0  35   0   0  |   320   3.6
 MilkChoco  25  30   0   0  35   0  |   280   3.1
 Vanilla    35   0   0   0   0  55  |   175   1.9

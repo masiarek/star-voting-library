@@ -67,11 +67,12 @@ Count × Maple,Olive,Pine
     6 ×     4,    5,   0
     3 ×     5,    1,   2
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Maple  3  6  0  0  0  0  |    39   4.3
-Olive  6  0  0  0  3  0  |    33   3.7
-Pine   0  0  0  3  0  6  |     6   0.7
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Maple      3  6  0  0  0  0  |    39   4.3
+Olive      6  0  0  0  3  0  |    33   3.7
+Pine       0  0  0  3  0  6  |     6   0.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

@@ -69,13 +69,14 @@ Count × Andre,Blake,Carmen,Dana,Evan
     7 ×     3,    2,     4,   5,   1
     6 ×     3,    2,     4,   1,   5
 
-[Score Distribution] (number of ballots giving each score)
-         5   4   3   2   1   0  | Total   Avg
-Andre    9  10  21   0   0   0  |   148   3.7
-Blake    8   0  19  13   0   0  |   123   3.1
-Carmen  10  30   0   0   0   0  |   170   4.2
-Dana     7   0   0  27   6   0  |    95   2.4
-Evan     6   0   0   0  34   0  |    64   1.6
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Andre       9  10  21   0   0   0  |   148   3.7
+Blake       8   0  19  13   0   0  |   123   3.1
+Carmen     10  30   0   0   0   0  |   170   4.3
+Dana        7   0   0  27   6   0  |    95   2.4
+Evan        6   0   0   0  34   0  |    64   1.6
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

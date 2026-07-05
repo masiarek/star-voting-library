@@ -51,13 +51,14 @@ Legend: For - Equal Support - Against
 Count × A,B,C,D,E
     2 × 5,5,5,4,4
 
-[Score Distribution] (number of ballots giving each score)
-   5  4  3  2  1  0  | Total   Avg
-A  2  0  0  0  0  0  |    10   5.0
-B  2  0  0  0  0  0  |    10   5.0
-C  2  0  0  0  0  0  |    10   5.0
-D  0  2  0  0  0  0  |     8   4.0
-E  0  2  0  0  0  0  |     8   4.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          2  0  0  0  0  0  |    10   5.0
+B          2  0  0  0  0  0  |    10   5.0
+C          2  0  0  0  0  0  |    10   5.0
+D          0  2  0  0  0  0  |     8   4.0
+E          0  2  0  0  0  0  |     8   4.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

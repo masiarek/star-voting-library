@@ -54,11 +54,12 @@ Count × Rock,Paper,Scissors
    33 ×    0,    5,       3
    32 ×    3,    0,       5
 
-[Score Distribution] (number of ballots giving each score)
-           5   4   3   2   1   0  | Total   Avg
-Rock      35   0  32   0   0  33  |   271   2.7
-Paper     33   0  35   0   0  32  |   270   2.7
-Scissors  32   0  33   0   0  35  |   259   2.6
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Rock       35   0  32   0   0  33  |   271   2.7
+Paper      33   0  35   0   0  32  |   270   2.7
+Scissors   32   0  33   0   0  35  |   259   2.6
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

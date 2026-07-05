@@ -67,11 +67,12 @@ Count × Ann,Bob,Cal
     3 ×   4,  0,  5
     2 ×   5,  1,  0
 
-[Score Distribution] (number of ballots giving each score)
-     5  4  3  2  1  0  | Total   Avg
-Ann  2  3  0  0  0  0  |    22   4.4
-Bob  0  0  0  0  2  3  |     2   0.4
-Cal  3  0  0  0  0  2  |    15   3.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        2  3  0  0  0  0  |    22   4.4
+Bob        0  0  0  0  2  3  |     2   0.4
+Cal        3  0  0  0  0  2  |    15   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

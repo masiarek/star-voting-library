@@ -60,11 +60,12 @@ Count × A,B,C
    35 × 5,3,0
    25 × 0,0,5
 
-[Score Distribution] (number of ballots giving each score)
-    5   4   3   2   1   0  | Total   Avg
-A  75   0   0   0   0  25  |   375   3.8
-B  40   0  35   0   0  25  |   305   3.0
-C  25   0   0   0   0  75  |   125   1.2
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A          75   0   0   0   0  25  |   375   3.8
+B          40   0  35   0   0  25  |   305   3.1
+C          25   0   0   0   0  75  |   125   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

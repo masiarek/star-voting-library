@@ -61,12 +61,13 @@ Allison,Bill,Carmen,Doug
       3,   4,     5,   0
       3,   5,     5,   4
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Allison  4  3  3  0  0  0  |    41   4.1
-Bill     4  3  0  0  0  3  |    32   3.2
-Carmen   3  2  2  0  3  0  |    32   3.2
-Doug     0  1  1  1  3  4  |    12   1.2
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    4  3  3  0  0  0  |    41   4.1
+Bill       4  3  0  0  0  3  |    32   3.2
+Carmen     3  2  2  0  3  0  |    32   3.2
+Doug       0  1  1  1  3  4  |    12   1.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

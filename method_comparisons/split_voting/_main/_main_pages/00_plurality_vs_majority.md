@@ -70,11 +70,12 @@ Count × Andre,Blake,Carmen
    35 ×     0,    5,     4
    25 ×     0,    4,     5
 
-[Score Distribution] (number of ballots giving each score)
-         5   4   3   2   1   0  | Total   Avg
-Andre   40   0   0   0   0  60  |   200   2.0
-Blake   35  25   0   0   0  40  |   275   2.8
-Carmen  25  35   0   0   0  40  |   265   2.6
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Andre      40   0   0   0   0  60  |   200   2.0
+Blake      35  25   0   0   0  40  |   275   2.8
+Carmen     25  35   0   0   0  40  |   265   2.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

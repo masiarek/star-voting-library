@@ -51,8 +51,9 @@ Count × Choco,Almond,Vanilla,Strawberry
     2 ×     0,     2,      3,         5
     1 ×     0,     2,      5,         3
 
-[Score Distribution] (number of ballots giving each score)
-            5  4  3  2  1  0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  | Total   Avg
 Choco       0  0  0  0  0  3  |     0   0.0
 Almond      0  0  0  3  0  0  |     6   2.0
 Vanilla     1  0  2  0  0  0  |    11   3.7

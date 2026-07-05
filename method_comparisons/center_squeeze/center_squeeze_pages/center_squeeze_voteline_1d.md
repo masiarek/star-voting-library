@@ -66,11 +66,12 @@ Count × Red,Green,Yellow
   175 ×   1,    5,     3
   138 ×   3,    5,     1
 
-[Score Distribution] (number of ballots giving each score)
-          5    4    3    2    1    0  | Total   Avg
-Red     332    0  138    0  175  353  |  2249   2.3
-Green   313    0  685    0    0    0  |  3620   3.6
-Yellow  353    0  175    0  138  332  |  2428   2.4
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Red        332    0  138    0  175  353  |  2249   2.3
+Green      313    0  685    0    0    0  |  3620   3.6
+Yellow     353    0  175    0  138  332  |  2428   2.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

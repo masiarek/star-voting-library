@@ -47,11 +47,12 @@ Count × Aral,Baikal,Crater
     2 ×    5,     4,     4
     1 ×    5,     0,     0
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Aral    3  0  0  0  0  0  |    15   5.0
-Baikal  0  2  0  0  0  1  |     8   2.7
-Crater  0  2  0  0  0  1  |     8   2.7
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Aral       3  0  0  0  0  0  |    15   5.0
+Baikal     0  2  0  0  0  1  |     8   2.7
+Crater     0  2  0  0  0  1  |     8   2.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

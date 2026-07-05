@@ -71,10 +71,11 @@ A,B
 -,-
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-   5  4  3  2  1  0  Abs  | Total   Avg
-A  2  1  0  0  0  1    1  |    14   3.5
-B  2  0  0  0  0  2    1  |    10   2.5
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          2  1  0  0  0  1    1  |    14   3.5
+B          2  0  0  0  0  2    1  |    10   2.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -112,4 +113,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/pet_real
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [flat_scores_abstention_c3_b8](flat_scores_abstention_c3_b8.md)
+More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [bv15_4h89vj_plurality_abstain](bv15_4h89vj_plurality_abstain.md) · [flat_scores_abstention_c3_b8](flat_scores_abstention_c3_b8.md)

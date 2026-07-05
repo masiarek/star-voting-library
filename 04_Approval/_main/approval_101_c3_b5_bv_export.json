@@ -1,0 +1,361 @@
+{
+  "Election": {
+    "election_id": "ff6mk3",
+    "title": "BV135 - Approval 101 — most approvals wins",
+    "description": "Approval Voting, 1 winner, 3 candidates, 5 ballots. The textbook Approval intro: each voter approves any number of candidates, and whoever collects the most approvals wins. Bob 4, Ann 3, Cal 2 -> Bob wins.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "masiarek_mc_demo",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV135 - Approval 101 — most approvals wins",
+        "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+        "num_winners": 1,
+        "voting_method": "Approval",
+        "candidates": [
+          {
+            "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+            "candidate_name": "Ann"
+          },
+          {
+            "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+            "candidate_name": "Bob"
+          },
+          {
+            "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+            "candidate_name": "Cal"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-05T13:41:39.541Z",
+    "update_date": "1783258899541",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-2vk2ccrj",
+      "election_id": "ff6mk3",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+          "scores": [
+            {
+              "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+              "score": 0
+            },
+            {
+              "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-3myky84b",
+      "election_id": "ff6mk3",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+          "scores": [
+            {
+              "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+              "score": 1
+            },
+            {
+              "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-g3dkd7rf",
+      "election_id": "ff6mk3",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+          "scores": [
+            {
+              "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+              "score": 1
+            },
+            {
+              "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-hfj4phj8",
+      "election_id": "ff6mk3",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+          "scores": [
+            {
+              "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+              "score": 0
+            },
+            {
+              "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "score": 1
+            },
+            {
+              "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ckgh4cyv",
+      "election_id": "ff6mk3",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "df072ad9-dbad-4490-b8f9-97a4257704b3",
+          "scores": [
+            {
+              "candidate_id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+              "score": 1
+            },
+            {
+              "candidate_id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "score": 0
+            },
+            {
+              "candidate_id": "c7010baa-9944-4942-a356-93acf115bd30",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "Approval",
+      "elected": [
+        {
+          "id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+          "name": "Bob",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 0,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 2,
+            "c7010baa-9944-4942-a356-93acf115bd30": 3
+          },
+          "winsAgainst": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": true,
+            "c7010baa-9944-4942-a356-93acf115bd30": true
+          },
+          "score": 4
+        }
+      ],
+      "tied": [
+        {
+          "id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+          "name": "Bob",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 0,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 2,
+            "c7010baa-9944-4942-a356-93acf115bd30": 3
+          },
+          "winsAgainst": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": true,
+            "c7010baa-9944-4942-a356-93acf115bd30": true
+          },
+          "score": 4
+        }
+      ],
+      "other": [
+        {
+          "id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+          "name": "Ann",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 1,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 0,
+            "c7010baa-9944-4942-a356-93acf115bd30": 2
+          },
+          "winsAgainst": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": false,
+            "c7010baa-9944-4942-a356-93acf115bd30": true
+          },
+          "score": 3
+        },
+        {
+          "id": "c7010baa-9944-4942-a356-93acf115bd30",
+          "name": "Cal",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 1,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 1,
+            "c7010baa-9944-4942-a356-93acf115bd30": 0
+          },
+          "winsAgainst": {
+            "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+            "5af1b3f8-f711-40ff-942c-05e2f04f8c31": false,
+            "c7010baa-9944-4942-a356-93acf115bd30": false
+          },
+          "score": 2
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "name": "Bob",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 0,
+                "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 2,
+                "c7010baa-9944-4942-a356-93acf115bd30": 3
+              },
+              "winsAgainst": {
+                "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+                "5af1b3f8-f711-40ff-942c-05e2f04f8c31": true,
+                "c7010baa-9944-4942-a356-93acf115bd30": true
+              },
+              "score": 4
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Bob has the most approvals and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+              "name": "Bob",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 0,
+                "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 2,
+                "c7010baa-9944-4942-a356-93acf115bd30": 3
+              },
+              "winsAgainst": {
+                "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+                "5af1b3f8-f711-40ff-942c-05e2f04f8c31": true,
+                "c7010baa-9944-4942-a356-93acf115bd30": true
+              },
+              "score": 4
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+            "name": "Bob",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 0,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 2,
+              "c7010baa-9944-4942-a356-93acf115bd30": 3
+            },
+            "winsAgainst": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": true,
+              "c7010baa-9944-4942-a356-93acf115bd30": true
+            },
+            "score": 4
+          },
+          {
+            "id": "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+            "name": "Ann",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 1,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 0,
+              "c7010baa-9944-4942-a356-93acf115bd30": 2
+            },
+            "winsAgainst": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": false,
+              "c7010baa-9944-4942-a356-93acf115bd30": true
+            },
+            "score": 3
+          },
+          {
+            "id": "c7010baa-9944-4942-a356-93acf115bd30",
+            "name": "Cal",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": 1,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": 1,
+              "c7010baa-9944-4942-a356-93acf115bd30": 0
+            },
+            "winsAgainst": {
+              "5fedd28a-445e-48fc-b8d3-f8fec009fe45": false,
+              "5af1b3f8-f711-40ff-942c-05e2f04f8c31": false,
+              "c7010baa-9944-4942-a356-93acf115bd30": false
+            },
+            "score": 2
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 5
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "5fedd28a-445e-48fc-b8d3-f8fec009fe45",
+        "5af1b3f8-f711-40ff-942c-05e2f04f8c31",
+        "c7010baa-9944-4942-a356-93acf115bd30"
+      ]
+    }
+  ]
+}

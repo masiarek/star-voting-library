@@ -18,6 +18,11 @@ elects {A,B,C,F} outright, the tied committee that leaves FEWER voters
 with no representative at all (2 instead of 3). Run the proportional
 rules on this file via abcvoting_tabulation_engine/ to see it.
 
+Live on BetterVoting (BV27, election jt6r76): BV's Approval engine seats
+A,B,C,F — its random draw broke the D/F tie for F, the book's other AV
+committee. Two-view page: bv27_jt6r76_lackner_approval_committee.md.
+Live results: https://bettervoting.com/jt6r76/results
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

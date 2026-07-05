@@ -72,12 +72,13 @@ Count × Alice,Bob,Carol,Dave
     1 ×     -,  -,    -,   -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-        5   4   3   2   1   0  Abs  | Total   Avg
-Alice   0   0   0   0   0  13    1  |     0   0.0
-Bob     0   0   0   0   2  11    1  |     2   0.2
-Carol   0   0   0   0   3  10    1  |     3   0.2
-Dave    0   0   0   0   5   8    1  |     5   0.4
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  Abs  | Total   Avg
+Alice       0   0   0   0   0  13    1  |     0   0.0
+Bob         0   0   0   0   2  11    1  |     2   0.2
+Carol       0   0   0   0   3  10    1  |     3   0.2
+Dave        0   0   0   0   5   8    1  |     5   0.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

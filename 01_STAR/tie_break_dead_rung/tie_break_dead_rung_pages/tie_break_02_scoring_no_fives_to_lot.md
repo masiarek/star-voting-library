@@ -51,11 +51,12 @@ Alice,Ben,Cara
     4,  4,   2
     4,  0,   2
 
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Alice  0  2  0  0  0  0  |     8   4.0
-Ben    0  1  0  0  0  1  |     4   2.0
-Cara   0  0  0  2  0  0  |     4   2.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alice      0  2  0  0  0  0  |     8   4.0
+Ben        0  1  0  0  0  1  |     4   2.0
+Cara       0  0  0  2  0  0  |     4   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

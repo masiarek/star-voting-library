@@ -10,6 +10,11 @@ The simplest Approval election: each voter marks 1 (approve) or 0 for every
 candidate, and the most-approved candidate wins. Five voters, three
 candidates. Bob is nobody's only choice, but four of five voters approve
 him — the broadest support in the field.
+This is BetterVoting test BV135, a REAL election: ff6mk3.
+Live results: https://bettervoting.com/ff6mk3/results
+BetterVoting agrees exactly — Bob 4, Ann 3, Cal 2, no tie.
+Frozen export: approval_101_c3_b5_bv_export.json.
+
 More Approval cases: method_comparisons/BV_Library (a real BetterVoting
 approval election) and method_comparisons/black_curtain (the same five
 voters counted by Approval vs STAR vs RCV-IRV).
@@ -59,5 +64,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/_mai
 
 ## See also
 
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [The Black Curtain (worked set)](../../../method_comparisons/black_curtain/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

@@ -938,15 +938,16 @@ Count × Bird,Cat,Python,Dog,Fish,Rabbit,Rat
     1 ×    4,  5,     3,  5,   3,     4,  2
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-          5    4    3    2    1    0  Abs  | Total   Avg
-Bird     31   49  114  112   61   65   29  |   978   2.3
-Cat     210  119   51   25   21   20   15  |  1750   3.9
-Python   12   23   32   59   83  193   59  |   449   1.1
-Dog     231  113   52   16   12   22   15  |  1807   4.1
-Fish     15   46  106  107   72   70   45  |   863   2.1
-Rabbit   20   55  121  101   78   44   42  |   963   2.3
-Rat      17   31   57   58   93  162   43  |   589   1.4
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  Abs  | Total   Avg
+Bird        31   49  114  112   61   65   29  |   978   2.3
+Cat        210  119   51   25   21   20   15  |  1750   3.9
+Python      12   23   32   59   83  193   59  |   449   1.1
+Dog        231  113   52   16   12   22   15  |  1807   4.1
+Fish        15   46  106  107   72   70   45  |   863   2.1
+Rabbit      20   55  121  101   78   44   42  |   963   2.3
+Rat         17   31   57   58   93  162   43  |   589   1.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -987,4 +988,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/pet_real
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [flat_scores_abstention_c3_b8](flat_scores_abstention_c3_b8.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)
+More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [bv15_4h89vj_plurality_abstain](bv15_4h89vj_plurality_abstain.md) · [flat_scores_abstention_c3_b8](flat_scores_abstention_c3_b8.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)

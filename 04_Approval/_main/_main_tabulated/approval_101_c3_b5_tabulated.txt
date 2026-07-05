@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     approval_101_c3_b5.yaml
-SOURCE MODIFIED: 2026-07-02 12:15:18
+SOURCE MODIFIED: 2026-07-05 09:44:17
 TABULATED FILE:  approval_101_c3_b5_tabulated.txt
-TABULATED AT:    2026-07-05 09:13:15
+TABULATED AT:    2026-07-05 09:44:29
 ======================================================================
 
 election_title: Approval 101 — most approvals wins
@@ -12,6 +12,11 @@ scenario_description: |-
   candidate, and the most-approved candidate wins. Five voters, three
   candidates. Bob is nobody's only choice, but four of five voters approve
   him — the broadest support in the field.
+  This is BetterVoting test BV135, a REAL election: ff6mk3.
+  Live results: https://bettervoting.com/ff6mk3/results
+  BetterVoting agrees exactly — Bob 4, Ann 3, Cal 2, no tie.
+  Frozen export: approval_101_c3_b5_bv_export.json.
+
   More Approval cases: method_comparisons/BV_Library (a real BetterVoting
   approval election) and method_comparisons/black_curtain (the same five
   voters counted by Approval vs STAR vs RCV-IRV).
@@ -24,6 +29,11 @@ options:
 
 voting_method: Approval
 num_winners: 1
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV135
+bv_election_id: ff6mk3
+bv_results_url: https://bettervoting.com/ff6mk3/results
 
 ballots: |-
   Ann,Bob,Cal

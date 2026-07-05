@@ -66,14 +66,15 @@ Allen,Bianca,Chris,Desi,Edith,Frank
     5,     5,    0,   5,    5,    5
     0,     0,    0,   0,    0,    1
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  | Total   Avg
-Allen   2  0  1  1  0  4  |    15   1.9
-Bianca  6  1  0  0  0  1  |    34   4.2
-Chris   0  0  0  0  0  8  |     0   0.0
-Desi    1  0  2  0  0  5  |    11   1.4
-Edith   1  0  0  0  2  5  |     7   0.9
-Frank   3  2  0  0  2  1  |    25   3.1
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allen      2  0  1  1  0  4  |    15   1.9
+Bianca     6  1  0  0  0  1  |    34   4.3
+Chris      0  0  0  0  0  8  |     0   0.0
+Desi       1  0  2  0  0  5  |    11   1.4
+Edith      1  0  0  0  2  5  |     7   0.9
+Frank      3  2  0  0  2  1  |    25   3.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

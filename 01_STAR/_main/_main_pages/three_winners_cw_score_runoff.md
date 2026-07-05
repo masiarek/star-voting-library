@@ -80,11 +80,12 @@ Count × Ann,Bob,Carl
     3 ×   5,  4,   3
     2 ×   0,  3,   5
 
-[Score Distribution] (number of ballots giving each score)
-      5  4  3  2  1  0  | Total   Avg
-Ann   3  0  0  0  0  2  |    15   3.0
-Bob   0  3  2  0  0  0  |    18   3.6
-Carl  2  0  3  0  0  0  |    19   3.8
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        3  0  0  0  0  2  |    15   3.0
+Bob        0  3  2  0  0  0  |    18   3.6
+Carl       2  0  3  0  0  0  |    19   3.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

@@ -62,11 +62,12 @@ Count × Almond,Brownie,Cocoa
     2 ×      4,      5,    0
     1 ×      5,      1,    2
 
-[Score Distribution] (number of ballots giving each score)
-         5  4  3  2  1  0  | Total   Avg
-Almond   1  2  0  0  0  0  |    13   4.3
-Brownie  2  0  0  0  1  0  |    11   3.7
-Cocoa    0  0  0  1  0  2  |     2   0.7
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     1  2  0  0  0  0  |    13   4.3
+Brownie    2  0  0  0  1  0  |    11   3.7
+Cocoa      0  0  0  1  0  2  |     2   0.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

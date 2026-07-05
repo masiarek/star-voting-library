@@ -80,11 +80,12 @@ Apple,Banana,Cherry
     5,     5,     0
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-        5  4  3  2  1  0  Abs  | Total   Avg
-Apple   2  1  2  0  0  2    1  |    20   2.9
-Banana  4  1  1  0  0  1    1  |    27   3.9
-Cherry  0  0  1  1  2  3    1  |     7   1.0
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Apple      2  1  2  0  0  2    1  |    20   2.9
+Banana     4  1  1  0  0  1    1  |    27   3.9
+Cherry     0  0  1  1  2  3    1  |     7   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -124,4 +125,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/pet_real
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)
+More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [bv15_4h89vj_plurality_abstain](bv15_4h89vj_plurality_abstain.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)

@@ -62,11 +62,12 @@ Count × X,Y,Z
    10 × 3,0,5
     8 × 0,5,3
 
-[Score Distribution] (number of ballots giving each score)
-    5   4   3   2   1   0  | Total   Avg
-X  16   0  10   0   0   8  |   110   3.2
-Y   8   0  16   0   0  10  |    88   2.6
-Z  10   0   8   0   0  16  |    74   2.2
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+X          16   0  10   0   0   8  |   110   3.2
+Y           8   0  16   0   0  10  |    88   2.6
+Z          10   0   8   0   0  16  |    74   2.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

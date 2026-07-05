@@ -62,8 +62,9 @@ Count × Memphis,Nashville,Chattanooga,Knoxville
    17 ×       2,        3,          4,        5
    15 ×       2,        3,          5,        4
 
-[Score Distribution] (number of ballots giving each score)
-              5   4   3   2   1   0  | Total   Avg
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate     5   4   3   2   1   0  | Total   Avg
 Memphis      42   0   0  58   0   0  |   326   3.3
 Nashville    26  42  32   0   0   0  |   394   3.9
 Chattanooga  15  43  42   0   0   0  |   373   3.7

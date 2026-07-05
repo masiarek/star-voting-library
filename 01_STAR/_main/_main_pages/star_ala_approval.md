@@ -78,12 +78,13 @@ A,B,C,D
 -,-,-,-
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (number of ballots giving each score)
-   5  4  3  2  1  0  Abs  | Total   Avg
-A  1  0  0  0  2  1    4  |     7   1.8
-B  1  0  0  0  1  2    4  |     6   1.5
-C  1  0  0  0  1  4    2  |     6   1.0
-D  1  0  0  0  3  2    2  |     8   1.3
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          1  0  0  0  2  1    4  |     7   1.8
+B          1  0  0  0  1  2    4  |     6   1.5
+C          1  0  0  0  1  4    2  |     6   1.0
+D          1  0  0  0  3  2    2  |     8   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
