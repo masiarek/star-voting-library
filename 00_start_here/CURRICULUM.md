@@ -95,6 +95,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Emphasize:** STV is the proportional multi-winner *cousin of IRV*, not IRV; proportional methods seat coalitions in proportion, Bloc STAR lets a majority sweep.
 - **Deeper math:** [the math behind proportional STAR](proportional_representation/STAR_PR/the_math_behind_proportional_star.md) — quotas, D'Hondt reweighting, JR/EJR, fair division.
 - **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules and the utilitarian–egalitarian spectrum](Approval_Voting/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén), one election laid on the utilitarian↔egalitarian axis, and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV). Verified with Lackner's `abcvoting`.
+- **Thiele methods (and how STAR-PR relates):** [Thiele methods](Approval_Voting/thiele_methods.md) — AV/PAV/CC as one parameterised family (the `w`-function "diminishing-returns" dial), the PAV harmonic worked example (`83/6`), welfare vectors, and the key STAR bridge: **RRV is the score-ballot cousin of seq-PAV**, while Allocated Score / SSS follow the STV lineage. Answers "do I need Thiele to learn STAR-PR?"
 
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.

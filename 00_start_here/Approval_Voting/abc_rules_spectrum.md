@@ -71,6 +71,10 @@ python abcvoting_tabulation_engine/abc_tabulation.py \
 # av -> {A,B,C,D}|{A,B,C,F} ; pav -> {A,B,C,F} ; cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}
 ```
 
+## Going deeper
+
+AV, PAV, and CC are all one parameterised family — the **Thiele methods** — turned by a single satisfaction dial `w`. The formal treatment (the `w`-function spectrum, PAV's harmonic worked to `83/6`, welfare vectors, seq-/rev-seq-PAV, and **how RRV is the score-ballot cousin of seq-PAV**) is in **[Thiele methods](thiele_methods.md)**.
+
 ## References
 
 - Lackner, M. & Skowron, P. (2023), *Multi-Winner Voting with Approval Preferences*, SpringerBriefs, [doi:10.1007/978-3-031-09016-5](https://doi.org/10.1007/978-3-031-09016-5) (open access) — §2.1–2.2, Examples 2.1–2.3, Rules 1–2.

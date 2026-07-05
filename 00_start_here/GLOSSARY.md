@@ -99,6 +99,19 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **Bloc STAR** — multi-winner STAR that elects the top N candidates (at-large / majoritarian — *not* proportional). → demo [`01_c4_b2_bloc-star-2-seats`](../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md); majoritarian-vs-proportional contrast in [Proportional Representation: STV vs STAR-PR](proportional_representation/stv/proportional_stv_vs_star.md); [STAR Voting — Curriculum (Voting 101 / 201 / 301)](CURRICULUM.md) (201.5)
 - **Proportional STAR** — multi-winner methods (Reweighted Range Voting, Allocated Score, Sequentially Spent Score) that give proportional representation. → demo [`03b_star_pr_3seats`](../03_STAR_PR/_main/_main_pages/03b_star_pr_3seats.md); page [Proportional Representation: STV vs STAR-PR](proportional_representation/stv/proportional_stv_vs_star.md) (STV vs STAR-PR); [STAR Voting — Curriculum (Voting 101 / 201 / 301)](CURRICULUM.md) (301.1)
 
+## Approval committees (ABC rules & Thiele methods)
+
+*Multi-winner **approval** theory (Lackner & Skowron). Not STAR, but the cleanest place to see proportionality — and the family RRV descends from. Pages: [ABC rules 101](Approval_Voting/abc_rules_intro.md) · [301 spectrum](Approval_Voting/abc_rules_spectrum.md) · [Thiele methods](Approval_Voting/thiele_methods.md).*
+
+- **ABC rule** — an *Approval-Based Committee* rule: takes an approval profile + committee size `k`, outputs one or more size-`k` **winning committees**. *Resolute* = always one committee; *irresolute* = may return several **tied** committees (broken by a pre-published order, like STAR's lot).
+- **AV (Multi-Winner Approval Voting)** — seat the `k` most-approved candidates; maximises total approvals (**utilitarian**). The LH engine's `Approval_Multi_Winner`.
+- **Approval Chamberlin–Courant (CC)** — maximise the number of voters with **≥ 1** approved winner (**egalitarian coverage**); the "opposite" of AV (Thiele/Chamberlin–Courant, 1895/1983).
+- **Thiele method (`w`-Thiele)** — a family scoring a committee by `Σ_i w(|W∩A(i)|)` for a non-decreasing `w` with `w(0)=0`; AV is `w(x)=x`, CC is `w(x)=min(1,x)`, **PAV** is the harmonic `w`. The single "diminishing-returns" dial from utilitarian to egalitarian.
+- **PAV (Proportional Approval Voting)** — the `w`-Thiele rule with the **harmonic** `w(x)=1+½+…+1/x`; the diminishing weights make it **proportional** (balances big and small groups). **seq-PAV** / **rev-seq-PAV** = its greedy forward / backward algorithms.
+- **Welfare vector / welfarist rule** — a committee's per-voter satisfaction `(|A(1)∩W|,…)`; a rule is *welfarist* if it maximises a function of that vector (all Thiele methods are).
+- **Monroe's rule / Phragmén** — proportional rules that are **not** Thiele: Monroe assigns each winner a disjoint voter quota; Phragmén balances "load."
+- **RRV = score-PAV** — Reweighted Range Voting (a Proportional STAR method) is the **score-ballot generalisation of sequential PAV**; on 0/1 ballots it reduces to seq-PAV. Allocated Score / SSS instead follow the **quota/STV** lineage, not Thiele. See [Thiele methods → "Does this apply to STAR-PR?"](Approval_Voting/thiele_methods.md).
+
 ## Civic / adoption
 
 - **[Equal Vote Coalition](https://equal.vote)** — the organization that developed and advocates STAR Voting.
