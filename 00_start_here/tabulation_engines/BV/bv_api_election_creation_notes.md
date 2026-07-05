@@ -63,5 +63,5 @@ The election that **works** has `admin_ids: null`; the one that's **denied** exp
 ## Related
 
 - [BV — BetterVoting (the live web app)](README.md)
-- The script: `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py`
+- The script + how to run it: [`create_bv_test_election.py` — tool guide](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.md)
 - The BV-backed case workflow is documented in the repo's `CLAUDE.md` (steps 3–4).

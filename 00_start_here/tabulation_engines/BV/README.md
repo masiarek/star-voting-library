@@ -8,4 +8,4 @@ For the worked pets example, BetterVoting's own screenshots live in [`../../STAR
 
 The matching **text** report — the same election counted by Larry Hastings' `starvote` engine — is in [reading a STAR report](../LH_starvote/reading_a_star_report.md). Same election, same winner, two reports.
 
-**Creating BV elections via the API** (for test cases) — what works and the one thing that doesn't (API-created elections are public and listable but not UI-administrable): [Creating BetterVoting elections via the API](bv_api_election_creation_notes.md).
+**Creating BV elections via the API** (for test cases): the [`create_bv_test_election.py` tool guide](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.md) (purpose + how to run), and the platform notes on [what works and the one thing that doesn't](bv_api_election_creation_notes.md) (API-created elections are public and listable but not UI-administrable).
