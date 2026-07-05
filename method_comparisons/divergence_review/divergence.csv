@@ -30,6 +30,7 @@ AGREE,01_STAR/_main/vote_splitting_scenario2_bloc_leads.yaml,3,36,DarkChoco,Dark
 AGREE,01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,0,False,False,False
 AGREE,01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
+AGREE,01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml,2,12,Andre,Andre,Andre,Andre,Andre,Andre,Andre,Andre,Andre,0,False,False,False
 AGREE,01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml,3,8,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,2,False,False,False
 AGREE,01_STAR/pet_real_bv_election/small_abstention_c2_b5.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
 AGREE,01_STAR/runoff_overturns_leader/04_c4_b3_runoff-confirms-leader.yaml,4,3,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,0,False,False,False

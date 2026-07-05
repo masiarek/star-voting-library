@@ -1,0 +1,79 @@
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV15
+bv_election_id: 4h89vj
+bv_results_url: https://bettervoting.com/4h89vj/results
+
+election:
+  election_title: "BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots)"
+  election_description: |-
+    A REAL BetterVoting election (BV id 4h89vj), "B15 - Basic - 2 candidates -
+    Plurality - Abstain". Live results: https://bettervoting.com/4h89vj/results
+    Frozen raw export: bv15_4h89vj_plurality_abstain_bv_export.json.
+
+    This is the Plurality instance of BetterVoting issue #740
+    (github.com/Equal-Vote/bettervoting/issues/740 — note: bettervoting#740, the
+    repo moved from star-server, the NUMBER stayed). #740 is a REPORTING gap, not
+    a tabulation error: BetterVoting's results widget shows only the MEANINGFUL
+    ballots as "voters" and drops the fully-abstained ones from the headline
+    turnout. The winner is right; the displayed voter count is short by exactly
+    the number of abstentions.
+
+    Twelve ballots, two candidates:
+
+      Andre,Blake
+      5,0   × 5   Andre  (a choose-one vote for Andre)
+      0,5   × 2   Blake  (a choose-one vote for Blake)
+      -,-   × 5   blank  — true abstentions (no score for anyone)
+
+    BetterVoting's own summaryData (in the frozen export) counts it CORRECTLY:
+    nTallyVotes = 7, nAbstentions = 5 (7 + 5 = 12 cast). Andre 5, Blake 2 -> Andre
+    wins. So the data is present; #740 is only that the results UI never surfaces
+    the 5 abstentions / the 12-ballot total — it reports the 7 as if that were
+    turnout.
+
+    Why this file is STAR, not Plurality: the LH engine has NO standalone
+    Plurality method (its methods are STAR / Bloc / SSS / RRV / Allocated, plus
+    auto RCV-IRV / Approval / Ranked Robin). With two candidates and choose-one
+    ballots every reasonable method elects the plurality leader, so we model each
+    "vote for X" as a STAR 5/0 ballot. STAR, Approval, and Choose-One Plurality
+    all name Andre here (no divergence). The point is the COUNT, and STAR's
+    self-reconciling runoff line prints exactly the accounting #740 is missing:
+    "12 ballots cast − 5 Equal Support = 7 voters with a preference." That runoff
+    line IS the "stats for nerds" turnout breakdown #740 asks BetterVoting to add.
+
+  options:
+    show_description: false
+    show_matrix: false   # only two candidates: the finalists matrix just echoes the runoff
+    matrix_finalists_only: false
+    show_condorcet: false
+    show_score_counts: true    # this case is about the count — show the per-score + abstention column
+    show_irv: false
+    show_runoff_percent: true  # the self-reconciling turnout line is the whole point
+    brief: true
+    collapse_ballots: true     # weighted blocs (5 / 2 / 5) — group them so the turnout split is legible
+    count_separator: "×"
+
+  races:
+  - race_id: '0'
+    race_description: ""
+    num_winners: 1
+    voting_method: STAR
+    ballots: |-
+      Andre,Blake
+      5,0
+      5,0
+      5,0
+      5,0
+      5,0
+      0,5
+      0,5
+      -,-
+      -,-
+      -,-
+      -,-
+      -,-
+    expected_results:
+      winners:
+      - Andre
+
+# file: bv15_4h89vj_plurality_abstain.yaml

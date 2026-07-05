@@ -6,11 +6,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**145 election files** (123 single-winner, 22 multi-winner) across 13 method(s).
+**146 election files** (124 single-winner, 22 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 103 |
+| STAR | 104 |
 | RCV-IRV (Hare) | 9 |
 | Ranked Robin (RCV-RR / Copeland) | 5 |
 | Approval | 3 |
@@ -24,7 +24,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (103)
+## STAR  (104)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -68,6 +68,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | — |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/pet_real_bv_election/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml) |
 | [`best_pet_c7_b461`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/best_pet_c7_b461.md) | `01_STAR/pet_real_bv_election/` | 1 | What Makes the Best Pet? → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml) |
+| [`bv15_4h89vj_plurality_abstain.yaml`](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml) | `01_STAR/pet_real_bv_election/` | 1 | BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) → _Andre_ | — |
 | [`flat_scores_abstention_c3_b8`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) | `01_STAR/pet_real_bv_election/` | 1 | BV Abstentions and flat scores (Apple/Banana/Cherry, 8 ballots) → _Banana_ | [`.yaml`](../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml) |
 | [`small_abstention_c2_b5`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md) | `01_STAR/pet_real_bv_election/` | 1 | Equal Support vs Abstention — minimal STAR test (A/B, 5 ballots) → _A_ | [`.yaml`](../../01_STAR/pet_real_bv_election/small_abstention_c2_b5.yaml) |
 | [`01a_c3_b3_more-stars-fewer-voters`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/01a_c3_b3_more-stars-fewer-voters.md) | `01_STAR/runoff_overturns_leader/` | 1 | More stars, fewer voters — the runoff overturns the score leader → _Brownie_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml) |

@@ -92,8 +92,12 @@ def _ballot_shape(race):
         return ("", "")
     header = lines[0]
     n_cand = len([c for c in header.split(",") if c.strip()])
-    # ballot rows = lines after the header that carry scores (contain a digit)
-    n_rows = sum(1 for ln in lines[1:] if any(ch.isdigit() for ch in ln))
+    # Ballot rows = every non-empty line after the header. A row may carry only
+    # markers (e.g. "-,-" or "~,~" — a blank/abstention ballot with no digit); it
+    # is still a CAST ballot and must be counted. (Counting only digit-bearing rows
+    # would drop abstentions — the very undercount bettervoting#740 is about.)
+    n_rows = sum(1 for ln in lines[1:]
+                 if any(cell.strip() for cell in ln.split(",")))
     return (n_cand, n_rows)
 
 
@@ -137,7 +141,11 @@ def collect():
         except Exception:
             nw = 1
         n_cand, n_ballots = _ballot_shape(race)
+        # expected winners: flat `expected_winners:` OR nested `expected_results: {winners: […]}`
         exp = race.get("expected_winners")
+        if not isinstance(exp, list):
+            er = race.get("expected_results")
+            exp = er.get("winners") if isinstance(er, dict) else None
         expected = ", ".join(map(str, exp)) if isinstance(exp, list) else ""
         md = rel[:-5] + ".md"
         md_rel = md if os.path.exists(os.path.join(REPO, md)) else ""
