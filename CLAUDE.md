@@ -259,6 +259,48 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
   the backend now demands RS256.
 
+## Workflow — building a BV-backed test case
+
+The loop that's working well (**Adam** = human, **AI** = assistant):
+
+1. **Brainstorm in `trash_delete.yaml`** (AI + Adam). Draft the scenario —
+   candidates, ballots, method, seats — in the scratch file and tabulate it with
+   the LH engine until it demonstrates the intended behavior (a tie rung, a
+   method divergence, a criterion failure…). Nothing here is permanent; iterate
+   freely, keep examples small.
+2. **Go / no-go** (Adam decides). If the scenario earns its keep, promote it to a
+   real case; otherwise it stays scratch / gets discarded.
+3. **Create the BV election** (AI runs it; Adam must be signed in to BV). Add the
+   election(s) to `create_bv_test_election.py`'s `ELECTIONS` list and
+   `uv run …/create_bv_test_election.py` — it creates the election **and casts the
+   ballots** via the API and prints `bettervoting.com/<id>`. Never build it by
+   hand in the UI. (Auth is asymmetric RS256; no real credential is stored.)
+4. **Export the full JSON** (Adam). The API GET returns only the election *config*,
+   so export the full **Election + Ballots + Results** from the BV UI and drop it
+   in `_demo_dropbox/`.
+5. **Reproduce in LH** (AI). Convert/import the export into a `.yaml` (converter:
+   `YAML_library/1_positive/01_convert_json_yaml.py`); for a random tie-break, pin
+   `lot_numbers` to BV's `perm`. Confirm LH's winner(s) match — or characterize the
+   divergence. Freeze the export as `_bv_export.json`.
+6. **Build the case files** (AI). Name `bv<testid>_<bvid>_<descriptor>.{yaml,md,
+   _bv_export.json}` (see naming rule above). The `.md` is the per-election page:
+   the clickable `▶ … /results` lead line, ballots, the **inline LH tabulation
+   echo**, why the winner wins, and the BV-vs-LH agreement/divergence.
+   `expected_winners` goes in the yaml.
+7. **Regenerate indexes + mirrors** (AI). Run the yaml through the engine (writes
+   its `_tabulated` mirror), then `tools_adam/scripts/build_yaml_index.py`, the
+   folder `README.md` table, and `build_divergence_index.py` if it diverges.
+8. **Verify + commit** (AI). The pre-commit hook runs the STAR suite + repo-hygiene;
+   commit with a descriptive message. **Adam pushes** (the sandbox has no push
+   credentials — always hand Adam the `git push https://github.com/masiarek/YAML.git
+   master` line).
+9. **Update the tracker** (Adam, AI drafts). Add/fill the row in the master Google
+   Sheet — Test ID, BV `/results` link, YAML file, MD page.
+
+**LH-only cases** (no BetterVoting election — e.g. a reproduction of a Larry
+`starvote` test file) skip steps 3–4 and the `<bvid>` filename segment; everything
+else is the same.
+
 ## Engines
 - `STARVote_LH_tabulation_engine/starvote_larry_hastings.py` — STAR + Bloc/
   proportional; reporting options; `blocs:` vote-splitting check; quorum;
