@@ -309,6 +309,14 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
 9. **Update the tracker** (Adam, AI drafts). Add/fill the row in the master Google
    Sheet — Test ID, BV `/results` link, YAML file, MD page.
 
+**Sheet sync — ding Adam (standing rule).** The sheet is the *thin* registry but
+still owns Test-ID assignment. Whenever a step assigns a **new BV Test ID** or
+fills in a freshly-created **BV election id** (e.g. after running
+`create_bv_test_election.py`), Adam only sees it if the AI says so. So **end that
+turn with an explicit, copy-pasteable ding**: which sheet row, and the exact
+Test ID + `bvid` + `/results` link to paste. Don't bury it — Adam has asked to be
+dinged because it's easy to forget.
+
 **LH-only cases** (no BetterVoting election — e.g. a reproduction of a Larry
 `starvote` test file) skip steps 3–4 and the `<bvid>` filename segment; everything
 else is the same.
