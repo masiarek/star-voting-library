@@ -1,0 +1,145 @@
+======================================================================
+SOURCE FILE:     bv215_26khr3_nota_wins.yaml
+SOURCE MODIFIED: 2026-07-05 15:03:16
+TABULATED FILE:  bv215_26khr3_nota_wins_tabulated.txt
+TABULATED AT:    2026-07-05 15:03:36
+======================================================================
+
+election_title: "BV215 — None of the Above wins (STAR) — with a null abstention"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/26khr3 ·
+  results: https://bettervoting.com/26khr3/results
+  A constructed protest election used to test BetterVoting's "None of the Above"
+  (c-nota) candidate and the flat-0 vs null-abstention vs NOTA distinction.
+
+# Machine-readable BV fields (engine ignores; read by build_bv_registry.py)
+bv_test_id: BV215
+bv_election_id: 26khr3
+bv_results_url: https://bettervoting.com/26khr3/results
+
+scenario_description: |-
+  A protest electorate. Four voters reject both real candidates and give the full
+  five stars to **None of the Above**; two voters back Ada (5) over Bruno (1). None
+  of the Above tops the score round (20 vs Ada 10 vs Bruno 2) and then wins the
+  automatic runoff 4-2 over Ada — so **None of the Above is elected**.
+
+  Three teaching points in one ballot set:
+  1. **None of the Above is a real candidate** on BetterVoting (id `c-nota`), scored
+     0-5 like anyone else — not a spoiler flag. Here it simply wins, and *neither*
+     BetterVoting nor the LH engine gives a NOTA win any special handling (no
+     "re-run / no winner" state). Whether that's the intended behaviour is an open
+     BetterVoting question.
+  2. **Flat 0 vs null abstention.** Most rejections here are an explicit `0`. Ballot
+     2 instead leaves None of the Above **unscored** — BetterVoting stores that as
+     `score: null` ("didn't score this candidate"), which is distinct from `0`. In
+     LH that per-candidate abstention is the `&` marker (tabulates as 0, but kept
+     separate in the record). A single unscored candidate does **not** make the
+     ballot an abstention (BetterVoting reported nAbstentions = 0).
+  3. **BV vs LH agree.** Both elect None of the Above with identical score/runoff
+     numbers.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+# Column order: Ada, Bruno, None of the Above.  `&` = candidate abstention (BV null).
+ballots: |-
+  Ada,Bruno,None of the Above
+  5,1,0
+  5,1,&
+  0,0,5
+  0,0,5
+  0,0,5
+  0,0,5
+
+expected_winners:
+  - None of the Above
+
+# file: bv215_26khr3_nota_wins.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV215 — None of the Above wins (STAR) — with a null abstention ===
+  A protest electorate. Four voters reject both real candidates and give the full
+  five stars to **None of the Above**; two voters back Ada (5) over Bruno (1). None
+  of the Above tops the score round (20 vs Ada 10 vs Bruno 2) and then wins the
+  automatic runoff 4-2 over Ada — so **None of the Above is elected**.
+
+  Three teaching points in one ballot set:
+  1. **None of the Above is a real candidate** on BetterVoting (id `c-nota`), scored
+     0-5 like anyone else — not a spoiler flag. Here it simply wins, and *neither*
+     BetterVoting nor the LH engine gives a NOTA win any special handling (no
+     "re-run / no winner" state). Whether that's the intended behaviour is an open
+     BetterVoting question.
+  2. **Flat 0 vs null abstention.** Most rejections here are an explicit `0`. Ballot
+     2 instead leaves None of the Above **unscored** — BetterVoting stores that as
+     `score: null` ("didn't score this candidate"), which is distinct from `0`. In
+     LH that per-candidate abstention is the `&` marker (tabulates as 0, but kept
+     separate in the record). A single unscored candidate does **not** make the
+     ballot an abstention (BetterVoting reported nAbstentions = 0).
+  3. **BV vs LH agree.** Both elect None of the Above with identical score/runoff
+     numbers.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                          |         * Ada         |         Bruno        | * None of the Above  |
+-------------------------------------------------------------------------------------------------
+                  * Ada > |          ---          |      2 - 4 - 0       |      2 - 0 - 4       |
+                  Bruno > |       0 - 4 - 2       |         ---          |      2 - 0 - 4       |
+    * None of the Above > |       4 - 0 - 2       |      4 - 0 - 2       |         ---          |
+
+[Condorcet Winner]
+  Condorcet Winner: None of the Above — matches the STAR winner
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 6 ballots.
+Count × Ada,Bruno,None of the Above
+    4 ×   0,    0,                5
+    1 ×   5,    1,                0
+    1 ×   5,    1,                &
+
+[Score Distribution] (how many ballots gave each star rating)
+                        Score
+Candidate          5  4  3  2  1  0  Abs  | Total   Avg
+Ada                2  0  0  0  0  4    0  |    10   1.7
+Bruno              0  0  0  0  2  4    0  |     2   0.3
+None of the Above  4  0  0  0  0  1    1  |    20   4.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   None of the Above -- 20 -- First place
+   Ada               -- 10 -- Second place
+   Bruno             --  2
+ None of the Above and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   None of the Above -- 4 -- First place
+   Ada               -- 2
+   Equal Support     -- 0
+ None of the Above wins.
+   Runoff math:
+     6  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     6  voters with a preference  (majority = 4)
+           None of the Above 4 (67%)  ·  Ada 2 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ None of the Above

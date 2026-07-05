@@ -1,0 +1,62 @@
+election_title: "BV215 — None of the Above wins (STAR) — with a null abstention"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/26khr3 ·
+  results: https://bettervoting.com/26khr3/results
+  A constructed protest election used to test BetterVoting's "None of the Above"
+  (c-nota) candidate and the flat-0 vs null-abstention vs NOTA distinction.
+
+# Machine-readable BV fields (engine ignores; read by build_bv_registry.py)
+bv_test_id: BV215
+bv_election_id: 26khr3
+bv_results_url: https://bettervoting.com/26khr3/results
+
+scenario_description: |-
+  A protest electorate. Four voters reject both real candidates and give the full
+  five stars to **None of the Above**; two voters back Ada (5) over Bruno (1). None
+  of the Above tops the score round (20 vs Ada 10 vs Bruno 2) and then wins the
+  automatic runoff 4-2 over Ada — so **None of the Above is elected**.
+
+  Three teaching points in one ballot set:
+  1. **None of the Above is a real candidate** on BetterVoting (id `c-nota`), scored
+     0-5 like anyone else — not a spoiler flag. Here it simply wins, and *neither*
+     BetterVoting nor the LH engine gives a NOTA win any special handling (no
+     "re-run / no winner" state). Whether that's the intended behaviour is an open
+     BetterVoting question.
+  2. **Flat 0 vs null abstention.** Most rejections here are an explicit `0`. Ballot
+     2 instead leaves None of the Above **unscored** — BetterVoting stores that as
+     `score: null` ("didn't score this candidate"), which is distinct from `0`. In
+     LH that per-candidate abstention is the `&` marker (tabulates as 0, but kept
+     separate in the record). A single unscored candidate does **not** make the
+     ballot an abstention (BetterVoting reported nAbstentions = 0).
+  3. **BV vs LH agree.** Both elect None of the Above with identical score/runoff
+     numbers.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+# Column order: Ada, Bruno, None of the Above.  `&` = candidate abstention (BV null).
+ballots: |-
+  Ada,Bruno,None of the Above
+  5,1,0
+  5,1,&
+  0,0,5
+  0,0,5
+  0,0,5
+  0,0,5
+
+expected_winners:
+  - None of the Above
+
+# file: bv215_26khr3_nota_wins.yaml
