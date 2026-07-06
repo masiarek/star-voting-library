@@ -1,0 +1,32 @@
+election_title: "Multi-member plurality — SNTV (3 seats): the minority tops the poll"
+scenario_description: |-
+  One of three races comparing the multi-member plurality family on the SAME 60/40
+  electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
+  (Home: Ada, Ben, Cal) and a 4-voter MINORITY (Away: Uma).
+
+  SNTV (single non-transferable vote): each voter casts exactly ONE vote, no matter
+  how many seats. Vote management decides everything. The majority spreads its 6
+  votes evenly (2 Ada, 2 Ben, 2 Cal); the minority concentrates all 4 on Uma. So
+  Uma FINISHES FIRST with 4, and the majority's split leaves its candidates on 2
+  each — Uma plus two Home candidates win, 2-1. The 40% minority earns a seat
+  because SNTV rewards concentrating votes (and punishes over-nominating). This is
+  the majoritarian sweep of Block Voting turned into rough proportionality.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
+lh_only_reason: "Comparison companion (kept LH-side with Block/Limited Voting). SNTV itself IS reproducible on BetterVoting — its tally is BV-confirmed as the BV2134 governance Bloc Plurality race (choose-one, top-N)."
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ada,Ben,Cal,Uma,Val,Wren
+  2: 1,0,0,0,0,0
+  2: 0,1,0,0,0,0
+  2: 0,0,1,0,0,0
+  4: 0,0,0,1,0,0
+expected_winners:
+  - Uma
+  - Ada
+  - Ben
+
+# file: mmp_sntv.yaml

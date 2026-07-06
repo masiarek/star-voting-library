@@ -1501,17 +1501,37 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
     cutoff_lot_tie = (num_winners < len(candidates)
                       and votes[order[num_winners - 1]] == votes[order[num_winners]])
 
+    # Identify which multi-member plurality variant this is, from votes-per-voter
+    # (the tally — top-N by marks — is identical; only the ballots differ):
+    #   1 mark        -> SNTV (single non-transferable vote)
+    #   k == seats    -> Block voting / plurality-at-large
+    #   1 < k < seats -> Limited voting
+    #   mixed / other -> generic multi-winner Plurality
+    per = [sum(1 for c in candidates if b.get(c, 0) > 0) for b in ballots]
+    cast = {k for k in per if k > 0}
+    k = next(iter(cast)) if len(cast) == 1 else None
+    if cast == {1}:
+        vlabel, vline = "SNTV (single non-transferable vote)", "First-choice votes"
+    elif k == num_winners:
+        vlabel, vline = "Block Voting (plurality-at-large)", "Votes"
+    elif k is not None and 1 < k < num_winners:
+        vlabel, vline = "Limited Voting", "Votes"
+    else:
+        vlabel, vline = "Multi-winner Plurality", "Votes"
+    banner = f"--- {vlabel} — {num_winners} winners ---"
+    winners_line = f"Winners — {vlabel}, {num_winners} seats:"
+
     nw = max((len(c) for c in candidates), default=4)
-    L = [f"--- Plurality (Choose-One / SNTV) Method ({num_winners} winners) ---",
-         f" Tabulating {n} ballots (choose-one"
+    L = [banner,
+         f" Tabulating {n} ballots ("
+         + (f"{k} vote{'s' if k and k > 1 else ''}/voter" if k else "mixed votes/voter")
          + (f"; {abstain} abstained" if abstain else "") + ").", "",
-         "First-choice votes (most votes fill the seats):"]
+         f"{vline} (most votes fill the seats):"]
     for c in order:
         tag = "  <- Elected" if c in winners else ""
         L.append(f"   {c:<{nw}}  {votes[c]:>4}{tag}")
     L.append("")
-    L.append(f"Winners — Plurality (SNTV), {num_winners} seats "
-             f"(the {num_winners} most first-choice votes):")
+    L.append(winners_line)
     for i, c in enumerate(winners, 1):
         L.append(f"   {i}. {c}   ({votes[c]} votes)")
     if cutoff_lot_tie:
@@ -1519,9 +1539,7 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
         L.append(f"   *** the last seat tied on votes ({a} and {b}) — decided by lot order.")
     report = "\n".join(L)
     if not silent:
-        hdr = f"--- Plurality (Choose-One / SNTV) Method ({num_winners} winners) ---"
-        win = f"Winners — Plurality (SNTV), {num_winners} seats"
-        print(report.replace(hdr, f"{COLOR_HEADER}{hdr}{COLOR_RESET}"))
+        print(report.replace(banner, f"{COLOR_HEADER}{banner}{COLOR_RESET}"))
     if out_path is not None:
         try:
             Path(out_path).parent.mkdir(parents=True, exist_ok=True)

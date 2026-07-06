@@ -1,0 +1,31 @@
+election_title: "Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1"
+scenario_description: |-
+  One of three races comparing the multi-member plurality family on the SAME 60/40
+  electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
+  (Home: Ada, Ben) and a 4-voter MINORITY (Away: Uma, Val).
+
+  LIMITED VOTING: each voter casts FEWER votes than there are seats — here 2 votes
+  for 3 seats. Because a party can't fill every seat with its own supporters, over-
+  nominating splits its vote, so disciplined parties run about as many candidates
+  as they can win. Home runs 2 (Ada, Ben → 6 each); Away runs 2 (Uma, Val → 4 each).
+  The top three are Ada, Ben (6) and Uma (4; Val loses the last seat by lot) — a
+  2-1 split. Limited Voting sits between Block Voting (majority sweeps 3-0) and SNTV
+  (minority tops the poll): reducing votes-per-voter below the seat count is what
+  opens space for the minority.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
+lh_only_reason: "BetterVoting has no Limited Voting method — its Plurality is choose-one (single mark), so it can't cast the k>1 votes-per-voter Limited Voting requires."
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ada,Ben,Cal,Uma,Val,Wren
+  6: 1,1,0,0,0,0
+  4: 0,0,0,1,1,0
+expected_winners:
+  - Ada
+  - Ben
+  - Uma
+
+# file: mmp_limited_voting.yaml

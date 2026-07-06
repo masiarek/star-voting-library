@@ -182,10 +182,12 @@ def collect():
             etitle = elec.get("election_title", "")
             eid = (d.get("bv_election_id") or elec.get("bv_election_id")
                    or _sibling_eid(p))
+            lh_reason = d.get("lh_only_reason") or elec.get("lh_only_reason")
             race_dicts = elec.get("races") or ([elec] if "ballots" in elec else [])
         else:
             etitle = d.get("election_title", "")
             eid = d.get("bv_election_id") or _sibling_eid(p)
+            lh_reason = d.get("lh_only_reason")
             race_dicts = [d] if "ballots" in d else []
         if not race_dicts:
             continue
@@ -200,6 +202,7 @@ def collect():
             if win is None:
                 win = (r.get("expected_results") or {}).get("winners")
             winners = ", ".join(win) if isinstance(win, list) else (win or "")
+            backing = "BV" if eid else ("LH-only (exception)" if lh_reason else "LH-only")
             races.append({
                 "election_id": election_id,
                 "election_title": (exp["title"] if exp else etitle),
@@ -209,7 +212,7 @@ def collect():
                 "seats": seats, "seat_class": _seat_class(seats),
                 "character": _character(canon, seats),
                 "candidates": ncand, "voters": nvoters, "winners": winners,
-                "backing": "BV" if eid else "LH-only",
+                "backing": backing, "lh_only_reason": lh_reason or "",
                 "yaml": rel,
             })
             if eid:
@@ -282,7 +285,7 @@ def main():
     # races.csv
     cols = ["election_id", "election_title", "race_title", "method", "canon",
             "ballot_type", "seats", "seat_class", "character", "candidates",
-            "voters", "winners", "backing", "yaml"]
+            "voters", "winners", "backing", "lh_only_reason", "yaml"]
     with open(os.path.join(IDXDIR, "races.csv"), "w", newline="", encoding="utf-8") as fh:
         wr = csv.DictWriter(fh, fieldnames=cols)
         wr.writeheader()
@@ -351,10 +354,21 @@ def main():
                     "STAR; allocated/sss/rrv to STAR_PR."))
     M.append(_facet(races, "backing", "backing (BV vs LH-only)",
                     "**BV** = reproduced on BetterVoting (has a frozen export). "
-                    "**LH-only** = tabulated only by our engine. Goal: keep LH-only near "
-                    "zero — reproduce cases on BV unless BV genuinely can't (e.g. a "
-                    "deterministic tie-break BV resolves at random). Filter "
-                    "`races.csv` by `backing=LH-only` to find migration candidates."))
+                    "**LH-only** = tabulated only by our engine (a migration candidate). "
+                    "**LH-only (exception)** = genuinely can't go to BV (marked "
+                    "`lh_only_reason` in the yaml). Goal: keep plain LH-only near zero — "
+                    "reproduce on BV unless it's a marked exception."))
+
+    exc = [r for r in races if r["backing"] == "LH-only (exception)"]
+    if exc:
+        M.append("### Genuine LH-only exceptions\n")
+        M.append("Cases that **cannot** be reproduced on BetterVoting — a real reason "
+                 "(missing BV method / non-deterministic tie-break), not a coverage gap:\n")
+        M.append("| Case | Method | Why it can't go to BV |")
+        M.append("|---|---|---|")
+        for r in sorted(exc, key=lambda x: x["race_title"]):
+            M.append(f"| {r['race_title'][:44]} | {r['canon']} | {r['lh_only_reason']} |")
+        M.append("")
 
     M.append("## How this is organized (for adding cases)\n")
     M.append(

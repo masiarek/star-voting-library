@@ -1,12 +1,12 @@
 # Cross-method divergence review
 
-_Generated 2026-07-06 19:44 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-06 19:58 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **109** single-winner STAR elections (skipped 31 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- Scanned **109** single-winner STAR elections (skipped 34 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
 - **46** (42%) diverge from STAR under at least one method; **63** agree across the board.
 
 | Bucket | Count |

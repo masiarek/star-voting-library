@@ -1,0 +1,29 @@
+election_title: "Multi-member plurality — Block Voting (3 seats): majority sweeps"
+scenario_description: |-
+  One of three races comparing the multi-member plurality family on the SAME 60/40
+  electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
+  (Home party: Ada, Ben, Cal) and a 4-voter MINORITY (Away party: Uma, Val, Wren).
+
+  BLOCK VOTING (plurality-at-large): each voter casts as many votes as there are
+  seats (3) and votes their full slate. So every Home candidate gets all 6 majority
+  votes and every Away candidate all 4 minority votes — Ada, Ben, Cal (6 each) beat
+  Uma, Val, Wren (4 each) and the majority SWEEPS all three seats, 3-0. The 40%
+  minority is shut out entirely. Contrast SNTV and Limited Voting (same electorate),
+  where the minority earns a seat.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
+lh_only_reason: "BetterVoting has no Block Voting / plurality-at-large method — its Plurality is choose-one (single mark), so it can't cast the full-slate (k = seats) ballot Block Voting requires."
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ada,Ben,Cal,Uma,Val,Wren
+  6: 1,1,1,0,0,0
+  4: 0,0,0,1,1,1
+expected_winners:
+  - Ada
+  - Ben
+  - Cal
+
+# file: mmp_block_voting.yaml

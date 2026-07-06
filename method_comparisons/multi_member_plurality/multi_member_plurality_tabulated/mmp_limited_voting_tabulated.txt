@@ -1,0 +1,16 @@
+--- Limited Voting — 3 winners ---
+ Tabulating 10 ballots (2 votes/voter).
+
+Votes (most votes fill the seats):
+   Ada      6  <- Elected
+   Ben      6  <- Elected
+   Uma      4  <- Elected
+   Val      4
+   Cal      0
+   Wren     0
+
+Winners — Limited Voting, 3 seats:
+   1. Ada   (6 votes)
+   2. Ben   (6 votes)
+   3. Uma   (4 votes)
+   *** the last seat tied on votes (Uma and Val) — decided by lot order.

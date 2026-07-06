@@ -19,6 +19,7 @@ election_description: >-
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [Ada, Ben, Cara]
+lh_only_reason: "BetterVoting breaks this exact tie at RANDOM (head-to-head is also tied), so its winner can't be frozen/reproduced. LH resolves it deterministically by margin then lot — the whole point of the case — so it is LH-only by design."
 options:
   show_matrix: true
 ballots: |-

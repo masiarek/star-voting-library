@@ -1,0 +1,16 @@
+--- SNTV (single non-transferable vote) — 3 winners ---
+ Tabulating 10 ballots (1 vote/voter).
+
+First-choice votes (most votes fill the seats):
+   Uma      4  <- Elected
+   Ada      2  <- Elected
+   Ben      2  <- Elected
+   Cal      2
+   Val      0
+   Wren     0
+
+Winners — SNTV (single non-transferable vote), 3 seats:
+   1. Uma   (4 votes)
+   2. Ada   (2 votes)
+   3. Ben   (2 votes)
+   *** the last seat tied on votes (Ben and Cal) — decided by lot order.

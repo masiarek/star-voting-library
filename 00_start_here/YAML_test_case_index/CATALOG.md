@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 162 elections, 176 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 165 elections, 179 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -124,6 +124,9 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | lot_random_vs_published_jfk7pd_published_order | Lot-decided tie (BV jfk7pd) — following a determinis | 1 | single-race | 2 | STAR | LH-only |
 | lot_tiebreak_bv_order | Lot tiebreak — following BetterVoting's drawn order | 1 | single-race | 2 | STAR | LH-only |
 | lot_tiebreak_published_order | Lot tiebreak — following the new published-lot appro | 1 | single-race | 2 | STAR | LH-only |
+| mmp_block_voting | Multi-member plurality — Block Voting (3 seats): maj | 1 | single-race | 10 | Plurality | LH-only |
+| mmp_limited_voting | Multi-member plurality — Limited Voting (3 seats): m | 1 | single-race | 10 | Plurality | LH-only |
+| mmp_sntv | Multi-member plurality — SNTV (3 seats): the minorit | 1 | single-race | 10 | Plurality | LH-only |
 | monotonicity_irv_after | Non-monotonicity (RCV-IRV) — part 2: raising X makes | 1 | single-race | 34 | IRV | LH-only |
 | monotonicity_irv_before | Non-monotonicity (RCV-IRV) — part 1: baseline, X win | 1 | single-race | 34 | IRV | LH-only |
 | monotonicity_star_after | Monotonicity — STAR counterpart (AFTER — X still win | 1 | single-race | 34 | STAR | LH-only |
@@ -188,7 +191,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 156 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| single-race | 159 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | contested (multi-race) | 20 | bvhchj, dyxrbr, example_tennessee, jfrk9t |
 
 ### By seat class
@@ -198,7 +201,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 | seat class | # races | example elections |
 |---|--:|---|
 | single-winner | 145 | 00_plurality_vs_majority, 01_condorcet_winner, 01_political_left_split, 01a_c2_b1_two-candidates |
-| multi-winner | 31 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss |
+| multi-winner | 34 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss |
 
 ### By ballot type
 
@@ -208,8 +211,8 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 |---|--:|---|
 | score | 137 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
 | ranked | 23 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 03a_stv_3seats |
+| choose-one | 10 | 4h89vj, 6hv7jf, BV_Library_plurality_single_winner, bvhchj |
 | approval | 9 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
-| choose-one | 7 | 4h89vj, 6hv7jf, BV_Library_plurality_single_winner, bvhchj |
 
 ### By character
 
@@ -217,7 +220,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 154 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
+| majoritarian | 157 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
 | proportional | 13 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
 | Condorcet | 9 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
 
@@ -230,21 +233,33 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | STAR | 125 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
 | IRV | 12 | RCV_ballot_example, Whoops_04_ossipoff_centrist_irv, Whoops_05_brams_many_pathologies_irv, center_squeeze_irv |
 | STAR_PR | 11 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03b_star_pr_3seats |
+| Plurality | 10 | 4h89vj, 6hv7jf, BV_Library_plurality_single_winner, bvhchj |
 | Approval | 9 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
 | RankedRobin | 9 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
-| Plurality | 7 | 4h89vj, 6hv7jf, BV_Library_plurality_single_winner, bvhchj |
 | STV | 2 | 03a_stv_3seats, kcf8vf |
 | Range | 1 | range_101_c3_b5 |
 
 ### By backing (BV vs LH-only)
 
-**BV** = reproduced on BetterVoting (has a frozen export). **LH-only** = tabulated only by our engine. Goal: keep LH-only near zero — reproduce cases on BV unless BV genuinely can't (e.g. a deterministic tie-break BV resolves at random). Filter `races.csv` by `backing=LH-only` to find migration candidates.
+**BV** = reproduced on BetterVoting (has a frozen export). **LH-only** = tabulated only by our engine (a migration candidate). **LH-only (exception)** = genuinely can't go to BV (marked `lh_only_reason` in the yaml). Goal: keep plain LH-only near zero — reproduce on BV unless it's a marked exception.
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 127 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| LH-only | 126 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV | 47 | 26khr3, 3494cb, 3w6v4b, 3yr2qd |
+| LH-only (exception) | 4 | dead_heat_lot_tiebreak, mmp_block_voting, mmp_limited_voting, mmp_sntv |
 | BV (no yaml) | 2 | jfk7pd, jfrk9t |
+
+### Genuine LH-only exceptions
+
+Cases that **cannot** be reproduced on BetterVoting — a real reason (missing BV method / non-deterministic tie-break), not a coverage gap:
+
+| Case | Method | Why it can't go to BV |
+|---|---|---|
+| Multi-member plurality — Block Voting (3 sea | Plurality | BetterVoting has no Block Voting / plurality-at-large method — its Plurality is choose-one (single mark), so it can't cast the full-slate (k = seats) ballot Block Voting requires. |
+| Multi-member plurality — Limited Voting (3 s | Plurality | BetterVoting has no Limited Voting method — its Plurality is choose-one (single mark), so it can't cast the k>1 votes-per-voter Limited Voting requires. |
+| Multi-member plurality — SNTV (3 seats): the | Plurality | Comparison companion (kept LH-side with Block/Limited Voting). SNTV itself IS reproducible on BetterVoting — its tally is BV-confirmed as the BV2134 governance Bloc Plurality race (choose-one, top-N). |
+| Ranked Robin — a dead heat that runs the who | RankedRobin | BetterVoting breaks this exact tie at RANDOM (head-to-head is also tied), so its winner can't be frozen/reproduced. LH resolves it deterministically by margin then lot — the whole point of the case — so it is LH-only by design. |
 
 ## How this is organized (for adding cases)
 

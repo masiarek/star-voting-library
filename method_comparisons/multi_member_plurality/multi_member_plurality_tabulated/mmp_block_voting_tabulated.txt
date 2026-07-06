@@ -1,0 +1,15 @@
+--- Block Voting (plurality-at-large) — 3 winners ---
+ Tabulating 10 ballots (3 votes/voter).
+
+Votes (most votes fill the seats):
+   Ada      6  <- Elected
+   Ben      6  <- Elected
+   Cal      6  <- Elected
+   Uma      4
+   Val      4
+   Wren     4
+
+Winners — Block Voting (plurality-at-large), 3 seats:
+   1. Ada   (6 votes)
+   2. Ben   (6 votes)
+   3. Cal   (6 votes)
