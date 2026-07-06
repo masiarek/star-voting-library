@@ -103,7 +103,9 @@ Dispatched automatically from the file's `voting_method` (or from the ballot sty
 
 ## Validation philosophy
 
-The engine is the validator. Instead of crashing on a bad file, it prints a specific, human-readable error and exits cleanly — e.g. a missing `ballots:` block prints the key-components template; a ranked ballot under a score method explains the mismatch and how to fix it; generated `_tabulated.txt` files are refused as input. The **negative** pytest cases assert each malformed fixture produces the right message with no traceback, so the error UX itself is tested.
+There's no separate validation step — **the same engine that tabulates is what catches bad files.** Feed it a malformed election and, instead of a Python traceback, it prints a specific, plain-language error saying what's wrong (and usually how to fix it), then exits cleanly. For example: a missing `ballots:` block prints the key-components template; a ranked ballot under a score method explains the mismatch; a generated `_tabulated.txt` file is refused as input.
+
+This error behavior is itself tested: the **negative** pytest cases feed in deliberately malformed files and assert each one produces the right message with **no traceback** — so the error experience can't silently regress.
 
 ---
 
