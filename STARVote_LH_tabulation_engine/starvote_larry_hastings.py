@@ -1415,10 +1415,22 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             L.append(f"   {why}")
         else:
             L.append(f"Winner — Ranked Robin (RCV-RR): {winner}")
-            L.append(f"   *** {len(leaders)} candidates tie on wins "
-                     f"({', '.join(leaders)}) — a Condorcet cycle. Resolved by total "
-                     "margin, then lot order. (This is where Minimax / Ranked Pairs / "
-                     "Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)")
+            # "Tie for the most wins" is the accurate lead. Only call it a
+            # *Condorcet cycle* when the tied leaders actually beat around a loop;
+            # if they merely DRAW their head-to-heads it's a co-top dead heat, not
+            # a cycle (e.g. two candidates who tie each other and both beat the rest).
+            draw_only = all(l2 in ties[l1]
+                            for l1 in leaders for l2 in leaders if l1 != l2)
+            if draw_only:
+                L.append(f"   *** {len(leaders)} candidates tie for the most wins "
+                         f"({', '.join(leaders)}) — a dead heat (they draw head-to-head, "
+                         "not a cycle). Resolved by total margin, then lot order.")
+            else:
+                L.append(f"   *** {len(leaders)} candidates tie for the most wins "
+                         f"({', '.join(leaders)}) — a Condorcet cycle (no candidate beats "
+                         "all others). Resolved by total margin, then lot order. (This is "
+                         "where Minimax / Ranked Pairs / Schulze differ — see "
+                         "00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)")
         return "\n".join(L)
 
     # On-screen echo is compact by default (house rule), but the file can opt

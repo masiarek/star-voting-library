@@ -115,5 +115,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     3  C          0–0–2         1      +0  —
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 3 candidates tie on wins (A, B, C) — a Condorcet cycle. Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (A, B, C) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```

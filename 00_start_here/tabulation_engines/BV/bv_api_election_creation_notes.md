@@ -30,8 +30,18 @@ The election that **works** has `admin_ids: null`; the one that's **denied** exp
 **Consequences for the test-case workflow:**
 
 - API-created elections are public, listable, and exportable — enough for the reproduce-and-freeze pipeline (create → export → reproduce in LH → freeze `_bv_export.json`).
-- They are **not** UI-administrable from your real login: you cannot edit, close, or **delete** them from the UI. Throwaways linger in `/manage` (e.g. `9tgj9d`, `xb8r6v` labeled "ZZZ DELETE ME") until a BV admin with DB access removes them.
+- They are **not** UI-administrable from your real login: you cannot edit, close, **rename**, or **delete** them from the UI (no API endpoint either). Throwaways linger in `/manage` until a BV admin with DB access removes them.
 - Don't bother setting `admin_ids` in the payload — proven no-op for authz.
+
+**Orphans awaiting BV-admin DB cleanup** (created via the API, undeletable by us):
+
+| bvid | why orphaned |
+|---|---|
+| `9tgj9d`, `xb8r6v` | early throwaways, labeled "ZZZ DELETE ME" |
+| `bwbc6d` | Pet-poll test, created before the Test ID was wired into the title (un-numbered) |
+| `mw9kpp` | Pet-poll test, superseded — its public title carried the old `trash delete test —` junk prefix (since removed) |
+
+**Lesson (why the title guard exists):** because API elections are **public and permanent**, the title must be right on the *first* create — there is no rename or delete. `create_bv_test_election.py` now (a) prepends only the `BV<n>` Test ID (no "trash/delete/test" junk), and (b) runs a pre-check that **blocks junk/placeholder titles** and reminds you the title is permanent + public. Set `BV_ALLOW_JUNK_TITLE=1` only to override deliberately.
 
 ## Ready-to-file BetterVoting GitHub issue
 

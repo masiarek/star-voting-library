@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2132 — Pet poll (STAR): the consensus center Cat wins
+ Tabulating 22 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Dog, Cat, Fish
+     9 ×   Dog > Cat > Fish      (5, 3, 1)
+     7 ×   Fish > Cat      (0, 3, 5)
+     6 ×   Cat > Fish      (0, 5, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Dog                9  Hopeful
+Fish               7  Hopeful
+Cat                6  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Fish              13  Elected
+Dog                9  Rejected
+Cat                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Fish
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

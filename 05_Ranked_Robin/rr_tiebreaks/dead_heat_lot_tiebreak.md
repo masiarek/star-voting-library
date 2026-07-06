@@ -58,9 +58,15 @@ The LH engine and BetterVoting resolve this **differently**, which is the whole 
 
 Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't resolve them and it falls through to a **random** pick — which can't be frozen into a reproducible `_bv_export.json`. So this case documents the **LH** ladder specifically; BetterVoting would agree that Ada and Ben are co-leaders but would not deterministically choose between them. Full write-up: [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
 
-### Known engine-wording nit
+### Engine wording
 
-The winner note currently reads *"2 candidates tie on wins (Ada, Ben) — a Condorcet cycle."* This is a **co-top dead heat**, not a cycle: Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop). The tiebreak logic is correct; only the word "cycle" is imprecise for a 2-tied-and-both-dominant set. Tracked in [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+The winner note distinguishes a dead heat from a real cycle:
+
+```text
+*** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+```
+
+Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop), so the engine says **dead heat**, not "Condorcet cycle" — the latter is reserved for a genuine directed loop (rock-paper-scissors). See [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
 
 ## See also
 

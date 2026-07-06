@@ -64,6 +64,8 @@ import os
 import sys
 import time
 import uuid
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 try:
     import jwt          # PyJWT
@@ -84,6 +86,22 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "_demo_dropbox")
 # below; it's not a secret (it's the owner_id in the frozen _bv_export.json files).
 USER_ID = os.environ.get("BV_USER_ID", "ea09e7c7-b00d-427a-bef8-32ade437d49d")
 TEMPLATE_ID = os.environ.get("BV_TEMPLATE_ID", "pet")
+
+# Ballots are cast CONCURRENTLY (each is an independent voter, so order doesn't
+# matter). A bounded pool keeps us fast without hammering the live server — the
+# serial version waited ~1s per POST (100 ballots ≈ 2-4 min); at 8-wide that's
+# ~15-30s. Bump BV_CONCURRENCY if you're impatient and the server tolerates it,
+# but keep it modest — this is a shared public service.
+CONCURRENCY = max(1, int(os.environ.get("BV_CONCURRENCY", "8")))
+
+# The election title is MEANINGFUL and PUBLIC — these elections are listed on
+# BetterVoting and their name shows on the results page, so it must read like a
+# real election. NO "trash/delete/test" junk. We prepend only the BV Test ID
+# (test_id, e.g. "BV2132") for traceability; the descriptive title carries the
+# rest. Default prefix is empty; set BV_TITLE_PREFIX only if you deliberately want
+# an extra tag. (API-created elections can't be deleted from the UI anyway, so a
+# "delete me" tag was never actionable — and it looked terrible in public.)
+TITLE_PREFIX = os.environ.get("BV_TITLE_PREFIX", "")
 
 # The backend now requires ASYMMETRIC auth: the election's `auth_key` must be a
 # PEM RS256 *public* key, and the identity token is signed with the matching
@@ -122,37 +140,70 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   BV_Library STAR_PR — fractional surplus           -> kk2gxj
 #   NOTA test — None of the Above wins               -> 26khr3
 #   01a_c2_b2 — two candidates, two ballots            -> my82v6
+#   Tennessee capital — Ranked Robin (single race)     -> vqyqkr   (backs case bv2131_…_vqyqkr; RR-only)
 # Their specs live in git history / the case .yaml files.
+#
+# MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
+# max_rankings?, candidates, ballots}, ... ] list INSTEAD of the flat single-race
+# fields. One election, several contests; each voter votes in every race, so all
+# races must have the SAME number of ballots (aligned by voter index). Score
+# ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
+# (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- Tennessee capital — the first RANKED (Ranked Robin) case on BV -----------
-# Textbook center-squeeze: four cities, voters rank by geographic distance,
-# weighted by population. On one ballot set the methods split three ways —
-# plurality -> Memphis, RCV-IRV -> Knoxville, Ranked Robin/Condorcet -> Nashville.
-# BV encodes ranked ballots as RANKS in the score slot: 1 = top choice ... 4 =
-# last (0 = unranked). Candidate order below is fixed; each bloc's rank row is
-# aligned to it. BV has no ballot weights, so each of the 100 voters is cast as a
-# real ballot (expanded from the four blocs).
-_TN_CANDS = ["Memphis", "Nashville", "Chattanooga", "Knoxville"]
-_TN_BLOCS = [
-    (42, [1, 2, 3, 4]),   # Memphis > Nashville > Chattanooga > Knoxville
-    (26, [4, 1, 2, 3]),   # Nashville > Chattanooga > Knoxville > Memphis
-    (15, [4, 3, 1, 2]),   # Chattanooga > Knoxville > Nashville > Memphis
-    (17, [4, 3, 2, 1]),   # Knoxville > Chattanooga > Nashville > Memphis
+# --- BV2132 — Pet poll: four methods, one electorate, THREE winners ------------
+# Our own answer to meta_pets ("What Makes the Best Pet?", 4 methods over the same
+# candidates) — but with MADE-UP ballots tuned so the methods actually disagree.
+# 22 voters, 3 pets (Dog, Cat, Fish), four races (Plurality / RCV-IRV / Approval /
+# STAR). The twist: Cat is the CONDORCET winner (beats Dog 13-9 and Fish 15-7) and
+# wins Approval + STAR, but has the fewest first choices, so Plurality elects the
+# polarizing front-runner Dog and IRV squeezes Cat out (its votes flow to Fish).
+# => Plurality→Dog, IRV→Fish, Approval→Cat, STAR→Cat.  A center-squeeze + spoiler
+# story in one ballot set. Each bloc lists per-method rows aligned to CANDS order:
+#   plurality (1=pick) · irv ranks (1=top…3=last) · approval (0/1) · star (0-5).
+_PET_CANDS = ["Dog", "Cat", "Fish"]
+_PET_BLOCS = [
+    # count, plurality,  irv-ranks, approval,  star        # preference
+    (9, [1, 0, 0], [1, 2, 3], [1, 1, 0], [5, 3, 1]),       # Dog > Cat > Fish
+    (7, [0, 0, 1], [3, 2, 1], [0, 1, 1], [0, 3, 5]),       # Fish > Cat > Dog
+    (6, [0, 1, 0], [3, 1, 2], [0, 1, 1], [0, 5, 3]),       # Cat > Fish > Dog
 ]
-_TN_BALLOTS = [row for n, row in _TN_BLOCS for _ in range(n)]
+def _pet(k):
+    """Expand the k-th per-method row of each bloc into one row per voter."""
+    return [rows[k] for n, *rows in _PET_BLOCS for _ in range(n)]
+_PET_PLUR, _PET_IRV, _PET_APPR, _PET_STAR = _pet(0), _pet(1), _pet(2), _pet(3)
 
 ELECTIONS = [
     {
-        "title": "Tennessee capital — Ranked Robin (RR/Condorcet = Nashville)",
-        "description": "Ranked Robin, 1 winner. The textbook Tennessee example: four cities, voters rank by geographic distance, weighted by population (Memphis 42, Nashville 26, Chattanooga 15, Knoxville 17). Ranked Robin elects the geographic-center consensus, Nashville — the Condorcet winner (beats every rival head-to-head) — while plurality would pick Memphis and RCV-IRV picks Knoxville. First ranked-ballot case created via this script.",
-        "method": "RankedRobin",
-        "num_winners": 1,
-        "max_rankings": 4,
-        "candidates": _TN_CANDS,
-        "ballots": _TN_BALLOTS,
-        "expected": "Nashville (Condorcet winner; IRV -> Knoxville, plurality -> Memphis)",
+        "test_id": "BV2132",
+        "title": "Pet poll: four methods, three winners",
+        "description": "One electorate, three pets (Dog, Cat, Fish), tallied four ways in a single election. Cat is the Condorcet winner (beats Dog 13-9 and Fish 15-7) and wins Approval and STAR — but has the fewest first choices, so choose-one Plurality elects the front-runner Dog and RCV-IRV eliminates Cat first and elects Fish. Result: Plurality→Dog, IRV→Fish, Approval→Cat, STAR→Cat. A made-up, small answer to meta_pets, tuned so the methods actually disagree.",
+        "races": [
+            {"title": "Pets — Choose One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_PLUR},
+            {"title": "Pets — RCV (IRV)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3,
+             "candidates": _PET_CANDS, "ballots": _PET_IRV},
+            {"title": "Pets — Approval", "method": "Approval",
+             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_APPR},
+            {"title": "Pets — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_STAR},
+        ],
+        "expected": "Plurality->Dog ; IRV->Fish ; Approval->Cat ; STAR->Cat  (Condorcet winner Cat squeezed by Plurality & IRV).  Test ID BV2132.",
     },
 ]
+
+
+def _race_specs(spec):
+    """Normalize a spec to a LIST of race specs. Accepts either the multi-race
+    `races: [...]` form or the flat single-race form (method/candidates/ballots)."""
+    if spec.get("races"):
+        return spec["races"]
+    r = {"title": spec["title"], "method": spec.get("method", "STAR"),
+         "num_winners": spec.get("num_winners", 1),
+         "candidates": spec["candidates"], "ballots": spec["ballots"]}
+    if "max_rankings" in spec:
+        r["max_rankings"] = spec["max_rankings"]
+    return [r]
 
 
 def _pp(resp):
@@ -163,37 +214,91 @@ def _pp(resp):
     print(f"    -> HTTP {resp.status_code}  {body}")
 
 
+def _verify_ballot_count(eid, expected):
+    """Post-cast sanity check: GET the election's ballots and compare the count the
+    server actually holds against how many we tried to cast. Non-fatal — if the
+    endpoint 404s or returns an unexpected shape, we say so and move on (you can
+    still confirm nTallyVotes from the UI export)."""
+    url = f"{API}/Election/{eid}/ballots"
+    try:
+        g = requests.get(url, cookies=CREATE_COOKIES, timeout=30)
+    except Exception as ex:
+        print(f"  ballot-count check: GET {url} failed ({ex!r}) — skipped.")
+        return
+    if g.status_code != 200:
+        print(f"  ballot-count check: HTTP {g.status_code} from /ballots — skipped "
+              "(confirm via the UI export's nTallyVotes).")
+        return
+    try:
+        data = g.json()
+    except Exception:
+        print("  ballot-count check: non-JSON response — skipped.")
+        return
+    got = None
+    if isinstance(data, list):
+        got = len(data)
+    elif isinstance(data, dict):
+        for k in ("ballots", "Ballots", "data"):
+            if isinstance(data.get(k), list):
+                got = len(data[k])
+                break
+        if got is None:
+            got = data.get("count") or data.get("total")
+    if got is None:
+        print(f"  ballot-count check: unrecognized /ballots shape "
+              f"({type(data).__name__}) — skipped.")
+    elif got == expected:
+        print(f"  ballot-count check: server holds {got}/{expected} ballots ✓")
+    else:
+        print(f"  ⚠ ballot-count check: server holds {got}, expected {expected} "
+              "— investigate before freezing the export.")
+
+
+def _cid(name):
+    """Fresh unique candidate id. SPECIAL CASE: 'None of the Above' must use the
+    fixed id 'c-nota' (NOTA_ID in star-vote-shared/utils/makeID) — the frontend
+    recognizes NOTA by id, not name."""
+    return 'c-nota' if name.strip().lower() == 'none of the above' else str(uuid.uuid4())
+
+
 def build_payload(template, spec):
-    """Copy the template election object and rewrite its first race to be our
-    3-candidate STAR single-winner poll. Mirrors the doc's 'duplicate pet' recipe."""
+    """Copy the template election and rewrite its race(s) from the spec. Supports
+    one race (flat spec) or several (spec['races']). Mirrors the doc's 'duplicate
+    pet' recipe, cloning the template's race object once per requested race."""
     e = json.loads(json.dumps(template))          # deep copy
     elec = e.get("election") or e.get("Election") or e
     elec.pop("election_id", None)                 # let the backend assign a new id
     elec["owner_id"] = USER_ID
     elec["auth_key"] = PUBLIC_PEM                  # PEM RS256 public key (backend requires)
-    elec["title"] = spec["title"]
+    # Title = "trash delete test — BV<nnn> — <title>". The BV<nnn> Test ID is put
+    # INTO the title so it's actually stored on BV (visible in /manage and the
+    # export), not just in our local `expected` note.
+    tid = spec.get("test_id")
+    title = TITLE_PREFIX + (f"{tid} — " if tid else "") + spec["title"]
+    elec["title"] = title
     elec["description"] = spec["description"]
-    races = elec.get("races") or []
-    if not races:
+    tmpl_races = elec.get("races") or []
+    if not tmpl_races:
         sys.exit("Template has no races[] — pick a different BV_TEMPLATE_ID.")
-    r = races[0]
-    r["title"] = spec["title"]
-    r["voting_method"] = spec.get("method", "STAR")
-    r["num_winners"] = spec.get("num_winners", 1)
-    # Ranked methods (IRV / STV / RankedRobin) validate ballots as 0..max_rankings
-    # (rank, not score: 1 = top choice, 0 = unranked). Set the cap when given so
-    # the copied STAR template doesn't reject rank values on submit.
-    if "max_rankings" in spec:
-        r["max_rankings"] = spec["max_rankings"]
-    r["race_id"] = str(uuid.uuid4())               # fresh race id (don't reuse template's)
-    # Fresh candidates, each with a UNIQUE id (backend rejects duplicate/empty ids).
-    # SPECIAL CASE: "None of the Above" must use the fixed id 'c-nota' (NOTA_ID in
-    # star-vote-shared/utils/makeID) — the frontend recognizes NOTA by id, not name.
-    def _cid(name):
-        return 'c-nota' if name.strip().lower() == 'none of the above' else str(uuid.uuid4())
-    r["candidates"] = [{"candidate_id": _cid(n), "candidate_name": n}
-                       for n in spec["candidates"]]
-    elec["races"] = [r]
+    base = tmpl_races[0]
+
+    races_out = []
+    for rs in _race_specs(spec):
+        r = json.loads(json.dumps(base))           # a fresh clone of the template race
+        r["title"] = rs.get("title", title)
+        r["voting_method"] = rs.get("method", "STAR")
+        r["num_winners"] = rs.get("num_winners", 1)
+        # Ranked methods (IRV / STV / RankedRobin) validate ballots as 0..max_rankings
+        # (rank, not score: 1 = top choice, 0 = unranked). Set the cap when given so
+        # the copied STAR template doesn't reject rank values on submit.
+        if "max_rankings" in rs:
+            r["max_rankings"] = rs["max_rankings"]
+        r["race_id"] = str(uuid.uuid4())           # fresh race id (don't reuse template's)
+        # Fresh candidates, each with a UNIQUE id (backend rejects duplicate/empty ids).
+        r["candidates"] = [{"candidate_id": _cid(n), "candidate_name": n}
+                           for n in rs["candidates"]]
+        races_out.append(r)
+    elec["races"] = races_out
     # NOTE: owner_id makes the election appear in /manage, but it does NOT grant
     # UI admin access — BV's /admin page authorizes off a server-side role binding
     # that only the authenticated (Keycloak) create flow writes, not off the
@@ -223,29 +328,94 @@ def create(spec):
     eid = elec["election_id"]
     print(f"  created election_id = {eid}   ({'https://bettervoting.com/' + eid})")
 
-    # Re-fetch to learn the assigned race_id + candidate ids.
+    # Re-fetch to learn the assigned race_ids + candidate ids (per race).
     g = requests.get(f"{API}/Election/{eid}")
     full = json.loads(g.text)
     felec = full.get("election") or full.get("Election") or full
-    race = felec["races"][0]
-    race_id = race["race_id"]
-    name_to_cid = {c["candidate_name"]: c["candidate_id"] for c in race["candidates"]}
+    rspecs = _race_specs(spec)
+    races_fetched = felec.get("races", [])
+    if len(races_fetched) != len(rspecs):
+        raise RuntimeError(f"expected {len(rspecs)} race(s), server returned "
+                           f"{len(races_fetched)}")
+    # Align by order; one voter votes EVERY race, so ballot counts must match.
+    race_info = []                   # (race_id, cand_names, name->cid, ballots)
+    for rs, rf in zip(rspecs, races_fetched):
+        n2c = {c["candidate_name"]: c["candidate_id"] for c in rf["candidates"]}
+        race_info.append((rf["race_id"], rs["candidates"], n2c, rs["ballots"]))
+    nb = len(race_info[0][3])
+    if any(len(ri[3]) != nb for ri in race_info):
+        raise RuntimeError("all races must have the same number of ballots "
+                           "(one per voter): " + ", ".join(str(len(ri[3])) for ri in race_info))
 
-    # Cast the ballots, one temp voter each.
-    cands = spec["candidates"]
-    for i, row in enumerate(spec["ballots"], start=1):
-        scores = [{"candidate_id": name_to_cid[cands[j]], "score": row[j]}
-                  for j in range(len(cands))]
+    # Cast the ballots. Each is an independent voter (distinct temp_id cookie so
+    # the backend doesn't reject as "already voted"), so we fire them CONCURRENTLY
+    # through a bounded pool and report a compact per-bloc summary. A voter's
+    # ballot carries one `votes` entry PER race.
+    def _sig(idx):                   # per-voter signature across races (for bloc grouping)
+        return tuple(tuple(ri[3][idx - 1]) for ri in race_info)
+
+    def _cast_one(idx):
+        votes = []
+        for race_id, cnames, n2c, rballots in race_info:
+            row = rballots[idx - 1]
+            votes.append({"race_id": race_id,
+                          "scores": [{"candidate_id": n2c[cnames[j]], "score": row[j]}
+                                     for j in range(len(cnames))]})
         body = {"ballot": {
             "election_id": eid,
-            "votes": [{"race_id": race_id, "scores": scores}],
+            "votes": votes,
             "date_submitted": int(time.time() * 1000),
             "status": "submitted",
         }}
-        v = requests.post(f"{API}/Election/{eid}/vote", json=body,
-                          cookies={"temp_id": f"{USER_ID}_voter{i}"})
-        print(f"  vote {i} {row}", end="  ")
-        _pp(v)
+        try:
+            v = requests.post(f"{API}/Election/{eid}/vote", json=body,
+                              cookies={"temp_id": f"{USER_ID}_voter{idx}"}, timeout=30)
+            return (idx, v.status_code, v.status_code == 200, v.text[:200])
+        except Exception as ex:
+            return (idx, None, False, repr(ex))
+
+    def _cast_all(idxs):
+        results = []
+        with ThreadPoolExecutor(max_workers=CONCURRENCY) as pool:
+            futs = [pool.submit(_cast_one, i) for i in idxs]
+            for fut in as_completed(futs):
+                results.append(fut.result())
+        return results
+
+    voters = list(range(1, nb + 1))
+    print(f"  casting {nb} ballots × {len(race_info)} race(s) ({CONCURRENCY}-wide)…")
+    results = _cast_all(voters)
+
+    # One retry (gentle) for any that failed.
+    failed = [i for i, _sc, ok, _b in results if not ok]
+    if failed:
+        print(f"  retrying {len(failed)} failed ballot(s) once…")
+        results += _cast_all(failed)
+
+    # A voter that failed then succeeded on retry counts as OK.
+    ok_idx = {i for i, _sc, ok, _b in results if ok}
+    last = {}
+    for i, sc, ok, b in results:
+        if i not in ok_idx or ok:
+            last[i] = (sc, b)
+
+    # Per-bloc summary keyed by the voter's cross-race signature.
+    want_by_sig = Counter(_sig(i) for i in voters)
+    ok_by_sig = Counter(_sig(i) for i in voters if i in ok_idx)
+    for sig in sorted(want_by_sig, key=lambda s: [-x for row in s for x in row]):
+        label = " | ".join("[" + ",".join(map(str, row)) + "]" for row in sig)
+        mark = "✓" if ok_by_sig[sig] == want_by_sig[sig] else "⚠"
+        print(f"    {ok_by_sig[sig]:>3}/{want_by_sig[sig]} × {label}  {mark}")
+    print(f"  cast {len(ok_idx)}/{nb} ballots OK.")
+    still_bad = [i for i in voters if i not in ok_idx]
+    if still_bad:
+        print(f"  ⚠ {len(still_bad)} ballot(s) still failing after retry:")
+        for i in still_bad[:10]:
+            sc, b = last.get(i, (None, ""))
+            print(f"      voter{i}  HTTP {sc}  {b}")
+
+    # Server-side confirmation: does BV actually hold the ballots we think it does?
+    _verify_ballot_count(eid, nb)
 
     # Save the finished object for promotion into the repo case.
     final = requests.get(f"{API}/Election/{eid}")
@@ -262,10 +432,87 @@ def create(spec):
     return eid
 
 
+def _effective_title(spec):
+    """The exact title BV will store (what the pre-check must judge)."""
+    tid = spec.get("test_id")
+    return TITLE_PREFIX + (f"{tid} — " if tid else "") + spec.get("title", "")
+
+
+def _preflight_test_ids(elections):
+    """PRE-CHECK (before any network call). Elections created via the API are
+    PUBLIC and CANNOT be renamed, closed, or deleted afterward (only a BV admin
+    with DB access can purge them), so the title has to be right the FIRST time.
+    This gate:
+      • requires a BV Test ID (`test_id`, e.g. 'BV2132') — embedded in the title
+        for traceability; missing/malformed/duplicate IDs are flagged;
+      • blocks JUNK/placeholder titles ('trash', 'delete', 'test', 'tbd', 'xxx',
+        'asdf', 'todo', 'zzz', 'foo/bar') — that's how 'trash delete test —' went
+        public on bwbc6d/mw9kpp and can't be undone.
+    Any problem requires an explicit y/N confirmation. Skip non-interactively with
+    BV_ALLOW_NO_TESTID=1 (missing id) / BV_ALLOW_JUNK_TITLE=1 (junk title)."""
+    import re
+    print("  reminder: BV titles are PERMANENT and PUBLIC — API elections can't be "
+          "renamed or deleted. Make each title real.")
+
+    # Junk/placeholder title guard (the thing that actually burned us). Whole-word
+    # match so real titles aren't caught ("test" won't trip "contest"/"latest").
+    JUNK = ("trash", "delete", "test", "tests", "junk", "tbd", "xxx", "asdf",
+            "todo", "zzz", "foobar", "foo", "bar", "dummy", "placeholder")
+    def _junk_hits(title):
+        low = title.lower()
+        return [w for w in JUNK if re.search(rf"\b{re.escape(w)}\b", low)]
+    bad_titles = [(_effective_title(s), _junk_hits(_effective_title(s)))
+                  for s in elections if _junk_hits(_effective_title(s))]
+    if bad_titles:
+        print("\n⚠ PRE-CHECK — these titles look like throwaway/junk names "
+              "(they will be PUBLIC and permanent):")
+        for t, hits in bad_titles:
+            print(f"    • “{t}”   ← {', '.join(hits)}")
+        if os.environ.get("BV_ALLOW_JUNK_TITLE") != "1":
+            try:
+                ans = input("  Publish these titles anyway, on purpose? [y/N] ").strip().lower()
+            except EOFError:
+                ans = ""
+            if ans not in ("y", "yes"):
+                sys.exit("Aborted. Give each election a real, meaningful title "
+                         "(set BV_ALLOW_JUNK_TITLE=1 only if you truly mean it).")
+        print("  Proceeding with those titles.\n")
+
+    missing = [s.get("title", "<untitled>") for s in elections if not s.get("test_id")]
+    odd = [(s.get("test_id"), s.get("title", "<untitled>"))
+           for s in elections
+           if s.get("test_id") and not re.match(r"^BV\w+$", str(s["test_id"]))]
+    dupes = [t for t, c in Counter(s.get("test_id") for s in elections
+                                   if s.get("test_id")).items() if c > 1]
+    for tid, ttl in odd:
+        print(f"  note: test_id {tid!r} on “{ttl}” doesn’t look like 'BV<n>'.")
+    if dupes:
+        print(f"  ⚠ duplicate test_id(s) across this run: {', '.join(map(str, dupes))}")
+    if not missing:
+        return
+    print("\n⚠ PRE-CHECK — these election(s) have NO BV Test ID (test_id, e.g. 'BV2132'):")
+    for t in missing:
+        print(f"    • {t}")
+    print("  The Test ID is embedded in the BV title for traceability in /manage.")
+    if os.environ.get("BV_ALLOW_NO_TESTID") == "1":
+        print("  BV_ALLOW_NO_TESTID=1 set — proceeding un-numbered ON PURPOSE.\n")
+        return
+    try:
+        ans = input("  Create these WITHOUT a BV number, on purpose? [y/N] ").strip().lower()
+    except EOFError:
+        ans = ""
+    if ans not in ("y", "yes"):
+        sys.exit("Aborted. Add a `test_id` (e.g. \"BV2132\") to each election above, "
+                 "or set BV_ALLOW_NO_TESTID=1 to proceed intentionally.")
+    print("  Confirmed — proceeding without a BV number.\n")
+
+
 if __name__ == "__main__":
     print(f"BetterVoting API @ {API}")
     print(f"identity BV_USER_ID={USER_ID}  template={TEMPLATE_ID}")
     print(f"Creating {len(ELECTIONS)} election(s)...\n")
+
+    _preflight_test_ids(ELECTIONS)          # gate: confirm any missing BV Test IDs
 
     summary = []  # (title, eid_or_None, expected)
     for spec in ELECTIONS:

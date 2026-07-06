@@ -99,5 +99,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     2  Ada        0–0–1       0.5      +0  —
 
 Winner — Ranked Robin (RCV-RR): Ben
-   *** 2 candidates tie on wins (Ada, Ben) — a Condorcet cycle. Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```

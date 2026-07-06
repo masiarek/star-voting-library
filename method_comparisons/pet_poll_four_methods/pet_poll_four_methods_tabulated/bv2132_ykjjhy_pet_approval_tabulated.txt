@@ -1,0 +1,53 @@
+======================================================================
+SOURCE FILE:     bv2132_ykjjhy_pet_approval.yaml
+SOURCE MODIFIED: 2026-07-06 17:40:56
+TABULATED FILE:  bv2132_ykjjhy_pet_approval_tabulated.txt
+TABULATED AT:    2026-07-06 17:41:24
+======================================================================
+
+election_title: "BV2132 — Pet poll (Approval): broad support elects Cat"
+election_description: >-
+  One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy).
+  This is the Approval race: each voter approves any number of pets (1 = approve).
+  Cat is approved by everyone except the pure Dog bloc — 22 approvals — so Approval
+  elects Cat, the broadly-acceptable consensus candidate (and Condorcet winner).
+  Same electorate as the Plurality race (Dog wins) and the RCV-IRV race (Fish wins).
+  BV also elects Cat.
+  Live results: https://bettervoting.com/ykjjhy/results
+bv_test_id: BV2132
+bv_election_id: ykjjhy
+bv_results_url: https://bettervoting.com/ykjjhy/results
+voting_method: Approval
+num_winners: 1
+options:
+  collapse_ballots: true
+  count_separator: "×"
+# Approval ballots accept only 0/1. Approvals: Dog bloc approves Dog+Cat; the Fish
+# and Cat blocs both approve Cat+Fish -> Cat 22, Fish 13, Dog 9.
+ballots: |-
+  Dog,Cat,Fish
+  9: 1,1,0
+  13: 0,1,1
+expected_winners:
+  - Cat
+
+# file: bv2132_ykjjhy_pet_approval.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 22 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Dog, Cat, Fish      (1 = approve; 0 / blank / marker = not approved)
+     9 × 1,1,0
+    13 × 0,1,1
+
+   Cat  -- 22 -- Elected
+   Fish -- 13
+   Dog  -- 9
+
+Winner — Approval Voting (single winner)
+  Cat

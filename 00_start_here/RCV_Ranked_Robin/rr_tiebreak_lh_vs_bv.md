@@ -35,15 +35,21 @@ That's why the dead-heat case has **no BetterVoting election**: there is no stab
 - For a case that **turns on the tiebreak**, state which engine's rule you're relying on. Only the **LH** rule (margin → lot) is reproducible from the ballots plus a published lot. If a real BetterVoting election could land on a Copeland tie, its winner may be **random**, not a function of the ballots.
 - When you *want* determinism from a tie, pin `lot_numbers` in the YAML and use the LH tally; the printed winner line names the rung that decided it.
 
-## Engine-wording nit (LH)
+## Engine wording (fixed)
 
-On a tie, the LH winner line currently reads, e.g.:
+The winner line now distinguishes a dead heat from a real cycle. `run_ranked_robin`
+tests whether the tied leaders **draw** their head-to-heads (dead heat) or **beat
+around a loop** (cycle):
 
 ```
-*** 2 candidates tie on wins (Ada, Ben) — a Condorcet cycle. Resolved by total margin, then lot order.
+# co-top dead heat (leaders draw each other, both beat the rest):
+*** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+
+# genuine rock-paper-scissors cycle (directed loop, no Condorcet winner):
+*** 3 candidates tie for the most wins (Rock, Scissors, Paper) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
 ```
 
-Calling a **2-tied-and-both-dominant** set a "Condorcet cycle" is imprecise. A cycle is a beat-*around-the-loop* (A>B>C>A) with no Condorcet winner; the dead-heat set is a **co-top tie** — Ada and Ben both *beat* Cara and *tie* each other. The tiebreak math is correct; only the label is loose. Suggested fix: say "**N candidates tie for the most wins**" and reserve "cycle" for a genuine loop (the true-cycle wording in [ranked_robin_vs_condorcet.md](ranked_robin_vs_condorcet.md) case 2 is correct). The message is emitted by `run_ranked_robin` in `starvote_larry_hastings.py`; if changed, update any test that pins the string.
+Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a genuine loop. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
 
 ## Tested cases
 

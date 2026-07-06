@@ -102,3 +102,22 @@ def test_ranked_robin_aliases_and_cycle(tmp_path):
     assert r.returncode == 0, r.stderr
     assert "Ranked Robin (RCV-RR / Copeland) Method" in r.stdout
     assert "Condorcet cycle" in r.stdout
+
+
+def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
+    """A co-top DEAD HEAT (tied leaders that draw each other and both beat the
+    rest) must be labelled 'dead heat', NOT 'Condorcet cycle' — cycle is reserved
+    for a genuine directed loop. Two indifferent voters (Ada=Ben) create the
+    head-to-head tie; the pre-published lot breaks it to Ada."""
+    f = tmp_path / "dead_heat.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara]\nballots: |-\n"
+        "  Ada,Ben,Cara\n  5,5,0\n  5,5,0\n  4,3,1\n  3,4,1\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "tie for the most wins" in r.stdout
+    assert "dead heat" in r.stdout
+    assert "Condorcet cycle" not in r.stdout
+    assert "Ranked Robin (RCV-RR): Ada" in r.stdout
