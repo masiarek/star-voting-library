@@ -109,6 +109,10 @@ _Last full review: 2026-06-21._
 | **Better elections (video)** | Equal Vote intro; STV / proportional 3-seat example (basis for 03a/03b) | https://youtu.be/C_27pYcjsJs |
 | **FairVote: displaying RCV results** | Best practices for showing RCV-IRV results (round-by-round table / bar series); basis for the display notes in `tabulation_star_vs_irv.md` | https://fairvote.org/how-to-display-rcv-election-results/ |
 | **Center for Civic Design — RCV** | Researched best practices for RCV results display & ballot design | https://civicdesign.org/topics/rcv/ |
+| **Round-robin voting (Wikipedia)** | The *general family* — pairwise/Condorcet ("tournament") methods. The umbrella above Ranked Robin; use for the family, not the specific method | https://en.wikipedia.org/wiki/Round-robin_voting |
+| **Copeland's method (Wikipedia)** | The *algorithm* under Ranked Robin — most head-to-head wins (ties = ½) | https://en.wikipedia.org/wiki/Copeland%27s_method |
+| **Ranked Robin (electowiki)** | The *branded method* definition (name coined by Sara Wolk, Equal Vote, 2021). Community wiki + Equal-Vote-adjacent — cite as definition, not authority; prefer academic sources for critical claims | https://electowiki.org/wiki/Ranked_Robin |
+| **Ranked Robin (Equal Vote)** | Equal Vote's own Ranked Robin page (advocacy framing) | https://www.equal.vote/ranked_robin |
 
 ## Software / code
 

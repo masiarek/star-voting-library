@@ -12,6 +12,16 @@ Because it's computed entirely from the **pairwise matrix** (for each pair, how 
 
 > **Sibling branding — "Consensus Choice."** The same core Condorcet idea is promoted by *Better Choices for Democracy* as **Consensus Choice** (often paired with a "Top 4" open primary front end). It allows equal ranks, compares every pair head-to-head, and is precinct-summable. It differs from Equal Vote's Ranked Robin mainly in packaging and in its **cycle-resolution rule** ("Most Wins, Smallest Loss" vs. RR's sum-of-margins). Treat "Ranked Robin," "Consensus Voting," and "Consensus Choice" as close cousins in the Condorcet family, not identical algorithms.
 
+## Names & family (genus vs. species)
+
+These terms are related but *not* interchangeable — they sit at different levels of generality:
+
+- **Round-robin voting** — the **general family**: any ranked method that compares every pair head-to-head (a.k.a. paired-comparison / tournament / **Condorcet** methods). The umbrella term. → [Round-robin voting (Wikipedia)](https://en.wikipedia.org/wiki/Round-robin_voting)
+- **Copeland's method** — the **algorithm** underneath: most head-to-head wins, ties count ½. → [Copeland's method (Wikipedia)](https://en.wikipedia.org/wiki/Copeland%27s_method)
+- **Ranked Robin (RCV-RR / "Consensus Voting")** — the **branded method**: essentially Copeland plus a defined cycle tiebreak (sum of win margins). The name was coined by Sara Wolk (Equal Vote Coalition) in 2021. → [electowiki](https://electowiki.org/wiki/Ranked_Robin) · [Equal Vote](https://www.equal.vote/ranked_robin)
+
+So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)).
+
 ## How it differs from RCV-IRV (Hare)
 
 | | **RCV-IRV (Hare)** | **Ranked Robin (RCV-RR)** |
