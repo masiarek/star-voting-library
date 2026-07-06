@@ -364,11 +364,14 @@ else is the same.
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
   **Bloc RR (multi-winner):** `num_winners > 1` now elects the **top-N by record**
   (most wins → margin → lot), printing a seats list and flagging a lot-decided
-  last seat — it no longer silently downgrades to one winner. (LH multi-winner
-  coverage: STAR→**Bloc STAR**, Approval→**Approval_Multi_Winner**, RankedRobin→
-  **Bloc RR**, STV, STAR_PR/allocated/sss/rrv. **Gap:** LH has **no multi-winner
-  Plurality** — it errors on `Plurality` + `num_winners>1`, so **Bloc Plurality /
-  SNTV is BV-only** and hand-verified as top-N first choices.)
+  last seat — it no longer silently downgrades to one winner. **Multi-winner
+  Plurality = SNTV / Bloc Plurality** (`run_plurality_multi`): `Plurality` +
+  `num_winners > 1` elects the top-N by first-choice count (ties → lot);
+  single-winner Plurality still routes through the STAR path. So LH multi-winner
+  coverage is now complete for BV's bloc set: STAR→**Bloc STAR**,
+  Approval→**Approval_Multi_Winner**, RankedRobin→**Bloc RR**, Plurality→**SNTV**,
+  plus STV and STAR_PR/allocated/sss/rrv. (The old "LH has no Plurality" caveat is
+  retired — single-winner via STAR path, multi-winner via SNTV.)
   **RR triple-check:** cross-verify RR cases three ways — this native tally,
   BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json` Results), and
   `pref_voting`'s independent Copeland via

@@ -219,7 +219,9 @@ def write_md(rows):
     out.append(f"**{len(rows)} cases** · methods: "
                + ", ".join(f"{m} ({c})" for m, c in sorted(methods.items())) + ".\n")
     out.append("> Multi-race (contested) elections are grouped race-by-race in "
-               "[multirace_elections.md](multirace_elections.md).\n")
+               "[multirace_elections.md](multirace_elections.md). For the faceted "
+               "slice-and-dice over **every** election & race (by ballot type, seat "
+               "class, character, method, backing), see [CATALOG.md](CATALOG.md).\n")
     numbered = [r['TestID'] for r in rows if _test_num(r['TestID']) is not None]
     unnumbered = sum(1 for r in rows if _test_num(r['TestID']) is None)
     out.append(f"**BV-numbered Test IDs:** {', '.join(numbered)}."

@@ -6,7 +6,7 @@
 
 ## Scenario
 
-One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, a
 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
 Hamster), voting ranked ballots. This 3-seat Delegates race uses STV (Droop
 quota = floor(22/4)+1 = 6). The majority (13) meets two quotas and the minority
@@ -71,4 +71,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_bloc_star](pets_gov_bloc_star.md) · [pets_gov_ranked_robin](pets_gov_ranked_robin.md) · [pets_gov_star_pr](pets_gov_star_pr.md)
+More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_bloc_plurality](pets_gov_bloc_plurality.md) · [pets_gov_bloc_star](pets_gov_bloc_star.md) · [pets_gov_ranked_robin](pets_gov_ranked_robin.md) · [pets_gov_star_pr](pets_gov_star_pr.md)

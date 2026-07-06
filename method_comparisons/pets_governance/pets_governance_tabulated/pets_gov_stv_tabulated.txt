@@ -1,19 +1,22 @@
 ======================================================================
 SOURCE FILE:     pets_gov_stv.yaml
-SOURCE MODIFIED: 2026-07-06 18:25:49
+SOURCE MODIFIED: 2026-07-06 19:14:31
 TABULATED FILE:  pets_gov_stv_tabulated.txt
-TABULATED AT:    2026-07-06 18:27:03
+TABULATED AT:    2026-07-06 19:41:15
 ======================================================================
 
 election_title: "Pets Governance — Delegates by STV (3 seats): proportional again"
 scenario_description: |-
-  One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+  One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, a
   13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
   Hamster), voting ranked ballots. This 3-seat Delegates race uses STV (Droop
   quota = floor(22/4)+1 = 6). The majority (13) meets two quotas and the minority
   (9) meets one, so STV elects Dog, Cat (majority) and Bird (minority) — 2 + 1,
   proportional. Like STAR-PR (Bird, Dog, Fish) it seats the minority; the two
   proportional methods differ only on the majority's third pick (Cat vs Fish).
+bv_test_id: BV2134
+bv_election_id: kcf8vf
+bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: STV
 num_winners: 3
 ballots: |-

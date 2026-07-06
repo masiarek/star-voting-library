@@ -1,6 +1,6 @@
 election_title: "Pets Governance — Council by STAR-PR (3 seats): minority earns a seat"
 scenario_description: |-
-  One of five races in the Pets Governance demo (LH-only). Same 22 voters, same
+  One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, same
   scores as the Bloc STAR race — a 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter
   MINORITY (Bird, Rabbit, Hamster). This race fills the 3-seat Council by STAR-PR
   (Allocated Score) — a PROPORTIONAL method. After the majority elects its first
@@ -8,6 +8,9 @@ scenario_description: |-
   result is Bird, Dog, Fish — 2 majority + 1 minority. Same ballots as Bloc STAR
   (which swept all three for the majority): proportional vs majoritarian, side by
   side.
+bv_test_id: BV2134
+bv_election_id: kcf8vf
+bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: allocated
 num_winners: 3
 options:

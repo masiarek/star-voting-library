@@ -122,6 +122,21 @@ def test_ranked_robin_bloc_multiwinner(tmp_path):
         assert name in r.stdout
 
 
+def test_plurality_multiwinner_sntv(tmp_path):
+    """Multi-winner Plurality = SNTV: top-N by first-choice count. It must NOT
+    error (the old missing-feature behavior) and must elect the two most-marked."""
+    f = tmp_path / "sntv.yaml"
+    f.write_text(
+        "voting_method: Plurality\nnum_winners: 2\n"
+        "lot_numbers: [Dog, Cat, Fish, Bird]\nballots: |-\n"
+        "  Dog,Cat,Fish,Bird\n  13: 1,0,0,0\n  9: 0,0,0,1\n  4: 0,1,0,0\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "SNTV" in r.stdout and "2 winners" in r.stdout
+    assert "Dog" in r.stdout and "Bird" in r.stdout
+
+
 def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
     """A co-top DEAD HEAT (tied leaders that draw each other and both beat the
     rest) must be labelled 'dead heat', NOT 'Condorcet cycle' — cycle is reserved

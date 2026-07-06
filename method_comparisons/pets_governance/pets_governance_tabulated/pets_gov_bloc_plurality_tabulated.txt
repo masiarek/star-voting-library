@@ -1,0 +1,14 @@
+--- Plurality (Choose-One / SNTV) Method (2 winners) ---
+ Tabulating 22 ballots (choose-one).
+
+First-choice votes (most votes fill the seats):
+   Dog        13  <- Elected
+   Bird        9  <- Elected
+   Cat         0
+   Fish        0
+   Rabbit      0
+   Hamster     0
+
+Winners — Plurality (SNTV), 2 seats (the 2 most first-choice votes):
+   1. Dog   (13 votes)
+   2. Bird   (9 votes)

@@ -2,15 +2,17 @@
 
 **Auto-generated — do not edit by hand.** Run `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py` to refresh (a pytest fails if it's stale).
 
+> This page is one cut (by method). For the full faceted catalog — slice by ballot type, seat class, single/multi-winner, character, backing — see **[CATALOG.md](CATALOG.md)** (fact tables: [`races.csv`](races.csv), [`elections.csv`](elections.csv)).
+
 Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**169 election files** (139 single-winner, 30 multi-winner) across 13 method(s).
+**171 election files** (140 single-winner, 31 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 109 |
+| STAR | 108 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 8 |
 | Approval | 5 |
@@ -20,11 +22,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 7 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
-| PLURALITY | 4 |
+| PLURALITY | 7 |
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (109)
+## STAR  (108)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -71,7 +73,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/pet_real_bv_election/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml) |
 | [`best_pet_c7_b461`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/best_pet_c7_b461.md) | `01_STAR/pet_real_bv_election/` | 1 | What Makes the Best Pet? → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml) |
-| [`bv15_4h89vj_plurality_abstain`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/bv15_4h89vj_plurality_abstain.md) | `01_STAR/pet_real_bv_election/` | 1 | BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) → _Andre_ | [`.yaml`](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml) |
 | [`flat_scores_abstention_c3_b8`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) | `01_STAR/pet_real_bv_election/` | 1 | BV Abstentions and flat scores (Apple/Banana/Cherry, 8 ballots) → _Banana_ | [`.yaml`](../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml) |
 | [`small_abstention_c2_b5`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md) | `01_STAR/pet_real_bv_election/` | 1 | Equal Support vs Abstention — minimal STAR test (A/B, 5 ballots) → _A_ | [`.yaml`](../../01_STAR/pet_real_bv_election/small_abstention_c2_b5.yaml) |
 | [`01a_c3_b3_more-stars-fewer-voters`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/01a_c3_b3_more-stars-fewer-voters.md) | `01_STAR/runoff_overturns_leader/` | 1 | More stars, fewer voters — the runoff overturns the score leader → _Brownie_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml) |
@@ -237,14 +238,17 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/_main_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 
-## PLURALITY  (4)
+## PLURALITY  (7)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`bv1570_6hv7jf_undecided_plurality`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv1570_6hv7jf_undecided_plurality.md) | `01_STAR/abstain_bugs/` | 1 | BV1570 — undecided plurality election still declares a winner → _Approve_ | [`.yaml`](../../01_STAR/abstain_bugs/bv1570_6hv7jf_undecided_plurality.yaml) |
+| [`bv15_4h89vj_plurality_abstain`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/bv15_4h89vj_plurality_abstain.md) | `01_STAR/pet_real_bv_election/` | 1 | BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) → _Andre_ | [`.yaml`](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml) |
+| [`bv2130_bvhchj_party_plurality`](../../03_STAR_PR/_main/_main_pages/bv2130_bvhchj_party_plurality.md) | `03_STAR_PR/_main/` | 1 | BV2130 — Presidential Board: party alignment (Plurality) → _Democrat_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_bvhchj_party_plurality.yaml) |
 | [`BV_Library_plurality_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_plurality_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Plurality (choose-one): most first-marks wins → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_plurality_single_winner.yaml) |
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
+| [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |
 
 ## RANGE  (1)
 

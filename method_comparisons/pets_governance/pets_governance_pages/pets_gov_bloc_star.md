@@ -6,7 +6,7 @@
 
 ## Scenario
 
-One of five races in the Pets Governance demo (LH-only). 22 voters split into a
+One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). 22 voters split into a
 13-voter MAJORITY ("Furries": Dog, Cat, Fish) and a 9-voter MINORITY ("Others":
 Bird, Rabbit, Hamster). This race fills a 3-seat Council by Bloc STAR — a
 MAJORITARIAN method. The majority's top three sweep every seat: Dog, Fish, Cat.
@@ -147,4 +147,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../split_voting/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_ranked_robin](pets_gov_ranked_robin.md) · [pets_gov_star_pr](pets_gov_star_pr.md) · [pets_gov_stv](pets_gov_stv.md)
+More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_bloc_plurality](pets_gov_bloc_plurality.md) · [pets_gov_ranked_robin](pets_gov_ranked_robin.md) · [pets_gov_star_pr](pets_gov_star_pr.md) · [pets_gov_stv](pets_gov_stv.md)

@@ -1481,6 +1481,61 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     return winners if num_winners > 1 else winner
 
 
+def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
+                        num_winners=2, silent=False, out_path=None):
+    """Multi-winner Plurality — SNTV / Bloc Plurality (single non-transferable
+    vote): each voter marks one candidate; the N candidates with the most
+    first-choice votes win. Ties broken by lot order. (Single-winner Plurality
+    goes through the STAR path, which is equivalent for one seat.)"""
+    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
+    priority = [c for c in (lot_numbers or candidates) if c in candidates]
+    for c in candidates:
+        if c not in priority:
+            priority.append(c)
+    votes = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
+    order = sorted(candidates, key=lambda c: (-votes[c], priority.index(c)))
+    num_winners = max(1, min(int(num_winners or 1), len(candidates)))
+    winners = order[:num_winners]
+    n = len(ballots)
+    abstain = sum(1 for b in ballots if not any(b.get(c, 0) > 0 for c in candidates))
+    cutoff_lot_tie = (num_winners < len(candidates)
+                      and votes[order[num_winners - 1]] == votes[order[num_winners]])
+
+    nw = max((len(c) for c in candidates), default=4)
+    L = [f"--- Plurality (Choose-One / SNTV) Method ({num_winners} winners) ---",
+         f" Tabulating {n} ballots (choose-one"
+         + (f"; {abstain} abstained" if abstain else "") + ").", "",
+         "First-choice votes (most votes fill the seats):"]
+    for c in order:
+        tag = "  <- Elected" if c in winners else ""
+        L.append(f"   {c:<{nw}}  {votes[c]:>4}{tag}")
+    L.append("")
+    L.append(f"Winners — Plurality (SNTV), {num_winners} seats "
+             f"(the {num_winners} most first-choice votes):")
+    for i, c in enumerate(winners, 1):
+        L.append(f"   {i}. {c}   ({votes[c]} votes)")
+    if cutoff_lot_tie:
+        a, b = winners[-1], order[num_winners]
+        L.append(f"   *** the last seat tied on votes ({a} and {b}) — decided by lot order.")
+    report = "\n".join(L)
+    if not silent:
+        hdr = f"--- Plurality (Choose-One / SNTV) Method ({num_winners} winners) ---"
+        win = f"Winners — Plurality (SNTV), {num_winners} seats"
+        print(report.replace(hdr, f"{COLOR_HEADER}{hdr}{COLOR_RESET}"))
+    if out_path is not None:
+        try:
+            Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+            Path(out_path).write_text(strip_ansi(report), encoding="utf-8")
+        except Exception:
+            pass
+    elif file_path:
+        try:
+            write_tabulated_copy(file_path, report)
+        except Exception:
+            pass
+    return winners
+
+
 def condorcet_winner(candidates, ballots):
     """
     Condorcet winner: the candidate who wins every head-to-head pairwise
@@ -2974,6 +3029,14 @@ Memphis,Nashville,Chattanooga,Knoxville
                              lot_numbers=election.get("lot_numbers"),
                              options=election.get("options"),
                              num_winners=(election.get("seats") or 1))
+            sys.exit(0)
+
+        # Multi-winner Plurality = SNTV / Bloc Plurality (top-N first choices).
+        # Single-winner Plurality falls through to the STAR path (equivalent).
+        if _is_plurality and (election.get("seats") or 1) > 1:
+            run_plurality_multi(csv_input, BALLOTS_FILE,
+                                lot_numbers=election.get("lot_numbers"),
+                                num_winners=election.get("seats") or 1)
             sys.exit(0)
 
         if _is_rcv or _ranked_ballots:

@@ -1,0 +1,163 @@
+election_id,title,races,kind,voters,methods,backing
+LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
+bvhchj,Presidential Board Election,2,contested (multi-race),102,"Plurality, STAR_PR",BV
+dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
+jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
+kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
+ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
+26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
+3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
+3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
+3yr2qd,Block STAR,1,single-race,3,STAR,BV
+4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
+6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
+6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
+7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
+8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
+9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
+9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
+LH:00_c3_b3_bloc-baseline-2-seats,"Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)",1,single-race,3,STAR,LH-only
+LH:00_plurality_vs_majority,Plurality vs Majority — most votes isn't more than half,1,single-race,100,STAR,LH-only
+LH:01_c4_b2_bloc-star-2-seats,Bloc STAR Voting: 2-Seat Committee Election,1,single-race,2,STAR,LH-only
+LH:01_condorcet_winner,Condorcet winner exists — Ranked Robin elects it,1,single-race,5,RankedRobin,LH-only
+LH:01_political_left_split,Spoiler — a split coalition hands the seat to the minority,1,single-race,100,STAR,LH-only
+LH:01a_c2_b1_two-candidates,The simplest possible STAR Voting example,1,single-race,1,STAR,LH-only
+LH:01a_c3_b3_more-stars-fewer-voters,"More stars, fewer voters — the runoff overturns the score leader",1,single-race,3,STAR,LH-only
+LH:01b_c2_b2_two-candidates,"Again, very similar - this time second ballot is 5 and 0",1,single-race,2,STAR,LH-only
+LH:01b_c3_b9_overturn-holds-at-scale,The same overturn at scale — 67% to 33%,1,single-race,9,STAR,LH-only
+LH:01c_c2_b3_two-candidates,"Equal support example (""I like both flavors"")",1,single-race,3,STAR,LH-only
+LH:02_c5_b5_leader-overturned,Five candidates — the score leader is overturned in the runoff,1,single-race,5,STAR,LH-only
+LH:02_cycle_no_condorcet,No Condorcet winner (a cycle) — Ranked Robin still elects one,1,single-race,7,RankedRobin,LH-only
+LH:02_icecream_chocolate_split,"Spoiler — chocolate's majority splits, vanilla steals the win",1,single-race,100,STAR,LH-only
+LH:02a_c3_b1_three-candidates,"Three candidates, one ballot - single-winner STAR",1,single-race,1,STAR,LH-only
+LH:02a_c5_b63_proportional-allocated-score,Proportional STAR — Allocated Score Voting,1,single-race,63,STAR_PR,LH-only
+LH:02b_c3_b2_three-candidates,"Three candidates, two ballots - single-winner STAR",1,single-race,2,STAR,LH-only
+LH:02b_c5_b63_proportional-sss,Proportional STAR — Sequentially Spent Score,1,single-race,63,STAR_PR,LH-only
+LH:02c_c5_b63_proportional-rrv,Proportional — Reweighted Range Voting,1,single-race,63,STAR_PR,LH-only
+LH:03_c7_b3_ice-cream-live,Ice Cream — Flavor of the Year (the real recorded race),1,single-race,3,STAR,LH-only
+LH:03_lunch_veggie_vs_meat,"Spoiler — the veggie majority splits, the burger wins the lunch vote",1,single-race,100,STAR,LH-only
+LH:03_real_record0_c6_b5,No Condorcet winner and Ranked Robin,1,single-race,5,RankedRobin,LH-only
+LH:03a_c3_b3_style-bullet-vote,Voting styles — a valid STAR bullet vote (3 candidates),1,single-race,3,STAR,LH-only
+LH:03a_stv_3seats,"STV — 3 seats, 7 candidates (proportional RCV)",1,single-race,100,STV,LH-only
+LH:03b_c3_b3_1_style-protest-vote,Voting styles — low-score ballots,1,single-race,3,STAR,LH-only
+LH:03b_c3_b3_2_expand_style-protest-vote,Voting styles — low-score ballots (continued),1,single-race,3,STAR,LH-only
+LH:03b_star_pr_3seats,Proportional STAR — same 3-seat electorate as the STV demo,1,single-race,100,STAR_PR,LH-only
+LH:03c_c6_b8_style-gallery,Voting styles — eight ways to fill out one 5-star ballot,1,single-race,8,STAR,LH-only
+LH:04_c4_b3_runoff-confirms-leader,The control case — here the runoff CONFIRMS the score leader,1,single-race,3,STAR,LH-only
+LH:04_star_wars_vote_split,The Voting Dilemma — Skywalker & Leia split the Rebel vote,1,single-race,100,STAR,LH-only
+LH:04b_c4_b3_display-options-all,All options demo,1,single-race,3,STAR,LH-only
+LH:05_c3_b5_low-scores-bv1265,"Low scores, switched winner — the popover example (BetterVoting BV1265)",1,single-race,5,STAR,LH-only
+LH:05a_c5_b3_unanimous-ballots,Unanimous ballots (five candidates),1,single-race,3,STAR,LH-only
+LH:05a_residual_split_bullet-voting,STAR's residual split — a coalition bullet-votes itself apart,1,single-race,100,STAR,LH-only
+LH:05b_residual_split_expressive-fix,"The cure — score your ally, and STAR's split disappears",1,single-race,100,STAR,LH-only
+LH:06a_c9_b3_large-field-equal-support,"Large field (9 candidates) — STAR scales, and Equal Support decides",1,single-race,3,STAR,LH-only
+LH:06b_c9_runoff-overturns-leader,Large field (9 candidates) — the runoff OVERTURNS the score leader,1,single-race,3,STAR,LH-only
+LH:09_c4_b100_tennessee-capital,Tennessee Capital — classic STAR example,1,single-race,100,STAR,LH-only
+LH:BV_Library_approval_single_winner,BV parity — Approval: most approvals wins (single winner),1,single-race,10,Approval,LH-only
+LH:BV_Library_plurality_single_winner,BV parity — Plurality (choose-one): most first-marks wins,1,single-race,14,Plurality,LH-only
+LH:BV_Library_ranked_robin_single_winner,BV parity — Ranked Robin: Condorcet winner (equal ranks allowed),1,single-race,11,RankedRobin,LH-only
+LH:BV_Library_ranked_robin_ties,BV parity — Ranked Robin: Copeland tie broken by tiebreak order,1,single-race,6,RankedRobin,LH-only
+LH:BV_Library_star_condorcet_winner,BV parity — STAR: highest-scoring Condorcet winner,1,single-race,10,STAR,LH-only
+LH:BV_Library_star_pr_basic_two_seats,BV parity — STAR_PR (Allocated Score): basic two-seat allocation,1,single-race,10,STAR_PR,LH-only
+LH:BV_Library_star_pr_fractional_surplus,BV parity — STAR_PR (Allocated Score): fractional surplus reweighting,1,single-race,12,STAR_PR,LH-only
+LH:BV_Library_star_pr_voters_fewer_than_seats,BV parity — STAR_PR (Allocated Score): fewer voters than seats,1,single-race,2,STAR_PR,LH-only
+LH:BV_Library_star_runnerup_tie,"BV parity — STAR: runner-up tie, Allison wins",1,single-race,10,STAR,LH-only
+LH:BV_Library_star_runoff,"BV parity — STAR: runoff, lower total wins the runoff",1,single-race,2,STAR,LH-only
+LH:BV_Library_star_runoff_score_tie_five_star,"BV parity — STAR: runoff & score tie, five-star tiebreaker",1,single-race,2,STAR,LH-only
+LH:BV_Library_star_runoff_tie_score_resolves,BV parity — STAR: runoff tie broken by score,1,single-race,2,STAR,LH-only
+LH:Black_Curtain_01_c3_b5_hidden-consensus,The Black Curtain,1,single-race,5,STAR,LH-only
+LH:Black_Curtain_01a_c3_b5_approval,The Black Curtain,1,single-race,5,Approval,LH-only
+LH:Black_Curtain_02_c3_b5_near-clones,The Black Curtain,1,single-race,5,STAR,LH-only
+LH:Black_Curtain_03_c3_b5_polarized-on-cal,The Black Curtain,1,single-race,5,STAR,LH-only
+LH:Black_Curtain_04_c4_b5_four-candidates,The Black Curtain,1,single-race,5,STAR,LH-only
+LH:Flat_scores_ties_01_baseline_clean,Flat scores 01 — clean top two (works-fine baseline),1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_02_runoff_tie_2cand,"Flat scores 02 — runoff tie, two candidates (everyone equal)",1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_03_runoff_tie_split,"Flat scores 03 — runoff tie, an even 1-1 split",1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_04_scoring_tie_2way,Flat scores 04 — scoring-round tie for the 2nd finalist slot (2-way),1,single-race,3,STAR,LH-only
+LH:Flat_scores_ties_05_scoring_tie_3way_xmyf7k,Flat scores 05 — scoring-round 3-way tie (BV555 /,1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_06_scoring_tie_4way,Flat scores 06 — scoring-round 4-way tie (ties at every step),1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_07_fully_flat,Flat scores 07 — fully flat ballots (the maximal tie + abstention trap),1,single-race,2,STAR,LH-only
+LH:Flat_scores_ties_08_all_flat_zero_count,Flat scores 08 — every ballot flat (BetterVoting counts 0),1,single-race,5,STAR,LH-only
+LH:RCV_ballot_example,RCV-IRV — a basic ranked-ballot example (3 candidates),1,single-race,100,IRV,LH-only
+LH:Whoops_01_tennessee_three_winners,"Whoops 01 — same ballots, three methods, three winners (Tennessee)",1,single-race,100,STAR,LH-only
+LH:Whoops_02_star_misses_condorcet,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),1,single-race,100,STAR,LH-only
+LH:Whoops_03_condorcet_cycle_rps,"Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)",1,single-race,100,STAR,LH-only
+LH:Whoops_04_ossipoff_centrist_irv,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),1,single-race,303,IRV,LH-only
+LH:Whoops_05_brams_many_pathologies_irv,Whoops 05 — many IRV pathologies in one election (Brams),1,single-race,21,IRV,LH-only
+LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minimal reconciliation case,1,single-race,6,STAR,LH-only
+LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
+LH:approval_bloc_2seats_c4_b6,"Bloc Approval — 2 seats, majority sweep",1,single-race,6,Approval,LH-only
+LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,single-race,5,Approval,LH-only
+LH:center_squeeze_irv,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),1,single-race,27,IRV,LH-only
+LH:center_squeeze_star,Center squeeze — STAR elects the consensus (Center),1,single-race,27,STAR,LH-only
+LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),1,single-race,998,STAR,LH-only
+LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
+LH:dead_heat_lot_tiebreak,Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only),1,single-race,4,RankedRobin,LH-only
+LH:dead_rung_scoring_dead_cap2,"Dead rung — scoring round, dead five-star rung, cap 2",1,single-race,2,STAR,LH-only
+LH:dead_rung_scoring_dead_cap3,"Dead rung — scoring round, dead five-star rung, cap 3",1,single-race,2,STAR,LH-only
+LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung, cap 4",1,single-race,2,STAR,LH-only
+LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
+LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
+LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
+LH:irv_district_A,Summability demo — RCV-IRV district A (B wins),1,single-race,13,IRV,LH-only
+LH:irv_district_B,Summability demo — RCV-IRV district B (B wins),1,single-race,13,IRV,LH-only
+LH:lackner_skowron_shadow_bloc_star_c7_b12,Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR,LH-only
+LH:lackner_skowron_shadow_star_pr_c7_b12,Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR_PR,LH-only
+LH:lackner_skowron_shadow_star_pr_rrv_c7_b12,Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV,1,single-race,12,STAR_PR,LH-only
+LH:lot_random_vs_published_jfk7pd_bv_order,Lot-decided tie (BV jfk7pd) — following BetterVoting's random draw,1,single-race,2,STAR,LH-only
+LH:lot_random_vs_published_jfk7pd_published_order,Lot-decided tie (BV jfk7pd) — following a deterministic published order,1,single-race,2,STAR,LH-only
+LH:lot_tiebreak_bv_order,Lot tiebreak — following BetterVoting's drawn order,1,single-race,2,STAR,LH-only
+LH:lot_tiebreak_published_order,Lot tiebreak — following the new published-lot approach,1,single-race,2,STAR,LH-only
+LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,1,single-race,34,IRV,LH-only
+LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only
+LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still wins),1,single-race,34,STAR,LH-only
+LH:monotonicity_star_before,Monotonicity — STAR counterpart (BEFORE — X wins),1,single-race,34,STAR,LH-only
+LH:options_examples,Display-options reference — every reporting toggle (STAR),1,single-race,100,STAR,LH-only
+LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
+LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
+LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
+LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
+LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
+LH:star_ala_approval,STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot,1,single-race,8,STAR,LH-only
+LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals add up),1,single-race,6,STAR,LH-only
+LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only
+LH:star_district_B,Summability demo — STAR district B (Oak wins — a runoff reversal),1,single-race,3,STAR,LH-only
+LH:three_way_dead_rung_A,"Three-way dead-rung tie — published order A,B,C elects A",1,single-race,3,STAR,LH-only
+LH:three_way_dead_rung_B,"Three-way dead-rung tie — published order B,C,A elects B",1,single-race,3,STAR,LH-only
+LH:three_way_dead_rung_C,"Three-way dead-rung tie — published order C,A,B elects C",1,single-race,3,STAR,LH-only
+LH:three_winners_cw_score_runoff,"Three notions of ""winner"" disagree — Condorcet, Score, and Runoff",1,single-race,5,STAR,LH-only
+LH:tie_break_01_scoring_five_star_breaks,"Tie-break 01 — scoring-round tie, FIVE-STAR breaks it (a 5 exists)",1,single-race,2,STAR,LH-only
+LH:tie_break_02_scoring_no_fives_to_lot,"Tie-break 02 — scoring-round tie, NO fives, five-star is a dead rung → LOT",1,single-race,2,STAR,LH-only
+LH:tie_break_03_runoff_no_fives_to_lot,"Tie-break 03 — runoff tie, score tied, NO fives → LOT",1,single-race,2,STAR,LH-only
+LH:tie_break_04_runoff_five_star_breaks,"Tie-break 04 — runoff tie, score tied, FIVE-STAR breaks it (a 5 exists)",1,single-race,2,STAR,LH-only
+LH:tie_break_05_scoring_five_star_vs_adversarial_lot,"Dead rung 01 — scoring tie, five-star rung ALIVE",1,single-race,5,STAR,LH-only
+LH:tie_break_06_scoring_dead_rung_adversarial_lot,"Dead rung 02 — same tie, but nobody scored a 5",1,single-race,5,STAR,LH-only
+LH:tie_break_07_runoff_five_star_vs_adversarial_lot,Dead rung 03 — runoff tie broken by five-star,1,single-race,2,STAR,LH-only
+LH:tie_break_08_runoff_dead_rung_adversarial_lot,"Dead rung 04 — runoff tie, nobody scored a 5, lot decides",1,single-race,2,STAR,LH-only
+LH:tie_break_09_five_star_tied_nonzero,Dead rung 05 — five-star rung alive but non-separating,1,single-race,2,STAR,LH-only
+LH:vote_splitting,Vote splitting — two chocolates split the majority,1,single-race,36,STAR,LH-only
+LH:vote_splitting2,Vote splitting — two chocolates split the majority,1,single-race,360,STAR,LH-only
+LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single-race,21,STAR,LH-only
+LH:vote_splitting_scenario1_spoiler,Vote splitting — scenario 1 of 3 — the spoiler strikes,1,single-race,90,STAR,LH-only
+LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway),1,single-race,36,STAR,LH-only
+LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
+bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
+btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
+d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
+dkj9dx,"BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",1,single-race,16,STAR,BV
+dq2dmm,BV Abstentions and flat scores,1,single-race,8,STAR,BV
+ff6mk3,BV135 - Approval 101 — most approvals wins,1,single-race,5,Approval,BV
+fk38pk,BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / simple),1,single-race,3,STAR,BV
+jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
+jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV
+kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV
+my82v6,"01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",1,single-race,2,STAR,BV
+pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
+r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
+r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
+rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
+tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
+vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
+xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
+yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
+yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV

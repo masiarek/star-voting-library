@@ -35,6 +35,19 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Pets II — Approval | Approval | 4 | **Bird** |
 | Pets II — STAR | STAR | 4 | **Cat** |
 
+## BV2134 — Pets Governance: six positions, six methods
+
+**Election** [`kcf8vf`](https://bettervoting.com/kcf8vf/results) · **6 races** · **22 ballots** · [frozen export](../../method_comparisons/pets_governance/pets_gov_bv2134_kcf8vf_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Town Council — Bloc STAR (3 seats) | STAR | 6 | **Dog, Fish, Cat** |
+| Town Council — STAR-PR (3 seats) | STAR_PR | 6 | **Dog, Bird, Fish** |
+| Advisory Committee — Approval (2 seats) | Approval | 6 | **Dog, Cat** |
+| Mayor — Ranked Robin (1 seat) | RankedRobin | 6 | **Dog** |
+| Delegates — STV (3 seats) | STV | 6 | **Dog, Bird, Cat** |
+| Neighborhood Reps — Bloc Plurality / SNTV (2 seats) | Plurality | 6 | **Dog, Bird** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

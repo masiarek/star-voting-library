@@ -1,0 +1,28 @@
+election_title: "Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each"
+scenario_description: |-
+  One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed).
+  Same 22 voters — a 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY
+  (Bird, Rabbit, Hamster). This 2-seat Neighborhood Reps race uses choose-one Bloc
+  Plurality (SNTV): each voter marks one pet, the two most-marked win. The majority
+  concentrates on Dog (13) and the minority on Bird (9), so the seats split Dog +
+  Bird — one of each. SNTV lands ~proportional here because each faction rallies
+  behind a single champion (contrast Bloc Approval, which gave the majority both
+  seats). BV also elects Dog, Bird.
+bv_test_id: BV2134
+bv_election_id: kcf8vf
+bv_results_url: https://bettervoting.com/kcf8vf/results
+voting_method: Plurality
+num_winners: 2
+lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Dog,Cat,Fish,Bird,Rabbit,Hamster
+  13: 1,0,0,0,0,0
+  9: 0,0,0,1,0,0
+expected_winners:
+  - Dog
+  - Bird
+
+# file: pets_gov_bloc_plurality.yaml

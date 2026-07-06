@@ -1,11 +1,14 @@
 election_title: "Pets Governance — Committee by Approval (2 seats): majority again"
 scenario_description: |-
-  One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+  One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, a
   13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
   Hamster). This race fills a 2-seat Committee by multi-winner Approval (each voter
   approves their own party's pets). Bloc Approval is MAJORITARIAN: the two most-
   approved are Dog and Cat (13 each), both majority — the minority is shut out
   again. Compare with the proportional STAR-PR / STV races on the same electorate.
+bv_test_id: BV2134
+bv_election_id: kcf8vf
+bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: Approval_Multi_Winner
 num_winners: 2
 options:

@@ -50,6 +50,18 @@ if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_
   fi
 fi
 
+# Refresh the faceted catalog (CATALOG.md + races.csv + elections.csv) and stage
+# it. The single slice-and-dice view over every election & race. Never blocks.
+if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" ]; then
+  if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" >/dev/null 2>&1; then
+    git add "$ROOT/00_start_here/YAML_test_case_index/CATALOG.md" \
+            "$ROOT/00_start_here/YAML_test_case_index/races.csv" \
+            "$ROOT/00_start_here/YAML_test_case_index/elections.csv" 2>/dev/null || true
+  else
+    echo "pre-commit: catalog refresh failed — skipping (commit not blocked)."
+  fi
+fi
+
 # If pytest isn't installed, don't block the commit — just say how to get it.
 if ! "$PY" -c "import pytest" >/dev/null 2>&1; then
   echo "pre-commit: pytest not installed for $PY — skipping tests."

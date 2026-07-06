@@ -131,6 +131,10 @@ def render(rows):
     out.append("**Auto-generated — do not edit by hand.** "
                "Run `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py` to refresh "
                "(a pytest fails if it's stale).\n")
+    out.append("> This page is one cut (by method). For the full faceted catalog — slice "
+               "by ballot type, seat class, single/multi-winner, character, backing — see "
+               "**[CATALOG.md](CATALOG.md)** (fact tables: [`races.csv`](races.csv), "
+               "[`elections.csv`](elections.csv)).\n")
     out.append("Election YAMLs live in many folders (the test harnesses glob specific "
                "ones, so they're indexed *in place*, not moved). Each file declares a "
                "`voting_method` and `num_winners`; this catalog groups them so you can "

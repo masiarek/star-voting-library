@@ -8,7 +8,7 @@
 
 ## Scenario
 
-One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, a
 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
 Hamster), voting ranked ballots. This single-seat Mayor race uses Ranked Robin
 (RCV-RR / Copeland). Because the 13-voter majority ranks Dog first and outnumbers
@@ -91,4 +91,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_bloc_star](pets_gov_bloc_star.md) · [pets_gov_star_pr](pets_gov_star_pr.md) · [pets_gov_stv](pets_gov_stv.md)
+More cases in this set: [pets_gov_approval](pets_gov_approval.md) · [pets_gov_bloc_plurality](pets_gov_bloc_plurality.md) · [pets_gov_bloc_star](pets_gov_bloc_star.md) · [pets_gov_star_pr](pets_gov_star_pr.md) · [pets_gov_stv](pets_gov_stv.md)

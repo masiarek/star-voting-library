@@ -18,12 +18,12 @@ election:
     turnout. The winner is right; the displayed voter count is short by exactly
     the number of abstentions.
 
-    Twelve ballots, two candidates:
+    Twelve ballots, two candidates (choose-one):
 
       Andre,Blake
-      5,0   × 5   Andre  (a choose-one vote for Andre)
-      0,5   × 2   Blake  (a choose-one vote for Blake)
-      -,-   × 5   blank  — true abstentions (no score for anyone)
+      1,0   × 5   Andre  (a choose-one vote for Andre)
+      0,1   × 2   Blake  (a choose-one vote for Blake)
+      -,-   × 5   blank  — true abstentions (no vote for anyone)
 
     BetterVoting's own summaryData (in the frozen export) counts it CORRECTLY:
     nTallyVotes = 7, nAbstentions = 5 (7 + 5 = 12 cast). Andre 5, Blake 2 -> Andre
@@ -31,15 +31,12 @@ election:
     the 5 abstentions / the 12-ballot total — it reports the 7 as if that were
     turnout.
 
-    Why this file is STAR, not Plurality: the LH engine has NO standalone
-    Plurality method (its methods are STAR / Bloc / SSS / RRV / Allocated, plus
-    auto RCV-IRV / Approval / Ranked Robin). With two candidates and choose-one
-    ballots every reasonable method elects the plurality leader, so we model each
-    "vote for X" as a STAR 5/0 ballot. STAR, Approval, and Choose-One Plurality
-    all name Andre here (no divergence). The point is the COUNT, and STAR's
-    self-reconciling runoff line prints exactly the accounting #740 is missing:
-    "12 ballots cast − 5 Equal Support = 7 voters with a preference." That runoff
-    line IS the "stats for nerds" turnout breakdown #740 asks BetterVoting to add.
+    This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
+    version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
+    no Plurality method — it does: single-winner Plurality tabulates via the STAR
+    path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
+    accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
+    preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
 
   options:
     show_description: false
@@ -57,16 +54,16 @@ election:
   - race_id: '0'
     race_description: ""
     num_winners: 1
-    voting_method: STAR
+    voting_method: Plurality
     ballots: |-
       Andre,Blake
-      5,0
-      5,0
-      5,0
-      5,0
-      5,0
-      0,5
-      0,5
+      1,0
+      1,0
+      1,0
+      1,0
+      1,0
+      0,1
+      0,1
       -,-
       -,-
       -,-
