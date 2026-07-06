@@ -1,0 +1,47 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 22 ballots (ranked ballots).
+
+Ballots:
+    13 × Dog > Cat > Fish > Bird > Rabbit > Hamster
+     9 × Bird > Rabbit > Hamster > Fish > Cat > Dog
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Dog      beats Cat       13 –  9
+   Dog      beats Fish      13 –  9
+   Dog      beats Bird      13 –  9
+   Dog      beats Rabbit    13 –  9
+   Dog      beats Hamster   13 –  9
+   Cat      beats Fish      13 –  9
+   Cat      beats Bird      13 –  9
+   Cat      beats Rabbit    13 –  9
+   Cat      beats Hamster   13 –  9
+   Fish     beats Bird      13 –  9
+   Fish     beats Rabbit    13 –  9
+   Fish     beats Hamster   13 –  9
+   Bird     beats Rabbit    22 –  0
+   Bird     beats Hamster   22 –  0
+   Rabbit   beats Hamster   22 –  0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+            |     Dog      |    Cat      |    Fish     |    Bird     |   Rabbit    |  Hamster    |
+--------------------------------------------------------------------------------------------------
+      Dog > |     ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+      Cat > |  9 -  0 - 13 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+     Fish > |  9 -  0 - 13 | 9 -  0 - 13 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+     Bird > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 |    ---      |22 -  0 -  0 |22 -  0 -  0 |
+   Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      |22 -  0 -  0 |
+  Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 -  0 - 22 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Dog        5–0–0         5     +20  Cat, Fish, Bird, Rabbit, Hamster
+    2  Cat        4–1–0         4     +12  Fish, Bird, Rabbit, Hamster
+    3  Fish       3–2–0         3      +4  Bird, Rabbit, Hamster
+    4  Bird       2–3–0         2     +32  Rabbit, Hamster
+    5  Rabbit     1–4–0         1     -12  Hamster
+    6  Hamster    0–5–0         0     -56  —
+
+Winner — Ranked Robin (RCV-RR): Dog
+   beats every opponent head-to-head — the Condorcet winner.

@@ -82,23 +82,41 @@ def _race(d):
 
 
 def _ballot_shape(race):
-    """(n_candidates, n_ballot_rows) parsed from the ballots block string."""
+    """(n_candidates, n_voters) parsed from the ballots block string.
+
+    Counts VOTERS, not lines: a weighted row like `9: 5,3,1` or `42:A>B>C` is 9 /
+    42 ballots, not one. Handles both score ballots (CSV with a candidate header)
+    and ranked ballots (`A>B>C`, no header). A row may carry only markers (e.g.
+    `-,-` — a blank/abstention ballot); it is still a cast ballot and counts."""
     b = race.get("ballots")
     if not isinstance(b, str):
         return ("", "")
-    lines = [ln.split("#", 1)[0].strip() for ln in b.splitlines()]
-    lines = [ln for ln in lines if ln]
-    if not lines:
+    raw = [ln.split("#", 1)[0].strip() for ln in b.splitlines()]
+    raw = [ln for ln in raw if ln]
+    if not raw:
         return ("", "")
-    header = lines[0]
-    n_cand = len([c for c in header.split(",") if c.strip()])
-    # Ballot rows = every non-empty line after the header. A row may carry only
-    # markers (e.g. "-,-" or "~,~" — a blank/abstention ballot with no digit); it
-    # is still a CAST ballot and must be counted. (Counting only digit-bearing rows
-    # would drop abstentions — the very undercount bettervoting#740 is about.)
-    n_rows = sum(1 for ln in lines[1:]
-                 if any(cell.strip() for cell in ln.split(",")))
-    return (n_cand, n_rows)
+
+    def _weight(ln):
+        m = re.match(r"^\s*(\d+)\s*[:xX×]", ln)
+        return int(m.group(1)) if m else 1
+
+    def _strip_weight(ln):
+        return re.sub(r"^\s*\d+\s*[:xX×]\s*", "", ln)
+
+    if any(">" in ln for ln in raw):          # ranked ballots — no header line
+        rows = raw
+        cands = set()
+        for ln in rows:
+            for tok in _strip_weight(ln).split(">"):
+                t = tok.strip()
+                if t:
+                    cands.add(t)
+        n_cand = len(cands)
+    else:                                     # score ballots — first line is the header
+        n_cand = len([c for c in raw[0].split(",") if c.strip()])
+        rows = raw[1:]
+    n_voters = sum(_weight(ln) for ln in rows)
+    return (n_cand, n_voters)
 
 
 def _test_num(test_id):
@@ -200,6 +218,8 @@ def write_md(rows):
            "QA (UI, roles, archive…) that has no YAML here.\n"]
     out.append(f"**{len(rows)} cases** · methods: "
                + ", ".join(f"{m} ({c})" for m, c in sorted(methods.items())) + ".\n")
+    out.append("> Multi-race (contested) elections are grouped race-by-race in "
+               "[multirace_elections.md](multirace_elections.md).\n")
     numbered = [r['TestID'] for r in rows if _test_num(r['TestID']) is not None]
     unnumbered = sum(1 for r in rows if _test_num(r['TestID']) is None)
     out.append(f"**BV-numbered Test IDs:** {', '.join(numbered)}."

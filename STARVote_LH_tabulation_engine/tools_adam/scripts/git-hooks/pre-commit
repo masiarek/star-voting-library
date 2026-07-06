@@ -39,6 +39,17 @@ if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence
   fi
 fi
 
+# Refresh the multi-race (contested elections) index from the frozen exports and
+# stage it, so multirace_elections.md always matches the committed cases. Never
+# blocks the commit.
+if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" ]; then
+  if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" >/dev/null 2>&1; then
+    git add "$ROOT/00_start_here/YAML_test_case_index/multirace_elections.md" 2>/dev/null || true
+  else
+    echo "pre-commit: multirace index refresh failed — skipping (commit not blocked)."
+  fi
+fi
+
 # If pytest isn't installed, don't block the commit — just say how to get it.
 if ! "$PY" -c "import pytest" >/dev/null 2>&1; then
   echo "pre-commit: pytest not installed for $PY — skipping tests."

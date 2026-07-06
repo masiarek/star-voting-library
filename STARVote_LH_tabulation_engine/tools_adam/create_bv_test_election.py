@@ -141,6 +141,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   NOTA test — None of the Above wins               -> 26khr3
 #   01a_c2_b2 — two candidates, two ballots            -> my82v6
 #   Tennessee capital — Ranked Robin (single race)     -> vqyqkr   (backs case bv2131_…_vqyqkr; RR-only)
+#   BV2132 — Pet poll (4 methods, THREE winners)        -> ykjjhy   (multi-race; backs method_comparisons/pet_poll_four_methods)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -150,22 +151,25 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- BV2132 — Pet poll: four methods, one electorate, THREE winners ------------
-# Our own answer to meta_pets ("What Makes the Best Pet?", 4 methods over the same
-# candidates) — but with MADE-UP ballots tuned so the methods actually disagree.
-# 22 voters, 3 pets (Dog, Cat, Fish), four races (Plurality / RCV-IRV / Approval /
-# STAR). The twist: Cat is the CONDORCET winner (beats Dog 13-9 and Fish 15-7) and
-# wins Approval + STAR, but has the fewest first choices, so Plurality elects the
-# polarizing front-runner Dog and IRV squeezes Cat out (its votes flow to Fish).
-# => Plurality→Dog, IRV→Fish, Approval→Cat, STAR→Cat.  A center-squeeze + spoiler
-# story in one ballot set. Each bloc lists per-method rows aligned to CANDS order:
-#   plurality (1=pick) · irv ranks (1=top…3=last) · approval (0/1) · star (0-5).
-_PET_CANDS = ["Dog", "Cat", "Fish"]
+# --- BV2133 — Pet poll II: four methods, FOUR winners --------------------------
+# The sequel to BV2132, tuned harder: FOUR pets (Dog, Cat, Fish, Bird) and 32
+# voters, four races (Plurality / RCV-IRV / Approval / STAR) that each elect a
+# DIFFERENT pet — the strongest possible "the method picks the winner" demo.
+#   Plurality → Dog   (most first choices, 13 — but broadly disliked)
+#   RCV-IRV   → Fish  (Bird then Cat eliminated; transfers pile onto Fish)
+#   Approval  → Bird  (widely approved at 3+, 19 approvals)
+#   STAR      → Cat   (consensus: score leader Cat & Fish advance, Cat wins runoff)
+# All four winners verified against the LH engine. Each bloc lists per-method rows
+# aligned to CANDS order: plurality (1=pick) · irv ranks (1=top…4=last) · approval
+# (0/1, = score>=3) · star (0-5). The 7- and 6-voter blocs rank identically and
+# differ only in STAR score (mild vs die-hard Dog fans).
+_PET_CANDS = ["Dog", "Cat", "Fish", "Bird"]
 _PET_BLOCS = [
-    # count, plurality,  irv-ranks, approval,  star        # preference
-    (9, [1, 0, 0], [1, 2, 3], [1, 1, 0], [5, 3, 1]),       # Dog > Cat > Fish
-    (7, [0, 0, 1], [3, 2, 1], [0, 1, 1], [0, 3, 5]),       # Fish > Cat > Dog
-    (6, [0, 1, 0], [3, 1, 2], [0, 1, 1], [0, 5, 3]),       # Cat > Fish > Dog
+    # count, plurality,     irv-ranks,     approval,      star          # preference
+    (9,  [0, 0, 0, 1], [4, 2, 3, 1], [0, 0, 0, 1], [0, 2, 1, 4]),       # Bird>Cat>Fish>Dog
+    (10, [0, 0, 1, 0], [4, 2, 1, 3], [0, 1, 1, 1], [2, 4, 5, 3]),       # Fish>Cat>Bird>Dog
+    (7,  [1, 0, 0, 0], [1, 2, 3, 4], [1, 0, 0, 0], [3, 2, 1, 0]),       # Dog>Cat>Fish>Bird (mild)
+    (6,  [1, 0, 0, 0], [1, 2, 3, 4], [1, 0, 0, 0], [5, 2, 1, 0]),       # Dog>Cat>Fish>Bird (die-hard)
 ]
 def _pet(k):
     """Expand the k-th per-method row of each bloc into one row per voter."""
@@ -174,21 +178,21 @@ _PET_PLUR, _PET_IRV, _PET_APPR, _PET_STAR = _pet(0), _pet(1), _pet(2), _pet(3)
 
 ELECTIONS = [
     {
-        "test_id": "BV2132",
-        "title": "Pet poll: four methods, three winners",
-        "description": "One electorate, three pets (Dog, Cat, Fish), tallied four ways in a single election. Cat is the Condorcet winner (beats Dog 13-9 and Fish 15-7) and wins Approval and STAR — but has the fewest first choices, so choose-one Plurality elects the front-runner Dog and RCV-IRV eliminates Cat first and elects Fish. Result: Plurality→Dog, IRV→Fish, Approval→Cat, STAR→Cat. A made-up, small answer to meta_pets, tuned so the methods actually disagree.",
+        "test_id": "BV2133",
+        "title": "Pet poll II: four methods, four winners",
+        "description": "One electorate, four pets (Dog, Cat, Fish, Bird), 32 voters, tallied four ways in a single election — and every method elects a DIFFERENT pet. Plurality→Dog (most first choices but broadly disliked), RCV-IRV→Fish (center squeeze), Approval→Bird (widely approved), STAR→Cat (consensus, wins the runoff). The sequel to BV2132, tuned so all four methods disagree — the sharpest 'the method chooses the winner' demonstration. All four winners verified against the LH engine.",
         "races": [
-            {"title": "Pets — Choose One (Plurality)", "method": "Plurality",
+            {"title": "Pets II — Choose One (Plurality)", "method": "Plurality",
              "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_PLUR},
-            {"title": "Pets — RCV (IRV)", "method": "IRV",
-             "num_winners": 1, "max_rankings": 3,
+            {"title": "Pets II — RCV (IRV)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 4,
              "candidates": _PET_CANDS, "ballots": _PET_IRV},
-            {"title": "Pets — Approval", "method": "Approval",
+            {"title": "Pets II — Approval", "method": "Approval",
              "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_APPR},
-            {"title": "Pets — STAR", "method": "STAR",
+            {"title": "Pets II — STAR", "method": "STAR",
              "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_STAR},
         ],
-        "expected": "Plurality->Dog ; IRV->Fish ; Approval->Cat ; STAR->Cat  (Condorcet winner Cat squeezed by Plurality & IRV).  Test ID BV2132.",
+        "expected": "Plurality->Dog ; IRV->Fish ; Approval->Bird ; STAR->Cat  (four methods, four winners).  Test ID BV2133.",
     },
 ]
 

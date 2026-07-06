@@ -1,0 +1,54 @@
+======================================================================
+SOURCE FILE:     pets_gov_approval.yaml
+SOURCE MODIFIED: 2026-07-06 18:25:32
+TABULATED FILE:  pets_gov_approval_tabulated.txt
+TABULATED AT:    2026-07-06 18:27:03
+======================================================================
+
+election_title: "Pets Governance — Committee by Approval (2 seats): majority again"
+scenario_description: |-
+  One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+  13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
+  Hamster). This race fills a 2-seat Committee by multi-winner Approval (each voter
+  approves their own party's pets). Bloc Approval is MAJORITARIAN: the two most-
+  approved are Dog and Cat (13 each), both majority — the minority is shut out
+  again. Compare with the proportional STAR-PR / STV races on the same electorate.
+voting_method: Approval_Multi_Winner
+num_winners: 2
+options:
+  collapse_ballots: true
+  count_separator: "×"
+# Approval ballots are 0/1 (approve = score>=3 in the parties' scoring).
+ballots: |-
+  Dog,Cat,Fish,Bird,Rabbit,Hamster
+  13: 1,1,1,0,0,0
+  9: 0,0,0,1,1,1
+expected_winners:
+  - Dog
+  - Cat
+
+# file: pets_gov_approval.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (2 winners) ---
+ Tabulating 22 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Dog, Cat, Fish, Bird, Rabbit, Hamster      (1 = approve; 0 / blank / marker = not approved)
+    13 × 1,1,1,0,0,0
+     9 × 0,0,0,1,1,1
+
+   Dog     -- 13 -- Elected
+   Cat     -- 13 -- Elected
+   Fish    -- 13
+   Bird    -- 9
+   Rabbit  -- 9
+   Hamster -- 9
+  Note: Dog, Cat, Fish each have 13 approvals and tie for the last 2 seats.
+        Candidate priority order (Dog > Cat > Fish) broke the tie: Dog, Cat elected, Fish not elected.
+
+Winners — Approval Voting (2 winners)
+  Dog, Cat

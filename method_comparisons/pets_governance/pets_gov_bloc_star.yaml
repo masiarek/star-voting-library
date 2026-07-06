@@ -1,0 +1,24 @@
+election_title: "Pets Governance — Council by Bloc STAR (3 seats): majority sweeps"
+scenario_description: |-
+  One of five races in the Pets Governance demo (LH-only). 22 voters split into a
+  13-voter MAJORITY ("Furries": Dog, Cat, Fish) and a 9-voter MINORITY ("Others":
+  Bird, Rabbit, Hamster). This race fills a 3-seat Council by Bloc STAR — a
+  MAJORITARIAN method. The majority's top three sweep every seat: Dog, Fish, Cat.
+  The minority gets nothing. Contrast with the STAR-PR and STV races on the same
+  ballots, where the minority earns a seat (proportional).
+voting_method: Bloc STAR
+num_winners: 3
+options:
+  show_matrix: false
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Dog,Cat,Fish,Bird,Rabbit,Hamster
+  13: 5,4,4,1,0,0
+  9: 0,0,1,5,4,4
+expected_winners:
+  - Dog
+  - Fish
+  - Cat
+
+# file: pets_gov_bloc_star.yaml

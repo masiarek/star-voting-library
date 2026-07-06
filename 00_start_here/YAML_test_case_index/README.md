@@ -6,20 +6,20 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**160 election files** (134 single-winner, 26 multi-winner) across 13 method(s).
+**165 election files** (135 single-winner, 30 multi-winner) across 13 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 108 |
 | RCV-IRV (Hare) | 10 |
-| Ranked Robin (RCV-RR / Copeland) | 7 |
+| Ranked Robin (RCV-RR / Copeland) | 8 |
 | Approval | 4 |
-| STV (proportional RCV) | 1 |
+| STV (proportional RCV) | 2 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 6 |
-| APPROVAL_MULTI_WINNER | 3 |
-| BLOC STAR | 12 |
+| Allocated Score (STAR-PR) | 7 |
+| APPROVAL_MULTI_WINNER | 4 |
+| BLOC STAR | 13 |
 | PLURALITY | 3 |
 | RANGE | 1 |
 | RR | 1 |
@@ -152,7 +152,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (7)
+## Ranked Robin (RCV-RR / Copeland)  (8)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -163,6 +163,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/rr_vs_irv_plurality_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_ties.yaml) |
+| [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_ranked_robin.yaml) |
 
 ## Approval  (4)
 
@@ -173,11 +174,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Black_Curtain_01a_c3_b5_approval`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_01a_c3_b5_approval.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_01a_c3_b5_approval.yaml) |
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_approval.yaml) |
 
-## STV (proportional RCV)  (1)
+## STV (proportional RCV)  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
+| [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 
 ## STAR-PR (Sequential Selection)  (2)
 
@@ -193,7 +195,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/_main/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (6)
+## Allocated Score (STAR-PR)  (7)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -201,18 +203,20 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_fractional_surplus.yaml) |
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
+| [`pets_gov_star_pr`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_star_pr.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/_main/_main_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/_main/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |
 
-## APPROVAL_MULTI_WINNER  (3)
+## APPROVAL_MULTI_WINNER  (4)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`approval_bloc_2seats_c4_b6`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_2seats_c4_b6.md) | `04_Approval/multiwinner/` | 2 | Bloc Approval — 2 seats, majority sweep → _Amy, Ben_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml) |
+| [`pets_gov_approval`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_approval.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Committee by Approval (2 seats): majority again → _Dog, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_approval.yaml) |
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (12)
+## BLOC STAR  (13)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -226,6 +230,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/_main/_main_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/_main/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/_main/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.yaml) |
+| [`pets_gov_bloc_star`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_star.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Council by Bloc STAR (3 seats): majority sweeps → _Dog, Fish, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_star.yaml) |
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/_main_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 

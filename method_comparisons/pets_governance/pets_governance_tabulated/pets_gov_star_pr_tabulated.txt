@@ -1,0 +1,133 @@
+======================================================================
+SOURCE FILE:     pets_gov_star_pr.yaml
+SOURCE MODIFIED: 2026-07-06 18:25:24
+TABULATED FILE:  pets_gov_star_pr_tabulated.txt
+TABULATED AT:    2026-07-06 18:27:03
+======================================================================
+
+election_title: "Pets Governance — Council by STAR-PR (3 seats): minority earns a seat"
+scenario_description: |-
+  One of five races in the Pets Governance demo (LH-only). Same 22 voters, same
+  scores as the Bloc STAR race — a 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter
+  MINORITY (Bird, Rabbit, Hamster). This race fills the 3-seat Council by STAR-PR
+  (Allocated Score) — a PROPORTIONAL method. After the majority elects its first
+  seat its ballots are down-weighted, so the minority's Bird wins a seat: the
+  result is Bird, Dog, Fish — 2 majority + 1 minority. Same ballots as Bloc STAR
+  (which swept all three for the majority): proportional vs majoritarian, side by
+  side.
+voting_method: allocated
+num_winners: 3
+options:
+  show_matrix: false
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Dog,Cat,Fish,Bird,Rabbit,Hamster
+  13: 5,4,4,1,0,0
+  9: 0,0,1,5,4,4
+expected_winners:
+  - Bird
+  - Dog
+  - Fish
+
+# file: pets_gov_star_pr.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Pets Governance — Council by STAR-PR (3 seats): minority earns a seat ===
+  One of five races in the Pets Governance demo (LH-only). Same 22 voters, same
+  scores as the Bloc STAR race — a 13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter
+  MINORITY (Bird, Rabbit, Hamster). This race fills the 3-seat Council by STAR-PR
+  (Allocated Score) — a PROPORTIONAL method. After the majority elects its first
+  seat its ballots are down-weighted, so the minority's Bird wins a seat: the
+  result is Bird, Dog, Fish — 2 majority + 1 minority. Same ballots as Bloc STAR
+  (which swept all three for the majority): proportional vs majoritarian, side by
+  side.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Dog     |     Cat     |   * Fish    |     Bird    |    Rabbit   |   Hamster   |
+-------------------------------------------------------------------------------------------------------
+         * Dog > |     ---      |13 -  9 -  0 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+           Cat > |  0 -  9 - 13 |    ---      | 0 - 13 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+        * Fish > |  9 -  0 - 13 | 9 - 13 -  0 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+          Bird > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 |    ---      |22 -  0 -  0 |22 -  0 -  0 |
+        Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      | 0 - 22 -  0 |
+       Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 - 22 -  0 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Dog — matches the STAR winner
+
+--- Allocated Score Voting Method (3 winners) ---
+[Allocated Score Voting]
+ Tabulating 22 ballots to fill 3 seats.
+Count × Dog,Cat,Fish,Bird,Rabbit,Hamster
+   13 ×   5,  4,   4,   1,     0,      0
+    9 ×   0,  0,   1,   5,     4,      4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Dog        13   0   0   0   0   9  |    65   3.0
+Cat         0  13   0   0   0   9  |    52   2.4
+Fish        0  13   0   0   9   0  |    61   2.8
+Bird        9   0   0   0  13   0  |    58   2.6
+Rabbit      0   9   0   0   0  13  |    36   1.6
+Hamster     0   9   0   0   0  13  |    36   1.6
+ Hare quota is 22/3.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Dog           -- 65 -- First place
+   Fish          -- 61
+   Bird          -- 58
+   Cat           -- 52
+   Hamster       -- 36
+   Rabbit        -- 36
+ Dog wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 7+1/3 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 13 ballots at score 5.
+ This allocation overfills the quota.  Returning fractional surplus.
+ Allocating only 56.41% of these ballots.
+ Keeping these ballots, but multiplying their weights by 17/39.
+ 13 ballots reweighted from 1 to 17/39.
+
+[Allocated Score Voting: Round 2]
+ The highest-scoring candidate wins a seat.
+   Bird          -- 50+2/3 -- First place
+   Hamster       -- 36
+   Rabbit        -- 36
+   Fish          -- 31+2/3
+   Cat           -- 22+2/3
+ Bird wins a seat.
+
+[Allocated Score Voting: Round 2: Ballot allocation round]
+ Allocating 7+1/3 ballots.
+
+[Allocated Score Voting: Round 2: Ballot allocation round: Round 1]
+ Allocating 9 ballots at score 5.
+ This allocation overfills the quota.  Returning fractional surplus.
+ Allocating only 81.48% of these ballots.
+ Keeping these ballots, but multiplying their weights by 5/27.
+ 9 ballots reweighted from 1 to 5/27.
+
+[Allocated Score Voting: Round 3]
+ The highest-scoring candidate wins a seat.
+   Fish          -- 24+1/3 -- First place
+   Cat           -- 22+2/3
+   Hamster       --  6+2/3
+   Rabbit        --  6+2/3
+ Fish wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (3 winners)]
+ Bird
+ Dog
+ Fish

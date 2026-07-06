@@ -2159,13 +2159,17 @@ def run_election(
     show_runoff_percent=False,
     full_report=False,
     src_path=None,
+    display_method_name=None,
 ):
     if method is None:
         method = starvote.star
 
     # Reject method/seats mismatches up front (before any tabulation), so the
     # intent must be corrected rather than silently guessed.
-    method_name = getattr(method, "name", str(method))
+    # `display_method_name` overrides the label ONLY (the tabulation is unchanged) —
+    # e.g. Choose-One/Plurality is computed via the STAR path but must not be
+    # labelled "STAR" in the banner and winner line.
+    method_name = display_method_name or getattr(method, "name", str(method))
     single_winner = method is starvote.star
     if single_winner and seats > 1:
         print(
@@ -3098,6 +3102,9 @@ Memphis,Nashville,Chattanooga,Knoxville
         quorum=(election["quorum"] if BALLOTS_FILE else None),
         blocs=(election["blocs"] if BALLOTS_FILE else None),
         show_description=SHOW_DESCRIPTION,
+        # Label Choose-One/Plurality honestly even though it runs via the STAR path.
+        display_method_name=("Choose-One / Plurality"
+                             if locals().get("_is_plurality") else None),
     )
 
     if BALLOTS_FILE:

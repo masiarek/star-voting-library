@@ -37,7 +37,7 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dog — matches the STAR winner
 
---- STAR Voting Method (single winner) ---
+--- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 22 ballots.
 Count × Dog,Cat,Fish
@@ -72,7 +72,7 @@ Fish        0   0   0   0   7  15  |     7   0.3
      16  voters with a preference  (majority = 9)
            Dog 9 (56%)  ·  Fish 7 (44%)
 
-[STAR Voting: Winner — STAR Voting Method (single winner)]
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Dog
 ```
 

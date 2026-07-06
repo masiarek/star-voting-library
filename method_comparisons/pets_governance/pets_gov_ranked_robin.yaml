@@ -1,0 +1,21 @@
+election_title: "Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner"
+scenario_description: |-
+  One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+  13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
+  Hamster), voting ranked ballots. This single-seat Mayor race uses Ranked Robin
+  (RCV-RR / Copeland). Because the 13-voter majority ranks Dog first and outnumbers
+  the minority, Dog beats every rival head-to-head — the Condorcet winner. So the
+  executive (Mayor) goes to the majority's choice even as the proportional Council
+  races (STAR-PR, STV) seat the minority.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
+options:
+  show_matrix: true
+ballots: |-
+  13:Dog>Cat>Fish>Bird>Rabbit>Hamster
+  9:Bird>Rabbit>Hamster>Fish>Cat>Dog
+expected_winners:
+  - Dog
+
+# file: pets_gov_ranked_robin.yaml

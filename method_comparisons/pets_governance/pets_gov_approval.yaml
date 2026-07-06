@@ -1,0 +1,23 @@
+election_title: "Pets Governance — Committee by Approval (2 seats): majority again"
+scenario_description: |-
+  One of five races in the Pets Governance demo (LH-only). Same 22 voters, a
+  13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
+  Hamster). This race fills a 2-seat Committee by multi-winner Approval (each voter
+  approves their own party's pets). Bloc Approval is MAJORITARIAN: the two most-
+  approved are Dog and Cat (13 each), both majority — the minority is shut out
+  again. Compare with the proportional STAR-PR / STV races on the same electorate.
+voting_method: Approval_Multi_Winner
+num_winners: 2
+options:
+  collapse_ballots: true
+  count_separator: "×"
+# Approval ballots are 0/1 (approve = score>=3 in the parties' scoring).
+ballots: |-
+  Dog,Cat,Fish,Bird,Rabbit,Hamster
+  13: 1,1,1,0,0,0
+  9: 0,0,0,1,1,1
+expected_winners:
+  - Dog
+  - Cat
+
+# file: pets_gov_approval.yaml
