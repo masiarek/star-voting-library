@@ -47,6 +47,72 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: D**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * D     |
+-----------------------------------------
+         * A > |    ---     |0 - 7 - 1  |
+         * D > | 1 - 7 - 0  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = D
+  Choose-One (Plurality) = A   (differs from STAR)
+  RCV-IRV                = A   (differs from STAR)
+  Approval               = A   (differs from STAR)
+  Note: 4 of 8 ballots (50%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 8 ballots. Note: 2 of 8 ballots are marked as abstentions.
+A,B,C,D
+-,-,1,1
+-,-,0,0
+1,0,0,1
+1,1,0,1
+~,~,~,~
+0,0,0,0
+5,5,5,5
+-,-,-,-
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          1  0  0  0  2  1    4  |     7   1.8
+B          1  0  0  0  1  2    4  |     6   1.5
+C          1  0  0  0  1  4    2  |     6   1.0
+D          1  0  0  0  3  2    2  |     8   1.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   D             -- 8 -- First place
+   A             -- 7 -- Second place
+   B             -- 6
+   C             -- 6
+ D and A advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   D             -- 1 -- First place
+   A             -- 0
+   Equal Support -- 7
+ D wins.
+   Voters with a preference: 1 of 8 (7 Equal Support).
+   D 1 (100%) vs A 0 (0%); majority = 1.
+
+Winner — STAR Voting Method (single winner)
+ D
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.

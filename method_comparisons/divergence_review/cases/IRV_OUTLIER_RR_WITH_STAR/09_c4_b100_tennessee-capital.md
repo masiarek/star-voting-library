@@ -46,6 +46,64 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Nashville**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |   * Nashville   | * Chattanooga  |
+--------------------------------------------------------
+      * Nashville > |       ---       | 68 -  0 - 32   |
+    * Chattanooga > |  32 -  0 - 68   |      ---       |
+
+[Divergence from STAR]
+  STAR                   = Nashville
+  Choose-One (Plurality) = Memphis   (differs from STAR)
+  RCV-IRV                = Knoxville   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 100 ballots.
+Count × Memphis,Nashville,Chattanooga,Knoxville
+   42 ×       5,        4,          3,        2
+   26 ×       2,        5,          4,        3
+   17 ×       2,        3,          4,        5
+   15 ×       2,        3,          5,        4
+
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate     5   4   3   2   1   0  | Total   Avg
+Memphis      42   0   0  58   0   0  |   326   3.3
+Nashville    26  42  32   0   0   0  |   394   3.9
+Chattanooga  15  43  42   0   0   0  |   373   3.7
+Knoxville    17  15  26  42   0   0  |   307   3.1
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Nashville     -- 394 -- First place
+   Chattanooga   -- 373 -- Second place
+   Memphis       -- 326
+   Knoxville     -- 307
+ Nashville and Chattanooga advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Nashville     -- 68 -- First place
+   Chattanooga   -- 32
+   Equal Support --  0
+ Nashville wins.
+   Voters with a preference: 100 of 100 (no Equal Support).
+   Nashville 68 (68%) vs Chattanooga 32 (32%); majority = 51.
+
+Winner — STAR Voting Method (single winner)
+ Nashville
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -44,6 +44,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Ada**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    | * Bruno   |
+-----------------------------------------
+       * Ada > |    ---     |3 - 0 - 2  |
+     * Bruno > | 2 - 0 - 3  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Ada
+  Approval = Bruno   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Bruno)
+ - Runoff Round Winner   = (Ada)
+  Candidate Bruno earned the highest total score,
+  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Ada,Bruno,Cleo
+    3 ×   5,    4,   0
+    2 ×   0,    5,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        3  0  0  0  0  2  |    15   3.0
+Bruno      2  3  0  0  0  0  |    22   4.4
+Cleo       2  0  0  0  0  3  |    10   2.0
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 22 -- First place
+   Ada           -- 15 -- Second place
+   Cleo          -- 10
+ Bruno and Ada advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 3 -- First place
+   Bruno         -- 2
+   Equal Support -- 0
+ Ada wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Ada 3 (60%) vs Bruno 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Ada
+```
+
 ## RCV-IRV — round by round
 
 ```text

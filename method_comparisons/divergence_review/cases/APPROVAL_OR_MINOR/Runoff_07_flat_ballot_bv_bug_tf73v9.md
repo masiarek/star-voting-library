@@ -45,6 +45,63 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Blair**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Alex   | * Blair   |
+-----------------------------------------
+      * Alex > |    ---     |1 - 1 - 2  |
+     * Blair > | 2 - 1 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Blair
+  Approval = Alex   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Alex)
+ - Runoff Round Winner   = (Blair)
+  Candidate Alex earned the highest total score,
+  but Candidate Blair won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 4 ballots.
+Count × Alex,Blair,Cleo
+    2 ×    4,    5,   0
+    1 ×    5,    1,   2
+    1 ×    3,    3,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alex       1  2  1  0  0  0  |    16   4.0
+Blair      2  0  1  0  1  0  |    14   3.5
+Cleo       0  0  1  1  0  2  |     5   1.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Alex          -- 16 -- First place
+   Blair         -- 14 -- Second place
+   Cleo          --  5
+ Alex and Blair advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Blair         -- 2 -- First place
+   Alex          -- 1
+   Equal Support -- 1
+ Blair wins.
+   Voters with a preference: 3 of 4 (1 Equal Support).
+   Blair 2 (67%) vs Alex 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Blair
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.

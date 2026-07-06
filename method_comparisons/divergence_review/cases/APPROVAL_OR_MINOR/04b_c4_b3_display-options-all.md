@@ -44,6 +44,57 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Strawberry**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                   |   * Vanilla    | * Strawberry  |
+-----------------------------------------------------
+       * Vanilla > |      ---       |  1 - 0 - 2    |
+    * Strawberry > |   2 - 0 - 1    |     ---       |
+
+[Divergence from STAR]
+  STAR     = Strawberry
+  Approval = Vanilla   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 3 ballots.
+Count × Choco,Almond,Vanilla,Strawberry
+    2 ×     0,     2,      3,         5
+    1 ×     0,     2,      5,         3
+
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  | Total   Avg
+Choco       0  0  0  0  0  3  |     0   0.0
+Almond      0  0  0  3  0  0  |     6   2.0
+Vanilla     1  0  2  0  0  0  |    11   3.7
+Strawberry  2  0  1  0  0  0  |    13   4.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Strawberry    -- 13 -- First place
+   Vanilla       -- 11 -- Second place
+   Almond        --  6
+   Choco         --  0
+ Strawberry and Vanilla advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Strawberry    -- 2 -- First place
+   Vanilla       -- 1
+   Equal Support -- 0
+ Strawberry wins.
+   Voters with a preference: 3 of 3 (no Equal Support).
+   Strawberry 2 (67%) vs Vanilla 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Strawberry
+```
+
 ## RCV-IRV — round by round
 
 ```text

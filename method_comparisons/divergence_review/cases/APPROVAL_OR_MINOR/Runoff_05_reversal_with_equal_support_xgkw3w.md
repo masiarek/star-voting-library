@@ -46,6 +46,64 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Sage**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Rosa   |  * Sage   |
+-----------------------------------------
+      * Rosa > |    ---     |1 - 2 - 2  |
+      * Sage > | 2 - 2 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Sage
+  Approval = Rosa   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Rosa)
+ - Runoff Round Winner   = (Sage)
+  Candidate Rosa earned the highest total score,
+  but Candidate Sage won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Rosa,Sage,Tulip
+    2 ×    4,   5,    0
+    1 ×    5,   1,    0
+    1 ×    3,   3,    1
+    1 ×    5,   5,    2
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Rosa       2  2  1  0  0  0  |    21   4.2
+Sage       3  0  1  0  1  0  |    19   3.8
+Tulip      0  0  0  1  1  3  |     3   0.6
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Rosa          -- 21 -- First place
+   Sage          -- 19 -- Second place
+   Tulip         --  3
+ Rosa and Sage advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Sage          -- 2 -- First place
+   Rosa          -- 1
+   Equal Support -- 2
+ Sage wins.
+   Voters with a preference: 3 of 5 (2 Equal Support).
+   Sage 2 (67%) vs Rosa 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Sage
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.

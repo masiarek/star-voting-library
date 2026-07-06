@@ -44,6 +44,55 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Almond**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Almond   | * Vanilla  |
+--------------------------------------------
+     * Almond > |     ---     | 2 - 0 - 1  |
+    * Vanilla > |  1 - 0 - 2  |    ---     |
+
+[Divergence from STAR]
+  STAR     = Almond
+  Approval = Choco   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 3 ballots.
+Count × Choco,Almond,Vanilla
+    2 ×     0,     1,      0
+    1 ×     0,     0,      1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Choco      0  0  0  0  0  3  |     0   0.0
+Almond     0  0  0  0  2  1  |     2   0.7
+Vanilla    0  0  0  0  1  2  |     1   0.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Almond        -- 2 -- First place
+   Vanilla       -- 1 -- Second place
+   Choco         -- 0
+ Almond and Vanilla advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Almond        -- 2 -- First place
+   Vanilla       -- 1
+   Equal Support -- 0
+ Almond wins.
+   Voters with a preference: 3 of 3 (no Equal Support).
+   Almond 2 (67%) vs Vanilla 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Almond
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -316,6 +316,25 @@ def _star_summary(candidates, ballots, order):
     return "\n\n".join(lines)
 
 
+def _star_text(ballots_text, order):
+    """Full LH STAR engine echo (captured), so the STAR section shows the same
+    real engine report the IRV and RR sections do — not just a summary."""
+    import contextlib
+    import io
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf):
+            w.run_election(ballots_text, order, seats=1, brief=True,
+                           show_matrix=True, matrix_finalists_only=True,
+                           show_condorcet=False, show_score_counts=True,
+                           show_runoff_percent=True, collapse_ballots=True)
+        txt = buf.getvalue()
+        txt = w.strip_ansi(txt) if hasattr(w, "strip_ansi") else txt
+        return txt.strip() or "(STAR report unavailable)"
+    except Exception as e:                       # noqa: BLE001
+        return f"(STAR report unavailable: {e})"
+
+
 def _irv_text(candidates, ballots, order):
     return w.build_irv_report(candidates, ballots, order) or "(RCV-IRV engine unavailable)"
 
@@ -452,6 +471,8 @@ def case_md(r, dupes):
 
     M.append("## STAR result (official)\n")
     M.append(_star_summary(candidates, ballots, order) + "\n")
+    M.append("Full LH STAR engine report:\n")
+    M.append("```text\n" + _star_text(ballots_text, order) + "\n```\n")
 
     M.append("## RCV-IRV — round by round\n")
     if r["irv_fragile"]:

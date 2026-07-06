@@ -44,6 +44,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Brownie**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Almond   | * Brownie  |
+--------------------------------------------
+     * Almond > |     ---     | 1 - 0 - 2  |
+    * Brownie > |  2 - 0 - 1  |    ---     |
+
+[Divergence from STAR]
+  STAR     = Brownie
+  Approval = Almond   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Almond)
+ - Runoff Round Winner   = (Brownie)
+  Candidate Almond earned the highest total score,
+  but Candidate Brownie won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 3 ballots.
+Count × Almond,Brownie,Cocoa
+    2 ×      4,      5,    0
+    1 ×      5,      1,    2
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     1  2  0  0  0  0  |    13   4.3
+Brownie    2  0  0  0  1  0  |    11   3.7
+Cocoa      0  0  0  1  0  2  |     2   0.7
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Almond        -- 13 -- First place
+   Brownie       -- 11 -- Second place
+   Cocoa         --  2
+ Almond and Brownie advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Brownie       -- 2 -- First place
+   Almond        -- 1
+   Equal Support -- 0
+ Brownie wins.
+   Voters with a preference: 3 of 3 (no Equal Support).
+   Brownie 2 (67%) vs Almond 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Brownie
+```
+
 ## RCV-IRV — round by round
 
 ```text

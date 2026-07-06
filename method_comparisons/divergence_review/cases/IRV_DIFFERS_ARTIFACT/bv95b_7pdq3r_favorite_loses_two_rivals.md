@@ -44,6 +44,63 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Bruno**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Bruno   |  * Cleo   |
+-----------------------------------------
+     * Bruno > |    ---     |3 - 2 - 0  |
+      * Cleo > | 0 - 2 - 3  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Bruno
+  Choose-One (Plurality) = Ada   (differs from STAR)
+  RCV-IRV                = Ada   (differs from STAR)
+  RCV-RR (Condorcet)     = Ada   (differs from STAR)
+  Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Ada,Bruno,Cleo
+    3 ×   5,    4,   3
+    2 ×   0,    5,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        3  0  0  0  0  2  |    15   3.0
+Bruno      2  3  0  0  0  0  |    22   4.4
+Cleo       2  0  3  0  0  0  |    19   3.8
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 22 -- First place
+   Cleo          -- 19 -- Second place
+   Ada           -- 15
+ Bruno and Cleo advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 3 -- First place
+   Cleo          -- 0
+   Equal Support -- 2
+ Bruno wins.
+   Voters with a preference: 3 of 5 (2 Equal Support).
+   Bruno 3 (100%) vs Cleo 0 (0%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Bruno
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -47,6 +47,69 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Boston**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Austin  | * Boston  |
+-----------------------------------------
+    * Austin > |    ---     |2 - 0 - 3  |
+    * Boston > | 3 - 0 - 2  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Boston
+  Approval = Austin   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Austin)
+ - Runoff Round Winner   = (Boston)
+  Candidate Austin earned the highest total score,
+  but Candidate Boston won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Austin,Boston,Chicago,Denver,Erie
+     5,     0,      1,     0,   2
+     5,     0,      0,     1,   0
+     4,     5,      1,     0,   0
+     4,     5,      0,     2,   0
+     4,     5,      0,     0,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Austin     2  3  0  0  0  0  |    22   4.4
+Boston     3  0  0  0  0  2  |    15   3.0
+Chicago    0  0  0  0  2  3  |     2   0.4
+Denver     0  0  0  1  1  3  |     3   0.6
+Erie       0  0  0  1  1  3  |     3   0.6
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Austin        -- 22 -- First place
+   Boston        -- 15 -- Second place
+   Denver        --  3
+   Erie          --  3
+   Chicago       --  2
+ Austin and Boston advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Boston        -- 3 -- First place
+   Austin        -- 2
+   Equal Support -- 0
+ Boston wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Boston 3 (60%) vs Austin 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Boston
+```
+
 ## RCV-IRV — round by round
 
 ```text

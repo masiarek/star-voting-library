@@ -44,6 +44,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Olive**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Maple   | * Olive   |
+-----------------------------------------
+     * Maple > |    ---     |3 - 0 - 6  |
+     * Olive > | 6 - 0 - 3  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Olive
+  Approval = Maple   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Maple)
+ - Runoff Round Winner   = (Olive)
+  Candidate Maple earned the highest total score,
+  but Candidate Olive won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 9 ballots.
+Count × Maple,Olive,Pine
+    6 ×     4,    5,   0
+    3 ×     5,    1,   2
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Maple      3  6  0  0  0  0  |    39   4.3
+Olive      6  0  0  0  3  0  |    33   3.7
+Pine       0  0  0  3  0  6  |     6   0.7
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Maple         -- 39 -- First place
+   Olive         -- 33 -- Second place
+   Pine          --  6
+ Maple and Olive advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Olive         -- 6 -- First place
+   Maple         -- 3
+   Equal Support -- 0
+ Olive wins.
+   Voters with a preference: 9 of 9 (no Equal Support).
+   Olive 6 (67%) vs Maple 3 (33%); majority = 5.
+
+Winner — STAR Voting Method (single winner)
+ Olive
+```
+
 ## RCV-IRV — round by round
 
 ```text

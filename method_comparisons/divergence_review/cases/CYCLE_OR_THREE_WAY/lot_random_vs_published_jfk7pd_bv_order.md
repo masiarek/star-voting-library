@@ -46,6 +46,82 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Ben**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    |  * Ben    |
+-----------------------------------------
+       * Ada > |    ---     |1 - 0 - 1  |
+       * Ben > | 1 - 0 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR    = Ben
+  RCV-IRV = Ada   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 2 ballots.
+Ada,Ben
+  4,  0
+  0,  4
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        0  1  0  0  0  1  |     4   2.0
+Ben        0  1  0  0  0  1  |     4   2.0
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Ada           -- 4 -- First place
+   Ben           -- 4 -- Second place
+ Ada and Ben advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 1 -- Tied for first place
+   Ben           -- 1 -- Tied for first place
+   Equal Support -- 0
+ There's a two-way tie for first.
+
+Automatic Runoff Round: First tiebreaker
+ The highest-scoring candidate wins.
+   Ada           -- 4 -- Tied for first place
+   Ben           -- 4 -- Tied for first place
+ There's still a two-way tie for first.
+
+Automatic Runoff Round: Second tiebreaker
+ The candidate with the most votes of score 5 wins.
+   Ada           -- 0 -- Tied for first place
+   Ben           -- 0 -- Tied for first place
+ There's still a two-way tie for first.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Ben', 'Ada']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ada', 'Ben']
+  Resolved: ['Ben'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+Winner — STAR Voting Method (single winner)
+ Ben
+```
+
 ## RCV-IRV — round by round
 
 ```text

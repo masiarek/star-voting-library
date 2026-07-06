@@ -45,6 +45,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Leia**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |  * Skywalker  |   * Leia     |
+--------------------------------------------------
+    * Skywalker > |      ---      |33 -  0 - 67  |
+         * Leia > | 67 -  0 - 33  |     ---      |
+
+[Divergence from STAR]
+  STAR                   = Leia
+  Choose-One (Plurality) = Vader   (differs from STAR)
+  RCV-IRV                = Skywalker   (differs from STAR)
+  Approval               = Skywalker   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 100 ballots.
+Count × Skywalker,Leia,Vader
+   40 ×         0,   1,    5
+   33 ×         5,   4,    0
+   27 ×         4,   5,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Skywalker  33  27   0   0   0  40  |   273   2.7
+Leia       27  33   0   0  40   0  |   307   3.1
+Vader      40   0   0   0   0  60  |   200   2.0
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Leia          -- 307 -- First place
+   Skywalker     -- 273 -- Second place
+   Vader         -- 200
+ Leia and Skywalker advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Leia          -- 67 -- First place
+   Skywalker     -- 33
+   Equal Support --  0
+ Leia wins.
+   Voters with a preference: 100 of 100 (no Equal Support).
+   Leia 67 (67%) vs Skywalker 33 (33%); majority = 51.
+
+Winner — STAR Voting Method (single winner)
+ Leia
+```
+
 ## RCV-IRV — round by round
 
 ```text

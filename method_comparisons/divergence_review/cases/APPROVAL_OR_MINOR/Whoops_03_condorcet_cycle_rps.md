@@ -45,6 +45,56 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Rock**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Rock    |  * Paper    |
+-----------------------------------------------
+        * Rock > |     ---      |67 -  0 - 33 |
+       * Paper > | 33 -  0 - 67 |    ---      |
+
+[Divergence from STAR]
+  STAR     = Rock
+  Approval = Paper   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 100 ballots.
+Count × Rock,Paper,Scissors
+   35 ×    5,    3,       0
+   33 ×    0,    5,       3
+   32 ×    3,    0,       5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Rock       35   0  32   0   0  33  |   271   2.7
+Paper      33   0  35   0   0  32  |   270   2.7
+Scissors   32   0  33   0   0  35  |   259   2.6
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Rock          -- 271 -- First place
+   Paper         -- 270 -- Second place
+   Scissors      -- 259
+ Rock and Paper advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Rock          -- 67 -- First place
+   Paper         -- 33
+   Equal Support --  0
+ Rock wins.
+   Voters with a preference: 100 of 100 (no Equal Support).
+   Rock 67 (67%) vs Paper 33 (33%); majority = 51.
+
+Winner — STAR Voting Method (single winner)
+ Rock
+```
+
 ## RCV-IRV — round by round
 
 ```text

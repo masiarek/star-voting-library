@@ -45,6 +45,60 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: X**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * X      |    * Y      |
+-----------------------------------------------
+           * X > |     ---      |26 -  0 -  8 |
+           * Y > |  8 -  0 - 26 |    ---      |
+
+[Divergence from STAR]
+  STAR    = X
+  RCV-IRV = Z   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 34 ballots.
+Count × X,Y,Z
+   16 × 5,3,0
+   10 × 3,0,5
+    8 × 0,5,3
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+X          16   0  10   0   0   8  |   110   3.2
+Y           8   0  16   0   0  10  |    88   2.6
+Z          10   0   8   0   0  16  |    74   2.2
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   X             -- 110 -- First place
+   Y             --  88 -- Second place
+   Z             --  74
+ X and Y advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   X             -- 26 -- First place
+   Y             --  8
+   Equal Support --  0
+ X wins.
+   Voters with a preference: 34 of 34 (no Equal Support).
+   X 26 (76%) vs Y 8 (24%); majority = 18.
+
+Winner — STAR Voting Method (single winner)
+ X
+```
+
 ## RCV-IRV — round by round
 
 ```text

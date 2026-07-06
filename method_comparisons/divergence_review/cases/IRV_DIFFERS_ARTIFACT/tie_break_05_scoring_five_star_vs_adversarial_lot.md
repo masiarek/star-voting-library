@@ -47,6 +47,72 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Ben**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Ben    |
+-----------------------------------------
+       * Ann > |    ---     |2 - 0 - 3  |
+       * Ben > | 3 - 0 - 2  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Ben
+  Choose-One (Plurality) = Cara   (differs from STAR)
+  RCV-IRV                = Cara   (differs from STAR)
+  Approval               = Ann   (differs from STAR)
+  RCV-RR                 = Ann   (differs from STAR)
+  Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Ann)
+ - Runoff Round Winner   = (Ben)
+  Candidate Ann earned the highest total score,
+  but Candidate Ben won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Ann,Ben,Cara
+  3,  5,   1
+  3,  5,   0
+  4,  0,   3
+  4,  0,   4
+  0,  1,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  2  2  0  0  1  |    14   2.8
+Ben        2  0  0  0  1  2  |    11   2.2
+Cara       0  1  1  0  2  1  |     9   1.8
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 14 -- First place
+   Ben           -- 11 -- Second place
+   Cara          --  9
+ Ann and Ben advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Ben           -- 3 -- First place
+   Ann           -- 2
+   Equal Support -- 0
+ Ben wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Ben 3 (60%) vs Ann 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Ben
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.

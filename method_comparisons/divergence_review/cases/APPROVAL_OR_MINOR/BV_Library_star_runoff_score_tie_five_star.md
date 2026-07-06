@@ -44,6 +44,63 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Allison**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Allison  |  * Bill    |
+--------------------------------------------
+    * Allison > |     ---     | 1 - 0 - 1  |
+       * Bill > |  1 - 0 - 1  |    ---     |
+
+[Divergence from STAR]
+  STAR     = Allison
+  Approval = Bill   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 2 ballots.
+Allison,Bill
+      2,   4
+      5,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    1  0  0  1  0  0  |     7   3.5
+Bill       0  1  1  0  0  0  |     7   3.5
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Allison       -- 7 -- First place
+   Bill          -- 7 -- Second place
+ Allison and Bill advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Allison       -- 1 -- Tied for first place
+   Bill          -- 1 -- Tied for first place
+   Equal Support -- 0
+ There's a two-way tie for first.
+
+Automatic Runoff Round: First tiebreaker
+ The highest-scoring candidate wins.
+   Allison       -- 7 -- Tied for first place
+   Bill          -- 7 -- Tied for first place
+ There's still a two-way tie for first.
+
+Automatic Runoff Round: Second tiebreaker
+ The candidate with the most votes of score 5 wins.
+   Allison       -- 1 -- First place
+   Bill          -- 0
+ Allison wins.
+
+Winner — STAR Voting Method (single winner)
+ Allison
+```
+
 ## RCV-IRV — round by round
 
 ```text

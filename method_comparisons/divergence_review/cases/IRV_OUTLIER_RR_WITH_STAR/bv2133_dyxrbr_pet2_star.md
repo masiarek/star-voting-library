@@ -46,6 +46,65 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Cat**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Cat     |   * Fish    |
+-----------------------------------------------
+         * Cat > |     ---      |22 -  0 - 10 |
+        * Fish > | 10 -  0 - 22 |    ---      |
+
+[Divergence from STAR]
+  STAR                   = Cat
+  Choose-One (Plurality) = Dog   (differs from STAR)
+  RCV-IRV                = Fish   (differs from STAR)
+  Approval               = Bird   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 32 ballots.
+Count × Dog,Cat,Fish,Bird
+   10 ×   2,  4,   5,   3
+    9 ×   0,  2,   1,   4
+    7 ×   3,  2,   1,   0
+    6 ×   5,  2,   1,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Dog         6   0   7  10   0   9  |    71   2.2
+Cat         0  10   0  22   0   0  |    84   2.6
+Fish       10   0   0   0  22   0  |    72   2.3
+Bird        0   9  10   0   0  13  |    66   2.1
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Cat           -- 84 -- First place
+   Fish          -- 72 -- Second place
+   Dog           -- 71
+   Bird          -- 66
+ Cat and Fish advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Cat           -- 22 -- First place
+   Fish          -- 10
+   Equal Support --  0
+ Cat wins.
+   Voters with a preference: 32 of 32 (no Equal Support).
+   Cat 22 (69%) vs Fish 10 (31%); majority = 17.
+
+Winner — STAR Voting Method (single winner)
+ Cat
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -47,6 +47,69 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Eden**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Dakota  |  * Eden   |
+-----------------------------------------
+    * Dakota > |    ---     |2 - 0 - 3  |
+      * Eden > | 3 - 0 - 2  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Eden
+  Approval = Dakota   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Dakota)
+ - Runoff Round Winner   = (Eden)
+  Candidate Dakota earned the highest total score,
+  but Candidate Eden won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Dakota,Eden,Flynn,Gale,Hazel
+     5,   0,    1,   0,    0
+     5,   0,    0,   1,    0
+     4,   5,    0,   0,    1
+     4,   5,    1,   0,    0
+     4,   5,    0,   1,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Dakota     2  3  0  0  0  0  |    22   4.4
+Eden       3  0  0  0  0  2  |    15   3.0
+Flynn      0  0  0  0  2  3  |     2   0.4
+Gale       0  0  0  0  2  3  |     2   0.4
+Hazel      0  0  0  0  1  4  |     1   0.2
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Dakota        -- 22 -- First place
+   Eden          -- 15 -- Second place
+   Flynn         --  2
+   Gale          --  2
+   Hazel         --  1
+ Dakota and Eden advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Eden          -- 3 -- First place
+   Dakota        -- 2
+   Equal Support -- 0
+ Eden wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Eden 3 (60%) vs Dakota 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Eden
+```
+
 ## RCV-IRV — round by round
 
 ```text

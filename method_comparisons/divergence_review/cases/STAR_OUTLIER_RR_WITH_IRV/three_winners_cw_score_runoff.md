@@ -44,6 +44,68 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Bob**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Bob    |  * Carl   |
+-----------------------------------------
+       * Bob > |    ---     |3 - 0 - 2  |
+      * Carl > | 2 - 0 - 3  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Bob
+  Choose-One (Plurality) = Ann   (differs from STAR)
+  RCV-IRV                = Ann   (differs from STAR)
+  RCV-RR (Condorcet)     = Ann   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Carl)
+ - Runoff Round Winner   = (Bob)
+  Candidate Carl earned the highest total score,
+  but Candidate Bob won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Ann,Bob,Carl
+    3 ×   5,  4,   3
+    2 ×   0,  3,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        3  0  0  0  0  2  |    15   3.0
+Bob        0  3  2  0  0  0  |    18   3.6
+Carl       2  0  3  0  0  0  |    19   3.8
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Carl          -- 19 -- First place
+   Bob           -- 18 -- Second place
+   Ann           -- 15
+ Carl and Bob advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Bob           -- 3 -- First place
+   Carl          -- 2
+   Equal Support -- 0
+ Bob wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Bob 3 (60%) vs Carl 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Bob
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -46,6 +46,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Green**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |     * Green     |   * Yellow     |
+--------------------------------------------------------
+          * Green > |       ---       |645 -   0 - 353 |
+         * Yellow > | 353 -   0 - 645 |      ---       |
+
+[Divergence from STAR]
+  STAR                   = Green
+  Choose-One (Plurality) = Yellow   (differs from STAR)
+  RCV-IRV                = Yellow   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 998 ballots.
+Count × Red,Green,Yellow
+  353 ×   0,    3,     5
+  332 ×   5,    3,     0
+  175 ×   1,    5,     3
+  138 ×   3,    5,     1
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Red        332    0  138    0  175  353  |  2249   2.3
+Green      313    0  685    0    0    0  |  3620   3.6
+Yellow     353    0  175    0  138  332  |  2428   2.4
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Green         -- 3620 -- First place
+   Yellow        -- 2428 -- Second place
+   Red           -- 2249
+ Green and Yellow advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Green         -- 645 -- First place
+   Yellow        -- 353
+   Equal Support --   0
+ Green wins.
+   Voters with a preference: 998 of 998 (no Equal Support).
+   Green 645 (65%) vs Yellow 353 (35%); majority = 500.
+
+Winner — STAR Voting Method (single winner)
+ Green
+```
+
 ## RCV-IRV — round by round
 
 ```text

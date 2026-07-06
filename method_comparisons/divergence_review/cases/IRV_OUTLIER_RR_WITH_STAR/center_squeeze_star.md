@@ -45,6 +45,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Center**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Left    |  * Center   |
+-----------------------------------------------
+        * Left > |     ---      |12 -  0 - 15 |
+      * Center > | 15 -  0 - 12 |    ---      |
+
+[Divergence from STAR]
+  STAR                   = Center
+  Choose-One (Plurality) = Left   (differs from STAR)
+  RCV-IRV                = Left   (differs from STAR)
+  Approval               = Left   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 27 ballots.
+Count × Left,Center,Right
+   12 ×    5,     4,    3
+    9 ×    3,     4,    5
+    6 ×    4,     5,    3
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Left       12   6   9   0   0   0  |   111   4.1
+Center      6  21   0   0   0   0  |   114   4.2
+Right       9   0  18   0   0   0  |    99   3.7
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Center        -- 114 -- First place
+   Left          -- 111 -- Second place
+   Right         --  99
+ Center and Left advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Center        -- 15 -- First place
+   Left          -- 12
+   Equal Support --  0
+ Center wins.
+   Voters with a preference: 27 of 27 (no Equal Support).
+   Center 15 (56%) vs Left 12 (44%); majority = 14.
+
+Winner — STAR Voting Method (single winner)
+ Center
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -44,6 +44,70 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Ben**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Ben    |
+-----------------------------------------
+       * Ann > |    ---     |1 - 0 - 1  |
+       * Ben > | 1 - 0 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Ann
+  Choose-One (Plurality) = Ben   (differs from STAR)
+  RCV-IRV                = Ben   (differs from STAR)
+  Approval               = Ben   (differs from STAR)
+  RCV-RR                 = Ben   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 2 ballots.
+Ann,Ben
+  5,  1
+  0,  4
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        1  0  0  0  0  1  |     5   2.5
+Ben        0  1  0  0  1  0  |     5   2.5
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 5 -- First place
+   Ben           -- 5 -- Second place
+ Ann and Ben advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Ann           -- 1 -- Tied for first place
+   Ben           -- 1 -- Tied for first place
+   Equal Support -- 0
+ There's a two-way tie for first.
+
+Automatic Runoff Round: First tiebreaker
+ The highest-scoring candidate wins.
+   Ann           -- 5 -- Tied for first place
+   Ben           -- 5 -- Tied for first place
+ There's still a two-way tie for first.
+
+Automatic Runoff Round: Second tiebreaker
+ The candidate with the most votes of score 5 wins.
+   Ann           -- 1 -- First place
+   Ben           -- 0
+ Ann wins.
+
+Winner — STAR Voting Method (single winner)
+ Ann
+```
+
 ## RCV-IRV — round by round
 
 ```text

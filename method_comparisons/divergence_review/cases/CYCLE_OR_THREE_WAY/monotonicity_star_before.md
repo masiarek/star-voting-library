@@ -45,6 +45,64 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: X**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * X      |    * Y      |
+-----------------------------------------------
+           * X > |     ---      |22 -  0 - 12 |
+           * Y > | 12 -  0 - 22 |    ---      |
+
+[Divergence from STAR]
+  STAR     = X
+  Approval = Y   (differs from STAR)
+  RCV-RR   = Y   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Y)
+ - Runoff Round Winner   = (X)
+  Candidate Y earned the highest total score,
+  but Candidate X won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 34 ballots.
+Count × X,Y,Z
+   12 × 5,3,0
+   12 × 0,5,3
+   10 × 3,0,5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+X          12   0  10   0   0  12  |    90   2.6
+Y          12   0  12   0   0  10  |    96   2.8
+Z          10   0  12   0   0  12  |    86   2.5
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Y             -- 96 -- First place
+   X             -- 90 -- Second place
+   Z             -- 86
+ Y and X advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   X             -- 22 -- First place
+   Y             -- 12
+   Equal Support --  0
+ X wins.
+   Voters with a preference: 34 of 34 (no Equal Support).
+   X 22 (65%) vs Y 12 (35%); majority = 18.
+
+Winner — STAR Voting Method (single winner)
+ X
+```
+
 ## RCV-IRV — round by round
 
 ```text

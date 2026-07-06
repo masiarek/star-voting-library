@@ -45,6 +45,61 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Cat**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Cat     |   * Fish    |
+-----------------------------------------------
+         * Cat > |     ---      |15 -  0 -  7 |
+        * Fish > |  7 -  0 - 15 |    ---      |
+
+[Divergence from STAR]
+  STAR                   = Cat
+  Choose-One (Plurality) = Dog   (differs from STAR)
+  RCV-IRV                = Fish   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 22 ballots.
+Count × Dog,Cat,Fish
+    9 ×   5,  3,   1
+    7 ×   0,  3,   5
+    6 ×   0,  5,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Dog         9   0   0   0   0  13  |    45   2.0
+Cat         6   0  16   0   0   0  |    78   3.5
+Fish        7   0   6   0   9   0  |    62   2.8
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Cat           -- 78 -- First place
+   Fish          -- 62 -- Second place
+   Dog           -- 45
+ Cat and Fish advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Cat           -- 15 -- First place
+   Fish          --  7
+   Equal Support --  0
+ Cat wins.
+   Voters with a preference: 22 of 22 (no Equal Support).
+   Cat 15 (68%) vs Fish 7 (32%); majority = 12.
+
+Winner — STAR Voting Method (single winner)
+ Cat
+```
+
 ## RCV-IRV — round by round
 
 ```text

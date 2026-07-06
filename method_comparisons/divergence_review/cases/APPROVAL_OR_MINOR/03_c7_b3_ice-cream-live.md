@@ -45,6 +45,71 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: ChocoAlm**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |  * ChocoDrk  | * ChocoAlm  |
+-----------------------------------------------
+    * ChocoDrk > |     ---      | 1 - 0 - 2   |
+    * ChocoAlm > |  2 - 0 - 1   |    ---      |
+
+[Divergence from STAR]
+  STAR     = ChocoAlm
+  Approval = ChocoDrk   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (ChocoDrk)
+ - Runoff Round Winner   = (ChocoAlm)
+  Candidate ChocoDrk earned the highest total score,
+  but Candidate ChocoAlm won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 3 ballots.
+ChocoDrk,ChocoAlm,ChocoHzn,VanillaClssc,VanillaFrnch,Mango,Peach
+       4,       5,       3,           0,           1,    2,    0
+       0,       3,       0,           0,           0,    0,    0
+       5,       0,       0,           0,           0,    0,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate     5  4  3  2  1  0  | Total   Avg
+ChocoDrk      1  1  0  0  0  1  |     9   3.0
+ChocoAlm      1  0  1  0  0  1  |     8   2.7
+ChocoHzn      0  0  1  0  0  2  |     3   1.0
+VanillaClssc  0  0  0  0  0  3  |     0   0.0
+VanillaFrnch  0  0  0  0  1  2  |     1   0.3
+Mango         0  0  0  1  0  2  |     2   0.7
+Peach         0  0  0  0  0  3  |     0   0.0
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   ChocoDrk      -- 9 -- First place
+   ChocoAlm      -- 8 -- Second place
+   ChocoHzn      -- 3
+   Mango         -- 2
+   VanillaFrnch  -- 1
+   Peach         -- 0
+   VanillaClssc  -- 0
+ ChocoDrk and ChocoAlm advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   ChocoAlm      -- 2 -- First place
+   ChocoDrk      -- 1
+   Equal Support -- 0
+ ChocoAlm wins.
+   Voters with a preference: 3 of 3 (no Equal Support).
+   ChocoAlm 2 (67%) vs ChocoDrk 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ ChocoAlm
+```
+
 ## RCV-IRV — round by round
 
 ```text

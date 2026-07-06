@@ -47,6 +47,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Carmen**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Andre    |  * Carmen   |
+-----------------------------------------------
+       * Andre > |     ---      | 9 -  0 - 31 |
+      * Carmen > | 31 -  0 -  9 |    ---      |
+
+[Divergence from STAR]
+  STAR     = Carmen
+  Approval = Andre   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 40 ballots.
+Count × Andre,Blake,Carmen,Dana,Evan
+   10 ×     4,    3,     5,   2,   1
+    9 ×     5,    3,     4,   2,   1
+    8 ×     3,    5,     4,   2,   1
+    7 ×     3,    2,     4,   5,   1
+    6 ×     3,    2,     4,   1,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Andre       9  10  21   0   0   0  |   148   3.7
+Blake       8   0  19  13   0   0  |   123   3.1
+Carmen     10  30   0   0   0   0  |   170   4.3
+Dana        7   0   0  27   6   0  |    95   2.4
+Evan        6   0   0   0  34   0  |    64   1.6
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Carmen        -- 170 -- First place
+   Andre         -- 148 -- Second place
+   Blake         -- 123
+   Dana          --  95
+   Evan          --  64
+ Carmen and Andre advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Carmen        -- 31 -- First place
+   Andre         --  9
+   Equal Support --  0
+ Carmen wins.
+   Voters with a preference: 40 of 40 (no Equal Support).
+   Carmen 31 (78%) vs Andre 9 (22%); majority = 21.
+
+Winner — STAR Voting Method (single winner)
+ Carmen
+```
+
 ## RCV-IRV — round by round
 
 ```text

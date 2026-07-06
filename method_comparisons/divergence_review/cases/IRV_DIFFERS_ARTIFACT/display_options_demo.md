@@ -45,6 +45,66 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Don**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Bob    |  * Don    |
+-----------------------------------------
+       * Bob > |    ---     |1 - 1 - 2  |
+       * Don > | 2 - 1 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Don
+  Choose-One (Plurality) = Bob   (differs from STAR)
+  RCV-IRV                = Bob   (differs from STAR)
+  Approval               = Ann   (differs from STAR)
+  Note: 2 of 4 ballots (50%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 4 ballots.
+Count × Ann,Bob,Cal,Don
+    2 ×   3,  4,  2,  5
+    1 ×   3,  4,  2,  4
+    1 ×   3,  5,  2,  3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  0  4  0  0  0  |    12   3.0
+Bob        1  3  0  0  0  0  |    17   4.3
+Cal        0  0  0  4  0  0  |     8   2.0
+Don        2  1  1  0  0  0  |    17   4.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Bob           -- 17 -- First place
+   Don           -- 17 -- Second place
+   Ann           -- 12
+   Cal           --  8
+ Bob and Don advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Don           -- 2 -- First place
+   Bob           -- 1
+   Equal Support -- 1
+ Don wins.
+   Voters with a preference: 3 of 4 (1 Equal Support).
+   Don 2 (67%) vs Bob 1 (33%); majority = 2.
+
+Winner — STAR Voting Method (single winner)
+ Don
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.

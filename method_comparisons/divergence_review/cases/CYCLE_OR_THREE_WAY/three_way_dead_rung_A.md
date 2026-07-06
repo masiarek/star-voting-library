@@ -47,6 +47,112 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: A**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |
+-----------------------------------------
+         * A > |    ---     |1 - 1 - 1  |
+         * B > | 1 - 1 - 1  |   ---     |
+
+[Divergence from STAR]
+  STAR    = A
+  RCV-IRV = B   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 3 ballots.
+A,B,C
+4,0,0
+0,4,0
+0,0,4
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          0  1  0  0  0  2  |     4   1.3
+B          0  1  0  0  0  2  |     4   1.3
+C          0  1  0  0  0  2  |     4   1.3
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   A             -- 4 -- Tied for first place
+   B             -- 4 -- Tied for first place
+   C             -- 4 -- Tied for first place
+ There's a three-way tie for first.
+
+Scoring Round: First tiebreaker
+ The two candidates preferred in the most head-to-head matchups advance.
+   A             -- 2 -- Tied for first place
+   B             -- 2 -- Tied for first place
+   C             -- 2 -- Tied for first place
+   Equal Support -- 0
+ There's still a three-way tie for first.
+
+Scoring Round: Second tiebreaker
+ The two candidates with the most votes of score 5 advance.
+   A             -- 0 -- Tied for first place
+   B             -- 0 -- Tied for first place
+   C             -- 0 -- Tied for first place
+ There's still a three-way tie for first.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['A', 'B', 'C']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['A', 'B', 'C']
+  Resolved: ['A', 'B'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 1 -- Tied for first place
+   B             -- 1 -- Tied for first place
+   Equal Support -- 1
+ There's a two-way tie for first.
+
+Automatic Runoff Round: First tiebreaker
+ The highest-scoring candidate wins.
+   A             -- 4 -- Tied for first place
+   B             -- 4 -- Tied for first place
+ There's still a two-way tie for first.
+
+Automatic Runoff Round: Second tiebreaker
+ The candidate with the most votes of score 5 wins.
+   A             -- 0 -- Tied for first place
+   B             -- 0 -- Tied for first place
+ There's still a two-way tie for first.
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['A', 'B']
+  Resolved: ['A'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+Winner — STAR Voting Method (single winner)
+ A
+```
+
 ## RCV-IRV — round by round
 
 ```text

@@ -44,6 +44,62 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Cal**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Cal    |
+-----------------------------------------
+       * Ann > |    ---     |2 - 0 - 3  |
+       * Cal > | 3 - 0 - 2  |   ---     |
+
+[Divergence from STAR]
+  STAR     = Cal
+  Approval = Ann   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Ann)
+ - Runoff Round Winner   = (Cal)
+  Candidate Ann earned the highest total score,
+  but Candidate Cal won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Ann,Bob,Cal
+    3 ×   4,  0,  5
+    2 ×   5,  1,  0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        2  3  0  0  0  0  |    22   4.4
+Bob        0  0  0  0  2  3  |     2   0.4
+Cal        3  0  0  0  0  2  |    15   3.0
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 22 -- First place
+   Cal           -- 15 -- Second place
+   Bob           --  2
+ Ann and Cal advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Cal           -- 3 -- First place
+   Ann           -- 2
+   Equal Support -- 0
+ Cal wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Cal 3 (60%) vs Ann 2 (40%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Cal
+```
+
 ## RCV-IRV — round by round
 
 ```text

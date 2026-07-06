@@ -47,6 +47,93 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 **STAR winner: Ann**
 
+Full LH STAR engine report:
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Cara   |
+-----------------------------------------
+       * Ann > |    ---     |3 - 1 - 1  |
+      * Cara > | 1 - 1 - 3  |   ---     |
+
+[Divergence from STAR]
+  STAR                   = Ann
+  Choose-One (Plurality) = Cara   (differs from STAR)
+  RCV-IRV                = Cara   (differs from STAR)
+  Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Ann,Ben,Cara
+  3,  4,   1
+  3,  4,   0
+  4,  0,   3
+  4,  0,   4
+  0,  1,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  2  2  0  0  1  |    14   2.8
+Ben        0  2  0  0  1  2  |     9   1.8
+Cara       0  1  1  0  2  1  |     9   1.8
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 14 -- First place
+   Ben           --  9 -- Tied for second place
+   Cara          --  9 -- Tied for second place
+ Ann advances, but there's a two-way tie for second.
+
+Scoring Round: First tiebreaker
+ The candidate preferred in the most head-to-head matchups advances.
+   Ben           -- 2 -- Tied for second place
+   Cara          -- 2 -- Tied for second place
+   Equal Support -- 1
+ There's still a two-way tie for second.
+
+Scoring Round: Second tiebreaker
+ The candidate with the most votes of score 5 advances.
+   Ben           -- 0 -- Tied for second place
+   Cara          -- 0 -- Tied for second place
+ There's still a two-way tie for second.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Cara', 'Ann', 'Ben']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ben', 'Cara']
+  Resolved: ['Cara'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Ann           -- 3 -- First place
+   Cara          -- 1
+   Equal Support -- 1
+ Ann wins.
+   Voters with a preference: 4 of 5 (1 Equal Support).
+   Ann 3 (75%) vs Cara 1 (25%); majority = 3.
+
+Winner — STAR Voting Method (single winner)
+ Ann
+```
+
 ## RCV-IRV — round by round
 
 > ⚠️ This election has a **fragile IRV tie** (equal scores force an arbitrary tie-break). The round table below is only *one* realization; a different tie-break can change the winner. See the flag above.
