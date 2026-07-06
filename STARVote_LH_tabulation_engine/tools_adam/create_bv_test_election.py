@@ -121,6 +121,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   BV_Library STAR_PR — fewer voters than seats      -> hk27tk
 #   BV_Library STAR_PR — fractional surplus           -> kk2gxj
 #   NOTA test — None of the Above wins               -> 26khr3
+#   01a_c2_b2 — two candidates, two ballots            -> my82v6
 # Their specs live in git history / the case .yaml files.
 
 ELECTIONS = [
@@ -233,7 +234,10 @@ def create(spec):
     # Save the finished object for promotion into the repo case.
     final = requests.get(f"{API}/Election/{eid}")
     os.makedirs(OUT_DIR, exist_ok=True)
-    out = os.path.join(OUT_DIR, f"{spec['title'].split(' -')[0].strip()}-{eid}.json")
+    # Sanitize the title for use as a filename (titles may contain '/', ':' etc.,
+    # e.g. "Chocolate/Vanilla" — an unsanitized '/' makes the write fail).
+    safe_title = "".join(c if c not in '/\\:*?"<>|' else "-" for c in spec["title"]).strip()[:60]
+    out = os.path.join(OUT_DIR, f"{safe_title}-{eid}.json")
     with open(out, "w") as fh:
         fh.write(final.text)
     print(f"  saved -> {out}")
