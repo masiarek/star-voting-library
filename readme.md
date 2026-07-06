@@ -12,6 +12,8 @@ The constant across all three stages: the count is never a black box. Every clai
 
 Everything here orbits a single, human-readable **YAML election file** as the source of truth. The pieces fit together as a pipeline:
 
+> **New here? Start with the founding idea:** [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md) — how each case is human-readable and machine-runnable at once, so it can be taught, run, and audited from the same source.
+
 ```
  author ──▶ validate ──▶ tabulate ──▶ verify ──▶ publish
    │                         │                       │
