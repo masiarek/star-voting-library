@@ -1,38 +1,14 @@
 # STAR Voting — Education & Test-Case Library
 
-A toolkit for making **STAR Voting** counts *legible, runnable, and verifiable*. It's built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine. It serves two audiences: people **learning and teaching** STAR, and **BetterVoting itself**, which it re-checks as an independent second-opinion engine.
+A library that does three things:
 
-**What it's for — and how that's evolved.** It began as a **YAML validator**: a strict parser for STAR election files with plain-language errors (no tracebacks) and a suite of negative fixtures that lock those messages in. It grew into a **library** of runnable example elections — hand-authored and imported. Today its center of gravity is **BetterVoting integration**: take a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), convert its JSON export to canonical YAML, re-tabulate it with an engine whose every step is auditable, and confirm the winner matches BetterVoting's official tally — turning real elections into reproducible cases and, increasingly, **catching and guarding BetterVoting's bugs** (turnout undercounts, tie mislabels, abstention miscounts) as a repo-native regression test-bank.
+**1. A human-readable test-case library.** Real and hand-written voting-method elections — each a single YAML file a *person* can read and the *engine* can run. → [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md). Browse the cases by different criteria: [by method](00_start_here/YAML_test_case_index/) · [BetterVoting-backed (sortable)](00_start_here/YAML_test_case_index/BV_registry.md) · [where methods diverge](method_comparisons/divergence_review/INDEX.md).
 
-The constant across all three stages: the count is never a black box. Every claim is backed by a runnable election and a transparent, cross-checked count — so it can be taught, audited, and verified.
+**2. Cross-verification with BetterVoting.** Import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it with an independent, auditable engine, and confirm the winner matches its official tally — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 
----
+**3. Educational material.** Concept pages and worked examples, organized by level — [Voting 101 / 201 / 301](00_start_here/CURRICULUM.md).
 
-## The big picture: one YAML file, a pipeline around it
-
-Everything here orbits a single, human-readable **YAML election file** as the source of truth. The pieces fit together as a pipeline:
-
-> **New here? Start with the founding idea:** [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md) — how each case is human-readable and machine-runnable at once, so it can be taught, run, and audited from the same source.
-
-```
- author ──▶ validate ──▶ tabulate ──▶ verify ──▶ publish
-   │                         │                       │
-   │                         ├─▶ screen echo         └─▶ a browsable <name>.md page
-   │                         └─▶ _tabulated.txt          (the friendly, linkable surface)
-   │                             (the full record)
-   ├─ hand-write the YAML, or
-   └─ import a BetterVoting JSON export (converter → canonical YAML)
-```
-
-1. **Author.** Write a small YAML election by hand, *or* import a real **BetterVoting JSON export** with the converter. The converter produces a canonical YAML: real candidate names as IDs, aligned ballot columns, the election's official tie-break (lot) order, and the embedded expected winner.
-2. **Validate.** The engine rejects malformed files with clear, plain-language errors and **no Python tracebacks** (bad YAML, missing `ballots:`, wrong column counts, out-of-range scores, ranked ballots under a score method, method/seat mismatches…). Negative test cases lock this behavior in.
-3. **Tabulate.** Run the YAML election file through the engine. It prints an annotated, round-by-round **interactive echo** to the screen, and writes a full-detail **`_tabulated.txt`** sibling for the record. STAR (single / Bloc / PR), Approval, **Ranked Robin**, and RCV-IRV are dispatched automatically based on the file.
-4. **Verify.** Each file embeds its expected winner — `expected_winners:` in hand-written files, an `expected_results:` block in BetterVoting imports — and a **pytest** suite checks them (positive winners, negative errors, JSON→YAML conversion, tie-break logic, Ranked Robin, plus non-vacuous self-checks), wired into a pre-commit hook.
-5. **Publish.** `STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py` renders each election into a **browsable Markdown page** (`<folder>/<folder>_pages/<name>.md`) — title, method, the scenario description, the ballots, and the full tabulation report, with auto cross-references. A pytest keeps these pages in sync with their YAML, so they're always current. This `.md` page — not the raw `.yaml` — is the reader-facing surface.
-
-> **House rule — link the `.md` page, not the raw `.yaml`.** The generated pages are the friendly, reader-first surface: lead with them in tables, navs, and cross-references; link a `.yaml` only when the *runnable source* is genuinely the point (e.g. a "run this file" command), and demote it. See `CLAUDE.md`.
-
-This is *not* a black box that just prints a winner — the whole point is that the count is **legible and reproducible**, so it can be taught and audited.
+Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine. New here? Start with [Why YAML?](00_start_here/why_yaml_test_cases.md), then [the pipeline](00_start_here/the_pipeline.md) that wraps it.
 
 ---
 
@@ -85,23 +61,6 @@ The full field-by-field guide — every option, the marker table, weighted rows,
 
 ---
 
-## Scored (rated) vs. ranked — the thing people conflate
-
-People new to STAR — especially from a ranked-choice background — constantly mix up **scored** methods with **ranked** ones. They sound like cousins but do opposite things.
-
-**Ranked = put them in order. Scored = give each a star rating.**
-
-- **Ranked (RCV-IRV):** you line candidates up — 1st, 2nd, 3rd. Purely *relative order*. You can't say a candidate is your 1st by a mile vs. by a hair, and you can't give two candidates the same position.
-- **Scored / starred (STAR, Score, Approval):** you rate each candidate independently, 0 to 5 — like rating movies. *Absolute and independent*: two candidates can both get 5, or everyone 0, because each rating stands alone.
-
-The tell: in ranked ballots, equal marks are illegal. In scored ballots, equal marks are the whole point — that's how a voter says "I like these two the same."
-
-**STAR** spells it out: **S**core **T**hen **A**utomatic **R**unoff. Voters star every candidate, the two highest *totals* advance, then the automatic runoff (the one idea borrowed from ranked voting) checks which finalist is preferred on more ballots.
-
-> Terminology note: this project prefers **scored / scores / stars** over "rated / rating," because "rated" is the word most easily confused with "ranked." Equal-score ballots are counted as **Equal Support** in the runoff — they are **not** discarded.
-
----
-
 ## Quick start
 
 All commands assume the project's virtualenv (`.venv` / `uv`).
@@ -132,11 +91,11 @@ pytest tests/
 
 Dispatched automatically from the file's `voting_method` (or from the ballot style — ranked `A>B>C` always routes to RCV-IRV):
 
-- **STAR** — single-winner Score Then Automatic Runoff (the default).
-- **Bloc STAR** / **proportional STAR** (`bloc`, `sss`, `rrv`, `allocated`) — multi-winner variants.
-- **Approval** — score each candidate 0/1; most approvals wins.
-- **Ranked Robin** (`RankedRobin`, aka RCV-RR / Copeland / Consensus) — every pair of candidates compared head-to-head; best win–loss record wins. Prints the full pairwise table and flags Condorcet cycles.
-- **RCV-IRV** — ranked ballots, tabulated by the vendored RCV-IRV engine.
+- **STAR** — single-winner Score Then Automatic Runoff (the default). → [learn](00_start_here/STAR_Voting/STAR_start_here.md)
+- **Bloc STAR** / **proportional STAR** (`bloc`, `sss`, `rrv`, `allocated`) — multi-winner variants. → [Bloc](02_STAR_Bloc/README.md) · [proportional](00_start_here/proportional_representation/STAR_PR/README.md)
+- **Approval** — score each candidate 0/1; most approvals wins. → [learn](00_start_here/Approval_Voting/approval_voting.md)
+- **Ranked Robin** (`RankedRobin`, aka RCV-RR / Copeland / Consensus) — every pair of candidates compared head-to-head; best win–loss record wins. Prints the full pairwise table and flags Condorcet cycles. → [learn](00_start_here/RCV_Ranked_Robin/ranked_robin.md)
+- **RCV-IRV** — ranked ballots, tabulated by the vendored RCV-IRV engine. → [learn](00_start_here/RCV_IRV/RCV-IRV-Hare.md)
 
 > Terminology: this repo says **RCV-IRV** (or **IRV**) for the instant-runoff count, reserving bare **RCV** for the ranked-ballot family. "RCV" loosely means IRV in US usage; we clarify once, then use the precise term. See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](00_start_here/TIPS_terminology.md).
 
@@ -159,5 +118,6 @@ The engine is the validator. Instead of crashing on a bad file, it prints a spec
 - [Start Here](00_start_here/00_START_HERE.md) — guided entry point
 - [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
 - [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
+- [Scored (rated) vs. ranked ballots](00_start_here/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
 - [Concepts — deep-dive pages for the important terms](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
 - [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently
