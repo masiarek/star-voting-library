@@ -1,0 +1,117 @@
+======================================================================
+SOURCE FILE:     bv2133_dyxrbr_pet2_star.yaml
+SOURCE MODIFIED: 2026-07-06 18:30:54
+TABULATED FILE:  bv2133_dyxrbr_pet2_star_tabulated.txt
+TABULATED AT:    2026-07-06 18:31:29
+======================================================================
+
+election_title: "BV2133 — Pet poll II (STAR): the consensus Cat wins"
+election_description: >-
+  One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr) —
+  32 voters, four pets (Dog, Cat, Fish, Bird), tallied four ways, each electing a
+  DIFFERENT pet. This is the STAR race: Cat (84) and Fish (72) lead on score and
+  advance; Cat wins the automatic runoff 22-10, so STAR elects the consensus, Cat.
+  The other races elect Dog (Plurality), Fish (RCV-IRV), and Bird (Approval).
+  BV also elects Cat.
+  Live results: https://bettervoting.com/dyxrbr/results
+bv_test_id: BV2133
+bv_election_id: dyxrbr
+bv_results_url: https://bettervoting.com/dyxrbr/results
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Dog,Cat,Fish,Bird
+  9: 0,2,1,4
+  10: 2,4,5,3
+  7: 3,2,1,0
+  6: 5,2,1,0
+expected_winners:
+  - Cat
+
+# file: bv2133_dyxrbr_pet2_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV2133 — Pet poll II (STAR): the consensus Cat wins ===
+  One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr) — 32 voters, four pets (Dog, Cat, Fish, Bird), tallied four ways, each electing a DIFFERENT pet. This is the STAR race: Cat (84) and Fish (72) lead on score and advance; Cat wins the automatic runoff 22-10, so STAR elects the consensus, Cat. The other races elect Dog (Plurality), Fish (RCV-IRV), and Bird (Approval). BV also elects Cat. Live results: https://bettervoting.com/dyxrbr/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Dog     |   * Cat     |   * Fish    |     Bird    |
+---------------------------------------------------------------------------
+           Dog > |     ---      |13 -  0 - 19 |13 -  0 - 19 |13 -  0 - 19 |
+         * Cat > | 19 -  0 - 13 |    ---      |22 -  0 - 10 |23 -  0 -  9 |
+        * Fish > | 19 -  0 - 13 |10 -  0 - 22 |    ---      |23 -  0 -  9 |
+          Bird > | 19 -  0 - 13 | 9 -  0 - 23 | 9 -  0 - 23 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Cat — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Cat
+  Choose-One (Plurality) = Dog   (differs from STAR)
+  RCV-IRV                = Fish   (differs from STAR)
+  Approval               = Bird   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
+     file:///sessions/practical-cool-brown/mnt/YAML/method_comparisons/pet_poll_four_winners/pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 32 ballots.
+Count × Dog,Cat,Fish,Bird
+   10 ×   2,  4,   5,   3
+    9 ×   0,  2,   1,   4
+    7 ×   3,  2,   1,   0
+    6 ×   5,  2,   1,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Dog         6   0   7  10   0   9  |    71   2.2
+Cat         0  10   0  22   0   0  |    84   2.6
+Fish       10   0   0   0  22   0  |    72   2.3
+Bird        0   9  10   0   0  13  |    66   2.1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cat           -- 84 -- First place
+   Fish          -- 72 -- Second place
+   Dog           -- 71
+   Bird          -- 66
+ Cat and Fish advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cat           -- 22 -- First place
+   Fish          -- 10
+   Equal Support --  0
+ Cat wins.
+   Runoff math:
+     32  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     32  voters with a preference  (majority = 17)
+           Cat 22 (69%)  ·  Fish 10 (31%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cat

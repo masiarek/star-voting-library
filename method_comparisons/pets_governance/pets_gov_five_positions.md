@@ -40,5 +40,5 @@ BetterVoting's methods are Plurality, IRV, STV, STAR, STAR-PR, Approval, and Ran
 ## See also
 
 - Folder overview: [pets_governance — README](README.md)
-- The single-winner sibling (four methods, four winners): [BV2133 pet poll](../pet_poll_four_methods/) *(once created)* and [BV2132 pet poll](../pet_poll_four_methods/bv2132_ykjjhy_pet_poll_four_methods.md)
+- The single-winner siblings: [BV2133 — Pet poll II (four winners)](../pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners.md) and [BV2132 — Pet poll (three winners)](../pet_poll_four_methods/bv2132_ykjjhy_pet_poll_four_methods.md)
 - STAR-PR / proportional background: [03_STAR_PR](../../03_STAR_PR/) · [Ranked Robin](../../05_Ranked_Robin/)

@@ -24,6 +24,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Pets — Approval | Approval | 3 | **Cat** |
 | Pets — STAR | STAR | 3 | **Cat** |
 
+## BV2133 — Pet poll II: four methods, four winners
+
+**Election** [`dyxrbr`](https://bettervoting.com/dyxrbr/results) · **4 races** · **32 ballots** · [frozen export](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Pets II — Choose One (Plurality) | Plurality | 4 | **Dog** |
+| Pets II — RCV (IRV) | IRV | 4 | **Fish** |
+| Pets II — Approval | Approval | 4 | **Bird** |
+| Pets II — STAR | STAR | 4 | **Cat** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

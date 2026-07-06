@@ -1,0 +1,57 @@
+======================================================================
+SOURCE FILE:     bv2133_dyxrbr_pet2_irv.yaml
+SOURCE MODIFIED: 2026-07-06 18:31:18
+TABULATED FILE:  bv2133_dyxrbr_pet2_irv_tabulated.txt
+TABULATED AT:    2026-07-06 18:31:29
+======================================================================
+
+election_title: "BV2133 — Pet poll II (RCV-IRV): transfers elect Fish"
+election_description: >-
+  One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr).
+  RCV-IRV (ranked, instant runoff). Round 1: Dog 13, Fish 10, Bird 9 — eliminate
+  Bird; Bird > Cat, so Cat rises. Then Cat (fewest) is eliminated and its ballots
+  flow to Fish, which beats Dog 19-13. So IRV elects Fish. Same electorate as the
+  Plurality race (Dog), Approval race (Bird) and STAR race (Cat): four methods,
+  four winners. BV also elects Fish.
+  Live results: https://bettervoting.com/dyxrbr/results
+bv_test_id: BV2133
+bv_election_id: dyxrbr
+bv_results_url: https://bettervoting.com/dyxrbr/results
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  9:Bird>Cat>Fish>Dog
+  10:Fish>Cat>Bird>Dog
+  13:Dog>Cat>Fish>Bird
+expected_winners:
+  - Fish
+
+# file: bv2133_dyxrbr_pet2_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2133 — Pet poll II (RCV-IRV): transfers elect Fish
+ Tabulating 32 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Dog               13  Hopeful
+Fish              10  Hopeful
+Bird               9  Rejected
+Cat                0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Fish              19  Elected
+Dog               13  Rejected
+Bird               0  Rejected
+Cat                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Fish

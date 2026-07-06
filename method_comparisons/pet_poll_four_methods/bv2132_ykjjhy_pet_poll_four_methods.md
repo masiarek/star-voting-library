@@ -50,6 +50,12 @@ Each race's full LH tabulation is in its `_tabulated` mirror:
 
 Created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py) as a single multi-race BV election (`ykjjhy`) with made-up ballots — the first multi-race case built through the script. BetterVoting's Results for all four races match our engines exactly.
 
+## The pets set
+
+- **BV2132 — Pet poll (three winners)** — this one (Cat wins Approval *and* STAR).
+- [BV2133 — Pet poll II (four winners)](../pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners.md) — a 4th pet splits Approval from STAR too, so all four methods disagree.
+- [Pets Governance (five methods, LH-only)](../pets_governance/pets_gov_five_positions.md) — multi-winner: majoritarian sweep vs proportional representation.
+
 ## See also
 
 - Folder overview: [pet_poll_four_methods — README](README.md)
