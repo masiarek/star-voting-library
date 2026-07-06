@@ -4,9 +4,9 @@
 
 Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, or a frozen `_bv_export.json`). Cases with a real BetterVoting election but no assigned BV number (e.g. the `Runoff_NN` set) appear under their case name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) (GitHub sorts CSV columns on click). **The master Google Sheet stays authoritative for the full BV numbering** — it also tracks non-tabulation QA (UI, roles, archive…) that has no YAML here.
 
-**30 cases** · methods: Approval (1), Approval_Multi_Winner (1), Bloc STAR (9), Plurality (1), STAR (17), allocated (1).
+**31 cases** · methods: Approval (1), Approval_Multi_Winner (1), Bloc STAR (9), Plurality (1), STAR (18), allocated (1).
 
-**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130.  (+10 export-backed cases with no BV number.)
+**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130.  (+11 export-backed cases with no BV number.)
 
 Highest number here is **BV2130** → the next free number above the repo is **BV2131**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
 
@@ -32,6 +32,7 @@ Highest number here is **BV2130** → the next free number above the repo is **B
 | BV1815 | bv1815_bloc_3c2s_basic | [`fk38pk`](https://bettervoting.com/fk38pk/results) | Bloc STAR | 2 | 3 | 3 | A, C | [page](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.md) | [yaml](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
 | BV2105 | bv2105_r4dqvd_ice_cream_bloc | [`r4dqvd`](https://bettervoting.com/r4dqvd/results) | Bloc STAR | 2 | 3 | 4 | Chocolate, Strawberry | [page](../../02_STAR_Bloc/_main/bv2105_r4dqvd_ice_cream_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv2105_r4dqvd_ice_cream_bloc.yaml) |
 | BV2130 | bv2130_presidential_board_star_pr | [`bvhchj`](https://bettervoting.com/bvhchj/results) | allocated | 7 | 51 | 102 | Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation) | [page](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.md) | [yaml](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |
+| — | 01a_c2_b2_two-candidates | [`my82v6`](https://bettervoting.com/my82v6/results) | STAR | 1 | 2 | 2 | Chocolate | [page](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) | [yaml](../../01_STAR/_main/01a_c2_b2_two-candidates.yaml) |
 | — | Runoff_01_confirms_leader_r2pvc9 | [`r2pvc9`](https://bettervoting.com/r2pvc9/results) | STAR | 1 | 3 | 3 | Aspen | [page](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.yaml) |
 | — | Runoff_02_atom_reversal_yx9447 | [`yx9447`](https://bettervoting.com/yx9447/results) | STAR | 1 | 3 | 3 | Boston | [page](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.yaml) |
 | — | Runoff_03_enthusiasts_vs_majority_rkgtpk | [`rkgtpk`](https://bettervoting.com/rkgtpk/results) | STAR | 1 | 5 | 5 | Eden | [page](../../01_STAR/runoff_overturns_leader/Runoff_03_enthusiasts_vs_majority_rkgtpk.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml) |
