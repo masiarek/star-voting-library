@@ -30,7 +30,7 @@ video_script: |-
   voting — which is exactly why we start here.
 ballots: |-
   Chocolate,Vanilla
-          5,      3       # Caroline — she likes both flavors
+          5,      3       # Caroline — Chocolate (5) over Vanilla (3)
 
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen

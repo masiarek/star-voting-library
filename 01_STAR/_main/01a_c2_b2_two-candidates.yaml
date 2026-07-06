@@ -10,12 +10,12 @@ scenario_description: |-
 video_script: |-
   The goal here is two show how the results change when we add one more vote.
   
-  5,      3       # Caroline - she likes both flavors
-  5,      3       # Bob - he likes both flavors too
+  5,      3       # Caroline — Chocolate (5) over Vanilla (3)
+  5,      3       # Bob — same
 ballots: |-
   Chocolate,Vanilla
-          5,      3       # Caroline - she likes both flavors
-          5,      3       # Bob - he likes both flavors too
+          5,      3       # Caroline — Chocolate (5) over Vanilla (3)
+          5,      3       # Bob — same
 
 options:
   show_description: false
