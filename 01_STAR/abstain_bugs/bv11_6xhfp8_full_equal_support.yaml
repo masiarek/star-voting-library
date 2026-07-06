@@ -1,0 +1,53 @@
+election_title: "BV11 — full & equal support (5,5) counted as abstentions"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/6xhfp8 ·
+  results: https://bettervoting.com/6xhfp8/results
+  Three voters each give both candidates the maximum score; BetterVoting counts
+  every ballot as an abstention.
+
+bv_test_id: BV11
+bv_election_id: 6xhfp8
+bv_results_url: https://bettervoting.com/6xhfp8/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/1053
+
+scenario_description: |-
+  Two candidates, three voters, every ballot **5,5** — full and equal support. This
+  is a valid STAR ballot (it contributes 5 to both in the scoring round).
+
+  **BetterVoting** treats each all-equal ballot as an abstention (policy
+  bettervoting#884): it reports nTallyVotes = 0, nAbstentions = 3, and the submit
+  dialog warns "Abstained / No preference" on a full-support ballot (the bug in
+  bettervoting#1053) — yet it still declares a winner (Ann) off zero tallied votes.
+
+  **LH diverges:** it counts all three as real votes (Ann 15, Bob 15), so it's a
+  genuine tie, resolved to Ann by lot (CSV column order). Same winner, opposite
+  reasoning: BetterVoting says "everyone abstained," LH says "everyone tied." LH's
+  treatment matches the view that full, equal support is a cast vote, not an
+  abstention — the #884 dispute.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+# Ann, Bob — every voter gives full, equal support.
+ballots: |-
+  Ann,Bob
+  5,5
+  5,5
+  5,5
+
+# Tie (Ann 15, Bob 15) resolved to Ann by lot / CSV column order.
+expected_winners:
+  - Ann
+
+# file: bv11_6xhfp8_full_equal_support.yaml

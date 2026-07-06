@@ -1,0 +1,452 @@
+{
+  "Election": {
+    "election_id": "jfrk9t",
+    "title": "BV655 - “equal opposition” vote - the “Same-Score Ballots” ",
+    "description": "",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "closed",
+    "races": [
+      {
+        "title": "BV655 - “equal opposition” vote - the “Same-Score Ballots” ",
+        "description": "",
+        "race_id": "r-3hw",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-hb2",
+            "candidate_name": "Option 1"
+          },
+          {
+            "candidate_id": "c-qj9",
+            "candidate_name": "Option 2"
+          }
+        ]
+      },
+      {
+        "title": "Abstain Vote",
+        "description": "",
+        "race_id": "r-rgy",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-hb2",
+            "candidate_name": "Option 1"
+          },
+          {
+            "candidate_id": "c-qj9",
+            "candidate_name": "Option 2"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": false,
+      "draggable_ballot": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": "ElectionManager.User1@gmail.com"
+    },
+    "auth_key": null,
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-11-13T16:22:00.622Z",
+    "update_date": "1763054755650",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-j4mg3vmp",
+      "election_id": "jfrk9t",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-hb2"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-qj9"
+            }
+          ],
+          "race_id": "r-3hw"
+        },
+        {
+          "scores": [
+            {
+              "score": null,
+              "candidate_id": "c-hb2"
+            },
+            {
+              "score": null,
+              "candidate_id": "c-qj9"
+            }
+          ],
+          "race_id": "r-rgy"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-7xyff4x2",
+      "election_id": "jfrk9t",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-hb2"
+            },
+            {
+              "score": null,
+              "candidate_id": "c-qj9"
+            }
+          ],
+          "race_id": "r-3hw"
+        },
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-hb2"
+            },
+            {
+              "score": null,
+              "candidate_id": "c-qj9"
+            }
+          ],
+          "race_id": "r-rgy"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-hb2",
+          "name": "Option 1",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-qj9": 1,
+            "c-hb2": 0
+          },
+          "winsAgainst": {
+            "c-qj9": true,
+            "c-hb2": false
+          },
+          "score": 5,
+          "fiveStarCount": 1
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-qj9",
+          "name": "Option 2",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-qj9": 0,
+            "c-hb2": 0
+          },
+          "winsAgainst": {
+            "c-qj9": false,
+            "c-hb2": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-hb2",
+              "name": "Option 1",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-qj9": 1,
+                "c-hb2": 0
+              },
+              "winsAgainst": {
+                "c-qj9": true,
+                "c-hb2": false
+              },
+              "score": 5,
+              "fiveStarCount": 1
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-qj9",
+              "name": "Option 2",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-qj9": 0,
+                "c-hb2": 0
+              },
+              "winsAgainst": {
+                "c-qj9": false,
+                "c-hb2": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Option 1",
+                "Option 2"
+              ],
+              "stars": [
+                "5",
+                "0"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Option 1",
+              "runner_up": "Option 2",
+              "winner_votes": 1,
+              "runner_up_votes": 0,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-hb2",
+            "name": "Option 1",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-qj9": 1,
+              "c-hb2": 0
+            },
+            "winsAgainst": {
+              "c-qj9": true,
+              "c-hb2": false
+            },
+            "score": 5,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "c-qj9",
+            "name": "Option 2",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-qj9": 0,
+              "c-hb2": 0
+            },
+            "winsAgainst": {
+              "c-qj9": false,
+              "c-hb2": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 1,
+        "nTallyVotes": 1
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "c-qj9",
+        "c-hb2"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-qj9",
+          "name": "Option 2",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-qj9": 0,
+            "c-hb2": 0
+          },
+          "winsAgainst": {
+            "c-qj9": false,
+            "c-hb2": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-hb2",
+          "name": "Option 1",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-qj9": 0,
+            "c-hb2": 0
+          },
+          "winsAgainst": {
+            "c-qj9": false,
+            "c-hb2": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-qj9",
+              "name": "Option 2",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-qj9": 0,
+                "c-hb2": 0
+              },
+              "winsAgainst": {
+                "c-qj9": false,
+                "c-hb2": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-hb2",
+              "name": "Option 1",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-qj9": 0,
+                "c-hb2": 0
+              },
+              "winsAgainst": {
+                "c-qj9": false,
+                "c-hb2": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_same_score",
+              "names": [
+                "Option 2",
+                "Option 1"
+              ],
+              "star": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Option 2",
+                "Option 1"
+              ],
+              "votes": 0,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "Option 2",
+                "Option 1"
+              ],
+              "stars": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "Option 2",
+                "Option 1"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "Option 2",
+              "runner_up": "Option 1",
+              "tiebreak_candidate_names": "Option 2, Option 1"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Option 2",
+              "runner_up": "Option 1"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-qj9",
+            "name": "Option 2",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-qj9": 0,
+              "c-hb2": 0
+            },
+            "winsAgainst": {
+              "c-qj9": false,
+              "c-hb2": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-hb2",
+            "name": "Option 1",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-qj9": 0,
+              "c-hb2": 0
+            },
+            "winsAgainst": {
+              "c-qj9": false,
+              "c-hb2": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 2,
+        "nTallyVotes": 0
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "c-qj9",
+        "c-hb2"
+      ]
+    }
+  ]
+}

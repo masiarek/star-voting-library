@@ -1,0 +1,288 @@
+{
+  "Election": {
+    "election_id": "6xhfp8",
+    "title": "BV11 - Valid Ballot - Full and Equal Support (2 Candidates)",
+    "description": "",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV11 - Valid Ballot - Full and Equal Support (2 Candidates)",
+        "description": "",
+        "race_id": "r-hgx",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-3pd",
+            "candidate_name": "Ann"
+          },
+          {
+            "candidate_id": "c-w9y",
+            "candidate_name": "Bob"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true,
+      "draggable_ballot": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": ""
+    },
+    "auth_key": null,
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-10-30T23:15:37.436Z",
+    "update_date": "1783301143012",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-by7qkf9j",
+      "election_id": "6xhfp8",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-3pd"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-w9y"
+            }
+          ],
+          "race_id": "r-hgx"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-yw26f96t",
+      "election_id": "6xhfp8",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-3pd"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-w9y"
+            }
+          ],
+          "race_id": "r-hgx"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-74kd6v78",
+      "election_id": "6xhfp8",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-3pd"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-w9y"
+            }
+          ],
+          "race_id": "r-hgx"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-3pd",
+          "name": "Ann",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-3pd": 0,
+            "c-w9y": 0
+          },
+          "winsAgainst": {
+            "c-3pd": false,
+            "c-w9y": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-w9y",
+          "name": "Bob",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-3pd": 0,
+            "c-w9y": 0
+          },
+          "winsAgainst": {
+            "c-3pd": false,
+            "c-w9y": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-3pd",
+              "name": "Ann",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "c-3pd": 0,
+                "c-w9y": 0
+              },
+              "winsAgainst": {
+                "c-3pd": false,
+                "c-w9y": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-w9y",
+              "name": "Bob",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-3pd": 0,
+                "c-w9y": 0
+              },
+              "winsAgainst": {
+                "c-3pd": false,
+                "c-w9y": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_same_score",
+              "names": [
+                "Ann",
+                "Bob"
+              ],
+              "star": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Ann",
+                "Bob"
+              ],
+              "votes": 0,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "Ann",
+                "Bob"
+              ],
+              "stars": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "Ann",
+                "Bob"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "Ann",
+              "runner_up": "Bob",
+              "tiebreak_candidate_names": "Ann, Bob"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Ann",
+              "runner_up": "Bob"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-3pd",
+            "name": "Ann",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-3pd": 0,
+              "c-w9y": 0
+            },
+            "winsAgainst": {
+              "c-3pd": false,
+              "c-w9y": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-w9y",
+            "name": "Bob",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-3pd": 0,
+              "c-w9y": 0
+            },
+            "winsAgainst": {
+              "c-3pd": false,
+              "c-w9y": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 3,
+        "nTallyVotes": 0
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "c-3pd",
+        "c-w9y"
+      ]
+    }
+  ]
+}

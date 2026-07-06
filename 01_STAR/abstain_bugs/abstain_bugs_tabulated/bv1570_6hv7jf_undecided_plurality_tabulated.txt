@@ -1,0 +1,147 @@
+======================================================================
+SOURCE FILE:     bv1570_6hv7jf_undecided_plurality.yaml
+SOURCE MODIFIED: 2026-07-05 21:31:51
+TABULATED FILE:  bv1570_6hv7jf_undecided_plurality_tabulated.txt
+TABULATED AT:    2026-07-05 21:32:01
+======================================================================
+
+election_title: "BV1570 — undecided plurality election still declares a winner"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/6hv7jf ·
+  results: https://bettervoting.com/6hv7jf/results
+  Every ballot is effectively empty, yet a winner (and a wrong voter count) is shown.
+
+bv_test_id: BV1570
+bv_election_id: 6hv7jf
+bv_results_url: https://bettervoting.com/6hv7jf/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/894
+
+scenario_description: |-
+  A Plurality ("choose one") race, two options, three voters, all "undecided":
+  one ballot deselects Approve (a `0`, then blank), one is fully blank, one
+  deselects Reject. Markers: `&` = the BetterVoting `null` (left blank).
+
+  **BetterVoting** counts all three as abstentions (nTallyVotes = 0), reports the
+  wrong voter count (the results view showed 2, not 3), and still declares a winner
+  (Approve) off zero tallied votes (bettervoting#894).
+
+  **LH diverges:** only the fully-blank ballot abstains. The two ballots that carry
+  an explicit `0` are real tally votes (both options score 0), so LH sees
+  nTallyVotes = 2, nAbstentions = 1, a 0-0 tie, resolved to Approve by lot. Same
+  winner, different count — LH counts an explicit 0 as a cast vote, per the #884
+  dispute.
+
+num_winners: 1
+voting_method: Plurality
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+# Approve, Reject.  `&` = candidate abstention (BV null / left blank).
+ballots: |-
+  Approve,Reject
+  0,&
+  &,&
+  &,0
+
+# 0-0 tie resolved to Approve by lot / CSV column order.
+expected_winners:
+  - Approve
+
+# file: bv1570_6hv7jf_undecided_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV1570 — undecided plurality election still declares a winner ===
+  A Plurality ("choose one") race, two options, three voters, all "undecided":
+  one ballot deselects Approve (a `0`, then blank), one is fully blank, one
+  deselects Reject. Markers: `&` = the BetterVoting `null` (left blank).
+
+  **BetterVoting** counts all three as abstentions (nTallyVotes = 0), reports the
+  wrong voter count (the results view showed 2, not 3), and still declares a winner
+  (Approve) off zero tallied votes (bettervoting#894).
+
+  **LH diverges:** only the fully-blank ballot abstains. The two ballots that carry
+  an explicit `0` are real tally votes (both options score 0), so LH sees
+  nTallyVotes = 2, nAbstentions = 1, a 0-0 tie, resolved to Approve by lot. Same
+  winner, different count — LH counts an explicit 0 as a cast vote, per the #884
+  dispute.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Approve  | * Reject   |
+--------------------------------------------
+    * Approve > |     ---     | 0 - 3 - 0  |
+     * Reject > |  0 - 3 - 0  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots. Note: 1 of 3 ballots is marked as an abstention.
+Approve,Reject
+      0,     &
+      &,     &
+      &,     0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Approve    0  0  0  0  0  1    2  |     0   0.0
+Reject     0  0  0  0  0  1    2  |     0   0.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Approve       -- 0 -- First place
+   Reject        -- 0 -- Second place
+ Approve and Reject advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Approve       -- 0 -- Tied for first place
+   Reject        -- 0 -- Tied for first place
+   Equal Support -- 3
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Approve       -- 0 -- Tied for first place
+   Reject        -- 0 -- Tied for first place
+ There's still a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   Approve       -- 0 -- Tied for first place
+   Reject        -- 0 -- Tied for first place
+ There's still a two-way tie for first.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Approve', 'Reject']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Approve', 'Reject']
+  Resolved: ['Approve'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Approve

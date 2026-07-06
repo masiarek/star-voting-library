@@ -4,14 +4,15 @@
 
 Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, or a frozen `_bv_export.json`). Cases with a real BetterVoting election but no assigned BV number (e.g. the `Runoff_NN` set) appear under their case name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) (GitHub sorts CSV columns on click). **The master Google Sheet stays authoritative for the full BV numbering** — it also tracks non-tabulation QA (UI, roles, archive…) that has no YAML here.
 
-**27 cases** · methods: Approval (1), Approval_Multi_Winner (1), Bloc STAR (9), STAR (15), allocated (1).
+**30 cases** · methods: Approval (1), Approval_Multi_Winner (1), Bloc STAR (9), Plurality (1), STAR (17), allocated (1).
 
-**BV-numbered Test IDs:** BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV750, BV1525, BV1815, BV2105, BV2130.  (+10 export-backed cases with no BV number.)
+**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130.  (+10 export-backed cases with no BV number.)
 
 Highest number here is **BV2130** → the next free number above the repo is **BV2131**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
 
 | Test ID | Case | BV id | Method | W | Cand | Ballots | Winners | Page | YAML |
 |---------|------|-------|--------|:-:|:-:|:-:|---------|------|------|
+| BV11 | bv11_6xhfp8_full_equal_support | [`6xhfp8`](https://bettervoting.com/6xhfp8/results) | STAR | 1 | 2 | 3 | Ann | [page](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.md) | [yaml](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml) |
 | BV15 | bv15_4h89vj_plurality_abstain | [`4h89vj`](https://bettervoting.com/4h89vj/results) | STAR | 1 | 2 | 12 | Andre | [page](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) | [yaml](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml) |
 | BV27 | approval_bloc_4seats_c7_b12_lackner_skowron | [`jt6r76`](https://bettervoting.com/jt6r76/results) | Approval_Multi_Winner | 4 | 7 | 12 | A, B, C, D | [page](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | [yaml](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 | BV95a | bv95a_9m6rxr_favorite_survives_one_rival | [`9m6rxr`](https://bettervoting.com/9m6rxr/results) | STAR | 1 | 3 | 5 | Ada | [page](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) | [yaml](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
@@ -24,8 +25,10 @@ Highest number here is **BV2130** → the next free number above the repo is **B
 | BV132 | bv132_verify_votes_bloc | [`3494cb`](https://bettervoting.com/3494cb/results) | Bloc STAR | 2 | 3 | 4 | C, B | [page](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv132_verify_votes_bloc.yaml) |
 | BV135 | approval_101_c3_b5 | [`ff6mk3`](https://bettervoting.com/ff6mk3/results) | Approval | 1 | 3 | 5 | Bob | [page](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) | [yaml](../../04_Approval/_main/approval_101_c3_b5.yaml) |
 | BV215 | bv215_26khr3_nota_wins | [`26khr3`](https://bettervoting.com/26khr3/results) | STAR | 1 | 3 | 6 | None of the Above | [page](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md) | [yaml](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
+| BV655 | bv655_jfrk9t_equal_opposition | [`jfrk9t`](https://bettervoting.com/jfrk9t/results) | STAR | 1 | 2 | 2 | Option 1 | [page](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.md) | [yaml](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml) |
 | BV750 | bv750_tie_breaking_bloc | [`3yr2qd`](https://bettervoting.com/3yr2qd/results) | Bloc STAR | 2 | 3 | 3 | c, a | [page](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
 | BV1525 | bv1525_condorcet_loser_bloc | [`dkj9dx`](https://bettervoting.com/dkj9dx/results) | Bloc STAR | 4 | 5 | 16 | First, Second, Third, Fourth | [page](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
+| BV1570 | bv1570_6hv7jf_undecided_plurality | [`6hv7jf`](https://bettervoting.com/6hv7jf/results) | Plurality | 1 | 2 | 3 | Approve | [page](../../01_STAR/abstain_bugs/bv1570_6hv7jf_undecided_plurality.md) | [yaml](../../01_STAR/abstain_bugs/bv1570_6hv7jf_undecided_plurality.yaml) |
 | BV1815 | bv1815_bloc_3c2s_basic | [`fk38pk`](https://bettervoting.com/fk38pk/results) | Bloc STAR | 2 | 3 | 3 | A, C | [page](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.md) | [yaml](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
 | BV2105 | bv2105_r4dqvd_ice_cream_bloc | [`r4dqvd`](https://bettervoting.com/r4dqvd/results) | Bloc STAR | 2 | 3 | 4 | Chocolate, Strawberry | [page](../../02_STAR_Bloc/_main/bv2105_r4dqvd_ice_cream_bloc.md) | [yaml](../../02_STAR_Bloc/_main/bv2105_r4dqvd_ice_cream_bloc.yaml) |
 | BV2130 | bv2130_presidential_board_star_pr | [`bvhchj`](https://bettervoting.com/bvhchj/results) | allocated | 7 | 51 | 102 | Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation) | [page](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.md) | [yaml](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |

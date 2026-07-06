@@ -1,0 +1,147 @@
+======================================================================
+SOURCE FILE:     bv11_6xhfp8_full_equal_support.yaml
+SOURCE MODIFIED: 2026-07-05 21:31:39
+TABULATED FILE:  bv11_6xhfp8_full_equal_support_tabulated.txt
+TABULATED AT:    2026-07-05 21:32:01
+======================================================================
+
+election_title: "BV11 — full & equal support (5,5) counted as abstentions"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/6xhfp8 ·
+  results: https://bettervoting.com/6xhfp8/results
+  Three voters each give both candidates the maximum score; BetterVoting counts
+  every ballot as an abstention.
+
+bv_test_id: BV11
+bv_election_id: 6xhfp8
+bv_results_url: https://bettervoting.com/6xhfp8/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/1053
+
+scenario_description: |-
+  Two candidates, three voters, every ballot **5,5** — full and equal support. This
+  is a valid STAR ballot (it contributes 5 to both in the scoring round).
+
+  **BetterVoting** treats each all-equal ballot as an abstention (policy
+  bettervoting#884): it reports nTallyVotes = 0, nAbstentions = 3, and the submit
+  dialog warns "Abstained / No preference" on a full-support ballot (the bug in
+  bettervoting#1053) — yet it still declares a winner (Ann) off zero tallied votes.
+
+  **LH diverges:** it counts all three as real votes (Ann 15, Bob 15), so it's a
+  genuine tie, resolved to Ann by lot (CSV column order). Same winner, opposite
+  reasoning: BetterVoting says "everyone abstained," LH says "everyone tied." LH's
+  treatment matches the view that full, equal support is a cast vote, not an
+  abstention — the #884 dispute.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+# Ann, Bob — every voter gives full, equal support.
+ballots: |-
+  Ann,Bob
+  5,5
+  5,5
+  5,5
+
+# Tie (Ann 15, Bob 15) resolved to Ann by lot / CSV column order.
+expected_winners:
+  - Ann
+
+# file: bv11_6xhfp8_full_equal_support.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV11 — full & equal support (5,5) counted as abstentions ===
+  Two candidates, three voters, every ballot **5,5** — full and equal support. This
+  is a valid STAR ballot (it contributes 5 to both in the scoring round).
+
+  **BetterVoting** treats each all-equal ballot as an abstention (policy
+  bettervoting#884): it reports nTallyVotes = 0, nAbstentions = 3, and the submit
+  dialog warns "Abstained / No preference" on a full-support ballot (the bug in
+  bettervoting#1053) — yet it still declares a winner (Ann) off zero tallied votes.
+
+  **LH diverges:** it counts all three as real votes (Ann 15, Bob 15), so it's a
+  genuine tie, resolved to Ann by lot (CSV column order). Same winner, opposite
+  reasoning: BetterVoting says "everyone abstained," LH says "everyone tied." LH's
+  treatment matches the view that full, equal support is a cast vote, not an
+  abstention — the #884 dispute.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Bob    |
+-----------------------------------------
+       * Ann > |    ---     |0 - 3 - 0  |
+       * Bob > | 0 - 3 - 0  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ann, Bob (pairwise ties)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Ann,Bob
+    3 ×   5,  5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        3  0  0  0  0  0  |    15   5.0
+Bob        3  0  0  0  0  0  |    15   5.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 15 -- First place
+   Bob           -- 15 -- Second place
+ Ann and Bob advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ann           -- 0 -- Tied for first place
+   Bob           -- 0 -- Tied for first place
+   Equal Support -- 3
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Ann           -- 15 -- Tied for first place
+   Bob           -- 15 -- Tied for first place
+ There's still a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   Ann           -- 3 -- Tied for first place
+   Bob           -- 3 -- Tied for first place
+ There's still a two-way tie for first.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Ann', 'Bob']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ann', 'Bob']
+  Resolved: ['Ann'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ann

@@ -51,9 +51,15 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 
 - **Concept lesson:** [abstention_vs_zero_vs_nota.md](../../STAR_Voting/abstention_vs_zero_vs_nota.md) — the 0 / null / NOTA distinction, and the LH marker vocabulary (`- ~ & ? %`) BV lacks.
 - **Reproduced cases:**
+  - [`abstain_bugs/`](../../../01_STAR/abstain_bugs/README.md) — the #884 "all-equal = abstain" reproductions, cross-checked against LH:
+    - [`bv11_6xhfp8_full_equal_support`](../../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.md) → **#1053** (`5,5`×3 counted as 3 abstentions).
+    - [`bv655_jfrk9t_equal_opposition`](../../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.md) → **#1090** (explicit `0,0` labeled "Abstained").
+    - [`bv1570_6hv7jf_undecided_plurality`](../../../01_STAR/abstain_bugs/bv1570_6hv7jf_undecided_plurality.md) → **#894** (undecided plurality still declares a winner; wrong voter count).
   - [`bv215_26khr3_nota_wins`](../../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md) → #1421 (NOTA wins; also carries a per-candidate `null`).
   - [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md) · [`bv15_4h89vj_plurality_abstain`](../../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) — abstention handling in real BV counts.
   - `YAML_library/2_negative/bv20_neg1.yaml` / `bv20_neg2.yaml` → BV20 / #791.
+
+  **Key finding across the abstain_bugs set:** LH counts an explicit score (even all-0 or all-5) as a real vote and abstains only a *truly blank* ballot, so it never zeroes out the tally the way BetterVoting's #884 "all-equal = abstain" rule does. The winner survives via tiebreak, but the counts diverge — evidence for the #884 dispute.
 - **Code contribution:** PR **#1419** (v2 JSON export) preserves `score: null` distinct from `0` — i.e. it delivers the **"Raw Audit Data"** half of **#1160** for the JSON path. Worth commenting on #1160 to link them rather than opening a new export-ambiguity ticket.
 
 ## Don't-duplicate note
@@ -62,5 +68,5 @@ The "BetterVoting has no explicit abstain/spoiled mark distinct from 0/blank" id
 
 ## Gaps / opportunities
 
-- No library case yet for **#1053** (BV11 5,5-mislabel), **#1090** (BV655 all-0 mislabel), or **#894** (BV1570 undecided-plurality). Each is a clean small reproduction if we want them.
+- #1053, #1090, and #894 now have reproductions (see `abstain_bugs/` above). ✅
 - The **spoiled** / **spoiled-and-reissued** states (LH `?` / `%`) have no BetterVoting equivalent at all — not currently ticketed.

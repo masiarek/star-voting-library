@@ -28,6 +28,8 @@ AGREE,01_STAR/_main/vote_splitting3.yaml,3,21,DarkChoco,DarkChoco,DarkChoco,Dark
 AGREE,01_STAR/_main/vote_splitting_scenario1_spoiler.yaml,3,90,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,0,False,False,False
 AGREE,01_STAR/_main/vote_splitting_scenario2_bloc_leads.yaml,3,36,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,0,False,False,False
 AGREE,01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,0,False,False,False
+AGREE,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
+AGREE,01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
 AGREE,01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml,3,6,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,0,False,False,False
 AGREE,01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
