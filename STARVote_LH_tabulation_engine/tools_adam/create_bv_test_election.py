@@ -120,30 +120,25 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   BV_Library STAR_PR — basic two-seat allocation   -> jwxr3j
 #   BV_Library STAR_PR — fewer voters than seats      -> hk27tk
 #   BV_Library STAR_PR — fractional surplus           -> kk2gxj
-# Their specs live in git history / method_comparisons/BV_Library/BV_Library_star_pr_*.yaml.
+#   NOTA test — None of the Above wins               -> 26khr3
+# Their specs live in git history / the case .yaml files.
 
 ELECTIONS = [
-    # NOTA feature test — "None of the Above" as a real (c-nota) candidate, plus a
-    # null abstention. Candidate order: [Ada, Bruno, None of the Above].
-    #   - Ada gets 10, Bruno 2, None-of-the-Above 20 -> NOTA is a finalist and WINS
-    #     the runoff (NOTA preferred 4-2 over Ada). Observe how BV displays a NOTA win.
-    #   - Ballot 2 leaves None-of-the-Above as `null` (abstained on NOTA), distinct
-    #     from an explicit 0 — check the export keeps null != 0.
+    # Promote the 01a_c2_b2 intro case to a BV-backed case (cross-verify the
+    # simplest STAR election against BetterVoting). Two voters, both Chocolate 5 /
+    # Vanilla 3 -> Chocolate wins on totals (10 vs 6). Keeps the teaching name
+    # 01a_c2_b2_two-candidates; we just add bv_* fields + a frozen export.
     {
-        "title": "NOTA test — None of the Above wins (with a null abstention)",
-        "description": "STAR, 1 winner. Candidates Ada, Bruno, None of the Above (c-nota). Protest voters push None of the Above to a runoff win; ballot 2 abstains (null) on NOTA. Tests the NOTA feature and the flat-0 vs null vs NOTA distinction.",
+        "title": "01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",
+        "description": "STAR, 1 winner. Two voters both score Chocolate 5, Vanilla 3. Intro teaching case (01a_c2_b2_two-candidates) promoted to a BV-backed case for cross-verification against the LH engine.",
         "method": "STAR",
         "num_winners": 1,
-        "candidates": ["Ada", "Bruno", "None of the Above"],
+        "candidates": ["Chocolate", "Vanilla"],
         "ballots": [
-            [5, 1, 0],
-            [5, 1, None],   # abstains (null) on None of the Above
-            [0, 0, 5],
-            [0, 0, 5],
-            [0, 0, 5],
-            [0, 0, 5],
+            [5, 3],
+            [5, 3],
         ],
-        "expected": "None of the Above",
+        "expected": "Chocolate",
     },
 ]
 
