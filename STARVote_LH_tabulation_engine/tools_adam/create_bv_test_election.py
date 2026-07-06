@@ -142,6 +142,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   01a_c2_b2 — two candidates, two ballots            -> my82v6
 #   Tennessee capital — Ranked Robin (single race)     -> vqyqkr   (backs case bv2131_…_vqyqkr; RR-only)
 #   BV2132 — Pet poll (4 methods, THREE winners)        -> ykjjhy   (multi-race; backs method_comparisons/pet_poll_four_methods)
+#   BV2133 — Pet poll II (4 methods, FOUR winners)       -> dyxrbr   (multi-race; backs method_comparisons/pet_poll_four_winners)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -151,48 +152,50 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- BV2133 — Pet poll II: four methods, FOUR winners --------------------------
-# The sequel to BV2132, tuned harder: FOUR pets (Dog, Cat, Fish, Bird) and 32
-# voters, four races (Plurality / RCV-IRV / Approval / STAR) that each elect a
-# DIFFERENT pet — the strongest possible "the method picks the winner" demo.
-#   Plurality → Dog   (most first choices, 13 — but broadly disliked)
-#   RCV-IRV   → Fish  (Bird then Cat eliminated; transfers pile onto Fish)
-#   Approval  → Bird  (widely approved at 3+, 19 approvals)
-#   STAR      → Cat   (consensus: score leader Cat & Fish advance, Cat wins runoff)
-# All four winners verified against the LH engine. Each bloc lists per-method rows
-# aligned to CANDS order: plurality (1=pick) · irv ranks (1=top…4=last) · approval
-# (0/1, = score>=3) · star (0-5). The 7- and 6-voter blocs rank identically and
-# differ only in STAR score (mild vs die-hard Dog fans).
-_PET_CANDS = ["Dog", "Cat", "Fish", "Bird"]
-_PET_BLOCS = [
-    # count, plurality,     irv-ranks,     approval,      star          # preference
-    (9,  [0, 0, 0, 1], [4, 2, 3, 1], [0, 0, 0, 1], [0, 2, 1, 4]),       # Bird>Cat>Fish>Dog
-    (10, [0, 0, 1, 0], [4, 2, 1, 3], [0, 1, 1, 1], [2, 4, 5, 3]),       # Fish>Cat>Bird>Dog
-    (7,  [1, 0, 0, 0], [1, 2, 3, 4], [1, 0, 0, 0], [3, 2, 1, 0]),       # Dog>Cat>Fish>Bird (mild)
-    (6,  [1, 0, 0, 0], [1, 2, 3, 4], [1, 0, 0, 0], [5, 2, 1, 0]),       # Dog>Cat>Fish>Bird (die-hard)
+# --- BV2134 — Pets Governance: five positions, five methods --------------------
+# One 22-voter electorate — a 13-voter MAJORITY ("Furries": Dog, Cat, Fish) and a
+# 9-voter MINORITY ("Others": Bird, Rabbit, Hamster) — elects a whole pet
+# government five ways, to show majoritarian vs proportional. All five run on BV:
+# Bloc STAR = STAR with 3 winners; Bloc Approval = Approval with 2 winners (BV's
+# runBlocTabulator); plus STAR-PR, Ranked Robin, STV. Each bloc carries three
+# ballot shapes (aligned to CANDS order): scores 0-5 (STAR + STAR-PR), approval
+# 0/1 (Committee), and ranks 1..6 (Mayor RR + Delegates STV).
+#   Council (Bloc STAR, 3)  -> Dog, Fish, Cat      (majority sweep)
+#   Council (STAR-PR, 3)    -> Bird, Dog, Fish     (minority seated — proportional)
+#   Committee (Approval, 2) -> Dog, Cat            (majoritarian)
+#   Mayor (Ranked Robin, 1) -> Dog                 (Condorcet winner)
+#   Delegates (STV, 3)      -> Dog, Bird, Cat      (minority seated — proportional)
+# Winners are the LH prediction; cross-check against BV on export.
+_GOV_CANDS = ["Dog", "Cat", "Fish", "Bird", "Rabbit", "Hamster"]
+_GOV_BLOCS = [
+    # count, scores (STAR/PR),      approval (0/1),         ranks (RR/STV, 1=top)
+    (13, [5, 4, 4, 1, 0, 0], [1, 1, 1, 0, 0, 0], [1, 2, 3, 4, 5, 6]),   # Furry majority
+    (9,  [0, 0, 1, 5, 4, 4], [0, 0, 0, 1, 1, 1], [6, 5, 4, 1, 2, 3]),   # Others minority
 ]
-def _pet(k):
-    """Expand the k-th per-method row of each bloc into one row per voter."""
-    return [rows[k] for n, *rows in _PET_BLOCS for _ in range(n)]
-_PET_PLUR, _PET_IRV, _PET_APPR, _PET_STAR = _pet(0), _pet(1), _pet(2), _pet(3)
+def _gov(k):
+    return [rows[k] for n, *rows in _GOV_BLOCS for _ in range(n)]
+_GOV_SC, _GOV_AP, _GOV_RK = _gov(0), _gov(1), _gov(2)
 
 ELECTIONS = [
     {
-        "test_id": "BV2133",
-        "title": "Pet poll II: four methods, four winners",
-        "description": "One electorate, four pets (Dog, Cat, Fish, Bird), 32 voters, tallied four ways in a single election — and every method elects a DIFFERENT pet. Plurality→Dog (most first choices but broadly disliked), RCV-IRV→Fish (center squeeze), Approval→Bird (widely approved), STAR→Cat (consensus, wins the runoff). The sequel to BV2132, tuned so all four methods disagree — the sharpest 'the method chooses the winner' demonstration. All four winners verified against the LH engine.",
+        "test_id": "BV2134",
+        "title": "Pets Governance: five positions, five methods",
+        "description": "One 22-voter electorate — a 13-voter Furry majority (Dog, Cat, Fish) and a 9-voter Others minority (Bird, Rabbit, Hamster) — elects a pet government five ways, contrasting majoritarian and proportional multi-winner methods. Council by Bloc STAR sweeps all three seats for the majority (Dog, Fish, Cat); Council by STAR-PR and Delegates by STV seat the minority (Bird); Committee by Approval is majoritarian (Dog, Cat); Mayor by Ranked Robin is the Condorcet winner (Dog). Winners are the LH prediction, to be cross-checked against BetterVoting.",
         "races": [
-            {"title": "Pets II — Choose One (Plurality)", "method": "Plurality",
-             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_PLUR},
-            {"title": "Pets II — RCV (IRV)", "method": "IRV",
-             "num_winners": 1, "max_rankings": 4,
-             "candidates": _PET_CANDS, "ballots": _PET_IRV},
-            {"title": "Pets II — Approval", "method": "Approval",
-             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_APPR},
-            {"title": "Pets II — STAR", "method": "STAR",
-             "num_winners": 1, "candidates": _PET_CANDS, "ballots": _PET_STAR},
+            {"title": "Town Council — Bloc STAR (3 seats)", "method": "STAR",
+             "num_winners": 3, "candidates": _GOV_CANDS, "ballots": _GOV_SC},
+            {"title": "Town Council — STAR-PR (3 seats)", "method": "STAR_PR",
+             "num_winners": 3, "candidates": _GOV_CANDS, "ballots": _GOV_SC},
+            {"title": "Advisory Committee — Approval (2 seats)", "method": "Approval",
+             "num_winners": 2, "candidates": _GOV_CANDS, "ballots": _GOV_AP},
+            {"title": "Mayor — Ranked Robin (1 seat)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 6,
+             "candidates": _GOV_CANDS, "ballots": _GOV_RK},
+            {"title": "Delegates — STV (3 seats)", "method": "STV",
+             "num_winners": 3, "max_rankings": 6,
+             "candidates": _GOV_CANDS, "ballots": _GOV_RK},
         ],
-        "expected": "Plurality->Dog ; IRV->Fish ; Approval->Bird ; STAR->Cat  (four methods, four winners).  Test ID BV2133.",
+        "expected": "Council/Bloc STAR: Dog,Fish,Cat ; STAR-PR: Bird,Dog,Fish ; Committee/Approval: Dog,Cat ; Mayor/RR: Dog ; Delegates/STV: Dog,Bird,Cat.  Test ID BV2134.",
     },
 ]
 

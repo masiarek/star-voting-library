@@ -1,6 +1,6 @@
 # Pets Governance — five positions, five methods (majoritarian vs proportional)
 
-*One electorate elects a whole pet government five different ways. The lesson is the sharpest divide in multi-winner voting: **majoritarian methods hand every seat to the majority; proportional methods seat the minority.** LH-only (Bloc STAR and multi-winner Approval aren't BetterVoting methods).*
+*One electorate elects a whole pet government five different ways. The lesson is the sharpest divide in multi-winner voting: **majoritarian methods hand every seat to the majority; proportional methods seat the minority.** All five races are reproducible on BetterVoting (see "On BetterVoting" below).*
 
 ## The electorate
 
@@ -33,9 +33,9 @@ Give the **same** 59/41 electorate three seats:
 
 So a minority that is **shut out** of the Council-by-Bloc and the Committee is **represented** on the Council-by-PR and the Delegates — same voters, different rules.
 
-## Why LH-only
+## On BetterVoting
 
-BetterVoting's methods are Plurality, IRV, STV, STAR, STAR-PR, Approval, and Ranked Robin — it has **no Bloc STAR**, and its Approval is single-winner. Two of these five races (Bloc STAR; multi-winner Approval) can't be built on BV, so the whole set is kept LH-only for coherence. The BV-supported races here (STAR-PR, STV, Ranked Robin) match BetterVoting's own tabulators if reproduced there.
+All five races are reproducible on BetterVoting. BV's `runBlocTabulator` is a generic bloc/sequential multi-winner driver used by STAR, Approval, Plurality and Ranked Robin — so **Bloc STAR** is `voting_method: STAR` with `num_winners: 3`, and **Bloc Approval** is `voting_method: Approval` with `num_winners: 2` (the bloc behavior comes from the winner count, not a separate method). STAR-PR, STV and Ranked Robin map directly. This set is created as a single multi-race BV election; the winners here are the LH tabulation, cross-checked against BetterVoting's own tabulators.
 
 ## See also
 

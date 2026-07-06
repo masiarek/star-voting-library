@@ -1,6 +1,6 @@
-# pets_governance — one electorate elects a pet government five ways (LH-only)
+# pets_governance — one electorate elects a pet government five ways
 
-A single 22-voter electorate (a 13-voter **Furry** majority + a 9-voter **Others** minority) fills **five positions by five methods**, to show the majoritarian-vs-proportional divide on one ballot set. LH-only — Bloc STAR and multi-winner Approval aren't BetterVoting methods.
+A single 22-voter electorate (a 13-voter **Furry** majority + a 9-voter **Others** minority) fills **five positions by five methods**, to show the majoritarian-vs-proportional divide on one ballot set. All five races run on BetterVoting (Bloc STAR = STAR with 3 winners; Bloc Approval = Approval with 2 winners — both via BV's `runBlocTabulator`).
 
 | Position | Method | Seats | Winners | src |
 |----------|--------|:---:|---------|:--:|

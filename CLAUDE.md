@@ -278,6 +278,25 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   from the BV UI (Election + Ballots + Results). Proven end-to-end (BV95a `9m6rxr`,
   BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
   the backend now demands RS256.
+  - **BV methods & multi-winner (correction — 2026-07).** BV's seven
+    `voting_method` strings are `STAR | STAR_PR | Approval | RankedRobin | IRV |
+    Plurality | STV`. There is **no separate "Bloc STAR" string**, but BV *does*
+    do bloc multi-winner: its `runBlocTabulator` drives **STAR, Approval,
+    Plurality and Ranked Robin** whenever `num_winners > 1`. So **Bloc STAR =
+    `STAR` + `num_winners: 3`** and **Bloc Approval = `Approval` +
+    `num_winners: 2`**. (An earlier claim that BV couldn't do Bloc STAR /
+    multi-winner Approval was WRONG — it can; the pets-governance set is fully
+    BV-backable.) Ballot encoding per method: STAR/STAR_PR = scores 0-5;
+    Approval/Plurality = 0/1; ranked (IRV/STV/RankedRobin) = **ranks** in the
+    score slot (1 = top … 0 = unranked), validated `0..max_rankings`. Multi-race
+    elections carry several `races[]`; each voter votes every race — grouped in
+    `00_start_here/YAML_test_case_index/multirace_elections.md`.
+  - **BV titles are PERMANENT and PUBLIC.** API-created elections can't be
+    renamed, closed, or deleted (only a BV admin with DB access can purge them),
+    and the title shows on the public results page — so give a real, meaningful
+    title on the FIRST create (no "trash/delete/test" junk). The script prepends
+    only the `BV<n>` Test ID and runs a pre-check that blocks junk/placeholder
+    titles. See `bv_api_election_creation_notes.md` (orphan list included).
   - **Set `owner_id` to your real BV account** (the script default is Adam's
     `ea09e7c7-…`/Admin1) so the elections show up in `/manage`. **But** API-created
     elections are public, listable, and exportable **only** — they are **NOT
