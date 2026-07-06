@@ -224,16 +224,20 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   YAML (`election_description` + the results URL).
 - **Cross-reference slides by title** via `00_start_here/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
-- **Case-file naming → `bv<testid>_<bvid>_<short_descriptor>.<ext>`.** Lead with
-  the sheet **Test ID** (lowercased — `bv95a`, `bv130`, `bv1525`) so files sort
-  with the tracker and are findable by ID (GitHub's file finder matches *names*,
-  not contents); then the **BetterVoting election id** when one exists (`9m6rxr`)
-  for traceability — **omit that segment** for an LH-only reference with no BV
-  election; then a short descriptive name. Applies to the whole case group — the
-  `.yaml`, the two-view `.md`, the frozen `_bv_export.json`, and the `_tabulated`
-  mirror. Example: `bv95a_9m6rxr_favorite_survives.yaml`. (Older cases predating
-  this — `bv131_guido_bloc`, the `Runoff_NN_…_<bvid>` set — keep their names;
-  re-align only if you're already touching them.)
+- **Case-file naming.** Two accepted forms; the **bvid is the load-bearing id**
+  (unique, stable, traceable by construction — no assignment step needed):
+  - **If the election already has a sheet Test ID** (e.g. the older QA rows —
+    `bv95a`, `bv130`, `bv1525`), lead with it: `bv<testid>_<bvid>_<descriptor>`
+    (e.g. `bv95a_9m6rxr_favorite_survives.yaml`). It sorts with the (retained) QA
+    sheet and is findable by ID.
+  - **Otherwise (a fresh case with no pre-assigned Test ID)** — DON'T stop to
+    assign one; lead with the bvid: `b<bvid>_<descriptor>` (e.g.
+    `b26khr3_nota_wins`). The auto-generated repo registry indexes it either way.
+  - **LH-only** reference (no BV election) → omit the bvid segment, descriptive name.
+
+  Applies to the whole case group — `.yaml`, two-view `.md`, frozen
+  `_bv_export.json`, `_tabulated` mirror. Older cases keep their names; re-align
+  only if you're already touching them.
 - **Every BV-backed case `.md` links the live BetterVoting results — clickably.**
   When a case has a real BV election, its page must carry a prominent, clickable
   link to the **results** page near the top (not just the bare election id, and
@@ -250,11 +254,15 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   the `bv…` filename for the Test ID) and regenerates
   `00_start_here/YAML_test_case_index/BV_registry.md` + `bv_cases.csv` — a
   sortable, repo-native index (method / winners / candidates / ballots / bvid /
-  page / yaml). **The Google Sheet is now a *thin* registry**: it owns Test-ID
-  assignment and the non-tabulation QA (UI, roles, archive…) that has no YAML; the
-  `.yaml` (source of truth) + `.md` (writeup, replaces the old per-case Google
-  Docs) are canonical for tabulation cases. Regenerate the registry when adding a
-  BV case.
+  page / yaml). **The repo registry is canonical for tabulation cases** — the
+  `.yaml` (source of truth) + `.md` (writeup) + the auto-generated
+  `BV_registry.md` / `bv_cases.csv`. Regenerate it when adding a BV case.
+  **No Google-Sheet sync is required for tabulation cases** (decided 2026-07 —
+  the auto-registry already does the sheet's job at zero manual cost, and the bvid
+  is the case id so there's no Test-ID to assign). The Google Sheet is retained
+  **only** for the *extraordinary* non-tabulation QA that has no YAML home — UI,
+  roles, archive, casting, "delete a race," video walkthroughs, pass/fail — which
+  Adam maintains by hand when he wants to.
 - **Creating BetterVoting elections — DON'T do it by hand.** No need to click
   through the BV builder UI (it's slow and fiddly). Use
   `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a
@@ -314,16 +322,11 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    commit with a descriptive message. **Adam pushes** (the sandbox has no push
    credentials — always hand Adam the `git push https://github.com/masiarek/YAML.git
    master` line).
-9. **Update the tracker** (Adam, AI drafts). Add/fill the row in the master Google
-   Sheet — Test ID, BV `/results` link, YAML file, MD page.
-
-**Sheet sync — ding Adam (standing rule).** The sheet is the *thin* registry but
-still owns Test-ID assignment. Whenever a step assigns a **new BV Test ID** or
-fills in a freshly-created **BV election id** (e.g. after running
-`create_bv_test_election.py`), Adam only sees it if the AI says so. So **end that
-turn with an explicit, copy-pasteable ding**: which sheet row, and the exact
-Test ID + `bvid` + `/results` link to paste. Don't bury it — Adam has asked to be
-dinged because it's easy to forget.
+9. **Registry regenerates itself** (AI). `build_bv_registry.py` writes
+   `BV_registry.md` + `bv_cases.csv` from the case's `bv_*` fields — that's the
+   canonical tracker. **No Google-Sheet update is required for tabulation cases**
+   (decided 2026-07). Only ding Adam to touch the sheet for an *extraordinary*
+   non-tabulation QA case (UI / roles / archive / casting / video) that has no YAML.
 
 **LH-only cases** (no BetterVoting election — e.g. a reproduction of a Larry
 `starvote` test file) skip steps 3–4 and the `<bvid>` filename segment; everything
