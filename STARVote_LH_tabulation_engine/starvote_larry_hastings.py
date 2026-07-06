@@ -1220,7 +1220,7 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
 
 
 def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=None,
-                     silent=False, out_path=None):
+                     silent=False, out_path=None, num_winners=1):
     """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
 
     Ranked Robin reads the *whole* ballot: it compares every pair of candidates
@@ -1309,6 +1309,16 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     top = len(wins[order[0]])
     leaders = [c for c in candidates if len(wins[c]) == top]
     winner = order[0]
+    # Bloc Ranked Robin: for N seats, elect the top N by the same rule (most wins,
+    # then total margin, then lot). num_winners is clamped to the field size.
+    num_winners = max(1, min(int(num_winners or 1), len(candidates)))
+    winners = order[:num_winners]
+    seats_label = "single winner" if num_winners == 1 else f"{num_winners} winners"
+    # Did the last seat come down to a lot tie-break? (Nth and (N+1)th identical on
+    # wins AND margin, so only the pre-published lot order separated them.)
+    cutoff_lot_tie = (num_winners < len(candidates)
+                      and len(wins[order[num_winners - 1]]) == len(wins[order[num_winners]])
+                      and margin[order[num_winners - 1]] == margin[order[num_winners]])
 
     # --- Aligned head-to-head list (names padded into columns) ---
     nw = max((len(c) for c in candidates), default=4)
@@ -1380,7 +1390,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     _sep = str(_opts.get("count_separator", "×")) or "×"
 
     def _build(full):
-        L = ["--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---",
+        L = [f"--- Ranked Robin (RCV-RR / Copeland) Method ({seats_label}) ---",
              f" Tabulating {n} ballots "
              f"({'ranked' if '>' in clean else 'score'} ballots).", ""]
         L.append("Ballots:")
@@ -1408,7 +1418,18 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                  "(most wins wins; ties broken by total margin, then lot order):")
         L += record_lines
         L.append("")
-        if len(leaders) == 1:
+        if num_winners > 1:
+            # Bloc Ranked Robin: the top N of the win-loss record fill the seats.
+            L.append(f"Winners — Ranked Robin (RCV-RR), {num_winners} seats "
+                     f"(Bloc — the top {num_winners} by record):")
+            for idx, c in enumerate(winners, 1):
+                rec = f"{len(wins[c])}–{len(losses[c])}–{len(ties[c])}"
+                L.append(f"   {idx}. {c}   ({rec}, Copeland {cope[c]:g}, margin {margin[c]:+d})")
+            if cutoff_lot_tie:
+                a, b = winners[-1], order[num_winners]
+                L.append(f"   *** the last seat was a tie ({a} and {b} share wins and "
+                         f"margin) — decided by lot order.")
+        elif len(leaders) == 1:
             why = ("beats every opponent head-to-head — the Condorcet winner."
                    if not losses[winner] else f"the most head-to-head wins ({top}).")
             L.append(f"Winner — Ranked Robin (RCV-RR): {winner}")
@@ -1437,8 +1458,10 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     # the echo into the full matrix with `options: { show_matrix: true }`. The
     # _tabulated mirror is ALWAYS full regardless.
     plain = _build(full=_echo_full)             # echo (compact unless show_matrix)
-    hdr = "--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---"
-    win = f"Winner — Ranked Robin (RCV-RR): {winner}"
+    hdr = f"--- Ranked Robin (RCV-RR / Copeland) Method ({seats_label}) ---"
+    win = (f"Winner — Ranked Robin (RCV-RR): {winner}" if num_winners == 1
+           else f"Winners — Ranked Robin (RCV-RR), {num_winners} seats "
+                f"(Bloc — the top {num_winners} by record):")
     colored = plain.replace(hdr, f"{COLOR_HEADER}{hdr}{COLOR_RESET}") \
                    .replace(win, f"{COLOR_WINNER}{win}{COLOR_RESET}")
     if not silent:
@@ -1455,7 +1478,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             write_tabulated_copy(file_path, _build(full=True))   # full mirror
         except Exception:
             pass
-    return winner
+    return winners if num_winners > 1 else winner
 
 
 def condorcet_winner(candidates, ballots):
@@ -2949,7 +2972,8 @@ Memphis,Nashville,Chattanooga,Knoxville
         if _is_rr:
             run_ranked_robin(csv_input, BALLOTS_FILE,
                              lot_numbers=election.get("lot_numbers"),
-                             options=election.get("options"))
+                             options=election.get("options"),
+                             num_winners=(election.get("seats") or 1))
             sys.exit(0)
 
         if _is_rcv or _ranked_ballots:

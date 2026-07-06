@@ -362,6 +362,13 @@ else is the same.
   (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report
   (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
+  **Bloc RR (multi-winner):** `num_winners > 1` now elects the **top-N by record**
+  (most wins → margin → lot), printing a seats list and flagging a lot-decided
+  last seat — it no longer silently downgrades to one winner. (LH multi-winner
+  coverage: STAR→**Bloc STAR**, Approval→**Approval_Multi_Winner**, RankedRobin→
+  **Bloc RR**, STV, STAR_PR/allocated/sss/rrv. **Gap:** LH has **no multi-winner
+  Plurality** — it errors on `Plurality` + `num_winners>1`, so **Bloc Plurality /
+  SNTV is BV-only** and hand-verified as top-N first choices.)
   **RR triple-check:** cross-verify RR cases three ways — this native tally,
   BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json` Results), and
   `pref_voting`'s independent Copeland via

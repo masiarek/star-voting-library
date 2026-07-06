@@ -104,6 +104,24 @@ def test_ranked_robin_aliases_and_cycle(tmp_path):
     assert "Condorcet cycle" in r.stdout
 
 
+def test_ranked_robin_bloc_multiwinner(tmp_path):
+    """RankedRobin with num_winners>1 elects the top-N by record (Bloc RR) — it
+    must NOT silently downgrade to a single winner (the old bug)."""
+    f = tmp_path / "bloc_rr.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 3\n"
+        "lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]\nballots: |-\n"
+        "  13:Dog>Cat>Fish>Bird>Rabbit>Hamster\n"
+        "  9:Bird>Rabbit>Hamster>Fish>Cat>Dog\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "3 winners" in r.stdout and "Winners — Ranked Robin" in r.stdout
+    assert "single winner" not in r.stdout
+    for name in ("Dog", "Cat", "Fish"):
+        assert name in r.stdout
+
+
 def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
     """A co-top DEAD HEAT (tied leaders that draw each other and both beat the
     rest) must be labelled 'dead heat', NOT 'Condorcet cycle' — cycle is reserved

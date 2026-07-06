@@ -168,19 +168,19 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # Winners are the LH prediction; cross-check against BV on export.
 _GOV_CANDS = ["Dog", "Cat", "Fish", "Bird", "Rabbit", "Hamster"]
 _GOV_BLOCS = [
-    # count, scores (STAR/PR),      approval (0/1),         ranks (RR/STV, 1=top)
-    (13, [5, 4, 4, 1, 0, 0], [1, 1, 1, 0, 0, 0], [1, 2, 3, 4, 5, 6]),   # Furry majority
-    (9,  [0, 0, 1, 5, 4, 4], [0, 0, 0, 1, 1, 1], [6, 5, 4, 1, 2, 3]),   # Others minority
+    # count, scores (STAR/PR),      approval (0/1),         ranks (RR/STV, 1=top), plurality (choose-one)
+    (13, [5, 4, 4, 1, 0, 0], [1, 1, 1, 0, 0, 0], [1, 2, 3, 4, 5, 6], [1, 0, 0, 0, 0, 0]),   # Furry majority (mark Dog)
+    (9,  [0, 0, 1, 5, 4, 4], [0, 0, 0, 1, 1, 1], [6, 5, 4, 1, 2, 3], [0, 0, 0, 1, 0, 0]),   # Others minority (mark Bird)
 ]
 def _gov(k):
     return [rows[k] for n, *rows in _GOV_BLOCS for _ in range(n)]
-_GOV_SC, _GOV_AP, _GOV_RK = _gov(0), _gov(1), _gov(2)
+_GOV_SC, _GOV_AP, _GOV_RK, _GOV_PL = _gov(0), _gov(1), _gov(2), _gov(3)
 
 ELECTIONS = [
     {
         "test_id": "BV2134",
-        "title": "Pets Governance: five positions, five methods",
-        "description": "One 22-voter electorate — a 13-voter Furry majority (Dog, Cat, Fish) and a 9-voter Others minority (Bird, Rabbit, Hamster) — elects a pet government five ways, contrasting majoritarian and proportional multi-winner methods. Council by Bloc STAR sweeps all three seats for the majority (Dog, Fish, Cat); Council by STAR-PR and Delegates by STV seat the minority (Bird); Committee by Approval is majoritarian (Dog, Cat); Mayor by Ranked Robin is the Condorcet winner (Dog). Winners are the LH prediction, to be cross-checked against BetterVoting.",
+        "title": "Pets Governance: six positions, six methods",
+        "description": "One 22-voter electorate — a 13-voter Furry majority (Dog, Cat, Fish) and a 9-voter Others minority (Bird, Rabbit, Hamster) — elects a pet government six ways, contrasting majoritarian and proportional multi-winner methods. Council by Bloc STAR sweeps all three seats for the majority (Dog, Fish, Cat); Council by STAR-PR and Delegates by STV seat the minority (Bird); Committee by Approval is majoritarian (Dog, Cat); Mayor by Ranked Robin is the Condorcet winner (Dog); Neighborhood Reps by Bloc Plurality / SNTV seat one of each (Dog, Bird). Winners are the LH prediction, to be cross-checked against BetterVoting.",
         "races": [
             {"title": "Town Council — Bloc STAR (3 seats)", "method": "STAR",
              "num_winners": 3, "candidates": _GOV_CANDS, "ballots": _GOV_SC},
@@ -194,8 +194,11 @@ ELECTIONS = [
             {"title": "Delegates — STV (3 seats)", "method": "STV",
              "num_winners": 3, "max_rankings": 6,
              "candidates": _GOV_CANDS, "ballots": _GOV_RK},
+            {"title": "Neighborhood Reps — Bloc Plurality / SNTV (2 seats)",
+             "method": "Plurality", "num_winners": 2,
+             "candidates": _GOV_CANDS, "ballots": _GOV_PL},
         ],
-        "expected": "Council/Bloc STAR: Dog,Fish,Cat ; STAR-PR: Bird,Dog,Fish ; Committee/Approval: Dog,Cat ; Mayor/RR: Dog ; Delegates/STV: Dog,Bird,Cat.  Test ID BV2134.",
+        "expected": "Council/Bloc STAR: Dog,Fish,Cat ; STAR-PR: Bird,Dog,Fish ; Committee/Approval: Dog,Cat ; Mayor/RR: Dog ; Delegates/STV: Dog,Bird,Cat ; Bloc Plurality/SNTV: Dog,Bird.  Test ID BV2134.",
     },
 ]
 
