@@ -22,6 +22,16 @@ These terms are related but *not* interchangeable — they sit at different leve
 
 So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)).
 
+**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../TIPS_terminology.md#the-ranked-method-family-tree).
+
+A law-review framing of the same idea (useful when an audience wants an authoritative source):
+
+> Condorcet's method was to see if any candidate was ranked higher on more ballots than each other candidate, when considering each pair of candidates one-on-one (as in a round-robin sports tournament); because this candidate, when one exists, is preferred by a majority of voters to every other candidate on the ballot, Condorcet considered [it] necessarily the top one.
+>
+> — Atkinson, Foley & Ganz, *University of Illinois Law Review* (quoted via [Ballotpedia](https://ballotpedia.org/Ranked-choice_voting_(RCV)))
+
+Two house-style clarifications on that quote: (1) it describes the Condorcet **winner** — a way of *counting* a ranked ballot by head-to-head comparison, i.e. a **sibling tabulation to IRV, not a variation of it** (RCV names the ballot; IRV and Ranked Robin are different counts of it). (2) "Condorcet's method" (singular) is loose — there's a **family** of Condorcet methods that all elect the Condorcet winner *when one exists* but differ in how they resolve a **cycle** (none exists); Ranked Robin resolves it by sum of win margins.
+
 ## How it differs from RCV-IRV (Hare)
 
 | | **RCV-IRV (Hare)** | **Ranked Robin (RCV-RR)** |

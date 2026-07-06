@@ -18,20 +18,27 @@ So when someone says "RCV," they've named the *ballot* but implied a *count*. In
 
 The ranked ballot ("RCV") is counted by a whole family of *methods*, which split into two branches. Knowing which is which keeps you precise — and keeps you from lumping a Condorcet method in with IRV.
 
+```mermaid
+flowchart TD
+    R["<b>RANKED ballot</b><br/>('RCV' names the BALLOT,<br/>not any one method)"]
+    R --> COND["<b>Condorcet</b> / round-robin / pairwise<br/><i>elects the head-to-head winner<br/>when one exists · precinct-summable</i>"]
+    R --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer · order-dependent · NOT summable</i>"]
+    R --> POS["<b>Positional</b><br/><i>points by rank position</i>"]
+
+    COND --> RR["<b>Ranked Robin</b> (RCV-RR)<br/>aka 'Consensus Voting'<br/>= Copeland + margin tiebreak"]
+    COND --> RP["Ranked Pairs · aka Tideman"]
+    COND --> SZ["Schulze · aka Beatpath"]
+    COND --> MM["Minimax · aka Simpson–Kramer"]
+
+    ELIM --> IRV["<b>RCV-IRV</b> (single-winner)<br/>aka IRV · Hare · Alternative Vote ·<br/>'instant runoff' — and 'RCV' in US usage"]
+    ELIM --> STV["STV (multi-winner, proportional)"]
+    ELIM --> CB["Coombs"]
+
+    POS --> BO["Borda count"]
+    POS --> BU["Bucklin · aka Grand Junction"]
 ```
-Ranked-Choice Methods = any method counted from a RANKED ballot
-├── Condorcet methods  (always elect the head-to-head winner when one exists)
-│     • Ranked Robin (Equal Vote's "most pairwise wins"; Copeland-style)
-│     • Ranked Pairs (Tideman)
-│     • Schulze (beatpath)
-│     • Minimax (Simpson–Kramer)
-│     • Copeland
-└── Non-Condorcet ranked methods  (can MISS the Condorcet winner)
-      • RCV-IRV      (a.k.a. Hare, single-winner; eliminate-and-transfer; "RCV" in US usage)
-      • Borda        (positional points)
-      • Bucklin      (Grand Junction; median-style)
-      • Coombs       (eliminates the candidate with the most last-place votes)
-```
+
+*(**Copeland** is the algorithm under Ranked Robin, so it's folded into that node. A Condorcet **cousin**: "**Consensus Choice**" — Better Choices for Democracy's variant, same family but a different cycle-resolution rule. Plain-text version of this tree is in the `git log` if a viewer can't render Mermaid.)*
 
 True statements that follow (and good ways to test your own precision):
 - "Ranked Robin, Ranked Pairs, Schulze, and Minimax are forms of **Condorcet** RCV." ✅
@@ -39,6 +46,22 @@ True statements that follow (and good ways to test your own precision):
 - "Borda / Bucklin are Condorcet methods." ❌ — ranked, yes; Condorcet, no.
 
 Spelling/naming watch: it's **Bucklin** (not "Buckling"); **Hare ≈ IRV** for single-winner, but "Hare" strictly usually means **STV** / the Hare quota.
+
+## Aliases — same thing, different name
+
+The single biggest source of confusion is that one method has many names. This table maps what you'll *hear* to what it *is*:
+
+| You'll hear… | What it actually is | Precise name here |
+|---|---|---|
+| "RCV" (US / FairVote usage) | the eliminate-and-transfer single-winner method | **RCV-IRV** |
+| "Instant runoff", "Alternative Vote", "Hare" (single-winner) | the same eliminate-and-transfer method | **RCV-IRV** |
+| "Round-robin voting", "pairwise voting", "Condorcet" (used as *a* method) | the *family* that elects the head-to-head winner | **Condorcet methods** (a family, not one method) |
+| "Ranked Robin", "RCV-RR", "Consensus Voting" | Equal Vote's Copeland-plus-margin-tiebreak | **Ranked Robin** |
+| "Consensus Choice" | Better Choices for Democracy's Condorcet variant (different cycle rule) | a **Condorcet cousin** — *not* identical to Ranked Robin |
+| "Copeland" | the win-minus-loss algorithm underneath Ranked Robin | **Copeland** |
+| "Beatpath" → Schulze · "Tideman" → Ranked Pairs · "Grand Junction" → Bucklin | older / academic names | as named |
+
+Rule of thumb: when you mean the **family**, say "Condorcet" or "round-robin"; when you mean the **specific Equal-Vote method**, say "Ranked Robin." Reserve bare "**RCV**" for the *ballot*.
 
 ## Why the precision actually matters
 
