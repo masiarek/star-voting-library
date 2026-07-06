@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """
-ranked_robin_report.py — a friendly Ranked Robin (RCV-RR / Copeland) tabulation.
+ranked_robin_report.py — an INDEPENDENT Ranked Robin (RCV-RR / Copeland) check.
 
-Why this exists: the STAR engine (`starvote_larry_hastings.py`) has **no Ranked
-Robin tabulator**, so when it's handed ranked ballots it dispatches them to
-**RCV-IRV** — its echo shows elimination rounds, not the round-robin. This tool
-prints the *Ranked Robin* view instead: the ballots, the full pairwise
-(round-robin) table, each candidate's win–loss record, and the winner — the way
-Ranked Robin actually decides (most head-to-head wins).
+Why this exists: `starvote_larry_hastings.py` now has a **native** Ranked Robin
+tabulator (`run_ranked_robin()`, dispatched by `voting_method: RankedRobin`) —
+it prints the round-robin report and writes the `_tabulated` mirror. This tool is
+the **third opinion** used to guard against that native code misbehaving: it
+prints the Ranked Robin view (ballots, full pairwise table, win–loss record,
+winner) and — critically — cross-checks the winner against Eric Pacuit's
+`pref_voting` library, whose Copeland is computed **independently** from a fresh
+`Profile` built off the raw ballots (it does NOT reuse LH's matrix), so a bug in
+the shared helper can't hide.
 
-Dependency-light: uses only the LH engine's pairwise-matrix helper (no
-`pref_voting` needed). If `pref_voting` is installed, the winner is also
-cross-checked against its Copeland implementation.
+So a Ranked Robin case can be tallied three ways that must agree:
+  1. LH native  — starvote_larry_hastings.run_ranked_robin()
+  2. BetterVoting — RankedRobin.ts (the frozen _bv_export.json Results)
+  3. pref_voting — the independent Copeland cross-check printed below
+
+(The round-robin table here still uses LH's `calculate_preference_matrix` for
+display; the load-bearing independent verdict is the `pref_voting` line.)
+`pref_voting` is declared in pyproject.toml; install with `uv sync`.
 
 Usage:
-    python ranked_robin_report.py FILE.yaml
+    uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py FILE.yaml
 """
 import os
 import sys
@@ -111,17 +119,43 @@ def report(path):
                    "(This is where Minimax / Ranked Pairs / Schulze differ — see "
                    "cycle_resolution.md.)")
 
-    # Optional cross-check.
+    # --- Independent third opinion: pref_voting's Copeland (see module docstring).
+    # Loud, not silent: if the library is missing we SAY so, so a skipped check is
+    # never mistaken for a passed one.
+    out.append("")
     try:
         from pref_voting.profiles import Profile
         from pref_voting.c1_methods import copeland
-        I = {c: i for i, c in enumerate(cands)}
-        if ranks is not None:
-            prof = Profile([[I[c] for c in o] for o in ranks])
-            cope = [cands[x] for x in copeland(prof)]
-            out.append(f"\n (pref_voting Copeland cross-check: {', '.join(cope)})")
     except Exception:
-        pass
+        out.append(" [pref_voting cross-check SKIPPED — library not installed. "
+                   "Run `uv sync` (pref_voting is declared in pyproject.toml).]")
+        return "\n".join(out)
+
+    if ranks is None:
+        out.append(" [pref_voting cross-check SKIPPED — score ballots; the "
+                   "independent Copeland check runs on ranked ballots.]")
+        return "\n".join(out)
+
+    I = {c: i for i, c in enumerate(cands)}
+    try:
+        prof = Profile([[I[c] for c in o] for o in ranks])
+        pv_winners = sorted(cands[x] for x in copeland(prof))
+    except Exception as ex:
+        out.append(f" [pref_voting cross-check ERROR: {ex!r}]")
+        return "\n".join(out)
+
+    # pref_voting's copeland returns the Copeland-leader SET (no margin/lot tiebreak).
+    # A unique match is a clean agreement; if it returns several and LH's winner is
+    # among them, LH merely tie-broke within that set — still consistent.
+    if len(pv_winners) == 1 and pv_winners[0] == winner:
+        verdict = "AGREE ✓  (unique Copeland winner)"
+    elif winner in pv_winners:
+        verdict = (f"CONSISTENT ✓  (LH tie-broke within pref_voting's "
+                   f"{len(pv_winners)}-way Copeland-leader set)")
+    else:
+        verdict = "DISAGREE ✗  — INVESTIGATE"
+    out.append(f" pref_voting Copeland leader(s): {', '.join(pv_winners)}")
+    out.append(f" cross-check vs Ranked Robin winner ({winner}): {verdict}")
     return "\n".join(out)
 
 

@@ -124,22 +124,33 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   01a_c2_b2 — two candidates, two ballots            -> my82v6
 # Their specs live in git history / the case .yaml files.
 
+# --- Tennessee capital — the first RANKED (Ranked Robin) case on BV -----------
+# Textbook center-squeeze: four cities, voters rank by geographic distance,
+# weighted by population. On one ballot set the methods split three ways —
+# plurality -> Memphis, RCV-IRV -> Knoxville, Ranked Robin/Condorcet -> Nashville.
+# BV encodes ranked ballots as RANKS in the score slot: 1 = top choice ... 4 =
+# last (0 = unranked). Candidate order below is fixed; each bloc's rank row is
+# aligned to it. BV has no ballot weights, so each of the 100 voters is cast as a
+# real ballot (expanded from the four blocs).
+_TN_CANDS = ["Memphis", "Nashville", "Chattanooga", "Knoxville"]
+_TN_BLOCS = [
+    (42, [1, 2, 3, 4]),   # Memphis > Nashville > Chattanooga > Knoxville
+    (26, [4, 1, 2, 3]),   # Nashville > Chattanooga > Knoxville > Memphis
+    (15, [4, 3, 1, 2]),   # Chattanooga > Knoxville > Nashville > Memphis
+    (17, [4, 3, 2, 1]),   # Knoxville > Chattanooga > Nashville > Memphis
+]
+_TN_BALLOTS = [row for n, row in _TN_BLOCS for _ in range(n)]
+
 ELECTIONS = [
-    # Promote the 01a_c2_b2 intro case to a BV-backed case (cross-verify the
-    # simplest STAR election against BetterVoting). Two voters, both Chocolate 5 /
-    # Vanilla 3 -> Chocolate wins on totals (10 vs 6). Keeps the teaching name
-    # 01a_c2_b2_two-candidates; we just add bv_* fields + a frozen export.
     {
-        "title": "01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",
-        "description": "STAR, 1 winner. Two voters both score Chocolate 5, Vanilla 3. Intro teaching case (01a_c2_b2_two-candidates) promoted to a BV-backed case for cross-verification against the LH engine.",
-        "method": "STAR",
+        "title": "Tennessee capital — Ranked Robin (RR/Condorcet = Nashville)",
+        "description": "Ranked Robin, 1 winner. The textbook Tennessee example: four cities, voters rank by geographic distance, weighted by population (Memphis 42, Nashville 26, Chattanooga 15, Knoxville 17). Ranked Robin elects the geographic-center consensus, Nashville — the Condorcet winner (beats every rival head-to-head) — while plurality would pick Memphis and RCV-IRV picks Knoxville. First ranked-ballot case created via this script.",
+        "method": "RankedRobin",
         "num_winners": 1,
-        "candidates": ["Chocolate", "Vanilla"],
-        "ballots": [
-            [5, 3],
-            [5, 3],
-        ],
-        "expected": "Chocolate",
+        "max_rankings": 4,
+        "candidates": _TN_CANDS,
+        "ballots": _TN_BALLOTS,
+        "expected": "Nashville (Condorcet winner; IRV -> Knoxville, plurality -> Memphis)",
     },
 ]
 
@@ -169,6 +180,11 @@ def build_payload(template, spec):
     r["title"] = spec["title"]
     r["voting_method"] = spec.get("method", "STAR")
     r["num_winners"] = spec.get("num_winners", 1)
+    # Ranked methods (IRV / STV / RankedRobin) validate ballots as 0..max_rankings
+    # (rank, not score: 1 = top choice, 0 = unranked). Set the cap when given so
+    # the copied STAR template doesn't reject rank values on submit.
+    if "max_rankings" in spec:
+        r["max_rankings"] = spec["max_rankings"]
     r["race_id"] = str(uuid.uuid4())               # fresh race id (don't reuse template's)
     # Fresh candidates, each with a UNIQUE id (backend rejects duplicate/empty ids).
     # SPECIAL CASE: "None of the Above" must use the fixed id 'c-nota' (NOTA_ID in

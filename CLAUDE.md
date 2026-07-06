@@ -343,6 +343,14 @@ else is the same.
   (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report
   (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
+  **RR triple-check:** cross-verify RR cases three ways — this native tally,
+  BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json` Results), and
+  `pref_voting`'s independent Copeland via
+  `tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py` (declared in
+  `pyproject.toml`; `uv sync` then `uv run …`). **Tiebreak caveat — LH and BV
+  diverge:** LH breaks a Copeland tie by margin → **lot** (deterministic); BV by
+  head-to-head → **random**. So a tie-deciding case is **LH-only** (a random BV
+  result can't be frozen). Worked: `00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md`.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

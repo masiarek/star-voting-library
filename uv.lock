@@ -950,6 +950,7 @@ dependencies = [
     { name = "faker" },
     { name = "mypy" },
     { name = "playwright" },
+    { name = "pref-voting" },
     { name = "pyyaml" },
     { name = "starvote" },
 ]
@@ -964,6 +965,7 @@ requires-dist = [
     { name = "faker", specifier = ">=40.19.1" },
     { name = "mypy", specifier = ">=2.0.0" },
     { name = "playwright", specifier = ">=1.60.0" },
+    { name = "pref-voting", specifier = ">=1.14.0" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "starvote", editable = "STARVote_LH_tabulation_engine" },
 ]

@@ -1,0 +1,36 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 100 ballots (ranked ballots).
+
+Ballots:
+    42 × Memphis > Nashville > Chattanooga > Knoxville
+    26 × Nashville > Chattanooga > Knoxville > Memphis
+    15 × Chattanooga > Knoxville > Nashville > Memphis
+    17 × Knoxville > Chattanooga > Nashville > Memphis
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Nashville    beats Memphis       58 – 42
+   Chattanooga  beats Memphis       58 – 42
+   Knoxville    beats Memphis       58 – 42
+   Nashville    beats Chattanooga   68 – 32
+   Nashville    beats Knoxville     68 – 32
+   Chattanooga  beats Knoxville     83 – 17
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+                |    Memphis    |  Nashville   | Chattanooga  |  Knoxville   |
+------------------------------------------------------------------------------
+      Memphis > |      ---      |42 -  0 - 58  |42 -  0 - 58  |42 -  0 - 58  |
+    Nashville > | 58 -  0 - 42  |     ---      |68 -  0 - 32  |68 -  0 - 32  |
+  Chattanooga > | 58 -  0 - 42  |32 -  0 - 68  |     ---      |83 -  0 - 17  |
+    Knoxville > | 58 -  0 - 42  |32 -  0 - 68  |17 -  0 - 83  |     ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate    W–L–T  Copeland  Margin  Beats
+    1  Nashville    3–0–0         3     +88  Chattanooga, Knoxville, Memphis
+    2  Chattanooga  2–1–0         2     +46  Knoxville, Memphis
+    3  Knoxville    1–2–0         1     -86  Memphis
+    4  Memphis      0–3–0         0     -48  —
+
+Winner — Ranked Robin (RCV-RR): Nashville
+   beats every opponent head-to-head — the Condorcet winner.

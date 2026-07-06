@@ -1,0 +1,39 @@
+election_title: "BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville)"
+election_description: >-
+  The textbook Tennessee example, and the first BV-backed Ranked Robin case.
+  Four cities; each voter ranks by geographic distance; blocs weighted by
+  population (Memphis 42, Nashville 26, Chattanooga 15, Knoxville 17). On ONE
+  ranked ballot set the three methods split three ways: plurality would elect
+  Memphis (largest first-choice bloc), RCV-IRV elects Knoxville (Nashville is
+  squeezed out in round 2), and Ranked Robin elects the geographic-center
+  consensus, Nashville — who beats every rival head-to-head, the Condorcet
+  winner. Cross-verified: LH native run_ranked_robin, BetterVoting RankedRobin.ts,
+  and pref_voting's Copeland all elect Nashville (Copeland 3, no tiebreak needed).
+  Live results: https://bettervoting.com/vqyqkr/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these (tabulation
+# engine ignores them). Test ID uses the house "BV<election id>" form.
+bv_test_id: BV2131
+bv_election_id: vqyqkr
+bv_results_url: https://bettervoting.com/vqyqkr/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+lot_numbers: [Memphis, Nashville, Chattanooga, Knoxville]
+options:
+  show_matrix: true          # show the 4x4 pairwise (round-robin) matrix on screen
+# Head-to-heads: Nashville beats all three (58-42 vs Memphis, 68-32 vs Chattanooga
+#   and Knoxville) -> Condorcet winner, Copeland 3. Chattanooga 2, Knoxville 1,
+#   Memphis 0. No tiebreak needed. Same ballots elect Knoxville under RCV-IRV and
+#   Memphis under plurality — the whole point of the case.
+# Lesson folder: 05_Ranked_Robin/rr_vs_irv_plurality/README.md
+ballots: |-
+  42:Memphis>Nashville>Chattanooga>Knoxville
+  26:Nashville>Chattanooga>Knoxville>Memphis
+  15:Chattanooga>Knoxville>Nashville>Memphis
+  17:Knoxville>Chattanooga>Nashville>Memphis
+
+expected_winners:
+  - Nashville
+
+# file: bv2131_tennessee_condorcet_center_vqyqkr.yaml

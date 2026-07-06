@@ -16,7 +16,7 @@ Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` pr
 
 ```text
 Choco,Vanilla
-    5,      3       # Caroline - she likes both flavors
+    5,      3       # Caroline — Choco (5) over Vanilla (3)
     5,      0       # George - he likes only one flavor (Choco)
     5,      5       # Julia - she likes both flavors equally
 ```

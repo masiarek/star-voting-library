@@ -17,8 +17,8 @@ Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` pr
 
 ```text
 Chocolate,Vanilla
-        5,      3       # Caroline - she likes both flavors
-        5,      3       # Bob - he likes both flavors too
+        5,      3       # Caroline — Chocolate (5) over Vanilla (3)
+        5,      3       # Bob — same
 ```
 
 ## What the engine says
