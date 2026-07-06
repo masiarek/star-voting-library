@@ -21,12 +21,10 @@ scenario_description: |-              # ← for the human: what this case teache
   The same election as 01a_c2_b1 with one more identical ballot: two voters,
   both scoring Chocolate 5 and Vanilla 3. Nothing changes but the totals.
 
-video_script: |-                      # ← for the human: presenter notes, never echoed
-
-ballots: |-                           # ← for BOTH: a person reads it as a table;
-  Chocolate,Vanilla                   #    the engine reads it as the cast votes
-          5,      3       # Caroline - she likes both flavors
-          5,      3       # Bob - he likes both flavors too
+ballots: |-                           # read by BOTH — a table to a person, the cast votes to the engine
+  Chocolate,Vanilla
+          5,      3       # Caroline: Chocolate (5) over Vanilla (3)
+          5,      3       # Bob: same — Chocolate over Vanilla
 
 options:                              # ← for the engine: how to render the report
   show_matrix: false
@@ -36,7 +34,9 @@ expected_winners:                     # ← for BOTH: the human sees the claim,
   - Chocolate                         #    the test suite enforces it
 ```
 
-- **A person** reads `election_title`, `scenario_description`, the ballot table (with inline per-voter comments), and the expected winner — and understands the whole case at a glance.
+*(The `#` notes on the ballot rows sit inside the `ballots: |-` literal block, so YAML reads them as text — the ballot parser strips them when it reads the scores. Everywhere else here, `#` is an ordinary YAML comment.)*
+
+- **A person** reads `election_title`, `scenario_description`, the ballot table (with the inline per-voter notes), and the expected winner — and understands the whole case at a glance.
 - **The engine** reads `ballots`, `voting_method` (defaulted here), and `options` and produces an annotated, round-by-round count; the **pytest** suite reads `expected_winners` and fails if the engine disagrees.
 
 Same file. Two readers. Never out of sync — because there's nothing to keep in sync.
