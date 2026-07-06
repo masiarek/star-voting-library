@@ -2,6 +2,8 @@
 
 A record of how the first code contribution went, so the workflow (and its gotchas) isn't re-derived from scratch. Written after PR **#1419** — "Clean up the JSON ballot-data export (v2 format)".
 
+> **Running it locally** (dev server vs Docker, and the AirPlay / Keycloak / `crypto.randomUUID` / shared-rebuild gotchas) → [running_bettervoting_locally.md](./running_bettervoting_locally.md).
+
 ## The setup facts (easy to forget)
 
 - **Upstream repo:** `Equal-Vote/bettervoting` (was formerly "star-server").
