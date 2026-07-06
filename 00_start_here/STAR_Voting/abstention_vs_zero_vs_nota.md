@@ -61,4 +61,6 @@ That's a candidate **missing-feature** for BetterVoting relative to LH: an expli
 
 ## Related
 
+The BetterVoting issues on this exact topic (abstain / blank / zero mislabels, export ambiguity, the `#884` "all-equal = abstain" policy, and the `#1421` NOTA case) are catalogued in [BV abstain / blank / zero — issue index](../tabulation_engines/BV/abstain_issues_index.md), cross-referenced to the test cases.
+
 [Ballot voting styles](STAR_ballot_voting_styles.md) · ["Preference" — the word that causes half the confusion](../preference.md) · [Quorum](../quorum.md) · [GLOSSARY](../GLOSSARY.md) · [Curriculum](../CURRICULUM.md)

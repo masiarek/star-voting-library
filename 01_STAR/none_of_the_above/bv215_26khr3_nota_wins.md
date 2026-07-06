@@ -61,4 +61,4 @@ Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](none_of_the_above_t
 
 ## Open question (BetterVoting)
 
-Seating "None of the Above" as the winner is easy to read as unintended — a NOTA option usually exists so voters can say *no candidate should be seated*. Filed as a clarification question: is a NOTA win meant to seat NOTA, or should it produce a "no candidate selected / re-run" outcome? → **[Equal-Vote/bettervoting#1421](https://github.com/Equal-Vote/bettervoting/issues/1421)**.
+Seating "None of the Above" as the winner is easy to read as unintended — a NOTA option usually exists so voters can say *no candidate should be seated*. Filed as a clarification question: is a NOTA win meant to seat NOTA, or should it produce a "no candidate selected / re-run" outcome? → **[Equal-Vote/bettervoting#1421](https://github.com/Equal-Vote/bettervoting/issues/1421)**. This sits inside a wider cluster of BetterVoting abstain/blank/zero tickets — see the [BV abstain issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).
