@@ -2,7 +2,7 @@
 SOURCE FILE:     lackner_skowron_shadow_bloc_star_c7_b12.yaml
 SOURCE MODIFIED: 2026-07-05 06:53:56
 TABULATED FILE:  lackner_skowron_shadow_bloc_star_c7_b12_tabulated.txt
-TABULATED AT:    2026-07-06 23:07:51
+TABULATED AT:    2026-07-07 13:03:56
 ======================================================================
 
 election_title: "Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4)"

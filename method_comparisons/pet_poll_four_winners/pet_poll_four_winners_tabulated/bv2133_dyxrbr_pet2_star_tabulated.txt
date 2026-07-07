@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2133_dyxrbr_pet2_star.yaml
 SOURCE MODIFIED: 2026-07-06 18:30:54
 TABULATED FILE:  bv2133_dyxrbr_pet2_star_tabulated.txt
-TABULATED AT:    2026-07-06 23:08:00
+TABULATED AT:    2026-07-07 13:04:06
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (STAR): the consensus Cat wins"
@@ -73,7 +73,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
-     file:///sessions/practical-focused-feynman/mnt/YAML/method_comparisons/pet_poll_four_winners/pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
+     file:///sessions/admiring-tender-fermat/mnt/YAML/method_comparisons/pet_poll_four_winners/pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
