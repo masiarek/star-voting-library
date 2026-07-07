@@ -1,3 +1,4 @@
+paradoxes: [condorcet-winner]
 election:
   election_title: Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops)
   election_description: |-

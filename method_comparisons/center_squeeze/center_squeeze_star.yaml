@@ -22,6 +22,7 @@ options:
   collapse_ballots: true
   count_separator: "×"
 
+paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 

@@ -28,7 +28,7 @@ Total score (sum of all grades):
   Cal            15
   Bob            2
 
-Cross-check — pref_voting score_voting: Ann  (✓ agrees with the hand count)
+Cross-check — pref_voting not installed; hand count only (install `pref_voting` to enable the independent check).
 
 Winner — Range / Score Voting (single winner)
   Ann

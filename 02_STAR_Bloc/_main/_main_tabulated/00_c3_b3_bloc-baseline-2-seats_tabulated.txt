@@ -2,7 +2,7 @@
 SOURCE FILE:     00_c3_b3_bloc-baseline-2-seats.yaml
 SOURCE MODIFIED: 2026-07-04 10:16:57
 TABULATED FILE:  00_c3_b3_bloc-baseline-2-seats_tabulated.txt
-TABULATED AT:    2026-07-07 13:03:55
+TABULATED AT:    2026-07-07 17:34:18
 ======================================================================
 
 election_title: "Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)"

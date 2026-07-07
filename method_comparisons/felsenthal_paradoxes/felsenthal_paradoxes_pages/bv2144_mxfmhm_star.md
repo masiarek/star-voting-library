@@ -1,0 +1,110 @@
+# Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner
+
+*Generated from [`bv2144_mxfmhm_star.yaml`](../bv2144_mxfmhm_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bo
+
+## Scenario
+
+Race 2 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in Practice" workshop, Château du Baffy, Normandy); Appendix A1, Example 1.
+The same 7 voters, rankings mapped to 0–5 scores with the house map (N=3: top=5, mid=3, bottom=1). Scores: Bo 25, Ana 19, Cal 19 — a scoring-round tie for the second finalist slot, broken head-to-head (Cal beats Ana 4–3, so Cal advances); Bo then wins the automatic runoff 5–2. STAR elects the Condorcet winner Bo, while Choose-One (race 1) elects Ana, the Condorcet-and-absolute loser. The tabulation, not the ballot, decides.
+Live results: https://bettervoting.com/mxfmhm/results
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Ana,Bo,Cal
+5,3,1
+5,3,1
+5,3,1
+1,5,3
+1,5,3
+1,3,5
+1,3,5
+```
+
+## What the engine says
+
+Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2144_mxfmhm_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ana    |   * Bo    |    Cal    |
+-----------------------------------------------------
+       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
+        * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
+         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bo — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Bo
+  Choose-One (Plurality) = Ana   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × Ana,Bo,Cal
+    3 ×   5, 3,  1
+    2 ×   1, 5,  3
+    2 ×   1, 3,  5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ana        3  0  0  0  4  0  |    19   2.7
+Bo         2  0  5  0  0  0  |    25   3.6
+Cal        2  0  2  0  3  0  |    19   2.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bo            -- 25 -- First place
+   Ana           -- 19 -- Tied for second place
+   Cal           -- 19 -- Tied for second place
+ Bo advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Cal           -- 4 -- Second place
+   Ana           -- 3
+   Equal Support -- 0
+ Bo and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bo            -- 5 -- First place
+   Cal           -- 2
+   Equal Support -- 0
+ Bo wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bo 5 (71%)  ·  Cal 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bo
+```
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2144_mxfmhm_plurality](bv2144_mxfmhm_plurality.md)

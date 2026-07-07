@@ -1,3 +1,4 @@
+paradoxes: [condorcet-cycle]
 election:
   election_title: Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)
   election_description: |-

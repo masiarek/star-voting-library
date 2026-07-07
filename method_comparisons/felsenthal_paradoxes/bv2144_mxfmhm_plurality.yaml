@@ -1,0 +1,38 @@
+election_title: "Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins"
+scenario_description: |-
+  Race 1 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in Practice" workshop, Château du Baffy, Normandy); Appendix A1, Example 1.
+  7 voters, three candidates (Ana=a, Bo=b, Cal=c); rankings 3×(Ana>Bo>Cal), 2×(Bo>Cal>Ana), 2×(Cal>Bo>Ana). Bo is the Condorcet winner (beats Ana 4–3, Cal 5–2). Ana is both the Condorcet LOSER and the ABSOLUTE loser — a majority (4 of 7) rank Ana dead last. Yet Choose-One elects Ana 3–2–2 on first choices; and if Cal dropped out, Bo would beat Ana 4–3 — Felsenthal's SCC (the spoiler effect). Four paradoxes in one 7-voter election.
+  Live results: https://bettervoting.com/mxfmhm/results
+bv_test_id: BV2144
+bv_election_id: mxfmhm
+bv_results_url: https://bettervoting.com/mxfmhm/results
+paradoxes: [condorcet-winner, condorcet-loser, absolute-loser, spoiler-scc]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+# lot_numbers pinned to BV's published tiebreak order (perm). It only affects the
+# moot Bo/Cal second-place tie in LH's report — Ana's win is ballot-decided.
+lot_numbers: [Ana, Cal, Bo]
+ballots: |-
+  Ana,Bo,Cal
+  1,0,0
+  1,0,0
+  1,0,0
+  0,1,0
+  0,1,0
+  0,0,1
+  0,0,1
+expected_winners:
+  - Ana
+
+# file: bv2144_mxfmhm_plurality.yaml

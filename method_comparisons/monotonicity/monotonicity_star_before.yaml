@@ -19,6 +19,7 @@ options:
   collapse_ballots: true
   count_separator: "×"
 
+paradoxes: [non-monotonicity]
 voting_method: STAR
 num_winners: 1
 

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     monotonicity_irv_after.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
+SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  monotonicity_irv_after_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:03
+TABULATED AT:    2026-07-07 17:34:26
 ======================================================================
 
 election_title: "Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose"
@@ -14,6 +14,7 @@ scenario_description: |-
   ballots feed Z, and Z beats X 18-16. More support made the winner lose —
   IRV's non-monotonicity. STAR cannot do this (more points never hurt); see
   the monotonicity_star_* pair and the monotonicity topic hub.
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV   # RCV-IRV — monotonicity demo (AFTER: X now LOSES)
 num_winners: 1
 

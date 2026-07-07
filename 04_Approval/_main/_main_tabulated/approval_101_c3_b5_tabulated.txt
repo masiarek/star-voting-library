@@ -2,7 +2,7 @@
 SOURCE FILE:     approval_101_c3_b5.yaml
 SOURCE MODIFIED: 2026-07-05 09:44:17
 TABULATED FILE:  approval_101_c3_b5_tabulated.txt
-TABULATED AT:    2026-07-07 13:03:59
+TABULATED AT:    2026-07-07 17:34:21
 ======================================================================
 
 election_title: Approval 101 — most approvals wins

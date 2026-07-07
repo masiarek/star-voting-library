@@ -2,7 +2,7 @@
 SOURCE FILE:     bv126_ties_every_step_8fvd2x.yaml
 SOURCE MODIFIED: 2026-07-04 11:36:44
 TABULATED FILE:  bv126_ties_every_step_8fvd2x_tabulated.txt
-TABULATED AT:    2026-07-07 13:03:52
+TABULATED AT:    2026-07-07 17:34:15
 ======================================================================
 
 election_title: "BV126 — ties at every step (single-winner STAR); #1052"

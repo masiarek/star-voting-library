@@ -15,6 +15,7 @@ election_description: >-
   2-way tie by head-to-head instead (BetterVoting) elects C, not A1 — the attack
   fails there. Companion: clone_teaming_01_pre.yaml · lesson:
   00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A1, A2, B, C, D, E, F]

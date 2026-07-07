@@ -1,10 +1,11 @@
 ======================================================================
 SOURCE FILE:     Whoops_04_ossipoff_centrist_irv.yaml
-SOURCE MODIFIED: 2026-07-02 11:56:34
+SOURCE MODIFIED: 2026-07-07 17:29:28
 TABULATED FILE:  Whoops_04_ossipoff_centrist_irv_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:05
+TABULATED AT:    2026-07-07 17:34:28
 ======================================================================
 
+paradoxes: [condorcet-winner]
 election:
   election_title: Whoops 04 — IRV buries the centrist (Ossipoff 303-voter)
   election_description: |-

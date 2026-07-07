@@ -50,10 +50,12 @@ AGREE,01_STAR/tie_break_dead_rung/tie_break_03_runoff_no_fives_to_lot.yaml,2,2,A
 AGREE,YAML_library/1_positive/_generated/S_W1_N_CopyOfIceCreamFlavorOfTheYear6FlavorsTemplate_bk6ymd.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,,,2,False,False,True
 AGREE,YAML_library/1_positive/_generated/S_W1_N_TestTestTestElection_kgbf8w.yaml,7,1,Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),1,False,False,False
 AGREE,YAML_library/1_positive/lot_tiebreak_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
+AGREE,YAML_library/1_positive/trash_delete.yaml,3,7,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,0,False,False,False
 AGREE,method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,1,False,False,False
 AGREE,method_comparisons/BV_Library/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False
 AGREE,method_comparisons/black_curtain/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
+AGREE,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml,3,7,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml,3,100,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/01_political_left_split.yaml,4,100,Labour,Labour,Labour,Labour,Labour,Labour,Labour,Labour,Labour,22,False,False,False
 AGREE,method_comparisons/split_voting/_main/02_icecream_chocolate_split.yaml,4,100,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,22,False,False,False

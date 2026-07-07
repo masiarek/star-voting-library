@@ -7,6 +7,7 @@ scenario_description: |-
   ballots feed Z, and Z beats X 18-16. More support made the winner lose —
   IRV's non-monotonicity. STAR cannot do this (more points never hurt); see
   the monotonicity_star_* pair and the monotonicity topic hub.
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV   # RCV-IRV — monotonicity demo (AFTER: X now LOSES)
 num_winners: 1
 

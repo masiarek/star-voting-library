@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2138_cxrf8v_stv.yaml
 SOURCE MODIFIED: 2026-07-06 22:17:50
 TABULATED FILE:  bv2138_cxrf8v_stv_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:04
+TABULATED AT:    2026-07-07 17:34:27
 ======================================================================
 
 election_title: "No Condorcet Winner — STV (1 seat = IRV single-winner): Dave"

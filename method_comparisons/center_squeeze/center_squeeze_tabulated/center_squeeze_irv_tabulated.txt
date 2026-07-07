@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     center_squeeze_irv.yaml
-SOURCE MODIFIED: 2026-07-06 22:11:36
+SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  center_squeeze_irv_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:02
+TABULATED AT:    2026-07-07 17:34:25
 ======================================================================
 
 election_title: "Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated)"
@@ -15,6 +15,7 @@ scenario_description: |-
   center_squeeze_star.yaml scores the same profile 0-5 and elects Center.
   See center_squeeze_voteline_1d.yaml for the spectrum picture and the
   center-squeeze topic hub for the cross-method view.
+paradoxes: [condorcet-winner]
 voting_method: RCV_IRV   # RCV-IRV — center squeeze (Center eliminated; Left wins)
 num_winners: 1
 

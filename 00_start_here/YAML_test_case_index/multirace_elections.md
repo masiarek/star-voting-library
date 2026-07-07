@@ -79,6 +79,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Method comparison — STV, 1 seat (= IRV single-winner) | STV | 5 | **Dave** |
 | Method comparison — STAR (ranks mapped to 0-5 scores) | STAR | 5 | **Brad** |
 
+## BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner
+
+**Election** [`mxfmhm`](https://bettervoting.com/mxfmhm/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.1 — Choose-One (Plurality) | Plurality | 3 | **Ana** |
+| Felsenthal Ex.1 — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bo** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

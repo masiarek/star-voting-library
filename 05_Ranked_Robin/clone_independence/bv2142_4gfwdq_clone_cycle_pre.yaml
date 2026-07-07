@@ -14,6 +14,7 @@ election_description: >-
 bv_test_id: BV2142
 bv_election_id: 4gfwdq
 bv_results_url: https://bettervoting.com/4gfwdq/results
+paradoxes: [clone-teaming, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A, B, C, D, E, F]

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv655_jfrk9t_equal_opposition.yaml
 SOURCE MODIFIED: 2026-07-05 21:30:06
 TABULATED FILE:  bv655_jfrk9t_equal_opposition_tabulated.txt
-TABULATED AT:    2026-07-07 13:03:52
+TABULATED AT:    2026-07-07 17:34:15
 ======================================================================
 
 election_title: "BV655 — 'equal opposition' (all-0) mislabeled as Abstained"

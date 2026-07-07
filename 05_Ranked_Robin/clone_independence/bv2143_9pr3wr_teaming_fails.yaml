@@ -15,6 +15,7 @@ election_description: >-
 bv_test_id: BV2143
 bv_election_id: 9pr3wr
 bv_results_url: https://bettervoting.com/9pr3wr/results
+paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A1, A2, B, C, D, E, F]

@@ -2,7 +2,7 @@
 SOURCE FILE:     pets_gov_stv.yaml
 SOURCE MODIFIED: 2026-07-06 19:14:31
 TABULATED FILE:  pets_gov_stv_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:06
+TABULATED AT:    2026-07-07 17:34:29
 ======================================================================
 
 election_title: "Pets Governance — Delegates by STV (3 seats): proportional again"

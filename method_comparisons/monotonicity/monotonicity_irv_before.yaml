@@ -6,6 +6,7 @@ scenario_description: |-
   (monotonicity_irv_after.yaml) four voters RAISE X from second to first
   choice, change nothing else, and X LOSES. Keep both files side by side; the
   ballots differ only in those four voters.
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV   # RCV-IRV — monotonicity demo (BEFORE: X wins)
 num_winners: 1
 

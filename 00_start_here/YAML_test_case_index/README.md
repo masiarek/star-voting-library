@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**192 election files** (157 single-winner, 35 multi-winner) across 14 method(s).
+**194 election files** (159 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 110 |
+| STAR | 111 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 19 |
 | Approval | 5 |
@@ -23,11 +23,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
 | IRV | 2 |
-| PLURALITY | 11 |
+| PLURALITY | 12 |
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (110)
+## STAR  (111)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -123,6 +123,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`center_squeeze_star`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_star.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — STAR elects the consensus (Center) → _Center_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml) |
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) |
 | [`bv2137_ywckmg_star`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_star.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml) |
+| [`bv2144_mxfmhm_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2144_mxfmhm_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner → _Bo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml) |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |
 | [`monotonicity_star_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_before.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (BEFORE — X wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_before.yaml) |
 | [`bv2138_cxrf8v_star`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_star.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff → _Brad_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml) |
@@ -261,7 +262,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2137_ywckmg_irv`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_irv.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — IRV (Hare): the center gets squeezed out → _Carter_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_irv.yaml) |
 | [`bv2138_cxrf8v_irv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_irv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — IRV (Hare): Dave wins by elimination → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) |
 
-## PLURALITY  (11)
+## PLURALITY  (12)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -269,6 +270,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv15_4h89vj_plurality_abstain`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/bv15_4h89vj_plurality_abstain.md) | `01_STAR/pet_real_bv_election/` | 1 | BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) → _Andre_ | [`.yaml`](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml) |
 | [`bv2130_bvhchj_party_plurality`](../../03_STAR_PR/_main/_main_pages/bv2130_bvhchj_party_plurality.md) | `03_STAR_PR/_main/` | 1 | BV2130 — Presidential Board: party alignment (Plurality) → _Democrat_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_bvhchj_party_plurality.yaml) |
 | [`BV_Library_plurality_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_plurality_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Plurality (choose-one): most first-marks wins → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_plurality_single_winner.yaml) |
+| [`bv2144_mxfmhm_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2144_mxfmhm_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins → _Ana_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml) |
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
 | [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |

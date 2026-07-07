@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2137_ywckmg_stv.yaml
-SOURCE MODIFIED: 2026-07-06 22:17:50
+SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  bv2137_ywckmg_stv_tabulated.txt
-TABULATED AT:    2026-07-07 13:04:03
+TABULATED AT:    2026-07-07 17:34:26
 ======================================================================
 
 election_title: "Center Squeeze — STV (1 seat = IRV single-winner): same squeeze"
@@ -11,6 +11,7 @@ scenario_description: |-
 bv_test_id: BV2137
 bv_election_id: ywckmg
 bv_results_url: https://bettervoting.com/ywckmg/results
+paradoxes: [condorcet-winner]
 voting_method: STV
 num_winners: 1
 options:

@@ -1,3 +1,4 @@
+paradoxes: [condorcet-winner, no-show, truncation, non-monotonicity, favorite-betrayal]
 election:
   election_title: Whoops 05 — many IRV pathologies in one election (Brams)
   election_description: |-

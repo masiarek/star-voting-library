@@ -8,6 +8,7 @@ scenario_description: |-
   center_squeeze_star.yaml scores the same profile 0-5 and elects Center.
   See center_squeeze_voteline_1d.yaml for the spectrum picture and the
   center-squeeze topic hub for the cross-method view.
+paradoxes: [condorcet-winner]
 voting_method: RCV_IRV   # RCV-IRV — center squeeze (Center eliminated; Left wins)
 num_winners: 1
 

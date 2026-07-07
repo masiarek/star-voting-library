@@ -4,6 +4,7 @@ scenario_description: |-
 bv_test_id: BV2137
 bv_election_id: ywckmg
 bv_results_url: https://bettervoting.com/ywckmg/results
+paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 options:

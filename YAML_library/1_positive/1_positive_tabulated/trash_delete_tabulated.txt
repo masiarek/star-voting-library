@@ -1,0 +1,122 @@
+======================================================================
+SOURCE FILE:     trash_delete.yaml
+SOURCE MODIFIED: 2026-07-07 17:14:00
+TABULATED FILE:  trash_delete_tabulated.txt
+TABULATED AT:    2026-07-07 17:14:08
+======================================================================
+
+election_title: 'BV2144 draft — Felsenthal Ex.1 as STAR (scratch)'
+
+scenario_description: |-
+  Felsenthal's Example 1 (plurality paradoxes appendix): 7 voters, 3 candidates.
+  Rankings 3×(a>b>c), 2×(b>c>a), 2×(c>b>a) converted to STAR with the house
+  rank→score map (N=3: top=5, mid=3, bottom=1). Cast: Ana=a, Bo=b, Cal=c.
+
+  Bo is the Condorcet winner; Ana is the Condorcet AND absolute loser, yet
+  Plurality elects Ana. Expected STAR: scores Ana 19, Bo 25, Cal 19 — a
+  scoring-round tie for finalist #2, broken head-to-head (Cal beats Ana 4–3);
+  runoff Bo beats Cal 5–2. STAR elects the Condorcet winner Bo.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 1
+voting_method: STAR
+ballots: |-
+  Ana,Bo,Cal
+  5,3,1
+  5,3,1
+  5,3,1
+  1,5,3
+  1,5,3
+  1,3,5
+  1,3,5
+expected_winners:
+  - Bo
+
+# file: trash_delete.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV2144 draft — Felsenthal Ex.1 as STAR (scratch) ===
+  Felsenthal's Example 1 (plurality paradoxes appendix): 7 voters, 3 candidates.
+  Rankings 3×(a>b>c), 2×(b>c>a), 2×(c>b>a) converted to STAR with the house
+  rank→score map (N=3: top=5, mid=3, bottom=1). Cast: Ana=a, Bo=b, Cal=c.
+
+  Bo is the Condorcet winner; Ana is the Condorcet AND absolute loser, yet
+  Plurality elects Ana. Expected STAR: scores Ana 19, Bo 25, Cal 19 — a
+  scoring-round tie for finalist #2, broken head-to-head (Cal beats Ana 4–3);
+  runoff Bo beats Cal 5–2. STAR elects the Condorcet winner Bo.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ana    |   * Bo    |    Cal    |
+-----------------------------------------------------
+       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
+        * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
+         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bo — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Bo
+  Choose-One (Plurality) = Ana   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × Ana,Bo,Cal
+    3 ×   5, 3,  1
+    2 ×   1, 5,  3
+    2 ×   1, 3,  5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ana        3  0  0  0  4  0  |    19   2.7
+Bo         2  0  5  0  0  0  |    25   3.6
+Cal        2  0  2  0  3  0  |    19   2.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bo            -- 25 -- First place
+   Ana           -- 19 -- Tied for second place
+   Cal           -- 19 -- Tied for second place
+ Bo advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Cal           -- 4 -- Second place
+   Ana           -- 3
+   Equal Support -- 0
+ Bo and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bo            -- 5 -- First place
+   Cal           -- 2
+   Equal Support -- 0
+ Bo wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bo 5 (71%)  ·  Cal 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bo

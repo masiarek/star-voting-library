@@ -371,7 +371,8 @@ _C6_LEVELS = [
     (10, [["C"], ["A1"], ["A2"], ["B"], ["D"], ["E"], ["F"]]),
 ]
 
-ELECTIONS = [
+# Already created -> bettervoting.com/4gfwdq (BV2142) / 9pr3wr (BV2143). Reference only.
+_CREATED_BV2142_43 = [
     {
         "test_id": "BV2142",
         "title": "Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning",
@@ -393,6 +394,60 @@ ELECTIONS = [
         "candidates": _C6_CANDS,
         "ballots": _dense_rank_rows(_C6_LEVELS, _C6_CANDS),
         "expected": "Teaming: A1 & C tie at 5 wins. LH margin -> A1 (+134 vs +104), teaming SUCCEEDS. BV 2-way head-to-head: C beats A1 21-12 -> C, teaming FAILS on BV. Test ID BV2143.",
+    },
+]
+
+
+# --- BV2144 — Felsenthal (2010) Example 1: plurality's four paradoxes at once ----
+# SOURCE: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting
+# Procedures Where One Out of m Candidates (m >= 2) Must Be Elected", University
+# of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in
+# Practice" workshop, Chateau du Baffy, Normandy, 30 July - 2 August 2010).
+# Appendix A1 ("Demonstrating Paradoxes Afflicting the Plurality Procedure"),
+# Example 1: 7 voters, candidates a/b/c — 3×(a>b>c), 2×(b>c>a), 2×(c>b>a).
+# b is the Condorcet winner; a is the Condorcet loser AND absolute loser
+# (a majority ranks a last), yet Plurality elects a; if c drops out, b wins (SCC).
+# Cast (named, initials match): Ana=a, Bo=b, Cal=c. Two races, one electorate:
+#   Plurality (choose-one): Ana 3, Bo 2, Cal 2 -> Ana.
+#   STAR (house rank->score map, N=3: top=5/mid=3/bottom=1): Bo 25, Ana 19,
+#   Cal 19 — finalist tie broken head-to-head (Cal beats Ana 4-3); runoff
+#   Bo beats Cal 5-2 -> STAR elects the Condorcet winner Bo. (LH-verified.)
+_F1_CANDS = ["Ana", "Bo", "Cal"]
+_F1_STAR_ROWS = [[5, 3, 1]] * 3 + [[1, 5, 3]] * 2 + [[1, 3, 5]] * 2
+_F1_PLUR_ROWS = [[1, 0, 0]] * 3 + [[0, 1, 0]] * 2 + [[0, 0, 1]] * 2
+
+ELECTIONS = [
+    {
+        "test_id": "BV2144",
+        "title": "Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner",
+        "description": ("Example 1 from Dan S. Felsenthal, 'Review of Paradoxes "
+                        "Afflicting Various Voting Procedures Where One Out of m "
+                        "Candidates (m ≥ 2) Must Be Elected' (University of Haifa / "
+                        "LSE, revised 26 May 2010; Leverhulme Trust 'Voting Power in "
+                        "Practice' workshop, Château du Baffy, Normandy). Appendix A1 "
+                        "demonstrates FOUR paradoxes hitting Plurality in one tiny "
+                        "election: 7 voters, three candidates — 3 rank Ana>Bo>Cal, "
+                        "2 rank Bo>Cal>Ana, 2 rank Cal>Bo>Ana. Bo is the Condorcet "
+                        "winner (beats Ana 4-3 and Cal 5-2 head-to-head). Ana is both "
+                        "the Condorcet LOSER and the ABSOLUTE loser — a majority (4 of "
+                        "7) rank Ana dead last. Yet Choose-One Plurality elects Ana "
+                        "(3-2-2 on first choices); and if Cal dropped out, Bo would "
+                        "win — the classic spoiler (Felsenthal's SCC). This election "
+                        "runs the same 7-voter electorate two ways: a Plurality race "
+                        "(Ana wins) and a STAR race with the rankings mapped to 0-5 "
+                        "scores (top=5, mid=3, bottom=1: Bo 25, Ana 19, Cal 19; the "
+                        "second-finalist tie breaks head-to-head to Cal 4-3, and Bo "
+                        "wins the runoff 5-2). STAR elects the Condorcet winner Bo — "
+                        "the tabulation, not the ballot, decides."),
+        "races": [
+            {"title": "Felsenthal Ex.1 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _F1_CANDS, "ballots": _F1_PLUR_ROWS},
+            {"title": "Felsenthal Ex.1 — STAR (ranks mapped to 0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _F1_CANDS, "ballots": _F1_STAR_ROWS},
+        ],
+        "expected": "Plurality -> Ana (3-2-2; Condorcet & absolute loser). STAR -> Bo "
+                    "(25; finalist tie 19-19 broken head-to-head to Cal, runoff 5-2). "
+                    "LH-verified both. Test ID BV2144.",
     },
 ]
 
