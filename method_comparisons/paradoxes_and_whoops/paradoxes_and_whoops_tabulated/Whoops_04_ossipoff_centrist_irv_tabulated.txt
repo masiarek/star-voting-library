@@ -2,7 +2,7 @@
 SOURCE FILE:     Whoops_04_ossipoff_centrist_irv.yaml
 SOURCE MODIFIED: 2026-07-07 17:29:28
 TABULATED FILE:  Whoops_04_ossipoff_centrist_irv_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:28
+TABULATED AT:    2026-07-07 18:31:51
 ======================================================================
 
 paradoxes: [condorcet-winner]

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv130_bloc_pagination_731.yaml
 SOURCE MODIFIED: 2026-07-05 08:26:37
 TABULATED FILE:  bv130_bloc_pagination_731_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:18
+TABULATED AT:    2026-07-07 18:31:38
 ======================================================================
 
 election_title: "BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731)"

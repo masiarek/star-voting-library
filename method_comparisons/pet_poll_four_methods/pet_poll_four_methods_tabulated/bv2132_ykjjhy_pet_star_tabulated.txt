@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2132_ykjjhy_pet_star.yaml
 SOURCE MODIFIED: 2026-07-06 17:40:43
 TABULATED FILE:  bv2132_ykjjhy_pet_star_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:28
+TABULATED AT:    2026-07-07 18:31:52
 ======================================================================
 
 election_title: "BV2132 — Pet poll (STAR): the consensus center Cat wins"

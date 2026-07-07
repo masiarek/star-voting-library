@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2149_byk9v2_star.yaml
 SOURCE MODIFIED: 2026-07-07 18:01:46
 TABULATED FILE:  bv2149_byk9v2_star_tabulated.txt
-TABULATED AT:    2026-07-07 18:01:56
+TABULATED AT:    2026-07-07 18:31:48
 ======================================================================
 
 election_title: "Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts"

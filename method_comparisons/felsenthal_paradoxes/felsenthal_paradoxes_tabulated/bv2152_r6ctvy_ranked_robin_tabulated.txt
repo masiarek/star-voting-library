@@ -1,0 +1,32 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 47 ballots (ranked ballots).
+
+Ballots:
+    18 × Anna > Bert > Carla
+     6 × Bert > Carla > Anna
+     8 × Bert > Anna > Carla
+     2 × Carla > Anna > Bert
+    13 × Carla > Bert > Anna
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Bert   beats Anna    27 – 20
+   Anna   beats Carla   26 – 21
+   Bert   beats Carla   32 – 15
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |     Anna     |    Bert     |   Carla     |
+------------------------------------------------------
+   Anna > |     ---      |20 -  0 - 27 |26 -  0 - 21 |
+   Bert > | 27 -  0 - 20 |    ---      |32 -  0 - 15 |
+  Carla > | 21 -  0 - 26 |15 -  0 - 32 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Bert       2–0–0         2     +24  Anna, Carla
+    2  Anna       1–1–0         1      -2  Carla
+    3  Carla      0–2–0         0     -22  —
+
+Winner — Ranked Robin (RCV-RR): Bert
+   beats every opponent head-to-head — the Condorcet winner.

@@ -2,7 +2,7 @@
 SOURCE FILE:     lot_random_vs_published_jfk7pd_bv_order.yaml
 SOURCE MODIFIED: 2026-07-03 23:00:25
 TABULATED FILE:  lot_random_vs_published_jfk7pd_bv_order_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:16
+TABULATED AT:    2026-07-07 18:31:35
 ======================================================================
 
 election_title: 'Lot-decided tie (BV jfk7pd) — following BetterVoting''s random draw'

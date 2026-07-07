@@ -1,0 +1,30 @@
+election_title: "Felsenthal Ex.7 — Ranked Robin: the Condorcet winner Amos"
+scenario_description: |-
+  Race 3 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.
+  The same 100 voters' full rankings counted by Ranked Robin (Copeland): Amos wins both head-to-heads (Bella 51–49, Chad 51–49) — the Condorcet winner, elected. A majority's first choice survives any pairwise count; it is the approval cutoff, not the ballots, that loses him.
+  Live results: https://bettervoting.com/pcttmr/results
+bv_test_id: BV2153
+bv_election_id: pcttmr
+bv_results_url: https://bettervoting.com/pcttmr/results
+paradoxes: [majority-failure]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  51:Amos>Bella>Chad
+  48:Bella>Chad>Amos
+  1:Chad>Bella>Amos
+expected_winners:
+  - Amos
+
+# file: bv2153_pcttmr_ranked_robin.yaml

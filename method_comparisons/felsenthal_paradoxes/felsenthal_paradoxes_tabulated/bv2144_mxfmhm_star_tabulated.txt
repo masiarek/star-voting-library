@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2144_mxfmhm_star.yaml
 SOURCE MODIFIED: 2026-07-07 17:20:23
 TABULATED FILE:  bv2144_mxfmhm_star_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:26
+TABULATED AT:    2026-07-07 18:31:47
 ======================================================================
 
 election_title: "Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner"

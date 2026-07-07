@@ -14,13 +14,21 @@ Condorcet winner paradox,Simple,Felsenthal Ex.2 — STAR (ranks→scores): elect
 Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_ranked_robin.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth,STAR,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.5 — Approval: the Condorcet winner loses the approval count,Approval,Anna,BV2152,r6ctvy,method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_approval.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.5 — Ranked Robin: the Condorcet winner Bert,RankedRobin,Bert,BV2152,r6ctvy,method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_ranked_robin.yaml
+Condorcet winner paradox,Simple,"Felsenthal Ex.8 — IRV: a third winner, Clara",IRV,Clara,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_irv.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto_approval.yaml
 Condorcet winner paradox,Simple,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),STAR,Ada,,,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml
 Condorcet winner paradox,Simple,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_04_ossipoff_centrist_irv.yaml
 Condorcet winner paradox,Simple,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
+Condorcet loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot,Approval,April,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_approval.yaml
+Condorcet loser paradox,Simple,Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce,RankedRobin,Bruce,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_ranked_robin.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
+Absolute loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot,Approval,April,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_approval.yaml
+Absolute loser paradox,Simple,Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce,RankedRobin,Bruce,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_ranked_robin.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
@@ -59,3 +67,8 @@ Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District 
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District II — STAR: also Bruno,STAR,Bruno,BV2148,h87k6v,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_irv.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts",STAR,Bruno,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.yaml
+Majority criterion failure,Simple,Felsenthal Ex.7 — Approval: a majority's first choice loses,Approval,Bella,BV2153,pcttmr,method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_approval.yaml
+Majority criterion failure,Simple,Felsenthal Ex.7 — IRV: the majority favorite wins round one,IRV,Amos,BV2153,pcttmr,method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_irv.yaml
+Majority criterion failure,Simple,Felsenthal Ex.7 — Ranked Robin: the Condorcet winner Amos,RankedRobin,Amos,BV2153,pcttmr,method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_ranked_robin.yaml
+Pareto-dominated winner,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto_approval.yaml
+Pareto-dominated winner,Simple,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),RankedRobin,Aria,,,method_comparisons/felsenthal_paradoxes/felsenthal_ex6_ranked_robin.yaml

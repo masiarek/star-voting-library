@@ -1,0 +1,75 @@
+election_title: "Felsenthal Ex.5 — Approval: the Condorcet winner loses the approval count"
+scenario_description: |-
+  Race 1 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6ctvy; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 5 — due to Felsenthal & Maoz (1988: 123, Example 2).
+  47 voters, rankings 18×(Anna>Bert>Carla), 6×(Bert>Carla>Anna), 8×(Bert>Anna>Carla), 2×(Carla>Anna>Bert), 13×(Carla>Bert>Anna). Bert is the Condorcet winner (beats Anna 27–20, Carla 32–15; social ordering Bert>Anna>Carla). But each voter approves only the candidates the text marks in parentheses — 18×{Anna}, 6×{Bert,Carla}, 8×{Bert,Anna}, 2×{Carla,Anna}, 13×{Carla} — and the approval totals are Anna 28, Bert 14, Carla 21: APPROVAL ELECTS ANNA. The Condorcet winner paradox under Approval: where a voter draws the approval cutoff decides the election, and the pairwise favorite can fall below it.
+  Live results: https://bettervoting.com/r6ctvy/results
+bv_test_id: BV2152
+bv_election_id: r6ctvy
+bv_results_url: https://bettervoting.com/r6ctvy/results
+paradoxes: [condorcet-winner]
+voting_method: Approval
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Anna,Bert,Carla
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  0,1,1
+  0,1,1
+  0,1,1
+  0,1,1
+  0,1,1
+  0,1,1
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,0,1
+  1,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - Anna
+
+# file: bv2152_r6ctvy_approval.yaml

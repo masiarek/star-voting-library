@@ -1,0 +1,56 @@
+# Felsenthal Ex.7 — IRV: the majority favorite wins round one
+
+*Generated from [`bv2153_pcttmr_irv.yaml`](../bv2153_pcttmr_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Amos
+
+## Scenario
+
+Race 2 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.
+The same 100 voters' full rankings under instant runoff: Amos holds 51 first choices — an absolute majority — and wins in the first round. The contrast with the approval race (Bella, 100 approvals) is the whole point: a top-two approval cutoff erases the majority's first-vs-second distinction.
+Live results: https://bettervoting.com/pcttmr/results
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+51:Amos>Bella>Chad
+48:Bella>Chad>Amos
+1:Chad>Bella>Amos
+```
+
+## What the engine says
+
+Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2153_pcttmr_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
+
+```text
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.7 — IRV: the majority favorite wins round one
+ Tabulating 100 ballots (ranked ballots).
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Amos              51  Elected
+Bella             48  Rejected
+Chad               1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Amos
+```
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_irv.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2144_mxfmhm_plurality](bv2144_mxfmhm_plurality.md) · [bv2144_mxfmhm_star](bv2144_mxfmhm_star.md) · [bv2145_6fj2kg_irv](bv2145_6fj2kg_irv.md) · [bv2145_6fj2kg_ranked_robin](bv2145_6fj2kg_ranked_robin.md) · [bv2145_6fj2kg_star](bv2145_6fj2kg_star.md) · [bv2146_krk2px_irv](bv2146_krk2px_irv.md) · [bv2146_krk2px_ranked_robin](bv2146_krk2px_ranked_robin.md) · [bv2146_krk2px_star](bv2146_krk2px_star.md) · [bv2147_9gdrqg_irv](bv2147_9gdrqg_irv.md) · [bv2147_9gdrqg_star](bv2147_9gdrqg_star.md) · [bv2148_h87k6v_irv](bv2148_h87k6v_irv.md) · [bv2148_h87k6v_star](bv2148_h87k6v_star.md) · [bv2149_byk9v2_irv](bv2149_byk9v2_irv.md) · [bv2149_byk9v2_star](bv2149_byk9v2_star.md) · [bv2150_dxg8pb_irv](bv2150_dxg8pb_irv.md) · [bv2150_dxg8pb_ranked_robin](bv2150_dxg8pb_ranked_robin.md) · [bv2150_dxg8pb_star](bv2150_dxg8pb_star.md) · [bv2151_97hbpw_irv](bv2151_97hbpw_irv.md) · [bv2151_97hbpw_ranked_robin](bv2151_97hbpw_ranked_robin.md) · [bv2151_97hbpw_star](bv2151_97hbpw_star.md) · [bv2152_r6ctvy_approval](bv2152_r6ctvy_approval.md) · [bv2152_r6ctvy_ranked_robin](bv2152_r6ctvy_ranked_robin.md) · [bv2153_pcttmr_approval](bv2153_pcttmr_approval.md) · [bv2153_pcttmr_ranked_robin](bv2153_pcttmr_ranked_robin.md) · [bv2154_wq6yv7_approval](bv2154_wq6yv7_approval.md) · [bv2154_wq6yv7_irv](bv2154_wq6yv7_irv.md) · [bv2154_wq6yv7_ranked_robin](bv2154_wq6yv7_ranked_robin.md) · [felsenthal_ex6_pareto_approval](felsenthal_ex6_pareto_approval.md) · [felsenthal_ex6_ranked_robin](felsenthal_ex6_ranked_robin.md)

@@ -736,7 +736,8 @@ def _f4_races(prefix, blocs):
     ]
 
 
-ELECTIONS = [
+# Already created -> dxg8pb (BV2150) / 97hbpw (BV2151). Reference.
+_CREATED_BV2150_51 = [
     {
         "test_id": "BV2150",
         "title": "Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice",
@@ -784,6 +785,169 @@ ELECTIONS = [
                     "the abstaining pair does BETTER than in BV2150. Ranked Robin -> "
                     "Beth. STAR -> Beth (19/31/31; runoff 5-4). LH-verified. "
                     "Test ID BV2151.",
+    },
+]
+
+
+# --- BV2152/53/54 — Felsenthal (2010) §A3: paradoxes afflicting APPROVAL --------
+# SOURCE: same Felsenthal (2010) paper; Appendix A3 ("Demonstrating the
+# Paradoxes Afflicting the Approval Voting Procedure"), Examples 5, 7, 8.
+# (Example 6 — the Pareto-dominated paradox — turns on a RANDOM a/b tie, which
+# BV can't freeze; it becomes an LH-only case instead.) Each election pairs an
+# Approval race (the strategic approval profile from the text, 0/1 ballots)
+# with ranked race(s) on the SAME voters' full orderings — all deterministic
+# (Condorcet winners exist; no cycles, no BV random tiebreaks).
+#   BV2152 (Ex.5; due to Felsenthal & Maoz 1988: 123, Example 2): 47 voters.
+#     Rankings 18×(a>b>c), 6×(b>c>a), 8×(b>a>c), 2×(c>a>b), 13×(c>b>a);
+#     social ordering b>a>c, b is the Condorcet winner (beats a 27-20, c
+#     32-15). Approvals per the text's parentheses: 18×{a}, 6×{b,c}, 8×{b,a},
+#     2×{c,a}, 13×{c} -> a 28, b 14, c 21: APPROVAL ELECTS a, not the
+#     Condorcet winner. Races: Approval -> Anna; Ranked Robin -> Bert.
+#   BV2153 (Ex.7): 100 voters — 51×(a>b>c), 48×(b>c>a), 1×(c>b>a). a is
+#     ranked FIRST BY AN ABSOLUTE MAJORITY (51) and is the Condorcet winner.
+#     If every voter approves their top two: a 51, b 100, c 49 — APPROVAL
+#     ELECTS b: the Absolute Majority paradox. Races: Approval -> Bella;
+#     IRV -> Amos (round-1 majority); Ranked Robin -> Amos.
+#   BV2154 (Ex.8): 15 voters — 6×(a>b>c), 4×(b>c>a), 1×(c>a>b), 4×(c>b>a).
+#     Social ordering b>c>a: a is the Condorcet loser AND absolute loser
+#     (ranked last by 8 of 15). If the single c>a>b voter approves the top
+#     two and everyone else bullet-votes: a 7, b 4, c 5 — APPROVAL ELECTS a.
+#     Bonus: one electorate, THREE winners — Approval -> April, IRV -> Clara
+#     (Bruce deleted 6/4/5; Clara beats April 9-6), Ranked Robin -> Bruce.
+# Cast: BV2152 Anna/Bert/Carla; BV2153 Amos/Bella/Chad; BV2154 April/Bruce/
+# Clara. All eight races LH-verified pre-creation.
+
+_F5_SRC = ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting Various "
+           "Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be "
+           "Elected' (University of Haifa / LSE, revised 26 May 2010; Leverhulme "
+           "Trust 'Voting Power in Practice' workshop, Château du Baffy, "
+           "Normandy), Appendix A3: the paradoxes afflicting the Approval "
+           "voting procedure. ")
+
+
+def _expand(blocs):
+    """Weighted (count, row) blocs -> one row per voter."""
+    out = []
+    for n, row in blocs:
+        out += [list(row)] * n
+    return out
+
+
+def _ranks(blocs, cands):
+    R, _ = _mk_ranked_and_star(blocs, cands)
+    return R
+
+
+_F6_CANDS = ["Anna", "Bert", "Carla"]
+_F6_RANKED = [(18, ["Anna", "Bert", "Carla"]), (6, ["Bert", "Carla", "Anna"]),
+              (8, ["Bert", "Anna", "Carla"]), (2, ["Carla", "Anna", "Bert"]),
+              (13, ["Carla", "Bert", "Anna"])]
+_F6_APPR = [(18, (1, 0, 0)), (6, (0, 1, 1)), (8, (1, 1, 0)),
+            (2, (1, 0, 1)), (13, (0, 0, 1))]
+
+_F7_CANDS = ["Amos", "Bella", "Chad"]
+_F7_RANKED = [(51, ["Amos", "Bella", "Chad"]), (48, ["Bella", "Chad", "Amos"]),
+              (1, ["Chad", "Bella", "Amos"])]
+_F7_APPR = [(51, (1, 1, 0)), (48, (0, 1, 1)), (1, (0, 1, 1))]
+
+_F8_CANDS = ["April", "Bruce", "Clara"]
+_F8_RANKED = [(6, ["April", "Bruce", "Clara"]), (4, ["Bruce", "Clara", "April"]),
+              (1, ["Clara", "April", "Bruce"]), (4, ["Clara", "Bruce", "April"])]
+_F8_APPR = [(6, (1, 0, 0)), (4, (0, 1, 0)), (1, (1, 0, 1)), (4, (0, 0, 1))]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2152",
+        "title": "Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count",
+        "description": (_F5_SRC +
+                        "Example 5, due to Felsenthal & Maoz (1988: 123, Example 2). "
+                        "47 voters, three candidates, rankings 18×(Anna>Bert>Carla), "
+                        "6×(Bert>Carla>Anna), 8×(Bert>Anna>Carla), 2×(Carla>Anna>Bert), "
+                        "13×(Carla>Bert>Anna). The social preference ordering is "
+                        "Bert>Anna>Carla — Bert is the Condorcet winner (beats Anna "
+                        "27-20 and Carla 32-15). But when each voter approves the "
+                        "candidates the text marks in parentheses — 18×{Anna}, "
+                        "6×{Bert,Carla}, 8×{Bert,Anna}, 2×{Carla,Anna}, 13×{Carla} — "
+                        "the approval totals are Anna 28, Bert 14, Carla 21, and "
+                        "APPROVAL ELECTS ANNA: the Condorcet winner paradox under "
+                        "Approval. The second race runs the same voters' full rankings "
+                        "as Ranked Robin (Copeland), which elects Bert directly."),
+        "races": [
+            {"title": "Felsenthal Ex.5 — Approval (the text's approval sets)",
+             "method": "Approval", "num_winners": 1, "candidates": _F6_CANDS,
+             "ballots": _expand(_F6_APPR)},
+            {"title": "Felsenthal Ex.5 — Ranked Robin (the same voters' full rankings)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+             "candidates": _F6_CANDS, "ballots": _ranks(_F6_RANKED, _F6_CANDS)},
+        ],
+        "expected": "Approval -> Anna (28/14/21), NOT the Condorcet winner. "
+                    "Ranked Robin -> Bert (beats Anna 27-20, Carla 32-15). "
+                    "LH-verified. Test ID BV2152.",
+    },
+    {
+        "test_id": "BV2153",
+        "title": "Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count",
+        "description": (_F5_SRC +
+                        "Example 7. 100 voters — 51×(Amos>Bella>Chad), "
+                        "48×(Bella>Chad>Amos), 1×(Chad>Bella>Amos). Amos is ranked "
+                        "FIRST by an absolute majority of the voters (51 of 100) and "
+                        "is the Condorcet winner. But if every voter approves their "
+                        "top TWO preferences, the approval totals are Amos 51, Bella "
+                        "100, Chad 49 — APPROVAL ELECTS BELLA despite Amos's absolute "
+                        "majority of first preferences: the Absolute Majority paradox. "
+                        "The ranked races on the same orderings show the contrast: "
+                        "instant-runoff (IRV) elects Amos immediately (51 is a "
+                        "first-round majority), and Ranked Robin (Copeland) elects "
+                        "Amos as Condorcet winner (beats Bella 51-49, Chad 51-49)."),
+        "races": [
+            {"title": "Felsenthal Ex.7 — Approval (everyone approves their top two)",
+             "method": "Approval", "num_winners": 1, "candidates": _F7_CANDS,
+             "ballots": _expand(_F7_APPR)},
+            {"title": "Felsenthal Ex.7 — IRV (majority favorite wins round one)",
+             "method": "IRV", "num_winners": 1, "max_rankings": 3,
+             "candidates": _F7_CANDS, "ballots": _ranks(_F7_RANKED, _F7_CANDS)},
+            {"title": "Felsenthal Ex.7 — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+             "candidates": _F7_CANDS, "ballots": _ranks(_F7_RANKED, _F7_CANDS)},
+        ],
+        "expected": "Approval -> Bella (51/100/49) despite Amos's absolute majority "
+                    "of first preferences. IRV -> Amos (round-1 majority). Ranked "
+                    "Robin -> Amos (Condorcet winner). LH-verified. Test ID BV2153.",
+    },
+    {
+        "test_id": "BV2154",
+        "title": "Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",
+        "description": (_F5_SRC +
+                        "Example 8. 15 voters — 6×(April>Bruce>Clara), "
+                        "4×(Bruce>Clara>April), 1×(Clara>April>Bruce), "
+                        "4×(Clara>Bruce>April). The social preference ordering is "
+                        "Bruce>Clara>April: April is both the Condorcet LOSER and the "
+                        "ABSOLUTE loser — an absolute majority (8 of 15) rank April "
+                        "dead last. But if the single Clara>April>Bruce voter approves "
+                        "their top two while everyone else votes only their top "
+                        "preference, the approval totals are April 7, Bruce 4, Clara 5 "
+                        "— APPROVAL ELECTS APRIL: the Condorcet loser and Absolute "
+                        "loser paradoxes under Approval. Bonus: this one electorate "
+                        "produces THREE different winners — Approval elects April, "
+                        "instant-runoff (IRV) elects Clara (Bruce is deleted 6/4/5 and "
+                        "Clara beats April 9-6), and Ranked Robin (Copeland) elects "
+                        "Bruce, the Condorcet winner (beats April 8-7, Clara 10-5). "
+                        "The tabulation, not the ballot, decides."),
+        "races": [
+            {"title": "Felsenthal Ex.8 — Approval (one strategic voter approves two)",
+             "method": "Approval", "num_winners": 1, "candidates": _F8_CANDS,
+             "ballots": _expand(_F8_APPR)},
+            {"title": "Felsenthal Ex.8 — IRV (Hare)",
+             "method": "IRV", "num_winners": 1, "max_rankings": 3,
+             "candidates": _F8_CANDS, "ballots": _ranks(_F8_RANKED, _F8_CANDS)},
+            {"title": "Felsenthal Ex.8 — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+             "candidates": _F8_CANDS, "ballots": _ranks(_F8_RANKED, _F8_CANDS)},
+        ],
+        "expected": "Approval -> April (7/4/5; Condorcet & absolute loser). IRV -> "
+                    "Clara (Bruce deleted; 9-6). Ranked Robin -> Bruce (Condorcet "
+                    "winner). Three winners, one electorate. LH-verified. "
+                    "Test ID BV2154.",
     },
 ]
 

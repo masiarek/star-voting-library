@@ -68,7 +68,9 @@ VOCAB = {
     "multiple-districts": ("Reinforcement / multiple-districts paradox", "Conditional", "multiple_districts.md",
                            "A candidate wins in every district separately but loses the combined election (a.k.a. inconsistency paradox)."),
     "majority-failure": ("Majority criterion failure", "Simple", None,
-                         "A candidate who is the first choice of a majority is not elected."),
+                         "A candidate who is the first choice of an absolute majority is not elected (Felsenthal's Absolute Majority paradox)."),
+    "pareto": ("Pareto-dominated winner", "Simple", None,
+               "A candidate is (or can be) elected although EVERY voter prefers some other candidate."),
 }
 
 

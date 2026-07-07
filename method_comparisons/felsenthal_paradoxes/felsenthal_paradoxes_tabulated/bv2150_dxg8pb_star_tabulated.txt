@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2150_dxg8pb_star.yaml
 SOURCE MODIFIED: 2026-07-07 18:12:03
 TABULATED FILE:  bv2150_dxg8pb_star_tabulated.txt
-TABULATED AT:    2026-07-07 18:13:00
+TABULATED AT:    2026-07-07 18:31:49
 ======================================================================
 
 election_title: "Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth"

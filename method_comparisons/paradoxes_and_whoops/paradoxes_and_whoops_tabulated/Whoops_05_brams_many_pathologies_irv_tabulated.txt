@@ -2,7 +2,7 @@
 SOURCE FILE:     Whoops_05_brams_many_pathologies_irv.yaml
 SOURCE MODIFIED: 2026-07-07 17:29:28
 TABULATED FILE:  Whoops_05_brams_many_pathologies_irv_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:28
+TABULATED AT:    2026-07-07 18:31:51
 ======================================================================
 
 paradoxes: [condorcet-winner, no-show, truncation, non-monotonicity, favorite-betrayal]

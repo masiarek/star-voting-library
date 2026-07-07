@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2137_ywckmg_star.yaml
 SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  bv2137_ywckmg_star_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:25
+TABULATED AT:    2026-07-07 18:31:46
 ======================================================================
 
 election_title: "Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV"

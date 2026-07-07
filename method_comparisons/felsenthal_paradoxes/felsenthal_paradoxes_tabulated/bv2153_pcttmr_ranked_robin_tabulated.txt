@@ -1,0 +1,30 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 100 ballots (ranked ballots).
+
+Ballots:
+    51 × Amos > Bella > Chad
+    48 × Bella > Chad > Amos
+     1 × Chad > Bella > Amos
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Amos   beats Bella   51 – 49
+   Amos   beats Chad    51 – 49
+   Bella  beats Chad    99 –  1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |     Amos     |   Bella     |    Chad     |
+------------------------------------------------------
+   Amos > |     ---      |51 -  0 - 49 |51 -  0 - 49 |
+  Bella > | 49 -  0 - 51 |    ---      |99 -  0 -  1 |
+   Chad > | 49 -  0 - 51 | 1 -  0 - 99 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Amos       2–0–0         2      +4  Bella, Chad
+    2  Bella      1–1–0         1     +96  Chad
+    3  Chad       0–2–0         0    -100  —
+
+Winner — Ranked Robin (RCV-RR): Amos
+   beats every opponent head-to-head — the Condorcet winner.

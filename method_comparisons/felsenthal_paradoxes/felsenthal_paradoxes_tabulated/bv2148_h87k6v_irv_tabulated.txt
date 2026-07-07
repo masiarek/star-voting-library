@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2148_h87k6v_irv.yaml
 SOURCE MODIFIED: 2026-07-07 18:01:18
 TABULATED FILE:  bv2148_h87k6v_irv_tabulated.txt
-TABULATED AT:    2026-07-07 18:01:55
+TABULATED AT:    2026-07-07 18:31:48
 ======================================================================
 
 election_title: "Felsenthal Ex.3 District II — Runoff/IRV: Bruno wins in round one"

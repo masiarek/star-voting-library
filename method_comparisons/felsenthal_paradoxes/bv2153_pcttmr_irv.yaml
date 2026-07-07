@@ -1,0 +1,30 @@
+election_title: "Felsenthal Ex.7 — IRV: the majority favorite wins round one"
+scenario_description: |-
+  Race 2 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.
+  The same 100 voters' full rankings under instant runoff: Amos holds 51 first choices — an absolute majority — and wins in the first round. The contrast with the approval race (Bella, 100 approvals) is the whole point: a top-two approval cutoff erases the majority's first-vs-second distinction.
+  Live results: https://bettervoting.com/pcttmr/results
+bv_test_id: BV2153
+bv_election_id: pcttmr
+bv_results_url: https://bettervoting.com/pcttmr/results
+paradoxes: [majority-failure]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  51:Amos>Bella>Chad
+  48:Bella>Chad>Amos
+  1:Chad>Bella>Amos
+expected_winners:
+  - Amos
+
+# file: bv2153_pcttmr_irv.yaml

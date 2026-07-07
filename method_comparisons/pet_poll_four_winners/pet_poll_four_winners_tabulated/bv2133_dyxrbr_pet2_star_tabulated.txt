@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2133_dyxrbr_pet2_star.yaml
 SOURCE MODIFIED: 2026-07-06 18:30:54
 TABULATED FILE:  bv2133_dyxrbr_pet2_star_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:29
+TABULATED AT:    2026-07-07 18:31:52
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (STAR): the consensus Cat wins"

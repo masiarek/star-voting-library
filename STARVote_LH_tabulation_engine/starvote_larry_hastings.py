@@ -3130,6 +3130,7 @@ Memphis,Nashville,Chattanooga,Knoxville
             try:
                 with _ctx.redirect_stdout(_buf):
                     tabulate_approval(csv_input, seats=_seats,
+                                      priority=election.get("lot_numbers"),
                                       options=election.get("options"))
             except SystemExit:
                 sys.stdout.write(_buf.getvalue())  # don't swallow error text

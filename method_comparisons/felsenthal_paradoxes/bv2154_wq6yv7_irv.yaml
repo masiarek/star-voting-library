@@ -1,0 +1,31 @@
+election_title: "Felsenthal Ex.8 — IRV: a third winner, Clara"
+scenario_description: |-
+  Race 2 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 8 — see bv2154_wq6yv7_approval.yaml for the setup.
+  The same 15 voters' full rankings under instant runoff: first choices April 6, Bruce 4, Clara 5, so BRUCE — the Condorcet winner — is deleted first, and Clara beats April 9–6. IRV elects Clara: neither the approval race's April (the absolute loser) nor the pairwise winner Bruce. One electorate, three winners across the three races.
+  Live results: https://bettervoting.com/wq6yv7/results
+bv_test_id: BV2154
+bv_election_id: wq6yv7
+bv_results_url: https://bettervoting.com/wq6yv7/results
+paradoxes: [condorcet-winner]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  6:April>Bruce>Clara
+  4:Bruce>Clara>April
+  1:Clara>April>Bruce
+  4:Clara>Bruce>April
+expected_winners:
+  - Clara
+
+# file: bv2154_wq6yv7_irv.yaml

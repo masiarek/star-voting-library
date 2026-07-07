@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2150_dxg8pb_irv.yaml
 SOURCE MODIFIED: 2026-07-07 18:11:52
 TABULATED FILE:  bv2150_dxg8pb_irv_tabulated.txt
-TABULATED AT:    2026-07-07 18:13:36
+TABULATED AT:    2026-07-07 18:31:48
 ======================================================================
 
 election_title: "Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins"

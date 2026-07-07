@@ -155,6 +155,35 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Felsenthal Ex.4 after two no-shows — Ranked Robin (Copeland) | RankedRobin | 3 | **Beth** |
 | Felsenthal Ex.4 after two no-shows — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Beth** |
 
+## BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count
+
+**Election** [`r6ctvy`](https://bettervoting.com/r6ctvy/results) · **2 races** · **47 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.5 — Approval (the text's approval sets) | Approval | 3 | **Anna** |
+| Felsenthal Ex.5 — Ranked Robin (the same voters' full rankings) | RankedRobin | 3 | **Bert** |
+
+## BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count
+
+**Election** [`pcttmr`](https://bettervoting.com/pcttmr/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.7 — Approval (everyone approves their top two) | Approval | 3 | **Bella** |
+| Felsenthal Ex.7 — IRV (majority favorite wins round one) | IRV | 3 | **Amos** |
+| Felsenthal Ex.7 — Ranked Robin (Copeland) | RankedRobin | 3 | **Amos** |
+
+## BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners
+
+**Election** [`wq6yv7`](https://bettervoting.com/wq6yv7/results) · **3 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.8 — Approval (one strategic voter approves two) | Approval | 3 | **April** |
+| Felsenthal Ex.8 — IRV (Hare) | IRV | 3 | **Clara** |
+| Felsenthal Ex.8 — Ranked Robin (Copeland) | RankedRobin | 3 | **Bruce** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

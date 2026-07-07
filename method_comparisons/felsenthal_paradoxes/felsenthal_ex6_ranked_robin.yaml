@@ -1,0 +1,26 @@
+election_title: "Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only)"
+scenario_description: |-
+  LH-only companion to felsenthal_ex6_pareto_approval.yaml (no BetterVoting election — see that file for why). Source: Dan S. Felsenthal (2010), Appendix A3, Example 6, due to Felsenthal & Maoz (1988: 123, Example 4).
+  The same 3 voters' full rankings counted by Ranked Robin (Copeland): Aria wins every head-to-head — Beau 3–0 (every single voter prefers Aria to Beau: Pareto dominance), Cole 2–1, Dean 2–1 — the Condorcet winner, elected outright. The approval count in the companion file loses this information because the top-three approval cutoff puts Aria and Beau in the same bucket on every ballot.
+paradoxes: [pareto]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+ballots: |-
+  1:Aria>Beau>Cole>Dean
+  1:Cole>Aria>Beau>Dean
+  1:Dean>Aria>Beau>Cole
+expected_winners:
+  - Aria
+
+# file: felsenthal_ex6_ranked_robin.yaml

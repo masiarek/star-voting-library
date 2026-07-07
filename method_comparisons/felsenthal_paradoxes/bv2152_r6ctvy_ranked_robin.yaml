@@ -1,0 +1,32 @@
+election_title: "Felsenthal Ex.5 — Ranked Robin: the Condorcet winner Bert"
+scenario_description: |-
+  Race 2 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6ctvy; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 5, due to Felsenthal & Maoz (1988: 123, Example 2) — see bv2152_r6ctvy_approval.yaml for the setup.
+  The same 47 voters' full rankings counted by Ranked Robin (Copeland): Bert wins both head-to-heads (Anna 27–20, Carla 32–15) — the Condorcet winner, elected directly. The approval race loses him because 18 Anna-only and 13 Carla-only voters draw their approval line above Bert even while ranking him second.
+  Live results: https://bettervoting.com/r6ctvy/results
+bv_test_id: BV2152
+bv_election_id: r6ctvy
+bv_results_url: https://bettervoting.com/r6ctvy/results
+paradoxes: [condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  18:Anna>Bert>Carla
+  6:Bert>Carla>Anna
+  8:Bert>Anna>Carla
+  2:Carla>Anna>Bert
+  13:Carla>Bert>Anna
+expected_winners:
+  - Bert
+
+# file: bv2152_r6ctvy_ranked_robin.yaml

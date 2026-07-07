@@ -2,7 +2,7 @@
 SOURCE FILE:     bv130r2_dead_rung_bloc.yaml
 SOURCE MODIFIED: 2026-07-05 07:58:26
 TABULATED FILE:  bv130r2_dead_rung_bloc_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:18
+TABULATED AT:    2026-07-07 18:31:38
 ======================================================================
 
 election_title: "BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk)"

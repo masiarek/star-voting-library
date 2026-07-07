@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 15 ballots (ranked ballots).
+
+Ballots:
+     6 × April > Bruce > Clara
+     4 × Bruce > Clara > April
+     1 × Clara > April > Bruce
+     4 × Clara > Bruce > April
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Bruce  beats April    8 –  7
+   Clara  beats April    9 –  6
+   Bruce  beats Clara   10 –  5
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    April     |   Bruce     |   Clara     |
+------------------------------------------------------
+  April > |     ---      | 7 -  0 -  8 | 6 -  0 -  9 |
+  Bruce > |  8 -  0 -  7 |    ---      |10 -  0 -  5 |
+  Clara > |  9 -  0 -  6 | 5 -  0 - 10 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Bruce      2–0–0         2      +6  Clara, April
+    2  Clara      1–1–0         1      -2  April
+    3  April      0–2–0         0      -4  —
+
+Winner — Ranked Robin (RCV-RR): Bruce
+   beats every opponent head-to-head — the Condorcet winner.

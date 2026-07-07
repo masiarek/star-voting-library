@@ -1,0 +1,35 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 3 ballots (ranked ballots).
+
+Ballots:
+   Aria > Beau > Cole > Dean
+   Cole > Aria > Beau > Dean
+   Dean > Aria > Beau > Cole
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Aria  beats Beau   3 – 0
+   Aria  beats Cole   2 – 1
+   Aria  beats Dean   2 – 1
+   Beau  beats Cole   2 – 1
+   Beau  beats Dean   2 – 1
+   Cole  beats Dean   2 – 1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |   Aria    |  Beau    |  Cole    |  Dean    |
+-------------------------------------------------------
+  Aria > |    ---    |3 - 0 - 0 |2 - 0 - 1 |2 - 0 - 1 |
+  Beau > | 0 - 0 - 3 |   ---    |2 - 0 - 1 |2 - 0 - 1 |
+  Cole > | 1 - 0 - 2 |1 - 0 - 2 |   ---    |2 - 0 - 1 |
+  Dean > | 1 - 0 - 2 |1 - 0 - 2 |1 - 0 - 2 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Aria       3–0–0         3      +5  Beau, Cole, Dean
+    2  Beau       2–1–0         2      -1  Cole, Dean
+    3  Cole       1–2–0         1      -1  Dean
+    4  Dean       0–3–0         0      -3  —
+
+Winner — Ranked Robin (RCV-RR): Aria
+   beats every opponent head-to-head — the Condorcet winner.

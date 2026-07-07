@@ -2,7 +2,7 @@
 SOURCE FILE:     03a_stv_3seats.yaml
 SOURCE MODIFIED: 2026-07-02 13:00:37
 TABULATED FILE:  03a_stv_3seats_tabulated.txt
-TABULATED AT:    2026-07-07 17:34:30
+TABULATED AT:    2026-07-07 18:31:55
 ======================================================================
 
 election_title: "STV — 3 seats, 7 candidates (proportional RCV)"
