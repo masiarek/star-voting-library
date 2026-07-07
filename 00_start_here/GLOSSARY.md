@@ -112,6 +112,14 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **Monroe's rule / Phragmén** — proportional rules that are **not** Thiele: Monroe assigns each winner a disjoint voter quota; Phragmén balances "load."
 - **RRV = score-PAV** — Reweighted Range Voting (a Proportional STAR method) is the **score-ballot generalisation of sequential PAV**; on 0/1 ballots it reduces to seq-PAV. Allocated Score / SSS instead follow the **quota/STV** lineage, not Thiele. See [Thiele methods → "Does this apply to STAR-PR?"](Approval_Voting/thiele_methods.md).
 
+## The wider field (computational social choice)
+
+*Where STAR and these method comparisons sit academically. The frontier is surveyed in the Dagstuhl computational-social-choice seminar series (2007, 2010, 2012, 2015, and [2017 — "Voting: Beyond Simple Majorities and Single-Winner Elections"](https://www.dagstuhl.de/17261)).*
+
+- **Computational social choice (comsoc)** — the interdisciplinary field (social choice theory + computer science + economics) studying how to aggregate agents' preferences into a joint decision, with particular attention to *computation*: how hard a winner is to compute, to manipulate, or to audit. STAR, the Condorcet family, and the ABC/Thiele rules above all sit here; the active frontier is **multi-winner** elections, **non-standard ballots**, and settings like the two below. → the 2017 Dagstuhl seminar [17261](https://www.dagstuhl.de/17261).
+- **Judgement aggregation** — a cousin of voting where agents vote **yes/no on several logically linked propositions** (not on candidates), and the collective verdict is required to stay logically consistent. The question is when that's even possible. → doctrinal paradox, next.
+- **Doctrinal paradox (discursive dilemma)** — the judgement-aggregation analogue of a Condorcet cycle: taking a **proposition-by-proposition majority** can yield a **collectively inconsistent** verdict even when every individual voter is perfectly consistent. Textbook case: a court where a majority affirms premise P, a majority affirms premise Q, yet a majority *rejects* the conclusion (P∧Q) those premises logically force. Same lesson as the ranked [cycle](RCV_Ranked_Robin/cycle_resolution.md) — aggregation can manufacture an incoherence that none of the voters hold.
+
 ## Civic / adoption
 
 - **[Equal Vote Coalition](https://equal.vote)** — the organization that developed and advocates STAR Voting.
