@@ -12,14 +12,14 @@ One of three races comparing the multi-member plurality family on the SAME 60/40
 electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
 (Home: Ada, Ben) and a 4-voter MINORITY (Away: Uma, Val).
 
-LIMITED VOTING: each voter casts FEWER votes than there are seats — here 2 votes
-for 3 seats. Because a party can't fill every seat with its own supporters, over-
-nominating splits its vote, so disciplined parties run about as many candidates
-as they can win. Home runs 2 (Ada, Ben → 6 each); Away runs 2 (Uma, Val → 4 each).
-The top three are Ada, Ben (6) and Uma (4; Val loses the last seat by lot) — a
-2-1 split. Limited Voting sits between Block Voting (majority sweeps 3-0) and SNTV
-(minority tops the poll): reducing votes-per-voter below the seat count is what
-opens space for the minority.
+LIMITED VOTING: each voter casts FEWER votes than there are seats — here up to 2
+votes for 3 seats. Because a party can't fill every seat with its own supporters,
+over-nominating splits the vote, so disciplined parties concentrate. Home uses
+its 2 votes on Ada, Ben (6 each); Away concentrates all 4 of its voters behind
+Uma (bullet — using just one of its two votes). The top three are Ada, Ben (6)
+and Uma (4) — a clean 2-1 split, no tie. Limited Voting sits between Block Voting
+(majority sweeps 3-0) and SNTV (minority tops the poll): capping votes-per-voter
+below the seat count is what opens space for a concentrated minority.
 
 ## Ballots
 
@@ -28,7 +28,7 @@ Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` pr
 ```text
 Ada,Ben,Cal,Uma,Val,Wren
 6: 1,1,0,0,0,0
-4: 0,0,0,1,1,0
+4: 0,0,0,1,0,0
 ```
 
 ## What the engine says
@@ -36,22 +36,21 @@ Ada,Ben,Cal,Uma,Val,Wren
 Full report from the [`_tabulated` mirror](../multi_member_plurality_tabulated/mmp_limited_voting_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
---- Limited Voting — 3 winners ---
- Tabulating 10 ballots (2 votes/voter).
+--- Multi-winner Plurality — 3 winners ---
+ Tabulating 10 ballots (mixed votes/voter).
 
 Votes (most votes fill the seats):
    Ada      6  <- Elected
    Ben      6  <- Elected
    Uma      4  <- Elected
-   Val      4
    Cal      0
+   Val      0
    Wren     0
 
-Winners — Limited Voting, 3 seats:
+Winners — Multi-winner Plurality, 3 seats:
    1. Ada   (6 votes)
    2. Ben   (6 votes)
    3. Uma   (4 votes)
-   *** the last seat tied on votes (Uma and Val) — decided by lot order.
 ```
 
 Run it yourself:
@@ -63,6 +62,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [Vote splitting (worked set)](../../split_voting/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

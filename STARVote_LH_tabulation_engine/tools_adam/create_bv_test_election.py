@@ -143,6 +143,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   Tennessee capital — Ranked Robin (single race)     -> vqyqkr   (backs case bv2131_…_vqyqkr; RR-only)
 #   BV2132 — Pet poll (4 methods, THREE winners)        -> ykjjhy   (multi-race; backs method_comparisons/pet_poll_four_methods)
 #   BV2133 — Pet poll II (4 methods, FOUR winners)       -> dyxrbr   (multi-race; backs method_comparisons/pet_poll_four_winners)
+#   BV2134 — Pets Governance (6 methods, 6 positions)     -> kcf8vf   (multi-race; backs method_comparisons/pets_governance)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -152,53 +153,37 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- BV2134 — Pets Governance: five positions, five methods --------------------
-# One 22-voter electorate — a 13-voter MAJORITY ("Furries": Dog, Cat, Fish) and a
-# 9-voter MINORITY ("Others": Bird, Rabbit, Hamster) — elects a whole pet
-# government five ways, to show majoritarian vs proportional. All five run on BV:
-# Bloc STAR = STAR with 3 winners; Bloc Approval = Approval with 2 winners (BV's
-# runBlocTabulator); plus STAR-PR, Ranked Robin, STV. Each bloc carries three
-# ballot shapes (aligned to CANDS order): scores 0-5 (STAR + STAR-PR), approval
-# 0/1 (Committee), and ranks 1..6 (Mayor RR + Delegates STV).
-#   Council (Bloc STAR, 3)  -> Dog, Fish, Cat      (majority sweep)
-#   Council (STAR-PR, 3)    -> Bird, Dog, Fish     (minority seated — proportional)
-#   Committee (Approval, 2) -> Dog, Cat            (majoritarian)
-#   Mayor (Ranked Robin, 1) -> Dog                 (Condorcet winner)
-#   Delegates (STV, 3)      -> Dog, Bird, Cat      (minority seated — proportional)
-# Winners are the LH prediction; cross-check against BV on export.
-_GOV_CANDS = ["Dog", "Cat", "Fish", "Bird", "Rabbit", "Hamster"]
-_GOV_BLOCS = [
-    # count, scores (STAR/PR),      approval (0/1),         ranks (RR/STV, 1=top), plurality (choose-one)
-    (13, [5, 4, 4, 1, 0, 0], [1, 1, 1, 0, 0, 0], [1, 2, 3, 4, 5, 6], [1, 0, 0, 0, 0, 0]),   # Furry majority (mark Dog)
-    (9,  [0, 0, 1, 5, 4, 4], [0, 0, 0, 1, 1, 1], [6, 5, 4, 1, 2, 3], [0, 0, 0, 1, 0, 0]),   # Others minority (mark Bird)
+# --- BV2135 — Block & Limited voting reproduced as bloc Approval ---------------
+# Proves the equivalence: the multi-member plurality family (Block / Limited /
+# SNTV) is just "mark k candidates, top N win", which is exactly BV's multi-winner
+# Approval. Same 60/40 electorate as method_comparisons/multi_member_plurality
+# (6-voter Home majority: Ada, Ben, Cal; 4-voter Away minority: Uma, Val, Wren; 3
+# seats). Both races are Approval + num_winners:3; only the number of marks differs:
+#   Block   (approve full slate of 3) -> Ada, Ben, Cal   (majority sweeps 3-0)
+#   Limited (approve up to 2; Away bullets Uma) -> Ada, Ben, Uma  (2-1)
+# BV should elect exactly what LH's Plurality-family cases do — that's the point.
+_MMP_CANDS = ["Ada", "Ben", "Cal", "Uma", "Val", "Wren"]
+_MMP_BLOCS = [
+    # count, block (approve 3),      limited (approve <=2)
+    (6, [1, 1, 1, 0, 0, 0], [1, 1, 0, 0, 0, 0]),   # Home majority
+    (4, [0, 0, 0, 1, 1, 1], [0, 0, 0, 1, 0, 0]),   # Away minority (bullets Uma under Limited)
 ]
-def _gov(k):
-    return [rows[k] for n, *rows in _GOV_BLOCS for _ in range(n)]
-_GOV_SC, _GOV_AP, _GOV_RK, _GOV_PL = _gov(0), _gov(1), _gov(2), _gov(3)
+def _mmp(k):
+    return [rows[k] for n, *rows in _MMP_BLOCS for _ in range(n)]
+_MMP_BLOCK, _MMP_LIMITED = _mmp(0), _mmp(1)
 
 ELECTIONS = [
     {
-        "test_id": "BV2134",
-        "title": "Pets Governance: six positions, six methods",
-        "description": "One 22-voter electorate — a 13-voter Furry majority (Dog, Cat, Fish) and a 9-voter Others minority (Bird, Rabbit, Hamster) — elects a pet government six ways, contrasting majoritarian and proportional multi-winner methods. Council by Bloc STAR sweeps all three seats for the majority (Dog, Fish, Cat); Council by STAR-PR and Delegates by STV seat the minority (Bird); Committee by Approval is majoritarian (Dog, Cat); Mayor by Ranked Robin is the Condorcet winner (Dog); Neighborhood Reps by Bloc Plurality / SNTV seat one of each (Dog, Bird). Winners are the LH prediction, to be cross-checked against BetterVoting.",
+        "test_id": "BV2135",
+        "title": "Block & Limited voting, reproduced as bloc Approval",
+        "description": "Demonstrates that Block Voting and Limited Voting (the multi-member plurality family) are just multi-winner Approval with a different number of marks per voter. One 60/40 electorate, 3 seats, 6 candidates (Home: Ada, Ben, Cal; Away: Uma, Val, Wren). Block = each voter approves a full 3-candidate slate -> the majority sweeps (Ada, Ben, Cal). Limited = each voter approves up to 2, with the minority concentrating on Uma -> a 2-1 split (Ada, Ben, Uma). Same ballots and winners as the LH Plurality-family cases in method_comparisons/multi_member_plurality, tabulated by BV as Approval.",
         "races": [
-            {"title": "Town Council — Bloc STAR (3 seats)", "method": "STAR",
-             "num_winners": 3, "candidates": _GOV_CANDS, "ballots": _GOV_SC},
-            {"title": "Town Council — STAR-PR (3 seats)", "method": "STAR_PR",
-             "num_winners": 3, "candidates": _GOV_CANDS, "ballots": _GOV_SC},
-            {"title": "Advisory Committee — Approval (2 seats)", "method": "Approval",
-             "num_winners": 2, "candidates": _GOV_CANDS, "ballots": _GOV_AP},
-            {"title": "Mayor — Ranked Robin (1 seat)", "method": "RankedRobin",
-             "num_winners": 1, "max_rankings": 6,
-             "candidates": _GOV_CANDS, "ballots": _GOV_RK},
-            {"title": "Delegates — STV (3 seats)", "method": "STV",
-             "num_winners": 3, "max_rankings": 6,
-             "candidates": _GOV_CANDS, "ballots": _GOV_RK},
-            {"title": "Neighborhood Reps — Bloc Plurality / SNTV (2 seats)",
-             "method": "Plurality", "num_winners": 2,
-             "candidates": _GOV_CANDS, "ballots": _GOV_PL},
+            {"title": "Block Voting (as bloc Approval, 3 seats)", "method": "Approval",
+             "num_winners": 3, "candidates": _MMP_CANDS, "ballots": _MMP_BLOCK},
+            {"title": "Limited Voting (as bloc Approval, 3 seats)", "method": "Approval",
+             "num_winners": 3, "candidates": _MMP_CANDS, "ballots": _MMP_LIMITED},
         ],
-        "expected": "Council/Bloc STAR: Dog,Fish,Cat ; STAR-PR: Bird,Dog,Fish ; Committee/Approval: Dog,Cat ; Mayor/RR: Dog ; Delegates/STV: Dog,Bird,Cat ; Bloc Plurality/SNTV: Dog,Bird.  Test ID BV2134.",
+        "expected": "Block: Ada,Ben,Cal (majority sweep) ; Limited: Ada,Ben,Uma (2-1).  Test ID BV2135.",
     },
 ]
 

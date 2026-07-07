@@ -218,8 +218,14 @@ def collect():
             if eid:
                 covered[eid].append(canon)
 
-    # Add BV-only races (in an export, no yaml) — e.g. Bloc Plurality.
+    # Add BV-only races (in an export, no yaml) — e.g. an unconverted secondary
+    # race. Coverage is COUNT-based: if there are as many yamls for this election as
+    # races, every race is considered covered even when the method LABEL differs
+    # (e.g. an LH "Plurality"/Block-Voting yaml backs a BV "Approval" race — same
+    # ballots, same winners, on purpose). Only a genuine shortfall is flagged.
     for eid, m in exports.items():
+        if len(covered.get(eid, [])) >= len(m["races"]):
+            continue
         seen = Counter(covered.get(eid, []))
         for r in m["races"]:
             if seen[r["canon"]] > 0:

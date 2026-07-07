@@ -48,6 +48,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Delegates — STV (3 seats) | STV | 6 | **Dog, Bird, Cat** |
 | Neighborhood Reps — Bloc Plurality / SNTV (2 seats) | Plurality | 6 | **Dog, Bird** |
 
+## BV2135 — Block & Limited voting, reproduced as bloc Approval
+
+**Election** [`3x4vrv`](https://bettervoting.com/3x4vrv/results) · **2 races** · **10 ballots** · [frozen export](../../method_comparisons/multi_member_plurality/mmp_bv2135_3x4vrv_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Block Voting (as bloc Approval, 3 seats) | Approval | 6 | **Ben, Cal, Ada** |
+| Limited Voting (as bloc Approval, 3 seats) | Approval | 6 | **Ben, Ada, Uma** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

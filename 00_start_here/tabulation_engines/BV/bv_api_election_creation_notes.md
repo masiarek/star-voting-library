@@ -40,6 +40,7 @@ The election that **works** has `admin_ids: null`; the one that's **denied** exp
 | `9tgj9d`, `xb8r6v` | early throwaways, labeled "ZZZ DELETE ME" |
 | `bwbc6d` | Pet-poll test, created before the Test ID was wired into the title (un-numbered) |
 | `mw9kpp` | Pet-poll test, superseded — its public title carried the old `trash delete test —` junk prefix (since removed) |
+| `9hmbg8` | Scratch SNTV confirmation (Plurality, 2 winners → c, b) — junk title "wqefwefwe…"; proved BV multi-winner Plurality = SNTV, then discardable |
 
 **Lesson (why the title guard exists):** because API elections are **public and permanent**, the title must be right on the *first* create — there is no rename or delete. `create_bv_test_election.py` now (a) prepends only the `BV<n>` Test ID (no "trash/delete/test" junk), and (b) runs a pre-check that **blocks junk/placeholder titles** and reminds you the title is permanent + public. Set `BV_ALLOW_JUNK_TITLE=1` only to override deliberately.
 

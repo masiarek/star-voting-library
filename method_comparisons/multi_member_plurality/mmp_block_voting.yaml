@@ -13,9 +13,13 @@ scenario_description: |-
 voting_method: Plurality
 num_winners: 3
 lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
-# Not a BV exception: BV has no method NAMED "Block Voting", but this IS
-# reproducible on BV as Approval + num_winners:3 with each voter approving their
-# full slate — same 0/1 ballots, same top-N tally, same winners (bloc Approval).
+# LH tabulates this as Block Voting (the Plurality family, auto-labelled from the
+# full-slate ballots). It is BV-BACKED: BetterVoting runs the same ballots as
+# multi-winner Approval (BV has no "Block Voting" method name) and elects the same
+# seats — see the BV2135 "Block Voting (as bloc Approval)" race.
+bv_test_id: BV2135
+bv_election_id: 3x4vrv
+bv_results_url: https://bettervoting.com/3x4vrv/results
 options:
   collapse_ballots: true
   count_separator: "×"

@@ -4,13 +4,13 @@
 
 Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, or a frozen `_bv_export.json`). Cases with a real BetterVoting election but no assigned BV number (e.g. the `Runoff_NN` set) appear under their case name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) (GitHub sorts CSV columns on click). **The master Google Sheet stays authoritative for the full BV numbering** — it also tracks non-tabulation QA (UI, roles, archive…) that has no YAML here.
 
-**47 cases** · methods: Approval (3), Approval_Multi_Winner (2), Bloc STAR (10), Plurality (6), RCV_IRV (2), RankedRobin (2), STAR (19), STV (1), allocated (2).
+**49 cases** · methods: Approval (3), Approval_Multi_Winner (2), Bloc STAR (10), Plurality (8), RCV_IRV (2), RankedRobin (2), STAR (19), STV (1), allocated (2).
 
 > Multi-race (contested) elections are grouped race-by-race in [multirace_elections.md](multirace_elections.md). For the faceted slice-and-dice over **every** election & race (by ballot type, seat class, character, method, backing), see [CATALOG.md](CATALOG.md).
 
-**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130, BV2130, BV2131, BV2132, BV2132, BV2132, BV2132, BV2133, BV2133, BV2133, BV2133, BV2134, BV2134, BV2134, BV2134, BV2134, BV2134.  (+11 export-backed cases with no BV number.)
+**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130, BV2130, BV2131, BV2132, BV2132, BV2132, BV2132, BV2133, BV2133, BV2133, BV2133, BV2134, BV2134, BV2134, BV2134, BV2134, BV2134, BV2135, BV2135.  (+11 export-backed cases with no BV number.)
 
-Highest number here is **BV2134** → the next free number above the repo is **BV2135**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
+Highest number here is **BV2135** → the next free number above the repo is **BV2136**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
 
 | Test ID | Case | BV id | Method | W | Cand | Ballots | Winners | Page | YAML |
 |---------|------|-------|--------|:-:|:-:|:-:|---------|------|------|
@@ -50,6 +50,8 @@ Highest number here is **BV2134** → the next free number above the repo is **B
 | BV2134 | pets_gov_ranked_robin | [`kcf8vf`](https://bettervoting.com/kcf8vf/results) | RankedRobin | 1 | 6 | 22 | Dog | [page](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_ranked_robin.md) | [yaml](../../method_comparisons/pets_governance/pets_gov_ranked_robin.yaml) |
 | BV2134 | pets_gov_star_pr | [`kcf8vf`](https://bettervoting.com/kcf8vf/results) | allocated | 3 | 6 | 22 | Bird, Dog, Fish | [page](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_star_pr.md) | [yaml](../../method_comparisons/pets_governance/pets_gov_star_pr.yaml) |
 | BV2134 | pets_gov_stv | [`kcf8vf`](https://bettervoting.com/kcf8vf/results) | STV | 3 | 6 | 22 | Dog, Bird, Cat | [page](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | [yaml](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
+| BV2135 | mmp_block_voting | [`3x4vrv`](https://bettervoting.com/3x4vrv/results) | Plurality | 3 | 6 | 10 | Ada, Ben, Cal | [page](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md) | [yaml](../../method_comparisons/multi_member_plurality/mmp_block_voting.yaml) |
+| BV2135 | mmp_limited_voting | [`3x4vrv`](https://bettervoting.com/3x4vrv/results) | Plurality | 3 | 6 | 10 | Ada, Ben, Uma | [page](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_limited_voting.md) | [yaml](../../method_comparisons/multi_member_plurality/mmp_limited_voting.yaml) |
 | — | 01a_c2_b2_two-candidates | [`my82v6`](https://bettervoting.com/my82v6/results) | STAR | 1 | 2 | 2 | Chocolate | [page](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) | [yaml](../../01_STAR/_main/01a_c2_b2_two-candidates.yaml) |
 | — | Runoff_01_confirms_leader_r2pvc9 | [`r2pvc9`](https://bettervoting.com/r2pvc9/results) | STAR | 1 | 3 | 3 | Aspen | [page](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.yaml) |
 | — | Runoff_02_atom_reversal_yx9447 | [`yx9447`](https://bettervoting.com/yx9447/results) | STAR | 1 | 3 | 3 | Boston | [page](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.yaml) |

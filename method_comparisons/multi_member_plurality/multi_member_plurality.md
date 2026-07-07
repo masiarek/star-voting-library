@@ -28,7 +28,9 @@ BV has no method *named* "Block Voting" or "Limited Voting" (its **Plurality** i
 - **Limited voting** = bloc Approval where each voter approves **k < N**.
 - **SNTV** = bloc Approval (or Plurality) where each voter approves **exactly 1** — already BV-confirmed as the [BV2134 governance Bloc Plurality race](../pets_governance/pets_gov_bloc_plurality.yaml).
 
-They're kept LH-only here only because this set's *point* is the Plurality-family framing (votes-per-voter), and our engine labels the tally Block / Limited / SNTV accordingly. They are **migration candidates, not exceptions** — reproducible on BV as Approval whenever it's worth doing.
+This set's *point* is the Plurality-family framing (votes-per-voter), and our engine labels the tally Block / Limited / SNTV accordingly — but the arithmetic is **BV-confirmed end-to-end**. Block and Limited are backed by BV election **BV2135** ([`3x4vrv`](https://bettervoting.com/3x4vrv/results)), which runs both as bloc Approval and elects exactly the same seats (Block → Ada, Ben, Cal; Limited → Ada, Ben, Uma). SNTV is BV-backed separately as the [governance Bloc Plurality race](../pets_governance/pets_gov_bloc_plurality.yaml). Full recipe: [running_on_bettervoting.md](running_on_bettervoting.md).
+
+**▶ Block & Limited live on BetterVoting:** [results ↗](https://bettervoting.com/3x4vrv/results) (election `3x4vrv`, Test ID BV2135) · frozen export [`mmp_bv2135_3x4vrv_bv_export.json`](mmp_bv2135_3x4vrv_bv_export.json).
 
 ## References
 
