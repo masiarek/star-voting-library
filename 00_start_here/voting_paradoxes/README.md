@@ -21,6 +21,7 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 | Absolute loser paradox | — | Simple | [absolute_loser_paradox.md](absolute_loser_paradox.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) |
 | SCC / spoiler | Subset choice condition; IIA failure (informal) | Conditional | [spoiler_scc.md](spoiler_scc.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [BV2145 Felsenthal Ex.2](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_felsenthal_ex2.md) · [the split-voting set](../../method_comparisons/split_voting/) |
 | Non-monotonicity | More-is-less; additional-support; lack of monotonicity | Conditional | [non_monotonicity.md](non_monotonicity.md) | [BV2145→BV2146 Felsenthal Ex.2 pair](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) · [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
+| Reinforcement / multiple-districts | Inconsistency paradox | Conditional | [multiple_districts.md](multiple_districts.md) | [BV2147+BV2148→BV2149 Felsenthal Ex.3 trio](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_felsenthal_ex3_reinforcement.md) |
 
 ## Covered elsewhere in the repo (tagged, no dedicated page yet)
 
@@ -34,7 +35,7 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 
 ## Planned (from the wider literature)
 
-Multiple-districts / inconsistency (reinforcement) paradox, Ostrogorski's paradox, Anscombe's paradox, Pareto violations, the paradox of multiple elections, and Simpson's paradox — each gets a page + a tagged case as examples are built. The [summability demo](../../method_comparisons/summability_demo/README.md) is adjacent to multiple-districts (district-by-district counting) and is the natural seed for that page.
+Ostrogorski's paradox, Anscombe's paradox, Pareto violations, the paradox of multiple elections, no-show and truncation dedicated pages, and Simpson's paradox — each gets a page + a tagged case as examples are built. The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).
 
 ## Further reading
 

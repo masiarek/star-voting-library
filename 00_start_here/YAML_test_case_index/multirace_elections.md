@@ -108,6 +108,33 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Felsenthal Ex.2 after the raise — Ranked Robin (Copeland) | RankedRobin | 3 | **Ada** |
 | Felsenthal Ex.2 after the raise — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Ada** |
 
+## BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno
+
+**Election** [`9gdrqg`](https://bettervoting.com/9gdrqg/results) · **2 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.3 District I — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Bruno** |
+| Felsenthal Ex.3 District I — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bruno** |
+
+## BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright
+
+**Election** [`h87k6v`](https://bettervoting.com/h87k6v/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.3 District II — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Bruno** |
+| Felsenthal Ex.3 District II — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bruno** |
+
+## BV2149 — Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole
+
+**Election** [`byk9v2`](https://bettervoting.com/byk9v2/results) · **2 races** · **32 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.3 Combined — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Alma** |
+| Felsenthal Ex.3 Combined — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bruno** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

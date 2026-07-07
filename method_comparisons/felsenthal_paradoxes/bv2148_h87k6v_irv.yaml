@@ -1,0 +1,30 @@
+election_title: "Felsenthal Ex.3 District II — Runoff/IRV: Bruno wins in round one"
+scenario_description: |-
+  Race 1 of 2 in District II of the Felsenthal Reinforcement-paradox trio (BV2148, bvid h87k6v; BV-confirmed; the trio is BV2147/48/49). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 3 (the Reinforcement paradox).
+  District II: 15 voters — 6×(Alma>Cora>Bruno), 8×(Bruno>Cora>Alma), 1×(Cora>Alma>Bruno). Bruno is ranked first by an absolute majority (8 of 15) and wins in the first round; no runoff is needed. Bruno is also this district's Condorcet winner (beats Alma 8–7, Cora 8–7). Bruno wins District I too (BV2147) — yet the amalgamated electorate (BV2149) elects Alma under the same procedure.
+  Live results: https://bettervoting.com/h87k6v/results
+bv_test_id: BV2148
+bv_election_id: h87k6v
+bv_results_url: https://bettervoting.com/h87k6v/results
+paradoxes: [multiple-districts]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  6:Alma>Cora>Bruno
+  8:Bruno>Cora>Alma
+  1:Cora>Alma>Bruno
+expected_winners:
+  - Bruno
+
+# file: bv2148_h87k6v_irv.yaml

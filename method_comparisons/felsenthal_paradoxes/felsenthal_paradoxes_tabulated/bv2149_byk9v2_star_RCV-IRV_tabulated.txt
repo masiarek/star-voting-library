@@ -1,0 +1,33 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts
+ Tabulating 32 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alma, Bruno, Cora
+     4 ×   Alma > Bruno > Cora      (5, 3, 1)
+     6 ×   Alma > Cora > Bruno      (5, 1, 3)
+     1 ×   Bruno > Alma > Cora      (3, 5, 1)
+    13 ×   Bruno > Cora > Alma      (1, 5, 3)
+     7 ×   Cora > Alma > Bruno      (3, 1, 5)
+     1 ×   Cora > Bruno > Alma      (1, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno             14  Hopeful
+Alma              10  Hopeful
+Cora               8  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alma              17  Elected
+Bruno             15  Rejected
+Cora               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alma
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -63,8 +63,8 @@ VOCAB = {
                       "Adding a near-copy of a candidate changes who wins (teaming = doing it on purpose)."),
     "favorite-betrayal": ("Favorite betrayal", "Conditional", None,
                           "A voter gets a better result by ranking/scoring their true favorite below another candidate."),
-    "multiple-districts": ("Multiple-districts / inconsistency paradox", "Conditional", None,
-                           "A candidate wins in every district separately but loses the combined election."),
+    "multiple-districts": ("Reinforcement / multiple-districts paradox", "Conditional", "multiple_districts.md",
+                           "A candidate wins in every district separately but loses the combined election (a.k.a. inconsistency paradox)."),
     "majority-failure": ("Majority criterion failure", "Simple", None,
                          "A candidate who is the first choice of a majority is not elected."),
 }

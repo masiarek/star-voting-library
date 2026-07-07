@@ -1,0 +1,143 @@
+# Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts
+
+*Generated from [`bv2149_byk9v2_star.yaml`](../bv2149_byk9v2_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
+
+## Scenario
+
+Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2149_byk9v2_irv.yaml for the setup.
+The same 32 ballots with ranks mapped 5/3/1. Scores: Alma 88, Bruno 98, Cora 102 — Cora and Bruno advance, and Bruno wins the automatic runoff 18–14. STAR elects Bruno in District I, District II, AND the combined electorate — consistent where the runoff procedure flips to Alma. (Honesty note: STAR is consistent in THIS election, but methods with a runoff stage are not reinforcement-proof in general.)
+Live results: https://bettervoting.com/byk9v2/results
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Alma,Bruno,Cora
+5,3,1
+5,3,1
+5,3,1
+5,3,1
+5,1,3
+5,1,3
+5,1,3
+5,1,3
+5,1,3
+5,1,3
+3,5,1
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+1,5,3
+3,1,5
+3,1,5
+3,1,5
+3,1,5
+3,1,5
+3,1,5
+3,1,5
+1,3,5
+```
+
+## What the engine says
+
+Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Alma    |  * Bruno    |   * Cora    |
+-------------------------------------------------------------
+          Alma > |     ---      |17 -  0 - 15 |11 -  0 - 21 |
+       * Bruno > | 15 -  0 - 17 |    ---      |18 -  0 - 14 |
+        * Cora > | 21 -  0 - 11 |14 -  0 - 18 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Alma > Bruno > Cora > Alma)
+
+[Divergence from STAR]
+  STAR     = Bruno
+  RCV-IRV  = Alma   (differs from STAR)
+  Approval = Cora   (differs from STAR)
+  RCV-RR   = Cora   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Cora)
+ - Runoff Round Winner   = (Bruno)
+  Candidate Cora earned the highest total score,
+  but Candidate Bruno won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 32 ballots.
+Count × Alma,Bruno,Cora
+   13 ×    1,    5,   3
+    7 ×    3,    1,   5
+    6 ×    5,    1,   3
+    4 ×    5,    3,   1
+    1 ×    3,    5,   1
+    1 ×    1,    3,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alma       10   0   8   0  14   0  |    88   2.8
+Bruno      14   0   5   0  13   0  |    98   3.1
+Cora        8   0  19   0   5   0  |   102   3.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cora          -- 102 -- First place
+   Bruno         --  98 -- Second place
+   Alma          --  88
+ Cora and Bruno advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 18 -- First place
+   Cora          -- 14
+   Equal Support --  0
+ Bruno wins.
+   Runoff math:
+     32  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     32  voters with a preference  (majority = 17)
+           Bruno 18 (56%)  ·  Cora 14 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bruno
+```
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2144_mxfmhm_plurality](bv2144_mxfmhm_plurality.md) · [bv2144_mxfmhm_star](bv2144_mxfmhm_star.md) · [bv2145_6fj2kg_irv](bv2145_6fj2kg_irv.md) · [bv2145_6fj2kg_ranked_robin](bv2145_6fj2kg_ranked_robin.md) · [bv2145_6fj2kg_star](bv2145_6fj2kg_star.md) · [bv2146_krk2px_irv](bv2146_krk2px_irv.md) · [bv2146_krk2px_ranked_robin](bv2146_krk2px_ranked_robin.md) · [bv2146_krk2px_star](bv2146_krk2px_star.md) · [bv2147_9gdrqg_irv](bv2147_9gdrqg_irv.md) · [bv2147_9gdrqg_star](bv2147_9gdrqg_star.md) · [bv2148_h87k6v_irv](bv2148_h87k6v_irv.md) · [bv2148_h87k6v_star](bv2148_h87k6v_star.md) · [bv2149_byk9v2_irv](bv2149_byk9v2_irv.md)

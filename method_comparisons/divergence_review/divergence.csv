@@ -84,6 +84,7 @@ APPROVAL_OR_MINOR,method_comparisons/_main/count_simplicity_star_vs_irv.yaml,5,4
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml,3,15,Bruno,Bruno,Bruno,Bruno,Bruno,Cora,Bruno,Bruno,Bruno,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
@@ -95,6 +96,8 @@ CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adv
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/tie_break_09_five_star_tied_nonzero.yaml,2,2,Ben,Ann,Ann,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml,3,17,Bruno,Bruno,Bruno,Cora,Cora,Cora,Cora,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.yaml,3,32,Bruno,Alma,Alma,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,3,34,X,Z,Z,X,X,X,X,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,Y,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,5,921,Brad,Dave,Dave,Abby,Abby,Erin,Abby,,,0,False,False,True

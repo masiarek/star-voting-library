@@ -499,7 +499,8 @@ def _f2_races(prefix, blocs):
     ]
 
 
-ELECTIONS = [
+# Already created -> bettervoting.com/6fj2kg (BV2145) / krk2px (BV2146). Reference.
+_CREATED_BV2145_46 = [
     {
         "test_id": "BV2145",
         "title": "Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner",
@@ -549,6 +550,132 @@ ELECTIONS = [
         "expected": "IRV (runoff) -> Ada (Cleo eliminated; Ada beats Ben 9-8) — Ben "
                     "loses by GAINING support vs BV2145. Ranked Robin -> Ada. STAR -> "
                     "Ada (55/53/45; runoff 9-8). LH-verified. Test ID BV2146.",
+    },
+]
+
+
+# --- BV2147/48/49 — Felsenthal (2010) Example 3: the Reinforcement paradox ------
+# SOURCE: same Felsenthal (2010) paper; Appendix A2, Example 3 (plurality with
+# runoff vs the Reinforcement postulate; a.k.a. the multiple-districts /
+# inconsistency paradox). THREE elections because the electorates differ:
+#   BV2147 District I  (17 voters): 4×(a>b>c), 1×(b>a>c), 5×(b>c>a),
+#                      6×(c>a>b), 1×(c>b>a). No first-round majority (4/6/7);
+#                      a is deleted and b beats c 10-7. Runoff -> b.
+#   BV2148 District II (15 voters): 6×(a>c>b), 8×(b>c>a), 1×(c>a>b). b is
+#                      ranked first by a majority (8 of 15) -> elected round 1.
+#   BV2149 Combined    (32 voters = I + II amalgamated, ceteris paribus). No
+#                      majority (10/14/8); c is deleted and a beats b 17-15.
+#                      Runoff -> a — though b won BOTH districts. Reinforcement
+#                      paradox, live.
+# Cast: Alma=a, Bruno=b, Cora=c. Each election runs TWO races on the same
+# ballots: the runoff procedure (IRV — identical for 3 candidates) and STAR
+# (5/3/1 map). STAR is consistent HERE (Bruno in I, II, and combined; scores
+# 47/51/55 -> runoff b 10-7; 41/47/47 -> b 8-7; 88/98/102 -> b 18-14) — a
+# clean contrast, though score+runoff methods are not reinforcement-proof in
+# general. NO Ranked Robin race: District I and the combined electorate are
+# Condorcet CYCLES (a>b, b>c, c>a), so BV's RR would tie 3-way and resolve at
+# RANDOM — not freezable (see the BV2142 caveat). The cycles are discussed in
+# the case pages instead. All six races LH-verified pre-creation.
+_F3_CANDS = ["Alma", "Bruno", "Cora"]
+_F3_D1_BLOCS = [(4, ["Alma", "Bruno", "Cora"]),
+                (1, ["Bruno", "Alma", "Cora"]),
+                (5, ["Bruno", "Cora", "Alma"]),
+                (6, ["Cora", "Alma", "Bruno"]),
+                (1, ["Cora", "Bruno", "Alma"])]
+_F3_D2_BLOCS = [(6, ["Alma", "Cora", "Bruno"]),
+                (8, ["Bruno", "Cora", "Alma"]),
+                (1, ["Cora", "Alma", "Bruno"])]
+_F3_COMB_BLOCS = [(4, ["Alma", "Bruno", "Cora"]),
+                  (6, ["Alma", "Cora", "Bruno"]),
+                  (1, ["Bruno", "Alma", "Cora"]),
+                  (13, ["Bruno", "Cora", "Alma"]),
+                  (7, ["Cora", "Alma", "Bruno"]),
+                  (1, ["Cora", "Bruno", "Alma"])]
+
+_F3_SRC = ("Example 3 from Dan S. Felsenthal, 'Review of Paradoxes Afflicting "
+           "Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must "
+           "Be Elected' (University of Haifa / LSE, revised 26 May 2010; "
+           "Leverhulme Trust 'Voting Power in Practice' workshop, Château du "
+           "Baffy, Normandy), Appendix A2: the Reinforcement paradox afflicting "
+           "the plurality-with-runoff procedure (a.k.a. the multiple-districts / "
+           "inconsistency paradox). ")
+
+
+def _f3_races(prefix, blocs):
+    R, S = _mk_ranked_and_star(blocs, _F3_CANDS)
+    return [
+        {"title": f"{prefix} — Runoff (IRV; = plurality-with-runoff for 3 candidates)",
+         "method": "IRV", "num_winners": 1, "max_rankings": len(_F3_CANDS),
+         "candidates": _F3_CANDS, "ballots": R},
+        {"title": f"{prefix} — STAR (ranks mapped to 0-5 scores)", "method": "STAR",
+         "num_winners": 1, "candidates": _F3_CANDS, "ballots": S},
+    ]
+
+
+ELECTIONS = [
+    {
+        "test_id": "BV2147",
+        "title": "Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno",
+        "description": (_F3_SRC +
+                        "This is DISTRICT I: 17 voters — 4×(Alma>Bruno>Cora), "
+                        "1×(Bruno>Alma>Cora), 5×(Bruno>Cora>Alma), 6×(Cora>Alma>Bruno), "
+                        "1×(Cora>Bruno>Alma). No candidate has a first-round majority "
+                        "(Alma 4, Bruno 6, Cora 7), so Alma is deleted and Bruno beats "
+                        "Cora 10-7 in the runoff. Bruno also wins District II (BV2148) "
+                        "outright — yet when the two districts are amalgamated (BV2149) "
+                        "the SAME procedure elects Alma. A subtlety worth savoring: this "
+                        "district's pairwise preferences form a Condorcet CYCLE "
+                        "(Alma>Bruno 10-7, Bruno>Cora 10-7, Cora>Alma 12-5), so there is "
+                        "no Condorcet winner here at all. The second race runs the same "
+                        "ballots as STAR (ranks mapped 5/3/1: 47/51/55; Bruno beats Cora "
+                        "10-7 in the automatic runoff) — also Bruno."),
+        "races": _f3_races("Felsenthal Ex.3 District I", _F3_D1_BLOCS),
+        "expected": "Runoff/IRV -> Bruno (Alma deleted 4/6/7; Bruno beats Cora 10-7). "
+                    "STAR -> Bruno (47/51/55; runoff 10-7). District pairwise is a "
+                    "CYCLE. LH-verified. Test ID BV2147.",
+    },
+    {
+        "test_id": "BV2148",
+        "title": "Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright",
+        "description": (_F3_SRC +
+                        "This is DISTRICT II: 15 voters — 6×(Alma>Cora>Bruno), "
+                        "8×(Bruno>Cora>Alma), 1×(Cora>Alma>Bruno). Bruno is ranked "
+                        "first by an absolute majority (8 of 15) and is elected in the "
+                        "first round — no runoff needed. Bruno also wins District I "
+                        "(BV2147) — yet the amalgamated electorate (BV2149) elects "
+                        "Alma under the same procedure. Here Bruno is also the "
+                        "Condorcet winner (beats Alma 8-7 and Cora 8-7). The second "
+                        "race runs the same ballots as STAR (5/3/1 map: 41/47/47; Bruno "
+                        "beats Cora 8-7 in the runoff) — also Bruno."),
+        "races": _f3_races("Felsenthal Ex.3 District II", _F3_D2_BLOCS),
+        "expected": "Runoff/IRV -> Bruno in round 1 (8 of 15 = majority). STAR -> "
+                    "Bruno (41/47/47; runoff 8-7). LH-verified. Test ID BV2148.",
+    },
+    {
+        "test_id": "BV2149",
+        "title": "Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole",
+        "description": (_F3_SRC +
+                        "This is the AMALGAMATED electorate: the 32 voters of Districts "
+                        "I and II together, ceteris paribus — 4×(Alma>Bruno>Cora), "
+                        "6×(Alma>Cora>Bruno), 1×(Bruno>Alma>Cora), 13×(Bruno>Cora>Alma), "
+                        "7×(Cora>Alma>Bruno), 1×(Cora>Bruno>Alma). No first-round "
+                        "majority (Alma 10, Bruno 14, Cora 8), so CORA is deleted — and "
+                        "Alma beats Bruno 17-15 in the runoff. Bruno won District I "
+                        "(BV2147) AND District II (BV2148); amalgamating two electorates "
+                        "that both chose Bruno makes the procedure elect Alma. That "
+                        "violates the Reinforcement postulate (a.k.a. the multiple-"
+                        "districts / inconsistency paradox). The combined pairwise "
+                        "preferences form a Condorcet cycle (Alma>Bruno 17-15, "
+                        "Bruno>Cora 18-14, Cora>Alma 21-11), so no Condorcet argument "
+                        "rescues the result — the failure is the procedure disagreeing "
+                        "with ITSELF. The second race runs the same 32 ballots as STAR "
+                        "(5/3/1 map: 88/98/102; Bruno beats Cora 18-14 in the automatic "
+                        "runoff) — Bruno, consistent with both districts."),
+        "races": _f3_races("Felsenthal Ex.3 Combined", _F3_COMB_BLOCS),
+        "expected": "Runoff/IRV -> Alma (Cora deleted 10/14/8; Alma beats Bruno 17-15) "
+                    "— though Bruno won BOTH districts. STAR -> Bruno (88/98/102; "
+                    "runoff 18-14), consistent. Combined pairwise is a CYCLE. "
+                    "LH-verified. Test ID BV2149.",
     },
 ]
 

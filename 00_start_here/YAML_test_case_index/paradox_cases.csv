@@ -23,6 +23,8 @@ SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the 
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
+Condorcet's paradox (cycle),Simple,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
+Condorcet's paradox (cycle),Simple,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_irv.yaml
 Condorcet's paradox (cycle),Simple,"Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)",STAR,Rock,,,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
@@ -40,3 +42,9 @@ Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independen
 Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
 Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/clone_independence/clone_teaming_02_post.yaml
 Favorite betrayal,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
+Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — STAR: also Bruno,STAR,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml
+Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District II — Runoff/IRV: Bruno wins in round one,IRV,Bruno,BV2148,h87k6v,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_irv.yaml
+Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District II — STAR: also Bruno,STAR,Bruno,BV2148,h87k6v,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_irv.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts",STAR,Bruno,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.yaml

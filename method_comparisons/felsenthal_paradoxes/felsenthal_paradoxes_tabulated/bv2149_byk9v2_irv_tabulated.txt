@@ -1,0 +1,66 @@
+======================================================================
+SOURCE FILE:     bv2149_byk9v2_irv.yaml
+SOURCE MODIFIED: 2026-07-07 18:01:39
+TABULATED FILE:  bv2149_byk9v2_irv_tabulated.txt
+TABULATED AT:    2026-07-07 18:02:05
+======================================================================
+
+election_title: "Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole"
+scenario_description: |-
+  Race 1 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed; the trio is BV2147/48/49). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 3 (the Reinforcement paradox).
+  The amalgamated electorate: the 32 voters of Districts I (BV2147) and II (BV2148) together, ceteris paribus. No first-round majority (Alma 10, Bruno 14, Cora 8), so CORA is deleted — and Alma beats Bruno 17–15 in the runoff. Bruno won BOTH districts separately; amalgamating two electorates that each chose Bruno makes plurality-with-runoff (run as IRV, identical for three candidates) elect Alma. That violates the Reinforcement postulate — the multiple-districts / inconsistency paradox, live on BetterVoting. The combined pairwise preferences form a Condorcet CYCLE (Alma>Bruno 17–15, Bruno>Cora 18–14, Cora>Alma 21–11), so no Condorcet argument rescues the flip: the procedure simply disagrees with itself.
+  Live results: https://bettervoting.com/byk9v2/results
+bv_test_id: BV2149
+bv_election_id: byk9v2
+bv_results_url: https://bettervoting.com/byk9v2/results
+paradoxes: [multiple-districts, condorcet-cycle]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Alma>Bruno>Cora
+  6:Alma>Cora>Bruno
+  1:Bruno>Alma>Cora
+  13:Bruno>Cora>Alma
+  7:Cora>Alma>Bruno
+  1:Cora>Bruno>Alma
+expected_winners:
+  - Alma
+
+# file: bv2149_byk9v2_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole
+ Tabulating 32 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno             14  Hopeful
+Alma              10  Hopeful
+Cora               8  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alma              17  Elected
+Bruno             15  Rejected
+Cora               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alma
