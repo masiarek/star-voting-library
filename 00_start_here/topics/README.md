@@ -4,6 +4,13 @@ The concept pages (now directly under [00_start_here](../)) are organized **by m
 
 **These hubs don't duplicate content** — the detailed write-ups stay in the per-method folders. A hub is just the shared definition plus a "which methods, and where" table, so there's almost nothing to keep in sync. Browse by method *or* by topic, whichever fits.
 
+## Start here — the meta-question
+
+Before the per-topic criteria: **what are we even optimizing for?**
+
+- [**What makes a good winner?**](../what_makes_a_good_winner.md) — the "correct" winner, consensus/Condorcet vs. utilitarian vs. majority, and why there's no single ideal.
+- [**What makes a voting *method* good?**](../what_makes_a_voting_method_good.md) — the criteria beyond the winner (simplicity, summability, auditability, honesty/strategy, competition), VSE, and "a perfect system will never exist."
+
 ## Topic hubs
 
 | Topic | What it compares | Hub |
