@@ -245,10 +245,10 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 126 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| LH-only | 129 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV | 47 | 26khr3, 3494cb, 3w6v4b, 3yr2qd |
-| LH-only (exception) | 4 | dead_heat_lot_tiebreak, mmp_block_voting, mmp_limited_voting, mmp_sntv |
 | BV (no yaml) | 2 | jfk7pd, jfrk9t |
+| LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 
 ### Genuine LH-only exceptions
 
@@ -256,9 +256,6 @@ Cases that **cannot** be reproduced on BetterVoting — a real reason (missing B
 
 | Case | Method | Why it can't go to BV |
 |---|---|---|
-| Multi-member plurality — Block Voting (3 sea | Plurality | BetterVoting has no Block Voting / plurality-at-large method — its Plurality is choose-one (single mark), so it can't cast the full-slate (k = seats) ballot Block Voting requires. |
-| Multi-member plurality — Limited Voting (3 s | Plurality | BetterVoting has no Limited Voting method — its Plurality is choose-one (single mark), so it can't cast the k>1 votes-per-voter Limited Voting requires. |
-| Multi-member plurality — SNTV (3 seats): the | Plurality | Comparison companion (kept LH-side with Block/Limited Voting). SNTV itself IS reproducible on BetterVoting — its tally is BV-confirmed as the BV2134 governance Bloc Plurality race (choose-one, top-N). |
 | Ranked Robin — a dead heat that runs the who | RankedRobin | BetterVoting breaks this exact tie at RANDOM (head-to-head is also tied), so its winner can't be frozen/reproduced. LH resolves it deterministically by margin then lot — the whole point of the case — so it is LH-only by design. |
 
 ## How this is organized (for adding cases)

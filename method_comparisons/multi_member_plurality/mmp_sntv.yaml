@@ -14,7 +14,8 @@ scenario_description: |-
 voting_method: Plurality
 num_winners: 3
 lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
-lh_only_reason: "Comparison companion (kept LH-side with Block/Limited Voting). SNTV itself IS reproducible on BetterVoting — its tally is BV-confirmed as the BV2134 governance Bloc Plurality race (choose-one, top-N)."
+# Reproducible on BV: SNTV is choose-one, top-N — BV-confirmed as the BV2134
+# governance Bloc Plurality race. (Also = Approval + num_winners with 1 mark each.)
 options:
   collapse_ballots: true
   count_separator: "×"

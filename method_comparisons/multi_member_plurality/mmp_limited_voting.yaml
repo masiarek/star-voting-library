@@ -15,7 +15,8 @@ scenario_description: |-
 voting_method: Plurality
 num_winners: 3
 lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
-lh_only_reason: "BetterVoting has no Limited Voting method — its Plurality is choose-one (single mark), so it can't cast the k>1 votes-per-voter Limited Voting requires."
+# Not a BV exception: reproducible on BV as Approval + num_winners:3 with each
+# voter approving k=2 candidates — same 0/1 ballots, same top-N tally (bloc Approval).
 options:
   collapse_ballots: true
   count_separator: "×"

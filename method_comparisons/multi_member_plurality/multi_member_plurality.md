@@ -20,9 +20,15 @@
 
 The whole family is one tally — *most marks fill the N seats* — so the same engine handles all three; it reads votes-per-voter and labels the output **Block Voting**, **Limited Voting**, or **SNTV** accordingly.
 
-## Why LH-only (a genuine exception)
+## Can these run on BetterVoting? Yes — as bloc Approval.
 
-Block and Limited Voting **can't be reproduced on BetterVoting**: BV's Plurality is *choose-one* (a single mark), so it can't cast the multi-mark ballots those methods require. That's a real "missing voting method" on BV, not a coverage gap — these are marked `lh_only_reason` in their yamls. (SNTV *is* BV-reproducible — it's choose-one — and its tally is BV-confirmed as the [BV2134 governance Bloc Plurality race](../pets_governance/pets_gov_bloc_plurality.yaml); it's kept here LH-side only to complete the comparison.)
+BV has no method *named* "Block Voting" or "Limited Voting" (its **Plurality** is choose-one), but that's a naming point, not a capability gap. All three are "mark k candidates, top N win" — which is exactly what BV's **multi-winner Approval** (`Approval` + `num_winners`) does. So each is reproducible on BV with the same 0/1 ballots and the same winners:
+
+- **Block voting** = bloc Approval where each voter approves their **full N-candidate slate**.
+- **Limited voting** = bloc Approval where each voter approves **k < N**.
+- **SNTV** = bloc Approval (or Plurality) where each voter approves **exactly 1** — already BV-confirmed as the [BV2134 governance Bloc Plurality race](../pets_governance/pets_gov_bloc_plurality.yaml).
+
+They're kept LH-only here only because this set's *point* is the Plurality-family framing (votes-per-voter), and our engine labels the tally Block / Limited / SNTV accordingly. They are **migration candidates, not exceptions** — reproducible on BV as Approval whenever it's worth doing.
 
 ## References
 

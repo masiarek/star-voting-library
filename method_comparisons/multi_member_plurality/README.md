@@ -10,7 +10,7 @@ The three multi-member plurality methods on **one** 60/40 electorate (6-voter Ho
 
 Confirms our engine's multi-winner Plurality (`run_plurality_multi`) tabulates the whole family (it auto-detects Block / Limited / SNTV from votes-per-voter).
 
-**Genuine LH-only exception:** Block and Limited Voting have **no BetterVoting equivalent** (BV Plurality is choose-one / single-mark), so they can't be reproduced there — marked `lh_only_reason` in the yamls. SNTV *is* BV-reproducible (BV-confirmed as the BV2134 governance Bloc Plurality race); it's here only to complete the comparison.
+**Not a BV exception (corrected):** BV has no method *named* Block/Limited Voting, but all three are "mark k, top N win" = BV's **multi-winner Approval** with each voter approving k (full slate = block, k<N = limited, 1 = SNTV). Same 0/1 ballots, same winners. So they're **migration candidates, not exceptions** — kept LH-only here only for the Plurality-family framing. (SNTV is already BV-confirmed as the BV2134 governance Bloc Plurality race.)
 
 → **Full lesson (with Wikipedia + electowiki links):** [multi_member_plurality.md](multi_member_plurality.md)
 

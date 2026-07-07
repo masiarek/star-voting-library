@@ -13,7 +13,9 @@ scenario_description: |-
 voting_method: Plurality
 num_winners: 3
 lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
-lh_only_reason: "BetterVoting has no Block Voting / plurality-at-large method — its Plurality is choose-one (single mark), so it can't cast the full-slate (k = seats) ballot Block Voting requires."
+# Not a BV exception: BV has no method NAMED "Block Voting", but this IS
+# reproducible on BV as Approval + num_winners:3 with each voter approving their
+# full slate — same 0/1 ballots, same top-N tally, same winners (bloc Approval).
 options:
   collapse_ballots: true
   count_separator: "×"
