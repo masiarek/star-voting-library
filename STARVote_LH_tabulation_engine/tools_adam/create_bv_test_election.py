@@ -612,7 +612,8 @@ def _f3_races(prefix, blocs):
     ]
 
 
-ELECTIONS = [
+# Already created -> 9gdrqg (BV2147) / h87k6v (BV2148) / byk9v2 (BV2149). Reference.
+_CREATED_BV2147_49 = [
     {
         "test_id": "BV2147",
         "title": "Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno",
@@ -676,6 +677,113 @@ ELECTIONS = [
                     "— though Bruno won BOTH districts. STAR -> Bruno (88/98/102; "
                     "runoff 18-14), consistent. Combined pairwise is a CYCLE. "
                     "LH-verified. Test ID BV2149.",
+    },
+]
+
+
+# --- BV2150/51 — Felsenthal (2010) Example 4: the No-Show and Twin paradoxes ----
+# SOURCE: same Felsenthal (2010) paper; Appendix A2, Example 4 (plurality with
+# runoff vs the No-Show and — weak-form — Twin paradoxes). A pre/after PAIR:
+#   BV2150 FULL (11 voters): 4×(a>b>c), 3×(b>c>a), 1×(c>a>b), 3×(c>b>a).
+#     No first-round majority (4/3/4); b is deleted and c beats a 7-4 — the
+#     WORST outcome for the four a>b>c voters. Note b is the Condorcet winner
+#     (beats a 6-5, c 7-4); the runoff elects c, which b beats 7-4.
+#   BV2151 NO-SHOW (9 voters): ceteris paribus, TWO of the a>b>c voters stay
+#     home. First choices 2/3/4 -> now A is deleted, and b beats c 5-4. The
+#     abstainers get b instead of c — a BETTER outcome for them than voting:
+#     the No-Show paradox. Read in reverse it is the (weak) TWIN paradox:
+#     start from the 9-voter electorate and add two voters IDENTICAL to the
+#     a>b>c pair — their twins' arrival elects c, their common worst.
+# Cast: Andy=a, Beth=b, Carl=c. THREE races per election this time — b/Beth is
+# the Condorcet winner in BOTH electorates, so Ranked Robin is deterministic
+# (no cycle, no BV random tiebreak): IRV, RankedRobin, STAR.
+#   Expected: BV2150 IRV -> Carl; RR -> Beth; STAR -> Beth (29/37/33, runoff
+#   7-4). BV2151 IRV -> Beth; RR -> Beth; STAR -> Beth (19/31/31 — Beth and
+#   Carl advance over Andy, no advancement tie — runoff 5-4). RR and STAR
+#   elect Beth in both electorates, so for them showing up never hurt the
+#   Andy voters HERE (Condorcet methods are not participation-proof in
+#   general — Moulin's theorem — but this electorate doesn't trigger it).
+# All six races LH-verified pre-creation.
+_F4_CANDS = ["Andy", "Beth", "Carl"]
+_F4_FULL_BLOCS = [(4, ["Andy", "Beth", "Carl"]),
+                  (3, ["Beth", "Carl", "Andy"]),
+                  (1, ["Carl", "Andy", "Beth"]),
+                  (3, ["Carl", "Beth", "Andy"])]
+_F4_NOSHOW_BLOCS = [(2, ["Andy", "Beth", "Carl"]),   # <- two stayed home
+                    (3, ["Beth", "Carl", "Andy"]),
+                    (1, ["Carl", "Andy", "Beth"]),
+                    (3, ["Carl", "Beth", "Andy"])]
+
+_F4_SRC = ("Example 4 from Dan S. Felsenthal, 'Review of Paradoxes Afflicting "
+           "Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must "
+           "Be Elected' (University of Haifa / LSE, revised 26 May 2010; "
+           "Leverhulme Trust 'Voting Power in Practice' workshop, Château du "
+           "Baffy, Normandy), Appendix A2: the No-Show and Twin paradoxes "
+           "afflicting the plurality-with-runoff procedure. ")
+
+
+def _f4_races(prefix, blocs):
+    R, S = _mk_ranked_and_star(blocs, _F4_CANDS)
+    N = len(_F4_CANDS)
+    return [
+        {"title": f"{prefix} — Runoff (IRV; = plurality-with-runoff for 3 candidates)",
+         "method": "IRV", "num_winners": 1, "max_rankings": N,
+         "candidates": _F4_CANDS, "ballots": R},
+        {"title": f"{prefix} — Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": N, "candidates": _F4_CANDS, "ballots": R},
+        {"title": f"{prefix} — STAR (ranks mapped to 0-5 scores)", "method": "STAR",
+         "num_winners": 1, "candidates": _F4_CANDS, "ballots": S},
+    ]
+
+
+ELECTIONS = [
+    {
+        "test_id": "BV2150",
+        "title": "Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice",
+        "description": (_F4_SRC +
+                        "This is the FULL electorate: 11 voters — 4×(Andy>Beth>Carl), "
+                        "3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), 3×(Carl>Beth>Andy). "
+                        "No candidate has a first-round majority (Andy 4, Beth 3, Carl "
+                        "4), so the runoff procedure — run as IRV, identical for three "
+                        "candidates — deletes BETH, and Carl beats Andy 7-4. Carl is "
+                        "the WORST outcome for the four Andy>Beth>Carl voters; part 2 "
+                        "(BV2151) shows that if two of them had simply stayed home, "
+                        "Beth would have won — voting hurt them (the No-Show paradox). "
+                        "Beth is in fact this electorate's Condorcet winner (beats "
+                        "Andy 6-5 and Carl 7-4): the second race, Ranked Robin "
+                        "(Copeland), elects Beth directly, and the third race, STAR "
+                        "(ranks mapped 5/3/1: Andy 29, Beth 37, Carl 33), elects Beth "
+                        "through the automatic runoff 7-4."),
+        "races": _f4_races("Felsenthal Ex.4 full electorate", _F4_FULL_BLOCS),
+        "expected": "Runoff/IRV -> Carl (Beth deleted 4/3/4; Carl beats Andy 7-4). "
+                    "Ranked Robin -> Beth (Condorcet winner, 2-0). STAR -> Beth "
+                    "(29/37/33; runoff 7-4). LH-verified. Test ID BV2150.",
+    },
+    {
+        "test_id": "BV2151",
+        "title": "Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",
+        "description": (_F4_SRC +
+                        "This is the NO-SHOW electorate: ceteris paribus, TWO of the "
+                        "four Andy>Beth>Carl voters do not participate — 9 voters: "
+                        "2×(Andy>Beth>Carl), 3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), "
+                        "3×(Carl>Beth>Andy). First choices are now Andy 2, Beth 3, "
+                        "Carl 4, so the runoff procedure deletes ANDY — and Beth beats "
+                        "Carl 5-4. The two abstainers get Beth, their second choice, "
+                        "instead of Carl, their last (BV2150): abstaining served them "
+                        "better than voting. That is the No-Show paradox. Read in "
+                        "reverse it is the weak TWIN paradox: start here and add two "
+                        "voters IDENTICAL to the Andy>Beth>Carl pair — the twins' "
+                        "arrival (BV2150) elects Carl, their common worst choice. "
+                        "Beth remains the Condorcet winner (beats Andy 6-3, Carl 5-4): "
+                        "Ranked Robin elects Beth, and STAR (5/3/1 map: Andy 19, Beth "
+                        "31, Carl 31; Beth and Carl advance over Andy) elects Beth "
+                        "5-4 — both unchanged from BV2150, so under those counts the "
+                        "Andy voters were never punished for showing up here."),
+        "races": _f4_races("Felsenthal Ex.4 after two no-shows", _F4_NOSHOW_BLOCS),
+        "expected": "Runoff/IRV -> Beth (Andy deleted 2/3/4; Beth beats Carl 5-4) — "
+                    "the abstaining pair does BETTER than in BV2150. Ranked Robin -> "
+                    "Beth. STAR -> Beth (19/31/31; runoff 5-4). LH-verified. "
+                    "Test ID BV2151.",
     },
 ]
 

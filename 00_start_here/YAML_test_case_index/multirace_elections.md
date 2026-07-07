@@ -135,6 +135,26 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Felsenthal Ex.3 Combined — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Alma** |
 | Felsenthal Ex.3 Combined — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bruno** |
 
+## BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice
+
+**Election** [`dxg8pb`](https://bettervoting.com/dxg8pb/results) · **3 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.4 full electorate — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Carl** |
+| Felsenthal Ex.4 full electorate — Ranked Robin (Copeland) | RankedRobin | 3 | **Beth** |
+| Felsenthal Ex.4 full electorate — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Beth** |
+
+## BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better
+
+**Election** [`97hbpw`](https://bettervoting.com/97hbpw/results) · **3 races** · **9 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.4 after two no-shows — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Beth** |
+| Felsenthal Ex.4 after two no-shows — Ranked Robin (Copeland) | RankedRobin | 3 | **Beth** |
+| Felsenthal Ex.4 after two no-shows — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Beth** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

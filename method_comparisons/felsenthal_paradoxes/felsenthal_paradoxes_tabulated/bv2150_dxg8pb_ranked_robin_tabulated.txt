@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 11 ballots (ranked ballots).
+
+Ballots:
+     4 × Andy > Beth > Carl
+     3 × Beth > Carl > Andy
+     1 × Carl > Andy > Beth
+     3 × Carl > Beth > Andy
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Beth  beats Andy   6 – 5
+   Carl  beats Andy   7 – 4
+   Beth  beats Carl   7 – 4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |   Andy    |  Beth    |  Carl    |
+--------------------------------------------
+  Andy > |    ---    |5 - 0 - 6 |4 - 0 - 7 |
+  Beth > | 6 - 0 - 5 |   ---    |7 - 0 - 4 |
+  Carl > | 7 - 0 - 4 |4 - 0 - 7 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Beth       2–0–0         2      +4  Carl, Andy
+    2  Carl       1–1–0         1      +0  Andy
+    3  Andy       0–2–0         0      -4  —
+
+Winner — Ranked Robin (RCV-RR): Beth
+   beats every opponent head-to-head — the Condorcet winner.

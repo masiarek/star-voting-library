@@ -1,0 +1,64 @@
+======================================================================
+SOURCE FILE:     bv2150_dxg8pb_irv.yaml
+SOURCE MODIFIED: 2026-07-07 18:11:52
+TABULATED FILE:  bv2150_dxg8pb_irv_tabulated.txt
+TABULATED AT:    2026-07-07 18:13:36
+======================================================================
+
+election_title: "Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins"
+scenario_description: |-
+  Race 1 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed; the pair is BV2150/51). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 4 (the No-Show and Twin paradoxes).
+  The full electorate: 11 voters — 4×(Andy>Beth>Carl), 3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), 3×(Carl>Beth>Andy). No first-round majority (Andy 4, Beth 3, Carl 4), so plurality-with-runoff (run as IRV; identical for three candidates) deletes BETH — and Carl beats Andy 7–4. Carl is the WORST outcome for the four Andy>Beth>Carl voters, and Beth is the Condorcet winner (beats Andy 6–5, Carl 7–4), so this race also exhibits the Condorcet winner paradox. Part 2 (BV2151): two of the Andy voters stay home and their side does BETTER — the No-Show paradox.
+  Live results: https://bettervoting.com/dxg8pb/results
+bv_test_id: BV2150
+bv_election_id: dxg8pb
+bv_results_url: https://bettervoting.com/dxg8pb/results
+paradoxes: [no-show, twin, condorcet-winner]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Andy>Beth>Carl
+  3:Beth>Carl>Andy
+  1:Carl>Andy>Beth
+  3:Carl>Beth>Andy
+expected_winners:
+  - Carl
+
+# file: bv2150_dxg8pb_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins
+ Tabulating 11 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Carl               4  Hopeful
+Andy               4  Hopeful
+Beth               3  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Carl               7  Elected
+Andy               4  Rejected
+Beth               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Carl

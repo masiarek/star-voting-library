@@ -1,0 +1,119 @@
+======================================================================
+SOURCE FILE:     bv2150_dxg8pb_star.yaml
+SOURCE MODIFIED: 2026-07-07 18:12:03
+TABULATED FILE:  bv2150_dxg8pb_star_tabulated.txt
+TABULATED AT:    2026-07-07 18:13:00
+======================================================================
+
+election_title: "Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth"
+scenario_description: |-
+  Race 3 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2150_dxg8pb_irv.yaml for the setup.
+  The same 11 voters with ranks mapped to 0–5 scores (5/3/1). Scores: Andy 29, Beth 37, Carl 33 — Beth and Carl advance, Beth wins the automatic runoff 7–4. STAR elects the Condorcet winner that the runoff procedure (the IRV race) deleted in round one.
+  Live results: https://bettervoting.com/dxg8pb/results
+bv_test_id: BV2150
+bv_election_id: dxg8pb
+bv_results_url: https://bettervoting.com/dxg8pb/results
+paradoxes: [no-show, condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Andy,Beth,Carl
+  5,3,1
+  5,3,1
+  5,3,1
+  5,3,1
+  1,5,3
+  1,5,3
+  1,5,3
+  3,1,5
+  1,3,5
+  1,3,5
+  1,3,5
+expected_winners:
+  - Beth
+
+# file: bv2150_dxg8pb_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth ===
+  Race 3 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2150_dxg8pb_irv.yaml for the setup.
+  The same 11 voters with ranks mapped to 0–5 scores (5/3/1). Scores: Andy 29, Beth 37, Carl 33 — Beth and Carl advance, Beth wins the automatic runoff 7–4. STAR elects the Condorcet winner that the runoff procedure (the IRV race) deleted in round one.
+  Live results: https://bettervoting.com/dxg8pb/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Andy   |  * Beth   |  * Carl   |
+-----------------------------------------------------
+        Andy > |    ---     |5 - 0 - 6  |4 - 0 - 7  |
+      * Beth > | 6 - 0 - 5  |   ---     |7 - 0 - 4  |
+      * Carl > | 7 - 0 - 4  |4 - 0 - 7  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Beth — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Beth
+  Choose-One (Plurality) = Andy   (differs from STAR)
+  RCV-IRV                = Carl   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_RCV-IRV_tabulated.txt
+     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 11 ballots.
+Count × Andy,Beth,Carl
+    4 ×    5,   3,   1
+    3 ×    1,   5,   3
+    3 ×    1,   3,   5
+    1 ×    3,   1,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andy       4  0  1  0  6  0  |    29   2.6
+Beth       3  0  7  0  1  0  |    37   3.4
+Carl       4  0  3  0  4  0  |    33   3.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Beth          -- 37 -- First place
+   Carl          -- 33 -- Second place
+   Andy          -- 29
+ Beth and Carl advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Beth          -- 7 -- First place
+   Carl          -- 4
+   Equal Support -- 0
+ Beth wins.
+   Runoff math:
+     11  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     11  voters with a preference  (majority = 6)
+           Beth 7 (64%)  ·  Carl 4 (36%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Beth

@@ -1,0 +1,31 @@
+election_title: "Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth"
+scenario_description: |-
+  Race 2 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2150_dxg8pb_irv.yaml for the setup.
+  The same 11 ranked ballots counted by Ranked Robin (Copeland): Beth wins both her head-to-heads (Andy 6–5, Carl 7–4) — the Condorcet winner, elected directly. No cycle here, so the count is fully deterministic on BetterVoting too.
+  Live results: https://bettervoting.com/dxg8pb/results
+bv_test_id: BV2150
+bv_election_id: dxg8pb
+bv_results_url: https://bettervoting.com/dxg8pb/results
+paradoxes: [no-show, condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Andy>Beth>Carl
+  3:Beth>Carl>Andy
+  1:Carl>Andy>Beth
+  3:Carl>Beth>Andy
+expected_winners:
+  - Beth
+
+# file: bv2150_dxg8pb_ranked_robin.yaml

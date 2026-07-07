@@ -22,6 +22,7 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 | SCC / spoiler | Subset choice condition; IIA failure (informal) | Conditional | [spoiler_scc.md](spoiler_scc.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [BV2145 Felsenthal Ex.2](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_felsenthal_ex2.md) · [the split-voting set](../../method_comparisons/split_voting/) |
 | Non-monotonicity | More-is-less; additional-support; lack of monotonicity | Conditional | [non_monotonicity.md](non_monotonicity.md) | [BV2145→BV2146 Felsenthal Ex.2 pair](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) · [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
 | Reinforcement / multiple-districts | Inconsistency paradox | Conditional | [multiple_districts.md](multiple_districts.md) | [BV2147+BV2148→BV2149 Felsenthal Ex.3 trio](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_felsenthal_ex3_reinforcement.md) |
+| No-Show + Twin | Participation failure | Conditional | [no_show.md](no_show.md) | [BV2150→BV2151 Felsenthal Ex.4 pair](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_felsenthal_ex4_noshow.md) · [Whoops_05 (Brams)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
 
 ## Covered elsewhere in the repo (tagged, no dedicated page yet)
 
@@ -29,13 +30,12 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 |---|---|---|---|
 | Condorcet's paradox (cycle) | Cyclical majorities | Simple | [Whoops_03](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.md) · [cycle_resolution.md](../RCV_Ranked_Robin/cycle_resolution.md) |
 | Clone dependence / teaming | Cloning paradox | Conditional | [rr_clone_independence.md](../RCV_Ranked_Robin/rr_clone_independence.md) |
-| No-show paradox | Participation failure | Conditional | [Whoops_05 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
 | Truncation paradox | Preference-truncation | Conditional | [Whoops_05 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
 | Favorite betrayal | — | Conditional | [favorite_betrayal_voting_301.md](../STAR_Voting/favorite_betrayal_voting_301.md) |
 
 ## Planned (from the wider literature)
 
-Ostrogorski's paradox, Anscombe's paradox, Pareto violations, the paradox of multiple elections, no-show and truncation dedicated pages, and Simpson's paradox — each gets a page + a tagged case as examples are built. The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).
+Ostrogorski's paradox, Anscombe's paradox, Pareto violations, the paradox of multiple elections, a truncation dedicated page, and Simpson's paradox — each gets a page + a tagged case as examples are built. The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).
 
 ## Further reading
 

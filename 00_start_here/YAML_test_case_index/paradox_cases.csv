@@ -11,6 +11,9 @@ Condorcet winner paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elect
 Condorcet winner paradox,Simple,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.2 — Ranked Robin: the Condorcet winner survives,RankedRobin,Ada,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_ranked_robin.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.2 — STAR (ranks→scores): elects the Condorcet winner,STAR,Ada,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_ranked_robin.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth,STAR,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml
 Condorcet winner paradox,Simple,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),STAR,Ada,,,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml
 Condorcet winner paradox,Simple,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_04_ossipoff_centrist_irv.yaml
 Condorcet winner paradox,Simple,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
@@ -35,7 +38,15 @@ Non-monotonicity,Conditional,"Non-monotonicity (RCV-IRV) — part 1: baseline, X
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (AFTER — X still wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_after.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (BEFORE — X wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_before.yaml
 Non-monotonicity,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
+No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_ranked_robin.yaml
+No-show paradox,Conditional,Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth,STAR,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml
+No-show paradox,Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml
+No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — Ranked Robin: unmoved, still Beth",RankedRobin,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_ranked_robin.yaml
+No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — STAR: unmoved, still Beth",STAR,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_star.yaml
 No-show paradox,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Twin paradox (weak form),Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
+Twin paradox (weak form),Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml
 Truncation paradox,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
 Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml
 Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml

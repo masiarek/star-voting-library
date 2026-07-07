@@ -1,0 +1,64 @@
+======================================================================
+SOURCE FILE:     bv2151_97hbpw_irv.yaml
+SOURCE MODIFIED: 2026-07-07 18:12:16
+TABULATED FILE:  bv2151_97hbpw_irv_tabulated.txt
+TABULATED AT:    2026-07-07 18:13:36
+======================================================================
+
+election_title: "Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better"
+scenario_description: |-
+  Race 1 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-confirmed; the pair is BV2150/51). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 4 (the No-Show and Twin paradoxes).
+  Ceteris paribus, TWO of the four Andy>Beth>Carl voters stay home: 9 voters — 2×(Andy>Beth>Carl), 3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), 3×(Carl>Beth>Andy). First choices are now Andy 2, Beth 3, Carl 4, so the runoff procedure (IRV; identical for three candidates) deletes ANDY — and Beth beats Carl 5–4. The two abstainers get Beth (their second choice) instead of Carl (their last, BV2150): staying home served them better than voting — the No-Show paradox. Read in reverse it is the weak TWIN paradox: add two voters identical to the Andy pair, and the twins' arrival elects their common worst choice.
+  Live results: https://bettervoting.com/97hbpw/results
+bv_test_id: BV2151
+bv_election_id: 97hbpw
+bv_results_url: https://bettervoting.com/97hbpw/results
+paradoxes: [no-show, twin]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  2:Andy>Beth>Carl
+  3:Beth>Carl>Andy
+  1:Carl>Andy>Beth
+  3:Carl>Beth>Andy
+expected_winners:
+  - Beth
+
+# file: bv2151_97hbpw_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better
+ Tabulating 9 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Carl               4  Hopeful
+Beth               3  Hopeful
+Andy               2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Beth               5  Elected
+Carl               4  Rejected
+Andy               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Beth
