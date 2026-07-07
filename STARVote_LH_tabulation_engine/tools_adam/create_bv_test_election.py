@@ -416,7 +416,8 @@ _F1_CANDS = ["Ana", "Bo", "Cal"]
 _F1_STAR_ROWS = [[5, 3, 1]] * 3 + [[1, 5, 3]] * 2 + [[1, 3, 5]] * 2
 _F1_PLUR_ROWS = [[1, 0, 0]] * 3 + [[0, 1, 0]] * 2 + [[0, 0, 1]] * 2
 
-ELECTIONS = [
+# Already created -> bettervoting.com/mxfmhm. Kept for reference; not re-run.
+_CREATED_BV2144 = [
     {
         "test_id": "BV2144",
         "title": "Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner",
@@ -448,6 +449,106 @@ ELECTIONS = [
         "expected": "Plurality -> Ana (3-2-2; Condorcet & absolute loser). STAR -> Bo "
                     "(25; finalist tie 19-19 broken head-to-head to Cal, runoff 5-2). "
                     "LH-verified both. Test ID BV2144.",
+    },
+]
+
+
+# --- BV2145 / BV2146 — Felsenthal (2010) Example 2: runoff-procedure paradoxes ---
+# SOURCE: same Felsenthal (2010) paper as BV2144; Appendix A2 ("Demonstrating
+# Paradoxes Afflicting the Plurality with Runoff Procedure"), Example 2.
+# 17 voters, candidates a/b/c (cast: Ada/Ben/Cleo). a is the Condorcet winner
+# (beats b 9-8 and c 9-8; social ordering a>b>c) but has the FEWEST first
+# choices (a=5, b=6, c=6), so plurality-with-runoff eliminates a first and b
+# beats c 9-8. With THREE candidates IRV is exactly plurality-with-runoff
+# (one elimination, then the final pair), so the BV race uses IRV.
+#   BV2145 (pre):  IRV -> Ben; Ranked Robin -> Ada; STAR (5/3/1 map: 53/51/49,
+#                  runoff 9-8) -> Ada. SCC note: if Cleo withdrew, Ada would win
+#                  in the first round outright (9 of 17 = majority).
+#   BV2146 (post, non-monotonicity): ceteris paribus, the TWO c>b>a voters
+#                  RAISE Ben (-> b>c>a). First choices become a=5, b=8, c=4:
+#                  Cleo is eliminated instead of Ada, and Ada beats Ben 9-8 —
+#                  Ben LOSES by gaining support. RR & STAR still -> Ada
+#                  (monotone here; STAR post scores 55/53/45, runoff Ada 9-8).
+# All LH-verified pre-creation (IRV/RR native; STAR via the 5/3/1 map).
+_F2_CANDS = ["Ada", "Ben", "Cleo"]
+_F2_PRE_BLOCS = [(3, ["Ada", "Ben", "Cleo"]),
+                 (2, ["Ada", "Cleo", "Ben"]),
+                 (4, ["Ben", "Ada", "Cleo"]),
+                 (2, ["Ben", "Cleo", "Ada"]),
+                 (4, ["Cleo", "Ada", "Ben"]),
+                 (2, ["Cleo", "Ben", "Ada"])]
+_F2_POST_BLOCS = [(3, ["Ada", "Ben", "Cleo"]),
+                  (2, ["Ada", "Cleo", "Ben"]),
+                  (4, ["Ben", "Ada", "Cleo"]),
+                  (2, ["Ben", "Cleo", "Ada"]),
+                  (4, ["Cleo", "Ada", "Ben"]),
+                  (2, ["Ben", "Cleo", "Ada"])]   # <- the two changed voters
+
+
+def _f2_races(prefix, blocs):
+    R, S = _mk_ranked_and_star(blocs, _F2_CANDS)
+    N = len(_F2_CANDS)
+    return [
+        {"title": f"{prefix} — Runoff (IRV; = plurality-with-runoff for 3 candidates)",
+         "method": "IRV", "num_winners": 1, "max_rankings": N,
+         "candidates": _F2_CANDS, "ballots": R},
+        {"title": f"{prefix} — Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": N, "candidates": _F2_CANDS, "ballots": R},
+        {"title": f"{prefix} — STAR (ranks mapped to 0-5 scores)", "method": "STAR",
+         "num_winners": 1, "candidates": _F2_CANDS, "ballots": S},
+    ]
+
+
+ELECTIONS = [
+    {
+        "test_id": "BV2145",
+        "title": "Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner",
+        "description": ("Example 2 from Dan S. Felsenthal, 'Review of Paradoxes "
+                        "Afflicting Various Voting Procedures Where One Out of m "
+                        "Candidates (m ≥ 2) Must Be Elected' (University of Haifa / "
+                        "LSE, revised 26 May 2010; Leverhulme Trust 'Voting Power in "
+                        "Practice' workshop, Château du Baffy, Normandy), Appendix A2: "
+                        "the paradoxes afflicting the plurality-with-runoff procedure. "
+                        "17 voters, three candidates: 3×(Ada>Ben>Cleo), 2×(Ada>Cleo>Ben), "
+                        "4×(Ben>Ada>Cleo), 2×(Ben>Cleo>Ada), 4×(Cleo>Ada>Ben), "
+                        "2×(Cleo>Ben>Ada). Ada is the Condorcet winner — she beats Ben "
+                        "9-8 and Cleo 9-8; the social ordering is Ada>Ben>Cleo. But Ada "
+                        "has the FEWEST first choices (5 vs 6 and 6), so the runoff "
+                        "procedure eliminates her first and Ben beats Cleo 9-8. (With "
+                        "three candidates, instant-runoff IRV is exactly plurality-with-"
+                        "runoff, which is how this race is run here.) The same ranked "
+                        "ballots under Ranked Robin (Copeland) elect Ada, and under STAR "
+                        "(ranks mapped to 0-5 scores: 53/51/49, runoff 9-8) also Ada. "
+                        "Felsenthal also notes the SCC/spoiler: had Cleo withdrawn, Ada "
+                        "would have won the first round outright with 9 of 17. Part 2 "
+                        "(BV2146) shows this procedure's non-monotonicity."),
+        "races": _f2_races("Felsenthal Ex.2", _F2_PRE_BLOCS),
+        "expected": "IRV (runoff) -> Ben (Ada eliminated first; Ben beats Cleo 9-8). "
+                    "Ranked Robin -> Ada. STAR -> Ada (53/51/49; runoff 9-8). "
+                    "LH-verified all three. Test ID BV2145.",
+    },
+    {
+        "test_id": "BV2146",
+        "title": "Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity)",
+        "description": ("Example 2 (continued) from Dan S. Felsenthal's 2010 review of "
+                        "voting-procedure paradoxes (University of Haifa / LSE; Appendix "
+                        "A2). Identical to BV2145 except that, ceteris paribus, the two "
+                        "voters whose ordering was Cleo>Ben>Ada RAISE Ben to first: "
+                        "Ben>Cleo>Ada — strictly increasing Ben's support and changing "
+                        "nothing else. Result: first choices are now Ada 5, Ben 8, Cleo "
+                        "4, so the runoff procedure eliminates CLEO instead of Ada, and "
+                        "Ada beats Ben head-to-head 9-8. Ben — who WON part 1 — loses "
+                        "precisely because two voters moved him UP their ballots. That "
+                        "is the lack-of-monotonicity paradox (more-is-less), a "
+                        "conditional paradox: one datum changed, everything else held "
+                        "constant. Ranked Robin and STAR are unaffected here (both "
+                        "elect Ada before and after; STAR post scores 55/53/45 with Ada "
+                        "winning the runoff 9-8). Run as IRV, which equals plurality-"
+                        "with-runoff for three candidates."),
+        "races": _f2_races("Felsenthal Ex.2 after the raise", _F2_POST_BLOCS),
+        "expected": "IRV (runoff) -> Ada (Cleo eliminated; Ada beats Ben 9-8) — Ben "
+                    "loses by GAINING support vs BV2145. Ranked Robin -> Ada. STAR -> "
+                    "Ada (55/53/45; runoff 9-8). LH-verified. Test ID BV2146.",
     },
 ]
 

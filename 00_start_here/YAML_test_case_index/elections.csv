@@ -1,11 +1,13 @@
 election_id,title,races,kind,voters,methods,backing
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
+6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
 bvhchj,Presidential Board Election,2,contested (multi-race),102,"Plurality, STAR_PR",BV
 cxrf8v,"BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method",4,contested (multi-race),921,"IRV, RankedRobin, STAR, STV",BV
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
+krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV

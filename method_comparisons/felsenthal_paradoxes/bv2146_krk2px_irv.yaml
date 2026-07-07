@@ -1,0 +1,33 @@
+election_title: "Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support"
+scenario_description: |-
+  Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 2 (continued).
+  Identical to BV2145 except one datum, ceteris paribus: the two Cleo>Ben>Ada voters RAISE Ben to first (Ben>Cleo>Ada) — strictly more support for Ben, nothing else changes. First choices become Ada 5, Ben 8, Cleo 4, so the runoff procedure (IRV; identical for three candidates) now eliminates CLEO instead of Ada — and Ada beats Ben 9–8. Ben, who won BV2145, loses precisely because two voters moved him UP: the lack-of-monotonicity (more-is-less) paradox, Felsenthal's model CONDITIONAL paradox. Confirmed live on BetterVoting.
+  Live results: https://bettervoting.com/krk2px/results
+bv_test_id: BV2146
+bv_election_id: krk2px
+bv_results_url: https://bettervoting.com/krk2px/results
+paradoxes: [non-monotonicity]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  3:Ada>Ben>Cleo
+  2:Ada>Cleo>Ben
+  4:Ben>Ada>Cleo
+  2:Ben>Cleo>Ada
+  4:Cleo>Ada>Ben
+  2:Ben>Cleo>Ada
+expected_winners:
+  - Ada
+
+# file: bv2146_krk2px_irv.yaml

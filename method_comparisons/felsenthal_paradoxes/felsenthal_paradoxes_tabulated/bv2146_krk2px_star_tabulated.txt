@@ -1,0 +1,125 @@
+======================================================================
+SOURCE FILE:     bv2146_krk2px_star.yaml
+SOURCE MODIFIED: 2026-07-07 17:47:49
+TABULATED FILE:  bv2146_krk2px_star_tabulated.txt
+TABULATED AT:    2026-07-07 17:47:59
+======================================================================
+
+election_title: "Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada"
+scenario_description: |-
+  Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 (continued) — see bv2146_krk2px_irv.yaml for the setup.
+  The same 17 voters after the raise, ranks mapped 5/3/1. Ben's two raised ballots move him 51 → 55 and Cleo 49 → 45; Ada stays 53. Finalists are now Ben and Ada — and Ada still wins the automatic runoff 9–8, exactly as in BV2145. Giving Ben more support changed STAR's finalist pair but not its winner: no more-is-less here, while the same raise flips the IRV race.
+  Live results: https://bettervoting.com/krk2px/results
+bv_test_id: BV2146
+bv_election_id: krk2px
+bv_results_url: https://bettervoting.com/krk2px/results
+paradoxes: [non-monotonicity]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ada,Ben,Cleo
+  5,3,1
+  5,3,1
+  5,3,1
+  5,1,3
+  5,1,3
+  3,5,1
+  3,5,1
+  3,5,1
+  3,5,1
+  1,5,3
+  1,5,3
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  1,5,3
+  1,5,3
+expected_winners:
+  - Ada
+
+# file: bv2146_krk2px_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada ===
+  Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 (continued) — see bv2146_krk2px_irv.yaml for the setup.
+  The same 17 voters after the raise, ranks mapped 5/3/1. Ben's two raised ballots move him 51 → 55 and Cleo 49 → 45; Ada stays 53. Finalists are now Ben and Ada — and Ada still wins the automatic runoff 9–8, exactly as in BV2145. Giving Ben more support changed STAR's finalist pair but not its winner: no more-is-less here, while the same raise flips the IRV race.
+  Live results: https://bettervoting.com/krk2px/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cleo    |
+-------------------------------------------------------------
+         * Ada > |     ---      | 9 -  0 -  8 | 9 -  0 -  8 |
+         * Ben > |  8 -  0 -  9 |    ---      |11 -  0 -  6 |
+          Cleo > |  8 -  0 -  9 | 6 -  0 - 11 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Ada
+  Choose-One (Plurality) = Ben   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Ben)
+ - Runoff Round Winner   = (Ada)
+  Candidate Ben earned the highest total score,
+  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 17 ballots.
+Count × Ada,Ben,Cleo
+    4 ×   3,  5,   1
+    4 ×   1,  5,   3
+    4 ×   3,  1,   5
+    3 ×   5,  3,   1
+    2 ×   5,  1,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        5  0  8  0  4  0  |    53   3.1
+Ben        8  0  3  0  6  0  |    55   3.2
+Cleo       4  0  6  0  7  0  |    45   2.6
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 55 -- First place
+   Ada           -- 53 -- Second place
+   Cleo          -- 45
+ Ben and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 9 -- First place
+   Ben           -- 8
+   Equal Support -- 0
+ Ada wins.
+   Runoff math:
+     17  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     17  voters with a preference  (majority = 9)
+           Ada 9 (53%)  ·  Ben 8 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ada

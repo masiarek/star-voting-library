@@ -1,0 +1,66 @@
+======================================================================
+SOURCE FILE:     bv2145_6fj2kg_irv.yaml
+SOURCE MODIFIED: 2026-07-07 17:47:08
+TABULATED FILE:  bv2145_6fj2kg_irv_tabulated.txt
+TABULATED AT:    2026-07-07 17:48:10
+======================================================================
+
+election_title: "Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first"
+scenario_description: |-
+  Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 2 (plurality with runoff).
+  17 voters, three candidates. Ada is the Condorcet winner (beats Ben 9–8 and Cleo 9–8; social ordering Ada>Ben>Cleo) but has the FEWEST first choices (Ada 5, Ben 6, Cleo 6). Plurality-with-runoff — run here as IRV, which is identical for three candidates — eliminates Ada first, and Ben beats Cleo 9–8. The Condorcet winner paradox, plus Felsenthal's SCC note: had Cleo withdrawn, Ada would have won the first round outright (9 of 17). The non-monotonicity half of the lesson is the paired election BV2146.
+  Live results: https://bettervoting.com/6fj2kg/results
+bv_test_id: BV2145
+bv_election_id: 6fj2kg
+bv_results_url: https://bettervoting.com/6fj2kg/results
+paradoxes: [condorcet-winner, spoiler-scc, non-monotonicity]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  3:Ada>Ben>Cleo
+  2:Ada>Cleo>Ben
+  4:Ben>Ada>Cleo
+  2:Ben>Cleo>Ada
+  4:Cleo>Ada>Ben
+  2:Cleo>Ben>Ada
+expected_winners:
+  - Ben
+
+# file: bv2145_6fj2kg_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first
+ Tabulating 17 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ben                6  Hopeful
+Cleo               6  Hopeful
+Ada                5  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ben                9  Elected
+Cleo               8  Rejected
+Ada                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ben

@@ -8,6 +8,9 @@ Condorcet winner paradox,Simple,"Center Squeeze — STAR (ranks→scores): agree
 Condorcet winner paradox,Simple,Center Squeeze — STV (1 seat = IRV single-winner): same squeeze,STV,Carter,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.2 — Ranked Robin: the Condorcet winner survives,RankedRobin,Ada,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_ranked_robin.yaml
+Condorcet winner paradox,Simple,Felsenthal Ex.2 — STAR (ranks→scores): elects the Condorcet winner,STAR,Ada,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml
 Condorcet winner paradox,Simple,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),STAR,Ada,,,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml
 Condorcet winner paradox,Simple,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_04_ossipoff_centrist_irv.yaml
 Condorcet winner paradox,Simple,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
@@ -17,9 +20,14 @@ Absolute loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the ab
 Absolute loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
+SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,"Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)",STAR,Rock,,,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml
+Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
+Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
+Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada",RankedRobin,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_ranked_robin.yaml
+Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada",STAR,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml
 Non-monotonicity,Conditional,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,RCV_IRV,Z,,,method_comparisons/monotonicity/monotonicity_irv_after.yaml
 Non-monotonicity,Conditional,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",RCV_IRV,X,,,method_comparisons/monotonicity/monotonicity_irv_before.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (AFTER — X still wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_after.yaml

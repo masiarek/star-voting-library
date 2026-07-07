@@ -1,0 +1,120 @@
+# Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada
+
+*Generated from [`bv2146_krk2px_star.yaml`](../bv2146_krk2px_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
+
+## Scenario
+
+Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 (continued) — see bv2146_krk2px_irv.yaml for the setup.
+The same 17 voters after the raise, ranks mapped 5/3/1. Ben's two raised ballots move him 51 → 55 and Cleo 49 → 45; Ada stays 53. Finalists are now Ben and Ada — and Ada still wins the automatic runoff 9–8, exactly as in BV2145. Giving Ben more support changed STAR's finalist pair but not its winner: no more-is-less here, while the same raise flips the IRV race.
+Live results: https://bettervoting.com/krk2px/results
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Ada,Ben,Cleo
+5,3,1
+5,3,1
+5,3,1
+5,1,3
+5,1,3
+3,5,1
+3,5,1
+3,5,1
+3,5,1
+1,5,3
+1,5,3
+3,1,5
+3,1,5
+3,1,5
+3,1,5
+1,5,3
+1,5,3
+```
+
+## What the engine says
+
+Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2146_krk2px_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cleo    |
+-------------------------------------------------------------
+         * Ada > |     ---      | 9 -  0 -  8 | 9 -  0 -  8 |
+         * Ben > |  8 -  0 -  9 |    ---      |11 -  0 -  6 |
+          Cleo > |  8 -  0 -  9 | 6 -  0 - 11 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Ada
+  Choose-One (Plurality) = Ben   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Ben)
+ - Runoff Round Winner   = (Ada)
+  Candidate Ben earned the highest total score,
+  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 17 ballots.
+Count × Ada,Ben,Cleo
+    4 ×   3,  5,   1
+    4 ×   1,  5,   3
+    4 ×   3,  1,   5
+    3 ×   5,  3,   1
+    2 ×   5,  1,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        5  0  8  0  4  0  |    53   3.1
+Ben        8  0  3  0  6  0  |    55   3.2
+Cleo       4  0  6  0  7  0  |    45   2.6
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 55 -- First place
+   Ada           -- 53 -- Second place
+   Cleo          -- 45
+ Ben and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 9 -- First place
+   Ben           -- 8
+   Equal Support -- 0
+ Ada wins.
+   Runoff math:
+     17  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     17  voters with a preference  (majority = 9)
+           Ada 9 (53%)  ·  Ben 8 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ada
+```
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2144_mxfmhm_plurality](bv2144_mxfmhm_plurality.md) · [bv2144_mxfmhm_star](bv2144_mxfmhm_star.md) · [bv2145_6fj2kg_irv](bv2145_6fj2kg_irv.md) · [bv2145_6fj2kg_ranked_robin](bv2145_6fj2kg_ranked_robin.md) · [bv2145_6fj2kg_star](bv2145_6fj2kg_star.md) · [bv2146_krk2px_irv](bv2146_krk2px_irv.md) · [bv2146_krk2px_ranked_robin](bv2146_krk2px_ranked_robin.md)

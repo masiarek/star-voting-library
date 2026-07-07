@@ -1,17 +1,17 @@
 # Cross-method divergence review
 
-_Generated 2026-07-07 17:36 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-07 17:52 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **113** single-winner STAR elections (skipped 44 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **48** (42%) diverge from STAR under at least one method; **65** agree across the board.
+- Scanned **115** single-winner STAR elections (skipped 48 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **49** (43%) diverge from STAR under at least one method; **66** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 8 |
+| IRV_OUTLIER_RR_WITH_STAR | 9 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 5 |
 | CYCLE_OR_THREE_WAY | 13 |
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (46 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (47 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 8
+### IRV_OUTLIER_RR_WITH_STAR — 9
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -40,6 +40,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Green** · IRV=Yellow · RR=Green · Approval=Green · Score=Green · Condorcet=Green
 - **[bv2137_ywckmg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2137_ywckmg_star.md)** — `method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml` (3c/100b)  
     STAR=**Anderson** · IRV=Carter · RR=Anderson · Approval=Anderson · Score=Anderson · Condorcet=Anderson
+- **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml` (3c/17b)  
+    STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada
 - **[Whoops_01_tennessee_three_winners](cases/IRV_OUTLIER_RR_WITH_STAR/Whoops_01_tennessee_three_winners.md)** — `method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
 - **[bv2132_ykjjhy_pet_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2132_ykjjhy_pet_star.md)** — `method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml` (3c/22b)  

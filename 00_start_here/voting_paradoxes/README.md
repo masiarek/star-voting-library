@@ -19,14 +19,14 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 | Condorcet winner paradox | Thwarted majorities | Simple | [condorcet_winner_paradox.md](condorcet_winner_paradox.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [BV2137 center squeeze](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_center_squeeze.md) |
 | Condorcet loser paradox | Borda's paradox | Simple | [condorcet_loser_paradox.md](condorcet_loser_paradox.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) |
 | Absolute loser paradox | — | Simple | [absolute_loser_paradox.md](absolute_loser_paradox.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) |
-| SCC / spoiler | Subset choice condition; IIA failure (informal) | Conditional | [spoiler_scc.md](spoiler_scc.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [the split-voting set](../../method_comparisons/split_voting/) |
+| SCC / spoiler | Subset choice condition; IIA failure (informal) | Conditional | [spoiler_scc.md](spoiler_scc.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [BV2145 Felsenthal Ex.2](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_felsenthal_ex2.md) · [the split-voting set](../../method_comparisons/split_voting/) |
+| Non-monotonicity | More-is-less; additional-support; lack of monotonicity | Conditional | [non_monotonicity.md](non_monotonicity.md) | [BV2145→BV2146 Felsenthal Ex.2 pair](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) · [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
 
 ## Covered elsewhere in the repo (tagged, no dedicated page yet)
 
 | Paradox | Also known as | Kind | Repo home |
 |---|---|---|---|
 | Condorcet's paradox (cycle) | Cyclical majorities | Simple | [Whoops_03](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.md) · [cycle_resolution.md](../RCV_Ranked_Robin/cycle_resolution.md) |
-| Non-monotonicity | More-is-less; additional-support paradox | Conditional | [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
 | Clone dependence / teaming | Cloning paradox | Conditional | [rr_clone_independence.md](../RCV_Ranked_Robin/rr_clone_independence.md) |
 | No-show paradox | Participation failure | Conditional | [Whoops_05 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
 | Truncation paradox | Preference-truncation | Conditional | [Whoops_05 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |

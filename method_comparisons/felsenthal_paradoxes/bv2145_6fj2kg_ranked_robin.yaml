@@ -1,0 +1,33 @@
+election_title: "Felsenthal Ex.2 — Ranked Robin: the Condorcet winner survives"
+scenario_description: |-
+  Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 — see bv2145_6fj2kg_irv.yaml for the full citation and setup.
+  The same 17 ranked ballots counted by Ranked Robin (Copeland): Ada wins both her head-to-heads (Ben 9–8, Cleo 9–8) — 2 pairwise wins, the Condorcet winner, elected directly. What the runoff procedure's elimination order threw away, the round-robin count keeps.
+  Live results: https://bettervoting.com/6fj2kg/results
+bv_test_id: BV2145
+bv_election_id: 6fj2kg
+bv_results_url: https://bettervoting.com/6fj2kg/results
+paradoxes: [condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  3:Ada>Ben>Cleo
+  2:Ada>Cleo>Ben
+  4:Ben>Ada>Cleo
+  2:Ben>Cleo>Ada
+  4:Cleo>Ada>Ben
+  2:Cleo>Ben>Ada
+expected_winners:
+  - Ada
+
+# file: bv2145_6fj2kg_ranked_robin.yaml

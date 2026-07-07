@@ -53,7 +53,7 @@ VOCAB = {
                     "A candidate who cannot win enters or leaves the race and the winner changes."),
     "condorcet-cycle": ("Condorcet's paradox (cycle)", "Simple", None,
                         "Pairwise majorities form a cycle; no Condorcet winner exists."),
-    "non-monotonicity": ("Non-monotonicity", "Conditional", None,
+    "non-monotonicity": ("Non-monotonicity", "Conditional", "non_monotonicity.md",
                          "Ranking/scoring a candidate HIGHER makes them lose (or lower makes them win); a.k.a. more-is-less, additional-support paradox."),
     "no-show": ("No-show paradox", "Conditional", None,
                 "Voters do better by staying home: adding ballots ranking X last can make X win."),

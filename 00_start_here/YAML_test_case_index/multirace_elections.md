@@ -88,6 +88,26 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Felsenthal Ex.1 — Choose-One (Plurality) | Plurality | 3 | **Ana** |
 | Felsenthal Ex.1 — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Bo** |
 
+## BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner
+
+**Election** [`6fj2kg`](https://bettervoting.com/6fj2kg/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.2 — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Ben** |
+| Felsenthal Ex.2 — Ranked Robin (Copeland) | RankedRobin | 3 | **Ada** |
+| Felsenthal Ex.2 — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Ada** |
+
+## BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity)
+
+**Election** [`krk2px`](https://bettervoting.com/krk2px/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Felsenthal Ex.2 after the raise — Runoff (IRV; = plurality-with-runoff for 3 candidates) | IRV | 3 | **Ada** |
+| Felsenthal Ex.2 after the raise — Ranked Robin (Copeland) | RankedRobin | 3 | **Ada** |
+| Felsenthal Ex.2 after the raise — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Ada** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)
