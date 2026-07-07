@@ -148,6 +148,12 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Page:** [Election simulation models](election_simulation_models.md) — the neutral menu (noise models vs. spatial), the math prerequisites, and the standing caveat (IC over-produces near-ties, spatial suppresses cycles, hierarchical-cluster sits in between) — with the IC-vs-IAC cycle-rate correction.
 - **Emphasize:** pairs with 301.6's habit — *never quote a rate without the model*; and with 201.6's VSE overview. Our repo's hand-crafted cases are the complementary "how it fails, concretely" end.
 
+## 301.10 — The ranked-ballot method zoo (many tabulations of one ballot)
+- **Objective:** See that a *single* ranked ballot supports a dozen-plus tabulations that pick different winners — the definitive proof that "RCV" names a ballot, not a method — and locate the repo's own engines (Hare = IRV, Copeland = Ranked Robin) inside the wider field.
+- **Key terms:** positional (Borda / Nanson / Baldwin / Rouse / Black), sequential elimination (Hare, Coombs, Carey), graduated majority (Bucklin), pairwise/Condorcet (Copeland, Small, Dodgson, Simpson/Minimax, Raynaud, Schulze, Tideman/Ranked Pairs), Smith/Schwartz/Landau sets, clone-independence, Condorcet loser.
+- **Page:** [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — grouped by family, an at-a-glance criterion table, and Robert LeGrand's live [calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) as a sandbox.
+- **Emphasize:** reinforces the [terminology canon](TIPS_terminology.md) and feeds 301.6/cycle-resolution (Simpson/Tideman/Schulze are the cycle-resolvers). The catalog, not the verdict — which properties matter is 201.6's question.
+
 ---
 
 ## Suggested pacing by audience
