@@ -1,0 +1,52 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 921 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Abby, Brad, Cora, Dave, Erin
+    98 × Abby > Cora > Erin > Dave > Brad      (5, 1, 4, 2, 3)
+    64 × Brad > Abby > Erin > Cora > Dave      (4, 5, 2, 1, 3)
+    12 × Brad > Abby > Erin > Dave > Cora      (4, 5, 1, 2, 3)
+    98 × Brad > Erin > Abby > Cora > Dave      (3, 5, 2, 1, 4)
+    13 × Brad > Erin > Abby > Dave > Cora      (3, 5, 1, 2, 4)
+   125 × Brad > Erin > Dave > Abby > Cora      (2, 5, 1, 3, 4)
+   124 × Cora > Abby > Erin > Dave > Brad      (4, 1, 5, 2, 3)
+    76 × Cora > Erin > Abby > Dave > Brad      (3, 1, 5, 2, 4)
+    21 × Dave > Abby > Brad > Erin > Cora      (4, 3, 1, 5, 2)
+    30 × Dave > Brad > Abby > Erin > Cora      (3, 4, 1, 5, 2)
+    98 × Dave > Brad > Erin > Cora > Abby      (1, 4, 2, 5, 3)
+   139 × Dave > Cora > Abby > Brad > Erin      (3, 2, 4, 5, 1)
+    23 × Dave > Cora > Brad > Abby > Erin      (2, 3, 4, 5, 1)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Brad  beats Abby   463 – 458
+   Abby  beats Cora   461 – 460
+   Abby  beats Dave   485 – 436
+   Abby  beats Erin   511 – 410
+   Brad  beats Cora   461 – 460
+   Dave  beats Brad   609 – 312
+   Brad  beats Erin   623 – 298
+   Dave  beats Cora   461 – 460
+   Erin  beats Cora   461 – 460
+   Erin  beats Dave   610 – 311
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |      Abby       |     Brad       |     Cora       |     Dave       |     Erin       |
+------------------------------------------------------------------------------------------------
+  Abby > |       ---       |458 -   0 - 463 |461 -   0 - 460 |485 -   0 - 436 |511 -   0 - 410 |
+  Brad > | 463 -   0 - 458 |      ---       |461 -   0 - 460 |312 -   0 - 609 |623 -   0 - 298 |
+  Cora > | 460 -   0 - 461 |460 -   0 - 461 |      ---       |460 -   0 - 461 |460 -   0 - 461 |
+  Dave > | 436 -   0 - 485 |609 -   0 - 312 |461 -   0 - 460 |      ---       |311 -   0 - 610 |
+  Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Abby       3–1–0         3    +146  Dave, Erin, Cora
+    2  Brad       3–1–0         3     +34  Abby, Erin, Cora
+    3  Dave       2–2–0         2     -50  Brad, Cora
+    4  Erin       2–2–0         2    -126  Dave, Cora
+    5  Cora       0–4–0         0      -4  —
+
+Winner — Ranked Robin (RCV-RR): Abby
+   *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

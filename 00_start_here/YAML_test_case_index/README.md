@@ -8,25 +8,26 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**174 election files** (140 single-winner, 34 multi-winner) across 13 method(s).
+**183 election files** (148 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 108 |
+| STAR | 110 |
 | RCV-IRV (Hare) | 11 |
-| Ranked Robin (RCV-RR / Copeland) | 8 |
+| Ranked Robin (RCV-RR / Copeland) | 10 |
 | Approval | 5 |
-| STV (proportional RCV) | 2 |
+| STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
 | Allocated Score (STAR-PR) | 7 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
-| PLURALITY | 10 |
+| IRV | 2 |
+| PLURALITY | 11 |
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (108)
+## STAR  (110)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -121,8 +122,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Black_Curtain_04_c4_b5_four-candidates`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_04_c4_b5_four-candidates.yaml) |
 | [`center_squeeze_star`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_star.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — STAR elects the consensus (Center) → _Center_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml) |
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) |
+| [`bv2137_ywckmg_star.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | — |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |
 | [`monotonicity_star_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_before.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (BEFORE — X wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_before.yaml) |
+| [`bv2138_cxrf8v_star.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff → _Brad_ | — |
 | [`Whoops_01_tennessee_three_winners`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/Whoops_01_tennessee_three_winners.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | Whoops 01 — same ballots, three methods, three winners (Tennessee) → _Nashville_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml) |
 | [`Whoops_02_star_misses_condorcet`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/Whoops_02_star_misses_condorcet.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml) |
 | [`Whoops_03_condorcet_cycle_rps`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/Whoops_03_condorcet_cycle_rps.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner) → _Rock_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml) |
@@ -155,7 +158,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (8)
+## Ranked Robin (RCV-RR / Copeland)  (10)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -166,6 +169,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/rr_vs_irv_plurality_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_ties.yaml) |
+| [`bv2137_ywckmg_ranked_robin.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | — |
+| [`bv2138_cxrf8v_ranked_robin.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_ranked_robin.yaml) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently → _Abby_ | — |
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_ranked_robin.yaml) |
 
 ## Approval  (5)
@@ -178,10 +183,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_approval.yaml) |
 
-## STV (proportional RCV)  (2)
+## STV (proportional RCV)  (4)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`bv2137_ywckmg_stv.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STV (1 seat = IRV single-winner): same squeeze → _Carter_ | — |
+| [`bv2138_cxrf8v_stv.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STV (1 seat = IRV single-winner): Dave → _Dave_ | — |
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 
@@ -238,7 +245,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/_main_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 
-## PLURALITY  (10)
+## IRV  (2)
+
+| Case (page) | Folder | Winners | Title / expected | src |
+|------|--------|:------:|------------------|:--:|
+| [`bv2137_ywckmg_irv.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_irv.yaml) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — IRV (Hare): the center gets squeezed out → _Carter_ | — |
+| [`bv2138_cxrf8v_irv.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — IRV (Hare): Dave wins by elimination → _Dave_ | — |
+
+## PLURALITY  (11)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -249,6 +263,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
 | [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |
+| [`sntv_village_council`](../../method_comparisons/sntv_village_council/sntv_village_council_pages/sntv_village_council.md) | `method_comparisons/sntv_village_council/` | 2 | Village Council by SNTV — a concentrated minority wins a seat → _Priya, Nora_ | [`.yaml`](../../method_comparisons/sntv_village_council/sntv_village_council.yaml) |
 | [`mmp_block_voting`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — Block Voting (3 seats): majority sweeps → _Ada, Ben, Cal_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_block_voting.yaml) |
 | [`mmp_limited_voting`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_limited_voting.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1 → _Ada, Ben, Uma_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_limited_voting.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_sntv.yaml) |

@@ -145,6 +145,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   BV2133 — Pet poll II (4 methods, FOUR winners)       -> dyxrbr   (multi-race; backs method_comparisons/pet_poll_four_winners)
 #   BV2134 — Pets Governance (6 methods, 6 positions)     -> kcf8vf   (multi-race; backs method_comparisons/pets_governance)
 #   BV2135 — Block & Limited voting (as bloc Approval)     -> 3x4vrv   (backs method_comparisons/multi_member_plurality)
+#   BV2136 — Village Council by SNTV (multi-winner Plurality) -> y3tvxm  (backs method_comparisons/sntv_village_council)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -154,29 +155,90 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- BV2136 — Village Council by SNTV: a concentrated minority wins a seat ------
-# A clean, standalone SNTV showcase (the property, minus the governance noise).
-# 9 voters elect a 2-seat Village Council under SNTV (one vote each, top 2 win).
-# The Downtown majority (5) SPLITS its votes between Nora (3) and Omar (2); the
-# Riverside minority (4) CONCENTRATES all its votes on Priya. So Priya tops the
-# poll (4) and takes a seat alongside Nora (3); Omar (2) misses. Under block voting
-# the 5-voter majority would take both seats — SNTV's single vote is what lets the
-# 44% minority earn representation by concentrating. On BV: Plurality + num_winners.
-_SNTV_CANDS = ["Nora", "Omar", "Priya"]
-_SNTV_BALLOTS = ([[1, 0, 0]] * 3      # Downtown -> Nora
-                 + [[0, 1, 0]] * 2    # Downtown -> Omar
-                 + [[0, 0, 1]] * 4)   # Riverside -> Priya (concentrated)
+# --- BV2137 / BV2138 — LeGrand rbvote examples: one ranked electorate, many -----
+# tabulations. Both come from Robert LeGrand's ranked-ballot calculator
+# (cs.angelo.edu/~rlegrand/rbvote/). Each is ONE election with FOUR races on the
+# SAME ranked ballots — the four ranked/score methods BetterVoting supports:
+# IRV (Hare), Ranked Robin (Copeland), STV (1 seat), and STAR (ranks mapped to
+# 0-5 scores). The other ~11 methods on LeGrand's page (Borda, Bucklin, Coombs,
+# Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small) have no BV
+# equivalent and are cross-checked with pref_voting + LeGrand's calculator only.
+#
+# RANK->SCORE CONVERSION (STAR race), documented once here and in the case .md:
+#   score(rank) = round( 1 + 4*(N - rank)/(N - 1) )   # top rank -> 5, bottom -> 1
+#   => N=3: 5,3,1   N=5: 5,4,3,2,1   (integer-clean for these two elections)
+
+
+def _mk_ranked_and_star(blocs, cands):
+    """Expand weighted blocs to one row per voter, aligned to `cands` order.
+    Returns (ranked_rows, star_rows): ranked = 1..N (1=top) for IRV/RR/STV;
+    star = 0-5 via the documented linear top=5/bottom=1 map."""
+    N = len(cands)
+    def ranks(order):
+        pos = {c: i + 1 for i, c in enumerate(order)}      # 1 = top choice
+        return [pos[c] for c in cands]
+    def star(order):
+        pos = {c: i for i, c in enumerate(order)}          # 0-based rank
+        sc = {c: round(1 + 4 * (N - 1 - pos[c]) / (N - 1)) for c in cands}
+        return [sc[c] for c in cands]
+    R, S = [], []
+    for cnt, order in blocs:
+        R += [ranks(order)] * cnt
+        S += [star(order)] * cnt
+    return R, S
+
+
+def _four_races(prefix, blocs, cands):
+    """The four BV-supported tabulations of one ranked electorate."""
+    R, S = _mk_ranked_and_star(blocs, cands)
+    N = len(cands)
+    return [
+        {"title": f"{prefix} — IRV (Hare)", "method": "IRV",
+         "num_winners": 1, "max_rankings": N, "candidates": cands, "ballots": R},
+        {"title": f"{prefix} — Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": N, "candidates": cands, "ballots": R},
+        {"title": f"{prefix} — STV, 1 seat (= IRV single-winner)", "method": "STV",
+         "num_winners": 1, "max_rankings": N, "candidates": cands, "ballots": R},
+        {"title": f"{prefix} — STAR (ranks mapped to 0-5 scores)", "method": "STAR",
+         "num_winners": 1, "candidates": cands, "ballots": S},
+    ]
+
+
+# BV2137 — Center squeeze (100 voters, 3 candidates). Anderson is the Condorcet
+# winner (beats Reagan 55-45, Carter 65-35) but has the fewest first-choices, so
+# IRV/STV eliminate him and elect Carter; Ranked Robin & STAR elect Anderson.
+_C1_CANDS = ["Reagan", "Anderson", "Carter"]
+_C1_BLOCS = [(45, ["Reagan", "Anderson", "Carter"]),
+             (20, ["Anderson", "Carter", "Reagan"]),
+             (35, ["Carter", "Anderson", "Reagan"])]
+
+# BV2138 — Five-way (921 voters, 5 candidates), NO Condorcet winner (Smith set =
+# Abby/Brad/Dave/Erin). The four BV methods give THREE winners: IRV/STV->Dave,
+# Ranked Robin->Abby, STAR->Brad. (Full 15-method set spreads across all five.)
+_C2_CANDS = ["Abby", "Brad", "Cora", "Dave", "Erin"]
+_C2_BLOCS = [(98,  "Abby Cora Erin Dave Brad"), (64,  "Brad Abby Erin Cora Dave"),
+             (12,  "Brad Abby Erin Dave Cora"), (98,  "Brad Erin Abby Cora Dave"),
+             (13,  "Brad Erin Abby Dave Cora"), (125, "Brad Erin Dave Abby Cora"),
+             (124, "Cora Abby Erin Dave Brad"), (76,  "Cora Erin Abby Dave Brad"),
+             (21,  "Dave Abby Brad Erin Cora"), (30,  "Dave Brad Abby Erin Cora"),
+             (98,  "Dave Brad Erin Cora Abby"), (139, "Dave Cora Abby Brad Erin"),
+             (23,  "Dave Cora Brad Abby Erin")]
+_C2_BLOCS = [(cnt, s.split()) for cnt, s in _C2_BLOCS]
 
 ELECTIONS = [
     {
-        "test_id": "BV2136",
-        "title": "Village Council by SNTV — a concentrated minority wins a seat",
-        "description": "Nine residents elect a 2-seat Village Council under SNTV (single non-transferable vote — one vote each, the top two win). The Downtown majority (5 voters) splits between Nora (3) and Omar (2); the Riverside minority (4 voters) concentrates all its votes on Priya. Priya tops the poll with 4 and wins a seat next to Nora (3); Omar (2) just misses. Under block voting the majority would take both seats — SNTV's single vote is what lets a 44% minority win representation by concentrating. Reproduced on BetterVoting as multi-winner Plurality.",
-        "method": "Plurality",
-        "num_winners": 2,
-        "candidates": _SNTV_CANDS,
-        "ballots": _SNTV_BALLOTS,
-        "expected": "Priya (4), Nora (3) win; Omar (2) misses.  Test ID BV2136.",
+        "test_id": "BV2137",
+        "title": "Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates",
+        "description": "A textbook 'center squeeze' (from Robert LeGrand's ranked-ballot calculator). 100 voters, three candidates: Reagan is the polarizing right (45 first-choices), Carter the polarizing left (35), Anderson the broadly-liked centrist (only 20 first-choices but nearly everyone's second). Anderson is the Condorcet winner — he beats Reagan 55-45 and Carter 65-35 head-to-head. Yet Instant-Runoff Voting eliminates Anderson FIRST (fewest first-choices) and elects Carter. This election runs the SAME ranked ballots four ways: IRV and STV (1 seat) elect Carter; Ranked Robin (Copeland / Condorcet) and STAR (ranks mapped to 0-5 scores) elect the centrist Anderson. The tabulation, not the ballot, decides. (13 of the ~15 methods on LeGrand's calculator elect Anderson.)",
+        "races": _four_races("Center squeeze", _C1_BLOCS, _C1_CANDS),
+        "expected": "IRV & STV -> Carter; Ranked Robin & STAR -> Anderson (the Condorcet winner). Test ID BV2137.",
+    },
+    {
+        "test_id": "BV2138",
+        "title": "One Ranked Electorate, Many Tabulations — the winner depends on the method",
+        "description": "Robert LeGrand's flagship 'the method decides everything' example: 921 voters, five candidates (Abby, Brad, Cora, Dave, Erin), with NO Condorcet winner (a top cycle; Smith set = Abby, Brad, Dave, Erin). Across the ~15 ranked methods on his rbvote calculator the win splits five ways. This election runs the identical ranked ballots through the four tabulations BetterVoting supports: IRV and STV (1 seat) elect Dave; Ranked Robin (Copeland) elects Abby; STAR (ranks mapped to 0-5 scores) elects Brad — three different winners from one electorate. The remaining methods (Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small) add Cora and Erin, and are checked with the pref_voting library and LeGrand's calculator.",
+        "races": _four_races("Method comparison", _C2_BLOCS, _C2_CANDS),
+        "expected": "IRV & STV -> Dave; Ranked Robin -> Abby; STAR -> Brad. Test ID BV2138.",
     },
 ]
 

@@ -1,0 +1,44 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff
+ Tabulating 921 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Abby, Brad, Cora, Dave, Erin
+    98 ×   Abby > Cora > Erin > Dave > Brad      (5, 1, 4, 2, 3)
+    64 ×   Brad > Abby > Erin > Cora > Dave      (4, 5, 2, 1, 3)
+    12 ×   Brad > Abby > Erin > Dave > Cora      (4, 5, 1, 2, 3)
+    98 ×   Brad > Erin > Abby > Cora > Dave      (3, 5, 2, 1, 4)
+    13 ×   Brad > Erin > Abby > Dave > Cora      (3, 5, 1, 2, 4)
+   125 ×   Brad > Erin > Dave > Abby > Cora      (2, 5, 1, 3, 4)
+   124 ×   Cora > Abby > Erin > Dave > Brad      (4, 1, 5, 2, 3)
+    76 ×   Cora > Erin > Abby > Dave > Brad      (3, 1, 5, 2, 4)
+    21 ×   Dave > Abby > Brad > Erin > Cora      (4, 3, 1, 5, 2)
+    30 ×   Dave > Brad > Abby > Erin > Cora      (3, 4, 1, 5, 2)
+    98 ×   Dave > Brad > Erin > Cora > Abby      (1, 4, 2, 5, 3)
+   139 ×   Dave > Cora > Abby > Brad > Erin      (3, 2, 4, 5, 1)
+    23 ×   Dave > Cora > Brad > Abby > Erin      (2, 3, 4, 5, 1)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Brad             312  Hopeful
+Dave             311  Hopeful
+Cora             200  Rejected
+Abby              98  Rejected
+Erin               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Dave             609  Elected
+Brad             312  Rejected
+Cora               0  Rejected
+Abby               0  Rejected
+Erin               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Dave
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

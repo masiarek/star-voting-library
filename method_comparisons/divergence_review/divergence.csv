@@ -94,6 +94,7 @@ CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ad
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,3,34,X,Z,Z,X,X,X,X,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,Y,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,5,921,Brad,Dave,Dave,Abby,Abby,Erin,Abby,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml,3,100,Ada,Ada,Bruno,Cleo,Cleo,Ada,Ada,Cleo,Cleo,25,True,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
@@ -103,6 +104,7 @@ IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_star.yaml,3,27,Center,Left,Left,Center,Center,Left,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml,3,100,Anderson,Carter,Carter,Anderson,Anderson,Anderson,Anderson,Anderson,Anderson,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml,3,22,Cat,Fish,Fish,Cat,Cat,Cat,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml,4,32,Cat,Fish,Fish,Cat,Cat,Bird,Cat,Cat,Cat,0,False,False,False

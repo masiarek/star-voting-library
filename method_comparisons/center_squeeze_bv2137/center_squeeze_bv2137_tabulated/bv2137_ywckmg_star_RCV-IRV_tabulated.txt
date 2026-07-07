@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Reagan, Anderson, Carter
+    45 ×   Reagan > Anderson > Carter      (5, 3, 1)
+    20 ×   Anderson > Carter > Reagan      (1, 5, 3)
+    35 ×   Carter > Anderson > Reagan      (1, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Reagan            45  Hopeful
+Carter            35  Hopeful
+Anderson          20  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Carter            55  Elected
+Reagan            45  Rejected
+Anderson           0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Carter
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

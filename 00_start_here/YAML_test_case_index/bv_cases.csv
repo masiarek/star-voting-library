@@ -38,6 +38,14 @@ BV2134,pets_gov_stv,kcf8vf,STV,3,6,22,"Dog, Bird, Cat",method_comparisons/pets_g
 BV2135,mmp_block_voting,3x4vrv,Plurality,3,6,10,"Ada, Ben, Cal",method_comparisons/multi_member_plurality/mmp_block_voting.yaml,method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md,https://bettervoting.com/3x4vrv/results
 BV2135,mmp_limited_voting,3x4vrv,Plurality,3,6,10,"Ada, Ben, Uma",method_comparisons/multi_member_plurality/mmp_limited_voting.yaml,method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_limited_voting.md,https://bettervoting.com/3x4vrv/results
 BV2136,sntv_village_council,y3tvxm,Plurality,2,3,9,"Priya, Nora",method_comparisons/sntv_village_council/sntv_village_council.yaml,method_comparisons/sntv_village_council/sntv_village_council.md,https://bettervoting.com/y3tvxm/results
+BV2137,bv2137_ywckmg_irv,ywckmg,IRV,1,3,100,Carter,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_irv.yaml,,https://bettervoting.com/ywckmg/results
+BV2137,bv2137_ywckmg_ranked_robin,ywckmg,RankedRobin,1,3,100,Anderson,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml,,https://bettervoting.com/ywckmg/results
+BV2137,bv2137_ywckmg_star,ywckmg,STAR,1,3,100,Anderson,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml,,https://bettervoting.com/ywckmg/results
+BV2137,bv2137_ywckmg_stv,ywckmg,STV,1,3,100,Carter,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml,,https://bettervoting.com/ywckmg/results
+BV2138,bv2138_cxrf8v_irv,cxrf8v,IRV,1,5,921,Dave,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml,,https://bettervoting.com/cxrf8v/results
+BV2138,bv2138_cxrf8v_ranked_robin,cxrf8v,RankedRobin,1,5,921,Abby,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_ranked_robin.yaml,,https://bettervoting.com/cxrf8v/results
+BV2138,bv2138_cxrf8v_star,cxrf8v,STAR,1,5,921,Brad,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,,https://bettervoting.com/cxrf8v/results
+BV2138,bv2138_cxrf8v_stv,cxrf8v,STV,1,5,921,Dave,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml,,https://bettervoting.com/cxrf8v/results
 ,01a_c2_b2_two-candidates,my82v6,STAR,1,2,2,Chocolate,01_STAR/_main/01a_c2_b2_two-candidates.yaml,01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md,https://bettervoting.com/my82v6/results
 ,Runoff_01_confirms_leader_r2pvc9,r2pvc9,STAR,1,3,3,Aspen,01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.yaml,01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md,https://bettervoting.com/r2pvc9/results
 ,Runoff_02_atom_reversal_yx9447,yx9447,STAR,1,3,3,Boston,01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.yaml,01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md,https://bettervoting.com/yx9447/results

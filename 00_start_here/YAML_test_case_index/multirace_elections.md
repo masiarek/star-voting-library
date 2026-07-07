@@ -57,6 +57,28 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Block Voting (as bloc Approval, 3 seats) | Approval | 6 | **Ben, Cal, Ada** |
 | Limited Voting (as bloc Approval, 3 seats) | Approval | 6 | **Ben, Ada, Uma** |
 
+## BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates
+
+**Election** [`ywckmg`](https://bettervoting.com/ywckmg/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Center squeeze — IRV (Hare) | IRV | 3 | **Carter** |
+| Center squeeze — Ranked Robin (Copeland) | RankedRobin | 3 | **Anderson** |
+| Center squeeze — STV, 1 seat (= IRV single-winner) | STV | 3 | **Carter** |
+| Center squeeze — STAR (ranks mapped to 0-5 scores) | STAR | 3 | **Anderson** |
+
+## BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method
+
+**Election** [`cxrf8v`](https://bettervoting.com/cxrf8v/results) · **4 races** · **921 ballots** · [frozen export](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Method comparison — IRV (Hare) | IRV | 5 | **Dave** |
+| Method comparison — Ranked Robin (Copeland) | RankedRobin | 5 | **Brad** |
+| Method comparison — STV, 1 seat (= IRV single-winner) | STV | 5 | **Dave** |
+| Method comparison — STAR (ranks mapped to 0-5 scores) | STAR | 5 | **Brad** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

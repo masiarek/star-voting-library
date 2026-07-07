@@ -4,13 +4,13 @@
 
 Every BV-backed case in this repo (a `bv_test_id:` field, a `bv…` filename, or a frozen `_bv_export.json`). Cases with a real BetterVoting election but no assigned BV number (e.g. the `Runoff_NN` set) appear under their case name. Machine-readable twin: [`bv_cases.csv`](bv_cases.csv) (GitHub sorts CSV columns on click). **The master Google Sheet stays authoritative for the full BV numbering** — it also tracks non-tabulation QA (UI, roles, archive…) that has no YAML here.
 
-**50 cases** · methods: Approval (3), Approval_Multi_Winner (2), Bloc STAR (10), Plurality (9), RCV_IRV (2), RankedRobin (2), STAR (19), STV (1), allocated (2).
+**58 cases** · methods: Approval (3), Approval_Multi_Winner (2), Bloc STAR (10), IRV (2), Plurality (9), RCV_IRV (2), RankedRobin (4), STAR (21), STV (3), allocated (2).
 
 > Multi-race (contested) elections are grouped race-by-race in [multirace_elections.md](multirace_elections.md). For the faceted slice-and-dice over **every** election & race (by ballot type, seat class, character, method, backing), see [CATALOG.md](CATALOG.md).
 
-**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130, BV2130, BV2131, BV2132, BV2132, BV2132, BV2132, BV2133, BV2133, BV2133, BV2133, BV2134, BV2134, BV2134, BV2134, BV2134, BV2134, BV2135, BV2135, BV2136.  (+11 export-backed cases with no BV number.)
+**BV-numbered Test IDs:** BV11, BV15, BV27, BV95a, BV95b, BV126, BV129, BV130, BV130-r2, BV131, BV132, BV135, BV215, BV655, BV750, BV1525, BV1570, BV1815, BV2105, BV2130, BV2130, BV2131, BV2132, BV2132, BV2132, BV2132, BV2133, BV2133, BV2133, BV2133, BV2134, BV2134, BV2134, BV2134, BV2134, BV2134, BV2135, BV2135, BV2136, BV2137, BV2137, BV2137, BV2137, BV2138, BV2138, BV2138, BV2138.  (+11 export-backed cases with no BV number.)
 
-Highest number here is **BV2136** → the next free number above the repo is **BV2137**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
+Highest number here is **BV2138** → the next free number above the repo is **BV2139**. (Numbering is sparse and the master Google Sheet is authoritative for choosing the next number; this list only avoids collisions with existing repo files.)
 
 | Test ID | Case | BV id | Method | W | Cand | Ballots | Winners | Page | YAML |
 |---------|------|-------|--------|:-:|:-:|:-:|---------|------|------|
@@ -53,6 +53,14 @@ Highest number here is **BV2136** → the next free number above the repo is **B
 | BV2135 | mmp_block_voting | [`3x4vrv`](https://bettervoting.com/3x4vrv/results) | Plurality | 3 | 6 | 10 | Ada, Ben, Cal | [page](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md) | [yaml](../../method_comparisons/multi_member_plurality/mmp_block_voting.yaml) |
 | BV2135 | mmp_limited_voting | [`3x4vrv`](https://bettervoting.com/3x4vrv/results) | Plurality | 3 | 6 | 10 | Ada, Ben, Uma | [page](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_limited_voting.md) | [yaml](../../method_comparisons/multi_member_plurality/mmp_limited_voting.yaml) |
 | BV2136 | sntv_village_council | [`y3tvxm`](https://bettervoting.com/y3tvxm/results) | Plurality | 2 | 3 | 9 | Priya, Nora | [page](../../method_comparisons/sntv_village_council/sntv_village_council.md) | [yaml](../../method_comparisons/sntv_village_council/sntv_village_council.yaml) |
+| BV2137 | bv2137_ywckmg_irv | [`ywckmg`](https://bettervoting.com/ywckmg/results) | IRV | 1 | 3 | 100 | Carter | — | [yaml](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_irv.yaml) |
+| BV2137 | bv2137_ywckmg_ranked_robin | [`ywckmg`](https://bettervoting.com/ywckmg/results) | RankedRobin | 1 | 3 | 100 | Anderson | — | [yaml](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml) |
+| BV2137 | bv2137_ywckmg_star | [`ywckmg`](https://bettervoting.com/ywckmg/results) | STAR | 1 | 3 | 100 | Anderson | — | [yaml](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml) |
+| BV2137 | bv2137_ywckmg_stv | [`ywckmg`](https://bettervoting.com/ywckmg/results) | STV | 1 | 3 | 100 | Carter | — | [yaml](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml) |
+| BV2138 | bv2138_cxrf8v_irv | [`cxrf8v`](https://bettervoting.com/cxrf8v/results) | IRV | 1 | 5 | 921 | Dave | — | [yaml](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) |
+| BV2138 | bv2138_cxrf8v_ranked_robin | [`cxrf8v`](https://bettervoting.com/cxrf8v/results) | RankedRobin | 1 | 5 | 921 | Abby | — | [yaml](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_ranked_robin.yaml) |
+| BV2138 | bv2138_cxrf8v_star | [`cxrf8v`](https://bettervoting.com/cxrf8v/results) | STAR | 1 | 5 | 921 | Brad | — | [yaml](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml) |
+| BV2138 | bv2138_cxrf8v_stv | [`cxrf8v`](https://bettervoting.com/cxrf8v/results) | STV | 1 | 5 | 921 | Dave | — | [yaml](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml) |
 | — | 01a_c2_b2_two-candidates | [`my82v6`](https://bettervoting.com/my82v6/results) | STAR | 1 | 2 | 2 | Chocolate | [page](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) | [yaml](../../01_STAR/_main/01a_c2_b2_two-candidates.yaml) |
 | — | Runoff_01_confirms_leader_r2pvc9 | [`r2pvc9`](https://bettervoting.com/r2pvc9/results) | STAR | 1 | 3 | 3 | Aspen | [page](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.yaml) |
 | — | Runoff_02_atom_reversal_yx9447 | [`yx9447`](https://bettervoting.com/yx9447/results) | STAR | 1 | 3 | 3 | Boston | [page](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md) | [yaml](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.yaml) |

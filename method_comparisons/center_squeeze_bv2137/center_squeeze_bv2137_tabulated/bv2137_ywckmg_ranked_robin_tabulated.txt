@@ -1,0 +1,30 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 100 ballots (ranked ballots).
+
+Ballots:
+    45 × Reagan > Anderson > Carter
+    20 × Anderson > Carter > Reagan
+    35 × Carter > Anderson > Reagan
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Anderson  beats Reagan     55 – 45
+   Carter    beats Reagan     55 – 45
+   Anderson  beats Carter     65 – 35
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+             |    Reagan    |  Anderson   |   Carter    |
+---------------------------------------------------------
+    Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
+  Anderson > | 55 -  0 - 45 |    ---      |65 -  0 - 35 |
+    Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Anderson   2–0–0         2     +40  Carter, Reagan
+    2  Carter     1–1–0         1     -20  Reagan
+    3  Reagan     0–2–0         0     -20  —
+
+Winner — Ranked Robin (RCV-RR): Anderson
+   beats every opponent head-to-head — the Condorcet winner.

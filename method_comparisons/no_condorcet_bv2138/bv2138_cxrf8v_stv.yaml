@@ -1,0 +1,35 @@
+election_title: "No Condorcet Winner — STV (1 seat = IRV single-winner): Dave"
+scenario_description: |-
+  One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Single-seat STV = IRV → Dave.
+bv_test_id: BV2138
+bv_election_id: cxrf8v
+bv_results_url: https://bettervoting.com/cxrf8v/results
+voting_method: STV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  98:Abby>Cora>Erin>Dave>Brad
+  64:Brad>Abby>Erin>Cora>Dave
+  12:Brad>Abby>Erin>Dave>Cora
+  98:Brad>Erin>Abby>Cora>Dave
+  13:Brad>Erin>Abby>Dave>Cora
+  125:Brad>Erin>Dave>Abby>Cora
+  124:Cora>Abby>Erin>Dave>Brad
+  76:Cora>Erin>Abby>Dave>Brad
+  21:Dave>Abby>Brad>Erin>Cora
+  30:Dave>Brad>Abby>Erin>Cora
+  98:Dave>Brad>Erin>Cora>Abby
+  139:Dave>Cora>Abby>Brad>Erin
+  23:Dave>Cora>Brad>Abby>Erin
+expected_winners:
+  - Dave

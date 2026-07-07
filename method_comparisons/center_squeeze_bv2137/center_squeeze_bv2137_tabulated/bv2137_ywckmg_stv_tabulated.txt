@@ -1,0 +1,58 @@
+======================================================================
+SOURCE FILE:     bv2137_ywckmg_stv.yaml
+SOURCE MODIFIED: 2026-07-06 22:17:50
+TABULATED FILE:  bv2137_ywckmg_stv_tabulated.txt
+TABULATED AT:    2026-07-06 22:17:50
+======================================================================
+
+election_title: "Center Squeeze — STV (1 seat = IRV single-winner): same squeeze"
+scenario_description: |-
+  One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confirmed). 100 voters, three candidates, ONE ranked electorate tabulated four ways. Anderson is the Condorcet winner (beats Reagan 55–45, Carter 65–35) but holds the fewest first-choices (20). Single-seat STV is IRV: Anderson eliminated first, Carter wins. STV → Carter.
+bv_test_id: BV2137
+bv_election_id: ywckmg
+bv_results_url: https://bettervoting.com/ywckmg/results
+voting_method: STV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  45:Reagan>Anderson>Carter
+  20:Anderson>Carter>Reagan
+  35:Carter>Anderson>Reagan
+expected_winners:
+  - Carter
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Center Squeeze — STV (1 seat = IRV single-winner): same squeeze
+ Tabulating 100 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Reagan            45  Hopeful
+Carter            35  Hopeful
+Anderson          20  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Carter            55  Elected
+Reagan            45  Rejected
+Anderson           0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Carter
