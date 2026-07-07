@@ -1,0 +1,11 @@
+--- SNTV (single non-transferable vote) — 2 winners ---
+ Tabulating 9 ballots (1 vote/voter).
+
+First-choice votes (most votes fill the seats):
+   Priya     4  <- Elected
+   Nora      3  <- Elected
+   Omar      2
+
+Winners — SNTV (single non-transferable vote), 2 seats:
+   1. Priya   (4 votes)
+   2. Nora   (3 votes)

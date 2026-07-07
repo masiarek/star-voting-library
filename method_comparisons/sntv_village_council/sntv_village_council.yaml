@@ -1,0 +1,35 @@
+election_title: "Village Council by SNTV — a concentrated minority wins a seat"
+scenario_description: |-
+  Nine residents elect a 2-seat Village Council under SNTV (single non-transferable
+  vote): each voter casts ONE vote, and the two candidates with the most votes win.
+
+  The Downtown majority (5 voters) SPLITS between its two candidates — Nora (3) and
+  Omar (2). The Riverside minority (4 voters) CONCENTRATES all its votes on Priya.
+  So Priya tops the poll with 4 and takes a seat next to Nora (3); Omar (2) just
+  misses. Under Block Voting the 5-voter majority would take BOTH seats — SNTV's
+  single vote is exactly what lets a 44% minority (4 of 9) win representation, if it
+  concentrates. That vote-management pressure is why SNTV was used for multi-member
+  districts (Japan, Taiwan) before STV.
+
+  Reproduced on BetterVoting as multi-winner Plurality (BV2136) — BV elects the same
+  two. Companion: the full Block / Limited / SNTV family in
+  method_comparisons/multi_member_plurality.
+bv_test_id: BV2136
+bv_election_id: y3tvxm
+bv_results_url: https://bettervoting.com/y3tvxm/results
+voting_method: Plurality
+num_winners: 2
+lot_numbers: [Nora, Omar, Priya]
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Nora,Omar,Priya
+  3: 1,0,0
+  2: 0,1,0
+  4: 0,0,1
+expected_winners:
+  - Priya
+  - Nora
+
+# file: sntv_village_council.yaml

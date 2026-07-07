@@ -144,6 +144,7 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 #   BV2132 — Pet poll (4 methods, THREE winners)        -> ykjjhy   (multi-race; backs method_comparisons/pet_poll_four_methods)
 #   BV2133 — Pet poll II (4 methods, FOUR winners)       -> dyxrbr   (multi-race; backs method_comparisons/pet_poll_four_winners)
 #   BV2134 — Pets Governance (6 methods, 6 positions)     -> kcf8vf   (multi-race; backs method_comparisons/pets_governance)
+#   BV2135 — Block & Limited voting (as bloc Approval)     -> 3x4vrv   (backs method_comparisons/multi_member_plurality)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -153,37 +154,29 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
 
-# --- BV2135 — Block & Limited voting reproduced as bloc Approval ---------------
-# Proves the equivalence: the multi-member plurality family (Block / Limited /
-# SNTV) is just "mark k candidates, top N win", which is exactly BV's multi-winner
-# Approval. Same 60/40 electorate as method_comparisons/multi_member_plurality
-# (6-voter Home majority: Ada, Ben, Cal; 4-voter Away minority: Uma, Val, Wren; 3
-# seats). Both races are Approval + num_winners:3; only the number of marks differs:
-#   Block   (approve full slate of 3) -> Ada, Ben, Cal   (majority sweeps 3-0)
-#   Limited (approve up to 2; Away bullets Uma) -> Ada, Ben, Uma  (2-1)
-# BV should elect exactly what LH's Plurality-family cases do — that's the point.
-_MMP_CANDS = ["Ada", "Ben", "Cal", "Uma", "Val", "Wren"]
-_MMP_BLOCS = [
-    # count, block (approve 3),      limited (approve <=2)
-    (6, [1, 1, 1, 0, 0, 0], [1, 1, 0, 0, 0, 0]),   # Home majority
-    (4, [0, 0, 0, 1, 1, 1], [0, 0, 0, 1, 0, 0]),   # Away minority (bullets Uma under Limited)
-]
-def _mmp(k):
-    return [rows[k] for n, *rows in _MMP_BLOCS for _ in range(n)]
-_MMP_BLOCK, _MMP_LIMITED = _mmp(0), _mmp(1)
+# --- BV2136 — Village Council by SNTV: a concentrated minority wins a seat ------
+# A clean, standalone SNTV showcase (the property, minus the governance noise).
+# 9 voters elect a 2-seat Village Council under SNTV (one vote each, top 2 win).
+# The Downtown majority (5) SPLITS its votes between Nora (3) and Omar (2); the
+# Riverside minority (4) CONCENTRATES all its votes on Priya. So Priya tops the
+# poll (4) and takes a seat alongside Nora (3); Omar (2) misses. Under block voting
+# the 5-voter majority would take both seats — SNTV's single vote is what lets the
+# 44% minority earn representation by concentrating. On BV: Plurality + num_winners.
+_SNTV_CANDS = ["Nora", "Omar", "Priya"]
+_SNTV_BALLOTS = ([[1, 0, 0]] * 3      # Downtown -> Nora
+                 + [[0, 1, 0]] * 2    # Downtown -> Omar
+                 + [[0, 0, 1]] * 4)   # Riverside -> Priya (concentrated)
 
 ELECTIONS = [
     {
-        "test_id": "BV2135",
-        "title": "Block & Limited voting, reproduced as bloc Approval",
-        "description": "Demonstrates that Block Voting and Limited Voting (the multi-member plurality family) are just multi-winner Approval with a different number of marks per voter. One 60/40 electorate, 3 seats, 6 candidates (Home: Ada, Ben, Cal; Away: Uma, Val, Wren). Block = each voter approves a full 3-candidate slate -> the majority sweeps (Ada, Ben, Cal). Limited = each voter approves up to 2, with the minority concentrating on Uma -> a 2-1 split (Ada, Ben, Uma). Same ballots and winners as the LH Plurality-family cases in method_comparisons/multi_member_plurality, tabulated by BV as Approval.",
-        "races": [
-            {"title": "Block Voting (as bloc Approval, 3 seats)", "method": "Approval",
-             "num_winners": 3, "candidates": _MMP_CANDS, "ballots": _MMP_BLOCK},
-            {"title": "Limited Voting (as bloc Approval, 3 seats)", "method": "Approval",
-             "num_winners": 3, "candidates": _MMP_CANDS, "ballots": _MMP_LIMITED},
-        ],
-        "expected": "Block: Ada,Ben,Cal (majority sweep) ; Limited: Ada,Ben,Uma (2-1).  Test ID BV2135.",
+        "test_id": "BV2136",
+        "title": "Village Council by SNTV — a concentrated minority wins a seat",
+        "description": "Nine residents elect a 2-seat Village Council under SNTV (single non-transferable vote — one vote each, the top two win). The Downtown majority (5 voters) splits between Nora (3) and Omar (2); the Riverside minority (4 voters) concentrates all its votes on Priya. Priya tops the poll with 4 and wins a seat next to Nora (3); Omar (2) just misses. Under block voting the majority would take both seats — SNTV's single vote is what lets a 44% minority win representation by concentrating. Reproduced on BetterVoting as multi-winner Plurality.",
+        "method": "Plurality",
+        "num_winners": 2,
+        "candidates": _SNTV_CANDS,
+        "ballots": _SNTV_BALLOTS,
+        "expected": "Priya (4), Nora (3) win; Omar (2) misses.  Test ID BV2136.",
     },
 ]
 
