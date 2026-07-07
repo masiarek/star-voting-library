@@ -286,7 +286,8 @@ def _dense_rank_rows(levels_blocs, cands):
     return rows
 
 
-ELECTIONS = [
+# Already created -> bettervoting.com/48hjkv. Kept for reference; not re-run.
+_CREATED_BV2140 = [
     {
         "test_id": "BV2140",
         "title": "Ranked Robin worked example — most pairwise wins, with no Condorcet winner",
@@ -297,6 +298,50 @@ ELECTIONS = [
         "candidates": _C3_CANDS,
         "ballots": _dense_rank_rows(_C3_LEVELS, _C3_CANDS),
         "expected": "Ranked Robin -> Ava (3 pairwise wins; NO Condorcet winner — Ava loses to Bianca 15-14). Test ID BV2140.",
+    },
+]
+
+
+# --- BV2141 — electowiki RR "all 4 tiebreak degrees" example (TIE-DECIDING) ------
+# electowiki.org/wiki/Ranked_Robin. 81 voters, 6 candidates, EQUAL ranks + PARTIAL
+# ballots (unranked = tied for last). Ava and Bianca TIE for most wins (3 each),
+# both +55 margin, both 149 against — the Equal-Vote 4-degree protocol elects
+# Bianca via beatpath (14 vs 7). CAUTION: this is a tie-deciding case. Ava vs
+# Bianca head-to-head is 29-29 (a tie), so BV's ladder (wins -> 2-way head-to-head
+# -> RANDOM) cannot separate them and picks at RANDOM — it does NOT run the higher
+# degrees. The BV winner is therefore non-deterministic and NOT freezable; this
+# election is a live probe of what BV actually does. Title claims no winner on
+# purpose. (Row totals verified == electowiki's 204/204/167/175/169/150; note
+# electowiki's printed cell values for Ava/Bianca over Cedric/Deegan/Eli are each
+# 4 low and don't sum to its own row totals — a display error, outcome unaffected.)
+_C4_CANDS = ["Ava", "Bianca", "Cedric", "Deegan", "Eli", "Fabio"]
+_C4_LEVELS = [
+    (10, [["Eli"], ["Deegan"], ["Ava", "Cedric"], ["Fabio"]]),
+    (9,  [["Bianca", "Deegan"], ["Eli"], ["Cedric"]]),
+    (8,  [["Deegan"], ["Eli"], ["Ava", "Bianca", "Cedric"]]),
+    (8,  [["Bianca"], ["Ava"], ["Fabio"], ["Cedric"]]),
+    (8,  [["Fabio"], ["Cedric"], ["Ava"], ["Deegan"], ["Bianca"]]),
+    (7,  [["Ava"], ["Eli"], ["Bianca"], ["Fabio"]]),
+    (6,  [["Fabio"], ["Bianca", "Cedric"], ["Ava"]]),
+    (6,  [["Cedric"], ["Deegan", "Eli"], ["Ava", "Bianca"], ["Fabio"]]),
+    (5,  [["Deegan"], ["Ava", "Bianca"], ["Eli"], ["Cedric"]]),
+    (4,  [["Cedric"], ["Bianca"], ["Ava"]]),
+    (4,  [["Ava"], ["Bianca", "Fabio"]]),
+    (4,  [["Ava", "Bianca"], ["Fabio"]]),
+    (2,  [["Bianca", "Fabio"], ["Ava", "Eli"]]),
+]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2141",
+        "title": "Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees",
+        "description": "The electowiki Ranked Robin 'all four tie-breaking degrees' example (electowiki.org/wiki/Ranked_Robin). 81 voters, six candidates (Ava, Bianca, Cedric, Deegan, Eli, Fabio) on ranked ballots with equal rankings and partial (truncated) ballots. Ava and Bianca TIE for the most pairwise wins (3 each); they also tie on total win margin (+55) and on votes-against (149). The Equal Vote Coalition's 4-degree tiebreak protocol resolves it to Bianca via a beatpath comparison. But Ava vs Bianca head-to-head is itself a 29-29 tie, so any engine that breaks a 2-way tie by head-to-head alone cannot separate them. This election is a live test of how BetterVoting's Ranked Robin tabulator resolves a genuine tie-of-ties.",
+        "method": "RankedRobin",
+        "num_winners": 1,
+        "max_rankings": len(_C4_CANDS),
+        "candidates": _C4_CANDS,
+        "ballots": _dense_rank_rows(_C4_LEVELS, _C4_CANDS),
+        "expected": "Copeland TIE: Ava & Bianca both 3 wins, +55 margin, 149 against. Equal-Vote 4-degree protocol -> Bianca (beatpath 14 vs 7). Ava vs Bianca head-to-head is 29-29, so a wins->head-to-head->random engine (BV) picks at RANDOM — non-deterministic, not freezable. Test ID BV2141.",
     },
 ]
 

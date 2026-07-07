@@ -10,6 +10,7 @@ ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-rac
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
+3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
 3yr2qd,Block STAR,1,single-race,3,STAR,BV
 48hjkv,"BV2140 — Ranked Robin worked example — most pairwise wins, with no Condorcet winner",1,single-race,35,RankedRobin,BV

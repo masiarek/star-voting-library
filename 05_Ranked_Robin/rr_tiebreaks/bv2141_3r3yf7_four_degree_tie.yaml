@@ -1,0 +1,55 @@
+election_title: "BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees (electowiki)"
+election_description: >-
+  The electowiki Ranked Robin "all four tie-breaking degrees" example
+  (electowiki.org/wiki/Ranked_Robin). 81 voters, six candidates, with equal
+  rankings and partial (truncated) ballots. Ava and Bianca TIE for the most
+  pairwise wins (3 each), and they also tie on total win margin (+55) AND on
+  votes-against (149) — so the first three degrees of the Equal Vote Coalition's
+  Ranked Robin tiebreak protocol all fail to separate them. Only the 4th-degree
+  beatpath comparison resolves it, to Bianca (14 vs 7). Neither engine here
+  implements that 4-degree protocol: LH breaks the (wins, then margin) tie by
+  pre-published lot, and BetterVoting breaks it at RANDOM — its results log even
+  says so: "Ava picked in random tie-breaker, more robust tiebreaker not yet
+  implemented." This file pins lot_numbers to BV's recorded random order (perm)
+  so LH reproduces BV's frozen instance (Ava). A re-tally on BV could elect
+  Bianca instead. See 00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md.
+  Live results: https://bettervoting.com/3r3yf7/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these.
+bv_test_id: BV2141
+bv_election_id: 3r3yf7
+bv_results_url: https://bettervoting.com/3r3yf7/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# Pinned to BetterVoting's recorded random perm [Fabio, Eli, Cedric, Deegan, Ava,
+# Bianca] so LH's lot rung reproduces BV's frozen instance: Ava precedes Bianca ->
+# Ava. (BV's tieBreakType was "random"; this pins the one draw we froze.)
+lot_numbers: [Fabio, Eli, Cedric, Deegan, Ava, Bianca]
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+# Records: Ava 3-1-1 and Bianca 3-1-1 both tie at Copeland 3.5, both +55 margin,
+#   both 149 against. Cedric/Deegan 2.5, Eli 2, Fabio 1. LH ladder: wins tie ->
+#   margin tie -> lot (perm) -> Ava. BV: random -> Ava (this draw). Equal-Vote
+#   4-degree protocol -> Bianca (beatpath 14 vs 7). Companion: dead_heat_lot_tiebreak.
+# Lesson: 00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md
+ballots: |-
+  10:Eli>Deegan>Ava=Cedric>Fabio
+  9:Bianca=Deegan>Eli>Cedric
+  8:Deegan>Eli>Ava=Bianca=Cedric
+  8:Bianca>Ava>Fabio>Cedric
+  8:Fabio>Cedric>Ava>Deegan>Bianca
+  7:Ava>Eli>Bianca>Fabio
+  6:Fabio>Bianca=Cedric>Ava
+  6:Cedric>Deegan=Eli>Ava=Bianca>Fabio
+  5:Deegan>Ava=Bianca>Eli>Cedric
+  4:Cedric>Bianca>Ava
+  4:Ava>Bianca=Fabio
+  4:Ava=Bianca>Fabio
+  2:Bianca=Fabio>Ava=Eli
+
+expected_winners:
+  - Ava
+
+# file: bv2141_3r3yf7_four_degree_tie.yaml
