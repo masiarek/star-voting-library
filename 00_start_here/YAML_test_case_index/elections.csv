@@ -121,6 +121,9 @@ LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,sing
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
+LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
+LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
+LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
 LH:star_ala_approval,STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot,1,single-race,8,STAR,LH-only
 LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals add up),1,single-race,6,STAR,LH-only

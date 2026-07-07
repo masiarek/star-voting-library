@@ -1,0 +1,20 @@
+election_title: "Summability demo — District B, counted by Ranked Robin"
+scenario_description: |-
+  District B of the two-district summability demo, counted by Ranked Robin.
+  Same ranked ballots as irv_district_B. B again beats both A and C head-to-head
+  (the Condorcet winner). Its pairwise matrix ADDS to District A's to give the
+  combined result (rr_combined) — no ballot pooling required.
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  6:C
+  4:B
+  3:A>B>C
+expected_winners:
+  - B

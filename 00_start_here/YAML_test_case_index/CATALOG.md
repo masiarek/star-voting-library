@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 167 elections, 188 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 170 elections, 191 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -137,6 +137,9 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | quorum_fail_demo_c3_b6 | Quorum FAILS — won the count, but not elected | 1 | single-race | 6 | STAR | LH-only |
 | range_101_c3_b5 | Range / Score Voting 101 — highest total score wins | 1 | single-race | 5 | Range | LH-only |
 | ranked_robin_consensus_center | Ranked Robin (RCV-RR) — the consensus center wins th | 1 | single-race | 13 | RankedRobin | LH-only |
+| rr_combined | Summability demo — Combined (A+B), counted by Ranked | 1 | single-race | 26 | RankedRobin | LH-only |
+| rr_district_A | Summability demo — District A, counted by Ranked Rob | 1 | single-race | 13 | RankedRobin | LH-only |
+| rr_district_B | Summability demo — District B, counted by Ranked Rob | 1 | single-race | 13 | RankedRobin | LH-only |
 | rrv_sample_c15_b13_three-parties | RRV sample as single-winner STAR — three parties (Pu | 1 | single-race | 13 | STAR | LH-only |
 | star_ala_approval | STAR à la Approval — 0/1 & marker ballots are legal  | 1 | single-race | 8 | STAR | LH-only |
 | star_combined | Summability demo — STAR combined A+B (Oak; precinct  | 1 | single-race | 6 | STAR | LH-only |
@@ -193,7 +196,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 158 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| single-race | 161 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | contested (multi-race) | 30 | 3x4vrv, bvhchj, cxrf8v, dyxrbr |
 
 ### By seat class
@@ -202,7 +205,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | seat class | # races | example elections |
 |---|--:|---|
-| single-winner | 153 | 00_plurality_vs_majority, 01_condorcet_winner, 01_political_left_split, 01a_c2_b1_two-candidates |
+| single-winner | 156 | 00_plurality_vs_majority, 01_condorcet_winner, 01_political_left_split, 01a_c2_b1_two-candidates |
 | multi-winner | 35 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss |
 
 ### By ballot type
@@ -212,7 +215,7 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 | ballot type | # races | example elections |
 |---|--:|---|
 | score | 139 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
-| ranked | 29 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 03a_stv_3seats |
+| ranked | 32 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 03a_stv_3seats |
 | choose-one | 11 | 3x4vrv, 4h89vj, 6hv7jf, BV_Library_plurality_single_winner |
 | approval | 9 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
 
@@ -224,7 +227,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 |---|--:|---|
 | majoritarian | 162 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
 | proportional | 15 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
-| Condorcet | 11 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
+| Condorcet | 14 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
 
 ### By method (family)
 
@@ -233,10 +236,10 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | method (family) | # races | example elections |
 |---|--:|---|
 | STAR | 127 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_political_left_split |
+| RankedRobin | 14 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
 | IRV | 14 | RCV_ballot_example, Whoops_04_ossipoff_centrist_irv, Whoops_05_brams_many_pathologies_irv, center_squeeze_irv |
 | Plurality | 11 | 3x4vrv, 4h89vj, 6hv7jf, BV_Library_plurality_single_winner |
 | STAR_PR | 11 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03b_star_pr_3seats |
-| RankedRobin | 11 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, BV_Library_ranked_robin_single_winner |
 | Approval | 9 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
 | STV | 4 | 03a_stv_3seats, cxrf8v, kcf8vf, ywckmg |
 | Range | 1 | range_101_c3_b5 |
@@ -247,7 +250,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 127 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| LH-only | 130 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV | 58 | 26khr3, 3494cb, 3w6v4b, 3x4vrv |
 | BV (no yaml) | 2 | jfk7pd, jfrk9t |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |

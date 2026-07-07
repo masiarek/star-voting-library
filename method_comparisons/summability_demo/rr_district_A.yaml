@@ -1,0 +1,22 @@
+election_title: "Summability demo — District A, counted by Ranked Robin"
+scenario_description: |-
+  District A of the two-district summability demo, counted by Ranked Robin
+  (RCV-RR / Copeland) instead of IRV. Same ranked ballots as irv_district_A.
+  The summable artifact is the pairwise (For–Against–Equal) matrix: B beats both
+  A and C, so B is the Condorcet winner here. Combine with rr_district_B by
+  ADDING the matrices cell-by-cell (see rr_combined) — the sum recovers the true
+  winner without pooling ballots, the summability property IRV's count lacks.
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  6:A
+  4:B
+  3:C>B>A
+expected_winners:
+  - B

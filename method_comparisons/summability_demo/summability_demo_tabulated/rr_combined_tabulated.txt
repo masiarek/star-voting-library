@@ -1,0 +1,32 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 26 ballots (ranked ballots).
+
+Ballots:
+     6 × A
+     8 × B
+     3 × C > B > A
+     6 × C
+     3 × A > B > C
+
+Round-Robin — every pair, head-to-head (For – Against):
+   B  beats A   11 –  9
+   A  ties  C    9 –  9
+   B  beats C   11 –  9
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |
+--------------------------------------------------
+  A > |     ---      | 9 -  6 - 11 | 9 -  8 -  9 |
+  B > | 11 -  6 -  9 |    ---      |11 -  6 -  9 |
+  C > |  9 -  8 -  9 | 9 -  6 - 11 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  B          2–0–0         2      +4  A, C
+    2  A          0–1–1       0.5      -2  —
+    3  C          0–1–1       0.5      -2  —
+
+Winner — Ranked Robin (RCV-RR): B
+   beats every opponent head-to-head — the Condorcet winner.

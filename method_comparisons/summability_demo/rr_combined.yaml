@@ -1,0 +1,26 @@
+election_title: "Summability demo — Combined (A+B), counted by Ranked Robin"
+scenario_description: |-
+  The two districts merged, counted by Ranked Robin. These are the SAME ranked
+  ballots IRV could not combine (under IRV, B wins both districts yet is
+  eliminated when merged — see irv_combined). Ranked Robin's pairwise matrix is
+  summable: District A's matrix + District B's matrix EQUALS this combined matrix
+  cell-by-cell, and from it B beats A (11–9) and C (11–9) → B is the Condorcet
+  winner. The candidate who won both districts wins the merge, reached by adding
+  precinct tables, never pooling ballots.
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  6:A
+  4:B
+  3:C>B>A
+  6:C
+  4:B
+  3:A>B>C
+expected_winners:
+  - B
