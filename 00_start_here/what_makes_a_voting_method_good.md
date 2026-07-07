@@ -2,7 +2,7 @@
 
 *Picking a good **winner** (see [What makes a good winner?](what_makes_a_good_winner.md)) is only half of choosing a voting method. The other half is everything around the tally: can voters use it, can citizens verify it, does it invite honest voting and real competition, is it practical to run? This page lays out those criteria — and the reason there's no clean answer: **a perfect election system will never exist**, so a good method is one that **balances** these against each other.*
 
-→ **Level: Voting 201–301.** Companion: [What makes a good winner?](what_makes_a_good_winner.md).
+→ **Level: Voting 201** — Curriculum [201.6](CURRICULUM.md) (deeper theory at 301). Companion: [What makes a good winner?](what_makes_a_good_winner.md).
 
 ## "A perfect election system will never exist"
 

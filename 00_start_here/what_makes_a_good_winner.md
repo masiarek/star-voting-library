@@ -2,7 +2,7 @@
 
 *When we say a voting method "gets it right" or "elects the wrong winner," what do we actually mean? There is no single **correct** winner handed down from on high — "good winner" is a **design choice** about what we value. This page lays out the competing ideals, shows them disagreeing on real elections in this repo, and pins down the vocabulary (consensus candidate, strong candidate, utilitarian winner) so the rest of the docs can use it precisely.*
 
-→ **Level: Voting 201–301.** Related topic hubs: [Condorcet efficiency](topics/condorcet/) · [Center squeeze](topics/center_squeeze/) · [Majority criterion](topics/majority_criterion/) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
+→ **Level: Voting 201** — Curriculum [201.6](CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](topics/condorcet/) · [Center squeeze](topics/center_squeeze/) · [Majority criterion](topics/majority_criterion/) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
 
 ## The trap: "the winner should have won"
 

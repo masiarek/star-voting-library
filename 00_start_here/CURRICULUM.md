@@ -81,6 +81,12 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Emphasize:** a cohesive majority can sweep all seats — which motivates 301's proportional methods.
 - **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](Approval_Voting/abc_rules_intro.md) — counting-only walkthrough of AV vs "cover everyone" (CC) vs proportional, on Lackner & Skowron's steering-committee example. No math beyond addition; motivates why multi-winner has several right answers.
 
+## 201.6 — What are we optimizing for? (good winner, good method)
+- **Objective:** Before comparing methods, name the competing ideals of a "good winner" and the criteria of a "good method" — and see there is no single ideal.
+- **Key terms:** consensus / Condorcet winner, majoritarian vs. utilitarian winner, representative outcome, VSE, strategy-resistance, summability, "a perfect system will never exist."
+- **Pages:** [What makes a good winner?](what_makes_a_good_winner.md) (four ideals; majoritarian-vs-utilitarian with the fruit example; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](what_makes_a_voting_method_good.md) (criteria beyond the winner; "where reasonable people disagree").
+- **Emphasize:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301** — 301.6 walks a concrete disagreement and 301.9 covers how the simulations are built.
+
 ---
 
 # Voting 301 — Advanced (proportional, criteria, debate theory)
@@ -135,6 +141,12 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
 - **Material:** [Scale granularity can flip the winner (a 301 case)](scores_and_ranks/scale_granularity_flips_the_winner.md); case `01_Single_winner/_main/rrv_sample_c15_b13_three-parties.yaml` (BetterVoting's RRV sample run as single-winner STAR: 0–5 → Orange5, 0–9 → Orange1).
 - **Emphasize:** a *fragile, mapping-dependent* divergence (a 2nd-place tie on one scale, a one-point gap on the other) — present both counts, never quote one. Builds on Black Curtain #5 and the report-your-assumptions habit of 301.6.
+
+## 301.9 — How the simulations are built (VSE's foundation)
+- **Objective:** Understand the models that generate synthetic electorates for VSE / Bayesian-Regret studies — and why every simulation result is conditional on the model.
+- **Key terms:** Impartial Culture (IC) / Impartial Anonymous Culture (IAC), spatial model, Euclidean distance, utility-from-distance, Mallows (Kendall-Tau, φ), Plackett-Luce, Pólya urn, Yee diagram.
+- **Page:** [Election simulation models](election_simulation_models.md) — the neutral menu (noise models vs. spatial), the math prerequisites, and the standing caveat (IC over-produces near-ties, spatial suppresses cycles, hierarchical-cluster sits in between) — with the IC-vs-IAC cycle-rate correction.
+- **Emphasize:** pairs with 301.6's habit — *never quote a rate without the model*; and with 201.6's VSE overview. Our repo's hand-crafted cases are the complementary "how it fails, concretely" end.
 
 ---
 
