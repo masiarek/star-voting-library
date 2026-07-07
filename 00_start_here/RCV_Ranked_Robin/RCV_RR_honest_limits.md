@@ -22,6 +22,10 @@ Like STAR and Approval, RCV-RR fails Later-No-Harm — ranking a later choice ca
 
 "Add the stars" (STAR/Score) or "most approvals" (Approval) is a one-sentence tally. A **pairwise matrix** — every candidate against every other — plus cycle-handling is more to show a general audience, even though it's fully **summable and auditable**. Simplicity of *explanation* is a real adoption cost.
 
+## 5. Clone independence — teaming (a narrow, tiebreak-specific failure)
+
+RR **passes** vote-splitting (crowding) clone independence — because it counts head-to-head wins, cloning a candidate can't make that candidate lose. But it can fail **teaming** (running clones of *yourself*) in the one situation where there's **no Condorcet winner** and the winner turns on a **margin** tiebreak: a faction can field clones to reshape the margins and crowd a rival out of the top tier. Worth knowing, easy to overstate — and note it's implementation-dependent: an engine that breaks a 2-way tie by head-to-head (BetterVoting) resists the same attack that a margin tiebreak (LH / the Equal Vote protocol) succumbs to. Worked example: [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md).
+
 ## Keep it in perspective
 
 RCV-RR's strengths are exactly why it's worth taking seriously: it passes the **Equal Vote**, reads **every** rank (nothing exhausts), allows equal ranks, and avoids RCV-IRV's center squeeze and non-monotonicity. Its limits — cycles and blindness to intensity — are the genuine cost of a ranked, consensus-first count. Every method trades something away (Arrow, Gibbard); the fair question is which tradeoffs you want, laid out for all four methods on the companion pages above.

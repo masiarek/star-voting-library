@@ -1,0 +1,34 @@
+election_title: "BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak"
+election_description: >-
+  The electowiki clone-independence example, part 1 (before cloning), BV-backed.
+  33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The
+  engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C
+  is lower (+95) — so LH drops C and coin-flips A/B by lot (this file pins A). But
+  BetterVoting has no margin rung for a 3-way tie: it picks at RANDOM among A, B,
+  C, and its log says so ("C picked in random tie-breaker, more robust tiebreaker
+  not yet implemented") — this draw elected C, a candidate LH's margin rung would
+  eliminate. Part 2 (BV2143) adds the clones. LH-only clean pair:
+  clone_teaming_01_pre.yaml. Lesson:
+  00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+  Live results: https://bettervoting.com/4gfwdq/results
+bv_test_id: BV2142
+bv_election_id: 4gfwdq
+bv_results_url: https://bettervoting.com/4gfwdq/results
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [A, B, C, D, E, F]
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+# A,B,C cycle, tie at 4 wins. Margins A +101, B +101, C +95. LH: margin drops C,
+#   lot -> A. BV: 3-way tie -> RANDOM -> C (this draw). LH can't elect C (lowest
+#   margin) -> a genuine LH/BV divergence, not just a different lot.
+ballots: |-
+  12:A>B>C>D>E>F
+  11:B>C>A>D>E>F
+  10:C>A>B>D>E>F
+
+expected_winners:
+  - A
+
+# file: bv2142_4gfwdq_clone_cycle_pre.yaml

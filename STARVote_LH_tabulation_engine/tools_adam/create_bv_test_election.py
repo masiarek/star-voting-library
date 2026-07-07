@@ -331,7 +331,8 @@ _C4_LEVELS = [
     (2,  [["Bianca", "Fabio"], ["Ava", "Eli"]]),
 ]
 
-ELECTIONS = [
+# Already created -> bettervoting.com/3r3yf7. Kept for reference; not re-run.
+_CREATED_BV2141 = [
     {
         "test_id": "BV2141",
         "title": "Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees",
@@ -342,6 +343,56 @@ ELECTIONS = [
         "candidates": _C4_CANDS,
         "ballots": _dense_rank_rows(_C4_LEVELS, _C4_CANDS),
         "expected": "Copeland TIE: Ava & Bianca both 3 wins, +55 margin, 149 against. Equal-Vote 4-degree protocol -> Bianca (beatpath 14 vs 7). Ava vs Bianca head-to-head is 29-29, so a wins->head-to-head->random engine (BV) picks at RANDOM — non-deterministic, not freezable. Test ID BV2141.",
+    },
+]
+
+
+# --- BV2142 / BV2143 — electowiki Ranked Robin CLONE INDEPENDENCE (teaming) -----
+# electowiki.org/wiki/Ranked_Robin "A note on cloneproofness". A pre/after pair
+# in a no-Condorcet-winner cycle. BV divergence is the whole point:
+#   * BV2142 (pre): A,B,C tie 3-way at 4 wins (cycle) -> BV RANDOM (this is the
+#     LH-only 'coin flip'; LH margin->lot -> A or B).
+#   * BV2143 (post, teaming): A-faction runs clones A1,A2. Under a MARGIN tiebreak
+#     (LH / Equal Vote) A1 wins (+134) — teaming succeeds. But A1 and C tie at 5
+#     wins and C beats A1 head-to-head 21-12, so BV's 2-way head-to-head tiebreak
+#     elects C — the teaming attack FAILS on BV. Live probe of that divergence.
+# All strict full rankings (no ties). Lesson: 00_start_here/RCV_Ranked_Robin/
+# rr_clone_independence.md ; LH-only pair: 05_Ranked_Robin/clone_independence/.
+_C5_CANDS = ["A", "B", "C", "D", "E", "F"]
+_C5_LEVELS = [
+    (12, [["A"], ["B"], ["C"], ["D"], ["E"], ["F"]]),
+    (11, [["B"], ["C"], ["A"], ["D"], ["E"], ["F"]]),
+    (10, [["C"], ["A"], ["B"], ["D"], ["E"], ["F"]]),
+]
+_C6_CANDS = ["A1", "A2", "B", "C", "D", "E", "F"]
+_C6_LEVELS = [
+    (12, [["A1"], ["A2"], ["B"], ["C"], ["D"], ["E"], ["F"]]),
+    (11, [["B"], ["C"], ["A1"], ["A2"], ["D"], ["E"], ["F"]]),
+    (10, [["C"], ["A1"], ["A2"], ["B"], ["D"], ["E"], ["F"]]),
+]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2142",
+        "title": "Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning",
+        "description": "The electowiki Ranked Robin clone-independence ('cloneproofness') example, part 1 of 2. 33 voters, six candidates. A, B, C form a rock-paper-scissors cycle (A beats B, B beats C, C beats A) so there is NO Condorcet winner; all three tie for the most pairwise wins (4 each). A and B even tie on total win margin (+101), so the winner is effectively a coin flip between them. This election sets up part 2 (BV2143), where the A-faction runs clones to turn that coin flip into a certain win. Note: because A, B, C are a 3-way tie, BetterVoting resolves it at random.",
+        "method": "RankedRobin",
+        "num_winners": 1,
+        "max_rankings": len(_C5_CANDS),
+        "candidates": _C5_CANDS,
+        "ballots": _dense_rank_rows(_C5_LEVELS, _C5_CANDS),
+        "expected": "A,B,C tie 3-way at 4 wins (cycle, no Condorcet winner); A&B tie on margin +101. LH margin->lot -> A. BV: 3-way tie -> RANDOM. Test ID BV2142.",
+    },
+    {
+        "test_id": "BV2143",
+        "title": "Ranked Robin clone independence (2 of 2) — a faction runs clones (teaming)",
+        "description": "The electowiki Ranked Robin clone-independence example, part 2 of 2. Same election as BV2142, but the A-faction now fields two clones, A1 and A2 (ranked together in A's old slot). Under a margin-based tiebreak (the Equal Vote Coalition's protocol, and the LH engine) this 'teaming' works: A1's win margin rises to +134, B is crowded out of the top tier, and A1 wins deterministically — converting part 1's coin flip into a guaranteed A-faction win. That is a clone-independence failure. BUT A1 and C tie at 5 wins and C beats A1 head-to-head 21-12, so BetterVoting's 2-way head-to-head tiebreak elects C instead — on BV the teaming attack fails. This election is a live test of which tiebreak BV applies.",
+        "method": "RankedRobin",
+        "num_winners": 1,
+        "max_rankings": len(_C6_CANDS),
+        "candidates": _C6_CANDS,
+        "ballots": _dense_rank_rows(_C6_LEVELS, _C6_CANDS),
+        "expected": "Teaming: A1 & C tie at 5 wins. LH margin -> A1 (+134 vs +104), teaming SUCCEEDS. BV 2-way head-to-head: C beats A1 21-12 -> C, teaming FAILS on BV. Test ID BV2143.",
     },
 ]
 

@@ -1,0 +1,56 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 33 ballots (ranked ballots).
+
+Ballots:
+    12 × A1 > A2 > B > C > D > E > F
+    11 × B > C > A1 > A2 > D > E > F
+    10 × C > A1 > A2 > B > D > E > F
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A1  beats A2   33 –  0
+   A1  beats B    22 – 11
+   C   beats A1   21 – 12
+   A1  beats D    33 –  0
+   A1  beats E    33 –  0
+   A1  beats F    33 –  0
+   A2  beats B    22 – 11
+   C   beats A2   21 – 12
+   A2  beats D    33 –  0
+   A2  beats E    33 –  0
+   A2  beats F    33 –  0
+   B   beats C    23 – 10
+   B   beats D    33 –  0
+   B   beats E    33 –  0
+   B   beats F    33 –  0
+   C   beats D    33 –  0
+   C   beats E    33 –  0
+   C   beats F    33 –  0
+   D   beats E    33 –  0
+   D   beats F    33 –  0
+   E   beats F    33 –  0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+       |      A1      |     A2      |     B       |     C       |     D       |     E       |     F       |
+-----------------------------------------------------------------------------------------------------------
+  A1 > |     ---      |33 -  0 -  0 |22 -  0 - 11 |12 -  0 - 21 |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+  A2 > |  0 -  0 - 33 |    ---      |22 -  0 - 11 |12 -  0 - 21 |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+   B > | 11 -  0 - 22 |11 -  0 - 22 |    ---      |23 -  0 - 10 |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+   C > | 21 -  0 - 12 |21 -  0 - 12 |10 -  0 - 23 |    ---      |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+   D > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |33 -  0 -  0 |33 -  0 -  0 |
+   E > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |33 -  0 -  0 |
+   F > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  A1         5–1–0         5    +134  B, A2, D, E, F
+    2  C          5–1–0         5    +104  A1, A2, D, E, F
+    3  B          4–2–0         4     +90  C, D, E, F
+    4  A2         4–2–0         4     +68  B, D, E, F
+    5  D          2–4–0         2     -66  E, F
+    6  E          1–5–0         1    -132  F
+    7  F          0–6–0         0    -198  —
+
+Winner — Ranked Robin (RCV-RR): A1
+   *** 2 candidates tie for the most wins (A1, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

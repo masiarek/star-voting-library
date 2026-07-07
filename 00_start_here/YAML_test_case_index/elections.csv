@@ -14,6 +14,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
 3yr2qd,Block STAR,1,single-race,3,STAR,BV
 48hjkv,"BV2140 — Ranked Robin worked example — most pairwise wins, with no Condorcet winner",1,single-race,35,RankedRobin,BV
+4gfwdq,BV2142 — Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning,1,single-race,33,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
@@ -21,6 +22,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
+9pr3wr,BV2143 — Ranked Robin clone independence (2 of 2) — a faction runs clones (teaming),1,single-race,33,RankedRobin,BV
 LH:00_c3_b3_bloc-baseline-2-seats,"Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)",1,single-race,3,STAR,LH-only
 LH:00_plurality_vs_majority,Plurality vs Majority — most votes isn't more than half,1,single-race,100,STAR,LH-only
 LH:01_c4_b2_bloc-star-2-seats,Bloc STAR Voting: 2-Seat Committee Election,1,single-race,2,STAR,LH-only
@@ -96,6 +98,8 @@ LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,s
 LH:center_squeeze_irv,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),1,single-race,27,IRV,LH-only
 LH:center_squeeze_star,Center squeeze — STAR elects the consensus (Center),1,single-race,27,STAR,LH-only
 LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),1,single-race,998,STAR,LH-only
+LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
+LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
 LH:dead_heat_lot_tiebreak,Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only),1,single-race,4,RankedRobin,LH-only
 LH:dead_rung_scoring_dead_cap2,"Dead rung — scoring round, dead five-star rung, cap 2",1,single-race,2,STAR,LH-only

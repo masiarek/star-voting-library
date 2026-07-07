@@ -185,6 +185,7 @@ Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **indep
 
 - [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../topics/summability/))
 - [Cycle resolution](cycle_resolution.md) — why Copeland is tie-prone, and why Minimax / Ranked Pairs / Schulze exist (they differ only on cycles)
+- [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md) — RR passes vote-splitting but can fail teaming in a no-Condorcet-winner cycle (and only under a margin tiebreak)
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't
 - [Is IRV "just plurality"?](../RCV_IRV/RCV_IRV_and_plurality.md) — why IRV isn't pairwise

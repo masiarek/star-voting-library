@@ -1,0 +1,48 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 33 ballots (ranked ballots).
+
+Ballots:
+    12 × A > B > C > D > E > F
+    11 × B > C > A > D > E > F
+    10 × C > A > B > D > E > F
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  beats B   22 – 11
+   C  beats A   21 – 12
+   A  beats D   33 –  0
+   A  beats E   33 –  0
+   A  beats F   33 –  0
+   B  beats C   23 – 10
+   B  beats D   33 –  0
+   B  beats E   33 –  0
+   B  beats F   33 –  0
+   C  beats D   33 –  0
+   C  beats E   33 –  0
+   C  beats F   33 –  0
+   D  beats E   33 –  0
+   D  beats F   33 –  0
+   E  beats F   33 –  0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |     E       |     F       |
+--------------------------------------------------------------------------------------------
+  A > |     ---      |22 -  0 - 11 |12 -  0 - 21 |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+  B > | 11 -  0 - 22 |    ---      |23 -  0 - 10 |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+  C > | 21 -  0 - 12 |10 -  0 - 23 |    ---      |33 -  0 -  0 |33 -  0 -  0 |33 -  0 -  0 |
+  D > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |33 -  0 -  0 |33 -  0 -  0 |
+  E > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |33 -  0 -  0 |
+  F > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  A          4–1–0         4    +101  B, D, E, F
+    2  B          4–1–0         4    +101  C, D, E, F
+    3  C          4–1–0         4     +95  A, D, E, F
+    4  D          2–3–0         2     -33  E, F
+    5  E          1–4–0         1     -99  F
+    6  F          0–5–0         0    -165  —
+
+Winner — Ranked Robin (RCV-RR): A
+   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
