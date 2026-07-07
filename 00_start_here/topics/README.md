@@ -10,6 +10,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 
 - [**What makes a good winner?**](../what_makes_a_good_winner.md) — the "correct" winner, consensus/Condorcet vs. utilitarian vs. majority, and why there's no single ideal.
 - [**What makes a voting *method* good?**](../what_makes_a_voting_method_good.md) — the criteria beyond the winner (simplicity, summability, auditability, honesty/strategy, competition), VSE, and "a perfect system will never exist."
+- [**Election simulation models**](../election_simulation_models.md) — how VSE studies generate synthetic electorates (Impartial Culture, spatial, Mallows, urn…), and why results depend on the model.
 
 ## Topic hubs
 
