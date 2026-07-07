@@ -154,3 +154,30 @@ def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
     assert "dead heat" in r.stdout
     assert "Condorcet cycle" not in r.stdout
     assert "Ranked Robin (RCV-RR): Ada" in r.stdout
+
+
+def test_equal_rankings_are_ties(tmp_path):
+    """Ranked Robin reads an equal-rank level (A=B>C) as a TIE between A and B,
+    not as one phantom candidate literally named 'A=B'. Regression for the
+    parser that split ballots only on '>' (see README_larry_hastings.md change
+    log). Every ballot ties two candidates at some level; the winner and the
+    pairwise field must contain only the three real candidates."""
+    f = tmp_path / "equal_ranks.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "options:\n  show_matrix: true\nballots: |-\n"
+        "  4:Ada>Ben=Cara\n  3:Ben>Ada=Cara\n  2:Cara>Ada=Ben\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    # Ada beats Ben 4-3 and Cara 4-2 -> 2-0, the round-robin winner.
+    assert "Ranked Robin (RCV-RR): Ada" in out
+    # No phantom candidate: the '=' groups must never appear as a matrix ROW
+    # label or a round-robin competitor ("Name >" / "Name beats"). (They DO
+    # legitimately appear in the ballot echo, e.g. "Ada > Ben=Cara".)
+    for phantom in ("Ben=Cara >", "Ada=Cara >", "Ada=Ben >",
+                    "Ben=Cara beats", "Ada=Ben beats", "Ada=Cara beats"):
+        assert phantom not in out, f"phantom equal-rank candidate leaked: {phantom!r}"
+    # The tie is scored as Equal Support in the matrix (middle column).
+    assert "Equal Support" in out

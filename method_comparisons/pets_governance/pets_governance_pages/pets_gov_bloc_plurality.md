@@ -32,8 +32,8 @@ Dog,Cat,Fish,Bird,Rabbit,Hamster
 Full report from the [`_tabulated` mirror](../pets_governance_tabulated/pets_gov_bloc_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
---- Plurality (Choose-One / SNTV) Method (2 winners) ---
- Tabulating 22 ballots (choose-one).
+--- SNTV (single non-transferable vote) — 2 winners ---
+ Tabulating 22 ballots (1 vote/voter).
 
 First-choice votes (most votes fill the seats):
    Dog        13  <- Elected
@@ -43,7 +43,7 @@ First-choice votes (most votes fill the seats):
    Rabbit      0
    Hamster     0
 
-Winners — Plurality (SNTV), 2 seats (the 2 most first-choice votes):
+Winners — SNTV (single non-transferable vote), 2 seats:
    1. Dog   (13 votes)
    2. Bird   (9 votes)
 ```

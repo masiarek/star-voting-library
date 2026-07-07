@@ -2,7 +2,7 @@
 SOURCE FILE:     pets_gov_approval.yaml
 SOURCE MODIFIED: 2026-07-06 19:14:31
 TABULATED FILE:  pets_gov_approval_tabulated.txt
-TABULATED AT:    2026-07-06 19:41:15
+TABULATED AT:    2026-07-06 23:08:00
 ======================================================================
 
 election_title: "Pets Governance — Committee by Approval (2 seats): majority again"

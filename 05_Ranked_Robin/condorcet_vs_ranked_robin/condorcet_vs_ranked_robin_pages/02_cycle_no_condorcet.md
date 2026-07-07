@@ -58,7 +58,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     3  Cara       1–1–0         1      -2  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie on wins (Ada, Ben, Cara) — a Condorcet cycle. Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:
@@ -74,4 +74,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [01_condorcet_winner](01_condorcet_winner.md) · [03_real_record0_c6_b5](03_real_record0_c6_b5.md)
+More cases in this set: [01_condorcet_winner](01_condorcet_winner.md) · [03_real_record0_c6_b5](03_real_record0_c6_b5.md) · [bv2140_48hjkv_most_pairwise_wins](bv2140_48hjkv_most_pairwise_wins.md)

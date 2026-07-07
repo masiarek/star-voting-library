@@ -225,7 +225,10 @@ _C2_BLOCS = [(98,  "Abby Cora Erin Dave Brad"), (64,  "Brad Abby Erin Cora Dave"
              (23,  "Dave Cora Brad Abby Erin")]
 _C2_BLOCS = [(cnt, s.split()) for cnt, s in _C2_BLOCS]
 
-ELECTIONS = [
+# Already created on BetterVoting — kept for reference only. DO NOT re-run these:
+# BV elections are PERMANENT and cannot be deleted, so re-running would create
+# undeletable duplicates. Only the `ELECTIONS` list at the bottom is executed.
+_ALREADY_CREATED = [
     {
         "test_id": "BV2137",
         "title": "Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates",
@@ -239,6 +242,61 @@ ELECTIONS = [
         "description": "Robert LeGrand's flagship 'the method decides everything' example: 921 voters, five candidates (Abby, Brad, Cora, Dave, Erin), with NO Condorcet winner (a top cycle; Smith set = Abby, Brad, Dave, Erin). Across the ~15 ranked methods on his rbvote calculator the win splits five ways. This election runs the identical ranked ballots through the four tabulations BetterVoting supports: IRV and STV (1 seat) elect Dave; Ranked Robin (Copeland) elects Abby; STAR (ranks mapped to 0-5 scores) elects Brad — three different winners from one electorate. The remaining methods (Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small) add Cora and Erin, and are checked with the pref_voting library and LeGrand's calculator.",
         "races": _four_races("Method comparison", _C2_BLOCS, _C2_CANDS),
         "expected": "IRV & STV -> Dave; Ranked Robin -> Abby; STAR -> Brad. Test ID BV2138.",
+    },
+]
+
+
+# --- BV2140 — electowiki Ranked Robin worked example (EQUAL-RANK ballots) --------
+# electowiki.org/wiki/Ranked_Robin. 35 voters, 5 candidates, ballots that use tied
+# ranks (e.g. Ava=Bianca=Cedric). Ava wins the most pairwise matchups (3 of 4) even
+# though there is NO Condorcet winner (Ava loses head-to-head to Bianca 15-14). LH
+# reproduces the same pairwise matrix + winner (see the case .md).
+#
+# NOTE: BV ranked ballots put a rank in each candidate's slot (1 = top, 0 = unranked).
+# This example needs TIED ranks, so equal-ranked candidates share a rank number
+# (dense ranking: 1,1,1,2,3 …). Whether BV's RankedRobin accepts/counts tied
+# ranks the same way LH does is UNVERIFIED — if BV rejects or mis-handles ties,
+# capture the error / divergence in the case writeup (the create just errors, no
+# permanent election is made on a validation failure).
+_C3_CANDS = ["Ava", "Bianca", "Cedric", "Deegan", "Eli"]
+# Weighted ballots as ordered rank LEVELS (each inner list = candidates tied at that
+# level; most-preferred level first).
+_C3_LEVELS = [
+    (8, [["Ava"], ["Cedric"], ["Deegan"], ["Bianca"], ["Eli"]]),
+    (6, [["Ava", "Bianca", "Cedric"], ["Eli"], ["Deegan"]]),
+    (6, [["Eli"], ["Ava"], ["Bianca", "Cedric", "Deegan"]]),
+    (6, [["Deegan"], ["Bianca", "Cedric"], ["Eli"], ["Ava"]]),
+    (4, [["Bianca"], ["Ava"], ["Eli"], ["Deegan"], ["Cedric"]]),
+    (3, [["Eli"], ["Deegan"], ["Bianca", "Cedric"], ["Ava"]]),
+    (2, [["Deegan", "Eli"], ["Bianca", "Cedric"], ["Ava"]]),
+]
+
+
+def _dense_rank_rows(levels_blocs, cands):
+    """Expand weighted rank-LEVEL blocs to one row per voter, dense-ranked
+    (level 0 -> rank 1; candidates tied within a level share that rank), aligned
+    to `cands` order. 0 = unranked (not used here — every ballot ranks all five)."""
+    rows = []
+    for cnt, levels in levels_blocs:
+        rank = {}
+        for i, grp in enumerate(levels):
+            for c in grp:
+                rank[c] = i + 1
+        rows += [[rank.get(c, 0) for c in cands]] * cnt
+    return rows
+
+
+ELECTIONS = [
+    {
+        "test_id": "BV2140",
+        "title": "Ranked Robin worked example — most pairwise wins, with no Condorcet winner",
+        "description": "The electowiki Ranked Robin worked example (electowiki.org/wiki/Ranked_Robin). 35 voters, five candidates (Ava, Bianca, Cedric, Deegan, Eli) on ranked ballots that use EQUAL rankings (e.g. Ava=Bianca=Cedric). Ranked Robin (Copeland) compares every pair head-to-head and elects whoever wins the most matchups: Ava wins 3 of 4 and is elected — even though there is NO Condorcet winner (Ava actually loses head-to-head to Bianca, 15-14). It shows Ranked Robin picking the strongest all-round candidate when nobody beats everyone. The LH tabulation engine reproduces the same pairwise matrix and winner.",
+        "method": "RankedRobin",
+        "num_winners": 1,
+        "max_rankings": len(_C3_CANDS),
+        "candidates": _C3_CANDS,
+        "ballots": _dense_rank_rows(_C3_LEVELS, _C3_CANDS),
+        "expected": "Ranked Robin -> Ava (3 pairwise wins; NO Condorcet winner — Ava loses to Bianca 15-14). Test ID BV2140.",
     },
 ]
 

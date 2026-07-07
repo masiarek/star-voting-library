@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv215_26khr3_nota_wins.yaml
-SOURCE MODIFIED: 2026-07-05 15:03:16
+SOURCE MODIFIED: 2026-07-05 15:09:11
 TABULATED FILE:  bv215_26khr3_nota_wins_tabulated.txt
-TABULATED AT:    2026-07-05 15:03:36
+TABULATED AT:    2026-07-06 23:07:47
 ======================================================================
 
 election_title: "BV215 — None of the Above wins (STAR) — with a null abstention"
@@ -16,6 +16,7 @@ election_description: |-
 bv_test_id: BV215
 bv_election_id: 26khr3
 bv_results_url: https://bettervoting.com/26khr3/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/1421  # NOTA-win handling question
 
 scenario_description: |-
   A protest electorate. Four voters reject both real candidates and give the full

@@ -99,7 +99,8 @@ def _ballot_shape(ballots):
     if any(">" in ln for ln in raw):
         cands = set()
         for ln in raw:
-            cands.update(t.strip() for t in strip(ln).split(">") if t.strip())
+            for tok in strip(ln).split(">"):       # split rank levels…
+                cands.update(t.strip() for t in tok.split("=") if t.strip())  # …and equal-rank ties
         return (len(cands), sum(w(ln) for ln in raw))
     ncand = len([c for c in raw[0].split(",") if c.strip()])
     return (ncand, sum(w(ln) for ln in raw[1:]))

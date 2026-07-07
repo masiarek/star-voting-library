@@ -61,7 +61,7 @@ Legend: For - Equal Support - Against
   STAR     = Dave
   Approval = Alice   (differs from STAR)
 
---- STAR Voting Method (single winner) ---
+--- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 14 ballots. Note: 1 of 14 ballots is marked as an abstention.
 Count × Alice,Bob,Carol,Dave
@@ -101,7 +101,7 @@ Dave        0   0   0   0   5   8    1  |     5   0.4
       8  voters with a preference  (majority = 5)
            Dave 5 (62%)  ·  Carol 3 (38%)
 
-[STAR Voting: Winner — STAR Voting Method (single winner)]
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Dave
 ```
 

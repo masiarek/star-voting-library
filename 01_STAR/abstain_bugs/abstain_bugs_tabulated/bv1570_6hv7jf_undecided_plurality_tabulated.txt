@@ -2,7 +2,7 @@
 SOURCE FILE:     bv1570_6hv7jf_undecided_plurality.yaml
 SOURCE MODIFIED: 2026-07-05 21:31:51
 TABULATED FILE:  bv1570_6hv7jf_undecided_plurality_tabulated.txt
-TABULATED AT:    2026-07-05 21:32:01
+TABULATED AT:    2026-07-06 23:07:47
 ======================================================================
 
 election_title: "BV1570 — undecided plurality election still declares a winner"
@@ -88,7 +88,7 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
 
---- STAR Voting Method (single winner) ---
+--- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 3 ballots. Note: 1 of 3 ballots is marked as an abstention.
 Approve,Reject
@@ -143,5 +143,5 @@ Reject     0  0  0  0  0  1    2  |     0   0.0
     "dead rung": no tied candidate held a score-5 vote (five-star
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
-[STAR Voting: Winner — STAR Voting Method (single winner)]
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Approve

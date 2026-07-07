@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_01a_c3_b5_approval.yaml
 SOURCE MODIFIED: 2026-07-02 12:49:11
 TABULATED FILE:  Black_Curtain_01a_c3_b5_approval_tabulated.txt
-TABULATED AT:    2026-07-05 09:13:17
+TABULATED AT:    2026-07-06 23:07:56
 ======================================================================
 
 election_title: The Black Curtain #1 as Approval — the consensus candidate wins

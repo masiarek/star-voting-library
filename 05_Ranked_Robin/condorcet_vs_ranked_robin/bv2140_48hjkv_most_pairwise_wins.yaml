@@ -1,0 +1,47 @@
+election_title: "BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki)"
+election_description: >-
+  The electowiki Ranked Robin worked example (electowiki.org/wiki/Ranked_Robin),
+  and the first repo case built on EQUAL-RANK ballots. 35 voters, five candidates
+  (Ava, Bianca, Cedric, Deegan, Eli); several ballots tie candidates (e.g.
+  Ava=Bianca=Cedric). Ranked Robin (Copeland) compares every pair head-to-head and
+  elects whoever wins the most matchups: Ava wins 3 of 4 and is elected. Yet there
+  is NO Condorcet winner — Ava actually loses head-to-head to Bianca 15-14, and
+  {Ava, Bianca, Cedric} form a 3-cycle (Ava>Cedric, Cedric>Bianca, Bianca>Ava). So
+  no one beats everyone, but Ranked Robin still names the strongest all-round
+  candidate by win count. Reproduced natively by the LH engine (its round-robin
+  parser reads equal ranks as ties); the pairwise matrix matches electowiki
+  exactly.
+  Live results: https://bettervoting.com/48hjkv/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these (the tabulation
+# engine ignores them). Test ID uses the house "BV<n>" form; bvid is 48hjkv.
+bv_test_id: BV2140
+bv_election_id: 48hjkv
+bv_results_url: https://bettervoting.com/48hjkv/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+options:
+  show_matrix: true          # show the 5x5 pairwise (round-robin) matrix on screen
+  matrix_finalists_only: false
+  show_condorcet: true       # the point: there is NO Condorcet winner (a 3-cycle)
+# Pairwise (row beats column): Ava beats Cedric 18-11, Deegan 24-11, Eli 18-17, but
+#   LOSES to Bianca 14-15. Records: Ava 3, Bianca/Cedric/Deegan 2, Eli 1 -> Ranked
+#   Robin winner Ava (most wins), even though no candidate is a Condorcet winner
+#   (Ava>Cedric>Bianca>Ava is a cycle). Equal-rank ballots (A=B) are read as ties.
+# Companion files: 01_condorcet_winner.yaml (a clean Condorcet winner) and
+#   02_cycle_no_condorcet.yaml (a pure 3-way rock-paper-scissors tie).
+# Lesson folder: 05_Ranked_Robin/condorcet_vs_ranked_robin/README.md
+ballots: |-
+  8:Ava>Cedric>Deegan>Bianca>Eli
+  6:Ava=Bianca=Cedric>Eli>Deegan
+  6:Eli>Ava>Bianca=Cedric=Deegan
+  6:Deegan>Bianca=Cedric>Eli>Ava
+  4:Bianca>Ava>Eli>Deegan>Cedric
+  3:Eli>Deegan>Bianca=Cedric>Ava
+  2:Deegan=Eli>Bianca=Cedric>Ava
+
+expected_winners:
+  - Ava
+
+# file: bv2140_48hjkv_most_pairwise_wins.yaml

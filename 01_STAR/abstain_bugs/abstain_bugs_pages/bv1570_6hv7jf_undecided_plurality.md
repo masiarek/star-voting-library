@@ -50,7 +50,7 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
 
---- STAR Voting Method (single winner) ---
+--- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 3 ballots. Note: 1 of 3 ballots is marked as an abstention.
 Approve,Reject
@@ -105,7 +105,7 @@ Reject     0  0  0  0  0  1    2  |     0   0.0
     "dead rung": no tied candidate held a score-5 vote (five-star
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
-[STAR Voting: Winner — STAR Voting Method (single winner)]
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Approve
 ```
 

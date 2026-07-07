@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**186 election files** (151 single-winner, 35 multi-winner) across 14 method(s).
+**187 election files** (152 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 110 |
 | RCV-IRV (Hare) | 11 |
-| Ranked Robin (RCV-RR / Copeland) | 13 |
+| Ranked Robin (RCV-RR / Copeland) | 14 |
 | Approval | 5 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -158,13 +158,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (13)
+## Ranked Robin (RCV-RR / Copeland)  (14)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ranked_robin_consensus_center`](../../05_Ranked_Robin/_main/_main_pages/ranked_robin_consensus_center.md) | `05_Ranked_Robin/_main/` | 1 | Ranked Robin (RCV-RR) — the consensus center wins the round-robin → _Ben_ | [`.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) |
 | [`01_condorcet_winner`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/01_condorcet_winner.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | Condorcet winner exists — Ranked Robin elects it → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/01_condorcet_winner.yaml) |
 | [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | No Condorcet winner (a cycle) — Ranked Robin still elects one → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/02_cycle_no_condorcet.yaml) |
+| [`bv2140_48hjkv_most_pairwise_wins`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/bv2140_48hjkv_most_pairwise_wins.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/bv2140_48hjkv_most_pairwise_wins.yaml) |
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/rr_tiebreaks/rr_tiebreaks_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/rr_tiebreaks/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_tiebreak.yaml) |
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/rr_vs_irv_plurality_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_single_winner.yaml) |

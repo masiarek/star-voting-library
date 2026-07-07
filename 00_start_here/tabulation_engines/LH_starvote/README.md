@@ -2,6 +2,8 @@
 
 *The repo's primary tabulator. It's Larry Hastings' STAR engine plus a thick **presentation + analysis layer** of our own — the part that turns a correct winner into a **readable, auditable report**. This page is the map; the section-by-section walkthrough is [Reading a STAR report](reading_a_star_report.md).*
 
+> **Looking for the exhaustive change list?** This page is the narrative overview; the itemized, canonical changelog of every method / report / fix is **[`LH_ENGINE_CHANGES.md`](../../../STARVote_LH_tabulation_engine/LH_ENGINE_CHANGES.md)**.
+
 → Cross-checks: [pref_voting (independent referee)](../cross_checking_with_pref_voting.md) · [BetterVoting and the engine](../bettervoting_and_the_engine.md). Source: [`larryhastings/starvote`](https://github.com/larryhastings/starvote) · [PyPI](https://pypi.org/project/starvote/). Curriculum: [201.1](../../CURRICULUM.md).
 
 ---

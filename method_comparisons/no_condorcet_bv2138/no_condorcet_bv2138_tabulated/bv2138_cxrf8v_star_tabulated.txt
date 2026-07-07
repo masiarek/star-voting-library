@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2138_cxrf8v_star.yaml
 SOURCE MODIFIED: 2026-07-06 22:17:50
 TABULATED FILE:  bv2138_cxrf8v_star_tabulated.txt
-TABULATED AT:    2026-07-06 22:17:50
+TABULATED AT:    2026-07-06 23:07:59
 ======================================================================
 
 election_title: "No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff"
@@ -64,7 +64,7 @@ Legend: For - Equal Support - Against
              Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Dave > Brad > Erin > Dave)
+  No Condorcet winner (majority cycle: Abby > Dave > Brad > Abby)
 
 [Divergence from STAR]
   STAR     = Brad
@@ -75,9 +75,9 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-IRV_tabulated.txt
-     file:///sessions/practical-cool-brown/mnt/YAML/method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-IRV_tabulated.txt
+     file:///sessions/practical-focused-feynman/mnt/YAML/method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-RR_tabulated.txt
-     file:///sessions/practical-cool-brown/mnt/YAML/method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-RR_tabulated.txt
+     file:///sessions/practical-focused-feynman/mnt/YAML/method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-RR_tabulated.txt
 
 Majority Preference Enforcement Principle:
  - Score Round Winner(s) = (Abby)

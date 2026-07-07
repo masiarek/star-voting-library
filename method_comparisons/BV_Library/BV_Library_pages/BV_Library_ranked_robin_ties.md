@@ -64,7 +64,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Dave       0–3–0         0     -18  —
 
 Winner — Ranked Robin (RCV-RR): Alice
-   *** 2 candidates tie on wins (Alice, Bob) — a Condorcet cycle. Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Alice, Bob) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
 
 Run it yourself:

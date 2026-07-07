@@ -14,6 +14,13 @@ The election's `owner_id` is whatever the script's `BV_USER_ID` says. **Set it t
 - **Public visibility**: the election is live at `bettervoting.com/<id>`, votes tabulate, and the results are exportable (Election + Ballots + Results) from the UI.
 - **`/manage` listing**: with `owner_id` = your account, the election appears in *My Elections & Polls* and is searchable by title. (Before this fix, script elections were owned by a throwaway identity and were invisible there.)
 
+## Ballot-data export format — the `precinct` column
+
+BetterVoting's **Ballot Data** export (the per-ballot CSV, `Ballot Data - <title>-<id>.csv`) has this shape: `ballot_id, precinct, <Candidate1>, <Candidate2>, …`. Two things worth knowing:
+
+- **There is always a `precinct` column** (column B), part of BV's precinct-tagging / `precinctFilteredElection` feature. It is **blank** unless the election actually defines precincts — API-created elections don't, so every row's precinct is empty. It's harmless: the JSON→YAML importer ignores it (only the candidate columns + `ballot_id` matter).
+- **Ranked methods put a rank in each candidate cell** (`1` = top … `0` = unranked), and **equal ranks are preserved** — a tie like `Ava=Bianca=Cedric` exports as `1,1,1,…`. Confirmed on **BV2140** (`48hjkv`): the exported ballots round-trip the tied ranks exactly, and BV's `RankedRobin.ts` tabulated them to the same winner/records as the LH engine. So BV both **accepts equal-rank ballots on creation and counts ties the same way** LH does.
+
 ## What does NOT work — the `/admin` gate (a real BV limitation)
 
 **You cannot administer an API-created election from the UI**, even though you own it. Opening `/<id>/admin` returns *"Only the users with admin access on the election can view this page."*

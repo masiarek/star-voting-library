@@ -12,6 +12,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
 3yr2qd,Block STAR,1,single-race,3,STAR,BV
+48hjkv,"BV2140 — Ranked Robin worked example — most pairwise wins, with no Condorcet winner",1,single-race,35,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV

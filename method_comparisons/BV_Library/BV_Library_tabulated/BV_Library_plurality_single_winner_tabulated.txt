@@ -2,7 +2,7 @@
 SOURCE FILE:     BV_Library_plurality_single_winner.yaml
 SOURCE MODIFIED: 2026-07-02 08:54:23
 TABULATED FILE:  BV_Library_plurality_single_winner_tabulated.txt
-TABULATED AT:    2026-07-05 09:13:16
+TABULATED AT:    2026-07-06 23:07:55
 ======================================================================
 
 election_title: "BV parity — Plurality (choose-one): most first-marks wins"
@@ -70,7 +70,7 @@ Legend: For - Equal Support - Against
   STAR     = Dave
   Approval = Alice   (differs from STAR)
 
---- STAR Voting Method (single winner) ---
+--- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 14 ballots. Note: 1 of 14 ballots is marked as an abstention.
 Count × Alice,Bob,Carol,Dave
@@ -110,5 +110,5 @@ Dave        0   0   0   0   5   8    1  |     5   0.4
       8  voters with a preference  (majority = 5)
            Dave 5 (62%)  ·  Carol 3 (38%)
 
-[STAR Voting: Winner — STAR Voting Method (single winner)]
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Dave

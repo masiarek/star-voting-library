@@ -78,8 +78,11 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 
 ## Change log — wrapper display (this is *our* code, not the vendored engine)
 
+> For the **full consolidated list** of all LH changes (methods, reports, fixes across the whole engine, not just display), see **[`LH_ENGINE_CHANGES.md`](LH_ENGINE_CHANGES.md)**. The entries below are the wrapper's *display-layer* edits specifically.
+
 Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendored `starvote/` core stays pristine (see [`FORK_NOTES.md`](FORK_NOTES.md)); these never touch it.
 
+- **Ranked Robin equal-rankings (`A=B>C`) — parser fix** — `run_ranked_robin`'s ranked-ballot reader now splits each `>` rank level on `=`, so tied candidates share a rank and are scored as *Equal Support* against each other (exactly how Ranked Robin treats a tie). Previously the parser split only on `>`, so a level like `Ava=Bianca=Cedric` was mis-read as a *single phantom candidate* by that literal name — inflating the field and electing the wrong winner. Strict ballots (every level a singleton) are byte-for-byte unchanged. Equal ranking is a core Ranked Robin feature, so this lets the engine read the weak orders RR is defined on natively (e.g. the [electowiki worked example](https://electowiki.org/wiki/Ranked_Robin)). Guarded by `tests/test_ranked_robin.py::test_equal_rankings_are_ties`.
 - **`[Score Distribution]` header + exact-rational half-up average** — `Score` corner label, `===` rule row, star-rating caption, and the Avg float→`Decimal`/`ROUND_HALF_UP` fix. ([full write-up](../00_start_here/STAR_reporting/score_distribution_and_averages.md))
 - **Multiwinner setup line** — merged `Want to fill N seats.` into `Tabulating N ballots to fill N seats.`
 - Earlier: `[Lot-decided tie — rare]` callout; validator accepts `voting_method: Bloc STAR`.

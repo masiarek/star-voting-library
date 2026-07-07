@@ -1,0 +1,45 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 35 ballots (ranked ballots).
+
+Ballots:
+     8 × Ava > Cedric > Deegan > Bianca > Eli
+     6 × Ava=Bianca=Cedric > Eli > Deegan
+     6 × Eli > Ava > Bianca=Cedric=Deegan
+     6 × Deegan > Bianca=Cedric > Eli > Ava
+     4 × Bianca > Ava > Eli > Deegan > Cedric
+     3 × Eli > Deegan > Bianca=Cedric > Ava
+     2 × Deegan=Eli > Bianca=Cedric > Ava
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ava     beats Cedric   18 – 11
+   Ava     beats Deegan   24 – 11
+   Bianca  beats Ava      15 – 14
+   Ava     beats Eli      18 – 17
+   Deegan  beats Cedric   15 – 14
+   Cedric  beats Bianca    8 –  4
+   Cedric  beats Eli      20 – 15
+   Deegan  beats Bianca   19 – 10
+   Eli     beats Deegan   19 – 14
+   Bianca  beats Eli      24 – 11
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |     Ava      |   Cedric    |   Deegan    |   Bianca    |    Eli      |
+-----------------------------------------------------------------------------------
+     Ava > |     ---      |18 -  6 - 11 |24 -  0 - 11 |14 -  6 - 15 |18 -  0 - 17 |
+  Cedric > | 11 -  6 - 18 |    ---      |14 -  6 - 15 | 8 - 23 -  4 |20 -  0 - 15 |
+  Deegan > | 11 -  0 - 24 |15 -  6 - 14 |    ---      |19 -  6 - 10 |14 -  2 - 19 |
+  Bianca > | 15 -  6 - 14 | 4 - 23 -  8 |10 -  6 - 19 |    ---      |24 -  0 - 11 |
+     Eli > | 17 -  0 - 18 |15 -  0 - 20 |19 -  2 - 14 |11 -  0 - 24 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ava        3–1–0         3     +20  Cedric, Deegan, Eli
+    2  Cedric     2–2–0         2      +1  Bianca, Eli
+    3  Bianca     2–2–0         2      +1  Ava, Eli
+    4  Deegan     2–2–0         2      -8  Cedric, Bianca
+    5  Eli        1–3–0         1     -14  Deegan
+
+Winner — Ranked Robin (RCV-RR): Ava
+   the most head-to-head wins (3).

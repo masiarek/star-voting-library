@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2137_ywckmg_stv.yaml
 SOURCE MODIFIED: 2026-07-06 22:17:50
 TABULATED FILE:  bv2137_ywckmg_stv_tabulated.txt
-TABULATED AT:    2026-07-06 22:17:50
+TABULATED AT:    2026-07-06 23:07:57
 ======================================================================
 
 election_title: "Center Squeeze — STV (1 seat = IRV single-winner): same squeeze"

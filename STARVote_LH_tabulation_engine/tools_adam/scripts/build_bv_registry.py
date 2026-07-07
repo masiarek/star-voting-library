@@ -108,9 +108,10 @@ def _ballot_shape(race):
         cands = set()
         for ln in rows:
             for tok in _strip_weight(ln).split(">"):
-                t = tok.strip()
-                if t:
-                    cands.add(t)
+                for name in tok.split("="):        # split equal-rank ties too
+                    t = name.strip()
+                    if t:
+                        cands.add(t)
         n_cand = len(cands)
     else:                                     # score ballots — first line is the header
         n_cand = len([c for c in raw[0].split(",") if c.strip()])

@@ -1240,12 +1240,6 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     clean = "\n".join(ln.split("#")[0] for ln in ballots_text.splitlines())
     display_rows = None
     if ">" in clean:                                    # ranked ballots
-        # Each ballot is a weak order: '>' separates rank levels (most→least
-        # preferred), '=' ties candidates within a level (Ava=Bianca>Cara).
-        # Equal-ranked candidates share a rank, so the pairwise matrix scores
-        # them as Equal Support against each other — exactly how Ranked Robin
-        # treats a tie. (A strict ballot A>B>C is the all-singleton case, so
-        # this stays identical for ballots without '='.)
         voters, seen = [], []
         for ln in ballots_text.splitlines():
             ln = ln.split("#")[0].strip()
@@ -1253,24 +1247,17 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 continue
             m = _re.match(r"(\d+)\s*[:xX×]\s*(.+)", ln)
             w, rest = (int(m.group(1)), m.group(2)) if m else (1, ln)
-            groups = [[c.strip() for c in grp.split("=") if c.strip()]
-                      for grp in rest.split(">")]
-            groups = [g for g in groups if g]           # drop empty levels
-            for g in groups:
-                for c in g:
-                    if c not in seen:
-                        seen.append(c)
-            voters += [groups] * w
+            order = [c.strip() for c in rest.split(">") if c.strip()]
+            for c in order:
+                if c not in seen:
+                    seen.append(c)
+            voters += [order] * w
         candidates = seen
         ballots = []
-        for groups in voters:
-            ng = len(groups)
-            ranked = {}
-            for i, g in enumerate(groups):              # level 0 = most preferred
-                for c in g:
-                    ranked[c] = ng - i                  # tied candidates share a rank
+        for order in voters:
+            ranked = {c: (len(order) - i) for i, c in enumerate(order)}
             ballots.append({c: ranked.get(c, 0) for c in candidates})
-        display_rows = [" > ".join("=".join(g) for g in groups) for groups in voters]
+        display_rows = [" > ".join(o) for o in voters]
     else:                                               # score ballots
         candidates, ballots, _ = parse_ballots_from_string(ballots_text)
 

@@ -1,5 +1,7 @@
 # Fork Notes — starvote (vendored fork)
 
+> **This page covers only the vendored upstream `starvote/` package.** For the full, consolidated list of *everything* we add to or change in the LH tabulator — new methods, new reports, and fixes — see **[`LH_ENGINE_CHANGES.md`](LH_ENGINE_CHANGES.md)** (canonical).
+
 This directory contains a **vendored fork** of Larry Hastings' STAR Voting engine, [`larryhastings/starvote`](https://github.com/larryhastings/starvote). We do not submit pull requests upstream; we edit the engine directly here and keep it as part of this project (the `masiarek/YAML` repo).
 
 ## What is what
