@@ -1,0 +1,124 @@
+======================================================================
+SOURCE FILE:     bv2167_f3dxq9_star.yaml
+SOURCE MODIFIED: 2026-07-07 21:47:24
+TABULATED FILE:  bv2167_f3dxq9_star_tabulated.txt
+TABULATED AT:    2026-07-07 21:48:07
+======================================================================
+
+election_title: "Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser"
+scenario_description: |-
+  Race 1 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A10 (the Condorcet / Minimax / Simpson-Kramer procedure), Example 29.
+  11 voters, four candidates: 2×(D>A>C>B), 3×(D>B>A>C), 3×(C>B>A>D), 1×(B>A>C>D), 2×(A>C>B>D). A, B, C form a top cycle (B>A 7–4, A>C 8–3, C>B 7–4); D loses every matchup 5–6 — the Condorcet loser AND absolute loser (6 of 11 rank D last). Minimax — worked on the case page; no tabulator on BV or in LH — elects D, whose worst loss (6) is the smallest (A/B/C: 7/7/8). This STAR race (ranks mapped 5/4/2/1): A 34, B 35, C 32, D 31 — B and A advance, B wins the automatic runoff 7–4. No RR race (the A/B/C Copeland tie → BV random) and no IRV race (random transfer tie).
+  Live results: https://bettervoting.com/f3dxq9/results
+bv_test_id: BV2167
+bv_election_id: f3dxq9
+bv_results_url: https://bettervoting.com/f3dxq9/results
+paradoxes: [condorcet-loser, absolute-loser, condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  4,1,2,5
+  4,1,2,5
+  2,4,1,5
+  2,4,1,5
+  2,4,1,5
+  2,4,5,1
+  2,4,5,1
+  2,4,5,1
+  4,5,2,1
+  5,2,4,1
+  5,2,4,1
+expected_winners:
+  - B
+
+# file: bv2167_f3dxq9_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser ===
+  Race 1 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A10 (the Condorcet / Minimax / Simpson-Kramer procedure), Example 29.
+  11 voters, four candidates: 2×(D>A>C>B), 3×(D>B>A>C), 3×(C>B>A>D), 1×(B>A>C>D), 2×(A>C>B>D). A, B, C form a top cycle (B>A 7–4, A>C 8–3, C>B 7–4); D loses every matchup 5–6 — the Condorcet loser AND absolute loser (6 of 11 rank D last). Minimax — worked on the case page; no tabulator on BV or in LH — elects D, whose worst loss (6) is the smallest (A/B/C: 7/7/8). This STAR race (ranks mapped 5/4/2/1): A 34, B 35, C 32, D 31 — B and A advance, B wins the automatic runoff 7–4. No RR race (the A/B/C Copeland tie → BV random) and no IRV race (random transfer tie).
+  Live results: https://bettervoting.com/f3dxq9/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |     C     |     D     |
+-----------------------------------------------------------------
+         * A > |    ---     |4 - 0 - 7  |8 - 0 - 3  |6 - 0 - 5  |
+         * B > | 7 - 0 - 4  |   ---     |4 - 0 - 7  |6 - 0 - 5  |
+           C > | 3 - 0 - 8  |7 - 0 - 4  |   ---     |6 - 0 - 5  |
+           D > | 5 - 0 - 6  |5 - 0 - 6  |5 - 0 - 6  |   ---     |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: A > C > B > A)
+
+[Divergence from STAR]
+  STAR                   = B
+  Choose-One (Plurality) = D   (differs from STAR)
+  RCV-IRV                = C   (differs from STAR)
+  RCV-RR                 = A   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-IRV_tabulated.txt
+     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
+     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 11 ballots.
+Count × A,B,C,D
+    3 × 2,4,1,5
+    3 × 2,4,5,1
+    2 × 4,1,2,5
+    2 × 5,2,4,1
+    1 × 4,5,2,1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          2  3  0  6  0  0  |    34   3.1
+B          1  6  0  2  2  0  |    35   3.2
+C          3  2  0  3  3  0  |    32   2.9
+D          5  0  0  0  6  0  |    31   2.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 35 -- First place
+   A             -- 34 -- Second place
+   C             -- 32
+   D             -- 31
+ B and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   B             -- 7 -- First place
+   A             -- 4
+   Equal Support -- 0
+ B wins.
+   Runoff math:
+     11  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     11  voters with a preference  (majority = 6)
+           B 7 (64%)  ·  A 4 (36%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ B

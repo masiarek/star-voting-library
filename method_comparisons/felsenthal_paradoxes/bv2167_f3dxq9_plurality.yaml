@@ -1,0 +1,39 @@
+election_title: "Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D"
+scenario_description: |-
+  Race 2 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A10, Example 29 — see bv2167_f3dxq9_star.yaml for the setup.
+  The same 11 voters under Choose-One: first choices D 5, C 3, A 2, B 1 → D — the candidate who loses every head-to-head 5–6 and whom a majority (6 of 11) rank dead last. Choose-One and Minimax (worked on the case page) agree on the absolute loser, for opposite reasons: Choose-One sees only D's five committed fans; Minimax sees only that D's defeats are narrow.
+  Live results: https://bettervoting.com/f3dxq9/results
+bv_test_id: BV2167
+bv_election_id: f3dxq9
+bv_results_url: https://bettervoting.com/f3dxq9/results
+paradoxes: [condorcet-loser, absolute-loser, condorcet-cycle]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,1,0,0
+  1,0,0,0
+  1,0,0,0
+expected_winners:
+  - D
+
+# file: bv2167_f3dxq9_plurality.yaml

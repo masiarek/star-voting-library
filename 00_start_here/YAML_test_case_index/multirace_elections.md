@@ -301,6 +301,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Coombs Ex.19 no-show — STAR (ranks mapped to 0-5) | STAR | 3 | **Cass** |
 | Coombs Ex.19 no-show — Choose-One (Plurality) | Plurality | 3 | **Cass** |
 
+## BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss
+
+**Election** [`f3dxq9`](https://bettervoting.com/f3dxq9/results) · **2 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Minimax Ex.29 — STAR (ranks mapped to 0-5) | STAR | 4 | **B** |
+| Minimax Ex.29 — Choose-One (Plurality) | Plurality | 4 | **D** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

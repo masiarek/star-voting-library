@@ -105,6 +105,7 @@ CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.ya
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.yaml,3,32,Bruno,Alma,Alma,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_star.yaml,4,7,B,A,A,C,C,B,B,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml,3,15,Boone,Boone,Boone,Cass,Cass,Cass,Cass,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml,4,11,B,C,C,A,A,B,B,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,3,34,X,Z,Z,X,X,X,X,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,Y,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,5,921,Brad,Dave,Dave,Abby,Abby,Erin,Abby,,,0,False,False,True

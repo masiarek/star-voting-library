@@ -1398,7 +1398,8 @@ _F7_SRC = ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting Various "
            "Normandy), Appendix A7: the paradoxes afflicting Coombs' procedure "
            "(eliminate whoever is ranked LAST by the most voters). ")
 
-ELECTIONS = [
+# Already created -> xbqq8t/9vxcj7/b7b8dv (BV2164-66). Reference.
+_CREATED_BV2164_66 = [
     {
         "test_id": "BV2164",
         "title": "Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him",
@@ -1493,6 +1494,69 @@ ELECTIONS = [
         "expected": "STAR -> Cass (39/37/41; runoff 9-4) — the two abstainers do "
                     "BETTER than in BV2165 under STAR as well as Coombs. Plurality "
                     "-> Cass. LH-verified. Test ID BV2166.",
+    },
+]
+
+
+# --- BV2167 — Felsenthal (2010) §A10 Example 29: Minimax elects the absolute loser
+# SOURCE: same Felsenthal (2010) paper; Appendix A10 ("...the Condorcet (aka
+# Minimax or Simpson-Kramer) Procedure"), Example 29. Minimax (elect whoever's
+# WORST pairwise loss is smallest) has no tabulator on BV or in LH (LH's
+# Ranked Robin is Copeland; pref_voting can cross-check), so the Minimax count
+# lives on the case page. The election is spectacular on paper: 11 voters,
+# four candidates — 2×(d>a>c>b), 3×(d>b>a>c), 3×(c>b>a>d), 1×(b>a>c>d),
+# 2×(a>c>b>d). The a/b/c trio is a top cycle (b>a 7-4, a>c 8-3, c>b 7-4) and
+# D LOSES EVERY MATCHUP 5-6 — d is the Condorcet loser AND the absolute loser
+# (ranked last by 6 of 11, a majority). Yet Minimax elects D: d's worst loss
+# margin (6) is smaller than a/b/c's (7, 7, 8). Live races: STAR (5/4/2/1
+# map: 34/35/32/31; B beats A 7-4 in the runoff) -> B; Choose-One Plurality
+# -> D (5 first choices of 11 — Choose-One AGREES with Minimax on the
+# absolute loser). No RR race (the a/b/c Copeland tie -> BV random); no IRV
+# race (after B's elimination the A/C transfer tie is random). LH-verified.
+
+_E29_CANDS = ["A", "B", "C", "D"]
+_E29_STAR = [(2, (4, 1, 2, 5)), (3, (2, 4, 1, 5)), (3, (2, 4, 5, 1)),
+             (1, (4, 5, 2, 1)), (2, (5, 2, 4, 1))]
+_E29_PLUR = [(5, (0, 0, 0, 1)), (3, (0, 0, 1, 0)), (1, (0, 1, 0, 0)), (2, (1, 0, 0, 0))]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2167",
+        "title": "Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss",
+        "description": ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting "
+                        "Various Voting Procedures Where One Out of m Candidates "
+                        "(m ≥ 2) Must Be Elected' (University of Haifa / LSE, revised "
+                        "26 May 2010; Leverhulme Trust 'Voting Power in Practice' "
+                        "workshop, Château du Baffy, Normandy), Appendix A10: the "
+                        "Condorcet (aka Minimax or Simpson-Kramer) procedure — elect "
+                        "whoever's WORST pairwise loss is smallest — Example 29. "
+                        "11 voters, four candidates: 2×(D>A>C>B), 3×(D>B>A>C), "
+                        "3×(C>B>A>D), 1×(B>A>C>D), 2×(A>C>B>D). A, B and C form a "
+                        "top cycle (B beats A 7-4, A beats C 8-3, C beats B 7-4) and "
+                        "D loses every single matchup 5-6 — D is the Condorcet loser "
+                        "AND the absolute loser (a majority, 6 of 11, rank D dead "
+                        "last). Yet Minimax elects D, because D's worst loss margin "
+                        "(6) is smaller than A's, B's or C's (7, 7, 8): losing to "
+                        "everyone NARROWLY beats beating some and losing one badly. "
+                        "BetterVoting has no Minimax tabulator, so that count lives "
+                        "on this election's case page. The live races: STAR (ranks "
+                        "mapped 5/4/2/1: A 34, B 35, C 32, D 31; B beats A 7-4 in "
+                        "the automatic runoff) elects B — a top-cycle member, not "
+                        "the universal loser — and Choose-One Plurality elects D (5 "
+                        "first choices), AGREEING with Minimax on the absolute "
+                        "loser. No Ranked Robin race (the A/B/C Copeland tie would "
+                        "resolve at random) and no IRV race (a random transfer tie), "
+                        "per the freezability rule."),
+        "races": [
+            {"title": "Minimax Ex.29 — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E29_CANDS, "ballots": _expand(_E29_STAR)},
+            {"title": "Minimax Ex.29 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E29_CANDS, "ballots": _expand(_E29_PLUR)},
+        ],
+        "expected": "STAR -> B (34/35/32/31; runoff B beats A 7-4). Plurality -> D "
+                    "(5 of 11) — agreeing with Minimax's paper pick of the absolute "
+                    "loser. Minimax (paper) -> D (worst loss 6 vs 7/7/8). "
+                    "LH-verified. Test ID BV2167.",
     },
 ]
 

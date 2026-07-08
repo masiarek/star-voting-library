@@ -15,6 +15,7 @@ cphxpt,"BV2155 — Tennessee capital, four ways — one electorate; Memphis, Kno
 cxrf8v,"BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method",4,contested (multi-race),921,"IRV, RankedRobin, STAR, STV",BV
 dxg8pb,"BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice",3,contested (multi-race),11,"IRV, RankedRobin, STAR",BV
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
+f3dxq9,BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss,2,contested (multi-race),11,"Plurality, STAR",BV
 f4cjpy,BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head,3,contested (multi-race),21,"IRV, RankedRobin, STAR",BV
 gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV

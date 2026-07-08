@@ -1,0 +1,34 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser
+ Tabulating 11 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D
+     2 ×   D > A > C > B      (4, 1, 2, 5)
+     3 ×   D > B > A > C      (2, 4, 1, 5)
+     3 ×   C > B > A > D      (2, 4, 5, 1)
+     1 ×   B > A > C > D      (4, 5, 2, 1)
+     2 ×   A > C > B > D      (5, 2, 4, 1)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+D                  5  Hopeful
+C                  3  Hopeful
+A                  2  Rejected
+B                  1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+C                  6  Elected
+D                  5  Rejected
+A                  0  Rejected
+B                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  C
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

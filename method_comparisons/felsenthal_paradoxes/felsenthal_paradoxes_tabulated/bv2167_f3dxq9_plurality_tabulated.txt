@@ -1,0 +1,114 @@
+======================================================================
+SOURCE FILE:     bv2167_f3dxq9_plurality.yaml
+SOURCE MODIFIED: 2026-07-07 21:47:30
+TABULATED FILE:  bv2167_f3dxq9_plurality_tabulated.txt
+TABULATED AT:    2026-07-07 21:48:07
+======================================================================
+
+election_title: "Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D"
+scenario_description: |-
+  Race 2 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A10, Example 29 — see bv2167_f3dxq9_star.yaml for the setup.
+  The same 11 voters under Choose-One: first choices D 5, C 3, A 2, B 1 → D — the candidate who loses every head-to-head 5–6 and whom a majority (6 of 11) rank dead last. Choose-One and Minimax (worked on the case page) agree on the absolute loser, for opposite reasons: Choose-One sees only D's five committed fans; Minimax sees only that D's defeats are narrow.
+  Live results: https://bettervoting.com/f3dxq9/results
+bv_test_id: BV2167
+bv_election_id: f3dxq9
+bv_results_url: https://bettervoting.com/f3dxq9/results
+paradoxes: [condorcet-loser, absolute-loser, condorcet-cycle]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,1,0,0
+  1,0,0,0
+  1,0,0,0
+expected_winners:
+  - D
+
+# file: bv2167_f3dxq9_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D ===
+  Race 2 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A10, Example 29 — see bv2167_f3dxq9_star.yaml for the setup.
+  The same 11 voters under Choose-One: first choices D 5, C 3, A 2, B 1 → D — the candidate who loses every head-to-head 5–6 and whom a majority (6 of 11) rank dead last. Choose-One and Minimax (worked on the case page) agree on the absolute loser, for opposite reasons: Choose-One sees only D's five committed fans; Minimax sees only that D's defeats are narrow.
+  Live results: https://bettervoting.com/f3dxq9/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |      A     |     B     |   * C     |   * D     |
+-----------------------------------------------------------------
+           A > |    ---     |2 - 8 - 1  |2 - 6 - 3  |2 - 4 - 5  |
+           B > | 1 - 8 - 2  |   ---     |1 - 7 - 3  |1 - 5 - 5  |
+         * C > | 3 - 6 - 2  |3 - 7 - 1  |   ---     |3 - 3 - 5  |
+         * D > | 5 - 4 - 2  |5 - 5 - 1  |5 - 3 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: D — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = D
+  Approval = A   (differs from STAR)
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 11 ballots.
+Count × A,B,C,D
+    5 × 0,0,0,1
+    3 × 0,0,1,0
+    2 × 1,0,0,0
+    1 × 0,1,0,0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           0   0   0   0   2   9  |     2   0.2
+B           0   0   0   0   1  10  |     1   0.1
+C           0   0   0   0   3   8  |     3   0.3
+D           0   0   0   0   5   6  |     5   0.5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   D             -- 5 -- First place
+   C             -- 3 -- Second place
+   A             -- 2
+   B             -- 1
+ D and C advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   D             -- 5 -- First place
+   C             -- 3
+   Equal Support -- 3
+ D wins.
+   Runoff math:
+     11  ballots cast
+   −  3  Equal Support (no preference between the two finalists)
+     ──
+      8  voters with a preference  (majority = 5)
+           D 5 (62%)  ·  C 3 (38%)
+
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
+ D

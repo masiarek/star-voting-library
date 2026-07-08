@@ -32,10 +32,14 @@ Condorcet loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the a
 Condorcet loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot,Approval,April,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_approval.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce,RankedRobin,Bruce,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_ranked_robin.yaml
+Condorcet loser paradox,Simple,"Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D",Plurality,D,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_plurality.yaml
+Condorcet loser paradox,Simple,"Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser",STAR,B,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot,Approval,April,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_approval.yaml
 Absolute loser paradox,Simple,Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce,RankedRobin,Bruce,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_ranked_robin.yaml
+Absolute loser paradox,Simple,"Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D",Plurality,D,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_plurality.yaml
+Absolute loser paradox,Simple,"Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser",STAR,B,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
@@ -51,6 +55,8 @@ Condorcet's paradox (cycle),Simple,Borda SCC Ex.15 — Choose-One: C wins on fir
 Condorcet's paradox (cycle),Simple,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml
 Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — Choose-One: Cass on first choices,Plurality,Cass,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_plurality.yaml
 Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — STAR: Boone wins the runoff 8–7,STAR,Boone,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D",Plurality,D,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_plurality.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser",STAR,B,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml
 Condorcet's paradox (cycle),Simple,"A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)",STAR,Rock,BV2157,mmcmpy,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
