@@ -1,4 +1,4 @@
-# Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops)
+# STAR misses the Condorcet winner — STAR's own signature failure (BV2156)
 
 **Bucket — CYCLE_OR_THREE_WAY:** Cycle / three-way split
 
@@ -21,7 +21,7 @@ The methods split: STAR=Ada, RCV-IRV=Ada, Ranked Robin=Cleo; the Condorcet (pair
 
 **Flags:** 25 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml`](../../../../method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml)  ·  **STAR tabulated mirror:** [`Whoops_02_star_misses_condorcet_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_tabulated.txt)
+**Source election:** [`method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml`](../../../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml)  ·  **STAR tabulated mirror:** [`bv2156_3grpbb_star_misses_condorcet_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

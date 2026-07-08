@@ -1,6 +1,9 @@
+bv_test_id: BV2156
+bv_election_id: 3grpbb
+bv_results_url: https://bettervoting.com/3grpbb/results
 paradoxes: [condorcet-winner]
 election:
-  election_title: Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops)
+  election_title: STAR misses the Condorcet winner — STAR's own signature failure (BV2156)
   election_description: |-
     STAR is not perfect, and this is its signature failure. Cleo is the CONDORCET WINNER
     (beats Ada 60-40 and Bruno 65-35 head-to-head) but is a low-scored compromise: the two
@@ -8,7 +11,8 @@ election:
     STAR elects ADA. Sincere ballots, no strategy. This is the score-method cousin of IRV's
     center squeeze: the broadly-acceptable middle is excluded before the final comparison.
     Rare (STAR is ~98% Condorcet-efficient in spatial models) but structural. Level 301.
-    Cross-ref: STAR_three_winner_notions. Lesson: Whoops_02_star_misses_condorcet.md
+    Cross-ref: STAR_three_winner_notions. Lesson: bv2156_3grpbb_star_misses_condorcet.md
+    Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STAR is race 1).
   options:
     show_description: false
     show_matrix: true
@@ -35,4 +39,4 @@ election:
       winners:
       - Ada
 
-# file: Whoops_02_star_misses_condorcet.yaml
+# file: bv2156_3grpbb_star_misses_condorcet.yaml

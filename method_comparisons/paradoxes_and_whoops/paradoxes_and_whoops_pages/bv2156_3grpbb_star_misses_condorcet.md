@@ -1,6 +1,6 @@
-# Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops)
+# STAR misses the Condorcet winner — STAR's own signature failure (BV2156)
 
-*Generated from [`Whoops_02_star_misses_condorcet.yaml`](../Whoops_02_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2156_3grpbb_star_misses_condorcet.yaml`](../bv2156_3grpbb_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 
@@ -12,7 +12,8 @@ wings score Cleo only a 2, so Cleo finishes THIRD on score and never reaches the
 STAR elects ADA. Sincere ballots, no strategy. This is the score-method cousin of IRV's
 center squeeze: the broadly-acceptable middle is excluded before the final comparison.
 Rare (STAR is ~98% Condorcet-efficient in spatial models) but structural. Level 301.
-Cross-ref: STAR_three_winner_notions. Lesson: Whoops_02_star_misses_condorcet.md
+Cross-ref: STAR_three_winner_notions. Lesson: bv2156_3grpbb_star_misses_condorcet.md
+Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STAR is race 1).
 
 ## Ballots
 
@@ -27,7 +28,7 @@ Ada, Bruno, Cleo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -47,7 +48,7 @@ Legend: For - Equal Support - Against
   STAR               = Ada
   RCV-RR (Condorcet) = Cleo   (differs from STAR)
   Full round-by-round reports (generated for review):
-  RCV-RR round-robin: paradoxes_and_whoops_tabulated/Whoops_02_star_misses_condorcet_RCV-RR_tabulated.txt
+  RCV-RR round-robin: paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
@@ -91,16 +92,15 @@ Cleo       25   0   0  75   0   0  |   275   2.8
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml
 ```
 
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/CYCLE_OR_THREE_WAY/Whoops_02_star_misses_condorcet.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [Whoops_01_tennessee_three_winners](Whoops_01_tennessee_three_winners.md) · [Whoops_03_condorcet_cycle_rps](Whoops_03_condorcet_cycle_rps.md) · [Whoops_04_ossipoff_centrist_irv](Whoops_04_ossipoff_centrist_irv.md) · [Whoops_05_brams_many_pathologies_irv](Whoops_05_brams_many_pathologies_irv.md)
+More cases in this set: [bv2155_cphxpt_tennessee_four_ways](bv2155_cphxpt_tennessee_four_ways.md) · [bv2157_mmcmpy_condorcet_cycle_rps](bv2157_mmcmpy_condorcet_cycle_rps.md) · [bv2158_gr72hd_ossipoff_centrist_irv](bv2158_gr72hd_ossipoff_centrist_irv.md) · [bv2159_f4cjpy_brams_irv_pathologies](bv2159_f4cjpy_brams_irv_pathologies.md)

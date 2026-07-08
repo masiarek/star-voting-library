@@ -86,7 +86,7 @@ APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml,3,15,Bruno,Bruno,Bruno,Bruno,Bruno,Cora,Bruno,Bruno,Bruno,0,False,False,False
-APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
+APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True
@@ -102,7 +102,7 @@ CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_star.ya
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,3,34,X,Z,Z,X,X,X,X,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,Y,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,5,921,Brad,Dave,Dave,Abby,Abby,Erin,Abby,,,0,False,False,True
-CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml,3,100,Ada,Ada,Bruno,Cleo,Cleo,Ada,Ada,Cleo,Cleo,25,True,False,False
+CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml,3,100,Ada,Ada,Bruno,Cleo,Cleo,Ada,Ada,Cleo,Cleo,25,True,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
@@ -114,7 +114,7 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_voteli
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml,3,100,Anderson,Carter,Carter,Anderson,Anderson,Anderson,Anderson,Anderson,Anderson,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml,3,17,Ada,Ben,Ben,Ada,Ada,Ada,Ada,Ada,Ada,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml,3,11,Beth,Carl,Carl,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
-IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml,3,22,Cat,Fish,Fish,Cat,Cat,Cat,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml,4,32,Cat,Fish,Fish,Cat,Cat,Bird,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml,3,100,Leia,Skywalker,Skywalker,Leia,Leia,Skywalker,Leia,Leia,Leia,0,False,False,False

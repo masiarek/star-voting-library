@@ -1,5 +1,5 @@
 --- RCV / Instant-Runoff Voting (single winner) ---
-  Whoops 01 — same ballots, three methods, three winners (Tennessee)
+  Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)
  Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:

@@ -1,4 +1,6 @@
-# Whoops 04 — IRV buries the centrist (Ossipoff, 303 voters)
+# BV2158 — IRV buries the centrist — Ossipoff's 303-voter one-dimensional example
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gr72hd) · **[results ↗](https://bettervoting.com/gr72hd/results)** (election `gr72hd`, Test ID BV2158; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 301 · the "core support" defense, demolished.** IRV defenders excuse center squeeze by saying the eliminated moderate "lacked core support" (first-choice votes). This example (Mike Ossipoff, via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) kills that defense: candidate **C has the *most* first choices of anyone *and* beats every rival head-to-head — and IRV eliminates C anyway**, electing D.
 
@@ -16,7 +18,7 @@ A ranked-ballot case (no scores invented). → fairness test: [Reading these fai
  49 : E>D>C>B>A
 ```
 
-A realistic "one-dimensional politics" taper — support falls off with distance from each voter's favorite. Source: [`Whoops_04_ossipoff_centrist_irv.yaml`](Whoops_04_ossipoff_centrist_irv.yaml).
+A realistic "one-dimensional politics" taper — support falls off with distance from each voter's favorite. Source: [`bv2158_gr72hd_ossipoff_centrist_irv.yaml`](bv2158_gr72hd_ossipoff_centrist_irv.yaml).
 
 ## C is the favorite by two measures — and still loses
 
@@ -37,4 +39,4 @@ C — the plurality leader and the candidate a 2-to-1 majority prefers over ever
 
 Sincere ballots, a textbook 1-D electorate (the source calls it "highly realistic"), and the failure is **structural** — it's the same center-squeeze mechanism, just dramatic enough to make the point unmissable.
 
-> ### Reading this fairly - **How common:** *structural* — center squeeze is a whole region of 1-D electorates; this is a vivid instance, not a knife-edge. - **Sincere or strategic:** fully **sincere**. - **What IRV does well:** guarantees the final pair has majority support and is simple to explain; the failure is specific to squeezed centrists. - **The symmetric whoops:** STAR isn't spotless — see [Whoops 02](Whoops_02_star_misses_condorcet.md), where STAR itself misses the Condorcet winner. The honest tally is in the [README balance ledger](README.md#balance-ledger).
+> ### Reading this fairly - **How common:** *structural* — center squeeze is a whole region of 1-D electorates; this is a vivid instance, not a knife-edge. - **Sincere or strategic:** fully **sincere**. - **What IRV does well:** guarantees the final pair has majority support and is simple to explain; the failure is specific to squeezed centrists. - **The symmetric whoops:** STAR isn't spotless — see [Whoops 02](bv2156_3grpbb_star_misses_condorcet.md), where STAR itself misses the Condorcet winner. The honest tally is in the [README balance ledger](README.md#balance-ledger).

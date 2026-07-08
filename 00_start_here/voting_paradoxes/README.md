@@ -22,15 +22,15 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 | SCC / spoiler | Subset choice condition; IIA failure (informal) | Conditional | [spoiler_scc.md](spoiler_scc.md) | [BV2144 Felsenthal Ex.1](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) · [BV2145 Felsenthal Ex.2](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_felsenthal_ex2.md) · [the split-voting set](../../method_comparisons/split_voting/) |
 | Non-monotonicity | More-is-less; additional-support; lack of monotonicity | Conditional | [non_monotonicity.md](non_monotonicity.md) | [BV2145→BV2146 Felsenthal Ex.2 pair](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) · [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
 | Reinforcement / multiple-districts | Inconsistency paradox | Conditional | [multiple_districts.md](multiple_districts.md) | [BV2147+BV2148→BV2149 Felsenthal Ex.3 trio](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_felsenthal_ex3_reinforcement.md) |
-| No-Show + Twin | Participation failure | Conditional | [no_show.md](no_show.md) | [BV2150→BV2151 Felsenthal Ex.4 pair](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_felsenthal_ex4_noshow.md) · [Whoops_05 (Brams)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
+| No-Show + Twin | Participation failure | Conditional | [no_show.md](no_show.md) | [BV2150→BV2151 Felsenthal Ex.4 pair](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_felsenthal_ex4_noshow.md) · [BV2159 (Brams)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md) |
 
 ## Covered elsewhere in the repo (tagged, no dedicated page yet)
 
 | Paradox | Also known as | Kind | Repo home |
 |---|---|---|---|
-| Condorcet's paradox (cycle) | Cyclical majorities | Simple | [Whoops_03](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.md) · [cycle_resolution.md](../RCV_Ranked_Robin/cycle_resolution.md) |
+| Condorcet's paradox (cycle) | Cyclical majorities | Simple | [BV2157 (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · [cycle_resolution.md](../RCV_Ranked_Robin/cycle_resolution.md) |
 | Clone dependence / teaming | Cloning paradox | Conditional | [rr_clone_independence.md](../RCV_Ranked_Robin/rr_clone_independence.md) |
-| Truncation paradox | Preference-truncation | Conditional | [Whoops_05 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md) |
+| Truncation paradox | Preference-truncation | Conditional | [BV2159 (Brams sampler)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md) |
 | Favorite betrayal | — | Conditional | [favorite_betrayal_voting_301.md](../STAR_Voting/favorite_betrayal_voting_301.md) |
 | Absolute Majority paradox | Majority criterion failure | Simple | [BV2153 Felsenthal Ex.7](../../method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_felsenthal_ex7_absolute_majority.md) |
 | Pareto-dominated winner | Pareto violation | Simple | [Felsenthal Ex.6 (LH-only)](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |

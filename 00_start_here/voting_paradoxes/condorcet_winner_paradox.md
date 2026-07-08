@@ -15,8 +15,8 @@ The same election's STAR race elects Bo: the runoff is itself a head-to-head, so
 | Method | Vulnerable? | Why / where demonstrated |
 |---|---|---|
 | Choose-One (Plurality) | Yes | First-choice counts ignore every pairwise fact — [BV2144](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) |
-| RCV-IRV | Yes | Center squeeze eliminates the broad favorite early — [BV2137 center squeeze](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_center_squeeze.md), [center_squeeze_irv](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md), [Whoops_04 (Ossipoff)](../../method_comparisons/paradoxes_and_whoops/Whoops_04_ossipoff_centrist_irv.md) |
-| STAR | Rarely | Usually elects the Condorcet winner, but can miss one — honestly shown in [Whoops_02](../../method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.md) |
+| RCV-IRV | Yes | Center squeeze eliminates the broad favorite early — [BV2137 center squeeze](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_center_squeeze.md), [center_squeeze_irv](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md), [BV2158 (Ossipoff)](../../method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_ossipoff_centrist_irv.md) |
+| STAR | Rarely | Usually elects the Condorcet winner, but can miss one — honestly shown in [BV2156 (STAR's miss)](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md) |
 | Ranked Robin | No | Elects the Condorcet winner by construction whenever one exists — [ranked_robin.md](../RCV_Ranked_Robin/ranked_robin.md) |
 
 Note the IRV-specific wording: center squeeze is a property of **IRV's elimination order**, not of ranked ballots — Ranked Robin counts the *same* ballots and finds the Condorcet winner.

@@ -6,13 +6,13 @@ A small gallery of **low-stakes elections with surprising results** — the kind
 
 ## The cases
 
-| # | Lesson | The whoops | Who takes the hit |
-|---|--------|-----------|-------------------|
-| 01 | [Tennessee — 3 methods, 3 winners](Whoops_01_tennessee_three_winners.md) | one ballot set → Plurality=Memphis, IRV=Knoxville, Condorcet/STAR=Nashville | **Plurality & IRV** |
-| 02 | [STAR misses the Condorcet winner](Whoops_02_star_misses_condorcet.md) | the head-to-head winner is too low-scored to reach the runoff | **STAR** |
-| 03 | [a Condorcet cycle (rock-paper-scissors)](Whoops_03_condorcet_cycle_rps.md) | majority rule is intransitive — *no* Condorcet winner exists | **Condorcet / Ranked Robin** |
-| 04 | [IRV buries the centrist (Ossipoff)](Whoops_04_ossipoff_centrist_irv.md) | the plurality *and* Condorcet winner is eliminated; IRV elects D | **IRV** |
-| 05 | [many IRV pathologies in one (Brams)](Whoops_05_brams_many_pathologies_irv.md) | Condorcet failure + no-show + truncation + non-monotonicity | **IRV** |
+| Case | Lesson | The whoops | Who takes the hit | Live |
+|---|--------|-----------|-------------------|------|
+| BV2155 | [Tennessee — four ways, three winners](bv2155_cphxpt_tennessee_four_ways.md) | one ballot set → Plurality=Memphis, IRV=Knoxville, STAR & Ranked Robin=Nashville | **Plurality & IRV** | [results ↗](https://bettervoting.com/cphxpt/results) |
+| BV2156 | [STAR misses the Condorcet winner](bv2156_3grpbb_star_misses_condorcet.md) | the head-to-head winner is too low-scored to reach the runoff | **STAR** | [results ↗](https://bettervoting.com/3grpbb/results) |
+| BV2157 | [a Condorcet cycle (rock-paper-scissors)](bv2157_mmcmpy_condorcet_cycle_rps.md) | majority rule is intransitive — *no* Condorcet winner exists | **Condorcet / Ranked Robin** | [results ↗](https://bettervoting.com/mmcmpy/results) |
+| BV2158 | [IRV buries the centrist (Ossipoff)](bv2158_gr72hd_ossipoff_centrist_irv.md) | the plurality *and* Condorcet winner is eliminated; IRV elects D | **IRV** | [results ↗](https://bettervoting.com/gr72hd/results) |
+| BV2159 | [many IRV pathologies in one (Brams)](bv2159_f4cjpy_brams_irv_pathologies.md) | Condorcet failure + no-show + truncation + non-monotonicity | **IRV** | [results ↗](https://bettervoting.com/f4cjpy/results) |
 
 Cases 01–03 are STAR/score files (engine-verified, in the test library); 04–05 are **ranked-ballot** RCV-IRV cases (IRV rounds engine-verified, Condorcet winners checked by pairwise tally). Each carries a **fairness box**.
 
@@ -41,15 +41,15 @@ A "whoops" is only worth teaching if it's an **honest** one. The full test is in
 
 All three cases here pass that test (Tennessee is canonical; the STAR miss and the Condorcet cycle are foundational, sincere-vote results) — which is itself the lesson: these aren't cheap gotchas.
 
-## These are LH-only (house principle)
+## Live on BetterVoting (BV2155–BV2159)
 
-The contrast here is **method vs method**, not **BV vs LH** — BetterVoting and the engine agree on these. So no BV screenshots; see the [two-view principle](../../01_STAR/Flat_scores_ties/) for when those are warranted.
+Every case in this gallery is now a **real BetterVoting election** (created 2026-07; STAR is race 1 in each, per house style, with the comparison methods as further races on the same ballots). All 16 races match the LH tabulation exactly — the contrast here is **method vs method**, and BV and LH agree on every count. Frozen exports sit beside each case as `bv215N_<bvid>_bv_export.json`.
 
 ## Run them yourself
 
 ```
 cd STARVote_LH_tabulation_engine
-python starvote_larry_hastings.py "../01_Single_winner/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml"
+python starvote_larry_hastings.py "../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml"
 ```
 
 Each writes a full audit copy to `paradoxes_and_whoops_tabulated/`. All three also live as flat-schema positive test cases in `YAML_library/1_positive/` (each verifies the **STAR** winner — the gallery is about *disagreement*, so the test pins STAR's answer, and the lesson narrates the others).

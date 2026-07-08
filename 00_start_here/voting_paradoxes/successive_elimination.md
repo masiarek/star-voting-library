@@ -44,7 +44,7 @@ No. of voters    Preference ordering
       2          d > a > b > c
 ```
 
-Agenda *b vs c*, *winner vs d*, *winner vs a*; ties break toward the earlier letter. Sincere: b ties c → **b**; **d beats b**; **d beats a** — d wins, the `a>b>c>d` voter's *last* choice. Now let that voter **truncate** to just `a` (participating only where a stands): round 1 **c beats b**; round 2 **c beats d**; round 3 a ties c → **a wins**. Revealing *less* of the ballot got the voter their *first* choice instead of their last — the Truncation paradox ([`truncation`](../YAML_test_case_index/PARADOX_index.md); its IRV flavor lurks in [Whoops_05](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md)).
+Agenda *b vs c*, *winner vs d*, *winner vs a*; ties break toward the earlier letter. Sincere: b ties c → **b**; **d beats b**; **d beats a** — d wins, the `a>b>c>d` voter's *last* choice. Now let that voter **truncate** to just `a` (participating only where a stands): round 1 **c beats b**; round 2 **c beats d**; round 3 a ties c → **a wins**. Revealing *less* of the ballot got the voter their *first* choice instead of their last — the Truncation paradox ([`truncation`](../YAML_test_case_index/PARADOX_index.md); its IRV flavor lurks in [BV2159 (Brams)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md)).
 
 ## Why this procedure matters anyway
 

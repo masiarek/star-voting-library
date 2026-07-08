@@ -18,9 +18,10 @@ Condorcet winner paradox,Simple,Felsenthal Ex.5 — Approval: the Condorcet winn
 Condorcet winner paradox,Simple,Felsenthal Ex.5 — Ranked Robin: the Condorcet winner Bert,RankedRobin,Bert,BV2152,r6ctvy,method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_ranked_robin.yaml
 Condorcet winner paradox,Simple,"Felsenthal Ex.8 — IRV: a third winner, Clara",IRV,Clara,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_irv.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto_approval.yaml
-Condorcet winner paradox,Simple,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),STAR,Ada,,,method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml
-Condorcet winner paradox,Simple,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_04_ossipoff_centrist_irv.yaml
-Condorcet winner paradox,Simple,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Condorcet winner paradox,Simple,"Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)",STAR,Nashville,BV2155,cphxpt,method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml
+Condorcet winner paradox,Simple,STAR misses the Condorcet winner — STAR's own signature failure (BV2156),STAR,Ada,BV2156,3grpbb,method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml
+Condorcet winner paradox,Simple,IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158),RCV_IRV,,BV2158,gr72hd,method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_ossipoff_centrist_irv.yaml
+Condorcet winner paradox,Simple,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 Condorcet loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot,Approval,April,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_approval.yaml
@@ -36,7 +37,7 @@ Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
 Condorcet's paradox (cycle),Simple,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_irv.yaml
-Condorcet's paradox (cycle),Simple,"Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)",STAR,Rock,,,method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml
+Condorcet's paradox (cycle),Simple,"A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)",STAR,Rock,BV2157,mmcmpy,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada",RankedRobin,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_ranked_robin.yaml
@@ -45,22 +46,22 @@ Non-monotonicity,Conditional,Non-monotonicity (RCV-IRV) — part 2: raising X ma
 Non-monotonicity,Conditional,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",RCV_IRV,X,,,method_comparisons/monotonicity/monotonicity_irv_before.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (AFTER — X still wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_after.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (BEFORE — X wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_before.yaml
-Non-monotonicity,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Non-monotonicity,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_ranked_robin.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth,STAR,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml
 No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — Ranked Robin: unmoved, still Beth",RankedRobin,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_ranked_robin.yaml
 No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — STAR: unmoved, still Beth",STAR,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_star.yaml
-No-show paradox,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+No-show paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml
-Truncation paradox,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Truncation paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml
 Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml
 Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
 Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/clone_independence/clone_teaming_02_post.yaml
-Favorite betrayal,Conditional,Whoops 05 — many IRV pathologies in one election (Brams),RCV_IRV,,,,method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.yaml
+Favorite betrayal,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — STAR: also Bruno,STAR,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District II — Runoff/IRV: Bruno wins in round one,IRV,Bruno,BV2148,h87k6v,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_irv.yaml

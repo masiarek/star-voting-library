@@ -1,12 +1,18 @@
+bv_test_id: BV2155
+bv_election_id: cphxpt
+bv_results_url: https://bettervoting.com/cphxpt/results
+paradoxes: [condorcet-winner]
 election:
-  election_title: Whoops 01 — same ballots, three methods, three winners (Tennessee)
+  election_title: Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)
   election_description: |-
     The classic Tennessee state-capital example. One set of ballots; Plurality picks
     MEMPHIS, RCV-IRV picks KNOXVILLE, and Condorcet + STAR pick NASHVILLE (the central
     compromise that beats everyone head-to-head). Nobody is being strategic — these are
     sincere ballots. The whoops belongs to Plurality and IRV here. Scores are a simple
     geographic-distance spatial model. Level 201. Fairness note in the lesson.
-    Lesson: Whoops_01_tennessee_three_winners.md
+    Live results: https://bettervoting.com/cphxpt/results (all races LH<->BV confirmed).
+    Lesson: bv2155_cphxpt_tennessee_four_ways.md
+    Live on BetterVoting: https://bettervoting.com/cphxpt/results (BV-confirmed; STAR is race 1).
   options:
     show_description: false
     show_matrix: true
@@ -34,4 +40,4 @@ election:
       winners:
       - Nashville
 
-# file: Whoops_01_tennessee_three_winners.yaml
+# file: bv2155_cphxpt_tennessee_four_ways.yaml

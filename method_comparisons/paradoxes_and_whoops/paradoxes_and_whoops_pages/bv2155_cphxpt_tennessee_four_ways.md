@@ -1,6 +1,6 @@
-# Whoops 01 — same ballots, three methods, three winners (Tennessee)
+# Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)
 
-*Generated from [`Whoops_01_tennessee_three_winners.yaml`](../Whoops_01_tennessee_three_winners.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2155_cphxpt_tennessee_four_ways.yaml`](../bv2155_cphxpt_tennessee_four_ways.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Nashville
 
@@ -11,7 +11,9 @@ MEMPHIS, RCV-IRV picks KNOXVILLE, and Condorcet + STAR pick NASHVILLE (the centr
 compromise that beats everyone head-to-head). Nobody is being strategic — these are
 sincere ballots. The whoops belongs to Plurality and IRV here. Scores are a simple
 geographic-distance spatial model. Level 201. Fairness note in the lesson.
-Lesson: Whoops_01_tennessee_three_winners.md
+Live results: https://bettervoting.com/cphxpt/results (all races LH<->BV confirmed).
+Lesson: bv2155_cphxpt_tennessee_four_ways.md
+Live on BetterVoting: https://bettervoting.com/cphxpt/results (BV-confirmed; STAR is race 1).
 
 ## Ballots
 
@@ -27,7 +29,7 @@ Memphis, Nashville, Chattanooga, Knoxville
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -53,7 +55,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
@@ -100,14 +102,13 @@ Knoxville    17  15   0  26   0  42  |   197   2.0
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml
 ```
 
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/Whoops_01_tennessee_three_winners.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [Whoops_02_star_misses_condorcet](Whoops_02_star_misses_condorcet.md) · [Whoops_03_condorcet_cycle_rps](Whoops_03_condorcet_cycle_rps.md) · [Whoops_04_ossipoff_centrist_irv](Whoops_04_ossipoff_centrist_irv.md) · [Whoops_05_brams_many_pathologies_irv](Whoops_05_brams_many_pathologies_irv.md)
+More cases in this set: [bv2156_3grpbb_star_misses_condorcet](bv2156_3grpbb_star_misses_condorcet.md) · [bv2157_mmcmpy_condorcet_cycle_rps](bv2157_mmcmpy_condorcet_cycle_rps.md) · [bv2158_gr72hd_ossipoff_centrist_irv](bv2158_gr72hd_ossipoff_centrist_irv.md) · [bv2159_f4cjpy_brams_irv_pathologies](bv2159_f4cjpy_brams_irv_pathologies.md)

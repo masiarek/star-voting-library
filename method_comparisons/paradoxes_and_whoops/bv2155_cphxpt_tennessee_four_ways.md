@@ -1,4 +1,6 @@
-# Whoops 01 — same ballots, three methods, three winners (Tennessee)
+# BV2155 — Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cphxpt) · **[results ↗](https://bettervoting.com/cphxpt/results)** (election `cphxpt`, Test ID BV2155; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 201 · the headline whoops.** The classic Tennessee state-capital puzzle. Four cities, one set of sincere ballots — and **three different methods crown three different cities.** It's the cleanest demonstration that "the winner" isn't a property of the voters; it's a property of the *rule*.
 
@@ -18,7 +20,7 @@ Memphis, Nashville, Chattanooga, Knoxville
 17 × 0, 3, 4, 5      # Knoxville voters
 ```
 
-Scores are a simple distance model (home city 5, falling off with distance). Source: [`Whoops_01_tennessee_three_winners.yaml`](Whoops_01_tennessee_three_winners.yaml).
+Scores are a simple distance model (home city 5, falling off with distance). Source: [`bv2155_cphxpt_tennessee_four_ways.yaml`](bv2155_cphxpt_tennessee_four_ways.yaml).
 
 ## Three methods, three winners
 
@@ -37,10 +39,10 @@ Scoring Round:   Nashville 310 · Chattanooga 263 · Memphis 236 · Knoxville 19
 Automatic Runoff: Nashville 68 (68%) vs Chattanooga 32 (32%)  → Nashville wins
 ```
 
-Full audit copy: [`_tabulated`](paradoxes_and_whoops_tabulated/Whoops_01_tennessee_three_winners_tabulated.txt).
+Full audit copy: [`_tabulated`](paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt).
 
 ## Why it's the perfect opener
 
 No one voted strategically; the ballots are honest geography. The disagreement is purely about **what question each method asks** — most-first-choices (Plurality), last-one- standing (IRV), or beats-everyone-else (Condorcet/STAR). Same data, three answers.
 
-> ### Reading this fairly - **How common:** *structural* — three-way disagreements are routine whenever a centrist sits between two larger wings; Tennessee is the canonical illustration, not a one-off. - **Sincere or strategic:** fully **sincere** — no manipulation needed. - **What each does well:** Plurality is dead simple; IRV guarantees a majority of the *final two* and handles many fields fine. The catch here is specific to the centrist geometry. - **The symmetric whoops:** STAR isn't immune to weird results either — it just gets *this* one right. See [Whoops 02](Whoops_02_star_misses_condorcet.md), where STAR is the one that stumbles.
+> ### Reading this fairly - **How common:** *structural* — three-way disagreements are routine whenever a centrist sits between two larger wings; Tennessee is the canonical illustration, not a one-off. - **Sincere or strategic:** fully **sincere** — no manipulation needed. - **What each does well:** Plurality is dead simple; IRV guarantees a majority of the *final two* and handles many fields fine. The catch here is specific to the centrist geometry. - **The symmetric whoops:** STAR isn't immune to weird results either — it just gets *this* one right. See [Whoops 02](bv2156_3grpbb_star_misses_condorcet.md), where STAR is the one that stumbles.

@@ -1,4 +1,5 @@
 election_id,title,races,kind,voters,methods,backing
+3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
@@ -6,13 +7,17 @@ election_id,title,races,kind,voters,methods,backing
 LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
 bvhchj,Presidential Board Election,2,contested (multi-race),102,"Plurality, STAR_PR",BV
 byk9v2,"BV2149 — Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole",2,contested (multi-race),32,"IRV, STAR",BV
+cphxpt,"BV2155 — Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 cxrf8v,"BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method",4,contested (multi-race),921,"IRV, RankedRobin, STAR, STV",BV
 dxg8pb,"BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice",3,contested (multi-race),11,"IRV, RankedRobin, STAR",BV
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
+f4cjpy,BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head,3,contested (multi-race),21,"IRV, RankedRobin, STAR",BV
+gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
+mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
 r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count,2,contested (multi-race),47,"Approval, RankedRobin",BV
@@ -97,11 +102,6 @@ LH:Flat_scores_ties_06_scoring_tie_4way,Flat scores 06 — scoring-round 4-way t
 LH:Flat_scores_ties_07_fully_flat,Flat scores 07 — fully flat ballots (the maximal tie + abstention trap),1,single-race,2,STAR,LH-only
 LH:Flat_scores_ties_08_all_flat_zero_count,Flat scores 08 — every ballot flat (BetterVoting counts 0),1,single-race,5,STAR,LH-only
 LH:RCV_ballot_example,RCV-IRV — a basic ranked-ballot example (3 candidates),1,single-race,100,IRV,LH-only
-LH:Whoops_01_tennessee_three_winners,"Whoops 01 — same ballots, three methods, three winners (Tennessee)",1,single-race,100,STAR,LH-only
-LH:Whoops_02_star_misses_condorcet,Whoops 02 — STAR misses the Condorcet winner (STAR's own whoops),1,single-race,100,STAR,LH-only
-LH:Whoops_03_condorcet_cycle_rps,"Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)",1,single-race,100,STAR,LH-only
-LH:Whoops_04_ossipoff_centrist_irv,Whoops 04 — IRV buries the centrist (Ossipoff 303-voter),1,single-race,303,IRV,LH-only
-LH:Whoops_05_brams_many_pathologies_irv,Whoops 05 — many IRV pathologies in one election (Brams),1,single-race,21,IRV,LH-only
 LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minimal reconciliation case,1,single-race,6,STAR,LH-only
 LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
 LH:approval_bloc_2seats_c4_b6,"Bloc Approval — 2 seats, majority sweep",1,single-race,6,Approval,LH-only

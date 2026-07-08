@@ -1,6 +1,6 @@
-# Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)
+# A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)
 
-*Generated from [`Whoops_03_condorcet_cycle_rps.yaml`](../Whoops_03_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../bv2157_mmcmpy_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Rock
 
@@ -11,7 +11,8 @@ Rock — a majority CYCLE with NO Condorcet winner at all. So Condorcet / Ranked
 cannot name a winner without a cycle-breaking rule: this is THEIR whoops. The score
 methods still finish: STAR elects Rock (271 vs Paper 270 — razor thin), Approval picks
 Paper. Sincere ballots. The whole point is that 'majority rule' can be intransitive.
-Level 301. Lesson: Whoops_03_condorcet_cycle_rps.md
+Level 301. Lesson: bv2157_mmcmpy_condorcet_cycle_rps.md
+Live on BetterVoting: https://bettervoting.com/mmcmpy/results (BV-confirmed; STAR is race 1).
 
 ## Ballots
 
@@ -26,7 +27,7 @@ Rock, Paper, Scissors
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/Whoops_03_condorcet_cycle_rps_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -88,14 +89,13 @@ Scissors   32   0  33   0   0  35  |   259   2.6
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml
 ```
 
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/Whoops_03_condorcet_cycle_rps.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [Whoops_01_tennessee_three_winners](Whoops_01_tennessee_three_winners.md) · [Whoops_02_star_misses_condorcet](Whoops_02_star_misses_condorcet.md) · [Whoops_04_ossipoff_centrist_irv](Whoops_04_ossipoff_centrist_irv.md) · [Whoops_05_brams_many_pathologies_irv](Whoops_05_brams_many_pathologies_irv.md)
+More cases in this set: [bv2155_cphxpt_tennessee_four_ways](bv2155_cphxpt_tennessee_four_ways.md) · [bv2156_3grpbb_star_misses_condorcet](bv2156_3grpbb_star_misses_condorcet.md) · [bv2158_gr72hd_ossipoff_centrist_irv](bv2158_gr72hd_ossipoff_centrist_irv.md) · [bv2159_f4cjpy_brams_irv_pathologies](bv2159_f4cjpy_brams_irv_pathologies.md)

@@ -1,6 +1,6 @@
 # Cross-method divergence review
 
-_Generated 2026-07-07 18:38 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-07 20:29 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
@@ -44,7 +44,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada
 - **[bv2150_dxg8pb_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2150_dxg8pb_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml` (3c/11b)  
     STAR=**Beth** · IRV=Carl · RR=Beth · Approval=Beth · Score=Beth · Condorcet=Beth
-- **[Whoops_01_tennessee_three_winners](cases/IRV_OUTLIER_RR_WITH_STAR/Whoops_01_tennessee_three_winners.md)** — `method_comparisons/paradoxes_and_whoops/Whoops_01_tennessee_three_winners.yaml` (4c/100b)  
+- **[bv2155_cphxpt_tennessee_four_ways](cases/IRV_OUTLIER_RR_WITH_STAR/bv2155_cphxpt_tennessee_four_ways.md)** — `method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
 - **[bv2132_ykjjhy_pet_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2132_ykjjhy_pet_star.md)** — `method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml` (3c/22b)  
     STAR=**Cat** · IRV=Fish · RR=Cat · Approval=Cat · Score=Cat · Condorcet=Cat
@@ -110,7 +110,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**X** · IRV=X · RR=Y · Approval=Y · Score=Y · Condorcet=none
 - **[bv2138_cxrf8v_star](cases/CYCLE_OR_THREE_WAY/bv2138_cxrf8v_star.md)** — `method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml` (5c/921b)  
     STAR=**Brad** · IRV=Dave · RR=Abby · Approval=Erin · Score=Abby · Condorcet=none
-- **[Whoops_02_star_misses_condorcet](cases/CYCLE_OR_THREE_WAY/Whoops_02_star_misses_condorcet.md)** — `method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.yaml` (3c/100b)  
+- **[bv2156_3grpbb_star_misses_condorcet](cases/CYCLE_OR_THREE_WAY/bv2156_3grpbb_star_misses_condorcet.md)** — `method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml` (3c/100b)  
     STAR=**Ada** · IRV=Ada · RR=Cleo · Approval=Ada · Score=Ada · Condorcet=Cleo  
     _flags: 25 tied-score ballot(s); IRV flips on reversed priority_
 
@@ -162,7 +162,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Cal** · IRV=Cal · RR=Cal · Approval=Ann · Score=Ann · Condorcet=Cal
 - **[bv2148_h87k6v_star](cases/APPROVAL_OR_MINOR/bv2148_h87k6v_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml` (3c/15b)  
     STAR=**Bruno** · IRV=Bruno · RR=Bruno · Approval=Cora · Score=Bruno · Condorcet=Bruno
-- **[Whoops_03_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/Whoops_03_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml` (3c/100b)  
+- **[bv2157_mmcmpy_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/bv2157_mmcmpy_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml` (3c/100b)  
     STAR=**Rock** · IRV=Rock · RR=Rock · Approval=Paper · Score=Rock · Condorcet=none
 - **[star_district_B](cases/APPROVAL_OR_MINOR/star_district_B.md)** — `method_comparisons/summability_demo/star_district_B.yaml` (3c/3b)  
     STAR=**Oak** · IRV=Oak · RR=Oak · Approval=Pine · Score=Pine · Condorcet=Oak

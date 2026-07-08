@@ -1,4 +1,4 @@
-# Whoops 03 — a Condorcet cycle (rock-paper-scissors, no winner)
+# A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)
 
 **Bucket — APPROVAL_OR_MINOR:** Only Approval differs
 
@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Rock**. Only **Approval** differs,
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml`](../../../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.yaml)  ·  **STAR tabulated mirror:** [`Whoops_03_condorcet_cycle_rps_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/Whoops_03_condorcet_cycle_rps_tabulated.txt)
+**Source election:** [`method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../../../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml)  ·  **STAR tabulated mirror:** [`bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

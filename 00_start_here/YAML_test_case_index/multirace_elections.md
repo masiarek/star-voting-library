@@ -184,6 +184,57 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Felsenthal Ex.8 — IRV (Hare) | IRV | 3 | **Clara** |
 | Felsenthal Ex.8 — Ranked Robin (Copeland) | RankedRobin | 3 | **Bruce** |
 
+## BV2155 — Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count
+
+**Election** [`cphxpt`](https://bettervoting.com/cphxpt/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Tennessee — STAR (distance scores) | STAR | 4 | **Nashville** |
+| Tennessee — Choose-One (Plurality) | Plurality | 4 | **Memphis** |
+| Tennessee — IRV (Hare) | IRV | 4 | **Knoxville** |
+| Tennessee — Ranked Robin (Copeland) | RankedRobin | 4 | **Nashville** |
+
+## BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff
+
+**Election** [`3grpbb`](https://bettervoting.com/3grpbb/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR's miss — STAR (0-5 scores) | STAR | 3 | **Ada** |
+| STAR's miss — Ranked Robin (equal ranks allowed) | RankedRobin | 3 | **Cleo** |
+
+## BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper
+
+**Election** [`mmcmpy`](https://bettervoting.com/mmcmpy/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Rock-Paper-Scissors — STAR (271 vs 270) | STAR | 3 | **Rock** |
+| Rock-Paper-Scissors — IRV (Hare) | IRV | 3 | **Rock** |
+| Rock-Paper-Scissors — Approval (approve 3+) | Approval | 3 | **Paper** |
+
+## BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff
+
+**Election** [`gr72hd`](https://bettervoting.com/gr72hd/results) · **4 races** · **303 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Ossipoff centrist — STAR (ranks mapped to 0-5) | STAR | 5 | **C** |
+| Ossipoff centrist — Choose-One (Plurality) | Plurality | 5 | **C** |
+| Ossipoff centrist — IRV (Hare) | IRV | 5 | **D** |
+| Ossipoff centrist — Ranked Robin (Copeland) | RankedRobin | 5 | **C** |
+
+## BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head
+
+**Election** [`f4cjpy`](https://bettervoting.com/f4cjpy/results) · **3 races** · **21 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Brams sampler — STAR (ranks mapped to 0-5) | STAR | 4 | **G** |
+| Brams sampler — IRV (Hare) | IRV | 4 | **B** |
+| Brams sampler — Ranked Robin (Copeland) | RankedRobin | 4 | **G** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

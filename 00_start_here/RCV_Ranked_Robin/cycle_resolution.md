@@ -8,7 +8,7 @@
 
 **One line:** when a [Condorcet winner](../GLOSSARY.md) exists, **every** Condorcet method elects them — Ranked Robin, Minimax, Ranked Pairs, Schulze all agree. They differ *only* when majority preference forms a **cycle** (A beats B, B beats C, C beats A, with no one beating all). "Cycle resolution" is the rule a method uses to pick a winner in that case — and it's the *entire* difference between these methods.
 
-→ the cycle itself: [Whoops_03 — Condorcet cycle](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.md) · the base method: [Ranked Robin](ranked_robin.md) · [`GLOSSARY`](../GLOSSARY.md).
+→ the cycle itself: [BV2157 — Condorcet cycle (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · the base method: [Ranked Robin](ranked_robin.md) · [`GLOSSARY`](../GLOSSARY.md).
 
 ---
 
@@ -18,7 +18,7 @@ Usually one candidate beats every other head-to-head — the **Condorcet winner*
 
 > a majority prefers **A > B**, a majority prefers **B > C**, *and* a majority prefers **C > A**.
 
-There is no "beats everyone" candidate — the result is a **cycle** (the [Condorcet paradox](../../method_comparisons/paradoxes_and_whoops/Whoops_03_condorcet_cycle_rps.md), known since the 1780s). Now "elect the candidate the majority prefers" has *no* answer, and a method has to break the tie somehow. *How* it breaks it is what separates the methods.
+There is no "beats everyone" candidate — the result is a **cycle** (the [Condorcet paradox](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md), known since the 1780s). Now "elect the candidate the majority prefers" has *no* answer, and a method has to break the tie somehow. *How* it breaks it is what separates the methods.
 
 ## Why Ranked Robin / Copeland is tie-prone
 
@@ -64,7 +64,7 @@ Same ballots, **two different winners** depending on the cycle-resolution rule. 
 ## Where Ranked Robin and STAR fit
 
 - **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak** — a pragmatic choice: cycles are rare, so the simple win-loss count plus a sum-of-margins fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins, Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md).
-- **STAR is *not* a Condorcet method** and doesn't try to resolve cycles at all. Its score-then-runoff just produces a winner, which *can* differ from the Condorcet winner ([Whoops_02](../../method_comparisons/paradoxes_and_whoops/Whoops_02_star_misses_condorcet.md)). The trade: these ranked methods capture *pure majority preference* but ignore *intensity*; STAR captures intensity (how much, not just which) at the cost of strict Condorcet guarantees. Neither is "the" right answer — it's a values choice.
+- **STAR is *not* a Condorcet method** and doesn't try to resolve cycles at all. Its score-then-runoff just produces a winner, which *can* differ from the Condorcet winner ([BV2156 (STAR's miss)](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md)). The trade: these ranked methods capture *pure majority preference* but ignore *intensity*; STAR captures intensity (how much, not just which) at the cost of strict Condorcet guarantees. Neither is "the" right answer — it's a values choice.
 
 ## How often do cycles even happen?
 

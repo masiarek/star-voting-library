@@ -1,4 +1,6 @@
-# Whoops 05 — many IRV pathologies in one election (Brams)
+# BV2159 — Many IRV pathologies in one election — Brams' 21-voter sampler
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`, Test ID BV2159; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 301 · the sampler platter.** Steven Brams' famous example (*Notices of the AMS*, 1982; via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) packs **several** IRV anomalies into one 21-voter election. IRV elects **B**, but **G is the Condorcet winner** — and the same ballots demonstrate a no-show paradox, a truncation incentive, favorite-betrayal, and non-monotonicity.
 
@@ -15,7 +17,7 @@ A ranked-ballot case (no scores invented). → fairness test: [Reading these fai
 3 : F>N>G>B
 ```
 
-Source: [`Whoops_05_brams_many_pathologies_irv.yaml`](Whoops_05_brams_many_pathologies_irv.yaml).
+Source: [`bv2159_f4cjpy_brams_irv_pathologies.yaml`](bv2159_f4cjpy_brams_irv_pathologies.yaml).
 
 ## G beats everyone — and IRV still drops it
 
@@ -39,4 +41,4 @@ Final:    B 13 · N 8                 → B wins
 
 Sincere ballots, a published academic source, and the anomalies are *logical consequences* of the ballots — not artifacts of weird weights.
 
-> ### Reading this fairly - **How common:** the individual anomalies are *structural* (Smith's analysis: ~15% of 3-candidate IRV elections are non-monotonic); getting *all four* in one tiny election is a curated illustration, but each is real. - **Sincere or strategic:** the failures arise under **sincere** voting; the truncation/betrayal points are about the *incentive* IRV creates, clearly labeled. - **What IRV does well:** simple, familiar, majority-of-the-final-two. These pathologies are rarer in 2-strong-candidate races. - **The symmetric whoops:** see [Whoops 02](Whoops_02_star_misses_condorcet.md) (STAR misses a Condorcet winner) and [Whoops 03](Whoops_03_condorcet_cycle_rps.md) (no Condorcet winner exists). Tally in the [balance ledger](README.md#balance-ledger).
+> ### Reading this fairly - **How common:** the individual anomalies are *structural* (Smith's analysis: ~15% of 3-candidate IRV elections are non-monotonic); getting *all four* in one tiny election is a curated illustration, but each is real. - **Sincere or strategic:** the failures arise under **sincere** voting; the truncation/betrayal points are about the *incentive* IRV creates, clearly labeled. - **What IRV does well:** simple, familiar, majority-of-the-final-two. These pathologies are rarer in 2-strong-candidate races. - **The symmetric whoops:** see [Whoops 02](bv2156_3grpbb_star_misses_condorcet.md) (STAR misses a Condorcet winner) and [Whoops 03](bv2157_mmcmpy_condorcet_cycle_rps.md) (no Condorcet winner exists). Tally in the [balance ledger](README.md#balance-ledger).

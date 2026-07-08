@@ -10,7 +10,7 @@ Felsenthal's Example 4, run for real: [BV2150](../../method_comparisons/felsenth
 
 The Twin paradox is the same pair traversed the other way: start at BV2151, where two `Andy>Beth>Carl` voters are joined by two *twins* with the identical ordering — and the reinforced group's worst choice wins. "More voters like us" made things worse.
 
-The paradox also lurks in [Whoops_05 (Brams' sampler)](../../method_comparisons/paradoxes_and_whoops/Whoops_05_brams_many_pathologies_irv.md), packed alongside truncation and non-monotonicity in one 21-voter election.
+The paradox also lurks in [BV2159 (Brams' sampler)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md), packed alongside truncation and non-monotonicity in one 21-voter election.
 
 ## Where it comes from
 

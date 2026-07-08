@@ -1,13 +1,16 @@
 ======================================================================
-SOURCE FILE:     Whoops_04_ossipoff_centrist_irv.yaml
-SOURCE MODIFIED: 2026-07-07 17:29:28
-TABULATED FILE:  Whoops_04_ossipoff_centrist_irv_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:51
+SOURCE FILE:     bv2158_gr72hd_ossipoff_centrist_irv.yaml
+SOURCE MODIFIED: 2026-07-07 20:28:19
+TABULATED FILE:  bv2158_gr72hd_ossipoff_centrist_irv_tabulated.txt
+TABULATED AT:    2026-07-07 20:28:19
 ======================================================================
 
+bv_test_id: BV2158
+bv_election_id: gr72hd
+bv_results_url: https://bettervoting.com/gr72hd/results
 paradoxes: [condorcet-winner]
 election:
-  election_title: Whoops 04 — IRV buries the centrist (Ossipoff 303-voter)
+  election_title: IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158)
   election_description: |-
     Mike Ossipoff's 1-D example (via rangevoting.org). Candidate C is the centrist:
     C is the PLURALITY winner (100 first-choices, most of any) AND the Condorcet winner
@@ -15,7 +18,9 @@ election:
     ballots; a realistic 'one-dimensional politics' taper. Ranked-ballot case (no scores
     invented). Approval/STAR/Condorcet/Ranked Robin would all elect C. Level 301.
     Source: https://www.rangevoting.org/rangeVirv.html (section 12).
-    Lesson: Whoops_04_ossipoff_centrist_irv.md
+    Live results: https://bettervoting.com/gr72hd/results (all races LH<->BV confirmed).
+    Lesson: bv2158_gr72hd_ossipoff_centrist_irv.md
+    Live on BetterVoting: https://bettervoting.com/gr72hd/results (BV-confirmed; STAR is race 1).
   options: {show_irv: true, collapse_ballots: true, count_separator: "×"}
   races:
   - race_id: '0'
@@ -32,7 +37,7 @@ election:
 expected_winners:
   - D
 
-# file: Whoops_04_ossipoff_centrist_irv.yaml
+# file: bv2158_gr72hd_ossipoff_centrist_irv.yaml
 
 ======================================================================
 TABULATION RESULTS

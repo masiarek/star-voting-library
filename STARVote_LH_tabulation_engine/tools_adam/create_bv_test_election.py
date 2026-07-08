@@ -855,7 +855,8 @@ _F8_RANKED = [(6, ["April", "Bruce", "Clara"]), (4, ["Bruce", "Clara", "April"])
               (1, ["Clara", "April", "Bruce"]), (4, ["Clara", "Bruce", "April"])]
 _F8_APPR = [(6, (1, 0, 0)), (4, (0, 1, 0)), (1, (1, 0, 1)), (4, (0, 0, 1))]
 
-ELECTIONS = [
+# Already created -> r6ctvy (BV2152) / pcttmr (BV2153) / wq6yv7 (BV2154). Reference.
+_CREATED_BV2152_54 = [
     {
         "test_id": "BV2152",
         "title": "Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count",
@@ -948,6 +949,191 @@ ELECTIONS = [
                     "Clara (Bruce deleted; 9-6). Ranked Robin -> Bruce (Condorcet "
                     "winner). Three winners, one electorate. LH-verified. "
                     "Test ID BV2154.",
+    },
+]
+
+
+# --- BV2155–59 — the "Whoops" library promoted to live BV elections -------------
+# The five classic method-comparison cases from method_comparisons/
+# paradoxes_and_whoops/, each created as a real BV election so the repo pages
+# can point at live results (Adam: rename the Whoops files to the bv-case
+# naming afterwards). House rule per Adam: STAR IS RACE 1 in every election —
+# the lead/reference method the others are compared against. Only
+# DETERMINISTIC races are included (the W03 cycle would make BV's Ranked Robin
+# tiebreak RANDOM, so that election carries no RR race). All races LH-verified.
+_W1_CANDS = ["Memphis", "Nashville", "Chattanooga", "Knoxville"]
+_W1_STAR = [(42, (5, 2, 1, 0)), (26, (1, 5, 3, 2)), (15, (0, 3, 5, 4)), (17, (0, 3, 4, 5))]
+_W1_PLUR = [(42, (1, 0, 0, 0)), (26, (0, 1, 0, 0)), (15, (0, 0, 1, 0)), (17, (0, 0, 0, 1))]
+_W1_RANKS = [(42, (1, 2, 3, 4)), (26, (4, 1, 2, 3)), (15, (4, 3, 1, 2)), (17, (4, 3, 2, 1))]
+
+_W2_CANDS = ["Ada", "Bruno", "Cleo"]
+_W2_STAR = [(40, (5, 1, 2)), (35, (1, 5, 2)), (25, (3, 3, 5))]
+_W2_RANKS = [(40, (1, 3, 2)), (35, (3, 1, 2)), (25, (2, 2, 1))]   # 25× Cleo first, Ada=Bruno tied 2nd
+
+_W3_CANDS = ["Rock", "Paper", "Scissors"]
+_W3_STAR = [(35, (5, 3, 0)), (33, (0, 5, 3)), (32, (3, 0, 5))]
+_W3_RANKS = [(35, (1, 2, 3)), (33, (3, 1, 2)), (32, (2, 3, 1))]
+_W3_APPR = [(35, (1, 1, 0)), (33, (0, 1, 1)), (32, (1, 0, 1))]    # approve scores >= 3
+
+_W4_CANDS = ["A", "B", "C", "D", "E"]
+_W4_BLOCS = [(50, ["A", "B", "C", "D", "E"]), (51, ["B", "A", "C", "D", "E"]),
+             (100, ["C", "D", "B", "E", "A"]), (53, ["D", "E", "C", "B", "A"]),
+             (49, ["E", "D", "C", "B", "A"])]
+_W4_PLUR = [(50, (1, 0, 0, 0, 0)), (51, (0, 1, 0, 0, 0)), (100, (0, 0, 1, 0, 0)),
+            (53, (0, 0, 0, 1, 0)), (49, (0, 0, 0, 0, 1))]
+
+_W5_CANDS = ["B", "G", "N", "F"]
+_W5_BLOCS = [(7, ["B", "G", "N", "F"]), (6, ["G", "B", "N", "F"]),
+             (5, ["N", "G", "B", "F"]), (3, ["F", "N", "G", "B"])]
+
+_W4_R, _W4_S = _mk_ranked_and_star(_W4_BLOCS, _W4_CANDS)   # N=5 map: 5,4,3,2,1
+_W5_R, _W5_S = _mk_ranked_and_star(_W5_BLOCS, _W5_CANDS)   # N=4 map: 5,4,2,1
+
+ELECTIONS = [
+    {
+        "test_id": "BV2155",
+        "title": "Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count",
+        "description": ("The classic Tennessee state-capital example (a staple of "
+                        "voting-methods teaching): 100 voters spread along the state "
+                        "vote on where to put the capital, with preferences from simple "
+                        "geographic distance — 42 around Memphis (far west), 26 around "
+                        "Nashville (central), 15 around Chattanooga and 17 around "
+                        "Knoxville (east). One sincere electorate, four counts, three "
+                        "winners: STAR (0-5 scores from the distance model) elects "
+                        "NASHVILLE, the central compromise that also beats every rival "
+                        "head-to-head (the Condorcet winner — confirmed by the Ranked "
+                        "Robin race); Choose-One Plurality elects MEMPHIS (biggest "
+                        "single bloc, 42, though 58 voters put Memphis dead last); and "
+                        "instant-runoff IRV elects KNOXVILLE (Chattanooga's elimination "
+                        "feeds east: 15 transfers make Knoxville 32, Nashville is "
+                        "deleted next, and Knoxville beats Memphis 58-42). The "
+                        "tabulation, not the ballot, decides."),
+        "races": [
+            {"title": "Tennessee — STAR (distance scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _W1_CANDS, "ballots": _expand(_W1_STAR)},
+            {"title": "Tennessee — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _W1_CANDS, "ballots": _expand(_W1_PLUR)},
+            {"title": "Tennessee — IRV (Hare)", "method": "IRV", "num_winners": 1,
+             "max_rankings": 4, "candidates": _W1_CANDS, "ballots": _expand(_W1_RANKS)},
+            {"title": "Tennessee — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 4, "candidates": _W1_CANDS,
+             "ballots": _expand(_W1_RANKS)},
+        ],
+        "expected": "STAR -> Nashville; Plurality -> Memphis; IRV -> Knoxville; "
+                    "Ranked Robin -> Nashville (Condorcet winner). LH-verified. "
+                    "Test ID BV2155.",
+    },
+    {
+        "test_id": "BV2156",
+        "title": "STAR's own miss — the Condorcet winner scores third and never reaches the runoff",
+        "description": ("STAR is not perfect, and this 100-voter example is its "
+                        "signature (and rare) failure, shown honestly. Cleo is the "
+                        "CONDORCET WINNER — beats Ada 60-40 and Bruno 65-35 head-to-"
+                        "head — but is a low-scored compromise: the two wings score "
+                        "Cleo only a 2, so the score totals are Ada 310, Bruno 290, "
+                        "Cleo 275 and Cleo finishes THIRD, never reaching the "
+                        "automatic runoff. STAR elects ADA (beats Bruno 40-35 with 25 "
+                        "Equal Support). Sincere ballots, no strategy — the score-"
+                        "method cousin of IRV's center squeeze (STAR is ~98% Condorcet-"
+                        "efficient in spatial models, so this is rare but structural). "
+                        "The second race counts the same voters' rankings (including "
+                        "the 25 ballots ranking Ada and Bruno EQUAL second) by Ranked "
+                        "Robin, which elects Cleo directly."),
+        "races": [
+            {"title": "STAR's miss — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _W2_CANDS, "ballots": _expand(_W2_STAR)},
+            {"title": "STAR's miss — Ranked Robin (equal ranks allowed)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+             "candidates": _W2_CANDS, "ballots": _expand(_W2_RANKS)},
+        ],
+        "expected": "STAR -> Ada (310/290/275; runoff 40-35). Ranked Robin -> Cleo "
+                    "(Condorcet winner 60-40, 65-35). LH-verified. Test ID BV2156.",
+    },
+    {
+        "test_id": "BV2157",
+        "title": "Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",
+        "description": ("The paradox of voting itself, as a 100-voter election. Rock "
+                        "beats Paper 67-33, Paper beats Scissors 68-32, Scissors beats "
+                        "Rock 65-35 — a majority CYCLE with NO Condorcet winner, so "
+                        "'majority rule' is intransitive on these sincere ballots. "
+                        "Methods that don't need a Condorcet winner still finish: STAR "
+                        "elects ROCK on a razor-thin scoring round (Rock 271, Paper "
+                        "270, Scissors 259; runoff 67-33), IRV also elects ROCK "
+                        "(Scissors out first, 32 transfers), and Approval (approving "
+                        "scores of 3+) elects PAPER 68-67-65. NOTE: this election "
+                        "deliberately carries NO Ranked Robin race — under a perfect "
+                        "3-way Copeland tie BetterVoting resolves at RANDOM, which "
+                        "cannot be frozen into a repeatable test case."),
+        "races": [
+            {"title": "Rock-Paper-Scissors — STAR (271 vs 270)", "method": "STAR",
+             "num_winners": 1, "candidates": _W3_CANDS, "ballots": _expand(_W3_STAR)},
+            {"title": "Rock-Paper-Scissors — IRV (Hare)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _W3_CANDS,
+             "ballots": _expand(_W3_RANKS)},
+            {"title": "Rock-Paper-Scissors — Approval (approve 3+)", "method": "Approval",
+             "num_winners": 1, "candidates": _W3_CANDS, "ballots": _expand(_W3_APPR)},
+        ],
+        "expected": "STAR -> Rock (271/270/259; runoff 67-33). IRV -> Rock. "
+                    "Approval -> Paper (68/67/65). Cycle: no Condorcet winner; no RR "
+                    "race on purpose. LH-verified. Test ID BV2157.",
+    },
+    {
+        "test_id": "BV2158",
+        "title": "Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff",
+        "description": ("Mike Ossipoff's one-dimensional 303-voter example (via "
+                        "rangevoting.org, §12). Five candidates A-E on a left-right "
+                        "line; C is the centrist with 100 first-choice votes — the "
+                        "most of any candidate — AND the Condorcet winner (beats every "
+                        "rival roughly 2:1). Choose-One Plurality elects C. Ranked "
+                        "Robin elects C. STAR (ranks mapped to 0-5 scores, top=5 … "
+                        "bottom=1: C 1109, D 1063, B 959) elects C. But instant-runoff "
+                        "IRV eliminates C in round three — the wings' transfers pile "
+                        "up before the center's do — and elects D. A realistic "
+                        "'one-dimensional politics' taper where IRV alone misses the "
+                        "consensus candidate that even Plurality finds."),
+        "races": [
+            {"title": "Ossipoff centrist — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _W4_CANDS, "ballots": _W4_S},
+            {"title": "Ossipoff centrist — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _W4_CANDS, "ballots": _expand(_W4_PLUR)},
+            {"title": "Ossipoff centrist — IRV (Hare)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 5, "candidates": _W4_CANDS,
+             "ballots": _W4_R},
+            {"title": "Ossipoff centrist — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 5, "candidates": _W4_CANDS,
+             "ballots": _W4_R},
+        ],
+        "expected": "STAR -> C (1109/1063/959; runoff 201-102). Plurality -> C (100 "
+                    "first choices). Ranked Robin -> C (Condorcet winner). IRV -> D "
+                    "(C eliminated round 3). LH-verified. Test ID BV2158.",
+    },
+    {
+        "test_id": "BV2159",
+        "title": "Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head",
+        "description": ("Steven Brams' famous example (Notices of the AMS, 1982; via "
+                        "rangevoting.org §12): 21 voters, four candidates — "
+                        "7×(B>G>N>F), 6×(G>B>N>F), 5×(N>G>B>F), 3×(F>N>G>B). G is the "
+                        "Condorcet winner (beats B 14-7, N 13-8, F 18-3) — yet "
+                        "instant-runoff IRV eliminates G's supporters' chances (N and "
+                        "F fall first, transfers make B 11 of 21) and elects B. The "
+                        "same 21 ballots also demonstrate a no-show paradox, a "
+                        "truncation incentive, favorite betrayal and non-monotonicity "
+                        "— several IRV pathologies in one tiny, academically sourced "
+                        "election. STAR (ranks mapped to 0-5: G 84, B 72, N 63, F 33; "
+                        "runoff G beats B 14-7) and Ranked Robin both elect G."),
+        "races": [
+            {"title": "Brams sampler — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _W5_CANDS, "ballots": _W5_S},
+            {"title": "Brams sampler — IRV (Hare)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 4, "candidates": _W5_CANDS,
+             "ballots": _W5_R},
+            {"title": "Brams sampler — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 4, "candidates": _W5_CANDS,
+             "ballots": _W5_R},
+        ],
+        "expected": "STAR -> G (84/72/63/33; runoff 14-7). IRV -> B. Ranked Robin -> "
+                    "G (Condorcet winner 14-7, 13-8, 18-3). LH-verified. Test ID "
+                    "BV2159.",
     },
 ]
 
