@@ -1,0 +1,114 @@
+======================================================================
+SOURCE FILE:     bv2164_xbqq8t_plurality.yaml
+SOURCE MODIFIED: 2026-07-07 20:57:05
+TABULATED FILE:  bv2164_xbqq8t_plurality_tabulated.txt
+TABULATED AT:    2026-07-07 20:57:25
+======================================================================
+
+election_title: "Coombs Ex.17 — Choose-One: Bree on first choices"
+scenario_description: |-
+  Race 2 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 17 — see bv2164_xbqq8t_star.yaml for the setup.
+  The same 33 voters under Choose-One: first choices Arlo 11, Bree 14, Cole 4, Dana 4 → Bree (a plurality, not a majority). Choose-One happens to agree with Coombs' paper result here — both miss the Condorcet winner Arlo, whom STAR and Ranked Robin elect.
+  Live results: https://bettervoting.com/xbqq8t/results
+bv_test_id: BV2164
+bv_election_id: xbqq8t
+bv_results_url: https://bettervoting.com/xbqq8t/results
+paradoxes: [condorcet-winner]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Arlo,Bree,Cole,Dana
+  11: 1,0,0,0
+  14: 0,1,0,0
+  # 4× Cole-first, 4× Dana-first:
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+expected_winners:
+  - Bree
+
+# file: bv2164_xbqq8t_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Coombs Ex.17 — Choose-One: Bree on first choices ===
+  Race 2 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 17 — see bv2164_xbqq8t_star.yaml for the setup.
+  The same 33 voters under Choose-One: first choices Arlo 11, Bree 14, Cole 4, Dana 4 → Bree (a plurality, not a majority). Choose-One happens to agree with Coombs' paper result here — both miss the Condorcet winner Arlo, whom STAR and Ranked Robin elect.
+  Live results: https://bettervoting.com/xbqq8t/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Arlo    |   * Bree    |     Cole    |     Dana    |
+---------------------------------------------------------------------------
+        * Arlo > |     ---      |11 -  8 - 14 |11 - 18 -  4 |11 - 18 -  4 |
+        * Bree > | 14 -  8 - 11 |    ---      |14 - 15 -  4 |14 - 15 -  4 |
+          Cole > |  4 - 18 - 11 | 4 - 15 - 14 |    ---      | 4 - 25 -  4 |
+          Dana > |  4 - 18 - 11 | 4 - 15 - 14 | 4 - 25 -  4 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Bree — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = Bree
+  Approval = Arlo   (differs from STAR)
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 33 ballots.
+Count × Arlo,Bree,Cole,Dana
+   14 ×    0,   1,   0,   0
+   11 ×    1,   0,   0,   0
+    4 ×    0,   0,   1,   0
+    4 ×    0,   0,   0,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Arlo        0   0   0   0  11  22  |    11   0.3
+Bree        0   0   0   0  14  19  |    14   0.4
+Cole        0   0   0   0   4  29  |     4   0.1
+Dana        0   0   0   0   4  29  |     4   0.1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bree          -- 14 -- First place
+   Arlo          -- 11 -- Second place
+   Cole          --  4
+   Dana          --  4
+ Bree and Arlo advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bree          -- 14 -- First place
+   Arlo          -- 11
+   Equal Support --  8
+ Bree wins.
+   Runoff math:
+     33  ballots cast
+   −  8  Equal Support (no preference between the two finalists)
+     ──
+     25  voters with a preference  (majority = 13)
+           Bree 14 (56%)  ·  Arlo 11 (44%)
+
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
+ Bree

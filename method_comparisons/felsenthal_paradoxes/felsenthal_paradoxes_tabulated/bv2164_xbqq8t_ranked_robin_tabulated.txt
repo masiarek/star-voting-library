@@ -1,0 +1,37 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 33 ballots (ranked ballots).
+
+Ballots:
+    11 × Arlo > Bree > Cole > Dana
+    12 × Bree > Cole > Dana > Arlo
+     2 × Bree > Arlo > Dana > Cole
+     4 × Cole > Arlo > Dana > Bree
+     4 × Dana > Arlo > Bree > Cole
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Arlo  beats Bree   19 – 14
+   Arlo  beats Cole   17 – 16
+   Arlo  beats Dana   17 – 16
+   Bree  beats Cole   29 –  4
+   Bree  beats Dana   25 –  8
+   Cole  beats Dana   27 –  6
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |     Arlo     |    Bree     |    Cole     |    Dana     |
+-------------------------------------------------------------------
+  Arlo > |     ---      |19 -  0 - 14 |17 -  0 - 16 |17 -  0 - 16 |
+  Bree > | 14 -  0 - 19 |    ---      |29 -  0 -  4 |25 -  0 -  8 |
+  Cole > | 16 -  0 - 17 | 4 -  0 - 29 |    ---      |27 -  0 -  6 |
+  Dana > | 16 -  0 - 17 | 8 -  0 - 25 | 6 -  0 - 27 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Arlo       3–0–0         3      +7  Bree, Cole, Dana
+    2  Bree       2–1–0         2     +37  Cole, Dana
+    3  Cole       1–2–0         1      -5  Dana
+    4  Dana       0–3–0         0     -39  —
+
+Winner — Ranked Robin (RCV-RR): Arlo
+   beats every opponent head-to-head — the Condorcet winner.

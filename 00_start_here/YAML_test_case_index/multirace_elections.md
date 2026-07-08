@@ -273,6 +273,34 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Nurmi Ex.16 truncated — IRV (Hare) | IRV | 4 | **B** |
 | Nurmi Ex.16 truncated — Ranked Robin (Copeland) | RankedRobin | 4 | **B** |
 
+## BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him
+
+**Election** [`xbqq8t`](https://bettervoting.com/xbqq8t/results) · **3 races** · **33 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Coombs Ex.17 — STAR (ranks mapped to 0-5) | STAR | 4 | **Arlo** |
+| Coombs Ex.17 — Choose-One (Plurality) | Plurality | 4 | **Bree** |
+| Coombs Ex.17 — Ranked Robin (Copeland) | RankedRobin | 4 | **Arlo** |
+
+## BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass
+
+**Election** [`9vxcj7`](https://bettervoting.com/9vxcj7/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Coombs Ex.19 full — STAR (ranks mapped to 0-5) | STAR | 3 | **Boone** |
+| Coombs Ex.19 full — Choose-One (Plurality) | Plurality | 3 | **Cass** |
+
+## BV2166 — Coombs' No-Show electorate (2 of 2) — two voters stay home and their favorite wins (STAR flips too)
+
+**Election** [`b7b8dv`](https://bettervoting.com/b7b8dv/results) · **2 races** · **13 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Coombs Ex.19 no-show — STAR (ranks mapped to 0-5) | STAR | 3 | **Cass** |
+| Coombs Ex.19 no-show — Choose-One (Plurality) | Plurality | 3 | **Cass** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

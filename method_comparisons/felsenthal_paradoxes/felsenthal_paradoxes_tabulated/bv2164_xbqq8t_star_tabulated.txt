@@ -1,0 +1,125 @@
+======================================================================
+SOURCE FILE:     bv2164_xbqq8t_star.yaml
+SOURCE MODIFIED: 2026-07-07 20:56:58
+TABULATED FILE:  bv2164_xbqq8t_star_tabulated.txt
+TABULATED AT:    2026-07-07 20:57:25
+======================================================================
+
+election_title: "Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff"
+scenario_description: |-
+  Race 1 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure: eliminate whoever is ranked LAST by the most voters), Example 17.
+  33 voters, four candidates: 11×(Arlo>Bree>Cole>Dana), 12×(Bree>Cole>Dana>Arlo), 2×(Bree>Arlo>Dana>Cole), 4×(Cole>Arlo>Dana>Bree), 4×(Dana>Arlo>Bree>Cole). Arlo is the Condorcet winner (beats Bree 19–14, Cole 17–16, Dana 17–16). Coombs — worked on the case page; no tabulator on BetterVoting or in the LH engine — deletes ARLO first (ranked last by 12, the most) and elects Bree. This STAR race (ranks mapped 5/4/2/1): Arlo 107, Bree 126, Cole 96, Dana 67 — Bree tops the scoring round, but Arlo wins the automatic runoff 19–14. No IRV race: its first elimination is a random Cole/Dana 4–4 tie on BV.
+  Live results: https://bettervoting.com/xbqq8t/results
+bv_test_id: BV2164
+bv_election_id: xbqq8t
+bv_results_url: https://bettervoting.com/xbqq8t/results
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Arlo,Bree,Cole,Dana
+  11: 5,4,2,1
+  12: 1,5,4,2
+  # 2× Bree>Arlo>Dana>Cole and 4× Cole>Arlo>Dana>Bree and 4× Dana>Arlo>Bree>Cole:
+  4,5,1,2
+  4,5,1,2
+  4,1,5,2
+  4,1,5,2
+  4,1,5,2
+  4,1,5,2
+  4,2,1,5
+  4,2,1,5
+  4,2,1,5
+  4,2,1,5
+expected_winners:
+  - Arlo
+
+# file: bv2164_xbqq8t_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff ===
+  Race 1 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure: eliminate whoever is ranked LAST by the most voters), Example 17.
+  33 voters, four candidates: 11×(Arlo>Bree>Cole>Dana), 12×(Bree>Cole>Dana>Arlo), 2×(Bree>Arlo>Dana>Cole), 4×(Cole>Arlo>Dana>Bree), 4×(Dana>Arlo>Bree>Cole). Arlo is the Condorcet winner (beats Bree 19–14, Cole 17–16, Dana 17–16). Coombs — worked on the case page; no tabulator on BetterVoting or in the LH engine — deletes ARLO first (ranked last by 12, the most) and elects Bree. This STAR race (ranks mapped 5/4/2/1): Arlo 107, Bree 126, Cole 96, Dana 67 — Bree tops the scoring round, but Arlo wins the automatic runoff 19–14. No IRV race: its first elimination is a random Cole/Dana 4–4 tie on BV.
+  Live results: https://bettervoting.com/xbqq8t/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Arlo    |   * Bree    |     Cole    |     Dana    |
+---------------------------------------------------------------------------
+        * Arlo > |     ---      |19 -  0 - 14 |17 -  0 - 16 |17 -  0 - 16 |
+        * Bree > | 14 -  0 - 19 |    ---      |29 -  0 -  4 |25 -  0 -  8 |
+          Cole > | 16 -  0 - 17 | 4 -  0 - 29 |    ---      |27 -  0 -  6 |
+          Dana > | 16 -  0 - 17 | 8 -  0 - 25 | 6 -  0 - 27 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Arlo — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Arlo
+  Choose-One (Plurality) = Bree   (differs from STAR)
+  Approval               = Bree   (differs from STAR)
+
+Majority Preference Enforcement Principle:
+ - Score Round Winner(s) = (Bree)
+ - Runoff Round Winner   = (Arlo)
+  Candidate Bree earned the highest total score,
+  but Candidate Arlo won the automatic runoff by being the head-to-head majority favorite.
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 33 ballots.
+Count × Arlo,Bree,Cole,Dana
+   12 ×    1,   5,   4,   2
+   11 ×    5,   4,   2,   1
+    4 ×    4,   1,   5,   2
+    4 ×    4,   2,   1,   5
+    2 ×    4,   5,   1,   2
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Arlo       11  10   0   0  12   0  |   107   3.2
+Bree       14  11   0   4   4   0  |   126   3.8
+Cole        4  12   0  11   6   0  |    96   2.9
+Dana        4   0   0  18  11   0  |    67   2.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bree          -- 126 -- First place
+   Arlo          -- 107 -- Second place
+   Cole          --  96
+   Dana          --  67
+ Bree and Arlo advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Arlo          -- 19 -- First place
+   Bree          -- 14
+   Equal Support --  0
+ Arlo wins.
+   Runoff math:
+     33  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     33  voters with a preference  (majority = 17)
+           Arlo 19 (58%)  ·  Bree 14 (42%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Arlo

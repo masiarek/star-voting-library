@@ -1205,7 +1205,8 @@ _F56_SRC = ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting Various "
             "Trust 'Voting Power in Practice' workshop, Château du Baffy, "
             "Normandy). ")
 
-ELECTIONS = [
+# Already created -> r6qc8h/q3h4fk/4htk44/74j6vv (BV2160-63). Reference.
+_CREATED_BV2160_63 = [
     {
         "test_id": "BV2160",
         "title": "Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper",
@@ -1330,6 +1331,168 @@ ELECTIONS = [
         "expected": "STAR -> B (329/373/244/171). IRV -> B (D out, ballots exhaust, "
                     "C out, B wins) — the 17 truncators improve their outcome vs "
                     "BV2162. Ranked Robin -> B. LH-verified. Test ID BV2163.",
+    },
+]
+
+
+# --- BV2164-66 — Felsenthal (2010) §A7: Coombs' procedure ------------------------
+# SOURCE: same Felsenthal (2010) paper; Appendix A7 ("Demonstrating Paradoxes
+# Afflicting Coombs' Procedure", Examples 17-22). Coombs (eliminate whoever is
+# ranked LAST by the most voters, unless someone has a first-choice majority)
+# has NO tabulator on BetterVoting or in the LH engine (pref_voting can
+# cross-check), so — like Borda — the Coombs counts live as worked numbers in
+# the case pages while these elections carry the same electorates under the
+# supported DETERMINISTIC methods, STAR first (house rule). Per Adam: Ex.17 +
+# the Ex.19 pair go live; Ex.18 (a Coombs-only monotonicity flip whose live
+# races are unchanged), Ex.20 (reinforcement; NOTE a source typo — District II
+# is announced as 6 voters but lists 1+6=7, and the amalgamated table sums to
+# 41), Ex.21 (twin; the post-twin Coombs state is a RANDOM a/b tie — not
+# freezable) and Ex.22 (SCC) are worked on the coombs teaching page.
+#   BV2164 (Ex.17): 33 voters, four candidates — 11×(a>b>c>d), 12×(b>c>d>a),
+#     2×(b>a>d>c), 4×(c>a>d>b), 4×(d>a>b>c). Arlo (=a) is the Condorcet
+#     winner (beats Bree 19-14, Cole 17-16, Dana 17-16). Coombs (paper):
+#     nobody has a first-count majority, and ARLO is ranked last by the most
+#     voters (12) — the Condorcet winner is the first one deleted; Bree then
+#     has a majority and wins. Live: STAR (5/4/2/1 map: 107/126/96/67 — Bree
+#     tops the scores but Arlo wins the runoff 19-14) -> Arlo; Plurality ->
+#     Bree (14 of 33); Ranked Robin -> Arlo. No IRV race: its first
+#     elimination is a random Cole/Dana tie (4-4). Felsenthal also conjectures
+#     4 candidates are MINIMAL for a Coombs Condorcet failure.
+#   BV2165 (Ex.19 full, 15 voters): 4×(a>b>c), 4×(b>c>a), 5×(c>a>b),
+#     2×(c>b>a). Cast Amy/Boone/Cass. Coombs (paper): Amy is ranked last by
+#     the most voters (6) and is deleted; Boone then has a majority — Boone
+#     wins. Live: STAR (5/3/1: 41/43/51; Boone beats Cass 8-7 in the runoff)
+#     -> Boone; Plurality -> Cass (7 of 15). Pairwise is a cycle (Amy>Boone
+#     9-6, Boone>Cass 8-7, Cass>Amy 11-4) -> no RR race; IRV's first
+#     elimination is a random Amy/Boone tie -> no IRV race.
+#   BV2166 (Ex.19 no-show, 13 voters): ceteris paribus the two c>b>a voters
+#     stay home. Coombs (paper): now BOONE is ranked last by the most voters
+#     (5) and is deleted; Cass — the abstainers' TOP preference — wins: the
+#     No-Show paradox (and, with truncation instead of abstention, the
+#     Truncation paradox). LIVE BONUS, shown honestly: STAR flips too —
+#     39/37/41, and Cass beats Amy 9-4 in the runoff. The two c>b>a voters
+#     get their FAVORITE by staying home where their sincere ballots (which
+#     score Boone 3) had helped Boone reach and win the runoff: a genuine
+#     STAR participation failure on this profile (STAR's runoff stage is
+#     what costs it Moulin-style participation guarantees). Plurality -> Cass
+#     in both electorates, unmoved.
+# All seven live races LH-verified pre-creation.
+
+_E17_CANDS = ["Arlo", "Bree", "Cole", "Dana"]
+_E17_STAR = [(11, (5, 4, 2, 1)), (12, (1, 5, 4, 2)), (2, (4, 5, 1, 2)),
+             (4, (4, 1, 5, 2)), (4, (4, 2, 1, 5))]
+_E17_PLUR = [(11, (1, 0, 0, 0)), (14, (0, 1, 0, 0)), (4, (0, 0, 1, 0)), (4, (0, 0, 0, 1))]
+_E17_RANKS = [(11, (1, 2, 3, 4)), (12, (4, 1, 2, 3)), (2, (2, 1, 4, 3)),
+              (4, (2, 4, 1, 3)), (4, (2, 3, 4, 1))]
+
+_E19_CANDS = ["Amy", "Boone", "Cass"]
+_E19_STAR = [(4, (5, 3, 1)), (4, (1, 5, 3)), (5, (3, 1, 5)), (2, (1, 3, 5))]
+_E19_PLUR = [(4, (1, 0, 0)), (4, (0, 1, 0)), (7, (0, 0, 1))]
+_E19N_STAR = [(4, (5, 3, 1)), (4, (1, 5, 3)), (5, (3, 1, 5))]
+_E19N_PLUR = [(4, (1, 0, 0)), (4, (0, 1, 0)), (5, (0, 0, 1))]
+
+_F7_SRC = ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting Various "
+           "Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be "
+           "Elected' (University of Haifa / LSE, revised 26 May 2010; Leverhulme "
+           "Trust 'Voting Power in Practice' workshop, Château du Baffy, "
+           "Normandy), Appendix A7: the paradoxes afflicting Coombs' procedure "
+           "(eliminate whoever is ranked LAST by the most voters). ")
+
+ELECTIONS = [
+    {
+        "test_id": "BV2164",
+        "title": "Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him",
+        "description": (_F7_SRC +
+                        "Example 17. 33 voters, four candidates — 11×(Arlo>Bree>Cole>"
+                        "Dana), 12×(Bree>Cole>Dana>Arlo), 2×(Bree>Arlo>Dana>Cole), "
+                        "4×(Cole>Arlo>Dana>Bree), 4×(Dana>Arlo>Bree>Cole). Arlo is "
+                        "the Condorcet winner (beats Bree 19-14, Cole 17-16, Dana "
+                        "17-16; the social ordering is Arlo>Bree>Cole>Dana). Coombs' "
+                        "procedure — worked on this election's case page, since "
+                        "BetterVoting has no Coombs tabulator — deletes the candidate "
+                        "ranked LAST by the most voters when nobody holds a first-"
+                        "count majority: that candidate is ARLO himself (last on 12 "
+                        "ballots), and Bree then wins with a majority. The Condorcet "
+                        "winner is the first candidate Coombs eliminates (Felsenthal "
+                        "conjectures four candidates are the minimum for this). The "
+                        "live races: STAR (ranks mapped 5/4/2/1: Arlo 107, Bree 126, "
+                        "Cole 96, Dana 67 — Bree tops the scores, but Arlo wins the "
+                        "automatic runoff 19-14), Choose-One Plurality (Bree, 14 of "
+                        "33), and Ranked Robin (Arlo, directly). No IRV race: its "
+                        "first elimination is a random Cole/Dana 4-4 tie."),
+        "races": [
+            {"title": "Coombs Ex.17 — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E17_CANDS, "ballots": _expand(_E17_STAR)},
+            {"title": "Coombs Ex.17 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E17_CANDS, "ballots": _expand(_E17_PLUR)},
+            {"title": "Coombs Ex.17 — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 4, "candidates": _E17_CANDS,
+             "ballots": _expand(_E17_RANKS)},
+        ],
+        "expected": "STAR -> Arlo (107/126/96/67; runoff 19-14). Plurality -> Bree "
+                    "(14). Ranked Robin -> Arlo (Condorcet winner). Coombs (paper) "
+                    "-> Bree, deleting the Condorcet winner FIRST. LH-verified. "
+                    "Test ID BV2164.",
+    },
+    {
+        "test_id": "BV2165",
+        "title": "Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass",
+        "description": (_F7_SRC +
+                        "Example 19, part 1 of 2: the electorate whose Coombs count "
+                        "punishes participation. 15 voters, three candidates — "
+                        "4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone), "
+                        "2×(Cass>Boone>Amy). Coombs (worked on the case page): "
+                        "nobody has a first-count majority; AMY is ranked last by "
+                        "the most voters (6) and is deleted, and Boone then holds a "
+                        "majority — Boone wins. Part 2 (BV2166): the two "
+                        "Cass>Boone>Amy voters stay home, and Coombs elects CASS — "
+                        "their top preference: the No-Show paradox (the same flip "
+                        "happens if they merely truncate to Cass-only: the "
+                        "Truncation paradox). The live races here: STAR (5/3/1 map: "
+                        "Amy 41, Boone 43, Cass 51; Boone beats Cass 8-7 in the "
+                        "runoff) and Choose-One Plurality (Cass, 7 of 15). The "
+                        "pairwise preferences are a cycle (Amy>Boone 9-6, Boone>Cass "
+                        "8-7, Cass>Amy 11-4), so no Ranked Robin race; IRV's first "
+                        "elimination is a random Amy/Boone tie, so no IRV race."),
+        "races": [
+            {"title": "Coombs Ex.19 full — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E19_CANDS, "ballots": _expand(_E19_STAR)},
+            {"title": "Coombs Ex.19 full — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E19_CANDS, "ballots": _expand(_E19_PLUR)},
+        ],
+        "expected": "STAR -> Boone (41/43/51; runoff 8-7). Plurality -> Cass (7 of "
+                    "15). Coombs (paper) -> Boone. LH-verified. Test ID BV2165.",
+    },
+    {
+        "test_id": "BV2166",
+        "title": "Coombs' No-Show electorate (2 of 2) — two voters stay home and their favorite wins (STAR flips too)",
+        "description": (_F7_SRC +
+                        "Example 19, part 2 of 2: ceteris paribus, the two "
+                        "Cass>Boone>Amy voters do NOT participate — 13 voters: "
+                        "4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone). "
+                        "Coombs (worked on the case page): now BOONE is ranked last "
+                        "by the most voters (5) and is deleted — and Cass, the "
+                        "abstainers' TOP preference, wins: the No-Show paradox under "
+                        "Coombs (Felsenthal notes the same flip via truncation). "
+                        "LIVE BONUS, shown honestly: STAR flips here too. With all "
+                        "15 ballots STAR elects Boone (BV2165); on these 13 it "
+                        "scores Amy 39, Boone 37, Cass 41 and CASS beats Amy 9-4 in "
+                        "the runoff. The two absent voters' sincere ballots (which "
+                        "score Boone 3) had helped Boone reach and win the runoff — "
+                        "by staying home they get their favorite: a genuine STAR "
+                        "participation failure on this profile. (STAR's runoff stage "
+                        "is what costs it Moulin-style participation guarantees; "
+                        "score-only methods cannot do this.) Choose-One Plurality "
+                        "elects Cass in both electorates, unmoved."),
+        "races": [
+            {"title": "Coombs Ex.19 no-show — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E19_CANDS, "ballots": _expand(_E19N_STAR)},
+            {"title": "Coombs Ex.19 no-show — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E19_CANDS, "ballots": _expand(_E19N_PLUR)},
+        ],
+        "expected": "STAR -> Cass (39/37/41; runoff 9-4) — the two abstainers do "
+                    "BETTER than in BV2165 under STAR as well as Coombs. Plurality "
+                    "-> Cass. LH-verified. Test ID BV2166.",
     },
 ]
 

@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**232 election files** (197 single-winner, 35 multi-winner) across 14 method(s).
+**239 election files** (204 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 122 |
+| STAR | 125 |
 | RCV-IRV (Hare) | 11 |
-| Ranked Robin (RCV-RR / Copeland) | 29 |
+| Ranked Robin (RCV-RR / Copeland) | 30 |
 | Approval | 9 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -23,11 +23,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
 | IRV | 13 |
-| PLURALITY | 14 |
+| PLURALITY | 17 |
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (122)
+## STAR  (125)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -135,6 +135,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2161_q3h4fk_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2161_q3h4fk_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits) → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml) |
 | [`bv2162_4htk44_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2162_4htk44_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_star.yaml) |
 | [`bv2163_74j6vv_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2163_74j6vv_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 truncated — STAR: unmoved, still B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_star.yaml) |
+| [`bv2164_xbqq8t_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2164_xbqq8t_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml) |
+| [`bv2165_9vxcj7_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2165_9vxcj7_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 full — STAR: Boone wins the runoff 8–7 → _Boone_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml) |
+| [`bv2166_b7b8dv_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2166_b7b8dv_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too) → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml) |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |
 | [`monotonicity_star_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_before.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (BEFORE — X wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_before.yaml) |
 | [`bv2138_cxrf8v_star`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_star.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff → _Brad_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml) |
@@ -170,7 +173,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (29)
+## Ranked Robin (RCV-RR / Copeland)  (30)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -197,6 +200,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2154_wq6yv7_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2154_wq6yv7_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce → _Bruce_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_ranked_robin.yaml) |
 | [`bv2162_4htk44_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2162_4htk44_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 sincere — Ranked Robin: the Condorcet winner B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_ranked_robin.yaml) |
 | [`bv2163_74j6vv_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2163_74j6vv_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_ranked_robin.yaml) |
+| [`bv2164_xbqq8t_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2164_xbqq8t_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_ranked_robin.yaml) |
 | [`felsenthal_ex6_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/felsenthal_ex6_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only) → _Aria_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_ranked_robin.yaml) |
 | [`bv2138_cxrf8v_ranked_robin`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_ranked_robin.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently → _Abby_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_ranked_robin.yaml) |
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_ranked_robin.yaml) |
@@ -298,7 +302,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2163_74j6vv_irv`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2163_74j6vv_irv.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_irv.yaml) |
 | [`bv2138_cxrf8v_irv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_irv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — IRV (Hare): Dave wins by elimination → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) |
 
-## PLURALITY  (14)
+## PLURALITY  (17)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -309,6 +313,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2144_mxfmhm_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2144_mxfmhm_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins → _Ana_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml) |
 | [`bv2160_r6qc8h_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2160_r6qc8h_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Fishburn Ex.14 — Choose-One: A wins on first choices → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_plurality.yaml) |
 | [`bv2161_q3h4fk_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2161_q3h4fk_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Borda SCC Ex.15 — Choose-One: C wins on first choices → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_plurality.yaml) |
+| [`bv2164_xbqq8t_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2164_xbqq8t_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.17 — Choose-One: Bree on first choices → _Bree_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_plurality.yaml) |
+| [`bv2165_9vxcj7_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2165_9vxcj7_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 full — Choose-One: Cass on first choices → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_plurality.yaml) |
+| [`bv2166_b7b8dv_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2166_b7b8dv_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 no-show — Choose-One: still Cass, unmoved → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_plurality.yaml) |
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
 | [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |

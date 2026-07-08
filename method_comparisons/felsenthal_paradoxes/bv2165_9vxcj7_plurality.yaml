@@ -1,0 +1,43 @@
+election_title: "Coombs Ex.19 full — Choose-One: Cass on first choices"
+scenario_description: |-
+  Race 2 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 19 — see bv2165_9vxcj7_star.yaml for the setup.
+  The same 15 voters under Choose-One: first choices Amy 4, Boone 4, Cass 7 → Cass (a plurality, not a majority). Plurality picks Cass with or without the two Cass>Boone>Amy voters (BV2166) — the no-show drama belongs to the elimination and runoff stages of Coombs and STAR, not to the first-choice count.
+  Live results: https://bettervoting.com/9vxcj7/results
+bv_test_id: BV2165
+bv_election_id: 9vxcj7
+bv_results_url: https://bettervoting.com/9vxcj7/results
+paradoxes: [no-show, condorcet-cycle]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Amy,Boone,Cass
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  0,1,0
+  0,1,0
+  0,1,0
+  0,1,0
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - Cass
+
+# file: bv2165_9vxcj7_plurality.yaml

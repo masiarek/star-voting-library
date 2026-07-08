@@ -1,21 +1,21 @@
 # Cross-method divergence review
 
-_Generated 2026-07-07 20:47 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-07 21:01 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **124** single-winner STAR elections (skipped 71 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **56** (45%) diverge from STAR under at least one method; **68** agree across the board.
+- Scanned **127** single-winner STAR elections (skipped 75 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **59** (46%) diverge from STAR under at least one method; **68** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 11 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 5 |
-| CYCLE_OR_THREE_WAY | 16 |
-| APPROVAL_OR_MINOR | 23 |
+| CYCLE_OR_THREE_WAY | 17 |
+| APPROVAL_OR_MINOR | 25 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (54 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (57 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 11
 
@@ -82,7 +82,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
 
-### CYCLE_OR_THREE_WAY — 14
+### CYCLE_OR_THREE_WAY — 15
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -108,6 +108,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Bruno** · IRV=Alma · RR=Cora · Approval=Cora · Score=Cora · Condorcet=none
 - **[bv2160_r6qc8h_star](cases/CYCLE_OR_THREE_WAY/bv2160_r6qc8h_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_star.yaml` (4c/7b)  
     STAR=**B** · IRV=A · RR=C · Approval=B · Score=B · Condorcet=none
+- **[bv2165_9vxcj7_star](cases/CYCLE_OR_THREE_WAY/bv2165_9vxcj7_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml` (3c/15b)  
+    STAR=**Boone** · IRV=Boone · RR=Cass · Approval=Cass · Score=Cass · Condorcet=none
 - **[monotonicity_star_after](cases/CYCLE_OR_THREE_WAY/monotonicity_star_after.md)** — `method_comparisons/monotonicity/monotonicity_star_after.yaml` (3c/34b)  
     STAR=**X** · IRV=Z · RR=X · Approval=X · Score=X · Condorcet=none
 - **[monotonicity_star_before](cases/CYCLE_OR_THREE_WAY/monotonicity_star_before.md)** — `method_comparisons/monotonicity/monotonicity_star_before.yaml` (3c/34b)  
@@ -118,7 +120,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Ada** · IRV=Ada · RR=Cleo · Approval=Ada · Score=Ada · Condorcet=Cleo  
     _flags: 25 tied-score ballot(s); IRV flips on reversed priority_
 
-### APPROVAL_OR_MINOR — 23
+### APPROVAL_OR_MINOR — 25
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -168,6 +170,10 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Bruno** · IRV=Bruno · RR=Bruno · Approval=Cora · Score=Bruno · Condorcet=Bruno
 - **[bv2161_q3h4fk_star](cases/APPROVAL_OR_MINOR/bv2161_q3h4fk_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml` (3c/7b)  
     STAR=**C** · IRV=C · RR=C · Approval=B · Score=C · Condorcet=none
+- **[bv2164_xbqq8t_star](cases/APPROVAL_OR_MINOR/bv2164_xbqq8t_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml` (4c/33b)  
+    STAR=**Arlo** · IRV=Arlo · RR=Arlo · Approval=Bree · Score=Bree · Condorcet=Arlo
+- **[bv2166_b7b8dv_star](cases/APPROVAL_OR_MINOR/bv2166_b7b8dv_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml` (3c/13b)  
+    STAR=**Cass** · IRV=Cass · RR=Cass · Approval=Amy · Score=Cass · Condorcet=none
 - **[bv2157_mmcmpy_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/bv2157_mmcmpy_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml` (3c/100b)  
     STAR=**Rock** · IRV=Rock · RR=Rock · Approval=Paper · Score=Rock · Condorcet=none
 - **[star_district_B](cases/APPROVAL_OR_MINOR/star_district_B.md)** — `method_comparisons/summability_demo/star_district_B.yaml` (3c/3b)  

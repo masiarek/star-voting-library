@@ -20,6 +20,9 @@ Condorcet winner paradox,Simple,"Felsenthal Ex.8 — IRV: a third winner, Clara"
 Condorcet winner paradox,Simple,"Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner",IRV,A,BV2162,4htk44,method_comparisons/felsenthal_paradoxes/bv2162_4htk44_irv.yaml
 Condorcet winner paradox,Simple,Nurmi Ex.16 sincere — Ranked Robin: the Condorcet winner B,RankedRobin,B,BV2162,4htk44,method_comparisons/felsenthal_paradoxes/bv2162_4htk44_ranked_robin.yaml
 Condorcet winner paradox,Simple,Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B,STAR,B,BV2162,4htk44,method_comparisons/felsenthal_paradoxes/bv2162_4htk44_star.yaml
+Condorcet winner paradox,Simple,Coombs Ex.17 — Choose-One: Bree on first choices,Plurality,Bree,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_plurality.yaml
+Condorcet winner paradox,Simple,Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo,RankedRobin,Arlo,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_ranked_robin.yaml
+Condorcet winner paradox,Simple,"Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff",STAR,Arlo,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto_approval.yaml
 Condorcet winner paradox,Simple,"Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)",STAR,Nashville,BV2155,cphxpt,method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml
 Condorcet winner paradox,Simple,STAR misses the Condorcet winner — STAR's own signature failure (BV2156),STAR,Ada,BV2156,3grpbb,method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml
@@ -46,6 +49,8 @@ Condorcet's paradox (cycle),Simple,Fishburn Ex.14 — Choose-One: A wins on firs
 Condorcet's paradox (cycle),Simple,Fishburn Ex.14 — STAR: B wins the electorate whose Borda count is truncation-unstable,STAR,B,BV2160,r6qc8h,method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_star.yaml
 Condorcet's paradox (cycle),Simple,Borda SCC Ex.15 — Choose-One: C wins on first choices,Plurality,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_plurality.yaml
 Condorcet's paradox (cycle),Simple,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml
+Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — Choose-One: Cass on first choices,Plurality,Cass,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_plurality.yaml
+Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — STAR: Boone wins the runoff 8–7,STAR,Boone,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml
 Condorcet's paradox (cycle),Simple,"A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)",STAR,Rock,BV2157,mmcmpy,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
@@ -62,6 +67,10 @@ No-show paradox,Conditional,Felsenthal Ex.4 full electorate — STAR: elects the
 No-show paradox,Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml
 No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — Ranked Robin: unmoved, still Beth",RankedRobin,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_ranked_robin.yaml
 No-show paradox,Conditional,"Felsenthal Ex.4 after two no-shows — STAR: unmoved, still Beth",STAR,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_star.yaml
+No-show paradox,Conditional,Coombs Ex.19 full — Choose-One: Cass on first choices,Plurality,Cass,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_plurality.yaml
+No-show paradox,Conditional,Coombs Ex.19 full — STAR: Boone wins the runoff 8–7,STAR,Boone,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml
+No-show paradox,Conditional,"Coombs Ex.19 no-show — Choose-One: still Cass, unmoved",Plurality,Cass,BV2166,b7b8dv,method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_plurality.yaml
+No-show paradox,Conditional,Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too),STAR,Cass,BV2166,b7b8dv,method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml
 No-show paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_irv.yaml

@@ -1,0 +1,141 @@
+======================================================================
+SOURCE FILE:     bv2166_b7b8dv_plurality.yaml
+SOURCE MODIFIED: 2026-07-07 20:58:12
+TABULATED FILE:  bv2166_b7b8dv_plurality_tabulated.txt
+TABULATED AT:    2026-07-07 20:58:16
+======================================================================
+
+election_title: "Coombs Ex.19 no-show — Choose-One: still Cass, unmoved"
+scenario_description: |-
+  Race 2 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 19 (continued) — see bv2166_b7b8dv_star.yaml for the setup.
+  The 13 remaining voters under Choose-One: first choices Amy 4, Boone 4, Cass 5 → Cass, exactly as with all 15 (BV2165). The first-choice count never wavers; the no-show flips live in Coombs' elimination (on paper) and STAR's runoff (live).
+  Live results: https://bettervoting.com/b7b8dv/results
+bv_test_id: BV2166
+bv_election_id: b7b8dv
+bv_results_url: https://bettervoting.com/b7b8dv/results
+paradoxes: [no-show]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Amy,Boone,Cass
+  1,0,0
+  1,0,0
+  1,0,0
+  1,0,0
+  0,1,0
+  0,1,0
+  0,1,0
+  0,1,0
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - Cass
+
+# file: bv2166_b7b8dv_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Coombs Ex.19 no-show — Choose-One: still Cass, unmoved ===
+  Race 2 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 19 (continued) — see bv2166_b7b8dv_star.yaml for the setup.
+  The 13 remaining voters under Choose-One: first choices Amy 4, Boone 4, Cass 5 → Cass, exactly as with all 15 (BV2165). The first-choice count never wavers; the no-show flips live in Coombs' elimination (on paper) and STAR's runoff (live).
+  Live results: https://bettervoting.com/b7b8dv/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Amy    |   Boone   |  * Cass   |
+-----------------------------------------------------
+       * Amy > |    ---     |4 - 5 - 4  |4 - 4 - 5  |
+       Boone > | 4 - 5 - 4  |   ---     |4 - 4 - 5  |
+      * Cass > | 5 - 4 - 4  |5 - 4 - 4  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cass — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = Cass
+  Approval = Amy   (differs from STAR)
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 13 ballots.
+Count × Amy,Boone,Cass
+    5 ×   0,    0,   1
+    4 ×   1,    0,   0
+    4 ×   0,    1,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Amy        0  0  0  0  4  9  |     4   0.3
+Boone      0  0  0  0  4  9  |     4   0.3
+Cass       0  0  0  0  5  8  |     5   0.4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cass          -- 5 -- First place
+   Amy           -- 4 -- Tied for second place
+   Boone         -- 4 -- Tied for second place
+ Cass advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Amy           -- 4 -- Tied for second place
+   Boone         -- 4 -- Tied for second place
+   Equal Support -- 5
+ There's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   Amy           -- 0 -- Tied for second place
+   Boone         -- 0 -- Tied for second place
+ There's still a two-way tie for second.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Amy', 'Boone', 'Cass']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Amy', 'Boone']
+  Resolved: ['Amy'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cass          -- 5 -- First place
+   Amy           -- 4
+   Equal Support -- 4
+ Cass wins.
+   Runoff math:
+     13  ballots cast
+   −  4  Equal Support (no preference between the two finalists)
+     ──
+      9  voters with a preference  (majority = 5)
+           Cass 5 (56%)  ·  Amy 4 (44%)
+
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
+ Cass
