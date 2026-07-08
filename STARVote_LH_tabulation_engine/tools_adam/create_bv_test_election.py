@@ -989,7 +989,8 @@ _W5_BLOCS = [(7, ["B", "G", "N", "F"]), (6, ["G", "B", "N", "F"]),
 _W4_R, _W4_S = _mk_ranked_and_star(_W4_BLOCS, _W4_CANDS)   # N=5 map: 5,4,3,2,1
 _W5_R, _W5_S = _mk_ranked_and_star(_W5_BLOCS, _W5_CANDS)   # N=4 map: 5,4,2,1
 
-ELECTIONS = [
+# Already created -> cphxpt/3grpbb/mmcmpy/gr72hd/f4cjpy (BV2155-59). Reference.
+_CREATED_BV2155_59 = [
     {
         "test_id": "BV2155",
         "title": "Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count",
@@ -1134,6 +1135,201 @@ ELECTIONS = [
         "expected": "STAR -> G (84/72/63/33; runoff 14-7). IRV -> B. Ranked Robin -> "
                     "G (Condorcet winner 14-7, 13-8, 18-3). LH-verified. Test ID "
                     "BV2159.",
+    },
+]
+
+
+# --- BV2160-63 — Felsenthal (2010) §A5 (Borda) + §A6 (RCV-IRV, a.k.a. "AV") ------
+# SOURCE: same Felsenthal (2010) paper; Appendix A5 ("Demonstrating Paradoxes
+# Afflicting Borda's procedure", Examples 13-15) and A6 ("...the Alternative
+# Vote Procedure" — Felsenthal's British name for instant-runoff; house
+# terminology is RCV-IRV, Example 16 due to Nurmi 1999: 63).
+# BetterVoting has NO Borda tabulator (and neither does the LH engine — Borda
+# is cross-checked via pref_voting), so the Borda counts live as worked
+# numbers in the case pages while the BV elections carry the same electorate
+# under STAR (race 1, house rule) + the other supported methods that are
+# DETERMINISTIC on the profile:
+#   Ex.13 (Borda's Absolute-Majority failure, 51/48/1) is the SAME electorate
+#     as BV2153 — no new election; the BV2153 case page gains a Borda section
+#     (Borda 102/148/50 -> b, missing the 51-vote absolute winner a).
+#   BV2160 (Ex.14, adapted from Fishburn 1974: 543): 7 voters, 4 candidates —
+#     3×(a>b>c>d), 1×(b>c>a>d), 1×(b>c>d>a), 2×(c>d>a>b). Borda (k..0):
+#     19/19/20/12 -> c; if V1-V3 TRUNCATE c: 16/16/14/12 -> a/b tie — the
+#     Truncation paradox under Borda (paper only). Pairwise is a CYCLE
+#     (a>b 5-2, b>c 5-2, c>a 4-3) -> no RR race (BV random); IRV would hit a
+#     RANDOM elimination tie (b/c at 2) -> no IRV race. Live races: STAR
+#     (5/4/2/1 map: 22/24/24/14; the b-c tie is for BOTH finalist slots, so
+#     both advance and b wins the runoff 5-2) and Plurality (a, 3 of 7).
+#   BV2161 (Ex.15): 7 voters — 2×(a>c>b), 2×(b>a>c), 3×(c>b>a). NOTE: the
+#     paper PRINTS the third bloc as c>a>b, but its own Borda points 6/7/8
+#     (and totals 21) are only consistent with c>b>a — we use the arithmetic-
+#     consistent profile. Borda -> c (8); if b (a loser) drops out, Borda ->
+#     a 4-3: SCC under Borda (paper only). Pairwise is again a cycle and the
+#     IRV first count has an a/b elimination tie -> live races are STAR
+#     (19/21/23 -> c beats b 5-2) and Plurality (c, 3 of 7). Note STAR and
+#     Plurality agree with Borda here (c) — the paradox is Borda's
+#     INSTABILITY when a loser exits, not the initial pick.
+#   BV2162/63 (Ex.16, Nurmi 1999: 63) — the Truncation paradox under RCV-IRV,
+#     LIVE, as a pre/post pair. 103 voters, 4 candidates:
+#     33×(a>b>c>d), 29×(b>a>c>d), 24×(c>b>a>d), 17×(d>c>b>a).
+#     b is the Condorcet winner (beats a 70-33, c 62-41, d 86-17).
+#     BV2162 (sincere): IRV -> a (d out 17, transfers to c 41; b out 29;
+#       a 62) — also a Condorcet-winner failure. STAR (5/4/2/1 map:
+#       346/407/312/171) -> b; Ranked Robin -> b.
+#     BV2163 (truncated): ceteris paribus the 17 d>c>b>a voters list ONLY d.
+#       d is still eliminated first but their ballots exhaust, so C (not b)
+#       is eliminated next and B wins — the truncators PREFER b to a:
+#       revealing less got them more. STAR -> b (329/373/244/171); RR -> b.
+# All ten live races LH-verified pre-creation.
+
+_E14_CANDS = ["A", "B", "C", "D"]
+_E14_STAR = [(3, (5, 4, 2, 1)), (1, (2, 5, 4, 1)), (1, (1, 5, 4, 2)), (2, (2, 1, 5, 4))]
+_E14_PLUR = [(3, (1, 0, 0, 0)), (2, (0, 1, 0, 0)), (2, (0, 0, 1, 0))]
+
+_E15_CANDS = ["A", "B", "C"]
+_E15_STAR = [(2, (5, 1, 3)), (2, (3, 5, 1)), (3, (1, 3, 5))]
+_E15_PLUR = [(2, (1, 0, 0)), (2, (0, 1, 0)), (3, (0, 0, 1))]
+
+_E16_CANDS = ["A", "B", "C", "D"]
+_E16_BLOCS = [(33, ["A", "B", "C", "D"]), (29, ["B", "A", "C", "D"]),
+              (24, ["C", "B", "A", "D"]), (17, ["D", "C", "B", "A"])]
+_E16_R, _E16_S = _mk_ranked_and_star(_E16_BLOCS, _E16_CANDS)
+# Truncated variant: the 17 d>c>b>a voters list ONLY d (rank 0 = unranked;
+# STAR: only d scored).
+_E16T_R = ([r for r in _E16_R if r != [4, 3, 2, 1]] + [[0, 0, 0, 1]] * 17)
+_E16T_S = ([s for s in _E16_S if s != [1, 2, 4, 5]] + [[0, 0, 0, 5]] * 17)
+
+_F56_SRC = ("From Dan S. Felsenthal, 'Review of Paradoxes Afflicting Various "
+            "Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be "
+            "Elected' (University of Haifa / LSE, revised 26 May 2010; Leverhulme "
+            "Trust 'Voting Power in Practice' workshop, Château du Baffy, "
+            "Normandy). ")
+
+ELECTIONS = [
+    {
+        "test_id": "BV2160",
+        "title": "Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper",
+        "description": (_F56_SRC +
+                        "Appendix A5, Example 14, adapted from Fishburn (1974: 543): "
+                        "the Truncation paradox under Borda's procedure. 7 voters, "
+                        "four candidates — 3×(A>B>C>D), 1×(B>C>A>D), 1×(B>C>D>A), "
+                        "2×(C>D>A>B). Under Borda (k points for a top rank … 0 for "
+                        "unranked) the counts are A 19, B 19, C 20, D 12 — C is "
+                        "elected. But if the three A>B>C>D voters TRUNCATE C from "
+                        "their ballots, Borda gives A 16, B 16, C 14, D 12: revealing "
+                        "less flips the win away from C, which those voters prefer — "
+                        "the Truncation paradox. BetterVoting has no Borda tabulator, "
+                        "so the Borda arithmetic lives in this election's case page; "
+                        "the live races run the same electorate under STAR (ranks "
+                        "mapped 5/4/2/1: A 22, B 24, C 24, D 14 — B and C take both "
+                        "finalist seats and B wins the runoff 5-2) and Choose-One "
+                        "Plurality (A wins with 3 of 7). The profile's pairwise "
+                        "preferences are a CYCLE (A>B 5-2, B>C 5-2, C>A 4-3), so a "
+                        "Ranked Robin race would tie 3-ways and resolve at random — "
+                        "deliberately omitted, like the IRV race (its first "
+                        "elimination is a random B/C tie)."),
+        "races": [
+            {"title": "Fishburn Ex.14 — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E14_CANDS, "ballots": _expand(_E14_STAR)},
+            {"title": "Fishburn Ex.14 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E14_CANDS, "ballots": _expand(_E14_PLUR)},
+        ],
+        "expected": "STAR -> B (22/24/24/14; B & C both advance, runoff 5-2). "
+                    "Plurality -> A (3 of 7). Borda (paper): C 20; truncation -> "
+                    "A/B 16-16 tie. Pairwise cycle. LH-verified. Test ID BV2160.",
+    },
+    {
+        "test_id": "BV2161",
+        "title": "Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick)",
+        "description": (_F56_SRC +
+                        "Appendix A5, Example 15: SCC (the spoiler condition) under "
+                        "Borda's procedure. 7 voters, three candidates — 2×(A>C>B), "
+                        "2×(B>A>C), 3×(C>B>A). (The paper prints the third bloc as "
+                        "C>A>B, but its own Borda totals 6/7/8 are only consistent "
+                        "with C>B>A — this election uses the arithmetic-consistent "
+                        "profile.) Borda points: A 6, B 7, C 8 — C is elected. Now "
+                        "let B, a losing candidate, drop out: Borda on the remaining "
+                        "pair gives A 4, C 3 — A wins. A loser's exit flipped the "
+                        "winner: SCC violated (paper arithmetic; BetterVoting has no "
+                        "Borda tabulator). The live races run the same electorate "
+                        "under STAR (5/3/1 map: A 19, B 21, C 23; C beats B 5-2 in "
+                        "the runoff) and Choose-One Plurality (C, 3 of 7) — both "
+                        "agree with Borda's initial pick, C; the paradox is Borda's "
+                        "instability, not the pick. The pairwise preferences are a "
+                        "cycle (B>A 5-2, A>C 4-3, C>B 5-2), so Ranked Robin and IRV "
+                        "races would hit random ties and are deliberately omitted."),
+        "races": [
+            {"title": "Borda SCC Ex.15 — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E15_CANDS, "ballots": _expand(_E15_STAR)},
+            {"title": "Borda SCC Ex.15 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E15_CANDS, "ballots": _expand(_E15_PLUR)},
+        ],
+        "expected": "STAR -> C (19/21/23; runoff 5-2). Plurality -> C. Borda "
+                    "(paper): C 8; B exits -> A 4-3 (SCC). Pairwise cycle. "
+                    "LH-verified. Test ID BV2161.",
+    },
+    {
+        "test_id": "BV2162",
+        "title": "Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner",
+        "description": (_F56_SRC +
+                        "Appendix A6 ('the Alternative Vote' — Felsenthal's British "
+                        "name for instant-runoff, RCV-IRV), Example 16, due to Nurmi "
+                        "(1999: 63): the Truncation paradox under IRV, part 1 of 2. "
+                        "103 voters, four candidates — 33×(A>B>C>D), 29×(B>A>C>D), "
+                        "24×(C>B>A>D), 17×(D>C>B>A), all ranking every candidate. "
+                        "B is the Condorcet winner (beats A 70-33, C 62-41, D 86-17). "
+                        "IRV: nobody has a first-count majority, D (17) is eliminated "
+                        "and transfers to C (41), then B (29) is eliminated — and A "
+                        "wins 62. IRV elects A over the Condorcet winner B. STAR "
+                        "(ranks mapped 5/4/2/1: A 346, B 407, C 312, D 171) elects B, "
+                        "as does Ranked Robin. Part 2 (BV2163): the 17 D-first voters "
+                        "truncate to just D — and do BETTER."),
+        "races": [
+            {"title": "Nurmi Ex.16 sincere — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E16_CANDS, "ballots": _E16_S},
+            {"title": "Nurmi Ex.16 sincere — IRV (Hare)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 4, "candidates": _E16_CANDS,
+             "ballots": _E16_R},
+            {"title": "Nurmi Ex.16 sincere — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 4,
+             "candidates": _E16_CANDS, "ballots": _E16_R},
+        ],
+        "expected": "STAR -> B (346/407/312/171; runoff 70-33). IRV -> A (D out, "
+                    "then B out, A 62). Ranked Robin -> B (Condorcet winner). "
+                    "LH-verified. Test ID BV2162.",
+    },
+    {
+        "test_id": "BV2163",
+        "title": "Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",
+        "description": (_F56_SRC +
+                        "Appendix A6, Example 16 (continued), due to Nurmi (1999: "
+                        "63): the Truncation paradox under instant-runoff (RCV-IRV), "
+                        "part 2 of 2. Identical to BV2162 except that, ceteris "
+                        "paribus, the 17 voters whose ordering is D>C>B>A TRUNCATE "
+                        "and list only their top preference, D. IRV: D is eliminated "
+                        "first exactly as before, but the truncated ballots exhaust "
+                        "instead of transferring to C — so C (24) is eliminated "
+                        "instead of B, C's transfers flow to B, and B wins. The "
+                        "truncators prefer B to A (their full ordering was D>C>B>A), "
+                        "so ranking FEWER candidates got them a BETTER result than "
+                        "ranking all — the Truncation paradox, live. (It also happens "
+                        "to elect the Condorcet winner B that sincere IRV missed in "
+                        "BV2162 — truncation as accidental repair.) STAR (B 373 with "
+                        "the truncated ballots scoring only D) and Ranked Robin "
+                        "still elect B — both unmoved by the truncation."),
+        "races": [
+            {"title": "Nurmi Ex.16 truncated — STAR (ranks mapped to 0-5)", "method": "STAR",
+             "num_winners": 1, "candidates": _E16_CANDS, "ballots": _E16T_S},
+            {"title": "Nurmi Ex.16 truncated — IRV (Hare)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 4, "candidates": _E16_CANDS,
+             "ballots": _E16T_R},
+            {"title": "Nurmi Ex.16 truncated — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 4,
+             "candidates": _E16_CANDS, "ballots": _E16T_R},
+        ],
+        "expected": "STAR -> B (329/373/244/171). IRV -> B (D out, ballots exhaust, "
+                    "C out, B wins) — the 17 truncators improve their outcome vs "
+                    "BV2162. Ranked Robin -> B. LH-verified. Test ID BV2163.",
     },
 ]
 

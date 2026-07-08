@@ -1,0 +1,107 @@
+======================================================================
+SOURCE FILE:     bv2163_74j6vv_star.yaml
+SOURCE MODIFIED: 2026-07-07 20:43:21
+TABULATED FILE:  bv2163_74j6vv_star_tabulated.txt
+TABULATED AT:    2026-07-07 20:43:34
+======================================================================
+
+election_title: "Nurmi Ex.16 truncated — STAR: unmoved, still B"
+scenario_description: |-
+  Race 1 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
+  The same electorate with the 17 truncated ballots scoring only D (everything else 0): A 329, B 373, C 244, D 171 — B still wins the automatic runoff. STAR elects the Condorcet winner B with full ballots (BV2162: 346/407/312/171) and with truncated ones: no truncation incentive on this profile, while the IRV race's winner flips A → B on the same change.
+  Live results: https://bettervoting.com/74j6vv/results
+bv_test_id: BV2163
+bv_election_id: 74j6vv
+bv_results_url: https://bettervoting.com/74j6vv/results
+paradoxes: [truncation]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  33: 5,4,2,1
+  29: 4,5,2,1
+  24: 2,4,5,1
+  17: 0,0,0,5
+expected_winners:
+  - B
+
+# file: bv2163_74j6vv_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Nurmi Ex.16 truncated — STAR: unmoved, still B ===
+  Race 1 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
+  The same electorate with the 17 truncated ballots scoring only D (everything else 0): A 329, B 373, C 244, D 171 — B still wins the automatic runoff. STAR elects the Condorcet winner B with full ballots (BV2162: 346/407/312/171) and with truncated ones: no truncation incentive on this profile, while the IRV race's winner flips A → B on the same change.
+  Live results: https://bettervoting.com/74j6vv/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |    * B      |      C      |      D      |
+---------------------------------------------------------------------------
+           * A > |     ---      |33 - 17 - 53 |62 - 17 - 24 |86 -  0 - 17 |
+           * B > | 53 - 17 - 33 |    ---      |62 - 17 - 24 |86 -  0 - 17 |
+             C > | 24 - 17 - 62 |24 - 17 - 62 |    ---      |86 -  0 - 17 |
+             D > | 17 -  0 - 86 |17 -  0 - 86 |17 -  0 - 86 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: B — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = B
+  Choose-One (Plurality) = A   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 103 ballots.
+Count × A,B,C,D
+   33 × 5,4,2,1
+   29 × 4,5,2,1
+   24 × 2,4,5,1
+   17 × 0,0,0,5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A          33  29   0  24   0  17  |   329   3.2
+B          29  57   0   0   0  17  |   373   3.6
+C          24   0   0  62   0  17  |   244   2.4
+D          17   0   0   0  86   0  |   171   1.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 373 -- First place
+   A             -- 329 -- Second place
+   C             -- 244
+   D             -- 171
+ B and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   B             -- 53 -- First place
+   A             -- 33
+   Equal Support -- 17
+ B wins.
+   Runoff math:
+     103  ballots cast
+   −  17  Equal Support (no preference between the two finalists)
+     ───
+      86  voters with a preference  (majority = 44)
+           B 53 (62%)  ·  A 33 (38%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ B

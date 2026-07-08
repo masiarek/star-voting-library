@@ -1,0 +1,41 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B
+ Tabulating 103 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D
+    33 ×   A > B > C > D      (5, 4, 2, 1)
+    29 ×   B > A > C > D      (4, 5, 2, 1)
+    24 ×   C > B > A > D      (2, 4, 5, 1)
+    17 ×   D > C > B > A      (1, 2, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                 33  Hopeful
+B                 29  Hopeful
+C                 24  Hopeful
+D                 17  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+C                 41  Hopeful
+A                 33  Hopeful
+B                 29  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 62  Elected
+C                 41  Rejected
+B                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -235,6 +235,44 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Brams sampler — IRV (Hare) | IRV | 4 | **B** |
 | Brams sampler — Ranked Robin (Copeland) | RankedRobin | 4 | **G** |
 
+## BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper
+
+**Election** [`r6qc8h`](https://bettervoting.com/r6qc8h/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Fishburn Ex.14 — STAR (ranks mapped to 0-5) | STAR | 4 | **B** |
+| Fishburn Ex.14 — Choose-One (Plurality) | Plurality | 4 | **A** |
+
+## BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick)
+
+**Election** [`q3h4fk`](https://bettervoting.com/q3h4fk/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Borda SCC Ex.15 — STAR (ranks mapped to 0-5) | STAR | 3 | **C** |
+| Borda SCC Ex.15 — Choose-One (Plurality) | Plurality | 3 | **C** |
+
+## BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner
+
+**Election** [`4htk44`](https://bettervoting.com/4htk44/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Nurmi Ex.16 sincere — STAR (ranks mapped to 0-5) | STAR | 4 | **B** |
+| Nurmi Ex.16 sincere — IRV (Hare) | IRV | 4 | **A** |
+| Nurmi Ex.16 sincere — Ranked Robin (Copeland) | RankedRobin | 4 | **B** |
+
+## BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better
+
+**Election** [`74j6vv`](https://bettervoting.com/74j6vv/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Nurmi Ex.16 truncated — STAR (ranks mapped to 0-5) | STAR | 4 | **B** |
+| Nurmi Ex.16 truncated — IRV (Hare) | IRV | 4 | **B** |
+| Nurmi Ex.16 truncated — Ranked Robin (Copeland) | RankedRobin | 4 | **B** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

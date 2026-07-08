@@ -98,6 +98,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/CYCLE_OR_THREE_WAY/bv2156_3grpbb_star_misses_condorcet.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)

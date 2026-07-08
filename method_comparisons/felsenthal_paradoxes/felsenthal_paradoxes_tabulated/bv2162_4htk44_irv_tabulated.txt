@@ -1,0 +1,74 @@
+======================================================================
+SOURCE FILE:     bv2162_4htk44_irv.yaml
+SOURCE MODIFIED: 2026-07-07 20:42:54
+TABULATED FILE:  bv2162_4htk44_irv_tabulated.txt
+TABULATED AT:    2026-07-07 20:43:34
+======================================================================
+
+election_title: "Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner"
+scenario_description: |-
+  Race 2 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2162_4htk44_star.yaml for the setup.
+  The same 103 full rankings under instant runoff: no first-count majority (33/29/24/17), D is eliminated and transfers to C (41), then B (29) is eliminated — and A wins 62. Sincere, complete ballots elect A over the Condorcet winner B; and part 2 (BV2163) shows the 17 D-first voters doing BETTER by ranking only D. Their reward for ranking honestly and fully is their third choice.
+  Live results: https://bettervoting.com/4htk44/results
+bv_test_id: BV2162
+bv_election_id: 4htk44
+bv_results_url: https://bettervoting.com/4htk44/results
+paradoxes: [truncation, condorcet-winner]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  33:A>B>C>D
+  29:B>A>C>D
+  24:C>B>A>D
+  17:D>C>B>A
+expected_winners:
+  - A
+
+# file: bv2162_4htk44_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner
+ Tabulating 103 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                 33  Hopeful
+B                 29  Hopeful
+C                 24  Hopeful
+D                 17  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+C                 41  Hopeful
+A                 33  Hopeful
+B                 29  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 62  Elected
+C                 41  Rejected
+B                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A

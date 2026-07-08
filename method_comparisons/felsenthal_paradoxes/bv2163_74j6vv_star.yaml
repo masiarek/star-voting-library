@@ -1,0 +1,32 @@
+election_title: "Nurmi Ex.16 truncated — STAR: unmoved, still B"
+scenario_description: |-
+  Race 1 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
+  The same electorate with the 17 truncated ballots scoring only D (everything else 0): A 329, B 373, C 244, D 171 — B still wins the automatic runoff. STAR elects the Condorcet winner B with full ballots (BV2162: 346/407/312/171) and with truncated ones: no truncation incentive on this profile, while the IRV race's winner flips A → B on the same change.
+  Live results: https://bettervoting.com/74j6vv/results
+bv_test_id: BV2163
+bv_election_id: 74j6vv
+bv_results_url: https://bettervoting.com/74j6vv/results
+paradoxes: [truncation]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  33: 5,4,2,1
+  29: 4,5,2,1
+  24: 2,4,5,1
+  17: 0,0,0,5
+expected_winners:
+  - B
+
+# file: bv2163_74j6vv_star.yaml

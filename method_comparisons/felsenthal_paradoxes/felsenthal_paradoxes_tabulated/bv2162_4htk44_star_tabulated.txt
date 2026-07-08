@@ -1,0 +1,115 @@
+======================================================================
+SOURCE FILE:     bv2162_4htk44_star.yaml
+SOURCE MODIFIED: 2026-07-07 20:42:37
+TABULATED FILE:  bv2162_4htk44_star_tabulated.txt
+TABULATED AT:    2026-07-07 20:43:33
+======================================================================
+
+election_title: "Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B"
+scenario_description: |-
+  Race 1 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6 (instant-runoff — Felsenthal's "Alternative Vote" is the British name for RCV-IRV), Example 16, due to Nurmi (1999: 63).
+  103 voters, four candidates, everyone ranking all four: 33×(A>B>C>D), 29×(B>A>C>D), 24×(C>B>A>D), 17×(D>C>B>A). B is the Condorcet winner (beats A 70–33, C 62–41, D 86–17). This STAR race (ranks mapped 5/4/2/1) scores A 346, B 407, C 312, D 171 — B wins the automatic runoff 70–33. The IRV race elects A instead (a Condorcet winner failure); part 2 (BV2163) shows 17 voters improving their result by TRUNCATING.
+  Live results: https://bettervoting.com/4htk44/results
+bv_test_id: BV2162
+bv_election_id: 4htk44
+bv_results_url: https://bettervoting.com/4htk44/results
+paradoxes: [truncation, condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  33: 5,4,2,1
+  29: 4,5,2,1
+  24: 2,4,5,1
+  17: 1,2,4,5
+expected_winners:
+  - B
+
+# file: bv2162_4htk44_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B ===
+  Race 1 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6 (instant-runoff — Felsenthal's "Alternative Vote" is the British name for RCV-IRV), Example 16, due to Nurmi (1999: 63).
+  103 voters, four candidates, everyone ranking all four: 33×(A>B>C>D), 29×(B>A>C>D), 24×(C>B>A>D), 17×(D>C>B>A). B is the Condorcet winner (beats A 70–33, C 62–41, D 86–17). This STAR race (ranks mapped 5/4/2/1) scores A 346, B 407, C 312, D 171 — B wins the automatic runoff 70–33. The IRV race elects A instead (a Condorcet winner failure); part 2 (BV2163) shows 17 voters improving their result by TRUNCATING.
+  Live results: https://bettervoting.com/4htk44/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |    * B      |      C      |      D      |
+---------------------------------------------------------------------------
+           * A > |     ---      |33 -  0 - 70 |62 -  0 - 41 |86 -  0 - 17 |
+           * B > | 70 -  0 - 33 |    ---      |62 -  0 - 41 |86 -  0 - 17 |
+             C > | 41 -  0 - 62 |41 -  0 - 62 |    ---      |86 -  0 - 17 |
+             D > | 17 -  0 - 86 |17 -  0 - 86 |17 -  0 - 86 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: B — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = B
+  Choose-One (Plurality) = A   (differs from STAR)
+  RCV-IRV                = A   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2162_4htk44_star_RCV-IRV_tabulated.txt
+     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2162_4htk44_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 103 ballots.
+Count × A,B,C,D
+   33 × 5,4,2,1
+   29 × 4,5,2,1
+   24 × 2,4,5,1
+   17 × 1,2,4,5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A          33  29   0  24  17   0  |   346   3.4
+B          29  57   0  17   0   0  |   407   4.0
+C          24  17   0  62   0   0  |   312   3.0
+D          17   0   0   0  86   0  |   171   1.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 407 -- First place
+   A             -- 346 -- Second place
+   C             -- 312
+   D             -- 171
+ B and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   B             -- 70 -- First place
+   A             -- 33
+   Equal Support --  0
+ B wins.
+   Runoff math:
+     103  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     103  voters with a preference  (majority = 52)
+           B 70 (68%)  ·  A 33 (32%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ B

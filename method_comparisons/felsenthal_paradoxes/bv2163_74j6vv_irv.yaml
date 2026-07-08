@@ -1,0 +1,31 @@
+election_title: "Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better"
+scenario_description: |-
+  Race 2 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6, Example 16, due to Nurmi (1999: 63).
+  Identical to BV2162 except one datum, ceteris paribus: the 17 voters whose full ordering is D>C>B>A TRUNCATE and rank only D. D is eliminated first exactly as before — but the truncated ballots EXHAUST instead of transferring to C, so C (24) is eliminated instead of B, C's transfers flow to B, and B wins. The truncators prefer B to A (the sincere-IRV winner of BV2162), so ranking FEWER candidates got them a BETTER result: the Truncation paradox, live. It also accidentally repairs IRV's Condorcet failure — B, the Condorcet winner, now wins.
+  Live results: https://bettervoting.com/74j6vv/results
+bv_test_id: BV2163
+bv_election_id: 74j6vv
+bv_results_url: https://bettervoting.com/74j6vv/results
+paradoxes: [truncation]
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  33:A>B>C>D
+  29:B>A>C>D
+  24:C>B>A>D
+  17:D
+expected_winners:
+  - B
+
+# file: bv2163_74j6vv_irv.yaml

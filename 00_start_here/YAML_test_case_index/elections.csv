@@ -1,7 +1,9 @@
 election_id,title,races,kind,voters,methods,backing
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
+4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
+74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
 LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
@@ -20,7 +22,9 @@ krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes 
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
+q3h4fk,BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick),2,contested (multi-race),7,"Plurality, STAR",BV
 r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count,2,contested (multi-race),47,"Approval, RankedRobin",BV
+r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV

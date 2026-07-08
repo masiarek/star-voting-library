@@ -19,6 +19,10 @@ No. of voters    Ranking                    Approves (top two)
 
 Approval totals: **Amos 51, Bella 100, Chad 49** → Bella. The top-two cutoff makes a 51-voter majority's *first-vs-second* distinction invisible: their ballots support Bella exactly as strongly as Amos. Under any count that reads that distinction, Amos wins — IRV seats him in round one (51 is a majority) and Ranked Robin elects him as Condorcet winner (beats Bella 51–49, Chad 51–49). Tag: [majority-failure](../../00_start_here/YAML_test_case_index/PARADOX_index.md); note this is a *strategy-profile* paradox — it needs every voter to approve two — where [Ex.5's](bv2152_r6ctvy_felsenthal_ex5_approval_cw.md) cutoffs were mixed.
 
+## Borda, worked (Felsenthal Ex.13 — the same electorate)
+
+Felsenthal reuses exactly this 51/48/1 profile as **Example 13** (Appendix §A5) to show **Borda's** Absolute-Majority failure: Borda points (2/1/0) give **Amos 102, Bella 148, Chad 50 → Bella elected** — Borda agrees with the top-two Approval count and misses the 51-vote absolute winner for the same underlying reason: both counts weigh a voter's second preference nearly (Approval: exactly) as much as their first. No Borda tabulator exists on BetterVoting or in the LH engine, so this count lives here on paper (cross-checkable with `pref_voting`).
+
 ## The races
 
 | Race | BetterVoting | LH engine | Agree? |
@@ -26,5 +30,6 @@ Approval totals: **Amos 51, Bella 100, Chad 49** → Bella. The top-two cutoff m
 | Approval (everyone approves top two) | Bella (51/100/49) | Bella | ✓ |
 | IRV | Amos (round-1 majority) | Amos | ✓ |
 | Ranked Robin | Amos | Amos | ✓ |
+| Borda *(paper only, Ex.13)* | — | Bella (102/148/50) | n/a |
 
 Files: [approval yaml](bv2153_pcttmr_approval.yaml) · [irv yaml](bv2153_pcttmr_irv.yaml) · [rr yaml](bv2153_pcttmr_ranked_robin.yaml) · [frozen export](bv2153_pcttmr_bv_export.json) · mirrors: [approval](felsenthal_paradoxes_tabulated/bv2153_pcttmr_approval_tabulated.txt), [irv](felsenthal_paradoxes_tabulated/bv2153_pcttmr_irv_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2153_pcttmr_ranked_robin_tabulated.txt).

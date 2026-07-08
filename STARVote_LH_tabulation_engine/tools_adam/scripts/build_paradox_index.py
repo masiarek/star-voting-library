@@ -59,7 +59,7 @@ VOCAB = {
                 "Voters do better by staying home: adding ballots ranking X last can make X win."),
     "twin": ("Twin paradox (weak form)", "Conditional", "no_show.md",
              "Voters are made worse off by the arrival of 'twins' — added voters with an identical preference ordering."),
-    "truncation": ("Truncation paradox", "Conditional", None,
+    "truncation": ("Truncation paradox", "Conditional", "truncation.md",
                    "Ranking fewer candidates gives a voter a better outcome than ranking all."),
     "clone-teaming": ("Clone dependence / teaming", "Conditional", None,
                       "Adding a near-copy of a candidate changes who wins (teaming = doing it on purpose)."),

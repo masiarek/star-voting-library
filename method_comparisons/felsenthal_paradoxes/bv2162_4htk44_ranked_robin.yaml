@@ -1,0 +1,31 @@
+election_title: "Nurmi Ex.16 sincere — Ranked Robin: the Condorcet winner B"
+scenario_description: |-
+  Race 3 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2162_4htk44_star.yaml for the setup.
+  The same 103 full rankings counted by Ranked Robin (Copeland): B wins every head-to-head (A 70–33, C 62–41, D 86–17) — the Condorcet winner, elected directly, agreeing with STAR and disagreeing with the IRV race's A.
+  Live results: https://bettervoting.com/4htk44/results
+bv_test_id: BV2162
+bv_election_id: 4htk44
+bv_results_url: https://bettervoting.com/4htk44/results
+paradoxes: [condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  33:A>B>C>D
+  29:B>A>C>D
+  24:C>B>A>D
+  17:D>C>B>A
+expected_winners:
+  - B
+
+# file: bv2162_4htk44_ranked_robin.yaml

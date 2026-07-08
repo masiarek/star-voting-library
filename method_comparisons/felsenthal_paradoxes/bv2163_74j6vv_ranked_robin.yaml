@@ -1,0 +1,31 @@
+election_title: "Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B"
+scenario_description: |-
+  Race 3 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
+  The same rankings with the 17 truncated ballots (only D ranked; the unranked candidates count as tied-last, Equal Support among themselves): B still wins every head-to-head (A 53–33 among voters with a preference, C 62–24, D 86–17) — the Condorcet winner, elected with full ballots and with truncated ones. Pairwise counting gives these 17 voters no truncation incentive; the elimination order (the IRV race) is what their truncation exploits.
+  Live results: https://bettervoting.com/74j6vv/results
+bv_test_id: BV2163
+bv_election_id: 74j6vv
+bv_results_url: https://bettervoting.com/74j6vv/results
+paradoxes: [truncation]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  33:A>B>C>D
+  29:B>A>C>D
+  24:C>B>A>D
+  17:D
+expected_winners:
+  - B
+
+# file: bv2163_74j6vv_ranked_robin.yaml

@@ -1,0 +1,135 @@
+======================================================================
+SOURCE FILE:     bv2161_q3h4fk_plurality.yaml
+SOURCE MODIFIED: 2026-07-07 20:42:29
+TABULATED FILE:  bv2161_q3h4fk_plurality_tabulated.txt
+TABULATED AT:    2026-07-07 20:43:33
+======================================================================
+
+election_title: "Borda SCC Ex.15 — Choose-One: C wins on first choices"
+scenario_description: |-
+  Race 2 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 15 — see bv2161_q3h4fk_star.yaml for the setup and the profile note (the paper's printed C>A>B bloc is arithmetic-corrected to C>B>A).
+  The same 7 voters under Choose-One: first choices A 2, B 2, C 3 → C. All three live counts (STAR, Plurality) and Borda's paper count pick C; the paradox on the case page is Borda's SCC instability — B's exit flips Borda (and, honestly, any two-candidate count, since A beats C 4–3) to A.
+  Live results: https://bettervoting.com/q3h4fk/results
+bv_test_id: BV2161
+bv_election_id: q3h4fk
+bv_results_url: https://bettervoting.com/q3h4fk/results
+paradoxes: [spoiler-scc, condorcet-cycle]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C
+  1,0,0
+  1,0,0
+  0,1,0
+  0,1,0
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - C
+
+# file: bv2161_q3h4fk_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Borda SCC Ex.15 — Choose-One: C wins on first choices ===
+  Race 2 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 15 — see bv2161_q3h4fk_star.yaml for the setup and the profile note (the paper's printed C>A>B bloc is arithmetic-corrected to C>B>A).
+  The same 7 voters under Choose-One: first choices A 2, B 2, C 3 → C. All three live counts (STAR, Plurality) and Borda's paper count pick C; the paradox on the case page is Borda's SCC instability — B's exit flips Borda (and, honestly, any two-candidate count, since A beats C 4–3) to A.
+  Live results: https://bettervoting.com/q3h4fk/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |     B     |   * C     |
+-----------------------------------------------------
+         * A > |    ---     |2 - 3 - 2  |2 - 2 - 3  |
+           B > | 2 - 3 - 2  |   ---     |2 - 2 - 3  |
+         * C > | 3 - 2 - 2  |3 - 2 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: C — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = C
+  Approval = A   (differs from STAR)
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × A,B,C
+    3 × 0,0,1
+    2 × 1,0,0
+    2 × 0,1,0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          0  0  0  0  2  5  |     2   0.3
+B          0  0  0  0  2  5  |     2   0.3
+C          0  0  0  0  3  4  |     3   0.4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 3 -- First place
+   A             -- 2 -- Tied for second place
+   B             -- 2 -- Tied for second place
+ C advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   A             -- 2 -- Tied for second place
+   B             -- 2 -- Tied for second place
+   Equal Support -- 3
+ There's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   A             -- 0 -- Tied for second place
+   B             -- 0 -- Tied for second place
+ There's still a two-way tie for second.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['A', 'B', 'C']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['A', 'B']
+  Resolved: ['A'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   C             -- 3 -- First place
+   A             -- 2
+   Equal Support -- 2
+ C wins.
+   Runoff math:
+     7  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           C 3 (60%)  ·  A 2 (40%)
+
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
+ C

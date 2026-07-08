@@ -1,0 +1,33 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Fishburn Ex.14 — STAR: B wins the electorate whose Borda count is truncation-unstable
+ Tabulating 7 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D
+     3 ×   A > B > C > D      (5, 4, 2, 1)
+     1 ×   B > C > A > D      (2, 5, 4, 1)
+     1 ×   B > C > D > A      (1, 5, 4, 2)
+     2 ×   C > D > A > B      (2, 1, 5, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                  3  Hopeful
+B                  2  Hopeful
+C                  2  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                  5  Elected
+B                  2  Rejected
+C                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

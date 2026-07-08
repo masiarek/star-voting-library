@@ -1,0 +1,106 @@
+======================================================================
+SOURCE FILE:     bv2161_q3h4fk_star.yaml
+SOURCE MODIFIED: 2026-07-07 20:42:23
+TABULATED FILE:  bv2161_q3h4fk_star_tabulated.txt
+TABULATED AT:    2026-07-07 20:43:33
+======================================================================
+
+election_title: "Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits)"
+scenario_description: |-
+  Race 1 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A5, Example 15.
+  7 voters, three candidates: 2×(A>C>B), 2×(B>A>C), 3×(C>B>A). NOTE: the paper prints the third bloc as C>A>B, but its own Borda totals (6/7/8, summing to 21) are only consistent with C>B>A — this case uses the arithmetic-consistent profile. The Borda paradox lives on the case page: Borda elects C (8 points), but if B — a LOSING candidate — drops out, Borda on the remaining pair elects A 4–3: SCC violated. This STAR race (5/3/1 map) scores A 19, B 21, C 23; C beats B 5–2 in the runoff — STAR agrees with Borda's initial pick. Honest note: if B exits, A beats C head-to-head 4–3, so a two-candidate contest elects A under ANY method, STAR included — on a cyclic profile (B>A 5–2, A>C 4–3, C>B 5–2) every method's winner is exit-sensitive; Felsenthal's charge is that Borda's POINT COUNT did the flipping. The cycle is also why no Ranked Robin or IRV race exists here (random ties on BV).
+  Live results: https://bettervoting.com/q3h4fk/results
+bv_test_id: BV2161
+bv_election_id: q3h4fk
+bv_results_url: https://bettervoting.com/q3h4fk/results
+paradoxes: [spoiler-scc, condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C
+  5,1,3
+  5,1,3
+  3,5,1
+  3,5,1
+  1,3,5
+  1,3,5
+  1,3,5
+expected_winners:
+  - C
+
+# file: bv2161_q3h4fk_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits) ===
+  Race 1 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A5, Example 15.
+  7 voters, three candidates: 2×(A>C>B), 2×(B>A>C), 3×(C>B>A). NOTE: the paper prints the third bloc as C>A>B, but its own Borda totals (6/7/8, summing to 21) are only consistent with C>B>A — this case uses the arithmetic-consistent profile. The Borda paradox lives on the case page: Borda elects C (8 points), but if B — a LOSING candidate — drops out, Borda on the remaining pair elects A 4–3: SCC violated. This STAR race (5/3/1 map) scores A 19, B 21, C 23; C beats B 5–2 in the runoff — STAR agrees with Borda's initial pick. Honest note: if B exits, A beats C head-to-head 4–3, so a two-candidate contest elects A under ANY method, STAR included — on a cyclic profile (B>A 5–2, A>C 4–3, C>B 5–2) every method's winner is exit-sensitive; Felsenthal's charge is that Borda's POINT COUNT did the flipping. The cycle is also why no Ranked Robin or IRV race exists here (random ties on BV).
+  Live results: https://bettervoting.com/q3h4fk/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |      A     |   * B     |   * C     |
+-----------------------------------------------------
+           A > |    ---     |2 - 0 - 5  |4 - 0 - 3  |
+         * B > | 5 - 0 - 2  |   ---     |2 - 0 - 5  |
+         * C > | 3 - 0 - 4  |5 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: A > C > B > A)
+
+[Divergence from STAR]
+  STAR     = C
+  Approval = B   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × A,B,C
+    3 × 1,3,5
+    2 × 5,1,3
+    2 × 3,5,1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          2  0  2  0  3  0  |    19   2.7
+B          2  0  3  0  2  0  |    21   3.0
+C          3  0  2  0  2  0  |    23   3.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 23 -- First place
+   B             -- 21 -- Second place
+   A             -- 19
+ C and B advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   C             -- 5 -- First place
+   B             -- 2
+   Equal Support -- 0
+ C wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           C 5 (71%)  ·  B 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ C

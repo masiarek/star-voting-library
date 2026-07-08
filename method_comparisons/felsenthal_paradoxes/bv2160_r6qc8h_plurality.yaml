@@ -1,0 +1,35 @@
+election_title: "Fishburn Ex.14 — Choose-One: A wins on first choices"
+scenario_description: |-
+  Race 2 of 2 in the Borda-truncation election (BV2160, bvid r6qc8h; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 14, adapted from Fishburn (1974: 543) — see bv2160_r6qc8h_star.yaml for the setup.
+  The same 7 voters under Choose-One: first choices A 3, B 2, C 2 → A. So this tiny cyclic electorate splits three ways across counts: Plurality → A, STAR → B, Borda (on paper) → C — and Borda's C evaporates into an A/B tie if three voters merely truncate. The tabulation, not the ballot, decides.
+  Live results: https://bettervoting.com/r6qc8h/results
+bv_test_id: BV2160
+bv_election_id: r6qc8h
+bv_results_url: https://bettervoting.com/r6qc8h/results
+paradoxes: [truncation, condorcet-cycle]
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  A,B,C,D
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  0,1,0,0
+  0,1,0,0
+  0,0,1,0
+  0,0,1,0
+expected_winners:
+  - A
+
+# file: bv2160_r6qc8h_plurality.yaml
