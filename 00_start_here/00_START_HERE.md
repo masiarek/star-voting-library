@@ -19,6 +19,7 @@ Welcome to the **STAR Voting education library**. This repo teaches STAR in dept
 
 ## Go deeper
 
+- **What a voting method even is (the foundation)** → [a ballot and a count](voting_method_ballot_and_count.md) — and why "most votes" isn't "over half."
 - **Same ballots, different methods** → [method_comparisons/](../method_comparisons/) (the Black Curtain, center squeeze, monotonicity, and the auto-generated cross-method divergence ledger).
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).

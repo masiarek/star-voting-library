@@ -2,7 +2,7 @@
 
 *The four ideas people most often get wrong about voting methods — a short reading path. Read in order, or jump to whichever myth you're clearing up.*
 
-→ New to the library? The front door is [**00_START_HERE**](00_START_HERE.md). This page is the **ballot-types & terminology primer** — the cluster of confusion hiding behind the word "RCV." For the deeper "what is a ballot vs. a count" foundation, see [What is a voting method?](what_is_a_voting_method.md).
+→ New to the library? The front door is [**00_START_HERE**](00_START_HERE.md). This page is the **ballot-types & terminology primer** — the cluster of confusion hiding behind the word "RCV." For the deeper "what is a ballot vs. a count" foundation, see [What is a voting method? — a ballot and a count](voting_method_ballot_and_count.md) (its spoken companion is the [conversation version](what_is_a_voting_method.md)).
 
 ![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](img/star_ballot_example.png)
 

@@ -1,6 +1,8 @@
 # What Is a Voting Method? — Ballot vs Count, Plurality vs Majority
 ### A recorded conversation — Larry (host) & Adam (expert) · Voting 101 · the foundation
 
+> 📄 Prefer to read it as a reference? See the concept page **[What is a voting method? — a ballot and a count](voting_method_ballot_and_count.md)**. This page is the spoken/video companion (with live-demo cues).
+
 The **primer** episode — the one that comes before everything. Before spoilers, runoffs, or STAR, Larry and Adam settle what a "voting method" even *is*, and untangle the two words people mix up most: **plurality** and **majority**. Keep this one slow and friendly; every later episode assumes it.
 
 Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesson file.
