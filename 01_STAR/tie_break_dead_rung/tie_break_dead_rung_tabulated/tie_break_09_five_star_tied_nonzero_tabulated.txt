@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_09_five_star_tied_nonzero.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_09_five_star_tied_nonzero_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:37
+TABULATED AT:    2026-07-08 21:47:24
 ======================================================================
 
 election_title: Dead rung 05 — five-star rung alive but non-separating
@@ -70,7 +70,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_09_five_star_tied_nonzero_RCV-IRV_tabulated.txt
-     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_09_five_star_tied_nonzero_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_09_five_star_tied_nonzero_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

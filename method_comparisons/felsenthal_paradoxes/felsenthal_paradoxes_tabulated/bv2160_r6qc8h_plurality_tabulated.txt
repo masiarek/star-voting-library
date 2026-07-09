@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2160_r6qc8h_plurality.yaml
 SOURCE MODIFIED: 2026-07-07 20:41:49
 TABULATED FILE:  bv2160_r6qc8h_plurality_tabulated.txt
-TABULATED AT:    2026-07-07 20:43:33
+TABULATED AT:    2026-07-08 21:47:36
 ======================================================================
 
 election_title: "Fishburn Ex.14 — Choose-One: A wins on first choices"

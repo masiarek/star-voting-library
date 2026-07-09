@@ -2,7 +2,7 @@
 SOURCE FILE:     BV_Library_star_pr_voters_fewer_than_seats.yaml
 SOURCE MODIFIED: 2026-07-05 12:38:14
 TABULATED FILE:  BV_Library_star_pr_voters_fewer_than_seats_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:45
+TABULATED AT:    2026-07-08 21:47:30
 ======================================================================
 
 election_title: "BV parity — STAR_PR (Allocated Score): fewer voters than seats"

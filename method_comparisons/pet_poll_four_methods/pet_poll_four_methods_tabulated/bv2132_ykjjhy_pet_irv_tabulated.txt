@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2132_ykjjhy_pet_irv.yaml
 SOURCE MODIFIED: 2026-07-06 17:41:14
 TABULATED FILE:  bv2132_ykjjhy_pet_irv_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:51
+TABULATED AT:    2026-07-08 21:47:41
 ======================================================================
 
 election_title: "BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish"

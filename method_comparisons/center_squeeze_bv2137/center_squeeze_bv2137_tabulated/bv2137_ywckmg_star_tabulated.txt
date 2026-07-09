@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2137_ywckmg_star.yaml
 SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  bv2137_ywckmg_star_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:46
+TABULATED AT:    2026-07-08 21:47:32
 ======================================================================
 
 election_title: "Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV"
@@ -65,7 +65,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
-     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

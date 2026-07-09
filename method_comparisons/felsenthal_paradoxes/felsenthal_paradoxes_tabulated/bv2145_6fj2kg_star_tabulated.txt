@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2145_6fj2kg_star.yaml
 SOURCE MODIFIED: 2026-07-07 17:47:20
 TABULATED FILE:  bv2145_6fj2kg_star_tabulated.txt
-TABULATED AT:    2026-07-07 18:31:47
+TABULATED AT:    2026-07-08 21:47:33
 ======================================================================
 
 election_title: "Felsenthal Ex.2 — STAR (ranks→scores): elects the Condorcet winner"
@@ -83,7 +83,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2145_6fj2kg_star_RCV-IRV_tabulated.txt
-     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2145_6fj2kg_star_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2145_6fj2kg_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

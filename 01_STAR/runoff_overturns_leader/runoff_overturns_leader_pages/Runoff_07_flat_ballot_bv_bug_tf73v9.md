@@ -105,7 +105,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_o
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/Runoff_07_flat_ballot_bv_bug_tf73v9.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/Runoff_07_flat_ballot_bv_bug_tf73v9.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../README.md)
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

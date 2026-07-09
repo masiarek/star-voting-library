@@ -118,7 +118,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/tie_break_08_runoff_dead_rung_adversarial_lot.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
