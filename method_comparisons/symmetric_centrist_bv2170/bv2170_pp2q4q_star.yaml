@@ -1,0 +1,39 @@
+election_title: "Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner"
+scenario_description: |-
+  One of four races in the Symmetric Centrist election (BV2170, bvid pp2q4q; BV-confirmed). 100 voters, three candidates, ONE electorate tabulated four ways. Avery is the left pole, Blake the right pole, Casey the broadly-liked centrist. 47 rank Avery>Casey>Blake, 47 rank Blake>Casey>Avery, and 6 put Casey first (3 leaning each way). Casey is the Condorcet winner — a majority prefers Casey to Avery (53–47) and to Blake (53–47) — yet holds only 6 first choices. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 312 (Avery and Blake tie at 294) and wins the automatic runoff 53–47 → STAR → Casey, matching Ranked Robin, unlike IRV and Choose-One (which throw the centrist out first and then deadlock the two poles).
+
+  Live results: https://bettervoting.com/pp2q4q/results
+  Companion races: bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_ranked_robin.yaml, bv2170_pp2q4q_plurality.yaml.
+  Overview page: bv2170_pp2q4q_symmetric_centrist.md
+bv_test_id: BV2170
+bv_election_id: pp2q4q
+bv_results_url: https://bettervoting.com/pp2q4q/results
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+# Perfectly symmetric between the two poles: Avery and Blake tie at every rung
+# (score 294=294, pairwise 50–50, five-star 47=47), so the SECOND finalist slot is
+# lot-decided. Casey is the deterministic winner regardless. lot_numbers pinned to
+# BV's `perm` for this run so LH reproduces the frozen export.
+lot_numbers: [Blake, Casey, Avery]
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Avery,Blake,Casey
+  47:5,1,3   # Avery > Casey > Blake  (left pole)
+  47:1,5,3   # Blake > Casey > Avery  (right pole)
+  3:3,1,5    # Casey > Avery > Blake  (centrist, leans left)
+  3:1,3,5    # Casey > Blake > Avery  (centrist, leans right)
+expected_winners:
+  - Casey
+
+# file: bv2170_pp2q4q_star.yaml

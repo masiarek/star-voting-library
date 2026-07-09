@@ -1,0 +1,34 @@
+election_title: "Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head"
+scenario_description: |-
+  One of four races in the Symmetric Centrist election (BV2170, bvid pp2q4q; BV-confirmed). 100 voters, three candidates, ONE electorate tabulated four ways. Avery is the left pole, Blake the right pole, Casey the centrist. Ranked Robin (Copeland) compares every pair head-to-head: Casey beats Avery 53–47 and Casey beats Blake 53–47, while Avery ties Blake 50–50. Casey wins both matchups (2–0) — the Condorcet winner — so Ranked Robin elects Casey directly and deterministically (no cycle, no tiebreak), agreeing with STAR and disagreeing with the center-squeeze methods IRV and Choose-One.
+
+  Live results: https://bettervoting.com/pp2q4q/results
+  Companion races: bv2170_pp2q4q_star.yaml, bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_plurality.yaml.
+  Overview page: bv2170_pp2q4q_symmetric_centrist.md
+bv_test_id: BV2170
+bv_election_id: pp2q4q
+bv_results_url: https://bettervoting.com/pp2q4q/results
+paradoxes: [condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Avery, Casey, Blake]
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  47:Avery>Casey>Blake
+  47:Blake>Casey>Avery
+  3:Casey>Avery>Blake
+  3:Casey>Blake>Avery
+expected_winners:
+  - Casey
+
+# file: bv2170_pp2q4q_ranked_robin.yaml

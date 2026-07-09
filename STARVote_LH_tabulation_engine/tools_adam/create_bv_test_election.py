@@ -1542,7 +1542,10 @@ _FV1_IRV = [(45, (1, 2, 3)), (43, (3, 2, 1)), (6, (2, 1, 3)), (6, (3, 1, 2))]
 _FV2_STAR = [(56, (5, 2, 0)), (32, (0, 2, 5)), (6, (2, 5, 0)), (6, (0, 5, 2))]
 _FV2_IRV = [(56, (1, 2, 3)), (32, (3, 2, 1)), (6, (2, 1, 3)), (6, (3, 1, 2))]
 
-ELECTIONS = [
+# Already created -> 6w2gq7 (BV2168) / 2jrfpg (BV2169). Reference only — do NOT
+# re-run (BV elections are permanent and cannot be deleted; re-running would make
+# undeletable duplicates). Only the `ELECTIONS` list at the bottom is executed.
+_CREATED_BV2168_69 = [
     {
         "test_id": "BV2168",
         "title": "FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",
@@ -1609,6 +1612,71 @@ ELECTIONS = [
                     "Liberal (56 first-choice majority, round one). Condorcet "
                     "winner = Liberal. Deterministic, no ties. LH-verified. "
                     "Test ID BV2169.",
+    },
+]
+
+
+# ---- BV2170 — the symmetric 47/47/3/3 Condorcet centrist (classroom profile) ----
+# The textbook two-poles-plus-a-centrist profile (100 voters, 3 candidates):
+#   47 × Avery > Casey > Blake   (left pole ranks the centrist second)
+#   47 × Blake > Casey > Avery   (right pole ranks the centrist second)
+#    3 × Casey > Avery > Blake   (centrist, leans left)
+#    3 × Casey > Blake > Avery   (centrist, leans right)
+# Casey is the CONDORCET winner — beats Avery 53-47 and Blake 53-47 head-to-head —
+# yet has only 6 first choices. STAR (5/3/1 map: Casey 312 vs Avery/Blake 294) and
+# Ranked Robin (Copeland 2-0) elect Casey. IRV eliminates Casey first (6) and the
+# two poles DEADLOCK 50-50; Choose-One deadlocks 47-47. The electorate is PERFECTLY
+# SYMMETRIC between the two poles, so IRV and Plurality produce an exact Avery/Blake
+# tie that BetterVoting breaks at RANDOM (not freezable — like the BV2141/2142
+# random-tie probes); the deadlock of the poles once the compromise is squeezed out
+# is itself the lesson. STAR is the LEAD race (per request). All four LH-verified.
+# Cast: Avery = left pole (A), Blake = right pole (B), Casey = centrist (C) —
+# initials aligned to the ballot columns.
+_CS_CANDS = ["Avery", "Blake", "Casey"]
+_CS_STAR = [(47, (5, 1, 3)), (47, (1, 5, 3)), (3, (3, 1, 5)), (3, (1, 3, 5))]
+_CS_RANK = [(47, (1, 3, 2)), (47, (3, 1, 2)), (3, (2, 3, 1)), (3, (3, 2, 1))]
+_CS_PLUR = [(47, (1, 0, 0)), (47, (0, 1, 0)), (3, (0, 0, 1)), (3, (0, 0, 1))]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2170",
+        "title": "The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways",
+        "description": ("The textbook 'two poles and a compromise' electorate: 100 "
+                        "voters, three candidates — Avery on the left, Blake on the "
+                        "right, and Casey the broadly-liked centrist. 47 voters rank "
+                        "Avery > Casey > Blake, 47 rank Blake > Casey > Avery, and 6 "
+                        "put Casey first (3 leaning to Avery, 3 to Blake). Casey is "
+                        "the Condorcet winner — a majority prefers Casey to Avery "
+                        "(53-47) and to Blake (53-47) head-to-head — yet Casey holds "
+                        "only 6 first-choice votes. This one electorate is counted "
+                        "four ways. STAR elects Casey (score round Casey 312, Avery "
+                        "294, Blake 294; the automatic runoff confirms Casey 53-47). "
+                        "Ranked Robin (Copeland) elects Casey outright — Casey beats "
+                        "everyone head-to-head. But Instant-Runoff eliminates Casey "
+                        "in the first round (fewest first choices) and the two poles "
+                        "then deadlock 50-50; Choose-One Plurality deadlocks 47-47. "
+                        "Because the electorate is perfectly symmetric between the "
+                        "two poles, IRV and Choose-One end in an exact Avery-Blake "
+                        "tie, which BetterVoting resolves at random — the deadlock of "
+                        "the poles, once the candidate a majority actually prefers is "
+                        "squeezed out, is the whole point."),
+        "races": [
+            {"title": "Symmetric centrist — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _CS_CANDS, "ballots": _expand(_CS_STAR)},
+            {"title": "Symmetric centrist — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_CS_CANDS),
+             "candidates": _CS_CANDS, "ballots": _expand(_CS_RANK)},
+            {"title": "Symmetric centrist — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": len(_CS_CANDS),
+             "candidates": _CS_CANDS, "ballots": _expand(_CS_RANK)},
+            {"title": "Symmetric centrist — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _CS_CANDS, "ballots": _expand(_CS_PLUR)},
+        ],
+        "expected": "STAR -> Casey (312/294/294; runoff 53-47). Ranked Robin -> Casey "
+                    "(Condorcet winner, 2-0). IRV -> Avery/Blake TIE 50-50 (Casey "
+                    "eliminated round one, 6). Plurality -> Avery/Blake TIE 47-47. "
+                    "IRV & Plurality ties resolve at RANDOM on BV (not freezable). "
+                    "Condorcet winner = Casey. LH-verified. Test ID BV2170.",
     },
 ]
 

@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**243 election files** (208 single-winner, 35 multi-winner) across 14 method(s).
+**247 election files** (212 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 128 |
+| STAR | 129 |
 | RCV-IRV (Hare) | 11 |
-| Ranked Robin (RCV-RR / Copeland) | 30 |
+| Ranked Robin (RCV-RR / Copeland) | 31 |
 | Approval | 9 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -22,12 +22,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 7 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
-| IRV | 13 |
-| PLURALITY | 18 |
+| IRV | 14 |
+| PLURALITY | 19 |
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (128)
+## STAR  (129)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -159,6 +159,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`star_combined`](../../method_comparisons/summability_demo/summability_demo_pages/star_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR combined A+B (Oak; precinct subtotals add up) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_combined.yaml) |
 | [`star_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district A (Maple wins outright) → _Maple_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_A.yaml) |
 | [`star_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district B (Oak wins — a runoff reversal) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_B.yaml) |
+| [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) |
 
 ## RCV-IRV (Hare)  (11)
 
@@ -176,7 +177,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (30)
+## Ranked Robin (RCV-RR / Copeland)  (31)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -210,6 +211,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`rr_combined`](../../method_comparisons/summability_demo/summability_demo_pages/rr_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — Combined (A+B), counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/rr_combined.yaml) |
 | [`rr_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/rr_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — District A, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/rr_district_A.yaml) |
 | [`rr_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/rr_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — District B, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/rr_district_B.yaml) |
+| [`bv2170_pp2q4q_ranked_robin`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_ranked_robin.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_ranked_robin.yaml) |
 
 ## Approval  (9)
 
@@ -287,7 +289,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/_main_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 
-## IRV  (13)
+## IRV  (14)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -304,8 +306,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2162_4htk44_irv`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2162_4htk44_irv.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_irv.yaml) |
 | [`bv2163_74j6vv_irv`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2163_74j6vv_irv.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_irv.yaml) |
 | [`bv2138_cxrf8v_irv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_irv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — IRV (Hare): Dave wins by elimination → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) |
+| [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (18)
+## PLURALITY  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -322,6 +325,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2167_f3dxq9_plurality`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2167_f3dxq9_plurality.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D → _D_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_plurality.yaml) |
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
+| [`bv2170_pp2q4q_plurality`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_plurality.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6 → _Blake_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_plurality.yaml) |
 | [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |
 | [`sntv_village_council`](../../method_comparisons/sntv_village_council/sntv_village_council_pages/sntv_village_council.md) | `method_comparisons/sntv_village_council/` | 2 | Village Council by SNTV — a concentrated minority wins a seat → _Priya, Nora_ | [`.yaml`](../../method_comparisons/sntv_village_council/sntv_village_council.yaml) |
 | [`mmp_block_voting`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — Block Voting (3 seats): majority sweeps → _Ada, Ben, Cal_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_block_voting.yaml) |

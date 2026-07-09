@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Avery, Blake, Casey
+    47 ×   Avery      (1, 0, 0)
+    47 ×   Blake      (0, 1, 0)
+     6 ×   Casey      (0, 0, 1)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Avery             47  Hopeful
+Blake             47  Hopeful
+Casey              6  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Avery             47  Elected
+Blake             47  Rejected
+Casey              0  Rejected
+Blank Votes        6  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Avery
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

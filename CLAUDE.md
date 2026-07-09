@@ -1,8 +1,6 @@
 # CLAUDE.md — working guidance for this repo
 
-Standing instructions for Claude when working in this project. Prefer the
-canonical docs in `00_start_here/` over memory; this file is the index + the
-non-obvious house rules.
+Standing instructions for Claude when working in this project. 
 
 ## What this is
 A **STAR Voting education** repo built on a fork of Larry Hastings' `starvote`

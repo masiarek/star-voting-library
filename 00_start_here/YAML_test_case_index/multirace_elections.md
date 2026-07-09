@@ -328,6 +328,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Shifted-left 56/12/32 — STAR | STAR | 3 | **Liberal** |
 | Shifted-left 56/12/32 — RCV-IRV | IRV | 3 | **Liberal** |
 
+## BV2170 — The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways
+
+**Election** [`pp2q4q`](https://bettervoting.com/pp2q4q/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Symmetric centrist — STAR | STAR | 3 | **Casey** |
+| Symmetric centrist — RCV-IRV | IRV | 3 | **Blake** |
+| Symmetric centrist — Ranked Robin (Copeland) | RankedRobin | 3 | **Casey** |
+| Symmetric centrist — Choose-One (Plurality) | Plurality | 3 | **Blake** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

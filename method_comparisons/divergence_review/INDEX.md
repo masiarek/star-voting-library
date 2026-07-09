@@ -1,17 +1,17 @@
 # Cross-method divergence review
 
-_Generated 2026-07-08 22:24 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-08 22:55 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **130** single-winner STAR elections (skipped 76 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **61** (47%) diverge from STAR under at least one method; **69** agree across the board.
+- Scanned **131** single-winner STAR elections (skipped 79 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **62** (47%) diverge from STAR under at least one method; **69** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 12 |
+| IRV_OUTLIER_RR_WITH_STAR | 13 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 5 |
 | CYCLE_OR_THREE_WAY | 18 |
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (59 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (60 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 12
+### IRV_OUTLIER_RR_WITH_STAR — 13
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -56,6 +56,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Cat** · IRV=Fish · RR=Cat · Approval=Bird · Score=Cat · Condorcet=Cat
 - **[04_star_wars_vote_split](cases/IRV_OUTLIER_RR_WITH_STAR/04_star_wars_vote_split.md)** — `method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml` (3c/100b)  
     STAR=**Leia** · IRV=Skywalker · RR=Leia · Approval=Skywalker · Score=Leia · Condorcet=Leia
+- **[bv2170_pp2q4q_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2170_pp2q4q_star.md)** — `method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml` (3c/100b)  
+    STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey
 
 ### STAR_OUTLIER_RR_WITH_IRV — 1
 

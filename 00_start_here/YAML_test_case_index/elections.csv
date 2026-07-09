@@ -27,6 +27,7 @@ krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes 
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
+pp2q4q,"BV2170 — The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 q3h4fk,BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick),2,contested (multi-race),7,"Plurality, STAR",BV
 r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count,2,contested (multi-race),47,"Approval, RankedRobin",BV
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
