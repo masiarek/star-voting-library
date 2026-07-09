@@ -66,7 +66,7 @@ Automatic Runoff Round
    Wren 4 (80%) vs Yarrow 1 (20%); majority = 3.
 ```
 
-(No "Majority Preference Enforcement" line here — that block only prints when the score winner and the runoff winner *differ*. They agree, so it stays silent.)
+(No `[Runoff Reversal]` block here — it only prints when the score winner and the runoff winner *differ*. They agree, so it stays silent.)
 
 > **BV ↔ LH wording.** The line `Wren 4 (80%) vs Yarrow 1 (20%)` is BetterVoting's *Runoff Votes* (4 / 1) and *% Between Finalists* (80% / 20%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 

@@ -50,11 +50,13 @@ Legend: For - Equal Support - Against
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: monotonicity_tabulated/monotonicity_star_before_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Y)
  - Runoff Round Winner   = (X)
-  Candidate Y earned the highest total score,
-  but Candidate X won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Y earned the highest total score, but
+  Candidate X won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

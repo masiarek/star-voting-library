@@ -55,11 +55,13 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Carmen — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Andre)
  - Runoff Round Winner   = (Carmen)
-  Candidate Andre earned the highest total score,
-  but Candidate Carmen won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Andre earned the highest total score, but
+  Candidate Carmen won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

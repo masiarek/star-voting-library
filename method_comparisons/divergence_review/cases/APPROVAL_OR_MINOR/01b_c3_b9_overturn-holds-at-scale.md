@@ -60,11 +60,13 @@ Legend: For - Equal Support - Against
   STAR     = Brownie
   Approval = Almond   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Almond)
  - Runoff Round Winner   = (Brownie)
-  Candidate Almond earned the highest total score,
-  but Candidate Brownie won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Almond earned the highest total score, but
+  Candidate Brownie won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

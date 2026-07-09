@@ -2,7 +2,7 @@
 SOURCE FILE:     three_winners_cw_score_runoff.yaml
 SOURCE MODIFIED: 2026-06-26 20:07:51
 TABULATED FILE:  three_winners_cw_score_runoff_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
+TABULATED AT:    2026-07-09 07:50:35
 ======================================================================
 
 election_title: Three notions of "winner" disagree — Condorcet, Score, and Runoff
@@ -91,15 +91,17 @@ Legend: For - Equal Support - Against
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/three_winners_cw_score_runoff_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_RCV-IRV_tabulated.txt
   RCV-RR round-robin: _main_tabulated/three_winners_cw_score_runoff_RCV-RR_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_RCV-RR_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Carl)
  - Runoff Round Winner   = (Bob)
-  Candidate Carl earned the highest total score,
-  but Candidate Bob won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Carl earned the highest total score, but
+  Candidate Bob won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

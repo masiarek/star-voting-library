@@ -68,11 +68,13 @@ Legend: For - Equal Support - Against
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Cora)
  - Runoff Round Winner   = (Bruno)
-  Candidate Cora earned the highest total score,
-  but Candidate Bruno won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Cora earned the highest total score, but
+  Candidate Bruno won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

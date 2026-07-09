@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_05_scoring_five_star_vs_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-02 12:32:49
 TABULATED FILE:  tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:23
+TABULATED AT:    2026-07-09 07:50:35
 ======================================================================
 
 election_title: Dead rung 01 — scoring tie, five-star rung ALIVE
@@ -86,11 +86,13 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
      file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ann)
  - Runoff Round Winner   = (Ben)
-  Candidate Ann earned the highest total score,
-  but Candidate Ben won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ann earned the highest total score, but
+  Candidate Ben won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

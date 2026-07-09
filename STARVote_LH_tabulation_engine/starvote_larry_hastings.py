@@ -2113,17 +2113,22 @@ def print_extended_analysis(ballots, winners):
     top_scorers = [c for c, s in scores.items() if s == max_score]
 
     if runoff_winner_name not in top_scorers:
-        # A Reversal HAPPENED (Runoff winner is NOT the score winner)
+        # A Runoff Reversal HAPPENED (Runoff winner is NOT the score winner).
+        # Header uses the house glossary term; the old label "Majority
+        # Preference Enforcement Principle" overclaimed (STAR fails the formal
+        # majority criterion — the true guarantee is conditional: majority
+        # preference BETWEEN THE TWO FINALISTS).
         score_winners_str = ", ".join(top_scorers)
         print(
-            "\nMajority Preference Enforcement Principle:\n"
+            "\n[Runoff Reversal]\n"
             f" - Score Round Winner(s) = ({score_winners_str})\n"
             f" - Runoff Round Winner   = ({runoff_winner_name})"
         )
         print(
-            f"  Candidate {score_winners_str} earned the highest total score,\n"
-            f"  but Candidate {runoff_winner_name} won the automatic runoff by "
-            "being the head-to-head majority favorite.\n"
+            f"  Candidate {score_winners_str} earned the highest total score, but\n"
+            f"  Candidate {runoff_winner_name} won the automatic runoff — not a malfunction,\n"
+            "  STAR working as designed: the runoff elects the finalist preferred\n"
+            "  by the majority (of voters with a preference).\n"
         )
 
 

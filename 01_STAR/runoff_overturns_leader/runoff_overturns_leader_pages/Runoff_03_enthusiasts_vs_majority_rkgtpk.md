@@ -51,11 +51,13 @@ Legend: For - Equal Support - Against
   STAR     = Eden
   Approval = Dakota   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Dakota)
  - Runoff Round Winner   = (Eden)
-  Candidate Dakota earned the highest total score,
-  but Candidate Eden won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Dakota earned the highest total score, but
+  Candidate Eden won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

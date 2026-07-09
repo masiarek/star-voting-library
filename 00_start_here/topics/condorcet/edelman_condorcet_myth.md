@@ -30,7 +30,7 @@ Every majoritarian count elects **Ada**; every positional/summation count elects
 | RCV-IRV — Cara out (31/39/11), then 41–40 | Choose-One Plurality: Ben 39, Ada 31, Cara 11 |
 | **STAR's automatic runoff** — Ada 41–40 | **STAR's scoring round** — Ben first, 257–233 |
 
-STAR is the one method that shows **both counts in one election** — its scoring round *is* a proper-cancelling summation (a Condorcet component adds the same total to every candidate, so it cancels exactly, like Borda), and its runoff *is* the majoritarian step. The engine narrates the handoff:
+STAR is the one method that shows **both counts in one election** — its scoring round *is* a proper-cancelling summation (a Condorcet component adds the same total to every candidate, so it cancels exactly, like Borda), and its runoff *is* the majoritarian step. The engine's `[Runoff Reversal]` block narrates the handoff:
 
 ```
 --- Runoff (Preference) Matrix ---
@@ -48,11 +48,13 @@ STAR is the one method that shows **both counts in one election** — its scorin
   Choose-One (Plurality) = Ben   (differs from STAR)
   Approval               = Ben   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ben)
  - Runoff Round Winner   = (Ada)
-  Candidate Ben earned the highest total score,
-  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ben earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 ```
 
 So "who should win Edelman's election?" is precisely the repo's [majoritarian-vs-utilitarian split](../../what_makes_a_good_winner.md), with a 240-year pedigree: Condorcet built the example to embarrass Borda's count; Saari — Borda's great modern champion — reversed the polarity and used the same example to embarrass Condorcet's criterion. Neither side ever "won," because the two ideals genuinely disagree here, 41 voters to 40.

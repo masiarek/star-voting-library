@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2173_gmfv4c_edelman_saari_cancellation.yaml
 SOURCE MODIFIED: 2026-07-08 23:32:11
 TABULATED FILE:  bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt
-TABULATED AT:    2026-07-08 23:33:46
+TABULATED AT:    2026-07-09 07:50:35
 ======================================================================
 
 election_title: "Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada"
@@ -119,11 +119,13 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Ben   (differs from STAR)
   Approval               = Ben   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ben)
  - Runoff Round Winner   = (Ada)
-  Candidate Ben earned the highest total score,
-  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ben earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

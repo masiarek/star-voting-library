@@ -2,7 +2,7 @@
 SOURCE FILE:     rrv_sample_c15_b13_three-parties.yaml
 SOURCE MODIFIED: 2026-07-02 11:59:47
 TABULATED FILE:  rrv_sample_c15_b13_three-parties_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:27
+TABULATED AT:    2026-07-09 07:50:37
 ======================================================================
 
 election_title: "RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow)"
@@ -129,11 +129,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
      file:///Volumes/T7/Voting/Larry%20Hastings/YAML/03_STAR_PR/_main/_main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Orange1)
  - Runoff Round Winner   = (Orange5)
-  Candidate Orange1 earned the highest total score,
-  but Candidate Orange5 won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Orange1 earned the highest total score, but
+  Candidate Orange5 won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

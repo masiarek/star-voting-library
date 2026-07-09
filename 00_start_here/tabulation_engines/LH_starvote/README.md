@@ -35,7 +35,7 @@ The vendored `starvote/` package is kept **as close to pristine as possible.** C
   - `print_maximum_score` — default `False`; CLI `-M` / `--print-maximum-score`; config key `print maximum score`. Suppresses the "Maximum score is …" line.
   - a `bool_converter` helper to parse those two config keys. Both options are only forwarded to method functions when they differ from the default, so reference method implementations don't break.
 
-**What is *not* an engine edit** (a common misconception — these are all in the wrapper): the `No Preference → Equal Support` relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the Majority Preference Enforcement summary, and `show_runoff_percent`. The vendored package still prints "No Preference" internally; our wrapper renders "Equal Support" on screen. Keeping the engine pristine-but-for-the- two-toggles is deliberate — re-pulling a future upstream release stays trivial.
+**What is *not* an engine edit** (a common misconception — these are all in the wrapper): the `No Preference → Equal Support` relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent`. The vendored package still prints "No Preference" internally; our wrapper renders "Equal Support" on screen. Keeping the engine pristine-but-for-the- two-toggles is deliberate — re-pulling a future upstream release stays trivial.
 
 To reproduce this list precisely at any time:
 
@@ -59,7 +59,7 @@ The payoff: **the on-screen demo stays clean while the saved record stays comple
 Beyond the raw result, the wrapper renders the parts that make a STAR result *trustworthy and teachable*:
 
 - **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../STAR_Voting/STAR_summability.md).
-- **Majority Preference Enforcement Principle** — a plain-English sentence naming *why* the runoff winner beat the score leader when they differ. The whole Runoff-Reversal lesson in two lines.
+- **`[Runoff Reversal]` summary** — a plain-English sentence naming *why* the runoff winner beat the score leader when they differ: the runoff elects the finalist preferred by the majority (of voters with a preference). The whole Runoff-Reversal lesson in two lines. (Header formerly "Majority Preference Enforcement Principle" — renamed to the glossary term.)
 - **`[Divergence from STAR]`** — a quick cross-check that flags when Approval / a pure score count, or RCV-IRV, would pick someone else; it prints whenever methods disagree, so comparative demos keep their punch even with the minimal echo.
 - **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../STAR_Voting/runoff_percentages.md).
 - **Score distribution, Condorcet line, tiebreaker rounds** — on demand on screen, always in the mirror. The **lot-number tiebreak cascade** (head-to-head → most 5s → lot order) is shown step by step so a tie's resolution is auditable.

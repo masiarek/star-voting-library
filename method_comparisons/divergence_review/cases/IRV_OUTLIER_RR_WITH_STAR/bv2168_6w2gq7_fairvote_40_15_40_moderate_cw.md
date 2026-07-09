@@ -68,11 +68,13 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Liberal)
  - Runoff Round Winner   = (Moderate)
-  Candidate Liberal earned the highest total score,
-  but Candidate Moderate won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Liberal earned the highest total score, but
+  Candidate Moderate won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

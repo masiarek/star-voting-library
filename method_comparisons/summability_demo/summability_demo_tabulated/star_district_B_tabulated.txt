@@ -2,7 +2,7 @@
 SOURCE FILE:     star_district_B.yaml
 SOURCE MODIFIED: 2026-07-02 13:00:37
 TABULATED FILE:  star_district_B_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:09
+TABULATED AT:    2026-07-09 07:50:36
 ======================================================================
 
 election_title: "Summability demo — STAR district B (Oak wins — a runoff reversal)"
@@ -56,11 +56,13 @@ Legend: For - Equal Support - Against
   STAR     = Oak
   Approval = Pine   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Pine)
  - Runoff Round Winner   = (Oak)
-  Candidate Pine earned the highest total score,
-  but Candidate Oak won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Pine earned the highest total score, but
+  Candidate Oak won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

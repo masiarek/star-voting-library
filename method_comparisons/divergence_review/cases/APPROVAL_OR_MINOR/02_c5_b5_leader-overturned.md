@@ -63,11 +63,13 @@ Legend: For - Equal Support - Against
   STAR     = Boston
   Approval = Austin   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Austin)
  - Runoff Round Winner   = (Boston)
-  Candidate Austin earned the highest total score,
-  but Candidate Boston won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Austin earned the highest total score, but
+  Candidate Boston won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

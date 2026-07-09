@@ -2,7 +2,7 @@
 SOURCE FILE:     01a_c3_b3_more-stars-fewer-voters.yaml
 SOURCE MODIFIED: 2026-06-26 18:42:52
 TABULATED FILE:  01a_c3_b3_more-stars-fewer-voters_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:53
+TABULATED AT:    2026-07-09 07:50:34
 ======================================================================
 
 election_title: More stars, fewer voters — the runoff overturns the score leader
@@ -68,11 +68,13 @@ Legend: For - Equal Support - Against
   STAR     = Brownie
   Approval = Almond   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Almond)
  - Runoff Round Winner   = (Brownie)
-  Candidate Almond earned the highest total score,
-  but Candidate Brownie won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Almond earned the highest total score, but
+  Candidate Brownie won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

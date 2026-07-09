@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2165_9vxcj7_star.yaml
 SOURCE MODIFIED: 2026-07-07 20:57:43
 TABULATED FILE:  bv2165_9vxcj7_star_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:38
+TABULATED AT:    2026-07-09 07:50:36
 ======================================================================
 
 election_title: "Coombs Ex.19 full — STAR: Boone wins the runoff 8–7"
@@ -80,11 +80,13 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
      file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Cass)
  - Runoff Round Winner   = (Boone)
-  Candidate Cass earned the highest total score,
-  but Candidate Boone won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Cass earned the highest total score, but
+  Candidate Boone won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

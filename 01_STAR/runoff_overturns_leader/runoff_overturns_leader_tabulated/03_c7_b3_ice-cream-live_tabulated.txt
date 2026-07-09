@@ -2,7 +2,7 @@
 SOURCE FILE:     03_c7_b3_ice-cream-live.yaml
 SOURCE MODIFIED: 2026-06-26 18:49:12
 TABULATED FILE:  03_c7_b3_ice-cream-live_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:53
+TABULATED AT:    2026-07-09 07:50:34
 ======================================================================
 
 election_title: Ice Cream — Flavor of the Year (the real recorded race)
@@ -72,11 +72,13 @@ Legend: For - Equal Support - Against
   STAR     = ChocoAlm
   Approval = ChocoDrk   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (ChocoDrk)
  - Runoff Round Winner   = (ChocoAlm)
-  Candidate ChocoDrk earned the highest total score,
-  but Candidate ChocoAlm won the automatic runoff by being the head-to-head majority favorite.
+  Candidate ChocoDrk earned the highest total score, but
+  Candidate ChocoAlm won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

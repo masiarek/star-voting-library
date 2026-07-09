@@ -2,7 +2,7 @@
 SOURCE FILE:     06b_c9_runoff-overturns-leader.yaml
 SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  06b_c9_runoff-overturns-leader_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
+TABULATED AT:    2026-07-09 07:50:35
 ======================================================================
 
 election_title: Large field (9 candidates) — the runoff OVERTURNS the score leader
@@ -84,11 +84,13 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Carmen — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Andre)
  - Runoff Round Winner   = (Carmen)
-  Candidate Andre earned the highest total score,
-  but Candidate Carmen won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Andre earned the highest total score, but
+  Candidate Carmen won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

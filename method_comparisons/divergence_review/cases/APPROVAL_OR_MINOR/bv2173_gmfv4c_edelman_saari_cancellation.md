@@ -65,11 +65,13 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Ben   (differs from STAR)
   Approval               = Ben   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ben)
  - Runoff Round Winner   = (Ada)
-  Candidate Ben earned the highest total score,
-  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ben earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

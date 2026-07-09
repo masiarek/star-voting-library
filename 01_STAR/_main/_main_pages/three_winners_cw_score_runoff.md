@@ -66,11 +66,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/three_winners_cw_score_runoff_RCV-IRV_tabulated.txt
   RCV-RR round-robin: _main_tabulated/three_winners_cw_score_runoff_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Carl)
  - Runoff Round Winner   = (Bob)
-  Candidate Carl earned the highest total score,
-  but Candidate Bob won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Carl earned the highest total score, but
+  Candidate Bob won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

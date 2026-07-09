@@ -62,11 +62,13 @@ Legend: For - Equal Support - Against
   Approval = Y   (differs from STAR)
   RCV-RR   = Y   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Y)
  - Runoff Round Winner   = (X)
-  Candidate Y earned the highest total score,
-  but Candidate X won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Y earned the highest total score, but
+  Candidate X won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

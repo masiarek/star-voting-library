@@ -52,11 +52,13 @@ Same ballots, the full text report (the saved [`_tabulated`](runoff_overturns_le
 [Condorcet Winner]
   Condorcet Winner: Sage — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Rosa)
  - Runoff Round Winner   = (Sage)
-  Rosa earned the highest total score, but Sage won the automatic
-  runoff by being the head-to-head majority favorite.
+  Candidate Rosa earned the highest total score, but
+  Candidate Sage won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 Scoring Round
    Rosa          -- 21 -- First place

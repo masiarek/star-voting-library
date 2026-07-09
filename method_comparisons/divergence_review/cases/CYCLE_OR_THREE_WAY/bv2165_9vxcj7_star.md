@@ -64,11 +64,13 @@ Legend: For - Equal Support - Against
   Approval               = Cass   (differs from STAR)
   RCV-RR                 = Cass   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Cass)
  - Runoff Round Winner   = (Boone)
-  Candidate Cass earned the highest total score,
-  but Candidate Boone won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Cass earned the highest total score, but
+  Candidate Boone won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

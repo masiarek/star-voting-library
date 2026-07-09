@@ -60,11 +60,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ann)
  - Runoff Round Winner   = (Ben)
-  Candidate Ann earned the highest total score,
-  but Candidate Ben won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ann earned the highest total score, but
+  Candidate Ben won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

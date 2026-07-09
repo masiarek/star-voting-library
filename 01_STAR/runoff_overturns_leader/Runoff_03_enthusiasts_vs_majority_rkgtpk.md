@@ -47,11 +47,13 @@ Same ballots, the full text report (the saved [`_tabulated`](runoff_overturns_le
 [Condorcet Winner]
   Condorcet Winner: Eden — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Dakota)
  - Runoff Round Winner   = (Eden)
-  Dakota earned the highest total score, but Eden won the automatic
-  runoff by being the head-to-head majority favorite.
+  Candidate Dakota earned the highest total score, but
+  Candidate Eden won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 Scoring Round
    Dakota        -- 22 -- First place

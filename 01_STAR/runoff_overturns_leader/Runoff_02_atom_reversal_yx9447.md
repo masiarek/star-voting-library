@@ -46,11 +46,13 @@ Legend: For - Equal Support - Against        * indicates Top 2 Finalist
 [Condorcet Winner]
   Condorcet Winner: Boston — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Austin)
  - Runoff Round Winner   = (Boston)
-  Austin earned the highest total score, but Boston won the automatic
-  runoff by being the head-to-head majority favorite.
+  Candidate Austin earned the highest total score, but
+  Candidate Boston won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 Scoring Round
    Austin        -- 13 -- First place

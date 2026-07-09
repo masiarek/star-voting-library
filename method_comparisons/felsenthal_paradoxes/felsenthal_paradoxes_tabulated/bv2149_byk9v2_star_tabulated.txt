@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2149_byk9v2_star.yaml
 SOURCE MODIFIED: 2026-07-07 18:01:46
 TABULATED FILE:  bv2149_byk9v2_star_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:34
+TABULATED AT:    2026-07-09 07:50:37
 ======================================================================
 
 election_title: "Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts"
@@ -101,11 +101,13 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
      file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Cora)
  - Runoff Round Winner   = (Bruno)
-  Candidate Cora earned the highest total score,
-  but Candidate Bruno won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Cora earned the highest total score, but
+  Candidate Bruno won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

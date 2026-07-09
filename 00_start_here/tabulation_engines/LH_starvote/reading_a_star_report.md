@@ -37,11 +37,13 @@ Legend: For - Equal Support - Against
   STAR     = A
   Approval = C   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (C)
  - Runoff Round Winner   = (A)
-  Candidate C earned the highest total score,
-  but Candidate A won the automatic runoff by being the head-to-head majority favorite.
+  Candidate C earned the highest total score, but
+  Candidate A won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 Scoring Round
  The two highest-scoring candidates advance to the next round.
@@ -67,7 +69,7 @@ Winner — STAR Voting Method (single winner)
 
 **2. [Divergence from STAR].** A quick cross-check against other methods. `STAR = A` but `Approval = C` — i.e., a pure *score/approval* count (most total stars) would pick **C**. When this line shows a difference, you're looking at a case where the scoring total and the STAR winner disagree — the signal of a **Runoff Reversal**.
 
-**3. Majority Preference Enforcement Principle.** The plain-English summary, and the one sentence to quote: *"C earned the highest total score, but A won the automatic runoff by being the head-to-head majority favorite."* This is the whole lesson in two lines — score leader ≠ winner, because the runoff applies a majority check.
+**3. [Runoff Reversal].** The plain-English summary, and the one sentence to quote: *"C earned the highest total score, but A won the automatic runoff — not a malfunction, STAR working as designed: the runoff elects the finalist preferred by the majority (of voters with a preference)."* This is the whole lesson in two lines — score leader ≠ winner, because the runoff applies a majority check between the two finalists. (This block was formerly headed "Majority Preference Enforcement Principle"; renamed to match the [glossary term](../../GLOSSARY.md) — and because the old name overclaimed: STAR does *not* satisfy the formal majority criterion, the guarantee is majority preference *between the finalists*.)
 
 **4. [Scoring Round](../../STAR_Voting/STAR_Scoring_Round.md).** Add every candidate's stars: **C 7, A 6, B 4**. The two highest — **C and A** — become the Finalists; **B is out**. (This is one of the only three lines a first-time voter needs.)
 

@@ -61,11 +61,13 @@ Legend: For - Equal Support - Against
   STAR     = Oak
   Approval = Pine   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Pine)
  - Runoff Round Winner   = (Oak)
-  Candidate Pine earned the highest total score,
-  but Candidate Oak won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Pine earned the highest total score, but
+  Candidate Oak won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

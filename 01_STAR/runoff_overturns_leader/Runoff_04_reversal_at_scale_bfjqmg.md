@@ -46,11 +46,13 @@ Same ballots (collapsed as `count × scores`), the full text report (the saved [
 [Condorcet Winner]
   Condorcet Winner: Olive — matches the STAR winner
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Maple)
  - Runoff Round Winner   = (Olive)
-  Maple earned the highest total score, but Olive won the automatic
-  runoff by being the head-to-head majority favorite.
+  Candidate Maple earned the highest total score, but
+  Candidate Olive won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 Count × Maple,Olive,Pine
     6 ×     4,    5,   0

@@ -52,7 +52,7 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Consider offering it to Larry.
 - **Regression guard:** the four `01_STAR/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
 
-> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the Majority Preference Enforcement summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-the-two-toggles is deliberate: it makes re-pulling a future upstream release trivial.
+> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-the-two-toggles is deliberate: it makes re-pulling a future upstream release trivial.
 
 To regenerate this list precisely at any time, run the `git diff` commands above and compare the `def`/`class` inventory of the two versions.
 

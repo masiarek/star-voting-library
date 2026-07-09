@@ -77,11 +77,13 @@ Legend: For - Equal Support - Against
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Liberal)
  - Runoff Round Winner   = (Moderate)
-  Candidate Liberal earned the highest total score,
-  but Candidate Moderate won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Liberal earned the highest total score, but
+  Candidate Moderate won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

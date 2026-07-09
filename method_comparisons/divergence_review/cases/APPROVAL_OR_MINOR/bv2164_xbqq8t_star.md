@@ -64,11 +64,13 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Bree   (differs from STAR)
   Approval               = Bree   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Bree)
  - Runoff Round Winner   = (Arlo)
-  Candidate Bree earned the highest total score,
-  but Candidate Arlo won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Bree earned the highest total score, but
+  Candidate Arlo won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

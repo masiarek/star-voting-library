@@ -69,11 +69,13 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Ben   (differs from STAR)
   Approval               = Ben   (differs from STAR)
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Ben)
  - Runoff Round Winner   = (Ada)
-  Candidate Ben earned the highest total score,
-  but Candidate Ada won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Ben earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---
@@ -127,6 +129,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/bv2173_gmfv4c_edelman_saari_cancellation.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)

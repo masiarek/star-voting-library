@@ -66,11 +66,13 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Carl)
  - Runoff Round Winner   = (Bob)
-  Candidate Carl earned the highest total score,
-  but Candidate Bob won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Carl earned the highest total score, but
+  Candidate Bob won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

@@ -61,11 +61,13 @@ Legend: For - Equal Support - Against
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2147_9gdrqg_star_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Cora)
  - Runoff Round Winner   = (Bruno)
-  Candidate Cora earned the highest total score,
-  but Candidate Bruno won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Cora earned the highest total score, but
+  Candidate Bruno won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

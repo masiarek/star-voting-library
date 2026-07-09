@@ -91,11 +91,13 @@ Legend: For - Equal Support - Against
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Orange1)
  - Runoff Round Winner   = (Orange5)
-  Candidate Orange1 earned the highest total score,
-  but Candidate Orange5 won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Orange1 earned the highest total score, but
+  Candidate Orange5 won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---

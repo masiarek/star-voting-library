@@ -47,7 +47,7 @@ Legend: For - Equal Support - Against
              Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Abby > Dave > Brad > Abby)
+  No Condorcet winner (majority cycle: Erin > Dave > Brad > Erin)
 
 [Divergence from STAR]
   STAR     = Brad
@@ -60,11 +60,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_RCV-RR_tabulated.txt
 
-Majority Preference Enforcement Principle:
+[Runoff Reversal]
  - Score Round Winner(s) = (Abby)
  - Runoff Round Winner   = (Brad)
-  Candidate Abby earned the highest total score,
-  but Candidate Brad won the automatic runoff by being the head-to-head majority favorite.
+  Candidate Abby earned the highest total score, but
+  Candidate Brad won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
 
 
 --- STAR Voting Method (single winner) ---
