@@ -122,7 +122,7 @@ The article's honest core — "majority-pairwise preference isn't the only defen
 
 ## The demo elections — live on BetterVoting
 
-Both are **live BetterVoting elections** (BV2168 / BV2169), each with two races on the same 100 voters — a STAR race and an RCV-IRV race — so every number below is independently checkable on a public site, not just in this repo's engine.
+Both are **live BetterVoting elections** (BV2168 / BV2169), each with two races on the same 100 voters — a STAR race and an RCV-IRV race — so every number below is independently checkable on a public site, not just in this repo's engine. BetterVoting's frozen results (the `*_bv_export.json` beside each yaml) **agree with the LH tabulation in all four races**, including the round-one elimination of the Moderate in BV2168's IRV race.
 
 | Page (start here) | What it shows | Live results | Source | Full report |
 |---|---|---|---|---|

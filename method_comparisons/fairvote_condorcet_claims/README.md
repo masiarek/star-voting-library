@@ -7,6 +7,8 @@ The tabulatable evidence behind [Claim check — FairVote's "Why the Condorcet C
 - **BV2168** — [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7`)
 - **BV2169** — [vote](https://bettervoting.com/2jrfpg) · **[results ↗](https://bettervoting.com/2jrfpg/results)** (election `2jrfpg`)
 
+**BV agrees with LH in all four races** (frozen exports beside the yamls: `*_bv_export.json`). BV2168: STAR → Moderate (pairwise 55/57, matching the LH matrix), RCV-IRV → Liberal (Moderate eliminated round one, final 51–49). BV2169: STAR and RCV-IRV → Liberal. Ballot multisets verified identical to the yaml blocs.
+
 Read the reader-friendly **pages** (`fairvote_condorcet_claims_pages/`); the `.yaml` beside each is the tabulatable source.
 
 | Page (read this) | What it shows | src |

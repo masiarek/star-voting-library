@@ -310,6 +310,24 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Minimax Ex.29 — STAR (ranks mapped to 0-5) | STAR | 4 | **B** |
 | Minimax Ex.29 — Choose-One (Plurality) | Plurality | 4 | **D** |
 
+## BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice
+
+**Election** [`6w2gq7`](https://bettervoting.com/6w2gq7/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| FairVote 45/12/43 — STAR | STAR | 3 | **Moderate** |
+| FairVote 45/12/43 — RCV-IRV | IRV | 3 | **Liberal** |
+
+## BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner
+
+**Election** [`2jrfpg`](https://bettervoting.com/2jrfpg/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Shifted-left 56/12/32 — STAR | STAR | 3 | **Liberal** |
+| Shifted-left 56/12/32 — RCV-IRV | IRV | 3 | **Liberal** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -1,8 +1,10 @@
 election_id,title,races,kind,voters,methods,backing
+2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
+6w2gq7,"BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",2,contested (multi-race),100,"IRV, STAR",BV
 74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
@@ -33,7 +35,6 @@ xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked 
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
-2jrfpg,"Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner",1,single-race,100,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
@@ -42,7 +43,6 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 4gfwdq,BV2142 — Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning,1,single-race,33,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
-6w2gq7,FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice,1,single-race,100,STAR,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
