@@ -1,6 +1,6 @@
 # STAR Voting — concept pages
 
-Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start with **[STAR — start here](STAR_start_here.md)**.
+Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start with **[STAR — start here](STAR_start_here.md)**. The case for it, in brief: **[The benefits of STAR Voting](STAR_benefits.md)**.
 
 ## The count — two rounds
 

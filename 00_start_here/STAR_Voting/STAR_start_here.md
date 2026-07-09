@@ -85,6 +85,8 @@ Why both? If we only added up scores (pure score voting), voters are tempted to 
 - **Equal scores are allowed.** You're not forced to rank or invent a difference you don't feel. (Two candidates can tie at 5.)
 - **Vocabulary they'll see on screen:** score 0–5, finalists, head-to-head, "Equal Support" (a voter who scored both finalists the same).
 
+→ The fuller case: [The benefits of STAR Voting](STAR_benefits.md) — expressive ballot, no spoilers, majority winners, one ballot (cost + turnout), summability, and more representative results (with the honest caveats).
+
 ---
 
 ## How to transition into the examples
@@ -125,7 +127,7 @@ If you're short on time: spend ~60 seconds on 2 candidates purely to name the tw
 ## Sources & further resources
 
 - Equal Vote Coalition — STAR Voting overview: https://www.equal.vote/star
-- "How Does STAR Voting Work?" (short video): https://www.youtube.com/watch?v=3-mOeUXAkV0
+- "How Does STAR Voting Work?" (short video): https://www.youtube.com/watch?v=fKg0fRL88zc&pp=ygUVaG93IHN0YXIgdm90aW5nIHdvcmtz
 - Try it / host an election: https://bettervoting.com
 
 The ballot rules and the "no preference / Equal Support" wording above follow the Equal Vote Coalition's official explanation; this lesson reframes them as a mechanics-first teaching sequence for these examples.
