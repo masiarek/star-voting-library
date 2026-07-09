@@ -1637,7 +1637,10 @@ _CS_STAR = [(47, (5, 1, 3)), (47, (1, 5, 3)), (3, (3, 1, 5)), (3, (1, 3, 5))]
 _CS_RANK = [(47, (1, 3, 2)), (47, (3, 1, 2)), (3, (2, 3, 1)), (3, (3, 2, 1))]
 _CS_PLUR = [(47, (1, 0, 0)), (47, (0, 1, 0)), (3, (0, 0, 1)), (3, (0, 0, 1))]
 
-ELECTIONS = [
+# Already created -> pp2q4q (BV2170). Reference only — do NOT re-run (permanent).
+# Superseded for method coverage by BV2172 (same 47/47/3/3 profile, all SEVEN BV
+# methods); BV2170 was the original four-method cut. Kept live and cross-linked.
+_CREATED_BV2170 = [
     {
         "test_id": "BV2170",
         "title": "The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways",
@@ -1677,6 +1680,109 @@ ELECTIONS = [
                     "eliminated round one, 6). Plurality -> Avery/Blake TIE 47-47. "
                     "IRV & Plurality ties resolve at RANDOM on BV (not freezable). "
                     "Condorcet winner = Casey. LH-verified. Test ID BV2170.",
+    },
+]
+
+
+# ---- BV2171 / BV2172 — the symmetric Condorcet centrist, minimal vs full, ALL 7 ----
+# The same two-poles-plus-a-centrist symptom (Casey the Condorcet winner, fewest
+# first choices) run through EVERY BetterVoting method, at two sizes:
+#   BV2171 = the MINIMAL form, 8 voters (3/3/1/1) — the fewest ballots that still
+#            reproduce the whole symptom (Casey Condorcet + strictly fewest first
+#            choices + the exact Avery/Blake pole tie under IRV/STV/Plurality).
+#   BV2172 = the FULL form, 100 voters (47/47/3/3) — the profile as drawn in the
+#            "Should we always elect the Condorcet winner?" video (youtu.be/
+#            NlisR8vbpN4?t=53). Same shape, 12.5x the ballots.
+# Seven races each (STAR leads): STAR, STAR-PR (1 seat = STAR), Approval (approve
+# top two), Ranked Robin, RCV-IRV, STV (1 seat = IRV), Choose-One. The three
+# whole-ballot methods (STAR/STAR-PR/Approval), plus Ranked Robin (Condorcet),
+# elect Casey; the three first-choice methods (IRV/STV/Plurality) squeeze Casey
+# out and, by symmetry, deadlock the two poles in an exact tie (random on BV, not
+# freezable). Approval uses an approve-top-two model (everyone's top two include
+# Casey, so Casey sweeps approval). Cast: Avery = left pole, Blake = right pole,
+# Casey = centrist — same as BV2170. All LH-verified (STAR-PR at 1 seat ≡ STAR in
+# LH, which elects Casey).
+_SQ_CANDS = ["Avery", "Blake", "Casey"]
+
+
+def _sq_races(prefix, P, Q):
+    """The seven BV tabulations of the symmetric centrist profile: P voters each
+    pole (A>C>B / B>C>A), Q voters each centrist lean (C>A>B / C>B>A)."""
+    star = [(P, (5, 1, 3)), (P, (1, 5, 3)), (Q, (3, 1, 5)), (Q, (1, 3, 5))]
+    appr = [(P, (1, 0, 1)), (P, (0, 1, 1)), (Q, (1, 0, 1)), (Q, (0, 1, 1))]  # top two
+    rank = [(P, (1, 3, 2)), (P, (3, 1, 2)), (Q, (2, 3, 1)), (Q, (3, 2, 1))]
+    plur = [(P, (1, 0, 0)), (P, (0, 1, 0)), (Q, (0, 0, 1)), (Q, (0, 0, 1))]
+    N = len(_SQ_CANDS)
+    return [
+        {"title": f"{prefix} — STAR", "method": "STAR",
+         "num_winners": 1, "candidates": _SQ_CANDS, "ballots": _expand(star)},
+        {"title": f"{prefix} — STAR-PR (1 seat)", "method": "STAR_PR",
+         "num_winners": 1, "candidates": _SQ_CANDS, "ballots": _expand(star)},
+        {"title": f"{prefix} — Approval (approve top two)", "method": "Approval",
+         "num_winners": 1, "candidates": _SQ_CANDS, "ballots": _expand(appr)},
+        {"title": f"{prefix} — Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": N, "candidates": _SQ_CANDS, "ballots": _expand(rank)},
+        {"title": f"{prefix} — RCV-IRV", "method": "IRV",
+         "num_winners": 1, "max_rankings": N, "candidates": _SQ_CANDS, "ballots": _expand(rank)},
+        {"title": f"{prefix} — STV (1 seat)", "method": "STV",
+         "num_winners": 1, "max_rankings": N, "candidates": _SQ_CANDS, "ballots": _expand(rank)},
+        {"title": f"{prefix} — Choose-One (Plurality)", "method": "Plurality",
+         "num_winners": 1, "candidates": _SQ_CANDS, "ballots": _expand(plur)},
+    ]
+
+
+_SQ_EXPECTED = ("STAR / STAR-PR / Approval (top two) / Ranked Robin -> Casey (the "
+                "Condorcet winner, beats each pole {m}). RCV-IRV / STV / Choose-One "
+                "-> exact Avery/Blake pole tie (Casey has the fewest first choices "
+                "and is eliminated first), resolved at RANDOM on BV — not freezable. "
+                "LH-verified (STAR-PR 1 seat = STAR in LH). ")
+
+ELECTIONS = [
+    {
+        "test_id": "BV2171",
+        "title": "The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest",
+        "description": ("The smallest electorate that still reproduces the whole "
+                        "center-squeeze symptom: 8 voters, three candidates — Avery "
+                        "(left pole), Blake (right pole), Casey (centrist). 3 rank "
+                        "Avery > Casey > Blake, 3 rank Blake > Casey > Avery, 1 ranks "
+                        "Casey > Avery > Blake, 1 ranks Casey > Blake > Avery. Casey "
+                        "is the Condorcet winner — beats Avery 5-3 and Blake 5-3 "
+                        "head-to-head — but has only 2 first-choice votes, the fewest. "
+                        "The same 8 voters are counted seven ways, every method "
+                        "BetterVoting supports. The whole-ballot methods — STAR, "
+                        "STAR-PR, Approval (approve your top two), and Ranked Robin "
+                        "(the Condorcet method) — elect Casey. The first-choice "
+                        "methods — RCV-IRV, STV, and Choose-One Plurality — eliminate "
+                        "Casey first and, because the electorate is perfectly "
+                        "symmetric between the two poles, deadlock Avery and Blake in "
+                        "an exact tie. This is the minimal companion to the full "
+                        "100-voter version (BV2172), the profile from the 'Should we "
+                        "always elect the Condorcet winner?' explainer."),
+        "races": _sq_races("Condorcet centrist (minimal)", 3, 1),
+        "expected": _SQ_EXPECTED.format(m="5-3") + "8 voters (3/3/1/1). Test ID BV2171.",
+    },
+    {
+        "test_id": "BV2172",
+        "title": "The Condorcet centrist, full form (100 voters) — squeezed out by first-choice methods, elected by the rest",
+        "description": ("The profile as drawn in the 'Should we always elect the "
+                        "Condorcet winner?' explainer (youtu.be/NlisR8vbpN4): 100 "
+                        "voters, three candidates — Avery (left pole), Blake (right "
+                        "pole), Casey (centrist). 47 rank Avery > Casey > Blake, 47 "
+                        "rank Blake > Casey > Avery, 3 rank Casey > Avery > Blake, 3 "
+                        "rank Casey > Blake > Avery. Casey is the Condorcet winner — "
+                        "beats Avery 53-47 and Blake 53-47 head-to-head — yet holds "
+                        "only 6 first-choice votes. The same 100 voters are counted "
+                        "seven ways, every method BetterVoting supports. The "
+                        "whole-ballot methods — STAR, STAR-PR, Approval (approve your "
+                        "top two), and Ranked Robin (the Condorcet method) — elect "
+                        "Casey. The first-choice methods — RCV-IRV, STV, and "
+                        "Choose-One Plurality — eliminate Casey first and, because the "
+                        "electorate is perfectly symmetric between the two poles, "
+                        "deadlock Avery and Blake in an exact tie. The minimal "
+                        "companion (BV2171) shows the identical symptom in just 8 "
+                        "voters. (Earlier four-method cut of this profile: BV2170.)"),
+        "races": _sq_races("Condorcet centrist (full)", 47, 3),
+        "expected": _SQ_EXPECTED.format(m="53-47") + "100 voters (47/47/3/3). Test ID BV2172.",
     },
 ]
 

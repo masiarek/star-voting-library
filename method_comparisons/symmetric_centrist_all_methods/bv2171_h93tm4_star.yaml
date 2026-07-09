@@ -1,0 +1,35 @@
+election_title: "Condorcet centrist, minimal form (8 voters) — STAR elects Casey"
+scenario_description: |-
+  The STAR race (lead of seven) in the minimal Condorcet-centrist election (BV2171, bvid h93tm4; BV-confirmed). The fewest ballots that still reproduce the whole center-squeeze symptom: 8 voters, three candidates — Avery (left pole), Blake (right pole), Casey (centrist). Casey is the Condorcet winner (beats Avery 5–3 and Blake 5–3) but has only 2 first choices, the fewest. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 28 (Avery/Blake tie at 22) and wins the automatic runoff 5–3.
+
+  Seven methods, one electorate. Whole-ballot methods — STAR, STAR-PR (1 seat), Approval (approve top two), Ranked Robin — elect Casey. First-choice methods — RCV-IRV, STV (1 seat), Choose-One — eliminate Casey first and, because the poles are a mirror image, deadlock Avery vs Blake in an exact tie (random on BV, not freezable). See the overview page for all seven.
+
+  Live results: https://bettervoting.com/h93tm4/results
+  Overview: bv2171_h93tm4_all_methods.md · Full 100-voter version: bv2172_bkwfjr_star.yaml (BV2172) · Original 4-method cut: ../symmetric_centrist_bv2170/
+bv_test_id: BV2171
+bv_election_id: h93tm4
+bv_results_url: https://bettervoting.com/h93tm4/results
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Avery,Blake,Casey
+  3:5,1,3   # Avery > Casey > Blake  (left pole)
+  3:1,5,3   # Blake > Casey > Avery  (right pole)
+  1:3,1,5   # Casey > Avery > Blake  (centrist, leans left)
+  1:1,3,5   # Casey > Blake > Avery  (centrist, leans right)
+expected_winners:
+  - Casey
+
+# file: bv2171_h93tm4_star.yaml

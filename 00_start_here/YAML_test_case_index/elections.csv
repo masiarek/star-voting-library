@@ -11,6 +11,7 @@ election_id,title,races,kind,voters,methods,backing
 9vxcj7,"BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass",2,contested (multi-race),15,"Plurality, STAR",BV
 LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
 b7b8dv,BV2166 — Coombs' No-Show electorate (2 of 2) — two voters stay home and their favorite wins (STAR flips too),2,contested (multi-race),13,"Plurality, STAR",BV
+bkwfjr,"BV2172 — The Condorcet centrist, full form (100 voters) — squeezed out by first-choice methods, elected by the rest",7,contested (multi-race),100,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 bvhchj,Presidential Board Election,2,contested (multi-race),102,"Plurality, STAR_PR",BV
 byk9v2,"BV2149 — Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole",2,contested (multi-race),32,"IRV, STAR",BV
 cphxpt,"BV2155 — Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
@@ -21,6 +22,7 @@ f3dxq9,BV2167 — Minimax elects the absolute loser — the candidate who loses 
 f4cjpy,BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head,3,contested (multi-race),21,"IRV, RankedRobin, STAR",BV
 gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV
+h93tm4,"BV2171 — The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest",7,contested (multi-race),8,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV

@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**247 election files** (212 single-winner, 35 multi-winner) across 14 method(s).
+**249 election files** (214 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 129 |
+| STAR | 131 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 31 |
 | Approval | 9 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (129)
+## STAR  (131)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -159,6 +159,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`star_combined`](../../method_comparisons/summability_demo/summability_demo_pages/star_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR combined A+B (Oak; precinct subtotals add up) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_combined.yaml) |
 | [`star_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district A (Maple wins outright) → _Maple_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_A.yaml) |
 | [`star_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/star_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — STAR district B (Oak wins — a runoff reversal) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/star_district_B.yaml) |
+| [`bv2171_h93tm4_star`](../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_pages/bv2171_h93tm4_star.md) | `method_comparisons/symmetric_centrist_all_methods/` | 1 | Condorcet centrist, minimal form (8 voters) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml) |
+| [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) |
 
 ## RCV-IRV (Hare)  (11)

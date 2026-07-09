@@ -1,18 +1,17 @@
-# Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner
+# Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey
 
-*Generated from [`bv2170_pp2q4q_star.yaml`](../bv2170_pp2q4q_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2172_bkwfjr_star.yaml`](../bv2172_bkwfjr_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Casey
 
-**Official tie-break (lot) order:** Blake > Casey > Avery — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
-
 ## Scenario
 
-One of four races in the Symmetric Centrist election (BV2170, bvid pp2q4q; BV-confirmed). 100 voters, three candidates, ONE electorate tabulated four ways. Avery is the left pole, Blake the right pole, Casey the broadly-liked centrist. 47 rank Avery>Casey>Blake, 47 rank Blake>Casey>Avery, and 6 put Casey first (3 leaning each way). Casey is the Condorcet winner — a majority prefers Casey to Avery (53–47) and to Blake (53–47) — yet holds only 6 first choices. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 312 (Avery and Blake tie at 294) and wins the automatic runoff 53–47 → STAR → Casey, matching Ranked Robin, unlike IRV and Choose-One (which throw the centrist out first and then deadlock the two poles).
+The STAR race (lead of seven) in the full Condorcet-centrist election (BV2172, bvid bkwfjr; BV-confirmed) — the profile as drawn in the "Should we always elect the Condorcet winner?" explainer (youtu.be/NlisR8vbpN4). 100 voters, three candidates — Avery (left pole), Blake (right pole), Casey (centrist). Casey is the Condorcet winner (beats Avery 53–47 and Blake 53–47) but has only 6 first choices. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 312 (Avery/Blake tie at 294) and wins the automatic runoff 53–47.
 
-Live results: https://bettervoting.com/pp2q4q/results
-Companion races: bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_ranked_robin.yaml, bv2170_pp2q4q_plurality.yaml.
-Overview page: bv2170_pp2q4q_symmetric_centrist.md
+Seven methods, one electorate. Whole-ballot methods — STAR, STAR-PR (1 seat), Approval (approve top two), Ranked Robin — elect Casey. First-choice methods — RCV-IRV, STV (1 seat), Choose-One — eliminate Casey first and, because the poles are a mirror image, deadlock Avery vs Blake in an exact tie (random on BV, not freezable). See the overview page for all seven.
+
+Live results: https://bettervoting.com/bkwfjr/results
+Overview: bv2172_bkwfjr_all_methods.md · Minimal 8-voter version: bv2171_h93tm4_star.yaml (BV2171) · Original 4-method cut: ../symmetric_centrist_bv2170/
 
 ## Ballots
 
@@ -28,17 +27,17 @@ Count:Avery,Blake,Casey
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |     Avery    |  * Blake    |  * Casey    |
+                 |   * Avery    |    Blake    |  * Casey    |
 -------------------------------------------------------------
-         Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
-       * Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
+       * Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
+         Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
        * Casey > | 53 -  0 - 47 |53 -  0 - 47 |    ---      |
 
 [Condorcet Winner]
@@ -46,14 +45,14 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Blake   (differs from STAR)
+  Choose-One (Plurality) = Avery   (differs from STAR)
   RCV-IRV                = Avery   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_star_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
@@ -91,12 +90,13 @@ Casey       6   0  94   0   0   0  |   312   3.1
    Blake         -- 47 -- Tied for second place
  There's still a two-way tie for second.
 
-*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
-    Lot-number priority order: ['Blake', 'Casey', 'Avery']
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Avery', 'Blake', 'Casey']
 
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Avery', 'Blake']
-  Resolved: ['Blake'] (selected by lot-number priority).
+  Resolved: ['Avery'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
   ⚠ The ballots did not break this tie: the deterministic rungs
@@ -109,7 +109,7 @@ Casey       6   0  94   0   0   0  |   312   3.1
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
    Casey         -- 53 -- First place
-   Blake         -- 47
+   Avery         -- 47
    Equal Support --  0
  Casey wins.
    Runoff math:
@@ -117,7 +117,7 @@ Casey       6   0  94   0   0   0  |   312   3.1
    −   0  Equal Support (no preference between the two finalists)
      ───
      100  voters with a preference  (majority = 51)
-           Casey 53 (53%)  ·  Blake 47 (47%)
+           Casey 53 (53%)  ·  Avery 47 (47%)
 
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Casey
@@ -126,16 +126,15 @@ Casey       6   0  94   0   0   0  |   312   3.1
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml
 ```
 
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2170_pp2q4q_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [bv2170_pp2q4q_irv](bv2170_pp2q4q_irv.md) · [bv2170_pp2q4q_plurality](bv2170_pp2q4q_plurality.md) · [bv2170_pp2q4q_ranked_robin](bv2170_pp2q4q_ranked_robin.md)
+More cases in this set: [bv2171_h93tm4_star](bv2171_h93tm4_star.md)

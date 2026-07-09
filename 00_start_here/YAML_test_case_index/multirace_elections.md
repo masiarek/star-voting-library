@@ -339,6 +339,34 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Symmetric centrist — Ranked Robin (Copeland) | RankedRobin | 3 | **Casey** |
 | Symmetric centrist — Choose-One (Plurality) | Plurality | 3 | **Blake** |
 
+## BV2171 — The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest
+
+**Election** [`h93tm4`](https://bettervoting.com/h93tm4/results) · **7 races** · **8 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Condorcet centrist (minimal) — STAR | STAR | 3 | **?** |
+| Condorcet centrist (minimal) — STAR-PR (1 seat) | STAR_PR | 3 | **?** |
+| Condorcet centrist (minimal) — Approval (approve top two) | Approval | 3 | **?** |
+| Condorcet centrist (minimal) — Ranked Robin (Copeland) | RankedRobin | 3 | **?** |
+| Condorcet centrist (minimal) — RCV-IRV | IRV | 3 | **?** |
+| Condorcet centrist (minimal) — STV (1 seat) | STV | 3 | **?** |
+| Condorcet centrist (minimal) — Choose-One (Plurality) | Plurality | 3 | **?** |
+
+## BV2172 — The Condorcet centrist, full form (100 voters) — squeezed out by first-choice methods, elected by the rest
+
+**Election** [`bkwfjr`](https://bettervoting.com/bkwfjr/results) · **7 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Condorcet centrist (full) — STAR | STAR | 3 | **?** |
+| Condorcet centrist (full) — STAR-PR (1 seat) | STAR_PR | 3 | **?** |
+| Condorcet centrist (full) — Approval (approve top two) | Approval | 3 | **?** |
+| Condorcet centrist (full) — Ranked Robin (Copeland) | RankedRobin | 3 | **?** |
+| Condorcet centrist (full) — RCV-IRV | IRV | 3 | **?** |
+| Condorcet centrist (full) — STV (1 seat) | STV | 3 | **?** |
+| Condorcet centrist (full) — Choose-One (Plurality) | Plurality | 3 | **?** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

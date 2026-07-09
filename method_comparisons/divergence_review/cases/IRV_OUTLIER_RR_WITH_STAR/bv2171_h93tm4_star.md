@@ -1,4 +1,4 @@
-# Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner
+# Condorcet centrist, minimal form (8 voters) — STAR elects Casey
 
 **Bucket — IRV_OUTLIER_RR_WITH_STAR:** RCV-IRV is the outlier (center squeeze)
 
@@ -21,9 +21,9 @@ STAR elects **Casey** — and so do Ranked Robin and Condorcet, because **Casey 
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml`](../../../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml)  ·  **STAR tabulated mirror:** [`bv2170_pp2q4q_star_tabulated.txt`](../../../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_star_tabulated.txt)
+**Source election:** [`method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml`](../../../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml)  ·  **STAR tabulated mirror:** [`bv2171_h93tm4_star_tabulated.txt`](../../../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_tabulated/bv2171_h93tm4_star_tabulated.txt)
 
-_3 candidates, 100 ballots._
+_3 candidates, 8 ballots._
 
 ## The ballots
 
@@ -31,18 +31,18 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 | Count | Avery | Blake | Casey |
 |---:|:--:|:--:|:--:|
-| 47 | 5 | 1 | 3 |
-| 47 | 1 | 5 | 3 |
-| 3 | 3 | 1 | 5 |
-| 3 | 1 | 3 | 5 |
+| 3 | 5 | 1 | 3 |
+| 3 | 1 | 5 | 3 |
+| 1 | 3 | 1 | 5 |
+| 1 | 1 | 3 | 5 |
 
 ## STAR result (official)
 
-**Scoring round (sum of scores):** Casey 312, Avery 294, Blake 294
+**Scoring round (sum of scores):** Casey 28, Avery 22, Blake 22
 
-**Finalists (top two):** Casey and Blake
+**Finalists (top two):** Casey and Avery
 
-**Automatic runoff:** Casey 53 vs Blake 47
+**Automatic runoff:** Casey 5 vs Avery 3
 
 **STAR winner: Casey**
 
@@ -53,14 +53,14 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Blake    |  * Casey    |
------------------------------------------------
-       * Blake > |     ---      |47 -  0 - 53 |
-       * Casey > | 53 -  0 - 47 |    ---      |
+               |  * Avery   | * Casey   |
+-----------------------------------------
+     * Avery > |    ---     |3 - 0 - 5  |
+     * Casey > | 5 - 0 - 3  |   ---     |
 
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Blake   (differs from STAR)
+  Choose-One (Plurality) = Avery   (differs from STAR)
   RCV-IRV                = Avery   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
@@ -68,46 +68,46 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
 
 --- STAR Voting Method (single winner) ---
- Tabulating 100 ballots.
+ Tabulating 8 ballots.
 Count × Avery,Blake,Casey
-   47 ×     5,    1,    3
-   47 ×     1,    5,    3
-    3 ×     3,    1,    5
-    3 ×     1,    3,    5
+    3 ×     5,    1,    3
+    3 ×     1,    5,    3
+    1 ×     3,    1,    5
+    1 ×     1,    3,    5
 
 [Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Avery      47   0   3   0  50   0  |   294   2.9
-Blake      47   0   3   0  50   0  |   294   2.9
-Casey       6   0  94   0   0   0  |   312   3.1
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Avery      3  0  1  0  4  0  |    22   2.8
+Blake      3  0  1  0  4  0  |    22   2.8
+Casey      2  0  6  0  0  0  |    28   3.5
 
 Scoring Round
  The two highest-scoring candidates advance to the next round.
-   Casey         -- 312 -- First place
-   Avery         -- 294 -- Tied for second place
-   Blake         -- 294 -- Tied for second place
+   Casey         -- 28 -- First place
+   Avery         -- 22 -- Tied for second place
+   Blake         -- 22 -- Tied for second place
  Casey advances, but there's a two-way tie for second.
 
 Scoring Round: First tiebreaker
  The candidate preferred in the most head-to-head matchups advances.
-   Avery         -- 50 -- Tied for second place
-   Blake         -- 50 -- Tied for second place
-   Equal Support --  0
+   Avery         -- 4 -- Tied for second place
+   Blake         -- 4 -- Tied for second place
+   Equal Support -- 0
  There's still a two-way tie for second.
 
 Scoring Round: Second tiebreaker
  The candidate with the most votes of score 5 advances.
-   Avery         -- 47 -- Tied for second place
-   Blake         -- 47 -- Tied for second place
+   Avery         -- 3 -- Tied for second place
+   Blake         -- 3 -- Tied for second place
  There's still a two-way tie for second.
 
 *(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
-    Lot-number priority order: ['Blake', 'Casey', 'Avery']
+    Lot-number priority order: ['Avery', 'Blake', 'Casey']
 
 [Tiebreaker: Lot Number Priority]
   Tie among: ['Avery', 'Blake']
-  Resolved: ['Blake'] (selected by lot-number priority).
+  Resolved: ['Avery'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
   ⚠ The ballots did not break this tie: the deterministic rungs
@@ -119,12 +119,12 @@ Scoring Round: Second tiebreaker
 
 Automatic Runoff Round
  The candidate preferred in the most head-to-head matchups wins.
-   Casey         -- 53 -- First place
-   Blake         -- 47
-   Equal Support --  0
+   Casey         -- 5 -- First place
+   Avery         -- 3
+   Equal Support -- 0
  Casey wins.
-   Voters with a preference: 100 of 100 (no Equal Support).
-   Casey 53 (53%) vs Blake 47 (47%); majority = 51.
+   Voters with a preference: 8 of 8 (no Equal Support).
+   Casey 5 (62%) vs Avery 3 (38%); majority = 5.
 
 Winner — STAR Voting Method (single winner)
  Casey
@@ -134,28 +134,28 @@ Winner — STAR Voting Method (single winner)
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
- Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+ Tabulating 8 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:
    the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
    the source score ballot follows in () per column: Avery, Blake, Casey
-    47 ×   Avery > Casey > Blake      (5, 1, 3)
-    47 ×   Blake > Casey > Avery      (1, 5, 3)
-     3 ×   Casey > Avery > Blake      (3, 1, 5)
-     3 ×   Casey > Blake > Avery      (1, 3, 5)
+     3 ×   Avery > Casey > Blake      (5, 1, 3)
+     3 ×   Blake > Casey > Avery      (1, 5, 3)
+     1 ×   Casey > Avery > Blake      (3, 1, 5)
+     1 ×   Casey > Blake > Avery      (1, 3, 5)
 
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------
-Avery             47  Hopeful
-Blake             47  Hopeful
-Casey              6  Rejected
+Avery              3  Hopeful
+Blake              3  Hopeful
+Casey              2  Rejected
 
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------
-Avery             50  Elected
-Blake             50  Rejected
+Avery              4  Elected
+Blake              4  Rejected
 Casey              0  Rejected
 
 
@@ -169,34 +169,34 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
- Tabulating 100 ballots (score ballots).
+ Tabulating 8 ballots (score ballots).
 
 Ballots:
    the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Avery, Blake, Casey
-    47 × Avery > Casey > Blake      (5, 1, 3)
-    47 × Blake > Casey > Avery      (1, 5, 3)
-     3 × Casey > Avery > Blake      (3, 1, 5)
-     3 × Casey > Blake > Avery      (1, 3, 5)
+     3 × Avery > Casey > Blake      (5, 1, 3)
+     3 × Blake > Casey > Avery      (1, 5, 3)
+     1 × Casey > Avery > Blake      (3, 1, 5)
+     1 × Casey > Blake > Avery      (1, 3, 5)
 
 Round-Robin — every pair, head-to-head (For – Against):
-   Avery  ties  Blake   50 – 50
-   Casey  beats Avery   53 – 47
-   Casey  beats Blake   53 – 47
+   Avery  ties  Blake   4 – 4
+   Casey  beats Avery   5 – 3
+   Casey  beats Blake   5 – 3
 
 --- Pairwise (Round-Robin) Matrix ---
 Head-to-head / pairwise comparison — the Ranked Robin tally
 Legend: For - Equal Support - Against   (row vs column)
-          |    Avery     |   Blake     |   Casey     |
-------------------------------------------------------
-  Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
-  Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
-  Casey > | 53 -  0 - 47 |53 -  0 - 47 |    ---      |
+          |   Avery   |  Blake   |  Casey   |
+---------------------------------------------
+  Avery > |    ---    |4 - 0 - 4 |3 - 0 - 5 |
+  Blake > | 4 - 0 - 4 |   ---    |3 - 0 - 5 |
+  Casey > | 5 - 0 - 3 |5 - 0 - 3 |   ---    |
 
 Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Casey      2–0–0         2     +12  Blake, Avery
-    2  Blake      0–1–1       0.5      -6  —
-    3  Avery      0–1–1       0.5      -6  —
+    1  Casey      2–0–0         2      +4  Avery, Blake
+    2  Avery      0–1–1       0.5      -2  —
+    3  Blake      0–1–1       0.5      -2  —
 
 Winner — Ranked Robin (RCV-RR): Casey
    beats every opponent head-to-head — the Condorcet winner.

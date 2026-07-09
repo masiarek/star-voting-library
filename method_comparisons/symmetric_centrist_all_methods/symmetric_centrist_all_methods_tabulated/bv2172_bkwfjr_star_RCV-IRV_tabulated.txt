@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Avery, Blake, Casey
+    47 ×   Avery > Casey > Blake      (5, 1, 3)
+    47 ×   Blake > Casey > Avery      (1, 5, 3)
+     3 ×   Casey > Avery > Blake      (3, 1, 5)
+     3 ×   Casey > Blake > Avery      (1, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Avery             47  Hopeful
+Blake             47  Hopeful
+Casey              6  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Avery             50  Elected
+Blake             50  Rejected
+Casey              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Avery
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
