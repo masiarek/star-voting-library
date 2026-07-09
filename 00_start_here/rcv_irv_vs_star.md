@@ -47,3 +47,5 @@ These comparison pages are written by **advocacy organizations**; read them know
 - [Equal Vote Coalition — RCV vs. STAR](https://www.equal.vote/rcv_v_star) *(pro-STAR)*
 - [STAR Voting — RCV vs. STAR](https://www.starvoting.org/rcv_v_star) *(pro-STAR)*
 - [FairVote](https://fairvote.org/) *(pro-RCV-IRV — the case for ranked choice)*
+
+A worked example of this kind of critical reading — a FairVote article on the Condorcet criterion, quoted claim by claim and checked against tabulated elections: [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md).

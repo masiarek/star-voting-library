@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Liberal, Moderate, Conservative
+    45 ×   Liberal > Moderate      (5, 2, 0)
+    43 ×   Conservative > Moderate      (0, 2, 5)
+     6 ×   Moderate > Liberal      (2, 5, 0)
+     6 ×   Moderate > Conservative      (0, 5, 2)
+
+ROUND 1
+Candidate       Votes  Status
+------------  -------  --------
+Liberal            45  Hopeful
+Conservative       43  Hopeful
+Moderate           12  Rejected
+
+FINAL RESULT
+Candidate       Votes  Status
+------------  -------  --------
+Liberal            51  Elected
+Conservative       49  Rejected
+Moderate            0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Liberal
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

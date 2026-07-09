@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**241 election files** (206 single-winner, 35 multi-winner) across 14 method(s).
+**243 election files** (208 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 126 |
+| STAR | 128 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 30 |
 | Approval | 9 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (126)
+## STAR  (128)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -123,6 +123,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`center_squeeze_star`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_star.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — STAR elects the consensus (Center) → _Center_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml) |
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) |
 | [`bv2137_ywckmg_star`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_star.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml) |
+| [`fairvote_40_15_40_moderate_cw`](../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_40_15_40_moderate_cw.md) | `method_comparisons/fairvote_condorcet_claims/` | 1 | FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice → _Moderate_ | [`.yaml`](../../method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml) |
+| [`fairvote_shifted_left_liberal_cw`](../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_shifted_left_liberal_cw.md) | `method_comparisons/fairvote_condorcet_claims/` | 1 | Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner → _Liberal_ | [`.yaml`](../../method_comparisons/fairvote_condorcet_claims/fairvote_shifted_left_liberal_cw.yaml) |
 | [`bv2144_mxfmhm_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2144_mxfmhm_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner → _Bo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml) |
 | [`bv2145_6fj2kg_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2145_6fj2kg_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.2 — STAR (ranks→scores): elects the Condorcet winner → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml) |
 | [`bv2146_krk2px_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2146_krk2px_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml) |

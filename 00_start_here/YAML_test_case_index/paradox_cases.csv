@@ -6,6 +6,7 @@ Condorcet winner paradox,Simple,Center Squeeze — IRV (Hare): the center gets s
 Condorcet winner paradox,Simple,Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives,RankedRobin,Anderson,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml
 Condorcet winner paradox,Simple,"Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV",STAR,Anderson,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml
 Condorcet winner paradox,Simple,Center Squeeze — STV (1 seat = IRV single-winner): same squeeze,STV,Carter,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml
+Condorcet winner paradox,Simple,FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice,STAR,Moderate,,,method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml

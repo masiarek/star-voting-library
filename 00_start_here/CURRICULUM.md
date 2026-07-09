@@ -154,6 +154,11 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Page:** [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — grouped by family, an at-a-glance criterion table, and Robert LeGrand's live [calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) as a sandbox.
 - **Emphasize:** reinforces the [terminology canon](TIPS_terminology.md) and feeds 301.6/cycle-resolution (Simpson/Tideman/Schulze are the cycle-resolvers). The catalog, not the verdict — which properties matter is 201.6's question.
 
+## 301.11 — Reading advocacy claims: a claim-check, worked
+- **Objective:** Practice checking a voting-method claim against a countable election — quote it verbatim, build the smallest electorate that tests it, tabulate. Also settles "is the Condorcet winner the *best* choice?" (no single ideal exists — 201.6's lesson, applied).
+- **Material:** [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) + the demo pair in `method_comparisons/fairvote_condorcet_claims/` (the article's own 40/15/40 hypothetical; a shifted electorate where a *pole* candidate is the Condorcet winner).
+- **Emphasize:** steelman first — the article's "hated least ≠ liked most" point is *true* (it's the cardinal critique of ordinal methods, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
+
 ---
 
 ## Suggested pacing by audience

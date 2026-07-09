@@ -1,0 +1,57 @@
+election_title: "FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice"
+
+scenario_description: |-
+  FairVote's article "Why the Condorcet Criterion Is Less Important Than It
+  Seems" (Alec Slatky, 2010) argues from a hypothetical: "a strong liberal who
+  commands between 40% to 50% of the vote, a moderate with about 10% to 15%,
+  and a strong conservative between 40% and 50%." This file tabulates exactly
+  that electorate: Liberal 45, Moderate 12, Conservative 43 (100 voters).
+
+  What the count shows: the Moderate is the Condorcet winner — a 55-voter
+  majority prefers Moderate over Liberal, and a 57-voter majority prefers
+  Moderate over Conservative. The article reads the 45/12/43 FIRST-CHOICE
+  split as "80-90% would prefer their candidate have a chance"; the pairwise
+  count is the answer — majorities, not the 12%, choose the Moderate against
+  either rival. And the method the article defends, RCV-IRV, eliminates that
+  Moderate first (fewest first choices) and elects the Liberal — the classic
+  center squeeze, in the article's own numbers.
+
+  Honest nuance the scores add: the poles only lukewarm-support the Moderate
+  (2 of 5), so the Liberal actually tops the SCORE sum 237 to 236 — the
+  article's "hated least isn't liked most" point, made visible. STAR shows
+  both facts (score round: Liberal first; runoff: Moderate wins 55-45).
+  Matched file: fairvote_shifted_left_liberal_cw.yaml (same cast, electorate
+  shifts left — the "strong liberal" becomes the Condorcet winner).
+  Full claim-by-claim reading of the article:
+  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [condorcet-winner]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# 100 voters, FairVote's ranges: Liberal 45 (40-50%), Moderate 12 (10-15%),
+# Conservative 43 (40-50%). Moderate is everyone's acceptable second choice;
+# the 12 Moderate-first voters split evenly toward each pole.
+ballots: |-
+  Count:Liberal,Moderate,Conservative
+  45:5,2,0   # Liberal > Moderate > Conservative
+  43:0,2,5   # Conservative > Moderate > Liberal
+  6:2,5,0    # Moderate > Liberal > Conservative
+  6:0,5,2    # Moderate > Conservative > Liberal
+
+expected_winners:
+  - Moderate
+
+# file: fairvote_40_15_40_moderate_cw.yaml

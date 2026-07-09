@@ -18,6 +18,10 @@ STAR and the Equal Vote Coalition grew out of the same community; the consumer-f
 
 Score/Range voting has no single dominant US campaign; its main hub is the [Center for Range Voting](https://rangevoting.org) (see the repo's [Range / Score overview](Range_Voting/range_voting.md)). Broader reform coalitions (e.g. RepresentUS, Unite America) back multiple methods rather than one.
 
+## Reading advocacy claims critically — a worked example
+
+Advocacy pages (from every camp) mix solid points with overreach. The repo's worked example of checking one claim by claim: [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) — each quote verified, each checkable claim tabulated as a small election you can re-run.
+
 _These descriptions are the organizations' own emphases, not endorsements. Verify current campaigns and results on each site — advocacy priorities change._
 
 # file: advocacy_organizations.md

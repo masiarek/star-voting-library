@@ -1,0 +1,130 @@
+======================================================================
+SOURCE FILE:     fairvote_shifted_left_liberal_cw.yaml
+SOURCE MODIFIED: 2026-07-08 21:40:07
+TABULATED FILE:  fairvote_shifted_left_liberal_cw_tabulated.txt
+TABULATED AT:    2026-07-08 21:47:32
+======================================================================
+
+election_title: "Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner"
+
+scenario_description: |-
+  The refutation-by-example of FairVote's claim that "Condorcet winners are
+  centrist by nature, regardless of the preferences of the electorate" (and
+  that agreeing with the Condorcet criterion "is equivalent to saying that
+  moderate candidates should always win"). Same cast as
+  fairvote_40_15_40_moderate_cw.yaml, but the electorate has moved left:
+  Liberal 56 first choices, Moderate 12, Conservative 32.
+
+  Now the strong LIBERAL — a pole candidate, not the moderate — is the
+  Condorcet winner: 56-44 over Moderate, 62-38 over Conservative. A candidate
+  ranked first by an outright majority is automatically the Condorcet winner,
+  so every landslide winner in history satisfies the criterion trivially. The
+  Condorcet winner is defined BY the preferences of the electorate and moves
+  with them; "centrist regardless of preferences" is exactly backwards.
+  Every method here agrees (STAR, RCV-IRV, Choose-One, Ranked Robin): Liberal.
+  Full claim-by-claim reading of the article:
+  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# Same 100-voter structure as the matched file, first-choice split shifted to
+# 56/12/32. Liberal holds a first-choice majority, hence is the Condorcet
+# winner by definition.
+ballots: |-
+  Count:Liberal,Moderate,Conservative
+  56:5,2,0   # Liberal > Moderate > Conservative
+  32:0,2,5   # Conservative > Moderate > Liberal
+  6:2,5,0    # Moderate > Liberal > Conservative
+  6:0,5,2    # Moderate > Conservative > Liberal
+
+expected_winners:
+  - Liberal
+
+# file: fairvote_shifted_left_liberal_cw.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner ===
+  The refutation-by-example of FairVote's claim that "Condorcet winners are
+  centrist by nature, regardless of the preferences of the electorate" (and
+  that agreeing with the Condorcet criterion "is equivalent to saying that
+  moderate candidates should always win"). Same cast as
+  fairvote_40_15_40_moderate_cw.yaml, but the electorate has moved left:
+  Liberal 56 first choices, Moderate 12, Conservative 32.
+
+  Now the strong LIBERAL — a pole candidate, not the moderate — is the
+  Condorcet winner: 56-44 over Moderate, 62-38 over Conservative. A candidate
+  ranked first by an outright majority is automatically the Condorcet winner,
+  so every landslide winner in history satisfies the criterion trivially. The
+  Condorcet winner is defined BY the preferences of the electorate and moves
+  with them; "centrist regardless of preferences" is exactly backwards.
+  Every method here agrees (STAR, RCV-IRV, Choose-One, Ranked Robin): Liberal.
+  Full claim-by-claim reading of the article:
+  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                     |    * Liberal     |   * Moderate    |   Conservative  |
+-----------------------------------------------------------------------------
+         * Liberal > |       ---        |  56 -  0 - 44   |  62 -  0 - 38   |
+        * Moderate > |   44 -  0 - 56   |      ---        |  68 -  0 - 32   |
+      Conservative > |   38 -  0 - 62   |  32 -  0 - 68   |      ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: Liberal — matches the STAR winner
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Liberal,Moderate,Conservative
+   56 ×       5,       2,           0
+   32 ×       0,       2,           5
+    6 ×       2,       5,           0
+    6 ×       0,       5,           2
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate      5   4   3   2   1   0  | Total   Avg
+Liberal       56   0   0   6   0  38  |   292   2.9
+Moderate      12   0   0  88   0   0  |   236   2.4
+Conservative  32   0   0   6   0  62  |   172   1.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Liberal       -- 292 -- First place
+   Moderate      -- 236 -- Second place
+   Conservative  -- 172
+ Liberal and Moderate advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Liberal       -- 56 -- First place
+   Moderate      -- 44
+   Equal Support --  0
+ Liberal wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Liberal 56 (56%)  ·  Moderate 44 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Liberal
