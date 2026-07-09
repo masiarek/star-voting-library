@@ -1,0 +1,50 @@
+election_title: "A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact"
+
+scenario_description: |-
+  The building block of Edelman's "Myth of the Condorcet Winner" argument
+  (22 Supreme Court Economic Review 207 (2015), Section III): 10 Ada>Ben>Cara,
+  10 Ben>Cara>Ada, 10 Cara>Ada>Ben — a perfectly symmetric Condorcet cycle.
+  Every pairwise vote is exactly 20-10 (in a cycle), every score sum is 70,
+  every candidate holds ten 5s. Edelman: "the only reasonable conclusion is
+  that all three alternatives are tied" — a bloc like this, he argues,
+  should cancel out of any larger electorate.
+
+  Watch the engine agree: the scoring round ties 70/70/70, the pairwise
+  tiebreaker ties 30/30/30, the five-star tiebreaker ties 10/10/10 — a true
+  dead rung, resolved only by the pre-published lot (pinned below), and the
+  engine flags "[Lot-decided tie — rare]: the result here was set by lot,
+  not by the votes." Then the cycle itself decides the runoff: whichever
+  two candidates the lot picks, one beats the other 20-10. The winner is
+  100% agenda artifact — which IS the lesson. LH-only (a BetterVoting
+  version would resolve its ties at random, so the result can't be frozen).
+  The 81-voter live case this bloc embeds into:
+  bv2173_gmfv4c_edelman_saari_cancellation.yaml
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [condorcet-cycle]
+
+lot_numbers: [Ada, Ben, Cara]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Ada,Ben,Cara
+  10:5,2,0   # Ada > Ben > Cara
+  10:0,5,2   # Ben > Cara > Ada
+  10:2,0,5   # Cara > Ada > Ben
+
+expected_winners:
+  - Ada
+
+# file: edelman_perfect_component_c3_b30.yaml

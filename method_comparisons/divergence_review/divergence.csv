@@ -55,6 +55,7 @@ AGREE,method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml,4,10,A
 AGREE,method_comparisons/BV_Library/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False
 AGREE,method_comparisons/black_curtain/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
+AGREE,method_comparisons/edelman_condorcet_myth/edelman_perfect_component_c3_b30.yaml,3,30,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml,3,100,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml,3,7,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml,3,17,Ada,Ada,Ada,Ada,Ada,Ada,Ben,Ada,Ada,0,False,False,False
@@ -87,6 +88,7 @@ APPROVAL_OR_MINOR,method_comparisons/_main/count_simplicity_star_vs_irv.yaml,5,4
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml,3,81,Ada,Ada,Ada,Ada,Ada,Ben,Ben,Ada,Ada,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml,3,15,Bruno,Bruno,Bruno,Bruno,Bruno,Cora,Bruno,Bruno,Bruno,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml,3,7,C,C,C,C,C,B,C,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml,4,33,Arlo,Arlo,Arlo,Arlo,Arlo,Bree,Bree,Arlo,Arlo,0,False,False,False

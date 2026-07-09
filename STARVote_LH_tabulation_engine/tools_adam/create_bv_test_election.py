@@ -1737,7 +1737,7 @@ _SQ_EXPECTED = ("STAR / STAR-PR / Approval (top two) / Ranked Robin -> Casey (th
                 "and is eliminated first), resolved at RANDOM on BV — not freezable. "
                 "LH-verified (STAR-PR 1 seat = STAR in LH). ")
 
-ELECTIONS = [
+_CREATED_BV2171_72 = [
     {
         "test_id": "BV2171",
         "title": "The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest",
@@ -1824,6 +1824,77 @@ _CREATED_BV2167 = [
                     "(5 of 11) — agreeing with Minimax's paper pick of the absolute "
                     "loser. Minimax (paper) -> D (worst loss 6 vs 7/7/8). "
                     "LH-verified. Test ID BV2167.",
+    },
+]
+
+# ---- BV2173 — Edelman's "Myth of the Condorcet Winner" 81-voter profile ----
+# SOURCE: Paul H. Edelman, "The Myth of the Condorcet Winner," 22 Supreme
+# Court Economic Review 207 (2015), Section III — the Saari / Balinski-Laraki
+# "cancellation" profile (per Edelman's fn.24, the example goes back to
+# CONDORCET HIMSELF, who used it against Borda): 30 A>B>C, 1 A>C>B, 29 B>A>C,
+# 10 B>C>A, 10 C>A>B, 1 C>B>A (81 voters; here A/B/C = Ada/Ben/Cara).
+# Ada is the Condorcet winner (41-40 v Ben, 60-21 v Cara). Edelman removes two
+# "Condorcet components" (10+10+10 and 1+1+1 — cyclic blocs that pairwise-tie)
+# and the remaining 48 voters say Ben 28-20, so he argues Ben is the rightful
+# winner; Borda agrees (Ben 109, Ada 101, Cara 33). The live races: STAR ->
+# Ada (score round Ben 257 / Ada 233 / Cara 77 — the cancellation-respecting
+# count — then runoff Ada 41-40, the majoritarian step); Ranked Robin -> Ada
+# (2-0-0); RCV-IRV -> Ada (Cara out 31/39/11... first prefs Ada 31, Ben 39,
+# Cara 11 -> Cara eliminated, final Ada 41-40); Choose-One -> Ben (39/31/11,
+# agreeing with Borda). All four races deterministic (no ties) -> freezable.
+# LH-verified (matrix 41-40 / 60-21 / 69-12).
+
+_EDL_CANDS = ["Ada", "Ben", "Cara"]
+_EDL_STAR = [(30, (5, 2, 0)), (1, (5, 0, 2)), (29, (2, 5, 0)),
+             (10, (0, 5, 2)), (10, (2, 0, 5)), (1, (0, 2, 5))]
+_EDL_RANK = [(30, (1, 2, 3)), (1, (1, 3, 2)), (29, (2, 1, 3)),
+             (10, (3, 1, 2)), (10, (2, 3, 1)), (1, (3, 2, 1))]
+_EDL_PLUR = [(31, (1, 0, 0)), (39, (0, 1, 0)), (11, (0, 0, 1))]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2173",
+        "title": "Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",
+        "description": ("From Paul H. Edelman, 'The Myth of the Condorcet "
+                        "Winner,' 22 Supreme Court Economic Review 207 (2015), "
+                        "Section III — a 'cancellation' profile that per "
+                        "Edelman's own footnote goes back to Condorcet himself "
+                        "(who aimed it at Borda), later used by Saari and "
+                        "Balinski & Laraki against the Condorcet criterion. "
+                        "81 voters: 30 Ada>Ben>Cara, 1 Ada>Cara>Ben, 29 "
+                        "Ben>Ada>Cara, 10 Ben>Cara>Ada, 10 Cara>Ada>Ben, 1 "
+                        "Cara>Ben>Ada. Ada is the Condorcet winner — 41-40 "
+                        "over Ben, 60-21 over Cara. Edelman's argument: two "
+                        "cyclic voter blocs (10+10+10 and 1+1+1) are "
+                        "'Condorcet components' that pairwise-tie and should "
+                        "cancel out; the remaining 48 voters prefer Ben 28-20, "
+                        "and Borda agrees (Ben 109, Ada 101, Cara 33). So who "
+                        "is right? The races show the split live: Ranked "
+                        "Robin and RCV-IRV elect Ada; Choose-One Plurality "
+                        "elects Ben (39/31/11); and STAR shows BOTH counts in "
+                        "one method — the scoring round (which respects the "
+                        "cancellation, like Borda) puts Ben first 257-233, "
+                        "then the automatic runoff (the majoritarian step) "
+                        "elects Ada 41-40. A 240-year-old argument — "
+                        "Condorcet vs Borda — in one election."),
+        "races": [
+            {"title": "Edelman 81 — STAR (ranks mapped 5/2/0)", "method": "STAR",
+             "num_winners": 1, "candidates": _EDL_CANDS, "ballots": _expand(_EDL_STAR)},
+            {"title": "Edelman 81 — Ranked Robin", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": len(_EDL_CANDS),
+             "candidates": _EDL_CANDS, "ballots": _expand(_EDL_RANK)},
+            {"title": "Edelman 81 — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_EDL_CANDS),
+             "candidates": _EDL_CANDS, "ballots": _expand(_EDL_RANK)},
+            {"title": "Edelman 81 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _EDL_CANDS, "ballots": _expand(_EDL_PLUR)},
+        ],
+        "expected": "STAR -> Ada (score: Ben 257, Ada 233, Cara 77; runoff Ada "
+                    "41-40). RankedRobin -> Ada (2-0-0). IRV -> Ada (Cara "
+                    "eliminated 31/39/11; final 41-40). Plurality -> Ben "
+                    "(39/31/11). Borda (paper) -> Ben (109/101/33). Condorcet "
+                    "winner = Ada. Deterministic, no ties. LH-verified. "
+                    "Test ID BV2173.",
     },
 ]
 

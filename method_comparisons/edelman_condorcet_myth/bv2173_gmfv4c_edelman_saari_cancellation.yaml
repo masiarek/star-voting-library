@@ -1,0 +1,64 @@
+election_title: "Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada"
+
+scenario_description: |-
+  The centerpiece profile of Paul H. Edelman, "The Myth of the Condorcet
+  Winner," 22 Supreme Court Economic Review 207 (2015) — per Edelman's own
+  footnote the example goes back to CONDORCET HIMSELF (who aimed it at
+  Borda); Saari and Balinski & Laraki later turned it against the Condorcet
+  criterion. 81 voters: 30 Ada>Ben>Cara, 1 Ada>Cara>Ben, 29 Ben>Ada>Cara,
+  10 Ben>Cara>Ada, 10 Cara>Ada>Ben, 1 Cara>Ben>Ada (ranks mapped 5/2/0).
+
+  Ada is the Condorcet winner — 41-40 over Ben, 60-21 over Cara. Edelman's
+  argument: two cyclic voter blocs (10+10+10 and 1+1+1) are "Condorcet
+  components" — within each bloc every pairwise vote ties, so they should
+  CANCEL OUT; the remaining 48 voters prefer Ben 28-20, so Ben is arguably
+  the rightful winner. Borda agrees (Ben 109, Ada 101, Cara 33); so do the
+  score sum (Ben 257, Ada 233) and Choose-One (Ben 39/31/11). But every
+  MAJORITARIAN count picks Ada: Ranked Robin (2-0-0), RCV-IRV (Cara out,
+  then 41-40), and STAR's automatic runoff (41-40) — STAR shows both counts
+  in one method, the cancellation-respecting scoring round (Ben first) then
+  the majoritarian runoff (Ada wins). A 240-year-old argument — Condorcet
+  vs Borda — in one election. Full reading:
+  00_start_here/topics/condorcet/edelman_condorcet_myth.md
+
+  LIVE on BetterVoting as BV2173 — four races on the same 81 voters (STAR,
+  Ranked Robin, RCV-IRV, Choose-One).
+  Live results: https://bettervoting.com/gmfv4c/results
+  Companion LH-only file: edelman_perfect_component_c3_b30.yaml (the
+  30-voter "Condorcet component" on its own — everything ties).
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [condorcet-winner]
+
+bv_test_id: BV2173
+bv_election_id: gmfv4c
+bv_results_url: https://bettervoting.com/gmfv4c/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# Edelman (2015) p.213, faithful counts (81 voters; small 1x blocs kept as
+# published — reproduction fidelity beats the count>=6 design rule).
+ballots: |-
+  Count:Ada,Ben,Cara
+  30:5,2,0   # Ada > Ben > Cara
+  1:5,0,2    # Ada > Cara > Ben
+  29:2,5,0   # Ben > Ada > Cara
+  10:0,5,2   # Ben > Cara > Ada
+  10:2,0,5   # Cara > Ada > Ben
+  1:0,2,5    # Cara > Ben > Ada
+
+expected_winners:
+  - Ada
+
+# file: bv2173_gmfv4c_edelman_saari_cancellation.yaml

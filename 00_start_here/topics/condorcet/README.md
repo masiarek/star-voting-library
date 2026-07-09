@@ -18,6 +18,8 @@ When there's **no** Condorcet winner (a cycle), methods differ in how they resol
 
 > **"Isn't the Condorcet criterion just a guarantee for moderates?"** No — that's the load-bearing error of a much-cited FairVote article. The Condorcet winner is defined *by* the electorate and moves with it (a majority-first-choice landslide candidate is automatically the Condorcet winner). The article, quoted and checked claim by claim against tabulated elections — including its own 40/15/40 hypothetical, where RCV-IRV eliminates the very moderate it discusses: [FairVote's Condorcet article, claim-checked](fairvote_condorcet_claim_check.md).
 
+> **"So is the Condorcet winner sacrosanct, then?"** Also no — and the serious version of that argument deserves a serious reading. Edelman's ["Myth of the Condorcet Winner," tabulated](edelman_condorcet_myth.md) (BV2173, live): a "cancellation" profile going back to Condorcet himself where every majoritarian count elects one candidate and every positional count (Borda, score sum) elects another, 41 voters to 40 — plus the join-consistency/no-show theorems. The anti-Condorcet argument that *survives* tabulation.
+
 > **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked Robin still picks the best record). Worked through with a real example in [Ranked Robin vs. the Condorcet winner](../../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).
 
 Glossary: [`Condorcet`](../../GLOSSARY.md).

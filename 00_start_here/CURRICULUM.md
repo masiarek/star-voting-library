@@ -157,6 +157,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 ## 301.11 — Reading advocacy claims: a claim-check, worked
 - **Objective:** Practice checking a voting-method claim against a countable election — quote it verbatim, build the smallest electorate that tests it, tabulate. Also settles "is the Condorcet winner the *best* choice?" (no single ideal exists — 201.6's lesson, applied).
 - **Material:** [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) + the demo pair in `method_comparisons/fairvote_condorcet_claims/` (the article's own 40/15/40 hypothetical; a shifted electorate where a *pole* candidate is the Condorcet winner).
+- **The steelman companion:** [Edelman's "Myth of the Condorcet Winner," tabulated](topics/condorcet/edelman_condorcet_myth.md) + `method_comparisons/edelman_condorcet_myth/` (BV2173 live) — the anti-Condorcet argument that *survives* checking: the Saari/Condorcet cancellation profile (majoritarian counts → Ada, positional counts → Ben) and the no-show/join-consistency theorems. The contrast between the two readings — one dissolves under tabulation, one doesn't — is the lesson.
 - **Emphasize:** steelman first — the article's "hated least ≠ liked most" point is *true* (it's the cardinal critique of ordinal methods, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
 
 ---

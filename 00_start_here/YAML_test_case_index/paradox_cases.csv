@@ -6,6 +6,7 @@ Condorcet winner paradox,Simple,Center Squeeze — IRV (Hare): the center gets s
 Condorcet winner paradox,Simple,Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives,RankedRobin,Anderson,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml
 Condorcet winner paradox,Simple,"Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV",STAR,Anderson,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml
 Condorcet winner paradox,Simple,Center Squeeze — STV (1 seat = IRV single-winner): same squeeze,STV,Carter,BV2137,ywckmg,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml
+Condorcet winner paradox,Simple,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",STAR,Ada,BV2173,gmfv4c,method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml
 Condorcet winner paradox,Simple,FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice,STAR,Moderate,BV2168,6w2gq7,method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml
@@ -54,6 +55,7 @@ SCC / spoiler,Conditional,Borda SCC Ex.15 — Choose-One: C wins on first choice
 SCC / spoiler,Conditional,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
+Condorcet's paradox (cycle),Simple,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,STAR,Ada,,,method_comparisons/edelman_condorcet_myth/edelman_perfect_component_c3_b30.yaml
 Condorcet's paradox (cycle),Simple,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
 Condorcet's paradox (cycle),Simple,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_irv.yaml
 Condorcet's paradox (cycle),Simple,Fishburn Ex.14 — Choose-One: A wins on first choices,Plurality,A,BV2160,r6qc8h,method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_plurality.yaml
