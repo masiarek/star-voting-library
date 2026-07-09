@@ -113,6 +113,8 @@ CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_after.yaml,
 CYCLE_OR_THREE_WAY,method_comparisons/monotonicity/monotonicity_star_before.yaml,3,34,X,X,X,Y,Y,Y,Y,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml,5,921,Brad,Dave,Dave,Abby,Abby,Erin,Abby,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml,3,100,Ada,Ada,Bruno,Cleo,Cleo,Ada,Ada,Cleo,Cleo,25,True,False,False
+CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/bv2174_yyhr66_noshow_baseline.yaml,3,54,Bruno,Bruno,Bruno,Celia,Celia,Celia,Celia,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/bv2175_9dhv8y_noshow_showup.yaml,3,62,April,Celia,Celia,April,April,April,April,,,0,False,False,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False

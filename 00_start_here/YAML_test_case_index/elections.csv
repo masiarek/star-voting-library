@@ -49,6 +49,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
+9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
 9pr3wr,BV2143 — Ranked Robin clone independence (2 of 2) — a faction runs clones (teaming),1,single-race,33,RankedRobin,BV
@@ -203,3 +204,4 @@ xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
 yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV
+yyhr66,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,1,single-race,54,STAR,BV

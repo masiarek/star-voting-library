@@ -22,5 +22,6 @@ Before the per-topic criteria: **what are we even optimizing for?**
 | **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/) |
 | **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/) |
 | **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [majority_criterion/](majority_criterion/) |
+| **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [participation/](participation/) |
 
 *(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked examples.)*

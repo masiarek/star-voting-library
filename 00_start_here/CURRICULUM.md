@@ -160,6 +160,12 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **The steelman companion:** [Edelman's "Myth of the Condorcet Winner," tabulated](topics/condorcet/edelman_condorcet_myth.md) + `method_comparisons/edelman_condorcet_myth/` (BV2173 live) — the anti-Condorcet argument that *survives* checking: the Saari/Condorcet cancellation profile (majoritarian counts → Ada, positional counts → Ben) and the no-show/join-consistency theorems. The contrast between the two readings — one dissolves under tabulation, one doesn't — is the lesson.
 - **Emphasize:** steelman first — the article's "hated least ≠ liked most" point is *true* (it's the cardinal critique of ordinal methods, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
 
+## 301.12 — Participation: can showing up ever hurt you?
+- **Objective:** The Participation criterion and the no-show/Twin paradoxes — "vote, it can only help your side" is a promise some methods structurally can't make; know which, why, and how visibly.
+- **Material:** the [Participation topic hub](topics/participation/) + the live pair `method_comparisons/participation_no_show/` (BV2174/BV2175: 8 voters decide whether to show up; three races per election — Choose-One and STAR reward the sincere ballots, RCV-IRV replaces the voters' 2nd choice with their LAST). Catalog page: [no-show paradox](voting_paradoxes/no_show.md) (Felsenthal Ex.4, BV2150/51).
+- **Key terms:** Participation criterion, no-show paradox, Twin paradox, Moulin's theorem (Condorcet consistency ⇒ no-show), join consistency (Edelman/Young — see 301.11's steelman companion).
+- **Emphasize:** the honest scorecard — only pure summation (Score/Approval) and Choose-One are immune; STAR's runoff costs it the formal guarantee too (live flip: BV2165→BV2166), just far more rarely than IRV's elimination machinery. Frame per [reading_these_fairly](../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md).
+
 ---
 
 ## Suggested pacing by audience

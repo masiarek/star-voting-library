@@ -1851,7 +1851,7 @@ _EDL_RANK = [(30, (1, 2, 3)), (1, (1, 3, 2)), (29, (2, 1, 3)),
              (10, (3, 1, 2)), (10, (2, 3, 1)), (1, (3, 2, 1))]
 _EDL_PLUR = [(31, (1, 0, 0)), (39, (0, 1, 0)), (11, (0, 0, 1))]
 
-ELECTIONS = [
+_CREATED_BV2173 = [
     {
         "test_id": "BV2173",
         "title": "Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",
@@ -1898,6 +1898,105 @@ ELECTIONS = [
     },
 ]
 
+
+# ---- BV2174 / BV2175 — the Participation criterion (no-show paradox), live --
+# OUR OWN minimal multi-method pair (Participation topic hub). One electorate,
+# told twice: BV2174 = 54 voters (8 April fans stay home); BV2175 = the same
+# election with those 8 voting sincerely April>Bruno>Celia (62 voters). Effect
+# of showing up, per method: Choose-One Celia -> April (helped: last choice ->
+# favorite); STAR Bruno -> April (helped: favorite wins; BV2174's STAR count is
+# also a Runoff Reversal — Celia tops the scores 136/122/120, Bruno wins the
+# runoff 34-20); RCV-IRV Bruno -> Celia (HURT: their 2nd choice replaced by
+# their LAST — the no-show paradox; April eliminated first at 16 before, Bruno
+# eliminated at 18 after, final Celia 38-24). Both electorates are a Condorcet
+# cycle (April > Bruno > Celia > April) — that's WHY the paradox exists — so
+# NO RankedRobin race (BV's Copeland tie -> head-to-head -> RANDOM, not
+# freezable; LH's margin-based RR resolves deterministically: Celia before,
+# April after — told on the case page). LH-verified.
+
+_NS_CANDS = ["April", "Bruno", "Celia"]
+_NS1_STAR = [(16, (5, 2, 0)), (18, (0, 5, 2)), (20, (2, 0, 5))]
+_NS1_RANK = [(16, (1, 2, 3)), (18, (3, 1, 2)), (20, (2, 3, 1))]
+_NS1_PLUR = [(16, (1, 0, 0)), (18, (0, 1, 0)), (20, (0, 0, 1))]
+_NS2_STAR = [(24, (5, 2, 0)), (18, (0, 5, 2)), (20, (2, 0, 5))]
+_NS2_RANK = [(24, (1, 2, 3)), (18, (3, 1, 2)), (20, (2, 3, 1))]
+_NS2_PLUR = [(24, (1, 0, 0)), (18, (0, 1, 0)), (20, (0, 0, 1))]
+
+ELECTIONS = [
+    {
+        "test_id": "BV2174",
+        "title": "No-show paradox electorate (1 of 2) — 8 April fans stay home",
+        "description": ("The Participation criterion, live — election 1 of 2. "
+                        "54 voters, three candidates: 16 April > Bruno > Celia, "
+                        "18 Bruno > Celia > April, 20 Celia > April > Bruno. "
+                        "Eight more April fans (same sincere ranking "
+                        "April > Bruno > Celia) exist but STAY HOME here; the "
+                        "companion election 2 of 2 adds them. With them absent: "
+                        "RCV-IRV eliminates April (16 first choices) and elects "
+                        "Bruno 34-20; STAR scores Celia 136, Bruno 122, April "
+                        "120, and Bruno wins the automatic runoff 34-20 (a "
+                        "Runoff Reversal — the score leader loses the majority "
+                        "check); Choose-One elects Celia (20/18/16). The "
+                        "pairwise picture is a perfect Condorcet cycle (April "
+                        "beats Bruno 36-18, Bruno beats Celia 34-20, Celia "
+                        "beats April 38-16) — which is exactly the soil the "
+                        "no-show paradox grows in. No Ranked Robin race: with "
+                        "a Copeland three-way tie BetterVoting resolves at "
+                        "random (not freezable); the LH engine's margin "
+                        "tiebreak resolves it deterministically to Celia."),
+        "races": [
+            {"title": "No-show 1of2 — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _NS_CANDS, "ballots": _expand(_NS1_STAR)},
+            {"title": "No-show 1of2 — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_NS_CANDS),
+             "candidates": _NS_CANDS, "ballots": _expand(_NS1_RANK)},
+            {"title": "No-show 1of2 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _NS_CANDS, "ballots": _expand(_NS1_PLUR)},
+        ],
+        "expected": "STAR -> Bruno (Celia 136 / Bruno 122 / April 120; runoff "
+                    "Bruno 34-20 — Runoff Reversal). IRV -> Bruno (April out "
+                    "at 16; final 34-20). Plurality -> Celia (20/18/16). "
+                    "Condorcet cycle, no CW. Deterministic, no ties. "
+                    "LH-verified. Test ID BV2174.",
+    },
+    {
+        "test_id": "BV2175",
+        "title": "No-show paradox electorate (2 of 2) — the 8 April fans vote, and RCV-IRV hands them their last choice",
+        "description": ("The Participation criterion, live — election 2 of 2. "
+                        "Identical to election 1 of 2 plus the 8 April fans "
+                        "casting their sincere ballots April > Bruno > Celia: "
+                        "62 voters — 24 April > Bruno > Celia, 18 Bruno > "
+                        "Celia > April, 20 Celia > April > Bruno. What their "
+                        "showing up buys, by method: Choose-One flips Celia -> "
+                        "April (their favorite — helped); STAR flips Bruno -> "
+                        "April (scores April 160, Bruno 138, Celia 136; runoff "
+                        "April 44-18 — their favorite, helped); RCV-IRV flips "
+                        "Bruno -> CELIA (Bruno now eliminated at 18; Celia "
+                        "beats April 38-24): the 8 sincere ballots replaced "
+                        "the voters' SECOND choice with their LAST choice — "
+                        "the no-show paradox. Voting for their favorite, "
+                        "honestly, made their outcome worse; had they stayed "
+                        "home (election 1 of 2) they would keep Bruno. Same "
+                        "Condorcet cycle as the companion (April beats Bruno "
+                        "44-18, Bruno beats Celia 42-20, Celia beats April "
+                        "38-24); no Ranked Robin race for the same "
+                        "freezability reason (LH's margin tiebreak: April)."),
+        "races": [
+            {"title": "No-show 2of2 — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _NS_CANDS, "ballots": _expand(_NS2_STAR)},
+            {"title": "No-show 2of2 — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_NS_CANDS),
+             "candidates": _NS_CANDS, "ballots": _expand(_NS2_RANK)},
+            {"title": "No-show 2of2 — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _NS_CANDS, "ballots": _expand(_NS2_PLUR)},
+        ],
+        "expected": "STAR -> April (160/138/136; runoff April 44-18). IRV -> "
+                    "Celia (Bruno out at 18; final Celia 38-24) — participation "
+                    "HURT the 8 added voters (Bruno was their 2nd, Celia their "
+                    "last). Plurality -> April (24/20/18). Condorcet cycle, no "
+                    "CW. Deterministic, no ties. LH-verified. Test ID BV2175.",
+    },
+]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race

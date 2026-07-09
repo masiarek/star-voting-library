@@ -12,6 +12,8 @@ The Twin paradox is the same pair traversed the other way: start at BV2151, wher
 
 The paradox also lurks in [BV2159 (Brams' sampler)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md), packed alongside truncation and non-monotonicity in one 21-voter election.
 
+**The multi-method pair (BV2174/BV2175):** the [Participation topic hub](../topics/participation/) carries a second live pair built for cross-method comparison — three races per election, where the *same* 8 sincere ballots reward the voters under Choose-One and STAR but hand them their last choice under RCV-IRV ([case folder](../../method_comparisons/participation_no_show/)).
+
 ## Where it comes from
 
 The same elimination-order machinery as [non-monotonicity](non_monotonicity.md): under RCV-IRV and plurality-with-runoff, a ballot's first-choice weight can prop up its *own* favorite just enough to get its *fallback* eliminated — after which the ballot's lower preferences are worthless. In BV2150 the four Andy-first ballots kept Andy alive, which is precisely what killed Beth. Removing two of them let Andy die early and Beth (the Condorcet winner in both electorates) survive to win.

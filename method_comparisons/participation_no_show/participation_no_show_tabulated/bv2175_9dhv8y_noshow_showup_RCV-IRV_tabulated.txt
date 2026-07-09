@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice
+ Tabulating 62 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: April, Bruno, Celia
+    24 ×   April > Bruno      (5, 2, 0)
+    18 ×   Bruno > Celia      (0, 5, 2)
+    20 ×   Celia > April      (2, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+April             24  Hopeful
+Celia             20  Hopeful
+Bruno             18  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Celia             38  Elected
+April             24  Rejected
+Bruno              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Celia
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

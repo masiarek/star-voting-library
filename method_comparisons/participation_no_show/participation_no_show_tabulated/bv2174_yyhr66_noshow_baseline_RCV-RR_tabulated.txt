@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 54 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: April, Bruno, Celia
+    16 × April > Bruno > Celia      (5, 2, 0)
+    18 × Bruno > Celia > April      (0, 5, 2)
+    20 × Celia > April > Bruno      (2, 0, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   April  beats Bruno   36 – 18
+   Celia  beats April   38 – 16
+   Bruno  beats Celia   34 – 20
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    April     |   Bruno     |   Celia     |
+------------------------------------------------------
+  April > |     ---      |36 -  0 - 18 |16 -  0 - 38 |
+  Bruno > | 18 -  0 - 36 |    ---      |34 -  0 - 20 |
+  Celia > | 38 -  0 - 16 |20 -  0 - 34 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Celia      1–1–0         1      +8  April
+    2  April      1–1–0         1      -4  Bruno
+    3  Bruno      1–1–0         1      -4  Celia
+
+Winner — Ranked Robin (RCV-RR): Celia
+   *** 3 candidates tie for the most wins (April, Bruno, Celia) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

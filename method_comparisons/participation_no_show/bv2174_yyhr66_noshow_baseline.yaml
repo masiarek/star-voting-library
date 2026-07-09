@@ -1,0 +1,52 @@
+election_title: "No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno"
+
+scenario_description: |-
+  The Participation criterion, live — the baseline half of a matched pair
+  (see 00_start_here/topics/participation/). 54 voters: 16 April>Bruno>Celia,
+  18 Bruno>Celia>April, 20 Celia>April>Bruno. Eight MORE April fans (same
+  sincere ranking) exist but stay home here; the companion file adds them.
+
+  With the 8 absent: RCV-IRV eliminates April (16 first choices) and elects
+  Bruno 34-20. STAR is a Runoff Reversal — Celia tops the scores 136/122/120
+  but Bruno wins the automatic runoff 34-20. Choose-One elects Celia
+  (20/18/16). The pairwise picture is a perfect Condorcet cycle (April 36-18
+  Bruno, Bruno 34-20 Celia, Celia 38-16 April) — the soil every no-show
+  paradox grows in. No Ranked Robin BV race: a Copeland three-way tie
+  resolves at RANDOM on BetterVoting (not freezable); LH's margin tiebreak
+  resolves it deterministically to Celia (+4), shown in this file's mirror.
+
+  LIVE on BetterVoting as BV2174 (three races: STAR, RCV-IRV, Choose-One).
+  Live results: https://bettervoting.com/yyhr66/results
+  Matched file: bv2175_9dhv8y_noshow_showup.yaml (the 8 fans vote — and
+  RCV-IRV hands them their LAST choice).
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [no-show, condorcet-cycle]
+
+bv_test_id: BV2174
+bv_election_id: yyhr66
+bv_results_url: https://bettervoting.com/yyhr66/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:April,Bruno,Celia
+  16:5,2,0   # April > Bruno > Celia
+  18:0,5,2   # Bruno > Celia > April
+  20:2,0,5   # Celia > April > Bruno
+
+expected_winners:
+  - Bruno
+
+# file: bv2174_yyhr66_noshow_baseline.yaml

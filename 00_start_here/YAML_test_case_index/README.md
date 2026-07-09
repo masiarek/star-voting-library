@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**251 election files** (216 single-winner, 35 multi-winner) across 14 method(s).
+**253 election files** (218 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 133 |
+| STAR | 135 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 31 |
 | Approval | 9 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (133)
+## STAR  (135)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -149,6 +149,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2155_cphxpt_tennessee_four_ways`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2155_cphxpt_tennessee_four_ways.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155) → _Nashville_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml) |
 | [`bv2156_3grpbb_star_misses_condorcet`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2156_3grpbb_star_misses_condorcet.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | STAR misses the Condorcet winner — STAR's own signature failure (BV2156) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.yaml) |
 | [`bv2157_mmcmpy_condorcet_cycle_rps`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2157_mmcmpy_condorcet_cycle_rps.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157) → _Rock_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml) |
+| [`bv2174_yyhr66_noshow_baseline`](../../method_comparisons/participation_no_show/participation_no_show_pages/bv2174_yyhr66_noshow_baseline.md) | `method_comparisons/participation_no_show/` | 1 | No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno → _Bruno_ | [`.yaml`](../../method_comparisons/participation_no_show/bv2174_yyhr66_noshow_baseline.yaml) |
+| [`bv2175_9dhv8y_noshow_showup`](../../method_comparisons/participation_no_show/participation_no_show_pages/bv2175_9dhv8y_noshow_showup.md) | `method_comparisons/participation_no_show/` | 1 | No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice → _April_ | [`.yaml`](../../method_comparisons/participation_no_show/bv2175_9dhv8y_noshow_showup.yaml) |
 | [`bv2132_ykjjhy_pet_star`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_star.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (STAR): the consensus center Cat wins → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml) |
 | [`bv2133_dyxrbr_pet2_star`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_star.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (STAR): the consensus Cat wins → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml) |
 | [`00_plurality_vs_majority`](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) | `method_comparisons/split_voting/_main/` | 1 | Plurality vs Majority — most votes isn't more than half → _Blake_ | [`.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) |
