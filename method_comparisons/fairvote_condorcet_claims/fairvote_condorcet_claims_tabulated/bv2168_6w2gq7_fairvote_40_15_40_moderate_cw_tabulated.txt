@@ -1,8 +1,8 @@
 ======================================================================
-SOURCE FILE:     fairvote_40_15_40_moderate_cw.yaml
-SOURCE MODIFIED: 2026-07-08 21:40:16
-TABULATED FILE:  fairvote_40_15_40_moderate_cw_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:32
+SOURCE FILE:     bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml
+SOURCE MODIFIED: 2026-07-08 22:14:20
+TABULATED FILE:  bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt
+TABULATED AT:    2026-07-08 22:15:31
 ======================================================================
 
 election_title: "FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice"
@@ -27,14 +27,23 @@ scenario_description: |-
   (2 of 5), so the Liberal actually tops the SCORE sum 237 to 236 — the
   article's "hated least isn't liked most" point, made visible. STAR shows
   both facts (score round: Liberal first; runoff: Moderate wins 55-45).
-  Matched file: fairvote_shifted_left_liberal_cw.yaml (same cast, electorate
-  shifts left — the "strong liberal" becomes the Condorcet winner).
+
+  LIVE on BetterVoting as BV2168 — two races on the same 100 voters: this
+  STAR race plus an RCV-IRV race, so the squeeze is clickable live.
+  Live results: https://bettervoting.com/6w2gq7/results
+  Matched file: bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml (same
+  cast, electorate shifts left — the "strong liberal" becomes the Condorcet
+  winner).
   Full claim-by-claim reading of the article:
   00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 
 voting_method: STAR
 num_winners: 1
 paradoxes: [condorcet-winner]
+
+bv_test_id: BV2168
+bv_election_id: 6w2gq7
+bv_results_url: https://bettervoting.com/6w2gq7/results
 
 options:
   show_description: false
@@ -61,7 +70,7 @@ ballots: |-
 expected_winners:
   - Moderate
 
-# file: fairvote_40_15_40_moderate_cw.yaml
+# file: bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -87,8 +96,13 @@ TABULATION RESULTS
   (2 of 5), so the Liberal actually tops the SCORE sum 237 to 236 — the
   article's "hated least isn't liked most" point, made visible. STAR shows
   both facts (score round: Liberal first; runoff: Moderate wins 55-45).
-  Matched file: fairvote_shifted_left_liberal_cw.yaml (same cast, electorate
-  shifts left — the "strong liberal" becomes the Condorcet winner).
+
+  LIVE on BetterVoting as BV2168 — two races on the same 100 voters: this
+  STAR race plus an RCV-IRV race, so the squeeze is clickable live.
+  Live results: https://bettervoting.com/6w2gq7/results
+  Matched file: bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml (same
+  cast, electorate shifts left — the "strong liberal" becomes the Condorcet
+  winner).
   Full claim-by-claim reading of the article:
   00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 
@@ -115,8 +129,8 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
 
 Majority Preference Enforcement Principle:
  - Score Round Winner(s) = (Liberal)

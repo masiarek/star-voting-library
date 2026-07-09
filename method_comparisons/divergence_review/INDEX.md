@@ -1,6 +1,6 @@
 # Cross-method divergence review
 
-_Generated 2026-07-08 21:56 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-08 22:16 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
@@ -40,7 +40,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Green** · IRV=Yellow · RR=Green · Approval=Green · Score=Green · Condorcet=Green
 - **[bv2137_ywckmg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2137_ywckmg_star.md)** — `method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml` (3c/100b)  
     STAR=**Anderson** · IRV=Carter · RR=Anderson · Approval=Anderson · Score=Anderson · Condorcet=Anderson
-- **[fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  
+- **[bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  
     STAR=**Moderate** · IRV=Liberal · RR=Moderate · Approval=Liberal · Score=Liberal · Condorcet=Moderate
 - **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml` (3c/17b)  
     STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada

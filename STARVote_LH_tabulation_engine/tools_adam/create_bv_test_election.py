@@ -1519,7 +1519,100 @@ _E29_STAR = [(2, (4, 1, 2, 5)), (3, (2, 4, 1, 5)), (3, (2, 4, 5, 1)),
              (1, (4, 5, 2, 1)), (2, (5, 2, 4, 1))]
 _E29_PLUR = [(5, (0, 0, 0, 1)), (3, (0, 0, 1, 0)), (1, (0, 1, 0, 0)), (2, (1, 0, 0, 0))]
 
+# ---- BV2168 / BV2169 — FairVote Condorcet-article claim-check pair ---------
+# FairVote's "Why the Condorcet Criterion Is Less Important Than It Seems"
+# (Slatky, 2010) hypothetical: "a strong liberal who commands between 40% to
+# 50% of the vote, a moderate with about 10% to 15%, and a strong conservative
+# between 40% and 50%." BV2168 counts exactly that (45/12/43, poles rank the
+# Moderate second): Moderate is the Condorcet winner (55-45 v Liberal, 57-43
+# v Conservative); STAR -> Moderate (score round Liberal 237 / Moderate 236 /
+# Conservative 227; runoff Moderate 55-45); IRV eliminates the Moderate round
+# one (12 first choices) and elects Liberal 51-49 — center squeeze in the
+# article's own numbers. Both races deterministic (no ties -> freezable).
+# BV2169 = same cast, electorate shifted left (56/12/32): the strong LIBERAL
+# pole is the Condorcet winner (56-44, 62-38) — refuting "centrist by nature,
+# regardless of the preferences of the electorate"; STAR and IRV both ->
+# Liberal (IRV: first-choice majority, round one). LH-verified:
+# method_comparisons/fairvote_condorcet_claims/ + the claim-check page
+# 00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md.
+
+_FV_CANDS = ["Liberal", "Moderate", "Conservative"]
+_FV1_STAR = [(45, (5, 2, 0)), (43, (0, 2, 5)), (6, (2, 5, 0)), (6, (0, 5, 2))]
+_FV1_IRV = [(45, (1, 2, 3)), (43, (3, 2, 1)), (6, (2, 1, 3)), (6, (3, 1, 2))]
+_FV2_STAR = [(56, (5, 2, 0)), (32, (0, 2, 5)), (6, (2, 5, 0)), (6, (0, 5, 2))]
+_FV2_IRV = [(56, (1, 2, 3)), (32, (3, 2, 1)), (6, (2, 1, 3)), (6, (3, 1, 2))]
+
 ELECTIONS = [
+    {
+        "test_id": "BV2168",
+        "title": "FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",
+        "description": ("FairVote's article 'Why the Condorcet Criterion Is Less "
+                        "Important Than It Seems' (Alec Slatky, 2010) argues from "
+                        "a hypothetical: 'a strong liberal who commands between "
+                        "40% to 50% of the vote, a moderate with about 10% to "
+                        "15%, and a strong conservative between 40% and 50%.' "
+                        "This election counts exactly that electorate: 100 "
+                        "voters — Liberal 45 first choices, Moderate 12, "
+                        "Conservative 43, with each pole ranking the Moderate "
+                        "second. The Moderate is the Condorcet winner by real "
+                        "majorities (55-45 over Liberal, 57-43 over "
+                        "Conservative) — it is majorities, not the 12%, who "
+                        "choose the Moderate against either rival. STAR elects "
+                        "the Moderate (score round: Liberal 237, Moderate 236, "
+                        "Conservative 227; automatic runoff: Moderate 55-45). "
+                        "The IRV race on the same voters eliminates the "
+                        "Moderate in round one (fewest first choices) and "
+                        "elects the Liberal 51-49 — the classic center squeeze, "
+                        "in the article's own numbers. Companion election: "
+                        "'electorate shifted left' (same candidates, the strong "
+                        "Liberal becomes the Condorcet winner)."),
+        "races": [
+            {"title": "FairVote 45/12/43 — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _FV_CANDS, "ballots": _expand(_FV1_STAR)},
+            {"title": "FairVote 45/12/43 — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_FV_CANDS),
+             "candidates": _FV_CANDS, "ballots": _expand(_FV1_IRV)},
+        ],
+        "expected": "STAR -> Moderate (237/236/227; runoff 55-45). IRV -> "
+                    "Liberal (Moderate eliminated round one 45/43/12; final "
+                    "51-49). Condorcet winner = Moderate. Deterministic, no "
+                    "ties. LH-verified. Test ID BV2168.",
+    },
+    {
+        "test_id": "BV2169",
+        "title": "FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",
+        "description": ("The companion to the 'FairVote's Condorcet "
+                        "hypothetical, counted' election, refuting the "
+                        "article's claim that 'Condorcet winners are centrist "
+                        "by nature, regardless of the preferences of the "
+                        "electorate' (and that the criterion is 'equivalent to "
+                        "saying that moderate candidates should always win'). "
+                        "Same three candidates, but the electorate has moved "
+                        "left: 100 voters — Liberal 56 first choices, Moderate "
+                        "12, Conservative 32. Now the strong LIBERAL — a pole "
+                        "candidate, not the moderate — is the Condorcet winner "
+                        "(56-44 over Moderate, 62-38 over Conservative): a "
+                        "candidate ranked first by an outright majority is "
+                        "automatically the Condorcet winner, so the criterion "
+                        "follows the electorate rather than pinning the "
+                        "center. STAR elects Liberal (scores 292/236/172; "
+                        "runoff 56-44) and the IRV race agrees (first-choice "
+                        "majority, round one)."),
+        "races": [
+            {"title": "Shifted-left 56/12/32 — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _FV_CANDS, "ballots": _expand(_FV2_STAR)},
+            {"title": "Shifted-left 56/12/32 — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_FV_CANDS),
+             "candidates": _FV_CANDS, "ballots": _expand(_FV2_IRV)},
+        ],
+        "expected": "STAR -> Liberal (292/236/172; runoff 56-44). IRV -> "
+                    "Liberal (56 first-choice majority, round one). Condorcet "
+                    "winner = Liberal. Deterministic, no ties. LH-verified. "
+                    "Test ID BV2169.",
+    },
+]
+
+_CREATED_BV2167 = [
     {
         "test_id": "BV2167",
         "title": "Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss",

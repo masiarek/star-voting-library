@@ -33,6 +33,7 @@ xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked 
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
+2jrfpg,"Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner",1,single-race,100,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
@@ -41,6 +42,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 4gfwdq,BV2142 — Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning,1,single-race,33,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
+6w2gq7,FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice,1,single-race,100,STAR,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
@@ -126,8 +128,6 @@ LH:dead_rung_scoring_dead_cap3,"Dead rung — scoring round, dead five-star rung
 LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung, cap 4",1,single-race,2,STAR,LH-only
 LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
 LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
-LH:fairvote_40_15_40_moderate_cw,FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice,1,single-race,100,STAR,LH-only
-LH:fairvote_shifted_left_liberal_cw,"Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner",1,single-race,100,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only

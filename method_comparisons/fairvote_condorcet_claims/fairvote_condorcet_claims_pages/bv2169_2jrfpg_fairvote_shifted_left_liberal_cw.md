@@ -1,6 +1,6 @@
 # Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner
 
-*Generated from [`fairvote_shifted_left_liberal_cw.yaml`](../fairvote_shifted_left_liberal_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml`](../bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Liberal
 
@@ -10,8 +10,8 @@ The refutation-by-example of FairVote's claim that "Condorcet winners are
 centrist by nature, regardless of the preferences of the electorate" (and
 that agreeing with the Condorcet criterion "is equivalent to saying that
 moderate candidates should always win"). Same cast as
-fairvote_40_15_40_moderate_cw.yaml, but the electorate has moved left:
-Liberal 56 first choices, Moderate 12, Conservative 32.
+bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml, but the electorate has
+moved left: Liberal 56 first choices, Moderate 12, Conservative 32.
 
 Now the strong LIBERAL — a pole candidate, not the moderate — is the
 Condorcet winner: 56-44 over Moderate, 62-38 over Conservative. A candidate
@@ -20,6 +20,10 @@ so every landslide winner in history satisfies the criterion trivially. The
 Condorcet winner is defined BY the preferences of the electorate and moves
 with them; "centrist regardless of preferences" is exactly backwards.
 Every method here agrees (STAR, RCV-IRV, Choose-One, Ranked Robin): Liberal.
+
+LIVE on BetterVoting as BV2169 — two races on the same 100 voters: this
+STAR race plus an RCV-IRV race that agrees (first-choice majority).
+Live results: https://bettervoting.com/2jrfpg/results
 Full claim-by-claim reading of the article:
 00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 
@@ -37,7 +41,7 @@ Count:Liberal,Moderate,Conservative
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/fairvote_shifted_left_liberal_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -96,7 +100,7 @@ Conservative  32   0   0   6   0  62  |   172   1.7
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/fairvote_condorcet_claims/fairvote_shifted_left_liberal_cw.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml
 ```
 
 ## See also
@@ -105,4 +109,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [fairvote_40_15_40_moderate_cw](fairvote_40_15_40_moderate_cw.md)
+More cases in this set: [bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)

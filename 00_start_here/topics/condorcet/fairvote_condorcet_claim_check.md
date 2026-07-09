@@ -16,7 +16,7 @@ So an article arguing "Condorcet isn't everything" *could* be making a legitimat
 
 **False, and it's the foundation of the piece.** The criterion says only: *when* a candidate is majority-preferred to every alternative, elect them. Who that candidate is depends entirely on the electorate. A candidate ranked first by an outright majority is *automatically* the Condorcet winner — so every landslide winner in history (a Reagan '84, an FDR '36) satisfies the criterion trivially, moderate or not. The criterion is compatible with electing transformative, off-center candidates whenever a majority actually prefers them.
 
-**The countable check:** [same three candidates, electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_shifted_left_liberal_cw.md) — the "strong liberal" pole candidate takes 56% of first choices and *is* the Condorcet winner (56–44 over the moderate, 62–38 over the conservative). Every method agrees.
+**The countable check:** [same three candidates, electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) — the "strong liberal" pole candidate takes 56% of first choices and *is* the Condorcet winner (56–44 over the moderate, 62–38 over the conservative). Every method agrees. Live on BetterVoting as BV2169: **[results ↗](https://bettervoting.com/2jrfpg/results)**.
 
 ```
 --- Runoff (Preference) Matrix ---
@@ -53,7 +53,7 @@ A minor structural slip: an undefeated *schedule* is a round-robin argument (eve
 
 ### Claim 6 — the 40/15/40 hypothetical proves the opposite of what it's cited for
 
-The article's scenario: *"a strong liberal who commands between 40% to 50% of the vote, a moderate with about 10% to 15%, and a strong conservative between 40% and 50%."* We tabulated exactly that — Liberal 45, Moderate 12, Conservative 43, poles ranking the moderate second: [FairVote's own hypothetical, counted](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_40_15_40_moderate_cw.md).
+The article's scenario: *"a strong liberal who commands between 40% to 50% of the vote, a moderate with about 10% to 15%, and a strong conservative between 40% and 50%."* We tabulated exactly that — Liberal 45, Moderate 12, Conservative 43, poles ranking the moderate second: [FairVote's own hypothetical, counted](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md). It's also **live on BetterVoting as BV2168** — the same 100 voters, a STAR race *and* an RCV-IRV race: **[results ↗](https://bettervoting.com/6w2gq7/results)**.
 
 ```
 --- Runoff (Preference) Matrix ---
@@ -120,12 +120,14 @@ But notice what this argument is: it's the **cardinal** (score-ballot) critique 
 
 The article's honest core — "majority-pairwise preference isn't the only defensible standard, because it ignores intensity" — is true, and this repo agrees with it ([the majoritarian/utilitarian split](../../what_makes_a_good_winner.md)). But the core is wrapped in a definitional error (Condorcet ≠ "moderates always win"), a false claim ("impossibility of victory" for non-moderates), a fallacy mislabel, and a hypothetical that — when actually counted — shows majorities electing the moderate and the article's own method squeezing them out. Read advocacy literature, from every camp, with the ballots in hand.
 
-## The demo elections
+## The demo elections — live on BetterVoting
 
-| Page (start here) | What it shows | Source | Full report |
-|---|---|---|---|
-| [FairVote's own hypothetical](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_40_15_40_moderate_cw.md) | Moderate = Condorcet winner by 55- and 57-voter majorities; RCV-IRV eliminates them (center squeeze); score sum says Liberal — the intensity nuance, honestly | [yaml](../../../method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml) | [tabulated](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_tabulated.txt) |
-| [Electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/fairvote_shifted_left_liberal_cw.md) | The "strong liberal" pole candidate is the Condorcet winner — the criterion follows the electorate, it doesn't pin the center | [yaml](../../../method_comparisons/fairvote_condorcet_claims/fairvote_shifted_left_liberal_cw.yaml) | [tabulated](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/fairvote_shifted_left_liberal_cw_tabulated.txt) |
+Both are **live BetterVoting elections** (BV2168 / BV2169), each with two races on the same 100 voters — a STAR race and an RCV-IRV race — so every number below is independently checkable on a public site, not just in this repo's engine.
+
+| Page (start here) | What it shows | Live results | Source | Full report |
+|---|---|---|---|---|
+| [BV2168 — FairVote's own hypothetical](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) | Moderate = Condorcet winner by 55- and 57-voter majorities; the live RCV-IRV race eliminates them (center squeeze); score sum says Liberal — the intensity nuance, honestly | **[results ↗](https://bettervoting.com/6w2gq7/results)** | [yaml](../../../method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) | [tabulated](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt) |
+| [BV2169 — electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) | The "strong liberal" pole candidate is the Condorcet winner — the criterion follows the electorate, it doesn't pin the center | **[results ↗](https://bettervoting.com/2jrfpg/results)** | [yaml](../../../method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) | [tabulated](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt) |
 
 Related: [Condorcet topic hub](README.md) · [Center squeeze](../center_squeeze/) · [What makes a "good" winner?](../../what_makes_a_good_winner.md) · [Advocacy organizations](../../advocacy_organizations.md) · [RCV-IRV vs STAR](../../rcv_irv_vs_star.md) · [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md)
 

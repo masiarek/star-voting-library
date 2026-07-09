@@ -1,8 +1,8 @@
 ======================================================================
-SOURCE FILE:     fairvote_shifted_left_liberal_cw.yaml
-SOURCE MODIFIED: 2026-07-08 21:40:07
-TABULATED FILE:  fairvote_shifted_left_liberal_cw_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:32
+SOURCE FILE:     bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml
+SOURCE MODIFIED: 2026-07-08 22:14:29
+TABULATED FILE:  bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt
+TABULATED AT:    2026-07-08 22:15:32
 ======================================================================
 
 election_title: "Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner"
@@ -12,8 +12,8 @@ scenario_description: |-
   centrist by nature, regardless of the preferences of the electorate" (and
   that agreeing with the Condorcet criterion "is equivalent to saying that
   moderate candidates should always win"). Same cast as
-  fairvote_40_15_40_moderate_cw.yaml, but the electorate has moved left:
-  Liberal 56 first choices, Moderate 12, Conservative 32.
+  bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml, but the electorate has
+  moved left: Liberal 56 first choices, Moderate 12, Conservative 32.
 
   Now the strong LIBERAL — a pole candidate, not the moderate — is the
   Condorcet winner: 56-44 over Moderate, 62-38 over Conservative. A candidate
@@ -22,11 +22,19 @@ scenario_description: |-
   Condorcet winner is defined BY the preferences of the electorate and moves
   with them; "centrist regardless of preferences" is exactly backwards.
   Every method here agrees (STAR, RCV-IRV, Choose-One, Ranked Robin): Liberal.
+
+  LIVE on BetterVoting as BV2169 — two races on the same 100 voters: this
+  STAR race plus an RCV-IRV race that agrees (first-choice majority).
+  Live results: https://bettervoting.com/2jrfpg/results
   Full claim-by-claim reading of the article:
   00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 
 voting_method: STAR
 num_winners: 1
+
+bv_test_id: BV2169
+bv_election_id: 2jrfpg
+bv_results_url: https://bettervoting.com/2jrfpg/results
 
 options:
   show_description: false
@@ -53,7 +61,7 @@ ballots: |-
 expected_winners:
   - Liberal
 
-# file: fairvote_shifted_left_liberal_cw.yaml
+# file: bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -64,8 +72,8 @@ TABULATION RESULTS
   centrist by nature, regardless of the preferences of the electorate" (and
   that agreeing with the Condorcet criterion "is equivalent to saying that
   moderate candidates should always win"). Same cast as
-  fairvote_40_15_40_moderate_cw.yaml, but the electorate has moved left:
-  Liberal 56 first choices, Moderate 12, Conservative 32.
+  bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml, but the electorate has
+  moved left: Liberal 56 first choices, Moderate 12, Conservative 32.
 
   Now the strong LIBERAL — a pole candidate, not the moderate — is the
   Condorcet winner: 56-44 over Moderate, 62-38 over Conservative. A candidate
@@ -74,6 +82,10 @@ TABULATION RESULTS
   Condorcet winner is defined BY the preferences of the electorate and moves
   with them; "centrist regardless of preferences" is exactly backwards.
   Every method here agrees (STAR, RCV-IRV, Choose-One, Ranked Robin): Liberal.
+
+  LIVE on BetterVoting as BV2169 — two races on the same 100 voters: this
+  STAR race plus an RCV-IRV race that agrees (first-choice majority).
+  Live results: https://bettervoting.com/2jrfpg/results
   Full claim-by-claim reading of the article:
   00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 

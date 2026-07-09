@@ -21,7 +21,7 @@ STAR elects **Moderate** — and so do Ranked Robin and Condorcet, because **Mod
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml`](../../../../method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml)  ·  **STAR tabulated mirror:** [`fairvote_40_15_40_moderate_cw_tabulated.txt`](../../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_tabulated.txt)
+**Source election:** [`method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml`](../../../../method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml)  ·  **STAR tabulated mirror:** [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt`](../../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

@@ -1,6 +1,6 @@
 # FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice
 
-*Generated from [`fairvote_40_15_40_moderate_cw.yaml`](../fairvote_40_15_40_moderate_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml`](../bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Moderate
 
@@ -25,8 +25,13 @@ Honest nuance the scores add: the poles only lukewarm-support the Moderate
 (2 of 5), so the Liberal actually tops the SCORE sum 237 to 236 — the
 article's "hated least isn't liked most" point, made visible. STAR shows
 both facts (score round: Liberal first; runoff: Moderate wins 55-45).
-Matched file: fairvote_shifted_left_liberal_cw.yaml (same cast, electorate
-shifts left — the "strong liberal" becomes the Condorcet winner).
+
+LIVE on BetterVoting as BV2168 — two races on the same 100 voters: this
+STAR race plus an RCV-IRV race, so the squeeze is clickable live.
+Live results: https://bettervoting.com/6w2gq7/results
+Matched file: bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml (same
+cast, electorate shifts left — the "strong liberal" becomes the Condorcet
+winner).
 Full claim-by-claim reading of the article:
 00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
 
@@ -44,7 +49,7 @@ Count:Liberal,Moderate,Conservative
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -70,7 +75,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: fairvote_condorcet_claims_tabulated/fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
 
 Majority Preference Enforcement Principle:
  - Score Round Winner(s) = (Liberal)
@@ -122,17 +127,16 @@ Conservative  43   0   0   6   0  51  |   227   2.3
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/fairvote_condorcet_claims/fairvote_40_15_40_moderate_cw.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml
 ```
 
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/fairvote_40_15_40_moderate_cw.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [fairvote_shifted_left_liberal_cw](fairvote_shifted_left_liberal_cw.md)
+More cases in this set: [bv2169_2jrfpg_fairvote_shifted_left_liberal_cw](bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md)
