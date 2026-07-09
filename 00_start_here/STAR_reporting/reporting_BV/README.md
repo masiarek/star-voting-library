@@ -37,4 +37,4 @@
 
 BetterVoting counts a ballot as an **abstention** when it is **flat** — every candidate scored the same — and excludes it from the tally. That includes an all-zeros ballot **and** an engaged ballot like all-5s or `3,3,3`. The LH engine instead counts every cast ballot and treats only a **blank** ballot as an abstention, filing flat ballots under **Equal Support**. Same winner, different tally and score totals — see [Where the two reports differ](../reporting_diff_BV_LH.md).
 
-Try it: [bettervoting.com](https://bettervoting.com) · a real frozen result: [pet race snapshot](../../../01_STAR/pet_real_bv_election/BV_result_snapshot.md).
+Try it: [bettervoting.com](https://bettervoting.com) · [help & FAQ](https://docs.bettervoting.com) · a real frozen result: [pet race snapshot](../../../01_STAR/pet_real_bv_election/BV_result_snapshot.md).

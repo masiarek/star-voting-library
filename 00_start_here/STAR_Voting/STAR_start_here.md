@@ -128,6 +128,6 @@ If you're short on time: spend ~60 seconds on 2 candidates purely to name the tw
 
 - Equal Vote Coalition — STAR Voting overview: https://www.equal.vote/star
 - "How Does STAR Voting Work?" (short video): https://www.youtube.com/watch?v=fKg0fRL88zc&pp=ygUVaG93IHN0YXIgdm90aW5nIHdvcmtz
-- Try it / host an election: https://bettervoting.com
+- Try it / host an election: https://bettervoting.com · Help, FAQ & hand-count guides: https://docs.bettervoting.com
 
 The ballot rules and the "no preference / Equal Support" wording above follow the Equal Vote Coalition's official explanation; this lesson reframes them as a mechanics-first teaching sequence for these examples.

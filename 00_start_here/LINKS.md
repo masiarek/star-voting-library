@@ -106,6 +106,7 @@ _Last full review: 2026-06-21._
 | **STAR Voting org** | Campaign / get involved | https://starvoting.org |
 | **STAR-PR (starvoting.org)** | Proportional STAR explainer — what PR is, pros/cons, the case for STAR-PR (advocacy framing; our mechanics page is `proportional_representation/STAR_PR/README.md`) | https://www.starvoting.org/star-pr |
 | **BetterVoting** | Cast a STAR ballot / run a poll (audience CTA) | https://bettervoting.com |
+| **BetterVoting Docs** | Help & FAQ — paper ballots, hand count, ties, security options, preliminary results | https://docs.bettervoting.com |
 | **Better elections (video)** | Equal Vote intro; STV / proportional 3-seat example (basis for 03a/03b) | https://youtu.be/C_27pYcjsJs |
 | **FairVote: displaying RCV results** | Best practices for showing RCV-IRV results (round-by-round table / bar series); basis for the display notes in `tabulation_star_vs_irv.md` | https://fairvote.org/how-to-display-rcv-election-results/ |
 | **Center for Civic Design — RCV** | Researched best practices for RCV results display & ballot design | https://civicdesign.org/topics/rcv/ |

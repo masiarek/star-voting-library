@@ -1,6 +1,6 @@
 # BV — BetterVoting (the live web app)
 
-[BetterVoting.com](https://bettervoting.com) is the web app voters use to run a real STAR election. Its result is the **visual** report — the Scoring Round / Automatic Runoff charts and the Race Details tables.
+[BetterVoting.com](https://bettervoting.com) is the web app voters use to run a real STAR election (help & FAQ: [docs.bettervoting.com](https://docs.bettervoting.com)). Its result is the **visual** report — the Scoring Round / Automatic Runoff charts and the Race Details tables.
 
 **Live result for the worked pets example:** [bettervoting.com/pet/results](https://bettervoting.com/pet/results) — the interactive version of the screenshots used throughout these pages (toggle the bar/pie views there).
 
