@@ -18,9 +18,11 @@ You score every candidate from 0 to 5, and the two highest-scoring candidates au
 
 ## Why STAR exists: the spoiler effect
 
-Our current "choose one" (plurality) voting is only accurate when there are **exactly two candidates**. The moment a third candidate enters, votes split: two similar candidates can divide their shared supporters and *both* lose to a less-liked candidate the majority didn't want. That's the **spoiler effect**, and it's why we feel pressure to vote "lesser evil" for the front-runner instead of the candidate we actually like.
+Our current "choose one" (plurality) voting is only accurate when there are **exactly two candidates**. The moment a third candidate enters, votes split: two similar candidates can divide their shared supporters and *both* lose to a less-liked candidate the majority didn't want. That's the **[spoiler effect](../spoiler_effect.md)**, and it's why we feel pressure to vote "lesser evil" for the front-runner instead of the candidate we actually like.
 
 STAR fixes this. Because you score every candidate independently, adding more good candidates never splits your vote — you can fully support your favorite *and* a backup. Honesty becomes the best strategy.
+
+→ Full lesson: [The spoiler effect](../spoiler_effect.md) — what it is, its root cause (vote splitting), and how each method handles it · runnable demos: [the split-voting set](../../method_comparisons/split_voting/).
 
 > Keep this in mind for the examples: with **2 candidates** STAR and ordinary voting agree (plurality already works there). STAR's whole advantage shows up only with **3 or more** — which is exactly why our examples start at two (to learn the gears) and then add a third candidate (to see the point).
 
