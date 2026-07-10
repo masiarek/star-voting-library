@@ -60,8 +60,6 @@ Same 20 rankings, both scorings strictly consistent with them — and STAR flips
 | Approval threshold picks the winner | [BV2177 Approval race](https://bettervoting.com/v8r66y/results) (threshold ≤ 3 → Pink) · [LH mirror](postit_rcv_example_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
 | The switch, real | [BV2178](https://bettervoting.com/8kg698/results) · [LH mirror](postit_rcv_example_tabulated/bv2178_8kg698_irv_tabulated.txt) |
 
-Want to say this in public? **[youtube_comment_drafts.md](youtube_comment_drafts.md)** turns this page into three ready-to-post, RCV-friendly comments (disclose your leaning, verify before praising, concede the real counterpoints, bridge via Ranked Robin before STAR).
-
 Related: [terminology tips](../../00_start_here/TIPS_terminology.md) · [RR tiebreaks, LH vs BV](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) · up: [method_comparisons](../)
 
 # file: postit_video_fair_and_balanced.md

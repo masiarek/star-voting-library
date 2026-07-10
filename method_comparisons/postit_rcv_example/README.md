@@ -2,7 +2,7 @@
 
 The 20-voter election from Equal Vote's video **["Updated: How does RCV work? — With Post-its!"](https://youtu.be/Vte4nly_Neg)**, reproduced, stress-tested, and extended as **three live BetterVoting elections**. RCV-IRV elects **Purple**, exactly as counted on the whiteboard — but Blue, eliminated in round 2, beats Purple head-to-head 10–9, and **STAR elects Blue** by actually holding that runoff. From there the set widens: all seven BV methods on the same ballots elect **four different candidates**, and a two-ballot flip makes the video's round-2 hypothetical real. <!-- terminology-ok: bare RCV is inside the quoted video title -->
 
-**Start here → [Is the video fair and balanced?](postit_video_fair_and_balanced.md)** — the claim-check lesson — and **[youtube_comment_drafts.md](youtube_comment_drafts.md)** for ready-to-post, RCV-friendly comment drafts built on it. The lesson: what the video gets right (the count; the ignored 10–9 head-to-head), where a critic pushes back (the electorate is a Condorcet cycle with *no* rightful winner; the 0–5 scores are invented — order-consistent with the ranks, verified, but the *gap sizes* decide STAR's answer: generous 5/4/3 → Blue, stingy 5/2/1 → Purple), and five portable lessons.
+**Start here → [Is the video fair and balanced?](postit_video_fair_and_balanced.md)** — the claim-check lesson: what the video gets right (the count; the ignored 10–9 head-to-head), where a critic pushes back (the electorate is a Condorcet cycle with *no* rightful winner; the 0–5 scores are invented — order-consistent with the ranks, verified, but the *gap sizes* decide STAR's answer: generous 5/4/3 → Blue, stingy 5/2/1 → Purple), and five portable lessons.
 
 **▶ Live on BetterVoting:**
 
