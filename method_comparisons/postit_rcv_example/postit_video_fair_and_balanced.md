@@ -5,7 +5,7 @@ The lesson page for the whole Post-it set: a claim-by-claim check of Equal Vote'
 **The three live elections:**
 
 - **BV2176** [`p8dp28`](https://bettervoting.com/p8dp28/results) — the video's election, three races (STAR / RCV-IRV / Ranked Robin) → [case page](bv2176_p8dp28_postit_rcv_example.md)
-- **BV2177** [`v8r66y`](https://bettervoting.com/v8r66y/results) — the same 20 voters, **all seven BV methods**, four different winners → [case page](bv2177_v8r66y_seven_methods.md)
+- **BV2177** [`v8r66y`](https://bettervoting.com/v8r66y/results) — the same 20 voters, the **single-winner methods side by side** (STAR, Ranked Robin, Approval, RCV-IRV, Choose-One), four different winners → [case page](bv2177_v8r66y_seven_methods.md)
 - **BV2178** [`8kg698`](https://bettervoting.com/8kg698/results) — the video's round-2 hypothetical **made real** by a two-ballot flip → [case page](bv2178_8kg698_switch_made_real.md)
 
 ## What the video gets right
@@ -35,11 +35,11 @@ Same 20 rankings, both scorings strictly consistent with them — and STAR flips
 
 ## The verdict
 
-**Fair on the count, advocacy in the frame.** The video's arithmetic is flawless and its central complaint — IRV decides by elimination order and never consults the head-to-head — is true and important. Its two rhetorical shortcuts are presenting an elimination IRV cannot perform as a near-miss (fixed live by [BV2178](bv2178_8kg698_switch_made_real.md)), and presenting invented preference strengths as if they were data (stress-tested above — under stingier but equally consistent scores, STAR agrees with IRV). And it stops one twist short of full honesty about its own example: there is **no consensus winner in this electorate at all** — run all seven of BetterVoting's methods on it and **all four candidates win somewhere** ([BV2177](bv2177_v8r66y_seven_methods.md)):
+**Fair on the count, advocacy in the frame.** The video's arithmetic is flawless and its central complaint — IRV decides by elimination order and never consults the head-to-head — is true and important. Its two rhetorical shortcuts are presenting an elimination IRV cannot perform as a near-miss (fixed live by [BV2178](bv2178_8kg698_switch_made_real.md)), and presenting invented preference strengths as if they were data (stress-tested above — under stingier but equally consistent scores, STAR agrees with IRV). And it stops one twist short of full honesty about its own example: there is **no consensus winner in this electorate at all** — run the single-winner methods side by side on BetterVoting and **all four candidates win somewhere** ([BV2177](bv2177_v8r66y_seven_methods.md)):
 
 | Purple | Green | Blue | Pink |
 |:--:|:--:|:--:|:--:|
-| RCV-IRV, Choose-One, STV, STAR-PR(1) | Ranked Robin (BV's ladder) | STAR (and LH's RR ladder) | Approval (approve = any support) |
+| RCV-IRV, Choose-One | Ranked Robin (BV's ladder) | STAR (and LH's RR ladder) | Approval (approve = any support) |
 
 ## Lessons to take away
 
@@ -59,6 +59,8 @@ Same 20 rankings, both scorings strictly consistent with them — and STAR flips
 | STAR → Purple under stingy scores | re-score [bv2176_p8dp28_star.yaml](bv2176_p8dp28_star.yaml) with 5→5, 4→2, 3→1 and re-run (40/34/32/26; runoff Purple 9–8) |
 | Approval threshold picks the winner | [BV2177 Approval race](https://bettervoting.com/v8r66y/results) (threshold ≤ 3 → Pink) · [LH mirror](postit_rcv_example_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
 | The switch, real | [BV2178](https://bettervoting.com/8kg698/results) · [LH mirror](postit_rcv_example_tabulated/bv2178_8kg698_irv_tabulated.txt) |
+
+Want to say this in public? **[youtube_comment_drafts.md](youtube_comment_drafts.md)** turns this page into three ready-to-post, RCV-friendly comments (disclose your leaning, verify before praising, concede the real counterpoints, bridge via Ranked Robin before STAR).
 
 Related: [terminology tips](../../00_start_here/TIPS_terminology.md) · [RR tiebreaks, LH vs BV](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) · up: [method_comparisons](../)
 

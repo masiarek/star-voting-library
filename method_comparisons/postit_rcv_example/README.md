@@ -2,7 +2,7 @@
 
 The 20-voter election from Equal Vote's video **["Updated: How does RCV work? — With Post-its!"](https://youtu.be/Vte4nly_Neg)**, reproduced, stress-tested, and extended as **three live BetterVoting elections**. RCV-IRV elects **Purple**, exactly as counted on the whiteboard — but Blue, eliminated in round 2, beats Purple head-to-head 10–9, and **STAR elects Blue** by actually holding that runoff. From there the set widens: all seven BV methods on the same ballots elect **four different candidates**, and a two-ballot flip makes the video's round-2 hypothetical real. <!-- terminology-ok: bare RCV is inside the quoted video title -->
 
-**Start here → [Is the video fair and balanced?](postit_video_fair_and_balanced.md)** — the claim-check lesson: what the video gets right (the count; the ignored 10–9 head-to-head), where a critic pushes back (the electorate is a Condorcet cycle with *no* rightful winner; the 0–5 scores are invented — order-consistent with the ranks, verified, but the *gap sizes* decide STAR's answer: generous 5/4/3 → Blue, stingy 5/2/1 → Purple), and five portable lessons.
+**Start here → [Is the video fair and balanced?](postit_video_fair_and_balanced.md)** — the claim-check lesson — and **[youtube_comment_drafts.md](youtube_comment_drafts.md)** for ready-to-post, RCV-friendly comment drafts built on it. The lesson: what the video gets right (the count; the ignored 10–9 head-to-head), where a critic pushes back (the electorate is a Condorcet cycle with *no* rightful winner; the 0–5 scores are invented — order-consistent with the ranks, verified, but the *gap sizes* decide STAR's answer: generous 5/4/3 → Blue, stingy 5/2/1 → Purple), and five portable lessons.
 
 **▶ Live on BetterVoting:**
 
@@ -13,7 +13,7 @@ The 20-voter election from Equal Vote's video **["Updated: How does RCV work? �
 | Case page (read these) | What it shows |
 |---|---|
 | [BV2176 — the Post-it RCV example](bv2176_p8dp28_postit_rcv_example.md) | The video, live: IRV → Purple (7/6/4/3 → 8/7/4 → 9–8); STAR → Blue (44–44 finalist tie breaks head-to-head, runoff 10–9 — a Runoff Reversal); Ranked Robin → the first live sighting of the [LH-vs-BV tiebreak-ladder divergence](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) (Green on BV, Blue in LH) |
-| [BV2177 — seven ways, four winners](bv2177_v8r66y_seven_methods.md) | The same 20 ballots under STAR, Ranked Robin, Approval, IRV, Choose-One, STV, STAR-PR: **all four candidates win somewhere** — incl. Approval's threshold trap (approve ≥1/≥4/=5 → Pink/Blue/Purple) and STAR-PR-at-1-seat being Score voting (Purple, no runoff) |
+| [BV2177 — the single-winner methods, side by side](bv2177_v8r66y_seven_methods.md) | The same 20 ballots under STAR, Ranked Robin, Approval, RCV-IRV and Choose-One: **all four candidates win somewhere** — incl. Approval's threshold trap (approve ≥1/≥4/=5 → Pink/Blue/Purple). (STV and STAR-PR also run at 1 seat as completeness footnotes: STV(1) = IRV; STAR-PR(1) = Score voting, no runoff.) |
 | [BV2178 — the switch, made real](bv2178_8kg698_switch_made_real.md) | Two of six Green>Blue>Pink voters flip their top two → IRV really does eliminate Green in round 2 and lands the video's exact hypothetical (Blue 10, Purple 9); Blue becomes a clean 3–0 Condorcet winner; only Choose-One still says Purple |
 
 ## Races and sources

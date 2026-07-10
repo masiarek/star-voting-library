@@ -1,0 +1,4948 @@
+{
+  "Election": {
+    "election_id": "v8r66y",
+    "title": "BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",
+    "description": "The 20-voter election from Equal Vote's video 'Updated: How does RCV work? — With Post-its!' (youtu.be/Vte4nly_Neg) — the same electorate as BV2176 (bettervoting.com/p8dp28) — run through every voting method BetterVoting supports, as seven single-winner races. The winners fan out to all four candidates. STAR: scores Purple 46, Blue 44, Pink 44, Green 38; the 44-44 tie for second finalist breaks head-to-head (Blue over Pink 10-3) and Blue wins the runoff 10-9. Ranked Robin: a genuine Condorcet cycle leaves Green and Blue tied 2-1; the head-to-head between the tied pair elects Green 7-4. Approval (approve = any support; the video's scores use only 0/3/4/5, so any threshold from 1 to 3 casts these same approvals): Pink 12, Purple 10, Blue 10, Green 8 — Pink wins; had voters approved only 4s and 5s Blue would win, and only 5s Purple — the rank-to-approval conversion IS the election. RCV-IRV: the video's whiteboard count — Purple 9, Green 8 after Pink and Blue are eliminated (3 ballots exhaust). Choose-One: Purple on 7 first choices. STV at 1 seat: identical rounds to IRV — Purple. STAR-PR (Allocated Score) at 1 seat: the per-seat rule is score-only, no runoff, so it's plain Score voting — the score leader Purple, and STAR's Runoff Reversal vanishes. One ballot set, seven counts, four winners: the tabulation decides.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "Post-its 7 ways — STAR",
+        "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "title": "Post-its 7 ways — Ranked Robin (Copeland)",
+        "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+        "num_winners": 1,
+        "voting_method": "RankedRobin",
+        "candidates": [
+          {
+            "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": "",
+        "max_rankings": 4
+      },
+      {
+        "title": "Post-its 7 ways — Approval (approve = any support)",
+        "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+        "num_winners": 1,
+        "voting_method": "Approval",
+        "candidates": [
+          {
+            "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "title": "Post-its 7 ways — RCV-IRV",
+        "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+        "num_winners": 1,
+        "voting_method": "IRV",
+        "candidates": [
+          {
+            "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": "",
+        "max_rankings": 4
+      },
+      {
+        "title": "Post-its 7 ways — Choose-One (Plurality)",
+        "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+        "num_winners": 1,
+        "voting_method": "Plurality",
+        "candidates": [
+          {
+            "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "title": "Post-its 7 ways — STV, 1 seat (= IRV single-winner)",
+        "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+        "num_winners": 1,
+        "voting_method": "STV",
+        "candidates": [
+          {
+            "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": "",
+        "max_rankings": 4
+      },
+      {
+        "title": "Post-its 7 ways — STAR-PR (Allocated Score), 1 seat",
+        "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+        "num_winners": 1,
+        "voting_method": "STAR_PR",
+        "candidates": [
+          {
+            "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+            "candidate_name": "Purple"
+          },
+          {
+            "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+            "candidate_name": "Green"
+          },
+          {
+            "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+            "candidate_name": "Blue"
+          },
+          {
+            "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+            "candidate_name": "Pink"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-10T19:07:14.302Z",
+    "update_date": "1783710434302",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-b4x6t4yt",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-x2wjc693",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-q2bj46xp",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-gw2bygjk",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-hw73c3dt",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ttbqgq9k",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-kxr73q8x",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-xkcv79jg",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 3
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 4
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 3
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 2
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 3
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 2
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 3
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 2
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 3
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 4
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-74m4bkx4",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-qv9j8tpk",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-8x73bvtd",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-7wpcrdqf",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 5
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 1
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 1
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 1
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 1
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 5
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-v82tbq4g",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-x84xgm9f",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 4
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 2
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 2
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 2
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 4
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-7bvqthm3",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 4
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 5
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 2
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 1
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 2
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 1
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 1
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 2
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 1
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 4
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 5
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-cbvhx242",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 5
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 2
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 1
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 1
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 2
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 1
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 1
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 2
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 5
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 4
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-hc9w9fbg",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 0
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 5
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 0
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 1
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 0
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 0
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 1
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 1
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 0
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 1
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 2
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 0
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 5
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-2hx3y9yf",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-mh373ygq",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 4
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 5
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 2
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 1
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 1
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 2
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 1
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 0
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 1
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 2
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 1
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 4
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 5
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-t99f6xvj",
+      "election_id": "v8r66y",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4e5a5480-ff77-45b9-bbf1-87d137b5cce6",
+          "scores": [
+            {
+              "candidate_id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "score": 5
+            },
+            {
+              "candidate_id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+              "score": 0
+            },
+            {
+              "candidate_id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4086d66-a554-49c1-b465-742be74618f8",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "ebedc113-147d-48e0-856e-79ac21713653",
+          "scores": [
+            {
+              "candidate_id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+              "score": 1
+            },
+            {
+              "candidate_id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+              "score": 0
+            },
+            {
+              "candidate_id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "a4c61ccf-d4cd-4d3f-adcb-7315917767dd",
+          "scores": [
+            {
+              "candidate_id": "9c889778-d9e4-4339-95fb-b69796af945d",
+              "score": 1
+            },
+            {
+              "candidate_id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+              "score": 0
+            },
+            {
+              "candidate_id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+              "score": 0
+            },
+            {
+              "candidate_id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "b8cf72e9-2fa8-4ef2-b0b1-e2bb5a47f4ac",
+          "scores": [
+            {
+              "candidate_id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "score": 1
+            },
+            {
+              "candidate_id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+              "score": 0
+            },
+            {
+              "candidate_id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "score": 0
+            },
+            {
+              "candidate_id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "99493f68-018c-4d98-97eb-95c2143145da",
+          "scores": [
+            {
+              "candidate_id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "score": 1
+            },
+            {
+              "candidate_id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+              "score": 0
+            },
+            {
+              "candidate_id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+              "score": 0
+            },
+            {
+              "candidate_id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "02917afa-b375-4916-8230-5fec4c7e6366",
+          "scores": [
+            {
+              "candidate_id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "score": 1
+            },
+            {
+              "candidate_id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "score": 0
+            },
+            {
+              "candidate_id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "score": 0
+            },
+            {
+              "candidate_id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d88f7b4b-f7a2-4d38-b1d3-49675eec792a",
+          "scores": [
+            {
+              "candidate_id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+              "score": 5
+            },
+            {
+              "candidate_id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+              "score": 0
+            },
+            {
+              "candidate_id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+              "score": 0
+            },
+            {
+              "candidate_id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+          "name": "Blue",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": 10,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 4,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": 0,
+            "e4086d66-a554-49c1-b465-742be74618f8": 10
+          },
+          "winsAgainst": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": true,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+            "e4086d66-a554-49c1-b465-742be74618f8": true
+          },
+          "score": 44,
+          "fiveStarCount": 4
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "0e22db73-3bbb-4330-9050-f653a934d863",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": 0,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 9,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": 9,
+            "e4086d66-a554-49c1-b465-742be74618f8": 8
+          },
+          "winsAgainst": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": false,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": true,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+            "e4086d66-a554-49c1-b465-742be74618f8": false
+          },
+          "score": 46,
+          "fiveStarCount": 7
+        },
+        {
+          "id": "e4086d66-a554-49c1-b465-742be74618f8",
+          "name": "Pink",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": 12,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 5,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": 3,
+            "e4086d66-a554-49c1-b465-742be74618f8": 0
+          },
+          "winsAgainst": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": true,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+            "e4086d66-a554-49c1-b465-742be74618f8": false
+          },
+          "score": 44,
+          "fiveStarCount": 3
+        },
+        {
+          "id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+          "name": "Green",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": 8,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 0,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": 7,
+            "e4086d66-a554-49c1-b465-742be74618f8": 7
+          },
+          "winsAgainst": {
+            "0e22db73-3bbb-4330-9050-f653a934d863": false,
+            "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+            "0131bd20-93bd-4aec-b928-2bc9a10af20c": true,
+            "e4086d66-a554-49c1-b465-742be74618f8": true
+          },
+          "score": 38,
+          "fiveStarCount": 6
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+              "name": "Blue",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "0e22db73-3bbb-4330-9050-f653a934d863": 10,
+                "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 4,
+                "0131bd20-93bd-4aec-b928-2bc9a10af20c": 0,
+                "e4086d66-a554-49c1-b465-742be74618f8": 10
+              },
+              "winsAgainst": {
+                "0e22db73-3bbb-4330-9050-f653a934d863": true,
+                "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+                "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+                "e4086d66-a554-49c1-b465-742be74618f8": true
+              },
+              "score": 44,
+              "fiveStarCount": 4
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "0e22db73-3bbb-4330-9050-f653a934d863",
+              "name": "Purple",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "0e22db73-3bbb-4330-9050-f653a934d863": 0,
+                "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 9,
+                "0131bd20-93bd-4aec-b928-2bc9a10af20c": 9,
+                "e4086d66-a554-49c1-b465-742be74618f8": 8
+              },
+              "winsAgainst": {
+                "0e22db73-3bbb-4330-9050-f653a934d863": false,
+                "dfe1cce0-e26c-4853-b1d9-721eecd55bae": true,
+                "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+                "e4086d66-a554-49c1-b465-742be74618f8": false
+              },
+              "score": 46,
+              "fiveStarCount": 7
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "head_to_head",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_advance_to_runoff",
+              "name": "Purple",
+              "score": 46
+            },
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "Blue",
+                "Pink"
+              ],
+              "score": 44
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_advance_to_runoff",
+              "winner": "Blue",
+              "runner_up": "Pink",
+              "winner_votes": 10,
+              "runner_up_votes": 3
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "Purple",
+                "Blue"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Blue",
+              "runner_up": "Purple",
+              "winner_votes": 10,
+              "runner_up_votes": 9,
+              "equal_votes": 1
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+            "name": "Blue",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": 10,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 4,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": 0,
+              "e4086d66-a554-49c1-b465-742be74618f8": 10
+            },
+            "winsAgainst": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": true,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+              "e4086d66-a554-49c1-b465-742be74618f8": true
+            },
+            "score": 44,
+            "fiveStarCount": 4
+          },
+          {
+            "id": "0e22db73-3bbb-4330-9050-f653a934d863",
+            "name": "Purple",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": 0,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 9,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": 9,
+              "e4086d66-a554-49c1-b465-742be74618f8": 8
+            },
+            "winsAgainst": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": false,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": true,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+              "e4086d66-a554-49c1-b465-742be74618f8": false
+            },
+            "score": 46,
+            "fiveStarCount": 7
+          },
+          {
+            "id": "e4086d66-a554-49c1-b465-742be74618f8",
+            "name": "Pink",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": 12,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 5,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": 3,
+              "e4086d66-a554-49c1-b465-742be74618f8": 0
+            },
+            "winsAgainst": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": true,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": false,
+              "e4086d66-a554-49c1-b465-742be74618f8": false
+            },
+            "score": 44,
+            "fiveStarCount": 3
+          },
+          {
+            "id": "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+            "name": "Green",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": 8,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": 0,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": 7,
+              "e4086d66-a554-49c1-b465-742be74618f8": 7
+            },
+            "winsAgainst": {
+              "0e22db73-3bbb-4330-9050-f653a934d863": false,
+              "dfe1cce0-e26c-4853-b1d9-721eecd55bae": false,
+              "0131bd20-93bd-4aec-b928-2bc9a10af20c": true,
+              "e4086d66-a554-49c1-b465-742be74618f8": true
+            },
+            "score": 38,
+            "fiveStarCount": 6
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20
+      },
+      "tieBreakType": "head_to_head",
+      "perm": [
+        "0e22db73-3bbb-4330-9050-f653a934d863",
+        "dfe1cce0-e26c-4853-b1d9-721eecd55bae",
+        "0131bd20-93bd-4aec-b928-2bc9a10af20c",
+        "e4086d66-a554-49c1-b465-742be74618f8"
+      ]
+    },
+    {
+      "votingMethod": "RankedRobin",
+      "elected": [
+        {
+          "id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+          "name": "Green",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 7,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 0,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 8,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 7
+          },
+          "winsAgainst": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": true,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": false,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": true
+          },
+          "copelandScore": 2
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+          "name": "Blue",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 10,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 4,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 10,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 0
+          },
+          "winsAgainst": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": true,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": true,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+          },
+          "copelandScore": 2
+        },
+        {
+          "id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+          "name": "Pink",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 0,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 5,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 12,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 3
+          },
+          "winsAgainst": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": false,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": true,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+          },
+          "copelandScore": 1
+        },
+        {
+          "id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+          "name": "Purple",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 8,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 9,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 0,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 9
+          },
+          "winsAgainst": {
+            "904b8e6e-d893-4e1e-88a9-cc6750636ee7": false,
+            "7bf31013-d19d-4bea-b48a-ff08f2b3bece": true,
+            "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": false,
+            "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+          },
+          "copelandScore": 1
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+              "name": "Green",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 7,
+                "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 0,
+                "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 8,
+                "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 7
+              },
+              "winsAgainst": {
+                "904b8e6e-d893-4e1e-88a9-cc6750636ee7": true,
+                "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+                "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": false,
+                "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": true
+              },
+              "copelandScore": 2
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            "Green preferred over Blue in runoff."
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+            "name": "Green",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 7,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 0,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 8,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 7
+            },
+            "winsAgainst": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": true,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": false,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": true
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "ef61f8c5-5ef1-43a6-8b86-2ab23a716493",
+            "name": "Blue",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 10,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 4,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 10,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 0
+            },
+            "winsAgainst": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": true,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": true,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+            "name": "Pink",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 0,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 5,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 12,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 3
+            },
+            "winsAgainst": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": false,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": false,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": true,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+            },
+            "copelandScore": 1
+          },
+          {
+            "id": "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+            "name": "Purple",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": 8,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": 9,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": 0,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": 9
+            },
+            "winsAgainst": {
+              "904b8e6e-d893-4e1e-88a9-cc6750636ee7": false,
+              "7bf31013-d19d-4bea-b48a-ff08f2b3bece": true,
+              "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9": false,
+              "ef61f8c5-5ef1-43a6-8b86-2ab23a716493": false
+            },
+            "copelandScore": 1
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "904b8e6e-d893-4e1e-88a9-cc6750636ee7",
+        "7bf31013-d19d-4bea-b48a-ff08f2b3bece",
+        "a9eff340-5b2e-46a4-aaf7-960fb7ede3b9",
+        "ef61f8c5-5ef1-43a6-8b86-2ab23a716493"
+      ]
+    },
+    {
+      "votingMethod": "Approval",
+      "elected": [
+        {
+          "id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+          "name": "Pink",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 4,
+            "9c889778-d9e4-4339-95fb-b69796af945d": 10,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 3
+          },
+          "winsAgainst": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+            "9c889778-d9e4-4339-95fb-b69796af945d": true,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": true
+          },
+          "score": 12
+        }
+      ],
+      "tied": [
+        {
+          "id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+          "name": "Pink",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 4,
+            "9c889778-d9e4-4339-95fb-b69796af945d": 10,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 3
+          },
+          "winsAgainst": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+            "9c889778-d9e4-4339-95fb-b69796af945d": true,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": true
+          },
+          "score": 12
+        }
+      ],
+      "other": [
+        {
+          "id": "9c889778-d9e4-4339-95fb-b69796af945d",
+          "name": "Purple",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 9,
+            "9c889778-d9e4-4339-95fb-b69796af945d": 0,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 8,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 9
+          },
+          "winsAgainst": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+            "9c889778-d9e4-4339-95fb-b69796af945d": false,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+          },
+          "score": 10
+        },
+        {
+          "id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+          "name": "Blue",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 3,
+            "9c889778-d9e4-4339-95fb-b69796af945d": 9,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 1,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 0
+          },
+          "winsAgainst": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+            "9c889778-d9e4-4339-95fb-b69796af945d": false,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+          },
+          "score": 10
+        },
+        {
+          "id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+          "name": "Green",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 0,
+            "9c889778-d9e4-4339-95fb-b69796af945d": 7,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 1
+          },
+          "winsAgainst": {
+            "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": false,
+            "9c889778-d9e4-4339-95fb-b69796af945d": false,
+            "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+            "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+          },
+          "score": 8
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "name": "Pink",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 4,
+                "9c889778-d9e4-4339-95fb-b69796af945d": 10,
+                "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+                "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 3
+              },
+              "winsAgainst": {
+                "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+                "9c889778-d9e4-4339-95fb-b69796af945d": true,
+                "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+                "367a12fa-ce67-482f-83ce-e9c990eaf4c2": true
+              },
+              "score": 12
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Pink has the most approvals and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+              "name": "Pink",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 4,
+                "9c889778-d9e4-4339-95fb-b69796af945d": 10,
+                "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+                "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 3
+              },
+              "winsAgainst": {
+                "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+                "9c889778-d9e4-4339-95fb-b69796af945d": true,
+                "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+                "367a12fa-ce67-482f-83ce-e9c990eaf4c2": true
+              },
+              "score": 12
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+            "name": "Pink",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 4,
+              "9c889778-d9e4-4339-95fb-b69796af945d": 10,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 3
+            },
+            "winsAgainst": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+              "9c889778-d9e4-4339-95fb-b69796af945d": true,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": true
+            },
+            "score": 12
+          },
+          {
+            "id": "9c889778-d9e4-4339-95fb-b69796af945d",
+            "name": "Purple",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 9,
+              "9c889778-d9e4-4339-95fb-b69796af945d": 0,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 8,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 9
+            },
+            "winsAgainst": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+              "9c889778-d9e4-4339-95fb-b69796af945d": false,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+            },
+            "score": 10
+          },
+          {
+            "id": "367a12fa-ce67-482f-83ce-e9c990eaf4c2",
+            "name": "Blue",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 3,
+              "9c889778-d9e4-4339-95fb-b69796af945d": 9,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 1,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 0
+            },
+            "winsAgainst": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": true,
+              "9c889778-d9e4-4339-95fb-b69796af945d": false,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+            },
+            "score": 10
+          },
+          {
+            "id": "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+            "name": "Green",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": 0,
+              "9c889778-d9e4-4339-95fb-b69796af945d": 7,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": 0,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": 1
+            },
+            "winsAgainst": {
+              "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c": false,
+              "9c889778-d9e4-4339-95fb-b69796af945d": false,
+              "468ba597-30ce-492f-bdca-1c7b73b1ccc6": false,
+              "367a12fa-ce67-482f-83ce-e9c990eaf4c2": false
+            },
+            "score": 8
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "06100ac2-a04e-4ff2-bdbe-ac205b8ce50c",
+        "9c889778-d9e4-4339-95fb-b69796af945d",
+        "468ba597-30ce-492f-bdca-1c7b73b1ccc6",
+        "367a12fa-ce67-482f-83ce-e9c990eaf4c2"
+      ]
+    },
+    {
+      "votingMethod": "IRV",
+      "elected": [
+        {
+          "id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "e4e2d65a-806f-4c5e-9427-c4d81d105949": 0,
+            "66c3498f-8193-448b-a961-af7e8523d50d": 8,
+            "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 9,
+            "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 9
+          },
+          "winsAgainst": {
+            "e4e2d65a-806f-4c5e-9427-c4d81d105949": false,
+            "66c3498f-8193-448b-a961-af7e8523d50d": false,
+            "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+            "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": true
+          },
+          "hareScores": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "tied": [],
+      "other": [],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+            "name": "Purple",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": 0,
+              "66c3498f-8193-448b-a961-af7e8523d50d": 8,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 9,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 9
+            },
+            "winsAgainst": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": false,
+              "66c3498f-8193-448b-a961-af7e8523d50d": false,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": true
+            },
+            "hareScores": [
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "id": "c70f41f6-e50b-4ab2-81b8-6a60d12d718e",
+            "name": "Green",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": 8,
+              "66c3498f-8193-448b-a961-af7e8523d50d": 7,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 7,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 0
+            },
+            "winsAgainst": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": false,
+              "66c3498f-8193-448b-a961-af7e8523d50d": true,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": true,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": false
+            },
+            "hareScores": [
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+            "name": "Blue",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": 10,
+              "66c3498f-8193-448b-a961-af7e8523d50d": 10,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 0,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 4
+            },
+            "winsAgainst": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": true,
+              "66c3498f-8193-448b-a961-af7e8523d50d": true,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": false
+            },
+            "hareScores": [
+              4,
+              4,
+              0
+            ]
+          },
+          {
+            "id": "66c3498f-8193-448b-a961-af7e8523d50d",
+            "name": "Pink",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": 12,
+              "66c3498f-8193-448b-a961-af7e8523d50d": 0,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 3,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 5
+            },
+            "winsAgainst": {
+              "e4e2d65a-806f-4c5e-9427-c4d81d105949": true,
+              "66c3498f-8193-448b-a961-af7e8523d50d": false,
+              "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+              "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": false
+            },
+            "hareScores": [
+              3,
+              0,
+              0
+            ]
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20
+      },
+      "roundResults": [
+        {
+          "winners": [],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [
+            {
+              "id": "66c3498f-8193-448b-a961-af7e8523d50d",
+              "name": "Pink",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": 12,
+                "66c3498f-8193-448b-a961-af7e8523d50d": 0,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 3,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 5
+              },
+              "winsAgainst": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": true,
+                "66c3498f-8193-448b-a961-af7e8523d50d": false,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": false
+              },
+              "hareScores": [
+                3,
+                0,
+                0
+              ]
+            }
+          ],
+          "logs": [],
+          "exhaustedVoteCount": 0,
+          "isStartOfSearch": true
+        },
+        {
+          "winners": [],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [
+            {
+              "id": "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+              "name": "Blue",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": 10,
+                "66c3498f-8193-448b-a961-af7e8523d50d": 10,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 0,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 4
+              },
+              "winsAgainst": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": true,
+                "66c3498f-8193-448b-a961-af7e8523d50d": true,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": false
+              },
+              "hareScores": [
+                4,
+                4,
+                0
+              ]
+            }
+          ],
+          "logs": [],
+          "exhaustedVoteCount": 1,
+          "isStartOfSearch": false
+        },
+        {
+          "winners": [
+            {
+              "id": "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+              "name": "Purple",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": 0,
+                "66c3498f-8193-448b-a961-af7e8523d50d": 8,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": 9,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": 9
+              },
+              "winsAgainst": {
+                "e4e2d65a-806f-4c5e-9427-c4d81d105949": false,
+                "66c3498f-8193-448b-a961-af7e8523d50d": false,
+                "968ce8cd-93db-4822-ac7a-472c9e8fc45d": false,
+                "c70f41f6-e50b-4ab2-81b8-6a60d12d718e": true
+              },
+              "hareScores": [
+                7,
+                8,
+                9
+              ]
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [],
+          "logs": [],
+          "exhaustedVoteCount": 3,
+          "isStartOfSearch": false
+        }
+      ],
+      "exhaustedVoteCounts": [
+        0,
+        1,
+        3
+      ],
+      "tieBreakType": "none",
+      "nExhaustedViaOvervote": 0,
+      "nExhaustedViaSkippedRank": 0,
+      "nExhaustedViaDuplicateRank": 0,
+      "perm": [
+        "e4e2d65a-806f-4c5e-9427-c4d81d105949",
+        "66c3498f-8193-448b-a961-af7e8523d50d",
+        "968ce8cd-93db-4822-ac7a-472c9e8fc45d",
+        "c70f41f6-e50b-4ab2-81b8-6a60d12d718e"
+      ]
+    },
+    {
+      "votingMethod": "Plurality",
+      "elected": [
+        {
+          "id": "992b717d-5822-4028-afa2-db04b1543f03",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "992b717d-5822-4028-afa2-db04b1543f03": 0,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": 7,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": 7,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": 7
+          },
+          "winsAgainst": {
+            "992b717d-5822-4028-afa2-db04b1543f03": false,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": true,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+          },
+          "score": 7
+        }
+      ],
+      "tied": [
+        {
+          "id": "992b717d-5822-4028-afa2-db04b1543f03",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "992b717d-5822-4028-afa2-db04b1543f03": 0,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": 7,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": 7,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": 7
+          },
+          "winsAgainst": {
+            "992b717d-5822-4028-afa2-db04b1543f03": false,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": true,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+          },
+          "score": 7
+        }
+      ],
+      "other": [
+        {
+          "id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+          "name": "Green",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "992b717d-5822-4028-afa2-db04b1543f03": 6,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": 6,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": 0,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": 6
+          },
+          "winsAgainst": {
+            "992b717d-5822-4028-afa2-db04b1543f03": false,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+          },
+          "score": 6
+        },
+        {
+          "id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+          "name": "Blue",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "992b717d-5822-4028-afa2-db04b1543f03": 4,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": 0,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": 4,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": 4
+          },
+          "winsAgainst": {
+            "992b717d-5822-4028-afa2-db04b1543f03": false,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": false,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+          },
+          "score": 4
+        },
+        {
+          "id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+          "name": "Pink",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "992b717d-5822-4028-afa2-db04b1543f03": 3,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": 3,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": 3,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": 0
+          },
+          "winsAgainst": {
+            "992b717d-5822-4028-afa2-db04b1543f03": false,
+            "d5a19d66-48e2-4075-bdca-2998757b6d37": false,
+            "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+            "996bfb9b-daf5-42b0-8415-7bfd11531960": false
+          },
+          "score": 3
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "name": "Purple",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "992b717d-5822-4028-afa2-db04b1543f03": 0,
+                "d5a19d66-48e2-4075-bdca-2998757b6d37": 7,
+                "13466eaf-2dff-4e2d-9bd9-0848a135177e": 7,
+                "996bfb9b-daf5-42b0-8415-7bfd11531960": 7
+              },
+              "winsAgainst": {
+                "992b717d-5822-4028-afa2-db04b1543f03": false,
+                "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+                "13466eaf-2dff-4e2d-9bd9-0848a135177e": true,
+                "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+              },
+              "score": 7
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Purple has the most votes and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "992b717d-5822-4028-afa2-db04b1543f03",
+              "name": "Purple",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "992b717d-5822-4028-afa2-db04b1543f03": 0,
+                "d5a19d66-48e2-4075-bdca-2998757b6d37": 7,
+                "13466eaf-2dff-4e2d-9bd9-0848a135177e": 7,
+                "996bfb9b-daf5-42b0-8415-7bfd11531960": 7
+              },
+              "winsAgainst": {
+                "992b717d-5822-4028-afa2-db04b1543f03": false,
+                "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+                "13466eaf-2dff-4e2d-9bd9-0848a135177e": true,
+                "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+              },
+              "score": 7
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "992b717d-5822-4028-afa2-db04b1543f03",
+            "name": "Purple",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "992b717d-5822-4028-afa2-db04b1543f03": 0,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": 7,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": 7,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": 7
+            },
+            "winsAgainst": {
+              "992b717d-5822-4028-afa2-db04b1543f03": false,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": true,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+            },
+            "score": 7
+          },
+          {
+            "id": "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+            "name": "Green",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "992b717d-5822-4028-afa2-db04b1543f03": 6,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": 6,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": 0,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": 6
+            },
+            "winsAgainst": {
+              "992b717d-5822-4028-afa2-db04b1543f03": false,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": true,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+            },
+            "score": 6
+          },
+          {
+            "id": "d5a19d66-48e2-4075-bdca-2998757b6d37",
+            "name": "Blue",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "992b717d-5822-4028-afa2-db04b1543f03": 4,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": 0,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": 4,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": 4
+            },
+            "winsAgainst": {
+              "992b717d-5822-4028-afa2-db04b1543f03": false,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": false,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": true
+            },
+            "score": 4
+          },
+          {
+            "id": "996bfb9b-daf5-42b0-8415-7bfd11531960",
+            "name": "Pink",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "992b717d-5822-4028-afa2-db04b1543f03": 3,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": 3,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": 3,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": 0
+            },
+            "winsAgainst": {
+              "992b717d-5822-4028-afa2-db04b1543f03": false,
+              "d5a19d66-48e2-4075-bdca-2998757b6d37": false,
+              "13466eaf-2dff-4e2d-9bd9-0848a135177e": false,
+              "996bfb9b-daf5-42b0-8415-7bfd11531960": false
+            },
+            "score": 3
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nOvervotes": 0,
+        "nTallyVotes": 20
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "992b717d-5822-4028-afa2-db04b1543f03",
+        "d5a19d66-48e2-4075-bdca-2998757b6d37",
+        "13466eaf-2dff-4e2d-9bd9-0848a135177e",
+        "996bfb9b-daf5-42b0-8415-7bfd11531960"
+      ]
+    },
+    {
+      "votingMethod": "STV",
+      "elected": [
+        {
+          "id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 0,
+            "155df33d-5b19-47ed-8e4b-8e5a67195215": 8,
+            "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 9,
+            "f44348e7-b973-4592-91bf-e08356b575c8": 9
+          },
+          "winsAgainst": {
+            "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": false,
+            "155df33d-5b19-47ed-8e4b-8e5a67195215": false,
+            "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+            "f44348e7-b973-4592-91bf-e08356b575c8": true
+          },
+          "hareScores": [
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "tied": [],
+      "other": [],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+            "name": "Purple",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 0,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": 8,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 9,
+              "f44348e7-b973-4592-91bf-e08356b575c8": 9
+            },
+            "winsAgainst": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": false,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": false,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+              "f44348e7-b973-4592-91bf-e08356b575c8": true
+            },
+            "hareScores": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          {
+            "id": "f44348e7-b973-4592-91bf-e08356b575c8",
+            "name": "Green",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 8,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": 7,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 7,
+              "f44348e7-b973-4592-91bf-e08356b575c8": 0
+            },
+            "winsAgainst": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": false,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": true,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": true,
+              "f44348e7-b973-4592-91bf-e08356b575c8": false
+            },
+            "hareScores": [
+              6,
+              7,
+              8,
+              0
+            ]
+          },
+          {
+            "id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+            "name": "Blue",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 10,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": 10,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 0,
+              "f44348e7-b973-4592-91bf-e08356b575c8": 4
+            },
+            "winsAgainst": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": true,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": true,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+              "f44348e7-b973-4592-91bf-e08356b575c8": false
+            },
+            "hareScores": [
+              4,
+              4,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+            "name": "Pink",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 12,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": 0,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 3,
+              "f44348e7-b973-4592-91bf-e08356b575c8": 5
+            },
+            "winsAgainst": {
+              "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": true,
+              "155df33d-5b19-47ed-8e4b-8e5a67195215": false,
+              "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+              "f44348e7-b973-4592-91bf-e08356b575c8": false
+            },
+            "hareScores": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20
+      },
+      "roundResults": [
+        {
+          "winners": [],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [
+            {
+              "id": "155df33d-5b19-47ed-8e4b-8e5a67195215",
+              "name": "Pink",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 12,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": 0,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 3,
+                "f44348e7-b973-4592-91bf-e08356b575c8": 5
+              },
+              "winsAgainst": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": true,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": false,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+                "f44348e7-b973-4592-91bf-e08356b575c8": false
+              },
+              "hareScores": [
+                3,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "logs": []
+        },
+        {
+          "winners": [],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [
+            {
+              "id": "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+              "name": "Blue",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 10,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": 10,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 0,
+                "f44348e7-b973-4592-91bf-e08356b575c8": 4
+              },
+              "winsAgainst": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": true,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": true,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+                "f44348e7-b973-4592-91bf-e08356b575c8": false
+              },
+              "hareScores": [
+                4,
+                4,
+                0,
+                0
+              ]
+            }
+          ],
+          "logs": []
+        },
+        {
+          "winners": [],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [
+            {
+              "id": "f44348e7-b973-4592-91bf-e08356b575c8",
+              "name": "Green",
+              "tieBreakOrder": 3,
+              "votesPreferredOver": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 8,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": 7,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 7,
+                "f44348e7-b973-4592-91bf-e08356b575c8": 0
+              },
+              "winsAgainst": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": false,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": true,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": true,
+                "f44348e7-b973-4592-91bf-e08356b575c8": false
+              },
+              "hareScores": [
+                6,
+                7,
+                8,
+                0
+              ]
+            }
+          ],
+          "logs": []
+        },
+        {
+          "winners": [
+            {
+              "id": "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+              "name": "Purple",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": 0,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": 8,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": 9,
+                "f44348e7-b973-4592-91bf-e08356b575c8": 9
+              },
+              "winsAgainst": {
+                "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1": false,
+                "155df33d-5b19-47ed-8e4b-8e5a67195215": false,
+                "cca467b4-02a9-4d36-a6c8-09dfbfcc7334": false,
+                "f44348e7-b973-4592-91bf-e08356b575c8": true
+              },
+              "hareScores": [
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "eliminated": [],
+          "logs": []
+        }
+      ],
+      "exhaustedVoteCounts": [
+        0,
+        1,
+        3,
+        10
+      ],
+      "tieBreakType": "none",
+      "nExhaustedViaOvervote": 0,
+      "nExhaustedViaSkippedRank": 0,
+      "nExhaustedViaDuplicateRank": 0,
+      "perm": [
+        "ff8a4eb5-129b-4bb0-ab8a-b1b9a5d019a1",
+        "155df33d-5b19-47ed-8e4b-8e5a67195215",
+        "cca467b4-02a9-4d36-a6c8-09dfbfcc7334",
+        "f44348e7-b973-4592-91bf-e08356b575c8"
+      ]
+    },
+    {
+      "votingMethod": "STAR_PR",
+      "elected": [
+        {
+          "id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 0,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": 9,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 9,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 8
+          },
+          "winsAgainst": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": false,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": true,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": false
+          },
+          "score": 46
+        }
+      ],
+      "tied": [
+        {
+          "id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+          "name": "Purple",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 0,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": 9,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 9,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 8
+          },
+          "winsAgainst": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": false,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": true,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": false
+          },
+          "score": 46
+        }
+      ],
+      "other": [
+        {
+          "id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+          "name": "Green",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 8,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": 0,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 7,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 7
+          },
+          "winsAgainst": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": false,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": true,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": true
+          },
+          "score": 38
+        },
+        {
+          "id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+          "name": "Blue",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 10,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": 4,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 0,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 10
+          },
+          "winsAgainst": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": true,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": true
+          },
+          "score": 44
+        },
+        {
+          "id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+          "name": "Pink",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 12,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": 5,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 3,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 0
+          },
+          "winsAgainst": {
+            "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": true,
+            "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+            "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+            "b574f593-4dfe-4e58-936f-0eb2c3a55e48": false
+          },
+          "score": 44
+        }
+      ],
+      "roundResults": [],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+            "name": "Purple",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 0,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": 9,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 9,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 8
+            },
+            "winsAgainst": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": false,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": true,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": false
+            },
+            "score": 46
+          },
+          {
+            "id": "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+            "name": "Blue",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 10,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": 4,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 0,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 10
+            },
+            "winsAgainst": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": true,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": true
+            },
+            "score": 44
+          },
+          {
+            "id": "b574f593-4dfe-4e58-936f-0eb2c3a55e48",
+            "name": "Pink",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 12,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": 5,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 3,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 0
+            },
+            "winsAgainst": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": true,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": false,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": false
+            },
+            "score": 44
+          },
+          {
+            "id": "eace33a4-210d-42a6-8675-6047cbdf824a",
+            "name": "Green",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": 8,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": 0,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": 7,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": 7
+            },
+            "winsAgainst": {
+              "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37": false,
+              "eace33a4-210d-42a6-8675-6047cbdf824a": false,
+              "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8": true,
+              "b574f593-4dfe-4e58-936f-0eb2c3a55e48": true
+            },
+            "score": 38
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 20,
+        "splitPoints": [
+          0
+        ],
+        "spentAboves": [
+          10
+        ],
+        "weight_on_splits": [
+          10
+        ],
+        "weightedScoresByRound": [
+          [
+            46,
+            44,
+            44,
+            38
+          ]
+        ]
+      },
+      "tieBreakType": "random",
+      "logs": [
+        "1 winners will represent 20 voters, so winners will need to represent a quota of 20 voters each.",
+        "Round 1 of tabulation...",
+        "Purple is scored highest with 46 stars and is elected!",
+        "The 10 voters who gave Purple more than 0 stars are fully represented and will be removed from future rounds.",
+        "The 10 voters who gave Purple 0 stars are partially represented. 100% of their remaining vote will go toward Purple and 0% will be preserved for future rounds."
+      ],
+      "perm": [
+        "13bfb0f2-b2e3-4486-b5ef-a9b902ddbf37",
+        "eace33a4-210d-42a6-8675-6047cbdf824a",
+        "9da21fe4-c9eb-4d08-90ad-90a9bdc690d8",
+        "b574f593-4dfe-4e58-936f-0eb2c3a55e48"
+      ]
+    }
+  ]
+}

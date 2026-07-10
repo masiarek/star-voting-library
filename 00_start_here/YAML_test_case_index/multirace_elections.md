@@ -367,6 +367,41 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Condorcet centrist (full) — STV (1 seat) | STV | 3 | **?** |
 | Condorcet centrist (full) — Choose-One (Plurality) | Plurality | 3 | **?** |
 
+## BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue
+
+**Election** [`p8dp28`](https://bettervoting.com/p8dp28/results) · **3 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Post-its 20 voters — STAR (the video's 0-5 scores) | STAR | 4 | **Blue** |
+| Post-its 20 voters — RCV-IRV | IRV | 4 | **Purple** |
+| Post-its 20 voters — Ranked Robin (Copeland) | RankedRobin | 4 | **Green** |
+
+## BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method
+
+**Election** [`v8r66y`](https://bettervoting.com/v8r66y/results) · **7 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Post-its 7 ways — STAR | STAR | 4 | **Blue** |
+| Post-its 7 ways — Ranked Robin (Copeland) | RankedRobin | 4 | **Green** |
+| Post-its 7 ways — Approval (approve = any support) | Approval | 4 | **Pink** |
+| Post-its 7 ways — RCV-IRV | IRV | 4 | **Purple** |
+| Post-its 7 ways — Choose-One (Plurality) | Plurality | 4 | **Purple** |
+| Post-its 7 ways — STV, 1 seat (= IRV single-winner) | STV | 4 | **Purple** |
+| Post-its 7 ways — STAR-PR (Allocated Score), 1 seat | STAR_PR | 4 | **Purple** |
+
+## BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue
+
+**Election** [`8kg698`](https://bettervoting.com/8kg698/results) · **4 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2178_8kg698_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Post-its switch — STAR | STAR | 4 | **Blue** |
+| Post-its switch — Ranked Robin (Copeland) | RankedRobin | 4 | **Blue** |
+| Post-its switch — RCV-IRV | IRV | 4 | **Blue** |
+| Post-its switch — Choose-One (Plurality) | Plurality | 4 | **Purple** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)
