@@ -4,6 +4,8 @@
 
 → Round 1: [The Scoring Round](STAR_Scoring_Round.md) · the whole report, section by section: [Reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../tabulation_star_vs_irv.md) · how it's displayed: [STAR Reporting](../STAR_reporting/).
 
+> Pushback on the runoff (why not just the scores? isn't the reversal a bug? are equal-score votes wasted?) → [The second round — FAQ & how to answer twisted claims](STAR_second_round_FAQ.md).
+
 ---
 
 ## Why a second step at all?

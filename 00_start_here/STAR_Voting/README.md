@@ -6,6 +6,7 @@ Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start wi
 
 - [The Scoring Round](STAR_Scoring_Round.md) — Round 1: add the stars, top two advance
 - [The Automatic Runoff](STAR_Automatic_Runoff.md) — Round 2: the majority-preferred finalist wins ([runoff percentages / two denominators](runoff_percentages.md) · [slide version](STAR_Automatic_Runoff_slides.md))
+- [The second round — FAQ & how to answer twisted claims](STAR_second_round_FAQ.md) — what each round measures, the false-vs-fair objections, and the runoff reversal conceded honestly
 - [STAR's hybrid nature](STAR_hybrid_nature.md) — why it's a score ballot **plus** a runoff
 
 ## The ballot
