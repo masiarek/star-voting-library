@@ -69,6 +69,10 @@ The **Page** (left) is the readable write-up with ballots + full results; the ra
 | [03 — ice-cream, live](runoff_overturns_leader_pages/03_c7_b3_ice-cream-live.md) | 7 cand, 3 voters | The real race: ChocoDrk leads 9, **ChocoAlm** wins 2–1 | [`.yaml`](03_c7_b3_ice-cream-live.yaml) |
 | [04 — runoff confirms leader](runoff_overturns_leader_pages/04_c4_b3_runoff-confirms-leader.md) | 4 cand, 3 voters | **Control:** Blue leads *and* wins — the runoff confirms the leader | [`.yaml`](04_c4_b3_runoff-confirms-leader.yaml) |
 | [05 — low scores (BV1265)](runoff_overturns_leader_pages/05_c3_b5_low-scores-bv1265.md) | 3 cand, 5 voters | A *real* BetterVoting election with all-low scores: C leads (7), **A** wins the runoff 3–2 | [`.yaml`](05_c3_b5_low-scores-bv1265.yaml) |
+| [reversal — the *convincing* case](runoff_overturns_leader_pages/reversal_convincing_c3_b100.md) | 3 cand, 100 voters | Intense-minority Max leads on stars 335–255, **Nora** (broad) wins the runoff 55–45 — the runoff clearly earns its keep | [`.yaml`](reversal_convincing_c3_b100.yaml) |
+| [reversal — the *jarring* case](runoff_overturns_leader_pages/reversal_jarring_c3_b100.md) | 3 cand, 100 voters | Near-consensus Uma leads 449–255 (avg **4.5**) yet polarizing **Rye** wins 51–49 — STAR choosing majority over utility, the honest drawback | [`.yaml`](reversal_jarring_c3_b100.yaml) |
+
+The last two are the contrasting pair behind the [second-round FAQ](../../00_start_here/STAR_Voting/STAR_second_round_FAQ.md) — one reversal almost everyone accepts, one that's a genuine philosophical trade-off (a token no-hoper keeps each a proper three-way race).
 
 Two more, in the main folder, push the field even wider:
 
