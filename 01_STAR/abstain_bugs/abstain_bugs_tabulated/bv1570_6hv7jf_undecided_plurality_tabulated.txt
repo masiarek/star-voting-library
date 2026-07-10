@@ -2,7 +2,7 @@
 SOURCE FILE:     bv1570_6hv7jf_undecided_plurality.yaml
 SOURCE MODIFIED: 2026-07-05 21:31:51
 TABULATED FILE:  bv1570_6hv7jf_undecided_plurality_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:20
+TABULATED AT:    2026-07-09 09:52:36
 ======================================================================
 
 election_title: "BV1570 — undecided plurality election still declares a winner"

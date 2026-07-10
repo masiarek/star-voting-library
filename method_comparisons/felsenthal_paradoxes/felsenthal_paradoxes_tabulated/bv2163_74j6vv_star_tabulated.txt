@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2163_74j6vv_star.yaml
 SOURCE MODIFIED: 2026-07-07 20:43:21
 TABULATED FILE:  bv2163_74j6vv_star_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:37
+TABULATED AT:    2026-07-09 09:52:51
 ======================================================================
 
 election_title: "Nurmi Ex.16 truncated — STAR: unmoved, still B"

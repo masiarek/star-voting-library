@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2146_krk2px_irv.yaml
 SOURCE MODIFIED: 2026-07-07 17:47:34
 TABULATED FILE:  bv2146_krk2px_irv_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:33
+TABULATED AT:    2026-07-09 09:52:47
 ======================================================================
 
 election_title: "Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support"

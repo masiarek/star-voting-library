@@ -155,6 +155,8 @@ LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,sing
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
+LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
+LH:reversal_jarring_c3_b100,"Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival",1,single-race,100,STAR,LH-only
 LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only

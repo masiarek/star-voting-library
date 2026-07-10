@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**253 election files** (218 single-winner, 35 multi-winner) across 14 method(s).
+**255 election files** (220 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 135 |
+| STAR | 137 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 31 |
 | Approval | 9 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (135)
+## STAR  (137)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -89,6 +89,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Runoff_05_reversal_with_equal_support_xgkw3w`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_05_reversal_with_equal_support_xgkw3w.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 05 — reversal with Equal Support → _Sage_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.yaml) |
 | [`Runoff_06_confirms_at_scale_d664xw`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_06_confirms_at_scale_d664xw.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 06 — the runoff confirms the leader at scale (control) → _Wren_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_06_confirms_at_scale_d664xw.yaml) |
 | [`Runoff_07_flat_ballot_bv_bug_tf73v9`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 07 (WIP) — flat ballot exposes the BV abstention bug → _Blair_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml) |
+| [`reversal_convincing_c3_b100`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/reversal_convincing_c3_b100.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise → _Nora_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/reversal_convincing_c3_b100.yaml) |
+| [`reversal_jarring_c3_b100`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/reversal_jarring_c3_b100.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival → _Rye_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml) |
 | [`bv126_ties_every_step_8fvd2x`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/bv126_ties_every_step_8fvd2x.md) | `01_STAR/tie_break_dead_rung/` | 1 | BV126 — ties at every step (single-winner STAR); #1052 → _Amy_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/bv126_ties_every_step_8fvd2x.yaml) |
 | [`dead_rung_scoring_dead_cap2`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/dead_rung_scoring_dead_cap2.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung — scoring round, dead five-star rung, cap 2 → _Ann_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap2.yaml) |
 | [`dead_rung_scoring_dead_cap3`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/dead_rung_scoring_dead_cap3.md) | `01_STAR/tie_break_dead_rung/` | 1 | Dead rung — scoring round, dead five-star rung, cap 3 → _Ann_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/dead_rung_scoring_dead_cap3.yaml) |

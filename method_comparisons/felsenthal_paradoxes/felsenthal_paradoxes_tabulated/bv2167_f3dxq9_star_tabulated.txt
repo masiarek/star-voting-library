@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2167_f3dxq9_star.yaml
 SOURCE MODIFIED: 2026-07-07 21:47:24
 TABULATED FILE:  bv2167_f3dxq9_star_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:39
+TABULATED AT:    2026-07-09 09:52:52
 ======================================================================
 
 election_title: "Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser"
@@ -77,9 +77,9 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-IRV_tabulated.txt
+     file:///sessions/gracious-blissful-gauss/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
+     file:///sessions/gracious-blissful-gauss/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

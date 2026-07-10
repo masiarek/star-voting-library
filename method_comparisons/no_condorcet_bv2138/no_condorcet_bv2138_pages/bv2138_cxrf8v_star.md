@@ -47,7 +47,7 @@ Legend: For - Equal Support - Against
              Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Erin > Dave > Brad > Erin)
+  No Condorcet winner (majority cycle: Abby > Dave > Brad > Abby)
 
 [Divergence from STAR]
   STAR     = Brad

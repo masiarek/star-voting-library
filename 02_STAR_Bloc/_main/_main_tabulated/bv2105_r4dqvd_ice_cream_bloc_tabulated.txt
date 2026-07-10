@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2105_r4dqvd_ice_cream_bloc.yaml
 SOURCE MODIFIED: 2026-07-05 09:00:15
 TABULATED FILE:  bv2105_r4dqvd_ice_cream_bloc_tabulated.txt
-TABULATED AT:    2026-07-08 21:47:25
+TABULATED AT:    2026-07-09 09:52:40
 ======================================================================
 
 election_title: "BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention"
@@ -146,7 +146,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/02_STAR_Bloc/_main/_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
+     file:///sessions/gracious-blissful-gauss/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2146_krk2px_star.yaml
 SOURCE MODIFIED: 2026-07-07 17:47:49
 TABULATED FILE:  bv2146_krk2px_star_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:36
+TABULATED AT:    2026-07-09 09:52:48
 ======================================================================
 
 election_title: "Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada"

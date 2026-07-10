@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2165_9vxcj7_star.yaml
 SOURCE MODIFIED: 2026-07-07 20:57:43
 TABULATED FILE:  bv2165_9vxcj7_star_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:36
+TABULATED AT:    2026-07-09 09:52:52
 ======================================================================
 
 election_title: "Coombs Ex.19 full — STAR: Boone wins the runoff 8–7"
@@ -78,7 +78,7 @@ Legend: For - Equal Support - Against
   RCV-RR                 = Cass   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
+     file:///sessions/gracious-blissful-gauss/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Cass)

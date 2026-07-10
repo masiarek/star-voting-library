@@ -22,7 +22,7 @@ Total score (sum of all grades):
   Cole           15
   Amy            11
 
-Cross-check — pref_voting not installed; hand count only (install `pref_voting` to enable the independent check).
+Cross-check — pref_voting score_voting: Beth  (✓ agrees with the hand count)
 
 Winner — Range / Score Voting (single winner)
   Beth

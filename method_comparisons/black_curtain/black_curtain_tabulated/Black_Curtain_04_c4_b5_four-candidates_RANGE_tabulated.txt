@@ -30,7 +30,7 @@ Total score (sum of all grades):
   Dee            11
   Ann            10
 
-Cross-check — pref_voting not installed; hand count only (install `pref_voting` to enable the independent check).
+Cross-check — pref_voting score_voting: Cal  (✓ agrees with the hand count)
 
 Winner — Range / Score Voting (single winner)
   Cal

@@ -2,7 +2,7 @@
 SOURCE FILE:     monotonicity_star_before.yaml
 SOURCE MODIFIED: 2026-07-07 17:28:13
 TABULATED FILE:  monotonicity_star_before_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:36
+TABULATED AT:    2026-07-09 09:52:53
 ======================================================================
 
 election_title: Monotonicity — STAR counterpart (BEFORE — X wins)
@@ -73,7 +73,7 @@ Legend: For - Equal Support - Against
   RCV-RR   = Y   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: monotonicity_tabulated/monotonicity_star_before_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/monotonicity/monotonicity_tabulated/monotonicity_star_before_RCV-RR_tabulated.txt
+     file:///sessions/gracious-blissful-gauss/mnt/YAML/method_comparisons/monotonicity/monotonicity_tabulated/monotonicity_star_before_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Y)
