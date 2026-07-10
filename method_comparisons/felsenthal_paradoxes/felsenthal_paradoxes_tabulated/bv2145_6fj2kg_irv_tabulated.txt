@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2145_6fj2kg_irv.yaml
 SOURCE MODIFIED: 2026-07-07 17:47:08
 TABULATED FILE:  bv2145_6fj2kg_irv_tabulated.txt
-TABULATED AT:    2026-07-09 09:52:47
+TABULATED AT:    2026-07-10 08:09:09
 ======================================================================
 
 election_title: "Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first"

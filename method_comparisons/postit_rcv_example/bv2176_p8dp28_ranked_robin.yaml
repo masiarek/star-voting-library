@@ -1,0 +1,69 @@
+election_title: "The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders"
+
+scenario_description: |-
+  One of three races in the Post-it RCV example (BV2176, bvid p8dp28;
+  BV-confirmed). The same 20 ranked ballots as the RCV-IRV race, compared
+  every-pair head-to-head. The pairwise picture is a genuine Condorcet cycle —
+  Purple beats Green 9-8, Green beats Blue 7-4, Blue beats Purple 10-9 (and
+  Pink beats Purple 12-8) — so no candidate beats all others, and Green and
+  Blue tie on record at 2-1 (Copeland 2). This is the documented spot where
+  the two engines' tiebreak ladders part ways
+  (00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), and BOTH stay
+  deterministic here: BetterVoting's ladder (exactly 2 tied -> their own
+  head-to-head) elects GREEN, who beats Blue 7-4 — BV-confirmed, freezable;
+  the LH ladder below (total margin, then lot) elects BLUE (+5 vs Green's +4).
+  Same ballots, same 2-1 tie, two defensible winners — the first live
+  BetterVoting election to exhibit the ladder divergence. expected_winners
+  records the LH result (Blue); the frozen BV export records Green.
+
+  Live results: https://bettervoting.com/p8dp28/results
+  Companion races: bv2176_p8dp28_star.yaml, bv2176_p8dp28_irv.yaml.
+  Overview page: bv2176_p8dp28_postit_rcv_example.md
+
+bv_test_id: BV2176
+bv_election_id: p8dp28
+bv_results_url: https://bettervoting.com/p8dp28/results
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Purple, Green, Blue, Pink]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Blue>Pink
+  Blue>Pink
+  Blue>Green>Pink
+  Blue>Purple
+  Pink>Green>Purple
+  Pink>Purple
+  Pink
+
+expected_winners:
+  - Blue   # LH ladder (margin +5); BetterVoting's ladder (head-to-head among the tied pair) elects Green
+
+# file: bv2176_p8dp28_ranked_robin.yaml

@@ -29,6 +29,10 @@ The LH-only **[dead-heat case](../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_
 
 That's why the dead-heat case has **no BetterVoting election**: there is no stable BV result to record. It documents the **LH** ladder specifically. (BetterVoting would agree Ada and Ben are co-leaders; it just wouldn't deterministically choose between them.)
 
+## Where they diverge — live (BV2176)
+
+The **[Post-it RCV example (BV2176, `p8dp28`)](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md)** is the first **live** BetterVoting election to land on the divergence — a clean 2-way tie whose head-to-head is decisive, so *both* ladders stay deterministic and simply disagree. Green and Blue each go 2–1 inside a genuine cycle. BetterVoting's rung 2 (head-to-head between the two tied) elects **Green**, who beats Blue 7–4 — confirmed on the live results page and freezable. LH's rung 2 (total margin) elects **Blue** (+5 vs Green's +4). Same ballots, same Copeland tie, two published rules, two winners — `pref_voting`'s independent Copeland reports the leader set {Blue, Green}, and each engine tie-broke inside it consistently with its own ladder.
+
 ## Practical guidance
 
 - For **teaching a clean outcome** (a Condorcet winner, or any un-tied Copeland ranking), any engine is fine and they agree — cross-check freely.
@@ -57,6 +61,7 @@ Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a
 |------|--------|---------|---------|
 | [BV2131 — Tennessee](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md) | RankedRobin | Nashville (Condorcet, no tiebreak) | LH = BV = pref_voting ✓ |
 | [Dead heat → lot](../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_tiebreak.md) | RankedRobin | Ada (LH lot); BV random | LH deterministic; BV non-deterministic |
+| [BV2176 — Post-it RCV example](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md) | RankedRobin | 2-way tie, decisive head-to-head: **Green (BV) vs Blue (LH)** | both deterministic — the ladder divergence, live |
 
 ## Related
 

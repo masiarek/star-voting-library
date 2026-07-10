@@ -1,0 +1,65 @@
+election_title: "The Post-it RCV example (20 voters) — RCV-IRV: Purple wins the video's whiteboard count"
+
+scenario_description: |-
+  One of three races in the Post-it RCV example (BV2176, bvid p8dp28;
+  BV-confirmed). The 20 ranked ballots from Equal Vote's video "Updated: How
+  does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg), counted
+  exactly as on the whiteboard. Round 1: Purple 7, Green 6, Blue 4, Pink 3 —
+  Pink is eliminated (1 ballot goes to Green, 1 to Purple, and 1 bullet-vote
+  Pink ballot exhausts). Round 2: Purple 8, Green 7, Blue 4 — Blue is
+  eliminated (1 to Green, 1 to Purple, and the 2 Blue>Pink ballots exhaust,
+  Pink being already gone). Final: Purple 9, Green 8 — Purple wins with 9 of
+  the 17 still-active ballots. The sting the video builds to: Blue, the round-2
+  eliminee, beats Purple head-to-head 10-9 — a runoff RCV-IRV never held, but
+  the STAR race on these voters' scores does (and Blue wins it).
+
+  Live results: https://bettervoting.com/p8dp28/results
+  Companion races: bv2176_p8dp28_star.yaml, bv2176_p8dp28_ranked_robin.yaml.
+  Overview page: bv2176_p8dp28_postit_rcv_example.md
+
+bv_test_id: BV2176
+bv_election_id: p8dp28
+bv_results_url: https://bettervoting.com/p8dp28/results
+paradoxes: [condorcet-cycle]
+
+voting_method: IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Blue>Pink
+  Blue>Pink
+  Blue>Green>Pink
+  Blue>Purple
+  Pink>Green>Purple
+  Pink>Purple
+  Pink
+
+expected_winners:
+  - Purple
+
+# file: bv2176_p8dp28_irv.yaml

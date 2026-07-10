@@ -138,7 +138,18 @@ def report(path):
 
     I = {c: i for i, c in enumerate(cands)}
     try:
-        prof = Profile([[I[c] for c in o] for o in ranks])
+        if any(len(o) != len(cands) for o in ranks):
+            # Truncated ballots: a strict Profile needs complete rankings, so use
+            # ProfileWithTies. Extended strict preference counts ranked-over-unranked
+            # (and unranked pairs as no preference) — the same pairwise rule LH and
+            # BetterVoting apply, so the Copeland tally stays comparable.
+            from pref_voting.profiles_with_ties import ProfileWithTies
+            prof = ProfileWithTies(
+                [{I[c]: i + 1 for i, c in enumerate(o)} for o in ranks],
+                candidates=list(range(len(cands))))
+            prof.use_extended_strict_preference()
+        else:
+            prof = Profile([[I[c] for c in o] for o in ranks])
         pv_winners = sorted(cands[x] for x in copeland(prof))
     except Exception as ex:
         out.append(f" [pref_voting cross-check ERROR: {ex!r}]")

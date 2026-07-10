@@ -1,0 +1,47 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held
+ Tabulating 20 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Purple, Green, Blue, Pink
+     7 ×   Purple      (5, 0, 0, 0)
+     6 ×   Green > Blue > Pink      (0, 5, 4, 3)
+     2 ×   Blue > Pink      (0, 0, 5, 4)
+     1 ×   Blue > Green > Pink      (0, 4, 5, 3)
+     1 ×   Blue > Purple      (4, 0, 5, 0)
+     1 ×   Pink > Green > Purple      (3, 4, 0, 5)
+     1 ×   Pink > Purple      (4, 0, 0, 5)
+     1 ×   Pink      (0, 0, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Purple             7  Hopeful
+Green              6  Hopeful
+Blue               4  Hopeful
+Pink               3  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Purple             8  Hopeful
+Green              7  Hopeful
+Blue               4  Rejected
+Pink               0  Rejected
+Blank Votes        1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Purple             9  Elected
+Green              8  Rejected
+Blue               0  Rejected
+Pink               0  Rejected
+Blank Votes        3  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Purple
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

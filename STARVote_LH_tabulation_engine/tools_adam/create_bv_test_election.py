@@ -1922,7 +1922,8 @@ _NS2_STAR = [(24, (5, 2, 0)), (18, (0, 5, 2)), (20, (2, 0, 5))]
 _NS2_RANK = [(24, (1, 2, 3)), (18, (3, 1, 2)), (20, (2, 3, 1))]
 _NS2_PLUR = [(24, (1, 0, 0)), (18, (0, 1, 0)), (20, (0, 0, 1))]
 
-ELECTIONS = [
+# Already created -> yyhr66 (BV2174) / 9dhv8y (BV2175). Reference only — do NOT re-run.
+_CREATED_BV2174_75 = [
     {
         "test_id": "BV2174",
         "title": "No-show paradox electorate (1 of 2) — 8 April fans stay home",
@@ -1997,6 +1998,90 @@ ELECTIONS = [
                     "CW. Deterministic, no ties. LH-verified. Test ID BV2175.",
     },
 ]
+
+# ---- BV2176 — the "How does RCV work? With Post-its!" video, 20 voters -------
+# Equal Vote's Post-it demo (https://youtu.be/Vte4nly_Neg): 20 voters, four
+# candidates (Purple, Green, Blue, Pink), told three ways on ONE electorate.
+# RCV-IRV (the video's walk-through): R1 7/6/4/3 -> Pink out; R2 8/7/4
+# (1 exhausted) -> Blue out; final Purple 9 - Green 8 (3 exhausted) -> PURPLE,
+# with 9 of the 17 still-active ballots. The video's hypothetical — eliminate
+# Green instead of Blue in round 2 — hands BLUE the win 10-9, and indeed Blue
+# beats Purple head-to-head 10-9. STAR (the video's own 0-5 scores): Purple 46,
+# Blue 44, Pink 44, Green 38 — the 44-44 scoring tie for second breaks
+# head-to-head (Blue beats Pink 10-3), and Blue wins the automatic runoff 10-9
+# (1 Equal Support) — a Runoff Reversal (score leader Purple loses the
+# majority check). Ranked Robin: a genuine Condorcet cycle (Purple > Green >
+# Blue > Purple; Pink beats Purple 12-8) leaves Green and Blue tied on record
+# 2-1. The tie is FREEZABLE on BV: exactly 2 tied -> BV's ladder goes to their
+# head-to-head, Green beats Blue 7-4 -> GREEN, deterministic. LH's ladder
+# (total margin) picks BLUE (+5 vs +4) — the documented RankedRobin.ts-vs-LH
+# ladder divergence (00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md),
+# live for the first time. All LH-verified 2026-07-10.
+# Already created -> p8dp28 (BV2176). Reference only — do NOT re-run (permanent).
+
+_PI_CANDS = ["Purple", "Green", "Blue", "Pink"]
+_PI_STAR = [(7, (5, 0, 0, 0)), (6, (0, 5, 4, 3)), (2, (0, 0, 5, 4)),
+            (1, (0, 4, 5, 3)), (1, (4, 0, 5, 0)), (1, (3, 4, 0, 5)),
+            (1, (4, 0, 0, 5)), (1, (0, 0, 0, 5))]
+_PI_RANK = [(7, (1, 0, 0, 0)), (6, (0, 1, 2, 3)), (2, (0, 0, 1, 2)),
+            (1, (0, 2, 1, 3)), (1, (2, 0, 1, 0)), (1, (3, 2, 0, 1)),
+            (1, (2, 0, 0, 1)), (1, (0, 0, 0, 1))]
+
+_CREATED_BV2176 = [
+    {
+        "test_id": "BV2176",
+        "title": "The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue",
+        "description": ("The 20-voter election from Equal Vote's video 'Updated: "
+                        "How does RCV work? — With Post-its!' "
+                        "(youtu.be/Vte4nly_Neg), one electorate told three ways. "
+                        "RCV-IRV, as walked through on the whiteboard: round 1 "
+                        "Purple 7, Green 6, Blue 4, Pink 3 — Pink eliminated "
+                        "(1 ballot exhausts); round 2 Purple 8, Green 7, Blue 4 "
+                        "— Blue eliminated (2 more exhaust); final Purple 9, "
+                        "Green 8 — Purple wins with 9 of the 17 still-active "
+                        "ballots. The video then asks: what if round 2 had "
+                        "eliminated Green (7 votes) instead of Blue (4)? Blue "
+                        "would jump to 10 and WIN 10-9 — and in fact Blue beats "
+                        "Purple head-to-head 10-9 on these very ballots. STAR, "
+                        "on the video's own 0-5 scores, surfaces that majority "
+                        "automatically: scores Purple 46, Blue 44, Pink 44, "
+                        "Green 38; the 44-44 tie for second finalist breaks "
+                        "head-to-head (Blue beats Pink 10-3); Blue then wins "
+                        "the automatic runoff over Purple 10-9 (1 Equal "
+                        "Support) — a Runoff Reversal, the score leader losing "
+                        "the majority check. Ranked Robin shows WHY no method "
+                        "has a clean claim here: the pairwise picture is a "
+                        "genuine Condorcet cycle (Purple beats Green 9-8, Green "
+                        "beats Blue 7-4, Blue beats Purple 10-9; Pink beats "
+                        "Purple 12-8) with Green and Blue tied on record 2-1 — "
+                        "BetterVoting's tiebreak ladder (2-way tie -> their "
+                        "head-to-head) elects Green deterministically; the LH "
+                        "engine's ladder (total margin) picks Blue (+5 vs +4). "
+                        "Same ballots, three winners: the tabulation decides."),
+        "races": [
+            {"title": "Post-its 20 voters — STAR (the video's 0-5 scores)",
+             "method": "STAR", "num_winners": 1,
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_STAR)},
+            {"title": "Post-its 20 voters — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_RANK)},
+            {"title": "Post-its 20 voters — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1,
+             "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_RANK)},
+        ],
+        "expected": "IRV -> Purple (7/6/4/3 -> 8/7/4 -> 9-8; 3 exhausted). "
+                    "STAR -> Blue (46/38/44/44; Blue over Pink head-to-head "
+                    "10-3; runoff Blue 10-9 — Runoff Reversal). RankedRobin -> "
+                    "Green on BV (2-way Copeland tie at 2-1; head-to-head "
+                    "Green 7-4 Blue — deterministic); LH's margin ladder gives "
+                    "Blue (+5 vs +4), the documented ladder divergence. No "
+                    "Condorcet winner (cycle). LH-verified. Test ID BV2176.",
+    },
+]
+
+# Add the next election batch here, then run the script.
+ELECTIONS: list = []
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race

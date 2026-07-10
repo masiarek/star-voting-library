@@ -107,6 +107,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/none_of_
 
 ## See also
 
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Vote splitting (worked set)](../../../method_comparisons/split_voting/README.md)
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)

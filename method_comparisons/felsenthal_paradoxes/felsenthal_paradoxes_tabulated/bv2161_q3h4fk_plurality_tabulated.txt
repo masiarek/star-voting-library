@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2161_q3h4fk_plurality.yaml
 SOURCE MODIFIED: 2026-07-07 20:42:29
 TABULATED FILE:  bv2161_q3h4fk_plurality_tabulated.txt
-TABULATED AT:    2026-07-09 09:52:50
+TABULATED AT:    2026-07-10 08:09:13
 ======================================================================
 
 election_title: "Borda SCC Ex.15 — Choose-One: C wins on first choices"
