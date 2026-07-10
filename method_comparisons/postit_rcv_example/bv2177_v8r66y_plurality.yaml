@@ -1,0 +1,67 @@
+election_title: "The Post-it election, seven ways — Choose-One: Purple on 7 first choices"
+
+scenario_description: |-
+  One of seven races in the Post-it seven-ways election (BV2177, bvid v8r66y;
+  BV-confirmed) — the BV2176 electorate from Equal Vote's video "Updated: How
+  does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg), run through
+  every method BetterVoting supports. This race keeps only each voter's first
+  choice: Purple 7, Green 6, Blue 4, Pink 3 — Purple wins with 35% of the
+  vote, seeing nothing of the 13 voters who put Purple last-or-unranked.
+  Identical to RCV-IRV's round 1 (and RCV-IRV lands on Purple here too, so on
+  this electorate the "instant runoff" changed nothing about the winner —
+  only about the margin story). See the fairness lesson page:
+  postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/v8r66y/results
+  Companion races: BV2176's bv2176_p8dp28_star.yaml / _irv.yaml /
+  _ranked_robin.yaml (identical ballots to the BV2177 STAR/IRV/RR/STV races)
+  and bv2177_v8r66y_approval.yaml.
+  Overview page: bv2177_v8r66y_seven_methods.md
+
+bv_test_id: BV2177
+bv_election_id: v8r66y
+bv_results_url: https://bettervoting.com/v8r66y/results
+paradoxes: [condorcet-cycle]
+
+voting_method: Plurality
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple,Green,Blue,Pink
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  0,1,0,0
+  0,1,0,0
+  0,1,0,0
+  0,1,0,0
+  0,1,0,0
+  0,1,0,0
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,0,1,0
+  0,0,0,1
+  0,0,0,1
+  0,0,0,1
+
+expected_winners:
+  - Purple
+
+# file: bv2177_v8r66y_plurality.yaml

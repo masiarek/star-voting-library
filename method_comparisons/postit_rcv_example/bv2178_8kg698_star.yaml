@@ -1,0 +1,68 @@
+election_title: "The Post-it switch, made real — STAR: Blue, now also the score co-leader"
+
+scenario_description: |-
+  One of four races in the Post-it switch election (BV2178, bvid 8kg698;
+  BV-confirmed) — the BV2176/BV2177 electorate from Equal Vote's video
+  "Updated: How does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg)
+  with exactly TWO of the six Green>Blue>Pink voters flipping their top two
+  (to Blue>Green>Pink; scores 0,4,5,3). The video's round-2 hypothetical
+  ("what if Green were eliminated instead of Blue?") becomes the actual
+  RCV-IRV count in the companion race — and STAR barely moves: scores are now
+  Blue 46, Purple 46, Pink 44, Green 36; the two co-leaders are exactly the
+  two finalists (no tiebreak needed — both advance) and Blue wins the same
+  runoff as in BV2176, 10-9. The flip that upended RCV-IRV's whole story
+  merely swapped which finalist tops the scoring round: Blue stops being a
+  Runoff Reversal winner and becomes the score co-leader. See the fairness
+  lesson page: postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/8kg698/results
+  Companion races: bv2178_8kg698_irv.yaml, bv2178_8kg698_ranked_robin.yaml.
+  Overview page: bv2178_8kg698_switch_made_real.md
+
+bv_test_id: BV2178
+bv_election_id: 8kg698
+bv_results_url: https://bettervoting.com/8kg698/results
+paradoxes: [condorcet-winner]
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple,Green,Blue,Pink
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  0,5,4,3
+  0,5,4,3
+  0,5,4,3
+  0,5,4,3
+  0,4,5,3
+  0,4,5,3
+  0,0,5,4
+  0,0,5,4
+  0,4,5,3
+  4,0,5,0
+  3,4,0,5
+  4,0,0,5
+  0,0,0,5
+
+expected_winners:
+  - Blue
+
+# file: bv2178_8kg698_star.yaml

@@ -1,0 +1,162 @@
+======================================================================
+SOURCE FILE:     bv2178_8kg698_star.yaml
+SOURCE MODIFIED: 2026-07-10 15:10:33
+TABULATED FILE:  bv2178_8kg698_star_tabulated.txt
+TABULATED AT:    2026-07-10 15:11:07
+======================================================================
+
+election_title: "The Post-it switch, made real — STAR: Blue, now also the score co-leader"
+
+scenario_description: |-
+  One of four races in the Post-it switch election (BV2178, bvid 8kg698;
+  BV-confirmed) — the BV2176/BV2177 electorate from Equal Vote's video
+  "Updated: How does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg)
+  with exactly TWO of the six Green>Blue>Pink voters flipping their top two
+  (to Blue>Green>Pink; scores 0,4,5,3). The video's round-2 hypothetical
+  ("what if Green were eliminated instead of Blue?") becomes the actual
+  RCV-IRV count in the companion race — and STAR barely moves: scores are now
+  Blue 46, Purple 46, Pink 44, Green 36; the two co-leaders are exactly the
+  two finalists (no tiebreak needed — both advance) and Blue wins the same
+  runoff as in BV2176, 10-9. The flip that upended RCV-IRV's whole story
+  merely swapped which finalist tops the scoring round: Blue stops being a
+  Runoff Reversal winner and becomes the score co-leader. See the fairness
+  lesson page: postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/8kg698/results
+  Companion races: bv2178_8kg698_irv.yaml, bv2178_8kg698_ranked_robin.yaml.
+  Overview page: bv2178_8kg698_switch_made_real.md
+
+bv_test_id: BV2178
+bv_election_id: 8kg698
+bv_results_url: https://bettervoting.com/8kg698/results
+paradoxes: [condorcet-winner]
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple,Green,Blue,Pink
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  0,5,4,3
+  0,5,4,3
+  0,5,4,3
+  0,5,4,3
+  0,4,5,3
+  0,4,5,3
+  0,0,5,4
+  0,0,5,4
+  0,4,5,3
+  4,0,5,0
+  3,4,0,5
+  4,0,0,5
+  0,0,0,5
+
+expected_winners:
+  - Blue
+
+# file: bv2178_8kg698_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== The Post-it switch, made real — STAR: Blue, now also the score co-leader ===
+  One of four races in the Post-it switch election (BV2178, bvid 8kg698;
+  BV-confirmed) — the BV2176/BV2177 electorate from Equal Vote's video
+  "Updated: How does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg)
+  with exactly TWO of the six Green>Blue>Pink voters flipping their top two
+  (to Blue>Green>Pink; scores 0,4,5,3). The video's round-2 hypothetical
+  ("what if Green were eliminated instead of Blue?") becomes the actual
+  RCV-IRV count in the companion race — and STAR barely moves: scores are now
+  Blue 46, Purple 46, Pink 44, Green 36; the two co-leaders are exactly the
+  two finalists (no tiebreak needed — both advance) and Blue wins the same
+  runoff as in BV2176, 10-9. The flip that upended RCV-IRV's whole story
+  merely swapped which finalist tops the scoring round: Blue stops being a
+  Runoff Reversal winner and becomes the score co-leader. See the fairness
+  lesson page: postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/8kg698/results
+  Companion races: bv2178_8kg698_irv.yaml, bv2178_8kg698_ranked_robin.yaml.
+  Overview page: bv2178_8kg698_switch_made_real.md
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Purple   |    Green    |   * Blue    |     Pink    |
+---------------------------------------------------------------------------
+      * Purple > |     ---      | 9 -  3 -  8 | 9 -  1 - 10 | 8 -  0 - 12 |
+         Green > |  8 -  3 -  9 |    ---      | 5 -  9 -  6 | 7 -  8 -  5 |
+        * Blue > | 10 -  1 -  9 | 6 -  9 -  5 |    ---      |10 -  7 -  3 |
+          Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Blue — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Blue
+  Choose-One (Plurality) = Purple   (differs from STAR)
+  Approval               = Pink   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 20 ballots.
+Count × Purple,Green,Blue,Pink
+    7 ×      5,    0,   0,   0
+    4 ×      0,    5,   4,   3
+    3 ×      0,    4,   5,   3
+    2 ×      0,    0,   5,   4
+    1 ×      4,    0,   5,   0
+    1 ×      3,    4,   0,   5
+    1 ×      4,    0,   0,   5
+    1 ×      0,    0,   0,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Purple      7   2   1   0   0  10  |    46   2.3
+Green       4   4   0   0   0  12  |    36   1.8
+Blue        6   4   0   0   0  10  |    46   2.3
+Pink        3   2   7   0   0   8  |    44   2.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Blue          -- 46 -- First place
+   Purple        -- 46 -- Second place
+   Pink          -- 44
+   Green         -- 36
+ Blue and Purple advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blue          -- 10 -- First place
+   Purple        --  9
+   Equal Support --  1
+ Blue wins.
+   Runoff math:
+     20  ballots cast
+   −  1  Equal Support (no preference between the two finalists)
+     ──
+     19  voters with a preference  (majority = 10)
+           Blue 10 (53%)  ·  Purple 9 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blue

@@ -96,6 +96,7 @@ APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yam
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml,4,33,Arlo,Arlo,Arlo,Arlo,Arlo,Bree,Bree,Arlo,Arlo,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml,3,13,Cass,Cass,Cass,Cass,Cass,Amy,Cass,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
+APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/bv2178_8kg698_star.yaml,4,20,Blue,Blue,Blue,Blue,Blue,Pink,Purple,Blue,Blue,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True

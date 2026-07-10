@@ -1,0 +1,102 @@
+======================================================================
+SOURCE FILE:     bv2177_v8r66y_approval.yaml
+SOURCE MODIFIED: 2026-07-10 15:10:08
+TABULATED FILE:  bv2177_v8r66y_approval_tabulated.txt
+TABULATED AT:    2026-07-10 15:11:06
+======================================================================
+
+election_title: "The Post-it election, seven ways — Approval: Pink, if approving means any support"
+
+scenario_description: |-
+  One of seven races in the Post-it seven-ways election (BV2177, bvid v8r66y;
+  BV-confirmed) — the BV2176 electorate from Equal Vote's video "Updated: How
+  does RCV work? — With Post-its!" (https://youtu.be/Vte4nly_Neg), run through
+  every method BetterVoting supports. This race converts the video's 0-5
+  scores to Approval ballots with the most natural rule: approve = any
+  support (score above 0). Because the video's scores use only 0/3/4/5, any
+  threshold from 1 to 3 casts these exact same approvals. Result: Pink 12,
+  Purple 10, Blue 10, Green 8 — PINK wins, carried by the six Green fans who
+  scored their LAST choice a 3. The conversion is the election: had voters
+  approved only 4s and 5s, Blue would win (10/9/8/5); only 5s, Purple
+  (7/6/4/3). Three thresholds, three winners — a lesson in why "just make it
+  Approval" is never neutral. See the fairness lesson page:
+  postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/v8r66y/results
+  Companion races: BV2176's bv2176_p8dp28_star.yaml / _irv.yaml /
+  _ranked_robin.yaml (identical ballots to the BV2177 STAR/IRV/RR/STV races)
+  and bv2177_v8r66y_plurality.yaml.
+  Overview page: bv2177_v8r66y_seven_methods.md
+
+bv_test_id: BV2177
+bv_election_id: v8r66y
+bv_results_url: https://bettervoting.com/v8r66y/results
+paradoxes: [condorcet-cycle]
+
+voting_method: Approval
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple,Green,Blue,Pink
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  1,0,0,0
+  0,1,1,1
+  0,1,1,1
+  0,1,1,1
+  0,1,1,1
+  0,1,1,1
+  0,1,1,1
+  0,0,1,1
+  0,0,1,1
+  0,1,1,1
+  1,0,1,0
+  1,1,0,1
+  1,0,0,1
+  0,0,0,1
+
+expected_winners:
+  - Pink
+
+# file: bv2177_v8r66y_approval.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 20 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Purple, Green, Blue, Pink      (1 = approve; 0 / blank / marker = not approved)
+     7 × 1,0,0,0
+     7 × 0,1,1,1
+     2 × 0,0,1,1
+     1 × 1,0,1,0
+     1 × 1,1,0,1
+     1 × 1,0,0,1
+     1 × 0,0,0,1
+
+   Pink   -- 12 -- Elected
+   Purple -- 10
+   Blue   -- 10
+   Green  -- 8
+
+Winner — Approval Voting (single winner)
+  Pink

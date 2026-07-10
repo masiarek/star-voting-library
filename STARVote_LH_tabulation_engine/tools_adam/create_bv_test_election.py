@@ -2080,6 +2080,170 @@ _CREATED_BV2176 = [
     },
 ]
 
+# ---- BV2177 / BV2178 — the Post-it election, seven ways + the switch made real
+# Companions to BV2176 (p8dp28). Same source: Equal Vote's "Updated: How does
+# RCV work? — With Post-its!" (youtu.be/Vte4nly_Neg), 20 voters.
+#
+# BV2177 = the SAME electorate as BV2176, run through ALL SEVEN BV methods as
+# single-winner races (the BV2172 "all seven" pattern), leading with STAR.
+# Winners fan out to ALL FOUR candidates: STAR -> Blue (44-44 scoring tie for
+# 2nd finalist breaks head-to-head, runoff Blue 10-9); Ranked Robin -> Green on
+# BV (2-way Copeland tie -> head-to-head; LH's margin ladder says Blue — the
+# BV2176 ladder divergence, same race); Approval -> Pink 12 (approve = any
+# support: the video's scores are only 0/3/4/5, so thresholds 1-3 cast
+# identical approvals; at >=4 Blue would win, at =5 Purple — the conversion IS
+# the election); IRV -> Purple (7/6/4/3 -> 8/7/4 -> 9-8); Choose-One -> Purple
+# (7 first choices); STV 1 seat -> Purple (Droop 11 = IRV, LH round-identical);
+# STAR-PR 1 seat -> Purple PREDICTED (Allocated Score's per-seat rule is
+# score-only — no runoff — so at 1 seat it's plain Score voting and the Runoff
+# Reversal vanishes; LH's allocated refuses seats=1 outright, so this leg is
+# BV-only, verify from the live results). All other legs LH-verified 2026-07-10.
+#
+# BV2178 = the video's round-2 hypothetical MADE REAL: exactly TWO of the six
+# Green > Blue > Pink voters flip their top two (-> Blue > Green > Pink).
+# RCV-IRV round 1 becomes Purple 7 / Blue 6 / Green 4 / Pink 3; round 2
+# Purple 8 / Blue 6 / Green 5 — GREEN is eliminated this time, and the final
+# lands the video's exact hypothetical tally: Blue 10, Purple 9. The flip also
+# makes Blue the outright Condorcet winner (3-0: beats Purple 10-9, Green 6-5,
+# Pink 10-3), so STAR (scores 46/36/46/44; runoff Blue 10-9), Ranked Robin
+# (no tie, no ladder needed) and IRV all agree on Blue — while Choose-One
+# still says Purple (7 first choices vs 6). Deterministic everywhere
+# (the 46-46 scoring tie is between the two finalists themselves, so both
+# advance and nothing needs breaking). LH-verified 2026-07-10.
+# Already created -> v8r66y (BV2177) / 8kg698 (BV2178). Reference only — do NOT
+# re-run (permanent). All 11 live races verified against predictions the same
+# day via GET /API/ElectionResult (STAR_PR leg: Purple 46, unique — BV labels
+# the round tieBreakType 'random' but the one-candidate 'tied' list shows no
+# tie was actually broken).
+
+_PI_APPR = [(7, (1, 0, 0, 0)), (6, (0, 1, 1, 1)), (2, (0, 0, 1, 1)),
+            (1, (0, 1, 1, 1)), (1, (1, 0, 1, 0)), (1, (1, 1, 0, 1)),
+            (1, (1, 0, 0, 1)), (1, (0, 0, 0, 1))]
+_PI_PLUR = [(7, (1, 0, 0, 0)), (6, (0, 1, 0, 0)), (2, (0, 0, 1, 0)),
+            (1, (0, 0, 1, 0)), (1, (0, 0, 1, 0)), (1, (0, 0, 0, 1)),
+            (1, (0, 0, 0, 1)), (1, (0, 0, 0, 1))]
+
+_SW_STAR = [(7, (5, 0, 0, 0)), (4, (0, 5, 4, 3)), (2, (0, 4, 5, 3)),
+            (2, (0, 0, 5, 4)), (1, (0, 4, 5, 3)), (1, (4, 0, 5, 0)),
+            (1, (3, 4, 0, 5)), (1, (4, 0, 0, 5)), (1, (0, 0, 0, 5))]
+_SW_RANK = [(7, (1, 0, 0, 0)), (4, (0, 1, 2, 3)), (2, (0, 2, 1, 3)),
+            (2, (0, 0, 1, 2)), (1, (0, 2, 1, 3)), (1, (2, 0, 1, 0)),
+            (1, (3, 2, 0, 1)), (1, (2, 0, 0, 1)), (1, (0, 0, 0, 1))]
+_SW_PLUR = [(7, (1, 0, 0, 0)), (4, (0, 1, 0, 0)), (2, (0, 0, 1, 0)),
+            (2, (0, 0, 1, 0)), (1, (0, 0, 1, 0)), (1, (0, 0, 1, 0)),
+            (1, (0, 0, 0, 1)), (1, (0, 0, 0, 1)), (1, (0, 0, 0, 1))]
+
+_CREATED_BV2177_78 = [
+    {
+        "test_id": "BV2177",
+        "title": "The Post-it election, seven ways — all four candidates win, depending on the method",
+        "description": ("The 20-voter election from Equal Vote's video 'Updated: "
+                        "How does RCV work? — With Post-its!' "
+                        "(youtu.be/Vte4nly_Neg) — the same electorate as BV2176 "
+                        "(bettervoting.com/p8dp28) — run through every voting "
+                        "method BetterVoting supports, as seven single-winner "
+                        "races. The winners fan out to all four candidates. "
+                        "STAR: scores Purple 46, Blue 44, Pink 44, Green 38; "
+                        "the 44-44 tie for second finalist breaks head-to-head "
+                        "(Blue over Pink 10-3) and Blue wins the runoff 10-9. "
+                        "Ranked Robin: a genuine Condorcet cycle leaves Green "
+                        "and Blue tied 2-1; the head-to-head between the tied "
+                        "pair elects Green 7-4. Approval (approve = any "
+                        "support; the video's scores use only 0/3/4/5, so any "
+                        "threshold from 1 to 3 casts these same approvals): "
+                        "Pink 12, Purple 10, Blue 10, Green 8 — Pink wins; had "
+                        "voters approved only 4s and 5s Blue would win, and "
+                        "only 5s Purple — the rank-to-approval conversion IS "
+                        "the election. RCV-IRV: the video's whiteboard count — "
+                        "Purple 9, Green 8 after Pink and Blue are eliminated "
+                        "(3 ballots exhaust). Choose-One: Purple on 7 first "
+                        "choices. STV at 1 seat: identical rounds to IRV — "
+                        "Purple. STAR-PR (Allocated Score) at 1 seat: the "
+                        "per-seat rule is score-only, no runoff, so it's plain "
+                        "Score voting — the score leader Purple, and STAR's "
+                        "Runoff Reversal vanishes. One ballot set, seven "
+                        "counts, four winners: the tabulation decides."),
+        "races": [
+            {"title": "Post-its 7 ways — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _PI_CANDS, "ballots": _expand(_PI_STAR)},
+            {"title": "Post-its 7 ways — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1,
+             "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_RANK)},
+            {"title": "Post-its 7 ways — Approval (approve = any support)",
+             "method": "Approval", "num_winners": 1,
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_APPR)},
+            {"title": "Post-its 7 ways — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_RANK)},
+            {"title": "Post-its 7 ways — Choose-One (Plurality)",
+             "method": "Plurality", "num_winners": 1,
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_PLUR)},
+            {"title": "Post-its 7 ways — STV, 1 seat (= IRV single-winner)",
+             "method": "STV", "num_winners": 1,
+             "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_RANK)},
+            {"title": "Post-its 7 ways — STAR-PR (Allocated Score), 1 seat",
+             "method": "STAR_PR", "num_winners": 1,
+             "candidates": _PI_CANDS, "ballots": _expand(_PI_STAR)},
+        ],
+        "expected": "STAR -> Blue (runoff 10-9). RankedRobin -> Green (BV "
+                    "ladder; LH margin ladder says Blue). Approval -> Pink "
+                    "(12/10/10/8). IRV -> Purple (9-8). Plurality -> Purple "
+                    "(7). STV -> Purple (= IRV). STAR_PR 1 seat -> Purple "
+                    "PREDICTED (score-only rule, 46; LH allocated refuses "
+                    "seats=1 — BV-only leg). All four candidates win "
+                    "somewhere. Test ID BV2177.",
+    },
+    {
+        "test_id": "BV2178",
+        "title": "The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",
+        "description": ("The 'what if?' from Equal Vote's video 'Updated: How "
+                        "does RCV work? — With Post-its!' "
+                        "(youtu.be/Vte4nly_Neg), made real. The video asks what "
+                        "would happen if round 2 had eliminated Green instead "
+                        "of Blue, and answers: Blue would win 10-9. This "
+                        "election is the companion BV2176/BV2177 electorate "
+                        "with exactly TWO of the six Green > Blue > Pink "
+                        "voters flipping their top two choices (to Blue > "
+                        "Green > Pink; scores 0,4,5,3). That two-ballot switch "
+                        "makes the hypothetical the actual count: RCV-IRV "
+                        "round 1 is Purple 7, Blue 6, Green 4, Pink 3; round 2 "
+                        "Purple 8, Blue 6, Green 5 — Green IS eliminated this "
+                        "time, all four Green > Blue > Pink ballots transfer "
+                        "to Blue, and the final is the video's exact "
+                        "hypothetical tally: Blue 10, Purple 9. The flip also "
+                        "makes Blue the outright Condorcet winner (beats "
+                        "Purple 10-9, Green 6-5, Pink 10-3), so Ranked Robin "
+                        "elects Blue with no tie to break, and STAR elects "
+                        "Blue too (scores Blue 46, Purple 46, Pink 44, Green "
+                        "36 — both leaders advance, runoff Blue 10-9). Only "
+                        "Choose-One still says Purple (7 first choices vs 6). "
+                        "Two voters' honesty about their favorite flipped the "
+                        "RCV-IRV winner from Purple to Blue; the methods that "
+                        "read the whole ballot were already pointing there."),
+        "races": [
+            {"title": "Post-its switch — STAR", "method": "STAR",
+             "num_winners": 1, "candidates": _PI_CANDS, "ballots": _expand(_SW_STAR)},
+            {"title": "Post-its switch — Ranked Robin (Copeland)",
+             "method": "RankedRobin", "num_winners": 1,
+             "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_SW_RANK)},
+            {"title": "Post-its switch — RCV-IRV", "method": "IRV",
+             "num_winners": 1, "max_rankings": len(_PI_CANDS),
+             "candidates": _PI_CANDS, "ballots": _expand(_SW_RANK)},
+            {"title": "Post-its switch — Choose-One (Plurality)",
+             "method": "Plurality", "num_winners": 1,
+             "candidates": _PI_CANDS, "ballots": _expand(_SW_PLUR)},
+        ],
+        "expected": "IRV -> Blue (7/6/4/3 -> 8/6/5, Green out -> Blue 10, "
+                    "Purple 9 — the video's hypothetical, real). STAR -> Blue "
+                    "(46/36/46/44; runoff 10-9). RankedRobin -> Blue (Condorcet "
+                    "winner 3-0, no tiebreak). Plurality -> Purple (7 vs 6). "
+                    "Deterministic, LH-verified. Test ID BV2178.",
+    },
+]
+
 # Add the next election batch here, then run the script.
 ELECTIONS: list = []
 

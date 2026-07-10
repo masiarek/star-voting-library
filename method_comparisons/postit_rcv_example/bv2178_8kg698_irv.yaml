@@ -1,0 +1,68 @@
+election_title: "The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9"
+
+scenario_description: |-
+  One of four races in the Post-it switch election (BV2178, bvid 8kg698;
+  BV-confirmed). Equal Vote's video "Updated: How does RCV work? — With
+  Post-its!" (https://youtu.be/Vte4nly_Neg) asks: what if round 2 had
+  eliminated Green instead of Blue? Its answer — Blue jumps to 10 and wins
+  10-9 — is a hypothetical RCV-IRV itself would never execute (Green held 7
+  votes to Blue's 4). This election makes it REAL with the smallest possible
+  nudge: two of the six Green>Blue>Pink voters genuinely prefer Blue first
+  (Blue>Green>Pink). Now round 1 is Purple 7, Blue 6, Green 4, Pink 3; round
+  2 Purple 8, Blue 6, Green 5 — GREEN is eliminated, all four remaining
+  Green>Blue>Pink ballots transfer to Blue, and the final is the video's
+  exact hypothetical tally: Blue 10, Purple 9 (1 exhausted). Two ballots
+  moved; the winner flipped from Purple to Blue — RCV-IRV finds Blue's
+  head-to-head strength only when Blue's supporters put Blue FIRST. See the
+  fairness lesson page: postit_video_fair_and_balanced.md.
+
+  Live results: https://bettervoting.com/8kg698/results
+  Companion races: bv2178_8kg698_star.yaml, bv2178_8kg698_ranked_robin.yaml.
+  Overview page: bv2178_8kg698_switch_made_real.md
+
+bv_test_id: BV2178
+bv_election_id: 8kg698
+bv_results_url: https://bettervoting.com/8kg698/results
+paradoxes: [condorcet-winner]
+
+voting_method: IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Purple
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Green>Blue>Pink
+  Blue>Green>Pink
+  Blue>Green>Pink
+  Blue>Pink
+  Blue>Pink
+  Blue>Green>Pink
+  Blue>Purple
+  Pink>Green>Purple
+  Pink>Purple
+  Pink
+
+expected_winners:
+  - Blue
+
+# file: bv2178_8kg698_irv.yaml
