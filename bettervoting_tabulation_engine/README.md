@@ -87,7 +87,7 @@ Most methods lean on three helpers:
 | Method | File | Ballot | Core rule |
 |---|---|---|---|
 | **STAR** | `Star.ts` | score 0–5 | Score to pick top-2, then pairwise automatic runoff. Tie cascade: score → head-to-head → five-star → random |
-| **STAR_PR** | `AllocatedScore.ts` | score 0–5 | Proportional (Allocated Score), Hare quota `V/nWinners`, ballot weight spent on winners |
+| **STAR_PR** | `AllocatedScore.ts` | score 0–5 | Proportional (Allocated Score): elect the top scorer, spend a Hare quota `V/nWinners` of their strongest ballots, repeat; ties → random |
 | **Approval** | `Approval.ts` | approve 0/1 | Most approvals; random tiebreak |
 | **Plurality** | `Plurality.ts` | choose-one | Most votes; tracks overvotes; random tiebreak |
 | **Ranked Robin** | `RankedRobin.ts` | ranked | Highest Copeland (win +1, tie +0.5); 2-way tie → head-to-head; else random |
