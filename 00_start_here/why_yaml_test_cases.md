@@ -12,34 +12,26 @@ This library refuses that split. There is **one artifact**, and it's legible bot
 
 ## What that looks like
 
-A whole election, in one small YAML ([`01a_c2_b2_two-candidates.yaml`](../01_STAR/_main/01a_c2_b2_two-candidates.yaml)):
+A whole election, in one small YAML:
 
 ```yaml
-election_title: Same as before - but this time two ballots
-
-scenario_description: |-              # ← for the human: what this case teaches
-  The same election as 01a_c2_b1 with one more identical ballot: two voters,
-  both scoring Chocolate 5 and Vanilla 3. Nothing changes but the totals.
-
-ballots: |-                           # read by BOTH — a table to a person, the cast votes to the engine
-  Chocolate,Vanilla
-          5,      3       # Caroline: Chocolate (5) over Vanilla (3)
-          5,      3       # Bob: same — Chocolate over Vanilla
-
-options:                              # ← for the engine: how to render the report
-  show_matrix: false
-  brief: true
-
-expected_winners:                     # ← for BOTH: the human sees the claim,
-  - Chocolate                         #    the test suite enforces it
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Ann,Bob,Cal
+  5,4,0
+  3,5,2
+  0,3,5
+expected_winners:
+- Bob
 ```
 
-*(The `#` notes on the ballot rows sit inside the `ballots: |-` literal block, so YAML reads them as text — the ballot parser strips them when it reads the scores. Everywhere else here, `#` is an ordinary YAML comment.)*
-
-- **A person** reads `election_title`, `scenario_description`, the ballot table (with the inline per-voter notes), and the expected winner — and understands the whole case at a glance.
-- **The engine** reads `ballots`, `voting_method` (defaulted here), and `options` and produces an annotated, round-by-round count; the **pytest** suite reads `expected_winners` and fails if the engine disagrees.
+- **A person** reads the candidate names, the three ballot rows, and the expected winner — and understands the whole case at a glance.
+- **The engine** reads `voting_method`, `num_winners`, and `ballots`, and produces an annotated, round-by-round count; the **pytest** suite reads `expected_winners` and fails if the engine disagrees.
 
 Same file. Two readers. Never out of sync — because there's nothing to keep in sync.
+
+Richer files keep more *human* context in the same file — an `election_title`, a `scenario_description`, inline per-voter notes on the ballot rows, and `options:` to shape the report — all stored in the one artifact and never shown on screen unless you ask. → [YAML authoring template](YAML_authoring_template.md)
 
 ## Everything else is *generated* from it
 
