@@ -2,7 +2,7 @@
 
 A library that does three things:
 
-**1. A human-readable test-case library.** Real and hand-written voting-method elections — each a single YAML file a *person* can read and the *engine* can run. → [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md). Browse the cases by different criteria: [by method](00_start_here/YAML_test_case_index/) · [BetterVoting-backed (sortable)](00_start_here/YAML_test_case_index/BV_registry.md) · [where methods diverge](method_comparisons/divergence_review/INDEX.md).
+**1. A human-readable test-case library.** Real and hand-written voting-method elections — each a single YAML file a *person* can read and the *engine* can run. → [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md).
 
 **2. Cross-verification with BetterVoting.** Import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it with an independent, auditable engine, and confirm the winner matches its official tally — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 
