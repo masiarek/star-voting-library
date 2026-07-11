@@ -1,13 +1,13 @@
 # Cross-method divergence review
 
-_Generated 2026-07-11 19:47 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-11 19:56 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
-- Scanned **143** single-winner STAR elections (skipped 85 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **71** (50%) diverge from STAR under at least one method; **72** agree across the board.
+- Scanned **144** single-winner STAR elections (skipped 85 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **72** (50%) diverge from STAR under at least one method; **72** agree across the board.
 
 | Bucket | Count |
 |---|---:|
@@ -15,7 +15,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 5 |
 | CYCLE_OR_THREE_WAY | 21 |
-| APPROVAL_OR_MINOR | 29 |
+| APPROVAL_OR_MINOR | 30 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (68 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (69 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 14
 
@@ -135,7 +135,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
 
-### APPROVAL_OR_MINOR — 29
+### APPROVAL_OR_MINOR — 30
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -145,6 +145,9 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[04b_c4_b3_display-options-all](cases/APPROVAL_OR_MINOR/04b_c4_b3_display-options-all.md)** — `01_STAR/_main/04b_c4_b3_display-options-all.yaml` (4c/3b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Vanilla · Score=Strawberry · Condorcet=Strawberry
+- **[faq_runoff_reversal_c3_b10](cases/APPROVAL_OR_MINOR/faq_runoff_reversal_c3_b10.md)** — `01_STAR/_main/faq_runoff_reversal_c3_b10.yaml` (3c/10b)  
+    STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Berry · Score=Berry · Condorcet=Almond  
+    _flags: 1 tied-score ballot(s)_
 - **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
     _flags: 2 tied-score ballot(s)_

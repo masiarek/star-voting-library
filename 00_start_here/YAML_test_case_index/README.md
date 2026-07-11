@@ -4,15 +4,15 @@
 
 > This page is one cut (by method). For the full faceted catalog — slice by ballot type, seat class, single/multi-winner, character, backing — see **[CATALOG.md](CATALOG.md)** (fact tables: [`races.csv`](races.csv), [`elections.csv`](elections.csv)).
 
-Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `06_Other/_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
+Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**265 election files** (230 single-winner, 35 multi-winner) across 14 method(s).
+**266 election files** (231 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 141 |
+| STAR | 142 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 33 |
 | Approval | 10 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (141)
+## STAR  (142)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -57,6 +57,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`abstentions`](../../01_STAR/_main/_main_pages/abstentions.md) | `01_STAR/_main/` | 1 | Abstentions — blank and abstaining ballots in STAR → _Dog_ | [`.yaml`](../../01_STAR/_main/abstentions.yaml) |
 | [`display_options_demo`](../../01_STAR/_main/_main_pages/display_options_demo.md) | `01_STAR/_main/` | 1 | Display options demo → _Don_ | [`.yaml`](../../01_STAR/_main/display_options_demo.yaml) |
 | [`equal_support_runoff_demo`](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) | `01_STAR/_main/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/_main/equal_support_runoff_demo.yaml) |
+| [`faq_runoff_reversal_c3_b10`](../../01_STAR/_main/_main_pages/faq_runoff_reversal_c3_b10.md) | `01_STAR/_main/` | 1 | FAQ — why the automatic runoff (and Equal Support) → _Almond_ | [`.yaml`](../../01_STAR/_main/faq_runoff_reversal_c3_b10.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/_main/_main_pages/quorum_demo_c3_b6.md) | `01_STAR/_main/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/_main/quorum_demo_c3_b6.yaml) |
 | [`quorum_fail_demo_c3_b6`](../../01_STAR/_main/_main_pages/quorum_fail_demo_c3_b6.md) | `01_STAR/_main/` | 1 | Quorum FAILS — won the count, but not elected | [`.yaml`](../../01_STAR/_main/quorum_fail_demo_c3_b6.yaml) |
 | [`star_ala_approval`](../../01_STAR/_main/_main_pages/star_ala_approval.md) | `01_STAR/_main/` | 1 | STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot → _D_ | [`.yaml`](../../01_STAR/_main/star_ala_approval.yaml) |

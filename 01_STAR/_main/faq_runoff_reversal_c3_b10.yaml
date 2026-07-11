@@ -1,0 +1,36 @@
+election_title: FAQ — why the automatic runoff (and Equal Support)
+
+scenario_description: |-
+  A 10-voter STAR election built for the FAQ. Berry is the consensus candidate —
+  broadly liked, so Berry wins the Scoring Round on total stars. But more voters
+  strictly prefer Almond head-to-head, so Almond wins the Automatic Runoff: a
+  clean Runoff Reversal that shows why the second step exists. One voter scores
+  both finalists 5 (Equal Support) — counted, but expressing no preference between
+  the two, so it lands in neither finalist's runoff column.
+
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Almond,Berry,Cocoa
+  5,4,1
+  5,4,1
+  5,4,1
+  5,4,1
+  5,4,0
+  5,4,0
+  0,5,2
+  0,5,2
+  0,5,2
+  5,5,0
+
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+
+expected_winners:
+- Almond
+
+# file: faq_runoff_reversal_c3_b10.yaml

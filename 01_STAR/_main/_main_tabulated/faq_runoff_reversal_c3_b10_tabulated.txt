@@ -1,0 +1,120 @@
+======================================================================
+SOURCE FILE:     faq_runoff_reversal_c3_b10.yaml
+SOURCE MODIFIED: 2026-07-11 19:53:46
+TABULATED FILE:  faq_runoff_reversal_c3_b10_tabulated.txt
+TABULATED AT:    2026-07-11 19:53:46
+======================================================================
+
+election_title: FAQ — why the automatic runoff (and Equal Support)
+
+scenario_description: |-
+  A 10-voter STAR election built for the FAQ. Berry is the consensus candidate —
+  broadly liked, so Berry wins the Scoring Round on total stars. But more voters
+  strictly prefer Almond head-to-head, so Almond wins the Automatic Runoff: a
+  clean Runoff Reversal that shows why the second step exists. One voter scores
+  both finalists 5 (Equal Support) — counted, but expressing no preference between
+  the two, so it lands in neither finalist's runoff column.
+
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Almond,Berry,Cocoa
+  5,4,1
+  5,4,1
+  5,4,1
+  5,4,1
+  5,4,0
+  5,4,0
+  0,5,2
+  0,5,2
+  0,5,2
+  5,5,0
+
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+
+expected_winners:
+- Almond
+
+# file: faq_runoff_reversal_c3_b10.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== FAQ — why the automatic runoff (and Equal Support) ===
+  A 10-voter STAR election built for the FAQ. Berry is the consensus candidate —
+  broadly liked, so Berry wins the Scoring Round on total stars. But more voters
+  strictly prefer Almond head-to-head, so Almond wins the Automatic Runoff: a
+  clean Runoff Reversal that shows why the second step exists. One voter scores
+  both finalists 5 (Equal Support) — counted, but expressing no preference between
+  the two, so it lands in neither finalist's runoff column.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Almond   |  * Berry    |    Cocoa    |
+-------------------------------------------------------------
+      * Almond > |     ---      | 6 -  1 -  3 | 7 -  0 -  3 |
+       * Berry > |  3 -  1 -  6 |    ---      |10 -  0 -  0 |
+         Cocoa > |  3 -  0 -  7 | 0 -  0 - 10 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Almond — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = Almond
+  Approval = Berry   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Berry)
+ - Runoff Round Winner   = (Almond)
+  Candidate Berry earned the highest total score, but
+  Candidate Almond won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 10 ballots.
+Count × Almond,Berry,Cocoa
+    4 ×      5,    4,    1
+    3 ×      0,    5,    2
+    2 ×      5,    4,    0
+    1 ×      5,    5,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     7  0  0  0  0  3  |    35   3.5
+Berry      4  6  0  0  0  0  |    44   4.4
+Cocoa      0  0  0  3  4  3  |    10   1.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Berry         -- 44 -- First place
+   Almond        -- 35 -- Second place
+   Cocoa         -- 10
+ Berry and Almond advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Almond        -- 6 -- First place
+   Berry         -- 3
+   Equal Support -- 1
+ Almond wins.
+   Runoff math:
+     10  ballots cast
+   −  1  Equal Support (no preference between the two finalists)
+     ──
+      9  voters with a preference  (majority = 5)
+           Almond 6 (67%)  ·  Berry 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Almond

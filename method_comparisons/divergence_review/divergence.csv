@@ -74,6 +74,7 @@ AGREE,method_comparisons/summability_demo/star_district_A.yaml,3,3,Maple,Maple,M
 APPROVAL_OR_MINOR,01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/_main/03b_c3_b3_2_expand_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/_main/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/_main/faq_runoff_reversal_c3_b10.yaml,3,10,Almond,Almond,Almond,Almond,Almond,Berry,Berry,Almond,Almond,1,False,False,False
 APPROVAL_OR_MINOR,01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml,3,5,Ada,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml,3,3,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01b_c3_b9_overturn-holds-at-scale.yaml,3,9,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
