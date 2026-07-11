@@ -186,9 +186,33 @@ The practical upshot: for most hand-built examples you never write `lot_numbers`
 
 ---
 
+## LH vs BetterVoting — where the two STAR ladders differ
+
+The ladder above is the **LH** ladder. BetterVoting follows its own [official protocol](https://docs.bettervoting.com/help/ties.html), and for **most** elections the two agree — they only part on a genuinely tied race, and even then only at two rungs. It's worth pinning down, because it decides whether a tie case can be cross-checked against a live BetterVoting election or is **LH-only**.
+
+| Rung | **LH** `starvote_larry_hastings.py` | **BetterVoting** `Star.ts` / [ties protocol](https://docs.bettervoting.com/help/ties.html) |
+|---|---|---|
+| Scoring 1 | head-to-head **among the tied set** (any N) | head-to-head **only if exactly 2 are tied**; a 3+ way tie **skips** it |
+| Scoring 2 | most **five-star** votes | most **five-star** votes |
+| Scoring 3 (floor) | **lot order** (pre-published) — *deterministic* | **random** shuffle — *non-deterministic* |
+| Runoff 1 | higher total **score** | higher total **score** |
+| Runoff 2 | most **five-star** votes | most **five-star** votes |
+| Runoff 3 (floor) | **lot order** — *deterministic* | **random** shuffle — *non-deterministic* |
+
+Two consequences:
+
+1. **The 3+ way scoring tie.** LH runs a head-to-head *among the tied set* before five-star; BetterVoting's protocol **deliberately skips** head-to-head once more than two candidates are tied and goes straight to five-star. This is **working-as-intended on BetterVoting's side** — a deliberate complexity/ability trade-off, [confirmed on #1379](https://github.com/Equal-Vote/bettervoting/issues/1379). (Often the extra LH rung changes nothing, because a symmetric dead heat ties head-to-head too.)
+2. **The floor is different.** LH bottoms out at a **published lot** (reproducible from the ballots plus that order); BetterVoting bottoms out at a **random** shuffle. So when a race ties all the way down, **only the LH winner is a function of the ballots** — BetterVoting's is a coin toss that can't be frozen into a `_bv_export.json`.
+
+**Practical upshot — the same rule as the Ranked Robin analog:** a case that *turns on the terminal tiebreak* is **LH-only** — state which engine's rule you're relying on, pin `lot_numbers`, and use the LH tally for a reproducible winner. The worked STAR example is **[Flat scores 05 — the 3-way scoring tie (BV555, `xmyf7k`)](../../../01_STAR/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md)**: every score-based rung ties, LH's lot elects **A**, BetterVoting's random shuffle picked **C** — same ballots, and BV's result isn't reproducible. The Ranked Robin version of exactly this story (deterministic margin→lot vs BV's random) is **[rr_tiebreak_lh_vs_bv.md](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md)**.
+
+Separately, BetterVoting doesn't yet *show* which rung fired in its human-readable report or JSON export (the data exists internally as `roundResults.logs` + `tieBreakType`); surfacing it is tracked in **[#1432](https://github.com/Equal-Vote/bettervoting/issues/1432)** (building on the JSON-v2 export in [PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)), with a pre-published lot (vs random floor) tracked in **[#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)**.
+
+---
+
 ## See also
 
-- **BetterVoting's official tie-breaking protocol** (the authoritative source for the ladder above, and the "shuffle the candidates" random order our `lot_numbers` carries): <https://docs.bettervoting.com/help/ties.html>
+- **BetterVoting's official tie-breaking protocol** (BetterVoting's own ladder — the source of the "shuffle the candidates" random order our `lot_numbers` carries, and *close but not identical* to the LH ladder above; see the divergence section just above): <https://docs.bettervoting.com/help/ties.html>
 - Glossary: **Tiebreaker**, **Head-to-head / pairwise**, **Automatic runoff**, **Equal Support** — [Glossary — voting methods & criteria](../../GLOSSARY.md)
 - Equal-score handling in the runoff: ["Aren't Equal-Score Votes Just Discounted?"](../are_equal_score_votes_discounted.md) · demo [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml)
 - Converter + engine wiring and the full test matrix (perm, `tieBreakOrder`, no-sequence, manual override, column-order fallback, and the non-vacuous self-check): [`tests/test_lot_number_tiebreak.py`](../../../STARVote_LH_tabulation_engine/tests/test_lot_number_tiebreak.py)
