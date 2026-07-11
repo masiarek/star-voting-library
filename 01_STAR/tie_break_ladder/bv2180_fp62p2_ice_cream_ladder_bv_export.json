@@ -1,0 +1,554 @@
+{
+  "Election": {
+    "election_id": "fp62p2",
+    "title": "BV2180 — Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",
+    "description": "The worked example from the STAR tie-breaking documentation (the two-round, two-ladder tiebreak). Two voters, six ice-cream flavors. Scoring round: Strawberry leads at 7; Chocolate, Chocolate Chip and Vanilla tie for the second finalist slot at 5 each. The pairwise rung can't separate the three (all 2), so the FIVE-STAR rung decides — only Chocolate Chip earned a 5, so it advances alongside Strawberry. The automatic runoff then ties 1-1 on head-to-head preference, and the SCORE rung breaks it: Strawberry 7 beats Chocolate Chip 5. Winner: Strawberry. The point of the case is that STAR settles ties in BOTH rounds by DETERMINISTIC rungs (five-star, then score) — the pre-published random lot order is never consulted. LH and BetterVoting agree; the lot is irrelevant here, so the result is fully reproducible.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",
+        "race_id": "bf6ab163-ea1c-46aa-8b0c-55fa9d1e0f1a",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "652883a6-fe55-434e-a76e-c22f7d6d4239",
+            "candidate_name": "Chocolate"
+          },
+          {
+            "candidate_id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+            "candidate_name": "Chocolate Chip"
+          },
+          {
+            "candidate_id": "37309642-3275-4fb5-9c95-1c3be5aab804",
+            "candidate_name": "Fudge Brownie"
+          },
+          {
+            "candidate_id": "e573c550-63b1-4010-bcd0-9252a7f5e371",
+            "candidate_name": "Vanilla"
+          },
+          {
+            "candidate_id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+            "candidate_name": "Strawberry"
+          },
+          {
+            "candidate_id": "0c0b7862-09d6-4854-9868-6552478882ae",
+            "candidate_name": "Mango"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-11T13:18:47.176Z",
+    "update_date": "1783775927176",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-d33wfhf2",
+      "election_id": "fp62p2",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "bf6ab163-ea1c-46aa-8b0c-55fa9d1e0f1a",
+          "scores": [
+            {
+              "candidate_id": "652883a6-fe55-434e-a76e-c22f7d6d4239",
+              "score": 1
+            },
+            {
+              "candidate_id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+              "score": 0
+            },
+            {
+              "candidate_id": "37309642-3275-4fb5-9c95-1c3be5aab804",
+              "score": 0
+            },
+            {
+              "candidate_id": "e573c550-63b1-4010-bcd0-9252a7f5e371",
+              "score": 4
+            },
+            {
+              "candidate_id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+              "score": 5
+            },
+            {
+              "candidate_id": "0c0b7862-09d6-4854-9868-6552478882ae",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-w72y6pfj",
+      "election_id": "fp62p2",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "bf6ab163-ea1c-46aa-8b0c-55fa9d1e0f1a",
+          "scores": [
+            {
+              "candidate_id": "652883a6-fe55-434e-a76e-c22f7d6d4239",
+              "score": 4
+            },
+            {
+              "candidate_id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+              "score": 5
+            },
+            {
+              "candidate_id": "37309642-3275-4fb5-9c95-1c3be5aab804",
+              "score": 4
+            },
+            {
+              "candidate_id": "e573c550-63b1-4010-bcd0-9252a7f5e371",
+              "score": 1
+            },
+            {
+              "candidate_id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+              "score": 2
+            },
+            {
+              "candidate_id": "0c0b7862-09d6-4854-9868-6552478882ae",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+          "name": "Strawberry",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 2,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 2,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": true,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": true,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 7,
+          "fiveStarCount": 1
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "652883a6-fe55-434e-a76e-c22f7d6d4239",
+          "name": "Chocolate",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 0,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": false,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": true,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 5,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+          "name": "Chocolate Chip",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 0,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": false,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": true,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 5,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "e573c550-63b1-4010-bcd0-9252a7f5e371",
+          "name": "Vanilla",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 0,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": true,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 5,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "0c0b7862-09d6-4854-9868-6552478882ae",
+          "name": "Mango",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 0,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 0,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": false,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "37309642-3275-4fb5-9c95-1c3be5aab804",
+          "name": "Fudge Brownie",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": 0,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": 0,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": 0,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+          },
+          "winsAgainst": {
+            "0c0b7862-09d6-4854-9868-6552478882ae": false,
+            "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+            "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+            "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+            "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+            "321ac954-80e2-4832-8ed0-203c46b70e63": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+              "name": "Strawberry",
+              "tieBreakOrder": 5,
+              "votesPreferredOver": {
+                "0c0b7862-09d6-4854-9868-6552478882ae": 2,
+                "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+                "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+                "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+                "e573c550-63b1-4010-bcd0-9252a7f5e371": 2,
+                "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+              },
+              "winsAgainst": {
+                "0c0b7862-09d6-4854-9868-6552478882ae": true,
+                "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+                "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+                "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+                "e573c550-63b1-4010-bcd0-9252a7f5e371": true,
+                "321ac954-80e2-4832-8ed0-203c46b70e63": false
+              },
+              "score": 7,
+              "fiveStarCount": 1
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+              "name": "Chocolate Chip",
+              "tieBreakOrder": 3,
+              "votesPreferredOver": {
+                "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+                "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+                "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+                "3679ba14-eb89-4806-82f6-844605e7f0b6": 0,
+                "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+                "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+              },
+              "winsAgainst": {
+                "0c0b7862-09d6-4854-9868-6552478882ae": false,
+                "37309642-3275-4fb5-9c95-1c3be5aab804": true,
+                "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+                "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+                "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+                "321ac954-80e2-4832-8ed0-203c46b70e63": false
+              },
+              "score": 5,
+              "fiveStarCount": 1
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "five_star",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_advance_to_runoff",
+              "name": "Strawberry",
+              "score": 7
+            },
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "Chocolate",
+                "Chocolate Chip",
+                "Vanilla"
+              ],
+              "score": 5
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_too_many_candidates"
+            },
+            {
+              "key": "tabulation_logs.star.five_star_second",
+              "name": "Chocolate Chip",
+              "votes": 1
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "Strawberry",
+                "Chocolate Chip"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Strawberry",
+                "Chocolate Chip"
+              ],
+              "votes": 1,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tiebreak",
+              "winner": "Strawberry",
+              "runner_up": "Chocolate Chip",
+              "winner_stars": 7,
+              "runner_up_stars": 5
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Strawberry",
+              "runner_up": "Chocolate Chip"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "321ac954-80e2-4832-8ed0-203c46b70e63",
+            "name": "Strawberry",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 2,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 2,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": true,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": true,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 7,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "652883a6-fe55-434e-a76e-c22f7d6d4239",
+            "name": "Chocolate",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 0,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": false,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": true,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 5,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "3679ba14-eb89-4806-82f6-844605e7f0b6",
+            "name": "Chocolate Chip",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 0,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": false,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": true,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 5,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "e573c550-63b1-4010-bcd0-9252a7f5e371",
+            "name": "Vanilla",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 0,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": true,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 5,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "0c0b7862-09d6-4854-9868-6552478882ae",
+            "name": "Mango",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 0,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 1,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 1,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 1,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 0,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 0
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": false,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "37309642-3275-4fb5-9c95-1c3be5aab804",
+            "name": "Fudge Brownie",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": 1,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": 0,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": 0,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": 0,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": 1,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": 1
+            },
+            "winsAgainst": {
+              "0c0b7862-09d6-4854-9868-6552478882ae": false,
+              "37309642-3275-4fb5-9c95-1c3be5aab804": false,
+              "652883a6-fe55-434e-a76e-c22f7d6d4239": false,
+              "3679ba14-eb89-4806-82f6-844605e7f0b6": false,
+              "e573c550-63b1-4010-bcd0-9252a7f5e371": false,
+              "321ac954-80e2-4832-8ed0-203c46b70e63": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 2
+      },
+      "tieBreakType": "five_star",
+      "perm": [
+        "0c0b7862-09d6-4854-9868-6552478882ae",
+        "37309642-3275-4fb5-9c95-1c3be5aab804",
+        "652883a6-fe55-434e-a76e-c22f7d6d4239",
+        "3679ba14-eb89-4806-82f6-844605e7f0b6",
+        "e573c550-63b1-4010-bcd0-9252a7f5e371",
+        "321ac954-80e2-4832-8ed0-203c46b70e63"
+      ]
+    }
+  ]
+}

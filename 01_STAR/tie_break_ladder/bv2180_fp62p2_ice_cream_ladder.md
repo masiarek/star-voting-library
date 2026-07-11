@@ -97,7 +97,7 @@ Full audit copy: [`_tabulated`](tie_break_ladder_tabulated/bv2180_fp62p2_ice_cre
 
 ## BV vs LH
 
-Both engines elect **Strawberry**, and — unlike the 3-way dead heat — they *must* agree: every tie here is broken by a deterministic rung (five-star, then score), so no random shuffle is ever reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) is LH-only.
+Both engines elect **Strawberry** — confirmed against BetterVoting's frozen export ([`_bv_export.json`](bv2180_fp62p2_ice_cream_ladder_bv_export.json)), whose Results record `tieBreakType: five_star` for the scoring round: BV broke the three-way tie by the five-star count, exactly as LH does. Unlike the 3-way dead heat, they *must* agree here: every tie is broken by a deterministic rung (five-star, then score), so no random shuffle is reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) is LH-only.
 
 ## See also
 
