@@ -8,7 +8,7 @@ Each scenario has its own friendly themed cast (fruits, flavors, capitals, …) 
 
 > **When to use two views (house principle).** Show BetterVoting *beside* the LH report only where the two **diverge** (the discrepancy is the lesson) or where reading **BV's own UI** is the point. When they *agree*, LH-only is enough — don't paste screenshots that just duplicate the LH numbers. This tie/abstention set is two-view *because* BV mishandles these cases; the [vote-splitting set](../../method_comparisons/split_voting/) is LH-only *because* BV and LH agree there.
 
-> **Workflow / status.** The LH side is complete and verified. The BV side is being reproduced: for each case you build the BV election, drop the export + screenshots, and the `_<bvid>` suffix is appended to the filenames. **Case 05 is already built** (BV id `xmyf7k`, the documented #1379). Cases where BV diverges show BV's *incorrect* result with a **"bug pending"** callout linking the tracking issue (same pattern as [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)).
+> **Workflow / status.** The LH side is complete and verified. The BV side is being reproduced: for each case you build the BV election, drop the export + screenshots, and the `_<bvid>` suffix is appended to the filenames. **Case 05 is already built** (BV id `xmyf7k`) but is a special one: BV's terminal tiebreak there is **random**, so it's **LH-only / not freezable** — a documented deterministic-vs-random divergence (the logic is WAI), not a bug. Cases where BV produces a genuinely *incorrect* result still show it with a **"bug pending"** callout linking the tracking issue (same pattern as [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md)).
 
 Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
 
@@ -42,7 +42,7 @@ Each scenario has its own friendly cast (fruits, flavors, capitals, lakes, names
 | 02 | [runoff tie, two candidates](Flat_scores_ties_02_runoff_tie_2cand.md) | ice cream | runoff (all Equal Support) | 101 | Almond | NaN on equal ties ⚠️ #1035 |
 | 03 | [runoff tie, even 1-1 split](Flat_scores_ties_03_runoff_tie_split.md) | capitals | runoff (real split) | 201 | Athens | check ⚠️ |
 | 04 | [scoring tie for 2nd slot (2-way)](Flat_scores_ties_04_scoring_tie_2way.md) | lakes | scoring round | 201 | Aral | check ⚠️ |
-| 05 ⚠️ | [scoring 3-way tie **(BV555/#1379)**](Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) | A–E | scoring round | 201/301 | A | **picks C — wrong** ❌ #1379 |
+| 05 🔀 | [scoring 3-way tie **(BV555, xmyf7k)**](Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) | A–E | scoring round | 201/301 | A | **LH lot vs BV random — LH-only** 🔀 #1432 |
 | 06 | [scoring 4-way tie (ties every step)](Flat_scores_ties_06_scoring_tie_4way.md) | names | both rounds | 301 | Ava | "no ballots cast" msg ⚠️ #1052 |
 | 07 | [fully flat ballots (maximal tie)](Flat_scores_ties_07_fully_flat.md) | mountains | both rounds | 301 | Ararat | abstention mis-file ⚠️ #1407 |
 | 08 | [every ballot flat → BV counts 0](Flat_scores_ties_08_all_flat_zero_count.md) | pizza | both rounds | 301 | Anchovy | **0 ballots** (all abstentions) ⚠️ #1407 |
@@ -53,7 +53,8 @@ Each scenario has its own friendly cast (fruits, flavors, capitals, lakes, names
 
 | Report | What it's about | Cases |
 |--------|-----------------|-------|
-| [#1379 — BV555, scoring-round 3-way tie](https://github.com/Equal-Vote/bettervoting/issues/1379) | BV picks different finalists than the reference engine **and** exports no tie-break explanation | 05 |
+| [#1379 — BV555, scoring-round 3-way tie](https://github.com/Equal-Vote/bettervoting/issues/1379) ✅ **WAI (closing)** | the tie-break *logic* is working-as-intended: BV's protocol deliberately skips head-to-head for 3+ way ties. The winner differs only because LH breaks the dead heat by **published lot** and BV by **random** — so case 05 is **LH-only** | 05 |
+| [#1432 — surface tie-break explanations in results + export](https://github.com/Equal-Vote/bettervoting/issues/1432) 🔀 **open (split from #1379)** | expose BV's existing `roundResults.logs` + `tieBreakType` in the human-readable report and JSON; builds on the JSON-v2 export in [PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419) | 05 |
 | [#1371 — JSON: add tie-break priority sequence](https://github.com/Equal-Vote/bettervoting/issues/1371) ✅ **closed** | the randomized tie-break order is now in the export, so another engine can import it and reproduce the result | all |
 | [#1063 — deterministic lot-number tie-breaking](https://github.com/Equal-Vote/bettervoting/issues/1063) | implement the published-lot-number final rule (the fix LH already has) | all |
 | [#242 — Approval/Plurality tie handling](https://github.com/Equal-Vote/bettervoting/issues/242) · [PR #229](https://github.com/Equal-Vote/bettervoting/pull/229) | tabulators break when random tie-breakers are disabled | method note |

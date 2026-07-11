@@ -1,12 +1,22 @@
-# Flat scores 05 — scoring-round 3-way tie (BV555 / #1379)
+# Flat scores 05 — scoring-round 3-way tie (BV555, xmyf7k)
 
-> ⚠️ **The documented divergence — work in progress until BetterVoting is fixed.** This is the one case in the set where BV and LH **pick a different winner.** Same ballots: the LH engine advances **A, B** and elects **A**; BetterVoting (`xmyf7k`) advances **C, A** and declares **C** — and exports **no explanation** of how it broke the tie. Tracked as **[BV555 / #1379](https://github.com/Equal-Vote/bettervoting/issues/1379)**.
+> 🔀 **A documented divergence — deterministic vs random, not a bug.** Three candidates tie at the top of the scoring round and **every score-based tiebreaker stays tied**, so the winner turns entirely on the **terminal tiebreak** — and that is the one rung where LH and BetterVoting genuinely differ: **LH breaks it with a pre-published lot order** (deterministic → advances **A, B**, elects **A**); **BetterVoting breaks it with a random shuffle** (that run: **C, A** → **C**). Same ballots, two published rules, and BV's is **not reproducible**. This is the STAR analog of the Ranked Robin dead-heat case — see [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
 
-**Level 201/301.** Three candidates tie at the top of the scoring round; **every score-based tiebreaker stays tied**; only the **lot number** can separate them. This is the cleanest possible test of "does your tabulator break ties deterministically *and* show its work?" — and the reference answer is A.
+> ⚠️ **LH-only / not freezable.** Because BV's terminal tiebreak is random, there is **no stable BV result to record** — so this case has **no `_bv_export.json`** and documents the **LH** ladder specifically. (`xmyf7k` exists on BetterVoting, but its displayed winner can change between runs.)
 
-→ the cascade: [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · why a published lot order matters: [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) · export of the tie-break sequence — **added by BV, now closed**: [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+**Level 201/301.** This is the cleanest possible test of "does your tabulator break a fully-tied race *deterministically*, and does it *show its work*?" The LH reference answer, with the published lot order `[A, B, C, D, E]`, is **A**.
 
----
+## The two ladders (STAR scoring round)
+
+Both engines agree A, B, C tie at 10 and both stay tied through the 5-star count. They differ only in **how the tie is finally broken**:
+
+| Rung | **LH** `starvote_larry_hastings.py` | **BetterVoting** `Star.ts` / [ties protocol](https://docs.bettervoting.com/help/ties.html) |
+|---|---|---|
+| 1 | head-to-head **among the tied set** | head-to-head **only if exactly 2 are tied** |
+| 2 | most **5-star** ratings | most **5-star** ratings (for 3+ tied, or a h2h tie) |
+| 3 | **lot order** (pre-published `lot_numbers`) | **random** shuffle |
+
+**LH is deterministic at every rung.** **BetterVoting is deterministic only for a clean 2-way tie its head-to-head resolves** — a 3+ way tie (this case) deliberately skips head-to-head and, when 5-star also ties, falls through to **random**. That skip is **working-as-intended**, [confirmed on #1379](https://github.com/Equal-Vote/bettervoting/issues/1379) (closing as WAI); LH's rung-1 head-to-head is a **no-op here anyway** (no preference among A/B/C), so what actually separates the two winners is rung 3: **lot vs random**.
 
 ## The ballots (2 voters)
 
@@ -18,23 +28,25 @@ A, B, C, D, E
 
 Source: [`Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml`](Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml) · BV: <https://bettervoting.com/xmyf7k/results>.
 
-## Where the two engines diverge (the whole point)
+## Where the two engines diverge
 
 | | LH engine (reference) | BetterVoting (`xmyf7k`) |
 |---|---|---|
 | Scoring-round tie | A, B, C tied at 10 | A, B, C tied at 10 |
-| Tie-break shown? | **yes — every step printed** | **no explanation in JSON** |
-| Finalists advanced | **A, B** (lot order) | **C, A** |
+| Head-to-head among tied | applied — **no-op** (all 0) | **skipped** (3-way, per protocol) |
+| 5-star count | A 2 = B 2 = C 2 → tied | A 2 = B 2 = C 2 → tied |
+| Terminal tiebreak | **lot order** → A, B | **random shuffle** → C, A (that run) |
 | Runoff | A vs B → tie → lot → **A** | C vs A → **C** |
-| **Winner** | **A** | **C** ❌ |
+| **Winner** | **A** (reproducible) | **random** (was C) |
+| Tie-break shown? | **yes — every step printed** | **no explanation in the export** |
 
-Both engines see the same three-way tie. LH applies the published lot order (A, B, C, …), advances **A** and **B**, breaks the resulting runoff tie by lot again, and elects **A** — printing each step. The screenshot in #1379 showed BV advancing **C** and **A** and electing **C**. BV has **added the tie-break priority sequence to its JSON export** ([#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), now **closed**), so the result is now **reproducible** — a second engine can import BV's exported order and replay it (the LH engine already accepts an imported lot order for exactly this). What's still open is the substance of #1379: BV using a *different* order than the reference and not showing the tie-break in its human-readable report, plus the request for a **pre-published** lot number rather than a post-hoc random shuffle ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)). **Re-verify `xmyf7k` against a fresh BV run** — the displayed winner may have changed since the export fix.
+Both engines see the same three-way tie. The winners differ **not** because one is wrong on the logic — BV's protocol is deliberate and documented — but because LH resolves the dead heat from a **published lot** while BV resolves it at **random**. Only the LH result is a function of the ballots plus a published order.
 
-## View 1 — BetterVoting (incorrect — bug pending)
+## View 1 — BetterVoting (`xmyf7k`)
 
-BV elects **C**, the wrong finalist set, with no tie-break explanation.
+BV advances two finalists and elects a winner **without showing how the tie was broken**. Because the terminal tiebreak is random, the displayed winner is not stable between runs.
 
-> 📷 _Paste the BetterVoting `xmyf7k` result screenshot here (the one in #1379 showing C as winner). Keep the filename suffix `_xmyf7k`._
+> 📷 _Paste the BetterVoting `xmyf7k` result screenshot here. Keep the filename suffix `_xmyf7k`._
 
 ## View 2 — the LH engine (reference)
 
@@ -66,6 +78,15 @@ Winner: A
 
 Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_05_scoring_tie_3way_xmyf7k_tabulated.txt).
 
+## The two open threads on BetterVoting
+
+The tie-break **logic** question is settled — WAI — so what remains is not "fix the winner" but two orthogonal asks:
+
+- **Transparency** — surface the tie-break steps in BV's human-readable report and JSON. BV already builds them internally (`roundResults.logs` + `tieBreakType` in `Star.ts`); the ask is to expose them. Tracked in **[#1432](https://github.com/Equal-Vote/bettervoting/issues/1432)**, which builds on the JSON-v2 export in **[PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)**. (The earlier export-of-the-tie-break-sequence work landed in [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), now closed.)
+- **Pre-published lot** — a body-established lot order instead of a post-hoc random shuffle, so a fully-tied race is reproducible across engines. Tracked in **[#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)**.
+
+→ the cascade: [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · the RR analog: [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+
 ## The takeaway
 
-When every score-based tiebreaker ties, the only thing that lets two independent systems agree is a **shared tie-break order**. LH publishes its lot order and prints every step; BV **now exports** its tie-break sequence too ([#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), recently added), so the result can be reproduced by importing that order. What keeps this case flagged is the rest of [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379): BV choosing different finalists than the reference here and not showing the tie-break in its human-readable report — and the open ask for a **pre-published** lot number rather than a random shuffle ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)). Confirm the current `xmyf7k` result before treating the winner divergence as live.
+When every score-based tiebreaker ties, the only thing that lets two independent systems agree is a **shared, deterministic tie-break order**. LH publishes its lot order and prints every step, so its winner (**A**) is reproducible from the ballots plus that order. BetterVoting's protocol is a deliberate, documented compromise — but it resolves this fully-tied case at **random**, so its winner isn't a function of the ballots and **can't be frozen**. That is why this case is **LH-only**. The productive asks are transparency ([#1432](https://github.com/Equal-Vote/bettervoting/issues/1432) / [PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)) and a pre-published lot ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)) — not a winner "fix."

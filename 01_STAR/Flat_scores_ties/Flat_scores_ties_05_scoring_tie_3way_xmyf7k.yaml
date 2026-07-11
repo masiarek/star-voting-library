@@ -1,13 +1,18 @@
 election:
-  election_title: Flat scores 05 — scoring-round 3-way tie (BV555 / #1379)
+  election_title: Flat scores 05 — scoring-round 3-way tie (BV555, xmyf7k)
   election_description: |-
-    THE documented bug case. A, B, C tie at 10; every score-based tiebreaker stays
-    tied; the lot-number fallback picks A, B as finalists and A wins. BetterVoting
-    (xmyf7k) instead picks C and A and declares C the winner, and exports NO
-    tie-break explanation. Same ballots, different winner -> a real divergence.
-    Tracked: BV555 #1379 (wrong finalists + missing explanation), #1371 closed (JSON
-    sequence), #1063 (lot-number tie-break). Level 201/301. WORK IN PROGRESS until
-    BV is fixed. Lesson: Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
+    A 3-way scoring-round tie (A, B, C all at 10) where every score-based tiebreaker
+    stays tied, so the winner turns on the TERMINAL tiebreak — and that is where LH and
+    BetterVoting part ways: LH uses a pre-published lot order (deterministic -> A, B
+    advance, A wins); BV uses a random shuffle (that run: C, A -> C). Same ballots, but
+    BV's result is NOT reproducible, so this case is LH-ONLY / not freezable (no
+    _bv_export.json — a random BV winner can't be frozen). The logic divergence is
+    working-as-intended, not a bug: BV's ties protocol deliberately skips head-to-head
+    for 3+ way ties (confirmed on #1379, closing WAI); LH's extra head-to-head-among-tied
+    rung is a no-op here anyway. What stays open is transparency — surfacing BV's
+    tie-break steps in the results/JSON export — now tracked in #1432 (builds on the
+    JSON-v2 export in PR #1419). Precedent: the Ranked Robin analog, rr_tiebreak_lh_vs_bv.md.
+    Level 201/301. Lesson: Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
     BV: https://bettervoting.com/xmyf7k/results
   options:
     show_description: false

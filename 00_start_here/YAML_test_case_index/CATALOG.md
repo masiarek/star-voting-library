@@ -130,7 +130,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | Flat_scores_ties_02_runoff_tie_2cand | Flat scores 02 — runoff tie, two candidates (everyon | 1 | single-race | 2 | STAR | LH-only |
 | Flat_scores_ties_03_runoff_tie_split | Flat scores 03 — runoff tie, an even 1-1 split | 1 | single-race | 2 | STAR | LH-only |
 | Flat_scores_ties_04_scoring_tie_2way | Flat scores 04 — scoring-round tie for the 2nd final | 1 | single-race | 3 | STAR | LH-only |
-| Flat_scores_ties_05_scoring_tie_3way_xmyf7k | Flat scores 05 — scoring-round 3-way tie (BV555 / | 1 | single-race | 2 | STAR | LH-only |
+| Flat_scores_ties_05_scoring_tie_3way_xmyf7k | Flat scores 05 — scoring-round 3-way tie (BV555, xmy | 1 | single-race | 2 | STAR | LH-only |
 | Flat_scores_ties_06_scoring_tie_4way | Flat scores 06 — scoring-round 4-way tie (ties at ev | 1 | single-race | 2 | STAR | LH-only |
 | Flat_scores_ties_07_fully_flat | Flat scores 07 — fully flat ballots (the maximal tie | 1 | single-race | 2 | STAR | LH-only |
 | Flat_scores_ties_08_all_flat_zero_count | Flat scores 08 — every ballot flat (BetterVoting cou | 1 | single-race | 5 | STAR | LH-only |
