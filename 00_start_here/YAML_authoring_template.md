@@ -102,6 +102,7 @@ expected_winners:
 | `num_winners` | recommended (defaults to 1 with a NOTE) | Seats to fill. Multi-winner needs a multi-winner method. |
 | `ballots` | **yes** | The ballot grid (see rules below). Must be a literal block: write `ballots: \|-` and indent every row. |
 | `expected_winners` | **yes, for a test case** | Top-level list of winner name(s). This is the key the automated test suite discovers and asserts. |
+| `expected_results` | optional | Richer answer key — per-round scores, the runoff, turnout/quorum figures — beyond the bare winner. Emitted by the BetterVoting converter; the engine reads it the same way. |
 | `election_title` | optional | One-line human title, printed as the report header. |
 | `scenario_description` | optional | Printable context (echoed only if `show_description: true`; always in `_tabulated`). |
 | `video_script` | optional | Presenter notes. Never echoed. |
@@ -109,6 +110,8 @@ expected_winners:
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |
 | `blocs` | optional | Named candidate groups for the vote-splitting analysis. |
+
+> **Richer, converter-produced files.** Elections imported from BetterVoting (via the [JSON→YAML converter](../YAML_library/1_positive/01_convert_json_yaml.py)) carry a fuller shape than a hand-written case: candidates as objects with **explicit IDs** (not just a name row), more `election_*` context, and an **`expected_results:`** block that pins per-round detail. You don't hand-write these — the converter emits them — but the flat, hand-authored fields above are all you need to write a case yourself.
 
 ## `voting_method` values
 

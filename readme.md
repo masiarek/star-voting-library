@@ -32,8 +32,6 @@ expected_winners:
 - Bob
 ```
 
-Richer files — the shape the BetterVoting converter produces — add candidates with explicit IDs, human context, an optional `lot_numbers:` tie-break order, and an `expected_results:` block. Score cells may also carry **markers** (`-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all count as 0 but are preserved so reports and quorums stay honest), and rows can be **weighted** (`42 × 0,3,5`). Approval ballots accept only `0`/`1`.
-
 The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](00_start_here/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](00_start_here/TIPS_choosing_voter_counts.md).
 
 ---
