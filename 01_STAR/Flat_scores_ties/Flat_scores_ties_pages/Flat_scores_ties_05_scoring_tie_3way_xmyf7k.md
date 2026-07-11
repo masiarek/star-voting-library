@@ -89,7 +89,8 @@ E          0  2  0  0  0  0  |     8   4.0
    C             -- 2 -- Tied for first place
  There's still a three-way tie for first.
 
-*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
     Lot-number priority order: ['A', 'B', 'C', 'D', 'E']
 
 [Tiebreaker: Lot Number Priority]

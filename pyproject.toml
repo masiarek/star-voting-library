@@ -3,7 +3,7 @@ name = "yaml"
 version = "0.1.0"
 description = "STAR Voting education & test-case library: a vendored STAR / RCV-IRV tabulation engine, example elections, a BetterVoting JSON->YAML converter, and a pytest suite."
 readme = "readme.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10,<3.14"
 dependencies = [
     "faker>=40.19.1",
     "mypy>=2.0.0",
