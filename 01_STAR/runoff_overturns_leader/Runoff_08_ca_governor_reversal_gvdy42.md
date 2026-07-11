@@ -28,9 +28,17 @@ On this election, BetterVoting's **"Distribution of Equal Support" graph** (Stat
 
 ## View 1 — BetterVoting (`gvdy42`)
 
-STAR winner **Tom Steyer (D)**; runoff Steyer 98 vs Lapp 80, 124 Equal Support (302 tallied).
+BetterVoting's official results, with the **runoff reversal on full display**: the scoring bars put Lapp (R) on top (395), yet the winner banner reads **Tom Steyer (D)** — and BV's own UI even prints a *"Why is the top scoring candidate different from the winner?"* explainer.
 
-> 📷 _Paste the BetterVoting `gvdy42` results screenshot into `img/` (suffix `_gvdy42`). The buggy "Distribution of Equal Support" graph — 5 vs 124 — is worth capturing too, for lesson 3._
+![BetterVoting OFFICIAL RESULTS for the 2026 California Governor Election (STAR Voting), 302 voters, "⭐ Tom Steyer (D) wins! ⭐". Scoring Round bars: Alicia Olivia Lapp (R) 395, Tom Steyer (D) 390, Tom Woodard (L) 366, Duane Terrence Loynes Jr. (NPP) 364, Matt Mahan (D) 352, Lukasz Adam Filinski (NPP) 351, Katie Porter (D) 348, Lewis Herms (NPP) 348, "+52 more". Automatic Runoff Round bars in percent mode: Tom Steyer (D) 32%, Alicia Olivia Lapp (R) 26%, Equal Support 41%, with a dashed "majority threshold (½ of voters with preference)" line that only Steyer crosses.](img/gvdy42_official_results.png)
+
+The runoff bars toggled to **raw counts** — **Steyer 98 vs Lapp 80** (Equal Support 124) — matching the LH report exactly:
+
+![BetterVoting Automatic Runoff Round bars in count mode: Tom Steyer (D) 98, Alicia Olivia Lapp (R) 80, Equal Support 124, above BetterVoting's "Why is the top scoring candidate different from the winner?" explanation card](img/gvdy42_runoff_counts.png)
+
+Note BV's **Equal Support bar — 41%** (124 / 302 = 41.1%) — the tallied denominator that *excludes* the 17 abstentions (which is why LH's Equal Support reads 141, not 124; see lesson 2). And mind BV's percent view: it divides every bar by all **302** voters (Steyer 32%, Lapp 26%), so neither finalist shows a bare "majority" — the actual STAR runoff is **98 : 80 of the 178 decided voters (55% : 45%)**, which is what the dashed majority line marks.
+
+> 📷 _Still wanted for lesson 3: a screenshot of the buggy "Distribution of Equal Support" graph (Stats for Nerds) showing 5 vs 124 — save as `img/gvdy42_equal_support_graph_bug.png`._
 
 ## View 2 — the LH engine (reference)
 
