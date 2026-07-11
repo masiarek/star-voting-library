@@ -37,4 +37,8 @@
 
 BetterVoting counts a ballot as an **abstention** when it is **flat** — every candidate scored the same — and excludes it from the tally. That includes an all-zeros ballot **and** an engaged ballot like all-5s or `3,3,3`. The LH engine instead counts every cast ballot and treats only a **blank** ballot as an abstention, filing flat ballots under **Equal Support**. Same winner, different tally and score totals — see [Where the two reports differ](../reporting_diff_BV_LH.md).
 
+### A related display bug — the "Distribution of Equal Support" graph (#1390)
+
+The same **blank (`null`) vs explicit `0`** distinction bit one of BetterVoting's *Stats for Nerds* charts. On the real **[CA Governor election `gvdy42`](../../../01_STAR/runoff_overturns_leader/Runoff_08_ca_governor_reversal_gvdy42.md)**, the "Distribution of Equal Support" graph showed a single bar built from only **5** ballots, though the runoff correctly counted **124** equal-support. The widget compared raw scores, so ballots that skipped *both* finalists (`null == null`) and `null`-vs-`0` ballots were silently dropped. Fixed by coercing skipped scores to `0` to match the tabulator — [#1390](https://github.com/Equal-Vote/bettervoting/issues/1390) / [PR #1431](https://github.com/Equal-Vote/bettervoting/pull/1431). The tabulator was always right; only the chart was wrong. (LH independently reproduces the 124: it reports 141 Equal Support = 124 + the 17 abstentions it folds in.)
+
 Try it: [bettervoting.com](https://bettervoting.com) · [help & FAQ](https://docs.bettervoting.com) · a real frozen result: [pet race snapshot](../../../01_STAR/pet_real_bv_election/BV_result_snapshot.md).

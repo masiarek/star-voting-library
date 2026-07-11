@@ -411,3 +411,12 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV655 - “equal opposition” vote - the “Same-Score Ballots”  | STAR | 2 | **Option 1** |
 | Abstain Vote | STAR | 2 | **Option 2** |
 
+## — — 2026 California Governor Election
+
+**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_overturns_leader/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| 2026 STAR Voting Governor Election | STAR | 61 | **Tom Steyer (D)** |
+| 2026 Ranked Choice Voting Governor Election | IRV | 61 | **Duane Terrence Loynes Jr. (NPP)** |
+

@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**264 election files** (229 single-winner, 35 multi-winner) across 14 method(s).
+**265 election files** (230 single-winner, 35 multi-winner) across 14 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 140 |
+| STAR | 141 |
 | RCV-IRV (Hare) | 11 |
 | Ranked Robin (RCV-RR / Copeland) | 33 |
 | Approval | 10 |
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (140)
+## STAR  (141)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -89,6 +89,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Runoff_05_reversal_with_equal_support_xgkw3w`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_05_reversal_with_equal_support_xgkw3w.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 05 — reversal with Equal Support → _Sage_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.yaml) |
 | [`Runoff_06_confirms_at_scale_d664xw`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_06_confirms_at_scale_d664xw.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 06 — the runoff confirms the leader at scale (control) → _Wren_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_06_confirms_at_scale_d664xw.yaml) |
 | [`Runoff_07_flat_ballot_bv_bug_tf73v9`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 07 (WIP) — flat ballot exposes the BV abstention bug → _Blair_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml) |
+| [`Runoff_08_ca_governor_reversal_gvdy42`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/Runoff_08_ca_governor_reversal_gvdy42.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff 08 — CA Governor, a real STAR field of 61 (BV2181, gvdy42) → _Tom Steyer (D)_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/Runoff_08_ca_governor_reversal_gvdy42.yaml) |
 | [`reversal_convincing_c3_b100`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/reversal_convincing_c3_b100.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise → _Nora_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/reversal_convincing_c3_b100.yaml) |
 | [`reversal_jarring_c3_b100`](../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_pages/reversal_jarring_c3_b100.md) | `01_STAR/runoff_overturns_leader/` | 1 | Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival → _Rye_ | [`.yaml`](../../01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml) |
 | [`bv126_ties_every_step_8fvd2x`](../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_pages/bv126_ties_every_step_8fvd2x.md) | `01_STAR/tie_break_dead_rung/` | 1 | BV126 — ties at every step (single-winner STAR); #1052 → _Amy_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/bv126_ties_every_step_8fvd2x.yaml) |

@@ -17,6 +17,7 @@ This is STAR's single most important lesson — the one BetterVoting itself asks
 | 05 | [reversal with Equal Support](Runoff_05_reversal_with_equal_support_xgkw3w.md) | 201 | "no preference" voters → the two-denominator bridge |
 | 06 | [confirms at scale](Runoff_06_confirms_at_scale_d664xw.md) | 101 | control bookend — leader confirmed 4–1 |
 | 07 ⚠️ | [flat ballot / BV bug **(WIP)**](Runoff_07_flat_ballot_bv_bug_tf73v9.md) | 201/301 | the one case where the reports *disagree* — a flat ballot BV mis-files as an abstention ([#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)) |
+| 08 | [CA Governor, a real field of 61 **(BV2181, `gvdy42`)**](Runoff_08_ca_governor_reversal_gvdy42.md) | 201/301 | the largest live case — Lapp (R) tops the score, **Steyer (D)** wins the runoff 98–80; also the Equal-Support reconciliation (141 = 124 + 17 abstentions) and the #1390 graph bug ([PR #1431](https://github.com/Equal-Vote/bettervoting/pull/1431)) |
 
 ↔ **BV QA tracker:** this set is the runnable home for **BV90** (scoring/runoff divergence) and **BV205** (top-scoring candidate ≠ winner) — the "Runoff Reversal" scenarios.
 
