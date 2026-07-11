@@ -54,7 +54,7 @@ Because these are generated, they can't drift from the source. Edit the YAML, re
 
 ## The companion ideas
 
-- **Store rich, display clean.** Keep all the context *in* the YAML; control what appears on screen with `options:` (e.g. `show_description: false`). You never delete information to get a clean demo. → [ORGANIZATION.md — storage ≠ display](ORGANIZATION.md)
+- **Store rich, display clean.** Keep all the context *in* the YAML; control what appears on screen with `options:` (e.g. `show_description: false`). You never delete information to get a clean demo. → [ORGANIZATION.md — storage ≠ display](ORGANIZATION.md) The sharpest example is the **marker vocabulary** (`-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued): all tabulate as `0`, yet the file records *why* each line is zero — a distinction a flat CSV of scores would flatten away. → [Abstention vs. a zero vs. "None of the Above"](STAR_Voting/abstention_vs_zero_vs_nota.md)
 - **The pipeline.** author → validate → tabulate → verify → publish, all wrapped around the one file. → [readme.md — one YAML file, a pipeline around it](../readme.md)
 - **The shape of a case.** Which fields are for humans vs the engine, ready to copy. → [YAML authoring template](YAML_authoring_template.md)
 
