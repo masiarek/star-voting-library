@@ -1,6 +1,6 @@
 # Ballot & Terminology Basics
 
-*The four ideas people most often get wrong about voting methods — a short reading path. Read in order, or jump to whichever myth you're clearing up.*
+*The four ideas people most often get wrong about voting methods — a short, four-step reading path. Read in order, or jump to whichever myth you're clearing up.*
 
 → New to the library? The front door is [**00_START_HERE**](00_START_HERE.md). This page is the **ballot-types & terminology primer** — the cluster of confusion hiding behind the word "RCV." For the deeper "what is a ballot vs. a count" foundation, see [What is a voting method? — a ballot and a count](voting_method_ballot_and_count.md) (its spoken companion is the [conversation version](what_is_a_voting_method.md)).
 
@@ -10,7 +10,7 @@
 
 ---
 
-Most confusion about "RCV" comes from four mix-ups: a slippery name, mistaking scores for ranks, lumping in methods that aren't ranked at all, and assuming every ranked ballot works like the next. These four pages, read together, fix that.
+Most confusion about "RCV" comes from four mix-ups: a slippery name, mistaking scores for ranks, lumping in methods that aren't ranked at all, and assuming every ranked ballot works like the next. These four steps, read together, fix that.
 
 ## The reading path
 

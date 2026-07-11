@@ -1,6 +1,6 @@
 # Concepts — deep-dive pages for the important terms
 
-**New here? Start with [Ballot & Terminology Basics](ballot_and_terminology_basics.md)** — a short 4-page reading path through the ideas people most often get wrong (terminology, scores vs. ranks, what counts as "ranked," and strict vs. weak ranks).
+**New here? Start with [Ballot & Terminology Basics](ballot_and_terminology_basics.md)** — a short four-step reading path through the ideas people most often get wrong (terminology, scores vs. ranks, what counts as "ranked," and strict vs. weak ranks).
 
 Not every glossary term needs its own page — most are fine as a one-liner in [Glossary — voting methods & criteria](GLOSSARY.md). This folder holds the handful of concepts that are **load-bearing in debates** and worth a focused page with a worked example and **links to the test-case YAMLs** that demonstrate them.
 
