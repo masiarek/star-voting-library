@@ -14,9 +14,9 @@ repo's approval YAML files. Two jobs:
    bloc-Approval result (see `tests/test_abcvoting_crosscheck.py`).
 
 Usage (CLI):
-    python abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml
-    python abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav,pav
-    python abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --seats 3
+    python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml
+    python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav,pav
+    python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --seats 3
 
 Programmatic:
     from abc_tabulation import tabulate_abc

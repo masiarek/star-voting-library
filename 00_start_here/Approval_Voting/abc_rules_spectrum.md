@@ -65,7 +65,7 @@ Two lessons drop out: STAR's *runoff* adds nothing over AV on binary ballots (Bl
 
 ```bash
 pip install abcvoting
-python abcvoting_tabulation_engine/abc_tabulation.py \
+python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
   04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
   --rules av,pav,cc,seqphragmen
 # av -> {A,B,C,D}|{A,B,C,F} ; pav -> {A,B,C,F} ; cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}

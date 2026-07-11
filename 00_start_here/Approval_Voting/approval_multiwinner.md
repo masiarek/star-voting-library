@@ -68,7 +68,7 @@ The approval ballot itself carries enough information for proportionality; you c
 
 This ladder — *same ballot, majoritarian bloc count vs proportional reweighting* — is why the [Equal Vote Coalition's Approval page](https://www.equal.vote/approval) lists "can be used for single-winner or multi-winner elections and can be adapted for proportional representation" among Approval's advantages.
 
-**Engine note:** the LH engine tabulates **bloc Approval only** (`voting_method: Approval_Multi_Winner`, `num_winners: ≥ 2`). The proportional rules are runnable too, via the [the abcvoting engine](../../abcvoting_tabulation_engine/) wrapper around Martin Lackner's peer-reviewed [`abcvoting`](https://github.com/martinlackner/abcvoting) library. On the sweep example above, plain `av` sees the same 2–2 tie the LH engine breaks by priority — but every proportional rule seats the minority's Cora *decisively*:
+**Engine note:** the LH engine tabulates **bloc Approval only** (`voting_method: Approval_Multi_Winner`, `num_winners: ≥ 2`). The proportional rules are runnable too, via the [the abcvoting engine](../../06_Other/abcvoting_tabulation_engine/) wrapper around Martin Lackner's peer-reviewed [`abcvoting`](https://github.com/martinlackner/abcvoting) library. On the sweep example above, plain `av` sees the same 2–2 tie the LH engine breaks by priority — but every proportional rule seats the minority's Cora *decisively*:
 
 ```text
 --- abcvoting: approval-based committee rules (2 seats) ---

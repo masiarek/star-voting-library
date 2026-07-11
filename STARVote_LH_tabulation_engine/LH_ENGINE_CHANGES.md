@@ -77,7 +77,7 @@ All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **echo*
 Independent referees confirm the LH picks; not part of the LH engine, but part of the "is it right" story.
 
 - **`pref_voting`** (Eric Pacuit) — independent Condorcet / IRV / Plurality / Copeland referee across the library (currently 0 mismatches). `tools_adam/pref_voting_tabulation_engine/`, `tests/test_pref_voting_crosscheck.py`.
-- **`abcvoting`** (Martin Lackner) — multi-winner Approval (`av` cross-check + proportional `seqpav`/`pav`/`seqphragmen`). `abcvoting_tabulation_engine/`, `tests/test_abcvoting_crosscheck.py`.
+- **`abcvoting`** (Martin Lackner) — multi-winner Approval (`av` cross-check + proportional `seqpav`/`pav`/`seqphragmen`). `06_Other/abcvoting_tabulation_engine/`, `tests/test_abcvoting_crosscheck.py`.
 - **BetterVoting** — the frozen `_bv_export.json` Results give a third tally for BV-backed cases. **RR tiebreak caveat:** LH breaks a Copeland tie by margin → lot (deterministic); BV by head-to-head → random, so a tie-deciding RR case is LH-only.
 
 ---

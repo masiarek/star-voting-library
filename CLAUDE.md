@@ -380,7 +380,7 @@ else is the same.
   result can't be frozen). Worked: `00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md`.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
-- `abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)
+- `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)
   rules via Martin Lackner's `abcvoting` (optional `pip install abcvoting`;
   everything guards on it). `av` doubles as an independent cross-check of the
   LH bloc-Approval count; `seqpav` / `pav` / `seqphragmen` add the proportional

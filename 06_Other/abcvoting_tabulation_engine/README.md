@@ -4,14 +4,14 @@ Runs **approval-based committee (ABC)** rules from Martin Lackner's [`abcvoting`
 
 It does two jobs:
 
-1. **Extends the LH engine.** The [LH engine](../STARVote_LH_tabulation_engine) tabulates **bloc** Approval only (`voting_method: Approval_Multi_Winner` — the `num_winners` most-approved win). This wrapper adds the **proportional** rules on the *same ballots*: **SPAV** (`seqpav`), **PAV** (`pav`), and **seq-Phragmén** (`seqphragmen`) — the rules described in [Approval — Multi-Winner](../00_start_here/Approval_Voting/approval_multiwinner.md).
-2. **Independent cross-check.** abcvoting's plain `av` rule must elect the same committee as the LH engine's bloc-Approval count — an outside witness that the LH approval tally is correct, in the same spirit as the [`pref_voting` cross-check](../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine) for ranked methods.
+1. **Extends the LH engine.** The [LH engine](../../STARVote_LH_tabulation_engine) tabulates **bloc** Approval only (`voting_method: Approval_Multi_Winner` — the `num_winners` most-approved win). This wrapper adds the **proportional** rules on the *same ballots*: **SPAV** (`seqpav`), **PAV** (`pav`), and **seq-Phragmén** (`seqphragmen`) — the rules described in [Approval — Multi-Winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
+2. **Independent cross-check.** abcvoting's plain `av` rule must elect the same committee as the LH engine's bloc-Approval count — an outside witness that the LH approval tally is correct, in the same spirit as the [`pref_voting` cross-check](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine) for ranked methods.
 
 ```bash
 pip install abcvoting        # optional dependency — everything guards on it
 
-python abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
-python abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav,pav,seqphragmen --seats 3
+python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
+python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav,pav,seqphragmen --seats 3
 ```
 
 On the repo's majority-sweep case (6 voters, 2 seats: a 4-voter majority behind Amy — two of them also approving Ben — and a 2-voter minority behind Cora/Doug) it prints:
@@ -33,6 +33,6 @@ Notes:
 - **Ties:** an ABC rule can return *several* tied committees; all are printed (`[N tied committees]`).
 - **Empty ballots** (no approvals) can't affect any ABC rule; they are dropped and the count reported.
 - `abcvoting` offers many more rules (`monroe`, `cc`, `lexcc`, `rule-x`/MES, …) — pass any rule id via `--rules`. Exact PAV/Monroe use an ILP solver on large instances; the repo's small teaching cases compute instantly.
-- Tested by [`tests/test_abcvoting_crosscheck.py`](../STARVote_LH_tabulation_engine/tests/test_abcvoting_crosscheck.py) (skips cleanly if `abcvoting` isn't installed).
+- Tested by [`tests/test_abcvoting_crosscheck.py`](../../STARVote_LH_tabulation_engine/tests/test_abcvoting_crosscheck.py) (skips cleanly if `abcvoting` isn't installed).
 
 # file: README.md

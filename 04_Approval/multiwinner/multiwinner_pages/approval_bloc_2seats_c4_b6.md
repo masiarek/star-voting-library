@@ -15,7 +15,7 @@ Ben and Cora tie 2–2 for the last seat, and candidate priority order
 note. The lesson: bloc Approval is majoritarian, not proportional —
 same trade-off as Bloc STAR (02_STAR_Bloc). Proportional rules on the
 SAME ballots (SPAV, PAV, seq-Phragmén — run them via
-abcvoting_tabulation_engine/) instead elect Amy + Cora decisively,
+06_Other/abcvoting_tabulation_engine/) instead elect Amy + Cora decisively,
 giving the minority its seat; see
 00_start_here/Approval_Voting/approval_multiwinner.md.
 

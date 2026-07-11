@@ -96,7 +96,7 @@ Everything above is the *minimal* view: scores → finalists → runoff → winn
 
 ## How often does it happen? (301)
 
-Often enough to matter — but the exact rate depends entirely on your modelling assumptions, which is a lesson in itself. A brute-force simulation ([`simulations/runoff_reversal_simulation.py`](../../simulations/runoff_reversal_simulation.py)) measures it: under a realistic *spatial* electorate of ~100 voters, a clean Runoff Reversal happens in roughly **1 election in 11**; under white-noise *Impartial Culture* it's higher, and at tiny electorates the figure is dominated by ties. The takeaway for a debate: never quote a bare percentage without naming the model, the electorate size, and how ties were counted. Full writeup: [Simulations — measure it, don't guess it](../../simulations/README.md#runoff-reversal-frequency-simulation).
+Often enough to matter — but the exact rate depends entirely on your modelling assumptions, which is a lesson in itself. A brute-force simulation ([`06_Other/simulations/runoff_reversal_simulation.py`](../../06_Other/simulations/runoff_reversal_simulation.py)) measures it: under a realistic *spatial* electorate of ~100 voters, a clean Runoff Reversal happens in roughly **1 election in 11**; under white-noise *Impartial Culture* it's higher, and at tiny electorates the figure is dominated by ties. The takeaway for a debate: never quote a bare percentage without naming the model, the electorate size, and how ties were counted. Full writeup: [Simulations — measure it, don't guess it](../../06_Other/simulations/README.md#runoff-reversal-frequency-simulation).
 
 ## Run them yourself
 

@@ -53,20 +53,20 @@ Prominence follows the library's mission: the **equal-vote (EVC) methods get the
 03_STAR_PR/           proportional STAR (sss / allocated / rrv)
 04_Approval/          Approval Voting
 05_Ranked_Robin/      Ranked Robin (RCV-RR / Copeland)
-06_Other/             non-EVC reference methods, each in its own subfolder —
+06_Other/             non-EVC reference methods + auxiliary engines/tools, each in its own subfolder —
   RCV_IRV/            RCV-IRV example + its engine (RCV_IRV_tabulation_engine/)
   STV/                STV example
   Range/              Range example + its engine (Range_tabulation_engine/)
+  abcvoting_tabulation_engine/   multi-winner Approval (ABC) cross-check (optional)
+  simulations/        Monte-Carlo scripts (favorite-betrayal / runoff-reversal rates)
 method_comparisons/   SAME ballots, DIFFERENT methods — black_curtain,
                       center_squeeze, monotonicity, split_voting, summability,
                       paradoxes_and_whoops, BV_Library, divergence_review
 YAML_library/         BetterVoting JSON→YAML converter + positive/negative fixtures
-simulations/          Monte-Carlo scripts (favorite-betrayal / runoff-reversal rates)
 _demo_dropbox/        watch-folder demo (drop a BV export, get YAML + tabulation)
 STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
   tools_adam/         Adam's tooling — the build scripts (scripts/), the
                       pref_voting cross-check engine, find_*divergence.py
-abcvoting_tabulation_engine/     multi-winner Approval (ABC) cross-check (optional)
 ```
 
 - **`_tabulated` output nests INSIDE the source file's own folder** as `<folder>/<folder>_tabulated/` (the engine computes this: `tabulated_output_path`). Loose files live in a `_main/` subfolder so their mirrors nest the same way. Generated, regenerable, separate from source, but right next to the YAML it came from. (Committed by choice; they could be gitignored instead.)

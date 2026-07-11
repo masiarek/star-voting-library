@@ -90,7 +90,7 @@ If *enough* of those Palin voters had **betrayed Palin** and ranked **Begich 1st
 
 Concede it cleanly: **STAR is also not formally FBC-compliant.** Equal Vote's criteria chart marks STAR ❌ on Favorite Betrayal — it's a *binary* pass/fail, with **no percentage attached.** (You may have seen "~98%" quoted, including in earlier drafts of this repo. That figure has **no FBC source** — it was borrowed from STAR's *accuracy* score, Voter Satisfaction Efficiency ~91–98%, which measures something else entirely. Don't use it.)
 
-So instead of quoting a number we can't defend, we **measured** FBC directly — see `simulations/fbc_simulation.py`, which brute-forces every voter's best favorite-betrayal across thousands of random elections. Two honest results:
+So instead of quoting a number we can't defend, we **measured** FBC directly — see `06_Other/simulations/fbc_simulation.py`, which brute-forces every voter's best favorite-betrayal across thousands of random elections. Two honest results:
 
 - **On raw frequency, neither method is FBC-proof — and STAR is *not* better than RCV-IRV.** Under a realistic spatial model STAR is FBC-compliant in ~92–96% of elections and RCV-IRV in ~95–97% — essentially a tie, IRV slightly ahead. (FBC is an *existence* test, and STAR's score ballot simply offers far more betrayal ballots in which to find one that helps.) So *"STAR fails FBC less often than IRV"* is **not** a claim the numbers support — drop it.
 - **The real, measurable difference is whether betrayal ever pays.** Of the favorite-betrayals that actually change who wins, only **~2% help the voter under STAR** — the other ~98% backfire — versus **~7–12% under RCV-IRV.** Betrayal is several times more likely to pay off in IRV, and STAR's rare wins need extreme ballots plus near-perfect knowledge of everyone else's vote. *That* is the only defensible "98%": not "FBC-compliant 98% of the time," but **"favorite betrayal backfires ~98% of the time you'd try it."**
@@ -124,7 +124,7 @@ So *every* method must give up at least one:
 | Score | ✅ | ❌ |
 | **STAR** | ❌ rare — and betrayal backfires ~98% of the time it's tried | ❌ rare |
 
-Read across the STAR row: it commits to neither criterion fully, accepting rare failures of *each* in exchange for a majority-backed, exaggeration-resistant result. The payoff isn't that STAR passes FBC more often than RCV-IRV (it doesn't — see `simulations/`) — it's that in STAR a favorite-betrayal almost never pays off, so honesty stays your safest ballot.
+Read across the STAR row: it commits to neither criterion fully, accepting rare failures of *each* in exchange for a majority-backed, exaggeration-resistant result. The payoff isn't that STAR passes FBC more often than RCV-IRV (it doesn't — see `06_Other/simulations/`) — it's that in STAR a favorite-betrayal almost never pays off, so honesty stays your safest ballot.
 
 **The reframe to leave them with:** Later-No-Harm sounds nice, but it's the very property that *forces* center squeeze — guaranteeing your later choices never help your favorite is mathematically the same as guaranteeing a broadly-liked compromise can't be rescued by being everyone's strong second. STAR gives that up on purpose, because "your honest support for a compromise should be allowed to help elect them" is the *better* value.
 
@@ -169,5 +169,5 @@ Read across the STAR row: it commits to neither criterion fully, accepting rare 
 - Slide 4 in `00_start_here/Why_STAR_Voting.md` (the claim this defends) and its Part 2 talking point **#12**.
 - `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the runoff / Equal-Support sibling of this concede-then-reframe argument.
 - `LINKS.md` → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
-- `simulations/fbc_simulation.py` + `simulations/README.md` — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
+- `06_Other/simulations/fbc_simulation.py` + `06_Other/simulations/README.md` — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
 - `00_start_here/residual_vote_splitting.md` — the same "only top-two advance" root cause seen as vote-splitting: STAR's self-inflicted bullet-voting / chicken-dilemma edge case, with the `split_voting/05a`–`05b` matched demo.

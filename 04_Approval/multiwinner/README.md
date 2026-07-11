@@ -40,11 +40,11 @@ Run it yourself:
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
 ```
 
-The **proportional** Approval rules (SPAV, PAV, seq-Phragmén) run on the same file via the [`abcvoting` engine](../../abcvoting_tabulation_engine/) — all of them break the sweep and give the minority its seat (Amy + Cora):
+The **proportional** Approval rules (SPAV, PAV, seq-Phragmén) run on the same file via the [`abcvoting` engine](../../06_Other/abcvoting_tabulation_engine/) — all of them break the sweep and give the minority its seat (Amy + Cora):
 
 ```bash
 pip install abcvoting   # once
-python abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
+python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
 ```
 
 Same trade-off, score-ballot edition: Bloc STAR sweeps too ([Bloc STAR](../../02_STAR_Bloc/)); the proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/)). Concepts: [Approval — Multi-Winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).

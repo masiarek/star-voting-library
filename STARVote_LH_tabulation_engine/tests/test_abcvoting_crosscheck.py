@@ -21,7 +21,7 @@ abcvoting = pytest.importorskip("abcvoting")
 
 ENGINE_DIR = pathlib.Path(__file__).resolve().parents[1]
 REPO_ROOT = ENGINE_DIR.parent
-sys.path.insert(0, str(REPO_ROOT / "abcvoting_tabulation_engine"))
+sys.path.insert(0, str(REPO_ROOT / "06_Other/abcvoting_tabulation_engine"))
 from abc_tabulation import tabulate_abc  # noqa: E402
 
 ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",

@@ -67,7 +67,7 @@ python3 fbc_simulation.py --elections 3000 --voters 41 --candidates 3 --seed 7
 
 ## Runoff Reversal frequency simulation
 
-`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../01_STAR/runoff_overturns_leader/)).
+`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../../01_STAR/runoff_overturns_leader/)).
 
 ### Why this exists
 
@@ -109,5 +109,5 @@ python3 runoff_reversal_simulation.py --elections 300000 --voters 21 --candidate
 
 - Sincere ballots only — no strategy.
 - Spatial model is 2-D uniform; real issue spaces are lumpier (clusters, polarization).
-- "Reversal" here is score-leader-vs-runoff only; it says nothing about the Condorcet winner (see [Three notions of "winner"](../00_start_here/STAR_Voting/STAR_three_winner_notions.md)).
+- "Reversal" here is score-leader-vs-runoff only; it says nothing about the Condorcet winner (see [Three notions of "winner"](../../00_start_here/STAR_Voting/STAR_three_winner_notions.md)).
 - **Always report the model, the size, and the tie split with the number.**

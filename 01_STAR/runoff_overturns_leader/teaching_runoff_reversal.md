@@ -109,4 +109,4 @@ For the recorded races (`03` = BV `4c7kp9`, `05` = BV `BV1265`), the strongest p
 ![BetterVoting result for BV 4c7kp9 (ice cream): ChocoDrk leads, ChocoAlm wins](img/REPLACE_4c7kp9_bv_result.png)
 -->
 
-See also: the full audit report for each case in [`runoff_overturns_leader_tabulated/`](runoff_overturns_leader_tabulated), and how often reversals occur in [`simulations/runoff_reversal_simulation.py`](../../simulations/runoff_reversal_simulation.py).
+See also: the full audit report for each case in [`runoff_overturns_leader_tabulated/`](runoff_overturns_leader_tabulated), and how often reversals occur in [`06_Other/simulations/runoff_reversal_simulation.py`](../../06_Other/simulations/runoff_reversal_simulation.py).

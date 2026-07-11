@@ -126,7 +126,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 ## 301.6 — When Condorcet, Score, and Runoff disagree (and how often)
 - **Objective:** "Winner" isn't one thing — three reasonable definitions can name three different candidates; STAR targets the runoff winner *by design* (it is not a Condorcet method).
 - **Material:** `STAR_Voting/STAR_three_winner_notions.md` (CW = Ann, Score = Carl, Runoff = Bob); builds on the 101 Runoff Reversal lesson `01_Single_winner/runoff_overturns_leader/`.
-- **Frequency:** `simulations/runoff_reversal_simulation.py` measures how often score and runoff diverge — and shows the rate swings with the model (impartial vs spatial), the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
+- **Frequency:** `06_Other/simulations/runoff_reversal_simulation.py` measures how often score and runoff diverge — and shows the rate swings with the model (impartial vs spatial), the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
 - **Emphasize:** the methodological habit (measure it, report the assumptions) is as much the point as the numbers.
 - **Ranked Robin vs. Condorcet:** [ranked_robin_vs_condorcet.md](RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one (worked on the random-sweep record 0); deeper math in [the math behind Condorcet](RCV_Ranked_Robin/the_math_behind_condorcet.md).
 
