@@ -1,0 +1,44 @@
+bv_test_id: BV2180
+bv_election_id: fp62p2
+bv_results_url: https://bettervoting.com/fp62p2/results
+
+election:
+  election_title: Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2)
+  election_description: |-
+    The worked example behind the STAR tie-breaking doc (the two-round, two-ladder
+    tiebreak), now a live BetterVoting election. Two voters, six flavors. Scoring
+    round: Strawberry leads at 7; Chocolate, Chocolate Chip and Vanilla tie for the
+    second finalist slot at 5 each. Pairwise can't separate the three (all 2), so
+    the FIVE-STAR rung decides — only Chocolate Chip earned a 5, so it advances with
+    Strawberry. The automatic runoff then ties 1-1 head-to-head, and the SCORE rung
+    breaks it: Strawberry 7 beats Chocolate Chip 5. Winner: Strawberry. The lesson:
+    STAR settles ties in BOTH rounds by DETERMINISTIC rungs (five-star, then score) —
+    the pre-published lot order is never consulted, so LH and BetterVoting agree and
+    the result is fully reproducible (unlike the 3-way dead heat in BV555/xmyf7k,
+    which reaches the random floor). Live results: https://bettervoting.com/fp62p2/results
+    Lesson: bv2180_fp62p2_ice_cream_ladder.md
+  options:
+    show_description: false
+    show_matrix: false
+    matrix_finalists_only: true
+    show_condorcet: false
+    show_score_counts: true
+    show_irv: false
+    show_runoff_percent: true
+    brief: true
+    collapse_ballots: false
+    count_separator: "×"
+  races:
+  - race_id: '0'
+    race_description: "https://bettervoting.com/fp62p2/results"
+    num_winners: 1
+    voting_method: STAR
+    ballots: |-
+      Chocolate, Chocolate Chip, Fudge Brownie, Vanilla, Strawberry, Mango
+      4, 5, 4, 1, 2, -
+      1, 0, 0, 4, 5, 4
+    expected_results:
+      winners:
+      - Strawberry
+
+# file: bv2180_fp62p2_ice_cream_ladder.yaml

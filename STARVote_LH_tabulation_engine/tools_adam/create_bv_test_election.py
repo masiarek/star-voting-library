@@ -2245,7 +2245,33 @@ _CREATED_BV2177_78 = [
 ]
 
 # Add the next election batch here, then run the script.
-ELECTIONS: list = []
+_ICE_CREAM_LADDER = {
+    "test_id": "BV2180",
+    "title": "Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",
+    "description": (
+        "The worked example from the STAR tie-breaking documentation (the two-round, "
+        "two-ladder tiebreak). Two voters, six ice-cream flavors. Scoring round: "
+        "Strawberry leads at 7; Chocolate, Chocolate Chip and Vanilla tie for the "
+        "second finalist slot at 5 each. The pairwise rung can't separate the three "
+        "(all 2), so the FIVE-STAR rung decides — only Chocolate Chip earned a 5, so "
+        "it advances alongside Strawberry. The automatic runoff then ties 1-1 on "
+        "head-to-head preference, and the SCORE rung breaks it: Strawberry 7 beats "
+        "Chocolate Chip 5. Winner: Strawberry. The point of the case is that STAR "
+        "settles ties in BOTH rounds by DETERMINISTIC rungs (five-star, then score) — "
+        "the pre-published random lot order is never consulted. LH and BetterVoting "
+        "agree; the lot is irrelevant here, so the result is fully reproducible."
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Chocolate", "Chocolate Chip", "Fudge Brownie", "Vanilla", "Strawberry", "Mango"],
+    "ballots": [
+        [4, 5, 4, 1, 2, 0],   # Mango left blank -> counts as 0
+        [1, 0, 0, 4, 5, 4],
+    ],
+    "expected": "Strawberry",
+}
+
+ELECTIONS: list = [_ICE_CREAM_LADDER]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race

@@ -79,7 +79,7 @@ Runnable cases (all verified in the test suite): [the dead-rung tie-break cases]
 
 ## Worked example — Ice Cream, 6 flavors (ties in *both* rounds)
 
-Two ballots, six flavors. This is the canonical "it tied twice" case — and, importantly, **the lot order is never reached**; deterministic tests settle everything.
+Two ballots, six flavors. This is the canonical "it tied twice" case — and, importantly, **the lot order is never reached**; deterministic tests settle everything. It is now a **live, BV-backed case:** **[Ice cream ladder — BV2180, `fp62p2`](../../../01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.md)** ([results ↗](https://bettervoting.com/fp62p2/results)) — LH and BetterVoting agree, precisely because no random rung is reached.
 
 ```
 Ballots:

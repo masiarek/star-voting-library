@@ -85,6 +85,7 @@ APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/Runoff_04_reversal_at_scale_bf
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.yaml,3,5,Sage,Sage,Rosa,Sage,Sage,Rosa,Rosa,Sage,Sage,2,True,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml,3,4,Blair,Blair,Alex,Blair,Blair,Alex,Alex,Blair,,1,True,False,True
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml,3,100,Rye,Rye,Rye,Rye,Rye,Uma,Uma,Rye,Rye,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Chocolate,Strawberry,,,2,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml,2,2,Allison,Allison,Allison,Allison,Allison,Bill,Allison,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/_main/count_simplicity_star_vs_irv.yaml,5,40,Carmen,Carmen,Carmen,Carmen,Carmen,Andre,Carmen,Carmen,Carmen,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
