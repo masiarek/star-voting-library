@@ -10,7 +10,7 @@ create_bv_test_election.py — create BetterVoting test elections via the REST A
 Creates the BV95a / BV95b "Majority Criterion" demo elections on bettervoting.com
 and casts their ballots, using the API recipe from the Discord-bot integration
 doc (POST /API/Elections, POST /API/Election/{id}/vote, GET /API/Election/{id}).
-Then it saves each finished election object as JSON into ../../_demo_dropbox/ so
+Then it saves each finished election object as JSON into ../../06_Other/_demo_dropbox/ so
 it can be promoted into the BV95a/BV95b cases.
 
 WHY A SCRIPT (and not the UI, or Claude): the BetterVoting builder UI is fiddly to
@@ -77,7 +77,7 @@ except ImportError:
              "(deps are declared inline via PEP 723).")
 
 API = "https://bettervoting.com/API"
-OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "_demo_dropbox")
+OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "06_Other/_demo_dropbox")
 
 # Defaults so it runs from PyCharm's green button with NO env setup. Override via
 # environment if you like. BV_USER_ID becomes the election's owner_id — set it to

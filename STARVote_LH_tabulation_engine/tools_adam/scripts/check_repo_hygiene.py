@@ -141,7 +141,8 @@ def _yaml_teaching_files():
         base = os.path.join(REPO, root)
         for dirpath, dirnames, filenames in os.walk(base):
             dirnames[:] = [d for d in dirnames
-                           if not d.endswith(("_tabulated", "_generated", "_pages", "_tabulation_engine"))]
+                           if d not in SKIP_DIRS
+                           and not d.endswith(("_tabulated", "_generated", "_pages", "_tabulation_engine"))]
             for fn in sorted(filenames):
                 if fn.endswith((".yaml", ".yml")):
                     yield os.path.join(dirpath, fn)

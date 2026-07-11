@@ -4,7 +4,7 @@
 
 > This page is one cut (by method). For the full faceted catalog — slice by ballot type, seat class, single/multi-winner, character, backing — see **[CATALOG.md](CATALOG.md)** (fact tables: [`races.csv`](races.csv), [`elections.csv`](elections.csv)).
 
-Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
+Election YAMLs live in many folders (the test harnesses glob specific ones, so they're indexed *in place*, not moved). Each file declares a `voting_method` and `num_winners`; this catalog groups them so you can browse by method. Excludes `_tabulated` mirrors, raw `06_Other/_demo_dropbox` drops, generated copies, and deliberately-malformed negative fixtures.
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 

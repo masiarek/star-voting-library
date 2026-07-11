@@ -59,11 +59,11 @@ Prominence follows the library's mission: the **equal-vote (EVC) methods get the
   Range/              Range example + its engine (Range_tabulation_engine/)
   abcvoting_tabulation_engine/   multi-winner Approval (ABC) cross-check (optional)
   simulations/        Monte-Carlo scripts (favorite-betrayal / runoff-reversal rates)
+  _demo_dropbox/      watch-folder demo (drop a BV export, get YAML + tabulation)
 method_comparisons/   SAME ballots, DIFFERENT methods — black_curtain,
                       center_squeeze, monotonicity, split_voting, summability,
                       paradoxes_and_whoops, BV_Library, divergence_review
 YAML_library/         BetterVoting JSON→YAML converter + positive/negative fixtures
-_demo_dropbox/        watch-folder demo (drop a BV export, get YAML + tabulation)
 STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
   tools_adam/         Adam's tooling — the build scripts (scripts/), the
                       pref_voting cross-check engine, find_*divergence.py

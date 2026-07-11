@@ -12,7 +12,7 @@ Dependencies are declared inline (PEP 723), so `uv` installs them into an epheme
 uv run STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py
 ```
 
-It prints each new `bettervoting.com/<id>` URL and saves the created election object to `_demo_dropbox/`.
+It prints each new `bettervoting.com/<id>` URL and saves the created election object to `06_Other/_demo_dropbox/`.
 
 ## Defining the election(s)
 
@@ -44,7 +44,7 @@ BV_USER_ID=<your-bv-account-id> uv run …/create_bv_test_election.py
 
 ## After it runs
 
-The plain API GET the script saves lacks `Ballots`/`Results`. For the **frozen `_bv_export.json`** a case needs, grab the full export (Election + Ballots + Results) from the BV UI and drop it in `_demo_dropbox/`. Then reproduce it in the LH engine and build the case files (see the repo `CLAUDE.md`, "Workflow — building a BV-backed test case," steps 3–6).
+The plain API GET the script saves lacks `Ballots`/`Results`. For the **frozen `_bv_export.json`** a case needs, grab the full export (Election + Ballots + Results) from the BV UI and drop it in `06_Other/_demo_dropbox/`. Then reproduce it in the LH engine and build the case files (see the repo `CLAUDE.md`, "Workflow — building a BV-backed test case," steps 3–6).
 
 ## Known limitation
 

@@ -6,7 +6,7 @@ Ad-hoc demo zone. Drop a BetterVoting (BV) `.json` export in here and it gets co
 
 1. Start the watcher once per session:
    - double-click **`Run BV Demo Watcher.command`**, or
-   - run `python _demo_dropbox/watch_bv.py` in a terminal.
+   - run `python 06_Other/_demo_dropbox/watch_bv.py` in a terminal.
 2. Drop one or more BV `.json` files into this folder.
 3. Watch the results print in the terminal. Press **Ctrl-C** to stop.
 
@@ -32,10 +32,10 @@ A `DEMO_FORMAT` flag near the top of `watch_bv.py` (default `False`) can strip t
 For a **lot-decided tie** (a "dead rung": the ballots tie at every deterministic rung, so only the tie-break order decides), the winner depends entirely on the lot order. To show that, import one BV export *two ways*:
 
 ```
-python ../STARVote_LH_tabulation_engine/tools_adam/two_way_import.py <bv_export.json>
+python ../../STARVote_LH_tabulation_engine/tools_adam/two_way_import.py <bv_export.json>
 ```
 
-It writes `<base>_bv_order.yaml` (BV's DRAWN order → reproduces BV's winner) and `<base>_published_order.yaml` (a deterministic pre-published order → the other winner), tabulates both, and prints the comparison — e.g. *BV drew Ben, the published order gives Ada; same ballots, decided entirely by the lot.* Pass `--published "Ada, Ben"` to set the published order explicitly. The export must carry BV's tie-break sequence (`perm` / `tieBreakOrder`, BV #1371) for its draw to be reconstructable. See [the dead-rung cases](../01_STAR/tie_break_dead_rung/).
+It writes `<base>_bv_order.yaml` (BV's DRAWN order → reproduces BV's winner) and `<base>_published_order.yaml` (a deterministic pre-published order → the other winner), tabulates both, and prints the comparison — e.g. *BV drew Ben, the published order gives Ada; same ballots, decided entirely by the lot.* Pass `--published "Ada, Ben"` to set the published order explicitly. The export must carry BV's tie-break sequence (`perm` / `tieBreakOrder`, BV #1371) for its draw to be reconstructable. See [the dead-rung cases](../../01_STAR/tie_break_dead_rung/).
 
 ## Notes
 

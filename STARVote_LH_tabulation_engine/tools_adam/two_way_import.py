@@ -21,11 +21,11 @@ Usage
 -----
   python two_way_import.py <bv_export.json>
   python two_way_import.py <bv_export.json> --published "Ada, Ben"
-  python two_way_import.py <bv_export.json> --out-dir _demo_dropbox
+  python two_way_import.py <bv_export.json> --out-dir 06_Other/_demo_dropbox
 
 Writes `<base>_bv_order.yaml` and `<base>_published_order.yaml` next to the JSON
 (or into --out-dir), runs the LH engine on each, and prints the comparison.
-Works on any BV export, e.g. one dropped in `_demo_dropbox/`.
+Works on any BV export, e.g. one dropped in `06_Other/_demo_dropbox/`.
 """
 from __future__ import annotations
 

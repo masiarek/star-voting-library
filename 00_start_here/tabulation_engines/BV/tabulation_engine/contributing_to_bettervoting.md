@@ -20,7 +20,7 @@ A record of how the first code contribution went, so the workflow (and its gotch
 1. **Diagnosed the problem.** The "Download JSON" export was literally `JSON.stringify({Election, Ballots, Results})` of the raw in-memory objects (`packages/frontend/src/components/Election/Results/BallotDataExport.tsx`), leaking the tabulator's internal shape (O(n²) pairwise maps, mixed casing, inconsistent timestamps).
 2. **Fixed it in the right layer.** The export is a **view**, so the transform went in `packages/shared/src/utils/exportFormat.ts` (`buildElectionExport`) — no change to the tabulation engine, the results endpoint, or what the UI renders. Wired it into `downloadJson`.
 3. **Wrote a unit test.** `packages/backend/src/test/exportFormat.test.ts` (Jest).
-4. **Verified on real data.** Ran the actual transform against saved exports in `_demo_dropbox/` — 69% of legacy size on a 51-candidate election, 60% on a small one, all defects gone. (This is what proved it before ever touching CI.)
+4. **Verified on real data.** Ran the actual transform against saved exports in `06_Other/_demo_dropbox/` — 69% of legacy size on a 51-candidate election, 60% on a small one, all defects gone. (This is what proved it before ever touching CI.)
 5. **Branch + commit.**
    ```
    git checkout -b feature/clean-json-export

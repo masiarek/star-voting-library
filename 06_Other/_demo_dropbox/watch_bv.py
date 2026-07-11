@@ -34,7 +34,7 @@ import yaml
 
 # ----- locations (all derived from this file, so cwd doesn't matter) ----------
 DROP = Path(__file__).resolve().parent          # _demo_dropbox/
-REPO = DROP.parent                              # repo root (…/YAML)
+REPO = DROP.parent.parent                              # repo root (…/YAML)
 CONVERTER = REPO / "YAML_library" / "1_positive" / "01_convert_json_yaml.py"
 ENGINE = REPO / "STARVote_LH_tabulation_engine" / "starvote_larry_hastings.py"
 ENGINE_DIR = ENGINE.parent

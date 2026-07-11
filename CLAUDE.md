@@ -271,7 +271,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   `bettervoting.com/<id>` URLs. Auth is asymmetric **RS256** (the API requires a
   PEM public key in `auth_key`; the script mints a fresh keypair and signs the
   `custom_id_token` with the private key — no real account credential needed). It
-  saves the election object to `_demo_dropbox/`, but that plain GET lacks
+  saves the election object to `06_Other/_demo_dropbox/`, but that plain GET lacks
   `Ballots`/`Results`; for the **frozen `_bv_export.json`** grab the full export
   from the BV UI (Election + Ballots + Results). Proven end-to-end (BV95a `9m6rxr`,
   BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
@@ -322,7 +322,7 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    hand in the UI. (Auth is asymmetric RS256; no real credential is stored.)
 4. **Export the full JSON** (Adam). The API GET returns only the election *config*,
    so export the full **Election + Ballots + Results** from the BV UI and drop it
-   in `_demo_dropbox/`.
+   in `06_Other/_demo_dropbox/`.
 5. **Reproduce in LH** (AI). Convert/import the export into a `.yaml` (converter:
    `YAML_library/1_positive/01_convert_json_yaml.py`); for a random tie-break, pin
    `lot_numbers` to BV's `perm`. Confirm LH's winner(s) match — or characterize the
