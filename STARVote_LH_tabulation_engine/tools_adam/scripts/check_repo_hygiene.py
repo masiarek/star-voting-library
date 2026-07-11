@@ -29,7 +29,7 @@ REPO = _find_repo(__file__)  # robust: search upward for the repo root
 
 # Directories we never police (raw staging, generated, vendored, caches).
 SKIP_DIRS = {".git", ".venv", "node_modules", "__pycache__",
-             "_demo_dropbox", ".idea", ".claude"}
+             "_demo_dropbox", ".idea", ".claude", ".junie"}
 
 
 def _skip(rel):

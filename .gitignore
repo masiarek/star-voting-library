@@ -1,5 +1,6 @@
 .idea/
 .claude/
+.junie/
 
 # Converter staging output (regenerable from the JSON sources)
 **/_generated/
