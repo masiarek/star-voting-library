@@ -66,7 +66,7 @@ Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a
 ## Related
 
 - [Ranked Robin (the method)](ranked_robin.md) · [cycle resolution](cycle_resolution.md) · [ranked_robin_vs_condorcet.md](ranked_robin_vs_condorcet.md)
-- BetterVoting tabulation engine notes: [`bettervoting_tabulation_engine/README.md`](../../bettervoting_tabulation_engine/README.md) (the `RankedRobin.ts` row: *"2-way tie → head-to-head; else random"*)
+- BetterVoting tabulation engine notes: [`tabulation_engines/BV/tabulation_engine/README.md`](../tabulation_engines/BV/tabulation_engine/README.md) (the `RankedRobin.ts` row: *"2-way tie → head-to-head; else random"*)
 - [Glossary](../GLOSSARY.md)
 
 # file: rr_tiebreak_lh_vs_bv.md

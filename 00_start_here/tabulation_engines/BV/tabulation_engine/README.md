@@ -12,7 +12,7 @@ This page explains how the engine *works*; these explain how to *run and change 
 - **Run BetterVoting locally** — the two setups (dev server vs Docker) and the gotchas that cost time (AirPlay port, Keycloak, `crypto.randomUUID`, shared-package rebuilds) → [running_bettervoting_locally.md](./running_bettervoting_locally.md).
 - **Contribute a change** — the fork → PR workflow and lessons from the first merged contribution (PR #1419), since you don't have direct push to `Equal-Vote/bettervoting` → [contributing_to_bettervoting.md](./contributing_to_bettervoting.md).
 - **Official docs & contribution guide** — [docs.bettervoting.com](https://docs.bettervoting.com) · [Contribution Guide](https://docs.bettervoting.com/contributions/0_contribution_guide.html) ([first-time local setup](https://docs.bettervoting.com/contributions/developers/1_local_setup.html) · [opening a PR](https://docs.bettervoting.com/contributions/developers/2_how_to_open_a_pull_request.html) · [testing](https://docs.bettervoting.com/contributions/developers/5_testing.html)).
-- **Repo-side BV notes** — [BV website / UI to-do backlog](../00_start_here/tabulation_engines/BV/BV_website_TODO.md) · [creating BV elections via the API](../00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md) · [BV concept hub](../00_start_here/tabulation_engines/BV/README.md).
+- **Repo-side BV notes** — [BV website / UI to-do backlog](../BV_website_TODO.md) · [creating BV elections via the API](../bv_api_election_creation_notes.md) · [BV concept hub](../README.md).
 
 ## Where it lives
 
