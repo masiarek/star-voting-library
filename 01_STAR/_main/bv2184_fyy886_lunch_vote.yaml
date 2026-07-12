@@ -1,4 +1,12 @@
-election_title: The team lunch vote
+election_title: BV2184 — The team lunch vote
+election_description: |-
+  Live on BetterVoting (BV2184, election fyy886).
+  Results: https://bettervoting.com/fyy886/results
+  BV's STAR tally agrees with LH: winner Pizza.
+
+bv_test_id: BV2184
+bv_election_id: fyy886
+bv_results_url: https://bettervoting.com/fyy886/results
 
 scenario_description: |-
   The beginner's running example (STAR — start here). Five coworkers pick lunch
@@ -31,4 +39,4 @@ options:
 expected_winners:
 - Pizza
 
-# file: lunch_vote_c3_b5.yaml
+# file: bv2184_fyy886_lunch_vote.yaml

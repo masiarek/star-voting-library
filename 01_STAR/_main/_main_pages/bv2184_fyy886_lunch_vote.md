@@ -1,6 +1,6 @@
-# The team lunch vote
+# BV2184 — The team lunch vote
 
-*Generated from [`lunch_vote_c3_b5.yaml`](../lunch_vote_c3_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2184_fyy886_lunch_vote.yaml`](../bv2184_fyy886_lunch_vote.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Pizza
 
@@ -31,7 +31,7 @@ Sushi,Tacos,Pizza
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/lunch_vote_c3_b5_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../_main_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -56,7 +56,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: _main_tabulated/lunch_vote_c3_b5_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: _main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
@@ -100,7 +100,7 @@ Pizza      1  0  4  0  0  0  |    17   3.4
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/lunch_vote_c3_b5.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml
 ```
 
 ## See also

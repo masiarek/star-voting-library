@@ -31,7 +31,7 @@ That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "r
 
 Same five people, same feelings — but now each of them **rates all three** (5 = love it, 3 = fine, 0 = no):
 
-Run it yourself: [`lunch_vote_c3_b5.yaml`](../../01_STAR/_main/lunch_vote_c3_b5.yaml) · [reader page](../../01_STAR/_main/_main_pages/lunch_vote_c3_b5.md).
+Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml) · [reader page](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
 
 ```
                     Sushi   Tacos   Pizza

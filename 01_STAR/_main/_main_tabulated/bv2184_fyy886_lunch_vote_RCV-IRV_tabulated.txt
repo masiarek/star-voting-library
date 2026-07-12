@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2184 — The team lunch vote
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Sushi, Tacos, Pizza
+     2 ×   Sushi > Pizza      (5, 0, 3)
+     2 ×   Tacos > Pizza      (0, 5, 3)
+     1 ×   Pizza > Sushi > Tacos      (3, 1, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Sushi              2  Hopeful
+Tacos              2  Hopeful
+Pizza              1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Sushi              3  Elected
+Tacos              2  Rejected
+Pizza              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Sushi
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

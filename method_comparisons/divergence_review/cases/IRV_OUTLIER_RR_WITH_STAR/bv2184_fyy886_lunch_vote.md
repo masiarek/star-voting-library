@@ -1,4 +1,4 @@
-# The team lunch vote
+# BV2184 — The team lunch vote
 
 **Bucket — IRV_OUTLIER_RR_WITH_STAR:** RCV-IRV is the outlier (center squeeze)
 
@@ -21,7 +21,7 @@ STAR elects **Pizza** — and so do Ranked Robin and Condorcet, because **Pizza 
 
 **Flags:** none
 
-**Source election:** [`01_STAR/_main/lunch_vote_c3_b5.yaml`](../../../../01_STAR/_main/lunch_vote_c3_b5.yaml)  ·  **STAR tabulated mirror:** [`lunch_vote_c3_b5_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/lunch_vote_c3_b5_tabulated.txt)
+**Source election:** [`01_STAR/_main/bv2184_fyy886_lunch_vote.yaml`](../../../../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml)  ·  **STAR tabulated mirror:** [`bv2184_fyy886_lunch_vote_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt)
 
 _Also present (identical ballots) at: `YAML_library/1_positive/trash_delete.yaml`._
 

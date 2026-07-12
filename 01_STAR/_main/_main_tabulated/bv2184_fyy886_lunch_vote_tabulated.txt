@@ -1,11 +1,19 @@
 ======================================================================
-SOURCE FILE:     lunch_vote_c3_b5.yaml
-SOURCE MODIFIED: 2026-07-12 08:30:05
-TABULATED FILE:  lunch_vote_c3_b5_tabulated.txt
-TABULATED AT:    2026-07-12 08:30:05
+SOURCE FILE:     bv2184_fyy886_lunch_vote.yaml
+SOURCE MODIFIED: 2026-07-12 10:34:53
+TABULATED FILE:  bv2184_fyy886_lunch_vote_tabulated.txt
+TABULATED AT:    2026-07-12 10:35:15
 ======================================================================
 
-election_title: The team lunch vote
+election_title: BV2184 — The team lunch vote
+election_description: |-
+  Live on BetterVoting (BV2184, election fyy886).
+  Results: https://bettervoting.com/fyy886/results
+  BV's STAR tally agrees with LH: winner Pizza.
+
+bv_test_id: BV2184
+bv_election_id: fyy886
+bv_results_url: https://bettervoting.com/fyy886/results
 
 scenario_description: |-
   The beginner's running example (STAR — start here). Five coworkers pick lunch
@@ -38,13 +46,13 @@ options:
 expected_winners:
 - Pizza
 
-# file: lunch_vote_c3_b5.yaml
+# file: bv2184_fyy886_lunch_vote.yaml
 
 ======================================================================
 TABULATION RESULTS
 ======================================================================
 
-=== The team lunch vote ===
+=== BV2184 — The team lunch vote ===
   The beginner's running example (STAR — start here). Five coworkers pick lunch
   from Sushi, Tacos, or Pizza. Two love Sushi, two love Tacos — and everyone is
   perfectly happy with Pizza. Under Choose-One each person names ONE favorite,
@@ -77,8 +85,8 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: _main_tabulated/lunch_vote_c3_b5_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/lunch_vote_c3_b5_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: _main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
