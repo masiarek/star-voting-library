@@ -70,7 +70,7 @@ The **return path** is to photograph the filled ballots and OCR the scores into 
 
 **Ballots with and without a BV election.** A ballot is meant to be *self-sufficient*; the BV link is an enhancement, not a requirement.
 - **With** a `--bv-id`: the ballot prints the id, the results URL, and a scannable **QR** — paper and platform stay linked.
-- **Without** one (a purely offline classroom, no internet): still a perfectly valid ballot — it just carries the generic STAR heading and no QR. For traceability, put a date or set name in `--title`.
+- **Without** one (an **LH-only** demo — no BetterVoting): still a perfectly valid ballot; it just carries the generic STAR heading and **no QR** (the QR only earns its place when there's an election to open). For traceability, put a date or set name in `--title`. If you *want* a QR anyway — say, to a "learn how STAR works" page — pass `--qr-url <URL>` (it works with or without a BV election).
 
 **Flagging mistakes — reuse the repo's markers, don't invent a scheme.** The repo already has a marker vocabulary for exactly this (see [CLAUDE.md](../../CLAUDE.md) / the [markers glossary](STAR_ballot_voting_styles.md)): every marker tabulates as **0** *and* is reported. So an ambiguous mark maps cleanly:
 

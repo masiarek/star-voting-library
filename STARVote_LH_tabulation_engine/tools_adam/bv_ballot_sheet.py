@@ -145,7 +145,7 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
-                  serial=None, write_ins=0):
+                  serial=None, write_ins=0, qr_caption="scan to vote"):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
     bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
@@ -162,8 +162,8 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                         f'— keep this to verify it was counted')
     idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
-    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="Scan to open election '
-                f'{html.escape(bv_id or "")}"><span>scan to vote</span></div>'
+    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code">'
+                f'<span>{html.escape(qr_caption)}</span></div>'
                 if qr_uri else "")
     return f"""
 <div class="ballot">
@@ -183,11 +183,16 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
-                 qr=True, serials=False, write_ins=0):
-    qr_uri = qr_data_uri(f"https://bettervoting.com/{bv_id}") if (bv_id and qr) else None
+                 qr=True, serials=False, write_ins=0, qr_url=None):
+    # QR points to --qr-url if given (works even LH-only, no BV), else the BV
+    # election if there is one, else nothing.
+    url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
+    caption = "scan" if qr_url else "scan to vote"
+    qr_uri = qr_data_uri(url) if (url and qr) else None
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id, qr_uri,
-                      serial=(i + 1 if serials else None), write_ins=write_ins)
+                      serial=(i + 1 if serials else None), write_ins=write_ins,
+                      qr_caption=caption)
         for i in range(copies))
     hint = ('<p class="noprint" style="margin:12px 18px;color:#666;font-size:13px">'
             f'{copies} ballots · aim for ~{per_page} per page — use your browser\'s '
@@ -255,6 +260,9 @@ def main():
     ap.add_argument("--out", default="ballots.html")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
+    ap.add_argument("--qr-url",
+                    help="point the QR at any URL (e.g. a 'learn STAR' page) — useful "
+                         "for LH-only demos with no BV election; default is the BV election")
     ap.add_argument("--serials", action="store_true",
                     help="number each ballot (a 'keep this to verify it was counted' "
                          "receipt — see the secret-ballot caveat in the demo page)")
@@ -286,7 +294,7 @@ def main():
     question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
-                         write_ins=args.write_ins)
+                         write_ins=args.write_ins, qr_url=args.qr_url)
     with open(args.out, "w", encoding="utf-8") as f:
         f.write(sheet)
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates) to "
