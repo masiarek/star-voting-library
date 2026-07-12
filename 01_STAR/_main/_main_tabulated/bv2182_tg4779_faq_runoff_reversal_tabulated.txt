@@ -1,14 +1,17 @@
 ======================================================================
 SOURCE FILE:     bv2182_tg4779_faq_runoff_reversal.yaml
-SOURCE MODIFIED: 2026-07-11 20:24:54
+SOURCE MODIFIED: 2026-07-11 20:37:06
 TABULATED FILE:  bv2182_tg4779_faq_runoff_reversal_tabulated.txt
-TABULATED AT:    2026-07-11 20:25:04
+TABULATED AT:    2026-07-11 20:37:16
 ======================================================================
 
 election_title: BV2182 — why the automatic runoff (and Equal Support)
 election_description: |-
   Live on BetterVoting (BV2182, election tg4779).
   Results: https://bettervoting.com/tg4779/results
+  BV's official tally agrees with LH: winner Almond (score 35, five-star count 7),
+  preferred over Berry 6 and over Cocoa 7 head-to-head. Frozen export:
+  bv2182_tg4779_faq_runoff_reversal_bv_export.json
 
 bv_test_id: BV2182
 bv_election_id: tg4779
