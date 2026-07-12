@@ -51,6 +51,7 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 
 ## Mechanics
 
+- **Echo (on-screen echo)** — the report the LH engine **prints on screen** as it tabulates a file. The `options:` block controls how much of it shows; it never changes the result. Contrast the **`_tabulated.txt` mirror**, which ignores `options:` and always renders full detail. → [LH reporting options](STAR_reporting/reporting_LH/options.md)
 - **Equal scores allowed** — you may give two candidates the same score; you're never forced to invent a preference. → demo [`03a_c3_b3_style-bullet-vote`](../01_STAR/_main/_main_pages/03a_c3_b3_style-bullet-vote.md)
 - **Exhausted ballot** — (an **RCV-IRV** term; IRV-specific, *not* all ranked methods — Ranked Robin / Condorcet counts read every rank) a ballot set aside mid-count because all its ranked candidates were eliminated. FairVote's single word covers several very different cases (voter-side vs method-caused); STAR's runoff never eliminates anyone, so it doesn't discard ballots this way. → episode ["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)
   - **Voluntary exhaustion (self-truncation)** — the *voter-side* case: you ranked fewer candidates than allowed, so the ballot exhausts as the direct result of your own choice. Not a method flaw. → [Forced vs. Voluntary Exhaustion](RCV_IRV/forced_vs_voluntary_exhaustion.md)

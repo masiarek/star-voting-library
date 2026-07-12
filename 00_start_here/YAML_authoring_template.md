@@ -92,6 +92,21 @@ expected_winners:
 # file: <your_file_name>.yaml
 ```
 
+### What those `options:` show (and what "echo" means)
+
+The **echo** is the report the engine **prints on screen** as it tabulates. The `options:` flags only decide *how much of it appears* — they never change the winner or the numbers, and the saved **`_tabulated.txt`** mirror ignores them and always shows everything. So `options:` is purely "what to put on screen for *this* teaching case."
+
+Each flag, explained with before/after examples:
+
+- **`show_description`** — echo the `scenario_description` prose (off by default; always in `_tabulated`).
+- **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](STAR_reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
+- **`show_score_counts`** → the per-candidate **[score-distribution table](STAR_reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
+- **`show_irv`** → the `[Divergence from STAR]` block comparing the RCV-IRV winner.
+- **`show_runoff_percent`** → the compact [self-reconciling runoff line](STAR_Voting/runoff_percentages.md).
+- **`brief`** → strip the repetitive `[STAR Voting: …]` header prefix — **[with/without](STAR_reporting/reporting_LH/brief.md)**.
+
+Full rundown of the whole block, option by option: **[LH reporting options](STAR_reporting/reporting_LH/options.md)**.
+
 ---
 
 ## Field reference
