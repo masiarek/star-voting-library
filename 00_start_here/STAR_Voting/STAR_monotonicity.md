@@ -38,6 +38,16 @@ RCV-IRV = Z   (differs from STAR)
 
 Same voters, same change: RCV-IRV flips X → Z; STAR doesn't budge. (Verified on the engine: STAR elects X in both files.)
 
+## The 301 nuance — a *stronger* variant STAR doesn't pass
+
+Everything above is the standard **monotonicity criterion** (formally *mono-raise*: raising a candidate's score, and changing nothing else, never hurts them). STAR passes it without exception. But mathematician D. R. Woodall catalogued *several* monotonicity properties, and STAR fails a stronger one, **mono-raise-delete**: *"a candidate X should not be harmed if X is raised on some ballots **and** all candidates now below X on those ballots are deleted from them"* (for a score ballot, "deleted" means "dropped to the lowest score").
+
+The catch is that this bundles **two** moves — raise X *and* bury everyone the voter placed below X — and only the first is safe. Raising X's own score can never push X out of the top two; but *which candidate joins X in the runoff* depends on **everyone's** totals. Burying the also-rans can change X's runoff **opponent** — from a Y that X beats to a Z that beats X. X was "raised," yet ended up losing. The soft spot isn't the arithmetic of X's own score; it's **finalist selection**.
+
+This doesn't walk back STAR's monotonicity. The everyday promise — *"score your favorite at the top, it can only help them"* — holds exactly, because that's the standard criterion, and voters don't perform the composite raise-and-delete operation. It's simply the honest, precise statement: **STAR satisfies mono-raise; it does not satisfy every stronger monotonicity variant.** (The same care cuts the other way for IRV — which fails even plain mono-raise, the far more damaging failure.)
+
+*Source: D. R. Woodall, ["Monotonicity and Single-Seat Election Rules"](http://www.votingmatters.org.uk/ISSUE6/P4.HTM), Voting Matters, Issue 6 (1996).*
+
 ## Why this matters
 
 Monotonicity is what lets you tell a voter, truthfully, *"score your favorite at the top — it can only help them."* Under IRV that advice can backfire; under STAR it always holds. It's a quieter virtue than the spoiler story, but it's the one that keeps honest voting safe.
