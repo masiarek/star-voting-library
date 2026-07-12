@@ -24,5 +24,6 @@ Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start wi
 
 - Glossary: [STAR terms](glossary_STAR.md)
 - Conversation scripts: [What's so good about STAR](whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](why_do_you_love_STAR_Voting.md) · [Aren't equal-score votes discounted?](are_equal_score_votes_discounted.md)
+- Outside explainers, videos & official guides: [STAR Voting — resources & further watching](STAR_resources.md)
 
 *(Up: the docs hub [`00_START_HERE`](../00_START_HERE.md).)*

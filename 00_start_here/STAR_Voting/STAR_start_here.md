@@ -117,6 +117,7 @@ Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scori
 - Equal Vote Coalition — [STAR Voting overview](https://www.equal.vote/star)
 - ["How Does STAR Voting Work?" (short video)](https://www.youtube.com/watch?v=fKg0fRL88zc)
 - [bettervoting.com](https://bettervoting.com) · [help, FAQ & hand-count guides](https://docs.bettervoting.com)
+- **More explainers, videos & guides:** [STAR Voting — resources & further watching](STAR_resources.md)
 
 ---
 
