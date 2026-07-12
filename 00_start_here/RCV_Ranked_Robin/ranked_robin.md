@@ -22,7 +22,7 @@ These terms are related but *not* interchangeable — they sit at different leve
 
 So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)).
 
-**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../TIPS_terminology.md#the-ranked-method-family-tree).
+**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../TIPS_terminology.md#the-ranked-method-family-tree). **Still tangled by the outside terminology** (and why Wikipedia's *Round-robin voting* and *Copeland's method* articles overlap)? → [Round-robin / Copeland / Ranked Robin — a naming decoder](condorcet_naming_decoder.md).
 
 A law-review framing of the same idea (useful when an audience wants an authoritative source):
 
