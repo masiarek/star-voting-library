@@ -12,19 +12,21 @@ So use this table to *navigate to the worked cases*, not to crown a winner.
 
 ## The table
 
+Each **criterion name** links to an explanation of that criterion; where a cell's **✗ is itself a link** (blue), it opens a *runnable* election demonstrating that failure. (More below in [Watch the failures happen](#watch-the-failures-happen-runnable).)
+
 | Criterion | Approval | STAR | Ranked Robin | RCV-IRV |
 |---|:---:|:---:|:---:|:---:|
-| **Monotonicity** (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
-| **Condorcet winner** (elects a beats-all candidate) | ✗ | [✗](STAR_Voting/STAR_three_winner_notions.md) | ✓ | [✗](RCV_IRV/RCV_IRV_center_squeeze.md) |
-| **Condorcet loser** (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
-| **Majority favorite** (a majority's 1st choice wins) | ✗ † | [✗](../01_STAR/majority_criterion/) | ✓ | ✓ |
-| **Mutual majority** | ✗ | ✗ | ✓ | ✓ |
-| **Participation** (showing up can't backfire) | ✓ | [✗](../method_comparisons/participation_no_show/) | ✗ | [✗](../method_comparisons/participation_no_show/) |
-| **Consistency** (two districts agreeing agree combined) | ✓ | ✗ | ✗ | ✗ |
-| **Independence of clones** | ✓ | ✗ | [✗](../05_Ranked_Robin/clone_independence/) | ✓ |
-| **Later-no-harm** (a backup can't sink your favorite) | ✗ | [✗](STAR_Voting/STAR_second_round_FAQ.md) | ✗ | ✓ |
-| **Favorite betrayal** (never rewards burying your favorite) | ✓ | [✗](STAR_Voting/favorite_betrayal_voting_301.md) | ✗ | ✗ |
-| **Summable** (precinct subtotals; easy audit) | ✓ | ✓ | ✓ | [✗](STAR_Voting/STAR_summability.md) |
+| [**Monotonicity**](topics/monotonicity/) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
+| [**Condorcet winner**](topics/condorcet/) (elects a beats-all candidate) | ✗ | [✗](STAR_Voting/STAR_three_winner_notions.md) | ✓ | [✗](RCV_IRV/RCV_IRV_center_squeeze.md) |
+| [**Condorcet loser**](voting_paradoxes/condorcet_loser_paradox.md) (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
+| [**Majority favorite**](topics/majority_criterion/) (a majority's 1st choice wins) | ✗ † | [✗](../01_STAR/majority_criterion/) | ✓ | ✓ |
+| [**Mutual majority**](GLOSSARY.md) | ✗ | ✗ | ✓ | ✓ |
+| [**Participation**](topics/participation/) (showing up can't backfire) | ✓ | [✗](../method_comparisons/participation_no_show/) | ✗ | [✗](../method_comparisons/participation_no_show/) |
+| [**Consistency**](voting_paradoxes/multiple_districts.md) (two districts agreeing agree combined) | ✓ | ✗ | ✗ | ✗ |
+| [**Independence of clones**](../05_Ranked_Robin/clone_independence/) | ✓ | ✗ | [✗](../05_Ranked_Robin/clone_independence/) | ✓ |
+| [**Later-no-harm**](STAR_Voting/STAR_second_round_FAQ.md) (a backup can't sink your favorite) | ✗ | [✗](STAR_Voting/STAR_second_round_FAQ.md) | ✗ | ✓ |
+| [**Favorite betrayal**](STAR_Voting/favorite_betrayal_voting_301.md) (never rewards burying your favorite) | ✓ | [✗](STAR_Voting/favorite_betrayal_voting_301.md) | ✗ | ✗ |
+| [**Summable**](topics/summability/) (precinct subtotals; easy audit) | ✓ | ✓ | ✓ | [✗](STAR_Voting/STAR_summability.md) |
 
 *(Ranked Robin = the repo's Copeland-based Condorcet method. "RCV-IRV" = ranked ballots counted by instant runoff.)*
 
