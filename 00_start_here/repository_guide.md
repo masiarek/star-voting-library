@@ -53,6 +53,25 @@ cd STARVote_LH_tabulation_engine
 pytest tests/
 ```
 
+### Python version — why `.python-version` matters (a uv gotcha)
+
+Two files work together to pin the interpreter, and they do **different** jobs:
+
+- **`pyproject.toml` → `requires-python = ">=3.10,<3.14"`** is a **constraint** — uv *checks* it and refuses to run on anything outside the range. The `<3.14` cap is deliberate: `pref_voting`/`numba` don't support Python 3.14 yet.
+- **`.python-version` (= `3.13`)** is the **selector** — it tells uv *which* Python to actually use. **Keep it tracked in git.** It is *not* redundant with `requires-python`.
+
+If `.python-version` goes missing, uv picks the **newest** interpreter it can find (e.g. 3.14) and then fails the constraint:
+
+```
+error: The requested interpreter resolved to Python 3.14.2, which is
+incompatible with the project's Python requirement: >=3.10, <3.14
+```
+
+**Fix:** don't widen the constraint — restore the selector.
+1. Make sure `.python-version` exists at the repo root and contains `3.13`.
+2. Rebuild the environment on 3.13: `uv venv --python 3.13 --allow-existing`.
+3. If your **IDE** still uses 3.14 (e.g. PyCharm running `uv run`), point its **project interpreter at this repo's `.venv/bin/python`** (which is 3.13), and clear any `UV_PYTHON` override in the run config.
+
 ---
 
 ## Voting methods
