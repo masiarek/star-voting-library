@@ -6,7 +6,7 @@ A library for learning, teaching, and debating **[STAR Voting](00_start_here/STA
 
 Under the hood it does three things:
 
-1. **Teaches** — concept pages and worked examples, organized by level ([Voting 101 / 201 / 301](00_start_here/CURRICULUM.md)).
+1. **Teaches** — concept pages and worked examples, organized by level: [Voting 101](00_start_here/CURRICULUM.md#voting-101) (the basics) · [201](00_start_here/CURRICULUM.md#voting-201) (reading results & comparisons) · [301](00_start_here/CURRICULUM.md#voting-301) (proportional, criteria, theory).
 2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](00_start_here/why_yaml_test_cases.md).
 3. **Cross-verifies with BetterVoting** — import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it independently, and confirm the official winner — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 

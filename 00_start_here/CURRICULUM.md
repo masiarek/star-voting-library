@@ -8,6 +8,8 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 
 ---
 
+<a id="voting-101"></a>
+
 # Voting 101 — Basics (the ballot, the two rounds, the spoiler)
 
 > Audience: general public, first contact. The goal is intuition, not theory.
@@ -47,6 +49,8 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Why here:** it unlocks 201's nomenclature and every later comparison.
 
 ---
+
+<a id="voting-201"></a>
 
 # Voting 201 — Intermediate (reading results, comparisons, multi-winner intro)
 
@@ -90,6 +94,8 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Emphasize:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301** — 301.6 walks a concrete disagreement and 301.9 covers how the simulations are built.
 
 ---
+
+<a id="voting-301"></a>
 
 # Voting 301 — Advanced (proportional, criteria, debate theory)
 
