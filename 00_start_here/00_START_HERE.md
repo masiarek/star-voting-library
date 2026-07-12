@@ -24,6 +24,7 @@ Welcome to the **STAR Voting education library**. This repo teaches STAR in dept
 - **Choosing among the three Equal Vote methods** → [STAR vs. Approval vs. Ranked Robin](choosing_among_evc_methods.md) — the tradeoff triangle (simplicity / expressiveness / precision), even-handed to all three.
 - **Strategic voting across the methods** → [strategic voting](strategic_voting.md) — the four kinds of insincere vote (favorite betrayal, burial, bullet voting, tactical maximization), how each method handles them, and what the simulations show.
 - **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
+- **A guided reading path (beginner → advanced)** → [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md) — the whole field in three levels (after Marcus Ogren), threaded through this repo's runnable pages.
 - **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
 - **Ballot & terminology basics (the "RCV" confusions)** → [the four things people get wrong](ballot_and_terminology_basics.md).
 - **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).

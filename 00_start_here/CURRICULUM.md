@@ -4,6 +4,8 @@ The authoritative **learning-path map**. Difficulty lives *here*, not in the fol
 
 Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md)), the **files/episodes** to use, and **what to emphasize**. Example YAMLs stay in their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`, `split_voting/`); conversation scripts live beside their topics, indexed in [Conversation scripts — index](conversation_scripts.md).
 
+> This curriculum is **STAR-specific** (how to learn STAR, with honest comparisons). For a **method-neutral, field-wide** reading path — the whole landscape in three levels, after Marcus Ogren — see [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md).
+
 ---
 
 # Voting 101 — Basics (the ballot, the two rounds, the spoiler)
