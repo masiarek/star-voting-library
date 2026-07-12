@@ -63,7 +63,7 @@ In the automatic runoff, if you scored both finalists the **same**, your ballot 
 
 ## Why TWO rounds and not just the scores? (the conceptual heart)
 
-The cleanest way to explain it — the **dual nature** of STAR:
+The idea — the **dual nature** of STAR:
 
 - **Scoring Round measures *how much* support** (strength). Add up the stars; the two strongest candidates become finalists.
 - **Automatic Runoff measures *how many* supporters** (numbers). Each ballot goes to whichever finalist it scored higher; the finalist more voters preferred wins.
@@ -78,7 +78,7 @@ Why both? If we only added up scores (pure score voting), voters are tempted to 
 
 ---
 
-## What else to mention up front
+## The key points, at a glance
 
 - **It's one ballot, not two trips to the polls.**
 - **You can be honest.** Score your favorite a 5 *and* give a backup a 4 — you never split your own vote or "waste" it.
@@ -89,13 +89,9 @@ Why both? If we only added up scores (pure score voting), voters are tempted to 
 
 ---
 
-## How to transition into the examples
+## Your reading path — the examples in order
 
-End Lesson 0 with a promise and a map:
-
-> "Let's watch those two rounds actually turn. We'll start on the smallest possible election so the gears are visible, then add a candidate and see why STAR matters."
-
-**Roadmap (single-winner):**
+Now watch those two rounds actually turn. The examples start on the smallest possible election so the gears are visible, then add a candidate so you can see why STAR matters:
 
 | Step | Pages (read in order) | Purpose |
 |------|-------------|---------|
