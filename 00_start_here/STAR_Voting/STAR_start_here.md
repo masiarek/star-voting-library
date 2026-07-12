@@ -2,7 +2,9 @@
 
 *The STAR on-ramp. For the repo's method-neutral entry point see [Start Here](../00_START_HERE.md).*
 
-Read this before showing any example. It gives the audience the background that makes every later election make sense. (Feedback from a test run: people get lost if you jump straight into a specific ballot without this.)
+New to STAR Voting? Start here — the *why* before the *how*. This page builds the background that makes every worked example later click, so you're not dropped into a ballot with no context.
+
+*Presenting to a group? Open with this too — in test runs, audiences get lost if you jump straight to a specific ballot.*
 
 > Looking for persuasion material rather than the teaching sequence? See [Why STAR Voting](../Why_STAR_Voting.md) — presentation slide bullets plus tiered debate-prep talking points (claim / rebuttal / response).
 
