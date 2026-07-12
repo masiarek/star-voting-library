@@ -71,6 +71,7 @@ STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballo
 
 ## See also
 
+- [Criteria at a glance](criteria_at_a_glance.md) — the four methods' pass/fail across every criterion here, each failure linked to a runnable election (read *this page's* caveat first: a table is a map, not a verdict)
 - [What makes a good winner?](what_makes_a_good_winner.md) — the winner-selection half
 - Topic hubs: [Condorcet](topics/condorcet/) · [Summability](topics/summability/) · [Monotonicity](topics/monotonicity/) · [Center squeeze](topics/center_squeeze/) · [Ties](topics/ties/)
 - [Why STAR Voting](Why_STAR_Voting.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · [Glossary](GLOSSARY.md)

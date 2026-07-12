@@ -46,6 +46,7 @@
 - **Key terms:** consensus / Condorcet winner, majoritarian vs. utilitarian winner, VSE, strategy-resistance, summability, "a perfect system will never exist."
 - **Pages:** [What makes a good winner?](what_makes_a_good_winner.md) (four ideals; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](what_makes_a_voting_method_good.md).
 - **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — the pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked.
+- **Criteria side by side:** [Criteria at a glance](criteria_at_a_glance.md) — Approval / STAR / Ranked Robin / RCV-IRV pass/fail across every major criterion, each failure linked to a runnable election (with the "a table is a map, not a verdict" caveat up front).
 - **The point:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301**.
 
 ---
