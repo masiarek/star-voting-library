@@ -4,6 +4,10 @@ The core single-winner STAR sequence: the smallest examples that introduce one i
 
 ## The arc
 
+**⭐ The running example — the team lunch.** The one a newcomer meets first: five coworkers, three lunches, and the compromise everyone likes wins. Live on BetterVoting.
+
+- [`bv2184_fyy886_lunch_vote`](_main_pages/bv2184_fyy886_lunch_vote.md) — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
+
 **Intros — ballot basics (101).** Start here: how a STAR ballot is scored and read.
 
 - [`01a_c2_b1_two-candidates`](_main_pages/01a_c2_b1_two-candidates.md) · [`01a_c2_b2_two-candidates`](_main_pages/01a_c2_b2_two-candidates.md) · [`01b_c2_b2_two-candidates`](_main_pages/01b_c2_b2_two-candidates.md) · [`01c_c2_b3_two-candidates`](_main_pages/01c_c2_b3_two-candidates.md)
@@ -21,6 +25,7 @@ The core single-winner STAR sequence: the smallest examples that introduce one i
 **Larger fields & the runoff.** Where the scoring round has to choose two finalists.
 
 - [`06a_c9_b3_large-field-equal-support`](_main_pages/06a_c9_b3_large-field-equal-support.md) · [`06b_c9_runoff-overturns-leader`](_main_pages/06b_c9_runoff-overturns-leader.md) · [`09_c4_b100_tennessee-capital`](_main_pages/09_c4_b100_tennessee-capital.md) · [`three_winners_cw_score_runoff`](_main_pages/three_winners_cw_score_runoff.md)
+- [`bv2182_tg4779_faq_runoff_reversal`](_main_pages/bv2182_tg4779_faq_runoff_reversal.md) — the scoring leader loses the runoff; live on BetterVoting · **[live ↗](https://bettervoting.com/tg4779/results)**
 
 **Vote-splitting (why STAR resists the spoiler).**
 
