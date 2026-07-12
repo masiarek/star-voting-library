@@ -40,15 +40,24 @@ Full report from the [`_tabulated` mirror](../black_curtain_tabulated/Black_Curt
 
 Ballots:
    columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
-   0,1,1
-   0,1,1
-   0,1,1
-   1,1,0
-   1,1,0
+     3 × 0,1,1
+     2 × 1,1,0
 
-   Bob -- 5 -- Elected
-   Cal -- 3
-   Ann -- 2
+   Bob -- 5 (100%) -- Elected
+   Cal -- 3 (60%)
+   Ann -- 2 (40%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   10 approvals across 5 ballots — average 2.0 of 3 (range 2–2).
+     approved 2: 5 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+        |  Bob   |  Cal   |  Ann   |
+   ---------------------------------
+   Bob  |   --   |  60%   |  40%   |
+   Cal  |  100%  |   --   |   0%   |
+   Ann  |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Bob

@@ -33,10 +33,24 @@ Ballots:
     10 × 0,1,1,1
     13 × 1,0,0,0
 
-   Bird -- 19 -- Elected
-   Dog  -- 13
-   Cat  -- 10
-   Fish -- 10
+   Bird -- 19 (59%) -- Elected
+   Dog  -- 13 (41%)
+   Cat  -- 10 (31%)
+   Fish -- 10 (31%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   52 approvals across 32 ballots — average 1.6 of 4 (range 1–3).
+     approved 1: 22 ballots
+     approved 3: 10 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Bird  |  Dog   |  Cat   |  Fish  |
+   -------------------------------------------
+   Bird  |   --   |   0%   |  53%   |  53%   |
+   Dog   |   0%   |   --   |   0%   |   0%   |
+   Cat   |  100%  |   0%   |   --   |  100%  |
+   Fish  |  100%  |   0%   |  100%  |   --   |
 
 Winner — Approval Voting (single winner)
   Bird

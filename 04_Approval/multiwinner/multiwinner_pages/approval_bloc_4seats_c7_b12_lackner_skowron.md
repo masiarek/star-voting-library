@@ -61,15 +61,33 @@ Ballots:
      1 × 0,0,0,0,0,1,0
      1 × 0,0,0,0,0,0,1
 
-   A -- 8 -- Elected
-   B -- 4 -- Elected
-   C -- 4 -- Elected
-   D -- 2 -- Elected
-   F -- 2
-   E -- 1
-   G -- 1
+   A -- 8 (67%) -- Elected
+   B -- 4 (33%) -- Elected
+   C -- 4 (33%) -- Elected
+   D -- 2 (17%) -- Elected
+   F -- 2 (17%)
+   E -- 1 (8%)
+   G -- 1 (8%)
   Note: D, F each have 2 approvals and tie for the last 1 seat.
         Candidate priority order (D > F) broke the tie: D elected, F not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   22 approvals across 12 ballots — average 1.8 of 7 (range 1–3).
+     approved 1: 3 ballots
+     approved 2: 8 ballots
+     approved 3: 1 ballot
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+      |   A    |   B    |   C    |   D    |   F    |   E    |   G    |
+   -------------------------------------------------------------------
+   A  |   --   |  38%   |  38%   |  25%   |   0%   |   0%   |   0%   |
+   B  |  75%   |   --   |  25%   |   0%   |  25%   |   0%   |   0%   |
+   C  |  75%   |  25%   |   --   |   0%   |  25%   |   0%   |   0%   |
+   D  |  100%  |   0%   |   0%   |   --   |   0%   |   0%   |   0%   |
+   F  |   0%   |  50%   |  50%   |   0%   |   --   |   0%   |   0%   |
+   E  |   0%   |   0%   |   0%   |   0%   |   0%   |   --   |   0%   |
+   G  |   0%   |   0%   |   0%   |   0%   |   0%   |   0%   |   --   |
 
 Winners — Approval Voting (4 winners)
   A, B, C, D

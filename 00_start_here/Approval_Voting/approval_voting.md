@@ -28,6 +28,34 @@ Because the ballot is binary, Approval forces exactly one genuinely hard call: *
 
 An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/_main/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)).
 
+## Reading an Approval result
+
+An approval count is more than "who got the most marks." Three numbers tell the story — here they are for the [`approval_101` example](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) (5 voters, candidates Ann/Bob/Cal):
+
+```text
+   Bob -- 4 (80%) -- Elected
+   Ann -- 3 (60%)
+   Cal -- 2 (40%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 5 ballots — average 1.8 of 3 (range 1–2).
+     approved 1: 1 ballot
+     approved 2: 4 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+        |  Bob   |  Ann   |  Cal   |
+   Bob  |   --   |  50%   |  25%   |
+   Ann  |  67%   |   --   |  33%   |
+   Cal  |  50%   |  50%   |   --   |
+```
+
+- **Count and share.** Each candidate's approvals, and that as a **percentage of ballots** (Bob 4/5 = 80%). The share is the honest headline — "80% of voters approve Bob," not a share of some contested denominator.
+- **The approval distribution — the strategy signal.** How many candidates *each ballot* approved. If most voters **bullet-voted** (approved exactly one), the electorate is behaving like Choose-One and the "approve as many as you like" freedom went unused; a healthy spread (here, an average of 1.8 of 3) means voters actually expressed acceptance of more than one option. This is the approval analogue of STAR's [score distribution](../STAR_Voting/STAR_Scoring_Round.md).
+- **The co-approval matrix — the coalitions.** Of the voters who approved A, what fraction *also* approved B. It exposes structure the totals hide: blocs that move together, and "bridge" candidates approved across camps. (Ann's approvers back Bob 67% of the time; Cal's split evenly.) It's the approval analogue of STAR's [preference matrix](../STAR_Voting/STAR_Automatic_Runoff.md) — coalition shape, not just a winner.
+
+The share and distribution print on every result; the co-approval matrix is opt-in on screen (`options: { show_matrix: true }`) and always in the full [`_tabulated`](../../04_Approval/_main/_main_tabulated/approval_101_c3_b5_tabulated.txt) mirror. For a **visual** version of exactly these statistics — bar charts, an approval-distribution histogram, and a co-approval correlation table — the [Center for Election Science's polling tool](https://vote.electionscience.org/) renders them live (an Approval-advocacy site; the numbers are the numbers).
+
 ## How it compares
 
 | | **Choose-One** | **Approval** | **STAR** |

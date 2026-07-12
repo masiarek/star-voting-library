@@ -43,19 +43,31 @@ Full report from the [`_tabulated` mirror](../multiwinner_tabulated/approval_blo
 
 Ballots:
    columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
-   1,0,0,0
-   1,1,0,0
-   1,1,0,0
-   1,0,0,0
-   0,0,1,1
-   0,0,1,0
+     2 × 1,0,0,0
+     2 × 1,1,0,0
+     1 × 0,0,1,1
+     1 × 0,0,1,0
 
-   Amy  -- 4 -- Elected
-   Ben  -- 2 -- Elected
-   Cora -- 2
-   Doug -- 1
+   Amy  -- 4 (67%) -- Elected
+   Ben  -- 2 (33%) -- Elected
+   Cora -- 2 (33%)
+   Doug -- 1 (17%)
   Note: Ben, Cora each have 2 approvals and tie for the last 1 seat.
         Candidate priority order (Ben > Cora) broke the tie: Ben elected, Cora not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 6 ballots — average 1.5 of 4 (range 1–2).
+     approved 1: 3 ballots
+     approved 2: 3 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Amy   |  Ben   |  Cora  |  Doug  |
+   -------------------------------------------
+   Amy   |   --   |  50%   |   0%   |   0%   |
+   Ben   |  100%  |   --   |   0%   |   0%   |
+   Cora  |   0%   |   0%   |   --   |  50%   |
+   Doug  |   0%   |   0%   |  100%  |   --   |
 
 Winners — Approval Voting (2 winners)
   Amy, Ben

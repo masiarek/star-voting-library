@@ -31,9 +31,21 @@ Ballots:
      9 × 1,1,0
     13 × 0,1,1
 
-   Cat  -- 22 -- Elected
-   Fish -- 13
-   Dog  -- 9
+   Cat  -- 22 (100%) -- Elected
+   Fish -- 13 (59%)
+   Dog  -- 9 (41%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   44 approvals across 22 ballots — average 2.0 of 3 (range 2–2).
+     approved 2: 22 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Cat   |  Fish  |  Dog   |
+   ----------------------------------
+   Cat   |   --   |  59%   |  41%   |
+   Fish  |  100%  |   --   |   0%   |
+   Dog   |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Cat

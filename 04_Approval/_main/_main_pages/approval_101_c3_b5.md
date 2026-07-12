@@ -42,15 +42,27 @@ Full report from the [`_tabulated` mirror](../_main_tabulated/approval_101_c3_b5
 
 Ballots:
    columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
-   1,1,0
-   0,1,1
-   1,1,0
-   0,1,0
-   1,0,1
+     2 × 1,1,0
+     1 × 0,1,1
+     1 × 0,1,0
+     1 × 1,0,1
 
-   Bob -- 4 -- Elected
-   Ann -- 3
-   Cal -- 2
+   Bob -- 4 (80%) -- Elected
+   Ann -- 3 (60%)
+   Cal -- 2 (40%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 5 ballots — average 1.8 of 3 (range 1–2).
+     approved 1: 1 ballot
+     approved 2: 4 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+        |  Bob   |  Ann   |  Cal   |
+   ---------------------------------
+   Bob  |   --   |  50%   |  25%   |
+   Ann  |  67%   |   --   |  33%   |
+   Cal  |  50%   |  50%   |   --   |
 
 Winner — Approval Voting (single winner)
   Bob

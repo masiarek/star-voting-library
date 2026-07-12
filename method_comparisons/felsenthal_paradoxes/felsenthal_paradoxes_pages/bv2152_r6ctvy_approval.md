@@ -81,9 +81,22 @@ Ballots:
      2 × 1,0,1
     13 × 0,0,1
 
-   Anna  -- 28 -- Elected
-   Carla -- 21
-   Bert  -- 14
+   Anna  -- 28 (60%) -- Elected
+   Carla -- 21 (45%)
+   Bert  -- 14 (30%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   63 approvals across 47 ballots — average 1.3 of 3 (range 1–2).
+     approved 1: 31 ballots
+     approved 2: 16 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          |  Anna  | Carla  |  Bert  |
+   -----------------------------------
+   Anna   |   --   |   7%   |  29%   |
+   Carla  |  10%   |   --   |  29%   |
+   Bert   |  57%   |  43%   |   --   |
 
 Winner — Approval Voting (single winner)
   Anna

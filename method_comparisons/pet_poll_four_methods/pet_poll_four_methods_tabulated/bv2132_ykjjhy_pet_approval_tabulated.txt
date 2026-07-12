@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2132_ykjjhy_pet_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2132_ykjjhy_pet_approval_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:20
+TABULATED AT:    2026-07-12 12:39:34
 ======================================================================
 
 election_title: "BV2132 — Pet poll (Approval): broad support elects Cat"
@@ -45,9 +45,21 @@ Ballots:
      9 × 1,1,0
     13 × 0,1,1
 
-   Cat  -- 22 -- Elected
-   Fish -- 13
-   Dog  -- 9
+   Cat  -- 22 (100%) -- Elected
+   Fish -- 13 (59%)
+   Dog  -- 9 (41%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   44 approvals across 22 ballots — average 2.0 of 3 (range 2–2).
+     approved 2: 22 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Cat   |  Fish  |  Dog   |
+   ----------------------------------
+   Cat   |   --   |  59%   |  41%   |
+   Fish  |  100%  |   --   |   0%   |
+   Dog   |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Cat

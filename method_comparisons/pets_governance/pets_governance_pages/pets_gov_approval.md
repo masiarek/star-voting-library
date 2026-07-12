@@ -36,14 +36,29 @@ Ballots:
     13 × 1,1,1,0,0,0
      9 × 0,0,0,1,1,1
 
-   Dog     -- 13 -- Elected
-   Cat     -- 13 -- Elected
-   Fish    -- 13
-   Bird    -- 9
-   Rabbit  -- 9
-   Hamster -- 9
+   Dog     -- 13 (59%) -- Elected
+   Cat     -- 13 (59%) -- Elected
+   Fish    -- 13 (59%)
+   Bird    -- 9 (41%)
+   Rabbit  -- 9 (41%)
+   Hamster -- 9 (41%)
   Note: Dog, Cat, Fish each have 13 approvals and tie for the last 2 seats.
         Candidate priority order (Dog > Cat > Fish) broke the tie: Dog, Cat elected, Fish not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   66 approvals across 22 ballots — average 3.0 of 6 (range 3–3).
+     approved 3: 22 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+            |   Dog   |   Cat   |   Fish  |   Bird  |  Rabbit | Hamster |
+   ----------------------------------------------------------------------
+   Dog      |    --   |   100%  |   100%  |    0%   |    0%   |    0%   |
+   Cat      |   100%  |    --   |   100%  |    0%   |    0%   |    0%   |
+   Fish     |   100%  |   100%  |    --   |    0%   |    0%   |    0%   |
+   Bird     |    0%   |    0%   |    0%   |    --   |   100%  |   100%  |
+   Rabbit   |    0%   |    0%   |    0%   |   100%  |    --   |   100%  |
+   Hamster  |    0%   |    0%   |    0%   |   100%  |   100%  |    --   |
 
 Winners — Approval Voting (2 winners)
   Dog, Cat

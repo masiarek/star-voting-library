@@ -48,9 +48,22 @@ Ballots:
      1 × 1,0,1
      4 × 0,0,1
 
-   April -- 7 -- Elected
-   Clara -- 5
-   Bruce -- 4
+   April -- 7 (47%) -- Elected
+   Clara -- 5 (33%)
+   Bruce -- 4 (27%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   16 approvals across 15 ballots — average 1.1 of 3 (range 1–2).
+     approved 1: 14 ballots
+     approved 2: 1 ballot
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          | April  | Clara  | Bruce  |
+   -----------------------------------
+   April  |   --   |  14%   |   0%   |
+   Clara  |  20%   |   --   |   0%   |
+   Bruce  |   0%   |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   April

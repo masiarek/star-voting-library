@@ -33,9 +33,21 @@ Ballots:
     51 × 1,1,0
     49 × 0,1,1
 
-   Bella -- 100 -- Elected
-   Amos  -- 51
-   Chad  -- 49
+   Bella -- 100 (100%) -- Elected
+   Amos  -- 51 (51%)
+   Chad  -- 49 (49%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   200 approvals across 100 ballots — average 2.0 of 3 (range 2–2).
+     approved 2: 100 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          | Bella  |  Amos  |  Chad  |
+   -----------------------------------
+   Bella  |   --   |  51%   |  49%   |
+   Amos   |  100%  |   --   |   0%   |
+   Chad   |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Bella

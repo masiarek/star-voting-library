@@ -48,10 +48,27 @@ Ballots:
      1 × 0,0,0,1
      3 × 0,0,0,0
 
-   Dave  -- 7 -- Elected
-   Carol -- 6
-   Bob   -- 3
-   Alice -- 1
+   Dave  -- 7 (70%) -- Elected
+   Carol -- 6 (60%)
+   Bob   -- 3 (30%)
+   Alice -- 1 (10%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   17 approvals across 10 ballots — average 1.7 of 4 (range 0–4).
+     approved none: 3 ballots
+     approved 1: 1 ballot
+     approved 2: 3 ballots
+     approved 3: 2 ballots
+     approved 4: 1 ballot
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          |  Dave  | Carol  |  Bob   | Alice  |
+   --------------------------------------------
+   Dave   |   --   |  86%   |  43%   |  14%   |
+   Carol  |  100%  |   --   |  50%   |  17%   |
+   Bob    |  100%  |  100%  |   --   |  33%   |
+   Alice  |  100%  |  100%  |  100%  |   --   |
 
 Winner — Approval Voting (single winner)
   Dave

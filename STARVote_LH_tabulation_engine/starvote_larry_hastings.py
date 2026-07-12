@@ -1191,7 +1191,8 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     name_w = max(len(c) for c in candidates)
     for i, c in enumerate(ranked):
         tag = " -- Elected" if i < seats else ""
-        print(f"   {c.ljust(name_w)} -- {counts[c]}{tag}")
+        pct = round(100 * counts[c] / total) if total else 0
+        print(f"   {c.ljust(name_w)} -- {counts[c]} ({pct}%){tag}")
 
     # Flag a tie straddling the cut and spell out exactly how it was resolved.
     if seats < len(candidates) and counts[ranked[seats - 1]] == counts[ranked[seats]]:
@@ -1213,6 +1214,59 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
             f"        Candidate priority order ({prio}) broke the tie: "
             f"{', '.join(elected_tied)} elected, {', '.join(missed_tied)} not elected."
         )
+
+    # --- Approval distribution: how many candidates each ballot approved. The
+    # bullet-vote-vs-broad signal (are voters approving one, or many?) — the
+    # approval analogue of STAR's score distribution. ---
+    per_ballot = [sum(1 for c in candidates if b.get(c, 0) > 0) for b in ballots]
+    total_appr = sum(per_ballot)
+    avg = total_appr / total if total else 0.0
+    lo = min(per_ballot) if per_ballot else 0
+    hi = max(per_ballot) if per_ballot else 0
+    print("\n[Approval Distribution] (how many candidates each ballot approved)")
+    print(f"   {total_appr} approval{'' if total_appr == 1 else 's'} across "
+          f"{total} ballot{'' if total == 1 else 's'} — average {avg:.1f} of "
+          f"{len(candidates)} (range {lo}–{hi}).")
+    hist = {}
+    for k in per_ballot:
+        hist[k] = hist.get(k, 0) + 1
+    for k in sorted(hist):
+        nb = hist[k]
+        lbl = "approved none" if k == 0 else f"approved {k}"
+        print(f"     {lbl}: {nb} ballot{'' if nb == 1 else 's'}")
+
+    # --- Co-approval matrix: of the voters who approved the ROW candidate, the
+    # % who ALSO approved the COLUMN candidate. Coalition structure, not just
+    # totals — the approval analogue of STAR's preference matrix. Opt-in on
+    # screen via `options: { show_matrix: true }`; the _tabulated mirror forces
+    # it on. ---
+    if _truthy(_opts.get("show_matrix"), default=False) and len(candidates) >= 2:
+        cols = ranked
+        rw = max(len(c) for c in cols)
+        cw = max(6, rw)
+
+        def _corow(label, cells):
+            return "   " + label.ljust(rw) + "  | " + " | ".join(cells) + " |"
+
+        print("\n[Co-Approval Matrix]")
+        print(" Of the voters who approved the ROW candidate, the % who ALSO "
+              "approved the COLUMN candidate.")
+        header = _corow("", [c.center(cw) for c in cols])
+        print(header)
+        print("   " + "-" * (len(header) - 3))
+        for r in cols:
+            denom = counts[r]
+            cells = []
+            for c in cols:
+                if c == r:
+                    cells.append("--".center(cw))
+                elif denom == 0:
+                    cells.append("·".center(cw))
+                else:
+                    both = sum(1 for b in ballots
+                               if b.get(r, 0) > 0 and b.get(c, 0) > 0)
+                    cells.append(f"{round(100 * both / denom)}%".center(cw))
+            print(_corow(r, cells))
 
     word = "Winner" if seats == 1 else "Winners"
     print(f"\n{COLOR_WINNER}{word} — Approval Voting ({label}){COLOR_RESET}")
@@ -3131,19 +3185,34 @@ Memphis,Nashville,Chattanooga,Knoxville
             # the STAR path: provenance header + original file + results).
             import contextlib as _ctx
             import io as _io
+            _file_opts = election.get("options") or {}
+            # On-screen render honors the file's own options (co-approval matrix
+            # only if it sets show_matrix — house "less is more" default).
             _buf = _io.StringIO()
             try:
                 with _ctx.redirect_stdout(_buf):
                     tabulate_approval(csv_input, seats=_seats,
                                       priority=election.get("lot_numbers"),
-                                      options=election.get("options"))
+                                      options=_file_opts)
             except SystemExit:
                 sys.stdout.write(_buf.getvalue())  # don't swallow error text
                 raise
-            _out = _buf.getvalue()
-            sys.stdout.write(_out)
+            sys.stdout.write(_buf.getvalue())
+            # The '_tabulated' mirror ALWAYS renders full detail: force the
+            # co-approval matrix on regardless of the file's options.
+            _full_opts = dict(_file_opts)
+            _full_opts["show_matrix"] = True
+            _full_opts["collapse_ballots"] = True
+            _mbuf = _io.StringIO()
             try:
-                write_composed_tabulated(BALLOTS_FILE, _out)
+                with _ctx.redirect_stdout(_mbuf):
+                    tabulate_approval(csv_input, seats=_seats,
+                                      priority=election.get("lot_numbers"),
+                                      options=_full_opts)
+            except SystemExit:
+                _mbuf.write("")  # a validation error already surfaced on screen
+            try:
+                write_composed_tabulated(BALLOTS_FILE, _mbuf.getvalue())
             except Exception:
                 pass
             sys.exit(0)

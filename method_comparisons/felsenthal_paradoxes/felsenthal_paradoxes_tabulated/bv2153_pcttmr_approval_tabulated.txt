@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2153_pcttmr_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2153_pcttmr_approval_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:14
+TABULATED AT:    2026-07-12 12:39:34
 ======================================================================
 
 election_title: "Felsenthal Ex.7 — Approval: a majority's first choice loses"
@@ -50,9 +50,21 @@ Ballots:
     51 × 1,1,0
     49 × 0,1,1
 
-   Bella -- 100 -- Elected
-   Amos  -- 51
-   Chad  -- 49
+   Bella -- 100 (100%) -- Elected
+   Amos  -- 51 (51%)
+   Chad  -- 49 (49%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   200 approvals across 100 ballots — average 2.0 of 3 (range 2–2).
+     approved 2: 100 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          | Bella  |  Amos  |  Chad  |
+   -----------------------------------
+   Bella  |   --   |  51%   |  49%   |
+   Amos   |  100%  |   --   |   0%   |
+   Chad   |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Bella

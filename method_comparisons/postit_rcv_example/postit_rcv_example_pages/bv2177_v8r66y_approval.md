@@ -72,10 +72,25 @@ Ballots:
      1 × 1,0,0,1
      1 × 0,0,0,1
 
-   Pink   -- 12 -- Elected
-   Purple -- 10
-   Blue   -- 10
-   Green  -- 8
+   Pink   -- 12 (60%) -- Elected
+   Purple -- 10 (50%)
+   Blue   -- 10 (50%)
+   Green  -- 8 (40%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   40 approvals across 20 ballots — average 2.0 of 4 (range 1–3).
+     approved 1: 8 ballots
+     approved 2: 4 ballots
+     approved 3: 8 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+           |  Pink  | Purple |  Blue  | Green  |
+   ---------------------------------------------
+   Pink    |   --   |  17%   |  75%   |  67%   |
+   Purple  |  20%   |   --   |  10%   |  10%   |
+   Blue    |  90%   |  10%   |   --   |  70%   |
+   Green   |  100%  |  12%   |  88%   |   --   |
 
 Winner — Approval Voting (single winner)
   Pink

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2154_wq6yv7_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2154_wq6yv7_approval_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:14
+TABULATED AT:    2026-07-12 12:39:34
 ======================================================================
 
 election_title: "Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot"
@@ -63,9 +63,22 @@ Ballots:
      1 × 1,0,1
      4 × 0,0,1
 
-   April -- 7 -- Elected
-   Clara -- 5
-   Bruce -- 4
+   April -- 7 (47%) -- Elected
+   Clara -- 5 (33%)
+   Bruce -- 4 (27%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   16 approvals across 15 ballots — average 1.1 of 3 (range 1–2).
+     approved 1: 14 ballots
+     approved 2: 1 ballot
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          | April  | Clara  | Bruce  |
+   -----------------------------------
+   April  |   --   |  14%   |   0%   |
+   Clara  |  20%   |   --   |   0%   |
+   Bruce  |   0%   |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   April

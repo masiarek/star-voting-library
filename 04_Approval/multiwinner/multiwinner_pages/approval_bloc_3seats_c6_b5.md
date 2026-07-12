@@ -39,18 +39,34 @@ Full report from the [`_tabulated` mirror](../multiwinner_tabulated/approval_blo
 
 Ballots:
    columns = Adams, Brown, Clark, Davis, Evans, Foster      (1 = approve; 0 / blank / marker = not approved)
-   1,1,0,0,0,0
-   0,1,1,1,0,0
-   1,0,0,0,1,1
-   1,1,1,0,0,0
-   0,0,1,1,1,0
+     1 × 1,1,0,0,0,0
+     1 × 0,1,1,1,0,0
+     1 × 1,0,0,0,1,1
+     1 × 1,1,1,0,0,0
+     1 × 0,0,1,1,1,0
 
-   Adams  -- 3 -- Elected
-   Brown  -- 3 -- Elected
-   Clark  -- 3 -- Elected
-   Davis  -- 2
-   Evans  -- 2
-   Foster -- 1
+   Adams  -- 3 (60%) -- Elected
+   Brown  -- 3 (60%) -- Elected
+   Clark  -- 3 (60%) -- Elected
+   Davis  -- 2 (40%)
+   Evans  -- 2 (40%)
+   Foster -- 1 (20%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   14 approvals across 5 ballots — average 2.8 of 6 (range 2–3).
+     approved 2: 1 ballot
+     approved 3: 4 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+           | Adams  | Brown  | Clark  | Davis  | Evans  | Foster |
+   ---------------------------------------------------------------
+   Adams   |   --   |  67%   |  33%   |   0%   |  33%   |  33%   |
+   Brown   |  67%   |   --   |  67%   |  33%   |   0%   |   0%   |
+   Clark   |  33%   |  67%   |   --   |  67%   |  33%   |   0%   |
+   Davis   |   0%   |  50%   |  100%  |   --   |  50%   |   0%   |
+   Evans   |  50%   |   0%   |  50%   |  50%   |   --   |  50%   |
+   Foster  |  100%  |   0%   |   0%   |   0%   |  100%  |   --   |
 
 Winners — Approval Voting (3 winners)
   Adams, Brown, Clark

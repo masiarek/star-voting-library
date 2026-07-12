@@ -32,16 +32,28 @@ Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/fel
 
 Ballots:
    columns = Aria, Beau, Cole, Dean      (1 = approve; 0 / blank / marker = not approved)
-   1,1,1,0
-   1,1,1,0
-   1,1,0,1
+     2 × 1,1,1,0
+     1 × 1,1,0,1
 
-   Beau -- 3 -- Elected
-   Aria -- 3
-   Cole -- 2
-   Dean -- 1
+   Beau -- 3 (100%) -- Elected
+   Aria -- 3 (100%)
+   Cole -- 2 (67%)
+   Dean -- 1 (33%)
   Note: Beau, Aria each have 3 approvals and tie for the last 1 seat.
         Candidate priority order (Beau > Aria) broke the tie: Beau elected, Aria not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 3 ballots — average 3.0 of 4 (range 3–3).
+     approved 3: 3 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Beau  |  Aria  |  Cole  |  Dean  |
+   -------------------------------------------
+   Beau  |   --   |  100%  |  67%   |  33%   |
+   Aria  |  100%  |   --   |  67%   |  33%   |
+   Cole  |  100%  |  100%  |   --   |   0%   |
+   Dean  |  100%  |  100%  |   0%   |   --   |
 
 Winner — Approval Voting (single winner)
   Beau
