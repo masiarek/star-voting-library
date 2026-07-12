@@ -29,7 +29,7 @@ options:
 | `show_condorcet` | the `[Condorcet Winner]` line and whether it matches the STAR winner | [matrix](matrix.md) |
 | `show_score_counts` | the `[Score Distribution]` table (per-score counts, Total, Avg) | [score distribution](score_distribution.md) |
 | `show_irv` | the `[Divergence from STAR]` block comparing the RCV-IRV result | — |
-| `brief` | `true` collapses repeated section headers so the report is shorter | — |
+| `brief` | `true` collapses repeated section headers so the report is shorter | [brief (with/without)](brief.md) |
 | `collapse_ballots` | `false` lists every ballot; `true` groups identical ones as `count × scores` | — |
 | `show_runoff_percent` | the `Voters with a preference: N of TOTAL …` line | [runoff percentages](../../STAR_Voting/runoff_percentages.md) |
 
