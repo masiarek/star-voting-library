@@ -91,6 +91,7 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 - **Objective:** Before comparing methods, name the competing ideals of a "good winner" and the criteria of a "good method" — and see there is no single ideal.
 - **Key terms:** consensus / Condorcet winner, majoritarian vs. utilitarian winner, representative outcome, VSE, strategy-resistance, summability, "a perfect system will never exist."
 - **Pages:** [What makes a good winner?](what_makes_a_good_winner.md) (four ideals; majoritarian-vs-utilitarian with the fruit example; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](what_makes_a_voting_method_good.md) (criteria beyond the winner; "where reasonable people disagree").
+- **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — the common pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked: what's provable, what's overstated, and the advocacy on *every* side.
 - **Emphasize:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301** — 301.6 walks a concrete disagreement and 301.9 covers how the simulations are built.
 
 ---
