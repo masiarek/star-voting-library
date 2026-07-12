@@ -75,6 +75,13 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **Strategyproofness** — no voter can ever gain by voting insincerely; impossible for any method (Gibbard).
 - **Gibbard / Gibbard–Satterthwaite theorems** — proofs that every reasonable voting method is manipulable.
 - **Strategy resistance** — how rarely and riskily strategy pays; STAR is resistant, not proof.
+- **Strategic / tactical / insincere voting** — casting a ballot that misstates your true preferences to try for a better result. Every method is manipulable (Gibbard); what matters is whether it's *actionable* and whether it *pays*. → page [Strategic Voting Across the Equal Vote Methods](strategic_voting.md)
+- **Compromising (strong insincerity)** — scoring/ranking a "lesser evil" *above* your true favorite; the same thing as **favorite betrayal**, and the defining flaw of choose-one. → [strategic voting](strategic_voting.md)
+- **Burial (weak insincerity)** — keeping your favorite on top but placing a rival *below* candidates you like even less, to knock the rival out. The named strategic risk for Ranked Robin; rarely pays in STAR. → [strategic voting](strategic_voting.md)
+- **Bullet voting / tactical minimization (truncation)** — supporting *only* your favorite and zeroing (or omitting) everyone else. The central Approval tension; STAR's runoff discourages it. → [strategic voting](strategic_voting.md)
+- **Tactical maximization** — the opposite of bullet voting: inflating support for a front-runner you don't love, to hedge. The other side of the Approval threshold; STAR's runoff neutralizes it. → [strategic voting](strategic_voting.md)
+- **Candidate viability** — whether a candidate is seen as *able to win*; under choose-one it pressures voters toward the "electable" lesser evil, and it's the lever establishment/media use to steer votes. → [strategic voting](strategic_voting.md)
+- **Voter Satisfaction Efficiency (VSE)** — a simulation metric for how well a method's outcomes reflect voter preferences, and how much strategy shifts that; the basis for the strategic "backfire ratio" figures (STAR ≈ 1:1, IRV ≈ 3:1, Plurality ≈ 17:1). → [strategic voting](strategic_voting.md)
 - **Equal Vote / Test of Balance** — any support a ballot expresses can be exactly cancelled by an opposite ballot; STAR's precise sense of equal weight.
 - **One-person-one-vote** — equal voting weight. (Caution: the constitutional OPOV doctrine governs district population, not ballot expressiveness.)
 - **Utilitarian vs majoritarian** — maximizing total support vs guaranteeing a majority; STAR blends both.

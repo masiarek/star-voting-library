@@ -70,4 +70,4 @@ That view is contestable — a committed Condorcet advocate would answer that a 
 
 All three beat the status quo, and the honest differences between them are tradeoffs, not knockouts. Read each method's honest-limits page alongside its case, and decide which corner of the triangle fits your election.
 
-**See also:** [STAR FAQ (mechanics, with worked examples)](STAR_Voting/STAR_FAQ.md) · [RCV-IRV vs. STAR](rcv_irv_vs_star.md) · [Three notions of "winner"](STAR_Voting/STAR_three_winner_notions.md) · [Curriculum](CURRICULUM.md) · [Glossary](GLOSSARY.md)
+**See also:** [Strategic voting across these methods](strategic_voting.md) · [STAR FAQ (mechanics, with worked examples)](STAR_Voting/STAR_FAQ.md) · [RCV-IRV vs. STAR](rcv_irv_vs_star.md) · [Three notions of "winner"](STAR_Voting/STAR_three_winner_notions.md) · [Curriculum](CURRICULUM.md) · [Glossary](GLOSSARY.md)
