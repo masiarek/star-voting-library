@@ -88,9 +88,13 @@ def _find_candidate_names(obj):
 def from_bv_export(path):
     """Return (title, bv_id, [candidates]) from a frozen BV export JSON."""
     data = json.load(open(path, encoding="utf-8"))
-    election = data.get("election", data) if isinstance(data, dict) else {}
+    # A frozen BV UI export nests everything under a capitalized "Election" key
+    # (siblings "Ballots"/"Results"); older/plain GETs use lowercase or are flat.
+    election = data if not isinstance(data, dict) else (
+        data.get("Election") or data.get("election") or data)
     title = election.get("title") or election.get("name")
-    bv_id = election.get("election_id") or election.get("id") or data.get("election_id")
+    bv_id = (election.get("election_id") or election.get("id")
+             or data.get("election_id") or data.get("Election", {}).get("election_id"))
     cands = _find_candidate_names(data)
     if not cands:
         raise SystemExit(f"Could not find candidate names in {path} "
@@ -243,6 +247,24 @@ def selftest():
         no_qr = 'class="qr"' not in html_out
         print(f"[selftest] graceful no-QR (segno absent): {'OK' if no_qr else 'FAIL'}")
         ok &= no_qr
+    # BV-export parsing: a frozen UI export nests everything under capitalized
+    # "Election" (siblings "Ballots"/"Results") — regression guard for that schema.
+    import tempfile, os
+    export = {"Election": {"title": "Pets", "election_id": "mptvrm",
+                           "races": [{"candidates": [{"candidate_name": "ala"},
+                                                     {"candidate_name": "bob"}]}]},
+              "Ballots": [], "Results": []}
+    fd, tmp = tempfile.mkstemp(suffix=".json")
+    with os.fdopen(fd, "w") as f:
+        json.dump(export, f)
+    try:
+        t, bid, cs = from_bv_export(tmp)
+        bv_ok = (t == "Pets" and bid == "mptvrm" and cs == ["ala", "bob"])
+    finally:
+        os.remove(tmp)
+    print(f"[selftest] BV export (capital 'Election'): title+id+candidates: "
+          f"{'OK' if bv_ok else 'FAIL'}")
+    ok &= bv_ok
     print(f"[selftest] {'ALL PASS' if ok else 'FAILURES PRESENT'}")
     return ok
 

@@ -99,7 +99,7 @@ Restated in the repo's terms (the *goal*, not the letter of the original suggest
 
 ## 7. Verification status
 
-- **Verified (automated):** `--selftest` passes (structure, bubbles, serials, write-ins, QR present/absent). Reads the lunch YAML (picks up candidates + title + `fyy886`) and the live `bettervoting.com/pet` election (7 candidates, QR → `/pet`).
+- **Verified (automated):** `--selftest` passes (structure, bubbles, serials, write-ins, QR present/absent, and the **`--bv-export` schema** — a frozen UI export nests everything under a capitalized `Election` key). Reads the lunch YAML (picks up candidates + title + `fyy886`), the live `bettervoting.com/pet` election (7 candidates, QR → `/pet`), and a **real frozen export** (`mptvrm`: title + `election_id` + candidates + results URL + QR all extracted). *(The capitalized-`Election` case is why the earlier best-effort guess missed title/id until a real export was tested — now covered.)*
 - **Pending (needs a human — owner: user):** (a) the QR **actually scans** on a phone and opens the election; (b) the ballot **prints cleanly** (bubble alignment, ~2/page, no clipping, 7-row grids); (c) the **flow feels right** in a real room. These are structurally un-checkable in-repo; validate on real paper before treating the doc as final.
 
 ## 8. Invocation
