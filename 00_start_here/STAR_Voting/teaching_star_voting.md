@@ -58,9 +58,26 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 - **Match depth to the audience** (see [curriculum pacing](../CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the arc above and stop; officials = add [summability & audits](STAR_summability.md); skeptics/debaters = [honest limits](STAR_honest_limits.md) + [the criteria](../criteria_at_a_glance.md).
 - **End with a call to action** — have them cast a real STAR ballot or run their own poll before they leave.
 
-## Running a real hand-count (for organizers)
+## Print your own paper ballots (the hands-on loop)
 
-**Want the full hands-on loop?** [Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md) — create a BetterVoting election, **print matching paper ballots** with the [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) tool, have the room vote, hand-count, and check against BetterVoting.
+The repo has a tool that **turns any STAR election into print-ready paper ballots** — [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) (stdlib `python3`). One command, e.g. the live "best pet" election:
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
+    --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
+    --title "What Makes the Best Pet?" --bv-id pet \
+    --serials --write-ins 1 --copies 25 --out pets.html
+```
+
+Open the HTML, **Print → PDF**, and hand them out. Each ballot has a 0–5 bubble grid, the STAR instructions, and — the fun part:
+
+- a **QR code** → scan to open the live election ([`bettervoting.com/pet`](https://bettervoting.com/pet)), so a class can vote **on paper *and* online** and compare;
+- optional **serial "receipts"** (`--serials`) — a lovely way to teach *verifiability* and the secret-ballot tension (publish the counted serials; discuss why a name→number list would be bad);
+- optional **write-in rows** (`--write-ins N`) and a custom **`--qr-url`** for offline demos.
+
+The full walkthrough — the create → print → vote → hand-count → compare loop, the ready-made [lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) / [pet](https://bettervoting.com/pet) / [meta_pets](https://bettervoting.com/meta_pets) elections, and the design notes — is [**Run a paper-ballot STAR demo**](running_a_paper_ballot_demo.md).
+
+## Running a real hand-count (for organizers)
 
 For an actual election, STAR is genuinely hand-countable. The Equal Vote Coalition's official procedure is worth following: [**BetterVoting — Hand Counting STAR**](https://docs.bettervoting.com/help/hand_count.html). The gist:
 
@@ -75,6 +92,7 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 - **Scripts:** [What's so good about STAR](whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](why_do_you_love_STAR_Voting.md) (conversation-style walkthroughs) · [the Automatic Runoff, as slides](STAR_Automatic_Runoff_slides.md)
 - **The ballot image, the lunch diagram, and worked pages** in [STAR — start here](STAR_start_here.md); the [FAQ](STAR_FAQ.md) and [second-round FAQ](STAR_second_round_FAQ.md) for the questions that come up
 - **Videos & official guides:** [STAR resources](STAR_resources.md)
+- **Print paper ballots & run a hands-on demo:** [Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md) (QR, serial receipts, write-ins) + [Count a STAR election by hand](count_star_by_hand.md)
 - **Teaching runoff reversal specifically:** [the step-by-step guide](../../01_STAR/runoff_overturns_leader/) with a devil's-advocate Q&A
 
 ## Audience quick-adaptations
