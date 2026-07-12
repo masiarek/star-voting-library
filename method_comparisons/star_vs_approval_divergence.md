@@ -13,21 +13,28 @@ STAR has a **canonical sincere ballot**: min-max your feelings onto 0–5. Appro
 
 Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../00_start_here/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
 
-## The measured rates
+## The measured rates — the approval cutoff is the knob
 
-From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections per cell, 51 voters, seed 12345; sincere ballots, no strategy):
+Because Approval has no canonical sincere ballot, the honest way to report this is to **sweep the cutoff**. Read each voter's 0–5 STAR ballot as approvals at threshold *N* (approve everything scored ≥ *N*): *ge5* = approve only your top (near-[bullet](../00_start_here/plurality.md)), *ge1* = approve anyone but your worst. From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections, 51 voters, seed 12345, sincere):
 
-| Electorate model | 3 candidates | 5 candidates |
+**3 candidates** — divergence by where the approval line is drawn:
+
+| Approve scores ≥ | Spatial (realistic) | Impartial (stress) |
 |---|:---:|:---:|
-| **Spatial** (voters & candidates as points in issue space — the realistic model) | **~12%** | **~25%** |
-| **Impartial culture** (every utility independent & uniform — an adversarial stress test) | **~23%** | **~35%** |
+| **5** — only your top (near-bullet) | 14% | 22% |
+| **4** | **10%** ← *most STAR-like* | 22% |
+| **3** — top half of the scale | 12% | 23% |
+| **2** | 20% | 24% |
+| **1** — anyone but your worst | **27%** | 27% |
 
-Two robust takeaways:
+Four findings:
 
-- **Divergence grows with the size of the field** — with only two candidates they can't disagree; the more candidates, the more room for the two methods to pick differently.
-- **The electorate model dominates the sincere cutoff.** The two sincere cutoffs tested — *approve above your average* and *approve the top half of your range* — give nearly identical rates; realistic (spatial) electorates disagree far less than the impartial-culture stress test. (The cutoff *can* matter at the extreme: an electorate that **bullet-votes** collapses Approval toward [Plurality](../00_start_here/plurality.md) and would diverge much more — but that's a strategic degenerate, not a sincere model, so it's a bound, not a rate.)
+- **The cutoff is the dominant knob under a realistic electorate.** Just moving the approval line swings divergence from ~10% to ~27% (3 candidates); at 4 candidates it's ~15% to ~39%. So "how often do STAR and Approval disagree?" has *no answer* until you say **where voters approve** — which is the whole point.
+- **It's non-monotonic, with a sweet spot.** Agreement is *highest* at a **moderate** cutoff (approve your top ~half, ge3–ge4) and *worst at the generous extreme* (ge1): approving everyone but your worst discards nearly all intensity and collapses Approval toward "least-hated" — exactly where it parts from STAR's majority-preferred runoff winner.
+- **More candidates → more divergence**, at every cutoff.
+- **The electorate model still matters** (impartial > spatial), but under the realistic model the *cutoff* moves the number more than the model does. (An earlier version of this page tested only two *similar* cutoffs and wrongly concluded the cutoff barely mattered — the sweep corrects that.)
 
-So a fair one-liner is: **in realistic 3–5 candidate elections, sincere STAR and Approval pick the same winner roughly 75–90% of the time; when they split, it's the *intensity-vs-breadth* disagreement below.**
+A fair one-liner: **with a sensible sincere cutoff (approve your top half) in realistic 3–5 candidate elections, STAR and Approval agree ~80–90% of the time; loosen the cutoff toward "approve almost everyone" and they part far more often** — because that's when Approval stops measuring intensity. When they split, it's the *intensity-vs-breadth* disagreement below.
 
 ## Why they diverge (when they do)
 
@@ -51,10 +58,13 @@ For the single-election view in the engine, any Approval or STAR file prints a *
 ## Run it yourself
 
 ```bash
-python3 06_Other/simulations/star_vs_approval_divergence.py                 # default sweep
+python3 06_Other/simulations/star_vs_approval_divergence.py                       # default: sweep score cutoffs ge5..ge1
 python3 06_Other/simulations/star_vs_approval_divergence.py --candidates 5 --voters 101
-python3 06_Other/simulations/star_vs_approval_divergence.py --selftest      # known-answer checks
+python3 06_Other/simulations/star_vs_approval_divergence.py --cutoffs mean midpoint   # utility cutoffs instead
+python3 06_Other/simulations/star_vs_approval_divergence.py --selftest            # known-answer checks
 ```
+
+The **`--cutoffs`** parameter is the one that matters: `geN` reads the STAR ballot as approvals at threshold *N* (the sweep above); `mean`/`midpoint` are utility-based cutoffs. Sweeping it is how you *see* that the "divergence rate" is a function of the approval rule, not a fixed fact.
 
 It reuses the electorate models and STAR tabulator from [`fbc_simulation.py`](../06_Other/simulations/fbc_simulation.py), is fully **seeded** (reproducible), and **self-tests** its tabulators (a known Approval count and a constructed STAR≠Approval divergence) before every run. Everything it reports carries its model and cutoff — because, as above, the number is meaningless without them.
 

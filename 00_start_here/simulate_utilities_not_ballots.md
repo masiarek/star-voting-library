@@ -60,7 +60,7 @@ Level-1 random ballots are **not wrong for everything** — they're wrong for *c
 Even utility-first, the *conversion* to a ballot is a modeling choice with real consequences:
 
 - **STAR's min-max** assumes each voter uses the full 0–5 range — the "do scored ballots have a stable meaning?" debate lives here ([what makes a method good](what_makes_a_voting_method_good.md)).
-- **Approval has no canonical conversion at all** — the voter picks a 0/1 cutoff, and *where* changes the winner. That's precisely why [STAR-vs-Approval divergence](../method_comparisons/star_vs_approval_divergence.md) depends on the cutoff as well as the electorate model.
+- **Approval has no canonical conversion at all** — the voter picks a 0/1 cutoff, and *where* changes the winner. That's precisely why [STAR-vs-Approval divergence](../method_comparisons/star_vs_approval_divergence.md) depends on the cutoff as well as the electorate model — its `--cutoffs` parameter *sweeps* the approval threshold (approve scores ≥5, ≥4, … ≥1) and the divergence rate moves from ~10% to ~40%, non-monotonically. The conversion rule isn't a detail; it's the experiment.
 
 Sampling ballots directly hides this step; sampling utilities forces you to make it explicit — which is a feature, not a burden.
 

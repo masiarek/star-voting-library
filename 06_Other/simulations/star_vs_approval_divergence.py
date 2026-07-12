@@ -23,11 +23,15 @@ per (electorate model, approval cutoff).
 
 APPROVAL CUTOFF RULES (sincere; no polling/strategy)
 ----------------------------------------------------
-- mean     : approve every candidate you rate ABOVE your own average utility.
-- midpoint : approve every candidate in the top half of your own utility RANGE
-             (utility > (min+max)/2) — equivalently ~score >= 3 on the 0-5 scale.
-(Bullet voting — approve only your favorite — degenerates to Plurality and is a
-bound, not a sincere model; it's discussed on the page, not simulated here.)
+The key knob: Approval has NO canonical sincere ballot, so *where a voter draws
+the 0/1 line* is a modelling choice — and it moves the winner. Two families:
+- Score cutoffs (default): geN = approve every candidate you'd SCORE >= N on the
+  0-5 STAR ballot. ge5 = only your top (near-Plurality) .. ge1 = anyone but your
+  worst (near-universal). This is the intuitive "read the STAR ballot as approvals
+  at threshold N" family — sweep it to see the cutoff's impact directly.
+- Utility cutoffs: mean (above your average utility), midpoint (above your midrange).
+Run `--cutoffs ge5 ge4 ge3 ge2 ge1` (the default) to see divergence rise as the
+cutoff tightens toward bullet voting.
 
 ELECTORATE MODELS (same as fbc_simulation.py)
 ---------------------------------------------
@@ -92,13 +96,29 @@ def honest_scores(U):
 
 
 def honest_approvals(U, cutoff):
-    """U: (V, C) utilities -> (V, C) 0/1 approvals under a sincere cutoff rule."""
+    """U: (V, C) utilities -> (V, C) 0/1 approvals under a sincere cutoff rule.
+
+    Utility cutoffs:
+      mean      approve every candidate rated above your average utility.
+      midpoint  approve every candidate above the midpoint of your utility range.
+    Score cutoffs (the intuitive "read the STAR ballot as approvals" family) —
+    approve every candidate you'd SCORE >= N on the 0-5 STAR ballot:
+      ge5  only your top-scored candidate(s)   (most restrictive, ~bullet vote)
+      ge4  scored 4 or 5
+      ge3  scored 3-5   (top half of the scale; ~= midpoint)
+      ge2  scored 2-5
+      ge1  scored 1-5   (anyone but your worst; most generous)
+    Because STAR's min-max scaling puts each voter's favorite at 5 and worst at 0,
+    ge5 approves >=1 candidate and ge1 approves all-but-worst — a full spectrum
+    from near-Plurality to near-universal-approval.
+    """
     if cutoff == "mean":
-        thresh = U.mean(axis=1, keepdims=True)
-        return (U > thresh).astype(int)
+        return (U > U.mean(axis=1, keepdims=True)).astype(int)
     if cutoff == "midpoint":
         mid = (U.min(axis=1, keepdims=True) + U.max(axis=1, keepdims=True)) / 2.0
         return (U > mid).astype(int)
+    if cutoff.startswith("ge") and cutoff[2:].isdigit():
+        return (honest_scores(U) >= int(cutoff[2:])).astype(int)
     raise ValueError(f"unknown cutoff: {cutoff}")
 
 
@@ -180,8 +200,11 @@ def main():
     ap.add_argument("--seed", type=int, default=12345)
     ap.add_argument("--models", nargs="+", default=["spatial", "impartial"],
                     choices=["spatial", "impartial"])
-    ap.add_argument("--cutoffs", nargs="+", default=["mean", "midpoint"],
-                    choices=["mean", "midpoint"])
+    ap.add_argument("--cutoffs", nargs="+",
+                    default=["ge5", "ge4", "ge3", "ge2", "ge1"],
+                    choices=["mean", "midpoint", "ge1", "ge2", "ge3", "ge4", "ge5"],
+                    help="approval cutoff rule(s): geN = approve scores >= N (ge5 "
+                         "restrictive .. ge1 generous); mean/midpoint = utility cutoffs")
     ap.add_argument("--selftest", action="store_true", help="run known-answer checks only")
     args = ap.parse_args()
 
