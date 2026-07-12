@@ -4,40 +4,42 @@ The core single-winner STAR sequence: the smallest examples that introduce one i
 
 ## The arc
 
+Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside it in this folder under the filename shown on the page.
+
 **⭐ The running example — the team lunch.** The one a newcomer meets first: five coworkers, three lunches, and the compromise everyone likes wins. Live on BetterVoting.
 
-- [`bv2184_fyy886_lunch_vote`](_main_pages/bv2184_fyy886_lunch_vote.md) — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
+- **[The team lunch vote](_main_pages/bv2184_fyy886_lunch_vote.md)** — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
 
 **Intros — three candidates (101).** How a STAR ballot is scored and read, where the third option makes the two rounds matter.
 
-- [`02a_c3_b1_three-candidates`](_main_pages/02a_c3_b1_three-candidates.md) · [`02b_c3_b2_three-candidates`](_main_pages/02b_c3_b2_three-candidates.md)
+- [Three candidates, one ballot](_main_pages/02a_c3_b1_three-candidates.md) · [Three candidates, two ballots](_main_pages/02b_c3_b2_three-candidates.md)
 
 **Ballot styles.** The choices a voter can make on a STAR ballot.
 
-- [`03a_c3_b3_style-bullet-vote`](_main_pages/03a_c3_b3_style-bullet-vote.md) · [`03b_c3_b3_1_style-protest-vote`](_main_pages/03b_c3_b3_1_style-protest-vote.md) · [`03b_c3_b3_2_expand_style-protest-vote`](_main_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [`03c_c6_b8_style-gallery`](_main_pages/03c_c6_b8_style-gallery.md)
-- [`star_ala_approval`](_main_pages/star_ala_approval.md) — scoring only 0/5 (Approval-style)
+- [A valid bullet vote](_main_pages/03a_c3_b3_style-bullet-vote.md) · [Low-score "protest" ballots](_main_pages/03b_c3_b3_1_style-protest-vote.md) · […low-score ballots, continued](_main_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [Eight ways to fill out one ballot](_main_pages/03c_c6_b8_style-gallery.md)
+- [STAR à la Approval](_main_pages/star_ala_approval.md) — scoring only 0/5 (Approval-style)
 
 **Equal support & abstentions.** How "no preference" and blank scores are counted.
 
-- [`equal_support_runoff_demo`](_main_pages/equal_support_runoff_demo.md) · [`abstentions`](_main_pages/abstentions.md) · [`05a_c5_b3_unanimous-ballots`](_main_pages/05a_c5_b3_unanimous-ballots.md)
+- [Equal Support — counted in both rounds](_main_pages/equal_support_runoff_demo.md) · [Abstentions — blank & abstaining ballots](_main_pages/abstentions.md) · [Unanimous ballots](_main_pages/05a_c5_b3_unanimous-ballots.md)
 
 **Larger fields & the runoff.** Where the scoring round has to choose two finalists.
 
-- [`06a_c9_b3_large-field-equal-support`](_main_pages/06a_c9_b3_large-field-equal-support.md) · [`06b_c9_runoff-overturns-leader`](_main_pages/06b_c9_runoff-overturns-leader.md) · [`09_c4_b100_tennessee-capital`](_main_pages/09_c4_b100_tennessee-capital.md) · [`three_winners_cw_score_runoff`](_main_pages/three_winners_cw_score_runoff.md)
-- [`bv2182_tg4779_faq_runoff_reversal`](_main_pages/bv2182_tg4779_faq_runoff_reversal.md) — the scoring leader loses the runoff; live on BetterVoting · **[live ↗](https://bettervoting.com/tg4779/results)**
+- [Large field (9 candidates) — Equal Support decides](_main_pages/06a_c9_b3_large-field-equal-support.md) · [Large field — the runoff overturns the leader](_main_pages/06b_c9_runoff-overturns-leader.md) · [Tennessee capital (the classic)](_main_pages/09_c4_b100_tennessee-capital.md) · [When Condorcet, Score & Runoff disagree](_main_pages/three_winners_cw_score_runoff.md)
+- [The FAQ runoff reversal — the scoring leader loses](_main_pages/bv2182_tg4779_faq_runoff_reversal.md); live on BetterVoting · **[live ↗](https://bettervoting.com/tg4779/results)**
 
 **Vote-splitting (why STAR resists the spoiler).**
 
-- [`vote_splitting`](_main_pages/vote_splitting.md) · [`vote_splitting2`](_main_pages/vote_splitting2.md) · [`vote_splitting3`](_main_pages/vote_splitting3.md)
-- [`vote_splitting_scenario1_spoiler`](_main_pages/vote_splitting_scenario1_spoiler.md) · [`vote_splitting_scenario2_bloc_leads`](_main_pages/vote_splitting_scenario2_bloc_leads.md) · [`vote_splitting_scenario3_outsider_wins`](_main_pages/vote_splitting_scenario3_outsider_wins.md)
+- Two chocolates split the majority: [part 1](_main_pages/vote_splitting.md) · [part 2](_main_pages/vote_splitting2.md) · [part 3](_main_pages/vote_splitting3.md)
+- [Scenario 1 — the spoiler strikes](_main_pages/vote_splitting_scenario1_spoiler.md) · [Scenario 2 — bloc leader wins anyway](_main_pages/vote_splitting_scenario2_bloc_leads.md) · [Scenario 3 — the outsider truly wins](_main_pages/vote_splitting_scenario3_outsider_wins.md)
 
 **Quorum (turnout threshold).**
 
-- [`quorum_demo_c3_b6`](_main_pages/quorum_demo_c3_b6.md) · [`quorum_fail_demo_c3_b6`](_main_pages/quorum_fail_demo_c3_b6.md)
+- [An abstention still counts toward turnout](_main_pages/quorum_demo_c3_b6.md) · [Won the count, but not elected](_main_pages/quorum_fail_demo_c3_b6.md)
 
 **Display options (engine reporting).**
 
-- [`04b_c4_b3_display-options-all`](_main_pages/04b_c4_b3_display-options-all.md) · [`display_options_demo`](_main_pages/display_options_demo.md)
+- [Every reporting option, shown](_main_pages/04b_c4_b3_display-options-all.md) · [Display-options demo](_main_pages/display_options_demo.md)
 
 ---
 

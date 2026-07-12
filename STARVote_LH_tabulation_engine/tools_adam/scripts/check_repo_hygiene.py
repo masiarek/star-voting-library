@@ -304,6 +304,46 @@ def check_bv_case_md():
     return sorted(missing)
 
 
+# --------------------------------------------------------------------------- #
+# Index completeness: some folders keep a README that is meant to be an
+# EXHAUSTIVE index of their generated pages (the teaching progression's front
+# door). A new page added to `<folder>_pages/` but forgotten in that README goes
+# silently missing — the exact bug that dropped bv2184_fyy886_lunch_vote from
+# 01_STAR/_main. This gate makes that impossible: for each listed folder, every
+# `<folder>_pages/*.md` must be referenced (by href) somewhere in its README.md.
+#
+# Deliberately an ALLOWLIST, not every folder: most READMEs are narrative and
+# link a representative subset by design. Add a folder here only when its README
+# is a complete index. Paths are repo-relative POSIX.
+# --------------------------------------------------------------------------- #
+INDEX_COMPLETE_DIRS = [
+    "01_STAR/_main",
+]
+
+
+def check_pages_indexed():
+    """Return [(readme_rel, unlisted_page)] for pages under an INDEX_COMPLETE_DIRS
+    folder's `<folder>_pages/` that its README.md never links."""
+    missing = []
+    for rel_folder in INDEX_COMPLETE_DIRS:
+        folder = os.path.join(REPO, rel_folder.replace("/", os.sep))
+        readme = os.path.join(folder, "README.md")
+        pages_dir = os.path.join(folder, os.path.basename(folder) + "_pages")
+        if not (os.path.isfile(readme) and os.path.isdir(pages_dir)):
+            continue
+        try:
+            text = open(readme, encoding="utf-8").read()
+        except OSError:
+            continue
+        text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+        linked = {os.path.basename(m.group(1).split("#")[0].strip())
+                  for m in MD_LINK.finditer(text)}
+        for fn in sorted(os.listdir(pages_dir)):
+            if fn.endswith(".md") and fn not in linked:
+                missing.append((os.path.relpath(readme, REPO), fn))
+    return sorted(missing)
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -351,6 +391,15 @@ def main(argv):
         print(f"repo-hygiene: ⚠️  BV cases missing their .md page ({len(no_md)}):")
         for rel, msg in no_md:
             print(f"   • {rel}\n       {msg}")
+    unlisted = check_pages_indexed()
+    if not unlisted:
+        print("repo-hygiene: ✓ every index-complete README lists all its pages.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  pages missing from an index README ({len(unlisted)}) — "
+              "add them to the README (or move the folder off INDEX_COMPLETE_DIRS):")
+        for rel, page in unlisted:
+            print(f"   • {rel}  ←  {page} not linked")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.
     return rc
