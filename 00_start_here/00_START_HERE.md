@@ -34,6 +34,8 @@ The honest comparison — where STAR's case is actually made.
 - [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
 - [RCV-IRV vs. STAR](rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
 - [Strategic voting](strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
+- **Skeptical?** [STAR for skeptics — the honest 5-minute path](STAR_Voting/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
+- **More than one seat?** [Electing more than one, simply](electing_more_than_one.md) — majoritarian vs. proportional, in plain language
 
 ## The whole field, even-handed
 

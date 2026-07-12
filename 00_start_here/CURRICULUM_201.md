@@ -34,6 +34,7 @@
 
 ## 201.5 — Multi-winner intro: Bloc STAR
 
+- **Start plain:** [Electing more than one, simply](electing_more_than_one.md) — the majoritarian-vs-proportional fork before any machinery ("do you want the N best, or a body that mirrors the electorate?").
 - **Objective:** electing several seats with a majoritarian / at-large method.
 - **Key terms:** Bloc STAR, seats, at-large.
 - **See it:** [Bloc STAR, 2 seats](../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../02_STAR_Bloc/)).
