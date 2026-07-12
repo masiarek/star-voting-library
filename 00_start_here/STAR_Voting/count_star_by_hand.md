@@ -72,6 +72,10 @@ and those tables simply **add up** across precincts to give the national result.
 
 Contrast **[RCV-IRV](../RCV_IRV/RCV_IRV_is_simple.md)**: because it eliminates candidates round by round and *transfers* votes, a precinct can't publish a subtotal that adds up — every ballot has to reach a central count, and a single changed ballot can cascade. STAR's "add, then compare the top two" is genuinely a pencil-and-paper method; IRV's is not.
 
+## A faster runoff for a big stack: sort into three piles
+
+Instead of marking each ballot one by one, **sort the whole stack into three piles** — *prefers finalist A*, *prefers finalist B*, and *Equal Support* (scored them the same) — then just count the two preference piles. That's the method the Equal Vote Coalition's official procedure uses, along with role assignments (a caller, a verifier, one tallier per star-level) and practical tips (train on test ballots, use a straight-edge to keep tally rows aligned): [**BetterVoting — Hand Counting STAR**](https://docs.bettervoting.com/help/hand_count.html). Teaching it to a group? See [Teaching STAR Voting](teaching_star_voting.md).
+
 ## Try it yourself
 
 - Grab the [ballot styles](STAR_ballot_voting_styles.md) and make up your own 3-voter election — count it by hand, then run it on [bettervoting.com](https://bettervoting.com) and check you agree.

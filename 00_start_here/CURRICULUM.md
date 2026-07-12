@@ -33,6 +33,8 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 
 ## Suggested pacing by audience
 
+*Presenting or teaching STAR? [Teaching STAR Voting](STAR_Voting/teaching_star_voting.md) turns this pacing into a full guide — the arc, the terms to cover, which example to use when, and the misconceptions to head off.*
+
 - **Public talk (15–20 min):** [101](CURRICULUM_101.md) only (the problem → the two rounds → the compromise → the payoff). Skip theory.
 - **Workshop (60–90 min):** all of [101](CURRICULUM_101.md) + [201.1–201.4](CURRICULUM_201.md), hands-on with the files.
 - **Officials / administrators:** 101.0, then [201.1](CURRICULUM_201.md) (summability / audit) + the scorecard.
