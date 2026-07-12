@@ -159,8 +159,11 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 - **Markers (all tabulate as 0):** `-` blank · `~` race abstention · `&` candidate
   abstention · `?` spoiled · `%` spoiled+reissued. **No `^`** (removed). Approval
   ballots accept only `0`/`1` (+ blank/marker = not approved).
-- **Levels (101/201/301)** live ONLY in `00_start_here/CURRICULUM.md`
-  (authoritative). Don't tag every file. Example folders stay content-typed
+- **Levels (101/201/301)** live ONLY in the curriculum — now a hub
+  (`00_start_here/CURRICULUM.md`) plus one page per level
+  (`CURRICULUM_101.md` / `_201.md` / `_301.md`); the hub links them and holds no
+  level content itself, so there's a single source of truth per level (no sync
+  drift). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in

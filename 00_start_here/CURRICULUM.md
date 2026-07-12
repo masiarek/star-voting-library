@@ -1,8 +1,8 @@
 # STAR Voting — Curriculum (Voting 101 / 201 / 301)
 
-The authoritative **learning-path map**. Difficulty lives *here*, not in the folder names or in every file — so a single example can be 101 for its basic idea and reappear at 301 for the deep dive, without being duplicated or moved. (This is the "curriculum map, keep folders" approach; see [ORGANIZATION.md](ORGANIZATION.md).)
+The **learning-path map**, in three levels. Difficulty lives *here*, not in the folder names or in every file — so a single example can be 101 for its basic idea and reappear at 301 for the deep dive, without being duplicated or moved. (The "curriculum map, keep folders" approach; see [ORGANIZATION.md](ORGANIZATION.md).)
 
-Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md)), the **files/episodes** to use, and **what to emphasize**. Example YAMLs stay in their content-typed folders (`01_Single_winner/`, `02_Multi_winner/`, `split_voting/`); conversation scripts live beside their topics, indexed in [Conversation scripts — index](conversation_scripts.md).
+Each level is its **own page** so it can stand alone; this page is just the hub. (Keeping the content in one place per level — not copied here — is what keeps them from drifting out of sync.)
 
 > This curriculum is **STAR-specific** (how to learn STAR, with honest comparisons). For a **method-neutral, field-wide** reading path — the whole landscape in three levels, after Marcus Ogren — see [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md).
 
@@ -10,179 +10,34 @@ Each entry lists its **objective**, **key terms** (see [GLOSSARY.md](GLOSSARY.md
 
 <a id="voting-101"></a>
 
-# Voting 101 — Basics (the ballot, the two rounds, the spoiler)
+## 🟢 [Voting 101 — the basics](CURRICULUM_101.md)
 
-> Audience: general public, first contact. The goal is intuition, not theory.
-
-## 101.0 — Why: the problem before the method
-- **Objective:** Make the audience *feel* the failure of Choose-One first.
-- **Key terms:** Choose-One / plurality, vote splitting, spoiler effect, lesser-evil voting.
-- **Material:** [00_START_HERE.md](00_START_HERE.md); episode `why_do_you_love_STAR_Voting.md` (cold open).
-
-## 101.1 — Mechanics: the two rounds (2 candidates)
-- **Objective:** See the Scoring Round and Automatic Runoff once, slowly.
-- **Key terms:** score 0–5, scoring round, finalists, automatic runoff, equal scores.
-- **Files:** `01_Single_winner/00a*`, `01a*`, `01b*`, `01c*`.
-- **Emphasize:** with two candidates STAR == ordinary voting — that's *why* we start here.
-
-## 101.2 — Why it matters: add a third candidate
-- **Objective:** Watch the winner become the broad compromise.
-- **Files:** `01_Single_winner/02*`; `01_Single_winner/vote_splitting.yaml`.
-- **Emphasize:** adding a candidate you love never splits your vote.
-
-## 101.3 — How you're allowed to vote
-- **Objective:** Remove the fear of "voting wrong."
-- **Key terms:** bullet vote, equal scores, partial ballot, blank vs explicit 0, voting style, expressiveness.
-- **Page:** [Filling Out the 5-Star Ballot — Voting Styles](STAR_Voting/STAR_ballot_voting_styles.md) — the style gallery (traditional / backup / partisan / ranked-style / nuanced / "anyone but…" / protest), why the 5-star ballot is hard to spoil, and the expressiveness case.
-- **Files:** `01_Single_winner/03*` (`03c` is the eight-style gallery in one election); large field (9 candidates) `06a` (STAR scales; Equal Support decides the runoff) and `06b` (the runoff overturns the score leader).
-- **The headline lesson — top scorer ≠ winner:** the dedicated walkthrough [Runoff Reversal](../01_STAR/runoff_overturns_leader/) collects this as an approachable 3→9-candidate progression (with a confirm-case control), answering BetterVoting's *"why is the top-scoring candidate different from the winner?"*
-- **Ballot note:** the ballot's own line *"equal scores indicate no preference"* means no preference *in the runoff* — those ballots still count in the scoring round. (That's the Equal Support point; see `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md`.)
-
-## 101.4 — The payoff: the spoiler, in numbers
-- **Objective:** Land the whole case in one race.
-- **Files:** `split_voting/01–03`, `01_Single_winner/vote_splitting2.yaml`, `09_*` (Tennessee); the `blocs:` vote-splitting check.
-- **Episode:** `whats_so_good_about_STAR_Voting.md` (flagship).
-
-## 101.5 — One foundational idea: ballot vs tabulation
-- **Objective:** A *ballot* is what you mark; a *tabulation* is how it's counted.
-- **Material:** [TIPS_terminology.md](TIPS_terminology.md) (top section).
-- **Why here:** it unlocks 201's nomenclature and every later comparison.
-
----
+*First contact, general public. The goal is intuition, not theory.* The ballot, the two rounds, and the spoiler — built on the running team-lunch example, every step a runnable election.
+→ **[Start Voting 101](CURRICULUM_101.md)**
 
 <a id="voting-201"></a>
 
-# Voting 201 — Intermediate (reading results, comparisons, multi-winner intro)
+## 🟡 [Voting 201 — reading results & comparisons](CURRICULUM_201.md)
 
-> Audience: engaged learners, officials, the curious. Now we name things precisely and compare methods.
-
-## 201.1 — Reading the results (transparency)
-- **Key terms:** preference matrix, For/Equal/Against, Condorcet winner, summability, score distribution.
-- **Files:** `01_Single_winner/04*` with `options: { show_matrix, show_condorcet }`.
-- **Emphasize:** the pairwise matrix is the auditable, precinct-summable heart.
-- **Two reports, one count:** an election appears both as BetterVoting's visual display and the LH engine's text report; why there are two, how they map, and the convert→validate→test pipeline are in [BetterVoting and the LH Engine — One Election, Two Reports](tabulation_engines/bettervoting_and_the_engine.md).
-- **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (matrix + score distribution + the plain-English *Majority Preference* block). The Runoff Reversal lesson (101.3) shows the *minimal* on-screen view; reading the **full** report of those same elections (e.g. `01_Single_winner/runoff_overturns_leader_tabulated/`) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
-- **Worked walkthrough:** [How to Read a STAR Result Report (201)](tabulation_engines/LH_starvote/reading_a_star_report.md) — a full LH report (BV1265) annotated section by section, with a "show which parts to 101 / 201 / 301" table.
-- **Reading the runoff percentages:** [Reading the Runoff Percentages — Two Denominators, One Winner](STAR_Voting/runoff_percentages.md) — the BetterVoting runoff shown two ways: % of *all* voters vs % of those *with a preference* (the two denominators), and why the majority bar is half of the decided voters, not half of everyone. The LH engine prints this same decided-voters share as a one-line summary — enable with `options: { show_runoff_percent: true }` (forced on in the `_tabulated` copy). Pairs with 301.3 (Equal Support).
-- **A real election, end to end:** [a real BetterVoting election](../01_STAR/pet_real_bv_election/) — a real BetterVoting STAR election ("What Makes the Best Pet?", 7 pets, 461 ballots), the actual export YAML plus its full engine report, read section by section (scoring → runoff → runoff % → Condorcet check), including the real-ballot distinction between an abstention (blank) and an explicit-zero ballot.
-
-## 201.2 — Edge cases & trust
-- **Key terms:** unanimous ballots, ties / tiebreaker, abstention, equal-max ballot.
-- **Files:** `01_Single_winner/05*`.
-
-## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
-- **Objective:** Stop conflating the ranked *ballot* (RCV) with one *count* (IRV).
-- **Material:** [TIPS_terminology.md](TIPS_terminology.md); episode `RCV_or_IRV_whats_the_right_word.md`.
-- **Emphasize:** center squeeze / exhausted ballots are **IRV**-specific, not all ranked methods (Ranked Robin isn't squeezed).
-
-## 201.4 — STAR vs RCV-IRV (the honest comparison)
-- **Key terms:** exhausted ballots, center squeeze, wasted votes, the method scorecard.
-- **Episode:** flagship Segment 6; `Why_STAR_Voting.md` Part 2 Tier 1.
-- **Files:** any 4-candidate file with `show_irv` → the `[Divergence from STAR]` block.
-
-## 201.5 — Multi-winner intro: Bloc STAR
-- **Objective:** Electing several seats with a majoritarian/at-large method.
-- **Key terms:** Bloc STAR, seats, at-large.
-- **Files:** `02_Multi_winner/01_c4_b2_bloc-star-2-seats.yaml`.
-- **Emphasize:** a cohesive majority can sweep all seats — which motivates 301's proportional methods.
-- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](Approval_Voting/abc_rules_intro.md) — counting-only walkthrough of AV vs "cover everyone" (CC) vs proportional, on Lackner & Skowron's steering-committee example. No math beyond addition; motivates why multi-winner has several right answers.
-
-## 201.6 — What are we optimizing for? (good winner, good method)
-- **Objective:** Before comparing methods, name the competing ideals of a "good winner" and the criteria of a "good method" — and see there is no single ideal.
-- **Key terms:** consensus / Condorcet winner, majoritarian vs. utilitarian winner, representative outcome, VSE, strategy-resistance, summability, "a perfect system will never exist."
-- **Pages:** [What makes a good winner?](what_makes_a_good_winner.md) (four ideals; majoritarian-vs-utilitarian with the fruit example; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](what_makes_a_voting_method_good.md) (criteria beyond the winner; "where reasonable people disagree").
-- **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — the common pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked: what's provable, what's overstated, and the advocacy on *every* side.
-- **Emphasize:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301** — 301.6 walks a concrete disagreement and 301.9 covers how the simulations are built.
-
----
+*Engaged learners, officials, the curious.* Reading a full result report (the preference matrix, the runoff percentages, a real 461-ballot election), precise nomenclature, STAR vs RCV-IRV, the intro to multi-winner, and "what are we even optimizing for?"
+→ **[Start Voting 201](CURRICULUM_201.md)**
 
 <a id="voting-301"></a>
 
-# Voting 301 — Advanced (proportional, criteria, debate theory)
+## 🔴 [Voting 301 — proportional, criteria, debate theory](CURRICULUM_301.md)
 
-> Audience: skeptics, academics, RCV advocates, deep self-study. Concede limits honestly; that candor is the credibility.
-
-## 301.1 — Proportional STAR (and STV)
-- **Objective:** Give a cohesive minority the representation it earned.
-- **Key terms:** proportional representation, Droop quota, Allocated Score, Sequentially Spent Score (SSS), Reweighted Range Voting (RRV), STV.
-- **Files:** `02_Multi_winner/02a–02c` (allocated / sss / rrv). Compare with Bloc STAR.
-- **STV comparison:** `02_Multi_winner/03a_stv_3seats.yaml` (STV) vs `03b_star_pr_3seats.yaml` (STAR-PR) — same electorate, same proportional slate; Bloc STAR differs. Page: `proportional_representation/` (STV vs STAR-PR + STAR-PR methods).
-- **Emphasize:** STV is the proportional multi-winner *cousin of IRV*, not IRV; proportional methods seat coalitions in proportion, Bloc STAR lets a majority sweep.
-- **Deeper math:** [the math behind proportional STAR](proportional_representation/STAR_PR/the_math_behind_proportional_star.md) — quotas, D'Hondt reweighting, JR/EJR, fair division.
-- **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules and the utilitarian–egalitarian spectrum](Approval_Voting/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén), one election laid on the utilitarian↔egalitarian axis, and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV). Verified with Lackner's `abcvoting`.
-- **Thiele methods (and how STAR-PR relates):** [Thiele methods](Approval_Voting/thiele_methods.md) — AV/PAV/CC as one parameterised family (the `w`-function "diminishing-returns" dial), the PAV harmonic worked example (`83/6`), welfare vectors, and the key STAR bridge: **RRV is the score-ballot cousin of seq-PAV**, while Allocated Score / SSS follow the STV lineage. Answers "do I need Thiele to learn STAR-PR?"
-
-## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
-- **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.
-- **Episode:** `favorite_betrayal_voting_301.md`; `Why_STAR_Voting.md` Part 2 #12.
-- **Emphasize:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally (Alaska '22), STAR only in lab cases.
-
-## 301.3 — "Are equal-score votes discounted?"
-- **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
-- **Episode:** `are_equal_score_votes_discounted.md`; demo `01_Single_winner/equal_support_runoff_demo.yaml`.
-- **In the result display:** [Reading the Runoff Percentages — Two Denominators, One Winner](STAR_Voting/runoff_percentages.md) shows exactly where Equal Support lands in BetterVoting's runoff — counted in full in the score round, then set aside to form the "voters with a preference" denominator (so the winner's majority is of the decided voters, not of everyone).
-
-## 301.4 — The honest limits & theory
-- **Key terms:** Gibbard / Gibbard–Satterthwaite, strategy resistance vs proofness, Condorcet efficiency, Test of Balance.
-- **Material:** `Why_STAR_Voting.md` Part 2 Tier 2–3; "resistant, not proof."
-- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](STAR_Voting/equally_weighted_vote.md) (why STAR passes — any ballot has an exact opposite that cancels) and [RCV-IRV Fails the Equal Vote (Equality) Criterion](RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats on the criticism).
-- **Deeper math:** [the math behind Condorcet](RCV_Ranked_Robin/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite) · [the math behind proportional STAR](proportional_representation/STAR_PR/the_math_behind_proportional_star.md) (apportionment, Balinski–Young).
-
-## 301.5 — The vote-splitting formula (blocs)
-- **Objective:** Confirm a spoiler in numbers for a declared bloc.
-- **Material:** the `blocs:` field + `[Vote-splitting check]` (see the engine); `split_voting/`.
-
-## 301.6 — When Condorcet, Score, and Runoff disagree (and how often)
-- **Objective:** "Winner" isn't one thing — three reasonable definitions can name three different candidates; STAR targets the runoff winner *by design* (it is not a Condorcet method).
-- **Material:** `STAR_Voting/STAR_three_winner_notions.md` (CW = Ann, Score = Carl, Runoff = Bob); builds on the 101 Runoff Reversal lesson `01_Single_winner/runoff_overturns_leader/`.
-- **Frequency:** `06_Other/simulations/runoff_reversal_simulation.py` measures how often score and runoff diverge — and shows the rate swings with the model (impartial vs spatial), the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
-- **Emphasize:** the methodological habit (measure it, report the assumptions) is as much the point as the numbers.
-- **Ranked Robin vs. Condorcet:** [ranked_robin_vs_condorcet.md](RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one (worked on the random-sweep record 0); deeper math in [the math behind Condorcet](RCV_Ranked_Robin/the_math_behind_condorcet.md).
-
-## 301.7 — "Exhausted ballots": what FairVote's word hides
-- **Objective:** Untangle the overloaded RCV-IRV term — separate the fair, voter-side cases from the method-caused ones a fully and correctly ranked ballot still suffers.
-- **Key terms:** ballot exhaustion, inactive ballot, exhausted-untransferable, nonexhausted-untransferred, ranking limit, majority-of-remaining-ballots.
-- **Episode:** `exhausted_ballots_301.md`; contrast `are_equal_score_votes_discounted.md`.
-- **Emphasize:** exhaustion is **IRV**-specific (Ranked Robin reads every rank); STAR counts every ballot in both rounds, so nothing exhausts.
-
-## 301.8 — Scale granularity can flip the winner
-- **Objective:** a score scale's *resolution* (0–5 vs 0–9…) is a modeling choice; when the top contenders are bunched, compressing the scale can move a **finalist** and flip the **STAR** winner — even though rescaling never reorders any voter's own preferences.
-- **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
-- **Material:** [Scale granularity can flip the winner (a 301 case)](scores_and_ranks/scale_granularity_flips_the_winner.md); case `01_Single_winner/_main/rrv_sample_c15_b13_three-parties.yaml` (BetterVoting's RRV sample run as single-winner STAR: 0–5 → Orange5, 0–9 → Orange1).
-- **Emphasize:** a *fragile, mapping-dependent* divergence (a 2nd-place tie on one scale, a one-point gap on the other) — present both counts, never quote one. Builds on Black Curtain #5 and the report-your-assumptions habit of 301.6.
-
-## 301.9 — How the simulations are built (VSE's foundation)
-- **Objective:** Understand the models that generate synthetic electorates for VSE / Bayesian-Regret studies — and why every simulation result is conditional on the model.
-- **Key terms:** Impartial Culture (IC) / Impartial Anonymous Culture (IAC), spatial model, Euclidean distance, utility-from-distance, Mallows (Kendall-Tau, φ), Plackett-Luce, Pólya urn, Yee diagram.
-- **Page:** [Election simulation models](election_simulation_models.md) — the neutral menu (noise models vs. spatial), the math prerequisites, and the standing caveat (IC over-produces near-ties, spatial suppresses cycles, hierarchical-cluster sits in between) — with the IC-vs-IAC cycle-rate correction.
-- **Emphasize:** pairs with 301.6's habit — *never quote a rate without the model*; and with 201.6's VSE overview. Our repo's hand-crafted cases are the complementary "how it fails, concretely" end.
-
-## 301.10 — The ranked-ballot method zoo (many tabulations of one ballot)
-- **Objective:** See that a *single* ranked ballot supports a dozen-plus tabulations that pick different winners — the definitive proof that "RCV" names a ballot, not a method — and locate the repo's own engines (Hare = IRV, Copeland = Ranked Robin) inside the wider field.
-- **Key terms:** positional (Borda / Nanson / Baldwin / Rouse / Black), sequential elimination (Hare, Coombs, Carey), graduated majority (Bucklin), pairwise/Condorcet (Copeland, Small, Dodgson, Simpson/Minimax, Raynaud, Schulze, Tideman/Ranked Pairs), Smith/Schwartz/Landau sets, clone-independence, Condorcet loser.
-- **Page:** [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — grouped by family, an at-a-glance criterion table, and Robert LeGrand's live [calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) as a sandbox.
-- **Emphasize:** reinforces the [terminology canon](TIPS_terminology.md) and feeds 301.6/cycle-resolution (Simpson/Tideman/Schulze are the cycle-resolvers). The catalog, not the verdict — which properties matter is 201.6's question.
-
-## 301.11 — Reading advocacy claims: a claim-check, worked
-- **Objective:** Practice checking a voting-method claim against a countable election — quote it verbatim, build the smallest electorate that tests it, tabulate. Also settles "is the Condorcet winner the *best* choice?" (no single ideal exists — 201.6's lesson, applied).
-- **Material:** [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) + the demo pair in `method_comparisons/fairvote_condorcet_claims/` (the article's own 40/15/40 hypothetical; a shifted electorate where a *pole* candidate is the Condorcet winner).
-- **The steelman companion:** [Edelman's "Myth of the Condorcet Winner," tabulated](topics/condorcet/edelman_condorcet_myth.md) + `method_comparisons/edelman_condorcet_myth/` (BV2173 live) — the anti-Condorcet argument that *survives* checking: the Saari/Condorcet cancellation profile (majoritarian counts → Ada, positional counts → Ben) and the no-show/join-consistency theorems. The contrast between the two readings — one dissolves under tabulation, one doesn't — is the lesson.
-- **Emphasize:** steelman first — the article's "hated least ≠ liked most" point is *true* (it's the cardinal critique of ordinal methods, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
-
-## 301.12 — Participation: can showing up ever hurt you?
-- **Objective:** The Participation criterion and the no-show/Twin paradoxes — "vote, it can only help your side" is a promise some methods structurally can't make; know which, why, and how visibly.
-- **Material:** the [Participation topic hub](topics/participation/) + the live pair `method_comparisons/participation_no_show/` (BV2174/BV2175: 8 voters decide whether to show up; three races per election — Choose-One and STAR reward the sincere ballots, RCV-IRV replaces the voters' 2nd choice with their LAST). Catalog page: [no-show paradox](voting_paradoxes/no_show.md) (Felsenthal Ex.4, BV2150/51).
-- **Key terms:** Participation criterion, no-show paradox, Twin paradox, Moulin's theorem (Condorcet consistency ⇒ no-show), join consistency (Edelman/Young — see 301.11's steelman companion).
-- **Emphasize:** the honest scorecard — only pure summation (Score/Approval) and Choose-One are immune; STAR's runoff costs it the formal guarantee too (live flip: BV2165→BV2166), just far more rarely than IRV's elimination machinery. Frame per [reading_these_fairly](../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md).
+*Skeptics, academics, RCV advocates, deep self-study.* Proportional STAR & STV, favorite betrayal, the honest limits, when Condorcet/Score/Runoff disagree, the simulation foundations of VSE, and worked claim-checks. Concede limits honestly — that candor is the credibility.
+→ **[Start Voting 301](CURRICULUM_301.md)**
 
 ---
 
 ## Suggested pacing by audience
 
-- **Public talk (15–20 min):** 101 only (0 → 1 brief → 2 → payoff). Skip theory.
-- **Workshop (60–90 min):** all of 101 + 201.1–201.4, hands-on with the files.
-- **Officials / administrators:** 101.0, then 201.1 (summability/audit) + the scorecard.
-- **Academic / skeptic / RCV advocate:** 101 fast, then 301 with the precise caveats.
+- **Public talk (15–20 min):** [101](CURRICULUM_101.md) only (the problem → the two rounds → the compromise → the payoff). Skip theory.
+- **Workshop (60–90 min):** all of [101](CURRICULUM_101.md) + [201.1–201.4](CURRICULUM_201.md), hands-on with the files.
+- **Officials / administrators:** 101.0, then [201.1](CURRICULUM_201.md) (summability / audit) + the scorecard.
+- **Academic / skeptic / RCV advocate:** 101 fast, then [301](CURRICULUM_301.md) with the precise caveats.
 
 ## Designing your own examples
+
 See [TIPS_choosing_voter_counts.md](TIPS_choosing_voter_counts.md) (voter counts) and [ORGANIZATION.md](ORGANIZATION.md) (where scenario text lives, clean-demo flags). Term definitions: [GLOSSARY.md](GLOSSARY.md).
