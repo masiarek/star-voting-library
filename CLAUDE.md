@@ -187,6 +187,17 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   up top, then the **ballots**, then the **results** — with the full engine detail (the
   same content as the `_tabulated` mirror, or the mirror embedded) at the **bottom** of
   the page, so the reader gets the lesson before the numbers.
+- **External sourcing — match the source to the claim, and disclose the lean.**
+  Cite by tier: **electowiki** for *niche/branded method definitions & mechanics*
+  (Ranked Robin, STAR variants, exotic methods — where Wikipedia is thin, it's the
+  clearest); **Wikipedia** for the *neutral family term, notability, and any
+  criteria/critical claim* (it has NPOV pressure, electowiki doesn't); **academic**
+  (Stanford Encyclopedia, papers) for *rigor* (impossibility theorems, VSE math,
+  proofs). electowiki and the campaign sites (equal.vote, starvoting.org,
+  electionscience.org, fairvote.org, rangevoting.org) are **advocacy-adjacent** —
+  fine for *definitions*, weak for *verdicts*; **whenever we lean on one, disclose
+  its lean inline** (as the naming decoder, `how_to_learn`, and the "leans toward"
+  table do). Never trade the repo's neutrality for better niche coverage.
 - **`_tabulated`** files are generated into a `<folder>_tabulated/` subfolder
   **nested inside the source file's own folder** (e.g.
   `01_Single_winner/black_curtain/black_curtain_tabulated/`); regenerate by
