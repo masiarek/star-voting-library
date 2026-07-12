@@ -40,7 +40,7 @@ Almost never. In the runoff, your ballot backs whichever of the two finalists yo
 ## About the bigger picture
 
 **"Isn't this the same as ranked-choice voting (RCV)?"**
-No. RCV uses a **ranked** ballot (1st, 2nd, 3rd) counted by elimination; STAR uses a **scored** ballot (0–5) with a runoff. Different ballot, different count, different behavior — STAR isn't [instant-runoff voting](../RCV_IRV/RCV-IRV-Hare.md). → [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
+No. The method usually *called* "RCV" in the US — **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md)** (instant-runoff) — uses a **ranked** ballot (1st, 2nd, 3rd) counted by round-by-round elimination; STAR uses a **scored** ballot (0–5) with an automatic runoff. Different ballot, different count, different behavior — STAR isn't instant-runoff. → [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
 
 **"Scoring is for restaurants and movies — is it serious enough for elections?"**
 Rating 0–5 is a *more* expressive, not less serious, way to say what you think — it captures both *who* you prefer and *how strongly*, which "pick one" throws away. It's the same intuition you already use everywhere; STAR just adds the runoff to make it a fair election method.
