@@ -32,7 +32,7 @@ So the *core observation* — "the people who model these systems tend to be har
 
 - **Warren Smith** *founded* the [Center for Range Voting](https://rangevoting.org) — he is Score voting's leading advocate.
 - **Steven Brams** is *the* best-known academic champion of **Approval** voting.
-- **Jameson Quinn** was a board member of the **Center for Election Science** (the Approval advocacy group).
+- **Jameson Quinn** (1974–2025) served on the boards of *both* the **Center for Election Science** (Approval) and the **Equal Vote Coalition** (STAR).
 
 Their work is serious and worth engaging — but they are arguing *for* the methods their numbers favor, and the pro-IRV side (chiefly **FairVote**) produces its own favorable analyses. [Advocacy pages from every camp mix solid points with overreach](advocacy_organizations.md) — *including pro-STAR ones*. "Cite the experts" cuts in more than one direction.
 
@@ -64,7 +64,9 @@ That's the version this repo will stand behind: STAR looks strong here, honestly
 |---|---|---|---|
 | **Warren D. Smith** | Ph.D. in applied math, Princeton | **Bayesian Regret** simulations; argued Score/Range outperforms RCV-IRV | Founder, **Center for Range Voting** (Score advocate) |
 | **Steven Brams** | Game theorist, Professor of Politics, NYU | Co-author of *Approval Voting* (1983); many papers on RCV-IRV paradoxes incl. monotonicity | Leading academic **Approval** advocate |
-| **Jameson Quinn** | Harvard-trained statistician | **Voter Satisfaction Efficiency (VSE)** — the modern simulation metric; modeling favorable to STAR/Approval | Former board member, **Center for Election Science** (Approval) |
+| **Jameson Quinn** (1974–2025) | Ph.D. in Statistics, Harvard (2020) | **Voter Satisfaction Efficiency (VSE)** — the modern simulation metric; modeling favorable to STAR/Approval; also designed the Hugo Awards' *E Pluribus Hugo* nominating method | Board member of **both** the Center for Election Science (Approval) and the **Equal Vote Coalition** (STAR) |
+
+> **In memoriam — Jameson Quinn (1974–2025).** Quinn died on March 23, 2025, in a fall in Guatemala, where he lived; by several accounts he was trying to rescue a dog. He earned a Harvard statistics Ph.D. to bring rigorous modeling to electoral reform, popularized **VSE** as the field's standard way to compare methods, and designed the Hugo Awards' nominating system. That he was an advocate takes nothing from the work — VSE remains central to how methods are evaluated, this page included. ([Equal Vote Coalition statement](https://x.com/TheEqualVote/status/1911140261297787074) · [obituary](https://obituaries.paloaltoonline.com/obituaries/memorials/jameson-quinn?o=8976))
 
 Naming them is fair *evidence*; naming them as neutral *authorities* is the move to resist. Read their work, note their affiliations, and check the claims against countable elections — which is the whole method of this repo.
 
