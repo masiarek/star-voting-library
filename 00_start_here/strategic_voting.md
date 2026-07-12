@@ -4,7 +4,7 @@
 
 Two facts frame everything below:
 
-- **No method is immune.** The [Gibbard–Satterthwaite theorem](https://en.wikipedia.org/wiki/Gibbard%E2%80%93Satterthwaite_theorem) proves that *every* ranked or scored method has *some* scenario where a voter can gain by voting insincerely. So "you can construct a strategy" isn't a mark against a method — the real questions are **how often it pays, whether it's actionable, and whether it backfires.**
+- **No method is immune.** The [Gibbard–Satterthwaite theorem](gibbard_satterthwaite_theorem.md) proves that *every* ranked or scored method has *some* scenario where a voter can gain by voting insincerely. So "you can construct a strategy" isn't a mark against a method — the real questions are **how often it pays, whether it's actionable, and whether it backfires.**
 - **Honest ≠ the same as strategy-proof.** A method can *fail* a criterion on paper (STAR fails Later-No-Harm, for instance) yet still make honesty the *practical* best play. This page separates the paper property from the practical incentive, and tries to be even-handed to all three [Equal Vote methods](choosing_among_evc_methods.md) — STAR, Approval, and Ranked Robin.
 
 External references worth reading directly: the Equal Vote Coalition's **[Strategic STAR](https://www.equal.vote/strategic-star)** and **[Gaming the Vote](https://www.equal.vote/gaming_the_vote)**, and STAR Voting's **[Is STAR vulnerable to strategic voting?](https://www.starvoting.org/strategic_voting)**. (These are advocacy sources; this page reports their claims and evidence while flagging the honest counterpoints.)

@@ -32,7 +32,7 @@ So use this table to *navigate to the worked cases*, not to crown a winner.
 
 ## What the pattern actually says
 
-- **No method passes everything** — that's [Arrow / Gibbard–Satterthwaite](GLOSSARY.md), not a shortcoming of any one row. Every column has ✗s.
+- **No method passes everything** — that's [Arrow / Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md), not a shortcoming of any one row. Every column has ✗s. (Strategy-proofness is the row *no* method passes.)
 - **Later-no-harm and favorite betrayal pull against each other.** RCV-IRV passes later-no-harm but fails favorite betrayal; Approval does the reverse; **STAR fails both — on purpose** (its advocates argue mitigating both beats passing one and hard-failing the other; that's the pass_fail essay above). Ranked Robin fails both too.
 - **Ranked Robin is the Condorcet specialist** — it's the only column that elects the Condorcet winner and satisfies majority / mutual-majority — but it pays for it by failing participation, consistency, and clones (the price every Condorcet method pays: Moulin's theorem).
 - **RCV-IRV's strengths are later-no-harm, clone independence, and the majority guarantees**; its costs are monotonicity, the Condorcet winner (center squeeze), and summability.

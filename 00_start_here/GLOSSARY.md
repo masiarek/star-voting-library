@@ -79,7 +79,7 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **Summability / precinct-summable** — results can be computed by adding independent precinct totals (STAR can; RCV-IRV cannot). → page [STAR Is Summable — Add Up Precinct Totals](STAR_Voting/STAR_summability.md); demo [`04b_c4_b3_display-options-all`](../01_STAR/_main/_main_pages/04b_c4_b3_display-options-all.md)
 - **Pairwise (For / Equal / Against) matrix** — the summable head-to-head table the runoff and audits use. → demo [`04b_c4_b3_display-options-all`](../01_STAR/_main/_main_pages/04b_c4_b3_display-options-all.md) (`show_matrix`)
 - **Strategyproofness** — no voter can ever gain by voting insincerely; impossible for any method (Gibbard).
-- **Gibbard / Gibbard–Satterthwaite theorems** — proofs that every reasonable voting method is manipulable.
+- **Gibbard / Gibbard–Satterthwaite theorems** — proofs that every reasonable voting method is manipulable. → page [The Gibbard–Satterthwaite theorem](gibbard_satterthwaite_theorem.md)
 - **Strategy resistance** — how rarely and riskily strategy pays; STAR is resistant, not proof.
 - **Strategic / tactical / insincere voting** — casting a ballot that misstates your true preferences to try for a better result. Every method is manipulable (Gibbard); what matters is whether it's *actionable* and whether it *pays*. → page [Strategic Voting Across the Equal Vote Methods](strategic_voting.md)
 - **Compromising (strong insincerity)** — scoring/ranking a "lesser evil" *above* your true favorite; the same thing as **favorite betrayal**, and the defining flaw of choose-one. → [strategic voting](strategic_voting.md)

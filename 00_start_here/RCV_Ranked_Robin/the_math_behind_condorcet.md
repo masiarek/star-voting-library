@@ -40,7 +40,7 @@ The last row is the gem: treat the margin matrix as a **symmetric zero-sum game*
 ## The load-bearing theorems
 
 - **Arrow's impossibility theorem** — no rank-aggregation rule can satisfy a short list of obviously-fair conditions at once.
-- **Gibbard–Satterthwaite** — every reasonable non-dictatorial method is **manipulable**; strategy-proofness is impossible. (This is *why* favorite-betrayal incentives exist.)
+- **[Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md)** — every reasonable non-dictatorial method is **manipulable**; strategy-proofness is impossible. (This is *why* favorite-betrayal incentives exist.)
 - **McKelvey–Schofield chaos theorem** — in 2+ spatial dimensions, when there's no Condorcet winner the top cycle can wander *anywhere*, so agenda-setting power becomes decisive.
 - **Probability of cycles** — under random ("impartial culture") preferences, a 3-candidate Condorcet cycle occurs ~**8.8%** of the time with many voters, and the chance of *no* Condorcet winner climbs toward 1 as candidates increase. (Exactly why a random 6-candidate, 5-ballot sweep leaves the Condorcet column blank so often — see `tools_adam/random_star_divergence.py`.)
 
