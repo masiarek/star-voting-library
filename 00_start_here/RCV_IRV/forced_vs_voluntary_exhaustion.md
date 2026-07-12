@@ -31,6 +31,8 @@ Six candidates — **A B C D E F** — but the ballot caps you at **3** rankings
 
 Their neighbour who *chose* to bullet-vote **C** only also exhausts — but that was a choice. Same outcome on the tally sheet; **completely different stories**, and only one is the system's fault. That's why one word for both is misleading.
 
+A runnable, BetterVoting-backed version of exactly this — where forced exhaustion discards more ballots than the winner receives — is the [**Forced Exhaustion Ceiling**](../../method_comparisons/paradoxes_and_whoops/bv2183_dfw8rj_forced_exhaustion_ceiling.md) case (read as a *ceiling*, not a typical election).
+
 ## Why the distinction matters
 
 - **It changes who's responsible.** "Exhaustion is just voters choosing not to rank everyone" is only true of the *voluntary* kind. Forced exhaustion is the method (plus a cap) discarding a maximally-expressive ballot — and it's **fixable** by removing the cap.

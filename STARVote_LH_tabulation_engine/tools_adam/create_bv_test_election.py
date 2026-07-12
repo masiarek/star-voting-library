@@ -2294,7 +2294,37 @@ _FAQ_RUNOFF = {
     "expected": "Almond",
 }
 
-ELECTIONS: list = [_FAQ_RUNOFF]
+_FORCED_EXHAUSTION = {
+    "test_id": "BV2183",
+    "title": "Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example)",
+    "description": (
+        "A deliberately-constructed worst case (clearly not a typical election) showing "
+        "the ceiling of RCV-IRV ballot exhaustion under a ranking cap. 50 voters, five "
+        "candidates, but the ballot caps you at 2 rankings. Three minor candidates "
+        "(Cleo, Dev, Eli) form a rotating bloc; their 21 voters ranked only minor "
+        "candidates (all they could fit), so when those are eliminated their ballots "
+        "EXHAUST — none reaches the two real contenders. Ada beats Ben 15-14, a margin "
+        "of ONE, while 21 ballots (42%) are discarded — more than the winner's own 15 "
+        "votes. Ada's 'majority' is 15 of 50 = 30% of the electorate. Lift the 2-rank "
+        "cap and the forced exhaustion vanishes. Companion to the repo's forced-vs-"
+        "voluntary-exhaustion page; the point is the mechanism's ceiling, not a claim "
+        "that real elections look like this (they are much milder — see the real rates)."
+    ),
+    "method": "IRV",
+    "num_winners": 1,
+    "max_rankings": 2,
+    "candidates": ["Ada", "Ben", "Cleo", "Dev", "Eli"],
+    "ballots": (
+        [[1, 0, 2, 0, 0]] * 15 +   # Ada > Cleo
+        [[0, 1, 0, 2, 0]] * 14 +   # Ben > Dev
+        [[0, 0, 1, 0, 2]] * 8 +    # Cleo > Eli
+        [[0, 0, 2, 1, 0]] * 7 +    # Dev > Cleo
+        [[0, 0, 0, 2, 1]] * 6      # Eli > Dev
+    ),
+    "expected": "Ada (15 vs Ben 14, margin 1); 21 of 50 ballots forced-exhausted by the 2-rank cap — more than the winner's own total.",
+}
+
+ELECTIONS: list = [_FORCED_EXHAUSTION]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race

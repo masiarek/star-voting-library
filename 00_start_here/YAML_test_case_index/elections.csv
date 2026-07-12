@@ -192,6 +192,7 @@ LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 —
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
+dfw8rj,BV2183 — Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example),1,single-race,50,IRV,BV
 dkj9dx,"BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",1,single-race,16,STAR,BV
 dq2dmm,BV Abstentions and flat scores,1,single-race,8,STAR,BV
 ff6mk3,BV135 - Approval 101 — most approvals wins,1,single-race,5,Approval,BV

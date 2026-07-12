@@ -13,6 +13,7 @@ A small gallery of **low-stakes elections with surprising results** — the kind
 | BV2157 | [a Condorcet cycle (rock-paper-scissors)](bv2157_mmcmpy_condorcet_cycle_rps.md) | majority rule is intransitive — *no* Condorcet winner exists | **Condorcet / Ranked Robin** | [results ↗](https://bettervoting.com/mmcmpy/results) |
 | BV2158 | [IRV buries the centrist (Ossipoff)](bv2158_gr72hd_ossipoff_centrist_irv.md) | the plurality *and* Condorcet winner is eliminated; IRV elects D | **IRV** | [results ↗](https://bettervoting.com/gr72hd/results) |
 | BV2159 | [many IRV pathologies in one (Brams)](bv2159_f4cjpy_brams_irv_pathologies.md) | Condorcet failure + no-show + truncation + non-monotonicity | **IRV** | [results ↗](https://bettervoting.com/f4cjpy/results) |
+| BV2183 | [Forced Exhaustion Ceiling](bv2183_dfw8rj_forced_exhaustion_ceiling.md) | *(constructed ceiling)* a 2-rank cap force-exhausts 21 of 50 ballots — more than the winner's own votes | **IRV** | [results ↗](https://bettervoting.com/dfw8rj/results) |
 
 Cases 01–03 are STAR/score files (engine-verified, in the test library); 04–05 are **ranked-ballot** RCV-IRV cases (IRV rounds engine-verified, Condorcet winners checked by pairwise tally). Each carries a **fairness box**.
 

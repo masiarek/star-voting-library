@@ -48,6 +48,8 @@ The second case is why the popular slogan is misleading even for voters whose ba
 
 A rough rule of thumb cited in the literature: in competitive RCV-IRV elections, **over 10% of ballots are commonly exhausted or spoiled** — and even a few percent can decide a close race.
 
+**The ceiling, for contrast.** Those are the *real* rates. To see the theoretical worst the mechanism allows, there's a deliberately-constructed, runnable case (clearly labeled as *not* typical): [**Forced Exhaustion Ceiling**](../../method_comparisons/paradoxes_and_whoops/bv2183_dfw8rj_forced_exhaustion_ceiling.md) — a 2-rank cap discards **21 of 50 ballots, more than the winner's own 15 votes**, and lifting the cap makes it all vanish. Live on [BetterVoting](https://bettervoting.com/dfw8rj/results). Read it as a ceiling, not an average.
+
 ## A claim to state precisely
 
 The common advocacy line — *"if your first choice is eliminated, your vote transfers to your next choice"* — is only true if that next choice is **still in the race**, and only for voters whose favorite is eliminated *before* the final round. The accurate version: *"…transfers to your next **continuing** choice, if you have one — and not at all if your favorite survives to the final round and loses."*
