@@ -1,10 +1,12 @@
-# STAR Voting — Start Here (the *why* before the *how*)
+# Welcome to STAR Voting 👋
 
-*New to STAR Voting? You're in the right place — no background needed. We start with a problem you already know.*
+**New here? You're in exactly the right place.** No background needed, about five minutes, and not a word of politics. By the end you'll know what STAR Voting is — and *feel* why it picks winners people actually like.
+
+Here's the plan: we'll start with a small, familiar problem, watch the usual way of voting get it wrong, then meet the fix. That's it. Ready?
 
 ---
 
-## A problem you already know: the team lunch
+## First, a problem you already know: the team lunch
 
 Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**, and everyone — every single person — is perfectly happy with **Pizza**.
 
