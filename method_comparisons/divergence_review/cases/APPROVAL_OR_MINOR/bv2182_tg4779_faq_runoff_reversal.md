@@ -1,4 +1,4 @@
-# FAQ — why the automatic runoff (and Equal Support)
+# BV2182 — why the automatic runoff (and Equal Support)
 
 **Bucket — APPROVAL_OR_MINOR:** Only Approval differs
 
@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Almond**. Only **Approval** differ
 
 **Flags:** 1 tied-score ballot(s)
 
-**Source election:** [`01_STAR/_main/faq_runoff_reversal_c3_b10.yaml`](../../../../01_STAR/_main/faq_runoff_reversal_c3_b10.yaml)  ·  **STAR tabulated mirror:** [`faq_runoff_reversal_c3_b10_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/faq_runoff_reversal_c3_b10_tabulated.txt)
+**Source election:** [`01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml`](../../../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml)  ·  **STAR tabulated mirror:** [`bv2182_tg4779_faq_runoff_reversal_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt)
 
 _3 candidates, 10 ballots._
 

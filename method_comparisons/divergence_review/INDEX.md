@@ -1,6 +1,6 @@
 # Cross-method divergence review
 
-_Generated 2026-07-11 20:01 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-11 20:25 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
@@ -145,7 +145,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[04b_c4_b3_display-options-all](cases/APPROVAL_OR_MINOR/04b_c4_b3_display-options-all.md)** — `01_STAR/_main/04b_c4_b3_display-options-all.yaml` (4c/3b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Vanilla · Score=Strawberry · Condorcet=Strawberry
-- **[faq_runoff_reversal_c3_b10](cases/APPROVAL_OR_MINOR/faq_runoff_reversal_c3_b10.md)** — `01_STAR/_main/faq_runoff_reversal_c3_b10.yaml` (3c/10b)  
+- **[bv2182_tg4779_faq_runoff_reversal](cases/APPROVAL_OR_MINOR/bv2182_tg4779_faq_runoff_reversal.md)** — `01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml` (3c/10b)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Berry · Score=Berry · Condorcet=Almond  
     _flags: 1 tied-score ballot(s)_
 - **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  

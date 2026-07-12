@@ -137,7 +137,6 @@ LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung
 LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
 LH:edelman_perfect_component_c3_b30,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,1,single-race,30,STAR,LH-only
 LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
-LH:faq_runoff_reversal_c3_b10,FAQ — why the automatic runoff (and Equal Support),1,single-race,10,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
@@ -207,6 +206,7 @@ r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
+tg4779,BV2182 — why the automatic runoff (and Equal Support),1,single-race,10,STAR,BV
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV

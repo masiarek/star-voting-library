@@ -1,11 +1,18 @@
 ======================================================================
-SOURCE FILE:     faq_runoff_reversal_c3_b10.yaml
-SOURCE MODIFIED: 2026-07-11 19:53:46
-TABULATED FILE:  faq_runoff_reversal_c3_b10_tabulated.txt
-TABULATED AT:    2026-07-11 19:53:46
+SOURCE FILE:     bv2182_tg4779_faq_runoff_reversal.yaml
+SOURCE MODIFIED: 2026-07-11 20:24:54
+TABULATED FILE:  bv2182_tg4779_faq_runoff_reversal_tabulated.txt
+TABULATED AT:    2026-07-11 20:25:04
 ======================================================================
 
-election_title: FAQ — why the automatic runoff (and Equal Support)
+election_title: BV2182 — why the automatic runoff (and Equal Support)
+election_description: |-
+  Live on BetterVoting (BV2182, election tg4779).
+  Results: https://bettervoting.com/tg4779/results
+
+bv_test_id: BV2182
+bv_election_id: tg4779
+bv_results_url: https://bettervoting.com/tg4779/results
 
 scenario_description: |-
   A 10-voter STAR election built for the FAQ. Berry is the consensus candidate —
@@ -14,6 +21,7 @@ scenario_description: |-
   clean Runoff Reversal that shows why the second step exists. One voter scores
   both finalists 5 (Equal Support) — counted, but expressing no preference between
   the two, so it lands in neither finalist's runoff column.
+  Live results: https://bettervoting.com/tg4779/results
 
 voting_method: STAR
 num_winners: 1
@@ -40,19 +48,20 @@ options:
 expected_winners:
 - Almond
 
-# file: faq_runoff_reversal_c3_b10.yaml
+# file: bv2182_tg4779_faq_runoff_reversal.yaml
 
 ======================================================================
 TABULATION RESULTS
 ======================================================================
 
-=== FAQ — why the automatic runoff (and Equal Support) ===
+=== BV2182 — why the automatic runoff (and Equal Support) ===
   A 10-voter STAR election built for the FAQ. Berry is the consensus candidate —
   broadly liked, so Berry wins the Scoring Round on total stars. But more voters
   strictly prefer Almond head-to-head, so Almond wins the Automatic Runoff: a
   clean Runoff Reversal that shows why the second step exists. One voter scores
   both finalists 5 (Equal Support) — counted, but expressing no preference between
   the two, so it lands in neither finalist's runoff column.
+  Live results: https://bettervoting.com/tg4779/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

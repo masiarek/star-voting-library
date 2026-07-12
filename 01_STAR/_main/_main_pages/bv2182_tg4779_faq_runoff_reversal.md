@@ -1,6 +1,6 @@
-# FAQ — why the automatic runoff (and Equal Support)
+# BV2182 — why the automatic runoff (and Equal Support)
 
-*Generated from [`faq_runoff_reversal_c3_b10.yaml`](../faq_runoff_reversal_c3_b10.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2182_tg4779_faq_runoff_reversal.yaml`](../bv2182_tg4779_faq_runoff_reversal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Almond
 
@@ -12,6 +12,7 @@ strictly prefer Almond head-to-head, so Almond wins the Automatic Runoff: a
 clean Runoff Reversal that shows why the second step exists. One voter scores
 both finalists 5 (Equal Support) — counted, but expressing no preference between
 the two, so it lands in neither finalist's runoff column.
+Live results: https://bettervoting.com/tg4779/results
 
 ## Ballots
 
@@ -33,7 +34,7 @@ Almond,Berry,Cocoa
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/faq_runoff_reversal_c3_b10_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../_main_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -105,7 +106,7 @@ Cocoa      0  0  0  3  4  3  |    10   1.0
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/faq_runoff_reversal_c3_b10.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml
 ```
 
 ## See also

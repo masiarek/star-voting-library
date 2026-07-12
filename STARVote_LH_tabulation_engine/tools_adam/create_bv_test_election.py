@@ -2271,7 +2271,30 @@ _ICE_CREAM_LADDER = {
     "expected": "Strawberry",
 }
 
-ELECTIONS: list = [_ICE_CREAM_LADDER]
+_FAQ_RUNOFF = {
+    "test_id": "BV2182",
+    "title": "Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",
+    "description": (
+        "STAR FAQ teaching example: why STAR has a second round. 10 voters, three "
+        "candidates. Berry is the consensus choice and leads the Scoring Round on total "
+        "stars (44), but more voters strictly prefer Almond head-to-head, so Almond wins "
+        "the Automatic Runoff 6-3 — a clean 'score leader != runoff winner' Runoff "
+        "Reversal. One voter scored both finalists 5 (Equal Support) and is counted in "
+        "neither runoff column. Almond is also the Condorcet winner here."
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Almond", "Berry", "Cocoa"],
+    "ballots": [
+        [5, 4, 1], [5, 4, 1], [5, 4, 1], [5, 4, 1],
+        [5, 4, 0], [5, 4, 0],
+        [0, 5, 2], [0, 5, 2], [0, 5, 2],
+        [5, 5, 0],
+    ],
+    "expected": "Almond",
+}
+
+ELECTIONS: list = [_FAQ_RUNOFF]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race
