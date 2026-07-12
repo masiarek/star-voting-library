@@ -48,5 +48,6 @@ Both camps overuse Australia. The workability is real and IRV's defenders are ri
 
 - [RCV-IRV — origins and spread](RCV_IRV_history.md) — where this fits in the timeline
 - [Center squeeze](RCV_IRV_center_squeeze.md) and [exhausted ballots](RCV_IRV_exhausted_ballots.md) — the IRV-specific mechanics
+- [Two-Party Dominance — pros, cons, and what changes it](../two_party_dominance.md) — is two-party good or bad, and why *proportional* reform (not single-winner) is what breaks it
 - [Proportional representation: STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) — the method behind Australia's *multiparty* chamber
 - [Choosing among the Equal Vote methods](../choosing_among_evc_methods.md) · [Glossary](../GLOSSARY.md)
