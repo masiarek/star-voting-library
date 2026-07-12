@@ -1,14 +1,16 @@
 # STAR Voting — Education & Test-Case Library
 
-A library that does three things:
+A library for learning, teaching, and debating **[STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). It puts STAR first — and earns your trust by testing STAR honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness *is* the argument: the STAR case is stronger because you can check it yourself.
 
-**1. A human-readable test-case library.** Real and hand-written voting-method elections — each a single YAML file a *person* can read and the *engine* can run. → [Why YAML? One file a person reads and a computer runs](00_start_here/why_yaml_test_cases.md).
+**New here? → [Start Here](00_start_here/00_START_HERE.md)** routes you by what you want — learn STAR, see what's broken about voting today, compare methods even-handedly, or run the engine yourself.
 
-**2. Cross-verification with BetterVoting.** Import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it with an independent, auditable engine, and confirm the winner matches its official tally — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
+Under the hood it does three things:
 
-**3. Educational material.** Concept pages and worked examples, organized by level — [Voting 101 / 201 / 301](00_start_here/CURRICULUM.md).
+1. **Teaches** — concept pages and worked examples, organized by level ([Voting 101 / 201 / 301](00_start_here/CURRICULUM.md)).
+2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](00_start_here/why_yaml_test_cases.md).
+3. **Cross-verifies with BetterVoting** — import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it independently, and confirm the official winner — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 
-Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine. New here? Start with [Why YAML?](00_start_here/why_yaml_test_cases.md), then [the pipeline](00_start_here/the_pipeline.md) that wraps it.
+Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.
 
 > **Contributors / running it locally →** the [**Repository & Engine Guide**](00_start_here/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](00_start_here/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
 

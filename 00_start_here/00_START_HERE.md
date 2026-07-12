@@ -1,13 +1,63 @@
 # Start Here
 
-Welcome to the **STAR Voting education library**. This repo teaches STAR in depth and — for honest comparison — the other single-mark and ranked methods, with a real tabulation engine, runnable example elections, and a test suite behind every result.
+This is the **STAR Voting education library** — for learning, teaching, and debating **[STAR Voting](STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). STAR comes first here. What makes the case for it trustworthy is that we *don't hide the ball*: STAR is tested honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness **is** the argument — the STAR case is stronger because you can check it yourself.
 
-## Pick your path
+**Pick your path — what brings you here?**
 
-- **New to voting reform? Start with STAR** → [**STAR — Lesson 0**](STAR_Voting/STAR_start_here.md) (the "why" before the "how"), then the [STAR concept pages](STAR_Voting/).
-- **Persuasion / debate prep** → [Why STAR Voting](Why_STAR_Voting.md).
+---
 
-## The methods (one page each)
+## ⭐ Learn STAR Voting
+
+The main event.
+
+- **New here — the "why" before the "how"** → [STAR — start here](STAR_Voting/STAR_start_here.md)
+- **How the count works** → [the Scoring Round](STAR_Voting/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/STAR_Automatic_Runoff.md) (two rounds, one ballot)
+- **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/STAR_benefits.md) · debate prep → [Why STAR Voting](Why_STAR_Voting.md)
+- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/STAR_FAQ.md)
+- **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
+
+## What's wrong with how we vote now?
+
+The problem STAR is built to fix — start here if you're new to voting reform.
+
+- [Choose-One / Plurality (FPTP)](plurality.md) — the status quo, and why it breaks with more than two candidates
+- [The spoiler effect](spoiler_effect.md) — the core failure
+- [Center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — how even ranked methods can eliminate the consensus candidate
+- [Two-party dominance](two_party_dominance.md) — is it good or bad, and what actually changes it
+- [Alaska 2022](RCV_IRV/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
+
+## Why STAR over the alternatives?
+
+The honest comparison — where STAR's case is actually made.
+
+- [Scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) — the ballot distinction everything turns on
+- [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
+- [RCV-IRV vs. STAR](rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
+- [Strategic voting](strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
+
+## The whole field, even-handed
+
+The credibility layer — read the arguments *against*, too.
+
+- [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
+- [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
+- **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/STAR_honest_limits.md) · [Approval](Approval_Voting/approval_honest_limits.md) · [Ranked Robin](RCV_Ranked_Robin/RCV_RR_honest_limits.md)
+- [Who champions each method](advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
+
+## Run & verify elections (the library + engine)
+
+The thing that makes every claim above checkable.
+
+- [Repository & Engine Guide](repository_guide.md) — how to tabulate a file, import a BetterVoting export, run the tests
+- [The YAML test-case index](YAML_test_case_index/) — every example election, grouped by method · [BetterVoting-backed cases](YAML_test_case_index/BV_registry.md)
+- [Why YAML?](why_yaml_test_cases.md) — one file a person reads and a computer runs
+
+## Reference
+
+- [Glossary](GLOSSARY.md) — every term, precisely defined
+- [Ballot & terminology basics](ballot_and_terminology_basics.md) — the four "RCV" confusions people get wrong
+
+**The methods, one page each:**
 
 | Method | Ballot | Page |
 |---|---|---|
@@ -16,25 +66,6 @@ Welcome to the **STAR Voting education library**. This repo teaches STAR in dept
 | **Range / Score** | grade each; highest total wins | [Range_Voting/](Range_Voting/range_voting.md) |
 | **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [RCV_Ranked_Robin/](RCV_Ranked_Robin/ranked_robin.md) |
 | **RCV-IRV** | rank; instant runoff | [RCV_IRV/](RCV_IRV/RCV-IRV-Hare.md) |
-
-## Go deeper
-
-- **What a voting method even is (the foundation)** → [a ballot and a count](voting_method_ballot_and_count.md) — and why "most votes" isn't "over half."
-- **Same ballots, different methods** → [method_comparisons/](../method_comparisons/) (the Black Curtain, center squeeze, monotonicity, and the auto-generated cross-method divergence ledger).
-- **Choosing among the three Equal Vote methods** → [STAR vs. Approval vs. Ranked Robin](choosing_among_evc_methods.md) — the tradeoff triangle (simplicity / expressiveness / precision), even-handed to all three.
-- **Strategic voting across the methods** → [strategic voting](strategic_voting.md) — the four kinds of insincere vote (favorite betrayal, burial, bullet voting, tactical maximization), how each method handles them, and what the simulations show.
-- **The learning path — 101 / 201 / 301** → [CURRICULUM.md](CURRICULUM.md).
-- **A guided reading path (beginner → advanced)** → [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md) — the whole field in three levels (after Marcus Ogren), threaded through this repo's runnable pages.
-- **Look up a term** → [GLOSSARY.md](GLOSSARY.md).
-- **Ballot & terminology basics (the "RCV" confusions)** → [the four things people get wrong](ballot_and_terminology_basics.md).
-- **Scores vs. ranks (the thing people conflate)** → [scores_and_ranks/](scores_and_ranks/scores_vs_ranks.md).
-- **The three ballot styles, side by side** → [alternate ballot styles](ballot_styles.md) (ranking vs. yes/no vs. scoring).
-- **The spoiler effect (and how each method handles it)** → [spoiler effect](spoiler_effect.md).
-- **Is two-party dominance good or bad?** → [Two-Party Dominance](two_party_dominance.md) — both cases fairly, and why *proportional* (not single-winner) reform is what actually changes it.
-- **The status quo we're improving on** → [plurality (choose-one / FPTP)](plurality.md).
-- **A real RCV-IRV failure** → [Alaska 2022](RCV_IRV/RCV_IRV_alaska_2022.md) (center squeeze + spoiler + non-monotonicity in one race).
-- **Who champions each method** → [advocacy organizations](advocacy_organizations.md) (FairVote, CES, Equal Vote Coalition).
-
-> This page is the method-neutral front door. The STAR-specific "why" lives in [STAR_Voting/STAR_start_here.md](STAR_Voting/STAR_start_here.md).
+| **3-2-1** | Good / OK / Bad | [06_Other/three_two_one/](../06_Other/three_two_one/README.md) |
 
 # file: 00_START_HERE.md
