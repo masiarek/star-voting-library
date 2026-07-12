@@ -67,7 +67,8 @@ Why not just add up the stars and stop? Because then you'd be tempted to game it
 
 Here's a real STAR ballot — five candidates, each rated 0 to 5 stars:
 
-![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../img/star_ballot_example.png)
+<img src="../img/star_ballot_example.png" width="440" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
+
 
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
@@ -81,7 +82,7 @@ One nuance for the runoff: if you rate the two finalists the *same*, your ballot
 ## What this means for you
 
 - **You can be honest.** Score your favorite a 5 *and* a backup a 4 — you never split your own vote.
-- **No "wasted" votes.** Supporting someone who can't win no longer helps elect someone you dislike.
+- **No "wasted" votes.** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
 → The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).

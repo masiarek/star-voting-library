@@ -2324,7 +2324,31 @@ _FORCED_EXHAUSTION = {
     "expected": "Ada (15 vs Ben 14, margin 1); 21 of 50 ballots forced-exhausted by the 2-rank cap — more than the winner's own total.",
 }
 
-ELECTIONS: list = [_FORCED_EXHAUSTION]
+_LUNCH_VOTE = {
+    "test_id": "BV2184",
+    "title": "The Team Lunch Vote — a beginner's STAR example (the compromise everyone likes wins)",
+    "description": (
+        "The running example from the STAR beginner's on-ramp. Five coworkers pick "
+        "lunch: two love Sushi, two love Tacos, and everyone is happy with Pizza. Under "
+        "Choose-One each names one favorite, the vote splits (Sushi 2, Tacos 2, Pizza 1), "
+        "and Pizza — the option nobody objected to — comes last; a coin flip hands lunch "
+        "to Sushi or Tacos and half the team is stuck with something they rated 0. STAR "
+        "reads the whole ballot: Pizza tops the Scoring Round (17) and wins the runoff 3-2. "
+        "The compromise everyone can live with wins, with no strategic voting. (Choose-One "
+        "and RCV-IRV both elect Sushi here; STAR elects Pizza.)"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Sushi", "Tacos", "Pizza"],
+    "ballots": [
+        [5, 0, 3], [5, 0, 3],   # Sushi-lovers
+        [0, 5, 3], [0, 5, 3],   # Taco-lovers
+        [3, 1, 5],              # Pizza-fan
+    ],
+    "expected": "Pizza (Scoring Round 17; runoff 3-2 over Sushi). Choose-One/IRV pick Sushi.",
+}
+
+ELECTIONS: list = [_LUNCH_VOTE]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race
