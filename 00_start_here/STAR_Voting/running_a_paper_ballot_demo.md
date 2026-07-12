@@ -43,7 +43,7 @@ It writes a self-contained **HTML file**; open it in a browser and **Print → S
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
 - a **QR code** (top-right) that opens the online election when scanned — handy for "vote on paper *and* online, then compare." (The QR needs the tiny pure-Python `segno` library — `uv pip install segno`; without it the tool just prints the URL text and skips the QR, so it still runs with plain `python3`.)
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (layout hint), `--out FILE`, `--no-qr`, and `--selftest` (verify the tool). Run `--help` for all of them.
+Useful flags: `--copies N` (how many ballots), `--per-page N` (layout hint), `--out FILE`, `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), and `--selftest` (verify the tool). Run `--help` for all of them.
 
 ## Step 3 — vote on paper
 
@@ -92,6 +92,16 @@ So *"the voter marked 2, 4 and 5 for one candidate"* becomes a **`?`** in that c
 5. Tabulate in the [LH engine](../why_yaml_test_cases.md), which already reports spoiled ballots — loop closed.
 
 When that tool gets built, the right way is against a **local OCR engine** with a **synthetic-ballot round-trip self-test** (render ballots with known scores → OCR → assert they match), so it's *verified before it's trusted* on real scans.
+
+## Fun extensions (and what they secretly teach)
+
+**Write-in candidates** (`--write-ins N`). Adds N blank *"Write-in: ______"* rows with their own 0–5 grid — realistic (BetterVoting supports write-ins too) and easy on paper. The *hard* part isn't printing them; it's **tallying** them: the return-path tool has to read a hand-written *name* and match write-ins across ballots ("Bob" = "bob" = "Bobby"?). So treat write-in matching as a design question for the OCR step, not the ballot.
+
+**Ballot receipts & verifiability** (`--serials`). Each ballot gets a number — *"Ballot #7 — keep this to verify it was counted."* After the count, publish the list of serials that were counted and have each voter confirm theirs is on it. That demonstrates a genuinely important property: **counted as cast** — you can check your ballot made it into the tally.
+
+But here's the honest catch, and it *is* the lesson: **a serial that anyone can link back to you breaks the [secret ballot](../GLOSSARY.md).** If a sign-in sheet maps *name → serial*, a coercer or vote-buyer could demand your number and check how you voted. Real elections resolve this tension with **end-to-end verifiability (E2E-V)** — cryptographic receipts that let you confirm your vote was counted *without* revealing (or being able to prove to anyone) how you voted. So the serial demo is the perfect way to introduce *why verifiability is hard*: you want **both** "confirm it counted" **and** "nobody can tell how I voted," and getting both at once takes real cryptography. (BetterVoting's per-voter unique numbers are the platform's version of this receipt.)
+
+For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
 ## Why do this (the teaching value)
 

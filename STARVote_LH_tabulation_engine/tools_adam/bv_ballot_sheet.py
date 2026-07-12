@@ -138,19 +138,30 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 .bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
 .qr { text-align: center; font-size: 9px; color: #555; }
 .qr img { width: 72px; height: 72px; display: block; }
+.wline { display: inline-block; border-bottom: 1px solid #333; width: 55%; height: 1em; }
+.serial { font-weight: 700; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; } }
 """
 
 
-def render_ballot(title, question, candidates, bv_id, qr_uri=None):
+def render_ballot(title, question, candidates, bv_id, qr_uri=None,
+                  serial=None, write_ins=0):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
+    bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
     for c in candidates:
-        cells = "".join('<td><span class="bub"></span></td>' for _ in range(6))
-        rows.append(f'<tr><td class="cand">{html.escape(c)}</td>{cells}</tr>')
+        rows.append(f'<tr><td class="cand">{html.escape(c)}</td>{bubbles}</tr>')
+    for _ in range(write_ins):
+        rows.append(f'<tr><td class="cand">Write-in: <span class="wline"></span>'
+                    f'</td>{bubbles}</tr>')
     results = (f'results: bettervoting.com/{html.escape(bv_id)}/results'
                if bv_id else 'STAR Voting — Score Then Automatic Runoff')
-    idline = f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot'
+    idpieces = []
+    if serial is not None:
+        idpieces.append(f'Ballot <span class="serial">#{html.escape(str(serial))}</span> '
+                        f'— keep this to verify it was counted')
+    idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
+    idline = " · ".join(idpieces)
     qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="Scan to open election '
                 f'{html.escape(bv_id or "")}"><span>scan to vote</span></div>'
                 if qr_uri else "")
@@ -171,10 +182,13 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None):
 </div>"""
 
 
-def render_sheet(title, question, candidates, bv_id, copies, per_page, qr=True):
+def render_sheet(title, question, candidates, bv_id, copies, per_page,
+                 qr=True, serials=False, write_ins=0):
     qr_uri = qr_data_uri(f"https://bettervoting.com/{bv_id}") if (bv_id and qr) else None
     ballots = "\n".join(
-        render_ballot(title, question, candidates, bv_id, qr_uri) for _ in range(copies))
+        render_ballot(title, question, candidates, bv_id, qr_uri,
+                      serial=(i + 1 if serials else None), write_ins=write_ins)
+        for i in range(copies))
     hint = ('<p class="noprint" style="margin:12px 18px;color:#666;font-size:13px">'
             f'{copies} ballots · aim for ~{per_page} per page — use your browser\'s '
             'Print → "Save as PDF". This is the print-and-hand-count front end; '
@@ -200,6 +214,18 @@ def selftest():
          "&lt;b&gt;" in render_ballot("t", "q", ["<b>"], None)),
     ]
     for label, cond in checks:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
+    # serials + write-in rows
+    s2 = render_sheet("T", "q", ["A", "B"], "x", copies=2, per_page=1,
+                      qr=False, serials=True, write_ins=1)
+    extra = [
+        ("serial numbers per ballot", '#1</span>' in s2 and '#2</span>' in s2),
+        ("write-in row added (1 per ballot x 2)", s2.count("Write-in:") == 2),
+        ("bubbles = (2 cands + 1 write-in) x 6 x 2 ballots",
+         s2.count('class="bub"') == (2 + 1) * 6 * 2),
+    ]
+    for label, cond in extra:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
     # QR is optional (needs segno); test whichever path applies.
@@ -229,6 +255,11 @@ def main():
     ap.add_argument("--out", default="ballots.html")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
+    ap.add_argument("--serials", action="store_true",
+                    help="number each ballot (a 'keep this to verify it was counted' "
+                         "receipt — see the secret-ballot caveat in the demo page)")
+    ap.add_argument("--write-ins", type=int, default=0, metavar="N",
+                    help="add N blank write-in rows per ballot")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -254,7 +285,8 @@ def main():
 
     question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
-                         args.per_page, qr=not args.no_qr)
+                         args.per_page, qr=not args.no_qr, serials=args.serials,
+                         write_ins=args.write_ins)
     with open(args.out, "w", encoding="utf-8") as f:
         f.write(sheet)
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates) to "
