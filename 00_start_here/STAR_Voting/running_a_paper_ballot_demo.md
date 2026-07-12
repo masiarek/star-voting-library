@@ -59,7 +59,9 @@ Each ballot carries:
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
 - a **QR code** (top-right) that opens the online election when scanned — handy for "vote on paper *and* online, then compare." (The QR needs the tiny pure-Python `segno` library — `uv pip install segno`; without it the tool just prints the URL text and skips the QR, so it still runs with plain `python3`.)
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.pdf` or `.html`), `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), and `--selftest` (verify the tool). Run `--help` for all of them.
+The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes, and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
+
+Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.txt` / `.pdf` / `.html`), `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), and `--selftest`. Run `--help` for all of them.
 
 ## Step 3 — vote on paper
 

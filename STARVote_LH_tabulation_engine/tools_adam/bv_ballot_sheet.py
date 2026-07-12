@@ -167,47 +167,100 @@ def html_to_pdf(html_str, pdf_path):
         return False
 
 
+# A star-with-check lookalike of the STAR Voting mark (inline SVG — we can't embed
+# Equal Vote's actual logo asset in a self-contained file, and every ballot says
+# EDUCATION ONLY, so this is a teaching facsimile, not their trademark).
+STAR_LOGO = ('<svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
+             '<polygon points="50,6 61,38 95,38 67,58 78,90 50,71 22,90 33,58 5,38 39,38" '
+             'fill="none" stroke="#7fa0ad" stroke-width="6" stroke-linejoin="round"/>'
+             '<path d="M31,52 L44,65 L71,33" fill="none" stroke="#111" stroke-width="9" '
+             'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+STAR_OUTLINE = ('<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
+                '<polygon points="50,6 61,38 95,38 67,58 78,90 50,71 22,90 33,58 5,38 39,38" '
+                'fill="none" stroke="#7fa0ad" stroke-width="6" stroke-linejoin="round"/></svg>')
+INSTRUCTION_BULLETS = [
+    "Give your favorite candidate(s) five stars.",
+    "Give your last choice(s) zero or leave blank.",
+    "Equal scores are allowed.",
+    "Score other candidates as desired.",
+]
+EXPLAIN_LINES = [
+    "The two highest scoring candidates are finalists.",
+    "Your full vote goes to the finalist you prefer.",
+    "The finalist with the most votes wins.",
+]
+
 CSS = """
 :root { color-scheme: light; }
+* { box-sizing: border-box; }
 body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
        margin: 0; color: #111; }
-.ballot { border: 2px solid #111; border-radius: 8px; padding: 14px 18px;
-          margin: 12px; page-break-inside: avoid; }
-.ballot h2 { margin: 0 0 2px; font-size: 17px; }
-.q { margin: 0 0 8px; color: #333; font-size: 13px; }
-.edesc { margin: 0 0 7px; color: #555; font-size: 12px; font-style: italic; }
-.inst { margin: 0 0 10px; font-size: 11.5px; color: #444; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid #999; padding: 6px 4px; text-align: center; font-size: 13px; }
-th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
-.bub { display: inline-block; width: 15px; height: 15px; border: 1.6px solid #333;
-       border-radius: 50%; }
-.foot { margin-top: 8px; font-size: 10.5px; color: #555; display: flex;
-        justify-content: space-between; }
-.bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-.qr { text-align: center; font-size: 9px; color: #555; }
-.qr img { width: 72px; height: 72px; display: block; }
-.wline { display: inline-block; border-bottom: 1px solid #333; width: 55%; height: 1em; }
-.serial { font-weight: 700; }
+.ballot { position: relative; border: 3px solid #111; border-radius: 10px;
+          padding: 16px 22px 14px; margin: 12px; page-break-inside: avoid; }
 .notice { border: 1.5px solid #c0392b; border-radius: 5px; padding: 3px 8px;
-          margin: 0 0 9px; font-size: 10.5px; font-weight: 700; color: #c0392b;
+          margin: 0 0 10px; font-size: 10.5px; font-weight: 700; color: #c0392b;
           text-align: center; text-transform: uppercase; letter-spacing: .4px; }
+.brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 2px 0 8px; }
+.brand .logo { width: 50px; height: 50px; flex: none; }
+.brand .word { font-weight: 800; font-size: 30px; letter-spacing: .5px; line-height: 1; }
+.brand .tag { font-weight: 800; font-size: 10.5px; letter-spacing: 1.5px; color: #5a7683; margin-top: 3px; }
+.title { text-align: center; font-size: 16px; font-weight: 700; margin: 2px 0 1px; }
+.edesc { text-align: center; font-style: italic; color: #555; font-size: 12px; margin: 0 0 2px; }
+.q { text-align: center; color: #333; font-size: 12.5px; margin: 0 0 6px; }
+.inst { margin: 6px 0 2px 22px; padding: 0; font-size: 13.5px; }
+.inst li { margin: 1px 0; }
+.fine { margin: 2px 0 6px 22px; font-size: 10.5px; color: #666; }
+.qr { position: absolute; top: 44px; right: 18px; text-align: center; font-size: 9px; color: #555; }
+.qr img { width: 64px; height: 64px; display: block; }
+table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
+.grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
+.grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 15px; padding-left: 6px; }
+.wb td { font-weight: 800; font-size: 13px; padding: 1px 0; }
+.sh { position: relative; height: 36px; }
+.sh .star svg { width: 34px; height: 34px; display: block; margin: 0 auto; }
+.sh .n { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+         font-weight: 800; font-size: 14px; }
+.sh .n0 { display: flex; align-items: center; justify-content: center; height: 36px;
+          font-weight: 800; font-size: 16px; }
+.grid tr.cand td, .grid tr.cand th { padding: 7px 0; }
+.grid tr.alt { background: #dcebf1; }
+.bub { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
+       border: 2px solid #111; border-radius: 50%; font-weight: 700; font-size: 13px; }
+.wline { display: inline-block; border-bottom: 1.5px solid #333; width: 62%; height: 1em; }
+.explain { text-align: center; font-size: 12.5px; line-height: 1.35; margin: 6px 4px 2px;
+           padding-top: 8px; border-top: 1.5px solid #111; }
+.foot { margin-top: 8px; font-size: 10.5px; color: #555; display: flex; justify-content: space-between; }
+.promo { text-align: center; font-size: 10px; color: #5a7683; margin: 5px 0 0; }
+.serial { font-weight: 700; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; }
   .ballot.pagebreak { page-break-after: always; } }
 """
 
 
+def _colhead(n):
+    """A column header cell: 0 plain, 1-5 a star outline with the number inside."""
+    if n == 0:
+        return '<th class="sh"><span class="n0">0</span></th>'
+    return (f'<th class="sh"><span class="star">{STAR_OUTLINE}</span>'
+            f'<span class="n">{n}</span></th>')
+
+
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                   serial=None, write_ins=0, qr_caption="scan to vote",
-                  break_after=False, notice="", blurb=""):
+                  break_after=False, notice="", blurb="", promo=""):
+    bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
     rows = []
-    header = "".join(f"<th>{n}</th>" for n in range(6))
-    bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
-    for c in candidates:
-        rows.append(f'<tr><td class="cand">{html.escape(c)}</td>{bubbles}</tr>')
-    for _ in range(write_ins):
-        rows.append(f'<tr><td class="cand">Write-in: <span class="wline"></span>'
-                    f'</td>{bubbles}</tr>')
+    for i, c in enumerate(candidates):
+        alt = " alt" if i % 2 == 1 else ""
+        rows.append(f'<tr class="cand{alt}"><td class="cand">{html.escape(c)}</td>{bubbles}</tr>')
+    for k in range(write_ins):
+        alt = " alt" if (len(candidates) + k) % 2 == 1 else ""
+        rows.append(f'<tr class="cand{alt}"><td class="cand">Write-in: '
+                    f'<span class="wline"></span></td>{bubbles}</tr>')
+    colheads = "".join(_colhead(n) for n in range(6))
+    bullets = "".join(f"<li>{html.escape(b)}</li>" for b in INSTRUCTION_BULLETS)
+    explain = "<br>".join(html.escape(l) for l in EXPLAIN_LINES)
+
     results = (f'results: bettervoting.com/{html.escape(bv_id)}/results'
                if bv_id else 'STAR Voting — Score Then Automatic Runoff')
     idpieces = []
@@ -216,34 +269,38 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                         f'— keep this to verify it was counted')
     idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
+
     qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code">'
                 f'<span>{html.escape(qr_caption)}</span></div>'
                 if qr_uri else "")
     cls = "ballot pagebreak" if break_after else "ballot"
-    notice_block = (f'<div class="notice">{html.escape(notice)}</div>'
-                    if notice else "")
-    blurb_block = (f'<p class="edesc">{html.escape(blurb)}</p>' if blurb else "")
+    notice_block = f'<div class="notice">{html.escape(notice)}</div>' if notice else ""
+    title_block = f'<p class="title">{html.escape(title)}</p>' if title else ""
+    blurb_block = f'<p class="edesc">{html.escape(blurb)}</p>' if blurb else ""
+    q_block = f'<p class="q">{html.escape(question)}</p>' if question else ""
+    promo_block = f'<p class="promo">{promo}</p>' if promo else ""
     return f"""
 <div class="{cls}">
-  {notice_block}
-  <div class="bhead">
-    <div>
-      <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
-      {blurb_block}
-      <p class="q">{html.escape(question)}</p>
-    </div>{qr_block}
-  </div>
-  <p class="inst">{INSTRUCTIONS}</p>
-  <table>
-    <tr><th class="cand">Candidate</th>{header}</tr>
+  {notice_block}{qr_block}
+  <div class="brand">{STAR_LOGO}<div><div class="word">STAR VOTING</div>
+    <div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div></div>
+  {title_block}{blurb_block}{q_block}
+  <ul class="inst">{bullets}</ul>
+  <p class="fine">Fill one bubble per row. Two or more bubbles in a row spoils that candidate's score.</p>
+  <table class="grid">
+    <tr class="wb"><td></td><td>Worst</td><td></td><td></td><td></td><td></td><td>Best</td></tr>
+    <tr class="colhead"><th class="chl">Candidate</th>{colheads}</tr>
     {''.join(rows)}
   </table>
+  <div class="explain">{explain}</div>
   <p class="foot"><span>{idline}</span><span>{results}</span></p>
+  {promo_block}
 </div>"""
 
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
-                 qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb=""):
+                 qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb="",
+                 promo=""):
     # QR points to --qr-url if given (works even LH-only, no BV), else the BV
     # election if there is one, else nothing.
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
@@ -253,7 +310,7 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
-                      qr_caption=caption, notice=notice, blurb=blurb,
+                      qr_caption=caption, notice=notice, blurb=blurb, promo=promo,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
@@ -275,24 +332,23 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
 # URL is printed instead) — the purest, most portable ballot.                   #
 # --------------------------------------------------------------------------- #
 TEXT_WIDTH = 72
-TEXT_INSTRUCTIONS = ("Fill ONE circle per row, 0 (worst) to 5 (best). A blank row "
-                     "counts as 0. Two or more marks in one row is a spoiled score "
-                     "for that candidate. The two highest-scoring candidates have an "
-                     "automatic runoff.")
 
 
 def _ascii_row(label, name_w):
-    cells = "   ".join("( )" for _ in range(6))
+    cells = "  ".join(f"({n})" for n in range(6))
     return f"  {label[:name_w].ljust(name_w)}  {cells}"
 
 
-def render_ballot_text(title, question, candidates, bv_id,
-                       serial=None, write_ins=0, notice="", blurb=""):
+def render_ballot_text(title, question, candidates, bv_id, serial=None,
+                       write_ins=0, notice="", blurb="", promo=""):
     rule = "=" * TEXT_WIDTH
-    name_w = max([len("Candidate")] + [len(c) for c in candidates] + [11]) + 1
-    name_w = min(name_w, 34)
+    name_w = min(max([len(c) for c in candidates] + [9]) + 1, 26)
     lines = [rule]
-    lines.append((title or "STAR Voting ballot").center(TEXT_WIDTH).rstrip())
+    lines.append("* STAR VOTING *".center(TEXT_WIDTH).rstrip())
+    lines.append("Score - Then - Automatic - Runoff".center(TEXT_WIDTH).rstrip())
+    if title:
+        lines.append("")
+        lines.append(title.center(TEXT_WIDTH).rstrip())
     if serial is not None:
         lines.append(f"  Ballot #{serial} - keep this to verify it was counted")
     if notice:
@@ -306,37 +362,48 @@ def render_ballot_text(title, question, candidates, bv_id,
         lines.append("")
         lines += textwrap.wrap(blurb, TEXT_WIDTH - 2, initial_indent="  ",
                                subsequent_indent="  ")
+    if question:
+        lines.append("")
+        lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
+                               subsequent_indent="  ")
     lines.append("")
-    lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
-                           subsequent_indent="  ")
+    for b in INSTRUCTION_BULLETS:
+        wrapped = textwrap.wrap(b, TEXT_WIDTH - 6)
+        for j, ln in enumerate(wrapped):
+            lines.append(("  - " if j == 0 else "    ") + ln)
+    lines.append("  Fill one bubble per row; two or more spoils that score.")
     lines.append("")
-    lines += textwrap.wrap(TEXT_INSTRUCTIONS, TEXT_WIDTH - 2, initial_indent="  ",
-                           subsequent_indent="  ")
-    lines.append("")
-    header = f"  {'Candidate'.ljust(name_w)}  " + "   ".join(f" {n} " for n in range(6))
-    lines.append(header)
-    lines.append(f"  {'-' * name_w}  " + "   ".join("---" for _ in range(6)))
+    cellblock = "  ".join(f"({n})" for n in range(6))
+    pre = "  " + " " * name_w + "  "
+    lines.append(pre + "Worst" + " " * (len(cellblock) - 9) + "Best")
     for c in candidates:
         lines.append(_ascii_row(c, name_w))
     for _ in range(write_ins):
-        lines.append(_ascii_row("Write-in: " + "_" * (name_w - 10), name_w))
+        lines.append(_ascii_row("Write-in: " + "_" * max(0, name_w - 10), name_w))
+    lines.append("")
+    lines.append("  " + "-" * (TEXT_WIDTH - 4))
+    for l in EXPLAIN_LINES:
+        lines.append("  " + l)
     lines.append("")
     if bv_id:
         lines.append(f"  Election {bv_id}  |  results: bettervoting.com/{bv_id}/results")
     else:
-        lines.append("  STAR Voting — Score Then Automatic Runoff")
+        lines.append("  STAR Voting - Score Then Automatic Runoff")
+    if promo:
+        lines.append("  " + promo)
     lines.append(rule)
     return "\n".join(lines)
 
 
 def render_sheet_text(title, question, candidates, bv_id, copies, per_page,
-                      serials=False, write_ins=0, notice="", blurb=""):
+                      serials=False, write_ins=0, notice="", blurb="", promo=""):
     pp = max(1, per_page)
     out = []
     for i in range(copies):
         out.append(render_ballot_text(title, question, candidates, bv_id,
                                       serial=(i + 1 if serials else None),
-                                      write_ins=write_ins, notice=notice, blurb=blurb))
+                                      write_ins=write_ins, notice=notice, blurb=blurb,
+                                      promo=promo))
         last = (i + 1 == copies)
         if not last:
             # form-feed = a hard page break for printers; a blank gap otherwise.
@@ -358,6 +425,16 @@ def selftest():
         ("0-5 bubble grid (18 bubbles/ballot = 3 cands x 6)", html_out.count('class="bub"') == 3 * 6 * 3),
         ("html escaping of a tricky name",
          "&lt;b&gt;" in render_ballot("t", "q", ["<b>"], None)),
+        # official-style chrome
+        ("STAR VOTING wordmark present", "STAR VOTING" in html_out),
+        ("bulleted instructions (favorite five stars)",
+         "favorite candidate(s) five stars" in html_out),
+        ("Worst / Best column labels", "Worst" in html_out and "Best" in html_out),
+        ("zebra stripe on even candidate row", 'class="cand alt"' in html_out),
+        ("star column headers (1-5)", html_out.count('class="star"') == 3 * 5),
+        ("finalist explanation footer",
+         "two highest scoring candidates are finalists" in html_out),
+        ("bubbles carry their digit", '<span class="bub">5</span>' in html_out),
     ]
     for label, cond in checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
@@ -394,7 +471,9 @@ def selftest():
         ("ascii: candidates + results url present",
          "ala" in txt and "bob" in txt and "bettervoting.com/mptvrm/results" in txt),
         ("ascii: one-per-page form-feeds (3 copies -> 2)", txt.count("\f") == 2),
-        ("ascii: 6 markable circles per candidate row", "( )   ( )   ( )   ( )   ( )   ( )" in txt),
+        ("ascii: 6 markable bubbles per candidate row", "(0)  (1)  (2)  (3)  (4)  (5)" in txt),
+        ("ascii: STAR VOTING wordmark + Worst/Best", "STAR VOTING" in txt and "Worst" in txt and "Best" in txt),
+        ("ascii: finalist explanation", "two highest scoring candidates are finalists" in txt),
         ("ascii: serial receipt line", "Ballot #1 - keep" in txt),
         ("ascii: strictly 7-bit ASCII (no QR, no unicode)", is_ascii),
     ]
@@ -508,6 +587,13 @@ def main():
     ap.add_argument("--race-description", metavar="TEXT",
                     help="race/contest description used as the ballot question line "
                          "(a --bv-export supplies this from the race's description)")
+    ap.add_argument("--promo", action="store_true",
+                    help="add a small footer promo line linking the STAR education/"
+                         "platform sites (starvoting.org, equal.vote, bettervoting.com)")
+    ap.add_argument("--chapter", metavar="TEXT",
+                    help="append your local chapter to the promo footer, e.g. "
+                         "\"STAR Voting NC (facebook.com/groups/starvotingnc)\" "
+                         "(implies --promo)")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -539,11 +625,28 @@ def main():
                 or "Score each candidate from 0 (worst) to 5 (best).").strip()
     notice = "" if args.no_notice else (args.notice or DEFAULT_NOTICE)
 
+    # Optional promo footer (links are parameters, not the description — off by
+    # default so the base ballot matches the clean official design). --chapter
+    # implies --promo. Built per format: HTML uses "·", ASCII uses "|".
+    promo_parts = ["starvoting.org", "equal.vote", "bettervoting.com"] \
+        if (args.promo or args.chapter) else []
+    if args.chapter:
+        promo_parts.append(args.chapter.strip())
+    is_txt = args.out.lower().endswith(".txt")
+    if promo_parts:
+        sep = " | " if is_txt else " · "
+        joined = sep.join(promo_parts if is_txt
+                          else [html.escape(p) for p in promo_parts])
+        promo = "Learn more: " + joined
+    else:
+        promo = ""
+
     # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
     if args.out.lower().endswith(".txt"):
         sheet = render_sheet_text(title, question, candidates, bv_id, args.copies,
                                   args.per_page, serials=args.serials,
-                                  write_ins=args.write_ins, notice=notice, blurb=blurb)
+                                  write_ins=args.write_ins, notice=notice, blurb=blurb,
+                                  promo=promo)
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(sheet)
         pp = max(1, args.per_page)
@@ -560,7 +663,7 @@ def main():
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, qr_url=args.qr_url, notice=notice,
-                         blurb=blurb)
+                         blurb=blurb, promo=promo)
 
     want_pdf = args.out.lower().endswith(".pdf")
     wrote_pdf = False
