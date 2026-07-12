@@ -67,6 +67,12 @@ Because the two rounds measure two different things:
 
 > Strength of support finds the real contenders → number of supporters decides between them.
 
+The part that takes a moment to click is what happens to *your* ballot in the second round. Follow one voter's ballot all the way through:
+
+<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Caroline's ballot scores Choco 5, Vanilla 3, Almond 0. Round 1 (Scoring Round): her stars are added to each flavor's total — Choco +5, Vanilla +3, Almond +0 — and the two highest overall, Choco and Vanilla, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Choco higher than Vanilla (5 > 3), so her whole ballot becomes a single vote for Choco. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
+
+So your scores do two jobs: their *size* helps pick the two finalists, and then, in the runoff, they shrink to a single **vote for whichever finalist you rated higher**. A 5-vs-3 and a 5-vs-0 count exactly the same in that final step — one vote each. Once that lands, STAR makes sense.
+
 Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
 
 ## How you fill out the ballot

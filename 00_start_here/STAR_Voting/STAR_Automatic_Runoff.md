@@ -8,6 +8,16 @@
 
 ---
 
+## First, the whole idea on one ballot
+
+New to the runoff? Before the buckets and denominators below, just watch what STAR does to a **single** ballot — read once to help pick the finalists, then again as one vote between them:
+
+<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Caroline's ballot scores Choco 5, Vanilla 3, Almond 0. Round 1 (Scoring Round): her stars are added to each flavor's total — Choco +5, Vanilla +3, Almond +0 — and the two highest overall, Choco and Vanilla, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Choco higher than Vanilla (5 > 3), so her whole ballot becomes a single vote for Choco. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
+
+The key move is in Round 2: your scores **shrink to a single vote** for whichever finalist you rated higher — a 5-vs-3 and a 5-vs-0 count exactly the same there. Size chose the finalists; direction chooses the winner. Everything below is the precise version of that.
+
+---
+
 ## Why a second step at all?
 
 The key contrast is **how much vs how many.** The Scoring Round measures *how much* support each candidate has; the runoff counts *how many* voters prefer each finalist. Points and people aren't the same thing — a candidate's total can be lifted by a handful of very high scores, while the runoff gives every voter exactly **one** vote between the two finalists. So the runoff is what makes the winner the **majority's** choice, not just the biggest pile of stars.
