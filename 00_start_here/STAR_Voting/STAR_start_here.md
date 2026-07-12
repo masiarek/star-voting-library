@@ -43,6 +43,12 @@ Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/bv2184_fy
   Round 2 — the final two:  Pizza 3  vs  Sushi 2             → Pizza wins
 ```
 
+Here's that exact election counted on real software — the same two rounds, live on BetterVoting:
+
+<img src="img/fyy886_lunch_results.png" width="640" alt="BetterVoting results for the team lunch vote. Left panel, Scoring Round: bars showing Pizza 17, Sushi 13, Tacos 11 — 'add the stars from all the ballots; the two highest scoring candidates are the finalists.' Right panel, Automatic Runoff Round: Pizza 60% vs Sushi 40% with a dashed majority-threshold line just past Pizza's bar — 'each vote goes to the voter's preferred finalist; finalist with most votes wins.' Pizza is starred as the winner.">
+
+*(The runoff bars read **60% vs 40%** — that's the same **3 of the 5 people vs 2** from Round 2, just shown as a share.)*
+
 In plain English:
 
 - **Round 1 just adds up the stars.** Pizza collects 17 (a 3 or a 5 from *everyone*), the most — so Pizza and Sushi become the two finalists, and Tacos is out.
