@@ -50,8 +50,8 @@ The tool owns step 2. Steps 4–5 are the [count-by-hand](../../00_start_here/ST
 
 **FR-1 Inputs (candidates + title), any one of:**
 - `--yaml FILE` — a repo election YAML; minimal parse pulls `election_title`, `bv_election_id` (if present), and the candidate header under `ballots:`. No PyYAML dependency.
-- `--bv-export FILE` — a frozen `*_bv_export.json`; best-effort recursive search for the title and candidate names.
-- `--candidates "A,B,C"` [`--title` `--bv-id` `--question`] — manual.
+- `--bv-export FILE` — a frozen `*_bv_export.json`; extracts title, `election_id`, candidate names, and the election + first-race **descriptions**.
+- `--candidates "A,B,C"` [`--title` `--bv-id` `--question` `--description` `--race-description`] — manual.
 
 **FR-2 Output — the extension picks the format:**
 - **`.txt` → plain ASCII** (strictly 7-bit — enforced by `--selftest`). **Zero dependencies**, prints from anywhere (`lpr ballots.txt`, or any editor). One ballot per page via the **form-feed** char (`\f`). `( )` circles to mark; no QR (the results URL is printed instead). The purest, most portable ballot — and the best fit for the "keep it simple" guard when styling isn't needed.
@@ -62,7 +62,9 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 **FR-2a Pagination:** `--per-page N` is *real* (a print `page-break-after` every N ballots, never a trailing blank page). **Default is 1** — one ballot per page, the right choice for ballots handed to voters individually (secret ballot). Set `--per-page 2+` to pack multiple per sheet to save paper.
 
-**FR-3 Per-ballot content:** a **demonstration notice** (see FR-9), title, question, STAR instructions (incl. the overvote warning), a **0–5 bubble grid** (one row per candidate), and a footer with the BV id + results URL.
+**FR-3 Per-ballot content:** a **demonstration notice** (see FR-9), title, an optional **election-description blurb** (italic, under the title), the **question** (the race description if the source supplies one, else a generic 0–5 line), STAR instructions (incl. the overvote warning), a **0–5 bubble grid** (one row per candidate), and a footer with the BV id + results URL.
+
+**FR-3a Descriptions:** a `--bv-export` automatically carries the election's `description` (→ the blurb) and the first race's `description` (→ the question line) onto the ballot; `--description` / `--race-description` override or supply them for the YAML/manual paths (the minimal YAML parser doesn't read block-scalar descriptions). Both print in all three formats.
 
 **FR-9 Demonstration notice (on by default):** every ballot carries a standing notice — default `"EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."` — because this tool *only* makes demo ballots. It also does real work: it makes the optional **serial number** read as a teaching device rather than surveillance (a numbered *real* ballot would break the secret ballot; the notice preempts the immediate — and correct — objection). `--notice "..."` overrides the text; `--no-notice` omits it (discouraged). Kept 7-bit ASCII so it survives unchanged into the `.txt` output. Rendered as a bordered banner (HTML) / dashed banner (ASCII) at the top of each ballot.
 
@@ -120,6 +122,7 @@ Restated in the repo's terms (the *goal*, not the letter of the original suggest
 - **Verified (manual, this pass):** `--out mptvrm_ballots.pdf` produced a **30-page PDF, one ballot per page** (confirmed `/Count 30`) via headless Chromium; `--out mptvrm_ballots.txt` produced a **strictly-7-bit-ASCII 30-page** text file (30 form-feed pages, zero deps) — both from the real export.
 - **Verified (real hardware, owner: user — 2026-07):** the full loop ran end to end on the `mptvrm` PDF — (a) the **QR scanned** on a phone and opened the live election; (b) the ballot **printed cleanly** (banner, bubble grid, QR, serial line all legible, one per page); (c) the voter **cast an online ballot via the QR** and it landed in the BV tally (re-exported as a fresh `_bv_export.json`). The earlier "pending, needs a human" items are now cleared.
 - **Insight from that run (see §3, workflow #2):** the QR makes this a **hybrid** demo — some vote on paper, some scan-and-vote online. Online votes need **no transcription** (BV tabulates them instantly), so the more of the room that uses the QR, the *less* scanning/typing for the teacher; paper is then optional, kept only to demonstrate the hand-count.
+- **Return path proven end-to-end (owner: user — 2026-07).** A hand-marked ballot photo (`mptvrm` #1, deliberately messy: a slash, an ✗, a check, one faint) was read correctly (ala 2, bob 4, tome 5), tabulated in the LH engine (→ tome), **and cast back into the live BV election** via `POST /API/Election/{id}/vote` (HTTP 200; BV `nTallyVotes` 1→2, BV STAR winner tome — agrees with LH). So all three legs — paper→engine, paper→BV, and scan→BV — are demonstrated. The lesson the messy marks confirmed: a valid human mark is a **slash/✗/check, not a filled bubble**, so any future OCR must detect mark *intent* (not fill-darkness) and flag low-confidence marks (`?`) for review. Note: the API cast is what the test tooling uses; a classroom normally enters paper ballots via the BV vote page/QR — a bulk paper→BV uploader is explicitly **not** built (engineering past the lesson).
 
 ## 8. Invocation
 

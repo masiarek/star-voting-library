@@ -53,6 +53,7 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
 
 Each ballot carries:
 
+- the **election & race descriptions** (if your BV election has them) — the election description prints as a blurb under the title, the race description as the ballot question,
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and

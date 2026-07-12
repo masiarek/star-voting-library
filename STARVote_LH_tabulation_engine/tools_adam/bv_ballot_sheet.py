@@ -15,8 +15,10 @@ so paper and platform stay linked. Default is one ballot per page.
 Candidates + title come from ONE of:
   --yaml FILE          a repo election .yaml (title + candidates from its ballots header;
                        picks up bv_election_id automatically if present)
-  --bv-export FILE     a frozen BetterVoting <case>_bv_export.json
-  --candidates "A,B,C" --title "..." [--bv-id ID] [--question "..."]   manual
+  --bv-export FILE     a frozen BetterVoting <case>_bv_export.json (also carries the
+                       election + race descriptions onto the ballot)
+  --candidates "A,B,C" --title "..." [--bv-id ID] [--question "..."]
+                       [--description "..."] [--race-description "..."]   manual
 
 Stdlib only — no dependencies (QR is optional via `segno`). `--selftest` runs
 known-answer checks. Design spec & rationale: bv_ballot_sheet_FSD.md (beside this file).
@@ -61,7 +63,9 @@ def from_yaml(path):
                 cands = [c.strip() for c in content.split(",") if c.strip()]
     if not cands:
         raise SystemExit(f"Could not find a candidate header under `ballots:` in {path}")
-    return title, bv_id, cands
+    # (election/race descriptions in repo YAMLs are block scalars this minimal
+    # parser doesn't read; use --description if you want one on a YAML-sourced ballot.)
+    return title, bv_id, cands, None, None
 
 
 def _find_candidate_names(obj):
@@ -89,7 +93,8 @@ def _find_candidate_names(obj):
 
 
 def from_bv_export(path):
-    """Return (title, bv_id, [candidates]) from a frozen BV export JSON."""
+    """Return (title, bv_id, [candidates], election_desc, race_desc) from a frozen
+    BV export JSON."""
     data = json.load(open(path, encoding="utf-8"))
     # A frozen BV UI export nests everything under a capitalized "Election" key
     # (siblings "Ballots"/"Results"); older/plain GETs use lowercase or are flat.
@@ -102,7 +107,10 @@ def from_bv_export(path):
     if not cands:
         raise SystemExit(f"Could not find candidate names in {path} "
                          f"(pass --candidates manually).")
-    return title, bv_id, cands
+    edesc = election.get("description") or None
+    races = election.get("races") or []
+    rdesc = races[0].get("description") if races and isinstance(races[0], dict) else None
+    return title, bv_id, cands, edesc, (rdesc or None)
 
 
 # --------------------------------------------------------------------------- #
@@ -167,6 +175,7 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
           margin: 12px; page-break-inside: avoid; }
 .ballot h2 { margin: 0 0 2px; font-size: 17px; }
 .q { margin: 0 0 8px; color: #333; font-size: 13px; }
+.edesc { margin: 0 0 7px; color: #555; font-size: 12px; font-style: italic; }
 .inst { margin: 0 0 10px; font-size: 11.5px; color: #444; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #999; padding: 6px 4px; text-align: center; font-size: 13px; }
@@ -190,7 +199,7 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                   serial=None, write_ins=0, qr_caption="scan to vote",
-                  break_after=False, notice=""):
+                  break_after=False, notice="", blurb=""):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
     bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
@@ -213,12 +222,14 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     cls = "ballot pagebreak" if break_after else "ballot"
     notice_block = (f'<div class="notice">{html.escape(notice)}</div>'
                     if notice else "")
+    blurb_block = (f'<p class="edesc">{html.escape(blurb)}</p>' if blurb else "")
     return f"""
 <div class="{cls}">
   {notice_block}
   <div class="bhead">
     <div>
       <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
+      {blurb_block}
       <p class="q">{html.escape(question)}</p>
     </div>{qr_block}
   </div>
@@ -232,7 +243,7 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
-                 qr=True, serials=False, write_ins=0, qr_url=None, notice=""):
+                 qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb=""):
     # QR points to --qr-url if given (works even LH-only, no BV), else the BV
     # election if there is one, else nothing.
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
@@ -242,7 +253,7 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
-                      qr_caption=caption, notice=notice,
+                      qr_caption=caption, notice=notice, blurb=blurb,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
@@ -276,7 +287,7 @@ def _ascii_row(label, name_w):
 
 
 def render_ballot_text(title, question, candidates, bv_id,
-                       serial=None, write_ins=0, notice=""):
+                       serial=None, write_ins=0, notice="", blurb=""):
     rule = "=" * TEXT_WIDTH
     name_w = max([len("Candidate")] + [len(c) for c in candidates] + [11]) + 1
     name_w = min(name_w, 34)
@@ -291,6 +302,10 @@ def render_ballot_text(title, question, candidates, bv_id,
         for ln in textwrap.wrap(notice, TEXT_WIDTH - 4):
             lines.append("  " + ln)
         lines.append(bar)
+    if blurb:
+        lines.append("")
+        lines += textwrap.wrap(blurb, TEXT_WIDTH - 2, initial_indent="  ",
+                               subsequent_indent="  ")
     lines.append("")
     lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
                            subsequent_indent="  ")
@@ -315,13 +330,13 @@ def render_ballot_text(title, question, candidates, bv_id,
 
 
 def render_sheet_text(title, question, candidates, bv_id, copies, per_page,
-                      serials=False, write_ins=0, notice=""):
+                      serials=False, write_ins=0, notice="", blurb=""):
     pp = max(1, per_page)
     out = []
     for i in range(copies):
         out.append(render_ballot_text(title, question, candidates, bv_id,
                                       serial=(i + 1 if serials else None),
-                                      write_ins=write_ins, notice=notice))
+                                      write_ins=write_ins, notice=notice, blurb=blurb))
         last = (i + 1 == copies)
         if not last:
             # form-feed = a hard page break for printers; a blank gap otherwise.
@@ -399,20 +414,38 @@ def selftest():
     # "Election" (siblings "Ballots"/"Results") — regression guard for that schema.
     import tempfile, os
     export = {"Election": {"title": "Pets", "election_id": "mptvrm",
-                           "races": [{"candidates": [{"candidate_name": "ala"},
+                           "description": "Our class demo election.",
+                           "races": [{"description": "Which pet is best?",
+                                      "candidates": [{"candidate_name": "ala"},
                                                      {"candidate_name": "bob"}]}]},
               "Ballots": [], "Results": []}
     fd, tmp = tempfile.mkstemp(suffix=".json")
     with os.fdopen(fd, "w") as f:
         json.dump(export, f)
     try:
-        t, bid, cs = from_bv_export(tmp)
-        bv_ok = (t == "Pets" and bid == "mptvrm" and cs == ["ala", "bob"])
+        t, bid, cs, ed, rd = from_bv_export(tmp)
+        bv_ok = (t == "Pets" and bid == "mptvrm" and cs == ["ala", "bob"]
+                 and ed == "Our class demo election." and rd == "Which pet is best?")
     finally:
         os.remove(tmp)
-    print(f"[selftest] BV export (capital 'Election'): title+id+candidates: "
+    print(f"[selftest] BV export (capital 'Election'): title+id+candidates+descriptions: "
           f"{'OK' if bv_ok else 'FAIL'}")
     ok &= bv_ok
+    # descriptions print on the ballot: election desc as blurb, race desc as question.
+    html_d = render_sheet("Pets", "Which pet is best?", ["A"], "x", copies=1,
+                          per_page=1, qr=False, blurb="Our class demo election.")
+    txt_d = render_sheet_text("Pets", "Which pet is best?", ["A"], "x", copies=1,
+                              per_page=1, blurb="Our class demo election.")
+    desc_checks = [
+        ("HTML ballot shows election description (blurb)",
+         'class="edesc"' in html_d and "Our class demo election." in html_d),
+        ("HTML ballot shows race description (question)", "Which pet is best?" in html_d),
+        ("ASCII ballot shows both descriptions",
+         "Our class demo election." in txt_d and "Which pet is best?" in txt_d),
+    ]
+    for label, cond in desc_checks:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
     # demonstration / secret-ballot notice: on by default, both formats, off-able.
     html_n = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
                           notice=DEFAULT_NOTICE)
@@ -469,6 +502,12 @@ def main():
     ap.add_argument("--no-notice", action="store_true",
                     help="omit the demonstration/secret-ballot notice (not recommended "
                          "— it's what keeps the serial number a teaching device)")
+    ap.add_argument("--description", metavar="TEXT",
+                    help="election description printed under the title (a --bv-export "
+                         "supplies this automatically from the election's description)")
+    ap.add_argument("--race-description", metavar="TEXT",
+                    help="race/contest description used as the ballot question line "
+                         "(a --bv-export supplies this from the race's description)")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -478,12 +517,13 @@ def main():
     title = args.title
     bv_id = args.bv_id
     candidates = None
+    edesc = rdesc = None
     if args.yaml:
-        title, bv_id2, candidates = from_yaml(args.yaml)
+        title, bv_id2, candidates, edesc, rdesc = from_yaml(args.yaml)
         bv_id = bv_id or bv_id2
         title = args.title or title
     elif args.bv_export:
-        t2, bv_id2, candidates = from_bv_export(args.bv_export)
+        t2, bv_id2, candidates, edesc, rdesc = from_bv_export(args.bv_export)
         title = args.title or t2
         bv_id = bv_id or bv_id2
     elif args.candidates:
@@ -492,14 +532,18 @@ def main():
         raise SystemExit("Provide one of --yaml / --bv-export / --candidates "
                          "(see --help). Run --selftest to verify the tool.")
 
-    question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
+    # Description → blurb under the title; race description → the question line.
+    # CLI flags win over what the export supplied.
+    blurb = (args.description or edesc or "").strip()
+    question = (args.question or args.race_description or rdesc
+                or "Score each candidate from 0 (worst) to 5 (best).").strip()
     notice = "" if args.no_notice else (args.notice or DEFAULT_NOTICE)
 
     # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
     if args.out.lower().endswith(".txt"):
         sheet = render_sheet_text(title, question, candidates, bv_id, args.copies,
                                   args.per_page, serials=args.serials,
-                                  write_ins=args.write_ins, notice=notice)
+                                  write_ins=args.write_ins, notice=notice, blurb=blurb)
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(sheet)
         pp = max(1, args.per_page)
@@ -515,7 +559,8 @@ def main():
 
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
-                         write_ins=args.write_ins, qr_url=args.qr_url, notice=notice)
+                         write_ins=args.write_ins, qr_url=args.qr_url, notice=notice,
+                         blurb=blurb)
 
     want_pdf = args.out.lower().endswith(".pdf")
     wrote_pdf = False
