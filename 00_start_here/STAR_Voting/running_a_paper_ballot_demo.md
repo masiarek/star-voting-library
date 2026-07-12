@@ -118,7 +118,19 @@ But here's the honest catch, and it *is* the lesson: **a serial that anyone can 
 
 For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
-**Every ballot says so, in print.** Because a numbered ballot invites an immediate (and correct) objection — *"wait, that breaks the secret ballot!"* — the tool prints a standing notice on **every** ballot by default: *"EDUCATION ONLY — a STAR Voting teaching demo, not a secret ballot."* That's what lets the serial be a *teaching device* instead of a red flag: the ballot itself declares it's a demo. Change the wording with `--notice "..."`, or drop it with `--no-notice` (not recommended — it's the thing that heads off the objection). And note serials are **off unless you ask** (`--serials`) for the same reason.
+**Every ballot says so, in print.** Because a numbered ballot invites an immediate (and correct) objection — *"wait, that breaks the secret ballot!"* — the tool prints a standing notice on **every** ballot by default: *"EDUCATION ONLY — a STAR Voting teaching demo, not a secret ballot."* That's what lets the serial be a *teaching device* instead of a red flag: the ballot itself declares it's a demo. Change the wording with `--notice "..."`, or drop it with `--no-notice` (not recommended — it's the thing that heads off the objection).
+
+### Should you number the ballots? (`--serials` is off by default)
+
+Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
+
+| Number them (`--serials`) when… | Leave them unnumbered (default) when… |
+|---|---|
+| **verifiability is the lesson** — you *want* to demonstrate "counted as cast" and then discuss the secret-ballot tension | the point is **how STAR works** (score → runoff) and a numbering tangent would distract |
+| you want to **reconcile the count** ("all 30 ballots back, none duplicated") | the room is mixed/adult and a numbered ballot would trigger objections before you're ready to teach them |
+| — | you might **reuse the ballots casually** later (no privacy footgun) |
+
+**Why off by default:** a default is used by whoever *isn't* thinking about it, and a serial only pays off when it's **paired with the discussion** ("what would break if we posted a name→number list?"). So the tool keeps the clean, on-topic ballot as the default and makes numbering a conscious opt-in — when you type `--serials`, that's your cue to actually teach the verifiability lesson (and to keep the numbers **unlinked** to any name). **Teaching verifiability? Reach for `--serials`.** Otherwise the plain ballot is the right call.
 
 *Scope note (so nobody rabbit-holes this):* the whole serial demo runs on **paper + hand-count** — print serialized ballots, count them, publish the list of counted serials. You don't need BetterVoting or any digital plumbing for it, and you shouldn't try to thread serials through BV's vote API (it doesn't carry them, and it isn't needed). A genuinely *digital* verifiable count is **end-to-end verifiability (E2E-V)** — a cryptography topic beyond this teaching repo. The lesson is already complete on paper; stop there.
 
