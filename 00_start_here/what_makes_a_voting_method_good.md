@@ -69,10 +69,26 @@ These are genuine, unsettled disputes — presented as the case each side makes,
 
 STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](STAR_Voting/STAR_honest_limits.md) argue the trade-off both ways.
 
+## Sources — and which way each leans
+
+Almost every method comparison you'll read is written by someone with a preferred answer. That doesn't make it wrong — but read each one *knowing where it leans*. (Fuller rosters: [advocacy organizations](advocacy_organizations.md) · [who's who in voting methods](whos_who_voting_reform.md).)
+
+| Source | What it offers | Leans toward |
+|---|---|---|
+| [Equal Vote Coalition](https://www.equal.vote) · [STAR Voting](https://www.starvoting.org) | STAR advocacy; the criteria & ["Farewell to Pass/Fail"](https://www.starvoting.org/pass_fail) essays | **STAR** |
+| [Center for Election Science](https://electionscience.org) · [VSE](https://electionscience.org/library/voter-satisfaction-efficiency/) | Approval advocacy; the VSE simulations | **Approval** (cardinal) |
+| [Center for Range Voting](https://rangevoting.org) | Bayesian-regret simulations; Score advocacy | **Score / Range** |
+| [FairVote](https://fairvote.org) | the largest US RCV-IRV campaign | **RCV-IRV** |
+| [Marcus Ogren — Voting in the Abstract](https://voting-in-the-abstract.medium.com/) | field-wide method analysis | **Condorcet**-leaning |
+| [electowiki](https://electowiki.org/) | community method encyclopedia | reform-community (mixed) |
+| [Stanford Encyclopedia — Voting Methods](https://plato.stanford.edu/entries/voting-methods/) | rigorous scholarly survey | **neutral** (academic) |
+| [League of Women Voters (WA) — Review of Election Methods](https://www.lwvwa.org/resources/Documents/Review%20of%20Election%20Methods%202-12-20.pdf) | side-by-side comparison | **nonpartisan** |
+| [Wikipedia — Comparison of electoral systems](https://en.wikipedia.org/wiki/Comparison_of_electoral_systems) | criteria compliance table | **neutral** (encyclopedic) |
+| *this repository* | STAR-first, but tests STAR honestly against every method | **STAR** (with honest-limits pages) |
+
 ## See also
 
 - [Criteria at a glance](criteria_at_a_glance.md) — the four methods' pass/fail across every criterion here, each failure linked to a runnable election (read *this page's* caveat first: a table is a map, not a verdict)
 - [What makes a good winner?](what_makes_a_good_winner.md) — the winner-selection half
 - Topic hubs: [Condorcet](topics/condorcet/) · [Summability](topics/summability/) · [Monotonicity](topics/monotonicity/) · [Center squeeze](topics/center_squeeze/) · [Ties](topics/ties/)
 - [Why STAR Voting](Why_STAR_Voting.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · [Glossary](GLOSSARY.md)
-- External: [Voter Satisfaction Efficiency](https://electionscience.org/library/voter-satisfaction-efficiency/) · [electowiki](https://electowiki.org/)
