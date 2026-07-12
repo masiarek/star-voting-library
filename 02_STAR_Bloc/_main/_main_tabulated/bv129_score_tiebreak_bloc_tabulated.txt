@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv129_score_tiebreak_bloc.yaml
-SOURCE MODIFIED: 2026-07-04 10:22:09
+SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv129_score_tiebreak_bloc_tabulated.txt
-TABULATED AT:    2026-07-11 08:09:03
+TABULATED AT:    2026-07-12 08:11:02
 ======================================================================
 
 election_title: "BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker"

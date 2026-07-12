@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv215_26khr3_nota_wins.yaml
-SOURCE MODIFIED: 2026-07-05 15:09:11
+SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  bv215_26khr3_nota_wins_tabulated.txt
-TABULATED AT:    2026-07-11 08:09:00
+TABULATED AT:    2026-07-12 08:10:59
 ======================================================================
 
 election_title: "BV215 — None of the Above wins (STAR) — with a null abstention"

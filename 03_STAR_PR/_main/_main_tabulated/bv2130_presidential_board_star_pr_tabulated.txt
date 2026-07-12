@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2130_presidential_board_star_pr.yaml
-SOURCE MODIFIED: 2026-07-04 12:40:10
+SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv2130_presidential_board_star_pr_tabulated.txt
-TABULATED AT:    2026-07-11 08:09:06
+TABULATED AT:    2026-07-12 08:11:05
 ======================================================================
 
 election_title: "BV2130 — Presidential Board Election (Proportional STAR = Allocated Score)"

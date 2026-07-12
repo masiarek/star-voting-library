@@ -1,6 +1,6 @@
 # 01_STAR / _main — the STAR teaching progression
 
-The core single-winner STAR sequence: the smallest examples that introduce one idea at a time, from a two-candidate ballot up through vote-splitting and quorum. Read the reader-friendly **pages** (`_main_pages/`); the `.yaml` beside each is the tabulatable source, and the always-full audit copy is in `_main_tabulated/`.
+The core single-winner STAR sequence: the smallest examples that introduce one idea at a time, from the team-lunch example up through vote-splitting and quorum. Read the reader-friendly **pages** (`_main_pages/`); the `.yaml` beside each is the tabulatable source, and the always-full audit copy is in `_main_tabulated/`.
 
 ## The arc
 
@@ -8,9 +8,8 @@ The core single-winner STAR sequence: the smallest examples that introduce one i
 
 - [`bv2184_fyy886_lunch_vote`](_main_pages/bv2184_fyy886_lunch_vote.md) — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
 
-**Intros — ballot basics (101).** Start here: how a STAR ballot is scored and read.
+**Intros — three candidates (101).** How a STAR ballot is scored and read, where the third option makes the two rounds matter.
 
-- [`01a_c2_b1_two-candidates`](_main_pages/01a_c2_b1_two-candidates.md) · [`01a_c2_b2_two-candidates`](_main_pages/01a_c2_b2_two-candidates.md) · [`01b_c2_b2_two-candidates`](_main_pages/01b_c2_b2_two-candidates.md) · [`01c_c2_b3_two-candidates`](_main_pages/01c_c2_b3_two-candidates.md)
 - [`02a_c3_b1_three-candidates`](_main_pages/02a_c3_b1_three-candidates.md) · [`02b_c3_b2_three-candidates`](_main_pages/02b_c3_b2_three-candidates.md)
 
 **Ballot styles.** The choices a voter can make on a STAR ballot.

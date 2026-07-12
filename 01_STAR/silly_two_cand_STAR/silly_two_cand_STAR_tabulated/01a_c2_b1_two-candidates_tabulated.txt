@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     01a_c2_b1_two-candidates.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
+SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  01a_c2_b1_two-candidates_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:00
+TABULATED AT:    2026-07-12 10:57:01
 ======================================================================
 
 election_title: The simplest possible STAR Voting example
@@ -37,7 +37,7 @@ video_script: |-
   voting — which is exactly why we start here.
 ballots: |-
   Chocolate,Vanilla
-          5,      3       # Caroline — she likes both flavors
+          5,      3       # Caroline — Chocolate (5) over Vanilla (3)
 
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen

@@ -179,4 +179,4 @@ The engine is the validator — it fails with a plain-language message, never a 
 3. Re-run — the `_tabulated.txt` sibling regenerates.
 4. From `STARVote_LH_tabulation_engine/`, run `pytest tests/test_single_winner_positive.py` — your file is discovered automatically (single-winner STAR cases with `expected_winners`).
 
-Live examples to crib from: [01_STAR — single-winner STAR Voting](../01_STAR/) — start with `01a_c2_b1_two-candidates.yaml` (simplest) and `03c_c6_b8_style-gallery.yaml` (every optional field in use).
+Live examples to crib from: [01_STAR — single-winner STAR Voting](../01_STAR/) — start with `_main/bv2184_fyy886_lunch_vote.yaml` (the clean beginner example) and `_main/03c_c6_b8_style-gallery.yaml` (every optional field in use).

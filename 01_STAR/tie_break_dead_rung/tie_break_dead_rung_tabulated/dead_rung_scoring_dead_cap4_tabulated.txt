@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     dead_rung_scoring_dead_cap4.yaml
-SOURCE MODIFIED: 2026-07-03 18:32:43
+SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  dead_rung_scoring_dead_cap4_tabulated.txt
-TABULATED AT:    2026-07-11 08:09:01
+TABULATED AT:    2026-07-12 08:11:00
 ======================================================================
 
 election_title: 'Dead rung — scoring round, dead five-star rung, cap 4'

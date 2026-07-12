@@ -16,8 +16,8 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 ### Voting 101 — the basics (the ballot, the two rounds, the spoiler)
 
-1. **Mechanics, two candidates.** Watch the two rounds turn with nothing surprising competing for attention → [`_main` · simplest example](_main/_main_pages/01a_c2_b1_two-candidates.md). *(With only two candidates STAR agrees with ordinary voting — that's the point of starting here.)*
-2. **Add a third candidate — why it matters.** The winner becomes the broad compromise → [`_main` · three candidates](_main/_main_pages/02a_c3_b1_three-candidates.md).
+1. **The ballot and the two rounds.** Five coworkers, three lunches — the compromise everyone likes wins, shown on real BetterVoting results → [`_main` · the team-lunch example](_main/_main_pages/bv2184_fyy886_lunch_vote.md). *(The running example paired with [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md).)*
+2. **The broad compromise, again.** A second three-candidate case to make the pattern stick → [`_main` · three candidates](_main/_main_pages/02a_c3_b1_three-candidates.md).
 3. **How you're allowed to vote.** Bullet votes, equal scores, low-score "protest" ballots, the eight-style gallery → [`_main` · ballot styles](_main/_main_pages/03a_c3_b3_style-bullet-vote.md).
 4. **The headline lesson — top scorer ≠ winner.** STAR's single most important behavior, as a 3→9-candidate progression with a control case → **[Runoff Reversal](runoff_overturns_leader/)**.
 5. **The spoiler, in numbers.** Vote-splitting and the compromise winner → [`_main` vote-splitting scenarios](_main/) · cross-method: [the split-voting set](../method_comparisons/split_voting/).
@@ -41,7 +41,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 | Set | Level | What it teaches |
 |---|:---:|---|
-| [`_main` — the teaching progression](_main/) | 101 | The core sequence: two-candidate intros → third candidate → ballot styles → abstentions → quorum → vote-splitting → display options (28 files, one idea at a time). |
+| [`_main` — the teaching progression](_main/) | 101 | The core sequence: the team-lunch example → three candidates → ballot styles → abstentions → quorum → vote-splitting → display options (one idea at a time). |
 | [Runoff Reversal — top scorer ≠ winner](runoff_overturns_leader/) | 101→301 | Real BetterVoting elections where the runoff **confirms** or **overturns** the score leader — STAR's headline lesson, plus the convincing-vs-jarring reversal pair. |
 | ["What Makes the Best Pet?"](pet_real_bv_election/) | 201 | A real 461-ballot BV race imported and reconciled line by line — the whole pipeline, raw ballots to winner. |
 | [Flat scores, ties & tie-breaking](Flat_scores_ties/) | 201 | Flat/tied scores meet the tiebreak cascade meet reporting — two-view cases exposing one tie behavior each (and BV bugs). |
@@ -49,6 +49,8 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 | [majority_criterion](majority_criterion/) | 301 | Two 5-voter elections isolating STAR's Majority-Criterion behavior (and the Relaxed Majority Criterion). |
 | [tie_break_dead_rung](tie_break_dead_rung/) | 301 | The "dead rung": when no tied candidate holds a 5, the five-star tiebreak reads 0–0 and the lot decides. |
 | [none_of_the_above](none_of_the_above/) | 301 | BV215 — a protest election where None of the Above tops the scores and wins the runoff. |
+
+*Parked, not on the learning path: [`silly_two_cand_STAR`](silly_two_cand_STAR/) — deliberately-trivial two-candidate cases. With only two candidates the runoff just echoes the scores, so there's nothing distinctive to learn; kept for completeness and as engine test fixtures.*
 
 ---
 

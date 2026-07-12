@@ -99,8 +99,7 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 
 | Step | Read in order | What you'll see |
 |---|---|---|
-| **Two candidates** | [simplest example](../../01_STAR/_main/_main_pages/01a_c2_b1_two-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) · [a 5-and-0 ballot](../../01_STAR/_main/_main_pages/01b_c2_b2_two-candidates.md) · [equal support](../../01_STAR/_main/_main_pages/01c_c2_b3_two-candidates.md) | The mechanics, with nothing surprising — STAR agrees with ordinary voting when there are only two choices. |
-| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | Add a third option and the winner becomes the broad compromise — the lunch, formalized. |
+| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | A third option, and the winner becomes the broad compromise — the lunch, formalized in the smallest possible way. |
 | **Ways to vote** | [the eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
 | **The classic** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2172_bkwfjr_star.yaml
-SOURCE MODIFIED: 2026-07-08 23:13:23
+SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2172_bkwfjr_star_tabulated.txt
-TABULATED AT:    2026-07-11 08:09:24
+TABULATED AT:    2026-07-12 08:11:24
 ======================================================================
 
 election_title: "Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey"
@@ -76,7 +76,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_RCV-IRV_tabulated.txt
-     file:///sessions/amazing-laughing-bardeen/mnt/YAML/method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_RCV-IRV_tabulated.txt
+     file:///sessions/adoring-zealous-turing/mnt/YAML/method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

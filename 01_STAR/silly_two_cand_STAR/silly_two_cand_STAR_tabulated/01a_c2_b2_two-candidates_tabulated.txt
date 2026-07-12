@@ -1,11 +1,21 @@
 ======================================================================
 SOURCE FILE:     01a_c2_b2_two-candidates.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
+SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  01a_c2_b2_two-candidates_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
+TABULATED AT:    2026-07-12 10:57:02
 ======================================================================
 
 election_title: Same as before - but this time two ballots
+
+election_description: |-
+  ▶ Live on BetterVoting: https://bettervoting.com/my82v6 ·
+  results: https://bettervoting.com/my82v6/results
+  This intro case is also run as a real BetterVoting STAR election — both
+  BetterVoting and the LH engine elect Chocolate (totals 10 vs 6, 2 tally votes).
+
+# Machine-readable BV fields (engine ignores; read by build_bv_registry.py)
+bv_election_id: my82v6
+bv_results_url: https://bettervoting.com/my82v6/results
 
 scenario_description: |-
   The same election as 01a_c2_b1 with one more identical ballot: two voters,
@@ -17,12 +27,12 @@ scenario_description: |-
 video_script: |-
   The goal here is two show how the results change when we add one more vote.
   
-  5,      3       # Caroline - she likes both flavors
-  5,      3       # Bob - he likes both flavors too
+  5,      3       # Caroline — Chocolate (5) over Vanilla (3)
+  5,      3       # Bob — same
 ballots: |-
   Chocolate,Vanilla
-          5,      3       # Caroline - she likes both flavors
-          5,      3       # Bob - he likes both flavors too
+          5,      3       # Caroline — Chocolate (5) over Vanilla (3)
+          5,      3       # Bob — same
 
 options:
   show_description: false

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     01c_c2_b3_two-candidates.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
+SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  01c_c2_b3_two-candidates_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:59
+TABULATED AT:    2026-07-12 10:57:02
 ======================================================================
 
 election_title: Equal support example ("I like both flavors")
@@ -42,7 +42,7 @@ num_winners: 1
 
 ballots: |-
   Choco,Vanilla
-      5,      3       # Caroline - she likes both flavors
+      5,      3       # Caroline — Choco (5) over Vanilla (3)
       5,      0       # George - he likes only one flavor (Choco)
       5,      5       # Julia - she likes both flavors equally
 
