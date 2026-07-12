@@ -118,6 +118,8 @@ But here's the honest catch, and it *is* the lesson: **a serial that anyone can 
 
 For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
+**Every ballot says so, in print.** Because a numbered ballot invites an immediate (and correct) objection — *"wait, that breaks the secret ballot!"* — the tool prints a standing notice on **every** ballot by default: *"EDUCATION ONLY — a STAR Voting teaching demo, not a secret ballot."* That's what lets the serial be a *teaching device* instead of a red flag: the ballot itself declares it's a demo. Change the wording with `--notice "..."`, or drop it with `--no-notice` (not recommended — it's the thing that heads off the objection). And note serials are **off unless you ask** (`--serials`) for the same reason.
+
 *Scope note (so nobody rabbit-holes this):* the whole serial demo runs on **paper + hand-count** — print serialized ballots, count them, publish the list of counted serials. You don't need BetterVoting or any digital plumbing for it, and you shouldn't try to thread serials through BV's vote API (it doesn't carry them, and it isn't needed). A genuinely *digital* verifiable count is **end-to-end verifiability (E2E-V)** — a cryptography topic beyond this teaching repo. The lesson is already complete on paper; stop there.
 
 ## Why do this (the teaching value)

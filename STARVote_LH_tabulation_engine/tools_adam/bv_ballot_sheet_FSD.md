@@ -60,7 +60,9 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 **FR-2a Pagination:** `--per-page N` is *real* (a print `page-break-after` every N ballots, never a trailing blank page). **Default is 1** — one ballot per page, the right choice for ballots handed to voters individually (secret ballot). Set `--per-page 2+` to pack multiple per sheet to save paper.
 
-**FR-3 Per-ballot content:** title, question, STAR instructions (incl. the overvote warning), a **0–5 bubble grid** (one row per candidate), and a footer with the BV id + results URL.
+**FR-3 Per-ballot content:** a **demonstration notice** (see FR-9), title, question, STAR instructions (incl. the overvote warning), a **0–5 bubble grid** (one row per candidate), and a footer with the BV id + results URL.
+
+**FR-9 Demonstration notice (on by default):** every ballot carries a standing notice — default `"EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."` — because this tool *only* makes demo ballots. It also does real work: it makes the optional **serial number** read as a teaching device rather than surveillance (a numbered *real* ballot would break the secret ballot; the notice preempts the immediate — and correct — objection). `--notice "..."` overrides the text; `--no-notice` omits it (discouraged). Kept 7-bit ASCII so it survives unchanged into the `.txt` output. Rendered as a bordered banner (HTML) / dashed banner (ASCII) at the top of each ballot.
 
 **FR-4 QR code (optional):** top-right of each ballot.
 - Points to `bettervoting.com/<bv-id>` by default; to `--qr-url <URL>` if given (works with no BV election).
@@ -89,7 +91,7 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 So "voter marked 2, 4 and 5 for one candidate" → `?` in that column; the engine already scores it 0 and surfaces it as spoiled. The ballot *warns the voter up front*.
 
-**5.3 Serials teach verifiability — with the secret-ballot tension as the lesson.** Publishing the list of counted serials demonstrates **counted-as-cast**. But a serial linkable to a voter breaks ballot secrecy (coercion) — which is *why* real systems need E2E-V (crypto receipts that confirm your vote counted without revealing how you voted). The tool prints serials; the [demo page](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md) frames the tension. **Keep serials unlinked to identity in any real use; do not build BV/digital serial plumbing (§2).**
+**5.3 Serials teach verifiability — with the secret-ballot tension as the lesson.** Publishing the list of counted serials demonstrates **counted-as-cast**. But a serial linkable to a voter breaks ballot secrecy (coercion) — which is *why* real systems need E2E-V (crypto receipts that confirm your vote counted without revealing how you voted). The tool prints serials; the [demo page](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md) frames the tension. **Keep serials unlinked to identity in any real use; do not build BV/digital serial plumbing (§2).** The **default demonstration notice (FR-9)** is the on-ballot half of this safeguard: it states in print that the sheet is a teaching demo, not a secret ballot — so a numbered ballot can't be mistaken for (or objected to as) a real one. Serials are also **off by default** for the same reason; you opt in with `--serials`.
 
 **5.4 QR is conditional, not decorative.** It only appears when there's something to open (a BV election, or an explicit `--qr-url`). No BV, no `--qr-url` → no QR. Avoids a QR that points nowhere.
 

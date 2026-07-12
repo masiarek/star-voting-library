@@ -114,6 +114,13 @@ INSTRUCTIONS = ("Score each candidate 0 to 5 (fill ONE bubble per row). "
                 "spoiled score for that candidate. The two highest-scoring "
                 "candidates have an automatic runoff.")
 
+# Printed on every ballot by default: this tool only ever makes DEMO ballots, so
+# a standing notice keeps that honest and — crucially — makes the optional serial
+# number read as a teaching device, not surveillance (a numbered *real* ballot
+# would break the secret ballot). Suppress with --no-notice; override with --notice.
+# Kept 7-bit ASCII (plain '-') so it survives into the .txt output unchanged.
+DEFAULT_NOTICE = "EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."
+
 
 def qr_data_uri(url):
     """An inline QR (data: URI) for `url` if the pure-python `segno` library is
@@ -173,6 +180,9 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 .qr img { width: 72px; height: 72px; display: block; }
 .wline { display: inline-block; border-bottom: 1px solid #333; width: 55%; height: 1em; }
 .serial { font-weight: 700; }
+.notice { border: 1.5px solid #c0392b; border-radius: 5px; padding: 3px 8px;
+          margin: 0 0 9px; font-size: 10.5px; font-weight: 700; color: #c0392b;
+          text-align: center; text-transform: uppercase; letter-spacing: .4px; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; }
   .ballot.pagebreak { page-break-after: always; } }
 """
@@ -180,7 +190,7 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                   serial=None, write_ins=0, qr_caption="scan to vote",
-                  break_after=False):
+                  break_after=False, notice=""):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
     bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
@@ -201,8 +211,11 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                 f'<span>{html.escape(qr_caption)}</span></div>'
                 if qr_uri else "")
     cls = "ballot pagebreak" if break_after else "ballot"
+    notice_block = (f'<div class="notice">{html.escape(notice)}</div>'
+                    if notice else "")
     return f"""
 <div class="{cls}">
+  {notice_block}
   <div class="bhead">
     <div>
       <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
@@ -219,7 +232,7 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
-                 qr=True, serials=False, write_ins=0, qr_url=None):
+                 qr=True, serials=False, write_ins=0, qr_url=None, notice=""):
     # QR points to --qr-url if given (works even LH-only, no BV), else the BV
     # election if there is one, else nothing.
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
@@ -229,7 +242,7 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
-                      qr_caption=caption,
+                      qr_caption=caption, notice=notice,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
@@ -263,7 +276,7 @@ def _ascii_row(label, name_w):
 
 
 def render_ballot_text(title, question, candidates, bv_id,
-                       serial=None, write_ins=0):
+                       serial=None, write_ins=0, notice=""):
     rule = "=" * TEXT_WIDTH
     name_w = max([len("Candidate")] + [len(c) for c in candidates] + [11]) + 1
     name_w = min(name_w, 34)
@@ -271,6 +284,13 @@ def render_ballot_text(title, question, candidates, bv_id,
     lines.append((title or "STAR Voting ballot").center(TEXT_WIDTH).rstrip())
     if serial is not None:
         lines.append(f"  Ballot #{serial} - keep this to verify it was counted")
+    if notice:
+        bar = "  " + "-" * (TEXT_WIDTH - 4)
+        lines.append("")
+        lines.append(bar)
+        for ln in textwrap.wrap(notice, TEXT_WIDTH - 4):
+            lines.append("  " + ln)
+        lines.append(bar)
     lines.append("")
     lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
                            subsequent_indent="  ")
@@ -295,13 +315,13 @@ def render_ballot_text(title, question, candidates, bv_id,
 
 
 def render_sheet_text(title, question, candidates, bv_id, copies, per_page,
-                      serials=False, write_ins=0):
+                      serials=False, write_ins=0, notice=""):
     pp = max(1, per_page)
     out = []
     for i in range(copies):
         out.append(render_ballot_text(title, question, candidates, bv_id,
                                       serial=(i + 1 if serials else None),
-                                      write_ins=write_ins))
+                                      write_ins=write_ins, notice=notice))
         last = (i + 1 == copies)
         if not last:
             # form-feed = a hard page break for printers; a blank gap otherwise.
@@ -393,6 +413,25 @@ def selftest():
     print(f"[selftest] BV export (capital 'Election'): title+id+candidates: "
           f"{'OK' if bv_ok else 'FAIL'}")
     ok &= bv_ok
+    # demonstration / secret-ballot notice: on by default, both formats, off-able.
+    html_n = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
+                          notice=DEFAULT_NOTICE)
+    html_off = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
+                            notice="")
+    txt_n = render_sheet_text("T", "q", ["A"], "x", copies=1, per_page=1,
+                              notice=DEFAULT_NOTICE)
+    notice_checks = [
+        ("notice: default text mentions 'not a secret ballot'",
+         "not a secret ballot" in DEFAULT_NOTICE),
+        ("notice: HTML ballot shows it (class=notice)",
+         'class="notice"' in html_n and "secret ballot" in html_n),
+        ("notice: --no-notice omits it from HTML", 'class="notice"' not in html_off),
+        ("notice: ASCII ballot shows it and stays 7-bit",
+         "secret ballot" in txt_n and all(ord(c) < 128 for c in txt_n)),
+    ]
+    for label, cond in notice_checks:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
     print(f"[selftest] {'ALL PASS' if ok else 'FAILURES PRESENT'}")
     return ok
 
@@ -424,6 +463,12 @@ def main():
                          "receipt — see the secret-ballot caveat in the demo page)")
     ap.add_argument("--write-ins", type=int, default=0, metavar="N",
                     help="add N blank write-in rows per ballot")
+    ap.add_argument("--notice", metavar="TEXT",
+                    help="the 'this is a demo, not a secret ballot' notice printed on "
+                         f"every ballot (default: \"{DEFAULT_NOTICE}\")")
+    ap.add_argument("--no-notice", action="store_true",
+                    help="omit the demonstration/secret-ballot notice (not recommended "
+                         "— it's what keeps the serial number a teaching device)")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -448,12 +493,13 @@ def main():
                          "(see --help). Run --selftest to verify the tool.")
 
     question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
+    notice = "" if args.no_notice else (args.notice or DEFAULT_NOTICE)
 
     # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
     if args.out.lower().endswith(".txt"):
         sheet = render_sheet_text(title, question, candidates, bv_id, args.copies,
                                   args.per_page, serials=args.serials,
-                                  write_ins=args.write_ins)
+                                  write_ins=args.write_ins, notice=notice)
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(sheet)
         pp = max(1, args.per_page)
@@ -469,7 +515,7 @@ def main():
 
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
-                         write_ins=args.write_ins, qr_url=args.qr_url)
+                         write_ins=args.write_ins, qr_url=args.qr_url, notice=notice)
 
     want_pdf = args.out.lower().endswith(".pdf")
     wrote_pdf = False
