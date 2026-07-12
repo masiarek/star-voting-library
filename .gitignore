@@ -1,7 +1,6 @@
 .idea/
 .claude/
 .junie/
-.python-version
 
 # Converter staging output (regenerable from the JSON sources)
 **/_generated/

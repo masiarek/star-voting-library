@@ -1,17 +1,17 @@
 # Cross-method divergence review
 
-_Generated 2026-07-12 08:33 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-12 10:11 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
 ## Base rate
 
 - Scanned **145** single-winner STAR elections (skipped 86 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **73** (50%) diverge from STAR under at least one method; **72** agree across the board.
+- **74** (51%) diverge from STAR under at least one method; **71** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 16 |
+| IRV_OUTLIER_RR_WITH_STAR | 17 |
 | STAR_OUTLIER_RR_WITH_IRV | 1 |
 | IRV_DIFFERS_ARTIFACT | 5 |
 | CYCLE_OR_THREE_WAY | 21 |
@@ -35,7 +35,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
 - **[09_c4_b100_tennessee-capital](cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md)** — `01_STAR/_main/09_c4_b100_tennessee-capital.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
 - **[lunch_vote_c3_b5](cases/IRV_OUTLIER_RR_WITH_STAR/lunch_vote_c3_b5.md)** — `01_STAR/_main/lunch_vote_c3_b5.yaml` (3c/5b)  
-    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza
+    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza  
+    _also at: `YAML_library/1_positive/trash_delete.yaml`_
 - **[center_squeeze_star](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_star.md)** — `method_comparisons/center_squeeze/center_squeeze_star.yaml` (3c/27b)  
     STAR=**Center** · IRV=Left · RR=Center · Approval=Left · Score=Center · Condorcet=Center
 - **[center_squeeze_voteline_1d](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md)** — `method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml` (3c/998b)  
