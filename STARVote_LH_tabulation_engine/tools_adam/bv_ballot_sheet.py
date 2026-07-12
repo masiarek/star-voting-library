@@ -31,8 +31,10 @@ Examples
 """
 
 import argparse
+import base64
 import html
 import json
+import mimetypes
 import os
 import re
 import sys
@@ -142,6 +144,23 @@ def qr_data_uri(url):
     except Exception:
         return None
 
+def logo_data_uri(path):
+    """Read a local image (SVG/PNG/JPG/…) into a self-contained data: URI so a
+    custom logo can replace the drawn STAR wordmark in the ballot header. Returns
+    '' on failure (the tool falls back to the built-in facsimile). HTML/PDF only —
+    the ASCII output keeps the text wordmark."""
+    try:
+        data = open(path, "rb").read()
+    except OSError:
+        print(f"[logo] could not read {path}; using the built-in STAR wordmark.")
+        return ""
+    if os.path.splitext(path)[1].lower() == ".svg":
+        mime = "image/svg+xml"
+    else:
+        mime = mimetypes.guess_type(path)[0] or "image/png"
+    return f"data:{mime};base64,{base64.b64encode(data).decode('ascii')}"
+
+
 def html_to_pdf(html_str, pdf_path):
     """Render the ballot HTML straight to a print-ready PDF via headless Chromium
     (the already-declared `playwright` dep). Returns True on success; False if
@@ -202,6 +221,7 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
           text-align: center; text-transform: uppercase; letter-spacing: .4px; }
 .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 2px 0 8px; }
 .brand .logo { width: 50px; height: 50px; flex: none; }
+.brand .blogo { display: block; margin: 0 auto; max-height: 74px; max-width: 76%; }
 .brand .word { font-weight: 800; font-size: 30px; letter-spacing: .5px; line-height: 1; }
 .brand .tag { font-weight: 800; font-size: 10.5px; letter-spacing: 1.5px; color: #5a7683; margin-top: 3px; }
 .title { text-align: center; font-size: 16px; font-weight: 700; margin: 2px 0 1px; }
@@ -247,7 +267,7 @@ def _colhead(n):
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                   serial=None, write_ins=0, qr_caption="scan to vote",
-                  break_after=False, notice="", blurb="", promo=""):
+                  break_after=False, notice="", blurb="", promo="", logo_uri=""):
     bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
     rows = []
     for i, c in enumerate(candidates):
@@ -279,11 +299,15 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     blurb_block = f'<p class="edesc">{html.escape(blurb)}</p>' if blurb else ""
     q_block = f'<p class="q">{html.escape(question)}</p>' if question else ""
     promo_block = f'<p class="promo">{promo}</p>' if promo else ""
+    if logo_uri:
+        brand = f'<div class="brand"><img class="blogo" src="{logo_uri}" alt="STAR Voting"></div>'
+    else:
+        brand = (f'<div class="brand">{STAR_LOGO}<div><div class="word">STAR VOTING</div>'
+                 f'<div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div></div>')
     return f"""
 <div class="{cls}">
   {notice_block}{qr_block}
-  <div class="brand">{STAR_LOGO}<div><div class="word">STAR VOTING</div>
-    <div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div></div>
+  {brand}
   {title_block}{blurb_block}{q_block}
   <ul class="inst">{bullets}</ul>
   <p class="fine">Fill one bubble per row. Two or more bubbles in a row spoils that candidate's score.</p>
@@ -300,7 +324,7 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb="",
-                 promo=""):
+                 promo="", logo_uri=""):
     # QR points to --qr-url if given (works even LH-only, no BV), else the BV
     # election if there is one, else nothing.
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
@@ -311,6 +335,7 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
                       qr_caption=caption, notice=notice, blurb=blurb, promo=promo,
+                      logo_uri=logo_uri,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
@@ -525,6 +550,25 @@ def selftest():
     for label, cond in desc_checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
+    # custom logo: embeds as a data URI and replaces the drawn wordmark.
+    fd2, logo_path = tempfile.mkstemp(suffix=".svg")
+    with os.fdopen(fd2, "w") as f:
+        f.write('<svg xmlns="http://www.w3.org/2000/svg"><rect width="10" height="10"/></svg>')
+    try:
+        uri = logo_data_uri(logo_path)
+        html_l = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
+                              logo_uri=uri)
+    finally:
+        os.remove(logo_path)
+    logo_checks = [
+        ("logo: file embeds as an svg data URI", uri.startswith("data:image/svg+xml;base64,")),
+        ("logo: header uses <img> and drops the drawn wordmark",
+         'class="blogo"' in html_l and "SCORE · THEN" not in html_l),
+        ("logo: missing file degrades to '' (keeps wordmark)", logo_data_uri("/no/such.png") == ""),
+    ]
+    for label, cond in logo_checks:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
     # demonstration / secret-ballot notice: on by default, both formats, off-able.
     html_n = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
                           notice=DEFAULT_NOTICE)
@@ -594,6 +638,10 @@ def main():
                     help="append your local chapter to the promo footer, e.g. "
                          "\"STAR Voting NC (facebook.com/groups/starvotingnc)\" "
                          "(implies --promo)")
+    ap.add_argument("--logo", metavar="FILE",
+                    help="a local image (SVG/PNG/JPG) to embed in the header, "
+                         "replacing the drawn STAR wordmark (HTML/PDF only; embedded "
+                         "as a self-contained data URI). ASCII keeps the text wordmark.")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -640,6 +688,7 @@ def main():
         promo = "Learn more: " + joined
     else:
         promo = ""
+    logo_uri = logo_data_uri(args.logo) if (args.logo and not is_txt) else ""
 
     # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
     if args.out.lower().endswith(".txt"):
@@ -663,7 +712,7 @@ def main():
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, qr_url=args.qr_url, notice=notice,
-                         blurb=blurb, promo=promo)
+                         blurb=blurb, promo=promo, logo_uri=logo_uri)
 
     want_pdf = args.out.lower().endswith(".pdf")
     wrote_pdf = False
