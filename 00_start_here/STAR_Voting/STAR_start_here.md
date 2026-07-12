@@ -27,6 +27,19 @@ STAR asks for a little more, using two things you already know:
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
+**And here's the ballot you'd actually fill out** — five candidates, each rated 0 to 5 stars:
+
+<img src="../img/star_ballot_example.png" width="440" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
+
+The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
+
+- Give your **favorite** **5 stars**.
+- Give your **last choice 0** (or just leave it blank).
+- **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
+- **Score everyone else** wherever they honestly land, 0 to 5.
+
+→ [the STAR ballot & the ways to fill it out](STAR_ballot_voting_styles.md).
+
 ## Watch STAR fix the lunch
 
 Same five people, same feelings — but now each of them **rates all three** (5 = love it, 3 = fine, 0 = no):
@@ -75,21 +88,7 @@ So your scores do two jobs: their *size* helps pick the two finalists, and then,
 
 Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
 
-## How you fill out the ballot
-
-Here's a real STAR ballot — five candidates, each rated 0 to 5 stars:
-
-<img src="../img/star_ballot_example.png" width="440" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
-
-
-The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
-
-- Give your **favorite** **5 stars**.
-- Give your **last choice 0** (or just leave it blank).
-- **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
-- **Score everyone else** wherever they honestly land, 0 to 5.
-
-One nuance for the runoff: if you rate the two finalists the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Your ratings still counted fully in Round 1. → [the STAR ballot & the ways to fill it out](STAR_ballot_voting_styles.md).
+One nuance you can now name: if you rate the **two finalists** the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Either way your ratings still counted fully in Round 1, where they helped choose the finalists.
 
 ## What this means for you
 
