@@ -65,7 +65,7 @@
 
 - **Objective:** understand the models that generate synthetic electorates for VSE / Bayesian-Regret studies — and why every simulation result is conditional on the model.
 - **Key terms:** Impartial Culture (IC) / Impartial Anonymous Culture (IAC), spatial model, Euclidean distance, Mallows (Kendall-Tau, φ), Plackett-Luce, Pólya urn, Yee diagram.
-- **Page:** [Election simulation models](election_simulation_models.md) — the neutral menu, the math prerequisites, and the standing caveat.
+- **Page:** [Election simulation models](election_simulation_models.md) — the neutral menu, the math prerequisites, and the standing caveat. **Prerequisite:** [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — the methodology point that you sample *preferences* and derive ballots, never sample random ballots directly (and why `[0,1]` utilities beat random `{0..5}` scores).
 - **The point:** pairs with 301.6's habit — *never quote a rate without the model* — and with 201.6's VSE overview.
 - **A worked frequency study:** [How often do STAR and Approval disagree?](../method_comparisons/star_vs_approval_divergence.md) — a seeded, self-testing simulation (~12% at 3 candidates / ~25% at 5, realistic model) that makes the "no single number" lesson concrete: divergence depends on the electorate model *and* the approval cutoff, because Approval has no canonical sincere ballot.
 
