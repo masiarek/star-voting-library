@@ -102,6 +102,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## Related
 
+- [**How often do STAR and Approval disagree?**](../star_vs_approval_divergence.md) — these hand-picked cases show *that* they can diverge; this measures *how often* (a seeded simulation), and explains why
 - [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting); Range and STAR part ways in elections 1 and 3
 - [`../../00_start_here/scores_and_ranks/`](../../00_start_here/scores_and_ranks) — scores vs ranks, the fidelity ladder
 - [RCV-IRV vs. STAR — A Side-by-Side](../../00_start_here/rcv_irv_vs_star.md) — method comparison
