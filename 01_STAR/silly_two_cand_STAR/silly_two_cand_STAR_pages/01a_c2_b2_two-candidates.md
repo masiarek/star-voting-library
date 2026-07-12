@@ -57,7 +57,7 @@ Count × Chocolate,Vanilla
 ```
 
 <details>
-<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
 
 ```text
 --- Runoff (Preference) Matrix ---

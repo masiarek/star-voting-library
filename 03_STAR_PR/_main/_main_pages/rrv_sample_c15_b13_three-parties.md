@@ -130,7 +130,7 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
 ```
 
 <details>
-<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
 
 ```text
 --- Runoff (Preference) Matrix ---

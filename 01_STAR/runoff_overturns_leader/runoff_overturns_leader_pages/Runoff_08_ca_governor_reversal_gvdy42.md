@@ -628,7 +628,7 @@ Count × Akinyemi Agbede (D),Mohammad Arif (D),Larry Azevedo (D),Xavier Becerra 
 ```
 
 <details>
-<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
 
 ```text
 --- Runoff (Preference) Matrix ---

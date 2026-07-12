@@ -93,7 +93,7 @@ Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
 ```
 
 <details>
-<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
 
 ```text
 --- Runoff (Preference) Matrix ---

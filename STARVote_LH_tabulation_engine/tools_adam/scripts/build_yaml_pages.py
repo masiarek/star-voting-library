@@ -304,7 +304,7 @@ def render(yaml_path, siblings):
             L.append("```")
             L.append("")
             L.append("<details>")
-            L.append("<summary>▸ Full audit — preference matrix, Condorcet, and "
+            L.append("<summary>Full audit — preference matrix, Condorcet, and "
                      "score distribution</summary>")
             L.append("")
             L.append("```text")

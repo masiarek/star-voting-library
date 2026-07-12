@@ -115,7 +115,7 @@ Ann,Bob,Cal,Don
 ```
 
 <details>
-<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
 
 ```text
 --- Runoff (Preference) Matrix ---
