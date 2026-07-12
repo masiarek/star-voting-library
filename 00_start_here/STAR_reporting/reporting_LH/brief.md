@@ -72,6 +72,6 @@ The `[STAR Voting:` prefix is noise once you know the method — so `brief` remo
 
 ## Which to use
 
-- **On-screen echo → `brief: true`** is the [house default](../../../CLAUDE.md) ("less is more"). It reads cleaner, especially when several elections scroll past.
+- **On-screen report → `brief: true`** is the [house default](../../../CLAUDE.md) ("less is more"). It reads cleaner, especially when several elections scroll past.
 - **`brief: false`** is occasionally handy when you want the section markers to be unmistakable machine-parseable `[...]` tags, or when teaching what the raw sections are called.
 - **The `_tabulated.txt` mirror** ignores `brief` entirely and always renders full detail — so the saved audit copy never depends on this flag.

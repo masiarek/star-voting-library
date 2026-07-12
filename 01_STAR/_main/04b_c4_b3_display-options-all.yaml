@@ -37,7 +37,7 @@ options:
   brief: true              # true = collapse repetitive "[STAR Voting: ...]" headers
                            # into plain sub-headings; false = keep full headers
   collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
-                           # (most common first); false = echo every ballot
+                           # (most common first); false = show every ballot
   count_separator: "×"     # separator for the collapsed count: "×", ":", or "x"/"X"
                            # (all round-trip back to valid input)
 

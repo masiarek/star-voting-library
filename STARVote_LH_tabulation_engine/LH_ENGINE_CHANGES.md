@@ -44,7 +44,7 @@ The wrapper reads `voting_method` + `num_winners` and routes to the right tabula
 
 ## 3. New reports & presentation (the wrapper's analysis layer)
 
-All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **echo** stays minimal (honors the file's `options:`); the saved **`_tabulated.txt` mirror** always renders every analysis on, stamped with source name + mtimes.
+All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **on-screen report** stays minimal (honors the file's `options:`); the saved **`_tabulated.txt` mirror** always renders every analysis on, stamped with source name + mtimes.
 
 | Report / feature | What it adds | Reference |
 |------------------|--------------|-----------|

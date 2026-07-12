@@ -24,7 +24,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 ### Voting 201 — reading results & trusting the count
 
-6. **Read the full audit report.** The minimal on-screen echo vs the complete `_tabulated.txt` (preference matrix + score distribution + the runoff/Condorcet blocks) → the `_tabulated/` siblings in [Runoff Reversal](runoff_overturns_leader/).
+6. **Read the full audit report.** The minimal on-screen report vs the complete `_tabulated.txt` (preference matrix + score distribution + the runoff/Condorcet blocks) → the `_tabulated/` siblings in [Runoff Reversal](runoff_overturns_leader/).
 7. **A real election, end to end.** A real 461-ballot BetterVoting STAR race, raw ballots → winner, read section by section → **["What Makes the Best Pet?"](pet_real_bv_election/)**.
 8. **Edge cases & trust.** How ties resolve, and where BetterVoting's display diverges from the engine → [Flat scores, ties & tie-breaking](Flat_scores_ties/) · [abstain / blank / zero handling](abstain_bugs/).
 

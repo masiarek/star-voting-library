@@ -91,9 +91,9 @@ and in the saved `_tabulated` copy, the same as a funnel that adds up:
 
 Cherry's low scores still **counted** (they're inside the 7) — they just didn't make the top two. The 4 Equal Support ballots counted in the score round and are set aside only from the runoff percentage; 4 voters had a preference, and Banana takes 3 of them (75%), clearing the majority of 3.
 
-## The LH report (echo)
+## The LH report (on-screen report)
 
-This is a small election, so here is the **on-screen echo** in full (the saved [`flat_scores_abstention_c3_b8_tabulated.txt`](pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) mirror additionally forces the full N×N matrix, the Condorcet line, and the "Runoff math" funnel):
+This is a small election, so here is the **on-screen report** in full (the saved [`flat_scores_abstention_c3_b8_tabulated.txt`](pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) mirror additionally forces the full N×N matrix, the Condorcet line, and the "Runoff math" funnel):
 
 ```
 --- Runoff (Preference) Matrix ---

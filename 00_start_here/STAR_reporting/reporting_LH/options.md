@@ -35,11 +35,11 @@ options:
 
 ## What this block produces
 
-With the values above, the on-screen report shows: the **finalists-only matrix**, the ballots **one per row**, both rounds (headers collapsed by `brief`), and the **runoff-percentage line** — but **no** Score Distribution, **no** Condorcet line, and **no** IRV divergence. Turning `show_score_counts` and `show_condorcet` on (as the demo file now does) adds those two sections back; that's the only difference between a lean teaching echo and a fuller study render.
+With the values above, the on-screen report shows: the **finalists-only matrix**, the ballots **one per row**, both rounds (headers collapsed by `brief`), and the **runoff-percentage line** — but **no** Score Distribution, **no** Condorcet line, and **no** IRV divergence. Turning `show_score_counts` and `show_condorcet` on (as the demo file now does) adds those two sections back; that's the only difference between a lean teaching on-screen report and a fuller study render.
 
 ## Two things that never change with options
 
 1. **The winner and all the numbers** — options only hide or show sections, never alter the tabulation.
-2. **The `_tabulated.txt` mirror** — it always forces every analysis on (full matrix, Condorcet, score counts, IRV, the runoff funnel), so the saved audit copy is complete regardless of what the on-screen echo chose to show.
+2. **The `_tabulated.txt` mirror** — it always forces every analysis on (full matrix, Condorcet, score counts, IRV, the runoff funnel), so the saved audit copy is complete regardless of what the on-screen report chose to show.
 
 The recommended minimal block and the per-option house defaults live in [CLAUDE.md — working guidance for this repo](../../../CLAUDE.md); the full report section-by-section is [Reading a STAR report](../../tabulation_engines/LH_starvote/reading_a_star_report.md).

@@ -33,7 +33,7 @@ How this repo is laid out, how to run it, how the voting methods dispatch, and w
 
 All commands assume the project's virtualenv (`.venv` / `uv`), run from the repo root.
 
-**Tabulate an election file** — annotated echo on screen, plus a `_tabulated.txt` sibling:
+**Tabulate an election file** — annotated on-screen report on screen, plus a `_tabulated.txt` sibling:
 
 ```bash
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \

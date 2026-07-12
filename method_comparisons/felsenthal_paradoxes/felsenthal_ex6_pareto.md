@@ -21,6 +21,6 @@ Approval totals: **Aria 3, Beau 3**, Cole 2, Dean 1 — an Aria/Beau tie. Broken
 
 ## The LH pair
 
-[felsenthal_ex6_pareto_approval.yaml](felsenthal_ex6_pareto_approval.yaml) pins the lot order **adversarially** (`[Beau, Aria, Cole, Dean]`) to exhibit exactly the branch Felsenthal warns about — the LH echo shows the 3–3 tie resolving to **Beau**, the Pareto-dominated candidate. (This required a small engine fix: the Approval path now honors `lot_numbers`, where it previously fell back to ballot column order.) The companion [felsenthal_ex6_ranked_robin.yaml](felsenthal_ex6_ranked_robin.yaml) counts the same rankings pairwise and elects **Aria** outright.
+[felsenthal_ex6_pareto_approval.yaml](felsenthal_ex6_pareto_approval.yaml) pins the lot order **adversarially** (`[Beau, Aria, Cole, Dean]`) to exhibit exactly the branch Felsenthal warns about — the LH on-screen report shows the 3–3 tie resolving to **Beau**, the Pareto-dominated candidate. (This required a small engine fix: the Approval path now honors `lot_numbers`, where it previously fell back to ballot column order.) The companion [felsenthal_ex6_ranked_robin.yaml](felsenthal_ex6_ranked_robin.yaml) counts the same rankings pairwise and elects **Aria** outright.
 
 Mirrors: [approval](felsenthal_paradoxes_tabulated/felsenthal_ex6_pareto_approval_tabulated.txt) · [rr](felsenthal_paradoxes_tabulated/felsenthal_ex6_ranked_robin_tabulated.txt). Tag: `pareto` in the [paradox registry](../../00_start_here/YAML_test_case_index/PARADOX_index.md).

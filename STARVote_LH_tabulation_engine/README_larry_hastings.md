@@ -64,7 +64,7 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 | `show_condorcet` | off | Show the `[Condorcet Winner]` line. |
 | `show_score_counts` | off | Show the per-candidate `[Score Distribution]` table. |
 | `brief` | on | Collapse repetitive `[STAR Voting: …]` section headers into plain sub-headings. |
-| `collapse_ballots` | on | Echo identical ballots as `count × scores` (most common first) instead of one row each. |
+| `collapse_ballots` | on | On-screen report identical ballots as `count × scores` (most common first) instead of one row each. |
 | `count_separator` | `×` | Separator for the collapsed count: `×`, `:`, or `x`/`X` (all round-trip to valid input). |
 
 ## Output conventions

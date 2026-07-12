@@ -1,6 +1,6 @@
 # _demo_dropbox — frictionless drop-to-results for BetterVoting exports
 
-Ad-hoc demo zone. Drop a BetterVoting (BV) `.json` export in here and it gets converted, tabulated, and echoed to screen automatically. **Outside the test suite** — nothing dropped here is picked up by `pytest`.
+Ad-hoc demo zone. Drop a BetterVoting (BV) `.json` export in here and it gets converted, tabulated, and shown on screen to screen automatically. **Outside the test suite** — nothing dropped here is picked up by `pytest`.
 
 ## Use it
 

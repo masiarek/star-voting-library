@@ -36,6 +36,6 @@ It names the decided count *against the total* with the Equal Support gap inline
 
 ## On-screen vs the saved copy
 
-The on-screen echo honors the file's `options:` (house default is minimal). The `_tabulated.txt` sibling is always the **maximal** render — every analysis on, the runoff line expanded into the funnel — so the saved audit copy is fully self-explanatory. Which flag shows which section: [**LH reporting options**](options.md). (House defaults: `CLAUDE.md`.)
+The on-screen report honors the file's `options:` (house default is minimal). The `_tabulated.txt` sibling is always the **maximal** render — every analysis on, the runoff line expanded into the funnel — so the saved audit copy is fully self-explanatory. Which flag shows which section: [**LH reporting options**](options.md). (House defaults: `CLAUDE.md`.)
 
 See it on a real election: [the pet race report](../../../01_STAR/pet_real_bv_election/).

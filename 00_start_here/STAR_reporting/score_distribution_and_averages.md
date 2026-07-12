@@ -8,7 +8,7 @@ Part of the [STAR reporting](reporting_ties.md) notes. Companion to [Reading a S
 
 ## The table
 
-With `show_score_counts: true`, the LH engine prints a per-candidate score histogram between the ballot echo and the Scoring Round. Example (the 6-candidate / 3-seat Bloc case):
+With `show_score_counts: true`, the LH engine prints a per-candidate score histogram between the ballot on-screen report and the Scoring Round. Example (the 6-candidate / 3-seat Bloc case):
 
 ```
 [Score Distribution] (how many ballots gave each star rating)

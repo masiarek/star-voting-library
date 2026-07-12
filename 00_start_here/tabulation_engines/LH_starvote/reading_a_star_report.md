@@ -85,4 +85,4 @@ Winner — STAR Voting Method (single winner)
 | **201** — official / auditor | + the Preference Matrix and the Majority Preference summary |
 | **301** — debater / theorist | + [Divergence from STAR], Condorcet checks, score distribution, tiebreakers |
 
-That's the point of the minimal on-screen echo plus the always-full `_tabulated.txt`: the report scales to the reader. The full report for *any* example lives in its `_tabulated.txt` sibling; step-by-step method comparison is in [STAR vs RCV-IRV, step by step](../../tabulation_star_vs_irv.md).
+That's the point of the minimal on-screen report plus the always-full `_tabulated.txt`: the report scales to the reader. The full report for *any* example lives in its `_tabulated.txt` sibling; step-by-step method comparison is in [STAR vs RCV-IRV, step by step](../../tabulation_star_vs_irv.md).

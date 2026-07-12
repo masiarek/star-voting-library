@@ -46,11 +46,11 @@ scenario_description: |-
 video_script: |-
   SAY / HOW / WHY / POINT OUT / TRANSITION notes for whoever presents this.
 
-# Output options — what the SHORT on-screen echo shows. House default below
+# Output options — what the SHORT on-screen report shows. House default below
 # ("less is more"). The saved _tabulated copy always shows maximum detail
 # regardless of these flags, so only turn on the section your case teaches.
 options:
-  show_description: false     # print scenario_description in the echo
+  show_description: false     # print scenario_description in the on-screen report
   show_matrix: true           # the Runoff (Preference) Matrix
   matrix_finalists_only: true # true = finalists only; false = full N×N grid
   show_condorcet: false       # the [Condorcet Winner] line
@@ -92,13 +92,13 @@ expected_winners:
 # file: <your_file_name>.yaml
 ```
 
-### What those `options:` show (and what "echo" means)
+### What those `options:` show (and what "on-screen report" means)
 
-The **echo** is the report the engine **prints on screen** as it tabulates. The `options:` flags only decide *how much of it appears* — they never change the winner or the numbers, and the saved **`_tabulated.txt`** mirror ignores them and always shows everything. So `options:` is purely "what to put on screen for *this* teaching case."
+The **on-screen report** is the report the engine **prints on screen** as it tabulates. The `options:` flags only decide *how much of it appears* — they never change the winner or the numbers, and the saved **`_tabulated.txt`** mirror ignores them and always shows everything. So `options:` is purely "what to put on screen for *this* teaching case."
 
 Each flag, explained with before/after examples:
 
-- **`show_description`** — echo the `scenario_description` prose (off by default; always in `_tabulated`).
+- **`show_description`** — on-screen report the `scenario_description` prose (off by default; always in `_tabulated`).
 - **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](STAR_reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
 - **`show_score_counts`** → the per-candidate **[score-distribution table](STAR_reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
 - **`show_irv`** → adds the **RCV-IRV** comparison line to the `[Divergence from STAR]` block. Note the block itself is **built-in and auto-prints whenever STAR's winner differs** from Choose-One (Plurality) or Approval — no flag needed; `show_irv` only adds the IRV line. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../method_comparisons/divergence_review/INDEX.md).
@@ -119,8 +119,8 @@ Full rundown of the whole block, option by option: **[LH reporting options](STAR
 | `expected_winners` | **yes, for a test case** | Top-level list of winner name(s). This is the key the automated test suite discovers and asserts. |
 | `expected_results` | optional | Richer answer key — per-round scores, the runoff, turnout/quorum figures — beyond the bare winner. Emitted by the BetterVoting converter; the engine reads it the same way. |
 | `election_title` | optional | One-line human title, printed as the report header. |
-| `scenario_description` | optional | Printable context (echoed only if `show_description: true`; always in `_tabulated`). |
-| `video_script` | optional | Presenter notes. Never echoed. |
+| `scenario_description` | optional | Printable context (shown only if `show_description: true`; always in `_tabulated`). |
+| `video_script` | optional | Presenter notes. Never shown on screen. |
 | `options` | optional | On-screen display flags (see template comments). The `_tabulated` copy ignores them and always shows everything. |
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |

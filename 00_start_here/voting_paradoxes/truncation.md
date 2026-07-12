@@ -16,4 +16,4 @@ Truncation is powerful wherever a ballot's lower ranks can *hurt* its upper rank
 
 ## Why it matters
 
-"Rank as many as you like — more information helps" is the standard advice on ranked ballots. A method where the strategically savvy *shorten* their ballots turns ballot completion into a sucker's move, and it biases outcomes toward factions with better strategic coordination. Note the practical echo: real RCV-IRV elections show heavy truncation, and this paradox says some of it may be rational.
+"Rank as many as you like — more information helps" is the standard advice on ranked ballots. A method where the strategically savvy *shorten* their ballots turns ballot completion into a sucker's move, and it biases outcomes toward factions with better strategic coordination. Note the practical on-screen report: real RCV-IRV elections show heavy truncation, and this paradox says some of it may be rational.

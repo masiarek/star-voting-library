@@ -58,7 +58,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 - **Equal Support** is the canonical label for the no-preference runoff bucket
   (matrix legend *and* runoff) — printed **plain**, just "Equal Support". The aka
   (Equal Preference / No Preference) is documented once in `GLOSSARY.md`, **not**
-  echoed on every runoff line. Do **not** reintroduce "Equal Preference" as the
+  shown on screen on every runoff line. Do **not** reintroduce "Equal Preference" as the
   lead term.
 - **Favorite Betrayal Criterion ≠ Later-No-Harm** — keep distinct. Neither STAR
   nor IRV is FBC-compliant; RCV-IRV fails it structurally (center squeeze), STAR
@@ -71,8 +71,8 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 ## Repo conventions (so output stays consistent)
 - **YAML `options:` booleans → `true` / `false`** (parser also accepts t/f/y/n/etc.,
   but house style is the long form).
-- **Echo-to-screen `options:` — house default is "less is more."** The on-screen
-  echo should be minimal; the saved `_tabulated` copy already renders **maximum
+- **On-screen report `options:` — house default is "less is more."** The on-screen
+  on-screen report should be minimal; the saved `_tabulated` copy already renders **maximum
   info automatically** (engine forces every analysis on, regardless of the file's
   options — don't hand-set that). Single-winner default block:
 
@@ -105,8 +105,8 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   is trivial (it just echoes the runoff). The `[Divergence from STAR]`
   block prints whenever methods differ regardless of these flags, so comparative
   demos keep their punch on screen even with the minimal block.
-- **Echo options = the minimal block + only the section(s) the doc teaches.** When a
-  file backs a teaching/reporting `.md` whose embedded echo should show a specific
+- **On-screen report options = the minimal block + only the section(s) the doc teaches.** When a
+  file backs a teaching/reporting `.md` whose embedded on-screen report should show a specific
   section, flip ON *just that flag* (keep everything else minimal; the `_tabulated`
   mirror still forces full detail). `show_runoff_percent` is already on in the minimal
   block, so the per-doc triggers are the heavier sections:
@@ -163,7 +163,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   (authoritative). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
-  printable, `video_script` = notes, never echoed); cross-file teaching in
+  printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
   see next bullet). See `ORGANIZATION.md`.
 - **Folder overview pages are named exactly `README.md`** (not `README_<folder>.md`).
@@ -198,7 +198,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   When a teaching/reporting `.md` discusses a result, paste the actual LH output inline
   as a fenced code block (strip ANSI) rather than only linking the `_tabulated` file —
   the reader should see the output on the page. **Match the depth to the election:**
-  - **Small / simple** examples → embed the **short echo** (the on-screen render with
+  - **Small / simple** examples → embed the **short on-screen report** (the on-screen render with
     the file's minimal options), not a full dump.
   - **Large or complex** elections (many ballots/candidates), or docs whose point *is*
     the matrix / Condorcet / score-distribution detail → embed the fuller
@@ -330,7 +330,7 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
 6. **Build the case files** (AI). Name `bv<testid>_<bvid>_<descriptor>.{yaml,md,
    _bv_export.json}` (see naming rule above). The `.md` is the per-election page:
    the clickable `▶ … /results` lead line, ballots, the **inline LH tabulation
-   echo**, why the winner wins, and the BV-vs-LH agreement/divergence.
+   on-screen report**, why the winner wins, and the BV-vs-LH agreement/divergence.
    `expected_winners` goes in the yaml.
 7. **Regenerate indexes + mirrors** (AI). Run the yaml through the engine (writes
    its `_tabulated` mirror), then `tools_adam/scripts/build_yaml_index.py`, the

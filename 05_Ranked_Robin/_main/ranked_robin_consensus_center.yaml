@@ -6,7 +6,7 @@ election_description: >-
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
 options:
-  show_matrix: true          # opt the on-screen echo into the full pairwise matrix
+  show_matrix: true          # opt the on-screen report into the full pairwise matrix
                              # (the _tabulated mirror always shows it regardless)
 # Ranked Robin / Copeland worked example. 13 ranked ballots, 4 candidates
 # (Ada=left, Ben=center-left, Cara=center-right, Dan=right).

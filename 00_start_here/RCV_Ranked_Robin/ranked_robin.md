@@ -93,11 +93,11 @@ The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tool
 
 ### Options for an RCV-RR YAML file — and what shows where
 
-The Ranked Robin path follows the same **minimal echo / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
+The Ranked Robin path follows the same **minimal on-screen report / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
 
 | Option | Default | Effect on RCV-RR |
 |--------|:-------:|------------------|
-| `show_matrix` | `false` | When `true`, the **on-screen echo** also prints the full N×N pairwise matrix. The `_tabulated` mirror **always** includes it regardless. |
+| `show_matrix` | `false` | When `true`, the **on-screen report** also prints the full N×N pairwise matrix. The `_tabulated` mirror **always** includes it regardless. |
 | `collapse_ballots` | `true` | `true` → identical ballots shown as `N × ballot`; `false` → one row per voter. |
 | `count_separator` | `×` | The glyph between the count and the ballot (`×`, `:`, or `x`/`X`). |
 
@@ -114,7 +114,7 @@ ballots: |-
   2:Cara>Ben>Ada
 ```
 
-The **on-screen echo** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
+The **on-screen report** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---

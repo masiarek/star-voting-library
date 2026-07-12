@@ -37,7 +37,7 @@ Richer files keep more *human* context in the same file — an `election_title`,
 
 The YAML is the **one source of truth**; every other surface is derived from it and never hand-maintained in parallel:
 
-- the on-screen **tabulation echo** (what you show live),
+- the **on-screen tabulation report** (what you show live),
 - the full-detail **`_tabulated.txt`** record (the audit copy),
 - the browsable **`.md` page** (the reader-facing surface, built by `build_yaml_pages.py`),
 - the sortable **registry** (`BV_registry.md` / `bv_cases.csv`, built by `build_bv_registry.py` from the `bv_*` fields).

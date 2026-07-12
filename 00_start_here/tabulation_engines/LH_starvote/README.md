@@ -44,15 +44,15 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 git diff       starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvote/
 ```
 
-## The headline design: **echo** vs **`_tabulated`**
+## The headline design: **on-screen report** vs **`_tabulated`**
 
 The single most important improvement is that every run produces **two** outputs, tuned for two different readers:
 
-**1. The on-screen *echo* — minimal by design.** What prints to the terminal honors the file's own `options:`, and our house default is *less is more*: show the rounds, the winner, and the one or two sections the example is teaching. Clean enough to put on a slide without overwhelming a first-time voter.
+**1. The on-screen *on-screen report* — minimal by design.** What prints to the terminal honors the file's own `options:`, and our house default is *less is more*: show the rounds, the winner, and the one or two sections the example is teaching. Clean enough to put on a slide without overwhelming a first-time voter.
 
 **2. The saved `_tabulated.txt` mirror — always maximal.** Every run *also* writes a plain-text copy into a sibling `<folder>_tabulated/` mirror, and that copy is **always rendered with every analysis on** — full N×N matrix, Condorcet line, score distribution, tiebreaker detail, the runoff funnel — *regardless of the file's options*. It also stamps the source name, the source's last-modified time, and when tabulation ran, so a stale record is obvious at a glance.
 
-The payoff: **the on-screen demo stays clean while the saved record stays complete.** You never have to choose between a readable echo and a full audit trail — you get the right one in each place. (This is why house YAML files carry a deliberately *minimal* `options:` block: the mirror forces full detail anyway, so hand-maxing the echo just adds noise.)
+The payoff: **the on-screen demo stays clean while the saved record stays complete.** You never have to choose between a readable on-screen report and a full audit trail — you get the right one in each place. (This is why house YAML files carry a deliberately *minimal* `options:` block: the mirror forces full detail anyway, so hand-maxing the on-screen report just adds noise.)
 
 ## What the report adds on top of "the winner is X"
 
@@ -60,7 +60,7 @@ Beyond the raw result, the wrapper renders the parts that make a STAR result *tr
 
 - **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../STAR_Voting/STAR_summability.md).
 - **`[Runoff Reversal]` summary** — a plain-English sentence naming *why* the runoff winner beat the score leader when they differ: the runoff elects the finalist preferred by the majority (of voters with a preference). The whole Runoff-Reversal lesson in two lines. (Header formerly "Majority Preference Enforcement Principle" — renamed to the glossary term.)
-- **`[Divergence from STAR]`** — a quick cross-check that flags when Approval / a pure score count, or RCV-IRV, would pick someone else; it prints whenever methods disagree, so comparative demos keep their punch even with the minimal echo.
+- **`[Divergence from STAR]`** — a quick cross-check that flags when Approval / a pure score count, or RCV-IRV, would pick someone else; it prints whenever methods disagree, so comparative demos keep their punch even with the minimal on-screen report.
 - **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../STAR_Voting/runoff_percentages.md).
 - **Score distribution, Condorcet line, tiebreaker rounds** — on demand on screen, always in the mirror. The **lot-number tiebreak cascade** (head-to-head → most 5s → lot order) is shown step by step so a tie's resolution is auditable.
 - **Color palette + round separators** — distinct colors per phase (scoring, runoff, winner), mirroring the matrix legend; auto-off when piped to a file or under `NO_COLOR`, so the saved text stays clean.

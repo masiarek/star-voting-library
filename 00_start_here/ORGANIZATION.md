@@ -17,7 +17,7 @@ So: store rich, display clean. You never have to choose.
 |---------|----------|-------------------|
 | `election_title` | YAML | yes (one-line banner) |
 | `scenario_description` — short, audience-facing "what" | YAML | yes, unless `show_description: false` |
-| `video_script` — presenter notes, cues, "how to present" | YAML | **no** (never echoed) |
+| `video_script` — presenter notes, cues, "how to present" | YAML | **no** (never shown on screen) |
 | Cross-file teaching (lessons, sequences, comparisons, "why") | **Markdown** (`00_start_here/`, folder READMEs) | n/a |
 
 Rule of thumb: **per-file context → in the YAML; cross-file teaching → Markdown.** If a paragraph is about *this one election*, it belongs in the file. If it's about how several examples fit together, it belongs in an `.md`.
