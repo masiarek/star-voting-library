@@ -6,9 +6,11 @@ hand-count exercise, tied to a BetterVoting (BV) election.
 The teacher's front-of-workflow tool: you make a real election on BetterVoting,
 then print matching paper ballots so a room can vote by hand, hand-count the result
 (see 00_start_here/STAR_Voting/count_star_by_hand.md), and compare to BV's official
-tally. This script writes a self-contained, print-ready HTML file — open it and
-"Print to PDF". Each ballot carries the STAR instructions, a 0-5 bubble grid per
-candidate, and the BV election id + results URL so paper and platform stay linked.
+tally. The `--out` extension picks the format: .txt = plain ASCII (zero deps, prints
+anywhere, form-feed page breaks), .pdf = print-ready PDF (via playwright), .html
+(default) = styled with a scannable QR (Print -> PDF). Each ballot carries the STAR
+instructions, a 0-5 bubble grid per candidate, and the BV election id + results URL
+so paper and platform stay linked. Default is one ballot per page.
 
 Candidates + title come from ONE of:
   --yaml FILE          a repo election .yaml (title + candidates from its ballots header;
@@ -32,6 +34,7 @@ import json
 import os
 import re
 import sys
+import textwrap
 
 
 # --------------------------------------------------------------------------- #
@@ -243,6 +246,70 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
 
 
 # --------------------------------------------------------------------------- #
+# Plain-ASCII output: zero dependencies, prints from anywhere (`lpr file.txt`   #
+# or any editor). One ballot per page via the form-feed char (\f). No QR (the   #
+# URL is printed instead) — the purest, most portable ballot.                   #
+# --------------------------------------------------------------------------- #
+TEXT_WIDTH = 72
+TEXT_INSTRUCTIONS = ("Fill ONE circle per row, 0 (worst) to 5 (best). A blank row "
+                     "counts as 0. Two or more marks in one row is a spoiled score "
+                     "for that candidate. The two highest-scoring candidates have an "
+                     "automatic runoff.")
+
+
+def _ascii_row(label, name_w):
+    cells = "   ".join("( )" for _ in range(6))
+    return f"  {label[:name_w].ljust(name_w)}  {cells}"
+
+
+def render_ballot_text(title, question, candidates, bv_id,
+                       serial=None, write_ins=0):
+    rule = "=" * TEXT_WIDTH
+    name_w = max([len("Candidate")] + [len(c) for c in candidates] + [11]) + 1
+    name_w = min(name_w, 34)
+    lines = [rule]
+    lines.append((title or "STAR Voting ballot").center(TEXT_WIDTH).rstrip())
+    if serial is not None:
+        lines.append(f"  Ballot #{serial} - keep this to verify it was counted")
+    lines.append("")
+    lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
+                           subsequent_indent="  ")
+    lines.append("")
+    lines += textwrap.wrap(TEXT_INSTRUCTIONS, TEXT_WIDTH - 2, initial_indent="  ",
+                           subsequent_indent="  ")
+    lines.append("")
+    header = f"  {'Candidate'.ljust(name_w)}  " + "   ".join(f" {n} " for n in range(6))
+    lines.append(header)
+    lines.append(f"  {'-' * name_w}  " + "   ".join("---" for _ in range(6)))
+    for c in candidates:
+        lines.append(_ascii_row(c, name_w))
+    for _ in range(write_ins):
+        lines.append(_ascii_row("Write-in: " + "_" * (name_w - 10), name_w))
+    lines.append("")
+    if bv_id:
+        lines.append(f"  Election {bv_id}  |  results: bettervoting.com/{bv_id}/results")
+    else:
+        lines.append("  STAR Voting — Score Then Automatic Runoff")
+    lines.append(rule)
+    return "\n".join(lines)
+
+
+def render_sheet_text(title, question, candidates, bv_id, copies, per_page,
+                      serials=False, write_ins=0):
+    pp = max(1, per_page)
+    out = []
+    for i in range(copies):
+        out.append(render_ballot_text(title, question, candidates, bv_id,
+                                      serial=(i + 1 if serials else None),
+                                      write_ins=write_ins))
+        last = (i + 1 == copies)
+        if not last:
+            # form-feed = a hard page break for printers; a blank gap otherwise.
+            out.append("\f" if (i + 1) % pp == 0 else "\n")
+    return "\n".join(out) + "\n"
+
+
+# --------------------------------------------------------------------------- #
 # Self-tests.                                                                  #
 # --------------------------------------------------------------------------- #
 def selftest():
@@ -282,6 +349,21 @@ def selftest():
          two.count('class="ballot pagebreak"') == 1),
     ]
     for label, cond in page:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
+    # plain-ASCII output: zero deps, form-feed page breaks, results URL not QR.
+    txt = render_sheet_text("Pets", "q", ["ala", "bob"], "mptvrm",
+                            copies=3, per_page=1, serials=True)
+    is_ascii = all(ord(ch) < 128 for ch in txt)
+    txtchecks = [
+        ("ascii: candidates + results url present",
+         "ala" in txt and "bob" in txt and "bettervoting.com/mptvrm/results" in txt),
+        ("ascii: one-per-page form-feeds (3 copies -> 2)", txt.count("\f") == 2),
+        ("ascii: 6 markable circles per candidate row", "( )   ( )   ( )   ( )   ( )   ( )" in txt),
+        ("ascii: serial receipt line", "Ballot #1 - keep" in txt),
+        ("ascii: strictly 7-bit ASCII (no QR, no unicode)", is_ascii),
+    ]
+    for label, cond in txtchecks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
     # QR is optional (needs segno); test whichever path applies.
@@ -329,8 +411,9 @@ def main():
                     help="ballots per printed page (default 1 — one ballot per page, "
                          "the right choice for ballots you hand out individually)")
     ap.add_argument("--out", default="ballots.html",
-                    help="output file; end it in .pdf for a print-ready PDF directly "
-                         "(needs `playwright`), otherwise HTML you Print → PDF yourself")
+                    help="output file — extension picks the format: .txt = plain "
+                         "ASCII (zero deps, prints anywhere), .pdf = print-ready PDF "
+                         "(needs `playwright`), .html (default) = styled, Print → PDF")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
     ap.add_argument("--qr-url",
@@ -365,6 +448,25 @@ def main():
                          "(see --help). Run --selftest to verify the tool.")
 
     question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
+
+    # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
+    if args.out.lower().endswith(".txt"):
+        sheet = render_sheet_text(title, question, candidates, bv_id, args.copies,
+                                  args.per_page, serials=args.serials,
+                                  write_ins=args.write_ins)
+        with open(args.out, "w", encoding="utf-8") as f:
+            f.write(sheet)
+        pp = max(1, args.per_page)
+        layout = "one per page" if pp == 1 else f"{pp} per page"
+        print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, "
+              f"{layout}) to {os.path.abspath(args.out)}")
+        print("Plain text — print with `lpr` or any editor (form-feed = page break). "
+              "No dependencies, no QR (the results URL is printed).")
+        if bv_id:
+            print(f"Linked to BetterVoting election {bv_id} "
+                  f"(results: https://bettervoting.com/{bv_id}/results).")
+        return
+
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, qr_url=args.qr_url)

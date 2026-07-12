@@ -46,7 +46,12 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
   ```
 - the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
 
-**Output:** end `--out` in **`.pdf`** for a print-ready PDF directly (e.g. `--out lunch.pdf` → a 30-page PDF, **one ballot per page**, straight to the printer — needs the `playwright` library, `playwright install chromium` once). End it in `.html` (or omit `--out`) for a self-contained **HTML file** you open and **Print → Save as PDF** yourself — the fallback if playwright isn't installed. Each ballot carries:
+**Output — the `--out` extension picks the format:**
+- **`.txt`** → **plain ASCII**, zero dependencies, prints from anywhere (`lpr lunch.txt` or any editor); one ballot per page via the form-feed character, `( )` circles to mark, and the results URL printed (no QR). The simplest, most portable option.
+- **`.pdf`** → a print-ready **PDF** directly (e.g. `--out lunch.pdf` → a 30-page PDF, **one ballot per page**, straight to the printer — needs the `playwright` library, `playwright install chromium` once).
+- **`.html`** (or omit `--out`) → a self-contained styled **HTML file** with the scannable QR; open it and **Print → Save as PDF** yourself. This is also the automatic fallback if playwright isn't installed.
+
+Each ballot carries:
 
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
