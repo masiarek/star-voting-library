@@ -36,9 +36,15 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
     --bv-id demo1 --copies 30
 ```
 
-**Ready-made real elections to demo with** (both live on BetterVoting, so you get paper ballots *and* an online tally to check against):
-- the [team lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) — `--yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` (3 options, politics-free);
-- the fun [Pet Poll](../../method_comparisons/pet_poll_four_winners/) — `--yaml method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml` (4 pets, "the consensus Cat wins" — a great classroom crowd-pleaser).
+**Ready-made real elections to demo with** — live on BetterVoting with memorable URLs, so you get paper ballots *and* an online tally to check against:
+- the [team lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) — `--yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` (3 options, politics-free, the simplest);
+- **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets (Bird, Cat, Python, Dog, Fish, Rabbit, Rat), single-winner STAR, a classroom crowd-pleaser:
+  ```bash
+  python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
+      --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
+      --title "What Makes the Best Pet?" --bv-id pet --serials --copies 25
+  ```
+- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
 
 It writes a self-contained **HTML file**; open it in a browser and **Print → Save as PDF**. Each ballot carries:
 
