@@ -10,6 +10,8 @@ In RCV-IRV, ballots are counted in rounds. In each round your ballot counts for 
 
 This isn't necessarily a spoiled or mismarked ballot. A voter can fill out their ballot perfectly and still have it exhaust.
 
+> **Common misconception:** *"Only single-marking (bullet) ballots exhaust."* Not so. A ballot that ranks **many** candidates still exhausts if **all of them** get eliminated — and a **ranking limit** (Minneapolis caps you at 3, New York City at 5) exhausts ballots even when the voter used *every* allowed slot. Exhaustion is about **whether your ranked candidates survive**, not **how many** you marked. Bullet-voted ballots are just the *easiest* way to exhaust, not the only way.
+
 **Same idea, many names:** inactive ballots, exhausted choices/ranks, non-transferable ballots, untransferred ballots, discarded/"wasted" ballots.
 
 ## Two distinct failures (often lumped together)
