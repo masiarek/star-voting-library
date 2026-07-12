@@ -17,6 +17,7 @@ Let a teacher / workshop leader / demo runner turn a STAR election into **printa
 **Out of scope — deliberately (the guard):**
 - **OCR / scan-to-YAML** (the *return* path). Needs a vision engine; specified in §6 as the roadmap, not built. Rationale: an unverified OCR pipeline that silently misreads a score is worse than none.
 - **Threading serials through BetterVoting's vote API** for digital "confirm counted." BV doesn't carry them and it isn't needed — the serial demo is complete on paper (§5.3). A truly *digital* verifiable count is **end-to-end verifiability (E2E-V)**, a cryptography research area, flatly out of scope.
+- **Extra ballot *options* — parked "someday, if asked":** other ballot *types* (Approval checkboxes, ranked-order grids), tear-off receipt stubs, localization (`--lang`), custom logos/branding, and multi-race-per-sheet ballots. Each is real polish or added capability but adds no *lesson* the single-race STAR paper ballot doesn't already teach; multi-race printing complicates both the sheet and the hand-count, and the "run 4 separate demos and compare" framing teaches the same thing with no code. (Revisit *only* if there's a concrete need — e.g. teaching the meta method-comparison **on paper**.)
 - The compass for every call above: **"does this add education, or just engineering?"** Education → build; engineering-only → drop.
 
 ## 3. Workflow supported
@@ -30,6 +31,18 @@ Let a teacher / workshop leader / demo runner turn a STAR election into **printa
 6. (roadmap) OCR paper → YAML         → LH engine
 ```
 The tool owns step 2. Steps 4–5 are the [count-by-hand](../../00_start_here/STAR_Voting/count_star_by_hand.md) and [teacher](../../00_start_here/STAR_Voting/teaching_star_voting.md) pages. Step 1 can use [`create_bv_test_election.py`](./create_bv_test_election.py).
+
+**The five workflows this enables** (all supported today; the loop above is the fullest one):
+
+| # | Workflow | Election defined in | Vote | Counted by | QR |
+|---|---|---|---|---|---|
+| 1 | **Pure paper, offline** (the simplest) | manual / a YAML | paper only | by hand | none (or `--qr-url`) |
+| 2 | **Paper + BV — the "compare" demo** | a BV election | paper and/or online | hand-count *vs.* BV | → the BV election |
+| 3 | **Create → print** | `create_bv_test_election.py` → id | paper and/or online | hand-count *vs.* BV | → BV |
+| 4 | **Meta method-comparison** | `meta_pets` (4 races) | online (or paper STAR) | winner changes per method | → `meta_pets` |
+| 5 | **Paper → LH engine** | manual / YAML | paper | transcribe → the engine | optional |
+
+#1 and #2 are the two that matter; #3 is #2 with the create step (the only worthwhile *smoothing* is having `create_bv_test_election.py` print the ready-to-run `bv_ballot_sheet.py` command — not yet done); #4 is a teaching framing (pair with `criteria_at_a_glance.md`); #5 is the offline-verify path.
 
 ## 4. Functional requirements — the tool
 
