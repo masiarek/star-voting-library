@@ -1,0 +1,23 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR mono-raise-delete — part 1: baseline, X wins
+ Tabulating 30 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: X, Y, Z
+    12 ×   X > Y      (5, 4, 0)
+     9 ×   Z > X > Y      (3, 2, 5)
+     9 ×   Z > Y      (0, 2, 3)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Z                 18  Elected
+X                 12  Rejected
+Y                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Z
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

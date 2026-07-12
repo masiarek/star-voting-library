@@ -1,0 +1,40 @@
+election_title: "STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses"
+
+scenario_description: |-
+  Part 2 of the STAR mono-raise-delete pair. The ONLY change from part 1
+  (mono_raise_delete_before.yaml): on the nine ballots that read Z>X>Y
+  (Z=5, X=3, Y=2, i.e. "3,2,5"), X is raised from 3 to 4 and the one candidate
+  now below X — Y — is deleted (dropped to 0). Those ballots become
+  Z=5, X=4, Y=0 ("4,0,5"). Z stays above X and is untouched, exactly as
+  mono-raise-delete prescribes ("delete all candidates now below X").
+
+  Effect: burying Y drops its total from 84 to 66, below Z's 72, so the finalists
+  change from {X, Y} to {X, Z}. X still leads the scoring round (now 96), but the
+  runoff is X vs Z, and Z beats X 18-12. X went from winning to losing after being
+  raised — STAR fails the mono-raise-delete criterion (Woodall 1996). It still
+  passes plain mono-raise (see the monotonicity_star_* pair, where the same kind
+  of change leaves X winning). Concept: 00_start_here/STAR_Voting/STAR_monotonicity.md.
+
+paradoxes: [non-monotonicity]
+voting_method: STAR
+num_winners: 1
+
+# The only change from part 1 is the middle bloc: "3,2,5" -> "4,0,5"
+# (X raised 3->4; Y, now below X, deleted to 0; Z unchanged, still above X).
+ballots: |-
+  X,Y,Z
+  12: 5,4,0
+  9: 4,0,5
+  9: 0,2,3
+
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+
+expected_winners:
+  - Z
+
+# file: mono_raise_delete_after.yaml
