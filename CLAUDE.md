@@ -198,6 +198,18 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   fine for *definitions*, weak for *verdicts*; **whenever we lean on one, disclose
   its lean inline** (as the naming decoder, `how_to_learn`, and the "leans toward"
   table do). Never trade the repo's neutrality for better niche coverage.
+- **Link key terms on first meaningful use — with restraint** (a gentle habit, not
+  an enforced gate). The first time a page uses a *jargon* term that has a canonical
+  home (a `topics/` hub, a concept page, or a `GLOSSARY` entry) — Condorcet
+  winner/loser, center squeeze, monotonicity, later-no-harm, favorite betrayal,
+  Equal Support, exhausted ballots, mutual majority, VSE, summability, Copeland /
+  Ranked Robin, spoiler effect, the impossibility theorems — link it there so a
+  newcomer can click through. But follow the overlinking discipline: (1) link to
+  *aid*, not decorate — skip common words and what the audience plainly knows;
+  (2) **never self-link** the page's own subject; (3) link a term **once** per page,
+  not every occurrence; (4) prefer the **topic hub** if one exists, else the concept
+  page, else the glossary. When in doubt, fewer links read better than a wall of blue.
+  (Not machine-checked — the failure mode is over-linking, not under-linking.)
 - **`_tabulated`** files are generated into a `<folder>_tabulated/` subfolder
   **nested inside the source file's own folder** (e.g.
   `01_Single_winner/black_curtain/black_curtain_tabulated/`); regenerate by
