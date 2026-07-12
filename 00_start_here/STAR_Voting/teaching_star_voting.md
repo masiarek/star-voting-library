@@ -60,6 +60,8 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 
 ## Running a real hand-count (for organizers)
 
+**Want the full hands-on loop?** [Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md) — create a BetterVoting election, **print matching paper ballots** with the [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) tool, have the room vote, hand-count, and check against BetterVoting.
+
 For an actual election, STAR is genuinely hand-countable. The Equal Vote Coalition's official procedure is worth following: [**BetterVoting — Hand Counting STAR**](https://docs.bettervoting.com/help/hand_count.html). The gist:
 
 - **Scoring round:** a *caller* reads each ballot aloud, a *verifier* confirms, and **one tallier per star-level** (five talliers) marks tally sheets; multiply each tally by its star value and sum. An *observer* watches for errors.
