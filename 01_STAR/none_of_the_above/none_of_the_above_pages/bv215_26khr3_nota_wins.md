@@ -44,36 +44,17 @@ Ada,Bruno,None of the Above
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../none_of_the_above_tabulated/bv215_26khr3_nota_wins_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                          |         * Ada         |         Bruno        | * None of the Above  |
--------------------------------------------------------------------------------------------------
-                  * Ada > |          ---          |      2 - 4 - 0       |      2 - 0 - 4       |
-                  Bruno > |       0 - 4 - 2       |         ---          |      2 - 0 - 4       |
-    * None of the Above > |       4 - 0 - 2       |      4 - 0 - 2       |         ---          |
-
-[Condorcet Winner]
-  Condorcet Winner: None of the Above — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 6 ballots.
 Count × Ada,Bruno,None of the Above
     4 ×   0,    0,                5
     1 ×   5,    1,                0
     1 ×   5,    1,                &
-
-[Score Distribution] (how many ballots gave each star rating)
-                        Score
-Candidate          5  4  3  2  1  0  Abs  | Total   Avg
-Ada                2  0  0  0  0  4    0  |    10   1.7
-Bruno              0  0  0  0  2  4    0  |     2   0.3
-None of the Above  4  0  0  0  0  1    1  |    20   4.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -98,6 +79,35 @@ None of the Above  4  0  0  0  0  1    1  |    20   4.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  None of the Above
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                          |         * Ada         |         Bruno        | * None of the Above  |
+-------------------------------------------------------------------------------------------------
+                  * Ada > |          ---          |      2 - 4 - 0       |      2 - 0 - 4       |
+                  Bruno > |       0 - 4 - 2       |         ---          |      2 - 0 - 4       |
+    * None of the Above > |       4 - 0 - 2       |      4 - 0 - 2       |         ---          |
+
+[Condorcet Winner]
+  Condorcet Winner: None of the Above — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                        Score
+Candidate          5  4  3  2  1  0  Abs  | Total   Avg
+Ada                2  0  0  0  0  4    0  |    10   1.7
+Bruno              0  0  0  0  2  4    0  |     2   0.3
+None of the Above  4  0  0  0  0  1    1  |    20   4.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../none_of_the_above_tabulated/bv215_26khr3_nota_wins_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

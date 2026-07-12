@@ -33,23 +33,9 @@ Count:VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/03_lunch_veggie_vs_meat_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                    |  * VeggieCurry  | * TofuStirFry  |   GardenSalad  |   BeefBurger   |
-------------------------------------------------------------------------------------------
-    * VeggieCurry > |       ---       | 42 - 30 - 28   | 54 - 30 - 16   | 70 -  0 - 30   |
-    * TofuStirFry > |  28 - 30 - 42   |      ---       | 28 - 56 - 16   | 70 -  0 - 30   |
-      GardenSalad > |  16 - 30 - 54   | 16 - 56 - 28   |      ---       | 70 -  0 - 30   |
-       BeefBurger > |  30 -  0 - 70   | 30 -  0 - 70   | 30 -  0 - 70   |      ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: VeggieCurry — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = VeggieCurry
   Choose-One (Plurality) = BeefBurger   (differs from STAR)
@@ -63,6 +49,7 @@ Legend: For - Equal Support - Against
      Choose-One. STAR elected VeggieCurry.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
@@ -70,14 +57,6 @@ Count × VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
    28 ×           4,          5,          2,         0
    26 ×           5,          4,          4,         0
    16 ×           4,          2,          5,         0
-
-[Score Distribution] (how many ballots gave each star rating)
-                     Score
-Candidate     5   4   3   2   1   0  | Total   Avg
-VeggieCurry  26  44   0   0   0  30  |   306   3.1
-TofuStirFry  28  26   0  16   0  30  |   276   2.8
-GardenSalad  16  26   0  28   0  30  |   240   2.4
-BeefBurger   30   0   0   0   0  70  |   150   1.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -103,6 +82,37 @@ BeefBurger   30   0   0   0   0  70  |   150   1.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  VeggieCurry
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |  * VeggieCurry  | * TofuStirFry  |   GardenSalad  |   BeefBurger   |
+------------------------------------------------------------------------------------------
+    * VeggieCurry > |       ---       | 42 - 30 - 28   | 54 - 30 - 16   | 70 -  0 - 30   |
+    * TofuStirFry > |  28 - 30 - 42   |      ---       | 28 - 56 - 16   | 70 -  0 - 30   |
+      GardenSalad > |  16 - 30 - 54   | 16 - 56 - 28   |      ---       | 70 -  0 - 30   |
+       BeefBurger > |  30 -  0 - 70   | 30 -  0 - 70   | 30 -  0 - 70   |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: VeggieCurry — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate     5   4   3   2   1   0  | Total   Avg
+VeggieCurry  26  44   0   0   0  30  |   306   3.1
+TofuStirFry  28  26   0  16   0  30  |   276   2.8
+GardenSalad  16  26   0  28   0  30  |   240   2.4
+BeefBurger   30   0   0   0   0  70  |   150   1.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/03_lunch_veggie_vs_meat_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

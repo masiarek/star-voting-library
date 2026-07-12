@@ -45,22 +45,11 @@ A, B
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |   * B     |
------------------------------------------
-         * A > |    ---     |2 - 2 - 1  |
-         * B > | 1 - 2 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: A — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots. Note: 1 of 5 ballots is marked as an abstention.
 A,B
@@ -70,12 +59,6 @@ A,B
 5,0
 -,-
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-A          2  1  0  0  0  1    1  |    14   3.5
-B          2  0  0  0  0  2    1  |    10   2.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -99,6 +82,33 @@ B          2  0  0  0  0  2    1  |    10   2.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  A
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |
+-----------------------------------------
+         * A > |    ---     |2 - 2 - 1  |
+         * B > | 1 - 2 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: A — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          2  1  0  0  0  1    1  |    14   3.5
+B          2  0  0  0  0  2    1  |    10   2.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -20,21 +20,9 @@ Ada, Ben
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_demo_dropbox_tabulated/Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    |  * Ben    |
------------------------------------------
-       * Ada > |    ---     |1 - 0 - 1  |
-       * Ben > | 1 - 0 - 1  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Ada, Ben (pairwise ties)
-
 [Divergence from STAR]
   STAR    = Ben
   RCV-IRV = Ada   (differs from STAR)
@@ -46,16 +34,12 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _demo_dropbox_tabulated/Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Ada,Ben
   4,  0
   0,  4
-
-[Score Distribution] (number of ballots giving each score)
-     5  4  3  2  1  0  | Total   Avg
-Ada  0  1  0  0  0  1  |     4   2.0
-Ben  0  1  0  0  0  1  |     4   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -100,6 +84,32 @@ Ben  0  1  0  0  0  1  |     4   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ben
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    |  * Ben    |
+-----------------------------------------
+       * Ada > |    ---     |1 - 0 - 1  |
+       * Ben > | 1 - 0 - 1  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ada, Ben (pairwise ties)
+
+[Score Distribution] (number of ballots giving each score)
+     5  4  3  2  1  0  | Total   Avg
+Ada  0  1  0  0  0  1  |     4   2.0
+Ben  0  1  0  0  0  1  |     4   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_demo_dropbox_tabulated/Ballot Data - The BV recipe (the _crazy_ scenario)-jfk7pd_bv_order_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

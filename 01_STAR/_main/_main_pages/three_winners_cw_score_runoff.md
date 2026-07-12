@@ -37,22 +37,9 @@ Ann, Bob, Carl
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/three_winners_cw_score_runoff_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ann    |  * Bob    |  * Carl   |
------------------------------------------------------
-         Ann > |    ---     |3 - 0 - 2  |3 - 0 - 2  |
-       * Bob > | 2 - 0 - 3  |   ---     |3 - 0 - 2  |
-      * Carl > | 2 - 0 - 3  |2 - 0 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Ann — STAR elected Bob instead (Ann was eliminated in the scoring round)
-
 [Divergence from STAR]
   STAR                   = Bob
   Choose-One (Plurality) = Ann   (differs from STAR)
@@ -74,20 +61,13 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Count × Ann,Bob,Carl
     3 ×   5,  4,   3
     2 ×   0,  3,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ann        3  0  0  0  0  2  |    15   3.0
-Bob        0  3  2  0  0  0  |    18   3.6
-Carl       2  0  3  0  0  0  |    19   3.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -112,6 +92,35 @@ Carl       2  0  3  0  0  0  |    19   3.8
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bob
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Ann    |  * Bob    |  * Carl   |
+-----------------------------------------------------
+         Ann > |    ---     |3 - 0 - 2  |3 - 0 - 2  |
+       * Bob > | 2 - 0 - 3  |   ---     |3 - 0 - 2  |
+      * Carl > | 2 - 0 - 3  |2 - 0 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ann — STAR elected Bob instead (Ann was eliminated in the scoring round)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        3  0  0  0  0  2  |    15   3.0
+Bob        0  3  2  0  0  0  |    18   3.6
+Carl       2  0  3  0  0  0  |    19   3.8
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/three_winners_cw_score_runoff_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

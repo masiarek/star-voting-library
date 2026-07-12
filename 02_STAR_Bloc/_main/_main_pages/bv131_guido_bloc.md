@@ -44,22 +44,9 @@ Cand1,Cand2,Cand3
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv131_guido_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Cand1   | * Cand2   |   Cand3   |
------------------------------------------------------
-     * Cand1 > |    ---     |1 - 1 - 1  |1 - 0 - 2  |
-     * Cand2 > | 1 - 1 - 1  |   ---     |1 - 0 - 2  |
-       Cand3 > | 2 - 0 - 1  |2 - 0 - 1  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Cand3 — STAR elected Cand2 instead (Cand3 was eliminated in the scoring round)
-
 [Divergence from STAR]
   STAR               = Cand2
   RCV-IRV            = Cand3   (differs from STAR)
@@ -73,19 +60,13 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: _main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 3 ballots to fill 2 seats.
 Cand1,Cand2,Cand3
     1,    5,    2
     0,    0,    1
     5,    1,    2
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Cand1      1  0  0  0  1  1  |     6   2.0
-Cand2      1  0  0  0  1  1  |     6   2.0
-Cand3      0  0  0  2  1  0  |     5   1.7
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -129,6 +110,7 @@ Cand3      0  0  0  2  1  0  |     5   1.7
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Cand1         -- 6 -- First place
@@ -152,6 +134,35 @@ Cand3      0  0  0  2  1  0  |     5   1.7
  Cand2
  Cand3
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Cand1   | * Cand2   |   Cand3   |
+-----------------------------------------------------
+     * Cand1 > |    ---     |1 - 1 - 1  |1 - 0 - 2  |
+     * Cand2 > | 1 - 1 - 1  |   ---     |1 - 0 - 2  |
+       Cand3 > | 2 - 0 - 1  |2 - 0 - 1  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cand3 — STAR elected Cand2 instead (Cand3 was eliminated in the scoring round)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Cand1      1  0  0  0  1  1  |     6   2.0
+Cand2      1  0  0  0  1  1  |     6   2.0
+Cand3      0  0  0  2  1  0  |     5   1.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv131_guido_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

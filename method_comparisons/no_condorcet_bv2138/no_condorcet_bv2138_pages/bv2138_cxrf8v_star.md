@@ -31,24 +31,9 @@ Abby,Brad,Cora,Dave,Erin
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                    |     * Abby      |    * Brad      |      Cora      |      Dave      |      Erin      |
------------------------------------------------------------------------------------------------------------
-           * Abby > |       ---       |458 -   0 - 463 |461 -   0 - 460 |485 -   0 - 436 |511 -   0 - 410 |
-           * Brad > | 463 -   0 - 458 |      ---       |461 -   0 - 460 |312 -   0 - 609 |623 -   0 - 298 |
-             Cora > | 460 -   0 - 461 |460 -   0 - 461 |      ---       |460 -   0 - 461 |460 -   0 - 461 |
-             Dave > | 436 -   0 - 485 |609 -   0 - 312 |461 -   0 - 460 |      ---       |311 -   0 - 610 |
-             Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Abby > Erin > Dave > Brad > Abby)
-
 [Divergence from STAR]
   STAR     = Brad
   RCV-IRV  = Dave   (differs from STAR)
@@ -68,8 +53,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 921 ballots.
 Count × Abby,Brad,Cora,Dave,Erin
@@ -86,15 +71,6 @@ Count × Abby,Brad,Cora,Dave,Erin
    21 ×    4,   3,   1,   5,   2
    13 ×    3,   5,   1,   2,   4
    12 ×    4,   5,   1,   2,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate    5    4    3    2    1    0  | Total   Avg
-Abby        98  221  356  148   98    0  |  2836   3.1
-Brad       312  128   44  139  298    0  |  2780   3.0
-Cora       200  260    0  260  201    0  |  2761   3.0
-Dave       311    0  125  323  162    0  |  2738   3.0
-Erin         0  312  396   51  162    0  |  2700   2.9
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -121,6 +97,39 @@ Erin         0  312  396   51  162    0  |  2700   2.9
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Brad
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |     * Abby      |    * Brad      |      Cora      |      Dave      |      Erin      |
+-----------------------------------------------------------------------------------------------------------
+           * Abby > |       ---       |458 -   0 - 463 |461 -   0 - 460 |485 -   0 - 436 |511 -   0 - 410 |
+           * Brad > | 463 -   0 - 458 |      ---       |461 -   0 - 460 |312 -   0 - 609 |623 -   0 - 298 |
+             Cora > | 460 -   0 - 461 |460 -   0 - 461 |      ---       |460 -   0 - 461 |460 -   0 - 461 |
+             Dave > | 436 -   0 - 485 |609 -   0 - 312 |461 -   0 - 460 |      ---       |311 -   0 - 610 |
+             Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Abby > Erin > Dave > Brad > Abby)
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Abby        98  221  356  148   98    0  |  2836   3.1
+Brad       312  128   44  139  298    0  |  2780   3.0
+Cora       200  260    0  260  201    0  |  2761   3.0
+Dave       311    0  125  323  162    0  |  2738   3.0
+Erin         0  312  396   51  162    0  |  2700   2.9
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

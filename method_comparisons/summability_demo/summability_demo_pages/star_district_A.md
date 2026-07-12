@@ -27,36 +27,17 @@ Maple, Oak, Pine
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../summability_demo_tabulated/star_district_A_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Maple   |  * Oak    |    Pine   |
------------------------------------------------------
-     * Maple > |    ---     |2 - 0 - 1  |2 - 0 - 1  |
-       * Oak > | 1 - 0 - 2  |   ---     |2 - 0 - 1  |
-        Pine > | 1 - 0 - 2  |1 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Maple — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Maple,Oak,Pine
     5,  4,   0
     5,  3,   1
     0,  2,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Maple      2  0  0  0  0  1  |    10   3.3
-Oak        0  1  1  1  0  0  |     9   3.0
-Pine       1  0  0  0  1  1  |     6   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -81,6 +62,35 @@ Pine       1  0  0  0  1  1  |     6   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Maple
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Maple   |  * Oak    |    Pine   |
+-----------------------------------------------------
+     * Maple > |    ---     |2 - 0 - 1  |2 - 0 - 1  |
+       * Oak > | 1 - 0 - 2  |   ---     |2 - 0 - 1  |
+        Pine > | 1 - 0 - 2  |1 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Maple — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Maple      2  0  0  0  0  1  |    10   3.3
+Oak        0  1  1  1  0  0  |     9   3.0
+Pine       1  0  0  0  1  1  |     6   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../summability_demo_tabulated/star_district_A_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

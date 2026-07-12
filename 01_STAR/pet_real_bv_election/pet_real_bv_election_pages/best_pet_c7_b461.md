@@ -483,27 +483,11 @@ Bird, Cat, Python, Dog, Fish, Rabbit, Rat
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pet_real_bv_election_tabulated/best_pet_c7_b461_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                    |       Bird      |     * Cat      |     Python     |     * Dog      |      Fish      |     Rabbit     |       Rat      |
----------------------------------------------------------------------------------------------------------------------------------------------
-             Bird > |       ---       | 59 -  54 - 348 |295 -  96 -  70 | 57 -  43 - 361 |184 - 129 - 148 |149 - 133 - 179 |247 -  99 - 115 |
-            * Cat > | 348 -  54 -  59 |      ---       |396 -  38 -  27 |173 -  98 - 190 |357 -  57 -  47 |350 -  66 -  45 |382 -  51 -  28 |
-           Python > |  70 -  96 - 295 | 27 -  38 - 396 |      ---       | 37 -  40 - 384 | 78 - 116 - 267 | 69 -  93 - 299 | 98 - 184 - 179 |
-            * Dog > | 361 -  43 -  57 |190 -  98 - 173 |384 -  40 -  37 |      ---       |373 -  51 -  37 |363 -  56 -  42 |388 -  42 -  31 |
-             Fish > | 148 - 129 - 184 | 47 -  57 - 357 |267 - 116 -  78 | 37 -  51 - 373 |      ---       |142 - 135 - 184 |229 - 114 - 118 |
-           Rabbit > | 179 - 133 - 149 | 45 -  66 - 350 |299 -  93 -  69 | 42 -  56 - 363 |184 - 135 - 142 |      ---       |251 - 128 -  82 |
-              Rat > | 115 -  99 - 247 | 28 -  51 - 382 |179 - 184 -  98 | 31 -  42 - 388 |118 - 114 - 229 | 82 - 128 - 251 |      ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: Dog — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 461 ballots. Note: 1 of 461 ballots is marked as an abstention.
 Count × Bird,Cat,Python,Dog,Fish,Rabbit,Rat
@@ -938,17 +922,6 @@ Count × Bird,Cat,Python,Dog,Fish,Rabbit,Rat
     1 ×    4,  5,     3,  5,   3,     4,  2
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
 
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate    5    4    3    2    1    0  Abs  | Total   Avg
-Bird        31   49  114  112   61   65   29  |   978   2.3
-Cat        210  119   51   25   21   20   15  |  1750   3.9
-Python      12   23   32   59   83  193   59  |   449   1.1
-Dog        231  113   52   16   12   22   15  |  1807   4.1
-Fish        15   46  106  107   72   70   45  |   863   2.1
-Rabbit      20   55  121  101   78   44   42  |   963   2.3
-Rat         17   31   57   58   93  162   43  |   589   1.4
-
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Dog           -- 1807 -- First place
@@ -976,6 +949,43 @@ Rat         17   31   57   58   93  162   43  |   589   1.4
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Dog
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |       Bird      |     * Cat      |     Python     |     * Dog      |      Fish      |     Rabbit     |       Rat      |
+---------------------------------------------------------------------------------------------------------------------------------------------
+             Bird > |       ---       | 59 -  54 - 348 |295 -  96 -  70 | 57 -  43 - 361 |184 - 129 - 148 |149 - 133 - 179 |247 -  99 - 115 |
+            * Cat > | 348 -  54 -  59 |      ---       |396 -  38 -  27 |173 -  98 - 190 |357 -  57 -  47 |350 -  66 -  45 |382 -  51 -  28 |
+           Python > |  70 -  96 - 295 | 27 -  38 - 396 |      ---       | 37 -  40 - 384 | 78 - 116 - 267 | 69 -  93 - 299 | 98 - 184 - 179 |
+            * Dog > | 361 -  43 -  57 |190 -  98 - 173 |384 -  40 -  37 |      ---       |373 -  51 -  37 |363 -  56 -  42 |388 -  42 -  31 |
+             Fish > | 148 - 129 - 184 | 47 -  57 - 357 |267 - 116 -  78 | 37 -  51 - 373 |      ---       |142 - 135 - 184 |229 - 114 - 118 |
+           Rabbit > | 179 - 133 - 149 | 45 -  66 - 350 |299 -  93 -  69 | 42 -  56 - 363 |184 - 135 - 142 |      ---       |251 - 128 -  82 |
+              Rat > | 115 -  99 - 247 | 28 -  51 - 382 |179 - 184 -  98 | 31 -  42 - 388 |118 - 114 - 229 | 82 - 128 - 251 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Dog — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  Abs  | Total   Avg
+Bird        31   49  114  112   61   65   29  |   978   2.3
+Cat        210  119   51   25   21   20   15  |  1750   3.9
+Python      12   23   32   59   83  193   59  |   449   1.1
+Dog        231  113   52   16   12   22   15  |  1807   4.1
+Fish        15   46  106  107   72   70   45  |   863   2.1
+Rabbit      20   55  121  101   78   44   42  |   963   2.3
+Rat         17   31   57   58   93  162   43  |   589   1.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pet_real_bv_election_tabulated/best_pet_c7_b461_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -35,40 +35,21 @@ Amy,Boone,Cass
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Amy    |   Boone   |  * Cass   |
------------------------------------------------------
-       * Amy > |    ---     |4 - 7 - 4  |4 - 4 - 7  |
-       Boone > | 4 - 7 - 4  |   ---     |4 - 4 - 7  |
-      * Cass > | 7 - 4 - 4  |7 - 4 - 4  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Cass — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Cass
   Approval = Amy   (differs from STAR)
 
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 15 ballots.
 Count × Amy,Boone,Cass
     7 ×   0,    0,   1
     4 ×   1,    0,   0
     4 ×   0,    1,   0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Amy         0   0   0   0   4  11  |     4   0.3
-Boone       0   0   0   0   4  11  |     4   0.3
-Cass        0   0   0   0   7   8  |     7   0.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -122,6 +103,35 @@ Cass        0   0   0   0   7   8  |     7   0.5
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Cass
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Amy    |   Boone   |  * Cass   |
+-----------------------------------------------------
+       * Amy > |    ---     |4 - 7 - 4  |4 - 4 - 7  |
+       Boone > | 4 - 7 - 4  |   ---     |4 - 4 - 7  |
+      * Cass > | 7 - 4 - 4  |7 - 4 - 4  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cass — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Amy         0   0   0   0   4  11  |     4   0.3
+Boone       0   0   0   0   4  11  |     4   0.3
+Cass        0   0   0   0   7   8  |     7   0.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

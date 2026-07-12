@@ -37,29 +37,15 @@ Count:Andre,Blake,Carmen,Dana,Evan
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/count_simplicity_star_vs_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Andre    |    Blake    |  * Carmen   |     Dana    |     Evan    |
------------------------------------------------------------------------------------------
-       * Andre > |     ---      |32 -  0 -  8 | 9 -  0 - 31 |33 -  0 -  7 |34 -  0 -  6 |
-         Blake > |  8 -  0 - 32 |    ---      | 8 -  0 - 32 |33 -  0 -  7 |34 -  0 -  6 |
-      * Carmen > | 31 -  0 -  9 |32 -  0 -  8 |    ---      |33 -  0 -  7 |34 -  0 -  6 |
-          Dana > |  7 -  0 - 33 | 7 -  0 - 33 | 7 -  0 - 33 |    ---      |34 -  0 -  6 |
-          Evan > |  6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Carmen — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Carmen
   Approval = Andre   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 40 ballots.
 Count × Andre,Blake,Carmen,Dana,Evan
@@ -68,15 +54,6 @@ Count × Andre,Blake,Carmen,Dana,Evan
     8 ×     3,    5,     4,   2,   1
     7 ×     3,    2,     4,   5,   1
     6 ×     3,    2,     4,   1,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Andre       9  10  21   0   0   0  |   148   3.7
-Blake       8   0  19  13   0   0  |   123   3.1
-Carmen     10  30   0   0   0   0  |   170   4.3
-Dana        7   0   0  27   6   0  |    95   2.4
-Evan        6   0   0   0  34   0  |    64   1.6
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -103,6 +80,39 @@ Evan        6   0   0   0  34   0  |    64   1.6
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Carmen
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Andre    |    Blake    |  * Carmen   |     Dana    |     Evan    |
+-----------------------------------------------------------------------------------------
+       * Andre > |     ---      |32 -  0 -  8 | 9 -  0 - 31 |33 -  0 -  7 |34 -  0 -  6 |
+         Blake > |  8 -  0 - 32 |    ---      | 8 -  0 - 32 |33 -  0 -  7 |34 -  0 -  6 |
+      * Carmen > | 31 -  0 -  9 |32 -  0 -  8 |    ---      |33 -  0 -  7 |34 -  0 -  6 |
+          Dana > |  7 -  0 - 33 | 7 -  0 - 33 | 7 -  0 - 33 |    ---      |34 -  0 -  6 |
+          Evan > |  6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Carmen — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Andre       9  10  21   0   0   0  |   148   3.7
+Blake       8   0  19  13   0   0  |   123   3.1
+Carmen     10  30   0   0   0   0  |   170   4.3
+Dana        7   0   0  27   6   0  |    95   2.4
+Evan        6   0   0   0  34   0  |    64   1.6
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/count_simplicity_star_vs_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

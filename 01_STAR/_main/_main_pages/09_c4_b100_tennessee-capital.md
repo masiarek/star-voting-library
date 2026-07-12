@@ -25,23 +25,9 @@ Memphis,Nashville,Chattanooga,Knoxville
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/09_c4_b100_tennessee-capital_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                    |      Memphis    |  * Nashville   | * Chattanooga  |    Knoxville   |
-------------------------------------------------------------------------------------------
-          Memphis > |       ---       | 42 -  0 - 58   | 42 -  0 - 58   | 42 -  0 - 58   |
-      * Nashville > |  58 -  0 - 42   |      ---       | 68 -  0 - 32   | 68 -  0 - 32   |
-    * Chattanooga > |  58 -  0 - 42   | 32 -  0 - 68   |      ---       | 83 -  0 - 17   |
-        Knoxville > |  58 -  0 - 42   | 32 -  0 - 68   | 17 -  0 - 83   |      ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: Nashville — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Nashville
   Choose-One (Plurality) = Memphis   (differs from STAR)
@@ -54,6 +40,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/09_c4_b100_tennessee-capital_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Memphis,Nashville,Chattanooga,Knoxville
@@ -61,14 +48,6 @@ Count × Memphis,Nashville,Chattanooga,Knoxville
    26 ×       2,        5,          4,        3
    17 ×       2,        3,          4,        5
    15 ×       2,        3,          5,        4
-
-[Score Distribution] (how many ballots gave each star rating)
-                     Score
-Candidate     5   4   3   2   1   0  | Total   Avg
-Memphis      42   0   0  58   0   0  |   326   3.3
-Nashville    26  42  32   0   0   0  |   394   3.9
-Chattanooga  15  43  42   0   0   0  |   373   3.7
-Knoxville    17  15  26  42   0   0  |   307   3.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -94,6 +73,37 @@ Knoxville    17  15  26  42   0   0  |   307   3.1
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Nashville
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |      Memphis    |  * Nashville   | * Chattanooga  |    Knoxville   |
+------------------------------------------------------------------------------------------
+          Memphis > |       ---       | 42 -  0 - 58   | 42 -  0 - 58   | 42 -  0 - 58   |
+      * Nashville > |  58 -  0 - 42   |      ---       | 68 -  0 - 32   | 68 -  0 - 32   |
+    * Chattanooga > |  58 -  0 - 42   | 32 -  0 - 68   |      ---       | 83 -  0 - 17   |
+        Knoxville > |  58 -  0 - 42   | 32 -  0 - 68   | 17 -  0 - 83   |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Nashville — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate     5   4   3   2   1   0  | Total   Avg
+Memphis      42   0   0  58   0   0  |   326   3.3
+Nashville    26  42  32   0   0   0  |   394   3.9
+Chattanooga  15  43  42   0   0   0  |   373   3.7
+Knoxville    17  15  26  42   0   0  |   307   3.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/09_c4_b100_tennessee-capital_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

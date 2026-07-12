@@ -49,22 +49,9 @@ Count:Liberal,Moderate,Conservative
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                     |    * Liberal     |   * Moderate    |   Conservative  |
------------------------------------------------------------------------------
-         * Liberal > |       ---        |  45 -  0 - 55   |  51 -  0 - 49   |
-        * Moderate > |   55 -  0 - 45   |      ---        |  57 -  0 - 43   |
-      Conservative > |   49 -  0 - 51   |  43 -  0 - 57   |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: Moderate — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Moderate
   Choose-One (Plurality) = Liberal   (differs from STAR)
@@ -85,8 +72,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Liberal,Moderate,Conservative
@@ -94,13 +81,6 @@ Count × Liberal,Moderate,Conservative
    43 ×       0,       2,           5
     6 ×       2,       5,           0
     6 ×       0,       5,           2
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate      5   4   3   2   1   0  | Total   Avg
-Liberal       45   0   0   6   0  49  |   237   2.4
-Moderate      12   0   0  88   0   0  |   236   2.4
-Conservative  43   0   0   6   0  51  |   227   2.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -125,6 +105,35 @@ Conservative  43   0   0   6   0  51  |   227   2.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Moderate
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                     |    * Liberal     |   * Moderate    |   Conservative  |
+-----------------------------------------------------------------------------
+         * Liberal > |       ---        |  45 -  0 - 55   |  51 -  0 - 49   |
+        * Moderate > |   55 -  0 - 45   |      ---        |  57 -  0 - 43   |
+      Conservative > |   49 -  0 - 51   |  43 -  0 - 57   |      ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: Moderate — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate      5   4   3   2   1   0  | Total   Avg
+Liberal       45   0   0   6   0  49  |   237   2.4
+Moderate      12   0   0  88   0   0  |   236   2.4
+Conservative  43   0   0   6   0  51  |   227   2.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

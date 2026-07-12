@@ -29,23 +29,11 @@ Wren, Yarrow, Zinnia
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Wren   | * Yarrow  |   Zinnia  |
------------------------------------------------------
-      * Wren > |    ---     |4 - 0 - 1  |4 - 0 - 1  |
-    * Yarrow > | 1 - 0 - 4  |   ---     |4 - 0 - 1  |
-      Zinnia > | 1 - 0 - 4  |1 - 0 - 4  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Wren — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Count × Wren,Yarrow,Zinnia
@@ -53,13 +41,6 @@ Count × Wren,Yarrow,Zinnia
     1 ×    5,     3,     1
     1 ×    4,     5,     0
     1 ×    2,     1,     5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Wren       3  1  0  1  0  0  |    21   4.2
-Yarrow     1  0  1  2  1  0  |    13   2.6
-Zinnia     1  0  0  0  1  3  |     6   1.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -84,6 +65,35 @@ Zinnia     1  0  0  0  1  3  |     6   1.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Wren
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Wren   | * Yarrow  |   Zinnia  |
+-----------------------------------------------------
+      * Wren > |    ---     |4 - 0 - 1  |4 - 0 - 1  |
+    * Yarrow > | 1 - 0 - 4  |   ---     |4 - 0 - 1  |
+      Zinnia > | 1 - 0 - 4  |1 - 0 - 4  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Wren — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Wren       3  1  0  1  0  0  |    21   4.2
+Yarrow     1  0  1  2  1  0  |    13   2.6
+Zinnia     1  0  0  0  1  3  |     6   1.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

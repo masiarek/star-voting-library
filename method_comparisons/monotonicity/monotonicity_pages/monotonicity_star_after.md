@@ -28,22 +28,9 @@ Count:X,Y,Z
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../monotonicity_tabulated/monotonicity_star_after_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     * X      |    * Y      |      Z      |
--------------------------------------------------------------
-           * X > |     ---      |26 -  0 -  8 |16 -  0 - 18 |
-           * Y > |  8 -  0 - 26 |    ---      |24 -  0 - 10 |
-             Z > | 18 -  0 - 16 |10 -  0 - 24 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: X > Y > Z > X)
-
 [Divergence from STAR]
   STAR    = X
   RCV-IRV = Z   (differs from STAR)
@@ -55,19 +42,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: monotonicity_tabulated/monotonicity_star_after_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 34 ballots.
 Count × X,Y,Z
    16 × 5,3,0
    10 × 3,0,5
     8 × 0,5,3
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-X          16   0  10   0   0   8  |   110   3.2
-Y           8   0  16   0   0  10  |    88   2.6
-Z          10   0   8   0   0  16  |    74   2.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -92,6 +73,35 @@ Z          10   0   8   0   0  16  |    74   2.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  X
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * X      |    * Y      |      Z      |
+-------------------------------------------------------------
+           * X > |     ---      |26 -  0 -  8 |16 -  0 - 18 |
+           * Y > |  8 -  0 - 26 |    ---      |24 -  0 - 10 |
+             Z > | 18 -  0 - 16 |10 -  0 - 24 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: X > Y > Z > X)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+X          16   0  10   0   0   8  |   110   3.2
+Y           8   0  16   0   0  10  |    88   2.6
+Z          10   0   8   0   0  16  |    74   2.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../monotonicity_tabulated/monotonicity_star_after_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

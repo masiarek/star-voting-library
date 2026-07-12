@@ -23,32 +23,15 @@ Almond, Brownie
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_02_runoff_tie_2cand_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Almond   | * Brownie  |
---------------------------------------------
-     * Almond > |     ---     | 0 - 2 - 0  |
-    * Brownie > |  0 - 2 - 0  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Almond, Brownie (pairwise ties)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Count × Almond,Brownie
     2 ×      5,      5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Almond     2  0  0  0  0  0  |    10   5.0
-Brownie    2  0  0  0  0  0  |    10   5.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +76,33 @@ Brownie    2  0  0  0  0  0  |    10   5.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Almond
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Almond   | * Brownie  |
+--------------------------------------------
+     * Almond > |     ---     | 0 - 2 - 0  |
+    * Brownie > |  0 - 2 - 0  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Almond, Brownie (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     2  0  0  0  0  0  |    10   5.0
+Brownie    2  0  0  0  0  0  |    10   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_02_runoff_tie_2cand_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

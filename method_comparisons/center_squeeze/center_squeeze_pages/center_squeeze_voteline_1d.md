@@ -30,22 +30,9 @@ Red, Green, Yellow
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../center_squeeze_tabulated/center_squeeze_voteline_1d_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                    |        Red      |    * Green     |   * Yellow     |
--------------------------------------------------------------------------
-              Red > |       ---       |332 -   0 - 666 |470 -   0 - 528 |
-          * Green > | 666 -   0 - 332 |      ---       |645 -   0 - 353 |
-         * Yellow > | 528 -   0 - 470 |353 -   0 - 645 |      ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: Green — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Green
   Choose-One (Plurality) = Yellow   (differs from STAR)
@@ -58,6 +45,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: center_squeeze_tabulated/center_squeeze_voteline_1d_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 998 ballots.
 Count × Red,Green,Yellow
@@ -65,13 +53,6 @@ Count × Red,Green,Yellow
   332 ×   5,    3,     0
   175 ×   1,    5,     3
   138 ×   3,    5,     1
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate    5    4    3    2    1    0  | Total   Avg
-Red        332    0  138    0  175  353  |  2249   2.3
-Green      313    0  685    0    0    0  |  3620   3.6
-Yellow     353    0  175    0  138  332  |  2428   2.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -96,6 +77,35 @@ Yellow     353    0  175    0  138  332  |  2428   2.4
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Green
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |        Red      |    * Green     |   * Yellow     |
+-------------------------------------------------------------------------
+              Red > |       ---       |332 -   0 - 666 |470 -   0 - 528 |
+          * Green > | 666 -   0 - 332 |      ---       |645 -   0 - 353 |
+         * Yellow > | 528 -   0 - 470 |353 -   0 - 645 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Green — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Red        332    0  138    0  175  353  |  2249   2.3
+Green      313    0  685    0    0    0  |  3620   3.6
+Yellow     353    0  175    0  138  332  |  2428   2.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../center_squeeze_tabulated/center_squeeze_voteline_1d_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

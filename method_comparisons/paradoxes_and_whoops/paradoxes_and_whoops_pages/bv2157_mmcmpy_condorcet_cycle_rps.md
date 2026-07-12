@@ -27,40 +27,21 @@ Rock, Paper, Scissors
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Rock    |  * Paper    |   Scissors  |
--------------------------------------------------------------
-        * Rock > |     ---      |67 -  0 - 33 |35 -  0 - 65 |
-       * Paper > | 33 -  0 - 67 |    ---      |68 -  0 - 32 |
-      Scissors > | 65 -  0 - 35 |32 -  0 - 68 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Rock > Paper > Scissors > Rock)
-
 [Divergence from STAR]
   STAR     = Rock
   Approval = Paper   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Rock,Paper,Scissors
    35 ×    5,    3,       0
    33 ×    0,    5,       3
    32 ×    3,    0,       5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Rock       35   0  32   0   0  33  |   271   2.7
-Paper      33   0  35   0   0  32  |   270   2.7
-Scissors   32   0  33   0   0  35  |   259   2.6
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -85,6 +66,35 @@ Scissors   32   0  33   0   0  35  |   259   2.6
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Rock
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Rock    |  * Paper    |   Scissors  |
+-------------------------------------------------------------
+        * Rock > |     ---      |67 -  0 - 33 |35 -  0 - 65 |
+       * Paper > | 33 -  0 - 67 |    ---      |68 -  0 - 32 |
+      Scissors > | 65 -  0 - 35 |32 -  0 - 68 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Rock > Paper > Scissors > Rock)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Rock       35   0  32   0   0  33  |   271   2.7
+Paper      33   0  35   0   0  32  |   270   2.7
+Scissors   32   0  33   0   0  35  |   259   2.6
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

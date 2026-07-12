@@ -50,23 +50,11 @@ Apple, Banana, Cherry
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Apple   | * Banana  |   Cherry  |
------------------------------------------------------
-     * Apple > |    ---     |1 - 4 - 3  |4 - 3 - 1  |
-    * Banana > | 3 - 4 - 1  |   ---     |5 - 3 - 0  |
-      Cherry > | 1 - 3 - 4  |0 - 3 - 5  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Banana — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 8 ballots. Note: 1 of 8 ballots is marked as an abstention.
 Apple,Banana,Cherry
@@ -79,13 +67,6 @@ Apple,Banana,Cherry
     3,     5,     0
     5,     5,     0
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Apple      2  1  2  0  0  2    1  |    20   2.9
-Banana     4  1  1  0  0  1    1  |    27   3.9
-Cherry     0  0  1  1  2  3    1  |     7   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -110,6 +91,35 @@ Cherry     0  0  1  1  2  3    1  |     7   1.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Banana
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Apple   | * Banana  |   Cherry  |
+-----------------------------------------------------
+     * Apple > |    ---     |1 - 4 - 3  |4 - 3 - 1  |
+    * Banana > | 3 - 4 - 1  |   ---     |5 - 3 - 0  |
+      Cherry > | 1 - 3 - 4  |0 - 3 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Banana — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Apple      2  1  2  0  0  2    1  |    20   2.9
+Banana     4  1  1  0  0  1    1  |    27   3.9
+Cherry     0  0  1  1  2  3    1  |     7   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

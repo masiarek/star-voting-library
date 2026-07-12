@@ -24,32 +24,15 @@ Chocolate,Vanilla
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../silly_two_cand_STAR_tabulated/01a_c2_b1_two-candidates_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                  |  * Chocolate  |  * Vanilla   |
---------------------------------------------------
-    * Chocolate > |      ---      |  1 - 0 - 0   |
-      * Vanilla > |   0 - 0 - 1   |     ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Chocolate — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 1 ballot.
 Chocolate,Vanilla
         5,      3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Chocolate  1  0  0  0  0  0  |     5   5.0
-Vanilla    0  0  1  0  0  0  |     3   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -74,6 +57,33 @@ Vanilla    0  0  1  0  0  0  |     3   3.0
  Chocolate
 ```
 
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |  * Chocolate  |  * Vanilla   |
+--------------------------------------------------
+    * Chocolate > |      ---      |  1 - 0 - 0   |
+      * Vanilla > |   0 - 0 - 1   |     ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Chocolate — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Chocolate  1  0  0  0  0  0  |     5   5.0
+Vanilla    0  0  1  0  0  0  |     3   3.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../silly_two_cand_STAR_tabulated/01a_c2_b1_two-candidates_tabulated.txt) (regenerated on every run; every analysis forced on).
+
 Run it yourself:
 
 ```bash
@@ -82,6 +92,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/silly_tw
 
 ## See also
 
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

@@ -30,22 +30,9 @@ Alex, Blair, Cleo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Alex   | * Blair   |    Cleo   |
------------------------------------------------------
-      * Alex > |    ---     |1 - 1 - 2  |3 - 1 - 0  |
-     * Blair > | 2 - 1 - 1  |   ---     |2 - 1 - 1  |
-        Cleo > | 0 - 1 - 3  |1 - 1 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Blair — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Blair
   Approval = Alex   (differs from STAR)
@@ -58,21 +45,14 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 4 ballots.
 Count × Alex,Blair,Cleo
     2 ×    4,    5,   0
     1 ×    5,    1,   2
     1 ×    3,    3,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Alex       1  2  1  0  0  0  |    16   4.0
-Blair      2  0  1  0  1  0  |    14   3.5
-Cleo       0  0  1  1  0  2  |     5   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -97,6 +77,35 @@ Cleo       0  0  1  1  0  2  |     5   1.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Blair
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Alex   | * Blair   |    Cleo   |
+-----------------------------------------------------
+      * Alex > |    ---     |1 - 1 - 2  |3 - 1 - 0  |
+     * Blair > | 2 - 1 - 1  |   ---     |2 - 1 - 1  |
+        Cleo > | 0 - 1 - 3  |1 - 1 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Blair — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alex       1  2  1  0  0  0  |    16   4.0
+Blair      2  0  1  0  1  0  |    14   3.5
+Cleo       0  0  1  1  0  2  |     5   1.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

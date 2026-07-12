@@ -34,22 +34,9 @@ Count:Ada,Ben,Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/05b_residual_split_expressive-fix_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ada     |   * Ben     |     Cara    |
--------------------------------------------------------------
-         * Ada > |     ---      |35 - 40 - 25 |60 -  0 - 40 |
-         * Ben > | 25 - 40 - 35 |    ---      |60 -  0 - 40 |
-          Cara > | 40 -  0 - 60 |40 -  0 - 60 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Ada — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Ada
   Choose-One (Plurality) = Cara   (differs from STAR)
@@ -63,19 +50,13 @@ Legend: For - Equal Support - Against
      Ada.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Ada,Ben,Cara
    40 ×   0,  0,   5
    35 ×   5,  3,   0
    25 ×   3,  5,   0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Ada        35   0  25   0   0  40  |   250   2.5
-Ben        25   0  35   0   0  40  |   230   2.3
-Cara       40   0   0   0   0  60  |   200   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -100,6 +81,35 @@ Cara       40   0   0   0   0  60  |   200   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cara    |
+-------------------------------------------------------------
+         * Ada > |     ---      |35 - 40 - 25 |60 -  0 - 40 |
+         * Ben > | 25 - 40 - 35 |    ---      |60 -  0 - 40 |
+          Cara > | 40 -  0 - 60 |40 -  0 - 60 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ada        35   0  25   0   0  40  |   250   2.5
+Ben        25   0  35   0   0  40  |   230   2.3
+Cara       40   0   0   0   0  60  |   200   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/05b_residual_split_expressive-fix_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

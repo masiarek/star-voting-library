@@ -34,22 +34,9 @@ Count:Andre,Blake,Carmen
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/00_plurality_vs_majority_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     Andre    |  * Blake    |  * Carmen   |
--------------------------------------------------------------
-         Andre > |     ---      |40 -  0 - 60 |40 -  0 - 60 |
-       * Blake > | 60 -  0 - 40 |    ---      |35 - 40 - 25 |
-      * Carmen > | 60 -  0 - 40 |25 - 40 - 35 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Blake — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Blake
   Choose-One (Plurality) = Andre   (differs from STAR)
@@ -63,19 +50,13 @@ Legend: For - Equal Support - Against
      STAR elected Blake.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Andre,Blake,Carmen
    40 ×     5,    0,     0
    35 ×     0,    5,     4
    25 ×     0,    4,     5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Andre      40   0   0   0   0  60  |   200   2.0
-Blake      35  25   0   0   0  40  |   275   2.8
-Carmen     25  35   0   0   0  40  |   265   2.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -100,6 +81,35 @@ Carmen     25  35   0   0   0  40  |   265   2.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Blake
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     Andre    |  * Blake    |  * Carmen   |
+-------------------------------------------------------------
+         Andre > |     ---      |40 -  0 - 60 |40 -  0 - 60 |
+       * Blake > | 60 -  0 - 40 |    ---      |35 - 40 - 25 |
+      * Carmen > | 60 -  0 - 40 |25 - 40 - 35 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Blake — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Andre      40   0   0   0   0  60  |   200   2.0
+Blake      35  25   0   0   0  40  |   275   2.8
+Carmen     25  35   0   0   0  40  |   265   2.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/00_plurality_vs_majority_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

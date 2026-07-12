@@ -44,26 +44,11 @@ Ada,Ben,Cara,Dan,Eve,Finn
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    |    Ben    |    Cara   |  * Dan    |    Eve    |    Finn   |
------------------------------------------------------------------------------------------
-       * Ada > |    ---     |4 - 0 - 0  |4 - 0 - 0  |1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |
-         Ben > | 0 - 0 - 4  |   ---     |3 - 0 - 1  |0 - 0 - 4  |0 - 1 - 3  |3 - 1 - 0  |
-        Cara > | 0 - 0 - 4  |1 - 0 - 3  |   ---     |0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |
-       * Dan > | 1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |   ---     |4 - 0 - 0  |4 - 0 - 0  |
-         Eve > | 0 - 0 - 4  |3 - 1 - 0  |3 - 1 - 0  |0 - 0 - 4  |   ---     |4 - 0 - 0  |
-        Finn > | 0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |0 - 0 - 4  |0 - 0 - 4  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Ada, Dan (pairwise ties)
-
 --- Bloc STAR Voting Method (3 winners) ---
+
 [Bloc STAR]
  Tabulating 4 ballots to fill 3 seats.
 Ada,Ben,Cara,Dan,Eve,Finn
@@ -71,16 +56,6 @@ Ada,Ben,Cara,Dan,Eve,Finn
   3,  2,   1,  4,  2,   1
   4,  2,   1,  4,  3,   2
   4,  2,   1,  4,  3,   1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        0  3  1  0  0  0  |    15   3.8
-Ben        0  0  0  3  1  0  |     7   1.8
-Cara       0  0  0  1  3  0  |     5   1.3
-Dan        0  3  1  0  0  0  |    15   3.8
-Eve        0  0  2  2  0  0  |    10   2.5
-Finn       0  0  0  1  2  1  |     4   1.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -127,6 +102,7 @@ Finn       0  0  0  1  2  1  |     4   1.0
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Ada           -- 15 -- First place
@@ -150,6 +126,7 @@ Finn       0  0  0  1  2  1  |     4   1.0
            Ada 4 (100%)  ·  Eve 0 (0%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 3: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Eve           -- 10 -- First place
@@ -176,6 +153,41 @@ Finn       0  0  0  1  2  1  |     4   1.0
  Ada
  Eve
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    |    Ben    |    Cara   |  * Dan    |    Eve    |    Finn   |
+-----------------------------------------------------------------------------------------
+       * Ada > |    ---     |4 - 0 - 0  |4 - 0 - 0  |1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |
+         Ben > | 0 - 0 - 4  |   ---     |3 - 0 - 1  |0 - 0 - 4  |0 - 1 - 3  |3 - 1 - 0  |
+        Cara > | 0 - 0 - 4  |1 - 0 - 3  |   ---     |0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |
+       * Dan > | 1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |   ---     |4 - 0 - 0  |4 - 0 - 0  |
+         Eve > | 0 - 0 - 4  |3 - 1 - 0  |3 - 1 - 0  |0 - 0 - 4  |   ---     |4 - 0 - 0  |
+        Finn > | 0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |0 - 0 - 4  |0 - 0 - 4  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ada, Dan (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        0  3  1  0  0  0  |    15   3.8
+Ben        0  0  0  3  1  0  |     7   1.8
+Cara       0  0  0  1  3  0  |     5   1.3
+Dan        0  3  1  0  0  0  |    15   3.8
+Eve        0  0  2  2  0  0  |    10   2.5
+Finn       0  0  0  1  2  1  |     4   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

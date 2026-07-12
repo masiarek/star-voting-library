@@ -29,24 +29,9 @@ Dakota, Eden, Flynn, Gale, Hazel
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Dakota  |  * Eden   |   Flynn   |    Gale   |   Hazel   |
------------------------------------------------------------------------------
-    * Dakota > |    ---     |2 - 0 - 3  |5 - 0 - 0  |5 - 0 - 0  |5 - 0 - 0  |
-      * Eden > | 3 - 0 - 2  |   ---     |3 - 1 - 1  |3 - 1 - 1  |3 - 2 - 0  |
-       Flynn > | 0 - 0 - 5  |1 - 1 - 3  |   ---     |2 - 1 - 2  |2 - 2 - 1  |
-        Gale > | 0 - 0 - 5  |1 - 1 - 3  |2 - 1 - 2  |   ---     |2 - 2 - 1  |
-       Hazel > | 0 - 0 - 5  |0 - 2 - 3  |1 - 2 - 2  |1 - 2 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Eden — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Eden
   Approval = Dakota   (differs from STAR)
@@ -59,8 +44,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Dakota,Eden,Flynn,Gale,Hazel
@@ -69,15 +54,6 @@ Dakota,Eden,Flynn,Gale,Hazel
      4,   5,    0,   0,    1
      4,   5,    1,   0,    0
      4,   5,    0,   1,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Dakota     2  3  0  0  0  0  |    22   4.4
-Eden       3  0  0  0  0  2  |    15   3.0
-Flynn      0  0  0  0  2  3  |     2   0.4
-Gale       0  0  0  0  2  3  |     2   0.4
-Hazel      0  0  0  0  1  4  |     1   0.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -104,6 +80,39 @@ Hazel      0  0  0  0  1  4  |     1   0.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Eden
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Dakota  |  * Eden   |   Flynn   |    Gale   |   Hazel   |
+-----------------------------------------------------------------------------
+    * Dakota > |    ---     |2 - 0 - 3  |5 - 0 - 0  |5 - 0 - 0  |5 - 0 - 0  |
+      * Eden > | 3 - 0 - 2  |   ---     |3 - 1 - 1  |3 - 1 - 1  |3 - 2 - 0  |
+       Flynn > | 0 - 0 - 5  |1 - 1 - 3  |   ---     |2 - 1 - 2  |2 - 2 - 1  |
+        Gale > | 0 - 0 - 5  |1 - 1 - 3  |2 - 1 - 2  |   ---     |2 - 2 - 1  |
+       Hazel > | 0 - 0 - 5  |0 - 2 - 3  |1 - 2 - 2  |1 - 2 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Eden — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Dakota     2  3  0  0  0  0  |    22   4.4
+Eden       3  0  0  0  0  2  |    15   3.0
+Flynn      0  0  0  0  2  3  |     2   0.4
+Gale       0  0  0  0  2  3  |     2   0.4
+Hazel      0  0  0  0  1  4  |     1   0.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

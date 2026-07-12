@@ -33,27 +33,11 @@ Count:Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/03b_star_pr_3seats_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Housing   | * Schools   |    Parks    |   Transit   |   SmallBiz  |    BigBiz   |   TaxCuts   |
----------------------------------------------------------------------------------------------------------------------
-     * Housing > |     ---      |71 -  0 - 29 |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
-     * Schools > | 29 -  0 - 71 |    ---      |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
-         Parks > | 13 -  0 - 87 |13 -  0 - 87 |    ---      |57 - 42 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
-       Transit > |  1 -  0 - 99 | 1 -  0 - 99 | 1 - 42 - 57 |    ---      |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
-      SmallBiz > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |    ---      |83 -  0 - 17 |97 -  0 -  3 |
-        BigBiz > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |17 -  0 - 83 |    ---      |39 - 58 -  3 |
-       TaxCuts > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 | 3 -  0 - 97 | 3 - 58 - 39 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Housing — matches the STAR winner
-
 --- Sequentially Spent Score Voting Method (3 winners) ---
+
 [Sequentially Spent Score]
  Tabulating 100 ballots to fill 3 seats.
 Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
@@ -64,18 +48,6 @@ Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
    13 ×       3,      4,    5,      2,       1,     0,      0
     3 ×       2,      1,    0,      0,       4,     3,      5
     1 ×       3,      4,    2,      5,       1,     0,      0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Housing    29  15  14  42   0   0  |   331   3.3
-Schools    15  43   0   0  42   0  |   289   2.9
-Parks      13   0  44   1   0  42  |   199   2.0
-Transit     1   0   0  57   0  42  |   119   1.2
-SmallBiz   22  20   0   0  58   0  |   248   2.5
-BigBiz     17  22   3   0   0  58  |   182   1.8
-TaxCuts     3   0  39   0   0  58  |   132   1.3
- Hare score quota is 166+2/3.
 
 [Sequentially Spent Score: Round 1]
  The highest-scoring candidate wins a seat.
@@ -131,6 +103,44 @@ TaxCuts     3   0  39   0   0  58  |   132   1.3
  Schools
  SmallBiz
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |  * Housing   | * Schools   |    Parks    |   Transit   |   SmallBiz  |    BigBiz   |   TaxCuts   |
+---------------------------------------------------------------------------------------------------------------------
+     * Housing > |     ---      |71 -  0 - 29 |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+     * Schools > | 29 -  0 - 71 |    ---      |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+         Parks > | 13 -  0 - 87 |13 -  0 - 87 |    ---      |57 - 42 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+       Transit > |  1 -  0 - 99 | 1 -  0 - 99 | 1 - 42 - 57 |    ---      |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+      SmallBiz > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |    ---      |83 -  0 - 17 |97 -  0 -  3 |
+        BigBiz > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |17 -  0 - 83 |    ---      |39 - 58 -  3 |
+       TaxCuts > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 | 3 -  0 - 97 | 3 - 58 - 39 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Housing — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Housing    29  15  14  42   0   0  |   331   3.3
+Schools    15  43   0   0  42   0  |   289   2.9
+Parks      13   0  44   1   0  42  |   199   2.0
+Transit     1   0   0  57   0  42  |   119   1.2
+SmallBiz   22  20   0   0  58   0  |   248   2.5
+BigBiz     17  22   3   0   0  58  |   182   1.8
+TaxCuts     3   0  39   0   0  58  |   132   1.3
+ Hare score quota is 166+2/3.
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/03b_star_pr_3seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

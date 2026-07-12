@@ -35,22 +35,9 @@ Ada,Bruno,Cleo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    | * Bruno   |    Cleo   |
------------------------------------------------------
-       * Ada > |    ---     |3 - 0 - 2  |3 - 0 - 2  |
-     * Bruno > | 2 - 0 - 3  |   ---     |3 - 2 - 0  |
-        Cleo > | 2 - 0 - 3  |0 - 2 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Ada — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Ada
   Approval = Bruno   (differs from STAR)
@@ -63,20 +50,13 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Count × Ada,Bruno,Cleo
     3 ×   5,    4,   0
     2 ×   0,    5,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        3  0  0  0  0  2  |    15   3.0
-Bruno      2  3  0  0  0  0  |    22   4.4
-Cleo       2  0  0  0  0  3  |    10   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -101,6 +81,35 @@ Cleo       2  0  0  0  0  3  |    10   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    | * Bruno   |    Cleo   |
+-----------------------------------------------------
+       * Ada > |    ---     |3 - 0 - 2  |3 - 0 - 2  |
+     * Bruno > | 2 - 0 - 3  |   ---     |3 - 2 - 0  |
+        Cleo > | 2 - 0 - 3  |0 - 2 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        3  0  0  0  0  2  |    15   3.0
+Bruno      2  3  0  0  0  0  |    22   4.4
+Cleo       2  0  0  0  0  3  |    10   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

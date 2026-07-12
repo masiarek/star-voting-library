@@ -25,41 +25,16 @@ Dog,Cat,Fish,Bird,Rabbit,Hamster
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pets_governance_tabulated/pets_gov_bloc_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Dog     |     Cat     |   * Fish    |     Bird    |    Rabbit   |   Hamster   |
--------------------------------------------------------------------------------------------------------
-         * Dog > |     ---      |13 -  9 -  0 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
-           Cat > |  0 -  9 - 13 |    ---      | 0 - 13 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
-        * Fish > |  9 -  0 - 13 | 9 - 13 -  0 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
-          Bird > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 |    ---      |22 -  0 -  0 |22 -  0 -  0 |
-        Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      | 0 - 22 -  0 |
-       Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 - 22 -  0 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Dog — matches the STAR winner
-
 --- Bloc STAR Voting Method (3 winners) ---
+
 [Bloc STAR]
  Tabulating 22 ballots to fill 3 seats.
 Count × Dog,Cat,Fish,Bird,Rabbit,Hamster
    13 ×   5,  4,   4,   1,     0,      0
     9 ×   0,  0,   1,   5,     4,      4
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Dog        13   0   0   0   0   9  |    65   3.0
-Cat         0  13   0   0   0   9  |    52   2.4
-Fish        0  13   0   0   9   0  |    61   2.8
-Bird        9   0   0   0  13   0  |    58   2.6
-Rabbit      0   9   0   0   0  13  |    36   1.6
-Hamster     0   9   0   0   0  13  |    36   1.6
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -85,6 +60,7 @@ Hamster     0   9   0   0   0  13  |    36   1.6
            Dog 13 (59%)  ·  Fish 9 (41%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Fish          -- 61 -- First place
@@ -108,6 +84,7 @@ Hamster     0   9   0   0   0  13  |    36   1.6
            Fish 13 (59%)  ·  Bird 9 (41%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 3: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Bird          -- 58 -- First place
@@ -134,6 +111,41 @@ Hamster     0   9   0   0   0  13  |    36   1.6
  Fish
  Cat
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Dog     |     Cat     |   * Fish    |     Bird    |    Rabbit   |   Hamster   |
+-------------------------------------------------------------------------------------------------------
+         * Dog > |     ---      |13 -  9 -  0 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+           Cat > |  0 -  9 - 13 |    ---      | 0 - 13 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+        * Fish > |  9 -  0 - 13 | 9 - 13 -  0 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+          Bird > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 |    ---      |22 -  0 -  0 |22 -  0 -  0 |
+        Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      | 0 - 22 -  0 |
+       Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 - 22 -  0 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Dog — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Dog        13   0   0   0   0   9  |    65   3.0
+Cat         0  13   0   0   0   9  |    52   2.4
+Fish        0  13   0   0   9   0  |    61   2.8
+Bird        9   0   0   0  13   0  |    58   2.6
+Rabbit      0   9   0   0   0  13  |    36   1.6
+Hamster     0   9   0   0   0  13  |    36   1.6
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pets_governance_tabulated/pets_gov_bloc_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

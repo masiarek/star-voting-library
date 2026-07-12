@@ -27,22 +27,9 @@ Count:Avery,Blake,Casey
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Avery    |    Blake    |  * Casey    |
--------------------------------------------------------------
-       * Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
-         Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
-       * Casey > | 53 -  0 - 47 |53 -  0 - 47 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Casey — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Casey
   Choose-One (Plurality) = Avery   (differs from STAR)
@@ -55,6 +42,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Avery,Blake,Casey
@@ -62,13 +50,6 @@ Count × Avery,Blake,Casey
    47 ×     1,    5,    3
     3 ×     3,    1,    5
     3 ×     1,    3,    5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Avery      47   0   3   0  50   0  |   294   2.9
-Blake      47   0   3   0  50   0  |   294   2.9
-Casey       6   0  94   0   0   0  |   312   3.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -122,6 +103,35 @@ Casey       6   0  94   0   0   0  |   312   3.1
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Casey
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Avery    |    Blake    |  * Casey    |
+-------------------------------------------------------------
+       * Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
+         Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
+       * Casey > | 53 -  0 - 47 |53 -  0 - 47 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Casey — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Avery      47   0   3   0  50   0  |   294   2.9
+Blake      47   0   3   0  50   0  |   294   2.9
+Casey       6   0  94   0   0   0  |   312   3.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../symmetric_centrist_all_methods_tabulated/bv2172_bkwfjr_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

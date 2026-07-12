@@ -33,32 +33,15 @@ Ann,Bob
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../abstain_bugs_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ann    |  * Bob    |
------------------------------------------
-       * Ann > |    ---     |0 - 3 - 0  |
-       * Bob > | 0 - 3 - 0  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Ann, Bob (pairwise ties)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Count × Ann,Bob
     3 ×   5,  5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ann        3  0  0  0  0  0  |    15   5.0
-Bob        3  0  0  0  0  0  |    15   5.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -104,6 +87,33 @@ Bob        3  0  0  0  0  0  |    15   5.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ann
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Bob    |
+-----------------------------------------
+       * Ann > |    ---     |0 - 3 - 0  |
+       * Bob > | 0 - 3 - 0  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ann, Bob (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        3  0  0  0  0  0  |    15   5.0
+Bob        3  0  0  0  0  0  |    15   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../abstain_bugs_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

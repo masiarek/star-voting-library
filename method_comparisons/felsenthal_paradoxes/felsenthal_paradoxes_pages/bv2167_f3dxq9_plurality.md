@@ -31,28 +31,15 @@ A,B,C,D
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2167_f3dxq9_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |      A     |     B     |   * C     |   * D     |
------------------------------------------------------------------
-           A > |    ---     |2 - 8 - 1  |2 - 6 - 3  |2 - 4 - 5  |
-           B > | 1 - 8 - 2  |   ---     |1 - 7 - 3  |1 - 5 - 5  |
-         * C > | 3 - 6 - 2  |3 - 7 - 1  |   ---     |3 - 3 - 5  |
-         * D > | 5 - 4 - 2  |5 - 5 - 1  |5 - 3 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: D — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = D
   Approval = A   (differs from STAR)
 
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 11 ballots.
 Count × A,B,C,D
@@ -60,14 +47,6 @@ Count × A,B,C,D
     3 × 0,0,1,0
     2 × 1,0,0,0
     1 × 0,1,0,0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-A           0   0   0   0   2   9  |     2   0.2
-B           0   0   0   0   1  10  |     1   0.1
-C           0   0   0   0   3   8  |     3   0.3
-D           0   0   0   0   5   6  |     5   0.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +72,37 @@ D           0   0   0   0   5   6  |     5   0.5
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  D
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |      A     |     B     |   * C     |   * D     |
+-----------------------------------------------------------------
+           A > |    ---     |2 - 8 - 1  |2 - 6 - 3  |2 - 4 - 5  |
+           B > | 1 - 8 - 2  |   ---     |1 - 7 - 3  |1 - 5 - 5  |
+         * C > | 3 - 6 - 2  |3 - 7 - 1  |   ---     |3 - 3 - 5  |
+         * D > | 5 - 4 - 2  |5 - 5 - 1  |5 - 3 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: D — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           0   0   0   0   2   9  |     2   0.2
+B           0   0   0   0   1  10  |     1   0.1
+C           0   0   0   0   3   8  |     3   0.3
+D           0   0   0   0   5   6  |     5   0.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2167_f3dxq9_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -35,40 +35,21 @@ Count:DarkChoco,MilkChoco,Vanilla
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/vote_splitting_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                  |  * DarkChoco  | * MilkChoco  |    Vanilla   |
------------------------------------------------------------------
-    * DarkChoco > |      ---      |26 -  0 - 10  |22 -  0 - 14  |
-    * MilkChoco > | 10 -  0 - 26  |     ---      |22 -  0 - 14  |
-        Vanilla > | 14 -  0 - 22  |14 -  0 - 22  |     ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: DarkChoco — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = DarkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 36 ballots.
 Count × DarkChoco,MilkChoco,Vanilla
    14 ×         2,        1,      5
    12 ×         5,        4,      0
    10 ×         4,        5,      0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-DarkChoco  12  10   0  14   0   0  |   128   3.6
-MilkChoco  10  12   0   0  14   0  |   112   3.1
-Vanilla    14   0   0   0   0  22  |    70   1.9
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +74,35 @@ Vanilla    14   0   0   0   0  22  |    70   1.9
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  DarkChoco
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |  * DarkChoco  | * MilkChoco  |    Vanilla   |
+-----------------------------------------------------------------
+    * DarkChoco > |      ---      |26 -  0 - 10  |22 -  0 - 14  |
+    * MilkChoco > | 10 -  0 - 26  |     ---      |22 -  0 - 14  |
+        Vanilla > | 14 -  0 - 22  |14 -  0 - 22  |     ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: DarkChoco — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+DarkChoco  12  10   0  14   0   0  |   128   3.6
+MilkChoco  10  12   0   0  14   0  |   112   3.1
+Vanilla    14   0   0   0   0  22  |    70   1.9
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/vote_splitting_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

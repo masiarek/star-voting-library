@@ -42,22 +42,9 @@ Count:April,Bruno,Celia
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../participation_no_show_tabulated/bv2175_9dhv8y_noshow_showup_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * April    |  * Bruno    |    Celia    |
--------------------------------------------------------------
-       * April > |     ---      |44 -  0 - 18 |24 -  0 - 38 |
-       * Bruno > | 18 -  0 - 44 |    ---      |42 -  0 - 20 |
-         Celia > | 38 -  0 - 24 |20 -  0 - 42 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: April > Bruno > Celia > April)
-
 [Divergence from STAR]
   STAR    = April
   RCV-IRV = Celia   (differs from STAR)
@@ -69,19 +56,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: participation_no_show_tabulated/bv2175_9dhv8y_noshow_showup_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 62 ballots.
 Count × April,Bruno,Celia
    24 ×     5,    2,    0
    20 ×     2,    0,    5
    18 ×     0,    5,    2
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-April      24   0   0  20   0  18  |   160   2.6
-Bruno      18   0   0  24   0  20  |   138   2.2
-Celia      20   0   0  18   0  24  |   136   2.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -106,6 +87,35 @@ Celia      20   0   0  18   0  24  |   136   2.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  April
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * April    |  * Bruno    |    Celia    |
+-------------------------------------------------------------
+       * April > |     ---      |44 -  0 - 18 |24 -  0 - 38 |
+       * Bruno > | 18 -  0 - 44 |    ---      |42 -  0 - 20 |
+         Celia > | 38 -  0 - 24 |20 -  0 - 42 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: April > Bruno > Celia > April)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+April      24   0   0  20   0  18  |   160   2.6
+Bruno      18   0   0  24   0  20  |   138   2.2
+Celia      20   0   0  18   0  24  |   136   2.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../participation_no_show_tabulated/bv2175_9dhv8y_noshow_showup_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

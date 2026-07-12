@@ -42,33 +42,16 @@ Option 1,Option 2
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../abstain_bugs_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Option 1  | * Option 2  |
------------------------------------------------
-    * Option 1 > |     ---      | 1 - 1 - 0   |
-    * Option 2 > |  0 - 1 - 1   |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Option 1 — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Option 1,Option 2
        0,       0
        5,       &
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Option 1   1  0  0  0  0  1    0  |     5   2.5
-Option 2   0  0  0  0  0  1    1  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -92,6 +75,33 @@ Option 2   0  0  0  0  0  1    1  |     0   0.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Option 1
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |  * Option 1  | * Option 2  |
+-----------------------------------------------
+    * Option 1 > |     ---      | 1 - 1 - 0   |
+    * Option 2 > |  0 - 1 - 1   |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Option 1 — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Option 1   1  0  0  0  0  1    0  |     5   2.5
+Option 2   0  0  0  0  0  1    1  |     0   0.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../abstain_bugs_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -34,22 +34,9 @@ Count:Skywalker,Leia,Vader
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/04_star_wars_vote_split_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                  |  * Skywalker  |   * Leia     |     Vader    |
------------------------------------------------------------------
-    * Skywalker > |      ---      |33 -  0 - 67  |60 -  0 - 40  |
-         * Leia > | 67 -  0 - 33  |     ---      |60 -  0 - 40  |
-          Vader > | 40 -  0 - 60  |40 -  0 - 60  |     ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Leia — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Leia
   Choose-One (Plurality) = Vader   (differs from STAR)
@@ -71,19 +58,13 @@ Legend: For - Equal Support - Against
      STAR elected Leia.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Skywalker,Leia,Vader
    40 ×         0,   1,    5
    33 ×         5,   4,    0
    27 ×         4,   5,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Skywalker  33  27   0   0   0  40  |   273   2.7
-Leia       27  33   0   0  40   0  |   307   3.1
-Vader      40   0   0   0   0  60  |   200   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -108,6 +89,35 @@ Vader      40   0   0   0   0  60  |   200   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Leia
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |  * Skywalker  |   * Leia     |     Vader    |
+-----------------------------------------------------------------
+    * Skywalker > |      ---      |33 -  0 - 67  |60 -  0 - 40  |
+         * Leia > | 67 -  0 - 33  |     ---      |60 -  0 - 40  |
+          Vader > | 40 -  0 - 60  |40 -  0 - 60  |     ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Leia — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Skywalker  33  27   0   0   0  40  |   273   2.7
+Leia       27  33   0   0  40   0  |   307   3.1
+Vader      40   0   0   0   0  60  |   200   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/04_star_wars_vote_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

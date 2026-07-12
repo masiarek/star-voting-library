@@ -22,41 +22,20 @@ Ann,Bob,Cal,Don
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/01_c4_b2_bloc-star-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ann    |    Bob    |  * Cal    |  * Don    |
------------------------------------------------------------------
-         Ann > |    ---     |1 - 0 - 1  |0 - 0 - 2  |0 - 0 - 2  |
-         Bob > | 1 - 0 - 1  |   ---     |0 - 0 - 2  |0 - 0 - 2  |
-       * Cal > | 2 - 0 - 0  |2 - 0 - 0  |   ---     |0 - 0 - 2  |
-       * Don > | 2 - 0 - 0  |2 - 0 - 0  |2 - 0 - 0  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Don — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Don
   Approval = Cal   (differs from STAR)
 
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 2 ballots to fill 2 seats.
 Ann,Bob,Cal,Don
   1,  0,  4,  5
   1,  2,  4,  5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ann        0  0  0  0  2  0  |     2   1.0
-Bob        0  0  0  1  0  1  |     2   1.0
-Cal        0  2  0  0  0  0  |     8   4.0
-Don        2  0  0  0  0  0  |    10   5.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -80,6 +59,7 @@ Don        2  0  0  0  0  0  |    10   5.0
            Don 2 (100%)  ·  Cal 0 (0%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Cal           -- 8 -- First place
@@ -133,6 +113,37 @@ Don        2  0  0  0  0  0  |    10   5.0
  Don
  Cal
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Ann    |    Bob    |  * Cal    |  * Don    |
+-----------------------------------------------------------------
+         Ann > |    ---     |1 - 0 - 1  |0 - 0 - 2  |0 - 0 - 2  |
+         Bob > | 1 - 0 - 1  |   ---     |0 - 0 - 2  |0 - 0 - 2  |
+       * Cal > | 2 - 0 - 0  |2 - 0 - 0  |   ---     |0 - 0 - 2  |
+       * Don > | 2 - 0 - 0  |2 - 0 - 0  |2 - 0 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Don — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  0  0  0  2  0  |     2   1.0
+Bob        0  0  0  1  0  1  |     2   1.0
+Cal        0  2  0  0  0  0  |     8   4.0
+Don        2  0  0  0  0  0  |    10   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/01_c4_b2_bloc-star-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

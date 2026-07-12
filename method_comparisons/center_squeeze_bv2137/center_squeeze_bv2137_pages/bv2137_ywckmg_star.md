@@ -21,22 +21,9 @@ Reagan,Anderson,Carter
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Reagan   | * Anderson  |    Carter   |
--------------------------------------------------------------
-      * Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
-    * Anderson > | 55 -  0 - 45 |    ---      |65 -  0 - 35 |
-        Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Anderson — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Anderson
   Choose-One (Plurality) = Reagan   (differs from STAR)
@@ -49,19 +36,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Reagan,Anderson,Carter
    45 ×      5,       3,     1
    35 ×      1,       3,     5
    20 ×      1,       5,     3
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Reagan     45   0   0   0  55   0  |   280   2.8
-Anderson   20   0  80   0   0   0  |   340   3.4
-Carter     35   0  20   0  45   0  |   280   2.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +74,35 @@ Carter     35   0  20   0  45   0  |   280   2.8
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Anderson
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Reagan   | * Anderson  |    Carter   |
+-------------------------------------------------------------
+      * Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
+    * Anderson > | 55 -  0 - 45 |    ---      |65 -  0 - 35 |
+        Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anderson — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Reagan     45   0   0   0  55   0  |   280   2.8
+Anderson   20   0  80   0   0   0  |   340   3.4
+Carter     35   0  20   0  45   0  |   280   2.8
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

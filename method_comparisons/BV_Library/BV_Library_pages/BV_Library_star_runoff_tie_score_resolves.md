@@ -21,21 +21,9 @@ Allison,Bill
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runoff_tie_score_resolves_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |
---------------------------------------------
-    * Allison > |     ---     | 1 - 0 - 1  |
-       * Bill > |  1 - 0 - 1  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
-
 [Divergence from STAR]
   STAR                   = Bill
   Choose-One (Plurality) = Allison   (differs from STAR)
@@ -45,17 +33,12 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: BV_Library_tabulated/BV_Library_star_runoff_tie_score_resolves_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Allison,Bill
       0,   5
       3,   2
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allison    0  0  1  0  0  1  |     3   1.5
-Bill       1  0  0  1  0  0  |     7   3.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -79,6 +62,33 @@ Bill       1  0  0  1  0  0  |     7   3.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bill
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Allison  |  * Bill    |
+--------------------------------------------
+    * Allison > |     ---     | 1 - 0 - 1  |
+       * Bill > |  1 - 0 - 1  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    0  0  1  0  0  1  |     3   1.5
+Bill       1  0  0  1  0  0  |     7   3.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runoff_tie_score_resolves_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -34,26 +34,11 @@ Allen,Bianca,Chris,Desi,Edith,Frank
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/03c_c6_b8_style-gallery_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    Allen   | * Bianca  |   Chris   |    Desi   |   Edith   | * Frank   |
------------------------------------------------------------------------------------------
-       Allen > |    ---     |0 - 3 - 5  |4 - 4 - 0  |1 - 6 - 1  |3 - 5 - 0  |0 - 3 - 5  |
-    * Bianca > | 5 - 3 - 0  |   ---     |7 - 1 - 0  |6 - 2 - 0  |6 - 2 - 0  |4 - 2 - 2  |
-       Chris > | 0 - 4 - 4  |0 - 1 - 7  |   ---     |0 - 5 - 3  |0 - 5 - 3  |0 - 1 - 7  |
-        Desi > | 1 - 6 - 1  |0 - 2 - 6  |3 - 5 - 0  |   ---     |2 - 6 - 0  |0 - 2 - 6  |
-       Edith > | 0 - 5 - 3  |0 - 2 - 6  |3 - 5 - 0  |0 - 6 - 2  |   ---     |0 - 2 - 6  |
-     * Frank > | 5 - 3 - 0  |2 - 2 - 4  |7 - 1 - 0  |6 - 2 - 0  |6 - 2 - 0  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Bianca — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 8 ballots.
 Allen,Bianca,Chris,Desi,Edith,Frank
@@ -65,16 +50,6 @@ Allen,Bianca,Chris,Desi,Edith,Frank
     3,     4,    0,   3,    1,    5
     5,     5,    0,   5,    5,    5
     0,     0,    0,   0,    0,    1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allen      2  0  1  1  0  4  |    15   1.9
-Bianca     6  1  0  0  0  1  |    34   4.3
-Chris      0  0  0  0  0  8  |     0   0.0
-Desi       1  0  2  0  0  5  |    11   1.4
-Edith      1  0  0  0  2  5  |     7   0.9
-Frank      3  2  0  0  2  1  |    25   3.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -102,6 +77,41 @@ Frank      3  2  0  0  2  1  |    25   3.1
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bianca
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    Allen   | * Bianca  |   Chris   |    Desi   |   Edith   | * Frank   |
+-----------------------------------------------------------------------------------------
+       Allen > |    ---     |0 - 3 - 5  |4 - 4 - 0  |1 - 6 - 1  |3 - 5 - 0  |0 - 3 - 5  |
+    * Bianca > | 5 - 3 - 0  |   ---     |7 - 1 - 0  |6 - 2 - 0  |6 - 2 - 0  |4 - 2 - 2  |
+       Chris > | 0 - 4 - 4  |0 - 1 - 7  |   ---     |0 - 5 - 3  |0 - 5 - 3  |0 - 1 - 7  |
+        Desi > | 1 - 6 - 1  |0 - 2 - 6  |3 - 5 - 0  |   ---     |2 - 6 - 0  |0 - 2 - 6  |
+       Edith > | 0 - 5 - 3  |0 - 2 - 6  |3 - 5 - 0  |0 - 6 - 2  |   ---     |0 - 2 - 6  |
+     * Frank > | 5 - 3 - 0  |2 - 2 - 4  |7 - 1 - 0  |6 - 2 - 0  |6 - 2 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bianca — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allen      2  0  1  1  0  4  |    15   1.9
+Bianca     6  1  0  0  0  1  |    34   4.3
+Chris      0  0  0  0  0  8  |     0   0.0
+Desi       1  0  2  0  0  5  |    11   1.4
+Edith      1  0  0  0  2  5  |     7   0.9
+Frank      3  2  0  0  2  1  |    25   3.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/03c_c6_b8_style-gallery_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

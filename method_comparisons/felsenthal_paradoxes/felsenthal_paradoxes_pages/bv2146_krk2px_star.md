@@ -37,22 +37,9 @@ Ada,Ben,Cleo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2146_krk2px_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ada     |   * Ben     |     Cleo    |
--------------------------------------------------------------
-         * Ada > |     ---      | 9 -  0 -  8 | 9 -  0 -  8 |
-         * Ben > |  8 -  0 -  9 |    ---      |11 -  0 -  6 |
-          Cleo > |  8 -  0 -  9 | 6 -  0 - 11 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Ada — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Ada
   Choose-One (Plurality) = Ben   (differs from STAR)
@@ -65,8 +52,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 17 ballots.
 Count × Ada,Ben,Cleo
@@ -75,13 +62,6 @@ Count × Ada,Ben,Cleo
     4 ×   3,  1,   5
     3 ×   5,  3,   1
     2 ×   5,  1,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        5  0  8  0  4  0  |    53   3.1
-Ben        8  0  3  0  6  0  |    55   3.2
-Cleo       4  0  6  0  7  0  |    45   2.6
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -106,6 +86,35 @@ Cleo       4  0  6  0  7  0  |    45   2.6
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cleo    |
+-------------------------------------------------------------
+         * Ada > |     ---      | 9 -  0 -  8 | 9 -  0 -  8 |
+         * Ben > |  8 -  0 -  9 |    ---      |11 -  0 -  6 |
+          Cleo > |  8 -  0 -  9 | 6 -  0 - 11 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        5  0  8  0  4  0  |    53   3.1
+Ben        8  0  3  0  6  0  |    55   3.2
+Cleo       4  0  6  0  7  0  |    45   2.6
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2146_krk2px_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

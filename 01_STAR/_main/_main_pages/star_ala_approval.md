@@ -33,23 +33,9 @@ A,B,C,D
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/star_ala_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |     B     |     C     |   * D     |
------------------------------------------------------------------
-         * A > |    ---     |1 - 7 - 0  |2 - 5 - 1  |0 - 7 - 1  |
-           B > | 0 - 7 - 1  |   ---     |1 - 6 - 1  |0 - 6 - 2  |
-           C > | 1 - 5 - 2  |1 - 6 - 1  |   ---     |0 - 6 - 2  |
-         * D > | 1 - 7 - 0  |2 - 6 - 0  |2 - 6 - 0  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: D — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = D
   Choose-One (Plurality) = A   (differs from STAR)
@@ -65,6 +51,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 8 ballots. Note: 2 of 8 ballots are marked as abstentions.
 A,B,C,D
@@ -77,14 +64,6 @@ A,B,C,D
 5,5,5,5
 -,-,-,-
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-A          1  0  0  0  2  1    4  |     7   1.8
-B          1  0  0  0  1  2    4  |     6   1.5
-C          1  0  0  0  1  4    2  |     6   1.0
-D          1  0  0  0  3  2    2  |     8   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -110,6 +89,37 @@ D          1  0  0  0  3  2    2  |     8   1.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  D
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |     B     |     C     |   * D     |
+-----------------------------------------------------------------
+         * A > |    ---     |1 - 7 - 0  |2 - 5 - 1  |0 - 7 - 1  |
+           B > | 0 - 7 - 1  |   ---     |1 - 6 - 1  |0 - 6 - 2  |
+           C > | 1 - 5 - 2  |1 - 6 - 1  |   ---     |0 - 6 - 2  |
+         * D > | 1 - 7 - 0  |2 - 6 - 0  |2 - 6 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: D — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+A          1  0  0  0  2  1    4  |     7   1.8
+B          1  0  0  0  1  2    4  |     6   1.5
+C          1  0  0  0  1  4    2  |     6   1.0
+D          1  0  0  0  3  2    2  |     8   1.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/star_ala_approval_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

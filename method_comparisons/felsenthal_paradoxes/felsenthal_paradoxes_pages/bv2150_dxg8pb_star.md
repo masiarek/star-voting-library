@@ -31,22 +31,9 @@ Andy,Beth,Carl
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Andy   |  * Beth   |  * Carl   |
------------------------------------------------------
-        Andy > |    ---     |5 - 0 - 6  |4 - 0 - 7  |
-      * Beth > | 6 - 0 - 5  |   ---     |7 - 0 - 4  |
-      * Carl > | 7 - 0 - 4  |4 - 0 - 7  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Beth — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Beth
   Choose-One (Plurality) = Andy   (differs from STAR)
@@ -59,6 +46,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 11 ballots.
 Count × Andy,Beth,Carl
@@ -66,13 +54,6 @@ Count × Andy,Beth,Carl
     3 ×    1,   5,   3
     3 ×    1,   3,   5
     1 ×    3,   1,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Andy       4  0  1  0  6  0  |    29   2.6
-Beth       3  0  7  0  1  0  |    37   3.4
-Carl       4  0  3  0  4  0  |    33   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -97,6 +78,35 @@ Carl       4  0  3  0  4  0  |    33   3.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Beth
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Andy   |  * Beth   |  * Carl   |
+-----------------------------------------------------
+        Andy > |    ---     |5 - 0 - 6  |4 - 0 - 7  |
+      * Beth > | 6 - 0 - 5  |   ---     |7 - 0 - 4  |
+      * Carl > | 7 - 0 - 4  |4 - 0 - 7  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Beth — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andy       4  0  1  0  6  0  |    29   2.6
+Beth       3  0  7  0  1  0  |    37   3.4
+Carl       4  0  3  0  4  0  |    33   3.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

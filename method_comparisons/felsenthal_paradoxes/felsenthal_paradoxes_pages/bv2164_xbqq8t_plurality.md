@@ -31,28 +31,15 @@ Arlo,Bree,Cole,Dana
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Arlo    |   * Bree    |     Cole    |     Dana    |
----------------------------------------------------------------------------
-        * Arlo > |     ---      |11 -  8 - 14 |11 - 18 -  4 |11 - 18 -  4 |
-        * Bree > | 14 -  8 - 11 |    ---      |14 - 15 -  4 |14 - 15 -  4 |
-          Cole > |  4 - 18 - 11 | 4 - 15 - 14 |    ---      | 4 - 25 -  4 |
-          Dana > |  4 - 18 - 11 | 4 - 15 - 14 | 4 - 25 -  4 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Bree — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Bree
   Approval = Arlo   (differs from STAR)
 
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 33 ballots.
 Count × Arlo,Bree,Cole,Dana
@@ -60,14 +47,6 @@ Count × Arlo,Bree,Cole,Dana
    11 ×    1,   0,   0,   0
     4 ×    0,   0,   1,   0
     4 ×    0,   0,   0,   1
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Arlo        0   0   0   0  11  22  |    11   0.3
-Bree        0   0   0   0  14  19  |    14   0.4
-Cole        0   0   0   0   4  29  |     4   0.1
-Dana        0   0   0   0   4  29  |     4   0.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +72,37 @@ Dana        0   0   0   0   4  29  |     4   0.1
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Bree
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Arlo    |   * Bree    |     Cole    |     Dana    |
+---------------------------------------------------------------------------
+        * Arlo > |     ---      |11 -  8 - 14 |11 - 18 -  4 |11 - 18 -  4 |
+        * Bree > | 14 -  8 - 11 |    ---      |14 - 15 -  4 |14 - 15 -  4 |
+          Cole > |  4 - 18 - 11 | 4 - 15 - 14 |    ---      | 4 - 25 -  4 |
+          Dana > |  4 - 18 - 11 | 4 - 15 - 14 | 4 - 25 -  4 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Bree — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Arlo        0   0   0   0  11  22  |    11   0.3
+Bree        0   0   0   0  14  19  |    14   0.4
+Cole        0   0   0   0   4  29  |     4   0.1
+Dana        0   0   0   0   4  29  |     4   0.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -35,40 +35,21 @@ Alma,Bruno,Cora
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2148_h87k6v_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Alma   | * Bruno   |  * Cora   |
------------------------------------------------------
-        Alma > |    ---     |7 - 0 - 8  |6 - 0 - 9  |
-     * Bruno > | 8 - 0 - 7  |   ---     |8 - 0 - 7  |
-      * Cora > | 9 - 0 - 6  |7 - 0 - 8  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Bruno — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Bruno
   Approval = Cora   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 15 ballots.
 Count × Alma,Bruno,Cora
     8 ×    1,    5,   3
     6 ×    5,    1,   3
     1 ×    3,    1,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Alma        6   0   1   0   8   0  |    41   2.7
-Bruno       8   0   0   0   7   0  |    47   3.1
-Cora        1   0  14   0   0   0  |    47   3.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -93,6 +74,35 @@ Cora        1   0  14   0   0   0  |    47   3.1
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bruno
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Alma   | * Bruno   |  * Cora   |
+-----------------------------------------------------
+        Alma > |    ---     |7 - 0 - 8  |6 - 0 - 9  |
+     * Bruno > | 8 - 0 - 7  |   ---     |8 - 0 - 7  |
+      * Cora > | 9 - 0 - 6  |7 - 0 - 8  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bruno — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alma        6   0   1   0   8   0  |    41   2.7
+Bruno       8   0   0   0   7   0  |    47   3.1
+Cora        1   0  14   0   0   0  |    47   3.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2148_h87k6v_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -161,6 +161,43 @@ def _mirror_report(yaml_path):
     return "\n".join(out).strip("\n")
 
 
+# Report sections that are audit detail, not the first-read lesson: the abstract
+# preference matrix, the Condorcet line that references it, and the score-count
+# table. For a newcomer these ambush the page (the matrix leads the raw report);
+# we fold them so the count — scoring round → automatic runoff → winner — leads.
+_SECTION_BOUNDARY = re.compile(r"^(?:---\s+.+?\s+---\s*$|\[[^\]]+\])")
+_FOLD_SECTION = re.compile(r"Preference\)?\s*Matrix|Condorcet|Score Distribution", re.I)
+
+
+def _split_report(report):
+    """Split the engine report into (lead, audit): the beginner-facing count
+    (scoring round, automatic runoff, winner) vs the folded detail (preference
+    matrix, Condorcet, score distribution). `audit` is "" when none of those
+    sections appear — non-STAR reports (IRV rounds, RR pairwise, …) pass through
+    unfolded."""
+    segments, header, block = [], None, []
+    for ln in report.split("\n"):
+        if _SECTION_BOUNDARY.match(ln):
+            if block or header is not None:
+                segments.append((header, block))
+            header, block = ln, [ln]
+        else:
+            block.append(ln)
+    if block or header is not None:
+        segments.append((header, block))
+
+    lead, audit = [], []
+    for hdr, blk in segments:
+        (audit if hdr and _FOLD_SECTION.search(hdr) else lead).append(blk)
+
+    def _join(blocks):
+        return "\n\n".join("\n".join(b).strip("\n") for b in blocks).strip("\n")
+
+    if not audit:
+        return report.strip("\n"), ""
+    return _join(lead), _join(audit)
+
+
 def _rel(target_repo_relative, page_dir):
     return os.path.relpath(os.path.join(REPO, target_repo_relative),
                            page_dir).replace(os.sep, "/")
@@ -256,12 +293,35 @@ def render(yaml_path, siblings):
     L.append("")
     if report:
         mirror_rel = os.path.relpath(_mirror_path(yaml_path), page_dir).replace(os.sep, "/")
-        L.append(f"Full report from the [`_tabulated` mirror]({mirror_rel}) "
-                 f"(regenerated on every run; every analysis forced on):")
-        L.append("")
-        L.append("```text")
-        L.append(report)
-        L.append("```")
+        lead, audit = _split_report(report)
+        if audit:
+            # Progressive disclosure: lead with the count, fold the audit detail.
+            L.append("The count, step by step — the rounds and how the winner is "
+                     "reached:")
+            L.append("")
+            L.append("```text")
+            L.append(lead)
+            L.append("```")
+            L.append("")
+            L.append("<details>")
+            L.append("<summary>▸ Full audit — preference matrix, Condorcet, and "
+                     "score distribution</summary>")
+            L.append("")
+            L.append("```text")
+            L.append(audit)
+            L.append("```")
+            L.append("")
+            L.append("</details>")
+            L.append("")
+            L.append(f"Everything in one file: the [`_tabulated` mirror]({mirror_rel}) "
+                     f"(regenerated on every run; every analysis forced on).")
+        else:
+            L.append(f"Full report from the [`_tabulated` mirror]({mirror_rel}) "
+                     f"(regenerated on every run; every analysis forced on):")
+            L.append("")
+            L.append("```text")
+            L.append(report)
+            L.append("```")
     else:
         L.append("*(No `_tabulated` mirror found — run the file once to generate it.)*")
     L.append("")

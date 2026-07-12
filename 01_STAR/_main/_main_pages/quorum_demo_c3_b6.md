@@ -37,25 +37,13 @@ Anna, Ben, Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/quorum_demo_c3_b6_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
  Quorum: 6 of 10 eligible voters participated (60% turnout); requires more than 50% (>= 6). MET.
 
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Anna   |  * Ben    |    Cara   |
------------------------------------------------------
-      * Anna > |    ---     |3 - 1 - 2  |4 - 2 - 0  |
-       * Ben > | 2 - 1 - 3  |   ---     |3 - 2 - 1  |
-        Cara > | 0 - 2 - 4  |1 - 2 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Anna — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 6 ballots. Note: 1 of 6 ballots is marked as an abstention.
 Anna,Ben,Cara
@@ -66,13 +54,6 @@ Anna,Ben,Cara
    1,  4,   0
    -,  -,   -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Anna       2  1  0  0  1  1    1  |    15   3.0
-Ben        1  1  0  0  1  2    1  |    10   2.0
-Cara       0  0  0  0  1  4    1  |     1   0.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -97,6 +78,35 @@ Cara       0  0  0  0  1  4    1  |     1   0.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Anna
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Anna   |  * Ben    |    Cara   |
+-----------------------------------------------------
+      * Anna > |    ---     |3 - 1 - 2  |4 - 2 - 0  |
+       * Ben > | 2 - 1 - 3  |   ---     |3 - 2 - 1  |
+        Cara > | 0 - 2 - 4  |1 - 2 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Anna — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Anna       2  1  0  0  1  1    1  |    15   3.0
+Ben        1  1  0  0  1  2    1  |    10   2.0
+Cara       0  0  0  0  1  4    1  |     1   0.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/quorum_demo_c3_b6_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

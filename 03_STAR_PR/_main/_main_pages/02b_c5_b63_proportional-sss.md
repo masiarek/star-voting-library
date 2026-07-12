@@ -25,30 +25,16 @@ Alice,Ben,Cara,Dan,Eve
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/02b_c5_b63_proportional-sss_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Alice    |   * Ben     |     Cara    |     Dan     |     Eve     |
------------------------------------------------------------------------------------------
-       * Alice > |     ---      |18 - 24 - 21 |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
-         * Ben > | 21 - 24 - 18 |    ---      |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
-          Cara > |  9 - 24 - 30 | 9 - 24 - 30 |    ---      |39 -  0 - 24 |39 -  0 - 24 |
-           Dan > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 |    ---      |15 - 39 -  9 |
-           Eve > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 | 9 - 39 - 15 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Ben — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
   Approval               = Alice   (differs from STAR)
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
+
 [Sequentially Spent Score]
  Tabulating 63 ballots to fill 3 seats.
 Count × Alice,Ben,Cara,Dan,Eve
@@ -57,16 +43,6 @@ Count × Alice,Ben,Cara,Dan,Eve
    12 ×     4,  5,   3,  0,  0
     9 ×     3,  4,   5,  0,  0
     9 ×     0,  0,   0,  4,  5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Alice      18  12   9   0   0  24  |   165   2.6
-Ben        12  27   0   0   0  24  |   168   2.7
-Cara        9   0  30   0   0  24  |   135   2.1
-Dan        15   9   0   0   0  39  |   111   1.8
-Eve         9  15   0   0   0  39  |   105   1.7
- Hare score quota is 105.
 
 [Sequentially Spent Score: Round 1]
  The highest-scoring candidate wins a seat.
@@ -111,6 +87,40 @@ Eve         9  15   0   0   0  39  |   105   1.7
  Ben
  Dan
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Alice    |   * Ben     |     Cara    |     Dan     |     Eve     |
+-----------------------------------------------------------------------------------------
+       * Alice > |     ---      |18 - 24 - 21 |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
+         * Ben > | 21 - 24 - 18 |    ---      |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
+          Cara > |  9 - 24 - 30 | 9 - 24 - 30 |    ---      |39 -  0 - 24 |39 -  0 - 24 |
+           Dan > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 |    ---      |15 - 39 -  9 |
+           Eve > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 | 9 - 39 - 15 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ben — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alice      18  12   9   0   0  24  |   165   2.6
+Ben        12  27   0   0   0  24  |   168   2.7
+Cara        9   0  30   0   0  24  |   135   2.1
+Dan        15   9   0   0   0  39  |   111   1.8
+Eve         9  15   0   0   0  39  |   105   1.7
+ Hare score quota is 105.
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/02b_c5_b63_proportional-sss_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

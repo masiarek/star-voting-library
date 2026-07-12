@@ -23,41 +23,20 @@ Choco,Almond,Vanilla,Strawberry
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/04b_c4_b3_display-options-all_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                   |      Choco     |     Almond    |  * Vanilla    | * Strawberry  |
--------------------------------------------------------------------------------------
-           Choco > |      ---       |  0 - 0 - 3    |  0 - 0 - 3    |  0 - 0 - 3    |
-          Almond > |   3 - 0 - 0    |     ---       |  0 - 0 - 3    |  0 - 0 - 3    |
-       * Vanilla > |   3 - 0 - 0    |  3 - 0 - 0    |     ---       |  1 - 0 - 2    |
-    * Strawberry > |   3 - 0 - 0    |  3 - 0 - 0    |  2 - 0 - 1    |     ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: Strawberry — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Strawberry
   Approval = Vanilla   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Count × Choco,Almond,Vanilla,Strawberry
     2 ×     0,     2,      3,         5
     1 ×     0,     2,      5,         3
-
-[Score Distribution] (how many ballots gave each star rating)
-                 Score
-Candidate   5  4  3  2  1  0  | Total   Avg
-Choco       0  0  0  0  0  3  |     0   0.0
-Almond      0  0  0  3  0  0  |     6   2.0
-Vanilla     1  0  2  0  0  0  |    11   3.7
-Strawberry  2  0  1  0  0  0  |    13   4.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -83,6 +62,37 @@ Strawberry  2  0  1  0  0  0  |    13   4.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Strawberry
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                   |      Choco     |     Almond    |  * Vanilla    | * Strawberry  |
+-------------------------------------------------------------------------------------
+           Choco > |      ---       |  0 - 0 - 3    |  0 - 0 - 3    |  0 - 0 - 3    |
+          Almond > |   3 - 0 - 0    |     ---       |  0 - 0 - 3    |  0 - 0 - 3    |
+       * Vanilla > |   3 - 0 - 0    |  3 - 0 - 0    |     ---       |  1 - 0 - 2    |
+    * Strawberry > |   3 - 0 - 0    |  3 - 0 - 0    |  2 - 0 - 1    |     ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Strawberry — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  | Total   Avg
+Choco       0  0  0  0  0  3  |     0   0.0
+Almond      0  0  0  3  0  0  |     6   2.0
+Vanilla     1  0  2  0  0  0  |    11   3.7
+Strawberry  2  0  1  0  0  0  |    13   4.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/04b_c4_b3_display-options-all_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

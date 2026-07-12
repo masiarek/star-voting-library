@@ -60,22 +60,9 @@ Vanilla,Chocolate,Strawberry
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                   |     Vanilla    | * Chocolate   | * Strawberry  |
----------------------------------------------------------------------
-         Vanilla > |      ---       |  1 - 2 - 1    |  1 - 2 - 1    |
-     * Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
-    * Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Vanilla, Chocolate (pairwise ties)
-
 [Divergence from STAR]
   STAR                   = Chocolate
   Choose-One (Plurality) = Vanilla   (differs from STAR)
@@ -90,6 +77,7 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 4 ballots to fill 2 seats. Note: 1 of 4 ballots is marked as an abstention.
 Vanilla,Chocolate,Strawberry
@@ -98,13 +86,6 @@ Vanilla,Chocolate,Strawberry
       1,        -,         -
       2,        5,         4
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                 Score
-Candidate   5  4  3  2  1  0  Abs  | Total   Avg
-Vanilla     1  0  0  1  1  0    1  |     8   2.7
-Chocolate   2  0  0  0  0  0    2  |    10   5.0
-Strawberry  1  1  0  0  0  0    2  |     9   4.5
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -127,6 +108,7 @@ Strawberry  1  1  0  0  0  0    2  |     9   4.5
            Chocolate 1 (100%)  ·  Strawberry 0 (0%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Strawberry    -- 9 -- First place
@@ -150,6 +132,35 @@ Strawberry  1  1  0  0  0  0    2  |     9   4.5
  Chocolate
  Strawberry
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                   |     Vanilla    | * Chocolate   | * Strawberry  |
+---------------------------------------------------------------------
+         Vanilla > |      ---       |  1 - 2 - 1    |  1 - 2 - 1    |
+     * Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
+    * Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Vanilla, Chocolate (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  Abs  | Total   Avg
+Vanilla     1  0  0  1  1  0    1  |     8   2.7
+Chocolate   2  0  0  0  0  0    2  |    10   5.0
+Strawberry  1  1  0  0  0  0    2  |     9   4.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

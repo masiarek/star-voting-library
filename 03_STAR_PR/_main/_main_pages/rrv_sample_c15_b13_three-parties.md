@@ -49,34 +49,9 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    Purple1   |   Purple2   |   Purple3   |   Purple4   |   Purple5   | * Orange1   |   Orange2   |   Orange3   |   Orange4   | * Orange5   |   Yellow1   |   Yellow2   |   Yellow3   |   Yellow4   |   Yellow5   |
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-       Purple1 > |     ---      | 3 -  9 -  1 | 1 - 11 -  1 | 2 - 11 -  0 | 2 - 11 -  0 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 6 -  1 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
-       Purple2 > |  1 -  9 -  3 |    ---      | 0 - 11 -  2 | 1 - 10 -  2 | 2 -  8 -  3 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
-       Purple3 > |  1 - 11 -  1 | 2 - 11 -  0 |    ---      | 2 - 10 -  1 | 3 -  9 -  1 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 6 -  1 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
-       Purple4 > |  0 - 11 -  2 | 2 - 10 -  1 | 1 - 10 -  2 |    ---      | 2 -  9 -  2 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
-       Purple5 > |  0 - 11 -  2 | 3 -  8 -  2 | 1 -  9 -  3 | 2 -  9 -  2 |    ---      | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
-     * Orange1 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 |    ---      | 4 -  7 -  2 | 4 -  7 -  2 | 4 -  7 -  2 | 3 -  6 -  4 | 8 -  1 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 7 -  2 -  4 | 9 -  0 -  4 |
-       Orange2 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 |    ---      | 1 -  9 -  3 | 0 - 11 -  2 | 1 -  8 -  4 | 7 -  2 -  4 | 8 -  0 -  5 | 7 -  2 -  4 | 7 -  1 -  5 | 8 -  1 -  4 |
-       Orange3 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 | 3 -  9 -  1 |    ---      | 1 - 11 -  1 | 1 -  9 -  3 | 8 -  1 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 7 -  2 -  4 | 9 -  0 -  4 |
-       Orange4 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 | 2 - 11 -  0 | 1 - 11 -  1 |    ---      | 1 -  9 -  3 | 7 -  2 -  4 | 8 -  0 -  5 | 8 -  1 -  4 | 7 -  1 -  5 | 8 -  1 -  4 |
-     * Orange5 > |  6 -  1 -  6 | 6 -  2 -  5 | 6 -  1 -  6 | 6 -  2 -  5 | 6 -  2 -  5 | 4 -  6 -  3 | 4 -  8 -  1 | 3 -  9 -  1 | 3 -  9 -  1 |    ---      | 9 -  0 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 8 -  1 -  4 | 9 -  0 -  4 |
-       Yellow1 > |  4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  1 -  8 | 4 -  2 -  7 | 4 -  1 -  8 | 4 -  2 -  7 | 4 -  0 -  9 |    ---      | 2 -  8 -  3 | 4 -  8 -  1 | 1 - 11 -  1 | 2 -  9 -  2 |
-       Yellow2 > |  6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 4 -  1 -  8 | 5 -  0 -  8 | 4 -  1 -  8 | 5 -  0 -  8 | 4 -  1 -  8 | 3 -  8 -  2 |    ---      | 5 -  7 -  1 | 3 -  8 -  2 | 1 - 12 -  0 |
-       Yellow3 > |  5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 4 -  0 -  9 | 4 -  2 -  7 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 1 -  8 -  4 | 1 -  7 -  5 |    ---      | 1 -  8 -  4 | 1 -  8 -  4 |
-       Yellow4 > |  4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  2 -  7 | 5 -  1 -  7 | 4 -  2 -  7 | 5 -  1 -  7 | 4 -  1 -  8 | 1 - 11 -  1 | 2 -  8 -  3 | 4 -  8 -  1 |    ---      | 3 -  7 -  3 |
-       Yellow5 > |  6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 2 -  9 -  2 | 0 - 12 -  1 | 4 -  8 -  1 | 3 -  7 -  3 |    ---      |
-
-[Condorcet Winner]
-  No strict Condorcet winner; weak Condorcet winner: Orange5 — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Orange5
   Choose-One (Plurality) = Orange1   (differs from STAR)
@@ -99,8 +74,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 13 ballots.
 Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,Yellow1,Yellow2,Yellow3,Yellow4,Yellow5
@@ -117,25 +92,6 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
       1,      1,      1,      1,      0,      0,      0,      0,      0,      0,      4,      4,      4,      4,      4
       1,      1,      1,      1,      1,      0,      0,      0,      0,      1,      5,      4,      4,      5,      4
       2,      0,      2,      2,      1,      0,      0,      0,      0,      0,      5,      5,      4,      4,      5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Purple1    2  1  0  1  3  6  |    19   1.5
-Purple2    1  2  0  0  3  7  |    16   1.2
-Purple3    2  1  0  1  3  6  |    19   1.5
-Purple4    1  1  0  2  3  6  |    16   1.2
-Purple5    2  1  0  0  3  7  |    17   1.3
-Orange1    4  2  0  0  3  4  |    31   2.4
-Orange2    3  1  1  0  3  5  |    25   1.9
-Orange3    2  4  0  0  3  4  |    29   2.2
-Orange4    3  3  0  0  2  5  |    29   2.2
-Orange5    3  2  0  2  3  3  |    30   2.3
-Yellow1    3  1  0  0  1  8  |    20   1.5
-Yellow2    2  2  0  0  3  6  |    21   1.6
-Yellow3    0  3  0  1  1  8  |    15   1.2
-Yellow4    2  2  0  0  2  7  |    20   1.5
-Yellow5    2  2  0  0  2  7  |    20   1.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -172,6 +128,59 @@ Yellow5    2  2  0  0  2  7  |    20   1.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Orange5
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    Purple1   |   Purple2   |   Purple3   |   Purple4   |   Purple5   | * Orange1   |   Orange2   |   Orange3   |   Orange4   | * Orange5   |   Yellow1   |   Yellow2   |   Yellow3   |   Yellow4   |   Yellow5   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       Purple1 > |     ---      | 3 -  9 -  1 | 1 - 11 -  1 | 2 - 11 -  0 | 2 - 11 -  0 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 6 -  1 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
+       Purple2 > |  1 -  9 -  3 |    ---      | 0 - 11 -  2 | 1 - 10 -  2 | 2 -  8 -  3 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
+       Purple3 > |  1 - 11 -  1 | 2 - 11 -  0 |    ---      | 2 - 10 -  1 | 3 -  9 -  1 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 6 -  1 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
+       Purple4 > |  0 - 11 -  2 | 2 - 10 -  1 | 1 - 10 -  2 |    ---      | 2 -  9 -  2 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 7 -  0 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
+       Purple5 > |  0 - 11 -  2 | 3 -  8 -  2 | 1 -  9 -  3 | 2 -  9 -  2 |    ---      | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 6 -  1 -  6 | 5 -  2 -  6 | 3 -  6 -  4 | 3 -  4 -  6 | 3 -  5 -  5 | 3 -  6 -  4 | 3 -  4 -  6 |
+     * Orange1 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 |    ---      | 4 -  7 -  2 | 4 -  7 -  2 | 4 -  7 -  2 | 3 -  6 -  4 | 8 -  1 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 7 -  2 -  4 | 9 -  0 -  4 |
+       Orange2 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 |    ---      | 1 -  9 -  3 | 0 - 11 -  2 | 1 -  8 -  4 | 7 -  2 -  4 | 8 -  0 -  5 | 7 -  2 -  4 | 7 -  1 -  5 | 8 -  1 -  4 |
+       Orange3 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 | 3 -  9 -  1 |    ---      | 1 - 11 -  1 | 1 -  9 -  3 | 8 -  1 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 7 -  2 -  4 | 9 -  0 -  4 |
+       Orange4 > |  6 -  0 -  7 | 6 -  1 -  6 | 6 -  0 -  7 | 6 -  0 -  7 | 6 -  1 -  6 | 2 -  7 -  4 | 2 - 11 -  0 | 1 - 11 -  1 |    ---      | 1 -  9 -  3 | 7 -  2 -  4 | 8 -  0 -  5 | 8 -  1 -  4 | 7 -  1 -  5 | 8 -  1 -  4 |
+     * Orange5 > |  6 -  1 -  6 | 6 -  2 -  5 | 6 -  1 -  6 | 6 -  2 -  5 | 6 -  2 -  5 | 4 -  6 -  3 | 4 -  8 -  1 | 3 -  9 -  1 | 3 -  9 -  1 |    ---      | 9 -  0 -  4 | 8 -  1 -  4 | 9 -  0 -  4 | 8 -  1 -  4 | 9 -  0 -  4 |
+       Yellow1 > |  4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  1 -  8 | 4 -  2 -  7 | 4 -  1 -  8 | 4 -  2 -  7 | 4 -  0 -  9 |    ---      | 2 -  8 -  3 | 4 -  8 -  1 | 1 - 11 -  1 | 2 -  9 -  2 |
+       Yellow2 > |  6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 4 -  1 -  8 | 5 -  0 -  8 | 4 -  1 -  8 | 5 -  0 -  8 | 4 -  1 -  8 | 3 -  8 -  2 |    ---      | 5 -  7 -  1 | 3 -  8 -  2 | 1 - 12 -  0 |
+       Yellow3 > |  5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 5 -  5 -  3 | 4 -  0 -  9 | 4 -  2 -  7 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 1 -  8 -  4 | 1 -  7 -  5 |    ---      | 1 -  8 -  4 | 1 -  8 -  4 |
+       Yellow4 > |  4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  6 -  3 | 4 -  2 -  7 | 5 -  1 -  7 | 4 -  2 -  7 | 5 -  1 -  7 | 4 -  1 -  8 | 1 - 11 -  1 | 2 -  8 -  3 | 4 -  8 -  1 |    ---      | 3 -  7 -  3 |
+       Yellow5 > |  6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 6 -  4 -  3 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 4 -  1 -  8 | 4 -  0 -  9 | 2 -  9 -  2 | 0 - 12 -  1 | 4 -  8 -  1 | 3 -  7 -  3 |    ---      |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: Orange5 — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Purple1    2  1  0  1  3  6  |    19   1.5
+Purple2    1  2  0  0  3  7  |    16   1.2
+Purple3    2  1  0  1  3  6  |    19   1.5
+Purple4    1  1  0  2  3  6  |    16   1.2
+Purple5    2  1  0  0  3  7  |    17   1.3
+Orange1    4  2  0  0  3  4  |    31   2.4
+Orange2    3  1  1  0  3  5  |    25   1.9
+Orange3    2  4  0  0  3  4  |    29   2.2
+Orange4    3  3  0  0  2  5  |    29   2.2
+Orange5    3  2  0  2  3  3  |    30   2.3
+Yellow1    3  1  0  0  1  8  |    20   1.5
+Yellow2    2  2  0  0  3  6  |    21   1.6
+Yellow3    0  3  0  1  1  8  |    15   1.2
+Yellow4    2  2  0  0  2  7  |    20   1.5
+Yellow5    2  2  0  0  2  7  |    20   1.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

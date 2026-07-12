@@ -33,47 +33,22 @@ Chocolate, Chocolate Chip, Fudge Brownie, Vanilla, Strawberry, Mango
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../tie_break_ladder_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                       |    * Chocolate     |   Chocolate Chip  |   Fudge Brownie   |      Vanilla      |   * Strawberry    |       Mango       |
--------------------------------------------------------------------------------------------------------------------------------------------------
-         * Chocolate > |        ---         |    1 - 0 - 1      |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
-      Chocolate Chip > |     1 - 0 - 1      |       ---         |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
-       Fudge Brownie > |     0 - 1 - 1      |    0 - 1 - 1      |       ---         |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
-             Vanilla > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |       ---         |    0 - 0 - 2      |    1 - 1 - 0      |
-        * Strawberry > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |    2 - 0 - 0      |       ---         |    2 - 0 - 0      |
-               Mango > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |    0 - 1 - 1      |    0 - 0 - 2      |       ---         |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Chocolate, Chocolate Chip, Strawberry (pairwise ties)
-
 [Divergence from STAR]
   STAR                   = Strawberry
   Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
   Approval               = Chocolate   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
         4,             5,            4,      1,         2,    -
         1,             0,            0,      4,         5,    4
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                     Score
-Candidate       5  4  3  2  1  0  Abs  | Total   Avg
-Chocolate       0  1  0  0  1  0    0  |     5   2.5
-Chocolate Chip  1  0  0  0  0  1    0  |     5   2.5
-Fudge Brownie   0  1  0  0  0  1    0  |     4   2.0
-Vanilla         0  1  0  0  1  0    0  |     5   2.5
-Strawberry      1  0  0  1  0  0    0  |     7   3.5
-Mango           0  1  0  0  0  0    1  |     4   4.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -116,6 +91,41 @@ Mango           0  1  0  0  0  0    1  |     4   4.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Strawberry
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                       |    * Chocolate     |   Chocolate Chip  |   Fudge Brownie   |      Vanilla      |   * Strawberry    |       Mango       |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+         * Chocolate > |        ---         |    1 - 0 - 1      |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
+      Chocolate Chip > |     1 - 0 - 1      |       ---         |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
+       Fudge Brownie > |     0 - 1 - 1      |    0 - 1 - 1      |       ---         |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
+             Vanilla > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |       ---         |    0 - 0 - 2      |    1 - 1 - 0      |
+        * Strawberry > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |    2 - 0 - 0      |       ---         |    2 - 0 - 0      |
+               Mango > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |    0 - 1 - 1      |    0 - 0 - 2      |       ---         |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Chocolate, Chocolate Chip, Strawberry (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate       5  4  3  2  1  0  Abs  | Total   Avg
+Chocolate       0  1  0  0  1  0    0  |     5   2.5
+Chocolate Chip  1  0  0  0  0  1    0  |     5   2.5
+Fudge Brownie   0  1  0  0  0  1    0  |     4   2.0
+Vanilla         0  1  0  0  1  0    0  |     5   2.5
+Strawberry      1  0  0  1  0  0    0  |     7   3.5
+Mango           0  1  0  0  0  0    1  |     4   4.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../tie_break_ladder_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

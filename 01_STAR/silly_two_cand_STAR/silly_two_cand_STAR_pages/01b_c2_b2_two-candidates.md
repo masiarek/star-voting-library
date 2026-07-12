@@ -28,33 +28,16 @@ Choco,Vanilla
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../silly_two_cand_STAR_tabulated/01b_c2_b2_two-candidates_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |   * Choco   | * Vanilla  |
---------------------------------------------
-      * Choco > |     ---     | 2 - 0 - 0  |
-    * Vanilla > |  0 - 0 - 2  |    ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Choco — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Choco,Vanilla
     5,      3
     5,      0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Choco      2  0  0  0  0  0  |    10   5.0
-Vanilla    0  0  1  0  0  1  |     3   1.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -79,6 +62,33 @@ Vanilla    0  0  1  0  0  1  |     3   1.5
  Choco
 ```
 
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |   * Choco   | * Vanilla  |
+--------------------------------------------
+      * Choco > |     ---     | 2 - 0 - 0  |
+    * Vanilla > |  0 - 0 - 2  |    ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Choco — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Choco      2  0  0  0  0  0  |    10   5.0
+Vanilla    0  0  1  0  0  1  |     3   1.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../silly_two_cand_STAR_tabulated/01b_c2_b2_two-candidates_tabulated.txt) (regenerated on every run; every analysis forced on).
+
 Run it yourself:
 
 ```bash
@@ -87,6 +97,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/silly_tw
 
 ## See also
 
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [01a_c2_b1_two-candidates](01a_c2_b1_two-candidates.md) · [01a_c2_b2_two-candidates](01a_c2_b2_two-candidates.md) · [01c_c2_b3_two-candidates](01c_c2_b3_two-candidates.md)

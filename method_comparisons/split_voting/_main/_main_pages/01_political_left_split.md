@@ -33,23 +33,9 @@ Count:Green,Labour,SocialDem,Conservative
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/01_political_left_split_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                     |     * Green      |    * Labour     |    SocialDem    |   Conservative  |
------------------------------------------------------------------------------------------------
-           * Green > |       ---        |  24 - 34 - 42   |  24 - 56 - 20   |  66 -  0 - 34   |
-          * Labour > |   42 - 34 - 24   |      ---        |  46 - 34 - 20   |  66 -  0 - 34   |
-         SocialDem > |   20 - 56 - 24   |  20 - 34 - 46   |      ---        |  66 -  0 - 34   |
-      Conservative > |   34 -  0 - 66   |  34 -  0 - 66   |  34 -  0 - 66   |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: Labour — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Labour
   Choose-One (Plurality) = Conservative   (differs from STAR)
@@ -63,6 +49,7 @@ Legend: For - Equal Support - Against
      Choose-One. STAR elected Labour.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Green,Labour,SocialDem,Conservative
@@ -70,14 +57,6 @@ Count × Green,Labour,SocialDem,Conservative
    24 ×     5,     4,        2,           0
    22 ×     4,     5,        4,           0
    20 ×     2,     4,        5,           0
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate      5   4   3   2   1   0  | Total   Avg
-Green         24  22   0  20   0  34  |   248   2.5
-Labour        22  44   0   0   0  34  |   286   2.9
-SocialDem     20  22   0  24   0  34  |   236   2.4
-Conservative  34   0   0   0   0  66  |   170   1.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -103,6 +82,37 @@ Conservative  34   0   0   0   0  66  |   170   1.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Labour
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                     |     * Green      |    * Labour     |    SocialDem    |   Conservative  |
+-----------------------------------------------------------------------------------------------
+           * Green > |       ---        |  24 - 34 - 42   |  24 - 56 - 20   |  66 -  0 - 34   |
+          * Labour > |   42 - 34 - 24   |      ---        |  46 - 34 - 20   |  66 -  0 - 34   |
+         SocialDem > |   20 - 56 - 24   |  20 - 34 - 46   |      ---        |  66 -  0 - 34   |
+      Conservative > |   34 -  0 - 66   |  34 -  0 - 66   |  34 -  0 - 66   |      ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: Labour — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate      5   4   3   2   1   0  | Total   Avg
+Green         24  22   0  20   0  34  |   248   2.5
+Labour        22  44   0   0   0  34  |   286   2.9
+SocialDem     20  22   0  24   0  34  |   236   2.4
+Conservative  34   0   0   0   0  66  |   170   1.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/01_political_left_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -25,21 +25,9 @@ Ann,Ben
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ann    |  * Ben    |
------------------------------------------
-       * Ann > |    ---     |1 - 0 - 1  |
-       * Ben > | 1 - 0 - 1  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Ann, Ben (pairwise ties)
-
 [Divergence from STAR]
   STAR                   = Ann
   Choose-One (Plurality) = Ben   (differs from STAR)
@@ -55,17 +43,12 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Ann,Ben
   5,  1
   0,  4
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ann        1  0  0  0  0  1  |     5   2.5
-Ben        0  1  0  0  1  0  |     5   2.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -95,6 +78,33 @@ Ben        0  1  0  0  1  0  |     5   2.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ann
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Ben    |
+-----------------------------------------
+       * Ann > |    ---     |1 - 0 - 1  |
+       * Ben > | 1 - 0 - 1  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ann, Ben (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        1  0  0  0  0  1  |     5   2.5
+Ben        0  1  0  0  1  0  |     5   2.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

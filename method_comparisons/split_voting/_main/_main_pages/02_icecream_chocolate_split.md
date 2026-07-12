@@ -32,23 +32,9 @@ Count:DarkChoco,MilkChoco,ChocoChip,Vanilla
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/02_icecream_chocolate_split_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                  |  * DarkChoco  | * MilkChoco  |   ChocoChip  |    Vanilla   |
---------------------------------------------------------------------------------
-    * DarkChoco > |      ---      |24 - 34 - 42  |24 - 56 - 20  |66 -  0 - 34  |
-    * MilkChoco > | 42 - 34 - 24  |     ---      |46 - 34 - 20  |66 -  0 - 34  |
-      ChocoChip > | 20 - 56 - 24  |20 - 34 - 46  |     ---      |66 -  0 - 34  |
-        Vanilla > | 34 -  0 - 66  |34 -  0 - 66  |34 -  0 - 66  |     ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: MilkChoco — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = MilkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)
@@ -62,6 +48,7 @@ Legend: For - Equal Support - Against
      STAR elected MilkChoco.
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × DarkChoco,MilkChoco,ChocoChip,Vanilla
@@ -69,14 +56,6 @@ Count × DarkChoco,MilkChoco,ChocoChip,Vanilla
    24 ×         5,        4,        2,      0
    22 ×         4,        5,        4,      0
    20 ×         2,        4,        5,      0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-DarkChoco  24  22   0  20   0  34  |   248   2.5
-MilkChoco  22  44   0   0   0  34  |   286   2.9
-ChocoChip  20  22   0  24   0  34  |   236   2.4
-Vanilla    34   0   0   0   0  66  |   170   1.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -102,6 +81,37 @@ Vanilla    34   0   0   0   0  66  |   170   1.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  MilkChoco
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |  * DarkChoco  | * MilkChoco  |   ChocoChip  |    Vanilla   |
+--------------------------------------------------------------------------------
+    * DarkChoco > |      ---      |24 - 34 - 42  |24 - 56 - 20  |66 -  0 - 34  |
+    * MilkChoco > | 42 - 34 - 24  |     ---      |46 - 34 - 20  |66 -  0 - 34  |
+      ChocoChip > | 20 - 56 - 24  |20 - 34 - 46  |     ---      |66 -  0 - 34  |
+        Vanilla > | 34 -  0 - 66  |34 -  0 - 66  |34 -  0 - 66  |     ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: MilkChoco — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+DarkChoco  24  22   0  20   0  34  |   248   2.5
+MilkChoco  22  44   0   0   0  34  |   286   2.9
+ChocoChip  20  22   0  24   0  34  |   236   2.4
+Vanilla    34   0   0   0   0  66  |   170   1.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/02_icecream_chocolate_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

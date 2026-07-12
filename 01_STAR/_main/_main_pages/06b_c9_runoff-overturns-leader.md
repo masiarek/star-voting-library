@@ -33,28 +33,9 @@ Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/06b_c9_runoff-overturns-leader_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Andre    |    Blake    |  * Carmen   |    David    |     Ella    |   Fernando  |     Gabe    |    Helena   |     Ira     |
--------------------------------------------------------------------------------------------------------------------------------------------------
-       * Andre > |     ---      | 3 - 0 - 0   | 1 - 0 - 2   | 3 - 0 - 0   | 3 - 0 - 0   | 2 - 1 - 0   | 2 - 1 - 0   | 3 - 0 - 0   | 3 - 0 - 0   |
-         Blake > |  0 - 0 - 3   |    ---      | 1 - 0 - 2   | 2 - 0 - 1   | 1 - 2 - 0   | 2 - 0 - 1   | 1 - 1 - 1   | 2 - 0 - 1   | 1 - 1 - 1   |
-      * Carmen > |  2 - 0 - 1   | 2 - 0 - 1   |    ---      | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 1 - 0   |
-         David > |  0 - 0 - 3   | 1 - 0 - 2   | 1 - 0 - 2   |    ---      | 2 - 0 - 1   | 1 - 1 - 1   | 2 - 0 - 1   | 1 - 2 - 0   | 1 - 1 - 1   |
-          Ella > |  0 - 0 - 3   | 0 - 2 - 1   | 1 - 0 - 2   | 1 - 0 - 2   |    ---      | 1 - 1 - 1   | 0 - 2 - 1   | 1 - 1 - 1   | 1 - 1 - 1   |
-      Fernando > |  0 - 1 - 2   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 1 - 1   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   | 1 - 2 - 0   | 2 - 0 - 1   |
-          Gabe > |  0 - 1 - 2   | 1 - 1 - 1   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 2 - 0   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   | 2 - 0 - 1   |
-        Helena > |  0 - 0 - 3   | 1 - 0 - 2   | 1 - 0 - 2   | 0 - 2 - 1   | 1 - 1 - 1   | 0 - 2 - 1   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   |
-           Ira > |  0 - 0 - 3   | 1 - 1 - 1   | 0 - 1 - 2   | 1 - 1 - 1   | 1 - 1 - 1   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 1 - 1   |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Carmen — matches the STAR winner
-
 [Runoff Reversal]
  - Score Round Winner(s) = (Andre)
  - Runoff Round Winner   = (Carmen)
@@ -63,27 +44,14 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
     5,    3,     0,    2,   1,       1,   1,     1,  0
     2,    0,     3,    1,   0,       2,   0,     1,  1
     2,    1,     3,    0,   1,       0,   2,     0,  1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Andre      1  0  0  2  0  0  |     9   3.0
-Blake      0  0  1  0  1  1  |     4   1.3
-Carmen     0  0  2  0  0  1  |     6   2.0
-David      0  0  0  1  1  1  |     3   1.0
-Ella       0  0  0  0  2  1  |     2   0.7
-Fernando   0  0  0  1  1  1  |     3   1.0
-Gabe       0  0  0  1  1  1  |     3   1.0
-Helena     0  0  0  0  2  1  |     2   0.7
-Ira        0  0  0  0  2  1  |     2   0.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -114,6 +82,47 @@ Ira        0  0  0  0  2  1  |     2   0.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Carmen
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Andre    |    Blake    |  * Carmen   |    David    |     Ella    |   Fernando  |     Gabe    |    Helena   |     Ira     |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+       * Andre > |     ---      | 3 - 0 - 0   | 1 - 0 - 2   | 3 - 0 - 0   | 3 - 0 - 0   | 2 - 1 - 0   | 2 - 1 - 0   | 3 - 0 - 0   | 3 - 0 - 0   |
+         Blake > |  0 - 0 - 3   |    ---      | 1 - 0 - 2   | 2 - 0 - 1   | 1 - 2 - 0   | 2 - 0 - 1   | 1 - 1 - 1   | 2 - 0 - 1   | 1 - 1 - 1   |
+      * Carmen > |  2 - 0 - 1   | 2 - 0 - 1   |    ---      | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 0 - 1   | 2 - 1 - 0   |
+         David > |  0 - 0 - 3   | 1 - 0 - 2   | 1 - 0 - 2   |    ---      | 2 - 0 - 1   | 1 - 1 - 1   | 2 - 0 - 1   | 1 - 2 - 0   | 1 - 1 - 1   |
+          Ella > |  0 - 0 - 3   | 0 - 2 - 1   | 1 - 0 - 2   | 1 - 0 - 2   |    ---      | 1 - 1 - 1   | 0 - 2 - 1   | 1 - 1 - 1   | 1 - 1 - 1   |
+      Fernando > |  0 - 1 - 2   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 1 - 1   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   | 1 - 2 - 0   | 2 - 0 - 1   |
+          Gabe > |  0 - 1 - 2   | 1 - 1 - 1   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 2 - 0   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   | 2 - 0 - 1   |
+        Helena > |  0 - 0 - 3   | 1 - 0 - 2   | 1 - 0 - 2   | 0 - 2 - 1   | 1 - 1 - 1   | 0 - 2 - 1   | 1 - 1 - 1   |    ---      | 1 - 1 - 1   |
+           Ira > |  0 - 0 - 3   | 1 - 1 - 1   | 0 - 1 - 2   | 1 - 1 - 1   | 1 - 1 - 1   | 1 - 0 - 2   | 1 - 0 - 2   | 1 - 1 - 1   |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Carmen — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      1  0  0  2  0  0  |     9   3.0
+Blake      0  0  1  0  1  1  |     4   1.3
+Carmen     0  0  2  0  0  1  |     6   2.0
+David      0  0  0  1  1  1  |     3   1.0
+Ella       0  0  0  0  2  1  |     2   0.7
+Fernando   0  0  0  1  1  1  |     3   1.0
+Gabe       0  0  0  1  1  1  |     3   1.0
+Helena     0  0  0  0  2  1  |     2   0.7
+Ira        0  0  0  0  2  1  |     2   0.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/06b_c9_runoff-overturns-leader_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

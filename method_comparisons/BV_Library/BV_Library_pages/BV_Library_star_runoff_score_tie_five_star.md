@@ -22,37 +22,20 @@ Allison,Bill
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runoff_score_tie_five_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |
---------------------------------------------
-    * Allison > |     ---     | 1 - 0 - 1  |
-       * Bill > |  1 - 0 - 1  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
-
 [Divergence from STAR]
   STAR     = Allison
   Approval = Bill   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Allison,Bill
       2,   4
       5,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allison    1  0  0  1  0  0  |     7   3.5
-Bill       0  1  1  0  0  0  |     7   3.5
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -82,6 +65,33 @@ Bill       0  1  1  0  0  0  |     7   3.5
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Allison
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Allison  |  * Bill    |
+--------------------------------------------
+    * Allison > |     ---     | 1 - 0 - 1  |
+       * Bill > |  1 - 0 - 1  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    1  0  0  1  0  0  |     7   3.5
+Bill       0  1  1  0  0  0  |     7   3.5
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runoff_score_tie_five_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

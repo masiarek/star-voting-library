@@ -28,22 +28,9 @@ Ada, Bruno, Cleo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ada     |  * Bruno    |     Cleo    |
--------------------------------------------------------------
-         * Ada > |     ---      |40 - 25 - 35 |40 -  0 - 60 |
-       * Bruno > | 35 - 25 - 40 |    ---      |35 -  0 - 65 |
-          Cleo > | 60 -  0 - 40 |65 -  0 - 35 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Cleo — STAR elected Ada instead (Cleo was eliminated in the scoring round)
-
 [Divergence from STAR]
   STAR               = Ada
   RCV-RR (Condorcet) = Cleo   (differs from STAR)
@@ -51,19 +38,13 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Ada,Bruno,Cleo
    40 ×   5,    1,   2
    35 ×   1,    5,   2
    25 ×   3,    3,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Ada        40   0  25   0  35   0  |   310   3.1
-Bruno      35   0  25   0  40   0  |   290   2.9
-Cleo       25   0   0  75   0   0  |   275   2.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -88,6 +69,35 @@ Cleo       25   0   0  75   0   0  |   275   2.8
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |  * Bruno    |     Cleo    |
+-------------------------------------------------------------
+         * Ada > |     ---      |40 - 25 - 35 |40 -  0 - 60 |
+       * Bruno > | 35 - 25 - 40 |    ---      |35 -  0 - 65 |
+          Cleo > | 60 -  0 - 40 |65 -  0 - 35 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Cleo — STAR elected Ada instead (Cleo was eliminated in the scoring round)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ada        40   0  25   0  35   0  |   310   3.1
+Bruno      35   0  25   0  40   0  |   290   2.9
+Cleo       25   0   0  75   0   0  |   275   2.8
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

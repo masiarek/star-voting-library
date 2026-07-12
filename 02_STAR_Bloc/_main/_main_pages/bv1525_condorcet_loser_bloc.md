@@ -53,25 +53,11 @@ First,Condorcet Loser,Second,Third,Fourth
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                        |       * First       | * Condorcet Loser  |       Second       |        Third       |       Fourth       |
------------------------------------------------------------------------------------------------------------------------------------
-              * First > |         ---         |    8 -  0 -  8     |    8 -  5 -  3     |    8 -  5 -  3     |    8 -  5 -  3     |
-    * Condorcet Loser > |     8 -  0 -  8     |        ---         |    5 -  0 - 11     |    5 -  0 - 11     |    5 -  2 -  9     |
-               Second > |     3 -  5 -  8     |   11 -  0 -  5     |        ---         |    3 - 13 -  0     |    3 - 13 -  0     |
-                Third > |     3 -  5 -  8     |   11 -  0 -  5     |    0 - 13 -  3     |        ---         |    3 - 13 -  0     |
-               Fourth > |     3 -  5 -  8     |    9 -  2 -  5     |    0 - 13 -  3     |    0 - 13 -  3     |        ---         |
-
-[Condorcet Winner]
-  No strict Condorcet winner; weak Condorcet winner: First — matches the STAR winner
-
 --- Bloc STAR Voting Method (4 winners) ---
+
 [Bloc STAR]
  Tabulating 16 ballots to fill 4 seats.
 Count × First,Condorcet Loser,Second,Third,Fourth
@@ -79,15 +65,6 @@ Count × First,Condorcet Loser,Second,Third,Fourth
     5 ×     0,              4,     0,    0,     0
     2 ×     0,              1,     3,    2,     1
     1 ×     0,              2,     5,    4,     3
-
-[Score Distribution] (how many ballots gave each star rating)
-                         Score
-Candidate         5   4   3   2   1   0  | Total   Avg
-First             0   0   8   0   0   8  |    24   1.5
-Condorcet Loser   0   5   0   1   2   8  |    24   1.5
-Second            1   0   2   0   8   5  |    19   1.2
-Third             0   1   0   2   8   5  |    16   1.0
-Fourth            0   0   1   0  10   5  |    13   0.8
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -133,6 +110,7 @@ Fourth            0   0   1   0  10   5  |    13   0.8
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Condorcet Loser -- 24 -- First place
@@ -155,6 +133,7 @@ Fourth            0   0   1   0  10   5  |    13   0.8
            Second 11 (69%)  ·  Condorcet Loser 5 (31%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 3: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Condorcet Loser -- 24 -- First place
@@ -176,6 +155,7 @@ Fourth            0   0   1   0  10   5  |    13   0.8
            Third 11 (69%)  ·  Condorcet Loser 5 (31%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 4: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Condorcet Loser -- 24 -- First place
@@ -201,6 +181,39 @@ Fourth            0   0   1   0  10   5  |    13   0.8
  Third
  Fourth
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                        |       * First       | * Condorcet Loser  |       Second       |        Third       |       Fourth       |
+-----------------------------------------------------------------------------------------------------------------------------------
+              * First > |         ---         |    8 -  0 -  8     |    8 -  5 -  3     |    8 -  5 -  3     |    8 -  5 -  3     |
+    * Condorcet Loser > |     8 -  0 -  8     |        ---         |    5 -  0 - 11     |    5 -  0 - 11     |    5 -  2 -  9     |
+               Second > |     3 -  5 -  8     |   11 -  0 -  5     |        ---         |    3 - 13 -  0     |    3 - 13 -  0     |
+                Third > |     3 -  5 -  8     |   11 -  0 -  5     |    0 - 13 -  3     |        ---         |    3 - 13 -  0     |
+               Fourth > |     3 -  5 -  8     |    9 -  2 -  5     |    0 - 13 -  3     |    0 - 13 -  3     |        ---         |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: First — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                         Score
+Candidate         5   4   3   2   1   0  | Total   Avg
+First             0   0   8   0   0   8  |    24   1.5
+Condorcet Loser   0   5   0   1   2   8  |    24   1.5
+Second            1   0   2   0   8   5  |    19   1.2
+Third             0   1   0   2   8   5  |    16   1.0
+Fourth            0   0   1   0  10   5  |    13   0.8
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

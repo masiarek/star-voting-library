@@ -24,35 +24,16 @@ Aral, Baikal, Crater
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_04_scoring_tie_2way_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Aral   | * Baikal  |   Crater  |
------------------------------------------------------
-      * Aral > |    ---     |3 - 0 - 0  |3 - 0 - 0  |
-    * Baikal > | 0 - 0 - 3  |   ---     |0 - 3 - 0  |
-      Crater > | 0 - 0 - 3  |0 - 3 - 0  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Aral — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Count × Aral,Baikal,Crater
     2 ×    5,     4,     4
     1 ×    5,     0,     0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Aral       3  0  0  0  0  0  |    15   5.0
-Baikal     0  2  0  0  0  1  |     8   2.7
-Crater     0  2  0  0  0  1  |     8   2.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -105,6 +86,35 @@ Crater     0  2  0  0  0  1  |     8   2.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Aral
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Aral   | * Baikal  |   Crater  |
+-----------------------------------------------------
+      * Aral > |    ---     |3 - 0 - 0  |3 - 0 - 0  |
+    * Baikal > | 0 - 0 - 3  |   ---     |0 - 3 - 0  |
+      Crater > | 0 - 0 - 3  |0 - 3 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Aral — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Aral       3  0  0  0  0  0  |    15   5.0
+Baikal     0  2  0  0  0  1  |     8   2.7
+Crater     0  2  0  0  0  1  |     8   2.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_04_scoring_tie_2way_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

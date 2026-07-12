@@ -25,36 +25,17 @@ Aspen, Birch, Cedar
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Aspen   | * Birch   |   Cedar   |
------------------------------------------------------
-     * Aspen > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
-     * Birch > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
-       Cedar > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Aspen — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Aspen,Birch,Cedar
     5,    2,    1
     2,    5,    0
     5,    3,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Aspen      2  0  0  1  0  0  |    12   4.0
-Birch      1  0  1  1  0  0  |    10   3.3
-Cedar      0  0  0  0  1  2  |     1   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -79,6 +60,35 @@ Cedar      0  0  0  0  1  2  |     1   0.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Aspen
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Aspen   | * Birch   |   Cedar   |
+-----------------------------------------------------
+     * Aspen > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
+     * Birch > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
+       Cedar > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Aspen — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Aspen      2  0  0  1  0  0  |    12   4.0
+Birch      1  0  1  1  0  0  |    10   3.3
+Cedar      0  0  0  0  1  2  |     1   0.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

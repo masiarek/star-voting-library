@@ -31,27 +31,15 @@ Maple, Oak, Pine
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../summability_demo_tabulated/star_combined_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    Maple   |  * Oak    |  * Pine   |
------------------------------------------------------
-       Maple > |    ---     |3 - 0 - 3  |2 - 0 - 4  |
-       * Oak > | 3 - 0 - 3  |   ---     |4 - 0 - 2  |
-      * Pine > | 4 - 0 - 2  |2 - 0 - 4  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; weak Condorcet winner: Oak — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Oak
   Choose-One (Plurality) = Maple   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 6 ballots.
 Maple,Oak,Pine
@@ -61,13 +49,6 @@ Maple,Oak,Pine
     1,  5,   4
     0,  5,   3
     4,  0,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Maple      2  1  0  0  1  2  |    15   2.5
-Oak        2  1  1  1  0  1  |    19   3.2
-Pine       2  1  1  0  1  1  |    18   3.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -92,6 +73,35 @@ Pine       2  1  1  0  1  1  |    18   3.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Oak
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    Maple   |  * Oak    |  * Pine   |
+-----------------------------------------------------
+       Maple > |    ---     |3 - 0 - 3  |2 - 0 - 4  |
+       * Oak > | 3 - 0 - 3  |   ---     |4 - 0 - 2  |
+      * Pine > | 4 - 0 - 2  |2 - 0 - 4  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: Oak — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Maple      2  1  0  0  1  2  |    15   2.5
+Oak        2  1  1  1  0  1  |    19   3.2
+Pine       2  1  1  0  1  1  |    18   3.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../summability_demo_tabulated/star_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

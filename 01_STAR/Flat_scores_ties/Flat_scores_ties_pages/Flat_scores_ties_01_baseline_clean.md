@@ -22,34 +22,15 @@ Apple, Banana, Cherry
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_01_baseline_clean_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Apple   | * Banana  |   Cherry  |
------------------------------------------------------
-     * Apple > |    ---     |2 - 0 - 0  |2 - 0 - 0  |
-    * Banana > | 0 - 0 - 2  |   ---     |2 - 0 - 0  |
-      Cherry > | 0 - 0 - 2  |0 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Apple — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Count × Apple,Banana,Cherry
     2 ×     5,     3,     1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Apple      2  0  0  0  0  0  |    10   5.0
-Banana     0  0  2  0  0  0  |     6   3.0
-Cherry     0  0  0  0  2  0  |     2   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -74,6 +55,35 @@ Cherry     0  0  0  0  2  0  |     2   1.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Apple
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Apple   | * Banana  |   Cherry  |
+-----------------------------------------------------
+     * Apple > |    ---     |2 - 0 - 0  |2 - 0 - 0  |
+    * Banana > | 0 - 0 - 2  |   ---     |2 - 0 - 0  |
+      Cherry > | 0 - 0 - 2  |0 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Apple — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Apple      2  0  0  0  0  0  |    10   5.0
+Banana     0  0  2  0  0  0  |     6   3.0
+Cherry     0  0  0  0  2  0  |     2   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_01_baseline_clean_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

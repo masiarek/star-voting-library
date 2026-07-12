@@ -31,22 +31,9 @@ A,B,C
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |   * B     |     C     |
------------------------------------------------------
-         * A > |    ---     |1 - 1 - 1  |1 - 1 - 1  |
-         * B > | 1 - 1 - 1  |   ---     |1 - 1 - 1  |
-           C > | 1 - 1 - 1  |1 - 1 - 1  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: A, B, C (pairwise ties)
-
 [Divergence from STAR]
   STAR    = A
   RCV-IRV = B   (differs from STAR)
@@ -58,19 +45,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 A,B,C
 4,0,0
 0,4,0
 0,0,4
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          0  1  0  0  0  2  |     4   1.3
-B          0  1  0  0  0  2  |     4   1.3
-C          0  1  0  0  0  2  |     4   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -143,6 +124,35 @@ C          0  1  0  0  0  2  |     4   1.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  A
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |     C     |
+-----------------------------------------------------
+         * A > |    ---     |1 - 1 - 1  |1 - 1 - 1  |
+         * B > | 1 - 1 - 1  |   ---     |1 - 1 - 1  |
+           C > | 1 - 1 - 1  |1 - 1 - 1  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: A, B, C (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          0  1  0  0  0  2  |     4   1.3
+B          0  1  0  0  0  2  |     4   1.3
+C          0  1  0  0  0  2  |     4   1.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

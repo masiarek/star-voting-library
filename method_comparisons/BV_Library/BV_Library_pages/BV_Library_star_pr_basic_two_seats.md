@@ -35,24 +35,11 @@ Allison,Bill,Carmen,Doug
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_pr_basic_two_seats_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
-----------------------------------------------------------------------
-    * Allison > |     ---     | 1 - 9 - 0  | 5 - 1 - 4  | 5 - 0 - 5  |
-       * Bill > |  0 - 9 - 1  |    ---     | 4 - 2 - 4  | 5 - 0 - 5  |
-       Carmen > |  4 - 1 - 5  | 4 - 2 - 4  |    ---     | 5 - 0 - 5  |
-         Doug > |  5 - 0 - 5  | 5 - 0 - 5  | 5 - 0 - 5  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Allison, Doug (pairwise ties)
-
 --- Allocated Score Voting Method (2 winners) ---
+
 [Allocated Score Voting]
  Tabulating 10 ballots to fill 2 seats.
 Count × Allison,Bill,Carmen,Doug
@@ -60,15 +47,6 @@ Count × Allison,Bill,Carmen,Doug
     4 ×       0,   0,     4,   5
     1 ×       5,   4,     4,   0
     1 ×       0,   0,     0,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allison    5  0  0  0  0  5  |    25   2.5
-Bill       4  1  0  0  0  5  |    24   2.4
-Carmen     0  5  0  0  4  1  |    24   2.4
-Doug       4  0  1  0  0  5  |    23   2.3
- Hare quota is 5.
 
 [Allocated Score Voting: Round 1]
  The highest-scoring candidate wins a seat.
@@ -92,6 +70,38 @@ Count × Allison,Bill,Carmen,Doug
     1 ×       5,   4,     4,   0
     1 ×       0,   0,     0,   3
 
+[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
+ Allison
+ Doug
+```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
+----------------------------------------------------------------------
+    * Allison > |     ---     | 1 - 9 - 0  | 5 - 1 - 4  | 5 - 0 - 5  |
+       * Bill > |  0 - 9 - 1  |    ---     | 4 - 2 - 4  | 5 - 0 - 5  |
+       Carmen > |  4 - 1 - 5  | 4 - 2 - 4  |    ---     | 5 - 0 - 5  |
+         Doug > |  5 - 0 - 5  | 5 - 0 - 5  | 5 - 0 - 5  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Allison, Doug (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    5  0  0  0  0  5  |    25   2.5
+Bill       4  1  0  0  0  5  |    24   2.4
+Carmen     0  5  0  0  4  1  |    24   2.4
+Doug       4  0  1  0  0  5  |    23   2.3
+ Hare quota is 5.
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg
@@ -104,11 +114,11 @@ Doug       4  0  1  0  0  5  |    23   2.3
    Carmen        -- 16
    Bill          --  0
  Doug wins a seat.
-
-[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
- Allison
- Doug
 ```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_pr_basic_two_seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

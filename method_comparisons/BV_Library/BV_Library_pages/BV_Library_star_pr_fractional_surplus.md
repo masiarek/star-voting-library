@@ -36,24 +36,11 @@ Allison,Bill,Carmen,Doug
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_pr_fractional_surplus_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Allison   |   * Bill    |    Carmen   |     Doug    |
----------------------------------------------------------------------------
-     * Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
-        * Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
-        Carmen > |  3 -  1 -  8 | 3 -  2 -  7 |    ---      | 8 -  0 -  4 |
-          Doug > |  4 -  0 -  8 | 4 -  0 -  8 | 4 -  0 -  8 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Allison — matches the STAR winner
-
 --- Allocated Score Voting Method (2 winners) ---
+
 [Allocated Score Voting]
  Tabulating 12 ballots to fill 2 seats.
 Count × Allison,Bill,Carmen,Doug
@@ -61,15 +48,6 @@ Count × Allison,Bill,Carmen,Doug
     3 ×       0,   0,     4,   5
     1 ×       5,   4,     4,   0
     1 ×       0,   0,     0,   3
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allison    8  0  0  0  0  4  |    40   3.3
-Bill       7  1  0  0  0  4  |    39   3.3
-Carmen     0  4  0  0  7  1  |    23   1.9
-Doug       3  0  1  0  0  8  |    18   1.5
- Hare quota is 6.
 
 [Allocated Score Voting: Round 1]
  The highest-scoring candidate wins a seat.
@@ -100,6 +78,38 @@ Doug       3  0  1  0  0  8  |    18   1.5
  Allison
  Doug
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |  * Allison   |   * Bill    |    Carmen   |     Doug    |
+---------------------------------------------------------------------------
+     * Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
+        * Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
+        Carmen > |  3 -  1 -  8 | 3 -  2 -  7 |    ---      | 8 -  0 -  4 |
+          Doug > |  4 -  0 -  8 | 4 -  0 -  8 | 4 -  0 -  8 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Allison — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    8  0  0  0  0  4  |    40   3.3
+Bill       7  1  0  0  0  4  |    39   3.3
+Carmen     0  4  0  0  7  1  |    23   1.9
+Doug       3  0  1  0  0  8  |    18   1.5
+ Hare quota is 6.
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_pr_fractional_surplus_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

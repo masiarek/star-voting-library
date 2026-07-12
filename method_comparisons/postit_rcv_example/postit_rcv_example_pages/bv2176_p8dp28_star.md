@@ -54,23 +54,9 @@ Purple,Green,Blue,Pink
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../postit_rcv_example_tabulated/bv2176_p8dp28_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Purple   |    Green    |   * Blue    |     Pink    |
----------------------------------------------------------------------------
-      * Purple > |     ---      | 9 -  3 -  8 | 9 -  1 - 10 | 8 -  0 - 12 |
-         Green > |  8 -  3 -  9 |    ---      | 7 -  9 -  4 | 7 -  8 -  5 |
-        * Blue > | 10 -  1 -  9 | 4 -  9 -  7 |    ---      |10 -  7 -  3 |
-          Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Purple > Green > Pink > Purple)
-
 [Divergence from STAR]
   STAR                   = Blue
   Choose-One (Plurality) = Purple   (differs from STAR)
@@ -91,8 +77,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 20 ballots.
 Count × Purple,Green,Blue,Pink
@@ -104,14 +90,6 @@ Count × Purple,Green,Blue,Pink
     1 ×      3,    4,   0,   5
     1 ×      4,    0,   0,   5
     1 ×      0,    0,   0,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Purple      7   2   1   0   0  10  |    46   2.3
-Green       6   2   0   0   0  12  |    38   1.9
-Blue        4   6   0   0   0  10  |    44   2.2
-Pink        3   2   7   0   0   8  |    44   2.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -144,6 +122,37 @@ Pink        3   2   7   0   0   8  |    44   2.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Blue
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Purple   |    Green    |   * Blue    |     Pink    |
+---------------------------------------------------------------------------
+      * Purple > |     ---      | 9 -  3 -  8 | 9 -  1 - 10 | 8 -  0 - 12 |
+         Green > |  8 -  3 -  9 |    ---      | 7 -  9 -  4 | 7 -  8 -  5 |
+        * Blue > | 10 -  1 -  9 | 4 -  9 -  7 |    ---      |10 -  7 -  3 |
+          Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Purple > Green > Pink > Purple)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Purple      7   2   1   0   0  10  |    46   2.3
+Green       6   2   0   0   0  12  |    38   1.9
+Blue        4   6   0   0   0  10  |    44   2.2
+Pink        3   2   7   0   0   8  |    44   2.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../postit_rcv_example_tabulated/bv2176_p8dp28_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

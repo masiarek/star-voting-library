@@ -36,36 +36,17 @@ Count:A,B,C
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/equal_support_runoff_demo_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     * A      |    * B      |      C      |
--------------------------------------------------------------
-           * A > |     ---      |35 - 65 -  0 |75 -  0 - 25 |
-           * B > |  0 - 65 - 35 |    ---      |75 -  0 - 25 |
-             C > | 25 -  0 - 75 |25 -  0 - 75 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: A — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × A,B,C
    40 × 5,5,0
    35 × 5,3,0
    25 × 0,0,5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-A          75   0   0   0   0  25  |   375   3.8
-B          40   0  35   0   0  25  |   305   3.1
-C          25   0   0   0   0  75  |   125   1.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -90,6 +71,35 @@ C          25   0   0   0   0  75  |   125   1.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  A
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |    * B      |      C      |
+-------------------------------------------------------------
+           * A > |     ---      |35 - 65 -  0 |75 -  0 - 25 |
+           * B > |  0 - 65 - 35 |    ---      |75 -  0 - 25 |
+             C > | 25 -  0 - 75 |25 -  0 - 75 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: A — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A          75   0   0   0   0  25  |   375   3.8
+B          40   0  35   0   0  25  |   305   3.1
+C          25   0   0   0   0  75  |   125   1.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/equal_support_runoff_demo_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

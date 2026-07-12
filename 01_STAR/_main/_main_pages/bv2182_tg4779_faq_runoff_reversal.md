@@ -34,22 +34,9 @@ Almond,Berry,Cocoa
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Almond   |  * Berry    |    Cocoa    |
--------------------------------------------------------------
-      * Almond > |     ---      | 6 -  1 -  3 | 7 -  0 -  3 |
-       * Berry > |  3 -  1 -  6 |    ---      |10 -  0 -  0 |
-         Cocoa > |  3 -  0 -  7 | 0 -  0 - 10 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Almond — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Almond
   Approval = Berry   (differs from STAR)
@@ -62,8 +49,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 10 ballots.
 Count × Almond,Berry,Cocoa
@@ -71,13 +58,6 @@ Count × Almond,Berry,Cocoa
     3 ×      0,    5,    2
     2 ×      5,    4,    0
     1 ×      5,    5,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Almond     7  0  0  0  0  3  |    35   3.5
-Berry      4  6  0  0  0  0  |    44   4.4
-Cocoa      0  0  0  3  4  3  |    10   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -102,6 +82,35 @@ Cocoa      0  0  0  3  4  3  |    10   1.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Almond
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Almond   |  * Berry    |    Cocoa    |
+-------------------------------------------------------------
+      * Almond > |     ---      | 6 -  1 -  3 | 7 -  0 -  3 |
+       * Berry > |  3 -  1 -  6 |    ---      |10 -  0 -  0 |
+         Cocoa > |  3 -  0 -  7 | 0 -  0 - 10 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Almond — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Almond     7  0  0  0  0  3  |    35   3.5
+Berry      4  6  0  0  0  0  |    44   4.4
+Cocoa      0  0  0  3  4  3  |    10   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

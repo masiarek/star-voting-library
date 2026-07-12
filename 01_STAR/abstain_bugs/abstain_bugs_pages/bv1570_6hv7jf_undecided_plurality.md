@@ -35,34 +35,17 @@ Approve,Reject
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../abstain_bugs_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Approve  | * Reject   |
---------------------------------------------
-    * Approve > |     ---     | 0 - 3 - 0  |
-     * Reject > |  0 - 3 - 0  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots. Note: 1 of 3 ballots is marked as an abstention.
 Approve,Reject
       0,     &
       &,     &
       &,     0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Approve    0  0  0  0  0  1    2  |     0   0.0
-Reject     0  0  0  0  0  1    2  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -108,6 +91,33 @@ Reject     0  0  0  0  0  1    2  |     0   0.0
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Approve
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Approve  | * Reject   |
+--------------------------------------------
+    * Approve > |     ---     | 0 - 3 - 0  |
+     * Reject > |  0 - 3 - 0  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Approve    0  0  0  0  0  1    2  |     0   0.0
+Reject     0  0  0  0  0  1    2  |     0   0.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../abstain_bugs_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

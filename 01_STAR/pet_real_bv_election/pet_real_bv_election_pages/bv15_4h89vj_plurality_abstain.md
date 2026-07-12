@@ -62,22 +62,11 @@ Andre,Blake
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pet_real_bv_election_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Andre   | * Blake   |
------------------------------------------
-     * Andre > |    ---     |5 - 5 - 2  |
-     * Blake > | 2 - 5 - 5  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Andre — matches the STAR winner
-
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 12 ballots. Note: 5 of 12 ballots are marked as abstentions.
 Count × Andre,Blake
@@ -85,12 +74,6 @@ Count × Andre,Blake
     5 ×     -,    -
     2 ×     0,    1
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Andre      0  0  0  0  5  2    5  |     5   0.7
-Blake      0  0  0  0  2  5    5  |     2   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -114,6 +97,33 @@ Blake      0  0  0  0  2  5    5  |     2   0.3
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Andre
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Andre   | * Blake   |
+-----------------------------------------
+     * Andre > |    ---     |5 - 5 - 2  |
+     * Blake > | 2 - 5 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Andre — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Andre      0  0  0  0  5  2    5  |     5   0.7
+Blake      0  0  0  0  2  5    5  |     2   0.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pet_real_bv_election_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

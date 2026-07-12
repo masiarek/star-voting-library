@@ -23,34 +23,15 @@ Ararat, Blanc, Cook
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_07_fully_flat_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Ararat  | * Blanc   |    Cook   |
------------------------------------------------------
-    * Ararat > |    ---     |0 - 2 - 0  |0 - 2 - 0  |
-     * Blanc > | 0 - 2 - 0  |   ---     |0 - 2 - 0  |
-        Cook > | 0 - 2 - 0  |0 - 2 - 0  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Ararat, Blanc, Cook (pairwise ties)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Count × Ararat,Blanc,Cook
     2 ×      5,    5,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ararat     2  0  0  0  0  0  |    10   5.0
-Blanc      2  0  0  0  0  0  |    10   5.0
-Cook       2  0  0  0  0  0  |    10   5.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -123,6 +104,35 @@ Cook       2  0  0  0  0  0  |    10   5.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ararat
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Ararat  | * Blanc   |    Cook   |
+-----------------------------------------------------
+    * Ararat > |    ---     |0 - 2 - 0  |0 - 2 - 0  |
+     * Blanc > | 0 - 2 - 0  |   ---     |0 - 2 - 0  |
+        Cook > | 0 - 2 - 0  |0 - 2 - 0  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Ararat, Blanc, Cook (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ararat     2  0  0  0  0  0  |    10   5.0
+Blanc      2  0  0  0  0  0  |    10   5.0
+Cook       2  0  0  0  0  0  |    10   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_07_fully_flat_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

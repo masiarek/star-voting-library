@@ -41,23 +41,11 @@ Count:Liberal,Moderate,Conservative
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                     |    * Liberal     |   * Moderate    |   Conservative  |
------------------------------------------------------------------------------
-         * Liberal > |       ---        |  56 -  0 - 44   |  62 -  0 - 38   |
-        * Moderate > |   44 -  0 - 56   |      ---        |  68 -  0 - 32   |
-      Conservative > |   38 -  0 - 62   |  32 -  0 - 68   |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: Liberal — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Liberal,Moderate,Conservative
@@ -65,13 +53,6 @@ Count × Liberal,Moderate,Conservative
    32 ×       0,       2,           5
     6 ×       2,       5,           0
     6 ×       0,       5,           2
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate      5   4   3   2   1   0  | Total   Avg
-Liberal       56   0   0   6   0  38  |   292   2.9
-Moderate      12   0   0  88   0   0  |   236   2.4
-Conservative  32   0   0   6   0  62  |   172   1.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -96,6 +77,35 @@ Conservative  32   0   0   6   0  62  |   172   1.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Liberal
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                     |    * Liberal     |   * Moderate    |   Conservative  |
+-----------------------------------------------------------------------------
+         * Liberal > |       ---        |  56 -  0 - 44   |  62 -  0 - 38   |
+        * Moderate > |   44 -  0 - 56   |      ---        |  68 -  0 - 32   |
+      Conservative > |   38 -  0 - 62   |  32 -  0 - 68   |      ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: Liberal — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate      5   4   3   2   1   0  | Total   Avg
+Liberal       56   0   0   6   0  38  |   292   2.9
+Moderate      12   0   0  88   0   0  |   236   2.4
+Conservative  32   0   0   6   0  62  |   172   1.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../fairvote_condorcet_claims_tabulated/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

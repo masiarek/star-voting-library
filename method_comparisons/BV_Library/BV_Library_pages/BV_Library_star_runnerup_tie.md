@@ -29,24 +29,11 @@ Allison,Bill,Carmen,Doug
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runnerup_tie_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
-----------------------------------------------------------------------
-    * Allison > |     ---     | 5 - 0 - 5  | 7 - 0 - 3  | 9 - 0 - 1  |
-       * Bill > |  5 - 0 - 5  |    ---     | 5 - 1 - 4  | 7 - 1 - 2  |
-       Carmen > |  3 - 0 - 7  | 4 - 1 - 5  |    ---     | 7 - 2 - 1  |
-         Doug > |  1 - 0 - 9  | 2 - 1 - 7  | 1 - 2 - 7  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 10 ballots.
 Allison,Bill,Carmen,Doug
@@ -60,14 +47,6 @@ Allison,Bill,Carmen,Doug
       4,   0,     5,   1
       3,   4,     5,   0
       3,   5,     5,   4
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Allison    4  3  3  0  0  0  |    41   4.1
-Bill       4  3  0  0  0  3  |    32   3.2
-Carmen     3  2  2  0  3  0  |    32   3.2
-Doug       0  1  1  1  3  4  |    12   1.2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -100,6 +79,37 @@ Doug       0  1  1  1  3  4  |    12   1.2
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Allison
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
+----------------------------------------------------------------------
+    * Allison > |     ---     | 5 - 0 - 5  | 7 - 0 - 3  | 9 - 0 - 1  |
+       * Bill > |  5 - 0 - 5  |    ---     | 5 - 1 - 4  | 7 - 1 - 2  |
+       Carmen > |  3 - 0 - 7  | 4 - 1 - 5  |    ---     | 7 - 2 - 1  |
+         Doug > |  1 - 0 - 9  | 2 - 1 - 7  | 1 - 2 - 7  |    ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    4  3  3  0  0  0  |    41   4.1
+Bill       4  3  0  0  0  3  |    32   3.2
+Carmen     3  2  2  0  3  0  |    32   3.2
+Doug       0  1  1  1  3  4  |    12   1.2
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_star_runnerup_tie_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

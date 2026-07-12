@@ -34,36 +34,17 @@ Alice,Bruno,Clara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/00_c3_b3_bloc-baseline-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Alice   | * Bruno   |   Clara   |
------------------------------------------------------
-     * Alice > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
-     * Bruno > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
-       Clara > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Alice — matches the STAR winner
-
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 3 ballots to fill 2 seats.
 Alice,Bruno,Clara
     5,    3,    1
     4,    5,    2
     5,    4,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Alice      2  1  0  0  0  0  |    14   4.7
-Bruno      1  1  1  0  0  0  |    12   4.0
-Clara      0  0  0  1  1  1  |     3   1.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -86,6 +67,7 @@ Clara      0  0  0  1  1  1  |     3   1.0
            Alice 2 (67%)  ·  Bruno 1 (33%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Bruno         -- 12 -- First place
@@ -109,6 +91,35 @@ Clara      0  0  0  1  1  1  |     3   1.0
  Alice
  Bruno
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Alice   | * Bruno   |   Clara   |
+-----------------------------------------------------
+     * Alice > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
+     * Bruno > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
+       Clara > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Alice — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alice      2  1  0  0  0  0  |    14   4.7
+Bruno      1  1  1  0  0  0  |    12   4.0
+Clara      0  0  0  1  1  1  |     3   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/00_c3_b3_bloc-baseline-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

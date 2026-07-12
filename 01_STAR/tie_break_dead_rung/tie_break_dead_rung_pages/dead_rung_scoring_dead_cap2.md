@@ -22,35 +22,16 @@ Ann,Ben,Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../tie_break_dead_rung_tabulated/dead_rung_scoring_dead_cap2_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ann    |  * Ben    |    Cara   |
------------------------------------------------------
-       * Ann > |    ---     |1 - 1 - 0  |2 - 0 - 0  |
-       * Ben > | 0 - 1 - 1  |   ---     |1 - 0 - 1  |
-        Cara > | 0 - 0 - 2  |1 - 0 - 1  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Ann — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Ann,Ben,Cara
   2,  2,   1
   2,  0,   1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ann        0  0  0  2  0  0  |     4   2.0
-Ben        0  0  0  1  0  1  |     2   1.0
-Cara       0  0  0  0  2  0  |     2   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -103,6 +84,35 @@ Cara       0  0  0  0  2  0  |     2   1.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ann
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Ben    |    Cara   |
+-----------------------------------------------------
+       * Ann > |    ---     |1 - 1 - 0  |2 - 0 - 0  |
+       * Ben > | 0 - 1 - 1  |   ---     |1 - 0 - 1  |
+        Cara > | 0 - 0 - 2  |1 - 0 - 1  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ann — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        0  0  0  2  0  0  |     4   2.0
+Ben        0  0  0  1  0  1  |     2   1.0
+Cara       0  0  0  0  2  0  |     2   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../tie_break_dead_rung_tabulated/dead_rung_scoring_dead_cap2_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

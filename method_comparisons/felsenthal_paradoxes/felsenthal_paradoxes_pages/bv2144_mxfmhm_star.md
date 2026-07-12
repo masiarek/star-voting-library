@@ -27,40 +27,21 @@ Ana,Bo,Cal
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2144_mxfmhm_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ana    |   * Bo    |    Cal    |
------------------------------------------------------
-       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
-        * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
-         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Bo — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Bo
   Choose-One (Plurality) = Ana   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 7 ballots.
 Count × Ana,Bo,Cal
     3 ×   5, 3,  1
     2 ×   1, 5,  3
     2 ×   1, 3,  5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ana        3  0  0  0  4  0  |    19   2.7
-Bo         2  0  5  0  0  0  |    25   3.6
-Cal        2  0  2  0  3  0  |    19   2.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -92,6 +73,35 @@ Cal        2  0  2  0  3  0  |    19   2.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bo
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ana    |   * Bo    |    Cal    |
+-----------------------------------------------------
+       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
+        * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
+         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bo — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ana        3  0  0  0  4  0  |    19   2.7
+Bo         2  0  5  0  0  0  |    25   3.6
+Cal        2  0  2  0  3  0  |    19   2.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2144_mxfmhm_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

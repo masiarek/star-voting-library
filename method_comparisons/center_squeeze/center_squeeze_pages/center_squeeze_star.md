@@ -30,22 +30,9 @@ Count:Left,Center,Right
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../center_squeeze_tabulated/center_squeeze_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Left    |  * Center   |    Right    |
--------------------------------------------------------------
-        * Left > |     ---      |12 -  0 - 15 |18 -  0 -  9 |
-      * Center > | 15 -  0 - 12 |    ---      |18 -  0 -  9 |
-         Right > |  9 -  0 - 18 | 9 -  0 - 18 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Center — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Center
   Choose-One (Plurality) = Left   (differs from STAR)
@@ -59,19 +46,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: center_squeeze_tabulated/center_squeeze_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 27 ballots.
 Count × Left,Center,Right
    12 ×    5,     4,    3
     9 ×    3,     4,    5
     6 ×    4,     5,    3
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Left       12   6   9   0   0   0  |   111   4.1
-Center      6  21   0   0   0   0  |   114   4.2
-Right       9   0  18   0   0   0  |    99   3.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -96,6 +77,35 @@ Right       9   0  18   0   0   0  |    99   3.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Center
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Left    |  * Center   |    Right    |
+-------------------------------------------------------------
+        * Left > |     ---      |12 -  0 - 15 |18 -  0 -  9 |
+      * Center > | 15 -  0 - 12 |    ---      |18 -  0 -  9 |
+         Right > |  9 -  0 - 18 | 9 -  0 - 18 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Center — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Left       12   6   9   0   0   0  |   111   4.1
+Center      6  21   0   0   0   0  |   114   4.2
+Right       9   0  18   0   0   0  |    99   3.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../center_squeeze_tabulated/center_squeeze_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

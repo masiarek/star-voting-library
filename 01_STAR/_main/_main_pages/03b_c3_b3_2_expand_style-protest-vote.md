@@ -31,39 +31,20 @@ Choco,Almond,Vanilla
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/03b_c3_b3_2_expand_style-protest-vote_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |     Choco   | * Almond   | * Vanilla  |
----------------------------------------------------------
-        Choco > |     ---     | 0 - 1 - 2  | 0 - 2 - 1  |
-     * Almond > |  2 - 1 - 0  |    ---     | 2 - 0 - 1  |
-    * Vanilla > |  1 - 2 - 0  | 1 - 0 - 2  |    ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Almond — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Almond
   Approval = Choco   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Count × Choco,Almond,Vanilla
     2 ×     0,     2,      0
     1 ×     0,     0,      2
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Choco      0  0  0  0  0  3  |     0   0.0
-Almond     0  0  0  2  0  1  |     4   1.3
-Vanilla    0  0  0  1  0  2  |     2   0.7
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -88,6 +69,35 @@ Vanilla    0  0  0  1  0  2  |     2   0.7
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Almond
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                |     Choco   | * Almond   | * Vanilla  |
+---------------------------------------------------------
+        Choco > |     ---     | 0 - 1 - 2  | 0 - 2 - 1  |
+     * Almond > |  2 - 1 - 0  |    ---     | 2 - 0 - 1  |
+    * Vanilla > |  1 - 2 - 0  | 1 - 0 - 2  |    ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Almond — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Choco      0  0  0  0  0  3  |     0   0.0
+Almond     0  0  0  2  0  1  |     4   1.3
+Vanilla    0  0  0  1  0  2  |     2   0.7
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/03b_c3_b3_2_expand_style-protest-vote_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

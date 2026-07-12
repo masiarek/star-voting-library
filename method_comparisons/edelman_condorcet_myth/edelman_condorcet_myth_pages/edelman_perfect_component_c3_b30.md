@@ -40,36 +40,17 @@ Count:Ada,Ben,Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../edelman_condorcet_myth_tabulated/edelman_perfect_component_c3_b30_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ada     |   * Ben     |     Cara    |
--------------------------------------------------------------
-         * Ada > |     ---      |20 -  0 - 10 |10 -  0 - 20 |
-         * Ben > | 10 -  0 - 20 |    ---      |20 -  0 - 10 |
-          Cara > | 20 -  0 - 10 |10 -  0 - 20 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Ada > Ben > Cara > Ada)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 30 ballots.
 Count × Ada,Ben,Cara
    10 ×   5,  2,   0
    10 ×   0,  5,   2
    10 ×   2,  0,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Ada        10   0   0  10   0  10  |    70   2.3
-Ben        10   0   0  10   0  10  |    70   2.3
-Cara       10   0   0  10   0  10  |    70   2.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -124,6 +105,35 @@ Cara       10   0   0  10   0  10  |    70   2.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cara    |
+-------------------------------------------------------------
+         * Ada > |     ---      |20 -  0 - 10 |10 -  0 - 20 |
+         * Ben > | 10 -  0 - 20 |    ---      |20 -  0 - 10 |
+          Cara > | 20 -  0 - 10 |10 -  0 - 20 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Ada > Ben > Cara > Ada)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ada        10   0   0  10   0  10  |    70   2.3
+Ben        10   0   0  10   0  10  |    70   2.3
+Cara       10   0   0  10   0  10  |    70   2.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../edelman_condorcet_myth_tabulated/edelman_perfect_component_c3_b30_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

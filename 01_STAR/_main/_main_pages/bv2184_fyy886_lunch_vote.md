@@ -31,22 +31,9 @@ Sushi,Tacos,Pizza
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Sushi   |   Tacos   | * Pizza   |
------------------------------------------------------
-     * Sushi > |    ---     |3 - 0 - 2  |2 - 0 - 3  |
-       Tacos > | 2 - 0 - 3  |   ---     |2 - 0 - 3  |
-     * Pizza > | 3 - 0 - 2  |3 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Pizza — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Pizza
   Choose-One (Plurality) = Sushi   (differs from STAR)
@@ -59,19 +46,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: _main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Count × Sushi,Tacos,Pizza
     2 ×     5,    0,    3
     2 ×     0,    5,    3
     1 ×     3,    1,    5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Sushi      2  0  1  0  0  2  |    13   2.6
-Tacos      2  0  0  0  1  2  |    11   2.2
-Pizza      1  0  4  0  0  0  |    17   3.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -96,6 +77,35 @@ Pizza      1  0  4  0  0  0  |    17   3.4
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Pizza
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Sushi   |   Tacos   | * Pizza   |
+-----------------------------------------------------
+     * Sushi > |    ---     |3 - 0 - 2  |2 - 0 - 3  |
+       Tacos > | 2 - 0 - 3  |   ---     |2 - 0 - 3  |
+     * Pizza > | 3 - 0 - 2  |3 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Pizza — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Sushi      2  0  1  0  0  2  |    13   2.6
+Tacos      2  0  0  0  1  2  |    11   2.2
+Pizza      1  0  4  0  0  0  |    17   3.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

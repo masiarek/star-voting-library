@@ -48,22 +48,9 @@ Count:Ada,Ben,Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../edelman_condorcet_myth_tabulated/bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ada     |   * Ben     |     Cara    |
--------------------------------------------------------------
-         * Ada > |     ---      |41 -  0 - 40 |60 -  0 - 21 |
-         * Ben > | 40 -  0 - 41 |    ---      |69 -  0 - 12 |
-          Cara > | 21 -  0 - 60 |12 -  0 - 69 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Ada — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Ada
   Choose-One (Plurality) = Ben   (differs from STAR)
@@ -77,8 +64,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 81 ballots.
 Count × Ada,Ben,Cara
@@ -88,13 +75,6 @@ Count × Ada,Ben,Cara
    10 ×   2,  0,   5
     1 ×   5,  0,   2
     1 ×   0,  2,   5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Ada        31   0   0  39   0  11  |   233   2.9
-Ben        39   0   0  31   0  11  |   257   3.2
-Cara       11   0   0  11   0  59  |    77   1.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -119,6 +99,35 @@ Cara       11   0   0  11   0  59  |    77   1.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ada     |   * Ben     |     Cara    |
+-------------------------------------------------------------
+         * Ada > |     ---      |41 -  0 - 40 |60 -  0 - 21 |
+         * Ben > | 40 -  0 - 41 |    ---      |69 -  0 - 12 |
+          Cara > | 21 -  0 - 60 |12 -  0 - 69 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ada        31   0   0  39   0  11  |   233   2.9
+Ben        39   0   0  31   0  11  |   257   3.2
+Cara       11   0   0  11   0  59  |    77   1.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../edelman_condorcet_myth_tabulated/bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

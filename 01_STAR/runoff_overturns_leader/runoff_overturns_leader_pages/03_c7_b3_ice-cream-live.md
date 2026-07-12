@@ -28,26 +28,9 @@ ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/03_c7_b3_ice-cream-live_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                     |    * ChocoDrk    |   * ChocoAlm    |     ChocoHzn    |   VanillaClssc  |   VanillaFrnch  |      Mango      |      Peach      |
------------------------------------------------------------------------------------------------------------------------------------------------------
-        * ChocoDrk > |       ---        |   1 - 0 - 2     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |
-        * ChocoAlm > |    2 - 0 - 1     |      ---        |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |
-          ChocoHzn > |    0 - 1 - 2     |   0 - 1 - 2     |      ---        |   1 - 2 - 0     |   1 - 2 - 0     |   1 - 2 - 0     |   1 - 2 - 0     |
-      VanillaClssc > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |      ---        |   0 - 2 - 1     |   0 - 2 - 1     |   0 - 3 - 0     |
-      VanillaFrnch > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   1 - 2 - 0     |      ---        |   0 - 2 - 1     |   1 - 2 - 0     |
-             Mango > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   1 - 2 - 0     |   1 - 2 - 0     |      ---        |   1 - 2 - 0     |
-             Peach > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   0 - 3 - 0     |   0 - 2 - 1     |   0 - 2 - 1     |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: ChocoAlm — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = ChocoAlm
   Approval = ChocoDrk   (differs from STAR)
@@ -60,25 +43,14 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 ChocoDrk,ChocoAlm,ChocoHzn,VanillaClssc,VanillaFrnch,Mango,Peach
        4,       5,       3,           0,           1,    2,    0
        0,       3,       0,           0,           0,    0,    0
        5,       0,       0,           0,           0,    0,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate     5  4  3  2  1  0  | Total   Avg
-ChocoDrk      1  1  0  0  0  1  |     9   3.0
-ChocoAlm      1  0  1  0  0  1  |     8   2.7
-ChocoHzn      0  0  1  0  0  2  |     3   1.0
-VanillaClssc  0  0  0  0  0  3  |     0   0.0
-VanillaFrnch  0  0  0  0  1  2  |     1   0.3
-Mango         0  0  0  1  0  2  |     2   0.7
-Peach         0  0  0  0  0  3  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -107,6 +79,43 @@ Peach         0  0  0  0  0  3  |     0   0.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  ChocoAlm
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                     |    * ChocoDrk    |   * ChocoAlm    |     ChocoHzn    |   VanillaClssc  |   VanillaFrnch  |      Mango      |      Peach      |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+        * ChocoDrk > |       ---        |   1 - 0 - 2     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |
+        * ChocoAlm > |    2 - 0 - 1     |      ---        |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |   2 - 1 - 0     |
+          ChocoHzn > |    0 - 1 - 2     |   0 - 1 - 2     |      ---        |   1 - 2 - 0     |   1 - 2 - 0     |   1 - 2 - 0     |   1 - 2 - 0     |
+      VanillaClssc > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |      ---        |   0 - 2 - 1     |   0 - 2 - 1     |   0 - 3 - 0     |
+      VanillaFrnch > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   1 - 2 - 0     |      ---        |   0 - 2 - 1     |   1 - 2 - 0     |
+             Mango > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   1 - 2 - 0     |   1 - 2 - 0     |      ---        |   1 - 2 - 0     |
+             Peach > |    0 - 1 - 2     |   0 - 1 - 2     |   0 - 2 - 1     |   0 - 3 - 0     |   0 - 2 - 1     |   0 - 2 - 1     |      ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: ChocoAlm — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate     5  4  3  2  1  0  | Total   Avg
+ChocoDrk      1  1  0  0  0  1  |     9   3.0
+ChocoAlm      1  0  1  0  0  1  |     8   2.7
+ChocoHzn      0  0  1  0  0  2  |     3   1.0
+VanillaClssc  0  0  0  0  0  3  |     0   0.0
+VanillaFrnch  0  0  0  0  1  2  |     1   0.3
+Mango         0  0  0  1  0  2  |     2   0.7
+Peach         0  0  0  0  0  3  |     0   0.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/03_c7_b3_ice-cream-live_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

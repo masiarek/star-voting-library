@@ -31,23 +31,9 @@ A,B,C,D
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |   * B     |     C     |     D     |
------------------------------------------------------------------
-         * A > |    ---     |4 - 0 - 7  |8 - 0 - 3  |6 - 0 - 5  |
-         * B > | 7 - 0 - 4  |   ---     |4 - 0 - 7  |6 - 0 - 5  |
-           C > | 3 - 0 - 8  |7 - 0 - 4  |   ---     |6 - 0 - 5  |
-           D > | 5 - 0 - 6  |5 - 0 - 6  |5 - 0 - 6  |   ---     |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: A > C > B > A)
-
 [Divergence from STAR]
   STAR                   = B
   Choose-One (Plurality) = D   (differs from STAR)
@@ -60,6 +46,7 @@ Legend: For - Equal Support - Against
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 11 ballots.
 Count × A,B,C,D
@@ -68,14 +55,6 @@ Count × A,B,C,D
     2 × 4,1,2,5
     2 × 5,2,4,1
     1 × 4,5,2,1
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          2  3  0  6  0  0  |    34   3.1
-B          1  6  0  2  2  0  |    35   3.2
-C          3  2  0  3  3  0  |    32   2.9
-D          5  0  0  0  6  0  |    31   2.8
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -101,6 +80,37 @@ D          5  0  0  0  6  0  |    31   2.8
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  B
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |     C     |     D     |
+-----------------------------------------------------------------
+         * A > |    ---     |4 - 0 - 7  |8 - 0 - 3  |6 - 0 - 5  |
+         * B > | 7 - 0 - 4  |   ---     |4 - 0 - 7  |6 - 0 - 5  |
+           C > | 3 - 0 - 8  |7 - 0 - 4  |   ---     |6 - 0 - 5  |
+           D > | 5 - 0 - 6  |5 - 0 - 6  |5 - 0 - 6  |   ---     |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: A > C > B > A)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          2  3  0  6  0  0  |    34   3.1
+B          1  6  0  2  2  0  |    35   3.2
+C          3  2  0  3  3  0  |    32   2.9
+D          5  0  0  0  6  0  |    31   2.8
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

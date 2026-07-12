@@ -22,35 +22,16 @@ Athens, Berlin, Cairo
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_03_runoff_tie_split_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Athens  | * Berlin  |   Cairo   |
------------------------------------------------------
-    * Athens > |    ---     |1 - 0 - 1  |2 - 0 - 0  |
-    * Berlin > | 1 - 0 - 1  |   ---     |2 - 0 - 0  |
-       Cairo > | 0 - 0 - 2  |0 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Athens, Berlin (pairwise ties)
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 2 ballots.
 Athens,Berlin,Cairo
      5,     4,    0
      4,     5,    0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Athens     1  1  0  0  0  0  |     9   4.5
-Berlin     1  1  0  0  0  0  |     9   4.5
-Cairo      0  0  0  0  0  2  |     0   0.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -96,6 +77,35 @@ Cairo      0  0  0  0  0  2  |     0   0.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Athens
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Athens  | * Berlin  |   Cairo   |
+-----------------------------------------------------
+    * Athens > |    ---     |1 - 0 - 1  |2 - 0 - 0  |
+    * Berlin > | 1 - 0 - 1  |   ---     |2 - 0 - 0  |
+       Cairo > | 0 - 0 - 2  |0 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Athens, Berlin (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Athens     1  1  0  0  0  0  |     9   4.5
+Berlin     1  1  0  0  0  0  |     9   4.5
+Cairo      0  0  0  0  0  2  |     0   0.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../Flat_scores_ties_tabulated/Flat_scores_ties_03_runoff_tie_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

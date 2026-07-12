@@ -36,48 +36,17 @@ Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/06a_c9_b3_large-field-equal-support_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     Andre    |    Blake    |  * Carmen   |  * David    |     Ella    |   Fernando  |     Gabe    |    Helena   |     Ira     |
--------------------------------------------------------------------------------------------------------------------------------------------------
-         Andre > |     ---      | 3 - 0 - 0   | 0 - 0 - 3   | 0 - 0 - 3   | 2 - 1 - 0   | 2 - 0 - 1   | 0 - 1 - 2   | 0 - 2 - 1   | 3 - 0 - 0   |
-         Blake > |  0 - 0 - 3   |    ---      | 0 - 0 - 3   | 0 - 0 - 3   | 1 - 0 - 2   | 0 - 1 - 2   | 0 - 0 - 3   | 0 - 0 - 3   | 1 - 2 - 0   |
-      * Carmen > |  3 - 0 - 0   | 3 - 0 - 0   |    ---      | 1 - 2 - 0   | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 2 - 0   | 3 - 0 - 0   | 3 - 0 - 0   |
-       * David > |  3 - 0 - 0   | 3 - 0 - 0   | 0 - 2 - 1   |    ---      | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 2 - 0   | 2 - 1 - 0   | 3 - 0 - 0   |
-          Ella > |  0 - 1 - 2   | 2 - 0 - 1   | 0 - 0 - 3   | 0 - 0 - 3   |    ---      | 0 - 0 - 3   | 0 - 1 - 2   | 0 - 0 - 3   | 2 - 1 - 0   |
-      Fernando > |  1 - 0 - 2   | 2 - 1 - 0   | 0 - 0 - 3   | 0 - 0 - 3   | 3 - 0 - 0   |    ---      | 1 - 0 - 2   | 0 - 0 - 3   | 3 - 0 - 0   |
-          Gabe > |  2 - 1 - 0   | 3 - 0 - 0   | 0 - 2 - 1   | 0 - 2 - 1   | 2 - 1 - 0   | 2 - 0 - 1   |    ---      | 2 - 0 - 1   | 3 - 0 - 0   |
-        Helena > |  1 - 2 - 0   | 3 - 0 - 0   | 0 - 0 - 3   | 0 - 1 - 2   | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 0 - 2   |    ---      | 3 - 0 - 0   |
-           Ira > |  0 - 0 - 3   | 0 - 2 - 1   | 0 - 0 - 3   | 0 - 0 - 3   | 0 - 1 - 2   | 0 - 0 - 3   | 0 - 0 - 3   | 0 - 0 - 3   |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Carmen — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 3 ballots.
 Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
     4,    0,     5,    5,   1,       3,   5,     4,  0
     4,    3,     5,    5,   1,       3,   5,     4,  1
     1,    0,     5,    4,   1,       3,   1,     4,  0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Andre      0  2  0  0  1  0  |     9   3.0
-Blake      0  0  1  0  0  2  |     3   1.0
-Carmen     3  0  0  0  0  0  |    15   5.0
-David      2  1  0  0  0  0  |    14   4.7
-Ella       0  0  0  0  3  0  |     3   1.0
-Fernando   0  0  3  0  0  0  |     9   3.0
-Gabe       2  0  0  0  1  0  |    11   3.7
-Helena     0  3  0  0  0  0  |    12   4.0
-Ira        0  0  0  0  1  2  |     1   0.3
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -108,6 +77,47 @@ Ira        0  0  0  0  1  2  |     1   0.3
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Carmen
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     Andre    |    Blake    |  * Carmen   |  * David    |     Ella    |   Fernando  |     Gabe    |    Helena   |     Ira     |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+         Andre > |     ---      | 3 - 0 - 0   | 0 - 0 - 3   | 0 - 0 - 3   | 2 - 1 - 0   | 2 - 0 - 1   | 0 - 1 - 2   | 0 - 2 - 1   | 3 - 0 - 0   |
+         Blake > |  0 - 0 - 3   |    ---      | 0 - 0 - 3   | 0 - 0 - 3   | 1 - 0 - 2   | 0 - 1 - 2   | 0 - 0 - 3   | 0 - 0 - 3   | 1 - 2 - 0   |
+      * Carmen > |  3 - 0 - 0   | 3 - 0 - 0   |    ---      | 1 - 2 - 0   | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 2 - 0   | 3 - 0 - 0   | 3 - 0 - 0   |
+       * David > |  3 - 0 - 0   | 3 - 0 - 0   | 0 - 2 - 1   |    ---      | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 2 - 0   | 2 - 1 - 0   | 3 - 0 - 0   |
+          Ella > |  0 - 1 - 2   | 2 - 0 - 1   | 0 - 0 - 3   | 0 - 0 - 3   |    ---      | 0 - 0 - 3   | 0 - 1 - 2   | 0 - 0 - 3   | 2 - 1 - 0   |
+      Fernando > |  1 - 0 - 2   | 2 - 1 - 0   | 0 - 0 - 3   | 0 - 0 - 3   | 3 - 0 - 0   |    ---      | 1 - 0 - 2   | 0 - 0 - 3   | 3 - 0 - 0   |
+          Gabe > |  2 - 1 - 0   | 3 - 0 - 0   | 0 - 2 - 1   | 0 - 2 - 1   | 2 - 1 - 0   | 2 - 0 - 1   |    ---      | 2 - 0 - 1   | 3 - 0 - 0   |
+        Helena > |  1 - 2 - 0   | 3 - 0 - 0   | 0 - 0 - 3   | 0 - 1 - 2   | 3 - 0 - 0   | 3 - 0 - 0   | 1 - 0 - 2   |    ---      | 3 - 0 - 0   |
+           Ira > |  0 - 0 - 3   | 0 - 2 - 1   | 0 - 0 - 3   | 0 - 0 - 3   | 0 - 1 - 2   | 0 - 0 - 3   | 0 - 0 - 3   | 0 - 0 - 3   |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Carmen — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      0  2  0  0  1  0  |     9   3.0
+Blake      0  0  1  0  0  2  |     3   1.0
+Carmen     3  0  0  0  0  0  |    15   5.0
+David      2  1  0  0  0  0  |    14   4.7
+Ella       0  0  0  0  3  0  |     3   1.0
+Fernando   0  0  3  0  0  0  |     9   3.0
+Gabe       2  0  0  0  1  0  |    11   3.7
+Helena     0  3  0  0  0  0  |    12   4.0
+Ira        0  0  0  0  1  2  |     1   0.3
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/06a_c9_b3_large-field-equal-support_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

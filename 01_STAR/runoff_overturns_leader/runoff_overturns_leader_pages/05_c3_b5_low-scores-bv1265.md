@@ -32,22 +32,9 @@ A, B, C
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/05_c3_b5_low-scores-bv1265_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |     B     |   * C     |
------------------------------------------------------
-         * A > |    ---     |2 - 2 - 1  |3 - 0 - 2  |
-           B > | 1 - 2 - 2  |   ---     |1 - 2 - 2  |
-         * C > | 2 - 0 - 3  |2 - 2 - 1  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: A — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = A
   Approval = C   (differs from STAR)
@@ -60,8 +47,8 @@ Legend: For - Equal Support - Against
   STAR working as designed: the runoff elects the finalist preferred
   by the majority (of voters with a preference).
 
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 5 ballots.
 Count × A,B,C
@@ -69,13 +56,6 @@ Count × A,B,C
     1 × 0,0,4
     1 × 0,2,3
     1 × 2,2,0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          0  0  0  3  0  2  |     6   1.2
-B          0  0  0  2  0  3  |     4   0.8
-C          0  1  1  0  0  3  |     7   1.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -100,6 +80,35 @@ C          0  1  1  0  0  3  |     7   1.4
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  A
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |     B     |   * C     |
+-----------------------------------------------------
+         * A > |    ---     |2 - 2 - 1  |3 - 0 - 2  |
+           B > | 1 - 2 - 2  |   ---     |1 - 2 - 2  |
+         * C > | 2 - 0 - 3  |2 - 2 - 1  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: A — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          0  0  0  3  0  2  |     6   1.2
+B          0  0  0  2  0  3  |     4   0.8
+C          0  1  1  0  0  3  |     7   1.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/05_c3_b5_low-scores-bv1265_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

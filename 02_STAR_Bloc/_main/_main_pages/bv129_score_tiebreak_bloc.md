@@ -34,27 +34,15 @@ Andre,Blake,Carmen
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Andre   |   Blake   | * Carmen  |
------------------------------------------------------
-     * Andre > |    ---     |1 - 3 - 1  |0 - 0 - 5  |
-       Blake > | 1 - 3 - 1  |   ---     |0 - 0 - 5  |
-    * Carmen > | 5 - 0 - 0  |5 - 0 - 0  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Carmen — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Carmen
   Approval = Andre   (differs from STAR)
 
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 5 ballots to fill 2 seats.
 Count × Andre,Blake,Carmen
@@ -62,13 +50,6 @@ Count × Andre,Blake,Carmen
     1 ×     3,    3,     5
     1 ×     3,    1,     5
     1 ×     3,    4,     5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Andre      0  2  3  0  0  0  |    17   3.4
-Blake      0  3  1  0  1  0  |    16   3.2
-Carmen     5  0  0  0  0  0  |    25   5.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -91,6 +72,7 @@ Carmen     5  0  0  0  0  0  |    25   5.0
            Carmen 5 (100%)  ·  Andre 0 (0%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Andre         -- 17 -- First place
@@ -114,6 +96,35 @@ Carmen     5  0  0  0  0  0  |    25   5.0
  Carmen
  Andre
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Andre   |   Blake   | * Carmen  |
+-----------------------------------------------------
+     * Andre > |    ---     |1 - 3 - 1  |0 - 0 - 5  |
+       Blake > | 1 - 3 - 1  |   ---     |0 - 0 - 5  |
+    * Carmen > | 5 - 0 - 0  |5 - 0 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Carmen — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      0  2  3  0  0  0  |    17   3.4
+Blake      0  3  1  0  1  0  |    16   3.2
+Carmen     5  0  0  0  0  0  |    25   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

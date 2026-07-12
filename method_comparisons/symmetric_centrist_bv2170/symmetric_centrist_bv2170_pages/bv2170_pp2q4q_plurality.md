@@ -30,22 +30,9 @@ Count:Avery,Blake,Casey
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Avery    |  * Blake    |    Casey    |
--------------------------------------------------------------
-       * Avery > |     ---      |47 -  6 - 47 |47 - 47 -  6 |
-       * Blake > | 47 -  6 - 47 |    ---      |47 - 47 -  6 |
-         Casey > |  6 - 47 - 47 | 6 - 47 - 47 |    ---      |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Avery, Blake (pairwise ties)
-
 [Divergence from STAR]
   STAR     = Blake
   RCV-IRV  = Avery   (differs from STAR)
@@ -58,19 +45,13 @@ Legend: For - Equal Support - Against
   RCV-IRV rounds: symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_RCV-IRV_tabulated.txt
 
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 100 ballots.
 Count × Avery,Blake,Casey
    47 ×     1,    0,    0
    47 ×     0,    1,    0
     6 ×     0,    0,    1
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Avery       0   0   0   0  47  53  |    47   0.5
-Blake       0   0   0   0  47  53  |    47   0.5
-Casey       0   0   0   0   6  94  |     6   0.1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -116,6 +97,35 @@ Casey       0   0   0   0   6  94  |     6   0.1
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Blake
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Avery    |  * Blake    |    Casey    |
+-------------------------------------------------------------
+       * Avery > |     ---      |47 -  6 - 47 |47 - 47 -  6 |
+       * Blake > | 47 -  6 - 47 |    ---      |47 - 47 -  6 |
+         Casey > |  6 - 47 - 47 | 6 - 47 - 47 |    ---      |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Avery, Blake (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Avery       0   0   0   0  47  53  |    47   0.5
+Blake       0   0   0   0  47  53  |    47   0.5
+Casey       0   0   0   0   6  94  |     6   0.1
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

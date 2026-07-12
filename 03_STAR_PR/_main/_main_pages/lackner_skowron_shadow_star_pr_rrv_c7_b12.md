@@ -46,27 +46,11 @@ A,B,C,D,E,F,G
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/lackner_skowron_shadow_star_pr_rrv_c7_b12_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     * A      |    * B      |      C      |      D      |      E      |      F      |      G      |
----------------------------------------------------------------------------------------------------------------------
-           * A > |     ---      | 5 -  6 -  1 | 5 -  6 -  1 | 6 -  6 -  0 | 8 -  3 -  1 | 8 -  2 -  2 | 8 -  3 -  1 |
-           * B > |  1 -  6 -  5 |    ---      | 3 -  6 -  3 | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
-             C > |  1 -  6 -  5 | 3 -  6 -  3 |    ---      | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
-             D > |  0 -  6 -  6 | 2 -  6 -  4 | 2 -  6 -  4 |    ---      | 2 -  9 -  1 | 2 -  8 -  2 | 2 -  9 -  1 |
-             E > |  1 -  3 -  8 | 1 -  7 -  4 | 1 -  7 -  4 | 1 -  9 -  2 |    ---      | 1 -  9 -  2 | 1 - 10 -  1 |
-             F > |  2 -  2 -  8 | 1 -  8 -  3 | 1 -  8 -  3 | 2 -  8 -  2 | 2 -  9 -  1 |    ---      | 2 -  9 -  1 |
-             G > |  1 -  3 -  8 | 1 -  7 -  4 | 1 -  7 -  4 | 1 -  9 -  2 | 1 - 10 -  1 | 1 -  9 -  2 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: A — matches the STAR winner
-
 --- Reweighted Range Voting Method (4 winners) ---
+
 [Reweighted Range Voting]
  Tabulating 12 ballots to fill 4 seats.
 Count × A,B,C,D,E,F,G
@@ -77,17 +61,6 @@ Count × A,B,C,D,E,F,G
     1 × 0,0,0,0,5,0,0
     1 × 0,0,0,0,0,5,0
     1 × 0,0,0,0,0,0,5
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-A           8   0   0   0   0   4  |    40   3.3
-B           4   0   0   0   0   8  |    20   1.7
-C           4   0   0   0   0   8  |    20   1.7
-D           2   0   0   0   0  10  |    10   0.8
-E           1   0   0   0   0  11  |     5   0.4
-F           2   0   0   0   0  10  |    10   0.8
-G           1   0   0   0   0  11  |     5   0.4
 
 [Reweighted Range Voting: Round 1: Score round]
  The highest-scoring candidate wins a seat.
@@ -159,6 +132,43 @@ G           1   0   0   0   0  11  |     5   0.4
  C
  F
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |    * B      |      C      |      D      |      E      |      F      |      G      |
+---------------------------------------------------------------------------------------------------------------------
+           * A > |     ---      | 5 -  6 -  1 | 5 -  6 -  1 | 6 -  6 -  0 | 8 -  3 -  1 | 8 -  2 -  2 | 8 -  3 -  1 |
+           * B > |  1 -  6 -  5 |    ---      | 3 -  6 -  3 | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
+             C > |  1 -  6 -  5 | 3 -  6 -  3 |    ---      | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
+             D > |  0 -  6 -  6 | 2 -  6 -  4 | 2 -  6 -  4 |    ---      | 2 -  9 -  1 | 2 -  8 -  2 | 2 -  9 -  1 |
+             E > |  1 -  3 -  8 | 1 -  7 -  4 | 1 -  7 -  4 | 1 -  9 -  2 |    ---      | 1 -  9 -  2 | 1 - 10 -  1 |
+             F > |  2 -  2 -  8 | 1 -  8 -  3 | 1 -  8 -  3 | 2 -  8 -  2 | 2 -  9 -  1 |    ---      | 2 -  9 -  1 |
+             G > |  1 -  3 -  8 | 1 -  7 -  4 | 1 -  7 -  4 | 1 -  9 -  2 | 1 - 10 -  1 | 1 -  9 -  2 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: A — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           8   0   0   0   0   4  |    40   3.3
+B           4   0   0   0   0   8  |    20   1.7
+C           4   0   0   0   0   8  |    20   1.7
+D           2   0   0   0   0  10  |    10   0.8
+E           1   0   0   0   0  11  |     5   0.4
+F           2   0   0   0   0  10  |    10   0.8
+G           1   0   0   0   0  11  |     5   0.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/lackner_skowron_shadow_star_pr_rrv_c7_b12_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

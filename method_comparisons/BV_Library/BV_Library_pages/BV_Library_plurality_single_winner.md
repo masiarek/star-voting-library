@@ -40,28 +40,15 @@ Alice,Bob,Carol,Dave
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_plurality_single_winner_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     Alice    |     Bob     |  * Carol    |   * Dave    |
----------------------------------------------------------------------------
-         Alice > |     ---      | 0 - 12 -  2 | 0 - 11 -  3 | 0 -  9 -  5 |
-           Bob > |  2 - 12 -  0 |    ---      | 2 -  9 -  3 | 2 -  7 -  5 |
-       * Carol > |  3 - 11 -  0 | 3 -  9 -  2 |    ---      | 3 -  6 -  5 |
-        * Dave > |  5 -  9 -  0 | 5 -  7 -  2 | 5 -  6 -  3 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Dave — matches the STAR winner
-
 [Divergence from STAR]
   STAR     = Dave
   Approval = Alice   (differs from STAR)
 
 --- Choose-One / Plurality Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 14 ballots. Note: 1 of 14 ballots is marked as an abstention.
 Count × Alice,Bob,Carol,Dave
@@ -71,14 +58,6 @@ Count × Alice,Bob,Carol,Dave
     2 ×     0,  1,    0,   0
     1 ×     -,  -,    -,   -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Alice       0   0   0   0   0  13    1  |     0   0.0
-Bob         0   0   0   0   2  11    1  |     2   0.2
-Carol       0   0   0   0   3  10    1  |     3   0.2
-Dave        0   0   0   0   5   8    1  |     5   0.4
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -104,6 +83,37 @@ Dave        0   0   0   0   5   8    1  |     5   0.4
 [STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
  Dave
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     Alice    |     Bob     |  * Carol    |   * Dave    |
+---------------------------------------------------------------------------
+         Alice > |     ---      | 0 - 12 -  2 | 0 - 11 -  3 | 0 -  9 -  5 |
+           Bob > |  2 - 12 -  0 |    ---      | 2 -  9 -  3 | 2 -  7 -  5 |
+       * Carol > |  3 - 11 -  0 | 3 -  9 -  2 |    ---      | 3 -  6 -  5 |
+        * Dave > |  5 -  9 -  0 | 5 -  7 -  2 | 5 -  6 -  3 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Dave — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  Abs  | Total   Avg
+Alice       0   0   0   0   0  13    1  |     0   0.0
+Bob         0   0   0   0   2  11    1  |     2   0.2
+Carol       0   0   0   0   3  10    1  |     3   0.2
+Dave        0   0   0   0   5   8    1  |     5   0.4
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../BV_Library_tabulated/BV_Library_plurality_single_winner_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

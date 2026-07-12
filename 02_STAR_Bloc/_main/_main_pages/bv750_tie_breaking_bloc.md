@@ -39,34 +39,15 @@ a,b,c
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * a     |     b     |   * c     |
------------------------------------------------------
-         * a > |    ---     |0 - 3 - 0  |0 - 3 - 0  |
-           b > | 0 - 3 - 0  |   ---     |0 - 3 - 0  |
-         * c > | 0 - 3 - 0  |0 - 3 - 0  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: a, b, c (pairwise ties)
-
 --- Bloc STAR Voting Method (2 winners) ---
+
 [Bloc STAR]
  Tabulating 3 ballots to fill 2 seats.
 Count × a,b,c
     3 × 5,5,5
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-a          3  0  0  0  0  0  |    15   5.0
-b          3  0  0  0  0  0  |    15   5.0
-c          3  0  0  0  0  0  |    15   5.0
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -137,6 +118,7 @@ c          3  0  0  0  0  0  |    15   5.0
     counts fives, not fours). Verify the tied candidates' 5-counts.
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    a             -- 15 -- First place
@@ -178,6 +160,35 @@ c          3  0  0  0  0  0  |    15   5.0
  c
  a
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * a     |     b     |   * c     |
+-----------------------------------------------------
+         * a > |    ---     |0 - 3 - 0  |0 - 3 - 0  |
+           b > | 0 - 3 - 0  |   ---     |0 - 3 - 0  |
+         * c > | 0 - 3 - 0  |0 - 3 - 0  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: a, b, c (pairwise ties)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+a          3  0  0  0  0  0  |    15   5.0
+b          3  0  0  0  0  0  |    15   5.0
+c          3  0  0  0  0  0  |    15   5.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

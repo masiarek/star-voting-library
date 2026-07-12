@@ -38,47 +38,22 @@ Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse 
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../_main_tabulated/bv130_bloc_pagination_731_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                        |      Johnny Cash    |    Elvis Presley   |   * Santa Claus    |   The Lesser Evil  | * Someone I Like   |   Apocalypse Now   |
---------------------------------------------------------------------------------------------------------------------------------------------------------
-          Johnny Cash > |         ---         |     4 - 2 - 3      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     2 - 7 - 0      |
-        Elvis Presley > |      3 - 2 - 4      |        ---         |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     5 - 0 - 4      |
-        * Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
-      The Lesser Evil > |      9 - 0 - 0      |     9 - 0 - 0      |     4 - 0 - 5      |        ---         |     4 - 0 - 5      |     9 - 0 - 0      |
-     * Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
-       Apocalypse Now > |      0 - 7 - 2      |     4 - 0 - 5      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |        ---         |
-
-[Condorcet Winner]
-  Condorcet Winner: Someone I Like — matches the STAR winner
-
 [Divergence from STAR]
   STAR                   = Someone I Like
   Choose-One (Plurality) = The Lesser Evil   (differs from STAR)
   Approval               = Santa Claus   (differs from STAR)
 
 --- Bloc STAR Voting Method (3 winners) ---
+
 [Bloc STAR]
  Tabulating 9 ballots to fill 3 seats.
 Count × Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse Now
     4 ×           2,            1,          3,              4,             3,             2
     3 ×           0,            2,          4,              3,             5,             0
     2 ×           1,            1,          5,              2,             5,             0
-
-[Score Distribution] (how many ballots gave each star rating)
-                      Score
-Candidate        5  4  3  2  1  0  | Total   Avg
-Johnny Cash      0  0  0  4  2  3  |    10   1.1
-Elvis Presley    0  0  0  3  6  0  |    12   1.3
-Santa Claus      2  3  4  0  0  0  |    34   3.8
-The Lesser Evil  0  4  3  2  0  0  |    29   3.2
-Someone I Like   5  0  4  0  0  0  |    37   4.1
-Apocalypse Now   0  0  0  4  0  5  |     8   0.9
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -104,6 +79,7 @@ Apocalypse Now   0  0  0  4  0  5  |     8   0.9
            Someone I Like 3 (100%)  ·  Santa Claus 0 (0%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 2: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Santa Claus     -- 34 -- First place
@@ -127,6 +103,7 @@ Apocalypse Now   0  0  0  4  0  5  |     8   0.9
            Santa Claus 5 (56%)  ·  The Lesser Evil 4 (44%)
 
 ──────────────────────────────────────────────────
+
 [Bloc STAR: Round 3: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    The Lesser Evil -- 29 -- First place
@@ -153,6 +130,41 @@ Apocalypse Now   0  0  0  4  0  5  |     8   0.9
  Santa Claus
  The Lesser Evil
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                        |      Johnny Cash    |    Elvis Presley   |   * Santa Claus    |   The Lesser Evil  | * Someone I Like   |   Apocalypse Now   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+          Johnny Cash > |         ---         |     4 - 2 - 3      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     2 - 7 - 0      |
+        Elvis Presley > |      3 - 2 - 4      |        ---         |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     5 - 0 - 4      |
+        * Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
+      The Lesser Evil > |      9 - 0 - 0      |     9 - 0 - 0      |     4 - 0 - 5      |        ---         |     4 - 0 - 5      |     9 - 0 - 0      |
+     * Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
+       Apocalypse Now > |      0 - 7 - 2      |     4 - 0 - 5      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |        ---         |
+
+[Condorcet Winner]
+  Condorcet Winner: Someone I Like — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate        5  4  3  2  1  0  | Total   Avg
+Johnny Cash      0  0  0  4  2  3  |    10   1.1
+Elvis Presley    0  0  0  3  6  0  |    12   1.3
+Santa Claus      2  3  4  0  0  0  |    34   3.8
+The Lesser Evil  0  4  3  2  0  0  |    29   3.2
+Someone I Like   5  0  4  0  0  0  |    37   4.1
+Apocalypse Now   0  0  0  4  0  5  |     8   0.9
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv130_bloc_pagination_731_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

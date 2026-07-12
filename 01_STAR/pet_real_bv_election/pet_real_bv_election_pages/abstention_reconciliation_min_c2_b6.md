@@ -52,22 +52,11 @@ Dog,Cat
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../pet_real_bv_election_tabulated/abstention_reconciliation_min_c2_b6_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Dog    |  * Cat    |
------------------------------------------
-       * Dog > |    ---     |2 - 3 - 1  |
-       * Cat > | 1 - 3 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Dog — matches the STAR winner
-
 --- STAR Voting Method (single winner) ---
+
 [STAR Voting]
  Tabulating 6 ballots. Note: 1 of 6 ballots is marked as an abstention.
 Dog,Cat
@@ -78,12 +67,6 @@ Dog,Cat
   0,  0
   -,  -
   ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Dog        2  1  0  0  0  2    1  |    14   2.8
-Cat        2  0  0  0  0  3    1  |    10   2.0
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
@@ -107,6 +90,33 @@ Cat        2  0  0  0  0  3    1  |    10   2.0
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Dog
 ```
+
+<details>
+<summary>▸ Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Dog    |  * Cat    |
+-----------------------------------------
+       * Dog > |    ---     |2 - 3 - 1  |
+       * Cat > | 1 - 3 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Dog — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Dog        2  1  0  0  0  2    1  |    14   2.8
+Cat        2  0  0  0  0  3    1  |    10   2.0
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../pet_real_bv_election_tabulated/abstention_reconciliation_min_c2_b6_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
