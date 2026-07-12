@@ -43,7 +43,7 @@ Two house-style clarifications on that quote: (1) it describes the Condorcet **w
 | Elects the Condorcet winner? | Not always (can center-squeeze) | ✅ Yes, when one exists |
 | Monotonic? | ❌ No | ✅ Yes |
 | Precinct-summable? | ❌ No | ✅ Yes (add pairwise matrices) |
-| Exhausted ballots? | Possible | No — all rankings are read |
+| [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
 The headline: the two things people *assume* "RCV" does — let you mark ties and compare candidates head-to-head — are exactly what **RCV-RR (Ranked Robin)** does and what **RCV-IRV (Instant-Runoff Voting)** does not. (See [strict_vs_weak_ranks.md](../scores_and_ranks/strict_vs_weak_ranks.md) and [RCV_IRV_and_plurality.md](../RCV_IRV/RCV_IRV_and_plurality.md).)
 
@@ -188,6 +188,7 @@ Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **indep
 - [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md) — RR passes vote-splitting but can fail teaming in a no-Condorcet-winner cycle (and only under a margin tiebreak)
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't
+- [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) — the IRV ballots that stop counting; Ranked Robin never exhausts one (every ballot is read in every pair)
 - [Is IRV "just plurality"?](../RCV_IRV/RCV_IRV_and_plurality.md) — why IRV isn't pairwise
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — RR is still order-only, unlike STAR
 - [RCV-IRV vs. STAR (side-by-side)](../rcv_irv_vs_star.md)
