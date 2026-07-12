@@ -44,6 +44,8 @@ The tool owns step 2. Steps 4–5 are the [count-by-hand](../../00_start_here/ST
 
 #1 and #2 are the two that matter; #3 is #2 with the create step (the only worthwhile *smoothing* is having `create_bv_test_election.py` print the ready-to-run `bv_ballot_sheet.py` command — not yet done); #4 is a teaching framing (pair with `criteria_at_a_glance.md`); #5 is the offline-verify path.
 
+**Workflow #2 is really *hybrid* (validated on real hardware).** The same election runs on paper **and** online at once: paper voters fill bubbles, QR voters scan and vote on BetterVoting. The payoff for the teacher is **less work, not more** — online votes need **no transcription** (BV tabulates them the instant they're cast), so you can push most of the room to the QR and keep only a handful of paper ballots to demonstrate the hand-count. This also reframes the return path (§6): OCR only ever matters for the paper ballots you *choose* to keep; every QR voter has already closed the loop.
+
 ## 4. Functional requirements — the tool
 
 **FR-1 Inputs (candidates + title), any one of:**
@@ -116,7 +118,8 @@ Restated in the repo's terms (the *goal*, not the letter of the original suggest
 
 - **Verified (automated):** `--selftest` passes (structure, bubbles, serials, write-ins, **pagination** (per-page breaks, no trailing blank), QR present/absent, and the **`--bv-export` schema** — a frozen UI export nests everything under a capitalized `Election` key). Reads the lunch YAML (picks up candidates + title + `fyy886`), the live `bettervoting.com/pet` election (7 candidates, QR → `/pet`), and a **real frozen export** (`mptvrm`: title + `election_id` + candidates + results URL + QR all extracted). *(The capitalized-`Election` case is why the earlier best-effort guess missed title/id until a real export was tested — now covered.)*
 - **Verified (manual, this pass):** `--out mptvrm_ballots.pdf` produced a **30-page PDF, one ballot per page** (confirmed `/Count 30`) via headless Chromium; `--out mptvrm_ballots.txt` produced a **strictly-7-bit-ASCII 30-page** text file (30 form-feed pages, zero deps) — both from the real export.
-- **Pending (needs a human — owner: user):** (a) the QR **actually scans** on a phone and opens the election; (b) the ballot **prints cleanly** (bubble alignment, ~2/page, no clipping, 7-row grids); (c) the **flow feels right** in a real room. These are structurally un-checkable in-repo; validate on real paper before treating the doc as final.
+- **Verified (real hardware, owner: user — 2026-07):** the full loop ran end to end on the `mptvrm` PDF — (a) the **QR scanned** on a phone and opened the live election; (b) the ballot **printed cleanly** (banner, bubble grid, QR, serial line all legible, one per page); (c) the voter **cast an online ballot via the QR** and it landed in the BV tally (re-exported as a fresh `_bv_export.json`). The earlier "pending, needs a human" items are now cleared.
+- **Insight from that run (see §3, workflow #2):** the QR makes this a **hybrid** demo — some vote on paper, some scan-and-vote online. Online votes need **no transcription** (BV tabulates them instantly), so the more of the room that uses the QR, the *less* scanning/typing for the teacher; paper is then optional, kept only to demonstrate the hand-count.
 
 ## 8. Invocation
 

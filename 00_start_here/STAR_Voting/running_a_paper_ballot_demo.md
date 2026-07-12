@@ -77,6 +77,10 @@ Full walkthrough: [Count a STAR election by hand](count_star_by_hand.md). Roles 
 
 Have the same voters also vote online (or enter the paper ballots), and confirm your **hand tally matches** `bettervoting.com/<id>/results`. The teachable moment: the result is *transparent and reproducible* — the paper count, the platform, and the [LH engine](../../STARVote_LH_tabulation_engine/) all agree, and anyone in the room can verify it.
 
+### Paper *and* online at once — and less work for you
+
+The QR makes this a **hybrid** demo, and that's a feature, not a compromise: some voters fill a paper ballot, others just **scan the QR and vote online** on the same election. The nice part for the presenter is that it *cuts* your workload. **Online votes need no transcription** — BetterVoting tabulates them the instant they're cast — so you can send most of the room to the QR (zero paper handling) and keep just a handful of paper ballots to *demonstrate* the hand-count. The more people scan, the less scanning and typing you do, and the paper and online votes still land in one tally to compare. (It also reframes Step 6: OCR only ever matters for the paper ballots you *choose* to keep — every QR voter has already closed the loop.)
+
 ## Step 6 (advanced) — scan the paper back into YAML
 
 The **return path** is to photograph the filled ballots and OCR the scores into a YAML the [LH engine](../why_yaml_test_cases.md) tabulates — closing the loop from paper to a fully-auditable digital count. That tool needs a vision engine and careful design, so it's the **roadmap**, not built yet; the design is below. **Until then, transcribe the paper ballots into a YAML by hand** using the same rules — the format is trivial (a candidate header, then one row of 0–5 scores per ballot).
