@@ -47,7 +47,7 @@ green > red > yellow : 13.8%      yellow > green > red : 35.3%
 - But **Green is the Condorcet winner** — it beats Red (66.6 vs 33.2) *and* Yellow (64.5 vs 35.3) head-to-head. IRV threw out the one candidate a majority preferred over each rival.
 - **STAR** advances Green on its scores (lots of 3s from both wings + 5s from the center) and wins the runoff **65–35**.
 
-Run it: [`center_squeeze_voteline_1d.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) (scores are a simple 1-D spatial model: own side 5, the adjacent center 3, the far side 0–1; weights are the percentages ×10). The engine's own divergence block:
+Run it: [`center_squeeze_voteline_1d.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) (scores are a simple 1-D [spatial model](../spatial_voting_model.md): own side 5, the adjacent center 3, the far side 0–1; weights are the percentages ×10). The engine's own divergence block:
 
 ```
 [Divergence from STAR]

@@ -22,6 +22,8 @@
 
 ### B. Spatial (geometric / ideological) models — the realistic "gold standard"
 
+*New to the idea? Start with the concept page: [The spatial model — voters and candidates as points on a map](spatial_voting_model.md) (the political spectrum, the median voter theorem, and why it predicts center-squeeze). This subsection is the simulation-recipe version.*
+
 Voters and candidates are **points in an N-dimensional space** (1-D left–right, 2-D adds e.g. libertarian–authoritarian). A voter prefers the candidate **closest** to them (Euclidean distance); for *scored* methods, distance is converted to a **utility** (e.g. `utility = 100 − distance × factor`, or a Gaussian/decreasing function). Voters are typically drawn from a **multivariate Normal** (a bell curve centered on the median voter); candidates uniform or clustered. This is what the **Ka-Ping Yee diagrams** visualize, and what the more sophisticated VSE "hierarchical clusters" model elaborates (issue clusters, identity clusters, varying salience).
 
 ## The standing caveat: results are conditional on the model
