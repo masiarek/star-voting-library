@@ -10,6 +10,6 @@ Standalone demos of methods this library teaches *about* but does not promote: t
 
 Range overview: [Range / Score Voting](../00_start_here/Range_Voting/range_voting.md); engine: [Range / Score voting tabulation engine](Range/Range_tabulation_engine/) (pref_voting).
 
-Most non-EVC material lives where it teaches best: inside [method comparisons](../method_comparisons/), where RCV-IRV and choose-one serve as the foil to the equal-vote methods. Concept docs: [RCV-IRV (Hare)](../00_start_here/RCV_IRV/RCV-IRV-Hare.md) and [Borda & other ranked methods](../00_start_here/other_ranked_methods/borda.md).
+Most non-EVC material lives where it teaches best: inside [method comparisons](../method_comparisons/), where RCV-IRV and choose-one serve as the foil to the equal-vote methods. Concept docs: [RCV-IRV (Hare)](../00_start_here/RCV_IRV/RCV-IRV-Hare.md), [Borda](../00_start_here/other_ranked_methods/borda.md), and [Agenda voting](../00_start_here/other_ranked_methods/agenda_voting.md).
 
 # file: README.md

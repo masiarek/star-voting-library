@@ -74,4 +74,5 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the reverse direction, and why scores are the richer object
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — why ties matter (the ladder above)
 - [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — where the weak-rank reduction shows up live
+- [Agenda voting](agenda_voting.md) — the other classic "ranked but not neutral" procedure in this folder
 - [Which RCV-IRV?](../RCV_IRV/RCV_IRV_variants.md) · Glossary: [`Borda`](../GLOSSARY.md)
