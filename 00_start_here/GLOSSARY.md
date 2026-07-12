@@ -45,7 +45,7 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **Spoiler effect** — a candidate who cannot win still changes who does, by splitting another's support. → concept [The spoiler effect](spoiler_effect.md); demo [`04_star_wars_vote_split`](../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md); episode [What's So Good About STAR Voting?](STAR_Voting/whats_so_good_about_STAR_Voting.md) (Seg 1)
 - **Favorite betrayal** — being pressured to score/rank a front-runner above your true favorite. → episode [Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/favorite_betrayal_voting_301.md)
 - **Lesser-evil voting** — backing a tolerable front-runner instead of your favorite to block a worse outcome. → episode [Our Voting System Is Broken — The Problem with Plurality](our_voting_system_is_broken.md)
-- **Wasted vote** — a vote that has no effect on the result.
+- **Wasted vote** — a vote with no effect on the result. An *overloaded* term with four distinct senses — plurality loser/surplus votes, IRV ballot exhaustion, the spoiler "throwing your vote away" pressure, and the "no wasted votes" method claim — pinned down (with the honest read of the STAR claim) in [Wasted Votes](wasted_votes.md).
 - **Two-round system** — separate primary + general/runoff elections; STAR does both jobs on one ballot.
 - **Plurality / minority winner** — a winner with the most votes but less than majority support. → episode [Our Voting System Is Broken — The Problem with Plurality](our_voting_system_is_broken.md)
 

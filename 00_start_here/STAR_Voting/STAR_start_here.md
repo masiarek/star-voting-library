@@ -82,7 +82,7 @@ One nuance for the runoff: if you rate the two finalists the *same*, your ballot
 ## What this means for you
 
 - **You can be honest.** Score your favorite a 5 *and* a backup a 4 — you never split your own vote.
-- **No "wasted" votes.** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../spoiler_effect.md), gone.
+- **No ["wasted" votes](../wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
 → The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).
