@@ -43,6 +43,11 @@ Run it yourself: [`lunch_vote_c3_b5.yaml`](../../01_STAR/_main/lunch_vote_c3_b5.
   Round 2 — the final two:  Pizza 3  vs  Sushi 2             → Pizza wins
 ```
 
+In plain English:
+
+- **Round 1 just adds up the stars.** Pizza collects 17 (a 3 or a 5 from *everyone*), the most — so Pizza and Sushi become the two finalists, and Tacos is out.
+- **Round 2 is a simple head-to-head between those two finalists.** Each person's ballot counts as **one vote**, for whichever finalist they rated higher. **Three** people scored Pizza above Sushi; **two** scored Sushi above Pizza. So **Pizza wins the final, 3 to 2** — an actual majority.
+
 **Pizza wins** — the option *everyone* was happy with. It got only one first-place vote, so "pick one" buried it; but because STAR reads the *whole* ballot, the broad, quiet support shows up. Nobody had to vote strategically, and nobody's stuck with a 0.
 
 *(For contrast: Choose-One and Instant-Runoff both pick Sushi here. Same voters, same feelings — the method decides.)*
