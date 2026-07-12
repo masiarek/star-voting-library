@@ -58,9 +58,12 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 ## Further reading (beyond this repo)
 
 - **Marcus Ogren** — [Voting in the Abstract](https://voting-in-the-abstract.medium.com/) (the model for this page; field-wide, Condorcet-leaning).
-- **Organizations** — the [Equal Vote Coalition](https://www.equal.vote), [STAR Voting](https://www.starvoting.org), the [Center for Election Science](https://electionscience.org), and [FairVote](https://fairvote.org) (the primary IRV advocate — read for the case this repo often argues *against*).
-- **Simulations & data** — [Jameson Quinn](in_memoriam_jameson_quinn.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/).
+- **Academic & nonpartisan overviews** — the [Stanford Encyclopedia of Philosophy: Voting Methods](https://plato.stanford.edu/entries/voting-methods/) (the rigorous, neutral scholarly survey) and the [League of Women Voters of Washington — *Review of Election Methods*](https://www.lwvwa.org/resources/Documents/Review%20of%20Election%20Methods%202-12-20.pdf) (a nonpartisan side-by-side comparison, 2020).
+- **Organizations** — the [Equal Vote Coalition](https://www.equal.vote), [STAR Voting](https://www.starvoting.org), the [Center for Election Science](https://electionscience.org), and [FairVote](https://fairvote.org) (the primary IRV advocate — read for the case this repo often argues *against*). Who's who among them: [voting-reform people](whos_who_voting_reform.md).
+- **Simulations & data** — [Jameson Quinn](in_memoriam_jameson_quinn.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) (background: [social utility efficiency](https://en.wikipedia.org/wiki/Social_utility_efficiency)) · [PrefLib](https://www.preflib.org/) — a database of real ranked-preference elections.
+- **Independent tabulation libraries** (used to cross-check this repo's engine) — [pref_voting](https://pref-voting.readthedocs.io/) and [abcvoting](https://abcvoting.readthedocs.io/).
 - **Reference** — [electowiki](https://electowiki.org) for the method encyclopedia.
+- **Watch** — [PBS *Infinite Series*: Voting Systems and the Condorcet Paradox](https://www.youtube.com/watch?v=HoAnYQZrNrQ) — a clear explainer of why majority preferences can cycle.
 
 *(These include strong advocates on several sides. Read them the way this repo reads FairVote — critically, and for the argument, not the conclusion.)*
 
