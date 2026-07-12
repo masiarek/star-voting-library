@@ -2,7 +2,7 @@
 SOURCE FILE:     lackner_skowron_shadow_star_pr_c7_b12.yaml
 SOURCE MODIFIED: 2026-07-05 06:56:15
 TABULATED FILE:  lackner_skowron_shadow_star_pr_c7_b12_tabulated.txt
-TABULATED AT:    2026-07-10 08:09:03
+TABULATED AT:    2026-07-11 08:09:06
 ======================================================================
 
 election_title: "Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4)"

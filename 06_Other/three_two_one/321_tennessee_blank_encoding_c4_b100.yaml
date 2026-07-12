@@ -1,0 +1,26 @@
+election_title: Tennessee capital by 3-2-1 Voting (blank = Bad)
+
+voting_method: 3-2-1
+
+scenario_description: |-
+  The classic Tennessee-capital electorate (100 voters, four cities), cast as
+  3-2-1 Good/OK/Bad ballots. Each faction rates its own city Good, its nearer
+  neighbours OK, and the far city Bad — and here **Bad is left blank**, to show
+  3-2-1's blank encoding: an unrated candidate counts as Bad.
+
+  Memphis has the most first-choice support (42) and would win Choose-One. But
+  3-2-1 filters on Bad ratings: Memphis is Bad (blank) on 58 ballots, so it is
+  eliminated at the finalist step. The consensus capital, Nashville — never
+  rated Bad by anyone — wins the runoff. This is the same "centrist consensus
+  winner" result most non-plurality methods give on this electorate.
+
+# Ballot: Good=2, OK=1, Bad=0; a BLANK cell = Bad (the "blank encoding").
+# Columns: Memphis, Nashville, Chattanooga, Knoxville
+ballots: |-
+  Memphis,Nashville,Chattanooga,Knoxville
+  42 × 2,1,,
+  26 × ,2,1,1
+  15 × ,1,2,1
+  17 × ,1,1,2
+
+expected_winner: Nashville

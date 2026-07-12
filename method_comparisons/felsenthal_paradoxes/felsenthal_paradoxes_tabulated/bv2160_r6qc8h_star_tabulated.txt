@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2160_r6qc8h_star.yaml
 SOURCE MODIFIED: 2026-07-07 20:41:43
 TABULATED FILE:  bv2160_r6qc8h_star_tabulated.txt
-TABULATED AT:    2026-07-10 08:09:13
+TABULATED AT:    2026-07-11 08:09:15
 ======================================================================
 
 election_title: "Fishburn Ex.14 — STAR: B wins the electorate whose Borda count is truncation-unstable"
@@ -73,9 +73,9 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-IRV_tabulated.txt
-     file:///sessions/great-wonderful-bell/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-IRV_tabulated.txt
+     file:///sessions/amazing-laughing-bardeen/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-RR_tabulated.txt
-     file:///sessions/great-wonderful-bell/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-RR_tabulated.txt
+     file:///sessions/amazing-laughing-bardeen/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

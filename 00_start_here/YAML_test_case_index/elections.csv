@@ -94,6 +94,7 @@ LH:05b_residual_split_expressive-fix,"The cure — score your ally, and STAR's s
 LH:06a_c9_b3_large-field-equal-support,"Large field (9 candidates) — STAR scales, and Equal Support decides",1,single-race,3,STAR,LH-only
 LH:06b_c9_runoff-overturns-leader,Large field (9 candidates) — the runoff OVERTURNS the score leader,1,single-race,3,STAR,LH-only
 LH:09_c4_b100_tennessee-capital,Tennessee Capital — classic STAR example,1,single-race,100,STAR,LH-only
+LH:321_tennessee_blank_encoding_c4_b100,Tennessee capital by 3-2-1 Voting (blank = Bad),1,single-race,100,3-2-1,LH-only
 LH:BV_Library_approval_single_winner,BV parity — Approval: most approvals wins (single winner),1,single-race,10,Approval,LH-only
 LH:BV_Library_plurality_single_winner,BV parity — Plurality (choose-one): most first-marks wins,1,single-race,14,Plurality,LH-only
 LH:BV_Library_ranked_robin_single_winner,BV parity — Ranked Robin: Condorcet winner (equal ranks allowed),1,single-race,11,RankedRobin,LH-only

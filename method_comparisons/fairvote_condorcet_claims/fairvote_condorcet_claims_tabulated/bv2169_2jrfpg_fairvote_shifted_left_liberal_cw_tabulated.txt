@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml
 SOURCE MODIFIED: 2026-07-08 22:14:29
 TABULATED FILE:  bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt
-TABULATED AT:    2026-07-10 08:09:09
+TABULATED AT:    2026-07-11 08:09:12
 ======================================================================
 
 election_title: "Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner"

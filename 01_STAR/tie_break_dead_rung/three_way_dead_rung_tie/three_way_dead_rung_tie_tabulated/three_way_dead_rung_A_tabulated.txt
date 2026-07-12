@@ -2,7 +2,7 @@
 SOURCE FILE:     three_way_dead_rung_A.yaml
 SOURCE MODIFIED: 2026-07-04 07:06:57
 TABULATED FILE:  three_way_dead_rung_A_tabulated.txt
-TABULATED AT:    2026-07-10 08:08:58
+TABULATED AT:    2026-07-11 08:09:01
 ======================================================================
 
 election_title: 'Three-way dead-rung tie — published order A,B,C elects A'
@@ -80,7 +80,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_RCV-IRV_tabulated.txt
-     file:///sessions/great-wonderful-bell/mnt/YAML/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_RCV-IRV_tabulated.txt
+     file:///sessions/amazing-laughing-bardeen/mnt/YAML/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2164_xbqq8t_star.yaml
 SOURCE MODIFIED: 2026-07-07 20:56:58
 TABULATED FILE:  bv2164_xbqq8t_star_tabulated.txt
-TABULATED AT:    2026-07-10 08:09:14
+TABULATED AT:    2026-07-11 08:09:17
 ======================================================================
 
 election_title: "Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff"
