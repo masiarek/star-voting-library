@@ -20,7 +20,7 @@ The trade it makes: rounds of simple first-choice counts are easy to hand-tally,
 
 ## A century of use in Australia
 
-Australia adopted the **Alternative Vote** — its name for single-winner IRV — for House of Representatives elections in **1918**, and has used it ever since: **over 100 years** of real-world experience (the Senate uses STV, the multi-winner cousin).
+Australia adopted the **Alternative Vote** — its name for single-winner IRV — for House of Representatives elections in **1918**, and has used it ever since: **over 100 years** of real-world experience (the Senate uses STV, the multi-winner cousin). What that century actually proves — workable and durable, *yes*; broke two-party dominance, *no* — is assessed even-handedly in **[The Alternative Vote in Australia](RCV_IRV_australia.md)**.
 
 ## US momentum — the last ~20 years
 
