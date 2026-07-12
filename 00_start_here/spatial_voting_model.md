@@ -39,6 +39,15 @@ So "which method elects the compromise vs. squeezes it" isn't a matter of opinio
 
 This repo's simulations ([`fbc_simulation.py`](../06_Other/simulations/fbc_simulation.py), [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py)) offer two electorate models, and **spatial is the realistic one**: draw voters from a bell curve on the map, candidates as points, utility = −distance. Empirical work finds spatial models explain **most** real voting behavior, which is why VSE / Bayesian-regret studies use them. The contrast model — **[impartial culture](election_simulation_models.md)** (every preference independent and random) — has *no* geometry, manufactures far more paradoxes than reality, and is treated as an adversarial stress test. When a simulation here reports "spatial ~12%, impartial ~23%," that gap *is* the model dependence — see [simulate utilities, not ballots](simulate_utilities_not_ballots.md).
 
+## Making it realistic — not all axes weigh the same
+
+A *flat* spatial model (every dimension equally important, voters spread uniformly) has a surprising flaw: it makes the voting methods **agree too much**. The winner is usually the obvious central candidate, so Plurality, IRV, STAR, and Condorcet all pick the same person — and you'd wrongly conclude the method barely matters. Two refinements, which serious simulators use, restore realistic disagreement:
+
+- **Weight the dimensions unequally (salience).** Real ideology has one dominant axis (roughly left–right) and many minor ones. [Chris Smith's models](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390) scale the variance of successive dimensions down by **Zipf's law** — later axes matter progressively less — which brings the method disagreement back up to a realistic **35–85%** (versus near-unanimity when the axes are flat).
+- **Cluster the voters (communities of interest).** Instead of one uniform cloud, draw voters as a **mixture of Gaussians** — parties, regions, identity groups, with overlap. This is the "hierarchical clusters" model VSE uses; Smith's **Mixture of Zipf Gaussians (MoZG)** is a worked version (100 dimensions, clustered voters).
+
+The lesson mirrors the [approval-cutoff sweep](../method_comparisons/star_vs_approval_divergence.md): **how you set up the model decides whether the methods look identical or different.** So a simulation that concludes "the methods barely differ" may just have an unrealistically flat electorate — always ask how the dimensions were weighted and whether voters were clustered. (Code: [cdsmith/spatial-voting](https://github.com/cdsmith/spatial-voting).)
+
 ## The honest limits
 
 The spatial model is a **lens, not reality**:

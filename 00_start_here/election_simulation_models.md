@@ -6,9 +6,9 @@
 
 ## The prerequisites (what the math is built from)
 
-- **Combinatorics** — `N!` strict rankings of N candidates (5 → 120); combinations for candidate subsets.
-- **Probability distributions** — **Uniform** (Impartial Culture), **Normal/Gaussian** (spatial clustering around a center), **Dirichlet** (random bloc mixtures that sum to 1).
-- **Distance metrics** — **Euclidean** `√Σ(xᵢ−yᵢ)²` (the heart of spatial models), and **Kendall-Tau** (number of pairwise disagreements / adjacent swaps between two rankings — used by Mallows).
+- **Combinatorics** — [`N!`](https://en.wikipedia.org/wiki/Permutation) strict rankings of N candidates (5 → 120); [combinations](https://en.wikipedia.org/wiki/Combination) for candidate subsets.
+- **Probability distributions** — [**Uniform**](https://en.wikipedia.org/wiki/Discrete_uniform_distribution) (Impartial Culture), [**Normal/Gaussian**](https://en.wikipedia.org/wiki/Normal_distribution) (spatial clustering around a center), [**Dirichlet**](https://en.wikipedia.org/wiki/Dirichlet_distribution) (random bloc mixtures that sum to 1).
+- **Distance metrics** — [**Euclidean**](https://en.wikipedia.org/wiki/Euclidean_distance) `√Σ(xᵢ−yᵢ)²` (the heart of spatial models), and [**Kendall-Tau**](https://en.wikipedia.org/wiki/Kendall_tau_distance) (number of pairwise disagreements / adjacent swaps between two rankings — used by Mallows).
 
 ## Two families of model
 
