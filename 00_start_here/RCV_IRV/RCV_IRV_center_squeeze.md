@@ -74,7 +74,7 @@ They look alike but aren't. **Vote splitting** is *similar* candidates sharing o
 
 ## "Core support" doesn't rescue IRV
 
-IRV advocates excuse the squeeze by saying the moderate simply lacked **"core support"** (first-place votes). But the squeezed Condorcet winner can have *more* first-place votes than the eventual IRV winner and still be eliminated — so the "core support" defense doesn't hold. (A sharper 4-candidate version of this can be added as a test case on request.)
+IRV advocates excuse the squeeze by saying the moderate simply lacked **"core support"** (first-place votes). But the squeezed Condorcet winner can have *more* first-place votes than the eventual IRV winner and still be eliminated — so the "core support" defense doesn't hold. The worked case: **[the Ossipoff electorate (BV2158)](../../method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_ossipoff_centrist_irv.md)** — candidate C has the **most** first-choices of anyone (100, vs. the field's 49–53) *and* beats every rival head-to-head, yet IRV eliminates C and elects D. First-place support was highest *and* pairwise dominance was total; the elimination order threw both away.
 
 ## Why it matters: polarization
 
