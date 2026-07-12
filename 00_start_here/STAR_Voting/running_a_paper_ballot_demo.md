@@ -36,6 +36,10 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
     --bv-id demo1 --copies 30
 ```
 
+**Ready-made real elections to demo with** (both live on BetterVoting, so you get paper ballots *and* an online tally to check against):
+- the [team lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) — `--yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` (3 options, politics-free);
+- the fun [Pet Poll](../../method_comparisons/pet_poll_four_winners/) — `--yaml method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml` (4 pets, "the consensus Cat wins" — a great classroom crowd-pleaser).
+
 It writes a self-contained **HTML file**; open it in a browser and **Print → Save as PDF**. Each ballot carries:
 
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
