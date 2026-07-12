@@ -16,6 +16,9 @@
 
 ## Real-world adoption (STAR in actual use)
 
+**The current, authoritative "where is STAR used" list** is maintained by the campaign — [**starvoting.org/elections**](https://www.starvoting.org/elections) (we link it rather than copy it, because adoption status changes and a stale list is worse than none). The honest summary as of writing: used by organizations and political parties (Multnomah County Democrats since 2019, several Oregon state parties); not yet adopted for a government election. A concrete example:
+
+
 - **[Multnomah County Democrats — "STAR Voting: What and Why"](https://multdems.org/star-voting-what-and-why/)** — a party organization explaining STAR (and **Bloc STAR** for multi-winner) *because they use it* for their own reorganization elections. Useful as a concrete "an organization actually adopted this, here's how they framed it to members" example, with a sample ballot.
 
 ## Deep dives & data

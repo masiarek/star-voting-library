@@ -45,6 +45,9 @@ No. The method usually *called* "RCV" in the US — **[RCV-IRV](../RCV_IRV/RCV-I
 **"Scoring is for restaurants and movies — is it serious enough for elections?"**
 Rating 0–5 is a *more* expressive, not less serious, way to say what you think — it captures both *who* you prefer and *how strongly*, which "pick one" throws away. It's the same intuition you already use everywhere; STAR just adds the runoff to make it a fair election method.
 
+**"Is STAR actually used anywhere, or is it just a proposal?"**
+Both, honestly. It's **really used** — for the internal and primary elections of organizations and political parties (the Multnomah County Democrats since 2019, and several Oregon state parties). It has **not** been adopted for a *government* election yet — recent Oregon ballot measures (Eugene and Oakridge, 2024) fell short — so it's a newer reform still making its case, which is fair to say plainly. The current, authoritative list is kept by the campaign: **[starvoting.org/elections](https://www.starvoting.org/elections)**. And you can run a real STAR election yourself today at [bettervoting.com](https://bettervoting.com).
+
 **"Isn't it too complicated?"**
 To vote: score some candidates 0–5 — done. To count: add the columns, take the top two, count which is preferred. It's two steps of grade-school arithmetic, and it's **[hand-countable](count_star_by_hand.md)** — genuinely *simpler* to tally than RCV, which needs round-by-round central counting.
 
