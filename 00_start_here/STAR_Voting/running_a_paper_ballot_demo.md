@@ -46,14 +46,14 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
   ```
 - the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
 
-It writes a self-contained **HTML file**; open it in a browser and **Print → Save as PDF**. Each ballot carries:
+**Output:** end `--out` in **`.pdf`** for a print-ready PDF directly (e.g. `--out lunch.pdf` → a 30-page PDF, **one ballot per page**, straight to the printer — needs the `playwright` library, `playwright install chromium` once). End it in `.html` (or omit `--out`) for a self-contained **HTML file** you open and **Print → Save as PDF** yourself — the fallback if playwright isn't installed. Each ballot carries:
 
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
 - a **QR code** (top-right) that opens the online election when scanned — handy for "vote on paper *and* online, then compare." (The QR needs the tiny pure-Python `segno` library — `uv pip install segno`; without it the tool just prints the URL text and skips the QR, so it still runs with plain `python3`.)
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (layout hint), `--out FILE`, `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), and `--selftest` (verify the tool). Run `--help` for all of them.
+Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.pdf` or `.html`), `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), and `--selftest` (verify the tool). Run `--help` for all of them.
 
 ## Step 3 — vote on paper
 

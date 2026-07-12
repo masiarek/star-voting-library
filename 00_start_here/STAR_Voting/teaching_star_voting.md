@@ -66,10 +66,10 @@ The repo has a tool that **turns any STAR election into print-ready paper ballot
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
     --title "What Makes the Best Pet?" --bv-id pet \
-    --serials --write-ins 1 --copies 25 --out pets.html
+    --serials --write-ins 1 --copies 25 --out pets.pdf
 ```
 
-Open the HTML, **Print → PDF**, and hand them out. Each ballot has a 0–5 bubble grid, the STAR instructions, and — the fun part:
+End `--out` in **`.pdf`** and you get a print-ready PDF (one ballot per page) straight to the printer; end it in `.html` to open and **Print → PDF** yourself. Each ballot has a 0–5 bubble grid, the STAR instructions, and — the fun part:
 
 - a **QR code** → scan to open the live election ([`bettervoting.com/pet`](https://bettervoting.com/pet)), so a class can vote **on paper *and* online** and compare;
 - optional **serial "receipts"** (`--serials`) — a lovely way to teach *verifiability* and the secret-ballot tension (publish the counted serials; discuss why a name→number list would be bad);

@@ -124,6 +124,31 @@ def qr_data_uri(url):
     except Exception:
         return None
 
+def html_to_pdf(html_str, pdf_path):
+    """Render the ballot HTML straight to a print-ready PDF via headless Chromium
+    (the already-declared `playwright` dep). Returns True on success; False if
+    playwright isn't installed/usable, so the caller can fall back to writing HTML.
+    page.pdf() emulates print media, so the @media-print page-breaks apply."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return False
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page()
+            page.set_content(html_str, wait_until="load")
+            page.pdf(path=pdf_path, format="Letter", print_background=True,
+                     margin={"top": "0.4in", "bottom": "0.4in",
+                             "left": "0.4in", "right": "0.4in"})
+            browser.close()
+        return True
+    except Exception as e:
+        print(f"[pdf] playwright present but PDF render failed ({e}); "
+              "falling back to HTML.")
+        return False
+
+
 CSS = """
 :root { color-scheme: light; }
 body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -145,12 +170,14 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
 .qr img { width: 72px; height: 72px; display: block; }
 .wline { display: inline-block; border-bottom: 1px solid #333; width: 55%; height: 1em; }
 .serial { font-weight: 700; }
-@media print { .noprint { display: none; } .ballot { margin: 0 0 8px; } }
+@media print { .noprint { display: none; } .ballot { margin: 0 0 8px; }
+  .ballot.pagebreak { page-break-after: always; } }
 """
 
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
-                  serial=None, write_ins=0, qr_caption="scan to vote"):
+                  serial=None, write_ins=0, qr_caption="scan to vote",
+                  break_after=False):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
     bubbles = "".join('<td><span class="bub"></span></td>' for _ in range(6))
@@ -170,8 +197,9 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code">'
                 f'<span>{html.escape(qr_caption)}</span></div>'
                 if qr_uri else "")
+    cls = "ballot pagebreak" if break_after else "ballot"
     return f"""
-<div class="ballot">
+<div class="{cls}">
   <div class="bhead">
     <div>
       <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
@@ -194,14 +222,20 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
     caption = "scan" if qr_url else "scan to vote"
     qr_uri = qr_data_uri(url) if (url and qr) else None
+    pp = max(1, per_page)
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
-                      qr_caption=caption)
+                      qr_caption=caption,
+                      # force a page break after every `per_page` ballots (but not
+                      # after the last — a trailing break makes a blank page).
+                      break_after=((i + 1) % pp == 0 and i + 1 < copies))
         for i in range(copies))
+    perpage_txt = ('one ballot per page' if pp == 1 else f'{pp} ballots per page')
     hint = ('<p class="noprint" style="margin:12px 18px;color:#666;font-size:13px">'
-            f'{copies} ballots · aim for ~{per_page} per page — use your browser\'s '
-            'Print → "Save as PDF". This is the print-and-hand-count front end; '
+            f'{copies} ballots · {perpage_txt} — use your browser\'s '
+            'Print → "Save as PDF" (or run with --out ballots.pdf for a PDF directly). '
+            'This is the print-and-hand-count front end; '
             'count with count_star_by_hand.md, then compare to BetterVoting.</p>')
     return (f'<!doctype html><html><head><meta charset="utf-8">'
             f'<title>STAR ballots — {html.escape(title or bv_id or "demo")}</title>'
@@ -218,7 +252,7 @@ def selftest():
     checks = [
         ("all three candidates present", all(n in html_out for n in ("Ann", "Bob", "Cal"))),
         ("bv id + results url", "bettervoting.com/abc123/results" in html_out),
-        ("3 ballots rendered", html_out.count('class="ballot"') == 3),
+        ("3 ballots rendered", html_out.count('class="ballot') == 3),
         ("0-5 bubble grid (18 bubbles/ballot = 3 cands x 6)", html_out.count('class="bub"') == 3 * 6 * 3),
         ("html escaping of a tricky name",
          "&lt;b&gt;" in render_ballot("t", "q", ["<b>"], None)),
@@ -236,6 +270,18 @@ def selftest():
          s2.count('class="bub"') == (2 + 1) * 6 * 2),
     ]
     for label, cond in extra:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
+    # pagination: page-break after every `per_page` ballots, never after the last.
+    one = render_sheet("T", "q", ["A"], None, copies=3, per_page=1, qr=False)
+    two = render_sheet("T", "q", ["A"], None, copies=3, per_page=2, qr=False)
+    page = [
+        ("one-per-page: breaks after all but last (3 copies -> 2 breaks)",
+         one.count('class="ballot pagebreak"') == 2),
+        ("two-per-page: break after ballot 2 only (3 copies -> 1 break)",
+         two.count('class="ballot pagebreak"') == 1),
+    ]
+    for label, cond in page:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
     # QR is optional (needs segno); test whichever path applies.
@@ -279,8 +325,12 @@ def main():
     ap.add_argument("--question", help="the ballot question line")
     ap.add_argument("--bv-id")
     ap.add_argument("--copies", type=int, default=30)
-    ap.add_argument("--per-page", type=int, default=2)
-    ap.add_argument("--out", default="ballots.html")
+    ap.add_argument("--per-page", type=int, default=1,
+                    help="ballots per printed page (default 1 — one ballot per page, "
+                         "the right choice for ballots you hand out individually)")
+    ap.add_argument("--out", default="ballots.html",
+                    help="output file; end it in .pdf for a print-ready PDF directly "
+                         "(needs `playwright`), otherwise HTML you Print → PDF yourself")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
     ap.add_argument("--qr-url",
@@ -318,11 +368,31 @@ def main():
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, qr_url=args.qr_url)
-    with open(args.out, "w", encoding="utf-8") as f:
-        f.write(sheet)
-    print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates) to "
-          f"{os.path.abspath(args.out)}")
-    print("Open it in a browser and Print → Save as PDF.")
+
+    want_pdf = args.out.lower().endswith(".pdf")
+    wrote_pdf = False
+    if want_pdf:
+        wrote_pdf = html_to_pdf(sheet, args.out)
+        if not wrote_pdf:
+            # Graceful fallback: no playwright → write the HTML beside it so the
+            # user can still Print → PDF. (Keeps the tool runnable on plain python3.)
+            args.out = args.out[:-4] + ".html"
+            print("[pdf] `playwright` not available — install it (uv pip install "
+                  "playwright && playwright install chromium) for direct PDF. "
+                  f"Writing HTML instead: {args.out}")
+
+    if not wrote_pdf:
+        with open(args.out, "w", encoding="utf-8") as f:
+            f.write(sheet)
+
+    pp = max(1, args.per_page)
+    layout = "one per page" if pp == 1 else f"{pp} per page"
+    print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, {layout}) "
+          f"to {os.path.abspath(args.out)}")
+    if wrote_pdf:
+        print("Print-ready PDF — send it straight to the printer.")
+    else:
+        print("Open it in a browser and Print → Save as PDF.")
     if bv_id:
         print(f"Linked to BetterVoting election {bv_id} "
               f"(results: https://bettervoting.com/{bv_id}/results).")
