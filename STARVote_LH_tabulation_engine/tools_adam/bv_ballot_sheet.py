@@ -16,7 +16,8 @@ Candidates + title come from ONE of:
   --bv-export FILE     a frozen BetterVoting <case>_bv_export.json
   --candidates "A,B,C" --title "..." [--bv-id ID] [--question "..."]   manual
 
-Stdlib only — no dependencies. `--selftest` runs known-answer checks.
+Stdlib only — no dependencies (QR is optional via `segno`). `--selftest` runs
+known-answer checks. Design spec & rationale: bv_ballot_sheet_FSD.md (beside this file).
 
 Examples
 --------
