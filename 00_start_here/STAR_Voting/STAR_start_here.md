@@ -1,6 +1,6 @@
 # STAR Voting — Start Here (the *why* before the *how*)
 
-*New to STAR? This is your on-ramp. For the repo's method-neutral entry point, see [Start Here](../00_START_HERE.md); for the case *for* STAR (arguments and rebuttals), see [Why STAR Voting](../Why_STAR_Voting.md).*
+*New to STAR Voting? You're in the right place — no background needed. We start with a problem you already know.*
 
 ---
 
@@ -34,13 +34,13 @@ Same five people, same feelings — but now each of them **rates all three** (5 
 Run it yourself: [`lunch_vote_c3_b5.yaml`](../../01_STAR/_main/lunch_vote_c3_b5.yaml) · [reader page](../../01_STAR/_main/_main_pages/lunch_vote_c3_b5.md).
 
 ```
-                        Sushi  Tacos  Pizza
-2 Sushi-lovers            5      0      3
-2 Taco-lovers             0      5      3
-1 Pizza-fan              3      1      5
+                    Sushi   Tacos   Pizza
+  2 Sushi-lovers      5       0       3
+  2 Taco-lovers       0       5       3
+  1 Pizza-fan         3       1       5
 
-Round 1 — add the stars:   Pizza 17 · Sushi 13 · Tacos 11   → Pizza & Sushi advance
-Round 2 — the final two:   Pizza 3  vs  Sushi 2             → Pizza wins
+  Round 1 — add the stars:  Pizza 17 · Sushi 13 · Tacos 11   → Pizza & Sushi advance
+  Round 2 — the final two:  Pizza 3  vs  Sushi 2             → Pizza wins
 ```
 
 **Pizza wins** — the option *everyone* was happy with. It got only one first-place vote, so "pick one" buried it; but because STAR reads the *whole* ballot, the broad, quiet support shows up. Nobody had to vote strategically, and nobody's stuck with a 0.
@@ -59,6 +59,10 @@ Because the two rounds measure two different things:
 Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
 
 ## How you fill out the ballot
+
+Here's a real STAR ballot — five candidates, each rated 0 to 5 stars:
+
+![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../img/star_ballot_example.png)
 
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
@@ -97,3 +101,7 @@ Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scori
 - Equal Vote Coalition — [STAR Voting overview](https://www.equal.vote/star)
 - ["How Does STAR Voting Work?" (short video)](https://www.youtube.com/watch?v=fKg0fRL88zc)
 - [bettervoting.com](https://bettervoting.com) · [help, FAQ & hand-count guides](https://docs.bettervoting.com)
+
+---
+
+*Up: [Start Here](../00_START_HERE.md) (all methods, method-neutral) · [more STAR concept pages](README.md).*
