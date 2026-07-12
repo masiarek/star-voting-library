@@ -1,5 +1,5 @@
-<svg viewBox="0 0 860 410" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <rect x="1" y="1" width="858" height="408" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+<svg viewBox="0 0 860 424" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="858" height="422" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
 
   <text x="430" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2328">One ballot, two rounds</text>
   <text x="430" y="61" text-anchor="middle" font-size="13.5" fill="#57606a">Caroline scores every flavor once — then STAR reads that one ballot twice.</text>
@@ -24,21 +24,21 @@
     </marker>
   </defs>
   <line x1="252" y1="168" x2="300" y2="150" stroke="#6e7781" stroke-width="2" marker-end="url(#ah)"/>
-  <line x1="252" y1="250" x2="300" y2="288" stroke="#6e7781" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="252" y1="250" x2="300" y2="292" stroke="#6e7781" stroke-width="2" marker-end="url(#ah)"/>
 
   <!-- Round 1 -->
   <rect x="306" y="100" width="528" height="108" rx="12" fill="#eef6ec" stroke="#b7d7b0" stroke-width="1.5"/>
   <text x="326" y="128" font-size="15" font-weight="700" fill="#1f5c2e">Round 1 — Scoring Round: add the stars</text>
-  <text x="326" y="156" font-size="14" fill="#1f2328">Her stars are added to each flavor's total:  <tspan font-weight="700">Choco +5</tspan>, <tspan font-weight="700">Vanilla +3</tspan>, Almond +0.</text>
-  <text x="326" y="184" font-size="14" fill="#1f2328">The two highest-scoring flavors overall — <tspan font-weight="700">Choco &amp; Vanilla</tspan> — become the finalists.</text>
+  <text x="326" y="156" font-size="14" fill="#1f2328">Her stars add to each flavor's total:  <tspan font-weight="700">Choco +5</tspan>, <tspan font-weight="700">Vanilla +3</tspan>, Almond +0.</text>
+  <text x="326" y="184" font-size="14" fill="#1f2328">The two highest overall — <tspan font-weight="700">Choco &amp; Vanilla</tspan> — become the finalists.</text>
 
   <!-- Round 2 -->
-  <rect x="306" y="240" width="528" height="130" rx="12" fill="#eef2fb" stroke="#b6c6ec" stroke-width="1.5"/>
+  <rect x="306" y="240" width="528" height="146" rx="12" fill="#eef2fb" stroke="#b6c6ec" stroke-width="1.5"/>
   <text x="326" y="268" font-size="15" font-weight="700" fill="#1f3a8a">Round 2 — Automatic Runoff: Choco vs Vanilla</text>
-  <text x="326" y="296" font-size="14" fill="#1f2328">Now only the two finalists matter. Which did she score higher?</text>
-  <text x="326" y="322" font-size="14" fill="#1f2328"><tspan font-weight="700">Choco 5 &gt; Vanilla 3</tspan> — so her whole ballot becomes just&#160;…</text>
-  <rect x="646" y="304" width="168" height="30" rx="15" fill="#1f3a8a"/>
-  <text x="730" y="324" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">1 vote for Choco</text>
+  <text x="326" y="295" font-size="14" fill="#1f2328">Now only the two finalists matter — which did she score higher?</text>
+  <text x="326" y="321" font-size="14" fill="#1f2328"><tspan font-weight="700">Choco 5 &gt; Vanilla 3</tspan>, so her whole ballot becomes just one vote:</text>
+  <rect x="486" y="340" width="168" height="32" rx="16" fill="#1f3a8a"/>
+  <text x="570" y="361" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">1 vote for Choco</text>
 
-  <text x="430" y="396" text-anchor="middle" font-size="13.5" font-style="italic" fill="#57606a">In the runoff her 5 and 3 collapse to a single vote — for whichever finalist she preferred. That is the whole trick.</text>
+  <text x="430" y="410" text-anchor="middle" font-size="13.5" font-style="italic" fill="#57606a">In the runoff her 5 and 3 collapse to a single vote — for whichever finalist she preferred. That is the whole trick.</text>
 </svg>
