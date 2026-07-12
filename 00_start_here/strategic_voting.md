@@ -52,7 +52,7 @@ The honest limit on this argument: it says exaggeration *rarely pays and often b
 
 ## What the simulations say
 
-Strategic incentive is often summarized as a ratio — how often a strategic vote *helps* the voter vs. how often it *backfires*. From Dr. [Jameson Quinn](whos_who_voting_reform.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/VSE/) work:
+Strategic incentive is often summarized as a ratio — how often a strategic vote *helps* the voter vs. how often it *backfires*. From Dr. [Jameson Quinn](in_memoriam_jameson_quinn.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/VSE/) work:
 
 - **Choose-One Plurality ≈ 17:1** — strategy almost always pays (the "lesser evil" problem).
 - **IRV ≈ 3:1** — strategy pays about three times as often as it backfires.

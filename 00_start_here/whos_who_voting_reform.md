@@ -57,7 +57,7 @@ Living advocates and the methods they champion. Grouped by camp *and disclosed a
 
 | Person | Role / contribution | Links |
 |---|---|---|
-| **Jameson Quinn** (1974–2025) | Harvard statistics Ph.D.; popularized **Voter Satisfaction Efficiency (VSE)**; board member of *both* the Center for Election Science and the Equal Vote Coalition; designed the Hugo Awards' *E Pluribus Hugo* method. *Died March 2025; [in memoriam](expert_consensus_and_irv.md#the-people-named-accurately).* | [obituary](https://obituaries.paloaltoonline.com/obituaries/memorials/jameson-quinn?o=8976) |
+| **Jameson Quinn** (1974–2025) | Harvard statistics Ph.D.; popularized **Voter Satisfaction Efficiency (VSE)**; board member of *both* the Center for Election Science and the Equal Vote Coalition; designed the Hugo Awards' *E Pluribus Hugo* method. *Died March 2025; [in memoriam →](in_memoriam_jameson_quinn.md).* | [obituary](https://obituaries.paloaltoonline.com/obituaries/memorials/jameson-quinn?o=8976) |
 | **Marcus Ogren** | Voting-methods researcher; simulation work on VSE and strategic behavior; writes the *Voting in the Abstract* series. | [Voting in the Abstract](https://voting-in-the-abstract.medium.com/) |
 
 ## How to use this page
