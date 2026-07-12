@@ -59,13 +59,13 @@ The thing that makes every claim above checkable.
 
 **The methods, one page each:**
 
-| Method | Ballot | Page |
+| Method | Ballot | Learn more |
 |---|---|---|
-| **STAR** | score 0–5, then automatic runoff | [STAR_Voting/](STAR_Voting/STAR_start_here.md) |
-| **Approval** | approve any number (0/1) | [Approval_Voting/](Approval_Voting/approval_voting.md) |
-| **Range / Score** | grade each; highest total wins | [Range_Voting/](Range_Voting/range_voting.md) |
-| **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [RCV_Ranked_Robin/](RCV_Ranked_Robin/ranked_robin.md) |
-| **RCV-IRV** | rank; instant runoff | [RCV_IRV/](RCV_IRV/RCV-IRV-Hare.md) |
-| **3-2-1** | Good / OK / Bad | [06_Other/three_two_one/](../06_Other/three_two_one/README.md) |
+| **STAR** | score 0–5, then automatic runoff | [STAR — start here →](STAR_Voting/STAR_start_here.md) |
+| **Approval** | approve any number (0/1) | [Approval overview →](Approval_Voting/approval_voting.md) |
+| **Range / Score** | grade each; highest total wins | [Range / Score overview →](Range_Voting/range_voting.md) |
+| **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [Ranked Robin overview →](RCV_Ranked_Robin/ranked_robin.md) |
+| **RCV-IRV** | rank; instant runoff | [RCV-IRV (Hare) →](RCV_IRV/RCV-IRV-Hare.md) |
+| **3-2-1** | Good / OK / Bad | [3-2-1 overview →](../06_Other/three_two_one/README.md) |
 
 # file: 00_START_HERE.md

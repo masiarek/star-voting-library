@@ -59,7 +59,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 
 - **Marcus Ogren** — [Voting in the Abstract](https://voting-in-the-abstract.medium.com/) (the model for this page; field-wide, Condorcet-leaning).
 - **Organizations** — the [Equal Vote Coalition](https://www.equal.vote), [STAR Voting](https://www.starvoting.org), the [Center for Election Science](https://electionscience.org), and [FairVote](https://fairvote.org) (the primary IRV advocate — read for the case this repo often argues *against*).
-- **Simulations & data** — Jameson Quinn's [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/).
+- **Simulations & data** — [Jameson Quinn](whos_who_voting_reform.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/).
 - **Reference** — [electowiki](https://electowiki.org) for the method encyclopedia.
 
 *(These include strong advocates on several sides. Read them the way this repo reads FairVote — critically, and for the argument, not the conclusion.)*

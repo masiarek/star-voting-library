@@ -24,6 +24,8 @@ Advocacy pages (from every camp) mix solid points with overreach. The repo's wor
 
 The check cuts the other way too: [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) grades the popular *pro-cardinal* claim that "the voting scientists have proven RCV-IRV inferior" — noting that the most-cited experts (Smith, Brams, Quinn) are themselves advocates, and separating what the math proves from what it doesn't.
 
+The people behind these methods — foundational theorists and modern advocates alike, with affiliations disclosed — are collected in [Who's who in voting methods](whos_who_voting_reform.md).
+
 _These descriptions are the organizations' own emphases, not endorsements. Verify current campaigns and results on each site — advocacy priorities change._
 
 # file: advocacy_organizations.md

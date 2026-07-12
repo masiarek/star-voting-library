@@ -1,6 +1,6 @@
 # 3-2-1 Voting
 
-**3-2-1 Voting** (designed by Jameson Quinn of the [Center for Election Science](https://electionscience.org)) is a rated method that reaches a winner in three named steps. Voters rate each candidate **Good**, **OK**, or **Bad**:
+**3-2-1 Voting** (designed by [Jameson Quinn](../../00_start_here/whos_who_voting_reform.md) of the [Center for Election Science](https://electionscience.org)) is a rated method that reaches a winner in three named steps. Voters rate each candidate **Good**, **OK**, or **Bad**:
 
 1. **Semifinalists** — the **3** candidates with the most *Good* ratings.
 2. **Finalists** — of those 3, the **2** with the fewest *Bad* ratings.

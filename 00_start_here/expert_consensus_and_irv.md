@@ -74,6 +74,6 @@ Naming them is fair *evidence*; naming them as neutral *authorities* is the move
 
 - [What makes a "good" winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) — the criteria and the VSE framing
 - [Election simulation models](election_simulation_models.md) — why every VSE number is conditional on its assumptions
-- [Advocacy organizations](advocacy_organizations.md) — who champions what (every camp) · [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) — the same even-handed check, in the other direction
+- [Advocacy organizations](advocacy_organizations.md) — who champions what (every camp) · [Who's who in voting methods](whos_who_voting_reform.md) — the people, foundational to modern, affiliations disclosed · [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md) — the same even-handed check, in the other direction
 - [STAR vs RCV-IRV](rcv_irv_vs_star.md) · [STAR's honest limits](STAR_Voting/STAR_honest_limits.md) — where this repo turns the candor on STAR
 - IRV-specific behavior: [non-monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md) (concept) & the [worked before/after pair](../method_comparisons/monotonicity/) · [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md) · how STAR differs: [STAR & monotonicity](STAR_Voting/STAR_monotonicity.md)
