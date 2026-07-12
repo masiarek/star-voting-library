@@ -4,9 +4,7 @@
 
 New to STAR Voting? Start here — the *why* before the *how*. This page builds the background that makes every worked example later click, so you're not dropped into a ballot with no context.
 
-*Presenting to a group? Open with this too — in test runs, audiences get lost if you jump straight to a specific ballot.*
-
-> Looking for persuasion material rather than the teaching sequence? See [Why STAR Voting](../Why_STAR_Voting.md) — presentation slide bullets plus tiered debate-prep talking points (claim / rebuttal / response).
+> Want the case *for* STAR — the arguments, rebuttals, and talking points — rather than the learning path? See [Why STAR Voting](../Why_STAR_Voting.md).
 
 ---
 
@@ -112,17 +110,11 @@ Then [Bloc STAR](../../02_STAR_Bloc/) and [proportional STAR](../../03_STAR_PR/)
 
 ---
 
-## The 2-candidate problem — read this, it'll save your demo
+## The 2-candidate case — why STAR looks ordinary here
 
-STAR's *value* only shows up with **3 or more candidates** (vote-splitting, spoilers, and compromise winners need a crowd). With only two candidates, STAR gives the same answer as ordinary voting. That's not a weakness of the example — it's the **point** of starting there.
+STAR's *value* only shows up with **3 or more candidates** (vote-splitting, spoilers, and compromise winners need a crowd). With only two candidates, STAR gives the same answer as ordinary voting — and that's not a weakness, it's *why the examples start there*.
 
-**Frame the 2-candidate lesson honestly as the mechanics warm-up:**
-
-> "With only two candidates, STAR lands on the same winner as a normal election — and that's exactly why we start here. Nothing surprising competes for your attention, so you can watch the Scoring Round and the Automatic Runoff turn once, slowly. The interesting behavior starts the moment we add a third candidate."
-
-Say that out loud and the let-down disappears: the audience knows they're looking at the gears, not the payoff. Then the 3-candidate example (where the winner flips to the compromise) hits harder *because* you set the baseline first.
-
-If you're short on time: spend ~60 seconds on 2 candidates purely to name the two rounds, then move quickly to 3 candidates where the "aha" lives.
+With two candidates, nothing surprising competes for your attention, so you can watch the **Scoring Round** and the **Automatic Runoff** turn once, slowly, and learn what each does. The interesting behavior starts the moment a third candidate joins — that's where the winner can flip to the broad compromise, and it clicks harder *because* you've seen the simple two-candidate baseline first.
 
 ---
 
@@ -132,4 +124,4 @@ If you're short on time: spend ~60 seconds on 2 candidates purely to name the tw
 - "How Does STAR Voting Work?" (short video): https://www.youtube.com/watch?v=fKg0fRL88zc&pp=ygUVaG93IHN0YXIgdm90aW5nIHdvcmtz
 - Try it / host an election: https://bettervoting.com · Help, FAQ & hand-count guides: https://docs.bettervoting.com
 
-The ballot rules and the "no preference / Equal Support" wording above follow the Equal Vote Coalition's official explanation; this lesson reframes them as a mechanics-first teaching sequence for these examples.
+The ballot rules and the "no preference / Equal Support" wording above follow the Equal Vote Coalition's official explanation; this page presents them mechanics-first, in the order the ideas build.
