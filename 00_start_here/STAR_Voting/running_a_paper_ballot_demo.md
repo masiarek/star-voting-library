@@ -39,10 +39,11 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
 It writes a self-contained **HTML file**; open it in a browser and **Print → Save as PDF**. Each ballot carries:
 
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
-- the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"), and
-- the **BV election id and results URL** printed on every ballot, so paper and platform stay linked.
+- the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
+- the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
+- a **QR code** (top-right) that opens the online election when scanned — handy for "vote on paper *and* online, then compare." (The QR needs the tiny pure-Python `segno` library — `uv pip install segno`; without it the tool just prints the URL text and skips the QR, so it still runs with plain `python3`.)
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (layout hint), `--out FILE`, and `--selftest` (verify the tool). Run `--help` for all of them.
+Useful flags: `--copies N` (how many ballots), `--per-page N` (layout hint), `--out FILE`, `--no-qr`, and `--selftest` (verify the tool). Run `--help` for all of them.
 
 ## Step 3 — vote on paper
 
@@ -63,7 +64,34 @@ Have the same voters also vote online (or enter the paper ballots), and confirm 
 
 ## Step 6 (advanced) — scan the paper back into YAML
 
-The **return path** is to photograph the filled ballots and OCR the scores into a YAML the [LH engine](../why_yaml_test_cases.md) tabulates — closing the loop from paper to a fully-auditable digital count. That's a harder tool (it needs an OCR / vision engine, confidence thresholds, and human review of illegible marks), and it **isn't built yet** — the functional spec (batch of images → grayscale/deskew → read the 0–5 grid → validate → emit `voting_method: STAR` YAML with a run log) is the documented roadmap. **Until then, just transcribe the paper ballots into a YAML by hand** — the format is trivial (a candidate header, then one comma-separated row of 0–5 scores per ballot) — and run the engine.
+The **return path** is to photograph the filled ballots and OCR the scores into a YAML the [LH engine](../why_yaml_test_cases.md) tabulates — closing the loop from paper to a fully-auditable digital count. That tool needs a vision engine and careful design, so it's the **roadmap**, not built yet; the design is below. **Until then, transcribe the paper ballots into a YAML by hand** using the same rules — the format is trivial (a candidate header, then one row of 0–5 scores per ballot).
+
+## Design notes — the flow, and how a mistake becomes YAML
+
+**Ballots with and without a BV election.** A ballot is meant to be *self-sufficient*; the BV link is an enhancement, not a requirement.
+- **With** a `--bv-id`: the ballot prints the id, the results URL, and a scannable **QR** — paper and platform stay linked.
+- **Without** one (a purely offline classroom, no internet): still a perfectly valid ballot — it just carries the generic STAR heading and no QR. For traceability, put a date or set name in `--title`.
+
+**Flagging mistakes — reuse the repo's markers, don't invent a scheme.** The repo already has a marker vocabulary for exactly this (see [CLAUDE.md](../../CLAUDE.md) / the [markers glossary](STAR_ballot_voting_styles.md)): every marker tabulates as **0** *and* is reported. So an ambiguous mark maps cleanly:
+
+| On the paper ballot | Meaning | In the YAML |
+|---|---|---|
+| exactly **one** bubble filled in a row | a valid 0–5 score | that digit (e.g. `4`) |
+| **two or more** bubbles in one row (e.g. 2, 4 *and* 5) | ambiguous / overvote | **`?`** (spoiled — counts as 0, flagged) |
+| **no** bubble in a row | no score given | `0` (or `-` for "left blank") |
+| a stray mark, or illegible | can't read it confidently | `?` + a line in the run log for human review |
+
+So *"the voter marked 2, 4 and 5 for one candidate"* becomes a **`?`** in that candidate's column — the engine already knows what to do with it (score it 0, surface it as spoiled), and a human can review every flagged row. No new mechanism needed — and the ballot itself warns the voter up front (*"two or more bubbles is a spoiled score for that candidate"*).
+
+**The OCR tool, respecified in the repo's terms** (the goal, not the letter of the original spec):
+
+1. Read each ballot image; locate the candidate rows and the 0–5 bubble grid.
+2. Per row, count filled bubbles → **1** = that score · **0** = `0` · **≥2** = `?` (spoiled).
+3. Anything below a confidence threshold, or unreadable → `?` and log for review.
+4. Emit a standard `voting_method: STAR` YAML (candidate header + one scored/marked row per ballot) **plus a run log** naming every flagged ballot.
+5. Tabulate in the [LH engine](../why_yaml_test_cases.md), which already reports spoiled ballots — loop closed.
+
+When that tool gets built, the right way is against a **local OCR engine** with a **synthetic-ballot round-trip self-test** (render ballots with known scores → OCR → assert they match), so it's *verified before it's trusted* on real scans.
 
 ## Why do this (the teaching value)
 

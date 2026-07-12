@@ -10,6 +10,7 @@ dependencies = [
     "playwright>=1.60.0",
     "pref-voting>=1.14.0",
     "pyyaml>=6.0.3",
+    "segno>=1.6.0",
     "starvote",
 ]
 

@@ -100,10 +100,24 @@ def from_bv_export(path):
 # --------------------------------------------------------------------------- #
 # HTML ballot rendering.                                                       #
 # --------------------------------------------------------------------------- #
-INSTRUCTIONS = ("Score each candidate 0 to 5 (fill one bubble per row). "
+INSTRUCTIONS = ("Score each candidate 0 to 5 (fill ONE bubble per row). "
                 "Give your favorite 5, your last choice 0 (or leave blank). "
-                "Equal scores are allowed. The two highest-scoring candidates "
-                "have an automatic runoff.")
+                "Equal scores are allowed. Two or more bubbles in a row is a "
+                "spoiled score for that candidate. The two highest-scoring "
+                "candidates have an automatic runoff.")
+
+
+def qr_data_uri(url):
+    """An inline QR (data: URI) for `url` if the pure-python `segno` library is
+    installed; None otherwise (the tool stays stdlib-only, QR just degrades)."""
+    try:
+        import segno
+    except ImportError:
+        return None
+    try:
+        return segno.make(url, error="m").svg_data_uri(scale=3, border=1)
+    except Exception:
+        return None
 
 CSS = """
 :root { color-scheme: light; }
@@ -121,11 +135,14 @@ th.cand, td.cand { text-align: left; width: 42%; font-weight: 600; }
        border-radius: 50%; }
 .foot { margin-top: 8px; font-size: 10.5px; color: #555; display: flex;
         justify-content: space-between; }
+.bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.qr { text-align: center; font-size: 9px; color: #555; }
+.qr img { width: 72px; height: 72px; display: block; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; } }
 """
 
 
-def render_ballot(title, question, candidates, bv_id):
+def render_ballot(title, question, candidates, bv_id, qr_uri=None):
     rows = []
     header = "".join(f"<th>{n}</th>" for n in range(6))
     for c in candidates:
@@ -134,10 +151,17 @@ def render_ballot(title, question, candidates, bv_id):
     results = (f'results: bettervoting.com/{html.escape(bv_id)}/results'
                if bv_id else 'STAR Voting — Score Then Automatic Runoff')
     idline = f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot'
+    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="Scan to open election '
+                f'{html.escape(bv_id or "")}"><span>scan to vote</span></div>'
+                if qr_uri else "")
     return f"""
 <div class="ballot">
-  <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
-  <p class="q">{html.escape(question)}</p>
+  <div class="bhead">
+    <div>
+      <h2>{html.escape(title or 'STAR Voting ballot')}</h2>
+      <p class="q">{html.escape(question)}</p>
+    </div>{qr_block}
+  </div>
   <p class="inst">{INSTRUCTIONS}</p>
   <table>
     <tr><th class="cand">Candidate</th>{header}</tr>
@@ -147,9 +171,10 @@ def render_ballot(title, question, candidates, bv_id):
 </div>"""
 
 
-def render_sheet(title, question, candidates, bv_id, copies, per_page):
+def render_sheet(title, question, candidates, bv_id, copies, per_page, qr=True):
+    qr_uri = qr_data_uri(f"https://bettervoting.com/{bv_id}") if (bv_id and qr) else None
     ballots = "\n".join(
-        render_ballot(title, question, candidates, bv_id) for _ in range(copies))
+        render_ballot(title, question, candidates, bv_id, qr_uri) for _ in range(copies))
     hint = ('<p class="noprint" style="margin:12px 18px;color:#666;font-size:13px">'
             f'{copies} ballots · aim for ~{per_page} per page — use your browser\'s '
             'Print → "Save as PDF". This is the print-and-hand-count front end; '
@@ -177,6 +202,15 @@ def selftest():
     for label, cond in checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
+    # QR is optional (needs segno); test whichever path applies.
+    if qr_data_uri("https://bettervoting.com/abc123"):
+        has_qr = 'class="qr"' in html_out and "data:image/svg" in html_out
+        print(f"[selftest] QR embedded (segno present): {'OK' if has_qr else 'FAIL'}")
+        ok &= has_qr
+    else:
+        no_qr = 'class="qr"' not in html_out
+        print(f"[selftest] graceful no-QR (segno absent): {'OK' if no_qr else 'FAIL'}")
+        ok &= no_qr
     print(f"[selftest] {'ALL PASS' if ok else 'FAILURES PRESENT'}")
     return ok
 
@@ -193,6 +227,8 @@ def main():
     ap.add_argument("--copies", type=int, default=30)
     ap.add_argument("--per-page", type=int, default=2)
     ap.add_argument("--out", default="ballots.html")
+    ap.add_argument("--no-qr", action="store_true",
+                    help="omit the QR code (QR needs the `segno` library)")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -217,7 +253,8 @@ def main():
                          "(see --help). Run --selftest to verify the tool.")
 
     question = args.question or "Score each candidate from 0 (worst) to 5 (best)."
-    sheet = render_sheet(title, question, candidates, bv_id, args.copies, args.per_page)
+    sheet = render_sheet(title, question, candidates, bv_id, args.copies,
+                         args.per_page, qr=not args.no_qr)
     with open(args.out, "w", encoding="utf-8") as f:
         f.write(sheet)
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates) to "
