@@ -1,0 +1,34 @@
+election_title: The team lunch vote
+
+scenario_description: |-
+  The beginner's running example (STAR — start here). Five coworkers pick lunch
+  from Sushi, Tacos, or Pizza. Two love Sushi, two love Tacos — and everyone is
+  perfectly happy with Pizza. Under Choose-One each person names ONE favorite,
+  so the vote splits (Sushi 2, Tacos 2, Pizza 1) and Pizza — the option nobody
+  objected to — comes LAST; a coin flip hands lunch to Sushi or Tacos and half
+  the team is stuck with something they rated 0. STAR reads the whole ballot:
+  Pizza tops the Scoring Round (17) and wins the runoff 3-2. The compromise
+  everyone can live with wins, and no one had to vote strategically. (Choose-One
+  and RCV-IRV both elect Sushi here; STAR elects Pizza.)
+
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Sushi,Tacos,Pizza
+  5,0,3
+  5,0,3
+  0,5,3
+  0,5,3
+  3,1,5
+
+options:
+  show_matrix: true
+  matrix_finalists_only: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+
+expected_winners:
+- Pizza
+
+# file: lunch_vote_c3_b5.yaml

@@ -150,6 +150,7 @@ LH:lot_random_vs_published_jfk7pd_bv_order,Lot-decided tie (BV jfk7pd) — follo
 LH:lot_random_vs_published_jfk7pd_published_order,Lot-decided tie (BV jfk7pd) — following a deterministic published order,1,single-race,2,STAR,LH-only
 LH:lot_tiebreak_bv_order,Lot tiebreak — following BetterVoting's drawn order,1,single-race,2,STAR,LH-only
 LH:lot_tiebreak_published_order,Lot tiebreak — following the new published-lot approach,1,single-race,2,STAR,LH-only
+LH:lunch_vote_c3_b5,The team lunch vote,1,single-race,5,STAR,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,1,single-race,34,IRV,LH-only
 LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only

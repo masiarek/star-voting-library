@@ -8,18 +8,19 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**266 election files** (231 single-winner, 35 multi-winner) across 14 method(s).
+**269 election files** (234 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 142 |
-| RCV-IRV (Hare) | 11 |
+| STAR | 143 |
+| RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 33 |
 | Approval | 10 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
 | Allocated Score (STAR-PR) | 7 |
+| 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 13 |
 | IRV | 16 |
@@ -27,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (142)
+## STAR  (143)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -58,6 +59,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2182_tg4779_faq_runoff_reversal`](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md) | `01_STAR/_main/` | 1 | BV2182 — why the automatic runoff (and Equal Support) → _Almond_ | [`.yaml`](../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml) |
 | [`display_options_demo`](../../01_STAR/_main/_main_pages/display_options_demo.md) | `01_STAR/_main/` | 1 | Display options demo → _Don_ | [`.yaml`](../../01_STAR/_main/display_options_demo.yaml) |
 | [`equal_support_runoff_demo`](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) | `01_STAR/_main/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/_main/equal_support_runoff_demo.yaml) |
+| [`lunch_vote_c3_b5`](../../01_STAR/_main/_main_pages/lunch_vote_c3_b5.md) | `01_STAR/_main/` | 1 | The team lunch vote → _Pizza_ | [`.yaml`](../../01_STAR/_main/lunch_vote_c3_b5.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/_main/_main_pages/quorum_demo_c3_b6.md) | `01_STAR/_main/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/_main/quorum_demo_c3_b6.yaml) |
 | [`quorum_fail_demo_c3_b6`](../../01_STAR/_main/_main_pages/quorum_fail_demo_c3_b6.md) | `01_STAR/_main/` | 1 | Quorum FAILS — won the count, but not elected | [`.yaml`](../../01_STAR/_main/quorum_fail_demo_c3_b6.yaml) |
 | [`star_ala_approval`](../../01_STAR/_main/_main_pages/star_ala_approval.md) | `01_STAR/_main/` | 1 | STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot → _D_ | [`.yaml`](../../01_STAR/_main/star_ala_approval.yaml) |
@@ -174,7 +176,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) |
 
-## RCV-IRV (Hare)  (11)
+## RCV-IRV (Hare)  (12)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -184,6 +186,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`monotonicity_irv_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_before.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_before.yaml) |
 | [`bv2158_gr72hd_ossipoff_centrist_irv`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2158_gr72hd_ossipoff_centrist_irv.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158) | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_ossipoff_centrist_irv.yaml) |
 | [`bv2159_f4cjpy_brams_irv_pathologies`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2159_f4cjpy_brams_irv_pathologies.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159) | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml) |
+| [`bv2183_dfw8rj_forced_exhaustion_ceiling`](../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md) | `method_comparisons/paradoxes_and_whoops/` | 1 | BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/bv2183_dfw8rj_forced_exhaustion_ceiling.yaml) |
 | [`bv2132_ykjjhy_pet_irv`](../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_pages/bv2132_ykjjhy_pet_irv.md) | `method_comparisons/pet_poll_four_methods/` | 1 | BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_irv.yaml) |
 | [`bv2133_dyxrbr_pet2_irv`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_irv.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (RCV-IRV): transfers elect Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_irv.yaml) |
 | [`irv_combined`](../../method_comparisons/summability_demo/summability_demo_pages/irv_combined.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV combined A+B (B eliminated; not summable) → _A_ | [`.yaml`](../../method_comparisons/summability_demo/irv_combined.yaml) |
@@ -277,6 +280,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`pets_gov_star_pr`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_star_pr.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/_main/_main_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/_main/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.yaml) |
+
+## 3-2-1  (1)
+
+| Case (page) | Folder | Winners | Title / expected | src |
+|------|--------|:------:|------------------|:--:|
+| [`321_tennessee_blank_encoding_c4_b100`](../../06_Other/three_two_one/three_two_one_pages/321_tennessee_blank_encoding_c4_b100.md) | `06_Other/three_two_one/` | 1 | Tennessee capital by 3-2-1 Voting (blank = Bad) | [`.yaml`](../../06_Other/three_two_one/321_tennessee_blank_encoding_c4_b100.yaml) |
 
 ## APPROVAL_MULTI_WINNER  (4)
 

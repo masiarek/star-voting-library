@@ -1,123 +1,99 @@
-# STAR Voting — Lesson 0: Start Here (the "why" before the "how")
+# STAR Voting — Start Here (the *why* before the *how*)
 
-*The STAR on-ramp. For the repo's method-neutral entry point see [Start Here](../00_START_HERE.md).*
-
-New to STAR Voting? Start here — the *why* before the *how*. This page builds the background that makes every worked example later click, so you're not dropped into a ballot with no context.
-
-> Want the case *for* STAR — the arguments, rebuttals, and talking points — rather than the learning path? See [Why STAR Voting](../Why_STAR_Voting.md).
+*New to STAR? This is your on-ramp. For the repo's method-neutral entry point, see [Start Here](../00_START_HERE.md); for the case *for* STAR (arguments and rebuttals), see [Why STAR Voting](../Why_STAR_Voting.md).*
 
 ---
 
-## The one-sentence pitch
+## A problem you already know: the team lunch
 
-**STAR Voting compresses today's two-election process into a single ballot.**
+Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**, and everyone — every single person — is perfectly happy with **Pizza**.
 
-You score every candidate from 0 to 5, and the two highest-scoring candidates automatically go head-to-head to decide the winner. That's the name: **S**core **T**hen **A**utomatic **R**unoff.
+They vote the usual way: **everyone names one favorite.**
 
----
+> **Sushi 2 · Tacos 2 · Pizza 1**
 
-## Why STAR exists: the spoiler effect
+The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want.
 
-Our current "choose one" (plurality) voting is only accurate when there are **exactly two candidates**. The moment a third candidate enters, votes split: two similar candidates can divide their shared supporters and *both* lose to a less-liked candidate the majority didn't want. That's the **[spoiler effect](../spoiler_effect.md)**, and it's why we feel pressure to vote "lesser evil" for the front-runner instead of the candidate we actually like.
+That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../spoiler_effect.md).)
 
-STAR fixes this. Because you score every candidate independently, adding more good candidates never splits your vote — you can fully support your favorite *and* a backup. Honesty becomes the best strategy.
+The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite.
 
-→ Full lesson: [The spoiler effect](../spoiler_effect.md) — what it is, its root cause (vote splitting), and how each method handles it · runnable demos: [the split-voting set](../../method_comparisons/split_voting/).
+## Meet STAR — in one breath
 
-> Keep this in mind for the examples: with **2 candidates** STAR and ordinary voting agree (plurality already works there). STAR's whole advantage shows up only with **3 or more** — which is exactly why our examples start at two (to learn the gears) and then add a third candidate (to see the point).
+STAR asks for a little more, using two things you already know:
 
----
+- **Rate every option 0 to 5 stars** — exactly like a Yelp or Amazon review. (Give your favorite 5, something you can't stand 0, and everything else wherever it honestly lands.)
+- **Then the two highest-rated options have a final runoff** — head-to-head, like a championship.
 
-## Start from what people already know: we already vote in two rounds
+That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
-Today, to handle a crowded field of candidates, we usually run **two separate elections**:
+## Watch STAR fix the lunch
 
-1. A **primary** that narrows many candidates down to one or two finalists.
-2. A **general election / runoff** that picks between those finalists.
+Same five people, same feelings — but now each of them **rates all three** (5 = love it, 3 = fine, 0 = no):
 
-That means two trips to the polls, two campaigns, and low-turnout primaries that quietly decide who you even get to choose from in November.
+Run it yourself: [`lunch_vote_c3_b5.yaml`](../../01_STAR/_main/lunch_vote_c3_b5.yaml) · [reader page](../../01_STAR/_main/_main_pages/lunch_vote_c3_b5.md).
 
-**STAR does both jobs on one ballot:**
+```
+                        Sushi  Tacos  Pizza
+2 Sushi-lovers            5      0      3
+2 Taco-lovers             0      5      3
+1 Pizza-fan              3      1      5
 
-- **Round 1 — [Scoring Round](STAR_Scoring_Round.md)** (this is the "primary"): add up everyone's scores; the **top two** advance.
-- **Round 2 — [Automatic Runoff](STAR_Automatic_Runoff.md)** (this is the "runoff"): of those two finalists, whoever is preferred on **more ballots** wins.
+Round 1 — add the stars:   Pizza 17 · Sushi 13 · Tacos 11   → Pizza & Sushi advance
+Round 2 — the final two:   Pizza 3  vs  Sushi 2             → Pizza wins
+```
 
-One ballot. One election. Two rounds of logic — done automatically.
+**Pizza wins** — the option *everyone* was happy with. It got only one first-place vote, so "pick one" buried it; but because STAR reads the *whole* ballot, the broad, quiet support shows up. Nobody had to vote strategically, and nobody's stuck with a 0.
 
----
+*(For contrast: Choose-One and Instant-Runoff both pick Sushi here. Same voters, same feelings — the method decides.)*
 
-## How to vote (the ballot rules)
+## The one idea worth pausing on: why *two* rounds?
 
-The official Equal Vote Coalition guidance, in four lines:
+Because the two rounds measure two different things:
 
-- Give your **favorite** candidate **5 stars**.
-- Give your **last choice 0 stars** (or leave it blank).
-- **Equal scores are allowed.**
-- **Score the other candidates as you wish**, anywhere from 0 to 5.
+- **The Scoring Round measures *how much* support** — add up the stars, and the two strongest options become finalists.
+- **The Automatic Runoff measures *how many* supporters** — each ballot goes to whichever finalist it rated higher; the finalist more people preferred wins.
 
-In the automatic runoff, if you scored both finalists the **same**, your ballot counts as **"no preference"** (what this tool labels **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." If you do have a preference, it's best to show it.
+> Strength of support finds the real contenders → number of supporters decides between them.
 
-→ The STAR ballot itself, and the eight ways you can honestly fill it out: [the STAR ballot & voting styles](STAR_ballot_voting_styles.md). See all three ballot styles (ranking / yes-no / scoring) side by side: [alternate ballot styles](../ballot_styles.md).
+Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
 
----
+## How you fill out the ballot
 
-## Why TWO rounds and not just the scores? (the conceptual heart)
+The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
-The idea — the **dual nature** of STAR:
+- Give your **favorite** **5 stars**.
+- Give your **last choice 0** (or just leave it blank).
+- **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
+- **Score everyone else** wherever they honestly land, 0 to 5.
 
-- **Scoring Round measures *how much* support** (strength). Add up the stars; the two strongest candidates become finalists.
-- **Automatic Runoff measures *how many* supporters** (numbers). Each ballot goes to whichever finalist it scored higher; the finalist more voters preferred wins.
+One nuance for the runoff: if you rate the two finalists the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Your ratings still counted fully in Round 1. → [the STAR ballot & the ways to fill it out](STAR_ballot_voting_styles.md).
 
-So round 1 asks "who are the real contenders?" and round 2 asks "between those two, who do more voters actually prefer?"
+## What this means for you
 
-Why both? If we only added up scores (pure score voting), voters are tempted to "min-max" — give a 5 to their favorite and 0 to everyone else — and honest, nuanced ballots lose to strategic ones. The automatic runoff fixes that by re-checking real preference between the finalists, so honest scoring is safe and the winner has genuine support, not just a passionate minority.
+- **You can be honest.** Score your favorite a 5 *and* a backup a 4 — you never split your own vote.
+- **No "wasted" votes.** Supporting someone who can't win no longer helps elect someone you dislike.
+- **It's one ballot**, not a separate primary and general election.
 
-> Strength of support (how much) -> finds the finalists. Number of supporters (how many) -> decides between them.
+→ The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).
 
-**Equal scores still count in both rounds.** If you score the two finalists the same, your ballot is "no preference" (Equal Support) in the runoff — but it was fully counted in the scoring round and helped decide *which* candidates became finalists. An equal-score ballot is never discarded.
+## Where to go next
 
----
+You've seen the two rounds turn once. Now watch them on more elections, smallest first:
 
-## The key points, at a glance
+| Step | Read in order | What you'll see |
+|---|---|---|
+| **Two candidates** | [simplest example](../../01_STAR/_main/_main_pages/01a_c2_b1_two-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) · [a 5-and-0 ballot](../../01_STAR/_main/_main_pages/01b_c2_b2_two-candidates.md) · [equal support](../../01_STAR/_main/_main_pages/01c_c2_b3_two-candidates.md) | The mechanics, with nothing surprising — STAR agrees with ordinary voting when there are only two choices. |
+| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | Add a third option and the winner becomes the broad compromise — the lunch, formalized. |
+| **Ways to vote** | [the eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
+| **The classic** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 
-- **It's one ballot, not two trips to the polls.**
-- **You can be honest.** Score your favorite a 5 *and* give a backup a 4 — you never split your own vote or "waste" it.
-- **Equal scores are allowed.** You're not forced to rank or invent a difference you don't feel. (Two candidates can tie at 5.)
-- **Vocabulary they'll see on screen:** score 0–5, finalists, head-to-head, "Equal Support" (a voter who scored both finalists the same).
+Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scoring_Round.md) · [Automatic Runoff](STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../two_party_dominance.md) and [Why STAR Voting](../Why_STAR_Voting.md).
 
-→ The fuller case: [The benefits of STAR Voting](STAR_benefits.md) — expressive ballot, no spoilers, majority winners, one ballot (cost + turnout), summability, and more representative results (with the honest caveats).
+**Try it for real:** cast a STAR ballot or run your own election at [bettervoting.com](https://bettervoting.com).
 
----
+## Sources
 
-## Your reading path — the examples in order
-
-Now watch those two rounds actually turn. The examples start on the smallest possible election so the gears are visible, then add a candidate so you can see why STAR matters:
-
-| Step | Pages (read in order) | Purpose |
-|------|-------------|---------|
-| **Two candidates** | [simplest example](../../01_STAR/_main/_main_pages/01a_c2_b1_two-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/01a_c2_b2_two-candidates.md) · [a 5-and-0 ballot](../../01_STAR/_main/_main_pages/01b_c2_b2_two-candidates.md) · [equal support](../../01_STAR/_main/_main_pages/01c_c2_b3_two-candidates.md) | **The mechanics.** 2 candidates — watch the two rounds turn. |
-| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | **Why it matters.** Add a 3rd candidate; the winner becomes the broad compromise. |
-| **Ballot styles** | [bullet vote](../../01_STAR/_main/_main_pages/03a_c3_b3_style-bullet-vote.md) · [low-score ballots](../../01_STAR/_main/_main_pages/03b_c3_b3_1_style-protest-vote.md) · [low-score (cont.)](../../01_STAR/_main/_main_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | **How you're allowed to vote** — bullet votes, equal scores, low-score ballots, and the eight-style gallery (traditional / backup / partisan / ranked-style / "anyone but…"). Lesson: [Filling Out the 5-Star Ballot — Voting Styles](STAR_ballot_voting_styles.md). |
-| **Display options** | [all options demo](../../01_STAR/_main/_main_pages/04b_c4_b3_display-options-all.md) | Display/analysis options (matrix, Condorcet). |
-| **Edge case** | [unanimous ballots](../../01_STAR/_main/_main_pages/05a_c5_b3_unanimous-ballots.md) | Unanimous ballots — everyone agrees. |
-| **The payoff** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The classic Tennessee capital example. |
-
-Then [Bloc STAR](../../02_STAR_Bloc/) and [proportional STAR](../../03_STAR_PR/) for the multi-winner methods.
-
----
-
-## The 2-candidate case — why STAR looks ordinary here
-
-STAR's *value* only shows up with **3 or more candidates** (vote-splitting, spoilers, and compromise winners need a crowd). With only two candidates, STAR gives the same answer as ordinary voting — and that's not a weakness, it's *why the examples start there*.
-
-With two candidates, nothing surprising competes for your attention, so you can watch the **Scoring Round** and the **Automatic Runoff** turn once, slowly, and learn what each does. The interesting behavior starts the moment a third candidate joins — that's where the winner can flip to the broad compromise, and it clicks harder *because* you've seen the simple two-candidate baseline first.
-
----
-
-## Sources & further resources
-
-- Equal Vote Coalition — STAR Voting overview: https://www.equal.vote/star
-- "How Does STAR Voting Work?" (short video): https://www.youtube.com/watch?v=fKg0fRL88zc&pp=ygUVaG93IHN0YXIgdm90aW5nIHdvcmtz
-- Try it / host an election: https://bettervoting.com · Help, FAQ & hand-count guides: https://docs.bettervoting.com
-
-The ballot rules and the "no preference / Equal Support" wording above follow the Equal Vote Coalition's official explanation; this page presents them mechanics-first, in the order the ideas build.
+- Equal Vote Coalition — [STAR Voting overview](https://www.equal.vote/star)
+- ["How Does STAR Voting Work?" (short video)](https://www.youtube.com/watch?v=fKg0fRL88zc)
+- [bettervoting.com](https://bettervoting.com) · [help, FAQ & hand-count guides](https://docs.bettervoting.com)
