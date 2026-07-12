@@ -103,6 +103,8 @@ But here's the honest catch, and it *is* the lesson: **a serial that anyone can 
 
 For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
+*Scope note (so nobody rabbit-holes this):* the whole serial demo runs on **paper + hand-count** — print serialized ballots, count them, publish the list of counted serials. You don't need BetterVoting or any digital plumbing for it, and you shouldn't try to thread serials through BV's vote API (it doesn't carry them, and it isn't needed). A genuinely *digital* verifiable count is **end-to-end verifiability (E2E-V)** — a cryptography topic beyond this teaching repo. The lesson is already complete on paper; stop there.
+
 ## Why do this (the teaching value)
 
 - **Demystifies the method** — students *see* that STAR is simple to count, not a black box.
