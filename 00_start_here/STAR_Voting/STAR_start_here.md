@@ -100,6 +100,8 @@ One nuance you can now name: if you rate the **two finalists** the *same*, your 
 
 → The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).
 
+*Thinking "wait, but isn't it just averaging? / a wasted 0? / a second election?"* — the honest, plain-language answers: [Common misunderstandings](common_misunderstandings.md).
+
 ## Where to go next
 
 You've seen the two rounds turn once. Now watch them on more elections, smallest first:

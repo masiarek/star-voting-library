@@ -1,6 +1,6 @@
 # STAR Voting — concept pages
 
-Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start with **[STAR — start here](STAR_start_here.md)**. The case for it, in brief: **[The benefits of STAR Voting](STAR_benefits.md)**. Have a specific question? The **[STAR Voting FAQ — mechanics, with worked examples](STAR_FAQ.md)** answers the how-the-count-works questions (runoff, Equal Support, summability, preference matrix…) each with a runnable election.
+Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start with **[STAR — start here](STAR_start_here.md)**. Got a "wait, but isn't it…?" doubt? **[Common misunderstandings](common_misunderstandings.md)**. The case for it, in brief: **[The benefits of STAR Voting](STAR_benefits.md)**. Have a specific question? The **[STAR Voting FAQ — mechanics, with worked examples](STAR_FAQ.md)** answers the how-the-count-works questions (runoff, Equal Support, summability, preference matrix…) each with a runnable election.
 
 **Hands-on:** [Count a STAR election by hand](count_star_by_hand.md) — tally a real election with pencil and paper (add the stars → top two → count the runoff). **Presenting it?** [Teaching STAR Voting](teaching_star_voting.md) — the order, the terms, the examples, the misconceptions to head off.
 

@@ -52,6 +52,8 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
   - *"Isn't giving a 0 wasting my vote?"* — No; a 0 is a real score, and you never [split your own vote](../wasted_votes.md).
   - *"Is the runoff a second election?"* — No; it's **automatic**, computed from the same ballots.
   - *"Won't everyone just give all 5s and 0s?"* — The runoff removes the payoff for that, so honest scoring is also the smart move.
+
+  (Hand your audience the full set: [Common misunderstandings about STAR](common_misunderstandings.md).)
 - **Concede a limit — on purpose.** "No method is perfect ([that's a theorem](../gibbard_satterthwaite_theorem.md))" and naming one honest [limit](STAR_honest_limits.md) *builds* trust; overselling loses the skeptics.
 - **Match depth to the audience** (see [curriculum pacing](../CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the arc above and stop; officials = add [summability & audits](STAR_summability.md); skeptics/debaters = [honest limits](STAR_honest_limits.md) + [the criteria](../criteria_at_a_glance.md).
 - **End with a call to action** — have them cast a real STAR ballot or run their own poll before they leave.
