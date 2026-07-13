@@ -4,6 +4,10 @@
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
+![A generated STAR paper ballot — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](img/star_paper_ballot_example.png)
+
+*A real generated ballot (the [Best Ice Cream Flavor](https://bettervoting.com/2wfth7) demo, B&W long-form logo). Every element below is configurable — see the checklist.*
+
 ## The loop at a glance
 
 ```text
@@ -66,6 +70,8 @@ python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class Presid
       --title "What Makes the Best Pet?" --bv-id pet --serials --copies 25
   ```
 - the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
+- **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
+- **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
 
 **Output — the `--out` extension picks the format:**
 - **`.txt`** → **plain ASCII**, zero dependencies, prints from anywhere (`lpr lunch.txt` or any editor); one ballot per page via the form-feed character, `( )` circles to mark, and the results URL printed (no QR). The simplest, most portable option.

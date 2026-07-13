@@ -164,7 +164,41 @@ python3 tools_adam/bv_ballot_sheet.py --selftest        # known-answer checks
 
 **Dependencies:** **stdlib only** for the core (incl. `.txt` output and `--verify-bv`, which uses `urllib`). Two *optional*, gracefully-degrading extras: **`segno`** (QR — without it the URL is printed, no QR) and **`playwright`** (direct `.pdf` — without it, writes `.html` to Print → PDF). Both declared in `pyproject.toml`.
 
-## 9. Related
+## 9. Test scenarios (QA matrix)
+
+A rendered example ballot (BV-linked, two QRs, long-form logo):
+
+![Example STAR paper ballot](../../00_start_here/STAR_Voting/img/star_paper_ballot_example.png)
+
+`--selftest` covers the offline render logic (FR-8); the scenarios below are the end-to-end cases to spot-check by eye. Each named election is a live BV demo created via [`create_bv_test_election.py`](./create_bv_test_election.py).
+
+| # | Scenario | Key flags | Expected |
+|---|---|---|---|
+| 1 | LH-only, zero-dep ASCII | `--candidates "A,B,C" --title "…" --out b.txt` | 7-bit text ballot, form-feed pages, no QR |
+| 2 | LH-only, styled PDF | `--candidates … --out b.pdf` | facsimile logo, no QR, generic footer |
+| 3 | BV-linked, **two QRs** | `--bv-export … --out b.pdf` (or `--bv-id ID`) | vote QR left + results QR right; election id once in footer |
+| 4 | Descriptions from a real export | `--bv-export <real _bv_export.json>` | election description → blurb; race description → question |
+| 5 | Custom logo | `--logo assets/BW_long_form.jpg` (or `NC_STAR_Logo1.jpg`) | image replaces the drawn wordmark; missing file → warning + facsimile |
+| 6 | Serials (ballot numbers) | `--serials` | "Ballot #N — keep this…" line; off by default |
+| 7 | Write-in rows | `--write-ins 2` | two blank "Write-in: ___" rows |
+| 8 | Promo + chapter footer | `--promo --chapter "STAR Voting NC (…)"` | footer "Learn more:" line |
+| 9 | Verify a **real** id | `--bv-id <live id> --verify-bv` | "confirmed"; QR + results kept |
+| 10 | Verify a **fake** id | `--bv-id nope --verify-bv` | "no election… printing LH-only"; QR + results dropped |
+| 11 | QR size | `--qr-size 108` | larger QRs |
+| 12 | Pagination | `--copies 30 --per-page 1` | 30 pages, one ballot each, no trailing blank |
+| 13 | Graceful degrade | run without `segno` / `playwright` | prints URL instead of QR / writes `.html` instead of `.pdf` |
+| 14 | Self-test | `--selftest` | all known-answer checks pass, offline, exit 0 |
+
+**Live end-to-end demo elections** (created + cast via the BV API; each runs the full print → QR → vote → results loop):
+
+| Election | id (Test ID) | Teaching angle |
+|---|---|---|
+| The team lunch | `fyy886` (BV2184) | beginner vote-splitting on-ramp |
+| Bond Brothers Beer Picks | `yt3232` (BV2185) | crowded field, broad spectrum |
+| Best Ice Cream Flavor | `2wfth7` (BV2186) | engineered vote-splitting (3-flavor chocolate cluster); write-ins on |
+| What Makes the Best Pet? | `pet` | simple, kid-friendly crowd-pleaser |
+
+## 10. Related
 
 - Teacher how-to: [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md)
 - Hand-count: [`count_star_by_hand.md`](../../00_start_here/STAR_Voting/count_star_by_hand.md) · Teaching guide: [`teaching_star_voting.md`](../../00_start_here/STAR_Voting/teaching_star_voting.md)
