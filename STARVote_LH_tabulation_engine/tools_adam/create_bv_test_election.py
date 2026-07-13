@@ -132,6 +132,8 @@ CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
 # Add the election(s) to create here, then run the script. Entry shape:
 #   {"title": ..., "description": ..., "method": "STAR"|"Approval"|...,
 #    "num_winners": 1, "candidates": [...], "ballots": [[...], ...],
+#    "enable_write_in": True,   # optional; DEFAULT True so QR/online voters can
+#                               # write in a choice. Set False to lock the list.
 #    "expected": "free text"}
 # (Score range: Approval = 0/1 ; STAR / Bloc / STAR_PR = 0-5.)
 # Already created (do NOT re-run — would duplicate):
@@ -2466,6 +2468,11 @@ def build_payload(template, spec):
         r["title"] = rs.get("title", title)
         r["voting_method"] = rs.get("method", "STAR")
         r["num_winners"] = rs.get("num_winners", 1)
+        # Write-ins default ON so online (QR) voters can add a choice that's not on
+        # the list. (The paper ballot's printed list is fixed; --write-ins there is a
+        # separate, off-by-default thing.) Override per-race (rs) or per-election (spec).
+        r["enable_write_in"] = bool(rs.get("enable_write_in",
+                                           spec.get("enable_write_in", True)))
         # Ranked methods (IRV / STV / RankedRobin) validate ballots as 0..max_rankings
         # (rank, not score: 1 = top choice, 0 = unranked). Set the cap when given so
         # the copied STAR template doesn't reject rank values on submit.
