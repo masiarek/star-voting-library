@@ -61,7 +61,11 @@ Each ballot carries:
 
 The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes (in the official ballot grays: bubbles `#666`, stars `#ccc`, highlight `#ececec`), and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
 
-**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, supply the **official STAR Voting logo** with `--logo yourlogo.png` — the horizontal *long-form* lockup ("STAR VOTING · SCORE-THEN-AUTOMATIC-RUNOFF") fits the header cleanly; the round *seal* is a lighter-ink alternative. Get the asset from [starvoting.org](https://www.starvoting.org)'s brand/press kit — the repo doesn't bundle it (it's Equal Vote's trademark; use it if you have the right to, e.g. as a local chapter).
+**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, add the **official STAR Voting logo** with `--logo`. Two are bundled in [`tools_adam/assets/`](../../STARVote_LH_tabulation_engine/tools_adam/assets/):
+- `--logo STARVote_LH_tabulation_engine/tools_adam/assets/BW_long_form.jpg` — the horizontal lockup (recommended; fits the header cleanly),
+- `--logo STARVote_LH_tabulation_engine/tools_adam/assets/bw_logo_star.jpg` — the round seal (lighter-ink alternative).
+
+These are the Equal Vote Coalition's trademark, included for STAR education/promotion (see [assets/README.md](../../STARVote_LH_tabulation_engine/tools_adam/assets/README.md) for attribution); official brand assets live at [starvoting.org](https://www.starvoting.org).
 
 Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.txt` / `.pdf` / `.html`), `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), and `--selftest`. Run `--help` for all of them.
 
