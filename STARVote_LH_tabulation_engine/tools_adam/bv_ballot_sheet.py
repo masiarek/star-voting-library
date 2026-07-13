@@ -144,6 +144,22 @@ def qr_data_uri(url):
     except Exception:
         return None
 
+def verify_bv_id(bv_id, timeout=6):
+    """Does a real BetterVoting election with this id exist? Returns True (yes),
+    False (definitively no — a 4xx), or None (couldn't check: offline/timeout).
+    Stdlib only (urllib). Guards against printing a QR/results link that 404s."""
+    import urllib.request
+    import urllib.error
+    url = f"https://bettervoting.com/API/Election/{bv_id}"
+    try:
+        with urllib.request.urlopen(url, timeout=timeout) as r:
+            return 200 <= r.status < 300
+    except urllib.error.HTTPError as e:
+        return False if 400 <= e.code < 500 else None
+    except Exception:
+        return None
+
+
 def logo_data_uri(path):
     """Read a local image (SVG/PNG/JPG/…) into a self-contained data: URI so a
     custom logo can replace the drawn STAR wordmark in the ballot header. Returns
@@ -643,6 +659,11 @@ def main():
                     help="a local image (SVG/PNG/JPG) to embed in the header, "
                          "replacing the drawn STAR wordmark (HTML/PDF only; embedded "
                          "as a self-contained data URI). ASCII keeps the text wordmark.")
+    ap.add_argument("--verify-bv", action="store_true",
+                    help="before printing, check the BV id resolves to a real election; "
+                         "if it doesn't, drop the QR + results link (print LH-only) so "
+                         "voters never scan a dead link. Needs network; skips gracefully "
+                         "offline. Recommended before a real print run.")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -666,6 +687,21 @@ def main():
     else:
         raise SystemExit("Provide one of --yaml / --bv-export / --candidates "
                          "(see --help). Run --selftest to verify the tool.")
+
+    # Guard against a dead BV link: a QR/results URL should only appear for a REAL,
+    # already-created election. --verify-bv confirms the id resolves; if it doesn't,
+    # drop to LH-only (no bv_id -> no QR, no results line).
+    if args.verify_bv and bv_id:
+        exists = verify_bv_id(bv_id)
+        if exists is False:
+            print(f"[verify-bv] No BetterVoting election '{bv_id}' — printing LH-only "
+                  f"(no QR, no results link). Create it on BV first, or omit the id.")
+            bv_id = None
+        elif exists is None:
+            print(f"[verify-bv] Couldn't reach BetterVoting to check '{bv_id}'; "
+                  f"keeping the link as given.")
+        else:
+            print(f"[verify-bv] BetterVoting election '{bv_id}' confirmed.")
 
     # Description → blurb under the title; race description → the question line.
     # CLI flags win over what the export supplied.
