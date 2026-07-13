@@ -76,11 +76,10 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 **FR-9 Demonstration notice (on by default):** every ballot carries a standing notice — default `"EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."` — because this tool *only* makes demo ballots. It also does real work: it makes the optional **serial number** read as a teaching device rather than surveillance (a numbered *real* ballot would break the secret ballot; the notice preempts the immediate — and correct — objection). `--notice "..."` overrides the text; `--no-notice` omits it (discouraged). Kept 7-bit ASCII so it survives unchanged into the `.txt` output. Rendered as a bordered banner (HTML) / dashed banner (ASCII) at the top of each ballot.
 
-**FR-4 QR code (optional):** top-right of each ballot.
-- Points to `bettervoting.com/<bv-id>` by default; to `--qr-url <URL>` if given (works with no BV election).
+**FR-4 QR codes (optional).** With a `bv_id`, the header shows **two** QRs flanking the logo — **vote** (left, → `bettervoting.com/<bv-id>`, "scan to vote") and **results** (right, → `…/results`, "scan for results"). A `--qr-url <URL>` (LH-only) yields a single vote QR; no BV / no URL → none.
 - Implemented via the pure-Python **`segno`** library (declared in `pyproject.toml`). **Graceful fallback:** no segno → no QR, tool still runs on plain `python3`. `--no-qr` to force off.
 - **Size:** `--qr-size PX` (default 88) — bump it up for easier scanning across a room.
-- The short **vote URL** (`bettervoting.com/<bv-id>`) prints in bold under the QR, so non-scanners can type it (and the election id is legible on the ballot). Shown only when there's a `bv_id`.
+- **The election id is printed ONCE** (was three times): a **bold** `Election <id>` + the `…/results` link in the footer. The QRs carry captions only (no URL text), so the id isn't duplicated under them.
 
 **FR-5 Serial receipts (optional, `--serials`):** number each ballot ("Ballot #N — keep this to verify it was counted"). See §5.3 for the verifiability design + secret-ballot caveat.
 

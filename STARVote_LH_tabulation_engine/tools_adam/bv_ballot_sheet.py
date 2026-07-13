@@ -236,9 +236,10 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .notice { border: 1.5px solid #c0392b; border-radius: 5px; padding: 3px 8px;
           margin: 0 0 10px; font-size: 10.5px; font-weight: 700; color: #c0392b;
           text-align: center; text-transform: uppercase; letter-spacing: .4px; }
-.brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 2px 0 8px; }
+.brand { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 2px 0 8px; }
+.brand .logo-slot { flex: 1; display: flex; align-items: center; justify-content: center; gap: 12px; }
 .brand .logo { width: 50px; height: 50px; flex: none; }
-.brand .blogo { display: block; margin: 0 auto; max-height: 74px; max-width: 76%; }
+.brand .blogo { display: block; margin: 0 auto; max-height: 74px; max-width: 100%; }
 .brand .word { font-weight: 800; font-size: 30px; letter-spacing: .5px; line-height: 1; }
 .brand .tag { font-weight: 800; font-size: 10.5px; letter-spacing: 1.5px; color: #5a7683; margin-top: 3px; }
 .title { text-align: center; font-size: 16px; font-weight: 700; margin: 2px 0 1px; }
@@ -247,9 +248,9 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .inst { margin: 6px 0 2px 22px; padding: 0; font-size: 13.5px; }
 .inst li { margin: 1px 0; }
 .fine { margin: 2px 0 6px 22px; font-size: 10.5px; color: #666; }
-.qr { position: absolute; top: 40px; right: 18px; text-align: center; font-size: 9px; color: #555; }
-.qr img { display: block; }
-.qr .qrurl { display: block; margin-top: 1px; font-weight: 700; font-size: 9px; color: #222; }
+.qr { flex: none; text-align: center; font-size: 9px; color: #555; }
+.qr img { display: block; margin: 0 auto; }
+.qr span { display: block; margin-top: 1px; }
 table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
 .grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 15px; padding-left: 6px; }
@@ -285,8 +286,8 @@ def _colhead(n):
             f'<span class="n">{n}</span></th>')
 
 
-def render_ballot(title, question, candidates, bv_id, qr_uri=None,
-                  serial=None, write_ins=0, qr_caption="scan to vote",
+def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
+                  results_qr_uri=None, serial=None, write_ins=0,
                   break_after=False, notice="", blurb="", promo="", logo_uri="",
                   qr_size=88):
     bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
@@ -312,26 +313,34 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                     if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
 
-    qr_url_line = (f'<span class="qrurl">bettervoting.com/{html.escape(bv_id)}</span>'
-                   if (qr_uri and bv_id) else "")
-    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code" '
-                f'style="width:{qr_size}px;height:{qr_size}px">'
-                f'<span>{html.escape(qr_caption)}</span>{qr_url_line}</div>'
-                if qr_uri else "")
     cls = "ballot pagebreak" if break_after else "ballot"
     notice_block = f'<div class="notice">{html.escape(notice)}</div>' if notice else ""
     title_block = f'<p class="title">{html.escape(title)}</p>' if title else ""
     blurb_block = f'<p class="edesc">{html.escape(blurb)}</p>' if blurb else ""
     q_block = f'<p class="q">{html.escape(question)}</p>' if question else ""
     promo_block = f'<p class="promo">{promo}</p>' if promo else ""
-    if logo_uri:
-        brand = f'<div class="brand"><img class="blogo" src="{logo_uri}" alt="STAR Voting"></div>'
-    else:
-        brand = (f'<div class="brand">{STAR_LOGO}<div><div class="word">STAR VOTING</div>'
-                 f'<div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div></div>')
+
+    # Header row: vote QR (left), logo (center), results QR (right). Balance with a
+    # spacer if only one QR exists, so the logo stays centered.
+    def _qr_cell(uri, caption):
+        return (f'<div class="qr"><img src="{uri}" alt="QR code" '
+                f'style="width:{qr_size}px;height:{qr_size}px">'
+                f'<span>{html.escape(caption)}</span></div>' if uri else "")
+    left_qr = _qr_cell(vote_qr_uri, "scan to vote")
+    right_qr = _qr_cell(results_qr_uri, "scan for results")
+    spacer = f'<div style="width:{qr_size}px;flex:none"></div>'
+    if left_qr and not right_qr:
+        right_qr = spacer
+    elif right_qr and not left_qr:
+        left_qr = spacer
+    logo_content = (f'<img class="blogo" src="{logo_uri}" alt="STAR Voting">' if logo_uri
+                    else (f'{STAR_LOGO}<div><div class="word">STAR VOTING</div>'
+                          f'<div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div>'))
+    brand = (f'<div class="brand">{left_qr}'
+             f'<div class="logo-slot">{logo_content}</div>{right_qr}</div>')
     return f"""
 <div class="{cls}">
-  {notice_block}{qr_block}
+  {notice_block}
   {brand}
   {title_block}{blurb_block}{q_block}
   <ul class="inst">{bullets}</ul>
@@ -350,16 +359,18 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb="",
                  promo="", logo_uri="", qr_size=88):
-    # QR points to --qr-url if given (works even LH-only, no BV), else the BV
-    # election if there is one, else nothing.
-    url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
-    caption = "scan" if qr_url else "scan to vote"
-    qr_uri = qr_data_uri(url) if (url and qr) else None
+    # Two QRs when there's a BV election: vote (left) and results (right). A custom
+    # --qr-url (LH-only) yields a single vote QR; no BV/URL yields none.
+    vote_url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
+    results_url = f"https://bettervoting.com/{bv_id}/results" if bv_id else None
+    vote_qr_uri = qr_data_uri(vote_url) if (vote_url and qr) else None
+    results_qr_uri = qr_data_uri(results_url) if (results_url and qr) else None
     pp = max(1, per_page)
     ballots = "\n".join(
-        render_ballot(title, question, candidates, bv_id, qr_uri,
+        render_ballot(title, question, candidates, bv_id,
+                      vote_qr_uri=vote_qr_uri, results_qr_uri=results_qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
-                      qr_caption=caption, notice=notice, blurb=blurb, promo=promo,
+                      notice=notice, blurb=blurb, promo=promo,
                       logo_uri=logo_uri, qr_size=qr_size,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
@@ -530,10 +541,13 @@ def selftest():
     for label, cond in txtchecks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
-    # QR is optional (needs segno); test whichever path applies.
+    # QR is optional (needs segno); test whichever path applies. With a bv_id there
+    # are TWO QRs — vote (left) + results (right).
     if qr_data_uri("https://bettervoting.com/abc123"):
-        has_qr = 'class="qr"' in html_out and "data:image/svg" in html_out
-        print(f"[selftest] QR embedded (segno present): {'OK' if has_qr else 'FAIL'}")
+        has_qr = (html_out.count('class="qr"') == 2 * 3   # 2 QRs x 3 ballots
+                  and "scan to vote" in html_out and "scan for results" in html_out
+                  and "data:image/svg" in html_out)
+        print(f"[selftest] two QRs (vote + results) embedded: {'OK' if has_qr else 'FAIL'}")
         ok &= has_qr
     else:
         no_qr = 'class="qr"' not in html_out
