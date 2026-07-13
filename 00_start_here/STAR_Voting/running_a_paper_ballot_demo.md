@@ -67,6 +67,17 @@ The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTI
 
 These are the Equal Vote Coalition's trademark, included for STAR education/promotion (see [assets/README.md](../../STARVote_LH_tabulation_engine/tools_adam/assets/README.md) for attribution); official brand assets live at [starvoting.org](https://www.starvoting.org).
 
+**Recommended setup for a classroom print run** — the black-and-white long-form logo on the ballot, and your local chapter in the footer (a color chapter logo like STAR Voting NC's is built for dark backgrounds, so it's an ink-heavy black box on a white ballot — keep the chapter as footer text instead):
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
+    --bv-export path/to/<election>_bv_export.json \
+    --copies 30 --serials --promo \
+    --chapter "STAR Voting NC (facebook.com/groups/starvotingnc)" \
+    --logo STARVote_LH_tabulation_engine/tools_adam/assets/BW_long_form.jpg \
+    --out ballots.pdf
+```
+
 Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.txt` / `.pdf` / `.html`), `--no-qr`, `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), and `--selftest`. Run `--help` for all of them.
 
 ## Step 3 — vote on paper
