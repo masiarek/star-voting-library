@@ -247,8 +247,8 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .inst { margin: 6px 0 2px 22px; padding: 0; font-size: 13.5px; }
 .inst li { margin: 1px 0; }
 .fine { margin: 2px 0 6px 22px; font-size: 10.5px; color: #666; }
-.qr { position: absolute; top: 44px; right: 18px; text-align: center; font-size: 9px; color: #555; }
-.qr img { width: 64px; height: 64px; display: block; }
+.qr { position: absolute; top: 40px; right: 18px; text-align: center; font-size: 9px; color: #555; }
+.qr img { display: block; }
 table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
 .grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 15px; padding-left: 6px; }
@@ -284,7 +284,8 @@ def _colhead(n):
 
 def render_ballot(title, question, candidates, bv_id, qr_uri=None,
                   serial=None, write_ins=0, qr_caption="scan to vote",
-                  break_after=False, notice="", blurb="", promo="", logo_uri=""):
+                  break_after=False, notice="", blurb="", promo="", logo_uri="",
+                  qr_size=88):
     bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
     rows = []
     for i, c in enumerate(candidates):
@@ -307,7 +308,8 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
 
-    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code">'
+    qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code" '
+                f'style="width:{qr_size}px;height:{qr_size}px">'
                 f'<span>{html.escape(qr_caption)}</span></div>'
                 if qr_uri else "")
     cls = "ballot pagebreak" if break_after else "ballot"
@@ -341,7 +343,7 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb="",
-                 promo="", logo_uri=""):
+                 promo="", logo_uri="", qr_size=88):
     # QR points to --qr-url if given (works even LH-only, no BV), else the BV
     # election if there is one, else nothing.
     url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
@@ -352,7 +354,7 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
         render_ballot(title, question, candidates, bv_id, qr_uri,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
                       qr_caption=caption, notice=notice, blurb=blurb, promo=promo,
-                      logo_uri=logo_uri,
+                      logo_uri=logo_uri, qr_size=qr_size,
                       # force a page break after every `per_page` ballots (but not
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
@@ -659,6 +661,8 @@ def main():
                     help="a local image (SVG/PNG/JPG) to embed in the header, "
                          "replacing the drawn STAR wordmark (HTML/PDF only; embedded "
                          "as a self-contained data URI). ASCII keeps the text wordmark.")
+    ap.add_argument("--qr-size", type=int, default=88, metavar="PX",
+                    help="QR code size in pixels (default 88; bump up for easier scanning)")
     ap.add_argument("--verify-bv", action="store_true",
                     help="before printing, check the BV id resolves to a real election; "
                          "if it doesn't, drop the QR + results link (print LH-only) so "
@@ -749,7 +753,7 @@ def main():
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, qr_url=args.qr_url, notice=notice,
-                         blurb=blurb, promo=promo, logo_uri=logo_uri)
+                         blurb=blurb, promo=promo, logo_uri=logo_uri, qr_size=args.qr_size)
 
     want_pdf = args.out.lower().endswith(".pdf")
     wrote_pdf = False
