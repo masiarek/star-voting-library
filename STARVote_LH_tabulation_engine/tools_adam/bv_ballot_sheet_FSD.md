@@ -2,7 +2,7 @@
 
 *Functional Specification (as-built). A dev/maintainer-facing spec for the printable-ballot tool and the paper-ballot demo workflow. The teacher-facing how-to is [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md); this doc records **what** it does, **why** the design choices were made, and — importantly — **what it deliberately does not do**.*
 
-**Status:** front-end (ballot generation) built, self-tested, in use. Return-path (OCR) is a documented roadmap, not built. Real-world print + QR-scan validation is pending (owner: user — see §7).
+**Status:** front-end (ballot generation) built, self-tested, and **validated on real hardware** (printed → QR scanned → voted → hand-marked ballot read → cast back to BV; see §7). Return-path (OCR — automated image→scores) is a documented roadmap, not built; until then the return path is a human transcribing marks into a YAML/CSV.
 
 ---
 
@@ -22,15 +22,17 @@ Let a teacher / workshop leader / demo runner turn a STAR election into **printa
 
 ## 3. Workflow supported
 
+The teacher-facing page frames this as **two paths** — **A: BetterVoting-integrated** (live QR + online results) and **B: LH-only / offline** (no account) — see [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md). The fullest (Path A) loop:
+
 ```
-1. Make the election on BetterVoting → get the BV id (bettervoting.com/<id>)
-2. Print matching paper ballots      → bv_ballot_sheet.py → HTML → PDF
-3. Vote on paper                      → fill 0–5 bubbles
-4. Hand-count                         → add columns · runoff (count_star_by_hand.md)
-5. Compare to BetterVoting            → bettervoting.com/<id>/results
-6. (roadmap) OCR paper → YAML         → LH engine
+1. Create the election on BetterVoting → BV id (bettervoting.com/<id>)   [Path A only]
+2. Print matching paper ballots        → bv_ballot_sheet.py → .pdf / .txt / .html
+3. Vote on paper                        → fill 0–5 bubbles
+4. Get the result — any of:             → hand-count · LH engine · cast to BV
+5. (Path A) Compare to BetterVoting     → bettervoting.com/<id>/results
+6. (roadmap) OCR paper → YAML           → LH engine  (today: human transcribes)
 ```
-The tool owns step 2. Steps 4–5 are the [count-by-hand](../../00_start_here/STAR_Voting/count_star_by_hand.md) and [teacher](../../00_start_here/STAR_Voting/teaching_star_voting.md) pages. Step 1 can use [`create_bv_test_election.py`](./create_bv_test_election.py).
+The tool owns step 2. Step 4's routes are the [count-by-hand](../../00_start_here/STAR_Voting/count_star_by_hand.md) / [teacher](../../00_start_here/STAR_Voting/teaching_star_voting.md) pages and the LH engine. Step 1 can use [`create_bv_test_election.py`](./create_bv_test_election.py) (creates the election **and** casts seed ballots via the BV API — so the id is real and the QR/results resolve; cf. FR-12). **Path B** skips steps 1 and 5 entirely — omit the `bv_id`, and the ballot prints with no QR/results.
 
 **The five workflows this enables** (all supported today; the loop above is the fullest one):
 
@@ -82,9 +84,9 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 **FR-6 Write-in rows (optional, `--write-ins N`):** N blank "Write-in: ___" rows with a 0–5 grid. Front-end only — *tallying* write-ins (name matching across ballots) is an OCR-step concern (§6), not the printer's.
 
-**FR-7 Layout:** `--copies N`, `--per-page N` (real page-breaks, default 1), `--out FILE` (`.pdf` → direct PDF, else HTML). Print CSS avoids splitting a ballot across pages.
+**FR-7 Layout:** `--copies N`, `--per-page N` (real page-breaks, default 1), `--out FILE` (extension picks format: `.txt` / `.pdf` / `.html`). Print CSS avoids splitting a ballot across pages.
 
-**FR-8 Self-test (`--selftest`):** known-answer checks — candidate presence, BV id + results URL, ballot count, bubble-grid arithmetic, HTML escaping, serials, write-in rows, and the QR path (whichever of present/absent applies). Exit non-zero on failure.
+**FR-8 Self-test (`--selftest`, offline):** known-answer checks covering candidate presence, BV id + results URL, ballot count, bubble-grid arithmetic, HTML escaping, serials, write-in rows, **pagination** (per-page breaks, no trailing blank), the QR path (present/absent), the **`--bv-export` schema** (capitalized `Election`) + descriptions, the **demonstration notice** (both formats, `--no-notice`), the **official-style chrome** (wordmark, bullets, Worst/Best, stripes, star headers, explanation, digit bubbles), the **ASCII** mirror (strict 7-bit), and the **`--logo`** embed. No network (so `--verify-bv` is exercised manually, not in selftest). Exit non-zero on failure.
 
 ## 5. Key design decisions & rationale
 
@@ -142,17 +144,24 @@ Restated in the repo's terms (the *goal*, not the letter of the original suggest
 ## 8. Invocation
 
 ```bash
-# from a repo YAML (auto-picks title, candidates, bv id)
-python3 tools_adam/bv_ballot_sheet.py --yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml --copies 30
+# Path A — recommended classroom print run: real BV election, official logo,
+# chapter footer, ballot serials, verified id, direct PDF
+python3 tools_adam/bv_ballot_sheet.py \
+    --bv-export path/to/<election>_bv_export.json \
+    --copies 30 --serials --promo --chapter "STAR Voting NC (…)" \
+    --logo tools_adam/assets/BW_long_form.jpg --verify-bv --out ballots.pdf
 
-# the friendly live pet election, with receipts + a write-in
-python3 tools_adam/bv_ballot_sheet.py --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
-    --title "What Makes the Best Pet?" --bv-id pet --serials --write-ins 1 --copies 25
+# Path B — LH-only / offline: candidates + title only, no BV (no QR/results)
+python3 tools_adam/bv_ballot_sheet.py --candidates "Ada,Ben,Cara" \
+    --title "Class President" --out ballots.pdf      # or ballots.txt (zero-dep)
+
+# from a repo YAML (auto-picks title, candidates, bv id, descriptions)
+python3 tools_adam/bv_ballot_sheet.py --yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml --copies 30
 
 python3 tools_adam/bv_ballot_sheet.py --selftest        # known-answer checks
 ```
 
-**Dependencies:** stdlib only, except the *optional* `segno` (QR; declared in `pyproject.toml`, degrades gracefully).
+**Dependencies:** **stdlib only** for the core (incl. `.txt` output and `--verify-bv`, which uses `urllib`). Two *optional*, gracefully-degrading extras: **`segno`** (QR — without it the URL is printed, no QR) and **`playwright`** (direct `.pdf` — without it, writes `.html` to Print → PDF). Both declared in `pyproject.toml`.
 
 ## 9. Related
 

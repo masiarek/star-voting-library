@@ -69,13 +69,13 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --serials --write-ins 1 --copies 25 --out pets.pdf
 ```
 
-End `--out` in **`.pdf`** and you get a print-ready PDF (one ballot per page) straight to the printer; end it in `.html` to open and **Print → PDF** yourself. Each ballot has a 0–5 bubble grid, the STAR instructions, and — the fun part:
+The ballot is styled after the **official Equal Vote STAR ballot** (STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, zebra stripes, finalist footer), so it's instantly familiar. End `--out` in **`.pdf`** for a print-ready PDF (one ballot per page) straight to the printer; `.txt` for a zero-dependency plain-text ballot that prints anywhere; `.html` to Print → PDF yourself. The fun parts:
 
 - a **QR code** → scan to open the live election ([`bettervoting.com/pet`](https://bettervoting.com/pet)), so a class can vote **on paper *and* online** and compare;
 - optional **serial "receipts"** (`--serials`) — a lovely way to teach *verifiability* and the secret-ballot tension (publish the counted serials; discuss why a name→number list would be bad);
-- optional **write-in rows** (`--write-ins N`) and a custom **`--qr-url`** for offline demos.
+- optional **write-in rows** (`--write-ins N`), a **`--logo`** for the real STAR / chapter logo, and `--promo` / `--chapter` for a footer.
 
-The full walkthrough — the create → print → vote → hand-count → compare loop, the ready-made [lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) / [pet](https://bettervoting.com/pet) / [meta_pets](https://bettervoting.com/meta_pets) elections, and the design notes — is [**Run a paper-ballot STAR demo**](running_a_paper_ballot_demo.md).
+**Two ways to run it:** *BetterVoting-integrated* (create the election first, so the QR + results are live — add `--verify-bv` so no one scans a dead link) or *LH-only / offline* (just `--candidates` + `--title`, no account, no internet). The full walkthrough — both paths, the print checklist, the three ways to count the result, and the ready-made [lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) / [pet](https://bettervoting.com/pet) / [meta_pets](https://bettervoting.com/meta_pets) elections — is [**Run a paper-ballot STAR demo**](running_a_paper_ballot_demo.md).
 
 ## Running a real hand-count (for organizers)
 
