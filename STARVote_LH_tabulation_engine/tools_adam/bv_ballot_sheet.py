@@ -194,9 +194,10 @@ STAR_LOGO = ('<svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2
              'fill="none" stroke="#7fa0ad" stroke-width="6" stroke-linejoin="round"/>'
              '<path d="M31,52 L44,65 L71,33" fill="none" stroke="#111" stroke-width="9" '
              'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+# Column-header stars use the official STAR-ballot gray for stars (#cccccc).
 STAR_OUTLINE = ('<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
                 '<polygon points="50,6 61,38 95,38 67,58 78,90 50,71 22,90 33,58 5,38 39,38" '
-                'fill="none" stroke="#7fa0ad" stroke-width="6" stroke-linejoin="round"/></svg>')
+                'fill="none" stroke="#cccccc" stroke-width="6" stroke-linejoin="round"/></svg>')
 INSTRUCTION_BULLETS = [
     "Give your favorite candidate(s) five stars.",
     "Give your last choice(s) zero or leave blank.",
@@ -243,9 +244,9 @@ table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .sh .n0 { display: flex; align-items: center; justify-content: center; height: 36px;
           font-weight: 800; font-size: 16px; }
 .grid tr.cand td, .grid tr.cand th { padding: 7px 0; }
-.grid tr.alt { background: #dcebf1; }
+.grid tr.alt { background: #ececec; }
 .bub { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
-       border: 2px solid #111; border-radius: 50%; font-weight: 700; font-size: 13px; }
+       border: 2px solid #666; border-radius: 50%; font-weight: 700; font-size: 13px; color: #444; }
 .wline { display: inline-block; border-bottom: 1.5px solid #333; width: 62%; height: 1em; }
 .explain { text-align: center; font-size: 12.5px; line-height: 1.35; margin: 6px 4px 2px;
            padding-top: 8px; border-top: 1.5px solid #111; }
