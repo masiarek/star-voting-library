@@ -260,6 +260,7 @@ table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
          font-weight: 800; font-size: 14px; }
 .sh .n0 { display: flex; align-items: center; justify-content: center; height: 36px;
           font-weight: 800; font-size: 16px; }
+.grid tr.colhead th { border-bottom: 1.5px solid #bbb; }
 .grid tr.cand td, .grid tr.cand th { padding: 7px 0; }
 .grid tr.alt { background: #ececec; }
 .bub { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
