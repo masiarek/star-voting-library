@@ -2371,7 +2371,27 @@ _BEER_VOTE = {
     "expected": "live vote (no seed ballots)",
 }
 
-ELECTIONS: list = [_BEER_VOTE]
+_ICE_CREAM = {
+    "test_id": "BV2186",
+    "title": "Best Ice Cream Flavor — STAR Voting NC",
+    "description": (
+        "A mainstream, politics-free STAR Voting demo built to SHOW vote-splitting. "
+        "Three of the eight flavors are chocolate — Dark Chocolate, Chocolate Chip, and "
+        "Chocolate Fudge. Under Choose-One, chocolate lovers split their vote three ways, "
+        "so a single non-chocolate flavor can win with fewer real fans (the classic "
+        "spoiler effect). With STAR you score every flavor 0–5, so you can give all three "
+        "chocolates a 5 — the crowd's true favorite isn't punished for having similar "
+        "options on the menu. Score them all; the two highest meet in an automatic runoff."
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Vanilla", "Strawberry", "Mango", "Dark Chocolate",
+                   "Chocolate Chip", "Chocolate Fudge", "Butter Pecan", "Salted Caramel"],
+    "ballots": [],   # empty — a live vote
+    "expected": "live vote — vote-splitting demo (a 3-flavor chocolate cluster)",
+}
+
+ELECTIONS: list = [_ICE_CREAM]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race
