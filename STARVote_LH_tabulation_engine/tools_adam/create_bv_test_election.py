@@ -2348,7 +2348,28 @@ _LUNCH_VOTE = {
     "expected": "Pizza (Scoring Round 17; runoff 3-2 over Sushi). Choose-One/IRV pick Sushi.",
 }
 
-ELECTIONS: list = [_LUNCH_VOTE]
+_BEER_VOTE = {
+    "test_id": "BV2185",
+    "title": "Bond Brothers Beer Picks — STAR Voting NC",
+    "description": (
+        "A friendly STAR Voting demo from STAR Voting NC: score nine Bond Brothers "
+        "Beer Company (Cary, NC) beers 0–5 across the whole spectrum — a crisp Pilsner, "
+        "a Blonde Ale, three IPAs, an amber, a brown, and two stouts — and the two "
+        "highest-scoring beers meet in an automatic runoff. Everyone has a real favorite "
+        "and a real 'hard no', which is exactly what makes STAR interesting. Vote on "
+        "paper and/or online and compare. (Taplists rotate; a real event would confirm "
+        "what's actually pouring.)"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Cary Parkway Pilsner", "Blonde Roast", "Local", "Lazy Daze Haze",
+                   "Long Stride", "Chatham Street Copper", "Bakers", "O'Rascal's",
+                   "Breakfast Variant"],
+    "ballots": [],   # empty — a live vote; people score fresh at the meetup
+    "expected": "live vote (no seed ballots)",
+}
+
+ELECTIONS: list = [_BEER_VOTE]
 
 def _race_specs(spec):
     """Normalize a spec to a LIST of race specs. Accepts either the multi-race
