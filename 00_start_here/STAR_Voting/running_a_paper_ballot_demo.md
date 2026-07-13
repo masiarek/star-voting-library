@@ -1,6 +1,6 @@
 # Run a paper-ballot STAR demo (from a BetterVoting election)
 
-*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election: create a real election on **BetterVoting**, print matching **paper ballots**, have the room vote, **hand-count** the result, and check your tally against BetterVoting's official one. Three independent counts — paper, platform, and the engine — that agree. This page is how to use the ballot-printing tool and run the whole loop.*
+*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election: print **paper ballots** for a STAR election, have the room vote, **hand-count** the result, and (optionally) check it against BetterVoting and the LH engine — three independent counts that agree. There are **two ways to run it**: fully integrated with **BetterVoting** (live QR + online results), or **LH-only / offline** (no account, no internet). This page covers both.*
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
@@ -14,6 +14,27 @@
   5. Compare to BetterVoting              ─→  bettervoting.com/<id>/results
   6. (advanced) scan paper back to YAML   ─→  OCR → the LH engine
 ```
+
+## Two ways to run it — pick your path
+
+**Path A — BetterVoting-integrated** *(recommended when you want a live tally + QR).* Create the election on BV **first**, so the ballot's QR and `…/results` link are real, then print from its export. You get the full three-way cross-check (paper · platform · engine) and the hybrid paper-*and*-online option. The numbered steps below follow this path.
+
+**Path B — LH-only** *(offline: no account, no internet).* Print blank ballots straight from a candidate list, vote, hand-count — and optionally transcribe into the LH engine for a digital audit. No BV, no QR. The simplest, most portable path (see [LH-only — the offline path](#lh-only--the-offline-path) below).
+
+> **Key idea:** to *print* ballots you only ever need **candidates + a title** — never vote data. You're printing *blank* ballots. Votes enter the picture only *after* people mark them, on the return path.
+
+## Decisions before you print (a quick checklist)
+
+Before you run the tool, decide:
+
+- **Logo?** — none (built-in STAR facsimile), the official B&W `--logo …/BW_long_form.jpg`, or your chapter's. (A *color* chapter logo is for color prints; on B&W keep the chapter as footer text.)
+- **How many copies?** — `--copies N` (voters + a few spares).
+- **One per page, or packed to save paper?** — `--per-page` (default **1**).
+- **Ballot numbers (serials)?** — `--serials` adds "Ballot #N" (a "keep this to verify it was counted" stub — the standard term is a *ballot serial/stub number*). On for a verifiability lesson or to reconcile the count; off for a plain quick demo. Keep numbers **unlinked** to voter identity.
+- **Write-in rows?** — `--write-ins N`.
+- **Promo / chapter footer?** — `--promo` + `--chapter "…"`.
+- **Output format?** — `.pdf` (print-ready, recommended), `.txt` (zero-dependency ASCII), `.html` (Print → PDF yourself).
+- **(Path A) Is the id live?** — add `--verify-bv` so no one scans a dead QR.
 
 ## Step 1 — make the election, get the BV id
 
@@ -103,9 +124,17 @@ Have the same voters also vote online (or enter the paper ballots), and confirm 
 
 The QR makes this a **hybrid** demo, and that's a feature, not a compromise: some voters fill a paper ballot, others just **scan the QR and vote online** on the same election. The nice part for the presenter is that it *cuts* your workload. **Online votes need no transcription** — BetterVoting tabulates them the instant they're cast — so you can send most of the room to the QR (zero paper handling) and keep just a handful of paper ballots to *demonstrate* the hand-count. The more people scan, the less scanning and typing you do, and the paper and online votes still land in one tally to compare. (It also reframes Step 6: OCR only ever matters for the paper ballots you *choose* to keep — every QR voter has already closed the loop.)
 
-## Step 6 (advanced) — scan the paper back into YAML
+## Step 6 — after the vote: three ways to get the result
 
-The **return path** is to photograph the filled ballots and OCR the scores into a YAML the [LH engine](../why_yaml_test_cases.md) tabulates — closing the loop from paper to a fully-auditable digital count. That tool needs a vision engine and careful design, so it's the **roadmap**, not built yet; the design is below. **Until then, transcribe the paper ballots into a YAML by hand** using the same rules — the format is trivial (a candidate header, then one row of 0–5 scores per ballot).
+Once the ballots are marked, pick a route — they aren't exclusive; running more than one is exactly the "three counts agree" cross-check:
+
+1. **Hand-count** *(no computer — the classic lesson).* Add the columns, sort the runoff piles. [Count a STAR election by hand](count_star_by_hand.md).
+2. **LH engine** *(digital audit, no BetterVoting).* Transcribe the marks into a YAML — a candidate header, then one row of `0–5` scores per ballot — and tabulate. Fully reproducible, fully offline.
+3. **Cast into BetterVoting** *(joins the online tally).* Enter the ballots on the BV vote page, or cast them via the API (`POST /API/Election/{id}/vote`).
+
+**The honest catch — reading the paper is manual today.** Turning a *photo* of a ballot into scores is **not automated** (the OCR tool is roadmap, not built — design in [Design notes](#design-notes--the-flow-and-how-a-mistake-becomes-yaml) below). So routes 2 and 3 begin with a **human transcribing** the marks into a YAML/CSV using the marker rules below (one bubble → that digit; **≥2 bubbles → `?`** spoiled; blank → `0`/`-`; illegible → `?` + note). Once you have that scores file, tabulating (route 2) or casting to BV (route 3, a small API script — the `POST /vote` pattern) is quick.
+
+**Folders (repo convention):** put BV exports in `06_Other/_demo_dropbox/`; photograph the marked ballots into a case's `img/` subfolder.
 
 ## Design notes — the flow, and how a mistake becomes YAML
 
@@ -159,6 +188,19 @@ Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
 **Why off by default:** a default is used by whoever *isn't* thinking about it, and a serial only pays off when it's **paired with the discussion** ("what would break if we posted a name→number list?"). So the tool keeps the clean, on-topic ballot as the default and makes numbering a conscious opt-in — when you type `--serials`, that's your cue to actually teach the verifiability lesson (and to keep the numbers **unlinked** to any name). **Teaching verifiability? Reach for `--serials`.** Otherwise the plain ballot is the right call.
 
 *Scope note (so nobody rabbit-holes this):* the whole serial demo runs on **paper + hand-count** — print serialized ballots, count them, publish the list of counted serials. You don't need BetterVoting or any digital plumbing for it, and you shouldn't try to thread serials through BV's vote API (it doesn't carry them, and it isn't needed). A genuinely *digital* verifiable count is **end-to-end verifiability (E2E-V)** — a cryptography topic beyond this teaching repo. The lesson is already complete on paper; stop there.
+
+## LH-only — the offline path
+
+No BetterVoting, no account, no internet — just paper. Print blank ballots straight from a candidate list (no YAML, no export needed):
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
+    --candidates "Ada,Ben,Cara" --title "Class President" --out ballots.pdf
+```
+
+With no `--bv-id`, the ballot prints with **no QR and no results link** (the generic STAR footer) — exactly right when there's no online election. Then: vote on paper → **hand-count**, or transcribe into a YAML and run the **[LH engine](../why_yaml_test_cases.md)** for a reproducible digital audit. The `.txt` output makes this path **zero-dependency** — it runs and prints anywhere.
+
+**Why keep it — it's the foundation, not a lesser option.** It's the most accessible (no signup or wifi), the most private (nothing leaves the room), and the simplest (ballots in seconds). BetterVoting's QR and live results are the *enhancement* layered on top, not a requirement. Want a QR *without* a BV election — say, pointing at a "learn STAR" page? Pass `--qr-url <URL>`.
 
 ## Why do this (the teaching value)
 
