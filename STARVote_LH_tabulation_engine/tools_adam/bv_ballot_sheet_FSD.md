@@ -80,6 +80,7 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 - Points to `bettervoting.com/<bv-id>` by default; to `--qr-url <URL>` if given (works with no BV election).
 - Implemented via the pure-Python **`segno`** library (declared in `pyproject.toml`). **Graceful fallback:** no segno → no QR, tool still runs on plain `python3`. `--no-qr` to force off.
 - **Size:** `--qr-size PX` (default 88) — bump it up for easier scanning across a room.
+- The short **vote URL** (`bettervoting.com/<bv-id>`) prints in bold under the QR, so non-scanners can type it (and the election id is legible on the ballot). Shown only when there's a `bv_id`.
 
 **FR-5 Serial receipts (optional, `--serials`):** number each ballot ("Ballot #N — keep this to verify it was counted"). See §5.3 for the verifiability design + secret-ballot caveat.
 

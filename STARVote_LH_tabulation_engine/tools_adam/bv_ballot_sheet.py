@@ -249,6 +249,7 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .fine { margin: 2px 0 6px 22px; font-size: 10.5px; color: #666; }
 .qr { position: absolute; top: 40px; right: 18px; text-align: center; font-size: 9px; color: #555; }
 .qr img { display: block; }
+.qr .qrurl { display: block; margin-top: 1px; font-weight: 700; font-size: 9px; color: #222; }
 table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
 .grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 15px; padding-left: 6px; }
@@ -308,9 +309,11 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
 
+    qr_url_line = (f'<span class="qrurl">bettervoting.com/{html.escape(bv_id)}</span>'
+                   if (qr_uri and bv_id) else "")
     qr_block = (f'<div class="qr"><img src="{qr_uri}" alt="QR code" '
                 f'style="width:{qr_size}px;height:{qr_size}px">'
-                f'<span>{html.escape(qr_caption)}</span></div>'
+                f'<span>{html.escape(qr_caption)}</span>{qr_url_line}</div>'
                 if qr_uri else "")
     cls = "ballot pagebreak" if break_after else "ballot"
     notice_block = f'<div class="notice">{html.escape(notice)}</div>' if notice else ""
