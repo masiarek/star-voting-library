@@ -268,6 +268,7 @@ table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .explain { text-align: center; font-size: 12.5px; line-height: 1.35; margin: 6px 4px 2px;
            padding-top: 8px; border-top: 1.5px solid #111; }
 .foot { margin-top: 8px; font-size: 10.5px; color: #555; display: flex; justify-content: space-between; }
+.foot .eid { font-weight: 800; font-size: 12.5px; color: #111; }
 .promo { text-align: center; font-size: 10px; color: #5a7683; margin: 5px 0 0; }
 .serial { font-weight: 700; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; }
@@ -306,7 +307,8 @@ def render_ballot(title, question, candidates, bv_id, qr_uri=None,
     if serial is not None:
         idpieces.append(f'Ballot <span class="serial">#{html.escape(str(serial))}</span> '
                         f'— keep this to verify it was counted')
-    idpieces.append(f'Election {html.escape(bv_id)}' if bv_id else 'demo ballot')
+    idpieces.append(f'Election <span class="eid">{html.escape(bv_id)}</span>'
+                    if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
 
     qr_url_line = (f'<span class="qrurl">bettervoting.com/{html.escape(bv_id)}</span>'

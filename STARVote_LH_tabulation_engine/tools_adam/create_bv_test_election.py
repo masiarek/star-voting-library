@@ -2616,6 +2616,29 @@ def _effective_title(spec):
     return TITLE_PREFIX + (f"{tid} — " if tid else "") + spec.get("title", "")
 
 
+def _existing_titles():
+    """Titles of elections already created (read from the saved exports in OUT_DIR)
+    → their election ids. Lets the pre-check warn before minting a *duplicate* public
+    election — the API doesn't dedupe, so each re-run of a spec creates a brand-new
+    permanent election (that's how the beer demo ended up with dr3h7f/m3p6v6/yt3232)."""
+    seen: dict = {}
+    if not os.path.isdir(OUT_DIR):
+        return seen
+    for fn in os.listdir(OUT_DIR):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            d = json.load(open(os.path.join(OUT_DIR, fn), encoding="utf-8"))
+        except Exception:
+            continue
+        e = d.get("election") or d.get("Election") or d
+        title = (e.get("title") or "").strip()
+        eid = e.get("election_id") or e.get("id")
+        if title and eid:
+            seen.setdefault(title, []).append(str(eid))
+    return seen
+
+
 def _preflight_test_ids(elections):
     """PRE-CHECK (before any network call). Elections created via the API are
     PUBLIC and CANNOT be renamed, closed, or deleted afterward (only a BV admin
@@ -2655,6 +2678,27 @@ def _preflight_test_ids(elections):
                 sys.exit("Aborted. Give each election a real, meaningful title "
                          "(set BV_ALLOW_JUNK_TITLE=1 only if you truly mean it).")
         print("  Proceeding with those titles.\n")
+
+    # Duplicate-title guard: re-running a spec mints a NEW public election every time
+    # (the API doesn't dedupe) — that's how the beer demo got dr3h7f/m3p6v6/yt3232.
+    # If a saved export already carries this exact title, warn and require an OK.
+    existing = _existing_titles()
+    dup = [(_effective_title(s), existing[_effective_title(s)])
+           for s in elections if _effective_title(s) in existing]
+    if dup:
+        print("\n⚠ PRE-CHECK — these titles were ALREADY created (a saved export exists "
+              "in _demo_dropbox); re-running mints ANOTHER permanent, undeletable duplicate:")
+        for t, ids in dup:
+            print(f"    • “{t}”   ← already exists as {', '.join(sorted(set(ids)))}")
+        if os.environ.get("BV_ALLOW_DUP_TITLE") != "1":
+            try:
+                ans = input("  Create duplicate(s) anyway? [y/N] ").strip().lower()
+            except EOFError:
+                ans = ""
+            if ans not in ("y", "yes"):
+                sys.exit("Aborted — reuse the existing election (see the ids above), or "
+                         "change the title. Set BV_ALLOW_DUP_TITLE=1 to force a duplicate.")
+        print("  Proceeding — a duplicate will be created.\n")
 
     missing = [s.get("title", "<untitled>") for s in elections if not s.get("test_id")]
     odd = [(s.get("test_id"), s.get("title", "<untitled>"))
