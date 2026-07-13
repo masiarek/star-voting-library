@@ -292,8 +292,10 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py` — a
   uv-run (PEP 723) script that creates elections **and casts ballots** via the BV
   REST API (`POST /API/Elections`, `POST /API/Election/{id}/vote`). Define the
-  election(s) — title, candidates, ballots, method, seats — in the script's
-  `ELECTIONS` list and run `uv run …/create_bv_test_election.py`; it prints the new
+  election(s) — title, candidates, ballots, method, seats — in the **data module
+  `bv_election_specs.py`** (the specs live there, separate from the ~520-line engine),
+  point its `ELECTIONS` list at what you want to create (empty = create nothing), and
+  run `uv run …/create_bv_test_election.py`; it prints the new
   `bettervoting.com/<id>` URLs. Auth is asymmetric **RS256** (the API requires a
   PEM public key in `auth_key`; the script mints a fresh keypair and signs the
   `custom_id_token` with the private key — no real account credential needed). It
@@ -342,8 +344,8 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
 2. **Go / no-go** (Adam decides). If the scenario earns its keep, promote it to a
    real case; otherwise it stays scratch / gets discarded.
 3. **Create the BV election** (AI runs it; Adam must be signed in to BV). Add the
-   election(s) to `create_bv_test_election.py`'s `ELECTIONS` list and
-   `uv run …/create_bv_test_election.py` — it creates the election **and casts the
+   election spec to the data module `bv_election_specs.py`, set its `ELECTIONS`
+   list to that spec, then `uv run …/create_bv_test_election.py` — it creates the election **and casts the
    ballots** via the API and prints `bettervoting.com/<id>`. Never build it by
    hand in the UI. (Auth is asymmetric RS256; no real credential is stored.)
 4. **Export the full JSON** (Adam). The API GET returns only the election *config*,
