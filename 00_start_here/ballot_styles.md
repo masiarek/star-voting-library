@@ -24,7 +24,7 @@ Meet one voter deciding among five candidates — Andre, Blake, Carmen, David, E
 | David | ○ | ○ | ● | ○ | ○ |
 | Ella | ○ | ○ | ○ | ○ | ● |
 
-**Yes/No** — approve each candidate, or don't. One bit per candidate. *(Deep dive: [Approval voting](Approval_Voting/approval_voting.md).)*
+**Yes/No** — approve each candidate, or don't. One bit per candidate. *(Deep dive: [Approval voting](Approval_Voting/approval_voting.md) — including its **two ballot designs**: a single bubble per candidate, or an explicit Yes/No pair, which distinguishes a deliberate "No" from a blank.)*
 
 | Candidate | Approve? |
 |---|:--:|

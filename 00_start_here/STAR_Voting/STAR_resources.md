@@ -26,6 +26,7 @@
 - **[Voter Satisfaction Efficiency (VSE)](https://electionscience.github.io/vse-sim/)** — the simulation metric ([Jameson Quinn](../in_memoriam_jameson_quinn.md)'s work) behind "STAR scores well on satisfaction"; read with [election simulation models](../election_simulation_models.md) on why every such number is model-conditional.
 - **[Marcus Ogren — Voting in the Abstract](https://voting-in-the-abstract.medium.com/)** — field-wide analysis from a *Condorcet-leaning* researcher; a useful outside-the-STAR-bubble perspective.
 - **[electowiki: STAR voting](https://electowiki.org/wiki/STAR_voting)** · **[Wikipedia: STAR voting](https://en.wikipedia.org/wiki/STAR_voting)** — encyclopedia references.
+- **[Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/)** (2023) — a rare **joint STAR + Approval case** in one essay, on a civil-debate outlet. Lean disclosed: the authors lead STAR Voting Action and Utah Approves — advocates, writing well. Its best hard datum is the 2021 St. Louis Approval primary (winner ~35% under choose-one framing vs 57% approval) — verify against a primary source before citing it as fact here.
 
 ## Read them critically
 

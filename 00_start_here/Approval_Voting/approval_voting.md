@@ -92,6 +92,7 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 - [Approval — Multi-Winner](approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [the Approval examples](../../04_Approval/) — the method's example folder
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
+- [Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/) — a joint STAR + Approval essay (authors lead STAR Voting Action and Utah Approves — advocacy lean disclosed); cites the 2021 St. Louis Approval primary
 - [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
 - Glossary: **Approval voting** — [Glossary — voting methods & criteria](../GLOSSARY.md)
