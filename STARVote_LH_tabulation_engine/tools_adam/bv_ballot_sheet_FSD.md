@@ -60,8 +60,8 @@ The tool owns step 2. **BetterVoting is the tabulation authority** — the paper
 
 **FR-9 Demonstration notice (on by default):** every ballot carries a standing notice — default `"EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."` — because this tool *only* makes demo ballots. It also does real work: it makes the optional **serial number** read as a teaching device rather than surveillance (a numbered *real* ballot would break the secret ballot; the notice preempts the immediate — and correct — objection). `--notice "..."` overrides the text; `--no-notice` omits it (discouraged). Rendered as a bordered banner at the top of each ballot.
 
-**FR-4 QR codes.** The header shows **two** QRs flanking the logo — **vote** (left, → `bettervoting.com/<bv-id>`, "scan to vote") and **results** (right, → `…/results`, "scan for results"). The short vote URL prints in bold under the vote QR. `--no-qr` omits both; if `--verify-bv` finds the id doesn't resolve, both are dropped (→ plain ballot).
-- Implemented via the pure-Python **`segno`** library (declared in `pyproject.toml`). **Graceful fallback:** no segno → no QR, tool still runs on plain `python3`. `--no-qr` to force off.
+**FR-4 QR codes (required, not optional).** The header shows **two** QRs flanking the logo — **vote** (left, → `bettervoting.com/<bv-id>`, "scan to vote") and **results** (right, → `…/results`, "scan for results"). The short vote URL prints in bold under the vote QR. Because every ballot links to a **live BV election**, it *must* be scannable: if `segno` (the QR library) is missing, the tool **errors** with the install command — it does not silently print a QR-less ballot. `--no-qr` is the only way to deliberately omit the QRs; and if `--verify-bv` finds the id doesn't resolve, both QRs are dropped (→ plain ballot, since there's nothing real to scan).
+- Implemented via the pure-Python **`segno`** library (declared in `pyproject.toml`, required). Missing segno → error (see above), not a QR-less ballot; `--no-qr` to force off deliberately.
 - **Size:** `--qr-size PX` (default 88) — bump it up for easier scanning across a room.
 - **The election id is printed ONCE** (was three times): a **bold** `Election <id>` + the `…/results` link in the footer. The QRs carry captions only (no URL text), so the id isn't duplicated under them.
 
@@ -140,7 +140,7 @@ python3 tools_adam/bv_ballot_sheet.py \
 python3 tools_adam/bv_ballot_sheet.py --selftest        # known-answer checks
 ```
 
-**Dependencies:** **`playwright`** is **required** (renders the PDF via headless Chromium — `playwright install chromium` once). **`segno`** is *optional* (QR — without it the vote/results URLs still print, just no QR image). `--verify-bv` uses stdlib `urllib`. Both declared in `pyproject.toml`.
+**Dependencies:** **`playwright`** (renders the PDF via headless Chromium — `playwright install chromium` once) and **`segno`** (the QR codes) are both **required** — every ballot is a PDF that links to a live BV election, so both the PDF render and the scannable QR are essential. Missing either → a clear error with the install command. (`segno` can be skipped only with `--no-qr`.) `--verify-bv` uses stdlib `urllib`. Both declared in `pyproject.toml`.
 
 ## 9. Test scenarios (QA matrix)
 
@@ -164,8 +164,9 @@ A rendered example ballot (BV-linked, two QRs, long-form logo):
 | 10 | Verify a **stale** id | export whose id no longer resolves `+ --verify-bv` | "no election… printing plain"; QR + results dropped |
 | 11 | QR size | `--qr-size 108` | larger QRs |
 | 12 | Pagination | `--copies 30 --per-page 1` | 30 pages, one ballot each, no trailing blank |
-| 13 | Missing deps | run without `segno` / without `playwright` | no `segno` → URLs print, no QR image; no `playwright` → clear error with install command |
-| 14 | Self-test | `--selftest` | all known-answer checks pass, offline, exit 0 |
+| 13 | Missing deps | run without `segno` / without `playwright` | either missing → clear error with the install command (no silent QR-less or HTML fallback) |
+| 14 | Deliberate no-QR | `--bv-export … --no-qr` | prints a plain ballot with no QRs, no error |
+| 15 | Self-test | `--selftest` | all known-answer checks pass, offline, exit 0 |
 
 **Live end-to-end demo elections** (created + cast via the BV API; each runs the full print → QR → vote → results loop):
 

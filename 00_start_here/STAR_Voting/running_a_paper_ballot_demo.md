@@ -64,7 +64,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
-- a **QR code** (top-right) that opens the online election when scanned — handy for "vote on paper *and* online, then compare." (The QR needs the tiny pure-Python `segno` library — `uv pip install segno`; without it the tool just prints the URL text and skips the QR, so it still runs with plain `python3`.)
+- **two QR codes** (top corners) — *scan to vote* and *scan for results* — so a class can vote **on paper *and* online**, then compare. (QRs use the pure-Python `segno` library, which is required — a ballot that links to a live election must be scannable; if segno is missing the tool tells you to `uv pip install segno`, or pass `--no-qr` to skip on purpose.)
 
 The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes (in the official ballot grays: bubbles `#666`, stars `#ccc`, highlight `#ececec`), and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
 

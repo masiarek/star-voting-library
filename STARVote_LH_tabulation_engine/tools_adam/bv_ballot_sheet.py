@@ -21,8 +21,9 @@ ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
   --title / --question  optional overrides (e.g. a cleaner ballot title than the
                         verbose BV one). Output styling flags: see --help.
 
-Requires `playwright` (PDF render); `segno` optional (QR — without it the vote/
-results URLs still print). `--selftest` runs known-answer checks. Spec: bv_ballot_sheet_FSD.md.
+Requires `playwright` (PDF render) and `segno` (QR — every ballot links to a live BV
+election, so it must be scannable; missing segno is an error unless --no-qr).
+`--selftest` runs known-answer checks. Spec: bv_ballot_sheet_FSD.md.
 
 Examples
 --------
@@ -107,8 +108,10 @@ DEFAULT_NOTICE = "EDUCATION ONLY - a STAR Voting teaching demo, not a secret bal
 
 
 def qr_data_uri(url):
-    """An inline QR (data: URI) for `url` if the pure-python `segno` library is
-    installed; None otherwise (the tool stays stdlib-only, QR just degrades)."""
+    """An inline QR (data: URI) for `url` via the pure-python `segno` library, or
+    None if segno isn't installed/usable. `main` treats None as an error when a QR is
+    needed (a ballot with a live BV id must be scannable) — so segno is effectively
+    required unless --no-qr is passed."""
     try:
         import segno
     except ImportError:
@@ -506,7 +509,9 @@ def main():
                     help="output PDF path (default ballots.pdf). PDF is the only "
                          "format; rendered via headless Chromium (needs `playwright`).")
     ap.add_argument("--no-qr", action="store_true",
-                    help="omit the QR code (QR needs the `segno` library)")
+                    help="deliberately print without the QR codes. (Otherwise a QR is "
+                         "required — a ballot with a live BV id must be scannable — so "
+                         "a missing `segno` library is an error, not a QR-less ballot.)")
     ap.add_argument("--serials", action="store_true",
                     help="number each ballot (a 'keep this to verify it was counted' "
                          "receipt — see the secret-ballot caveat in the demo page)")
@@ -565,6 +570,17 @@ def main():
                   f"keeping the link as given.")
         else:
             print(f"[verify-bv] BetterVoting election '{bv_id}' confirmed.")
+
+    # A ballot with a real election id MUST carry a QR (voters scan it to vote).
+    # So `segno` is required unless the QR is deliberately suppressed (--no-qr) or
+    # there's no id to link to (a bad id dropped by --verify-bv). Missing segno with a
+    # live id is an error, not a silent QR-less ballot.
+    if bv_id and not args.no_qr and qr_data_uri(f"https://bettervoting.com/{bv_id}") is None:
+        raise SystemExit(
+            "This ballot needs a QR code (it links to BetterVoting election "
+            f"'{bv_id}'), but the `segno` QR library isn't available. Install it:\n"
+            "    uv pip install segno\n"
+            "…or pass --no-qr to print without a QR on purpose.")
 
     # From the export: election description → blurb under the title; race
     # description → the question line (--question overrides).
