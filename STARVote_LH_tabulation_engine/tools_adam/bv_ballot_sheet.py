@@ -69,9 +69,10 @@ def _find_candidate_names(obj):
     return names
 
 
-def from_bv_export(path):
+def from_bv_export(path, race_index=0):
     """Return (title, bv_id, [candidates], election_desc, race_desc) from a frozen
-    BV export JSON."""
+    BV export JSON. This tool prints ONE contest; `race_index` selects which race
+    when the export has several (a multi-race export warns to stderr — see main)."""
     data = json.load(open(path, encoding="utf-8"))
     # A frozen BV UI export nests everything under a capitalized "Election" key
     # (siblings "Ballots"/"Results"); older/plain GETs use lowercase or are flat.
@@ -80,14 +81,41 @@ def from_bv_export(path):
     title = election.get("title") or election.get("name")
     bv_id = (election.get("election_id") or election.get("id")
              or data.get("election_id") or data.get("Election", {}).get("election_id"))
-    cands = _find_candidate_names(data)
-    if not cands:
-        raise SystemExit(f"Could not find candidate names in {path} "
-                         f"(pass --candidates manually).")
     edesc = election.get("description") or None
-    races = election.get("races") or []
-    rdesc = races[0].get("description") if races and isinstance(races[0], dict) else None
+
+    races = [r for r in (election.get("races") or []) if isinstance(r, dict)]
+    if races:
+        # A genuine multi-race export: warn (we print only ONE contest) and let
+        # --race pick which. Out-of-range is a clear error, not a silent wrap.
+        if len(races) > 1:
+            listing = "; ".join(
+                f'[{i}] {_race_label(r)}' for i, r in enumerate(races))
+            print(f"note: this export has {len(races)} races — printing race "
+                  f"[{race_index}] only. Use --race N to pick another.\n"
+                  f"      races: {listing}", file=sys.stderr)
+        if not (0 <= race_index < len(races)):
+            raise SystemExit(f"--race {race_index} is out of range: the export has "
+                             f"{len(races)} race(s) (valid 0..{len(races) - 1}).")
+        race = races[race_index]
+        cands = _find_candidate_names(race) or _find_candidate_names(data)
+        rdesc = race.get("description") or None
+    else:
+        # Single-race or flat export: keep the original recursive candidate search.
+        cands = _find_candidate_names(data)
+        rdesc = None
+
+    if not cands:
+        raise SystemExit(f"Could not find candidate names in {path}.")
     return title, bv_id, cands, edesc, (rdesc or None)
+
+
+def _race_label(race):
+    """A short 'method / title' tag for a race, for the multi-race warning."""
+    method = race.get("voting_method") or race.get("votingMethod")
+    title = race.get("title") or race.get("race_title")
+    if method and title:
+        return f"{method}: {title}"
+    return str(method or title or "(untitled race)")
 
 
 # --------------------------------------------------------------------------- #
@@ -498,6 +526,10 @@ def main():
                     help="a BetterVoting export JSON — the ONLY input route. Title, "
                          "candidates, election id, and descriptions all come from it. "
                          "Create the election on BV first, then print from its export.")
+    ap.add_argument("--race", type=int, default=0, metavar="N",
+                    help="which contest to print when the export has several races "
+                         "(0 = the first, the default). A multi-race export prints ONE "
+                         "race and warns; use this to pick a different one.")
     ap.add_argument("--title", help="optional: override the ballot title (e.g. a cleaner "
                                     "name than the verbose BV title)")
     ap.add_argument("--question", help="optional: override the ballot question line")
@@ -553,7 +585,7 @@ def main():
         raise SystemExit("Provide --bv-export FILE (a BetterVoting export JSON). "
                          "Create the election on BV first, then print from its export. "
                          "Run --selftest to verify the tool.")
-    t2, bv_id, candidates, edesc, rdesc = from_bv_export(args.bv_export)
+    t2, bv_id, candidates, edesc, rdesc = from_bv_export(args.bv_export, args.race)
     title = args.title or t2
 
     # Guard against a dead BV link: a QR/results URL should only appear for a REAL,
