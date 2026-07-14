@@ -1,6 +1,6 @@
 # Run a paper-ballot STAR demo (from a BetterVoting election)
 
-*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election. **One route:** create the election on **BetterVoting**, export its JSON, and print matching **paper ballots** from that export — then the room votes on paper and/or via the QR, you **hand-count**, and check it against BetterVoting and the LH engine. Three independent counts that agree. (Everything the ballot needs — title, candidates, id, descriptions — comes from the BV export, so the ballot's QR and results link are always real.)*
+*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election. **One route:** create the election on **BetterVoting**, export its JSON, and print matching **paper ballots** (a print-ready PDF) from that export — then the room votes on paper and/or via the QR, you **hand-count**, and check it against BetterVoting's official tally. Two independent counts (paper + platform) that agree. (Everything the ballot needs — title, candidates, id, descriptions — comes from the BV export, so the ballot's QR and results link are always real.)*
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
@@ -16,7 +16,7 @@
   3. Vote                                   ─→  fill 0–5 bubbles on paper, and/or scan the QR
   4. Hand-count                             ─→  add the columns · runoff (count_star_by_hand)
   5. Compare to BetterVoting                ─→  bettervoting.com/<id>/results
-  6. (advanced) scan paper back to YAML     ─→  OCR → the LH engine
+  6. (advanced) scan paper back                ─→  OCR → scores → cast into BV
 ```
 
 > **Key idea:** to *print* ballots you only need the election's **candidates + title** — never vote data. You're printing *blank* ballots; the BV export supplies all of it. Votes enter the picture only *after* people mark them, on the return path (step 6).
@@ -31,7 +31,7 @@ Before you run the tool, decide:
 - **Ballot numbers (serials)?** — `--serials` adds "Ballot #N" (a "keep this to verify it was counted" stub — the standard term is a *ballot serial/stub number*). On for a verifiability lesson or to reconcile the count; off for a plain quick demo. Keep numbers **unlinked** to voter identity.
 - **Write-in rows?** — `--write-ins N`.
 - **Promo / chapter footer?** — `--promo` + `--chapter "…"`.
-- **Output format?** — `.pdf` (print-ready, recommended), `.txt` (zero-dependency ASCII), `.html` (Print → PDF yourself).
+- **Copies / layout** — the output is always a print-ready **PDF** (`--out ballots.pdf`).
 - **Is the id live?** — add `--verify-bv` so no one scans a dead QR.
 
 ## Step 1 — create the election and export its JSON
@@ -58,12 +58,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 - **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
 - **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
 
-**Output — the `--out` extension picks the format:**
-- **`.txt`** → **plain ASCII**, zero dependencies, prints from anywhere (`lpr lunch.txt` or any editor); one ballot per page via the form-feed character, `( )` circles to mark, and the results URL printed (no QR). The simplest, most portable option.
-- **`.pdf`** → a print-ready **PDF** directly (e.g. `--out lunch.pdf` → a 30-page PDF, **one ballot per page**, straight to the printer — needs the `playwright` library, `playwright install chromium` once).
-- **`.html`** (or omit `--out`) → a self-contained styled **HTML file** with the scannable QR; open it and **Print → Save as PDF** yourself. This is also the automatic fallback if playwright isn't installed.
-
-Each ballot carries:
+**Output — a print-ready PDF** (`--out ballots.pdf`), one ballot per page, straight to the printer. It's rendered from the ballot HTML by headless Chromium, so the **`playwright`** library is required (`playwright install chromium` once); if it's missing the tool tells you the install command. Each ballot carries:
 
 - the **election & race descriptions** (if your BV election has them) — the election description prints as a blurb under the title, the race description as the ballot question,
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
@@ -90,7 +85,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --out ballots.pdf
 ```
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.txt` / `.pdf` / `.html`), `--no-qr`, `--qr-size PX` (QR size, default 88 — bump up for easier scanning), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
+Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out ballots.pdf`, `--no-qr`, `--qr-size PX` (QR size, default 88 — bump up for easier scanning), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
 
 **The id always comes from a real, already-created election** — that's the point of the single route. Because you print from a BetterVoting export, the QR and `…/results` link are real by construction. To be safe before a print run, add **`--verify-bv`**: it pings BetterVoting to confirm the id resolves and, if it somehow doesn't (a stale or hand-edited export), drops the QR + results link automatically — so no one ever scans a dead link.
 
@@ -109,46 +104,45 @@ Full walkthrough: [Count a STAR election by hand](count_star_by_hand.md). Roles 
 
 ## Step 5 — compare to BetterVoting
 
-Have the same voters also vote online (or enter the paper ballots), and confirm your **hand tally matches** `bettervoting.com/<id>/results`. The teachable moment: the result is *transparent and reproducible* — the paper count, the platform, and the [LH engine](../../STARVote_LH_tabulation_engine/) all agree, and anyone in the room can verify it.
+Have the same voters also vote online (or enter the paper ballots into BV), and confirm your **hand tally matches** `bettervoting.com/<id>/results`. The teachable moment: the result is *transparent and reproducible* — the paper count and the platform agree, and anyone in the room can re-add the numbers.
 
 ### Paper *and* online at once — and less work for you
 
 The QR makes this a **hybrid** demo, and that's a feature, not a compromise: some voters fill a paper ballot, others just **scan the QR and vote online** on the same election. The nice part for the presenter is that it *cuts* your workload. **Online votes need no transcription** — BetterVoting tabulates them the instant they're cast — so you can send most of the room to the QR (zero paper handling) and keep just a handful of paper ballots to *demonstrate* the hand-count. The more people scan, the less scanning and typing you do, and the paper and online votes still land in one tally to compare. (It also reframes Step 6: OCR only ever matters for the paper ballots you *choose* to keep — every QR voter has already closed the loop.)
 
-## Step 6 — after the vote: three ways to get the result
+## Step 6 — after the vote: count via BetterVoting
 
-Once the ballots are marked, pick a route — they aren't exclusive; running more than one is exactly the "three counts agree" cross-check:
+Once the ballots are marked, count via **BetterVoting** — two complementary ways (do both for the cross-check):
 
-1. **Hand-count** *(no computer — the classic lesson).* Add the columns, sort the runoff piles. [Count a STAR election by hand](count_star_by_hand.md).
-2. **LH engine** *(digital audit, no BetterVoting).* Transcribe the marks into a YAML — a candidate header, then one row of `0–5` scores per ballot — and tabulate. Fully reproducible, fully offline.
-3. **Cast into BetterVoting** *(joins the online tally).* Enter the ballots on the BV vote page, or cast them via the API (`POST /API/Election/{id}/vote`).
+1. **Hand-count** *(no computer — the classic lesson).* Add the columns, sort the runoff piles, then confirm your tally matches `bettervoting.com/<id>/results`. [Count a STAR election by hand](count_star_by_hand.md).
+2. **Enter the paper into BetterVoting** *(so it joins the online tally).* Type each ballot on the BV vote page, or cast them via the API (`POST /API/Election/{id}/vote`).
 
-**The honest catch — reading the paper is manual today.** Turning a *photo* of a ballot into scores is **not automated** (the OCR tool is roadmap, not built — design in [Design notes](#design-notes--the-flow-and-how-a-mistake-becomes-yaml) below). So routes 2 and 3 begin with a **human transcribing** the marks into a YAML/CSV using the marker rules below (one bubble → that digit; **≥2 bubbles → `?`** spoiled; blank → `0`/`-`; illegible → `?` + note). Once you have that scores file, tabulating (route 2) or casting to BV (route 3, a small API script — the `POST /vote` pattern) is quick.
+**The honest catch — reading the paper is manual today.** Turning a *photo* of a ballot into scores is **not automated** (the OCR tool is roadmap, not built — design in [Design notes](#design-notes--the-flow-and-how-a-mistake-becomes-a-score) below). So option 2 begins with a **human transcribing** the marks using the marker rules below (one bubble → that digit; **≥2 bubbles → spoiled**; blank → `0`; illegible → flag + note), then entering them into BV.
 
 **Folders (repo convention):** put BV exports in `06_Other/_demo_dropbox/`; photograph the marked ballots into a case's `img/` subfolder.
 
-## Design notes — the flow, and how a mistake becomes YAML
+## Design notes — the flow, and how a mistake becomes a score
 
 **The ballot is always tied to a BV election** (the export supplies the id), so every ballot prints the id, the results URL, and two scannable **QRs** (vote + results) — paper and platform stay linked. The only time a ballot prints *without* the QR/results is when **`--verify-bv`** finds the id doesn't resolve; then it degrades to a plain STAR ballot so nothing points at a dead link.
 
-**Flagging mistakes — reuse the repo's markers, don't invent a scheme.** The repo already has a marker vocabulary for exactly this (see [CLAUDE.md](../../CLAUDE.md) / the [markers glossary](STAR_ballot_voting_styles.md)): every marker tabulates as **0** *and* is reported. So an ambiguous mark maps cleanly:
+**Flagging mistakes when you enter a ballot into BetterVoting.** An ambiguous mark maps cleanly to a BV score (0–5), with a note for the log:
 
-| On the paper ballot | Meaning | In the YAML |
+| On the paper ballot | Meaning | Enter into BV |
 |---|---|---|
 | exactly **one** bubble filled in a row | a valid 0–5 score | that digit (e.g. `4`) |
-| **two or more** bubbles in one row (e.g. 2, 4 *and* 5) | ambiguous / overvote | **`?`** (spoiled — counts as 0, flagged) |
-| **no** bubble in a row | no score given | `0` (or `-` for "left blank") |
-| a stray mark, or illegible | can't read it confidently | `?` + a line in the run log for human review |
+| **two or more** bubbles in one row (e.g. 2, 4 *and* 5) | ambiguous / overvote | **`0`** (spoiled — score it 0) + note it in the log |
+| **no** bubble in a row | no score given | `0` (blank) |
+| a stray mark, or illegible | can't read it confidently | `0` + a line in the run log for human review |
 
-So *"the voter marked 2, 4 and 5 for one candidate"* becomes a **`?`** in that candidate's column — the engine already knows what to do with it (score it 0, surface it as spoiled), and a human can review every flagged row. No new mechanism needed — and the ballot itself warns the voter up front (*"two or more bubbles is a spoiled score for that candidate"*).
+So *"the voter marked 2, 4 and 5 for one candidate"* → enter `0` for that candidate and log the ballot for review. The ballot itself warns the voter up front (*"two or more bubbles is a spoiled score for that candidate"*), so overvotes should be rare.
 
 **The OCR tool, respecified in the repo's terms** (the goal, not the letter of the original spec):
 
 1. Read each ballot image; locate the candidate rows and the 0–5 bubble grid.
-2. Per row, count filled bubbles → **1** = that score · **0** = `0` · **≥2** = `?` (spoiled).
-3. Anything below a confidence threshold, or unreadable → `?` and log for review.
-4. Emit a standard `voting_method: STAR` YAML (candidate header + one scored/marked row per ballot) **plus a run log** naming every flagged ballot.
-5. Tabulate in the [LH engine](../why_yaml_test_cases.md), which already reports spoiled ballots — loop closed.
+2. Per row, count filled bubbles → **1** = that score · **0** = `0` · **≥2** = spoiled.
+3. Anything below a confidence threshold, or unreadable → flag and log for review.
+4. Emit a scores table (one scored/marked row per ballot) **plus a run log** naming every flagged ballot.
+5. **Cast the scores into the BV election** (`POST /API/Election/{id}/vote`) — they join the online tally. Loop closed.
 
 When that tool gets built, the right way is against a **local OCR engine** with a **synthetic-ballot round-trip self-test** (render ballots with known scores → OCR → assert they match), so it's *verified before it's trusted* on real scans.
 
@@ -181,7 +175,7 @@ Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
 ## Why do this (the teaching value)
 
 - **Demystifies the method** — students *see* that STAR is simple to count, not a black box.
-- **Three independent counts that agree** — paper, BetterVoting, and the LH engine — which is exactly the trust story ("don't believe it, check it").
+- **Two independent counts that agree** — the paper hand-count and BetterVoting's tally — which is exactly the trust story ("don't believe it, check it").
 - **Perfect for classrooms, clubs, and workshops** — everyone participates, and the result is theirs to verify.
 
 ## See also

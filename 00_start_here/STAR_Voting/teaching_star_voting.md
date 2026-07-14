@@ -68,7 +68,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --serials --write-ins 1 --copies 25 --verify-bv --out pets.pdf
 ```
 
-The ballot is styled after the **official Equal Vote STAR ballot** (STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, zebra stripes, finalist footer), so it's instantly familiar. End `--out` in **`.pdf`** for a print-ready PDF (one ballot per page); `.txt` for a zero-dependency plain-text ballot; `.html` to Print → PDF yourself. The fun parts:
+The ballot is styled after the **official Equal Vote STAR ballot** (STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, zebra stripes, finalist footer), so it's instantly familiar. The output is a **print-ready PDF** (`--out ballots.pdf`), one ballot per page. The fun parts:
 
 - **two QR codes** → *scan to vote* and *scan for results*, so a class can vote **on paper *and* online** and compare;
 - optional **serial "receipts"** (`--serials`) — a lovely way to teach *verifiability* and the secret-ballot tension (publish the counted serials; discuss why a name→number list would be bad);

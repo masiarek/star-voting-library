@@ -6,11 +6,10 @@ hand-count exercise, tied to a BetterVoting (BV) election.
 The teacher's front-of-workflow tool: you make a real election on BetterVoting,
 then print matching paper ballots so a room can vote by hand, hand-count the result
 (see 00_start_here/STAR_Voting/count_star_by_hand.md), and compare to BV's official
-tally. The `--out` extension picks the format: .txt = plain ASCII (zero deps, prints
-anywhere, form-feed page breaks), .pdf = print-ready PDF (via playwright), .html
-(default) = styled with a scannable QR (Print -> PDF). Each ballot carries the STAR
-instructions, a 0-5 bubble grid per candidate, and the BV election id + results URL
-so paper and platform stay linked. Default is one ballot per page.
+tally. Output is a **print-ready PDF** (the only format), rendered from the ballot
+HTML via headless Chromium. Each ballot carries the STAR instructions, a 0-5 bubble
+grid per candidate, two QRs (vote + results), and the BV election id — so paper and
+platform stay linked. Default is one ballot per page.
 
 ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
   --bv-export FILE     a BetterVoting export JSON. Everything the ballot needs —
@@ -22,8 +21,8 @@ ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
   --title / --question  optional overrides (e.g. a cleaner ballot title than the
                         verbose BV one). Output styling flags: see --help.
 
-Optional deps: `segno` (QR), `playwright` (direct .pdf) — both degrade gracefully.
-`--selftest` runs known-answer checks. Design spec: bv_ballot_sheet_FSD.md.
+Requires `playwright` (PDF render); `segno` optional (QR — without it the vote/
+results URLs still print). `--selftest` runs known-answer checks. Spec: bv_ballot_sheet_FSD.md.
 
 Examples
 --------
@@ -39,9 +38,7 @@ import html
 import json
 import mimetypes
 import os
-import re
 import sys
-import textwrap
 
 
 # --------------------------------------------------------------------------- #
@@ -105,7 +102,7 @@ INSTRUCTIONS = ("Score each candidate 0 to 5 (fill ONE bubble per row). "
 # a standing notice keeps that honest and — crucially — makes the optional serial
 # number read as a teaching device, not surveillance (a numbered *real* ballot
 # would break the secret ballot). Suppress with --no-notice; override with --notice.
-# Kept 7-bit ASCII (plain '-') so it survives into the .txt output unchanged.
+# Kept simple 7-bit ASCII (plain '-') for maximum print/font compatibility.
 DEFAULT_NOTICE = "EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."
 
 
@@ -155,10 +152,10 @@ def logo_data_uri(path):
 
 
 def html_to_pdf(html_str, pdf_path):
-    """Render the ballot HTML straight to a print-ready PDF via headless Chromium
-    (the already-declared `playwright` dep). Returns True on success; False if
-    playwright isn't installed/usable, so the caller can fall back to writing HTML.
-    page.pdf() emulates print media, so the @media-print page-breaks apply."""
+    """Render the ballot HTML to a print-ready PDF via headless Chromium (the
+    required `playwright` dep). Returns True on success, False if playwright isn't
+    installed/usable (the caller then errors). page.pdf() emulates print media, so
+    the @media-print page-breaks apply."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -174,8 +171,7 @@ def html_to_pdf(html_str, pdf_path):
             browser.close()
         return True
     except Exception as e:
-        print(f"[pdf] playwright present but PDF render failed ({e}); "
-              "falling back to HTML.")
+        print(f"[pdf] PDF render failed ({e}).")
         return False
 
 
@@ -353,100 +349,9 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
                       # after the last — a trailing break makes a blank page).
                       break_after=((i + 1) % pp == 0 and i + 1 < copies))
         for i in range(copies))
-    perpage_txt = ('one ballot per page' if pp == 1 else f'{pp} ballots per page')
-    hint = ('<p class="noprint" style="margin:12px 18px;color:#666;font-size:13px">'
-            f'{copies} ballots · {perpage_txt} — use your browser\'s '
-            'Print → "Save as PDF" (or run with --out ballots.pdf for a PDF directly). '
-            'This is the print-and-hand-count front end; '
-            'count with count_star_by_hand.md, then compare to BetterVoting.</p>')
     return (f'<!doctype html><html><head><meta charset="utf-8">'
             f'<title>STAR ballots — {html.escape(title or bv_id or "demo")}</title>'
-            f'<style>{CSS}</style></head><body>{hint}{ballots}</body></html>')
-
-
-# --------------------------------------------------------------------------- #
-# Plain-ASCII output: zero dependencies, prints from anywhere (`lpr file.txt`   #
-# or any editor). One ballot per page via the form-feed char (\f). No QR (the   #
-# URL is printed instead) — the purest, most portable ballot.                   #
-# --------------------------------------------------------------------------- #
-TEXT_WIDTH = 72
-
-
-def _ascii_row(label, name_w):
-    cells = "  ".join(f"({n})" for n in range(6))
-    return f"  {label[:name_w].ljust(name_w)}  {cells}"
-
-
-def render_ballot_text(title, question, candidates, bv_id, serial=None,
-                       write_ins=0, notice="", blurb="", promo=""):
-    rule = "=" * TEXT_WIDTH
-    name_w = min(max([len(c) for c in candidates] + [9]) + 1, 26)
-    lines = [rule]
-    lines.append("* STAR VOTING *".center(TEXT_WIDTH).rstrip())
-    lines.append("Score - Then - Automatic - Runoff".center(TEXT_WIDTH).rstrip())
-    if title:
-        lines.append("")
-        lines.append(title.center(TEXT_WIDTH).rstrip())
-    if serial is not None:
-        lines.append(f"  Ballot #{serial} - keep this to verify it was counted")
-    if notice:
-        bar = "  " + "-" * (TEXT_WIDTH - 4)
-        lines.append("")
-        lines.append(bar)
-        for ln in textwrap.wrap(notice, TEXT_WIDTH - 4):
-            lines.append("  " + ln)
-        lines.append(bar)
-    if blurb:
-        lines.append("")
-        lines += textwrap.wrap(blurb, TEXT_WIDTH - 2, initial_indent="  ",
-                               subsequent_indent="  ")
-    if question:
-        lines.append("")
-        lines += textwrap.wrap(question, TEXT_WIDTH - 2, initial_indent="  ",
-                               subsequent_indent="  ")
-    lines.append("")
-    for b in INSTRUCTION_BULLETS:
-        wrapped = textwrap.wrap(b, TEXT_WIDTH - 6)
-        for j, ln in enumerate(wrapped):
-            lines.append(("  - " if j == 0 else "    ") + ln)
-    lines.append("  Fill one bubble per row; two or more spoils that score.")
-    lines.append("")
-    cellblock = "  ".join(f"({n})" for n in range(6))
-    pre = "  " + " " * name_w + "  "
-    lines.append(pre + "Worst" + " " * (len(cellblock) - 9) + "Best")
-    for c in candidates:
-        lines.append(_ascii_row(c, name_w))
-    for _ in range(write_ins):
-        lines.append(_ascii_row("Write-in: " + "_" * max(0, name_w - 10), name_w))
-    lines.append("")
-    lines.append("  " + "-" * (TEXT_WIDTH - 4))
-    for l in EXPLAIN_LINES:
-        lines.append("  " + l)
-    lines.append("")
-    if bv_id:
-        lines.append(f"  Election {bv_id}  |  results: bettervoting.com/{bv_id}/results")
-    else:
-        lines.append("  STAR Voting - Score Then Automatic Runoff")
-    if promo:
-        lines.append("  " + promo)
-    lines.append(rule)
-    return "\n".join(lines)
-
-
-def render_sheet_text(title, question, candidates, bv_id, copies, per_page,
-                      serials=False, write_ins=0, notice="", blurb="", promo=""):
-    pp = max(1, per_page)
-    out = []
-    for i in range(copies):
-        out.append(render_ballot_text(title, question, candidates, bv_id,
-                                      serial=(i + 1 if serials else None),
-                                      write_ins=write_ins, notice=notice, blurb=blurb,
-                                      promo=promo))
-        last = (i + 1 == copies)
-        if not last:
-            # form-feed = a hard page break for printers; a blank gap otherwise.
-            out.append("\f" if (i + 1) % pp == 0 else "\n")
-    return "\n".join(out) + "\n"
+            f'<style>{CSS}</style></head><body>{ballots}</body></html>')
 
 
 # --------------------------------------------------------------------------- #
@@ -501,23 +406,6 @@ def selftest():
     for label, cond in page:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
-    # plain-ASCII output: zero deps, form-feed page breaks, results URL not QR.
-    txt = render_sheet_text("Pets", "q", ["ala", "bob"], "mptvrm",
-                            copies=3, per_page=1, serials=True)
-    is_ascii = all(ord(ch) < 128 for ch in txt)
-    txtchecks = [
-        ("ascii: candidates + results url present",
-         "ala" in txt and "bob" in txt and "bettervoting.com/mptvrm/results" in txt),
-        ("ascii: one-per-page form-feeds (3 copies -> 2)", txt.count("\f") == 2),
-        ("ascii: 6 markable bubbles per candidate row", "(0)  (1)  (2)  (3)  (4)  (5)" in txt),
-        ("ascii: STAR VOTING wordmark + Worst/Best", "STAR VOTING" in txt and "Worst" in txt and "Best" in txt),
-        ("ascii: finalist explanation", "two highest scoring candidates are finalists" in txt),
-        ("ascii: serial receipt line", "Ballot #1 - keep" in txt),
-        ("ascii: strictly 7-bit ASCII (no QR, no unicode)", is_ascii),
-    ]
-    for label, cond in txtchecks:
-        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
-        ok &= cond
     # QR is optional (needs segno); test whichever path applies. With a bv_id there
     # are TWO QRs — vote (left) + results (right).
     if qr_data_uri("https://bettervoting.com/abc123"):
@@ -554,14 +442,10 @@ def selftest():
     # descriptions print on the ballot: election desc as blurb, race desc as question.
     html_d = render_sheet("Pets", "Which pet is best?", ["A"], "x", copies=1,
                           per_page=1, qr=False, blurb="Our class demo election.")
-    txt_d = render_sheet_text("Pets", "Which pet is best?", ["A"], "x", copies=1,
-                              per_page=1, blurb="Our class demo election.")
     desc_checks = [
-        ("HTML ballot shows election description (blurb)",
+        ("ballot shows election description (blurb)",
          'class="edesc"' in html_d and "Our class demo election." in html_d),
-        ("HTML ballot shows race description (question)", "Which pet is best?" in html_d),
-        ("ASCII ballot shows both descriptions",
-         "Our class demo election." in txt_d and "Which pet is best?" in txt_d),
+        ("ballot shows race description (question)", "Which pet is best?" in html_d),
     ]
     for label, cond in desc_checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
@@ -585,21 +469,17 @@ def selftest():
     for label, cond in logo_checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
-    # demonstration / secret-ballot notice: on by default, both formats, off-able.
+    # demonstration / secret-ballot notice: on by default, off-able.
     html_n = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
                           notice=DEFAULT_NOTICE)
     html_off = render_sheet("T", "q", ["A"], "x", copies=1, per_page=1, qr=False,
                             notice="")
-    txt_n = render_sheet_text("T", "q", ["A"], "x", copies=1, per_page=1,
-                              notice=DEFAULT_NOTICE)
     notice_checks = [
         ("notice: default text mentions 'not a secret ballot'",
          "not a secret ballot" in DEFAULT_NOTICE),
-        ("notice: HTML ballot shows it (class=notice)",
+        ("notice: ballot shows it (class=notice)",
          'class="notice"' in html_n and "secret ballot" in html_n),
-        ("notice: --no-notice omits it from HTML", 'class="notice"' not in html_off),
-        ("notice: ASCII ballot shows it and stays 7-bit",
-         "secret ballot" in txt_n and all(ord(c) < 128 for c in txt_n)),
+        ("notice: --no-notice omits it", 'class="notice"' not in html_off),
     ]
     for label, cond in notice_checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
@@ -622,10 +502,9 @@ def main():
     ap.add_argument("--per-page", type=int, default=1,
                     help="ballots per printed page (default 1 — one ballot per page, "
                          "the right choice for ballots you hand out individually)")
-    ap.add_argument("--out", default="ballots.html",
-                    help="output file — extension picks the format: .txt = plain "
-                         "ASCII (zero deps, prints anywhere), .pdf = print-ready PDF "
-                         "(needs `playwright`), .html (default) = styled, Print → PDF")
+    ap.add_argument("--out", default="ballots.pdf",
+                    help="output PDF path (default ballots.pdf). PDF is the only "
+                         "format; rendered via headless Chromium (needs `playwright`).")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
     ap.add_argument("--serials", action="store_true",
@@ -696,69 +575,33 @@ def main():
 
     # Optional promo footer (links are parameters, not the description — off by
     # default so the base ballot matches the clean official design). --chapter
-    # implies --promo. Built per format: HTML uses "·", ASCII uses "|".
+    # implies --promo.
     promo_parts = ["starvoting.org", "equal.vote", "bettervoting.com"] \
         if (args.promo or args.chapter) else []
     if args.chapter:
         promo_parts.append(args.chapter.strip())
-    is_txt = args.out.lower().endswith(".txt")
-    if promo_parts:
-        sep = " | " if is_txt else " · "
-        joined = sep.join(promo_parts if is_txt
-                          else [html.escape(p) for p in promo_parts])
-        promo = "Learn more: " + joined
-    else:
-        promo = ""
-    logo_uri = logo_data_uri(args.logo) if (args.logo and not is_txt) else ""
-
-    # Plain-ASCII output: zero deps, prints anywhere, one ballot per page via \f.
-    if args.out.lower().endswith(".txt"):
-        sheet = render_sheet_text(title, question, candidates, bv_id, args.copies,
-                                  args.per_page, serials=args.serials,
-                                  write_ins=args.write_ins, notice=notice, blurb=blurb,
-                                  promo=promo)
-        with open(args.out, "w", encoding="utf-8") as f:
-            f.write(sheet)
-        pp = max(1, args.per_page)
-        layout = "one per page" if pp == 1 else f"{pp} per page"
-        print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, "
-              f"{layout}) to {os.path.abspath(args.out)}")
-        print("Plain text — print with `lpr` or any editor (form-feed = page break). "
-              "No dependencies, no QR (the results URL is printed).")
-        if bv_id:
-            print(f"Linked to BetterVoting election {bv_id} "
-                  f"(results: https://bettervoting.com/{bv_id}/results).")
-        return
+    promo = ("Learn more: " + " · ".join(html.escape(p) for p in promo_parts)
+             if promo_parts else "")
+    logo_uri = logo_data_uri(args.logo) if args.logo else ""
 
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, notice=notice,
                          blurb=blurb, promo=promo, logo_uri=logo_uri, qr_size=args.qr_size)
 
-    want_pdf = args.out.lower().endswith(".pdf")
-    wrote_pdf = False
-    if want_pdf:
-        wrote_pdf = html_to_pdf(sheet, args.out)
-        if not wrote_pdf:
-            # Graceful fallback: no playwright → write the HTML beside it so the
-            # user can still Print → PDF. (Keeps the tool runnable on plain python3.)
-            args.out = args.out[:-4] + ".html"
-            print("[pdf] `playwright` not available — install it (uv pip install "
-                  "playwright && playwright install chromium) for direct PDF. "
-                  f"Writing HTML instead: {args.out}")
-
-    if not wrote_pdf:
-        with open(args.out, "w", encoding="utf-8") as f:
-            f.write(sheet)
+    # PDF is the only output. It's rendered from the ballot HTML via headless
+    # Chromium (playwright), which is therefore required.
+    out = args.out if args.out.lower().endswith(".pdf") else os.path.splitext(args.out)[0] + ".pdf"
+    if not html_to_pdf(sheet, out):
+        raise SystemExit(
+            "PDF render needs `playwright`. Install it once:\n"
+            "    uv pip install playwright && playwright install chromium")
 
     pp = max(1, args.per_page)
     layout = "one per page" if pp == 1 else f"{pp} per page"
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, {layout}) "
-          f"to {os.path.abspath(args.out)}")
-    if wrote_pdf:
-        print("Print-ready PDF — send it straight to the printer.")
-    else:
-        print("Open it in a browser and Print → Save as PDF.")
+          f"to {os.path.abspath(out)}")
+    print("Print-ready PDF — send it straight to the printer.")
     if bv_id:
         print(f"Linked to BetterVoting election {bv_id} "
               f"(results: https://bettervoting.com/{bv_id}/results).")
