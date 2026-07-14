@@ -1,6 +1,6 @@
 # Run a paper-ballot STAR demo (from a BetterVoting election)
 
-*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election: print **paper ballots** for a STAR election, have the room vote, **hand-count** the result, and (optionally) check it against BetterVoting and the LH engine — three independent counts that agree. There are **two ways to run it**: fully integrated with **BetterVoting** (live QR + online results), or **LH-only / offline** (no account, no internet). This page covers both.*
+*The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election. **One route:** create the election on **BetterVoting**, export its JSON, and print matching **paper ballots** from that export — then the room votes on paper and/or via the QR, you **hand-count**, and check it against BetterVoting and the LH engine. Three independent counts that agree. (Everything the ballot needs — title, candidates, id, descriptions — comes from the BV export, so the ballot's QR and results link are always real.)*
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
@@ -11,21 +11,15 @@
 ## The loop at a glance
 
 ```text
-  1. Make the election on BetterVoting  ─→  get the BV id  (bettervoting.com/<id>)
-  2. Print matching paper ballots        ─→  bv_ballot_sheet.py  →  PDF
-  3. Vote on paper                        ─→  fill 0–5 bubbles
-  4. Hand-count                           ─→  add the columns · runoff (count_star_by_hand)
-  5. Compare to BetterVoting              ─→  bettervoting.com/<id>/results
-  6. (advanced) scan paper back to YAML   ─→  OCR → the LH engine
+  1. Create the election on BetterVoting  ─→  export its JSON
+  2. Print ballots from the export         ─→  bv_ballot_sheet.py --bv-export … → PDF
+  3. Vote                                   ─→  fill 0–5 bubbles on paper, and/or scan the QR
+  4. Hand-count                             ─→  add the columns · runoff (count_star_by_hand)
+  5. Compare to BetterVoting                ─→  bettervoting.com/<id>/results
+  6. (advanced) scan paper back to YAML     ─→  OCR → the LH engine
 ```
 
-## Two ways to run it — pick your path
-
-**Path A — BetterVoting-integrated** *(recommended when you want a live tally + QR).* Create the election on BV **first**, so the ballot's QR and `…/results` link are real, then print from its export. You get the full three-way cross-check (paper · platform · engine) and the hybrid paper-*and*-online option. The numbered steps below follow this path.
-
-**Path B — LH-only** *(offline: no account, no internet).* Print blank ballots straight from a candidate list, vote, hand-count — and optionally transcribe into the LH engine for a digital audit. No BV, no QR. The simplest, most portable path (see [LH-only — the offline path](#lh-only--the-offline-path) below).
-
-> **Key idea:** to *print* ballots you only ever need **candidates + a title** — never vote data. You're printing *blank* ballots. Votes enter the picture only *after* people mark them, on the return path.
+> **Key idea:** to *print* ballots you only need the election's **candidates + title** — never vote data. You're printing *blank* ballots; the BV export supplies all of it. Votes enter the picture only *after* people mark them, on the return path (step 6).
 
 ## Decisions before you print (a quick checklist)
 
@@ -38,37 +32,28 @@ Before you run the tool, decide:
 - **Write-in rows?** — `--write-ins N`.
 - **Promo / chapter footer?** — `--promo` + `--chapter "…"`.
 - **Output format?** — `.pdf` (print-ready, recommended), `.txt` (zero-dependency ASCII), `.html` (Print → PDF yourself).
-- **(Path A) Is the id live?** — add `--verify-bv` so no one scans a dead QR.
+- **Is the id live?** — add `--verify-bv` so no one scans a dead QR.
 
-## Step 1 — make the election, get the BV id
+## Step 1 — create the election and export its JSON
 
-Create your election at [bettervoting.com](https://bettervoting.com) (or, for a batch of test elections, via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py)). The **BV id** is the code in the URL — `bettervoting.com/`**`<id>`** — and the official tally will live at `bettervoting.com/<id>/results`. That id is what ties your paper ballots back to the online election.
+Create your election at [bettervoting.com](https://bettervoting.com) — or, faster, define it in [`bv_election_specs.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_election_specs.py) and run [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py), which creates the election **and saves its JSON** to `06_Other/_demo_dropbox/` automatically. Either way you end up with a **BV export JSON** — that file carries the title, candidates, election id, and descriptions, and it's the only input the ballot tool needs. (For a full export *with* ballots/results, use the BV UI's export; for *printing*, the auto-saved config JSON is enough.)
 
-## Step 2 — print matching paper ballots
+## Step 2 — print ballots from the export
 
-The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) (stdlib only — runs with plain `python3`). Feed it the candidates and title **three ways**:
+The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). It has **one input route** — a BetterVoting export — so there's nothing to hand-type; title, candidates, id, and descriptions all come from the JSON:
 
 ```bash
-# A) from a repo election YAML — auto-picks up the title, candidates, and bv_election_id
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
-    --yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml --copies 30 --out lunch.html
-
-# B) from a frozen BetterVoting export
-python3 .../bv_ballot_sheet.py --bv-export path/to/<case>_bv_export.json --copies 30
-
-# C) manually (your own demo election)
-python3 .../bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class President" \
-    --bv-id demo1 --copies 30
+    --bv-export "06_Other/_demo_dropbox/<election>-<id>.json" \
+    --title "A cleaner ballot title" --serials --verify-bv \
+    --logo STARVote_LH_tabulation_engine/tools_adam/assets/BW_long_form.jpg \
+    --copies 30 --out ballots.pdf
 ```
 
-**Ready-made real elections to demo with** — live on BetterVoting with memorable URLs, so you get paper ballots *and* an online tally to check against:
-- the [team lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) — `--yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` (3 options, politics-free, the simplest);
-- **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets (Bird, Cat, Python, Dog, Fish, Rabbit, Rat), single-winner STAR, a classroom crowd-pleaser:
-  ```bash
-  python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
-      --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
-      --title "What Makes the Best Pet?" --bv-id pet --serials --copies 25
-  ```
+`--title` / `--question` are optional overrides (e.g. a shorter ballot title than the verbose BV one); everything else is output styling. Old placeholder for the manual/YAML routes:
+
+**Ready-made live elections to demo with** — each has a BV export you can print from (and a live results page to check against):
+- **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets, single-winner STAR, a classroom crowd-pleaser.
 - the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
 - **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
 - **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
@@ -107,7 +92,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out FILE` (`.txt` / `.pdf` / `.html`), `--no-qr`, `--qr-size PX` (QR size, default 88 — bump up for easier scanning), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
 
-**The BV id must be a real, already-created election.** The QR and the `…/results` link only make sense if the election exists on BetterVoting — so **create the election first, export it, and print from that** (`--bv-export`). If you're running **LH-only** (no BetterVoting election), **don't invent a bv id** — omit it, and the ballot prints with no QR and no results link (a plain STAR ballot, still perfectly usable). To be safe before a real print run, add **`--verify-bv`**: it pings BetterVoting to confirm the id resolves and, if it doesn't, drops the QR + results link automatically — so no one ever scans a dead link.
+**The id always comes from a real, already-created election** — that's the point of the single route. Because you print from a BetterVoting export, the QR and `…/results` link are real by construction. To be safe before a print run, add **`--verify-bv`**: it pings BetterVoting to confirm the id resolves and, if it somehow doesn't (a stale or hand-edited export), drops the QR + results link automatically — so no one ever scans a dead link.
 
 ## Step 3 — vote on paper
 
@@ -144,9 +129,7 @@ Once the ballots are marked, pick a route — they aren't exclusive; running mor
 
 ## Design notes — the flow, and how a mistake becomes YAML
 
-**Ballots with and without a BV election.** A ballot is meant to be *self-sufficient*; the BV link is an enhancement, not a requirement.
-- **With** a `--bv-id`: the ballot prints the id, the results URL, and a scannable **QR** — paper and platform stay linked.
-- **Without** one (an **LH-only** demo — no BetterVoting): still a perfectly valid ballot; it just carries the generic STAR heading and **no QR** (the QR only earns its place when there's an election to open). For traceability, put a date or set name in `--title`. If you *want* a QR anyway — say, to a "learn how STAR works" page — pass `--qr-url <URL>` (it works with or without a BV election).
+**The ballot is always tied to a BV election** (the export supplies the id), so every ballot prints the id, the results URL, and two scannable **QRs** (vote + results) — paper and platform stay linked. The only time a ballot prints *without* the QR/results is when **`--verify-bv`** finds the id doesn't resolve; then it degrades to a plain STAR ballot so nothing points at a dead link.
 
 **Flagging mistakes — reuse the repo's markers, don't invent a scheme.** The repo already has a marker vocabulary for exactly this (see [CLAUDE.md](../../CLAUDE.md) / the [markers glossary](STAR_ballot_voting_styles.md)): every marker tabulates as **0** *and* is reported. So an ambiguous mark maps cleanly:
 
@@ -194,19 +177,6 @@ Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
 **Why off by default:** a default is used by whoever *isn't* thinking about it, and a serial only pays off when it's **paired with the discussion** ("what would break if we posted a name→number list?"). So the tool keeps the clean, on-topic ballot as the default and makes numbering a conscious opt-in — when you type `--serials`, that's your cue to actually teach the verifiability lesson (and to keep the numbers **unlinked** to any name). **Teaching verifiability? Reach for `--serials`.** Otherwise the plain ballot is the right call.
 
 *Scope note (so nobody rabbit-holes this):* the whole serial demo runs on **paper + hand-count** — print serialized ballots, count them, publish the list of counted serials. You don't need BetterVoting or any digital plumbing for it, and you shouldn't try to thread serials through BV's vote API (it doesn't carry them, and it isn't needed). A genuinely *digital* verifiable count is **end-to-end verifiability (E2E-V)** — a cryptography topic beyond this teaching repo. The lesson is already complete on paper; stop there.
-
-## LH-only — the offline path
-
-No BetterVoting, no account, no internet — just paper. Print blank ballots straight from a candidate list (no YAML, no export needed):
-
-```bash
-python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
-    --candidates "Ada,Ben,Cara" --title "Class President" --out ballots.pdf
-```
-
-With no `--bv-id`, the ballot prints with **no QR and no results link** (the generic STAR footer) — exactly right when there's no online election. Then: vote on paper → **hand-count**, or transcribe into a YAML and run the **[LH engine](../why_yaml_test_cases.md)** for a reproducible digital audit. The `.txt` output makes this path **zero-dependency** — it runs and prints anywhere.
-
-**Why keep it — it's the foundation, not a lesser option.** It's the most accessible (no signup or wifi), the most private (nothing leaves the room), and the simplest (ballots in seconds). BetterVoting's QR and live results are the *enhancement* layered on top, not a requirement. Want a QR *without* a BV election — say, pointing at a "learn STAR" page? Pass `--qr-url <URL>`.
 
 ## Why do this (the teaching value)
 

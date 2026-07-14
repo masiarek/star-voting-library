@@ -12,21 +12,24 @@ anywhere, form-feed page breaks), .pdf = print-ready PDF (via playwright), .html
 instructions, a 0-5 bubble grid per candidate, and the BV election id + results URL
 so paper and platform stay linked. Default is one ballot per page.
 
-Candidates + title come from ONE of:
-  --yaml FILE          a repo election .yaml (title + candidates from its ballots header;
-                       picks up bv_election_id automatically if present)
-  --bv-export FILE     a frozen BetterVoting <case>_bv_export.json (also carries the
-                       election + race descriptions onto the ballot)
-  --candidates "A,B,C" --title "..." [--bv-id ID] [--question "..."]
-                       [--description "..."] [--race-description "..."]   manual
+ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
+  --bv-export FILE     a BetterVoting export JSON. Everything the ballot needs —
+                       title, candidates, election id, and the election + race
+                       descriptions — comes from the export. So the workflow is
+                       always: create the election on BV -> export its JSON ->
+                       print from that. (`create_bv_test_election.py` saves the
+                       JSON automatically when it creates the election.)
+  --title / --question  optional overrides (e.g. a cleaner ballot title than the
+                        verbose BV one). Output styling flags: see --help.
 
-Stdlib only — no dependencies (QR is optional via `segno`). `--selftest` runs
-known-answer checks. Design spec & rationale: bv_ballot_sheet_FSD.md (beside this file).
+Optional deps: `segno` (QR), `playwright` (direct .pdf) — both degrade gracefully.
+`--selftest` runs known-answer checks. Design spec: bv_ballot_sheet_FSD.md.
 
 Examples
 --------
-  python3 bv_ballot_sheet.py --yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml --copies 30
-  python3 bv_ballot_sheet.py --candidates "Ada,Ben,Cara" --title "Class President" --bv-id demo1
+  python3 bv_ballot_sheet.py --bv-export path/to/<election>_bv_export.json \\
+      --title "Best Ice Cream Flavor" --serials --logo assets/BW_long_form.jpg \\
+      --verify-bv --out ballots.pdf
   python3 bv_ballot_sheet.py --selftest
 """
 
@@ -42,34 +45,8 @@ import textwrap
 
 
 # --------------------------------------------------------------------------- #
-# Read candidates / title / bv-id from the supported sources.                  #
+# Read title / candidates / id / descriptions from a BetterVoting export JSON.  #
 # --------------------------------------------------------------------------- #
-def from_yaml(path):
-    """Return (title, bv_id, [candidates]) from a repo election YAML, parsed
-    minimally (no PyYAML dependency): title line, bv_election_id line, and the
-    first content row under `ballots:` (the comma-separated candidate header)."""
-    title = bv_id = None
-    cands = None
-    in_ballots = False
-    for ln in open(path, encoding="utf-8").read().splitlines():
-        s = ln.strip()
-        if s.startswith("election_title:"):
-            title = s.split(":", 1)[1].strip().strip('"\'')
-        elif s.startswith("bv_election_id:"):
-            bv_id = s.split(":", 1)[1].strip().strip('"\'')
-        elif s.startswith("ballots:"):
-            in_ballots = True
-        elif in_ballots and cands is None:
-            content = s.split("#", 1)[0].strip()
-            if content and content not in ("|-", "|", ">-", ">"):
-                cands = [c.strip() for c in content.split(",") if c.strip()]
-    if not cands:
-        raise SystemExit(f"Could not find a candidate header under `ballots:` in {path}")
-    # (election/race descriptions in repo YAMLs are block scalars this minimal
-    # parser doesn't read; use --description if you want one on a YAML-sourced ballot.)
-    return title, bv_id, cands, None, None
-
-
 def _find_candidate_names(obj):
     """Best-effort recursive search of a BV export for candidate display names."""
     names = []
@@ -357,11 +334,11 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
 
 
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
-                 qr=True, serials=False, write_ins=0, qr_url=None, notice="", blurb="",
+                 qr=True, serials=False, write_ins=0, notice="", blurb="",
                  promo="", logo_uri="", qr_size=88):
-    # Two QRs when there's a BV election: vote (left) and results (right). A custom
-    # --qr-url (LH-only) yields a single vote QR; no BV/URL yields none.
-    vote_url = qr_url or (f"https://bettervoting.com/{bv_id}" if bv_id else None)
+    # Two QRs when there's a BV election: vote (left) and results (right).
+    # (bv_id is None only when --verify-bv found the id doesn't resolve → no QR.)
+    vote_url = f"https://bettervoting.com/{bv_id}" if bv_id else None
     results_url = f"https://bettervoting.com/{bv_id}/results" if bv_id else None
     vote_qr_uri = qr_data_uri(vote_url) if (vote_url and qr) else None
     results_qr_uri = qr_data_uri(results_url) if (results_url and qr) else None
@@ -634,12 +611,13 @@ def selftest():
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--yaml")
-    ap.add_argument("--bv-export")
-    ap.add_argument("--candidates", help='comma-separated, e.g. "Ada,Ben,Cara"')
-    ap.add_argument("--title")
-    ap.add_argument("--question", help="the ballot question line")
-    ap.add_argument("--bv-id")
+    ap.add_argument("--bv-export", metavar="FILE",
+                    help="a BetterVoting export JSON — the ONLY input route. Title, "
+                         "candidates, election id, and descriptions all come from it. "
+                         "Create the election on BV first, then print from its export.")
+    ap.add_argument("--title", help="optional: override the ballot title (e.g. a cleaner "
+                                    "name than the verbose BV title)")
+    ap.add_argument("--question", help="optional: override the ballot question line")
     ap.add_argument("--copies", type=int, default=30)
     ap.add_argument("--per-page", type=int, default=1,
                     help="ballots per printed page (default 1 — one ballot per page, "
@@ -650,9 +628,6 @@ def main():
                          "(needs `playwright`), .html (default) = styled, Print → PDF")
     ap.add_argument("--no-qr", action="store_true",
                     help="omit the QR code (QR needs the `segno` library)")
-    ap.add_argument("--qr-url",
-                    help="point the QR at any URL (e.g. a 'learn STAR' page) — useful "
-                         "for LH-only demos with no BV election; default is the BV election")
     ap.add_argument("--serials", action="store_true",
                     help="number each ballot (a 'keep this to verify it was counted' "
                          "receipt — see the secret-ballot caveat in the demo page)")
@@ -664,12 +639,6 @@ def main():
     ap.add_argument("--no-notice", action="store_true",
                     help="omit the demonstration/secret-ballot notice (not recommended "
                          "— it's what keeps the serial number a teaching device)")
-    ap.add_argument("--description", metavar="TEXT",
-                    help="election description printed under the title (a --bv-export "
-                         "supplies this automatically from the election's description)")
-    ap.add_argument("--race-description", metavar="TEXT",
-                    help="race/contest description used as the ballot question line "
-                         "(a --bv-export supplies this from the race's description)")
     ap.add_argument("--promo", action="store_true",
                     help="add a small footer promo line linking the STAR education/"
                          "platform sites (starvoting.org, equal.vote, bettervoting.com)")
@@ -694,23 +663,14 @@ def main():
     if args.selftest:
         raise SystemExit(0 if selftest() else 1)
 
-    title = args.title
-    bv_id = args.bv_id
-    candidates = None
-    edesc = rdesc = None
-    if args.yaml:
-        title, bv_id2, candidates, edesc, rdesc = from_yaml(args.yaml)
-        bv_id = bv_id or bv_id2
-        title = args.title or title
-    elif args.bv_export:
-        t2, bv_id2, candidates, edesc, rdesc = from_bv_export(args.bv_export)
-        title = args.title or t2
-        bv_id = bv_id or bv_id2
-    elif args.candidates:
-        candidates = [c.strip() for c in args.candidates.split(",") if c.strip()]
-    else:
-        raise SystemExit("Provide one of --yaml / --bv-export / --candidates "
-                         "(see --help). Run --selftest to verify the tool.")
+    # ONE input route: a BetterVoting export supplies title, candidates, id, and
+    # descriptions. Create the election first, then print from its export.
+    if not args.bv_export:
+        raise SystemExit("Provide --bv-export FILE (a BetterVoting export JSON). "
+                         "Create the election on BV first, then print from its export. "
+                         "Run --selftest to verify the tool.")
+    t2, bv_id, candidates, edesc, rdesc = from_bv_export(args.bv_export)
+    title = args.title or t2
 
     # Guard against a dead BV link: a QR/results URL should only appear for a REAL,
     # already-created election. --verify-bv confirms the id resolves; if it doesn't,
@@ -727,10 +687,10 @@ def main():
         else:
             print(f"[verify-bv] BetterVoting election '{bv_id}' confirmed.")
 
-    # Description → blurb under the title; race description → the question line.
-    # CLI flags win over what the export supplied.
-    blurb = (args.description or edesc or "").strip()
-    question = (args.question or args.race_description or rdesc
+    # From the export: election description → blurb under the title; race
+    # description → the question line (--question overrides).
+    blurb = (edesc or "").strip()
+    question = (args.question or rdesc
                 or "Score each candidate from 0 (worst) to 5 (best).").strip()
     notice = "" if args.no_notice else (args.notice or DEFAULT_NOTICE)
 
@@ -772,7 +732,7 @@ def main():
 
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
-                         write_ins=args.write_ins, qr_url=args.qr_url, notice=notice,
+                         write_ins=args.write_ins, notice=notice,
                          blurb=blurb, promo=promo, logo_uri=logo_uri, qr_size=args.qr_size)
 
     want_pdf = args.out.lower().endswith(".pdf")

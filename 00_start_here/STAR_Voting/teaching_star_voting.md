@@ -60,22 +60,21 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 
 ## Print your own paper ballots (the hands-on loop)
 
-The repo has a tool that **turns any STAR election into print-ready paper ballots** — [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) (stdlib `python3`). One command, e.g. the live "best pet" election:
+The repo has a tool that **turns a BetterVoting election into print-ready paper ballots** — [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). **One route:** create the election on BetterVoting, export its JSON, and print from that export — so the ballot's QR and results link are always real:
 
 ```bash
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
-    --candidates "Bird,Cat,Python,Dog,Fish,Rabbit,Rat" \
-    --title "What Makes the Best Pet?" --bv-id pet \
-    --serials --write-ins 1 --copies 25 --out pets.pdf
+    --bv-export "06_Other/_demo_dropbox/<election>-<id>.json" \
+    --serials --write-ins 1 --copies 25 --verify-bv --out pets.pdf
 ```
 
-The ballot is styled after the **official Equal Vote STAR ballot** (STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, zebra stripes, finalist footer), so it's instantly familiar. End `--out` in **`.pdf`** for a print-ready PDF (one ballot per page) straight to the printer; `.txt` for a zero-dependency plain-text ballot that prints anywhere; `.html` to Print → PDF yourself. The fun parts:
+The ballot is styled after the **official Equal Vote STAR ballot** (STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, zebra stripes, finalist footer), so it's instantly familiar. End `--out` in **`.pdf`** for a print-ready PDF (one ballot per page); `.txt` for a zero-dependency plain-text ballot; `.html` to Print → PDF yourself. The fun parts:
 
-- a **QR code** → scan to open the live election ([`bettervoting.com/pet`](https://bettervoting.com/pet)), so a class can vote **on paper *and* online** and compare;
+- **two QR codes** → *scan to vote* and *scan for results*, so a class can vote **on paper *and* online** and compare;
 - optional **serial "receipts"** (`--serials`) — a lovely way to teach *verifiability* and the secret-ballot tension (publish the counted serials; discuss why a name→number list would be bad);
-- optional **write-in rows** (`--write-ins N`), a **`--logo`** for the real STAR / chapter logo, and `--promo` / `--chapter` for a footer.
+- optional **write-in rows** (`--write-ins N`), a **`--logo`** for the real STAR / chapter logo, and `--promo` / `--chapter` for a footer, and **`--verify-bv`** so no one scans a dead link.
 
-**Two ways to run it:** *BetterVoting-integrated* (create the election first, so the QR + results are live — add `--verify-bv` so no one scans a dead link) or *LH-only / offline* (just `--candidates` + `--title`, no account, no internet). The full walkthrough — both paths, the print checklist, the three ways to count the result, and the ready-made [lunch](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) / [pet](https://bettervoting.com/pet) / [meta_pets](https://bettervoting.com/meta_pets) elections — is [**Run a paper-ballot STAR demo**](running_a_paper_ballot_demo.md).
+The full walkthrough — the create → export → print → vote → count loop, the print checklist, the three ways to count the result, and the ready-made [pet](https://bettervoting.com/pet) / [meta_pets](https://bettervoting.com/meta_pets) / [beer](https://bettervoting.com/yt3232) / [ice cream](https://bettervoting.com/2wfth7) elections — is [**Run a paper-ballot STAR demo**](running_a_paper_ballot_demo.md).
 
 ## Running a real hand-count (for organizers)
 

@@ -22,38 +22,27 @@ Let a teacher / workshop leader / demo runner turn a STAR election into **printa
 
 ## 3. Workflow supported
 
-The teacher-facing page frames this as **two paths** — **A: BetterVoting-integrated** (live QR + online results) and **B: LH-only / offline** (no account) — see [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md). The fullest (Path A) loop:
+**ONE route** (simplified 2026-07, at the user's request — see §5.1). The tool prints from a BetterVoting export, full stop:
 
 ```
-1. Create the election on BetterVoting → BV id (bettervoting.com/<id>)   [Path A only]
-2. Print matching paper ballots        → bv_ballot_sheet.py → .pdf / .txt / .html
-3. Vote on paper                        → fill 0–5 bubbles
+1. Create the election on BetterVoting → export its JSON
+2. Print ballots from the export        → bv_ballot_sheet.py --bv-export … → .pdf / .txt / .html
+3. Vote                                 → fill 0–5 bubbles on paper, and/or scan the QR
 4. Get the result — any of:             → hand-count · LH engine · cast to BV
-5. (Path A) Compare to BetterVoting     → bettervoting.com/<id>/results
+5. Compare to BetterVoting              → bettervoting.com/<id>/results
 6. (roadmap) OCR paper → YAML           → LH engine  (today: human transcribes)
 ```
-The tool owns step 2. Step 4's routes are the [count-by-hand](../../00_start_here/STAR_Voting/count_star_by_hand.md) / [teacher](../../00_start_here/STAR_Voting/teaching_star_voting.md) pages and the LH engine. Step 1 can use [`create_bv_test_election.py`](./create_bv_test_election.py) (creates the election **and** casts seed ballots via the BV API — so the id is real and the QR/results resolve; cf. FR-12). **Path B** skips steps 1 and 5 entirely — omit the `bv_id`, and the ballot prints with no QR/results.
+The tool owns step 2. Step 4's routes are the [count-by-hand](../../00_start_here/STAR_Voting/count_star_by_hand.md) / [teacher](../../00_start_here/STAR_Voting/teaching_star_voting.md) pages and the LH engine. Step 1 uses [`create_bv_test_election.py`](./create_bv_test_election.py) (creates the election **and** saves its JSON to `06_Other/_demo_dropbox/` — so the id is real and the QR/results resolve; cf. FR-12), or the BV UI.
 
-**The five workflows this enables** (all supported today; the loop above is the fullest one):
+**Why one route:** earlier the tool also accepted `--candidates` (offline, no BV) and `--yaml`. Those were dropped to make the workflow singular and unambiguous — *create → export → import → print*. The cost, accepted deliberately: **no offline printing** (you must create a BV election first). The upside: the id is always real (no fabricated-id dead links), descriptions/title/candidates come from one authoritative source, and there is exactly one thing to document and teach.
 
-| # | Workflow | Election defined in | Vote | Counted by | QR |
-|---|---|---|---|---|---|
-| 1 | **Pure paper, offline** (the simplest) | manual / a YAML | paper only | by hand | none (or `--qr-url`) |
-| 2 | **Paper + BV — the "compare" demo** | a BV election | paper and/or online | hand-count *vs.* BV | → the BV election |
-| 3 | **Create → print** | `create_bv_test_election.py` → id | paper and/or online | hand-count *vs.* BV | → BV |
-| 4 | **Meta method-comparison** | `meta_pets` (4 races) | online (or paper STAR) | winner changes per method | → `meta_pets` |
-| 5 | **Paper → LH engine** | manual / YAML | paper | transcribe → the engine | optional |
-
-#1 and #2 are the two that matter; #3 is #2 with the create step (the only worthwhile *smoothing* is having `create_bv_test_election.py` print the ready-to-run `bv_ballot_sheet.py` command — not yet done); #4 is a teaching framing (pair with `criteria_at_a_glance.md`); #5 is the offline-verify path.
-
-**Workflow #2 is really *hybrid* (validated on real hardware).** The same election runs on paper **and** online at once: paper voters fill bubbles, QR voters scan and vote on BetterVoting. The payoff for the teacher is **less work, not more** — online votes need **no transcription** (BV tabulates them the instant they're cast), so you can push most of the room to the QR and keep only a handful of paper ballots to demonstrate the hand-count. This also reframes the return path (§6): OCR only ever matters for the paper ballots you *choose* to keep; every QR voter has already closed the loop.
+**Still hybrid.** Because the ballot carries a real QR, the same election runs on paper **and** online at once — paper voters fill bubbles, QR voters scan and vote on BetterVoting (online votes need no transcription). So you can push most of a room to the QR and keep a few paper ballots to demonstrate the hand-count.
 
 ## 4. Functional requirements — the tool
 
-**FR-1 Inputs (candidates + title), any one of:**
-- `--yaml FILE` — a repo election YAML; minimal parse pulls `election_title`, `bv_election_id` (if present), and the candidate header under `ballots:`. No PyYAML dependency.
-- `--bv-export FILE` — a frozen `*_bv_export.json`; extracts title, `election_id`, candidate names, and the election + first-race **descriptions**.
-- `--candidates "A,B,C"` [`--title` `--bv-id` `--question` `--description` `--race-description`] — manual.
+**FR-1 Input — one route:**
+- `--bv-export FILE` (**required**) — a BetterVoting export JSON. Extracts the title, `election_id`, candidate names, and the election + first-race **descriptions**. This is the *only* input; there is no manual/candidate-list or YAML route (removed 2026-07, §5.1).
+- `--title` / `--question` — optional overrides (e.g. a cleaner ballot title than the verbose BV one). Everything else is output styling (FR-2 … FR-12).
 
 **FR-2 Output — the extension picks the format:**
 - **`.txt` → plain ASCII** (strictly 7-bit — enforced by `--selftest`). **Zero dependencies**, prints from anywhere (`lpr ballots.txt`, or any editor). One ballot per page via the **form-feed** char (`\f`). `( )` circles to mark; no QR (the results URL is printed instead). The purest, most portable ballot — and the best fit for the "keep it simple" guard when styling isn't needed.
@@ -66,17 +55,17 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 **FR-3 Per-ballot content (styled after the official Equal Vote STAR ballot):** a **demonstration notice** (FR-9); a **STAR VOTING wordmark** header (star-with-check facsimile + "SCORE · THEN · AUTOMATIC · RUNOFF"); the election **title**, optional **description blurb** (italic), and **question**; the four **bulleted instructions** ("Give your favorite candidate(s) five stars", etc.) plus a fine-print overvote line; the **score grid** — **Worst/Best** labels, **star-outline column headers** 1–5 (0 plain), **digit-in-bubble** cells, **zebra-striped** candidate rows; the **finalist explanation** ("The two highest scoring candidates are finalists…"); a footer with serial + BV id + results URL; and an optional **promo line** (FR-10). The ASCII (`.txt`) output mirrors this as faithfully as 7-bit allows (wordmark, bullets, Worst/Best, `(0)…(5)` bubbles, explanation).
 
-**FR-3a Descriptions:** a `--bv-export` automatically carries the election's `description` (→ the blurb) and the first race's `description` (→ the question line) onto the ballot; `--description` / `--race-description` override or supply them for the YAML/manual paths (the minimal YAML parser doesn't read block-scalar descriptions). Both print in all three formats.
+**FR-3a Descriptions:** the export's election `description` becomes the blurb and the first race's `description` becomes the question line, automatically. `--question` overrides the question line. Both print in all three formats.
 
 **FR-10 Promo footer (optional, off by default):** `--promo` adds a small footer line — `Learn more: starvoting.org · equal.vote · bettervoting.com`; `--chapter "TEXT"` appends a local chapter (e.g. `STAR Voting NC (facebook.com/groups/starvotingnc)`) and implies `--promo`. **Off by default** so the base ballot matches the clean official design; **links are parameters, not the election description** (see §5.5).
 
 **FR-11 Custom logo (optional):** `--logo FILE` embeds a local image (SVG/PNG/JPG) as a self-contained data URI in the header, **replacing** the drawn STAR-wordmark facsimile — so a user can drop in the real Equal Vote logo or a chapter logo. HTML/PDF only (ignored for `.txt`, which keeps the text wordmark). Missing/unreadable file → a warning and graceful fallback to the facsimile. Bounded on purpose: **one** header logo, not a general image-insertion system (that would be engineering past the lesson).
 
-**FR-12 BV-id integrity — no dead links (the rule + a check).** The QR and the `…/results` URL must only appear when the BV election **actually exists** — a scanned QR that 404s is worse than none (you find out *after* printing). The rule: **only set a `bv_id` for a real, already-created election;** an LH-only or synthetic run **omits the id**, and the tool then prints no QR and no results line (the generic STAR footer instead — already the behavior when `bv_id` is absent). As a safety net, **`--verify-bv`** pings `GET /API/Election/{id}` before printing: a definitive 4xx → **drop the QR + results link and print LH-only** (with a warning to create the election first); confirmed → keep; unreachable (offline) → keep with a warning (don't punish offline use). Stdlib `urllib`, no new dependency; recommended before a real print run. *(This bug was found via a synthetic `demo99` test export whose fabricated id printed a `bettervoting.com/demo99/results` link that doesn't resolve.)*
+**FR-12 BV-id integrity — no dead links.** The single input route already makes the id real by construction (it comes from an actual BV export). As a belt-and-suspenders against a stale or hand-edited export, **`--verify-bv`** pings `GET /API/Election/{id}` before printing: a definitive 4xx → **drop the QR + results link and print a plain ballot** (with a warning); confirmed → keep; unreachable (offline) → keep with a warning. Stdlib `urllib`, no new dependency; recommended before a real print run. *(The dead-link risk originally surfaced via a synthetic `demo99` export with a fabricated id; the one-route simplification removed the class of bug at the source, and `--verify-bv` catches the rest.)*
 
 **FR-9 Demonstration notice (on by default):** every ballot carries a standing notice — default `"EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."` — because this tool *only* makes demo ballots. It also does real work: it makes the optional **serial number** read as a teaching device rather than surveillance (a numbered *real* ballot would break the secret ballot; the notice preempts the immediate — and correct — objection). `--notice "..."` overrides the text; `--no-notice` omits it (discouraged). Kept 7-bit ASCII so it survives unchanged into the `.txt` output. Rendered as a bordered banner (HTML) / dashed banner (ASCII) at the top of each ballot.
 
-**FR-4 QR codes (optional).** With a `bv_id`, the header shows **two** QRs flanking the logo — **vote** (left, → `bettervoting.com/<bv-id>`, "scan to vote") and **results** (right, → `…/results`, "scan for results"). A `--qr-url <URL>` (LH-only) yields a single vote QR; no BV / no URL → none.
+**FR-4 QR codes.** The header shows **two** QRs flanking the logo — **vote** (left, → `bettervoting.com/<bv-id>`, "scan to vote") and **results** (right, → `…/results`, "scan for results"). The short vote URL prints in bold under the vote QR. `--no-qr` omits both; if `--verify-bv` finds the id doesn't resolve, both are dropped (→ plain ballot).
 - Implemented via the pure-Python **`segno`** library (declared in `pyproject.toml`). **Graceful fallback:** no segno → no QR, tool still runs on plain `python3`. `--no-qr` to force off.
 - **Size:** `--qr-size PX` (default 88) — bump it up for easier scanning across a room.
 - **The election id is printed ONCE** (was three times): a **bold** `Election <id>` + the `…/results` link in the footer. The QRs carry captions only (no URL text), so the id isn't duplicated under them.
@@ -91,7 +80,7 @@ The trade-off is deliberate: **ASCII** = zero-dep and universal but plain (no QR
 
 ## 5. Key design decisions & rationale
 
-**5.1 Ballot is self-sufficient; BV is an enhancement.** With `--bv-id` → id, results URL, QR. Without → generic STAR heading, no QR — still a valid **LH-only** ballot. So the tool serves both BV-backed and offline demos with no forced complexity.
+**5.1 One input route: print from a BetterVoting export (simplified 2026-07).** The tool originally accepted three inputs — `--bv-export`, `--yaml`, and a manual `--candidates` list (which allowed *offline*, no-BV printing). At the user's request that was collapsed to **`--bv-export` only**: create the election on BV, export the JSON, print from it. The trade-off, chosen deliberately: **offline printing is gone** (you must create a BV election first). What it buys — a single unambiguous workflow, an id that's always real (no fabricated-id dead links, cf. FR-12), one authoritative source for title/candidates/descriptions, and far less to document. (An earlier version of this spec argued the offline/LH-only path was "the foundation"; the user reversed that in favor of simplicity — recorded here so the history is clear.)
 
 **5.2 Flag mistakes by reusing the repo's existing markers — don't invent a scheme.** The marker vocabulary (see [CLAUDE.md](../../CLAUDE.md)) already maps ambiguous input to `0`-with-a-flag:
 
@@ -112,7 +101,7 @@ So "voter marked 2, 4 and 5 for one candidate" → `?` in that column; the engin
 
 The decider is a **default-design principle**: *a default is used by the person who isn't thinking about it.* A serial only pays off **paired with the discussion** ("what breaks if we post a name→number list?"); a teacher who wants that types `--serials`, and that deliberate act is the signal they'll frame it. An ON default instead hands numbered ballots to the teacher who *didn't* plan the lesson — propagating the double-edged artifact without the framing that makes it safe. So: **the safe, on-topic thing is the default; the richer-but-double-edged thing is a conscious opt-in.** Serials OFF, notice ON, and the teacher docs actively *invite* `--serials` when verifiability is the lesson. **Keep serials unlinked to identity in any real use; do not build BV/digital serial plumbing (§2).**
 
-**5.4 QR is conditional, not decorative.** It only appears when there's something to open (a BV election, or an explicit `--qr-url`). No BV, no `--qr-url` → no QR. Avoids a QR that points nowhere.
+**5.4 QR is conditional, not decorative.** The QRs are dropped only when the id doesn't resolve (`--verify-bv`) or `--no-qr` is set — never printed pointing at nothing.
 
 **5.6 Adopt the official ballot gray palette; skip the brand fonts.** From Equal Vote's brand sheet:
 - **Grays applied** (match + save ink, both cheap wins): bubbles `#666666`, stars `#cccccc`, alternating-row highlight `#ececec` (was a black bubble border, blue-gray stars, blue stripe). These are the exact ballot-element grays the brand specifies, and the lighter tones use less toner across a 30-ballot print run — which the source images explicitly flag ("too much black, too much ink"). The `#999999` candidate-separator lines aren't added — we use the zebra stripe instead of lines (either is on-brand; stripe is cleaner).
@@ -145,19 +134,16 @@ Restated in the repo's terms (the *goal*, not the letter of the original suggest
 ## 8. Invocation
 
 ```bash
-# Path A — recommended classroom print run: real BV election, official logo,
-# chapter footer, ballot serials, verified id, direct PDF
+# The one route: recommended classroom print run — print from a BV export, with the
+# official logo, chapter footer, ballot serials, a verified id, direct PDF.
 python3 tools_adam/bv_ballot_sheet.py \
-    --bv-export path/to/<election>_bv_export.json \
+    --bv-export "06_Other/_demo_dropbox/<election>-<id>.json" \
+    --title "A cleaner ballot title" \
     --copies 30 --serials --promo --chapter "STAR Voting NC (…)" \
     --logo tools_adam/assets/BW_long_form.jpg --verify-bv --out ballots.pdf
 
-# Path B — LH-only / offline: candidates + title only, no BV (no QR/results)
-python3 tools_adam/bv_ballot_sheet.py --candidates "Ada,Ben,Cara" \
-    --title "Class President" --out ballots.pdf      # or ballots.txt (zero-dep)
-
-# from a repo YAML (auto-picks title, candidates, bv id, descriptions)
-python3 tools_adam/bv_ballot_sheet.py --yaml 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml --copies 30
+# .txt (zero-dep ASCII) or .html output — just change the --out extension.
+python3 tools_adam/bv_ballot_sheet.py --bv-export "…/<export>.json" --out ballots.txt
 
 python3 tools_adam/bv_ballot_sheet.py --selftest        # known-answer checks
 ```
@@ -174,16 +160,16 @@ A rendered example ballot (BV-linked, two QRs, long-form logo):
 
 | # | Scenario | Key flags | Expected |
 |---|---|---|---|
-| 1 | LH-only, zero-dep ASCII | `--candidates "A,B,C" --title "…" --out b.txt` | 7-bit text ballot, form-feed pages, no QR |
-| 2 | LH-only, styled PDF | `--candidates … --out b.pdf` | facsimile logo, no QR, generic footer |
-| 3 | BV-linked, **two QRs** | `--bv-export … --out b.pdf` (or `--bv-id ID`) | vote QR left + results QR right; election id once in footer |
+| 1 | Zero-dep ASCII output | `--bv-export … --out b.txt` | 7-bit text ballot, form-feed pages, results URL printed (no QR image) |
+| 2 | Styled PDF, **two QRs** | `--bv-export … --out b.pdf` | vote QR left + results QR right; election id once in footer |
+| 3 | Missing input → clear error | (no `--bv-export`) | exits with "Provide --bv-export FILE …" |
 | 4 | Descriptions from a real export | `--bv-export <real _bv_export.json>` | election description → blurb; race description → question |
 | 5 | Custom logo | `--logo assets/BW_long_form.jpg` (or `NC_STAR_Logo1.jpg`) | image replaces the drawn wordmark; missing file → warning + facsimile |
 | 6 | Serials (ballot numbers) | `--serials` | "Ballot #N — keep this…" line; off by default |
 | 7 | Write-in rows | `--write-ins 2` | two blank "Write-in: ___" rows |
 | 8 | Promo + chapter footer | `--promo --chapter "STAR Voting NC (…)"` | footer "Learn more:" line |
-| 9 | Verify a **real** id | `--bv-id <live id> --verify-bv` | "confirmed"; QR + results kept |
-| 10 | Verify a **fake** id | `--bv-id nope --verify-bv` | "no election… printing LH-only"; QR + results dropped |
+| 9 | Verify a **real** id | export of a live election `+ --verify-bv` | "confirmed"; QR + results kept |
+| 10 | Verify a **stale** id | export whose id no longer resolves `+ --verify-bv` | "no election… printing plain"; QR + results dropped |
 | 11 | QR size | `--qr-size 108` | larger QRs |
 | 12 | Pagination | `--copies 30 --per-page 1` | 30 pages, one ballot each, no trailing blank |
 | 13 | Graceful degrade | run without `segno` / `playwright` | prints URL instead of QR / writes `.html` instead of `.pdf` |
