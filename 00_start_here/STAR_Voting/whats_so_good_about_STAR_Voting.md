@@ -43,7 +43,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam (after the demo):** Notice what just happened. Nobody was dishonest. The majority just got divided and conquered by their own ballot. That's not a freak event — it can happen in *any* race with more than two candidates.
 
-> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `00_start_here/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
+> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `00_start_here/our_voting_system_is_broken.md` (the foundational "Problem with Choose-One Plurality" page).
 
 ---
 

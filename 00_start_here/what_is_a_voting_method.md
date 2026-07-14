@@ -89,7 +89,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 Cross-references:
 - `00_start_here/GLOSSARY.md` — "Ballot," "Tabulation," "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Majority finish," "Vote splitting."
-- `00_start_here/our_voting_system_is_broken.md` — the next episode (1.5).
+- `00_start_here/our_voting_system_is_broken.md` — the next step: the diagnosis, now an educational page (roadmap episode 1.5 builds its Q&A from it).
 - `split_voting/00_plurality_vs_majority.yaml` — the live demo for Segment 4.
 - `LINKS.md` → **Full Deck 2025** ("Rating vs Ranking," "Problem: Vote-Splitting").
 - Source: Google Doc **"Voting Method - what is it?"** (the ballot/count framing and the Andre/Blake/Carmen plurality table this episode is built from).

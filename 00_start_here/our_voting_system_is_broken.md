@@ -1,83 +1,102 @@
-# Our Voting System Is Broken — The Problem with Plurality
-### A recorded conversation — Larry (host) & Adam (expert) · Voting 101 · foundational
+# The Problem with Choose-One Plurality
 
-The **diagnosis** episode — the "why fix anything at all?" that comes *before* the spoiler-effect mechanism and the STAR pitch. Larry presses on whether the problem is real, frequent, and serious; Adam concedes what's true, then shows why Choose-One Plurality can't be trusted to find the majority's choice — and how STAR settles it on a single ballot.
+*"Our voting system is broken" is a big claim, so this page tests it the way a fair skeptic would: is the problem real? Is it frequent? Is it serious when it happens? Is it getting worse? The answers are honest — including the concessions reform advocates should make — and they end at the part that actually stings: a Choose-One ballot cannot even tell you whether its winner was the majority's choice.*
 
-Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesson file.
-
----
-
-## Segment 1 — Is the system actually broken?
-
-**Larry:** You keep saying "our voting system is broken and needs fixing." Before I buy the fix, sell me the problem. Is our current system actually prone to failure? And if it is — have these failures been *frequent*? Were they *serious* when they happened? Are they likely to get *worse*?
-
-**Adam:** Four fair questions, and I'll take them honestly. The fundamental problem with Choose-One Plurality isn't really in dispute: the rules allow a candidate who is the *least* preferred choice of a majority of voters to be declared the winner. A majority can be against you and you can still win — just by leading a divided field. Nobody seriously argues that's democratic; it plainly violates majority rule. The only open question is the one you put your finger on: is it worth doing something about?
-
-> [SLIDE] Full Deck — "PROBLEM: VOTE-SPLITTING"; Arend (Torrance) — "SPOILER EFFECT." [REPO] `00_start_here/GLOSSARY.md` — "Choose-One / Plurality," "Plurality / minority winner."
+→ Companions: [What is a voting method? (ballot + count)](voting_method_ballot_and_count.md) — the foundation this builds on · [the spoiler effect](spoiler_effect.md) and the [vote-splitting worked set](../method_comparisons/split_voting/README.md) — the mechanism in numbers · [What's so good about STAR Voting?](STAR_Voting/whats_so_good_about_STAR_Voting.md) — the fix · Glossary: [Choose-One / Plurality, minority winner, vote splitting, lesser-evil voting](GLOSSARY.md)
 
 ---
 
-## Segment 2 — "But usually the front-runner really is the favorite, right?"
+## Is the problem real? Yes — it's in the rules, not in anyone's opinion
 
-**Larry:** Come on — most of the time the person with the most votes really is the one most people want. Isn't this a problem on paper more than in practice?
+The core defect of Choose-One Plurality is not in dispute: the rules allow a candidate who is the *least* preferred choice of a majority of voters to be declared the winner. A majority can be against you and you can still win — just by leading a divided field. Nobody seriously argues that outcome is democratic; it plainly violates majority rule. The genuinely open questions are the practical ones — how often it happens, how much it costs, and which way it's trending — and those deserve honest answers, not slogans.
 
-**Adam:** Usually, yes — and I won't pretend otherwise. When you have richer ballots to check against, the plurality front-runner *usually* does turn out to be the broader choice too; in Australia's ranked elections the first-preference leader goes on to win about **90%** of the time. But flip that around: roughly **one race in ten** is decided differently once you look past first choices. And here's the catch — a Choose-One ballot gives you **no way to tell which kind of race you're in.** You can't know, from the marks on the ballot, whether your plurality winner is the majority's real choice or an accident of vote-splitting.
+## The honest concession: usually the front-runner really is the favorite
 
-**Larry:** So the ballot itself hides the answer.
+Most of the time, the candidate with the most votes really is the one most people wanted, and there is no point pretending otherwise. Where richer ballots exist to check against, the plurality front-runner usually turns out to be the broader choice too: in Australia's ranked elections, the first-preference leader goes on to win about **90%** of the time.
 
-**Adam:** Exactly. That hidden answer is precisely what STAR puts back on the table — but hold that thought for a second.
+Flip that around, though, and the concession has teeth: roughly **one race in ten** is decided differently once you look past first choices. And here is the catch — a Choose-One ballot gives you **no way to tell which kind of race you're in.** One mark per voter is all the data that exists. You cannot know, from the marks on the ballot, whether your plurality winner is the majority's real choice or an accident of a divided field. The ballot itself hides the answer.
 
-> [REPO] `00_start_here/GLOSSARY.md` — "Condorcet winner," "Head-to-head / pairwise."
+## What Choose-One cannot see
+
+A Choose-One ballot records a single fact per voter — one name — and discards everything else the voter thinks. Two failure modes live in that blind spot:
+
+- **Vote-splitting.** Similar candidates divide their shared supporters, and a candidate most voters oppose slips past the divided majority. The ballot never collected the information ("I'd take either of those two over *that* one") that would have exposed it. The mechanism, in runnable numbers: the [vote-splitting worked set](../method_comparisons/split_voting/README.md) and [the spoiler effect](spoiler_effect.md).
+- **The lesser-evil incentive.** Voters can see the trap, so they defend themselves the only way one mark allows: abandon the favorite and back a tolerable front-runner instead. The system doesn't just miscount honest preferences — it teaches voters to stop expressing them. That's [lesser-evil voting](GLOSSARY.md), and it means even the marks Choose-One *does* collect are distorted by the method itself.
+
+## Watch it happen: the team lunch
+
+The smallest version of the trap is the canonical [team lunch vote](../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) ([live BetterVoting results ↗](https://bettervoting.com/fyy886/results)). Five coworkers pick lunch: two love Sushi, two love Tacos, and everyone is perfectly happy with Pizza. Under Choose-One each person names exactly one favorite, so the vote splits **Sushi 2, Tacos 2, Pizza 1** — and Pizza, the option nobody objected to, comes *last*. A coin flip hands lunch to Sushi or Tacos, and half the team is stuck with something they rated a 0.
+
+Give the same five voters a ballot that can carry their full opinion — 0–5 scores — and the hidden information surfaces:
+
+```text
+--- STAR Voting Method (single winner) ---
+ Tabulating 5 ballots.
+Count × Sushi,Tacos,Pizza
+    2 ×     5,    0,    3
+    2 ×     0,    5,    3
+    1 ×     3,    1,    5
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   Pizza         -- 17 -- First place
+   Sushi         -- 13 -- Second place
+   Tacos         -- 11
+ Pizza and Sushi advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   Pizza         -- 3 -- First place
+   Sushi         -- 2
+   Equal Support -- 0
+ Pizza wins.
+   Voters with a preference: 5 of 5 (no Equal Support).
+   Pizza 3 (60%) vs Sushi 2 (40%); majority = 3.
+```
+
+Same voters, same preferences — the only thing that changed is how much of each voter's opinion the ballot was allowed to carry. The engine's method comparison states the diagnosis directly:
+
+```text
+[Divergence from STAR]
+  STAR                   = Pizza
+  Choose-One (Plurality) = Sushi   (differs from STAR)
+  RCV-IRV                = Sushi   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+```
+
+Choose-One elects Sushi, the choice a majority scored at 0. And note the RCV-IRV line: it elects Sushi here too — eliminating candidates by first-choice counts inherits a version of the same blindness ([center squeeze](topics/center_squeeze/README.md)). The full case page, with the preference matrix and every method's round-by-round report, is [the team lunch vote](../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) (source: [`bv2184_fyy886_lunch_vote.yaml`](../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml)).
+
+## How often, and how serious? The two-party mask
+
+If one race in ten can come out wrong, why did nobody notice for so long? Because for decades two dominant parties *masked* it. Squeeze almost every race into two big tents and you rarely see a third candidate split the vote — the flaw was real but invisible. That's the second honest concession: in a strictly two-candidate world, Choose-One works fine, because with two candidates "most votes" and "majority" are the same thing.
+
+The mask slips the moment serious independents show up. In 1992, with Ross Perot in the race, Bill Clinton won an outright *majority* of the popular vote in exactly **one state — his home state of Arkansas** (plus the District of Columbia). Every other state was carried with a plurality, not a majority: a president elected while 49 states out of 50 never gave *any* candidate more than half their vote. Not a fluke of one strange year — structural. The instant voters have more than two real choices, which is exactly what most people say they want, Choose-One starts producing minority winners and punishing the voters who dared back a third option.
+
+**Is it getting worse?** Yes, by construction: the failure rate scales with the number of serious candidates, and the two-party grip that suppressed third candidacies is loosening. So the skeptic's scorecard reads: prone to failure — yes, by rule; serious when it happens — yes, it can seat the majority's least-preferred choice; trending worse — yes, as fields grow. Three yeses is why it's worth fixing.
+
+## What a fix has to do — and how STAR does it
+
+A real fix has to close both halves of the blind spot, not just exhort people to "vote smarter":
+
+1. **Stop punishing honesty.** In [STAR Voting](STAR_Voting/STAR_start_here.md) you score every candidate 0–5, so supporting your favorite *and* a compromise can't split your own side. The lesser-evil dilemma isn't managed — it's removed, because one mark per voter was the thing creating it.
+2. **Check majority support instead of hoping for it.** STAR's Automatic Runoff is a head-to-head majority test between the two strongest candidates, and the preference matrix shows exactly who beats whom ([Condorcet / head-to-head](topics/condorcet/README.md)). The very question Choose-One cannot answer — "is this winner actually the majority's choice?" — STAR prints right on the result, from one single ballot.
+
+Under Choose-One, "is the plurality winner the real winner?" is unknowable from the ballots. Under STAR, you read it off the result. That's the whole difference between hoping for majority rule and measuring it. The full pitch is its own page: [What's so good about STAR Voting?](STAR_Voting/whats_so_good_about_STAR_Voting.md)
+
+## The takeaway
+
+Choose-One can crown the candidate a majority likes *least*, and the ballot itself won't tell you when that's happened. It usually gets the winner right — and gives you no way to know when it didn't. STAR refuses to split your vote, then *proves* the winner has majority support — on one ballot, in plain sight.
 
 ---
 
-## Segment 3 — How often, and how serious? (the two-party mask)
+## Where this fits in the teaching
 
-**Larry:** If it's only one in ten, why has nobody noticed?
+This is Voting 101, **foundational** — the *diagnosis* that comes before the mechanism and the fix. Reading order: [What is a voting method?](voting_method_ballot_and_count.md) (ballot vs count) → this page (why the Choose-One count fails) → [the spoiler effect](spoiler_effect.md) and the [vote-splitting demos](../method_comparisons/split_voting/README.md) (the mechanism, case by case) → [What's so good about STAR Voting?](STAR_Voting/whats_so_good_about_STAR_Voting.md) (the fix). Keep the words "Choose-One" / "Plurality" for a public audience; the argument here is method-accurate for Plurality specifically. (Reworked from a classic pro-reform passage that originally leaned on IRV; here the resolution is STAR's majority runoff + preference matrix, which answer "is the plurality winner the real winner?" directly, on one ballot.)
 
-**Adam:** Because for decades two dominant parties *masked* it. Squeeze almost every race into two big tents and you rarely see a third candidate split the vote — the flaw was real but invisible. That's been changing. The moment serious independents show up — Perot-style or otherwise — we snap right back to plurality winners instead of majority winners. In 1992, with Perot in the race, Bill Clinton won an outright *majority* of the popular vote in exactly **one state — his home state of Arkansas** (plus the District of Columbia). Every other state was carried with a plurality, not a majority: a president elected while 49 states out of 50 never gave *any* candidate more than half their vote.
-
-**Larry:** So it's not a fluke of one strange year.
-
-**Adam:** It's structural. The instant voters have more than two real choices — which is exactly what most people *say* they want — Choose-One starts handing out minority winners and punishing the voters who dared back a third option. That's vote-splitting and the spoiler effect, and as the two-party grip loosens it's getting *more* common, not less. So: prone to failure, yes; serious when it happens, yes; and trending worse. That's three yeses — which is why it's worth fixing.
-
-> [DEMO] `split_voting/01_political_left_split.yaml` — a 60–66% coalition splits and Choose-One hands the seat to a candidate the majority ranked last; the `[Vote-splitting check]` block says it in numbers. [REPO] the spoiler mechanism in detail: `whats_so_good_about_STAR_Voting.md` Segment 1, plus the `split_voting/` demos.
-
----
-
-## Segment 4 — How STAR fixes it (the pivot)
-
-**Larry:** Okay, I feel the problem. Why is STAR the answer, and not just "try harder"?
-
-**Adam:** Because STAR removes the two things that break Plurality. First, you're never punished for honesty: you score every candidate 0–5, so backing your favorite *and* a compromise can't split your own side. Second — and this answers your earlier question directly — STAR doesn't just *hope* the winner has majority support, it *checks*. The automatic runoff is a head-to-head majority test between the top two, and the preference matrix shows you exactly who beats whom. The very thing Choose-One hides — "is this winner actually the majority's choice?" — STAR prints right on the result, from one single ballot.
-
-**Larry:** So "is the plurality winner the real winner?" stops being a guess.
-
-**Adam:** Right. Under Choose-One you *can't know*. Under STAR you *read it off the result.* That's the whole difference between hoping for majority rule and measuring it.
-
-> [DEMO] `split_voting/04_star_wars_vote_split.yaml` — Choose-One elects Vader (40%, the candidate 60% ranked last); STAR elects Leia, the majority's real choice, and the `[Divergence from STAR]` line shows **Choose-One (Plurality)** disagreeing with STAR while STAR matches the Condorcet (head-to-head) winner. [SLIDE] Full Deck — "THE VOTING DILEMMA" (Skywalker / Vader / Leia).
-
----
-
-## Segment 5 — The one-liner
-
-**Larry:** Give me the sentence I can repeat.
-
-**Adam:** "Choose-One can crown the candidate a majority likes *least*, and the ballot itself won't tell you when that's happened. STAR refuses to split your vote, then *proves* the winner has majority support — on one ballot, in plain sight."
-
----
-
-## Where this fits in the overall teaching
-
-- **Level:** Voting 101 — **foundational**. This is the *diagnosis*; play it before the spoiler-effect mechanism and the STAR pitch.
-- **Pairs with:** the spoiler effect (flagship Segment 1 / roadmap Episode 2) and the `split_voting/` demos — this episode argues *that* the system is broken; those show *how*. Then `whats_so_good_about_STAR_Voting.md` delivers the fix.
-- **Terminology:** keep it `Choose-One` / `Plurality` for a public audience; the point is method-accurate for Plurality specifically. (Reworked from a classic pro-reform passage that originally leaned on IRV; here the resolution is STAR's majority runoff + preference matrix, which answer "is the plurality winner the real winner?" directly, on one ballot.)
-
-Cross-references:
-- `00_start_here/GLOSSARY.md` — "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Vote splitting," "Spoiler effect," "Majority finish."
-- `00_start_here/Why_STAR_Voting.md` — Part 1 problem bullets.
-- `00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md` — Segment 1 (the spoiler).
-- `LINKS.md` → **Full Deck 2025** ("PROBLEM: VOTE-SPLITTING," "THE VOTING DILEMMA"), **Torrance LWV (Arend)** ("SPOILER EFFECT").
+**Presenters:** the recorded-episode cues for this material — **[SLIDE]** Full Deck 2025: "PROBLEM: VOTE-SPLITTING," "THE VOTING DILEMMA"; Torrance LWV (Arend): "SPOILER EFFECT" · **[DEMO]** [the team lunch](../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md), [01_political_left_split](../method_comparisons/split_voting/_main/_main_pages/01_political_left_split.md), [04_star_wars_vote_split](../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md). Slide short names resolve in [LINKS.md](LINKS.md); the episode roadmap (episode 1.5) lives in [conversation scripts](conversation_scripts.md).
 
 <!-- Sourced facts: Clinton 1992 won an absolute majority of the popular vote only
 in Arkansas (53.2%) and DC (every other state a plurality). In Australian IRV
