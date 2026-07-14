@@ -1,0 +1,150 @@
+======================================================================
+SOURCE FILE:     01_c3_b3_ann-bob-cal.yaml
+SOURCE MODIFIED: 2026-07-14 17:41:59
+TABULATED FILE:  01_c3_b3_ann-bob-cal_tabulated.txt
+TABULATED AT:    2026-07-14 17:42:15
+======================================================================
+
+election_title: Ann, Bob, Cal - the canonical leading example (single-winner STAR)
+scenario_description: |-
+  THE repo's leading example - the exact election shown in the root README, the
+  YAML authoring template, and "Why YAML test cases". One file, three voters,
+  three candidates: the smallest STAR election where both rounds do visible,
+  different work. If a page needs "a STAR election" and nothing scenario-specific,
+  it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+
+  What each ballot teaches:
+  - Voter 1 (5,4,0): likes BOTH Ann (5) and Bob (4) - no vote-splitting fear.
+    In the runoff her ballot is one full vote for Ann (5 > 4): a near-tie in
+    scores is still a whole vote in the runoff.
+  - Voter 2 (3,5,2): a Bob fan who honestly scores the others too.
+  - Voter 3 (0,3,5): loves Cal, rates Bob a lukewarm 3 - and that honest 3 is
+    exactly what makes Bob everyone's acceptable choice.
+
+  The count: Scoring Round totals Bob 12, Ann 8, Cal 7 -> finalists Bob & Ann.
+  Automatic Runoff: Bob is preferred on 2 ballots, Ann on 1 -> Bob wins 2-1.
+  Bob leads the scores AND wins the runoff - deliberately no twist, so the
+  PROCEDURE is the whole lesson. (Bob is also the Condorcet winner.)
+
+  CANONICAL = FROZEN: never edit these ballots. A lesson needing different
+  ballots gets a new scenario with a new cast of names.
+
+# Presenter notes (ignored by the engine; not shown to the audience).
+video_script: |-
+  SAY: "Three voters, three candidates - small enough to count in your head.
+       Add the stars: Bob 12, Ann 8, Cal 7. Bob and Ann are the finalists.
+       Now each ballot becomes one vote for the finalist it scored higher:
+       Ann gets voter 1 (5 beats 4), Bob gets voters 2 and 3. Bob wins 2 to 1."
+  HOW: Walk voter 1's ballot slowly - she scored Bob a friendly 4, yet her
+       runoff vote goes to Ann. Scores pick the finalists; preferences pick
+       the winner.
+  WHY: This is the mechanics demo, not a persuasion demo - nothing surprising
+       happens on purpose. Save the "winner flips" drama for the lunch vote
+       and the runoff-reversal cases.
+
+options:
+  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
+  show_condorcet: false   # show the [Condorcet Winner] line
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
+  show_runoff_percent: true   # the self-reconciling two-line runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: false   # each ballot is a distinct teaching case - one row per voter
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+voting_method: STAR   # STAR Voting - Single-winner
+num_winners: 1
+ballots: |-
+  Ann,Bob,Cal
+  5,4,0
+  3,5,2
+  0,3,5
+
+expected_winners:
+  - Bob
+
+# file: 01_c3_b3_ann-bob-cal.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Ann, Bob, Cal - the canonical leading example (single-winner STAR) ===
+  THE repo's leading example - the exact election shown in the root README, the
+  YAML authoring template, and "Why YAML test cases". One file, three voters,
+  three candidates: the smallest STAR election where both rounds do visible,
+  different work. If a page needs "a STAR election" and nothing scenario-specific,
+  it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+
+  What each ballot teaches:
+  - Voter 1 (5,4,0): likes BOTH Ann (5) and Bob (4) - no vote-splitting fear.
+    In the runoff her ballot is one full vote for Ann (5 > 4): a near-tie in
+    scores is still a whole vote in the runoff.
+  - Voter 2 (3,5,2): a Bob fan who honestly scores the others too.
+  - Voter 3 (0,3,5): loves Cal, rates Bob a lukewarm 3 - and that honest 3 is
+    exactly what makes Bob everyone's acceptable choice.
+
+  The count: Scoring Round totals Bob 12, Ann 8, Cal 7 -> finalists Bob & Ann.
+  Automatic Runoff: Bob is preferred on 2 ballots, Ann on 1 -> Bob wins 2-1.
+  Bob leads the scores AND wins the runoff - deliberately no twist, so the
+  PROCEDURE is the whole lesson. (Bob is also the Condorcet winner.)
+
+  CANONICAL = FROZEN: never edit these ballots. A lesson needing different
+  ballots gets a new scenario with a new cast of names.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ann    |  * Bob    |    Cal    |
+-----------------------------------------------------
+       * Ann > |    ---     |1 - 0 - 2  |2 - 0 - 1  |
+       * Bob > | 2 - 0 - 1  |   ---     |2 - 0 - 1  |
+         Cal > | 1 - 0 - 2  |1 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bob — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Bob
+  Choose-One (Plurality) = Ann   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots.
+Ann,Bob,Cal
+  5,  4,  0
+  3,  5,  2
+  0,  3,  5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ann        1  0  1  0  0  1  |     8   2.7
+Bob        1  1  1  0  0  0  |    12   4.0
+Cal        1  0  0  1  0  1  |     7   2.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bob           -- 12 -- First place
+   Ann           --  8 -- Second place
+   Cal           --  7
+ Bob and Ann advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bob           -- 2 -- First place
+   Ann           -- 1
+   Equal Support -- 0
+ Bob wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Bob 2 (67%)  ·  Ann 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bob

@@ -10,6 +10,10 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 - **[The team lunch vote](_main_pages/bv2184_fyy886_lunch_vote.md)** — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
 
+**The canonical mechanics demo.** The exact election quoted in the [root README](../../README.md) and the authoring docs — three voters, three candidates, both rounds doing visible work, no twist on purpose.
+
+- [Ann, Bob, Cal — the canonical leading example](_main_pages/01_c3_b3_ann-bob-cal.md) — reuse rules & the full canonical set: [TIPS — Canonical Elections](../../00_start_here/TIPS_canonical_elections.md)
+
 **Intros — three candidates (101).** How a STAR ballot is scored and read, where the third option makes the two rounds matter.
 
 - [Three candidates, one ballot](_main_pages/02a_c3_b1_three-candidates.md) · [Three candidates, two ballots](_main_pages/02b_c3_b2_three-candidates.md)

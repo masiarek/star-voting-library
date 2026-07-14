@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**269 election files** (234 single-winner, 35 multi-winner) across 15 method(s).
+**272 election files** (237 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 143 |
+| STAR | 146 |
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 33 |
 | Approval | 10 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (143)
+## STAR  (146)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -40,6 +40,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Flat_scores_ties_06_scoring_tie_4way`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_pages/Flat_scores_ties_06_scoring_tie_4way.md) | `01_STAR/Flat_scores_ties/` | 1 | Flat scores 06 — scoring-round 4-way tie (ties at every step) → _Ava_ | [`.yaml`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.yaml) |
 | [`Flat_scores_ties_07_fully_flat`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_pages/Flat_scores_ties_07_fully_flat.md) | `01_STAR/Flat_scores_ties/` | 1 | Flat scores 07 — fully flat ballots (the maximal tie + abstention trap) → _Ararat_ | [`.yaml`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_07_fully_flat.yaml) |
 | [`Flat_scores_ties_08_all_flat_zero_count`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_pages/Flat_scores_ties_08_all_flat_zero_count.md) | `01_STAR/Flat_scores_ties/` | 1 | Flat scores 08 — every ballot flat (BetterVoting counts 0) → _Anchovy_ | [`.yaml`](../../01_STAR/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.yaml) |
+| [`01_c3_b3_ann-bob-cal`](../../01_STAR/_main/_main_pages/01_c3_b3_ann-bob-cal.md) | `01_STAR/_main/` | 1 | Ann, Bob, Cal - the canonical leading example (single-winner STAR) → _Bob_ | [`.yaml`](../../01_STAR/_main/01_c3_b3_ann-bob-cal.yaml) |
 | [`02a_c3_b1_three-candidates`](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) | `01_STAR/_main/` | 1 | Three candidates, one ballot - single-winner STAR → _Choco_ | [`.yaml`](../../01_STAR/_main/02a_c3_b1_three-candidates.yaml) |
 | [`02b_c3_b2_three-candidates`](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | `01_STAR/_main/` | 1 | Three candidates, two ballots - single-winner STAR → _Vanilla_ | [`.yaml`](../../01_STAR/_main/02b_c3_b2_three-candidates.yaml) |
 | [`03a_c3_b3_style-bullet-vote`](../../01_STAR/_main/_main_pages/03a_c3_b3_style-bullet-vote.md) | `01_STAR/_main/` | 1 | Voting styles — a valid STAR bullet vote (3 candidates) → _Vanilla_ | [`.yaml`](../../01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml) |
@@ -150,6 +151,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2165_9vxcj7_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2165_9vxcj7_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 full — STAR: Boone wins the runoff 8–7 → _Boone_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml) |
 | [`bv2166_b7b8dv_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2166_b7b8dv_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too) → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml) |
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml) |
+| [`mono_raise_delete_after`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_after.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_after.yaml) |
+| [`mono_raise_delete_before`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_before.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |
 | [`monotonicity_star_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_before.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (BEFORE — X wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_before.yaml) |
 | [`bv2138_cxrf8v_star`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_star.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff → _Brad_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml) |

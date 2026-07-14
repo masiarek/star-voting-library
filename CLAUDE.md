@@ -156,6 +156,11 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   matched pair or family (e.g. `05a`/`05b`) keeps the *same* cast — it's the same
   election with one thing changed, so new names would imply a different election. Use
   bare `A/B/C/D` only for purely abstract/academic illustrations where names are noise.
+  **Canonical reusable elections** (Ann/Bob/Cal, the team lunch, the runoff reversal,
+  Tennessee, the pets) are registered in `00_start_here/TIPS_canonical_elections.md`
+  with their jobs and the two rules — *one election per page* and *canonical = frozen
+  ballots* (same cast ⇒ same election; a new lesson gets a new cast, never a tweak).
+  Reuse a canonical for generic examples instead of minting a new cast.
 - **Markers (all tabulate as 0):** `-` blank · `~` race abstention · `&` candidate
   abstention · `?` spoiled · `%` spoiled+reissued. **No `^`** (removed). Approval
   ballots accept only `0`/`1` (+ blank/marker = not approved).

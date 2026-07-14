@@ -29,9 +29,9 @@ STAR asks for a little more, using two things you already know:
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
-**And here's the ballot you'd actually fill out** — five candidates, each rated 0 to 5 stars:
+**And here's the ballot the five coworkers would actually fill out** — the official STAR ballot design, printed for this very lunch election (it's real: the QR codes go to the live election on BetterVoting):
 
-<img src="../img/star_ballot_example.png" width="440" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
+<img src="img/fyy886_lunch_ballot.png" width="560" alt="A printed STAR paper ballot for the Team Lunch election: the STAR VOTING wordmark, the four scoring instructions, and a score grid with one row per option — Sushi, Tacos, Pizza — each with 0–5 bubbles from Worst to Best; below the grid, the finalist explanation (the two highest scoring candidates are finalists; your full vote goes to the finalist you prefer) and a footer with the BetterVoting election id fyy886 and its results URL">
 
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
@@ -82,11 +82,13 @@ Because the two rounds measure two different things:
 
 > Strength of support finds the real contenders → number of supporters decides between them.
 
-The part that takes a moment to click is what happens to *your* ballot in the second round. Follow one voter's ballot all the way through:
+The part that takes a moment to click is what happens to *your* ballot in the second round. Follow one voter's ballot all the way through — Sofia, one of the two Sushi-lovers from the lunch:
 
-<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Caroline's ballot scores Choco 5, Vanilla 3, Almond 0. Round 1 (Scoring Round): her stars are added to each flavor's total — Choco +5, Vanilla +3, Almond +0 — and the two highest overall, Choco and Vanilla, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Choco higher than Vanilla (5 > 3), so her whole ballot becomes a single vote for Choco. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
+<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Sofia's ballot scores Sushi 5, Tacos 0, Pizza 3. Round 1 (Scoring Round): her stars are added to each option's total — Sushi +5, Pizza +3, Tacos +0 — and the two highest overall, Pizza and Sushi, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Sushi higher than Pizza (5 > 3), so her whole ballot becomes a single vote for Sushi. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
 
 So your scores do two jobs: their *size* helps pick the two finalists, and then, in the runoff, they shrink to a single **vote for whichever finalist you rated higher**. A 5-vs-3 and a 5-vs-0 count exactly the same in that final step — one vote each. Once that lands, STAR makes sense.
+
+And notice how Sofia's story ends: her runoff vote went to Sushi, and Sushi still lost the final, 2 to 3. She wasn't cheated — she was **outvoted**, fair and square. Meanwhile the 3 stars she gave Pizza had already done real work in Round 1, helping the option she was happy with reach the final at all. That's an honest ballot doing exactly what it should: full say in who the finalists are, one equal vote between them.
 
 Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
 
