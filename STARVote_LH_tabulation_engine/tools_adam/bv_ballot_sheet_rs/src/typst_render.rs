@@ -82,6 +82,7 @@ fn build_source(b: &Ballot) -> String {
     stroke: none,
     inset: (x: 2pt, y: 4pt),
     fill: (_, row) => if row >= 2 and calc.odd(row) {{ rgb("#ececec") }} else {{ none }},
+    table.hline(y: 2, stroke: 1.5pt + rgb("#bbbbbb")),
     [], text(weight: "bold")[Worst], [], [], [], [], text(weight: "bold")[Best],
     text(weight: "bold", size: 13pt)[Candidate], starhead(0), starhead(1), starhead(2), starhead(3), starhead(4), starhead(5),
     ..CANDS.map(c => (text(weight: "bold", size: 13pt)[#c], bub(0), bub(1), bub(2), bub(3), bub(4), bub(5))).flatten()
