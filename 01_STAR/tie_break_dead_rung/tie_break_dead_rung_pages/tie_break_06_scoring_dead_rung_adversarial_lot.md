@@ -37,14 +37,13 @@ The count, step by step — the rounds and how the winner is reached:
 ```text
 [Divergence from STAR]
   STAR                   = Ann
-  Choose-One (Plurality) = Cara   (differs from STAR)
+  Choose-One (Plurality) = tie (Cara / Ben)   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
+  RCV-RR                 = tie (Ann / Ben)   (tie — includes the STAR winner)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_06_scoring_dead_rung_adversarial_lot_RCV-IRV_tabulated.txt
 

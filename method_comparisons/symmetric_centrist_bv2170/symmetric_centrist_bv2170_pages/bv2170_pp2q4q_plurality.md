@@ -33,17 +33,6 @@ Count:Avery,Blake,Casey
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Blake
-  RCV-IRV  = Avery   (differs from STAR)
-  Approval = Casey   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_RCV-IRV_tabulated.txt
-
 --- Choose-One / Plurality Voting Method (single winner) ---
 
 [STAR Voting]

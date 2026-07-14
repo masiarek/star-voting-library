@@ -61,7 +61,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Pizza
-  Choose-One (Plurality) = Sushi   (differs from STAR)
+  Choose-One (Plurality) = tie (Sushi / Tacos)   (differs from STAR)
   RCV-IRV                = Sushi   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

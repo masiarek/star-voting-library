@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     RCV_ballot_example.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  RCV_ballot_example_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:25
+TABULATED AT:    2026-07-14 18:13:12
 ======================================================================
 
 election_title: "RCV-IRV — a basic ranked-ballot example (3 candidates)"

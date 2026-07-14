@@ -139,7 +139,7 @@ Legend: For - Equal Support - Against
           Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Purple > Green > Pink > Purple)
+  No Condorcet winner (majority cycle: Purple > Green > Blue > Purple)
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score

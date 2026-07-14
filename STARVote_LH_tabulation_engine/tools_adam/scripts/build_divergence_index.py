@@ -93,10 +93,12 @@ def _copeland_winner(candidates, score_ballots, order):
     """Ranked Robin (Copeland) winner from {cand: value} ballots.
 
     Mirrors run_ranked_robin's tally: most pairwise wins, then total margin,
-    then lot/priority order. Returns (winner, is_cycle)."""
+    then lot/priority order. Returns (winner, is_cycle, top_tied) where
+    top_tied is the set of candidates tied on BOTH wins and margin — a >1 set
+    means only the arbitrary lot/priority step separated them."""
     matrix = w.calculate_preference_matrix(candidates, score_ballots)
     if not matrix:
-        return None, False
+        return None, False, []
     wins = {c: 0 for c in candidates}
     margin = {c: 0 for c in candidates}
     for i, a in enumerate(candidates):
@@ -113,7 +115,9 @@ def _copeland_winner(candidates, score_ballots, order):
     leaders = [c for c in candidates if wins[c] == top]
     # A cycle: nobody wins all their matchups yet several share the top win count.
     is_cycle = len(leaders) > 1 and top < len(candidates) - 1
-    return ranked[0], is_cycle
+    top_tied = [c for c in ranked
+                if wins[c] == wins[ranked[0]] and margin[c] == margin[ranked[0]]]
+    return ranked[0], is_cycle, top_tied
 
 
 def _score_winner(candidates, score_ballots, order):
@@ -184,14 +188,20 @@ def analyze(path):
     irv_rev, rev_unstable, _, _ = _irv_stable(candidates, ballots, rev)
     irv_fragile = (irv_unstable or rev_unstable
                    or (irv is not None and irv_rev is not None and irv != irv_rev))
+    # Exact tie at the IRV deciding round: the "winner" was separated only by
+    # pyrankvote's tie comparator, not by the count (same rule as the engine's
+    # [Divergence from STAR] block).
+    _irv_res, _, _ = w._run_irv(candidates, ballots, order)
+    irv_tie = w.irv_deciding_tie(_irv_res, order)
 
     strict = _strict_pseudo_scores(ballots, order)
-    rr_weak, cyc_weak = _copeland_winner(candidates, ballots, order)
-    rr_strict, cyc_strict = _copeland_winner(candidates, strict, order)
+    rr_weak, cyc_weak, rr_tie = _copeland_winner(candidates, ballots, order)
+    rr_strict, cyc_strict, _ = _copeland_winner(candidates, strict, order)
     cond_weak = w.condorcet_winner(candidates, ballots)
     cond_strict = w.condorcet_winner(candidates, strict)
 
     approval = w.approval_winner(candidates, ballots, order)
+    approval_tie = w.approval_leaders(candidates, ballots, order)
     score = _score_winner(candidates, ballots, order)
 
     rr_conv_sensitive = rr_weak != rr_strict
@@ -213,6 +223,11 @@ def analyze(path):
         "irv_fragile": irv_fragile,
         "rr_conv_sensitive": rr_conv_sensitive,
         "cycle": cyc_weak or cyc_strict or cond_weak is None,
+        # Exact-tie top sets (>1 member = only an arbitrary tiebreak separated
+        # them). Empty list = clean single winner for that method.
+        "IRV_tie": irv_tie,
+        "RR_tie": rr_tie if len(rr_tie) > 1 else [],
+        "Approval_tie": approval_tie if len(approval_tie) > 1 else [],
     }
 
 
@@ -236,10 +251,20 @@ BUCKETS = [
 def classify(r):
     if r["STAR"] is None:
         return "APPROVAL_OR_MINOR"
-    irv_diff = r["IRV"] is not None and r["IRV"] != r["STAR"]
+
+    def _tie_includes_star(tie_set):
+        # Same rule as the engine's [Divergence from STAR] block: an exact tie
+        # that INCLUDES the STAR winner is not a divergence — the single name
+        # recorded for the method is just an arbitrary tiebreak realization.
+        return bool(tie_set) and r["STAR"] in tie_set
+
+    irv_diff = (r["IRV"] is not None and r["IRV"] != r["STAR"]
+                and not _tie_includes_star(r["IRV_tie"]))
     rr = r["RR_weak"]
-    rr_diff = rr is not None and rr != r["STAR"]
-    appr_diff = r["Approval"] is not None and r["Approval"] != r["STAR"]
+    rr_diff = (rr is not None and rr != r["STAR"]
+               and not _tie_includes_star(r["RR_tie"]))
+    appr_diff = (r["Approval"] is not None and r["Approval"] != r["STAR"]
+                 and not _tie_includes_star(r["Approval_tie"]))
 
     if irv_diff and (r["tie_ballots"] or r["irv_fragile"]):
         return "IRV_DIFFERS_ARTIFACT"          # tie-break artifact, not a cycle
@@ -421,6 +446,11 @@ def _flag_line(r):
         flags.append("IRV winner flips under reversed priority (fragile tie)")
     if r["rr_conv_sensitive"]:
         flags.append(f"RR conversion-sensitive (weak={r['RR_weak']}, strict={r['RR_strict']})")
+    for key, label in (("IRV_tie", "IRV deciding round"),
+                       ("RR_tie", "Ranked Robin top"),
+                       ("Approval_tie", "Approval top")):
+        if r.get(key):
+            flags.append(f"{label} is an exact tie ({' / '.join(r[key])})")
     return "; ".join(flags) if flags else "none"
 
 
@@ -547,12 +577,16 @@ def main():
     cols = ["bucket", "file", "candidates", "ballots", "STAR", "IRV", "IRV_rev",
             "RR_weak", "RR_strict", "Approval", "Score", "Condorcet_weak",
             "Condorcet_strict", "tie_ballots", "irv_fragile",
-            "rr_conv_sensitive", "cycle"]
+            "rr_conv_sensitive", "cycle", "IRV_tie", "RR_tie", "Approval_tie"]
+
+    def _cell(v):
+        return " / ".join(v) if isinstance(v, list) else v
+
     with (OUT_DIR / "divergence.csv").open("w", newline="") as fh:
         wri = csv.DictWriter(fh, fieldnames=cols)
         wri.writeheader()
         for r in sorted(rows, key=lambda x: (x["bucket"], x["file"])):
-            wri.writerow({k: r.get(k, "") for k in cols})
+            wri.writerow({k: _cell(r.get(k, "")) for k in cols})
 
     # --- INDEX.md (human review surface) ---
     L = []
@@ -624,6 +658,10 @@ def main():
             flags.append("IRV flips on reversed priority")
         if r["rr_conv_sensitive"]:
             flags.append(f"RR conv-sensitive (weak={r['RR_weak']}, strict={r['RR_strict']})")
+        for key, label in (("IRV_tie", "IRV"), ("RR_tie", "RR"),
+                           ("Approval_tie", "Approval")):
+            if r.get(key):
+                flags.append(f"{label} exact tie ({' / '.join(r[key])})")
         flagtxt = ("  \n    _flags: " + "; ".join(flags) + "_") if flags else ""
         duptxt = (f"  \n    _also at: {', '.join('`'+d+'`' for d in dupes)}_"
                   if dupes else "")

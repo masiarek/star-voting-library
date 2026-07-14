@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     mono_raise_delete_after.yaml
-SOURCE MODIFIED: 2026-07-12 13:55:35
+SOURCE MODIFIED: 2026-07-14 17:47:10
 TABULATED FILE:  mono_raise_delete_after_tabulated.txt
-TABULATED AT:    2026-07-12 13:55:49
+TABULATED AT:    2026-07-14 18:13:04
 ======================================================================
 
 election_title: "STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses"

@@ -26,8 +26,11 @@ The count, step by step — the rounds and how the winner is reached:
 
 ```text
 [Divergence from STAR]
-  STAR     = Allison
-  Approval = Bill   (differs from STAR)
+  STAR                   = Allison
+  Choose-One (Plurality) = tie (Allison / Bill)   (tie — includes the STAR winner)
+  RCV-IRV                = tie (Allison / Bill)   (tie — includes the STAR winner)
+  Approval               = Bill   (differs from STAR)
+  RCV-RR                 = tie (Allison / Bill)   (tie — includes the STAR winner)
 
 --- STAR Voting Method (single winner) ---
 

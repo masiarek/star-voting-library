@@ -33,10 +33,6 @@ Choco,Vanilla,Almond
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR                   = Vanilla
-  Choose-One (Plurality) = Choco   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]

@@ -40,6 +40,7 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Blake
   Choose-One (Plurality) = Andre   (differs from STAR)
+  Approval               = tie (Blake / Carmen)   (tie — includes the STAR winner)
 
 [Vote-splitting check]
   Choose-One first choices: Andre 40, Blake 35, Carmen 25

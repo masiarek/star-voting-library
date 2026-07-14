@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv750_tie_breaking_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  bv750_tie_breaking_bloc_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:03
+TABULATED AT:    2026-07-14 18:12:48
 ======================================================================
 
 election_title: "BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family)"

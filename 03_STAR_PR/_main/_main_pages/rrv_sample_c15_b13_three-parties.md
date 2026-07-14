@@ -54,9 +54,9 @@ The count, step by step — the rounds and how the winner is reached:
 ```text
 [Divergence from STAR]
   STAR                   = Orange5
-  Choose-One (Plurality) = Orange1   (differs from STAR)
+  Choose-One (Plurality) = tie (Orange1 / Yellow1)   (differs from STAR)
   RCV-IRV                = Orange1   (differs from STAR)
-  Approval               = Orange1   (differs from STAR)
+  Approval               = tie (Orange1 / Orange3 / Orange4)   (differs from STAR)
   Note: 13 of 13 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be
         an artifact of score-to-rank tie-breaking rather than a deep

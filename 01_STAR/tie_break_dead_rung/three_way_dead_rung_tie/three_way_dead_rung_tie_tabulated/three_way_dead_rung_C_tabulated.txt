@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     three_way_dead_rung_C.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  three_way_dead_rung_C_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:00
+TABULATED AT:    2026-07-14 18:12:45
 ======================================================================
 
 election_title: 'Three-way dead-rung tie — published order C,A,B elects C'
@@ -68,15 +68,16 @@ Legend: For - Equal Support - Against
   No strict Condorcet winner; unbeaten candidates: A, B, C (pairwise ties)
 
 [Divergence from STAR]
-  STAR    = C
-  RCV-IRV = B   (differs from STAR)
+  STAR                   = C
+  Choose-One (Plurality) = tie (C / A / B)   (tie — includes the STAR winner)
+  RCV-IRV                = tie (A / B)   (differs from STAR)
+  Approval               = tie (C / A / B)   (tie — includes the STAR winner)
+  RCV-RR                 = tie (C / A / B)   (tie — includes the STAR winner)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: three_way_dead_rung_tie_tabulated/three_way_dead_rung_C_RCV-IRV_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_C_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_C_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

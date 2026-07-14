@@ -36,6 +36,7 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Nashville
   Choose-One (Plurality) = Memphis   (differs from STAR)
   RCV-IRV                = Knoxville   (differs from STAR)
+  Approval               = tie (Nashville / Chattanooga)   (tie — includes the STAR winner)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

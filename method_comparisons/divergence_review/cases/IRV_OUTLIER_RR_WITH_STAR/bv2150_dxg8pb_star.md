@@ -60,7 +60,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Beth
-  Choose-One (Plurality) = Andy   (differs from STAR)
+  Choose-One (Plurality) = tie (Andy / Carl)   (differs from STAR)
   RCV-IRV                = Carl   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

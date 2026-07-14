@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     03b_c3_b3_2_expand_style-protest-vote.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  03b_c3_b3_2_expand_style-protest-vote_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:00
+TABULATED AT:    2026-07-14 17:59:38
 ======================================================================
 
 # Continuation of the previous lesson (03b low-score ballots).
@@ -90,10 +90,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: Almond — matches the STAR winner
-
-[Divergence from STAR]
-  STAR     = Almond
-  Approval = Choco   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

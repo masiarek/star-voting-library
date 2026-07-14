@@ -67,6 +67,7 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Chocolate
   Choose-One (Plurality) = Vanilla   (differs from STAR)
   RCV-IRV                = Vanilla   (differs from STAR)
+  Approval               = tie (Chocolate / Strawberry)   (tie — includes the STAR winner)
   Note: 1 of 4 ballots (25%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep

@@ -44,6 +44,7 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Bob
   Choose-One (Plurality) = Ann   (differs from STAR)
   RCV-IRV                = Ann   (differs from STAR)
+  Approval               = tie (Bob / Carl)   (tie — includes the STAR winner)
   RCV-RR (Condorcet)     = Ann   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

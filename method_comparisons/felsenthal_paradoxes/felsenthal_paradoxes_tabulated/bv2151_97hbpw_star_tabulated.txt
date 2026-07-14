@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2151_97hbpw_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  bv2151_97hbpw_star_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:14
+TABULATED AT:    2026-07-14 18:12:59
 ======================================================================
 
 election_title: "Felsenthal Ex.4 after two no-shows — STAR: unmoved, still Beth"

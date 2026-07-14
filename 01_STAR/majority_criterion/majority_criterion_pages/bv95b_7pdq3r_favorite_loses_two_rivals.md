@@ -48,6 +48,7 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Bruno
   Choose-One (Plurality) = Ada   (differs from STAR)
   RCV-IRV                = Ada   (differs from STAR)
+  Approval               = tie (Bruno / Cleo)   (tie — includes the STAR winner)
   RCV-RR (Condorcet)     = Ada   (differs from STAR)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an

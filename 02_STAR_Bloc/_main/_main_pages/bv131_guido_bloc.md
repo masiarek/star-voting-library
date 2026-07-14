@@ -48,9 +48,11 @@ The count, step by step — the rounds and how the winner is reached:
 
 ```text
 [Divergence from STAR]
-  STAR               = Cand2
-  RCV-IRV            = Cand3   (differs from STAR)
-  RCV-RR (Condorcet) = Cand3   (differs from STAR)
+  STAR                   = Cand2
+  Choose-One (Plurality) = tie (Cand2 / Cand1 / Cand3)   (tie — includes the STAR winner)
+  RCV-IRV                = Cand3   (differs from STAR)
+  Approval               = tie (Cand2 / Cand1)   (tie — includes the STAR winner)
+  RCV-RR (Condorcet)     = Cand3   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier

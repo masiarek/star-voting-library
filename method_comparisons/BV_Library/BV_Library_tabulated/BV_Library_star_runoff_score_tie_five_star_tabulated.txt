@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     BV_Library_star_runoff_score_tie_five_star.yaml
-SOURCE MODIFIED: 2026-07-02 08:52:23
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  BV_Library_star_runoff_score_tie_five_star_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:07
+TABULATED AT:    2026-07-14 17:59:47
 ======================================================================
 
 election_title: "BV parity — STAR: runoff & score tie, five-star tiebreaker"
@@ -45,8 +45,11 @@ Legend: For - Equal Support - Against
   No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
 
 [Divergence from STAR]
-  STAR     = Allison
-  Approval = Bill   (differs from STAR)
+  STAR                   = Allison
+  Choose-One (Plurality) = tie (Allison / Bill)   (tie — includes the STAR winner)
+  RCV-IRV                = tie (Allison / Bill)   (tie — includes the STAR winner)
+  Approval               = Bill   (differs from STAR)
+  RCV-RR                 = tie (Allison / Bill)   (tie — includes the STAR winner)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **Cara** rather than STAR's **Ann**, but this i
 | Range / Score | Ann |
 | Condorcet | none (cycle) |
 
-**Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Ann, strict=Cara)
+**Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Ann, strict=Cara); Ranked Robin top is an exact tie (Ann / Ben)
 
 **Source election:** [`01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_06_scoring_dead_rung_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_06_scoring_dead_rung_adversarial_lot_tabulated.txt)
 
@@ -61,14 +61,13 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Ann
-  Choose-One (Plurality) = Cara   (differs from STAR)
+  Choose-One (Plurality) = tie (Cara / Ben)   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
+  RCV-RR                 = tie (Ann / Ben)   (tie — includes the STAR winner)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 5 ballots.

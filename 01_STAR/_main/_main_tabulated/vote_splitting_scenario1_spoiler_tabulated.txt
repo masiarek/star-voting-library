@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     vote_splitting_scenario1_spoiler.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  vote_splitting_scenario1_spoiler_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
+TABULATED AT:    2026-07-14 17:59:39
 ======================================================================
 
 election_title: Vote splitting — scenario 1 of 3 — the spoiler strikes
@@ -78,6 +78,7 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = DarkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)
+  Approval               = tie (DarkChoco / MilkChoco)   (tie — includes the STAR winner)
 
 [Vote-splitting check]
   Choose-One first choices: Vanilla 35, DarkChoco 30, MilkChoco 25

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     tie_break_07_runoff_five_star_vs_adversarial_lot.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:01
+TABULATED AT:    2026-07-14 18:12:47
 ======================================================================
 
 election_title: Dead rung 03 — runoff tie broken by five-star
@@ -60,22 +60,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Ann, Ben (pairwise ties)
-
-[Divergence from STAR]
-  STAR                   = Ann
-  Choose-One (Plurality) = Ben   (differs from STAR)
-  RCV-IRV                = Ben   (differs from STAR)
-  Approval               = Ben   (differs from STAR)
-  RCV-RR                 = Ben   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
-        here — STAR need not elect the Condorcet candidate.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

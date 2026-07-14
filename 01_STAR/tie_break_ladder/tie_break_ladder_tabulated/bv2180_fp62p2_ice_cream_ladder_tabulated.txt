@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2180_fp62p2_ice_cream_ladder.yaml
-SOURCE MODIFIED: 2026-07-11 09:20:10
+SOURCE MODIFIED: 2026-07-14 17:47:09
 TABULATED FILE:  bv2180_fp62p2_ice_cream_ladder_tabulated.txt
-TABULATED AT:    2026-07-11 09:20:18
+TABULATED AT:    2026-07-14 17:59:45
 ======================================================================
 
 bv_test_id: BV2180
@@ -72,11 +72,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Chocolate, Chocolate Chip, Strawberry (pairwise ties)
-
-[Divergence from STAR]
-  STAR                   = Strawberry
-  Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
-  Approval               = Chocolate   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     count_simplicity_star_vs_irv.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  count_simplicity_star_vs_irv_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:09
+TABULATED AT:    2026-07-14 18:12:54
 ======================================================================
 
 election_title: Same winner, very different counts — STAR adds, IRV eliminates
@@ -85,10 +85,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: Carmen — matches the STAR winner
-
-[Divergence from STAR]
-  STAR     = Carmen
-  Approval = Andre   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

@@ -33,16 +33,6 @@ Ada,Ben
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR    = Ben
-  RCV-IRV = Ada   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]
@@ -130,7 +120,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 ## See also
 
-- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)

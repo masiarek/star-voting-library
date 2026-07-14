@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     vote_splitting.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  vote_splitting_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
+TABULATED AT:    2026-07-14 17:59:39
 ======================================================================
 
 election_title: Vote splitting — two chocolates split the majority
@@ -105,6 +105,7 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = DarkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)
+  Approval               = tie (DarkChoco / MilkChoco)   (tie — includes the STAR winner)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

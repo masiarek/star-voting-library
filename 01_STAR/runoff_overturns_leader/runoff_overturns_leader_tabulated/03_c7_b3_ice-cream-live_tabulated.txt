@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     03_c7_b3_ice-cream-live.yaml
-SOURCE MODIFIED: 2026-06-26 18:49:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  03_c7_b3_ice-cream-live_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:34
+TABULATED AT:    2026-07-14 17:59:41
 ======================================================================
 
 election_title: Ice Cream — Flavor of the Year (the real recorded race)
@@ -67,10 +67,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: ChocoAlm — matches the STAR winner
-
-[Divergence from STAR]
-  STAR     = ChocoAlm
-  Approval = ChocoDrk   (differs from STAR)
 
 [Runoff Reversal]
  - Score Round Winner(s) = (ChocoDrk)

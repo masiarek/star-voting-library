@@ -36,10 +36,6 @@ Ann,Bob,Cal
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Cal
-  Approval = Ann   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]
@@ -110,7 +106,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md) — its entry in the divergence review ledger
 - [The Black Curtain (worked set)](../README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

@@ -50,19 +50,6 @@ A,B,C
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR                   = C
-  Choose-One (Plurality) = A   (differs from STAR)
-  RCV-IRV                = A   (differs from STAR)
-  Note: 2 of 4 ballots (50%) had equal non-zero scores, so their ranks were
-        decided by candidate priority order. The RCV-IRV result may be an
-        artifact of score-to-rank tie-breaking rather than a deep
-        difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: _main_tabulated/bv132_verify_votes_bloc_RCV-IRV_tabulated.txt
-
 --- Bloc STAR Voting Method (2 winners) ---
 
 [Bloc STAR]

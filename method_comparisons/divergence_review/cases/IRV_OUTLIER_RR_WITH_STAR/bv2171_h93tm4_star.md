@@ -19,7 +19,7 @@ STAR elects **Casey** — and so do Ranked Robin and Condorcet, because **Casey 
 | Range / Score | Casey |
 | Condorcet | Casey |
 
-**Flags:** none
+**Flags:** IRV deciding round is an exact tie (Avery / Blake)
 
 **Source election:** [`method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml`](../../../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml)  ·  **STAR tabulated mirror:** [`bv2171_h93tm4_star_tabulated.txt`](../../../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_tabulated/bv2171_h93tm4_star_tabulated.txt)
 
@@ -60,8 +60,8 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Avery   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
+  Choose-One (Plurality) = tie (Avery / Blake)   (differs from STAR)
+  RCV-IRV                = tie (Avery / Blake)   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

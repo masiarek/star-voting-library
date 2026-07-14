@@ -19,7 +19,7 @@ STAR elects **Leia** — and so do Ranked Robin and Condorcet, because **Leia is
 | Range / Score | Leia |
 | Condorcet | Leia |
 
-**Flags:** none
+**Flags:** Approval top is an exact tie (Skywalker / Leia)
 
 **Source election:** [`method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml`](../../../../method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml)  ·  **STAR tabulated mirror:** [`04_star_wars_vote_split_tabulated.txt`](../../../../method_comparisons/split_voting/_main/_main_tabulated/04_star_wars_vote_split_tabulated.txt)
 
@@ -61,7 +61,7 @@ Legend: For - Equal Support - Against
   STAR                   = Leia
   Choose-One (Plurality) = Vader   (differs from STAR)
   RCV-IRV                = Skywalker   (differs from STAR)
-  Approval               = Skywalker   (differs from STAR)
+  Approval               = tie (Skywalker / Leia)   (tie — includes the STAR winner)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

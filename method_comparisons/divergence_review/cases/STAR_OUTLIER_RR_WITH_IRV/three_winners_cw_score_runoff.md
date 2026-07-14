@@ -19,7 +19,7 @@ RCV-IRV and Ranked Robin both elect **Ann**, the Condorcet (pairwise) winner. ST
 | Range / Score | Carl |
 | Condorcet | Ann |
 
-**Flags:** none
+**Flags:** Approval top is an exact tie (Bob / Carl)
 
 **Source election:** [`01_STAR/_main/three_winners_cw_score_runoff.yaml`](../../../../01_STAR/_main/three_winners_cw_score_runoff.yaml)  ·  **STAR tabulated mirror:** [`three_winners_cw_score_runoff_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_tabulated.txt)
 
@@ -60,6 +60,7 @@ Legend: For - Equal Support - Against
   STAR                   = Bob
   Choose-One (Plurality) = Ann   (differs from STAR)
   RCV-IRV                = Ann   (differs from STAR)
+  Approval               = tie (Bob / Carl)   (tie — includes the STAR winner)
   RCV-RR (Condorcet)     = Ann   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

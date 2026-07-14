@@ -37,10 +37,6 @@ Andre,Blake,Carmen
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Carmen
-  Approval = Andre   (differs from STAR)
-
 --- Bloc STAR Voting Method (2 winners) ---
 
 [Bloc STAR]

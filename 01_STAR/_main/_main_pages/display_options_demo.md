@@ -27,20 +27,6 @@ Ann,Bob,Cal,Don
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR                   = Don
-  Choose-One (Plurality) = Bob   (differs from STAR)
-  RCV-IRV                = Bob   (differs from STAR)
-  Approval               = Ann   (differs from STAR)
-  Note: 2 of 4 ballots (50%) had equal non-zero scores, so their ranks were
-        decided by candidate priority order. The RCV-IRV result may be an
-        artifact of score-to-rank tie-breaking rather than a deep
-        difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: _main_tabulated/display_options_demo_RCV-IRV_tabulated.txt
-
 [Vote-splitting check]
   Choose-One first choices: Bob 2, Don 2, Ann 0, Cal 0
   Plurality winner: Bob (2, 50.0%)
@@ -125,7 +111,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/di
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/display_options_demo.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

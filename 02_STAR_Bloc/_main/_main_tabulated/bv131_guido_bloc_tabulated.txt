@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv131_guido_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  bv131_guido_bloc_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:03
+TABULATED AT:    2026-07-14 18:12:48
 ======================================================================
 
 election_title: "BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie"
@@ -100,18 +100,20 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Cand3 — STAR elected Cand2 instead (Cand3 was eliminated in the scoring round)
 
 [Divergence from STAR]
-  STAR               = Cand2
-  RCV-IRV            = Cand3   (differs from STAR)
-  RCV-RR (Condorcet) = Cand3   (differs from STAR)
+  STAR                   = Cand2
+  Choose-One (Plurality) = tie (Cand2 / Cand1 / Cand3)   (tie — includes the STAR winner)
+  RCV-IRV                = Cand3   (differs from STAR)
+  Approval               = tie (Cand2 / Cand1)   (tie — includes the STAR winner)
+  RCV-RR (Condorcet)     = Cand3   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/bv131_guido_bloc_RCV-IRV_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-IRV_tabulated.txt
   RCV-RR round-robin: _main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

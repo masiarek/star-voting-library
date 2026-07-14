@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2184_fyy886_lunch_vote.yaml
-SOURCE MODIFIED: 2026-07-12 10:34:53
+SOURCE MODIFIED: 2026-07-14 17:47:09
 TABULATED FILE:  bv2184_fyy886_lunch_vote_tabulated.txt
-TABULATED AT:    2026-07-12 10:35:15
+TABULATED AT:    2026-07-14 17:59:38
 ======================================================================
 
 election_title: BV2184 — The team lunch vote
@@ -78,7 +78,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Pizza
-  Choose-One (Plurality) = Sushi   (differs from STAR)
+  Choose-One (Plurality) = tie (Sushi / Tacos)   (differs from STAR)
   RCV-IRV                = Sushi   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
@@ -86,7 +86,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/01_STAR/_main/_main_tabulated/bv2184_fyy886_lunch_vote_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

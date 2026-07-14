@@ -62,7 +62,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR                   = Ada
-  Choose-One (Plurality) = Ben   (differs from STAR)
+  Choose-One (Plurality) = tie (Ben / Cleo)   (differs from STAR)
   RCV-IRV                = Ben   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

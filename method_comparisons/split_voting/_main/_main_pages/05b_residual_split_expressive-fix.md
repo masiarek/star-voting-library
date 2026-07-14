@@ -40,6 +40,7 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Ada
   Choose-One (Plurality) = Cara   (differs from STAR)
+  Approval               = tie (Ada / Ben)   (tie — includes the STAR winner)
 
 [Vote-splitting check]
   Choose-One first choices: Cara 40, Ada 35, Ben 25

@@ -35,17 +35,16 @@ The count, step by step — the rounds and how the winner is reached:
 ```text
 [Divergence from STAR]
   STAR                   = Ben
-  Choose-One (Plurality) = Cara   (differs from STAR)
+  Choose-One (Plurality) = tie (Cara / Ben)   (tie — includes the STAR winner)
   RCV-IRV                = Cara   (differs from STAR)
   Approval               = Ann   (differs from STAR)
-  RCV-RR                 = Ann   (differs from STAR)
+  RCV-RR                 = tie (Ann / Ben)   (tie — includes the STAR winner)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ann)

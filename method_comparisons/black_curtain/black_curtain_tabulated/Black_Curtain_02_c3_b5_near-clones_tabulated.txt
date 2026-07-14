@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     Black_Curtain_02_c3_b5_near-clones.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  Black_Curtain_02_c3_b5_near-clones_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:09
+TABULATED AT:    2026-07-14 18:12:54
 ======================================================================
 
 election_title: The Black Curtain #2 — two candidates everyone loves
@@ -77,10 +77,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: Cal — matches the STAR winner
-
-[Divergence from STAR]
-  STAR     = Cal
-  Approval = Ann   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

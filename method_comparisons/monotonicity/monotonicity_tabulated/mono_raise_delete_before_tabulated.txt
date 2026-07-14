@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     mono_raise_delete_before.yaml
-SOURCE MODIFIED: 2026-07-12 13:55:21
+SOURCE MODIFIED: 2026-07-14 17:47:10
 TABULATED FILE:  mono_raise_delete_before_tabulated.txt
-TABULATED AT:    2026-07-12 13:55:49
+TABULATED AT:    2026-07-14 18:13:04
 ======================================================================
 
 election_title: "STAR mono-raise-delete — part 1: baseline, X wins"
@@ -95,9 +95,9 @@ Legend: For - Equal Support - Against
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: monotonicity_tabulated/mono_raise_delete_before_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_before_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_before_RCV-IRV_tabulated.txt
   RCV-RR round-robin: monotonicity_tabulated/mono_raise_delete_before_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_before_RCV-RR_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_before_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

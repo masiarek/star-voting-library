@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2155_cphxpt_tennessee_four_ways.yaml
-SOURCE MODIFIED: 2026-07-07 20:28:19
+SOURCE MODIFIED: 2026-07-08 21:50:09
 TABULATED FILE:  bv2155_cphxpt_tennessee_four_ways_tabulated.txt
-TABULATED AT:    2026-07-07 20:28:19
+TABULATED AT:    2026-07-14 17:59:52
 ======================================================================
 
 bv_test_id: BV2155
@@ -74,13 +74,14 @@ Legend: For - Equal Support - Against
   STAR                   = Nashville
   Choose-One (Plurality) = Memphis   (differs from STAR)
   RCV-IRV                = Knoxville   (differs from STAR)
+  Approval               = tie (Nashville / Chattanooga)   (tie — includes the STAR winner)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_RCV-IRV_tabulated.txt
-     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

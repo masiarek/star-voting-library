@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **Ada** rather than STAR's **Bruno**, but this 
 | Range / Score | Bruno |
 | Condorcet | Ada |
 
-**Flags:** 2 tied-score ballot(s)
+**Flags:** 2 tied-score ballot(s); Approval top is an exact tie (Bruno / Cleo)
 
 **Source election:** [`01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
 
@@ -60,6 +60,7 @@ Legend: For - Equal Support - Against
   STAR                   = Bruno
   Choose-One (Plurality) = Ada   (differs from STAR)
   RCV-IRV                = Ada   (differs from STAR)
+  Approval               = tie (Bruno / Cleo)   (tie — includes the STAR winner)
   RCV-RR (Condorcet)     = Ada   (differs from STAR)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an

@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2105_r4dqvd_ice_cream_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  bv2105_r4dqvd_ice_cream_bloc_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:03
+TABULATED AT:    2026-07-14 18:12:48
 ======================================================================
 
 election_title: "BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention"
@@ -138,6 +138,7 @@ Legend: For - Equal Support - Against
   STAR                   = Chocolate
   Choose-One (Plurality) = Vanilla   (differs from STAR)
   RCV-IRV                = Vanilla   (differs from STAR)
+  Approval               = tie (Chocolate / Strawberry)   (tie — includes the STAR winner)
   Note: 1 of 4 ballots (25%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
@@ -146,7 +147,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/02_STAR_Bloc/_main/_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

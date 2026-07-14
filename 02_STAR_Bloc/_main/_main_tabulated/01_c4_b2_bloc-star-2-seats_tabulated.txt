@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     01_c4_b2_bloc-star-2-seats.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  01_c4_b2_bloc-star-2-seats_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:02
+TABULATED AT:    2026-07-14 18:12:47
 ======================================================================
 
 election_title: "Bloc STAR Voting: 2-Seat Committee Election"
@@ -71,10 +71,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: Don — matches the STAR winner
-
-[Divergence from STAR]
-  STAR     = Don
-  Approval = Cal   (differs from STAR)
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

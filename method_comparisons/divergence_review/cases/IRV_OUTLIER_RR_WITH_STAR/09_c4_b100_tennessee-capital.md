@@ -19,7 +19,7 @@ STAR elects **Nashville** — and so do Ranked Robin and Condorcet, because **Na
 | Range / Score | Nashville |
 | Condorcet | Nashville |
 
-**Flags:** none
+**Flags:** Approval top is an exact tie (Nashville / Chattanooga)
 
 **Source election:** [`01_STAR/_main/09_c4_b100_tennessee-capital.yaml`](../../../../01_STAR/_main/09_c4_b100_tennessee-capital.yaml)  ·  **STAR tabulated mirror:** [`09_c4_b100_tennessee-capital_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/09_c4_b100_tennessee-capital_tabulated.txt)
 
@@ -62,6 +62,7 @@ Legend: For - Equal Support - Against
   STAR                   = Nashville
   Choose-One (Plurality) = Memphis   (differs from STAR)
   RCV-IRV                = Knoxville   (differs from STAR)
+  Approval               = tie (Nashville / Chattanooga)   (tie — includes the STAR winner)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

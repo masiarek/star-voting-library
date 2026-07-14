@@ -32,8 +32,8 @@ The count, step by step — the rounds and how the winner is reached:
 ```text
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Avery   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
+  Choose-One (Plurality) = tie (Avery / Blake)   (differs from STAR)
+  RCV-IRV                = tie (Avery / Blake)   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

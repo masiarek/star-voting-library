@@ -115,7 +115,7 @@ Legend: For - Equal Support - Against
              Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Abby > Erin > Dave > Brad > Abby)
+  No Condorcet winner (majority cycle: Dave > Brad > Erin > Dave)
 
 [Score Distribution] (how many ballots gave each star rating)
                       Score

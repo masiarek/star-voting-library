@@ -58,9 +58,10 @@ Legend: For - Equal Support - Against
            * Y > | 12 -  0 - 22 |    ---      |
 
 [Divergence from STAR]
-  STAR     = X
-  Approval = Y   (differs from STAR)
-  RCV-RR   = Y   (differs from STAR)
+  STAR                   = X
+  Choose-One (Plurality) = tie (X / Y)   (tie — includes the STAR winner)
+  Approval               = Y   (differs from STAR)
+  RCV-RR                 = Y   (differs from STAR)
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Y)

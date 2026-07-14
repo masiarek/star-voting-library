@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     02b_c5_b63_proportional-sss.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  02b_c5_b63_proportional-sss_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:04
+TABULATED AT:    2026-07-14 18:12:49
 ======================================================================
 
 # Proportional multi-winner example: Sequentially Spent Score (SSS).
@@ -89,7 +89,7 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
-  Approval               = Alice   (differs from STAR)
+  Approval               = tie (Alice / Ben / Cara)   (tie — includes the STAR winner)
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
 [Sequentially Spent Score]

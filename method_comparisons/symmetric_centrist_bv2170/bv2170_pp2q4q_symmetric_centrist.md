@@ -49,8 +49,8 @@ STAR and Ranked Robin agree on Casey. IRV and Choose-One eliminate the centrist 
 
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Blake   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
+  Choose-One (Plurality) = tie (Blake / Avery)   (differs from STAR)
+  RCV-IRV                = tie (Blake / Avery)   (differs from STAR)
 
 Scoring Round
    Casey         -- 312 -- First place

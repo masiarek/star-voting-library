@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **A** rather than STAR's **D**, but this is an 
 | Range / Score | D |
 | Condorcet | D |
 
-**Flags:** 4 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=D, strict=A)
+**Flags:** 4 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=D, strict=A); Approval top is an exact tie (A / B / C / D)
 
 **Source election:** [`01_STAR/_main/star_ala_approval.yaml`](../../../../01_STAR/_main/star_ala_approval.yaml)  ·  **STAR tabulated mirror:** [`star_ala_approval_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/star_ala_approval_tabulated.txt)
 
@@ -63,7 +63,7 @@ Legend: For - Equal Support - Against
   STAR                   = D
   Choose-One (Plurality) = A   (differs from STAR)
   RCV-IRV                = A   (differs from STAR)
-  Approval               = A   (differs from STAR)
+  Approval               = tie (A / B / C / D)   (tie — includes the STAR winner)
   Note: 4 of 8 ballots (50%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep

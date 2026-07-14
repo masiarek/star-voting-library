@@ -988,10 +988,11 @@ def print_condorcet(candidates, matrix, star_winner=None, finalists=None):
     print(f"  {analyze_condorcet(candidates, matrix, star_winner, finalists)}")
 
 
-def compute_irv_winner(candidates, ballots, priority):
+def _run_irv(candidates, ballots, priority):
     """
-    Tabulate the same election under RCV-IRV and return the winner's name
-    (or None if unavailable / no winner).
+    Tabulate the same election under RCV-IRV and return the raw pyrankvote
+    ElectionResults (or None if unavailable), plus the tied-ballot count and
+    the total ballots.
 
     The STAR ballots are *scores*; IRV needs *ranks*. Conversion (see
     rcv_irv_tabulation.score_ballot_to_ranking): higher score = higher
@@ -1029,25 +1030,62 @@ def compute_irv_winner(candidates, ballots, priority):
         result = _pyrankvote.instant_runoff_voting(
             list(cand_objs.values()), pv_ballots
         )
-        winners = result.get_winners()
-        winner = winners[0].name if winners else None
-        return winner, tie_ballots, len(ballots)
+        return result, tie_ballots, len(ballots)
     except Exception:  # pragma: no cover
         return None, 0, 0
 
 
-def approval_winner(candidates, ballots, priority):
+def compute_irv_winner(candidates, ballots, priority):
+    """RCV-IRV winner's name (or None if unavailable / no winner), plus the
+    tied-ballot count and total ballots. See _run_irv for the score->rank
+    conversion rules."""
+    result, tie_ballots, total = _run_irv(candidates, ballots, priority)
+    if result is None:
+        return None, 0, 0
+    winners = result.get_winners()
+    winner = winners[0].name if winners else None
+    return winner, tie_ballots, total
+
+
+def irv_deciding_tie(result, priority=None):
     """
-    Approval winner (single): a candidate is approved on a ballot for every
-    score of 3, 4, or 5 (stars). The candidate with the most approvals wins;
-    a tie is broken by `priority` order (left-to-right CSV column sequence) —
-    the same tiebreak STAR uses — so a single winner is returned.
+    Names tied with the IRV winner at the deciding (final) round: every
+    candidate whose final-round vote count equals the elected candidate's.
+    A result longer than 1 means the printed IRV "winner" was separated from
+    the others by pyrankvote's tie comparator (most second-choice votes, then
+    seeded random) rather than by the count itself — an exact tie the
+    [Divergence from STAR] block must not sell as a clean win.
+    Returns [] for a clean win, no result, or a multi-elected round.
+    """
+    if result is None or not getattr(result, "rounds", None):
+        return []
+    last = result.rounds[-1]
+    elected = [cr for cr in last.candidate_results if cr.status == "Elected"]
+    if len(elected) != 1:
+        return []
+    w_votes = elected[0].number_of_votes
+    tied = [cr.candidate.name for cr in last.candidate_results
+            if abs(cr.number_of_votes - w_votes) < 0.001]
+    if len(tied) <= 1:
+        return []
+    if priority:
+        rank = {c: i for i, c in enumerate(priority)}
+        tied.sort(key=lambda c: rank.get(c, len(rank)))
+    return tied
+
+
+def approval_leaders(candidates, ballots, priority):
+    """
+    All candidates tied at the top Approval count, in `priority` order.
+    A candidate is approved on a ballot for every score of 3, 4, or 5 (stars).
+    A one-element list is an outright Approval winner; a longer list is an
+    exact tie that only the priority order would separate. [] if no candidates.
     """
     approvals = {
         c: sum(1 for b in ballots if b.get(c, 0) >= 3) for c in candidates
     }
     if not approvals:
-        return None
+        return []
     top = max(approvals.values())
     order = [c for c in (priority or candidates) if c in candidates]
     for c in candidates:  # any candidate missing from priority falls in last
@@ -1055,7 +1093,17 @@ def approval_winner(candidates, ballots, priority):
             order.append(c)
     tied = [c for c in candidates if approvals[c] == top]
     tied.sort(key=lambda c: order.index(c))
-    return tied[0]
+    return tied
+
+
+def approval_winner(candidates, ballots, priority):
+    """
+    Approval winner (single): the candidate with the most approvals; a tie is
+    broken by `priority` order (left-to-right CSV column sequence) — the same
+    tiebreak STAR uses — so a single winner is returned.
+    """
+    leaders = approval_leaders(candidates, ballots, priority)
+    return leaders[0] if leaders else None
 
 
 def _approval_raw_problems(ballots_text):
@@ -1641,23 +1689,23 @@ def condorcet_winner(candidates, ballots):
     return None
 
 
-def copeland_winner(candidates, ballots, priority):
+def copeland_leaders(candidates, ballots, priority):
     """
-    Ranked Robin (RCV-RR / Copeland) winner from score ballots: the candidate
-    who wins the most head-to-head matchups, ties broken by total pairwise margin,
-    then by `priority` order. Mirrors run_ranked_robin's tally exactly. Unlike a
-    Condorcet winner it ALWAYS returns a name (a cycle is resolved by margin /
-    priority), or None if unavailable.
+    All candidates tied at the top of the Ranked Robin (RCV-RR / Copeland)
+    standings — same pairwise-win record AND same total margin — in `priority`
+    order. Mirrors run_ranked_robin's tally exactly (most wins, then margin).
+    A one-element list is an outright RR winner; a longer list means only the
+    arbitrary lot/priority step would separate them. [] if unavailable.
     """
     if not candidates or not ballots:
-        return None
+        return []
     order = [c for c in (priority or candidates) if c in candidates]
     for c in candidates:
         if c not in order:
             order.append(c)
     matrix = calculate_preference_matrix(candidates, ballots)
     if not matrix:
-        return None
+        return []
     wins = {c: 0 for c in candidates}
     margin = {c: 0 for c in candidates}
     for i, a in enumerate(candidates):
@@ -1669,7 +1717,42 @@ def copeland_winner(candidates, ballots, priority):
                 wins[a] += 1
             elif ag > fa:
                 wins[b] += 1
-    return min(candidates, key=lambda c: (-wins[c], -margin[c], order.index(c)))
+    best = min((-wins[c], -margin[c]) for c in candidates)
+    tied = [c for c in candidates if (-wins[c], -margin[c]) == best]
+    tied.sort(key=lambda c: order.index(c))
+    return tied
+
+
+def copeland_winner(candidates, ballots, priority):
+    """
+    Ranked Robin (RCV-RR / Copeland) winner from score ballots: most pairwise
+    wins, ties broken by total margin, then by `priority` order. Unlike a
+    Condorcet winner it ALWAYS returns a name (a cycle is resolved by margin /
+    priority), or None if unavailable.
+    """
+    leaders = copeland_leaders(candidates, ballots, priority)
+    return leaders[0] if leaders else None
+
+
+def plurality_leaders(candidates, ballots, priority):
+    """
+    All candidates tied at the top Choose-One (Plurality) first-choice count
+    (each ballot's one vote goes to its top-scored candidate — the same tally
+    the [Vote-splitting check] uses), in `priority` order. A one-element list
+    is an outright plurality winner; a longer list is an exact tie that only
+    the priority order would separate. [] when every ballot is an undervote.
+    """
+    counts, _ = first_choice_counts(candidates, ballots, priority)
+    if not any(v > 0 for v in counts.values()):
+        return []
+    order = [c for c in (priority or candidates) if c in candidates]
+    for c in candidates:
+        if c not in order:
+            order.append(c)
+    top = max(counts.values())
+    tied = [c for c in candidates if counts[c] == top]
+    tied.sort(key=lambda c: order.index(c))
+    return tied
 
 
 def print_method_comparison(candidates, ballots, star_winner, priority,
@@ -1680,70 +1763,84 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
     a DIFFERENT winner than STAR, print the block; if every method agrees with
     STAR, print nothing.
 
-    A method "differs" when:
-      * Choose-One (Plurality): its winner != the STAR winner (each ballot's one
-        vote goes to its top-scored candidate)
-      * RCV-IRV  : its winner != the STAR winner
-      * Approval : its (single) winner != the STAR winner
-      * RCV-RR   : the Ranked Robin (Copeland) winner != the STAR winner
-        (always defined; a cycle is resolved by margin / priority)
-      * Condorcet: a Condorcet winner exists and != the STAR winner
-        (no Condorcet winner / a cycle is not treated as a disagreement)
+    Each comparison method yields the SET of candidates tied at its top (usually
+    one). An exact tie is printed as a tie — "tie (Ann / Bob / Cal)" — never
+    silently broken into a single name by the priority/lot order (or, for
+    RCV-IRV, by pyrankvote's tie comparator). A method "differs" from STAR when
+    the STAR winner is NOT in its top set:
+      * a single winner != the STAR winner  -> "(differs from STAR)"
+      * a tie that excludes the STAR winner -> "(differs from STAR)"
+      * a tie that INCLUDES the STAR winner -> not a divergence (it doesn't
+        trigger the block), but when the block prints anyway the line is shown
+        labeled "(tie — includes the STAR winner)" so the tie isn't hidden.
+    Condorcet is tie-free by definition (a Condorcet winner is unique or none);
+    no Condorcet winner / a cycle is not treated as a disagreement.
 
     RCV-RR and Condorcet usually name the same candidate (Copeland elects the
     Condorcet winner whenever one exists); they only part on a cycle. When both
     differ from STAR and agree with each other, they print as one combined line.
     """
-    irv, tie_ballots, total = compute_irv_winner(candidates, ballots, priority)
-    approval = approval_winner(candidates, ballots, priority)
-    rr = copeland_winner(candidates, ballots, priority)
+    irv_result, tie_ballots, total = _run_irv(candidates, ballots, priority)
+    _irv_winners = irv_result.get_winners() if irv_result else []
+    irv = _irv_winners[0].name if _irv_winners else None
+    irv_leaders = (irv_deciding_tie(irv_result, priority)
+                   or ([irv] if irv else []))
+    approval_l = approval_leaders(candidates, ballots, priority)
+    rr_l = copeland_leaders(candidates, ballots, priority)
     condorcet = condorcet_winner(candidates, ballots)
+    plurality_l = plurality_leaders(candidates, ballots, priority)
 
-    # Choose-One Plurality: each ballot's single vote goes to its top-scored
-    # candidate (the same tally the [Vote-splitting check] uses). Ties broken by
-    # candidate priority; an all-zero ballot is an undervote that counts for no one.
-    fc_counts, _ = first_choice_counts(candidates, ballots, priority)
-    _order = [c for c in (priority or candidates) if c in candidates]
-    for _c in candidates:
-        if _c not in _order:
-            _order.append(_c)
-    _prank = {c: i for i, c in enumerate(_order)}
-    plurality = (min(candidates, key=lambda c: (-fc_counts[c], _prank[c]))
-                 if any(v > 0 for v in fc_counts.values()) else None)
+    def _diff(leaders):
+        # A tie counts as a divergence only when the STAR winner is NOT among
+        # the tied set — a tie that merely includes the STAR winner is honest
+        # context, not a different result.
+        return bool(leaders) and star_winner not in leaders
 
-    plurality_diff = plurality is not None and plurality != star_winner
-    irv_diff = irv is not None and irv != star_winner
-    approval_diff = approval is not None and approval != star_winner
-    rr_diff = rr is not None and rr != star_winner
+    plurality_diff = _diff(plurality_l)
+    irv_diff = _diff(irv_leaders)
+    approval_diff = _diff(approval_l)
+    rr_diff = _diff(rr_l)
     condorcet_diff = condorcet is not None and condorcet != star_winner
 
     if not (plurality_diff or irv_diff or approval_diff or rr_diff
             or condorcet_diff):
         return  # every method agrees with STAR — nothing to learn here
 
-    # Show STAR (the baseline) plus ONLY the methods that disagree with it;
-    # methods that agree are hidden to keep the block focused on the divergence.
-    shown = [("STAR", star_winner if star_winner else "(tie)")]
-    if plurality_diff:
-        shown.append(("Choose-One (Plurality)", plurality))
-    if irv_diff:
-        shown.append(("RCV-IRV", irv))
-    if approval_diff:
-        shown.append(("Approval", approval))
+    def _entry(label, leaders):
+        if len(leaders) == 1:
+            return (label, leaders[0], "   (differs from STAR)")
+        value = "tie (" + " / ".join(leaders) + ")"
+        tag = ("   (differs from STAR)" if star_winner not in leaders
+               else "   (tie — includes the STAR winner)")
+        return (label, value, tag)
+
+    # Show STAR (the baseline) plus the methods that disagree with it; methods
+    # that agree outright are hidden to keep the block focused on the
+    # divergence, but an exact tie is always shown once the block prints (a tie
+    # is never full agreement, even when the STAR winner is in it).
+    shown = [("STAR", star_winner if star_winner else "(tie)", "")]
+    if plurality_diff or len(plurality_l) > 1:
+        shown.append(_entry("Choose-One (Plurality)", plurality_l))
+    if irv_diff or len(irv_leaders) > 1:
+        shown.append(_entry("RCV-IRV", irv_leaders))
+    if approval_diff or len(approval_l) > 1:
+        shown.append(_entry("Approval", approval_l))
     # RCV-RR (Ranked Robin / Copeland) and Condorcet coincide off-cycle; when
     # both differ from STAR and name the same candidate, collapse to one line.
-    if rr_diff and condorcet_diff and rr == condorcet:
-        shown.append(("RCV-RR (Condorcet)", rr))
+    # (An RR tie implies no Condorcet winner, so a tie never reaches the
+    # combined branch.)
+    if (rr_diff and condorcet_diff and len(rr_l) == 1
+            and rr_l[0] == condorcet):
+        shown.append(_entry("RCV-RR (Condorcet)", rr_l))
     else:
-        if rr_diff:
-            shown.append(("RCV-RR", rr))
+        if rr_diff or len(rr_l) > 1:
+            shown.append(_entry("RCV-RR", rr_l))
         if condorcet_diff:
-            shown.append(("Condorcet", condorcet))
-    width = max(len(label) for label, _ in shown)
+            shown.append(("Condorcet", condorcet, "   (differs from STAR)"))
+    width = max(len(label) for label, _, _ in shown)
 
     print("\n[Divergence from STAR]")
-    for label, value in shown:
-        tag = "   (differs from STAR)" if label != "STAR" else ""
+    for label, value, tag in shown:
         print(f"  {label.ljust(width)} = {value}{tag}")
 
     # Smart note: when RCV-IRV differs, say whether the score->rank tiebreak
@@ -1768,12 +1865,13 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
                 f"genuine method difference, not a tie-breaking artifact."
             )
         # Where does Ranked Robin land? That's the tell for who's the outlier.
-        if not rr_diff:
+        # (Only when RR has a single clean winner — a tied RR picks no side.)
+        if not rr_diff and len(rr_l) == 1:
             _note(
                 "Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the "
                 "lone outlier — the classic center-squeeze signature."
             )
-        elif rr == irv:
+        elif rr_diff and len(rr_l) == 1 and rr_l[0] == irv:
             _note(
                 "Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the "
                 "outlier here — STAR need not elect the Condorcet candidate."

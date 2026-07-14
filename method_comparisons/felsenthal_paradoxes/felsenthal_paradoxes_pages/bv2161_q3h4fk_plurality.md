@@ -30,10 +30,6 @@ A,B,C
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = C
-  Approval = A   (differs from STAR)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
 
 [STAR Voting]

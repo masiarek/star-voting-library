@@ -36,6 +36,7 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = DarkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)
+  Approval               = tie (DarkChoco / MilkChoco)   (tie — includes the STAR winner)
 
 [Vote-splitting check]
   Choose-One first choices: Vanilla 35, DarkChoco 30, MilkChoco 25

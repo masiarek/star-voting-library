@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     star_combined.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
+SOURCE MODIFIED: 2026-07-08 21:50:09
 TABULATED FILE:  star_combined_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:09
+TABULATED AT:    2026-07-14 17:59:55
 ======================================================================
 
 election_title: "Summability demo — STAR combined A+B (Oak; precinct subtotals add up)"
@@ -54,10 +54,6 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: Oak — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Oak
-  Choose-One (Plurality) = Maple   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

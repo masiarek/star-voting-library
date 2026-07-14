@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     star_ala_approval.yaml
-SOURCE MODIFIED: 2026-07-02 19:05:00
+SOURCE MODIFIED: 2026-07-08 21:50:08
 TABULATED FILE:  star_ala_approval_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
+TABULATED AT:    2026-07-14 17:59:39
 ======================================================================
 
 election_title: "STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot"
@@ -63,7 +63,7 @@ Legend: For - Equal Support - Against
   STAR                   = D
   Choose-One (Plurality) = A   (differs from STAR)
   RCV-IRV                = A   (differs from STAR)
-  Approval               = A   (differs from STAR)
+  Approval               = tie (A / B / C / D)   (tie — includes the STAR winner)
   Note: 4 of 8 ballots (50%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
@@ -72,7 +72,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/charming-chandrasekhar-562f3d/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

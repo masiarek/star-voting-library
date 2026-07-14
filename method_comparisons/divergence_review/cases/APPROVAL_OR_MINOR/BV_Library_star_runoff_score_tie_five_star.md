@@ -19,7 +19,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Allison**. Only **Approval** diffe
 | Range / Score | Allison |
 | Condorcet | none (cycle) |
 
-**Flags:** none
+**Flags:** IRV deciding round is an exact tie (Allison / Bill); Ranked Robin top is an exact tie (Allison / Bill)
 
 **Source election:** [`method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml`](../../../../method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml)  ·  **STAR tabulated mirror:** [`BV_Library_star_runoff_score_tie_five_star_tabulated.txt`](../../../../method_comparisons/BV_Library/BV_Library_tabulated/BV_Library_star_runoff_score_tie_five_star_tabulated.txt)
 
@@ -57,8 +57,11 @@ Legend: For - Equal Support - Against
        * Bill > |  1 - 0 - 1  |    ---     |
 
 [Divergence from STAR]
-  STAR     = Allison
-  Approval = Bill   (differs from STAR)
+  STAR                   = Allison
+  Choose-One (Plurality) = tie (Allison / Bill)   (tie — includes the STAR winner)
+  RCV-IRV                = tie (Allison / Bill)   (tie — includes the STAR winner)
+  Approval               = Bill   (differs from STAR)
+  RCV-RR                 = tie (Allison / Bill)   (tie — includes the STAR winner)
 
 --- STAR Voting Method (single winner) ---
  Tabulating 2 ballots.

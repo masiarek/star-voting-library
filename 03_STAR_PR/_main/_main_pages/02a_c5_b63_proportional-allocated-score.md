@@ -32,7 +32,7 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
-  Approval               = Alice   (differs from STAR)
+  Approval               = tie (Alice / Ben / Cara)   (tie — includes the STAR winner)
 
 --- Allocated Score Voting Method (3 winners) ---
 

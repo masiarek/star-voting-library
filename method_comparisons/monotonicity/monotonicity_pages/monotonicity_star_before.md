@@ -31,9 +31,10 @@ The count, step by step — the rounds and how the winner is reached:
 
 ```text
 [Divergence from STAR]
-  STAR     = X
-  Approval = Y   (differs from STAR)
-  RCV-RR   = Y   (differs from STAR)
+  STAR                   = X
+  Choose-One (Plurality) = tie (X / Y)   (tie — includes the STAR winner)
+  Approval               = Y   (differs from STAR)
+  RCV-RR                 = Y   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: monotonicity_tabulated/monotonicity_star_before_RCV-RR_tabulated.txt
 

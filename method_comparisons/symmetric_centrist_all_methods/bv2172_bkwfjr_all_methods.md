@@ -37,15 +37,15 @@ The four whole-ballot methods elect the candidate a majority actually prefers; t
 
 [Divergence from STAR]
   STAR                   = Casey
-  Choose-One (Plurality) = Avery   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
+  Choose-One (Plurality) = tie (Avery / Blake)   (differs from STAR)
+  RCV-IRV                = tie (Avery / Blake)   (differs from STAR)
   Note: Ranked Robin (RCV-RR) agrees with STAR — RCV-IRV is the lone outlier.
 
 Scoring Round:  Casey 312 · Avery 294 · Blake 294   (Casey advances; poles tie for 2nd)
 Automatic Runoff:  Casey 53 vs Avery/Blake 47        (Casey wins)
 ```
 
-(LH's RCV-IRV breaks the 50–50 tie with a stable seed → Avery; BetterVoting breaks it at random. Same profile, same conclusion — only the coin lands differently.)
+(The block prints the pole deadlocks as the exact ties they are — `tie (Avery / Blake)` — rather than selling one seeded draw as a winner; BetterVoting resolves the same ties at random. Same profile, same conclusion.)
 
 ## Why 47/47/3/3?
 

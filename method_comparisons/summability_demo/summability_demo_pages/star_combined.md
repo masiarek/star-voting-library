@@ -34,10 +34,6 @@ Maple, Oak, Pine
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR                   = Oak
-  Choose-One (Plurality) = Maple   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]
