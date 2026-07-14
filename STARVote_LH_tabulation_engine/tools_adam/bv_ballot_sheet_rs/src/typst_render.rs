@@ -38,6 +38,8 @@ fn build_source(b: &Ballot) -> String {
 #let BVID = "{bvid}"
 #let PROMO = "{promo}"
 #let HASQR = {hasqr}
+#let HASLOGO = {haslogo}
+#let LOGOFILE = "{logofile}"
 #let SERIALS = {serials}
 #let COPIES = {copies}
 #let CANDS = ({cands},)
@@ -56,10 +58,10 @@ fn build_source(b: &Ballot) -> String {
   v(3pt)
   grid(columns: (1fr, auto, 1fr), align: (center + horizon, center + horizon, center + horizon), column-gutter: 10pt,
     if HASQR {{ align(center)[#image("qr_vote.svg", width: 78pt) \ #text(size: 8pt)[scan to vote]] }} else {{ [] }},
-    align(center)[
+    if HASLOGO {{ align(center + horizon, image(LOGOFILE, height: 56pt)) }} else {{ align(center)[
       #text(weight: "black", size: 27pt)[STAR VOTING] \
       #text(weight: "bold", size: 9pt, fill: rgb("#5a7683"))[SCORE #sym.dot.c THEN #sym.dot.c AUTOMATIC #sym.dot.c RUNOFF]
-    ],
+    ] }},
     if HASQR {{ align(center)[#image("qr_results.svg", width: 78pt) \ #text(size: 8pt)[scan for results]] }} else {{ [] }},
   )
   v(2pt)
@@ -115,6 +117,8 @@ fn build_source(b: &Ballot) -> String {
         bvid = esc(&b.bv_id),
         promo = esc(&promo),
         hasqr = b.qr_vote_svg.is_some(),
+        haslogo = b.logo.is_some(),
+        logofile = b.logo.as_ref().map(|(name, _)| name.as_str()).unwrap_or(""),
         serials = b.serials,
         copies = b.copies,
         cands = cands,
@@ -130,6 +134,9 @@ pub fn render_pdf(b: &Ballot) -> Result<Vec<u8>, String> {
     }
     if let Some(svg) = &b.qr_results_svg {
         files.push(("qr_results.svg", svg.clone().into_bytes()));
+    }
+    if let Some((name, bytes)) = &b.logo {
+        files.push((name.as_str(), bytes.clone()));
     }
 
     let engine = typst_as_lib::TypstEngine::builder()

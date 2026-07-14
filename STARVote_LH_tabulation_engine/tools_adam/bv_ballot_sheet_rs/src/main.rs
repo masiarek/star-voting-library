@@ -43,6 +43,9 @@ struct Args {
     /// Append your local chapter to a small promo footer.
     #[arg(long)]
     chapter: Option<String>,
+    /// A logo image (SVG/PNG/JPG) to embed in the header, replacing the drawn wordmark.
+    #[arg(long)]
+    logo: Option<PathBuf>,
 }
 
 /// Everything the ballot needs, pulled from the export.
@@ -57,6 +60,8 @@ pub struct Ballot {
     pub copies: usize,
     pub serials: bool,
     pub chapter: Option<String>,
+    /// (virtual filename, bytes) of a header logo image, if given.
+    pub logo: Option<(String, Vec<u8>)>,
 }
 
 fn qr_svg(url: &str) -> Result<String, String> {
@@ -144,6 +149,21 @@ fn run() -> Result<(), String> {
         question = q;
     }
 
+    // Optional header logo: read the bytes, keep a virtual filename with the real
+    // extension so Typst's image() can sniff the format (svg/png/jpg).
+    let logo = if let Some(p) = &args.logo {
+        let bytes = std::fs::read(p)
+            .map_err(|e| format!("could not read logo {}: {e}", p.display()))?;
+        let ext = p
+            .extension()
+            .and_then(|e| e.to_str())
+            .unwrap_or("png")
+            .to_lowercase();
+        Some((format!("logo.{ext}"), bytes))
+    } else {
+        None
+    };
+
     // A ballot with a live BV id MUST be scannable — QR unless deliberately suppressed.
     let (qr_vote_svg, qr_results_svg) = if args.no_qr || bv_id.is_empty() {
         (None, None)
@@ -165,6 +185,7 @@ fn run() -> Result<(), String> {
         copies: args.copies.max(1),
         serials: args.serials,
         chapter: args.chapter,
+        logo,
     };
 
     let out = if args.out.extension().map(|e| e == "pdf").unwrap_or(false) {

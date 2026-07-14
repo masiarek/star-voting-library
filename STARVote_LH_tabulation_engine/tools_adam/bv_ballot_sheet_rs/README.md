@@ -21,9 +21,12 @@ cargo build --release
 ./target/release/bv_ballot_sheet \
     --bv-export "../../../06_Other/_demo_dropbox/<election>-<id>.json" \
     --title "Best Ice Cream Flavor" --serials \
+    --logo ../assets/NC_STAR_Logo1.jpg \
     --chapter "STAR Voting NC (facebook.com/groups/starvotingnc)" \
     --copies 30 --out ballots.pdf
 ```
+
+**With a logo:** `--logo <FILE>` (SVG/PNG/JPG) drops your chapter logo into the header in place of the drawn "STAR VOTING" wordmark — the image is embedded straight into the PDF (no external file needed at print time). For a color print, use `../assets/NC_STAR_Logo1.jpg`; for black-and-white, `../assets/BW_long_form.jpg`.
 
 ## Same design as the Python tool
 
@@ -34,8 +37,8 @@ cargo build --release
 
 ## Status / parity with the Python tool
 
-Implemented: `--bv-export`, `--title`, `--question`, `--copies`, `--serials`, `--no-qr`, `--chapter` (promo), `--out`.
+Implemented: `--bv-export`, `--title`, `--question`, `--copies`, `--serials`, `--no-qr`, `--chapter` (promo), `--logo` (embed a header logo image), `--out`.
 
-Not yet ported (easy follow-ups): `--logo` (embed a real logo image), `--verify-bv`, `--per-page`, `--write-ins`, `--qr-size`, `--promo` without a chapter, `--notice`/`--no-notice`. The **Python tool remains the reference / full-featured version**; this is a working proof that the Rust/Typst path produces the same ballot with zero runtime dependencies.
+Not yet ported (easy follow-ups): `--verify-bv`, `--per-page`, `--write-ins`, `--qr-size`, `--promo` without a chapter, `--notice`/`--no-notice`. The **Python tool remains the reference / full-featured version**; this is a working proof that the Rust/Typst path produces the same ballot with zero runtime dependencies.
 
 Cosmetic note: uses Typst's bundled serif font (Libertinus) rather than the Python tool's system sans — a faithful sans match would bundle a sans `.ttf`.
