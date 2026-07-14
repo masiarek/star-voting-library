@@ -2,7 +2,7 @@
 
 *The same voter's opinion, expressed on three different ballots: **Ranking**, **Yes/No** (Approval), and **Scoring**. Seeing them side by side is the clearest way to grasp what each ballot **captures** and what it **throws away**.*
 
-→ The core distinction — order vs. strength: [scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md)
+→ The core distinction — order vs. strength: [scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · **deep dives, one per ballot:** [the ranked ballot](scores_and_ranks/ranked_ballot.md) · [the score ballot](scores_and_ranks/score_ballot.md) · [Approval](Approval_Voting/approval_voting.md)
 
 ![Three ballot styles side by side for the same five candidates (Andre, Blake, Carmen, David, Ella): a Ranking ballot with a 1st–5th grid, a Yes/No (Approval) ballot with one filled or open bubble per candidate, and a Scoring ballot rating each candidate 0 (Worst) to 5 (Best)](img/ballot_styles_ranking_yesno_scoring.png)
 
@@ -14,7 +14,7 @@
 
 Meet one voter deciding among five candidates — Andre, Blake, Carmen, David, Ella. Here is how that *same* opinion looks on each ballot style (● = the mark the voter made).
 
-**Ranking** — put the candidates in order, 1st through 5th. One mark per column, one per row.
+**Ranking** — put the candidates in order, 1st through 5th. One mark per column, one per row. *(Deep dive: [the ranked ballot](scores_and_ranks/ranked_ballot.md) — grid rules, strict vs. weak, and the many ways to count it.)*
 
 | Candidate | 1st | 2nd | 3rd | 4th | 5th |
 |---|:--:|:--:|:--:|:--:|:--:|
@@ -24,7 +24,7 @@ Meet one voter deciding among five candidates — Andre, Blake, Carmen, David, E
 | David | ○ | ○ | ● | ○ | ○ |
 | Ella | ○ | ○ | ○ | ○ | ● |
 
-**Yes/No** — approve each candidate, or don't. One bit per candidate.
+**Yes/No** — approve each candidate, or don't. One bit per candidate. *(Deep dive: [Approval voting](Approval_Voting/approval_voting.md).)*
 
 | Candidate | Approve? |
 |---|:--:|
@@ -34,7 +34,7 @@ Meet one voter deciding among five candidates — Andre, Blake, Carmen, David, E
 | David | ● approve |
 | Ella | ○ no |
 
-**Scoring** — rate each candidate from 0 (worst) to 5 (best), independently. Equal scores allowed.
+**Scoring** — rate each candidate from 0 (worst) to 5 (best), independently. Equal scores allowed. *(Deep dive: [the score ballot](scores_and_ranks/score_ballot.md) — marking rules, resolution, and the counts that read it.)*
 
 | Candidate | Score (0–5) |
 |---|:--:|
