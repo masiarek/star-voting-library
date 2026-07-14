@@ -10,7 +10,19 @@
 
 <img src="../img/ballot_panel_ranking.png" width="420" alt="A ranked ballot: five candidates (Andre, Blake, Carmen, David, Ella) each on a row, with bubble columns 1st through 5th. The voter has marked Andre 1st, Carmen 2nd, David 3rd, Blake 4th, Ella 5th.">
 
-One row per candidate, one column per rank. This voter says: Andre first, then Carmen, then David, then Blake, and Ella last. (Same voter, same opinion as on [the score ballot](score_ballot.md) — compare them side by side on [alternate ballot styles](../ballot_styles.md).)
+One row per candidate, one column per rank. This voter says: Andre first, then Carmen, then David, then Blake, and Ella last.
+
+It's the same voter, the same opinion, as on [the score ballot](score_ballot.md) — line the expressions up and you can see what each style keeps:
+
+| Candidate | **Ranking (this page)** | Yes/No | Score 0–5 |
+|---|:--:|:--:|:--:|
+| Andre | 1st | ● | 5 |
+| Blake | 4th | ○ | 1 |
+| Carmen | 2nd | ● | 4 |
+| David | 3rd | ● | 4 |
+| Ella | 5th | ○ | 0 |
+
+Notice the middle of the field: the voter feels Carmen = David (both 4s), but this ballot *has* to call one of them 2nd and the other 3rd. The full side-by-side walk-through is [alternate ballot styles](../ballot_styles.md).
 
 ## The grid rules — and how they bite
 

@@ -10,7 +10,19 @@
 
 <img src="../img/ballot_panel_scoring.png" width="420" alt="A score ballot: five candidates (Andre, Blake, Carmen, David, Ella) each on a row with bubbles 0 (Worst) through 5 (Best). The voter has scored Andre 5, Blake 1, Carmen 4, David 4, Ella 0.">
 
-One row per candidate, 0 (worst) to 5 (best) — like rating movies. This voter says: Andre a 5, Carmen and David both a 4, Blake a grudging 1, Ella a 0. (Same voter, same opinion as on [the ranked ballot](ranked_ballot.md) — note what survived the trip: here Carmen = David is *recorded*; the ranking had to fake a 2nd-vs-3rd difference.)
+One row per candidate, 0 (worst) to 5 (best) — like rating movies. This voter says: Andre a 5, Carmen and David both a 4, Blake a grudging 1, Ella a 0.
+
+It's the same voter, the same opinion, as on [the ranked ballot](ranked_ballot.md) — line the expressions up and you can see what each style keeps:
+
+| Candidate | Ranking | Yes/No | **Score 0–5 (this page)** |
+|---|:--:|:--:|:--:|
+| Andre | 1st | ● | 5 |
+| Blake | 4th | ○ | 1 |
+| Carmen | 2nd | ● | 4 |
+| David | 3rd | ● | 4 |
+| Ella | 5th | ○ | 0 |
+
+Note what survived the trip: here Carmen = David is *recorded* — the ranking had to fake a 2nd-vs-3rd difference, and Yes/No can't tell Andre from David at all. The full side-by-side walk-through is [alternate ballot styles](../ballot_styles.md).
 
 ## The marking rules — deliberately hard to get wrong
 
