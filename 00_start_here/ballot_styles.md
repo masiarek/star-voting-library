@@ -6,6 +6,8 @@
 
 ![Three ballot styles side by side for the same five candidates (Andre, Blake, Carmen, David, Ella): a Ranking ballot with a 1st–5th grid, a Yes/No (Approval) ballot with one filled or open bubble per candidate, and a Scoring ballot rating each candidate 0 (Worst) to 5 (Best)](img/ballot_styles_ranking_yesno_scoring.png)
 
+*Ballot graphics after the [Equal Vote Coalition's](https://www.equal.vote/) ballot designs (the candidate cast matches their materials, so what you see here is what you'll meet on [equal.vote](https://www.equal.vote/star) and [bettervoting.com](https://bettervoting.com)). Equal Vote is a STAR-advocacy organization — fine for ballot* anatomy, *which is all this page uses; the method* comparisons *in this repo rest on its own runnable elections.*
+
 ---
 
 ## The three ballots

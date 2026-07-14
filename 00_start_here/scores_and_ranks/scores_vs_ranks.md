@@ -2,6 +2,8 @@
 
 *The single most important distinction in ballot design — and the one people get wrong most often.*
 
+→ **See it, don't just read it:** [Alternate ballot styles — one voter, three ballots](../ballot_styles.md) shows the *same* voter's opinion on a ranking ballot (read by RCV-IRV, STV, or Ranked Robin), a Yes/No ballot (Approval), and a 0–5 scoring ballot (Score/Range, STAR) — side by side, with what each captures and throws away.
+
 ---
 
 There are two fundamentally different ways a ballot can ask for your opinion, and they are **not** interchangeable:
@@ -44,6 +46,7 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 
 ## Related concepts in this library
 
+- [Alternate ballot styles](../ballot_styles.md) — the three ballots side by side, marked by one voter (with the ballot images)
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — equal ranks & pairwise comparison: which ranked methods allow them (IRV doesn't)
 - [Scoring methods vs. ranked voting](../scoring-methods-vs-ranked-voting.md) — why Approval & STAR sit *outside* the RCV family
 - [Is RCV "simple"? (201)](../RCV_IRV/RCV_IRV_is_simple.md) — the five-star mental model vs. ordering strangers
