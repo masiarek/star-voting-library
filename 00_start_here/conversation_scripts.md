@@ -6,6 +6,27 @@ Start here: [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about
 
 ---
 
+## Format policy — scripts are for presenters; readers get educational pages (decided 2026-07)
+
+The Larry↔Adam dialogue format exists **for recording** — it is a presenter artifact, not the reading surface. A visitor landing on a topic should meet a normal educational page, not a screenplay. So:
+
+1. **Every topic's primary surface is an educational concept page.** A conversation script survives only where the spoken format *is* the product (the flagship pitch, the personal cold open) — and even then it should point to the educational pages for the substance.
+2. **The model pattern** is [what_is_a_voting_method.md](what_is_a_voting_method.md): a concept page ([voting_method_ballot_and_count.md](voting_method_ballot_and_count.md)) is primary, and the script opens by saying it is the spoken/video companion.
+3. **Status of the dialogue-format pages:**
+
+| Page | Verdict | State |
+|---|---|---|
+| [are_equal_score_votes_discounted.md](STAR_Voting/are_equal_score_votes_discounted.md) | convert | **✔ converted** to an educational page (2026-07) |
+| [what_is_a_voting_method.md](what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
+| [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](STAR_Voting/STAR_start_here.md) & [benefits](STAR_Voting/STAR_benefits.md) |
+| [why_do_you_love_STAR_Voting.md](STAR_Voting/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
+| [our_voting_system_is_broken.md](our_voting_system_is_broken.md) | convert | pending — educational "problem with plurality" page |
+| [favorite_betrayal_voting_301.md](STAR_Voting/favorite_betrayal_voting_301.md) | convert | pending — already a reference doc at heart; de-dialogue it |
+| [RCV_or_IRV_whats_the_right_word.md](RCV_IRV/RCV_or_IRV_whats_the_right_word.md) | convert | pending — fold toward [TIPS_terminology](TIPS_terminology.md) (canonical), keep a short concept page |
+| [exhausted_ballots_301.md](RCV_IRV/exhausted_ballots_301.md) | convert | pending — the taxonomy is reference material; de-dialogue it |
+
+---
+
 ## Where to start & how to organize
 
 **Record one flagship episode first** (the "What's so good…" script), because it forces you to nail the core arc end-to-end. Then break that arc into **short, single-topic clips** you can release on their own and reuse. The flagship doubles as the table of contents.
@@ -35,7 +56,7 @@ Start here: [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about
 | 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |
 
-Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](STAR_Voting/are_equal_score_votes_discounted.md)) is debate-prep — deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
+Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](STAR_Voting/are_equal_score_votes_discounted.md), now an educational page — build the clip's Q&A from its sections) is debate-prep — deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
 
 ### Suggested additional topics (good standalone clips)
 - "Equal Preference / no-preference in the runoff" — what an equal score does. <!-- terminology-ok: names the aka under discussion -->

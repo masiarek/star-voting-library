@@ -1,105 +1,86 @@
-# "Aren't Equal-Score Votes Just Discounted?"
-### A recorded conversation — Larry (channels the critic) & Adam (expert)
+# Are Equal-Score Votes "Discounted"?
 
-An **objection-handling** episode. The FairVote line is that a STAR ballot which scores both finalists the same (e.g. 5/5) is "discounted" — ignored in the runoff. Larry plays the skeptic; Adam answers honestly: concede the mechanical point, reframe the meaning, contrast it with RCV-IRV's exhausted ballots, and be candid about the one place the criticism actually has weight.
+*The objection, in its strongest form: in STAR, a ballot that scores both finalists the same (a 5/5, a 0/0) is tagged "no preference" and moves nothing in the Automatic Runoff. Sometimes that's a lot of ballots. Isn't that just a discounted vote? This page answers honestly: it concedes the mechanical fact, shows why "discounted" is the wrong word, proves with a runnable election that these ballots do real work, and names the one version of the criticism that genuinely lands.*
 
-This is **Tier 2–3 / debate-prep material** — for skeptics and the RCV crowd, not a first-contact public talk. See "Where this fits" at the end.
-
-Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesson file.
+→ Companions: [Equal Support in both rounds (the demo)](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
 
 ---
 
-## Segment A — the accusation
+## What actually happens to an equal-score ballot
 
-**Larry:** Here's the criticism I keep hearing, and honestly it sounds damning. In STAR, if I score both finalists a 5, my ballot is tagged "no preference" and ignored in the final count. So a bunch of ballots — sometimes a lot of them — don't count in the round that picks the winner. Isn't that just a discounted vote?
+The mechanical claim is true, and there is no point denying it: if you score both finalists the same, your ballot does not move the margin between them. Concede that up front — it buys credibility for what follows.
 
-**Adam:** I'm going to give you something you don't usually get in these debates: I'll agree with the mechanical part, completely. If you score both finalists the same, your ballot does not move the margin between them. That's true. Where I part ways is the word "discounted," because it smuggles in a conclusion that isn't true.
+Where the criticism goes wrong is the word **"discounted."** Discounted implies the voter tried to say something and the system threw it away. That is not what happened. The voter looked at the two finalists and said, explicitly, "these two are equal to me" — and the system recorded exactly that. A tie vote cannot break a tie, but it wasn't ignored; it was counted as what it was: **Equal Support**, neutral between those two.
 
-**Larry:** Go on — why isn't "discounted" fair?
+Two details make this concrete:
 
-**Adam:** Because "discounted" implies the voter tried to say something and the system threw it away. That's not what happened. The voter looked at the two finalists and said, explicitly, "these two are equal to me." The system recorded that exactly. A tie vote can't break a tie — but it wasn't ignored, it was *counted as what it was*: **Equal Support** — neutral between those two. (That's the exact label STAR's runoff gives it: "Equal Support," aka Equal Preference / No <!-- terminology-ok: documents the aka --> Preference.)
+- **One label, two honest opposites inside it.** Some Equal Support voters scored *both* finalists high ("I'd be glad with either"); some scored *both* low ("I wanted neither of these two"). Either way it is no preference *between these two* — and either way the ballot was counted in full in the Scoring Round that chose them. On a results pie, Equal Support is the thin slice that makes the finalists' shares add to a bit under 100% — present voters, not missing ones.
+- **The ballot instruction says exactly this.** *"Equal scores indicate no preference"* is a statement about the **runoff**. In the Scoring Round, those scores counted at full weight.
 
-**Larry:** And "Equal Support" is one bucket for everyone who tied the two finalists?
+## The key contrast: a declared tie is not a lost voice
 
-**Adam:** One label, two honest opposites inside it. Some scored *both* finalists high — "I'd be glad with either." Some scored *both* low — "I wanted neither of these two." Either way it's no preference *between these two*, and either way it was counted in the scoring round that chose the finalists. On a results pie it's the thin slice that makes the two finalists' shares add up to a bit under 100% — present voters, not missing ones. It's also exactly what the STAR ballot's own instruction means — *"equal scores indicate no preference"* is about the **runoff**, not the scoring round, where those ballots counted in full.
-
-> [SLIDE] Full Deck — "NO-PREFERENCE VOTES IN THE STAR RUNOFF." [SLIDE] STAR-vs-RCV Template — the "Results" pie ("Supported both" ★ / "Supported neither" ✗, both = Equal Support).
-
----
-
-## Segment B — the key reframe (declared tie vs lost voice)
-
-**Larry:** But my critic would say: the voter clearly cared — they gave both a 5! That's strong support, and it bought them nothing in the final round.
-
-**Adam:** Here's the exact comparison to make. In RCV-IRV, if you don't rank the two finalists — maybe you ran out of rankings, maybe the ballot only allowed three — your ballot is *exhausted*: set aside because the system doesn't know what you think about A versus B. Nobody calls *that* discounted, even though it's a voter whose voice genuinely dropped out.
-
-A STAR equal-score ballot is the opposite situation. The system knows exactly what you think about A versus B — you told it they're equal. So the one-liner is:
+The sharpest way to see why "discounted" fails is to compare the thing critics never call discounted. In RCV-IRV, if your ballot doesn't rank the two finalists — you ran out of rankings, or the ballot only allowed three — it is **exhausted**: set aside because the system *doesn't know* what you think about A versus B. A STAR equal-score ballot is the opposite: the system knows *exactly* what you think about A versus B, because you told it — they're equal.
 
 > **In RCV-IRV, an exhausted ballot is a voter who lost their voice. In STAR, an equal-score ballot is a voter who declared a tie.**
 
-**Larry:** So one is missing data and the other is present data that says "tie."
+One is missing data; the other is present data that happens to be neutral. Treating "I am equally happy with either winner" as a *failure to be counted* is the part of the criticism that doesn't survive contact. The full taxonomy of what "exhausted" hides is its own page: [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md).
 
-**Adam:** Exactly. One ran out of information; the other supplied information that happens to be neutral. Treating "I am equally happy with either winner" as a *failure* is the part of the criticism that doesn't survive contact.
+## Proof they're counted: an election where equal-score ballots pick the finalists
 
-> [REPO] `00_start_here/GLOSSARY.md` — "Equal Support", "Exhausted ballot."
+Run [`equal_support_runoff_demo.yaml`](../../01_STAR/_main/equal_support_runoff_demo.yaml) ([reader page](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
+
+```text
+--- STAR Voting Method (single winner) ---
+ Tabulating 100 ballots.
+Count × A,B,C
+   40 × 5,5,0
+   35 × 5,3,0
+   25 × 0,0,5
+
+Scoring Round
+ The two highest-scoring candidates advance to the next round.
+   A             -- 375 -- First place
+   B             -- 305 -- Second place
+   C             -- 125
+ A and B advance.
+
+Automatic Runoff Round
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 35 -- First place
+   B             --  0
+   Equal Support -- 65
+ A wins.
+```
+
+Read the two rounds against the objection:
+
+- **Scoring Round:** A and B top the totals *because of* the 40 equal-A-B ballots — those 5/5s are what pushed both finalists past C. The "ignored" ballots literally chose who is in the final.
+- **Automatic Runoff:** A beats B 35–0, decided by the voters who *had* a preference between them. The 65 Equal Support ballots (the 40 both-5s and the 25 both-0s) are neutral — because their voters *are* neutral between A and B.
+
+Counted in both rounds, decisive in neither tie they had no stake in — a very different story from "discounted."
+
+## The honest concession: coarse scales can swallow a faint preference
+
+There is one version of this criticism that is legitimate, and pretending otherwise would cost more than it saves. Suppose you like A a *tiny* bit more than B, but you think both are excellent and you want them both to beat C. On a 0–5 scale you might give both a 5 to keep them strong — and now a preference you really had is recorded as a tie. The ballot's resolution failed to capture it. In one Oregon Independent Party race, nearly 30% of runoff ballots landed as "no preference," and some of those voters surely had a faint lean they maxed out of existence.
+
+That is a fair, objective criticism of *cardinal ballots with few levels* — a self-inflicted discount the scale makes easy. The practical answer is voter education, and it's one sentence: **show the gap you feel between the front-runners — if you like A more, give A the 5 and B a 4.** Your 4 still supports B strongly in the Scoring Round, and your preference now counts in the runoff. (STAR's design rewards exactly this honesty; see [the ways to fill out a STAR ballot](STAR_ballot_voting_styles.md).)
+
+## The asymmetry: compare it to how ranked-IRV ballots get wasted
+
+Does the concession mean STAR "wastes" votes just like the thing it criticizes? No — the two failure modes are not symmetric. A STAR equal-score ballot is *voluntary neutrality*; the worst case is a voter who maxed out two candidates they both love. RCV-IRV's wasted votes are *involuntary*, and they hit voters who had explicit preferences:
+
+- **Voided ballots** — equal or skipped rankings can spoil the whole ballot, and that error rate falls hardest on the voters with the least support navigating the format.
+- **Favorite in the final, and loses** — if your favorite reaches the last round and loses, your backup rankings are never read at all.
+- **Your next choice is already gone** — by the time your vote is ready to transfer, the candidate it would have gone to may already be eliminated.
+
+In every one of those cases the voter *supplied* a preference and the count never used it. So the debate move is: concede the equal-score mechanic, then ask the critic to account for those. See [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md) and [Why STAR Voting](../Why_STAR_Voting.md) (usability / exhausted ballots).
+
+## The takeaway
+
+An equal-score ballot isn't a discounted vote — it's a voter who said, in their own hand, that they're equally happy with either finalist. It was counted in full in the round that picked the finalists, and it stayed neutral in the one contest it had no stake in. And if you *do* have a preference, STAR rewards you for showing it — so show it.
 
 ---
 
-## Segment C — but they ARE counted (the demo)
+## Where this fits in the teaching
 
-**Larry:** Prove to me these ballots actually did something. Show me they're not just dead weight.
-
-**Adam:** Let's run an election where the equal-score ballots are the reason the finalists exist.
-
-> [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` 100 voters. 40 score **both A and B a 5** (love both, C=0). 35 prefer A (A=5, B=3). 25 prefer C. - **Scoring Round:** A and B have the top totals and advance — and it's those 40 equal-A-B ballots that pushed them both over C. *They picked the finalists.* That's them being counted. - **Automatic Runoff:** A beats B, decided by the 35 voters who actually preferred one. The 40 equal ballots (and the 25 C-voters who scored both finalists 0) are "Equal Support" — neutral, because they *are* neutral.
-
-**Adam (after demo):** So those ballots were fully counted in round one — they literally chose who's in the final — and then they were neutral in round two, because their voters had no preference there. "Counted in both rounds, decisive in neither tie they had no stake in" is a very different story than "discounted."
-
----
-
-## Segment D — the honest concession (where the critic has a point)
-
-**Larry:** You said you'd be honest about where this criticism lands. Where does it?
-
-**Adam:** The coarseness of the scale. Here's the real version of the objection, and it's legitimate: suppose I like A a *tiny* bit more than B, but I think they're both excellent — and I want to make sure they both beat C. On a 0–5 scale I might give both a 5 to keep them strong. Now I've genuinely got a preference, A over B, but I recorded a tie. The ballot design failed to capture a real preference I had.
-
-**Larry:** So in that case it *is* a kind of self-inflicted discount.
-
-**Adam:** Yes — and I won't pretend otherwise. In one Oregon Independent Party race, nearly 30% of ballots landed as "no preference" in the runoff, and some of those were surely people who had a faint preference but maxed both out. That's a fair, objective criticism of *cardinal scales with few levels*. The honest answer is: score your true preference order between the front-runners — if you like A more, give A the 5 and B a 4. The runoff only works if you show the gap you feel.
-
-> [SLIDE] Full Deck — "COMBATTING STRATEGIC VOTING" (show your preference order between the frontrunners).
-
----
-
-## Segment E — the counter (RCV-IRV wastes votes in worse ways)
-
-**Larry:** Okay, but doesn't this still mean STAR "wastes" votes, just like the thing it criticizes RCV-IRV for?
-
-**Adam:** No — and here's the asymmetry. A STAR equal-score ballot is *voluntary neutrality*: the worst case is a voter who maxed two candidates they both love. RCV-IRV's wasted votes are *involuntary* and they hit voters who had explicit preferences:
-- **Voter errors / voided ballots** — equal or skipped rankings can spoil the whole ballot, and that falls hardest on marginalized voters.
-- **Favorite eliminated in the final round** — if your favorite makes it to the last two and loses, your other rankings are never counted at all.
-- **Your next choice already gone** — by the time your vote is ready to transfer, the candidate it would've gone to may already be eliminated.
-
-So the move in a debate is: concede the equal-score mechanic, then ask the critic to account for *those* — the ones where a voter had a real preference and the system still threw it out. That's not symmetric.
-
-> [SLIDE] Full Deck — "RANKED CHOICE DEAL BREAKERS" and the exhausted-ballot slides; Torrance deck — the scorecard row "Wasted Votes / Exhausted Ballots." [REPO] `00_start_here/Why_STAR_Voting.md` Part 2 — Tier 1 #4 (usability / exhausted ballots).
-
----
-
-## Segment F — close
-
-**Larry:** Give me the sentence I can repeat.
-
-**Adam:** "An equal-score ballot isn't a discounted vote — it's a voter who told us, in their own hand, that they're equally happy with either finalist. It was counted in the round that picked the finalists, and it stayed neutral in the one tie it had no stake in. If you *do* have a preference, STAR rewards you for showing it — so show it."
-
----
-
-## Where this fits in the overall teaching
-
-This is **not** an introductory beat — don't raise "discounted votes" with a first-contact audience; you'd be planting a doubt they didn't have. Place it as:
-
-- **A standalone debate-prep clip** (Episode 11 in the series roadmap), released for the skeptic / RCV-advocate audience.
-- **A pull-out you only deploy when asked.** In the flagship script (`whats_so_good_about_STAR_Voting.md`), it hangs off **Segment 4** (where "Equal Support" is first introduced) and **Segment 7** (STAR vs RCV-IRV). Add a one- line pointer there: *"If someone pushes the 'discounted votes' line, see the Equal-Support episode."*
-- **Mapped to the debate tiers** in `Why_STAR_Voting.md`: it's the runoff/Equal- Support counterpart to Tier 3 #9 (later-no-harm / center squeeze) — same shape, concede-then-reframe-then-counter.
-
-Cross-references: `LINKS.md` → **"Discounted votes — RCV-IRV FairVote False Talking Points"**, **"Equal Support vs Equal Preference"**, **"Exhausted Ballots"**. <!-- terminology-ok: slide titles -->
+This is **objection-handling material for skeptics and the RCV-advocate audience** — don't raise "discounted votes" with a first-contact audience; you'd plant a doubt they didn't have. It hangs off two 101 moments: where [Equal Support](glossary_STAR.md) is first introduced, and the STAR-vs-RCV-IRV comparison. Presenters: the matching slides are indexed by short name in [LINKS.md](../LINKS.md) ("No-preference votes in the STAR runoff"; "Combatting strategic voting"; the exhausted-ballot slides), and the episode roadmap lives in [conversation scripts](../conversation_scripts.md).
