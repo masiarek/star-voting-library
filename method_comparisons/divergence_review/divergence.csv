@@ -50,8 +50,6 @@ AGREE,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.
 AGREE,01_STAR/tie_break_dead_rung/tie_break_01_scoring_five_star_breaks.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_02_scoring_no_fives_to_lot.yaml,3,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,Alice,1,False,False,False
 AGREE,01_STAR/tie_break_dead_rung/tie_break_03_runoff_no_fives_to_lot.yaml,2,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,,,0,False,False,True
-AGREE,YAML_library/1_positive/_generated/S_W1_N_CopyOfIceCreamFlavorOfTheYear6FlavorsTemplate_bk6ymd.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,,,2,False,False,True
-AGREE,YAML_library/1_positive/_generated/S_W1_N_TestTestTestElection_kgbf8w.yaml,7,1,Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),Almond Choco (CAm),1,False,False,False
 AGREE,YAML_library/1_positive/lot_tiebreak_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,1,False,False,False
 AGREE,method_comparisons/BV_Library/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
