@@ -21,6 +21,25 @@ BetterVoting's **Ballot Data** export (the per-ballot CSV, `Ballot Data - <title
 - **There is always a `precinct` column** (column B), part of BV's precinct-tagging / `precinctFilteredElection` feature. It is **blank** unless the election actually defines precincts — API-created elections don't, so every row's precinct is empty. It's harmless: the JSON→YAML importer ignores it (only the candidate columns + `ballot_id` matter).
 - **Ranked methods put a rank in each candidate cell** (`1` = top … `0` = unranked), and **equal ranks are preserved** — a tie like `Ava=Bianca=Cedric` exports as `1,1,1,…`. Confirmed on **BV2140** (`48hjkv`): the exported ballots round-trip the tied ranks exactly, and BV's `RankedRobin.ts` tabulated them to the same winner/records as the LH engine. So BV both **accepts equal-rank ballots on creation and counts ties the same way** LH does.
 
+## Voter identity when casting, and ballot anonymity in the export
+
+**How a vote is attributed to a "voter": the `temp_id` cookie.** `POST /API/Election/{id}/vote` carries a **`temp_id`** cookie, and BV keys the ballot to that value. It's how an open/anonymous poll enforces *one ballot per voter* and lets a voter **change** their vote (re-submitting with the same `temp_id` **updates** the existing ballot rather than adding a new one). In the browser this cookie is set for you; our scripts set it explicitly, so **each distinct `temp_id` = a distinct voter**. To cast N independent ballots you use N distinct `temp_id`s (`create_bv_test_election.py` uses `f"{USER_ID}_voter{idx}"`); reuse one and BV overwrites/ rejects it as the same voter re-voting. Caveat: `temp_id` is an **arbitrary string the caller chooses** — no real identity, freely settable via the API. That's why these open API polls are fine for **demos but not secure** for a real election (a real one uses authenticated voter credentials, not a self-set cookie).
+
+**The `temp_id` does NOT appear in the export — ballots are anonymous.** A ballot record in the exported JSON looks like:
+
+```json
+{ "ballot_id": "b-vmm2y3c2", "election_id": "kjhpg6", "precinct": null,
+  "votes": [ { "race_id": "0", "scores": [ {"candidate_id": "c-494", "score": 3}, … ] } ] }
+```
+
+| Field | In the export? | What it is |
+|---|---|---|
+| `ballot_id` | ✅ | a **random per-ballot** handle BV assigns — **not** the voter/`temp_id`, not a person |
+| `election_id`, `precinct`, `votes.scores` | ✅ | which election, precinct label (usually `null`), and the 0–5 scores (+ any `write_in_name`) |
+| **`temp_id`** / voter_id / user_id / IP / email | ❌ **absent** | — |
+
+So the `temp_id` is **server-side only** (dedup / vote-changing while voting); it is **not written into the exported ballot**. The tally export is a set of **anonymous ballots** — random `ballot_id` + scores, with nothing tying a ballot back to a voter. This is the good half of the secret-ballot property, and it complements the paper-side discussion in the [paper-ballot demo](../../STAR_Voting/running_a_paper_ballot_demo.md) (serials / E2E-V): distinguishing ballots *while voting* without letting the tally re-identify a voter. (One residual: `ballot_id` is a stable handle for *that ballot*, so an external "voter X → ballot_id Y" record could re-link them — but the export itself provides no such map.)
+
 ## What does NOT work — the `/admin` gate (a real BV limitation)
 
 **You cannot administer an API-created election from the UI**, even though you own it. Opening `/<id>/admin` returns *"Only the users with admin access on the election can view this page."*
