@@ -245,8 +245,8 @@ table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .wline { display: inline-block; border-bottom: 1.5px solid #333; width: 62%; height: 1em; }
 .explain { text-align: center; font-size: 12.5px; line-height: 1.35; margin: 6px 4px 2px;
            padding-top: 8px; border-top: 1.5px solid #111; }
-.foot { margin-top: 8px; font-size: 10.5px; color: #555; display: flex; justify-content: space-between; }
-.foot .eid { font-weight: 800; font-size: 12.5px; color: #111; }
+.foot { margin-top: 8px; font-size: 16px; color: #555; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.foot .eid { font-weight: 800; color: #111; }
 .promo { text-align: center; font-size: 10px; color: #5a7683; margin: 5px 0 0; }
 .serial { font-weight: 700; }
 @media print { .noprint { display: none; } .ballot { margin: 0 0 8px; }
@@ -279,13 +279,13 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
     bullets = "".join(f"<li>{html.escape(b)}</li>" for b in INSTRUCTION_BULLETS)
     explain = "<br>".join(html.escape(l) for l in EXPLAIN_LINES)
 
-    results = (f'results: bettervoting.com/{html.escape(bv_id)}/results'
+    results = (f'Election results: bettervoting.com/<span class="eid">{html.escape(bv_id)}</span>/results'
                if bv_id else 'STAR Voting — Score Then Automatic Runoff')
     idpieces = []
     if serial is not None:
         idpieces.append(f'Ballot <span class="serial">#{html.escape(str(serial))}</span> '
                         f'— keep this to verify it was counted')
-    idpieces.append(f'Election <span class="eid">{html.escape(bv_id)}</span>'
+    idpieces.append(f'Better Voting Election ID: <span class="eid">{html.escape(bv_id)}</span>'
                     if bv_id else 'demo ballot')
     idline = " · ".join(idpieces)
 
@@ -365,7 +365,8 @@ def selftest():
                             copies=3, per_page=2)
     checks = [
         ("all three candidates present", all(n in html_out for n in ("Ann", "Bob", "Cal"))),
-        ("bv id + results url", "bettervoting.com/abc123/results" in html_out),
+        ("bv id + results url", 'bettervoting.com/<span class="eid">abc123</span>/results' in html_out),
+        ("election id label", "Better Voting Election ID:" in html_out),
         ("3 ballots rendered", html_out.count('class="ballot') == 3),
         ("0-5 bubble grid (18 bubbles/ballot = 3 cands x 6)", html_out.count('class="bub"') == 3 * 6 * 3),
         ("html escaping of a tricky name",
