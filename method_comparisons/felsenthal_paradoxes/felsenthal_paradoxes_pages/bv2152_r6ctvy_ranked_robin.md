@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Bert
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r6ctvy) · **[results ↗](https://bettervoting.com/r6ctvy/results)** (election `r6ctvy`).
+
 ## Scenario
 
 Race 2 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6ctvy; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 5, due to Felsenthal & Maoz (1988: 123, Example 2) — see bv2152_r6ctvy_approval.yaml for the setup.

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
+
 ## Scenario
 
 Race 1 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6 (instant-runoff — Felsenthal's "Alternative Vote" is the British name for RCV-IRV), Example 16, due to Nurmi (1999: 63).

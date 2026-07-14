@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2177_v8r66y_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2177_v8r66y_plurality_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:22
+TABULATED AT:    2026-07-14 18:13:47
 ======================================================================
 
 election_title: "The Post-it election, seven ways — Choose-One: Purple on 7 first choices"

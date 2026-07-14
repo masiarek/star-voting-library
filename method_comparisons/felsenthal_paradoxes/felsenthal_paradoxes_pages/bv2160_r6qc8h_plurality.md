@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r6qc8h) · **[results ↗](https://bettervoting.com/r6qc8h/results)** (election `r6qc8h`).
+
 ## Scenario
 
 Race 2 of 2 in the Borda-truncation election (BV2160, bvid r6qc8h; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 14, adapted from Fishburn (1974: 543) — see bv2160_r6qc8h_star.yaml for the setup.

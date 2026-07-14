@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2153_pcttmr_irv.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2153_pcttmr_irv_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:14
+TABULATED AT:    2026-07-14 18:13:37
 ======================================================================
 
 election_title: "Felsenthal Ex.7 — IRV: the majority favorite wins round one"

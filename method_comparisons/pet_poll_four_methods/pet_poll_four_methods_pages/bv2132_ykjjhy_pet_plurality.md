@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Dog
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ykjjhy) · **[results ↗](https://bettervoting.com/ykjjhy/results)** (election `ykjjhy`).
+
 ## Scenario
 
 One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy). This is the choose-one Plurality race: each voter marks a single top pet. Dog has the most first choices (9 of 22) and wins — even though a 13-voter majority ranks Dog LAST. This is the spoiler/first-past-the-post failure: the consensus candidate Cat (the Condorcet winner) has only 6 first choices and loses. Same electorate as the Approval/STAR races (Cat wins) and the RCV-IRV race (Fish wins). BV also elects Dog. Live results: https://bettervoting.com/ykjjhy/results

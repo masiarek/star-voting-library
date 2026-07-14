@@ -7,7 +7,6 @@ AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml,
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.yaml,5,2,Ava,Ava,Dan,Ava,Ava,Ava,Ava,,Ava,2,True,False,True
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_07_fully_flat.yaml,3,2,Ararat,Ararat,Cook,Ararat,Ararat,Ararat,Ararat,,Ararat,2,True,False,True
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.yaml,3,5,Anchovy,Anchovy,Caper,Anchovy,Anchovy,Anchovy,Anchovy,,Anchovy,5,True,False,True
-AGREE,01_STAR/_main/01_c3_b3_ann-bob-cal.yaml,3,3,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,0,False,False,False
 AGREE,01_STAR/_main/02a_c3_b1_three-candidates.yaml,3,1,Choco,Choco,Choco,Choco,Choco,Choco,Choco,Choco,Choco,0,False,False,False
 AGREE,01_STAR/_main/02b_c3_b2_three-candidates.yaml,3,2,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,,,0,False,False,True
 AGREE,01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml,3,3,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,1,False,False,False
@@ -16,6 +15,7 @@ AGREE,01_STAR/_main/05a_c5_b3_unanimous-ballots.yaml,5,3,Andre,Andre,Andre,Andre
 AGREE,01_STAR/_main/06a_c9_b3_large-field-equal-support.yaml,9,3,Carmen,Carmen,Gabe,Carmen,Carmen,Carmen,Carmen,Carmen,Carmen,3,True,False,False
 AGREE,01_STAR/_main/06b_c9_runoff-overturns-leader.yaml,9,3,Carmen,Carmen,Carmen,Carmen,Carmen,Carmen,Andre,Carmen,Carmen,3,False,False,False
 AGREE,01_STAR/_main/abstentions.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
+AGREE,01_STAR/_main/bv2187_qrw6wb_ann-bob-cal.yaml,3,3,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,0,False,False,False
 AGREE,01_STAR/_main/equal_support_runoff_demo.yaml,3,100,A,A,B,A,A,A,A,A,A,40,True,False,False
 AGREE,01_STAR/_main/quorum_demo_c3_b6.yaml,3,6,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,0,False,False,False
 AGREE,01_STAR/_main/quorum_fail_demo_c3_b6.yaml,3,6,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,0,False,False,False

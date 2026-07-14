@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Amos
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr`).
+
 ## Scenario
 
 Race 3 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.

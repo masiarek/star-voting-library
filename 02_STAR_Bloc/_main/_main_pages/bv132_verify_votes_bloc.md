@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** C, B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/verify) · **[results ↗](https://bettervoting.com/verify/results)** (election `verify`).
+
 ## Scenario
 
 Bloc STAR, 3 candidates, 2 seats, 4 ballots — two of them "flat" (every

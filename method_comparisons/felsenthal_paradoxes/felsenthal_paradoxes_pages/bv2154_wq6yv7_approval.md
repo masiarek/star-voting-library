@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** April
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
+
 ## Scenario
 
 Race 1 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 8.

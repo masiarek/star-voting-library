@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ben
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg`).
+
 ## Scenario
 
 Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 2 (plurality with runoff).

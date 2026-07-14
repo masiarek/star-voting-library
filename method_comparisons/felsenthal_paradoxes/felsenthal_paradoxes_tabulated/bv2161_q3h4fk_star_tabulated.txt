@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2161_q3h4fk_star.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2161_q3h4fk_star_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:15
+TABULATED AT:    2026-07-14 18:13:39
 ======================================================================
 
 election_title: "Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits)"

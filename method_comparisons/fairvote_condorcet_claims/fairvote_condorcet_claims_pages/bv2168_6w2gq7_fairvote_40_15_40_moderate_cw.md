@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Moderate
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7`).
+
 ## Scenario
 
 FairVote's article "Why the Condorcet Criterion Is Less Important Than It

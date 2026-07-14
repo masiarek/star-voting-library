@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Fish
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyxrbr) · **[results ↗](https://bettervoting.com/dyxrbr/results)** (election `dyxrbr`).
+
 ## Scenario
 
 One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr). RCV-IRV (ranked, instant runoff). Round 1: Dog 13, Fish 10, Bird 9 — eliminate Bird; Bird > Cat, so Cat rises. Then Cat (fewest) is eliminated and its ballots flow to Fish, which beats Dog 19-13. So IRV elects Fish. Same electorate as the Plurality race (Dog), Approval race (Bird) and STAR race (Cat): four methods, four winners. BV also elects Fish. Live results: https://bettervoting.com/dyxrbr/results

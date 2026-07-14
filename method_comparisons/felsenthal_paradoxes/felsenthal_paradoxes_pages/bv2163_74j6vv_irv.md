@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv`).
+
 ## Scenario
 
 Race 2 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6, Example 16, due to Nurmi (1999: 63).

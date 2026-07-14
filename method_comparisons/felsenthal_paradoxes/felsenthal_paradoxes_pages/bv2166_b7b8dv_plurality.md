@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Cass
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b7b8dv) · **[results ↗](https://bettervoting.com/b7b8dv/results)** (election `b7b8dv`).
+
 ## Scenario
 
 Race 2 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 19 (continued) — see bv2166_b7b8dv_star.yaml for the setup.

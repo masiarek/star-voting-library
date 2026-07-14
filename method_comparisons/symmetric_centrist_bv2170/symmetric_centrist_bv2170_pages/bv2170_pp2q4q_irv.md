@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Avery
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q`).
+
 ## Scenario
 
 One of four races in the Symmetric Centrist election (BV2170, bvid pp2q4q; BV-confirmed). 100 voters, three candidates, ONE electorate tabulated four ways. Avery is the left pole, Blake the right pole, Casey the centrist Condorcet winner (beats each pole 53–47) — but Casey holds only 6 first choices. IRV eliminates Casey FIRST (fewest first choices), and Casey's 6 ballots split 3 to Avery, 3 to Blake, leaving Avery 50 vs Blake 50 — an EXACT TIE. The center squeeze throws out the candidate a majority actually prefers, and the two poles then deadlock.

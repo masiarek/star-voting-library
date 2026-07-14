@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** D
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f3dxq9) · **[results ↗](https://bettervoting.com/f3dxq9/results)** (election `f3dxq9`).
+
 ## Scenario
 
 Race 2 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A10, Example 29 — see bv2167_f3dxq9_star.yaml for the setup.

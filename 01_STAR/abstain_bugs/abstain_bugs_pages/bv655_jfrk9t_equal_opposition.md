@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Option 1
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfrk9t) · **[results ↗](https://bettervoting.com/jfrk9t/results)** (election `jfrk9t`).
+
 ## Scenario
 
 This is Race 1 of BetterVoting election jfrk9t (the election has two races — see

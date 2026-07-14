@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** None of the Above
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3`).
+
 ## Scenario
 
 A protest electorate. Four voters reject both real candidates and give the full

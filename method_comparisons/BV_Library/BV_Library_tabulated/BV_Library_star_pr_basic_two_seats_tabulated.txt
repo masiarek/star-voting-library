@@ -2,7 +2,7 @@
 SOURCE FILE:     BV_Library_star_pr_basic_two_seats.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  BV_Library_star_pr_basic_two_seats_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:09
+TABULATED AT:    2026-07-14 18:13:31
 ======================================================================
 
 election_title: "BV parity — STAR_PR (Allocated Score): basic two-seat allocation"

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h87k6v) · **[results ↗](https://bettervoting.com/h87k6v/results)** (election `h87k6v`).
+
 ## Scenario
 
 Race 2 of 2 in District II of the Felsenthal Reinforcement-paradox trio (BV2148, bvid h87k6v; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2148_h87k6v_irv.yaml for the setup.

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Liberal
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2jrfpg) · **[results ↗](https://bettervoting.com/2jrfpg/results)** (election `2jrfpg`).
+
 ## Scenario
 
 The refutation-by-example of FairVote's claim that "Condorcet winners are

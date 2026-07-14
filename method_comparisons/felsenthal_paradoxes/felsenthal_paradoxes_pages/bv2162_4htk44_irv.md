@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
+
 ## Scenario
 
 Race 2 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2162_4htk44_star.yaml for the setup.

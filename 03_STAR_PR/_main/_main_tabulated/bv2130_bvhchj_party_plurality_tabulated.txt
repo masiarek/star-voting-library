@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2130_bvhchj_party_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv2130_bvhchj_party_plurality_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:04
+TABULATED AT:    2026-07-14 18:13:27
 ======================================================================
 
 election_title: "BV2130 — Presidential Board: party alignment (Plurality)"

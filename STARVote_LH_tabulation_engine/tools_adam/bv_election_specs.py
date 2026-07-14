@@ -39,6 +39,7 @@ you need not hoard every spec here.
 #   BV2134 — Pets Governance (6 methods, 6 positions)     -> kcf8vf   (multi-race; backs method_comparisons/pets_governance)
 #   BV2135 — Block & Limited voting (as bloc Approval)     -> 3x4vrv   (backs method_comparisons/multi_member_plurality)
 #   BV2136 — Village Council by SNTV (multi-winner Plurality) -> y3tvxm  (backs method_comparisons/sntv_village_council)
+#   BV2187 — Ann, Bob, Cal (canonical STAR mechanics demo)      -> qrw6wb  (backs 01_STAR/_main/bv2187_qrw6wb_ann-bob-cal)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -2280,6 +2281,32 @@ _ICE_CREAM = {
                    "Chocolate Chip", "Chocolate Fudge", "Butter Pecan", "Salted Caramel"],
     "ballots": [],   # empty — a live vote
     "expected": "live vote — vote-splitting demo (a 3-flavor chocolate cluster)",
+}
+
+_ANN_BOB_CAL = {
+    "test_id": "BV2187",
+    "title": "Ann, Bob, Cal — the canonical STAR mechanics demo (3 voters, both rounds at work)",
+    "description": (
+        "The canonical leading example of the STAR education repo (github.com/masiarek/YAML): "
+        "the smallest STAR election where both rounds do visible, different work. Three voters "
+        "score three candidates: (Ann 5, Bob 4, Cal 0), (3, 5, 2), (0, 3, 5). Scoring Round: "
+        "Bob 12, Ann 8, Cal 7 — Bob and Ann advance. Automatic Runoff: voter 1 prefers Ann "
+        "(5 > 4), voters 2 and 3 prefer Bob, so Bob wins 2-1. Voter 1's ballot is the runoff "
+        "lesson: a friendly 4 for Bob still becomes one full vote for Ann. Deliberately no "
+        "twist — the score leader also wins the runoff (and is the Condorcet winner) — so the "
+        "procedure itself is the whole lesson. First-choice votes tie 1-1-1: Choose-One can "
+        "only shrug here."
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["Ann", "Bob", "Cal"],
+    "ballots": [
+        [5, 4, 0],   # voter 1: loves Ann, quite likes Bob
+        [3, 5, 2],   # voter 2: a Bob fan who scores honestly
+        [0, 3, 5],   # voter 3: loves Cal, Bob is acceptable
+    ],
+    "enable_write_in": False,   # canonical = frozen: lock the candidate list
+    "expected": "Bob (Scoring 12/8/7; runoff 2-1 over Ann; Condorcet winner). Plurality ties 1-1-1.",
 }
 
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────

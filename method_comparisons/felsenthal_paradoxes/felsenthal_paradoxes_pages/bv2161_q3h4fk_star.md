@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** C
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q3h4fk) · **[results ↗](https://bettervoting.com/q3h4fk/results)** (election `q3h4fk`).
+
 ## Scenario
 
 Race 1 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A5, Example 15.

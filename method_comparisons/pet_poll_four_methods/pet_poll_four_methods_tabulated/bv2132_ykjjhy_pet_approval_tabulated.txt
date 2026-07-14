@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2132_ykjjhy_pet_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2132_ykjjhy_pet_approval_tabulated.txt
-TABULATED AT:    2026-07-12 12:39:34
+TABULATED AT:    2026-07-14 18:13:44
 ======================================================================
 
 election_title: "BV2132 — Pet poll (Approval): broad support elects Cat"

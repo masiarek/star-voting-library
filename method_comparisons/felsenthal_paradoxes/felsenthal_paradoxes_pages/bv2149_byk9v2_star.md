@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/byk9v2) · **[results ↗](https://bettervoting.com/byk9v2/results)** (election `byk9v2`).
+
 ## Scenario
 
 Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2149_byk9v2_irv.yaml for the setup.

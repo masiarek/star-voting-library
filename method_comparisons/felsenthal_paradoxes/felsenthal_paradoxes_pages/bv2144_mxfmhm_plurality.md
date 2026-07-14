@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Ana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm`).
+
 **Official tie-break (lot) order:** Ana > Cal > Bo — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

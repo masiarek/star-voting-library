@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Bree
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t`).
+
 ## Scenario
 
 Race 2 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 17 — see bv2164_xbqq8t_star.yaml for the setup.

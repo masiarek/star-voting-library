@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Bruce
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
+
 ## Scenario
 
 Race 3 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 8 — see bv2154_wq6yv7_approval.yaml for the setup.

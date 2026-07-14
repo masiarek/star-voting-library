@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** April
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dhv8y) · **[results ↗](https://bettervoting.com/9dhv8y/results)** (election `9dhv8y`).
+
 ## Scenario
 
 The Participation criterion, live — the show-up half of the matched pair

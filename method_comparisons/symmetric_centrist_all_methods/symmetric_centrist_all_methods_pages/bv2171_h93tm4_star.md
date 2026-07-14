@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Casey
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h93tm4) · **[results ↗](https://bettervoting.com/h93tm4/results)** (election `h93tm4`).
+
 ## Scenario
 
 The STAR race (lead of seven) in the minimal Condorcet-centrist election (BV2171, bvid h93tm4; BV-confirmed). The fewest ballots that still reproduce the whole center-squeeze symptom: 8 voters, three candidates — Avery (left pole), Blake (right pole), Casey (centrist). Casey is the Condorcet winner (beats Avery 5–3 and Blake 5–3) but has only 2 first choices, the fewest. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 28 (Avery/Blake tie at 22) and wins the automatic runoff 5–3.

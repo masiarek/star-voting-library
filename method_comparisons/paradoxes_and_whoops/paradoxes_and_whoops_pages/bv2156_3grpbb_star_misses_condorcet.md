@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3grpbb) · **[results ↗](https://bettervoting.com/3grpbb/results)** (election `3grpbb`).
+
 ## Scenario
 
 STAR is not perfect, and this is its signature failure. Cleo is the CONDORCET WINNER

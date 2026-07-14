@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/97hbpw) · **[results ↗](https://bettervoting.com/97hbpw/results)** (election `97hbpw`).
+
 ## Scenario
 
 Race 3 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2151_97hbpw_irv.yaml for the setup.

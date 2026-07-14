@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gmfv4c) · **[results ↗](https://bettervoting.com/gmfv4c/results)** (election `gmfv4c`).
+
 ## Scenario
 
 The centerpiece profile of Paul H. Edelman, "The Myth of the Condorcet

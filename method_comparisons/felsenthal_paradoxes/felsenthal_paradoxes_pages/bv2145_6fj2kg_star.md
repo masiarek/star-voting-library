@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg`).
+
 ## Scenario
 
 Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 — see bv2145_6fj2kg_irv.yaml for the full citation and setup.

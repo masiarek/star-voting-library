@@ -1,8 +1,10 @@
 # Ann, Bob, Cal - the canonical leading example (single-winner STAR)
 
-*Generated from [`01_c3_b3_ann-bob-cal.yaml`](../01_c3_b3_ann-bob-cal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2187_qrw6wb_ann-bob-cal.yaml`](../bv2187_qrw6wb_ann-bob-cal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bob
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qrw6wb) · **[results ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`).
 
 ## Scenario
 
@@ -11,6 +13,9 @@ YAML authoring template, and "Why YAML test cases". One file, three voters,
 three candidates: the smallest STAR election where both rounds do visible,
 different work. If a page needs "a STAR election" and nothing scenario-specific,
 it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+
+Live results: https://bettervoting.com/qrw6wb/results (BetterVoting election
+qrw6wb, Test ID BV2187; write-ins disabled - the candidate list is locked).
 
 What each ballot teaches:
 - Voter 1 (5,4,0): likes BOTH Ann (5) and Bob (4) - no vote-splitting fear.
@@ -108,12 +113,12 @@ Cal        1  0  0  1  0  1  |     7   2.3
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../_main_tabulated/01_c3_b3_ann-bob-cal_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../_main_tabulated/bv2187_qrw6wb_ann-bob-cal_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/01_c3_b3_ann-bob-cal.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/bv2187_qrw6wb_ann-bob-cal.yaml
 ```
 
 ## See also

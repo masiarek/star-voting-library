@@ -1,10 +1,18 @@
 election_title: Ann, Bob, Cal - the canonical leading example (single-winner STAR)
+
+bv_test_id: BV2187
+bv_election_id: qrw6wb
+bv_results_url: https://bettervoting.com/qrw6wb/results
+
 scenario_description: |-
   THE repo's leading example - the exact election shown in the root README, the
   YAML authoring template, and "Why YAML test cases". One file, three voters,
   three candidates: the smallest STAR election where both rounds do visible,
   different work. If a page needs "a STAR election" and nothing scenario-specific,
   it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+
+  Live results: https://bettervoting.com/qrw6wb/results (BetterVoting election
+  qrw6wb, Test ID BV2187; write-ins disabled - the candidate list is locked).
 
   What each ballot teaches:
   - Voter 1 (5,4,0): likes BOTH Ann (5) and Bob (4) - no vote-splitting fear.
@@ -58,4 +66,4 @@ ballots: |-
 expected_winners:
   - Bob
 
-# file: 01_c3_b3_ann-bob-cal.yaml
+# file: bv2187_qrw6wb_ann-bob-cal.yaml

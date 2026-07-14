@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Casey
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bkwfjr) · **[results ↗](https://bettervoting.com/bkwfjr/results)** (election `bkwfjr`).
+
 ## Scenario
 
 The STAR race (lead of seven) in the full Condorcet-centrist election (BV2172, bvid bkwfjr; BV-confirmed) — the profile as drawn in the "Should we always elect the Condorcet winner?" explainer (youtu.be/NlisR8vbpN4). 100 voters, three candidates — Avery (left pole), Blake (right pole), Casey (centrist). Casey is the Condorcet winner (beats Avery 53–47 and Blake 53–47) but has only 6 first choices. Ranks mapped to 0–5 scores (top=5, mid=3, bottom=1): Casey tops the score round 312 (Avery/Blake tie at 294) and wins the automatic runoff 53–47.

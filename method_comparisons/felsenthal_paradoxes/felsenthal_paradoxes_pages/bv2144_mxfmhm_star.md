@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bo
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm`).
+
 ## Scenario
 
 Race 2 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in Practice" workshop, Château du Baffy, Normandy); Appendix A1, Example 1.

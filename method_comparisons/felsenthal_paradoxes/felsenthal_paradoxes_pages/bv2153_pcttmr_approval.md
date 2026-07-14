@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Bella
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr`).
+
 ## Scenario
 
 Race 1 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 7.

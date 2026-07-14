@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cat
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ykjjhy) · **[results ↗](https://bettervoting.com/ykjjhy/results)** (election `ykjjhy`).
+
 ## Scenario
 
 One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy) — the same 22 voters, three pets (Dog, Cat, Fish), tallied four ways. This is the STAR race. By score, Cat (78) and Fish (62) advance; in the automatic runoff Cat beats Fish 15-7, so STAR elects Cat — who is also the Condorcet winner (beats Dog 13-9 and Fish 15-7). Contrast the Plurality race (Dog) and the RCV-IRV race (Fish), where the consensus candidate is squeezed out. BV also elects Cat. Live results: https://bettervoting.com/ykjjhy/results

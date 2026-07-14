@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2178_8kg698_irv.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2178_8kg698_irv_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:23
+TABULATED AT:    2026-07-14 18:13:47
 ======================================================================
 
 election_title: "The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9"

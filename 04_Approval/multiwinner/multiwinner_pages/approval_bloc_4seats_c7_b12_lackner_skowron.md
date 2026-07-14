@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **4 seats** · **Expected winners:** A, B, C, D
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jt6r76) · **[results ↗](https://bettervoting.com/jt6r76/results)** (election `jt6r76`).
+
 ## Scenario
 
 The running example (Example 2.1) from Lackner & Skowron, "Multi-Winner

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Chocolate
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/my82v6) · **[results ↗](https://bettervoting.com/my82v6/results)** (election `my82v6`).
+
 ## Scenario
 
 The same election as 01a_c2_b1 with one more identical ballot: two voters,

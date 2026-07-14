@@ -135,10 +135,22 @@ def _elected(stdout):
             break
         if not ln.startswith((" ", "\t")):
             break
+        # SNTV / Bloc RR append a "*** the last seat tied … lot order." note
+        # after the seats list — commentary, not a winner.
+        if ln.lstrip().startswith("*"):
+            continue
+        # SNTV / Bloc RR print a seats list: "1. Priya   (4 votes)" — strip
+        # the trailing tally (may itself contain commas) BEFORE splitting.
+        # Only a parenthetical WITH a digit is a tally; "(Democrat)" is part
+        # of the candidate's name and must survive.
+        ln = re.sub(r"\s*\([^)]*\d[^)]*\)\s*$", "", ln)
         # Multi-winner Approval prints its winners on ONE line ("Amy, Ben").
         # Candidate names come from CSV headers, so they can never contain a
         # comma — splitting here is always safe.
-        names.extend(part.strip() for part in ln.split(",") if part.strip())
+        for part in ln.split(","):
+            part = re.sub(r"^\d+\.\s*", "", part.strip()).strip()
+            if part:
+                names.append(part)
     return names
 
 

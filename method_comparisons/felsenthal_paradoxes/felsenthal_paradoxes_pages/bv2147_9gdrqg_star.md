@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9gdrqg) · **[results ↗](https://bettervoting.com/9gdrqg/results)** (election `9gdrqg`).
+
 ## Scenario
 
 Race 2 of 2 in District I of the Felsenthal Reinforcement-paradox trio (BV2147, bvid 9gdrqg; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2147_9gdrqg_irv.yaml for the setup.

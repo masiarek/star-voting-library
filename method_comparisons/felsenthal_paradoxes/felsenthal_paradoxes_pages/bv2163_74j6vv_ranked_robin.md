@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv`).
+
 ## Scenario
 
 Race 3 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.

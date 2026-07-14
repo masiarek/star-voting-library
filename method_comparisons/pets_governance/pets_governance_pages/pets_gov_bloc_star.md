@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Dog, Fish, Cat
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+
 ## Scenario
 
 One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). 22 voters split into a

@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).
+
 **Official tie-break (lot) order:** A > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

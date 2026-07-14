@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f3dxq9) · **[results ↗](https://bettervoting.com/f3dxq9/results)** (election `f3dxq9`).
+
 ## Scenario
 
 Race 1 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dxq9; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A10 (the Condorcet / Minimax / Simpson-Kramer procedure), Example 29.

@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Dan, Ada, Eve
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk`).
+
 **Official tie-break (lot) order:** Finn > Ben > Dan > Eve > Ada > Cara — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

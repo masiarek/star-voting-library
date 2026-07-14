@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Ava
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/48hjkv) · **[results ↗](https://bettervoting.com/48hjkv/results)** (election `48hjkv`).
+
 ## Scenario
 
 The electowiki Ranked Robin worked example (electowiki.org/wiki/Ranked_Robin), and the first repo case built on EQUAL-RANK ballots. 35 voters, five candidates (Ava, Bianca, Cedric, Deegan, Eli); several ballots tie candidates (e.g. Ava=Bianca=Cedric). Ranked Robin (Copeland) compares every pair head-to-head and elects whoever wins the most matchups: Ava wins 3 of 4 and is elected. Yet there is NO Condorcet winner — Ava actually loses head-to-head to Bianca 15-14, and {Ava, Bianca, Cedric} form a 3-cycle (Ava>Cedric, Cedric>Bianca, Bianca>Ava). So no one beats everyone, but Ranked Robin still names the strongest all-round candidate by win count. Reproduced natively by the LH engine (its round-robin parser reads equal ranks as ties); the pairwise matrix matches electowiki exactly. Live results: https://bettervoting.com/48hjkv/results

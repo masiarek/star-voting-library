@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Bob
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ff6mk3) · **[results ↗](https://bettervoting.com/ff6mk3/results)** (election `ff6mk3`).
+
 ## Scenario
 
 The simplest Approval election: each voter marks 1 (approve) or 0 for every

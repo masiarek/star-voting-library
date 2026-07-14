@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ann
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6xhfp8) · **[results ↗](https://bettervoting.com/6xhfp8/results)** (election `6xhfp8`).
+
 ## Scenario
 
 Two candidates, three voters, every ballot **5,5** — full and equal support. This

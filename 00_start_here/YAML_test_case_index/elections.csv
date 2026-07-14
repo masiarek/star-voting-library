@@ -59,7 +59,6 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 9pr3wr,BV2143 — Ranked Robin clone independence (2 of 2) — a faction runs clones (teaming),1,single-race,33,RankedRobin,BV
 LH:00_c3_b3_bloc-baseline-2-seats,"Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)",1,single-race,3,STAR,LH-only
 LH:00_plurality_vs_majority,Plurality vs Majority — most votes isn't more than half,1,single-race,100,STAR,LH-only
-LH:01_c3_b3_ann-bob-cal,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,LH-only
 LH:01_c4_b2_bloc-star-2-seats,Bloc STAR Voting: 2-Seat Committee Election,1,single-race,2,STAR,LH-only
 LH:01_condorcet_winner,Condorcet winner exists — Ranked Robin elects it,1,single-race,5,RankedRobin,LH-only
 LH:01_political_left_split,Spoiler — a split coalition hands the seat to the minority,1,single-race,100,STAR,LH-only
@@ -206,6 +205,7 @@ jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-ra
 kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV
 my82v6,"01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",1,single-race,2,STAR,BV
 pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
+qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV

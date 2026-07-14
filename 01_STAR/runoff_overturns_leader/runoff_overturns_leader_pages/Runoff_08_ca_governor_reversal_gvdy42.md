@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Tom Steyer (D)
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvdy42) · **[results ↗](https://bettervoting.com/gvdy42/results)** (election `gvdy42`).
+
 ## Scenario
 
 A REAL BetterVoting STAR demo — the "2026 California Governor Election", 61

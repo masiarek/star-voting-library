@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_05_scoring_five_star_vs_adversarial_lot.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:01
+TABULATED AT:    2026-07-14 18:13:24
 ======================================================================
 
 election_title: Dead rung 01 — scoring tie, five-star rung ALIVE
@@ -82,9 +82,9 @@ Legend: For - Equal Support - Against
         difference.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
-     file:///sessions/adoring-zealous-turing/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ann)

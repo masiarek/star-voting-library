@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** D
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gr72hd) · **[results ↗](https://bettervoting.com/gr72hd/results)** (election `gr72hd`).
+
 ## Scenario
 
 Mike Ossipoff's 1-D example (via rangevoting.org). Candidate C is the centrist:

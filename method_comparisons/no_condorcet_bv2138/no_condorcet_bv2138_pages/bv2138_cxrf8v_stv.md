@@ -4,6 +4,8 @@
 
 **Method:** [STV (proportional, ranked ballots)](../../../00_start_here/proportional_representation) · **1 seat** · **Expected winner:** Dave
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
+
 ## Scenario
 
 One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Single-seat STV = IRV → Dave.

@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Anna
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r6ctvy) · **[results ↗](https://bettervoting.com/r6ctvy/results)** (election `r6ctvy`).
+
 ## Scenario
 
 Race 1 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6ctvy; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 5 — due to Felsenthal & Maoz (1988: 123, Example 2).

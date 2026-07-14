@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Chocolate, Strawberry
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).
+
 ## Scenario
 
 The LH reference for BetterVoting test BV2105 (election r4dqvd, "Favorite ice

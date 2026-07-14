@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (election `dfw8rj`).
+
 ## Scenario
 
 A DELIBERATELY-CONSTRUCTED worst case — not a typical election — showing the

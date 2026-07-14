@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Arlo
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t`).
+
 ## Scenario
 
 Race 1 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure: eliminate whoever is ranked LAST by the most voters), Example 17.

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Strawberry
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).
+
 ## Scenario
 
 The worked example behind the STAR tie-breaking doc (the two-round, two-ladder

@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Cat
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ykjjhy) · **[results ↗](https://bettervoting.com/ykjjhy/results)** (election `ykjjhy`).
+
 ## Scenario
 
 One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy). This is the Approval race: each voter approves any number of pets (1 = approve). Cat is approved by everyone except the pure Dog bloc — 22 approvals — so Approval elects Cat, the broadly-acceptable consensus candidate (and Condorcet winner). Same electorate as the Plurality race (Dog wins) and the RCV-IRV race (Fish wins). BV also elects Cat. Live results: https://bettervoting.com/ykjjhy/results

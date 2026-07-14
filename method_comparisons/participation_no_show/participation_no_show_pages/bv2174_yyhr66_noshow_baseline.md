@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhr66) · **[results ↗](https://bettervoting.com/yyhr66/results)** (election `yyhr66`).
+
 ## Scenario
 
 The Participation criterion, live — the baseline half of a matched pair

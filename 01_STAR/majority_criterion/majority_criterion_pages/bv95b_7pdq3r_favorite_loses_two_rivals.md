@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bruno
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r`).
+
 ## Scenario
 
 Backs sheet row BV95b (pair with BV95a / mc_01).

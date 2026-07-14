@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Brad
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
+
 ## Scenario
 
 One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Ranks mapped to 0–5 scores. Abby tops the score round (2836) but Brad wins the automatic runoff head-to-head (463–458) → STAR → Brad (agreeing with BV's Ranked Robin, not LH's).
@@ -115,7 +117,7 @@ Legend: For - Equal Support - Against
              Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Abby > Erin > Dave > Brad > Abby)
+  No Condorcet winner (majority cycle: Abby > Dave > Brad > Abby)
 
 [Score Distribution] (how many ballots gave each star rating)
                       Score

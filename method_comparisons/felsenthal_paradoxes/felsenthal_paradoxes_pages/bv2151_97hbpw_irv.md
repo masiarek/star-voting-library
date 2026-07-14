@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Beth
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/97hbpw) · **[results ↗](https://bettervoting.com/97hbpw/results)** (election `97hbpw`).
+
 ## Scenario
 
 Race 1 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-confirmed; the pair is BV2150/51). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 4 (the No-Show and Twin paradoxes).

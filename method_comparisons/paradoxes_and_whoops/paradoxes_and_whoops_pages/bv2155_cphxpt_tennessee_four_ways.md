@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Nashville
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cphxpt) · **[results ↗](https://bettervoting.com/cphxpt/results)** (election `cphxpt`).
+
 ## Scenario
 
 The classic Tennessee state-capital example. One set of ballots; Plurality picks

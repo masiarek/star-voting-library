@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Purple
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v8r66y) · **[results ↗](https://bettervoting.com/v8r66y/results)** (election `v8r66y`).
+
 ## Scenario
 
 One of seven races in the Post-it seven-ways election (BV2177, bvid v8r66y;

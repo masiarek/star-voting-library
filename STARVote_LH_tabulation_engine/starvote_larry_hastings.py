@@ -2135,8 +2135,8 @@ def _find_beats_cycle(candidates, beats):
     def dfs(c):
         color[c] = GRAY
         stack.append(c)
-        for nxt in beats[c]:
-            if color[nxt] == GRAY:
+        for nxt in sorted(beats[c]):   # sorted: a set's order varies per run,
+            if color[nxt] == GRAY:     # and the printed cycle must be stable
                 i = stack.index(nxt)
                 return stack[i:] + [nxt]
             if color[nxt] == WHITE:

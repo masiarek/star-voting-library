@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **2 seats** · **Expected winners:** Dog, Bird
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+
 **Official tie-break (lot) order:** Dog > Cat > Fish > Bird > Rabbit > Hamster — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

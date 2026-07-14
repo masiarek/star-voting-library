@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Rock
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mmcmpy) · **[results ↗](https://bettervoting.com/mmcmpy/results)** (election `mmcmpy`).
+
 ## Scenario
 
 The paradox of voting itself. Rock beats Paper, Paper beats Scissors, Scissors beats

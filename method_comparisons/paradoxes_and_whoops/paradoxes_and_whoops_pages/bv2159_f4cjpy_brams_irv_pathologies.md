@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** B
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`).
+
 ## Scenario
 
 Steven Brams' example (Notices of the AMS, 1982; via rangevoting.org). IRV elects B,

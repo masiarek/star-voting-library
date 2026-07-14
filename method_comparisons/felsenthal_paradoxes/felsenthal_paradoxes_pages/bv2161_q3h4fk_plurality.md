@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** C
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q3h4fk) · **[results ↗](https://bettervoting.com/q3h4fk/results)** (election `q3h4fk`).
+
 ## Scenario
 
 Race 2 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 15 — see bv2161_q3h4fk_star.yaml for the setup and the profile note (the paper's printed C>A>B bloc is arithmetic-corrected to C>B>A).

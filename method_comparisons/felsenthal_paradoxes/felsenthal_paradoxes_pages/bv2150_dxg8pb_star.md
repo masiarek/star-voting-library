@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dxg8pb) · **[results ↗](https://bettervoting.com/dxg8pb/results)** (election `dxg8pb`).
+
 ## Scenario
 
 Race 3 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2150_dxg8pb_irv.yaml for the setup.

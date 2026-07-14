@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Boone
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9vxcj7) · **[results ↗](https://bettervoting.com/9vxcj7/results)** (election `9vxcj7`).
+
 ## Scenario
 
 Race 1 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-confirmed; the pair is BV2165/66). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure), Example 19.

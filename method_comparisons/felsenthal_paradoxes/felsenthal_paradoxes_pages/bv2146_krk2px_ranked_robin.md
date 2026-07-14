@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/krk2px) · **[results ↗](https://bettervoting.com/krk2px/results)** (election `krk2px`).
+
 ## Scenario
 
 Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 (continued) — see bv2146_krk2px_irv.yaml for the setup.

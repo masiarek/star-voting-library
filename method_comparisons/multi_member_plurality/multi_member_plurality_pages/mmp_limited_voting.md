@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **3 seats** · **Expected winners:** Ada, Ben, Uma
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv`).
+
 **Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

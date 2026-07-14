@@ -2,7 +2,7 @@
 SOURCE FILE:     03b_star_pr_3seats.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  03b_star_pr_3seats_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:04
+TABULATED AT:    2026-07-14 18:13:27
 ======================================================================
 
 election_title: Proportional STAR — same 3-seat electorate as the STV demo

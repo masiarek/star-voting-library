@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Approve
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6hv7jf) · **[results ↗](https://bettervoting.com/6hv7jf/results)** (election `6hv7jf`).
+
 ## Scenario
 
 A Plurality ("choose one") race, two options, three voters, all "undecided":

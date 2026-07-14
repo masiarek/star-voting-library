@@ -266,6 +266,15 @@ def render(yaml_path, siblings):
     L.append(f"**Method:** [{disp}]({_rel(docs, page_dir)}) · **{seat_txt}**"
              + (f" · **Expected winner{'s' if winners and len(winners) > 1 else ''}:** "
                 + ", ".join(winners) if winners else ""))
+    # BV-backed case -> the house live-results lead line (CLAUDE.md rule).
+    bv_id = data.get("bv_election_id") if isinstance(data, dict) else None
+    if not bv_id and isinstance(data, dict):
+        m = re.match(r"^bv\w+_([a-z0-9]{6})_", os.path.basename(yaml_path))
+        bv_id = m.group(1) if m else None
+    if bv_id:
+        L.append("")
+        L.append(f"**▶ Live on BetterVoting:** [vote](https://bettervoting.com/{bv_id}) · "
+                 f"**[results ↗](https://bettervoting.com/{bv_id}/results)** (election `{bv_id}`).")
     if lot:
         L.append("")
         L.append(f"**Official tie-break (lot) order:** {' > '.join(str(c) for c in lot)} "

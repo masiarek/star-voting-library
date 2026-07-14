@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_02_c3_b5_near-clones.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  Black_Curtain_02_c3_b5_near-clones_tabulated.txt
-TABULATED AT:    2026-07-12 08:11:09
+TABULATED AT:    2026-07-14 18:13:32
 ======================================================================
 
 election_title: The Black Curtain #2 — two candidates everyone loves

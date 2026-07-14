@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr`).
+
 ## Scenario
 
 Backs sheet row BV95a (pair with BV95b / mc_02). A 5-voter STAR election. A 3-voter MAJORITY gives Ada their top score (5). The

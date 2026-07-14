@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Alma
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/byk9v2) · **[results ↗](https://bettervoting.com/byk9v2/results)** (election `byk9v2`).
+
 ## Scenario
 
 Race 1 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed; the trio is BV2147/48/49). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 3 (the Reinforcement paradox).

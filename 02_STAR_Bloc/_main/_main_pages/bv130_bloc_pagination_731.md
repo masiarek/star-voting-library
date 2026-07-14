@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q`).
+
 ## Scenario
 
 The LH reference for BetterVoting test BV130 (the ORIGINAL, not the r2 retest).

@@ -4,6 +4,8 @@
 
 **Method:** [Allocated Score (proportional STAR)](../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Bird, Dog, Fish
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+
 ## Scenario
 
 One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, same

@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Blue
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p8dp28) · **[results ↗](https://bettervoting.com/p8dp28/results)** (election `p8dp28`).
+
 ## Scenario
 
 One of three races in the Post-it RCV example (BV2176, bvid p8dp28;
@@ -139,7 +141,7 @@ Legend: For - Equal Support - Against
           Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
 
 [Condorcet Winner]
-  No Condorcet winner (majority cycle: Purple > Green > Pink > Purple)
+  No Condorcet winner (majority cycle: Purple > Green > Blue > Pink > Purple)
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score

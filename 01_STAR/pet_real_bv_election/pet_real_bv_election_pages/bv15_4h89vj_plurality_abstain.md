@@ -4,6 +4,8 @@
 
 **Method:** [plurality](../../../00_start_here) · **1 seat** · **Expected winner:** Andre
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id 4h89vj), "B15 - Basic - 2 candidates -
