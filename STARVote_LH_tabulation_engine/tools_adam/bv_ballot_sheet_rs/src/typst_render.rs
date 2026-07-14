@@ -75,7 +75,6 @@ fn build_source(b: &Ballot) -> String {
     [Equal scores are allowed.],
     [Score other candidates as desired.],
   )
-  text(size: 9pt, fill: rgb("#666666"))[Fill one bubble per row. Two or more bubbles in a row spoils that candidate's score.]
   v(4pt)
   table(
     columns: (2.2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),

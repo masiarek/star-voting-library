@@ -320,7 +320,6 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
   {brand}
   {title_block}{blurb_block}{q_block}
   <ul class="inst">{bullets}</ul>
-  <p class="fine">Fill one bubble per row. Two or more bubbles in a row spoils that candidate's score.</p>
   <table class="grid">
     <tr class="wb"><td></td><td>Worst</td><td></td><td></td><td></td><td></td><td>Best</td></tr>
     <tr class="colhead"><th class="chl">Candidate</th>{colheads}</tr>
