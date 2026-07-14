@@ -23,7 +23,7 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | [our_voting_system_is_broken.md](our_voting_system_is_broken.md) | convert | pending — educational "problem with plurality" page |
 | [favorite_betrayal_voting_301.md](STAR_Voting/favorite_betrayal_voting_301.md) | convert | pending — already a reference doc at heart; de-dialogue it |
 | [RCV_or_IRV_whats_the_right_word.md](RCV_IRV/RCV_or_IRV_whats_the_right_word.md) | convert | pending — fold toward [TIPS_terminology](TIPS_terminology.md) (canonical), keep a short concept page |
-| [exhausted_ballots_301.md](RCV_IRV/exhausted_ballots_301.md) | convert | pending — the taxonomy is reference material; de-dialogue it |
+| [exhausted_ballots_301.md](RCV_IRV/exhausted_ballots_301.md) | convert | **✔ converted** to an educational page (2026-07) |
 
 ---
 
