@@ -6,7 +6,7 @@ A single place to look up the claims you'll hear about "RCV" and see, for each, 
 
 ## Read this first (so you stay fair and precise)
 
-- **"RCV" names a ranked *ballot*; "IRV" names *one tabulation* of it.** Almost every failure below is **IRV-specific** — a Condorcet count of the *same* ballot (**Ranked Robin**) avoids center squeeze, and STAR uses a score ballot entirely. So the target is **IRV**, not ranked ballots in general. (See [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md), or the [conversation version](RCV_or_IRV_whats_the_right_word.md).)
+- **"RCV" names a ranked *ballot*; "IRV" names *one tabulation* of it.** Almost every failure below is **IRV-specific** — a Condorcet count of the *same* ballot (**Ranked Robin**) avoids center squeeze, and STAR uses a score ballot entirely. So the target is **IRV**, not ranked ballots in general. (See [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md), or the [short concept page](RCV_or_IRV_whats_the_right_word.md).)
 - **Most of these are *oversold*, not flatly false.** Each has a true core — concede it cleanly, then correct the overreach. That candor is what makes the correction land.
 - **Don't open with this.** It's for when an advocate makes one of these claims; correct once, don't fight the wind.
 

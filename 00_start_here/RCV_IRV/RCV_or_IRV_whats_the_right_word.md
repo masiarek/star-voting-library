@@ -1,82 +1,48 @@
-# "Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"
-### Voting 201 · the nomenclature episode
+# RCV or IRV — What's the Right Word?
 
-A short episode untangling the terminology. It sits at **201**: it needs the 101 foundation — *a ballot is what you mark; a tabulation is how it's counted* — but it isn't as deep as the 301 theory episodes. Great right after the basics, and a useful reference clip on its own.
+*Your friends say "Ranked Choice." Advocates say RCV. Critics say IRV. This repo writes RCV-IRV. Which is right? They aren't synonyms — they name different things, and one distinction untangles all of it. This page teaches that one idea and the usage rule that follows from it. The full family tree, alias table, and house style live in the canonical references — deliberately not restated here.*
 
-Cues: **[SLIDE]** · **[REPO]** `00_start_here/TIPS_terminology.md`, `GLOSSARY.md`.
-
----
-
-## Segment 1 — the question
-
-**Larry:** You keep switching between "RCV," "IRV," and "RCV-IRV." My friends just say "Ranked Choice." Which is right, and why do you fuss about it?
-
-**Adam:** Because two different things are hiding inside one word, and once you split them, everything gets clearer. Remember the most important idea in all of this: a **ballot** is *what you mark*, and a **tabulation** is *how it's counted*. Those are separate.
-
-**Larry:** Okay… so where does RCV fall?
-
-**Adam:** "RCV" — Ranked-Choice Voting — names a **ballot**. It just means you rank the candidates: 1st, 2nd, 3rd. That's it. It does **not** tell you how the ranks get counted.
+→ Canonical references: [Tips — Terminology: RCV vs IRV vs RCV-IRV](../TIPS_terminology.md) · [GLOSSARY.md](../GLOSSARY.md) · deeper history: [the naming problem](RCV-IRV-confusing-name.md) · foundation: [a ballot **and** a count](../voting_method_ballot_and_count.md)
 
 ---
 
-## Segment 2 — one ballot, several counts
+## RCV names a ballot; IRV names one count of it
 
-**Larry:** Wait, there's more than one way to count a ranked ballot?
+A voting method is [two parts](../voting_method_ballot_and_count.md): the **ballot** is what you mark; the **tabulation** is how it's counted. The two words live on opposite sides of that split.
 
-**Adam:** Several. The same ranked ballot can be tabulated as:
-- **IRV — Instant-Runoff Voting:** eliminate the last-place candidate, transfer their votes, repeat. This is the one almost everyone *means* when they say "RCV."
-- **Ranked Robin:** a Condorcet count — whoever wins the most head-to-head matchups. Same ballot, completely different math. Sometimes called "consensus."
-- **STV — Single Transferable Vote:** the proportional, multi-winner version.
+**RCV — Ranked-Choice Voting — names the ballot.** It says the voter ranks the candidates: 1st, 2nd, 3rd. That's all it says. It does not tell you how the ranks get counted.
 
-So "RCV" is the *ballot*; "IRV" is *one tabulation* of it. Saying "RCV" when you mean "IRV" is like saying "the paper ballot won" instead of naming the method.
+**IRV — Instant-Runoff Voting — names one tabulation** of that ballot: eliminate the last-place candidate, transfer their votes, repeat. It's the count almost everyone *means* when they say "RCV" — but it isn't the only one. The same ranked ballot can instead be counted by [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) (a Condorcet "consensus" count — most head-to-head wins) or by [STV](../proportional_representation/stv/proportional_stv_vs_star.md) (the proportional, multi-winner count). Same marks, different math — and sometimes a different winner.
 
-**Larry:** And Ranked Robin is its own thing?
+So saying "RCV won't elect extremists" or "RCV has problems" is like saying "the paper ballot won": it names the ballot when the claim is really about a count. In the US the two got fused — FairVote branded IRV as "Ranked Choice Voting" and the label stuck (the full story is on [the naming problem](RCV-IRV-confusing-name.md) and [origins & spread](RCV_IRV_history.md)). The family tree and the what-you'll-hear alias table are canon in [TIPS_terminology.md](../TIPS_terminology.md).
 
-**Adam:** Ranked Robin is one of a whole *family* — the **Condorcet** methods, which elect whoever beats everyone else head-to-head. Ranked Pairs, Schulze, and Minimax are siblings of Ranked Robin. They're all "RCV" in the ballot sense, but they are **not** IRV — and unlike IRV they don't suffer center squeeze. Meanwhile Borda and Bucklin are also ranked methods but they're *not* Condorcet — they can miss the head-to-head winner. (Full family tree in `TIPS_terminology.md`.)
+## Why the precision isn't pedantry
 
-> [SLIDE] Full Deck — "ABOUT RANKED CHOICE" and "WHICH METHODS ELIMINATE VOTE-SPLITTING?" (note Ranked Robin listed separately from RCV/IRV).
+Several of the sharpest criticisms in this whole debate — [center squeeze](RCV_IRV_center_squeeze.md), [exhausted ballots](RCV_IRV_exhausted_ballots.md), [non-monotonicity](RCV_IRV_non_monotonicity.md) — are failures of **IRV's elimination count**, not of ranked ballots in general. Ranked Robin reads the exact same ranked ballot and doesn't suffer center squeeze.
 
----
+That asymmetry is a trap for the imprecise. Say *"RCV has center squeeze"* and a well-informed opponent can correctly answer *"Ranked Robin is RCV and it doesn't."* Say *"**IRV** has center squeeze"* and you are precisely, unarguably right. Precision is armor — which is why the [false-claims index](rcv_irv_false_claims.md) aims every rebuttal at IRV, not at ranked ballots.
 
-## Segment 3 — why the precision isn't pedantry
+The same discipline points back at STAR: "STAR" is one tabulation (Score Then Automatic Runoff) of a **score** ballot that could also be counted as Approval, pure Score, or Proportional STAR. Ballot, then tabulation — every time, for every method. (The mirror-image write-up is in [TIPS_terminology.md](../TIPS_terminology.md).)
 
-**Larry:** Does it actually matter in an argument?
+## What to say, where
 
-**Adam:** It protects you from a real trap. A lot of the sharpest criticisms — center squeeze, exhausted ballots — are failures of **IRV's elimination count**, not of ranked ballots in general. **Ranked Robin uses the exact same ranked ballot and doesn't have center squeeze.** So if I say "RCV has center squeeze," a well-informed opponent can correctly say "Ranked Robin is RCV and it doesn't." If I say "**IRV** has center squeeze," I'm precisely, unarguably right.
+This repo's rule of thumb — the full when-to-use table is in [TIPS_terminology.md](../TIPS_terminology.md):
 
-**Larry:** So being loose with "RCV" hands your opponent an easy correction.
+- **Technical, comparative, or critical writing → "RCV-IRV"** (or bare **"IRV"** once it's established you mean the elimination count). Unambiguous, and it keeps IRV-specific criticisms pinned to IRV.
+- **Public-facing copy (slides, an intro talk) → plain "RCV" is fine** — it's the only word a general US audience knows, and "RCV-IRV" looks odd outside method-wonk circles. Just clarify once at first mention — *"RCV — ranked ballots counted by instant runoff (IRV)"* — then use the familiar word.
+- **Bare "RCV" otherwise means the ranked-ballot family**, and say so when you use it that way.
+- **Ranked Robin and STV get their own names, always** — never folded into "RCV" meaning IRV.
 
-**Adam:** Exactly. Precision is armor. It's the same reason I make STAR's critics separate "the score ballot" from "the runoff" — same discipline, pointed at myself.
+## Correct once, move on
 
----
+When someone else says "RCV" loosely, don't derail the conversation to police it. Keep their word, add the clarification once — "right, and to be precise, that's IRV, one way of counting ranked ballots" — and get back to the substance. The precision matters most in *your own* claims, where a loose word hands your opponent a free rebuttal. Being the purist who fights every gust of wind costs more credibility than it buys.
 
-## Segment 4 — so what do I actually say?
+## The takeaway
 
-**Larry:** Give me the cheat sheet.
-
-**Adam:**
-- Talking to a general US audience? Say **"RCV-IRV"** — or "IRV, what most people call RCV." Familiar *and* precise.
-- In a technical or critical point about the method? Just **"IRV."**
-- Mean the *ballot family*? Say **"ranked ballots."** Reserve bare "RCV" for that, and say so.
-- The Condorcet count is **"Ranked Robin."** The proportional one is **"STV."** Never fold those into "RCV" meaning IRV.
-
-**Larry:** And the same trick works on STAR?
-
-**Adam:** Perfectly. STAR is a **score** *ballot* with a *Score-Then-Automatic- Runoff* tabulation. That same score ballot could be counted as Approval, or pure Score, or Proportional STAR. "STAR" is one tabulation of a score ballot, exactly like "IRV" is one tabulation of a ranked ballot. Ballot, then tabulation — every time.
+**RCV is a ballot; IRV is a count.** In the US they were mashed into one word, so this repo writes **RCV-IRV** when it means the method everyone calls RCV — and says **Ranked Robin** or **STV** when it means the other ways to count the very same ranked ballot.
 
 ---
 
-## Segment 5 — the one-liner
+## Where this fits in the teaching
 
-**Larry:** Sum it up.
-
-**Adam:** "RCV is a *ballot*; IRV is a *count*. In the US they got mashed into one word, so I say **RCV-IRV** when I mean the method everyone calls RCV — and I say **Ranked Robin** or **STV** when I mean the other ways to count the very same ranked ballot."
-
----
-
-## Where this fits
-- **Level:** Voting 201 — right after the 101 mechanics, before the 301 theory.
-- **Pairs with:** `00_start_here/TIPS_terminology.md` (the written house style) and the `GLOSSARY.md` entries for RCV / IRV / RCV-IRV / Ranked Robin / STV.
-- **Why early-ish:** every later episode (spoiler, favorite betrayal, discounted votes) is cleaner once the audience won't conflate "RCV" with "IRV."
-
-Cross-references: `LINKS.md` → **Full Deck 2025** ("About Ranked Choice"), **Beyond RCV zine**.
+This sits right after the [ballot-and-count foundation](../voting_method_ballot_and_count.md): every later comparison — spoiler, favorite betrayal, exhausted ballots — is cleaner once the audience won't conflate "RCV" with "IRV." Presenters: the matching slides are indexed by short name in [LINKS.md](../LINKS.md) (Full Deck 2025 — "About Ranked Choice"; the **Beyond RCV zine**), and the episode roadmap lives in [conversation scripts](../conversation_scripts.md).

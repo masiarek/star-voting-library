@@ -101,4 +101,4 @@ The same split applies to STAR, which is why this framing is so useful:
 
 Teaching tip: once your audience holds "ballot vs tabulation," the whole nomenclature snaps into place — and so does why "RCV" alone is ambiguous.
 
-See also: [GLOSSARY.md](GLOSSARY.md) (precise definitions) · [CURRICULUM.md](CURRICULUM.md) · the nomenclature episode ["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](RCV_IRV/RCV_or_IRV_whats_the_right_word.md).
+See also: [GLOSSARY.md](GLOSSARY.md) (precise definitions) · [CURRICULUM.md](CURRICULUM.md) · the short concept page ["RCV or IRV — What's the Right Word?"](RCV_IRV/RCV_or_IRV_whats_the_right_word.md).
