@@ -69,7 +69,7 @@ Note BV's **Equal Support bar — 41%** (124 / 302 = 41.1%) — the tallied deno
          Tom Steyer (D) 98 (55%)  ·  Alicia Olivia Lapp (R) 80 (45%)
 ```
 
-Full audit copy: [`_tabulated`](runoff_overturns_leader_tabulated/Runoff_08_ca_governor_reversal_gvdy42_tabulated.txt) · frozen BV data: [`_bv_export.json`](Runoff_08_ca_governor_reversal_gvdy42_bv_export.json).
+Full audit copy: [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_08_ca_governor_reversal_gvdy42_tabulated.txt) · frozen BV data: [`_bv_export.json`](Runoff_08_ca_governor_reversal_gvdy42_bv_export.json).
 
 ## BV vs LH
 

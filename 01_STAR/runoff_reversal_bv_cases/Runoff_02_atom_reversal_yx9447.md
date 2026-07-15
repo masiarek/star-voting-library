@@ -4,7 +4,7 @@
 
 The contrast: in [Runoff 01](Runoff_01_confirms_leader_r2pvc9.md) the same machinery *confirmed* the leader. The runoff only changes the answer when raw stars and majority preference point at different candidates.
 
-Two views of the **same election** (BV id [`yx9447`](https://bettervoting.com/yx9447/results)). → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
+Two views of the **same election** (BV id [`yx9447`](https://bettervoting.com/yx9447/results)). → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 
 ---
 
@@ -34,7 +34,7 @@ Austin leads the Scoring Round (13) but **loses** the Automatic Runoff 1–2; Be
 
 ## View 2 — the LH engine
 
-Same ballots, the full text report (the saved [`_tabulated`](runoff_overturns_leader_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
+Same ballots, the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
 
 ```
 --- Runoff (Preference) Matrix ---

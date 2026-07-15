@@ -1,6 +1,6 @@
 # Cross-method divergence review
 
-_Generated 2026-07-15 07:20 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
+_Generated 2026-07-15 07:45 by `STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py` — do not hand-edit; rebuild._
 
 Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked Robin (RCV-RR / Copeland) and Approval, and flags where they disagree with STAR. Only hand-built library elections are scanned (never random ballots), and the base rate is reported, so the collection stays honest rather than cherry-picked.
 
@@ -167,20 +167,20 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
 - **[05_c3_b5_low-scores-bv1265](cases/APPROVAL_OR_MINOR/05_c3_b5_low-scores-bv1265.md)** — `01_STAR/runoff_overturns_leader/05_c3_b5_low-scores-bv1265.yaml` (3c/5b)  
     STAR=**A** · IRV=A · RR=A · Approval=C · Score=C · Condorcet=A  
     _flags: 1 tied-score ballot(s)_
-- **[Runoff_02_atom_reversal_yx9447](cases/APPROVAL_OR_MINOR/Runoff_02_atom_reversal_yx9447.md)** — `01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.yaml` (3c/3b)  
-    STAR=**Boston** · IRV=Boston · RR=Boston · Approval=Austin · Score=Austin · Condorcet=Boston
-- **[Runoff_03_enthusiasts_vs_majority_rkgtpk](cases/APPROVAL_OR_MINOR/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)** — `01_STAR/runoff_overturns_leader/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml` (5c/5b)  
-    STAR=**Eden** · IRV=Eden · RR=Eden · Approval=Dakota · Score=Dakota · Condorcet=Eden
-- **[Runoff_04_reversal_at_scale_bfjqmg](cases/APPROVAL_OR_MINOR/Runoff_04_reversal_at_scale_bfjqmg.md)** — `01_STAR/runoff_overturns_leader/Runoff_04_reversal_at_scale_bfjqmg.yaml` (3c/9b)  
-    STAR=**Olive** · IRV=Olive · RR=Olive · Approval=Maple · Score=Maple · Condorcet=Olive
-- **[Runoff_05_reversal_with_equal_support_xgkw3w](cases/APPROVAL_OR_MINOR/Runoff_05_reversal_with_equal_support_xgkw3w.md)** — `01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.yaml` (3c/5b)  
-    STAR=**Sage** · IRV=Sage · RR=Sage · Approval=Rosa · Score=Rosa · Condorcet=Sage  
-    _flags: 2 tied-score ballot(s); IRV flips on reversed priority_
-- **[Runoff_07_flat_ballot_bv_bug_tf73v9](cases/APPROVAL_OR_MINOR/Runoff_07_flat_ballot_bv_bug_tf73v9.md)** — `01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml` (3c/4b)  
-    STAR=**Blair** · IRV=Blair · RR=Blair · Approval=Alex · Score=Alex · Condorcet=Blair  
-    _flags: 1 tied-score ballot(s); IRV flips on reversed priority_
 - **[reversal_jarring_c3_b100](cases/APPROVAL_OR_MINOR/reversal_jarring_c3_b100.md)** — `01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml` (3c/100b)  
     STAR=**Rye** · IRV=Rye · RR=Rye · Approval=Uma · Score=Uma · Condorcet=Rye
+- **[Runoff_02_atom_reversal_yx9447](cases/APPROVAL_OR_MINOR/Runoff_02_atom_reversal_yx9447.md)** — `01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.yaml` (3c/3b)  
+    STAR=**Boston** · IRV=Boston · RR=Boston · Approval=Austin · Score=Austin · Condorcet=Boston
+- **[Runoff_03_enthusiasts_vs_majority_rkgtpk](cases/APPROVAL_OR_MINOR/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)** — `01_STAR/runoff_reversal_bv_cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml` (5c/5b)  
+    STAR=**Eden** · IRV=Eden · RR=Eden · Approval=Dakota · Score=Dakota · Condorcet=Eden
+- **[Runoff_04_reversal_at_scale_bfjqmg](cases/APPROVAL_OR_MINOR/Runoff_04_reversal_at_scale_bfjqmg.md)** — `01_STAR/runoff_reversal_bv_cases/Runoff_04_reversal_at_scale_bfjqmg.yaml` (3c/9b)  
+    STAR=**Olive** · IRV=Olive · RR=Olive · Approval=Maple · Score=Maple · Condorcet=Olive
+- **[Runoff_05_reversal_with_equal_support_xgkw3w](cases/APPROVAL_OR_MINOR/Runoff_05_reversal_with_equal_support_xgkw3w.md)** — `01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml` (3c/5b)  
+    STAR=**Sage** · IRV=Sage · RR=Sage · Approval=Rosa · Score=Rosa · Condorcet=Sage  
+    _flags: 2 tied-score ballot(s); IRV flips on reversed priority_
+- **[Runoff_07_flat_ballot_bv_bug_tf73v9](cases/APPROVAL_OR_MINOR/Runoff_07_flat_ballot_bv_bug_tf73v9.md)** — `01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml` (3c/4b)  
+    STAR=**Blair** · IRV=Blair · RR=Blair · Approval=Alex · Score=Alex · Condorcet=Blair  
+    _flags: 1 tied-score ballot(s); IRV flips on reversed priority_
 - **[bv2180_fp62p2_ice_cream_ladder](cases/APPROVAL_OR_MINOR/bv2180_fp62p2_ice_cream_ladder.md)** — `01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml` (6c/2b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Chocolate · Score=Strawberry · Condorcet=none  
     _flags: 2 tied-score ballot(s)_

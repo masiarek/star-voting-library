@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     Runoff_08_ca_governor_reversal_gvdy42.yaml
-SOURCE MODIFIED: 2026-07-11 11:17:13
+SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  Runoff_08_ca_governor_reversal_gvdy42_tabulated.txt
-TABULATED AT:    2026-07-11 11:17:23
+TABULATED AT:    2026-07-15 07:31:57
 ======================================================================
 
 bv_test_id: BV2181
@@ -371,9 +371,6 @@ election:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
-
-=== Runoff 08 — CA Governor, a real STAR field of 61 (BV2181, gvdy42) ===
-  https://bettervoting.com/gvdy42/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

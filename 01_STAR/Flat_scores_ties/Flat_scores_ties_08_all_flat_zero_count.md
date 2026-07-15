@@ -4,7 +4,7 @@
 
 **Level 301 · the abstention trap at full strength.** Where [case 07](Flat_scores_ties_07_fully_flat.md) had everyone score the *same* value (all 5s), here each voter is flat at a *different* level (1s, then 2s, … then 5s). Still every ballot is flat, so BV drops them all — and the counted total collapses to zero. LH counts all five, sees a clean three-way tie at 15, and resolves it by lot to **Anchovy**. Cast: three pizza toppings.
 
-→ Equal Support vs abstention: [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · the same bug worked end-to-end: [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md), [`small_case_abstention_lesson`](../pet_real_bv_election/small_case_abstention_lesson.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ Equal Support vs abstention: [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · the same bug worked end-to-end: [`Runoff_07`](../runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md), [`small_case_abstention_lesson`](../pet_real_bv_election/small_case_abstention_lesson.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

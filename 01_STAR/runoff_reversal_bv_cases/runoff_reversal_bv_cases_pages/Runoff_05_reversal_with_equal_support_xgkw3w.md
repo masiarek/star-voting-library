@@ -35,8 +35,18 @@ The count, step by step — the rounds and how the winner is reached:
 
 ```text
 [Divergence from STAR]
-  STAR     = Sage
-  Approval = Rosa   (differs from STAR)
+  STAR                   = Sage
+  Choose-One (Plurality) = Rosa   (differs from STAR)
+  RCV-IRV                = Rosa   (differs from STAR)
+  Approval               = Rosa   (differs from STAR)
+  Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: runoff_reversal_bv_cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_RCV-IRV_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Rosa)
@@ -107,12 +117,12 @@ Tulip      0  0  0  1  1  3  |     3   0.6
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../runoff_overturns_leader_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../runoff_reversal_bv_cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml
 ```
 
 ## See also
@@ -120,8 +130,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_o
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Methods disagree on this election](../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/Runoff_05_reversal_with_equal_support_xgkw3w.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
-- [Runoff reversal (worked set)](../README.md)
+- [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [01a_c3_b3_more-stars-fewer-voters](01a_c3_b3_more-stars-fewer-voters.md) · [01b_c3_b9_overturn-holds-at-scale](01b_c3_b9_overturn-holds-at-scale.md) · [02_c5_b5_leader-overturned](02_c5_b5_leader-overturned.md) · [03_c7_b3_ice-cream-live](03_c7_b3_ice-cream-live.md) · [04_c4_b3_runoff-confirms-leader](04_c4_b3_runoff-confirms-leader.md) · [05_c3_b5_low-scores-bv1265](05_c3_b5_low-scores-bv1265.md) · [Runoff_01_confirms_leader_r2pvc9](Runoff_01_confirms_leader_r2pvc9.md) · [Runoff_02_atom_reversal_yx9447](Runoff_02_atom_reversal_yx9447.md) · [Runoff_03_enthusiasts_vs_majority_rkgtpk](Runoff_03_enthusiasts_vs_majority_rkgtpk.md) · [Runoff_04_reversal_at_scale_bfjqmg](Runoff_04_reversal_at_scale_bfjqmg.md) · [Runoff_06_confirms_at_scale_d664xw](Runoff_06_confirms_at_scale_d664xw.md) · [Runoff_07_flat_ballot_bv_bug_tf73v9](Runoff_07_flat_ballot_bv_bug_tf73v9.md) · [Runoff_08_ca_governor_reversal_gvdy42](Runoff_08_ca_governor_reversal_gvdy42.md) · [reversal_convincing_c3_b100](reversal_convincing_c3_b100.md) · [reversal_jarring_c3_b100](reversal_jarring_c3_b100.md)
+More cases in this set: [Runoff_01_confirms_leader_r2pvc9](Runoff_01_confirms_leader_r2pvc9.md) · [Runoff_02_atom_reversal_yx9447](Runoff_02_atom_reversal_yx9447.md) · [Runoff_03_enthusiasts_vs_majority_rkgtpk](Runoff_03_enthusiasts_vs_majority_rkgtpk.md) · [Runoff_04_reversal_at_scale_bfjqmg](Runoff_04_reversal_at_scale_bfjqmg.md) · [Runoff_06_confirms_at_scale_d664xw](Runoff_06_confirms_at_scale_d664xw.md) · [Runoff_07_flat_ballot_bv_bug_tf73v9](Runoff_07_flat_ballot_bv_bug_tf73v9.md) · [Runoff_08_ca_governor_reversal_gvdy42](Runoff_08_ca_governor_reversal_gvdy42.md)

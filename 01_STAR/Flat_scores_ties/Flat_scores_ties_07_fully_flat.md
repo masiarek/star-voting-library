@@ -2,7 +2,7 @@
 
 **Level 301 · the capstone.** Every voter scores **every** mountain 5. It's the maximal tie — tied in **both** rounds, resolved entirely by lot — and it sits on top of a second BV bug: a fully-flat ballot gets **mis-filed as an abstention** and dropped.
 
-> ⚠️ **Two BV bugs meet here (pending).** 1. **Equal Support ≠ abstention.** A ballot that rates every candidate 5 is a *cast vote with no preference* (**Equal Support**), but BetterVoting drops it as an **abstention** — **[#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)** (see the worked case in [`Runoff_07`](../runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md) and [`small_case_abstention_lesson`](../pet_real_bv_election/small_case_abstention_lesson.md)). 2. **NaN on equal ties** — **[BV200 / #1035](https://github.com/Equal-Vote/bettervoting/issues/1035)**.
+> ⚠️ **Two BV bugs meet here (pending).** 1. **Equal Support ≠ abstention.** A ballot that rates every candidate 5 is a *cast vote with no preference* (**Equal Support**), but BetterVoting drops it as an **abstention** — **[#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)** (see the worked case in [`Runoff_07`](../runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md) and [`small_case_abstention_lesson`](../pet_real_bv_election/small_case_abstention_lesson.md)). 2. **NaN on equal ties** — **[BV200 / #1035](https://github.com/Equal-Vote/bettervoting/issues/1035)**.
 
 → [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [`GLOSSARY` (Equal Support vs abstention)](../../00_start_here/GLOSSARY.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 

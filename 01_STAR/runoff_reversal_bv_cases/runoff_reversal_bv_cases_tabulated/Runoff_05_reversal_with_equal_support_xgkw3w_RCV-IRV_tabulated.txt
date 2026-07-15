@@ -1,0 +1,23 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Rosa, Sage, Tulip
+     1 ×   Rosa > Sage      (5, 1, 0)
+     2 ×   Sage > Rosa      (4, 5, 0)
+     1 ×   Rosa > Sage > Tulip      (3, 3, 1)
+     1 ×   Rosa > Sage > Tulip      (5, 5, 2)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Rosa               3  Elected
+Sage               2  Rejected
+Tulip              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Rosa
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

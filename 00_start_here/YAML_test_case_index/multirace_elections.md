@@ -413,7 +413,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## — — 2026 California Governor Election
 
-**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_overturns_leader/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
+**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_reversal_bv_cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|

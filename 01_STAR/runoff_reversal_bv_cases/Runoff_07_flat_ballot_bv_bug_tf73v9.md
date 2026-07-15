@@ -61,7 +61,7 @@ The Runoff Table seals it: **Total 3** (not 4) and **Equal Support 0** — the `
 
 ## View 2 — the LH engine
 
-All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](runoff_overturns_leader_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
+All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
 
 ```
 [Score Distribution] (number of ballots giving each score)

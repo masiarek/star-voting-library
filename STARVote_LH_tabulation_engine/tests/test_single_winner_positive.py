@@ -38,6 +38,7 @@ SINGLE_WINNER_DIRS = [
     REPO_ROOT / "01_STAR" / "_main",
     REPO_ROOT / "01_STAR" / "silly_two_cand_STAR",
     REPO_ROOT / "01_STAR" / "runoff_overturns_leader",
+    REPO_ROOT / "01_STAR" / "runoff_reversal_bv_cases",
     REPO_ROOT / "01_STAR" / "tie_break_dead_rung",
     REPO_ROOT / "01_STAR" / "tie_break_dead_rung" / "lot_random_vs_published_jfk7pd",
     REPO_ROOT / "01_STAR" / "tie_break_dead_rung" / "three_way_dead_rung_tie",

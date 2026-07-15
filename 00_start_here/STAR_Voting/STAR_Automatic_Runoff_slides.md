@@ -88,7 +88,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - Most of the time the score leader is also the majority's pick — the runoff just **checks**.
 - Show this first so the next slide's reversal can't look "rigged."
 
-> Notes: Open the BV link live; point at the dashed majority line Aspen clears. Live result: <https://bettervoting.com/r2pvc9/results> Lesson: [Runoff 01 — confirms the leader](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md).
+> Notes: Open the BV link live; point at the dashed majority line Aspen clears. Live result: <https://bettervoting.com/r2pvc9/results> Lesson: [Runoff 01 — confirms the leader](../../01_STAR/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.md).
 
 ---
 
@@ -109,7 +109,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - Same machinery as the baseline; only the ballots changed.
 - BetterVoting itself pops up *"Why is the top-scoring candidate different from the winner?"*
 
-> Notes: Put slide 8 (Aspen) and this side by side if you can — identical mechanism, opposite outcome, because the preferences differ. Live result: <https://bettervoting.com/yx9447/results> Lesson: [Runoff 02 — the atom](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md).
+> Notes: Put slide 8 (Aspen) and this side by side if you can — identical mechanism, opposite outcome, because the preferences differ. Live result: <https://bettervoting.com/yx9447/results> Lesson: [Runoff 02 — the atom](../../01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.md).
 
 ---
 
@@ -119,7 +119,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - Adding voters in the same proportions doesn't rescue the score leader — it makes the majority's verdict **louder.**
 - *How many* is a headcount; headcounts grow with the crowd, a few enthusiasts' extra stars don't.
 
-> Notes: Use this to kill the "cute toy example" objection. Same shape, bigger room. Live result: <https://bettervoting.com/bfjqmg/results> Lesson: [Runoff 04 — reversal at scale](../../01_STAR/runoff_overturns_leader/Runoff_04_reversal_at_scale_bfjqmg.md).
+> Notes: Use this to kill the "cute toy example" objection. Same shape, bigger room. Live result: <https://bettervoting.com/bfjqmg/results> Lesson: [Runoff 04 — reversal at scale](../../01_STAR/runoff_reversal_bv_cases/Runoff_04_reversal_at_scale_bfjqmg.md).
 
 ---
 
@@ -129,7 +129,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - A passionate minority can top the score chart; it can't outvote the majority in the runoff.
 - Where Runoff 02 had a *broadly-liked* leader, this is an *intense-minority* leader — same reversal, opposite flavor.
 
-> Notes: First 201 slide. Good place to say: STAR rewards breadth of support, not just intensity. Eden is also the Condorcet winner — a calm case, no cross-method drama. Live result: <https://bettervoting.com/rkgtpk/results> Lesson: [Runoff 03 — enthusiasts vs majority](../../01_STAR/runoff_overturns_leader/Runoff_03_enthusiasts_vs_majority_rkgtpk.md).
+> Notes: First 201 slide. Good place to say: STAR rewards breadth of support, not just intensity. Eden is also the Condorcet winner — a calm case, no cross-method drama. Live result: <https://bettervoting.com/rkgtpk/results> Lesson: [Runoff 03 — enthusiasts vs majority](../../01_STAR/runoff_reversal_bv_cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.md).
 
 ---
 
@@ -139,7 +139,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - It is **not an abstention**: it counts fully in the Scoring Round; only a fully-blank ballot abstains.
 - **Runoff 05.** Rosa leads (21), but two voters rate Rosa = Sage, so **3 of 5** decide — and they pick **Sage 2–1.**
 
-> Notes: The single most-confused term in STAR. Hammer "cast vote, no preference ≠ didn't vote." This is the bridge to the two-denominator slide. Live result: <https://bettervoting.com/xgkw3w/results> Lesson: [Runoff 05 — reversal with Equal Support](../../01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.md) · term: [`GLOSSARY`](../GLOSSARY.md).
+> Notes: The single most-confused term in STAR. Hammer "cast vote, no preference ≠ didn't vote." This is the bridge to the two-denominator slide. Live result: <https://bettervoting.com/xgkw3w/results> Lesson: [Runoff 05 — reversal with Equal Support](../../01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md) · term: [`GLOSSARY`](../GLOSSARY.md).
 
 ---
 
@@ -159,7 +159,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - Bookend to the reversals: the runoff doesn't *change* the answer here — but it **asked the question**, which is the safeguard.
 - A reversal only happens when *how much* and *how many* point at **different** candidates.
 
-> Notes: Reassures the room the runoff isn't out to overturn leaders for sport. It confirms far more often than it reverses. Live result: <https://bettervoting.com/d664xw/results> Lesson: [Runoff 06 — confirms at scale](../../01_STAR/runoff_overturns_leader/Runoff_06_confirms_at_scale_d664xw.md).
+> Notes: Reassures the room the runoff isn't out to overturn leaders for sport. It confirms far more often than it reverses. Live result: <https://bettervoting.com/d664xw/results> Lesson: [Runoff 06 — confirms at scale](../../01_STAR/runoff_reversal_bv_cases/Runoff_06_confirms_at_scale_d664xw.md).
 
 ---
 
@@ -222,7 +222,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - Same winner (Blair), but BV's counts and score totals don't reconcile with a hand count of all four ballots.
 - Tracked as **[bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**; kept as a teaching illustration until fixed.
 
-> Notes: Optional 301 capstone — shows the audience how to *audit* a result and why the Equal-Support vs abstention distinction (slide 13) actually matters in practice. Live result: <https://bettervoting.com/tf73v9/results> Lesson: [Runoff 07 — flat ballot / BV bug (WIP)](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md) · the bug in full: [When "no preference" gets called an "abstention"](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md).
+> Notes: Optional 301 capstone — shows the audience how to *audit* a result and why the Equal-Support vs abstention distinction (slide 13) actually matters in practice. Live result: <https://bettervoting.com/tf73v9/results> Lesson: [Runoff 07 — flat ballot / BV bug (WIP)](../../01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md) · the bug in full: [When "no preference" gets called an "abstention"](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md).
 
 ---
 
@@ -240,12 +240,12 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 
 | # | Slide | Level | BetterVoting result | Repo lesson |
 |---|-------|:---:|---------------------|-------------|
-| 01 | confirms the leader (control) | 101 | [r2pvc9](https://bettervoting.com/r2pvc9/results) | [Runoff_01](../../01_STAR/runoff_overturns_leader/Runoff_01_confirms_leader_r2pvc9.md) |
-| 02 | the atom (smallest reversal) | 101 | [yx9447](https://bettervoting.com/yx9447/results) | [Runoff_02](../../01_STAR/runoff_overturns_leader/Runoff_02_atom_reversal_yx9447.md) |
-| 03 | enthusiasts vs majority | 201 | [rkgtpk](https://bettervoting.com/rkgtpk/results) | [Runoff_03](../../01_STAR/runoff_overturns_leader/Runoff_03_enthusiasts_vs_majority_rkgtpk.md) |
-| 04 | reversal at scale (67/33) | 101 | [bfjqmg](https://bettervoting.com/bfjqmg/results) | [Runoff_04](../../01_STAR/runoff_overturns_leader/Runoff_04_reversal_at_scale_bfjqmg.md) |
-| 05 | reversal with Equal Support | 201 | [xgkw3w](https://bettervoting.com/xgkw3w/results) | [Runoff_05](../../01_STAR/runoff_overturns_leader/Runoff_05_reversal_with_equal_support_xgkw3w.md) |
-| 06 | confirms at scale (control) | 101 | [d664xw](https://bettervoting.com/d664xw/results) | [Runoff_06](../../01_STAR/runoff_overturns_leader/Runoff_06_confirms_at_scale_d664xw.md) |
-| 07 ⚠️ | flat ballot / BV bug (WIP) | 301 | [tf73v9](https://bettervoting.com/tf73v9/results) | [Runoff_07](../../01_STAR/runoff_overturns_leader/Runoff_07_flat_ballot_bv_bug_tf73v9.md) |
+| 01 | confirms the leader (control) | 101 | [r2pvc9](https://bettervoting.com/r2pvc9/results) | [Runoff_01](../../01_STAR/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.md) |
+| 02 | the atom (smallest reversal) | 101 | [yx9447](https://bettervoting.com/yx9447/results) | [Runoff_02](../../01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.md) |
+| 03 | enthusiasts vs majority | 201 | [rkgtpk](https://bettervoting.com/rkgtpk/results) | [Runoff_03](../../01_STAR/runoff_reversal_bv_cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.md) |
+| 04 | reversal at scale (67/33) | 101 | [bfjqmg](https://bettervoting.com/bfjqmg/results) | [Runoff_04](../../01_STAR/runoff_reversal_bv_cases/Runoff_04_reversal_at_scale_bfjqmg.md) |
+| 05 | reversal with Equal Support | 201 | [xgkw3w](https://bettervoting.com/xgkw3w/results) | [Runoff_05](../../01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md) |
+| 06 | confirms at scale (control) | 101 | [d664xw](https://bettervoting.com/d664xw/results) | [Runoff_06](../../01_STAR/runoff_reversal_bv_cases/Runoff_06_confirms_at_scale_d664xw.md) |
+| 07 ⚠️ | flat ballot / BV bug (WIP) | 301 | [tf73v9](https://bettervoting.com/tf73v9/results) | [Runoff_07](../../01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md) |
 
 **Suggested cuts by audience:** *public intro (101)* → slides 1–11, 15–18, 22. *Technical / debate (201+)* → all of it. *Lightning (8–10 min)* → 1, 3, 4, 5, 9, 10, 18, 22.
