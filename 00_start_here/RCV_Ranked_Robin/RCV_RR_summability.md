@@ -12,7 +12,16 @@ Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-p
 
 ## Worked example — the same ballots IRV couldn't combine
 
-Take the [two districts IRV can't sum](../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example--two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Count them with Ranked Robin and the pairwise matrices add cell by cell — run [`summability_demo/`](../../method_comparisons/summability_demo):
+Take the [two districts IRV can't sum](../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example--two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Here are the actual ranked ballots — 13 voters in each district ([`summability_demo/`](../../method_comparisons/summability_demo)):
+
+```
+District A (13 voters)        District B (13 voters)
+  6 × A                         6 × C
+  4 × B                         4 × B
+  3 × C > B > A                 3 × A > B > C
+```
+
+Each precinct turns **its own** ballots into a pairwise **For – Against – No-preference** table. In District A, the 6 `A` ballots rank A over B, while the 4 `B` and 3 `C>B>A` ballots rank B over A — so the A-vs-B cell is **6 – 7 – 0**. Do that for every pair, in each district, and the matrices **add cell by cell**:
 
 ```
                 A vs B        A vs C        B vs C
