@@ -13,7 +13,7 @@ Ranked Robin usually just elects the Condorcet winner. This set is about the **e
 | **LH** `run_ranked_robin` | most wins → total **margin** → **lot order** (deterministic) |
 | **BetterVoting** `RankedRobin.ts` | most wins → **head-to-head** (2-way) → **random** |
 
-The dead-heat case is exactly the input where these part ways (the two leaders tie head-to-head too, so BV goes random), which is why it's **LH-only** — a random BV result can't be frozen. Full write-up + the "cycle" wording nit: [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+The dead-heat case is exactly the input where these part ways (the two leaders tie head-to-head too, so BV goes random), which is why it's **LH-only** — a random BV result can't be frozen. Full write-up + the "cycle" wording nit: [Ranked Robin tie-breaks — LH vs BetterVoting](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
 
 **Concept docs:** [Ranked Robin (the method)](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) · [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
 

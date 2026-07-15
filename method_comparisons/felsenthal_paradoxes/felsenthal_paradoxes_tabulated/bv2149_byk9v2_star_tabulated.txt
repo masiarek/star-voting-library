@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2149_byk9v2_star.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2149_byk9v2_star_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:19
+TABULATED AT:    2026-07-15 08:12:40
 ======================================================================
 
 election_title: "Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts"
@@ -97,9 +97,9 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-IRV_tabulated.txt
+     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
+     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Cora)

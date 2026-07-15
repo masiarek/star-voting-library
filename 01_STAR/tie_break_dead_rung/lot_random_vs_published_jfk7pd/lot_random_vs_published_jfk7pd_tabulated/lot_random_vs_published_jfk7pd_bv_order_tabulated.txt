@@ -2,7 +2,7 @@
 SOURCE FILE:     lot_random_vs_published_jfk7pd_bv_order.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  lot_random_vs_published_jfk7pd_bv_order_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:05
+TABULATED AT:    2026-07-15 08:12:26
 ======================================================================
 
 election_title: 'Lot-decided tie (BV jfk7pd) — following BetterVoting''s random draw'
@@ -78,7 +78,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
+     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

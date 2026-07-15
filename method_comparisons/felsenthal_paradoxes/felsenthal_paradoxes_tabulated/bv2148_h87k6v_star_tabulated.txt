@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2148_h87k6v_star.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2148_h87k6v_star_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:19
+TABULATED AT:    2026-07-15 08:12:39
 ======================================================================
 
 election_title: "Felsenthal Ex.3 District II — STAR: also Bruno"

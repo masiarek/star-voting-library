@@ -8,6 +8,6 @@ A clean, self-contained SNTV showcase: 9 residents, a 2-seat council. The Downto
 | Seats | 2 · Winners: **Priya (4), Nora (3)** |
 | On BV | multi-winner Plurality (BV2136) |
 
-→ **Lesson:** [sntv_village_council.md](sntv_village_council.md) · the whole plurality family: [multi_member_plurality](../multi_member_plurality/)
+→ **Lesson:** [SNTV in the village council](sntv_village_council.md) · the whole plurality family: [multi-member plurality](../multi_member_plurality/)
 
 # file: README.md

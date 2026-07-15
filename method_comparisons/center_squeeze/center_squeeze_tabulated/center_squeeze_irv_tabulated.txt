@@ -2,7 +2,7 @@
 SOURCE FILE:     center_squeeze_irv.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  center_squeeze_irv_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:15
+TABULATED AT:    2026-07-15 08:12:36
 ======================================================================
 
 election_title: "Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated)"

@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2174_yyhr66_noshow_baseline.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2174_yyhr66_noshow_baseline_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:27
+TABULATED AT:    2026-07-15 08:12:46
 ======================================================================
 
 election_title: "No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno"
@@ -102,7 +102,7 @@ Legend: For - Equal Support - Against
   RCV-RR                 = Celia   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: participation_no_show_tabulated/bv2174_yyhr66_noshow_baseline_RCV-RR_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/participation_no_show/participation_no_show_tabulated/bv2174_yyhr66_noshow_baseline_RCV-RR_tabulated.txt
+     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/participation_no_show/participation_no_show_tabulated/bv2174_yyhr66_noshow_baseline_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Celia)

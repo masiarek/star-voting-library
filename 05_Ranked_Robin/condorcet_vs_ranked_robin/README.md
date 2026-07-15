@@ -2,7 +2,7 @@
 
 *Three runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, plus a real 6-candidate case.*
 
-→ **Full lesson (the teaching write-up):** [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
+→ **Full lesson (the teaching write-up):** [Ranked Robin vs. Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
 
 | Case (page) | What it shows | Condorcet winner | Ranked Robin | src |
 |------|---------------|:---:|:---:|:--:|

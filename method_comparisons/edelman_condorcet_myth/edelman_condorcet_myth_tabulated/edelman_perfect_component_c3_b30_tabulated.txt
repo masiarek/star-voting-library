@@ -2,7 +2,7 @@
 SOURCE FILE:     edelman_perfect_component_c3_b30.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  edelman_perfect_component_c3_b30_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:16
+TABULATED AT:    2026-07-15 08:12:37
 ======================================================================
 
 election_title: "A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact"

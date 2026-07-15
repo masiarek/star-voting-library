@@ -15,8 +15,8 @@ The library's crown jewels: teaching sets where the *contrast between methods* i
 | [Summability demo — one example, three methods](summability_demo/) | two districts + the combined count: STAR subtotals add up, IRV's don't |
 | [Paradoxes & whoopses — when methods disagree 🎭](paradoxes_and_whoops/) | the classics — Tennessee, Condorcet cycles, Ossipoff's centrist, Brams' many-pathologies election |
 | [BV_Library — real BetterVoting elections, imported and verified](BV_Library/) | real BetterVoting elections across methods (STAR, Approval, Ranked Robin, plurality), imported and verified |
-| [method_comparisons / _main — loose comparison files](_main/) | loose comparison files (e.g. STAR-vs-IRV count simplicity) |
-| [`divergence_review/`](divergence_review/INDEX.md) | the GENERATED ledger: every curated STAR election re-counted under RCV-IRV / Ranked Robin / Approval, grouped by why they disagree (refreshed by pre-commit) |
+| [Loose comparison files — STAR-vs-IRV count simplicity](_main/) | loose comparison files (e.g. STAR-vs-IRV count simplicity) |
+| [The divergence ledger — every STAR election re-counted](divergence_review/INDEX.md) | the GENERATED ledger: every curated STAR election re-counted under RCV-IRV / Ranked Robin / Approval, grouped by why they disagree (refreshed by pre-commit) |
 
 The by-method view of every file in the repo is auto-generated at [the by-method index](../00_start_here/YAML_test_case_index/).
 

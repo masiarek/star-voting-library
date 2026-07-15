@@ -2,7 +2,7 @@
 SOURCE FILE:     bv1815_bloc_3c2s_basic.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv1815_bloc_3c2s_basic_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:08
+TABULATED AT:    2026-07-15 08:12:29
 ======================================================================
 
 election_title: "BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak)"

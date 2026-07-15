@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2133_dyxrbr_pet2_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2133_dyxrbr_pet2_plurality_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:28
+TABULATED AT:    2026-07-15 08:12:48
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (Plurality): the front-runner Dog wins"

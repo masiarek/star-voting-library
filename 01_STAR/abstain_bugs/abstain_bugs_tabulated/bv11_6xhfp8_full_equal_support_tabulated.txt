@@ -2,7 +2,7 @@
 SOURCE FILE:     bv11_6xhfp8_full_equal_support.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  bv11_6xhfp8_full_equal_support_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:03
+TABULATED AT:    2026-07-15 08:12:24
 ======================================================================
 
 election_title: "BV11 — full & equal support (5,5) counted as abstentions"

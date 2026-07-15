@@ -1,6 +1,6 @@
 # felsenthal_paradoxes — Felsenthal's paradox examples, run for real
 
-Worked examples from Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"* (University of Haifa / LSE, revised 26 May 2010; Leverhulme Trust *Voting Power in Practice* workshop, Château du Baffy, Normandy). Each example becomes a live BetterVoting election plus LH-engine YAML case(s), tagged by paradox (`paradoxes:` field) and indexed in the [paradox registry](../../00_start_here/YAML_test_case_index/PARADOX_index.md). Teaching pages: [voting_paradoxes/](../../00_start_here/voting_paradoxes/README.md).
+Worked examples from Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"* (University of Haifa / LSE, revised 26 May 2010; Leverhulme Trust *Voting Power in Practice* workshop, Château du Baffy, Normandy). Each example becomes a live BetterVoting election plus LH-engine YAML case(s), tagged by paradox (`paradoxes:` field) and indexed in the [paradox registry](../../00_start_here/YAML_test_case_index/PARADOX_index.md). Teaching pages: [the voting-paradoxes teaching pages](../../00_start_here/voting_paradoxes/README.md).
 
 ## Cases
 

@@ -2,7 +2,7 @@
 SOURCE FILE:     Black_Curtain_03_c3_b5_polarized-on-cal.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  Black_Curtain_03_c3_b5_polarized-on-cal_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:15
+TABULATED AT:    2026-07-15 08:12:36
 ======================================================================
 
 election_title: The Black Curtain #3 — same landslide, opposite meaning

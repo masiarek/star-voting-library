@@ -2,7 +2,7 @@
 SOURCE FILE:     approval_bloc_2seats_c4_b6.yaml
 SOURCE MODIFIED: 2026-07-11 19:08:39
 TABULATED FILE:  approval_bloc_2seats_c4_b6_tabulated.txt
-TABULATED AT:    2026-07-15 06:34:11
+TABULATED AT:    2026-07-15 08:12:33
 ======================================================================
 
 election_title: Bloc Approval — 2 seats, majority sweep

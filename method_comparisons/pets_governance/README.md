@@ -13,6 +13,6 @@ A single 22-voter electorate (a 13-voter **Furry** majority + a 9-voter **Others
 
 **The lesson:** give the same 59/41 electorate 3 seats and Bloc STAR hands the majority all three, while STV and STAR-PR seat the minority. Majoritarian vs proportional, side by side.
 
-→ **Full lesson:** [pets_gov_five_positions.md](pets_gov_five_positions.md)
+→ **Full lesson:** [Pets governance — five positions, five methods](pets_gov_five_positions.md)
 
 # file: README.md
