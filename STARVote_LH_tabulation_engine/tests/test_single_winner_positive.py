@@ -46,6 +46,7 @@ SINGLE_WINNER_DIRS = [
     REPO_ROOT / "method_comparisons" / "summability_demo",
     REPO_ROOT / "method_comparisons" / "BV_Library",
     REPO_ROOT / "method_comparisons" / "split_voting" / "_main",
+    REPO_ROOT / "method_comparisons" / "brams_grading_paradox",
     REPO_ROOT / "YAML_library" / "1_positive",
 ]
 
