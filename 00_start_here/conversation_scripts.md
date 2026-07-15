@@ -20,9 +20,9 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | [what_is_a_voting_method.md](topics/what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
 | [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](STAR_Voting/STAR_start_here.md) & [benefits](STAR_Voting/STAR_benefits.md) |
 | [why_do_you_love_STAR_Voting.md](STAR_Voting/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
-| [our_voting_system_is_broken.md](our_voting_system_is_broken.md) | convert | pending — educational "problem with plurality" page |
+| [our_voting_system_is_broken.md](our_voting_system_is_broken.md) | convert | **✔ done (2026-07)** — converted to an educational "problem with plurality" page (dialogue → prose; demos as links) |
 | [favorite_betrayal_voting_301.md](STAR_Voting/favorite_betrayal_voting_301.md) | convert | **✔ done (2026-07)** — educational reference body; §7 recast from a Larry↔Adam recording script into an **RCV-advocate ↔ STAR-advocate debate** (debate-prep, not a presenter artifact) |
-| [RCV_or_IRV_whats_the_right_word.md](RCV_IRV/RCV_or_IRV_whats_the_right_word.md) | convert | pending — fold toward [TIPS_terminology](TIPS_terminology.md) (canonical), keep a short concept page |
+| [RCV_or_IRV_whats_the_right_word.md](RCV_IRV/RCV_or_IRV_whats_the_right_word.md) | convert | **✔ done (2026-07)** — now a short concept page (dialogue → prose) that defers the full taxonomy to canonical [TIPS_terminology](TIPS_terminology.md) |
 | [exhausted_ballots_301.md](RCV_IRV/exhausted_ballots_301.md) | convert | **✔ done (2026-07)** — reference body kept; §7 recast from a Larry↔Adam script into an **RCV-advocate ↔ STAR-advocate debate** (matches favorite_betrayal_301) |
 
 ---
