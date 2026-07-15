@@ -20,7 +20,7 @@ Two opposite pressures pull on every ballot: approve **only** your favorite (so 
 
 ## 4. Can miss a majority favorite (lowest-common-denominator)
 
-A broadly **inoffensive** candidate approved by many can beat a candidate who is the *first choice of a majority* but polarizing. Sometimes that broad-consensus winner is the right call — but Approval can't distinguish "everyone's warm second choice" from "the majority's passionate first choice," because it never sees the difference.
+A broadly **inoffensive** candidate approved by many can beat a candidate who is the *first choice of a majority* but polarizing. Sometimes that broad-consensus winner is the right call — but Approval can't distinguish "everyone's warm second choice" from "the majority's passionate first choice," because it never sees the difference. The [Approval + Top-Two](approval_top_two.md) package answers this with a second, head-to-head election between the two most-approved — and the reason it must be a *second* election (an automatic runoff from 0/1 ballots just echoes the approval count) is the cleanest demonstration of what the checkmark discards.
 
 ## 5. Fails Later-No-Harm
 

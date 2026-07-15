@@ -16,6 +16,7 @@ The pages are grouped to mirror the folders: **general / cross-method** ideas li
 | [**Scores vs. ranks (don't confuse them!)**](scores_and_ranks/scores_vs_ranks.md) | order-only (ranks) vs. order+strength (scores) — relative vs. absolute preference |
 | [**Scoring methods aren't RCV**](topics/scoring-methods-vs-ranked-voting.md) | scoring methods (Approval, STAR) rate candidates and sit *outside* the ranked-voting family |
 | [**Approval — honest limits**](Approval_Voting/approval_honest_limits.md) | no preference strength/order, the approval-threshold dilemma, bullet-voting; balanced with its equal-vote simplicity |
+| [**Approval + Top-Two**](Approval_Voting/approval_top_two.md) | the St. Louis package — Approval primary, top-two general; why the runoff must be a *second* election (0/1 ballots re-counted head-to-head just echo the approval count), and how STAR folds it into one ballot |
 | [**Strict vs. weak ranks**](scores_and_ranks/strict_vs_weak_ranks.md) | many ranked methods allow equal ranks & compare pairwise — RCV-IRV does neither |
 | [**"Preference" (a slippery word)**](topics/preference.md) | everyday opinion vs. technical "ranking"; why "Preferential Voting" is a misnomer |
 | [**Ranked Robin / RCV-RR (Consensus Voting; = Copeland)**](RCV_Ranked_Robin/ranked_robin.md) | a Condorcet method: ranks + equal ranks, every pair compared head-to-head; tabulable via the pref_voting engine |
