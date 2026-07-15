@@ -1,6 +1,6 @@
 # Are Equal-Score Votes "Discounted"?
 
-*The objection, in its strongest form: in STAR, a ballot that scores both finalists the same (a 5/5, a 0/0) is tagged "no preference" and moves nothing in the Automatic Runoff. Sometimes that's a lot of ballots. Isn't that just a discounted vote? This page answers honestly: it concedes the mechanical fact, shows why "discounted" is the wrong word, proves with a runnable election that these ballots do real work, and names the one version of the criticism that genuinely lands.*
+*The objection, in its strongest form: in STAR, a ballot that scores both finalists the same (a 5/5, a 0/0) is tagged **Equal Support** — "no preference" between the two — and moves nothing in the Automatic Runoff. Sometimes that's a lot of ballots. Isn't that just a discounted vote? This page answers honestly: it concedes the mechanical fact, shows why "discounted" is the wrong word, proves with a runnable election that these ballots do real work, and names the one version of the criticism that genuinely lands.*
 
 → Companions: [Equal Support in both rounds (the demo)](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
 

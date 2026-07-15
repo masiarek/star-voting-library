@@ -7,7 +7,7 @@
 ## About filling out the ballot
 
 **"Do I have to rate every candidate?"**
-No. Score the ones you have an opinion about; leave the rest blank (a blank counts as **0**). Rating only your favorite (a "bullet vote") is perfectly valid — you're just choosing not to weigh in on the others. → [ways to fill out the ballot](STAR_ballot_voting_styles.md)
+No. Score the ones you have an opinion about; leave the rest blank (a blank counts as **0**). Scoring only your favorite (a "bullet vote") is perfectly valid — you're just choosing not to weigh in on the others. → [ways to fill out the ballot](STAR_ballot_voting_styles.md)
 
 **"Can I give two candidates the same score?"**
 Yes — and this is a real advantage over ranking. If you honestly like two candidates equally, score them both a 5 (or both a 2). You're **never forced to invent a preference** you don't feel. → [Equal Support](are_equal_score_votes_discounted.md)

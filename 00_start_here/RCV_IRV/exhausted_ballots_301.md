@@ -130,27 +130,30 @@ It's systematic, not a one-off. A peer-reviewed study (Burnett & Kogan, *Elector
 
 ## 6. The STAR contrast (the payoff)
 
-This is why STAR sidesteps the entire mess: **STAR counts every ballot in both rounds.** Nothing is eliminated, so nothing exhausts. And a STAR **"no-preference"** ballot (equal scores on the two finalists) is the *opposite* of an exhausted one: it's **present data** — a voter who *declared a tie* — that **still counted in the scoring round** to help pick the finalists. It isn't missing information thrown away; it's information that says "I'm equally happy with either."
+This is why STAR sidesteps the entire mess: **STAR counts every ballot in both rounds.** Nothing is eliminated, so nothing exhausts. And a STAR **Equal Support** ballot (equal scores on the two finalists — "no preference" between them) is the *opposite* of an exhausted one: it's **present data** — a voter who *declared a tie* — that **still counted in the scoring round** to help pick the finalists. It isn't missing information thrown away; it's information that says "I'm equally happy with either."
 
 That distinction — *declared tie* (STAR) vs *lost voice* (IRV exhaustion) — is the hinge, and it's developed in full in the companion episode.
 
-> [REPO] `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — no-preference ballots that *picked the finalists*, then stayed neutral in the runoff.
+> [REPO] `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
 
 ---
 
-## 7. The conversation (Larry ↔ Adam) — recording cut
+## 7. The debate — an RCV advocate vs a STAR advocate
 
-**Larry:** RCV folks say "your vote always counts — if your first choice loses, your next choice is counted." That sounds reassuring. True?
+The claim you'll actually meet isn't a neutral question — it's a reassurance. Here's the same taxonomy as the confrontation: the **RCV advocate** offering the comforting line, the **STAR advocate** pulling apart what's true from what's oversold.
 
-**Adam:** It's the most oversold sentence in the whole debate. It's only true if your favorite is eliminated *early*. If your favorite instead makes the final two and loses, none of your other rankings are ever read — the count already stopped. And sometimes your second choice is gone before your vote can even move. So "your next choice will be counted" is, for a lot of voters, just false.
+**RCV Advocate:** Ranked Choice means your vote always counts. If your first choice can't win, it just transfers to your next choice. Nobody's vote is wasted.
 
-**Larry:** But they call those ballots "exhausted," like the voter ran out of choices.
+**STAR Advocate:** That's the most oversold sentence in the whole debate — because it's only true when your favorite is eliminated *early*. If your favorite instead makes the final two and *loses* there, none of your lower rankings are ever read; the count already stopped. And sometimes your second choice is already gone before your ballot can move to it. For a lot of voters, "your next choice will be counted" is simply false.
 
-**Adam:** That's the sleight of hand. "Exhausted" is one word covering five different situations — overvotes, skipped ranks, bullet votes, ranking limits, and the elimination-order cases. Some are the voter's doing and totally fair. But others happen to people who ranked everyone correctly, purely because of the order candidates dropped out. Lumping all five under one fuzzy word lets you point at the harmless cases and pretend the others don't exist.
+**RCV Advocate:** Even so — only a small share of ballots ever "exhaust," and that's the voter running out of choices, not the system failing them. <!-- terminology-ok: "RCV Advocate" is the character's own self-label; the STAR side keeps IRV/RCV-IRV precise -->
 
-**Larry:** And STAR?
 
-**Adam:** STAR never eliminates anyone, so nothing exhausts — every ballot is read in both rounds. The closest thing, an equal-score "no-preference" ballot, is a voter telling us they like both finalists the same. That's *information*, and it still counted to pick the finalists. It's a declared tie, not a lost voice.
+**STAR Advocate:** "Exhausted" is one word hiding five different situations — overvotes, skipped ranks, bullet votes, the ranking limit, and the elimination-order cases. Some are the voter's own doing and perfectly fair. But others happen to people who ranked everyone correctly, purely because of the order candidates dropped out. Folding all five under one fuzzy word lets you point at the harmless cases while the harmful ones ride along — including inside the "majority" you report, which is only a majority of the ballots still *left*.
+
+**RCV Advocate:** And you'll tell me STAR has no version of this.
+
+**STAR Advocate:** STAR never eliminates anyone, so nothing exhausts — every ballot is read in *both* rounds. The nearest thing is an **Equal Support** ballot: equal scores on the two finalists, a voter saying "I like these two the same." But that's the *opposite* of an exhausted ballot — it's present data that already counted in the scoring round to help *choose* those finalists. A declared tie, not a lost voice.
 
 ---
 

@@ -4,7 +4,7 @@
 
 Two views of the **same election** (BV id [`r2pvc9`](https://bettervoting.com/r2pvc9/results)): BetterVoting's display and the LH engine's text report. Same ballots, same result.
 
-→ The reversal that contrasts with this: [S2 — the atom](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
+→ The reversal that contrasts with this: [the atom — the smallest reversal](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -69,4 +69,4 @@ Automatic Runoff Round
 
 ## The point
 
-Aspen leads on stars **and** is preferred head-to-head (2 of 3 voters score Aspen above Birch), so the runoff confirms Aspen. The runoff didn't change the answer — but it *asked the question*, and that's the safeguard. A reversal only happens when raw stars and majority preference point at **different** candidates ([next: S2](../runoff_overturns_leader/teaching_runoff_reversal.md)). The two reports agree exactly — BetterVoting and the LH engine are two views of one count.
+Aspen leads on stars **and** is preferred head-to-head (2 of 3 voters score Aspen above Birch), so the runoff confirms Aspen. The runoff didn't change the answer — but it *asked the question*, and that's the safeguard. A reversal only happens when raw stars and majority preference point at **different** candidates (next: [the atom — the smallest reversal →](../runoff_overturns_leader/teaching_runoff_reversal.md)). The two reports agree exactly — BetterVoting and the LH engine are two views of one count.
