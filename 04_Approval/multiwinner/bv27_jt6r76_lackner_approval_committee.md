@@ -55,6 +55,6 @@ It also makes the book's point tangible: `{a,b,c,d}` leaves **3** voters wholly 
 
 ## See also
 
-- The education built on this election: [ABC rules — a gentle intro (101)](../../00_start_here/Approval_Voting/abc_rules_intro.md) · [ABC rules & the utilitarian–egalitarian spectrum (301)](../../00_start_here/Approval_Voting/abc_rules_spectrum.md).
+- The education built on this election: [ABC rules — a gentle intro (101)](../../00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_intro.md) · [ABC rules & the utilitarian–egalitarian spectrum (301)](../../00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md).
 - [Shadow STAR of this same profile](lackner_skowron_shadow_star.md) — Bloc STAR / Allocated / SSS / RRV on the 5/0 reading.
-- [Approval multi-winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
+- [Approval multi-winner](../../00_start_here/Approval_Voting/Multiwinner_Approval/approval_multiwinner.md).

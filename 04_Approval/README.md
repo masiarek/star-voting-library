@@ -8,7 +8,7 @@ Approval also appears throughout the comparison sets — that's where its charac
 
 - [`../method_comparisons/black_curtain/`](../method_comparisons/black_curtain) — the same five voters counted by Approval vs STAR vs RCV-IRV vs Score (Approval flips the winner in election 1)
 - [`../method_comparisons/BV_Library/`](../method_comparisons/BV_Library) — a real BetterVoting approval election
-- Concept docs: [`../00_start_here/Approval_Voting/`](../00_start_here/Approval_Voting) — the [method overview](../00_start_here/Approval_Voting/approval_voting.md), its [honest limits](../00_start_here/Approval_Voting/approval_honest_limits.md), and [multi-winner Approval](../00_start_here/Approval_Voting/approval_multiwinner.md)
+- Concept docs: [`../00_start_here/Approval_Voting/`](../00_start_here/Approval_Voting) — the [method overview](../00_start_here/Approval_Voting/approval_voting.md), its [honest limits](../00_start_here/Approval_Voting/approval_honest_limits.md), and [multi-winner Approval](../00_start_here/Approval_Voting/Multiwinner_Approval/approval_multiwinner.md)
 
 House rule: Approval ballots accept only `0`/`1` (blank / markers = not approved); the engine errors on 0–5 scores under `voting_method: Approval`.
 

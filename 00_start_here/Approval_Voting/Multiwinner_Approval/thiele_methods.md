@@ -50,7 +50,7 @@ This is the question STAR learners really want answered. **Directly, no; by anal
 
 - **Different ballots.** Thiele methods are defined for **approval** ballots (`x = number of approved winners`). STAR-PR runs on **0–5 score** ballots — there's no "number approved," so the Thiele score formula doesn't apply as-is.
 - **Different machinery.** STAR's **Allocated Score** (BetterVoting's `STAR_PR`) and **SSS** are **quota/reweighting** rules — a faction that helps elect a candidate has its ballots *spent* against a Droop-style quota — which is mechanically the **STV** lineage, *not* Thiele's "maximise Σ w(satisfaction)."
-- **But RRV is score-PAV.** **Reweighted Range Voting** reweights each ballot by a harmonic-style divisor `1 / (1 + (score already awarded to winners)/max)` before each seat. On **0/1** ballots that divisor *is* the seq-PAV weight — which is exactly why, in the [shadow STAR](../../04_Approval/multiwinner/lackner_skowron_shadow_star.md), **RRV recovered PAV's `{A,B,C,F}`** while Allocated/SSS stayed at `{A,B,C,D}`. RRV is the **score-ballot generalisation of sequential PAV**; the harmonic "diminishing returns" idea is the same, lifted from *counts* to *scores*.
+- **But RRV is score-PAV.** **Reweighted Range Voting** reweights each ballot by a harmonic-style divisor `1 / (1 + (score already awarded to winners)/max)` before each seat. On **0/1** ballots that divisor *is* the seq-PAV weight — which is exactly why, in the [shadow STAR](../../../04_Approval/multiwinner/lackner_skowron_shadow_star.md), **RRV recovered PAV's `{A,B,C,F}`** while Allocated/SSS stayed at `{A,B,C,D}`. RRV is the **score-ballot generalisation of sequential PAV**; the harmonic "diminishing returns" idea is the same, lifted from *counts* to *scores*.
 
 So the honest map:
 
@@ -74,6 +74,6 @@ python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
 ## See also
 
 - [ABC rules & the utilitarian–egalitarian spectrum (301)](abc_rules_spectrum.md) · [gentle intro (101)](abc_rules_intro.md).
-- [Shadow STAR of the same profile](../../04_Approval/multiwinner/lackner_skowron_shadow_star.md) — where RRV = PAV shows up concretely.
-- [Proportional STAR (STAR-PR) methods](../proportional_representation/) — Allocated Score, SSS, RRV, and the STV comparison.
-- Glossary: [Thiele method, PAV, Chamberlin–Courant, welfare vector](../GLOSSARY.md).
+- [Shadow STAR of the same profile](../../../04_Approval/multiwinner/lackner_skowron_shadow_star.md) — where RRV = PAV shows up concretely.
+- [Proportional STAR (STAR-PR) methods](../../proportional_representation/) — Allocated Score, SSS, RRV, and the STV comparison.
+- Glossary: [Thiele method, PAV, Chamberlin–Courant, welfare vector](../../GLOSSARY.md).

@@ -25,7 +25,7 @@ That is a **feature or a bug depending on what you're electing:**
 - **Use Bloc STAR** when you *want* the body to reflect the majority as a unit — e.g. a slate of officers who must govern together, or any at-large seat where "the candidates most voters prefer" is the goal.
 - **Don't use it** when you want minorities represented — a legislature, a diverse committee. There, a majority sweep is exactly the wrong outcome, and you want **[Proportional STAR (STAR-PR)](../03_STAR_PR/)** instead.
 
-This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../00_start_here/Approval_Voting/abc_rules_intro.md). Concept hub: [proportional representation](../00_start_here/proportional_representation/).
+This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_intro.md). Concept hub: [proportional representation](../00_start_here/proportional_representation/).
 
 ## Learning path
 

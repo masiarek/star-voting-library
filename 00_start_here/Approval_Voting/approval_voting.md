@@ -2,7 +2,7 @@
 
 *The simplest equal-vote upgrade to Choose-One: mark **every** candidate you approve (**1**) and leave the rest (**0**); the most-approved candidate wins. It's Score voting at **one-bit resolution** — a big jump in expressiveness over "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
+→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
@@ -80,7 +80,7 @@ Several of Approval's advantages are logistical rather than mathematical — the
 - **Works with existing infrastructure.** An Approval ballot can look identical to a traditional one, is tallied the same way (add the votes), and is precinct-summable — so it's highly compatible with existing election codes and equipment. RCV-IRV, by contrast, often requires new equipment, central tabulation, or statutory changes.
 - **Campaign incentives.** Because candidates benefit from being *acceptable* to rivals' supporters, Approval rewards consensus-seeking and positive campaigning over base-only polarization.
 - **Pairs well with a top-two general.** An Approval primary feeding a top-two general election is a minimal-change package that yields notably representative results — the package St. Louis adopted in 2020, and the direct ancestor of STAR. Full page: [Approval + Top-Two](approval_top_two.md).
-- **Scales to multiple seats.** The same ballot handles multi-winner races (bloc counting) and can be adapted for proportional representation — see [multi-winner Approval](approval_multiwinner.md).
+- **Scales to multiple seats.** The same ballot handles multi-winner races (bloc counting) and can be adapted for proportional representation — see [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md).
 
 ## The stepping-stone argument
 
@@ -90,7 +90,7 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 
 - [Approval — Honest Limits](approval_honest_limits.md) — the critique companion
 - [Approval + Top-Two](approval_top_two.md) — the two-round package (St. Louis; Oregon's Unified Primary) and why its runoff can't be automatic — the gap STAR closes
-- [Approval — Multi-Winner](approval_multiwinner.md) — bloc counting, SPAV/PAV
+- [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [the Approval examples](../../04_Approval/) — the method's example folder
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/) — a joint STAR + Approval essay (authors lead STAR Voting Action and Utah Approves — advocacy lean disclosed); cites the 2021 St. Louis Approval primary

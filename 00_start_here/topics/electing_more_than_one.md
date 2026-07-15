@@ -37,5 +37,5 @@ Proportional methods all rest on a **quota** — roughly "how many votes buys on
 
 - **[Bloc STAR](../../02_STAR_Bloc)** — majoritarian multi-winner (the top-N extension of STAR)
 - **[Proportional representation](../proportional_representation)** — the proportional family (Allocated Score, SSS, RRV) and [STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) on the same electorate
-- **[Electing a committee](../Approval_Voting/abc_rules_intro.md)** — the same fork on the *approval* side, counting-only (a gentle companion)
+- **[Electing a committee](../Approval_Voting/Multiwinner_Approval/abc_rules_intro.md)** — the same fork on the *approval* side, counting-only (a gentle companion)
 - Curriculum: [201.5 multi-winner intro](../curriculum/CURRICULUM_201.md) → [301.1 proportional STAR](../curriculum/CURRICULUM_301.md)

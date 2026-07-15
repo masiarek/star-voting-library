@@ -13,8 +13,8 @@
 - **See it:** the proportional trio in [`03_STAR_PR/`](../../03_STAR_PR/) — [allocated](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) / [SSS](../../03_STAR_PR/_main/_main_pages/02b_c5_b63_proportional-sss.md) / [RRV](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md), and [STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) on the same electorate. Contrast with [Bloc STAR](../../02_STAR_Bloc/).
 - **The point:** STV is the proportional multi-winner *cousin of IRV*, not IRV; proportional methods seat coalitions in proportion, while Bloc STAR lets a majority sweep.
 - **Deeper math:** [the math behind proportional STAR](../proportional_representation/STAR_PR/the_math_behind_proportional_star.md) — quotas, D'Hondt reweighting, JR/EJR, fair division.
-- **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules](../Approval_Voting/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén) and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV), verified with `abcvoting`.
-- **Thiele methods:** [Thiele methods](../Approval_Voting/thiele_methods.md) — AV/PAV/CC as one parameterised family; **RRV is the score-ballot cousin of seq-PAV**, while Allocated Score / SSS follow the STV lineage.
+- **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules](../Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén) and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV), verified with `abcvoting`.
+- **Thiele methods:** [Thiele methods](../Approval_Voting/Multiwinner_Approval/thiele_methods.md) — AV/PAV/CC as one parameterised family; **RRV is the score-ballot cousin of seq-PAV**, while Allocated Score / SSS follow the STV lineage.
 
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 

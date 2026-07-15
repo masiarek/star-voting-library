@@ -2,7 +2,7 @@
 
 *An Approval primary plus a head-to-head general between the two most-approved: a real, field-tested reform package — St. Louis runs on it — and the sharpest little lesson in ballot design, because the runoff **must** be a second election: re-counting the same 0/1 ballots head-to-head just returns the approval count. STAR is this exact package folded into one ballot.*
 
-→ Overview: [**Approval Voting**](approval_voting.md) (how the primary round works). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](approval_multiwinner.md). · Curriculum: [301.4](../CURRICULUM.md).
+→ Overview: [**Approval Voting**](approval_voting.md) (how the primary round works). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md). · Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 

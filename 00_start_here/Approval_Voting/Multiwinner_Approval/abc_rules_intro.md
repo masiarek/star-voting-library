@@ -69,5 +69,5 @@ None is "the right answer" — each optimizes a *different value*. Choosing a mu
 ## Next
 
 - The formal treatment — the scoring formulas, the utilitarian↔egalitarian spectrum, Thiele methods, and how STAR's committee rules line up — is in **[ABC rules and the utilitarian–egalitarian spectrum (301)](abc_rules_spectrum.md)**.
-- The runnable files and a "shadow STAR" of this same election: [Lackner & Skowron — approval and its shadow STAR](../../04_Approval/multiwinner/lackner_skowron_shadow_star.md).
+- The runnable files and a "shadow STAR" of this same election: [Lackner & Skowron — approval and its shadow STAR](../../../04_Approval/multiwinner/lackner_skowron_shadow_star.md).
 - Source: Lackner & Skowron, [*Multi-Winner Voting with Approval Preferences*](https://link.springer.com/book/10.1007/978-3-031-09016-5) (open access), Example 2.1–2.3.

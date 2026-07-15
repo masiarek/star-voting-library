@@ -117,7 +117,7 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 
 ## Approval committees (ABC rules & Thiele methods)
 
-*Multi-winner **approval** theory (Lackner & Skowron). Not STAR, but the cleanest place to see proportionality — and the family RRV descends from. Pages: [ABC rules 101](Approval_Voting/abc_rules_intro.md) · [301 spectrum](Approval_Voting/abc_rules_spectrum.md) · [Thiele methods](Approval_Voting/thiele_methods.md).*
+*Multi-winner **approval** theory (Lackner & Skowron). Not STAR, but the cleanest place to see proportionality — and the family RRV descends from. Pages: [ABC rules 101](Approval_Voting/Multiwinner_Approval/abc_rules_intro.md) · [301 spectrum](Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md) · [Thiele methods](Approval_Voting/Multiwinner_Approval/thiele_methods.md).*
 
 - **ABC rule** — an *Approval-Based Committee* rule: takes an approval profile + committee size `k`, outputs one or more size-`k` **winning committees**. *Resolute* = always one committee; *irresolute* = may return several **tied** committees (broken by a pre-published order, like STAR's lot).
 - **AV (Multi-Winner Approval Voting)** — seat the `k` most-approved candidates; maximises total approvals (**utilitarian**). The LH engine's `Approval_Multi_Winner`.
@@ -126,7 +126,7 @@ The **shared** criteria (monotonicity, Condorcet, summability, center squeeze, t
 - **PAV (Proportional Approval Voting)** — the `w`-Thiele rule with the **harmonic** `w(x)=1+½+…+1/x`; the diminishing weights make it **proportional** (balances big and small groups). **seq-PAV** / **rev-seq-PAV** = its greedy forward / backward algorithms.
 - **Welfare vector / welfarist rule** — a committee's per-voter satisfaction `(|A(1)∩W|,…)`; a rule is *welfarist* if it maximises a function of that vector (all Thiele methods are).
 - **Monroe's rule / Phragmén** — proportional rules that are **not** Thiele: Monroe assigns each winner a disjoint voter quota; Phragmén balances "load."
-- **RRV = score-PAV** — Reweighted Range Voting (a Proportional STAR method) is the **score-ballot generalisation of sequential PAV**; on 0/1 ballots it reduces to seq-PAV. Allocated Score / SSS instead follow the **quota/STV** lineage, not Thiele. See [Thiele methods → "Does this apply to STAR-PR?"](Approval_Voting/thiele_methods.md).
+- **RRV = score-PAV** — Reweighted Range Voting (a Proportional STAR method) is the **score-ballot generalisation of sequential PAV**; on 0/1 ballots it reduces to seq-PAV. Allocated Score / SSS instead follow the **quota/STV** lineage, not Thiele. See [Thiele methods → "Does this apply to STAR-PR?"](Approval_Voting/Multiwinner_Approval/thiele_methods.md).
 
 ## The wider field (computational social choice)
 

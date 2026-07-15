@@ -7,7 +7,7 @@
 An **election instance** is `E = (A, k)`: an approval profile `A` (each voter `i` submits an approval set `A(i) ⊆ C`) and a target committee size `k`. An **ABC rule** maps `E` to one or more **winning committees** — size-`k` subsets of `C`.
 
 - A rule is **resolute** if it always returns exactly one committee, **irresolute** if it may return several **tied** committees.
-- Real systems force a single outcome with a **tie-breaking order**. Modelling all randomness as *fixed before the election* (a pre-published linear order over committees, "maximal committee wins") turns a randomised tiebreak into a deterministic one. **This is precisely the "published lot" discipline STAR uses** for its single-winner ties (see [STAR tie-breaking](../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)) — same idea, lifted to committees.
+- Real systems force a single outcome with a **tie-breaking order**. Modelling all randomness as *fixed before the election* (a pre-published linear order over committees, "maximal committee wins") turns a randomised tiebreak into a deterministic one. **This is precisely the "published lot" discipline STAR uses** for its single-winner ties (see [STAR tie-breaking](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)) — same idea, lifted to committees.
 
 ## The running instance (Example 2.1)
 
@@ -25,7 +25,7 @@ AV maximises the total number of approvals inside the committee. With `score_AV(
 
 Top three are `a,b,c`; the fourth seat ties between `d` and `f` (both 2). So AV is **irresolute** here, returning **two** committees of equal AV-score 18: `{a,b,c,d}` and `{a,b,c,f}`. AV is the pure **utilitarian** rule — it maximises summed satisfaction and is *indifferent* to whether some voters are left with nothing. (`{a,b,c,d}` leaves 3 voters wholly unrepresented; `{a,b,c,f}` leaves 2 — same AV-score, so AV can't tell them apart.)
 
-*This `av` rule is exactly the LH engine's `Approval_Multi_Winner` (bloc Approval) — see [the approval original](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml).*
+*This `av` rule is exactly the LH engine's `Approval_Multi_Winner` (bloc Approval) — see [the approval original](../../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml).*
 
 ## Rule 2 — Approval Chamberlin–Courant (CC): egalitarian
 
@@ -50,7 +50,7 @@ Reading down the table you trade **total satisfaction** (AV-score falls 18 → 1
 
 ## The shadow-STAR bridge
 
-Reading the same approval ballots as STAR ballots (approve = 5, else 0) and running STAR's committee rules (see [the shadow-STAR page](../../04_Approval/multiwinner/lackner_skowron_shadow_star.md)) maps the STAR family onto the *same* axis:
+Reading the same approval ballots as STAR ballots (approve = 5, else 0) and running STAR's committee rules (see [the shadow-STAR page](../../../04_Approval/multiwinner/lackner_skowron_shadow_star.md)) maps the STAR family onto the *same* axis:
 
 | STAR rule | lands like | committee |
 |-----------|-----------|-----------|
@@ -80,4 +80,4 @@ AV, PAV, and CC are all one parameterised family — the **Thiele methods** — 
 - Lackner, M. & Skowron, P. (2023), *Multi-Winner Voting with Approval Preferences*, SpringerBriefs, [doi:10.1007/978-3-031-09016-5](https://doi.org/10.1007/978-3-031-09016-5) (open access) — §2.1–2.2, Examples 2.1–2.3, Rules 1–2.
 - Thiele, T. N. (1895); Chamberlin, J. R. & Courant, P. N. (1983) — the CC rule.
 - `abcvoting` (Lackner et al.) — the peer-reviewed reference implementation used here.
-- Companion pages: [101 intro](abc_rules_intro.md) · [shadow STAR](../../04_Approval/multiwinner/lackner_skowron_shadow_star.md) · [Approval — multi-winner](approval_multiwinner.md).
+- Companion pages: [101 intro](abc_rules_intro.md) · [shadow STAR](../../../04_Approval/multiwinner/lackner_skowron_shadow_star.md) · [Approval — multi-winner](approval_multiwinner.md).

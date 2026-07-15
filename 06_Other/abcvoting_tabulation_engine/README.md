@@ -4,7 +4,7 @@ Runs **approval-based committee (ABC)** rules from Martin Lackner's [`abcvoting`
 
 It does two jobs:
 
-1. **Extends the LH engine.** The [LH engine](../../STARVote_LH_tabulation_engine) tabulates **bloc** Approval only (`voting_method: Approval_Multi_Winner` — the `num_winners` most-approved win). This wrapper adds the **proportional** rules on the *same ballots*: **SPAV** (`seqpav`), **PAV** (`pav`), and **seq-Phragmén** (`seqphragmen`) — the rules described in [Approval — Multi-Winner](../../00_start_here/Approval_Voting/approval_multiwinner.md).
+1. **Extends the LH engine.** The [LH engine](../../STARVote_LH_tabulation_engine) tabulates **bloc** Approval only (`voting_method: Approval_Multi_Winner` — the `num_winners` most-approved win). This wrapper adds the **proportional** rules on the *same ballots*: **SPAV** (`seqpav`), **PAV** (`pav`), and **seq-Phragmén** (`seqphragmen`) — the rules described in [Approval — Multi-Winner](../../00_start_here/Approval_Voting/Multiwinner_Approval/approval_multiwinner.md).
 2. **Independent cross-check.** abcvoting's plain `av` rule must elect the same committee as the LH engine's bloc-Approval count — an outside witness that the LH approval tally is correct, in the same spirit as the [`pref_voting` cross-check](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine) for ranked methods.
 
 ```bash

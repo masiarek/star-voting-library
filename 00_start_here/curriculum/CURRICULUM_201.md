@@ -39,7 +39,7 @@
 - **Key terms:** Bloc STAR, seats, at-large.
 - **See it:** [Bloc STAR, 2 seats](../../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../../02_STAR_Bloc/)).
 - **The point:** a cohesive majority can *sweep* all seats — which is exactly what motivates 301's proportional methods.
-- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](../Approval_Voting/abc_rules_intro.md) — a counting-only walk through "most approved" vs "cover everyone" vs proportional, on Lackner & Skowron's steering-committee example.
+- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](../Approval_Voting/Multiwinner_Approval/abc_rules_intro.md) — a counting-only walk through "most approved" vs "cover everyone" vs proportional, on Lackner & Skowron's steering-committee example.
 
 ## 201.6 — What are we optimizing for? (good winner, good method)
 
