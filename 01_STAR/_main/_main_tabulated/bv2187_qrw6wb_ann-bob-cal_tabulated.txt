@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2187_qrw6wb_ann-bob-cal.yaml
-SOURCE MODIFIED: 2026-07-14 17:59:34
+SOURCE MODIFIED: 2026-07-15 18:01:03
 TABULATED FILE:  bv2187_qrw6wb_ann-bob-cal_tabulated.txt
-TABULATED AT:    2026-07-14 18:00:33
+TABULATED AT:    2026-07-15 18:01:21
 ======================================================================
 
 election_title: Ann, Bob, Cal - the canonical leading example (single-winner STAR)
@@ -16,7 +16,7 @@ scenario_description: |-
   YAML authoring template, and "Why YAML test cases". One file, three voters,
   three candidates: the smallest STAR election where both rounds do visible,
   different work. If a page needs "a STAR election" and nothing scenario-specific,
-  it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+  it should show THIS one (see 00_start_here/tips/TIPS_canonical_elections.md).
 
   Live results: https://bettervoting.com/qrw6wb/results (BetterVoting election
   qrw6wb, Test ID BV2187; write-ins disabled - the candidate list is locked).
@@ -84,7 +84,7 @@ TABULATION RESULTS
   YAML authoring template, and "Why YAML test cases". One file, three voters,
   three candidates: the smallest STAR election where both rounds do visible,
   different work. If a page needs "a STAR election" and nothing scenario-specific,
-  it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+  it should show THIS one (see 00_start_here/tips/TIPS_canonical_elections.md).
 
   Live results: https://bettervoting.com/qrw6wb/results (BetterVoting election
   qrw6wb, Test ID BV2187; write-ins disabled - the candidate list is locked).

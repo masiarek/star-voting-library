@@ -27,7 +27,7 @@ The same ballot-then-tabulation split works on STAR: a **score ballot** counted 
 
 ---
 
-**This page is the short version.** The full **family tree**, the **when-to-use table**, and the reasoning behind the house style are canonical in **[TIPS — Terminology (RCV vs IRV vs RCV-IRV, and friends)](../TIPS_terminology.md)**, with per-term definitions in the [GLOSSARY](../GLOSSARY.md) (RCV / IRV / RCV-IRV / Ranked Robin / STV). One extra distinction the family tree draws: Borda and Bucklin are *ranked* methods but **not** Condorcet — they can miss the head-to-head winner, so they don't behave like Ranked Robin either.
+**This page is the short version.** The full **family tree**, the **when-to-use table**, and the reasoning behind the house style are canonical in **[TIPS — Terminology (RCV vs IRV vs RCV-IRV, and friends)](../tips/TIPS_terminology.md)**, with per-term definitions in the [GLOSSARY](../GLOSSARY.md) (RCV / IRV / RCV-IRV / Ranked Robin / STV). One extra distinction the family tree draws: Borda and Bucklin are *ranked* methods but **not** Condorcet — they can miss the head-to-head winner, so they don't behave like Ranked Robin either.
 
 - **Level:** Voting 201 — right after the 101 mechanics, before the 301 theory. Every later topic (spoiler, favorite betrayal, discounted votes) is cleaner once the audience won't conflate "RCV" with "IRV."
 - Cross-reference: [LINKS.md](../LINKS.md) → **Full Deck 2025** ("About Ranked Choice"), **Beyond RCV zine**.

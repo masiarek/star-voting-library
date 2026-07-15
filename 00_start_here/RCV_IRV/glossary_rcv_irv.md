@@ -2,7 +2,7 @@
 
 Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cross-method vocabulary (monotonicity, summability, the Equal Vote criterion…) lives in the [main glossary](../GLOSSARY.md).
 
-- **RCV (Ranked-Choice Voting)** — a ranked (**ordinal**) *ballot* type (rank 1st, 2nd, 3rd…): conveys order, not degree of support — the contrast with a *scored (cardinal)* ballot. A **family**, not one method; in US usage it's loosely used to mean IRV. → [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md); scored vs ranked [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../scores_and_ranks/scores_vs_ranks.md)
+- **RCV (Ranked-Choice Voting)** — a ranked (**ordinal**) *ballot* type (rank 1st, 2nd, 3rd…): conveys order, not degree of support — the contrast with a *scored (cardinal)* ballot. A **family**, not one method; in US usage it's loosely used to mean IRV. → [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md); scored vs ranked [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../scores_and_ranks/scores_vs_ranks.md)
 - **IRV (Instant-Runoff Voting)** — *one tabulation* of a ranked ballot: eliminate the lowest first-choice, transfer, repeat until a majority. The single-winner method usually meant by "RCV."
 - **RCV-IRV** — this repo's disambiguating label for "the RCV that is IRV" (vs. the ballot family or the other ranked tabulations).
 - **ballot vs tabulation** — the ballot is *what the voter marks*; the tabulation is *how it's counted*. "RCV" names a ballot; "IRV" names a tabulation.

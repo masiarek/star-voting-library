@@ -11,7 +11,7 @@ STAR has a **canonical sincere ballot**: min-max your feelings onto 0–5. Appro
 1. the **electorate model** (how voters' preferences are generated), and
 2. the **approval-cutoff rule** (how a voter turns feelings into approvals).
 
-Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../00_start_here/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
+Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../00_start_here/curriculum/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
 
 ## The measured rates — the approval cutoff is the knob
 

@@ -94,4 +94,4 @@ That leaves just the title banner, the ballots, and the tabulation. The full con
 
 > Tip: keep `scenario_description` to 1–3 short paragraphs (the audience-facing "what"), and put longer staging notes in `video_script` — it never prints, so it can be as detailed as you like without ever cluttering a demo.
 
-See also: [TIPS_choosing_voter_counts.md](TIPS_choosing_voter_counts.md) · [CURRICULUM.md](CURRICULUM.md).
+See also: [TIPS_choosing_voter_counts.md](../tips/TIPS_choosing_voter_counts.md) · [CURRICULUM.md](../CURRICULUM.md).

@@ -24,7 +24,7 @@ Used by real organizations and political parties since 2019; **not** yet adopted
 
 ## The skeptic's real advantage here
 
-You don't have to take any of this on faith. **This repo exists so you can check** — every claim above is a small [YAML election you can re-tabulate](../why_yaml_test_cases.md) with an independent engine, cross-checked against a real platform. So don't believe the advocates (including us); verify:
+You don't have to take any of this on faith. **This repo exists so you can check** — every claim above is a small [YAML election you can re-tabulate](../about_this_repo/why_yaml_test_cases.md) with an independent engine, cross-checked against a real platform. So don't believe the advocates (including us); verify:
 
 - [Criteria at a glance](../topics/criteria_at_a_glance.md) — where STAR *does and doesn't* win, each failure a runnable case
 - [STAR's honest limits](STAR_honest_limits.md) — the weaknesses, stated plainly

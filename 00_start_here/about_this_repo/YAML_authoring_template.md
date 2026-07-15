@@ -99,13 +99,13 @@ The **on-screen report** is the report the engine **prints on screen** as it tab
 Each flag, explained with before/after examples:
 
 - **`show_description`** — on-screen report the `scenario_description` prose (off by default; always in `_tabulated`).
-- **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](STAR_reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
-- **`show_score_counts`** → the per-candidate **[score-distribution table](STAR_reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
-- **`show_irv`** → adds the **RCV-IRV** comparison line to the `[Divergence from STAR]` block. Note the block itself is **built-in and auto-prints whenever STAR's winner differs** from Choose-One (Plurality) or Approval — no flag needed; `show_irv` only adds the IRV line. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../method_comparisons/divergence_review/INDEX.md).
-- **`show_runoff_percent`** → the compact [self-reconciling runoff line](STAR_Voting/runoff_percentages.md).
-- **`brief`** → strip the repetitive `[STAR Voting: …]` header prefix — **[with/without](STAR_reporting/reporting_LH/brief.md)**.
+- **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](../STAR_reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
+- **`show_score_counts`** → the per-candidate **[score-distribution table](../STAR_reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
+- **`show_irv`** → adds the **RCV-IRV** comparison line to the `[Divergence from STAR]` block. Note the block itself is **built-in and auto-prints whenever STAR's winner differs** from Choose-One (Plurality) or Approval — no flag needed; `show_irv` only adds the IRV line. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../../method_comparisons/divergence_review/INDEX.md).
+- **`show_runoff_percent`** → the compact [self-reconciling runoff line](../STAR_Voting/runoff_percentages.md).
+- **`brief`** → strip the repetitive `[STAR Voting: …]` header prefix — **[with/without](../STAR_reporting/reporting_LH/brief.md)**.
 
-Full rundown of the whole block, option by option: **[LH reporting options](STAR_reporting/reporting_LH/options.md)**.
+Full rundown of the whole block, option by option: **[LH reporting options](../STAR_reporting/reporting_LH/options.md)**.
 
 ---
 
@@ -126,20 +126,20 @@ Full rundown of the whole block, option by option: **[LH reporting options](STAR
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |
 | `blocs` | optional | Named candidate groups for the vote-splitting analysis. |
 
-> **Richer, converter-produced files.** Elections imported from BetterVoting (via the [JSON→YAML converter](../YAML_library/1_positive/01_convert_json_yaml.py)) carry a fuller shape than a hand-written case: candidates as objects with **explicit IDs** (not just a name row), more `election_*` context, and an **`expected_results:`** block that pins per-round detail. You don't hand-write these — the converter emits them — but the flat, hand-authored fields above are all you need to write a case yourself.
+> **Richer, converter-produced files.** Elections imported from BetterVoting (via the [JSON→YAML converter](../../YAML_library/1_positive/01_convert_json_yaml.py)) carry a fuller shape than a hand-written case: candidates as objects with **explicit IDs** (not just a name row), more `election_*` context, and an **`expected_results:`** block that pins per-round detail. You don't hand-write these — the converter emits them — but the flat, hand-authored fields above are all you need to write a case yourself.
 
 ## `voting_method` values
 
 | Value | Ballot | Counts as |
 |---|---|---|
-| `STAR` | scores 0–5 | [Score Then Automatic Runoff](STAR_Voting/STAR_start_here.md) (single-winner default) |
-| `Approval` | `0`/`1` only | [Most approvals wins](Approval_Voting/approval_voting.md) |
-| `RankedRobin` (aka `RCV_RR`, `Copeland`, `Consensus`) | scores 0–5 (read as an order) | [Head-to-head round robin](RCV_Ranked_Robin/ranked_robin.md); best win–loss record wins |
-| `RCV_IRV` | ranked, `A>C>B` | [Instant runoff](RCV_IRV/RCV-IRV-Hare.md) (elimination rounds) |
-| `bloc` | scores 0–5 | [Bloc STAR](../02_STAR_Bloc/README.md) (multi-winner, majoritarian) |
-| `sss` | scores 0–5 | [Sequentially Spent Score](proportional_representation/STAR_PR/README.md) (proportional) |
-| `rrv` | scores 0–5 | [Reweighted Range Voting](proportional_representation/STAR_PR/README.md) (proportional) |
-| `allocated` | scores 0–5 | [Allocated Score](proportional_representation/STAR_PR/README.md) (proportional) |
+| `STAR` | scores 0–5 | [Score Then Automatic Runoff](../STAR_Voting/STAR_start_here.md) (single-winner default) |
+| `Approval` | `0`/`1` only | [Most approvals wins](../Approval_Voting/approval_voting.md) |
+| `RankedRobin` (aka `RCV_RR`, `Copeland`, `Consensus`) | scores 0–5 (read as an order) | [Head-to-head round robin](../RCV_Ranked_Robin/ranked_robin.md); best win–loss record wins |
+| `RCV_IRV` | ranked, `A>C>B` | [Instant runoff](../RCV_IRV/RCV-IRV-Hare.md) (elimination rounds) |
+| `bloc` | scores 0–5 | [Bloc STAR](../../02_STAR_Bloc/README.md) (multi-winner, majoritarian) |
+| `sss` | scores 0–5 | [Sequentially Spent Score](../proportional_representation/STAR_PR/README.md) (proportional) |
+| `rrv` | scores 0–5 | [Reweighted Range Voting](../proportional_representation/STAR_PR/README.md) (proportional) |
+| `allocated` | scores 0–5 | [Allocated Score](../proportional_representation/STAR_PR/README.md) (proportional) |
 
 A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV automatically. (Rank notes inside `# comments` are ignored.)
 
@@ -162,7 +162,7 @@ A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV automaticall
 
 ## House style (so your case fits the library)
 
-- **Keep it small.** The fewest ballots that make the point — a handful of individual voters beats 100 weighted ones. Scale up only if percentages or proportional seats genuinely need it. See [TIPS_choosing_voter_counts.md](TIPS_choosing_voter_counts.md).
+- **Keep it small.** The fewest ballots that make the point — a handful of individual voters beats 100 weighted ones. Scale up only if percentages or proportional seats genuinely need it. See [TIPS_choosing_voter_counts.md](../tips/TIPS_choosing_voter_counts.md).
 - **Candidate names:** common, easy to say, **distinct initials in A, B, C… order** (Ann, Bob, Cal…), phonetically distinct, themed if you like. Use a fresh cast per scenario; keep the same cast across a matched pair of files.
 - **File name:** `NN<letter>_c<candidates>_b<ballots>_short-description.yaml` — e.g. `03c_c6_b8_style-gallery.yaml` (6 candidates, 8 ballots).
 - **Booleans** in `options:` are written `true` / `false` (long form).
@@ -179,4 +179,4 @@ The engine is the validator — it fails with a plain-language message, never a 
 3. Re-run — the `_tabulated.txt` sibling regenerates.
 4. From `STARVote_LH_tabulation_engine/`, run `pytest tests/test_single_winner_positive.py` — your file is discovered automatically (single-winner STAR cases with `expected_winners`).
 
-Live examples to crib from: [01_STAR — single-winner STAR Voting](../01_STAR/) — start with `_main/bv2184_fyy886_lunch_vote.yaml` (the clean beginner example) and `_main/03c_c6_b8_style-gallery.yaml` (every optional field in use).
+Live examples to crib from: [01_STAR — single-winner STAR Voting](../../01_STAR/) — start with `_main/bv2184_fyy886_lunch_vote.yaml` (the clean beginner example) and `_main/03c_c6_b8_style-gallery.yaml` (every optional field in use).

@@ -42,7 +42,7 @@ IRV: C out → B 7, A 6   IRV: A out → B 7, C 6   first-choices: A 9, C 9, B 8
 
 ## The nuance — it's IRV's count, not ranked ballots
 
-Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../STAR_Voting/STAR_summability.md).)
+Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../STAR_Voting/STAR_summability.md).)
 
 ### Same ballots, summed — Ranked Robin on the example above
 

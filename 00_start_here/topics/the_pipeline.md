@@ -2,7 +2,7 @@
 
 Everything in this library orbits a single, human-readable **YAML election file** as the source of truth. The pieces fit together as a pipeline:
 
-> **The founding idea:** [Why YAML? One file a person reads and a computer runs](../why_yaml_test_cases.md) — how each case is human-readable and machine-runnable at once, so it can be taught, run, and audited from the same source.
+> **The founding idea:** [Why YAML? One file a person reads and a computer runs](../about_this_repo/why_yaml_test_cases.md) — how each case is human-readable and machine-runnable at once, so it can be taught, run, and audited from the same source.
 
 ```
  author ──▶ validate ──▶ tabulate ──▶ verify ──▶ publish

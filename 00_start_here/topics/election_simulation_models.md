@@ -2,7 +2,7 @@
 
 *You can't read voters' minds, and you can't run millions of real elections under a dozen methods. So to compare methods (the [VSE / Bayesian-Regret](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret) studies), you **simulate**: generate synthetic electorates, cast ballots, tabulate, and score the outcome — thousands of times. This page is the neutral technical menu of the models used to generate those electorates, and a standing caution: **every conclusion is conditional on the model.***
 
-→ **Level: Voting 301** — Curriculum [301.9](../CURRICULUM_301.md). **Read first:** [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — *why* you sample preferences (the models below) and derive ballots from them, rather than drawing random ballots directly. Companion: [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
+→ **Level: Voting 301** — Curriculum [301.9](../curriculum/CURRICULUM_301.md). **Read first:** [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — *why* you sample preferences (the models below) and derive ballots from them, rather than drawing random ballots directly. Companion: [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
 
 ## The prerequisites (what the math is built from)
 

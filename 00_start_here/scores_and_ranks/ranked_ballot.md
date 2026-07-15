@@ -2,7 +2,7 @@
 
 *One ballot style, many counts. A ranked ballot asks one question — "put the candidates in order" — and that single design choice fixes what any method downstream can ever know about you: your **order**, never your **strength**. This page is the anatomy of the ballot itself; its twin is [the score ballot](score_ballot.md), and the side-by-side comparison is [alternate ballot styles](../topics/ballot_styles.md).*
 
-→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [strict vs. weak ranks](strict_vs_weak_ranks.md) · [the ranked-ballot method zoo](../topics/ranked_ballot_methods_zoo.md) (fifteen ways to count this one ballot) · terminology canon: [TIPS_terminology](../TIPS_terminology.md)
+→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [strict vs. weak ranks](strict_vs_weak_ranks.md) · [the ranked-ballot method zoo](../topics/ranked_ballot_methods_zoo.md) (fifteen ways to count this one ballot) · terminology canon: [TIPS_terminology](../tips/TIPS_terminology.md)
 
 ---
 

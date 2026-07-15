@@ -12,7 +12,7 @@ THE repo's leading example - the exact election shown in the root README, the
 YAML authoring template, and "Why YAML test cases". One file, three voters,
 three candidates: the smallest STAR election where both rounds do visible,
 different work. If a page needs "a STAR election" and nothing scenario-specific,
-it should show THIS one (see 00_start_here/TIPS_canonical_elections.md).
+it should show THIS one (see 00_start_here/tips/TIPS_canonical_elections.md).
 
 Live results: https://bettervoting.com/qrw6wb/results (BetterVoting election
 qrw6wb, Test ID BV2187; write-ins disabled - the candidate list is locked).

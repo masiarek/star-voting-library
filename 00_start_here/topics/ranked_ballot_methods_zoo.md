@@ -2,7 +2,7 @@
 
 *Robert LeGrand's [ranked-ballot voting calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) offers fifteen-plus methods — Baldwin, Black, Borda, Bucklin, Carey, Coombs, Copeland, Dodgson, Hare, Nanson, Raynaud, Schulze, Simpson, Small, Tideman — all fed **the same ranked ballots**. That single screen is the clearest possible demonstration of this repo's core terminology point: **RCV names a ballot (ranked); it does not name a tabulation.** IRV is just one way to count a ranked ballot; here are a dozen more, and they routinely pick different winners on identical votes.*
 
-→ **Level: Voting 301** — Curriculum [301.10](../CURRICULUM.md). Companions: [Ranked Robin vs. the Condorcet winner](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · [Cycle resolution — why Minimax, Ranked Pairs, Schulze exist](../RCV_Ranked_Robin/cycle_resolution.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · terminology canon: [TIPS_terminology](../TIPS_terminology.md).
+→ **Level: Voting 301** — Curriculum [301.10](../CURRICULUM.md). Companions: [Ranked Robin vs. the Condorcet winner](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · [Cycle resolution — why Minimax, Ranked Pairs, Schulze exist](../RCV_Ranked_Robin/cycle_resolution.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · terminology canon: [TIPS_terminology](../tips/TIPS_terminology.md).
 
 Live tool: **[calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html)** · authoritative method write-ups: **[descriptions](https://cs.angelo.edu/~rlegrand/rbvote/desc.html)** (LeGrand). Paste ballots like `14:Alan>Beth>Carl` (14 identical ballots; `=` for equal ranks) and it runs all methods at once — a great sandbox for the examples below.
 
@@ -95,7 +95,7 @@ Minimax (Simpson), Ranked Pairs (Tideman), and Schulze are the three cycle-resol
 
 Three payoffs for our teaching:
 
-1. **It nails the terminology.** One ranked ballot, fifteen tabulations, fifteen possible winners. "RCV" cannot mean a *method* — it names the ballot. IRV/Hare is one child of that ballot; Ranked Robin (Copeland), Ranked Pairs (Tideman), and Schulze are siblings. (House canon: [TIPS_terminology](../TIPS_terminology.md), [GLOSSARY](../GLOSSARY.md).)
+1. **It nails the terminology.** One ranked ballot, fifteen tabulations, fifteen possible winners. "RCV" cannot mean a *method* — it names the ballot. IRV/Hare is one child of that ballot; Ranked Robin (Copeland), Ranked Pairs (Tideman), and Schulze are siblings. (House canon: [TIPS_terminology](../tips/TIPS_terminology.md), [GLOSSARY](../GLOSSARY.md).)
 2. **It maps the repo's own engines onto the wider field.** The vendored IRV engine = **Hare**. The Ranked Robin engine = **Copeland** (with the house margin→lot tiebreak). The cycle-resolution page's Minimax/Ranked Pairs/Schulze = **Simpson/Tideman/Schulze** here.
 3. **It shows why STAR isn't on this list.** Every method here counts a **ranked** ballot. STAR counts a **scored** (0–5) ballot — a different, more expressive input — so it can't appear on a ranked-only calculator at all. That contrast is the point of [scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md): the ballot comes first, the tabulation second.
 

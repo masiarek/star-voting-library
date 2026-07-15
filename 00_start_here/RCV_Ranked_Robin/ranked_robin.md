@@ -22,7 +22,7 @@ These terms are related but *not* interchangeable — they sit at different leve
 
 So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)).
 
-**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../TIPS_terminology.md#the-ranked-method-family-tree). **Still tangled by the outside terminology** (and why Wikipedia's *Round-robin voting* and *Copeland's method* articles overlap)? → [Round-robin / Copeland / Ranked Robin — a naming decoder](condorcet_naming_decoder.md).
+**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../tips/TIPS_terminology.md#the-ranked-method-family-tree). **Still tangled by the outside terminology** (and why Wikipedia's *Round-robin voting* and *Copeland's method* articles overlap)? → [Round-robin / Copeland / Ranked Robin — a naming decoder](condorcet_naming_decoder.md).
 
 A law-review framing of the same idea (useful when an audience wants an authoritative source):
 
@@ -168,7 +168,7 @@ Add `options: { show_matrix: true }` to pull that matrix onto the screen too —
 
 They're the **same idea**: elect whoever wins the most head-to-head matchups (the Condorcet/Copeland winner). They agree on the winner whenever a Condorcet winner exists — i.e. almost always — and differ *only* in the **cycle/tie-break rule** (Ranked Robin: sum of margins; Consensus Choice: "Most Wins, Smallest Loss"; textbook Copeland: by score). So treat them as one method with several brands, not byte-identical algorithms.
 
-> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../TIPS_terminology.md).)
+> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md).)
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:

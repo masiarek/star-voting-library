@@ -52,7 +52,7 @@ public audience, who only know "RCV." So:
   Then use the familiar word.
 
 Family tree, when-to-use table, and glossary are canonical — **do not restate the
-taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md`.
+taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`.
 
 **Other voting-term canon:**
 - **STAR** = Score Then Automatic Runoff (a *score* ballot + that tabulation; the
@@ -145,7 +145,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   100-voter one. Only scale up when a larger electorate is genuinely essential
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
-  preserves STAR/proportional winners. See `TIPS_choosing_voter_counts.md`.
+  preserves STAR/proportional winners. See `00_start_here/tips/TIPS_choosing_voter_counts.md`.
 - **Candidate names — a fresh, easy cast per scenario; the same cast within one.**
   Prefer a *new* set of names for each scenario (memorable beats uniform — "the
   Ada/Ben/Cara split," "the Tennessee cities") over one fixed roster. Four rules:
@@ -167,7 +167,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
-  see next bullet). See `ORGANIZATION.md`.
+  see next bullet). See `00_start_here/about_this_repo/ORGANIZATION.md`.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by

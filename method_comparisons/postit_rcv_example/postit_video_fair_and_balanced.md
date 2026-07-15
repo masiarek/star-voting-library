@@ -60,6 +60,6 @@ Same 20 rankings, both scorings strictly consistent with them — and STAR flips
 | Approval threshold picks the winner | [BV2177 Approval race](https://bettervoting.com/v8r66y/results) (threshold ≤ 3 → Pink) · [LH mirror](postit_rcv_example_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
 | The switch, real | [BV2178](https://bettervoting.com/8kg698/results) · [LH mirror](postit_rcv_example_tabulated/bv2178_8kg698_irv_tabulated.txt) |
 
-Related: [terminology tips](../../00_start_here/TIPS_terminology.md) · [RR tiebreaks, LH vs BV](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) · up: [method_comparisons](../)
+Related: [terminology tips](../../00_start_here/tips/TIPS_terminology.md) · [RR tiebreaks, LH vs BV](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) · up: [method_comparisons](../)
 
 # file: postit_video_fair_and_balanced.md

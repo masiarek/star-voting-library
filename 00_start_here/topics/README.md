@@ -16,15 +16,15 @@ Before the per-topic criteria: **what are we even optimizing for?**
 
 | Topic | What it compares | Hub |
 |-------|------------------|-----|
-| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [summability/](summability/) |
-| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [monotonicity/](monotonicity/) |
-| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [center_squeeze/](center_squeeze/) |
-| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [condorcet/](condorcet/) |
-| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [ties/](ties/) |
-| **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [majority_criterion/](majority_criterion/) |
-| **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [participation/](participation/) |
+| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [Summability](summability/) |
+| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [Monotonicity](monotonicity/) |
+| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [Center squeeze](center_squeeze/) |
+| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [Condorcet efficiency](condorcet/) |
+| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [Ties & tie-breaking](ties/) |
+| **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/) |
+| **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/) |
 
-*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [`split_voting/`](../../method_comparisons/split_voting) for the worked examples.)*
+*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [the split-voting set](../../method_comparisons/split_voting) for the worked examples.)*
 
 ## Concept pages in this folder
 

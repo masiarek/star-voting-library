@@ -70,6 +70,6 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 - **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../00_start_here/proportional_representation/)
 - **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/) · [a six-method governance election](../method_comparisons/pets_governance/)
 - **Single-winner foundation:** [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md) · [the benefits of STAR](../00_start_here/STAR_Voting/STAR_benefits.md)
-- **Conversation scripts:** [What's so good about STAR](../00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/conversation_scripts.md)
+- **Conversation scripts:** [What's so good about STAR](../00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
 
 # file: README.md

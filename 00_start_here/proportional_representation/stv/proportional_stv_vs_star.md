@@ -41,7 +41,7 @@ Also note the proportional twist that matches the video: **BigBiz (17 first-choi
 
 ## STV is not IRV
 
-**STV = the proportional, multi-winner cousin of IRV.** Same ranked ballot and transfer idea, but it fills several seats against a quota instead of one. Reserve "IRV" for the single-winner case. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../TIPS_terminology.md).)
+**STV = the proportional, multi-winner cousin of IRV.** Same ranked ballot and transfer idea, but it fills several seats against a quota instead of one. Reserve "IRV" for the single-winner case. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../tips/TIPS_terminology.md).)
 
 ## Engine notes
 

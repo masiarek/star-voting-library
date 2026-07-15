@@ -52,4 +52,4 @@ makes the reader pause — *is that 5 voters, or a 5-star score?* That's the men
 - `01_Single_winner/equal_support_runoff_demo.yaml` — **100 voters** (40/35/25). Easy percentages; the trade-off is the `375` scoring total you don't ask the audience to verify.
 - `split_voting/00_plurality_vs_majority.yaml` — **100 voters** (40/35/25). The textbook "proportions / majority story": the whole lesson is "40% wins the plurality but a 60% majority opposed," so the counts *are* the percentages. Large scoring totals (`Blake 275`) you read past — the point is the divergence, not the sums.
 
-See also: [CURRICULUM.md](CURRICULUM.md) · [GLOSSARY.md](GLOSSARY.md).
+See also: [CURRICULUM.md](../CURRICULUM.md) · [GLOSSARY.md](../GLOSSARY.md).

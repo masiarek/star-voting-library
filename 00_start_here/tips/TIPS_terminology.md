@@ -76,12 +76,12 @@ So if you say *"RCV has center squeeze,"* a sharp opponent can correctly reply *
 
 | Situation | Use | Why |
 |-----------|-----|-----|
-| US public audience, naming the thing they know | **[RCV-IRV](RCV_IRV/RCV-IRV-Hare.md)** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
-| Technical / comparison / criticism of the method | **[IRV](RCV_IRV/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
-| Naming the elimination *rule* itself | **[Hare](RCV_IRV/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
-| Talking about the *ballot* / the ranked family | **[ranked ballots](scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](RCV_IRV/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
-| A Condorcet count of a ranked ballot | **[Ranked Robin](RCV_Ranked_Robin/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
-| Proportional multi-winner ranked | **[STV](proportional_representation/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
+| US public audience, naming the thing they know | **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md)** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
+| Technical / comparison / criticism of the method | **[IRV](../RCV_IRV/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
+| Naming the elimination *rule* itself | **[Hare](../RCV_IRV/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
+| Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../RCV_IRV/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
+| A Condorcet count of a ranked ballot | **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
+| Proportional multi-winner ranked | **[STV](../proportional_representation/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
 
 ## House style for this repo
 
@@ -101,4 +101,4 @@ The same split applies to STAR, which is why this framing is so useful:
 
 Teaching tip: once your audience holds "ballot vs tabulation," the whole nomenclature snaps into place — and so does why "RCV" alone is ambiguous.
 
-See also: [GLOSSARY.md](GLOSSARY.md) (precise definitions) · [CURRICULUM.md](CURRICULUM.md) · the nomenclature episode ["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](RCV_IRV/RCV_or_IRV_whats_the_right_word.md).
+See also: [GLOSSARY.md](../GLOSSARY.md) (precise definitions) · [CURRICULUM.md](../CURRICULUM.md) · the nomenclature episode ["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](../RCV_IRV/RCV_or_IRV_whats_the_right_word.md).

@@ -43,7 +43,7 @@ Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked 
 ## The clear version, in this repo
 
 - [Ranked Robin](ranked_robin.md) — the method, taught (with the "Names & family" section this page expands)
-- [Terminology — the ranked-method family tree](../TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
+- [Terminology — the ranked-method family tree](../tips/TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
 - [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) — why a *cycle* leaves "the Condorcet winner" blank while Ranked Robin still elects one
 - [The math behind Condorcet](the_math_behind_condorcet.md) — tournaments, Smith/Schwartz, the impossibility theorems
 - [Glossary](../GLOSSARY.md)

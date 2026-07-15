@@ -50,7 +50,7 @@ public audience, who only know "RCV." So:
   Then use the familiar word.
 
 Family tree, when-to-use table, and glossary are canonical — **do not restate the
-taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md`.
+taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`.
 
 **Other voting-term canon:**
 - **STAR** = Score Then Automatic Runoff (a *score* ballot + that tabulation; the
@@ -143,7 +143,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   100-voter one. Only scale up when a larger electorate is genuinely essential
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
-  preserves STAR/proportional winners. See `TIPS_choosing_voter_counts.md`.
+  preserves STAR/proportional winners. See `00_start_here/tips/TIPS_choosing_voter_counts.md`.
 - **Candidate names — a fresh, easy cast per scenario; the same cast within one.**
   Prefer a *new* set of names for each scenario (memorable beats uniform — "the
   Ada/Ben/Cara split," "the Tennessee cities") over one fixed roster. Four rules:
@@ -157,7 +157,7 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   election with one thing changed, so new names would imply a different election. Use
   bare `A/B/C/D` only for purely abstract/academic illustrations where names are noise.
   **Canonical reusable elections** (Ann/Bob/Cal, the team lunch, the runoff reversal,
-  Tennessee, the pets) are registered in `00_start_here/TIPS_canonical_elections.md`
+  Tennessee, the pets) are registered in `00_start_here/tips/TIPS_canonical_elections.md`
   with their jobs and the two rules — *one election per page* and *canonical = frozen
   ballots* (same cast ⇒ same election; a new lesson gets a new cast, never a tweak).
   Reuse a canonical for generic examples instead of minting a new cast.
@@ -166,14 +166,14 @@ taxonomy from memory:** see `00_start_here/TIPS_terminology.md` and `GLOSSARY.md
   ballots accept only `0`/`1` (+ blank/marker = not approved).
 - **Levels (101/201/301)** live ONLY in the curriculum — now a hub
   (`00_start_here/CURRICULUM.md`) plus one page per level
-  (`CURRICULUM_101.md` / `_201.md` / `_301.md`); the hub links them and holds no
+  (`00_start_here/curriculum/CURRICULUM_101.md` / `_201.md` / `_301.md`); the hub links them and holds no
   level content itself, so there's a single source of truth per level (no sync
   drift). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
-  see next bullet). See `ORGANIZATION.md`.
+  see next bullet). See `00_start_here/about_this_repo/ORGANIZATION.md`.
 - **Folder overview pages are named exactly `README.md`** (not `README_<folder>.md`).
   GitHub only auto-renders a file named `README.md` in a folder's tree view, so each
   folder's landing/overview page **must** be `README.md` — that's what makes the folder

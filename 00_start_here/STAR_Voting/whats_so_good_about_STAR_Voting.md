@@ -43,7 +43,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam (after the demo):** Notice what just happened. Nobody was dishonest. The majority just got divided and conquered by their own ballot. That's not a freak event — it can happen in *any* race with more than two candidates.
 
-> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `00_start_here/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
+> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `00_start_here/topics/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
 
 ---
 
@@ -204,4 +204,4 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 
-See `00_start_here/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.
+See `00_start_here/about_this_repo/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.
