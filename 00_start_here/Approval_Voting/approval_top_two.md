@@ -96,6 +96,7 @@ The [fidelity ladder](../scores_and_ranks/fidelity_ladder.md) says the same thin
 - [Approval — Honest Limits](approval_honest_limits.md) — the gaps the runoff patches (§2 the threshold, §4 the missed majority favorite)
 - [`approval_101_c3_b5`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) — the featured election (BV-backed, frozen ballots)
 - [Alternate ballot styles](../topics/ballot_styles.md) — one voter, every ballot style, side by side
+- [Brams' grading paradox, counted](../../method_comparisons/brams_grading_paradox/) — the echo identity as an Approval advocate's theorem: "Approval prevents score-vs-Condorcet discrepancies" is true precisely because 0/1 ballots can't disagree with themselves
 - [Unified primary (Wikipedia)](https://en.wikipedia.org/wiki/Unified_primary) · [St. Louis Prop D (Ballotpedia)](https://ballotpedia.org/St._Louis,_Missouri,_Proposition_D,_Approval_Voting_Initiative_%28November_2020%29) · [2021 St. Louis mayoral election (Wikipedia)](https://en.wikipedia.org/wiki/2021_St._Louis_mayoral_election)
 
 # file: approval_top_two.md

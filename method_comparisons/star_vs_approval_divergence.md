@@ -77,5 +77,6 @@ It reuses the electorate models and STAR tabulator from [`fbc_simulation.py`](..
 ## Related
 
 - [Black Curtain](black_curtain/) — the worked STAR-vs-Approval(-vs-others) elections
+- [Brams' grading paradox, counted](brams_grading_paradox/) — the cutoff dependence in one 3-voter example: four reasonable 0/1 cuts of the same grades elect Adams, Baker, or a tie
 - [Runoff-reversal & FBC simulations](../06_Other/simulations/) — the sibling brute-force studies
 - [Choosing among the Equal Vote methods](../00_start_here/topics/choosing_among_evc_methods.md) · [Criteria at a glance](../00_start_here/topics/criteria_at_a_glance.md)

@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**272 election files** (237 single-winner, 35 multi-winner) across 15 method(s).
+**273 election files** (238 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 146 |
+| STAR | 147 |
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 33 |
 | Approval | 10 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 1 |
 | RR | 1 |
 
-## STAR  (146)
+## STAR  (147)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -128,6 +128,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml) |
 | [`Black_Curtain_03_c3_b5_polarized-on-cal`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
 | [`Black_Curtain_04_c4_b5_four-candidates`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_04_c4_b5_four-candidates.yaml) |
+| [`brams_grading_paradox_c3_b3`](../../method_comparisons/brams_grading_paradox/brams_grading_paradox_pages/brams_grading_paradox_c3_b3.md) | `method_comparisons/brams_grading_paradox/` | 1 | Brams' grading paradox — the grade leader loses the runoff → _Baker_ | [`.yaml`](../../method_comparisons/brams_grading_paradox/brams_grading_paradox_c3_b3.yaml) |
 | [`center_squeeze_star`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_star.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — STAR elects the consensus (Center) → _Center_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml) |
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml) |
 | [`bv2137_ywckmg_star`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_star.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml) |

@@ -1,0 +1,40 @@
+election_title: "Brams' grading paradox — the grade leader loses the runoff"
+
+scenario_description: |-
+  Steven Brams' three-voter grading example (Brams & Potthoff, "The paradox
+  of grading systems," Public Choice 165, 2015), offered as a critique of
+  grading systems: the candidate with the best grade total (Adams, 6-5-4) is
+  not the head-to-head champion (Baker beats both rivals — the Condorcet
+  winner). Run under STAR, the example vindicates the automatic runoff
+  instead of indicting it: finalists Adams & Baker, and Baker takes the seat
+  2-1. Pure score summation (Score voting) elects Adams. The Approval reading
+  depends entirely on where the 0/1 line is drawn: the engine's any-non-zero
+  cut elects Adams, Brams' own top-grades cut elects Baker, and two other
+  reasonable cuts produce ties. Grades {0..3} as in the original slide.
+  LH-only for now (no BetterVoting election).
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Adams,Baker,Chen
+  3,0,0   # voter 1 — Adams gets the top grade, zeros for the rest
+  2,3,3   # voter 2 — Baker and Chen top grades, Adams a friendly 2
+  1,2,1   # voter 3 — Baker best, mild on Adams and Chen
+
+expected_winners:
+  - Baker
+
+# file: brams_grading_paradox_c3_b3.yaml
