@@ -51,10 +51,10 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                   |  * Chocolate   | * Strawberry  |
------------------------------------------------------
-     * Chocolate > |      ---       |  1 - 0 - 1    |
-    * Strawberry > |   1 - 0 - 1    |     ---       |
+                       |  * Chocolate Chip  |   * Strawberry    |
+-----------------------------------------------------------------
+    * Chocolate Chip > |        ---         |    1 - 0 - 1      |
+        * Strawberry > |     1 - 0 - 1      |       ---         |
 
 [Divergence from STAR]
   STAR                   = Strawberry

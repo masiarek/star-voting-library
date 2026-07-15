@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2137_ywckmg_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
+SOURCE MODIFIED: 2026-07-15 19:05:27
 TABULATED FILE:  bv2137_ywckmg_star_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:37
+TABULATED AT:    2026-07-15 19:19:19
 ======================================================================
 
 election_title: "Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV"
@@ -46,11 +46,11 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Reagan   | * Anderson  |    Carter   |
+                 |     Reagan   | * Anderson  |  * Carter   |
 -------------------------------------------------------------
-      * Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
+        Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
     * Anderson > | 55 -  0 - 45 |    ---      |65 -  0 - 35 |
-        Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
+      * Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
 
 [Condorcet Winner]
   Condorcet Winner: Anderson — matches the STAR winner
@@ -65,7 +65,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

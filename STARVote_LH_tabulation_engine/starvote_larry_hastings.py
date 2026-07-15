@@ -901,20 +901,36 @@ def calculate_preference_matrix(candidates, ballots):
     return matrix
 
 
-def get_top_two_finalists(ballots, order_map=None):
-    """Top two by total score; score ties broken by lot-number priority
-    (same rule as LotNumberTiebreaker) so the matrix '*' markers match
-    the finalists starvote actually selects."""
+def get_top_two_finalists(ballots, order_map=None, maximum_score=5):
+    """The two finalists starvote actually advances to the Automatic Runoff.
+    Mirrors _star_round's selection chain (via starvote's own helpers, so the
+    two can't drift): top two by total score; a score tie is broken by
+    head-to-head preferences among the tied candidates, then by most
+    maximum-score votes, then by lot-number priority (LotNumberTiebreaker's
+    rule)."""
     if order_map is None:
         order_map = {}
-    scores = defaultdict(int)
-    for b in ballots:
-        for c, s in b.items():
-            scores[c] += s
-    ranked = sorted(
-        scores.items(), key=lambda x: (-x[1], order_map.get(x[0], float("inf")))
-    )
-    return [c for c, _ in ranked[:2]]
+    scores = starvote._scoring_round(ballots)
+    if len(scores) < 2:
+        return list(scores)
+    first, second, tie = starvote._compute_first_and_second_from_score(scores, None)
+    if tie:
+        pref_scores, _no_pref = starvote._preference_round(ballots, tie)
+        first, second, tie = starvote._compute_first_and_second_from_score(
+            pref_scores, first
+        )
+    if tie:
+        top_counts = starvote._maximum_score_count_round(ballots, maximum_score, tie)
+        first, second, tie = starvote._compute_first_and_second_from_score(
+            top_counts, first
+        )
+    if tie:
+        ranked = sorted(tie, key=lambda c: order_map.get(c, float("inf")))
+        if first:
+            second = ranked[0]
+        else:
+            first, second = ranked[:2]
+    return [first, second]
 
 
 def print_matrix(

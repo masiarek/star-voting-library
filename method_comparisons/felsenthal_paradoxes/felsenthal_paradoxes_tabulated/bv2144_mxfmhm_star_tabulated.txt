@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2144_mxfmhm_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
+SOURCE MODIFIED: 2026-07-15 19:05:27
 TABULATED FILE:  bv2144_mxfmhm_star_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:38
+TABULATED AT:    2026-07-15 19:19:20
 ======================================================================
 
 election_title: "Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner"
@@ -54,11 +54,11 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-               |   * Ana    |   * Bo    |    Cal    |
+               |     Ana    |   * Bo    |  * Cal    |
 -----------------------------------------------------
-       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
+         Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
         * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
-         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
+       * Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Bo — matches the STAR winner

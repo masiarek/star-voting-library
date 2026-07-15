@@ -52,10 +52,10 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Reagan   | * Anderson  |
+                 |  * Anderson  |  * Carter   |
 -----------------------------------------------
-      * Reagan > |     ---      |45 -  0 - 55 |
-    * Anderson > | 55 -  0 - 45 |    ---      |
+    * Anderson > |     ---      |65 -  0 - 35 |
+      * Carter > | 35 -  0 - 65 |    ---      |
 
 [Divergence from STAR]
   STAR                   = Anderson
