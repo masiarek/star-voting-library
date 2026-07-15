@@ -12,7 +12,7 @@ New to the terms? Start with [Ballot & Terminology Basics](../topics/ballot_and_
 
 Most of the runoff questions below are really the same question. Here's a 10-voter STAR election that shows all of them at once — **Berry** is broadly liked and wins the Scoring Round, but more voters *strictly prefer* **Almond**, who wins the Automatic Runoff. One voter scores both finalists 5 (Equal Support).
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (BV2182, election `tg4779`). Run it locally: [`bv2182_tg4779_faq_runoff_reversal.yaml`](../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml) · reader page: [bv2182_tg4779_faq_runoff_reversal](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (BV2182, election `tg4779`). Reader page: [Almond vs Berry — a runoff reversal](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md) · run it locally: [`bv2182_tg4779_faq_runoff_reversal.yaml`](../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml).
 
 ```
 Count × Almond,Berry,Cocoa
@@ -50,7 +50,7 @@ Then your ballot expresses **no preference between them** — that's **Equal Sup
 
 ## Q: "Wasted votes" — what's the difference between an exhausted ballot in RCV and an Equal Support vote in STAR?
 
-The *outcome* can look similar — neither ballot affects the final pairwise decision — but the mechanism differs, and that's the honest distinction. In **RCV-IRV**, an *exhausted* ballot (all its ranked candidates eliminated) is **set aside in the deciding round**; the voter didn't choose that — elimination did. In **STAR**, an *Equal Support* ballot reaches the runoff, but the voter **rated the two finalists equally**, so it contributes to neither — a choice the voter made, and one where the ballot's scores still counted in the Scoring Round. So the difference is **agency and stage** (involuntary drop late vs. voluntary no-preference, ballot still counted earlier), *not* that one voter matters and the other doesn't — a STAR voter can equally decline to help decide the runoff by scoring both finalists the same. Worked example: [Exhausted ballots (IRV)](../RCV_IRV/RCV_IRV_exhausted_ballots.md).
+Both often get filed under the same loaded label — **["wasted votes"](../topics/wasted_votes.md)** — but they're two different things. The *outcome* can look similar — neither ballot affects the final pairwise decision — but the mechanism differs, and that's the honest distinction. In **RCV-IRV**, an *exhausted* ballot (all its ranked candidates eliminated) is **set aside in the deciding round**; the voter didn't choose that — elimination did. In **STAR**, an *Equal Support* ballot reaches the runoff, but the voter **rated the two finalists equally**, so it contributes to neither — a choice the voter made, and one where the ballot's scores still counted in the Scoring Round. So the difference is **agency and stage** (involuntary drop late vs. voluntary no-preference, ballot still counted earlier), *not* that one voter matters and the other doesn't — a STAR voter can equally decline to help decide the runoff by scoring both finalists the same. Worked example: [Exhausted ballots (IRV)](../RCV_IRV/RCV_IRV_exhausted_ballots.md).
 
 ## Q: Does STAR give everyone exactly one equal vote?
 

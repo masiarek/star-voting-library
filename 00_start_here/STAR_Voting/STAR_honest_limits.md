@@ -1,6 +1,6 @@
 # STAR Voting — Honest Limits
 
-**One line:** STAR is strong but **not perfect**. It is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-Harm by design, can fail the strict Majority Criterion (favoring a broad-consensus winner over a polarizing majority-favorite), leaves a narrow residual of vote-splitting, and — like *every* method (Gibbard) — can be gamed at the margins. None of these are secret; conceding them honestly is why the rest of the case is trustworthy.
+**One line:** STAR is strong but **not perfect**. It is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-Harm by design, can fail the strict Majority Criterion (favoring a broad-consensus winner over a polarizing majority-favorite), leaves a narrow residual of vote-splitting, and — like *every* method ([Gibbard](../topics/gibbard_satterthwaite_theorem.md)) — can be gamed at the margins. None of these are secret; conceding them honestly is why the rest of the case is trustworthy.
 
 → Companion critical pages so every method gets the same treatment: [Approval's limits](../Approval_Voting/approval_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). Curriculum: [301.4 — honest limits](../CURRICULUM.md).
 
@@ -8,7 +8,7 @@
 
 ## 1. Not Condorcet-compliant
 
-STAR can fail to elect the **Condorcet winner** (the candidate who beats every other one head-to-head). Its runoff is between the *top two by score*, and the Condorcet winner can be a close third on score and never reach the runoff. **How much it matters:** simulations put STAR's Condorcet-efficiency very high, and when it diverges the STAR winner is someone with very broad support who lost one pairing narrowly. It's a **tradeoff**, not a clean loss — Condorcet methods buy compliance by sometimes electing a weakly-supported compromise nobody is enthusiastic about. See [three notions of "winner"](./STAR_three_winner_notions.md).
+STAR can fail to elect the **[Condorcet winner](../topics/condorcet/)** (the candidate who beats every other one head-to-head). Its runoff is between the *top two by score*, and the Condorcet winner can be a close third on score and never reach the runoff. **How much it matters:** simulations put STAR's Condorcet-efficiency very high, and when it diverges the STAR winner is someone with very broad support who lost one pairing narrowly. It's a **tradeoff**, not a clean loss — Condorcet methods buy compliance by sometimes electing a weakly-supported compromise nobody is enthusiastic about. See [three notions of "winner"](./STAR_three_winner_notions.md).
 
 ## 2. Not favorite-betrayal-proof (rare)
 
@@ -24,7 +24,7 @@ STAR ends *forced* vote-splitting, but a **narrow, self-inflicted** residue rema
 
 ## 5. Strategic scoring / normalization
 
-The 0–5 ballot invites **min-maxing** — giving 5s and 0s rather than honest intermediate scores — because an exaggerated ballot can carry more weight in the scoring round. STAR's automatic runoff dampens this (your honest order still decides the final round), but doesn't erase it. Gibbard's theorem guarantees **no** method with 3+ candidates is fully strategy-proof; STAR aims for *resistant, not proof*.
+The 0–5 ballot invites **[min-maxing](../topics/strategic_voting.md)** — giving 5s and 0s rather than honest intermediate scores — because an exaggerated ballot can carry more weight in the scoring round. STAR's automatic runoff dampens this (your honest order still decides the final round), but doesn't erase it. Gibbard's theorem guarantees **no** method with 3+ candidates is fully strategy-proof; STAR aims for *resistant, not proof*.
 
 ## 6. The ballot has a learning curve
 
@@ -42,4 +42,4 @@ STAR can fail to elect a candidate that an outright **majority scored highest**.
 
 ## Keep it in perspective
 
-Every method trades something away — that's Arrow and Gibbard, not a STAR-specific flaw. The honest comparison is *which* tradeoffs, and how often they bite. STAR's limits are mostly rare edge cases or deliberate, well-motivated choices; its opponents' (and peers') limits are laid out just as plainly on the companion pages above, so you can judge the whole board rather than one square.
+Every method trades something away — that's [Arrow](../topics/what_makes_a_good_winner.md) and Gibbard, not a STAR-specific flaw. The honest comparison is *which* tradeoffs, and how often they bite. STAR's limits are mostly rare edge cases or deliberate, well-motivated choices; its opponents' (and peers') limits are laid out just as plainly on the companion pages above, so you can judge the whole board rather than one square.

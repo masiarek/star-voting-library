@@ -5,13 +5,20 @@ This is the hardest-to-keep-straight idea in the whole STAR-vs-RCV debate, so th
 
 > **"Favorite Betrayal" and "Later-No-Harm" are two DIFFERENT promises. RCV-IRV keeps the second one and breaks the first. People — including RCV advocates — mix them up constantly.**
 
+**The 30-second intuition** — think of **two doors** (the full version is §9):
+
+- 🚪 **Favorite Betrayal = the front door.** *Is it safe to walk your favorite in **first**?* In RCV-IRV, sometimes **no** — your favorite can be knocked out early for having too few first-place votes. In STAR, almost always yes.
+- 🚪 **Later-No-Harm = the back door.** *Is it safe to let your **backups** in too?* In RCV-IRV, yes. In Score/Approval, no. In STAR, almost always yes.
+
+RCV advocates say *"you never have to betray your favorite"* — that's the **front-door** promise — but what they're really describing is the **back door** (Later-No-Harm). RCV-IRV locks the back and leaves the front open. **That swap is the entire lesson; everything below is the proof.**
+
 ---
 
 ## 1. The context — what was actually challenged
 
-**The slide.** In the deck `00_start_here/topics/Why_STAR_Voting.md`, **Slide 4** is titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."*
+**The slide.** In the deck [`Why_STAR_Voting.md`](../topics/Why_STAR_Voting.md), **Slide 4** is titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."*
 
-**The challenge (Adam → the slide).** "This isn't *completely* true, right? And RCV-IRV proponents claim that **only** in IRV do you never betray your favorite, and that STAR *can* make you betray your favorite. Are they right?"
+**The challenge to the slide.** *"Isn't this overstated? RCV-IRV proponents claim that **only** in IRV do you never betray your favorite, and that STAR *can* make you betray your favorite. Are they right?"*
 
 **The short answer.** The slide is true in the everyday, practical sense, and overstated only as a strict theorem. And the RCV-IRV claim is **false** — RCV-IRV does *not* protect you from favorite betrayal; it protects a *different* thing. Below is why, with numbers.
 
@@ -63,13 +70,13 @@ This is the cleanest real-world proof. Three candidates, roughly on a spectrum:
 | Palin | ~31% |
 | Begich | ~29% |
 
-**What RCV-IRV does:** Begich has the *fewest* first choices, so he's **eliminated first**. His ballots transfer (mostly to Palin, some to Peltola, some exhausted). In the final round **Peltola beats Palin ~51.5% to 48.5%.** Peltola wins.
+**What RCV-IRV does:** Begich has the *fewest* first choices, so he's **eliminated first**. His ballots transfer (mostly to Palin, some to Peltola, some [exhausted](../RCV_IRV/exhausted_ballots_301.md)). In the final round **Peltola beats Palin ~51.5% to 48.5%.** Peltola wins.
 
 **But look at the head-to-heads (who beats whom one-on-one):**
 - Begich beats Peltola (~53–47).
 - Begich beats Palin (~61–39).
 
-So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the Condorcet winner). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **center squeeze.**
+So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the [Condorcet winner](../topics/condorcet/)). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **[center squeeze](../topics/center_squeeze/).**
 
 **Now the favorite-betrayal part — the key move, read slowly:**
 
@@ -130,23 +137,37 @@ Read across the STAR row: it commits to neither criterion fully, accepting rare 
 
 ---
 
-## 7. The conversation (Larry ↔ Adam) — recording cut
+## 7. The debate — an RCV advocate vs a STAR advocate
 
-**Larry:** An RCV friend told me Ranked Choice is the only system where you never have to betray your favorite — and that STAR can force you to. True?
+The claim in the wild is rarely a calm question; it's an argument. So here's the same lesson as the confrontation you'll actually have — the **RCV advocate** making the strongest version of the case, the **STAR advocate** separating the two criteria and conceding what's true.
 
-**Adam:** It's the most common mix-up in this whole debate, so let me pull two ideas apart that sound like one. There's "is it safe to put my favorite *first*?" — that's called Favorite Betrayal. And there's "is it safe to also mark my *backups*?" — that's a different thing called Later-No-Harm. RCV-IRV keeps the second promise. It does **not** keep the first.
+**RCV Advocate:** In Ranked Choice you never have to betray your favorite. Rank the person you love first, add your backups below, done — and supporting those backups can't hurt your favorite. STAR can't promise that.
 
-**Larry:** Wait — RCV doesn't protect your favorite?
+**STAR Advocate:** You've just folded two different promises into one, and that's where this whole argument goes wrong. *"Is it safe to rank my favorite **first**?"* is one criterion — Favorite Betrayal. *"Is it safe to **also** mark my backups?"* is a completely different one — Later-No-Harm. RCV-IRV keeps the second promise. It does **not** keep the first.
 
-**Adam:** Not the way people think. Alaska, 2022. Begich beat both other candidates head-to-head — a majority preferred him to each. But he had the fewest *first*-place votes, so Ranked Choice eliminated him first, and a lot of voters who honestly ranked Palin first ended up with Peltola — their *last* choice. If those Palin voters had **betrayed** Palin and ranked Begich first, they'd have gotten Begich — better for them. Ranking their true favorite first actively hurt them. That's a favorite-betrayal failure, in a real election.
+**RCV Advocate:** That's a distinction without a difference. If marking my backups never hurts my favorite, my favorite is safe. What more is there?
 
-**Larry:** Okay, but doesn't STAR have this problem too? You're always honest with me about the limits.
+**STAR Advocate:** The two come apart in real elections. "My backups don't hurt my favorite" says nothing about whether *ranking my favorite first* was safe in the first place — because in RCV-IRV your favorite can be eliminated for having too few first-place votes before your backups ever get counted.
 
-**Adam:** It does, technically — STAR isn't 100% favorite-betrayal-proof either. I used to say "98% safe," but I checked it with a simulation and that number doesn't hold up the way I was using it: on raw frequency, STAR and RCV-IRV fail about equally often. Here's what *does* hold up — when betraying your favorite in STAR could change the result, it backfires about 98% of the time; only ~2% of the time does it help, versus several times that in Ranked Choice. So in STAR honesty really is your safest bet. And there's a theorem: no method can promise both of those things at once, so everyone gives up one. Pure Score keeps favorites perfectly safe but invites exaggeration; STAR adds a runoff to kill the exaggeration, and that runoff is what costs it FBC. RCV-IRV's failure is the opposite kind: it's structural, it's the center squeeze, and it shows up in exactly the competitive races we're trying to fix.
+**RCV Advocate:** When has that actually happened?
 
-**Larry:** So the honest scorecard is…?
+**STAR Advocate:** Alaska, 2022. Begich beat *both* other candidates head-to-head — a majority preferred him to Peltola, and a majority preferred him to Palin. But he had the fewest *first* choices, so IRV eliminated him in the very first round. Honest Palin voters — Palin first, Begich second, Peltola last — watched their second choice get cut, then their first lose the final, and ended up with Peltola: their *last* choice.
 
-**Adam:** "Neither of us is favorite-betrayal-proof. You fail it in real center-squeeze races; we fail it only in lab constructions. And what you're *calling* 'no favorite betrayal' is actually a different promise — Later-No-Harm — which we gave up on purpose, because honest support for a compromise *should* be able to help them win."
+**RCV Advocate:** …and you're going to tell me ranking Begich first would have fixed that.
+
+**STAR Advocate:** It would. Begich survives the first round and wins — he beats Peltola head-to-head. Those voters get their second choice instead of their last. Ranking their *true* favorite first is the thing that hurt them. That is a favorite-betrayal failure, in a real, high-profile race, in the system you just told me is the only one that prevents it.
+
+**RCV Advocate:** Fine — but you can't sit there and claim STAR is favorite-betrayal-*proof*. It isn't. Your own criteria chart marks STAR ❌ on Favorite Betrayal.
+
+**STAR Advocate:** Correct, and I won't pretend otherwise: STAR is **not** formally FBC-compliant. On raw frequency we fail it about as often as you do — some simulations put IRV slightly ahead. And I'm not going to quote you a "98% compliant" figure, because that number doesn't exist; it was borrowed from a different metric and it's wrong.
+
+**RCV Advocate:** Then what exactly is your advantage?
+
+**STAR Advocate:** Whether the betrayal ever *pays*. We measured it directly. Of the favorite-betrayals in STAR that would actually change the winner, about **98% backfire** — you'd hurt yourself trying. Only ~2% help, and those need extreme ballots plus near-perfect knowledge of how everyone else votes. In IRV, betrayal pays several times more often — and your failure has a name and a shape, the **center squeeze**, so an entire wing can see it coming and has a standing reason to betray. Mine are lab constructions; yours turns up in exactly the competitive three-candidate races reform is supposed to fix.
+
+**RCV Advocate:** So strip away the rhetoric and you're just choosing which criterion to fail.
+
+**STAR Advocate:** We *both* are — that's a theorem, not a dodge. No method can satisfy Favorite Betrayal and Later-No-Harm at once. You keep Later-No-Harm and give up favorite-betrayal resistance. We give up Later-No-Harm on purpose — because guaranteeing your later support can *never* help your favorite is the same math that lets a broadly-liked compromise get squeezed out. We think your honest support for a second choice *should* be allowed to help elect them. That's the real disagreement, stated honestly — not "only one of us fails."
 
 ---
 
@@ -166,7 +187,7 @@ Read across the STAR row: it commits to neither criterion fully, accepting rare 
 ---
 
 ## Cross-references
-- Slide 4 in `00_start_here/topics/Why_STAR_Voting.md` (the claim this defends) and its Part 2 talking point **#12**.
+- Slide 4 in [`Why_STAR_Voting.md`](../topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
 - `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the runoff / Equal-Support sibling of this concede-then-reframe argument.
 - `LINKS.md` → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
 - `06_Other/simulations/fbc_simulation.py` + `06_Other/simulations/README.md` — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
