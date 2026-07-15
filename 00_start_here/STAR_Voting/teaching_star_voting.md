@@ -22,7 +22,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 |---|---|
 | **Score 0–5** | "Rate each candidate like a Yelp review — 5 for a favorite, 0 for a hard no, anything in between." |
 | **[Scoring Round](STAR_Scoring_Round.md)** | "Add up everyone's stars. The two highest-scoring candidates become the **finalists**." |
-| **Finalists** | "The top two — the only ones left in the final step." |
+| **[Finalists](STAR_Scoring_Round.md)** | "The top two — the only ones left in the final step." |
 | **[Automatic Runoff](STAR_Automatic_Runoff.md)** | "A built-in final round — *no second trip to the polls*. Each ballot counts as one vote for whichever finalist it scored higher." |
 | **[Equal Support](are_equal_score_votes_discounted.md)** | "If you rated the two finalists the same, you're saying 'either is fine' — your ballot still counted in the scoring round." |
 | **Vote-splitting / [spoiler](../topics/spoiler_effect.md)** | "The problem STAR solves — where similar candidates split support and the wrong one wins." |
