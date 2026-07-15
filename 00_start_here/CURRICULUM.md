@@ -4,7 +4,7 @@ The **learning-path map**, in three levels. Difficulty lives *here*, not in the 
 
 Each level is its **own page** so it can stand alone; this page is just the hub. (Keeping the content in one place per level — not copied here — is what keeps them from drifting out of sync.)
 
-> This curriculum is **STAR-specific** (how to learn STAR, with honest comparisons). For a **method-neutral, field-wide** reading path — the whole landscape in three levels, after Marcus Ogren — see [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md).
+> This curriculum is **STAR-specific** (how to learn STAR, with honest comparisons). For a **method-neutral, field-wide** reading path — the whole landscape in three levels, after Marcus Ogren — see [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md).
 
 ---
 

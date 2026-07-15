@@ -12,7 +12,7 @@ The main event.
 
 - **New here — the "why" before the "how"** → [STAR — start here](STAR_Voting/STAR_start_here.md)
 - **How the count works** → [the Scoring Round](STAR_Voting/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/STAR_Automatic_Runoff.md) (two rounds, one ballot)
-- **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/STAR_benefits.md) · debate prep → [Why STAR Voting](Why_STAR_Voting.md)
+- **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/STAR_benefits.md) · debate prep → [Why STAR Voting](topics/Why_STAR_Voting.md)
 - **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/STAR_FAQ.md)
 - **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
 
@@ -20,10 +20,10 @@ The main event.
 
 The problem STAR is built to fix — start here if you're new to voting reform.
 
-- [Choose-One / Plurality (FPTP)](plurality.md) — the status quo, and why it breaks with more than two candidates
-- [The spoiler effect](spoiler_effect.md) — the core failure
+- [Choose-One / Plurality (FPTP)](topics/plurality.md) — the status quo, and why it breaks with more than two candidates
+- [The spoiler effect](topics/spoiler_effect.md) — the core failure
 - [Center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — how even ranked methods can eliminate the consensus candidate
-- [Two-party dominance](two_party_dominance.md) — is it good or bad, and what actually changes it
+- [Two-party dominance](topics/two_party_dominance.md) — is it good or bad, and what actually changes it
 - [Alaska 2022](RCV_IRV/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
 
 ## Why STAR over the alternatives?
@@ -31,20 +31,20 @@ The problem STAR is built to fix — start here if you're new to voting reform.
 The honest comparison — where STAR's case is actually made.
 
 - [Scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) — the ballot distinction everything turns on
-- [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
-- [RCV-IRV vs. STAR](rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
-- [Strategic voting](strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
+- [Choosing among the Equal Vote methods](topics/choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
+- [RCV-IRV vs. STAR](topics/rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
+- [Strategic voting](topics/strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
 - **Skeptical?** [STAR for skeptics — the honest 5-minute path](STAR_Voting/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
-- **More than one seat?** [Electing more than one, simply](electing_more_than_one.md) — majoritarian vs. proportional, in plain language
+- **More than one seat?** [Electing more than one, simply](topics/electing_more_than_one.md) — majoritarian vs. proportional, in plain language
 
 ## The whole field, even-handed
 
 The credibility layer — read the arguments *against*, too.
 
-- [How to Learn About Voting Methods](how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
+- [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
 - [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
 - **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/STAR_honest_limits.md) · [Approval](Approval_Voting/approval_honest_limits.md) · [Ranked Robin](RCV_Ranked_Robin/RCV_RR_honest_limits.md)
-- [Who champions each method](advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
+- [Who champions each method](topics/advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
 
 ## Run & verify elections (the library + engine)
 
@@ -57,7 +57,7 @@ The thing that makes every claim above checkable.
 ## Reference
 
 - [Glossary](GLOSSARY.md) — every term, precisely defined
-- [Ballot & terminology basics](ballot_and_terminology_basics.md) — the four "RCV" confusions people get wrong
+- [Ballot & terminology basics](topics/ballot_and_terminology_basics.md) — the four "RCV" confusions people get wrong
 
 **The methods, one page each:**
 

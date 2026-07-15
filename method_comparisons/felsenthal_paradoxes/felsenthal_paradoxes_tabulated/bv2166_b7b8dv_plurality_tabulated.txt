@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2166_b7b8dv_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2166_b7b8dv_plurality_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:40
+TABULATED AT:    2026-07-15 06:34:23
 ======================================================================
 
 election_title: "Coombs Ex.19 no-show — Choose-One: still Cass, unmoved"

@@ -28,17 +28,17 @@ Read that table both ways. The rows where STAR wins (summability, monotonicity, 
 
 **STAR's honest advantages.** It's **monotonic**, **precinct-summable**, doesn't **exhaust** ballots, lets voters express **strength** and **equal support**, and **resists center squeeze**. Its ballot is the familiar five-star format.
 
-**Each one's price.** IRV's elimination mechanism produces [center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md), [non-monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md), [exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md), and [no precinct summability](RCV_IRV/RCV_IRV_lack_of_summability.md). STAR's price is failing **Later-No-Harm**, the **majority criterion**, and the **Participation criterion** (a no-show paradox — adding sincere ballots favoring a candidate can, in rare constructed cases, hurt them; this is the runoff's cost, and is *not* the same as monotonicity, which STAR does satisfy), plus an incentive toward **strategic min/max scoring**.
+**Each one's price.** IRV's elimination mechanism produces [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md), [non-monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md), [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md), and [no precinct summability](../RCV_IRV/RCV_IRV_lack_of_summability.md). STAR's price is failing **Later-No-Harm**, the **majority criterion**, and the **Participation criterion** (a no-show paradox — adding sincere ballots favoring a candidate can, in rare constructed cases, hurt them; this is the runoff's cost, and is *not* the same as monotonicity, which STAR does satisfy), plus an incentive toward **strategic min/max scoring**.
 
 > **Note on Participation:** the no-show paradox is a real but *rare* failure, and IRV fails Participation too — so it isn't a STAR-vs-IRV differentiator, just an honest caveat that STAR isn't flawless. The runoff that causes it is the same step that guarantees STAR rejects a Condorcet loser. No method escapes Gibbard–Satterthwaite.
 
 ## The detailed facet pages
 
-- [Scores vs. ranks](scores_and_ranks/scores_vs_ranks.md) · [Strict vs. weak ranks](scores_and_ranks/strict_vs_weak_ranks.md)
+- [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)
 - [Tabulation, step by step](tabulation_star_vs_irv.md) — same ballots, both counts
-- [Center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) · [Monotonicity](RCV_IRV/RCV_IRV_non_monotonicity.md) · [Summability](STAR_Voting/STAR_summability.md)
-- [Exhausted ballots](RCV_IRV/RCV_IRV_exhausted_ballots.md) · [Residual vote-splitting](STAR_Voting/residual_vote_splitting.md)
-- [Is RCV "simple"?](RCV_IRV/RCV_IRV_is_simple.md) · [Is IRV "just plurality"?](RCV_IRV/RCV_IRV_and_plurality.md)
+- [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) · [Monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md) · [Summability](../STAR_Voting/STAR_summability.md)
+- [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) · [Residual vote-splitting](../STAR_Voting/residual_vote_splitting.md)
+- [Is RCV "simple"?](../RCV_IRV/RCV_IRV_is_simple.md) · [Is IRV "just plurality"?](../RCV_IRV/RCV_IRV_and_plurality.md)
 
 ## Further reading — note on sources
 
@@ -48,4 +48,4 @@ These comparison pages are written by **advocacy organizations**; read them know
 - [STAR Voting — RCV vs. STAR](https://www.starvoting.org/rcv_v_star) *(pro-STAR)*
 - [FairVote](https://fairvote.org/) *(pro-RCV-IRV — the case for ranked choice)*
 
-A worked example of this kind of critical reading — a FairVote article on the Condorcet criterion, quoted claim by claim and checked against tabulated elections: [FairVote's Condorcet article, claim-checked](topics/condorcet/fairvote_condorcet_claim_check.md).
+A worked example of this kind of critical reading — a FairVote article on the Condorcet criterion, quoted claim by claim and checked against tabulated elections: [FairVote's Condorcet article, claim-checked](condorcet/fairvote_condorcet_claim_check.md).

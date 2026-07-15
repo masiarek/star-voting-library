@@ -2,7 +2,7 @@
 
 *The status quo for most US single-winner elections, and the baseline every reform on this site improves on. **Mark exactly one candidate; whoever gets the most marks wins — even without a majority.** Simple to count, but it forces the problems the other methods are designed to fix.*
 
-→ The problems it creates: [the spoiler effect](spoiler_effect.md) · [vote splitting & the equally-weighted vote](STAR_Voting/equally_weighted_vote.md) · is IRV just plurality in sequence? [RCV-IRV and plurality](RCV_IRV/RCV_IRV_and_plurality.md)
+→ The problems it creates: [the spoiler effect](spoiler_effect.md) · [vote splitting & the equally-weighted vote](../STAR_Voting/equally_weighted_vote.md) · is IRV just plurality in sequence? [RCV-IRV and plurality](../RCV_IRV/RCV_IRV_and_plurality.md)
 
 ---
 
@@ -16,7 +16,7 @@ The single mark is the root of a whole family of problems:
 
 - **Vote splitting & spoilers.** Similar candidates divide their shared supporters, so a less-preferred candidate can win with a minority. A candidate who can't win still changes who does — the [spoiler effect](spoiler_effect.md). Plurality is the method *most* susceptible to it.
 - **Minority winners.** With three or more candidates, the winner routinely has **less than half** the vote — a *plurality/minority winner* a majority actively voted against.
-- **Lesser-evil voting & favorite betrayal.** Because backing your true favorite can "waste" your vote or help your worst choice, voters are pressured to abandon their favorite for a viable front-runner — the [favorite-betrayal](STAR_Voting/favorite_betrayal_voting_301.md) incentive.
+- **Lesser-evil voting & favorite betrayal.** Because backing your true favorite can "waste" your vote or help your worst choice, voters are pressured to abandon their favorite for a viable front-runner — the [favorite-betrayal](../STAR_Voting/favorite_betrayal_voting_301.md) incentive.
 - **No expression.** One mark captures neither *order* (who's your second choice?) nor *strength* (how much do you like them?) — see [ballot styles](ballot_styles.md).
 - **Two-party entrenchment.** These pressures push the field toward two viable candidates over time (**Duverger's law**).
 
@@ -26,10 +26,10 @@ Every method this library teaches is, in part, a fix for one of plurality's fail
 
 | Reform | What it changes about the single mark |
 |---|---|
-| [Approval](Approval_Voting/approval_voting.md) | Mark **as many** candidates as you like — similar candidates stop splitting. |
-| [RCV-IRV](RCV_IRV/RCV-IRV-Hare.md) | **Rank** candidates; eliminate-and-transfer instead of one round. (In fact **plurality is just IRV with a ranking limit of 1** — see [RCV-IRV and plurality](RCV_IRV/RCV_IRV_and_plurality.md).) |
-| [Ranked Robin](RCV_Ranked_Robin/ranked_robin.md) | Rank, then compare **every pair head-to-head** — elects the majority-preferred candidate. |
-| [Score / Range](Range_Voting/range_voting.md) · [STAR](STAR_Voting/STAR_start_here.md) | **Rate** each candidate 0–5 — captures order *and* strength; STAR adds a runoff. |
+| [Approval](../Approval_Voting/approval_voting.md) | Mark **as many** candidates as you like — similar candidates stop splitting. |
+| [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) | **Rank** candidates; eliminate-and-transfer instead of one round. (In fact **plurality is just IRV with a ranking limit of 1** — see [RCV-IRV and plurality](../RCV_IRV/RCV_IRV_and_plurality.md).) |
+| [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) | Rank, then compare **every pair head-to-head** — elects the majority-preferred candidate. |
+| [Score / Range](../Range_Voting/range_voting.md) · [STAR](../STAR_Voting/STAR_start_here.md) | **Rate** each candidate 0–5 — captures order *and* strength; STAR adds a runoff. |
 
 ## Where it's used
 

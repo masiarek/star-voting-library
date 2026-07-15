@@ -115,7 +115,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/abstain_
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
-- [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
+- [Ballot & terminology basics](../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [bv11_6xhfp8_full_equal_support](bv11_6xhfp8_full_equal_support.md) · [bv1570_6hv7jf_undecided_plurality](bv1570_6hv7jf_undecided_plurality.md)

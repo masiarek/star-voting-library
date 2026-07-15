@@ -1,31 +1,31 @@
 # Concepts — deep-dive pages for the important terms
 
-**New here? Start with [Ballot & Terminology Basics](ballot_and_terminology_basics.md)** — a short four-step reading path through the ideas people most often get wrong (terminology, scores vs. ranks, what counts as "ranked," and strict vs. weak ranks).
+**New here? Start with [Ballot & Terminology Basics](topics/ballot_and_terminology_basics.md)** — a short four-step reading path through the ideas people most often get wrong (terminology, scores vs. ranks, what counts as "ranked," and strict vs. weak ranks).
 
 Not every glossary term needs its own page — most are fine as a one-liner in [Glossary — voting methods & criteria](GLOSSARY.md). This folder holds the handful of concepts that are **load-bearing in debates** and worth a focused page with a worked example and **links to the test-case YAMLs** that demonstrate them.
 
-The pages are grouped to mirror the folders: **general / cross-method** ideas sit at the top level, IRV-specific problems live in [`RCV_IRV/`](RCV_IRV), and STAR's own properties live in [`STAR_Voting/`](STAR_Voting).
+The pages are grouped to mirror the folders: **general / cross-method** ideas live in [`topics/`](topics/), IRV-specific problems live in [`RCV_IRV/`](RCV_IRV), and STAR's own properties live in [`STAR_Voting/`](STAR_Voting). The top level of this folder keeps only the entry points: the guided start, the curriculum, the glossary, and the authoring canon (TIPS, templates).
 
-**Two ways to browse.** The authoritative pages are organized **by method** (below). Ideas that cut across methods also have a **by-topic** view in [the topics index](topics/) — thin hubs that link to each method's treatment of one idea (so you can browse by topic in the GitHub file tree, not just by method). First hub: [Summability](topics/summability/).
+**Two ways to browse.** The authoritative pages are organized **by method** (below). Ideas that cut across methods live in [the topics folder](topics/) — flat concept pages plus thin per-topic hubs that link to each method's treatment of one idea (so you can browse by topic in the GitHub file tree, not just by method).
 
 ### General & cross-method
 
 | Concept | One line | Page |
 |---------|----------|------|
-| **Ballot & terminology basics** | the 4 ideas people most often get wrong — start here | [ballot_and_terminology_basics.md](ballot_and_terminology_basics.md) |
+| **Ballot & terminology basics** | the 4 ideas people most often get wrong — start here | [ballot_and_terminology_basics.md](topics/ballot_and_terminology_basics.md) |
 | **Scores vs. ranks (don't confuse them!)** | order-only (ranks) vs. order+strength (scores) — relative vs. absolute preference | [scores_vs_ranks.md](scores_and_ranks/scores_vs_ranks.md) |
-| **Scoring methods aren't RCV** | scoring methods (Approval, STAR) rate candidates and sit *outside* the ranked-voting family | [scoring-methods-vs-ranked-voting.md](scoring-methods-vs-ranked-voting.md) |
+| **Scoring methods aren't RCV** | scoring methods (Approval, STAR) rate candidates and sit *outside* the ranked-voting family | [scoring-methods-vs-ranked-voting.md](topics/scoring-methods-vs-ranked-voting.md) |
 | **Approval — honest limits** | no preference strength/order, the approval-threshold dilemma, bullet-voting; balanced with its equal-vote simplicity | [approval_honest_limits.md](Approval_Voting/approval_honest_limits.md) |
 | **Strict vs. weak ranks** | many ranked methods allow equal ranks & compare pairwise — RCV-IRV does neither | [strict_vs_weak_ranks.md](scores_and_ranks/strict_vs_weak_ranks.md) |
-| **"Preference" (a slippery word)** | everyday opinion vs. technical "ranking"; why "Preferential Voting" is a misnomer | [preference.md](preference.md) |
+| **"Preference" (a slippery word)** | everyday opinion vs. technical "ranking"; why "Preferential Voting" is a misnomer | [preference.md](topics/preference.md) |
 | **Ranked Robin / RCV-RR (Consensus Voting; = Copeland)** | a Condorcet method: ranks + equal ranks, every pair compared head-to-head; tabulable via the pref_voting engine | [RCV_Ranked_Robin/ranked_robin.md](RCV_Ranked_Robin/ranked_robin.md) |
 | **Ranked Robin (RCV-RR) — honest limits** | Condorcet cycles need a resolution rule; no preference strength (bland-compromise winner); burial | [RCV_RR_honest_limits.md](RCV_Ranked_Robin/RCV_RR_honest_limits.md) |
 | **Proportional Representation** | multi-seat — coalitions get proportional seats; STV ≈ STAR-PR, Bloc differs (301) | [proportional_representation/](proportional_representation/) ([STV vs STAR-PR](proportional_representation/stv/proportional_stv_vs_star.md) · [STAR-PR methods](proportional_representation/STAR_PR/)) |
-| **Tabulation, step by step (201)** | the same ballots counted both ways — STAR's 2 steps vs IRV's elimination rounds | [tabulation_star_vs_irv.md](tabulation_star_vs_irv.md) |
-| **RCV-IRV vs. STAR (side-by-side)** | balanced comparison hub — real strengths on both sides — routing to the facet pages | [rcv_irv_vs_star.md](rcv_irv_vs_star.md) |
+| **Tabulation, step by step (201)** | the same ballots counted both ways — STAR's 2 steps vs IRV's elimination rounds | [tabulation_star_vs_irv.md](topics/tabulation_star_vs_irv.md) |
+| **RCV-IRV vs. STAR (side-by-side)** | balanced comparison hub — real strengths on both sides — routing to the facet pages | [rcv_irv_vs_star.md](topics/rcv_irv_vs_star.md) |
 | **Tabulation engines — BV, LH, RCV-IRV** | why an election has two reports (BetterVoting's visual display + the LH engine's text report), how they map, and the convert→validate→test pipeline; hub for the per-engine folders | [tabulation_engines/](tabulation_engines/bettervoting_and_the_engine.md) |
 | **STAR Reporting — reading & comparing results** | how a result is reported: scores, runoff, percentages, Equal Support/abstentions; LH vs BetterVoting and where they differ; the Score Distribution and Preference Matrix up close | [STAR_reporting/](STAR_reporting/) |
-| **Quorum — did enough show up?** | a turnout threshold separate from who wins; abstentions count toward it; an unmet quorum means no winner — won the count but not elected | [quorum.md](quorum.md) |
+| **Quorum — did enough show up?** | a turnout threshold separate from who wins; abstentions count toward it; an unmet quorum means no winner — won the count but not elected | [quorum.md](topics/quorum.md) |
 
 ### RCV-IRV — problems specific to instant-runoff
 

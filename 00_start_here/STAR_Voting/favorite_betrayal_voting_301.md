@@ -9,7 +9,7 @@ This is the hardest-to-keep-straight idea in the whole STAR-vs-RCV debate, so th
 
 ## 1. The context — what was actually challenged
 
-**The slide.** In the deck `00_start_here/Why_STAR_Voting.md`, **Slide 4** is titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."*
+**The slide.** In the deck `00_start_here/topics/Why_STAR_Voting.md`, **Slide 4** is titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."*
 
 **The challenge (Adam → the slide).** "This isn't *completely* true, right? And RCV-IRV proponents claim that **only** in IRV do you never betray your favorite, and that STAR *can* make you betray your favorite. Are they right?"
 
@@ -166,7 +166,7 @@ Read across the STAR row: it commits to neither criterion fully, accepting rare 
 ---
 
 ## Cross-references
-- Slide 4 in `00_start_here/Why_STAR_Voting.md` (the claim this defends) and its Part 2 talking point **#12**.
+- Slide 4 in `00_start_here/topics/Why_STAR_Voting.md` (the claim this defends) and its Part 2 talking point **#12**.
 - `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the runoff / Equal-Support sibling of this concede-then-reframe argument.
 - `LINKS.md` → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
 - `06_Other/simulations/fbc_simulation.py` + `06_Other/simulations/README.md` — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).

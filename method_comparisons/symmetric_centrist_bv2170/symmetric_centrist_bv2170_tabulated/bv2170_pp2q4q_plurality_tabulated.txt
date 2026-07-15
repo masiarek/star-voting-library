@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2170_pp2q4q_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2170_pp2q4q_plurality_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:49
+TABULATED AT:    2026-07-15 06:34:32
 ======================================================================
 
 election_title: "Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6"

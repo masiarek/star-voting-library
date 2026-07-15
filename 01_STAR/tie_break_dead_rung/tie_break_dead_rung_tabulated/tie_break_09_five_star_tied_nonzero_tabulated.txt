@@ -2,7 +2,7 @@
 SOURCE FILE:     tie_break_09_five_star_tied_nonzero.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  tie_break_09_five_star_tied_nonzero_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:24
+TABULATED AT:    2026-07-15 06:34:07
 ======================================================================
 
 election_title: Dead rung 05 — five-star rung alive but non-separating

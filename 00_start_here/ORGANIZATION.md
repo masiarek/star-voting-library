@@ -40,10 +40,14 @@ Group by **teaching role**, not by file type:
 Prominence follows the library's mission: the **equal-vote (EVC) methods get the numbered, front-rank folders**; other methods appear mainly as contrast material.
 
 ```
-00_start_here/        lessons, glossary, curriculum, tips, conventions (Markdown);
-                      also the concept pages by method (STAR_Voting/, RCV_IRV/, …)
-                      and the Larry↔Adam conversation scripts, indexed in
-                      conversation_scripts.md
+00_start_here/        entry points only at the top level: guided start, glossary,
+                      curriculum, TIPS/authoring canon, conventions (Markdown)
+  topics/             cross-method CONCEPT pages (spoiler effect, wasted votes,
+                      ballot styles, criteria…) + per-topic hubs (summability/,
+                      monotonicity/, center_squeeze/, …)
+  STAR_Voting/ RCV_IRV/ RCV_Ranked_Robin/ …   concept pages BY METHOD; the
+                      Larry↔Adam conversation scripts live beside their topics,
+                      indexed in conversation_scripts.md
 01_STAR/              single-winner STAR — the headline method
   _main/              loose files that belong to no themed set
   _main/_main_tabulated/          their generated _tabulated.txt mirrors

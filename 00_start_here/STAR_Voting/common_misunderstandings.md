@@ -13,7 +13,7 @@ No. Score the ones you have an opinion about; leave the rest blank (a blank coun
 Yes — and this is a real advantage over ranking. If you honestly like two candidates equally, score them both a 5 (or both a 2). You're **never forced to invent a preference** you don't feel. → [Equal Support](are_equal_score_votes_discounted.md)
 
 **"Isn't giving someone a 0 throwing my vote away?"**
-No. A 0 is a real, expressed score — "I do not support this candidate" — not a non-vote. And because you score everyone *independently*, supporting your favorite never helps your worst choice. You literally **cannot split your own vote**. → [no "wasted" votes](../wasted_votes.md)
+No. A 0 is a real, expressed score — "I do not support this candidate" — not a non-vote. And because you score everyone *independently*, supporting your favorite never helps your worst choice. You literally **cannot split your own vote**. → [no "wasted" votes](../topics/wasted_votes.md)
 
 ## About how it's counted
 
@@ -29,7 +29,7 @@ Only if no one is genuinely preferred over them. If a majority rates candidate A
 ## About strategy ("won't people game it?")
 
 **"Won't everyone just vote all 5s and 0s?"**
-The runoff removes the *reward* for that. In a pure score/average system, min-maxing (all 5s and 0s) is the winning move, so everyone does it. Under STAR, the final winner is decided by simple preference between the top two, so your honest in-between scores (a 3, a 4) still do real work — and **exaggerating doesn't pay**. Simulations find STAR the most **strategy-resistant** of the common methods (honest voting is about as likely to help as to hurt). And the worst case is mild: if voters *did* all bullet-vote, STAR just behaves like [Approval voting](../Approval_Voting/approval_voting.md) — still a good method, not a broken one. → [strategic voting](../strategic_voting.md)
+The runoff removes the *reward* for that. In a pure score/average system, min-maxing (all 5s and 0s) is the winning move, so everyone does it. Under STAR, the final winner is decided by simple preference between the top two, so your honest in-between scores (a 3, a 4) still do real work — and **exaggerating doesn't pay**. Simulations find STAR the most **strategy-resistant** of the common methods (honest voting is about as likely to help as to hurt). And the worst case is mild: if voters *did* all bullet-vote, STAR just behaves like [Approval voting](../Approval_Voting/approval_voting.md) — still a good method, not a broken one. → [strategic voting](../topics/strategic_voting.md)
 
 **"My favorite can't win — should I score my realistic choice a 5 instead?"**
 No need. You can safely give your **true favorite a 5** *and* your realistic backup a **4**. Supporting your favorite can't hurt your backup, and supporting your backup can't hurt your favorite reaching the runoff. You almost never have to [betray your favorite](favorite_betrayal_voting_301.md) — a trap that "pick one" and even RCV can force on you.

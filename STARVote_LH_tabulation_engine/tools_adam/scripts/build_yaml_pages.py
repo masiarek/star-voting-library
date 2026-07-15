@@ -68,10 +68,10 @@ TOPIC_LINKS = [
     (r"condorcet|cycle",     "Condorcet efficiency (topic hub)", "00_start_here/topics/condorcet/README.md"),
     (r"\btie|lot[ _]order|lot[ _]number|dead[ _]rung|tiebreak", "Ties & tie-breaking (topic hub)", "00_start_here/topics/ties/README.md"),
     (r"tie[ _-]?break|dead[ _]rung", "The tie-breaking ladder (full chain)", "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md"),
-    (r"quorum",              "Quorum", "00_start_here/quorum.md"),
+    (r"quorum",              "Quorum", "00_start_here/topics/quorum.md"),
     (r"split|spoiler",       "Vote splitting (worked set)", "method_comparisons/split_voting/README.md"),
     (r"runoff",              "Runoff reversal (worked set)", "01_STAR/runoff_overturns_leader/README.md"),
-    (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "00_start_here/ballot_and_terminology_basics.md"),
+    (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "00_start_here/topics/ballot_and_terminology_basics.md"),
     (r"black[ _]curtain",    "The Black Curtain (worked set)", "method_comparisons/black_curtain/README.md"),
     (r"exhaust",             "Exhausted ballots (conversation)", "00_start_here/RCV_IRV/exhausted_ballots_301.md"),
 ]

@@ -2,7 +2,7 @@
 
 *Alaska's August 2022 U.S. House special election is the most-cited real-world example of RCV-IRV misfiring — because it hit **three** of IRV's pathologies at once, in a high-profile federal race. It's the case advocates on both sides keep pointing to.*
 
-→ Interactive breakdown (Equal Vote): [realrcv.equal.vote/alaska22](https://realrcv.equal.vote/alaska22) · concepts: [center squeeze](RCV_IRV_center_squeeze.md) · [non-monotonicity](RCV_IRV_non_monotonicity.md) · [the spoiler effect](../spoiler_effect.md)
+→ Interactive breakdown (Equal Vote): [realrcv.equal.vote/alaska22](https://realrcv.equal.vote/alaska22) · concepts: [center squeeze](RCV_IRV_center_squeeze.md) · [non-monotonicity](RCV_IRV_non_monotonicity.md) · [the spoiler effect](../topics/spoiler_effect.md)
 
 ---
 
@@ -27,7 +27,7 @@ Begich had the fewest first choices, so RCV-IRV eliminated him. His ballots spli
 
 **1. Center squeeze — the Condorcet winner was eliminated.** Head-to-head, **Begich beat *both* Peltola and Palin** — he was the [Condorcet winner](../RCV_Ranked_Robin/ranked_robin.md), the candidate a majority preferred over each rival one-on-one. But because he was too few voters' *first* choice, IRV cut him in the first round. That's the textbook [center squeeze](RCV_IRV_center_squeeze.md): the broadly-acceptable middle candidate is knocked out for lacking first-place "core support," even though he'd have won every direct matchup.
 
-**2. Spoiler — Palin spoiled the race for Begich.** Had Palin not run, Begich would have won (his support plus Palin's beats Peltola). Palin couldn't win, but her presence changed *who did* — the definition of a [spoiler](../spoiler_effect.md). So RCV-IRV did **not** deliver the spoiler-free election it's marketed as.
+**2. Spoiler — Palin spoiled the race for Begich.** Had Palin not run, Begich would have won (his support plus Palin's beats Peltola). Palin couldn't win, but her presence changed *who did* — the definition of a [spoiler](../topics/spoiler_effect.md). So RCV-IRV did **not** deliver the spoiler-free election it's marketed as.
 
 **3. Non-monotonicity / favorite betrayal.** The result was also a documented [monotonicity](RCV_IRV_non_monotonicity.md) failure: a bloc of Palin-first voters would have gotten a **preferred** outcome (Begich instead of Peltola) by ranking Peltola *higher* — i.e. by **not** putting their favorite first. IRV punished sincere voting, exactly the [favorite-betrayal](../STAR_Voting/favorite_betrayal_voting_301.md) incentive reform is supposed to remove.
 

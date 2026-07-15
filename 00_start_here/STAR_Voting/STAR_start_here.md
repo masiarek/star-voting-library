@@ -16,7 +16,7 @@ They vote the usual way: **everyone names one favorite.**
 
 The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want.
 
-That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../spoiler_effect.md).)
+That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../topics/spoiler_effect.md).)
 
 The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite.
 
@@ -97,7 +97,7 @@ One nuance you can now name: if you rate the **two finalists** the *same*, your 
 ## What this means for you
 
 - **You can be honest.** Score your favorite a 5 *and* a backup a 4 — you never split your own vote.
-- **No ["wasted" votes](../wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../spoiler_effect.md), gone.
+- **No ["wasted" votes](../topics/wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../topics/spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
 → The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).
@@ -115,7 +115,7 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 | **The classic** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 | **Do it yourself** | [Count a STAR election by hand](count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
 
-Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scoring_Round.md) · [Automatic Runoff](STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../two_party_dominance.md) and [Why STAR Voting](../Why_STAR_Voting.md).
+Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scoring_Round.md) · [Automatic Runoff](STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../topics/two_party_dominance.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md).
 
 **Try it for real:** cast a STAR ballot or run your own election at [bettervoting.com](https://bettervoting.com).
 

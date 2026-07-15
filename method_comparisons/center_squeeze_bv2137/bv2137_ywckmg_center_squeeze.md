@@ -4,7 +4,7 @@
 
 *The textbook "center squeeze," from Robert LeGrand's [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). One hundred voters rank three candidates. The broadly-liked centrist is the **Condorcet winner** — yet Instant-Runoff throws him out first. The same ballots, counted four ways on BetterVoting, split two-to-two. This is the single clearest "the tabulation, not the ballot, decides" lesson in the repo.*
 
-→ **Level: Voting 301** — Curriculum [301.10](../../00_start_here/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../00_start_here/ranked_ballot_methods_zoo.md) · [center squeeze topic hub](../../00_start_here/topics/center_squeeze/) · [what makes a good winner?](../../00_start_here/what_makes_a_good_winner.md).
+→ **Level: Voting 301** — Curriculum [301.10](../../00_start_here/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../00_start_here/topics/ranked_ballot_methods_zoo.md) · [center squeeze topic hub](../../00_start_here/topics/center_squeeze/) · [what makes a good winner?](../../00_start_here/topics/what_makes_a_good_winner.md).
 
 ## The electorate
 
@@ -65,7 +65,7 @@ So `Reagan>Anderson>Carter` becomes Reagan 5, Anderson 3, Carter 1. This is a mo
 
 ## Which methods are on BetterVoting — and which aren't
 
-BetterVoting natively tabulates **four** of LeGrand's ~15 methods: IRV, Ranked Robin, STV, and STAR (via the score conversion above). The other eleven — **Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small** — have no BetterVoting equivalent; they are verified with the [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md) library and LeGrand's calculator. All eleven elect **Anderson** here. That BV-vs-others split is a property of BetterVoting's method menu, not of the election — see the [method zoo](../../00_start_here/ranked_ballot_methods_zoo.md) for the full field.
+BetterVoting natively tabulates **four** of LeGrand's ~15 methods: IRV, Ranked Robin, STV, and STAR (via the score conversion above). The other eleven — **Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small** — have no BetterVoting equivalent; they are verified with the [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md) library and LeGrand's calculator. All eleven elect **Anderson** here. That BV-vs-others split is a property of BetterVoting's method menu, not of the election — see the [method zoo](../../00_start_here/topics/ranked_ballot_methods_zoo.md) for the full field.
 
 ## Sources
 

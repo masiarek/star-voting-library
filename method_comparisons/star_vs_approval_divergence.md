@@ -2,7 +2,7 @@
 
 *A common question with a deceptively honest answer: **there is no single number** — and the reason *why* is the actual lesson. This page measures the divergence rate (with a runnable, seeded simulation), explains why the two methods split, and links the worked elections where you can watch it happen on real ballots.*
 
-**Level: 301.** Companion: [What makes a good winner?](../00_start_here/what_makes_a_good_winner.md) · [election simulation models](../00_start_here/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
+**Level: 301.** Companion: [What makes a good winner?](../00_start_here/topics/what_makes_a_good_winner.md) · [election simulation models](../00_start_here/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
 
 ## Why there's no single rate
 
@@ -15,7 +15,7 @@ Quote a divergence percentage without both and it's meaningless — the same hou
 
 ## The measured rates — the approval cutoff is the knob
 
-Because Approval has no canonical sincere ballot, the honest way to report this is to **sweep the cutoff**. Read each voter's 0–5 STAR ballot as approvals at threshold *N* (approve everything scored ≥ *N*): *ge5* = approve only your top (near-[bullet](../00_start_here/plurality.md)), *ge1* = approve anyone but your worst. From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections, 51 voters, seed 12345, sincere):
+Because Approval has no canonical sincere ballot, the honest way to report this is to **sweep the cutoff**. Read each voter's 0–5 STAR ballot as approvals at threshold *N* (approve everything scored ≥ *N*): *ge5* = approve only your top (near-[bullet](../00_start_here/topics/plurality.md)), *ge1* = approve anyone but your worst. From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections, 51 voters, seed 12345, sincere):
 
 **3 candidates** — divergence by where the approval line is drawn:
 
@@ -43,7 +43,7 @@ Both methods reward broad support — that's why they agree most of the time. Th
 - **STAR reads intensity and runs a runoff.** Its 0–5 ballot records *how much*, and the automatic runoff then asks *how many prefer A to B* among the two strongest. So STAR leans toward the candidate a **majority actively prefers** head-to-head.
 - **Approval is a coarse 0/1 and has no runoff.** It elects whoever is **acceptable to the most voters** — the broadest common denominator — and can't distinguish "approve enthusiastically" from "approve as a tolerable compromise."
 
-So the classic split is: a **broadly-tolerable consensus** candidate (Approval's pick) vs. an **intensely-preferred majority favorite** (STAR's pick, surfaced by the runoff). Neither is "wrong" — it's the [good-winner](../00_start_here/what_makes_a_good_winner.md) question (utilitarian-broad vs. majoritarian) showing up as a method disagreement.
+So the classic split is: a **broadly-tolerable consensus** candidate (Approval's pick) vs. an **intensely-preferred majority favorite** (STAR's pick, surfaced by the runoff). Neither is "wrong" — it's the [good-winner](../00_start_here/topics/what_makes_a_good_winner.md) question (utilitarian-broad vs. majoritarian) showing up as a method disagreement.
 
 ## Watch it on real ballots — worked examples
 
@@ -78,4 +78,4 @@ It reuses the electorate models and STAR tabulator from [`fbc_simulation.py`](..
 
 - [Black Curtain](black_curtain/) — the worked STAR-vs-Approval(-vs-others) elections
 - [Runoff-reversal & FBC simulations](../06_Other/simulations/) — the sibling brute-force studies
-- [Choosing among the Equal Vote methods](../00_start_here/choosing_among_evc_methods.md) · [Criteria at a glance](../00_start_here/criteria_at_a_glance.md)
+- [Choosing among the Equal Vote methods](../00_start_here/topics/choosing_among_evc_methods.md) · [Criteria at a glance](../00_start_here/topics/criteria_at_a_glance.md)

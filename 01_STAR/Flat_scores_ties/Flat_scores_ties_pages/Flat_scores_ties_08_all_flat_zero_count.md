@@ -151,7 +151,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/Flat_sco
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
-- [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
+- [Ballot & terminology basics](../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [Flat_scores_ties_01_baseline_clean](Flat_scores_ties_01_baseline_clean.md) · [Flat_scores_ties_02_runoff_tie_2cand](Flat_scores_ties_02_runoff_tie_2cand.md) · [Flat_scores_ties_03_runoff_tie_split](Flat_scores_ties_03_runoff_tie_split.md) · [Flat_scores_ties_04_scoring_tie_2way](Flat_scores_ties_04_scoring_tie_2way.md) · [Flat_scores_ties_05_scoring_tie_3way_xmyf7k](Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) · [Flat_scores_ties_06_scoring_tie_4way](Flat_scores_ties_06_scoring_tie_4way.md) · [Flat_scores_ties_07_fully_flat](Flat_scores_ties_07_fully_flat.md)

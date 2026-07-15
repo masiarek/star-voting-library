@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2152_r6ctvy_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2152_r6ctvy_approval_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:37
+TABULATED AT:    2026-07-15 06:34:20
 ======================================================================
 
 election_title: "Felsenthal Ex.5 — Approval: the Condorcet winner loses the approval count"

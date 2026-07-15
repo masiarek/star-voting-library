@@ -25,7 +25,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 | **Finalists** | "The top two — the only ones left in the final step." |
 | **[Automatic Runoff](STAR_Automatic_Runoff.md)** | "A built-in final round — *no second trip to the polls*. Each ballot counts as one vote for whichever finalist it scored higher." |
 | **[Equal Support](are_equal_score_votes_discounted.md)** | "If you rated the two finalists the same, you're saying 'either is fine' — your ballot still counted in the scoring round." |
-| **Vote-splitting / [spoiler](../spoiler_effect.md)** | "The problem STAR solves — where similar candidates split support and the wrong one wins." |
+| **Vote-splitting / [spoiler](../topics/spoiler_effect.md)** | "The problem STAR solves — where similar candidates split support and the wrong one wins." |
 
 *Reach for these only with an audience that wants depth:* [Condorcet winner](../topics/condorcet/), [monotonicity](STAR_monotonicity.md), [summability](STAR_summability.md), the [honest limits](STAR_honest_limits.md). **Skip them for a first-timer** — they're 201/301, not the on-ramp.
 
@@ -49,13 +49,13 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 - **Preempt the five misconceptions** *before* they derail you:
   - *"Isn't it just averaging?"* — No; the **runoff** is what makes it a majority method, not a mean.
   - *"Do I have to rate everyone?"* — No; blanks count as 0, bullet-voting is fine.
-  - *"Isn't giving a 0 wasting my vote?"* — No; a 0 is a real score, and you never [split your own vote](../wasted_votes.md).
+  - *"Isn't giving a 0 wasting my vote?"* — No; a 0 is a real score, and you never [split your own vote](../topics/wasted_votes.md).
   - *"Is the runoff a second election?"* — No; it's **automatic**, computed from the same ballots.
   - *"Won't everyone just give all 5s and 0s?"* — The runoff removes the payoff for that, so honest scoring is also the smart move.
 
   (Hand your audience the full set: [Common misunderstandings about STAR](common_misunderstandings.md).)
-- **Concede a limit — on purpose.** "No method is perfect ([that's a theorem](../gibbard_satterthwaite_theorem.md))" and naming one honest [limit](STAR_honest_limits.md) *builds* trust; overselling loses the skeptics.
-- **Match depth to the audience** (see [curriculum pacing](../CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the arc above and stop; officials = add [summability & audits](STAR_summability.md); skeptics/debaters = [honest limits](STAR_honest_limits.md) + [the criteria](../criteria_at_a_glance.md).
+- **Concede a limit — on purpose.** "No method is perfect ([that's a theorem](../topics/gibbard_satterthwaite_theorem.md))" and naming one honest [limit](STAR_honest_limits.md) *builds* trust; overselling loses the skeptics.
+- **Match depth to the audience** (see [curriculum pacing](../CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the arc above and stop; officials = add [summability & audits](STAR_summability.md); skeptics/debaters = [honest limits](STAR_honest_limits.md) + [the criteria](../topics/criteria_at_a_glance.md).
 - **End with a call to action** — have them cast a real STAR ballot or run their own poll before they leave.
 
 ## Print your own paper ballots (the hands-on loop)
@@ -99,4 +99,4 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 - **Classroom / kids** → the lunch, a live hand-count, colored-paper "candidates." Pure mechanics, no theory.
 - **Voters / general public** → the arc + [ways to vote](STAR_ballot_voting_styles.md) ("no wrong ballot") + a live poll.
 - **Officials / administrators** → [summability](STAR_summability.md), [hand-count](count_star_by_hand.md), audits; skip the criteria theory.
-- **Skeptics / debaters / RCV advocates** → [honest limits](STAR_honest_limits.md), [criteria at a glance](../criteria_at_a_glance.md), [STAR vs RCV-IRV](../rcv_irv_vs_star.md). Concede limits first — it's disarming.
+- **Skeptics / debaters / RCV advocates** → [honest limits](STAR_honest_limits.md), [criteria at a glance](../topics/criteria_at_a_glance.md), [STAR vs RCV-IRV](../topics/rcv_irv_vs_star.md). Concede limits first — it's disarming.

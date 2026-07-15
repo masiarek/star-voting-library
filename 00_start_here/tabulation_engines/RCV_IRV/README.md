@@ -13,4 +13,4 @@ This folder is the RCV-IRV slot in the tabulation-engines hub, next to [the Bett
 - [Exhausted ballots](../../RCV_IRV/RCV_IRV_exhausted_ballots.md)
 - [IRV isn't summable](../../RCV_IRV/RCV_IRV_lack_of_summability.md)
 
-Side-by-side with STAR: [STAR vs RCV-IRV, step by step](../../tabulation_star_vs_irv.md) · [RCV-IRV vs. STAR](../../rcv_irv_vs_star.md).
+Side-by-side with STAR: [STAR vs RCV-IRV, step by step](../../topics/tabulation_star_vs_irv.md) · [RCV-IRV vs. STAR](../../topics/rcv_irv_vs_star.md).

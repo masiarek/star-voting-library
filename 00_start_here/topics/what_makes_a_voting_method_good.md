@@ -2,7 +2,7 @@
 
 *Picking a good **winner** (see [What makes a good winner?](what_makes_a_good_winner.md)) is only half of choosing a voting method. The other half is everything around the tally: can voters use it, can citizens verify it, does it invite honest voting and real competition, is it practical to run? This page lays out those criteria — and the reason there's no clean answer: **a perfect election system will never exist**, so a good method is one that **balances** these against each other.*
 
-→ **Level: Voting 201** — Curriculum [201.6](CURRICULUM.md) (deeper theory at 301). Companion: [What makes a good winner?](what_makes_a_good_winner.md).
+→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory at 301). Companion: [What makes a good winner?](what_makes_a_good_winner.md).
 
 ## "A perfect election system will never exist"
 
@@ -13,7 +13,7 @@ A consequence worth internalizing (Ka-Ping Yee): because *every* method must vio
 ## The criteria
 
 ### 1. Winner-selection quality
-Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](topics/condorcet/), [monotonicity](topics/monotonicity/), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
+Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](condorcet), [monotonicity](monotonicity), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
 
 ### 2. Simplicity & practicality
 How hard is it to **vote** and to **count**?
@@ -24,7 +24,7 @@ How hard is it to **vote** and to **count**?
 - **Machine requirement** — hand-countable, or does it need software?
 
 ### 3. Summability (precinct-level counting)
-Can each precinct publish a fixed-size tally that **adds up** to the national result, or must every ballot flow to one place? STAR and Approval are **summable** (a small matrix / totals per precinct); RCV-IRV and STV are **not** (transfers need the full ballot set centrally), which delays results and complicates audits. See [summability (topic hub)](topics/summability/).
+Can each precinct publish a fixed-size tally that **adds up** to the national result, or must every ballot flow to one place? STAR and Approval are **summable** (a small matrix / totals per precinct); RCV-IRV and STV are **not** (transfers need the full ballot set centrally), which delays results and complicates audits. See [summability (topic hub)](summability).
 
 ### 4. Transparency & auditability
 Can the public understand the process from ballots to result, and can it be checked? **Risk-limiting audits** are far easier on summable, single-round methods than on multi-round transfer methods.
@@ -33,7 +33,7 @@ Can the public understand the process from ballots to result, and can it be chec
 Does the method reward **sincere** voting, or punish it? A method that pressures voters to betray their favorite (or bury a strong rival) corrupts the very data it counts. Favorite-betrayal and later-no-harm pressures, and vulnerability to burial/compromising strategy, all live here. The VSE simulations put a number on it — a **strategy-incentive ratio** (how often strategy *works* vs. *backfires* for a voter): Plurality **17.8 : 1** (strategy almost always pays), IRV ~2.7 : 1, Approval ~2.6 : 1, STAR ~**1 : 1** (strategy is as likely to backfire as to help). Low is good: it means sincere voting is safe. This strategy-resistance is arguably STAR's strongest empirical claim — under *honest* voting the top methods (STAR, Smith/Minimax/Condorcet, Approval) are close; STAR's edge is that it barely moves when voters get strategic.
 
 ### 6. Competition & representation
-Does it let *all* candidates — including third parties and independents — get a clear, unpunished reflection of their support? A method with the **spoiler effect** / [vote-splitting](spoiler_effect.md) suppresses competition (voters abandon sincere favorites) and, in multi-winner form, the question becomes **proportionality** — does the elected body mirror the electorate? (see the [Pets Governance set](../method_comparisons/pets_governance/)).
+Does it let *all* candidates — including third parties and independents — get a clear, unpunished reflection of their support? A method with the **spoiler effect** / [vote-splitting](spoiler_effect.md) suppresses competition (voters abandon sincere favorites) and, in multi-winner form, the question becomes **proportionality** — does the elected body mirror the electorate? (see the [Pets Governance set](../../method_comparisons/pets_governance)).
 
 ### 7. Expressivity
 Does the ballot let voters say what they mean — degrees of support, equal preferences, honest rankings — rather than forcing a single mark? More expressive ballots capture better data (and are what voters say they want), but must be weighed against simplicity.
@@ -67,7 +67,7 @@ These are genuine, unsettled disputes — presented as the case each side makes,
 
 ## Where the STAR case lands (stated as advocacy)
 
-STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](STAR_Voting/STAR_honest_limits.md) argue the trade-off both ways.
+STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md) argue the trade-off both ways.
 
 ## Sources — and which way each leans
 
@@ -90,5 +90,5 @@ Almost every method comparison you'll read is written by someone with a preferre
 
 - [Criteria at a glance](criteria_at_a_glance.md) — the four methods' pass/fail across every criterion here, each failure linked to a runnable election (read *this page's* caveat first: a table is a map, not a verdict)
 - [What makes a good winner?](what_makes_a_good_winner.md) — the winner-selection half
-- Topic hubs: [Condorcet](topics/condorcet/) · [Summability](topics/summability/) · [Monotonicity](topics/monotonicity/) · [Center squeeze](topics/center_squeeze/) · [Ties](topics/ties/)
-- [Why STAR Voting](Why_STAR_Voting.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · [Glossary](GLOSSARY.md)
+- Topic hubs: [Condorcet](condorcet) · [Summability](summability) · [Monotonicity](monotonicity) · [Center squeeze](center_squeeze) · [Ties](ties)
+- [Why STAR Voting](Why_STAR_Voting.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · [Glossary](../GLOSSARY.md)

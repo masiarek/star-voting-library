@@ -2,7 +2,7 @@
 
 *The single most important distinction in ballot design — and the one people get wrong most often.*
 
-→ **See it, don't just read it:** [Alternate ballot styles — one voter, three ballots](../ballot_styles.md) shows the *same* voter's opinion on a ranking ballot (read by RCV-IRV, STV, or Ranked Robin), a Yes/No ballot (Approval), and a 0–5 scoring ballot (Score/Range, STAR) — side by side, with what each captures and throws away.
+→ **See it, don't just read it:** [Alternate ballot styles — one voter, three ballots](../topics/ballot_styles.md) shows the *same* voter's opinion on a ranking ballot (read by RCV-IRV, STV, or Ranked Robin), a Yes/No ballot (Approval), and a 0–5 scoring ballot (Score/Range, STAR) — side by side, with what each captures and throws away.
 
 ---
 
@@ -26,7 +26,7 @@ A rank answers *"which do you prefer?"* A score answers *"how much do you like e
 | Familiar from | A race: 1st, 2nd, 3rd | Amazon / movie **five-star** reviews |
 | Methods | RCV-IRV, STV, Condorcet (Ranked Robin), Borda | STAR, Score, Approval (0/1) |
 
-Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../tabulation_star_vs_irv.md).)
+Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md).)
 
 ## Why "ranked" is about the *data*, not just the ballot
 
@@ -46,12 +46,12 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 
 ## Related concepts in this library
 
-- [Alternate ballot styles](../ballot_styles.md) — the three ballots side by side, marked by one voter (with the ballot images)
+- [Alternate ballot styles](../topics/ballot_styles.md) — the three ballots side by side, marked by one voter (with the ballot images)
 - [The ranked ballot](ranked_ballot.md) · [the score ballot](score_ballot.md) — one anatomy page per ballot type
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — equal ranks & pairwise comparison: which ranked methods allow them (IRV doesn't)
-- [Scoring methods vs. ranked voting](../scoring-methods-vs-ranked-voting.md) — why Approval & STAR sit *outside* the RCV family
+- [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md) — why Approval & STAR sit *outside* the RCV family
 - [Is RCV "simple"? (201)](../RCV_IRV/RCV_IRV_is_simple.md) — the five-star mental model vs. ordering strangers
-- [Tabulation, step by step](../tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
+- [Tabulation, step by step](../topics/tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — how order-only ballots can bury a strong compromise candidate
 - [RCV vs. IRV vs. RCV-IRV — terminology](../RCV_IRV/RCV-IRV-confusing-name.md)
 

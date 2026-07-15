@@ -43,5 +43,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/three_t
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
-- [Ballot & terminology basics](../../../00_start_here/ballot_and_terminology_basics.md)
+- [Ballot & terminology basics](../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)

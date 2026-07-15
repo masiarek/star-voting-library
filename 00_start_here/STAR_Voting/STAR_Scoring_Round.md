@@ -2,7 +2,7 @@
 
 **One line:** STAR's **first** step. Add up every candidate's stars across all ballots; the **two highest-scoring candidates become the Finalists** and advance to the [Automatic Runoff](STAR_Automatic_Runoff.md). That's the whole first round — simple addition. The scoring round measures *how much* support each candidate has; the runoff then decides *how many* voters prefer each finalist (**S**core **T**hen **A**utomatic **R**unoff).
 
-→ Round 2: [The Automatic Runoff](STAR_Automatic_Runoff.md) · the whole report: [Reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../tabulation_star_vs_irv.md).
+→ Round 2: [The Automatic Runoff](STAR_Automatic_Runoff.md) · the whole report: [Reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../topics/tabulation_star_vs_irv.md).
 
 ---
 
@@ -31,7 +31,7 @@ The report prints each candidate's **total** and, in parentheses, the **average*
 
 ## Equal scores are allowed — and honest scoring is safe
 
-You may give two candidates the **same** score; you are never forced to invent a preference you don't feel ([equal ranks / weak orders are a ranked-ballot problem STAR doesn't have](../scores_and_ranks/scores_vs_ranks.md)). This is also what makes the scoring round **resist vote-splitting**: because you can give two similar candidates *both* a 5, running an ally no longer bleeds your favorite's total — the two don't split a shared pool of support the way they would under choose-one. → [the spoiler effect](../spoiler_effect.md). And you never need to **exaggerate**: in a pure score election the smart move is to give your favorite 5 and everyone else 0 (any in-between score just helps a rival's total), which collapses the ballot into [Approval](../Approval_Voting/approval_voting.md). STAR's **runoff** removes that pressure, so your honest 3s and 4s in the scoring round still do real work without costing your favorite. Why that matters, and its narrow limit: [residual vote-splitting](residual_vote_splitting.md) · [STAR's honest limits](STAR_honest_limits.md).
+You may give two candidates the **same** score; you are never forced to invent a preference you don't feel ([equal ranks / weak orders are a ranked-ballot problem STAR doesn't have](../scores_and_ranks/scores_vs_ranks.md)). This is also what makes the scoring round **resist vote-splitting**: because you can give two similar candidates *both* a 5, running an ally no longer bleeds your favorite's total — the two don't split a shared pool of support the way they would under choose-one. → [the spoiler effect](../topics/spoiler_effect.md). And you never need to **exaggerate**: in a pure score election the smart move is to give your favorite 5 and everyone else 0 (any in-between score just helps a rival's total), which collapses the ballot into [Approval](../Approval_Voting/approval_voting.md). STAR's **runoff** removes that pressure, so your honest 3s and 4s in the scoring round still do real work without costing your favorite. Why that matters, and its narrow limit: [residual vote-splitting](residual_vote_splitting.md) · [STAR's honest limits](STAR_honest_limits.md).
 
 ## Is the Scoring Round just Range (Score) voting?
 

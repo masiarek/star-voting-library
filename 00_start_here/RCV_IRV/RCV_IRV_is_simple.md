@@ -4,7 +4,7 @@
 
 > **Applies to:** the **count** of every sequential-elimination variant ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is simple, the *tabulation* isn't. See [Which RCV-IRV?](RCV_IRV_variants.md).
 
-→ Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../what_is_a_voting_method.md) (a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md), [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts: [How the Count Works — STAR vs RCV-IRV, Step by Step](../tabulation_star_vs_irv.md) · Level **201**.
+→ Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../topics/what_is_a_voting_method.md) (a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md), [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts: [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md) · Level **201**.
 
 ---
 
@@ -73,7 +73,7 @@ Give credit on the ballot; hold the line on the count. That's the version no one
 ---
 
 ## Cross-references
-- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../what_is_a_voting_method.md) — the 101 ballot-vs-count distinction this stands on.
+- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../topics/what_is_a_voting_method.md) — the 101 ballot-vs-count distinction this stands on.
 - [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md) — why the IRV count can't be done locally.
 - [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) — why the IRV count can also be counterintuitive.
 - Roadmap: pairs with **Episode 6** (Benefits — *Simple*) and **Episode 8** (Counting & trust). Glossary: "Summability," "Tabulation," "Equal Support."

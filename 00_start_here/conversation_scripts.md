@@ -11,13 +11,13 @@ Start here: [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about
 The Larry↔Adam dialogue format exists **for recording** — it is a presenter artifact, not the reading surface. A visitor landing on a topic should meet a normal educational page, not a screenplay. So:
 
 1. **Every topic's primary surface is an educational concept page.** A conversation script survives only where the spoken format *is* the product (the flagship pitch, the personal cold open) — and even then it should point to the educational pages for the substance.
-2. **The model pattern** is [what_is_a_voting_method.md](what_is_a_voting_method.md): a concept page ([voting_method_ballot_and_count.md](voting_method_ballot_and_count.md)) is primary, and the script opens by saying it is the spoken/video companion.
+2. **The model pattern** is [what_is_a_voting_method.md](topics/what_is_a_voting_method.md): a concept page ([voting_method_ballot_and_count.md](topics/voting_method_ballot_and_count.md)) is primary, and the script opens by saying it is the spoken/video companion.
 3. **Status of the dialogue-format pages:**
 
 | Page | Verdict | State |
 |---|---|---|
 | [are_equal_score_votes_discounted.md](STAR_Voting/are_equal_score_votes_discounted.md) | convert | **✔ converted** to an educational page (2026-07) |
-| [what_is_a_voting_method.md](what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
+| [what_is_a_voting_method.md](topics/what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
 | [whats_so_good_about_STAR_Voting.md](STAR_Voting/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](STAR_Voting/STAR_start_here.md) & [benefits](STAR_Voting/STAR_benefits.md) |
 | [why_do_you_love_STAR_Voting.md](STAR_Voting/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
 | [our_voting_system_is_broken.md](our_voting_system_is_broken.md) | convert | pending — educational "problem with plurality" page |

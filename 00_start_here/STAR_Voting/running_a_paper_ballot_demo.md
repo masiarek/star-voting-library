@@ -54,7 +54,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 **Ready-made live elections to demo with** — each has a BV export you can print from (and a live results page to check against):
 - **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets, single-winner STAR, a classroom crowd-pleaser.
-- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../criteria_at_a_glance.md).
+- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../topics/criteria_at_a_glance.md).
 - **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
 - **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
 

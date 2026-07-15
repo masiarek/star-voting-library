@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2176_p8dp28_star.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2176_p8dp28_star_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:46
+TABULATED AT:    2026-07-15 06:34:30
 ======================================================================
 
 election_title: "The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held"

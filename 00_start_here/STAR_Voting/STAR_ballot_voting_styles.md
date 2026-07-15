@@ -63,7 +63,7 @@ Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../../01_STAR/_main/_main
 
 ## Blanks, and what they mean
 
-Leaving a candidate's line blank counts as **0** — always, with no penalty to the rest of the ballot. In this library's YAML files a blank is written `-`, and there are markers for the other real-world cases (race abstention `~`, candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all tabulate as 0 but are reported honestly. See [Ballot & Terminology Basics](../ballot_and_terminology_basics.md) and the [GLOSSARY](../GLOSSARY.md).
+Leaving a candidate's line blank counts as **0** — always, with no penalty to the rest of the ballot. In this library's YAML files a blank is written `-`, and there are markers for the other real-world cases (race abstention `~`, candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all tabulate as 0 but are reported honestly. See [Ballot & Terminology Basics](../topics/ballot_and_terminology_basics.md) and the [GLOSSARY](../GLOSSARY.md).
 
 Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballot *errors* — one reason reported spoilage runs roughly **4–9% for ranked ballots vs. 0–2% for rated ballots** (and 1–4% for the familiar single-mark ballot). A scored ballot is very hard to fill out wrong.
 

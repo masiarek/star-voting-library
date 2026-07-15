@@ -2,11 +2,11 @@
 
 *A worked example of reading advocacy literature critically. FairVote's article ([fairvote.org, Alec Slatky, August 10, 2010](https://fairvote.org/why-the-condorcet-criterion-is-less-important-than-it-seems/)) argues that the [Condorcet criterion](README.md) matters less than voting theorists claim. The article contains one genuinely good point — and several claims that are checkably false. This page quotes each claim verbatim, checks it, and tabulates the article's own hypothetical with the LH engine. The errors are FairVote's, not "RCV's" — this is about one article's reasoning, not a verdict on ranked ballots.*
 
-**Why this page exists.** Comparison and criteria pages are usually written by [advocacy organizations](../../advocacy_organizations.md), and each leans toward the method it champions — that cuts in every direction, including pro-STAR pages (see the sources note in [RCV-IRV vs STAR](../../rcv_irv_vs_star.md)). The skill being taught here is not "FairVote is wrong"; it's *how to check a voting-method claim against a countable election*. Every check below is a small YAML you can re-run.
+**Why this page exists.** Comparison and criteria pages are usually written by [advocacy organizations](../advocacy_organizations.md), and each leans toward the method it champions — that cuts in every direction, including pro-STAR pages (see the sources note in [RCV-IRV vs STAR](../rcv_irv_vs_star.md)). The skill being taught here is not "FairVote is wrong"; it's *how to check a voting-method claim against a countable election*. Every check below is a small YAML you can re-run.
 
 ## First, the honest framing: is the Condorcet winner the "best" choice?
 
-**No single ideal of a "best" winner exists — that's a theorem, not an opinion.** The Condorcet winner (the *consensus candidate* — beats every rival head-to-head) is one of several defensible ideals, alongside the majority winner, the plurality leader, and the utilitarian (highest-total-support) winner. They usually agree; when they don't, *that disagreement is the whole subject*. The full treatment is [What makes a "good" winner?](../../what_makes_a_good_winner.md) — read that first if this vocabulary is new.
+**No single ideal of a "best" winner exists — that's a theorem, not an opinion.** The Condorcet winner (the *consensus candidate* — beats every rival head-to-head) is one of several defensible ideals, alongside the majority winner, the plurality leader, and the utilitarian (highest-total-support) winner. They usually agree; when they don't, *that disagreement is the whole subject*. The full treatment is [What makes a "good" winner?](../what_makes_a_good_winner.md) — read that first if this vocabulary is new.
 
 So an article arguing "Condorcet isn't everything" *could* be making a legitimate point — the utilitarian critique of pure majoritarianism is real, and this repo makes it too ([STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md) runs the same candor in the other direction). The problem with *this* article is that its load-bearing claims are definitionally false, and the method it defends fails the criterion in exactly the scenario it constructs.
 
@@ -95,7 +95,7 @@ Liberal            51  Elected
 Conservative       49  Rejected
 ```
 
-This isn't hypothetical-only: Burlington 2009 and Alaska's August 2022 special election are the standard real cases of RCV-IRV eliminating the Condorcet winner — both worked through in [What makes a "good" winner?](../../what_makes_a_good_winner.md) An article defending RCV-IRV by attacking the Condorcet criterion is, structurally, an argument that the scenario where its method misfires shouldn't count against it.
+This isn't hypothetical-only: Burlington 2009 and Alaska's August 2022 special election are the standard real cases of RCV-IRV eliminating the Condorcet winner — both worked through in [What makes a "good" winner?](../what_makes_a_good_winner.md) An article defending RCV-IRV by attacking the Condorcet criterion is, structurally, an argument that the scenario where its method misfires shouldn't count against it.
 
 ### Claim 7 — the Lieberman example is speculation stated as fact
 
@@ -116,11 +116,11 @@ Automatic Runoff Round
    Liberal       -- 45
 ```
 
-But notice what this argument is: it's the **cardinal** (score-ballot) critique of ordinal methods — the case for methods that measure *level of support*, not just order (see [scoring methods vs ranked](../../scoring-methods-vs-ranked-voting.md)). It is **not** an argument for RCV-IRV, which is exactly as ordinal and intensity-blind as any Condorcet method — while *also* failing the Condorcet criterion in the center-squeeze case above. The article's best point argues against its own conclusion.
+But notice what this argument is: it's the **cardinal** (score-ballot) critique of ordinal methods — the case for methods that measure *level of support*, not just order (see [scoring methods vs ranked](../scoring-methods-vs-ranked-voting.md)). It is **not** an argument for RCV-IRV, which is exactly as ordinal and intensity-blind as any Condorcet method — while *also* failing the Condorcet criterion in the center-squeeze case above. The article's best point argues against its own conclusion.
 
 ## Net assessment
 
-The article's honest core — "majority-pairwise preference isn't the only defensible standard, because it ignores intensity" — is true, and this repo agrees with it ([the majoritarian/utilitarian split](../../what_makes_a_good_winner.md)). But the core is wrapped in a definitional error (Condorcet ≠ "moderates always win"), a false claim ("impossibility of victory" for non-moderates), a fallacy mislabel, and a hypothetical that — when actually counted — shows majorities electing the moderate and the article's own method squeezing them out. Read advocacy literature, from every camp, with the ballots in hand.
+The article's honest core — "majority-pairwise preference isn't the only defensible standard, because it ignores intensity" — is true, and this repo agrees with it ([the majoritarian/utilitarian split](../what_makes_a_good_winner.md)). But the core is wrapped in a definitional error (Condorcet ≠ "moderates always win"), a false claim ("impossibility of victory" for non-moderates), a fallacy mislabel, and a hypothetical that — when actually counted — shows majorities electing the moderate and the article's own method squeezing them out. Read advocacy literature, from every camp, with the ballots in hand.
 
 ## The demo elections — live on BetterVoting
 
@@ -132,6 +132,6 @@ All three are **live BetterVoting elections** (BV2168 / BV2169 / BV2170) on the 
 | [BV2169 — electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) | The "strong liberal" pole candidate is the Condorcet winner — the criterion follows the electorate, it doesn't pin the center | **[results ↗](https://bettervoting.com/2jrfpg/results)** | [yaml](../../../method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) | [tabulated](../../../method_comparisons/fairvote_condorcet_claims/fairvote_condorcet_claims_tabulated/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_tabulated.txt) |
 | [BV2170 — the symmetric centrist, four ways](../../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_symmetric_centrist.md) | The pure center-squeeze mechanism: centrist Casey is the Condorcet winner (53–47 each) with only 6 first choices. STAR & **Ranked Robin** (the Condorcet method) elect Casey; RCV-IRV & Choose-One squeeze them out and deadlock the poles at random. The only four-method demo here | **[results ↗](https://bettervoting.com/pp2q4q/results)** | [yaml](../../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) | [tabulated](../../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_star_tabulated.txt) |
 
-Related: [Condorcet topic hub](README.md) · [Edelman's "Myth of the Condorcet Winner" — the steelman version of this argument, tabulated](edelman_condorcet_myth.md) · [Center squeeze](../center_squeeze/) · [What makes a "good" winner?](../../what_makes_a_good_winner.md) · [Advocacy organizations](../../advocacy_organizations.md) · [RCV-IRV vs STAR](../../rcv_irv_vs_star.md) · [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md)
+Related: [Condorcet topic hub](README.md) · [Edelman's "Myth of the Condorcet Winner" — the steelman version of this argument, tabulated](edelman_condorcet_myth.md) · [Center squeeze](../center_squeeze/) · [What makes a "good" winner?](../what_makes_a_good_winner.md) · [Advocacy organizations](../advocacy_organizations.md) · [RCV-IRV vs STAR](../rcv_irv_vs_star.md) · [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md)
 
 # file: fairvote_condorcet_claim_check.md

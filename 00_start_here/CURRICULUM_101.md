@@ -8,9 +8,9 @@
 
 ## 101.0 — The problem, before any method
 
-**What clicks:** the way we vote now (mark one) can pick the option *most* people didn't want. That's **vote-splitting**, and its political name is the **[spoiler effect](spoiler_effect.md)**.
+**What clicks:** the way we vote now (mark one) can pick the option *most* people didn't want. That's **vote-splitting**, and its political name is the **[spoiler effect](topics/spoiler_effect.md)**.
 
-**See it:** the team-lunch story in [STAR — start here](STAR_Voting/STAR_start_here.md) — five friends, and "pick one" buries the option everyone was happy with. Background: [Choose-One / plurality](plurality.md).
+**See it:** the team-lunch story in [STAR — start here](STAR_Voting/STAR_start_here.md) — five friends, and "pick one" buries the option everyone was happy with. Background: [Choose-One / plurality](topics/plurality.md).
 
 *Key terms: Choose-One / plurality, vote-splitting, spoiler effect, "lesser evil."*
 
@@ -54,7 +54,7 @@
 
 **What clicks:** a **ballot** is what you mark; a **tabulation** is how it's counted. The same ranked ballot can be counted several ways (IRV, Ranked Robin, STV) — so "RCV" names a *ballot*, not a method.
 
-**Material:** [a ballot and a count](voting_method_ballot_and_count.md) · [terminology basics](ballot_and_terminology_basics.md). *Why here:* it unlocks 201's precise comparisons.
+**Material:** [a ballot and a count](topics/voting_method_ballot_and_count.md) · [terminology basics](topics/ballot_and_terminology_basics.md). *Why here:* it unlocks 201's precise comparisons.
 
 ---
 

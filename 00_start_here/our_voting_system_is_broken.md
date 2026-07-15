@@ -75,7 +75,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 Cross-references:
 - `00_start_here/GLOSSARY.md` — "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Vote splitting," "Spoiler effect," "Majority finish."
-- `00_start_here/Why_STAR_Voting.md` — Part 1 problem bullets.
+- `00_start_here/topics/Why_STAR_Voting.md` — Part 1 problem bullets.
 - `00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md` — Segment 1 (the spoiler).
 - `LINKS.md` → **Full Deck 2025** ("PROBLEM: VOTE-SPLITTING," "THE VOTING DILEMMA"), **Torrance LWV (Arend)** ("SPOILER EFFECT").
 

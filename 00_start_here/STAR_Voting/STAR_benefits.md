@@ -1,6 +1,6 @@
 # The benefits of STAR Voting
 
-*A scannable reference to **why** STAR (Score Then Automatic Runoff) is worth adopting — each benefit in a sentence or two, with a link to the lesson that proves it. For the narrated versions, see the conversation scripts [What's so good about STAR](whats_so_good_about_STAR_Voting.md) and [Why do you love STAR](why_do_you_love_STAR_Voting.md), and the [Why STAR Voting deck](../Why_STAR_Voting.md).*
+*A scannable reference to **why** STAR (Score Then Automatic Runoff) is worth adopting — each benefit in a sentence or two, with a link to the lesson that proves it. For the narrated versions, see the conversation scripts [What's so good about STAR](whats_so_good_about_STAR_Voting.md) and [Why do you love STAR](why_do_you_love_STAR_Voting.md), and the [Why STAR Voting deck](../topics/Why_STAR_Voting.md).*
 
 → Start with the mechanics: [STAR — start here](STAR_start_here.md). Kept honest by: [STAR's honest limits](STAR_honest_limits.md).
 
@@ -12,7 +12,7 @@ You score every candidate 0–5 by how much you support them, instead of picking
 
 ## No vote splitting, no spoilers
 
-Because you rate each candidate independently, adding a candidate you like never bleeds support from another candidate you like. Two similar candidates can't divide their shared supporters and hand the win to someone the majority didn't want — the [spoiler effect](../spoiler_effect.md) that plagues choose-one voting. Honesty becomes your strongest ballot. (STAR reduces spoilers dramatically rather than perfectly — see [residual vote-splitting](residual_vote_splitting.md).)
+Because you rate each candidate independently, adding a candidate you like never bleeds support from another candidate you like. Two similar candidates can't divide their shared supporters and hand the win to someone the majority didn't want — the [spoiler effect](../topics/spoiler_effect.md) that plagues choose-one voting. Honesty becomes your strongest ballot. (STAR reduces spoilers dramatically rather than perfectly — see [residual vote-splitting](residual_vote_splitting.md).)
 
 ## Every winner earns a majority
 

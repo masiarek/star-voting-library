@@ -73,7 +73,7 @@ Does the concession mean STAR "wastes" votes just like the thing it criticizes? 
 - **Favorite in the final, and loses** — if your favorite reaches the last round and loses, your backup rankings are never read at all.
 - **Your next choice is already gone** — by the time your vote is ready to transfer, the candidate it would have gone to may already be eliminated.
 
-In every one of those cases the voter *supplied* a preference and the count never used it. So the debate move is: concede the equal-score mechanic, then ask the critic to account for those. See [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md) and [Why STAR Voting](../Why_STAR_Voting.md) (usability / exhausted ballots).
+In every one of those cases the voter *supplied* a preference and the count never used it. So the debate move is: concede the equal-score mechanic, then ask the critic to account for those. See [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md) (usability / exhausted ballots).
 
 ## The takeaway
 
@@ -83,4 +83,4 @@ An equal-score ballot isn't a discounted vote — it's a voter who said, in thei
 
 ## Where this fits in the teaching
 
-This is **objection-handling material for skeptics and the RCV-advocate audience** — don't raise "discounted votes" with a first-contact audience; you'd plant a doubt they didn't have. It hangs off two 101 moments: where [Equal Support](glossary_STAR.md) is first introduced, and the STAR-vs-RCV-IRV comparison. Presenters: the matching slides are indexed by short name in [LINKS.md](../LINKS.md) ("No-preference votes in the STAR runoff"; "Combatting strategic voting"; the exhausted-ballot slides), and the episode roadmap lives in [conversation scripts](../conversation_scripts.md).
+This is **objection-handling material for skeptics and the RCV-IRV-advocate audience** — don't raise "discounted votes" with a first-contact audience; you'd plant a doubt they didn't have. It hangs off two 101 moments: where [Equal Support](glossary_STAR.md) is first introduced, and the STAR-vs-RCV-IRV comparison. Presenters: the matching slides are indexed by short name in [LINKS.md](../LINKS.md) ("No-preference votes in the STAR runoff"; "Combatting strategic voting"; the exhausted-ballot slides), and the episode roadmap lives in [conversation scripts](../conversation_scripts.md).

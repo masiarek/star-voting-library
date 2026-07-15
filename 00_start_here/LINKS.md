@@ -134,7 +134,7 @@ These live in this repo and stay exactly in sync (prefer them for live demos):
 | Short name | Path |
 |------------|------|
 | **Start Here** | `00_start_here/00_START_HERE.md` |
-| **Why STAR (repo)** | `00_start_here/Why_STAR_Voting.md` (+ `.html` presenter view) |
+| **Why STAR (repo)** | `00_start_here/topics/Why_STAR_Voting.md` (+ `.html` presenter view) |
 | **Glossary** | `00_start_here/GLOSSARY.md` |
 | **Curriculum** | `00_start_here/CURRICULUM.md` |
 | **Flagship script** | `00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md` |

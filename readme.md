@@ -45,7 +45,7 @@ The full field-by-field guide — every option, the marker table, weighted rows,
 - [Start Here](00_start_here/00_START_HERE.md) — guided entry point
 - [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
 - [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
-- [Scored (rated) vs. ranked ballots](00_start_here/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
+- [Scored (rated) vs. ranked ballots](00_start_here/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
 - [Concepts — deep-dive pages for the important terms](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
 - [Repository & Engine Guide](00_start_here/repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
 - [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently

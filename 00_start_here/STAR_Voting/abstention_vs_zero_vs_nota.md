@@ -44,7 +44,7 @@ An all-blank ballot removes your weight from the room. A `0,0,0,…,5-for-NOTA` 
 | `?` | spoiled ballot |
 | `%` | spoiled **and** re-issued |
 
-See [STAR ballot voting styles](STAR_ballot_voting_styles.md) and [Ballot & Terminology Basics](../ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
+See [STAR ballot voting styles](STAR_ballot_voting_styles.md) and [Ballot & Terminology Basics](../topics/ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
 
 ## The gap: BetterVoting can't capture *intent* behind a non-score
 
@@ -63,4 +63,4 @@ That's a candidate **missing-feature** for BetterVoting relative to LH: an expli
 
 The BetterVoting issues on this exact topic (abstain / blank / zero mislabels, export ambiguity, the `#884` "all-equal = abstain" policy, and the `#1421` NOTA case) are catalogued in [BV abstain / blank / zero — issue index](../tabulation_engines/BV/abstain_issues_index.md), cross-referenced to the test cases.
 
-[Ballot voting styles](STAR_ballot_voting_styles.md) · ["Preference" — the word that causes half the confusion](../preference.md) · [Quorum](../quorum.md) · [GLOSSARY](../GLOSSARY.md) · [Curriculum](../CURRICULUM.md)
+[Ballot voting styles](STAR_ballot_voting_styles.md) · ["Preference" — the word that causes half the confusion](../topics/preference.md) · [Quorum](../topics/quorum.md) · [GLOSSARY](../GLOSSARY.md) · [Curriculum](../CURRICULUM.md)

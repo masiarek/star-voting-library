@@ -10,7 +10,7 @@
 |--------|:---:|-----|-----------|
 | **STAR** | ✅ | scores are added, not eliminated — raising a candidate only helps them | [STAR monotonicity](../../STAR_Voting/STAR_monotonicity.md) |
 | **Ranked Robin / Condorcet** | ✅ | pairwise wins only improve when you rank someone higher | [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md) |
-| **Approval / Score** | ✅ | more approval/points can't hurt | [scoring methods](../../scoring-methods-vs-ranked-voting.md) |
+| **Approval / Score** | ✅ | more approval/points can't hurt | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **RCV-IRV (Hare)** | ❌ | added first-choices can change the elimination order and flip the winner | [IRV non-monotonicity](../../RCV_IRV/RCV_IRV_non_monotonicity.md) |
 | **Other IRV variants** (BTR, Coombs, Baldwin, Nanson) | ❌ | same cause — they still eliminate round by round | [Which RCV-IRV?](../../RCV_IRV/RCV_IRV_variants.md) |
 

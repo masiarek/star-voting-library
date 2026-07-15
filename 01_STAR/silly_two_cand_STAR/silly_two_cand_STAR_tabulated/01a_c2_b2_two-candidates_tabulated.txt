@@ -2,7 +2,7 @@
 SOURCE FILE:     01a_c2_b2_two-candidates.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  01a_c2_b2_two-candidates_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:21
+TABULATED AT:    2026-07-15 06:34:04
 ======================================================================
 
 election_title: Same as before - but this time two ballots

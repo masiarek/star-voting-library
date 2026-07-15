@@ -1,6 +1,6 @@
 # The Score Ballot
 
-*One ballot style, several counts. A score ballot asks a different question than a ranking: not "which do you prefer?" but "**how much** do you like each one?" — every candidate gets an independent value, so the ballot carries your order **and** your strength. This page is the anatomy of the ballot itself; its twin is [the ranked ballot](ranked_ballot.md), and the side-by-side comparison is [alternate ballot styles](../ballot_styles.md).*
+*One ballot style, several counts. A score ballot asks a different question than a ranking: not "which do you prefer?" but "**how much** do you like each one?" — every candidate gets an independent value, so the ballot carries your order **and** your strength. This page is the anatomy of the ballot itself; its twin is [the ranked ballot](ranked_ballot.md), and the side-by-side comparison is [alternate ballot styles](../topics/ballot_styles.md).*
 
 → Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [filling out the 5-star ballot — the style gallery](../STAR_Voting/STAR_ballot_voting_styles.md) · [the fidelity ladder](fidelity_ladder.md) · [scale granularity](scale_granularity_flips_the_winner.md)
 
@@ -22,7 +22,7 @@ It's the same voter, the same opinion, as on [the ranked ballot](ranked_ballot.m
 | David | 3rd | ● | 4 |
 | Ella | 5th | ○ | 0 |
 
-Note what survived the trip: here Carmen = David is *recorded* — the ranking had to fake a 2nd-vs-3rd difference, and Yes/No can't tell Andre from David at all. The full side-by-side walk-through is [alternate ballot styles](../ballot_styles.md).
+Note what survived the trip: here Carmen = David is *recorded* — the ranking had to fake a 2nd-vs-3rd difference, and Yes/No can't tell Andre from David at all. The full side-by-side walk-through is [alternate ballot styles](../topics/ballot_styles.md).
 
 ## The marking rules — deliberately hard to get wrong
 
@@ -51,12 +51,12 @@ The same 0–5 grid above can be counted by:
 | [Approval](../Approval_Voting/approval_voting.md) | as 0/1 (approve or don't) | the 1-bit special case |
 | STAR-PR and friends | proportional multi-winner | [proportional representation](../proportional_representation/) |
 
-Same lesson as the ranked twin, from the other side: the ballot is what you mark; the **tabulation** decides what happens to it. See [what is a voting method? — a ballot and a count](../voting_method_ballot_and_count.md).
+Same lesson as the ranked twin, from the other side: the ballot is what you mark; the **tabulation** decides what happens to it. See [what is a voting method? — a ballot and a count](../topics/voting_method_ballot_and_count.md).
 
 ## Related
 
 - [The ranked ballot](ranked_ballot.md) — the twin page: an order instead of independent values
-- [Alternate ballot styles](../ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
+- [Alternate ballot styles](../topics/ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
 - [Scores vs. ranks](scores_vs_ranks.md) — why order and strength are different data
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — the tie-handling story on the ranked side
 - Glossary: [`score ballot`](../GLOSSARY.md)

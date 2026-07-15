@@ -10,7 +10,7 @@
 |--------|:---:|------------------------------------------------------|-----------|
 | **STAR** | ✅ | score totals **+** the For/Equal/Against pairwise matrix | [STAR is summable](../../STAR_Voting/STAR_summability.md) |
 | **Ranked Robin / Condorcet** | ✅ | the pairwise matrix (adds cell by cell) | [RR is summable](../../RCV_Ranked_Robin/RCV_RR_summability.md) |
-| **Approval** | ✅ | one approval count per candidate | [scoring methods](../../scoring-methods-vs-ranked-voting.md) |
+| **Approval** | ✅ | one approval count per candidate | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **Plurality** | ✅ | one vote count per candidate | — |
 | **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../RCV_IRV/RCV_IRV_lack_of_summability.md) |
 

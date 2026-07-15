@@ -79,4 +79,4 @@ Both engines agree on every number. The **only** gap is display: LH puts `12 = 7
 
 - [This set's lesson (README)](README.md) · [small_case abstention lesson](small_case_abstention_lesson.md) — the LH↔BV "no-preference" reconciliation these cases share.
 - [Abstention vs Equal Support — minimal STAR test](pet_real_bv_election_pages/small_abstention_c2_b5.md) — the STAR sibling of this counting question.
-- [Ballot & terminology basics](../../00_start_here/ballot_and_terminology_basics.md) · [Glossary](../../00_start_here/GLOSSARY.md) · [BV registry](../../00_start_here/YAML_test_case_index/BV_registry.md).
+- [Ballot & terminology basics](../../00_start_here/topics/ballot_and_terminology_basics.md) · [Glossary](../../00_start_here/GLOSSARY.md) · [BV registry](../../00_start_here/YAML_test_case_index/BV_registry.md).

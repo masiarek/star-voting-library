@@ -15,7 +15,7 @@ These aren't strawmen — they're the serious arguments, and some are backed by 
 ## The case *against*
 
 - **Limited choice / "lesser of two evils."** Large blocs of voters have no party that fits them; many feel they're voting against, not for.
-- **Underrepresentation.** Third parties and independents can win substantial vote shares yet almost no seats — a persistent votes-to-seats gap (e.g. Australia's Greens under the [Alternative Vote](RCV_IRV/RCV_IRV_australia.md)).
+- **Underrepresentation.** Third parties and independents can win substantial vote shares yet almost no seats — a persistent votes-to-seats gap (e.g. Australia's Greens under the [Alternative Vote](../RCV_IRV/RCV_IRV_australia.md)).
 - **Duopoly and safe seats.** With only two viable brands and many uncompetitive districts, the two parties face little real competition and can quietly collude to keep others out.
 - **Polarization.** The moderating pull is a *tendency*, not a law — modern US politics shows a two-party system can instead calcify into intense polarization, negative partisanship, and gridlock, with primaries dragging candidates *away* from the center.
 - **It can be manufactured, not chosen.** When two-party dominance is propped up by the [spoiler effect](spoiler_effect.md) and vote-splitting, it may reflect the *voting method* punishing alternatives rather than the electorate's genuine preferences.
@@ -34,7 +34,7 @@ Here is the distinction reformers most often blur. Two-party dominance has **two
 
 So the honest claim, which cuts against a common overreach:
 
-> **Better single-winner methods end the *spoiler-enforced* part of two-party dominance — they do not, by themselves, end two-party dominance.** What reliably produces a multiparty legislature is **proportional representation** ([STV](proportional_representation/stv/proportional_stv_vs_star.md), MMP, party-list, [proportional STAR](proportional_representation/STAR_PR/README.md)) — multi-winner methods, not single-winner ones.
+> **Better single-winner methods end the *spoiler-enforced* part of two-party dominance — they do not, by themselves, end two-party dominance.** What reliably produces a multiparty legislature is **proportional representation** ([STV](../proportional_representation/stv/proportional_stv_vs_star.md), MMP, party-list, [proportional STAR](../proportional_representation/STAR_PR/README.md)) — multi-winner methods, not single-winner ones.
 
 This is why Australia is two-party in its AV House but multiparty in its **STV** Senate. If your goal is specifically to *break* two-party dominance, single-winner reform is necessary-but-not-sufficient; the lever is proportional multi-winner elections. If your goal is honest, spoiler-free single-winner elections (a worthy goal on its own), STAR/Approval/Ranked Robin deliver that whether or not the party system ever changes.
 
@@ -45,6 +45,6 @@ Two-party dominance is a genuine trade-off, not a self-evident evil — it buys 
 ## Related
 
 - [The spoiler effect](spoiler_effect.md) · [Choose-One / plurality](plurality.md) — the method-caused half
-- [The Alternative Vote in Australia](RCV_IRV/RCV_IRV_australia.md) — two-party House, multiparty (STV) Senate
-- [Proportional representation: STV vs STAR-PR](proportional_representation/stv/proportional_stv_vs_star.md) · [Proportional STAR](proportional_representation/STAR_PR/README.md) — what actually yields multiparty legislatures
-- [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) · [Glossary](GLOSSARY.md)
+- [The Alternative Vote in Australia](../RCV_IRV/RCV_IRV_australia.md) — two-party House, multiparty (STV) Senate
+- [Proportional representation: STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) · [Proportional STAR](../proportional_representation/STAR_PR/README.md) — what actually yields multiparty legislatures
+- [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) · [Glossary](../GLOSSARY.md)

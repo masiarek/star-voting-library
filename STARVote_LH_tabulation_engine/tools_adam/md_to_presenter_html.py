@@ -11,7 +11,7 @@ Render a "Why STAR Voting"-style markdown deck into a styled presenter HTML page
 Markdown stays the source of truth; re-run this whenever it changes.
 
 Usage:
-    python md_to_presenter_html.py ../../00_start_here/Why_STAR_Voting.md
+    python md_to_presenter_html.py ../../00_start_here/topics/Why_STAR_Voting.md
     python md_to_presenter_html.py input.md -o output.html
 """
 

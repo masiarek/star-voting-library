@@ -42,7 +42,7 @@ This is the theoretical backbone of the repo's honesty stance — **"resistant, 
 - **When does honesty pay?** For which method, and under what electorate, is a sincere ballot the best *practical* strategy most of the time?
 - **How hard and how risky is manipulation?** Does it require coordination and knowing the result in advance? Does it backfire?
 
-Those are exactly what [Voter Satisfaction Efficiency](election_simulation_models.md) simulations and the [strategic-voting analysis](strategic_voting.md) measure. Gibbard–Satterthwaite doesn't end the debate — it *starts* it correctly, by ruling out the fantasy of an unmanipulable method and forcing the argument onto *degrees* of strategy-resistance. STAR's own advocates concede the point openly; the honest case for any method has to. See [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
+Those are exactly what [Voter Satisfaction Efficiency](election_simulation_models.md) simulations and the [strategic-voting analysis](strategic_voting.md) measure. Gibbard–Satterthwaite doesn't end the debate — it *starts* it correctly, by ruling out the fantasy of an unmanipulable method and forcing the argument onto *degrees* of strategy-resistance. STAR's own advocates concede the point openly; the honest case for any method has to. See [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).
 
 ## Relation to Arrow's theorem
 
@@ -51,7 +51,7 @@ Arrow (1951) and Gibbard–Satterthwaite are close cousins — G-S can even be d
 - **Arrow** is about *aggregation*: no rule can combine individual rankings into a group ranking while satisfying a short list of fairness conditions.
 - **Gibbard–Satterthwaite** is about *incentives*: no rule can make honest voting a dominant strategy.
 
-Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](STAR_Voting/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](RCV_Ranked_Robin/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
+Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](../STAR_Voting/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
 
 ## Sources
 
@@ -65,4 +65,4 @@ Two faces of the same fact — **there is no perfect voting method** — which i
 - [Strategic voting across the Equal Vote methods](strategic_voting.md) — the practical "when does it pay?" side
 - [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) — Arrow and the trade-off framing
 - [Criteria at a glance](criteria_at_a_glance.md) — the pass/fail map (and why no method aces it)
-- [Glossary](GLOSSARY.md) · [Who's who in voting methods](whos_who_voting_reform.md) (Gibbard, Satterthwaite)
+- [Glossary](../GLOSSARY.md) · [Who's who in voting methods](whos_who_voting_reform.md) (Gibbard, Satterthwaite)

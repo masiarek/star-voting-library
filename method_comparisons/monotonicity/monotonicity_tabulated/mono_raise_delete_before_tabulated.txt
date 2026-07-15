@@ -2,7 +2,7 @@
 SOURCE FILE:     mono_raise_delete_before.yaml
 SOURCE MODIFIED: 2026-07-12 13:55:21
 TABULATED FILE:  mono_raise_delete_before_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:41
+TABULATED AT:    2026-07-15 06:34:25
 ======================================================================
 
 election_title: "STAR mono-raise-delete — part 1: baseline, X wins"

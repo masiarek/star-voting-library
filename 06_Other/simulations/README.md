@@ -1,6 +1,6 @@
 # Simulations — measure it, don't guess it
 
-This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../00_start_here/simulate_utilities_not_ballots.md).
+This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../00_start_here/topics/simulate_utilities_not_ballots.md).
 
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).

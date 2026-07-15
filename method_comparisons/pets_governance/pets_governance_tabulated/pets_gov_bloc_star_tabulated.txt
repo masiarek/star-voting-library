@@ -2,7 +2,7 @@
 SOURCE FILE:     pets_gov_bloc_star.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  pets_gov_bloc_star_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:45
+TABULATED AT:    2026-07-15 06:34:29
 ======================================================================
 
 election_title: "Pets Governance — Council by Bloc STAR (3 seats): majority sweeps"

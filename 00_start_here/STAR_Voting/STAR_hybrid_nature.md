@@ -45,6 +45,6 @@ That's the hybrid working as designed: scores *nominated* the two finalists; the
 
 - When the scoring leader and the runoff winner **differ**, that's [**Runoff Reversal**](../../01_STAR/runoff_overturns_leader/) — the most important consequence of the hybrid design.
 - When **Condorcet, Score, and Runoff** point at three different candidates, see [Three notions of "winner"](STAR_three_winner_notions.md).
-- For where STAR sits relative to ranked methods, see [Scoring methods aren't RCV](../scoring-methods-vs-ranked-voting.md) and the step-by-step [STAR vs RCV-IRV count](../tabulation_star_vs_irv.md).
+- For where STAR sits relative to ranked methods, see [Scoring methods aren't RCV](../topics/scoring-methods-vs-ranked-voting.md) and the step-by-step [STAR vs RCV-IRV count](../topics/tabulation_star_vs_irv.md).
 
 Sources: [STAR Voting (Wikipedia)](https://en.wikipedia.org/wiki/STAR_voting), [Equal Vote Coalition — STAR Voting](https://www.starvoting.org/star).

@@ -26,13 +26,13 @@ Two footnotes on the pair, both deliberate:
 
 | Method | Participation? | Notes | Full treatment |
 |--------|:---:|------|-----------|
-| **Score / Approval** | ✅ immune | a sincere added ballot only adds support where the voter intends — summation can't backfire | [scoring methods vs ranked](../../scoring-methods-vs-ranked-voting.md) |
-| **Choose-One (Plurality)** | ✅ immune | more votes for your favorite never hurts your favorite | [plurality](../../plurality.md) |
+| **Score / Approval** | ✅ immune | a sincere added ballot only adds support where the voter intends — summation can't backfire | [scoring methods vs ranked](../scoring-methods-vs-ranked-voting.md) |
+| **Choose-One (Plurality)** | ✅ immune | more votes for your favorite never hurts your favorite | [plurality](../plurality.md) |
 | **STAR** | ❌ rare | the *runoff stage* costs the formal guarantee — live flip: [BV2165→BV2166 (Coombs Ex.19)](../../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md), shown honestly | [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md) |
 | **Ranked Robin / all Condorcet methods** | ❌ provably | **Moulin's theorem**: Condorcet consistency ⇒ no-show paradoxes exist; see also Edelman's join-consistency argument | [Edelman, tabulated](../condorcet/edelman_condorcet_myth.md) |
 | **RCV-IRV / plurality-runoff / Coombs** | ❌ readily | the elimination machinery — same root as [non-monotonicity](../monotonicity/) | [no-show paradox](../../voting_paradoxes/no_show.md) |
 
-**The honest scorecard, spelled out:** this page's live pair shows IRV failing while STAR passes — but on *other* electorates STAR fails too ([BV2165/66](../../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md): two abstainers do better under STAR's runoff as well as Coombs'). No elimination-or-runoff method — and no Condorcet method — carries a participation *guarantee*. The structural difference: STAR's failures need a finalist to flip **and** the runoff to reverse (rare, constructed), IRV's need only an elimination-order flip (the everyday center-squeeze machinery). Only pure summation (Score, Approval) and Choose-One are immune outright — and they pay for it elsewhere ([what makes a good winner?](../../what_makes_a_good_winner.md)).
+**The honest scorecard, spelled out:** this page's live pair shows IRV failing while STAR passes — but on *other* electorates STAR fails too ([BV2165/66](../../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md): two abstainers do better under STAR's runoff as well as Coombs'). No elimination-or-runoff method — and no Condorcet method — carries a participation *guarantee*. The structural difference: STAR's failures need a finalist to flip **and** the runoff to reverse (rare, constructed), IRV's need only an elimination-order flip (the everyday center-squeeze machinery). Only pure summation (Score, Approval) and Choose-One are immune outright — and they pay for it elsewhere ([what makes a good winner?](../what_makes_a_good_winner.md)).
 
 ## The paradox catalog & the theory
 

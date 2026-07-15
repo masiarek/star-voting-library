@@ -2,7 +2,7 @@
 
 *Felsenthal's **SCC** (subset choice condition) failure: a candidate who **cannot win** enters or leaves the race, and the winner changes.* This is the formal name for the everyday **spoiler effect** — and in Felsenthal's taxonomy it's the model **conditional** paradox: hold every ballot's preferences constant, change one datum (who's on the ballot), and the outcome flips.
 
-→ The full intuitive lesson: [spoiler_effect.md](../spoiler_effect.md) · Glossary: [`spoiler effect`](../GLOSSARY.md) · Felsenthal's taxonomy: [README](README.md)
+→ The full intuitive lesson: [spoiler_effect.md](../topics/spoiler_effect.md) · Glossary: [`spoiler effect`](../GLOSSARY.md) · Felsenthal's taxonomy: [README](README.md)
 
 ## The 7-voter demonstration
 

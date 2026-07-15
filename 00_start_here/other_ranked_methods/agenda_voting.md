@@ -121,4 +121,4 @@ Fail modes (from the book's 23-voter drill: 17 pro-motion, 6 status quo): let to
 - [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) — the neutral round-robin over the same matchups
 - [Cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) — what to do when the cycle isn't manufactured
 - [Borda](borda.md) — the other classic "ranked but not Condorcet" method in this folder
-- [Scoring methods vs. ranked voting](../scoring-methods-vs-ranked-voting.md) — the ballot-type map
+- [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md) — the ballot-type map

@@ -2,7 +2,7 @@
 
 *A 301 methodology note. When you run simulations to **compare** voting methods, the single most consequential decision is **where you inject the randomness**. Sampling random ballots (e.g. scores drawn uniformly from {0,1,2,3,4,5}) quietly rigs the comparison. Sampling random **utilities** and then *deriving* each ballot is the defensible approach — and it's what this repo's simulations already do.*
 
-**Level: 301.** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [How often do STAR and Approval disagree?](../method_comparisons/star_vs_approval_divergence.md) (a worked application).
+**Level: 301.** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) (a worked application).
 
 ## The question: what is the random *primitive*?
 
@@ -35,7 +35,7 @@ Now every method is scored on **one shared electorate**, and the comparison is f
 
 The two brute-force simulations here **sample utilities first**:
 
-- [`fbc_simulation.py`](../06_Other/simulations/fbc_simulation.py) and [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) both call `sample_utilities()` (spatial or impartial), then derive STAR scores, approvals, and rankings from those utilities. No ballot is ever drawn at random.
+- [`fbc_simulation.py`](../../06_Other/simulations/fbc_simulation.py) and [`star_vs_approval_divergence.py`](../../06_Other/simulations/star_vs_approval_divergence.py) both call `sample_utilities()` (spatial or impartial), then derive STAR scores, approvals, and rankings from those utilities. No ballot is ever drawn at random.
 
 So if a reviewer looked at the *committed* simulations, they're already at level 2/3. If an *earlier* sketch drew random `{0..5}` scores, that's the thing the correction applies to — and the fix is exactly what these scripts do.
 
@@ -49,7 +49,7 @@ So if a reviewer looked at the *committed* simulations, they're already at level
 | 2 | random **utilities**, uniform & independent (**impartial culture**) | better — but still *adversarial*: over-produces cycles and near-ties |
 | 3 | **spatial / structured** utilities (issue space, Mallows, clusters) | most realistic; what VSE leans on |
 
-So `[0,1]`-uniform utilities (impartial culture) is one rung up from random scores — the right *direction* — but it is itself a stress model, not "the truth." The honest habit is to run **both** a structured model and an adversarial one and **report which** (the [never-quote-a-rate-without-the-model](CURRICULUM_301.md) rule). Our sims default to running spatial *and* impartial for exactly this reason.
+So `[0,1]`-uniform utilities (impartial culture) is one rung up from random scores — the right *direction* — but it is itself a stress model, not "the truth." The honest habit is to run **both** a structured model and an adversarial one and **report which** (the [never-quote-a-rate-without-the-model](../CURRICULUM_301.md) rule). Our sims default to running spatial *and* impartial for exactly this reason.
 
 ## When random scores are actually fine
 
@@ -60,7 +60,7 @@ Level-1 random ballots are **not wrong for everything** — they're wrong for *c
 Even utility-first, the *conversion* to a ballot is a modeling choice with real consequences:
 
 - **STAR's min-max** assumes each voter uses the full 0–5 range — the "do scored ballots have a stable meaning?" debate lives here ([what makes a method good](what_makes_a_voting_method_good.md)).
-- **Approval has no canonical conversion at all** — the voter picks a 0/1 cutoff, and *where* changes the winner. That's precisely why [STAR-vs-Approval divergence](../method_comparisons/star_vs_approval_divergence.md) depends on the cutoff as well as the electorate model — its `--cutoffs` parameter *sweeps* the approval threshold (approve scores ≥5, ≥4, … ≥1) and the divergence rate moves from ~10% to ~40%, non-monotonically. The conversion rule isn't a detail; it's the experiment.
+- **Approval has no canonical conversion at all** — the voter picks a 0/1 cutoff, and *where* changes the winner. That's precisely why [STAR-vs-Approval divergence](../../method_comparisons/star_vs_approval_divergence.md) depends on the cutoff as well as the electorate model — its `--cutoffs` parameter *sweeps* the approval threshold (approve scores ≥5, ≥4, … ≥1) and the divergence rate moves from ~10% to ~40%, non-monotonically. The conversion rule isn't a detail; it's the experiment.
 
 Sampling ballots directly hides this step; sampling utilities forces you to make it explicit — which is a feature, not a burden.
 
@@ -79,5 +79,5 @@ So: your `[0,1]`-utility instinct is the correct, more-scientific one — "more 
 ## Related
 
 - [Election simulation models](election_simulation_models.md) — the menu of *utility* models (spatial, IC/IAC, Mallows, Plackett–Luce, Yee)
-- [How often do STAR and Approval disagree?](../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../06_Other/simulations/) — utility-first in practice
-- [What makes a good winner?](what_makes_a_good_winner.md) (VSE) · [What makes a voting method good?](what_makes_a_voting_method_good.md) (the stable-meaning debate) · [Curriculum 301](CURRICULUM_301.md)
+- [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../../06_Other/simulations) — utility-first in practice
+- [What makes a good winner?](what_makes_a_good_winner.md) (VSE) · [What makes a voting method good?](what_makes_a_voting_method_good.md) (the stable-meaning debate) · [Curriculum 301](../CURRICULUM_301.md)

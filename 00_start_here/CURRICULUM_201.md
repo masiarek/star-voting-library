@@ -24,17 +24,17 @@
 ## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
 
 - **Objective:** stop conflating the ranked *ballot* (RCV) with one *count* (IRV).
-- **Material:** [terminology basics](ballot_and_terminology_basics.md) · [why the name is confusing](RCV_IRV/RCV-IRV-confusing-name.md).
+- **Material:** [terminology basics](topics/ballot_and_terminology_basics.md) · [why the name is confusing](RCV_IRV/RCV-IRV-confusing-name.md).
 - **The point:** center squeeze / exhausted ballots are **IRV**-specific, not properties of all ranked methods (Ranked Robin isn't squeezed).
 
 ## 201.4 — STAR vs RCV-IRV (the honest comparison)
 
 - **Key terms:** exhausted ballots, center squeeze, wasted votes, the method scorecard.
-- **See it:** [RCV-IRV vs STAR](rcv_irv_vs_star.md); any 4-candidate file with `options: { show_irv: true }` prints the `[Divergence from STAR]` block. The cross-method worked sets live in [method_comparisons](../method_comparisons/README.md).
+- **See it:** [RCV-IRV vs STAR](topics/rcv_irv_vs_star.md); any 4-candidate file with `options: { show_irv: true }` prints the `[Divergence from STAR]` block. The cross-method worked sets live in [method_comparisons](../method_comparisons/README.md).
 
 ## 201.5 — Multi-winner intro: Bloc STAR
 
-- **Start plain:** [Electing more than one, simply](electing_more_than_one.md) — the majoritarian-vs-proportional fork before any machinery ("do you want the N best, or a body that mirrors the electorate?").
+- **Start plain:** [Electing more than one, simply](topics/electing_more_than_one.md) — the majoritarian-vs-proportional fork before any machinery ("do you want the N best, or a body that mirrors the electorate?").
 - **Objective:** electing several seats with a majoritarian / at-large method.
 - **Key terms:** Bloc STAR, seats, at-large.
 - **See it:** [Bloc STAR, 2 seats](../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../02_STAR_Bloc/)).
@@ -45,9 +45,9 @@
 
 - **Objective:** before comparing methods, name the competing ideals of a "good winner" and the criteria of a "good method" — and see there is no single ideal.
 - **Key terms:** consensus / Condorcet winner, majoritarian vs. utilitarian winner, VSE, strategy-resistance, summability, "a perfect system will never exist."
-- **Pages:** [What makes a good winner?](what_makes_a_good_winner.md) (four ideals; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](what_makes_a_voting_method_good.md).
-- **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — the pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked.
-- **Criteria side by side:** [Criteria at a glance](criteria_at_a_glance.md) — Approval / STAR / Ranked Robin / RCV-IRV pass/fail across every major criterion, each failure linked to a runnable election (with the "a table is a map, not a verdict" caveat up front).
+- **Pages:** [What makes a good winner?](topics/what_makes_a_good_winner.md) (four ideals; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](topics/what_makes_a_voting_method_good.md).
+- **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](topics/expert_consensus_and_irv.md) — the pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked.
+- **Criteria side by side:** [Criteria at a glance](topics/criteria_at_a_glance.md) — Approval / STAR / Ranked Robin / RCV-IRV pass/fail across every major criterion, each failure linked to a runnable election (with the "a table is a map, not a verdict" caveat up front).
 - **The point:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301**.
 
 ---

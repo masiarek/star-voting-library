@@ -57,7 +57,7 @@ STAR is the one method that shows **both counts in one election** — its scorin
   by the majority (of voters with a preference).
 ```
 
-So "who should win Edelman's election?" is precisely the repo's [majoritarian-vs-utilitarian split](../../what_makes_a_good_winner.md), with a 240-year pedigree: Condorcet built the example to embarrass Borda's count; Saari — Borda's great modern champion — reversed the polarity and used the same example to embarrass Condorcet's criterion. Neither side ever "won," because the two ideals genuinely disagree here, 41 voters to 40.
+So "who should win Edelman's election?" is precisely the repo's [majoritarian-vs-utilitarian split](../what_makes_a_good_winner.md), with a 240-year pedigree: Condorcet built the example to embarrass Borda's count; Saari — Borda's great modern champion — reversed the polarity and used the same example to embarrass Condorcet's criterion. Neither side ever "won," because the two ideals genuinely disagree here, 41 voters to 40.
 
 ## The component on its own — everything ties, and the engine says so
 
@@ -69,12 +69,12 @@ Edelman's second line is theoretical: by a theorem of H. Peyton Young, **"No soc
 
 Two honest notes, both already in this repo's canon:
 
-- **This critique reaches STAR too.** STAR's runoff step makes it fail the Participation criterion in rare constructed cases — the same family of pathology, documented openly in [RCV-IRV vs STAR](../../rcv_irv_vs_star.md) and [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md). No method escapes Gibbard–Satterthwaite; the choice is which failures, how often, and how visibly.
+- **This critique reaches STAR too.** STAR's runoff step makes it fail the Participation criterion in rare constructed cases — the same family of pathology, documented openly in [RCV-IRV vs STAR](../rcv_irv_vs_star.md) and [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md). No method escapes Gibbard–Satterthwaite; the choice is which failures, how often, and how visibly.
 - **It reaches IRV harder.** IRV fails join consistency *and* Participation *and* the Condorcet criterion — Edelman's Burlington example is an IRV election. This paper lends no comfort to "RCV fixes everything" claims; Edelman himself advocates none of these methods (he ends by gesturing at behavioral economics, not a ballot reform).
 
 ## Where this leaves us
 
-Edelman's conclusion — *"There are, alas, no self-evident correct alternatives even in the situations where a Condorcet winner exists"* — is, verbatim, the thesis of this repo's [What makes a "good" winner?](../../what_makes_a_good_winner.md) The paper demolishes Condorcet-as-axiom; it does not crown a rival. Read it alongside the [FairVote claim check](fairvote_condorcet_claim_check.md) as the pair of anti-Condorcet arguments: one that dissolves under tabulation, and one that survives it — and notice that the survivor's lesson is symmetrical. If the Condorcet winner isn't sacrosanct, then a method missing it occasionally (STAR, by design, in rare profiles) isn't automatically broken — and by the same token, electing it usually is a *chosen* ideal, not a proof of correctness. Name your ideal, show the ballots, count.
+Edelman's conclusion — *"There are, alas, no self-evident correct alternatives even in the situations where a Condorcet winner exists"* — is, verbatim, the thesis of this repo's [What makes a "good" winner?](../what_makes_a_good_winner.md) The paper demolishes Condorcet-as-axiom; it does not crown a rival. Read it alongside the [FairVote claim check](fairvote_condorcet_claim_check.md) as the pair of anti-Condorcet arguments: one that dissolves under tabulation, and one that survives it — and notice that the survivor's lesson is symmetrical. If the Condorcet winner isn't sacrosanct, then a method missing it occasionally (STAR, by design, in rare profiles) isn't automatically broken — and by the same token, electing it usually is a *chosen* ideal, not a proof of correctness. Name your ideal, show the ballots, count.
 
 ## The demo elections
 
@@ -83,6 +83,6 @@ Edelman's conclusion — *"There are, alas, no self-evident correct alternatives
 | [BV2173 — Edelman's 81 voters](../../../method_comparisons/edelman_condorcet_myth/edelman_condorcet_myth_pages/bv2173_gmfv4c_edelman_saari_cancellation.md) | Condorcet winner Ada vs cancellation/Borda winner Ben; STAR shows both counts (Ben 257–233 in scores, Ada 41–40 in the runoff); RR and IRV → Ada, Plurality → Ben | **[results ↗](https://bettervoting.com/gmfv4c/results)** | [yaml](../../../method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml) | [tabulated](../../../method_comparisons/edelman_condorcet_myth/edelman_condorcet_myth_tabulated/bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt) |
 | [The perfect component, alone](../../../method_comparisons/edelman_condorcet_myth/edelman_condorcet_myth_pages/edelman_perfect_component_c3_b30.md) | 30 voters, everything ties (70/70/70 scores, 20–10 cyclic pairwise); the engine's tiebreak ladder exhausts and flags the lot-decided result — LH-only by design | — (not freezable on BV) | [yaml](../../../method_comparisons/edelman_condorcet_myth/edelman_perfect_component_c3_b30.yaml) | [tabulated](../../../method_comparisons/edelman_condorcet_myth/edelman_condorcet_myth_tabulated/edelman_perfect_component_c3_b30_tabulated.txt) |
 
-Related: [Condorcet topic hub](README.md) · [FairVote claim check](fairvote_condorcet_claim_check.md) · [What makes a "good" winner?](../../what_makes_a_good_winner.md) · [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md) · [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md) · [the math behind Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md)
+Related: [Condorcet topic hub](README.md) · [FairVote claim check](fairvote_condorcet_claim_check.md) · [What makes a "good" winner?](../what_makes_a_good_winner.md) · [STAR's honest limits](../../STAR_Voting/STAR_honest_limits.md) · [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md) · [the math behind Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md)
 
 # file: edelman_condorcet_myth.md

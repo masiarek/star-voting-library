@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2154_wq6yv7_approval.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2154_wq6yv7_approval_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:38
+TABULATED AT:    2026-07-15 06:34:21
 ======================================================================
 
 election_title: "Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot"

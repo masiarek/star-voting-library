@@ -2,7 +2,7 @@
 SOURCE FILE:     bv2164_xbqq8t_plurality.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2164_xbqq8t_plurality_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:40
+TABULATED AT:    2026-07-15 06:34:23
 ======================================================================
 
 election_title: "Coombs Ex.17 — Choose-One: Bree on first choices"

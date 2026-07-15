@@ -1,10 +1,10 @@
 # STAR Voting FAQ — the mechanics, answered with worked examples
 
-The [official STAR Voting FAQ](https://www.starvoting.org/faq) answers dozens of questions in prose. This page mirrors the **mechanics** questions — the ones about *how the count works* — and answers each with a **runnable example**: a small YAML election you can tabulate yourself, with the engine's own output shown inline. The aim is an **impartial walk-through of the mechanics**: where STAR fails a criterion or carries an honest tradeoff, this page says so and links a worked case, rather than arguing the method. (For the case *for* STAR, see [Why STAR Voting?](../Why_STAR_Voting.md); for its limits, [STAR's honest limits](STAR_honest_limits.md).)
+The [official STAR Voting FAQ](https://www.starvoting.org/faq) answers dozens of questions in prose. This page mirrors the **mechanics** questions — the ones about *how the count works* — and answers each with a **runnable example**: a small YAML election you can tabulate yourself, with the engine's own output shown inline. The aim is an **impartial walk-through of the mechanics**: where STAR fails a criterion or carries an honest tradeoff, this page says so and links a worked case, rather than arguing the method. (For the case *for* STAR, see [Why STAR Voting?](../topics/Why_STAR_Voting.md); for its limits, [STAR's honest limits](STAR_honest_limits.md).)
 
 For the **political, legal, and historical** questions (cost, constitutionality, security, the League of Women Voters, presidential use, Oregon history…), the [official FAQ](https://www.starvoting.org/faq) is the right source — those aren't things a tabulation engine can demonstrate.
 
-New to the terms? Start with [Ballot & Terminology Basics](../ballot_and_terminology_basics.md) and the [Glossary](../GLOSSARY.md).
+New to the terms? Start with [Ballot & Terminology Basics](../topics/ballot_and_terminology_basics.md) and the [Glossary](../GLOSSARY.md).
 
 ---
 
@@ -58,7 +58,7 @@ In the **runoff**, yes. However many stars you gave out, the Automatic Runoff co
 
 ## Q: Why is a blank — or a skipped candidate — counted as a zero?
 
-Because a blank means "I did not support this candidate," which is exactly what a 0 encodes — it can't help that candidate advance. But STAR's engine keeps *why* a zero is a zero: this library records a small **marker vocabulary** — `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all of which tabulate as 0 but are reported distinctly, so a deliberate abstention isn't confused with an active low score. A *whole* ballot left blank (or all-equal) is set aside as an abstention (turnout only), not folded into the tally. Full detail: [Abstention vs. a zero vs. NOTA](abstention_vs_zero_vs_nota.md) and ["Preference" — the word that causes half the confusion](../preference.md).
+Because a blank means "I did not support this candidate," which is exactly what a 0 encodes — it can't help that candidate advance. But STAR's engine keeps *why* a zero is a zero: this library records a small **marker vocabulary** — `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all of which tabulate as 0 but are reported distinctly, so a deliberate abstention isn't confused with an active low score. A *whole* ballot left blank (or all-equal) is set aside as an abstention (turnout only), not folded into the tally. Full detail: [Abstention vs. a zero vs. NOTA](abstention_vs_zero_vs_nota.md) and ["Preference" — the word that causes half the confusion](../topics/preference.md).
 
 ## Q: What is a preference matrix?
 
@@ -86,7 +86,7 @@ Yes — STAR is **batch summable**: each precinct can total its own stars and it
 
 ## Q: Can RCV-IRV eliminate a broadly-liked centrist? (the center squeeze)
 
-It can. IRV eliminates each round by *fewest first-choice votes*, so a centrist who is many voters' **second** choice but few voters' **first** choice can be knocked out early — the **center squeeze** — leaving two more-polarized finalists. This is a property of IRV's **elimination mechanic specifically**; it is *not* a property of ranked ballots in general (a Condorcet / [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) count of the *same* ballots isn't squeezed). STAR's score-then-runoff doesn't eliminate the centre the same way — but to be even-handed, **STAR is not immune to failure either**: it can miss the Condorcet winner (above) and it fails LNH, so this isn't "STAR wins on everything." Worked examples: [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the [center-squeeze cases](../../method_comparisons/center_squeeze/README.md). Method-to-method, evenhandedly: [RCV-IRV vs. STAR](../rcv_irv_vs_star.md).
+It can. IRV eliminates each round by *fewest first-choice votes*, so a centrist who is many voters' **second** choice but few voters' **first** choice can be knocked out early — the **center squeeze** — leaving two more-polarized finalists. This is a property of IRV's **elimination mechanic specifically**; it is *not* a property of ranked ballots in general (a Condorcet / [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) count of the *same* ballots isn't squeezed). STAR's score-then-runoff doesn't eliminate the centre the same way — but to be even-handed, **STAR is not immune to failure either**: it can miss the Condorcet winner (above) and it fails LNH, so this isn't "STAR wins on everything." Worked examples: [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the [center-squeeze cases](../../method_comparisons/center_squeeze/README.md). Method-to-method, evenhandedly: [RCV-IRV vs. STAR](../topics/rcv_irv_vs_star.md).
 
 ---
 
@@ -107,4 +107,4 @@ The full, honest catalogue is [STAR's honest limits](STAR_honest_limits.md) and 
 
 Cost, constitutionality, security, One-Person-One-Vote law, presidential use, endorsements, and STAR's history are covered at the **[official STAR Voting FAQ](https://www.starvoting.org/faq)**. This page stays in its lane: the tabulation mechanics, shown with examples you can run.
 
-**See also:** [Curriculum (101/201/301)](../CURRICULUM.md) · [Why STAR Voting?](../Why_STAR_Voting.md) · [Scored vs. ranked ballots](../scoring-methods-vs-ranked-voting.md) · [Glossary](../GLOSSARY.md)
+**See also:** [Curriculum (101/201/301)](../CURRICULUM.md) · [Why STAR Voting?](../topics/Why_STAR_Voting.md) · [Scored vs. ranked ballots](../topics/scoring-methods-vs-ranked-voting.md) · [Glossary](../GLOSSARY.md)

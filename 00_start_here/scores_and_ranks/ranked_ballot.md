@@ -1,8 +1,8 @@
 # The Ranked Ballot
 
-*One ballot style, many counts. A ranked ballot asks one question — "put the candidates in order" — and that single design choice fixes what any method downstream can ever know about you: your **order**, never your **strength**. This page is the anatomy of the ballot itself; its twin is [the score ballot](score_ballot.md), and the side-by-side comparison is [alternate ballot styles](../ballot_styles.md).*
+*One ballot style, many counts. A ranked ballot asks one question — "put the candidates in order" — and that single design choice fixes what any method downstream can ever know about you: your **order**, never your **strength**. This page is the anatomy of the ballot itself; its twin is [the score ballot](score_ballot.md), and the side-by-side comparison is [alternate ballot styles](../topics/ballot_styles.md).*
 
-→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [strict vs. weak ranks](strict_vs_weak_ranks.md) · [the ranked-ballot method zoo](../ranked_ballot_methods_zoo.md) (fifteen ways to count this one ballot) · terminology canon: [TIPS_terminology](../TIPS_terminology.md)
+→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [strict vs. weak ranks](strict_vs_weak_ranks.md) · [the ranked-ballot method zoo](../topics/ranked_ballot_methods_zoo.md) (fifteen ways to count this one ballot) · terminology canon: [TIPS_terminology](../TIPS_terminology.md)
 
 ---
 
@@ -22,7 +22,7 @@ It's the same voter, the same opinion, as on [the score ballot](score_ballot.md)
 | David | 3rd | ● | 4 |
 | Ella | 5th | ○ | 0 |
 
-Notice the middle of the field: the voter feels Carmen = David (both 4s), but this ballot *has* to call one of them 2nd and the other 3rd. The full side-by-side walk-through is [alternate ballot styles](../ballot_styles.md).
+Notice the middle of the field: the voter feels Carmen = David (both 4s), but this ballot *has* to call one of them 2nd and the other 3rd. The full side-by-side walk-through is [alternate ballot styles](../topics/ballot_styles.md).
 
 ## The grid rules — and how they bite
 
@@ -49,14 +49,14 @@ This is the repo's core terminology point: **RCV names the ballot, not the count
 | [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) | elimination rounds | what "RCV" usually means in the US |
 | [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) | Condorcet / round-robin | reads every pairwise matchup; allows equal ranks |
 | STV | proportional | multi-winner transfers ([STV vs proportional STAR](../proportional_representation/stv/proportional_stv_vs_star.md)) |
-| [Borda](../other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../ranked_ballot_methods_zoo.md) runs 15+ on one screen |
+| [Borda](../other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../topics/ranked_ballot_methods_zoo.md) runs 15+ on one screen |
 
-Different tabulations of the same ballots routinely elect **different winners** — which is why "the ballots decided" is never the whole story. See [what is a voting method? — a ballot and a count](../voting_method_ballot_and_count.md).
+Different tabulations of the same ballots routinely elect **different winners** — which is why "the ballots decided" is never the whole story. See [what is a voting method? — a ballot and a count](../topics/voting_method_ballot_and_count.md).
 
 ## Related
 
 - [The score ballot](score_ballot.md) — the twin page: independent 0–5 values instead of an order
-- [Alternate ballot styles](../ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
+- [Alternate ballot styles](../topics/ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
 - [Scores vs. ranks](scores_vs_ranks.md) — why order and strength are different data
 - [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) — where unranked finalists end up under IRV
 - [Which RCV-IRV?](../RCV_IRV/RCV_IRV_variants.md) · Glossary: [`ranked ballot`](../GLOSSARY.md)

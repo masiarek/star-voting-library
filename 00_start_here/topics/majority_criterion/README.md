@@ -82,8 +82,8 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 
 | Method | Majority Criterion | Relaxed Majority Criterion | Detailed treatment |
 |--------|:--:|:--:|--------------------|
-| Choose-One (plurality) | ✅ | ✅ | [plurality](../../plurality.md) |
-| RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../../rcv_irv_vs_star.md) |
+| Choose-One (plurality) | ✅ | ✅ | [plurality](../plurality.md) |
+| RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
 | **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../STAR_Voting/STAR_honest_limits.md) |
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../Range_Voting/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../Approval_Voting/) |

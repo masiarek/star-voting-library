@@ -1,6 +1,6 @@
 # Proportional Representation
 
-*New to multi-winner? Start with the plain-language fork: [Electing more than one, simply](../electing_more_than_one.md) — majoritarian ("the N best") vs. proportional ("mirror the electorate"). This folder is the proportional half.*
+*New to multi-winner? Start with the plain-language fork: [Electing more than one, simply](../topics/electing_more_than_one.md) — majoritarian ("the N best") vs. proportional ("mirror the electorate"). This folder is the proportional half.*
 
 Multi-seat methods that give a coalition seats **in proportion to its size**, rather than letting the largest group take every seat. Two families, same goal, different ballots and machinery:
 

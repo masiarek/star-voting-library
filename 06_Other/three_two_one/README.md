@@ -1,12 +1,12 @@
 # 3-2-1 Voting
 
-**3-2-1 Voting** (designed by [Jameson Quinn](../../00_start_here/in_memoriam_jameson_quinn.md) of the [Center for Election Science](https://electionscience.org)) is a rated method that reaches a winner in three named steps. Voters rate each candidate **Good**, **OK**, or **Bad**:
+**3-2-1 Voting** (designed by [Jameson Quinn](../../00_start_here/topics/in_memoriam_jameson_quinn.md) of the [Center for Election Science](https://electionscience.org)) is a rated method that reaches a winner in three named steps. Voters rate each candidate **Good**, **OK**, or **Bad**:
 
 1. **Semifinalists** — the **3** candidates with the most *Good* ratings.
 2. **Finalists** — of those 3, the **2** with the fewest *Bad* ratings.
 3. **Winner** — of those 2, the one rated higher on more ballots (a virtual head-to-head runoff).
 
-The name is the countdown: **3** semifinalists → **2** finalists → **1** winner. It's a *reference* method here for comparison — **not** one of the three [Equal Vote Coalition](https://www.equal.vote) methods ([STAR, Approval, Ranked Robin](../../00_start_here/choosing_among_evc_methods.md)) — kept in `06_Other/` alongside RCV-IRV, Range, and STV.
+The name is the countdown: **3** semifinalists → **2** finalists → **1** winner. It's a *reference* method here for comparison — **not** one of the three [Equal Vote Coalition](https://www.equal.vote) methods ([STAR, Approval, Ranked Robin](../../00_start_here/topics/choosing_among_evc_methods.md)) — kept in `06_Other/` alongside RCV-IRV, Range, and STV.
 
 ## The engine (and why it's here)
 
@@ -63,7 +63,7 @@ The teaching point: **Memphis has the most first-choice support (42) and would w
 ## Properties
 
 - **Passes the Relaxed Majority Criterion** (like STAR and IRV; unlike Score/Approval) — see [Majority Criterion](../../00_start_here/topics/majority_criterion/README.md).
-- **Strategy-resistant** in Quinn's [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) simulations — it's one of the methods where honesty is the practical best play (see [strategic voting](../../00_start_here/strategic_voting.md)).
+- **Strategy-resistant** in Quinn's [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) simulations — it's one of the methods where honesty is the practical best play (see [strategic voting](../../00_start_here/topics/strategic_voting.md)).
 - A **rated** method with a small 3-level scale, and a runoff-style final step (a distant cousin of STAR's score-then-runoff).
 
-**See also:** [Choosing among the Equal Vote methods](../../00_start_here/choosing_among_evc_methods.md) · [Strategic voting](../../00_start_here/strategic_voting.md) · [electowiki: 3-2-1 voting](https://electowiki.org/wiki/3-2-1_voting) · [Jameson Quinn — Make All Votes Count](https://medium.com/@jameson.quinn/make-all-votes-count-part-2-single-winner-5a2fb47123d5)
+**See also:** [Choosing among the Equal Vote methods](../../00_start_here/topics/choosing_among_evc_methods.md) · [Strategic voting](../../00_start_here/topics/strategic_voting.md) · [electowiki: 3-2-1 voting](https://electowiki.org/wiki/3-2-1_voting) · [Jameson Quinn — Make All Votes Count](https://medium.com/@jameson.quinn/make-all-votes-count-part-2-single-winner-5a2fb47123d5)

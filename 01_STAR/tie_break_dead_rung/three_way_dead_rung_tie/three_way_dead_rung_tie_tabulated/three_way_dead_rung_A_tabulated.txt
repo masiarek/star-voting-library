@@ -2,7 +2,7 @@
 SOURCE FILE:     three_way_dead_rung_A.yaml
 SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  three_way_dead_rung_A_tabulated.txt
-TABULATED AT:    2026-07-14 18:13:23
+TABULATED AT:    2026-07-15 06:34:05
 ======================================================================
 
 election_title: 'Three-way dead-rung tie — published order A,B,C elects A'

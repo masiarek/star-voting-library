@@ -191,7 +191,7 @@ Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **indep
 - [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) — the IRV ballots that stop counting; Ranked Robin never exhausts one (every ballot is read in every pair)
 - [Is IRV "just plurality"?](../RCV_IRV/RCV_IRV_and_plurality.md) — why IRV isn't pairwise
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — RR is still order-only, unlike STAR
-- [RCV-IRV vs. STAR (side-by-side)](../rcv_irv_vs_star.md)
+- [RCV-IRV vs. STAR (side-by-side)](../topics/rcv_irv_vs_star.md)
 - [RCV vs. IRV vs. RCV-IRV — terminology](../RCV_IRV/RCV-IRV-confusing-name.md)
 
 ## Learn more — external

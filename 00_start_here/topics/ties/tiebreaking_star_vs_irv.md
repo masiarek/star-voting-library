@@ -63,5 +63,5 @@ The single-rule simplicity is a **real virtue**: "eliminate the candidate with t
 - [STAR Tie-Breaking — The Full Chain](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) — STAR's two ladders and the "dead rung."
 - [Which RCV-IRV? — variants & tie-breaks](../../RCV_IRV/RCV_IRV_variants.md) — how ranked-ballot methods differ, including tie handling.
 - [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md) — why RCV-IRV's strict ranks carry less information than scores.
-- [How the Count Works — STAR vs RCV-IRV](../../tabulation_star_vs_irv.md) — the two counts side by side (the non-tie case).
+- [How the Count Works — STAR vs RCV-IRV](../tabulation_star_vs_irv.md) — the two counts side by side (the non-tie case).
 - Worked lot-decided ties: [BetterVoting `jfk7pd`](../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) · [the dead-rung set](../../../01_STAR/tie_break_dead_rung/README.md).

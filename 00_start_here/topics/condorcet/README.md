@@ -12,7 +12,7 @@
 | **BTR / Baldwin / Nanson** | ✅ always | Condorcet-safe IRV variants | [Which RCV-IRV?](../../RCV_IRV/RCV_IRV_variants.md) |
 | **STAR** | ⚠️ very often | highly Condorcet-efficient, not guaranteed; the runoff usually recovers it | [STAR automatic runoff](../../STAR_Voting/STAR_Automatic_Runoff.md) |
 | **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
-| **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../../scoring-methods-vs-ranked-voting.md) |
+| **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 
 When there's **no** Condorcet winner (a cycle), methods differ in how they resolve it — see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections where STAR, IRV, and the Condorcet winner disagree.
 

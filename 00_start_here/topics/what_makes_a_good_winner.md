@@ -2,7 +2,7 @@
 
 *When we say a voting method "gets it right" or "elects the wrong winner," what do we actually mean? There is no single **correct** winner handed down from on high — "good winner" is a **design choice** about what we value. This page lays out the competing ideals, shows them disagreeing on real elections in this repo, and pins down the vocabulary (consensus candidate, strong candidate, utilitarian winner) so the rest of the docs can use it precisely.*
 
-→ **Level: Voting 201** — Curriculum [201.6](CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](topics/condorcet/) · [Center squeeze](topics/center_squeeze/) · [Majority criterion](topics/majority_criterion/) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).
+→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](condorcet) · [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).
 
 ## The trap: "the winner should have won"
 
@@ -15,8 +15,8 @@ This isn't a gap waiting to be filled; it's a **theorem**. Arrow's impossibility
 | Ideal | The winner is… | Also called | The criterion |
 |-------|----------------|-------------|---------------|
 | **Most first choices** | whoever leads the first-preference count | the plurality leader / front-runner | (plurality) |
-| **Majority's choice** | someone a majority ranks first / prefers | the majority winner | [Majority criterion](topics/majority_criterion/) |
-| **Beats everyone head-to-head** | who wins every one-on-one matchup | the **consensus candidate** / **Condorcet winner** / a "strong" candidate | [Condorcet criterion](topics/condorcet/) |
+| **Majority's choice** | someone a majority ranks first / prefers | the majority winner | [Majority criterion](majority_criterion) |
+| **Beats everyone head-to-head** | who wins every one-on-one matchup | the **consensus candidate** / **Condorcet winner** / a "strong" candidate | [Condorcet criterion](condorcet) |
 | **Highest overall support** | who the electorate rates highest in total | the **utilitarian** / best-liked winner | (utilitarian efficiency) |
 
 These are *different questions*. "Who has the most passionate first-choice base?" is not "who could beat any rival in a runoff?" is not "who is rated highest by everyone?" A **polarizing front-runner** can lead first choices while losing every head-to-head; a **consensus candidate** can be almost nobody's favorite yet everybody's acceptable second choice and beat all rivals one-on-one.
@@ -30,7 +30,7 @@ These are *different questions*. "Who has the most passionate first-choice base?
 
 ## They disagree — on real elections in this repo
 
-**[Tennessee (BV2131)](../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md).** One ballot set, three "good winners":
+**[Tennessee (BV2131)](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md).** One ballot set, three "good winners":
 
 - Plurality → **Memphis** (most first choices — but 58% rank it *last*).
 - RCV-IRV → **Knoxville** (last one standing after eliminations).
@@ -38,7 +38,7 @@ These are *different questions*. "Who has the most passionate first-choice base?
 
 Which is "correct"? Memphis is the plurality answer; Nashville is the consensus answer. The center-squeeze critique of IRV is precisely that it discards the consensus candidate — but that critique only bites if you *value* the consensus candidate.
 
-**[Pet poll II (BV2133)](../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners.md).** Four methods, **four different winners** on the same 32 voters: Dog (plurality front-runner), Fish (IRV), Bird (broadly approved), Cat (STAR / the consensus Condorcet winner). Each is the "right" winner under *some* ideal.
+**[Pet poll II (BV2133)](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners.md).** Four methods, **four different winners** on the same 32 voters: Dog (plurality front-runner), Fish (IRV), Bird (broadly approved), Cat (STAR / the consensus Condorcet winner). Each is the "right" winner under *some* ideal.
 
 **A real one — Alaska's 2022 special U.S. House election.** Begich was the **Condorcet winner**: head-to-head he beat Palin (101,229 to 63,621) *and* Peltola (93,052 to 79,558) — he'd have won a runoff against either. But RCV-IRV eliminated Begich in an earlier round (too few first choices — the center squeeze) and elected **Peltola**. That's a **Condorcet failure**: a real election with a consensus candidate the method didn't pick (Graham-Squire & McCune, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075)). Whether you call it a "failure" depends entirely on whether you hold the consensus-candidate ideal — which is the point of this page.
 
@@ -70,7 +70,7 @@ In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they 
 - **Approval** rewards **broad acceptability**.
 - **Plurality / IRV** center on **first-choice** support (all at once, or round by round), which is why they can miss the consensus candidate.
 
-*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](STAR_Voting/STAR_honest_limits.md).)*
+*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).)*
 
 ## Measuring it empirically: VSE / Bayesian Regret
 
@@ -84,7 +84,7 @@ In these studies the ordering is consistently roughly **STAR ≳ Approval > RCV-
 
 ## Multi-winner: "good" changes meaning
 
-For a *body* of seats, "good winner" becomes "good **body**," and a new ideal appears: **proportionality** — the winners should mirror the electorate's factions, not just repeat its majority. See the [Pets Governance set](../method_comparisons/pets_governance/): the same voters give a **majority sweep** under Bloc STAR/Approval but **minority representation** under STAR-PR and STV. Neither is "wrong" — they answer different questions ("who does the majority want?" vs. "does everyone get represented?").
+For a *body* of seats, "good winner" becomes "good **body**," and a new ideal appears: **proportionality** — the winners should mirror the electorate's factions, not just repeat its majority. See the [Pets Governance set](../../method_comparisons/pets_governance): the same voters give a **majority sweep** under Bloc STAR/Approval but **minority representation** under STAR-PR and STV. Neither is "wrong" — they answer different questions ("who does the majority want?" vs. "does everyone get represented?").
 
 ## Takeaway
 
@@ -97,8 +97,8 @@ A good *winner* is only half of it. The rest is whether the *method* is practica
 ## See also
 
 - [What makes a voting *method* good? (criteria & practicality)](what_makes_a_voting_method_good.md)
-- [Condorcet efficiency (topic hub)](topics/condorcet/) · [Ranked Robin vs. "the Condorcet winner"](RCV_Ranked_Robin/ranked_robin_vs_condorcet.md)
-- [Center squeeze](topics/center_squeeze/) · [Majority criterion](topics/majority_criterion/) · [Spoiler effect](spoiler_effect.md)
-- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](STAR_Voting/STAR_honest_limits.md) · [Glossary](GLOSSARY.md)
+- [Condorcet efficiency (topic hub)](condorcet) · [Ranked Robin vs. "the Condorcet winner"](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md)
+- [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Spoiler effect](spoiler_effect.md)
+- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md) · [Glossary](../GLOSSARY.md)
 
 **External references:** [Utilitarian winner (electowiki)](https://electowiki.org/wiki/Utilitarian_winner) · [Condorcet winner criterion (electowiki)](https://electowiki.org/wiki/Condorcet_winner_criterion) · [Voter Satisfaction Efficiency](https://electionscience.org/library/voter-satisfaction-efficiency/) · Graham-Squire & McCune, *RCV in the US*, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075) (the Alaska Condorcet failure).

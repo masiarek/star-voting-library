@@ -23,7 +23,7 @@ They're at *different levels of generality* — a category, a specific method in
 | **Consensus Choice** | a **sibling brand** (Copeland-family, different tiebreak) | *Better Choices for Democracy* | — |
 | ~~**RCV-RR**~~ | *this repo's* house shorthand — **not** an external term | — | — |
 
-Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../ranked_ballot_methods_zoo.md).
+Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../topics/ranked_ballot_methods_zoo.md).
 
 ## Why the two Wikipedia articles overlap (the trap you hit)
 
@@ -38,7 +38,7 @@ Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked 
 - **[equal.vote](https://www.equal.vote/ranked_robin)** is the promoter (**STAR / Equal Vote** camp) — the source for the brand, not a neutral referee.
 - **Wikipedia / academic** ("Condorcet method," "Copeland's method") is the neutral ground — but note the "round-robin voting" umbrella framing is itself contested.
 
-(Fuller roster of who-leans-where: [advocacy organizations](../advocacy_organizations.md) · [who's who](../whos_who_voting_reform.md).)
+(Fuller roster of who-leans-where: [advocacy organizations](../topics/advocacy_organizations.md) · [who's who](../topics/whos_who_voting_reform.md).)
 
 ## The clear version, in this repo
 

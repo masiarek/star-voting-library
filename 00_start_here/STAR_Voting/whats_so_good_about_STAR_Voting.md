@@ -29,7 +29,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** Okay, what's actually broken about how we vote now?
 
-**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../spoiler_effect.md).
+**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../topics/spoiler_effect.md).
 
 **Larry:** Give me the cartoon version.
 
@@ -132,7 +132,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** This is the sleeper feature. STAR is **[precinct-summable](STAR_summability.md)** — each precinct reports its score totals and a small for/equal/against table, and you just add precincts together. No shipping every ballot to one central computer. That means fast results, easy audits, and it works with paper ballots and vote- by-mail. Any citizen can re-add the numbers.
 
-> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `00_start_here/Why_STAR_Voting.md` — Slides 5–9 bullets.
+> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `00_start_here/topics/Why_STAR_Voting.md` — Slides 5–9 bullets.
 
 ---
 
@@ -152,7 +152,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 **Larry:** Do you have a real election, not a thought experiment?
 
 **Adam:** Two famous ones.
-- **[Burlington, Vermont, 2009](../spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
+- **[Burlington, Vermont, 2009](../topics/spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
 - **[Alaska 2022 special](../RCV_IRV/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head, but the two Republicans split and Begich was eliminated; Peltola won and the seat flipped. Voters who ranked Palin first effectively helped elect their last choice — favorite betrayal, live.
 
 **Larry:** So how does STAR avoid all that?
@@ -175,7 +175,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** No method is perfect — that's a theorem, not an opinion (Gibbard). STAR isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it diverges, it's choosing a candidate with broad, strong support over a weakly-liked compromise ([three notions of "winner"](STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug. Saying that out loud is what earns you the room.
 
-> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `00_start_here/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `00_start_here/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
+> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `00_start_here/topics/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `00_start_here/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
 
 ---
 

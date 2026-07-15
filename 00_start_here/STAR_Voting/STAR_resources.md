@@ -23,7 +23,7 @@
 
 ## Deep dives & data
 
-- **[Voter Satisfaction Efficiency (VSE)](https://electionscience.github.io/vse-sim/)** — the simulation metric ([Jameson Quinn](../in_memoriam_jameson_quinn.md)'s work) behind "STAR scores well on satisfaction"; read with [election simulation models](../election_simulation_models.md) on why every such number is model-conditional.
+- **[Voter Satisfaction Efficiency (VSE)](https://electionscience.github.io/vse-sim/)** — the simulation metric ([Jameson Quinn](../topics/in_memoriam_jameson_quinn.md)'s work) behind "STAR scores well on satisfaction"; read with [election simulation models](../topics/election_simulation_models.md) on why every such number is model-conditional.
 - **[Marcus Ogren — Voting in the Abstract](https://voting-in-the-abstract.medium.com/)** — field-wide analysis from a *Condorcet-leaning* researcher; a useful outside-the-STAR-bubble perspective.
 - **[electowiki: STAR voting](https://electowiki.org/wiki/STAR_voting)** · **[Wikipedia: STAR voting](https://en.wikipedia.org/wiki/STAR_voting)** — encyclopedia references.
 - **[Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/)** (2023) — a rare **joint STAR + Approval case** in one essay, on a civil-debate outlet. Lean disclosed: the authors lead STAR Voting Action and Utah Approves — advocates, writing well. Its best hard datum is the 2021 St. Louis Approval primary (winner ~35% under choose-one framing vs 57% approval) — verify against a primary source before citing it as fact here.
@@ -33,10 +33,10 @@
 Nearly everything above is made by people who advocate STAR (or another method). That doesn't make it wrong — but it's why this library exists: to let you *check* the claims against runnable elections. Pair the enthusiasm with:
 
 - [The benefits of STAR](STAR_benefits.md) *and* [STAR's honest limits](STAR_honest_limits.md) — the case and the caveats, from the same source
-- [Do the experts really think RCV-IRV is "bad"?](../expert_consensus_and_irv.md) — why "the experts agree" needs unpacking (advocates on every side)
-- [Who's who in voting methods](../whos_who_voting_reform.md) · [Advocacy organizations](../advocacy_organizations.md) — who made what, affiliations disclosed
+- [Do the experts really think RCV-IRV is "bad"?](../topics/expert_consensus_and_irv.md) — why "the experts agree" needs unpacking (advocates on every side)
+- [Who's who in voting methods](../topics/whos_who_voting_reform.md) · [Advocacy organizations](../topics/advocacy_organizations.md) — who made what, affiliations disclosed
 
 ## More from this repo
 
 - [STAR — start here](STAR_start_here.md) · [STAR FAQ](STAR_FAQ.md) · [the Scoring Round](STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Automatic_Runoff.md)
-- [How to learn about voting methods](../how_to_learn_about_voting_methods.md) — the guided reading path · [101 / 201 / 301 Curriculum](../CURRICULUM.md)
+- [How to learn about voting methods](../topics/how_to_learn_about_voting_methods.md) — the guided reading path · [101 / 201 / 301 Curriculum](../CURRICULUM.md)
