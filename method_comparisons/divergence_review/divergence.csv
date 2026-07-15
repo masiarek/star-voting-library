@@ -91,6 +91,7 @@ APPROVAL_OR_MINOR,method_comparisons/_main/count_simplicity_star_vs_irv.yaml,5,4
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/brams_grading_paradox/brams_ex3_two_candidates_c2_b5.yaml,2,5,Beth,Beth,Beth,Beth,Beth,Alan,Alan,Beth,Beth,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/brams_grading_paradox/brams_grading_paradox_c3_b3.yaml,3,3,Baker,Baker,Chen,Baker,Baker,Adams,Adams,Baker,Baker,2,True,False,False
 APPROVAL_OR_MINOR,method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml,3,81,Ada,Ada,Ada,Ada,Ada,Ben,Ben,Ada,Ada,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml,3,15,Bruno,Bruno,Bruno,Bruno,Bruno,Cora,Bruno,Bruno,Bruno,0,False,False,False
@@ -127,6 +128,7 @@ IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml,3,5,Ann,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
+IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,YAML_library/1_positive/trash_delete.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False

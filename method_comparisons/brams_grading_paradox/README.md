@@ -2,7 +2,7 @@
 
 *The most famous Approval advocate's case against grading systems, run through the engine. Steven Brams' three-voter example shows the top-grades candidate (Adams) is not the head-to-head champion (Baker). True — but counted under **STAR**, the example vindicates the automatic runoff: STAR elects Baker, the [Condorcet winner](../../00_start_here/topics/condorcet/). What the construction actually indicts is pure score summation — and its proposed Approval fix turns out to depend entirely on where each voter draws the 0/1 line.*
 
-**Provenance.** The example and its theorem are published in Brams & Potthoff, ["The paradox of grading systems"](https://link.springer.com/article/10.1007/s11127-015-0303-6) (*Public Choice* 165, 2015, pp. 193–210; [free preprint](https://mpra.ub.uni-muenchen.de/63268/)) and appear in Brams' talks; he raised the argument to this repo's author in correspondence (September 2024) as the case for Approval over STAR. Brams co-wrote the modern case for Approval voting itself, so this is the steelman, from the source. (His other appearance in this library: [many IRV pathologies in one election](../paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md).)
+**Provenance.** The theorem and a family of examples are published in Brams & Potthoff, ["The paradox of grading systems"](https://link.springer.com/article/10.1007/s11127-015-0303-6) (*Public Choice* 165, 2015, pp. 193–210; [free preprint](https://mpra.ub.uni-muenchen.de/63268/)); Brams raised the argument to this repo's author in correspondence (September 2024) as the case for Approval over STAR. The case on this page is the **talk-slide variant** of the paper's Example 2: the published version gives voter 3 the grades (0,1,1) instead of (1,2,1), which leaves Baker and Chen tied in *every* head-to-head view — a [dead rung](../../01_STAR/tie_break_dead_rung/) a deterministic count must lot-break — while the slide variant sharpens it to a strict Condorcet winner. Brams co-wrote the modern case for Approval voting itself, so this is the steelman, from the source. (His other appearance in this library: [many IRV pathologies in one election](../paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md).)
 
 ## The example — grades {0..3}, three voters
 
@@ -88,11 +88,23 @@ And the dispute doesn't vanish — it moves into the voting booth. "Dichotomize 
 | The 0/1 cut applied to the same grades | Ballots become | Totals A–B–C | The "indisputable" winner |
 |---|---|:--:|---|
 | Brams' slide cut — each voter approves their top grades | (1,0,0) (0,1,1) (0,1,0) | 1–2–1 | **Baker** |
-| Approve anything above 0 — the LH engine's reading | (1,0,0) (1,1,1) (1,1,1) | 3–2–2 | **Adams** |
+| Approve anything above 0 (the minimal uniform cut) | (1,0,0) (1,1,1) (1,1,1) | 3–2–2 | **Adams** |
 | Approve grades ≥ 2 (the top half of the scale) | (1,0,0) (1,1,1) (0,1,0) | 2–2–1 | **Adams–Baker tie** |
 | Approve only a top grade (3) | (1,0,0) (0,1,1) (0,0,0) | 1–1–1 | **three-way tie** |
 
-Same grades, four reasonable cuts, three different outcomes. The "indisputable" winner is Adams, Baker, or a tie depending on a choice the method silently delegates to each voter — Approval's [threshold dilemma](../../00_start_here/Approval_Voting/approval_honest_limits.md), and the reason [there is no single STAR-vs-Approval divergence rate](../star_vs_approval_divergence.md). (On Arrow: cardinal ballots do sidestep Arrow's ranking framework, as Brams says — but [Gibbard's theorem](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) applies to every method, Approval included; the strategic burden just relocates to the threshold.)
+Same grades, four reasonable cuts, three different outcomes. Even the engine's `Approval = Adams` line above is a fifth cut at work: its comparison block approves **3+ stars** (calibrated for real 0–5 STAR ballots), which only the 3s on these ballots clear — approval totals 1–1–1, and the tie falls to the left-most column. The threshold decides, always; that *is* the point. The "indisputable" winner is Adams, Baker, or a tie depending on a choice the method silently delegates to each voter — Approval's [threshold dilemma](../../00_start_here/Approval_Voting/approval_honest_limits.md), and the reason [there is no single STAR-vs-Approval divergence rate](../star_vs_approval_divergence.md). (On Arrow: cardinal ballots do sidestep Arrow's ranking framework, as Brams says — but [Gibbard's theorem](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) applies to every method, Approval included; the strategic burden just relocates to the threshold.)
+
+## More from the paper — two examples worth counting
+
+The full paper ([MPRA preprint](https://mpra.ub.uni-muenchen.de/63268/)) grades the paradox from weak (the average-grade and head-to-head winner *sets* overlap but differ) to strong (no overlap at all), and two of its constructions earned their own case files here:
+
+- **[Example 6 — three counts, three winners](brams_grading_paradox_pages/brams_ex6_three_winners_c3_b9.md)** (Amos, Bree, Cole; 9 voters, grades {0..2}). The paper's showpiece, proven by exhaustive search to be the *unique* minimal bloc-structured election of its kind: the **grade totals** crown Amos (11–10–10), the **median grade** crowns Bree (2 vs 1 vs 1 — the Majority Judgment answer), and **head-to-head** crowns Cole, who beats both rivals. STAR sides with head-to-head — the score round ties Bree/Cole at 10, the tiebreak advances Cole (he beats Bree 4–2), and Cole wins the runoff 3–2. Every bloc's preferences are dichotomous, so their natural Approval ballots elect Cole too (6–5–7); a uniform any-non-zero cut elects Amos (9–5–7). One election, and "who should win?" gets a different answer from every aggregation philosophy — the whole methods debate in nine ballots.
+- **[Example 3 — two candidates](brams_grading_paradox_pages/brams_ex3_two_candidates_c2_b5.md)** (Alan, Beth; 5 voters). The strong paradox needs no third candidate: two all-in fans put Alan ahead on grade totals 4–3, but three of five voters grade Beth higher, and STAR's runoff elects her 3–2. The purest "strength of support vs number of supporters" collision — nothing else in the election to blame.
+
+Two more findings worth carrying, no case files needed:
+
+- **At two grades, RCV-IRV is the odd one out.** The paper's Proposition 2 shows that on 0/1 ballots the median-grade and Borda counts collapse into Approval — same winner, always — but the **Hare (IRV) elimination machinery does not**: their 27-voter approval-ballot counterexample has Approval, head-to-head, median, and Borda all electing the same candidate while Hare eliminates that candidate first. Even on the simplest possible ballot, elimination order can defect from every aggregate count. (No LH case: reproducing it faithfully needs fractional splitting of tied ranks, which the vendored RCV-IRV engine doesn't do.)
+- **How often does the grade-leader-vs-head-to-head split happen?** Their impartial-culture simulation puts the weak paradox at **22%–56%**, rising with the number of candidates and with the number of grades (up to about 7), peaking around 5–8 voters — and the authors themselves stress these are near-certain *overestimates* of real electorates, the same caveat this repo attaches to every simulated rate ([there is no single divergence number](../star_vs_approval_divergence.md)).
 
 ## The honest concession
 
@@ -102,8 +114,10 @@ STAR is **not** Condorcet-compliant: when the Condorcet winner isn't among the t
 
 | Page (read this) | What it shows | src |
 |---|---|:--:|
-| [the case page](brams_grading_paradox_pages/brams_grading_paradox_c3_b3.md) | ballots, full engine report, cross-references | [`.yaml`](brams_grading_paradox_c3_b3.yaml) |
+| [the slide example](brams_grading_paradox_pages/brams_grading_paradox_c3_b3.md) | grade leader Adams vs Condorcet winner Baker; STAR's runoff catches it | [`.yaml`](brams_grading_paradox_c3_b3.yaml) |
+| [Example 6 — three counts, three winners](brams_grading_paradox_pages/brams_ex6_three_winners_c3_b9.md) | Score→Amos, median→Bree, head-to-head→Cole; STAR (and the blocs' natural Approval ballots) side with Cole; the tiebreak rung on display | [`.yaml`](brams_ex6_three_winners_c3_b9.yaml) |
+| [Example 3 — two candidates](brams_grading_paradox_pages/brams_ex3_two_candidates_c2_b5.md) | the strong paradox at c=2: grade totals say Alan, three of five voters say Beth; the runoff is the whole story | [`.yaml`](brams_ex3_two_candidates_c2_b5.yaml) |
 
-LH-only for now — a BetterVoting election (BV2189) can back it whenever wanted; the ballots are three tiny score rows. Up: [method_comparisons — same ballots, different methods](../).
+All three are LH-only for now — BetterVoting elections (BV2189+) can back them whenever wanted; every ballot set is a handful of tiny score rows. Up: [method_comparisons — same ballots, different methods](../).
 
 # file: README.md

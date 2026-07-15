@@ -1,0 +1,40 @@
+election_title: "Brams Example 3 — two candidates: two loud fans vs three mild preferences"
+
+scenario_description: |-
+  Example 3 of Brams & Potthoff, "The paradox of grading systems" (Public
+  Choice 165, 2015): the strong paradox needs only TWO candidates. Grades
+  {0..2}, five voters: two grade (Alan 2, Beth 0), three grade (Alan 0,
+  Beth 1). Alan wins the grade totals 4-3 on the strength of two maximal
+  fans, but three of the five voters grade Beth higher — the purest
+  "strength of support vs number of supporters" collision, with no
+  finalist-selection step to muddy it. STAR's automatic runoff is the
+  whole story at two candidates: Beth wins it 3-2. Pure score summation
+  elects Alan.
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Alan,Beth
+  2,0   # two voters — all-in for Alan
+  2,0
+  0,1   # three voters — mildly prefer Beth
+  0,1
+  0,1
+
+expected_winners:
+  - Beth
+
+# file: brams_ex3_two_candidates_c2_b5.yaml

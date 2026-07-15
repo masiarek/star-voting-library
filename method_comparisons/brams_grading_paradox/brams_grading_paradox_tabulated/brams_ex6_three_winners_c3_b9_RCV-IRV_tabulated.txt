@@ -1,0 +1,23 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Brams Example 6 — three counts, three winners (STAR sides with head-to-head)
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Amos, Bree, Cole
+     2 ×   Amos > Bree      (2, 2, 0)
+     3 ×   Bree > Cole > Amos      (1, 2, 2)
+     4 ×   Amos > Cole      (1, 0, 1)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Amos               6  Elected
+Bree               3  Rejected
+Cole               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Amos
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,0 +1,49 @@
+election_title: "Brams Example 6 — three counts, three winners (STAR sides with head-to-head)"
+
+scenario_description: |-
+  Example 6 of Brams & Potthoff, "The paradox of grading systems" (Public
+  Choice 165, 2015): nine voters in three like-minded blocs grade three
+  candidates {0..2}, and three grading aggregations crown three DIFFERENT
+  winners — proven by the authors' exhaustive search to be the unique
+  minimal party-structured example of this strong paradox:
+    - Highest grade total (Score): Amos 11, Bree 10, Cole 10 -> AMOS.
+    - Highest median grade: Bree 2 (Amos 1, Cole 1)          -> BREE.
+    - Head-to-head (Condorcet): Cole beats Amos 3-2 and Bree 4-2 -> COLE.
+  STAR sides with head-to-head: Bree/Cole tie at 10 for second place, the
+  tie breaks to Cole (he beats Bree 4-2), and Cole wins the runoff 3-2 with
+  4 Equal Support ballots. Every voter here has dichotomous preferences, so
+  their natural Approval ballots elect Cole too (6-5-7) — but a uniform
+  any-non-zero cut elects Amos (9-5-7). Where the 0/1 line falls decides
+  the approval winner; no cut is canonical.
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Amos,Bree,Cole
+  2,2,0   # bloc 1 (2 voters) — Amos and Bree top, Cole bottom
+  2,2,0
+  1,2,2   # bloc 2 (3 voters) — Bree and Cole top, Amos middling
+  1,2,2
+  1,2,2
+  1,0,1   # bloc 3 (4 voters) — Amos and Cole middling, Bree bottom
+  1,0,1
+  1,0,1
+  1,0,1
+
+expected_winners:
+  - Cole
+
+# file: brams_ex6_three_winners_c3_b9.yaml
