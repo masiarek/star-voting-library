@@ -194,6 +194,15 @@ def analyze(path):
     approval = w.approval_winner(candidates, ballots, order)
     score = _score_winner(candidates, ballots, order)
 
+    # Approval-conversion artifact check (mirrors the engine's inline note):
+    # the comparison approves scores >= APPROVAL_STARS_MIN, so on low-scoring
+    # profiles every candidate can end up with 0 approvals, or several can tie
+    # at the top — either way the "Approval winner" is just the priority order.
+    approvals = w.comparison_approvals(candidates, ballots)
+    appr_top = max(approvals.values()) if approvals else 0
+    appr_tied = sum(1 for c in candidates if approvals[c] == appr_top)
+    appr_artifact = appr_top == 0 or appr_tied > 1
+
     rr_conv_sensitive = rr_weak != rr_strict
 
     return {
@@ -212,6 +221,9 @@ def analyze(path):
         "tie_ballots": tie_ballots,
         "irv_fragile": irv_fragile,
         "rr_conv_sensitive": rr_conv_sensitive,
+        "appr_artifact": appr_artifact,
+        "appr_top": appr_top,
+        "appr_tied": appr_tied,
         "cycle": cyc_weak or cyc_strict or cond_weak is None,
     }
 
@@ -405,6 +417,18 @@ def _explanation(r):
             f"The methods split: STAR={S}, RCV-IRV={I}, Ranked Robin={RR}; the Condorcet "
             f"(pairwise) winner is {C}. A genuinely hard, divided electorate — useful for "
             f"showing that the choice of method matters most exactly when voters are split.")
+    if r.get("appr_artifact"):
+        how = ("no ballot scores anyone 3 or higher (every candidate has 0 "
+               "approvals)" if r.get("appr_top", 0) == 0 else
+               f"{r.get('appr_tied')} candidates tie for the most approvals "
+               f"({r.get('appr_top')} each)")
+        return (
+            f"STAR, RCV-IRV and Ranked Robin all agree on **{S}**. Only **Approval** "
+            f"reports **{A}** — but that line is a **conversion artifact**, not an "
+            f"Approval verdict: the comparison converts score ballots with a 3+ stars "
+            f"approval threshold, and on this profile {how} — the printed winner is "
+            f"just the candidate-priority tie-break. A caution about applying a fixed "
+            f"approval cut to low-scoring ballots, not an Approval-vs-STAR difference.")
     return (
         f"STAR, RCV-IRV and Ranked Robin all agree on **{S}**. Only **Approval** differs, "
         f"electing **{A}**: Approval counts every score of 3–5 as one equal 'approve' and "
@@ -421,6 +445,9 @@ def _flag_line(r):
         flags.append("IRV winner flips under reversed priority (fragile tie)")
     if r["rr_conv_sensitive"]:
         flags.append(f"RR conversion-sensitive (weak={r['RR_weak']}, strict={r['RR_strict']})")
+    if r.get("appr_artifact"):
+        flags.append("Approval winner decided by priority tie-break "
+                     "(3+ stars conversion artifact)")
     return "; ".join(flags) if flags else "none"
 
 
@@ -547,7 +574,7 @@ def main():
     cols = ["bucket", "file", "candidates", "ballots", "STAR", "IRV", "IRV_rev",
             "RR_weak", "RR_strict", "Approval", "Score", "Condorcet_weak",
             "Condorcet_strict", "tie_ballots", "irv_fragile",
-            "rr_conv_sensitive", "cycle"]
+            "rr_conv_sensitive", "appr_artifact", "cycle"]
     with (OUT_DIR / "divergence.csv").open("w", newline="") as fh:
         wri = csv.DictWriter(fh, fieldnames=cols)
         wri.writeheader()
@@ -614,7 +641,11 @@ def main():
              "depends on how ties are read; treat with care.\n"
              "- RCV-IRV can't represent equal ranks, so there is no weak IRV. "
              "`tie_ballots` (ballots with tied non-zero scores) and `irv_fragile` "
-             "(winner flips under reversed priority) flag a tie-break artifact.\n")
+             "(winner flips under reversed priority) flag a tie-break artifact.\n"
+             "- **`appr_artifact`** = the Approval column (a 3+ stars conversion "
+             "of the score ballots) approved nobody at all, or several candidates "
+             "tie for most approvals — the named Approval winner is just the "
+             "candidate-priority tie-break, not an Approval verdict.\n")
 
     def _row(r, dupes):
         flags = []
@@ -624,6 +655,8 @@ def main():
             flags.append("IRV flips on reversed priority")
         if r["rr_conv_sensitive"]:
             flags.append(f"RR conv-sensitive (weak={r['RR_weak']}, strict={r['RR_strict']})")
+        if r.get("appr_artifact"):
+            flags.append("Approval = priority tie-break (conversion artifact)")
         flagtxt = ("  \n    _flags: " + "; ".join(flags) + "_") if flags else ""
         duptxt = (f"  \n    _also at: {', '.join('`'+d+'`' for d in dupes)}_"
                   if dupes else "")

@@ -54,6 +54,11 @@ The count, step by step — the rounds and how the winner is reached:
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Amos) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: brams_grading_paradox_tabulated/brams_ex6_three_winners_c3_b9_RCV-IRV_tabulated.txt
 
@@ -143,6 +148,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)

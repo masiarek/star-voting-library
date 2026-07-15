@@ -38,6 +38,10 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = A
   Approval = C   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. 3 of 5 ballots score no one that high and convert to
+        empty Approval ballots, so the Approval result rests on the other 2
+        ballots.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (C)

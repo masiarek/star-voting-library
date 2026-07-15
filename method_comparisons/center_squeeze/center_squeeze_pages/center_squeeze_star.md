@@ -42,6 +42,10 @@ The count, step by step — the rounds and how the winner is reached:
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Left, Center, Right tie at 27 approvals each, so the
+        printed Approval winner (Left) was decided by candidate priority
+        order, not by the voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: center_squeeze_tabulated/center_squeeze_star_RCV-IRV_tabulated.txt
 

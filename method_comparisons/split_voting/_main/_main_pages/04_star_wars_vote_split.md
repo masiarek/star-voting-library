@@ -46,6 +46,10 @@ The count, step by step — the rounds and how the winner is reached:
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Skywalker, Leia tie at 60 approvals each, so the printed
+        Approval winner (Skywalker) was decided by candidate priority order,
+        not by the voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/04_star_wars_vote_split_RCV-IRV_tabulated.txt
 

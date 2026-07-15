@@ -63,6 +63,10 @@ The count, step by step — the rounds and how the winner is reached:
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Orange1, Orange3, Orange4 tie at 6 approvals each, so the
+        printed Approval winner (Orange1) was decided by candidate priority
+        order, not by the voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
 

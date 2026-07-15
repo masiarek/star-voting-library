@@ -42,6 +42,11 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Strawberry
   Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
   Approval               = Chocolate   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Chocolate, Chocolate Chip, Fudge Brownie, Vanilla,
+        Strawberry, Mango tie at 1 approval each, so the printed Approval
+        winner (Chocolate) was decided by candidate priority order, not by
+        the voters.
 
 --- STAR Voting Method (single winner) ---
 

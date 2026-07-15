@@ -29,6 +29,10 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = Strawberry
   Approval = Vanilla   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Vanilla, Strawberry tie at 3 approvals each, so the
+        printed Approval winner (Vanilla) was decided by candidate priority
+        order, not by the voters.
 
 --- STAR Voting Method (single winner) ---
 

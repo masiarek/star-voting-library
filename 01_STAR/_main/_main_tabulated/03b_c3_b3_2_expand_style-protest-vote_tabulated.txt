@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     03b_c3_b3_2_expand_style-protest-vote.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
+SOURCE MODIFIED: 2026-07-15 19:29:25
 TABULATED FILE:  03b_c3_b3_2_expand_style-protest-vote_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:00
+TABULATED AT:    2026-07-15 19:41:04
 ======================================================================
 
 # Continuation of the previous lesson (03b low-score ballots).
@@ -94,6 +94,11 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Almond
   Approval = Choco   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Choco) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

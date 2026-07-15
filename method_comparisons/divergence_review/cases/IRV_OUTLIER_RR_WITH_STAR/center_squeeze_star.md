@@ -19,7 +19,7 @@ STAR elects **Center** — and so do Ranked Robin and Condorcet, because **Cente
 | Range / Score | Center |
 | Condorcet | Center |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`method_comparisons/center_squeeze/center_squeeze_star.yaml`](../../../../method_comparisons/center_squeeze/center_squeeze_star.yaml)  ·  **STAR tabulated mirror:** [`center_squeeze_star_tabulated.txt`](../../../../method_comparisons/center_squeeze/center_squeeze_tabulated/center_squeeze_star_tabulated.txt)
 
@@ -66,6 +66,10 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Left, Center, Right tie at 27 approvals each, so the
+        printed Approval winner (Left) was decided by candidate priority
+        order, not by the voters.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 27 ballots.

@@ -37,6 +37,11 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = Beth
   Approval = Alan   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Alan) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Alan)
@@ -113,6 +118,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/APPROVAL_OR_MINOR/brams_ex3_two_candidates_c2_b5.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

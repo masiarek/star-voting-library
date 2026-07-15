@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **Amos** rather than STAR's **Cole**, but this 
 | Range / Score | Amos |
 | Condorcet | Cole |
 
-**Flags:** 9 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Cole, strict=Amos)
+**Flags:** 9 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Cole, strict=Amos); Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml`](../../../../method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml)  ·  **STAR tabulated mirror:** [`brams_ex6_three_winners_c3_b9_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/brams_grading_paradox_tabulated/brams_ex6_three_winners_c3_b9_tabulated.txt)
 
@@ -68,6 +68,11 @@ Legend: For - Equal Support - Against
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Amos) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Amos)

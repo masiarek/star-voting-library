@@ -1036,16 +1036,28 @@ def compute_irv_winner(candidates, ballots, priority):
         return None, 0, 0
 
 
+# The [Divergence from STAR] comparison converts 0..5 score ballots to
+# Approval by this threshold: scores >= APPROVAL_STARS_MIN count as approvals.
+# (Real Approval elections go through tabulate_approval, where ANY non-zero
+# score approves — this constant is only the comparison block's convention.)
+APPROVAL_STARS_MIN = 3
+
+
+def comparison_approvals(candidates, ballots):
+    """Approval totals under the comparison block's threshold conversion."""
+    return {c: sum(1 for b in ballots if b.get(c, 0) >= APPROVAL_STARS_MIN)
+            for c in candidates}
+
+
 def approval_winner(candidates, ballots, priority):
     """
     Approval winner (single): a candidate is approved on a ballot for every
-    score of 3, 4, or 5 (stars). The candidate with the most approvals wins;
-    a tie is broken by `priority` order (left-to-right CSV column sequence) —
-    the same tiebreak STAR uses — so a single winner is returned.
+    score of APPROVAL_STARS_MIN..5 (3, 4, or 5 stars). The candidate with the
+    most approvals wins; a tie is broken by `priority` order (left-to-right
+    CSV column sequence) — the same tiebreak STAR uses — so a single winner is
+    returned.
     """
-    approvals = {
-        c: sum(1 for b in ballots if b.get(c, 0) >= 3) for c in candidates
-    }
+    approvals = comparison_approvals(candidates, ballots)
     if not approvals:
         return None
     top = max(approvals.values())
@@ -1777,6 +1789,45 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
             _note(
                 "Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the "
                 "outlier here — STAR need not elect the Condorcet candidate."
+            )
+
+    # Honest-conversion note: the Approval line is a THRESHOLD CONVERSION of
+    # score ballots (scores >= APPROVAL_STARS_MIN approve), and on low-scoring
+    # profiles the conversion itself can pick the "winner". Say so, rather
+    # than let a priority tie-break read as an Approval verdict.
+    if approval_diff:
+        approvals = comparison_approvals(candidates, ballots)
+        appr_top = max(approvals.values())
+        appr_tied = sorted((c for c in candidates if approvals[c] == appr_top),
+                           key=lambda c: _prank[c])
+        appr_empty = sum(1 for b in ballots
+                         if all(b.get(c, 0) < APPROVAL_STARS_MIN
+                                for c in candidates))
+        n_ballots = len(ballots)
+        thresh = (f"Note: the Approval line converts score ballots with a "
+                  f"{APPROVAL_STARS_MIN}+ stars approval threshold.")
+        if appr_top == 0:
+            _note(
+                f"{thresh} No ballot here scores any candidate "
+                f"{APPROVAL_STARS_MIN} or higher, so every candidate has 0 "
+                f"approvals — the printed Approval winner ({approval}) is just "
+                f"the candidate-priority tie-break, an artifact of the "
+                f"conversion, not an Approval verdict."
+            )
+        elif len(appr_tied) > 1:
+            _note(
+                f"{thresh} {', '.join(appr_tied)} tie at {appr_top} approval"
+                f"{'' if appr_top == 1 else 's'} each, so the printed Approval "
+                f"winner ({approval}) was decided by candidate priority order, "
+                f"not by the voters."
+            )
+        elif 2 * appr_empty >= n_ballots:
+            remain = n_ballots - appr_empty
+            _note(
+                f"{thresh} {appr_empty} of {n_ballots} ballots score no one "
+                f"that high and convert to empty Approval ballots, so the "
+                f"Approval result rests on the other {remain} ballot"
+                f"{'' if remain == 1 else 's'}."
             )
 
     # Generate a round-by-round report for each diverging method and print a

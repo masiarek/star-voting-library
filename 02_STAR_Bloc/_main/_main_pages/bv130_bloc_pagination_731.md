@@ -47,6 +47,10 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Someone I Like
   Choose-One (Plurality) = The Lesser Evil   (differs from STAR)
   Approval               = Santa Claus   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Santa Claus, Someone I Like tie at 9 approvals each, so
+        the printed Approval winner (Santa Claus) was decided by candidate
+        priority order, not by the voters.
 
 --- Bloc STAR Voting Method (3 winners) ---
 

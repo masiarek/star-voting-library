@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv129_score_tiebreak_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-15 19:29:25
 TABULATED FILE:  bv129_score_tiebreak_bloc_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:28
+TABULATED AT:    2026-07-15 19:54:46
 ======================================================================
 
 election_title: "BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker"
@@ -83,6 +83,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Carmen
   Approval = Andre   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Andre, Carmen tie at 5 approvals each, so the printed
+        Approval winner (Andre) was decided by candidate priority order, not
+        by the voters.
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

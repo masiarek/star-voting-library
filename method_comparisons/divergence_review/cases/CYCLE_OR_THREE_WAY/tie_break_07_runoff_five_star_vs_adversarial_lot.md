@@ -19,7 +19,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 | Range / Score | Ben |
 | Condorcet | none (cycle) |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/tie_break_dead_rung/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt)
 
@@ -66,6 +66,10 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Ben, Ann tie at 1 approval each, so the printed Approval
+        winner (Ben) was decided by candidate priority order, not by the
+        voters.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 2 ballots.

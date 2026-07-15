@@ -28,6 +28,10 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = Don
   Approval = Cal   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Cal, Don tie at 2 approvals each, so the printed Approval
+        winner (Cal) was decided by candidate priority order, not by the
+        voters.
 
 --- Bloc STAR Voting Method (2 winners) ---
 

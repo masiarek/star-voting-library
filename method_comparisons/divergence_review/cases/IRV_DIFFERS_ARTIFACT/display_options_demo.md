@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **Bob** rather than STAR's **Don**, but this is
 | Range / Score | Bob |
 | Condorcet | Don |
 
-**Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Don, strict=Bob)
+**Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Don, strict=Bob); Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/_main/display_options_demo.yaml`](../../../../01_STAR/_main/display_options_demo.yaml)  ·  **STAR tabulated mirror:** [`display_options_demo_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/display_options_demo_tabulated.txt)
 
@@ -68,6 +68,10 @@ Legend: For - Equal Support - Against
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Ann, Bob, Don tie at 4 approvals each, so the printed
+        Approval winner (Ann) was decided by candidate priority order, not
+        by the voters.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 4 ballots.

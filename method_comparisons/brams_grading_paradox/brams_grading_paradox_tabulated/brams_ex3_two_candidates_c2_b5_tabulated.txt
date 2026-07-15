@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     brams_ex3_two_candidates_c2_b5.yaml
-SOURCE MODIFIED: 2026-07-15 19:04:32
+SOURCE MODIFIED: 2026-07-15 19:29:26
 TABULATED FILE:  brams_ex3_two_candidates_c2_b5_tabulated.txt
-TABULATED AT:    2026-07-15 19:05:11
+TABULATED AT:    2026-07-15 19:54:53
 ======================================================================
 
 election_title: "Brams Example 3 — two candidates: two loud fans vs three mild preferences"
@@ -76,6 +76,11 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Beth
   Approval = Alan   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Alan) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Alan)

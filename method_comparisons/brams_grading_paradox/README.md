@@ -40,6 +40,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Baker
   Approval = Adams   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Adams, Baker, Chen tie at 1 approval each, so the printed
+        Approval winner (Adams) was decided by candidate priority order, not
+        by the voters.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Adams)
@@ -77,7 +81,7 @@ Winner — STAR Voting Method (single winner)
  Baker
 ```
 
-Note the engine's own `[Divergence from STAR]` block: `Approval = Adams (differs from STAR)`. Hold that thought.
+Note the engine's own `[Divergence from STAR]` block: `Approval = Adams (differs from STAR)` — and the `Note:` right under it, admitting that on these low grades its own approval conversion decided nothing and the name fell out of the tie-break. Hold that thought.
 
 ## "Approval prevents this" — where the theorem is true, and what it costs
 
@@ -92,7 +96,7 @@ And the dispute doesn't vanish — it moves into the voting booth. "Dichotomize 
 | Approve grades ≥ 2 (the top half of the scale) | (1,0,0) (1,1,1) (0,1,0) | 2–2–1 | **Adams–Baker tie** |
 | Approve only a top grade (3) | (1,0,0) (0,1,1) (0,0,0) | 1–1–1 | **three-way tie** |
 
-Same grades, four reasonable cuts, three different outcomes. Even the engine's `Approval = Adams` line above is a fifth cut at work: its comparison block approves **3+ stars** (calibrated for real 0–5 STAR ballots), which only the 3s on these ballots clear — approval totals 1–1–1, and the tie falls to the left-most column. The threshold decides, always; that *is* the point. The "indisputable" winner is Adams, Baker, or a tie depending on a choice the method silently delegates to each voter — Approval's [threshold dilemma](../../00_start_here/Approval_Voting/approval_honest_limits.md), and the reason [there is no single STAR-vs-Approval divergence rate](../star_vs_approval_divergence.md). (On Arrow: cardinal ballots do sidestep Arrow's ranking framework, as Brams says — but [Gibbard's theorem](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) applies to every method, Approval included; the strategic burden just relocates to the threshold.)
+Same grades, four reasonable cuts, three different outcomes. Even the engine's `Approval = Adams` line above is a fifth cut at work: its comparison block approves **3+ stars** (calibrated for real 0–5 STAR ballots), which only the 3s on these ballots clear — approval totals 1–1–1, and the tie falls to the left-most column. The engine says so itself now — that's the `Note:` under the line, printed whenever its conversion approves nobody or the approval "winner" is really the tie-break. The threshold decides, always; that *is* the point. The "indisputable" winner is Adams, Baker, or a tie depending on a choice the method silently delegates to each voter — Approval's [threshold dilemma](../../00_start_here/Approval_Voting/approval_honest_limits.md), and the reason [there is no single STAR-vs-Approval divergence rate](../star_vs_approval_divergence.md). (On Arrow: cardinal ballots do sidestep Arrow's ranking framework, as Brams says — but [Gibbard's theorem](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) applies to every method, Approval included; the strategic burden just relocates to the threshold.)
 
 ## More from the paper — two examples worth counting
 

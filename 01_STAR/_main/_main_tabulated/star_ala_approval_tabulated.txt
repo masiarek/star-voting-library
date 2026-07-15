@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     star_ala_approval.yaml
-SOURCE MODIFIED: 2026-07-02 19:05:00
+SOURCE MODIFIED: 2026-07-15 19:29:25
 TABULATED FILE:  star_ala_approval_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
+TABULATED AT:    2026-07-15 19:41:05
 ======================================================================
 
 election_title: "STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot"
@@ -70,9 +70,13 @@ Legend: For - Equal Support - Against
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. A, B, C, D tie at 1 approval each, so the printed
+        Approval winner (A) was decided by candidate priority order, not by
+        the voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/_main/_main_tabulated/star_ala_approval_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

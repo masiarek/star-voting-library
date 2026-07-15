@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     bv2165_9vxcj7_plurality.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
+SOURCE MODIFIED: 2026-07-15 19:29:26
 TABULATED FILE:  bv2165_9vxcj7_plurality_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:43
+TABULATED AT:    2026-07-15 19:55:01
 ======================================================================
 
 election_title: "Coombs Ex.19 full — Choose-One: Cass on first choices"
@@ -74,6 +74,11 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Cass
   Approval = Amy   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Amy) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]

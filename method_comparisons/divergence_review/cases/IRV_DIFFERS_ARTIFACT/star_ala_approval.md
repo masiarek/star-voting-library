@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **A** rather than STAR's **D**, but this is an 
 | Range / Score | D |
 | Condorcet | D |
 
-**Flags:** 4 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=D, strict=A)
+**Flags:** 4 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=D, strict=A); Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/_main/star_ala_approval.yaml`](../../../../01_STAR/_main/star_ala_approval.yaml)  ·  **STAR tabulated mirror:** [`star_ala_approval_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/star_ala_approval_tabulated.txt)
 
@@ -70,6 +70,10 @@ Legend: For - Equal Support - Against
         difference.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. A, B, C, D tie at 1 approval each, so the printed
+        Approval winner (A) was decided by candidate priority order, not by
+        the voters.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 8 ballots. Note: 2 of 8 ballots are marked as abstentions.

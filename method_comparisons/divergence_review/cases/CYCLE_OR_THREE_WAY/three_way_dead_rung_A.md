@@ -19,7 +19,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 | Range / Score | A |
 | Condorcet | none (cycle) |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml`](../../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml)  ·  **STAR tabulated mirror:** [`three_way_dead_rung_A_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_tabulated.txt)
 

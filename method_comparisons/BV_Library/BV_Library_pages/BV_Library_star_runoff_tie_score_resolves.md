@@ -29,6 +29,10 @@ The count, step by step — the rounds and how the winner is reached:
   Choose-One (Plurality) = Allison   (differs from STAR)
   Approval               = Allison   (differs from STAR)
   RCV-RR                 = Allison   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Allison, Bill tie at 1 approval each, so the printed
+        Approval winner (Allison) was decided by candidate priority order,
+        not by the voters.
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: BV_Library_tabulated/BV_Library_star_runoff_tie_score_resolves_RCV-RR_tabulated.txt
 

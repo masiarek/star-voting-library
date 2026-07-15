@@ -385,7 +385,12 @@ else is the same.
 ## Engines
 - `STARVote_LH_tabulation_engine/starvote_larry_hastings.py` — STAR + Bloc/
   proportional; reporting options; `blocs:` vote-splitting check; quorum;
-  `[Divergence from STAR]` comparison; optional `show_runoff_percent` runoff
+  `[Divergence from STAR]` comparison (its Approval line converts scores at a
+  3+ stars threshold — `APPROVAL_STARS_MIN` — and prints an honest artifact
+  NOTE when that conversion, not the voters, decides the name: nobody clears
+  the threshold, the top approvals tie and fall to priority order, or most
+  ballots convert empty; wording locked by `tests/test_approval_artifact_note.py`);
+  optional `show_runoff_percent` runoff
   summary line (decided-voters denominator; forced on in `_tabulated`).
   Auto-dispatches to RCV-IRV / Approval / **Ranked Robin** by `voting_method`, or
   to RCV-IRV when ballots contain ranked `>` (comments with `->` are ignored).

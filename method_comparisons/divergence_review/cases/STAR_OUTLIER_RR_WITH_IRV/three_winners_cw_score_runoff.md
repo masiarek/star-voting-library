@@ -19,7 +19,7 @@ RCV-IRV and Ranked Robin both elect **Ann**, the Condorcet (pairwise) winner. ST
 | Range / Score | Carl |
 | Condorcet | Ann |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/_main/three_winners_cw_score_runoff.yaml`](../../../../01_STAR/_main/three_winners_cw_score_runoff.yaml)  ·  **STAR tabulated mirror:** [`three_winners_cw_score_runoff_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/three_winners_cw_score_runoff_tabulated.txt)
 

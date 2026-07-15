@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     03_c7_b3_ice-cream-live.yaml
-SOURCE MODIFIED: 2026-06-26 18:49:12
+SOURCE MODIFIED: 2026-07-15 19:29:25
 TABULATED FILE:  03_c7_b3_ice-cream-live_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:34
+TABULATED AT:    2026-07-15 19:41:05
 ======================================================================
 
 election_title: Ice Cream — Flavor of the Year (the real recorded race)
@@ -71,6 +71,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = ChocoAlm
   Approval = ChocoDrk   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. ChocoDrk, ChocoAlm tie at 2 approvals each, so the
+        printed Approval winner (ChocoDrk) was decided by candidate priority
+        order, not by the voters.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (ChocoDrk)

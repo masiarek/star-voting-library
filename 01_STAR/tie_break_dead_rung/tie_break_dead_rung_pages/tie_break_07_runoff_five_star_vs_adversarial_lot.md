@@ -38,6 +38,10 @@ The count, step by step — the rounds and how the winner is reached:
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Ben, Ann tie at 1 approval each, so the printed Approval
+        winner (Ben) was decided by candidate priority order, not by the
+        voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt

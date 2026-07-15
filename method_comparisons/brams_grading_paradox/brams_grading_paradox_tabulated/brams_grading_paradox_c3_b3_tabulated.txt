@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     brams_grading_paradox_c3_b3.yaml
-SOURCE MODIFIED: 2026-07-15 18:54:11
+SOURCE MODIFIED: 2026-07-15 19:29:26
 TABULATED FILE:  brams_grading_paradox_c3_b3_tabulated.txt
-TABULATED AT:    2026-07-15 18:54:23
+TABULATED AT:    2026-07-15 19:54:54
 ======================================================================
 
 election_title: "Brams' grading paradox — the grade leader loses the runoff"
@@ -79,6 +79,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Baker
   Approval = Adams   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Adams, Baker, Chen tie at 1 approval each, so the printed
+        Approval winner (Adams) was decided by candidate priority order, not
+        by the voters.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Adams)

@@ -19,7 +19,7 @@ STAR elects **Nashville** — and so do Ranked Robin and Condorcet, because **Na
 | Range / Score | Nashville |
 | Condorcet | Nashville |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/_main/09_c4_b100_tennessee-capital.yaml`](../../../../01_STAR/_main/09_c4_b100_tennessee-capital.yaml)  ·  **STAR tabulated mirror:** [`09_c4_b100_tennessee-capital_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/09_c4_b100_tennessee-capital_tabulated.txt)
 

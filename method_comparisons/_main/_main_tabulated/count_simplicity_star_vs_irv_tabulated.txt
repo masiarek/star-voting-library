@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     count_simplicity_star_vs_irv.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
+SOURCE MODIFIED: 2026-07-15 19:29:26
 TABULATED FILE:  count_simplicity_star_vs_irv_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:36
+TABULATED AT:    2026-07-15 19:54:53
 ======================================================================
 
 election_title: Same winner, very different counts — STAR adds, IRV eliminates
@@ -89,6 +89,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Carmen
   Approval = Andre   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Andre, Carmen tie at 40 approvals each, so the printed
+        Approval winner (Andre) was decided by candidate priority order, not
+        by the voters.
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

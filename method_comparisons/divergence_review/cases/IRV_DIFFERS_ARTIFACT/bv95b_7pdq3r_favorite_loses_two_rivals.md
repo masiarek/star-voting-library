@@ -19,7 +19,7 @@ On these ballots RCV-IRV reports **Ada** rather than STAR's **Bruno**, but this 
 | Range / Score | Bruno |
 | Condorcet | Ada |
 
-**Flags:** 2 tied-score ballot(s)
+**Flags:** 2 tied-score ballot(s); Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
 

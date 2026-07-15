@@ -36,6 +36,10 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = A
   Approval = C   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. 3 of 5 ballots score no one that high and convert to
+        empty Approval ballots, so the Approval result rests on the other 2
+        ballots.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (C)
@@ -67,7 +71,7 @@ Winner — STAR Voting Method (single winner)
 
 **1. Runoff (Preference) Matrix.** The head-to-head table — the summable, auditable heart of the count (see [STAR is summable](../../STAR_Voting/STAR_summability.md)). Each cell reads **For – Equal Support – Against** for the *row* candidate vs the *column* candidate. So `A > … | 3 - 0 - 2` means: in A-vs-C, **3** ballots scored A over C, **0** scored them equal, **2** scored C over A. The `*` marks the two **Finalists** (A and C). Read the winner's row: A beats C 3–2, so A wins their head-to-head.
 
-**2. [Divergence from STAR].** A quick cross-check against other methods. `STAR = A` but `Approval = C` — i.e., a pure *score/approval* count (most total stars) would pick **C**. When this line shows a difference, you're looking at a case where the scoring total and the STAR winner disagree — the signal of a **Runoff Reversal**.
+**2. [Divergence from STAR].** A quick cross-check against other methods. `STAR = A` but `Approval = C` — the block recounts the *same* score ballots as Approval ballots, treating 3+ stars as an approval. And it is honest about that conversion's limits: the `Note:` underneath warns whenever the conversion itself, rather than the voters, is doing the deciding — here 3 of the 5 low-scoring ballots approve nobody at the 3+ cut, so the Approval line rests on just 2 ballots. When this block shows a difference, another counting rule disagrees with STAR on the same ballots — here that difference is the signal of a **Runoff Reversal** (C leads on score, A wins the runoff).
 
 **3. [Runoff Reversal].** The plain-English summary, and the one sentence to quote: *"C earned the highest total score, but A won the automatic runoff — not a malfunction, STAR working as designed: the runoff elects the finalist preferred by the majority (of voters with a preference)."* This is the whole lesson in two lines — score leader ≠ winner, because the runoff applies a majority check between the two finalists. (This block was formerly headed "Majority Preference Enforcement Principle"; renamed to match the [glossary term](../../GLOSSARY.md) — and because the old name overclaimed: STAR does *not* satisfy the formal majority criterion, the guarantee is majority preference *between the finalists*.)
 

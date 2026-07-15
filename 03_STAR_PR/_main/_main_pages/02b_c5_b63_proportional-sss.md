@@ -32,6 +32,10 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
   Approval               = Alice   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Alice, Ben, Cara tie at 39 approvals each, so the printed
+        Approval winner (Alice) was decided by candidate priority order, not
+        by the voters.
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
 

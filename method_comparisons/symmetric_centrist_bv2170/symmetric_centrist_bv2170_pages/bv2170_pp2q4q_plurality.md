@@ -43,6 +43,11 @@ The count, step by step — the rounds and how the winner is reached:
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Casey) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_RCV-IRV_tabulated.txt
 

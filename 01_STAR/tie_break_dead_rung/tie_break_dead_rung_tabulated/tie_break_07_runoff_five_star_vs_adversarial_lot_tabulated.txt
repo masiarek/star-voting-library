@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     tie_break_07_runoff_five_star_vs_adversarial_lot.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-15 19:29:25
 TABULATED FILE:  tie_break_07_runoff_five_star_vs_adversarial_lot_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:27
+TABULATED AT:    2026-07-15 19:54:45
 ======================================================================
 
 election_title: Dead rung 03 — runoff tie broken by five-star
@@ -71,11 +71,15 @@ Legend: For - Equal Support - Against
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
         here — STAR need not elect the Condorcet candidate.
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Ben, Ann tie at 1 approval each, so the printed Approval
+        winner (Ben) was decided by candidate priority order, not by the
+        voters.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/focused-lalande-a29ec3/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
   RCV-RR round-robin: tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/.claude/worktrees/focused-lalande-a29ec3/01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_07_runoff_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

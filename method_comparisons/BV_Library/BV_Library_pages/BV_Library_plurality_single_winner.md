@@ -46,6 +46,11 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = Dave
   Approval = Alice   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Alice) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 --- Choose-One / Plurality Voting Method (single winner) ---
 

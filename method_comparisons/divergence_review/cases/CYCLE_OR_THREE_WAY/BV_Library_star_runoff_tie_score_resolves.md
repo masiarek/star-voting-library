@@ -19,7 +19,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 | Range / Score | Bill |
 | Condorcet | none (cycle) |
 
-**Flags:** none
+**Flags:** Approval winner decided by priority tie-break (3+ stars conversion artifact)
 
 **Source election:** [`method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml`](../../../../method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml)  ·  **STAR tabulated mirror:** [`BV_Library_star_runoff_tie_score_resolves_tabulated.txt`](../../../../method_comparisons/BV_Library/BV_Library_tabulated/BV_Library_star_runoff_tie_score_resolves_tabulated.txt)
 
@@ -61,6 +61,10 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Allison   (differs from STAR)
   Approval               = Allison   (differs from STAR)
   RCV-RR                 = Allison   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. Allison, Bill tie at 1 approval each, so the printed
+        Approval winner (Allison) was decided by candidate priority order,
+        not by the voters.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 2 ballots.

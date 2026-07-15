@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     BV_Library_plurality_single_winner.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
+SOURCE MODIFIED: 2026-07-15 19:29:26
 TABULATED FILE:  BV_Library_plurality_single_winner_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:35
+TABULATED AT:    2026-07-15 19:54:52
 ======================================================================
 
 election_title: "BV parity — Plurality (choose-one): most first-marks wins"
@@ -69,6 +69,11 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = Dave
   Approval = Alice   (differs from STAR)
+  Note: the Approval line converts score ballots with a 3+ stars approval
+        threshold. No ballot here scores any candidate 3 or higher, so every
+        candidate has 0 approvals — the printed Approval winner (Alice) is
+        just the candidate-priority tie-break, an artifact of the
+        conversion, not an Approval verdict.
 
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
