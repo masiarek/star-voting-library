@@ -1,11 +1,18 @@
 ======================================================================
 SOURCE FILE:     lot_random_vs_published_jfk7pd_bv_order.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
+SOURCE MODIFIED: 2026-07-15 22:53:26
 TABULATED FILE:  lot_random_vs_published_jfk7pd_bv_order_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:26
+TABULATED AT:    2026-07-15 22:53:51
 ======================================================================
 
 election_title: 'Lot-decided tie (BV jfk7pd) — following BetterVoting''s random draw'
+
+# Machine-readable BV fields (read by build_bv_registry.py). No assigned BV Test ID
+# — this is an export-backed case; "#1063" is the GitHub issue, not a Test ID. The
+# export sibling is shared with the _published_order twin, so the stem-based
+# auto-detection can't find it; declare the election id explicitly here.
+bv_election_id: jfk7pd
+bv_results_url: https://bettervoting.com/jfk7pd/results
 
 scenario_description: |-
   Real BetterVoting election jfk7pd ("The BV recipe — the crazy scenario"): two
@@ -78,7 +85,7 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
+     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

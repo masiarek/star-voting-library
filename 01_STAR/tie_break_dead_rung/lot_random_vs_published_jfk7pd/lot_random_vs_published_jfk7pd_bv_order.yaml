@@ -1,5 +1,12 @@
 election_title: 'Lot-decided tie (BV jfk7pd) — following BetterVoting''s random draw'
 
+# Machine-readable BV fields (read by build_bv_registry.py). No assigned BV Test ID
+# — this is an export-backed case; "#1063" is the GitHub issue, not a Test ID. The
+# export sibling is shared with the _published_order twin, so the stem-based
+# auto-detection can't find it; declare the election id explicitly here.
+bv_election_id: jfk7pd
+bv_results_url: https://bettervoting.com/jfk7pd/results
+
 scenario_description: |-
   Real BetterVoting election jfk7pd ("The BV recipe — the crazy scenario"): two
   candidates (Ada, Ben), two ballots (Ada 4 / Ben 0, and Ada 0 / Ben 4). Every
