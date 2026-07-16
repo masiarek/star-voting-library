@@ -42,7 +42,7 @@ The tool owns step 2. **BetterVoting is the tabulation authority** — the paper
 
 **FR-1 Input — one route:**
 - `--bv-export FILE` (**required**) — a BetterVoting export JSON. Extracts the title, `election_id`, candidate names, and the election + first-race **descriptions**. This is the *only* input; there is no manual/candidate-list or YAML route (removed 2026-07, §5.1).
-- `--title` / `--question` — optional overrides (e.g. a cleaner ballot title than the verbose BV one). Everything else is output styling (FR-2 … FR-12).
+- `--title` / `--question` / `--blurb` — optional overrides (e.g. a cleaner ballot title than the verbose BV one; `--blurb ""` suppresses the description blurb, for exports whose description narrates the expected outcome and would spoil a live vote). Everything else is output styling (FR-2 … FR-12).
 
 **FR-2 Output — a print-ready PDF (the only format).** The ballot is composed as self-contained HTML (embedded CSS, inline-SVG QRs) and rendered to PDF via headless Chromium (**`playwright`**, `playwright install chromium` once). `playwright` is therefore **required**; if it's missing the tool errors with the install command (no HTML/ASCII fallback). `--out` takes a `.pdf` path (a non-`.pdf` extension is swapped for `.pdf`). *(ASCII `.txt` and standalone `.html` outputs were removed 2026-07 at the user's request — PDF only.)*
 
@@ -50,7 +50,7 @@ The tool owns step 2. **BetterVoting is the tabulation authority** — the paper
 
 **FR-3 Per-ballot content (styled after the official Equal Vote STAR ballot):** a **demonstration notice** (FR-9); a **STAR VOTING wordmark** header (star-with-check facsimile + "SCORE · THEN · AUTOMATIC · RUNOFF"); the election **title**, optional **description blurb** (italic), and **question**; the four **bulleted instructions** ("Give your favorite candidate(s) five stars", etc.) plus a fine-print overvote line; the **score grid** — **Worst/Best** labels, **star-outline column headers** 1–5 (0 plain), **digit-in-bubble** cells, **zebra-striped** candidate rows; the **finalist explanation** ("The two highest scoring candidates are finalists…"); a footer with serial + BV id + results URL; and an optional **promo line** (FR-10).
 
-**FR-3a Descriptions:** the export's election `description` becomes the blurb and the first race's `description` becomes the question line, automatically. `--question` overrides the question line. Both print in all three formats.
+**FR-3a Descriptions:** the export's election `description` becomes the blurb and the first race's `description` becomes the question line, automatically. `--question` overrides the question line; `--blurb` overrides the blurb (`--blurb ""` prints none — the spoiler guard). Both print in all three formats.
 
 **FR-10 Promo footer (optional, off by default):** `--promo` adds a small footer line — `Learn more: starvoting.org · equal.vote · bettervoting.com`; `--chapter "TEXT"` appends a local chapter (e.g. `STAR Voting NC (facebook.com/groups/starvotingnc)`) and implies `--promo`. **Off by default** so the base ballot matches the clean official design; **links are parameters, not the election description** (see §5.5).
 

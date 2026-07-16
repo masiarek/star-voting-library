@@ -18,8 +18,9 @@ ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
                        always: create the election on BV -> export its JSON ->
                        print from that. (`create_bv_test_election.py` saves the
                        JSON automatically when it creates the election.)
-  --title / --question  optional overrides (e.g. a cleaner ballot title than the
-                        verbose BV one). Output styling flags: see --help.
+  --title / --question / --blurb  optional overrides (e.g. a cleaner ballot title
+                        than the verbose BV one; --blurb "" prints no description
+                        blurb). Output styling flags: see --help.
 
 Requires `playwright` (PDF render) and `segno` (QR — every ballot links to a live BV
 election, so it must be scannable; missing segno is an error unless --no-qr).
@@ -533,6 +534,11 @@ def main():
     ap.add_argument("--title", help="optional: override the ballot title (e.g. a cleaner "
                                     "name than the verbose BV title)")
     ap.add_argument("--question", help="optional: override the ballot question line")
+    ap.add_argument("--blurb", metavar="TEXT",
+                    help="optional: override the italic description blurb under the "
+                         "title (default: the export's election description). Pass "
+                         "\"\" to print no blurb — e.g. when the BV description "
+                         "narrates the expected outcome and would spoil a live vote.")
     ap.add_argument("--copies", type=int, default=30)
     ap.add_argument("--per-page", type=int, default=1,
                     help="ballots per printed page (default 1 — one ballot per page, "
@@ -615,8 +621,9 @@ def main():
             "…or pass --no-qr to print without a QR on purpose.")
 
     # From the export: election description → blurb under the title; race
-    # description → the question line (--question overrides).
-    blurb = (edesc or "").strip()
+    # description → the question line (--question / --blurb override; --blurb ""
+    # suppresses the blurb entirely).
+    blurb = ((args.blurb if args.blurb is not None else edesc) or "").strip()
     question = (args.question or rdesc
                 or "Score each candidate from 0 (worst) to 5 (best).").strip()
     notice = "" if args.no_notice else (args.notice or DEFAULT_NOTICE)
