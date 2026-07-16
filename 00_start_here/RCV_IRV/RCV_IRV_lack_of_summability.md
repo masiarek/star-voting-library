@@ -34,7 +34,7 @@ IRV: C out → B 7, A 6   IRV: A out → B 7, C 6   first-choices: A 9, C 9, B 8
 
 ## What that costs
 
-- **Central tabulation** — ballots (or full cast-vote records) must be gathered in one place, a single point of failure and a heavier, slower audit.
+- **[Central tabulation](../topics/central_tabulation.md)** — ballots (or full cast-vote records) must be gathered in one place, a single point of failure and a heavier, slower audit. (Expanded on its own page: Maine's courier operation, the NYC 2021 and Alameda 2022 central-count errors, and why IRV audits need heavier machinery.)
 - **No meaningful precinct subtotals** — a precinct can't certify its own contribution to the outcome the way it can under summable methods.
 - **Partial counts can mislead** — the candidate "ahead" in first-choices partway through can lose once transfers run, so early IRV numbers are easy to misread.
 

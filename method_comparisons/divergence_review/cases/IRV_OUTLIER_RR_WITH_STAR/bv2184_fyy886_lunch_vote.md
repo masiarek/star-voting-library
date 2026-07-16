@@ -23,8 +23,6 @@ STAR elects **Pizza** — and so do Ranked Robin and Condorcet, because **Pizza 
 
 **Source election:** [`01_STAR/_main/bv2184_fyy886_lunch_vote.yaml`](../../../../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml)  ·  **STAR tabulated mirror:** [`bv2184_fyy886_lunch_vote_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt)
 
-_Also present (identical ballots) at: `YAML_library/1_positive/trash_delete.yaml`._
-
 _3 candidates, 5 ballots._
 
 ## The ballots

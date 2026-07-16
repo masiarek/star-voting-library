@@ -14,6 +14,8 @@
 | **Plurality** | ✅ | one vote count per candidate | — |
 | **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../RCV_IRV/RCV_IRV_lack_of_summability.md) |
 
+What "needs every ballot centrally" costs in practice — the courier runs, the single point of failure, the heavier audit, and the real incidents (Maine's process, NYC 2021, Alameda 2022) — is its own page: [**Central tabulation — when every ballot must travel**](../central_tabulation.md).
+
 ## See it both ways (runnable)
 
 The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo):
