@@ -12,7 +12,7 @@ Both ask more of voters than Choose-One, and both usually beat plain plurality. 
 | Captures | Order only | Order **+ strength** |
 | Count | Eliminate fewest-first-choice, transfer, repeat | Sum scores → automatic runoff of top 2 |
 | Equal preferences | ❌ Not allowed | ✅ Allowed |
-| Precinct-summable | ❌ No (needs central count) | ✅ Yes |
+| Precinct-summable | ❌ No (needs a [central count](central_tabulation.md)) | ✅ Yes |
 | Exhausted ballots | ❌ Possible | ✅ Avoided (blank = 0) |
 | Monotonic | ❌ No (more support can hurt) | ✅ Yes |
 | Later-No-Harm | ✅ **Satisfies** | ❌ Fails |

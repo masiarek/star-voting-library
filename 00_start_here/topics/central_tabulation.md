@@ -1,6 +1,6 @@
 # Central Tabulation — When Every Ballot Must Travel
 
-*The operational price of a non-summable count: ballots (or full cast-vote records) must be gathered in one place before anyone can name the winner — a single point of failure, and a heavier, slower audit. This page expands the one-line cost bullet into what it actually means on the ground.*
+*The operational price of a non-summable count: ballots (or full cast-vote records) must be gathered in one place before anyone can name the winner — a single point of failure, a heavier and slower audit, and, in a low-trust era, a count that is harder to **show** correct to someone motivated to disbelieve it. This page expands the one-line cost bullet into what it actually means on the ground.*
 
 → **Level: Voting 201** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · the math side: [Summability topic hub](summability/) · Glossary: [`summability`](../GLOSSARY.md)
 
@@ -33,6 +33,21 @@ Central IRV gives that up. There is no precinct subtotal to check, so an audit h
 
 And the *results themselves* are slower and murkier along the way: partial counts under IRV are easy to misread (the first-choice leader partway through can lose once transfers run), and the definitive count can't even begin until the last ballots arrive — in Maine's case, after the courier run, days after election night.
 
+## Cost 3 — trust: the count becomes a black box
+
+**The US context this lands in.** American confidence in election accuracy is historically low and deeply polarized: Gallup's September 2024 measure found a **record 56-point partisan gap** — 84% of Democrats vs. 28% of Republicans confident that votes would be counted accurately ([Gallup](https://news.gallup.com/poll/651185/partisan-split-election-integrity-gets-even-wider.aspx)). And which party trusts less has *flipped* over the decades (in 2004 it was Democrats at 59% vs. Republicans at 87%), so this is not a partisan observation — it's the environment every US counting process now operates in. In that environment the bar isn't just *"is the count correct?"* but *"can it be **shown** correct to someone motivated to disbelieve it?"*
+
+**The security principle: software independence.** The design rule election-security researchers converged on (Ron Rivest's term) is that an undetected change or error in the counting *software* must never be able to cause an *undetectable* change in the election *outcome* ([Rivest 2008](https://royalsocietypublishing.org/doi/10.1098/rsta.2008.0149) · [Wikipedia](https://en.wikipedia.org/wiki/Software_independence)). Paper ballots keep any method software-independent *in principle* — the paper can always be recounted. The practical difference is what checking actually takes:
+
+- **A summable count is a distributed check.** Each precinct's published table can be recomputed by hand from ballots the precinct physically holds, and the statewide result is the sum — thousands of independent eyes, each verifying its own piece, none of whom has to trust any software, courier, or central team. The explanation also *survives a hostile audience*: "add up the published tables yourself."
+- **A central IRV count is a concentrated check.** Verifying it means trusting — or independently re-running — one software pipeline over the complete central CVR set. That is genuinely possible (it's exactly how Alameda's error was caught), but it is expert work on a central artifact: legible to specialists, opaque to nearly everyone else. "Download every ballot record and re-run the algorithm" is a real check, not a legible one.
+
+**What that looks like in a real dispute — Maine 2018.** The first federal IRV race (Maine's 2nd congressional district) went to the ranked rounds, the first-choice leader lost after transfers, and the losing incumbent demanded a hand recount while denouncing the state's **"black-box voting system"** — then sued in federal court. The count was right: the judge rejected the constitutional challenge and the recount was abandoned ([Roll Call](https://rollcall.com/2018/11/27/defeated-rep-bruce-poliquin-calls-for-lengthy-ranked-choice-recount/) · [WBUR](https://www.wbur.org/news/2018/12/13/poliquin-ranked-voting-lawsuit-2nd-district)). But notice what the structure handed the challenge: the decisive rounds ran in software, centrally, out of public view — so "black box" *worked as rhetoric* even though the count was clean. A summable count offers that narrative much less surface: there is no single box to point at, and any doubter can be handed a precinct table and a pencil.
+
+**And real errors amplify the story.** When a central count does stumble — NYC's 135,000 test ballots, Alameda's misconfiguration — the error is singular and big, so it becomes a national talking point that damages confidence far beyond its actual scope (neither incident changed a properly-certified final statewide outcome; each is still cited as evidence that "the machines can't be trusted"). Distributed counts make distributed mistakes; central counts make headlines.
+
+**The fair counterpoint.** Centralization is not inherently fatal to trust. Australia has run centralized preferential (IRV) counts for over a century, largely by hand at division counting centres with party scrutineers watching every transfer — it works, because the trust infrastructure and norms grew up around it ([Australia case study](../RCV_IRV/case_studies/RCV_IRV_australia.md)). The US-specific problem is *sequencing*: deploying a structurally central, software-run count into an environment that is already low-trust and heavily litigated — giving up the distributed, anyone-can-check property at exactly the moment it is most valuable.
+
 ## The honest caveats
 
 - **Plenty of jurisdictions centrally count anyway.** Vote-by-mail states run central-count scanners as a matter of logistics, whatever the voting method. The difference is *optionality*: with a summable method, central counting is a choice, and cheap public checks (precinct/batch subtotals that add) exist regardless of where the scanners sit. With IRV it's structural — no subtotal can stand in for the ballots, so the checks have to be rebuilt the heavy way.
@@ -48,4 +63,6 @@ And the *results themselves* are slower and murkier along the way: partial count
 - [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../RCV_Ranked_Robin/RCV_RR_summability.md) — the methods that keep the local count
 - [Pairwise counting — every ballot is a tiny matrix](pairwise_counting.md) — the artifact precincts publish instead of shipping ballots
 - [What makes a voting method good?](what_makes_a_voting_method_good.md) — where auditability and summability sit among the criteria
+- [Is RCV "simple"?](../RCV_IRV/RCV_IRV_is_simple.md) — the ballot-vs-count distinction this page's costs hang off ("the ballot is simple; the count needs a computer and a central tally")
+- [Australia case study](../RCV_IRV/case_studies/RCV_IRV_australia.md) — a century of centralized preferential counting that *does* hold public trust, and why that took its own infrastructure
 - Glossary: [`summability`, `preference matrix`](../GLOSSARY.md)

@@ -53,7 +53,7 @@ But look who got cut: **Center is the Condorcet winner** — Center beats Left 1
 - **Center squeeze** — eliminates a broadly-liked moderate who'd win every head-to-head ([center squeeze](RCV_IRV_center_squeeze.md)).
 - **Not monotonic** — *ranking a candidate higher can cause them to lose* ([non-monotonicity](RCV_IRV_non_monotonicity.md)).
 - **Not Condorcet** — can fail to elect a candidate who beats all others pairwise.
-- **Not summable** — precincts can't just add up totals; ballots must be centralized to run the rounds ([summability](RCV_IRV_lack_of_summability.md)).
+- **Not summable** — precincts can't just add up totals; ballots must be centralized to run the rounds ([summability](RCV_IRV_lack_of_summability.md); what the central count costs in practice — logistics, audits, trust: [central tabulation](../topics/central_tabulation.md)).
 - **Exhausted ballots** when rankings are limited ([exhausted ballots](RCV_IRV_exhausted_ballots.md)).
 
 → The full run-down of IRV's limitations and the claims made *for* it that don't hold up: [RCV-IRV misconceptions & false claims](rcv_irv_false_claims.md). Head-to-head vs STAR: [RCV-IRV vs. STAR](../topics/rcv_irv_vs_star.md).

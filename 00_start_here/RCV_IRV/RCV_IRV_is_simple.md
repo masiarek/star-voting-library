@@ -30,7 +30,7 @@ To find an IRV winner you can't just add a column. You:
 To follow it you have to track every transfer across every round. Three consequences, all working against "simple":
 
 - **Not summable.** A precinct's IRV result doesn't compose with another's — you can't add subtotals, because who's eliminated depends on the *whole* electorate. So every ballot has to travel to **one central count.** (See [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md).)
-- **Software-dependent and hard to hand-audit.** Rounds of transfers are not something poll workers reconcile on a precinct table; a recount means re-running the algorithm on all ballots at once.
+- **Software-dependent and hard to hand-audit.** Rounds of transfers are not something poll workers reconcile on a precinct table; a recount means re-running the algorithm on all ballots at once. (What that costs operationally and for public trust — courier runs, single point of failure, the real incidents: [Central tabulation — when every ballot must travel](../topics/central_tabulation.md).)
 - **Counterintuitive even when correct.** More support can *hurt* a candidate ([monotonicity](RCV_IRV_non_monotonicity.md)) — so the count can behave in ways that are hard to explain to the voter whose ballot "did the opposite."
 
 So the honest picture: *the ballot is simple; the count needs a computer and a central tally.* That's the half "look how simple it is" leaves out.

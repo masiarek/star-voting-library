@@ -11,6 +11,6 @@ Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cros
 - **STV (Single Transferable Vote)** — the proportional, multi-winner tabulation of ranked ballots (the proportional cousin of IRV, not IRV itself).
 - **Hare** — the ranked-transfer idea; single-winner = IRV, multi-winner = STV.
 
-*The shared criteria RCV-IRV fails or passes — **monotonicity**, **summability**, the **Equal Vote criterion**, **later-no-harm** — are in the [main glossary](../GLOSSARY.md#properties--criteria) (stated fairly, with caveats).*
+*The shared criteria RCV-IRV fails or passes — **monotonicity**, **summability** (and its operational cost, [central tabulation](../topics/central_tabulation.md)), the **Equal Vote criterion**, **later-no-harm** — are in the [main glossary](../GLOSSARY.md#properties--criteria) (stated fairly, with caveats).*
 
 # file: glossary_rcv_irv.md

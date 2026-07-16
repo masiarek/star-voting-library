@@ -20,7 +20,7 @@ These are properties of **IRV the tabulation**, not of ranked ballots in general
 
 - [Center squeeze](RCV_IRV_center_squeeze.md) — the moderate eliminated early
 - [Non-monotonicity](RCV_IRV_non_monotonicity.md) — when *more* support makes you lose
-- [Not summable](RCV_IRV_lack_of_summability.md) — every ballot must be counted centrally
+- [Not summable](RCV_IRV_lack_of_summability.md) — every ballot must be counted centrally, and [that central count has costs](../topics/central_tabulation.md)
 - [Fails the Equal Vote criterion](RCV_IRV_equal_vote.md)
 - [Exhausted ballots (301)](exhausted_ballots_301.md) · [forced vs. voluntary exhaustion](forced_vs_voluntary_exhaustion.md)
 - [Misconceptions & false claims — an index](rcv_irv_false_claims.md)
