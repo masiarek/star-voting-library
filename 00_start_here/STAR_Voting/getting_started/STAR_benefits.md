@@ -12,7 +12,7 @@ You score every candidate 0–5 by how much you support them, instead of picking
 
 ## No vote splitting, no spoilers
 
-Because you rate each candidate independently, adding a candidate you like never bleeds support from another candidate you like. Two similar candidates can't divide their shared supporters and hand the win to someone the majority didn't want — the [spoiler effect](../../topics/spoiler_effect.md) that plagues choose-one voting. Honesty becomes your strongest ballot. (STAR reduces spoilers dramatically rather than perfectly — see [residual vote-splitting](../properties_and_limits/residual_vote_splitting.md).)
+Because you rate each candidate independently, adding a candidate you like never bleeds support from another candidate you like. Two similar candidates can't divide their shared supporters and hand the win to someone the majority didn't want — the [spoiler effect](../../topics/spoiler_effect.md) that plagues choose-one voting. Honesty becomes your strongest ballot. This is also what **opens the door to new voices**: a fresh candidate or an independent can enter without playing spoiler, so voters can back a new perspective on its merits instead of being warned off "wasting" their vote. (STAR reduces spoilers dramatically rather than perfectly — see [residual vote-splitting](../properties_and_limits/residual_vote_splitting.md).)
 
 ## Every winner earns a majority
 
@@ -29,6 +29,14 @@ STAR is **summable**: each precinct can publish its score totals plus the finali
 ## More accurate, more representative results
 
 Feeding the count more information (intensity, equals, full expression) and finishing with a majority runoff tends to elect the candidate [who best represents](../../topics/what_makes_a_good_winner.md) the whole electorate. In large simulation studies STAR ranks among the highest methods on **voter-satisfaction efficiency**, and it elects the head-to-head (Condorcet) winner in the large majority of elections — the broadly-supported compromise that first-choice methods can squeeze out. It does **not** do this every time (no method can be perfect — that's a theorem), so this is a strong tendency, not a guarantee; the exact failure modes are laid out honestly in [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md).
+
+## Better campaigns, broader appeal
+
+To win under STAR you need to be scored well by your *opponents'* supporters too — a 3 or a 4 from someone whose favorite is elsewhere is what carries you into and through the runoff. That changes the incentive: trashing a rival backfires when their voters can lower your score in return, so the rewarded strategy is outreach and coalition-building rather than base-energizing and mudslinging. The tendency is toward broadly-supported [consensus winners](../../topics/what_makes_a_good_winner.md). State this honestly as *what the incentives reward* — the large-scale empirical record is thin because adoption is recent, so it's a well-grounded prediction, not a proven outcome (see the [honest caveat](#the-honest-caveat) below).
+
+## One method for single-winner, multi-winner, and PR
+
+The same 0–5 ballot scales to whatever seat you're filling. **Single-winner STAR** fills one office; **[Bloc STAR](../../../02_STAR_Bloc/)** elects a slate when you want the *most-preferred* set; and **[Proportional STAR](../../proportional_representation/STAR_PR/README.md)** ([PR hub](../../proportional_representation/README.md)) fills a body so that like-minded voters win seats in proportion to their numbers. One ballot voters already know, across the whole ballot. Because single-winner STAR already delivers a majority runoff from one round of voting, it also **removes the usual reason for a separate primary** — though a multi-winner method is the right tool when a body, not a single office, is being chosen.
 
 ## Simple and familiar
 
