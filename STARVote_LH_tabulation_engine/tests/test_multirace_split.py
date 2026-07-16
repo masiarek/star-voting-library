@@ -32,6 +32,29 @@ def _run(args, cwd):
                           capture_output=True, text=True)
 
 
+def _find_single_race_star_export():
+    """A real frozen single-race STAR export to synthesize a multi-race one from.
+
+    Prefer the canonical bv95a case (small, stable, documented in CLAUDE.md);
+    if a case reorganization moves it, fall back to scanning the case folders
+    for any frozen export with exactly one single-winner STAR race — the
+    S_W1_N_*.json files this test originally globbed were reorganized away.
+    """
+    preferred = (REPO_ROOT / "01_STAR" / "majority_criterion"
+                 / "bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json")
+    if preferred.exists():
+        return preferred
+    for p in sorted(REPO_ROOT.rglob("*_bv_export.json")):
+        try:
+            races = json.loads(p.read_text(encoding="utf-8"))["Election"]["races"]
+        except Exception:
+            continue
+        if (len(races) == 1 and races[0].get("voting_method") == "STAR"
+                and races[0].get("num_winners", 1) == 1):
+            return p
+    return None
+
+
 def test_engine_rejects_multirace_yaml():
     r = _run([str(WRAPPER), str(NEG_FIXTURE)], ENGINE_DIR)
     out = r.stdout + r.stderr
@@ -42,7 +65,7 @@ def test_engine_rejects_multirace_yaml():
 
 
 def test_converter_splits_multirace_export(tmp_path):
-    src_json = next(LIB_POS.glob("S_W1_N_*.json"), None)
+    src_json = _find_single_race_star_export()
     assert src_json is not None, "no frozen BV export found to synthesize from"
 
     data = json.loads(src_json.read_text(encoding="utf-8"))
