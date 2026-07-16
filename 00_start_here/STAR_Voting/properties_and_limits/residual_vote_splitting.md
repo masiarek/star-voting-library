@@ -34,7 +34,7 @@ In 05a the engine's `[Vote-splitting check]` is honest: it flags the majority co
 ## Why it's a narrow edge case, not the spoiler all over again
 
 - **The ordinary spoiler is automatic** — it needs no coordination and happens whenever similar candidates run. Splitting is the *default*.
-- **STAR's residual is the exception** — it needs a near-tie for the second runoff slot, accurate prediction, coordinated mis-scoring, and it **backfires if you're wrong**. The brute-force simulation in [`../../06_Other/simulations/`](../../../06_Other/simulations) finds that a favorite-betrayal-style play in STAR helps only ~2% of the time it changes the result — it backfires ~98% of the time. So honest, expressive scoring stays your safest ballot.
+- **STAR's residual is the exception** — it needs a near-tie for the second runoff slot, accurate prediction, coordinated mis-scoring, and it **backfires if you're wrong**. The [brute-force simulation](../../../06_Other/simulations/README.md) finds that a favorite-betrayal-style play in STAR helps only ~2% of the time it changes the result — it backfires ~98% of the time. So honest, expressive scoring stays your safest ballot.
 
 Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md) and [center-squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) edge cases: all three come from "only the top two advance."
 
