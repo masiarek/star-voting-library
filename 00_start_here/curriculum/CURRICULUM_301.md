@@ -19,20 +19,20 @@
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.
-- **Material:** [favorite betrayal (301)](../STAR_Voting/favorite_betrayal_voting_301.md).
+- **Material:** [favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).
 - **The point:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally (Alaska '22), STAR only in lab constructions.
 
 ## 301.3 — "Are equal-score votes discounted?"
 
 - **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
-- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md).
-- **In the result display:** [Two Denominators, One Winner](../STAR_Voting/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
+- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md).
+- **In the result display:** [Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
 
 ## 301.4 — The honest limits & theory
 
 - **Key terms:** Gibbard / Gibbard–Satterthwaite, strategy resistance vs proofness, Condorcet efficiency, Test of Balance.
-- **Material:** [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md); "resistant, not proof."
-- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../STAR_Voting/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
+- **Material:** [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); "resistant, not proof."
+- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
 - **Deeper math:** [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite).
 
 ## 301.5 — The vote-splitting formula (blocs)
@@ -43,7 +43,7 @@
 ## 301.6 — When Condorcet, Score, and Runoff disagree (and how often)
 
 - **Objective:** "Winner" isn't one thing — three reasonable definitions can name three different candidates; STAR targets the runoff winner *by design* (it is not a Condorcet method).
-- **Material:** [three winner notions](../STAR_Voting/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)).
+- **Material:** [three winner notions](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)).
 - **Frequency:** [`06_Other/simulations/`](../../06_Other/simulations/) measures how often score and runoff diverge — and shows the rate swings with the model, the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
 - **Ranked Robin vs. Condorcet:** [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one.
 
@@ -51,7 +51,7 @@
 
 - **Objective:** untangle the overloaded RCV-IRV term — separate the fair, voter-side cases from the method-caused ones a fully and correctly ranked ballot still suffers.
 - **Key terms:** ballot exhaustion, inactive ballot, ranking limit, majority-of-remaining-ballots, forced vs voluntary exhaustion.
-- **Material:** [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) · [forced vs voluntary exhaustion](../RCV_IRV/forced_vs_voluntary_exhaustion.md); contrast [are equal-score votes discounted?](../STAR_Voting/are_equal_score_votes_discounted.md).
+- **Material:** [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) · [forced vs voluntary exhaustion](../RCV_IRV/forced_vs_voluntary_exhaustion.md); contrast [are equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md).
 - **The point:** exhaustion is **IRV**-specific (Ranked Robin reads every rank); STAR counts every ballot in both rounds, so nothing exhausts.
 
 ## 301.8 — Scale granularity can flip the winner
@@ -79,7 +79,7 @@
 
 - **Objective:** practice checking a voting-method claim against a countable election — quote it verbatim, build the smallest electorate that tests it, tabulate.
 - **Material:** [FairVote's Condorcet article, claim-checked](../topics/condorcet/fairvote_condorcet_claim_check.md); the steelman companion [Edelman's "Myth of the Condorcet Winner," tabulated](../topics/condorcet/edelman_condorcet_myth.md).
-- **The point:** steelman first — the "hated least ≠ liked most" point is *true* (the cardinal critique, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).
+- **The point:** steelman first — the "hated least ≠ liked most" point is *true* (the cardinal critique, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
 
 ## 301.12 — Participation: can showing up ever hurt you?
 

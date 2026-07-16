@@ -58,10 +58,10 @@ The payoff: **the on-screen demo stays clean while the saved record stays comple
 
 Beyond the raw result, the wrapper renders the parts that make a STAR result *trustworthy and teachable*:
 
-- **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../STAR_Voting/STAR_summability.md).
+- **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../STAR_Voting/properties_and_limits/STAR_summability.md).
 - **`[Runoff Reversal]` summary** — a plain-English sentence naming *why* the runoff winner beat the score leader when they differ: the runoff elects the finalist preferred by the majority (of voters with a preference). The whole Runoff-Reversal lesson in two lines. (Header formerly "Majority Preference Enforcement Principle" — renamed to the glossary term.)
 - **`[Divergence from STAR]`** — a quick cross-check that flags when Approval / a pure score count, or RCV-IRV, would pick someone else; it prints whenever methods disagree, so comparative demos keep their punch even with the minimal on-screen report.
-- **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../STAR_Voting/runoff_percentages.md).
+- **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md).
 - **Score distribution, Condorcet line, tiebreaker rounds** — on demand on screen, always in the mirror. The **lot-number tiebreak cascade** (head-to-head → most 5s → lot order) is shown step by step so a tie's resolution is auditable.
 - **Color palette + round separators** — distinct colors per phase (scoring, runoff, winner), mirroring the matrix legend; auto-off when piped to a file or under `NO_COLOR`, so the saved text stays clean.
 

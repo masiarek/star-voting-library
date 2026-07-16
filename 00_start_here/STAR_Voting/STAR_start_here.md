@@ -100,9 +100,9 @@ One nuance you can now name: if you rate the **two finalists** the *same*, your 
 - **No ["wasted" votes](../topics/wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../topics/spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
-→ The fuller case (with the honest caveats): [The benefits of STAR Voting](STAR_benefits.md).
+→ The fuller case (with the honest caveats): [The benefits of STAR Voting](getting_started/STAR_benefits.md).
 
-*Thinking "wait, but isn't it just averaging? / a wasted 0? / a second election?"* — the honest, plain-language answers: [Common misunderstandings](common_misunderstandings.md).
+*Thinking "wait, but isn't it just averaging? / a wasted 0? / a second election?"* — the honest, plain-language answers: [Common misunderstandings](getting_started/common_misunderstandings.md).
 
 ## Where to go next
 
@@ -113,9 +113,9 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 | **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | A third option, and the winner becomes the broad compromise — the lunch, formalized in the smallest possible way. |
 | **Ways to vote** | [the eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
 | **The classic** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
-| **Do it yourself** | [Count a STAR election by hand](count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
+| **Do it yourself** | [Count a STAR election by hand](hands_on/count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
 
-Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scoring_Round.md) · [Automatic Runoff](STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../topics/two_party_dominance.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md).
+Then, when you're ready: **the two rounds in depth** ([Scoring Round](the_count/STAR_Scoring_Round.md) · [Automatic Runoff](the_count/STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../topics/two_party_dominance.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md).
 
 **Try it for real:** cast a STAR ballot or run your own election at [bettervoting.com](https://bettervoting.com).
 
@@ -124,7 +124,7 @@ Then, when you're ready: **the two rounds in depth** ([Scoring Round](STAR_Scori
 - Equal Vote Coalition — [STAR Voting overview](https://www.equal.vote/star)
 - ["How Does STAR Voting Work?" (short video)](https://www.youtube.com/watch?v=fKg0fRL88zc)
 - [bettervoting.com](https://bettervoting.com) · [help, FAQ & hand-count guides](https://docs.bettervoting.com)
-- **More explainers, videos & guides:** [STAR Voting — resources & further watching](STAR_resources.md)
+- **More explainers, videos & guides:** [STAR Voting — resources & further watching](reference/STAR_resources.md)
 
 ---
 

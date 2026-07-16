@@ -102,7 +102,7 @@ Each flag, explained with before/after examples:
 - **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](../STAR_reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
 - **`show_score_counts`** → the per-candidate **[score-distribution table](../STAR_reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
 - **`show_irv`** → adds the **RCV-IRV** comparison line to the `[Divergence from STAR]` block. Note the block itself is **built-in and auto-prints whenever STAR's winner differs** from Choose-One (Plurality) or Approval — no flag needed; `show_irv` only adds the IRV line. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../../method_comparisons/divergence_review/INDEX.md).
-- **`show_runoff_percent`** → the compact [self-reconciling runoff line](../STAR_Voting/runoff_percentages.md).
+- **`show_runoff_percent`** → the compact [self-reconciling runoff line](../STAR_Voting/the_count/runoff_percentages.md).
 - **`brief`** → strip the repetitive `[STAR Voting: …]` header prefix — **[with/without](../STAR_reporting/reporting_LH/brief.md)**.
 
 Full rundown of the whole block, option by option: **[LH reporting options](../STAR_reporting/reporting_LH/options.md)**.

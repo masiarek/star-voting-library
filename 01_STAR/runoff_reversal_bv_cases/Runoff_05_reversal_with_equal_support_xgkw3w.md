@@ -2,7 +2,7 @@
 
 **Level 201 · the first reversal where some voters have no preference.** Rosa leads the Scoring Round (21), but two voters scored **Rosa and Sage equally** — *Equal Support* — so they sit out the runoff. Of the **three** who did pick between the finalists, two prefer **Sage**, so Sage wins. The runoff is decided by **3 of 5** voters, not all five — the bridge to the two-denominator idea.
 
-→ what an Equal Support ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · the two denominators: [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
+→ what an Equal Support ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · the two denominators: [Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -42,7 +42,7 @@ Rosa leads the Scoring Round (21) but **loses** the Automatic Runoff 1–2, with
 
 ![Race Details: Scores Table (Rosa 21, Sage 19, Tulip 3) and Runoff Table with both denominators — Sage 2 / 40% Runoff Votes / 67% Between Finalists, Rosa 1 / 20% / 33%, Equal Support 2 / 40%, Total 5](img/xgkw3w_race_details.png)
 
-Watch the Runoff Table here: **% Between Finalists** is out of 3 (67% / 33%), but **% Runoff Votes** is out of all 5 — the two denominators side by side. ([Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md).)
+Watch the Runoff Table here: **% Between Finalists** is out of 3 (67% / 33%), but **% Runoff Votes** is out of all 5 — the two denominators side by side. ([Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md).)
 
 ## View 2 — the LH engine
 

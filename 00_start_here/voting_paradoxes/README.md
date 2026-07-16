@@ -31,7 +31,7 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 |---|---|---|---|
 | Condorcet's paradox (cycle) | Cyclical majorities | Simple | [BV2157 (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · [cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) |
 | Clone dependence / teaming | Cloning paradox | Conditional | [Ranked Robin & clone independence](../RCV_Ranked_Robin/rr_clone_independence.md) |
-| Favorite betrayal | — | Conditional | [Favorite betrayal](../STAR_Voting/favorite_betrayal_voting_301.md) |
+| Favorite betrayal | — | Conditional | [Favorite betrayal](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) |
 | Absolute Majority paradox | Majority criterion failure | Simple | [BV2153 Felsenthal Ex.7](../../method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_felsenthal_ex7_absolute_majority.md) |
 | Pareto-dominated winner | Pareto violation | Simple | [Felsenthal Ex.6 (LH-only)](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
 

@@ -2,7 +2,7 @@
 
 The single question STAR raises most often: *"Why didn't the candidate with the most stars win?"* This is the presenter's playbook for answering it — the order to teach it in, the examples to use, **why a reversal is a good thing**, and the hard ("devil's advocate") questions with answers.
 
-- Concept hub: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) (has the flow diagram)
+- Concept hub: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) (has the flow diagram)
 - The concept lesson + all cases: [When the top-scoring candidate isn't the winner](README.md)
 - Voter-facing one-paragraph version (and a BetterVoting popover fix): [Explaining Runoff Reversal to Voters](explaining_to_voters.md)
 - Glossary: [`Runoff Reversal`](../../00_start_here/GLOSSARY.md)
@@ -92,9 +92,9 @@ Talking point: the runoff isn't biased against the leader — it just *checks* t
 
 **"Couldn't I game it by scoring strategically?"** Your runoff vote is whatever your *own* scores already imply, so there's no gain from lowballing a rival or burying your second choice. Honest scoring is the best strategy — a property pure-score methods lack.
 
-**"Why only the top two? What about third place?"** The top two carry the most support, so the decisive question is which of *them* the majority prefers. If you worry the "right" candidate was a finalist at all, check the **Condorcet** winner (the candidate who beats everyone head-to-head) in the full report — STAR's runoff winner usually matches it. → [three notions of "winner"](../../00_start_here/STAR_Voting/STAR_three_winner_notions.md)
+**"Why only the top two? What about third place?"** The top two carry the most support, so the decisive question is which of *them* the majority prefers. If you worry the "right" candidate was a finalist at all, check the **Condorcet** winner (the candidate who beats everyone head-to-head) in the full report — STAR's runoff winner usually matches it. → [three notions of "winner"](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md)
 
-**"Is the reversal random, or tied to a tie-break?"** Neither. It's fully deterministic from the ballots, and it has nothing to do with tie-breaking — a reversal isn't a tie. (Tie-breaking only runs on an exact runoff split; see [the flow](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md#the-flow).)
+**"Is the reversal random, or tied to a tie-break?"** Neither. It's fully deterministic from the ballots, and it has nothing to do with tie-breaking — a reversal isn't a tie. (Tie-breaking only runs on an exact runoff split; see [the flow](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md#the-flow).)
 
 **"Voters will be confused/angry when their leader loses."** That's the real risk — so name it and explain it in one breath, the way [Explaining Runoff Reversal to Voters](explaining_to_voters.md) does. Confusion comes from an *unexplained* reversal, not the reversal itself.
 

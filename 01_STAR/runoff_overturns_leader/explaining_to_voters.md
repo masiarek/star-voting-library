@@ -13,7 +13,7 @@ When a real BetterVoting election produces a **Runoff Reversal** (the Scoring-Ro
 ## What's off about it
 
 1. **"only the most preferred votes count"** — sounds like ballots are discarded. They aren't. *Every* ballot counts in the runoff; each becomes **one full vote** for whichever finalist it scored higher.
-2. **"a 5 vs. 0-star vote … is equal in the runoff"** — a 5-vs-0 is a *clear* preference (a full vote for the 5). It is **not** "equal." The intended point is that it counts as the *same single vote* as a 5-vs-4 — but the word **equal** collides with **Equal Support**, STAR's term for a genuine *no-preference* tie ([what that actually means](../../00_start_here/STAR_Voting/are_equal_score_votes_discounted.md)). Telling a voter "5 vs 0 is equal" states the opposite of the truth.
+2. **"a 5 vs. 0-star vote … is equal in the runoff"** — a 5-vs-0 is a *clear* preference (a full vote for the 5). It is **not** "equal." The intended point is that it counts as the *same single vote* as a 5-vs-4 — but the word **equal** collides with **Equal Support**, STAR's term for a genuine *no-preference* tie ([what that actually means](../../00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md)). Telling a voter "5 vs 0 is equal" states the opposite of the truth.
 3. **The good sentence is buried.** "More voters prefer them over the runner-up" is the whole answer — it should lead, not trail.
 4. **No shared vocabulary.** "Second round," "top scoring candidate," "runner-up" — it never says **Scoring Round**, **Automatic Runoff**, or **Finalists**, and it gives the phenomenon no name.
 

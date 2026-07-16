@@ -137,7 +137,7 @@ These live in this repo and stay exactly in sync (prefer them for live demos):
 | **Why STAR (repo)** | `00_start_here/topics/Why_STAR_Voting.md` (+ `.html` presenter view) |
 | **Glossary** | `00_start_here/GLOSSARY.md` |
 | **Curriculum** | `00_start_here/CURRICULUM.md` |
-| **Flagship script** | `00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md` |
+| **Flagship script** | `00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md` |
 | **Spoiler demos** | `split_voting/` |
 | **Two-round demo** | `01_Single_winner/00a_c2_b1_two-candidates.yaml` |
 

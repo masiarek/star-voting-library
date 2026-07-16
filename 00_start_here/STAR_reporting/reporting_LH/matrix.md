@@ -2,7 +2,7 @@
 
 **One line:** the **Preference Matrix** shows every candidate against every other, one pair at a time — how many voters **prefer** each, and how many rated them **equal**. It's how you check whether STAR's winner is also the **Condorcet winner** (the candidate who beats everyone head-to-head).
 
-→ Hub: [STAR Reporting](../) · the full report: [How the LH engine reports](README.md) · the no-preference bucket: [Runoff percentages](../../STAR_Voting/runoff_percentages.md) · [`GLOSSARY`](../../GLOSSARY.md).
+→ Hub: [STAR Reporting](../) · the full report: [How the LH engine reports](README.md) · the no-preference bucket: [Runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md) · [`GLOSSARY`](../../GLOSSARY.md).
 
 ---
 
@@ -20,7 +20,7 @@ With only two candidates the matrix just **restates the runoff**, so house style
          * B > | 1 - 2 - 2  |   ---     |
 ```
 
-`A > B | 2 - 2 - 1`: 2 prefer A, 2 Equal Support, 1 prefers B — the same 2 vs 1 that decides the runoff (`Voters with a preference: 3 of 5 (2 Equal Support)`). Nothing new, hence hidden by default. (→ [Runoff percentages](../../STAR_Voting/runoff_percentages.md).)
+`A > B | 2 - 2 - 1`: 2 prefer A, 2 Equal Support, 1 prefers B — the same 2 vs 1 that decides the runoff (`Voters with a preference: 3 of 5 (2 Equal Support)`). Nothing new, hence hidden by default. (→ [Runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md).)
 
 ## Full N×N — every pair, and the Condorcet check
 
@@ -44,4 +44,4 @@ Read down Banana's row: it beats Apple (3 vs 1) **and** Cherry (5 vs 0), so Bana
 - **`matrix_finalists_only`** — `true` prints only the two finalists' row/column (a compact check that the runoff matches the pairwise result); `false` prints the full N×N grid. The saved `_tabulated.txt` always forces the **full** grid.
 - **`show_condorcet`** — `true` prints the `[Condorcet Winner]` line and whether it **matches the STAR winner**; `false` hides it (house default on screen, to keep the on-screen report lean). The `_tabulated.txt` copy always includes it.
 
-When the Condorcet winner and the STAR winner **differ**, that's the interesting case — see [three notions of "winner"](../../STAR_Voting/STAR_three_winner_notions.md).
+When the Condorcet winner and the STAR winner **differ**, that's the interesting case — see [three notions of "winner"](../../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md).

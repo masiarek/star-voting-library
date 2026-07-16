@@ -38,7 +38,7 @@ Filling it out is anchor-based, not field-scanning: give your favorite a 5, your
 
 A score carries **both** pieces of information a ballot can collect: the order (5 > 4 > 1 > 0) and the size of the gaps (Andre-to-Carmen is small; David-to-Blake is a cliff). Downstream methods can always *reduce* that to a ranking when they need one — scores → ranks drops information gracefully, while ranks → scores has to fabricate it (the [fidelity ladder](fidelity_ladder.md)).
 
-**Resolution is a design dial.** Yes/No approval is a score ballot at 1-bit resolution; 0–5 is the STAR standard (fine enough to express, coarse enough to read); classic Range ran 0–99. More levels = more expressiveness, and the choice can genuinely matter: [scale granularity can flip the winner](scale_granularity_flips_the_winner.md). The honest cost of coarseness: if you max out two candidates you *slightly* prefer apart, you've recorded a tie you didn't quite feel — see [are equal-score votes "discounted"?](../STAR_Voting/are_equal_score_votes_discounted.md) for the whole story, including why "show the gap: 5 and 4" is the honest advice.
+**Resolution is a design dial.** Yes/No approval is a score ballot at 1-bit resolution; 0–5 is the STAR standard (fine enough to express, coarse enough to read); classic Range ran 0–99. More levels = more expressiveness, and the choice can genuinely matter: [scale granularity can flip the winner](scale_granularity_flips_the_winner.md). The honest cost of coarseness: if you max out two candidates you *slightly* prefer apart, you've recorded a tie you didn't quite feel — see [are equal-score votes "discounted"?](../STAR_Voting/reference/are_equal_score_votes_discounted.md) for the whole story, including why "show the gap: 5 and 4" is the honest advice.
 
 ## One score ballot, several tabulations
 
@@ -47,7 +47,7 @@ The same 0–5 grid above can be counted by:
 | Count it with | How it reads the ballot | Notes |
 |---|---|---|
 | [Score / Range](../Range_Voting/range_voting.md) | add the scores; highest total wins | STAR without the runoff |
-| [STAR](../STAR_Voting/STAR_start_here.md) | add the scores, then the top two meet in an [automatic runoff](../STAR_Voting/STAR_Automatic_Runoff.md) | equal scores on the two finalists = [Equal Support](../STAR_Voting/glossary_STAR.md) — counted in round 1, neutral in the tie it had no stake in |
+| [STAR](../STAR_Voting/STAR_start_here.md) | add the scores, then the top two meet in an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md) | equal scores on the two finalists = [Equal Support](../STAR_Voting/reference/glossary_STAR.md) — counted in round 1, neutral in the tie it had no stake in |
 | [Approval](../Approval_Voting/approval_voting.md) | as 0/1 (approve or don't) | the 1-bit special case |
 | STAR-PR and friends | proportional multi-winner | [proportional representation](../proportional_representation/) |
 

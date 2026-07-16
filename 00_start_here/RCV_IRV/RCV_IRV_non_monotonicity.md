@@ -6,7 +6,7 @@
 
 > Why this page matters: most people are never told this. "Rank your honest favorite first, it can't backfire" is the core promise of IRV — and non-monotonicity is the case where that promise breaks. It's the single most underappreciated structural problem with the method.
 
-→ STAR doesn't have this failure — see [`STAR is monotone`](../STAR_Voting/STAR_monotonicity.md). Glossary: [`monotonicity`](../GLOSSARY.md).
+→ STAR doesn't have this failure — see [`STAR is monotone`](../STAR_Voting/properties_and_limits/STAR_monotonicity.md). Glossary: [`monotonicity`](../GLOSSARY.md).
 
 ---
 
@@ -57,7 +57,7 @@ Per a study of US RCV-IRV elections 2004–2022 (Graham-Squire & McCune, arXiv 2
 
 ## Don't confuse it with Later-No-Harm
 
-A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../STAR_Voting/favorite_betrayal_voting_301.md).)
+A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).)
 
 → More source notes: **RCV-IRV monotonicity** group in [LINKS — source-of-truth registry](../LINKS.md).
 

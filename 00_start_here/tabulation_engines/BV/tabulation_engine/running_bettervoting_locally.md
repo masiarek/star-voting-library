@@ -99,4 +99,4 @@ node@20 is keg-only. `fish_add_path /usr/local/opt/node@20/bin`.
 - **Env files (don't overwrite from sample.env):** `packages/backend/.env` → `BACKEND_PORT=5001`; `packages/frontend/.env` → `REACT_APP_BACKEND_URL=http://localhost:5001`
 - **`__META_TITLE__` placeholder** in the browser tab under the dev flow is normal — meta-tag injection only runs in the backend-served build, not the RSBuild dev server.
 
-Contribution/PR flow (fork → PR, "when is Docker needed"): see [contributing_to_bettervoting.md](./contributing_to_bettervoting.md). The repo's own `DEV_START.md` has the canonical dev-server steps.
+Contribution/PR flow (fork → PR, "when is Docker needed"): see [contributing_to_bettervoting.md](contributing_to_bettervoting.md). The repo's own `DEV_START.md` has the canonical dev-server steps.

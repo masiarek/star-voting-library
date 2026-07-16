@@ -32,9 +32,9 @@ Start here with zero background.
 Now the tools for judging methods against each other. *(Prereq: Level 1.)*
 
 - **Strategic voting** → [strategic voting across the Equal Vote methods](strategic_voting.md) — the four kinds of insincere vote, and when honesty pays.
-- **The classic failure scenarios** → [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the chicken-dilemma / [residual vote-splitting](../STAR_Voting/residual_vote_splitting.md).
-- **Simulations & VSE** → [Voter Satisfaction Efficiency and the favorite-betrayal simulation](../STAR_Voting/favorite_betrayal_voting_301.md), built on the repo's [Monte-Carlo scripts](../../06_Other/simulations/README.md).
-- **Three notions of "winner"** → [Condorcet vs. score vs. runoff](../STAR_Voting/STAR_three_winner_notions.md) — why "best" is ambiguous.
+- **The classic failure scenarios** → [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the chicken-dilemma / [residual vote-splitting](../STAR_Voting/properties_and_limits/residual_vote_splitting.md).
+- **Simulations & VSE** → [Voter Satisfaction Efficiency and the favorite-betrayal simulation](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md), built on the repo's [Monte-Carlo scripts](../../06_Other/simulations/README.md).
+- **Three notions of "winner"** → [Condorcet vs. score vs. runoff](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) — why "best" is ambiguous.
 - **The head-to-head comparisons** → [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) (STAR / Approval / Ranked Robin, even-handed) and [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
 - **Where methods disagree, worked** → [method comparisons](../../method_comparisons/README.md) and the [paradoxes & whoops](../../method_comparisons/paradoxes_and_whoops/README.md) collection (read under its [reading-these-fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) discipline).
 
@@ -49,7 +49,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 - **Impossibility theorems** → Arrow and Gibbard–Satterthwaite (defined in the [Glossary](../GLOSSARY.md)) — why *no* method is perfect, so every choice is a trade-off.
 - **The method zoo** → beyond the headline four: [3-2-1 voting](../../06_Other/three_two_one/README.md), [Borda](../other_ranked_methods/borda.md), [agenda voting](../other_ranked_methods/agenda_voting.md), and the ranked-method family in the [Glossary](../GLOSSARY.md#other-methods-for-contrast) (Ranked Pairs, Schulze, Minimax…).
 - **Opposing viewpoints (read these on purpose):**
-  - Each method's honest limits — [STAR](../STAR_Voting/STAR_honest_limits.md), [Approval](../Approval_Voting/approval_honest_limits.md), [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
+  - Each method's honest limits — [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Approval](../Approval_Voting/approval_honest_limits.md), [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
   - Claims we check both ways — [RCV-IRV claims, fact-checked](../RCV_IRV/rcv_irv_false_claims.md).
   - **Marcus's own guide** for a **Condorcet-preferring** perspective different from this library's STAR emphasis — [How to Learn About Voting Methods](https://voting-in-the-abstract.medium.com/how-to-learn-about-voting-methods-4e6c0e4d38d9).
 

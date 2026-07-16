@@ -2,13 +2,13 @@
 
 **One line:** Ranked Robin (RCV-RR) is a strong Condorcet method — it reads every rank, allows equal ranks, passes the Equal Vote, and has **no center squeeze** — but it inherits the two structural limits of ranked, Condorcet counting: it can hit a **cycle** with no clear winner, and it sees only **order, not strength**, so it can crown a bland compromise.
 
-→ Companion critical pages (parity across methods): [STAR's limits](../STAR_Voting/STAR_honest_limits.md) · [Approval's limits](../Approval_Voting/approval_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). What RCV-RR *is*: [Ranked Robin](./ranked_robin.md). Curriculum: [301.4](../CURRICULUM.md).
+→ Companion critical pages (parity across methods): [STAR's limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval's limits](../Approval_Voting/approval_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). What RCV-RR *is*: [Ranked Robin](ranked_robin.md). Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
 ## 1. Condorcet cycles (no clear winner)
 
-Sometimes there is **no Condorcet winner**: A beats B, B beats C, C beats A — a rock-paper-scissors "cycle." Then RCV-RR must fall back to a **resolution rule** (Copeland / margins), and any such rule is harder to explain and can feel arbitrary to a voter ("why did we break it *that* way?"). **How much it matters:** cycles are rare with real electorates, but they are the honest soft spot of every Condorcet method. See [cycle resolution](./cycle_resolution.md).
+Sometimes there is **no Condorcet winner**: A beats B, B beats C, C beats A — a rock-paper-scissors "cycle." Then RCV-RR must fall back to a **resolution rule** (Copeland / margins), and any such rule is harder to explain and can feel arbitrary to a voter ("why did we break it *that* way?"). **How much it matters:** cycles are rare with real electorates, but they are the honest soft spot of every Condorcet method. See [cycle resolution](cycle_resolution.md).
 
 ## 2. No preference strength — the "milquetoast" winner
 

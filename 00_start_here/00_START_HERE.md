@@ -11,9 +11,9 @@ This is the **STAR Voting education library** — for learning, teaching, and de
 The main event.
 
 - **New here — the "why" before the "how"** → [STAR — start here](STAR_Voting/STAR_start_here.md)
-- **How the count works** → [the Scoring Round](STAR_Voting/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/STAR_Automatic_Runoff.md) (two rounds, one ballot)
-- **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/STAR_benefits.md) · debate prep → [Why STAR Voting](topics/Why_STAR_Voting.md)
-- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/STAR_FAQ.md)
+- **How the count works** → [the Scoring Round](STAR_Voting/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
+- **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/getting_started/STAR_benefits.md) · debate prep → [Why STAR Voting](topics/Why_STAR_Voting.md)
+- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/getting_started/STAR_FAQ.md)
 - **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
 
 ## What's wrong with how we vote now?
@@ -34,7 +34,7 @@ The honest comparison — where STAR's case is actually made.
 - [Choosing among the Equal Vote methods](topics/choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
 - [RCV-IRV vs. STAR](topics/rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
 - [Strategic voting](topics/strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
-- **Skeptical?** [STAR for skeptics — the honest 5-minute path](STAR_Voting/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
+- **Skeptical?** [STAR for skeptics — the honest 5-minute path](STAR_Voting/getting_started/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
 - **More than one seat?** [Electing more than one, simply](topics/electing_more_than_one.md) — majoritarian vs. proportional, in plain language
 
 ## The whole field, even-handed
@@ -43,7 +43,7 @@ The credibility layer — read the arguments *against*, too.
 
 - [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
 - [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
-- **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/STAR_honest_limits.md) · [Approval](Approval_Voting/approval_honest_limits.md) · [Ranked Robin](RCV_Ranked_Robin/RCV_RR_honest_limits.md)
+- **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](Approval_Voting/approval_honest_limits.md) · [Ranked Robin](RCV_Ranked_Robin/RCV_RR_honest_limits.md)
 - [Who champions each method](topics/advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
 
 ## Run & verify elections (the library + engine)

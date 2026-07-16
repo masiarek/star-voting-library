@@ -2,7 +2,7 @@
 
 *The objection, in its strongest form: in STAR, a ballot that scores both finalists the same (a 5/5, a 0/0) is tagged **Equal Support** — "no preference" between the two — and moves nothing in the Automatic Runoff. Sometimes that's a lot of ballots. Isn't that just a discounted vote? This page answers honestly: it concedes the mechanical fact, shows why "discounted" is the wrong word, proves with a runnable election that these ballots do real work, and names the one version of the criticism that genuinely lands.*
 
-→ Companions: [Equal Support in both rounds (the demo)](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
+→ Companions: [Equal Support in both rounds (the demo)](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](../the_count/STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](../getting_started/common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
 
 ---
 
@@ -23,11 +23,11 @@ The sharpest way to see why "discounted" fails is to compare the thing critics n
 
 > **In RCV-IRV, an exhausted ballot is a voter who lost their voice. In STAR, an equal-score ballot is a voter who declared a tie.**
 
-One is missing data; the other is present data that happens to be neutral. Treating "I am equally happy with either winner" as a *failure to be counted* is the part of the criticism that doesn't survive contact. The full taxonomy of what "exhausted" hides is its own page: [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md).
+One is missing data; the other is present data that happens to be neutral. Treating "I am equally happy with either winner" as a *failure to be counted* is the part of the criticism that doesn't survive contact. The full taxonomy of what "exhausted" hides is its own page: [exhausted ballots, untangled](../../RCV_IRV/exhausted_ballots_301.md).
 
 ## Proof they're counted: an election where equal-score ballots pick the finalists
 
-Run [`equal_support_runoff_demo.yaml`](../../01_STAR/_main/equal_support_runoff_demo.yaml) ([reader page](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
+Run [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml) ([reader page](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
 
 ```text
 --- STAR Voting Method (single winner) ---
@@ -63,7 +63,7 @@ Counted in both rounds, decisive in neither tie they had no stake in — a very 
 
 There is one version of this criticism that is legitimate, and pretending otherwise would cost more than it saves. Suppose you like A a *tiny* bit more than B, but you think both are excellent and you want them both to beat C. On a 0–5 scale you might give both a 5 to keep them strong — and now a preference you really had is recorded as a tie. The ballot's resolution failed to capture it. In one Oregon Independent Party race, nearly 30% of runoff ballots landed as "no preference," and some of those voters surely had a faint lean they maxed out of existence.
 
-That is a fair, objective criticism of *cardinal ballots with few levels* — a self-inflicted discount the scale makes easy. The practical answer is voter education, and it's one sentence: **show the gap you feel between the front-runners — if you like A more, give A the 5 and B a 4.** Your 4 still supports B strongly in the Scoring Round, and your preference now counts in the runoff. (STAR's design rewards exactly this honesty; see [the ways to fill out a STAR ballot](STAR_ballot_voting_styles.md).)
+That is a fair, objective criticism of *cardinal ballots with few levels* — a self-inflicted discount the scale makes easy. The practical answer is voter education, and it's one sentence: **show the gap you feel between the front-runners — if you like A more, give A the 5 and B a 4.** Your 4 still supports B strongly in the Scoring Round, and your preference now counts in the runoff. (STAR's design rewards exactly this honesty; see [the ways to fill out a STAR ballot](../STAR_ballot_voting_styles.md).)
 
 ## The asymmetry: compare it to how ranked-IRV ballots get wasted
 
@@ -73,7 +73,7 @@ Does the concession mean STAR "wastes" votes just like the thing it criticizes? 
 - **Favorite in the final, and loses** — if your favorite reaches the last round and loses, your backup rankings are never read at all.
 - **Your next choice is already gone** — by the time your vote is ready to transfer, the candidate it would have gone to may already be eliminated.
 
-In every one of those cases the voter *supplied* a preference and the count never used it. So the debate move is: concede the equal-score mechanic, then ask the critic to account for those. See [exhausted ballots, untangled](../RCV_IRV/exhausted_ballots_301.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md) (usability / exhausted ballots).
+In every one of those cases the voter *supplied* a preference and the count never used it. So the debate move is: concede the equal-score mechanic, then ask the critic to account for those. See [exhausted ballots, untangled](../../RCV_IRV/exhausted_ballots_301.md) and [Why STAR Voting](../../topics/Why_STAR_Voting.md) (usability / exhausted ballots).
 
 ## The takeaway
 
@@ -83,4 +83,4 @@ An equal-score ballot isn't a discounted vote — it's a voter who said, in thei
 
 ## Where this fits in the teaching
 
-This is **objection-handling material for skeptics and the RCV-IRV-advocate audience** — don't raise "discounted votes" with a first-contact audience; you'd plant a doubt they didn't have. It hangs off two 101 moments: where [Equal Support](glossary_STAR.md) is first introduced, and the STAR-vs-RCV-IRV comparison. Presenters: the matching slides are indexed by short name in [LINKS.md](../LINKS.md) ("No-preference votes in the STAR runoff"; "Combatting strategic voting"; the exhausted-ballot slides), and the episode roadmap lives in [conversation scripts](../about_this_repo/conversation_scripts.md).
+This is **objection-handling material for skeptics and the RCV-IRV-advocate audience** — don't raise "discounted votes" with a first-contact audience; you'd plant a doubt they didn't have. It hangs off two 101 moments: where [Equal Support](glossary_STAR.md) is first introduced, and the STAR-vs-RCV-IRV comparison. Presenters: the matching slides are indexed by short name in [LINKS.md](../../LINKS.md) ("No-preference votes in the STAR runoff"; "Combatting strategic voting"; the exhausted-ballot slides), and the episode roadmap lives in [conversation scripts](../../about_this_repo/conversation_scripts.md).

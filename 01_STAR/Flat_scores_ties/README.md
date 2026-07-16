@@ -10,7 +10,7 @@ Each scenario has its own friendly themed cast (fruits, flavors, capitals, …) 
 
 > **Workflow / status.** The LH side is complete and verified. The BV side is being reproduced: for each case you build the BV election, drop the export + screenshots, and the `_<bvid>` suffix is appended to the filenames. **Case 05 is already built** (BV id `xmyf7k`) but is a special one: BV's terminal tiebreak there is **random**, so it's **LH-only / not freezable** — a documented deterministic-vs-random divergence (the logic is WAI), not a bug. Cases where BV produces a genuinely *incorrect* result still show it with a **"bug pending"** callout linking the tracking issue (same pattern as [`Runoff_07`](../runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md)).
 
-Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
+Concept backing: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · [why these contrived cases are worth building](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
 
 ---
 

@@ -7,7 +7,7 @@
 ## Scenario
 
 A *jarring* runoff reversal — the genuine philosophical drawback of STAR, shown honestly. 100 voters, three candidates: Uma is a near-consensus, high-utility candidate (49 give her a 5, 51 give her a 4 — a 4.5/5 average), Rye is polarizing (51 love him, 49 reject him), Tao is a no-hoper. Uma dominates the SCORE round 449 to Rye's 255 (Tao 49) — almost twice Rye's total — yet the runoff is Uma vs Rye, and Rye wins 51–49: a bare majority prefers him head-to-head. A utilitarian says STAR just elected the candidate who makes the electorate less happy overall; a majoritarian says 51 > 49 is the most legitimate thing an election can report. STAR is a hybrid (cardinal ballot, ordinal finish) and this is exactly where those two values pull apart — STAR chooses majority preference over utility maximization. Concede it plainly; it's a real cost, not a bug. Companion reversal_convincing_c3_b100 is the *convincing* reversal.
-Lesson: 00_start_here/STAR_Voting/STAR_second_round_FAQ.md
+Lesson: 00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md
 
 ## Ballots
 

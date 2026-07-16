@@ -10,10 +10,10 @@ This folder is a **hub**: short, reporting-focused pages that link out to the ca
 
 A STAR result is a short funnel, and every report shows the same stages:
 
-1. **Counts / scores** — add every star; each candidate gets a total. (STAR is *summable*: precinct totals add up. → [STAR summability](../STAR_Voting/STAR_summability.md))
+1. **Counts / scores** — add every star; each candidate gets a total. (STAR is *summable*: precinct totals add up. → [STAR summability](../STAR_Voting/properties_and_limits/STAR_summability.md))
 2. **Finalists** — the two highest scorers advance.
 3. **Automatic Runoff** — each ballot goes to whichever finalist it scored higher.
-4. **Percentages** — the winner needs a majority of the voters **with a preference** between the two finalists. (→ [Runoff percentages — two denominators](../STAR_Voting/runoff_percentages.md))
+4. **Percentages** — the winner needs a majority of the voters **with a preference** between the two finalists. (→ [Runoff percentages — two denominators](../STAR_Voting/the_count/runoff_percentages.md))
 5. **No-preference ballots** — ballots that score the two finalists equally are **Equal Support** (counted in the score round, set aside from the runoff percentage); a fully blank ballot is an **abstention**. (→ [`GLOSSARY`](../GLOSSARY.md))
 
 ## The two reports
@@ -37,7 +37,7 @@ A STAR result is a short funnel, and every report shows the same stages:
 
 - [Reading a STAR report](../tabulation_engines/LH_starvote/reading_a_star_report.md) — the LH report, section by section.
 - [BetterVoting and the LH engine](../tabulation_engines/bettervoting_and_the_engine.md) — why one election has two reports, and how they map.
-- [Runoff percentages](../STAR_Voting/runoff_percentages.md) — the two-denominator idea.
+- [Runoff percentages](../STAR_Voting/the_count/runoff_percentages.md) — the two-denominator idea.
 - [Tabulation, step by step](../topics/tabulation_star_vs_irv.md) — STAR's two steps vs IRV's rounds.
 
 ## Worked examples — always two views

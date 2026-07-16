@@ -5,7 +5,7 @@ hand-count exercise, tied to a BetterVoting (BV) election.
 
 The teacher's front-of-workflow tool: you make a real election on BetterVoting,
 then print matching paper ballots so a room can vote by hand, hand-count the result
-(see 00_start_here/STAR_Voting/count_star_by_hand.md), and compare to BV's official
+(see 00_start_here/STAR_Voting/hands_on/count_star_by_hand.md), and compare to BV's official
 tally. Output is a **print-ready PDF** (the only format), rendered from the ballot
 HTML via headless Chromium. Each ballot carries the STAR instructions, a 0-5 bubble
 grid per candidate, two QRs (vote + results), and the BV election id — so paper and

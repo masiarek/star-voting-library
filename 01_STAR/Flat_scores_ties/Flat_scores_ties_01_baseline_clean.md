@@ -2,7 +2,7 @@
 
 **Level 101 · the control.** Before any tie, show the ordinary case: distinct totals leave an **unambiguous top two** and a **decisive runoff**, so **no tie-break fires anywhere.** BetterVoting and the LH engine agree trivially. This is the contrast every later case is measured against. Cast: three fruits.
 
-→ the cascade that the tie cases trigger: [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · the set: [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ the cascade that the tie cases trigger: [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · the set: [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

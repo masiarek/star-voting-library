@@ -29,11 +29,11 @@ It's a strong slogan, and it's mostly defensible — but be precise about *which
 - **One equal vote in the runoff.** Big scores and small scores count the same in the final, so no ballot is worth less than another there.
 
 **The honest qualifications:**
-- **A `0` is a real (lowest) score, not a neutral discard.** Saying "no vote is thrown away" is fairer than in plurality, but a 0 *is* an expressed opinion, not a non-vote. → ["Aren't equal-score votes just discounted?"](../STAR_Voting/are_equal_score_votes_discounted.md)
-- **[Equal Support](../STAR_Voting/are_equal_score_votes_discounted.md) means you chose not to tip the runoff.** If you rate the two finalists the same, your ballot doesn't decide between them — by your own choice, not the method's.
+- **A `0` is a real (lowest) score, not a neutral discard.** Saying "no vote is thrown away" is fairer than in plurality, but a 0 *is* an expressed opinion, not a non-vote. → ["Aren't equal-score votes just discounted?"](../STAR_Voting/reference/are_equal_score_votes_discounted.md)
+- **[Equal Support](../STAR_Voting/reference/are_equal_score_votes_discounted.md) means you chose not to tip the runoff.** If you rate the two finalists the same, your ballot doesn't decide between them — by your own choice, not the method's.
 - **You can still be on the losing side.** Your candidate not winning is not the same as your vote being "wasted" — every ballot was counted; the electorate simply preferred someone else. No method makes every voter's choice decisive (that's impossible).
 
-So the precise, defensible claim is: **STAR eliminates *strategic* waste (vote-splitting, the spoiler trap) and never discards a ballot** — not the literal "every vote changes the outcome." Made precisely, it's a strong point; made as an absolute, it overreaches. (Full honest caveats: [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).)
+So the precise, defensible claim is: **STAR eliminates *strategic* waste (vote-splitting, the spoiler trap) and never discards a ballot** — not the literal "every vote changes the outcome." Made precisely, it's a strong point; made as an absolute, it overreaches. (Full honest caveats: [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).)
 
 ## Related
 

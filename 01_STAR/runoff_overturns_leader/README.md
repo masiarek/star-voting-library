@@ -6,7 +6,7 @@ This is STAR's single most important lesson — the one BetterVoting itself asks
 
 **Real BetterVoting cases — the `Runoff_01`–`Runoff_08` two-view series** now live in a sibling folder: **[runoff_reversal_bv_cases/](../runoff_reversal_bv_cases/)** — real BV elections, each a two-view lesson (BetterVoting screenshots beside the LH report) walking the *how much vs how many* arc, from the smallest possible reversal to the 61-candidate CA-Governor field. The small, LH-only teaching demos stay **here** (below).
 
-Concept hub for all of it: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md).
+Concept hub for all of it: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md).
 
 **The name for it:** we call this a **Runoff Reversal** — the Scoring-Round leader *loses* the Automatic Runoff to the finalist more voters prefer. (In technical or debate writing, the precise phrasing is "the runoff overturns the score leader," to avoid colliding with *reversal symmetry* in social-choice theory.)
 
@@ -58,7 +58,7 @@ The **Page** (left) is the readable write-up with ballots + full results; the ra
 | [reversal — the *convincing* case](runoff_overturns_leader_pages/reversal_convincing_c3_b100.md) | 3 cand, 100 voters | Intense-minority Max leads on stars 335–255, **Nora** (broad) wins the runoff 55–45 — the runoff clearly earns its keep | [`.yaml`](reversal_convincing_c3_b100.yaml) |
 | [reversal — the *jarring* case](runoff_overturns_leader_pages/reversal_jarring_c3_b100.md) | 3 cand, 100 voters | Near-consensus Uma leads 449–255 (avg **4.5**) yet polarizing **Rye** wins 51–49 — STAR choosing majority over utility, the honest drawback | [`.yaml`](reversal_jarring_c3_b100.yaml) |
 
-The last two are the contrasting pair behind the [second-round FAQ](../../00_start_here/STAR_Voting/STAR_second_round_FAQ.md) — one reversal almost everyone accepts, one that's a genuine philosophical trade-off (a token no-hoper keeps each a proper three-way race).
+The last two are the contrasting pair behind the [second-round FAQ](../../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md) — one reversal almost everyone accepts, one that's a genuine philosophical trade-off (a token no-hoper keeps each a proper three-way race).
 
 Two more, in the main folder, push the field even wider:
 

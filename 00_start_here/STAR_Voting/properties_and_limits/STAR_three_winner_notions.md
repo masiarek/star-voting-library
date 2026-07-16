@@ -2,7 +2,7 @@
 
 **One line:** the word *winner* isn't one thing. In a single election, three reasonable definitions can point at **three different candidates** — and STAR's job is to choose among them on purpose, not by accident.
 
-→ Related: the simpler two-way case, [Runoff Reversal](../../01_STAR/runoff_overturns_leader/) (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../GLOSSARY.md).
+→ Related: the simpler two-way case, [Runoff Reversal](../../../01_STAR/runoff_overturns_leader/) (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../../GLOSSARY.md).
 
 ---
 
@@ -10,13 +10,13 @@
 
 - **Condorcet winner** — the candidate who **beats every other candidate one-on-one**. The "no one would rather have someone else, head-to-head" winner.
 - **Score (utility) winner** — the candidate with the **most total stars**. The "highest overall enthusiasm" winner.
-- **Runoff winner (= the STAR winner)** — the candidate the **majority prefers between the two finalists**. STAR uses the [Scoring Round](STAR_Scoring_Round.md) to pick the two finalists, then the [Automatic Runoff](STAR_Automatic_Runoff.md) to choose between them.
+- **Runoff winner (= the STAR winner)** — the candidate the **majority prefers between the two finalists**. STAR uses the [Scoring Round](../the_count/STAR_Scoring_Round.md) to pick the two finalists, then the [Automatic Runoff](../the_count/STAR_Automatic_Runoff.md) to choose between them.
 
 When these three agree — which is common — STAR, score, and Condorcet all name the same person and there's nothing to discuss. The lesson is what happens when they **don't**.
 
 ## One election, three winners
 
-→ [`three_winners_cw_score_runoff.yaml`](../../01_STAR/_main/three_winners_cw_score_runoff.yaml) — five voters, three candidates:
+→ [`three_winners_cw_score_runoff.yaml`](../../../01_STAR/_main/three_winners_cw_score_runoff.yaml) — five voters, three candidates:
 
 ```
   Ann  Bob  Carl

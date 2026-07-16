@@ -21,7 +21,7 @@ The whole gap is one rule: **BetterVoting files a flat ballot (every candidate s
 
 ## Why "no preference" ≠ "abstention"
 
-A ballot that scores everyone the same is a **cast vote** with no preference between the finalists — that's **Equal Support**, which is correctly *neutral in the runoff denominator* but still **counts in the score round**. An **abstention** is a ballot with no score recorded at all (a blank). Folding the first into the second mislabels engaged voters and makes published score totals miss a hand count. (Terms: [`GLOSSARY`](../GLOSSARY.md) · the denominator: [Runoff percentages](../STAR_Voting/runoff_percentages.md).)
+A ballot that scores everyone the same is a **cast vote** with no preference between the finalists — that's **Equal Support**, which is correctly *neutral in the runoff denominator* but still **counts in the score round**. An **abstention** is a ballot with no score recorded at all (a blank). Folding the first into the second mislabels engaged voters and makes published score totals miss a hand count. (Terms: [`GLOSSARY`](../GLOSSARY.md) · the denominator: [Runoff percentages](../STAR_Voting/the_count/runoff_percentages.md).)
 
 ## Two views of the same election
 

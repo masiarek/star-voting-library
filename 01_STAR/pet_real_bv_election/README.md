@@ -1,6 +1,6 @@
 # A real BetterVoting election, end to end — "What Makes the Best Pet?"
 
-This is a **real STAR election run on BetterVoting** (BV id `pet`): 7 candidates, **461 ballots**, single winner. It's the worked example behind the screenshots in the [runoff percentages lesson](../../00_start_here/STAR_Voting/runoff_percentages.md) and the [BetterVoting ↔ LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) page — here you get the **whole thing**: the election file and the full engine report, side by side, so you can read a real result from raw ballots to winner.
+This is a **real STAR election run on BetterVoting** (BV id `pet`): 7 candidates, **461 ballots**, single winner. It's the worked example behind the screenshots in the [runoff percentages lesson](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) and the [BetterVoting ↔ LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) page — here you get the **whole thing**: the election file and the full engine report, side by side, so you can read a real result from raw ballots to winner.
 
 - **The election file:** [`best_pet_c7_b461.yaml`](best_pet_c7_b461.yaml) — the actual BetterVoting JSON export, converted to YAML (461 score ballots, 0–5, with blanks).
 - **The full engine report:** [`best_pet_c7_b461_tabulated.txt`](pet_real_bv_election_tabulated/best_pet_c7_b461_tabulated.txt) — matrix, Condorcet check, score distribution, both rounds, winner.
@@ -38,7 +38,7 @@ Now only the two finalists matter. Each ballot's full vote goes to whichever of 
    Dog 190 (52%) vs Cat 173 (48%); majority = 182.
 ```
 
-**Dog wins.** The line self-reconciles: of **461** cast ballots, **363 had a preference** between the finalists and **98 are Equal Support** (`461 − 98 = 363`). The same 190 reads two ways — 190 of all 461 isn't the point; 190 of the **363 with a preference** is **52%**, clearing the 182-vote majority. The 98 Equal Support voters scored Dog and Cat the same, so they sit out *this* head-to-head (but counted fully in the scoring round). That two-denominator idea is the whole [runoff percentages lesson](../../00_start_here/STAR_Voting/runoff_percentages.md); the engine prints the decisive line because the file sets `show_runoff_percent: true`. (The saved `_tabulated` copy expands it into a "Runoff math" funnel.)
+**Dog wins.** The line self-reconciles: of **461** cast ballots, **363 had a preference** between the finalists and **98 are Equal Support** (`461 − 98 = 363`). The same 190 reads two ways — 190 of all 461 isn't the point; 190 of the **363 with a preference** is **52%**, clearing the 182-vote majority. The 98 Equal Support voters scored Dog and Cat the same, so they sit out *this* head-to-head (but counted fully in the scoring round). That two-denominator idea is the whole [runoff percentages lesson](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md); the engine prints the decisive line because the file sets `show_runoff_percent: true`. (The saved `_tabulated` copy expands it into a "Runoff math" funnel.)
 
 ## 3. Did STAR pick the "right" pet? (the Condorcet check)
 
@@ -49,7 +49,7 @@ The full report's pairwise matrix shows **Dog beats every other candidate head-t
   Condorcet Winner: Dog — matches the STAR winner
 ```
 
-When the score leader, the runoff winner, and the Condorcet winner are the *same* candidate (as here), the result is about as uncontroversial as it gets. (For the case where they *differ*, see [three notions of "winner"](../../00_start_here/STAR_Voting/STAR_three_winner_notions.md) and the [Runoff Reversal](../runoff_overturns_leader/) walkthrough.)
+When the score leader, the runoff winner, and the Condorcet winner are the *same* candidate (as here), the result is about as uncontroversial as it gets. (For the case where they *differ*, see [three notions of "winner"](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) and the [Runoff Reversal](../runoff_overturns_leader/) walkthrough.)
 
 ## 4. Real-ballot details: abstention vs. explicit zero
 

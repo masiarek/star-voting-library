@@ -5,8 +5,8 @@ The library's headline method: **STAR** (Score Then Automatic Runoff) for one se
 This folder is the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [STAR Voting concepts folder](../00_start_here/STAR_Voting/README.md). New to STAR? Read those first:
 
 - **[STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md)** — the "why" before the "how."
-- **[The benefits of STAR](../00_start_here/STAR_Voting/STAR_benefits.md)** — the case for it, in brief.
-- **[The second round — FAQ](../00_start_here/STAR_Voting/STAR_second_round_FAQ.md)** — what the automatic runoff does, and the objections answered honestly.
+- **[The benefits of STAR](../00_start_here/STAR_Voting/getting_started/STAR_benefits.md)** — the case for it, in brief.
+- **[The second round — FAQ](../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md)** — what the automatic runoff does, and the objections answered honestly.
 
 ---
 
@@ -33,7 +33,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 9. **The Majority Criterion** (and the "relaxed" version) → [the two 5-voter elections](majority_criterion/).
 10. **The "dead rung"** — when STAR's five-star tiebreaker can't fire and the tie falls to the lot → [the dead-rung case](tie_break_dead_rung/).
 11. **None of the Above** — a protest electorate where NOTA actually wins → [the NOTA election](none_of_the_above/).
-12. **The honest limits & the reversal debate** → [STAR's honest limits](../00_start_here/STAR_Voting/STAR_honest_limits.md) · [the second-round FAQ](../00_start_here/STAR_Voting/STAR_second_round_FAQ.md).
+12. **The honest limits & the reversal debate** → [STAR's honest limits](../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [the second-round FAQ](../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md).
 
 ---
 
@@ -69,6 +69,6 @@ Every file writes a full audit report to its `_tabulated.txt` sibling — watch 
 - **Concept docs:** [the STAR Voting concepts folder](../00_start_here/STAR_Voting/README.md) · the curriculum: [CURRICULUM.md](../00_start_here/CURRICULUM.md)
 - **STAR vs other methods** (RCV-IRV, Approval, Score): [the method-comparisons folder](../method_comparisons/)
 - **Multi-winner STAR:** [Bloc STAR](../02_STAR_Bloc/) · [Proportional STAR](../03_STAR_PR/)
-- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](../00_start_here/STAR_Voting/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../00_start_here/STAR_Voting/why_do_you_love_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
+- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](../00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../00_start_here/STAR_Voting/reference/why_do_you_love_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
 
 # file: README.md

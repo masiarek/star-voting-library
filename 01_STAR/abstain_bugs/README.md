@@ -2,7 +2,7 @@
 
 Real BetterVoting elections that expose the **abstain / blank / zero** handling issues, reproduced and cross-checked against the LH engine. They share one root: BetterVoting's policy ([#884](https://github.com/Equal-Vote/bettervoting/issues/884)) counts an **all-equal** ballot (`0,0` *and* `5,5`) as an abstention, while LH counts an explicit score — even all-0 or all-5 — as a real vote and only abstains a *truly blank* ballot. The winner usually survives (via tiebreak), but the reported tally/abstention **counts diverge**, and BetterVoting's "0 tallied votes yet a winner" is the visible bug.
 
-Full context and the wider ticket map: [BV abstain / blank / zero — issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md) · concept: [abstention vs a zero vs None of the Above](../../00_start_here/STAR_Voting/abstention_vs_zero_vs_nota.md).
+Full context and the wider ticket map: [BV abstain / blank / zero — issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md) · concept: [abstention vs a zero vs None of the Above](../../00_start_here/STAR_Voting/properties_and_limits/abstention_vs_zero_vs_nota.md).
 
 | Case | Method | What it shows | Issue |
 |---|---|---|:--:|

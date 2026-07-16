@@ -31,7 +31,7 @@ options:
 | `show_irv` | the `[Divergence from STAR]` block comparing the RCV-IRV result | — |
 | `brief` | `true` collapses repeated section headers so the report is shorter | [brief (with/without)](brief.md) |
 | `collapse_ballots` | `false` lists every ballot; `true` groups identical ones as `count × scores` | — |
-| `show_runoff_percent` | the `Voters with a preference: N of TOTAL …` line | [runoff percentages](../../STAR_Voting/runoff_percentages.md) |
+| `show_runoff_percent` | the `Voters with a preference: N of TOTAL …` line | [runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md) |
 
 ## What this block produces
 

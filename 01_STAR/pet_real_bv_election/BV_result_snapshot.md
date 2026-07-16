@@ -53,4 +53,4 @@ The whole gap is one classification choice: BetterVoting files **flat / Equal Su
 - Minimal synthetic illustration (LH-correct behavior): [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
 - How that small case was reproduced on BetterVoting: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
 - Worked lesson: [A real BetterVoting election, end to end — "What Makes the Best Pet?"](README.md)
-- Concept: [BetterVoting and the LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) · [Runoff percentages](../../00_start_here/STAR_Voting/runoff_percentages.md)
+- Concept: [BetterVoting and the LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) · [Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md)

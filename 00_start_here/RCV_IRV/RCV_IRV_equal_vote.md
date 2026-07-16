@@ -2,13 +2,13 @@
 
 **One line:** RCV-IRV does **not** deliver an equally weighted vote. Because it counts only one ranking at a time and eliminates candidates sequentially, two voters with exactly opposite preferences often **cannot cancel each other out** — so vote-splitting and the spoiler effect survive. STAR, Score, and Approval pass this test; RCV-IRV does not.
 
-→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../STAR_Voting/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](./RCV_IRV_center_squeeze.md) · [exhausted ballots](./RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../CURRICULUM.md).
+→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
 ## The test it fails
 
-The **Equal Vote Criterion** (the "Test of Balance") asks: for any ballot one voter casts, can another voter cast an *equal-and-opposite* ballot so the two together change nothing? If yes, no voter's ballot outweighs another's. The full concept — and the worked example where two opposite score ballots cancel — is on the STAR page, [The Equally Weighted Vote](../STAR_Voting/equally_weighted_vote.md). RCV-IRV fails it for two connected reasons: **vote-splitting** and **ballot exhaustion**.
+The **Equal Vote Criterion** (the "Test of Balance") asks: for any ballot one voter casts, can another voter cast an *equal-and-opposite* ballot so the two together change nothing? If yes, no voter's ballot outweighs another's. The full concept — and the worked example where two opposite score ballots cancel — is on the STAR page, [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md). RCV-IRV fails it for two connected reasons: **vote-splitting** and **ballot exhaustion**.
 
 ## Why RCV-IRV fails: one active ranking at a time
 
@@ -30,8 +30,8 @@ X and Y did *not* have an equal-and-opposite effect. They inadvertently **both h
 
 ## Vote-splitting and exhaustion, precisely
 
-- **Vote-splitting.** Elimination order means a faction that runs *more* candidates is statistically disadvantaged; opposite preferences don't cancel, they interact with who gets eliminated when. (This is the same root cause as [center squeeze](./RCV_IRV_center_squeeze.md).)
-- **Ballot exhaustion.** In the deciding round, some voters' later choices are never counted because their ballot already **exhausted** — so those voters get no equal-and-opposite say at the moment it matters. See [exhausted ballots](./RCV_IRV_exhausted_ballots.md).
+- **Vote-splitting.** Elimination order means a faction that runs *more* candidates is statistically disadvantaged; opposite preferences don't cancel, they interact with who gets eliminated when. (This is the same root cause as [center squeeze](RCV_IRV_center_squeeze.md).)
+- **Ballot exhaustion.** In the deciding round, some voters' later choices are never counted because their ballot already **exhausted** — so those voters get no equal-and-opposite say at the moment it matters. See [exhausted ballots](RCV_IRV_exhausted_ballots.md).
 
 ## The other side, fairly stated
 
@@ -56,4 +56,4 @@ This is an **RCV-IRV** failure, not a property of ranked ballots in general. Wit
 - Equal Vote Coalition — the Equal Vote / Test of Balance: <https://www.equal.vote/equalvote>
 - electowiki — [Equal Vote Criterion](https://electowiki.org/wiki/Equal_Vote_Criterion)
 - FairVote (contrasting view) — [How RCV survives the one-person-one-vote challenge](https://fairvote.org/how_ranked_choice_voting_survives_the_one_person_one_vote_challenge/)
-- Companion page: [The Equally Weighted Vote (STAR)](../STAR_Voting/equally_weighted_vote.md)
+- Companion page: [The Equally Weighted Vote (STAR)](../STAR_Voting/properties_and_limits/equally_weighted_vote.md)

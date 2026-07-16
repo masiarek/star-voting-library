@@ -21,7 +21,7 @@ That pure "raise X and bury the losers below X" move drops Y from 84 to 66,
 below Z's 72, so the finalists become X and Z instead of X and Y. X still leads
 the scoring, but now faces Z in the runoff and loses. Raising X made X lose:
 STAR fails mono-raise-delete. The soft spot is finalist selection, not X's own
-score. See 00_start_here/STAR_Voting/STAR_monotonicity.md.
+score. See 00_start_here/STAR_Voting/properties_and_limits/STAR_monotonicity.md.
 
 ## Ballots
 

@@ -4,7 +4,7 @@
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
-![A generated STAR paper ballot — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](img/star_paper_ballot_example.png)
+![A generated STAR paper ballot — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](../img/star_paper_ballot_example.png)
 
 *A real generated ballot (the [Best Ice Cream Flavor](https://bettervoting.com/2wfth7) demo, B&W long-form logo). Every element below is configurable — see the checklist.*
 
@@ -36,11 +36,11 @@ Before you run the tool, decide:
 
 ## Step 1 — create the election and export its JSON
 
-Create your election at [bettervoting.com](https://bettervoting.com) — or, faster, define it in [`bv_election_specs.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_election_specs.py) and run [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py), which creates the election **and saves its JSON** to `06_Other/_demo_dropbox/` automatically. Either way you end up with a **BV export JSON** — that file carries the title, candidates, election id, and descriptions, and it's the only input the ballot tool needs. (For a full export *with* ballots/results, use the BV UI's export; for *printing*, the auto-saved config JSON is enough.)
+Create your election at [bettervoting.com](https://bettervoting.com) — or, faster, define it in [`bv_election_specs.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_election_specs.py) and run [`create_bv_test_election.py`](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py), which creates the election **and saves its JSON** to `06_Other/_demo_dropbox/` automatically. Either way you end up with a **BV export JSON** — that file carries the title, candidates, election id, and descriptions, and it's the only input the ballot tool needs. (For a full export *with* ballots/results, use the BV UI's export; for *printing*, the auto-saved config JSON is enough.)
 
 ## Step 2 — print ballots from the export
 
-The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). It has **one input route** — a BetterVoting export — so there's nothing to hand-type; title, candidates, id, and descriptions all come from the JSON:
+The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). It has **one input route** — a BetterVoting export — so there's nothing to hand-type; title, candidates, id, and descriptions all come from the JSON:
 
 ```bash
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
@@ -54,7 +54,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 **Ready-made live elections to demo with** — each has a BV export you can print from (and a live results page to check against):
 - **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets, single-winner STAR, a classroom crowd-pleaser.
-- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../topics/criteria_at_a_glance.md).
+- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../../topics/criteria_at_a_glance.md).
 - **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
 - **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
 
@@ -68,11 +68,11 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes (in the official ballot grays: bubbles `#666`, stars `#ccc`, highlight `#ececec`), and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
 
-**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, add the **official STAR Voting logo** with `--logo`. Two are bundled in [`tools_adam/assets/`](../../STARVote_LH_tabulation_engine/tools_adam/assets/):
+**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, add the **official STAR Voting logo** with `--logo`. Two are bundled in [`tools_adam/assets/`](../../../STARVote_LH_tabulation_engine/tools_adam/assets/):
 - `--logo STARVote_LH_tabulation_engine/tools_adam/assets/BW_long_form.jpg` — the horizontal lockup (recommended; fits the header cleanly),
 - `--logo STARVote_LH_tabulation_engine/tools_adam/assets/bw_logo_star.jpg` — the round seal (lighter-ink alternative).
 
-These are the Equal Vote Coalition's trademark, included for STAR education/promotion (see [assets/README.md](../../STARVote_LH_tabulation_engine/tools_adam/assets/README.md) for attribution); official brand assets live at [starvoting.org](https://www.starvoting.org).
+These are the Equal Vote Coalition's trademark, included for STAR education/promotion (see [assets/README.md](../../../STARVote_LH_tabulation_engine/tools_adam/assets/README.md) for attribution); official brand assets live at [starvoting.org](https://www.starvoting.org).
 
 **Recommended setup for a classroom print run** — the black-and-white long-form logo on the ballot, and your local chapter in the footer (a color chapter logo like STAR Voting NC's is built for dark backgrounds, so it's an ink-heavy black box on a white ballot — keep the chapter as footer text instead):
 
@@ -152,7 +152,7 @@ When that tool gets built, the right way is against a **local OCR engine** with 
 
 **Ballot receipts & verifiability** (`--serials`). Each ballot gets a number — *"Ballot #7 — keep this to verify it was counted."* After the count, publish the list of serials that were counted and have each voter confirm theirs is on it. That demonstrates a genuinely important property: **counted as cast** — you can check your ballot made it into the tally.
 
-But here's the honest catch, and it *is* the lesson: **a serial that anyone can link back to you breaks the [secret ballot](../GLOSSARY.md).** If a sign-in sheet maps *name → serial*, a coercer or vote-buyer could demand your number and check how you voted. Real elections resolve this tension with **end-to-end verifiability (E2E-V)** — cryptographic receipts that let you confirm your vote was counted *without* revealing (or being able to prove to anyone) how you voted. So the serial demo is the perfect way to introduce *why verifiability is hard*: you want **both** "confirm it counted" **and** "nobody can tell how I voted," and getting both at once takes real cryptography. (BetterVoting's per-voter unique numbers are the platform's version of this receipt.)
+But here's the honest catch, and it *is* the lesson: **a serial that anyone can link back to you breaks the [secret ballot](../../GLOSSARY.md).** If a sign-in sheet maps *name → serial*, a coercer or vote-buyer could demand your number and check how you voted. Real elections resolve this tension with **end-to-end verifiability (E2E-V)** — cryptographic receipts that let you confirm your vote was counted *without* revealing (or being able to prove to anyone) how you voted. So the serial demo is the perfect way to introduce *why verifiability is hard*: you want **both** "confirm it counted" **and** "nobody can tell how I voted," and getting both at once takes real cryptography. (BetterVoting's per-voter unique numbers are the platform's version of this receipt.)
 
 For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
@@ -181,5 +181,5 @@ Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
 ## See also
 
 - [Teaching STAR Voting](teaching_star_voting.md) — the presenter's guide (arc, terms, misconceptions)
-- [Count a STAR election by hand](count_star_by_hand.md) · [Summability](STAR_summability.md) — why it scales
-- [BetterVoting and the LH engine — one election, two reports](../tabulation_engines/bettervoting_and_the_engine.md) — the digital cross-check
+- [Count a STAR election by hand](count_star_by_hand.md) · [Summability](../properties_and_limits/STAR_summability.md) — why it scales
+- [BetterVoting and the LH engine — one election, two reports](../../tabulation_engines/bettervoting_and_the_engine.md) — the digital cross-check

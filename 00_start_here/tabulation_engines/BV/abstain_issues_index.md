@@ -2,7 +2,7 @@
 
 A single map of the BetterVoting GitHub issues about **abstention vs. blank vs. explicit zero** (and the related "None of the Above" case), because the topic is spread across a dozen tickets and keeps getting re-discovered. Cross-referenced to the **BV Test IDs** (Google-sheet tracker) and the **library cases** that reproduce them.
 
-Concept backbone: [Abstention vs. a zero vs. "None of the Above"](../../STAR_Voting/abstention_vs_zero_vs_nota.md).
+Concept backbone: [Abstention vs. a zero vs. "None of the Above"](../../STAR_Voting/properties_and_limits/abstention_vs_zero_vs_nota.md).
 
 ## The core tension
 
@@ -49,7 +49,7 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 
 ## How this library relates
 
-- **Concept lesson:** [abstention_vs_zero_vs_nota.md](../../STAR_Voting/abstention_vs_zero_vs_nota.md) — the 0 / null / NOTA distinction, and the LH marker vocabulary (`- ~ & ? %`) BV lacks.
+- **Concept lesson:** [abstention_vs_zero_vs_nota.md](../../STAR_Voting/properties_and_limits/abstention_vs_zero_vs_nota.md) — the 0 / null / NOTA distinction, and the LH marker vocabulary (`- ~ & ? %`) BV lacks.
 - **Reproduced cases:**
   - [`abstain_bugs/`](../../../01_STAR/abstain_bugs/README.md) — the #884 "all-equal = abstain" reproductions, cross-checked against LH:
     - [`bv11_6xhfp8_full_equal_support`](../../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.md) → **#1053** (`5,5`×3 counted as 3 abstentions).

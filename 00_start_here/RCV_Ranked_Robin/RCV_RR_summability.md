@@ -2,7 +2,7 @@
 
 **One line:** **RCV-RR (Ranked Robin / Copeland) is precinct-summable.** Its whole tally is the **pairwise matrix** — for every pair of candidates, how many ballots rank A over B, B over A, or neither — and those matrices **add across precincts**. So the *same ranked ballot* IRV must count centrally, Ranked Robin can tally locally and add up.
 
-→ Cross-method **topic hub**: [Summability](../topics/summability/) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../RCV_IRV/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../STAR_Voting/STAR_summability.md) · Glossary: [`summability`](../GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../topics/summability/) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../RCV_IRV/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md) · Glossary: [`summability`](../GLOSSARY.md).
 
 ---
 

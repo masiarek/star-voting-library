@@ -3,7 +3,7 @@
 Stores each cast ballot: one row per ballot version, holding the voter's scores/ranks for every
 race on the ballot. This is the table the tabulation engine reads (via `BallotModel`) to build the
 Cast Vote Record. Versioned with the `create_date` / `update_date` / `head` pattern (see
-[README](./README.md)).
+[README](README.md)).
 
 - **Domain type:** `Ballot` (`packages/shared/src/domain_model/Ballot.ts`)
 - **Primary key:** `(ballot_id, update_date)`

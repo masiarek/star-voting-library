@@ -36,13 +36,13 @@
 
 **See it:** [the eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) (bullet vote, backup, "anyone but…", protest — all valid) · a [bullet vote](../../01_STAR/_main/_main_pages/03a_c3_b3_style-bullet-vote.md) · [low-score ballots](../../01_STAR/_main/_main_pages/03b_c3_b3_1_style-protest-vote.md). Concept page: [the STAR ballot & voting styles](../STAR_Voting/STAR_ballot_voting_styles.md).
 
-**Ballot note:** "equal scores = no preference" means no preference *in the runoff* — those ballots still count fully in the scoring round ([Equal Support](../STAR_Voting/are_equal_score_votes_discounted.md)).
+**Ballot note:** "equal scores = no preference" means no preference *in the runoff* — those ballots still count fully in the scoring round ([Equal Support](../STAR_Voting/reference/are_equal_score_votes_discounted.md)).
 
 ## 101.4 — The headline lesson: top scorer ≠ winner
 
 **What clicks:** leading the scoring round only makes you a *finalist*; the winner is whichever finalist **more voters prefer**. Sometimes those differ — and that's the safeguard working, not a bug.
 
-**See it:** [the runoff overturns the score leader](../../01_STAR/_main/_main_pages/06b_c9_runoff-overturns-leader.md) · the live case [BV2182 — FAQ runoff reversal](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md) · the full progression, [Runoff Reversal](../../01_STAR/runoff_overturns_leader/). Concept: [the Automatic Runoff](../STAR_Voting/STAR_Automatic_Runoff.md).
+**See it:** [the runoff overturns the score leader](../../01_STAR/_main/_main_pages/06b_c9_runoff-overturns-leader.md) · the live case [BV2182 — FAQ runoff reversal](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md) · the full progression, [Runoff Reversal](../../01_STAR/runoff_overturns_leader/). Concept: [the Automatic Runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md).
 
 ## 101.5 — The payoff: the spoiler, in numbers
 

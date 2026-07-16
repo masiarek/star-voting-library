@@ -2,7 +2,7 @@
 
 **One line:** a method gives an **equally weighted vote** if, however you fill out your ballot, someone else can fill out the *exact opposite* ballot and the two together change nothing. STAR passes this (so do Score and Approval); **Choose-One** and **RCV-IRV** do not — and that failure is precisely what causes vote-splitting and the spoiler effect.
 
-→ Curriculum: [301.4 — honest limits & theory](../CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md).
+→ Curriculum: [301.4 — honest limits & theory](../../CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../../GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../../RCV_IRV/RCV_IRV_equal_vote.md).
 
 ---
 
@@ -44,7 +44,7 @@ Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there i
 | Condorcet methods that allow equal ranks and read every rank (e.g. **Ranked Robin**) | ✅ generally pass |
 | Ranked STAR (ranked ballot, added up) | ✅ passes |
 | **Choose-One plurality** | ❌ fails whenever there are 3+ candidates — the structural source of vote-splitting |
-| **RCV-IRV** | ❌ fails — opposite ballots don't reliably cancel under sequential elimination ([why](../RCV_IRV/RCV_IRV_equal_vote.md)) |
+| **RCV-IRV** | ❌ fails — opposite ballots don't reliably cancel under sequential elimination ([why](../../RCV_IRV/RCV_IRV_equal_vote.md)) |
 
 One caveat both sides agree on: with only **two** candidates, *every* method passes — the equal-vote problem only appears once there are three or more.
 
@@ -52,7 +52,7 @@ One caveat both sides agree on: with only **two** candidates, *every* method pas
 
 The equal-vote idea is the mathematical face of **"one person, one vote."** In *Wesberry v. Sanders* (1964) the U.S. Supreme Court held that the weight and worth of each citizen's vote must, as nearly as is practicable, be the same. Choose-One honors that only in a two-candidate race; with more candidates, voters who have several candidates "on their side" are systematically disadvantaged, which is why voters are pushed toward the "lesser of two evils" and third parties get blamed as spoilers. Advocates argue an equal vote is therefore not just a nicety but the constitutional standard, and that vote-splitting (unlike gerrymandering) is fully solvable.
 
-**The other side, fairly stated:** RCV-IRV advocates (e.g. FairVote) argue RCV-IRV upholds one-person-one-vote better than Choose-One. That debate — and why the equal-vote camp says RCV-IRV still fails the balance test in competitive races — is on the companion page, [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md).
+**The other side, fairly stated:** RCV-IRV advocates (e.g. FairVote) argue RCV-IRV upholds one-person-one-vote better than Choose-One. That debate — and why the equal-vote camp says RCV-IRV still fails the balance test in competitive races — is on the companion page, [RCV-IRV fails the Equal Vote](../../RCV_IRV/RCV_IRV_equal_vote.md).
 
 ## The formal criterion (deep 301)
 
@@ -63,7 +63,7 @@ The informal Test of Balance has been formalized two ways (BTernaryTau):
 
 Keep this distinct from **reversal symmetry**, a *different* criterion (if every voter flips their preferences, the winner should flip). Equality/balance is about one ballot having an equal-and-opposite partner; reversal symmetry is about flipping the *whole* electorate.
 
-For **multi-winner** elections the equal-vote idea extends to **Vote Unitarity** (Keith Edmonds) — an equal vote *plus* proportionate spending — which motivates proportional score methods like **Sequentially Spent Score (SSS)**. See [proportional: STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) for that thread.
+For **multi-winner** elections the equal-vote idea extends to **Vote Unitarity** (Keith Edmonds) — an equal vote *plus* proportionate spending — which motivates proportional score methods like **Sequentially Spent Score (SSS)**. See [proportional: STV vs STAR-PR](../../proportional_representation/stv/proportional_stv_vs_star.md) for that thread.
 
 ## Sources
 

@@ -64,7 +64,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   lead term.
 - **Favorite Betrayal Criterion ≠ Later-No-Harm** — keep distinct. Neither STAR
   nor IRV is FBC-compliant; RCV-IRV fails it structurally (center squeeze), STAR
-  only in rare constructions. See `00_start_here/STAR_Voting/favorite_betrayal_voting_301.md`.
+  only in rare constructions. See `00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md`.
 - Spelling: **Bucklin** (not "Buckling"). **Hare ≈ IRV** single-winner, **STV**
   multi-winner. Borda & Bucklin are ranked but **not** Condorcet.
 

@@ -66,7 +66,7 @@ Line them up and the trade-offs jump out:
 |---|:--:|---|
 | Ranking | ordinal | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md), STV, Condorcet ([Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)), Borda, Bucklin |
 | Yes/No | cardinal (1-bit) | [Approval](../Approval_Voting/approval_voting.md) |
-| Scoring | cardinal (graded, e.g. 0–5) | [Score / Range](../Range_Voting/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md) (a [hybrid](../STAR_Voting/STAR_hybrid_nature.md) — score ballot **+ runoff**) |
+| Scoring | cardinal (graded, e.g. 0–5) | [Score / Range](../Range_Voting/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md) (a [hybrid](../STAR_Voting/the_count/STAR_hybrid_nature.md) — score ballot **+ runoff**) |
 
 The ballot is *what the voter marks*; the **tabulation** is *how it's counted* — and the same ballot can be counted more than one way (a ranked ballot by IRV, Ranked Robin, or STV). See [ballot vs tabulation](what_is_a_voting_method.md) and the [glossary](../GLOSSARY.md).
 

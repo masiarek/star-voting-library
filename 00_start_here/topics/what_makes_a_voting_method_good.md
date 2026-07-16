@@ -67,7 +67,7 @@ These are genuine, unsettled disputes — presented as the case each side makes,
 
 ## Where the STAR case lands (stated as advocacy)
 
-STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md) argue the trade-off both ways.
+STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) argue the trade-off both ways.
 
 ## Sources — and which way each leans
 

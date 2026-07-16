@@ -6,7 +6,7 @@
 
 > Why this page matters: summability sounds like a dry administrative detail, but it drives real things voters care about — how elections are audited, whether a precinct can verify its own result, and whether early/partial counts mean anything. IRV quietly gives all of that up.
 
-→ Cross-method **topic hub**: [Summability](../topics/summability/) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../STAR_Voting/STAR_summability.md). Glossary: [`summability`](../GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../topics/summability/) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../STAR_Voting/properties_and_limits/STAR_summability.md). Glossary: [`summability`](../GLOSSARY.md).
 
 ---
 
@@ -38,11 +38,11 @@ IRV: C out → B 7, A 6   IRV: A out → B 7, C 6   first-choices: A 9, C 9, B 8
 - **No meaningful precinct subtotals** — a precinct can't certify its own contribution to the outcome the way it can under summable methods.
 - **Partial counts can mislead** — the candidate "ahead" in first-choices partway through can lose once transfers run, so early IRV numbers are easy to misread.
 
-(This is one row on the method scorecard: *Summable / local tally? — STAR: yes, RCV-IRV: no.* See the flagship Segment 6 in [What's So Good About STAR Voting?](../STAR_Voting/whats_so_good_about_STAR_Voting.md).)
+(This is one row on the method scorecard: *Summable / local tally? — STAR: yes, RCV-IRV: no.* See the flagship Segment 6 in [What's So Good About STAR Voting?](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md).)
 
 ## The nuance — it's IRV's count, not ranked ballots
 
-Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../STAR_Voting/STAR_summability.md).)
+Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../STAR_Voting/properties_and_limits/STAR_summability.md).)
 
 ### Same ballots, summed — Ranked Robin on the example above
 

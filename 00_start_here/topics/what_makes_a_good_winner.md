@@ -2,7 +2,7 @@
 
 *When we say a voting method "gets it right" or "elects the wrong winner," what do we actually mean? There is no single **correct** winner handed down from on high — "good winner" is a **design choice** about what we value. This page lays out the competing ideals, shows them disagreeing on real elections in this repo, and pins down the vocabulary (consensus candidate, strong candidate, utilitarian winner) so the rest of the docs can use it precisely.*
 
-→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](condorcet) · [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).
+→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](condorcet) · [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
 
 ## The trap: "the winner should have won"
 
@@ -70,7 +70,7 @@ In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they 
 - **Approval** rewards **broad acceptability**.
 - **Plurality / IRV** center on **first-choice** support (all at once, or round by round), which is why they can miss the consensus candidate.
 
-*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).)*
+*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).)*
 
 ## Measuring it empirically: VSE / Bayesian Regret
 
@@ -99,6 +99,6 @@ A good *winner* is only half of it. The rest is whether the *method* is practica
 - [What makes a voting *method* good? (criteria & practicality)](what_makes_a_voting_method_good.md)
 - [Condorcet efficiency (topic hub)](condorcet) · [Ranked Robin vs. "the Condorcet winner"](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md)
 - [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Spoiler effect](spoiler_effect.md)
-- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md) · [Glossary](../GLOSSARY.md)
+- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Glossary](../GLOSSARY.md)
 
 **External references:** [Utilitarian winner (electowiki)](https://electowiki.org/wiki/Utilitarian_winner) · [Condorcet winner criterion (electowiki)](https://electowiki.org/wiki/Condorcet_winner_criterion) · [Voter Satisfaction Efficiency](https://electionscience.org/library/voter-satisfaction-efficiency/) · Graham-Squire & McCune, *RCV in the US*, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075) (the Alaska Condorcet failure).

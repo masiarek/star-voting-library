@@ -2,7 +2,7 @@
 
 **Level 201 · a reversal in a bigger field (the "narrow-but-deep" pattern).** Five candidates, five voters. Two voters are **Dakota enthusiasts** — their 5s push Dakota to the top of the Scoring Round (22 stars). But the other three prefer **Eden**, so Eden wins the Automatic Runoff 3–2. Dakota leads on *how much*; Eden wins on *how many*. (Eden is also the Condorcet winner — a calm case.)
 
-Where [Runoff 02](Runoff_02_atom_reversal_yx9447.md) had a *broadly-liked* leader, this one has an *intense-minority* leader — the other face of the same reversal. → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
+Where [Runoff 02](Runoff_02_atom_reversal_yx9447.md) had a *broadly-liked* leader, this one has an *intense-minority* leader — the other face of the same reversal. → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 
 ---
 

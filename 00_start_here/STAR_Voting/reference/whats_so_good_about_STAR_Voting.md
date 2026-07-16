@@ -29,7 +29,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** Okay, what's actually broken about how we vote now?
 
-**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../topics/spoiler_effect.md).
+**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../../topics/spoiler_effect.md).
 
 **Larry:** Give me the cartoon version.
 
@@ -51,7 +51,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** People say "just use Ranked Choice." Isn't ranking already more expressive than picking one?
 
-**Adam:** It's more expressive than Choose-One, yes. But there's a deeper fork in the road here, and it's the thing most people never get told: there are two *families* of better ballots — **ranked** and **scored** ([the core distinction](../scores_and_ranks/scores_vs_ranks.md)) — and they're not the same tool.
+**Adam:** It's more expressive than Choose-One, yes. But there's a deeper fork in the road here, and it's the thing most people never get told: there are two *families* of better ballots — **ranked** and **scored** ([the core distinction](../../scores_and_ranks/scores_vs_ranks.md)) — and they're not the same tool.
 
 **Larry:** What's the difference, concretely?
 
@@ -76,7 +76,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 **Adam:** Four rules, that's it:
 - Give your favorite(s) **5 stars**.
 - Give your last choice(s) **0**, or leave them blank.
-- **[Equal scores are allowed](STAR_Scoring_Round.md)** — rate two candidates the same if you feel the same.
+- **[Equal scores are allowed](../the_count/STAR_Scoring_Round.md)** — rate two candidates the same if you feel the same.
 - Score everyone else anywhere from 0 to 5, however you like.
 
 **Larry:** And if I only like one candidate?
@@ -96,8 +96,8 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 **Larry:** STAR stands for Score Then Automatic Runoff. What are the two steps?
 
 **Adam:** You vote once; the count happens in two rounds.
-- **[Scoring Round](STAR_Scoring_Round.md):** add up all the stars. The two highest-scoring candidates become finalists.
-- **[Automatic Runoff](STAR_Automatic_Runoff.md):** for those two finalists, your ballot counts as a full vote for whichever one you scored higher. Whoever more voters preferred wins.
+- **[Scoring Round](../the_count/STAR_Scoring_Round.md):** add up all the stars. The two highest-scoring candidates become finalists.
+- **[Automatic Runoff](../the_count/STAR_Automatic_Runoff.md):** for those two finalists, your ballot counts as a full vote for whichever one you scored higher. Whoever more voters preferred wins.
 
 **Larry:** Why two rounds? Why not just elect the highest total score?
 
@@ -105,7 +105,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** So the two rounds are doing two different jobs.
 
-**Adam:** Exactly — that's the [dual nature](STAR_hybrid_nature.md). The Scoring Round measures **how much** support there is — candidate quality, strength. The runoff measures **how many** supporters — number of people, a real majority. One finds the genuine contenders; the other decides between them by majority. Strength, then numbers.
+**Adam:** Exactly — that's the [dual nature](../the_count/STAR_hybrid_nature.md). The Scoring Round measures **how much** support there is — candidate quality, strength. The runoff measures **how many** supporters — number of people, a real majority. One finds the genuine contenders; the other decides between them by majority. Strength, then numbers.
 
 **Larry:** Can you show the two rounds turning, slowly, on something tiny?
 
@@ -130,7 +130,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** And counting?
 
-**Adam:** This is the sleeper feature. STAR is **[precinct-summable](STAR_summability.md)** — each precinct reports its score totals and a small for/equal/against table, and you just add precincts together. No shipping every ballot to one central computer. That means fast results, easy audits, and it works with paper ballots and vote- by-mail. Any citizen can re-add the numbers.
+**Adam:** This is the sleeper feature. STAR is **[precinct-summable](../properties_and_limits/STAR_summability.md)** — each precinct reports its score totals and a small for/equal/against table, and you just add precincts together. No shipping every ballot to one central computer. That means fast results, easy audits, and it works with paper ballots and vote- by-mail. Any citizen can re-add the numbers.
 
 > [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `00_start_here/topics/Why_STAR_Voting.md` — Slides 5–9 bullets.
 
@@ -140,20 +140,20 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** Ranked Choice Voting is the one people have heard of. How is STAR different — and be fair, what does RCV do *well*?
 
-**Adam:** Fair is the right instinct. [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) is a real improvement over Choose-One, and where there are only two viable candidates it cleanly kills the old "Nader" spoiler. Credit where due. But it has structural problems that STAR doesn't, and they show up exactly in the competitive races that matter most.
+**Adam:** Fair is the right instinct. [RCV-IRV](../../RCV_IRV/RCV-IRV-Hare.md) is a real improvement over Choose-One, and where there are only two viable candidates it cleanly kills the old "Nader" spoiler. Credit where due. But it has structural problems that STAR doesn't, and they show up exactly in the competitive races that matter most.
 
 **Larry:** Name the big ones.
 
 **Adam:** Three:
 1. **It doesn't count all your rankings.** RCV-IRV only ever looks at your top *remaining* choice each round. If your favorite is eliminated, your next choice is counted — but only sometimes, depending on the order of elimination. Lots of marked rankings are simply never read.
-2. **[Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md).** When your ranked candidates are all eliminated, your ballot is discarded. On average around 10–11% of ballots aren't counted in the deciding round of competitive races, so the "majority winner" is often a majority of *remaining* ballots, not of voters.
-3. **[Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md).** A broadly-liked moderate can be eliminated early precisely because few people rank them *first* — and the polarizing candidate the majority actually opposed wins. That's the spoiler effect sneaking back in.
+2. **[Exhausted ballots](../../RCV_IRV/RCV_IRV_exhausted_ballots.md).** When your ranked candidates are all eliminated, your ballot is discarded. On average around 10–11% of ballots aren't counted in the deciding round of competitive races, so the "majority winner" is often a majority of *remaining* ballots, not of voters.
+3. **[Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md).** A broadly-liked moderate can be eliminated early precisely because few people rank them *first* — and the polarizing candidate the majority actually opposed wins. That's the spoiler effect sneaking back in.
 
 **Larry:** Do you have a real election, not a thought experiment?
 
 **Adam:** Two famous ones.
-- **[Burlington, Vermont, 2009](../topics/spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
-- **[Alaska 2022 special](../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head, but the two Republicans split and Begich was eliminated; Peltola won and the seat flipped. Voters who ranked Palin first effectively helped elect their last choice — favorite betrayal, live.
+- **[Burlington, Vermont, 2009](../../topics/spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
+- **[Alaska 2022 special](../../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head, but the two Republicans split and Begich was eliminated; Peltola won and the seat flipped. Voters who ranked Palin first effectively helped elect their last choice — favorite betrayal, live.
 
 **Larry:** So how does STAR avoid all that?
 
@@ -173,7 +173,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** And the honest caveat?
 
-**Adam:** No method is perfect — that's a theorem, not an opinion (Gibbard). STAR isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it diverges, it's choosing a candidate with broad, strong support over a weakly-liked compromise ([three notions of "winner"](STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug. Saying that out loud is what earns you the room.
+**Adam:** No method is perfect — that's a theorem, not an opinion (Gibbard). STAR isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it diverges, it's choosing a candidate with broad, strong support over a weakly-liked compromise ([three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug. Saying that out loud is what earns you the room.
 
 > [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `00_start_here/topics/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `00_start_here/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
 

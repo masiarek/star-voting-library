@@ -8,10 +8,10 @@ Three ballot situations look similar on a STAR score sheet but mean genuinely di
 
 **2. An abstention — blank / unscored.** You left the line blank. Two flavors:
 
-- **Whole-ballot abstention** — every line blank (or, in STAR, *all lines equal*, e.g. `0,0,0` or `5,5,5`). The ballot expresses **no preference**, so it's set aside as an **abstention**: it counts as turnout but contributes nothing to any candidate's score or to the runoff. **Set aside is not discarded** — the ballot is still counted as turnout (and toward [quorum](../topics/quorum.md)); it's only kept out of the *preference* math. And that costs no one anything: an all-equal ballot rates every candidate the same, so folding it in would move every total by the identical amount and tip no scoring round and no runoff — the winner is unchanged either way. Setting it aside simply keeps the turnout count honest instead of padding everyone's score with a ballot that voiced no opinion.
+- **Whole-ballot abstention** — every line blank (or, in STAR, *all lines equal*, e.g. `0,0,0` or `5,5,5`). The ballot expresses **no preference**, so it's set aside as an **abstention**: it counts as turnout but contributes nothing to any candidate's score or to the runoff. **Set aside is not discarded** — the ballot is still counted as turnout (and toward [quorum](../../topics/quorum.md)); it's only kept out of the *preference* math. And that costs no one anything: an all-equal ballot rates every candidate the same, so folding it in would move every total by the identical amount and tip no scoring round and no runoff — the winner is unchanged either way. Setting it aside simply keeps the turnout count honest instead of padding everyone's score with a ballot that voiced no opinion.
 - **Per-candidate abstention** — you scored some candidates and left one blank. That one blank tallies as 0 for the math, but the ballot still counts — a single unscored candidate does **not** turn the whole ballot into an abstention.
 
-**3. None of the Above — `c-nota` (an active vote for "reject the field").** "None of the Above" is a real *candidate* on BetterVoting. Scoring it 5 is an **active preference** — a vote *for* the option "none of these should be seated." It competes like any candidate: it can reach the runoff and win (see the [BV215 case](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md), where it does).
+**3. None of the Above — `c-nota` (an active vote for "reject the field").** "None of the Above" is a real *candidate* on BetterVoting. Scoring it 5 is an **active preference** — a vote *for* the option "none of these should be seated." It competes like any candidate: it can reach the runoff and win (see the [BV215 case](../../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md), where it does).
 
 ## The one-line contrast
 
@@ -44,7 +44,7 @@ An all-blank ballot removes your weight from the room. A `0,0,0,…,5-for-NOTA` 
 | `?` | spoiled ballot |
 | `%` | spoiled **and** re-issued |
 
-See [STAR ballot voting styles](STAR_ballot_voting_styles.md) and [Ballot & Terminology Basics](../topics/ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../about_this_repo/why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
+See [STAR ballot voting styles](../STAR_ballot_voting_styles.md) and [Ballot & Terminology Basics](../../topics/ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../../about_this_repo/why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
 
 ## The gap: BetterVoting can't capture *intent* behind a non-score
 
@@ -56,11 +56,11 @@ That's a candidate **missing-feature** for BetterVoting relative to LH: an expli
 
 ## See it in the cases
 
-- **Abstentions in a real STAR count:** [`flat_scores_abstention_c3_b8`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md)
-- **None of the Above winning (plus a per-candidate `null`):** [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md)
+- **Abstentions in a real STAR count:** [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md)
+- **None of the Above winning (plus a per-candidate `null`):** [`bv215_26khr3_nota_wins`](../../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md)
 
 ## Related
 
-The BetterVoting issues on this exact topic (abstain / blank / zero mislabels, export ambiguity, the `#884` "all-equal = abstain" policy, and the `#1421` NOTA case) are catalogued in [BV abstain / blank / zero — issue index](../tabulation_engines/BV/abstain_issues_index.md), cross-referenced to the test cases.
+The BetterVoting issues on this exact topic (abstain / blank / zero mislabels, export ambiguity, the `#884` "all-equal = abstain" policy, and the `#1421` NOTA case) are catalogued in [BV abstain / blank / zero — issue index](../../tabulation_engines/BV/abstain_issues_index.md), cross-referenced to the test cases.
 
-[Ballot voting styles](STAR_ballot_voting_styles.md) · ["Preference" — the word that causes half the confusion](../topics/preference.md) · [Quorum](../topics/quorum.md) · [GLOSSARY](../GLOSSARY.md) · [Curriculum](../CURRICULUM.md)
+[Ballot voting styles](../STAR_ballot_voting_styles.md) · ["Preference" — the word that causes half the confusion](../../topics/preference.md) · [Quorum](../../topics/quorum.md) · [GLOSSARY](../../GLOSSARY.md) · [Curriculum](../../CURRICULUM.md)

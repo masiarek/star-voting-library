@@ -2,7 +2,7 @@
 
 **One line:** the *same* ballots, counted two ways. **STAR** scores then holds one runoff — **two steps.** **RCV-IRV** runs rounds of eliminate-and-transfer — here **three.** In this example both elect **Carmen**, so the page isolates the *process* (how each count works and what it costs), not the winner.
 
-→ Companion to [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?" argument) and [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/STAR_summability.md). When the two counts elect *different* people, see [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**. <!-- terminology-ok: bare RCV is inside linked page titles -->
+→ Companion to [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?" argument) and [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md). When the two counts elect *different* people, see [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**. <!-- terminology-ok: bare RCV is inside linked page titles -->
 
 Worked on one shared file: [`count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/count_simplicity_star_vs_irv.yaml) — 45 voters, 5 candidates (Andre, Blake, Carmen, Dana, Evan).
 
@@ -27,7 +27,7 @@ Carmen is almost everyone's strong **second** choice but few voters' **first** �
 
 ## STAR — two steps
 
-**Step 1 — [Scoring Round](../STAR_Voting/STAR_Scoring_Round.md).** Add each candidate's scores (a column sum). The two highest advance.
+**Step 1 — [Scoring Round](../STAR_Voting/the_count/STAR_Scoring_Round.md).** Add each candidate's scores (a column sum). The two highest advance.
 
 ```
 Carmen  -- 194  -- First place
@@ -38,7 +38,7 @@ Evan    --  65
  Carmen and Andre advance.
 ```
 
-**Step 2 — [Automatic Runoff](../STAR_Voting/STAR_Automatic_Runoff.md).** On every ballot, see which *finalist* it scored higher. That's one head-to-head tally.
+**Step 2 — [Automatic Runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md).** On every ballot, see which *finalist* it scored higher. That's one head-to-head tally.
 
 ```
 Carmen        -- 35  -- First place
@@ -104,6 +104,6 @@ python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_S
 
 ## Cross-references
 - [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
-- [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
+- [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
 - [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
 - [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](what_is_a_voting_method.md) — ballot vs count, the 101 foundation.

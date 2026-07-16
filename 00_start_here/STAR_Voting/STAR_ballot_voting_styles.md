@@ -29,7 +29,7 @@ Same six candidates for every voter: **Allen, Bianca, Chris, Desi, Edith, Frank*
 Every one of these is legal, and every one is counted. A few are worth a second look:
 
 - **Traditional / choose-one** works exactly as the voter intends — but it's a bullet vote, and it under-uses the ballot: if Bianca doesn't reach the runoff, this ballot has no say in the final head-to-head. (The dedicated small demo: [`03a_c3_b3_style-bullet-vote.yaml`](../../01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml).)
-- **Backups are free.** The strong-backup and weak-backup ballots are the everyday super-power of a scored ballot: supporting a second choice can never hurt your first choice in the scoring round — a 5 is a 5 no matter what else you mark. (Honest fine print: the runoff compares your two scores, so *if both* end up finalists, your 4 says "prefer Bianca, but Frank is fine." That's the message the voter chose to send. See [STAR's honest limits](STAR_honest_limits.md).)
+- **Backups are free.** The strong-backup and weak-backup ballots are the everyday super-power of a scored ballot: supporting a second choice can never hurt your first choice in the scoring round — a 5 is a 5 no matter what else you mark. (Honest fine print: the runoff compares your two scores, so *if both* end up finalists, your 4 says "prefer Bianca, but Frank is fine." That's the message the voter chose to send. See [STAR's honest limits](properties_and_limits/STAR_honest_limits.md).)
 - **Ranked-style is legal but never required.** Using each score exactly once mimics a ranking. STAR reads it happily — but you've volunteered a constraint the ballot doesn't impose. The nuanced ballot right below it carries *more* honest information (equal 3s where the voter is truly indifferent) with *less* effort.
 - **Partisan and "anyone but" ballots score equal 5s** — and that's fine. If two of those 5s become the finalists, the ballot is **Equal Support** in the runoff: no preference between the finalists, by the voter's own choice. It still counted fully in the scoring round, where it helped decide *who* the finalists were. An equal-score ballot is never discarded.
 - **The protest vote still works.** All 0s and a single 1 registers a least-bad preference and can decide a race. Caveat: compressing your scores into the bottom of the range also shrinks your voice in the scoring round — a least-bad choice counts, but the full range counts louder. ([`03b_c3_b3_1_style-protest-vote.yaml`](../../01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml).)
@@ -73,14 +73,14 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 
 **Accurate.** Research comparing ratings and rankings finds ratings have superior validity — forced full rankings capture *noise*, differences voters don't actually feel. Equal scores let voters express exactly the distinctions that matter to them and no more. (The deep dive: [Scores vs. Ranks](../scores_and_ranks/scores_vs_ranks.md).)
 
-**Equal.** Any way you fill out your ballot, someone else can fill theirs out in the equal and opposite way — no style has secret extra weight. That's the [Equally Weighted Vote](equally_weighted_vote.md), and it's why the gallery above is safe to publish as a how-to: there is no trick style to teach.
+**Equal.** Any way you fill out your ballot, someone else can fill theirs out in the equal and opposite way — no style has secret extra weight. That's the [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md), and it's why the gallery above is safe to publish as a how-to: there is no trick style to teach.
 
 ## Related concepts in this library
 
 - [Scores vs. Ranks](../scores_and_ranks/scores_vs_ranks.md) — the ballot-design distinction underneath this whole page
-- [STAR's Automatic Runoff](STAR_Automatic_Runoff.md) — where Equal Support ballots land
-- [Equally Weighted Vote](equally_weighted_vote.md) — why no style out-muscles another
-- [STAR's honest limits](STAR_honest_limits.md) — what a backup score does and doesn't risk
+- [STAR's Automatic Runoff](the_count/STAR_Automatic_Runoff.md) — where Equal Support ballots land
+- [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
+- [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
 - [Curriculum 101.3 — How you're allowed to vote](../CURRICULUM.md) — this page's slot in the learning path
 - Small demos: [`03a` bullet vote](../../01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../../01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../../01_STAR/_main/03c_c6_b8_style-gallery.yaml)
 

@@ -60,7 +60,7 @@ Cues: **[SLIDE]** show a slide (by title — see `LINKS.md`) · **[REPO]** a fil
 ## Where this fits & how to cross-reference
 
 - **Placement:** best as the **cold open** (2–3 min) that leads straight into `whats_so_good_about_STAR_Voting.md`, or as the **emotional closer** after the technical episodes. It's the bookend, not the body.
-- **Series roadmap:** call it **Episode 0** in [README.md](../about_this_repo/conversation_scripts.md) — the warm-up before Episode 1.
+- **Series roadmap:** call it **Episode 0** in [README.md](../../about_this_repo/conversation_scripts.md) — the warm-up before Episode 1.
 - **"Do we already have a 'what's so good' presentation?"** — yes: `00_start_here/topics/Why_STAR_Voting.md` *is* it (11 presentation bullets, Part 1), with a styled `Why_STAR_Voting.html` presenter view. This conversation is the spoken, first-person companion to that deck.
 - **On linking to slides:** reference slides by **title** via the `LINKS.md` short names (e.g. `Full Deck — "Every Winner Earns a Majority"`), **not** by page number or `#slide=id…` deep links — those break the moment a slide is reordered or the deck is copied (see the sync note in `LINKS.md`).
 

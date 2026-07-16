@@ -45,19 +45,19 @@ The pages are grouped to mirror the folders: **general / cross-method** ideas li
 
 | Concept | One line |
 |---------|----------|
-| [**STAR's hybrid nature**](STAR_Voting/STAR_hybrid_nature.md) | expressive scoring to find the finalists + a majority runoff to pick the winner — the design the rest of these pages build on |
-| [**The Automatic Runoff Round**](STAR_Voting/STAR_Automatic_Runoff.md) | STAR's second step, end to end — finalists, the For/Against/Equal Support counts, percentages, tie-breaking, and Runoff Reversal; the hub for all runoff topics |
+| [**STAR's hybrid nature**](STAR_Voting/the_count/STAR_hybrid_nature.md) | expressive scoring to find the finalists + a majority runoff to pick the winner — the design the rest of these pages build on |
+| [**The Automatic Runoff Round**](STAR_Voting/the_count/STAR_Automatic_Runoff.md) | STAR's second step, end to end — finalists, the For/Against/Equal Support counts, percentages, tie-breaking, and Runoff Reversal; the hub for all runoff topics |
 | [**Runoff Reversal — top scorer ≠ winner**](../01_STAR/runoff_overturns_leader/) | the Scoring Round picks two finalists; the Automatic Runoff lets the *majority-preferred* finalist win — even with fewer total stars |
 | [**The LH starvote engine**](tabulation_engines/LH_starvote/) | what the engine is (a thin fork + a thick reporting wrapper) and our improvements — the minimal **on-screen report** vs the always-full **`_tabulated`** mirror, the matrix/divergence/runoff-funnel reporting, and multi-method dispatch |
 | [**Reading a STAR report (201)**](tabulation_engines/LH_starvote/reading_a_star_report.md) | the full engine report, section by section — matrix, divergence, both rounds, winner — and which parts to show 101 vs 201 vs 301 |
-| [**Reading the runoff percentages**](STAR_Voting/runoff_percentages.md) | the same runoff vote shown two ways — % of all voters vs % of the voters *with a preference*; why the winner needs a majority of the decided voters, and where Equal Support goes |
-| [**Three notions of "winner"**](STAR_Voting/STAR_three_winner_notions.md) | Condorcet vs Score vs Runoff can name three different candidates in one election |
-| [**STAR is monotone**](STAR_Voting/STAR_monotonicity.md) | raising a candidate's score can never make them lose — the failure IRV has, STAR doesn't |
-| [**STAR is summable**](STAR_Voting/STAR_summability.md) | tally by adding independent precinct totals; precinct-auditable, meaningful partials |
-| [**Residual vote-splitting**](STAR_Voting/residual_vote_splitting.md) | STAR ends *forced* splitting; the narrow leftover is self-inflicted bullet-voting / the chicken dilemma |
-| [**Equally Weighted Vote (Equal Vote Criterion)**](STAR_Voting/equally_weighted_vote.md) | every ballot has an exact opposite that cancels it (the Test of Balance) — why STAR fully ends *forced* vote-splitting; Choose-One and RCV-IRV fail it |
-| [**STAR — honest limits**](STAR_Voting/STAR_honest_limits.md) | not Condorcet-compliant, not FBC-proof, gives up Later-No-Harm, residual splitting, strategic scoring — stated plainly |
+| [**Reading the runoff percentages**](STAR_Voting/the_count/runoff_percentages.md) | the same runoff vote shown two ways — % of all voters vs % of the voters *with a preference*; why the winner needs a majority of the decided voters, and where Equal Support goes |
+| [**Three notions of "winner"**](STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) | Condorcet vs Score vs Runoff can name three different candidates in one election |
+| [**STAR is monotone**](STAR_Voting/properties_and_limits/STAR_monotonicity.md) | raising a candidate's score can never make them lose — the failure IRV has, STAR doesn't |
+| [**STAR is summable**](STAR_Voting/properties_and_limits/STAR_summability.md) | tally by adding independent precinct totals; precinct-auditable, meaningful partials |
+| [**Residual vote-splitting**](STAR_Voting/properties_and_limits/residual_vote_splitting.md) | STAR ends *forced* splitting; the narrow leftover is self-inflicted bullet-voting / the chicken dilemma |
+| [**Equally Weighted Vote (Equal Vote Criterion)**](STAR_Voting/properties_and_limits/equally_weighted_vote.md) | every ballot has an exact opposite that cancels it (the Test of Balance) — why STAR fully ends *forced* vote-splitting; Choose-One and RCV-IRV fail it |
+| [**STAR — honest limits**](STAR_Voting/properties_and_limits/STAR_honest_limits.md) | not Condorcet-compliant, not FBC-proof, gives up Later-No-Harm, residual splitting, strategic scoring — stated plainly |
 | [**Tie-breaking — the full chain**](STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) | ties fall through pairwise → five-star → lot order, in both rounds |
 | [**Tie-breaking in BetterVoting JSON**](STAR_Voting/Tie_Breaking_STAR/tie_breaking_JSON.md) | how a BV export pre-draws the official lot order, and its YAML mapping |
 
-Deeper conversation/debate scripts live beside their topics, indexed in [Conversation scripts — index](about_this_repo/conversation_scripts.md) (e.g. [Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/favorite_betrayal_voting_301.md), ["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)); these pages are the shorter, reference-style explainers the glossary links to. <!-- terminology-ok: bare RCV is inside linked page titles -->
+Deeper conversation/debate scripts live beside their topics, indexed in [Conversation scripts — index](about_this_repo/conversation_scripts.md) (e.g. [Favorite Betrayal — Does *Only* RCV Avoid It?](STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md), ["Exhausted Ballots" — What FairVote's Word Actually Hides](RCV_IRV/exhausted_ballots_301.md)); these pages are the shorter, reference-style explainers the glossary links to. <!-- terminology-ok: bare RCV is inside linked page titles -->

@@ -6,7 +6,7 @@
 
 ![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../img/star_ballot_example.png)
 
-*That's a **[score ballot](../scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), [equal scores are allowed](../GLOSSARY.md) (both a 5 = [Equal Support](../GLOSSARY.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](../scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](../STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](../STAR_Voting/STAR_Automatic_Runoff.md)).*
+*That's a **[score ballot](../scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), [equal scores are allowed](../GLOSSARY.md) (both a 5 = [Equal Support](../GLOSSARY.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](../scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](../STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md)).*
 
 ---
 
@@ -35,6 +35,6 @@ Most confusion about "RCV" comes from four mix-ups: a slippery name, mistaking s
 
 Want to *see* the ballots rather than read about them? [Alternate ballot styles](ballot_styles.md) puts this same cast (Andre, Blake, Carmen, David, Ella) on a ranking, a yes/no, and a scoring ballot side by side, so you can watch what each style keeps and drops.
 
-These four are the *vocabulary*. For what the choices actually do to outcomes, see the mechanism pages: [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md), [monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md), [summability](../STAR_Voting/STAR_summability.md), [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md), [residual vote-splitting](../STAR_Voting/residual_vote_splitting.md), and [tabulation step by step](tabulation_star_vs_irv.md). For the two methods compared head-to-head, see [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
+These four are the *vocabulary*. For what the choices actually do to outcomes, see the mechanism pages: [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md), [monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md), [summability](../STAR_Voting/properties_and_limits/STAR_summability.md), [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md), [residual vote-splitting](../STAR_Voting/properties_and_limits/residual_vote_splitting.md), and [tabulation step by step](tabulation_star_vs_irv.md). For the two methods compared head-to-head, see [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
 
 And the *problem* all these methods are trying to fix: the [spoiler effect](spoiler_effect.md) and the [plurality (choose-one)](plurality.md) status quo it comes from. Front door & full index: [00_START_HERE](../00_START_HERE.md) · [`README`](../README.md).

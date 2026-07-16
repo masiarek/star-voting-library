@@ -2,7 +2,7 @@
 
 *Plain-language first, jargon and references at the very bottom. This is the "a majority scored them highest but they still lost?!" idea — the objection FairVote raises most against STAR — and Equal Vote's answer to it.*
 
-Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../STAR_Voting/STAR_honest_limits.md).
+Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -62,7 +62,7 @@ Methods that **pass** RMC: RCV-IRV, **STAR**, Unified Primary, 3-2-1. Methods th
 
 ## The same fork as Later-No-Harm
 
-Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../STAR_Voting/STAR_honest_limits.md)) are *the same event*, described two ways.
+Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md)) are *the same event*, described two ways.
 
 - **Later-No-Harm** (a voter's-eye view): "scoring my *later* choices should never hurt my favorite." STAR breaks this.
 - **Majority Criterion** (the electorate's view): "a majority's favorite should win." STAR can break this.
@@ -84,7 +84,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 |--------|:--:|:--:|--------------------|
 | Choose-One (plurality) | ✅ | ✅ | [plurality](../plurality.md) |
 | RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
-| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../STAR_Voting/STAR_honest_limits.md) |
+| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md) |
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../Range_Voting/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../Approval_Voting/) |
 

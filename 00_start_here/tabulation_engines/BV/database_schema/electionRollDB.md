@@ -2,7 +2,7 @@
 
 The list of voters for an election: who is authorized to vote, how they were authenticated, whether
 they've submitted, and a pointer to their ballot. One row per roll-entry version. Versioned with the
-`create_date` / `update_date` / `head` pattern (see [README](./README.md)).
+`create_date` / `update_date` / `head` pattern (see [README](README.md)).
 
 - **Domain type:** `ElectionRoll` (`packages/shared/src/domain_model/ElectionRoll.ts`)
 - **Primary key:** `(election_id, voter_id, update_date)`

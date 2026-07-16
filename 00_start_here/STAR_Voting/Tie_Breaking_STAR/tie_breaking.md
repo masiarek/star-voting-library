@@ -214,5 +214,5 @@ Separately, BetterVoting doesn't yet *show* which rung fired in its human-readab
 
 - **BetterVoting's official tie-breaking protocol** (BetterVoting's own ladder — the source of the "shuffle the candidates" random order our `lot_numbers` carries, and *close but not identical* to the LH ladder above; see the divergence section just above): <https://docs.bettervoting.com/help/ties.html>
 - Glossary: **Tiebreaker**, **Head-to-head / pairwise**, **Automatic runoff**, **Equal Support** — [Glossary — voting methods & criteria](../../GLOSSARY.md)
-- Equal-score handling in the runoff: ["Aren't Equal-Score Votes Just Discounted?"](../are_equal_score_votes_discounted.md) · demo [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml)
+- Equal-score handling in the runoff: ["Aren't Equal-Score Votes Just Discounted?"](../reference/are_equal_score_votes_discounted.md) · demo [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml)
 - Converter + engine wiring and the full test matrix (perm, `tieBreakOrder`, no-sequence, manual override, column-order fallback, and the non-vacuous self-check): [`tests/test_lot_number_tiebreak.py`](../../../STARVote_LH_tabulation_engine/tests/test_lot_number_tiebreak.py)

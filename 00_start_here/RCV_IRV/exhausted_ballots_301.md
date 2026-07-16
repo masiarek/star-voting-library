@@ -134,7 +134,7 @@ This is why STAR sidesteps the entire mess: **STAR counts every ballot in both r
 
 That distinction — *declared tie* (STAR) vs *lost voice* (IRV exhaustion) — is the hinge, and it's developed in full in the companion episode.
 
-> [REPO] `00_start_here/STAR_Voting/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
+> [REPO] `00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
 
 ---
 

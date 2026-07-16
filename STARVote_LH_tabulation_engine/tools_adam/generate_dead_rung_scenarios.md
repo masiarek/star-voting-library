@@ -234,4 +234,4 @@ The adversarial `scoring/alive` → **B** vs `scoring/dead` → **A**, and `runo
 - The hand-built case set this generalizes: [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md) (cases 01–09).
 - Canonical concept page: [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) (Level 301) — has the "dead rung" section.
 - Why one point of scale can flip a winner: [Scale granularity can flip the winner](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md).
-- The runoff and scoring rounds themselves: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md).
+- The runoff and scoring rounds themselves: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md).

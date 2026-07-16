@@ -38,7 +38,7 @@ A few honest observations from that table:
 
 - **Approval's strategy is the most *actionable*.** Its one genuine dilemma — the **approval threshold**: do you approve only your favorite (bullet voting) or also the tolerable front-runner (tactical maximization)? — is easy to reason about, which cuts both ways: simple to use, but also simple to game. Approval never asks you to betray your favorite, which is its real strength. See [Approval's honest limits](../Approval_Voting/approval_honest_limits.md).
 - **Ranked Robin's exposure is burial.** Because it's purely ordinal (order, not strength), a faction can in principle *bury* a strong rival below weaker candidates. In practice sincere ranking is usually optimal and Condorcet methods are considered strongly strategy-resistant — but burial is the named risk. See [Ranked Robin's honest limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
-- **STAR's exposure is the bottom two, softened by the runoff.** Because scores are summed in round one but treated only as *order* in the runoff, exaggeration has limited upside and real downside (below). STAR does **fail Later-No-Harm** — honestly scoring a second choice *can*, in constructions, help them beat your favorite — which is a genuine, admitted property. See [STAR's honest limits](../STAR_Voting/STAR_honest_limits.md).
+- **STAR's exposure is the bottom two, softened by the runoff.** Because scores are summed in round one but treated only as *order* in the runoff, exaggeration has limited upside and real downside (below). STAR does **fail Later-No-Harm** — honestly scoring a second choice *can*, in constructions, help them beat your favorite — which is a genuine, admitted property. See [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
 
 ## Why exaggeration tends to backfire in STAR
 
@@ -48,7 +48,7 @@ The mechanism is worth understanding because it's STAR's clearest honesty argume
 - **Bury a strong consensus candidate** (the [FairVote hypothesis](https://www.fairvote.org/explaining_fairvote_s_position_on_star_voting)) → to do this you must *raise* someone you like *less*, which raises the chance your own favorite gets squeezed out of the top two. And if several factions all try it, all but one end up worse off than if they'd been honest.
 - **Bullet-vote or exaggerate the scale** → the runoff only reads *order*, so a 5-vs-4 counts the same as 5-vs-0; you gain nothing in the runoff by inflating, and you lose your say among candidates you flattened together.
 
-The honest limit on this argument: it says exaggeration *rarely pays and often backfires* — **not** that STAR is favorite-betrayal-proof. It isn't. The measured version is the brute-force simulation in [Favorite Betrayal — Voting 301](../STAR_Voting/favorite_betrayal_voting_301.md), which finds STAR and IRV fail the favorite-betrayal criterion at *about the same low rate* — STAR's real edge is that a betrayal **backfires far more often than it works**, not that it never works.
+The honest limit on this argument: it says exaggeration *rarely pays and often backfires* — **not** that STAR is favorite-betrayal-proof. It isn't. The measured version is the brute-force simulation in [Favorite Betrayal — Voting 301](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md), which finds STAR and IRV fail the favorite-betrayal criterion at *about the same low rate* — STAR's real edge is that a betrayal **backfires far more often than it works**, not that it never works.
 
 ## What the simulations say
 
@@ -70,4 +70,4 @@ Two nuances kept for honesty: (1) these are model outputs — the exact numbers 
 
 No method removes strategy entirely (Gibbard–Satterthwaite guarantees that). Among the Equal Vote methods the differences are about *how actionable* the strategy is and *whether it pays* — and on those measures all three are dramatically safer than the choose-one status quo.
 
-**See also:** [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) · [Favorite Betrayal — Voting 301](../STAR_Voting/favorite_betrayal_voting_301.md) · [Residual vote-splitting](../STAR_Voting/residual_vote_splitting.md) · [Scores vs. ranks (cardinal vs ordinal)](../scores_and_ranks/scores_vs_ranks.md) · [STAR FAQ](../STAR_Voting/STAR_FAQ.md) · [Glossary](../GLOSSARY.md)
+**See also:** [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) · [Favorite Betrayal — Voting 301](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) · [Residual vote-splitting](../STAR_Voting/properties_and_limits/residual_vote_splitting.md) · [Scores vs. ranks (cardinal vs ordinal)](../scores_and_ranks/scores_vs_ranks.md) · [STAR FAQ](../STAR_Voting/getting_started/STAR_FAQ.md) · [Glossary](../GLOSSARY.md)

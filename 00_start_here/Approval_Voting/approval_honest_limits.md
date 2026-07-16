@@ -2,7 +2,7 @@
 
 **One line:** Approval is the *simplest* equal-vote method — mark everyone you approve, most approvals wins — and that simplicity is both its strength and its weakness. It throws away preference **strength and order**, and it hands the voter one hard, unavoidable decision: **where to draw the approval line.** STAR was designed largely to fix exactly this gap.
 
-→ Overview: [**Approval Voting**](approval_voting.md) (how it works). · Companion critical pages (parity across methods): [STAR's limits](../STAR_Voting/STAR_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). Approval *does* pass the [Equal Vote](../STAR_Voting/equally_weighted_vote.md). Curriculum: [301.4](../CURRICULUM.md).
+→ Overview: [**Approval Voting**](approval_voting.md) (how it works). · Companion critical pages (parity across methods): [STAR's limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md). Approval *does* pass the [Equal Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md). Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 

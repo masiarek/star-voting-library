@@ -2,7 +2,7 @@
 
 **Level 201 · the first scoring-round tie.** Aral leads outright; **Baikal and Crater tie for the second finalist slot.** Now the cascade runs in the *scoring* round to decide *who advances*: head-to-head (tied) → most 5s (tied) → **lot number** → Baikal advances. Aral then wins the runoff cleanly. Cast: three lakes.
 
-→ [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md) · BV: wrong finalists under ties [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379), pre-published lot rule [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063), tie-break export [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371) (closed) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · BV: wrong finalists under ties [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379), pre-published lot rule [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063), tie-break export [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371) (closed) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

@@ -18,7 +18,7 @@ change from {X, Y} to {X, Z}. X still leads the scoring round (now 96), but the
 runoff is X vs Z, and Z beats X 18-12. X went from winning to losing after being
 raised — STAR fails the mono-raise-delete criterion (Woodall 1996). It still
 passes plain mono-raise (see the monotonicity_star_* pair, where the same kind
-of change leaves X winning). Concept: 00_start_here/STAR_Voting/STAR_monotonicity.md.
+of change leaves X winning). Concept: 00_start_here/STAR_Voting/properties_and_limits/STAR_monotonicity.md.
 
 ## Ballots
 

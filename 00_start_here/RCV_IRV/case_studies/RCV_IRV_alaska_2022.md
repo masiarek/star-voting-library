@@ -29,7 +29,7 @@ Begich had the fewest first choices, so RCV-IRV eliminated him. His ballots spli
 
 **2. Spoiler — Palin spoiled the race for Begich.** Had Palin not run, Begich would have won (his support plus Palin's beats Peltola). Palin couldn't win, but her presence changed *who did* — the definition of a [spoiler](../../topics/spoiler_effect.md). So RCV-IRV did **not** deliver the spoiler-free election it's marketed as.
 
-**3. Non-monotonicity / favorite betrayal.** The result was also a documented [monotonicity](../RCV_IRV_non_monotonicity.md) failure: a bloc of Palin-first voters would have gotten a **preferred** outcome (Begich instead of Peltola) by ranking Peltola *higher* — i.e. by **not** putting their favorite first. IRV punished sincere voting, exactly the [favorite-betrayal](../../STAR_Voting/favorite_betrayal_voting_301.md) incentive reform is supposed to remove.
+**3. Non-monotonicity / favorite betrayal.** The result was also a documented [monotonicity](../RCV_IRV_non_monotonicity.md) failure: a bloc of Palin-first voters would have gotten a **preferred** outcome (Begich instead of Peltola) by ranking Peltola *higher* — i.e. by **not** putting their favorite first. IRV punished sincere voting, exactly the [favorite-betrayal](../../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) incentive reform is supposed to remove.
 
 ## Why it matters
 

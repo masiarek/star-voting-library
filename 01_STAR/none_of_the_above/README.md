@@ -8,6 +8,6 @@ What happens when voters can formally reject the whole field? BetterVoting suppo
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3`). Open handling question: [Equal-Vote/bettervoting#1421](https://github.com/Equal-Vote/bettervoting/issues/1421).
 
-Up: [01_STAR](../README.md) · related edge cases: [abstain_bugs](../abstain_bugs/) (blank/zero handling) · concept: [abstention vs zero vs NOTA](../../00_start_here/STAR_Voting/abstention_vs_zero_vs_nota.md).
+Up: [01_STAR](../README.md) · related edge cases: [abstain_bugs](../abstain_bugs/) (blank/zero handling) · concept: [abstention vs zero vs NOTA](../../00_start_here/STAR_Voting/properties_and_limits/abstention_vs_zero_vs_nota.md).
 
 # file: README.md

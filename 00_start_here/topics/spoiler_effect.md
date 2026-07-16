@@ -2,7 +2,7 @@
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../STAR_Voting/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting)
 
 ---
 
@@ -14,7 +14,7 @@ Nothing about the electorate's actual preferences changed — only the ballot's 
 
 ## The root cause: one mark
 
-The spoiler comes from **vote splitting** — similar candidates sharing one pool of supporters who are each allowed only one mark. Fix the ballot so a voter can back several candidates at once, or express *degree* of support, and the forced split goes away. This is the same root the [equally-weighted-vote](../STAR_Voting/equally_weighted_vote.md) argument starts from.
+The spoiler comes from **vote splitting** — similar candidates sharing one pool of supporters who are each allowed only one mark. Fix the ballot so a voter can back several candidates at once, or express *degree* of support, and the forced split goes away. This is the same root the [equally-weighted-vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) argument starts from.
 
 ## How each method handles it
 
@@ -35,7 +35,7 @@ These get conflated, but they're different failures:
 
 ## Does STAR fully escape it?
 
-Almost. STAR removes the *forced* split, but a **narrow, self-inflicted residual** survives in the top-two runoff — a faction can still split itself if it refuses to use the score ballot honestly. That edge case (and why it's minor) is [STAR's residual vote-splitting](../STAR_Voting/residual_vote_splitting.md).
+Almost. STAR removes the *forced* split, but a **narrow, self-inflicted residual** survives in the top-two runoff — a faction can still split itself if it refuses to use the score ballot honestly. That edge case (and why it's minor) is [STAR's residual vote-splitting](../STAR_Voting/properties_and_limits/residual_vote_splitting.md).
 
 ## How social choice theory frames it
 
@@ -50,7 +50,7 @@ Susceptibility depends heavily on the method (Wikipedia's summary):
 | Condorcet methods ([Ranked Robin / RCV-RR](../RCV_Ranked_Robin/ranked_robin.md), Schulze, Ranked Pairs) | **Low** (only in a cyclic tie) |
 | Score / median ([Approval](../Approval_Voting/approval_voting.md), [Score](../Range_Voting/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md)) | **None** (on an absolute scale) |
 
-Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked* method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they *can* be spoilerproof — with one caveat: only if voters score on an **absolute** scale. If voters rescale their scores around who's running (a *relative* scale), a spoiler can reappear — which is exactly STAR's [narrow residual](../STAR_Voting/residual_vote_splitting.md).
+Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked* method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they *can* be spoilerproof — with one caveat: only if voters score on an **absolute** scale. If voters rescale their scores around who's running (a *relative* scale), a spoiler can reappear — which is exactly STAR's [narrow residual](../STAR_Voting/properties_and_limits/residual_vote_splitting.md).
 
 Methods that fail IIA can be gamed by **strategic nomination**. The Borda count has a severe *entry* incentive — a faction can "clone their way to victory" by running many candidates, which made Borda himself concede "my system is meant only for honest men." Plurality has the opposite, an *exit* incentive: similar candidates get pressured to drop out or merge so they don't split the vote. (Theory suggests **90–99% of real elections have a Condorcet winner**, so cyclic-tie spoilers are rare; the first Condorcet cycle found in a ranked US election was in 2021.)
 
@@ -69,7 +69,7 @@ The most prominent recent example is **[Alaska's 2022 U.S. House special electio
 - [The split-voting set](../../method_comparisons/split_voting) — the spoiler progression from plurality through each reform, on the same ballots.
 - [Star Wars vote split](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) — a compact worked example (Skywalker & Leia split the Rebel vote).
 - [Plurality vs. majority](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) — where the minority winner comes from.
-- Debate framing: [what's so good about STAR — Segment 1](../STAR_Voting/whats_so_good_about_STAR_Voting.md)
+- Debate framing: [what's so good about STAR — Segment 1](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md)
 
 Sources: [Spoiler effect — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect), [Spoiler effect rhetoric — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect_rhetoric), [Independence of irrelevant alternatives — Wikipedia](https://en.wikipedia.org/wiki/Independence_of_irrelevant_alternatives), [2009 Burlington mayoral election — Wikipedia](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election)
 

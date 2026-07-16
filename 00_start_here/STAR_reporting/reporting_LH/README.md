@@ -20,7 +20,7 @@
   Dog 190 (52%) vs Cat 173 (48%); majority = 182.
   ```
 
-It names the decided count *against the total* with the Equal Support gap inline, so the denominator never has to be inferred. (→ the two-denominator idea: [Runoff percentages](../../STAR_Voting/runoff_percentages.md).)
+It names the decided count *against the total* with the Equal Support gap inline, so the denominator never has to be inferred. (→ the two-denominator idea: [Runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md).)
 - **"Runoff math" funnel** — in the saved `_tabulated.txt`, the same line expands so the arithmetic is explicit:
 
   ```

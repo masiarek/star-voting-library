@@ -22,10 +22,10 @@ export interface Database {
 
 | Table | Purpose | Per-table doc |
 |---|---|---|
-| `electionDB` | Election config: races, candidates, settings, state, ownership | [electionDB.md](./electionDB.md) |
-| `ballotDB` | Cast ballots (votes per race) | [ballotDB.md](./ballotDB.md) |
-| `electionRollDB` | Voter roll: who may vote, auth, submission status | [electionRollDB.md](./electionRollDB.md) |
-| `emailEventsDB` | SendGrid email delivery/engagement events | [emailEventsDB.md](./emailEventsDB.md) |
+| `electionDB` | Election config: races, candidates, settings, state, ownership | [electionDB.md](electionDB.md) |
+| `ballotDB` | Cast ballots (votes per race) | [ballotDB.md](ballotDB.md) |
+| `electionRollDB` | Voter roll: who may vote, auth, submission status | [electionRollDB.md](electionRollDB.md) |
+| `emailEventsDB` | SendGrid email delivery/engagement events | [emailEventsDB.md](emailEventsDB.md) |
 
 ## The load-bearing design idea: append-only "head" versioning
 

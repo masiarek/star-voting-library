@@ -1,6 +1,6 @@
 # FSD — Paper-Ballot Demo Toolkit (`bv_ballot_sheet.py`)
 
-*Functional Specification (as-built). A dev/maintainer-facing spec for the printable-ballot tool and the paper-ballot demo workflow. The teacher-facing how-to is [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md); this doc records **what** it does, **why** the design choices were made, and — importantly — **what it deliberately does not do**.*
+*Functional Specification (as-built). A dev/maintainer-facing spec for the printable-ballot tool and the paper-ballot demo workflow. The teacher-facing how-to is [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md); this doc records **what** it does, **why** the design choices were made, and — importantly — **what it deliberately does not do**.*
 
 **Status:** front-end (ballot generation) built, self-tested, and **validated on real hardware** (printed → QR scanned → voted → hand-marked ballot read → cast back to BV; see §7). Return-path (OCR — automated image→scores) is a documented roadmap, not built; until then the return path is a human transcribing marks into a YAML/CSV.
 
@@ -32,7 +32,7 @@ Let a teacher / workshop leader / demo runner turn a STAR election into **printa
 5. Compare to BetterVoting              → bettervoting.com/<id>/results
 6. (roadmap) OCR paper → scores → cast into BV  (today: human transcribes)
 ```
-The tool owns step 2. **BetterVoting is the tabulation authority** — the paper ballots are hand-counted and/or entered into BV, and checked against the BV results page. (An earlier version documented a "transcribe → LH engine, no BV" counting route; that was dropped 2026-07 — every ballot corresponds to a real BV election, so counting goes through BV.) Step 1 uses [`create_bv_test_election.py`](./create_bv_test_election.py) (creates the election **and** saves its JSON to `06_Other/_demo_dropbox/` — so the id is real and the QR/results resolve; cf. FR-12), or the BV UI.
+The tool owns step 2. **BetterVoting is the tabulation authority** — the paper ballots are hand-counted and/or entered into BV, and checked against the BV results page. (An earlier version documented a "transcribe → LH engine, no BV" counting route; that was dropped 2026-07 — every ballot corresponds to a real BV election, so counting goes through BV.) Step 1 uses [`create_bv_test_election.py`](create_bv_test_election.py) (creates the election **and** saves its JSON to `06_Other/_demo_dropbox/` — so the id is real and the QR/results resolve; cf. FR-12), or the BV UI.
 
 **Why one route:** earlier the tool also accepted `--candidates` (offline, no BV) and `--yaml`. Those were dropped to make the workflow singular and unambiguous — *create → export → import → print*. The cost, accepted deliberately: **no offline printing** (you must create a BV election first). The upside: the id is always real (no fabricated-id dead links), descriptions/title/candidates come from one authoritative source, and there is exactly one thing to document and teach.
 
@@ -88,7 +88,7 @@ The tool owns step 2. **BetterVoting is the tabulation authority** — the paper
 
 So "voter marked 2, 4 and 5 for one candidate" → `?` in that column; the engine already scores it 0 and surfaces it as spoiled. The ballot *warns the voter up front*.
 
-**5.3 Serials teach verifiability — with the secret-ballot tension as the lesson.** Publishing the list of counted serials demonstrates **counted-as-cast**. But a serial linkable to a voter breaks ballot secrecy (coercion) — which is *why* real systems need E2E-V (crypto receipts that confirm your vote counted without revealing how you voted). The tool prints serials; the [demo page](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md) frames the tension. **Keep serials unlinked to identity in any real use; do not build BV/digital serial plumbing (§2).** The **default demonstration notice (FR-9)** is the on-ballot half of this safeguard: it states in print that the sheet is a teaching demo, not a secret ballot — so a numbered ballot can't be mistaken for (or objected to as) a real one.
+**5.3 Serials teach verifiability — with the secret-ballot tension as the lesson.** Publishing the list of counted serials demonstrates **counted-as-cast**. But a serial linkable to a voter breaks ballot secrecy (coercion) — which is *why* real systems need E2E-V (crypto receipts that confirm your vote counted without revealing how you voted). The tool prints serials; the [demo page](../../00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md) frames the tension. **Keep serials unlinked to identity in any real use; do not build BV/digital serial plumbing (§2).** The **default demonstration notice (FR-9)** is the on-ballot half of this safeguard: it states in print that the sheet is a teaching demo, not a secret ballot — so a numbered ballot can't be mistaken for (or objected to as) a real one.
 
 **Why serials default OFF (a considered call, not an accident).** The pull is real in both directions:
 - *For ON:* every demo would surface verifiability + the secret-ballot tension (the richest discussion the tool enables); numbered sheets aid hand-count reconciliation ("all 30 back, none duplicated"); and now that every ballot is stamped "EDUCATION ONLY," the main risk of ON is largely defused.
@@ -148,7 +148,7 @@ A rendered example ballot (BV-linked, two QRs, long-form logo):
 
 ![Example STAR paper ballot](../../00_start_here/STAR_Voting/img/star_paper_ballot_example.png)
 
-`--selftest` covers the offline render logic (FR-8); the scenarios below are the end-to-end cases to spot-check by eye. Each named election is a live BV demo created via [`create_bv_test_election.py`](./create_bv_test_election.py).
+`--selftest` covers the offline render logic (FR-8); the scenarios below are the end-to-end cases to spot-check by eye. Each named election is a live BV demo created via [`create_bv_test_election.py`](create_bv_test_election.py).
 
 | # | Scenario | Key flags | Expected |
 |---|---|---|---|
@@ -179,6 +179,6 @@ A rendered example ballot (BV-linked, two QRs, long-form logo):
 
 ## 10. Related
 
-- Teacher how-to: [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/running_a_paper_ballot_demo.md)
-- Hand-count: [`count_star_by_hand.md`](../../00_start_here/STAR_Voting/count_star_by_hand.md) · Teaching guide: [`teaching_star_voting.md`](../../00_start_here/STAR_Voting/teaching_star_voting.md)
-- BV election creation: [`create_bv_test_election.py`](./create_bv_test_election.py) · Marker conventions & house rules: [`CLAUDE.md`](../../CLAUDE.md)
+- Teacher how-to: [`running_a_paper_ballot_demo.md`](../../00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md)
+- Hand-count: [`count_star_by_hand.md`](../../00_start_here/STAR_Voting/hands_on/count_star_by_hand.md) · Teaching guide: [`teaching_star_voting.md`](../../00_start_here/STAR_Voting/hands_on/teaching_star_voting.md)
+- BV election creation: [`create_bv_test_election.py`](create_bv_test_election.py) · Marker conventions & house rules: [`CLAUDE.md`](../../CLAUDE.md)

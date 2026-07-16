@@ -7,7 +7,7 @@
 ## Scenario
 
 A *convincing* runoff reversal (the one nearly everyone agrees with). 100 voters, three candidates: Max is a passionate-minority favorite (45 voters give him a 5), Nora is the broad compromise, Cal is a no-hoper who never reaches the runoff. Max tops the SCORE round (335 vs Nora 255, Cal 55) on the strength of his intense base — but the runoff is Max vs Nora, and 55 of 100 voters prefer Nora, so she wins 55–45. Pure Score voting would crown Max on lopsided intensity; STAR's runoff catches that a majority actually wants Nora. This is the "runoff earns its keep" half of the pair; the companion reversal_jarring_c3_b100 shows the *jarring* case where the reversal is genuinely debatable.
-Lesson: 00_start_here/STAR_Voting/STAR_second_round_FAQ.md
+Lesson: 00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md
 
 ## Ballots
 

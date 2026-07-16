@@ -2,7 +2,7 @@
 
 Stores each election's full configuration: its races, candidates, settings, lifecycle state, and
 ownership. Versioned with the `create_date` / `update_date` / `head` pattern (see
-[README](./README.md)).
+[README](README.md)).
 
 - **Domain type:** `Election` (`packages/shared/src/domain_model/Election.ts`)
 - **Primary key:** `(election_id, update_date)`

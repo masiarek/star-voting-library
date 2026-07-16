@@ -2,7 +2,7 @@
 
 **One line:** STAR removes the *forced* vote-splitting that wrecks Choose-One — you can score two similar candidates both high, so running an ally doesn't bleed your support. What survives is a **narrow, self-inflicted** residual in the top-two runoff: a faction can still split itself if it refuses to use the score ballot, or tries to game which ally claims the second finalist slot.
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · related: [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) · debate version: [Favorite Betrayal — Does *Only* RCV Avoid It?](favorite_betrayal_voting_301.md)
+→ Glossary: [`spoiler effect`](../../GLOSSARY.md) · related: [Center Squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) · debate version: [Favorite Betrayal — Does *Only* RCV Avoid It?](favorite_betrayal_voting_301.md)
 
 ---
 
@@ -22,7 +22,7 @@ Only the **two highest score totals** advance to the automatic runoff. That sing
 
 Same three candidates and the same true preferences; only the *expressiveness* changes (60 voters on the Ada/Ben side, 40 for opponent Cara):
 
-→ [`05a_residual_split_bullet-voting.yaml`](../../method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml) · [`05b_residual_split_expressive-fix.yaml`](../../method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml)
+→ [`05a_residual_split_bullet-voting.yaml`](../../../method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml) · [`05b_residual_split_expressive-fix.yaml`](../../../method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml)
 
 | File | Ada/Ben behavior | Scores (Ada / Ben / Cara) | STAR winner |
 |------|------------------|--------------------------|-------------|
@@ -34,9 +34,9 @@ In 05a the engine's `[Vote-splitting check]` is honest: it flags the majority co
 ## Why it's a narrow edge case, not the spoiler all over again
 
 - **The ordinary spoiler is automatic** — it needs no coordination and happens whenever similar candidates run. Splitting is the *default*.
-- **STAR's residual is the exception** — it needs a near-tie for the second runoff slot, accurate prediction, coordinated mis-scoring, and it **backfires if you're wrong**. The brute-force simulation in [`../../06_Other/simulations/`](../../06_Other/simulations) finds that a favorite-betrayal-style play in STAR helps only ~2% of the time it changes the result — it backfires ~98% of the time. So honest, expressive scoring stays your safest ballot.
+- **STAR's residual is the exception** — it needs a near-tie for the second runoff slot, accurate prediction, coordinated mis-scoring, and it **backfires if you're wrong**. The brute-force simulation in [`../../06_Other/simulations/`](../../../06_Other/simulations) finds that a favorite-betrayal-style play in STAR helps only ~2% of the time it changes the result — it backfires ~98% of the time. So honest, expressive scoring stays your safest ballot.
 
-Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md) and [center-squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) edge cases: all three come from "only the top two advance."
+Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md) and [center-squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) edge cases: all three come from "only the top two advance."
 
 ## How to say it honestly
 

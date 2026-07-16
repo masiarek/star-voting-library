@@ -32,7 +32,7 @@ python pref_voting_tabulation.py ../../../method_comparisons/summability_demo/rr
 
 ## The three write-ups
 
-- [STAR is summable](../../00_start_here/STAR_Voting/STAR_summability.md)
+- [STAR is summable](../../00_start_here/STAR_Voting/properties_and_limits/STAR_summability.md)
 - [Ranked Robin is summable](../../00_start_here/RCV_Ranked_Robin/RCV_RR_summability.md)
 - [IRV is *not* summable](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md)
 

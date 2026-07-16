@@ -17,16 +17,16 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 | Criterion | Approval | STAR | Ranked Robin | RCV-IRV |
 |---|:---:|:---:|:---:|:---:|
 | [**Monotonicity**](monotonicity) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
-| [**Condorcet winner**](condorcet) (elects a beats-all candidate) | ✗ | [✗](../STAR_Voting/STAR_three_winner_notions.md) | ✓ | [✗](../RCV_IRV/RCV_IRV_center_squeeze.md) |
+| [**Condorcet winner**](condorcet) (elects a beats-all candidate) | ✗ | [✗](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) | ✓ | [✗](../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | [**Condorcet loser**](../voting_paradoxes/condorcet_loser_paradox.md) (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
 | [**Majority favorite**](majority_criterion) (a majority's 1st choice wins) | ✗ † | [✗](../../01_STAR/majority_criterion) | ✓ | ✓ |
 | [**Mutual majority**](../GLOSSARY.md) | ✗ | ✗ | ✓ | ✓ |
 | [**Participation**](participation) (showing up can't backfire) | ✓ | [✗](../../method_comparisons/participation_no_show) | ✗ | [✗](../../method_comparisons/participation_no_show) |
 | [**Consistency**](../voting_paradoxes/multiple_districts.md) (two districts agreeing agree combined) | ✓ | ✗ | ✗ | ✗ |
 | [**Independence of clones**](../../05_Ranked_Robin/clone_independence) | ✓ | ✗ | [✗](../../05_Ranked_Robin/clone_independence) | ✓ |
-| [**Later-no-harm**](../STAR_Voting/STAR_second_round_FAQ.md) (a backup can't sink your favorite) | ✗ | [✗](../STAR_Voting/STAR_second_round_FAQ.md) | ✗ | ✓ |
-| [**Favorite betrayal**](../STAR_Voting/favorite_betrayal_voting_301.md) (never rewards burying your favorite) | ✓ | [✗](../STAR_Voting/favorite_betrayal_voting_301.md) | ✗ | ✗ |
-| [**Summable**](summability) (precinct subtotals; easy audit) | ✓ | ✓ | ✓ | [✗](../STAR_Voting/STAR_summability.md) |
+| [**Later-no-harm**](../STAR_Voting/the_count/STAR_second_round_FAQ.md) (a backup can't sink your favorite) | ✗ | [✗](../STAR_Voting/the_count/STAR_second_round_FAQ.md) | ✗ | ✓ |
+| [**Favorite betrayal**](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) (never rewards burying your favorite) | ✓ | [✗](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) | ✗ | ✗ |
+| [**Summable**](summability) (precinct subtotals; easy audit) | ✓ | ✓ | ✓ | [✗](../STAR_Voting/properties_and_limits/STAR_summability.md) |
 
 *(Ranked Robin = the repo's Copeland-based Condorcet method. "RCV-IRV" = ranked ballots counted by instant runoff.)*
 
@@ -47,9 +47,9 @@ None of that ranks the methods. It tells you *which trade you're making*.
 The value of this repo isn't the ✗ — it's the countable election behind it:
 
 - **RCV-IRV fails monotonicity** → the [before/after pair](../../method_comparisons/monotonicity) (raise the winner, they lose).
-- **STAR fails monotonicity's *stronger* variant** (mono-raise-delete, though it passes the standard one) → the [mono-raise-delete pair](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) · concept: [STAR & monotonicity](../STAR_Voting/STAR_monotonicity.md).
+- **STAR fails monotonicity's *stronger* variant** (mono-raise-delete, though it passes the standard one) → the [mono-raise-delete pair](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) · concept: [STAR & monotonicity](../STAR_Voting/properties_and_limits/STAR_monotonicity.md).
 - **STAR fails the majority criterion** → [the favorite loses to two rivals](../../01_STAR/majority_criterion) (bv95a/bv95b).
-- **STAR & IRV fail the Condorcet winner** → [three notions of "winner"](../STAR_Voting/STAR_three_winner_notions.md) · [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md).
+- **STAR & IRV fail the Condorcet winner** → [three notions of "winner"](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) · [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md).
 - **STAR, IRV & Ranked Robin fail participation** → the live [no-show pair](../../method_comparisons/participation_no_show) (showing up flips the result).
 - **Ranked Robin fails clone independence** → [clone independence](../../05_Ranked_Robin/clone_independence).
 
@@ -61,5 +61,5 @@ Each cell was cross-checked against Wikipedia's [Comparison of electoral systems
 
 - [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) — the "which criteria matter" question
 - [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — why a table like this isn't a verdict
-- Per-method honest limits: [STAR](../STAR_Voting/STAR_honest_limits.md) · [Approval](../Approval_Voting/approval_honest_limits.md) · [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md)
+- Per-method honest limits: [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](../Approval_Voting/approval_honest_limits.md) · [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md)
 - [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — the wider family and its own criterion table

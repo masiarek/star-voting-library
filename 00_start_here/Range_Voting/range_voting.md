@@ -37,7 +37,7 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 | ✅ **No vote-splitting / spoiler** in the choose-one sense — scoring a new candidate never lowers another's score. | ⚠️ **Not majoritarian.** A candidate a slim majority *strongly* prefers can lose to one a broad group *mildly* likes. Range fails the **Majority Criterion**. |
 | ✅ **Precinct-summable & simple to tally** — just add columns; none of RCV-IRV's round-by-round machinery. | ⚠️ **The scale / normalization problem.** Honest voters using the scale differently — or a shifted "where's my line" — changes results (the [approval-line](../Approval_Voting/approval_honest_limits.md) issue, one notch up). |
 | ✅ **Monotone** — more support never hurts a candidate (unlike IRV). | ⚠️ **Fails Later-No-Harm** — grading a compromise can cost your favorite. |
-| ✅ **Passes the [Equal Vote / balance test](../STAR_Voting/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../scores_and_ranks/scale_granularity_flips_the_winner.md). |
+| ✅ **Passes the [Equal Vote / balance test](../STAR_Voting/properties_and_limits/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../scores_and_ranks/scale_granularity_flips_the_winner.md). |
 
 **The one-line summary:** Range asks the richest question, but rewards exaggeration; **STAR keeps Range's expressive ballot and adds a runoff** to make honesty safer. Which trade-off you want is the whole debate.
 

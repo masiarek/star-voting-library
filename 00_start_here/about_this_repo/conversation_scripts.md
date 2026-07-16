@@ -2,7 +2,7 @@
 
 A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../STAR_Voting/), RCV-IRV episodes in [`RCV_IRV/`](../RCV_IRV/), and the foundational ones here in `00_start_here/` — and this page indexes them. The demos come from `00_start_here/`, `01_Single_winner/`, and `split_voting/`.
 
-Start here: [whats_so_good_about_STAR_Voting.md](../STAR_Voting/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
+Start here: [whats_so_good_about_STAR_Voting.md](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
 
 ---
 
@@ -16,12 +16,12 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 
 | Page | Verdict | State |
 |---|---|---|
-| [are_equal_score_votes_discounted.md](../STAR_Voting/are_equal_score_votes_discounted.md) | convert | **✔ converted** to an educational page (2026-07) |
+| [are_equal_score_votes_discounted.md](../STAR_Voting/reference/are_equal_score_votes_discounted.md) | convert | **✔ converted** to an educational page (2026-07) |
 | [what_is_a_voting_method.md](../topics/what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
-| [whats_so_good_about_STAR_Voting.md](../STAR_Voting/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](../STAR_Voting/STAR_start_here.md) & [benefits](../STAR_Voting/STAR_benefits.md) |
-| [why_do_you_love_STAR_Voting.md](../STAR_Voting/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
+| [whats_so_good_about_STAR_Voting.md](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](../STAR_Voting/STAR_start_here.md) & [benefits](../STAR_Voting/getting_started/STAR_benefits.md) |
+| [why_do_you_love_STAR_Voting.md](../STAR_Voting/reference/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
 | [our_voting_system_is_broken.md](../topics/our_voting_system_is_broken.md) | convert | **✔ done (2026-07)** — converted to an educational "problem with plurality" page (dialogue → prose; demos as links) |
-| [favorite_betrayal_voting_301.md](../STAR_Voting/favorite_betrayal_voting_301.md) | convert | **✔ done (2026-07)** — educational reference body; §7 recast from a Larry↔Adam recording script into an **RCV-advocate ↔ STAR-advocate debate** (debate-prep, not a presenter artifact) |
+| [favorite_betrayal_voting_301.md](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) | convert | **✔ done (2026-07)** — educational reference body; §7 recast from a Larry↔Adam recording script into an **RCV-advocate ↔ STAR-advocate debate** (debate-prep, not a presenter artifact) |
 | [RCV_or_IRV_whats_the_right_word.md](../RCV_IRV/RCV_or_IRV_whats_the_right_word.md) | convert | **✔ done (2026-07)** — now a short concept page (dialogue → prose) that defers the full taxonomy to canonical [TIPS_terminology](../tips/TIPS_terminology.md) |
 | [exhausted_ballots_301.md](../RCV_IRV/exhausted_ballots_301.md) | convert | **✔ done (2026-07)** — reference body kept; §7 recast from a Larry↔Adam script into an **RCV-advocate ↔ STAR-advocate debate** (matches favorite_betrayal_301) |
 
@@ -56,7 +56,7 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |
 
-Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](../STAR_Voting/are_equal_score_votes_discounted.md), now an educational page — build the clip's Q&A from its sections) is debate-prep — deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
+Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](../STAR_Voting/reference/are_equal_score_votes_discounted.md), now an educational page — build the clip's Q&A from its sections) is debate-prep — deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
 
 ### Suggested additional topics (good standalone clips)
 - "Equal Preference / no-preference in the runoff" — what an equal score does. <!-- terminology-ok: names the aka under discussion -->

@@ -4,7 +4,7 @@
 
 This is the bookend to [Runoff 01](Runoff_01_confirms_leader_r2pvc9.md): most of the time the runoff just agrees with the score round. The reversals (02–05) are the exception — the safeguard catching the cases where intensity and majority preference diverge.
 
-→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/STAR_Automatic_Runoff.md).
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md).
 
 ---
 

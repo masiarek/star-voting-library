@@ -106,4 +106,4 @@ Happy to share the full JSON export, the other tabulator's complete report, or r
 
 ---
 
-*Cross-reference (our learning docs):* frozen evidence `BV_result_snapshot.md` · synthetic minimal case `abstention_reconciliation_min_c2_b6.yaml` · small real-BV reproduction recipe `SMALL_CASE_reproduce_on_BV.md` · full race `best_pet_c7_b461.yaml` + `README.md` · concept lessons `00_start_here/tabulation_engines/bettervoting_and_the_engine.md` and `00_start_here/STAR_Voting/runoff_percentages.md`. *This issue:* [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407).
+*Cross-reference (our learning docs):* frozen evidence `BV_result_snapshot.md` · synthetic minimal case `abstention_reconciliation_min_c2_b6.yaml` · small real-BV reproduction recipe `SMALL_CASE_reproduce_on_BV.md` · full race `best_pet_c7_b461.yaml` + `README.md` · concept lessons `00_start_here/tabulation_engines/bettervoting_and_the_engine.md` and `00_start_here/STAR_Voting/the_count/runoff_percentages.md`. *This issue:* [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407).

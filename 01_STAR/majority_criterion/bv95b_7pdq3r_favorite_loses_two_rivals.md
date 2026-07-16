@@ -57,4 +57,4 @@ Reproduced live at [`bettervoting.com/7pdq3r`](https://bettervoting.com/7pdq3r):
 
 - The concept, the Relaxed Majority Criterion, and the Later-No-Harm link: **[Majority Criterion topic hub](../../00_start_here/topics/majority_criterion/README.md)**.
 - The twin where the favorite survives: [BV95a — majority backs only one rival](bv95a_9m6rxr_favorite_survives_one_rival.md).
-- [STAR's honest limits #8](../../00_start_here/STAR_Voting/STAR_honest_limits.md).
+- [STAR's honest limits #8](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).
