@@ -40,6 +40,7 @@ you need not hoard every spec here.
 #   BV2135 — Block & Limited voting (as bloc Approval)     -> 3x4vrv   (backs method_comparisons/multi_member_plurality)
 #   BV2136 — Village Council by SNTV (multi-winner Plurality) -> y3tvxm  (backs method_comparisons/sntv_village_council)
 #   BV2187 — Ann, Bob, Cal (canonical STAR mechanics demo)      -> qrw6wb  (backs 01_STAR/_main/bv2187_qrw6wb_ann-bob-cal)
+#   BV830 — No Condorcet winner (top-two tie, score breaks it)   -> vb3xv2  (backs 01_STAR/… bv830_vb3xv2_no_condorcet_tie_score; STAR-only, RR unfreezable)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -2309,9 +2310,38 @@ _ANN_BOB_CAL = {
     "expected": "Bob (Scoring 12/8/7; runoff 2-1 over Ann; Condorcet winner). Plurality ties 1-1-1.",
 }
 
+_BV830_NO_CONDORCET = {
+    "test_id": "BV830",
+    "title": "No Condorcet winner (top-two tie) — STAR breaks it by score",
+    "description": (
+        "A STAR Voting edge case: no strict Condorcet winner, resolved by score. Three "
+        "voters score three candidates A, B, C — (A0, B0, C1), (A0, B2, C2), (A0, B5, C0). "
+        "Scoring Round: B totals 7 and C totals 3, so B and C advance (A gets 0). Automatic "
+        "Runoff: the two finalists tie 1-1-1 head-to-head — one voter prefers B, one prefers "
+        "C, and one scores them equally — so no candidate beats every rival and there is no "
+        "strict Condorcet winner. This is a top-two pairwise tie, not a rock-paper-scissors "
+        "cycle. STAR breaks the deadlock with the score total: B (7) outscores C (3), so B "
+        "wins. The teaching point: exactly where the head-to-head (Condorcet) standard runs "
+        "out of data, STAR's score intensity still identifies the broader-supported winner."
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["A", "B", "C"],
+    "ballots": [
+        [0, 0, 1],   # voter 1: only C, a single point
+        [0, 2, 2],   # voter 2: B and C equal
+        [0, 5, 0],   # voter 3: B to the max
+    ],
+    "enable_write_in": False,   # frozen reproduction of the BV830 source doc
+    "expected": (
+        "B — Scoring B7/C3/A0 (B,C advance); Automatic Runoff B vs C ties 1-1-1; "
+        "score total breaks the tie for B; no strict Condorcet winner (B and C pairwise tie)."
+    ),
+}
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
 # old specs here — every created election is recorded on BV + its saved export
 # in 06_Other/_demo_dropbox/ + BV_registry.md. Example: ELECTIONS = [_ICE_CREAM]
-ELECTIONS: list = []
+ELECTIONS: list = []   # BV830 (vb3xv2) created 2026-07-16 — reset to safe empty state
