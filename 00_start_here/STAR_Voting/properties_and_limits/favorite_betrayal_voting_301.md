@@ -188,7 +188,7 @@ The claim in the wild is rarely a calm question; it's an argument. So here's the
 
 ## Cross-references
 - Slide 4 in [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
-- `00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md` — the runoff / Equal-Support sibling of this concede-then-reframe argument.
-- `LINKS.md` → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
-- `06_Other/simulations/fbc_simulation.py` + `06_Other/simulations/README.md` — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
-- `00_start_here/residual_vote_splitting.md` — the same "only top-two advance" root cause seen as vote-splitting: STAR's self-inflicted bullet-voting / chicken-dilemma edge case, with the `split_voting/05a`–`05b` matched demo.
+- [`are_equal_score_votes_discounted.md`](../reference/are_equal_score_votes_discounted.md) — the runoff / Equal-Support sibling of this concede-then-reframe argument.
+- [`LINKS.md`](../../LINKS.md) → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
+- [`fbc_simulation.py`](../../../06_Other/simulations/fbc_simulation.py) + [`06_Other/simulations/README.md`](../../../06_Other/simulations/README.md) — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
+- [`residual_vote_splitting.md`](residual_vote_splitting.md) — the same "only top-two advance" root cause seen as vote-splitting: STAR's self-inflicted bullet-voting / chicken-dilemma edge case, with the [`split_voting/05a`](../../../method_comparisons/split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md)–[`05b`](../../../method_comparisons/split_voting/_main/_main_pages/05b_residual_split_expressive-fix.md) matched demo.
