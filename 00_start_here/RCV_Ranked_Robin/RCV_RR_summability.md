@@ -8,7 +8,7 @@
 
 ## Why it's summable
 
-Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-preference) matrix**: most head-to-head wins takes it. That matrix is a small fixed-size table (C×C), and each precinct can build its own and publish it — the statewide matrix is just the **sum**. No elimination order, no transfers, nothing that depends on the *other* precincts' ballots. (This is the very property [IRV lacks](../RCV_IRV/RCV_IRV_lack_of_summability.md): summability is about the **count**, not the ballot.)
+Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-preference) matrix**: most head-to-head wins takes it. (How that matrix is built, one ballot at a time: [pairwise counting](../topics/pairwise_counting.md) — each ballot is a tiny matrix, and the election's matrix is the ballots' sum; a precinct's matrix is just that same sum stopped partway.) That matrix is a small fixed-size table (C×C), and each precinct can build its own and publish it — the statewide matrix is just the **sum**. No elimination order, no transfers, nothing that depends on the *other* precincts' ballots. (This is the very property [IRV lacks](../RCV_IRV/RCV_IRV_lack_of_summability.md): summability is about the **count**, not the ballot.)
 
 ## Worked example — the same ballots IRV couldn't combine
 
