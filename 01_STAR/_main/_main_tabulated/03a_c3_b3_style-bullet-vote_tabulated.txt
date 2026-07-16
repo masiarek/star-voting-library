@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     03a_c3_b3_style-bullet-vote.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
 TABULATED FILE:  03a_c3_b3_style-bullet-vote_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
 ======================================================================
 
 election_title: "Voting styles — a valid STAR bullet vote (3 candidates)"

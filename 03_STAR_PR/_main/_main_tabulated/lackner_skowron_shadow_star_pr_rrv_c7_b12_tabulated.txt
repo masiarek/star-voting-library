@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  lackner_skowron_shadow_star_pr_rrv_c7_b12_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:33
 ======================================================================
 
 election_title: "Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV"

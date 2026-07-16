@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     02a_c3_b1_three-candidates.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  02a_c3_b1_three-candidates_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:01
 ======================================================================
 
 election_title: Three candidates, one ballot - single-winner STAR

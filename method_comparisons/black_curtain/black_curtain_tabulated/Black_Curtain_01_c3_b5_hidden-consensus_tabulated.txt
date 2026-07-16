@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Black_Curtain_01_c3_b5_hidden-consensus.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  Black_Curtain_01_c3_b5_hidden-consensus_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:36
 ======================================================================
 
 election_title: The Black Curtain #1 — the hidden consensus candidate

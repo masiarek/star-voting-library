@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv131_guido_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv131_guido_bloc_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:29
 ======================================================================
 
 election_title: "BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie"
@@ -109,9 +107,7 @@ Legend: For - Equal Support - Against
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/bv131_guido_bloc_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-IRV_tabulated.txt
   RCV-RR round-robin: _main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/02_STAR_Bloc/_main/_main_tabulated/bv131_guido_bloc_RCV-RR_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

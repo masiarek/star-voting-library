@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     trash_delete.yaml
-SOURCE MODIFIED: 2026-07-12 10:11:00
 TABULATED FILE:  trash_delete_tabulated.txt
-TABULATED AT:    2026-07-12 10:37:17
 ======================================================================
 
 election_title: The team lunch vote
@@ -78,7 +76,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: 1_positive_tabulated/trash_delete_RCV-IRV_tabulated.txt
-     file:///Volumes/T7/Voting/Larry%20Hastings/YAML/YAML_library/1_positive/1_positive_tabulated/trash_delete_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

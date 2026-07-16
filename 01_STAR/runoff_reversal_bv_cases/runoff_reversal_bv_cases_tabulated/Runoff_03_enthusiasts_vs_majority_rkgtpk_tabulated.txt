@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt
-TABULATED AT:    2026-07-15 07:31:54
 ======================================================================
 
 election:
@@ -48,6 +46,9 @@ election:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Runoff 03 — two enthusiasts vs the majority ===
+  https://bettervoting.com/rkgtpk/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

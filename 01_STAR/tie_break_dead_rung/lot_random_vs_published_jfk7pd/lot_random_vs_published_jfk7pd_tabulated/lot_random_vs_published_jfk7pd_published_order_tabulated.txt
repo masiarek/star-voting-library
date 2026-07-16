@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     lot_random_vs_published_jfk7pd_published_order.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  lot_random_vs_published_jfk7pd_published_order_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:26
 ======================================================================
 
 election_title: 'Lot-decided tie (BV jfk7pd) — following a deterministic published order'

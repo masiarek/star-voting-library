@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2162_4htk44_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2162_4htk44_star_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:42
 ======================================================================
 
 election_title: "Nurmi Ex.16 sincere — STAR: elects the Condorcet winner B"
@@ -71,7 +69,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: felsenthal_paradoxes_tabulated/bv2162_4htk44_star_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2162_4htk44_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

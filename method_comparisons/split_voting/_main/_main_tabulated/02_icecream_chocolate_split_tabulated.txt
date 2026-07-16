@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     02_icecream_chocolate_split.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  02_icecream_chocolate_split_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:08
 ======================================================================
 
 election_title: Spoiler — chocolate's majority splits, vanilla steals the win

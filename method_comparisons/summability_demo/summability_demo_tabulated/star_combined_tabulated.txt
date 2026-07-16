@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     star_combined.yaml
-SOURCE MODIFIED: 2026-07-02 13:00:37
 TABULATED FILE:  star_combined_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:09
 ======================================================================
 
 election_title: "Summability demo — STAR combined A+B (Oak; precinct subtotals add up)"

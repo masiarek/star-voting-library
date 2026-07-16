@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Runoff_04_reversal_at_scale_bfjqmg.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt
-TABULATED AT:    2026-07-15 07:31:54
 ======================================================================
 
 election:
@@ -52,6 +50,9 @@ election:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Runoff 04 — the reversal holds at scale (67/33) ===
+  https://bettervoting.com/bfjqmg/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

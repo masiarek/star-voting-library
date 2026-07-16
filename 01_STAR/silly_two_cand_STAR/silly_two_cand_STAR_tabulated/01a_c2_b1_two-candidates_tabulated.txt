@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     01a_c2_b1_two-candidates.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  01a_c2_b1_two-candidates_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:25
 ======================================================================
 
 election_title: The simplest possible STAR Voting example

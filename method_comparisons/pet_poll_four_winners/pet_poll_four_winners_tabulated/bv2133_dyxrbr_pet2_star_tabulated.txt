@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2133_dyxrbr_pet2_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2133_dyxrbr_pet2_star_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:48
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (STAR): the consensus Cat wins"
@@ -73,7 +71,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/pet_poll_four_winners/pet_poll_four_winners_tabulated/bv2133_dyxrbr_pet2_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

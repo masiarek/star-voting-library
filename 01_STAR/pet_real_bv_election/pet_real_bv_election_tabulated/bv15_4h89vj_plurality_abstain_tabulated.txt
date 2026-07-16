@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv15_4h89vj_plurality_abstain.yaml
-SOURCE MODIFIED: 2026-07-06 19:38:33
 TABULATED FILE:  bv15_4h89vj_plurality_abstain_tabulated.txt
-TABULATED AT:    2026-07-06 19:41:15
 ======================================================================
 
 # BetterVoting registry (machine-readable; the tabulation engine ignores these).

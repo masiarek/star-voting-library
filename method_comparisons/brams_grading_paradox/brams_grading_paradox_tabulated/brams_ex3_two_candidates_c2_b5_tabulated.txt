@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     brams_ex3_two_candidates_c2_b5.yaml
-SOURCE MODIFIED: 2026-07-15 19:04:32
 TABULATED FILE:  brams_ex3_two_candidates_c2_b5_tabulated.txt
-TABULATED AT:    2026-07-15 19:05:11
 ======================================================================
 
 election_title: "Brams Example 3 — two candidates: two loud fans vs three mild preferences"

@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     lot_tiebreak_bv_order.yaml
-SOURCE MODIFIED: 2026-07-03 18:30:56
 TABULATED FILE:  lot_tiebreak_bv_order_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:12
 ======================================================================
 
 election_title: 'Lot tiebreak — following BetterVoting''s drawn order'
@@ -80,7 +78,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: 1_positive_tabulated/lot_tiebreak_bv_order_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/YAML_library/1_positive/1_positive_tabulated/lot_tiebreak_bv_order_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

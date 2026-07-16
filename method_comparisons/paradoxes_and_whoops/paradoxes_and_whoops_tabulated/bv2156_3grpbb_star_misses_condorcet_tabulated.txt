@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2156_3grpbb_star_misses_condorcet.yaml
-SOURCE MODIFIED: 2026-07-07 20:27:55
 TABULATED FILE:  bv2156_3grpbb_star_misses_condorcet_tabulated.txt
-TABULATED AT:    2026-07-07 20:28:19
 ======================================================================
 
 bv_test_id: BV2156
@@ -73,7 +71,6 @@ Legend: For - Equal Support - Against
   RCV-RR (Condorcet) = Cleo   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_RCV-RR_tabulated.txt
-     file:///sessions/relaxed-focused-dijkstra/mnt/YAML/method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

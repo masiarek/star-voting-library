@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     reversal_jarring_c3_b100.yaml
-SOURCE MODIFIED: 2026-07-09 21:41:28
 TABULATED FILE:  reversal_jarring_c3_b100_tabulated.txt
-TABULATED AT:    2026-07-09 21:41:38
 ======================================================================
 
 election_title: "Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival"

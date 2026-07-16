@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     03_lunch_veggie_vs_meat.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  03_lunch_veggie_vs_meat_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:08
 ======================================================================
 
 election_title: Spoiler — the veggie majority splits, the burger wins the lunch vote

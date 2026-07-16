@@ -34,18 +34,8 @@ The count, step by step — the rounds and how the winner is reached:
 
 ```text
 [Divergence from STAR]
-  STAR                   = Blair
-  Choose-One (Plurality) = Alex   (differs from STAR)
-  RCV-IRV                = Alex   (differs from STAR)
-  Approval               = Alex   (differs from STAR)
-  Note: 1 of 4 ballots (25%) had equal non-zero scores, so their ranks were
-        decided by candidate priority order. The RCV-IRV result may be an
-        artifact of score-to-rank tie-breaking rather than a deep
-        difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: runoff_reversal_bv_cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_RCV-IRV_tabulated.txt
+  STAR     = Blair
+  Approval = Alex   (differs from STAR)
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Alex)

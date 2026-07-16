@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2137_ywckmg_irv.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  bv2137_ywckmg_irv_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:37
 ======================================================================
 
 election_title: "Center Squeeze — IRV (Hare): the center gets squeezed out"

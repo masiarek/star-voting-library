@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2144_mxfmhm_plurality.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2144_mxfmhm_plurality_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:38
 ======================================================================
 
 election_title: "Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins"

@@ -569,8 +569,12 @@ def write_tabulated_copy(src_path, output_text):
 def write_composed_tabulated(src_path, results_text):
     """Write the standard '_tabulated' mirror: a provenance header, the ORIGINAL
     election file copied as-is, then the (ANSI-stripped) tabulation results.
-    Shared by the STAR and Approval paths. Returns the path written."""
-    import datetime
+    Shared by the STAR and Approval paths. Returns the path written.
+
+    The header carries NO wall-clock or mtime stamps: mirrors are committed to
+    git, and regenerating them must yield byte-identical files whenever the
+    tabulation content is identical — timestamps would make every regeneration
+    a repo-wide diff of pure environment churn."""
     try:
         original = Path(src_path).read_text(encoding="utf-8")
     except OSError:
@@ -578,19 +582,10 @@ def write_composed_tabulated(src_path, results_text):
     divider = "=" * 70
     src_name = Path(src_path).name
     out_name = tabulated_output_path(src_path).name
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S %Z").strip()
-    try:
-        mtime = datetime.datetime.fromtimestamp(
-            Path(src_path).stat().st_mtime
-        ).strftime("%Y-%m-%d %H:%M:%S")
-    except OSError:
-        mtime = "unknown"
     composed = (
         f"{divider}\n"
         f"SOURCE FILE:     {src_name}\n"
-        f"SOURCE MODIFIED: {mtime}\n"
         f"TABULATED FILE:  {out_name}\n"
-        f"TABULATED AT:    {timestamp}\n"
         f"{divider}\n\n"
         f"{original.rstrip()}\n\n"
         f"{divider}\n"
@@ -615,17 +610,17 @@ def aux_tabulated_path(src_path, method_tag):
     return out_dir / f"{p.stem}_{method_tag}_tabulated.txt"
 
 
-def method_mirror_links(out_path, src_path):
-    """Two display lines for a generated mirror: a short repo-relative-ish path
-    (clickable in most IDE terminals) and an absolute file:// URL (paste to open).
-    The short path is relative to the source file's folder, i.e.
-    '<folder>_tabulated/<name>'."""
+def method_mirror_link(out_path, src_path):
+    """Display path for a generated mirror, relative to the source file's folder
+    ('<folder>_tabulated/<name>') — clickable in most IDE terminals. Deliberately
+    NOT an absolute file:// URL: this line lands inside the committed _tabulated
+    mirrors, and an absolute path would differ on every machine/checkout."""
     out_path = Path(out_path).resolve()
     try:
         short = out_path.relative_to(Path(src_path).resolve().parent)
     except ValueError:
         short = out_path
-    return str(short), out_path.as_uri()
+    return str(short)
 
 
 def build_irv_report(candidates, ballots, priority, title=None):
@@ -1795,9 +1790,8 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
                 out.write_text(strip_ansi(text), encoding="utf-8")
             except Exception:
                 return
-            short, uri = method_mirror_links(out, src_path)
+            short = method_mirror_link(out, src_path)
             link_lines.append(f"  {label}: {short}")
-            link_lines.append(f"     {uri}")
 
         if irv_diff:
             _emit("RCV-IRV", "RCV-IRV rounds",
@@ -1807,9 +1801,8 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
                 rr_out = aux_tabulated_path(src_path, "RCV-RR")
                 run_ranked_robin(ballots_text, file_path=src_path,
                                  lot_numbers=priority, silent=True, out_path=rr_out)
-                short, uri = method_mirror_links(rr_out, src_path)
+                short = method_mirror_link(rr_out, src_path)
                 link_lines.append(f"  RCV-RR round-robin: {short}")
-                link_lines.append(f"     {uri}")
             except Exception:
                 pass
 

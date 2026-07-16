@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     rrv_sample_c15_b13_three-parties.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  rrv_sample_c15_b13_three-parties_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:33
 ======================================================================
 
 election_title: "RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow)"
@@ -127,7 +125,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/03_STAR_PR/_main/_main_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Orange1)
