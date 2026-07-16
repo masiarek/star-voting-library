@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2165_9vxcj7_plurality.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2165_9vxcj7_plurality_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:43
 ======================================================================
 
 election_title: "Coombs Ex.19 full — Choose-One: Cass on first choices"

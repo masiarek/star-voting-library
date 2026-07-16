@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     03c_c6_b8_style-gallery.yaml
-SOURCE MODIFIED: 2026-07-01 22:45:10
 TABULATED FILE:  03c_c6_b8_style-gallery_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
 ======================================================================
 
 election_title: "Voting styles — eight ways to fill out one 5-star ballot"

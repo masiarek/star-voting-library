@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2183_dfw8rj_forced_exhaustion_ceiling.yaml
-SOURCE MODIFIED: 2026-07-12 07:02:34
 TABULATED FILE:  bv2183_dfw8rj_forced_exhaustion_ceiling_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:46
 ======================================================================
 
 election_title: BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap)

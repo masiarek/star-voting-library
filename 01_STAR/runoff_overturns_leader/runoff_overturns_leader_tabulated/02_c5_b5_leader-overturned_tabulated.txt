@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     02_c5_b5_leader-overturned.yaml
-SOURCE MODIFIED: 2026-06-26 18:42:52
 TABULATED FILE:  02_c5_b5_leader-overturned_tabulated.txt
-TABULATED AT:    2026-07-09 07:50:34
 ======================================================================
 
 election_title: Five candidates — the score leader is overturned in the runoff

@@ -81,6 +81,8 @@ Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winne
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada",RankedRobin,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_ranked_robin.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada",STAR,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml
+Non-monotonicity,Conditional,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",STAR,Z,,,method_comparisons/monotonicity/mono_raise_delete_after.yaml
+Non-monotonicity,Conditional,"STAR mono-raise-delete — part 1: baseline, X wins",STAR,X,,,method_comparisons/monotonicity/mono_raise_delete_before.yaml
 Non-monotonicity,Conditional,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,RCV_IRV,Z,,,method_comparisons/monotonicity/monotonicity_irv_after.yaml
 Non-monotonicity,Conditional,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",RCV_IRV,X,,,method_comparisons/monotonicity/monotonicity_irv_before.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (AFTER — X still wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_after.yaml

@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     monotonicity_irv_after.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  monotonicity_irv_after_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:44
 ======================================================================
 
 election_title: "Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose"

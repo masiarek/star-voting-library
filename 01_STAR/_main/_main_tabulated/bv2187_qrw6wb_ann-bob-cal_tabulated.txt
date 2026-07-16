@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2187_qrw6wb_ann-bob-cal.yaml
-SOURCE MODIFIED: 2026-07-15 18:01:03
 TABULATED FILE:  bv2187_qrw6wb_ann-bob-cal_tabulated.txt
-TABULATED AT:    2026-07-15 18:01:21
 ======================================================================
 
 election_title: Ann, Bob, Cal - the canonical leading example (single-winner STAR)

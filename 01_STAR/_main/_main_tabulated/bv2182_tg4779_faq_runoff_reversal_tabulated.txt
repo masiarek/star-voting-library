@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2182_tg4779_faq_runoff_reversal.yaml
-SOURCE MODIFIED: 2026-07-11 20:37:06
 TABULATED FILE:  bv2182_tg4779_faq_runoff_reversal_tabulated.txt
-TABULATED AT:    2026-07-11 20:37:16
 ======================================================================
 
 election_title: BV2182 — why the automatic runoff (and Equal Support)

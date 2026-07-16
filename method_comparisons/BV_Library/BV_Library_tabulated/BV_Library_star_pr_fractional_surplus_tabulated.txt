@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     BV_Library_star_pr_fractional_surplus.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  BV_Library_star_pr_fractional_surplus_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:35
 ======================================================================
 
 election_title: "BV parity — STAR_PR (Allocated Score): fractional surplus reweighting"

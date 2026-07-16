@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Runoff_06_confirms_at_scale_d664xw.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  Runoff_06_confirms_at_scale_d664xw_tabulated.txt
-TABULATED AT:    2026-07-15 07:31:55
 ======================================================================
 
 election:
@@ -48,6 +46,9 @@ election:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Runoff 06 — the runoff confirms the leader at scale (control) ===
+  https://bettervoting.com/d664xw/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

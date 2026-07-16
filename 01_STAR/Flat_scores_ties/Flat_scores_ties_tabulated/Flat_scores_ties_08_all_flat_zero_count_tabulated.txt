@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Flat_scores_ties_08_all_flat_zero_count.yaml
-SOURCE MODIFIED: 2026-06-28 22:06:01
 TABULATED FILE:  Flat_scores_ties_08_all_flat_zero_count_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
 ======================================================================
 
 election:

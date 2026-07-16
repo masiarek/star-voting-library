@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2180_fp62p2_ice_cream_ladder.yaml
-SOURCE MODIFIED: 2026-07-11 09:20:10
 TABULATED FILE:  bv2180_fp62p2_ice_cream_ladder_tabulated.txt
-TABULATED AT:    2026-07-11 09:20:18
 ======================================================================
 
 bv_test_id: BV2180

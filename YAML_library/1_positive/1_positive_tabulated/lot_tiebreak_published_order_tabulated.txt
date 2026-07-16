@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     lot_tiebreak_published_order.yaml
-SOURCE MODIFIED: 2026-07-03 18:31:05
 TABULATED FILE:  lot_tiebreak_published_order_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:12
 ======================================================================
 
 election_title: 'Lot tiebreak — following the new published-lot approach'

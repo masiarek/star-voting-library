@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     01_political_left_split.yaml
-SOURCE MODIFIED: 2026-06-24 07:58:37
 TABULATED FILE:  01_political_left_split_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:09
 ======================================================================
 
 election_title: Spoiler — a split coalition hands the seat to the minority

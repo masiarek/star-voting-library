@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     display_options_demo.yaml
-SOURCE MODIFIED: 2026-06-29 14:05:32
 TABULATED FILE:  display_options_demo_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:58
 ======================================================================
 
 # Single-race demo that controls its own output via `options:`.
@@ -88,7 +86,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: _main_tabulated/display_options_demo_RCV-IRV_tabulated.txt
-     file:///sessions/eloquent-serene-noether/mnt/YAML/01_STAR/_main/_main_tabulated/display_options_demo_RCV-IRV_tabulated.txt
 
 [Vote-splitting check]
   Choose-One first choices: Bob 2, Don 2, Ann 0, Cal 0

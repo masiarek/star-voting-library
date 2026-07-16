@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv1525_condorcet_loser_bloc.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  bv1525_condorcet_loser_bloc_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:29
 ======================================================================
 
 election_title: "BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1)"

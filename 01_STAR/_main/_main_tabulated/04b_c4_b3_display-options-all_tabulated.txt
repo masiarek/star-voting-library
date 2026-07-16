@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     04b_c4_b3_display-options-all.yaml
-SOURCE MODIFIED: 2026-06-21 07:07:40
 TABULATED FILE:  04b_c4_b3_display-options-all_tabulated.txt
-TABULATED AT:    2026-07-04 16:45:59
 ======================================================================
 
 # Single-race demo exercising EVERY supported field and `options:` flag.
@@ -44,7 +42,7 @@ options:
   brief: true              # true = collapse repetitive "[STAR Voting: ...]" headers
                            # into plain sub-headings; false = keep full headers
   collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
-                           # (most common first); false = echo every ballot
+                           # (most common first); false = show every ballot
   count_separator: "×"     # separator for the collapsed count: "×", ":", or "x"/"X"
                            # (all round-trip back to valid input)
 

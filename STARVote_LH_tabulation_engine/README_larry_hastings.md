@@ -100,18 +100,16 @@ elections_illustrations/bar.yaml
 
 Each `_tabulated.txt` contains:
 
-1. A header recording the source name, the tabulated name, the source's last-modified time, and when the tabulation ran:
+1. A header recording the source name and the tabulated name:
 
    ```
    ======================================================================
    SOURCE FILE:     bar.yaml
-   SOURCE MODIFIED: 2026-06-16 21:36:51
    TABULATED FILE:  bar_tabulated.txt
-   TABULATED AT:    2026-06-17 02:13:16
    ======================================================================
    ```
 
-If `SOURCE MODIFIED` is newer than `TABULATED AT`, the file is stale — re-run to refresh it.
+   (No timestamps, deliberately: the mirrors are committed to git, so regenerating them on any machine yields a byte-identical file whenever the tabulation content is unchanged. Git history is the record of when a mirror last changed.)
 2. The original election file, copied verbatim.
 3. A `TABULATION RESULTS` section.
 

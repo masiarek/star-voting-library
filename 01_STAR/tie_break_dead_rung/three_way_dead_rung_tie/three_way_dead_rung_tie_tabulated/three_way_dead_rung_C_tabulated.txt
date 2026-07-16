@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     three_way_dead_rung_C.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  three_way_dead_rung_C_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:27
 ======================================================================
 
 election_title: 'Three-way dead-rung tie — published order C,A,B elects C'
@@ -76,7 +74,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: three_way_dead_rung_tie_tabulated/three_way_dead_rung_C_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_C_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

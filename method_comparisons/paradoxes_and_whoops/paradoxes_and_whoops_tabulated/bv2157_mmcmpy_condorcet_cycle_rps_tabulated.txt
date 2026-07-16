@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2157_mmcmpy_condorcet_cycle_rps.yaml
-SOURCE MODIFIED: 2026-07-07 20:27:55
 TABULATED FILE:  bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt
-TABULATED AT:    2026-07-07 20:28:19
 ======================================================================
 
 bv_test_id: BV2157

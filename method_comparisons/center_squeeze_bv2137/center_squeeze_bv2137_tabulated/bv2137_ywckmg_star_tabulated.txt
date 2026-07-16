@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2137_ywckmg_star.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:13
 TABULATED FILE:  bv2137_ywckmg_star_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:37
 ======================================================================
 
 election_title: "Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV"
@@ -65,7 +63,6 @@ Legend: For - Equal Support - Against
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

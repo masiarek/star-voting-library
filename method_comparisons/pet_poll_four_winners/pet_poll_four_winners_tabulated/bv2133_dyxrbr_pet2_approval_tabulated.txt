@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2133_dyxrbr_pet2_approval.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  bv2133_dyxrbr_pet2_approval_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:47
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (Approval): broad support elects Bird"

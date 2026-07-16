@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     05a_residual_split_bullet-voting.yaml
-SOURCE MODIFIED: 2026-06-29 14:09:58
 TABULATED FILE:  05a_residual_split_bullet-voting_tabulated.txt
-TABULATED AT:    2026-07-04 16:46:08
 ======================================================================
 
 election_title: STAR's residual split — a coalition bullet-votes itself apart

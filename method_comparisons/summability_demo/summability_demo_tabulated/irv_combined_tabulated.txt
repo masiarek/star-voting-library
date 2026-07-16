@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     irv_combined.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  irv_combined_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:50
 ======================================================================
 
 election_title: "Summability demo — RCV-IRV combined A+B (B eliminated; not summable)"

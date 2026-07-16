@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     02a_c5_b63_proportional-allocated-score.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:12
 TABULATED FILE:  02a_c5_b63_proportional-allocated-score_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:29
 ======================================================================
 
 # Proportional multi-winner example: Allocated Score Voting (Proportional STAR).

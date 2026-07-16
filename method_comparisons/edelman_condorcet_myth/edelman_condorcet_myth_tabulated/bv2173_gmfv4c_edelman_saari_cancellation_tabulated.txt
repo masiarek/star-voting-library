@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv2173_gmfv4c_edelman_saari_cancellation.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:14
 TABULATED FILE:  bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:37
 ======================================================================
 
 election_title: "Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada"

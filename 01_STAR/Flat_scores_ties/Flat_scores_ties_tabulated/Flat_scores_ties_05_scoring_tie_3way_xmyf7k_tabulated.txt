@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml
-SOURCE MODIFIED: 2026-07-11 08:27:07
 TABULATED FILE:  Flat_scores_ties_05_scoring_tie_3way_xmyf7k_tabulated.txt
-TABULATED AT:    2026-07-11 08:27:56
 ======================================================================
 
 election:
@@ -51,6 +49,9 @@ election:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Flat scores 05 — scoring-round 3-way tie (BV555, xmyf7k) ===
+  https://bettervoting.com/xmyf7k/results
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
@@ -106,8 +107,7 @@ E          0  2  0  0  0  0  |     8   4.0
    C             -- 2 -- Tied for first place
  There's still a three-way tie for first.
 
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
     Lot-number priority order: ['A', 'B', 'C', 'D', 'E']
 
 [Tiebreaker: Lot Number Priority]

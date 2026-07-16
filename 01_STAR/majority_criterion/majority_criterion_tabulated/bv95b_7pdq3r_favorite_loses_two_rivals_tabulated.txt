@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     bv95b_7pdq3r_favorite_loses_two_rivals.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:11
 TABULATED FILE:  bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:25
 ======================================================================
 
 election_title: "BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals"
@@ -105,9 +103,7 @@ Legend: For - Equal Support - Against
         here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-IRV_tabulated.txt
   RCV-RR round-robin: majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-RR_tabulated.txt
-     file:///sessions/sharp-eloquent-mccarthy/mnt/YAML/01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

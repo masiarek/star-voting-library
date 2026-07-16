@@ -1,8 +1,6 @@
 ======================================================================
 SOURCE FILE:     pets_gov_star_pr.yaml
-SOURCE MODIFIED: 2026-07-11 19:05:15
 TABULATED FILE:  pets_gov_star_pr_tabulated.txt
-TABULATED AT:    2026-07-15 08:12:48
 ======================================================================
 
 election_title: "Pets Governance — Council by STAR-PR (3 seats): minority earns a seat"
