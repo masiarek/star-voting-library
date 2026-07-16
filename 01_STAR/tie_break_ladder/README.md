@@ -11,5 +11,6 @@ Here, five-star and score do their job, so LH and BetterVoting **agree determini
 | Case | Cast | Method | Winner | Ties resolved by |
 |---|---|---|---|---|
 | [Ice cream ladder **(BV2180, `fp62p2`)**](bv2180_fp62p2_ice_cream_ladder.md) | ice cream | STAR | Strawberry | five-star (scoring), then score (runoff) — lot never reached |
+| [No Condorcet winner — top-two tie **(BV830, `vb3xv2`)**](bv830_vb3xv2_no_condorcet_tie_score.md) | A/B/C (abstract) | STAR | B | score (runoff) — a head-to-head tie the Condorcet standard can't break |
 
-**Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)**.
+**Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (BV2180) · [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (BV830).

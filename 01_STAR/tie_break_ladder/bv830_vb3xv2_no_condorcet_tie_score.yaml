@@ -1,0 +1,46 @@
+bv_test_id: BV830
+bv_election_id: vb3xv2
+bv_results_url: https://bettervoting.com/vb3xv2/results
+
+election:
+  election_title: No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2)
+  election_description: |-
+    A STAR edge case where the head-to-head standard runs out of data and the
+    score rung finishes the job. Three voters score three candidates A, B, C:
+    (0,0,1), (0,2,2), (0,5,0). Scoring round: B totals 7 and C totals 3, so B and
+    C advance (A gets 0). Automatic runoff: the two finalists tie 1-1-1 head-to-head
+    — voter 1 prefers C, voter 3 prefers B, voter 2 scores them equally — so neither
+    beats the other and there is NO strict Condorcet winner. This is a top-two
+    pairwise tie, not a rock-paper-scissors cycle (the fork says so: "unbeaten
+    candidates: B, C (pairwise ties)"). STAR breaks the deadlock at the FIRST runoff
+    rung, the score total: B (7) outscores C (3), so B wins. Lot never reached —
+    LH and BetterVoting agree deterministically. The lesson: within a Condorcet tie
+    the ordinal (head-to-head) method is silent, and STAR's score intensity is the
+    stronger tiebreak. Live results: https://bettervoting.com/vb3xv2/results
+    Lesson: bv830_vb3xv2_no_condorcet_tie_score.md
+  options:
+    show_description: false
+    show_matrix: true
+    matrix_finalists_only: false
+    show_condorcet: true
+    show_score_counts: false
+    show_irv: false
+    show_runoff_percent: true
+    brief: true
+    collapse_ballots: false
+    count_separator: "×"
+  races:
+  - race_id: '0'
+    race_description: "https://bettervoting.com/vb3xv2/results"
+    num_winners: 1
+    voting_method: STAR
+    ballots: |-
+      A, B, C
+      0, 0, 1
+      0, 2, 2
+      0, 5, 0
+    expected_results:
+      winners:
+      - B
+
+# file: bv830_vb3xv2_no_condorcet_tie_score.yaml

@@ -1,0 +1,336 @@
+{
+  "Election": {
+    "election_id": "vb3xv2",
+    "title": "BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score",
+    "description": "A STAR Voting edge case: no strict Condorcet winner, resolved by score. Three voters score three candidates A, B, C — (A0, B0, C1), (A0, B2, C2), (A0, B5, C0). Scoring Round: B totals 7 and C totals 3, so B and C advance (A gets 0). Automatic Runoff: the two finalists tie 1-1-1 head-to-head — one voter prefers B, one prefers C, and one scores them equally — so no candidate beats every rival and there is no strict Condorcet winner. This is a top-two pairwise tie, not a rock-paper-scissors cycle. STAR breaks the deadlock with the score total: B (7) outscores C (3), so B wins. The teaching point: exactly where the head-to-head (Condorcet) standard runs out of data, STAR's score intensity still identifies the broader-supported winner.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "No Condorcet winner (top-two tie) — STAR breaks it by score",
+        "race_id": "0fde99aa-259f-4a51-a564-53e91ecb0ef8",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+            "candidate_name": "A"
+          },
+          {
+            "candidate_id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+            "candidate_name": "B"
+          },
+          {
+            "candidate_id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+            "candidate_name": "C"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-16T23:01:35.368Z",
+    "update_date": "1784242895368",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-tbb6g4dd",
+      "election_id": "vb3xv2",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0fde99aa-259f-4a51-a564-53e91ecb0ef8",
+          "scores": [
+            {
+              "candidate_id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+              "score": 0
+            },
+            {
+              "candidate_id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+              "score": 0
+            },
+            {
+              "candidate_id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-jmp8gdr7",
+      "election_id": "vb3xv2",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0fde99aa-259f-4a51-a564-53e91ecb0ef8",
+          "scores": [
+            {
+              "candidate_id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+              "score": 0
+            },
+            {
+              "candidate_id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+              "score": 2
+            },
+            {
+              "candidate_id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-9cdk8ymm",
+      "election_id": "vb3xv2",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0fde99aa-259f-4a51-a564-53e91ecb0ef8",
+          "scores": [
+            {
+              "candidate_id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+              "score": 0
+            },
+            {
+              "candidate_id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+              "score": 5
+            },
+            {
+              "candidate_id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+          "name": "B",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 1,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 0
+          },
+          "winsAgainst": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+          },
+          "score": 7,
+          "fiveStarCount": 1
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+          "name": "C",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 0,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 1
+          },
+          "winsAgainst": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+          },
+          "score": 3,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+          "name": "A",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": 0,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 0,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 0
+          },
+          "winsAgainst": {
+            "bc408770-3552-4580-b6f9-ea3ca627f8e1": false,
+            "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+            "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+              "name": "B",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+                "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 1,
+                "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 0
+              },
+              "winsAgainst": {
+                "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+                "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+                "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+              },
+              "score": 7,
+              "fiveStarCount": 1
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+              "name": "C",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+                "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 0,
+                "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 1
+              },
+              "winsAgainst": {
+                "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+                "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+                "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+              },
+              "score": 3,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "score",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "B",
+                "C"
+              ],
+              "stars": [
+                "7",
+                "3"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "B",
+                "C"
+              ],
+              "votes": 1,
+              "equal_votes": 1
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tiebreak",
+              "winner": "B",
+              "runner_up": "C",
+              "winner_stars": 7,
+              "runner_up_stars": 3
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "B",
+              "runner_up": "C"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c71dfc7e-e7e8-4562-9794-fa7aa382c66c",
+            "name": "B",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 1,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 0
+            },
+            "winsAgainst": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+            },
+            "score": 7,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+            "name": "C",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": 2,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 0,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 1
+            },
+            "winsAgainst": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": true,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+            },
+            "score": 3,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+            "name": "A",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": 0,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": 0,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": 0
+            },
+            "winsAgainst": {
+              "bc408770-3552-4580-b6f9-ea3ca627f8e1": false,
+              "42d1d2c3-50f8-418d-ae4e-61a02b995cb7": false,
+              "c71dfc7e-e7e8-4562-9794-fa7aa382c66c": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "score",
+      "perm": [
+        "bc408770-3552-4580-b6f9-ea3ca627f8e1",
+        "42d1d2c3-50f8-418d-ae4e-61a02b995cb7",
+        "c71dfc7e-e7e8-4562-9794-fa7aa382c66c"
+      ]
+    }
+  ]
+}
