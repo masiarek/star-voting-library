@@ -36,7 +36,7 @@ The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four 
 - **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
 - **Score everyone else** wherever they honestly land, 0 to 5.
 
-→ [the STAR ballot & the ways to fill it out](STAR_ballot_voting_styles.md).
+→ See the ballot itself, with a few filled-out examples: [The STAR Voting Ballot](STAR_ballot.md). *(For every legal way to fill it out — backups, equal scores, "anyone but…" — the fuller [voting-styles gallery](STAR_ballot_voting_styles.md).)*
 
 ## Watch STAR fix the lunch
 
