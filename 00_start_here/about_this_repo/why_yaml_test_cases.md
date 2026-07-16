@@ -33,6 +33,8 @@ Same file. Two readers. Never out of sync — because there's nothing to keep in
 
 Richer files keep more *human* context in the same file — an `election_title`, a `scenario_description`, inline per-voter notes on the ballot rows, and `options:` to shape the report — all stored in the one artifact and never shown on screen unless you ask. → [YAML authoring template](YAML_authoring_template.md)
 
+The same tiny format holds every method in the repo: swap `voting_method:` to `Approval`, `RankedRobin`, or a multi-winner count and only that line and the ballot rows change. What the methods *do differently* — and when to reach for each — is [Voting 201](../curriculum/CURRICULUM_201.md), not this page's job.
+
 ## Everything else is *generated* from it
 
 The YAML is the **one source of truth**; every other surface is derived from it and never hand-maintained in parallel:
