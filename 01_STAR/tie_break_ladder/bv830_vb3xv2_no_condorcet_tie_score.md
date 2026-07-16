@@ -47,17 +47,17 @@ BetterVoting runs the same STAR protocol and, because no random rung is reached,
 
 **The tally, honestly.** The Race Details tables carry the whole result: B and C tie the runoff 1-1 (each "50% Between Finalists"), and B wins on the score total, 7 to 3.
 
-![BetterVoting Race Details for vb3xv2: Scores Table (B 7, C 3, A 0) and Runoff Table (B 1, C 1, Equal Support 1; B and C each 50% between finalists)](img/vb3xv2_race_details.png)
+<img alt="BetterVoting Race Details for vb3xv2: Scores Table (B 7, C 3, A 0) and Runoff Table (B 1, C 1, Equal Support 1; B and C each 50% between finalists)" src="img/vb3xv2_race_details.png" width="640">
 
 **The runoff is a dead heat.** The count view and the pie both show the 1-1-1 split — one voter for B, one for C, one Equal Support — so neither finalist has a majority; the tie is what the score rung then breaks.
 
-![BetterVoting Automatic Runoff (count view) for vb3xv2: B 1, C 1, Equal Support 1](img/vb3xv2_runoff_counts.png)
+<img alt="BetterVoting Automatic Runoff (count view) for vb3xv2: B 1, C 1, Equal Support 1" src="img/vb3xv2_runoff_counts.png" width="420">
 
-![BetterVoting Automatic Runoff (pie view) for vb3xv2: an even B/C split, 33.3% of voters expressed no preference between the finalists](img/vb3xv2_runoff_pie.png)
+<img alt="BetterVoting Automatic Runoff (pie view) for vb3xv2: an even B/C split, 33.3% of voters expressed no preference between the finalists" src="img/vb3xv2_runoff_pie.png" width="380">
 
 **One caveat on BetterVoting's summary bar view.** In the headline summary the runoff is drawn as a percentage of *all three* ballots (33% each) while the dashed "majority threshold" is ½ of the *two decided* voters — the mismatched denominators put B's bar right on the threshold line, which can read as "B reached a majority." It didn't: this is a 1-1 tie, and B wins only on the score tiebreak. The count/pie/table views above are the unambiguous ones.
 
-![BetterVoting summary bars for vb3xv2: Scoring Round B 7, C 3, A 0; Automatic Runoff B 33%, C 33%, Equal Support 33% with a majority-threshold line the tied bars sit on](img/vb3xv2_result_bars.png)
+<img alt="BetterVoting summary bars for vb3xv2: Scoring Round B 7, C 3, A 0; Automatic Runoff B 33%, C 33%, Equal Support 33% with a majority-threshold line the tied bars sit on" src="img/vb3xv2_result_bars.png" width="560">
 
 ## View 2 — the LH engine (reference)
 
