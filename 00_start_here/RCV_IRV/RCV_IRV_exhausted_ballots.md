@@ -2,7 +2,7 @@
 
 *When a validly-cast ranked ballot stops counting before the final round — and why the "majority" IRV reports is a majority of the **ballots still active**, not of everyone who voted.*
 
-> **Applies to:** any RCV-IRV that eliminates and transfers ([Hare](RCV-IRV-Hare.md) and the rest) — and it gets **worse the fewer candidates you may rank**, so the [Supplementary Vote](RCV-IRV-contingent-supplementary.md) (only two choices) exhausts the most. Pairwise Condorcet methods like [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) read the whole ballot and don't exhaust. See [Which RCV-IRV?](RCV_IRV_variants.md).
+> **Applies to:** any RCV-IRV that eliminates and transfers ([Hare](RCV-IRV-Hare.md) and the rest) — and it gets **worse the fewer candidates you may rank**, so the [Supplementary Vote](variants/RCV-IRV-contingent-supplementary.md) (only two choices) exhausts the most. Pairwise Condorcet methods like [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) read the whole ballot and don't exhaust. See [Which RCV-IRV?](variants/RCV_IRV_variants.md).
 
 ---
 

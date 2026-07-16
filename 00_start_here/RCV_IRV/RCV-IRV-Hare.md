@@ -2,7 +2,7 @@
 
 *The single-winner instant-runoff method on the Hare elimination rule: drop the candidate with the **fewest first choices**, transfer, repeat. When an American ballot or statute says "Ranked Choice Voting," **this** is almost always it.*
 
-→ Family overview: [Which RCV-IRV?](RCV_IRV_variants.md) · why the name confuses: [RCV vs. IRV vs. RCV-IRV](RCV-IRV-confusing-name.md) · where it came from: [origins & spread](RCV_IRV_history.md)
+→ Family overview: [Which RCV-IRV?](variants/RCV_IRV_variants.md) · why the name confuses: [RCV vs. IRV vs. RCV-IRV](RCV-IRV-confusing-name.md) · where it came from: [origins & spread](case_studies/RCV_IRV_history.md)
 
 ---
 
@@ -10,7 +10,7 @@
 
 Count everyone's first choices. If someone has **more than half**, they win. Otherwise **eliminate the candidate with the fewest first choices**, hand each of those ballots to its next still-standing choice, and repeat until a candidate holds a majority of the **active** (non-exhausted) ballots — or only two remain.
 
-The rule is named for **Thomas Hare** (1857). "Hare" doesn't describe the ballot; it describes *which candidate is eliminated each round* — the fewest-first-choices one. That single design choice is what separates Hare from every other method on this [variants page](RCV_IRV_variants.md).
+The rule is named for **Thomas Hare** (1857). "Hare" doesn't describe the ballot; it describes *which candidate is eliminated each round* — the fewest-first-choices one. That single design choice is what separates Hare from every other method on this [variants page](variants/RCV_IRV_variants.md).
 
 ## How the count works, step by step
 
@@ -38,7 +38,7 @@ First choices: **Left 12, Right 9, Center 6** (27 total; majority = 14).
 - Center's 6 ballots have **Left** next → Left 12 + 6 = **18**, Right 9.
 - Left has 18 of 27 → **Left wins.**
 
-But look who got cut: **Center is the Condorcet winner** — Center beats Left 15–12 *and* beats Right 18–9 head-to-head. Hare eliminated the one candidate a majority preferred over each rival, because Center was too few voters' *first* pick. That's [center squeeze](RCV_IRV_center_squeeze.md), and it is specific to this Hare rule — [BTR](RCV-IRV-BTR.md), [Coombs](RCV-IRV-Coombs.md), and [Baldwin/Nanson](RCV-IRV-Baldwin-Nanson.md) all elect Center on these very ballots.
+But look who got cut: **Center is the Condorcet winner** — Center beats Left 15–12 *and* beats Right 18–9 head-to-head. Hare eliminated the one candidate a majority preferred over each rival, because Center was too few voters' *first* pick. That's [center squeeze](RCV_IRV_center_squeeze.md), and it is specific to this Hare rule — [BTR](variants/RCV-IRV-BTR.md), [Coombs](variants/RCV-IRV-Coombs.md), and [Baldwin/Nanson](variants/RCV-IRV-Baldwin-Nanson.md) all elect Center on these very ballots.
 
 *(Verified on the engine: `06_Other/RCV_IRV/RCV_IRV_tabulation_engine` elects Left; STAR and Ranked Robin elect Center.)*
 
@@ -60,13 +60,13 @@ But look who got cut: **Center is the Condorcet winner** — Center beats Left 1
 
 ## Where it's used
 
-US single-winner "RCV" (Maine statewide, Alaska, NYC primaries, SF, ~50 cities); internationally it's Australia's **Alternative Vote** for the House of Representatives and was the UK's 2011 AV referendum proposal. The multi-winner relative is **[STV](RCV_IRV_variants.md)**.
+US single-winner "RCV" (Maine statewide, Alaska, NYC primaries, SF, ~50 cities); internationally it's Australia's **Alternative Vote** for the House of Representatives and was the UK's 2011 AV referendum proposal. The multi-winner relative is **[STV](variants/RCV_IRV_variants.md)**.
 
 ## Related concept pages
 
-- [Which RCV-IRV? — Hare and the other variants](RCV_IRV_variants.md)
+- [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md)
 - [RCV vs. IRV vs. RCV-IRV — the naming problem](RCV-IRV-confusing-name.md)
-- [Origins & spread — where IRV came from](RCV_IRV_history.md)
+- [Origins & spread — where IRV came from](case_studies/RCV_IRV_history.md)
 - [Center squeeze](RCV_IRV_center_squeeze.md) · [Non-monotonicity](RCV_IRV_non_monotonicity.md) · [Exhausted ballots](RCV_IRV_exhausted_ballots.md) · [Lack of summability](RCV_IRV_lack_of_summability.md)
 
 Sources: [Instant-runoff voting — Wikipedia](https://en.wikipedia.org/wiki/Instant-runoff_voting), [Where RCV is used — FairVote](https://fairvote.org/our-reforms/ranked-choice-voting-information/), [NYC Board of Elections — RCV](https://www.vote.nyc/page/ranked-choice-voting)

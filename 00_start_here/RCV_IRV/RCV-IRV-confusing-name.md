@@ -18,7 +18,7 @@ The confusion is largely a **naming problem**. The same method goes by different
 
 > **"Preferential Voting" is itself a misnomer.** *Every* voting method lets voters express preferences — approval, score, and STAR included — so the name claims a broad, general word for one specific method. Worse, in the everyday sense a "preference" includes *strength of feeling*, which a **score** captures but a strict **rank** discards — so the label attaches the wider concept to the narrower mechanism. See ["Preference" — the Word That Causes Half the Confusion](../topics/preference.md).
 
-In the US specifically, the advocacy group FairVote popularized "Ranked Choice Voting" as an accessible brand for IRV starting in the early 2000s, and the label stuck — in journalism, legislation, and everyday speech, "RCV" now almost always means IRV. That's a misnomer, since IRV is just one of many ranked methods. (For how the method itself arose — whole-ballot counting came first, IRV was the hand-countable workaround ~150 years ago — see [origins & spread](RCV_IRV_history.md).)
+In the US specifically, the advocacy group FairVote popularized "Ranked Choice Voting" as an accessible brand for IRV starting in the early 2000s, and the label stuck — in journalism, legislation, and everyday speech, "RCV" now almost always means IRV. That's a misnomer, since IRV is just one of many ranked methods. (For how the method itself arose — whole-ballot counting came first, IRV was the hand-countable workaround ~150 years ago — see [origins & spread](case_studies/RCV_IRV_history.md).)
 
 When people say "RCV," they usually mean **IRV-Hare**: count everyone's first choices, eliminate the candidate with the fewest, redistribute those ballots to their next choice, and repeat until someone has a majority. (Other elimination rules exist — Coombs' method drops the candidate with the *most* last-place votes — which is why the fully precise label is **RCV-IRV (Hare)**.)
 
@@ -41,7 +41,7 @@ The word **"Hare"** (after Thomas Hare) is not decoration — it names *which* c
 
 All four read an identical ranked ballot and can crown different winners. So **RCV-IRV** fixes the *family* (ranked ballots counted by sequential runoff), but only **RCV-IRV (Hare)** fixes the *exact* elimination rule — which is why statutes, election specs, and academic papers reach for the longer name. (Borda and Bucklin are ranked but **not** Condorcet, and none of these is the pairwise **RCV-RR**.)
 
-> **There's more than one "IRV," too.** Beyond Hare, the instant-runoff *shape* also covers batch elimination, the contingent / supplementary vote, Condorcet-safe variants (BTR, Baldwin, Nanson), plus implementation knobs (how many candidates you may rank, how "majority" is counted) that change the winner on the same ballots. For the full catalog and when the precision matters, see [Which RCV-IRV? — Hare and the other variants](RCV_IRV_variants.md).
+> **There's more than one "IRV," too.** Beyond Hare, the instant-runoff *shape* also covers batch elimination, the contingent / supplementary vote, Condorcet-safe variants (BTR, Baldwin, Nanson), plus implementation knobs (how many candidates you may rank, how "majority" is counted) that change the winner on the same ballots. For the full catalog and when the precision matters, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md).
 
 ## Multi-winner: the same Hare family, renamed STV
 
@@ -65,7 +65,7 @@ When in doubt in conversation, the safest opener is: *"Which form of ranked voti
 
 ## Related concept pages
 
-- [Which RCV-IRV? — Hare and the other variants](RCV_IRV_variants.md) — batch / contingent / BTR / Coombs / Baldwin / Nanson, STV, and the ballot-rule knobs
+- [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) — batch / contingent / BTR / Coombs / Baldwin / Nanson, STV, and the ballot-rule knobs
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — RCV-IRV forbids equal ranks and isn't pairwise; other ranked methods differ
 - [Scores vs. ranks — don't confuse ranks and ratings](../scores_and_ranks/scores_vs_ranks.md)
 - [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md)

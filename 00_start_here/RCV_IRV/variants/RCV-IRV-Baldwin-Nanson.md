@@ -2,7 +2,7 @@
 
 *Two instant-runoff variants that eliminate by **Borda score** instead of first choices. Both are **Condorcet-consistent** — they always elect the head-to-head winner — and both come from the same E. J. Nanson who described center squeeze in 1882.*
 
-→ Family: [Which RCV-IRV?](RCV_IRV_variants.md) · the default they fix: [RCV-IRV (Hare)](RCV-IRV-Hare.md)
+→ Family: [Which RCV-IRV?](RCV_IRV_variants.md) · the default they fix: [RCV-IRV (Hare)](../RCV-IRV-Hare.md)
 
 ---
 
@@ -42,7 +42,7 @@ Borda (3 candidates → 1st = 2, 2nd = 1, 3rd = 0):
 
 **Nanson:** average = (30+33+18)/3 = **27**. At or below 27 → **Right (18)** only; eliminate it. Recompute on {Left, Center}: scores 12 vs 15, average 13.5, Left ≤ 13.5 → eliminate Left → **Center wins.**
 
-Same ballots as [Hare](RCV-IRV-Hare.md) (Left); both Borda-elimination methods elect **Center**, the Condorcet winner — no center squeeze.
+Same ballots as [Hare](../RCV-IRV-Hare.md) (Left); both Borda-elimination methods elect **Center**, the Condorcet winner — no center squeeze.
 
 ## Strengths & weaknesses
 
@@ -55,11 +55,11 @@ Same ballots as [Hare](RCV-IRV-Hare.md) (Left); both Borda-elimination methods e
 
 Mostly **academic and organizational** elections (some societies use Nanson). Their real value here is conceptual: they show that bolting a Condorcet-friendly score onto instant-runoff elimination removes the squeeze — the same insight behind [BTR](RCV-IRV-BTR.md).
 
-> **History rhymes.** **Nanson** laid this out in *Methods of Election* (1882), the same paper quoted on the [center squeeze page](RCV_IRV_center_squeeze.md) warning that Hare ("Ware's method") "may return the next worst." He didn't just diagnose the flaw — he designed a cure.
+> **History rhymes.** **Nanson** laid this out in *Methods of Election* (1882), the same paper quoted on the [center squeeze page](../RCV_IRV_center_squeeze.md) warning that Hare ("Ware's method") "may return the next worst." He didn't just diagnose the flaw — he designed a cure.
 
 ## Related
 
-- [RCV-IRV (Hare)](RCV-IRV-Hare.md) · [BTR](RCV-IRV-BTR.md) · [Coombs](RCV-IRV-Coombs.md) · [Contingent & Supplementary](RCV-IRV-contingent-supplementary.md)
-- [Center squeeze](RCV_IRV_center_squeeze.md) · [Which RCV-IRV?](RCV_IRV_variants.md)
+- [RCV-IRV (Hare)](../RCV-IRV-Hare.md) · [BTR](RCV-IRV-BTR.md) · [Coombs](RCV-IRV-Coombs.md) · [Contingent & Supplementary](RCV-IRV-contingent-supplementary.md)
+- [Center squeeze](../RCV_IRV_center_squeeze.md) · [Which RCV-IRV?](RCV_IRV_variants.md)
 
 Sources: [Nanson's method — Wikipedia](https://en.wikipedia.org/wiki/Nanson%27s_method), [Borda count — Wikipedia](https://en.wikipedia.org/wiki/Borda_count), [Descriptions of ranked-ballot voting methods (R. LeGrand)](https://www.cs.angelo.edu/~rlegrand/rbvote/desc.html)

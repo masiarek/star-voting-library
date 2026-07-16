@@ -2,7 +2,7 @@
 
 **One line:** ranking 1-2-3 really *is* simple to **mark** — but "simple" then gets quietly borrowed for the whole method, when **IRV's count is the opposite of simple**. STAR keeps *both* halves simple — and its ballot carries strength of support on top of order.
 
-> **Applies to:** the **count** of every sequential-elimination variant ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is simple, the *tabulation* isn't. See [Which RCV-IRV?](RCV_IRV_variants.md).
+> **Applies to:** the **count** of every sequential-elimination variant ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is simple, the *tabulation* isn't. See [Which RCV-IRV?](variants/RCV_IRV_variants.md).
 
 → Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../topics/what_is_a_voting_method.md) (a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md), [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts: [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md) · Level **201**.
 

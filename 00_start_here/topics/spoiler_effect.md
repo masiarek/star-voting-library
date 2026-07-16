@@ -62,7 +62,7 @@ The spoiler effect has its own political vocabulary, all of it aimed at pressuri
 
 The 2009 Burlington, Vermont mayoral election (run by RCV-IRV) is the textbook proof that instant runoff does **not** remove spoilers. **Andy Montroll was the Condorcet winner** — he beat every other candidate head-to-head — but he was eliminated in an early round for too few first choices. Republican **Kurt Wright** acted as the spoiler, and the seat went to **Bob Kiss**, even though most voters preferred Montroll to Kiss. That's a [center-squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) spoiler, and it's why IRV rates "Medium," not "None," in the table above.
 
-The most prominent recent example is **[Alaska's 2022 U.S. House special election](../RCV_IRV/RCV_IRV_alaska_2022.md)**, where RCV-IRV eliminated the Condorcet winner (Begich), a losing candidate (Palin) spoiled the result, and the outcome was even non-monotonic — three IRV pathologies in one real federal race.
+The most prominent recent example is **[Alaska's 2022 U.S. House special election](../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md)**, where RCV-IRV eliminated the Condorcet winner (Begich), a losing candidate (Palin) spoiled the result, and the outcome was even non-monotonic — three IRV pathologies in one real federal race.
 
 ## See it happen
 

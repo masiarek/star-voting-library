@@ -58,8 +58,8 @@ These keep the "instant runoff" shape but swap the elimination rule. They read a
 
 | Variant | Elimination rule | Condorcet-safe? | Seen in the wild | Page |
 |---|---|---|---|---|
-| **Hare (standard IRV)** | drop the candidate with the **fewest first-place** votes, one per round | No (center squeeze) | US "RCV": Maine, Alaska, NYC, SF… | [Hare](RCV-IRV-Hare.md) |
-| **Batch elimination** | drop **all** candidates who are mathematically out of reach **at once** | Same winner as Hare in most cases; can differ at the margins | North Carolina statute; speeds hand counts | [Hare § batch](RCV-IRV-Hare.md) |
+| **Hare (standard IRV)** | drop the candidate with the **fewest first-place** votes, one per round | No (center squeeze) | US "RCV": Maine, Alaska, NYC, SF… | [Hare](../RCV-IRV-Hare.md) |
+| **Batch elimination** | drop **all** candidates who are mathematically out of reach **at once** | Same winner as Hare in most cases; can differ at the margins | North Carolina statute; speeds hand counts | [Hare § batch](../RCV-IRV-Hare.md) |
 | **Contingent vote** | **one** round only — eliminate everyone except the **top two**, then transfer | No | Sri Lanka presidency (rank up to 3) | [Contingent & SV](RCV-IRV-contingent-supplementary.md) |
 | **Supplementary vote** | contingent vote with the ballot **limited to 1st + 2nd** choice | No | London Mayor / English PCCs **until 2022** (now first-past-the-post) | [Contingent & SV](RCV-IRV-contingent-supplementary.md) |
 | **Bottom-Two-Runoff (BTR-IRV)** | each round, the **two lowest** candidates meet head-to-head; the **loser** is eliminated | **Yes** — a Condorcet winner can never be cut | proposed reform (Rob LeGrand, 2006) | [BTR](RCV-IRV-BTR.md) |
@@ -69,7 +69,7 @@ These keep the "instant runoff" shape but swap the elimination rule. They read a
 
 Two things worth underlining. First, **Hare is the only one of these the US actually calls "RCV"** — but it's also the one prone to *center squeeze* (eliminating a broadly-liked middle candidate who'd beat everyone head-to-head). Second, the **Condorcet-safe** variants (BTR, Baldwin, Nanson) fix that specific flaw precisely because they stop eliminating purely on first-choice counts. (Borda and Coombs read whole ballots but are **not** Condorcet methods; BTR/Baldwin/Nanson are.)
 
-> **Where does Ranked Robin fit?** It doesn't eliminate at all — **RCV-RR** (Ranked Robin / Copeland) compares every pair head-to-head and elects whoever wins the most matchups. It's the round-robin alternative to sequential elimination. See [`../RCV_Ranked_Robin/`](../RCV_Ranked_Robin/).
+> **Where does Ranked Robin fit?** It doesn't eliminate at all — **RCV-RR** (Ranked Robin / Copeland) compares every pair head-to-head and elects whoever wins the most matchups. It's the round-robin alternative to sequential elimination. See [`../RCV_Ranked_Robin/`](../../RCV_Ranked_Robin/).
 
 ---
 
@@ -81,7 +81,7 @@ Even two elections that both run plain Hare IRV can disagree, because real ballo
 - **Batch vs. one-at-a-time elimination.** Dropping several hopeless candidates at once usually matches single elimination, but not always at the margins.
 - **What "majority" counts against.** A **majority of *continuing* ballots** (exhausted ballots excluded) vs. a **majority of *all* ballots cast** are different thresholds — the first is how most US IRV laws declare a winner.
 - **Equal ranks and skipped rankings.** Pure IRV forbids equal ranks; jurisdictions differ on whether a skipped rank ends the ballot or is passed over.
-- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result. Because ranks carry no strength signal, there's often little to break the tie *with*, so it falls to chance sooner than in a score method — see [Tie-Breaking: STAR vs. RCV-IRV](../topics/ties/tiebreaking_star_vs_irv.md) for why strict ranks make ties *harder* to resolve, not easier.
+- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result. Because ranks carry no strength signal, there's often little to break the tie *with*, so it falls to chance sooner than in a score method — see [Tie-Breaking: STAR vs. RCV-IRV](../../topics/ties/tiebreaking_star_vs_irv.md) for why strict ranks make ties *harder* to resolve, not easier.
 
 This is why a precise reference says not just "IRV" but the **whole rule set** — the elimination rule *plus* the ballot rules.
 
@@ -109,10 +109,10 @@ For several seats at once, the Hare idea becomes the **Single Transferable Vote 
 
 ## Related concept pages
 
-- [RCV vs. IRV vs. RCV-IRV — a note on terminology](RCV-IRV-confusing-name.md) — why "RCV" is a confusing name
-- [RCV-IRV center squeeze](RCV_IRV_center_squeeze.md) — the flaw the Condorcet-safe variants fix
-- [RCV-IRV exhausted ballots](RCV_IRV_exhausted_ballots.md) — the ranking-limit knob, in depth
-- [RCV-IRV non-monotonicity](RCV_IRV_non_monotonicity.md)
+- [RCV vs. IRV vs. RCV-IRV — a note on terminology](../RCV-IRV-confusing-name.md) — why "RCV" is a confusing name
+- [RCV-IRV center squeeze](../RCV_IRV_center_squeeze.md) — the flaw the Condorcet-safe variants fix
+- [RCV-IRV exhausted ballots](../RCV_IRV_exhausted_ballots.md) — the ranking-limit knob, in depth
+- [RCV-IRV non-monotonicity](../RCV_IRV_non_monotonicity.md)
 - See also the repo terminology canon: `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`
 
 ## Learn more — external resources

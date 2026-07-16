@@ -24,7 +24,7 @@ The problem STAR is built to fix — start here if you're new to voting reform.
 - [The spoiler effect](topics/spoiler_effect.md) — the core failure
 - [Center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — how even ranked methods can eliminate the consensus candidate
 - [Two-party dominance](topics/two_party_dominance.md) — is it good or bad, and what actually changes it
-- [Alaska 2022](RCV_IRV/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
+- [Alaska 2022](RCV_IRV/case_studies/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
 
 ## Why STAR over the alternatives?
 

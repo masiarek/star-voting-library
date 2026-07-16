@@ -10,7 +10,7 @@
 |--------|-----------------------|-------------------|-----------|
 | **STAR** | scoring round (which two advance) **or** the automatic runoff | official tiebreak protocol, then lot order | [Tie-breaking in STAR](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) |
 | **STAR (reporting)** | how a tie is *displayed* in the result | reported explicitly, not hidden | [reporting ties](../../STAR_reporting/reporting_ties.md) |
-| **RCV-IRV (Hare)** | which candidate to eliminate when two are tied for last | by statute — lot / prior round | [Which RCV-IRV? § tie-breaks](../../RCV_IRV/RCV_IRV_variants.md) |
+| **RCV-IRV (Hare)** | which candidate to eliminate when two are tied for last | by statute — lot / prior round | [Which RCV-IRV? § tie-breaks](../../RCV_IRV/variants/RCV_IRV_variants.md) |
 | **Ranked Robin** | a pairwise tie, or a Condorcet **cycle** | total margin, then lot order | [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md) |
 
 **The "dead rung" gotcha (STAR).** STAR's ladder is *pairwise → five-star → lot*, and the **five-star** step counts only votes of score **5** (the scale max). If the tied candidates have no 5s (or equal 5s), that rung reads `0–0` — a **dead rung** — and the tie drops straight to the lot; it never steps down to the 4s. So on a low-scoring or coarse ballot the lot decides earlier and more often than the ladder's length suggests. Mnemonic: *"it counts fives, not fours."* → [The "dead rung"](../../../01_STAR/tie_break_dead_rung/).

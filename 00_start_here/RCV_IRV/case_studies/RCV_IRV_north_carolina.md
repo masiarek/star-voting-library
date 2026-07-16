@@ -2,7 +2,7 @@
 
 *North Carolina ran one of the earliest and boldest US trials of instant-runoff voting — including the **first statewide general election ever decided by IRV** — then repealed it. A real case of IRV adopted, tested, and reversed, and (unusually) one where the loudest objections were **administrative and election-integrity** concerns rather than the social-choice pathologies.*
 
-→ Broader context: [origins & spread](RCV_IRV_history.md) · the method: [RCV-IRV (Hare)](RCV-IRV-Hare.md) · another real case: [Alaska 2022](RCV_IRV_alaska_2022.md)
+→ Broader context: [origins & spread](RCV_IRV_history.md) · the method: [RCV-IRV (Hare)](../RCV-IRV-Hare.md) · another real case: [Alaska 2022](RCV_IRV_alaska_2022.md)
 
 ---
 
@@ -42,8 +42,8 @@ The organized opposition — the **NC Coalition for Verified Voting** (Joyce McC
 
 ## What's solid, what's contested (staying fair)
 
-- **Solid / on-point.** IRV genuinely **is not [precinct-summable](RCV_IRV_lack_of_summability.md)** — who is eliminated depends on the whole electorate, so ballots must be centralized and a recount re-runs the rounds; that makes audits harder. And in 2007–2013 NC's certified equipment truly **could not tabulate IRV**, forcing hand counts or an uncertified workaround. Those were real, concrete barriers, not just rhetoric.
-- **General IRV critiques the repo agrees with elsewhere.** "Not a true majority" (it's a majority of *continuing* ballots), the **[monotonicity](RCV_IRV_non_monotonicity.md)** risk, and Duverger-style pressure on third parties are legitimate and covered in this repo's concept pages — though they apply to IRV *everywhere*, not just NC.
+- **Solid / on-point.** IRV genuinely **is not [precinct-summable](../RCV_IRV_lack_of_summability.md)** — who is eliminated depends on the whole electorate, so ballots must be centralized and a recount re-runs the rounds; that makes audits harder. And in 2007–2013 NC's certified equipment truly **could not tabulate IRV**, forcing hand counts or an uncertified workaround. Those were real, concrete barriers, not just rhetoric.
+- **General IRV critiques the repo agrees with elsewhere.** "Not a true majority" (it's a majority of *continuing* ballots), the **[monotonicity](../RCV_IRV_non_monotonicity.md)** risk, and Duverger-style pressure on third parties are legitimate and covered in this repo's concept pages — though they apply to IRV *everywhere*, not just NC.
 - **Advocacy framing to flag.** Phrases like "not all votes are counted" describe a normal IRV feature (later choices aren't tallied unless a round needs them) in the most alarming terms; and cost claims (e.g. Minneapolis RCV ~$244,000) come from opponents' framing. IRV's proponents (FairVote) counter that the pilots ran smoothly where machines allowed, saved the cost of a **separate** runoff, and delivered majority-tested winners — and that most of the machine problems were fixable equipment gaps, not inherent flaws.
 
 The lasting significance either way: NC remains the **only US state to have decided a statewide general election by IRV**, and its arc — adopt, pilot, scale up, repeal — is a frequently-cited data point in US ranked-voting debates.

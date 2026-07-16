@@ -59,4 +59,4 @@ Different tabulations of the same ballots routinely elect **different winners** 
 - [Alternate ballot styles](../topics/ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
 - [Scores vs. ranks](scores_vs_ranks.md) — why order and strength are different data
 - [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) — where unranked finalists end up under IRV
-- [Which RCV-IRV?](../RCV_IRV/RCV_IRV_variants.md) · Glossary: [`ranked ballot`](../GLOSSARY.md)
+- [Which RCV-IRV?](../RCV_IRV/variants/RCV_IRV_variants.md) · Glossary: [`ranked ballot`](../GLOSSARY.md)

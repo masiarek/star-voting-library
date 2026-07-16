@@ -15,7 +15,7 @@ IRV only ever looks at each ballot's **top remaining** choice, and each round it
 - **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
 - The **Condorcet-safe IRV variants** — **BTR-IRV, Baldwin, Nanson** — keep the instant-runoff *shape* but stop eliminating on first-choices alone, so a Condorcet winner can never be squeezed out. Fittingly, **Nanson** — quoted at the bottom of this page warning about exactly this flaw in **1882** — designed one of those fixes.
 
-So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](RCV_IRV_variants.md) and [the terminology tips](../tips/TIPS_terminology.md).
+So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) and [the terminology tips](../tips/TIPS_terminology.md).
 
 ## Minimal test case — run it
 
@@ -83,7 +83,7 @@ Center squeeze is a depolarization argument, not just a fairness one. A simulati
 ## Real elections
 
 - **Burlington, VT 2009 (mayor).** Montroll was the Condorcet winner — preferred over Wright 56–44 and over Kiss 54–46 — but had too few first-choices, was eliminated, and **Kiss won**. IRV was repealed there in 2010.
-- **[Alaska 2022 (US House special)](RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin head-to-head, but was eliminated first; **Peltola won.** (Worked through in [Favorite betrayal (301)](../STAR_Voting/favorite_betrayal_voting_301.md).)
+- **[Alaska 2022 (US House special)](case_studies/RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin head-to-head, but was eliminated first; **Peltola won.** (Worked through in [Favorite betrayal (301)](../STAR_Voting/favorite_betrayal_voting_301.md).)
 
 ## How STAR avoids it
 

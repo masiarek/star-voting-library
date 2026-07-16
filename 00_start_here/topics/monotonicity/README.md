@@ -12,7 +12,7 @@
 | **Ranked Robin / Condorcet** | ✅ | pairwise wins only improve when you rank someone higher | [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md) |
 | **Approval / Score** | ✅ | more approval/points can't hurt | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **RCV-IRV (Hare)** | ❌ | added first-choices can change the elimination order and flip the winner | [IRV non-monotonicity](../../RCV_IRV/RCV_IRV_non_monotonicity.md) |
-| **Other IRV variants** (BTR, Coombs, Baldwin, Nanson) | ❌ | same cause — they still eliminate round by round | [Which RCV-IRV?](../../RCV_IRV/RCV_IRV_variants.md) |
+| **Other IRV variants** (BTR, Coombs, Baldwin, Nanson) | ❌ | same cause — they still eliminate round by round | [Which RCV-IRV?](../../RCV_IRV/variants/RCV_IRV_variants.md) |
 
 So unlike [center squeeze](../center_squeeze/) (which is *Hare-specific*), non-monotonicity is shared by **all** the sequential-elimination methods — only the non-eliminating methods (STAR, Ranked Robin) escape it.
 

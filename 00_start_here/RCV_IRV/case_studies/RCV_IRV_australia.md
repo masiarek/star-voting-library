@@ -2,7 +2,7 @@
 
 Australia is the world's longest-running home of single-winner IRV, so both its advocates and its critics reach for it as evidence. This page tries to be the impartial referee: Australia settles one big question decisively, and a *different* big question in the opposite direction from what US advocates often imply. Keeping those two straight is the whole point.
 
-*(Terminology: Australians call it the **Alternative Vote (AV)** or **preferential voting** — their names for single-winner IRV. This page uses those, not the US term "RCV." See [the naming problem](RCV-IRV-confusing-name.md) and [variants](RCV_IRV_variants.md).)*
+*(Terminology: Australians call it the **Alternative Vote (AV)** or **preferential voting** — their names for single-winner IRV. This page uses those, not the US term "RCV." See [the naming problem](../RCV-IRV-confusing-name.md) and [variants](../variants/RCV_IRV_variants.md).)*
 
 ## What Australia actually uses
 
@@ -35,7 +35,7 @@ The honest reason is structural: AV is still a **single-member-district, majorit
 ## Caveats that make cross-country claims tricky
 
 - **Turnout isn't an IRV effect.** Australia's famously high turnout comes from **compulsory voting**, not the ballot type — don't credit it to AV.
-- **Exhaustion is low there for a reason.** Historically Australia required ranking *all* candidates (full preferential), so ballots rarely [exhaust](RCV_IRV_exhausted_ballots.md) — unlike US "rank up to 5" systems where [forced exhaustion](forced_vs_voluntary_exhaustion.md) is common. Optional-preferential states (e.g. NSW) show more exhaustion. The US IRV experience and the Australian one differ partly *because the ballot rules differ*.
+- **Exhaustion is low there for a reason.** Historically Australia required ranking *all* candidates (full preferential), so ballots rarely [exhaust](../RCV_IRV_exhausted_ballots.md) — unlike US "rank up to 5" systems where [forced exhaustion](../forced_vs_voluntary_exhaustion.md) is common. Optional-preferential states (e.g. NSW) show more exhaustion. The US IRV experience and the Australian one differ partly *because the ballot rules differ*.
 - **Ballot-order effects** ("donkey votes") and the 2PP reporting convention itself are Australian-specific artifacts a US comparison should flag.
 
 ## The even-handed takeaway
@@ -47,7 +47,7 @@ Both camps overuse Australia. The workability is real and IRV's defenders are ri
 ## Related
 
 - [RCV-IRV — origins and spread](RCV_IRV_history.md) — where this fits in the timeline
-- [Center squeeze](RCV_IRV_center_squeeze.md) and [exhausted ballots](RCV_IRV_exhausted_ballots.md) — the IRV-specific mechanics
-- [Two-Party Dominance — pros, cons, and what changes it](../topics/two_party_dominance.md) — is two-party good or bad, and why *proportional* reform (not single-winner) is what breaks it
-- [Proportional representation: STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) — the method behind Australia's *multiparty* chamber
-- [Choosing among the Equal Vote methods](../topics/choosing_among_evc_methods.md) · [Glossary](../GLOSSARY.md)
+- [Center squeeze](../RCV_IRV_center_squeeze.md) and [exhausted ballots](../RCV_IRV_exhausted_ballots.md) — the IRV-specific mechanics
+- [Two-Party Dominance — pros, cons, and what changes it](../../topics/two_party_dominance.md) — is two-party good or bad, and why *proportional* reform (not single-winner) is what breaks it
+- [Proportional representation: STV vs STAR-PR](../../proportional_representation/stv/proportional_stv_vs_star.md) — the method behind Australia's *multiparty* chamber
+- [Choosing among the Equal Vote methods](../../topics/choosing_among_evc_methods.md) · [Glossary](../../GLOSSARY.md)
