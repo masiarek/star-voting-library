@@ -29,9 +29,6 @@ STAR asks for a little more, using two things you already know:
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
-**And here's the ballot the five coworkers would actually fill out** — the official STAR ballot design, printed for this very lunch election (it's real: the QR codes go to the live election on BetterVoting):
-<img src="img/fyy886_lunch_ballot.png" width="560" alt="A printed STAR paper ballot for the Team Lunch election: the STAR VOTING wordmark, the four scoring instructions, and a score grid with one row per option — Sushi, Tacos, Pizza — each with 0–5 bubbles from Worst to Best; below the grid, the finalist explanation (the two highest scoring candidates are finalists; your full vote goes to the finalist you prefer) and a footer with the BetterVoting election id fyy886 and its results URL">
-
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
 - Give your **favorite** **5 stars**.
