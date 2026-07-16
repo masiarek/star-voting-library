@@ -36,4 +36,4 @@ Before the per-topic criteria: **what are we even optimizing for?**
 
 **Mechanics & multi-winner:** [electing more than one](electing_more_than_one.md) · [quorum](quorum.md) · [the pipeline](the_pipeline.md)
 
-**People, orgs & learning paths:** [how to learn about voting methods](how_to_learn_about_voting_methods.md) · [choosing among the EVC methods](choosing_among_evc_methods.md) · [advocacy organizations](advocacy_organizations.md) · [who's who in voting reform](whos_who_voting_reform.md) · [in memoriam: Jameson Quinn](in_memoriam_jameson_quinn.md)
+**People, orgs & learning paths:** [how to learn about voting methods](how_to_learn_about_voting_methods.md) · [books on voting methods](../books/README.md) · [choosing among the EVC methods](choosing_among_evc_methods.md) · [advocacy organizations](advocacy_organizations.md) · [who's who in voting reform](whos_who_voting_reform.md) · [in memoriam: Jameson Quinn](in_memoriam_jameson_quinn.md)

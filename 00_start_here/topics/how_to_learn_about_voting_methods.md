@@ -57,6 +57,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 
 ## Further reading (beyond this repo)
 
+- **Books** — the [annotated books shelf](../books/README.md): the popular introductions ([Poundstone](../books/popular_introductions.md), Szpiro, Saari) and the scholarly classics ([Arrow](../books/social_choice_theory.md), Sen, Balinski & Laraki), each with a cover and an honest "the lean."
 - **Marcus Ogren** — [Voting in the Abstract](https://voting-in-the-abstract.medium.com/) (the model for this page; field-wide, Condorcet-leaning).
 - **Academic & nonpartisan overviews** — the [Stanford Encyclopedia of Philosophy: Voting Methods](https://plato.stanford.edu/entries/voting-methods/) (the rigorous, neutral scholarly survey) and the [League of Women Voters of Washington — *Review of Election Methods*](https://www.lwvwa.org/resources/Documents/Review%20of%20Election%20Methods%202-12-20.pdf) (a nonpartisan side-by-side comparison, 2020).
 - **Organizations** — the [Equal Vote Coalition](https://www.equal.vote), [STAR Voting](https://www.starvoting.org), the [Center for Election Science](https://electionscience.org), and [FairVote](https://fairvote.org) (the primary IRV advocate — read for the case this repo often argues *against*). Who's who among them: [voting-reform people](whos_who_voting_reform.md).

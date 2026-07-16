@@ -42,6 +42,7 @@ The honest comparison — where STAR's case is actually made.
 The credibility layer — read the arguments *against*, too.
 
 - [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
+- [Books on Voting Methods](books/README.md) — an annotated shelf of the popular and scholarly books, with covers and an honest "the lean" on each
 - [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
 - **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](Approval_Voting/approval_honest_limits.md) · [Ranked Robin](RCV_Ranked_Robin/RCV_RR_honest_limits.md)
 - [Who champions each method](topics/advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
