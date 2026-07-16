@@ -76,6 +76,23 @@ The clearest book-length treatment of **strategic voting** and the Gibbard–Sat
 
 <table>
 <tr>
+<td width="150" valign="top"><!-- cover pending: img/mathematics_of_social_choice_borgers.jpg — Open Library candidate: https://covers.openlibrary.org/b/isbn/9780898716955-M.jpg --></td>
+<td valign="top">
+
+### Mathematics of Social Choice: Voting, Compensation, and Division — Christoph Börgers (2010)
+
+The gentlest *rigorous* book on the shelf — an undergraduate text (SIAM, from a Tufts course) that actually proves the things the others cite, in short chapters with exercises. Part I is the voting theory: Condorcet winners and cycles, Borda, IRV, and one of the few textbook-level treatments of the **[Smith set](../topics/smith_set.md)** — Börgers builds it as the "**generalized Condorcet candidates**," proving existence and uniqueness via nested dominating sets in a couple of pages you can follow with a pencil. Parts II–III widen out to fair division and apportionment.
+
+**The lean:** Neutral textbook — it teaches the mathematics and sells no method. Its voting coverage is classical (ranked methods and their theory); rated methods like score and STAR aren't its subject, so read it for the Condorcet-family foundations, not a method comparison.
+
+**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <td width="150" valign="top"><img src="img/voting_paradoxes_nurmi.jpg" width="130" alt="Cover of Voting Paradoxes and How to Deal with Them by Hannu Nurmi"></td>
 <td valign="top">
 
