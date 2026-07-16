@@ -25,6 +25,7 @@ Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start wi
 
 ## Reference & conversations
 
+- History: [A short history of STAR Voting](STAR_history.md) — where it came from, the timeline, and where it stands (adopted for party/org elections; government ballot measures haven't passed yet)
 - Glossary: [STAR terms](reference/glossary_STAR.md)
 - Conversation scripts: [What's so good about STAR](reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](reference/why_do_you_love_STAR_Voting.md) · [Aren't equal-score votes discounted?](reference/are_equal_score_votes_discounted.md)
 - Outside explainers, videos & official guides: [STAR Voting — resources & further watching](reference/STAR_resources.md)
