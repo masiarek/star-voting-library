@@ -24,6 +24,8 @@ These generalize "the Condorcet winner" to the case where none exists.
 
 **The math to compute them is graph theory:** the Smith set is the **top strongly connected component** of the dominance graph. You find it with standard algorithms — Tarjan's or Kosaraju's SCC, or by taking the transitive closure (Floyd–Warshall) and reading off the maximal candidates. "Find the Smith set" = "find the top SCC."
 
+**The concept, worked:** [The Smith set — the smallest club that beats everyone outside it](../topics/smith_set.md) — the club-membership walkthrough on a runnable 4-candidate election (a 3-cycle plus a dominated outsider), the Smith-efficiency scorecard, and ISDA.
+
 ## The cycle-resolving methods, mapped to their math
 
 | Method | What it does | The math it *is* |

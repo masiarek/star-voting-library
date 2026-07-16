@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**275 election files** (240 single-winner, 35 multi-winner) across 15 method(s).
+**276 election files** (241 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 149 |
 | RCV-IRV (Hare) | 12 |
-| Ranked Robin (RCV-RR / Copeland) | 33 |
+| Ranked Robin (RCV-RR / Copeland) | 34 |
 | Approval | 10 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -199,7 +199,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (33)
+## Ranked Robin (RCV-RR / Copeland)  (34)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -210,6 +210,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`clone_teaming_02_post`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/clone_teaming_02_post.md) | `05_Ranked_Robin/clone_independence/` | 1 | Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win → _A1_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/clone_teaming_02_post.yaml) |
 | [`01_condorcet_winner`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/01_condorcet_winner.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | Condorcet winner exists — Ranked Robin elects it → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/01_condorcet_winner.yaml) |
 | [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | No Condorcet winner (a cycle) — Ranked Robin still elects one → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/02_cycle_no_condorcet.yaml) |
+| [`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | The Smith set — the smallest club that beats everyone outside it → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/04_smith_set_c4_b7.yaml) |
 | [`bv2140_48hjkv_most_pairwise_wins`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/bv2140_48hjkv_most_pairwise_wins.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/` | 1 | BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/bv2140_48hjkv_most_pairwise_wins.yaml) |
 | [`bv2141_3r3yf7_four_degree_tie`](../../05_Ranked_Robin/rr_tiebreaks/rr_tiebreaks_pages/bv2141_3r3yf7_four_degree_tie.md) | `05_Ranked_Robin/rr_tiebreaks/` | 1 | BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/bv2141_3r3yf7_four_degree_tie.yaml) |
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/rr_tiebreaks/rr_tiebreaks_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/rr_tiebreaks/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_tiebreak.yaml) |

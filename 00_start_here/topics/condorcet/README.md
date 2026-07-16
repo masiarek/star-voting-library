@@ -14,7 +14,7 @@
 | **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 
-When there's **no** Condorcet winner (a cycle), methods differ in how they resolve it — see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections where STAR, IRV, and the Condorcet winner disagree.
+When there's **no** Condorcet winner (a cycle), the principled "still in contention" list is [the Smith set](../smith_set.md), and methods differ in how they pick from it — see [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md). The repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections where STAR, IRV, and the Condorcet winner disagree.
 
 > **"Isn't the Condorcet criterion just a guarantee for moderates?"** No — that's the load-bearing error of a much-cited FairVote article. The Condorcet winner is defined *by* the electorate and moves with it (a majority-first-choice landslide candidate is automatically the Condorcet winner). The article, quoted and checked claim by claim against tabulated elections — including its own 40/15/40 hypothetical, where RCV-IRV eliminates the very moderate it discusses: [FairVote's Condorcet article, claim-checked](fairvote_condorcet_claim_check.md).
 

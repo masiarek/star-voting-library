@@ -1,0 +1,35 @@
+election_title: "The Smith set — the smallest club that beats everyone outside it"
+election_description: >-
+  The 02_cycle election (Ada beats Ben, Ben beats Cara, Cara beats Ada — no
+  Condorcet winner) with ONE change: a fourth candidate, Dave, whom every voter
+  ranks last. All three cycle members beat Dave 7-0, and no smaller group beats
+  everyone outside it — so the SMITH SET is exactly {Ada, Ben, Cara}. Dave is
+  outside the club. Ranked Robin (Copeland) is Smith-efficient: its winner (Ada,
+  on margins) comes from inside the set.
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+lot_numbers: [Ada, Ben, Cara, Dave]
+options:
+  show_matrix: true          # the pairwise matrix IS the lesson here
+# Cycle: Ada>Ben 5-2, Ben>Cara 5-2, Cara>Ada 4-3; everyone beats Dave 7-0.
+#   Records: Ada 2-1, Ben 2-1, Cara 2-1, Dave 0-3 -> three-way Copeland tie.
+#   Tiebreak = total margin: Ada +9, Ben +7, Cara +5 -> RANKED ROBIN WINNER: Ada.
+#   Smith set = {Ada, Ben, Cara}: each member beats everyone outside it (Dave).
+#   The nesting check: {Ada}? no (Cara beats Ada). {Ada,Ben}? no. Trio? yes -> smallest.
+# Companion file: 02_cycle_no_condorcet.yaml (the same election without Dave).
+# LH-only case (no BetterVoting election): BV's RankedRobin breaks a Copeland tie
+#   randomly, so this deliberate three-way tie isn't freezable on BV.
+# Lesson: 00_start_here/topics/smith_set.md
+ballots: |-
+  Ada>Ben>Cara>Dave
+  Ada>Ben>Cara>Dave
+  Ada>Ben>Cara>Dave
+  Ben>Cara>Ada>Dave
+  Ben>Cara>Ada>Dave
+  Cara>Ada>Ben>Dave
+  Cara>Ada>Ben>Dave
+
+expected_winners:
+  - Ada
+
+# file: 04_smith_set_c4_b7.yaml

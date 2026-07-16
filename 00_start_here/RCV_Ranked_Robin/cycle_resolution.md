@@ -58,7 +58,7 @@ Same ballots, **two different winners** depending on the cycle-resolution rule. 
 ## What they share (the good news)
 
 - **Condorcet-consistent:** all elect the Condorcet winner whenever one exists — which, with many voters and realistic preferences, is the overwhelming majority of elections.
-- **Smith-efficient (the good ones):** Ranked Pairs, Schulze, and Copeland always elect from the **Smith set** (the smallest group that beats everyone outside it). Minimax can miss it.
+- **Smith-efficient (the good ones):** Ranked Pairs, Schulze, and Copeland always elect from the **[Smith set](../topics/smith_set.md)** (the smallest group that beats everyone outside it). Minimax can miss it.
 - **Clone-independent & monotone:** Ranked Pairs and Schulze add these guarantees; that robustness is why they're the "serious" cycle-resolvers despite being harder to explain.
 
 ## Where Ranked Robin and STAR fit

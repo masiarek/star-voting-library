@@ -1,6 +1,6 @@
 # Condorcet vs. Ranked Robin — worked examples
 
-*Three runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, plus a real 6-candidate case.*
+*Four runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, a real 6-candidate case, plus the cycle with a dominated fourth candidate — the **Smith set** demo.*
 
 → **Full lesson (the teaching write-up):** [Ranked Robin vs. Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
 
@@ -9,6 +9,7 @@
 | [01 — Condorcet winner](condorcet_vs_ranked_robin_pages/01_condorcet_winner.md) | a Condorcet winner exists → they **agree** | Ada | **Ada** | [`.yaml`](01_condorcet_winner.yaml) |
 | [02 — cycle, no Condorcet](condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) | a rock-paper-scissors **cycle** → they part ways | *(none)* | **Ada** | [`.yaml`](02_cycle_no_condorcet.yaml) |
 | [03 — real 6-cand sweep](condorcet_vs_ranked_robin_pages/03_real_record0_c6_b5.md) | real 6-cand sweep case — no Condorcet winner | *(none)* | **B** | [`.yaml`](03_real_record0_c6_b5.yaml) |
+| [04 — the Smith set](condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md) | the 02 cycle + a dominated 4th → **Smith set** = {Ada, Ben, Cara} | *(none)* | **Ada** | [`.yaml`](04_smith_set_c4_b7.yaml) |
 
 ---
 
@@ -76,6 +77,29 @@ Winner — Ranked Robin (RCV-RR): B   (the most head-to-head wins, 3)
 ```
 
 B went **3–1–1, not 5–0** (it loses to C, ties A), so no one beats everyone → Condorcet is blank. The full 6×6 pairwise grid is in the mirror: [`…_tabulated/03_real_record0_c6_b5_tabulated.txt`](condorcet_vs_ranked_robin_tabulated/03_real_record0_c6_b5_tabulated.txt)
+
+## 4. The Smith set — the cycle plus an outsider
+
+Election 2 with **one change**: a fourth candidate, **Dave**, whom every voter ranks last. The Ada/Ben/Cara cycle is untouched, and all three beat Dave 7–0 — so the smallest group that beats everyone outside it is exactly **{Ada, Ben, Cara}**: the **[Smith set](../../00_start_here/topics/smith_set.md)**, the "generalized Condorcet winner." Dave is on every ballot yet provably out of contention. Ranked Robin's pick (Ada, on margins) comes from inside the set — Copeland is Smith-efficient.
+
+```text
+Ballots:
+     3 × Ada > Ben > Cara > Dave
+     2 × Ben > Cara > Ada > Dave
+     2 × Cara > Ada > Ben > Dave
+
+Win–loss record:
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ada        2–1–0         2      +9  Ben, Dave
+    2  Ben        2–1–0         2      +7  Cara, Dave
+    3  Cara       2–1–0         2      +5  Ada, Dave
+    4  Dave       0–3–0         0     -21  —
+
+Winner — Ranked Robin (RCV-RR): Ada
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle.
+```
+
+(LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie randomly, so this deliberate three-way tie isn't freezable there.) Full report: [`…_tabulated/04_smith_set_c4_b7_tabulated.txt`](condorcet_vs_ranked_robin_tabulated/04_smith_set_c4_b7_tabulated.txt) · full lesson: [The Smith set — the smallest club that beats everyone outside it](../../00_start_here/topics/smith_set.md)
 
 ---
 
