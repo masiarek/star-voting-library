@@ -32,6 +32,31 @@ def _run(args, cwd):
                           capture_output=True, text=True)
 
 
+def _find_single_race_star_export():
+    """Locate a frozen BV export to synthesize the multi-race fixture from.
+
+    The old library fixtures (YAML_library/1_positive/S_W1_N_*.json) migrated
+    into the teaching folders as <case>_bv_export.json, so scan the whole repo
+    for those instead — case moves then can't strand this test. Filter to the
+    shape the synthesis needs: a single-race, single-winner STAR export with
+    ballots (the same S/W1 shape the old fixture names encoded)."""
+    for p in sorted(REPO_ROOT.rglob("*_bv_export.json")):
+        if any(part.startswith(".") or part.endswith("_tabulated")
+               for part in p.relative_to(REPO_ROOT).parts):
+            continue
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        races = data.get("Election", {}).get("races", [])
+        if (len(races) == 1
+                and races[0].get("voting_method") == "STAR"
+                and races[0].get("num_winners", 1) == 1
+                and data.get("Ballots")):
+            return p
+    return None
+
+
 def test_engine_rejects_multirace_yaml():
     r = _run([str(WRAPPER), str(NEG_FIXTURE)], ENGINE_DIR)
     out = r.stdout + r.stderr
@@ -42,7 +67,7 @@ def test_engine_rejects_multirace_yaml():
 
 
 def test_converter_splits_multirace_export(tmp_path):
-    src_json = next(LIB_POS.glob("S_W1_N_*.json"), None)
+    src_json = _find_single_race_star_export()
     assert src_json is not None, "no frozen BV export found to synthesize from"
 
     data = json.loads(src_json.read_text(encoding="utf-8"))

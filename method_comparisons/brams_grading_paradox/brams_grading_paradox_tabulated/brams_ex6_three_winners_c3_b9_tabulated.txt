@@ -1,8 +1,8 @@
 ======================================================================
 SOURCE FILE:     brams_ex6_three_winners_c3_b9.yaml
-SOURCE MODIFIED: 2026-07-15 19:04:24
+SOURCE MODIFIED: 2026-07-15 23:02:17
 TABULATED FILE:  brams_ex6_three_winners_c3_b9_tabulated.txt
-TABULATED AT:    2026-07-15 19:04:41
+TABULATED AT:    2026-07-15 23:07:37
 ======================================================================
 
 election_title: "Brams Example 6 — three counts, three winners (STAR sides with head-to-head)"
@@ -19,8 +19,9 @@ scenario_description: |-
   STAR sides with head-to-head: Bree/Cole tie at 10 for second place, the
   tie breaks to Cole (he beats Bree 4-2), and Cole wins the runoff 3-2 with
   4 Equal Support ballots. Every voter here has dichotomous preferences, so
-  their natural Approval ballots elect Cole too (6-5-7) — but the engine's
-  any-non-zero Approval cut elects Amos (9-5-7): the 0/1 line strikes again.
+  their natural Approval ballots elect Cole too (6-5-7) — but a uniform
+  any-non-zero cut elects Amos (9-5-7). Where the 0/1 line falls decides
+  the approval winner; no cut is canonical.
 
 voting_method: STAR
 num_winners: 1
@@ -70,8 +71,9 @@ TABULATION RESULTS
   STAR sides with head-to-head: Bree/Cole tie at 10 for second place, the
   tie breaks to Cole (he beats Bree 4-2), and Cole wins the runoff 3-2 with
   4 Equal Support ballots. Every voter here has dichotomous preferences, so
-  their natural Approval ballots elect Cole too (6-5-7) — but the engine's
-  any-non-zero Approval cut elects Amos (9-5-7): the 0/1 line strikes again.
+  their natural Approval ballots elect Cole too (6-5-7) — but a uniform
+  any-non-zero cut elects Amos (9-5-7). Where the 0/1 line falls decides
+  the approval winner; no cut is canonical.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

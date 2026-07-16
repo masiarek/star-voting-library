@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ben
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfk7pd) · **[results ↗](https://bettervoting.com/jfk7pd/results)** (election `jfk7pd`).
+
 **Official tie-break (lot) order:** Ben > Ada — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
