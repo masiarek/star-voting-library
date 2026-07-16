@@ -26,15 +26,15 @@ The four instructions printed on it are the whole method:
 
 ## A few example ballots
 
-There's no single "right" way to fill it out. Here are three voters in the same three-candidate race — **Ana, Ben, Cara** — each voting honestly, in a different style:
+There's no single "right" way to fill it out. Here are three voters in the same race — the same five candidates as the ballot above, **Andre, Blake, Carmen, David, Erin** — each voting honestly, in a different style:
 
-| Voter's style | Ana | Ben | Cara | What the ballot says |
-|---|--:|--:|--:|---|
-| **Bullet vote** | 5 | 0 | 0 | "Ana, and no one else." Legal — but if Ana misses the runoff, this ballot has no say in the final head-to-head. |
-| **Honest spread** | 5 | 3 | 0 | "Love Ana, Ben's fine, Cara no." Uses the full range — the everyday STAR ballot. |
-| **Equal top** | 5 | 5 | 0 | "Ana or Ben, either is great." If both reach the runoff it counts as [Equal Support](../GLOSSARY.md) — no preference between them — but it still helped choose the finalists in the scoring round. |
+| Voter's style | Andre | Blake | Carmen | David | Erin | What the ballot says |
+|---|--:|--:|--:|--:|--:|---|
+| **Bullet vote** | 5 | 0 | 0 | 0 | 0 | "Andre, and no one else." Legal — but if Andre misses the runoff, this ballot has no say in the final head-to-head. |
+| **Honest spread** | 5 | 0 | 4 | 4 | 1 | "Love Andre; Carmen and David nearly as good; Erin barely; Blake no." Uses the full range — and it's exactly the ballot pictured above. |
+| **Equal top** | 5 | 5 | 0 | 0 | 0 | "Andre or Blake, either is great." If both reach the runoff it counts as [Equal Support](../GLOSSARY.md) — no preference between them — but it still helped choose the finalists in the scoring round. |
 
-Every one of these counts. And a backup score — Ben's 3 in the middle row — can **never** hurt your favorite in the scoring round: a 5 is a 5 no matter what else you mark. So honest rating is also the smart rating; you never have to exaggerate or hold back.
+Every one of these counts. And a backup score — the 4s for Carmen and David in the honest-spread row — can **never** hurt your favorite (Andre) in the scoring round: a 5 is a 5 no matter what else you mark. So honest rating is also the smart rating; you never have to exaggerate or hold back.
 
 ## Learn more
 
