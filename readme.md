@@ -1,5 +1,7 @@
 # STAR Voting — Education & Test-Case Library
 
+> **New to STAR Voting?** It's a simple, expressive way to run an election: **score every candidate 0–5, then an automatic runoff between the two highest-scoring picks the winner.** It's [easy to vote in and easy to count](00_start_here/STAR_Voting/getting_started/STAR_benefits.md), and [relatively new](00_start_here/STAR_Voting/STAR_history.md) — first proposed in 2014. **Start with the five-minute intro → [Welcome to STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md).**
+
 A library for learning, teaching, and debating **[STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). It puts STAR first — and earns your trust by testing STAR honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness *is* the argument: the STAR case is stronger because you can check it yourself.
 
 **New here? → [Start Here](00_start_here/00_START_HERE.md)** routes you by what you want — learn STAR, see what's broken about voting today, compare methods even-handedly, or run the engine yourself.
@@ -43,6 +45,7 @@ The full field-by-field guide — every option, the marker table, weighted rows,
 ## Learn more
 
 - [Start Here](00_start_here/00_START_HERE.md) — guided entry point
+- [A short history of STAR Voting](00_start_here/STAR_Voting/STAR_history.md) — how new it is, the origin story, and the adoption timeline
 - [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
 - [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
 - [Scored (rated) vs. ranked ballots](00_start_here/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
