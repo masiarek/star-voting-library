@@ -27,6 +27,7 @@ AGREE,01_STAR/_main/vote_splitting_scenario2_bloc_leads.yaml,3,36,DarkChoco,Dark
 AGREE,01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,0,False,False,False
 AGREE,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
+AGREE,01_STAR/exercises/ex07_vanishing_votes.yaml,3,9,Aspen,Aspen,Birch,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,3,True,False,False
 AGREE,01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml,3,6,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,0,False,False,False
 AGREE,01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
@@ -74,6 +75,10 @@ APPROVAL_OR_MINOR,01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml,3,3,Almond,A
 APPROVAL_OR_MINOR,01_STAR/_main/03b_c3_b3_2_expand_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/_main/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml,3,10,Almond,Almond,Almond,Almond,Almond,Berry,Berry,Almond,Almond,1,False,False,False
+APPROVAL_OR_MINOR,01_STAR/exercises/ex04_olympics_1994.yaml,3,9,Baiul,Baiul,Baiul,Baiul,Baiul,Kerrigan,Kerrigan,Baiul,Baiul,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/exercises/ex06_bullet_backfire.yaml,3,9,Cash,Cash,Cash,Cash,Cash,Ari,Cash,Cash,Cash,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/exercises/ex08_minimal_reversal_2c.yaml,2,3,A,A,A,A,A,B,B,A,A,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/exercises/ex08_minimal_reversal_3c.yaml,3,5,A,A,A,A,A,B,B,A,A,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml,3,5,Ada,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml,3,3,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01b_c3_b9_overturn-holds-at-scale.yaml,3,9,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
@@ -137,6 +142,9 @@ IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex05_center_squeeze.yaml,3,9,Brook,Avi,Avi,Brook,Brook,Brook,Brook,Brook,Brook,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex06_bullet_honest.yaml,3,9,Bree,Cash,Cash,Bree,Bree,Bree,Bree,Bree,Bree,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,YAML_library/1_positive/trash_delete.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_star.yaml,3,27,Center,Left,Left,Center,Center,Left,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False

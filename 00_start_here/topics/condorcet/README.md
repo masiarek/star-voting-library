@@ -22,6 +22,8 @@ When there's **no** Condorcet winner (a cycle), the principled "still in content
 
 > **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked Robin still picks the best record). Worked through with a real example in [Ranked Robin vs. the Condorcet winner](../../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).
 
+> **"But a paper proves Condorcet, IIA, and monotonicity aren't even desirable?"** That's the most sophisticated form of the argument — an arXiv paper defining "ordered majority rule" and claiming IRV uniquely satisfies it. The catch: the property is IRV's own algorithm restated, defined circularly, so the "uniqueness" is a mirror. Taken apart (with the honest core — the case for *cardinal* ballots — kept) in [Ordered majority rule and the "Condorcet isn't desirable" argument](ordered_majority_rule_irv.md).
+
 Glossary: [`Condorcet`](../../GLOSSARY.md).
 
 ---

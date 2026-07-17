@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **156** single-winner STAR elections (skipped 86 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **85** (54%) diverge from STAR under at least one method; **71** agree across the board.
+- Scanned **164** single-winner STAR elections (skipped 87 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **92** (56%) diverge from STAR under at least one method; **72** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 17 |
+| IRV_OUTLIER_RR_WITH_STAR | 20 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 9 |
 | CYCLE_OR_THREE_WAY | 23 |
-| APPROVAL_OR_MINOR | 33 |
+| APPROVAL_OR_MINOR | 37 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (81 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (88 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 15
+### IRV_OUTLIER_RR_WITH_STAR — 18
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -37,6 +37,12 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
 - **[bv2184_fyy886_lunch_vote](cases/IRV_OUTLIER_RR_WITH_STAR/bv2184_fyy886_lunch_vote.md)** — `01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` (3c/5b)  
     STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza  
     _also at: `YAML_library/1_positive/trash_delete.yaml`_
+- **[ex03_five_verdicts](cases/IRV_OUTLIER_RR_WITH_STAR/ex03_five_verdicts.md)** — `01_STAR/exercises/ex03_five_verdicts.yaml` (3c/9b)  
+    STAR=**Cherry** · IRV=Banana · RR=Cherry · Approval=Cherry · Score=Cherry · Condorcet=Cherry
+- **[ex05_center_squeeze](cases/IRV_OUTLIER_RR_WITH_STAR/ex05_center_squeeze.md)** — `01_STAR/exercises/ex05_center_squeeze.yaml` (3c/9b)  
+    STAR=**Brook** · IRV=Avi · RR=Brook · Approval=Brook · Score=Brook · Condorcet=Brook
+- **[ex06_bullet_honest](cases/IRV_OUTLIER_RR_WITH_STAR/ex06_bullet_honest.md)** — `01_STAR/exercises/ex06_bullet_honest.yaml` (3c/9b)  
+    STAR=**Bree** · IRV=Cash · RR=Bree · Approval=Bree · Score=Bree · Condorcet=Bree
 - **[center_squeeze_star](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_star.md)** — `method_comparisons/center_squeeze/center_squeeze_star.yaml` (3c/27b)  
     STAR=**Center** · IRV=Left · RR=Center · Approval=Left · Score=Center · Condorcet=Center
 - **[center_squeeze_voteline_1d](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md)** — `method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml` (3c/998b)  
@@ -158,7 +164,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
 
-### APPROVAL_OR_MINOR — 33
+### APPROVAL_OR_MINOR — 37
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -171,6 +177,14 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
 - **[bv2182_tg4779_faq_runoff_reversal](cases/APPROVAL_OR_MINOR/bv2182_tg4779_faq_runoff_reversal.md)** — `01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml` (3c/10b)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Berry · Score=Berry · Condorcet=Almond  
     _flags: 1 tied-score ballot(s)_
+- **[ex04_olympics_1994](cases/APPROVAL_OR_MINOR/ex04_olympics_1994.md)** — `01_STAR/exercises/ex04_olympics_1994.yaml` (3c/9b)  
+    STAR=**Baiul** · IRV=Baiul · RR=Baiul · Approval=Kerrigan · Score=Kerrigan · Condorcet=Baiul
+- **[ex06_bullet_backfire](cases/APPROVAL_OR_MINOR/ex06_bullet_backfire.md)** — `01_STAR/exercises/ex06_bullet_backfire.yaml` (3c/9b)  
+    STAR=**Cash** · IRV=Cash · RR=Cash · Approval=Ari · Score=Cash · Condorcet=Cash
+- **[ex08_minimal_reversal_2c](cases/APPROVAL_OR_MINOR/ex08_minimal_reversal_2c.md)** — `01_STAR/exercises/ex08_minimal_reversal_2c.yaml` (2c/3b)  
+    STAR=**A** · IRV=A · RR=A · Approval=B · Score=B · Condorcet=A
+- **[ex08_minimal_reversal_3c](cases/APPROVAL_OR_MINOR/ex08_minimal_reversal_3c.md)** — `01_STAR/exercises/ex08_minimal_reversal_3c.yaml` (3c/5b)  
+    STAR=**A** · IRV=A · RR=A · Approval=B · Score=B · Condorcet=A
 - **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
     _flags: 2 tied-score ballot(s)_

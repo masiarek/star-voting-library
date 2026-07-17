@@ -146,6 +146,14 @@ LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral 
 LH:ex02_bella_exits,Exercise 2 — The tenth ballot: Bella withdraws,1,single-race,9,STAR,LH-only
 LH:ex02_nine_ballots,Exercise 2 — The tenth ballot: the nine counted ballots,1,single-race,9,STAR,LH-only
 LH:ex02_tenth_ballot,Exercise 2 — The tenth ballot: all ten ballots,1,single-race,10,STAR,LH-only
+LH:ex03_five_verdicts,"Exercise 3 — One electorate, five verdicts (the snack vote)",1,single-race,9,STAR,LH-only
+LH:ex04_olympics_1994,"Exercise 4 — Lillehammer 1994: nine judges, three skaters, two winners",1,single-race,9,STAR,LH-only
+LH:ex05_center_squeeze,Exercise 5 — The squeezed bridge-builder (IRV vs STAR),1,single-race,9,STAR,LH-only
+LH:ex06_bullet_backfire,Exercise 6 — Bullet voting backfires: the strategic ballots,1,single-race,9,STAR,LH-only
+LH:ex06_bullet_honest,Exercise 6 — Bullet voting backfires: the honest ballots,1,single-race,9,STAR,LH-only
+LH:ex07_vanishing_votes,Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill),1,single-race,9,STAR,LH-only
+LH:ex08_minimal_reversal_2c,"Exercise 8 — a smallest runoff reversal (sample solution, two candidates)",1,single-race,3,STAR,LH-only
+LH:ex08_minimal_reversal_3c,"Exercise 8 — a small runoff reversal (sample solution, three candidates)",1,single-race,5,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
@@ -162,6 +170,7 @@ LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes
 LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only
 LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still wins),1,single-race,34,STAR,LH-only
 LH:monotonicity_star_before,Monotonicity — STAR counterpart (BEFORE — X wins),1,single-race,34,STAR,LH-only
+LH:omr_opposition_decides,Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample),1,single-race,100,IRV,LH-only
 LH:options_examples,Display-options reference — every reporting toggle (STAR),1,single-race,100,STAR,LH-only
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
