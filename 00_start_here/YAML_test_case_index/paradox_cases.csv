@@ -1,4 +1,5 @@
 paradox,kind,case_title,method,expected_winners,bv_test_id,bv_election_id,yaml_path
+Condorcet winner paradox,Simple,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
 Condorcet winner paradox,Simple,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),RCV_IRV,Left,,,method_comparisons/center_squeeze/center_squeeze_irv.yaml
 Condorcet winner paradox,Simple,Center squeeze — STAR elects the consensus (Center),STAR,Center,,,method_comparisons/center_squeeze/center_squeeze_star.yaml
 Condorcet winner paradox,Simple,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),STAR,Green,,,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml
@@ -116,6 +117,8 @@ Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independen
 Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml
 Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml
 Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/clone_independence/clone_teaming_02_post.yaml
+Favorite betrayal,Conditional,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
+Favorite betrayal,Conditional,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,STAR,Bluebell,BV2207,b6xrdr,01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 Favorite betrayal,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_irv.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — STAR: also Bruno,STAR,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml

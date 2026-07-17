@@ -1,0 +1,32 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 57 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Aster, Bluebell, Clover
+     9 × Aster=Bluebell > Clover      (5, 5, 0)
+     6 × Aster > Bluebell=Clover      (5, 0, 0)
+    24 × Bluebell > Aster=Clover      (0, 1, 0)
+    18 × Clover > Aster=Bluebell      (0, 0, 4)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Bluebell  beats Aster      24 –  6
+   Clover    beats Aster      18 – 15
+   Bluebell  beats Clover     33 – 18
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+             |    Aster     |  Bluebell   |   Clover    |
+---------------------------------------------------------
+     Aster > |     ---      | 6 - 27 - 24 |15 - 24 - 18 |
+  Bluebell > | 24 - 27 -  6 |    ---      |33 -  6 - 18 |
+    Clover > | 18 - 24 - 15 |18 -  6 - 33 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Bluebell   2–0–0         2     +33  Clover, Aster
+    2  Clover     1–1–0         1     -12  Aster
+    3  Aster      0–2–0         0     -21  —
+
+Winner — Ranked Robin (RCV-RR): Bluebell
+   beats every opponent head-to-head — the Condorcet winner.

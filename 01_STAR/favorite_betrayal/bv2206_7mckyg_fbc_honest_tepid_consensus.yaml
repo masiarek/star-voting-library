@@ -1,0 +1,49 @@
+election_title: "Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff"
+bv_test_id: BV2206
+bv_election_id: 7mckyg
+bv_results_url: https://bettervoting.com/7mckyg/results
+paradoxes: [condorcet-winner, favorite-betrayal]
+
+scenario_description: |-
+  Honest ballots — half 1 of the repo's worked STAR favorite-betrayal
+  pair (the rare construction favorite_betrayal_voting_301.md describes:
+  STAR's FBC leak lives in the runoff, because scores pick the
+  FINALISTS). A garden club of 57 picks the town flower. Nine voters
+  love Aster and Bluebell equally (5,5); six back Aster alone (5); a
+  broad, TEPID twenty-four give Bluebell a shrug of support (1); a solid
+  eighteen-voter bloc backs Clover (4). Bluebell is the Condorcet winner
+  — she beats Aster 24-6 and Clover 33-18 head-to-head — but her tepid
+  totals leave her THIRD in the score round (Aster 75, Clover 72,
+  Bluebell 69), three points shy of the runoff. Aster-vs-Clover goes to
+  Clover, 18-15 with 24 Equal Support. STAR elects Clover while the
+  compromise a majority prefers stands outside the door. Half 2
+  (bv2207_b6xrdr_fbc_betrayal_pays.yaml) shows the nine Aster-fans
+  fixing this by DEMOTING their favorite — they cannot fix it any other
+  way, because they already score Bluebell 5 (equal-top is free in STAR,
+  and here it is not enough).
+  Live on BetterVoting (Test ID BV2206): https://bettervoting.com/7mckyg
+  Live results: https://bettervoting.com/7mckyg/results (BV agrees:
+  Clover, no tiebreaks).
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Aster,Bluebell,Clover
+  9: 5,5,0
+  6: 5,0,0
+  24: 0,1,0
+  18: 0,0,4
+expected_winners:
+  - Clover
+
+# file: bv2206_7mckyg_fbc_honest_tepid_consensus.yaml

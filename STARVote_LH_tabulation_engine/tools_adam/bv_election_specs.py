@@ -3047,4 +3047,87 @@ _STV_ENDGAME_PROBES = [
 # CLOSED; case folder: 06_Other/STV/bv_stv_sole_survivor_crash/ (evidence
 # table + ready-to-file issue). Do NOT re-run these specs (permanent dupes).
 
-ELECTIONS: list = []   # BV2203-2205 (gvtg2h/39py93/8xwx43) created 2026-07-17 — reset to safe empty state
+# --- BV2206-2207 — favorite betrayal in STAR, the worked pair -----------------
+# The rare construction favorite_betrayal_voting_301.md describes but never
+# shows: STAR's FBC leak lives in the runoff (scores pick the FINALISTS), and
+# here the leak is real. 57 voters, cast Aster/Bluebell/Clover:
+#   9x (Aster 5, Bluebell 5)   the betrayers-to-be: true pref Aster>Bluebell>Clover,
+#                              already equal-topping Bluebell — NO room to raise her
+#   6x (Aster 5)               Aster-only fans
+#  24x (Bluebell 1)            the tepid consensus: broad, feeble Bluebell support
+#  18x (Clover 4)              the Clover bloc
+# Bluebell is the CONDORCET winner (beats Aster 24-6, Clover 33-18) but scores
+# 3rd (75/72/69) — honest runoff Aster-vs-Clover, Clover wins 18-15. If the 9
+# demote Aster 5->4 (below Bluebell — the betrayal), Aster falls to 66, the
+# runoff becomes Clover-vs-Bluebell, and Bluebell wins it 33-18. Outcome for
+# the 9: Clover (their 0) -> Bluebell (their 5). Equal-top could NOT save them
+# (Bluebell already at 5); only strict demotion works. Knife-edge: it takes
+# >=7 of the 9 coordinating (6 ties Aster with Bluebell at 69; <=5 changes
+# nothing) — the fragility the 301 page claims, demonstrated by construction.
+_FBC_CANDS = ["Aster", "Bluebell", "Clover"]
+_FBC_HONEST = _expand([(9, [5, 5, 0]), (6, [5, 0, 0]), (24, [0, 1, 0]), (18, [0, 0, 4])])
+_FBC_BETRAY = _expand([(9, [4, 5, 0]), (6, [5, 0, 0]), (24, [0, 1, 0]), (18, [0, 0, 4])])
+
+_FBC_SRC = ("From the STAR education repo (github.com/masiarek/star-voting-library, "
+            "01_STAR/favorite_betrayal/) — the worked favorite-betrayal pair behind "
+            "favorite_betrayal_voting_301.md. ")
+
+_FBC_PAIR = [
+    {
+        "test_id": "BV2206",
+        "title": "Favorite betrayal in STAR, 1 of 2 — honest ballots: the tepid consensus misses the runoff",
+        "description": (_FBC_SRC +
+                        "Honest ballots. 57 voters: 9x(Aster 5, Bluebell 5), "
+                        "6x(Aster 5), 24x(Bluebell 1), 18x(Clover 4). Bluebell is the "
+                        "Condorcet winner — beats Aster 24-6 and Clover 33-18 head-to-"
+                        "head — but her support is broad and TEPID (twenty-four 1s), "
+                        "so the score round reads Aster 75, Clover 72, Bluebell 69 and "
+                        "she misses the runoff by three points. Aster-vs-Clover goes to "
+                        "Clover 18-15 (24 Equal Support). STAR elects Clover; the "
+                        "compromise everyone prefers is standing outside the door. The "
+                        "companion election (2 of 2) shows the nine Aster-fans fixing "
+                        "this by DEMOTING their favorite — the favorite-betrayal "
+                        "construction STAR's runoff makes possible in rare, knife-edge "
+                        "electorates. LH-verified."),
+        "races": [
+            {"title": "Town flower — STAR (honest ballots)", "method": "STAR",
+             "num_winners": 1, "candidates": _FBC_CANDS, "ballots": _FBC_HONEST},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Clover (scores 75/72/69; runoff Clover 18 - Aster 15, "
+                    "ES 24). Bluebell is the un-elected Condorcet winner. "
+                    "Test ID BV2206.",
+    },
+    {
+        "test_id": "BV2207",
+        "title": "Favorite betrayal in STAR, 2 of 2 — nine voters demote their favorite and it pays",
+        "description": (_FBC_SRC +
+                        "The betrayal. Same 57 voters as election 1 of 2, except the "
+                        "nine Aster-fans now score Aster 4 instead of 5 — strictly "
+                        "below Bluebell on their own ballots. They could NOT fix the "
+                        "result by raising Bluebell (she was already at 5 — equal-top "
+                        "was free and insufficient); the only move left was demoting "
+                        "their true favorite. Scores become Clover 72, Bluebell 69, "
+                        "Aster 66: the runoff is now Clover-vs-Bluebell, and the "
+                        "Condorcet winner Bluebell takes it 33-18. The nine turned "
+                        "their outcome from Clover (their 0) into Bluebell (their 5) "
+                        "by betraying Aster — a real STAR favorite-betrayal failure, "
+                        "of the fragile kind: it needs at least 7 of the 9 to "
+                        "coordinate (6 betrayers tie Aster and Bluebell at 69; 5 or "
+                        "fewer changes nothing), near-perfect knowledge of the "
+                        "standings, and a 3-point knife-edge. LH-verified."),
+        "races": [
+            {"title": "Town flower — STAR (nine betray their favorite)", "method": "STAR",
+             "num_winners": 1, "candidates": _FBC_CANDS, "ballots": _FBC_BETRAY},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Bluebell (scores 72/69/66; runoff Bluebell 33 - Clover "
+                    "18, ES 6). Test ID BV2207.",
+    },
+]
+
+# RESULTS (2026-07-17): BV2206 -> 7mckyg (Clover), BV2207 -> b6xrdr (Bluebell)
+# — BV agrees with LH on both halves, no tiebreaks. Case folder:
+# 01_STAR/favorite_betrayal/. Do NOT re-run (permanent dupes).
+
+ELECTIONS: list = []   # BV2203-2207 created 2026-07-17 — reset to safe empty state

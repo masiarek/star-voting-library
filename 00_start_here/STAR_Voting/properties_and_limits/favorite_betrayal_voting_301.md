@@ -106,6 +106,7 @@ So instead of quoting a number we can't defend, we **measured** FBC directly —
 - **Pure Score voting PASSES FBC.** You can always give your favorite a 5; since the winner is just the highest total, maxing your favorite can never hurt you.
 - But pure Score has a different weakness: **exaggeration** ("I'll give my favorite 5 and everyone else 0 to inflate them"). That distorts results.
 - **STAR adds the automatic runoff to neutralize that exaggeration.** And it works — but the runoff is *also* what introduces the sliver of FBC vulnerability, because now your scores can change *which two candidates are finalists*, and in rare, delicately balanced cases moving your favorite's score can change the finalist pairing in a way that helps you.
+- **This repo has that rare case worked, live, with numbers:** [the favorite-betrayal pair](../../../01_STAR/favorite_betrayal/README.md) (BV2206/BV2207) — a 57-voter electorate where the Condorcet-winning compromise misses the runoff by 3 points, the nine double-fans have *already* equal-topped her (so raising her is impossible), and demoting their favorite 5 → 4 flips the finalist pairing and pays. It also demonstrates the fragility claim by construction: the betrayal needs at least 7 of the 9 coordinating (6 produces a finalist tie; 5 or fewer does nothing).
 
 So STAR's FBC leak is a **deliberate trade**: it gives up a sliver of FBC to buy a genuine majority finish and immunity to score-exaggeration.
 
@@ -187,6 +188,7 @@ The claim in the wild is rarely a calm question; it's an argument. So here's the
 ---
 
 ## Cross-references
+- **[The worked STAR favorite-betrayal pair](../../../01_STAR/favorite_betrayal/README.md)** — BV2206 (honest: the tepid Condorcet winner misses the runoff) / BV2207 (nine voters demote their favorite and it pays), live on BetterVoting and LH-verified. The numeric backing for §5's "the leak is the runoff."
 - Slide 4 in [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
 - [`are_equal_score_votes_discounted.md`](../reference/are_equal_score_votes_discounted.md) — the runoff / Equal-Support sibling of this concede-then-reframe argument.
 - [`LINKS.md`](../../LINKS.md) → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.

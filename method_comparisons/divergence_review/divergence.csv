@@ -82,6 +82,7 @@ APPROVAL_OR_MINOR,01_STAR/exercises/ex04_olympics_1994.yaml,3,9,Baiul,Baiul,Baiu
 APPROVAL_OR_MINOR,01_STAR/exercises/ex06_bullet_backfire.yaml,3,9,Cash,Cash,Cash,Cash,Cash,Ari,Cash,Cash,Cash,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/exercises/ex08_minimal_reversal_2c.yaml,2,3,A,A,A,A,A,B,B,A,A,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/exercises/ex08_minimal_reversal_3c.yaml,3,5,A,A,A,A,A,B,B,A,A,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml,3,57,Bluebell,Bluebell,Bluebell,Bluebell,Bluebell,Clover,Clover,Bluebell,Bluebell,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml,3,5,Ada,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml,3,3,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/runoff_overturns_leader/01b_c3_b9_overturn-holds-at-scale.yaml,3,9,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
@@ -141,6 +142,7 @@ IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,
 IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_combined.yaml,5,18,Carmen,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,18,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_east.yaml,5,9,Avery,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,9,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_west.yaml,5,9,Avery,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,9,False,False,False
+IRV_DIFFERS_ARTIFACT,01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml,3,57,Clover,Bluebell,Bluebell,Bluebell,Bluebell,Clover,Aster,Bluebell,Bluebell,9,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml,3,5,Ann,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True

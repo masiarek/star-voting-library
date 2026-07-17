@@ -1,0 +1,52 @@
+election_title: "Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays"
+bv_test_id: BV2207
+bv_election_id: b6xrdr
+bv_results_url: https://bettervoting.com/b6xrdr/results
+paradoxes: [favorite-betrayal]
+
+scenario_description: |-
+  The betrayal — half 2 of the repo's worked STAR favorite-betrayal
+  pair. Same 57 voters as half 1
+  (bv2206_7mckyg_fbc_honest_tepid_consensus.yaml), except the nine
+  Aster-fans now score Aster 4 instead of 5 — strictly below Bluebell on
+  their own ballots. Note what they could NOT do: raise Bluebell. She
+  was already at 5 — STAR let them equal-top the compromise for free,
+  and it wasn't enough, because the problem was Aster's own score total
+  keeping Bluebell OUT of the runoff. Demoting him is the only move
+  left, and it is a true favorite betrayal (scoring your favorite below
+  another candidate). Scores become Clover 72, Bluebell 69, Aster 66 —
+  the runoff flips from Aster-vs-Clover to Clover-vs-Bluebell, and the
+  Condorcet winner Bluebell takes it 33-18. The nine turned their
+  outcome from Clover (their 0) into Bluebell (their 5). The knife-edge
+  that makes it a lab specimen, not a strategy: it needs AT LEAST 7 of
+  the 9 to coordinate (6 betrayers leave Aster and Bluebell tied at 69
+  for the second runoff seat; 5 or fewer changes nothing), plus exact
+  knowledge of a 3-point standings gap. This is the ~2% of STAR
+  betrayals that pay — the other ~98% backfire (see
+  favorite_betrayal_voting_301.md and 06_Other/simulations/).
+  Live on BetterVoting (Test ID BV2207): https://bettervoting.com/b6xrdr
+  Live results: https://bettervoting.com/b6xrdr/results (BV agrees:
+  Bluebell, no tiebreaks).
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Aster,Bluebell,Clover
+  9: 4,5,0
+  6: 5,0,0
+  24: 0,1,0
+  18: 0,0,4
+expected_winners:
+  - Bluebell
+
+# file: bv2207_b6xrdr_fbc_betrayal_pays.yaml

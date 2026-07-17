@@ -1,0 +1,32 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff
+ Tabulating 57 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Aster, Bluebell, Clover
+     9 ×   Aster > Bluebell      (5, 5, 0)
+     6 ×   Aster      (5, 0, 0)
+    24 ×   Bluebell      (0, 1, 0)
+    18 ×   Clover      (0, 0, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bluebell          24  Hopeful
+Clover            18  Hopeful
+Aster             15  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bluebell          33  Elected
+Clover            18  Rejected
+Aster              0  Rejected
+Blank Votes        6  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bluebell
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

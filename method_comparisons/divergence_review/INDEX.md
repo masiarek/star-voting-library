@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **175** single-winner STAR elections (skipped 95 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **100** (57%) diverge from STAR under at least one method; **75** agree across the board.
+- Scanned **177** single-winner STAR elections (skipped 95 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **102** (58%) diverge from STAR under at least one method; **75** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 21 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
-| IRV_DIFFERS_ARTIFACT | 14 |
+| IRV_DIFFERS_ARTIFACT | 15 |
 | CYCLE_OR_THREE_WAY | 25 |
-| APPROVAL_OR_MINOR | 37 |
+| APPROVAL_OR_MINOR | 38 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (96 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (98 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 19
 
@@ -84,7 +84,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
 
-### IRV_DIFFERS_ARTIFACT — 14
+### IRV_DIFFERS_ARTIFACT — 15
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -102,6 +102,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     _flags: 9 tied-score ballot(s)_
 - **[ex01_district_west](cases/IRV_DIFFERS_ARTIFACT/ex01_district_west.md)** — `01_STAR/exercises/ex01_district_west.yaml` (5c/9b)  
     STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
+    _flags: 9 tied-score ballot(s)_
+- **[bv2206_7mckyg_fbc_honest_tepid_consensus](cases/IRV_DIFFERS_ARTIFACT/bv2206_7mckyg_fbc_honest_tepid_consensus.md)** — `01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml` (3c/57b)  
+    STAR=**Clover** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Aster · Condorcet=Bluebell  
     _flags: 9 tied-score ballot(s)_
 - **[bv95b_7pdq3r_favorite_loses_two_rivals](cases/IRV_DIFFERS_ARTIFACT/bv95b_7pdq3r_favorite_loses_two_rivals.md)** — `01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml` (3c/5b)  
     STAR=**Bruno** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
@@ -185,7 +188,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
 
-### APPROVAL_OR_MINOR — 37
+### APPROVAL_OR_MINOR — 38
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -206,6 +209,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=B · Condorcet=A
 - **[ex08_minimal_reversal_3c](cases/APPROVAL_OR_MINOR/ex08_minimal_reversal_3c.md)** — `01_STAR/exercises/ex08_minimal_reversal_3c.yaml` (3c/5b)  
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=B · Condorcet=A
+- **[bv2207_b6xrdr_fbc_betrayal_pays](cases/APPROVAL_OR_MINOR/bv2207_b6xrdr_fbc_betrayal_pays.md)** — `01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml` (3c/57b)  
+    STAR=**Bluebell** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Clover · Condorcet=Bluebell
 - **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
     _flags: 2 tied-score ballot(s)_

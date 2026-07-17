@@ -65,6 +65,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
+7mckyg,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,1,single-race,57,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 8xwx43,"BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters)",1,single-race,6,STV,BV
@@ -223,6 +224,7 @@ LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single
 LH:vote_splitting_scenario1_spoiler,Vote splitting — scenario 1 of 3 — the spoiler strikes,1,single-race,90,STAR,LH-only
 LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway),1,single-race,36,STAR,LH-only
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
+b6xrdr,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,1,single-race,57,STAR,BV
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 bj8dfc,"BV2202 — The Transfer Machine, fully ranked — a book club buys two novels by STV",1,single-race,9,STV,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
