@@ -83,6 +83,6 @@ Total score:  Cal 15 ← winner · Bob 14 · Dee 11 · Ann 10   (pref_voting ✓
 
 ---
 
-*Tabulated by [`06_Other/Range/Range_tabulation_engine/range_tabulation.py`](../../06_Other/Range/Range_tabulation_engine/range_tabulation.py) (pref_voting `score_voting` + hand-sum cross-check). The full per-election `_RANGE_tabulated.txt` mirrors live in [`black_curtain_tabulated/`](black_curtain_tabulated/).*
+*Tabulated by [`06_Other/Range/Range_tabulation_engine/range_tabulation.py`](../../06_Other/Range/Range_tabulation_engine/range_tabulation.py) (pref_voting `score_voting` + hand-sum cross-check). The full per-election `_RANGE_tabulated.txt` mirrors live in `black_curtain_tabulated/`.*
 
 # file: black_curtain_range.md

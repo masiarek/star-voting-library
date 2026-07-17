@@ -36,7 +36,7 @@ The seven races use three ballot forms derived from one set of preferences — a
 
 | Race | YAML | `_tabulated` mirror |
 |---|---|---|
-| STAR / RCV-IRV / Ranked Robin / STV | identical ballots to BV2176 — [star](bv2176_p8dp28_star.yaml) · [irv](bv2176_p8dp28_irv.yaml) · [ranked_robin](bv2176_p8dp28_ranked_robin.yaml) | [see BV2176's mirrors](postit_rcv_example_tabulated/) |
+| STAR / RCV-IRV / Ranked Robin / STV | identical ballots to BV2176 — [star](bv2176_p8dp28_star.yaml) · [irv](bv2176_p8dp28_irv.yaml) · [ranked_robin](bv2176_p8dp28_ranked_robin.yaml) | in `postit_rcv_example_tabulated/` |
 | Approval | [bv2177_v8r66y_approval.yaml](bv2177_v8r66y_approval.yaml) | [txt](postit_rcv_example_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
 | Choose-One | [bv2177_v8r66y_plurality.yaml](bv2177_v8r66y_plurality.yaml) | [txt](postit_rcv_example_tabulated/bv2177_v8r66y_plurality_tabulated.txt) |
 | STAR-PR (1 seat) | BV-only (LH's allocated requires ≥ 2 seats); scoring round = the STAR yaml's | — |

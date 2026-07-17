@@ -21,4 +21,4 @@ Read them in order — the *how much vs how many* arc, smallest reversal first:
 
 ↔ **BV QA tracker:** this set is the runnable home for **BV90** (scoring/runoff divergence) and **BV205** (top-scoring candidate ≠ winner) — the "Runoff Reversal" scenarios.
 
-Each case is a trio — the two-view `.md` lesson, the tabulatable `.yaml`, and the frozen `_bv_export.json` — with the BetterVoting screenshots in [`img/`](img/) (prefixed by the election's `bvid`). The auto-generated reader pages and full `_tabulated` reports live in `runoff_reversal_bv_cases_pages/` and `runoff_reversal_bv_cases_tabulated/`.
+Each case is a trio — the two-view `.md` lesson, the tabulatable `.yaml`, and the frozen `_bv_export.json` — with the BetterVoting screenshots in `img/` (prefixed by the election's `bvid`). The auto-generated reader pages and full `_tabulated` reports live in `runoff_reversal_bv_cases_pages/` and `runoff_reversal_bv_cases_tabulated/`.

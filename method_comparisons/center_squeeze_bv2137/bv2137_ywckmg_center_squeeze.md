@@ -53,7 +53,7 @@ Winner — Ranked Robin (RCV-RR): Anderson
    beats every opponent head-to-head — the Condorcet winner.
 ```
 
-STAR agrees with Ranked Robin (not IRV): Anderson tops the score round with 340 and wins the automatic runoff. Full detail in the [`_tabulated` mirror](center_squeeze_bv2137_tabulated/).
+STAR agrees with Ranked Robin (not IRV): Anderson tops the score round with 340 and wins the automatic runoff. Full detail in the [`_tabulated` mirror](center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_tabulated.txt).
 
 ## The rank→score conversion (STAR race)
 

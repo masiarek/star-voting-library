@@ -24,7 +24,7 @@ The majority is 59%, the minority 41% — so a fair 3-seat body "should" be roug
 | **Delegates** | [STV](pets_gov_stv.yaml) | 3 | **Dog, Bird, Cat** | proportional — minority seated |
 | **Neighborhood Reps** | [Bloc Plurality (SNTV)](pets_gov_bloc_plurality.yaml) | 2 | **Dog, Bird** | concentrated votes → minority seated |
 
-Every winner is tabulated by the LH engine (`starvote_larry_hastings.py`); mirrors are in [`pets_governance_tabulated/`](pets_governance_tabulated/).
+Every winner is tabulated by the LH engine (`starvote_larry_hastings.py`); mirrors are in `pets_governance_tabulated/`.
 
 ## The one lesson
 

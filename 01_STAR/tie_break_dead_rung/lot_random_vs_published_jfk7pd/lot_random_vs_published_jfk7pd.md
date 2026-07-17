@@ -178,7 +178,7 @@ Winner — STAR Voting Method (single winner)
  Ben
 ```
 
-The complete audit copy is regenerated into [`lot_random_vs_published_jfk7pd_tabulated/`](lot_random_vs_published_jfk7pd_tabulated).
+The complete audit copy is regenerated into `lot_random_vs_published_jfk7pd_tabulated/` — [BV order](lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_bv_order_tabulated.txt) · [published order](lot_random_vs_published_jfk7pd_tabulated/lot_random_vs_published_jfk7pd_published_order_tabulated.txt).
 
 ---
 
