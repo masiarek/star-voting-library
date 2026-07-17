@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**277 election files** (242 single-winner, 35 multi-winner) across 15 method(s).
+**278 election files** (243 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -25,7 +25,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | BLOC STAR | 13 |
 | IRV | 16 |
 | PLURALITY | 20 |
-| RANGE | 1 |
+| RANGE | 2 |
 | RR | 1 |
 
 ## STAR  (150)
@@ -368,11 +368,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`mmp_limited_voting`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_limited_voting.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1 → _Ada, Ben, Uma_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_limited_voting.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_sntv.yaml) |
 
-## RANGE  (1)
+## RANGE  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`range_101_c3_b5`](../../06_Other/Range/Range_pages/range_101_c3_b5.md) | `06_Other/Range/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) |
+| [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) | `06_Other/Range/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | — |
 
 ## RR  (1)
 

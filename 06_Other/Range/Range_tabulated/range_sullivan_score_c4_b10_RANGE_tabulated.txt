@@ -1,0 +1,43 @@
+--- Range / Score Voting (single winner) ---
+  Range / Score Voting — Sullivan's Example 5.2 (0–10 scale)
+ Tabulating 10 ballots on a 0–10 scale (range/score: highest total wins, no runoff).
+
+[Scenario]
+  A worked Score (Range) election on a 0–10 scale, adapted from Brendan W.
+  Sullivan, "An Introduction to the Math of Voting Methods" (2022), Example 5.2
+  (used here for method comparison, with attribution). Ten voters grade four
+  candidates A, B, C, D from 0 (worst) to 10 (best); Range voting sums the grades
+  and the highest total wins. Totals: C 70, A 61, D 58, B 47 — C wins, powered by
+  many 10s (broad AND strong support). The teaching value is the comparison across
+  cardinal methods on ONE electorate: the mean (Range) winner is C; the median
+  (greatest-median) winner is also C (median 8.5); STAR agrees too (C leads scoring
+  70 and wins the runoff over A, 6–3); but Approval — a 1-bit cardinal ballot —
+  picks A in Sullivan's companion Example 5.1 (A has 8 approvals to C's 7). Same
+  voters, and the ballot's resolution changes the winner. Tabulated by the range
+  engine (pref_voting score_voting, cross-checked against a hand sum).
+  Source: Brendan W. Sullivan, An Introduction to the Math of Voting Methods
+  (2022), ISBN 978-1-958469-03-3.
+
+Ballots:
+  A, B, C, D
+  10, 0, 0, 0
+  5, 7, 10, 8
+  0, 4, 10, 8
+  7, 7, 1, 10
+  7, 9, 7, 4
+  6, 6, 9, 4
+  8, 3, 10, 3
+  0, 8, 5, 5
+  8, 0, 10, 6
+  10, 3, 8, 10
+
+Total score (sum of all grades):
+  C              70  ← winner
+  A              61
+  D              58
+  B              47
+
+Cross-check — pref_voting score_voting: C  (✓ agrees with the hand count)
+
+Winner — Range / Score Voting (single winner)
+  C

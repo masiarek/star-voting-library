@@ -41,9 +41,37 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 
 **The one-line summary:** Range asks the richest question, but rewards exaggeration; **STAR keeps Range's expressive ballot and adds a runoff** to make honesty safer. Which trade-off you want is the whole debate.
 
+## A worked comparison — one electorate, four cardinal methods
+
+*Ballot data adapted, with attribution, from Brendan W. Sullivan, [*An Introduction to the Math of Voting Methods*](https://books.google.com/books/about/An_Introduction_to_the_Math_of_Voting_Me.html?id=sohfzwEACAAJ) (2022, ISBN 978-1-958469-03-3), Examples 5.1–5.3. The numbers are reused for method comparison; all commentary below is original.*
+
+Ten voters grade four candidates **A, B, C, D** on a **0–10** scale. Range just sums the grades:
+
+```text
+Total score (sum of all grades):
+  C              70  ← winner
+  A              61
+  D              58
+  B              47
+```
+
+**C wins with 70** — not because C is everyone's favorite, but because C collected many **10s**: support that's both *broad* and *strong*. Now hold those exact ballots fixed and change only the **method**:
+
+| Method (same ballots) | Winner | Why |
+|---|---|---|
+| **Range / Score** (mean) | **C** — 70 pts | highest total |
+| **Score, median variant** (greatest-median) | **C** — median 8.5 | half the electorate gave C 8.5 or higher |
+| **STAR** (score + automatic runoff) | **C** | C leads scoring at 70, then wins the runoff over A, 6–3 |
+| **Approval** (a 1-bit score) | **A** | in Sullivan's companion Example 5.1, A has 8 approvals to C's 7 |
+
+The lesson: **the cardinal ballot's *resolution* can change the winner.** Collapse the 0–10 scale down to a single approve / don't-approve bit and **A** — with more *approvers* but fewer *enthusiasts* — overtakes C. Give voters room to say *how much*, and C's wall of 10s wins under Range, median-Range, and STAR alike. (Mean and median happen to agree here, but they needn't — some Score variants use the median precisely because a few extreme scores can't drag it the way they drag an average. Medians: A 7.0, B 5.0, **C 8.5**, D 5.5.)
+
+**Run it:** [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) ([tabulated](../../06_Other/Range/Range_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt)) — the range engine (pref_voting `score_voting`) confirms C by both the hand sum and the median cross-check. STAR on the same ballots (`maximum_score=10`) also elects C.
+
 ## Ballot examples
 
 - [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
+- [`06_Other/Range/range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) — Sullivan's Example 5.2 (0–10, four candidates; the worked comparison above).
 - **Black Curtain, read as Range** — the four Black Curtain elections tabulated by the range engine: [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md). Range elects the broadly-liked candidate (Bob, Cal, Ann…) where STAR's runoff hands the seat to the majority's favorite — the sharpest illustration of the Range-vs-STAR trade-off.
 
 ## Links
