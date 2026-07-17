@@ -1,0 +1,28 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 1 — Two districts, one mayor: the COMBINED city
+ Tabulating 18 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Avery, Blake, Carmen, Diego, Elena
+     5 ×   Elena > Carmen > Avery > Blake      (3, 3, 4, 0, 5)
+     3 ×   Avery > Blake > Carmen      (5, 5, 3, 0, 0)
+     1 ×   Avery > Blake > Carmen      (5, 3, 3, 0, 0)
+     5 ×   Elena > Carmen > Avery > Diego      (3, 0, 4, 3, 5)
+     3 ×   Avery > Diego > Carmen      (5, 0, 3, 5, 0)
+     1 ×   Avery > Carmen > Diego      (5, 0, 3, 3, 0)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Elena             10  Elected
+Avery              8  Rejected
+Carmen             0  Rejected
+Blake              0  Rejected
+Diego              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Elena
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

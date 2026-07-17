@@ -1,0 +1,45 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 18 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Avery, Blake, Carmen, Diego, Elena
+     5 × Elena > Carmen > Avery=Blake > Diego      (3, 3, 4, 0, 5)
+     3 × Avery=Blake > Carmen > Diego=Elena      (5, 5, 3, 0, 0)
+     1 × Avery > Blake=Carmen > Diego=Elena      (5, 3, 3, 0, 0)
+     5 × Elena > Carmen > Avery=Diego > Blake      (3, 0, 4, 3, 5)
+     3 × Avery=Diego > Carmen > Blake=Elena      (5, 0, 3, 5, 0)
+     1 × Avery > Carmen=Diego > Blake=Elena      (5, 0, 3, 3, 0)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Avery   beats Blake    10 –  0
+   Carmen  beats Avery    10 –  8
+   Avery   beats Diego    10 –  0
+   Elena   beats Avery    10 –  8
+   Carmen  beats Blake    14 –  3
+   Blake   ties  Diego     9 –  9
+   Elena   beats Blake    10 –  4
+   Carmen  beats Diego    14 –  3
+   Elena   beats Carmen   10 –  8
+   Elena   beats Diego    10 –  4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |    Avery     |   Blake     |   Carmen    |   Diego     |   Elena     |
+-----------------------------------------------------------------------------------
+   Avery > |     ---      |10 -  8 -  0 | 8 -  0 - 10 |10 -  8 -  0 | 8 -  0 - 10 |
+   Blake > |  0 -  8 - 10 |    ---      | 3 -  1 - 14 | 9 -  0 -  9 | 4 -  4 - 10 |
+  Carmen > | 10 -  0 -  8 |14 -  1 -  3 |    ---      |14 -  1 -  3 | 8 -  0 - 10 |
+   Diego > |  0 -  8 - 10 | 9 -  0 -  9 | 3 -  1 - 14 |    ---      | 4 -  4 - 10 |
+   Elena > | 10 -  0 -  8 |10 -  4 -  4 |10 -  0 -  8 |10 -  4 -  4 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Elena      4–0–0         4     +16  Carmen, Avery, Blake, Diego
+    2  Carmen     3–1–0         3     +22  Avery, Blake, Diego
+    3  Avery      2–2–0         2     +16  Blake, Diego
+    4  Blake      0–3–1       0.5     -27  —
+    5  Diego      0–3–1       0.5     -27  —
+
+Winner — Ranked Robin (RCV-RR): Elena
+   beats every opponent head-to-head — the Condorcet winner.

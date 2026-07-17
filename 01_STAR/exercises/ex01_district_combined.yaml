@@ -1,0 +1,51 @@
+election_title: "Exercise 1 — Two districts, one mayor: the COMBINED city"
+
+scenario_description: |-
+  All 18 ballots — West and East together. Both districts separately elect
+  Avery, but combined the runner-ups change: Blake (33) only exists in West and
+  Diego (33) only in East, while Carmen scores 32 in BOTH — so citywide it is
+  Avery 70 vs Carmen 64 in the runoff, and Carmen wins it 10-8 head-to-head.
+  STAR fails the CONSISTENCY criterion: winning every district does not
+  guarantee winning the whole. (Note this is NOT a summability failure — score
+  totals and the preference matrix still add across precincts; what you cannot
+  add is each district's declared winner.) Part 3 of 3 of the consistency
+  exercise (ex01_two_districts.md). Ballots adapted from a RangeVoting.org
+  example, posed as an exercise in Brendan W. Sullivan, "An Introduction to
+  the Math of Voting Methods" (2022), ch. 5.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Avery,Blake,Carmen,Diego,Elena
+  3,3,4,0,5 # 5 West voters: Elena first, Carmen second, Avery = Blake
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  5,5,3,0,0 # 3 West voters: Avery = Blake at the top, Carmen third
+  5,5,3,0,0
+  5,5,3,0,0
+  5,3,3,0,0 # 1 West voter: Avery over Blake
+  3,0,4,3,5 # 5 East voters: Elena first, Carmen second, Avery = Diego
+  3,0,4,3,5
+  3,0,4,3,5
+  3,0,4,3,5
+  3,0,4,3,5
+  5,0,3,5,0 # 3 East voters: Avery = Diego at the top, Carmen third
+  5,0,3,5,0
+  5,0,3,5,0
+  5,0,3,3,0 # 1 East voter: Avery over Diego
+expected_winners:
+  - Carmen
+
+# file: ex01_district_combined.yaml

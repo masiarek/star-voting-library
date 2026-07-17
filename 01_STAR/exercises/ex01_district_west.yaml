@@ -1,0 +1,39 @@
+election_title: "Exercise 1 — Two districts, one mayor: WEST district"
+
+scenario_description: |-
+  West District's nine ballots, tallied on their own. Scoring round: Avery 35,
+  Blake 33, Carmen 32, Elena 25, Diego 0 — Avery and Blake advance. Eight of
+  the nine ballots score the two finalists identically (Equal Support), and
+  the one decided voter prefers Avery. West's winner: Avery.
+  Part 1 of 3 of the consistency exercise (ex01_two_districts.md): East also
+  elects Avery, yet the combined city elects Carmen. Ballots adapted from a
+  RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
+  "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Avery,Blake,Carmen,Diego,Elena
+  3,3,4,0,5 # 5 West voters: Elena first, Carmen second, Avery = Blake
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  5,5,3,0,0 # 3 West voters: Avery = Blake at the top, Carmen third
+  5,5,3,0,0
+  5,5,3,0,0
+  5,3,3,0,0 # 1 West voter: Avery OVER Blake — the only decided runoff vote
+expected_winners:
+  - Avery
+
+# file: ex01_district_west.yaml

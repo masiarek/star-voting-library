@@ -1,0 +1,24 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 2 — The tenth ballot: Bella withdraws
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alex, Chris, Dana, Eli
+     4 ×   Dana > Chris > Alex      (3, 4, 5, 0)
+     3 ×   Eli > Alex      (3, 0, 0, 4)
+     2 ×   Eli > Chris > Alex      (3, 4, 0, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Eli                5  Elected
+Dana               4  Rejected
+Chris              0  Rejected
+Alex               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Eli
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -86,8 +86,15 @@
 ## 301.12 — Participation: can showing up ever hurt you?
 
 - **Objective:** the Participation criterion and the no-show / Twin paradoxes — "vote, it can only help your side" is a promise some methods structurally can't make.
-- **Material:** the [Participation topic hub](../topics/participation/) + the live pair [`method_comparisons/participation_no_show/`](../../method_comparisons/participation_no_show/); catalog: [no-show paradox](../voting_paradoxes/no_show.md).
+- **Material:** the [Participation topic hub](../topics/participation/) + the live pair [`method_comparisons/participation_no_show/`](../../method_comparisons/participation_no_show/); catalog: [no-show paradox](../voting_paradoxes/no_show.md); the rare STAR-side failure, as a predict-then-peek exercise: [The tenth ballot](../../01_STAR/exercises/ex02_tenth_ballot.md).
 - **The point:** the honest scorecard — only pure summation (Score/Approval) and Choose-One are immune; STAR's runoff costs it the formal guarantee too, just far more rarely than IRV's elimination machinery. Frame per [reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md).
+
+## 301.13 — Consistency: winning every district ≠ winning the whole
+
+- **Objective:** the consistency criterion (join-consistency / reinforcement) — if every district separately elects X, must the combined electorate? Point-summing rules must, by arithmetic; STAR (like RCV-IRV, top-two, and Condorcet methods) need not, because "who advances to the runoff" is not additive.
+- **Key terms:** consistency / reinforcement, runoff pairing, precinct-summable (the contrast).
+- **Material:** the predict-then-peek exercise [Two districts, one mayor](../../01_STAR/exercises/ex01_two_districts.md); contrast [STAR Is Summable](../STAR_Voting/properties_and_limits/STAR_summability.md) — the *tallies* add across precincts even though the *winner inference* doesn't.
+- **The point:** "she carried both districts and still lost" is a headline risk, not a tabulation risk — no one tallies a citywide seat district-by-district. Carry the worked answer.
 
 ---
 

@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**278 election files** (243 single-winner, 35 multi-winner) across 15 method(s).
+**284 election files** (249 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 150 |
+| STAR | 156 |
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 34 |
 | Approval | 10 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (150)
+## STAR  (156)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -69,6 +69,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vote_splitting_scenario3_outsider_wins`](../../01_STAR/_main/_main_pages/vote_splitting_scenario3_outsider_wins.md) | `01_STAR/_main/` | 1 | Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins) → _Vanilla_ | [`.yaml`](../../01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/abstain_bugs/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/abstain_bugs/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml) |
+| [`ex01_district_combined.yaml`](../../01_STAR/exercises/ex01_district_combined.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: the COMBINED city → _Carmen_ | — |
+| [`ex01_district_east.yaml`](../../01_STAR/exercises/ex01_district_east.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: EAST district → _Avery_ | — |
+| [`ex01_district_west.yaml`](../../01_STAR/exercises/ex01_district_west.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: WEST district → _Avery_ | — |
+| [`ex02_bella_exits.yaml`](../../01_STAR/exercises/ex02_bella_exits.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: Bella withdraws → _Chris_ | — |
+| [`ex02_nine_ballots.yaml`](../../01_STAR/exercises/ex02_nine_ballots.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: the nine counted ballots → _Alex_ | — |
+| [`ex02_tenth_ballot.yaml`](../../01_STAR/exercises/ex02_tenth_ballot.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: all ten ballots → _Chris_ | — |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |

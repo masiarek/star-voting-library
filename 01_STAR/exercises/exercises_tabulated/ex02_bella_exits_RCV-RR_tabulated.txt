@@ -1,0 +1,36 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 9 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alex, Chris, Dana, Eli
+     4 × Dana > Chris > Alex > Eli      (3, 4, 5, 0)
+     3 × Eli > Alex > Chris=Dana      (3, 0, 0, 4)
+     2 × Eli > Chris > Alex > Dana      (3, 4, 0, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Chris  beats Alex    6 – 3
+   Alex   beats Dana    5 – 4
+   Eli    beats Alex    5 – 4
+   Dana   beats Chris   4 – 2
+   Eli    beats Chris   5 – 4
+   Eli    beats Dana    5 – 4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |   Alex    |  Chris   |  Dana    |   Eli    |
+--------------------------------------------------------
+   Alex > |    ---    |3 - 0 - 6 |5 - 0 - 4 |4 - 0 - 5 |
+  Chris > | 6 - 0 - 3 |   ---    |2 - 3 - 4 |4 - 0 - 5 |
+   Dana > | 4 - 0 - 5 |4 - 3 - 2 |   ---    |4 - 0 - 5 |
+    Eli > | 5 - 0 - 4 |5 - 0 - 4 |5 - 0 - 4 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Eli        3–0–0         3      +3  Chris, Dana, Alex
+    2  Chris      1–2–0         1      +0  Alex
+    3  Dana       1–2–0         1      +0  Chris
+    4  Alex       1–2–0         1      -3  Dana
+
+Winner — Ranked Robin (RCV-RR): Eli
+   beats every opponent head-to-head — the Condorcet winner.

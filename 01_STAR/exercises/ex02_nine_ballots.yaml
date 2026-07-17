@@ -1,0 +1,39 @@
+election_title: "Exercise 2 — The tenth ballot: the nine counted ballots"
+
+scenario_description: |-
+  The base case: nine club ballots, five candidates. Scoring round: Alex 27,
+  Bella 25, Chris 24, Eli 22, Dana 20 — Alex and Bella advance, and Alex wins
+  the runoff 6-3. The exercise (ex02_tenth_ballot.md) then perturbs this
+  election twice: a forgotten tenth ballot whose FAVORITE is Alex flips the
+  win to Chris (a participation failure), and Bella withdrawing flips it to
+  Chris too (a runoff-slot spoiler). Ballots adapted from a RangeVoting.org
+  example, posed as an exercise in Brendan W. Sullivan, "An Introduction to
+  the Math of Voting Methods" (2022), ch. 5.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alex,Bella,Chris,Dana,Eli
+  3,2,4,5,0 # 4 voters: Dana first, Chris close second
+  3,2,4,5,0
+  3,2,4,5,0
+  3,2,4,5,0
+  3,5,0,0,4 # 3 voters: Bella first, Eli second
+  3,5,0,0,4
+  3,5,0,0,4
+  3,1,4,0,5 # 2 voters: Eli first, Chris second
+  3,1,4,0,5
+expected_winners:
+  - Alex
+
+# file: ex02_nine_ballots.yaml

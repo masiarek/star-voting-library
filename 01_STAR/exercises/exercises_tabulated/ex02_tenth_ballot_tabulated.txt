@@ -1,0 +1,142 @@
+======================================================================
+SOURCE FILE:     ex02_tenth_ballot.yaml
+TABULATED FILE:  ex02_tenth_ballot_tabulated.txt
+======================================================================
+
+election_title: "Exercise 2 — The tenth ballot: all ten ballots"
+
+scenario_description: |-
+  The same nine ballots plus the forgotten tenth — a voter whose favorite is
+  Alex (5), with Chris at 2 and everyone else at 0. The ballot ADDS more to
+  Alex's total than to anyone else's, yet it flips the win away from Alex:
+  scoring round Alex 32, Chris 26, Bella 25, Eli 22, Dana 20 — the extra 2
+  points lift Chris past Bella into the runoff, and Chris beats Alex
+  head-to-head 6-4. STAR fails the PARTICIPATION criterion: casting an honest
+  ballot can occasionally hurt your favorite (here, by changing WHO Alex has
+  to face). Part of the exercise ex02_tenth_ballot.md. Ballots adapted from a
+  RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
+  "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alex,Bella,Chris,Dana,Eli
+  3,2,4,5,0 # 4 voters: Dana first, Chris close second
+  3,2,4,5,0
+  3,2,4,5,0
+  3,2,4,5,0
+  3,5,0,0,4 # 3 voters: Bella first, Eli second
+  3,5,0,0,4
+  3,5,0,0,4
+  3,1,4,0,5 # 2 voters: Eli first, Chris second
+  3,1,4,0,5
+  5,0,2,0,0 # the forgotten TENTH ballot: Alex is this voter's favorite
+expected_winners:
+  - Chris
+
+# file: ex02_tenth_ballot.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 2 — The tenth ballot: all ten ballots ===
+  The same nine ballots plus the forgotten tenth — a voter whose favorite is
+  Alex (5), with Chris at 2 and everyone else at 0. The ballot ADDS more to
+  Alex's total than to anyone else's, yet it flips the win away from Alex:
+  scoring round Alex 32, Chris 26, Bella 25, Eli 22, Dana 20 — the extra 2
+  points lift Chris past Bella into the runoff, and Chris beats Alex
+  head-to-head 6-4. STAR fails the PARTICIPATION criterion: casting an honest
+  ballot can occasionally hurt your favorite (here, by changing WHO Alex has
+  to face). Part of the exercise ex02_tenth_ballot.md. Ballots adapted from a
+  RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
+  "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Alex   |   Bella   | * Chris   |    Dana   |    Eli    |
+-----------------------------------------------------------------------------
+      * Alex > |    ---     |7 - 0 - 3  |4 - 0 - 6  |6 - 0 - 4  |5 - 0 - 5  |
+       Bella > | 3 - 0 - 7  |   ---     |3 - 0 - 7  |5 - 1 - 4  |7 - 1 - 2  |
+     * Chris > | 6 - 0 - 4  |7 - 0 - 3  |   ---     |3 - 3 - 4  |5 - 0 - 5  |
+        Dana > | 4 - 0 - 6  |4 - 1 - 5  |4 - 3 - 3  |   ---     |4 - 1 - 5  |
+         Eli > | 5 - 0 - 5  |2 - 1 - 7  |5 - 0 - 5  |5 - 1 - 4  |   ---     |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Alex > Bella > Dana > Chris > Alex)
+
+[Divergence from STAR]
+  STAR                   = Chris
+  Choose-One (Plurality) = Dana   (differs from STAR)
+  RCV-IRV                = Bella   (differs from STAR)
+  Approval               = Alex   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: exercises_tabulated/ex02_tenth_ballot_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Alex)
+ - Runoff Round Winner   = (Chris)
+  Candidate Alex earned the highest total score, but
+  Candidate Chris won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 10 ballots.
+Count × Alex,Bella,Chris,Dana,Eli
+    4 ×    3,    2,    4,   5,  0
+    3 ×    3,    5,    0,   0,  4
+    2 ×    3,    1,    4,   0,  5
+    1 ×    5,    0,    2,   0,  0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alex       1  0  9  0  0  0  |    32   3.2
+Bella      3  0  0  4  2  1  |    25   2.5
+Chris      0  6  0  1  0  3  |    26   2.6
+Dana       4  0  0  0  0  6  |    20   2.0
+Eli        2  3  0  0  0  5  |    22   2.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alex          -- 32 -- First place
+   Chris         -- 26 -- Second place
+   Bella         -- 25
+   Eli           -- 22
+   Dana          -- 20
+ Alex and Chris advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Chris         -- 6 -- First place
+   Alex          -- 4
+   Equal Support -- 0
+ Chris wins.
+   Runoff math:
+     10  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     10  voters with a preference  (majority = 6)
+           Chris 6 (60%)  ·  Alex 4 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Chris
