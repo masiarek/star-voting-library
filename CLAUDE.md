@@ -181,7 +181,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   file's `# H1` (e.g. `# 01_STAR — single-winner STAR`). A folder may keep *secondary*
   docs under descriptive names (e.g. `README_larry_hastings.md`, `FORK_NOTES.md`), but
   the one overview is always `README.md`.
-- **The repo publishes as a searchable website** — <https://masiarek.github.io/YAML/>,
+- **The repo publishes as a searchable website** — <https://masiarek.github.io/star-voting-library/>,
   built by root `mkdocs.yml` (MkDocs Material + `mkdocs-same-dir`) straight from the
   repo's own Markdown (no `docs/` copy; `.yaml` / `_tabulated` files carried through)
   and deployed by `.github/workflows/docs.yml` on every push to master. Folder
@@ -379,8 +379,10 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    folder `README.md` table, and `build_divergence_index.py` if it diverges.
 8. **Verify + commit** (AI). The pre-commit hook runs the STAR suite + repo-hygiene;
    commit with a descriptive message. **Adam pushes** (the sandbox has no push
-   credentials — always hand Adam the `git push https://github.com/masiarek/YAML.git
-   master` line).
+   credentials — always hand Adam the `git push
+   https://github.com/masiarek/star-voting-library.git master` line). (The repo was
+   renamed from `masiarek/YAML` on 2026-07-16; old URLs redirect. NEVER create a new
+   repo named `YAML` — that would sever the redirects.)
 9. **Registry regenerates itself** (AI). `build_bv_registry.py` writes
    `BV_registry.md` + `bv_cases.csv` from the case's `bv_*` fields — that's the
    canonical tracker. **No Google-Sheet update is required for tabulation cases**

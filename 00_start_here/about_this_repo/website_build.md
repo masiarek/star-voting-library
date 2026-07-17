@@ -1,12 +1,12 @@
 # The website build — searchable pages from the same Markdown
 
-The whole repo publishes as a **searchable website** at **<https://masiarek.github.io/YAML/>** — every teaching page, glossary entry, and generated per-election page, with instant full-text search (the search box is the reason the site exists; GitHub's own rendering never gives readers one).
+The whole repo publishes as a **searchable website** at **<https://masiarek.github.io/star-voting-library/>** — every teaching page, glossary entry, and generated per-election page, with instant full-text search (the search box is the reason the site exists; GitHub's own rendering never gives readers one).
 
-There is **no separate docs source**. The site is built from the repo root itself ([`mkdocs.yml`](https://github.com/masiarek/YAML/blob/master/mkdocs.yml) + the `mkdocs-same-dir` plugin), so the same Markdown that GitHub renders is what the site serves — nothing is copied, nothing can drift. Non-Markdown files (`.yaml` sources, `_tabulated` `.txt` mirrors, images) are carried through unchanged, so "run this file" links keep working.
+There is **no separate docs source**. The site is built from the repo root itself ([`mkdocs.yml`](https://github.com/masiarek/star-voting-library/blob/master/mkdocs.yml) + the `mkdocs-same-dir` plugin), so the same Markdown that GitHub renders is what the site serves — nothing is copied, nothing can drift. Non-Markdown files (`.yaml` sources, `_tabulated` `.txt` mirrors, images) are carried through unchanged, so "run this file" links keep working.
 
 ## How it deploys
 
-[`.github/workflows/docs.yml`](https://github.com/masiarek/YAML/blob/master/.github/workflows/docs.yml) builds the site on every push to `master` and deploys it to GitHub Pages. **One-time setup** (repo admin): *Settings → Pages → Build and deployment → Source: **GitHub Actions***. After that it's fully automatic.
+[`.github/workflows/docs.yml`](https://github.com/masiarek/star-voting-library/blob/master/.github/workflows/docs.yml) builds the site on every push to `master` and deploys it to GitHub Pages. **One-time setup** (repo admin): *Settings → Pages → Build and deployment → Source: **GitHub Actions***. After that it's fully automatic.
 
 ## Local preview
 
@@ -29,6 +29,6 @@ uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" mkdocs serve
 - **Search index is ~6 MB** (≈700 pages). Fine over gzip; if it ever feels slow, the generated `*_pages` could be excluded from indexing (not from the site).
 - The 5 build warnings about `img/REPLACE_*.png` are the known screenshot placeholders in the Ranked Robin cases, not site breakage.
 
-## If the repo is renamed
+## The rename (2026-07-16)
 
-Renaming the GitHub repo (e.g. to `star-voting-library`) is safe — GitHub redirects the old URLs — but update `site_url` and `repo_url`/`repo_name` in `mkdocs.yml` so the Pages URL, sitemap, and header link follow.
+This repo was renamed from `masiarek/YAML` to `masiarek/star-voting-library` on 2026-07-16, *before* the first Pages deploy — so the site URL was born correct and no stale Pages links exist. All `github.com/masiarek/YAML/...` deep links (in Google Docs, Slack, the Substack posts) keep working via GitHub's automatic redirects. Two standing rules: **never create a new repo named `YAML`** under this account (it would sever those redirects), and if the repo is ever renamed again, update `site_url` / `repo_url` / `repo_name` in `mkdocs.yml` — the Pages URL moves on rename and old Pages URLs do **not** redirect.

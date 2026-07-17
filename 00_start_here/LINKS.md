@@ -121,7 +121,7 @@ _Last full review: 2026-06-21._
 | Short name | Purpose | URL |
 |------------|---------|-----|
 | **starvote (upstream)** | Larry Hastings' original STAR tabulation library | https://github.com/larryhastings/starvote |
-| **YAML fork (Adam)** | This repo — CSV parsing + extra reporting/options | https://github.com/masiarek/YAML |
+| **YAML fork (Adam)** | This repo — CSV parsing + extra reporting/options | https://github.com/masiarek/star-voting-library |
 | **RCVis** | RCV-IRV results *visualizer* (Sankey / bar / table). Note: a visualizer, not a tabulator, and **strong-copyleft (AGPL-style)** — use the hosted site, don't vendor the code | https://rcvis.com |
 | **maxhully/rcv** | BSD-3 Python RCV tabulation library (safe to borrow from, if ever needed) | https://github.com/maxhully/rcv |
 

@@ -12,9 +12,9 @@
 
 site_name: STAR Voting — Education & Test-Case Library
 site_description: Learn, teach, and debate STAR Voting — every claim backed by a runnable YAML election.
-site_url: https://masiarek.github.io/YAML/
-repo_url: https://github.com/masiarek/YAML
-repo_name: masiarek/YAML
+site_url: https://masiarek.github.io/star-voting-library/
+repo_url: https://github.com/masiarek/star-voting-library
+repo_name: masiarek/star-voting-library
 edit_uri: edit/master/
 
 docs_dir: .
