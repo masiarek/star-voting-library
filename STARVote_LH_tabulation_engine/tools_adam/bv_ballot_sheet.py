@@ -255,7 +255,7 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .fine { margin: 2px 0 6px 22px; font-size: 10.5px; color: #666; }
 .qr { flex: none; text-align: center; font-size: 9px; color: #555; }
 .qr img { display: block; margin: 0 auto; }
-.qr span { display: block; margin-top: 1px; }
+.qr span { display: block; margin-top: 2px; font-size: 15px; font-weight: 700; color: #222; }
 table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
 .grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 15px; padding-left: 6px; }
@@ -331,8 +331,8 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
         return (f'<div class="qr"><img src="{uri}" alt="QR code" '
                 f'style="width:{qr_size}px;height:{qr_size}px">'
                 f'<span>{html.escape(caption)}</span></div>' if uri else "")
-    left_qr = _qr_cell(vote_qr_uri, "scan to vote")
-    right_qr = _qr_cell(results_qr_uri, "scan for results")
+    left_qr = _qr_cell(vote_qr_uri, "vote")
+    right_qr = _qr_cell(results_qr_uri, "results")
     spacer = f'<div style="width:{qr_size}px;flex:none"></div>'
     if left_qr and not right_qr:
         right_qr = spacer
@@ -442,7 +442,7 @@ def selftest():
     # are TWO QRs — vote (left) + results (right).
     if qr_data_uri("https://bettervoting.com/abc123"):
         has_qr = (html_out.count('class="qr"') == 2 * 3   # 2 QRs x 3 ballots
-                  and "scan to vote" in html_out and "scan for results" in html_out
+                  and ">vote<" in html_out and ">results<" in html_out
                   and "data:image/svg" in html_out)
         print(f"[selftest] two QRs (vote + results) embedded: {'OK' if has_qr else 'FAIL'}")
         ok &= has_qr

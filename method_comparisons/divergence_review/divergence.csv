@@ -103,6 +103,8 @@ APPROVAL_OR_MINOR,method_comparisons/monotonicity/mono_raise_delete_after.yaml,3
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/bv2178_8kg698_star.yaml,4,20,Blue,Blue,Blue,Blue,Blue,Pink,Purple,Blue,Blue,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
+CYCLE_OR_THREE_WAY,01_STAR/exercises/ex02_nine_ballots.yaml,5,9,Alex,Bella,Bella,Eli,Eli,Alex,Alex,,,0,False,False,True
+CYCLE_OR_THREE_WAY,01_STAR/exercises/ex02_tenth_ballot.yaml,5,10,Chris,Bella,Bella,Chris,Chris,Alex,Alex,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml,3,3,C,B,B,C,C,C,C,,,0,False,False,True
@@ -126,6 +128,9 @@ CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/bv2175_9dhv8y_noshow
 CYCLE_OR_THREE_WAY,method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml,4,20,Blue,Purple,Purple,Blue,Blue,Pink,Purple,,,0,False,False,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
+IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_combined.yaml,5,18,Carmen,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,18,False,False,False
+IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_east.yaml,5,9,Avery,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,9,False,False,False
+IRV_DIFFERS_ARTIFACT,01_STAR/exercises/ex01_district_west.yaml,5,9,Avery,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,9,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/tie_break_06_scoring_dead_rung_adversarial_lot.yaml,3,5,Ann,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
@@ -148,4 +153,5 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_all_methods/bv217
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml,3,100,Casey,Avery,Avery,Casey,Casey,Casey,Casey,Casey,Casey,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml,3,100,Casey,Avery,Avery,Casey,Casey,Casey,Casey,Casey,Casey,0,False,False,False
 STAR_OUTLIER_RR_WITH_IRV,01_STAR/_main/three_winners_cw_score_runoff.yaml,3,5,Bob,Ann,Ann,Ann,Ann,Bob,Carl,Ann,Ann,0,False,False,False
+STAR_OUTLIER_RR_WITH_IRV,01_STAR/exercises/ex02_bella_exits.yaml,4,9,Chris,Eli,Eli,Eli,Eli,Alex,Alex,Eli,Eli,0,False,False,False
 STAR_OUTLIER_RR_WITH_IRV,method_comparisons/monotonicity/mono_raise_delete_before.yaml,3,30,X,Z,Z,Z,Z,X,X,Z,Z,0,False,False,False

@@ -142,6 +142,12 @@ LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung
 LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
 LH:edelman_perfect_component_c3_b30,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,1,single-race,30,STAR,LH-only
 LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
+LH:ex01_district_combined,"Exercise 1 — Two districts, one mayor: the COMBINED city",1,single-race,18,STAR,LH-only
+LH:ex01_district_east,"Exercise 1 — Two districts, one mayor: EAST district",1,single-race,9,STAR,LH-only
+LH:ex01_district_west,"Exercise 1 — Two districts, one mayor: WEST district",1,single-race,9,STAR,LH-only
+LH:ex02_bella_exits,Exercise 2 — The tenth ballot: Bella withdraws,1,single-race,9,STAR,LH-only
+LH:ex02_nine_ballots,Exercise 2 — The tenth ballot: the nine counted ballots,1,single-race,9,STAR,LH-only
+LH:ex02_tenth_ballot,Exercise 2 — The tenth ballot: all ten ballots,1,single-race,10,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
