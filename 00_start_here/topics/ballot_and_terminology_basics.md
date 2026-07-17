@@ -6,7 +6,7 @@
 
 ![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../img/star_ballot_example.png)
 
-*That's a **[score ballot](../scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), [equal scores are allowed](../GLOSSARY.md) (both a 5 = [Equal Support](../GLOSSARY.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](../scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](../STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md)).*
+*That's a **[score ballot](../scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), equal scores are allowed (both a 5 = [Equal Support](../STAR_Voting/reference/are_equal_score_votes_discounted.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](../scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](../STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md)).*
 
 ---
 
