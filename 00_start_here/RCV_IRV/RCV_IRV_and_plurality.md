@@ -24,6 +24,8 @@ This shared DNA has real consequences. Because elimination ignores lower prefere
 
 So the honest, defensible sentence is: **"IRV inherits plurality's round-by-round blindness to lower preferences — that's why it isn't pairwise and can eliminate a Condorcet-strong moderate."**
 
+The shared DNA has a precise name, too: like plurality, IRV **fails the [Equal Vote (balance) criterion](RCV_IRV_equal_vote.md)** — there's no ballot you can cast to *cancel* another voter's, which the glossary calls the structural root of vote-splitting that both methods carry.
+
 ## The part that's overstated (don't say this)
 
 The stronger slogans — *"IRV is the exact same as plurality"* or *"worse than plurality"* — don't survive scrutiny, and an informed opponent will dismantle them:
