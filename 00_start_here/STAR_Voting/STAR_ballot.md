@@ -32,7 +32,7 @@ There's no single "right" way to fill it out. Here are three voters in the same 
 |---|--:|--:|--:|--:|--:|---|
 | **Bullet vote** | 5 | 0 | 0 | 0 | 0 | "Andre, and no one else." Legal — but if Andre misses the runoff, this ballot has no say in the final head-to-head. |
 | **Honest spread** | 5 | 0 | 4 | 4 | 1 | "Love Andre; Carmen and David nearly as good; Erin barely; Blake no." Uses the full range — and it's exactly the ballot pictured above. |
-| **Equal top** | 5 | 5 | 0 | 0 | 0 | "Andre or Blake, either is great." If both reach the runoff it counts as [Equal Support](../GLOSSARY.md) — no preference between them — but it still helped choose the finalists in the scoring round. |
+| **Equal top** | 5 | 5 | 0 | 0 | 0 | "Andre or Blake, either is great." If both reach the runoff it counts as [Equal Support](reference/are_equal_score_votes_discounted.md) — no preference between them — but it still helped choose the finalists in the scoring round. |
 
 Every one of these counts. And a backup score — the 4s for Carmen and David in the honest-spread row — can **never** hurt your favorite (Andre) in the scoring round: a 5 is a 5 no matter what else you mark. So honest rating is also the smart rating; you never have to exaggerate or hold back.
 
