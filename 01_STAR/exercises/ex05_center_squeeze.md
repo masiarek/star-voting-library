@@ -2,6 +2,8 @@
 
 *A club elects its president. Two wings can't stand each other's candidate — and there's Brook, whom everyone can live with. Every single voter scores Brook a 3 or better. Run the same nine opinions as ranked ballots under RCV-IRV and as score ballots under STAR: do both counts find the bridge-builder?*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6bry7c) · **[results ↗](https://bettervoting.com/6bry7c/results)** (election `6bry7c`, Test ID BV2192 — STAR, RCV-IRV, and Ranked Robin races on the same opinions: the squeeze happens live).
+
 **You practice:** the **[center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)** mechanism — predicting *when* first-choice elimination discards a consensus candidate — and how a scoring round reads the support that first choices can't see.
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; its `expected_winners` key is regression-tested, and the `_tabulated` mirror is the full audit report.

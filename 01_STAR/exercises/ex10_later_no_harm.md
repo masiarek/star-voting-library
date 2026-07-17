@@ -2,6 +2,8 @@
 
 *Nine voters, three candidates. Amir's four fans face the classic scored-ballot dilemma: they honestly like Bess second — should they say so? Run it both ways: first with the fans scoring nothing below their favorite, then with their honest 3s for Bess. One of those elections is a textbook **later-no-harm failure**. The exercise is deciding what it means.*
 
+**▶ Live on BetterVoting:** reticent [vote](https://bettervoting.com/g6q42v) · **[results ↗](https://bettervoting.com/g6q42v/results)** · generous [vote](https://bettervoting.com/yyhj9x) · **[results ↗](https://bettervoting.com/yyhj9x/results)** (elections `g6q42v` / `yyhj9x`, Test IDs BV2195–96; each carries an RCV-IRV race — no Ranked Robin races on purpose: the reticent profile's rank conversion hides a Condorcet cycle BetterVoting would resolve at random).
+
 **You practice:** the **[later-no-harm](../../00_start_here/GLOSSARY.md)** criterion — the one RCV-IRV keeps and STAR deliberately gives up — run live in both directions, and the discipline of keeping it distinct from [favorite betrayal](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports.

@@ -1,4 +1,7 @@
 election_title: "Exercise 6 — Bullet voting backfires: the strategic ballots"
+bv_test_id: BV2194
+bv_election_id: 7f4f7q
+bv_results_url: https://bettervoting.com/7f4f7q/results
 
 scenario_description: |-
   The same nine voters as ex06_bullet_honest.yaml, but Ari's four fans now
@@ -11,6 +14,9 @@ scenario_description: |-
   nightmare. STAR's runoff is exactly the feature that makes this gamble
   costly. Exercise: ex06_bullet_backfire.md. Ballots and cast are this
   repo's own.
+  Live on BetterVoting (Test ID BV2194): https://bettervoting.com/7f4f7q/results
+  — with RCV-IRV and Ranked Robin races: on the bullet ballots all three
+  methods elect Cash.
 voting_method: STAR
 options:
   show_description: false

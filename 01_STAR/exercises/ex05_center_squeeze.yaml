@@ -1,4 +1,7 @@
 election_title: "Exercise 5 — The squeezed bridge-builder (IRV vs STAR)"
+bv_test_id: BV2192
+bv_election_id: 6bry7c
+bv_results_url: https://bettervoting.com/6bry7c/results
 
 scenario_description: |-
   A club presidency with two wings and one bridge-builder. Brook is scored
@@ -9,6 +12,9 @@ scenario_description: |-
   tops the scoring round 31-23-18 and wins the runoff against Avi 5-4.
   A drill for the squeeze mechanism (see the center-squeeze topic pages);
   ballots and cast are this repo's own. Exercise: ex05_center_squeeze.md.
+  Live on BetterVoting (Test ID BV2192): https://bettervoting.com/6bry7c/results
+  — three races on the same opinions: STAR (Brook), RCV-IRV (Avi — the
+  squeeze, live), Ranked Robin (Brook).
 voting_method: STAR
 options:
   show_description: false

@@ -1,4 +1,7 @@
 election_title: "Exercise 10 — Later-no-harm: the generous ballots"
+bv_test_id: BV2196
+bv_election_id: yyhj9x
+bv_results_url: https://bettervoting.com/yyhj9x/results
 
 scenario_description: |-
   The same nine voters as ex10_reticent.yaml, but Amir's four fans now
@@ -12,6 +15,9 @@ scenario_description: |-
   gives up later-no-harm on purpose: protecting favorites by hiding
   compromises is exactly what it declines to reward. Exercise:
   ex10_later_no_harm.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2196): https://bettervoting.com/yyhj9x/results
+  — with an RCV-IRV race (still Amir: IRV keeps later-no-harm precisely
+  by center-squeezing the Condorcet winner Bess).
 voting_method: STAR
 options:
   show_description: false

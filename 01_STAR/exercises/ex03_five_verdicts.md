@@ -2,6 +2,8 @@
 
 *An office votes on the snack to stock: Apple, Banana, or Cherry. Nine people fill in one score ballot each — and then the count is run five different ways. How many different winners can one small electorate produce? Commit to a number before you start.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywqhq4) · **[results ↗](https://bettervoting.com/ywqhq4/results)** (election `ywqhq4`, Test ID BV2191 — one election, **five races**, all five verdicts live; BV agrees with the LH engine on every race).
+
 **You practice:** reading one electorate through five tabulations — [Choose-One](../../00_start_here/topics/plurality.md), RCV-IRV, Approval, Score, and STAR — and the core lesson that **the method, not the ballot, picks the winner** ([ballot vs count](../../00_start_here/topics/rcv_irv_vs_star.md)).
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; its `expected_winners` key is regression-tested, and the `_tabulated` mirror is the full audit report.

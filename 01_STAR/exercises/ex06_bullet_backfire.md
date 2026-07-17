@@ -2,6 +2,8 @@
 
 *A club books a speaker. Ari's four fans genuinely like Bree too — their honest ballot is Ari 5, Bree 3, Cash 0. But the night before the vote, one of them argues: "scoring Bree helps Ari's rival — zero her, and Ari walks in." All four bullet vote. Predict what they wake up to.*
 
+**▶ Live on BetterVoting:** honest [vote](https://bettervoting.com/x4dkfd) · **[results ↗](https://bettervoting.com/x4dkfd/results)** · strategic [vote](https://bettervoting.com/7f4f7q) · **[results ↗](https://bettervoting.com/7f4f7q/results)** (elections `x4dkfd` / `7f4f7q`, Test IDs BV2193–94; each also carries RCV-IRV and Ranked Robin races).
+
 **You practice:** [strategic voting](../../00_start_here/topics/strategic_voting.md) in STAR — specifically **bullet voting** (supporting only your favorite) — and *why* the automatic runoff makes it a gamble rather than a free lift.
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports.

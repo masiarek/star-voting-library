@@ -1,4 +1,7 @@
 election_title: "Exercise 6 — Bullet voting backfires: the honest ballots"
+bv_test_id: BV2193
+bv_election_id: x4dkfd
+bv_results_url: https://bettervoting.com/x4dkfd/results
 
 scenario_description: |-
   The base case: nine voters, three speakers. Ari's four fans vote
@@ -9,6 +12,9 @@ scenario_description: |-
   those four fans bullet voting (Ari 5, everyone else 0) — and hands the
   win to Cash, their nightmare. Exercise: ex06_bullet_backfire.md.
   Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2193): https://bettervoting.com/x4dkfd/results
+  — with RCV-IRV and Ranked Robin races on the same opinions (IRV elects
+  Cash even on the honest ballots — the squeeze cameo; RR confirms Bree).
 voting_method: STAR
 options:
   show_description: false

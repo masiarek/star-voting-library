@@ -1,4 +1,7 @@
 election_title: "Exercise 11 — Recruit a spoiler: Axl enters the race"
+bv_test_id: BV2198
+bv_election_id: 93gjx6
+bv_results_url: https://bettervoting.com/93gjx6/results
 
 scenario_description: |-
   The same nine voters as ex11_two_way_base.yaml, plus a third name on
@@ -16,6 +19,9 @@ scenario_description: |-
   Alba's initial ON PURPOSE — they are clones; the distinct-initials
   naming rule yields to the lesson here.) Exercise:
   ex11_recruit_a_spoiler.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2198): https://bettervoting.com/93gjx6/results
+  — four races: Choose-One falls for the clone (Brett); RCV-IRV, STAR,
+  and Ranked Robin all hold (Alba).
 voting_method: STAR
 options:
   show_description: false

@@ -131,6 +131,14 @@ BV2187,bv2187_qrw6wb_ann-bob-cal,qrw6wb,STAR,1,3,3,Bob,01_STAR/_main/bv2187_qrw6
 BV2188,ex01_district_west,d3b9wc,STAR,1,5,9,Avery,01_STAR/exercises/ex01_district_west.yaml,,https://bettervoting.com/d3b9wc/results
 BV2189,ex01_district_east,rhbfj7,STAR,1,5,9,Avery,01_STAR/exercises/ex01_district_east.yaml,,https://bettervoting.com/rhbfj7/results
 BV2190,ex01_district_combined,923q3d,STAR,1,5,18,Carmen,01_STAR/exercises/ex01_district_combined.yaml,,https://bettervoting.com/923q3d/results
+BV2191,ex03_five_verdicts,ywqhq4,STAR,1,3,9,Cherry,01_STAR/exercises/ex03_five_verdicts.yaml,01_STAR/exercises/ex03_five_verdicts.md,https://bettervoting.com/ywqhq4/results
+BV2192,ex05_center_squeeze,6bry7c,STAR,1,3,9,Brook,01_STAR/exercises/ex05_center_squeeze.yaml,01_STAR/exercises/ex05_center_squeeze.md,https://bettervoting.com/6bry7c/results
+BV2193,ex06_bullet_honest,x4dkfd,STAR,1,3,9,Bree,01_STAR/exercises/ex06_bullet_honest.yaml,,https://bettervoting.com/x4dkfd/results
+BV2194,ex06_bullet_backfire,7f4f7q,STAR,1,3,9,Cash,01_STAR/exercises/ex06_bullet_backfire.yaml,01_STAR/exercises/ex06_bullet_backfire.md,https://bettervoting.com/7f4f7q/results
+BV2195,ex10_reticent,g6q42v,STAR,1,3,9,Amir,01_STAR/exercises/ex10_reticent.yaml,,https://bettervoting.com/g6q42v/results
+BV2196,ex10_generous,yyhj9x,STAR,1,3,9,Bess,01_STAR/exercises/ex10_generous.yaml,,https://bettervoting.com/yyhj9x/results
+BV2197,ex11_two_way_base,ggg7hd,STAR,1,2,9,Alba,01_STAR/exercises/ex11_two_way_base.yaml,,https://bettervoting.com/ggg7hd/results
+BV2198,ex11_spoiler_added,93gjx6,STAR,1,3,9,Alba,01_STAR/exercises/ex11_spoiler_added.yaml,,https://bettervoting.com/93gjx6/results
 ,01a_c2_b2_two-candidates,my82v6,STAR,1,2,2,Chocolate,01_STAR/silly_two_cand_STAR/01a_c2_b2_two-candidates.yaml,01_STAR/silly_two_cand_STAR/silly_two_cand_STAR_pages/01a_c2_b2_two-candidates.md,https://bettervoting.com/my82v6/results
 ,Runoff_01_confirms_leader_r2pvc9,r2pvc9,STAR,1,3,3,Aspen,01_STAR/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.yaml,01_STAR/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.md,https://bettervoting.com/r2pvc9/results
 ,Runoff_02_atom_reversal_yx9447,yx9447,STAR,1,3,3,Boston,01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.yaml,01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.md,https://bettervoting.com/yx9447/results

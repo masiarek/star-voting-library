@@ -1,4 +1,7 @@
 election_title: "Exercise 10 — Later-no-harm: the reticent ballots"
+bv_test_id: BV2195
+bv_election_id: g6q42v
+bv_results_url: https://bettervoting.com/g6q42v/results
 
 scenario_description: |-
   Nine voters, three candidates. Amir's four fans withhold everything
@@ -11,6 +14,10 @@ scenario_description: |-
   exercise asks which reading is right: did the generous 3s harm Amir, or
   did the reticent 0s hide the consensus winner Bess? Exercise:
   ex10_later_no_harm.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2195): https://bettervoting.com/g6q42v/results
+  — with an RCV-IRV race (also Amir). No Ranked Robin race on purpose:
+  the rank conversion of these sparse ballots yields a Condorcet cycle
+  whose 3-way tie BV resolves at random — not freezable.
 voting_method: STAR
 options:
   show_description: false

@@ -65,11 +65,14 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 48hjkv | BV2140 — Ranked Robin worked example — most pairwise | 1 | single-race | 35 | RankedRobin | BV |
 | 4gfwdq | BV2142 — Ranked Robin clone independence (1 of 2) —  | 1 | single-race | 33 | RankedRobin | BV |
 | 4h89vj | B15 - Basic - 2 candidates - Plurality - Abstain | 1 | single-race | 12 | Plurality | BV |
+| 6bry7c | Exercise 5 — The squeezed bridge-builder (IRV vs STA | 1 | single-race | 9 | STAR | BV |
 | 6hv7jf | BV1570 - deactivate selection - plurality voting - C | 1 | single-race | 3 | Plurality | BV |
 | 6xhfp8 | BV11 - Valid Ballot - Full and Equal Support (2 Cand | 1 | single-race | 3 | STAR | BV |
+| 7f4f7q | Exercise 6 — Bullet voting backfires: the strategic  | 1 | single-race | 9 | STAR | BV |
 | 7pdq3r | BV95b - Majority Criterion: favorite loses (backs tw | 1 | single-race | 5 | STAR | BV |
 | 8fvd2x | BV126 - “ties every time - every step” - Multiple ti | 1 | single-race | 7 | STAR | BV |
 | 923q3d | Exercise 1 — Two districts, one mayor: the COMBINED  | 1 | single-race | 18 | STAR | BV |
+| 93gjx6 | Exercise 11 — Recruit a spoiler: Axl enters the race | 1 | single-race | 9 | STAR | BV |
 | 9dhv8y | No-show paradox (2 of 2) — the 8 April fans vote; RC | 1 | single-race | 62 | STAR | BV |
 | 9ff9jk | BV130 — 6 candidates / 3 winners, Bloc STAR | 1 | single-race | 4 | STAR | BV |
 | 9m6rxr | BV95a - Majority Criterion: favorite survives (backs | 1 | single-race | 5 | STAR | BV |
@@ -162,19 +165,11 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ex02_bella_exits | Exercise 2 — The tenth ballot: Bella withdraws | 1 | single-race | 9 | STAR | LH-only |
 | ex02_nine_ballots | Exercise 2 — The tenth ballot: the nine counted ball | 1 | single-race | 9 | STAR | LH-only |
 | ex02_tenth_ballot | Exercise 2 — The tenth ballot: all ten ballots | 1 | single-race | 10 | STAR | LH-only |
-| ex03_five_verdicts | Exercise 3 — One electorate, five verdicts (the snac | 1 | single-race | 9 | STAR | LH-only |
 | ex04_olympics_1994 | Exercise 4 — Lillehammer 1994: nine judges, three sk | 1 | single-race | 9 | STAR | LH-only |
-| ex05_center_squeeze | Exercise 5 — The squeezed bridge-builder (IRV vs STA | 1 | single-race | 9 | STAR | LH-only |
-| ex06_bullet_backfire | Exercise 6 — Bullet voting backfires: the strategic  | 1 | single-race | 9 | STAR | LH-only |
-| ex06_bullet_honest | Exercise 6 — Bullet voting backfires: the honest bal | 1 | single-race | 9 | STAR | LH-only |
 | ex07_vanishing_votes | Exercise 7 — The vanishing votes that never vanished | 1 | single-race | 9 | STAR | LH-only |
 | ex08_minimal_reversal_2c | Exercise 8 — a smallest runoff reversal (sample solu | 1 | single-race | 3 | STAR | LH-only |
 | ex08_minimal_reversal_3c | Exercise 8 — a small runoff reversal (sample solutio | 1 | single-race | 5 | STAR | LH-only |
 | ex09_game_night_cycle | Exercise 9 — Game night: nobody is unbeatable (a Ran | 1 | single-race | 10 | RankedRobin | LH-only |
-| ex10_generous | Exercise 10 — Later-no-harm: the generous ballots | 1 | single-race | 9 | STAR | LH-only |
-| ex10_reticent | Exercise 10 — Later-no-harm: the reticent ballots | 1 | single-race | 9 | STAR | LH-only |
-| ex11_spoiler_added | Exercise 11 — Recruit a spoiler: Axl enters the race | 1 | single-race | 9 | STAR | LH-only |
-| ex11_two_way_base | Exercise 11 — Recruit a spoiler: the two-way base ra | 1 | single-race | 9 | STAR | LH-only |
 | felsenthal_ex6_pareto_approval | Felsenthal Ex.6 — Approval can elect a Pareto-domina | 1 | single-race | 3 | Approval | LH-only |
 | felsenthal_ex6_ranked_robin | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant  | 1 | single-race | 3 | RankedRobin | LH-only |
 | irv_combined | Summability demo — RCV-IRV combined A+B (B eliminate | 1 | single-race | 26 | IRV | LH-only |
@@ -238,6 +233,8 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | fk38pk | BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / | 1 | single-race | 3 | STAR | BV |
 | fp62p2 | BV2180 — Ice Cream, six flavors — a STAR tie in both | 1 | single-race | 2 | STAR | BV |
 | fyy886 | BV2184 — The Team Lunch Vote — a beginner's STAR exa | 1 | single-race | 5 | STAR | BV |
+| g6q42v | Exercise 10 — Later-no-harm: the reticent ballots | 1 | single-race | 9 | STAR | BV |
+| ggg7hd | Exercise 11 — Recruit a spoiler: the two-way base ra | 1 | single-race | 9 | STAR | BV |
 | gmfv4c | Edelman's 'Myth of the Condorcet Winner' 81 voters — | 1 | single-race | 81 | STAR | BV |
 | jfk7pd | The BV recipe (the "crazy" scenario) | 1 | single-race | 2 | STAR | BV |
 | jt6r76 | BV27 - Lackner & Skowron steering committee (Approva | 1 | single-race | 12 | Approval | BV |
@@ -253,10 +250,13 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | tg4779 | BV2182 — Why STAR Has an Automatic Runoff — a Runoff | 1 | single-race | 10 | STAR | BV |
 | vb3xv2 | BV830 — No Condorcet winner (top-two tie) — STAR bre | 1 | single-race | 3 | STAR | BV |
 | vqyqkr | Tennessee capital — Ranked Robin (RR/Condorcet = Nas | 1 | single-race | 100 | RankedRobin | BV |
+| x4dkfd | Exercise 6 — Bullet voting backfires: the honest bal | 1 | single-race | 9 | STAR | BV |
 | xgkw3w | Runoff_05 - Reversal with Equal Support | 1 | single-race | 5 | STAR | BV |
 | y3tvxm | BV2136 — Village Council by SNTV — a concentrated mi | 1 | single-race | 9 | Plurality | BV |
 | yhxy7q | BV130 - original steering committee (Bloc STAR, k=3; | 1 | single-race | 9 | STAR | BV |
+| ywqhq4 | Exercise 3 — One electorate, five verdicts (the snac | 1 | single-race | 9 | STAR | BV |
 | yx9447 | Runoff_02 The atom — smallest runoff reversal | 1 | single-race | 3 | STAR | BV |
+| yyhj9x | Exercise 10 — Later-no-harm: the generous ballots | 1 | single-race | 9 | STAR | BV |
 | yyhr66 | No-show paradox (1 of 2) — 8 April fans stay home; R | 1 | single-race | 54 | STAR | BV |
 
 ## Cuts
@@ -325,8 +325,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 154 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 144 | 26khr3, 2jrfpg, 3494cb, 3grpbb |
+| BV | 152 | 26khr3, 2jrfpg, 3494cb, 3grpbb |
+| LH-only | 146 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV (no yaml) | 33 | 2jrfpg, 3grpbb, 6w2gq7, 8kg698 |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

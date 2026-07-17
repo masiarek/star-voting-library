@@ -4,6 +4,9 @@ TABULATED FILE:  ex11_two_way_base_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 11 — Recruit a spoiler: the two-way base race"
+bv_test_id: BV2197
+bv_election_id: ggg7hd
+bv_results_url: https://bettervoting.com/ggg7hd/results
 
 scenario_description: |-
   The base case: a straight two-way race, nine voters. Alba's camp is
@@ -14,6 +17,8 @@ scenario_description: |-
   methods flip. (Two candidates: the finalist matrix is trivial, so
   show_matrix is off per house style.) Exercise: ex11_recruit_a_spoiler.md.
   Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
+  — with a Choose-One race (also Alba: two names, one verdict).
 voting_method: STAR
 options:
   show_description: false
@@ -56,6 +61,8 @@ TABULATION RESULTS
   methods flip. (Two candidates: the finalist matrix is trivial, so
   show_matrix is off per house style.) Exercise: ex11_recruit_a_spoiler.md.
   Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
+  — with a Choose-One race (also Alba: two names, one verdict).
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

@@ -2,6 +2,8 @@
 
 *You manage Brett's campaign, and the polling is grim: Alba leads the two-way race 5–4 and every voter is locked in. Then an intern slides a memo across the table: "We can't flip a single voter — so let's add a **candidate**. Recruit Axl, who's practically Alba with a different haircut. Alba's five voters will split, our four hold, we win." Your job: game out the memo under three counting rules before deciding whether the trick is worth it.*
 
+**▶ Live on BetterVoting:** base race [vote](https://bettervoting.com/ggg7hd) · **[results ↗](https://bettervoting.com/ggg7hd/results)** · clone added [vote](https://bettervoting.com/93gjx6) · **[results ↗](https://bettervoting.com/93gjx6/results)** (elections `ggg7hd` / `93gjx6`, Test IDs BV2197–98; the clone election runs all four methods — watch Choose-One fall for it live while RCV-IRV, STAR, and Ranked Robin hold).
+
 **You practice:** the **[spoiler effect](../../00_start_here/topics/spoiler_effect.md)** as a *design property* — predicting which ballot designs a vote-splitting attack actually works against — and reading an Equal-Support runoff line. (Concept home: [vote-splitting](../../method_comparisons/split_voting/README.md); glossary: [clone independence](../../00_start_here/GLOSSARY.md).)
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports. (Axl shares Alba's initial *on purpose* — they're clones; the distinct-initials naming rule yields to the lesson.)

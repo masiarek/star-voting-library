@@ -4,6 +4,9 @@ TABULATED FILE:  ex03_five_verdicts_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 3 — One electorate, five verdicts (the snack vote)"
+bv_test_id: BV2191
+bv_election_id: ywqhq4
+bv_results_url: https://bettervoting.com/ywqhq4/results
 
 scenario_description: |-
   Nine voters pick the office snack. Choose-One elects Apple (4 first
@@ -17,6 +20,9 @@ scenario_description: |-
   inspired by the worked comparisons in Brendan W. Sullivan, "An
   Introduction to the Math of Voting Methods" (2022), ch. 5; ballots and
   cast are this repo's own.
+  Live on BetterVoting (Test ID BV2191): https://bettervoting.com/ywqhq4/results
+  — one election, five races (Choose-One, RCV-IRV, Approval, STAR, Ranked
+  Robin), all five verdicts live; BV agrees with LH on every race.
 voting_method: STAR
 options:
   show_description: false
@@ -62,6 +68,9 @@ TABULATION RESULTS
   inspired by the worked comparisons in Brendan W. Sullivan, "An
   Introduction to the Math of Voting Methods" (2022), ch. 5; ballots and
   cast are this repo's own.
+  Live on BetterVoting (Test ID BV2191): https://bettervoting.com/ywqhq4/results
+  — one election, five races (Choose-One, RCV-IRV, Approval, STAR, Ranked
+  Robin), all five verdicts live; BV agrees with LH on every race.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

@@ -2471,9 +2471,287 @@ _TD_TRIO = [
 ]
 
 
+# --- BV2191-98 — the exercises set goes live (ex03/05/06/10/11) -----------------
+# Already created 2026-07-17 -> ywqhq4 (BV2191) / 6bry7c (BV2192) / x4dkfd
+# (BV2193) / 7f4f7q (BV2194) / g6q42v (BV2195) / yyhj9x (BV2196) / ggg7hd
+# (BV2197) / 93gjx6 (BV2198); all 22 races verified live against LH. Reference
+# only — do NOT point ELECTIONS back at _EX_TRIO_2 (re-running would create
+# undeletable duplicates).
+# Eight elections backing 01_STAR/exercises/ (ex09 stays LH-only on purpose: its
+# 3-way Ranked Robin wins tie is BV-random). All races LH-verified pre-creation;
+# ranked races use ranks-in-slots (1 = top, 0 = unranked), Approval/Plurality 0/1.
+# ex10 carries NO Ranked Robin races: the reticent profile's rank conversion
+# yields a Condorcet cycle (3-way tie -> BV random, not freezable), so the pair
+# stays symmetric with STAR + IRV only.
+
+_EX_SRC = ("From the exercises set of the STAR education repo "
+           "(github.com/masiarek/star-voting-library, 01_STAR/exercises/) — "
+           "predict-then-peek problems with hidden solutions; this election is "
+           "the live, vote-able copy of its exercise. ")
+
+_E3_CANDS = ["Apple", "Banana", "Cherry"]
+_E3_STAR = _expand([(4, [5, 0, 3]), (3, [0, 5, 4]), (2, [0, 1, 5])])
+_E3_PLUR = _expand([(4, [1, 0, 0]), (3, [0, 1, 0]), (2, [0, 0, 1])])
+_E3_APPR = _expand([(4, [1, 0, 1]), (3, [0, 1, 1]), (2, [0, 0, 1])])
+_E3_RANK = _expand([(4, [1, 3, 2]), (3, [3, 1, 2]), (2, [3, 2, 1])])
+
+_E5_CANDS = ["Avi", "Brook", "Cole"]
+_E5_STAR = _expand([(4, [5, 3, 0]), (3, [0, 3, 5]), (1, [3, 5, 0]), (1, [0, 5, 3])])
+_E5_RANK = _expand([(4, [1, 2, 3]), (3, [3, 2, 1]), (1, [2, 1, 3]), (1, [3, 1, 2])])
+
+_E6_CANDS = ["Ari", "Bree", "Cash"]
+_E6_STAR_H = _expand([(4, [5, 3, 0]), (4, [0, 2, 5]), (1, [0, 5, 1])])
+_E6_RANK_H = _expand([(4, [1, 2, 0]), (4, [0, 2, 1]), (1, [0, 1, 2])])
+_E6_STAR_S = _expand([(4, [5, 0, 0]), (4, [0, 2, 5]), (1, [0, 5, 1])])
+_E6_RANK_S = _expand([(4, [1, 0, 0]), (4, [0, 2, 1]), (1, [0, 1, 2])])
+
+_E10_CANDS = ["Amir", "Bess", "Cato"]
+_E10_STAR_R = _expand([(4, [5, 0, 0]), (2, [2, 5, 0]), (3, [0, 1, 5])])
+_E10_RANK_R = _expand([(4, [1, 0, 0]), (2, [2, 1, 0]), (3, [0, 2, 1])])
+_E10_STAR_G = _expand([(4, [5, 3, 0]), (2, [2, 5, 0]), (3, [0, 1, 5])])
+_E10_RANK_G = _expand([(4, [1, 2, 0]), (2, [2, 1, 0]), (3, [0, 2, 1])])
+
+_E11_CANDS2 = ["Alba", "Brett"]
+_E11_PLUR_B = _expand([(5, [1, 0]), (4, [0, 1])])
+_E11_STAR_B = _expand([(5, [5, 0]), (4, [0, 5])])
+_E11_CANDS3 = ["Alba", "Axl", "Brett"]
+_E11_PLUR_S = _expand([(3, [1, 0, 0]), (2, [0, 1, 0]), (4, [0, 0, 1])])
+_E11_STAR_S = _expand([(3, [5, 4, 0]), (2, [4, 5, 0]), (4, [0, 0, 5])])
+_E11_RANK_S = _expand([(3, [1, 2, 3]), (2, [2, 1, 3]), (4, [0, 0, 1])])
+
+_EX_TRIO_2 = [
+    {
+        "test_id": "BV2191",
+        "title": "One Electorate, Five Verdicts — the snack vote counted five ways",
+        "description": (_EX_SRC +
+                        "Nine voters pick the office snack (exercise ex03): 4×(Apple 5, "
+                        "Cherry 3, Banana 0), 3×(Banana 5, Cherry 4, Apple 0), 2×(Cherry 5, "
+                        "Banana 1, Apple 0). FIVE races on the same nine opinions, one per "
+                        "counting rule. Choose-One elects Apple (4-3-2 on first choices) — "
+                        "who loses head-to-head to BOTH rivals (the Condorcet loser). "
+                        "RCV-IRV eliminates Cherry first (2 first choices) and elects "
+                        "Banana 5-4. Approval (approve = score 3+) elects Cherry with 9 of "
+                        "9 approvals. Score elects Cherry, 34 of 45. STAR advances Cherry "
+                        "and Apple and Cherry wins the runoff 5-4. Ranked Robin confirms "
+                        "Cherry as the Condorcet winner (beats Apple 5-4, Banana 6-3). One "
+                        "electorate, three different winners across five rules — the "
+                        "ballot doesn't decide, the method does. LH-verified."),
+        "races": [
+            {"title": "Snack vote — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E3_CANDS, "ballots": _E3_PLUR},
+            {"title": "Snack vote — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E3_CANDS, "ballots": _E3_RANK},
+            {"title": "Snack vote — Approval (approve = 3+)", "method": "Approval",
+             "num_winners": 1, "candidates": _E3_CANDS, "ballots": _E3_APPR},
+            {"title": "Snack vote — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E3_CANDS, "ballots": _E3_STAR},
+            {"title": "Snack vote — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E3_CANDS, "ballots": _E3_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "Choose-One -> Apple (Condorcet loser); IRV -> Banana; Approval -> "
+                    "Cherry (9/9); STAR -> Cherry (34; runoff 5-4); RR -> Cherry "
+                    "(Condorcet winner). Test ID BV2191.",
+    },
+    {
+        "test_id": "BV2192",
+        "title": "The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination",
+        "description": (_EX_SRC +
+                        "The center-squeeze drill (exercise ex05): a club presidency with "
+                        "two wings and one bridge-builder. Nine voters — 4×(Avi 5, Brook 3), "
+                        "3×(Cole 5, Brook 3), 1×(Brook 5, Avi 3), 1×(Brook 5, Cole 3). "
+                        "Every single voter scores Brook 3 or better, and Brook beats each "
+                        "rival head-to-head (Avi 5-4, Cole 6-3) — the Condorcet winner. But "
+                        "Brook holds only 2 first choices, so RCV-IRV eliminates Brook "
+                        "FIRST and elects the wing candidate Avi 5-4. STAR reads the full "
+                        "scores: Brook tops the scoring round 31-23-18 and wins the runoff "
+                        "5-4; Ranked Robin agrees. The same mechanism as Burlington 2009 "
+                        "and Alaska 2022, at whiteboard scale. LH-verified."),
+        "races": [
+            {"title": "Club presidency — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E5_CANDS, "ballots": _E5_STAR},
+            {"title": "Club presidency — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E5_CANDS, "ballots": _E5_RANK},
+            {"title": "Club presidency — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E5_CANDS, "ballots": _E5_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Brook (31/23/18; runoff 5-4). IRV -> Avi (Brook eliminated "
+                    "on 2 first choices). RR -> Brook (Condorcet winner). Test ID BV2192.",
+    },
+    {
+        "test_id": "BV2193",
+        "title": "Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise",
+        "description": (_EX_SRC +
+                        "The strategy pair's base case (exercise ex06): nine voters, three "
+                        "speakers — 4×(Ari 5, Bree 3, Cash 0), 4×(Cash 5, Bree 2, Ari 0), "
+                        "1×(Bree 5, Cash 1). With Ari's fans voting honestly, the scoring "
+                        "round is Bree 25, Cash 21, Ari 20 — and the broad compromise Bree "
+                        "beats Cash 5-4 in the runoff. The fans' honest 3s are exactly what "
+                        "put their second choice on the podium. Part 2 (BV2194) reruns the "
+                        "election after those four fans bullet vote, hoping to lift Ari — "
+                        "and elects their nightmare. Side lesson the ranked races add: on "
+                        "these same honest opinions RCV-IRV eliminates Bree (1 first "
+                        "choice) and elects Cash — the compromise STAR finds, IRV can't "
+                        "even see; Ranked Robin agrees with STAR (Bree is the Condorcet "
+                        "winner). LH-verified."),
+        "races": [
+            {"title": "Speaker vote, honest — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E6_CANDS, "ballots": _E6_STAR_H},
+            {"title": "Speaker vote, honest — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E6_CANDS, "ballots": _E6_RANK_H},
+            {"title": "Speaker vote, honest — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E6_CANDS, "ballots": _E6_RANK_H},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Bree (25/21/20; runoff 5-4 over Cash). IRV -> Cash (Bree "
+                    "squeezed). RR -> Bree (Condorcet winner). Test ID BV2193.",
+    },
+    {
+        "test_id": "BV2194",
+        "title": "Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare",
+        "description": (_EX_SRC +
+                        "The strategy pair's payoff (exercise ex06): identical to BV2193 "
+                        "except Ari's four fans now BULLET VOTE — Ari 5, Bree 0, Cash 0 — "
+                        "hoping to drag Ari past the compromise. It works halfway: Bree "
+                        "crashes 25 -> 13 and out of the runoff, and Ari (20) becomes a "
+                        "finalist. But the runoff Ari inherits is against Cash (21), and "
+                        "zeroing Bree never manufactured a single Ari-over-Cash preference: "
+                        "Cash wins 5-4. The fans demoted their sure second choice and "
+                        "elected their zero. Under honest ballots (BV2193) they had Bree; "
+                        "the gamble bought Cash. The ranked races agree — with Bree's "
+                        "support hidden, IRV and Ranked Robin elect Cash too. STAR's "
+                        "runoff is exactly the feature that makes bullet voting a risk, "
+                        "not a free lift. LH-verified."),
+        "races": [
+            {"title": "Speaker vote, bullet — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E6_CANDS, "ballots": _E6_STAR_S},
+            {"title": "Speaker vote, bullet — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E6_CANDS, "ballots": _E6_RANK_S},
+            {"title": "Speaker vote, bullet — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E6_CANDS, "ballots": _E6_RANK_S},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Cash (21/20/13; runoff 5-4 over Ari) — the bullet gamble "
+                    "backfires vs BV2193's Bree. IRV -> Cash. RR -> Cash. Test ID BV2194.",
+    },
+    {
+        "test_id": "BV2195",
+        "title": "Later-No-Harm (1 of 2) — the reticent ballots protect Amir",
+        "description": (_EX_SRC +
+                        "The later-no-harm pair, part 1 (exercise ex10): nine voters — "
+                        "4×(Amir 5, nothing else), 2×(Bess 5, Amir 2), 3×(Cato 5, Bess 1). "
+                        "With Amir's fans scoring nothing below their favorite, the scoring "
+                        "round is Amir 24, Cato 15, Bess 13, and Amir wins the runoff 6-3 "
+                        "over Cato. RCV-IRV agrees (Bess out first, Amir 6-3). Part 2 "
+                        "(BV2196) has the same fans add an honest Bess 3 — and Bess wins "
+                        "instead: the later-no-harm failure, live. (No Ranked Robin race "
+                        "in this pair: converting the reticent ballots to ranks yields a "
+                        "Condorcet cycle whose 3-way tie BetterVoting resolves at random — "
+                        "not freezable. The repo's LH tabulation breaks it by margin.) "
+                        "LH-verified."),
+        "races": [
+            {"title": "Reticent ballots — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E10_CANDS, "ballots": _E10_STAR_R},
+            {"title": "Reticent ballots — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E10_CANDS, "ballots": _E10_RANK_R},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Amir (24/15/13; runoff 6-3 over Cato). IRV -> Amir. "
+                    "Test ID BV2195.",
+    },
+    {
+        "test_id": "BV2196",
+        "title": "Later-No-Harm (2 of 2) — the generous ballots reveal Bess",
+        "description": (_EX_SRC +
+                        "The later-no-harm pair, part 2 (exercise ex10): identical to "
+                        "BV2195 except Amir's four fans score honestly — Amir 5, Bess 3 — "
+                        "they genuinely like Bess second. Those twelve points lift Bess 13 "
+                        "-> 25: scoring round Bess 25, Amir 24, Cato 15, and Bess beats "
+                        "Amir 5-4 in the runoff. Scoring a LATER choice harmed the "
+                        "EARLIER one: a textbook later-no-harm failure, which STAR accepts "
+                        "by design. The counter-reading is on the same ballots: Bess is "
+                        "scored 1+ by all nine voters and is the honest Condorcet winner "
+                        "(beats Amir 5-4, Cato 6-3) — the reticent zeros of BV2195 were "
+                        "not protecting Amir so much as HIDING Bess. And the IRV race "
+                        "shows the trade's other side: RCV-IRV still elects Amir here "
+                        "(Bess, 2 first choices, is center-squeezed) — IRV keeps "
+                        "later-no-harm precisely by never counting the preferences that "
+                        "would break it. LH-verified."),
+        "races": [
+            {"title": "Generous ballots — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E10_CANDS, "ballots": _E10_STAR_G},
+            {"title": "Generous ballots — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E10_CANDS, "ballots": _E10_RANK_G},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Bess (25/24/15; runoff 5-4 over Amir) — the LNH failure vs "
+                    "BV2195's Amir. IRV -> Amir (keeps LNH by squeezing the Condorcet "
+                    "winner Bess). Test ID BV2196.",
+    },
+    {
+        "test_id": "BV2197",
+        "title": "Recruit a Spoiler (1 of 2) — the two-way base race",
+        "description": (_EX_SRC +
+                        "The spoiler pair's base case (exercise ex11): a straight two-way "
+                        "race, nine voters — Alba's camp of five (Alba 5, Brett 0), "
+                        "Brett's camp of four (Brett 5, Alba 0). Alba wins under "
+                        "Choose-One (5-4) and STAR (25-20; runoff 5-4) alike: with two "
+                        "names, every reasonable method is majority rule. Part 2 (BV2198) "
+                        "adds Axl — a near-clone of Alba recruited by Brett's campaign to "
+                        "split her vote — and asks which counting rules fall for it. "
+                        "LH-verified."),
+        "races": [
+            {"title": "Two-way race — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E11_CANDS2, "ballots": _E11_PLUR_B},
+            {"title": "Two-way race — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E11_CANDS2, "ballots": _E11_STAR_B},
+        ],
+        "enable_write_in": False,
+        "expected": "Choose-One -> Alba (5-4). STAR -> Alba (25-20; runoff 5-4). "
+                    "Test ID BV2197.",
+    },
+    {
+        "test_id": "BV2198",
+        "title": "Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",
+        "description": (_EX_SRC +
+                        "The spoiler pair's payoff (exercise ex11): the same nine voters "
+                        "as BV2197 plus Axl, a near-clone of Alba (recruited, in the "
+                        "exercise's story, by Brett's campaign). Alba's five-voter camp "
+                        "splits its first choices 3-2 across the clones but scores both "
+                        "4-5; Brett's four are unchanged. Choose-One now elects BRETT "
+                        "(4 first choices vs 3 and 2) — the attack works. STAR shrugs: "
+                        "scoring round Alba 23, Axl 22, Brett 20 — the camp keeps BOTH "
+                        "finalist slots and Alba wins the intramural runoff 3-2 (Brett's "
+                        "voters score the clones 0-0: Equal Support). RCV-IRV also "
+                        "survives: Axl is eliminated first and his ballots come home to "
+                        "Alba, 5-4 — pure-clone crowding is the one spoiler variant IRV "
+                        "genuinely handles, credit where due. Ranked Robin: Alba 2-0. "
+                        "The dirty trick pays only under Choose-One — how much a spoiler "
+                        "can extract is a property of the ballot design. LH-verified. "
+                        "(Axl shares Alba's initial on purpose: they are clones.)"),
+        "races": [
+            {"title": "Clone added — Choose-One (Plurality)", "method": "Plurality",
+             "num_winners": 1, "candidates": _E11_CANDS3, "ballots": _E11_PLUR_S},
+            {"title": "Clone added — RCV-IRV (Instant Runoff)", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E11_CANDS3, "ballots": _E11_RANK_S},
+            {"title": "Clone added — STAR (0-5 scores)", "method": "STAR",
+             "num_winners": 1, "candidates": _E11_CANDS3, "ballots": _E11_STAR_S},
+            {"title": "Clone added — Ranked Robin (Copeland)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _E11_CANDS3, "ballots": _E11_RANK_S},
+        ],
+        "enable_write_in": False,
+        "expected": "Choose-One -> Brett (4-3-2) — the spoiler works. IRV -> Alba "
+                    "(Axl's transfers come home). STAR -> Alba (23/22/20; clones take "
+                    "both finalist slots, runoff 3-2, 4 Equal Support). RR -> Alba (2-0). "
+                    "Test ID BV2198.",
+    },
+]
+
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
 # old specs here — every created election is recorded on BV + its saved export
 # in 06_Other/_demo_dropbox/ + BV_registry.md. Example: ELECTIONS = [_ICE_CREAM]
-ELECTIONS: list = []   # BV2188/89/90 (d3b9wc/rhbfj7/923q3d) created 2026-07-16 — reset to safe empty state
+ELECTIONS: list = []   # BV2191-98 (ywqhq4…93gjx6) created 2026-07-17 — reset to safe empty state
