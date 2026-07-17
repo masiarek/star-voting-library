@@ -33,7 +33,7 @@ The original `larryhastings/starvote` prints a blunt `No Condorcet Winner (cycle
 
 ## How the winner is found
 
-| Step | What happens | Rung that decides |
+| Step | What happens | [Rung](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) that decides |
 |---|---|---|
 | Scoring round | **B 7**, **C 3**, A 0 → B and C advance | — |
 | Runoff | B **1** vs C **1** head-to-head (1 voter each, 1 equal) → tied | — (tie) |
