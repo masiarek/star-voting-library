@@ -1,0 +1,73 @@
+======================================================================
+SOURCE FILE:     ex14_two_novels.yaml
+TABULATED FILE:  ex14_two_novels_tabulated.txt
+======================================================================
+
+election_title: "Exercise 14 — The transfer machine: a book club buys two novels (STV)"
+
+scenario_description: |-
+  A nine-member book club buys TWO novels by ranked ballot, counted with
+  STV (the proportional cousin of RCV-IRV). Droop quota = floor(9/3)+1 =
+  4. Round 1: Austen has 5 first choices — over quota — and is elected;
+  her ONE surplus vote transfers (as fractions of the five ballots that
+  elected her) to their next choice, Bronte. Standings: Bronte 2, Camus
+  3, Dickens 0. Nobody reaches quota, so the machine turns to
+  eliminations: Dickens (0) first, then Bronte (2) — whose pile, INCLUDING
+  the fraction that arrived from Austen's surplus, moves on to Camus.
+  Camus reaches 5 and takes the second seat. Seats: Austen + Camus. The
+  drill follows one ballot through the whole journey — surplus, then
+  elimination — to see how STV keeps a vote moving until it lands.
+  Exercise: ex14_transfer_machine.md. Ballots and cast (novelists as
+  candidates) are this repo's own.
+voting_method: STV
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  5:Austen>Bronte>Camus>Dickens
+  1:Bronte>Camus
+  3:Camus>Dickens
+expected_winners:
+  - Austen
+  - Camus
+
+# file: ex14_two_novels.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- STV / Single Transferable Vote (multi-winner — 2 seats) ---
+  Exercise 14 — The transfer machine: a book club buys two novels (STV)
+ Tabulating 9 ballots (ranked ballots).
+ 2 seats; Droop quota = 4 (44.4% of 9).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Austen             5  Elected
+Camus              3  Hopeful
+Bronte             1  Hopeful
+Dickens            0  Hopeful
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Austen          3.00  Elected
+Camus           3.00  Elected
+Bronte          3.00  Rejected
+Dickens         0.00  Rejected
+
+
+Winner(s) — STV / Single Transferable Vote (multi-winner — 2 seats)
+  Austen
+  Camus

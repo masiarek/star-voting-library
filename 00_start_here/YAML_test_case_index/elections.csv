@@ -161,6 +161,13 @@ LH:ex07_vanishing_votes,Exercise 7 — The vanishing votes that never vanished (
 LH:ex08_minimal_reversal_2c,"Exercise 8 — a smallest runoff reversal (sample solution, two candidates)",1,single-race,3,STAR,LH-only
 LH:ex08_minimal_reversal_3c,"Exercise 8 — a small runoff reversal (sample solution, three candidates)",1,single-race,5,STAR,LH-only
 LH:ex09_game_night_cycle,Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill),1,single-race,10,RankedRobin,LH-only
+LH:ex12_bloc_sweep,"Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps",1,single-race,10,STAR,LH-only
+LH:ex12_proportional_share,"Exercise 12 — Two seats, one neighborhood: Allocated Score shares",1,single-race,10,STAR_PR,LH-only
+LH:ex13_approve3,Exercise 13 — Where do you draw the line? Approve 3 and up,1,single-race,9,Approval,LH-only
+LH:ex13_approve4,Exercise 13 — Where do you draw the line? Approve 4 and up,1,single-race,9,Approval,LH-only
+LH:ex13_bullet,Exercise 13 — Where do you draw the line? Favorites only,1,single-race,9,Approval,LH-only
+LH:ex13_opinions,Exercise 13 — Where do you draw the line? The honest opinions (STAR),1,single-race,9,STAR,LH-only
+LH:ex14_two_novels,Exercise 14 — The transfer machine: a book club buys two novels (STV),1,single-race,9,STV,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only

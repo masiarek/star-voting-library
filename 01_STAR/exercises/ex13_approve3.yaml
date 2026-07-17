@@ -1,0 +1,38 @@
+election_title: "Exercise 13 — Where do you draw the line? Approve 3 and up"
+
+scenario_description: |-
+  The nine honest opinions of ex13_opinions.yaml converted to Approval
+  ballots under the GENEROUS reading: approve everyone you scored 3 or
+  higher. Approvals: Ash 7 of 9, Cora 6, Beck 5 — ASH wins. Compare
+  ex13_approve4.yaml (same opinions, stricter line: Beck wins) and
+  ex13_bullet.yaml (favorites only: Cora wins). One electorate, one
+  question the ballot cannot ask precisely — where the approval line
+  sits decides the election. Exercise: ex13_draw_the_line.md.
+voting_method: Approval
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ash,Beck,Cora
+  1,1,0 # 3 voters: scored Ash 5, Beck 4 — both clear the 3+ line
+  1,1,0
+  1,1,0
+  0,1,1 # 2 voters: scored Beck 5, Cora 3 — both approved
+  0,1,1
+  1,0,1 # 4 voters: scored Cora 5, Ash 3 — both approved
+  1,0,1
+  1,0,1
+  1,0,1
+expected_winners:
+  - Ash
+
+# file: ex13_approve3.yaml

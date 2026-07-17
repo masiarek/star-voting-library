@@ -1,0 +1,143 @@
+======================================================================
+SOURCE FILE:     ex12_bloc_sweep.yaml
+TABULATED FILE:  ex12_bloc_sweep_tabulated.txt
+======================================================================
+
+election_title: "Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps"
+
+scenario_description: |-
+  A neighborhood association elects a two-seat board. The north side (6 of
+  10 voters) runs Asa and Bram; the south side (4 of 10) runs Cleo and
+  Dane. Bloc STAR fills seats by running single-winner STAR once per seat:
+  seat 1 goes to Asa (30 points; runoff 6-0 over Bram with 4 Equal
+  Support), then Asa is removed and seat 2 goes to Bram (runoff 6-4 over
+  Cleo). The cohesive 60% takes 100% of the board — majoritarian by
+  design, the right tool when the body must act as one and the wrong one
+  when it should mirror the neighborhood. The companion file
+  ex12_proportional_share.yaml reruns the same ten ballots under Allocated
+  Score (STAR-PR): the south side's 40% earns one of the two seats.
+  Exercise: ex12_bloc_vs_proportional.md. Ballots and cast are this
+  repo's own.
+voting_method: Bloc STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  Asa,Bram,Cleo,Dane
+  5,4,0,0 # 6 north-side voters: Asa first, Bram close behind
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  0,0,5,4 # 4 south-side voters: Cleo first, Dane close behind
+  0,0,5,4
+  0,0,5,4
+  0,0,5,4
+expected_winners:
+  - Asa
+  - Bram
+
+# file: ex12_bloc_sweep.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps ===
+  A neighborhood association elects a two-seat board. The north side (6 of
+  10 voters) runs Asa and Bram; the south side (4 of 10) runs Cleo and
+  Dane. Bloc STAR fills seats by running single-winner STAR once per seat:
+  seat 1 goes to Asa (30 points; runoff 6-0 over Bram with 4 Equal
+  Support), then Asa is removed and seat 2 goes to Bram (runoff 6-4 over
+  Cleo). The cohesive 60% takes 100% of the board — majoritarian by
+  design, the right tool when the body must act as one and the wrong one
+  when it should mirror the neighborhood. The companion file
+  ex12_proportional_share.yaml reruns the same ten ballots under Allocated
+  Score (STAR-PR): the south side's 40% earns one of the two seats.
+  Exercise: ex12_bloc_vs_proportional.md. Ballots and cast are this
+  repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Asa    |  * Bram   |    Cleo   |    Dane   |
+-----------------------------------------------------------------
+       * Asa > |    ---     |6 - 4 - 0  |6 - 0 - 4  |6 - 0 - 4  |
+      * Bram > | 0 - 4 - 6  |   ---     |6 - 0 - 4  |6 - 0 - 4  |
+        Cleo > | 4 - 0 - 6  |4 - 0 - 6  |   ---     |4 - 6 - 0  |
+        Dane > | 4 - 0 - 6  |4 - 0 - 6  |0 - 6 - 4  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Asa — matches the STAR winner
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 10 ballots to fill 2 seats.
+Count × Asa,Bram,Cleo,Dane
+    6 ×   5,   4,   0,   0
+    4 ×   0,   0,   5,   4
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Asa        6  0  0  0  0  4  |    30   3.0
+Bram       0  6  0  0  0  4  |    24   2.4
+Cleo       4  0  0  0  0  6  |    20   2.0
+Dane       0  4  0  0  0  6  |    16   1.6
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Asa           -- 30 -- First place
+   Bram          -- 24 -- Second place
+   Cleo          -- 20
+   Dane          -- 16
+ Asa and Bram advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Asa           -- 6 -- First place
+   Bram          -- 0
+   Equal Support -- 4
+ Asa wins.
+   Runoff math:
+     10  ballots cast
+   −  4  Equal Support (no preference between the two finalists)
+     ──
+      6  voters with a preference  (majority = 4)
+           Asa 6 (100%)  ·  Bram 0 (0%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bram          -- 24 -- First place
+   Cleo          -- 20 -- Second place
+   Dane          -- 16
+ Bram and Cleo advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bram          -- 6 -- First place
+   Cleo          -- 4
+   Equal Support -- 0
+ Bram wins.
+   Runoff math:
+     10  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     10  voters with a preference  (majority = 6)
+           Bram 6 (60%)  ·  Cleo 4 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Asa
+ Bram

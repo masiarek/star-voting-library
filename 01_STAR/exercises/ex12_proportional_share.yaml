@@ -1,0 +1,44 @@
+election_title: "Exercise 12 — Two seats, one neighborhood: Allocated Score shares"
+
+scenario_description: |-
+  The same ten ballots as ex12_bloc_sweep.yaml, tabulated as Allocated
+  Score (STAR-PR). Round 1 elects the highest scorer, Asa (30) — and then
+  ALLOCATES a quota's worth (10 voters / 2 seats = 5 ballots) of Asa's
+  strongest supporters, spending most of the north side's voting weight.
+  Round 2 runs on what remains: the north's leftover fraction gives Bram
+  almost nothing, while the south side's four untouched ballots give Cleo
+  20 — Cleo takes seat 2. Board: Asa (north) + Cleo (south), one seat per
+  faction, matching their 60/40 weight. Same ballots as the Bloc STAR
+  sweep, opposite philosophy: proportional methods spend a faction's
+  weight as it wins seats so the rest of the room is heard. Exercise:
+  ex12_bloc_vs_proportional.md. Ballots and cast are this repo's own.
+voting_method: allocated
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  Asa,Bram,Cleo,Dane
+  5,4,0,0 # 6 north-side voters: Asa first, Bram close behind
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  0,0,5,4 # 4 south-side voters: Cleo first, Dane close behind
+  0,0,5,4
+  0,0,5,4
+  0,0,5,4
+expected_winners:
+  - Asa
+  - Cleo
+
+# file: ex12_proportional_share.yaml

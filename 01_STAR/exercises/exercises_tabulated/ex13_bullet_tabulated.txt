@@ -1,0 +1,75 @@
+======================================================================
+SOURCE FILE:     ex13_bullet.yaml
+TABULATED FILE:  ex13_bullet_tabulated.txt
+======================================================================
+
+election_title: "Exercise 13 — Where do you draw the line? Favorites only"
+
+scenario_description: |-
+  The nine honest opinions of ex13_opinions.yaml converted to Approval
+  ballots under the STINGIEST reading: approve only your 5s. Approvals:
+  Cora 4 of 9, Ash 3, Beck 2 — CORA wins, and the count is now just
+  Choose-One plurality wearing an Approval nametag. Compare
+  ex13_approve3.yaml (generous line: Ash) and ex13_approve4.yaml
+  (stricter line: Beck): three thresholds, three winners, one set of
+  honest opinions. Exercise: ex13_draw_the_line.md.
+voting_method: Approval
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ash,Beck,Cora
+  1,0,0 # 3 voters: only the Ash 5 makes the cut
+  1,0,0
+  1,0,0
+  0,1,0 # 2 voters: only the Beck 5
+  0,1,0
+  0,0,1 # 4 voters: only the Cora 5
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - Cora
+
+# file: ex13_bullet.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 9 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Ash, Beck, Cora      (1 = approve; 0 / blank / marker = not approved)
+     3 × 1,0,0
+     2 × 0,1,0
+     4 × 0,0,1
+
+   Cora -- 4 (44%) -- Elected
+   Ash  -- 3 (33%)
+   Beck -- 2 (22%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 9 ballots — average 1.0 of 3 (range 1–1).
+     approved 1: 9 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Cora  |  Ash   |  Beck  |
+   ----------------------------------
+   Cora  |   --   |   0%   |   0%   |
+   Ash   |   0%   |   --   |   0%   |
+   Beck  |   0%   |   0%   |   --   |
+
+Winner — Approval Voting (single winner)
+  Cora

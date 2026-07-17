@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 9 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ash, Beck, Cora
+     3 × Ash > Beck > Cora      (5, 4, 0)
+     2 × Beck > Cora > Ash      (0, 5, 3)
+     4 × Cora > Ash > Beck      (3, 0, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ash   beats Beck   7 – 2
+   Cora  beats Ash    6 – 3
+   Beck  beats Cora   5 – 4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |    Ash    |  Beck    |  Cora    |
+--------------------------------------------
+   Ash > |    ---    |7 - 0 - 2 |3 - 0 - 6 |
+  Beck > | 2 - 0 - 7 |   ---    |5 - 0 - 4 |
+  Cora > | 6 - 0 - 3 |4 - 0 - 5 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ash        1–1–0         1      +2  Beck
+    2  Cora       1–1–0         1      +2  Ash
+    3  Beck       1–1–0         1      -4  Cora
+
+Winner — Ranked Robin (RCV-RR): Ash
+   *** 3 candidates tie for the most wins (Ash, Beck, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

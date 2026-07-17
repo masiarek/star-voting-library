@@ -1,0 +1,45 @@
+election_title: "Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps"
+
+scenario_description: |-
+  A neighborhood association elects a two-seat board. The north side (6 of
+  10 voters) runs Asa and Bram; the south side (4 of 10) runs Cleo and
+  Dane. Bloc STAR fills seats by running single-winner STAR once per seat:
+  seat 1 goes to Asa (30 points; runoff 6-0 over Bram with 4 Equal
+  Support), then Asa is removed and seat 2 goes to Bram (runoff 6-4 over
+  Cleo). The cohesive 60% takes 100% of the board — majoritarian by
+  design, the right tool when the body must act as one and the wrong one
+  when it should mirror the neighborhood. The companion file
+  ex12_proportional_share.yaml reruns the same ten ballots under Allocated
+  Score (STAR-PR): the south side's 40% earns one of the two seats.
+  Exercise: ex12_bloc_vs_proportional.md. Ballots and cast are this
+  repo's own.
+voting_method: Bloc STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  Asa,Bram,Cleo,Dane
+  5,4,0,0 # 6 north-side voters: Asa first, Bram close behind
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  5,4,0,0
+  0,0,5,4 # 4 south-side voters: Cleo first, Dane close behind
+  0,0,5,4
+  0,0,5,4
+  0,0,5,4
+expected_winners:
+  - Asa
+  - Bram
+
+# file: ex12_bloc_sweep.yaml

@@ -1,0 +1,39 @@
+election_title: "Exercise 13 — Where do you draw the line? Approve 4 and up"
+
+scenario_description: |-
+  The nine honest opinions of ex13_opinions.yaml converted to Approval
+  ballots under the STRICTER reading: approve only what you scored 4 or
+  higher. Approvals: Beck 5 of 9, Cora 4, Ash 3 — BECK wins. The 4-point
+  Becks on the Ash-first ballots survive the cut while the 3-point
+  tolerances (Ash from Cora's fans, Cora from Beck's) all vanish, so the
+  quiet middle candidate tops the count. Compare ex13_approve3.yaml
+  (generous line: Ash) and ex13_bullet.yaml (favorites only: Cora).
+  Exercise: ex13_draw_the_line.md.
+voting_method: Approval
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ash,Beck,Cora
+  1,1,0 # 3 voters: Ash 5 and Beck 4 both clear the 4+ line
+  1,1,0
+  1,1,0
+  0,1,0 # 2 voters: only Beck (5) clears it — the Cora 3 vanishes
+  0,1,0
+  0,0,1 # 4 voters: only Cora (5) clears it — the Ash 3 vanishes
+  0,0,1
+  0,0,1
+  0,0,1
+expected_winners:
+  - Beck
+
+# file: ex13_approve4.yaml

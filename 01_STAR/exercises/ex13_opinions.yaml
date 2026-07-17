@@ -1,0 +1,42 @@
+election_title: "Exercise 13 — Where do you draw the line? The honest opinions (STAR)"
+
+scenario_description: |-
+  The reference election for the approval-threshold exercise: nine voters'
+  honest 0-5 opinions about Ash, Beck, and Cora — 3×(Ash 5, Beck 4),
+  2×(Beck 5, Cora 3), 4×(Cora 5, Ash 3). On the full scores, STAR
+  advances Ash (27) and Cora (26) and Cora wins the runoff 6-3; plain
+  Score voting would say Ash. The exercise then converts these SAME
+  opinions to Approval ballots under three defensible thresholds — and
+  gets three different Approval winners: approve 3+ elects Ash (7 of 9),
+  approve 4+ elects Beck (5), approve only 5s elects Cora (4). The
+  instructions, not the opinions, pick the winner. Companion files:
+  ex13_approve3.yaml / ex13_approve4.yaml / ex13_bullet.yaml. Exercise:
+  ex13_draw_the_line.md. Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ash,Beck,Cora
+  5,4,0 # 3 voters: Ash first, Beck a strong second
+  5,4,0
+  5,4,0
+  0,5,3 # 2 voters: Beck first, Cora mild
+  0,5,3
+  3,0,5 # 4 voters: Cora first, Ash tolerable
+  3,0,5
+  3,0,5
+  3,0,5
+expected_winners:
+  - Cora
+
+# file: ex13_opinions.yaml
