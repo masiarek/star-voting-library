@@ -1,4 +1,4 @@
-TestID,Case,ElectionID,Method,Winners,Candidates,Ballots,Expected,YAML,MD,ResultsURL
+﻿TestID,Case,ElectionID,Method,Winners,Candidates,Ballots,Expected,YAML,MD,ResultsURL
 BV11,bv11_6xhfp8_full_equal_support,6xhfp8,STAR,1,2,3,Ann,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.md,https://bettervoting.com/6xhfp8/results
 BV15,bv15_4h89vj_plurality_abstain,4h89vj,Plurality,1,2,12,Andre,01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.yaml,01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md,https://bettervoting.com/4h89vj/results
 BV27,approval_bloc_4seats_c7_b12_lackner_skowron,jt6r76,Approval_Multi_Winner,4,7,12,"A, B, C, D",04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml,04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md,https://bettervoting.com/jt6r76/results

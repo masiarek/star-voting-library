@@ -195,7 +195,7 @@ COLS = ["TestID", "Case", "ElectionID", "Method", "Winners", "Candidates",
 
 def write_csv(rows):
     path = os.path.join(OUT_DIR, "bv_cases.csv")
-    with open(path, "w", newline="") as fh:
+    with open(path, "w", newline="", encoding="utf-8-sig") as fh:
         w = csv.DictWriter(fh, fieldnames=COLS)
         w.writeheader()
         w.writerows(rows)

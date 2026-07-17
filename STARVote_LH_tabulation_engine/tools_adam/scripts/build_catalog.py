@@ -294,12 +294,12 @@ def main():
     cols = ["election_id", "election_title", "race_title", "method", "canon",
             "ballot_type", "seats", "seat_class", "character", "candidates",
             "voters", "winners", "backing", "lh_only_reason", "yaml"]
-    with open(os.path.join(IDXDIR, "races.csv"), "w", newline="", encoding="utf-8") as fh:
+    with open(os.path.join(IDXDIR, "races.csv"), "w", newline="", encoding="utf-8-sig") as fh:
         wr = csv.DictWriter(fh, fieldnames=cols)
         wr.writeheader()
         wr.writerows(sorted(races, key=lambda r: (r["election_id"], r["race_title"])))
     # elections.csv
-    with open(os.path.join(IDXDIR, "elections.csv"), "w", newline="", encoding="utf-8") as fh:
+    with open(os.path.join(IDXDIR, "elections.csv"), "w", newline="", encoding="utf-8-sig") as fh:
         wr = csv.DictWriter(fh, fieldnames=["election_id", "title", "races", "kind",
                                             "voters", "methods", "backing"])
         wr.writeheader()

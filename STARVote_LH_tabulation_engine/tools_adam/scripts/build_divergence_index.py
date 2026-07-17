@@ -547,7 +547,7 @@ def main():
             "RR_weak", "RR_strict", "Approval", "Score", "Condorcet_weak",
             "Condorcet_strict", "tie_ballots", "irv_fragile",
             "rr_conv_sensitive", "cycle"]
-    with (OUT_DIR / "divergence.csv").open("w", newline="") as fh:
+    with (OUT_DIR / "divergence.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         wri = csv.DictWriter(fh, fieldnames=cols)
         wri.writeheader()
         for r in sorted(rows, key=lambda x: (x["bucket"], x["file"])):
