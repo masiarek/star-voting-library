@@ -1,0 +1,44 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (2 winners) ---
+ Tabulating 100 ballots (ranked ballots).
+
+Ballots:
+    20 × Arepa > Bao > Churro
+    19 × Bao > Arepa > Churro
+    18 × Churro > Arepa > Bao
+    22 × Donut > Eclair
+    21 × Eclair > Donut
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Arepa   beats Bao      38 – 19
+   Arepa   beats Churro   39 – 18
+   Arepa   beats Donut    57 – 43
+   Arepa   beats Eclair   57 – 43
+   Bao     beats Churro   39 – 18
+   Bao     beats Donut    57 – 43
+   Bao     beats Eclair   57 – 43
+   Churro  beats Donut    57 – 43
+   Churro  beats Eclair   57 – 43
+   Donut   beats Eclair   22 – 21
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |    Arepa     |    Bao      |   Churro    |   Donut     |   Eclair    |
+-----------------------------------------------------------------------------------
+   Arepa > |     ---      |38 - 43 - 19 |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+     Bao > | 19 - 43 - 38 |    ---      |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+  Churro > | 18 - 43 - 39 |18 - 43 - 39 |    ---      |57 -  0 - 43 |57 -  0 - 43 |
+   Donut > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |    ---      |22 - 57 - 21 |
+  Eclair > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |21 - 57 - 22 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Arepa      4–0–0         4     +68  Bao, Churro, Donut, Eclair
+    2  Bao        3–1–0         3     +30  Churro, Donut, Eclair
+    3  Churro     2–2–0         2     -14  Donut, Eclair
+    4  Donut      1–3–0         1     -41  Eclair
+    5  Eclair     0–4–0         0     -43  —
+
+Winners — Ranked Robin (RCV-RR), 2 seats (Bloc — the top 2 by record):
+   1. Arepa   (4–0–0, Copeland 4, margin +68)
+   2. Bao   (3–1–0, Copeland 3, margin +30)

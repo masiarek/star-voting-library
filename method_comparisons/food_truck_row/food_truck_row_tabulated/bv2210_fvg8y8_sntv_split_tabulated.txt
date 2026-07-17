@@ -1,0 +1,13 @@
+--- SNTV (single non-transferable vote) — 2 winners ---
+ Tabulating 100 ballots (1 vote/voter).
+
+First-choice votes (most votes fill the seats):
+   Donut     22  <- Elected
+   Eclair    21  <- Elected
+   Arepa     20
+   Bao       19
+   Churro    18
+
+Winners — SNTV (single non-transferable vote), 2 seats:
+   1. Donut   (22 votes)
+   2. Eclair   (21 votes)

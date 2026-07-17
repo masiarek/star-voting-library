@@ -3215,4 +3215,76 @@ _RR_BURIAL_PAIR = [
 # win holds); the repo yamls/README carry the corrected analysis. Do NOT
 # re-run (permanent dupes).
 
-ELECTIONS: list = []   # BV2203-2209 created 2026-07-17 — reset to safe empty state
+# --- BV2210 — Food-Truck Row: the vote-splitting showcase ---------------------
+# One 100-voter electorate, five counts, three different parliaments. Two
+# spots on the food-truck row. The SAVORY side is a 57-voter outright
+# majority split across three trucks (Arepa 20, Bao 19, Churro 18); the
+# SWEET side is a disciplined 43-voter minority on two (Donut 22, Eclair 21).
+#   SNTV (choose one, top-2):   Donut + Eclair — the MAJORITY gets ZERO seats
+#   Bloc STAR (2 seats):        Arepa + Bao    — the majority SWEEPS both
+#   Bloc Ranked Robin (2):      Arepa + Bao    — ranked ballots sweep too
+#   STAR-PR / Allocated (2):    Arepa + Donut  — one per side
+#   STV (2):                    Arepa + Donut  — one per side
+# The LH `blocs:` vote-splitting check fires on the Bloc STAR yaml: "the
+# 'Savory' bloc is an outright majority (57 vs Donut's 22) but split across
+# 3 candidates, so Donut won Choose-One." All five LH-verified; every rung
+# distinct (counts 22/21/20/19/18; no ties anywhere). The STV race ends with
+# a hopeful still standing — clear of the BV2201-2205 sole-survivor crash.
+_FT_CANDS = ["Arepa", "Bao", "Churro", "Donut", "Eclair"]
+_FT_SNTV = _expand([(20, [1, 0, 0, 0, 0]), (19, [0, 1, 0, 0, 0]), (18, [0, 0, 1, 0, 0]),
+                    (22, [0, 0, 0, 1, 0]), (21, [0, 0, 0, 0, 1])])
+_FT_STAR = _expand([(20, [5, 4, 3, 0, 0]), (19, [4, 5, 3, 0, 0]), (18, [4, 3, 5, 0, 0]),
+                    (22, [0, 0, 0, 5, 4]), (21, [0, 0, 0, 4, 5])])
+_FT_RANK = _expand([(20, [1, 2, 3, 0, 0]), (19, [2, 1, 3, 0, 0]), (18, [2, 3, 1, 0, 0]),
+                    (22, [0, 0, 0, 1, 2]), (21, [0, 0, 0, 2, 1])])
+
+_FOOD_TRUCK = [
+    {
+        "test_id": "BV2210",
+        "title": "Food-Truck Row — two spots, five counts: vote-splitting, sweeps, and shares",
+        "description": (
+            "From the STAR education repo (github.com/masiarek/star-voting-library, "
+            "method_comparisons/food_truck_row/) — the vote-splitting showcase. One "
+            "100-voter electorate elects TWO food-truck spots five ways. The savory "
+            "side is a 57-voter outright majority split across three trucks (Arepa "
+            "20 first choices, Bao 19, Churro 18); the sweet side is a disciplined "
+            "43-voter minority on two (Donut 22, Eclair 21). SNTV (choose one, "
+            "top-2): Donut + Eclair — the 57% majority gets ZERO seats because it "
+            "split its one vote three ways; this is the classic SNTV failure that "
+            "punishes running too many candidates. Bloc STAR and Bloc Ranked Robin "
+            "(2 seats each): Arepa + Bao — the same majority now SWEEPS both seats; "
+            "majoritarian multi-winner counts hand 100% of the seats to 57% of the "
+            "room. STAR-PR / Allocated Score and STV (2 seats each): Arepa + Donut "
+            "— one seat per side, proportional to the room. Same opinions on every "
+            "ballot; only the counting rule changes. Savory ballots score/rank only "
+            "savory trucks (5/4/3 by taste), sweet ballots only sweet (5/4) — "
+            "cross-side abstentions are Equal Support. LH-verified on all five "
+            "counts, every rung distinct (22/21/20/19/18), no tie-breaks anywhere."),
+        "races": [
+            {"title": "Two spots — SNTV (choose one truck)", "method": "Plurality",
+             "num_winners": 2, "candidates": _FT_CANDS, "ballots": _FT_SNTV},
+            {"title": "Two spots — Bloc STAR", "method": "STAR",
+             "num_winners": 2, "candidates": _FT_CANDS, "ballots": _FT_STAR},
+            {"title": "Two spots — Bloc Ranked Robin", "method": "RankedRobin",
+             "num_winners": 2, "max_rankings": 5, "candidates": _FT_CANDS, "ballots": _FT_RANK},
+            {"title": "Two spots — STAR-PR / Allocated Score", "method": "STAR_PR",
+             "num_winners": 2, "candidates": _FT_CANDS, "ballots": _FT_STAR},
+            {"title": "Two spots — STV", "method": "STV",
+             "num_winners": 2, "max_rankings": 5, "candidates": _FT_CANDS, "ballots": _FT_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "SNTV -> Donut + Eclair. Bloc STAR -> Arepa + Bao. Bloc RR -> "
+                    "Arepa + Bao. STAR_PR -> Arepa + Donut (LH allocated; capture "
+                    "any BV divergence). STV -> Arepa + Donut. Test ID BV2210.",
+    },
+]
+
+# RESULTS (2026-07-17): BV2210 -> fvg8y8 — ALL FIVE races agree with LH
+# (SNTV Donut+Eclair / Bloc STAR Arepa+Bao / Bloc RR Arepa+Bao / STAR_PR
+# Arepa+Donut / STV Arepa+Donut), no genuine tie anywhere. BONUS: the
+# STAR_PR race reports tieBreakType 'random' with no tie — the THIRD
+# confirming instance of the STAR_PR 'Tied!' serializer quirk (89wwvr,
+# jwxr3j, now fvg8y8). Case folder: method_comparisons/food_truck_row/.
+# Do NOT re-run (permanent dupes).
+
+ELECTIONS: list = []   # BV2203-2210 created 2026-07-17 — reset to safe empty state

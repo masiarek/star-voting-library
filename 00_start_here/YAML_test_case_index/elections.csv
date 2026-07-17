@@ -27,6 +27,7 @@ dxg8pb,"BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
 f3dxq9,BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss,2,contested (multi-race),11,"Plurality, STAR",BV
 f4cjpy,BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head,3,contested (multi-race),21,"IRV, RankedRobin, STAR",BV
+fvg8y8,Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too,5,contested (multi-race),100,"Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 g6q42v,BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir,2,contested (multi-race),9,"IRV, STAR",BV
 ggg7hd,BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race,2,contested (multi-race),9,"Plurality, STAR",BV
 gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV

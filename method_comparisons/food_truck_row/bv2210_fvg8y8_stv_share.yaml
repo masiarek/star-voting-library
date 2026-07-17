@@ -1,0 +1,30 @@
+election_title: "Food-Truck Row — STV: one seat per side"
+bv_test_id: BV2210
+bv_election_id: fvg8y8
+bv_results_url: https://bettervoting.com/fvg8y8/results
+scenario_description: |-
+  One 100-voter electorate, two food-truck spots, five counts — this file is the STV count (ranked ballots, Droop quota + transfers). The savory side is a 57-voter OUTRIGHT MAJORITY split across three trucks (Arepa 20 first choices, Bao 19, Churro 18); the sweet side is a disciplined 43-voter minority on two (Donut 22, Eclair 21). Same opinions on every ballot; only the counting rule changes: SNTV hands the majority ZERO seats (Donut+Eclair), Bloc STAR and Bloc Ranked Robin hand it BOTH (Arepa+Bao), STAR-PR and STV share them one per side (Arepa+Donut). THE HEADLINE HERE: the ranked route to the same share. Droop quota 34; Churro's elimination pools the savory vote, Arepa is elected; Eclair's elimination pools the sweet vote, Donut is elected. One seat per ~quota of voters. (This race deliberately ends with a hopeful still standing — clear of the BV sole-survivor STV crash documented in 06_Other/STV/bv_stv_sole_survivor_crash/.) Full lesson: README.md in this folder. Live on BetterVoting (Test ID BV2210): https://bettervoting.com/fvg8y8 — all five races agree with the LH engine, no genuine tie anywhere. Live results: https://bettervoting.com/fvg8y8/results
+voting_method: STV
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  20:Arepa>Bao>Churro
+  19:Bao>Arepa>Churro
+  18:Churro>Arepa>Bao
+  22:Donut>Eclair
+  21:Eclair>Donut
+expected_winners:
+  - Arepa
+  - Donut
+
+# file: bv2210_fvg8y8_stv_share.yaml
