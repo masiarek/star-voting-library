@@ -3,10 +3,13 @@
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
+6bry7c,"BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 6w2gq7,"BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",2,contested (multi-race),100,"IRV, STAR",BV
 74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
+7f4f7q,BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 8kg698,"BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",4,contested (multi-race),20,"IRV, Plurality, RankedRobin, STAR",BV
+93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
 9vxcj7,"BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass",2,contested (multi-race),15,"Plurality, STAR",BV
@@ -21,6 +24,8 @@ dxg8pb,"BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
 f3dxq9,BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss,2,contested (multi-race),11,"Plurality, STAR",BV
 f4cjpy,BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head,3,contested (multi-race),21,"IRV, RankedRobin, STAR",BV
+g6q42v,BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir,2,contested (multi-race),9,"IRV, STAR",BV
+ggg7hd,BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race,2,contested (multi-race),9,"Plurality, STAR",BV
 gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV
 gvdy42,2026 California Governor Election,2,contested (multi-race),319,"IRV, STAR",BV
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV
@@ -38,9 +43,11 @@ r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner 
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
+x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him,3,contested (multi-race),33,"Plurality, RankedRobin, STAR",BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
+yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
@@ -49,14 +56,11 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 48hjkv,"BV2140 — Ranked Robin worked example — most pairwise wins, with no Condorcet winner",1,single-race,35,RankedRobin,BV
 4gfwdq,BV2142 — Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning,1,single-race,33,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
-6bry7c,Exercise 5 — The squeezed bridge-builder (IRV vs STAR),1,single-race,9,STAR,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
-7f4f7q,Exercise 6 — Bullet voting backfires: the strategic ballots,1,single-race,9,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 923q3d,"Exercise 1 — Two districts, one mayor: the COMBINED city",1,single-race,18,STAR,BV
-93gjx6,Exercise 11 — Recruit a spoiler: Axl enters the race,1,single-race,9,STAR,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
@@ -217,8 +221,6 @@ ff6mk3,BV135 - Approval 101 — most approvals wins,1,single-race,5,Approval,BV
 fk38pk,BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / simple),1,single-race,3,STAR,BV
 fp62p2,"BV2180 — Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",1,single-race,2,STAR,BV
 fyy886,BV2184 — The Team Lunch Vote — a beginner's STAR example (the compromise everyone likes wins),1,single-race,5,STAR,BV
-g6q42v,Exercise 10 — Later-no-harm: the reticent ballots,1,single-race,9,STAR,BV
-ggg7hd,Exercise 11 — Recruit a spoiler: the two-way base race,1,single-race,9,STAR,BV
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
 jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
 jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV
@@ -234,11 +236,9 @@ tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-ra
 tg4779,"BV2182 — Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",1,single-race,10,STAR,BV
 vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1,single-race,3,STAR,BV
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
-x4dkfd,Exercise 6 — Bullet voting backfires: the honest ballots,1,single-race,9,STAR,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
 ywqhq4,"Exercise 3 — One electorate, five verdicts (the snack vote)",1,single-race,9,STAR,BV
 yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV
-yyhj9x,Exercise 10 — Later-no-harm: the generous ballots,1,single-race,9,STAR,BV
 yyhr66,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,1,single-race,54,STAR,BV

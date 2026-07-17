@@ -402,6 +402,74 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Post-its switch — RCV-IRV | IRV | 4 | **Blue** |
 | Post-its switch — Choose-One (Plurality) | Plurality | 4 | **Purple** |
 
+## BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination
+
+**Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex05_center_squeeze_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Club presidency — STAR (0-5 scores) | STAR | 3 | **Brook** |
+| Club presidency — RCV-IRV (Instant Runoff) | IRV | 3 | **Avi** |
+| Club presidency — Ranked Robin (Copeland) | RankedRobin | 3 | **Brook** |
+
+## BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise
+
+**Election** [`x4dkfd`](https://bettervoting.com/x4dkfd/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex06_bullet_honest_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Speaker vote, honest — STAR (0-5 scores) | STAR | 3 | **Bree** |
+| Speaker vote, honest — RCV-IRV (Instant Runoff) | IRV | 3 | **Cash** |
+| Speaker vote, honest — Ranked Robin (Copeland) | RankedRobin | 3 | **Bree** |
+
+## BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare
+
+**Election** [`7f4f7q`](https://bettervoting.com/7f4f7q/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex06_bullet_backfire_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Speaker vote, bullet — STAR (0-5 scores) | STAR | 3 | **Cash** |
+| Speaker vote, bullet — RCV-IRV (Instant Runoff) | IRV | 3 | **Cash** |
+| Speaker vote, bullet — Ranked Robin (Copeland) | RankedRobin | 3 | **Cash** |
+
+## BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir
+
+**Election** [`g6q42v`](https://bettervoting.com/g6q42v/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex10_reticent_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Reticent ballots — STAR (0-5 scores) | STAR | 3 | **Amir** |
+| Reticent ballots — RCV-IRV (Instant Runoff) | IRV | 3 | **Amir** |
+
+## BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess
+
+**Election** [`yyhj9x`](https://bettervoting.com/yyhj9x/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex10_generous_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Generous ballots — STAR (0-5 scores) | STAR | 3 | **Bess** |
+| Generous ballots — RCV-IRV (Instant Runoff) | IRV | 3 | **Amir** |
+
+## BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race
+
+**Election** [`ggg7hd`](https://bettervoting.com/ggg7hd/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex11_two_way_base_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Two-way race — Choose-One (Plurality) | Plurality | 2 | **Alba** |
+| Two-way race — STAR (0-5 scores) | STAR | 2 | **Alba** |
+
+## BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it
+
+**Election** [`93gjx6`](https://bettervoting.com/93gjx6/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex11_spoiler_added_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Clone added — Choose-One (Plurality) | Plurality | 3 | **Brett** |
+| Clone added — RCV-IRV (Instant Runoff) | IRV | 3 | **Alba** |
+| Clone added — STAR (0-5 scores) | STAR | 3 | **Alba** |
+| Clone added — Ranked Robin (Copeland) | RankedRobin | 3 | **Alba** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

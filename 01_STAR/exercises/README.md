@@ -7,6 +7,7 @@ Three layers of answer key, so you can trust it:
 1. **The collapsed solutions** on each exercise page — worked arithmetic plus the relevant slice of engine output.
 2. **The runnable YAML** — each election is a real file you can tabulate yourself; the command is on every page.
 3. **The `_tabulated` mirror** — the full audit report (preference matrix, Condorcet check, score distribution, method divergence), one per election in the `exercises_tabulated/` subfolder, linked from every exercise page. The `expected_winners` keys are checked by the engine's regression suite for every score-method file (the one ranked-ballot exercise, 9, documents its key the same way), so the answers can't silently rot.
+4. **The frozen BetterVoting export** — BV-backed exercises keep their full `*_bv_export.json` (Election + Ballots + Results) beside the YAML: the canonical record of the live election at freeze time, even if strangers vote on the public pages later.
 
 ## The exercises
 
