@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 6 — Bullet voting backfires: the honest ballots
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ari, Bree, Cash
+     4 ×   Ari > Bree      (5, 3, 0)
+     4 ×   Cash > Bree      (0, 2, 5)
+     1 ×   Bree > Cash      (0, 5, 1)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cash               4  Hopeful
+Ari                4  Hopeful
+Bree               1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cash               5  Elected
+Ari                4  Rejected
+Bree               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cash
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**293 election files** (258 single-winner, 35 multi-winner) across 15 method(s).
+**298 election files** (263 single-winner, 35 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 164 |
+| STAR | 168 |
 | RCV-IRV (Hare) | 12 |
-| Ranked Robin (RCV-RR / Copeland) | 34 |
+| Ranked Robin (RCV-RR / Copeland) | 35 |
 | Approval | 10 |
 | STV (proportional RCV) | 4 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (164)
+## STAR  (168)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -83,6 +83,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex07_vanishing_votes.yaml`](../../01_STAR/exercises/ex07_vanishing_votes.yaml) | `01_STAR/exercises/` | 1 | Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill) → _Aspen_ | — |
 | [`ex08_minimal_reversal_2c.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_2c.yaml) | `01_STAR/exercises/` | 1 | Exercise 8 — a smallest runoff reversal (sample solution, two candidates) → _A_ | — |
 | [`ex08_minimal_reversal_3c.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_3c.yaml) | `01_STAR/exercises/` | 1 | Exercise 8 — a small runoff reversal (sample solution, three candidates) → _A_ | — |
+| [`ex10_generous.yaml`](../../01_STAR/exercises/ex10_generous.yaml) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the generous ballots → _Bess_ | — |
+| [`ex10_reticent.yaml`](../../01_STAR/exercises/ex10_reticent.yaml) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the reticent ballots → _Amir_ | — |
+| [`ex11_spoiler_added.yaml`](../../01_STAR/exercises/ex11_spoiler_added.yaml) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: Axl enters the race → _Alba_ | — |
+| [`ex11_two_way_base.yaml`](../../01_STAR/exercises/ex11_two_way_base.yaml) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: the two-way base race → _Alba_ | — |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
@@ -214,10 +218,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (34)
+## Ranked Robin (RCV-RR / Copeland)  (35)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`ex09_game_night_cycle.yaml`](../../01_STAR/exercises/ex09_game_night_cycle.yaml) | `01_STAR/exercises/` | 1 | Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill) → _Azul_ | — |
 | [`ranked_robin_consensus_center`](../../05_Ranked_Robin/_main/_main_pages/ranked_robin_consensus_center.md) | `05_Ranked_Robin/_main/` | 1 | Ranked Robin (RCV-RR) — the consensus center wins the round-robin → _Ben_ | [`.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) |
 | [`bv2142_4gfwdq_clone_cycle_pre`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2142_4gfwdq_clone_cycle_pre.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak → _A_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml) |
 | [`bv2143_9pr3wr_teaming_fails`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2143_9pr3wr_teaming_fails.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV → _A1_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml) |

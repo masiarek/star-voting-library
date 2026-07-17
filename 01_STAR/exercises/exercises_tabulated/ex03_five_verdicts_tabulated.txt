@@ -1,0 +1,126 @@
+======================================================================
+SOURCE FILE:     ex03_five_verdicts.yaml
+TABULATED FILE:  ex03_five_verdicts_tabulated.txt
+======================================================================
+
+election_title: "Exercise 3 — One electorate, five verdicts (the snack vote)"
+
+scenario_description: |-
+  Nine voters pick the office snack. Choose-One elects Apple (4 first
+  choices) — who loses head-to-head to BOTH rivals (the Condorcet loser).
+  RCV-IRV eliminates Cherry first (2 first choices) and elects Banana.
+  Approval (approve = score 3+) gives Cherry 9 of 9. Score gives Cherry 34
+  of a possible 45. STAR advances Cherry and Apple and Cherry wins the
+  runoff 5-4. And Ranked Robin confirms Cherry as the Condorcet winner.
+  One electorate, five different verdicts from five tabulations — the
+  ballot-vs-method lesson of the exercise ex03_five_verdicts.md. Structure
+  inspired by the worked comparisons in Brendan W. Sullivan, "An
+  Introduction to the Math of Voting Methods" (2022), ch. 5; ballots and
+  cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Apple,Banana,Cherry
+  5,0,3 # 4 voters: Apple fans, Cherry a solid second
+  5,0,3
+  5,0,3
+  5,0,3
+  0,5,4 # 3 voters: Banana fans, Cherry nearly as good
+  0,5,4
+  0,5,4
+  0,1,5 # 2 voters: Cherry fans, cool on both others
+  0,1,5
+expected_winners:
+  - Cherry
+
+# file: ex03_five_verdicts.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 3 — One electorate, five verdicts (the snack vote) ===
+  Nine voters pick the office snack. Choose-One elects Apple (4 first
+  choices) — who loses head-to-head to BOTH rivals (the Condorcet loser).
+  RCV-IRV eliminates Cherry first (2 first choices) and elects Banana.
+  Approval (approve = score 3+) gives Cherry 9 of 9. Score gives Cherry 34
+  of a possible 45. STAR advances Cherry and Apple and Cherry wins the
+  runoff 5-4. And Ranked Robin confirms Cherry as the Condorcet winner.
+  One electorate, five different verdicts from five tabulations — the
+  ballot-vs-method lesson of the exercise ex03_five_verdicts.md. Structure
+  inspired by the worked comparisons in Brendan W. Sullivan, "An
+  Introduction to the Math of Voting Methods" (2022), ch. 5; ballots and
+  cast are this repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Apple   |   Banana  | * Cherry  |
+-----------------------------------------------------
+     * Apple > |    ---     |4 - 0 - 5  |4 - 0 - 5  |
+      Banana > | 5 - 0 - 4  |   ---     |3 - 0 - 6  |
+    * Cherry > | 5 - 0 - 4  |6 - 0 - 3  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cherry — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Cherry
+  Choose-One (Plurality) = Apple   (differs from STAR)
+  RCV-IRV                = Banana   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: exercises_tabulated/ex03_five_verdicts_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Apple,Banana,Cherry
+    4 ×     5,     0,     3
+    3 ×     0,     5,     4
+    2 ×     0,     1,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Apple      4  0  0  0  0  5  |    20   2.2
+Banana     3  0  0  0  2  4  |    17   1.9
+Cherry     2  3  4  0  0  0  |    34   3.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cherry        -- 34 -- First place
+   Apple         -- 20 -- Second place
+   Banana        -- 17
+ Cherry and Apple advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cherry        -- 5 -- First place
+   Apple         -- 4
+   Equal Support -- 0
+ Cherry wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cherry 5 (56%)  ·  Apple 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cherry

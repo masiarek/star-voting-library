@@ -1,0 +1,35 @@
+election_title: "Exercise 8 — a small runoff reversal (sample solution, three candidates)"
+
+scenario_description: |-
+  A second sample solution to the construction exercise
+  ex08_build_a_reversal.md, with a third candidate so the finalist
+  selection is non-trivial. Five voters: B leads the scoring round 22-15-2
+  on the strength of two maximal ballots plus three friendly 4s — but
+  those three 4-givers all score A higher, so A wins the automatic runoff
+  3-2. The recipe visible in the ballots: give the score leader BREADTH
+  (many mid-high scores) and the runoff winner DEPTH (a majority that
+  ranks them on top).
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  A,B,C
+  5,4,0 # three voters: A first, B a friendly 4
+  5,4,0
+  5,4,0
+  0,5,1 # two voters: B first, a token point to C
+  0,5,1
+expected_winners:
+  - A
+
+# file: ex08_minimal_reversal_3c.yaml

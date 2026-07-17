@@ -1,0 +1,42 @@
+election_title: "Exercise 3 — One electorate, five verdicts (the snack vote)"
+
+scenario_description: |-
+  Nine voters pick the office snack. Choose-One elects Apple (4 first
+  choices) — who loses head-to-head to BOTH rivals (the Condorcet loser).
+  RCV-IRV eliminates Cherry first (2 first choices) and elects Banana.
+  Approval (approve = score 3+) gives Cherry 9 of 9. Score gives Cherry 34
+  of a possible 45. STAR advances Cherry and Apple and Cherry wins the
+  runoff 5-4. And Ranked Robin confirms Cherry as the Condorcet winner.
+  One electorate, five different verdicts from five tabulations — the
+  ballot-vs-method lesson of the exercise ex03_five_verdicts.md. Structure
+  inspired by the worked comparisons in Brendan W. Sullivan, "An
+  Introduction to the Math of Voting Methods" (2022), ch. 5; ballots and
+  cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Apple,Banana,Cherry
+  5,0,3 # 4 voters: Apple fans, Cherry a solid second
+  5,0,3
+  5,0,3
+  5,0,3
+  0,5,4 # 3 voters: Banana fans, Cherry nearly as good
+  0,5,4
+  0,5,4
+  0,1,5 # 2 voters: Cherry fans, cool on both others
+  0,1,5
+expected_winners:
+  - Cherry
+
+# file: ex03_five_verdicts.yaml

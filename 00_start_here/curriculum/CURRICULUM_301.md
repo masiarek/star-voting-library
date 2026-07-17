@@ -19,19 +19,19 @@
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.
-- **Material:** [favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).
+- **Material:** [favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md). Companion exercise: [Later-no-harm, both readings (ex10)](../../01_STAR/exercises/ex10_later_no_harm.md) — the criterion IRV keeps and STAR trades, live in one election.
 - **The point:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally (Alaska '22), STAR only in lab constructions.
 
 ## 301.3 — "Are equal-score votes discounted?"
 
 - **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
-- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md).
+- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md); drill: [The vanishing votes (ex07)](../../01_STAR/exercises/ex07_vanishing_votes.md).
 - **In the result display:** [Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
 
 ## 301.4 — The honest limits & theory
 
 - **Key terms:** Gibbard / Gibbard–Satterthwaite, strategy resistance vs proofness, Condorcet efficiency, Test of Balance.
-- **Material:** [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); "resistant, not proof."
+- **Material:** [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); "resistant, not proof." Worked gamble: [Bullet voting backfires (ex06)](../../01_STAR/exercises/ex06_bullet_backfire.md).
 - **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
 - **Deeper math:** [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite).
 - **The generalized Condorcet winner:** [The Smith set — the smallest club that beats everyone outside it](../topics/smith_set.md) — when a cycle erases the Condorcet winner, the smallest set that beats everyone outside it is the principled "still in contention" list; the Smith-efficiency scorecard (Ranked Robin ✅, Minimax ❌, STAR ❌ by design), the Smith//X constructions, and ISDA — worked on a runnable 4-candidate cycle ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md)).
@@ -44,7 +44,7 @@
 ## 301.6 — When Condorcet, Score, and Runoff disagree (and how often)
 
 - **Objective:** "Winner" isn't one thing — three reasonable definitions can name three different candidates; STAR targets the runoff winner *by design* (it is not a Condorcet method).
-- **Material:** [three winner notions](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)).
+- **Material:** [three winner notions](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)). Exercises: [Lillehammer 1994 (ex04)](../../01_STAR/exercises/ex04_olympics_1994.md) — Score vs STAR on real Olympic ballots — and the construction capstone [Build your own reversal (ex08)](../../01_STAR/exercises/ex08_build_a_reversal.md).
 - **Frequency:** [`06_Other/simulations/`](../../06_Other/simulations/) measures how often score and runoff diverge — and shows the rate swings with the model, the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
 - **Ranked Robin vs. Condorcet:** [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one.
 

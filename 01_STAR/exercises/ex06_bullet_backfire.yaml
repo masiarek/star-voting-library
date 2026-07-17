@@ -1,0 +1,41 @@
+election_title: "Exercise 6 — Bullet voting backfires: the strategic ballots"
+
+scenario_description: |-
+  The same nine voters as ex06_bullet_honest.yaml, but Ari's four fans now
+  bullet vote — Ari 5, Bree 0, Cash 0 — hoping to drag Ari past the
+  compromise candidate. It works halfway: Bree crashes from 25 points to
+  13 and out of the runoff, and Ari (20) becomes a finalist. But the
+  runoff Ari inherits is against Cash (21) — and Ari loses it 5-4, because
+  zeroing Bree never manufactured any Ari-over-Cash preferences. The
+  bullet voters demoted their sure second choice and elected their
+  nightmare. STAR's runoff is exactly the feature that makes this gamble
+  costly. Exercise: ex06_bullet_backfire.md. Ballots and cast are this
+  repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ari,Bree,Cash
+  5,0,0 # 4 voters: Ari fans BULLET VOTING (honest ballot was 5,3,0)
+  5,0,0
+  5,0,0
+  5,0,0
+  0,2,5 # 4 voters: Cash fans, unchanged
+  0,2,5
+  0,2,5
+  0,2,5
+  0,5,1 # 1 voter: Bree all the way, unchanged
+expected_winners:
+  - Cash
+
+# file: ex06_bullet_backfire.yaml

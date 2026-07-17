@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 3 — One electorate, five verdicts (the snack vote)
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Apple, Banana, Cherry
+     4 ×   Apple > Cherry      (5, 0, 3)
+     3 ×   Banana > Cherry      (0, 5, 4)
+     2 ×   Cherry > Banana      (0, 1, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Apple              4  Hopeful
+Banana             3  Hopeful
+Cherry             2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Banana             5  Elected
+Apple              4  Rejected
+Cherry             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Banana
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

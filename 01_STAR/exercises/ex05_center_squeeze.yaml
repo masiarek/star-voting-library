@@ -1,0 +1,39 @@
+election_title: "Exercise 5 — The squeezed bridge-builder (IRV vs STAR)"
+
+scenario_description: |-
+  A club presidency with two wings and one bridge-builder. Brook is scored
+  3+ by every single voter and beats each rival head-to-head (5-4 over
+  Avi, 6-3 over Cole) — the Condorcet winner. But Brook has only 2 first
+  choices, so RCV-IRV eliminates Brook FIRST and elects the wing candidate
+  Avi 5-4: the center squeeze. STAR reads the full scores instead: Brook
+  tops the scoring round 31-23-18 and wins the runoff against Avi 5-4.
+  A drill for the squeeze mechanism (see the center-squeeze topic pages);
+  ballots and cast are this repo's own. Exercise: ex05_center_squeeze.md.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Avi,Brook,Cole
+  5,3,0 # 4 voters: Avi's wing — Brook acceptable, Cole never
+  5,3,0
+  5,3,0
+  5,3,0
+  0,3,5 # 3 voters: Cole's wing — Brook acceptable, Avi never
+  0,3,5
+  0,3,5
+  3,5,0 # 1 voter: Brook first, leans Avi
+  0,5,3 # 1 voter: Brook first, leans Cole
+expected_winners:
+  - Brook
+
+# file: ex05_center_squeeze.yaml

@@ -1,0 +1,39 @@
+election_title: "Exercise 6 — Bullet voting backfires: the honest ballots"
+
+scenario_description: |-
+  The base case: nine voters, three speakers. Ari's four fans vote
+  honestly (Ari 5, Bree 3, Cash 0). Scoring round: Bree 25, Cash 21,
+  Ari 20 — Bree and Cash advance, and Bree (the broad compromise) beats
+  Cash 5-4 in the runoff. Ari's fans get their second choice. The
+  companion file ex06_bullet_backfire.yaml reruns the SAME election with
+  those four fans bullet voting (Ari 5, everyone else 0) — and hands the
+  win to Cash, their nightmare. Exercise: ex06_bullet_backfire.md.
+  Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ari,Bree,Cash
+  5,3,0 # 4 voters: Ari fans, honest about liking Bree too
+  5,3,0
+  5,3,0
+  5,3,0
+  0,2,5 # 4 voters: Cash fans, Bree tolerable
+  0,2,5
+  0,2,5
+  0,2,5
+  0,5,1 # 1 voter: Bree all the way
+expected_winners:
+  - Bree
+
+# file: ex06_bullet_honest.yaml

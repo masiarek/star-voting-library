@@ -1,0 +1,112 @@
+======================================================================
+SOURCE FILE:     ex08_minimal_reversal_2c.yaml
+TABULATED FILE:  ex08_minimal_reversal_2c_tabulated.txt
+======================================================================
+
+election_title: "Exercise 8 — a smallest runoff reversal (sample solution, two candidates)"
+
+scenario_description: |-
+  A sample solution to the construction exercise ex08_build_a_reversal.md:
+  the smallest election this repo knows where the score leader loses the
+  automatic runoff. Three voters, two candidates. B piles up points from
+  two friendly-but-not-first ballots (B 13, A 10) — yet a 2-1 majority
+  scores A above B, so A wins the runoff. Score voting and majority rule
+  disagree in the purest possible form; STAR sides with the majority.
+  (With only two candidates the finalist matrix is trivial, so
+  show_matrix is off per house style.)
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  A,B
+  5,4 # two voters: A first, B a friendly 4
+  5,4
+  0,5 # one voter: B only
+expected_winners:
+  - A
+
+# file: ex08_minimal_reversal_2c.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 8 — a smallest runoff reversal (sample solution, two candidates) ===
+  A sample solution to the construction exercise ex08_build_a_reversal.md:
+  the smallest election this repo knows where the score leader loses the
+  automatic runoff. Three voters, two candidates. B piles up points from
+  two friendly-but-not-first ballots (B 13, A 10) — yet a 2-1 majority
+  scores A above B, so A wins the runoff. Score voting and majority rule
+  disagree in the purest possible form; STAR sides with the majority.
+  (With only two candidates the finalist matrix is trivial, so
+  show_matrix is off per house style.)
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |   * B     |
+-----------------------------------------
+         * A > |    ---     |2 - 0 - 1  |
+         * B > | 1 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: A — matches the STAR winner
+
+[Divergence from STAR]
+  STAR     = A
+  Approval = B   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (B)
+ - Runoff Round Winner   = (A)
+  Candidate B earned the highest total score, but
+  Candidate A won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × A,B
+    2 × 5,4
+    1 × 0,5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          2  0  0  0  0  1  |    10   3.3
+B          1  2  0  0  0  0  |    13   4.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 13 -- First place
+   A             -- 10 -- Second place
+ B and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 2 -- First place
+   B             -- 1
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           A 2 (67%)  ·  B 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A

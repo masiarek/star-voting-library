@@ -1,0 +1,44 @@
+election_title: "Exercise 4 — Lillehammer 1994: nine judges, three skaters, two winners"
+
+scenario_description: |-
+  The real final ordinals of the 1994 Winter Olympics ladies figure
+  skating: nine judges ranked Oksana Baiul, Nancy Kerrigan, and Chen Lu —
+  five judges put Baiul first (Kerrigan second), four put Kerrigan first;
+  Lu is ranked third by seven judges and second by two. Ranks are mapped
+  to 0-5 scores with the repo's standard order-preserving map (top=5,
+  mid=3, bottom=1). Scoring round: Kerrigan 35, Baiul 33, Lu 13 — KERRIGAN
+  leads the scores. Automatic runoff: five of the nine judges prefer
+  Baiul, so BAIUL wins 5-4 — matching the real 5-4 judging split that
+  decided the gold medal. Score voting and STAR genuinely diverge on real
+  data; and Chen Lu can never win under ANY honest scoring, because every
+  single judge ranks Kerrigan above her (Pareto dominance). The exercise
+  is ex04_olympics_1994.md. Ordinals as reproduced in Brendan W. Sullivan,
+  "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Baiul,Kerrigan,Lu
+  5,3,1 # judges 1-5: Baiul > Kerrigan > Lu
+  5,3,1
+  5,3,1
+  5,3,1
+  5,3,1
+  3,5,1 # judges 6-7: Kerrigan > Baiul > Lu
+  3,5,1
+  1,5,3 # judges 8-9: Kerrigan > Lu > Baiul
+  1,5,3
+expected_winners:
+  - Baiul
+
+# file: ex04_olympics_1994.yaml

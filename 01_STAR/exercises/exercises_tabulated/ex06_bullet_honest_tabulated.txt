@@ -1,0 +1,120 @@
+======================================================================
+SOURCE FILE:     ex06_bullet_honest.yaml
+TABULATED FILE:  ex06_bullet_honest_tabulated.txt
+======================================================================
+
+election_title: "Exercise 6 — Bullet voting backfires: the honest ballots"
+
+scenario_description: |-
+  The base case: nine voters, three speakers. Ari's four fans vote
+  honestly (Ari 5, Bree 3, Cash 0). Scoring round: Bree 25, Cash 21,
+  Ari 20 — Bree and Cash advance, and Bree (the broad compromise) beats
+  Cash 5-4 in the runoff. Ari's fans get their second choice. The
+  companion file ex06_bullet_backfire.yaml reruns the SAME election with
+  those four fans bullet voting (Ari 5, everyone else 0) — and hands the
+  win to Cash, their nightmare. Exercise: ex06_bullet_backfire.md.
+  Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ari,Bree,Cash
+  5,3,0 # 4 voters: Ari fans, honest about liking Bree too
+  5,3,0
+  5,3,0
+  5,3,0
+  0,2,5 # 4 voters: Cash fans, Bree tolerable
+  0,2,5
+  0,2,5
+  0,2,5
+  0,5,1 # 1 voter: Bree all the way
+expected_winners:
+  - Bree
+
+# file: ex06_bullet_honest.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 6 — Bullet voting backfires: the honest ballots ===
+  The base case: nine voters, three speakers. Ari's four fans vote
+  honestly (Ari 5, Bree 3, Cash 0). Scoring round: Bree 25, Cash 21,
+  Ari 20 — Bree and Cash advance, and Bree (the broad compromise) beats
+  Cash 5-4 in the runoff. Ari's fans get their second choice. The
+  companion file ex06_bullet_backfire.yaml reruns the SAME election with
+  those four fans bullet voting (Ari 5, everyone else 0) — and hands the
+  win to Cash, their nightmare. Exercise: ex06_bullet_backfire.md.
+  Ballots and cast are this repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Ari    |  * Bree   |  * Cash   |
+-----------------------------------------------------
+         Ari > |    ---     |4 - 0 - 5  |4 - 0 - 5  |
+      * Bree > | 5 - 0 - 4  |   ---     |5 - 0 - 4  |
+      * Cash > | 5 - 0 - 4  |4 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Bree — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Bree
+  Choose-One (Plurality) = Ari   (differs from STAR)
+  RCV-IRV                = Cash   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: exercises_tabulated/ex06_bullet_honest_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ari,Bree,Cash
+    4 ×   5,   3,   0
+    4 ×   0,   2,   5
+    1 ×   0,   5,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ari        4  0  0  0  0  5  |    20   2.2
+Bree       1  0  4  4  0  0  |    25   2.8
+Cash       4  0  0  0  1  4  |    21   2.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bree          -- 25 -- First place
+   Cash          -- 21 -- Second place
+   Ari           -- 20
+ Bree and Cash advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bree          -- 5 -- First place
+   Cash          -- 4
+   Equal Support -- 0
+ Bree wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Bree 5 (56%)  ·  Cash 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bree

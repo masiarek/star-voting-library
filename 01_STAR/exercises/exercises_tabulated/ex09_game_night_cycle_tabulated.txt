@@ -1,0 +1,35 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 10 ballots (ranked ballots).
+
+Ballots:
+     4 × Azul > Boggle > Catan > Dominion
+     3 × Boggle > Catan > Azul > Dominion
+     3 × Catan > Azul > Boggle > Dominion
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Azul      beats Boggle      7 –  3
+   Catan     beats Azul        6 –  4
+   Azul      beats Dominion   10 –  0
+   Boggle    beats Catan       7 –  3
+   Boggle    beats Dominion   10 –  0
+   Catan     beats Dominion   10 –  0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+             |     Azul     |   Boggle    |   Catan     |  Dominion   |
+-----------------------------------------------------------------------
+      Azul > |     ---      | 7 -  0 -  3 | 4 -  0 -  6 |10 -  0 -  0 |
+    Boggle > |  3 -  0 -  7 |    ---      | 7 -  0 -  3 |10 -  0 -  0 |
+     Catan > |  6 -  0 -  4 | 3 -  0 -  7 |    ---      |10 -  0 -  0 |
+  Dominion > |  0 -  0 - 10 | 0 -  0 - 10 | 0 -  0 - 10 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Azul       2–1–0         2     +12  Boggle, Dominion
+    2  Boggle     2–1–0         2     +10  Catan, Dominion
+    3  Catan      2–1–0         2      +8  Azul, Dominion
+    4  Dominion   0–3–0         0     -30  —
+
+Winner — Ranked Robin (RCV-RR): Azul
+   *** 3 candidates tie for the most wins (Azul, Boggle, Catan) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

@@ -28,6 +28,9 @@ AGREE,01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Van
 AGREE,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
 AGREE,01_STAR/exercises/ex07_vanishing_votes.yaml,3,9,Aspen,Aspen,Birch,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,3,True,False,False
+AGREE,01_STAR/exercises/ex10_reticent.yaml,3,9,Amir,Amir,Amir,Amir,Amir,Amir,Amir,,,0,False,False,True
+AGREE,01_STAR/exercises/ex11_spoiler_added.yaml,3,9,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,0,False,False,False
+AGREE,01_STAR/exercises/ex11_two_way_base.yaml,2,9,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,0,False,False,False
 AGREE,01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml,3,6,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,0,False,False,False
 AGREE,01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
@@ -145,6 +148,7 @@ IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,S
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex05_center_squeeze.yaml,3,9,Brook,Avi,Avi,Brook,Brook,Brook,Brook,Brook,Brook,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex06_bullet_honest.yaml,3,9,Bree,Cash,Cash,Bree,Bree,Bree,Bree,Bree,Bree,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex10_generous.yaml,3,9,Bess,Amir,Amir,Bess,Bess,Bess,Bess,Bess,Bess,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,YAML_library/1_positive/trash_delete.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_star.yaml,3,27,Center,Left,Left,Center,Center,Left,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False

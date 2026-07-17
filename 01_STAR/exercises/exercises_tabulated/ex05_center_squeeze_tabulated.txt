@@ -1,0 +1,121 @@
+======================================================================
+SOURCE FILE:     ex05_center_squeeze.yaml
+TABULATED FILE:  ex05_center_squeeze_tabulated.txt
+======================================================================
+
+election_title: "Exercise 5 — The squeezed bridge-builder (IRV vs STAR)"
+
+scenario_description: |-
+  A club presidency with two wings and one bridge-builder. Brook is scored
+  3+ by every single voter and beats each rival head-to-head (5-4 over
+  Avi, 6-3 over Cole) — the Condorcet winner. But Brook has only 2 first
+  choices, so RCV-IRV eliminates Brook FIRST and elects the wing candidate
+  Avi 5-4: the center squeeze. STAR reads the full scores instead: Brook
+  tops the scoring round 31-23-18 and wins the runoff against Avi 5-4.
+  A drill for the squeeze mechanism (see the center-squeeze topic pages);
+  ballots and cast are this repo's own. Exercise: ex05_center_squeeze.md.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Avi,Brook,Cole
+  5,3,0 # 4 voters: Avi's wing — Brook acceptable, Cole never
+  5,3,0
+  5,3,0
+  5,3,0
+  0,3,5 # 3 voters: Cole's wing — Brook acceptable, Avi never
+  0,3,5
+  0,3,5
+  3,5,0 # 1 voter: Brook first, leans Avi
+  0,5,3 # 1 voter: Brook first, leans Cole
+expected_winners:
+  - Brook
+
+# file: ex05_center_squeeze.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 5 — The squeezed bridge-builder (IRV vs STAR) ===
+  A club presidency with two wings and one bridge-builder. Brook is scored
+  3+ by every single voter and beats each rival head-to-head (5-4 over
+  Avi, 6-3 over Cole) — the Condorcet winner. But Brook has only 2 first
+  choices, so RCV-IRV eliminates Brook FIRST and elects the wing candidate
+  Avi 5-4: the center squeeze. STAR reads the full scores instead: Brook
+  tops the scoring round 31-23-18 and wins the runoff against Avi 5-4.
+  A drill for the squeeze mechanism (see the center-squeeze topic pages);
+  ballots and cast are this repo's own. Exercise: ex05_center_squeeze.md.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Avi    | * Brook   |    Cole   |
+-----------------------------------------------------
+       * Avi > |    ---     |4 - 0 - 5  |5 - 0 - 4  |
+     * Brook > | 5 - 0 - 4  |   ---     |6 - 0 - 3  |
+        Cole > | 4 - 0 - 5  |3 - 0 - 6  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Brook — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Brook
+  Choose-One (Plurality) = Avi   (differs from STAR)
+  RCV-IRV                = Avi   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: exercises_tabulated/ex05_center_squeeze_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Avi,Brook,Cole
+    4 ×   5,    3,   0
+    3 ×   0,    3,   5
+    1 ×   3,    5,   0
+    1 ×   0,    5,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Avi        4  0  1  0  0  4  |    23   2.6
+Brook      2  0  7  0  0  0  |    31   3.4
+Cole       3  0  1  0  0  5  |    18   2.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Brook         -- 31 -- First place
+   Avi           -- 23 -- Second place
+   Cole          -- 18
+ Brook and Avi advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Brook         -- 5 -- First place
+   Avi           -- 4
+   Equal Support -- 0
+ Brook wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Brook 5 (56%)  ·  Avi 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Brook

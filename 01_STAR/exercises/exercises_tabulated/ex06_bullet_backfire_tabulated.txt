@@ -1,0 +1,118 @@
+======================================================================
+SOURCE FILE:     ex06_bullet_backfire.yaml
+TABULATED FILE:  ex06_bullet_backfire_tabulated.txt
+======================================================================
+
+election_title: "Exercise 6 — Bullet voting backfires: the strategic ballots"
+
+scenario_description: |-
+  The same nine voters as ex06_bullet_honest.yaml, but Ari's four fans now
+  bullet vote — Ari 5, Bree 0, Cash 0 — hoping to drag Ari past the
+  compromise candidate. It works halfway: Bree crashes from 25 points to
+  13 and out of the runoff, and Ari (20) becomes a finalist. But the
+  runoff Ari inherits is against Cash (21) — and Ari loses it 5-4, because
+  zeroing Bree never manufactured any Ari-over-Cash preferences. The
+  bullet voters demoted their sure second choice and elected their
+  nightmare. STAR's runoff is exactly the feature that makes this gamble
+  costly. Exercise: ex06_bullet_backfire.md. Ballots and cast are this
+  repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ari,Bree,Cash
+  5,0,0 # 4 voters: Ari fans BULLET VOTING (honest ballot was 5,3,0)
+  5,0,0
+  5,0,0
+  5,0,0
+  0,2,5 # 4 voters: Cash fans, unchanged
+  0,2,5
+  0,2,5
+  0,2,5
+  0,5,1 # 1 voter: Bree all the way, unchanged
+expected_winners:
+  - Cash
+
+# file: ex06_bullet_backfire.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 6 — Bullet voting backfires: the strategic ballots ===
+  The same nine voters as ex06_bullet_honest.yaml, but Ari's four fans now
+  bullet vote — Ari 5, Bree 0, Cash 0 — hoping to drag Ari past the
+  compromise candidate. It works halfway: Bree crashes from 25 points to
+  13 and out of the runoff, and Ari (20) becomes a finalist. But the
+  runoff Ari inherits is against Cash (21) — and Ari loses it 5-4, because
+  zeroing Bree never manufactured any Ari-over-Cash preferences. The
+  bullet voters demoted their sure second choice and elected their
+  nightmare. STAR's runoff is exactly the feature that makes this gamble
+  costly. Exercise: ex06_bullet_backfire.md. Ballots and cast are this
+  repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ari    |    Bree   |  * Cash   |
+-----------------------------------------------------
+       * Ari > |    ---     |4 - 0 - 5  |4 - 0 - 5  |
+        Bree > | 5 - 0 - 4  |   ---     |1 - 4 - 4  |
+      * Cash > | 5 - 0 - 4  |4 - 4 - 1  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cash — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Cash
+  Choose-One (Plurality) = Ari   (differs from STAR)
+  Approval               = Ari   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ari,Bree,Cash
+    4 ×   5,   0,   0
+    4 ×   0,   2,   5
+    1 ×   0,   5,   1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ari        4  0  0  0  0  5  |    20   2.2
+Bree       1  0  0  4  0  4  |    13   1.4
+Cash       4  0  0  0  1  4  |    21   2.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cash          -- 21 -- First place
+   Ari           -- 20 -- Second place
+   Bree          -- 13
+ Cash and Ari advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cash          -- 5 -- First place
+   Ari           -- 4
+   Equal Support -- 0
+ Cash wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cash 5 (56%)  ·  Ari 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cash

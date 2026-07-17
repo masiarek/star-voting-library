@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 10 — Later-no-harm: the generous ballots
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Amir, Bess, Cato
+     4 ×   Amir > Bess      (5, 3, 0)
+     2 ×   Bess > Amir      (2, 5, 0)
+     3 ×   Cato > Bess      (0, 1, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Amir               4  Hopeful
+Cato               3  Hopeful
+Bess               2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Amir               6  Elected
+Cato               3  Rejected
+Bess               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Amir
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

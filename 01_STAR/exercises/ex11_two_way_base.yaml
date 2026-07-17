@@ -1,0 +1,39 @@
+election_title: "Exercise 11 — Recruit a spoiler: the two-way base race"
+
+scenario_description: |-
+  The base case: a straight two-way race, nine voters. Alba's camp is
+  five strong, Brett's is four — Alba wins under Choose-One (5-4), Score
+  (25-20), and STAR (runoff 5-4). Every method agrees when there are only
+  two names. The companion file ex11_spoiler_added.yaml adds Axl — a
+  near-clone of Alba recruited by Brett's campaign — and asks which
+  methods flip. (Two candidates: the finalist matrix is trivial, so
+  show_matrix is off per house style.) Exercise: ex11_recruit_a_spoiler.md.
+  Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alba,Brett
+  5,0 # 5 voters: Alba's camp
+  5,0
+  5,0
+  5,0
+  5,0
+  0,5 # 4 voters: Brett's camp
+  0,5
+  0,5
+  0,5
+expected_winners:
+  - Alba
+
+# file: ex11_two_way_base.yaml

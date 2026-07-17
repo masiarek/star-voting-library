@@ -1,0 +1,127 @@
+======================================================================
+SOURCE FILE:     ex11_spoiler_added.yaml
+TABULATED FILE:  ex11_spoiler_added_tabulated.txt
+======================================================================
+
+election_title: "Exercise 11 — Recruit a spoiler: Axl enters the race"
+
+scenario_description: |-
+  The same nine voters as ex11_two_way_base.yaml, plus a third name on
+  the ballot: Axl, a near-clone of Alba (recruited, in the exercise's
+  story, by Brett's campaign to split Alba's vote). Alba's five-voter
+  camp splits its FIRST choices 3-2 between the clones but scores both
+  4-5; Brett's four voters are unchanged. Choose-One now elects BRETT
+  (4 first choices vs 3 and 2) — the spoiler worked. STAR shrugs:
+  scoring round Alba 23, Axl 22, Brett 20 — the CAMP keeps both finalist
+  slots and the runoff is Alba vs Axl, which Alba wins 3-2 (Brett's four
+  voters score the clones 0-0: Equal Support). RCV-IRV also survives
+  this one: Axl is eliminated first and his votes come home to Alba —
+  crowding by pure clones is the one spoiler variant IRV genuinely
+  handles. The dirty trick only pays under Choose-One. (Axl shares
+  Alba's initial ON PURPOSE — they are clones; the distinct-initials
+  naming rule yields to the lesson here.) Exercise:
+  ex11_recruit_a_spoiler.md. Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alba,Axl,Brett
+  5,4,0 # 3 voters: Alba's camp, Alba first among the clones
+  5,4,0
+  5,4,0
+  4,5,0 # 2 voters: Alba's camp, Axl first among the clones
+  4,5,0
+  0,0,5 # 4 voters: Brett's camp, unchanged
+  0,0,5
+  0,0,5
+  0,0,5
+expected_winners:
+  - Alba
+
+# file: ex11_spoiler_added.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 11 — Recruit a spoiler: Axl enters the race ===
+  The same nine voters as ex11_two_way_base.yaml, plus a third name on
+  the ballot: Axl, a near-clone of Alba (recruited, in the exercise's
+  story, by Brett's campaign to split Alba's vote). Alba's five-voter
+  camp splits its FIRST choices 3-2 between the clones but scores both
+  4-5; Brett's four voters are unchanged. Choose-One now elects BRETT
+  (4 first choices vs 3 and 2) — the spoiler worked. STAR shrugs:
+  scoring round Alba 23, Axl 22, Brett 20 — the CAMP keeps both finalist
+  slots and the runoff is Alba vs Axl, which Alba wins 3-2 (Brett's four
+  voters score the clones 0-0: Equal Support). RCV-IRV also survives
+  this one: Axl is eliminated first and his votes come home to Alba —
+  crowding by pure clones is the one spoiler variant IRV genuinely
+  handles. The dirty trick only pays under Choose-One. (Axl shares
+  Alba's initial ON PURPOSE — they are clones; the distinct-initials
+  naming rule yields to the lesson here.) Exercise:
+  ex11_recruit_a_spoiler.md. Ballots and cast are this repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Alba   |  * Axl    |   Brett   |
+-----------------------------------------------------
+      * Alba > |    ---     |3 - 4 - 2  |5 - 0 - 4  |
+       * Axl > | 2 - 4 - 3  |   ---     |5 - 0 - 4  |
+       Brett > | 4 - 0 - 5  |4 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Alba — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Alba
+  Choose-One (Plurality) = Brett   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Alba,Axl,Brett
+    4 ×    0,  0,    5
+    3 ×    5,  4,    0
+    2 ×    4,  5,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alba       3  2  0  0  0  4  |    23   2.6
+Axl        2  3  0  0  0  4  |    22   2.4
+Brett      4  0  0  0  0  5  |    20   2.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alba          -- 23 -- First place
+   Axl           -- 22 -- Second place
+   Brett         -- 20
+ Alba and Axl advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alba          -- 3 -- First place
+   Axl           -- 2
+   Equal Support -- 4
+ Alba wins.
+   Runoff math:
+     9  ballots cast
+   − 4  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Alba 3 (60%)  ·  Axl 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Alba

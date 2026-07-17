@@ -6,12 +6,12 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **164** single-winner STAR elections (skipped 88 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **92** (56%) diverge from STAR under at least one method; **72** agree across the board.
+- Scanned **168** single-winner STAR elections (skipped 88 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **93** (55%) diverge from STAR under at least one method; **75** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 20 |
+| IRV_OUTLIER_RR_WITH_STAR | 21 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 9 |
 | CYCLE_OR_THREE_WAY | 23 |
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (88 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (89 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 18
+### IRV_OUTLIER_RR_WITH_STAR — 19
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -43,6 +43,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Brook** · IRV=Avi · RR=Brook · Approval=Brook · Score=Brook · Condorcet=Brook
 - **[ex06_bullet_honest](cases/IRV_OUTLIER_RR_WITH_STAR/ex06_bullet_honest.md)** — `01_STAR/exercises/ex06_bullet_honest.yaml` (3c/9b)  
     STAR=**Bree** · IRV=Cash · RR=Bree · Approval=Bree · Score=Bree · Condorcet=Bree
+- **[ex10_generous](cases/IRV_OUTLIER_RR_WITH_STAR/ex10_generous.md)** — `01_STAR/exercises/ex10_generous.yaml` (3c/9b)  
+    STAR=**Bess** · IRV=Amir · RR=Bess · Approval=Bess · Score=Bess · Condorcet=Bess
 - **[center_squeeze_star](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_star.md)** — `method_comparisons/center_squeeze/center_squeeze_star.yaml` (3c/27b)  
     STAR=**Center** · IRV=Left · RR=Center · Approval=Left · Score=Center · Condorcet=Center
 - **[center_squeeze_voteline_1d](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md)** — `method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml` (3c/998b)  

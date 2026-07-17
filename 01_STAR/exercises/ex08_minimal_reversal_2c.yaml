@@ -1,0 +1,33 @@
+election_title: "Exercise 8 — a smallest runoff reversal (sample solution, two candidates)"
+
+scenario_description: |-
+  A sample solution to the construction exercise ex08_build_a_reversal.md:
+  the smallest election this repo knows where the score leader loses the
+  automatic runoff. Three voters, two candidates. B piles up points from
+  two friendly-but-not-first ballots (B 13, A 10) — yet a 2-1 majority
+  scores A above B, so A wins the runoff. Score voting and majority rule
+  disagree in the purest possible form; STAR sides with the majority.
+  (With only two candidates the finalist matrix is trivial, so
+  show_matrix is off per house style.)
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  A,B
+  5,4 # two voters: A first, B a friendly 4
+  5,4
+  0,5 # one voter: B only
+expected_winners:
+  - A
+
+# file: ex08_minimal_reversal_2c.yaml

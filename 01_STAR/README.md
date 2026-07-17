@@ -34,7 +34,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 10. **The "dead rung"** — when STAR's five-star tiebreaker can't fire and the tie falls to the lot → [the dead-rung case](tie_break_dead_rung/).
 11. **None of the Above** — a protest electorate where NOTA actually wins → [the NOTA election](none_of_the_above/).
 12. **The honest limits & the reversal debate** → [STAR's honest limits](../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [the second-round FAQ](../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md).
-13. **Practice — predict, then peek.** Worked problems with hidden, tested solutions: the two-district consistency puzzle, and the mislaid ballot that demotes its own favorite → **[the exercises set](exercises/README.md)**.
+13. **Practice — predict, then peek.** Eleven worked problems with hidden, tested solutions — reading drills, criteria probes (consistency, participation, later-no-harm), strategy gambles, the real 1994 Olympics ballots, a Ranked Robin cycle, and build-your-own constructions → **[the exercises set](exercises/README.md)**.
 
 ---
 
@@ -50,7 +50,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 | [The Majority Criterion](majority_criterion/) | 301 | Two 5-voter elections isolating STAR's Majority-Criterion behavior (and the Relaxed Majority Criterion). |
 | [The dead rung — when the tiebreak can't fire](tie_break_dead_rung/) | 301 | The "dead rung": when no tied candidate holds a 5, the five-star tiebreak reads 0–0 and the lot decides. |
 | [None of the Above](none_of_the_above/) | 301 | BV215 — a protest election where None of the Above tops the scores and wins the runoff. |
-| [Exercises — predict, then peek](exercises/README.md) | 301 | Worked problems with collapsible solutions: winning both districts but losing the city (consistency), and the mislaid tenth ballot that demotes its favorite (participation / no-show) plus the withdrawal shield (runoff-slot spoiler). |
+| [Exercises — predict, then peek](exercises/README.md) | 201→301 | Eleven worked problems with collapsible solutions: district consistency, the tenth-ballot participation paradox, five-verdicts-one-electorate, the 1994 Olympics ballots, center squeeze, bullet-vote backfire, the Equal Support reading drill, build-your-own reversal, a Ranked Robin cycle ladder, later-no-harm both ways, and recruit-a-spoiler. |
 
 *Parked, not on the learning path: [two-candidate STAR](silly_two_cand_STAR/) — deliberately-trivial two-candidate cases. With only two candidates the runoff just echoes the scores, so there's nothing distinctive to learn; kept for completeness and as engine test fixtures.*
 

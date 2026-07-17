@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Exercise 5 — The squeezed bridge-builder (IRV vs STAR)
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Avi, Brook, Cole
+     4 ×   Avi > Brook      (5, 3, 0)
+     3 ×   Cole > Brook      (0, 3, 5)
+     1 ×   Brook > Avi      (3, 5, 0)
+     1 ×   Brook > Cole      (0, 5, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Avi                4  Hopeful
+Cole               3  Hopeful
+Brook              2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Avi                5  Elected
+Cole               4  Rejected
+Brook              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Avi
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,0 +1,126 @@
+======================================================================
+SOURCE FILE:     ex07_vanishing_votes.yaml
+TABULATED FILE:  ex07_vanishing_votes_tabulated.txt
+======================================================================
+
+election_title: "Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill)"
+
+scenario_description: |-
+  A park board picks a tree. Nine ballot papers come back: two score the
+  finalists equal at the top (5-5), one at 3-3, one bullet-votes Cedar
+  (0,0,5), one is all zeros, one is completely blank — and only three
+  express a preference between the finalists Aspen and Birch. The drill:
+  predict every number in the two-line runoff summary before peeking.
+  Scoring round: Aspen 24, Birch 20, Cedar 13. Runoff: Aspen 2, Birch 1,
+  Equal Support 6 — "Voters with a preference: 3 of 9 (6 Equal Support)".
+  The 9 counts every tabulated ballot: the blank abstention folds into
+  Equal Support on this line, and the separate engine Note ("1 of 9
+  ballots is marked as an abstention") carries the cast-vs-abstained
+  split. No vote vanished: equal scores are counted in full in the
+  scoring round and then have no preference to give between equals.
+  Exercise: ex07_vanishing_votes.md. Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Aspen,Birch,Cedar
+  5,5,0 # equal top pair — full weight in scoring, Equal Support in the runoff
+  5,5,3 # same, with a nod to Cedar
+  3,3,5 # Cedar first — and equal on the two finalists
+  5,2,0 # a clear Aspen preference
+  4,1,0 # a clear Aspen preference
+  2,4,0 # a clear Birch preference
+  0,0,5 # bullet vote for Cedar — zero on both finalists is still Equal Support
+  0,0,0 # all zeros — a CAST ballot that supports no one
+  -,-,- # completely blank — a true abstention, not a cast ballot
+expected_winners:
+  - Aspen
+
+# file: ex07_vanishing_votes.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill) ===
+  A park board picks a tree. Nine ballot papers come back: two score the
+  finalists equal at the top (5-5), one at 3-3, one bullet-votes Cedar
+  (0,0,5), one is all zeros, one is completely blank — and only three
+  express a preference between the finalists Aspen and Birch. The drill:
+  predict every number in the two-line runoff summary before peeking.
+  Scoring round: Aspen 24, Birch 20, Cedar 13. Runoff: Aspen 2, Birch 1,
+  Equal Support 6 — "Voters with a preference: 3 of 9 (6 Equal Support)".
+  The 9 counts every tabulated ballot: the blank abstention folds into
+  Equal Support on this line, and the separate engine Note ("1 of 9
+  ballots is marked as an abstention") carries the cast-vs-abstained
+  split. No vote vanished: equal scores are counted in full in the
+  scoring round and then have no preference to give between equals.
+  Exercise: ex07_vanishing_votes.md. Ballots and cast are this repo's own.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Aspen   | * Birch   |   Cedar   |
+-----------------------------------------------------
+     * Aspen > |    ---     |2 - 6 - 1  |5 - 2 - 2  |
+     * Birch > | 1 - 6 - 2  |   ---     |5 - 2 - 2  |
+       Cedar > | 2 - 2 - 5  |2 - 2 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Aspen — matches the STAR winner
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots. Note: 1 of 9 ballots is marked as an abstention.
+Aspen,Birch,Cedar
+    5,    5,    0
+    5,    5,    3
+    3,    3,    5
+    5,    2,    0
+    4,    1,    0
+    2,    4,    0
+    0,    0,    5
+    0,    0,    0
+    -,    -,    -
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Aspen      3  1  1  1  0  2    1  |    24   3.0
+Birch      2  1  1  1  1  2    1  |    20   2.5
+Cedar      2  0  1  0  0  5    1  |    13   1.6
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Aspen         -- 24 -- First place
+   Birch         -- 20 -- Second place
+   Cedar         -- 13
+ Aspen and Birch advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Aspen         -- 2 -- First place
+   Birch         -- 1
+   Equal Support -- 6
+ Aspen wins.
+   Runoff math:
+     9  ballots cast
+   − 6  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Aspen 2 (67%)  ·  Birch 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Aspen

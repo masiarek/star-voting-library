@@ -157,6 +157,8 @@ LH:ex08_minimal_reversal_3c,"Exercise 8 — a small runoff reversal (sample solu
 LH:ex09_game_night_cycle,Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill),1,single-race,10,RankedRobin,LH-only
 LH:ex10_generous,Exercise 10 — Later-no-harm: the generous ballots,1,single-race,9,STAR,LH-only
 LH:ex10_reticent,Exercise 10 — Later-no-harm: the reticent ballots,1,single-race,9,STAR,LH-only
+LH:ex11_spoiler_added,Exercise 11 — Recruit a spoiler: Axl enters the race,1,single-race,9,STAR,LH-only
+LH:ex11_two_way_base,Exercise 11 — Recruit a spoiler: the two-way base race,1,single-race,9,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only

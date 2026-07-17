@@ -1,0 +1,38 @@
+election_title: "Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill)"
+
+scenario_description: |-
+  Ten friends rank four board games. Azul beats Boggle 7-3, Boggle beats
+  Catan 7-3, Catan beats Azul 6-4 — a rock-paper-scissors cycle, so there
+  is NO Condorcet winner — and everything beats Dominion 10-0. Ranked
+  Robin walks its ladder: most pairwise wins first (Azul, Boggle, and
+  Catan all tie at 2-1), then TOTAL WIN MARGIN: Azul +12, Boggle +10,
+  Catan +8 — Azul wins, deterministically, no lot needed. This is an
+  LH-only exercise on purpose: BetterVoting resolves a 3-way wins tie at
+  RANDOM (the BV2142 caveat), so a frozen BV result cannot exist.
+  Exercise: ex09_game_night_cycle.md. Ballots and cast are this repo's
+  own.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Azul, Boggle, Catan, Dominion]
+options:
+  show_description: false
+  show_matrix: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Azul>Boggle>Catan>Dominion
+  Azul>Boggle>Catan>Dominion
+  Azul>Boggle>Catan>Dominion
+  Azul>Boggle>Catan>Dominion
+  Boggle>Catan>Azul>Dominion
+  Boggle>Catan>Azul>Dominion
+  Boggle>Catan>Azul>Dominion
+  Catan>Azul>Boggle>Dominion
+  Catan>Azul>Boggle>Dominion
+  Catan>Azul>Boggle>Dominion
+
+expected_winners:
+  - Azul
+
+# file: ex09_game_night_cycle.yaml

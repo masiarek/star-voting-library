@@ -1,0 +1,41 @@
+election_title: "Exercise 10 — Later-no-harm: the reticent ballots"
+
+scenario_description: |-
+  Nine voters, three candidates. Amir's four fans withhold everything
+  below their favorite: Amir 5, Bess 0, Cato 0. Scoring round: Amir 24,
+  Cato 15, Bess 13 — Amir and Cato advance, and Amir wins the runoff 6-3.
+  The companion file ex10_generous.yaml reruns the election with those
+  fans scoring honestly (Amir 5, Bess 3, Cato 0): Bess reaches the runoff
+  instead and beats Amir 5-4. Scoring a later choice DID harm their
+  favorite — the later-no-harm failure STAR accepts by design. The
+  exercise asks which reading is right: did the generous 3s harm Amir, or
+  did the reticent 0s hide the consensus winner Bess? Exercise:
+  ex10_later_no_harm.md. Ballots and cast are this repo's own.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Amir,Bess,Cato
+  5,0,0 # 4 voters: Amir fans, scoring NOTHING below their favorite
+  5,0,0
+  5,0,0
+  5,0,0
+  2,5,0 # 2 voters: Bess first, mild nod to Amir
+  2,5,0
+  0,1,5 # 3 voters: Cato first, a token point to Bess
+  0,1,5
+  0,1,5
+expected_winners:
+  - Amir
+
+# file: ex10_reticent.yaml
