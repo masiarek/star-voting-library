@@ -402,6 +402,45 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Post-its switch — RCV-IRV | IRV | 4 | **Blue** |
 | Post-its switch — Choose-One (Plurality) | Plurality | 4 | **Purple** |
 
+## BV2188 — Two Districts, One Mayor (I of III) — West District: STAR elects Avery
+
+**Election** [`d3b9wc`](https://bettervoting.com/d3b9wc/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_west_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| West District — STAR (0-5 scores) | STAR | 5 | **Avery** |
+| West District — Ranked Robin (Copeland; equal ranks allowed) | RankedRobin | 5 | **Elena** |
+
+## BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again
+
+**Election** [`rhbfj7`](https://bettervoting.com/rhbfj7/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_east_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| East District — STAR (0-5 scores) | STAR | 5 | **Avery** |
+| East District — Ranked Robin (Copeland; equal ranks allowed) | RankedRobin | 5 | **Elena** |
+
+## BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts
+
+**Election** [`923q3d`](https://bettervoting.com/923q3d/results) · **2 races** · **18 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_combined_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Combined city — STAR (0-5 scores) | STAR | 5 | **Carmen** |
+| Combined city — Ranked Robin (Copeland; equal ranks allowed) | RankedRobin | 5 | **Elena** |
+
+## BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways
+
+**Election** [`ywqhq4`](https://bettervoting.com/ywqhq4/results) · **5 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex03_five_verdicts_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Snack vote — Choose-One (Plurality) | Plurality | 3 | **Apple** |
+| Snack vote — RCV-IRV (Instant Runoff) | IRV | 3 | **Banana** |
+| Snack vote — Approval (approve = 3+) | Approval | 3 | **Cherry** |
+| Snack vote — STAR (0-5 scores) | STAR | 3 | **Cherry** |
+| Snack vote — Ranked Robin (Copeland) | RankedRobin | 3 | **Cherry** |
+
 ## BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination
 
 **Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex05_center_squeeze_bv_export.json)

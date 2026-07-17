@@ -9,6 +9,7 @@
 74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 7f4f7q,BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 8kg698,"BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",4,contested (multi-race),20,"IRV, Plurality, RankedRobin, STAR",BV
+923q3d,"BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",2,contested (multi-race),18,"RankedRobin, STAR",BV
 93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
@@ -20,6 +21,7 @@ bvhchj,Presidential Board Election,2,contested (multi-race),102,"Plurality, STAR
 byk9v2,"BV2149 — Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole",2,contested (multi-race),32,"IRV, STAR",BV
 cphxpt,"BV2155 — Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 cxrf8v,"BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method",4,contested (multi-race),921,"IRV, RankedRobin, STAR, STV",BV
+d3b9wc,"BV2188 — Two Districts, One Mayor (I of III) — West District: STAR elects Avery",2,contested (multi-race),9,"RankedRobin, STAR",BV
 dxg8pb,"BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice",3,contested (multi-race),11,"IRV, RankedRobin, STAR",BV
 dyxrbr,"BV2133 — Pet poll II: four methods, four winners",4,contested (multi-race),32,"Approval, IRV, Plurality, STAR",BV
 f3dxq9,BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss,2,contested (multi-race),11,"Plurality, STAR",BV
@@ -41,12 +43,14 @@ pp2q4q,"BV2170 — The centrist a majority prefers, squeezed out — a symmetric
 q3h4fk,BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick),2,contested (multi-race),7,"Plurality, STAR",BV
 r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count,2,contested (multi-race),47,"Approval, RankedRobin",BV
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
+rhbfj7,"BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",2,contested (multi-race),9,"RankedRobin, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him,3,contested (multi-race),33,"Plurality, RankedRobin, STAR",BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
+ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways",5,contested (multi-race),9,"Approval, IRV, Plurality, RankedRobin, STAR",BV
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
@@ -60,7 +64,6 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
-923q3d,"Exercise 1 — Two districts, one mayor: the COMBINED city",1,single-race,18,STAR,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
@@ -212,7 +215,6 @@ LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
-d3b9wc,"Exercise 1 — Two districts, one mayor: WEST district",1,single-race,9,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
 dfw8rj,BV2183 — Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example),1,single-race,50,IRV,BV
 dkj9dx,"BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",1,single-race,16,STAR,BV
@@ -230,7 +232,6 @@ pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
 qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
-rhbfj7,"Exercise 1 — Two districts, one mayor: EAST district",1,single-race,9,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
 tg4779,"BV2182 — Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",1,single-race,10,STAR,BV
@@ -239,6 +240,5 @@ vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-ra
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
-ywqhq4,"Exercise 3 — One electorate, five verdicts (the snack vote)",1,single-race,9,STAR,BV
 yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV
 yyhr66,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,1,single-race,54,STAR,BV
