@@ -1,0 +1,16 @@
+/* Site-wide CSS overrides for the MkDocs Material build.
+   Wired in via `extra_css` in the repo-root mkdocs.yml. */
+
+/* Hide the footer previous/next page navigation site-wide.
+   There is no curated `nav:` in mkdocs.yml, so Material walks files
+   alphabetically — which made the homepage's "Next" point at CLAUDE.md
+   (internal working guidance), shoving new readers straight into it.
+   The `.md-footer-meta` copyright/footer bar is intentionally kept.
+
+   The `navigation.footer` feature stays enabled, so a single page can
+   opt BACK IN with a one-line inline override in its Markdown:
+       <style>.md-footer__inner { display: flex !important; }</style>
+*/
+.md-footer__inner {
+  display: none !important;
+}

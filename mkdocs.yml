@@ -55,6 +55,9 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
+extra_css:
+  - 00_start_here/about_this_repo/site_extra.css
+
 plugins:
   - search
   - same-dir
