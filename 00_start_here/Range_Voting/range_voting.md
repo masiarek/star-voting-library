@@ -66,7 +66,7 @@ Total score (sum of all grades):
 
 The lesson: **the cardinal ballot's *resolution* can change the winner.** Collapse the 0–10 scale down to a single approve / don't-approve bit and **A** — with more *approvers* but fewer *enthusiasts* — overtakes C. Give voters room to say *how much*, and C's wall of 10s wins under Range, median-Range, and STAR alike. (Mean and median happen to agree here, but they needn't — some Score variants use the median precisely because a few extreme scores can't drag it the way they drag an average. Medians: A 7.0, B 5.0, **C 8.5**, D 5.5.)
 
-**Run it:** [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) ([tabulated](../../06_Other/Range/Range_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt)) — the range engine (pref_voting `score_voting`) confirms C by both the hand sum and the median cross-check. STAR on the same ballots (`maximum_score=10`) also elects C.
+**Run it:** [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) ([tabulated](../../06_Other/Range/Range_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt)) — the range engine (pref_voting `score_voting`) confirms C by both the hand sum and the median cross-check. STAR on the same ballots also elects C — worked, with the how-to for running LH on a non-standard scale, in [Unorthodox STAR — a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md).
 
 ## Ballot examples
 

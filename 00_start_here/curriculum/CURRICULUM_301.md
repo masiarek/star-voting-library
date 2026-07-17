@@ -60,6 +60,7 @@
 - **Objective:** a score scale's *resolution* (0–5 vs 0–9…) is a modeling choice; when the top contenders are bunched, compressing the scale can move a **finalist** and flip the **STAR** winner — even though rescaling never reorders any voter's own preferences.
 - **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
 - **Material:** [Scale granularity can flip the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md); case [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) (0–5 → Orange5, 0–9 → Orange1).
+- **Companion — "unorthodox STAR":** [Running STAR on a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md) — the 0–5 range is a *convention*, not a rule; which round the scale touches (finalists, never the runoff), the honest tradeoff, and how to make LH tabulate a 0–10 STAR election (`maximum_score=N`).
 - **The point:** a *fragile, mapping-dependent* divergence — present both counts, never quote one.
 
 ## 301.9 — How the simulations are built (VSE's foundation)
