@@ -83,7 +83,7 @@ Making this exercise live turned it into a bug report. BetterVoting accepted the
 - **Zero-first-choice candidates and multi-seat acquitted.** BV's own 3-seat STV race on the pets-governance election (`kcf8vf`, six candidates, several with zero first choices) computes fine, as does the 1-seat STV race on `ywckmg`.
 - **Remaining suspects:** something in this pair's shape (2 seats, 4 candidates, 9 voters) or the race-level `enable_write_in` flag the older races lack. The error IDs above are searchable in BV's server logs — a crisp handle for the star-server maintainers.
 
-Until BV fixes it, the seats come from the LH engine (or any STV engine you point at these nine ballots), and the live pair stands as the reproduction case. It is also this set's best accidental lesson: *methods* are math, *implementations* are software — both need testing, which is what this repo's triple-check habit is for.
+One more symptom for the report: the BV UI *export* of both elections silently omits the `Results` section entirely (Election + Ballots only) — the frozen exports beside these YAMLs archive the ballots and await a re-export once the tabulator is fixed. Until BV fixes it, the seats come from the LH engine (or any STV engine you point at these nine ballots), and the live pair stands as the reproduction case. It is also this set's best accidental lesson: *methods* are math, *implementations* are software — both need testing, which is what this repo's triple-check habit is for.
 
 ## Reading this fairly
 

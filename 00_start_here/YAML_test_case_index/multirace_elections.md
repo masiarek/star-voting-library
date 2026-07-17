@@ -509,6 +509,26 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Clone added — STAR (0-5 scores) | STAR | 3 | **Alba** |
 | Clone added — Ranked Robin (Copeland) | RankedRobin | 3 | **Alba** |
 
+## BV2199 — Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares
+
+**Election** [`89wwvr`](https://bettervoting.com/89wwvr/results) · **2 races** · **10 ballots** · [frozen export](../../01_STAR/exercises/ex12_bloc_vs_proportional_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Neighborhood board — Bloc STAR (2 seats) | STAR | 4 | **Asa, Bram** |
+| Neighborhood board — STAR-PR / Allocated Score (2 seats) | STAR_PR | 4 | **Asa, Cleo** |
+
+## BV2200 — Where Do You Draw the Line? — one electorate, three approval thresholds
+
+**Election** [`qdtqf2`](https://bettervoting.com/qdtqf2/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex13_draw_the_line_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Draw the line — STAR (the honest 0-5 opinions) | STAR | 3 | **Cora** |
+| Draw the line — Approval, approve 3 and up | Approval | 3 | **Ash** |
+| Draw the line — Approval, approve 4 and up | Approval | 3 | **Beck** |
+| Draw the line — Approval, favorites only | Approval | 3 | **Cora** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

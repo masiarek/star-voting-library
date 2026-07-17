@@ -1,0 +1,318 @@
+{
+  "Election": {
+    "election_id": "bj8dfc",
+    "title": "BV2202 — The Transfer Machine, fully ranked — a book club buys two novels by STV",
+    "description": "From the exercises set of the STAR education repo (github.com/masiarek/star-voting-library, 01_STAR/exercises/) — predict-then-peek problems with hidden solutions; this election is the live, vote-able copy of its exercise. The STV drill (ex14), fully-ranked variant: the same nine voters as BV2201 (tk776t) with every ballot completed to a full ranking — 5×(Austen>Bronte>Camus>Dickens), 1×(Bronte>Camus>Austen>Dickens), 3×(Camus>Dickens>Bronte>Austen). The added trailing rankings are never reached by any transfer, so the count is identical to the exercise: Droop quota 4; Austen elected round 1 with a surplus of 1 that transfers to Bronte; Dickens (0) then Bronte (2) eliminated; Camus reaches 5 and takes the second seat. Seats: Austen + Camus. This variant exists because BetterVoting's STV tabulator errors on BV2201's TRUNCATED ballots (legal partial rankings) while fully-ranked STV elections compute fine — the pair isolates that bug. LH-verified.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "Two novels — STV (2 seats, fully ranked)",
+        "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+        "num_winners": 2,
+        "voting_method": "STV",
+        "candidates": [
+          {
+            "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+            "candidate_name": "Austen"
+          },
+          {
+            "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+            "candidate_name": "Bronte"
+          },
+          {
+            "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+            "candidate_name": "Camus"
+          },
+          {
+            "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+            "candidate_name": "Dickens"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false,
+        "max_rankings": 4
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-17T19:26:14.231Z",
+    "update_date": "1784316374231",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-m9ppj6wd",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 1
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 2
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 3
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-mphf9ktf",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 1
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 2
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 3
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-7mqvdv2d",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 1
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 2
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 3
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-dmg3fb7m",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 4
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 3
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 1
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-vy3bxw8k",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 3
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 1
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 2
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-6h778h62",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 1
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 2
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 3
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-9bdpftbv",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 4
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 3
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 1
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-gmj6v2xp",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 1
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 2
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 3
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-p8879ywb",
+      "election_id": "bj8dfc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "0683bbae-eddb-426c-9d34-21e329053388",
+          "scores": [
+            {
+              "candidate_id": "8b3213b8-6358-4d64-bfd9-617f2bb84aef",
+              "score": 4
+            },
+            {
+              "candidate_id": "3205d07f-071c-4075-b54d-27a15a88b4de",
+              "score": 3
+            },
+            {
+              "candidate_id": "561d0b65-c638-4cd8-8469-c68c2527b846",
+              "score": 1
+            },
+            {
+              "candidate_id": "062905a0-6ee3-4b78-8b31-a8c53a63abb5",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 6w2gq7 | BV2168 — FairVote's Condorcet hypothetical, counted  | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | 74j6vv | BV2163 — Nurmi's truncation electorate (2 of 2) — 17 | 3 | contested (multi-race) | 103 | IRV, RankedRobin, STAR | BV |
 | 7f4f7q | BV2194 — Bullet Voting Backfires (2 of 2) — the stra | 3 | contested (multi-race) | 9 | IRV, RankedRobin, STAR | BV |
-| 89wwvr | Exercise 12 — Two seats, one neighborhood: Bloc STAR | 2 | contested (multi-race) | 10 | STAR, STAR_PR | BV |
+| 89wwvr | BV2199 — Two Seats, One Neighborhood — Bloc STAR swe | 2 | contested (multi-race) | 10 | STAR, STAR_PR | BV |
 | 8kg698 | BV2178 — The Post-it election's round-2 switch, made | 4 | contested (multi-race) | 20 | IRV, Plurality, RankedRobin, STAR | BV |
 | 923q3d | BV2190 — Two Districts, One Mayor (III of III) — the | 2 | contested (multi-race) | 18 | RankedRobin, STAR | BV |
 | 93gjx6 | BV2198 — Recruit a Spoiler (2 of 2) — the clone ente | 4 | contested (multi-race) | 9 | IRV, Plurality, RankedRobin, STAR | BV |
@@ -58,7 +58,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | pcttmr | BV2153 — Felsenthal's Absolute Majority paradox — a  | 3 | contested (multi-race) | 100 | Approval, IRV, RankedRobin | BV |
 | pp2q4q | BV2170 — The centrist a majority prefers, squeezed o | 4 | contested (multi-race) | 100 | IRV, Plurality, RankedRobin, STAR | BV |
 | q3h4fk | BV2161 — Borda's SCC paradox electorate — the winner | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
-| qdtqf2 | Exercise 13 — Where do you draw the line? Approve 3  | 4 | contested (multi-race) | 9 | Approval, STAR | BV |
+| qdtqf2 | BV2200 — Where Do You Draw the Line? — one electorat | 4 | contested (multi-race) | 9 | Approval, STAR | BV |
 | r6ctvy | BV2152 — Felsenthal & Maoz's Approval paradox — the  | 2 | contested (multi-race) | 47 | Approval, RankedRobin | BV |
 | r6qc8h | BV2160 — Fishburn's Borda truncation electorate — ST | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
 | rhbfj7 | BV2189 — Two Districts, One Mayor (II of III) — East | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
@@ -232,7 +232,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vote_splitting_scenario2_bloc_leads | Vote splitting — scenario 2 of 3 — no spoiler (bloc  | 1 | single-race | 36 | STAR | LH-only |
 | vote_splitting_scenario3_outsider_wins | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
 | bfjqmg | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
-| bj8dfc | Exercise 14 — The transfer machine, fully ranked (BV | 1 | single-race | 9 | STV | BV |
+| bj8dfc | BV2202 — The Transfer Machine, fully ranked — a book | 1 | single-race | 9 | STV | BV |
 | btmydt | BV129 - 3 cand - 2 winners (Bloc STAR) | 1 | single-race | 5 | STAR | BV |
 | d664xw | Runoff_06 - Runoff confirms the leader at scale (con | 1 | single-race | 5 | STAR | BV |
 | dfw8rj | BV2183 — Forced Ballot Exhaustion — a 2-rank cap dis | 1 | single-race | 50 | IRV | BV |
@@ -254,7 +254,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | rkgtpk | Runoff_03 — the 201-level reversal in a bigger field | 1 | single-race | 5 | STAR | BV |
 | tf73v9 | Runoff_07 (WIP) — flat ballot exposes the BV abstent | 1 | single-race | 4 | STAR | BV |
 | tg4779 | BV2182 — Why STAR Has an Automatic Runoff — a Runoff | 1 | single-race | 10 | STAR | BV |
-| tk776t | Exercise 14 — The transfer machine: a book club buys | 1 | single-race | 9 | STV | BV |
+| tk776t | BV2201 — The Transfer Machine — a book club buys two | 1 | single-race | 9 | STV | BV |
 | vb3xv2 | BV830 — No Condorcet winner (top-two tie) — STAR bre | 1 | single-race | 3 | STAR | BV |
 | vqyqkr | Tennessee capital — Ranked Robin (RR/Condorcet = Nas | 1 | single-race | 100 | RankedRobin | BV |
 | xgkw3w | Runoff_05 - Reversal with Equal Support | 1 | single-race | 5 | STAR | BV |
