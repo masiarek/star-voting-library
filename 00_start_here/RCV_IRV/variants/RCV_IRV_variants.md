@@ -9,18 +9,20 @@
 Every method below reads the **same ranked ballot**; they differ in *what they do with it*. ✅ marks the **Condorcet-safe** methods (always elect the head-to-head winner); ❌ marks Hare's **center squeeze**.
 
 ```mermaid
-graph TD
-    R["RANKED BALLOT<br/>voter orders the candidates"]
+graph LR
+    %% LR, not TD: the 12 leaves stack vertically, keeping the diagram ~4 node-columns
+    %% wide — a TD layout is ~2300px wide and gets shrunk to unreadable on the site.
+    R["RANKED BALLOT<br/>voter orders<br/>the candidates"]
 
     R --> SEQ["Sequential elimination<br/>(instant-runoff shape)"]
     R --> PW["Pairwise / Condorcet<br/>(no elimination)"]
     R --> POS["Positional<br/>(no elimination)"]
     R --> MW["Multi-winner<br/>(proportional)"]
 
-    SEQ --> F1["eliminate by FEWEST first choices"]
-    SEQ --> FL["eliminate by MOST last choices"]
-    SEQ --> FB["eliminate by lowest BORDA score"]
-    SEQ --> FH["eliminate loser of BOTTOM-TWO runoff"]
+    SEQ --> F1["eliminate by<br/>FEWEST first choices"]
+    SEQ --> FL["eliminate by<br/>MOST last choices"]
+    SEQ --> FB["eliminate by<br/>lowest BORDA score"]
+    SEQ --> FH["eliminate loser of<br/>BOTTOM-TWO runoff"]
 
     F1 --> HARE["RCV-IRV (Hare)<br/>= US 'RCV' ❌ squeeze"]
     F1 --> BATCH["Batch elimination"]
@@ -30,11 +32,11 @@ graph TD
     FB --> NAN["Nanson ✅"]
     FH --> BTR["BTR-IRV ✅"]
 
-    PW --> RR["Ranked Robin / Copeland ✅"]
-    PW --> CMORE["Schulze · Ranked Pairs · Minimax ✅"]
+    PW --> RR["Ranked Robin /<br/>Copeland ✅"]
+    PW --> CMORE["Schulze · Ranked Pairs ·<br/>Minimax ✅"]
     POS --> BORDA["Borda"]
     POS --> BUCK["Bucklin"]
-    MW --> STV["STV — Hare, proportional"]
+    MW --> STV["STV — Hare,<br/>proportional"]
 
     %% stroke-only highlighting: hard-coded fills break dark mode (the site theme
     %% controls label color, so light fills get light text); borders work in both.

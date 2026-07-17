@@ -19,10 +19,12 @@ So when someone says "RCV," they've named the *ballot* but implied a *count*. In
 The ranked ballot ("RCV") is counted by a whole family of *methods*, which split into two branches. Knowing which is which keeps you precise — and keeps you from lumping a Condorcet method in with IRV.
 
 ```mermaid
-flowchart TD
+flowchart LR
+    %% LR, not TD: the 9 leaves stack vertically, keeping the diagram ~3 node-columns
+    %% wide — a TD layout is ~2000px wide and gets shrunk to unreadable on the site.
     R["<b>RANKED ballot</b><br/>('RCV' names the BALLOT,<br/>not any one method)"]
     R --> COND["<b>Condorcet</b> / round-robin / pairwise<br/><i>elects the head-to-head winner<br/>when one exists · precinct-summable</i>"]
-    R --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer · order-dependent · NOT summable</i>"]
+    R --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer ·<br/>order-dependent · NOT summable</i>"]
     R --> POS["<b>Positional</b><br/><i>points by rank position</i>"]
 
     COND --> RR["<b>Ranked Robin</b> (RCV-RR)<br/>aka 'Consensus Voting'<br/>= Copeland + margin tiebreak"]
