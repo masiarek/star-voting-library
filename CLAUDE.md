@@ -419,6 +419,21 @@ else is the same.
   LH bloc-Approval count; `seqpav` / `pav` / `seqphragmen` add the proportional
   rules the LH engine doesn't have. Tested by `tests/test_abcvoting_crosscheck.py`
   (skips if the library is absent).
+- **Score / range voting & the 0–5 cap (don't misstate this).** Larry's underlying
+  `starvote` engine is *range-parametric*: `starvote.election(starvote.star, rows,
+  maximum_score=N)` tabulates any range (verified at 0–10 → C). The **0–5 limit is the
+  fork's teaching guardrail, NOT an engine limit** — `validate_star_rows(…,
+  max_score=5)` in `starvote_larry_hastings.py` (def ~L2239, called with `max_score=5`
+  ~L2366) rejects scores >5 on the YAML-CLI path because STAR ballots are 0–5 by
+  convention; it's a single adjustable arg. **Pure Score / Range IS tabulable** — via
+  `pref_voting.grade_methods` (`score_voting` = mean, `greatest_median` = the median
+  variant, plus `star` / `approval` / `majority_judgement`), `starvote`'s RRV
+  (`Reweighted_Range_Voting`, range-based PR), and the sim/divergence tools
+  (`06_Other/simulations/star_vs_approval_divergence.py`, `tools_adam/find_divergence.py`)
+  which compute the score-total winner. The STAR **Scoring Round** output is itself the
+  score tally (the Score-Voting winner = whoever leads the scoring round before the
+  runoff). What's absent is only a first-class `voting_method: Score` on the teaching
+  CLI — **capability is not the blocker.**
 - Quick checks can use system `python3` (engines are vendored); the user runs via
   their `.venv` / `uv`.
 - The engine errors *clearly* (no tracebacks) for the common mistakes: bad YAML,
