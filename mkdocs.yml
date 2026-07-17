@@ -68,6 +68,13 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      # GitHub-style anchors: drop punctuation, map EACH space to a hyphen (no run
+      # collapsing), so "A & B" / "A — B" headings slug to a--b like GitHub does.
+      # The python-markdown default collapses those to a single hyphen, which broke
+      # ~30 cross-page #section links that were authored against GitHub's slugs.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.details
   - pymdownx.snippets
   - pymdownx.superfences:

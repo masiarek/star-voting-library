@@ -22,10 +22,10 @@ uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" mkdocs serve
 - **Plain `.html` URLs** (`use_directory_urls: false`). The repo's cross-links were authored for GitHub's file-relative rendering; pretty directory URLs would shift every page one level deeper and 404 the folder-style links. Don't flip this back without fixing hundreds of links.
 - **The homepage** is [`index.md`](../../index.md), which inlines [`readme.md`](../../readme.md) at build time (snippet include). GitHub ignores `index.md`; MkDocs doesn't recognize the lowercase `readme.md` as an index. One source, two front doors.
 - **Excluded from the site**: dot-dirs, `site/`, `AGENTS.md` (agent-facing duplicate of `CLAUDE.md`), `_demo_dropbox/` staging, and generated ballot printouts — see `exclude_docs` in `mkdocs.yml`.
+- **GitHub-style anchor slugs** (`toc.slugify: pymdownx.slugs.slugify` in `mkdocs.yml`). Headings with `&`/em-dashes slug to GitHub's double-hyphen form (`#properties--criteria`), so `#section` links authored against GitHub land on the exact section on the site too. Don't remove the override: python-markdown's default slugger collapses those to a single hyphen, which silently re-breaks ~30 cross-page anchors (they'd fall back to the top of the page).
 
 ## Known nits (accepted for v1)
 
-- **Anchor slugs differ from GitHub's** for headings with `&`/em-dashes (GitHub's `#properties--criteria` style). Those links land at the top of the correct page instead of the exact section — about 30 across the repo.
 - **Search index is ~6 MB** (≈700 pages). Fine over gzip; if it ever feels slow, the generated `*_pages` could be excluded from indexing (not from the site).
 - The 5 build warnings about `img/REPLACE_*.png` are the known screenshot placeholders in the Ranked Robin cases, not site breakage.
 
