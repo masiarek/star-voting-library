@@ -4,7 +4,7 @@
 
 > ⚖️ **Where head-to-head runs out of data, score finishes the job.** The two finalists, B and C, **tie 1-1-1 head-to-head**, so there is **no strict Condorcet winner**. But the ballots left more on the table — B pulled **7 points to C's 3** — and STAR reads it, electing **B**. As Kellyn Standley put it: *within a Condorcet tie the head-to-head method doesn't have enough data to name the preferred candidate when there clearly is one — and there, STAR's score intensity is the stronger standard.* (Scoped to Condorcet **non-decisions**; when a strict Condorcet winner exists, STAR-vs-Condorcet is a real debate — see [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).)
 
-**Level 201/301.** Three voters, three candidates. Winner: **B**. This is a **happy-path** tie: it settles at a **deterministic** rung (the runoff score total), never reaching the lot — so LH and BetterVoting agree.
+**Level 201/301.** Three voters, three candidates. Winner: **B**. This is a **happy-path** tie: it settles at a **deterministic** [rung](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) (the runoff score total), never reaching the lot — so LH and BetterVoting agree.
 
 ## The ballots (3 voters)
 
@@ -33,7 +33,7 @@ The original `larryhastings/starvote` prints a blunt `No Condorcet Winner (cycle
 
 ## How the winner is found
 
-| Step | What happens | [Rung](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) that decides |
+| Step | What happens | Rung that decides |
 |---|---|---|
 | Scoring round | **B 7**, **C 3**, A 0 → B and C advance | — |
 | Runoff | B **1** vs C **1** head-to-head (1 voter each, 1 equal) → tied | — (tie) |
