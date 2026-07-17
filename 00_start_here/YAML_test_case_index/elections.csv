@@ -1,4 +1,4 @@
-election_id,title,races,kind,voters,methods,backing
+﻿election_id,title,races,kind,voters,methods,backing
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV

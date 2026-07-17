@@ -1,4 +1,4 @@
-bucket,file,candidates,ballots,STAR,IRV,IRV_rev,RR_weak,RR_strict,Approval,Score,Condorcet_weak,Condorcet_strict,tie_ballots,irv_fragile,rr_conv_sensitive,cycle
+﻿bucket,file,candidates,ballots,STAR,IRV,IRV_rev,RR_weak,RR_strict,Approval,Score,Condorcet_weak,Condorcet_strict,tie_ballots,irv_fragile,rr_conv_sensitive,cycle
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.yaml,3,2,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,0,False,False,False
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_02_runoff_tie_2cand.yaml,2,2,Almond,Almond,Brownie,Almond,Almond,Almond,Almond,,Almond,2,True,False,True
 AGREE,01_STAR/Flat_scores_ties/Flat_scores_ties_03_runoff_tie_split.yaml,3,2,Athens,Athens,Athens,Athens,Athens,Athens,Athens,,,0,False,False,True

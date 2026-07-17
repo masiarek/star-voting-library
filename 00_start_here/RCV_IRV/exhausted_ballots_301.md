@@ -61,10 +61,12 @@ flowchart TD
     RR -.-> F
     BL -.-> F
 
-    classDef yellow fill:#fde68a,stroke:#b45309,color:#111;
-    classDef red fill:#fecaca,stroke:#b91c1c,color:#111;
-    classDef blue fill:#bfdbfe,stroke:#1d4ed8,color:#111;
-    classDef claim fill:#ffffff,stroke:#b91c1c,stroke-width:2px,color:#b91c1c;
+    %% stroke-only highlighting: hard-coded fills break dark mode (the site theme
+    %% controls label color, so light fills get light text); borders work in both.
+    classDef yellow stroke:#eab308,stroke-width:3px;
+    classDef red stroke:#ef4444,stroke-width:3px;
+    classDef blue stroke:#3b82f6,stroke-width:3px;
+    classDef claim stroke:#ef4444,stroke-width:3px,stroke-dasharray:6 3;
     class Y yellow;
     class RR red;
     class BL blue;

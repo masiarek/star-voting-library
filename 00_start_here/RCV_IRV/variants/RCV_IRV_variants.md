@@ -36,8 +36,10 @@ graph TD
     POS --> BUCK["Bucklin"]
     MW --> STV["STV — Hare, proportional"]
 
-    classDef safe fill:#dff0d8,stroke:#3c763d,color:#1b3a1b;
-    classDef squeeze fill:#f2dede,stroke:#a94442,color:#5a1a1a;
+    %% stroke-only highlighting: hard-coded fills break dark mode (the site theme
+    %% controls label color, so light fills get light text); borders work in both.
+    classDef safe stroke:#4caf50,stroke-width:3px;
+    classDef squeeze stroke:#e57373,stroke-width:3px;
     class BALD,NAN,BTR,RR,CMORE safe;
     class HARE squeeze;
 ```

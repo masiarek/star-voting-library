@@ -1,4 +1,4 @@
-election_id,election_title,race_title,method,canon,ballot_type,seats,seat_class,character,candidates,voters,winners,backing,lh_only_reason,yaml
+﻿election_id,election_title,race_title,method,canon,ballot_type,seats,seat_class,character,candidates,voters,winners,backing,lh_only_reason,yaml
 26khr3,NOTA test — None of the Above wins (with a null abstention),BV215 — None of the Above wins (STAR) — with a null abstention,STAR,STAR,score,1,single-winner,majoritarian,3,6,None of the Above,BV,,01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner","Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner",STAR,STAR,score,1,single-winner,majoritarian,3,100,Liberal,BV,,method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",Shifted-left 56/12/32 — RCV-IRV,IRV,IRV,ranked,1,single-winner,majoritarian,3,100,Liberal,BV (no yaml),,
