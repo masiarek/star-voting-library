@@ -117,7 +117,7 @@ For several seats at once, the Hare idea becomes the **Single Transferable Vote 
 - [RCV-IRV center squeeze](../RCV_IRV_center_squeeze.md) — the flaw the Condorcet-safe variants fix
 - [RCV-IRV exhausted ballots](../RCV_IRV_exhausted_ballots.md) — the ranking-limit knob, in depth
 - [RCV-IRV non-monotonicity](../RCV_IRV_non_monotonicity.md)
-- See also the repo terminology canon: `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`
+- See also the repo terminology canon: [`TIPS_terminology.md`](../../tips/TIPS_terminology.md) and [`GLOSSARY.md`](../../GLOSSARY.md)
 
 ## Learn more — external resources
 

@@ -91,13 +91,13 @@ Same answer — but one count you can do with a calculator and a precinct sheet,
 
 Here the methods agree, and Carmen even led the first round — but **the first-round leader is not always the winner.** In a **center squeeze**, the consensus candidate is almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while STAR's scoring round keeps her in and she wins. Same ballots, different count, **different winner** — traced in [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) (demos `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV results have to be read to the *final* round, never reported from first choices alone.
 
-> **On displaying RCV-IRV results.** The round-by-round table above follows the standard best practice (FairVote; Center for Civic Design): show every round with a written explanation, name the majority threshold, and treat the final round — not the first-choice lead — as the result. We deliberately show *all* the rounds rather than de-emphasizing the eliminations, because the whole point here is to see how the count works. See `00_start_here/LINKS.md` → "FairVote: displaying RCV results."
+> **On displaying RCV-IRV results.** The round-by-round table above follows the standard best practice (FairVote; Center for Civic Design): show every round with a written explanation, name the majority threshold, and treat the final round — not the first-choice lead — as the result. We deliberately show *all* the rounds rather than de-emphasizing the eliminations, because the whole point here is to see how the count works. See [`LINKS.md`](../LINKS.md) → "FairVote: displaying RCV results."
 
 ## Run it yourself
 
 ```
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_Single_winner/count_simplicity_star_vs_irv.yaml
-python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/count_simplicity_star_vs_irv.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/_main/count_simplicity_star_vs_irv.yaml
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/_main/count_simplicity_star_vs_irv.yaml
 ```
 
 ---

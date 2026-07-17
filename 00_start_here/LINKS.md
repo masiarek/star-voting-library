@@ -138,7 +138,7 @@ These live in this repo and stay exactly in sync (prefer them for live demos):
 | **Glossary** | `00_start_here/GLOSSARY.md` |
 | **Curriculum** | `00_start_here/CURRICULUM.md` |
 | **Flagship script** | `00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md` |
-| **Spoiler demos** | `split_voting/` |
-| **Two-round demo** | `01_Single_winner/00a_c2_b1_two-candidates.yaml` |
+| **Spoiler demos** | `method_comparisons/split_voting/` |
+| **Two-round demo** | `01_STAR/silly_two_cand_STAR/01a_c2_b1_two-candidates.yaml` |
 
 > Note: deep links of the form `…/edit#slide=id.g…` break when a slide is copied or duplicated. Prefer searching the slide **title** inside the deck over saving a deep link.

@@ -1,6 +1,6 @@
 # Conversation scripts — index
 
-A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../STAR_Voting/), RCV-IRV episodes in [`RCV_IRV/`](../RCV_IRV/), and the foundational ones here in `00_start_here/` — and this page indexes them. The demos come from `00_start_here/`, `01_Single_winner/`, and `split_voting/`.
+A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../STAR_Voting/), RCV-IRV episodes in [`RCV_IRV/`](../RCV_IRV/), and the foundational ones here in [`00_start_here/`](../) — and this page indexes them. The demos come from `00_start_here/`, [`01_STAR/`](../../01_STAR/), and [`method_comparisons/split_voting/`](../../method_comparisons/split_voting/).
 
 Start here: [whats_so_good_about_STAR_Voting.md](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
 
@@ -37,21 +37,21 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 
 | # | Episode (clip) | Core question | Repo demo | Source slides |
 |---|----------------|---------------|-----------|---------------|
-| 00 | What is a voting method? (the foundation) | ballot vs count; plurality vs majority | `split_voting/00_plurality_vs_majority` | "Rating vs Ranking", "Plurality vs Majority" |
+| 00 | What is a voting method? (the foundation) | ballot vs count; plurality vs majority | `method_comparisons/split_voting/_main/00_plurality_vs_majority` | "Rating vs Ranking", "Plurality vs Majority" |
 | 0 | Why do you love STAR? (cold open) | the personal "why" | — | Full Deck title + dilemma |
 | 1 | What's so good about STAR? | the whole pitch in one arc | flagship file's demos | Full Deck (all) |
-| 1.5 | Is our voting system broken? (Problem with Plurality) | is it broken — frequent? serious? worsening? | `split_voting/01*`, `04*` | "Problem: Vote-Splitting", "The Voting Dilemma" |
-| 2 | The spoiler effect | why Choose-One breaks with 3+ | `split_voting/01*`, `03*` | "Vote-Splitting", "Domino Effect" |
-| 3 | Ranks vs Scores | why scores carry more info | (whiteboard) + `00a` | "Rating vs Ranking" |
+| 1.5 | Is our voting system broken? (Problem with Plurality) | is it broken — frequent? serious? worsening? | `method_comparisons/split_voting/_main/01*`, `04*` | "Problem: Vote-Splitting", "The Voting Dilemma" |
+| 2 | The spoiler effect | why Choose-One breaks with 3+ | `method_comparisons/split_voting/_main/01*`, `03*` | "Vote-Splitting", "Domino Effect" |
+| 3 | Ranks vs Scores | why scores carry more info | (whiteboard) + `01a` | "Rating vs Ranking" |
 | 4 | The STAR ballot | how do I vote? | — | "Instructions" / 5-star ballot |
-| 5 | The two rounds | why Score *then* Runoff? | `00a_c2_b1`, `vote_splitting2` | "How STAR Works", Dual-Nature doc |
+| 5 | The two rounds | why Score *then* Runoff? | `01a_c2_b1`, `vote_splitting2` | "How STAR Works", Dual-Nature doc |
 | 6 | Benefits of STAR | Simple/Honest/Expressive/Accurate/Equal | accuracy demos | "What do we want", accuracy chart |
 | 7 | STAR vs RCV-IRV | pros & cons, honestly | 4-cand `show_irv` divergence | Scorecard, Burlington, Alaska |
 | 7.5 | RCV or IRV? (nomenclature, **201**) | which word, and why | — | "About Ranked Choice" |
 | 8 | Counting & trust | summability, audits | any file's matrix | "Summability" slides |
-| 9 | Multi-winner & proportional | electing several seats | `02_Multi_winner/*` | "Proportional Representation" |
+| 9 | Multi-winner & proportional | electing several seats | `02_STAR_Bloc/*`, `03_STAR_PR/*` | "Proportional Representation" |
 | 10 | The honest limits | "resistant, not proof" | — | "Voting Theory Facts" |
-| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | `01_Single_winner/equal_support_runoff_demo.yaml` | "No-Preference Votes in the Runoff" |
+| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | `01_STAR/_main/equal_support_runoff_demo.yaml` | "No-Preference Votes in the Runoff" |
 | 12 | Favorite betrayal (Voting 301) | does *only* RCV avoid it? | — | "RCV Common False Claims", "Alaska '22", pass/fail criteria |
 | 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |
@@ -100,7 +100,7 @@ You have four decks/docs in play. Treat them as **source slides**, not as the sc
 
 Google Slides/Docs don't auto-sync with this repo, so don't try to mirror their *content* here. Instead keep a **single source-of-truth link registry** and a **mapping**, and let each live in its own home:
 
-1. **One `LINKS.md`** (I can create it) listing every deck/doc: short name, URL, one-line purpose, and "last reviewed" date. Every script links by *short name*, never by raw URL — so when a URL changes you fix it in one place.
+1. **One [`LINKS.md`](../LINKS.md)** listing every deck/doc: short name, URL, one-line purpose, and "last reviewed" date. Every script links by *short name*, never by raw URL — so when a URL changes you fix it in one place.
 2. **Map, don't copy.** Scripts reference slides as `[SLIDE] Full Deck — "title"`. That survives slide reordering far better than slide-number links.
 3. **Stable anchors.** In Slides, give key slides a short, searchable title (you already do). Searching the title is more durable than a `#slide=id…` deep link, which breaks on copy/duplicate.
 4. **One-way canonical direction.** Pick the canonical artifact per topic (e.g. Arend's deck is canonical for the scorecard) and have others *point to it* rather than duplicating it.
@@ -131,6 +131,6 @@ The repo's own files (engine output, example YAMLs) *are* canonical and version-
 
 ---
 
-## Files in this folder
-- `whats_so_good_about_STAR_Voting.md` — the flagship Larry↔Adam script.
-- `README.md` — this plan (roadmap, slide map, sync strategy, demo software).
+## Related files
+- [`whats_so_good_about_STAR_Voting.md`](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) — the flagship Larry↔Adam script.
+- `conversation_scripts.md` — this plan (roadmap, slide map, sync strategy, demo software).

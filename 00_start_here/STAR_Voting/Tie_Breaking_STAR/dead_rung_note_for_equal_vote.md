@@ -60,8 +60,8 @@ Two questions for Equal Vote:
 
 ## Runnable material (in the library)
 
-- Concept page: `00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md`
-- The nine test elections: `01_STAR/tie_break_dead_rung/` (cases 01–04 mirror the examples above; 05–09 are the adversarial-lot regression set)
-- Engine: `STARVote_LH_tabulation_engine/` (vendored fork of Larry Hastings' `starvote`; deterministic lot order via `lot_numbers:`)
+- Concept page: [`tie_breaking.md`](tie_breaking.md)
+- The nine test elections: [`01_STAR/tie_break_dead_rung/`](../../../01_STAR/tie_break_dead_rung/) (cases 01–04 mirror the examples above; 05–09 are the adversarial-lot regression set)
+- Engine: [`STARVote_LH_tabulation_engine/`](../../../STARVote_LH_tabulation_engine/) (vendored fork of Larry Hastings' `starvote`; deterministic lot order via `lot_numbers:`)
 
 # file: dead_rung_note_for_equal_vote.md

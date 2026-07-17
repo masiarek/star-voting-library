@@ -36,8 +36,10 @@ BetterVoting's [results page](https://bettervoting.com/48hjkv/results) tabulates
 | Deegan | 2 | 50% |
 | Eli | 1 | 25% |
 
+<!-- Screenshot slots — BV result bars + Race Details for `48hjkv`.
+     Save as: img/48hjkv_result_bars.png · img/48hjkv_race_details.png
 ![BV head-to-head wins bar chart — Ava 75%, Bianca/Cedric/Deegan 50%, Eli 25%](img/REPLACE_48hjkv_result_bars.png)
-![BV Race Details table — Ava 3 wins (75%), Bianca/Cedric/Deegan 2 (50%), Eli 1 (25%)](img/REPLACE_48hjkv_race_details.png)
+![BV Race Details table — Ava 3 wins (75%), Bianca/Cedric/Deegan 2 (50%), Eli 1 (25%)](img/REPLACE_48hjkv_race_details.png) -->
 
 This is exactly the LH win–loss record below (Ava 3, Bianca/Cedric/Deegan 2, Eli 1). **BV = LH** — the equal-rank ballots tabulated identically on both engines, confirming BetterVoting reads tied ranks the same way. Note also that BV's ballot-data export carries a `precinct` column (blank here — this election defines no precincts).
 

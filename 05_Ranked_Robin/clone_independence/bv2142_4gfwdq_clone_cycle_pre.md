@@ -22,7 +22,9 @@ BV finds the 3-way tie and, with no margin rung for three tied candidates, picks
 - `tieBreakType: random`
 - `elected: [C]` (this draw); log: *"C picked in random tie-breaker, more robust tiebreaker not yet implemented."*
 
-![BV result for 4gfwdq — A, B, C tie at 4 wins; C elected by random tiebreak](img/REPLACE_4gfwdq_result.png)
+<!-- Screenshot slot — BV result for `4gfwdq`.
+     Save as: img/4gfwdq_result.png
+![BV result for 4gfwdq — A, B, C tie at 4 wins; C elected by random tiebreak](img/REPLACE_4gfwdq_result.png) -->
 
 ## View 2 — LH: margin, then lot
 

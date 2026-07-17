@@ -77,7 +77,7 @@ BetterVoting reports this race as **6 abstentions, 455 ballots tallied**; the en
 From the engine directory:
 
 ```
-python starvote_larry_hastings.py "01_Single_winner/pet_real_bv_election/best_pet_c7_b461.yaml"
+python starvote_larry_hastings.py "../01_STAR/pet_real_bv_election/best_pet_c7_b461.yaml"
 ```
 
 Re-running rewrites the `_tabulated` sibling. Because this is a converted BetterVoting export, it uses the nested `election: → races:` schema (options live under `election.options`) — exactly the format the [convert → validate → tabulate pipeline](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) produces and cross-checks against BetterVoting's own result.

@@ -108,8 +108,8 @@ What those ignored ranks would have said: **Center beats Left head-to-head 15–
 STAR (and Ranked Robin) read every ballot: STAR elects **Center**, and the engine prints `[Condorcet Winner] = Center`. Run both to see it:
 
 ```
-python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/center_squeeze_star.yaml   # Left wins; Center out in round 1
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_Single_winner/center_squeeze_star.yaml   # Center wins; Condorcet = Center
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/center_squeeze/center_squeeze_star.yaml   # Left wins; Center out in round 1
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/center_squeeze/center_squeeze_star.yaml   # Center wins; Condorcet = Center
 ```
 
 ---

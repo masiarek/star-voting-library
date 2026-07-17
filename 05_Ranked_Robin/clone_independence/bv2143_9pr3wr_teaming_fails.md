@@ -23,7 +23,9 @@ BV breaks the 2-way tie by head-to-head, and **C beats A1, 21–12**:
 - `tied: []`, `tieBreakType: none`
 - `elected: [C]`; log: *"C preferred over A1 in runoff."*
 
-![BV result for 9pr3wr — A1 and C tie at 5 wins; C elected on head-to-head](img/REPLACE_9pr3wr_result.png)
+<!-- Screenshot slot — BV result for `9pr3wr`.
+     Save as: img/9pr3wr_result.png
+![BV result for 9pr3wr — A1 and C tie at 5 wins; C elected on head-to-head](img/REPLACE_9pr3wr_result.png) -->
 
 So on BetterVoting the clones did **not** help the A-faction — C wins. Deterministic and freezable: [`bv2143_9pr3wr_teaming_fails_bv_export.json`](bv2143_9pr3wr_teaming_fails_bv_export.json).
 
