@@ -2340,6 +2340,10 @@ _BV830_NO_CONDORCET = {
 }
 
 # --- BV2188/89/90 — "Two Districts, One Mayor": STAR's reinforcement paradox ----
+# Already created 2026-07-16 -> d3b9wc (BV2188) / rhbfj7 (BV2189) / 923q3d
+# (BV2190); all six races verified live against LH. Reference only — do NOT
+# point ELECTIONS back at _TD_TRIO (re-running would create undeletable
+# duplicates).
 # SOURCE: 01_STAR/exercises/ex01_two_districts.md (this repo) — ballots adapted
 # from a RangeVoting.org worked example, posed as a districts exercise in
 # Brendan W. Sullivan, "An Introduction to the Math of Voting Methods" (2022),
@@ -2472,4 +2476,4 @@ _TD_TRIO = [
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
 # old specs here — every created election is recorded on BV + its saved export
 # in 06_Other/_demo_dropbox/ + BV_registry.md. Example: ELECTIONS = [_ICE_CREAM]
-ELECTIONS: list = _TD_TRIO   # BV2188/89/90 — the "Two Districts, One Mayor" trio
+ELECTIONS: list = []   # BV2188/89/90 (d3b9wc/rhbfj7/923q3d) created 2026-07-16 — reset to safe empty state
