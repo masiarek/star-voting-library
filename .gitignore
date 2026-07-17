@@ -38,3 +38,6 @@ ballots.html
 *_ballots.html
 ballots.pdf
 *_ballots.pdf
+
+# MkDocs website build output (regenerate: uvx --with mkdocs-same-dir --with mkdocs-material mkdocs build)
+/site/

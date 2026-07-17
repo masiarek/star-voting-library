@@ -45,7 +45,8 @@ IDXDIR = os.path.join(REPO, "00_start_here", "YAML_test_case_index")
 
 EXCLUDE = ("/.venv/", "/_tabulated", "_tabulated/", "/_pages/", "_pages/",
            "/_generated", "_generated/", "/tests/", "/2_negative/",
-           "/negative_cases/", "/harness_cases/", "/_demo_dropbox/")
+           "/negative_cases/", "/harness_cases/", "/_demo_dropbox/",
+           "/site/")  # mkdocs build output (mirrors the whole repo)
 
 # --- method vocabulary --------------------------------------------------------
 # Canonical family so a yaml's "Bloc STAR"/"allocated" lines up with BV's

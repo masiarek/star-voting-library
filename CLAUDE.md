@@ -181,6 +181,15 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   file's `# H1` (e.g. `# 01_STAR — single-winner STAR`). A folder may keep *secondary*
   docs under descriptive names (e.g. `README_larry_hastings.md`, `FORK_NOTES.md`), but
   the one overview is always `README.md`.
+- **The repo publishes as a searchable website** — <https://masiarek.github.io/YAML/>,
+  built by root `mkdocs.yml` (MkDocs Material + `mkdocs-same-dir`) straight from the
+  repo's own Markdown (no `docs/` copy; `.yaml` / `_tabulated` files carried through)
+  and deployed by `.github/workflows/docs.yml` on every push to master. Folder
+  `README.md`s become the site's section index pages (one more reason that naming rule
+  matters), and links keep GitHub's file-relative semantics (`use_directory_urls:
+  false` — don't flip it). Local preview: `uvx --with mkdocs-same-dir --with
+  "mkdocs-material>=9.5" mkdocs serve`. `site/` is generated output — never commit.
+  Details + known nits: `00_start_here/about_this_repo/website_build.md`.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by

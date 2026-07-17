@@ -36,7 +36,8 @@ import sys
 import yaml
 
 EXCLUDE = ("/_tabulated", "_tabulated/", "/_demo_dropbox/", "/_generated",
-           "/negative", "/tests/", "/test_elections/", "/YAML_library/2_negative")
+           "/negative", "/tests/", "/test_elections/", "/YAML_library/2_negative",
+           "/site/")  # mkdocs build output (mirrors the whole repo)
 
 
 def _find_repo(start):

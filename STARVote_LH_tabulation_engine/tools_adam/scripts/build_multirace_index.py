@@ -29,8 +29,8 @@ OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "multirace_ele
 def _find_exports():
     hits = []
     for p in glob.glob(os.path.join(REPO, "**", "*_bv_export.json"), recursive=True):
-        if "/.venv/" in p or "/_demo_dropbox/" in p:
-            continue
+        if "/.venv/" in p or "/_demo_dropbox/" in p or "/site/" in p:
+            continue  # /site/ = mkdocs build output (mirrors the whole repo)
         hits.append(p)
     return sorted(hits)
 

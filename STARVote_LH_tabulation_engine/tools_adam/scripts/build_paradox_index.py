@@ -35,7 +35,8 @@ OUT_CSV = os.path.join(OUT_DIR, "paradox_cases.csv")
 PAGES_DIR = "00_start_here/voting_paradoxes"
 
 EXCLUDE = ("_tabulated", "_generated", "_demo_dropbox", "/tests/", "/negative",
-           "/2_negative", "harness_cases", "trash_delete")
+           "/2_negative", "harness_cases", "trash_delete",
+           "/site/")  # mkdocs build output (mirrors the whole repo)
 
 # tag -> (display name, Felsenthal kind, teaching page filename or None, definition)
 VOCAB = {

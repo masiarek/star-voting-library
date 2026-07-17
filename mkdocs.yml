@@ -1,0 +1,87 @@
+# MkDocs Material site for the whole repo — publishes every Markdown page (teaching
+# docs + the generated per-election pages) as a searchable website on GitHub Pages.
+#
+#   Local preview:  uvx --with mkdocs-same-dir --with mkdocs-material mkdocs serve
+#   Deploy:         .github/workflows/docs.yml builds on every push to master
+#                   (one-time setup: repo Settings → Pages → Source: GitHub Actions)
+#
+# The docs root IS the repo root (mkdocs-same-dir), so there is no docs/ copy step:
+# the same Markdown that GitHub renders is what the site serves, and non-Markdown
+# files (.yaml sources, _tabulated .txt mirrors) are copied through so links to
+# them keep working.
+
+site_name: STAR Voting — Education & Test-Case Library
+site_description: Learn, teach, and debate STAR Voting — every claim backed by a runnable YAML election.
+site_url: https://masiarek.github.io/YAML/
+repo_url: https://github.com/masiarek/YAML
+repo_name: masiarek/YAML
+edit_uri: edit/master/
+
+docs_dir: .
+site_dir: site
+
+# The repo's cross-links were authored for GitHub's file-relative rendering
+# (including links to bare folders, which resolve to the folder's README.md).
+# Plain .html pages keep those exact semantics; pretty directory URLs would
+# shift every page one level deeper and 404 the folder-style links.
+use_directory_urls: false
+
+theme:
+  name: material
+  icon:
+    logo: material/star-circle
+  features:
+    - navigation.indexes    # a folder's README.md becomes its section landing page
+    - navigation.prune      # don't embed the full 700-page nav in every page
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - same-dir
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# docs_dir is the repo root, so keep non-content out of the site.
+# NOTE: setting exclude_docs replaces MkDocs' built-in default — the `.*` line
+# (dot-files/dirs: .git, .venv, .claude, .idea, …) must stay first.
+exclude_docs: |
+  .*
+  /site
+  /AGENTS.md
+  /pets.html
+  /ballots.pdf
+  _demo_dropbox/
+  _generated/
+  __pycache__/

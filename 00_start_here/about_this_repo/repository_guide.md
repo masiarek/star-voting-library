@@ -1,6 +1,6 @@
 # Repository & Engine Guide
 
-How this repo is laid out, how to run it, how the voting methods dispatch, and what the vendored engine adds. Moved here from the landing [`README`](../../README.md) to keep the front page short — this is the "how it works / how to run it" reference.
+How this repo is laid out, how to run it, how the voting methods dispatch, and what the vendored engine adds. Moved here from the landing [`README`](../../readme.md) to keep the front page short — this is the "how it works / how to run it" reference.
 
 > Start with [Start Here](../00_START_HERE.md) for the guided tour, and [CLAUDE.md — working guidance for this repo](../../CLAUDE.md) for the house conventions.
 
