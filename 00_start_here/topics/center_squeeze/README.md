@@ -17,6 +17,8 @@
 
 The same 27-voter election runs through every method on the [RCV-IRV-Hare page](../../RCV_IRV/RCV-IRV-Hare.md): Hare elects Left, everyone who reads the whole ballot elects the Condorcet winner, Center.
 
+**And it happened for real:** [Burlington 2009](../../../method_comparisons/burlington_2009/README.md) — the actual 8,980 ballots, runnable in this repo. Montroll beats everyone head-to-head (5–0), IRV eliminates him in the semifinal, and a 750-voter raise built from the same profile makes the winner lose (non-monotonicity on certified ballots).
+
 Closely related: [monotonicity](../monotonicity/) and [Condorcet efficiency](../condorcet/). Glossary: [`center squeeze`](../../GLOSSARY.md).
 
 ---

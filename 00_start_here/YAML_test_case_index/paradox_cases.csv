@@ -1,5 +1,6 @@
 paradox,kind,case_title,method,expected_winners,bv_test_id,bv_election_id,yaml_path
 Condorcet winner paradox,Simple,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
+Condorcet winner paradox,Simple,"Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)",RCV_IRV,Kiss,,,method_comparisons/burlington_2009/burlington_2009_irv.yaml
 Condorcet winner paradox,Simple,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),RCV_IRV,Left,,,method_comparisons/center_squeeze/center_squeeze_irv.yaml
 Condorcet winner paradox,Simple,Center squeeze — STAR elects the consensus (Center),STAR,Center,,,method_comparisons/center_squeeze/center_squeeze_star.yaml
 Condorcet winner paradox,Simple,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),STAR,Green,,,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml
@@ -78,6 +79,7 @@ Condorcet's paradox (cycle),Simple,"The Post-it RCV example (20 voters) — Rank
 Condorcet's paradox (cycle),Simple,The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held,STAR,Blue,BV2176,p8dp28,method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml
 Condorcet's paradox (cycle),Simple,"The Post-it election, seven ways — Approval: Pink, if approving means any support",Approval,Pink,BV2177,v8r66y,method_comparisons/postit_rcv_example/bv2177_v8r66y_approval.yaml
 Condorcet's paradox (cycle),Simple,"The Post-it election, seven ways — Choose-One: Purple on 7 first choices",Plurality,Purple,BV2177,v8r66y,method_comparisons/postit_rcv_example/bv2177_v8r66y_plurality.yaml
+Non-monotonicity,Conditional,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",RCV_IRV,Montroll,,,method_comparisons/burlington_2009/burlington_2009_raise_kiss_nonmono.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_irv.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada",RankedRobin,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_ranked_robin.yaml
@@ -89,6 +91,7 @@ Non-monotonicity,Conditional,"Non-monotonicity (RCV-IRV) — part 1: baseline, X
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (AFTER — X still wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_after.yaml
 Non-monotonicity,Conditional,Monotonicity — STAR counterpart (BEFORE — X wins),STAR,X,,,method_comparisons/monotonicity/monotonicity_star_before.yaml
 Non-monotonicity,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.yaml
+No-show paradox,Conditional,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",RCV_IRV,Montroll,,,method_comparisons/burlington_2009/burlington_2009_raise_kiss_nonmono.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_irv.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_ranked_robin.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — STAR: elects the Condorcet winner Beth,STAR,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml

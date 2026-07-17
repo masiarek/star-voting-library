@@ -89,7 +89,7 @@ If *enough* of those Palin voters had **betrayed Palin** and ranked **Begich 1st
 
 > **Ranking their true favorite (Palin) first gave them their worst outcome. Betraying her gave them a better one. That is a favorite-betrayal failure — in a real, high-profile election.** RCV-IRV did exactly the thing its advocates say only it prevents.
 
-(Burlington, Vermont 2009 is the same story with a left-leaning twist: Montroll was the head-to-head winner, eliminated early for too few first-place votes.)
+(Burlington, Vermont 2009 is the same story with a left-leaning twist: Montroll was the head-to-head winner, eliminated early for too few first-place votes — and this repo now carries [the real 8,980-ballot reproduction](../../../method_comparisons/burlington_2009/README.md), runnable, with the 750-voter raise that makes the winner lose.)
 
 ---
 

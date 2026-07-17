@@ -157,6 +157,9 @@ LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,s
 LH:brams_ex3_two_candidates_c2_b5,Brams Example 3 — two candidates: two loud fans vs three mild preferences,1,single-race,5,STAR,LH-only
 LH:brams_ex6_three_winners_c3_b9,"Brams Example 6 — three counts, three winners (STAR sides with head-to-head)",1,single-race,9,STAR,LH-only
 LH:brams_grading_paradox_c3_b3,Brams' grading paradox — the grade leader loses the runoff,1,single-race,3,STAR,LH-only
+LH:burlington_2009_irv,"Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)",1,single-race,8974,IRV,LH-only
+LH:burlington_2009_raise_kiss_nonmono,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",1,single-race,8974,IRV,LH-only
+LH:burlington_2009_ranked_robin,"Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner",1,single-race,8974,RankedRobin,LH-only
 LH:center_squeeze_irv,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),1,single-race,27,IRV,LH-only
 LH:center_squeeze_star,Center squeeze — STAR elects the consensus (Center),1,single-race,27,STAR,LH-only
 LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),1,single-race,998,STAR,LH-only
