@@ -2,6 +2,8 @@
 
 *A city elects its mayor with STAR Voting. Out of curiosity, each of its two districts also runs the count on just its own nine ballots. West District's winner: **Avery**. East District's winner: **Avery**. The city's winner: work it out below — and write your prediction down first.*
 
+**▶ Live on BetterVoting:** West [vote](https://bettervoting.com/d3b9wc) · **[results ↗](https://bettervoting.com/d3b9wc/results)** · East [vote](https://bettervoting.com/rhbfj7) · **[results ↗](https://bettervoting.com/rhbfj7/results)** · Combined [vote](https://bettervoting.com/923q3d) · **[results ↗](https://bettervoting.com/923q3d/results)** (elections `d3b9wc` / `rhbfj7` / `923q3d`, Test IDs BV2188–90; each also runs a **Ranked Robin** race on the same opinions — see "What about Elena?" below).
+
 **You practice:** the scoring round · how the runoff pairing is chosen · the **consistency** criterion ([glossary](../../00_start_here/GLOSSARY.md)) — and why it is *not* the same thing as [summability](../../00_start_here/topics/summability/README.md).
 
 Work each part on paper before opening its solution. The YAML files at the bottom are the same elections in runnable form; their `expected_winners` answer keys are regression-tested, and each `_tabulated` mirror is the full audit report.
@@ -127,6 +129,7 @@ Two honest cautions before this becomes a talking point:
 
 - **This is not a summability failure.** STAR remains fully [precinct-summable](../../00_start_here/STAR_Voting/properties_and_limits/STAR_summability.md): score totals and the [preference matrix](../../00_start_here/GLOSSARY.md) add across precincts, and officials run the two rounds *once* on the summed tallies. Nobody tabulates a citywide STAR seat district-by-district. What fails is only the *inference* "won every district ⇒ wins the whole."
 - **What the criterion actually threatens is the headline.** "She carried both districts and still lost!" is a real communications liability after a close election — this exercise is the worked answer to it: carrying a district means winning *that district's runoff pairing*, and the pairing itself is what changed.
+- **The paradox has a catalog page and an IRV-side sibling.** The general phenomenon is Felsenthal's *multiple-districts / reinforcement* paradox — see [the catalog page](../../00_start_here/voting_paradoxes/multiple_districts.md) — and the repo already runs the classic IRV-side demonstration live ([Felsenthal's reinforcement trio](../../method_comparisons/felsenthal_paradoxes/README.md), BV2147–49), where plurality-with-runoff commits the paradox and STAR happens to stay consistent. This exercise's trio (BV2188–90) is the other shoe: the constructive proof that STAR is not reinforcement-proof either.
 
 </details>
 
@@ -151,6 +154,8 @@ The on-screen report's `[Divergence from STAR]` block will have already whispere
 ```
 
 Elena is the *first choice* of 10 of the 18 voters and the Condorcet winner (she beats every rival head-to-head), yet she finishes third on points: her supporters also scored Carmen generously (4) and Avery moderately (3), while her opponents gave her straight 0s. So this one engineered electorate splits the three defensible notions of "best winner" three ways — Score says Avery, majority/Condorcet logic says Elena, STAR's broad-compromise runoff says Carmen. Which notion *should* prevail is its own lesson: [three winner notions](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md). The lesson *here* is narrower and method-internal: STAR's own answer changed when the electorate was sliced.
+
+The live BetterVoting trio makes Elena visible too: each election carries a second race — the same opinions cast as ranked ballots (equal rankings allowed) under Ranked Robin — and Elena wins it 4–0 in West, East, and the city alike.
 
 ## Reading this fairly
 

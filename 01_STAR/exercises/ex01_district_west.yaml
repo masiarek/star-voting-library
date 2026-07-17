@@ -1,4 +1,7 @@
 election_title: "Exercise 1 — Two districts, one mayor: WEST district"
+bv_test_id: BV2188
+bv_election_id: d3b9wc
+bv_results_url: https://bettervoting.com/d3b9wc/results
 
 scenario_description: |-
   West District's nine ballots, tallied on their own. Scoring round: Avery 35,
@@ -9,6 +12,9 @@ scenario_description: |-
   elects Avery, yet the combined city elects Carmen. Ballots adapted from a
   RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
   "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+  Live on BetterVoting (Test ID BV2188): https://bettervoting.com/d3b9wc/results
+  — the election carries a second, Ranked Robin race on the same opinions
+  (equal ranks allowed): Elena, the district's Condorcet winner, wins it 4-0.
 voting_method: STAR
 options:
   show_description: false

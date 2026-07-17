@@ -69,6 +69,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 6xhfp8 | BV11 - Valid Ballot - Full and Equal Support (2 Cand | 1 | single-race | 3 | STAR | BV |
 | 7pdq3r | BV95b - Majority Criterion: favorite loses (backs tw | 1 | single-race | 5 | STAR | BV |
 | 8fvd2x | BV126 - “ties every time - every step” - Multiple ti | 1 | single-race | 7 | STAR | BV |
+| 923q3d | Exercise 1 — Two districts, one mayor: the COMBINED  | 1 | single-race | 18 | STAR | BV |
 | 9dhv8y | No-show paradox (2 of 2) — the 8 April fans vote; RC | 1 | single-race | 62 | STAR | BV |
 | 9ff9jk | BV130 — 6 candidates / 3 winners, Bloc STAR | 1 | single-race | 4 | STAR | BV |
 | 9m6rxr | BV95a - Majority Criterion: favorite survives (backs | 1 | single-race | 5 | STAR | BV |
@@ -158,9 +159,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | display_options_demo | Display options demo | 1 | single-race | 4 | STAR | LH-only |
 | edelman_perfect_component_c3_b30 | A perfect 'Condorcet component' (30 voters) — every  | 1 | single-race | 30 | STAR | LH-only |
 | equal_support_runoff_demo | Equal Support — counted in both rounds, neutral only | 1 | single-race | 100 | STAR | LH-only |
-| ex01_district_combined | Exercise 1 — Two districts, one mayor: the COMBINED  | 1 | single-race | 18 | STAR | LH-only |
-| ex01_district_east | Exercise 1 — Two districts, one mayor: EAST district | 1 | single-race | 9 | STAR | LH-only |
-| ex01_district_west | Exercise 1 — Two districts, one mayor: WEST district | 1 | single-race | 9 | STAR | LH-only |
 | ex02_bella_exits | Exercise 2 — The tenth ballot: Bella withdraws | 1 | single-race | 9 | STAR | LH-only |
 | ex02_nine_ballots | Exercise 2 — The tenth ballot: the nine counted ball | 1 | single-race | 9 | STAR | LH-only |
 | ex02_tenth_ballot | Exercise 2 — The tenth ballot: all ten ballots | 1 | single-race | 10 | STAR | LH-only |
@@ -217,6 +215,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vote_splitting_scenario3_outsider_wins | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
 | bfjqmg | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
 | btmydt | BV129 - 3 cand - 2 winners (Bloc STAR) | 1 | single-race | 5 | STAR | BV |
+| d3b9wc | Exercise 1 — Two districts, one mayor: WEST district | 1 | single-race | 9 | STAR | BV |
 | d664xw | Runoff_06 - Runoff confirms the leader at scale (con | 1 | single-race | 5 | STAR | BV |
 | dfw8rj | BV2183 — Forced Ballot Exhaustion — a 2-rank cap dis | 1 | single-race | 50 | IRV | BV |
 | dkj9dx | BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, | 1 | single-race | 16 | STAR | BV |
@@ -234,6 +233,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | qrw6wb | Ann, Bob, Cal - the canonical leading example (singl | 1 | single-race | 3 | STAR | BV |
 | r2pvc9 | Runoff confirms the leader (control)  | 1 | single-race | 3 | STAR | BV |
 | r4dqvd | BV2105 - Favorite ice cream (Bloc STAR) - without en | 1 | single-race | 4 | STAR | BV |
+| rhbfj7 | Exercise 1 — Two districts, one mayor: EAST district | 1 | single-race | 9 | STAR | BV |
 | rkgtpk | Runoff_03 — the 201-level reversal in a bigger field | 1 | single-race | 5 | STAR | BV |
 | tf73v9 | Runoff_07 (WIP) — flat ballot exposes the BV abstent | 1 | single-race | 4 | STAR | BV |
 | tg4779 | BV2182 — Why STAR Has an Automatic Runoff — a Runoff | 1 | single-race | 10 | STAR | BV |
@@ -311,8 +311,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 143 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 141 | 26khr3, 2jrfpg, 3494cb, 3grpbb |
+| BV | 144 | 26khr3, 2jrfpg, 3494cb, 3grpbb |
+| LH-only | 140 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV (no yaml) | 33 | 2jrfpg, 3grpbb, 6w2gq7, 8kg698 |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

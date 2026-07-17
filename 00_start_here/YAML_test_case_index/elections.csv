@@ -53,6 +53,7 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
+923q3d,"Exercise 1 — Two districts, one mayor: the COMBINED city",1,single-race,18,STAR,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
@@ -142,9 +143,6 @@ LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung
 LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
 LH:edelman_perfect_component_c3_b30,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,1,single-race,30,STAR,LH-only
 LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
-LH:ex01_district_combined,"Exercise 1 — Two districts, one mayor: the COMBINED city",1,single-race,18,STAR,LH-only
-LH:ex01_district_east,"Exercise 1 — Two districts, one mayor: EAST district",1,single-race,9,STAR,LH-only
-LH:ex01_district_west,"Exercise 1 — Two districts, one mayor: WEST district",1,single-race,9,STAR,LH-only
 LH:ex02_bella_exits,Exercise 2 — The tenth ballot: Bella withdraws,1,single-race,9,STAR,LH-only
 LH:ex02_nine_ballots,Exercise 2 — The tenth ballot: the nine counted ballots,1,single-race,9,STAR,LH-only
 LH:ex02_tenth_ballot,Exercise 2 — The tenth ballot: all ten ballots,1,single-race,10,STAR,LH-only
@@ -201,6 +199,7 @@ LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
+d3b9wc,"Exercise 1 — Two districts, one mayor: WEST district",1,single-race,9,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
 dfw8rj,BV2183 — Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example),1,single-race,50,IRV,BV
 dkj9dx,"BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",1,single-race,16,STAR,BV
@@ -218,6 +217,7 @@ pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
 qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
+rhbfj7,"Exercise 1 — Two districts, one mayor: EAST district",1,single-race,9,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
 tg4779,"BV2182 — Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",1,single-race,10,STAR,BV

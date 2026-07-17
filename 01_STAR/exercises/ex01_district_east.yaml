@@ -1,4 +1,7 @@
 election_title: "Exercise 1 — Two districts, one mayor: EAST district"
+bv_test_id: BV2189
+bv_election_id: rhbfj7
+bv_results_url: https://bettervoting.com/rhbfj7/results
 
 scenario_description: |-
   East District's nine ballots, tallied on their own — a mirror of West with
@@ -10,6 +13,9 @@ scenario_description: |-
   elects Avery, yet the combined city elects Carmen. Ballots adapted from a
   RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
   "An Introduction to the Math of Voting Methods" (2022), ch. 5.
+  Live on BetterVoting (Test ID BV2189): https://bettervoting.com/rhbfj7/results
+  — the election carries a second, Ranked Robin race on the same opinions
+  (equal ranks allowed): Elena, the district's Condorcet winner, wins it 4-0.
 voting_method: STAR
 options:
   show_description: false

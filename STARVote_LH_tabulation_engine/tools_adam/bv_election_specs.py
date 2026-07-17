@@ -2339,9 +2339,137 @@ _BV830_NO_CONDORCET = {
     ),
 }
 
+# --- BV2188/89/90 — "Two Districts, One Mayor": STAR's reinforcement paradox ----
+# SOURCE: 01_STAR/exercises/ex01_two_districts.md (this repo) — ballots adapted
+# from a RangeVoting.org worked example, posed as a districts exercise in
+# Brendan W. Sullivan, "An Introduction to the Math of Voting Methods" (2022),
+# ch. 5. THREE elections, the STAR-side sibling of the Felsenthal BV2147-49
+# trio (where the SAME paradox hits IRV while STAR happens to stay consistent
+# on those ballots — this trio is the constructive proof that STAR is not
+# reinforcement-proof either):
+#   BV2188 West (9):  STAR Avery 35/33/32/25/0; runoff Avery 1-0 (8 Equal Support).
+#   BV2189 East (9):  West's mirror (Blake<->Diego): Avery again, vs Diego.
+#   BV2190 Combined (18): the runner-ups were LOCAL (Blake West-only, Diego
+#                     East-only) while Carmen scored 32 in BOTH: citywide it is
+#                     Avery 70 vs Carmen 64, and Carmen wins the runoff 10-8.
+#                     Avery swept the districts and lost the city.
+# Each election adds a Ranked Robin race on the same opinions (dense EQUAL
+# ranks, the encoding proven on BV2140): Elena — the Condorcet winner in every
+# electorate — wins 4-0 in all three, deterministic and freezable. All six
+# races LH-verified pre-creation (01_STAR/exercises/, tested answer keys).
+_TD_CANDS = ["Avery", "Blake", "Carmen", "Diego", "Elena"]
+_TD_W_STAR = [(5, [3, 3, 4, 0, 5]), (3, [5, 5, 3, 0, 0]), (1, [5, 3, 3, 0, 0])]
+_TD_W_RR = [(5, [3, 3, 2, 0, 1]), (3, [1, 1, 2, 0, 0]), (1, [1, 2, 2, 0, 0])]
+_TD_E_STAR = [(5, [3, 0, 4, 3, 5]), (3, [5, 0, 3, 5, 0]), (1, [5, 0, 3, 3, 0])]
+_TD_E_RR = [(5, [3, 0, 2, 3, 1]), (3, [1, 0, 2, 1, 0]), (1, [1, 0, 2, 2, 0])]
+
+
+def _td_races(prefix, star_blocs, rr_blocs):
+    return [
+        {"title": f"{prefix} — STAR (0-5 scores)", "method": "STAR",
+         "num_winners": 1, "candidates": _TD_CANDS, "ballots": _expand(star_blocs)},
+        {"title": f"{prefix} — Ranked Robin (Copeland; equal ranks allowed)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": len(_TD_CANDS),
+         "candidates": _TD_CANDS, "ballots": _expand(rr_blocs)},
+    ]
+
+
+_TD_SRC = ("The 'Two Districts, One Mayor' consistency exercise from the STAR "
+           "education repo (github.com/masiarek/star-voting-library — "
+           "01_STAR/exercises/ex01_two_districts.md): a live demonstration that "
+           "STAR Voting is not reinforcement-proof — a candidate can win every "
+           "district separately and still lose the combined election, because "
+           "WHO REACHES the automatic runoff is not an additive fact (the "
+           "reinforcement / consistency / multiple-districts paradox). Ballots "
+           "adapted from a worked example on RangeVoting.org, posed as a "
+           "districts exercise in Brendan W. Sullivan, 'An Introduction to the "
+           "Math of Voting Methods' (2022), ch. 5; candidates renamed. The "
+           "IRV-side counterpart is the Felsenthal Reinforcement trio "
+           "(BV2147-BV2149), where plurality-with-runoff commits the same "
+           "paradox on different ballots — and STAR happens to stay consistent "
+           "there. This trio is the constructive proof that STAR's runoff "
+           "forfeits the guarantee too. ")
+
+_TD_TRIO = [
+    {
+        "test_id": "BV2188",
+        "title": "Two Districts, One Mayor (I of III) — West District: STAR elects Avery",
+        "description": (_TD_SRC +
+                        "This is the WEST DISTRICT: 9 voters — 5×(Avery 3, Blake 3, "
+                        "Carmen 4, Diego 0, Elena 5), 3×(Avery 5, Blake 5, Carmen 3, "
+                        "Diego 0, Elena 0), 1×(Avery 5, Blake 3, Carmen 3, Diego 0, "
+                        "Elena 0). Scoring Round: Avery 35, Blake 33, Carmen 32, Elena "
+                        "25, Diego 0 — Avery and Blake advance. Eight of the nine "
+                        "ballots score the two finalists identically (Equal Support), "
+                        "so the one decided voter settles the Automatic Runoff: Avery "
+                        "wins 1-0. East (BV2189) elects Avery too — and the combined "
+                        "city (BV2190) elects Carmen. The second race runs the same "
+                        "nine opinions as Ranked Robin (Copeland) on ranked ballots "
+                        "with EQUAL rankings (e.g. Elena 1st, Carmen 2nd, Avery = "
+                        "Blake 3rd): Elena — first choice of 5 of the 9 and this "
+                        "district's Condorcet winner — wins every head-to-head 5-4 "
+                        "and takes a perfect 4-0 record. LH-verified pre-creation."),
+        "races": _td_races("West District", _TD_W_STAR, _TD_W_RR),
+        "enable_write_in": False,
+        "expected": "STAR -> Avery (35/33/32/25/0; runoff 1-0 over Blake, 8 Equal "
+                    "Support). RR -> Elena (Condorcet winner, 4-0). Trio: West Avery, "
+                    "East Avery, Combined CARMEN. Test ID BV2188.",
+    },
+    {
+        "test_id": "BV2189",
+        "title": "Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",
+        "description": (_TD_SRC +
+                        "This is the EAST DISTRICT — West's mirror image, with Blake "
+                        "and Diego trading places: 9 voters — 5×(Avery 3, Blake 0, "
+                        "Carmen 4, Diego 3, Elena 5), 3×(Avery 5, Blake 0, Carmen 3, "
+                        "Diego 5, Elena 0), 1×(Avery 5, Blake 0, Carmen 3, Diego 3, "
+                        "Elena 0). Scoring Round: Avery 35, Diego 33, Carmen 32, "
+                        "Elena 25, Blake 0 — Avery and Diego advance; again eight "
+                        "Equal Support ballots, and the one decided voter elects "
+                        "Avery 1-0. West (BV2188) chose Avery too — yet the combined "
+                        "city (BV2190) chooses Carmen. The second race runs the same "
+                        "opinions as Ranked Robin (Copeland, equal ranks): Elena is "
+                        "again the Condorcet winner, 4-0. LH-verified pre-creation."),
+        "races": _td_races("East District", _TD_E_STAR, _TD_E_RR),
+        "enable_write_in": False,
+        "expected": "STAR -> Avery (35/33/32/25/0 with Diego as the 33; runoff 1-0 "
+                    "over Diego, 8 Equal Support). RR -> Elena (4-0). Test ID BV2189.",
+    },
+    {
+        "test_id": "BV2190",
+        "title": "Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",
+        "description": (_TD_SRC +
+                        "This is the COMBINED CITY: all 18 ballots of West (BV2188) "
+                        "and East (BV2189) together, ceteris paribus. Citywide "
+                        "Scoring Round: Avery 70, Carmen 64, Elena 50, Blake 33, "
+                        "Diego 33. Each district's runner-up was LOCAL — Blake's 33 "
+                        "points live only in West, Diego's only in East — while "
+                        "Carmen scored 32 in BOTH districts, so citywide she replaces "
+                        "them as the second finalist. And the Avery-vs-Carmen matchup "
+                        "was never Avery's: the two Elena blocs (10 of the 18 voters) "
+                        "all score Carmen 4 > Avery 3, so Carmen wins the Automatic "
+                        "Runoff 10-8 (56%-44%). Avery won BOTH districts and leads "
+                        "the citywide scores 70-64, yet Carmen takes the seat — the "
+                        "reinforcement paradox, live. (Plain Score voting is immune: "
+                        "totals just add, so Avery leads West, East, and the city "
+                        "alike.) The second race runs the same opinions as Ranked "
+                        "Robin (Copeland, equal ranks): Elena — first choice of 10 of "
+                        "18 and the citywide Condorcet winner (10-8, 10-8, 10-4, "
+                        "10-4) — wins 4-0. One engineered electorate, three "
+                        "defensible winners: Score says Avery, STAR says Carmen, "
+                        "Condorcet logic says Elena. LH-verified pre-creation."),
+        "races": _td_races("Combined city", _TD_W_STAR + _TD_E_STAR, _TD_W_RR + _TD_E_RR),
+        "enable_write_in": False,
+        "expected": "STAR -> CARMEN (Avery 70 / Carmen 64; runoff Carmen 10-8) though "
+                    "Avery won both districts (BV2188, BV2189). RR -> Elena (4-0). "
+                    "The Score-total leader remains Avery. Test ID BV2190.",
+    },
+]
+
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
 # old specs here — every created election is recorded on BV + its saved export
 # in 06_Other/_demo_dropbox/ + BV_registry.md. Example: ELECTIONS = [_ICE_CREAM]
-ELECTIONS: list = []   # BV830 (vb3xv2) created 2026-07-16 — reset to safe empty state
+ELECTIONS: list = _TD_TRIO   # BV2188/89/90 — the "Two Districts, One Mayor" trio
