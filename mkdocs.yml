@@ -85,6 +85,7 @@ exclude_docs: |
   /AGENTS.md
   /pets.html
   /ballots.pdf
+  /todo-*.md
   _demo_dropbox/
   _generated/
   __pycache__/
