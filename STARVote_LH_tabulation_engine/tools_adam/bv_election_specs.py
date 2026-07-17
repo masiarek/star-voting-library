@@ -2913,4 +2913,138 @@ _EX14_FULL = [
     },
 ]
 
-ELECTIONS: list = []   # BV2199-2202 (89wwvr/qdtqf2/tk776t/bj8dfc) created 2026-07-17 — reset to safe empty state
+# BV2203 — the FLAG probe for the BV2201/2202 STV crash. The full config diff
+# between the crashing pair (tk776t, bj8dfc) and the working STV races (ywckmg
+# 1-seat, kcf8vf 3-seat) is down to ONE key: the crashers' race objects carry
+# `enable_write_in: false`; every working STV race LACKS the key entirely
+# (created before the script set it). This election is the ex14 ballots
+# byte-for-byte with the key OMITTED (enable_write_in: None -> the create
+# script now skips the key). One probe, two answers: if it COMPUTES, the flag
+# is convicted and the 2-seat/4-candidate/9-voter shape is acquitted in the
+# same stroke; if it CRASHES, the flag is acquitted and shape becomes the
+# prime suspect (next probe: same flag-less race, different fill).
+_EX14_PROBE_NOKEY = [
+    {
+        "test_id": "BV2203",
+        "title": "The Transfer Machine, flag probe — same STV ballots, write-in key omitted",
+        "description": (_EX_SRC +
+                        "Bisection probe for a live BetterVoting STV bug: elections "
+                        "tk776t (BV2201) and bj8dfc (BV2202) crash BV's STV tabulator "
+                        "(ElectionResult returns a server error) while older STV races "
+                        "(ywckmg, kcf8vf) compute fine. The complete config diff "
+                        "between crashers and workers is a single key: the crashing "
+                        "races carry enable_write_in: false, the working races lack "
+                        "the key. This election repeats BV2201's nine ballots exactly "
+                        "— 5x(Austen>Bronte>Camus>Dickens), 1x(Bronte>Camus), "
+                        "3x(Camus>Dickens), 2 seats, Droop quota 4, LH-verified seats "
+                        "Austen + Camus — with the enable_write_in key omitted from "
+                        "the race object. If this computes, the flag is the trigger "
+                        "and the 2-seat/4-candidate/9-voter shape is acquitted; if it "
+                        "errors, the flag is acquitted."),
+        "races": [
+            {"title": "Two novels — STV (2 seats, write-in key omitted)", "method": "STV",
+             "num_winners": 2, "max_rankings": 4, "candidates": _E14_CANDS, "ballots": _E14_RANK},
+        ],
+        "enable_write_in": None,
+        "expected": "STV -> Austen + Camus IF the tabulator runs (quota 4; surplus 1 "
+                    "to Bronte; Dickens then Bronte out; Camus 5). The probe's real "
+                    "output is computes-vs-errors. Test ID BV2203.",
+    },
+]
+
+# BV2203 result (2026-07-17): created -> gvtg2h, key confirmed ABSENT from the
+# race object, STILL crashes (error cc9625bb) — enable_write_in ACQUITTED.
+# Root cause then found by reading BV's IRV.ts (Equal-Vote/bettervoting,
+# packages/backend/src/Tabulators/IRV.ts): when the LAST remaining hopeful
+# reaches quota, the elect-branch shifts it out and redistributes its surplus
+# via distributeVotes(remainingCandidates=[], ...), whose
+# `remainingCandidates.reduce(...)` has NO initial value — [].reduce(f) throws
+# TypeError. The under-quota sole survivor is rescued by the fill-remaining-
+# seats shortcut (no redistribution); the AT-quota sole survivor crashes.
+# BV2204/2205 below are the two confirming probes.
+
+# BV2204 — the CONTROL: byte-level config identical to BV2201 (STV, 2 seats,
+# 4 candidates, enable_write_in: false) but the count ends with two hopefuls
+# still standing (both seats fill by quota, no candidate is ever eliminated):
+# 13 voters, quota floor(13/3+1)=5. R1: Angelou 6 >= 5 elected; surplus 1
+# (6 ballots x 1/6) -> Blake 1+1=2. R2: Cummings 5 >= 5 elected (zero surplus,
+# redistributed over a NON-empty remainder) — done. Expected: COMPUTES.
+_P24_CANDS = ["Angelou", "Blake", "Cummings", "Dickinson"]
+_P24_RANK = _expand([(6, [1, 2, 0, 0]), (5, [0, 2, 1, 0]), (1, [0, 1, 0, 0]), (1, [0, 0, 0, 1])])
+
+# BV2205 — the MINIMAL crasher: 1 seat, 3 candidates, 6 voters, every round
+# deterministic (3>2>1, then 3>2 — no ties anywhere). Quota floor(6/2+1)=4.
+# R1: Ash 3 / Birch 2 / Cedar 1 — nobody at quota, Cedar out (exhausts).
+# R2: Ash 3 / Birch 2 — Birch out, both ballots transfer to Ash. R3: Ash 5 is
+# the SOLE remaining hopeful at/above quota -> elect-branch -> surplus
+# redistribution over an empty candidate list -> [].reduce throws. Expected:
+# ERRORS — and proves single-seat STV is affected too, not just multi-seat.
+_P25_CANDS = ["Ash", "Birch", "Cedar"]
+_P25_RANK = _expand([(3, [1, 0, 0]), (2, [2, 1, 0]), (1, [0, 0, 1])])
+
+_STV_ENDGAME_PROBES = [
+    {
+        "test_id": "BV2204",
+        "title": "The Transfer Machine, control — an STV finish with hopefuls still standing",
+        "description": (_EX_SRC +
+                        "Control probe for the BetterVoting STV sole-survivor crash "
+                        "(see tk776t/BV2201, bj8dfc/BV2202, gvtg2h/BV2203). Config is "
+                        "identical to the crashing BV2201 — STV, 2 seats, 4 "
+                        "candidates, write-ins off — but these 13 ballots fill both "
+                        "seats by quota while two hopefuls still stand, so no "
+                        "candidate is ever eliminated: 6x(Angelou>Blake), "
+                        "5x(Cummings>Blake), 1x(Blake), 1x(Dickinson); Droop quota 5; "
+                        "Angelou elected round 1 (surplus 1 to Blake), Cummings "
+                        "elected round 2. If this computes while gvtg2h errors, the "
+                        "endgame — electing the LAST remaining hopeful at quota, "
+                        "whose surplus then redistributes over an empty candidate "
+                        "list ([].reduce with no initial value in IRV.ts "
+                        "distributeVotes) — is confirmed as the trigger, and the "
+                        "2-seat/4-candidate shape is acquitted. LH-verified seats: "
+                        "Angelou + Cummings."),
+        "races": [
+            {"title": "Poets on the shelf — STV (2 seats, control)", "method": "STV",
+             "num_winners": 2, "max_rankings": 4, "candidates": _P24_CANDS, "ballots": _P24_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "COMPUTES: STV -> Angelou + Cummings (quota 5; no eliminations; "
+                    "two hopefuls still standing at the end). Test ID BV2204.",
+    },
+    {
+        "test_id": "BV2205",
+        "title": "The sole-survivor STV finish — six voters, one seat, a tabulator edge case",
+        "description": (_EX_SRC +
+                        "Minimal reproduction of the BetterVoting STV sole-survivor "
+                        "crash: 1 seat, 3 candidates, 6 fully deterministic ballots — "
+                        "3x(Ash), 2x(Birch>Ash), 1x(Cedar). Droop quota 4. Round 1: "
+                        "Ash 3 / Birch 2 / Cedar 1, nobody at quota, Cedar eliminated "
+                        "(ballot exhausts). Round 2: Birch eliminated, both ballots "
+                        "transfer to Ash. Round 3: Ash, now the ONLY remaining "
+                        "candidate, holds 5 >= 4 — the elect-branch removes him and "
+                        "redistributes his surplus over an EMPTY candidate list, and "
+                        "distributeVotes' remainingCandidates.reduce(...) has no "
+                        "initial value, so [].reduce throws (IRV.ts, "
+                        "packages/backend/src/Tabulators). Expected here: the results "
+                        "page errors until the bug is fixed; any STV engine elects "
+                        "Ash. Proves the crash needs neither multi-seat, nor "
+                        "truncation-exhaustion mid-transfer, nor the write-in flag — "
+                        "only an endgame where eliminations leave one hopeful who "
+                        "then reaches quota. LH-verified winner: Ash."),
+        "races": [
+            {"title": "One seat, three trees — STV (sole-survivor finish)", "method": "STV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _P25_CANDS, "ballots": _P25_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "ERRORS on BV (sole-survivor elect-branch). Any working STV "
+                    "engine: Ash (quota 4; Cedar then Birch out; Ash 5). "
+                    "Test ID BV2205.",
+    },
+]
+
+# RESULTS (2026-07-17): BV2204 -> 39py93, COMPUTES (Angelou + Cummings, agrees
+# with LH — shape acquitted, endgame convicted). BV2205 -> 8xwx43, ERRORS
+# (13617b56) — minimal 1-seat sole-survivor crasher confirmed. Bisection
+# CLOSED; case folder: 06_Other/STV/bv_stv_sole_survivor_crash/ (evidence
+# table + ready-to-file issue). Do NOT re-run these specs (permanent dupes).
+
+ELECTIONS: list = []   # BV2203-2205 (gvtg2h/39py93/8xwx43) created 2026-07-17 — reset to safe empty state

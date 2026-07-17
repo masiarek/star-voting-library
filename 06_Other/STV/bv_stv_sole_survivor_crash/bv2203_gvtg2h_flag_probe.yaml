@@ -1,0 +1,43 @@
+election_title: "BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)"
+bv_test_id: BV2203
+bv_election_id: gvtg2h
+bv_results_url: https://bettervoting.com/gvtg2h/results
+
+scenario_description: |-
+  Bisection probe #1 for the BetterVoting STV sole-survivor crash: the
+  exercise-14 ballots byte-for-byte (5:Austen>Bronte>Camus>Dickens,
+  1:Bronte>Camus, 3:Camus>Dickens; 2 seats; Droop quota 4), created with
+  the enable_write_in key OMITTED from the race object — the one config
+  key that separated the crashing elections (tk776t, bj8dfc) from the
+  working older STV races (ywckmg, kcf8vf). Key confirmed absent on the
+  created race. RESULT: still crashes (error cc9625bb) — the flag is
+  acquitted, which pointed the investigation at the count itself: the
+  eliminations consume Dickens and Bronte, and Camus reaches quota as the
+  SOLE remaining hopeful — the endgame BetterVoting's IRV.ts cannot
+  redistribute a surplus from ([].reduce with no initial value throws).
+  Full lab notebook: README.md in this folder. Seats below are the LH
+  engine's (BV errors until fixed).
+  Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
+  — results page errors by design of the probe.
+voting_method: STV
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  5:Austen>Bronte>Camus>Dickens
+  1:Bronte>Camus
+  3:Camus>Dickens
+expected_winners:
+  - Austen
+  - Camus
+
+# file: bv2203_gvtg2h_flag_probe.yaml

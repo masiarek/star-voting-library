@@ -21,8 +21,13 @@ scenario_description: |-
   — the vote page works, but BV's STV tabulator currently returns a
   server error on /results for this election, and for its fully-ranked
   probe twin BV2202 (bj8dfc, ex14_two_novels_fullranks.yaml) — a live BV
-  bug, documented with error IDs on the exercise page. The seats above
-  are the LH engine's; nearby BV STV races (ywckmg, kcf8vf) compute fine.
+  bug, since DIAGNOSED: the count ends with Camus reaching quota as the
+  sole remaining hopeful, and BV's IRV.ts redistributes his surplus over
+  an empty candidate list ([].reduce with no initial value throws). Full
+  bisection (BV2203-2205) and ready-to-file issue:
+  06_Other/STV/bv_stv_sole_survivor_crash/. The seats above are the LH
+  engine's; BV STV races whose endgame leaves a hopeful standing
+  (ywckmg, kcf8vf, 39py93) compute fine.
 voting_method: STV
 options:
   show_description: false

@@ -1,0 +1,71 @@
+======================================================================
+SOURCE FILE:     bv2204_39py93_control_standing_hopefuls.yaml
+TABULATED FILE:  bv2204_39py93_control_standing_hopefuls_tabulated.txt
+======================================================================
+
+election_title: "BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)"
+bv_test_id: BV2204
+bv_election_id: 39py93
+bv_results_url: https://bettervoting.com/39py93/results
+
+scenario_description: |-
+  Bisection probe #2 (the CONTROL) for the BetterVoting STV sole-survivor
+  crash: config identical to the crashing exercise-14 election tk776t —
+  STV, 2 seats, 4 candidates, write-ins off — but ballots whose count
+  ends with two hopefuls STILL STANDING, so no candidate is ever
+  eliminated. 13 voters, Droop quota = floor(13/3)+1 = 5. Round 1:
+  Angelou holds 6 ≥ 5, elected; her surplus of 1 transfers (six ballots
+  at 1/6 each) to Blake: 1+1 = 2. Round 2: Cummings holds 5 ≥ 5, elected
+  with zero surplus — both seats filled, Blake and Dickinson never
+  eliminated. PREDICTION: computes. RESULT: computes — BetterVoting
+  returns Angelou + Cummings, agreeing with the LH engine. Together with
+  probe #1 (gvtg2h: same crashing count, flag removed, still errors)
+  this convicts the ENDGAME — electing the last remaining hopeful at
+  quota — and acquits the shape and every config key. Full lab notebook:
+  README.md in this folder.
+  Live on BetterVoting (Test ID BV2204): https://bettervoting.com/39py93
+voting_method: STV
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+ballots: |-
+  6:Angelou>Blake
+  5:Cummings>Blake
+  1:Blake
+  1:Dickinson
+expected_winners:
+  - Angelou
+  - Cummings
+
+# file: bv2204_39py93_control_standing_hopefuls.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- STV / Single Transferable Vote (multi-winner — 2 seats) ---
+  BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)
+ Tabulating 13 ballots (ranked ballots).
+ 2 seats; Droop quota = 5 (38.5% of 13).
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Angelou            6  Elected
+Cummings           5  Elected
+Blake              1  Rejected
+Dickinson          1  Rejected
+
+
+Winner(s) — STV / Single Transferable Vote (multi-winner — 2 seats)
+  Angelou
+  Cummings

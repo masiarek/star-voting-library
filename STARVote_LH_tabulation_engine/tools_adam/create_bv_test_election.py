@@ -230,8 +230,15 @@ def build_payload(template, spec):
         # Write-ins default ON so online (QR) voters can add a choice that's not on
         # the list. (The paper ballot's printed list is fixed; --write-ins there is a
         # separate, off-by-default thing.) Override per-race (rs) or per-election (spec).
-        r["enable_write_in"] = bool(rs.get("enable_write_in",
-                                           spec.get("enable_write_in", True)))
+        # SPECIAL: None OMITS the key from the race object entirely — the shape the
+        # pre-flag-era elections have (ywckmg, kcf8vf), needed by the BV2203 probe
+        # for the STV-crash bisection (crashing races carry enable_write_in: false;
+        # every working STV race lacks the key).
+        ewi = rs.get("enable_write_in", spec.get("enable_write_in", True))
+        if ewi is None:
+            r.pop("enable_write_in", None)
+        else:
+            r["enable_write_in"] = bool(ewi)
         # Ranked methods (IRV / STV / RankedRobin) validate ballots as 0..max_rankings
         # (rank, not score: 1 = top choice, 0 = unranked). Set the cap when given so
         # the copied STAR template doesn't reject rank values on submit.

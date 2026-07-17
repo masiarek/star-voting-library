@@ -2,7 +2,7 @@
 
 *A nine-member book club buys **two** novels, by ranked ballot under **STV** — the proportional cousin of RCV-IRV. Five members adore Austen; one champions Brontë; three want Camus. Your job is to be the counting machine: compute the quota, elect, transfer the surplus, eliminate, transfer again — and follow one single ballot through the whole journey to see where its vote finally lands.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) (election `tk776t`, Test ID BV2201) — **but don't expect numbers there: this election found a live BV bug.** BetterVoting's STV tabulator errors on these ballots (and on the fully-ranked probe twin `bj8dfc`, BV2202), while its other STV races compute fine — see [A live bug, found](#a-live-bug-found) below. The seats on this page are the LH engine's.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) (election `tk776t`, Test ID BV2201) — **but don't expect numbers there: this election found a live BV bug — now diagnosed.** BetterVoting's STV tabulator crashes on any count that ends with a *sole remaining hopeful* reaching quota (this one does), while its other STV races compute fine — see [A live bug, found — and diagnosed](#a-live-bug-found--and-diagnosed) below. The seats on this page are the LH engine's.
 
 **You practice:** STV's two moving parts — the **Droop quota** and the **transfer** (surplus and elimination) — the mechanics behind every "no vote is wasted" claim, done by hand at whiteboard scale. (Method home: [STV](../../06_Other/STV/README.md); the score-ballot counterpart is [exercise 12](ex12_bloc_vs_proportional.md).)
 
@@ -75,15 +75,16 @@ With quota 4, the 5-voter Austen bloc funds exactly one seat (and its leftover 1
 
 </details>
 
-## A live bug, found
+## A live bug, found — and diagnosed
 
-Making this exercise live turned it into a bug report. BetterVoting accepted the election and all nine ballots (`tk776t`, BV2201) — but its STV tabulator returns a server error when computing results (`{"error":"Error (a5f1af00)"}`-style, fresh ID per attempt). The bisection so far, with permanent public elections as the lab notebook:
+Making this exercise live turned it into a bug report. BetterVoting accepted the election and all nine ballots (`tk776t`, BV2201) — but its STV tabulator returns a server error when computing results (`{"error":"Error (a5f1af00)"}`-style, fresh ID per attempt). The bisection ran to ground the same day, with permanent public elections as the lab notebook — the full write-up, evidence table, and ready-to-file issue live at **[the sole-survivor STV crash](../../06_Other/STV/bv_stv_sole_survivor_crash/README.md)**. The short version:
 
-- **Truncation acquitted.** A fully-ranked twin — same nine voters, trailing rankings no transfer ever reaches — fails identically (`bj8dfc`, BV2202, error `8a75f8f6`; repo home [ex14_two_novels_fullranks.yaml](ex14_two_novels_fullranks.yaml), LH-verified to the same seats).
-- **Zero-first-choice candidates and multi-seat acquitted.** BV's own 3-seat STV race on the pets-governance election (`kcf8vf`, six candidates, several with zero first choices) computes fine, as does the 1-seat STV race on `ywckmg`.
-- **Remaining suspects:** something in this pair's shape (2 seats, 4 candidates, 9 voters) or the race-level `enable_write_in` flag the older races lack. The error IDs above are searchable in BV's server logs — a crisp handle for the star-server maintainers.
+- **Truncation acquitted.** A fully-ranked twin — same nine voters, trailing rankings no transfer ever reaches — fails identically (`bj8dfc`, BV2202; repo home [ex14_two_novels_fullranks.yaml](ex14_two_novels_fullranks.yaml), LH-verified to the same seats).
+- **The `enable_write_in` flag acquitted.** A probe with the key omitted from the race object — the one config difference from BV's older, working STV races — crashes identically (`gvtg2h`, BV2203).
+- **The shape acquitted, the endgame convicted.** A control with *identical config* (STV, 2 seats, 4 candidates) whose seats fill while two hopefuls still stand **computes fine** (`39py93`, BV2204) — and a minimal 1-seat, 6-voter election whose eliminations leave one candidate standing **crashes** (`8xwx43`, BV2205).
+- **Root cause, in BV's own source.** This exercise's count ends with Camus reaching quota as the *sole remaining hopeful*. BetterVoting's `IRV.ts` elect-branch then redistributes his surplus over an **empty** candidate list, and `distributeVotes` runs `remainingCandidates.reduce(…)` with no initial value — `[].reduce(f)` throws `TypeError`. A sole survivor *below* quota is rescued by the fill-remaining-seats shortcut; only the at-quota sole survivor crashes. (Their own `STV.test.ts` is this same 9-voter shape with a benign endgame — the gap in one test.)
 
-One more symptom for the report: the BV UI *export* of both elections silently omits the `Results` section entirely (Election + Ballots only) — the frozen exports beside these YAMLs archive the ballots and await a re-export once the tabulator is fixed. Until BV fixes it, the seats come from the LH engine (or any STV engine you point at these nine ballots), and the live pair stands as the reproduction case. It is also this set's best accidental lesson: *methods* are math, *implementations* are software — both need testing, which is what this repo's triple-check habit is for.
+One more symptom for the report: the BV UI *export* of both elections silently omits the `Results` section entirely (Election + Ballots only) — the frozen exports beside these YAMLs archive the ballots and await a re-export once the tabulator is fixed. Until BV fixes it, the seats come from the LH engine (or any STV engine you point at these nine ballots), and the live elections stand as the reproduction set. It is also this set's best accidental lesson: *methods* are math, *implementations* are software — both need testing, which is what this repo's triple-check habit is for. The tidy design — every STV moving part firing exactly once — is precisely what walked the count into an endgame that big real-world fields almost never reach. The exercise wasn't unlucky; it was thorough.
 
 ## Reading this fairly
 

@@ -11,13 +11,14 @@ scenario_description: |-
   This variant exists as a bug probe: BetterVoting's STV tabulator
   returns a server error on the exercise's truncated ballots (BV2201,
   tk776t) — and, it turns out, on this fully-ranked copy too (BV2202,
-  bj8dfc), acquitting truncation. Nearby BV STV races compute fine
-  (ywckmg: 1 seat, 3 candidates, 100 voters; kcf8vf: 3 seats, 6
-  candidates, zero-first-choice candidates included), so the trigger sits
-  somewhere in this pair's configuration (2 seats, 4 candidates, 9
-  voters, race-level enable_write_in flag). BV error IDs a5f1af00 /
-  b70e18c6 (tk776t) and 8a75f8f6 (bj8dfc) — findable in BV's server
-  logs. Details: ex14_transfer_machine.md.
+  bj8dfc), acquitting truncation. The bug has since been fully DIAGNOSED
+  (probes BV2203-2205): any STV count whose eliminations leave ONE
+  remaining hopeful who then reaches quota crashes — BV's IRV.ts
+  redistributes the winner's surplus over an empty candidate list, and
+  [].reduce with no initial value throws. This count is exactly that
+  shape (Camus elected last and alone). Full bisection, evidence table,
+  and ready-to-file issue: 06_Other/STV/bv_stv_sole_survivor_crash/;
+  narrative: ex14_transfer_machine.md.
   Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
   — the vote page works; /results currently errors (the bug above).
 voting_method: STV
