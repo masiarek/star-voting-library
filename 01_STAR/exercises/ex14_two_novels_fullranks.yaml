@@ -1,0 +1,47 @@
+election_title: "Exercise 14 — The transfer machine, fully ranked (BV probe variant)"
+
+scenario_description: |-
+  The same nine voters as ex14_two_novels.yaml with every ballot completed
+  to a full ranking — 5×(Austen>Bronte>Camus>Dickens), 1×(Bronte>Camus>
+  Austen>Dickens), 3×(Camus>Dickens>Bronte>Austen). The added trailing
+  rankings are never reached by any transfer, so quota (4), rounds, and
+  seats are identical to the exercise: Austen elected round 1, surplus 1
+  to Bronte; Dickens then Bronte eliminated; Camus reaches 5. Seats:
+  Austen + Camus.
+  This variant exists as a bug probe: BetterVoting's STV tabulator
+  returns a server error on the exercise's truncated ballots (BV2201,
+  tk776t) — and, it turns out, on this fully-ranked copy too (BV2202,
+  bj8dfc), acquitting truncation. Nearby BV STV races compute fine
+  (ywckmg: 1 seat, 3 candidates, 100 voters; kcf8vf: 3 seats, 6
+  candidates, zero-first-choice candidates included), so the trigger sits
+  somewhere in this pair's configuration (2 seats, 4 candidates, 9
+  voters, race-level enable_write_in flag). BV error IDs a5f1af00 /
+  b70e18c6 (tk776t) and 8a75f8f6 (bj8dfc) — findable in BV's server
+  logs. Details: ex14_transfer_machine.md.
+  Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
+  — the vote page works; /results currently errors (the bug above).
+voting_method: STV
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 2
+bv_test_id: BV2202
+bv_election_id: bj8dfc
+bv_results_url: https://bettervoting.com/bj8dfc/results
+ballots: |-
+  5:Austen>Bronte>Camus>Dickens
+  1:Bronte>Camus>Austen>Dickens
+  3:Camus>Dickens>Bronte>Austen
+expected_winners:
+  - Austen
+  - Camus
+
+# file: ex14_two_novels_fullranks.yaml

@@ -2,6 +2,8 @@
 
 *Nine voters hold perfectly clear opinions about Ash, Beck, and Cora — you can read them off their 0–5 scores below. Now hand those same nine people an **Approval ballot**: "mark everyone you approve of." Each voter must compress a five-point opinion into a yes/no. Run the election three times, with the whole room drawing its approval line at 3+, at 4+, and at favorites-only. Predict all three winners before you start — and then decide which of them is "the real one."*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2`, Test ID BV2200 — one election, four races: the honest-scores STAR count plus all three approval thresholds; BV agrees on all four winners).
+
 **You practice:** the Approval ballot's hidden free parameter — the **threshold** — and why [Approval](../../04_Approval/README.md) has *no canonical sincere ballot*: the same honest opinions legally produce many honest ballots, and the election can turn on which one the room's psychology converges to.
 
 Work each part on paper before opening its solution. All four YAMLs are runnable; the STAR file's answer key is regression-tested, and the `_tabulated` mirrors are the full audit reports.

@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**305 election files** (267 single-winner, 38 multi-winner) across 15 method(s).
+**306 election files** (267 single-winner, 39 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -16,7 +16,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 35 |
 | Approval | 13 |
-| STV (proportional RCV) | 5 |
+| STV (proportional RCV) | 6 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
 | Allocated Score (STAR-PR) | 8 |
@@ -277,13 +277,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_approval.yaml) |
 
-## STV (proportional RCV)  (5)
+## STV (proportional RCV)  (6)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`bv2137_ywckmg_stv`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_stv.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STV (1 seat = IRV single-winner): same squeeze → _Carter_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml) |
 | [`bv2138_cxrf8v_stv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_stv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STV (1 seat = IRV single-winner): Dave → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml) |
 | [`ex14_two_novels.yaml`](../../01_STAR/exercises/ex14_two_novels.yaml) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine: a book club buys two novels (STV) → _Austen, Camus_ | — |
+| [`ex14_two_novels_fullranks.yaml`](../../01_STAR/exercises/ex14_two_novels_fullranks.yaml) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine, fully ranked (BV probe variant) → _Austen, Camus_ | — |
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 

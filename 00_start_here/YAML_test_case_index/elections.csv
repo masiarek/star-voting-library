@@ -8,6 +8,7 @@
 6w2gq7,"BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",2,contested (multi-race),100,"IRV, STAR",BV
 74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 7f4f7q,BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
+89wwvr,"Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps",2,contested (multi-race),10,"STAR, STAR_PR",BV
 8kg698,"BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",4,contested (multi-race),20,"IRV, Plurality, RankedRobin, STAR",BV
 923q3d,"BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",2,contested (multi-race),18,"RankedRobin, STAR",BV
 93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
@@ -41,6 +42,7 @@ p8dp28,BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple;
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
 pp2q4q,"BV2170 — The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 q3h4fk,BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick),2,contested (multi-race),7,"Plurality, STAR",BV
+qdtqf2,Exercise 13 — Where do you draw the line? Approve 3 and up,4,contested (multi-race),9,"Approval, STAR",BV
 r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count,2,contested (multi-race),47,"Approval, RankedRobin",BV
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
 rhbfj7,"BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",2,contested (multi-race),9,"RankedRobin, STAR",BV
@@ -161,13 +163,6 @@ LH:ex07_vanishing_votes,Exercise 7 — The vanishing votes that never vanished (
 LH:ex08_minimal_reversal_2c,"Exercise 8 — a smallest runoff reversal (sample solution, two candidates)",1,single-race,3,STAR,LH-only
 LH:ex08_minimal_reversal_3c,"Exercise 8 — a small runoff reversal (sample solution, three candidates)",1,single-race,5,STAR,LH-only
 LH:ex09_game_night_cycle,Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill),1,single-race,10,RankedRobin,LH-only
-LH:ex12_bloc_sweep,"Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps",1,single-race,10,STAR,LH-only
-LH:ex12_proportional_share,"Exercise 12 — Two seats, one neighborhood: Allocated Score shares",1,single-race,10,STAR_PR,LH-only
-LH:ex13_approve3,Exercise 13 — Where do you draw the line? Approve 3 and up,1,single-race,9,Approval,LH-only
-LH:ex13_approve4,Exercise 13 — Where do you draw the line? Approve 4 and up,1,single-race,9,Approval,LH-only
-LH:ex13_bullet,Exercise 13 — Where do you draw the line? Favorites only,1,single-race,9,Approval,LH-only
-LH:ex13_opinions,Exercise 13 — Where do you draw the line? The honest opinions (STAR),1,single-race,9,STAR,LH-only
-LH:ex14_two_novels,Exercise 14 — The transfer machine: a book club buys two novels (STV),1,single-race,9,STV,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
@@ -221,6 +216,7 @@ LH:vote_splitting_scenario1_spoiler,Vote splitting — scenario 1 of 3 — the s
 LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway),1,single-race,36,STAR,LH-only
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
+bj8dfc,"Exercise 14 — The transfer machine, fully ranked (BV probe variant)",1,single-race,9,STV,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
 dfw8rj,BV2183 — Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example),1,single-race,50,IRV,BV
@@ -242,6 +238,7 @@ r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
 tg4779,"BV2182 — Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",1,single-race,10,STAR,BV
+tk776t,Exercise 14 — The transfer machine: a book club buys two novels (STV),1,single-race,9,STV,BV
 vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1,single-race,3,STAR,BV
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV

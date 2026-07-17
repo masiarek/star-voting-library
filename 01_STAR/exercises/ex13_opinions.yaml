@@ -1,4 +1,7 @@
 election_title: "Exercise 13 — Where do you draw the line? The honest opinions (STAR)"
+bv_test_id: BV2200
+bv_election_id: qdtqf2
+bv_results_url: https://bettervoting.com/qdtqf2/results
 
 scenario_description: |-
   The reference election for the approval-threshold exercise: nine voters'
@@ -12,6 +15,9 @@ scenario_description: |-
   instructions, not the opinions, pick the winner. Companion files:
   ex13_approve3.yaml / ex13_approve4.yaml / ex13_bullet.yaml. Exercise:
   ex13_draw_the_line.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — one election, four races (STAR + the three approval thresholds); BV
+  agrees on all four winners.
 voting_method: STAR
 options:
   show_description: false

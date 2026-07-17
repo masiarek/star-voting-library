@@ -4,6 +4,9 @@ TABULATED FILE:  ex12_bloc_sweep_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps"
+bv_test_id: BV2199
+bv_election_id: 89wwvr
+bv_results_url: https://bettervoting.com/89wwvr/results
 
 scenario_description: |-
   A neighborhood association elects a two-seat board. The north side (6 of
@@ -18,6 +21,9 @@ scenario_description: |-
   Score (STAR-PR): the south side's 40% earns one of the two seats.
   Exercise: ex12_bloc_vs_proportional.md. Ballots and cast are this
   repo's own.
+  Live on BetterVoting (Test ID BV2199): https://bettervoting.com/89wwvr/results
+  — one election, both races (Bloc STAR + STAR-PR); BV agrees on both
+  seat pairs.
 voting_method: Bloc STAR
 options:
   show_description: false
@@ -66,6 +72,9 @@ TABULATION RESULTS
   Score (STAR-PR): the south side's 40% earns one of the two seats.
   Exercise: ex12_bloc_vs_proportional.md. Ballots and cast are this
   repo's own.
+  Live on BetterVoting (Test ID BV2199): https://bettervoting.com/89wwvr/results
+  — one election, both races (Bloc STAR + STAR-PR); BV agrees on both
+  seat pairs.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

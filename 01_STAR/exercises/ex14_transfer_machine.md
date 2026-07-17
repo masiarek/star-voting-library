@@ -2,6 +2,8 @@
 
 *A nine-member book club buys **two** novels, by ranked ballot under **STV** — the proportional cousin of RCV-IRV. Five members adore Austen; one champions Brontë; three want Camus. Your job is to be the counting machine: compute the quota, elect, transfer the surplus, eliminate, transfer again — and follow one single ballot through the whole journey to see where its vote finally lands.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) (election `tk776t`, Test ID BV2201) — **but don't expect numbers there: this election found a live BV bug.** BetterVoting's STV tabulator errors on these ballots (and on the fully-ranked probe twin `bj8dfc`, BV2202), while its other STV races compute fine — see [A live bug, found](#a-live-bug-found) below. The seats on this page are the LH engine's.
+
 **You practice:** STV's two moving parts — the **Droop quota** and the **transfer** (surplus and elimination) — the mechanics behind every "no vote is wasted" claim, done by hand at whiteboard scale. (Method home: [STV](../../06_Other/STV/README.md); the score-ballot counterpart is [exercise 12](ex12_bloc_vs_proportional.md).)
 
 Work each part on paper before opening its solution. The YAML is runnable; the `_tabulated` mirror is the full report.
@@ -72,6 +74,16 @@ Take any one of the five `Austen > Brontë > Camus > Dickens` ballots. **4/5 of 
 With quota 4, the 5-voter Austen bloc funds exactly one seat (and its leftover 1 vote correctly *failed* to buy Brontë a second); the 3-voter Camus camp — just under quota on its own — reaches a seat with the transferred remainders. One seat per ~4 voters: **proportional to the room**, as designed. A Bloc-style count on these preferences would hand the Austen majority *both* seats ([exercise 12](ex12_bloc_vs_proportional.md)'s sweep, in ranked clothing). STV is the ranked-ballot route to the same proportional philosophy as Allocated Score — the side-by-side is worked in [STV vs STAR-PR](../../00_start_here/proportional_representation/stv/proportional_stv_vs_star.md), and the family map lives at [electing more than one](../../00_start_here/topics/electing_more_than_one.md).
 
 </details>
+
+## A live bug, found
+
+Making this exercise live turned it into a bug report. BetterVoting accepted the election and all nine ballots (`tk776t`, BV2201) — but its STV tabulator returns a server error when computing results (`{"error":"Error (a5f1af00)"}`-style, fresh ID per attempt). The bisection so far, with permanent public elections as the lab notebook:
+
+- **Truncation acquitted.** A fully-ranked twin — same nine voters, trailing rankings no transfer ever reaches — fails identically (`bj8dfc`, BV2202, error `8a75f8f6`; repo home [ex14_two_novels_fullranks.yaml](ex14_two_novels_fullranks.yaml), LH-verified to the same seats).
+- **Zero-first-choice candidates and multi-seat acquitted.** BV's own 3-seat STV race on the pets-governance election (`kcf8vf`, six candidates, several with zero first choices) computes fine, as does the 1-seat STV race on `ywckmg`.
+- **Remaining suspects:** something in this pair's shape (2 seats, 4 candidates, 9 voters) or the race-level `enable_write_in` flag the older races lack. The error IDs above are searchable in BV's server logs — a crisp handle for the star-server maintainers.
+
+Until BV fixes it, the seats come from the LH engine (or any STV engine you point at these nine ballots), and the live pair stands as the reproduction case. It is also this set's best accidental lesson: *methods* are math, *implementations* are software — both need testing, which is what this repo's triple-check habit is for.
 
 ## Reading this fairly
 

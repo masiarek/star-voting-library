@@ -4,6 +4,9 @@ TABULATED FILE:  ex12_proportional_share_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 12 — Two seats, one neighborhood: Allocated Score shares"
+bv_test_id: BV2199
+bv_election_id: 89wwvr
+bv_results_url: https://bettervoting.com/89wwvr/results
 
 scenario_description: |-
   The same ten ballots as ex12_bloc_sweep.yaml, tabulated as Allocated
@@ -17,6 +20,12 @@ scenario_description: |-
   sweep, opposite philosophy: proportional methods spend a faction's
   weight as it wins seats so the rest of the room is heard. Exercise:
   ex12_bloc_vs_proportional.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2199): https://bettervoting.com/89wwvr/results
+  — BV's STAR_PR race agrees: Asa + Cleo. (Its results page banners the
+  race "Tied!" — a systemic quirk of BV's STAR_PR serializer, which
+  echoes the elected pair as "tied" with no round detail on every
+  STAR_PR election, e.g. the older jwxr3j; the underlying scores here
+  are a clean 30, then 20/16/4.)
 voting_method: allocated
 options:
   show_description: false
@@ -64,6 +73,12 @@ TABULATION RESULTS
   sweep, opposite philosophy: proportional methods spend a faction's
   weight as it wins seats so the rest of the room is heard. Exercise:
   ex12_bloc_vs_proportional.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2199): https://bettervoting.com/89wwvr/results
+  — BV's STAR_PR race agrees: Asa + Cleo. (Its results page banners the
+  race "Tied!" — a systemic quirk of BV's STAR_PR serializer, which
+  echoes the elected pair as "tied" with no round detail on every
+  STAR_PR election, e.g. the older jwxr3j; the underlying scores here
+  are a clean 30, then 20/16/4.)
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

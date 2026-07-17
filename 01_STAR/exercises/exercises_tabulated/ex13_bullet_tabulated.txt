@@ -4,6 +4,9 @@ TABULATED FILE:  ex13_bullet_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 13 — Where do you draw the line? Favorites only"
+bv_test_id: BV2200
+bv_election_id: qdtqf2
+bv_results_url: https://bettervoting.com/qdtqf2/results
 
 scenario_description: |-
   The nine honest opinions of ex13_opinions.yaml converted to Approval
@@ -13,6 +16,8 @@ scenario_description: |-
   ex13_approve3.yaml (generous line: Ash) and ex13_approve4.yaml
   (stricter line: Beck): three thresholds, three winners, one set of
   honest opinions. Exercise: ex13_draw_the_line.md.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — this is the "favorites only" race; BV agrees: Cora 4.
 voting_method: Approval
 options:
   show_description: false

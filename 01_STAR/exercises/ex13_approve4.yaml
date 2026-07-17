@@ -1,4 +1,7 @@
 election_title: "Exercise 13 — Where do you draw the line? Approve 4 and up"
+bv_test_id: BV2200
+bv_election_id: qdtqf2
+bv_results_url: https://bettervoting.com/qdtqf2/results
 
 scenario_description: |-
   The nine honest opinions of ex13_opinions.yaml converted to Approval
@@ -9,6 +12,8 @@ scenario_description: |-
   quiet middle candidate tops the count. Compare ex13_approve3.yaml
   (generous line: Ash) and ex13_bullet.yaml (favorites only: Cora).
   Exercise: ex13_draw_the_line.md.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — this is the "approve 4 and up" race; BV agrees: Beck 5.
 voting_method: Approval
 options:
   show_description: false

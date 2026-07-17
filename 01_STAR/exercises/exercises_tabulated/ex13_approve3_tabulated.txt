@@ -4,6 +4,9 @@ TABULATED FILE:  ex13_approve3_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 13 — Where do you draw the line? Approve 3 and up"
+bv_test_id: BV2200
+bv_election_id: qdtqf2
+bv_results_url: https://bettervoting.com/qdtqf2/results
 
 scenario_description: |-
   The nine honest opinions of ex13_opinions.yaml converted to Approval
@@ -13,6 +16,8 @@ scenario_description: |-
   ex13_bullet.yaml (favorites only: Cora wins). One electorate, one
   question the ballot cannot ask precisely — where the approval line
   sits decides the election. Exercise: ex13_draw_the_line.md.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — this is the "approve 3 and up" race; BV agrees: Ash 7.
 voting_method: Approval
 options:
   show_description: false

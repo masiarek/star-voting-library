@@ -4,6 +4,9 @@ TABULATED FILE:  ex14_two_novels_tabulated.txt
 ======================================================================
 
 election_title: "Exercise 14 — The transfer machine: a book club buys two novels (STV)"
+bv_test_id: BV2201
+bv_election_id: tk776t
+bv_results_url: https://bettervoting.com/tk776t/results
 
 scenario_description: |-
   A nine-member book club buys TWO novels by ranked ballot, counted with
@@ -19,6 +22,12 @@ scenario_description: |-
   elimination — to see how STV keeps a vote moving until it lands.
   Exercise: ex14_transfer_machine.md. Ballots and cast (novelists as
   candidates) are this repo's own.
+  Live on BetterVoting (Test ID BV2201): https://bettervoting.com/tk776t
+  — the vote page works, but BV's STV tabulator currently returns a
+  server error on /results for this election, and for its fully-ranked
+  probe twin BV2202 (bj8dfc, ex14_two_novels_fullranks.yaml) — a live BV
+  bug, documented with error IDs on the exercise page. The seats above
+  are the LH engine's; nearby BV STV races (ywckmg, kcf8vf) compute fine.
 voting_method: STV
 options:
   show_description: false

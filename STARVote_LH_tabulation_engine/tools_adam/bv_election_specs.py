@@ -2749,9 +2749,168 @@ _EX_TRIO_2 = [
 ]
 
 
+# --- BV2199-2201 — the exercises' multi-winner wing + threshold dilemma ---------
+# Already created 2026-07-17 -> 89wwvr (BV2199) / qdtqf2 (BV2200) / tk776t
+# (BV2201); BV2202 probe -> bj8dfc. Reference only — do NOT re-run (permanent
+# duplicates). FINDINGS: BV2199 both seat pairs agree (its STAR_PR banner
+# says "Tied!" — systemic serializer quirk, elected pair echoed as tied, also
+# on jwxr3j); BV2200 all four races agree; BV2201 AND BV2202 crash BV's STV
+# tabulator (server errors a5f1af00/b70e18c6/8a75f8f6) while ywckmg/kcf8vf STV
+# races compute — reproduction pair documented in ex14_transfer_machine.md.
+# ex12 (Bloc vs Allocated), ex13 (approval thresholds), ex14 (STV). Two live
+# probes ride along: BV2199's STAR_PR race tests whether BV's surplus handling
+# matches LH's `allocated` (expected Asa+Cleo either way is NOT guaranteed —
+# capture any divergence in the case page), and BV2201 tests BV's STV transfer
+# flavor (seats Austen+Camus are robust to fractional vs whole-vote surplus).
+
+_E12_CANDS = ["Asa", "Bram", "Cleo", "Dane"]
+_E12_STAR = _expand([(6, [5, 4, 0, 0]), (4, [0, 0, 5, 4])])
+
+_E13_CANDS = ["Ash", "Beck", "Cora"]
+_E13_STAR = _expand([(3, [5, 4, 0]), (2, [0, 5, 3]), (4, [3, 0, 5])])
+_E13_A3 = _expand([(3, [1, 1, 0]), (2, [0, 1, 1]), (4, [1, 0, 1])])
+_E13_A4 = _expand([(3, [1, 1, 0]), (2, [0, 1, 0]), (4, [0, 0, 1])])
+_E13_A5 = _expand([(3, [1, 0, 0]), (2, [0, 1, 0]), (4, [0, 0, 1])])
+
+_E14_CANDS = ["Austen", "Bronte", "Camus", "Dickens"]
+_E14_RANK = _expand([(5, [1, 2, 3, 4]), (1, [0, 1, 2, 0]), (3, [0, 0, 1, 2])])
+
+_EX_TRIO_3 = [
+    {
+        "test_id": "BV2199",
+        "title": "Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares",
+        "description": (_EX_SRC +
+                        "The multi-winner exercise (ex12): a neighborhood association "
+                        "elects a TWO-SEAT board from the same ten honest ballots, "
+                        "counted two ways. Ten voters — 6 north-siders (Asa 5, Bram 4), "
+                        "4 south-siders (Cleo 5, Dane 4). Race 1, Bloc STAR (STAR once "
+                        "per seat): seat 1 Asa (30 points; runoff 6-0 with 4 Equal "
+                        "Support), seat 2 Bram (runoff 6-4 over Cleo) — the 60% side "
+                        "takes 100% of the board, majoritarian by design. Race 2, "
+                        "STAR-PR / Allocated Score: Asa wins seat 1 and his six "
+                        "strongest supporters are charged a 5-ballot quota (each keeps "
+                        "1/6 weight), so round 2 reads Cleo 20, Dane 16, Bram 4 — Cleo "
+                        "takes seat 2 and each side holds one seat, matching the 60/40 "
+                        "room. Same ballots, two philosophies: ask what the body is FOR, "
+                        "then pick the count. LH-verified (Bloc and allocated); the "
+                        "STAR-PR race doubles as a live check that BetterVoting's "
+                        "surplus handling agrees."),
+        "races": [
+            {"title": "Neighborhood board — Bloc STAR (2 seats)", "method": "STAR",
+             "num_winners": 2, "candidates": _E12_CANDS, "ballots": _E12_STAR},
+            {"title": "Neighborhood board — STAR-PR / Allocated Score (2 seats)", "method": "STAR_PR",
+             "num_winners": 2, "candidates": _E12_CANDS, "ballots": _E12_STAR},
+        ],
+        "enable_write_in": False,
+        "expected": "Bloc STAR -> Asa + Bram (the sweep). STAR_PR/Allocated -> Asa + "
+                    "Cleo (one seat per side; LH round 2: Cleo 20 / Dane 16 / Bram 4). "
+                    "Test ID BV2199.",
+    },
+    {
+        "test_id": "BV2200",
+        "title": "Where Do You Draw the Line? — one electorate, three approval thresholds",
+        "description": (_EX_SRC +
+                        "The approval-threshold exercise (ex13): nine voters' honest "
+                        "0-5 opinions — 3×(Ash 5, Beck 4), 2×(Beck 5, Cora 3), "
+                        "4×(Cora 5, Ash 3) — converted to Approval ballots under three "
+                        "defensible readings, plus the full-resolution STAR count. "
+                        "Approve 3+ (generous): Ash wins, 7 of 9. Approve 4+ "
+                        "(stricter): Beck wins, 5 — the tolerances vanish and the "
+                        "quietly high-graded middle survives. Favorites-only "
+                        "(stingiest): Cora wins, 4 — Approval has become Choose-One in "
+                        "a costume. STAR on the full scores: Ash 27 and Cora 26 "
+                        "advance, Cora wins the runoff 6-3 (plain Score would say "
+                        "Ash). One set of honest opinions, five defensible winners "
+                        "across five readings — the Approval ballot outsources its "
+                        "precision to the voter, and the threshold is a free parameter "
+                        "the method never pins down. Pairwise the three candidates "
+                        "form a Condorcet cycle, so even the head-to-head standard "
+                        "shrugs. LH-verified, all four races."),
+        "races": [
+            {"title": "Draw the line — STAR (the honest 0-5 opinions)", "method": "STAR",
+             "num_winners": 1, "candidates": _E13_CANDS, "ballots": _E13_STAR},
+            {"title": "Draw the line — Approval, approve 3 and up", "method": "Approval",
+             "num_winners": 1, "candidates": _E13_CANDS, "ballots": _E13_A3},
+            {"title": "Draw the line — Approval, approve 4 and up", "method": "Approval",
+             "num_winners": 1, "candidates": _E13_CANDS, "ballots": _E13_A4},
+            {"title": "Draw the line — Approval, favorites only", "method": "Approval",
+             "num_winners": 1, "candidates": _E13_CANDS, "ballots": _E13_A5},
+        ],
+        "enable_write_in": False,
+        "expected": "STAR -> Cora (27/26/22; runoff 6-3). Approve 3+ -> Ash (7/6/5). "
+                    "Approve 4+ -> Beck (5/4/3). Favorites only -> Cora (4/3/2 = "
+                    "Choose-One). Test ID BV2200.",
+    },
+    {
+        "test_id": "BV2201",
+        "title": "The Transfer Machine — a book club buys two novels by STV",
+        "description": (_EX_SRC +
+                        "The STV drill (ex14): a nine-member book club buys TWO novels "
+                        "by ranked ballot — 5×(Austen>Bronte>Camus>Dickens), "
+                        "1×(Bronte>Camus), 3×(Camus>Dickens). Droop quota = "
+                        "floor(9/3)+1 = 4. Round 1: Austen holds 5 first choices, is "
+                        "elected, and her ONE surplus vote transfers to Bronte "
+                        "(fractionally, five ballots at 1/5 each). Standings: Bronte "
+                        "2, Camus 3, Dickens 0. Nobody reaches quota, so eliminations "
+                        "run: Dickens (0), then Bronte (2) — whose pile, including the "
+                        "fraction that arrived from Austen's surplus, moves on to "
+                        "Camus: 3+2 = 5, elected. Seats: Austen + Camus — one seat per "
+                        "~quota of voters, proportional to the room, where a Bloc-style "
+                        "count would hand the Austen majority both seats. Follow one "
+                        "Austen ballot: 4/5 of it elected Austen, the remaining 1/5 "
+                        "rode through Bronte to elect Camus — 0 wasted. LH-verified "
+                        "(seats robust to fractional vs whole-vote surplus handling)."),
+        "races": [
+            {"title": "Two novels — STV (2 seats)", "method": "STV",
+             "num_winners": 2, "max_rankings": 4, "candidates": _E14_CANDS, "ballots": _E14_RANK},
+        ],
+        "enable_write_in": False,
+        "expected": "STV -> Austen + Camus (quota 4; Austen round 1 with surplus 1 to "
+                    "Bronte; Dickens then Bronte eliminated; Camus reaches 5). "
+                    "Test ID BV2201.",
+    },
+]
+
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
 # old specs here — every created election is recorded on BV + its saved export
 # in 06_Other/_demo_dropbox/ + BV_registry.md. Example: ELECTIONS = [_ICE_CREAM]
-ELECTIONS: list = []   # BV2191-98 (ywqhq4…93gjx6) created 2026-07-17 — reset to safe empty state
+# BV2202 — the fully-ranked variant of BV2201 (tk776t), whose truncated ballots
+# crash BV's STV tabulator (ElectionResult returns a server error; the repo's
+# fully-ranked STV race on ywckmg computes fine). The trailing rankings added
+# here are never reached by any transfer, so quota, rounds, and seats are
+# IDENTICAL to the exercise — this election is both the working live copy of
+# ex14 and the isolating probe for the truncation bug.
+_E14_RANK_FULL = _expand([(5, [1, 2, 3, 4]), (1, [3, 1, 2, 4]), (3, [4, 3, 1, 2])])
+
+_EX14_FULL = [
+    {
+        "test_id": "BV2202",
+        "title": "The Transfer Machine, fully ranked — a book club buys two novels by STV",
+        "description": (_EX_SRC +
+                        "The STV drill (ex14), fully-ranked variant: the same nine "
+                        "voters as BV2201 (tk776t) with every ballot completed to a "
+                        "full ranking — 5×(Austen>Bronte>Camus>Dickens), "
+                        "1×(Bronte>Camus>Austen>Dickens), 3×(Camus>Dickens>Bronte>"
+                        "Austen). The added trailing rankings are never reached by any "
+                        "transfer, so the count is identical to the exercise: Droop "
+                        "quota 4; Austen elected round 1 with a surplus of 1 that "
+                        "transfers to Bronte; Dickens (0) then Bronte (2) eliminated; "
+                        "Camus reaches 5 and takes the second seat. Seats: Austen + "
+                        "Camus. This variant exists because BetterVoting's STV "
+                        "tabulator errors on BV2201's TRUNCATED ballots (legal partial "
+                        "rankings) while fully-ranked STV elections compute fine — the "
+                        "pair isolates that bug. LH-verified."),
+        "races": [
+            {"title": "Two novels — STV (2 seats, fully ranked)", "method": "STV",
+             "num_winners": 2, "max_rankings": 4, "candidates": _E14_CANDS, "ballots": _E14_RANK_FULL},
+        ],
+        "enable_write_in": False,
+        "expected": "STV -> Austen + Camus (identical rounds to BV2201's design; the "
+                    "trailing ranks are never reached). Test ID BV2202.",
+    },
+]
+
+ELECTIONS: list = []   # BV2199-2202 (89wwvr/qdtqf2/tk776t/bj8dfc) created 2026-07-17 — reset to safe empty state

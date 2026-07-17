@@ -2,6 +2,8 @@
 
 *A neighborhood association elects a two-seat board. The north side — six voters of ten — runs Asa and Bram; the south side's four voters run Cleo and Dane. Everyone votes honestly. Count the same ten ballots two ways and you get two different boards. Neither count is broken. The exercise is deciding what a "fair" committee even means.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr`, Test ID BV2199 — both races in one election; BV agrees on both seat pairs, and banners the STAR-PR race "Tied!" — a documented serializer quirk, see solution (d)).
+
 **You practice:** [multi-winner thinking](../../00_start_here/topics/electing_more_than_one.md) — **Bloc STAR** (run STAR once per seat) versus **Allocated Score** (STAR-PR: winners *spend* their supporters' ballot weight) — and the majoritarian-vs-proportional design question underneath.
 
 Work each part on paper before opening its solution. Both YAMLs are runnable (the same ballots, different `voting_method`); the `_tabulated` mirrors are the full audit reports.
@@ -101,6 +103,8 @@ Round 2
 ```
 
 Asa wins seat 1 as before — but now his six 5-star supporters are charged a quota of 5 ballots for it. Six ballots share the bill, so each keeps only 1/6 of its weight (the engine narrates the fractional surplus exactly). In round 2 the north's leftover sliver gives Bram just 6 × 1/6 × 4 = **4** points, while the south's four *untouched* ballots give Cleo **20**. **Board: Asa and Cleo — one seat per side**, matching the 60/40 weight of the room. The deeper mechanics (quotas, reweighting, the whole PR family): [the math behind proportional STAR](../../00_start_here/proportional_representation/STAR_PR/the_math_behind_proportional_star.md).
+
+*A live-copy footnote:* BetterVoting's page banners this race "**Tied!** Asa and Cleo won after tiebreaker" — there is no tie. Its `STAR_PR` results object marks the elected pair as "tied" with no round detail on *every* STAR-PR election (the repo's older `jwxr3j` case shows the identical pattern), while the underlying scores here are a clean 30, then 20/16/4. A display quirk of BV's serializer, worth knowing before someone quotes the banner as evidence of anything.
 
 </details>
 
