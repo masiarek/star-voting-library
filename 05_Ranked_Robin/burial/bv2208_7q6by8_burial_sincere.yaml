@@ -1,0 +1,34 @@
+election_title: "BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone"
+bv_test_id: BV2208
+bv_election_id: 7q6by8
+bv_results_url: https://bettervoting.com/7q6by8/results
+election_description: >-
+  The sincere half of the repo's worked BURIAL pair — Ranked Robin's signature
+  strategic wart, shown honestly (burial is to Condorcet methods what center
+  squeeze is to IRV). A design club of 42 ranks four gemstones. Beryl is the
+  Condorcet winner: 27-15 over Amber, 33-9 over Coral, 27-15 over Diamond — a
+  clean 3-0 record, no cycle, no tie. Amber runs second at 2-1. Look at WHO
+  builds Beryl's three wins: her 33-9 over Coral and 27-15 over Diamond both
+  contain the 15 Amber-first ballots — support those voters can withdraw —
+  while her 27-15 over Amber contains none of them (they already rank Amber
+  first). Part 2 (bv2209_fxhw6g_burial_pays.yaml) is exactly that
+  withdrawal: rank Beryl LAST, flip the two wins she borrowed, keep the one
+  she owns. Triple-checked: LH native, pref_voting Copeland (unique winner),
+  BetterVoting live (Beryl, no tiebreak). (The live BV description's
+  slim-vs-blowout aside mischaracterizes which wins flip — this file and the
+  case README are the corrected analysis.)
+  Live results: https://bettervoting.com/7q6by8/results
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+ballots: |-
+  15:Amber>Beryl>Coral>Diamond
+  12:Beryl>Amber>Diamond>Coral
+  9:Coral>Diamond>Beryl>Amber
+  6:Diamond>Beryl>Coral>Amber
+expected_winners:
+  - Beryl
+
+# file: bv2208_7q6by8_burial_sincere.yaml

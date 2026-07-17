@@ -3130,4 +3130,89 @@ _FBC_PAIR = [
 # — BV agrees with LH on both halves, no tiebreaks. Case folder:
 # 01_STAR/favorite_betrayal/. Do NOT re-run (permanent dupes).
 
-ELECTIONS: list = []   # BV2203-2207 created 2026-07-17 — reset to safe empty state
+# --- BV2208-2209 — burial in Ranked Robin, the worked pair --------------------
+# The classic anti-Condorcet strategy nobody in the repo demonstrates yet:
+# rank the frontrunner LAST, manufacture a cycle, win on the record. 42
+# voters, cast Amber/Beryl/Coral/Diamond:
+#   15x Amber>Beryl>Coral>Diamond   (the buriers-to-be; true 2nd = Beryl)
+#   12x Beryl>Amber>Diamond>Coral
+#    9x Coral>Diamond>Beryl>Amber
+#    6x Diamond>Beryl>Coral>Amber
+# Sincere: Beryl is the Condorcet winner (27-15 over Amber, 33-9 Coral,
+# 27-15 Diamond) — record 3-0, clean. Burial: the 15 switch to
+# Amber>Coral>Diamond>Beryl (Beryl LAST). Beryl's slim wins over Coral and
+# Diamond flip (24-18 Coral, 30-12 Diamond); her big win over Amber survives.
+# Records: Amber 2-1, Coral 2-1, Beryl 1-2, Diamond 1-2 — a cycle with a
+# 2-way top tie that AMBER takes on every metric: LH total margin (+12 vs 0),
+# BV head-to-head (27-15), pref_voting Copeland-leader set {Amber, Coral}.
+# Deterministic on both engines -> freezable despite the LH/BV tiebreak
+# difference. Triple-checked (LH native, pref_voting Copeland; BV = this).
+_RRB_CANDS = ["Amber", "Beryl", "Coral", "Diamond"]
+_RRB_SINCERE = _expand([(15, [1, 2, 3, 4]), (12, [2, 1, 4, 3]), (9, [4, 3, 1, 2]), (6, [4, 2, 3, 1])])
+_RRB_BURIED = _expand([(15, [1, 4, 2, 3]), (12, [2, 1, 4, 3]), (9, [4, 3, 1, 2]), (6, [4, 2, 3, 1])])
+
+_RRB_SRC = ("From the STAR education repo (github.com/masiarek/star-voting-library, "
+            "05_Ranked_Robin/burial/) — the worked burial pair: Ranked Robin's "
+            "signature strategic wart, shown honestly. ")
+
+_RR_BURIAL_PAIR = [
+    {
+        "test_id": "BV2208",
+        "title": "Burial in Ranked Robin, 1 of 2 — sincere ballots: Beryl beats everyone",
+        "description": (_RRB_SRC +
+                        "Sincere ballots. A design club of 42 ranks four gemstones. "
+                        "Beryl is the Condorcet winner: 27-15 over Amber, 33-9 over "
+                        "Coral, 27-15 over Diamond — a clean 3-0 record; Amber runs "
+                        "second at 2-1. No cycle, no tie, nothing to break. The "
+                        "companion election (2 of 2) shows what happens when the 15 "
+                        "Amber-first voters bury Beryl — rank her LAST below "
+                        "candidates they honestly like less — and flip the two wins "
+                        "she holds by slim margins. LH-verified; pref_voting Copeland "
+                        "agrees (unique winner)."),
+        "races": [
+            {"title": "Gem of the year — Ranked Robin (sincere)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 4, "candidates": _RRB_CANDS, "ballots": _RRB_SINCERE},
+        ],
+        "enable_write_in": False,
+        "expected": "RankedRobin -> Beryl (3-0; Condorcet winner). Test ID BV2208.",
+    },
+    {
+        "test_id": "BV2209",
+        "title": "Burial in Ranked Robin, 2 of 2 — fifteen voters rank the leader last, and it pays",
+        "description": (_RRB_SRC +
+                        "The burial. Same 42 voters as election 1 of 2, except the 15 "
+                        "Amber-first voters now rank Amber>Coral>Diamond>Beryl — "
+                        "burying Beryl, their honest SECOND choice, below two "
+                        "candidates they like less. Beryl's slim sincere wins flip "
+                        "(Coral now beats her 24-18, Diamond 30-12) while her big win "
+                        "over Amber survives (27-15). The round-robin becomes a cycle "
+                        "with Amber and Coral tied on top at 2-1 — and Amber takes "
+                        "the tiebreak on every metric: total pairwise margin +12 vs "
+                        "0 (the LH engine's rule), the direct head-to-head 27-15 "
+                        "(BetterVoting's rule), first choices 15 vs 9. The buriers "
+                        "turned Beryl's win into Amber's. Burial is Condorcet "
+                        "methods' structural wart the way center squeeze is IRV's — "
+                        "and this pair is deliberately knife-edged: in election 1 the "
+                        "same move would need to flip a 33-9 blowout, which no "
+                        "faction can. LH-verified; pref_voting Copeland-leader set "
+                        "{Amber, Coral} contains the winner."),
+        "races": [
+            {"title": "Gem of the year — Ranked Robin (Beryl buried)", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 4, "candidates": _RRB_CANDS, "ballots": _RRB_BURIED},
+        ],
+        "enable_write_in": False,
+        "expected": "RankedRobin -> Amber (2-1, margin +12; cycle after the burial; "
+                    "BV breaks the 2-way tie by head-to-head Amber 27-15 Coral). "
+                    "Test ID BV2209.",
+    },
+]
+
+# RESULTS (2026-07-17): BV2208 -> 7q6by8 (Beryl), BV2209 -> fxhw6g (Amber) —
+# unanimous triple-check (LH, pref_voting, BV), tieBreakType none on both.
+# Case folder: 05_Ranked_Robin/burial/. ERRATUM: the live descriptions'
+# slim-vs-blowout aside mislabels which wins flip (the buriers sit inside
+# Beryl's 33-9 Coral win and 27-15 Diamond win — those flip; her 27-15 Amber
+# win holds); the repo yamls/README carry the corrected analysis. Do NOT
+# re-run (permanent dupes).
+
+ELECTIONS: list = []   # BV2203-2209 created 2026-07-17 — reset to safe empty state

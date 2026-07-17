@@ -1,0 +1,40 @@
+election_title: "BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank the leader last, and it pays"
+bv_test_id: BV2209
+bv_election_id: fxhw6g
+bv_results_url: https://bettervoting.com/fxhw6g/results
+election_description: >-
+  The burial. Same 42 voters as part 1 (bv2208_7q6by8_burial_sincere.yaml),
+  except the 15 Amber-first voters now rank Amber>Coral>Diamond>Beryl —
+  burying Beryl, their honest SECOND choice, below two gems they like less.
+  The mechanics: burial's reach is exactly the buriers' own weight inside
+  the victim's coalitions. Beryl's 33-9 over Coral and 27-15 over Diamond
+  both contained the buriers' 15 ballots, so withdrawing them flips both
+  (Coral 24-18, Diamond 30-12). Her 27-15 over Amber contained none of them
+  (they already ranked Amber first) — untouchable, which is why Amber can
+  never beat Beryl DIRECTLY and must win through the record instead. The
+  round-robin becomes a cycle with Amber and Coral tied on top at 2-1, and
+  Amber takes the tie on EVERY metric: total pairwise margin +12 vs 0 (LH's
+  rung), the direct head-to-head 27-15 (BV's rung), first choices 15 vs 9.
+  The buriers turned Beryl's win into Amber's — and left fingerprints: a
+  cycle where sincere ballots showed none. Burial needs a large coordinated
+  bloc sitting inside the leader's own majorities, good polling, and a lie;
+  the printed round-robin table is where you'd catch it.
+  (Contrast BV2142: a THREE-way RR tie is random on BV — this pair stays
+  freezable because a 2-way tie resolves by head-to-head, deterministically.)
+  Triple-checked: LH native (margin rung), pref_voting Copeland-leader set
+  {Amber, Coral}, BetterVoting live (Amber, tieBreakType none).
+  Live results: https://bettervoting.com/fxhw6g/results
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+ballots: |-
+  15:Amber>Coral>Diamond>Beryl
+  12:Beryl>Amber>Diamond>Coral
+  9:Coral>Diamond>Beryl>Amber
+  6:Diamond>Beryl>Coral>Amber
+expected_winners:
+  - Amber
+
+# file: bv2209_fxhw6g_burial_pays.yaml

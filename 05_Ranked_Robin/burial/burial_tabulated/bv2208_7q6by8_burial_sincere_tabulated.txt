@@ -1,0 +1,36 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 42 ballots (ranked ballots).
+
+Ballots:
+    15 × Amber > Beryl > Coral > Diamond
+    12 × Beryl > Amber > Diamond > Coral
+     9 × Coral > Diamond > Beryl > Amber
+     6 × Diamond > Beryl > Coral > Amber
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Beryl    beats Amber     27 – 15
+   Amber    beats Coral     27 – 15
+   Amber    beats Diamond   27 – 15
+   Beryl    beats Coral     33 –  9
+   Beryl    beats Diamond   27 – 15
+   Coral    beats Diamond   24 – 18
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+            |    Amber     |   Beryl     |   Coral     |  Diamond    |
+----------------------------------------------------------------------
+    Amber > |     ---      |15 -  0 - 27 |27 -  0 - 15 |27 -  0 - 15 |
+    Beryl > | 27 -  0 - 15 |    ---      |33 -  0 -  9 |27 -  0 - 15 |
+    Coral > | 15 -  0 - 27 | 9 -  0 - 33 |    ---      |24 -  0 - 18 |
+  Diamond > | 15 -  0 - 27 |15 -  0 - 27 |18 -  0 - 24 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Beryl      3–0–0         3     +48  Amber, Coral, Diamond
+    2  Amber      2–1–0         2     +12  Coral, Diamond
+    3  Coral      1–2–0         1     -30  Diamond
+    4  Diamond    0–3–0         0     -30  —
+
+Winner — Ranked Robin (RCV-RR): Beryl
+   beats every opponent head-to-head — the Condorcet winner.

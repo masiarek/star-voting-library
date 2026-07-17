@@ -1,0 +1,36 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 42 ballots (ranked ballots).
+
+Ballots:
+    15 × Amber > Coral > Diamond > Beryl
+    12 × Beryl > Amber > Diamond > Coral
+     9 × Coral > Diamond > Beryl > Amber
+     6 × Diamond > Beryl > Coral > Amber
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Amber    beats Coral     27 – 15
+   Amber    beats Diamond   27 – 15
+   Beryl    beats Amber     27 – 15
+   Coral    beats Diamond   24 – 18
+   Coral    beats Beryl     24 – 18
+   Diamond  beats Beryl     30 – 12
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+            |    Amber     |   Coral     |  Diamond    |   Beryl     |
+----------------------------------------------------------------------
+    Amber > |     ---      |27 -  0 - 15 |27 -  0 - 15 |15 -  0 - 27 |
+    Coral > | 15 -  0 - 27 |    ---      |24 -  0 - 18 |24 -  0 - 18 |
+  Diamond > | 15 -  0 - 27 |18 -  0 - 24 |    ---      |30 -  0 - 12 |
+    Beryl > | 27 -  0 - 15 |18 -  0 - 24 |12 -  0 - 30 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Amber      2–1–0         2     +12  Coral, Diamond
+    2  Coral      2–1–0         2      +0  Diamond, Beryl
+    3  Diamond    1–2–0         1      +0  Beryl
+    4  Beryl      1–2–0         1     -12  Amber
+
+Winner — Ranked Robin (RCV-RR): Amber
+   *** 2 candidates tie for the most wins (Amber, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
