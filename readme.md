@@ -45,6 +45,7 @@ The full field-by-field guide — every option, the marker table, weighted rows,
 ## Learn more
 
 - [Start Here](00_start_here/00_START_HERE.md) — guided entry point
+- [Hands-on — do STAR, don't just read about it](00_start_here/STAR_Voting/hands_on/README.md) — [**print real paper ballots**](00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md) from a BetterVoting election (live "scan to vote" QR, election id baked in), then vote, hand-count, and check it against the official tally
 - [A short history of STAR Voting](00_start_here/STAR_Voting/STAR_history.md) — how new it is, the origin story, and the adoption timeline
 - [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
 - [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined

@@ -2,7 +2,7 @@
 
 Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start with **[STAR — start here](STAR_start_here.md)**. Got a "wait, but isn't it…?" doubt? **[Common misunderstandings](getting_started/common_misunderstandings.md)**. Arms-crossed skeptic? **[STAR for skeptics](getting_started/star_for_skeptics.md)**. The case for it, in brief: **[The benefits of STAR Voting](getting_started/STAR_benefits.md)**. Have a specific question? The **[STAR Voting FAQ — mechanics, with worked examples](getting_started/STAR_FAQ.md)** answers the how-the-count-works questions (runoff, Equal Support, summability, preference matrix…) each with a runnable election.
 
-**Hands-on:** [Count a STAR election by hand](hands_on/count_star_by_hand.md) — tally a real election with pencil and paper (add the stars → top two → count the runoff). **Presenting it?** [Teaching STAR Voting](hands_on/teaching_star_voting.md) — the order, the terms, the examples, the misconceptions to head off.
+**[Hands-on](hands_on/README.md):** **[Run a paper-ballot STAR demo](hands_on/running_a_paper_ballot_demo.md)** — print real paper ballots (with a live "scan to vote" QR) from a BetterVoting election, vote, hand-count, and check it against the official tally. [Count a STAR election by hand](hands_on/count_star_by_hand.md) — tally a real election with pencil and paper (add the stars → top two → count the runoff). **Presenting it?** [Teaching STAR Voting](hands_on/teaching_star_voting.md) — the order, the terms, the examples, the misconceptions to head off.
 
 ## The count — two rounds
 

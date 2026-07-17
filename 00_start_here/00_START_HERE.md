@@ -14,6 +14,7 @@ The main event.
 - **How the count works** → [the Scoring Round](STAR_Voting/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
 - **The case for it, in brief** → [The benefits of STAR Voting](STAR_Voting/getting_started/STAR_benefits.md) · debate prep → [Why STAR Voting](topics/Why_STAR_Voting.md)
 - **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/getting_started/STAR_FAQ.md)
+- **Do it, don't just read it** → [Hands-on](STAR_Voting/hands_on/README.md): [run a paper-ballot demo](STAR_Voting/hands_on/running_a_paper_ballot_demo.md) (print real ballots from a BetterVoting election, vote, hand-count, compare) · [count a STAR election by hand](STAR_Voting/hands_on/count_star_by_hand.md) · [teach it](STAR_Voting/hands_on/teaching_star_voting.md)
 - **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
 
 ## What's wrong with how we vote now?
