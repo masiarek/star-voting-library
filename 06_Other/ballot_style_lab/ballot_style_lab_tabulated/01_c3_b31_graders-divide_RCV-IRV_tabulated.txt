@@ -1,0 +1,26 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp
+ Tabulating 31 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Abby, Bruno, Clara
+     8 ×   Bruno > Clara > Abby      (3, 5, 4)
+    12 ×   Abby > Clara      (2, 0, 1)
+     5 ×   Bruno > Clara > Abby      (3, 5, 5)
+     3 ×   Bruno > Abby > Clara      (3, 5, 3)
+     2 ×   Abby      (2, 0, 0)
+     1 ×   Abby > Clara      (2, 0, 2)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno             16  Elected
+Abby              15  Rejected
+Clara              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bruno
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

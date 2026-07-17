@@ -1,0 +1,77 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Noise Soup — weak factions, cross-winds, flat-liners and static
+ Tabulating 47 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Aaron, Beth, Caleb, Dana
+     1 ×   Aaron > Beth > Caleb > Dana      (5, 5, 5, 5)
+     1 ×   Aaron > Beth > Caleb > Dana      (3, 3, 3, 3)
+     2 ×   Aaron > Beth > Dana      (5, 5, 0, 5)
+     1 ×   Beth > Caleb > Dana      (0, 4, 4, 3)
+     2 ×   Beth > Dana > Caleb > Aaron      (2, 5, 3, 4)
+     1 ×   Aaron > Caleb > Dana      (5, 0, 3, 1)
+     2 ×   Aaron      (5, 0, 0, 0)
+     1 ×   Beth > Aaron > Dana > Caleb      (4, 5, 2, 3)
+     2 ×   Dana > Caleb      (0, 0, 1, 5)
+     2 ×   Caleb > Beth > Dana      (0, 2, 5, 2)
+     2 ×   Beth > Aaron      (4, 5, 0, 0)
+     1 ×   Dana > Aaron      (4, 0, 0, 5)
+     2 ×   Beth > Dana > Aaron      (1, 5, 0, 2)
+     2 ×   Caleb      (0, 0, 5, 0)
+     3 ×   (all unranked)      (0, 0, 0, 0)
+     1 ×   Aaron > Caleb > Beth > Dana      (5, 3, 4, 2)
+     1 ×   Caleb > Beth > Dana > Aaron      (2, 4, 5, 3)
+     1 ×   Dana > Aaron      (1, 0, 0, 5)
+     1 ×   Caleb > Beth > Aaron > Dana      (3, 4, 5, 2)
+     1 ×   Beth > Dana      (0, 5, 0, 5)
+     1 ×   Aaron > Beth > Dana > Caleb      (5, 4, 2, 3)
+     1 ×   Caleb > Dana > Aaron      (3, 0, 5, 4)
+     1 ×   Aaron > Beth > Caleb      (5, 2, 2, 0)
+     1 ×   Beth > Aaron      (2, 5, 0, 0)
+     1 ×   Beth > Caleb > Dana      (0, 5, 5, 5)
+     1 ×   Caleb > Dana      (0, 0, 5, 3)
+     1 ×   Aaron > Beth > Caleb      (5, 4, 2, 0)
+     1 ×   Aaron > Caleb > Beth      (5, 3, 5, 0)
+     1 ×   Dana > Caleb > Beth      (0, 3, 4, 5)
+     1 ×   Aaron > Caleb      (5, 0, 5, 0)
+     1 ×   Aaron > Dana > Beth > Caleb      (5, 3, 2, 4)
+     1 ×   Dana > Aaron > Caleb > Beth      (4, 2, 3, 5)
+     1 ×   Dana > Caleb      (0, 0, 4, 5)
+     1 ×   Beth > Caleb      (0, 5, 4, 0)
+     1 ×   Caleb      (0, 0, 1, 0)
+     1 ×   Beth > Aaron > Caleb > Dana      (4, 5, 3, 2)
+     1 ×   Dana > Beth > Caleb      (0, 2, 2, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Aaron             14  Hopeful
+Beth              13  Hopeful
+Caleb              9  Hopeful
+Dana               8  Rejected
+Blank Votes        3  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Aaron             17  Hopeful
+Beth              14  Hopeful
+Caleb             13  Rejected
+Dana               0  Rejected
+Blank Votes        3  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Beth              19  Elected
+Aaron             18  Rejected
+Caleb              0  Rejected
+Dana               0  Rejected
+Blank Votes       10  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Beth
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

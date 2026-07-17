@@ -1,0 +1,42 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Does the squeeze survive noise? Two poles, one consensus middle
+ Tabulating 38 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ava, Ben, Cora
+     1 ×   Ben > Ava > Cora      (3, 5, 3)
+     1 ×   Cora > Ben      (0, 2, 5)
+     3 ×   Ava > Ben      (5, 4, 0)
+     2 ×   Ben > Cora      (0, 5, 1)
+     6 ×   Ava > Ben > Cora      (5, 4, 3)
+     2 ×   Ava > Ben      (5, 2, 0)
+     4 ×   Cora > Ben > Ava      (3, 4, 5)
+    10 ×   Cora > Ben      (0, 1, 5)
+     1 ×   Cora      (0, 0, 5)
+     1 ×   Cora > Ben      (0, 4, 5)
+     1 ×   Ava > Ben      (2, 1, 0)
+     1 ×   Ava > Ben      (5, 3, 0)
+     1 ×   Ben > Cora      (0, 5, 5)
+     3 ×   Ben > Cora      (0, 5, 2)
+     1 ×   Cora > Ava      (3, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cora              18  Hopeful
+Ava               13  Hopeful
+Ben                7  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cora              24  Elected
+Ava               14  Rejected
+Ben                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cora
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

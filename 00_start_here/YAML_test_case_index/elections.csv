@@ -56,6 +56,7 @@ ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
+39py93,"BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)",1,single-race,13,STV,BV
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
 3yr2qd,Block STAR,1,single-race,3,STAR,BV
@@ -66,12 +67,14 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
+8xwx43,"BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters)",1,single-race,6,STV,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9ff9jk,"BV130 — 6 candidates / 3 winners, Bloc STAR",1,single-race,4,STAR,BV
 9m6rxr,BV95a - Majority Criterion: favorite survives (backs one rival),1,single-race,5,STAR,BV
 9pr3wr,BV2143 — Ranked Robin clone independence (2 of 2) — a faction runs clones (teaming),1,single-race,33,RankedRobin,BV
 LH:00_c3_b3_bloc-baseline-2-seats,"Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)",1,single-race,3,STAR,LH-only
 LH:00_plurality_vs_majority,Plurality vs Majority — most votes isn't more than half,1,single-race,100,STAR,LH-only
+LH:01_c3_b31_graders-divide,The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp,1,single-race,31,STAR,LH-only
 LH:01_c4_b2_bloc-star-2-seats,Bloc STAR Voting: 2-Seat Committee Election,1,single-race,2,STAR,LH-only
 LH:01_condorcet_winner,Condorcet winner exists — Ranked Robin elects it,1,single-race,5,RankedRobin,LH-only
 LH:01_political_left_split,Spoiler — a split coalition hands the seat to the minority,1,single-race,100,STAR,LH-only
@@ -80,6 +83,7 @@ LH:01a_c3_b3_more-stars-fewer-voters,"More stars, fewer voters — the runoff ov
 LH:01b_c2_b2_two-candidates,"Again, very similar - this time second ballot is 5 and 0",1,single-race,2,STAR,LH-only
 LH:01b_c3_b9_overturn-holds-at-scale,The same overturn at scale — 67% to 33%,1,single-race,9,STAR,LH-only
 LH:01c_c2_b3_two-candidates,"Equal support example (""I like both flavors"")",1,single-race,3,STAR,LH-only
+LH:02_c4_b40_cliff-city,"Cliff City food trucks — everyone scores 0 or 3-5, nothing between",1,single-race,40,STAR,LH-only
 LH:02_c5_b5_leader-overturned,Five candidates — the score leader is overturned in the runoff,1,single-race,5,STAR,LH-only
 LH:02_cycle_no_condorcet,No Condorcet winner (a cycle) — Ranked Robin still elects one,1,single-race,7,RankedRobin,LH-only
 LH:02_icecream_chocolate_split,"Spoiler — chocolate's majority splits, vanilla steals the win",1,single-race,100,STAR,LH-only
@@ -88,6 +92,7 @@ LH:02a_c5_b63_proportional-allocated-score,Proportional STAR — Allocated Score
 LH:02b_c3_b2_three-candidates,"Three candidates, two ballots - single-winner STAR",1,single-race,2,STAR,LH-only
 LH:02b_c5_b63_proportional-sss,Proportional STAR — Sequentially Spent Score,1,single-race,63,STAR_PR,LH-only
 LH:02c_c5_b63_proportional-rrv,Proportional — Reweighted Range Voting,1,single-race,63,STAR_PR,LH-only
+LH:03_c4_b33_bullet-storm,Bullet Storm — a bullet-voting electorate and the few who spread,1,single-race,33,STAR,LH-only
 LH:03_c7_b3_ice-cream-live,Ice Cream — Flavor of the Year (the real recorded race),1,single-race,3,STAR,LH-only
 LH:03_lunch_veggie_vs_meat,"Spoiler — the veggie majority splits, the burger wins the lunch vote",1,single-race,100,STAR,LH-only
 LH:03_real_record0_c6_b5,No Condorcet winner and Ranked Robin,1,single-race,5,RankedRobin,LH-only
@@ -98,13 +103,16 @@ LH:03b_c3_b3_2_expand_style-protest-vote,Voting styles — low-score ballots (co
 LH:03b_star_pr_3seats,Proportional STAR — same 3-seat electorate as the STV demo,1,single-race,100,STAR_PR,LH-only
 LH:03c_c6_b8_style-gallery,Voting styles — eight ways to fill out one 5-star ballot,1,single-race,8,STAR,LH-only
 LH:04_c4_b3_runoff-confirms-leader,The control case — here the runoff CONFIRMS the score leader,1,single-race,3,STAR,LH-only
+LH:04_c4_b47_noise-soup,"Noise Soup — weak factions, cross-winds, flat-liners and static",1,single-race,47,STAR,LH-only
 LH:04_smith_set_c4_b7,The Smith set — the smallest club that beats everyone outside it,1,single-race,7,RankedRobin,LH-only
 LH:04_star_wars_vote_split,The Voting Dilemma — Skywalker & Leia split the Rebel vote,1,single-race,100,STAR,LH-only
 LH:04b_c4_b3_display-options-all,All options demo,1,single-race,3,STAR,LH-only
+LH:05_c3_b38_squeeze-survives,"Does the squeeze survive noise? Two poles, one consensus middle",1,single-race,38,STAR,LH-only
 LH:05_c3_b5_low-scores-bv1265,"Low scores, switched winner — the popover example (BetterVoting BV1265)",1,single-race,5,STAR,LH-only
 LH:05a_c5_b3_unanimous-ballots,Unanimous ballots (five candidates),1,single-race,3,STAR,LH-only
 LH:05a_residual_split_bullet-voting,STAR's residual split — a coalition bullet-votes itself apart,1,single-race,100,STAR,LH-only
 LH:05b_residual_split_expressive-fix,"The cure — score your ally, and STAR's split disappears",1,single-race,100,STAR,LH-only
+LH:06_c4_b24_narrow-bands,Narrow Bands — a paint-swatch election scored in slivers of the scale,1,single-race,24,STAR,LH-only
 LH:06a_c9_b3_large-field-equal-support,"Large field (9 candidates) — STAR scales, and Equal Support decides",1,single-race,3,STAR,LH-only
 LH:06b_c9_runoff-overturns-leader,Large field (9 candidates) — the runoff OVERTURNS the score leader,1,single-race,3,STAR,LH-only
 LH:09_c4_b100_tennessee-capital,Tennessee Capital — classic STAR example,1,single-race,100,STAR,LH-only
@@ -227,6 +235,7 @@ fk38pk,BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / simple),1,single-rac
 fp62p2,"BV2180 — Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",1,single-race,2,STAR,BV
 fyy886,BV2184 — The Team Lunch Vote — a beginner's STAR example (the compromise everyone likes wins),1,single-race,5,STAR,BV
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
+gvtg2h,"BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)",1,single-race,9,STV,BV
 jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
 jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV
 kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV

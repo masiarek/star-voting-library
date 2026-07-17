@@ -85,6 +85,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 ## See also
 
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)

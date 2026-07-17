@@ -1,0 +1,52 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Cliff City food trucks — everyone scores 0 or 3-5, nothing between
+ Tabulating 40 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Arepa, Bao, Churro, Dumpling
+     3 ×   Bao > Churro      (0, 5, 4, 0)
+     7 ×   Bao      (0, 5, 0, 0)
+     4 ×   Arepa      (5, 0, 0, 0)
+     1 ×   Arepa > Churro > Dumpling      (5, 0, 5, 5)
+     1 ×   Arepa > Dumpling      (4, 0, 0, 4)
+     1 ×   Churro > Bao      (0, 3, 4, 0)
+     4 ×   Churro      (0, 0, 5, 0)
+     1 ×   Churro > Bao > Arepa      (1, 3, 4, 0)
+     3 ×   Bao > Dumpling      (0, 5, 0, 4)
+     2 ×   Bao > Churro      (0, 4, 4, 0)
+     1 ×   Dumpling      (0, 0, 0, 4)
+     1 ×   Churro      (0, 0, 4, 0)
+     2 ×   Arepa > Churro      (5, 0, 4, 0)
+     1 ×   Bao > Churro      (0, 5, 5, 0)
+     1 ×   Churro > Dumpling      (0, 0, 5, 5)
+     1 ×   Arepa > Bao > Churro > Dumpling      (3, 3, 3, 3)
+     1 ×   Dumpling > Churro      (0, 0, 3, 5)
+     1 ×   Bao      (0, 4, 0, 0)
+     1 ×   Arepa > Churro      (4, 0, 4, 0)
+     1 ×   Arepa > Churro > Bao      (5, 4, 5, 0)
+     1 ×   Bao > Churro > Dumpling      (0, 5, 5, 5)
+     1 ×   Churro > Dumpling      (0, 0, 4, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bao               18  Hopeful
+Arepa             11  Hopeful
+Churro             9  Rejected
+Dumpling           2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bao               20  Elected
+Arepa             11  Rejected
+Churro             0  Rejected
+Dumpling           0  Rejected
+Blank Votes        9  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bao
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

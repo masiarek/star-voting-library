@@ -59,6 +59,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/RCV_IRV
 
 ## See also
 
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
 - [Monotonicity (topic hub)](../../../00_start_here/topics/monotonicity/README.md)
 - [Summability (topic hub)](../../../00_start_here/topics/summability/README.md)

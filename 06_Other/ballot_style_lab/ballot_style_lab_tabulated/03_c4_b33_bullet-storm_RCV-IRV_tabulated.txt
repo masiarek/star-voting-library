@@ -1,0 +1,41 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Bullet Storm — a bullet-voting electorate and the few who spread
+ Tabulating 33 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Astrid, Boris, Carla, Dolores
+     1 ×   Boris > Astrid      (1, 5, 0, 0)
+     3 ×   Astrid > Carla      (5, 0, 4, 0)
+     1 ×   Astrid > Dolores      (5, 0, 0, 4)
+     9 ×   Carla      (0, 0, 5, 0)
+     8 ×   Astrid      (5, 0, 0, 0)
+     1 ×   Dolores > Carla > Astrid      (2, 0, 4, 5)
+     6 ×   Boris      (0, 5, 0, 0)
+     1 ×   Carla > Dolores > Astrid > Boris      (3, 2, 5, 4)
+     1 ×   Dolores > Carla      (0, 0, 2, 5)
+     1 ×   Carla > Dolores > Astrid      (1, 0, 5, 4)
+     1 ×   Dolores > Boris      (0, 2, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Astrid            12  Hopeful
+Carla             11  Hopeful
+Boris              7  Rejected
+Dolores            3  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Astrid            13  Elected
+Carla             13  Rejected
+Boris              0  Rejected
+Dolores            0  Rejected
+Blank Votes        7  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Astrid
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

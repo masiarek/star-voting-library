@@ -1,0 +1,49 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Narrow Bands — a paint-swatch election scored in slivers of the scale
+ Tabulating 24 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Azure, Beige, Coral, Dune
+     1 ×   Dune      (0, 0, 0, 5)
+     4 ×   Azure > Coral      (4, 0, 4, 0)
+     1 ×   Azure > Beige > Coral > Dune      (5, 5, 5, 5)
+     1 ×   Dune > Beige      (0, 4, 0, 5)
+     1 ×   Azure > Beige > Coral > Dune      (3, 3, 3, 3)
+     2 ×   Azure > Coral      (2, 0, 2, 0)
+     1 ×   Beige > Coral > Dune > Azure      (3, 5, 4, 4)
+     2 ×   Beige > Dune      (0, 5, 0, 5)
+     1 ×   Azure > Beige > Coral      (4, 4, 4, 0)
+     1 ×   Azure > Beige      (2, 1, 0, 0)
+     1 ×   (all unranked)      (0, 0, 0, 0)
+     2 ×   Beige > Dune > Coral > Azure      (3, 5, 4, 5)
+     1 ×   Dune > Beige > Coral > Azure      (3, 4, 4, 5)
+     1 ×   Azure      (4, 0, 0, 0)
+     1 ×   Coral > Azure > Beige > Dune      (4, 3, 5, 2)
+     1 ×   Coral > Azure > Dune > Beige      (4, 2, 5, 3)
+     1 ×   Beige      (0, 5, 0, 0)
+     1 ×   Beige > Dune > Azure > Coral      (3, 5, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Azure             11  Hopeful
+Beige              7  Hopeful
+Dune               3  Rejected
+Coral              2  Rejected
+Blank Votes        1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Azure             13  Elected
+Beige              9  Rejected
+Dune               0  Rejected
+Coral              0  Rejected
+Blank Votes        2  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Azure
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

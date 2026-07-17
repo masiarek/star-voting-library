@@ -1,0 +1,51 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 24 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Azure, Beige, Coral, Dune
+     1 × Dune > Azure=Beige=Coral      (0, 0, 0, 5)
+     4 × Azure=Coral > Beige=Dune      (4, 0, 4, 0)
+     1 × Azure=Beige=Coral=Dune      (5, 5, 5, 5)
+     1 × Dune > Beige > Azure=Coral      (0, 4, 0, 5)
+     1 × Azure=Beige=Coral=Dune      (3, 3, 3, 3)
+     2 × Azure=Coral > Beige=Dune      (2, 0, 2, 0)
+     1 × Beige > Coral=Dune > Azure      (3, 5, 4, 4)
+     2 × Beige=Dune > Azure=Coral      (0, 5, 0, 5)
+     1 × Azure=Beige=Coral > Dune      (4, 4, 4, 0)
+     1 × Azure > Beige > Coral=Dune      (2, 1, 0, 0)
+     1 × Azure=Beige=Coral=Dune      (0, 0, 0, 0)
+     2 × Beige=Dune > Coral > Azure      (3, 5, 4, 5)
+     1 × Dune > Beige=Coral > Azure      (3, 4, 4, 5)
+     1 × Azure > Beige=Coral=Dune      (4, 0, 0, 0)
+     1 × Coral > Azure > Beige > Dune      (4, 3, 5, 2)
+     1 × Coral > Azure > Dune > Beige      (4, 2, 5, 3)
+     1 × Beige > Azure=Coral=Dune      (0, 5, 0, 0)
+     1 × Beige=Dune > Azure=Coral      (3, 5, 3, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Azure  beats Beige   10 –  9
+   Coral  beats Azure    6 –  2
+   Azure  beats Dune    11 –  9
+   Beige  beats Coral    9 –  8
+   Beige  beats Dune     5 –  4
+   Coral  beats Dune     9 –  8
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    Azure     |   Beige     |   Coral     |    Dune     |
+--------------------------------------------------------------------
+  Azure > |     ---      |10 -  5 -  9 | 2 - 16 -  6 |11 -  4 -  9 |
+  Beige > |  9 -  5 - 10 |    ---      | 9 -  7 -  8 | 5 - 15 -  4 |
+  Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
+   Dune > |  9 -  4 - 11 | 4 - 15 -  5 | 8 -  7 -  9 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Coral      2–1–0         2      +4  Azure, Dune
+    2  Beige      2–1–0         2      +1  Coral, Dune
+    3  Azure      2–1–0         2      -1  Beige, Dune
+    4  Dune       0–3–0         0      -4  —
+
+Winner — Ranked Robin (RCV-RR): Coral
+   *** 3 candidates tie for the most wins (Azure, Beige, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

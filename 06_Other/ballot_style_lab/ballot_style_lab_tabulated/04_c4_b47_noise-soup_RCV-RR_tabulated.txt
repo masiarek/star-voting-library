@@ -1,0 +1,70 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 47 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Aaron, Beth, Caleb, Dana
+     1 × Aaron=Beth=Caleb=Dana      (5, 5, 5, 5)
+     1 × Aaron=Beth=Caleb=Dana      (3, 3, 3, 3)
+     2 × Aaron=Beth=Dana > Caleb      (5, 5, 0, 5)
+     1 × Beth=Caleb > Dana > Aaron      (0, 4, 4, 3)
+     2 × Beth > Dana > Caleb > Aaron      (2, 5, 3, 4)
+     1 × Aaron > Caleb > Dana > Beth      (5, 0, 3, 1)
+     2 × Aaron > Beth=Caleb=Dana      (5, 0, 0, 0)
+     1 × Beth > Aaron > Dana > Caleb      (4, 5, 2, 3)
+     2 × Dana > Caleb > Aaron=Beth      (0, 0, 1, 5)
+     2 × Caleb > Beth=Dana > Aaron      (0, 2, 5, 2)
+     2 × Beth > Aaron > Caleb=Dana      (4, 5, 0, 0)
+     1 × Dana > Aaron > Beth=Caleb      (4, 0, 0, 5)
+     2 × Beth > Dana > Aaron > Caleb      (1, 5, 0, 2)
+     2 × Caleb > Aaron=Beth=Dana      (0, 0, 5, 0)
+     3 × Aaron=Beth=Caleb=Dana      (0, 0, 0, 0)
+     1 × Aaron > Caleb > Beth > Dana      (5, 3, 4, 2)
+     1 × Caleb > Beth > Dana > Aaron      (2, 4, 5, 3)
+     1 × Dana > Aaron > Beth=Caleb      (1, 0, 0, 5)
+     1 × Caleb > Beth > Aaron > Dana      (3, 4, 5, 2)
+     1 × Beth=Dana > Aaron=Caleb      (0, 5, 0, 5)
+     1 × Aaron > Beth > Dana > Caleb      (5, 4, 2, 3)
+     1 × Caleb > Dana > Aaron > Beth      (3, 0, 5, 4)
+     1 × Aaron > Beth=Caleb > Dana      (5, 2, 2, 0)
+     1 × Beth > Aaron > Caleb=Dana      (2, 5, 0, 0)
+     1 × Beth=Caleb=Dana > Aaron      (0, 5, 5, 5)
+     1 × Caleb > Dana > Aaron=Beth      (0, 0, 5, 3)
+     1 × Aaron > Beth > Caleb > Dana      (5, 4, 2, 0)
+     1 × Aaron=Caleb > Beth > Dana      (5, 3, 5, 0)
+     1 × Dana > Caleb > Beth > Aaron      (0, 3, 4, 5)
+     1 × Aaron=Caleb > Beth=Dana      (5, 0, 5, 0)
+     1 × Aaron > Dana > Beth > Caleb      (5, 3, 2, 4)
+     1 × Dana > Aaron > Caleb > Beth      (4, 2, 3, 5)
+     1 × Dana > Caleb > Aaron=Beth      (0, 0, 4, 5)
+     1 × Beth > Caleb > Aaron=Dana      (0, 5, 4, 0)
+     1 × Caleb > Aaron=Beth=Dana      (0, 0, 1, 0)
+     1 × Beth > Aaron > Caleb > Dana      (4, 5, 3, 2)
+     1 × Dana > Beth=Caleb > Aaron      (0, 2, 2, 3)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Beth   beats Aaron   19 – 14
+   Aaron  beats Caleb   20 – 19
+   Dana   beats Aaron   20 – 16
+   Caleb  beats Beth    18 – 16
+   Beth   beats Dana    18 – 12
+   Caleb  ties  Dana    18 – 18
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    Aaron     |    Beth     |   Caleb     |    Dana     |
+--------------------------------------------------------------------
+  Aaron > |     ---      |14 - 14 - 19 |20 -  8 - 19 |16 - 11 - 20 |
+   Beth > | 19 - 14 - 14 |    ---      |16 - 13 - 18 |18 - 17 - 12 |
+  Caleb > | 19 -  8 - 20 |18 - 13 - 16 |    ---      |18 - 11 - 18 |
+   Dana > | 20 - 11 - 16 |12 - 17 - 18 |18 - 11 - 18 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Beth       2–1–0         2      +9  Dana, Aaron
+    2  Caleb      1–1–1       1.5      +1  Beth
+    3  Dana       1–1–1       1.5      -2  Aaron
+    4  Aaron      1–2–0         1      -8  Caleb
+
+Winner — Ranked Robin (RCV-RR): Beth
+   the most head-to-head wins (2).

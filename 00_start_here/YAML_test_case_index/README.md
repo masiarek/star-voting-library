@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**306 election files** (267 single-winner, 39 multi-winner) across 15 method(s).
+**312 election files** (273 single-winner, 39 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 169 |
+| STAR | 175 |
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 35 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (169)
+## STAR  (175)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -69,25 +69,25 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vote_splitting_scenario3_outsider_wins`](../../01_STAR/_main/_main_pages/vote_splitting_scenario3_outsider_wins.md) | `01_STAR/_main/` | 1 | Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins) → _Vanilla_ | [`.yaml`](../../01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/abstain_bugs/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/abstain_bugs/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml) |
-| [`ex01_district_combined.yaml`](../../01_STAR/exercises/ex01_district_combined.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: the COMBINED city → _Carmen_ | — |
-| [`ex01_district_east.yaml`](../../01_STAR/exercises/ex01_district_east.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: EAST district → _Avery_ | — |
-| [`ex01_district_west.yaml`](../../01_STAR/exercises/ex01_district_west.yaml) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: WEST district → _Avery_ | — |
-| [`ex02_bella_exits.yaml`](../../01_STAR/exercises/ex02_bella_exits.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: Bella withdraws → _Chris_ | — |
-| [`ex02_nine_ballots.yaml`](../../01_STAR/exercises/ex02_nine_ballots.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: the nine counted ballots → _Alex_ | — |
-| [`ex02_tenth_ballot.yaml`](../../01_STAR/exercises/ex02_tenth_ballot.yaml) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: all ten ballots → _Chris_ | — |
-| [`ex03_five_verdicts.yaml`](../../01_STAR/exercises/ex03_five_verdicts.yaml) | `01_STAR/exercises/` | 1 | Exercise 3 — One electorate, five verdicts (the snack vote) → _Cherry_ | — |
-| [`ex04_olympics_1994.yaml`](../../01_STAR/exercises/ex04_olympics_1994.yaml) | `01_STAR/exercises/` | 1 | Exercise 4 — Lillehammer 1994: nine judges, three skaters, two winners → _Baiul_ | — |
-| [`ex05_center_squeeze.yaml`](../../01_STAR/exercises/ex05_center_squeeze.yaml) | `01_STAR/exercises/` | 1 | Exercise 5 — The squeezed bridge-builder (IRV vs STAR) → _Brook_ | — |
-| [`ex06_bullet_backfire.yaml`](../../01_STAR/exercises/ex06_bullet_backfire.yaml) | `01_STAR/exercises/` | 1 | Exercise 6 — Bullet voting backfires: the strategic ballots → _Cash_ | — |
-| [`ex06_bullet_honest.yaml`](../../01_STAR/exercises/ex06_bullet_honest.yaml) | `01_STAR/exercises/` | 1 | Exercise 6 — Bullet voting backfires: the honest ballots → _Bree_ | — |
-| [`ex07_vanishing_votes.yaml`](../../01_STAR/exercises/ex07_vanishing_votes.yaml) | `01_STAR/exercises/` | 1 | Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill) → _Aspen_ | — |
-| [`ex08_minimal_reversal_2c.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_2c.yaml) | `01_STAR/exercises/` | 1 | Exercise 8 — a smallest runoff reversal (sample solution, two candidates) → _A_ | — |
-| [`ex08_minimal_reversal_3c.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_3c.yaml) | `01_STAR/exercises/` | 1 | Exercise 8 — a small runoff reversal (sample solution, three candidates) → _A_ | — |
-| [`ex10_generous.yaml`](../../01_STAR/exercises/ex10_generous.yaml) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the generous ballots → _Bess_ | — |
-| [`ex10_reticent.yaml`](../../01_STAR/exercises/ex10_reticent.yaml) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the reticent ballots → _Amir_ | — |
-| [`ex11_spoiler_added.yaml`](../../01_STAR/exercises/ex11_spoiler_added.yaml) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: Axl enters the race → _Alba_ | — |
-| [`ex11_two_way_base.yaml`](../../01_STAR/exercises/ex11_two_way_base.yaml) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: the two-way base race → _Alba_ | — |
-| [`ex13_opinions.yaml`](../../01_STAR/exercises/ex13_opinions.yaml) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? The honest opinions (STAR) → _Cora_ | — |
+| [`ex01_district_combined`](../../01_STAR/exercises/exercises_pages/ex01_district_combined.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: the COMBINED city → _Carmen_ | [`.yaml`](../../01_STAR/exercises/ex01_district_combined.yaml) |
+| [`ex01_district_east`](../../01_STAR/exercises/exercises_pages/ex01_district_east.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: EAST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_east.yaml) |
+| [`ex01_district_west`](../../01_STAR/exercises/exercises_pages/ex01_district_west.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: WEST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_west.yaml) |
+| [`ex02_bella_exits`](../../01_STAR/exercises/exercises_pages/ex02_bella_exits.md) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: Bella withdraws → _Chris_ | [`.yaml`](../../01_STAR/exercises/ex02_bella_exits.yaml) |
+| [`ex02_nine_ballots`](../../01_STAR/exercises/exercises_pages/ex02_nine_ballots.md) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: the nine counted ballots → _Alex_ | [`.yaml`](../../01_STAR/exercises/ex02_nine_ballots.yaml) |
+| [`ex02_tenth_ballot`](../../01_STAR/exercises/exercises_pages/ex02_tenth_ballot.md) | `01_STAR/exercises/` | 1 | Exercise 2 — The tenth ballot: all ten ballots → _Chris_ | [`.yaml`](../../01_STAR/exercises/ex02_tenth_ballot.yaml) |
+| [`ex03_five_verdicts`](../../01_STAR/exercises/exercises_pages/ex03_five_verdicts.md) | `01_STAR/exercises/` | 1 | Exercise 3 — One electorate, five verdicts (the snack vote) → _Cherry_ | [`.yaml`](../../01_STAR/exercises/ex03_five_verdicts.yaml) |
+| [`ex04_olympics_1994`](../../01_STAR/exercises/exercises_pages/ex04_olympics_1994.md) | `01_STAR/exercises/` | 1 | Exercise 4 — Lillehammer 1994: nine judges, three skaters, two winners → _Baiul_ | [`.yaml`](../../01_STAR/exercises/ex04_olympics_1994.yaml) |
+| [`ex05_center_squeeze`](../../01_STAR/exercises/exercises_pages/ex05_center_squeeze.md) | `01_STAR/exercises/` | 1 | Exercise 5 — The squeezed bridge-builder (IRV vs STAR) → _Brook_ | [`.yaml`](../../01_STAR/exercises/ex05_center_squeeze.yaml) |
+| [`ex06_bullet_backfire`](../../01_STAR/exercises/exercises_pages/ex06_bullet_backfire.md) | `01_STAR/exercises/` | 1 | Exercise 6 — Bullet voting backfires: the strategic ballots → _Cash_ | [`.yaml`](../../01_STAR/exercises/ex06_bullet_backfire.yaml) |
+| [`ex06_bullet_honest`](../../01_STAR/exercises/exercises_pages/ex06_bullet_honest.md) | `01_STAR/exercises/` | 1 | Exercise 6 — Bullet voting backfires: the honest ballots → _Bree_ | [`.yaml`](../../01_STAR/exercises/ex06_bullet_honest.yaml) |
+| [`ex07_vanishing_votes`](../../01_STAR/exercises/exercises_pages/ex07_vanishing_votes.md) | `01_STAR/exercises/` | 1 | Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill) → _Aspen_ | [`.yaml`](../../01_STAR/exercises/ex07_vanishing_votes.yaml) |
+| [`ex08_minimal_reversal_2c`](../../01_STAR/exercises/exercises_pages/ex08_minimal_reversal_2c.md) | `01_STAR/exercises/` | 1 | Exercise 8 — a smallest runoff reversal (sample solution, two candidates) → _A_ | [`.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_2c.yaml) |
+| [`ex08_minimal_reversal_3c`](../../01_STAR/exercises/exercises_pages/ex08_minimal_reversal_3c.md) | `01_STAR/exercises/` | 1 | Exercise 8 — a small runoff reversal (sample solution, three candidates) → _A_ | [`.yaml`](../../01_STAR/exercises/ex08_minimal_reversal_3c.yaml) |
+| [`ex10_generous`](../../01_STAR/exercises/exercises_pages/ex10_generous.md) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the generous ballots → _Bess_ | [`.yaml`](../../01_STAR/exercises/ex10_generous.yaml) |
+| [`ex10_reticent`](../../01_STAR/exercises/exercises_pages/ex10_reticent.md) | `01_STAR/exercises/` | 1 | Exercise 10 — Later-no-harm: the reticent ballots → _Amir_ | [`.yaml`](../../01_STAR/exercises/ex10_reticent.yaml) |
+| [`ex11_spoiler_added`](../../01_STAR/exercises/exercises_pages/ex11_spoiler_added.md) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: Axl enters the race → _Alba_ | [`.yaml`](../../01_STAR/exercises/ex11_spoiler_added.yaml) |
+| [`ex11_two_way_base`](../../01_STAR/exercises/exercises_pages/ex11_two_way_base.md) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: the two-way base race → _Alba_ | [`.yaml`](../../01_STAR/exercises/ex11_two_way_base.yaml) |
+| [`ex13_opinions`](../../01_STAR/exercises/exercises_pages/ex13_opinions.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? The honest opinions (STAR) → _Cora_ | [`.yaml`](../../01_STAR/exercises/ex13_opinions.yaml) |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
@@ -134,8 +134,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`three_way_dead_rung_B`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_B.md) | `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order B,C,A elects B → _B_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml) |
 | [`three_way_dead_rung_C`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_C.md) | `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order C,A,B elects C → _C_ | [`.yaml`](../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml) |
 | [`bv2180_fp62p2_ice_cream_ladder`](../../01_STAR/tie_break_ladder/tie_break_ladder_pages/bv2180_fp62p2_ice_cream_ladder.md) | `01_STAR/tie_break_ladder/` | 1 | Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2) → _Strawberry_ | [`.yaml`](../../01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml) |
-| [`bv830_vb3xv2_no_condorcet_tie_score.yaml`](../../01_STAR/tie_break_ladder/bv830_vb3xv2_no_condorcet_tie_score.yaml) | `01_STAR/tie_break_ladder/` | 1 | No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2) → _B_ | — |
+| [`bv830_vb3xv2_no_condorcet_tie_score`](../../01_STAR/tie_break_ladder/tie_break_ladder_pages/bv830_vb3xv2_no_condorcet_tie_score.md) | `01_STAR/tie_break_ladder/` | 1 | No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2) → _B_ | [`.yaml`](../../01_STAR/tie_break_ladder/bv830_vb3xv2_no_condorcet_tie_score.yaml) |
 | [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/_main_pages/rrv_sample_c15_b13_three-parties.md) | `03_STAR_PR/_main/` | 1 | RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow) → _Orange5_ | [`.yaml`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) |
+| [`01_c3_b31_graders-divide`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/01_c3_b31_graders-divide.md) | `06_Other/ballot_style_lab/` | 1 | The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp → _Clara_ | [`.yaml`](../../06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml) |
+| [`02_c4_b40_cliff-city`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/02_c4_b40_cliff-city.md) | `06_Other/ballot_style_lab/` | 1 | Cliff City food trucks — everyone scores 0 or 3-5, nothing between → _Churro_ | [`.yaml`](../../06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml) |
+| [`03_c4_b33_bullet-storm`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/03_c4_b33_bullet-storm.md) | `06_Other/ballot_style_lab/` | 1 | Bullet Storm — a bullet-voting electorate and the few who spread → _Carla_ | [`.yaml`](../../06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml) |
+| [`04_c4_b47_noise-soup`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/04_c4_b47_noise-soup.md) | `06_Other/ballot_style_lab/` | 1 | Noise Soup — weak factions, cross-winds, flat-liners and static → _Caleb_ | [`.yaml`](../../06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml) |
+| [`05_c3_b38_squeeze-survives`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/05_c3_b38_squeeze-survives.md) | `06_Other/ballot_style_lab/` | 1 | Does the squeeze survive noise? Two poles, one consensus middle → _Ben_ | [`.yaml`](../../06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml) |
+| [`06_c4_b24_narrow-bands`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/06_c4_b24_narrow-bands.md) | `06_Other/ballot_style_lab/` | 1 | Narrow Bands — a paint-swatch election scored in slivers of the scale → _Beige_ | [`.yaml`](../../06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml) |
 | [`lot_tiebreak_bv_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_bv_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following BetterVoting's drawn order → _Ben_ | — |
 | [`lot_tiebreak_published_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_published_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following the new published-lot approach → _Ada_ | — |
 | [`BV_Library_star_condorcet_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_condorcet_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: highest-scoring Condorcet winner → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_condorcet_winner.yaml) |
@@ -223,7 +229,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`ex09_game_night_cycle.yaml`](../../01_STAR/exercises/ex09_game_night_cycle.yaml) | `01_STAR/exercises/` | 1 | Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill) → _Azul_ | — |
+| [`ex09_game_night_cycle`](../../01_STAR/exercises/exercises_pages/ex09_game_night_cycle.md) | `01_STAR/exercises/` | 1 | Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill) → _Azul_ | [`.yaml`](../../01_STAR/exercises/ex09_game_night_cycle.yaml) |
 | [`ranked_robin_consensus_center`](../../05_Ranked_Robin/_main/_main_pages/ranked_robin_consensus_center.md) | `05_Ranked_Robin/_main/` | 1 | Ranked Robin (RCV-RR) — the consensus center wins the round-robin → _Ben_ | [`.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) |
 | [`bv2142_4gfwdq_clone_cycle_pre`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2142_4gfwdq_clone_cycle_pre.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak → _A_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml) |
 | [`bv2143_9pr3wr_teaming_fails`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2143_9pr3wr_teaming_fails.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV → _A1_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml) |
@@ -263,9 +269,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`ex13_approve3.yaml`](../../01_STAR/exercises/ex13_approve3.yaml) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Approve 3 and up → _Ash_ | — |
-| [`ex13_approve4.yaml`](../../01_STAR/exercises/ex13_approve4.yaml) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Approve 4 and up → _Beck_ | — |
-| [`ex13_bullet.yaml`](../../01_STAR/exercises/ex13_bullet.yaml) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Favorites only → _Cora_ | — |
+| [`ex13_approve3`](../../01_STAR/exercises/exercises_pages/ex13_approve3.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Approve 3 and up → _Ash_ | [`.yaml`](../../01_STAR/exercises/ex13_approve3.yaml) |
+| [`ex13_approve4`](../../01_STAR/exercises/exercises_pages/ex13_approve4.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Approve 4 and up → _Beck_ | [`.yaml`](../../01_STAR/exercises/ex13_approve4.yaml) |
+| [`ex13_bullet`](../../01_STAR/exercises/exercises_pages/ex13_bullet.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? Favorites only → _Cora_ | [`.yaml`](../../01_STAR/exercises/ex13_bullet.yaml) |
 | [`approval_101_c3_b5`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) | `04_Approval/_main/` | 1 | Approval 101 — most approvals wins → _Bob_ | [`.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml) |
 | [`BV_Library_approval_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_approval_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Approval: most approvals wins (single winner) → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_approval_single_winner.yaml) |
 | [`Black_Curtain_01a_c3_b5_approval`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_01a_c3_b5_approval.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_01a_c3_b5_approval.yaml) |
@@ -283,8 +289,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`bv2137_ywckmg_stv`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_stv.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STV (1 seat = IRV single-winner): same squeeze → _Carter_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml) |
 | [`bv2138_cxrf8v_stv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_stv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STV (1 seat = IRV single-winner): Dave → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml) |
-| [`ex14_two_novels.yaml`](../../01_STAR/exercises/ex14_two_novels.yaml) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine: a book club buys two novels (STV) → _Austen, Camus_ | — |
-| [`ex14_two_novels_fullranks.yaml`](../../01_STAR/exercises/ex14_two_novels_fullranks.yaml) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine, fully ranked (BV probe variant) → _Austen, Camus_ | — |
+| [`ex14_two_novels`](../../01_STAR/exercises/exercises_pages/ex14_two_novels.md) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine: a book club buys two novels (STV) → _Austen, Camus_ | [`.yaml`](../../01_STAR/exercises/ex14_two_novels.yaml) |
+| [`ex14_two_novels_fullranks`](../../01_STAR/exercises/exercises_pages/ex14_two_novels_fullranks.md) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine, fully ranked (BV probe variant) → _Austen, Camus_ | [`.yaml`](../../01_STAR/exercises/ex14_two_novels_fullranks.yaml) |
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 
@@ -306,7 +312,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`ex12_proportional_share.yaml`](../../01_STAR/exercises/ex12_proportional_share.yaml) | `01_STAR/exercises/` | 2 | Exercise 12 — Two seats, one neighborhood: Allocated Score shares → _Asa, Cleo_ | — |
+| [`ex12_proportional_share`](../../01_STAR/exercises/exercises_pages/ex12_proportional_share.md) | `01_STAR/exercises/` | 2 | Exercise 12 — Two seats, one neighborhood: Allocated Score shares → _Asa, Cleo_ | [`.yaml`](../../01_STAR/exercises/ex12_proportional_share.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_fractional_surplus.yaml) |
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
@@ -334,7 +340,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`ex12_bloc_sweep.yaml`](../../01_STAR/exercises/ex12_bloc_sweep.yaml) | `01_STAR/exercises/` | 2 | Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps → _Asa, Bram_ | — |
+| [`ex12_bloc_sweep`](../../01_STAR/exercises/exercises_pages/ex12_bloc_sweep.md) | `01_STAR/exercises/` | 2 | Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps → _Asa, Bram_ | [`.yaml`](../../01_STAR/exercises/ex12_bloc_sweep.yaml) |
 | [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/_main/_main_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/_main/00_c3_b3_bloc-baseline-2-seats.yaml) |
 | [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/_main/_main_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/_main/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/_main/01_c4_b2_bloc-star-2-seats.yaml) |
 | [`bv129_score_tiebreak_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv129_score_tiebreak_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker → _Carmen, Andre_ | [`.yaml`](../../02_STAR_Bloc/_main/bv129_score_tiebreak_bloc.yaml) |
@@ -366,7 +372,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2162_4htk44_irv`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2162_4htk44_irv.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_irv.yaml) |
 | [`bv2163_74j6vv_irv`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2163_74j6vv_irv.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_irv.yaml) |
 | [`bv2138_cxrf8v_irv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_irv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — IRV (Hare): Dave wins by elimination → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_irv.yaml) |
-| [`omr_opposition_decides.yaml`](../../method_comparisons/ordered_majority_rule/omr_opposition_decides.yaml) | `method_comparisons/ordered_majority_rule/` | 1 | Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample) → _B_ | — |
+| [`omr_opposition_decides`](../../method_comparisons/ordered_majority_rule/ordered_majority_rule_pages/omr_opposition_decides.md) | `method_comparisons/ordered_majority_rule/` | 1 | Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample) → _B_ | [`.yaml`](../../method_comparisons/ordered_majority_rule/omr_opposition_decides.yaml) |
 | [`bv2176_p8dp28_irv`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2176_p8dp28_irv.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it RCV example (20 voters) — RCV-IRV: Purple wins the video's whiteboard count → _Purple_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_irv.yaml) |
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_irv.yaml) |
@@ -401,7 +407,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`range_101_c3_b5`](../../06_Other/Range/Range_pages/range_101_c3_b5.md) | `06_Other/Range/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) |
-| [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) | `06_Other/Range/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | — |
+| [`range_sullivan_score_c4_b10`](../../06_Other/Range/Range_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) |
 
 ## RR  (1)
 

@@ -11,6 +11,8 @@ Standalone demos of methods this library teaches *about* but does not promote: t
 
 Range overview: [Range / Score Voting](../00_start_here/Range_Voting/range_voting.md); engine: [Range / Score voting tabulation engine](Range/Range_tabulation_engine/) (pref_voting). **3-2-1** has its own clean-room engine ([`three_two_one/three_two_one_tabulation.py`](three_two_one/three_two_one_tabulation.py)), verified against [Jameson Quinn](../00_start_here/topics/in_memoriam_jameson_quinn.md)'s reference vectors — no off-the-shelf 3-2-1 engine exists.
 
+Two lab-style subfolders round this folder out: [`simulations/`](simulations/README.md) — brute-force, utility-first method-comparison sims (FBC, runoff reversal, STAR-vs-Approval divergence) — and the [`ballot_style_lab/`](ballot_style_lab/README.md) — a seeded generator of random-but-HUMAN electorates (style-gallery renderings over slanted faction utilities: harsh 0–2 graders, gentle 3–5 souls, cliff voters, bullet brigades) frozen into six single-winner STAR stress cases with ties, cycles and reversals.
+
 Most non-EVC material lives where it teaches best: inside [method comparisons](../method_comparisons/), where RCV-IRV and choose-one serve as the foil to the equal-vote methods. Concept docs: [RCV-IRV (Hare)](../00_start_here/RCV_IRV/RCV-IRV-Hare.md), [Borda](../00_start_here/other_ranked_methods/borda.md), and [Agenda voting](../00_start_here/other_ranked_methods/agenda_voting.md).
 
 # file: README.md
