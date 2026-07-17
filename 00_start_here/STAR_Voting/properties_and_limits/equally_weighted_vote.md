@@ -40,13 +40,21 @@ Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there i
 
 | Method | Equal Vote / Test of Balance |
 |--------|------------------------------|
-| **STAR**, Score, Approval | ✅ pass — every ballot has an exact opposite that cancels (STAR *guarantees* it: the runoff is binary, so any non-blank ballot is equally weighted) |
+| **STAR**, Score, Approval | ✅ pass — every ballot has an exact opposite that cancels (see the *pass vs. guarantee* note below) |
 | Condorcet methods that allow equal ranks and read every rank (e.g. **Ranked Robin**) | ✅ generally pass |
 | Ranked STAR (ranked ballot, added up) | ✅ passes |
 | **Choose-One plurality** | ❌ fails whenever there are 3+ candidates — the structural source of vote-splitting |
 | **RCV-IRV** | ❌ fails — opposite ballots don't reliably cancel under sequential elimination ([why](../../RCV_IRV/RCV_IRV_equal_vote.md)) |
 
 One caveat both sides agree on: with only **two** candidates, *every* method passes — the equal-vote problem only appears once there are three or more.
+
+### Pass vs. guarantee — a distinction worth keeping
+
+*Passing* the Test of Balance and *guaranteeing* every cast ballot equal weight are two different bars, and STAR clears both.
+
+**Score passes** balance — a ballot scoring Abby 2 / Ben 3 has an exact opposite (3 / 2) that cancels it. But *influence* still varies with how you score: that voter moved the Abby-vs-Ben margin by **1 point**, while a voter scoring 0 / 5 moved it by **5**. Both ballots are cancellable; they are not equally weighted. Score only **guarantees** an equal vote if ballots are **normalized** — every voter actually using the minimum and maximum.
+
+**STAR guarantees it without asking anything of the voter**: the automatic runoff is binary, so a 2-vs-3 ballot and a 0-vs-5 ballot each count exactly **1–0** in the deciding round. Your honest, moderate scores carry the same final weight as someone else's maxed-out ones. **Approval** guarantees it too (a mark is a mark). This is one of the substantive reasons to prefer STAR over pure Score — and it's the flip side of [residual vote-splitting](residual_vote_splitting.md), where the scoring round *does* still reward exaggeration.
 
 ## One person, one vote (the legal thread)
 
