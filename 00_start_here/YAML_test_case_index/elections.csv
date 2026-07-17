@@ -67,6 +67,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 7mckyg,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,1,single-race,57,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
+7q6by8,"BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone",1,single-race,42,RankedRobin,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 8xwx43,"BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters)",1,single-race,6,STV,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
@@ -116,7 +117,11 @@ LH:05b_residual_split_expressive-fix,"The cure — score your ally, and STAR's s
 LH:06_c4_b24_narrow-bands,Narrow Bands — a paint-swatch election scored in slivers of the scale,1,single-race,24,STAR,LH-only
 LH:06a_c9_b3_large-field-equal-support,"Large field (9 candidates) — STAR scales, and Equal Support decides",1,single-race,3,STAR,LH-only
 LH:06b_c9_runoff-overturns-leader,Large field (9 candidates) — the runoff OVERTURNS the score leader,1,single-race,3,STAR,LH-only
+LH:07a_c5_b36_herb-council-bloc-3-seats,"The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep)",1,single-race,36,STAR,LH-only
+LH:07b_c5_b36_herb-council-pr-3-seats,"The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone)",1,single-race,36,STAR_PR,LH-only
+LH:08_c6_b29_quota-circus-pr-2-seats,"Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)",1,single-race,29,STAR_PR,LH-only
 LH:09_c4_b100_tennessee-capital,Tennessee Capital — classic STAR example,1,single-race,100,STAR,LH-only
+LH:09_c7_b44_park-bloc-4-seats,"Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",1,single-race,44,STAR,LH-only
 LH:321_tennessee_blank_encoding_c4_b100,Tennessee capital by 3-2-1 Voting (blank = Bad),1,single-race,100,3-2-1,LH-only
 LH:BV_Library_approval_single_winner,BV parity — Approval: most approvals wins (single winner),1,single-race,10,Approval,LH-only
 LH:BV_Library_plurality_single_winner,BV parity — Plurality (choose-one): most first-marks wins,1,single-race,14,Plurality,LH-only
@@ -235,6 +240,7 @@ dq2dmm,BV Abstentions and flat scores,1,single-race,8,STAR,BV
 ff6mk3,BV135 - Approval 101 — most approvals wins,1,single-race,5,Approval,BV
 fk38pk,BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / simple),1,single-race,3,STAR,BV
 fp62p2,"BV2180 — Ice Cream, six flavors — a STAR tie in both rounds, resolved without the lot",1,single-race,2,STAR,BV
+fxhw6g,"BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank the leader last, and it pays",1,single-race,42,RankedRobin,BV
 fyy886,BV2184 — The Team Lunch Vote — a beginner's STAR example (the compromise everyone likes wins),1,single-race,5,STAR,BV
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
 gvtg2h,"BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)",1,single-race,9,STV,BV

@@ -476,6 +476,136 @@ SCENARIOS = {
         why=("If a display or rounding change ever misbehaves on "
              "compressed, bunched totals, this file catches it."),
     ),
+    # ----- multi-winner wing: Bloc STAR & STAR-PR (Allocated Score) -----
+    "herb_council": dict(
+        seed=57,
+        file_no="07", descriptor="herb-council",
+        title="The Herb Garden Council — one electorate, two ideas of 'three winners'",
+        cast=["Anise", "Basil", "Chive", "Dill", "Endive"],
+        n_ballots=36,
+        num_winners=3,
+        slates={"kitchen bloc": ["Basil", "Chive", "Dill"],
+                "tea caucus": ["Anise", "Endive"]},
+        variants=[
+            dict(suffix="a", voting_method="Bloc STAR",
+                 descriptor="herb-council-bloc-3-seats",
+                 title="The Herb Garden Council — Bloc STAR, 3 seats "
+                       "(the majority can sweep)"),
+            dict(suffix="b", voting_method="allocated",
+                 descriptor="herb-council-pr-3-seats",
+                 title="The Herb Garden Council — Allocated Score / STAR-PR, "
+                       "3 seats (each quota seats someone)"),
+        ],
+        factions=[
+            dict(name="kitchen bloc", share=0.58,
+                 mu=[0.15, 0.90, 0.85, 0.80, 0.20], sigma=0.12,
+                 styles={"slate": 0.35, "nuanced": 0.35, "gentle": 0.15,
+                         "bullet": 0.15}),
+            dict(name="tea caucus", share=0.42,
+                 mu=[0.90, 0.15, 0.20, 0.25, 0.85], sigma=0.12,
+                 styles={"nuanced": 0.40, "slate": 0.30, "cliff35": 0.30}),
+        ],
+        feature_options={"show_matrix": False, "matrix_finalists_only": False},
+        intro=("One garden, 36 ballots, three seats - and TWO philosophies "
+               "of 'three winners'. This is a same-ballots TWIN PAIR: file "
+               "07a tabulates Bloc STAR (single-winner STAR run once per "
+               "seat - a cohesive majority can take every seat), file 07b "
+               "tabulates Allocated Score / STAR-PR on the IDENTICAL rows "
+               "(each Hare quota of voters fills one seat, ballots spent on "
+               "a winner are reweighted). A kitchen bloc slates "
+               "Basil-Chive-Dill; a tea caucus backs Anise & Endive. Same "
+               "opinions, same styles, same rows - different method, "
+               "different council."),
+        say=("Same 36 ballots, twice. Bloc STAR: the kitchen majority "
+             "sweeps all three seats. STAR-PR: the tea drinkers' quota "
+             "seats one of their own. Neither count is wrong - they answer "
+             "different questions."),
+        why=("THE multi-winner lesson (majoritarian vs proportional) as a "
+             "same-ballots pair, at individual-ballot scale with realistic "
+             "style mixing - the style-lab twin of the hand-built "
+             "03_STAR_PR/02a-02c set."),
+    ),
+    "quota_circus": dict(
+        seed=34,
+        file_no="08", descriptor="quota-circus-pr-2-seats",
+        title="Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)",
+        cast=["Amir", "Bree", "Cato", "Della", "Enzo", "Faye"],
+        n_ballots=29,
+        num_winners=2,
+        voting_method="allocated",
+        slates={"north side": ["Amir", "Bree"],
+                "south side": ["Cato", "Della"]},
+        factions=[
+            dict(name="north side", share=0.45,
+                 mu=[0.90, 0.80, 0.30, 0.20, 0.30, 0.25], sigma=0.15,
+                 styles={"cliff35": 0.40, "slate": 0.30, "bullet": 0.30}),
+            dict(name="south side", share=0.40,
+                 mu=[0.20, 0.25, 0.85, 0.80, 0.30, 0.30], sigma=0.15,
+                 styles={"gentle": 0.40, "nuanced": 0.30, "cliff34": 0.30}),
+            dict(name="floaters", share=0.15,
+                 mu=[0.45, 0.45, 0.45, 0.45, 0.45, 0.45], sigma=0.30,
+                 styles={"chaos": 0.40, "flat": 0.30, "anyone_but": 0.30}),
+        ],
+        feature_options={"show_matrix": False, "matrix_finalists_only": False,
+                         "show_score_counts": True},
+        intro=("Proportional STAR meets the style circus: a north side "
+               "voting in cliffs, slates and bullets (0s and 5s, nothing "
+               "between) against a south side of gentle souls and sliver "
+               "voters (3-5 only, zeros never) - plus floaters of pure "
+               "noise. Two seats, six candidates. The question quota "
+               "allocation has to answer: when one camp's ballots SHOUT "
+               "(max scores) and the other camp's ballots hum (inflated "
+               "3-4s everywhere), whose quota fills first, and what's left "
+               "to decide the second seat after the reweighting?"),
+        say=("Watch the allocation rounds: the north side's 5s spend their "
+             "quota loudly; the south side's gentle 4s still add up. The "
+             "second seat comes down to what the reweighted leftovers "
+             "agree on."),
+        why=("Stress fixture for the Allocated Score path: fractional "
+             "surplus, reweighting, and compressed-band ballots all in one "
+             "small file."),
+    ),
+    "park_bloc": dict(
+        seed=7,
+        file_no="09", descriptor="park-bloc-4-seats",
+        title="Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",
+        cast=["Aspen", "Birch", "Cedar", "Dogwood", "Elm", "Fir", "Ginkgo"],
+        n_ballots=44,
+        num_winners=4,
+        voting_method="Bloc STAR",
+        slates={"evergreen slate": ["Cedar", "Fir"],
+                "shade slate": ["Aspen", "Dogwood", "Elm"]},
+        factions=[
+            dict(name="evergreen slate", share=0.40,
+                 mu=[0.20, 0.25, 0.90, 0.20, 0.25, 0.85, 0.30], sigma=0.15,
+                 styles={"slate": 0.30, "nuanced": 0.30, "strong_backup": 0.20,
+                         "bullet": 0.20}),
+            dict(name="shade slate", share=0.35,
+                 mu=[0.85, 0.30, 0.25, 0.80, 0.75, 0.20, 0.35], sigma=0.15,
+                 styles={"nuanced": 0.40, "ranked_style": 0.30,
+                         "cliff35": 0.30}),
+            dict(name="wildcards", share=0.25,
+                 mu=[0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 0.50], sigma=0.35,
+                 styles={"chaos": 0.30, "anyone_but": 0.25, "protest": 0.15,
+                         "flat": 0.15, "ranked_style": 0.15}),
+        ],
+        feature_options={"show_matrix": False, "matrix_finalists_only": False},
+        intro=("The big-field crazy one: seven trees, FOUR seats, "
+               "forty-four ballots. An evergreen duo and a shade trio "
+               "campaign as slates while a quarter of the town votes "
+               "wildcard - noise, anyone-but, protest ballots, flat lines. "
+               "Bloc STAR runs the full STAR count once per seat (scoring "
+               "round + automatic runoff, four times over), so every seat "
+               "gets its own two-round story - and with only five slated "
+               "candidates for four seats, at least one seat is always "
+               "within a dark horse's reach."),
+        say=("Four consecutive STAR elections, one ballot set. Watch the "
+             "per-seat runoffs tighten as the strong candidates leave the "
+             "field - the last seat is where the drama lives."),
+        why=("Exercises the repeated-STAR bloc path at depth (4 rounds, 7 "
+             "candidates) with realistic noise - per-seat runoff margins, "
+             "Equal Support shifts, and late-round tiebreak pressure."),
+    ),
 }
 
 
@@ -541,7 +671,8 @@ def wrap(text, width=76):
 
 
 def build_yaml(name, spec, seed, rows, census, options, facts=None,
-               filename=None):
+               voting_method="STAR", num_winners=1, title=None,
+               twin_note=None):
     cast = spec["cast"]
     opt_lines = "\n".join(f"  {k}: {str(v).lower()}" for k, v in options)
     desc = [wrap(spec["intro"]), ""]
@@ -554,6 +685,9 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
     desc.append("")
     if facts:
         desc.append(wrap("What the frozen seed produced: " + facts))
+        desc.append("")
+    if twin_note:
+        desc.append(wrap(twin_note))
         desc.append("")
     desc.append(wrap(
         f"RANDOM-BUT-HUMAN, reproducible: generated by "
@@ -569,7 +703,7 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
              f"WHY: {wrap(spec['why'], 71)}")
 
     parts = [
-        f"election_title: {spec['title']}",
+        f"election_title: {title or spec['title']}",
         "",
         "scenario_description: |-",
         indent("\n".join(desc)),
@@ -582,13 +716,28 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
         opt_lines,
         "  count_separator: \"×\"",
         "",
-        "voting_method: STAR",
-        "num_winners: 1",
+        f"voting_method: {voting_method}",
+        f"num_winners: {num_winners}",
         "ballots: |-",
         indent(format_ballots(cast, rows)),
         "",
     ]
     return "\n".join(parts)
+
+
+def variants_of(spec):
+    """Every scenario is a list of emission variants; single-method scenarios
+    have exactly one, twin pairs (same ballots, two methods) have two."""
+    if "variants" in spec:
+        out = []
+        for v in spec["variants"]:
+            vv = dict(v)
+            vv.setdefault("num_winners", spec.get("num_winners", 1))
+            out.append(vv)
+        return out
+    return [dict(suffix="", voting_method=spec.get("voting_method", "STAR"),
+                 num_winners=spec.get("num_winners", 1),
+                 descriptor=spec["descriptor"], title=spec["title"])]
 
 
 # ---------------------------------------------------------------------------
@@ -609,6 +758,45 @@ def parse_report(out):
     m = re.search(r"Winner — STAR Voting Method[^\n]*\n\s+(\S+)", out)
     if m:
         r["star"] = m.group(1)
+
+    # Multi-winner: "Winners — <Method> Voting Method (N winners)" + one
+    # name per line; single-winner falls back to the STAR winner above.
+    m = re.search(r"Winners — .*?\((\d+) winners\)\n((?:[ \t]+\S+\n?)+)", out)
+    if m:
+        r["winners"] = re.findall(r"^[ \t]+(\S+)[ \t]*$", m.group(2), re.M)
+    else:
+        r["winners"] = [r["star"]] if r["star"] else []
+
+    # Every Automatic Runoff Round's margin, in order (Bloc = one per seat).
+    r["runoff_margins"] = []
+    for secm in re.finditer(r"Automatic Runoff Round\n(.*?)\n[ \t]*\n", out,
+                            re.S):
+        pair = re.findall(r"^\s+(\S+)\s+--\s+(\d+)", secm.group(1), re.M)
+        if len(pair) >= 2:
+            r["runoff_margins"].append(int(pair[0][1]) - int(pair[1][1]))
+
+    # Allocated-Score seat rounds: ordered (name, total) per "wins a seat"
+    # header; totals may be fractional after ballot reweighting, printed
+    # either decimal ("76.67") or mixed-fraction ("76 2/3").
+    def _num(tok):
+        # accepts "58", "76.67", "76 2/3" and the engine's "64+6/7" form
+        total = 0.0
+        for part in tok.replace("+", " ").split():
+            if "/" in part:
+                a, b = part.split("/")
+                total += float(a) / float(b)
+            else:
+                total += float(part)
+        return total
+
+    r["seat_rounds"] = []
+    for secm in re.finditer(
+            r"candidate wins a seat\.\n((?:[ \t]+\S+\s+--\s+\d[^\n]*\n)+)",
+            out):
+        r["seat_rounds"].append(
+            [(n_, _num(v)) for n_, v in
+             re.findall(r"^[ \t]+(\S+)\s+--\s+(\d[\d ./+]*)", secm.group(1),
+                        re.M)])
 
     sec = re.search(r"Scoring Round\n(.*?)\n\s*\n", out, re.S)
     if sec:
@@ -684,18 +872,71 @@ def interest(r, n_ballots):
     return score, flags
 
 
+def interest_multi(spec, reps):
+    """Score a multi-winner (or twin-pair) seed: sweeps, shutouts, dark
+    horses, last-seat drama, and (for pairs) Bloc-vs-PR seat differences."""
+    score, flags = 0, []
+    slates = spec.get("slates", {})
+    all_slated = set().union(*slates.values()) if slates else set()
+    for suf, rep in reps.items():
+        tag = f"[{suf}] " if len(reps) > 1 else ""
+        if rep["lot"]:
+            flags.append(tag + "LOT")
+        w = set(rep["winners"])
+        for fac, sl in slates.items():
+            if w and w <= set(sl):
+                score += 3
+                flags.append(tag + f"SWEEP:{fac}")
+            if not (w & set(sl)):
+                score += 2
+                flags.append(tag + f"SHUTOUT:{fac}")
+        dark = w - all_slated
+        if slates and dark:
+            score += 4
+            flags.append(tag + "DARKHORSE:" + ",".join(sorted(dark)))
+        if rep["runoff_margins"]:
+            lm = rep["runoff_margins"][-1]
+            if lm == 0:
+                score += 3
+                flags.append(tag + "last-seat-TIE")
+            elif lm <= 2:
+                score += 2
+                flags.append(tag + f"last-margin {lm}")
+        if rep["seat_rounds"]:
+            fr = rep["seat_rounds"][-1]
+            if len(fr) >= 2 and fr[0][1] - fr[1][1] <= 3:
+                score += 2
+                flags.append(tag + f"seat-gap {round(fr[0][1] - fr[1][1], 2):g}")
+    if len(reps) == 2:
+        a, b = [set(rep["winners"]) for rep in reps.values()]
+        diff = len(a ^ b) // 2
+        if diff:
+            score += 4 * diff
+            flags.append(f"BLOC≠PR ({diff} seat)")
+    return score, flags
+
+
 TARGETS = {
-    "graders_divide": lambda r, f: "RUNOFF-REVERSAL" in f,
-    "cliff_city": lambda r, f: any(x.startswith(("finalist-gap", "ES",
-                                                 "NO-CONDORCET")) for x in f),
-    "bullet_storm": lambda r, f: any(x.startswith("ES") for x in f)
-                                 and any(x.startswith("margin") or
-                                         x == "RUNOFF-TIE" for x in f),
-    "noise_soup": lambda r, f: "NO-CONDORCET/CYCLE" in f,
-    "squeeze_survives": lambda r, f: r["squeeze_note"]
-                                     and "RCV-IRV" in r["differs"],
-    "narrow_bands": lambda r, f: any(x.startswith(("finalist-gap", "margin"))
-                                     or x == "RUNOFF-TIE" for x in f),
+    "graders_divide": lambda reps, f: "RUNOFF-REVERSAL" in f,
+    "cliff_city": lambda reps, f: any(x.startswith(("finalist-gap", "ES",
+                                                    "NO-CONDORCET"))
+                                      for x in f),
+    "bullet_storm": lambda reps, f: any(x.startswith("ES") for x in f)
+                                    and any(x.startswith("margin") or
+                                            x == "RUNOFF-TIE" for x in f),
+    "noise_soup": lambda reps, f: "NO-CONDORCET/CYCLE" in f,
+    "squeeze_survives": lambda reps, f: reps[""]["squeeze_note"]
+                                        and "RCV-IRV" in reps[""]["differs"],
+    "narrow_bands": lambda reps, f: any(x.startswith(("finalist-gap",
+                                                      "margin"))
+                                        or x == "RUNOFF-TIE" for x in f),
+    "herb_council": lambda reps, f: any(x.startswith("BLOC≠PR") for x in f)
+                                    and "[a] SWEEP:kitchen bloc" in f,
+    "quota_circus": lambda reps, f: any(x.startswith(("seat-gap", "SWEEP"))
+                                        for x in f),
+    "park_bloc": lambda reps, f: any(x.startswith(("last-margin",
+                                                   "DARKHORSE"))
+                                     or x == "last-seat-TIE" for x in f),
 }
 
 
@@ -703,24 +944,41 @@ TARGETS = {
 # Hunt + emit
 # ---------------------------------------------------------------------------
 
+def hunt_options(variant, spec):
+    if variant["num_winners"] == 1:
+        return list(HUNT_OPTIONS.items())
+    opts = dict(HOUSE_OPTIONS, show_matrix=False, matrix_finalists_only=False)
+    return list(opts.items())
+
+
 def one_seed(name, spec, seed, tmpdir):
     rng = random.Random(seed)
     rows, census = sample_electorate(spec, rng)
-    ypath = tmpdir / f"{name}_{seed}.yaml"
-    ypath.write_text(build_yaml(name, spec, seed, rows, census,
-                                list(HUNT_OPTIONS.items()))
-                     + f"\n# file: {ypath.name}\n")
-    rc, out = run_engine(ypath)
-    if rc != 0:
-        return seed, None, None, out
-    rep = parse_report(out)
-    sc, flags = interest(rep, len(rows))
-    return seed, rep, (sc, flags), out
+    reps = {}
+    for v in variants_of(spec):
+        ypath = tmpdir / f"{name}_{seed}{v['suffix']}.yaml"
+        ypath.write_text(build_yaml(name, spec, seed, rows, census,
+                                    hunt_options(v, spec),
+                                    voting_method=v["voting_method"],
+                                    num_winners=v["num_winners"],
+                                    title=v["title"])
+                         + f"\n# file: {ypath.name}\n")
+        rc, out = run_engine(ypath)
+        if rc != 0:
+            return seed, None, None, out
+        reps[v["suffix"]] = parse_report(out)
+    vs = variants_of(spec)
+    if len(vs) == 1 and vs[0]["num_winners"] == 1:
+        sc, flags = interest(reps[""], len(rows))
+    else:
+        sc, flags = interest_multi(spec, reps)
+    return seed, reps, (sc, flags), None
 
 
 def hunt(names, n_seeds, tmp_base):
     for name in names:
         spec = SCENARIOS[name]
+        first_suffix = variants_of(spec)[0]["suffix"]
         tmpdir = Path(tmp_base) / name
         tmpdir.mkdir(parents=True, exist_ok=True)
         results, errors = [], []
@@ -728,27 +986,29 @@ def hunt(names, n_seeds, tmp_base):
             futs = [pool.submit(one_seed, name, spec, s, tmpdir)
                     for s in range(n_seeds)]
             for fut in concurrent.futures.as_completed(futs):
-                seed, rep, scored, out = fut.result()
-                if rep is None:
+                seed, reps, scored, out = fut.result()
+                if reps is None:
                     errors.append((seed, out))
                 else:
-                    results.append((seed, rep, scored))
+                    results.append((seed, reps, scored))
         print(f"\n=== {name}  ({len(results)} seeds ok, "
               f"{len(errors)} errors) ===")
         for seed, out in errors[:2]:
             print(f"  [seed {seed} ERROR]\n{out[-600:]}")
         results.sort(key=lambda t: (-t[2][0], t[0]))
         target = TARGETS[name]
-        champion = next(((s, r, sc) for s, r, sc in results
-                         if target(r, sc[1]) and not r["lot"]), None)
-        for seed, rep, (sc, flags) in results[:10]:
+        champion = next(
+            ((s, rp, sc) for s, rp, sc in results
+             if target(rp, sc[1])
+             and not any(r["lot"] for r in rp.values())), None)
+        for seed, reps, (sc, flags) in results[:10]:
             mark = "  <== CHAMPION" if champion and seed == champion[0] else ""
+            win = "+".join(reps[first_suffix]["winners"])
             print(f"  seed {seed:>4}  score {sc:>2}  "
-                  f"STAR={rep['star']:<9} {' '.join(flags)}{mark}")
+                  f"WIN={win:<22} {' '.join(flags)}{mark}")
         if champion:
-            s, rep, (sc, flags) = champion
-            print(f"  target met by seed {s} "
-                  f"(freeze with: seed={s} in SCENARIOS['{name}'])")
+            print(f"  target met by seed {champion[0]} "
+                  f"(freeze with: seed={champion[0]} in SCENARIOS['{name}'])")
         else:
             print("  target NOT met in this seed range")
 
@@ -789,6 +1049,33 @@ def facts_from(rep):
     return " ".join(bits)
 
 
+def facts_multi(rep, spec):
+    bits = [f"Seats: {', '.join(rep['winners'])}."]
+    slates = spec.get("slates", {})
+    if slates:
+        w = set(rep["winners"])
+        by = "; ".join(f"{fac} seats {len(w & set(sl))} of its "
+                       f"{len(sl)}-name slate" for fac, sl in slates.items())
+        bits.append(by + ".")
+        dark = sorted(w - set().union(*slates.values()))
+        if dark:
+            bits.append("Seated from OUTSIDE every slate: "
+                        + ", ".join(dark) + ".")
+    if rep["runoff_margins"]:
+        bits.append("Per-seat runoff margins: "
+                    + ", ".join(str(m) for m in rep["runoff_margins"]) + ".")
+        if rep["runoff_margins"][-1] == 0:
+            bits.append("The final seat's runoff is TIED - resolved by "
+                        "STAR's official tiebreaker ladder.")
+    if rep["seat_rounds"]:
+        fr = rep["seat_rounds"][-1]
+        if len(fr) >= 2:
+            bits.append(f"Final seat round (reweighted totals): "
+                        f"{fr[0][0]} {round(fr[0][1], 2):g} vs {fr[1][0]} "
+                        f"{round(fr[1][1], 2):g}.")
+    return " ".join(bits)
+
+
 def emit(names, outdir):
     for name in names:
         spec = SCENARIOS[name]
@@ -799,29 +1086,56 @@ def emit(names, outdir):
             continue
         rng = random.Random(seed)
         rows, census = sample_electorate(spec, rng)
+        vs = variants_of(spec)
 
+        probes = {}
         with tempfile.TemporaryDirectory() as td:
-            tp = Path(td) / "probe.yaml"
-            tp.write_text(build_yaml(name, spec, seed, rows, census,
-                                     list(HUNT_OPTIONS.items()))
-                          + f"\n# file: {tp.name}\n")
-            rc, out = run_engine(tp)
-            if rc != 0:
-                print(f"  {name}: engine error on frozen seed!\n{out[-400:]}")
-                continue
-            rep = parse_report(out)
+            for v in vs:
+                tp = Path(td) / f"probe{v['suffix']}.yaml"
+                tp.write_text(build_yaml(name, spec, seed, rows, census,
+                                         hunt_options(v, spec),
+                                         voting_method=v["voting_method"],
+                                         num_winners=v["num_winners"],
+                                         title=v["title"])
+                              + f"\n# file: {tp.name}\n")
+                rc, out = run_engine(tp)
+                if rc != 0:
+                    print(f"  {name}{v['suffix']}: engine error on frozen "
+                          f"seed!\n{out[-400:]}")
+                    break
+                probes[v["suffix"]] = parse_report(out)
+        if len(probes) != len(vs):
+            continue
 
-        options = dict(HOUSE_OPTIONS)
-        options.update(spec.get("feature_options", {}))
-        fname = (f"{spec['file_no']}_c{len(spec['cast'])}_b{len(rows)}_"
-                 f"{spec['descriptor']}.yaml")
-        body = build_yaml(name, spec, seed, rows, census,
-                          list(options.items()),
-                          facts=facts_from(rep))
-        body += ("\nexpected_winners:\n"
-                 f"  - {rep['star']}\n\n# file: {fname}\n")
-        (outdir / fname).write_text(body)
-        print(f"  wrote {fname}  (seed {seed}, STAR winner {rep['star']})")
+        fnames = {v["suffix"]:
+                  (f"{spec['file_no']}{v['suffix']}_c{len(spec['cast'])}_"
+                   f"b{len(rows)}_{v['descriptor']}.yaml") for v in vs}
+        for v in vs:
+            rep = probes[v["suffix"]]
+            options = dict(HOUSE_OPTIONS)
+            options.update(spec.get("feature_options", {}))
+            facts = (facts_from(rep) if v["num_winners"] == 1
+                     else facts_multi(rep, spec))
+            twin_note = None
+            if len(vs) == 2:
+                other = next(x for x in vs if x["suffix"] != v["suffix"])
+                orep = probes[other["suffix"]]
+                twin_note = (f"TWIN FILE (identical ballots, other method): "
+                             f"{fnames[other['suffix']]} tabulates "
+                             f"{other['voting_method']} and seats "
+                             f"{', '.join(orep['winners'])}.")
+            fname = fnames[v["suffix"]]
+            body = build_yaml(name, spec, seed, rows, census,
+                              list(options.items()), facts=facts,
+                              voting_method=v["voting_method"],
+                              num_winners=v["num_winners"],
+                              title=v["title"], twin_note=twin_note)
+            body += ("\nexpected_winners:\n"
+                     + "".join(f"  - {w}\n" for w in rep["winners"])
+                     + f"\n# file: {fname}\n")
+            (outdir / fname).write_text(body)
+            print(f"  wrote {fname}  (seed {seed}, winners: "
+                  f"{', '.join(rep['winners'])})")
 
 
 def main():

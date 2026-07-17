@@ -1,0 +1,93 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards
+ Tabulating 44 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Aspen, Birch, Cedar, Dogwood, Elm, Fir, Ginkgo
+     1 ×   Dogwood > Aspen > Birch > Elm > Cedar > Fir      (4, 4, 3, 5, 4, 3, 0)
+     4 ×   Cedar      (0, 0, 5, 0, 0, 0, 0)
+     2 ×   Fir > Cedar      (0, 0, 4, 0, 0, 5, 0)
+     3 ×   Cedar > Fir      (0, 0, 5, 0, 0, 5, 0)
+     1 ×   Aspen > Elm > Dogwood      (5, 0, 0, 4, 5, 0, 0)
+     1 ×   Birch > Ginkgo > Aspen > Dogwood > Fir      (4, 5, 0, 4, 0, 2, 5)
+     1 ×   Cedar > Fir > Dogwood > Birch > Ginkgo      (0, 1, 5, 2, 0, 5, 1)
+     1 ×   Dogwood > Aspen > Elm > Ginkgo > Fir      (4, 0, 0, 5, 3, 1, 2)
+     1 ×   Aspen > Birch > Cedar > Dogwood > Fir > Ginkgo      (5, 5, 5, 5, 0, 5, 5)
+     1 ×   Dogwood > Elm > Aspen > Fir > Cedar      (3, 0, 1, 5, 4, 2, 0)
+     1 ×   Aspen > Elm > Dogwood > Fir > Ginkgo      (5, 0, 0, 3, 4, 2, 1)
+     1 ×   Aspen > Dogwood > Elm      (5, 0, 0, 5, 4, 0, 0)
+     1 ×   Dogwood > Cedar > Aspen > Elm > Ginkgo      (1, 0, 4, 5, 1, 0, 1)
+     1 ×   Elm > Aspen > Dogwood > Birch > Fir      (4, 1, 0, 3, 5, 1, 0)
+     1 ×   Elm > Dogwood > Aspen > Birch > Cedar      (3, 2, 1, 4, 5, 0, 0)
+     2 ×   Cedar > Fir      (0, 0, 5, 0, 0, 4, 0)
+     1 ×   Elm > Dogwood > Aspen > Fir > Birch      (3, 1, 0, 4, 5, 2, 0)
+     1 ×   Dogwood > Ginkgo > Aspen > Elm > Birch > Fir      (4, 2, 0, 5, 4, 2, 5)
+     1 ×   Dogwood > Aspen > Elm > Birch > Cedar      (4, 2, 1, 5, 3, 0, 0)
+     1 ×   Dogwood > Elm > Aspen > Ginkgo > Cedar > Fir      (2, 0, 1, 5, 3, 1, 2)
+     1 ×   Aspen > Dogwood > Elm > Fir > Birch > Cedar      (5, 1, 1, 5, 5, 2, 0)
+     1 ×   Cedar > Fir > Ginkgo > Birch      (0, 1, 5, 0, 0, 4, 2)
+     4 ×   Aspen > Dogwood > Elm      (5, 0, 0, 5, 5, 0, 0)
+     1 ×   Ginkgo > Aspen > Elm > Cedar > Fir      (4, 0, 2, 0, 3, 1, 5)
+     1 ×   Fir      (0, 0, 0, 0, 0, 5, 0)
+     1 ×   Cedar > Fir > Aspen > Birch      (1, 1, 5, 0, 0, 4, 0)
+     1 ×   Ginkgo > Dogwood > Aspen > Birch > Fir      (1, 1, 0, 4, 0, 1, 5)
+     1 ×   Aspen > Birch > Cedar > Elm > Fir > Ginkgo      (5, 5, 5, 0, 5, 5, 5)
+     1 ×   Aspen > Dogwood > Elm > Cedar > Birch > Ginkgo      (5, 1, 2, 5, 3, 0, 1)
+     1 ×   Aspen > Elm > Dogwood > Cedar > Birch      (5, 1, 2, 3, 4, 0, 0)
+     1 ×   Aspen > Birch > Cedar > Dogwood > Elm > Fir      (5, 5, 5, 5, 5, 5, 0)
+     1 ×   Aspen > Elm > Fir > Ginkgo > Birch > Dogwood      (5, 2, 0, 1, 5, 5, 5)
+     1 ×   Aspen > Cedar > Dogwood > Elm > Fir > Ginkgo      (5, 0, 5, 5, 5, 5, 5)
+     1 ×   Fir > Cedar > Birch > Ginkgo > Dogwood > Elm      (0, 2, 4, 1, 1, 5, 2)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Aspen             15  Hopeful
+Cedar             12  Hopeful
+Dogwood            7  Hopeful
+Fir                4  Hopeful
+Elm                3  Hopeful
+Ginkgo             2  Rejected
+Birch              1  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Aspen             17  Hopeful
+Cedar             12  Hopeful
+Dogwood            8  Hopeful
+Fir                4  Rejected
+Elm                3  Rejected
+Ginkgo             0  Rejected
+Birch              0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Aspen             18  Hopeful
+Cedar             15  Hopeful
+Dogwood           10  Rejected
+Fir                0  Rejected
+Elm                0  Rejected
+Ginkgo             0  Rejected
+Birch              0  Rejected
+Blank Votes        1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Aspen             27  Elected
+Cedar             16  Rejected
+Dogwood            0  Rejected
+Fir                0  Rejected
+Elm                0  Rejected
+Ginkgo             0  Rejected
+Birch              0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Aspen
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

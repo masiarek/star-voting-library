@@ -1,6 +1,6 @@
 # 06_Other/ballot_style_lab — random-but-human electorates (the style lab)
 
-*What happens when you fill a whole election with the ballot styles real people actually use — bullet votes, partisan slates, harsh graders who top out at 2, gentle souls who never score below 3, cliff voters who jump straight from 0 to "one of mine"? This folder is a seeded generator plus six frozen elections it found: random enough to surprise, human enough to mean something, deterministic enough to be test cases.*
+*What happens when you fill a whole election with the ballot styles real people actually use — bullet votes, partisan slates, harsh graders who top out at 2, gentle souls who never score below 3, cliff voters who jump straight from 0 to "one of mine"? This folder is a seeded generator plus ten frozen elections it found — six single-winner STAR, plus a multi-winner wing (Bloc STAR and STAR-PR, up to 7 candidates and 4 seats): random enough to surprise, human enough to mean something, deterministic enough to be test cases.*
 
 → The style taxonomy these voters follow: [Filling Out the 5-Star Ballot — Voting Styles](../../00_start_here/STAR_Voting/STAR_ballot_voting_styles.md) · the methodology this generator obeys: [Simulate utilities, not ballots](../../00_start_here/topics/simulate_utilities_not_ballots.md) · one voter's opinion across ballot *formats*: [Alternate ballot styles](../../00_start_here/topics/ballot_styles.md)
 
@@ -17,9 +17,9 @@ Same opinion, different rendering — the [same-opinion line-up idea](../../00_s
 
 **Full disclosure — the seeds are hunted.** The generator tabulates hundreds of seeds with the real LH engine and keeps the *interesting* draws: runoff reversals, Condorcet cycles, tie rungs, photo finishes, Equal-Support blowouts. A typical random seed is boring; these six are champions selected across 250 seeds each, then frozen. That selection bias is the point of a test fixture — and it's disclosed here and inside every file.
 
-## The six frozen elections
+## The frozen elections — single-winner wing
 
-Every file records its scenario + seed and regenerates byte-identically (`--emit <scenario>`); `expected_winners` is embedded and the whole folder runs in the repo's positive test suite. All six are single-winner STAR, 24–47 individual ballots, fresh casts per the naming rules.
+Every file records its scenario + seed and regenerates byte-identically (`--emit <scenario>`); `expected_winners` is embedded, and the single-winner files run in the repo's positive test suite (the multi-winner files are engine-verified on emission — the suite is single-winner-scoped by design). All cases use 24–47 individual ballots and fresh casts per the naming rules. Files 1–6 are single-winner STAR; the [multi-winner wing](#the-frozen-elections--multi-winner-wing) below covers Bloc STAR and Allocated Score / STAR-PR at three field sizes (5c/3 seats, 6c/2 seats, 7c/4 seats).
 
 | # | Case | The electorate | What the frozen seed produced | Source |
 |---|---|---|---|---|
@@ -31,6 +31,19 @@ Every file records its scenario + seed and regenerates byte-identically (`--emit
 | 6 | [Narrow Bands](ballot_style_lab_pages/06_c4_b24_narrow-bands.md) | 24 paint-swatch voters and *nobody* uses the whole ballot: 0–2 camp, 3–5 camp, cliff & sliver voters, flat-liners, one protest | Compressed totals produce a **three-way scoring tie 61–61–61**; the official head-to-head tiebreaker picks the finalists, the runoff lands 9–8, and there's no Condorcet winner. Plurality, RCV-IRV and Approval-thinking all say Azure; STAR says Beige, Ranked Robin says Coral | [`yaml`](06_c4_b24_narrow-bands.yaml) · [`report`](ballot_style_lab_tabulated/06_c4_b24_narrow-bands_tabulated.txt) |
 
 Voter counts here (24–47) deliberately sit *above* the repo's keep-it-small default ([choosing voter counts](../../00_start_here/tips/TIPS_choosing_voter_counts.md)): statistical style patterns need a crowd, and 20–50 is still small enough to eyeball every row.
+
+## The frozen elections — multi-winner wing
+
+Bloc STAR (single-winner STAR run once per seat — a majority can sweep) and Allocated Score / STAR-PR (each Hare quota fills one seat, spent ballots reweighted), at deliberately different field sizes. The headline is the **twin pair**: files 07a/07b tabulate the *identical* 36 ballots under both philosophies and seat different councils.
+
+| # | Case | Field | What the frozen seed produced | Source |
+|---|---|---|---|---|
+| 7a | [Herb Garden Council — Bloc](ballot_style_lab_pages/07a_c5_b36_herb-council-bloc-3-seats.md) | 5 cand · **3 seats** · 36 ballots | The kitchen bloc **sweeps all three seats** — and the sweep hangs by a thread: the final seat's runoff **ties**, and the official tiebreaker settles it on total scores **Dill 83 vs Anise 82**. One star of score decides seat #3 | [`yaml`](07a_c5_b36_herb-council-bloc-3-seats.yaml) · [`report`](ballot_style_lab_tabulated/07a_c5_b36_herb-council-bloc-3-seats_tabulated.txt) |
+| 7b | [Herb Garden Council — STAR-PR](ballot_style_lab_pages/07b_c5_b36_herb-council-pr-3-seats.md) | same 5 cand · 3 seats · the **identical 36 ballots** | The tea caucus's quota **seats Anise**; kitchen keeps two (final reweighted round Chive 35.58 vs Dill 33.38). Same rows, different philosophy, different council — the majoritarian-vs-proportional lesson as a live pair | [`yaml`](07b_c5_b36_herb-council-pr-3-seats.yaml) · [`report`](ballot_style_lab_tabulated/07b_c5_b36_herb-council-pr-3-seats_tabulated.txt) |
+| 8 | [Quota Circus](ballot_style_lab_pages/08_c6_b29_quota-circus-pr-2-seats.md) | 6 cand · 2 seats · 29 ballots | The provocation: under *proportional* STAR-PR the north side sweeps **both** seats (final round Bree 39.25 vs Cato 36.94) — because the south's gentle 3–5 ballots donate floor-3s to their rivals. Grade inflation is unilateral disarmament, quota edition | [`yaml`](08_c6_b29_quota-circus-pr-2-seats.yaml) · [`report`](ballot_style_lab_tabulated/08_c6_b29_quota-circus-pr-2-seats_tabulated.txt) |
+| 9 | [Replant the Park](ballot_style_lab_pages/09_c7_b44_park-bloc-4-seats.md) | 7 cand · **4 seats** · 44 ballots | Four consecutive STAR counts (margins 4, 7, 4, 0): the shade trio sweeps seats 1–3, then the evergreen duo **tie for the last chair** — Cedar beats Fir on the score rung 110–101. Deepest Bloc exercise in the repo | [`yaml`](09_c7_b44_park-bloc-4-seats.yaml) · [`report`](ballot_style_lab_tabulated/09_c7_b44_park-bloc-4-seats_tabulated.txt) |
+
+The multi-winner files follow the house multi-winner options (`show_matrix: false` — a "Top 2 Finalist" matrix is a single-winner concept). The hand-built companion set for the sweep-vs-share lesson is [03_STAR_PR/\_main/02a–02c](../../03_STAR_PR/_main/); the style lab adds realistic style mixing, individual rows, and the tie drama.
 
 ## A taste — the Graders' Divide on screen
 
@@ -88,11 +101,11 @@ Realism garnishes: bullet/backup/slate voters flip a coin between writing `0`s a
 
 ```
 python generate_ballot_styles.py --list                 # scenario menu + frozen seeds
-python generate_ballot_styles.py --emit all             # regenerate the six files byte-identically
+python generate_ballot_styles.py --emit all             # regenerate all ten files byte-identically
 python generate_ballot_styles.py --hunt cliff_city --seeds 250   # go gem-hunting yourself
 ```
 
-The hunter tabulates every seed with the real LH engine and scores it for: runoff reversals, no-Condorcet/cycles, RCV-IRV divergence (and the engine's center-squeeze note), Equal-Support share, runoff margins and tie rungs, finalist-line photo finishes, and lot-decided anything. Champions must also satisfy the scenario's target predicate and resolve **deterministically** (a lot-decided result can't be a frozen test case). To add a scenario: give it factions, a style mix, a fresh cast ([naming rules](../../CLAUDE.md)), hunt, freeze the seed, `--emit`.
+The hunter tabulates every seed with the real LH engine and scores it for: runoff reversals, no-Condorcet/cycles, RCV-IRV divergence (and the engine's center-squeeze note), Equal-Support share, runoff margins and tie rungs, finalist-line photo finishes, and lot-decided anything. Multi-winner scenarios add slate-aware signals — sweeps, shutouts, dark-horse seats, per-seat margins, final-seat ties, reweighted seat-round gaps — and a **twin-pair mode** that tabulates each seed under two methods (Bloc vs PR) and scores the seat difference. Champions must also satisfy the scenario's target predicate and resolve **deterministically** (a lot-decided result can't be a frozen test case; the hunter rejects those seeds). To add a scenario: give it factions, a style mix, a fresh cast ([naming rules](../../CLAUDE.md)), optional `slates`/`variants`, hunt, freeze the seed, `--emit`.
 
 Stdlib-only; runs with the repo `.venv` (or any Python 3) and calls `starvote_larry_hastings.py` for every tabulation — the engine is the oracle, the generator never reimplements the count.
 

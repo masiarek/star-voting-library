@@ -8,27 +8,27 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**312 election files** (273 single-winner, 39 multi-winner) across 15 method(s).
+**321 election files** (276 single-winner, 45 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 175 |
+| STAR | 177 |
 | RCV-IRV (Hare) | 12 |
 | Ranked Robin (RCV-RR / Copeland) | 35 |
 | Approval | 13 |
-| STV (proportional RCV) | 6 |
+| STV (proportional RCV) | 9 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 8 |
+| Allocated Score (STAR-PR) | 10 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 14 |
+| BLOC STAR | 16 |
 | IRV | 17 |
 | PLURALITY | 20 |
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (175)
+## STAR  (177)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -88,6 +88,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex11_spoiler_added`](../../01_STAR/exercises/exercises_pages/ex11_spoiler_added.md) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: Axl enters the race → _Alba_ | [`.yaml`](../../01_STAR/exercises/ex11_spoiler_added.yaml) |
 | [`ex11_two_way_base`](../../01_STAR/exercises/exercises_pages/ex11_two_way_base.md) | `01_STAR/exercises/` | 1 | Exercise 11 — Recruit a spoiler: the two-way base race → _Alba_ | [`.yaml`](../../01_STAR/exercises/ex11_two_way_base.yaml) |
 | [`ex13_opinions`](../../01_STAR/exercises/exercises_pages/ex13_opinions.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? The honest opinions (STAR) → _Cora_ | [`.yaml`](../../01_STAR/exercises/ex13_opinions.yaml) |
+| [`bv2206_7mckyg_fbc_honest_tepid_consensus`](../../01_STAR/favorite_betrayal/favorite_betrayal_pages/bv2206_7mckyg_fbc_honest_tepid_consensus.md) | `01_STAR/favorite_betrayal/` | 1 | Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff → _Clover_ | [`.yaml`](../../01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) |
+| [`bv2207_b6xrdr_fbc_betrayal_pays`](../../01_STAR/favorite_betrayal/favorite_betrayal_pages/bv2207_b6xrdr_fbc_betrayal_pays.md) | `01_STAR/favorite_betrayal/` | 1 | Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays → _Bluebell_ | [`.yaml`](../../01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml) |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
@@ -283,14 +285,17 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_approval.yaml) |
 
-## STV (proportional RCV)  (6)
+## STV (proportional RCV)  (9)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`bv2205_8xwx43_minimal_sole_survivor`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv_stv_sole_survivor_crash_pages/bv2205_8xwx43_minimal_sole_survivor.md) | `06_Other/STV/bv_stv_sole_survivor_crash/` | 1 | BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters) → _Ash_ | [`.yaml`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv2205_8xwx43_minimal_sole_survivor.yaml) |
 | [`bv2137_ywckmg_stv`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_stv.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — STV (1 seat = IRV single-winner): same squeeze → _Carter_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_stv.yaml) |
 | [`bv2138_cxrf8v_stv`](../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_pages/bv2138_cxrf8v_stv.md) | `method_comparisons/no_condorcet_bv2138/` | 1 | No Condorcet Winner — STV (1 seat = IRV single-winner): Dave → _Dave_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_stv.yaml) |
 | [`ex14_two_novels`](../../01_STAR/exercises/exercises_pages/ex14_two_novels.md) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine: a book club buys two novels (STV) → _Austen, Camus_ | [`.yaml`](../../01_STAR/exercises/ex14_two_novels.yaml) |
 | [`ex14_two_novels_fullranks`](../../01_STAR/exercises/exercises_pages/ex14_two_novels_fullranks.md) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine, fully ranked (BV probe variant) → _Austen, Camus_ | [`.yaml`](../../01_STAR/exercises/ex14_two_novels_fullranks.yaml) |
+| [`bv2203_gvtg2h_flag_probe`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv_stv_sole_survivor_crash_pages/bv2203_gvtg2h_flag_probe.md) | `06_Other/STV/bv_stv_sole_survivor_crash/` | 2 | BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted) → _Austen, Camus_ | [`.yaml`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv2203_gvtg2h_flag_probe.yaml) |
+| [`bv2204_39py93_control_standing_hopefuls`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv_stv_sole_survivor_crash_pages/bv2204_39py93_control_standing_hopefuls.md) | `06_Other/STV/bv_stv_sole_survivor_crash/` | 2 | BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing) → _Angelou, Cummings_ | [`.yaml`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv2204_39py93_control_standing_hopefuls.yaml) |
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 
@@ -308,14 +313,16 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/_main/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (8)
+## Allocated Score (STAR-PR)  (10)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex12_proportional_share`](../../01_STAR/exercises/exercises_pages/ex12_proportional_share.md) | `01_STAR/exercises/` | 2 | Exercise 12 — Two seats, one neighborhood: Allocated Score shares → _Asa, Cleo_ | [`.yaml`](../../01_STAR/exercises/ex12_proportional_share.yaml) |
+| [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/08_c6_b29_quota-circus-pr-2-seats.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_fractional_surplus.yaml) |
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
+| [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
 | [`pets_gov_star_pr`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_star_pr.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
@@ -336,7 +343,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (14)
+## BLOC STAR  (16)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -351,9 +358,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/_main/_main_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/_main/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/_main/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.yaml) |
+| [`07a_c5_b36_herb-council-bloc-3-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/07a_c5_b36_herb-council-bloc-3-seats.md) | `06_Other/ballot_style_lab/` | 3 | The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep) → _Basil, Chive, Dill_ | [`.yaml`](../../06_Other/ballot_style_lab/07a_c5_b36_herb-council-bloc-3-seats.yaml) |
 | [`pets_gov_bloc_star`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_star.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Council by Bloc STAR (3 seats): majority sweeps → _Dog, Fish, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_star.yaml) |
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/_main/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1525_condorcet_loser_bloc.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/_main_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
+| [`09_c7_b44_park-bloc-4-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/09_c7_b44_park-bloc-4-seats.md) | `06_Other/ballot_style_lab/` | 4 | Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards → _Dogwood, Aspen, Elm, Cedar_ | [`.yaml`](../../06_Other/ballot_style_lab/09_c7_b44_park-bloc-4-seats.yaml) |
 
 ## IRV  (17)
 
