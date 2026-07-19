@@ -27,7 +27,7 @@ Voter 1 (Ann 5, Bob 4, Cal 0)
   Cal > | 0 - 0 - 1 | 0 - 0 - 1 |    ---    |
 ```
 
-Her 5 beats the 4, so this ballot is one vote **For Ann over Bob** — even though she likes Bob too. Every cell is just "which did this ballot put higher?"
+Her 5 beats the 4, so this ballot is one vote **For Ann over Bob** — even though she likes Bob too. Here's the one thing *not* to misread: that **`1` is a count, not a margin** — it is *not* 5 − 4. Look at **Ann over Cal** (5 vs 0), which is *also* just `1`: the cell records only *whether* one candidate is higher, never *by how much*. A 5-vs-4 and a 5-vs-0 are each exactly **one vote For**. (That intensity is thrown away *here* on purpose — which is why STAR keeps the score totals too, right alongside this matrix.) Every cell is just "which did this ballot put higher?"
 
 **Counting the election = adding the ballots' matrices.** Here are all three ballots' pair verdicts, and their sum:
 
