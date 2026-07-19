@@ -45,9 +45,11 @@ First choices: **Peltola 98, Palin 52, Begich 50.**
 | **Ranked Robin** | **Peltola** | Beats Begich 101–82 **and** Palin 104–85 — the Condorcet winner |
 | **STAR** | **Peltola** | Runoff winner (see below) |
 
-BetterVoting and the LH engine agree on all four, every race deterministic (`tieBreakType: none`).
+BetterVoting and this library's own independent count agree on all four, every race deterministic (`tieBreakType: none`).
 
-## View 2 — the LH tabulation
+## View 2 — an independent count (the full tabulation)
+
+*The same ballots, re-counted by this library's open-source engine (a fork of Larry Hastings' `starvote` — hence "LH" elsewhere in the repo), so the result is verifiable, not taken on trust.*
 
 ```
 --- Runoff (Preference) Matrix ---
