@@ -49,7 +49,7 @@ Scores are a rank→score modeling overlay (favorite 5, then 4/3, unranked 0). T
 | **Ranked Robin (Condorcet)** | **Begich** | Beats Peltola 93–84 **and** Palin 107–68 — wins every matchup |
 | **STAR** | **Begich** | Score finalists Begich (641) & Peltola (480); Begich wins the runoff **93–84** |
 
-Two of the four elect **Peltola**; the two that read the whole ballot elect **Begich**, the candidate a majority actually preferred. IRV is the lone method that fails the Condorcet winner — the center-squeeze signature. **BetterVoting and this library's own independent count agree on all four winners**, every race deterministic (`tieBreakType: none`).
+Two of the four elect **Peltola**; the two that read the whole ballot elect **Begich**, the candidate a majority actually preferred. IRV is the lone method that fails the Condorcet winner — the center-squeeze signature. **BetterVoting and an independent open-source count agree on all four winners**, every race deterministic (`tieBreakType: none`).
 
 ---
 
@@ -59,7 +59,7 @@ Four races on the one electorate, live: **[bettervoting.com/k3fmwv/results](http
 
 ## View 2 — an independent count (the full tabulation)
 
-*The same ballots, re-counted by this library's own open-source engine — so you can verify the result yourself instead of taking the platform's word for it. (The engine is a fork of Larry Hastings' `starvote`, which is why it's tagged "LH" elsewhere in this repo.)*
+*The same ballots, re-counted by the open-source engine this repo runs — **Larry Hastings' `starvote`, extended here** (added reporting and the RCV-IRV / Ranked Robin comparisons) — so you can verify the result yourself instead of taking the platform's word for it. It's tagged "LH" (Larry Hastings) elsewhere in this repo.*
 
 The score model tabulates STAR and auto-derives the other three counts (the `[Divergence from STAR]` block):
 
