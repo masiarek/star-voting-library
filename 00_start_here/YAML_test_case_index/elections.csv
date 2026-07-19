@@ -38,6 +38,7 @@ jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,con
 k3fmwv,"BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
+m3hb6y,"BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 p8dp28,BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue,3,contested (multi-race),20,"IRV, RankedRobin, STAR",BV

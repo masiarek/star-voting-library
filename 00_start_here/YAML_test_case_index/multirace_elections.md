@@ -540,6 +540,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Ranked Robin (Condorcet) — head-to-head wins | RankedRobin | 3 | **Begich** |
 | STAR — score then automatic runoff | STAR | 3 | **Begich** |
 
+## BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola
+
+**Election** [`m3hb6y`](https://bettervoting.com/m3hb6y/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — first choices only | Plurality | 3 | **Peltola** |
+| RCV-IRV (Hare) — instant runoff by elimination | IRV | 3 | **Peltola** |
+| Ranked Robin (Condorcet) — head-to-head wins | RankedRobin | 3 | **Peltola** |
+| STAR — score then automatic runoff | STAR | 3 | **Peltola** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

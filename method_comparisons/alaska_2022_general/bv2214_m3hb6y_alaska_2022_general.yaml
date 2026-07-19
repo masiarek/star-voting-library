@@ -1,0 +1,242 @@
+bv_test_id: BV2214
+bv_election_id: m3hb6y
+bv_results_url: https://bettervoting.com/m3hb6y/results
+election_title: "Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola"
+paradoxes: [condorcet-winner]
+scenario_description: |-
+  A reduced 200-voter TEACHING MODEL of the November 2022 Alaska US House GENERAL
+  election — the happy-ending counterpart to the August special. Same three main
+  candidates (the fourth, Bye, finished last and is dropped, as Equal Vote's realrcv
+  visualizer does); this is NOT the real vote data but a reconstruction of realrcv's
+  own 200-dot model, matched to its stated results. First choices: Peltola 98, Palin
+  52, Begich 50. RCV-IRV eliminates Begich, 11 ballots exhaust, and Peltola beats
+  Palin 104-85. But THIS time the electorate had shifted and Peltola is the Condorcet
+  winner (beats Begich 101-82 and Palin 104-85) — so ALL FOUR counts elect her:
+  Plurality, RCV-IRV, Ranked Robin, and STAR. IRV got it right. The mirror image of
+  the special (BV2213), where the same methods split 2-2 and IRV cut the Condorcet
+  winner: the center-squeeze failure is real but CONDITIONAL. (Bonus: Begich leads
+  STAR's score round 546 as everyone's broad 2nd choice, but Peltola wins the runoff
+  101-82 — STAR self-correcting toward the majority-preferred candidate.) Scores are a
+  rank->score overlay (favorite 5, 2nd 4, unranked 0). Source: Equal Vote's Real RCV,
+  realrcv.equal.vote/alaska22general. Live results (BV2214, all four races):
+  https://bettervoting.com/m3hb6y/results
+  Lesson: README.md
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Peltola, Begich, Palin
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,0,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,4,0
+    5,0,4
+    5,0,4
+    5,0,4
+    5,0,4
+    5,0,4
+    5,0,4
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,0
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    0,5,4
+    4,5,0
+    4,5,0
+    4,5,0
+    4,5,0
+    4,5,0
+    4,5,0
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,0,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    0,4,5
+    4,0,5
+    4,0,5
+    4,0,5
+expected_winners:
+  - Peltola
+
+# file: bv2214_m3hb6y_alaska_2022_general.yaml

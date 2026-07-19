@@ -326,6 +326,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2213_k3fmwv_alaska_2022.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Exhausted ballots (conversation)](../../../00_start_here/RCV_IRV/exhausted_ballots_301.md)

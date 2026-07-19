@@ -72,6 +72,8 @@ That is the honest headline, and it *strengthens* the case rather than weakening
 
 *(Equal Vote attributes the November shift to a larger, more left-leaning general electorate and an "electability bias" that moved from Palin — the best-known name in August — to Peltola, the incumbent by November.)*
 
+**Run the counterpart:** the general is a [runnable model too](../alaska_2022_general/README.md) — same cast, but all four counts agree on Peltola. Put side by side, the pair *is* the fairness argument: one election where IRV failed the Condorcet winner, one where it elected them, same mechanism, opposite outcome.
+
 ---
 
 ## Challenge your understanding

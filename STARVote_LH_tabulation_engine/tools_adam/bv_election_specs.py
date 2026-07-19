@@ -43,6 +43,7 @@ you need not hoard every spec here.
 #   BV830 — No Condorcet winner (top-two tie, score breaks it)   -> vb3xv2  (backs 01_STAR/… bv830_vb3xv2_no_condorcet_tie_score; STAR-only, RR unfreezable)
 #   BV2212 — STAR IIA under a Condorcet cycle (cycle-spoiler)      -> g3f7r2  (STAR-only, RR unfreezable; a losing candidate flips the winner)
 #   BV2213 — Alaska 2022 special (reduced 200-voter model, 4 races) -> k3fmwv  (Plurality/IRV -> Peltola; RR/STAR -> Begich, the Condorcet winner IRV cut)
+#   BV2214 — Alaska 2022 GENERAL (reduced model, 4 races) -> m3hb6y  (all four -> Peltola, the Condorcet winner; the "IRV got it right" counterpart to BV2213)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -3389,4 +3390,65 @@ _ALASKA = [
 # Backs method_comparisons/alaska_2022 (one electorate, four counts). Plurality &
 # IRV -> Peltola; Ranked Robin & STAR -> Begich (Condorcet winner). RR freezable
 # (clear CW, no tie). Do NOT re-run (permanent dupes).
-ELECTIONS: list = []   # reset to safe empty state (BV2213 done 2026-07-19)
+# --- BV2214 — Alaska 2022 GENERAL (reduced 200-voter model): IRV got it right ----
+# The happy-ending counterpart to BV2213 (the special). Same three candidates,
+# November general — a competitive 4-way (Bye eliminated first; here modeled on the
+# top 3 as Equal Vote's realrcv does). Reconstructed from realrcv.equal.vote/
+# alaska22general's own 200-dot model and cross-checked to its stated results:
+# first choices Peltola 98 / Palin 52 / Begich 50; IRV eliminates Begich, Peltola
+# wins 104-85 (11 exhaust); Peltola beats BOTH head-to-head (101-82, 104-85) => the
+# Condorcet winner. So all four counts elect Peltola — IRV included. RR deterministic
+# (clear Condorcet winner) => freezable.
+_AKG_CANDS = ["Peltola", "Begich", "Palin"]
+_AKG_STAR = _expand([(50,[5,0,0]),(42,[5,4,0]),(6,[5,0,4]),(11,[0,5,0]),(33,[0,5,4]),
+                     (6,[4,5,0]),(17,[0,0,5]),(32,[0,4,5]),(3,[4,0,5])])
+_AKG_PLUR = _expand([(50,[1,0,0]),(42,[1,0,0]),(6,[1,0,0]),(11,[0,1,0]),(33,[0,1,0]),
+                     (6,[0,1,0]),(17,[0,0,1]),(32,[0,0,1]),(3,[0,0,1])])
+_AKG_RANK = _expand([(50,[1,0,0]),(42,[1,2,0]),(6,[1,0,2]),(11,[0,1,0]),(33,[0,1,2]),
+                     (6,[2,1,0]),(17,[0,0,1]),(32,[0,2,1]),(3,[2,0,1])])
+
+_ALASKA_GENERAL = [
+    {
+        "test_id": "BV2214",
+        "title": ("Alaska 2022 GENERAL (reduced model) — IRV got it right: all four "
+                  "counts elect the Condorcet winner, Peltola"),
+        "description": (
+            "The happy-ending counterpart to the August special (BV2213). A reduced "
+            "200-voter TEACHING MODEL of the November 2022 Alaska US House GENERAL "
+            "election (same three candidates; the 4th, Bye, was eliminated first and is "
+            "dropped, as Equal Vote's realrcv.equal.vote/alaska22general does) — NOT the "
+            "real vote data, reconstructed from realrcv's own 200-dot model and matched "
+            "to its stated results. First choices: Peltola 98, Palin 52, Begich 50. "
+            "RCV-IRV eliminates Begich, 11 ballots exhaust, and Peltola beats Palin "
+            "104-85. This time the electorate had shifted and Peltola is the Condorcet "
+            "winner (beats Begich 101-82 and Palin 104-85), so ALL FOUR counts elect "
+            "her — Plurality, RCV-IRV, Ranked Robin, and STAR. IRV got it right. The "
+            "contrast with the special (where IRV cut the Condorcet winner Begich) is "
+            "the whole lesson: IRV's center-squeeze failure is real but conditional. "
+            "Companion: github.com/masiarek/star-voting-library."),
+        "races": [
+            {"title": "Choose-One (Plurality) — first choices only", "method": "Plurality",
+             "num_winners": 1, "candidates": _AKG_CANDS, "ballots": _AKG_PLUR},
+            {"title": "RCV-IRV (Hare) — instant runoff by elimination", "method": "IRV",
+             "num_winners": 1, "max_rankings": 3, "candidates": _AKG_CANDS, "ballots": _AKG_RANK},
+            {"title": "Ranked Robin (Condorcet) — head-to-head wins", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _AKG_CANDS, "ballots": _AKG_RANK},
+            {"title": "STAR — score then automatic runoff", "method": "STAR",
+             "num_winners": 1, "candidates": _AKG_CANDS, "ballots": _AKG_STAR},
+        ],
+        "enable_write_in": False,
+        "expected": "All four -> Peltola (the Condorcet winner). Plurality 98; IRV "
+                    "Peltola 104-85 (Begich out, 11 exhaust); RR Peltola (beats both); "
+                    "STAR Peltola (Begich leads scores 546, Peltola wins runoff "
+                    "101-82). Test ID BV2214.",
+    },
+]
+
+# RESULTS (2026-07-19): BV2213 -> k3fmwv — created + 200/200 ballots × 4 races OK.
+# Backs method_comparisons/alaska_2022 (one electorate, four counts). Plurality &
+# IRV -> Peltola; Ranked Robin & STAR -> Begich (Condorcet winner). RR freezable
+# (clear CW, no tie). Do NOT re-run (permanent dupes).
+# RESULTS (2026-07-19): BV2214 -> m3hb6y — created + 200/200 ballots × 4 races OK.
+# Backs method_comparisons/alaska_2022_general (the "IRV got it right" counterpart).
+# All four counts -> Peltola (Condorcet winner). RR freezable. Do NOT re-run.
+ELECTIONS: list = []   # reset to safe empty state (BV2214 done 2026-07-19)

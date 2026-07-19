@@ -15,7 +15,7 @@ Alaska voters passed **[Ballot Measure 2 (2020)](https://en.wikipedia.org/wiki/2
 | When | Race | Winner | Did RCV-IRV misfire? |
 |---|---|---|---|
 | **Aug 2022** | **US House — special** (Peltola / Begich / Palin) | **Peltola** | **YES — center squeeze.** Begich beat both head-to-head (the [Condorcet winner](../../topics/condorcet/)) but had the fewest first choices, so IRV eliminated him first. **← the case this repo models.** |
-| Nov 2022 | US House — general (Peltola / Palin / Begich / Bye) | Peltola | **No.** Six months later the electorate had shifted; per Equal Vote's [Real RCV](https://realrcv.equal.vote/alaska22general), **Peltola was the Condorcet winner this time**, and IRV elected her. |
+| Nov 2022 | US House — general (Peltola / Palin / Begich / Bye) | Peltola | **No.** Six months later the electorate had shifted; **Peltola was the Condorcet winner this time**, and IRV elected her — [**▶ runnable model**](../../../method_comparisons/alaska_2022_general/README.md), where all four counts agree. |
 | Nov 2022 | US Senate (Murkowski / Tshibaka / Chesbro / …) | Lisa Murkowski | **No** — arguably RCV's best showing: the broadly-acceptable incumbent won by gathering cross-partisan second choices, an outcome a closed partisan primary might have denied her. |
 | Nov 2022 | Governor | Mike Dunleavy | **No RCV rounds** — won an outright first-round majority, so no runoff was needed. |
 | Nov 2022 | ~many state legislative races | (various) | No Condorcet failure reported. |

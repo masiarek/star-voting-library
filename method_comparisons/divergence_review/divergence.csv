@@ -98,6 +98,7 @@ APPROVAL_OR_MINOR,01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_
 APPROVAL_OR_MINOR,01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Chocolate,Strawberry,,,2,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml,2,2,Allison,Allison,Allison,Allison,Allison,Bill,Allison,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/_main/count_simplicity_star_vs_irv.yaml,5,40,Carmen,Carmen,Carmen,Carmen,Carmen,Andre,Carmen,Carmen,Carmen,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general.yaml,3,200,Peltola,Peltola,Peltola,Peltola,Peltola,Begich,Begich,Peltola,Peltola,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False

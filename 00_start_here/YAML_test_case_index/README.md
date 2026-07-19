@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**333 election files** (283 single-winner, 50 multi-winner) across 15 method(s).
+**334 election files** (284 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 179 |
+| STAR | 180 |
 | RCV-IRV (Hare) | 14 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (179)
+## STAR  (180)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -154,6 +154,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`BV_Library_star_runoff_tie_score_resolves`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_runoff_tie_score_resolves.md) | `method_comparisons/BV_Library/` | 1 | BV parity — STAR: runoff tie broken by score → _Bill_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_runoff_tie_score_resolves.yaml) |
 | [`count_simplicity_star_vs_irv`](../../method_comparisons/_main/_main_pages/count_simplicity_star_vs_irv.md) | `method_comparisons/_main/` | 1 | Same winner, very different counts — STAR adds, IRV eliminates → _Carmen_ | [`.yaml`](../../method_comparisons/_main/count_simplicity_star_vs_irv.yaml) |
 | [`bv2213_k3fmwv_alaska_2022`](../../method_comparisons/alaska_2022/alaska_2022_pages/bv2213_k3fmwv_alaska_2022.md) | `method_comparisons/alaska_2022/` | 1 | Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut → _Begich_ | [`.yaml`](../../method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022.yaml) |
+| [`bv2214_m3hb6y_alaska_2022_general`](../../method_comparisons/alaska_2022_general/alaska_2022_general_pages/bv2214_m3hb6y_alaska_2022_general.md) | `method_comparisons/alaska_2022_general/` | 1 | Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola → _Peltola_ | [`.yaml`](../../method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general.yaml) |
 | [`Black_Curtain_01_c3_b5_hidden-consensus`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_02_c3_b5_near-clones.yaml) |
 | [`Black_Curtain_03_c3_b5_polarized-on-cal`](../../method_comparisons/black_curtain/black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | `method_comparisons/black_curtain/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |

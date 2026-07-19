@@ -51,6 +51,7 @@ SINGLE_WINNER_DIRS = [
     REPO_ROOT / "01_STAR" / "pet_real_bv_election",
     REPO_ROOT / "01_STAR" / "tie_break_ladder",
     REPO_ROOT / "method_comparisons" / "alaska_2022",
+    REPO_ROOT / "method_comparisons" / "alaska_2022_general",
     REPO_ROOT / "method_comparisons" / "center_squeeze",
     REPO_ROOT / "method_comparisons" / "paradoxes_and_whoops",
     REPO_ROOT / "method_comparisons" / "monotonicity",
