@@ -2,7 +2,7 @@
 
 *The same voter's opinion, expressed on three different ballots: **Ranking**, **Yes/No** (Approval), and **Scoring**. Seeing them side by side is the clearest way to grasp what each ballot **captures** and what it **throws away**.*
 
-→ The core distinction — order vs. strength: [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · **deep dives, one per ballot:** [the ranked ballot](../scores_and_ranks/ranked_ballot.md) · [the score ballot](../scores_and_ranks/score_ballot.md) · [Approval](../Approval_Voting/approval_voting.md)
+→ Its **method-side twin** — the *same electorate* run through every count, so the winners line up: [same opinions, every method](same_opinions_every_method.md). The core distinction — order vs. strength: [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · **deep dives, one per ballot:** [the ranked ballot](../scores_and_ranks/ranked_ballot.md) · [the score ballot](../scores_and_ranks/score_ballot.md) · [Approval](../Approval_Voting/approval_voting.md)
 
 ![Three ballot styles side by side for the same five candidates (Andre, Blake, Carmen, David, Ella): a Ranking ballot with a 1st–5th grid, a Yes/No (Approval) ballot with one filled or open bubble per candidate, and a Scoring ballot rating each candidate 0 (Worst) to 5 (Best)](../img/ballot_styles_ranking_yesno_scoring.png)
 
