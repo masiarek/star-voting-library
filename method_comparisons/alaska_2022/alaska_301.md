@@ -60,6 +60,18 @@ Not with "STAR is flawless" — that loses. With three moves:
 2. **Insist on the symmetric test** — is *your* STAR example structural and sincere and real, or a knife-edge construction? Alaska is the former; most anti-STAR examples are the latter.
 3. **Cite the empirics** — center squeeze has shown up in real US elections; the STAR failure modes have not. Both methods beat Choose-One by a mile; the honest debate is between *good* options.
 
+### Postscript — the same cast, six months later, and IRV got it *right*
+
+The best evidence that this critique is fair comes from the very next election. In **November 2022**, the *same* three candidates ran again in the general — and this time RCV-IRV produced a perfectly good result. IRV again eliminated the centrist Begich early, but per Equal Vote's own [Real RCV analysis of the general](https://realrcv.equal.vote/alaska22general), **Peltola was the Condorcet winner this time** — the electorate had shifted, she'd have beaten both rivals head-to-head, and IRV elected her. **No Condorcet failure.**
+
+That is the honest headline, and it *strengthens* the case rather than weakening it:
+
+- IRV's failure is **conditional, not guaranteed.** The center-squeeze *mechanism* (eliminate the centrist on first choices) fired in both elections — but it only produces a *wrong* result when the eliminated centrist was actually the Condorcet winner. In August, Begich was; in November, he wasn't.
+- So "IRV is broken" is the wrong claim. The right one: **IRV has a structural failure mode that triggers in a specific, identifiable configuration** (a genuine centrist Condorcet winner with few first choices) — and that configuration really occurred, in Alaska, in August 2022.
+- This is exactly why we insist on stating **rarity**: of these *two* back-to-back Alaska races, **one** was a Condorcet failure, not both. A critic who claimed otherwise would be wrong, and we'd lose the argument. Precision is the whole game.
+
+*(Equal Vote attributes the November shift to a larger, more left-leaning general electorate and an "electability bias" that moved from Palin — the best-known name in August — to Peltola, the incumbent by November.)*
+
 ---
 
 ## Challenge your understanding
@@ -87,6 +99,11 @@ STAR is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-
 <details><summary><strong>Q5.</strong> All four methods were run on the same electorate. Which failed the Condorcet winner, which didn't, and what single design choice separates the two groups?</summary>
 
 **Failed:** Choose-One and RCV-IRV (both → Peltola). **Passed:** Ranked Robin and STAR (both → Begich). The dividing line is **whether the method eliminates/decides on *first choices only* (Plurality, IRV) or reads the *whole ballot* (Ranked Robin's head-to-heads, STAR's scores + runoff).** First-choice elimination is the step that squeezes out the consensus candidate.
+</details>
+
+<details><summary><strong>Q6.</strong> In the November general election, IRV again eliminated the centrist Begich — yet there was no Condorcet failure. Why not, and what does that teach us?</summary>
+
+Because in the general the Condorcet winner was **Peltola**, not Begich — the electorate had shifted, and Peltola would beat both rivals head-to-head. IRV eliminating Begich no longer removed the "beats-everyone" candidate, so IRV's winner (Peltola) *was* the Condorcet winner. The lesson: the center-squeeze **mechanism** fires whenever a centrist has few first choices, but it only causes a **failure** when that centrist is the Condorcet winner. IRV's failure is conditional — which is exactly why we state its rarity precisely rather than claiming IRV is always wrong.
 </details>
 
 ---

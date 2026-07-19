@@ -2,6 +2,8 @@
 
 The most-cited real-world IRV failure, reproduced in this repo from the **actual 8,980 ballots** (PrefLib dataset 00005, from Burlington's published records). One ranked-ballot set, three different winners depending only on the count:
 
+→ **Interactive visualization:** Equal Vote's [Real RCV — Burlington 2009](https://realrcv.equal.vote/burlington09) (a scrollytelling walk through the final rounds) · browse [every real US RCV case study](https://realrcv.equal.vote) — most worked fine, which is the honest backdrop for why Burlington and [Alaska 2022](../alaska_2022/README.md) stand out.
+
 | Count | Winner |
 |---|---|
 | Choose-One Plurality (= round 1 first choices) | **Kurt Wright** (R) — 2,950 |
