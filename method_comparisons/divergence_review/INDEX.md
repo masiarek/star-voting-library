@@ -6,14 +6,14 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **180** single-winner STAR elections (skipped 107 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **105** (58%) diverge from STAR under at least one method; **75** agree across the board.
+- Scanned **181** single-winner STAR elections (skipped 107 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **106** (59%) diverge from STAR under at least one method; **75** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 22 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
-| IRV_DIFFERS_ARTIFACT | 15 |
+| IRV_DIFFERS_ARTIFACT | 16 |
 | CYCLE_OR_THREE_WAY | 26 |
 | APPROVAL_OR_MINOR | 39 |
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (101 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (102 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 20
 
@@ -86,7 +86,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
 
-### IRV_DIFFERS_ARTIFACT — 15
+### IRV_DIFFERS_ARTIFACT — 16
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -135,6 +135,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
+- **[minority_winner_c5_b20](cases/IRV_DIFFERS_ARTIFACT/minority_winner_c5_b20.md)** — `method_comparisons/minority_winner/minority_winner_c5_b20.yaml` (5c/20b)  
+    STAR=**Cole** · IRV=Amy · RR=Cole · Approval=Cole · Score=Cole · Condorcet=Cole  
+    _flags: 14 tied-score ballot(s); IRV flips on reversed priority_
 
 ### CYCLE_OR_THREE_WAY — 24
 

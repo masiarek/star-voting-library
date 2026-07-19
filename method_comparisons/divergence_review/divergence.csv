@@ -154,6 +154,7 @@ IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml,4,47,Ca
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml,4,24,Beige,Azure,Dune,Coral,Azure,Azure,Azure,,Azure,16,True,True,True
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/minority_winner/minority_winner_c5_b20.yaml,5,20,Cole,Amy,Dana,Cole,Cole,Cole,Cole,Cole,Cole,14,True,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False

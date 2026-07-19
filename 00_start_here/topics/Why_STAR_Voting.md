@@ -28,7 +28,7 @@ Under Choose-One, backing a long-shot you love means abandoning the front-runner
 
 ### 5. Every winner earns a majority
 
-The automatic runoff guarantees the winner beats the runner-up head-to-head: among all voters who expressed a preference between the two finalists, the winner has majority support. This is what answers the worry that scoring is "just an average" — the very last step is a real majority test, not a mean. Contrast a plurality winner who takes office on 30–40% while most voters opposed them. STAR pairs the expressiveness of scoring with the legitimacy of a final round, so there are **no more 10%-plurality winners.**
+The automatic runoff guarantees the winner beats the runner-up head-to-head: among all voters who expressed a preference between the two finalists, the winner has majority support. This is what answers the worry that scoring is "just an average" — the very last step is a real majority test, not a mean. Contrast a plurality winner who takes office on 30–40% while most voters opposed them. STAR pairs the expressiveness of scoring with the legitimacy of a final round, so there are **no more [10%-plurality winners](plurality.md#show-me-a-minority-winner-worked).**
 
 ### 6. Simple to vote
 

@@ -1,0 +1,54 @@
+election_title: "A crowded race — Plurality's minority winner vs STAR's consensus"
+scenario_description: |-
+  Five candidates, twenty voters — the case for reading the whole ballot, shown
+  simply. Erik has a passionate base: 6 of 20 rank him first. The other 14 split
+  their first choices among Amy (5), Ben (4), Dana (3), and Cole (2) — and nearly
+  all of them score Erik a flat 0. Under Choose-One, Erik wins on **30%** while
+  **70% of voters actively opposed him** — the textbook minority/plurality winner.
+  Cole tells the opposite story: few first choices (only 2), but broad, warm
+  support across the room (most voters rate him 4). Reading the whole ballot finds
+  him: he leads STAR's scoring round (70) and wins the automatic runoff, and he
+  beats every rival head-to-head — the Condorcet winner. STAR and Ranked Robin both
+  elect Cole, the candidate a majority is genuinely glad about; only the
+  first-choice-only count crowns Erik. Same opinions, no strategy — the difference
+  is how much of the ballot the method reads.
+  Lesson: 00_start_here/topics/plurality.md
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Amy, Ben, Cole, Dana, Erik
+     0,   0,    2,    0,    5
+     0,   0,    2,    0,    5
+     0,   0,    2,    0,    5
+     0,   0,    2,    0,    5
+     0,   0,    2,    0,    5
+     0,   0,    2,    0,    5
+     5,   1,    4,    1,    0
+     5,   1,    4,    1,    0
+     5,   1,    4,    1,    0
+     5,   1,    4,    1,    0
+     5,   1,    4,    1,    0
+     1,   5,    4,    1,    0
+     1,   5,    4,    1,    0
+     1,   5,    4,    1,    0
+     1,   5,    4,    1,    0
+     1,   1,    4,    5,    0
+     1,   1,    4,    5,    0
+     1,   1,    4,    5,    0
+     2,   2,    5,    2,    0
+     2,   2,    5,    2,    0
+expected_winners:
+  - Cole
+
+# file: minority_winner_c5_b20.yaml

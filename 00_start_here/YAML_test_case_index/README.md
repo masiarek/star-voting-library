@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**334 election files** (284 single-winner, 50 multi-winner) across 15 method(s).
+**335 election files** (285 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 180 |
+| STAR | 181 |
 | RCV-IRV (Hare) | 14 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (180)
+## STAR  (181)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -185,6 +185,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2165_9vxcj7_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2165_9vxcj7_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 full — STAR: Boone wins the runoff 8–7 → _Boone_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_star.yaml) |
 | [`bv2166_b7b8dv_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2166_b7b8dv_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too) → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml) |
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml) |
+| [`minority_winner_c5_b20`](../../method_comparisons/minority_winner/minority_winner_pages/minority_winner_c5_b20.md) | `method_comparisons/minority_winner/` | 1 | A crowded race — Plurality's minority winner vs STAR's consensus → _Cole_ | [`.yaml`](../../method_comparisons/minority_winner/minority_winner_c5_b20.yaml) |
 | [`mono_raise_delete_after`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_after.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_after.yaml) |
 | [`mono_raise_delete_before`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_before.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |

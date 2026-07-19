@@ -20,6 +20,20 @@ The single mark is the root of a whole family of problems:
 - **No expression.** One mark captures neither *order* (who's your second choice?) nor *strength* (how much do you like them?) — see [ballot styles](ballot_styles.md).
 - **Two-party entrenchment.** These pressures push the field toward two viable candidates over time (**Duverger's law**).
 
+### Show me — a minority winner, worked
+
+Five candidates, twenty voters. Under Choose-One only *first* choices count:
+
+| Candidate | First choices | |
+|---|--:|:--|
+| **Erik** | **6 — 30%** | ← wins |
+| Amy | 5 | |
+| Ben | 4 | |
+| Dana | 3 | |
+| Cole | 2 | |
+
+Erik takes office on **30%** — while **70% ranked someone else first, and nearly all scored him a flat 0.** Now read the *whole* ballot: Cole had just 2 first choices but broad, warm support everywhere (most voters rate him 4). He leads STAR's scoring round (70), wins the automatic runoff, and beats every rival head-to-head — the Condorcet winner. **[STAR](../STAR_Voting/STAR_start_here.md) and [Ranked Robin](../RCV_Ranked_Robin/why_ranked_robin.md) both elect Cole**, the candidate a majority is genuinely glad about; only first-choice counting crowns Erik. Same opinions, no strategy — the difference is how much of the ballot the method reads. See the whole field lined up in [same opinions, every method](same_opinions_every_method.md); run this one: [`minority_winner_c5_b20.yaml`](../../method_comparisons/minority_winner/minority_winner_c5_b20.yaml).
+
 ## Its relationship to the other methods
 
 Every method this library teaches is, in part, a fix for one of plurality's failures:
