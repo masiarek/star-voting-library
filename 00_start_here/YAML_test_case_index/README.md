@@ -8,27 +8,27 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**321 election files** (276 single-winner, 45 multi-winner) across 15 method(s).
+**332 election files** (282 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 177 |
-| RCV-IRV (Hare) | 12 |
-| Ranked Robin (RCV-RR / Copeland) | 35 |
+| STAR | 178 |
+| RCV-IRV (Hare) | 14 |
+| Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
-| STV (proportional RCV) | 9 |
+| STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 10 |
+| Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 16 |
+| BLOC STAR | 17 |
 | IRV | 17 |
-| PLURALITY | 20 |
+| PLURALITY | 21 |
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (177)
+## STAR  (178)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -90,6 +90,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex13_opinions`](../../01_STAR/exercises/exercises_pages/ex13_opinions.md) | `01_STAR/exercises/` | 1 | Exercise 13 — Where do you draw the line? The honest opinions (STAR) → _Cora_ | [`.yaml`](../../01_STAR/exercises/ex13_opinions.yaml) |
 | [`bv2206_7mckyg_fbc_honest_tepid_consensus`](../../01_STAR/favorite_betrayal/favorite_betrayal_pages/bv2206_7mckyg_fbc_honest_tepid_consensus.md) | `01_STAR/favorite_betrayal/` | 1 | Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff → _Clover_ | [`.yaml`](../../01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) |
 | [`bv2207_b6xrdr_fbc_betrayal_pays`](../../01_STAR/favorite_betrayal/favorite_betrayal_pages/bv2207_b6xrdr_fbc_betrayal_pays.md) | `01_STAR/favorite_betrayal/` | 1 | Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays → _Bluebell_ | [`.yaml`](../../01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml) |
+| [`bv2212_g3f7r2_cycle_spoiler`](../../01_STAR/iia_cycle_spoiler/iia_cycle_spoiler_pages/bv2212_g3f7r2_cycle_spoiler.md) | `01_STAR/iia_cycle_spoiler/` | 1 | STAR's runoff is spoiler-sensitive under a Condorcet cycle — a losing candidate (Ben) flips Alice vs Carla (BV2212, g3f7r2) → _Alice_ | [`.yaml`](../../01_STAR/iia_cycle_spoiler/bv2212_g3f7r2_cycle_spoiler.yaml) |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/majority_criterion_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/none_of_the_above_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.yaml) |
@@ -210,11 +211,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) |
 
-## RCV-IRV (Hare)  (12)
+## RCV-IRV (Hare)  (14)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`RCV_ballot_example`](../../06_Other/RCV_IRV/RCV_IRV_pages/RCV_ballot_example.md) | `06_Other/RCV_IRV/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../06_Other/RCV_IRV/RCV_ballot_example.yaml) |
+| [`burlington_2009_irv`](../../method_comparisons/burlington_2009/burlington_2009_pages/burlington_2009_irv.md) | `method_comparisons/burlington_2009/` | 1 | Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third) → _Kiss_ | [`.yaml`](../../method_comparisons/burlington_2009/burlington_2009_irv.yaml) |
+| [`burlington_2009_raise_kiss_nonmono`](../../method_comparisons/burlington_2009/burlington_2009_pages/burlington_2009_raise_kiss_nonmono.md) | `method_comparisons/burlington_2009/` | 1 | Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/burlington_2009_raise_kiss_nonmono.yaml) |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_irv.yaml) |
 | [`monotonicity_irv_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_after.yaml) |
 | [`monotonicity_irv_before`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_before.md) | `method_comparisons/monotonicity/` | 1 | Non-monotonicity (RCV-IRV) — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_before.yaml) |
@@ -227,12 +230,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/irv_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (35)
+## Ranked Robin (RCV-RR / Copeland)  (39)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex09_game_night_cycle`](../../01_STAR/exercises/exercises_pages/ex09_game_night_cycle.md) | `01_STAR/exercises/` | 1 | Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill) → _Azul_ | [`.yaml`](../../01_STAR/exercises/ex09_game_night_cycle.yaml) |
 | [`ranked_robin_consensus_center`](../../05_Ranked_Robin/_main/_main_pages/ranked_robin_consensus_center.md) | `05_Ranked_Robin/_main/` | 1 | Ranked Robin (RCV-RR) — the consensus center wins the round-robin → _Ben_ | [`.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) |
+| [`bv2208_7q6by8_burial_sincere`](../../05_Ranked_Robin/burial/burial_pages/bv2208_7q6by8_burial_sincere.md) | `05_Ranked_Robin/burial/` | 1 | BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone → _Beryl_ | [`.yaml`](../../05_Ranked_Robin/burial/bv2208_7q6by8_burial_sincere.yaml) |
+| [`bv2209_fxhw6g_burial_pays`](../../05_Ranked_Robin/burial/burial_pages/bv2209_fxhw6g_burial_pays.md) | `05_Ranked_Robin/burial/` | 1 | BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank the leader last, and it pays → _Amber_ | [`.yaml`](../../05_Ranked_Robin/burial/bv2209_fxhw6g_burial_pays.yaml) |
 | [`bv2142_4gfwdq_clone_cycle_pre`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2142_4gfwdq_clone_cycle_pre.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak → _A_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.yaml) |
 | [`bv2143_9pr3wr_teaming_fails`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/bv2143_9pr3wr_teaming_fails.md) | `05_Ranked_Robin/clone_independence/` | 1 | BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV → _A1_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.yaml) |
 | [`clone_teaming_01_pre`](../../05_Ranked_Robin/clone_independence/clone_independence_pages/clone_teaming_01_pre.md) | `05_Ranked_Robin/clone_independence/` | 1 | Clone independence (1/2) — before cloning: A, B, C tie in a cycle → _A_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml) |
@@ -246,6 +251,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/rr_vs_irv_plurality_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_ranked_robin_ties.yaml) |
+| [`burlington_2009_ranked_robin`](../../method_comparisons/burlington_2009/burlington_2009_pages/burlington_2009_ranked_robin.md) | `method_comparisons/burlington_2009/` | 1 | Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/burlington_2009_ranked_robin.yaml) |
 | [`bv2137_ywckmg_ranked_robin`](../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_pages/bv2137_ywckmg_ranked_robin.md) | `method_comparisons/center_squeeze_bv2137/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_ranked_robin.yaml) |
 | [`bv2145_6fj2kg_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2145_6fj2kg_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.2 — Ranked Robin: the Condorcet winner survives → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_ranked_robin.yaml) |
 | [`bv2146_krk2px_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2146_krk2px_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_ranked_robin.yaml) |
@@ -266,6 +272,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`rr_district_A`](../../method_comparisons/summability_demo/summability_demo_pages/rr_district_A.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — District A, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/rr_district_A.yaml) |
 | [`rr_district_B`](../../method_comparisons/summability_demo/summability_demo_pages/rr_district_B.md) | `method_comparisons/summability_demo/` | 1 | Summability demo — District B, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/rr_district_B.yaml) |
 | [`bv2170_pp2q4q_ranked_robin`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_ranked_robin.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_ranked_robin.yaml) |
+| [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/food_truck_row_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
 ## Approval  (13)
 
@@ -285,7 +292,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_approval.yaml) |
 
-## STV (proportional RCV)  (9)
+## STV (proportional RCV)  (10)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -296,6 +303,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex14_two_novels_fullranks`](../../01_STAR/exercises/exercises_pages/ex14_two_novels_fullranks.md) | `01_STAR/exercises/` | 2 | Exercise 14 — The transfer machine, fully ranked (BV probe variant) → _Austen, Camus_ | [`.yaml`](../../01_STAR/exercises/ex14_two_novels_fullranks.yaml) |
 | [`bv2203_gvtg2h_flag_probe`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv_stv_sole_survivor_crash_pages/bv2203_gvtg2h_flag_probe.md) | `06_Other/STV/bv_stv_sole_survivor_crash/` | 2 | BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted) → _Austen, Camus_ | [`.yaml`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv2203_gvtg2h_flag_probe.yaml) |
 | [`bv2204_39py93_control_standing_hopefuls`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv_stv_sole_survivor_crash_pages/bv2204_39py93_control_standing_hopefuls.md) | `06_Other/STV/bv_stv_sole_survivor_crash/` | 2 | BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing) → _Angelou, Cummings_ | [`.yaml`](../../06_Other/STV/bv_stv_sole_survivor_crash/bv2204_39py93_control_standing_hopefuls.yaml) |
+| [`bv2210_fvg8y8_stv_share`](../../method_comparisons/food_truck_row/food_truck_row_pages/bv2210_fvg8y8_stv_share.md) | `method_comparisons/food_truck_row/` | 2 | Food-Truck Row — STV: one seat per side → _Arepa, Donut_ | [`.yaml`](../../method_comparisons/food_truck_row/bv2210_fvg8y8_stv_share.yaml) |
 | [`03a_stv_3seats`](../../06_Other/STV/STV_pages/03a_stv_3seats.md) | `06_Other/STV/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_stv.yaml) |
 
@@ -313,7 +321,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/_main/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/_main/_main_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/_main/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/_main/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (10)
+## Allocated Score (STAR-PR)  (11)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -321,6 +329,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/08_c6_b29_quota-circus-pr-2-seats.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_fractional_surplus.yaml) |
+| [`bv2210_fvg8y8_star_pr_share`](../../method_comparisons/food_truck_row/food_truck_row_pages/bv2210_fvg8y8_star_pr_share.md) | `method_comparisons/food_truck_row/` | 2 | Food-Truck Row — STAR-PR / Allocated Score: one seat per side → _Arepa, Donut_ | [`.yaml`](../../method_comparisons/food_truck_row/bv2210_fvg8y8_star_pr_share.yaml) |
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/_main/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/_main/02a_c5_b63_proportional-allocated-score.yaml) |
 | [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/BV_Library_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
@@ -343,7 +352,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/multiwinner/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/multiwinner/multiwinner_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/multiwinner/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (16)
+## BLOC STAR  (17)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -356,6 +365,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/_main/_main_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/_main/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/_main/bv1815_bloc_3c2s_basic.yaml) |
 | [`bv2105_r4dqvd_ice_cream_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv2105_r4dqvd_ice_cream_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention → _Chocolate, Strawberry_ | [`.yaml`](../../02_STAR_Bloc/_main/bv2105_r4dqvd_ice_cream_bloc.yaml) |
 | [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/_main/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.yaml) |
+| [`bv2210_fvg8y8_bloc_star_sweep`](../../method_comparisons/food_truck_row/food_truck_row_pages/bv2210_fvg8y8_bloc_star_sweep.md) | `method_comparisons/food_truck_row/` | 2 | Food-Truck Row — Bloc STAR: the same majority sweeps both seats → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/bv2210_fvg8y8_bloc_star_sweep.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/_main/_main_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/_main/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/_main/_main_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/_main/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/_main/bv130r2_dead_rung_bloc.yaml) |
 | [`07a_c5_b36_herb-council-bloc-3-seats`](../../06_Other/ballot_style_lab/ballot_style_lab_pages/07a_c5_b36_herb-council-bloc-3-seats.md) | `06_Other/ballot_style_lab/` | 3 | The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep) → _Basil, Chive, Dill_ | [`.yaml`](../../06_Other/ballot_style_lab/07a_c5_b36_herb-council-bloc-3-seats.yaml) |
@@ -386,7 +396,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (20)
+## PLURALITY  (21)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -405,6 +415,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/pet_poll_four_winners_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_plurality.yaml) |
 | [`bv2177_v8r66y_plurality`](../../method_comparisons/postit_rcv_example/postit_rcv_example_pages/bv2177_v8r66y_plurality.md) | `method_comparisons/postit_rcv_example/` | 1 | The Post-it election, seven ways — Choose-One: Purple on 7 first choices → _Purple_ | [`.yaml`](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_plurality.yaml) |
 | [`bv2170_pp2q4q_plurality`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_plurality.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6 → _Blake_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_plurality.yaml) |
+| [`bv2210_fvg8y8_sntv_split`](../../method_comparisons/food_truck_row/food_truck_row_pages/bv2210_fvg8y8_sntv_split.md) | `method_comparisons/food_truck_row/` | 2 | Food-Truck Row — SNTV: the 57% majority splits three ways and gets zero seats → _Donut, Eclair_ | [`.yaml`](../../method_comparisons/food_truck_row/bv2210_fvg8y8_sntv_split.yaml) |
 | [`pets_gov_bloc_plurality`](../../method_comparisons/pets_governance/pets_governance_pages/pets_gov_bloc_plurality.md) | `method_comparisons/pets_governance/` | 2 | Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each → _Dog, Bird_ | [`.yaml`](../../method_comparisons/pets_governance/pets_gov_bloc_plurality.yaml) |
 | [`sntv_village_council`](../../method_comparisons/sntv_village_council/sntv_village_council_pages/sntv_village_council.md) | `method_comparisons/sntv_village_council/` | 2 | Village Council by SNTV — a concentrated minority wins a seat → _Priya, Nora_ | [`.yaml`](../../method_comparisons/sntv_village_council/sntv_village_council.yaml) |
 | [`mmp_block_voting`](../../method_comparisons/multi_member_plurality/multi_member_plurality_pages/mmp_block_voting.md) | `method_comparisons/multi_member_plurality/` | 3 | Multi-member plurality — Block Voting (3 seats): majority sweeps → _Ada, Ben, Cal_ | [`.yaml`](../../method_comparisons/multi_member_plurality/mmp_block_voting.yaml) |

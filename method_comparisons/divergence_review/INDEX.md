@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **177** single-winner STAR elections (skipped 107 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **102** (58%) diverge from STAR under at least one method; **75** agree across the board.
+- Scanned **178** single-winner STAR elections (skipped 107 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **103** (58%) diverge from STAR under at least one method; **75** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 21 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 15 |
-| CYCLE_OR_THREE_WAY | 25 |
+| CYCLE_OR_THREE_WAY | 26 |
 | APPROVAL_OR_MINOR | 38 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (98 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (99 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 19
 
@@ -134,7 +134,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
 
-### CYCLE_OR_THREE_WAY — 23
+### CYCLE_OR_THREE_WAY — 24
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -144,6 +144,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Chris** · IRV=Bella · RR=Chris · Approval=Alex · Score=Alex · Condorcet=none
 - **[ex13_opinions](cases/CYCLE_OR_THREE_WAY/ex13_opinions.md)** — `01_STAR/exercises/ex13_opinions.yaml` (3c/9b)  
     STAR=**Cora** · IRV=Cora · RR=Ash · Approval=Ash · Score=Ash · Condorcet=none
+- **[bv2212_g3f7r2_cycle_spoiler](cases/CYCLE_OR_THREE_WAY/bv2212_g3f7r2_cycle_spoiler.md)** — `01_STAR/iia_cycle_spoiler/bv2212_g3f7r2_cycle_spoiler.yaml` (3c/23b)  
+    STAR=**Alice** · IRV=Carla · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  
     STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none  
     _also at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`_

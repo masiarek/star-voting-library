@@ -41,6 +41,7 @@ you need not hoard every spec here.
 #   BV2136 — Village Council by SNTV (multi-winner Plurality) -> y3tvxm  (backs method_comparisons/sntv_village_council)
 #   BV2187 — Ann, Bob, Cal (canonical STAR mechanics demo)      -> qrw6wb  (backs 01_STAR/_main/bv2187_qrw6wb_ann-bob-cal)
 #   BV830 — No Condorcet winner (top-two tie, score breaks it)   -> vb3xv2  (backs 01_STAR/… bv830_vb3xv2_no_condorcet_tie_score; STAR-only, RR unfreezable)
+#   BV2212 — STAR IIA under a Condorcet cycle (cycle-spoiler)      -> g3f7r2  (STAR-only, RR unfreezable; a losing candidate flips the winner)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -3287,4 +3288,43 @@ _FOOD_TRUCK = [
 # jwxr3j, now fvg8y8). Case folder: method_comparisons/food_truck_row/.
 # Do NOT re-run (permanent dupes).
 
-ELECTIONS: list = []   # BV2203-2210 created 2026-07-17 — reset to safe empty state
+# --- BV2212 — STAR IIA under a Condorcet cycle (cycle-spoiler; STAR single-winner) -
+# Backs a STAR honest-limits case: three rotating factions, no Condorcet winner.
+# STAR elects Alice; dropping the losing finalist Ben flips the winner to Carla with
+# no score changed — an IIA failure in the runoff STAGE (Excellent_Air8235, r/EndFPTP,
+# 2026-07). STAR-only on BV: RR here is a Copeland 3-way tie (LH breaks by margin ->
+# Alice; BV breaks randomly) so RR is unfreezable, like BV830.
+_CYCLE_CANDS = ["Alice", "Ben", "Carla"]
+_CYCLE_STAR = _expand([(10, [5, 3, 0]), (6, [0, 5, 3]), (7, [3, 0, 5])])
+
+_STAR_IIA_CYCLE = [
+    {
+        "test_id": "BV2212",
+        "title": "STAR IIA under a Condorcet cycle — a losing candidate flips Alice vs Carla",
+        "description": (
+            "From the STAR education repo (github.com/masiarek/star-voting-library) — "
+            "STAR's sharpest honest limit, made mechanical. 23 voters, three rotating "
+            "factions voting sincerely (favorite 5, compromise 3, last 0). Head-to-head "
+            "is a Condorcet CYCLE: Alice>Ben, Ben>Carla, Carla>Alice — no Condorcet "
+            "winner. Score round: Alice 71, Ben 60, Carla 53, so the finalists are Alice "
+            "and Ben, and Alice wins the runoff. But drop Ben — who never wins — and the "
+            "finalists become Alice and Carla, whose runoff Carla wins: a losing "
+            "candidate decided Alice vs Carla with not one score changed, an "
+            "Independence-of-Irrelevant-Alternatives failure in the runoff stage. Bonus "
+            "divergence: STAR->Alice, RCV-IRV->Carla, Ranked Robin->Alice (Copeland "
+            "3-way tie broken by margin). LH-verified."),
+        "method": "STAR",
+        "num_winners": 1,
+        "candidates": _CYCLE_CANDS,
+        "ballots": _CYCLE_STAR,
+        "enable_write_in": False,
+        "expected": "STAR -> Alice (finalists Alice 71 & Ben 60; runoff Alice beats "
+                    "Ben). Drop Ben -> Carla wins (IIA failure). No Condorcet winner "
+                    "(cycle). Test ID BV2212.",
+    },
+]
+
+# RESULTS (2026-07-18): BV2212 -> g3f7r2 — created + 23/23 ballots cast OK.
+# STAR -> Alice (expected). Backs a STAR honest-limits cycle-spoiler case; RR
+# unfreezable (Copeland 3-way tie). Do NOT re-run (permanent dupes).
+ELECTIONS: list = []   # reset to safe empty state (BV2212 done 2026-07-18)

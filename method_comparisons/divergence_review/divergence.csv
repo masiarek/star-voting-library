@@ -115,6 +115,7 @@ APPROVAL_OR_MINOR,method_comparisons/summability_demo/star_district_B.yaml,3,3,O
 CYCLE_OR_THREE_WAY,01_STAR/exercises/ex02_nine_ballots.yaml,5,9,Alex,Bella,Bella,Eli,Eli,Alex,Alex,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/exercises/ex02_tenth_ballot.yaml,5,10,Chris,Bella,Bella,Chris,Chris,Alex,Alex,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/exercises/ex13_opinions.yaml,3,9,Cora,Cora,Cora,Ash,Ash,Ash,Ash,,,0,False,False,True
+CYCLE_OR_THREE_WAY,01_STAR/iia_cycle_spoiler/bv2212_g3f7r2_cycle_spoiler.yaml,3,23,Alice,Carla,Carla,Alice,Alice,Alice,Alice,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml,3,3,C,B,B,C,C,C,C,,,0,False,False,True
