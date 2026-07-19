@@ -33,21 +33,32 @@ This is the one thing to keep straight, because the name invites the opposite co
 
 ## Worked example 1 — the ladder doing real work
 
-Suppose three candidates tie (say, for the final finalist slot), and their head-to-head matchups form a **cycle** — each beats one and loses to one, so nobody is a Condorcet winner *among the tied set*:
+Nine voters, three candidates, real score ballots — the LH engine confirms every number below:
 
-| Head-to-head | Preferred | Opposed | Margin |
-|---|---:|---:|---:|
-| **Rosa** ▸ Sam | 15 | 12 | **+3** |
-| **Sam** ▸ Tess | 16 | 11 | **+5** |
-| **Tess** ▸ Rosa | 14 | 13 | **+1** |
+```
+Count × Rosa,Sam,Tess
+    4 ×    5,  3,   1
+    3 ×    1,  5,   3
+    2 ×    3,  1,   5
+```
 
-Walk the ladder:
+Their head-to-head (preference) matrix is a **cycle** — each beats one and loses to one, so there is no Condorcet winner *among them*:
 
-- **Step 1 — Matches won:** Rosa 1, Sam 1, Tess 1. A three-way cycle ties this rung. *Continue.*
-- **Step 2 — Total preference votes:** Rosa 15 + 13 = **28**, Sam 12 + 16 = **28**, Tess 11 + 14 = **25**. Tess (25) is eliminated; Rosa and Sam tie at 28. *Continue between Rosa and Sam.*
-- **Step 3 — Win margin:** Rosa's winning margin is **+3** (over Sam); Sam's is **+5** (over Tess). Sam's is larger → **Sam wins the tiebreak.** *Decided — random is never reached.*
+```
+               |   * Rosa   |  * Sam    |    Tess   |
+      * Rosa > |    ---     |6 - 0 - 3  |4 - 0 - 5  |
+       * Sam > | 3 - 0 - 6  |   ---     |7 - 0 - 2  |
+        Tess > | 5 - 0 - 4  |2 - 0 - 7  |   ---     |
+  No Condorcet winner (majority cycle: Rosa > Sam > Tess > Rosa)
+```
 
-The point: steps 1–3 are not decoration — a genuine cycle sinks past "matches won," and the deeper rungs still produce a deterministic winner. Note also that **LH's ladder would ask a different question here.** After the pairwise/matches-won rung ties, the LH engine consults **five-star counts**, not preference-votes-then-margin. Because rung 2 measures a different thing, the two protocols *can* name different winners on the same tied ballots — which is why this is a genuinely **third** protocol, not a restatement of the LH chain.
+Now suppose these three are **tied** and a tiebreaker must choose among them. Walk the Condorcet Tiebreaker on this real matrix:
+
+- **Step 1 — Matches won:** Rosa 1 (beat Sam), Sam 1 (beat Tess), Tess 1 (beat Rosa). A three-way cycle ties this rung. *Continue.*
+- **Step 2 — Total preference votes:** Rosa 6 + 4 = **10**, Sam 3 + 7 = **10**, Tess 2 + 5 = **7**. Tess (7) is eliminated; Rosa and Sam tie at 10. *Continue between Rosa and Sam.*
+- **Step 3 — Win margin:** Rosa's winning margin is **+3** (6–3 over Sam); Sam's is **+5** (7–2 over Tess). Sam's is larger → **Sam wins the tiebreak.** *Decided — random is never reached.*
+
+Here is the payoff, and it is the whole reason this is a **third** protocol: on the *same nine ballots*, **LH's ladder would break the identical three-way tie differently.** After matches-won ties on the cycle, LH consults **five-star counts** — Rosa has four 5s, Sam three, Tess two — so LH's rung 2 picks **Rosa**, while the Condorcet Tiebreaker's rung 2/3 (preference votes, then margin) picks **Sam**. Same tie, same ballots, two protocols, two winners. Steps 1–3 are not decoration: a genuine cycle sinks past "matches won," and the deeper rungs still name a deterministic — and *distinct* — winner. (Aside: the full STAR count here also elects Rosa, by a different route — Rosa and Sam tie the scoring round at 29 each, both advance, and Rosa takes the runoff 6–3.)
 
 ---
 
