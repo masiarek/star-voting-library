@@ -551,6 +551,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Ranked Robin (Condorcet) — head-to-head wins | RankedRobin | 3 | **Peltola** |
 | STAR — score then automatic runoff | STAR | 3 | **Peltola** |
 
+## BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers
+
+**Election** [`2p33qq`](https://bettervoting.com/2p33qq/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner/bv2215_2p33qq_minority_winner_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — mark your one favorite | Plurality | 3 | **Ada** |
+| Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 3 | **Cleo** |
+| STAR — score 0-5, then an automatic runoff | STAR | 3 | **Cleo** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

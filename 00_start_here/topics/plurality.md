@@ -22,17 +22,15 @@ The single mark is the root of a whole family of problems:
 
 ### Show me — a minority winner, worked
 
-Five candidates, twenty voters. Under Choose-One only *first* choices count:
+100 voters, three candidates. Under Choose-One only *first* choices count:
 
 | Candidate | First choices | |
 |---|--:|:--|
-| **Erik** | **6 — 30%** | ← wins |
-| Amy | 5 | |
-| Ben | 4 | |
-| Dana | 3 | |
-| Cole | 2 | |
+| **Ada** | **34 — 34%** | ← wins |
+| Ben | 33 | |
+| Cleo | 33 | |
 
-Erik takes office on **30%** — while **70% ranked someone else first, and nearly all scored him a flat 0.** Now read the *whole* ballot: Cole had just 2 first choices but broad, warm support everywhere (most voters rate him 4). He leads STAR's scoring round (70), wins the automatic runoff, and beats every rival head-to-head — the Condorcet winner. **[STAR](../STAR_Voting/STAR_start_here.md) and [Ranked Robin](../RCV_Ranked_Robin/why_ranked_robin.md) both elect Cole**, the candidate a majority is genuinely glad about; only first-choice counting crowns Erik. Same opinions, no strategy — the difference is how much of the ballot the method reads. See the whole field lined up in [same opinions, every method](same_opinions_every_method.md); run this one: [`minority_winner_c5_b20.yaml`](../../method_comparisons/minority_winner/minority_winner_c5_b20.yaml).
+Ada takes office on **34%** — but **66 of the 100 voters scored her 0 or 1.** Two-thirds didn't want her; they just split their first choices between Ben and Cleo. Now read the *whole* ballot: Cleo is nobody's fiery favorite (33 first choices) but everybody's easy second — she leads STAR's scoring round (433), wins the automatic runoff over Ada **66–34**, and beats both rivals head-to-head (the Condorcet winner). **[STAR](../STAR_Voting/STAR_start_here.md) and [Ranked Robin](../RCV_Ranked_Robin/why_ranked_robin.md) both elect Cleo**, the candidate a majority is genuinely glad about; only first-choice counting crowns Ada. Same opinions, no strategy — the difference is how much of the ballot the method reads. (With a bigger field it gets starker — Choose-One winners can take office on 10–20%.) The full worked page: [minority winner](../../method_comparisons/minority_winner/README.md) · the whole field lined up: [same opinions, every method](same_opinions_every_method.md).
 
 ## Its relationship to the other methods
 

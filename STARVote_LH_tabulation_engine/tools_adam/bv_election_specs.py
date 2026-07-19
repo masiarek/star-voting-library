@@ -44,6 +44,7 @@ you need not hoard every spec here.
 #   BV2212 — STAR IIA under a Condorcet cycle (cycle-spoiler)      -> g3f7r2  (STAR-only, RR unfreezable; a losing candidate flips the winner)
 #   BV2213 — Alaska 2022 special (reduced 200-voter model, 4 races) -> k3fmwv  (Plurality/IRV -> Peltola; RR/STAR -> Begich, the Condorcet winner IRV cut)
 #   BV2214 — Alaska 2022 GENERAL (reduced model, 4 races) -> m3hb6y  (all four -> Peltola, the Condorcet winner; the "IRV got it right" counterpart to BV2213)
+#   BV2215 — Minority winner (canonical; 3 races) -> 2p33qq  (Plurality -> Ada on 34%; RR & STAR -> Cleo, the majority's real choice)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -3451,4 +3452,52 @@ _ALASKA_GENERAL = [
 # RESULTS (2026-07-19): BV2214 -> m3hb6y — created + 200/200 ballots × 4 races OK.
 # Backs method_comparisons/alaska_2022_general (the "IRV got it right" counterpart).
 # All four counts -> Peltola (Condorcet winner). RR freezable. Do NOT re-run.
-ELECTIONS: list = []   # reset to safe empty state (BV2214 done 2026-07-19)
+# --- BV2215 — Minority winner: 34% wins Choose-One; STAR & RR find the consensus --
+# The canonical minority/plurality-winner example. 100 voters, 3 candidates. Ada has
+# a devoted third (34 first choices) and wins Choose-One on 34% while 66% rate her
+# <=1; Cleo is everyone's warm 4-or-5, the Condorcet winner (beats both head-to-head),
+# and STAR + Ranked Robin both elect her. IRV deliberately omitted (Cleo, a minority-
+# first-choice centrist, is elimination-tie-fragile here -> not cleanly freezable, and
+# the lesson is about Choose-One, not IRV). All three included races deterministic.
+_MW_CANDS = ["Ada", "Ben", "Cleo"]
+_MW_STAR = _expand([(34,[5,0,4]),(33,[0,5,4]),(33,[2,1,5])])
+_MW_PLUR = _expand([(34,[1,0,0]),(33,[0,1,0]),(33,[0,0,1])])
+_MW_RANK = _expand([(34,[1,3,2]),(33,[3,1,2]),(33,[2,3,1])])
+
+_MINORITY_WINNER = [
+    {
+        "test_id": "BV2215",
+        "title": ("Minority winner — 34% wins Choose-One, but STAR & Ranked Robin "
+                  "elect the candidate a majority prefers"),
+        "description": (
+            "The canonical minority/plurality-winner example from the STAR education "
+            "repo (github.com/masiarek/star-voting-library). 100 voters, three "
+            "candidates. Ada has a passionate third of the electorate: 34 rank her "
+            "first, so under Choose-One (Plurality) she WINS with 34% — even though 66 "
+            "of 100 voters score her 0 or 1. Cleo tells the opposite story: everyone's "
+            "warm second choice (most voters rate her 4-5), she is the Condorcet winner "
+            "(beats Ada 66-34 and Ben 67-33 head-to-head), leads STAR's scoring round "
+            "(433), and wins the automatic runoff 66-34. So STAR and Ranked Robin both "
+            "elect Cleo, the candidate a majority is genuinely glad about; only "
+            "first-choice-only counting crowns Ada on a third of the vote. Same "
+            "opinions, no strategy — the difference is how much of the ballot the "
+            "method reads. (RCV-IRV is not shown; the lesson is about Choose-One.)"),
+        "races": [
+            {"title": "Choose-One (Plurality) — mark your one favorite", "method": "Plurality",
+             "num_winners": 1, "candidates": _MW_CANDS, "ballots": _MW_PLUR},
+            {"title": "Ranked Robin (Condorcet) — rank; every pair head-to-head", "method": "RankedRobin",
+             "num_winners": 1, "max_rankings": 3, "candidates": _MW_CANDS, "ballots": _MW_RANK},
+            {"title": "STAR — score 0-5, then an automatic runoff", "method": "STAR",
+             "num_winners": 1, "candidates": _MW_CANDS, "ballots": _MW_STAR},
+        ],
+        "enable_write_in": False,
+        "expected": "Plurality -> Ada (34 of 100). Ranked Robin -> Cleo (Condorcet, "
+                    "beats both). STAR -> Cleo (scoring round 433; runoff 66-34 over "
+                    "Ada). Test ID BV2215.",
+    },
+]
+
+# RESULTS (2026-07-19): BV2215 -> 2p33qq — created + 100/100 ballots × 3 races OK.
+# Canonical minority-winner example; backs method_comparisons/minority_winner.
+# Plurality -> Ada (34); RR & STAR -> Cleo (Condorcet). All deterministic. Do NOT re-run.
+ELECTIONS: list = []   # reset to safe empty state (BV2215 done 2026-07-19)

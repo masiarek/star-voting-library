@@ -1,5 +1,6 @@
 ﻿election_id,title,races,kind,voters,methods,backing
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
+2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
@@ -194,7 +195,6 @@ LH:lackner_skowron_shadow_star_pr_rrv_c7_b12,Shadow STAR-PR (RRV) — Lackner & 
 LH:lot_random_vs_published_jfk7pd_published_order,Lot-decided tie (BV jfk7pd) — following a deterministic published order,1,single-race,2,STAR,LH-only
 LH:lot_tiebreak_bv_order,Lot tiebreak — following BetterVoting's drawn order,1,single-race,2,STAR,LH-only
 LH:lot_tiebreak_published_order,Lot tiebreak — following the new published-lot approach,1,single-race,2,STAR,LH-only
-LH:minority_winner_c5_b20,A crowded race — Plurality's minority winner vs STAR's consensus,1,single-race,20,STAR,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,1,single-race,34,IRV,LH-only
 LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only

@@ -66,6 +66,7 @@ AGREE,method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_star.yaml,3,7,Bo,Bo,
 AGREE,method_comparisons/felsenthal_paradoxes/bv2146_krk2px_star.yaml,3,17,Ada,Ada,Ada,Ada,Ada,Ada,Ben,Ada,Ada,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_star.yaml,3,9,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_star.yaml,4,103,B,B,B,B,B,B,B,B,B,0,False,False,False
+AGREE,method_comparisons/minority_winner/bv2215_2p33qq_minority_winner.yaml,3,100,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml,3,100,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/01_political_left_split.yaml,4,100,Labour,Labour,Labour,Labour,Labour,Labour,Labour,Labour,Labour,22,False,False,False
 AGREE,method_comparisons/split_voting/_main/02_icecream_chocolate_split.yaml,4,100,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,MilkChoco,22,False,False,False
@@ -154,7 +155,6 @@ IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml,4,47,Ca
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml,4,24,Beige,Azure,Dune,Coral,Azure,Azure,Azure,,Azure,16,True,True,True
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
-IRV_DIFFERS_ARTIFACT,method_comparisons/minority_winner/minority_winner_c5_b20.yaml,5,20,Cole,Amy,Dana,Cole,Cole,Cole,Cole,Cole,Cole,14,True,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False
