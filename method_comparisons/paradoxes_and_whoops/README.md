@@ -44,7 +44,7 @@ All three cases here pass that test (Tennessee is canonical; the STAR miss and t
 
 ## Live on BetterVoting (BV2155–BV2159)
 
-Every case in this gallery is now a **real BetterVoting election** (created 2026-07; STAR is race 1 in each, per house style, with the comparison methods as further races on the same ballots). All 16 races match the LH tabulation exactly — the contrast here is **method vs method**, and BV and LH agree on every count. Frozen exports sit beside each case as `bv215N_<bvid>_bv_export.json`.
+Every case in this gallery is now a **real BetterVoting election** (created 2026-07; STAR is race 1 in each, per house style, with the comparison methods as further races on the same ballots). All 16 races match this library's own independent count (the "LH" engine, a fork of Larry Hastings' `starvote`) exactly — the contrast here is **method vs method**, and BetterVoting and the engine agree on every count. Frozen exports sit beside each case as `bv215N_<bvid>_bv_export.json`.
 
 ## Run them yourself
 

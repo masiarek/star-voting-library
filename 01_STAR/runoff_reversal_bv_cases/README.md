@@ -2,9 +2,9 @@
 
 Real BetterVoting elections that demonstrate a **Runoff Reversal** — the Scoring-Round leader *loses* the Automatic Runoff to the finalist more voters prefer (the *score* winner ≠ the *STAR* winner). Each is a **two-view lesson**: BetterVoting's own screenshots beside the Larry Hastings engine report, so you see both how the result *looks* in the BV UI and how it *tallies* in the engine.
 
-New to the idea itself? Start with the concept folder next door — **[When the top-scoring candidate isn't the winner](../runoff_overturns_leader/README.md)** (the plain explanation + the small LH-only teaching demos) — and the presenter's guide, [Teaching Runoff Reversal](../runoff_overturns_leader/teaching_runoff_reversal.md). Concept hub: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md).
+New to the idea itself? Start with the concept folder next door — **[When the top-scoring candidate isn't the winner](../runoff_overturns_leader/README.md)** (the plain explanation + small teaching demos that run in the library's own engine only) — and the presenter's guide, [Teaching Runoff Reversal](../runoff_overturns_leader/teaching_runoff_reversal.md). Concept hub: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md).
 
-> **When to use two views (house principle).** Show BetterVoting beside the LH report only where the two **diverge** (the discrepancy is the lesson, e.g. `Runoff_07`) or where reading **BV's own UI** is the point (this set — the screenshots teach how a STAR result *looks*). When BV and LH simply agree and there's no UI to teach, LH-only is enough (see the [vote-splitting set](../../method_comparisons/split_voting/)).
+> **When to use two views (house principle).** Show BetterVoting beside the open-source engine's report (the "LH" tabulator) only where the two **diverge** (the discrepancy is the lesson, e.g. `Runoff_07`) or where reading **BV's own UI** is the point (this set — the screenshots teach how a STAR result *looks*). When BV and LH simply agree and there's no UI to teach, LH-only is enough (see the [vote-splitting set](../../method_comparisons/split_voting/)).
 
 Read them in order — the *how much vs how many* arc, smallest reversal first:
 

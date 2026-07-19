@@ -10,7 +10,7 @@ The most-cited real-world IRV failure, reproduced in this repo from the **actual
 | RCV-IRV (the rule actually in force) | **Bob Kiss** (P) — won the final 4,313–4,059 |
 | Any Condorcet count (Ranked Robin here) | **Andy Montroll** (D) — beats *everyone* head-to-head |
 
-Every teaching claim on this page is runnable: the yamls below are the real profile, and the LH engine reproduces the official figures within ±1 (a 6-ballot / 0.07% exclusion of equal-rank overvotes not representable in ranked syntax — every margin at stake is hundreds of votes).
+Every teaching claim on this page is runnable: the yamls below are the real profile, and this library's own open-source engine (the "LH" tabulator, a fork of Larry Hastings' `starvote`) reproduces the official figures within ±1 (a 6-ballot / 0.07% exclusion of equal-rank overvotes not representable in ranked syntax — every margin at stake is hundreds of votes).
 
 ## What happened under IRV
 
