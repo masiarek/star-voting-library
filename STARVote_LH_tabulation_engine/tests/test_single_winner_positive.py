@@ -3,7 +3,10 @@ test_single_winner_positive.py
 ==============================
 Positive regression tests for the single-winner STAR example/test cases.
 
-For every single-winner STAR file that declares `expected_winners`, we:
+Covers both file schemas: flat (`expected_winners` at top level) and nested
+BV/converter (`election.races[0].expected_results.winners`), single-race only.
+
+For every single-winner STAR file that declares an expected winner, we:
   1. run the engine through its CLI (a subprocess) — this is the real path that
      also (re)writes the `*_tabulated/<name>_tabulated.txt` sibling, so the test
      doubles as a check that tabulation succeeds and the _tabulated file is
@@ -43,7 +46,13 @@ SINGLE_WINNER_DIRS = [
     REPO_ROOT / "01_STAR" / "tie_break_dead_rung" / "lot_random_vs_published_jfk7pd",
     REPO_ROOT / "01_STAR" / "tie_break_dead_rung" / "three_way_dead_rung_tie",
     REPO_ROOT / "01_STAR" / "exercises",
+    REPO_ROOT / "01_STAR" / "Flat_scores_ties",
+    REPO_ROOT / "01_STAR" / "iia_cycle_spoiler",
+    REPO_ROOT / "01_STAR" / "pet_real_bv_election",
+    REPO_ROOT / "01_STAR" / "tie_break_ladder",
     REPO_ROOT / "method_comparisons" / "alaska_2022",
+    REPO_ROOT / "method_comparisons" / "center_squeeze",
+    REPO_ROOT / "method_comparisons" / "paradoxes_and_whoops",
     REPO_ROOT / "method_comparisons" / "monotonicity",
     REPO_ROOT / "method_comparisons" / "summability_demo",
     REPO_ROOT / "method_comparisons" / "BV_Library",
@@ -61,29 +70,67 @@ def _load(path):
         return None
 
 
+def _star_single_view(data):
+    """Normalize a loaded YAML into (method, num_winners, ballots, winners) for a
+    single-winner case, handling BOTH schemas:
+
+      * flat        — top-level `voting_method` / `num_winners` / `ballots` /
+                      `expected_winners` (Burlington-style teaching files);
+      * nested BV   — `election: { races: [ {voting_method, num_winners, ballots,
+                      expected_results: {winners: [...]}} ] }` (converter / BV-backed
+                      cases like bv830, bv2212).
+
+    Returns None if `data` isn't a dict, or is a *multi*-race nested file (those are
+    covered by the multirace tests, not here)."""
+    if not isinstance(data, dict):
+        return None
+    election = data.get("election")
+    if isinstance(election, dict) and "races" in election:
+        races = election.get("races")
+        if not (isinstance(races, list) and len(races) == 1):
+            return None                    # multi-race -> not this suite
+        race = races[0]
+        if not isinstance(race, dict) or "ballots" not in race:
+            return None
+        er = race.get("expected_results")
+        winners = er.get("winners") if isinstance(er, dict) else None
+        return (
+            str(race.get("voting_method", "star")).strip().lower(),
+            race.get("num_winners", 1),
+            str(race.get("ballots", "")),
+            winners,
+        )
+    if "ballots" not in data:
+        return None
+    return (
+        str(data.get("voting_method", "star")).strip().lower(),
+        data.get("num_winners", 1),
+        str(data.get("ballots", "")),
+        data.get("expected_winners"),
+    )
+
+
 def _single_winner_positive_files():
     files = []
     for d in SINGLE_WINNER_DIRS:
         if not d.is_dir():
             continue
         for p in sorted(d.glob("*.yaml")):
-            data = _load(p)
-            if not isinstance(data, dict) or "ballots" not in data:
+            view = _star_single_view(_load(p))
+            if view is None:
                 continue
-            method = str(data.get("voting_method", "star")).strip().lower()
+            method, num_winners, ballots, ew = view
             if method != "star":          # single-winner STAR only
                 continue
-            if data.get("num_winners", 1) not in (1, None):
+            if num_winners not in (1, None):
                 continue
             # ranked ballots (A>B>C) -> not a score/STAR file. Strip per-line
             # comments first, so a rank annotation in a comment (e.g.
             # "14:4,3,5,2,1  # Carmen base (C > A > B)") doesn't exclude a
             # genuine score file. (Mirrors the engines' own detection.)
-            _ballots = str(data.get("ballots", ""))
-            _ballots = "\n".join(ln.split("#")[0] for ln in _ballots.splitlines())
+            _ballots = "\n".join(ln.split("#")[0] for ln in ballots.splitlines())
             if ">" in _ballots:
                 continue
-            ew = data.get("expected_winners")
             if not (isinstance(ew, list) and len(ew) == 1):
                 continue
             files.append(p)
@@ -113,7 +160,7 @@ def test_at_least_one_case_discovered():
 
 @pytest.mark.parametrize("path", POSITIVE, ids=POSITIVE_IDS)
 def test_single_winner_tabulates_and_elects_expected(path, tmp_path):
-    expected = _load(path)["expected_winners"]
+    expected = _star_single_view(_load(path))[3]
 
     # Run the CLI on a TEMP COPY so the engine writes its _tabulated artifact
     # into tmp_path, never the tracked repo copy. (The engine derives the output
