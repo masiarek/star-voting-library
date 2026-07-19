@@ -72,6 +72,15 @@ In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they 
 
 *(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).)*
 
+## A theorist's "best": the candidate at the center
+
+The ideals above are values choices — but there's one framing where theory *does* pin down a single "best" candidate, **independent of any voting rule** (which matters, because "whoever the rule elects" is circular — rules disagree as the field changes; that's Arrow). It's the [spatial model](spatial_voting_model.md): place every voter's ideal at a point in issue-space. Then "best," per Tideman & Plassmann (*"Which voting rule is most likely to choose the 'best' candidate?"*, *Public Choice* 158 (2014): 331–357), has two natural readings — and they agree:
+
+- **Voters as disinterested judges** (each estimating what's best for society): the best candidate is the one **closest to the mean** of all the ideal points — the electorate's center of gravity.
+- **Voters as self-interested advocates**: the best candidate **minimizes the total distance** to every voter — the smallest aggregate compromise, the utilitarian least-unhappiness pick.
+
+As the electorate grows, **these two definitions converge**: the minimize-total-distance candidate *is* the one at the mean. So a procedure-independent "best" exists after all — **the candidate nearest the center of the electorate** — even if no voting rule is guaranteed to elect them. That candidate is precisely the "optimal winner" the **VSE** score below measures methods against, and the operational cousin of the [utilitarian](#the-deepest-split-majoritarian-vs-utilitarian) ideal. And it's no accident that this is where **STAR and Ranked Robin aim** — scores and head-to-heads both pull toward the center — and the candidate **Choose-One and IRV can eliminate for lacking first-choice support** (the [center squeeze](center_squeeze/); Alaska's Begich is a real one).
+
 ## Measuring it empirically: VSE / Bayesian Regret
 
 If there's no single definition of the *correct* winner, how do reformers compare methods? By **simulation**. **Voter Satisfaction Efficiency (VSE)** — the modern form of what earlier work called **Bayesian Regret** — models an electorate (usually a [spatial model](https://electowiki.org/wiki/Spatial_model): voters and candidates as points, closer = more preferred), runs thousands of simulated elections, and scores each method by *how satisfied the average voter is with the winner it produces* — 100% = the utility-maximizing winner every time, 0% = a random winner.
