@@ -24,6 +24,29 @@ It's the same voter, the same opinion, as on [the ranked ballot](ranked_ballot.m
 
 Note what survived the trip: here Carmen = David is *recorded* — the ranking had to fake a 2nd-vs-3rd difference, and Yes/No can't tell Andre from David at all. The full side-by-side walk-through is [alternate ballot styles](../topics/ballot_styles.md).
 
+## Writing it down — the grid, and why not to read it by columns
+
+This library writes elections as a text **grid** (it's what the tabulation engine reads, and it's just a spreadsheet):
+
+```
+A, B, C     ← the header names the candidates (the COLUMNS)
+5, 2, 0     ← each following row is ONE voter's whole ballot, read left→right
+0, 5, 3
+```
+
+The one thing to get right: **rows are voters, columns are candidates.** The first data row above is a single voter who gave **A = 5, B = 2, C = 0** — *not* candidate A's three scores read downward. (This is the *transpose* of the paper ballot up top, which lists one candidate per row; the grid just turns it on its side so a whole ballot fits on one line.) A small square grid like 3 voters × 3 candidates is the easiest to misread — the header is your anchor: whatever a cell sits under is the candidate it scores.
+
+The same single ballot can be written several equivalent ways — all of these say *A five, B two, C zero*:
+
+| Notation | Example | Where you'll see it |
+|---|---|---|
+| **Grid row** (this library) | `A, B, C` then `5, 2, 0` | YAML files, case pages, the engine |
+| **Colon / dict** | `{A: 5, B: 2, C: 0}` | prose, JSON-ish contexts |
+| **Equals** | `A=5, B=2, C=0` | quick inline notes |
+| **Bracket** | `A[5] B[2] C[0]` | occasionally in write-ups |
+
+(A slash form like `A/5, B/2, C/0` is **not** a standard convention — a slash usually reads as "or" or a fraction, so it's best avoided.) They're all the same ballot; the grid just happens to be the one a computer counts and a spreadsheet stores.
+
 ## The marking rules — deliberately hard to get wrong
 
 Every row is **independent** — there is no grid constraint tying your candidates together, which removes the ranked ballot's failure modes wholesale:
