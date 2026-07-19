@@ -529,6 +529,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Draw the line — Approval, approve 4 and up | Approval | 3 | **Beck** |
 | Draw the line — Approval, favorites only | Approval | 3 | **Cora** |
 
+## BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut
+
+**Election** [`k3fmwv`](https://bettervoting.com/k3fmwv/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — first choices only | Plurality | 3 | **Peltola** |
+| RCV-IRV (Hare) — instant runoff by elimination | IRV | 3 | **Peltola** |
+| Ranked Robin (Condorcet) — head-to-head wins | RankedRobin | 3 | **Begich** |
+| STAR — score then automatic runoff | STAR | 3 | **Begich** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

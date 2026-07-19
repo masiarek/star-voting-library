@@ -1,0 +1,37 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut
+ Tabulating 200 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Peltola, Begich, Palin
+    25 ×   Peltola      (5, 0, 0)
+    50 ×   Peltola > Begich      (5, 4, 0)
+     5 ×   Peltola > Palin      (5, 0, 4)
+    12 ×   Begich      (0, 5, 0)
+    16 ×   Begich > Peltola      (4, 5, 0)
+    29 ×   Begich > Palin      (0, 5, 4)
+    23 ×   Palin      (0, 0, 5)
+     4 ×   Palin > Peltola > Begich      (4, 3, 5)
+    36 ×   Palin > Begich      (0, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           80  Hopeful
+Palin             63  Hopeful
+Begich            57  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           96  Elected
+Palin             92  Rejected
+Begich             0  Rejected
+Blank Votes       12  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Peltola
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

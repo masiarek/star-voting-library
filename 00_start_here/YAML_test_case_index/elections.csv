@@ -35,6 +35,7 @@ gvdy42,2026 California Governor Election,2,contested (multi-race),319,"IRV, STAR
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV
 h93tm4,"BV2171 — The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest",7,contested (multi-race),8,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
+k3fmwv,"BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV

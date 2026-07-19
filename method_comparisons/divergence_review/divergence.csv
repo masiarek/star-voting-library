@@ -160,6 +160,7 @@ IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex05_center_squeeze.yaml,3,9,Brook,Av
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex06_bullet_honest.yaml,3,9,Bree,Cash,Cash,Bree,Bree,Bree,Bree,Bree,Bree,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/ex10_generous.yaml,3,9,Bess,Amir,Amir,Bess,Bess,Bess,Bess,Bess,Bess,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,YAML_library/1_positive/trash_delete.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022.yaml,3,200,Begich,Peltola,Peltola,Begich,Begich,Begich,Begich,Begich,Begich,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_star.yaml,3,27,Center,Left,Left,Center,Center,Left,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml,3,100,Anderson,Carter,Carter,Anderson,Anderson,Anderson,Anderson,Anderson,Anderson,0,False,False,False
