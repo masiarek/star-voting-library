@@ -9,8 +9,8 @@ How STAR resolves exact ties — the official tiebreaker ladder ("rungs"), what 
 - [STAR Tie-Breaking — The Full Chain](tie_breaking.md) — the complete ladder, rung by rung, with worked examples for ties in the scoring round and the runoff.
 - [The "dead rung" in STAR's official tiebreaker ladder](dead_rung_note_for_equal_vote.md) — a rung that can never decide anything, documented for Equal Vote.
 - [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md) — where BV exports record tie information and how it maps onto this library's `lot_numbers`.
+- [Equal Vote's optional *Condorcet Tiebreaker*](condorcet_tiebreaker.md) — the **third** protocol (matches-won → total preference votes → win margin → random), an alternative to the 5-Star Tiebreaker for hand counts, worked on two examples; and why a Condorcet *tiebreaker* is **not** Condorcet *compliance*.
 
 ## External reference
 
 - **[BetterVoting's official tie-breaking protocol](https://docs.bettervoting.com/help/ties.html)** — BetterVoting's own ladder, and the source of the random "lot" order our BV-backed cases carry. It's *close but not identical* to the LH ladder above (they part only on a genuinely tied race, and only at two rungs); [The Full Chain](tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ) pins down exactly where. (BetterVoting is advocacy-adjacent, but this is its own factual protocol doc.)
-- **[Equal Vote's optional *Condorcet Tiebreaker*](https://www.starvoting.org/condorcet_tiebreaker)** — a **third** protocol: an *alternative* to the recommended 5-Star Tiebreaker for **hand counts** (matches-won → total preference votes → win margin → random). It is a **tiebreaker, not Condorcet compliance** — STAR stays [not Condorcet-compliant](../properties_and_limits/STAR_honest_limits.md) even with it. (Advocacy-adjacent, but a factual protocol doc.)
