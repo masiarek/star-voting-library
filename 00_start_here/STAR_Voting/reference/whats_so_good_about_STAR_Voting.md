@@ -187,7 +187,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** Where?
 
-**Adam:** Go to **BetterVoting.com** and cast a STAR ballot right now. Bring it to your next club, board, or HOA vote — that's how it spreads. And dig into the science at **equal.vote/accuracy** and **equal.vote/star-vs-rcv**.
+**Adam:** Go to **BetterVoting.com** and cast a STAR ballot right now. Bring it to your next club, board, or HOA vote — that's how it spreads. And dig into the science at **equal.vote/accuracy**.
 
 > [SLIDE] Full Deck — "GET INVOLVED!" / "LET'S LEAD ON THIS ISSUE!" [DEMO] Close by sending the audience to a live BetterVoting poll (QR on screen).
 

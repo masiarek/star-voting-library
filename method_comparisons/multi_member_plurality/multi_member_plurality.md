@@ -35,7 +35,7 @@ This set's *point* is the Plurality-family framing (votes-per-voter), and our en
 ## References
 
 - **SNTV** — Wikipedia: [Single non-transferable vote](https://en.wikipedia.org/wiki/Single_non-transferable_vote) · electowiki: [Single non-transferable vote](https://electowiki.org/wiki/Single_non-transferable_vote)
-- **Limited voting** — Wikipedia: [Limited voting](https://en.wikipedia.org/wiki/Limited_voting) · electowiki: [Limited voting](https://electowiki.org/wiki/Limited_voting)
+- **Limited voting** — Wikipedia: [Limited voting](https://en.wikipedia.org/wiki/Limited_voting) · electowiki: [Limited voting (Wikipedia)](https://en.wikipedia.org/wiki/Limited_voting)
 - **Block voting** — Wikipedia: [Plurality block voting](https://en.wikipedia.org/wiki/Plurality_block_voting) · electowiki: [Bloc voting](https://electowiki.org/wiki/Bloc_voting)
 
 ## See also

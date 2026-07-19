@@ -114,6 +114,6 @@ Now the precise, technical statements (for readers who want them):
 - Later-no-harm criterion — Wikipedia: <https://en.wikipedia.org/wiki/Later-no-harm_criterion>
 - Woodall, D. (1997), *Monotonicity of single-seat preferential election rules* (Later-no-harm ⊥ Condorcet).
 - Gibbard (1973) / Satterthwaite (1975); Arrow (1951) — impossibility & strategy-proofness.
-- FairVote's majority-criterion argument against Score/Approval (the piece RMC responds to): <https://www.fairvote.org/why-approval-voting-is-unworkable-in-contested-elections>
+- FairVote's majority-criterion argument against Score/Approval (the piece RMC responds to): <https://web.archive.org/web/20180612045652/http://www.fairvote.org/why-approval-voting-is-unworkable-in-contested-elections>
 
 > **Balance.** FairVote's objection is real: STAR genuinely fails a criterion many find intuitive, and "we prefer the relaxed version" is a value judgment, not a proof. The counter is equally real: the failure is mild (needs two supported rivals), the resulting winner has broad support, and *no* method escapes the underlying impossibility results. Judge the whole board, not one square.

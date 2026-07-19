@@ -47,5 +47,5 @@ Our test cases are **hand-crafted** (small, legible elections designed to isolat
 ## References
 
 - cdsmith, *Simulating Elections with Spatial Voter Models* — [blog](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390) · [code](https://github.com/cdsmith/spatial-voting)
-- [Voter Satisfaction Efficiency (VSE) — model details](https://electionscience.github.io/vse-sim/VSE/) · Gehrlein, *Condorcet's Paradox* (paradox probabilities under IC/IAC)
+- [Voter Satisfaction Efficiency (VSE) — model details](https://electionscience.github.io/vse-sim/) · Gehrlein, *Condorcet's Paradox* (paradox probabilities under IC/IAC)
 - [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md)

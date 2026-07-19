@@ -101,7 +101,7 @@ _Last full review: 2026-06-21._
 | **Equal Vote** | The coalition; overview & resources | https://equal.vote |
 | **STAR overview** | STAR Voting overview page | https://equal.vote/star |
 | **Accuracy** | Voting-method accuracy simulations | https://equal.vote/accuracy |
-| **STAR vs RCV** | Side-by-side comparison | https://equal.vote/star-vs-rcv |
+| **STAR vs RCV** | Side-by-side comparison | https://web.archive.org/web/20220424220341/https://www.equal.vote/star-vs-rcv |
 | **Beyond RCV zine** | "Beyond Ranked Choice Voting" | https://equal.vote/beyond_rcv_zine |
 | **STAR Voting org** | Campaign / get involved | https://starvoting.org |
 | **STAR-PR (starvoting.org)** | Proportional STAR explainer — what PR is, pros/cons, the case for STAR-PR (advocacy framing; our mechanics page is `proportional_representation/STAR_PR/README.md`) | https://www.starvoting.org/star-pr |

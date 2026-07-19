@@ -80,7 +80,7 @@ When in doubt in conversation, the safest opener is: *"Which form of ranked voti
 
 ## Learn more — external resources
 
-- [LWVBC: "Which form of RCV are you talking about?" — Celeste Landry](https://lwvbc.clubexpress.com/content.aspx?page_id=5&club_id=629866&item_id=63120)
+- [Celeste Landry, "What is ranked-choice voting anyway?" (The Fulcrum)](https://thefulcrum.us/electoral-reforms/what-is-ranked-choice-voting-2106755)
 - [Basic Voting Theory: "Ranked Choice Voting" (what's in a name)](https://medium.com/basic-voting-theory/ranked-choice-voting-eabe8b9139fe)
 - [Common myths about Ranked Choice Voting, debunked (psephomancy)](https://medium.com/@psephomancy/common-myths-about-ranked-choice-voting-debunked-b2e54a81da1b)
 - [Equal Vote — Ranked Robin](https://www.equal.vote/ranked_robin)

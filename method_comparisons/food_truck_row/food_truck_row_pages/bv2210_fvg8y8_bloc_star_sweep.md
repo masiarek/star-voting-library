@@ -1,0 +1,153 @@
+# Food-Truck Row — Bloc STAR: the same majority sweeps both seats
+
+*Generated from [`bv2210_fvg8y8_bloc_star_sweep.yaml`](../bv2210_fvg8y8_bloc_star_sweep.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Arepa, Bao
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
+
+## Scenario
+
+One 100-voter electorate, two food-truck spots, five counts — this file is the Bloc STAR count (score ballots, two sequential STAR winners). The savory side is a 57-voter OUTRIGHT MAJORITY split across three trucks (Arepa 20 first choices, Bao 19, Churro 18); the sweet side is a disciplined 43-voter minority on two (Donut 22, Eclair 21). Same opinions on every ballot; only the counting rule changes: SNTV hands the majority ZERO seats (Donut+Eclair), Bloc STAR and Bloc Ranked Robin hand it BOTH (Arepa+Bao), STAR-PR and STV share them one per side (Arepa+Donut). THE HEADLINE HERE: score ballots cure the split (the majority's support pools across all three savory trucks) — but a BLOC count then hands 57% of the room 100% of the seats. This file also carries the engine's blocs: declaration, so the on-screen report prints the [Vote-splitting check]: 'the Savory bloc is an outright majority (57 vs Donut's 22) but split across 3 candidates, so Donut won Choose-One. STAR elected Arepa.' Majoritarian is a feature for ONE seat and a choice to make deliberately for many. Full lesson: README.md in this folder. Live on BetterVoting (Test ID BV2210): https://bettervoting.com/fvg8y8 — all five races agree with the LH engine, no genuine tie anywhere. Live results: https://bettervoting.com/fvg8y8/results
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Arepa,Bao,Churro,Donut,Eclair
+20: 5,4,3,0,0
+19: 4,5,3,0,0
+18: 4,3,5,0,0
+22: 0,0,0,5,4
+21: 0,0,0,4,5
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+```text
+[Divergence from STAR]
+  STAR                   = Arepa
+  Choose-One (Plurality) = Donut   (differs from STAR)
+
+[Vote-splitting check]
+  Choose-One first choices: Donut 22, Eclair 21, Arepa 20, Bao 19, Churro 18
+  Plurality winner: Donut (22, 22.0%)
+  Bloc 'Savory' = Arepa, Bao, Churro: combined 57 (57.0%); winner Donut is OUTSIDE it.
+  => VOTE SPLITTING: the 'Savory' bloc is an outright majority (57 vs
+     Donut's 22) but split across 3 candidates, so Donut won Choose-One.
+     STAR elected Arepa.
+  Bloc 'Sweet' = Donut, Eclair: combined 43 (43.0%); winner Donut is INSIDE it.
+  => No vote splitting: the bloc's own front-runner (Donut) also wins
+     Choose-One overall.
+
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 100 ballots to fill 2 seats.
+Count × Arepa,Bao,Churro,Donut,Eclair
+   22 ×     0,  0,     0,    5,     4
+   21 ×     0,  0,     0,    4,     5
+   20 ×     5,  4,     3,    0,     0
+   19 ×     4,  5,     3,    0,     0
+   18 ×     4,  3,     5,    0,     0
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Arepa         -- 248 -- First place
+   Bao           -- 229 -- Second place
+   Churro        -- 207
+   Donut         -- 194
+   Eclair        -- 193
+ Arepa and Bao advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Arepa         -- 38 -- First place
+   Bao           -- 19
+   Equal Support -- 43
+ Arepa wins.
+   Runoff math:
+     100  ballots cast
+   −  43  Equal Support (no preference between the two finalists)
+     ───
+      57  voters with a preference  (majority = 29)
+           Arepa 38 (67%)  ·  Bao 19 (33%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bao           -- 229 -- First place
+   Churro        -- 207 -- Second place
+   Donut         -- 194
+   Eclair        -- 193
+ Bao and Churro advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bao           -- 39 -- First place
+   Churro        -- 18
+   Equal Support -- 43
+ Bao wins.
+   Runoff math:
+     100  ballots cast
+   −  43  Equal Support (no preference between the two finalists)
+     ───
+      57  voters with a preference  (majority = 29)
+           Bao 39 (68%)  ·  Churro 18 (32%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Arepa
+ Bao
+```
+
+<details>
+<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Arepa    |   * Bao     |    Churro   |    Donut    |    Eclair   |
+-----------------------------------------------------------------------------------------
+       * Arepa > |     ---      |38 - 43 - 19 |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+         * Bao > | 19 - 43 - 38 |    ---      |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+        Churro > | 18 - 43 - 39 |18 - 43 - 39 |    ---      |57 -  0 - 43 |57 -  0 - 43 |
+         Donut > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |    ---      |22 - 57 - 21 |
+        Eclair > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |21 - 57 - 22 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Arepa — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Arepa      20  37   0   0   0  43  |   248   2.5
+Bao        19  20  18   0   0  43  |   229   2.3
+Churro     18   0  39   0   0  43  |   207   2.1
+Donut      22  21   0   0   0  57  |   194   1.9
+Eclair     21  22   0   0   0  57  |   193   1.9
+```
+
+</details>
+
+Everything in one file: the [`_tabulated` mirror](../food_truck_row_tabulated/bv2210_fvg8y8_bloc_star_sweep_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_bloc_star_sweep.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
+- [Vote splitting (worked set)](../../split_voting/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2210_fvg8y8_bloc_rr_sweep](bv2210_fvg8y8_bloc_rr_sweep.md) · [bv2210_fvg8y8_sntv_split](bv2210_fvg8y8_sntv_split.md) · [bv2210_fvg8y8_star_pr_share](bv2210_fvg8y8_star_pr_share.md) · [bv2210_fvg8y8_stv_share](bv2210_fvg8y8_stv_share.md)
