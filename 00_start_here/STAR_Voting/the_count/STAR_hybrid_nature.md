@@ -26,6 +26,8 @@ Each "pure" approach has a known weakness; STAR's hybrid covers both.
 
 STAR's move is to **use each idea for the job it's good at**: scores *measure support* and surface the two genuine front-runners; the runoff then applies a *majority check* so the winner can't be a minority-intense pick. You get strength-of-support **and** a majority finish on a single, simple ballot.
 
+In the vocabulary of [what makes a "good" winner](../../topics/what_makes_a_good_winner.md), that's a deliberate **blend of two ideals**: the scoring round targets the **utilitarian** winner (highest total support — the broadly-liked candidate), and the automatic runoff confirms it against the **majority** winner (preferred head-to-head). Score to nominate; majority to decide. Neither pure ideal alone lands there — which is the whole point of the hybrid.
+
 ## The hybrid in one tiny election
 
 Five voters, three flavors:
