@@ -2,6 +2,8 @@
 
 *Alaska's August 2022 U.S. House special election is the most-cited real-world example of RCV-IRV misfiring — because it hit **three** of IRV's pathologies at once, in a high-profile federal race. It's the case advocates on both sides keep pointing to.*
 
+> **Which Alaska election is this?** The **August 2022 US House *special*** — the one that misfired. Alaska has run many other RCV races (the Nov 2022 general, the 2022 Senate, 2024) that worked fine. For the full map and honest scorecard, see **[Alaska's RCV elections — the whole picture](alaska_rcv_elections.md)**.
+
 → **Run it yourself:** [Alaska 2022 — reduced 200-voter model, four counts](../../../method_comparisons/alaska_2022/README.md) (BV-backed; STAR & Ranked Robin elect the Condorcet winner IRV cut) · Interactive breakdown (Equal Vote): [realrcv.equal.vote/alaska22](https://realrcv.equal.vote/alaska22) · concepts: [center squeeze](../RCV_IRV_center_squeeze.md) · [non-monotonicity](../RCV_IRV_non_monotonicity.md) · [the spoiler effect](../../topics/spoiler_effect.md)
 
 ---
