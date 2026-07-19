@@ -2,6 +2,8 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/k3fmwv) · **[results ↗](https://bettervoting.com/k3fmwv/results)** (election `k3fmwv`, Test ID BV2213 — all four races).
 
+**▶ Runnable companion to a published analysis.** This case makes **[Clelland (2023), *Ranked Choice Voting and Condorcet Failure in the Alaska 2022 Special Election*](https://arxiv.org/abs/2303.00108)** hands-on. She worked out — by hand, from the full Cast Vote Record — what STAR and Approval *would* have done in this election. Here you can **click the tabulated results and run the ballots yourself**, and check her conclusions against a live engine. (Her ballot profile, our reduced model, and [Graham-Squire & McCune](https://arxiv.org/abs/2301.12075) all agree.)
+
 > **Which Alaska election is this?** The **August 2022 US House *special*** — the one where RCV-IRV misfired. It is *not* the November general (which worked fine — that's the [runnable counterpart](../alaska_2022_general/README.md)). Confused by all the Alaska elections? See the map: **[Alaska's RCV elections — the whole picture](../../00_start_here/RCV_IRV/case_studies/alaska_rcv_elections.md)**.
 
 **One line:** in the August 2022 Alaska US House special election, **Begich beat both other candidates head-to-head** — a majority preferred him to Peltola *and* to Palin — yet **RCV-IRV eliminated him first** for having the fewest first choices, and Peltola won. Count the *same ballots* with a method that reads the whole ballot — **Ranked Robin** or **STAR** — and Begich, the Condorcet winner, wins. That is the [center squeeze](../../00_start_here/topics/center_squeeze/README.md), in a real federal race.

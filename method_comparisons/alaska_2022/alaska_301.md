@@ -24,6 +24,17 @@ Every one of these traces to the **same** mechanism: **eliminating candidates on
 
 ---
 
+## Part 1½ — what if Alaska had used STAR or Approval? (Clelland's counterfactual)
+
+The reduced model above *shows* STAR electing Begich. [Clelland (2023)](https://arxiv.org/abs/2303.00108) *proves* it, working the full Cast Vote Record by hand — and the comparison with Approval is the interesting part, because it isolates what STAR's **automatic runoff** actually buys you:
+
+- **Under STAR, Begich almost certainly wins.** He's the Condorcet winner, and STAR's runoff floor (a second choice earns 1–4 stars, never 0) means his overwhelming second-place support carries him. Clelland's conclusion: *"Begich would almost certainly win the election"* under STAR, and Palin — the Condorcet **loser** — *"could not win this election under any circumstances"* (the runoff guarantees no Condorcet loser).
+- **Under Approval, the outcome is indeterminate.** Her Table 5 shows the winner ranges across **all three candidates** depending on where voters set their approval threshold — it likely favors Peltola, but Begich is realistic, and it can't even structurally rule out the Condorcet *loser*, Palin.
+
+Same score ballots; the whole difference is the runoff. STAR converts an indeterminate result into a **robust, Condorcet-friendly** one. (That's also why this case runs STAR and Ranked Robin but *not* a single Approval race — a lone Approval instance would fake a determinacy the method doesn't have. It's a virtue worth stating plainly, not a knock on Approval, which earns its keep on simplicity — see [choosing among the Equal Vote methods](../../00_start_here/topics/choosing_among_evc_methods.md).)
+
+---
+
 ## Part 2 — is this fair? (the honest reckoning)
 
 A fair critic should be squirming a little by now: *couldn't someone build a bad-looking STAR election too?* Yes. So here is how this library stays honest instead of just cheerleading.

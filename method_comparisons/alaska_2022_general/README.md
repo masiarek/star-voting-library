@@ -2,6 +2,8 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/m3hb6y) · **[results ↗](https://bettervoting.com/m3hb6y/results)** (election `m3hb6y`, Test ID BV2214 — all four races).
 
+**▶ Runnable companion to a published analysis.** [Clelland (2023)](https://arxiv.org/abs/2303.00108) analyzed this general election too (her §6 postscript): unlike the special, it had *no* Condorcet failure — Peltola was the Condorcet winner and every method agrees. This case makes that hands-on, on ballots that match her Table 8.
+
 > **Which Alaska election is this?** The **November 2022 US House *general*** — the one where RCV-IRV worked *fine*. It is the companion to the [August *special*](../alaska_2022/README.md) (where IRV misfired). Confused? See the [full map](../../00_start_here/RCV_IRV/case_studies/alaska_rcv_elections.md).
 
 **One line:** same three candidates as the special, six months later — and this time **all four counts agree on Peltola.** Because the electorate had shifted, **Peltola was now the Condorcet winner** (she beats both rivals head-to-head), so Plurality, RCV-IRV, Ranked Robin, and STAR *all* elect her. This is the honest other half of the story: IRV's [center-squeeze](../../00_start_here/topics/center_squeeze/README.md) failure is **real but conditional** — it strikes only when a centrist Condorcet winner has too few first choices, which was true in August and *not* true in November.
@@ -24,7 +26,7 @@ In the special, the Condorcet winner (Begich) had the *fewest* first choices, so
 
 ## The reduced model
 
-200 voters, three candidates (the real general's fourth candidate, Bye, finished last and is dropped — exactly as Equal Vote's [Real RCV](https://realrcv.equal.vote/alaska22general) visualizer does). Reconstructed from realrcv's own 200-dot model and matched to its stated results:
+200 voters, three candidates (the real general's fourth candidate, Bye, finished last and is dropped — exactly as Equal Vote's [Real RCV](https://realrcv.equal.vote/alaska22general) visualizer does). Reconstructed from realrcv's own 200-dot model and matched to its stated results — and, it turns out, to the **authoritative Cast Vote Record profile in [Clelland (2023), Table 8](https://arxiv.org/abs/2303.00108)**: every one of the nine blocs lines up (Peltola-only 66,349 → our 50; Begich › Palin 43,072 → our 33; Palin-only 22,751 → our 17; …). So this model is a faithful ~1,318:1 reduction of the real general, independently confirmed:
 
 | Voters | Ballot | | Voters | Ballot | | Voters | Ballot |
 |--:|--|--|--:|--|--|--:|--|
