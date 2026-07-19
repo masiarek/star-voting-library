@@ -1,0 +1,37 @@
+election_title: "Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice"
+scenario_description: |-
+  Rung 3 — the absurd one. Ten niche toppings on the menu now, each with its own
+  little fan club, and Choose-One crowns Pineapple on ELEVEN percent: eleven diners
+  out of a hundred decide the whole pizza, and the other 89 wanted something else.
+  Yet nothing has really changed — plain Cheese is still everyone's easy second, the
+  Condorcet winner, and STAR / Ranked Robin / Approval still find it. The more crowded
+  the menu, the sillier Choose-One's winner looks — and the more it matters that a
+  method read the whole ballot. Lesson: README.md
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: true
+  show_condorcet: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Pineapple,Anchovy,Mushroom,Olive,Sausage,Spinach,Jalapeno,Onion,Pepper,Basil,Cheese
+  11:5,0,0,0,0,0,0,0,0,0,4
+  10:0,5,0,0,0,0,0,0,0,0,4
+  10:0,0,5,0,0,0,0,0,0,0,4
+  10:0,0,0,5,0,0,0,0,0,0,4
+  10:0,0,0,0,5,0,0,0,0,0,4
+  10:0,0,0,0,0,5,0,0,0,0,4
+  10:0,0,0,0,0,0,5,0,0,0,4
+  10:0,0,0,0,0,0,0,5,0,0,4
+  10:0,0,0,0,0,0,0,0,5,0,4
+  9:0,0,0,0,0,0,0,0,0,5,4
+expected_winners:
+  - Cheese
+
+# file: pineapple_11pct.yaml

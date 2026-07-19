@@ -1,0 +1,166 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Pineapple, Anchovy, Mushroom, Olive, Sausage, Spinach, Jalapeno, Onion, Pepper, Basil, Cheese
+    11 ×   Pineapple > Cheese      (5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4)
+    10 ×   Anchovy > Cheese      (0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 4)
+    10 ×   Mushroom > Cheese      (0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 4)
+    10 ×   Olive > Cheese      (0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 4)
+    10 ×   Sausage > Cheese      (0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 4)
+    10 ×   Spinach > Cheese      (0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 4)
+    10 ×   Jalapeno > Cheese      (0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4)
+    10 ×   Onion > Cheese      (0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 4)
+    10 ×   Pepper > Cheese      (0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 4)
+     9 ×   Basil > Cheese      (0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Onion             10  Hopeful
+Anchovy           10  Hopeful
+Mushroom          10  Hopeful
+Olive             10  Hopeful
+Pepper            10  Hopeful
+Sausage           10  Hopeful
+Spinach           10  Hopeful
+Jalapeno          10  Hopeful
+Basil              9  Rejected
+Cheese             0  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Onion             10  Hopeful
+Olive             10  Hopeful
+Spinach           10  Hopeful
+Mushroom          10  Hopeful
+Jalapeno          10  Hopeful
+Pepper            10  Hopeful
+Anchovy           10  Hopeful
+Sausage           10  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes        9  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Anchovy           10  Hopeful
+Pepper            10  Hopeful
+Spinach           10  Hopeful
+Jalapeno          10  Hopeful
+Onion             10  Hopeful
+Olive             10  Hopeful
+Mushroom          10  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       19  Rejected
+
+ROUND 4
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Spinach           10  Hopeful
+Jalapeno          10  Hopeful
+Anchovy           10  Hopeful
+Onion             10  Hopeful
+Olive             10  Hopeful
+Pepper            10  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       29  Rejected
+
+ROUND 5
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Spinach           10  Hopeful
+Olive             10  Hopeful
+Anchovy           10  Hopeful
+Jalapeno          10  Hopeful
+Onion             10  Rejected
+Pepper             0  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       39  Rejected
+
+ROUND 6
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Anchovy           10  Hopeful
+Jalapeno          10  Hopeful
+Olive             10  Hopeful
+Spinach           10  Rejected
+Onion              0  Rejected
+Pepper             0  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       49  Rejected
+
+ROUND 7
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Olive             10  Hopeful
+Anchovy           10  Hopeful
+Jalapeno          10  Rejected
+Spinach            0  Rejected
+Onion              0  Rejected
+Pepper             0  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       59  Rejected
+
+ROUND 8
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Hopeful
+Anchovy           10  Hopeful
+Olive             10  Rejected
+Jalapeno           0  Rejected
+Spinach            0  Rejected
+Onion              0  Rejected
+Pepper             0  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       69  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         11  Elected
+Anchovy           10  Rejected
+Olive              0  Rejected
+Jalapeno           0  Rejected
+Spinach            0  Rejected
+Onion              0  Rejected
+Pepper             0  Rejected
+Mushroom           0  Rejected
+Sausage            0  Rejected
+Basil              0  Rejected
+Cheese             0  Rejected
+Blank Votes       79  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Pineapple
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

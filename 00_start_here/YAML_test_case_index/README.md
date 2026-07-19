@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**335 election files** (285 single-winner, 50 multi-winner) across 15 method(s).
+**338 election files** (288 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 181 |
+| STAR | 184 |
 | RCV-IRV (Hare) | 14 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (181)
+## STAR  (184)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -186,6 +186,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2166_b7b8dv_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2166_b7b8dv_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too) → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_star.yaml) |
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_star.yaml) |
 | [`bv2215_2p33qq_minority_winner`](../../method_comparisons/minority_winner/minority_winner_pages/bv2215_2p33qq_minority_winner.md) | `method_comparisons/minority_winner/` | 1 | Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq) → _Cleo_ | [`.yaml`](../../method_comparisons/minority_winner/bv2215_2p33qq_minority_winner.yaml) |
+| [`pineapple_11pct`](../../method_comparisons/minority_winner_progression/minority_winner_progression_pages/pineapple_11pct.md) | `method_comparisons/minority_winner_progression/` | 1 | Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice → _Cheese_ | [`.yaml`](../../method_comparisons/minority_winner_progression/pineapple_11pct.yaml) |
+| [`pineapple_25pct`](../../method_comparisons/minority_winner_progression/minority_winner_progression_pages/pineapple_25pct.md) | `method_comparisons/minority_winner_progression/` | 1 | Pineapple progression (2/3) — 25% wins Choose-One, but Cheese is the real choice → _Cheese_ | [`.yaml`](../../method_comparisons/minority_winner_progression/pineapple_25pct.yaml) |
+| [`pineapple_34pct`](../../method_comparisons/minority_winner_progression/minority_winner_progression_pages/pineapple_34pct.md) | `method_comparisons/minority_winner_progression/` | 1 | Pineapple progression (1/3) — 34% wins Choose-One, but Cheese is the real choice → _Cheese_ | [`.yaml`](../../method_comparisons/minority_winner_progression/pineapple_34pct.yaml) |
 | [`mono_raise_delete_after`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_after.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_after.yaml) |
 | [`mono_raise_delete_before`](../../method_comparisons/monotonicity/monotonicity_pages/mono_raise_delete_before.md) | `method_comparisons/monotonicity/` | 1 | STAR mono-raise-delete — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) |
 | [`monotonicity_star_after`](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_star_after.md) | `method_comparisons/monotonicity/` | 1 | Monotonicity — STAR counterpart (AFTER — X still wins) → _X_ | [`.yaml`](../../method_comparisons/monotonicity/monotonicity_star_after.yaml) |

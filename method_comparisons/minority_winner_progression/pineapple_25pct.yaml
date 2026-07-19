@@ -1,0 +1,31 @@
+election_title: "Pineapple progression (2/3) — 25% wins Choose-One, but Cheese is the real choice"
+scenario_description: |-
+  Rung 2 of the pineapple progression. Add a fourth topping and Choose-One gets
+  worse: with the fan clubs split four ways, Pineapple now wins on just 25% — a
+  quarter of the table picking the pizza the other three-quarters didn't ask for.
+  Cheese is still everybody's happy second, still the Condorcet winner, and STAR /
+  Ranked Robin / Approval still elect it. Same story, more toppings, smaller mandate.
+  Lesson: README.md
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Pineapple,Anchovy,Mushroom,Olive,Cheese
+  25:5,0,0,0,4
+  23:0,5,0,0,4
+  23:0,0,5,0,4
+  23:0,0,0,5,4
+  6:0,0,0,0,5
+expected_winners:
+  - Cheese
+
+# file: pineapple_25pct.yaml

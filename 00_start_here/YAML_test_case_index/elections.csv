@@ -202,6 +202,9 @@ LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still 
 LH:monotonicity_star_before,Monotonicity — STAR counterpart (BEFORE — X wins),1,single-race,34,STAR,LH-only
 LH:omr_opposition_decides,Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample),1,single-race,100,IRV,LH-only
 LH:options_examples,Display-options reference — every reporting toggle (STAR),1,single-race,100,STAR,LH-only
+LH:pineapple_11pct,"Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice",1,single-race,100,STAR,LH-only
+LH:pineapple_25pct,"Pineapple progression (2/3) — 25% wins Choose-One, but Cheese is the real choice",1,single-race,100,STAR,LH-only
+LH:pineapple_34pct,"Pineapple progression (1/3) — 34% wins Choose-One, but Cheese is the real choice",1,single-race,99,STAR,LH-only
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only

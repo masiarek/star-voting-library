@@ -1,0 +1,57 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Pineapple progression (2/3) — 25% wins Choose-One, but Cheese is the real choice
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Pineapple, Anchovy, Mushroom, Olive, Cheese
+    25 ×   Pineapple > Cheese      (5, 0, 0, 0, 4)
+    23 ×   Anchovy > Cheese      (0, 5, 0, 0, 4)
+    23 ×   Mushroom > Cheese      (0, 0, 5, 0, 4)
+    23 ×   Olive > Cheese      (0, 0, 0, 5, 4)
+     6 ×   Cheese      (0, 0, 0, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         25  Hopeful
+Anchovy           23  Hopeful
+Mushroom          23  Hopeful
+Olive             23  Hopeful
+Cheese             6  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         25  Hopeful
+Anchovy           23  Hopeful
+Mushroom          23  Hopeful
+Olive             23  Rejected
+Cheese             0  Rejected
+Blank Votes        6  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         25  Hopeful
+Anchovy           23  Hopeful
+Mushroom          23  Rejected
+Olive              0  Rejected
+Cheese             0  Rejected
+Blank Votes       29  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Pineapple         25  Elected
+Anchovy           23  Rejected
+Mushroom           0  Rejected
+Olive              0  Rejected
+Cheese             0  Rejected
+Blank Votes       52  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Pineapple
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

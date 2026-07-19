@@ -170,6 +170,9 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/fairvote_condorcet_claims/bv2168_6w2
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_star.yaml,3,17,Ada,Ben,Ben,Ada,Ada,Ada,Ada,Ada,Ada,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_star.yaml,3,11,Beth,Carl,Carl,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/bv2162_4htk44_star.yaml,4,103,B,A,A,B,B,B,B,B,B,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/pineapple_11pct.yaml,11,100,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/pineapple_25pct.yaml,5,100,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/pineapple_34pct.yaml,4,99,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml,3,22,Cat,Fish,Fish,Cat,Cat,Cat,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet2_star.yaml,4,32,Cat,Fish,Fish,Cat,Cat,Bird,Cat,Cat,Cat,0,False,False,False

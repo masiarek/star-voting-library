@@ -57,7 +57,7 @@ Nobody voted strategically. Nobody changed their opinion. The entire difference 
 
 > Choose-One sees only your *favorite*, so a passionate minority can win while the broadly-liked choice — everybody's easy second — is invisible to it. STAR and Ranked Robin read your *whole* ballot, so the candidate a majority actually prefers is the one who wins.
 
-That's the case for a better ballot and a fuller count, in one small election. (It can get starker: with a bigger field, Choose-One winners can take office on 10–20%. A third is just the most common, most believable version.)
+That's the case for a better ballot and a fuller count, in one small election. (It can get starker: with a bigger field, Choose-One winners can take office on 10–20%. A third is just the most common, most believable version — see it degrade in the silly, runnable **[pineapple progression](../minority_winner_progression/README.md)**, where a fan-favorite topping wins on 34% → 25% → 11% as the menu grows, while plain Cheese keeps winning STAR.)
 
 ---
 
