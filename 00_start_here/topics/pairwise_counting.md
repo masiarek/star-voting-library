@@ -11,7 +11,9 @@
 - **Pairwise counting** is the *process*: for every **pair** of candidates, tally each ballot's verdict — does this ballot support A over B, B over A, or neither?
 - The **preference matrix** is the *artifact* that process produces: the table holding those tallies for every pair.
 
-They are the same idea seen as verb and noun. The artifact goes by several names — **preference matrix**, **pairwise matrix**, **pairwise-comparison matrix**, **head-to-head table** — and the LH engine prints it as the **"Runoff (Preference) Matrix"** with the legend **For – Equal Support – Against**. All the same table. ([electowiki](https://electowiki.org/wiki/Pairwise_counting) calls the process "pairwise counting"; we use its mechanics pages here while noting it's an advocacy-adjacent wiki.)
+They are the same idea seen as verb and noun. The artifact goes by **many** names — **preference matrix**, **pairwise matrix**, **pairwise-comparison matrix**, **head-to-head table**, and, on [Wikipedia](https://en.wikipedia.org/wiki/Condorcet_method#Pairwise_counting_and_matrices), **beats matrix**, **tournament matrix**, or **outranking matrix**. When it holds the *summed* tallies for the whole electorate it's the **sum matrix**. The LH engine prints it as the **"Runoff (Preference) Matrix"** with the legend **For – Equal Support – Against**. All the same table. ([electowiki](https://electowiki.org/wiki/Pairwise_counting) calls the process "pairwise counting"; we use its mechanics pages here while noting it's an advocacy-adjacent wiki.)
+
+> **Seen the "strange" Wikipedia matrix?** That article shows a *single ballot* written as a 0/1 grid (1 = the row candidate beats the column candidate), then *adds* the ballots into a **sum matrix**. That two-step — one ballot is a matrix, and matrices add — is exactly what this page builds below, and it's why the count is **[precinct-summable](summability/)**.
 
 ## The one idea: a ballot is already a matrix
 
