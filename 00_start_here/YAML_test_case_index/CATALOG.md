@@ -218,9 +218,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | monotonicity_star_before | Monotonicity — STAR counterpart (BEFORE — X wins) | 1 | single-race | 34 | STAR | LH-only |
 | omr_opposition_decides | Ordered majority rule — the opposition decides the A | 1 | single-race | 100 | IRV | LH-only |
 | options_examples | Display-options reference — every reporting toggle ( | 1 | single-race | 100 | STAR | LH-only |
-| pineapple_11pct | Pineapple progression (3/3) — 11% wins Choose-One, b | 1 | single-race | 100 | STAR | LH-only |
-| pineapple_25pct | Pineapple progression (2/3) — 25% wins Choose-One, b | 1 | single-race | 100 | STAR | LH-only |
-| pineapple_34pct | Pineapple progression (1/3) — 34% wins Choose-One, b | 1 | single-race | 99 | STAR | LH-only |
 | quorum_demo_c3_b6 | Quorum — an abstention still counts toward turnout | 1 | single-race | 6 | STAR | LH-only |
 | quorum_fail_demo_c3_b6 | Quorum FAILS — won the count, but not elected | 1 | single-race | 6 | STAR | LH-only |
 | range_101_c3_b5 | Range / Score Voting 101 — highest total score wins | 1 | single-race | 5 | Range | LH-only |
@@ -271,9 +268,12 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | g3f7r2 | BV2212 — STAR IIA under a Condorcet cycle — a losing | 1 | single-race | 23 | STAR | BV |
 | gmfv4c | Edelman's 'Myth of the Condorcet Winner' 81 voters — | 1 | single-race | 81 | STAR | BV |
 | gvtg2h | BV2203 — The transfer machine, flag probe (STV 2 sea | 1 | single-race | 9 | STV | BV |
+| h34pp9 | Pineapple progression (3/3) — 11% wins Choose-One, b | 1 | single-race | 100 | STAR | BV |
+| ht2c3g | Pineapple progression (1/3) — 34% wins Choose-One, b | 1 | single-race | 99 | STAR | BV |
 | jfk7pd | The BV recipe (the "crazy" scenario) | 1 | single-race | 2 | STAR | BV |
 | jt6r76 | BV27 - Lackner & Skowron steering committee (Approva | 1 | single-race | 12 | Approval | BV |
 | kbh3d9 | Guido example - bloc STAR | 1 | single-race | 3 | STAR | BV |
+| mvxbxr | Pineapple progression (2/3) — 25% wins Choose-One, b | 1 | single-race | 100 | STAR | BV |
 | my82v6 | 01a_c2_b2 — two candidates, two ballots (Chocolate/V | 1 | single-race | 2 | STAR | BV |
 | pet | What Makes the Best Pet? | 1 | single-race | 461 | STAR | BV |
 | qrw6wb | Ann, Bob, Cal - the canonical leading example (singl | 1 | single-race | 3 | STAR | BV |
@@ -357,8 +357,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| BV | 176 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
-| LH-only | 162 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| BV | 179 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
+| LH-only | 159 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 60 | 2jrfpg, 2p33qq, 3grpbb, 6bry7c |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

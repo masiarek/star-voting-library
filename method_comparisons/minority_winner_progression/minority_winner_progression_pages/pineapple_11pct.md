@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cheese
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h34pp9) · **[results ↗](https://bettervoting.com/h34pp9/results)** (election `h34pp9`).
+
 ## Scenario
 
 Rung 3 — the absurd one. Ten niche toppings on the menu now, each with its own
@@ -150,6 +152,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Methods disagree on this election](../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_11pct.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 

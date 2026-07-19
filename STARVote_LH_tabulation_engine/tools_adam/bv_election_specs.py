@@ -45,6 +45,7 @@ you need not hoard every spec here.
 #   BV2213 — Alaska 2022 special (reduced 200-voter model, 4 races) -> k3fmwv  (Plurality/IRV -> Peltola; RR/STAR -> Begich, the Condorcet winner IRV cut)
 #   BV2214 — Alaska 2022 GENERAL (reduced model, 4 races) -> m3hb6y  (all four -> Peltola, the Condorcet winner; the "IRV got it right" counterpart to BV2213)
 #   BV2215 — Minority winner (canonical; 3 races) -> 2p33qq  (Plurality -> Ada on 34%; RR & STAR -> Cleo, the majority's real choice)
+#   BV2216/2217/2218 — Pineapple progression (4 races each) -> ht2c3g / mvxbxr / h34pp9  (Plurality -> Pineapple on 34/25/11%; Approval/RR/STAR -> Cheese)
 # Their specs live in git history / the case .yaml files.
 #
 # MULTI-RACE: a spec may carry a "races": [ {title, method, num_winners,
@@ -3500,4 +3501,72 @@ _MINORITY_WINNER = [
 # RESULTS (2026-07-19): BV2215 -> 2p33qq — created + 100/100 ballots × 3 races OK.
 # Canonical minority-winner example; backs method_comparisons/minority_winner.
 # Plurality -> Ada (34); RR & STAR -> Cleo (Condorcet). All deterministic. Do NOT re-run.
-ELECTIONS: list = []   # reset to safe empty state (BV2215 done 2026-07-19)
+# --- BV2216-2218 — the Pineapple progression (Choose-One's winner shrinks) --------
+# Three rungs of method_comparisons/minority_winner_progression. A shared pizza;
+# plain Cheese is nobody's favorite but everybody's easy second. As the menu grows
+# 3 -> 4 -> 11 toppings, Choose-One crowns fan-favorite Pineapple on a shrinking
+# share (34% -> 25% -> 11%), while STAR, Approval and Ranked Robin all elect Cheese
+# (the Condorcet winner) at every rung. Four races each so all methods are clickable.
+def _pineapple(niches, blocs, cb):
+    cands = niches + ["Cheese"]; N = len(cands); ci = N - 1
+    star, plur, appr, rank = [], [], [], []
+    for i, cnt in enumerate(blocs):
+        s = [0]*N; s[i] = 5; s[ci] = 4; star.append((cnt, s))
+        p = [0]*N; p[i] = 1;            plur.append((cnt, p))
+        a = [0]*N; a[i] = 1; a[ci] = 1; appr.append((cnt, a))
+        r = [0]*N; r[i] = 1; r[ci] = 2; rank.append((cnt, r))
+    if cb:
+        star.append((cb, [0]*(N-1) + [5])); plur.append((cb, [0]*(N-1) + [1]))
+        appr.append((cb, [0]*(N-1) + [1])); rank.append((cb, [0]*(N-1) + [1]))
+    return cands, _expand(star), _expand(plur), _expand(appr), _expand(rank)
+
+def _pineapple_election(test_id, part, pct, niches, blocs, cb):
+    cands, star, plur, appr, rank = _pineapple(niches, blocs, cb)
+    return {
+        "test_id": test_id,
+        "title": (f"Pineapple progression {part} — Choose-One elects Pineapple on "
+                  f"{pct}%, but STAR, Approval & Ranked Robin elect Cheese"),
+        "description": (
+            f"Rung {part} of the pineapple progression from the STAR education repo "
+            "(github.com/masiarek/star-voting-library). A group shares ONE pizza; "
+            "plain Cheese is nobody's favorite but everybody's easy second. With "
+            f"{len(cands)} toppings on the menu, Choose-One (mark your one favorite) "
+            f"crowns the biggest fan club, Pineapple, on just {pct}% — while STAR, "
+            "Approval and Ranked Robin all read the whole ballot and elect Cheese, the "
+            "Condorcet winner that beats every topping head-to-head. The more crowded "
+            "the menu, the smaller Choose-One's winning share; the whole-ballot methods "
+            "don't budge. Same lesson as the canonical 34% minority-winner case, one "
+            "memorable pizza."),
+        "races": [
+            {"title": "Choose-One (Plurality) — mark your one favorite topping",
+             "method": "Plurality", "num_winners": 1, "candidates": cands, "ballots": plur},
+            {"title": "Approval — approve every topping you're fine with",
+             "method": "Approval", "num_winners": 1, "candidates": cands, "ballots": appr},
+            {"title": "Ranked Robin (Condorcet) — rank; every pair head-to-head",
+             "method": "RankedRobin", "num_winners": 1, "max_rankings": 2,
+             "candidates": cands, "ballots": rank},
+            {"title": "STAR — score 0-5, then an automatic runoff",
+             "method": "STAR", "num_winners": 1, "candidates": cands, "ballots": star},
+        ],
+        "enable_write_in": False,
+        "expected": f"Plurality -> Pineapple ({pct}%). Approval / Ranked Robin / STAR "
+                    "-> Cheese (Condorcet winner). Test ID " + test_id + ".",
+    }
+
+_PINEAPPLE = [
+    _pineapple_election("BV2216", "1/3", 34, ["Pineapple", "Anchovy", "Mushroom"],
+                        [34, 33, 32], 0),
+    _pineapple_election("BV2217", "2/3", 25, ["Pineapple", "Anchovy", "Mushroom", "Olive"],
+                        [25, 23, 23, 23], 6),
+    _pineapple_election("BV2218", "3/3", 11,
+                        ["Pineapple", "Anchovy", "Mushroom", "Olive", "Sausage",
+                         "Spinach", "Jalapeno", "Onion", "Pepper", "Basil"],
+                        [11, 10, 10, 10, 10, 10, 10, 10, 10, 9], 0),
+]
+
+# RESULTS (2026-07-19): pineapple progression created OK, all ballots cast.
+#   BV2216 -> ht2c3g (34%, 4 toppings, 99 voters)
+#   BV2217 -> mvxbxr (25%, 5 toppings, 100 voters)
+#   BV2218 -> h34pp9 (11%, 11 toppings, 100 voters)
+# Each: Plurality -> Pineapple; Approval / RankedRobin / STAR -> Cheese. Do NOT re-run.
+ELECTIONS: list = []   # reset to safe empty state (BV2216-2218 done 2026-07-19)

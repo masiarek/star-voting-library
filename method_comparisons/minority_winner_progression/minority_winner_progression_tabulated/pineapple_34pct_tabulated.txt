@@ -3,6 +3,9 @@ SOURCE FILE:     pineapple_34pct.yaml
 TABULATED FILE:  pineapple_34pct_tabulated.txt
 ======================================================================
 
+bv_test_id: BV2216
+bv_election_id: ht2c3g
+bv_results_url: https://bettervoting.com/ht2c3g/results
 election_title: "Pineapple progression (1/3) — 34% wins Choose-One, but Cheese is the real choice"
 scenario_description: |-
   Rung 1 of the pineapple progression. A group shares ONE pizza. Three toppings on

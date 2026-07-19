@@ -2,15 +2,17 @@
 
 *A silly, runnable illustration of one serious point: under **Choose-One**, the more candidates on the ballot, the smaller the winner's mandate can get — while a method that reads the **whole ballot** keeps finding the choice everyone's actually happy with. We grow a pizza menu from 3 toppings to 11 and watch a fan-favorite win on a shrinking sliver of the vote.*
 
+**▶ Live on BetterVoting** — every rung is a real, clickable election: **[34% ↗](https://bettervoting.com/ht2c3g/results)** · **[25% ↗](https://bettervoting.com/mvxbxr/results)** · **[11% ↗](https://bettervoting.com/h34pp9/results)** (each shows all four counts).
+
 The setup never changes: a group shares **one** pizza. Everybody has a passionate favorite topping — but plain **Cheese** is nobody's *first* choice and everybody's easy *second*: put it on, and no one complains. Only the length of the menu changes.
 
 ## Watch it shrink
 
-| Menu | Choose-One winner | on… | STAR / Ranked Robin / Approval |
-|---|---|:--:|:--:|
-| **3 toppings** ([run](pineapple_34pct.yaml)) | 🍍 Pineapple | **34%** | 🧀 **Cheese** |
-| **4 toppings** ([run](pineapple_25pct.yaml)) | 🍍 Pineapple | **25%** | 🧀 **Cheese** |
-| **11 toppings** ([run](pineapple_11pct.yaml)) | 🍍 Pineapple | **11%** | 🧀 **Cheese** |
+| Menu | Choose-One winner | on… | STAR / Ranked Robin / Approval | |
+|---|---|:--:|:--:|:--|
+| **3 toppings** ([run](pineapple_34pct.yaml)) | 🍍 Pineapple | **34%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/ht2c3g/results) |
+| **4 toppings** ([run](pineapple_25pct.yaml)) | 🍍 Pineapple | **25%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/mvxbxr/results) |
+| **11 toppings** ([run](pineapple_11pct.yaml)) | 🍍 Pineapple | **11%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/h34pp9/results) |
 
 At the bottom rung, **eleven diners out of a hundred** decide the whole pizza — and the other 89 wanted something else. Pineapple's fan club never grew; the *menu* did. Choose-One only ever counts your one favorite, so the more the field splits, the less it takes to "win."
 

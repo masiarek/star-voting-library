@@ -3,6 +3,9 @@ SOURCE FILE:     pineapple_11pct.yaml
 TABULATED FILE:  pineapple_11pct_tabulated.txt
 ======================================================================
 
+bv_test_id: BV2218
+bv_election_id: h34pp9
+bv_results_url: https://bettervoting.com/h34pp9/results
 election_title: "Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice"
 scenario_description: |-
   Rung 3 — the absurd one. Ten niche toppings on the menu now, each with its own
