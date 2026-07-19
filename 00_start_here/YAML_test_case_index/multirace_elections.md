@@ -561,6 +561,39 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 3 | **Cleo** |
 | STAR — score 0-5, then an automatic runoff | STAR | 3 | **Cleo** |
 
+## BV2216 — Pineapple progression 1/3 — Choose-One elects Pineapple on 34%, but STAR, Approval & Ranked Robin elect Cheese
+
+**Election** [`ht2c3g`](https://bettervoting.com/ht2c3g/results) · **4 races** · **99 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_34pct_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — mark your one favorite topping | Plurality | 4 | **Pineapple** |
+| Approval — approve every topping you're fine with | Approval | 4 | **Cheese** |
+| Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 4 | **Cheese** |
+| STAR — score 0-5, then an automatic runoff | STAR | 4 | **Cheese** |
+
+## BV2217 — Pineapple progression 2/3 — Choose-One elects Pineapple on 25%, but STAR, Approval & Ranked Robin elect Cheese
+
+**Election** [`mvxbxr`](https://bettervoting.com/mvxbxr/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_25pct_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — mark your one favorite topping | Plurality | 5 | **Pineapple** |
+| Approval — approve every topping you're fine with | Approval | 5 | **Cheese** |
+| Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 5 | **Cheese** |
+| STAR — score 0-5, then an automatic runoff | STAR | 5 | **Cheese** |
+
+## BV2218 — Pineapple progression 3/3 — Choose-One elects Pineapple on 11%, but STAR, Approval & Ranked Robin elect Cheese
+
+**Election** [`h34pp9`](https://bettervoting.com/h34pp9/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_11pct_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Choose-One (Plurality) — mark your one favorite topping | Plurality | 11 | **Pineapple** |
+| Approval — approve every topping you're fine with | Approval | 11 | **Cheese** |
+| Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 11 | **Cheese** |
+| STAR — score 0-5, then an automatic runoff | STAR | 11 | **Cheese** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -33,14 +33,17 @@ g6q42v,BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir,2
 ggg7hd,BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race,2,contested (multi-race),9,"Plurality, STAR",BV
 gr72hd,BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff,4,contested (multi-race),303,"IRV, Plurality, RankedRobin, STAR",BV
 gvdy42,2026 California Governor Election,2,contested (multi-race),319,"IRV, STAR",BV
+h34pp9,"BV2218 — Pineapple progression 3/3 — Choose-One elects Pineapple on 11%, but STAR, Approval & Ranked Robin elect Cheese",4,contested (multi-race),100,"Approval, Plurality, RankedRobin, STAR",BV
 h87k6v,BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright,2,contested (multi-race),15,"IRV, STAR",BV
 h93tm4,"BV2171 — The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest",7,contested (multi-race),8,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
+ht2c3g,"BV2216 — Pineapple progression 1/3 — Choose-One elects Pineapple on 34%, but STAR, Approval & Ranked Robin elect Cheese",4,contested (multi-race),99,"Approval, Plurality, RankedRobin, STAR",BV
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
 k3fmwv,"BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 m3hb6y,"BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
+mvxbxr,"BV2217 — Pineapple progression 2/3 — Choose-One elects Pineapple on 25%, but STAR, Approval & Ranked Robin elect Cheese",4,contested (multi-race),100,"Approval, Plurality, RankedRobin, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
 p8dp28,BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue,3,contested (multi-race),20,"IRV, RankedRobin, STAR",BV
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
@@ -252,12 +255,9 @@ fyy886,BV2184 — The Team Lunch Vote — a beginner's STAR example (the comprom
 g3f7r2,BV2212 — STAR IIA under a Condorcet cycle — a losing candidate flips Alice vs Carla,1,single-race,23,STAR,BV
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
 gvtg2h,"BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)",1,single-race,9,STV,BV
-h34pp9,"Pineapple progression (3/3) — 11% wins Choose-One, but Cheese is the real choice",1,single-race,100,STAR,BV
-ht2c3g,"Pineapple progression (1/3) — 34% wins Choose-One, but Cheese is the real choice",1,single-race,99,STAR,BV
 jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
 jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV
 kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV
-mvxbxr,"Pineapple progression (2/3) — 25% wins Choose-One, but Cheese is the real choice",1,single-race,100,STAR,BV
 my82v6,"01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",1,single-race,2,STAR,BV
 pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
 qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
