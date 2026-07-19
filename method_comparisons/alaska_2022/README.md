@@ -6,6 +6,14 @@
 
 This folder reproduces it as a **runnable, reduced 200-voter model** so you can tabulate it yourself and see all four methods diverge.
 
+## Learn it in three levels
+
+New to this, or the "how did the guy who beat everyone lose?" part isn't clicking yet? Work up through these — each ends with **"challenge your understanding"** questions so you can check you actually get it:
+
+1. **[101 — what happened, in plain language](alaska_101.md)** (zero jargon; the core intuition)
+2. **[201 — the vote math, round by round](alaska_201.md)** (the exact IRV transfers, exhaustion, and head-to-head grid)
+3. **[301 — every pathology, and is this fair?](alaska_301.md)** (spoiler / monotonicity / exhaustion — *and* the honest question of whether it's fair to STAR)
+
 ---
 
 ## Provenance — a faithful scaling of the real profile
@@ -116,6 +124,8 @@ Methods that read the whole ballot — Ranked Robin, any Condorcet method, and S
 
 ## Related
 
+- **Three-level explainer:** [101](alaska_101.md) · [201](alaska_201.md) · [301](alaska_301.md)
+- **Equal Vote's Real RCV tool:** [this election](https://realrcv.equal.vote/alaska22) · [browse every real US RCV election](https://realrcv.equal.vote) — worth doing: most of them worked fine, which is the honest backdrop for why Alaska stands out (see [301](alaska_301.md) on rarity)
 - [Alaska 2022 — RCV-IRV case study](../../00_start_here/RCV_IRV/case_studies/RCV_IRV_alaska_2022.md) (the prose write-up with the real vote totals)
 - [Burlington 2009](../burlington_2009/README.md) — the other canonical real IRV center squeeze, also runnable
 - [Center squeeze](../../00_start_here/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md)
