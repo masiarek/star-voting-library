@@ -21,6 +21,17 @@ It reads the election's **preference (head-to-head) matrix** and applies four st
 
 ---
 
+## Why it looks like Ranked Robin — because mechanically it *is* one
+
+If this ladder feels like it belongs to a different method, that instinct is correct. "Most head-to-head matchups won, break ties by margin" **is** the [Ranked Robin](../../RCV_Ranked_Robin/README.md) (Copeland) algorithm. Equal Vote's Condorcet Tiebreaker is Ranked Robin's own logic **borrowed to settle a STAR tie** — a miniature round-robin run *only among the tied candidates*, and *only* when STAR's normal rounds (score, then head-to-head) finish exactly even.
+
+Keep the two roles distinct:
+
+- **STAR the method** is unchanged — voters score 0–5, the top two by score meet in an automatic runoff. This protocol never touches a decided election.
+- **The Condorcet Tiebreaker** is a *tie-break* deployed inside STAR (per Equal Vote's own doc, for both scoring-round and runoff ties). It happens to run RR-style pairwise arithmetic because that is a natural, matrix-based way to rank candidates STAR's own rungs couldn't separate.
+
+So Ranked Robin is where this arithmetic *lives as a whole method*; here the same arithmetic is a *subroutine* that only fires on an exact STAR tie. (Ranked Robin's own tie-break story — Copeland ties broken by margin, and where LH and BetterVoting diverge — is [rr_tiebreak_lh_vs_bv.md](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).)
+
 ## It is a *tiebreaker*, not Condorcet compliance
 
 This is the one thing to keep straight, because the name invites the opposite conclusion. Adding this protocol does **not** make STAR [Condorcet-compliant](../properties_and_limits/STAR_honest_limits.md):
