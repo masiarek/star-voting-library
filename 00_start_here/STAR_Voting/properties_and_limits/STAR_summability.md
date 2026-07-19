@@ -17,7 +17,7 @@ So each precinct can publish a small fixed-size table, and the statewide result 
 
 ## Worked example — two districts, subtotals that add up
 
-The mirror of [IRV's non-summable example](../../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example--two-districts-both-won-by-b-merged-b-loses). Same setup, opposite result — run [`summability_demo/`](../../../method_comparisons/summability_demo) (three trees: Maple, Oak, Pine). The two districts even have *different* winners (Maple in A, Oak in B — district B is a runoff reversal), so the merge is genuinely non-trivial:
+The mirror of [IRV's non-summable example](../../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses). Same setup, opposite result — run [`summability_demo/`](../../../method_comparisons/summability_demo) (three trees: Maple, Oak, Pine). The two districts even have *different* winners (Maple in A, Oak in B — district B is a runoff reversal), so the merge is genuinely non-trivial:
 
 **Score totals add:**
 

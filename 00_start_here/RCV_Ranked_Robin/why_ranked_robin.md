@@ -48,4 +48,4 @@ If you love ranked ballots, **Ranked Robin is your upgrade**: the ballot you kno
 
 The point was never to run down anyone's favorite reform. It's that the ranked ballot deserves a count worthy of it, and Ranked Robin is one.
 
-→ See it happen: [a worked example where the consensus center wins](ranked_robin.md#a-worked-example--the-consensus-center-wins-the-round-robin) · the full method: [Ranked Robin (RCV-RR)](ranked_robin.md).
+→ See it happen: [a worked example where the consensus center wins](ranked_robin.md#a-worked-example-the-consensus-center-wins-the-round-robin) · the full method: [Ranked Robin (RCV-RR)](ranked_robin.md).

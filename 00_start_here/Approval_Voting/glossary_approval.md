@@ -8,6 +8,6 @@ Method-specific terms for **Approval**. Shared, cross-method vocabulary (spoiler
 - **Approval + Top-Two ("unified primary")** — a nonpartisan Approval primary whose two most-approved candidates meet in a head-to-head general (St. Louis since 2021; Oregon's 2014 Unified Primary proposal). The runoff must be a *second election* — re-counting the same 0/1 ballots head-to-head just returns the approval margin — which is the gap STAR's 0–5 ballot closes. → [Approval + Top-Two](approval_top_two.md)
 - **Bloc / SPAV / PAV** — multi-winner Approval: at-large bloc counting, or the proportional Sequential/Proportional Approval variants. → [Approval Voting — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md)
 
-*Approval is the 1-bit rung of the scored family (**Approval → Range → STAR**); see the [fidelity ladder](../scores_and_ranks/fidelity_ladder.md). Shared criteria are in the [main glossary](../GLOSSARY.md#properties--criteria).*
+*Approval is the 1-bit rung of the scored family (**Approval → Range → STAR**); see the [fidelity ladder](../scores_and_ranks/fidelity_ladder.md). Shared criteria are in the [main glossary](../GLOSSARY.md#properties-criteria).*
 
 # file: glossary_approval.md

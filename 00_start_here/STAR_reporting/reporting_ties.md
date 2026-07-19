@@ -18,7 +18,7 @@ The engine marks the tied rows and says so in words, then resolves them by the t
  There's a two-way tie for first.
 ```
 
-— here broken by the **Scoring Round** (Vanilla had the higher total), exactly the ladder's first rung. (Worked end-to-end, with ties in *both* rounds: [Tie-Breaking — the Ice Cream example](../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md#worked-example--ice-cream-6-flavors-ties-in-both-rounds).)
+— here broken by the **Scoring Round** (Vanilla had the higher total), exactly the ladder's first rung. (Worked end-to-end, with ties in *both* rounds: [Tie-Breaking — the Ice Cream example](../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md#worked-example-ice-cream-6-flavors-ties-in-both-rounds).)
 
 **Reporting detail:** on an **exact runoff tie** the one-line runoff-percentage summary (`Voters with a preference: …`) is **suppressed** — a 50/50 split has no "winner vs other" to state, so the **tie-break chain explains the result instead**. The percentage line returns only for a decided runoff.
 

@@ -125,6 +125,110 @@ def check_links():
 
 
 # --------------------------------------------------------------------------- #
+# Anchor checker: a link like `page.md#some-heading` must point at a heading
+# that actually exists on the *rendered* page. The classic breakage: a heading
+# with " — ", " & ", " / " or ":" renders (in MkDocs / Python-Markdown's `toc`)
+# with the gap collapsed to a SINGLE hyphen, but the link was written with the
+# DOUBLE hyphen GitHub would produce (`#properties--criteria` vs the site's
+# `#properties-criteria`). The site is the canonical surface, so the site's slug
+# wins. check_links() only verifies the FILE resolves; this verifies the #anchor.
+# --------------------------------------------------------------------------- #
+import unicodedata
+
+_ATX = re.compile(r"^(#{1,6})\s+(.*?)\s*#*\s*$")
+_EXPLICIT_ID = re.compile(r"\{#([\w-]+)\}|\{:\s*#([\w-]+)")  # {#id} / {: #id }
+
+
+def _slugify(value, sep="-"):
+    """Python-Markdown's default `toc` slugify — what MkDocs uses to mint ids."""
+    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    value = re.sub(r"[^\w\s-]", "", value).strip().lower()
+    return re.sub(r"[%s\s]+" % re.escape(sep), sep, value)
+
+
+_ANCHOR_CACHE = {}
+
+
+def _page_anchors(path):
+    """The set of anchor slugs a rendered .md page exposes (heading ids), with
+    Python-Markdown's duplicate-heading suffixing (`slug`, `slug_1`, `slug_2`…)."""
+    if path in _ANCHOR_CACHE:
+        return _ANCHOR_CACHE[path]
+    anchors, counts = set(), {}
+    try:
+        text = open(path, encoding="utf-8").read()
+    except OSError:
+        _ANCHOR_CACHE[path] = anchors
+        return anchors
+    for line in _FENCED.sub("", text).splitlines():
+        m = _ATX.match(line)
+        if not m:
+            continue
+        htext = m.group(2)
+        exp = _EXPLICIT_ID.search(htext)
+        if exp:
+            slug = exp.group(1) or exp.group(2)
+        else:
+            t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", htext)  # [txt](url) -> txt
+            slug = _slugify(re.sub(r"[`*_]", "", t))
+        if slug in counts:
+            counts[slug] += 1
+            anchors.add(f"{slug}_{counts[slug]}")
+        else:
+            counts[slug] = 0
+            anchors.add(slug)
+    _ANCHOR_CACHE[path] = anchors
+    return anchors
+
+
+def check_anchors():
+    """Return sorted [(md_file, raw_link, suggestion)] for every relative link
+    whose #anchor matches no heading on the (existing) target page. `suggestion`
+    is the hyphen-collapsed anchor when that one *would* resolve, else None."""
+    from urllib.parse import unquote
+    broken = []
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        rel_dir = os.path.relpath(dirpath, REPO)
+        if rel_dir != "." and _skip(rel_dir):
+            continue
+        for fn in filenames:
+            if not fn.lower().endswith(".md"):
+                continue
+            full = os.path.join(dirpath, fn)
+            rel = os.path.normpath(os.path.join(rel_dir, fn))
+            try:
+                text = open(full, encoding="utf-8").read()
+            except OSError:
+                continue
+            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            for m in MD_LINK.finditer(text):
+                raw = m.group(1).strip()
+                tgt = raw.split()[0].strip("<>")
+                if re.match(r"(?i)^(https?:|mailto:)", tgt) or "#" not in tgt:
+                    continue
+                filepart, _, anchor = tgt.partition("#")
+                if not anchor:
+                    continue
+                if filepart == "":
+                    target_path = full                       # same-page anchor
+                elif filepart.endswith(".md"):
+                    target_path = os.path.normpath(os.path.join(
+                        dirpath, unquote(filepart).replace("/", os.sep)))
+                else:
+                    continue                                 # anchors only in .md
+                if not os.path.isfile(target_path):
+                    continue                                 # missing file = check_links' job
+                have = _page_anchors(target_path)
+                if unquote(anchor) in have:
+                    continue
+                collapsed = re.sub(r"-{2,}", "-", unquote(anchor))
+                suggestion = collapsed if collapsed in have else None
+                broken.append((rel, raw, suggestion))
+    return sorted(set(broken))
+
+
+# --------------------------------------------------------------------------- #
 # Description quality gate: every teaching YAML must carry a real
 # scenario_description — it is the educational prose on that file's generated
 # page. Missing, placeholder ("tbd"), or one-liner-thin descriptions are the
@@ -368,6 +472,17 @@ def main(argv):
               "move probably left these behind:")
         for rel, raw in dead:
             print(f"   • {rel}  →  ({raw})")
+    bad_anchors = check_anchors()
+    if not bad_anchors:
+        print("repo-hygiene: ✓ every #anchor link points at a real heading.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  links to nonexistent #anchors ({len(bad_anchors)}) — "
+              "the heading's rendered slug differs (MkDocs collapses ` — `/`&`/`/` "
+              "gaps to ONE hyphen):")
+        for rel, raw, suggestion in bad_anchors:
+            fix = f"  → did you mean #{suggestion}?" if suggestion else ""
+            print(f"   • {rel}  →  ({raw}){fix}")
     weak = check_descriptions()
     if not weak:
         print("repo-hygiene: ✓ every teaching YAML has a real description.")

@@ -17,6 +17,6 @@ Method-specific terms for **STAR** (Score Then Automatic Runoff). Shared, cross-
 - **Bloc STAR** — multi-winner STAR electing the top N (at-large / majoritarian, **not** proportional). → [02_STAR_Bloc — Bloc STAR (multi-winner, majoritarian)](../../../02_STAR_Bloc/)
 - **Proportional STAR** — multi-winner STAR variants (Allocated Score, Sequentially Spent Score, RRV) giving proportional representation. → [03_STAR_PR — proportional STAR (multi-winner)](../../../03_STAR_PR/)
 
-*Shared criteria STAR is judged on — [monotonicity, Condorcet efficiency, summability, later-no-harm, the Equal Vote criterion](../../GLOSSARY.md#properties--criteria) — are in the [main glossary](../../GLOSSARY.md).*
+*Shared criteria STAR is judged on — [monotonicity, Condorcet efficiency, summability, later-no-harm, the Equal Vote criterion](../../GLOSSARY.md#properties-criteria) — are in the [main glossary](../../GLOSSARY.md).*
 
 # file: glossary_STAR.md

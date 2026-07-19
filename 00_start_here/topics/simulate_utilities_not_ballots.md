@@ -66,7 +66,7 @@ Sampling ballots directly hides this step; sampling utilities forces you to make
 
 ## Why welfare metrics *require* utilities
 
-The clincher: [**Voter Satisfaction Efficiency / Bayesian regret**](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret) scores a method by *how much utility the average voter gets from the winner*, versus the best-possible winner. That number is **undefined** without cardinal utilities. If you start from random ballots, you have no utilities, so you literally cannot compute "how good was this winner" — you can only compare methods to each other, not to the ideal. Utility-first is what makes welfare measurement possible.
+The clincher: [**Voter Satisfaction Efficiency / Bayesian regret**](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) scores a method by *how much utility the average voter gets from the winner*, versus the best-possible winner. That number is **undefined** without cardinal utilities. If you start from random ballots, you have no utilities, so you literally cannot compute "how good was this winner" — you can only compare methods to each other, not to the ideal. Utility-first is what makes welfare measurement possible.
 
 ## The bottom line
 

@@ -20,9 +20,9 @@ What "needs every ballot centrally" costs in practice — the courier runs, the 
 
 The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo):
 
-- **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example--two-districts-both-won-by-b-merged-b-loses)
-- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../STAR_Voting/properties_and_limits/STAR_summability.md#worked-example--two-districts-subtotals-that-add-up)
-- **Ranked Robin (summable):** the *same ranked ballots* IRV couldn't combine — the pairwise matrices add cell by cell and recover the winner. → [RR is summable](../../RCV_Ranked_Robin/RCV_RR_summability.md#worked-example--the-same-ballots-irv-couldnt-combine)
+- **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses)
+- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../STAR_Voting/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)
+- **Ranked Robin (summable):** the *same ranked ballots* IRV couldn't combine — the pairwise matrices add cell by cell and recover the winner. → [RR is summable](../../RCV_Ranked_Robin/RCV_RR_summability.md#worked-example-the-same-ballots-irv-couldnt-combine)
 
 ## How much summing? (order of summability, and multi-winner)
 

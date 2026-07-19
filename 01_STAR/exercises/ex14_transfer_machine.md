@@ -2,7 +2,7 @@
 
 *A nine-member book club buys **two** novels, by ranked ballot under **STV** — the proportional cousin of RCV-IRV. Five members adore Austen; one champions Brontë; three want Camus. Your job is to be the counting machine: compute the quota, elect, transfer the surplus, eliminate, transfer again — and follow one single ballot through the whole journey to see where its vote finally lands.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) (election `tk776t`, Test ID BV2201) — **but don't expect numbers there: this election found a live BV bug — now diagnosed.** BetterVoting's STV tabulator crashes on any count that ends with a *sole remaining hopeful* reaching quota (this one does), while its other STV races compute fine — see [A live bug, found — and diagnosed](#a-live-bug-found--and-diagnosed) below. The seats on this page are the LH engine's.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) (election `tk776t`, Test ID BV2201) — **but don't expect numbers there: this election found a live BV bug — now diagnosed.** BetterVoting's STV tabulator crashes on any count that ends with a *sole remaining hopeful* reaching quota (this one does), while its other STV races compute fine — see [A live bug, found — and diagnosed](#a-live-bug-found-and-diagnosed) below. The seats on this page are the LH engine's.
 
 **You practice:** STV's two moving parts — the **Droop quota** and the **transfer** (surplus and elimination) — the mechanics behind every "no vote is wasted" claim, done by hand at whiteboard scale. (Method home: [STV](../../06_Other/STV/README.md); the score-ballot counterpart is [exercise 12](ex12_bloc_vs_proportional.md).)
 

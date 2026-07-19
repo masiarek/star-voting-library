@@ -152,7 +152,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 **Larry:** Do you have a real election, not a thought experiment?
 
 **Adam:** Two famous ones.
-- **[Burlington, Vermont, 2009](../../topics/spoiler_effect.md#a-real-irv-spoiler--burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
+- **[Burlington, Vermont, 2009](../../topics/spoiler_effect.md#a-real-irv-spoiler-burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
 - **[Alaska 2022 special](../../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head, but the two Republicans split and Begich was eliminated; Peltola won and the seat flipped. Voters who ranked Palin first effectively helped elect their last choice — favorite betrayal, live.
 
 **Larry:** So how does STAR avoid all that?

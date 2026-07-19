@@ -4,6 +4,6 @@ The Bloc STAR reference elections themselves live here. Each is a small, engine-
 
 **Naming.** `bv<NNN>_<descriptor>.yaml` ties a file to its row in the *BetterVoting – test cases* master sheet; `00_c3_b3_bloc-baseline-2-seats.yaml` is the tie-free control. `voting_method: Bloc STAR` (not the vaguer `bloc`).
 
-**Index & status** — the BV id → scenario → tie type → issue → case table lives one level up, in the folder overview: [02_STAR_Bloc/README.md → Bloc test-case index](../README.md#bloc-test-case-index). That's the single source of truth; this page just makes the case folder discoverable on GitHub.
+**Index & status** — the BV id → scenario → tie type → issue → case table lives one level up, in the folder overview: [02_STAR_Bloc/README.md → Bloc test-case index](../README.md#the-reference-cases). That's the single source of truth; this page just makes the case folder discoverable on GitHub.
 
 # file: README.md

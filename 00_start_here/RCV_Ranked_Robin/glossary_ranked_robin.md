@@ -14,6 +14,6 @@ Method-specific terms for **Ranked Robin** (RCV-RR) and the broader Condorcet fa
 - **Bucklin (Grand Junction)** — a ranked, median-style method; ranked but **not** Condorcet. (Spelled *Bucklin*, not "Buckling".) <!-- terminology-ok: teaches the correct spelling -->
 
 
-*The shared criterion terms — **Condorcet winner / loser / efficiency / compliance**, **monotonicity**, **summability** — are defined in the [main glossary](../GLOSSARY.md#properties--criteria) (they apply across methods).*
+*The shared criterion terms — **Condorcet winner / loser / efficiency / compliance**, **monotonicity**, **summability** — are defined in the [main glossary](../GLOSSARY.md#properties-criteria) (they apply across methods).*
 
 # file: glossary_ranked_robin.md

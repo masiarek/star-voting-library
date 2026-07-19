@@ -19,7 +19,7 @@ Same opinion, different rendering — the [same-opinion line-up idea](../../00_s
 
 ## The frozen elections — single-winner wing
 
-Every file records its scenario + seed and regenerates byte-identically (`--emit <scenario>`); `expected_winners` is embedded, and the single-winner files run in the repo's positive test suite (the multi-winner files are engine-verified on emission — the suite is single-winner-scoped by design). All cases use 24–47 individual ballots and fresh casts per the naming rules. Files 1–6 are single-winner STAR; the [multi-winner wing](#the-frozen-elections--multi-winner-wing) below covers Bloc STAR and Allocated Score / STAR-PR at three field sizes (5c/3 seats, 6c/2 seats, 7c/4 seats).
+Every file records its scenario + seed and regenerates byte-identically (`--emit <scenario>`); `expected_winners` is embedded, and the single-winner files run in the repo's positive test suite (the multi-winner files are engine-verified on emission — the suite is single-winner-scoped by design). All cases use 24–47 individual ballots and fresh casts per the naming rules. Files 1–6 are single-winner STAR; the [multi-winner wing](#the-frozen-elections-multi-winner-wing) below covers Bloc STAR and Allocated Score / STAR-PR at three field sizes (5c/3 seats, 6c/2 seats, 7c/4 seats).
 
 | # | Case | The electorate | What the frozen seed produced | Source |
 |---|---|---|---|---|

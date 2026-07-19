@@ -2,7 +2,7 @@
 
 **One line:** BetterVoting and the LH engine **agree on the winner and the runoff margin** on every election. They can differ in one bookkeeping detail — **how a "no preference" ballot is classified** — which shifts the abstention count, the tally total, and the score totals, but never the result.
 
-→ Hub: [STAR Reporting](README.md) · canonical write-up: [BetterVoting and the LH engine — when the reports differ](../tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support).
+→ Hub: [STAR Reporting](README.md) · canonical write-up: [BetterVoting and the LH engine — when the reports differ](../tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support).
 
 ---
 

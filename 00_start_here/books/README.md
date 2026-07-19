@@ -4,7 +4,7 @@ The [How to Learn About Voting Methods](../topics/how_to_learn_about_voting_meth
 
 It's organized into four shelves by how you'd actually use them, not by method. A book is listed on **one** shelf (its best home) and cross-referenced from the others, so nothing drifts out of sync.
 
-> **Reading fairly.** Several of these authors *advocate* — for range voting, for approval, for majority judgment, for Condorcet methods, even (in one famous case) for the Borda count. That's not a flaw; it's the field. This repo is STAR-centered and says so, and it reads its own sources — including [FairVote](../topics/how_to_learn_about_voting_methods.md#level-3--more-perspectives) — critically, for the argument and not the conclusion. **Every book below carries a one-line "the lean" so you know where the author is standing before you start.** Read them that way.
+> **Reading fairly.** Several of these authors *advocate* — for range voting, for approval, for majority judgment, for Condorcet methods, even (in one famous case) for the Borda count. That's not a flaw; it's the field. This repo is STAR-centered and says so, and it reads its own sources — including [FairVote](../topics/how_to_learn_about_voting_methods.md#level-3-more-perspectives) — critically, for the argument and not the conclusion. **Every book below carries a one-line "the lean" so you know where the author is standing before you start.** Read them that way.
 
 ---
 

@@ -117,7 +117,7 @@ Once the ballots are marked, count via **BetterVoting** — two complementary wa
 1. **Hand-count** *(no computer — the classic lesson).* Add the columns, sort the runoff piles, then confirm your tally matches `bettervoting.com/<id>/results`. [Count a STAR election by hand](count_star_by_hand.md).
 2. **Enter the paper into BetterVoting** *(so it joins the online tally).* Type each ballot on the BV vote page, or cast them via the API (`POST /API/Election/{id}/vote`).
 
-**The honest catch — reading the paper is manual today.** Turning a *photo* of a ballot into scores is **not automated** (the OCR tool is roadmap, not built — design in [Design notes](#design-notes--the-flow-and-how-a-mistake-becomes-a-score) below). So option 2 begins with a **human transcribing** the marks using the marker rules below (one bubble → that digit; **≥2 bubbles → spoiled**; blank → `0`; illegible → flag + note), then entering them into BV.
+**The honest catch — reading the paper is manual today.** Turning a *photo* of a ballot into scores is **not automated** (the OCR tool is roadmap, not built — design in [Design notes](#design-notes-the-flow-and-how-a-mistake-becomes-a-score) below). So option 2 begins with a **human transcribing** the marks using the marker rules below (one bubble → that digit; **≥2 bubbles → spoiled**; blank → `0`; illegible → flag + note), then entering them into BV.
 
 **Folders (repo convention):** put BV exports in `06_Other/_demo_dropbox/`; photograph the marked ballots into a case's `img/` subfolder.
 

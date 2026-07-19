@@ -4,7 +4,7 @@
 
 **Level 301 · the one where STAR stumbles.** No method is perfect, and this is STAR's signature failure. **Cleo is the Condorcet winner** — she beats Ada *and* Bruno one-on-one — yet STAR elects **Ada**, because Cleo is a low-scored compromise who never reaches the runoff. Same family as IRV's center squeeze: the broadly-acceptable middle is excluded *before* the decisive comparison.
 
-→ the three "winners" STAR can name: [`STAR_three_winner_notions`](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) · STAR's limits: [AR hub](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md#what-the-runoff-buys-you--and-its-limits) · the ranked cousin: [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) · fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md). ↔ BV QA tracker: **BV149** (STAR fails to elect the Condorcet winner).
+→ the three "winners" STAR can name: [`STAR_three_winner_notions`](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) · STAR's limits: [AR hub](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md#what-the-runoff-buys-you-and-its-limits) · the ranked cousin: [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) · fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md). ↔ BV QA tracker: **BV149** (STAR fails to elect the Condorcet winner).
 
 ---
 

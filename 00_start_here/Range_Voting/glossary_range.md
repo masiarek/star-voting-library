@@ -6,6 +6,6 @@ Method-specific terms for **Range (Score)** voting. Shared, cross-method vocabul
 - **Exaggeration / min-max strategy** — Range's central weakness: a voter often does best giving only max/min, which collapses Range toward Approval. STAR adds the runoff specifically to make honest scoring safer.
 - **Scale granularity** — how many rungs the scale offers (0–5 vs 0–9…). When top contenders are bunched, the granularity can change the winner. → [Scale granularity can flip the winner (a 301 case)](../scores_and_ranks/scale_granularity_flips_the_winner.md)
 
-*Range is a non-EVC method (this library teaches it for honest comparison). Shared criteria — monotonicity, the Majority criterion, the Equal Vote criterion — are in the [main glossary](../GLOSSARY.md#properties--criteria).*
+*Range is a non-EVC method (this library teaches it for honest comparison). Shared criteria — monotonicity, the Majority criterion, the Equal Vote criterion — are in the [main glossary](../GLOSSARY.md#properties-criteria).*
 
 # file: glossary_range.md

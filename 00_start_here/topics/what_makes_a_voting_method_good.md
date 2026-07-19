@@ -8,12 +8,12 @@
 
 Arrow's impossibility theorem (ranked methods) and the Gibbard–Satterthwaite theorem (strategy-proofness) prove that no method can satisfy every desirable property at once. So the goal isn't a flawless method — it's the one that **balances the advantages against the disadvantages** for the election at hand. Which criteria matter most depends on stakes, number of candidates, single- vs multi-winner, and who's counting.
 
-A consequence worth internalizing (Ka-Ping Yee): because *every* method must violate at least one of the five classic "reasonable behaviour" criteria, "one can always invent situations where a particular method violates one of these criteria — thus, presenting individual cases of strange behaviour proves little." A single anecdote (or even a handful) rarely settles anything; it's why reformers lean on **simulations across many electorates** ([VSE / Bayesian regret](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret)) rather than cherry-picked elections — while still using notorious real failures (Burlington 2009, Alaska 2022) to illustrate *how* a failure mode shows up in the wild.
+A consequence worth internalizing (Ka-Ping Yee): because *every* method must violate at least one of the five classic "reasonable behaviour" criteria, "one can always invent situations where a particular method violates one of these criteria — thus, presenting individual cases of strange behaviour proves little." A single anecdote (or even a handful) rarely settles anything; it's why reformers lean on **simulations across many electorates** ([VSE / Bayesian regret](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret)) rather than cherry-picked elections — while still using notorious real failures (Burlington 2009, Alaska 2022) to illustrate *how* a failure mode shows up in the wild.
 
 ## The criteria
 
 ### 1. Winner-selection quality
-Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse--bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](condorcet), [monotonicity](monotonicity), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
+Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](condorcet), [monotonicity](monotonicity), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
 
 ### 2. Simplicity & practicality
 How hard is it to **vote** and to **count**?

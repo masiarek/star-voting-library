@@ -169,7 +169,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - **Two candidates** → the Scoring Round is a formality; the runoff *is* the election.
 - **Everyone gives everyone 5** → all Equal Support → tie → ladder decides (the silly case).
 
-> Notes: Keep this brisk — it's the "edge cases exist and are handled" slide. Detail: [Variations](STAR_Automatic_Runoff.md#variation-2--exact-ties).
+> Notes: Keep this brisk — it's the "edge cases exist and are handled" slide. Detail: [Variations](STAR_Automatic_Runoff.md#variation-2-exact-ties).
 
 ---
 

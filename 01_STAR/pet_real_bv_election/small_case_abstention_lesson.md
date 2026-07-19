@@ -4,7 +4,7 @@
 
 > Filed with BetterVoting: **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**.
 
-→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine) · [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ--abstentions-vs-equal-support) (both) · [Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) · What an "Equal Support" ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
+→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine) · [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) (both) · [Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) · What an "Equal Support" ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
 
 ---
 
