@@ -76,7 +76,7 @@ Almost every method comparison you'll read is written by someone with a preferre
 | Source | What it offers | Leans toward |
 |---|---|---|
 | [Equal Vote Coalition](https://www.equal.vote) · [STAR Voting](https://www.starvoting.org) | STAR advocacy; the criteria & ["Farewell to Pass/Fail"](https://www.starvoting.org/pass_fail) essays | **STAR** |
-| [Center for Election Science](https://electionscience.org) · [VSE](https://electionscience.org/library/voter-satisfaction-efficiency/) | Approval advocacy; the VSE simulations | **Approval** (cardinal) |
+| [Center for Election Science](https://electionscience.org) · [VSE](https://electionscience.github.io/vse-sim/) | Approval advocacy; the VSE simulations | **Approval** (cardinal) |
 | [Center for Range Voting](https://rangevoting.org) | Bayesian-regret simulations; Score advocacy | **Score / Range** |
 | [FairVote](https://fairvote.org) | the largest US RCV-IRV campaign | **RCV-IRV** |
 | [Marcus Ogren — Voting in the Abstract](https://voting-in-the-abstract.medium.com/) | field-wide method analysis | **Condorcet**-leaning |

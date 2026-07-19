@@ -101,4 +101,4 @@ STAR's scoring round advances the **two highest totals**, so a broadly-liked can
 
 Animations + the full quote: [elsim — core-collapse center-squeeze](https://github.com/endolith/elsim/blob/collapse_2d/examples/README.md).
 
-Sources: [center squeeze (electionscience)](https://electionscience.org/library/the-center-squeeze-effect/), [Ogren 2023, Candidate Incentive Distributions (arXiv)](https://arxiv.org/abs/2306.07147), [Burlington 2009 (Wikipedia)](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election), [Alaska 2022 center squeeze (arXiv)](https://arxiv.org/abs/2303.00108).
+Sources: [center squeeze (Wikipedia)](https://en.wikipedia.org/wiki/Center_squeeze), [Ogren 2023, Candidate Incentive Distributions (arXiv)](https://arxiv.org/abs/2306.07147), [Burlington 2009 (Wikipedia)](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election), [Alaska 2022 center squeeze (arXiv)](https://arxiv.org/abs/2303.00108).
