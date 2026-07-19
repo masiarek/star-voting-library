@@ -12,6 +12,8 @@ STAR ballots are **0–5** everywhere you'll meet them — [BetterVoting](https:
 
 The 0–5 range is a **usability** choice, not a mathematical one. It maps onto the five-star rating everyone already knows (movies, rideshares) plus an explicit 0, giving **six levels** — enough to express order *and* intensity without asking a voter to agonize over "is this a 7 or an 8 out of 100?" Equal Vote settled on it because it's expressive enough to matter and simple enough to fill out fast, with low ballot-error rates. It's a sweet spot, not a boundary.
 
+**One subtle consequence of six levels.** With only six distinct scores (0, 1, 2, 3, 4, 5), a voter can put at most **six candidates in a strictly different order**. With **seven or more** candidates, some must share a score — so a 0–5 ballot can't encode every strict *ordering* that a ranked ballot can. This is the one narrow sense in which a ranked ballot out-expresses a 0–5 STAR ballot: [Clelland (2023)](https://arxiv.org/abs/2303.00108) puts it precisely — STAR offers a greater range of expression than IRV *"unless there are more than 6 candidates."* (Widen the scale and the threshold moves up: 0–9 strictly orders ten.) It rarely bites in practice — few single-winner races have seven serious contenders, and STAR trades this for what ranks can *never* capture, **strength** of support (and the [runoff, being scale-agnostic](#what-the-scale-changes-and-what-it-doesnt), doesn't care about it at all).
+
 ## What the scale changes — and what it doesn't
 
 STAR has two rounds, and they react to the scale very differently:
