@@ -44,8 +44,9 @@ The same single ballot can be written several equivalent ways — all of these s
 | **Colon / dict** | `{A: 5, B: 2, C: 0}` | prose, JSON-ish contexts |
 | **Equals** | `A=5, B=2, C=0` | quick inline notes |
 | **Bracket** | `A[5] B[2] C[0]` | occasionally in write-ups |
+| **ABIF** | `A/5 > B/2 > C/0` | the [ABIF](abif_format.md) interchange format (slash = rating) |
 
-(A slash form like `A/5, B/2, C/0` is **not** a standard convention — a slash usually reads as "or" or a fraction, so it's best avoided.) They're all the same ballot; the grid just happens to be the one a computer counts and a spreadsheet stores.
+(A **bare slash** in running *prose* still reads ambiguously — "or", or a fraction — so avoid it mid-sentence. But as the last row shows, the slash **is** standardized as the rating operator in [ABIF](abif_format.md), where `Allie/5` is unambiguous — the one place `A/5` is a convention, not a guess.) They're all the same ballot; the grid just happens to be the one a computer counts and a spreadsheet stores.
 
 ## The marking rules — deliberately hard to get wrong
 
