@@ -1,6 +1,6 @@
 # BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731)
 
-*The original BV130: a clean, tie-free 3-seat Bloc STAR election (6 candidates, 9 ballots). It backs [star-server#731](https://github.com/Equal-Vote/star-server/issues/731) — a **reporting/UI** issue (Bloc results are shown as browser **tabs**, one per round, and should use **numbered pages** instead). The tabulation is correct; LH and BetterVoting agree on the winners. The bug is purely how the three rounds are displayed, not the math.*
+*The original BV130: a clean, tie-free 3-seat Bloc STAR election (6 candidates, 9 ballots). It backs [star-server#731](https://github.com/Equal-Vote/bettervoting/issues/731) — a **reporting/UI** issue (Bloc results are shown as browser **tabs**, one per round, and should use **numbered pages** instead). The tabulation is correct; LH and BetterVoting agree on the winners. The bug is purely how the three rounds are displayed, not the math.*
 
 > **Which BV130 is this?** The **original** BV130 (this page). Not to be confused with **BV130-r2** (election `9ff9jk`), a separate 4-ballot retest built around a dead-rung lot tie — see [`bv130r2_dead_rung_bloc.md`](bv130r2_dead_rung_bloc.md). Same family name, different elections; keep them apart.
 
@@ -23,7 +23,7 @@ Scores separate everyone cleanly — Someone I Like 37, Santa Claus 34, The Less
 
 ## What star-server#731 is (and isn't)
 
-[#731](https://github.com/Equal-Vote/star-server/issues/731) asks BetterVoting to stop rendering the Bloc rounds as **tabs** and use the **Pagination** component (numbered pages at the bottom, as the proportional viewer already does). It is a **presentation** change to the results view — the winners and the round-by-round numbers are already correct. So this case's job is to pin the *correct* tabulation as the reference the UI must keep matching; there is no LH↔BV result divergence to show — LH and the live BV election (`yhxy7q`) agree on all three winners.
+[#731](https://github.com/Equal-Vote/bettervoting/issues/731) asks BetterVoting to stop rendering the Bloc rounds as **tabs** and use the **Pagination** component (numbered pages at the bottom, as the proportional viewer already does). It is a **presentation** change to the results view — the winners and the round-by-round numbers are already correct. So this case's job is to pin the *correct* tabulation as the reference the UI must keep matching; there is no LH↔BV result divergence to show — LH and the live BV election (`yhxy7q`) agree on all three winners.
 
 ## The LH report (the correct tabulation)
 

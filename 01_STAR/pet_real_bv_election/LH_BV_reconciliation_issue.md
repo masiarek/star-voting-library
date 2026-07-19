@@ -93,8 +93,8 @@ Voters with a preference: 3 of 6 (3 Equal Support). A 2 (67%) vs B 1 (33%).
 
 Worked write-up + the engine's **full report** for each (the `_tabulated.txt` shows the ballots, the runoff, the "1 abstention" note, and the "Runoff math" funnel — i.e. exactly the counts to compare against BetterVoting):
 
-- **3 candidates** — lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md) · engine report: [`flat_scores_abstention_c3_b8_tabulated.txt`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt)
-- **2 candidates** — lesson: [The minimal 2-candidate abstention case](small_abstention_c2_b5_lesson.md) · engine report: [`small_abstention_c2_b5_tabulated.txt`](https://github.com/masiarek/YAML/blob/master/01_Single_winner/pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt)
+- **3 candidates** — lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md) · engine report: [`flat_scores_abstention_c3_b8_tabulated.txt`](pet_real_bv_election_tabulated/flat_scores_abstention_c3_b8_tabulated.txt)
+- **2 candidates** — lesson: [The minimal 2-candidate abstention case](small_abstention_c2_b5_lesson.md) · engine report: [`small_abstention_c2_b5_tabulated.txt`](pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt)
 
 ## The ask
 
