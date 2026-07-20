@@ -60,6 +60,8 @@ One caveat both sides agree on: with only **two** candidates, *every* method pas
 
 ## One person, one vote (the legal thread)
 
+→ The full disentangling — the *legal* principle (which every method passes) vs. this *balance* criterion — is its own page: [One person, one vote](../../topics/one_person_one_vote.md).
+
 The equal-vote idea is the mathematical face of **"one person, one vote."** In *Wesberry v. Sanders* (1964) the U.S. Supreme Court held that the weight and worth of each citizen's vote must, as nearly as is practicable, be the same. Choose-One honors that only in a two-candidate race; with more candidates, voters who have several candidates "on their side" are systematically disadvantaged, which is why voters are pushed toward the "lesser of two evils" and third parties get blamed as spoilers. Advocates argue an equal vote is therefore not just a nicety but the constitutional standard, and that vote-splitting (unlike gerrymandering) is fully solvable.
 
 **The other side, fairly stated:** RCV-IRV advocates (e.g. FairVote) argue RCV-IRV upholds one-person-one-vote better than Choose-One. That debate — and why the equal-vote camp says RCV-IRV still fails the balance test in competitive races — is on the companion page, [RCV-IRV fails the Equal Vote](../../RCV_IRV/RCV_IRV_equal_vote.md).
