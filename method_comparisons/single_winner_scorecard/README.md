@@ -55,6 +55,25 @@ Verdict tags: ✅ **fair** · ⚠️ **fair but loaded** · ❗ **overclaim**.
 
 **Net:** a useful, good-faith summary that a reader can trust for **direction**. A careful reader should mentally soften the two "NO"s to "greatly reduced," and read the percentages as "under this model." That's not a knock on STAR — STAR's honest case is strong enough that it doesn't need the absolutes.
 
+## The longer version — Equal Vote's prose pros/cons, and its sources
+
+The scorecard is the graphic; Equal Vote's [**STAR vs RCV pros & cons**](https://www.equal.vote/star_rcv_pros_cons) is the prose expansion — same lean, more detail, and, to its credit, **actual citations**. That makes it checkable. Here is what's behind the headline numbers, and where the citation is stronger than the study it rests on:
+
+| The EVC claim | The real source | The honest reading |
+|---|---|---|
+| "≈1 in 5" close 3-candidate contests go wrong | Ornstein & Norman, [*Public Choice* 2014](https://link.springer.com/article/10.1007/s11127-013-0118-2) | The paper measures **[monotonicity failure](../monotonicity/)**, *not* spoilers — ≥15% of **competitive** 3-way IRV races, rising toward 50% only in near-ties (Miller, "Closeness matters," 2017). Real, but a specific pathology concentrated in close elections — not "1 in 5 elections come out wrong." |
+| RCV ballots "~10× more likely to be rejected" | Pettigrew & Radley, [*Political Behavior* 2025](https://link.springer.com/article/10.1007/s11109-025-10028-4) (3M+ ballots) | True as a **ratio** — but the **absolute** rate is 0.53% vs 0.04%, both under 1%. The load-bearing finding is the **demographic disparity** (more errors where there are more racial-minority, lower-income, lower-education voters). Peer-reviewed — and **contested** (a Mathematics & Democracy Institute rebuttal disputes the methodology). |
+| Ballot exhaustion "9.6%–27.1%" | Burnett & Kogan, *Electoral Studies* 2015 | Solid; [exhaustion](../../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md) is real and varies widely by race. |
+| San Francisco RCV spoilage + racial gaps | Neely & McDaniel (SF State) | Real; the equity angle is the substantive point, and it cuts against RCV's own fairness case. |
+| "Most accurate" / VSE | Quinn's VSE simulations | Ordering robust; exact % model-bound — same caveat as scorecard row 7. |
+
+Two more fairness notes on the prose page, beyond the graphic's:
+
+- It states STAR **"does not incentivize strategic voting."** Too strong. STAR *reduces* the incentive (and scores well on it in simulation), but no deterministic method is strategy-proof ([Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md)) and STAR has its own [strategic](../../00_start_here/topics/strategic_voting.md) edge cases. "The least strategically vulnerable of the three" is the defensible version.
+- A **framing asymmetry** the page's own structure shows: STAR's *newness / no governmental use yet* is filed as a minor con, while RCV's *long track record* is turned against it (every real failure catalogued). A neutral reader should weight "untested at scale" as a genuine STAR unknown, symmetrically.
+
+The pattern holds across Equal Vote's materials: the **facts are mostly right and well-sourced, the framing is advocacy**. Cite the sources — they're good and worth reading — keep the ordering, and discount the absolutes and the relative-risk drama.
+
 ---
 
 *Source: **Single-Winner Voting Method Scorecard**, Equal Vote Coalition (© Equal Vote Coalition, used by permission). Starred rows (VSE; honesty incentive): Sara Wolk, Jameson Quinn & Marcus Ogren, "STAR Voting, Equality of Voice, and Voter Satisfaction," *Constitutional Political Economy* (2023). To embed the original graphic here, drop it in `img/` and add an `<img>` — this page reproduces its content as text so the claims are searchable and checkable.*
