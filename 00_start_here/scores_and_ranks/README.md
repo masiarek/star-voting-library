@@ -7,6 +7,7 @@ The single most consequential distinction in ballot design: a **rank** records *
 ## The pages
 
 - [Scores vs. Ranks](scores_vs_ranks.md) — the core distinction: relative vs. absolute preference, and why it has real consequences.
+- [Preference vs. Support](preference_vs_support.md) — the vivid special case: `1,0,1,0` and `5,4,5,4` have the *same preference* but *opposite support*, and as ranks they're identical. Which do you like more, vs. how much you like each.
 - [The Ranked Ballot](ranked_ballot.md) · [The Score Ballot](score_ballot.md) — one anatomy page per ballot type.
 - [Strict ranks](strict_ranks.md) · [Weak ranks](weak_ranks.md) · [Strict vs. Weak Ranks](strict_vs_weak_ranks.md) — not all ranked ballots are the same: whether ties are allowed changes what the ballot can express.
 - [The Fidelity Ladder](fidelity_ladder.md) — converting between scores and ranks: which direction loses information, and how much.
