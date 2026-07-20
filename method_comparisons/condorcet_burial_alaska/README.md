@@ -8,7 +8,7 @@
 
 ## Sincere: Begich is the Condorcet winner
 
-The real Alaska special, reduced to a faithful 200-voter model (Peltola / Begich / Palin), as ranked ballots ([`alaska_sincere`](cases/alaska_sincere_c3_b200.yaml)). Head-to-head:
+The real Alaska special, reduced to a faithful 200-voter model (Peltola / Begich / Palin), as ranked ballots ([`alaska_sincere`](cases/cases_pages/alaska_sincere_c3_b200.md)). Head-to-head:
 
 ```
 Begich  beats Peltola  +9
@@ -21,7 +21,7 @@ Every Condorcet method elects **Begich**. Only **RCV-IRV** elects **Peltola** �
 
 ## The burial: 20 voters rank the winner last
 
-Now the attack. Of the 50 sincere `Peltola > Begich > Palin` voters, **20 bury Begich** — insincerely voting `Peltola > Palin > Begich` ([`alaska_buried`](cases/alaska_buried_c3_b200.yaml)). Peltola is still their favorite; they've only pushed Begich beneath Palin to sabotage him. That one move flips a single pairwise:
+Now the attack. Of the 50 sincere `Peltola > Begich > Palin` voters, **20 bury Begich** — insincerely voting `Peltola > Palin > Begich` ([`alaska_buried`](cases/cases_pages/alaska_buried_c3_b200.md)). Peltola is still their favorite; they've only pushed Begich beneath Palin to sabotage him. That one move flips a single pairwise:
 
 ```
 Begich  beats Peltola  +9      (unchanged)
