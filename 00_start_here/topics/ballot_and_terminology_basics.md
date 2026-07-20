@@ -4,7 +4,7 @@
 
 → New to the library? The front door is [**00_START_HERE**](../00_START_HERE.md). This page is the **ballot-types & terminology primer** — the cluster of confusion hiding behind the word "RCV." For the deeper "what is a ballot vs. a count" foundation, see [What is a voting method? — a ballot and a count](voting_method_ballot_and_count.md) (its spoken companion is the [conversation version](what_is_a_voting_method.md)).
 
-![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../img/star_ballot_example.png)
+<img src="../img/star_ballot_example.png" width="460" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
 
 *That's a **[score ballot](../scores_and_ranks/scores_vs_ranks.md)** — you rate each candidate 0–5 (order **and** strength), [equal scores are allowed](../GLOSSARY.md) (both a 5 = [Equal Support](../GLOSSARY.md) in the runoff), and a blank counts as 0. It is **not** a [ranked ballot](../scores_and_ranks/strict_vs_weak_ranks.md). Keeping those straight is exactly what myths 2 and 3 below are about. It's used by [STAR](../STAR_Voting/STAR_start_here.md) (score, then an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md)).*
 

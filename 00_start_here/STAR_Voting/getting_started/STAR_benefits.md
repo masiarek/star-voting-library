@@ -4,7 +4,7 @@
 
 → Start with the mechanics: [STAR — start here](../STAR_start_here.md). Kept honest by: [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md).
 
-![A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer](../../img/star_ballot_example.png)
+<img src="../../img/star_ballot_example.png" width="460" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
 
 *Here's the whole ballot: rate each candidate 0–5, like a five-star review — equal scores allowed, blanks count as zero. Everything below is what that one simple change buys you.*
 
