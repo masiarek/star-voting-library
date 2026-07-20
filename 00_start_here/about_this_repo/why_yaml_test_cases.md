@@ -35,6 +35,8 @@ Richer files keep more *human* context in the same file — an `election_title`,
 
 The same tiny format holds every method in the repo: swap `voting_method:` to `Approval`, `RankedRobin`, or a multi-winner count and only that line and the ballot rows change. What the methods *do differently* — and when to reach for each — is [Voting 201](../curriculum/CURRICULUM_201.md), not this page's job.
 
+**Not the only ballot format.** The election-methods world has a dedicated ballot-*interchange* format, **ABIF**, that packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps to just our **`ballots:` block** — our file wraps method, options, and an enforced answer key around that. The full decode and an honest side-by-side: [ABIF vs. our YAML grid](../scores_and_ranks/abif_format.md).
+
 ## Everything else is *generated* from it
 
 The YAML is the **one source of truth**; every other surface is derived from it and never hand-maintained in parallel:

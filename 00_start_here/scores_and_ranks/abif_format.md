@@ -68,6 +68,15 @@ Same 24 ballots, same scores, same everything — it tabulates identically. Put 
 - **ABIF** repeats the candidate names on every line and threads `>`/`=`/`/` through them; each line is a self-contained sentence.
 - **The grid** names the candidates **once** in a header and lets every ballot be a plain row of numbers you could type in a spreadsheet.
 
+## Comparing like with like — ABIF ≈ our `ballots:` block
+
+One clarification keeps the comparison fair: **ABIF is a *ballot* file; our `.yaml` is a *test-case* file.** They correspond at only one layer.
+
+- **The ballot data** — the votelines above vs. our grid rows — is the layer that truly matches, and that's the comparison this page makes.
+- **Everything wrapped around the ballots differs in kind.** Our [YAML test case](../about_this_repo/YAML_authoring_template.md) also carries the **method** (`voting_method`), **seats** (`num_winners`), reporting **`options:`**, human context (`scenario_description`), and — the big one — an **answer key** (`expected_winners`) that CI enforces. ABIF's metadata is a lighter `{ … }` block (title, candidate list); it has no notion of "the winner this file must produce," because it describes *ballots*, it doesn't assert a *test*.
+
+So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our full file is the [one-artifact container](../about_this_repo/why_yaml_test_cases.md) that also says *how to count* and *what to expect*. An ABIF↔grid converter would bridge the ballot layer; the method-and-answer-key layer stays ours.
+
 ## Pros and cons, honestly
 
 **Where ABIF wins**

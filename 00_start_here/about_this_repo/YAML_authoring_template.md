@@ -159,6 +159,7 @@ A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV automaticall
 
 - **Weighted (grouped) rows**: prefix a count — `42 × 0,3,5` (separators `×`, `:`, `x`, `X`). House rule: weights must be **≥ 6** so a count is never mistaken for a 0–5 score.
 - **`# comments`** are allowed at the end of any ballot row — use them to say what each ballot demonstrates.
+- **Other ballot formats.** These same rows in the election-methods [ABIF interchange format](../scores_and_ranks/abif_format.md) look like `Allie/5 =Billy/5 >Candace/4` — one dense self-describing line per ballot; decoded and compared there. (ABIF ≈ this `ballots:` block; the rest of the file stays ours.)
 
 ## House style (so your case fits the library)
 
