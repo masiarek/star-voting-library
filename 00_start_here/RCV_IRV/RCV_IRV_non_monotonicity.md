@@ -44,12 +44,14 @@ X went from **12 first-choices and a win** to **16 first-choices and a loss** �
 
 - A spatial-model study (**Ornstein & Norman, *Public Choice* 2014**) estimates a **lower bound of ~15%** monotonicity failure in *competitive* three-candidate IRV races — and the rate climbs as the race gets closer. This is a structural hazard of elimination, not a freak coincidence.
 
-## Two real-world flavors (both have happened)
+## Two real-world flavors (both have happened — and both are runnable here)
 
-Per a study of US RCV-IRV elections 2004–2022 (Graham-Squire & McCune, arXiv 2301.12075):
+Per a study of US RCV-IRV elections 2004–2022 (Graham-Squire & McCune, arXiv 2301.12075). Each has a dedicated page with a **before/after pair you can run** and the Ranked Robin contrast:
 
-- **Upward paradox — [Alaska 2022 (US House special)](case_studies/RCV_IRV_alaska_2022.md).** Had ~6,000 Palin-only voters instead ranked the *winner* Peltola first, Peltola would have **lost** — those extra first-place votes eliminate Palin first, and Begich then beats Peltola. Raising the winner defeats the winner.
-- **Downward paradox — San Francisco 2020 (D7 Supervisor).** Shifting the *loser* Engardio **down** on ~800 ballots would have made him **win**. Less support, more victory.
+- **Upward paradox ("more is less") — [Alaska 2022 (US House special)](../../method_comparisons/monotonicity/upward_monotonicity_alaska.md).** Had ~6,000 Palin-only voters instead ranked the *winner* Peltola first, Peltola would have **lost** — those extra first-place votes eliminate Palin first, and Begich then beats Peltola. Raising the winner defeats the winner. (Ranked Robin elects the Condorcet winner Begich both times, unmoved.)
+- **Downward paradox ("less is more") — [San Francisco 2020 (D7 Supervisor)](../../method_comparisons/monotonicity/downward_monotonicity_sf.md).** Shifting the *loser* Engardio **down** on ~800 ballots would have made him **win** — the shift eliminates Melgar first (by 3 votes), and Engardio then beats Nguyen. Less support, more victory. (Ranked Robin elects the Condorcet winner Melgar both times.)
+
+(See also the [Alaska 2022 case study](case_studies/RCV_IRV_alaska_2022.md) for the full election.)
 
 ## A textbook real election
 
