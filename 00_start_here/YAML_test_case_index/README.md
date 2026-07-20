@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**338 election files** (288 single-winner, 50 multi-winner) across 15 method(s).
+**340 election files** (290 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 184 |
+| STAR | 186 |
 | RCV-IRV (Hare) | 14 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (184)
+## STAR  (186)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -69,6 +69,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vote_splitting_scenario3_outsider_wins`](../../01_STAR/_main/_main_pages/vote_splitting_scenario3_outsider_wins.md) | `01_STAR/_main/` | 1 | Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins) → _Vanilla_ | [`.yaml`](../../01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/abstain_bugs/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/abstain_bugs/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml) |
+| [`bv2219_36f4v2_equal_opposite_base`](../../01_STAR/equal_and_opposite/equal_and_opposite_pages/bv2219_36f4v2_equal_opposite_base.md) | `01_STAR/equal_and_opposite/` | 1 | Equal & opposite — the base election (Comet wins) → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/bv2219_36f4v2_equal_opposite_base.yaml) |
+| [`bv2220_q8q9m7_equal_opposite_plus_cancel`](../../01_STAR/equal_and_opposite/equal_and_opposite_pages/bv2220_q8q9m7_equal_opposite_plus_cancel.md) | `01_STAR/equal_and_opposite/` | 1 | Equal & opposite — add two mirror ballots, Comet still wins → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) |
 | [`ex01_district_combined`](../../01_STAR/exercises/exercises_pages/ex01_district_combined.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: the COMBINED city → _Carmen_ | [`.yaml`](../../01_STAR/exercises/ex01_district_combined.yaml) |
 | [`ex01_district_east`](../../01_STAR/exercises/exercises_pages/ex01_district_east.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: EAST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_east.yaml) |
 | [`ex01_district_west`](../../01_STAR/exercises/exercises_pages/ex01_district_west.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: WEST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_west.yaml) |

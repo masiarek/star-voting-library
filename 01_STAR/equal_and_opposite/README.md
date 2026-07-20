@@ -28,7 +28,7 @@ Add both to *any* election and nothing moves, for two reasons that together are 
 
 ## The demonstration — before and after
 
-**Before** ([`…_01_base_c6_b3.yaml`](equal_and_opposite_01_base_c6_b3.yaml)) — three voters, a decisive STAR winner:
+**Before** ([`bv2219_…_base.yaml`](bv2219_36f4v2_equal_opposite_base.yaml)) — three voters, a decisive STAR winner:
 
 ```
 Scoring Round
@@ -40,7 +40,7 @@ Automatic Runoff
    Comet  -- 2 -- First place   vs   Echo -- 1        → Comet wins
 ```
 
-**After** ([`…_02_plus_cancel_c6_b5.yaml`](equal_and_opposite_02_plus_cancel_c6_b5.yaml)) — the same three voters **plus** the two mirror ballots:
+**After** ([`bv2220_…_plus_cancel.yaml`](bv2220_q8q9m7_equal_opposite_plus_cancel.yaml)) — the same three voters **plus** the two mirror ballots:
 
 ```
 Scoring Round
@@ -66,7 +66,7 @@ Balance isn't unique to scores. A ranked ballot and its **exact reverse** also c
 
 | Case | What it shows |
 |---|---|
-| base — [tabulated report](equal_and_opposite_tabulated/equal_and_opposite_01_base_c6_b3_tabulated.txt) · [`.yaml`](equal_and_opposite_01_base_c6_b3.yaml) | the base election — Comet wins 2–1 |
-| plus-cancel — [tabulated report](equal_and_opposite_tabulated/equal_and_opposite_02_plus_cancel_c6_b5_tabulated.txt) · [`.yaml`](equal_and_opposite_02_plus_cancel_c6_b5.yaml) | base + two mirror ballots — Comet still wins, 3–2 |
+| base — [tabulated report](equal_and_opposite_tabulated/bv2219_36f4v2_equal_opposite_base_tabulated.txt) · [`.yaml`](bv2219_36f4v2_equal_opposite_base.yaml) | the base election — Comet wins 2–1 |
+| plus-cancel — [tabulated report](equal_and_opposite_tabulated/bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt) · [`.yaml`](bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) | base + two mirror ballots — Comet still wins, 3–2 |
 
-*Source of the demonstration: Equal Vote Coalition, "Equally Weighted Vote" (the Test of Balance, after Mark Frohnmayer). Cast renamed here (Astra…Flux) for a fresh example. Live on BetterVoting as **BV2219** ([`36f4v2`](https://bettervoting.com/36f4v2/results)) and **BV2220** ([`q8q9m7`](https://bettervoting.com/q8q9m7/results)) — two STAR elections that reproduce the same Comet wins. BetterVoting's own STAR count agrees with the engine on both (Comet, scores 14 and 19); the frozen exports are `…_01_base…_bv_export.json` and `…_02_plus_cancel…_bv_export.json`.*
+*Source of the demonstration: Equal Vote Coalition, "Equally Weighted Vote" (the Test of Balance, after Mark Frohnmayer). Cast renamed here (Astra…Flux) for a fresh example. Live on BetterVoting as **BV2219** ([`36f4v2`](https://bettervoting.com/36f4v2/results)) and **BV2220** ([`q8q9m7`](https://bettervoting.com/q8q9m7/results)) — two STAR elections that reproduce the same Comet wins. BetterVoting's own STAR count agrees with the engine on both (Comet, scores 14 and 19); the frozen exports are `bv2219_…_base_bv_export.json` and `bv2220_…_plus_cancel_bv_export.json`.*

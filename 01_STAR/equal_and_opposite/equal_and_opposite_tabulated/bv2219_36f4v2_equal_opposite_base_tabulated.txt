@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     equal_and_opposite_01_base_c6_b3.yaml
-TABULATED FILE:  equal_and_opposite_01_base_c6_b3_tabulated.txt
+SOURCE FILE:     bv2219_36f4v2_equal_opposite_base.yaml
+TABULATED FILE:  bv2219_36f4v2_equal_opposite_base_tabulated.txt
 ======================================================================
 
 election_title: "Equal & opposite — the base election (Comet wins)"
@@ -45,7 +45,7 @@ ballots: |-
 expected_winners:
 - Comet
 
-# file: equal_and_opposite_01_base_c6_b3.yaml
+# file: bv2219_36f4v2_equal_opposite_base.yaml
 
 ======================================================================
 TABULATION RESULTS

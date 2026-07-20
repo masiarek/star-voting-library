@@ -1,6 +1,6 @@
 # Equal & opposite — the base election (Comet wins)
 
-*Generated from [`equal_and_opposite_01_base_c6_b3.yaml`](../equal_and_opposite_01_base_c6_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2219_36f4v2_equal_opposite_base.yaml`](../bv2219_36f4v2_equal_opposite_base.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Comet
 
@@ -99,12 +99,12 @@ Flux       0  0  0  0  1  2  |     1   0.3
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../equal_and_opposite_tabulated/equal_and_opposite_01_base_c6_b3_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../equal_and_opposite_tabulated/bv2219_36f4v2_equal_opposite_base_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_and_opposite/equal_and_opposite_01_base_c6_b3.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_and_opposite/bv2219_36f4v2_equal_opposite_base.yaml
 ```
 
 ## See also
@@ -113,4 +113,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_an
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [equal_and_opposite_02_plus_cancel_c6_b5](equal_and_opposite_02_plus_cancel_c6_b5.md)
+More cases in this set: [bv2220_q8q9m7_equal_opposite_plus_cancel](bv2220_q8q9m7_equal_opposite_plus_cancel.md)

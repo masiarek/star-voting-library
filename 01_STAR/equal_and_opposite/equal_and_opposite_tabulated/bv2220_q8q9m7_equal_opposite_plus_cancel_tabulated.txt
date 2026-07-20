@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     equal_and_opposite_02_plus_cancel_c6_b5.yaml
-TABULATED FILE:  equal_and_opposite_02_plus_cancel_c6_b5_tabulated.txt
+SOURCE FILE:     bv2220_q8q9m7_equal_opposite_plus_cancel.yaml
+TABULATED FILE:  bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt
 ======================================================================
 
 election_title: "Equal & opposite — add two mirror ballots, Comet still wins"
@@ -51,7 +51,7 @@ ballots: |-
 expected_winners:
 - Comet
 
-# file: equal_and_opposite_02_plus_cancel_c6_b5.yaml
+# file: bv2220_q8q9m7_equal_opposite_plus_cancel.yaml
 
 ======================================================================
 TABULATION RESULTS
