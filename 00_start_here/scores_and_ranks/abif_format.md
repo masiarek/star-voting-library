@@ -75,7 +75,7 @@ One clarification keeps the comparison fair: **ABIF is a *ballot* file; our `.ya
 - **The ballot data** — the votelines above vs. our grid rows — is the layer that truly matches, and that's the comparison this page makes.
 - **Everything wrapped around the ballots differs in kind.** Our [YAML test case](../about_this_repo/YAML_authoring_template.md) also carries the **method** (`voting_method`), **seats** (`num_winners`), reporting **`options:`**, human context (`scenario_description`), and — the big one — an **answer key** (`expected_winners`) that CI enforces. ABIF's metadata is a lighter `{ … }` block (title, candidate list); it has no notion of "the winner this file must produce," because it describes *ballots*, it doesn't assert a *test*.
 
-So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our full file is the [one-artifact container](../about_this_repo/why_yaml_test_cases.md) that also says *how to count* and *what to expect*. An ABIF↔grid converter would bridge the ballot layer; the method-and-answer-key layer stays ours.
+So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our full file is the [one-artifact container](../about_this_repo/why_yaml_test_cases.md) that also says *how to count* and *what to expect*. The repo's [`convert_abif.py`](../../STARVote_LH_tabulation_engine/tools_adam/convert_abif.py) bridges exactly that ballot layer, both ways; the method-and-answer-key layer stays ours.
 
 ## Pros and cons, honestly
 
@@ -109,7 +109,9 @@ They're optimized for **different jobs**, and "which is better" is really "bette
 - **ABIF is an interchange format** — tool-to-tool, one grammar for all methods, self-describing, order-explicit. Its density is the *price of universality*, and for holding voters constant across methods it's excellent. The hybrid `/` + `>`/`=` form, though, is a genuine design smell, not just unfamiliarity — avoid authoring in it.
 - **The grid is an authoring and teaching format** — spreadsheet-native, minimal punctuation, human-first. Its positional coupling is the *price of simplicity*.
 
-So: keep the grid as this library's authoring standard, and treat ABIF the way we already treat [BetterVoting's JSON](../tabulation_engines/bettervoting_and_the_engine.md) — a format to **import from and export to**, not to hand-write lessons in. An ABIF↔grid converter would be a natural companion to the [JSON→YAML converter](../../STARVote_LH_tabulation_engine/tools_adam) the repo already ships; it would let us pull in the electorama test corpus and re-tabulate it with the LH engine. "Getting used to" ABIF is real and worth doing if you work across tools — but your instinct that the grid reads more easily for *teaching* is also correct. Different beast, different pasture.
+So: keep the grid as this library's authoring standard, and treat ABIF the way we already treat [BetterVoting's JSON](../tabulation_engines/bettervoting_and_the_engine.md) — a format to **import from and export to**, not to hand-write lessons in. That bridge exists: [`convert_abif.py`](../../STARVote_LH_tabulation_engine/tools_adam/convert_abif.py) converts ABIF↔grid in both directions (rated *and* ranked, with the aggregated `count:` prefixes), so you can pull in the electorama test corpus and re-tabulate it with the LH engine — `test003.abif` above converts to a grid that elects **Allie**, exactly as tabulating the ABIF directly would. "Getting used to" ABIF is real and worth doing if you work across tools — but your instinct that the grid reads more easily for *teaching* is also correct. Different beast, different pasture.
+
+> **Try it:** `python STARVote_LH_tabulation_engine/tools_adam/convert_abif.py testfiles/test003.abif --check` reads ABIF, writes the grid, and tabulates it in one step. Reverse it with `convert_abif.py your_case.yaml -o out.abif` (add `--operators` for the `A/5 > B/4` form).
 
 ## Related
 
