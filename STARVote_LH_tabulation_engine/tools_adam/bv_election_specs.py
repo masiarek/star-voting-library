@@ -3607,4 +3607,4 @@ EQO_PLUS_SPEC = {
 # To create (mints TWO permanent public BV elections), set:
 #   ELECTIONS = [EQO_BASE_SPEC, EQO_PLUS_SPEC]
 # then `uv run …/create_bv_test_election.py`. Left empty until go.
-ELECTIONS: list = []   # reset to safe empty state (BV2216-2218 done 2026-07-19)
+ELECTIONS: list = []   # reset to safe empty state (BV2219 -> 36f4v2, BV2220 -> q8q9m7 done 2026-07-20)

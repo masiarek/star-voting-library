@@ -24,6 +24,10 @@ video_script: |-
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2220
+bv_election_id: q8q9m7
+bv_results_url: https://bettervoting.com/q8q9m7/results
+
 options:
   show_description: false
   show_matrix: true
@@ -52,6 +56,15 @@ expected_winners:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Equal & opposite — add two mirror ballots, Comet still wins ===
+  The base election plus two voters with exact-opposite opinions on every
+  candidate — their scores sum to 5 for each (Astra 2+3, Bolt 1+4, Comet 0+5,
+  Dune 1+4, Echo 5+0, Flux 4+1). Every candidate's score total rises by exactly
+  5, so the scoring order is untouched, and the two ballots cancel 1–1 in the
+  automatic runoff. STAR still elects Comet: an equally weighted vote,
+  demonstrated — any ballot can be perfectly cancelled by its exact opposite,
+  which is why STAR has no forced vote-splitting. See equal_and_opposite/README.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

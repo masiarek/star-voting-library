@@ -2,6 +2,8 @@
 
 *The Equal Vote Coalition's "Test of Balance" in one picture: **two voters with exact-opposite opinions on every candidate cancel out completely.** If a race was tied before their two ballots, it's tied after — neither outweighed the other. That's what an **equally weighted vote** means, and it's the reason STAR has no forced vote-splitting. This folder makes the demonstration runnable: a base election, then the same election with the two mirror ballots added — the winner never moves. The concept, in full: [The Equally Weighted Vote — the Test of Balance](../../00_start_here/STAR_Voting/properties_and_limits/equally_weighted_vote.md).*
 
+**▶ Live on BetterVoting:** base — [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (`36f4v2`, BV2219) · plus-cancel — [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (`q8q9m7`, BV2220). Two elections differing only by the two mirror ballots — both elect Comet.
+
 → Related: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md) (what an *unequal* vote causes) · [the Equal Vote scorecard](../../method_comparisons/single_winner_scorecard/) (row 1: "spoiler / vote splitting").
 
 ---
@@ -67,4 +69,4 @@ Balance isn't unique to scores. A ranked ballot and its **exact reverse** also c
 | base — [tabulated report](equal_and_opposite_tabulated/equal_and_opposite_01_base_c6_b3_tabulated.txt) · [`.yaml`](equal_and_opposite_01_base_c6_b3.yaml) | the base election — Comet wins 2–1 |
 | plus-cancel — [tabulated report](equal_and_opposite_tabulated/equal_and_opposite_02_plus_cancel_c6_b5_tabulated.txt) · [`.yaml`](equal_and_opposite_02_plus_cancel_c6_b5.yaml) | base + two mirror ballots — Comet still wins, 3–2 |
 
-*Source of the demonstration: Equal Vote Coalition, "Equally Weighted Vote" (the Test of Balance, after Mark Frohnmayer). Cast renamed here (Astra…Flux) for a fresh example. Live on BetterVoting: pending — this pair is ready to back with two BV STAR elections (base and plus-cancel) that reproduce the same Comet wins.*
+*Source of the demonstration: Equal Vote Coalition, "Equally Weighted Vote" (the Test of Balance, after Mark Frohnmayer). Cast renamed here (Astra…Flux) for a fresh example. Live on BetterVoting as **BV2219** ([`36f4v2`](https://bettervoting.com/36f4v2/results)) and **BV2220** ([`q8q9m7`](https://bettervoting.com/q8q9m7/results)) — two STAR elections that reproduce the same Comet wins.*

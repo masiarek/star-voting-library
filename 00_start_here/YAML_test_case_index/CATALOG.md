@@ -79,6 +79,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | yyhj9x | BV2196 — Later-No-Harm (2 of 2) — the generous ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
 | 26khr3 | NOTA test — None of the Above wins (with a null abst | 1 | single-race | 6 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
+| 36f4v2 | Equal & opposite — the base election (Comet wins) | 1 | single-race | 3 | STAR | BV |
 | 39py93 | BV2204 — Poets on the shelf: the control (STV 2 seat | 1 | single-race | 13 | STV | BV |
 | 3r3yf7 | BV2141 — Ranked Robin — a Copeland tie that needs al | 1 | single-race | 81 | RankedRobin | BV |
 | 3w6v4b | Equal Support vs Abstention — minimal STAR test (A/B | 1 | single-race | 5 | STAR | BV |
@@ -194,8 +195,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | dead_rung_scoring_dead_cap4 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | display_options_demo | Display options demo | 1 | single-race | 4 | STAR | LH-only |
 | edelman_perfect_component_c3_b30 | A perfect 'Condorcet component' (30 voters) — every  | 1 | single-race | 30 | STAR | LH-only |
-| equal_and_opposite_01_base_c6_b3 | Equal & opposite — the base election (Comet wins) | 1 | single-race | 3 | STAR | LH-only |
-| equal_and_opposite_02_plus_cancel_c6_b5 | Equal & opposite — add two mirror ballots, Comet sti | 1 | single-race | 5 | STAR | LH-only |
 | equal_support_runoff_demo | Equal Support — counted in both rounds, neutral only | 1 | single-race | 100 | STAR | LH-only |
 | ex02_bella_exits | Exercise 2 — The tenth ballot: Bella withdraws | 1 | single-race | 9 | STAR | LH-only |
 | ex02_nine_ballots | Exercise 2 — The tenth ballot: the nine counted ball | 1 | single-race | 9 | STAR | LH-only |
@@ -278,6 +277,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | kbh3d9 | Guido example - bloc STAR | 1 | single-race | 3 | STAR | BV |
 | my82v6 | 01a_c2_b2 — two candidates, two ballots (Chocolate/V | 1 | single-race | 2 | STAR | BV |
 | pet | What Makes the Best Pet? | 1 | single-race | 461 | STAR | BV |
+| q8q9m7 | Equal & opposite — add two mirror ballots, Comet sti | 1 | single-race | 5 | STAR | BV |
 | qrw6wb | Ann, Bob, Cal - the canonical leading example (singl | 1 | single-race | 3 | STAR | BV |
 | r2pvc9 | Runoff confirms the leader (control)  | 1 | single-race | 3 | STAR | BV |
 | r4dqvd | BV2105 - Favorite ice cream (Bloc STAR) - without en | 1 | single-race | 4 | STAR | BV |
@@ -359,8 +359,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| BV | 179 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
-| LH-only | 161 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| BV | 181 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
+| LH-only | 159 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 69 | 2jrfpg, 2p33qq, 3grpbb, 6bry7c |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

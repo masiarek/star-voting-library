@@ -20,6 +20,10 @@ video_script: |-
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2219
+bv_election_id: 36f4v2
+bv_results_url: https://bettervoting.com/36f4v2/results
+
 options:
   show_description: false
   show_matrix: true
@@ -46,6 +50,13 @@ expected_winners:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Equal & opposite — the base election (Comet wins) ===
+  Three voters, six candidates (Astra, Bolt, Comet, Dune, Echo, Flux). STAR
+  elects Comet — highest score total (14) and winner of the automatic runoff
+  over Echo, 2–1. This is the "before" half of the Equally Weighted Vote
+  demonstration: its twin adds two voters with exact-opposite ballots and shows
+  the winner never moves. See the lesson: equal_and_opposite/README.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

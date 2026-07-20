@@ -15,6 +15,10 @@ video_script: |-
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2219
+bv_election_id: 36f4v2
+bv_results_url: https://bettervoting.com/36f4v2/results
+
 options:
   show_description: false
   show_matrix: true
