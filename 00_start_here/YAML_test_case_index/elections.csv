@@ -9,6 +9,7 @@
 6w2gq7,"BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",2,contested (multi-race),100,"IRV, STAR",BV
 74j6vv,"BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better",3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 7f4f7q,BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
+82gg36,BV2226 — Preference vs Support — the center SUPPORTED (wings score Blair 4),3,contested (multi-race),36,"IRV, RankedRobin, STAR",BV
 89wwvr,"BV2199 — Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares",2,contested (multi-race),10,"STAR, STAR_PR",BV
 8kg698,"BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",4,contested (multi-race),20,"IRV, Plurality, RankedRobin, STAR",BV
 923q3d,"BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",2,contested (multi-race),18,"RankedRobin, STAR",BV
@@ -62,6 +63,7 @@ xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked 
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
 ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways",5,contested (multi-race),9,"Approval, IRV, Plurality, RankedRobin, STAR",BV
+ywx39y,BV2225 — Preference vs Support — the center TOLERATED (wings score Blair 1),3,contested (multi-race),36,"IRV, RankedRobin, STAR",BV
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 2kcwbw,BV2221 — STAR vs strategy — sincere ballots elect the Condorcet winner (Beth),1,single-race,100,STAR,BV
@@ -79,7 +81,6 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 7mckyg,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,1,single-race,57,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 7q6by8,"BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone",1,single-race,42,RankedRobin,BV
-82gg36,Preference vs Support — the center SUPPORTED (wings score Blair 4),1,single-race,36,STAR,BV
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 8xwx43,"BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters)",1,single-race,6,STV,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
@@ -282,6 +283,5 @@ vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-ra
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
-ywx39y,Preference vs Support — the center TOLERATED (wings score Blair 1),1,single-race,36,STAR,BV
 yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV
 yyhr66,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,1,single-race,54,STAR,BV

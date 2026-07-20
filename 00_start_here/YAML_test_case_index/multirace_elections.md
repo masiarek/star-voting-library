@@ -612,6 +612,26 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | STAR — strategic 5-1-0 scores | STAR | 3 | **Beth** |
 | RCV-IRV — the same preferences as ranks | IRV | 3 | **Ana** |
 
+## BV2225 — Preference vs Support — the center TOLERATED (wings score Blair 1)
+
+**Election** [`ywx39y`](https://bettervoting.com/ywx39y/results) · **3 races** · **36 ballots** · [frozen export](../../method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR — Blair merely tolerated (wings score him 1) | STAR | 3 | **Alex** |
+| RCV-IRV — the shared rankings | IRV | 3 | **Alex** |
+| Ranked Robin — the shared rankings | RankedRobin | 3 | **Blair** |
+
+## BV2226 — Preference vs Support — the center SUPPORTED (wings score Blair 4)
+
+**Election** [`82gg36`](https://bettervoting.com/82gg36/results) · **3 races** · **36 ballots** · [frozen export](../../method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR — Blair genuinely supported (wings score him 4) | STAR | 3 | **Blair** |
+| RCV-IRV — the shared rankings | IRV | 3 | **Alex** |
+| Ranked Robin — the shared rankings | RankedRobin | 3 | **Blair** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

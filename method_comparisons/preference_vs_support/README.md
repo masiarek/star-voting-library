@@ -91,4 +91,4 @@ python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
   method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml
 ```
 
-Each STAR file's `[Divergence from STAR]` block runs RCV-IRV and Ranked Robin on the same ballots — that's where the "same ranks, IRV & RR don't move, STAR does" table comes from. Both elections are also live on BetterVoting (results links above); BetterVoting's STAR / IRV / Ranked Robin tabulations agree with the LH engine.
+Each STAR file's `[Divergence from STAR]` block runs RCV-IRV and Ranked Robin on the same ballots — that's where the "same ranks, IRV & RR don't move, STAR does" table comes from. Both elections are also live on BetterVoting (results links above), and **BetterVoting's own tabulations confirm every cell of the table** — STAR → Alex/Blair, IRV → Alex/Alex, Ranked Robin → Blair/Blair — verified from the frozen full exports ([`…tolerated_bv_export.json`](cases/bv2225_ywx39y_center_tolerated_bv_export.json) · [`…supported_bv_export.json`](cases/bv2226_82gg36_center_supported_bv_export.json), each Election + Ballots + Results). BV and the LH engine agree exactly.
