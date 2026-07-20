@@ -228,6 +228,8 @@ LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
+LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
+LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
 LH:star_ala_approval,STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot,1,single-race,8,STAR,LH-only
 LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals add up),1,single-race,6,STAR,LH-only
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only

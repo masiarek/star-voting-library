@@ -24,6 +24,17 @@ The synthetic pair above shows the mechanism; **[Alaska 2022 is a real election 
 
 **[→ Full walk-through, mechanism, and why STAR / Ranked Robin can't do it](upward_monotonicity_alaska.md)** (Ranked Robin elects Begich — the Condorcet winner — *both* times, completely unmoved).
 
+### And the mirror — the Downward Monotonicity Paradox, San Francisco 2020
+
+The other flavour: shifting a **loser down** makes them **win** ("less is more"). Real case — **[San Francisco Board of Supervisors, District 7, 2020](downward_monotonicity_sf.md).** Shifting the losing candidate Engardio *down* on ~800 ballots eliminates Melgar first (by 3 votes) and hands Engardio the win. Reproduced on the paper's real full-scale counts:
+
+| Page (read this) | What it shows | src |
+|---|---|:--:|
+| [Downward monotonicity (SF D7) — before](cases/cases_pages/sf_d7_downward_before.md) | RCV-IRV: **Melgar** wins; Engardio loses | [`.yaml`](cases/sf_d7_downward_before.yaml) |
+| [Downward monotonicity (SF D7) — after](cases/cases_pages/sf_d7_downward_after.md) | shift Engardio **down** on 800 ballots → **Engardio** wins | [`.yaml`](cases/sf_d7_downward_after.yaml) |
+
+**[→ Full walk-through](downward_monotonicity_sf.md)** (Ranked Robin elects Melgar — the Condorcet winner — *both* times; RCV-IRV's result moves *off* the Condorcet winner under the paradox).
+
 ## The 301 nuance — STAR fails a *stronger* variant
 
 STAR passes the standard monotonicity criterion (*mono-raise*), as the pair above shows. But it does **not** pass the stronger **mono-raise-delete** (Woodall 1996): raising X *and* deleting the candidates now below X on those ballots can harm X — because burying the losers can change which candidate joins X in the runoff. This pair demonstrates it on a real election (X wins → raise X and delete the loser below X → **Z** wins):

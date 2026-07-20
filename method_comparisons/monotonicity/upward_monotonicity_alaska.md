@@ -2,7 +2,7 @@
 
 *A voting method should never punish a candidate for gaining support. RCV-IRV can. In the real **Alaska 2022** US House special, had about **6,000** Palin-only voters instead ranked the eventual winner **Peltola** first — giving her *more* first-place support and changing nothing else — **Peltola would have lost**. This is the **upward monotonicity paradox**, and this page reproduces it on a faithful model of the real ballots, then shows that **STAR and Ranked Robin cannot do it.***
 
-→ Part of the [monotonicity worked set](README.md). Companions: [Alaska 2022 (the full case)](../alaska_2022/) · [the burial attack on the same numbers](../condorcet_burial_alaska/) · [non-monotonicity (concept)](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../00_start_here/topics/monotonicity/README.md).
+→ Part of the [monotonicity worked set](README.md). Companions: [**Downward** paradox — San Francisco 2020](downward_monotonicity_sf.md) (its mirror) · [Alaska 2022 (the full case)](../alaska_2022/) · [the burial attack on the same numbers](../condorcet_burial_alaska/) · [non-monotonicity (concept)](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../00_start_here/topics/monotonicity/README.md).
 
 ---
 
@@ -11,7 +11,7 @@
 Non-monotonicity comes in a matched pair (Graham-Squire & McCune, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075)):
 
 - **Upward monotonicity paradox** ("more is less"): shift the **winner up** the rankings on some ballots — keeping every other candidate's relative order the same — and the winner *loses*. Giving a candidate **more** support defeats them. **← this page.**
-- **Downward monotonicity paradox** ("less is more"): shift a **loser down** on some ballots and that loser *wins*. Giving a candidate **less** support elects them.
+- **Downward monotonicity paradox** ("less is more"): shift a **loser down** on some ballots and that loser *wins*. Giving a candidate **less** support elects them. → [San Francisco D7 2020](downward_monotonicity_sf.md).
 
 Both are failures of the **monotonicity criterion**: raising a candidate should never hurt them, and lowering one should never help them. (Note: monotonicity is **not** the same as [Later-No-Harm](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) — a common conflation.)
 

@@ -1,0 +1,79 @@
+======================================================================
+SOURCE FILE:     sf_d7_downward_after.yaml
+TABULATED FILE:  sf_d7_downward_after_tabulated.txt
+======================================================================
+
+election_title: "Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins"
+
+scenario_description: |-
+  The BEFORE file (sf_d7_downward_before) exactly, with ONE change: 800 ballots of
+  the form Engardio>Nguyen>Melgar are shifted DOWN to Nguyen>Engardio>Melgar. Nothing
+  else moves. This gives the previous LOSER Engardio LESS first-place support (14119
+  -> 13319) — yet he now WINS. Why: the shifted votes lift Nguyen's first-round count
+  (10855 -> 11655) just past Melgar's 11652, so MELGAR is eliminated first instead of
+  Nguyen; Melgar's ballots transfer, and Engardio beats Nguyen in the final,
+  15819-15155. Ranking the loser lower made the loser win — the downward monotonicity
+  paradox (Graham-Squire & McCune, arXiv:2301.12075). As in the Alaska upward case,
+  the paradox works by changing the ORDER of elimination. The Melgar/Nguyen Round-1
+  gap is just 3 votes — this is a genuine knife-edge, which is why the real, full-scale
+  counts (not a reduced model) are used. Companion page: downward_monotonicity_sf.md.
+
+video_script: |-
+  Same election as BEFORE — we only moved 800 Engardio-first voters to rank Nguyen
+  first and Engardio second. Round 1 now: Engardio 13319, Nguyen 11655, Melgar 11652.
+  Melgar is out this time, by three votes. Melgar's ballots transfer and Engardio
+  wins 15819-15155. Engardio got LESS support and won. That's the mirror of the
+  Alaska paradox: a method should never reward a candidate for being ranked lower.
+  STAR and Ranked Robin can't do this.
+
+paradoxes: [monotonicity]
+voting_method: RCV_IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_irv: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  13319:Engardio>Melgar>Nguyen
+  2500:Melgar>Engardio>Nguyen
+  3500:Melgar>Nguyen>Engardio
+  5652:Melgar
+  6909:Nguyen>Melgar>Engardio
+  3051:Nguyen>Engardio>Melgar
+  1695:Nguyen
+
+expected_winners:
+  - Engardio
+
+# file: sf_d7_downward_after.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins
+ Tabulating 36626 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Engardio       13319  Hopeful
+Nguyen         11655  Hopeful
+Melgar         11652  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Engardio       15819  Elected
+Nguyen         15155  Rejected
+Melgar             0  Rejected
+Blank Votes     5652  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Engardio
