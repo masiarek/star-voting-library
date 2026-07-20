@@ -1,0 +1,60 @@
+======================================================================
+SOURCE FILE:     balance_plus_opposite_c3_b15.yaml
+TABULATED FILE:  balance_plus_opposite_c3_b15_tabulated.txt
+======================================================================
+
+election_title: "Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada)"
+
+scenario_description: |-
+  The base election plus three exact-opposite ballot pairs (each Ada>Bruno>Cyrus
+  matched by its reverse Cyrus>Bruno>Ada). The pairs are perfectly balanced — under
+  Condorcet / Ranked Robin / STAR they cancel and Bruno stays the winner (margins
+  just grow to 9-6 and 10-5). But RCV-IRV counts only first-choices, so the six new
+  ballots pile onto the extremes (Ada +3, Cyrus +3) and none onto the center
+  (Bruno +0): Bruno now has the fewest first-choices, is eliminated first, and Ada
+  wins 10-5. Balanced ballots that should cancel instead flip the winner — RCV-IRV
+  fails the Test of Balance, by the center-squeeze mechanism. Lesson:
+  00_start_here/RCV_IRV/RCV_IRV_equal_vote.md
+
+video_script: |-
+  Twin of the balance pair. Same base plus three exact-opposite pairs. Under IRV
+  the balanced ballots squeeze the center (Bruno) out and Ada wins — the winner
+  flipped, so the opposite ballots did NOT cancel. (Run with voting_method:
+  RankedRobin to see Bruno stay the Condorcet winner, 9-6 / 10-5.)
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  4:Bruno>Ada>Cyrus
+  6:Ada>Bruno>Cyrus
+  5:Cyrus>Bruno>Ada
+
+expected_winners:
+- Ada
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada)
+ Tabulating 15 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ada                6  Hopeful
+Cyrus              5  Hopeful
+Bruno              4  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ada               10  Elected
+Cyrus              5  Rejected
+Bruno              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ada

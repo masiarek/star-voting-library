@@ -1,0 +1,56 @@
+======================================================================
+SOURCE FILE:     balance_base_irv_c3_b9.yaml
+TABULATED FILE:  balance_base_irv_c3_b9_tabulated.txt
+======================================================================
+
+election_title: "Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)"
+
+scenario_description: |-
+  Three candidates on a line — Ada (left), Bruno (center), Cyrus (right). Bruno is
+  the Condorcet winner (beats Ada 6-3, Cyrus 7-2) and RCV-IRV elects him too:
+  Cyrus has the fewest first-choices and is eliminated, his ballots flow to Bruno,
+  who wins 6-3. The twin file adds three EXACT-OPPOSITE ballot pairs; they cancel
+  under Condorcet / Ranked Robin / STAR (Bruno stays the winner) but under RCV-IRV
+  they squeeze Bruno out and elect Ada — so RCV-IRV fails the Equal Vote / Test of
+  Balance. Lesson: 00_start_here/RCV_IRV/RCV_IRV_equal_vote.md
+
+video_script: |-
+  Base of the balance pair. IRV and Condorcet agree here: Bruno, the center, wins.
+  The twin (plus_opposite) adds balanced ballots that flip IRV to Ada.
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  4:Bruno>Ada>Cyrus
+  3:Ada>Bruno>Cyrus
+  2:Cyrus>Bruno>Ada
+
+expected_winners:
+- Bruno
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)
+ Tabulating 9 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno              4  Hopeful
+Ada                3  Hopeful
+Cyrus              2  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno              6  Elected
+Ada                3  Rejected
+Cyrus              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bruno

@@ -28,6 +28,32 @@ Under a method that passes the Equal Vote (Score or STAR), X and Y cancel **perf
 
 X and Y did *not* have an equal-and-opposite effect. They inadvertently **both helped C** by splitting the opposition. Their votes were not equally weighted — the hallmark failure of the Equality Criterion.
 
+### The same failure, counted — balanced ballots flip the winner
+
+Here it is with real numbers — the exact mirror of the STAR case where opposite ballots *do* cancel ([equal & opposite](../../01_STAR/equal_and_opposite/)). Three candidates on a line — **Ada** (left), **Bruno** (center), **Cyrus** (right) — and a small electorate where Bruno is the compromise:
+
+```
+4: Bruno > Ada  > Cyrus
+3: Ada   > Bruno > Cyrus
+2: Cyrus > Bruno > Ada
+```
+
+**Before.** Bruno is the [Condorcet winner](../topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
+
+Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
+
+But watch RCV-IRV:
+
+```
+Round 1:  Ada 6   Cyrus 5   Bruno 4     ← Bruno now has the FEWEST first-choices
+          → Bruno eliminated
+Round 2:  Ada 10  Cyrus 5               → Ada wins
+```
+
+The six new ballots put their first-choices on the two **extremes** (Ada +3, Cyrus +3) and *none* on the **center** (Bruno +0) — because IRV only ever counts the top of each ballot. Perfectly balanced ballots, which cancel under every other method, **squeezed the center candidate out and handed the win to an extreme.** Equal and opposite in, a flipped winner out — the effect was not zero.
+
+That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../../06_Other/RCV_IRV/equal_vote_balance/) (base → Bruno, plus-balanced → Ada).
+
 ## Vote-splitting and exhaustion, precisely
 
 - **Vote-splitting.** Elimination order means a faction that runs *more* candidates is statistically disadvantaged; opposite preferences don't cancel, they interact with who gets eliminated when. (This is the same root cause as [center squeeze](RCV_IRV_center_squeeze.md).)
