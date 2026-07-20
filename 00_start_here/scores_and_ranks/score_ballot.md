@@ -60,7 +60,7 @@ Filling it out is anchor-based, not field-scanning: give your favorite a 5, your
 
 ## What it captures — order, strength, and honest ties
 
-A score carries **both** pieces of information a ballot can collect: the order (5 > 4 > 1 > 0) and the size of the gaps (Andre-to-Carmen is small; David-to-Blake is a cliff). Downstream methods can always *reduce* that to a ranking when they need one — scores → ranks drops information gracefully, while ranks → scores has to fabricate it (the [fidelity ladder](fidelity_ladder.md)).
+A score carries **both** pieces of information a ballot can collect: the order (5 > 4 > 1 > 0) and the size of the gaps (Andre-to-Carmen is small; David-to-Blake is a cliff). Those are two different things — *which* you prefer (**preference**) and *how much* you back each one (**support**) — and a rank only records the first: see [Preference vs. Support](preference_vs_support.md). Downstream methods can always *reduce* a score to a ranking when they need one — scores → ranks drops information gracefully, while ranks → scores has to fabricate it (the [fidelity ladder](fidelity_ladder.md)).
 
 **Resolution is a design dial.** Yes/No approval is a score ballot at 1-bit resolution; 0–5 is the STAR standard (fine enough to express, coarse enough to read); classic Range ran 0–99. More levels = more expressiveness, and the choice can genuinely matter: [scale granularity can flip the winner](scale_granularity_flips_the_winner.md). The honest cost of coarseness: if you max out two candidates you *slightly* prefer apart, you've recorded a tie you didn't quite feel — see [are equal-score votes "discounted"?](../STAR_Voting/reference/are_equal_score_votes_discounted.md) for the whole story, including why "show the gap: 5 and 4" is the honest advice.
 
@@ -82,5 +82,6 @@ Same lesson as the ranked twin, from the other side: the ballot is what you mark
 - [The ranked ballot](ranked_ballot.md) — the twin page: an order instead of independent values
 - [Alternate ballot styles](../topics/ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
 - [Scores vs. ranks](scores_vs_ranks.md) — why order and strength are different data
+- [Preference vs. Support](preference_vs_support.md) — the vivid case: `1,0,1,0` vs `5,4,5,4`, identical as ranks
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — the tie-handling story on the ranked side
 - Glossary: [`score ballot`](../GLOSSARY.md)

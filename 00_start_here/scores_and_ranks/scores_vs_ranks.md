@@ -36,7 +36,7 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 
 **Different winners from identical voters.** A candidate who wins under a ranked method can lose under a scored method on the very same electorate, because the two are measuring different things. Treating "ranked = scored" hides that.
 
-**Expressiveness.** A rank carries order only; a score carries order *and* how strongly you feel. A broadly-liked compromise candidate can look weak on first-choice ranks yet clearly strong on scores — which is part of why IRV suffers [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and STAR doesn't.
+**Expressiveness — preference vs. support.** A rank carries order only; a score carries order *and* how strongly you feel. The sharpest way to see it: ballots `1,0,1,0` and `5,4,5,4` state the *same preference* but *opposite support*, yet as ranks they're the identical `A=C > B=D` — the ranking literally can't tell "I tolerate them" from "I love them." That gap is its own page: [**Preference vs. Support**](preference_vs_support.md). A broadly-liked compromise candidate can look weak on first-choice ranks yet clearly strong on scores — which is part of why IRV suffers [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and STAR doesn't.
 
 **You can go one way but not the other.** Scores → ranks is easy (just read off the order). Ranks → scores is **impossible** without inventing information, because the strength was never collected.
 
@@ -46,6 +46,7 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 
 ## Related concepts in this library
 
+- [Preference vs. Support](preference_vs_support.md) — the vivid special case: same order, opposite strength, indistinguishable as ranks
 - [Alternate ballot styles](../topics/ballot_styles.md) — the three ballots side by side, marked by one voter (with the ballot images)
 - [The ranked ballot](ranked_ballot.md) · [the score ballot](score_ballot.md) — one anatomy page per ballot type
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — equal ranks & pairwise comparison: which ranked methods allow them (IRV doesn't)

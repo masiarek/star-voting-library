@@ -57,7 +57,7 @@ A tiny illustration (Range Voting's "three brothers split one fruit," utilities 
 | boy 3 | 4 | **11** | 0 |
 | **average** | 3 | **9** | 6 |
 
-A **majority** (boys 1 & 2) rank *banana* top → the **majoritarian** winner is banana. But *orange* maximizes **total satisfaction** (avg 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things. Ranked methods can only see order, so they chase the majoritarian/Condorcet ideal; scored methods (STAR, Score) can see *intensity*, so they can weigh the utilitarian one — and STAR's automatic runoff then checks the utilitarian leader against majority preference.
+A **majority** (boys 1 & 2) rank *banana* top → the **majoritarian** winner is banana. But *orange* maximizes **total satisfaction** (avg 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things. Ranked methods can only see order — [**preference**, not **support**](../scores_and_ranks/preference_vs_support.md) — so they chase the majoritarian/Condorcet ideal; scored methods (STAR, Score) can see *intensity*, so they can weigh the utilitarian one — and STAR's automatic runoff then checks the utilitarian leader against majority preference.
 
 In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they diverge only in close elections — where Condorcet favors the majority's first choice and VSE the broadest compromise. And a Condorcet winner is only as trustworthy as the ballots: with rankings you can't tell honest from strategic votes, or see *how much* a voter liked each candidate — which is the argument for an expressive (scored) ballot.
 
