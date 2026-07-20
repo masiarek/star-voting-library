@@ -10,6 +10,10 @@
 
 ## The scorecard, reproduced
 
+<img src="img/eqv_single_winner_scorecard.png" width="700" alt="Equal Vote Coalition's Single-Winner Voting Method Scorecard: an 8-row, 3-column table rating Choose-One (Plurality), Ranked Choice (IRV), and STAR from worst (red) to best (green) on spoiler effect, candidate-type advantage, voided ballots, wasted/exhausted ballots, local tabulation, tabulation complexity, Voter Satisfaction Efficiency (87/92/99%), and honesty incentive (−14.5/−3.5/+12.0%).">
+
+*The Equal Vote Coalition's **Single-Winner Voting Method Scorecard** (© Equal Vote Coalition, used by permission). It's reproduced as text below so every claim is searchable and checkable.*
+
 Rating key (worst → best): 🟥 · 🟧 · 🟨 · 🟢 good · 🟩 best.
 
 | Dimension | Choose-One (Plurality) | Ranked Choice (RCV-IRV) | STAR |
@@ -76,4 +80,4 @@ The pattern holds across Equal Vote's materials: the **facts are mostly right an
 
 ---
 
-*Source: **Single-Winner Voting Method Scorecard**, Equal Vote Coalition (© Equal Vote Coalition, used by permission). Starred rows (VSE; honesty incentive): Sara Wolk, Jameson Quinn & Marcus Ogren, "STAR Voting, Equality of Voice, and Voter Satisfaction," *Constitutional Political Economy* (2023). To embed the original graphic here, drop it in `img/` and add an `<img>` — this page reproduces its content as text so the claims are searchable and checkable.*
+*Source: **Single-Winner Voting Method Scorecard**, Equal Vote Coalition (© Equal Vote Coalition, used by permission — [`img/eqv_single_winner_scorecard.png`](img/eqv_single_winner_scorecard.png)). Starred rows (VSE; honesty incentive): Sara Wolk, Jameson Quinn & Marcus Ogren, "STAR Voting, Equality of Voice, and Voter Satisfaction," *Constitutional Political Economy* (2023). The graphic's content is reproduced as text above so the claims are searchable and checkable.*
