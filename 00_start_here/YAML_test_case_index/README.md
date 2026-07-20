@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**342 election files** (292 single-winner, 50 multi-winner) across 15 method(s).
+**347 election files** (297 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 186 |
-| RCV-IRV (Hare) | 16 |
+| STAR | 189 |
+| RCV-IRV (Hare) | 18 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
 | STV (proportional RCV) | 10 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (186)
+## STAR  (189)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -212,6 +212,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`04_star_wars_vote_split`](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) | `method_comparisons/split_voting/_main/` | 1 | The Voting Dilemma — Skywalker & Leia split the Rebel vote → _Leia_ | [`.yaml`](../../method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml) |
 | [`05a_residual_split_bullet-voting`](../../method_comparisons/split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md) | `method_comparisons/split_voting/_main/` | 1 | STAR's residual split — a coalition bullet-votes itself apart → _Cara_ | [`.yaml`](../../method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml) |
 | [`05b_residual_split_expressive-fix`](../../method_comparisons/split_voting/_main/_main_pages/05b_residual_split_expressive-fix.md) | `method_comparisons/split_voting/_main/` | 1 | The cure — score your ally, and STAR's split disappears → _Ada_ | [`.yaml`](../../method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml) |
+| [`s1_sincere_thin_moderate_c3_b100`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/s1_sincere_thin_moderate_c3_b100.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Sincere STAR — the center wins (Beth is the Condorcet winner) → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml) |
+| [`s2_strategic_510_thin_moderate_c3_b100`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/s2_strategic_510_thin_moderate_c3_b100.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR — the center is squeezed out (fails the CW) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100.yaml) |
+| [`s4_strategic_510_real_moderate_c3_b100`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/s4_strategic_510_real_moderate_c3_b100.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100.yaml) |
 | [`star_combined`](../../method_comparisons/summability_demo/cases/cases_pages/star_combined.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — STAR combined A+B (Oak; precinct subtotals add up) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/cases/star_combined.yaml) |
 | [`star_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/star_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — STAR district A (Maple wins outright) → _Maple_ | [`.yaml`](../../method_comparisons/summability_demo/cases/star_district_A.yaml) |
 | [`star_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/star_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — STAR district B (Oak wins — a runoff reversal) → _Oak_ | [`.yaml`](../../method_comparisons/summability_demo/cases/star_district_B.yaml) |
@@ -219,7 +222,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml) |
 
-## RCV-IRV (Hare)  (16)
+## RCV-IRV (Hare)  (18)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -236,6 +239,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2183_dfw8rj_forced_exhaustion_ceiling`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2183_dfw8rj_forced_exhaustion_ceiling.yaml) |
 | [`bv2132_ykjjhy_pet_irv`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_irv.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_irv.yaml) |
 | [`bv2133_dyxrbr_pet2_irv`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_irv.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (RCV-IRV): transfers elect Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_irv.yaml) |
+| [`s3_irv_thin_moderate_c3_b100`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/s3_irv_thin_moderate_c3_b100.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | RCV-IRV on the same electorate — also squeezes the center (→ Ana) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/s3_irv_thin_moderate_c3_b100.yaml) |
+| [`s5_irv_real_moderate_c3_b100`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/s5_irv_real_moderate_c3_b100.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | RCV-IRV, real moderate base — still squeezes the center (→ Ana) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/s5_irv_real_moderate_c3_b100.yaml) |
 | [`irv_combined`](../../method_comparisons/summability_demo/cases/cases_pages/irv_combined.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV combined A+B (B eliminated; not summable) → _A_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_combined.yaml) |
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |

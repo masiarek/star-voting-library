@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **186** single-winner STAR elections (skipped 107 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **108** (58%) diverge from STAR under at least one method; **78** agree across the board.
+- Scanned **189** single-winner STAR elections (skipped 109 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **111** (59%) diverge from STAR under at least one method; **78** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 25 |
+| IRV_OUTLIER_RR_WITH_STAR | 27 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 15 |
-| CYCLE_OR_THREE_WAY | 26 |
+| CYCLE_OR_THREE_WAY | 27 |
 | APPROVAL_OR_MINOR | 39 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (104 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (107 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 23
+### IRV_OUTLIER_RR_WITH_STAR — 25
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -75,6 +75,10 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Cat** · IRV=Fish · RR=Cat · Approval=Bird · Score=Cat · Condorcet=Cat
 - **[04_star_wars_vote_split](cases/IRV_OUTLIER_RR_WITH_STAR/04_star_wars_vote_split.md)** — `method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml` (3c/100b)  
     STAR=**Leia** · IRV=Skywalker · RR=Leia · Approval=Skywalker · Score=Leia · Condorcet=Leia
+- **[s1_sincere_thin_moderate_c3_b100](cases/IRV_OUTLIER_RR_WITH_STAR/s1_sincere_thin_moderate_c3_b100.md)** — `method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml` (3c/100b)  
+    STAR=**Beth** · IRV=Ana · RR=Beth · Approval=Beth · Score=Beth · Condorcet=Beth
+- **[s4_strategic_510_real_moderate_c3_b100](cases/IRV_OUTLIER_RR_WITH_STAR/s4_strategic_510_real_moderate_c3_b100.md)** — `method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100.yaml` (3c/100b)  
+    STAR=**Beth** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 - **[bv2171_h93tm4_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2171_h93tm4_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml` (3c/8b)  
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey
 - **[bv2172_bkwfjr_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2172_bkwfjr_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml` (3c/100b)  
@@ -142,7 +146,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
 
-### CYCLE_OR_THREE_WAY — 24
+### CYCLE_OR_THREE_WAY — 25
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -197,6 +201,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**April** · IRV=Celia · RR=April · Approval=April · Score=April · Condorcet=none
 - **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
+- **[s2_strategic_510_thin_moderate_c3_b100](cases/CYCLE_OR_THREE_WAY/s2_strategic_510_thin_moderate_c3_b100.md)** — `method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100.yaml` (3c/100b)  
+    STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 
 ### APPROVAL_OR_MINOR — 39
 

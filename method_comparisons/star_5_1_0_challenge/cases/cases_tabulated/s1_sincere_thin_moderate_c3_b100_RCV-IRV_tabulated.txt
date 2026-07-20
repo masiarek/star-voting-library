@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Sincere STAR — the center wins (Beth is the Condorcet winner)
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Beth, Cole
+    48 ×   Ana > Beth      (5, 3, 0)
+    47 ×   Cole > Beth      (0, 3, 5)
+     5 ×   Beth > Ana      (2, 5, 0)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               48  Hopeful
+Cole              47  Hopeful
+Beth               5  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               53  Elected
+Cole              47  Rejected
+Beth               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ana
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

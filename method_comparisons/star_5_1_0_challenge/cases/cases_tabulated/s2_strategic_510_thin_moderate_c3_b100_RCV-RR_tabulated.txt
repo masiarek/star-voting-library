@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 100 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ana, Beth, Cole
+    48 × Ana > Beth > Cole      (5, 1, 0)
+    47 × Cole > Beth > Ana      (0, 1, 5)
+     5 × Beth > Ana > Cole      (1, 5, 0)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Beth  beats Ana    52 – 48
+   Ana   beats Cole   53 – 47
+   Beth  beats Cole   53 – 47
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |     Ana      |    Beth     |    Cole     |
+-----------------------------------------------------
+   Ana > |     ---      |48 -  0 - 52 |53 -  0 - 47 |
+  Beth > | 52 -  0 - 48 |    ---      |53 -  0 - 47 |
+  Cole > | 47 -  0 - 53 |47 -  0 - 53 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Beth       2–0–0         2     +10  Ana, Cole
+    2  Ana        1–1–0         1      +2  Cole
+    3  Cole       0–2–0         0     -12  —
+
+Winner — Ranked Robin (RCV-RR): Beth
+   beats every opponent head-to-head — the Condorcet winner.

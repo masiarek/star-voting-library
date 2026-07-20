@@ -1,0 +1,121 @@
+======================================================================
+SOURCE FILE:     s4_strategic_510_real_moderate_c3_b100.yaml
+TABULATED FILE:  s4_strategic_510_real_moderate_c3_b100_tabulated.txt
+======================================================================
+
+election_title: "Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW"
+scenario_description: |-
+  The nuance rb-j's "the 1s contribute little" misses. Same 5-1-0 min-max
+  strategy, but the moderate Beth has a real first-choice base (25, vs poles
+  40/35). Now the 75 "1"s plus her 25 fives lift Beth to 200 — past Cole (175)
+  and into the runoff — and she wins as the Condorcet winner. Under the identical
+  strategic ballot, STAR elects the CW here while RCV-IRV does not (s5): the "1"s
+  carry real weight, so 5-1-0 STAR is strictly more moderate-friendly than IRV.
+  So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ana, Beth, Cole
+  40 × 5, 1, 0
+  35 × 0, 1, 5
+  25 × 1, 5, 0
+expected_winners:
+- Beth
+
+# file: s4_strategic_510_real_moderate_c3_b100.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW ===
+  The nuance rb-j's "the 1s contribute little" misses. Same 5-1-0 min-max
+  strategy, but the moderate Beth has a real first-choice base (25, vs poles
+  40/35). Now the 75 "1"s plus her 25 fives lift Beth to 200 — past Cole (175)
+  and into the runoff — and she wins as the Condorcet winner. Under the identical
+  strategic ballot, STAR elects the CW here while RCV-IRV does not (s5): the "1"s
+  carry real weight, so 5-1-0 STAR is strictly more moderate-friendly than IRV.
+  So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ana     |   * Beth    |     Cole    |
+-------------------------------------------------------------
+         * Ana > |     ---      |40 -  0 - 60 |65 -  0 - 35 |
+        * Beth > | 60 -  0 - 40 |    ---      |65 -  0 - 35 |
+          Cole > | 35 -  0 - 65 |35 -  0 - 65 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Beth — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Beth
+  Choose-One (Plurality) = Ana   (differs from STAR)
+  RCV-IRV                = Ana   (differs from STAR)
+  Approval               = Ana   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/s4_strategic_510_real_moderate_c3_b100_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ana)
+ - Runoff Round Winner   = (Beth)
+  Candidate Ana earned the highest total score, but
+  Candidate Beth won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Ana,Beth,Cole
+   40 ×   5,   1,   0
+   35 ×   0,   1,   5
+   25 ×   1,   5,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ana        40   0   0   0  25  35  |   225   2.3
+Beth       25   0   0   0  75   0  |   200   2.0
+Cole       35   0   0   0   0  65  |   175   1.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ana           -- 225 -- First place
+   Beth          -- 200 -- Second place
+   Cole          -- 175
+ Ana and Beth advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Beth          -- 60 -- First place
+   Ana           -- 40
+   Equal Support --  0
+ Beth wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Beth 60 (60%)  ·  Ana 40 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Beth

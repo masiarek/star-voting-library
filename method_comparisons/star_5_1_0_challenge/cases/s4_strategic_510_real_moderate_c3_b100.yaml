@@ -1,0 +1,31 @@
+election_title: "Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW"
+scenario_description: |-
+  The nuance rb-j's "the 1s contribute little" misses. Same 5-1-0 min-max
+  strategy, but the moderate Beth has a real first-choice base (25, vs poles
+  40/35). Now the 75 "1"s plus her 25 fives lift Beth to 200 — past Cole (175)
+  and into the runoff — and she wins as the Condorcet winner. Under the identical
+  strategic ballot, STAR elects the CW here while RCV-IRV does not (s5): the "1"s
+  carry real weight, so 5-1-0 STAR is strictly more moderate-friendly than IRV.
+  So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ana, Beth, Cole
+  40 × 5, 1, 0
+  35 × 0, 1, 5
+  25 × 1, 5, 0
+expected_winners:
+- Beth
+
+# file: s4_strategic_510_real_moderate_c3_b100.yaml

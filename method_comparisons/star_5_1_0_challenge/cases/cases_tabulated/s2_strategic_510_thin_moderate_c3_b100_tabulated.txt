@@ -1,0 +1,104 @@
+======================================================================
+SOURCE FILE:     s2_strategic_510_thin_moderate_c3_b100.yaml
+TABULATED FILE:  s2_strategic_510_thin_moderate_c3_b100_tabulated.txt
+======================================================================
+
+election_title: "Strategic 5-1-0 STAR — the center is squeezed out (fails the CW)"
+scenario_description: |-
+  The SAME electorate as s1, but every voter min-maxes rb-j's way: favorite 5,
+  lesser-evil 1, hated 0. Now Beth's scoring total collapses to 120 (75 ones +
+  25 from her base) — below both poles — so she misses the runoff, and Ana (a
+  pole) wins. STAR fails to elect the Condorcet winner, exactly as rb-j argues:
+  under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes like
+  IRV. Confirmed identical to RCV-IRV on this electorate (s3).
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ana, Beth, Cole
+  48 × 5, 1, 0
+  47 × 0, 1, 5
+   5 × 1, 5, 0
+expected_winners:
+- Ana
+
+# file: s2_strategic_510_thin_moderate_c3_b100.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Strategic 5-1-0 STAR — the center is squeezed out (fails the CW) ===
+  The SAME electorate as s1, but every voter min-maxes rb-j's way: favorite 5,
+  lesser-evil 1, hated 0. Now Beth's scoring total collapses to 120 (75 ones +
+  25 from her base) — below both poles — so she misses the runoff, and Ana (a
+  pole) wins. STAR fails to elect the Condorcet winner, exactly as rb-j argues:
+  under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes like
+  IRV. Confirmed identical to RCV-IRV on this electorate (s3).
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ana     |     Beth    |   * Cole    |
+-------------------------------------------------------------
+         * Ana > |     ---      |48 -  0 - 52 |53 -  0 - 47 |
+          Beth > | 52 -  0 - 48 |    ---      |53 -  0 - 47 |
+        * Cole > | 47 -  0 - 53 |47 -  0 - 53 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Beth — STAR elected Ana instead (Beth was eliminated in the scoring round)
+
+[Divergence from STAR]
+  STAR               = Ana
+  RCV-RR (Condorcet) = Beth   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: cases_tabulated/s2_strategic_510_thin_moderate_c3_b100_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Ana,Beth,Cole
+   48 ×   5,   1,   0
+   47 ×   0,   1,   5
+    5 ×   1,   5,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ana        48   0   0   0   5  47  |   245   2.5
+Beth        5   0   0   0  95   0  |   120   1.2
+Cole       47   0   0   0   0  53  |   235   2.4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ana           -- 245 -- First place
+   Cole          -- 235 -- Second place
+   Beth          -- 120
+ Ana and Cole advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ana           -- 53 -- First place
+   Cole          -- 47
+   Equal Support --  0
+ Ana wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Ana 53 (53%)  ·  Cole 47 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ana

@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Beth, Cole
+    40 ×   Ana > Beth      (5, 1, 0)
+    35 ×   Cole > Beth      (0, 1, 5)
+    25 ×   Beth > Ana      (1, 5, 0)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               40  Hopeful
+Cole              35  Hopeful
+Beth              25  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               65  Elected
+Cole              35  Rejected
+Beth               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ana
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,0 +1,46 @@
+======================================================================
+SOURCE FILE:     s5_irv_real_moderate_c3_b100.yaml
+TABULATED FILE:  s5_irv_real_moderate_c3_b100_tabulated.txt
+======================================================================
+
+election_title: "RCV-IRV, real moderate base — still squeezes the center (→ Ana)"
+scenario_description: |-
+  The real-moderate electorate (40/35/25) as ranked ballots under RCV-IRV. Beth
+  still has the fewest first-choices (25) and is eliminated first, her ballots
+  flow to Ana, who wins 65–35. IRV fails the Condorcet winner regardless of
+  moderate base — because it only ever counts first choices. Contrast s4: the
+  SAME electorate under strategic-5-1-0 STAR elects Beth, the Condorcet winner.
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  40:Ana>Beth>Cole
+  35:Cole>Beth>Ana
+  25:Beth>Ana>Cole
+expected_winners:
+- Ana
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  RCV-IRV, real moderate base — still squeezes the center (→ Ana)
+ Tabulating 100 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               40  Hopeful
+Cole              35  Hopeful
+Beth              25  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               65  Elected
+Cole              35  Rejected
+Beth               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ana

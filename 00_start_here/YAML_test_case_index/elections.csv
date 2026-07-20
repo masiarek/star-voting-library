@@ -219,6 +219,11 @@ LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
+LH:s1_sincere_thin_moderate_c3_b100,Sincere STAR — the center wins (Beth is the Condorcet winner),1,single-race,100,STAR,LH-only
+LH:s2_strategic_510_thin_moderate_c3_b100,Strategic 5-1-0 STAR — the center is squeezed out (fails the CW),1,single-race,100,STAR,LH-only
+LH:s3_irv_thin_moderate_c3_b100,RCV-IRV on the same electorate — also squeezes the center (→ Ana),1,single-race,100,IRV,LH-only
+LH:s4_strategic_510_real_moderate_c3_b100,"Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW",1,single-race,100,STAR,LH-only
+LH:s5_irv_real_moderate_c3_b100,"RCV-IRV, real moderate base — still squeezes the center (→ Ana)",1,single-race,100,IRV,LH-only
 LH:star_ala_approval,STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot,1,single-race,8,STAR,LH-only
 LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals add up),1,single-race,6,STAR,LH-only
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only

@@ -142,6 +142,7 @@ CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/cases/bv2156_3grpbb_s
 CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml,3,54,Bruno,Bruno,Bruno,Celia,Celia,Celia,Celia,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml,3,62,April,Celia,Celia,April,April,April,April,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml,4,20,Blue,Purple,Purple,Blue,Blue,Pink,Purple,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100.yaml,3,100,Ana,Ana,Ana,Beth,Beth,Ana,Ana,Beth,Beth,0,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/cases/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/cases/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/exercises/cases/ex01_district_combined.yaml,5,18,Carmen,Elena,Elena,Elena,Elena,Avery,Avery,Elena,Elena,18,False,False,False
@@ -179,6 +180,8 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/cases/bv2155_cp
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml,3,22,Cat,Fish,Fish,Cat,Cat,Cat,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml,4,32,Cat,Fish,Fish,Cat,Cat,Bird,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml,3,100,Leia,Skywalker,Skywalker,Leia,Leia,Skywalker,Leia,Leia,Leia,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml,3,100,Beth,Ana,Ana,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100.yaml,3,100,Beth,Ana,Ana,Beth,Beth,Ana,Ana,Beth,Beth,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml,3,8,Casey,Avery,Avery,Casey,Casey,Casey,Casey,Casey,Casey,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml,3,100,Casey,Avery,Avery,Casey,Casey,Casey,Casey,Casey,Casey,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml,3,100,Casey,Avery,Avery,Casey,Casey,Casey,Casey,Casey,Casey,0,False,False,False

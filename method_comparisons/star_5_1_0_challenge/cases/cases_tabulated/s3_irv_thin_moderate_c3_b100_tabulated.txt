@@ -1,0 +1,46 @@
+======================================================================
+SOURCE FILE:     s3_irv_thin_moderate_c3_b100.yaml
+TABULATED FILE:  s3_irv_thin_moderate_c3_b100_tabulated.txt
+======================================================================
+
+election_title: "RCV-IRV on the same electorate — also squeezes the center (→ Ana)"
+scenario_description: |-
+  The thin-moderate electorate as ranked ballots under RCV-IRV. Beth has the
+  fewest first-choices (5) and is eliminated first; her ballots flow to Ana, who
+  wins 53–47. IRV fails to elect the Condorcet winner (Beth). This matches the
+  strategic-5-1-0 STAR result (s2): under 5-1-0 with a thin moderate base, STAR
+  and IRV fail the SAME way — rb-j's core point, confirmed.
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  48:Ana>Beth>Cole
+  47:Cole>Beth>Ana
+  5:Beth>Ana>Cole
+expected_winners:
+- Ana
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  RCV-IRV on the same electorate — also squeezes the center (→ Ana)
+ Tabulating 100 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               48  Hopeful
+Cole              47  Hopeful
+Beth               5  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               53  Elected
+Cole              47  Rejected
+Beth               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ana
