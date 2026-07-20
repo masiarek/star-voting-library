@@ -364,6 +364,14 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    freely, keep examples small.
 2. **Go / no-go** (Adam decides). If the scenario earns its keep, promote it to a
    real case; otherwise it stays scratch / gets discarded.
+   - **LOCK THE SMALLEST BALLOT SET *before* creating BV — BV elections are
+     PERMANENT and undeletable, so the ballot count has to be right the first
+     time.** Apply the house voter-count rules (fewest ballots that make the
+     point; weighted `Count`s **≥ 6**; prefer a handful of blocs) *at the scratch
+     stage*, not after minting. A demonstration that needs proportions (e.g. a
+     center-squeeze ratio) can still usually be shown in ~30 ballots across 3
+     clean blocs — don't reach for 100. Getting this wrong mints orphan public
+     elections you can't take back.
 3. **Create the BV election** (AI runs it; Adam must be signed in to BV). Add the
    election spec to the data module `bv_election_specs.py`, set its `ELECTIONS`
    list to that spec, then `uv run …/create_bv_test_election.py` — it creates the election **and casts the
