@@ -82,4 +82,4 @@ So the fair verdict: rb-j has found a genuine edge of STAR's strategy space and 
 | [`s4`](cases/s4_strategic_510_real_moderate_c3_b100.yaml) | real moderate · 5-1-0 | STAR | Beth (CW) |
 | [`s5`](cases/s5_irv_real_moderate_c3_b100.yaml) | real moderate · ranked | RCV-IRV | Ana |
 
-*Source of the argument: rb-j (Robert Bristow-Johnson), r/EndFPTP, "the restricted case of 3 significant candidates" (2026). Cast renamed (Ana/Beth/Cole) for a clean spatial example; Beth is the center. Every winner above is the engine's, reproducible from the files.*
+*Source of the argument: rb-j (Robert Bristow-Johnson), r/EndFPTP, "the restricted case of 3 significant candidates" (2026). Cast renamed (Ana/Beth/Cole) for a clean spatial example; Beth is the center. Every winner above is the engine's, reproducible from the files. BetterVoting's own STAR and IRV counts **agree on every race** (frozen `_bv_export.json` beside the yamls) — including `dyh93j`, where the same 5-1-0 ballots elect **Beth under STAR yet Ana under IRV**, live.*

@@ -594,6 +594,24 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Ranked Robin (Condorcet) — rank; every pair head-to-head | RankedRobin | 11 | **Cheese** |
 | STAR — score 0-5, then an automatic runoff | STAR | 11 | **Cheese** |
 
+## BV2222 — STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate)
+
+**Election** [`rfyk46`](https://bettervoting.com/rfyk46/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR — strategic 5-1-0 scores | STAR | 3 | **Ana** |
+| RCV-IRV — the same preferences as ranks | IRV | 3 | **Ana** |
+
+## BV2223 — STAR vs strategy — 5-1-0 min-max, real moderate: STAR keeps the CW, IRV doesn't
+
+**Election** [`dyh93j`](https://bettervoting.com/dyh93j/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR — strategic 5-1-0 scores | STAR | 3 | **Beth** |
+| RCV-IRV — the same preferences as ranks | IRV | 3 | **Ana** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

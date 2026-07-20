@@ -96,7 +96,7 @@ One nuance you can now name: if you rate the **two finalists** the *same*, your 
 - **No ["wasted" votes](../topics/wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../topics/spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
-→ The fuller case (with the honest caveats): [The benefits of STAR Voting](getting_started/STAR_benefits.md).
+→ Sold already? The quick, exciting wins: [The benefits of STAR Voting](getting_started/STAR_benefits.md).
 
 *Thinking "wait, but isn't it just averaging? / a wasted 0? / a second election?"* — the honest, plain-language answers: [Common misunderstandings](getting_started/common_misunderstandings.md).
 

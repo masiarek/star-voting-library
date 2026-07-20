@@ -41,7 +41,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | cxrf8v | BV2138 — One Ranked Electorate, Many Tabulations — t | 4 | contested (multi-race) | 921 | IRV, RankedRobin, STAR, STV | BV |
 | d3b9wc | BV2188 — Two Districts, One Mayor (I of III) — West  | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | dxg8pb | BV2150 — Felsenthal's No-Show paradox (1 of 2) — eve | 3 | contested (multi-race) | 11 | IRV, RankedRobin, STAR | BV |
-| dyh93j | Strategic 5-1-0 STAR, real moderate base — STAR STIL | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
+| dyh93j | BV2223 — STAR vs strategy — 5-1-0 min-max, real mode | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | dyxrbr | BV2133 — Pet poll II: four methods, four winners | 4 | contested (multi-race) | 32 | Approval, IRV, Plurality, STAR | BV |
 | f3dxq9 | BV2167 — Minimax elects the absolute loser — the can | 2 | contested (multi-race) | 11 | Plurality, STAR | BV |
 | f4cjpy | BV2159 — Brams' 21-voter sampler — IRV elects B whil | 3 | contested (multi-race) | 21 | IRV, RankedRobin, STAR | BV |
@@ -69,7 +69,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | qdtqf2 | BV2200 — Where Do You Draw the Line? — one electorat | 4 | contested (multi-race) | 9 | Approval, STAR | BV |
 | r6ctvy | BV2152 — Felsenthal & Maoz's Approval paradox — the  | 2 | contested (multi-race) | 47 | Approval, RankedRobin | BV |
 | r6qc8h | BV2160 — Fishburn's Borda truncation electorate — ST | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
-| rfyk46 | Strategic 5-1-0 STAR — the center is squeezed out (f | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
+| rfyk46 | BV2222 — STAR vs strategy — 5-1-0 min-max squeezes t | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | rhbfj7 | BV2189 — Two Districts, One Mayor (II of III) — East | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | v8r66y | BV2177 — The Post-it election, seven ways — all four | 7 | contested (multi-race) | 20 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
 | wq6yv7 | BV2154 — Felsenthal's Approval paradox — the absolut | 3 | contested (multi-race) | 15 | Approval, IRV, RankedRobin | BV |
@@ -80,7 +80,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ywqhq4 | BV2191 — One Electorate, Five Verdicts — the snack v | 5 | contested (multi-race) | 9 | Approval, IRV, Plurality, RankedRobin, STAR | BV |
 | yyhj9x | BV2196 — Later-No-Harm (2 of 2) — the generous ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
 | 26khr3 | NOTA test — None of the Above wins (with a null abst | 1 | single-race | 6 | STAR | BV |
-| 2kcwbw | Sincere STAR — the center wins (Beth is the Condorce | 1 | single-race | 100 | STAR | BV |
+| 2kcwbw | BV2221 — STAR vs strategy — sincere ballots elect th | 1 | single-race | 100 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
 | 36f4v2 | BV2219 — Equally Weighted Vote — base election (STAR | 1 | single-race | 3 | STAR | BV |
 | 39py93 | BV2204 — Poets on the shelf: the control (STV 2 seat | 1 | single-race | 13 | STV | BV |
