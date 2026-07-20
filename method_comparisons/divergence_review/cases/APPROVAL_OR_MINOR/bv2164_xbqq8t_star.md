@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Arlo**. Only **Approval** differs,
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_star.yaml)  ·  **STAR tabulated mirror:** [`bv2164_xbqq8t_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2164_xbqq8t_star_tabulated.txt)
+**Source election:** [`method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml)  ·  **STAR tabulated mirror:** [`bv2164_xbqq8t_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/cases/cases_tabulated/bv2164_xbqq8t_star_tabulated.txt)
 
 _4 candidates, 33 ballots._
 

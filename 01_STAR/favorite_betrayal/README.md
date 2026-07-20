@@ -96,11 +96,11 @@ Both sides of the honesty ledger, in one breath: **STAR fails FBC** — this pai
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 ```
 
-Sources: [bv2206_7mckyg_fbc_honest_tepid_consensus.yaml](bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) · [bv2207_b6xrdr_fbc_betrayal_pays.yaml](bv2207_b6xrdr_fbc_betrayal_pays.yaml). Full mirrors: [`favorite_betrayal_tabulated/`](favorite_betrayal_tabulated/).
+Sources: [bv2206_7mckyg_fbc_honest_tepid_consensus.yaml](cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) · [bv2207_b6xrdr_fbc_betrayal_pays.yaml](cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml). Full mirrors: [`favorite_betrayal_tabulated/`](cases/cases_tabulated/).
 
 ---
 

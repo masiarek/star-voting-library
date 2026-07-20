@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).
 
-Reference file: [`bv2105_r4dqvd_ice_cream_bloc.yaml`](bv2105_r4dqvd_ice_cream_bloc.yaml) (`expected_winners: [Chocolate, Strawberry]`). Frozen export: [`bv2105_r4dqvd_ice_cream_bloc_bv_export.json`](bv2105_r4dqvd_ice_cream_bloc_bv_export.json). Backs sheet row **BV2105**.
+Reference file: [`bv2105_r4dqvd_ice_cream_bloc.yaml`](cases/bv2105_r4dqvd_ice_cream_bloc.yaml) (`expected_winners: [Chocolate, Strawberry]`). Frozen export: [`bv2105_r4dqvd_ice_cream_bloc_bv_export.json`](cases/bv2105_r4dqvd_ice_cream_bloc_bv_export.json). Backs sheet row **BV2105**.
 
 ## The election
 
@@ -54,7 +54,7 @@ Winners — Bloc STAR Voting Method (2 winners)
  Strawberry
 ```
 
-Full audit copy: [`_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt`](_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt`](cases/cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt).
 
 ## LH ↔ BetterVoting
 

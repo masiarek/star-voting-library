@@ -19,7 +19,7 @@ Anchovy, Basil, Caper
 5, 5, 5
 ```
 
-Every row is flat — each voter likes all three toppings equally, just at a different intensity. Totals: **Anchovy 15, Basil 15, Caper 15** (a three-way tie). Source: [`Flat_scores_ties_08_all_flat_zero_count.yaml`](Flat_scores_ties_08_all_flat_zero_count.yaml).
+Every row is flat — each voter likes all three toppings equally, just at a different intensity. Totals: **Anchovy 15, Basil 15, Caper 15** (a three-way tie). Source: [`Flat_scores_ties_08_all_flat_zero_count.yaml`](cases/Flat_scores_ties_08_all_flat_zero_count.yaml).
 
 ## View 1 — BetterVoting (incorrect — bug pending)
 
@@ -55,7 +55,7 @@ Automatic Runoff Round
 Winner: Anchovy
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_08_all_flat_zero_count_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_08_all_flat_zero_count_tabulated.txt).
 
 ## The takeaway
 

@@ -6,7 +6,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q`). Recreated via the API so the reporting bug has a live election to point at; BV agrees with LH — Someone I Like, Santa Claus, The Lesser Evil — and reports `tieBreakType: none` correctly (there is no tie here).
 
-Reference file: [`bv130_bloc_pagination_731.yaml`](bv130_bloc_pagination_731.yaml) (`expected_winners: [Someone I Like, Santa Claus, The Lesser Evil]`). Backs sheet row **BV130**.
+Reference file: [`bv130_bloc_pagination_731.yaml`](cases/bv130_bloc_pagination_731.yaml) (`expected_winners: [Someone I Like, Santa Claus, The Lesser Evil]`). Backs sheet row **BV130**.
 
 ## The election
 
@@ -48,7 +48,7 @@ Winners — Bloc STAR Voting Method (3 winners)
  The Lesser Evil
 ```
 
-Full audit copy: [`_main_tabulated/bv130_bloc_pagination_731_tabulated.txt`](_main_tabulated/bv130_bloc_pagination_731_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv130_bloc_pagination_731_tabulated.txt`](cases/cases_tabulated/bv130_bloc_pagination_731_tabulated.txt).
 
 ## Related
 

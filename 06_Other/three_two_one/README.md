@@ -39,7 +39,7 @@ This matches Quinn's `V321.results()`, which runs the plain 3-step. The full ele
 
 ## Worked example — Tennessee, blank = Bad
 
-[`321_tennessee_blank_encoding_c4_b100.yaml`](321_tennessee_blank_encoding_c4_b100.yaml): the classic Tennessee-capital electorate (100 voters, four cities) as 3-2-1 ballots, with each faction's *Bad* ratings left **blank**.
+[`321_tennessee_blank_encoding_c4_b100.yaml`](cases/321_tennessee_blank_encoding_c4_b100.yaml): the classic Tennessee-capital electorate (100 voters, four cities) as 3-2-1 ballots, with each faction's *Bad* ratings left **blank**.
 
 ```
 $ python three_two_one_tabulation.py 321_tennessee_blank_encoding_c4_b100.yaml

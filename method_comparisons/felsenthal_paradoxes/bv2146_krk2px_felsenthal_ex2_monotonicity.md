@@ -24,7 +24,7 @@ First choices go from Ada 5, Ben 6, Cleo 6 to **Ada 5, Ben 8, Cleo 4**. So the r
 
 ## Why this is the monotonicity failure
 
-A method is *monotone* if ranking a candidate higher can never hurt them. Here the raise changed the **elimination order** — the eliminated candidate's transfers decide the final pair, so who gets eliminated *is* the election. This is IRV-specific machinery: the same raise leaves Ranked Robin and STAR unmoved (both elect Ada before and after), because neither depends on an elimination order. Compare the repo's standalone pair ([monotonicity set](../monotonicity/monotonicity_pages/monotonicity_irv_after.md)) — same paradox, different construction.
+A method is *monotone* if ranking a candidate higher can never hurt them. Here the raise changed the **elimination order** — the eliminated candidate's transfers decide the final pair, so who gets eliminated *is* the election. This is IRV-specific machinery: the same raise leaves Ranked Robin and STAR unmoved (both elect Ada before and after), because neither depends on an elimination order. Compare the repo's standalone pair ([monotonicity set](../monotonicity/cases/cases_pages/monotonicity_irv_after.md)) — same paradox, different construction.
 
 Note the composite lesson of the pair: in BV2145 the runoff robbed the *Condorcet winner*; here it punishes *Ben* for being supported more. The procedure fails both its own winner and its own logic.
 
@@ -34,7 +34,7 @@ Live results: **[bettervoting.com/krk2px/results ↗](https://bettervoting.com/k
 
 ## View 2 — LH engine
 
-Runoff/IRV race ([bv2146_krk2px_irv.yaml](bv2146_krk2px_irv.yaml)):
+Runoff/IRV race ([bv2146_krk2px_irv.yaml](cases/bv2146_krk2px_irv.yaml)):
 
 ```
  Tabulating 17 ballots (ranked ballots).
@@ -57,7 +57,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ada
 ```
 
-Ranked Robin ([bv2146_krk2px_ranked_robin.yaml](bv2146_krk2px_ranked_robin.yaml)): the raise only swaps Ben/Cleo on two ballots, so Ada still beats Ben 9–8 and Cleo 9–8 — **Ada**, unchanged. STAR ([bv2146_krk2px_star.yaml](bv2146_krk2px_star.yaml)): Ben rises 51 → 55, Cleo falls 49 → 45, Ada stays 53; the finalist pair changes to Ben/Ada but **Ada still wins the runoff 9–8** — no more-is-less. Full detail: [IRV mirror](felsenthal_paradoxes_tabulated/bv2146_krk2px_irv_tabulated.txt) · [RR mirror](felsenthal_paradoxes_tabulated/bv2146_krk2px_ranked_robin_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2146_krk2px_star_tabulated.txt).
+Ranked Robin ([bv2146_krk2px_ranked_robin.yaml](cases/bv2146_krk2px_ranked_robin.yaml)): the raise only swaps Ben/Cleo on two ballots, so Ada still beats Ben 9–8 and Cleo 9–8 — **Ada**, unchanged. STAR ([bv2146_krk2px_star.yaml](cases/bv2146_krk2px_star.yaml)): Ben rises 51 → 55, Cleo falls 49 → 45, Ada stays 53; the finalist pair changes to Ben/Ada but **Ada still wins the runoff 9–8** — no more-is-less. Full detail: [IRV mirror](cases/cases_tabulated/bv2146_krk2px_irv_tabulated.txt) · [RR mirror](cases/cases_tabulated/bv2146_krk2px_ranked_robin_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2146_krk2px_star_tabulated.txt).
 
 ## Agreement
 
@@ -67,4 +67,4 @@ Ranked Robin ([bv2146_krk2px_ranked_robin.yaml](bv2146_krk2px_ranked_robin.yaml)
 | Ranked Robin | Ada | Ada | ✓ |
 | STAR (ranks→scores) | Ada | Ada | ✓ |
 
-Frozen export: [bv2146_krk2px_bv_export.json](bv2146_krk2px_bv_export.json) · Part 1: [BV2145 — the Condorcet winner eliminated](bv2145_6fj2kg_felsenthal_ex2.md) · Teaching page: [non_monotonicity.md](../../00_start_here/voting_paradoxes/non_monotonicity.md).
+Frozen export: [bv2146_krk2px_bv_export.json](cases/bv2146_krk2px_bv_export.json) · Part 1: [BV2145 — the Condorcet winner eliminated](bv2145_6fj2kg_felsenthal_ex2.md) · Teaching page: [non_monotonicity.md](../../00_start_here/voting_paradoxes/non_monotonicity.md).

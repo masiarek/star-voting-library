@@ -191,7 +191,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - **Resists intensity capture and center squeeze** — a loud minority can't win on volume; a broadly-acceptable middle candidate isn't eliminated early (unlike **IRV**).
 - Still **simple** — two steps, easy to hand-count.
 
-> Notes: "Center squeeze" is an **IRV**-specific failure — name IRV precisely here, not "RCV." STAR's runoff is what avoids it. Comparison: [center squeeze, STAR vs IRV](../../../method_comparisons/center_squeeze/center_squeeze_star.yaml).
+> Notes: "Center squeeze" is an **IRV**-specific failure — name IRV precisely here, not "RCV." STAR's runoff is what avoids it. Comparison: [center squeeze, STAR vs IRV](../../../method_comparisons/center_squeeze/cases/center_squeeze_star.yaml).
 
 ---
 

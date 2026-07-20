@@ -20,7 +20,7 @@ Quorum is only checked when a file opts in. Two inputs:
 
 ## Worked example — the abstention that carries quorum
 
-A 10-member board; six submit a ballot, one of them **blank**. No explicit quorum, so the default is a majority of 10 — **at least 6** ([`quorum_demo_c3_b6.yaml`](../../01_STAR/_main/quorum_demo_c3_b6.yaml)):
+A 10-member board; six submit a ballot, one of them **blank**. No explicit quorum, so the default is a majority of 10 — **at least 6** ([`quorum_demo_c3_b6.yaml`](../../01_STAR/_main/cases/quorum_demo_c3_b6.yaml)):
 
 ```
  Quorum: 6 of 10 eligible voters participated (60% turnout); requires more than 50% (>= 6). MET.
@@ -31,11 +31,11 @@ A 10-member board; six submit a ballot, one of them **blank**. No explicit quoru
    Anna 3 (60%) vs Ben 2 (40%); majority = 3.
 ```
 
-The blank ballot is the **sixth participant**. Because a cast abstention counts toward quorum, turnout reaches 6 and the election is valid — **drop that abstention and quorum would fail** (5 of 10). The abstainer changed no candidate's score, but their presence made the result count. Full report: [`quorum_demo_c3_b6_tabulated.txt`](../../01_STAR/_main/_main_tabulated/quorum_demo_c3_b6_tabulated.txt).
+The blank ballot is the **sixth participant**. Because a cast abstention counts toward quorum, turnout reaches 6 and the election is valid — **drop that abstention and quorum would fail** (5 of 10). The abstainer changed no candidate's score, but their presence made the result count. Full report: [`quorum_demo_c3_b6_tabulated.txt`](../../01_STAR/_main/cases/cases_tabulated/quorum_demo_c3_b6_tabulated.txt).
 
 ## Won the count, but not elected (quorum fails)
 
-Take the **exact same six ballots** — Anna wins the tabulation — and change only the assumed electorate. For teaching, invent one: *"the electorate is the turnout plus another 100%,"* so `eligible_voters: 12` ([`quorum_fail_demo_c3_b6.yaml`](../../01_STAR/_main/quorum_fail_demo_c3_b6.yaml)). (That "cast + X%" rule is a **demo device only** — real elections use the actual registered roll, never a formula off the ballots.)
+Take the **exact same six ballots** — Anna wins the tabulation — and change only the assumed electorate. For teaching, invent one: *"the electorate is the turnout plus another 100%,"* so `eligible_voters: 12` ([`quorum_fail_demo_c3_b6.yaml`](../../01_STAR/_main/cases/quorum_fail_demo_c3_b6.yaml)). (That "cast + X%" rule is a **demo device only** — real elections use the actual registered roll, never a formula off the ballots.)
 
 ```
 --- STAR Voting Method (single winner) ---
@@ -43,7 +43,7 @@ Take the **exact same six ballots** — Anna wins the tabulation — and change 
  No winner declared — quorum not reached.
 ```
 
-Exactly half turned out, and a quorum is a *strict* majority, so 50% fails by one. Anna won the vote, but **winning the vote and being elected are different things** when turnout falls short — the engine stops before declaring a winner. (Note it bails *before* tabulating, so it doesn't reprint who would have won; that's the [quorum-met run](../../01_STAR/_main/quorum_demo_c3_b6.yaml) above, on the same ballots.)
+Exactly half turned out, and a quorum is a *strict* majority, so 50% fails by one. Anna won the vote, but **winning the vote and being elected are different things** when turnout falls short — the engine stops before declaring a winner. (Note it bails *before* tabulating, so it doesn't reprint who would have won; that's the [quorum-met run](../../01_STAR/_main/cases/quorum_demo_c3_b6.yaml) above, on the same ballots.)
 
 ## Why `eligible_voters` isn't auto-filled from the ballots
 

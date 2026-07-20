@@ -17,7 +17,7 @@ Aspen, Birch, Cedar
 5, 3, 0
 ```
 
-Source: [`Runoff_01_confirms_leader_r2pvc9.yaml`](Runoff_01_confirms_leader_r2pvc9.yaml) · frozen export: [`Runoff_01_confirms_leader_r2pvc9_bv_export.json`](Runoff_01_confirms_leader_r2pvc9_bv_export.json).
+Source: [`Runoff_01_confirms_leader_r2pvc9.yaml`](cases/Runoff_01_confirms_leader_r2pvc9.yaml) · frozen export: [`Runoff_01_confirms_leader_r2pvc9_bv_export.json`](cases/Runoff_01_confirms_leader_r2pvc9_bv_export.json).
 
 ## View 1 — BetterVoting
 
@@ -38,7 +38,7 @@ Aspen leads the Scoring Round (12) and wins the Automatic Runoff 2–1; the dash
 ![Race Details: Scores Table (Aspen 12, Birch 10, Cedar 1) and Runoff Table (Aspen 2 / 67% / 67%, Birch 1 / 33% / 33%, Equal Support 0, Total 3 / 100% / 100%)](img/r2pvc9_race_details.png)
 ## View 2 — the LH engine
 
-Same ballots, the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) mirror adds the funnel):
+Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) mirror adds the funnel):
 
 ```
 --- Runoff (Preference) Matrix ---

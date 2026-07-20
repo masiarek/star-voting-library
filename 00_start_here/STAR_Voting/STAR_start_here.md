@@ -42,7 +42,7 @@ The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four 
 
 Same five people, same feelings — but now each of them **rates all three** (5 = love it, 3 = fine, 0 = no):
 
-Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml) · [reader page](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
+Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) · [reader page](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
 
 ```
                     Sushi   Tacos   Pizza
@@ -106,9 +106,9 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 
 | Step | Read in order | What you'll see |
 |---|---|---|
-| **Three candidates** | [one ballot](../../01_STAR/_main/_main_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/_main_pages/02b_c3_b2_three-candidates.md) | A third option, and the winner becomes the broad compromise — the lunch, formalized in the smallest possible way. |
-| **Ways to vote** | [the eight-style gallery](../../01_STAR/_main/_main_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
-| **The classic** | [Tennessee capital](../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
+| **Three candidates** | [one ballot](../../01_STAR/_main/cases/cases_pages/02a_c3_b1_three-candidates.md) · [two ballots](../../01_STAR/_main/cases/cases_pages/02b_c3_b2_three-candidates.md) | A third option, and the winner becomes the broad compromise — the lunch, formalized in the smallest possible way. |
+| **Ways to vote** | [the eight-style gallery](../../01_STAR/_main/cases/cases_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
+| **The classic** | [Tennessee capital](../../01_STAR/_main/cases/cases_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 | **Do it yourself** | [Count a STAR election by hand](hands_on/count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
 
 Then, when you're ready: **the two rounds in depth** ([Scoring Round](the_count/STAR_Scoring_Round.md) · [Automatic Runoff](the_count/STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../topics/two_party_dominance.md) and [Why STAR Voting](../topics/Why_STAR_Voting.md).

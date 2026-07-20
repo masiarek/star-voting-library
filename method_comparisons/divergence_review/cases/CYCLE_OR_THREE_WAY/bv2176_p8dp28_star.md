@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml`](../../../../method_comparisons/postit_rcv_example/bv2176_p8dp28_star.yaml)  ·  **STAR tabulated mirror:** [`bv2176_p8dp28_star_tabulated.txt`](../../../../method_comparisons/postit_rcv_example/postit_rcv_example_tabulated/bv2176_p8dp28_star_tabulated.txt)
+**Source election:** [`method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml`](../../../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml)  ·  **STAR tabulated mirror:** [`bv2176_p8dp28_star_tabulated.txt`](../../../../method_comparisons/postit_rcv_example/cases/cases_tabulated/bv2176_p8dp28_star_tabulated.txt)
 
 _4 candidates, 20 ballots._
 

@@ -57,7 +57,7 @@ Winner — STAR Voting Method (single winner)
 
 (Note the `Abs` column: None of the Above shows `1` abstention — ballot 2's `&` — kept distinct from the `0` scores.)
 
-Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](none_of_the_above_tabulated/bv215_26khr3_nota_wins_tabulated.txt). Frozen BetterVoting export: [`bv215_26khr3_nota_wins_bv_export.json`](bv215_26khr3_nota_wins_bv_export.json). Tabulatable source: [`bv215_26khr3_nota_wins.yaml`](bv215_26khr3_nota_wins.yaml).
+Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](cases/cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt). Frozen BetterVoting export: [`bv215_26khr3_nota_wins_bv_export.json`](cases/bv215_26khr3_nota_wins_bv_export.json). Tabulatable source: [`bv215_26khr3_nota_wins.yaml`](cases/bv215_26khr3_nota_wins.yaml).
 
 ## Open question (BetterVoting)
 

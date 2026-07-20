@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **A**. Only **Approval** differs, el
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex08_minimal_reversal_3c.yaml`](../../../../01_STAR/exercises/ex08_minimal_reversal_3c.yaml)  ·  **STAR tabulated mirror:** [`ex08_minimal_reversal_3c_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex08_minimal_reversal_3c_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex08_minimal_reversal_3c.yaml`](../../../../01_STAR/exercises/cases/ex08_minimal_reversal_3c.yaml)  ·  **STAR tabulated mirror:** [`ex08_minimal_reversal_3c_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex08_minimal_reversal_3c_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

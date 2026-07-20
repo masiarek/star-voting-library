@@ -14,7 +14,7 @@ Maple, Olive, Pine
 3 ×  5, 1, 2     # the Maple enthusiasts
 ```
 
-Source: [`Runoff_04_reversal_at_scale_bfjqmg.yaml`](Runoff_04_reversal_at_scale_bfjqmg.yaml) · frozen export: [`Runoff_04_reversal_at_scale_bfjqmg_bv_export.json`](Runoff_04_reversal_at_scale_bfjqmg_bv_export.json).
+Source: [`Runoff_04_reversal_at_scale_bfjqmg.yaml`](cases/Runoff_04_reversal_at_scale_bfjqmg.yaml) · frozen export: [`Runoff_04_reversal_at_scale_bfjqmg_bv_export.json`](cases/Runoff_04_reversal_at_scale_bfjqmg_bv_export.json).
 
 ## View 1 — BetterVoting
 
@@ -40,7 +40,7 @@ Maple leads the Scoring Round (39) but **loses** the Automatic Runoff 3–6. Sou
 
 ## View 2 — the LH engine
 
-Same ballots (collapsed as `count × scores`), the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) mirror adds the funnel):
+Same ballots (collapsed as `count × scores`), the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) mirror adds the funnel):
 
 ```
 [Condorcet Winner]

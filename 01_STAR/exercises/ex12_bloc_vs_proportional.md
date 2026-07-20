@@ -122,11 +122,11 @@ Two clean factions and near-clone running mates — engineered so the philosophi
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex12_bloc_sweep.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex12_proportional_share.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex12_bloc_sweep.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex12_proportional_share.yaml
 ```
 
-Sources: [ex12_bloc_sweep.yaml](ex12_bloc_sweep.yaml) · [ex12_proportional_share.yaml](ex12_proportional_share.yaml). Full audit reports: [bloc](exercises_tabulated/ex12_bloc_sweep_tabulated.txt) · [allocated](exercises_tabulated/ex12_proportional_share_tabulated.txt).
+Sources: [ex12_bloc_sweep.yaml](cases/ex12_bloc_sweep.yaml) · [ex12_proportional_share.yaml](cases/ex12_proportional_share.yaml). Full audit reports: [bloc](cases/cases_tabulated/ex12_bloc_sweep_tabulated.txt) · [allocated](cases/cases_tabulated/ex12_proportional_share_tabulated.txt).
 
 ---
 

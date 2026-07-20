@@ -13,8 +13,8 @@ Read the reader-friendly **pages** (`fairvote_condorcet_claims_pages/`); the `.y
 
 | Page (read this) | What it shows | src |
 |---|---|:--:|
-| [BV2168 — FairVote's own hypothetical (45/12/43)](fairvote_condorcet_claims_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) | the Moderate is the Condorcet winner by 55- and 57-voter majorities; the live RCV-IRV race eliminates them round one (center squeeze); the score sum narrowly says Liberal — the intensity nuance, shown honestly | [`.yaml`](bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) |
-| [BV2169 — electorate shifts left, the pole IS the Condorcet winner](fairvote_condorcet_claims_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) | same cast, 56% now rank the strong Liberal first — a *pole* candidate is the Condorcet winner, refuting "centrist by nature, regardless of the preferences of the electorate"; STAR and the live IRV race agree | [`.yaml`](bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) |
+| [BV2168 — FairVote's own hypothetical (45/12/43)](cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) | the Moderate is the Condorcet winner by 55- and 57-voter majorities; the live RCV-IRV race eliminates them round one (center squeeze); the score sum narrowly says Liberal — the intensity nuance, shown honestly | [`.yaml`](cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) |
+| [BV2169 — electorate shifts left, the pole IS the Condorcet winner](cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) | same cast, 56% now rank the strong Liberal first — a *pole* candidate is the Condorcet winner, refuting "centrist by nature, regardless of the preferences of the electorate"; STAR and the live IRV race agree | [`.yaml`](cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) |
 
 Concept hubs: [Condorcet efficiency](../../00_start_here/topics/condorcet/) · [center squeeze](../../00_start_here/topics/center_squeeze/) · up: [method_comparisons — same ballots, different methods](../)
 

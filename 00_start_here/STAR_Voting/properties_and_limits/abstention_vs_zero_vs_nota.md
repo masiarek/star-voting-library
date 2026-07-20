@@ -56,7 +56,7 @@ That's a candidate **missing-feature** for BetterVoting relative to LH: an expli
 
 ## See it in the cases
 
-- **Abstentions in a real STAR count:** [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../../01_STAR/pet_real_bv_election/pet_real_bv_election_pages/small_abstention_c2_b5.md)
+- **Abstentions in a real STAR count:** [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../../01_STAR/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md)
 - **None of the Above winning (plus a per-candidate `null`):** [`bv215_26khr3_nota_wins`](../../../01_STAR/none_of_the_above/bv215_26khr3_nota_wins.md)
 
 ## Related

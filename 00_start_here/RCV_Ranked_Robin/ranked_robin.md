@@ -53,7 +53,7 @@ Because it reads every ranking against every opponent, Ranked Robin elects the c
 
 ## A worked example — the consensus center wins the round-robin
 
-Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). Run it: [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) (or paste the `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html)).
+Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). Run it: [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/cases/ranked_robin_consensus_center.yaml) (or paste the `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html)).
 
 ```
 4 : Ada > Ben > Cara > Dan
@@ -153,7 +153,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |
 ```
 
-Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which is what [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/ranked_robin_consensus_center.yaml) does, since the matrix is the point of that worked example.
+Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which is what [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/cases/ranked_robin_consensus_center.yaml) does, since the matrix is the point of that worked example.
 
 > **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
 

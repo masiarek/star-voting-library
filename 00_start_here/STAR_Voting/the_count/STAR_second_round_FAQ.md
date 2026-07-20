@@ -67,7 +67,7 @@ Round 2 (runoff):  Nora 55  vs  Max 45               → Nora WINS
 
 Max's high total came from 45 people who love him. But **55 of 100 prefer Nora.** Pure Score voting would crown Max on the strength of an intense minority; STAR's runoff catches that a *majority* actually wants Nora. Here almost everyone nods — the reversal is obviously right.
 
-*Reproduce it:* [`reversal_convincing_c3_b100.yaml`](../../../01_STAR/runoff_overturns_leader/reversal_convincing_c3_b100.yaml).
+*Reproduce it:* [`reversal_convincing_c3_b100.yaml`](../../../01_STAR/runoff_overturns_leader/cases/reversal_convincing_c3_b100.yaml).
 
 ### Scenario B — a *jarring* reversal (the real philosophical drawback)
 
@@ -84,7 +84,7 @@ Round 2 (runoff):  Rye 51  vs  Uma 49               → Rye WINS   (Uma avg 4.5 
 
 Uma is nearly everyone's near-favorite — a 4.5/5 average, *almost twice* Rye's total. Yet Rye wins the runoff by a single vote, 51–49. A pure utilitarian says STAR just elected the candidate who makes the electorate **less happy overall**, on a razor-thin ordinal majority, and threw away a huge cardinal signal. A majoritarian says: 51 people preferred Rye, and "more than half preferred them" is the most legitimate thing an election can say.
 
-*Reproduce it:* [`reversal_jarring_c3_b100.yaml`](../../../01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml).
+*Reproduce it:* [`reversal_jarring_c3_b100.yaml`](../../../01_STAR/runoff_overturns_leader/cases/reversal_jarring_c3_b100.yaml).
 
 **Concede it plainly:** this is a genuine philosophical drawback of STAR, not a bug to explain away. STAR is a **hybrid** — a cardinal (score) ballot with an ordinal (majority) finish — and Scenario B is exactly where those two values pull apart. STAR chooses majority preference over utility maximization at the final step. That's defensible, and it's also a real cost; whether it's the right call depends on whether you think an election should maximize total satisfaction or honor majority rule. (Score-voting advocates would elect Uma; STAR and every majoritarian method elect Rye.)
 

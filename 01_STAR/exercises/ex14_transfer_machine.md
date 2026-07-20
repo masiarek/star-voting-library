@@ -79,7 +79,7 @@ With quota 4, the 5-voter Austen bloc funds exactly one seat (and its leftover 1
 
 Making this exercise live turned it into a bug report. BetterVoting accepted the election and all nine ballots (`tk776t`, BV2201) — but its STV tabulator returns a server error when computing results (`{"error":"Error (a5f1af00)"}`-style, fresh ID per attempt). The bisection ran to ground the same day, with permanent public elections as the lab notebook — the full write-up, evidence table, and ready-to-file issue live at **[the sole-survivor STV crash](../../06_Other/STV/bv_stv_sole_survivor_crash/README.md)**. The short version:
 
-- **Truncation acquitted.** A fully-ranked twin — same nine voters, trailing rankings no transfer ever reaches — fails identically (`bj8dfc`, BV2202; repo home [ex14_two_novels_fullranks.yaml](ex14_two_novels_fullranks.yaml), LH-verified to the same seats).
+- **Truncation acquitted.** A fully-ranked twin — same nine voters, trailing rankings no transfer ever reaches — fails identically (`bj8dfc`, BV2202; repo home [ex14_two_novels_fullranks.yaml](cases/ex14_two_novels_fullranks.yaml), LH-verified to the same seats).
 - **The `enable_write_in` flag acquitted.** A probe with the key omitted from the race object — the one config difference from BV's older, working STV races — crashes identically (`gvtg2h`, BV2203).
 - **The shape acquitted, the endgame convicted.** A control with *identical config* (STV, 2 seats, 4 candidates) whose seats fill while two hopefuls still stand **computes fine** (`39py93`, BV2204) — and a minimal 1-seat, 6-voter election whose eliminations leave one candidate standing **crashes** (`8xwx43`, BV2205).
 - **Root cause, in BV's own source.** This exercise's count ends with Camus reaching quota as the *sole remaining hopeful*. BetterVoting's `IRV.ts` elect-branch then redistributes his surplus over an **empty** candidate list, and `distributeVotes` runs `remainingCandidates.reduce(…)` with no initial value — `[].reduce(f)` throws `TypeError`. A sole survivor *below* quota is rescued by the fill-remaining-seats shortcut; only the at-quota sole survivor crashes. (Their own `STV.test.ts` is this same 9-voter shape with a benign endgame — the gap in one test.)
@@ -93,10 +93,10 @@ A tidy electorate: full rankings (nothing exhausts), one surplus, one meaningful
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex14_two_novels.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex14_two_novels.yaml
 ```
 
-Source: [ex14_two_novels.yaml](ex14_two_novels.yaml). Full report: [mirror](exercises_tabulated/ex14_two_novels_tabulated.txt).
+Source: [ex14_two_novels.yaml](cases/ex14_two_novels.yaml). Full report: [mirror](cases/cases_tabulated/ex14_two_novels_tabulated.txt).
 
 ---
 

@@ -36,4 +36,4 @@ Winner — STAR Voting Method (single winner)
 
 BetterVoting result: `elected: ["Ann"]`, `nTallyVotes: 0`, `nAbstentions: 3`.
 
-Full engine detail: [`bv11_6xhfp8_full_equal_support_tabulated.txt`](abstain_bugs_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) · source [`.yaml`](bv11_6xhfp8_full_equal_support.yaml). Part of the [BV abstain issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).
+Full engine detail: [`bv11_6xhfp8_full_equal_support_tabulated.txt`](cases/cases_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) · source [`.yaml`](cases/bv11_6xhfp8_full_equal_support.yaml). Part of the [BV abstain issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).

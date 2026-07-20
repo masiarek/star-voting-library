@@ -51,7 +51,7 @@ Automatic Runoff Round
    Banana 3 (75%) vs Apple 1 (25%); majority = 3.
 ```
 
-(From [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml).)
+(From [`flat_scores_abstention_c3_b8`](../../../01_STAR/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml).)
 
 ## The flow
 
@@ -86,7 +86,7 @@ Now contrast **RCV-IRV**. A ballot that ranks *neither* finalist is **[exhausted
 
 **The precise version (this is the part that trips people up).** STAR measures the runoff majority among the voters who *expressed a preference* between the finalists — Equal Support is set aside **from that percentage** (the "decided-voters" denominator; see [two denominators](runoff_percentages.md)). That is **not** the same as RCV-IRV exhaustion: the Equal Support ballots are still **counted**, still **reported**, and still **shaped who the finalists were**. STAR's winner is "the finalist **more voters prefer**," never "a majority of whoever's left." So the shorthand "STAR keeps the ballots and RCV throws them away" is right in spirit; stated exactly, it's that STAR never *exhausts* a ballot, while RCV-IRV does. Every ballot keeps a voice — [one person, one vote](../properties_and_limits/equally_weighted_vote.md). <!-- terminology-ok: quotes the loose shorthand, then states it exactly -->
 
-This is exactly why the common criticism that STAR "**discounts**" equal-score ballots is misleading — the ballot is counted in full, it just isn't forced to invent a preference between two candidates the voter rated the same. Objection handled in depth: [Aren't equal-score votes just discounted?](../reference/are_equal_score_votes_discounted.md). See it on one small election: [Equal Support demo](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) (the 40 "love both finalists" ballots *chose* the finalists, then register as Equal Support in the runoff).
+This is exactly why the common criticism that STAR "**discounts**" equal-score ballots is misleading — the ballot is counted in full, it just isn't forced to invent a preference between two candidates the voter rated the same. Objection handled in depth: [Aren't equal-score votes just discounted?](../reference/are_equal_score_votes_discounted.md). See it on one small election: [Equal Support demo](../../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md) (the 40 "love both finalists" ballots *chose* the finalists, then register as Equal Support in the runoff).
 
 ## Variation 1 — Runoff Reversal (the score leader loses)
 
@@ -139,7 +139,7 @@ With only two candidates the Scoring Round is just a formality (both advance), s
 **What it buys you**
 - A **majority-backed** winner — beats the runner-up among voters with a preference.
 - **Honest scoring is safe** — no reward for exaggerating, so the expressive 0–5 ballot doesn't degenerate into Approval.
-- **Resists intensity capture and center squeeze** — a passionate minority can't win on volume, and a broadly-acceptable middle candidate isn't eliminated early ([center squeeze, STAR vs IRV](../../../method_comparisons/center_squeeze/center_squeeze_star.yaml)).
+- **Resists intensity capture and center squeeze** — a passionate minority can't win on volume, and a broadly-acceptable middle candidate isn't eliminated early ([center squeeze, STAR vs IRV](../../../method_comparisons/center_squeeze/cases/center_squeeze_star.yaml)).
 - Still **simple** — two steps, easy to hand-count.
 
 **Its limits**

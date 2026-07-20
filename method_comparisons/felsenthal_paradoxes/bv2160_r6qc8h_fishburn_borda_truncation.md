@@ -32,4 +32,4 @@ Pairwise, this profile is a **cycle** (A>B 5–2, B>C 5–2, C>A 4–3) — no C
 | Choose-One (Plurality) | **A** (3 of 7) | A | ✓ |
 | Borda *(paper only)* | — | C 20 → truncation → A/B 16 tie | n/a |
 
-Three counts, three answers (A, B, C) from seven ballots. Files: [star yaml](bv2160_r6qc8h_star.yaml) · [plurality yaml](bv2160_r6qc8h_plurality.yaml) · [frozen export](bv2160_r6qc8h_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2160_r6qc8h_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2160_r6qc8h_plurality_tabulated.txt).
+Three counts, three answers (A, B, C) from seven ballots. Files: [star yaml](cases/bv2160_r6qc8h_star.yaml) · [plurality yaml](cases/bv2160_r6qc8h_plurality.yaml) · [frozen export](cases/bv2160_r6qc8h_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2160_r6qc8h_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2160_r6qc8h_plurality_tabulated.txt).

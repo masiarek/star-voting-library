@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Beth**. Only **Approval** differs,
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/brams_grading_paradox/brams_ex3_two_candidates_c2_b5.yaml`](../../../../method_comparisons/brams_grading_paradox/brams_ex3_two_candidates_c2_b5.yaml)  ·  **STAR tabulated mirror:** [`brams_ex3_two_candidates_c2_b5_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/brams_grading_paradox_tabulated/brams_ex3_two_candidates_c2_b5_tabulated.txt)
+**Source election:** [`method_comparisons/brams_grading_paradox/cases/brams_ex3_two_candidates_c2_b5.yaml`](../../../../method_comparisons/brams_grading_paradox/cases/brams_ex3_two_candidates_c2_b5.yaml)  ·  **STAR tabulated mirror:** [`brams_ex3_two_candidates_c2_b5_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/cases/cases_tabulated/brams_ex3_two_candidates_c2_b5_tabulated.txt)
 
 _2 candidates, 5 ballots._
 

@@ -51,15 +51,15 @@ Two transparent steps you can do on a napkin and audit on a precinct table.
 
 ## See it — same winner, very different counts
 
-→ [`method_comparisons/_main/count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/count_simplicity_star_vs_irv.yaml) (45 voters, 5 candidates). Carmen, the broad consensus, wins under **both** methods — so this isn't about who *should* win. It's about the *work the count takes.*
+→ [`method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml) (45 voters, 5 candidates). Carmen, the broad consensus, wins under **both** methods — so this isn't about who *should* win. It's about the *work the count takes.*
 
 - **STAR** (`STARVote_LH_tabulation_engine/`): add the scores → Carmen & Andre are the top two → one runoff → Carmen. Done.
 - **RCV-IRV** (`06_Other/RCV_IRV/RCV_IRV_tabulation_engine/`): no first-round majority, so it eliminates Evan, transfers his ballots, rechecks; eliminates Dana, transfers, rechecks; *now* Carmen clears half — **three rounds** of eliminate-and-transfer for the same answer.
 
 ```
 # run both on the one file:
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/_main/count_simplicity_star_vs_irv.yaml
-python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/_main/count_simplicity_star_vs_irv.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml
 ```
 
 ## How to say it (without attacking anyone)

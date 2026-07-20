@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/tie_break_08_runoff_dead_rung_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_08_runoff_dead_rung_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_08_runoff_dead_rung_adversarial_lot_tabulated.txt)
+**Source election:** [`01_STAR/tie_break_dead_rung/cases/tie_break_08_runoff_dead_rung_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/cases/tie_break_08_runoff_dead_rung_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_08_runoff_dead_rung_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/cases/cases_tabulated/tie_break_08_runoff_dead_rung_adversarial_lot_tabulated.txt)
 
 _2 candidates, 2 ballots._
 

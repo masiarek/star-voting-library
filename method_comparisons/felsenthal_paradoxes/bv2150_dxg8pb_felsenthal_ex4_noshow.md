@@ -30,7 +30,7 @@ Live results: **[bettervoting.com/dxg8pb/results ↗](https://bettervoting.com/d
 
 ## View 2 — LH engine
 
-Runoff/IRV race ([bv2150_dxg8pb_irv.yaml](bv2150_dxg8pb_irv.yaml)):
+Runoff/IRV race ([bv2150_dxg8pb_irv.yaml](cases/bv2150_dxg8pb_irv.yaml)):
 
 ```
  Tabulating 11 ballots (ranked ballots).
@@ -53,7 +53,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Carl
 ```
 
-Ranked Robin ([bv2150_dxg8pb_ranked_robin.yaml](bv2150_dxg8pb_ranked_robin.yaml)) elects **Beth** — 2 pairwise wins (6–5, 7–4), the Condorcet winner. STAR ([bv2150_dxg8pb_star.yaml](bv2150_dxg8pb_star.yaml)) with the 5/3/1 map: **Andy 29, Beth 37, Carl 33**; Beth wins the automatic runoff **7–4**. Full detail: [IRV mirror](felsenthal_paradoxes_tabulated/bv2150_dxg8pb_irv_tabulated.txt) · [RR mirror](felsenthal_paradoxes_tabulated/bv2150_dxg8pb_ranked_robin_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2150_dxg8pb_star_tabulated.txt).
+Ranked Robin ([bv2150_dxg8pb_ranked_robin.yaml](cases/bv2150_dxg8pb_ranked_robin.yaml)) elects **Beth** — 2 pairwise wins (6–5, 7–4), the Condorcet winner. STAR ([bv2150_dxg8pb_star.yaml](cases/bv2150_dxg8pb_star.yaml)) with the 5/3/1 map: **Andy 29, Beth 37, Carl 33**; Beth wins the automatic runoff **7–4**. Full detail: [IRV mirror](cases/cases_tabulated/bv2150_dxg8pb_irv_tabulated.txt) · [RR mirror](cases/cases_tabulated/bv2150_dxg8pb_ranked_robin_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2150_dxg8pb_star_tabulated.txt).
 
 ## Agreement
 
@@ -63,4 +63,4 @@ Ranked Robin ([bv2150_dxg8pb_ranked_robin.yaml](bv2150_dxg8pb_ranked_robin.yaml)
 | Ranked Robin | Beth | Beth | ✓ |
 | STAR (ranks→scores) | Beth | Beth | ✓ |
 
-Frozen export: [bv2150_dxg8pb_bv_export.json](bv2150_dxg8pb_bv_export.json) · Part 2: [BV2151 — two supporters stay home](bv2151_97hbpw_felsenthal_ex4_noshow.md).
+Frozen export: [bv2150_dxg8pb_bv_export.json](cases/bv2150_dxg8pb_bv_export.json) · Part 2: [BV2151 — two supporters stay home](bv2151_97hbpw_felsenthal_ex4_noshow.md).

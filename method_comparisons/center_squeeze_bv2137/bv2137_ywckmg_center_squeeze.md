@@ -53,7 +53,7 @@ Winner — Ranked Robin (RCV-RR): Anderson
    beats every opponent head-to-head — the Condorcet winner.
 ```
 
-STAR agrees with Ranked Robin (not IRV): Anderson tops the score round with 340 and wins the automatic runoff. Full detail in the [`_tabulated` mirror](center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_tabulated.txt).
+STAR agrees with Ranked Robin (not IRV): Anderson tops the score round with 340 and wins the automatic runoff. Full detail in the [`_tabulated` mirror](cases/cases_tabulated/bv2137_ywckmg_star_tabulated.txt).
 
 ## The rank→score conversion (STAR race)
 
@@ -70,5 +70,5 @@ BetterVoting natively tabulates **four** of LeGrand's ~15 methods: IRV, Ranked R
 ## Sources
 
 - Robert LeGrand, ranked-ballot calculator — [calc.html](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) · [method descriptions](https://cs.angelo.edu/~rlegrand/rbvote/desc.html)
-- Live results: [bettervoting.com/ywckmg/results](https://bettervoting.com/ywckmg/results) · frozen export: [`bv2137_ywckmg_bv_export.json`](bv2137_ywckmg_bv_export.json)
-- Tabulatable sources: [IRV](bv2137_ywckmg_irv.yaml) · [Ranked Robin](bv2137_ywckmg_ranked_robin.yaml) · [STV](bv2137_ywckmg_stv.yaml) · [STAR](bv2137_ywckmg_star.yaml)
+- Live results: [bettervoting.com/ywckmg/results](https://bettervoting.com/ywckmg/results) · frozen export: [`bv2137_ywckmg_bv_export.json`](cases/bv2137_ywckmg_bv_export.json)
+- Tabulatable sources: [IRV](cases/bv2137_ywckmg_irv.yaml) · [Ranked Robin](cases/bv2137_ywckmg_ranked_robin.yaml) · [STV](cases/bv2137_ywckmg_stv.yaml) · [STAR](cases/bv2137_ywckmg_star.yaml)

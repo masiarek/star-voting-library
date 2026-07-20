@@ -1,0 +1,167 @@
+======================================================================
+SOURCE FILE:     ex01_district_combined.yaml
+TABULATED FILE:  ex01_district_combined_tabulated.txt
+======================================================================
+
+election_title: "Exercise 1 — Two districts, one mayor: the COMBINED city"
+bv_test_id: BV2190
+bv_election_id: 923q3d
+bv_results_url: https://bettervoting.com/923q3d/results
+
+scenario_description: |-
+  All 18 ballots — West and East together. Both districts separately elect
+  Avery, but combined the runner-ups change: Blake (33) only exists in West and
+  Diego (33) only in East, while Carmen scores 32 in BOTH — so citywide it is
+  Avery 70 vs Carmen 64 in the runoff, and Carmen wins it 10-8 head-to-head.
+  STAR fails the CONSISTENCY criterion: winning every district does not
+  guarantee winning the whole. (Note this is NOT a summability failure — score
+  totals and the preference matrix still add across precincts; what you cannot
+  add is each district's declared winner.) Part 3 of 3 of the consistency
+  exercise (ex01_two_districts.md). Ballots adapted from a RangeVoting.org
+  example, posed as an exercise in Brendan W. Sullivan, "An Introduction to
+  the Math of Voting Methods" (2022), ch. 5.
+  Live on BetterVoting (Test ID BV2190): https://bettervoting.com/923q3d/results
+  — the election carries a second, Ranked Robin race on the same opinions
+  (equal ranks allowed): Elena, the citywide Condorcet winner, wins it 4-0.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Avery,Blake,Carmen,Diego,Elena
+  3,3,4,0,5 # 5 West voters: Elena first, Carmen second, Avery = Blake
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  3,3,4,0,5
+  5,5,3,0,0 # 3 West voters: Avery = Blake at the top, Carmen third
+  5,5,3,0,0
+  5,5,3,0,0
+  5,3,3,0,0 # 1 West voter: Avery over Blake
+  3,0,4,3,5 # 5 East voters: Elena first, Carmen second, Avery = Diego
+  3,0,4,3,5
+  3,0,4,3,5
+  3,0,4,3,5
+  3,0,4,3,5
+  5,0,3,5,0 # 3 East voters: Avery = Diego at the top, Carmen third
+  5,0,3,5,0
+  5,0,3,5,0
+  5,0,3,3,0 # 1 East voter: Avery over Diego
+expected_winners:
+  - Carmen
+
+# file: ex01_district_combined.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 1 — Two districts, one mayor: the COMBINED city ===
+  All 18 ballots — West and East together. Both districts separately elect
+  Avery, but combined the runner-ups change: Blake (33) only exists in West and
+  Diego (33) only in East, while Carmen scores 32 in BOTH — so citywide it is
+  Avery 70 vs Carmen 64 in the runoff, and Carmen wins it 10-8 head-to-head.
+  STAR fails the CONSISTENCY criterion: winning every district does not
+  guarantee winning the whole. (Note this is NOT a summability failure — score
+  totals and the preference matrix still add across precincts; what you cannot
+  add is each district's declared winner.) Part 3 of 3 of the consistency
+  exercise (ex01_two_districts.md). Ballots adapted from a RangeVoting.org
+  example, posed as an exercise in Brendan W. Sullivan, "An Introduction to
+  the Math of Voting Methods" (2022), ch. 5.
+  Live on BetterVoting (Test ID BV2190): https://bettervoting.com/923q3d/results
+  — the election carries a second, Ranked Robin race on the same opinions
+  (equal ranks allowed): Elena, the citywide Condorcet winner, wins it 4-0.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Avery    |    Blake    |  * Carmen   |    Diego    |    Elena    |
+-----------------------------------------------------------------------------------------
+       * Avery > |     ---      |10 -  8 -  0 | 8 -  0 - 10 |10 -  8 -  0 | 8 -  0 - 10 |
+         Blake > |  0 -  8 - 10 |    ---      | 3 -  1 - 14 | 9 -  0 -  9 | 4 -  4 - 10 |
+      * Carmen > | 10 -  0 -  8 |14 -  1 -  3 |    ---      |14 -  1 -  3 | 8 -  0 - 10 |
+         Diego > |  0 -  8 - 10 | 9 -  0 -  9 | 3 -  1 - 14 |    ---      | 4 -  4 - 10 |
+         Elena > | 10 -  0 -  8 |10 -  4 -  4 |10 -  0 -  8 |10 -  4 -  4 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Elena — STAR elected Carmen instead (Elena was eliminated in the scoring round)
+
+[Divergence from STAR]
+  STAR                   = Carmen
+  Choose-One (Plurality) = Elena   (differs from STAR)
+  RCV-IRV                = Elena   (differs from STAR)
+  Approval               = Avery   (differs from STAR)
+  RCV-RR (Condorcet)     = Elena   (differs from STAR)
+  Note: 18 of 18 ballots (100%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex01_district_combined_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/ex01_district_combined_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Avery)
+ - Runoff Round Winner   = (Carmen)
+  Candidate Avery earned the highest total score, but
+  Candidate Carmen won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 18 ballots.
+Count × Avery,Blake,Carmen,Diego,Elena
+    5 ×     3,    3,     4,    0,    5
+    5 ×     3,    0,     4,    3,    5
+    3 ×     5,    5,     3,    0,    0
+    3 ×     5,    0,     3,    5,    0
+    1 ×     5,    3,     3,    0,    0
+    1 ×     5,    0,     3,    3,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Avery       8   0  10   0   0   0  |    70   3.9
+Blake       3   0   6   0   0   9  |    33   1.8
+Carmen      0  10   8   0   0   0  |    64   3.6
+Diego       3   0   6   0   0   9  |    33   1.8
+Elena      10   0   0   0   0   8  |    50   2.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Avery         -- 70 -- First place
+   Carmen        -- 64 -- Second place
+   Elena         -- 50
+   Blake         -- 33
+   Diego         -- 33
+ Avery and Carmen advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Carmen        -- 10 -- First place
+   Avery         --  8
+   Equal Support --  0
+ Carmen wins.
+   Runoff math:
+     18  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     18  voters with a preference  (majority = 10)
+           Carmen 10 (56%)  ·  Avery 8 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Carmen

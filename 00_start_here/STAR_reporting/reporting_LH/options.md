@@ -8,7 +8,7 @@
 
 ## The block, option by option
 
-This is the block from the 3-candidate demo ([`flat_scores_abstention_c3_b8.yaml`](../../../01_STAR/pet_real_bv_election/flat_scores_abstention_c3_b8.yaml)):
+This is the block from the 3-candidate demo ([`flat_scores_abstention_c3_b8.yaml`](../../../01_STAR/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml)):
 
 ```yaml
 options:

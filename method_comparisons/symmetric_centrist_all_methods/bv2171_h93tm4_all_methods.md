@@ -49,7 +49,7 @@ Automatic Runoff:  Casey 5 vs Avery/Blake 3      (Casey wins)
 
 ## Files
 
-- Tabulatable STAR source: [bv2171_h93tm4_star.yaml](bv2171_h93tm4_star.yaml) · mirror: [tabulated](symmetric_centrist_all_methods_tabulated/bv2171_h93tm4_star_tabulated.txt)
-- Frozen BV export: [bv2171_h93tm4_bv_export.json](bv2171_h93tm4_bv_export.json)
+- Tabulatable STAR source: [bv2171_h93tm4_star.yaml](cases/bv2171_h93tm4_star.yaml) · mirror: [tabulated](cases/cases_tabulated/bv2171_h93tm4_star_tabulated.txt)
+- Frozen BV export: [bv2171_h93tm4_bv_export.json](cases/bv2171_h93tm4_bv_export.json)
 - Full 100-voter twin: [BV2172](bv2172_bkwfjr_all_methods.md) · four-method original: [BV2170](../symmetric_centrist_bv2170/bv2170_pp2q4q_symmetric_centrist.md)
 - Debate context: [FairVote Condorcet claim-check](../../00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md)

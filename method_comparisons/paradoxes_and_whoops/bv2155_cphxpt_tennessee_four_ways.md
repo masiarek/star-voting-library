@@ -20,7 +20,7 @@ Memphis, Nashville, Chattanooga, Knoxville
 17 × 0, 3, 4, 5      # Knoxville voters
 ```
 
-Scores are a simple distance model (home city 5, falling off with distance). Source: [`bv2155_cphxpt_tennessee_four_ways.yaml`](bv2155_cphxpt_tennessee_four_ways.yaml).
+Scores are a simple distance model (home city 5, falling off with distance). Source: [`bv2155_cphxpt_tennessee_four_ways.yaml`](cases/bv2155_cphxpt_tennessee_four_ways.yaml).
 
 ## Three methods, three winners
 
@@ -39,7 +39,7 @@ Scoring Round:   Nashville 310 · Chattanooga 263 · Memphis 236 · Knoxville 19
 Automatic Runoff: Nashville 68 (68%) vs Chattanooga 32 (32%)  → Nashville wins
 ```
 
-Full audit copy: [`_tabulated`](paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt).
 
 ## Why it's the perfect opener
 

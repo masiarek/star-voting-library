@@ -31,4 +31,4 @@ STAR (truncated ballots score only D: 329/373/244/171) and Ranked Robin (B still
 | BV2162 / BV2163 | STAR | B / B | B / B | ✓ |
 | BV2162 / BV2163 | Ranked Robin | B / B | B / B | ✓ |
 
-Files: [star](bv2163_74j6vv_star.yaml) · [irv](bv2163_74j6vv_irv.yaml) · [rr](bv2163_74j6vv_ranked_robin.yaml) · [frozen export](bv2163_74j6vv_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2163_74j6vv_star_tabulated.txt), [irv](felsenthal_paradoxes_tabulated/bv2163_74j6vv_irv_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2163_74j6vv_ranked_robin_tabulated.txt) · Part 1: [BV2162](bv2162_4htk44_nurmi_truncation.md).
+Files: [star](cases/bv2163_74j6vv_star.yaml) · [irv](cases/bv2163_74j6vv_irv.yaml) · [rr](cases/bv2163_74j6vv_ranked_robin.yaml) · [frozen export](cases/bv2163_74j6vv_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2163_74j6vv_star_tabulated.txt), [irv](cases/cases_tabulated/bv2163_74j6vv_irv_tabulated.txt), [rr](cases/cases_tabulated/bv2163_74j6vv_ranked_robin_tabulated.txt) · Part 1: [BV2162](bv2162_4htk44_nurmi_truncation.md).

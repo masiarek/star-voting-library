@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/jt6r76) · **[results ↗](https://bettervoting.com/jt6r76/results)** (election `jt6r76`).
 
-Reference files: LH approval original [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](approval_bloc_4seats_c7_b12_lackner_skowron.yaml) · frozen export [`bv27_jt6r76_lackner_approval_committee_bv_export.json`](bv27_jt6r76_lackner_approval_committee_bv_export.json). Backs sheet row **BV27**. Created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py).
+Reference files: LH approval original [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) · frozen export [`bv27_jt6r76_lackner_approval_committee_bv_export.json`](cases/bv27_jt6r76_lackner_approval_committee_bv_export.json). Backs sheet row **BV27**. Created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py).
 
 ## The election
 

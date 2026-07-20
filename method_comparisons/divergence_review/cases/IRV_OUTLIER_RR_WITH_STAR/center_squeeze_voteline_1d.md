@@ -21,7 +21,7 @@ STAR elects **Green** — and so do Ranked Robin and Condorcet, because **Green 
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml`](../../../../method_comparisons/center_squeeze/center_squeeze_voteline_1d.yaml)  ·  **STAR tabulated mirror:** [`center_squeeze_voteline_1d_tabulated.txt`](../../../../method_comparisons/center_squeeze/center_squeeze_tabulated/center_squeeze_voteline_1d_tabulated.txt)
+**Source election:** [`method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml`](../../../../method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml)  ·  **STAR tabulated mirror:** [`center_squeeze_voteline_1d_tabulated.txt`](../../../../method_comparisons/center_squeeze/cases/cases_tabulated/center_squeeze_voteline_1d_tabulated.txt)
 
 _3 candidates, 998 ballots._
 

@@ -17,7 +17,7 @@ They are the same idea seen as verb and noun. The artifact goes by **many** name
 
 ## The one idea: a ballot is already a matrix
 
-You don't need the whole electorate to start a preference matrix — **a single ballot is one**. Take the first voter of the canonical [Ann, Bob, Cal election](../../01_STAR/_main/_main_pages/bv2187_qrw6wb_ann-bob-cal.md) (3 voters × 3 candidates, [registered canonical #1](../tips/TIPS_canonical_elections.md) — [live on BetterVoting](https://bettervoting.com/qrw6wb/results)). She scored **Ann 5, Bob 4, Cal 0**. Written as her own tiny matrix (For – Equal Support – Against, row vs column):
+You don't need the whole electorate to start a preference matrix — **a single ballot is one**. Take the first voter of the canonical [Ann, Bob, Cal election](../../01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) (3 voters × 3 candidates, [registered canonical #1](../tips/TIPS_canonical_elections.md) — [live on BetterVoting](https://bettervoting.com/qrw6wb/results)). She scored **Ann 5, Bob 4, Cal 0**. Written as her own tiny matrix (For – Equal Support – Against, row vs column):
 
 ```text
 Voter 1 (Ann 5, Bob 4, Cal 0)
@@ -38,7 +38,7 @@ Her 5 beats the 4, so this ballot is one vote **For Ann over Bob** — even thou
 | Voter 3 — 0, 3, 5 | **Bob** (3>0) | **Cal** (5>0) | **Cal** (5>3) |
 | **Sum (For – Equal Support – Against)** | Ann: 1 – 0 – 2 | Ann: 2 – 0 – 1 | Bob: 2 – 0 – 1 |
 
-That bottom row **is** the preference matrix. Here it is straight from the LH engine (the [full report](../../01_STAR/_main/_main_tabulated/bv2187_qrw6wb_ann-bob-cal_tabulated.txt) of [`bv2187_qrw6wb_ann-bob-cal.yaml`](../../01_STAR/_main/bv2187_qrw6wb_ann-bob-cal.yaml)):
+That bottom row **is** the preference matrix. Here it is straight from the LH engine (the [full report](../../01_STAR/_main/cases/cases_tabulated/bv2187_qrw6wb_ann-bob-cal_tabulated.txt) of [`bv2187_qrw6wb_ann-bob-cal.yaml`](../../01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml)):
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -68,7 +68,7 @@ The matrix doesn't care which ballot style fed it, only *order*:
 
 ## Why this one idea earns its keep
 
-1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/_main/_main_pages/04b_c4_b3_display-options-all.md) (`show_matrix`).
+1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/_main/cases/cases_pages/04b_c4_b3_display-options-all.md) (`show_matrix`).
 2. **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) reads its whole result off it** — most head-to-head wins takes the seat. The matrix isn't a supporting exhibit there; it *is* the tally.
 3. **It's why these counts are [summable](summability/).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../RCV_Ranked_Robin/RCV_RR_summability.md) and [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../RCV_IRV/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
 
@@ -80,7 +80,7 @@ Real election offices hit a wrinkle: a **write-in** candidate discovered mid-cou
 
 ## Cross-references
 
-- [Ann, Bob, Cal — the canonical leading example](../../01_STAR/_main/_main_pages/bv2187_qrw6wb_ann-bob-cal.md) — the election used above (frozen ballots; [canonical registry](../tips/TIPS_canonical_elections.md))
+- [Ann, Bob, Cal — the canonical leading example](../../01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) — the election used above (frozen ballots; [canonical registry](../tips/TIPS_canonical_elections.md))
 - [How the count works — STAR vs RCV-IRV, step by step](tabulation_star_vs_irv.md) — the two counts this matrix feeds and contrasts
 - [Summability topic hub](summability/) · [Ranked Robin is summable](../RCV_Ranked_Robin/RCV_RR_summability.md) — the precinct-level payoff
 - [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) — the 301 sequel: the matrix as a *graph* (tournaments, Smith set, cycles)

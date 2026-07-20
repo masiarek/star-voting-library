@@ -104,13 +104,13 @@ Engineered so the thresholds separate cleanly, and openly a *stress* case — in
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex13_opinions.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex13_approve3.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex13_approve4.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex13_bullet.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex13_opinions.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex13_approve3.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex13_approve4.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex13_bullet.yaml
 ```
 
-Sources: [opinions (STAR)](ex13_opinions.yaml) · [approve 3+](ex13_approve3.yaml) · [approve 4+](ex13_approve4.yaml) · [favorites only](ex13_bullet.yaml). Full audit reports in [exercises_tabulated](exercises_tabulated/ex13_opinions_tabulated.txt).
+Sources: [opinions (STAR)](cases/ex13_opinions.yaml) · [approve 3+](cases/ex13_approve3.yaml) · [approve 4+](cases/ex13_approve4.yaml) · [favorites only](cases/ex13_bullet.yaml). Full audit reports in [exercises_tabulated](cases/cases_tabulated/ex13_opinions_tabulated.txt).
 
 ---
 

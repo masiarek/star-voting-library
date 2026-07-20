@@ -16,9 +16,9 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 ### Voting 101 — the basics (the ballot, the two rounds, the spoiler)
 
-1. **The ballot and the two rounds.** Five coworkers, three lunches — the compromise everyone likes wins, shown on real BetterVoting results → [the team-lunch example](_main/_main_pages/bv2184_fyy886_lunch_vote.md). *(The running example paired with [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md).)*
-2. **The broad compromise, again.** A second three-candidate case to make the pattern stick → [three candidates](_main/_main_pages/02a_c3_b1_three-candidates.md).
-3. **How you're allowed to vote.** Bullet votes, equal scores, low-score "protest" ballots, the eight-style gallery → [ballot styles](_main/_main_pages/03a_c3_b3_style-bullet-vote.md).
+1. **The ballot and the two rounds.** Five coworkers, three lunches — the compromise everyone likes wins, shown on real BetterVoting results → [the team-lunch example](_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md). *(The running example paired with [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md).)*
+2. **The broad compromise, again.** A second three-candidate case to make the pattern stick → [three candidates](_main/cases/cases_pages/02a_c3_b1_three-candidates.md).
+3. **How you're allowed to vote.** Bullet votes, equal scores, low-score "protest" ballots, the eight-style gallery → [ballot styles](_main/cases/cases_pages/03a_c3_b3_style-bullet-vote.md).
 4. **The headline lesson — top scorer ≠ winner.** STAR's single most important behavior, as a 3→9-candidate progression with a control case → **[Runoff Reversal](runoff_overturns_leader/)**.
 5. **The spoiler, in numbers.** Vote-splitting and the compromise winner → [the vote-splitting scenarios](_main/) · cross-method: [the split-voting set](../method_comparisons/split_voting/).
 
@@ -61,7 +61,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 From the engine directory:
 
 ```
-python starvote_larry_hastings.py "01_STAR/_main/02a_c3_b1_three-candidates.yaml"
+python starvote_larry_hastings.py "01_STAR/_main/cases/02a_c3_b1_three-candidates.yaml"
 ```
 
 Every file writes a full audit report to its `_tabulated.txt` sibling — watch for the **[Runoff Reversal]** block, which prints whenever the score leader and the runoff winner differ.

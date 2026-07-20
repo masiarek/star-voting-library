@@ -15,7 +15,7 @@ The centerpiece pair: 8 voters who love April (sincere ranking April > Bruno > C
 | **RCV-IRV** | Bruno | **Celia** | ❌ **HURT — 2nd choice replaced by LAST choice** |
 | Ranked Robin (LH) | Celia | April | ✅ helped *(LH-only — see below)* |
 
-The IRV mechanism, in one sentence: the 8 extra April-first ballots keep April alive past round one, which gets **Bruno — the 8 voters' own fallback — eliminated instead**, and Bruno's transfers elect Celia, their last choice, 38–24. Their honest votes for their favorite bought their worst outcome; staying home (BV2174) keeps Bruno. Case pages with full engine reports: [baseline](../../../method_comparisons/participation_no_show/participation_no_show_pages/bv2174_yyhr66_noshow_baseline.md) · [show-up](../../../method_comparisons/participation_no_show/participation_no_show_pages/bv2175_9dhv8y_noshow_showup.md).
+The IRV mechanism, in one sentence: the 8 extra April-first ballots keep April alive past round one, which gets **Bruno — the 8 voters' own fallback — eliminated instead**, and Bruno's transfers elect Celia, their last choice, 38–24. Their honest votes for their favorite bought their worst outcome; staying home (BV2174) keeps Bruno. Case pages with full engine reports: [baseline](../../../method_comparisons/participation_no_show/cases/cases_pages/bv2174_yyhr66_noshow_baseline.md) · [show-up](../../../method_comparisons/participation_no_show/cases/cases_pages/bv2175_9dhv8y_noshow_showup.md).
 
 Two footnotes on the pair, both deliberate:
 

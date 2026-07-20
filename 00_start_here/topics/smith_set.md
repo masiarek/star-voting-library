@@ -28,7 +28,7 @@ One set, several names — the literature is messy: **Smith set** (after mathema
 
 ## See it: a cycle plus an outsider (runnable)
 
-Take the [Ada/Ben/Cara cycle](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) and change one thing: add a fourth candidate, **Dave**, whom every voter ranks last ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md), counted by [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)):
+Take the [Ada/Ben/Cara cycle](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) and change one thing: add a fourth candidate, **Dave**, whom every voter ranks last ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md), counted by [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)):
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -66,7 +66,7 @@ Now run the club-membership check, smallest group first:
 
 No smaller group works, so **the Smith set is `{Ada, Ben, Cara}`** — and Dave, despite being *on* every ballot, is provably out of contention: to get into the club, Dave would have to stop losing to someone inside it. Notice the shortcut the win–loss table hands you: the club is exactly the top block of the Copeland standings (records 2–1, 2–1, 2–1 vs Dave's 0–3) — that's not a coincidence, it's a theorem (dominating sets are nested *by Copeland score*).
 
-The full pairwise grid, and this exact election as a runnable YAML, are in [`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md). (It's an LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie *randomly*, so a deliberate three-way tie isn't freezable there — see [the tiebreak divergence](../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).) For a Smith set of four in a *real* library election, see the [no-Condorcet-winner comparison set](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md).
+The full pairwise grid, and this exact election as a runnable YAML, are in [`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md). (It's an LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie *randomly*, so a deliberate three-way tie isn't freezable there — see [the tiebreak divergence](../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).) For a Smith set of four in a *real* library election, see the [no-Condorcet-winner comparison set](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md).
 
 ## The criterion: Smith-efficient methods never leave the club
 
@@ -81,7 +81,7 @@ A method satisfies the **Smith criterion** (is **Smith-efficient**) if its winne
 | **Borda, Score, Approval, Plurality** | ❌ | point totals can crown a candidate the club collectively beats |
 | **STAR** | ❌ | not Condorcet-compliant *by design* — it trades the guarantee for counting preference strength; see [three notions of "winner"](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) |
 
-Two footnotes to the table. First, the criterion has spawned a whole construction kit: **Smith//X** methods first *eliminate everyone outside the Smith set*, then run method X on the survivors — Smith//IRV (a.k.a. Tideman's Alternative) and Smith//Minimax are the common ones, bolting Smith-efficiency onto methods that lack it. Equal Vote's own tie-breaking protocol reaches for the same idea ("Smith-Minimax" sits in [Ranked Robin's tiebreak hierarchy](../RCV_Ranked_Robin/ranked_robin.md)). Second, there's a related *independence* criterion, **ISDA** ("Independence of Smith-Dominated Alternatives"): candidates outside the Smith set should be ignorable — delete them from every ballot and the winner shouldn't change. Our demo passes the spot-check: delete Dave and you get exactly [the 02_cycle election](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md), where Ranked Robin still elects Ada. ([electowiki](https://electowiki.org/wiki/Independence_of_Smith-dominated_alternatives) has the formal statement — advocacy-adjacent wiki, fine for definitions.)
+Two footnotes to the table. First, the criterion has spawned a whole construction kit: **Smith//X** methods first *eliminate everyone outside the Smith set*, then run method X on the survivors — Smith//IRV (a.k.a. Tideman's Alternative) and Smith//Minimax are the common ones, bolting Smith-efficiency onto methods that lack it. Equal Vote's own tie-breaking protocol reaches for the same idea ("Smith-Minimax" sits in [Ranked Robin's tiebreak hierarchy](../RCV_Ranked_Robin/ranked_robin.md)). Second, there's a related *independence* criterion, **ISDA** ("Independence of Smith-Dominated Alternatives"): candidates outside the Smith set should be ignorable — delete them from every ballot and the winner shouldn't change. Our demo passes the spot-check: delete Dave and you get exactly [the 02_cycle election](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md), where Ranked Robin still elects Ada. ([electowiki](https://electowiki.org/wiki/Independence_of_Smith-dominated_alternatives) has the formal statement — advocacy-adjacent wiki, fine for definitions.)
 
 ## Fine print: Schwartz, ties, and "Smith's method"
 
@@ -99,7 +99,7 @@ So the honest summary matches the repo's [house caveat](../RCV_Ranked_Robin/the_
 
 ## Cross-references
 
-- [`04_smith_set_c4_b7` — the worked demo](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md) ([source YAML](../../05_Ranked_Robin/condorcet_vs_ranked_robin/04_smith_set_c4_b7.yaml)) · its no-Dave companion [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/02_cycle_no_condorcet.md) · a real 4-member Smith set: [BV2138](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md)
+- [`04_smith_set_c4_b7` — the worked demo](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md) ([source YAML](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/04_smith_set_c4_b7.yaml)) · its no-Dave companion [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) · a real 4-member Smith set: [BV2138](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md)
 - [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) — tournaments, SCCs, Schwartz, and the theorems (this page's mathematical home)
 - [Cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) — what Minimax / Ranked Pairs / Schulze do *inside* the club
 - [Condorcet efficiency — topic hub](condorcet/README.md) · [Pairwise counting](pairwise_counting.md) — the matrix all of this reads from

@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Cara** rather than STAR's **Ben**, but this i
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Ann, strict=Cara)
 
-**Source election:** [`01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/tie_break_dead_rung_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt)
+**Source election:** [`01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/cases/cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

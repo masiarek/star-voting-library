@@ -1,0 +1,126 @@
+======================================================================
+SOURCE FILE:     bv2165_9vxcj7_star.yaml
+TABULATED FILE:  bv2165_9vxcj7_star_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.19 full — STAR: Boone wins the runoff 8–7"
+scenario_description: |-
+  Race 1 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-confirmed; the pair is BV2165/66). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure), Example 19.
+  The full electorate: 15 voters — 4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone), 2×(Cass>Boone>Amy). Coombs (worked on the case page; no tabulator on BV or in LH): Amy is ranked last by the most voters (6) and is deleted; Boone then holds a majority — Boone wins. This STAR race (5/3/1 map): Amy 41, Boone 43, Cass 51 — Cass tops the scores, but Boone wins the automatic runoff 8–7. Part 2 (BV2166): the two Cass>Boone>Amy voters stay home, and BOTH Coombs and STAR flip to Cass, their favorite. Pairwise is a cycle (Amy>Boone 9–6, Boone>Cass 8–7, Cass>Amy 11–4) — no RR race; IRV's first elimination is a random Amy/Boone tie — no IRV race.
+  Live results: https://bettervoting.com/9vxcj7/results
+bv_test_id: BV2165
+bv_election_id: 9vxcj7
+bv_results_url: https://bettervoting.com/9vxcj7/results
+paradoxes: [no-show, condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Amy,Boone,Cass
+  5,3,1
+  5,3,1
+  5,3,1
+  5,3,1
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  1,3,5
+  1,3,5
+expected_winners:
+  - Boone
+
+# file: bv2165_9vxcj7_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Coombs Ex.19 full — STAR: Boone wins the runoff 8–7 ===
+  Race 1 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-confirmed; the pair is BV2165/66). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure), Example 19.
+  The full electorate: 15 voters — 4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone), 2×(Cass>Boone>Amy). Coombs (worked on the case page; no tabulator on BV or in LH): Amy is ranked last by the most voters (6) and is deleted; Boone then holds a majority — Boone wins. This STAR race (5/3/1 map): Amy 41, Boone 43, Cass 51 — Cass tops the scores, but Boone wins the automatic runoff 8–7. Part 2 (BV2166): the two Cass>Boone>Amy voters stay home, and BOTH Coombs and STAR flip to Cass, their favorite. Pairwise is a cycle (Amy>Boone 9–6, Boone>Cass 8–7, Cass>Amy 11–4) — no RR race; IRV's first elimination is a random Amy/Boone tie — no IRV race.
+  Live results: https://bettervoting.com/9vxcj7/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Amy     |  * Boone    |   * Cass    |
+-------------------------------------------------------------
+           Amy > |     ---      | 9 -  0 -  6 | 4 -  0 - 11 |
+       * Boone > |  6 -  0 -  9 |    ---      | 8 -  0 -  7 |
+        * Cass > | 11 -  0 -  4 | 7 -  0 -  8 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Amy > Boone > Cass > Amy)
+
+[Divergence from STAR]
+  STAR                   = Boone
+  Choose-One (Plurality) = Cass   (differs from STAR)
+  Approval               = Cass   (differs from STAR)
+  RCV-RR                 = Cass   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: cases_tabulated/bv2165_9vxcj7_star_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Cass)
+ - Runoff Round Winner   = (Boone)
+  Candidate Cass earned the highest total score, but
+  Candidate Boone won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 15 ballots.
+Count × Amy,Boone,Cass
+    5 ×   3,    1,   5
+    4 ×   5,    3,   1
+    4 ×   1,    5,   3
+    2 ×   1,    3,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Amy        4  0  5  0  6  0  |    41   2.7
+Boone      4  0  6  0  5  0  |    43   2.9
+Cass       7  0  4  0  4  0  |    51   3.4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cass          -- 51 -- First place
+   Boone         -- 43 -- Second place
+   Amy           -- 41
+ Cass and Boone advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Boone         -- 8 -- First place
+   Cass          -- 7
+   Equal Support -- 0
+ Boone wins.
+   Runoff math:
+     15  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     15  voters with a preference  (majority = 8)
+           Boone 8 (53%)  ·  Cass 7 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Boone

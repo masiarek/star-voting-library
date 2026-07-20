@@ -2,7 +2,7 @@
 
 *The extreme flat case: a 2-seat Bloc STAR election where all three ballots are `5,5,5`. Nothing separates anyone, so the lot decides both seats — and BetterVoting drops **every** ballot as an abstention (`nTallyVotes: 0`, the "no ballots have been cast" bug). LH and BV both elect **c, a** (via the lot), but LH counts all three ballots.*
 
-Reference files: [`bv750_tie_breaking_bloc.yaml`](bv750_tie_breaking_bloc.yaml) (`expected_winners: [c, a]`) · frozen export [`bv750_tie_breaking_bloc_bv_export.json`](bv750_tie_breaking_bloc_bv_export.json) (BV `3yr2qd`). Backs sheet row **BV750**.
+Reference files: [`bv750_tie_breaking_bloc.yaml`](cases/bv750_tie_breaking_bloc.yaml) (`expected_winners: [c, a]`) · frozen export [`bv750_tie_breaking_bloc_bv_export.json`](cases/bv750_tie_breaking_bloc_bv_export.json) (BV `3yr2qd`). Backs sheet row **BV750**.
 
 ## The election
 
@@ -54,7 +54,7 @@ Winners — Bloc STAR Voting Method (2 winners)
  a
 ```
 
-Full audit copy: [`_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt`](_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt`](cases/cases_tabulated/bv750_tie_breaking_bloc_tabulated.txt).
 
 ## Two findings
 

@@ -25,7 +25,7 @@ AV maximises the total number of approvals inside the committee. With `score_AV(
 
 Top three are `a,b,c`; the fourth seat ties between `d` and `f` (both 2). So AV is **irresolute** here, returning **two** committees of equal AV-score 18: `{a,b,c,d}` and `{a,b,c,f}`. AV is the pure **utilitarian** rule — it maximises summed satisfaction and is *indifferent* to whether some voters are left with nothing. (`{a,b,c,d}` leaves 3 voters wholly unrepresented; `{a,b,c,f}` leaves 2 — same AV-score, so AV can't tell them apart.)
 
-*This `av` rule is exactly the LH engine's `Approval_Multi_Winner` (bloc Approval) — see [the approval original](../../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml).*
+*This `av` rule is exactly the LH engine's `Approval_Multi_Winner` (bloc Approval) — see [the approval original](../../../04_Approval/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml).*
 
 ## Rule 2 — Approval Chamberlin–Courant (CC): egalitarian
 
@@ -66,7 +66,7 @@ Two lessons drop out: STAR's *runoff* adds nothing over AV on binary ballots (Bl
 ```bash
 pip install abcvoting
 python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
-  04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
+  04_Approval/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
   --rules av,pav,cc,seqphragmen
 # av -> {A,B,C,D}|{A,B,C,F} ; pav -> {A,B,C,F} ; cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}
 ```

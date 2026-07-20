@@ -14,7 +14,7 @@ Athens, Berlin, Cairo
 4, 5, 0
 ```
 
-Source: [`Flat_scores_ties_03_runoff_tie_split.yaml`](Flat_scores_ties_03_runoff_tie_split.yaml).
+Source: [`Flat_scores_ties_03_runoff_tie_split.yaml`](cases/Flat_scores_ties_03_runoff_tie_split.yaml).
 
 ## What LH does
 
@@ -46,7 +46,7 @@ Automatic Runoff Round
 Winner: Athens
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_03_runoff_tie_split_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_03_runoff_tie_split_tabulated.txt).
 
 ## The takeaway
 

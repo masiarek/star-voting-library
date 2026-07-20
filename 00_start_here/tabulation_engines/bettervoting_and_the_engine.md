@@ -47,7 +47,7 @@ This is the "results don't reconcile" branch of the pipeline below. It's tracked
 - Minimal **real** BetterVoting reproduction (3 candidates / 8 ballots, where BV files a flat `3,3,3` as an abstention): [When "no preference" gets called an "abstention"](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md)
 - Frozen evidence + raw export (the 461-ballot race): [BetterVoting result — frozen snapshot (pet race)](../../01_STAR/pet_real_bv_election/BV_result_snapshot.md)
 - Write-up & GitHub issue [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](../../01_STAR/pet_real_bv_election/LH_BV_reconciliation_issue.md)
-- Synthetic minimal illustration: [`abstention_reconciliation_min_c2_b6.yaml`](../../01_STAR/pet_real_bv_election/abstention_reconciliation_min_c2_b6.yaml)
+- Synthetic minimal illustration: [`abstention_reconciliation_min_c2_b6.yaml`](../../01_STAR/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml)
 
 The terminology — why a flat ballot is *Equal Support*, not a discarded or abstaining vote — is [runoff percentages](../STAR_Voting/the_count/runoff_percentages.md) and [`Equal Support`](../GLOSSARY.md).
 

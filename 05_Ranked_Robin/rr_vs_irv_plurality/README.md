@@ -4,7 +4,7 @@ Where the [Condorcet vs. Ranked Robin](../condorcet_vs_ranked_robin/) set asks *
 
 | Case (page) | What it shows | Plurality | RCV-IRV | Ranked Robin | src |
 |------|---------------|:---:|:---:|:---:|:--:|
-| [BV2131 — Tennessee capital](bv2131_tennessee_condorcet_center_vqyqkr.md) | one ballot set, three winners — the classic center-squeeze | Memphis | Knoxville | **Nashville** | [`.yaml`](bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
+| [BV2131 — Tennessee capital](bv2131_tennessee_condorcet_center_vqyqkr.md) | one ballot set, three winners — the classic center-squeeze | Memphis | Knoxville | **Nashville** | [`.yaml`](cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 
 **Tennessee in one line:** Nashville is nearly everyone's second choice, so it beats every rival head-to-head (the Condorcet winner Ranked Robin elects) — but it holds few first-choices, so plurality ignores it and IRV eliminates it before the final round.
 

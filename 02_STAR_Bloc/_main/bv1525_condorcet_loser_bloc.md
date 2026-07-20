@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx`). On this run BetterVoting drew **First** for seat 1 — matching this file's published-lot outcome. Note the reporting quirk: BV flags the seat-1 round `tieBreakType: random` (correct — its logs walk `runoff_tied → runoff_score_tie → runoff_five_star_tie → runoff_random`), but the **top-level summary still reads `tieBreakType: none`**, the same under-report seen in [BV130-r2](bv130r2_dead_rung_bloc.md) and [BV131](bv131_guido_bloc.md).
 
-Reference file: [`bv1525_condorcet_loser_bloc.yaml`](bv1525_condorcet_loser_bloc.yaml) (`expected_winners: [First, Second, Third, Fourth]`). Backs sheet row **BV1525**. Source: Larry's [`test_election_bloc_star_and_electowiki.starvote`](https://github.com/larryhastings/starvote/blob/master/test_elections/test_election_bloc_star_and_electowiki.starvote).
+Reference file: [`bv1525_condorcet_loser_bloc.yaml`](cases/bv1525_condorcet_loser_bloc.yaml) (`expected_winners: [First, Second, Third, Fourth]`). Backs sheet row **BV1525**. Source: Larry's [`test_election_bloc_star_and_electowiki.starvote`](https://github.com/larryhastings/starvote/blob/master/test_elections/test_election_bloc_star_and_electowiki.starvote).
 
 ## The election
 
@@ -54,7 +54,7 @@ Winners — Bloc STAR Voting Method (4 winners)
  Fourth
 ```
 
-Full audit copy: [`_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt`](_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt`](cases/cases_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt).
 
 ## The finding
 

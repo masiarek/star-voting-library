@@ -102,11 +102,11 @@ Note what this exercise is and isn't: a *sincere-vs-strategic* pair, so per the 
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex06_bullet_honest.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex06_bullet_backfire.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex06_bullet_honest.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex06_bullet_backfire.yaml
 ```
 
-Sources: [ex06_bullet_honest.yaml](ex06_bullet_honest.yaml) · [ex06_bullet_backfire.yaml](ex06_bullet_backfire.yaml). Full audit reports: [honest](exercises_tabulated/ex06_bullet_honest_tabulated.txt) · [strategic](exercises_tabulated/ex06_bullet_backfire_tabulated.txt).
+Sources: [ex06_bullet_honest.yaml](cases/ex06_bullet_honest.yaml) · [ex06_bullet_backfire.yaml](cases/ex06_bullet_backfire.yaml). Full audit reports: [honest](cases/cases_tabulated/ex06_bullet_honest_tabulated.txt) · [strategic](cases/cases_tabulated/ex06_bullet_backfire_tabulated.txt).
 
 ---
 

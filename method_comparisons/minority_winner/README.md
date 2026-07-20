@@ -61,4 +61,4 @@ That's the case for a better ballot and a fuller count, in one small election. (
 
 ---
 
-*See the same lens across every method: [same opinions, every method](../../00_start_here/topics/same_opinions_every_method.md). The concept page: [Choose-One / Plurality](../../00_start_here/topics/plurality.md). Full engine detail: [`bv2215_2p33qq_minority_winner_tabulated.txt`](minority_winner_tabulated/bv2215_2p33qq_minority_winner_tabulated.txt) · run it: [`bv2215_2p33qq_minority_winner.yaml`](bv2215_2p33qq_minority_winner.yaml).*
+*See the same lens across every method: [same opinions, every method](../../00_start_here/topics/same_opinions_every_method.md). The concept page: [Choose-One / Plurality](../../00_start_here/topics/plurality.md). Full engine detail: [`bv2215_2p33qq_minority_winner_tabulated.txt`](cases/cases_tabulated/bv2215_2p33qq_minority_winner_tabulated.txt) · run it: [`bv2215_2p33qq_minority_winner.yaml`](cases/bv2215_2p33qq_minority_winner.yaml).*

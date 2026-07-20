@@ -21,7 +21,7 @@ STAR elects **Brook** — and so do Ranked Robin and Condorcet, because **Brook 
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex05_center_squeeze.yaml`](../../../../01_STAR/exercises/ex05_center_squeeze.yaml)  ·  **STAR tabulated mirror:** [`ex05_center_squeeze_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex05_center_squeeze_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex05_center_squeeze.yaml`](../../../../01_STAR/exercises/cases/ex05_center_squeeze.yaml)  ·  **STAR tabulated mirror:** [`ex05_center_squeeze_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex05_center_squeeze_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

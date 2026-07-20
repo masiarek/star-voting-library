@@ -18,7 +18,7 @@ A ranked-ballot case (no scores invented). → fairness test: [Reading these fai
  49 : E>D>C>B>A
 ```
 
-A realistic "one-dimensional politics" taper — support falls off with distance from each voter's favorite. Source: [`bv2158_gr72hd_ossipoff_centrist_irv.yaml`](bv2158_gr72hd_ossipoff_centrist_irv.yaml).
+A realistic "one-dimensional politics" taper — support falls off with distance from each voter's favorite. Source: [`bv2158_gr72hd_ossipoff_centrist_irv.yaml`](cases/bv2158_gr72hd_ossipoff_centrist_irv.yaml).
 
 ## C is the favorite by two measures — and still loses
 

@@ -6,7 +6,7 @@
 
 ## What you're counting
 
-A stack of ballots. Each ballot has a **0–5 score for every candidate** (blank counts as 0). That's it. We'll use the [team-lunch election](../../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md) — 5 voters choosing **Sushi, Tacos, or Pizza**:
+A stack of ballots. Each ballot has a **0–5 score for every candidate** (blank counts as 0). That's it. We'll use the [team-lunch election](../../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) — 5 voters choosing **Sushi, Tacos, or Pizza**:
 
 ```text
               Sushi  Tacos  Pizza
@@ -80,7 +80,7 @@ Instead of marking each ballot one by one, **sort the whole stack into three pil
 
 - **Run the whole loop:** [make a BetterVoting election, print paper ballots, vote, hand-count, and compare](running_a_paper_ballot_demo.md) — the classroom/demo version, using the [ballot-printing tool](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py).
 - Grab the [ballot styles](../STAR_ballot_voting_styles.md) and make up your own 3-voter election — count it by hand, then run it on [bettervoting.com](https://bettervoting.com) and check you agree.
-- Or run the file: `python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/bv2184_fyy886_lunch_vote.yaml` and compare its Scoring Round and Automatic Runoff to your hand tally.
+- Or run the file: `python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml` and compare its Scoring Round and Automatic Runoff to your hand tally.
 
 ## See also
 

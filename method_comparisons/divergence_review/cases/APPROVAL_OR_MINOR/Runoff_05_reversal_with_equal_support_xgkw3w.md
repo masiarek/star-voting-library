@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Sage**. Only **Approval** differs,
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml)  ·  **STAR tabulated mirror:** [`Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/runoff_reversal_bv_cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt)
+**Source election:** [`01_STAR/runoff_reversal_bv_cases/cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml)  ·  **STAR tabulated mirror:** [`Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/cases/cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

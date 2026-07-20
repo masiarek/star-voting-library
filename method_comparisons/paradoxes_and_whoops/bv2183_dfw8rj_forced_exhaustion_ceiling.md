@@ -31,7 +31,7 @@ The kicker: **lift the 2-rank cap** — let those 21 voters rank all five candid
 
 ## BetterVoting confirms it
 
-BV's own IRV tabulation agrees with the LH engine to the number: **winner Ada**, and `exhaustedVoteCount = [0, 0, 8, 21]` — 8 exhausted after round 2, **21 by the final round**. Frozen export: [`…_bv_export.json`](bv2183_dfw8rj_forced_exhaustion_ceiling_bv_export.json).
+BV's own IRV tabulation agrees with the LH engine to the number: **winner Ada**, and `exhaustedVoteCount = [0, 0, 8, 21]` — 8 exhausted after round 2, **21 by the final round**. Frozen export: [`…_bv_export.json`](cases/bv2183_dfw8rj_forced_exhaustion_ceiling_bv_export.json).
 
 ## The LH tabulation
 
@@ -47,7 +47,7 @@ FINAL     Ada 15 (Elected) | Ben 14 | Blank Votes 21
 Winner — RCV / Instant-Runoff Voting: Ada
 ```
 
-Full report: [`…_tabulated.txt`](paradoxes_and_whoops_tabulated/bv2183_dfw8rj_forced_exhaustion_ceiling_tabulated.txt).
+Full report: [`…_tabulated.txt`](cases/cases_tabulated/bv2183_dfw8rj_forced_exhaustion_ceiling_tabulated.txt).
 
 ## Related
 

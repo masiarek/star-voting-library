@@ -224,7 +224,7 @@ def is_crosscheckable(path):
 def discover(dirs):
     files = []
     for d in dirs:
-        for p in sorted(glob.glob(os.path.join(d, "*.yaml"))):
+        for p in sorted(glob.glob(os.path.join(d, "*.yaml")) + glob.glob(os.path.join(d, "cases", "*.yaml"))):
             if "_tabulated" in p:
                 continue
             if is_crosscheckable(p):

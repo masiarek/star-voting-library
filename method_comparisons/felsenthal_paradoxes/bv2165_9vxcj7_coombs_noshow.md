@@ -28,4 +28,4 @@ No. of voters    Preference ordering
 | Choose-One (Plurality) | Cass (7 of 15) | Cass | ✓ |
 | Coombs *(paper only)* | — | Boone (Amy deleted) | n/a |
 
-Files: [star](bv2165_9vxcj7_star.yaml) · [plurality](bv2165_9vxcj7_plurality.yaml) · [frozen export](bv2165_9vxcj7_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2165_9vxcj7_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) · Part 2: [BV2166 — two voters stay home](bv2166_b7b8dv_coombs_noshow.md).
+Files: [star](cases/bv2165_9vxcj7_star.yaml) · [plurality](cases/bv2165_9vxcj7_plurality.yaml) · [frozen export](cases/bv2165_9vxcj7_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2165_9vxcj7_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) · Part 2: [BV2166 — two voters stay home](bv2166_b7b8dv_coombs_noshow.md).

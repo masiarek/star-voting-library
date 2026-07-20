@@ -33,4 +33,4 @@ With all 15 ballots STAR elects **Boone** (41/43/51; Boone beats Cass 8–7 in t
 | BV2165 / BV2166 | Choose-One | Cass / Cass | Cass / Cass | ✓ |
 | BV2165 / BV2166 | Coombs *(paper)* | — | Boone / Cass | n/a |
 
-Files: [star](bv2166_b7b8dv_star.yaml) · [plurality](bv2166_b7b8dv_plurality.yaml) · [frozen export](bv2166_b7b8dv_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2166_b7b8dv_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2166_b7b8dv_plurality_tabulated.txt) · Part 1: [BV2165](bv2165_9vxcj7_coombs_noshow.md).
+Files: [star](cases/bv2166_b7b8dv_star.yaml) · [plurality](cases/bv2166_b7b8dv_plurality.yaml) · [frozen export](cases/bv2166_b7b8dv_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2166_b7b8dv_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2166_b7b8dv_plurality_tabulated.txt) · Part 1: [BV2165](bv2165_9vxcj7_coombs_noshow.md).

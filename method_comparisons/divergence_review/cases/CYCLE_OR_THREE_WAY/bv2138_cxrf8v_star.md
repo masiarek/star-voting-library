@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml`](../../../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_star.yaml)  ·  **STAR tabulated mirror:** [`bv2138_cxrf8v_star_tabulated.txt`](../../../../method_comparisons/no_condorcet_bv2138/no_condorcet_bv2138_tabulated/bv2138_cxrf8v_star_tabulated.txt)
+**Source election:** [`method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_star.yaml`](../../../../method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_star.yaml)  ·  **STAR tabulated mirror:** [`bv2138_cxrf8v_star_tabulated.txt`](../../../../method_comparisons/no_condorcet_bv2138/cases/cases_tabulated/bv2138_cxrf8v_star_tabulated.txt)
 
 _5 candidates, 921 ballots._
 

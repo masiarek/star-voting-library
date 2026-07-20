@@ -10,9 +10,9 @@ The setup never changes: a group shares **one** pizza. Everybody has a passionat
 
 | Menu | Choose-One winner | on… | STAR / Ranked Robin / Approval | |
 |---|---|:--:|:--:|:--|
-| **3 toppings** ([run](pineapple_34pct.yaml)) | 🍍 Pineapple | **34%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/ht2c3g/results) |
-| **4 toppings** ([run](pineapple_25pct.yaml)) | 🍍 Pineapple | **25%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/mvxbxr/results) |
-| **11 toppings** ([run](pineapple_11pct.yaml)) | 🍍 Pineapple | **11%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/h34pp9/results) |
+| **3 toppings** ([run](cases/pineapple_34pct.yaml)) | 🍍 Pineapple | **34%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/ht2c3g/results) |
+| **4 toppings** ([run](cases/pineapple_25pct.yaml)) | 🍍 Pineapple | **25%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/mvxbxr/results) |
+| **11 toppings** ([run](cases/pineapple_11pct.yaml)) | 🍍 Pineapple | **11%** | 🧀 **Cheese** | [live ↗](https://bettervoting.com/h34pp9/results) |
 
 At the bottom rung, **eleven diners out of a hundred** decide the whole pizza — and the other 89 wanted something else. Pineapple's fan club never grew; the *menu* did. Choose-One only ever counts your one favorite, so the more the field splits, the less it takes to "win."
 

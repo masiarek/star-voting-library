@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Baiul**. Only **Approval** differs
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex04_olympics_1994.yaml`](../../../../01_STAR/exercises/ex04_olympics_1994.yaml)  ·  **STAR tabulated mirror:** [`ex04_olympics_1994_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex04_olympics_1994_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex04_olympics_1994.yaml`](../../../../01_STAR/exercises/cases/ex04_olympics_1994.yaml)  ·  **STAR tabulated mirror:** [`ex04_olympics_1994_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex04_olympics_1994_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

@@ -21,7 +21,7 @@ STAR elects **Cheese** — and so do Ranked Robin and Condorcet, because **Chees
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/minority_winner_progression/pineapple_34pct.yaml`](../../../../method_comparisons/minority_winner_progression/pineapple_34pct.yaml)  ·  **STAR tabulated mirror:** [`pineapple_34pct_tabulated.txt`](../../../../method_comparisons/minority_winner_progression/minority_winner_progression_tabulated/pineapple_34pct_tabulated.txt)
+**Source election:** [`method_comparisons/minority_winner_progression/cases/pineapple_34pct.yaml`](../../../../method_comparisons/minority_winner_progression/cases/pineapple_34pct.yaml)  ·  **STAR tabulated mirror:** [`pineapple_34pct_tabulated.txt`](../../../../method_comparisons/minority_winner_progression/cases/cases_tabulated/pineapple_34pct_tabulated.txt)
 
 _4 candidates, 99 ballots._
 

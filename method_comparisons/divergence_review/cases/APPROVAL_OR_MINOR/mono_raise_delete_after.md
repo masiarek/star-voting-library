@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Z**. Only **Approval** differs, el
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/monotonicity/mono_raise_delete_after.yaml`](../../../../method_comparisons/monotonicity/mono_raise_delete_after.yaml)  ·  **STAR tabulated mirror:** [`mono_raise_delete_after_tabulated.txt`](../../../../method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_after_tabulated.txt)
+**Source election:** [`method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml`](../../../../method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml)  ·  **STAR tabulated mirror:** [`mono_raise_delete_after_tabulated.txt`](../../../../method_comparisons/monotonicity/cases/cases_tabulated/mono_raise_delete_after_tabulated.txt)
 
 _3 candidates, 30 ballots._
 

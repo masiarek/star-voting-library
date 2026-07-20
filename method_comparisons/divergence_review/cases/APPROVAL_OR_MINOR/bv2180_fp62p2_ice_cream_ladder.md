@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Strawberry**. Only **Approval** di
 
 **Flags:** 2 tied-score ballot(s)
 
-**Source election:** [`01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml`](../../../../01_STAR/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.yaml)  ·  **STAR tabulated mirror:** [`bv2180_fp62p2_ice_cream_ladder_tabulated.txt`](../../../../01_STAR/tie_break_ladder/tie_break_ladder_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt)
+**Source election:** [`01_STAR/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml`](../../../../01_STAR/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml)  ·  **STAR tabulated mirror:** [`bv2180_fp62p2_ice_cream_ladder_tabulated.txt`](../../../../01_STAR/tie_break_ladder/cases/cases_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt)
 
 _6 candidates, 2 ballots._
 

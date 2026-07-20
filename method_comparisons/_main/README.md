@@ -4,7 +4,7 @@ Cross-method comparison files that don't belong to one of the curated sets. Toda
 
 | Case (page) | What it shows | src |
 |---|---|:--:|
-| [STAR adds, IRV eliminates](_main_pages/count_simplicity_star_vs_irv.md) | same winner, very different counts | [`.yaml`](count_simplicity_star_vs_irv.yaml) |
+| [STAR adds, IRV eliminates](cases/cases_pages/count_simplicity_star_vs_irv.md) | same winner, very different counts | [`.yaml`](cases/count_simplicity_star_vs_irv.yaml) |
 
 Up: [method_comparisons — same ballots, different methods](../)
 

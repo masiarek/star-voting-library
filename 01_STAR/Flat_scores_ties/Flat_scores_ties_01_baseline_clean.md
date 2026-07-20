@@ -14,7 +14,7 @@ Apple, Banana, Cherry
 5, 3, 1
 ```
 
-Source: [`Flat_scores_ties_01_baseline_clean.yaml`](Flat_scores_ties_01_baseline_clean.yaml).
+Source: [`Flat_scores_ties_01_baseline_clean.yaml`](cases/Flat_scores_ties_01_baseline_clean.yaml).
 
 ## Why nothing ties
 
@@ -42,7 +42,7 @@ Automatic Runoff Round
  Apple wins.
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_01_baseline_clean_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_01_baseline_clean_tabulated.txt).
 
 ## The takeaway
 

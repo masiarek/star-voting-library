@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyxrbr) · **[results ↗](https://bettervoting.com/dyxrbr/results)** (election `dyxrbr`, Test ID **BV2133**).
 
-Frozen export: [`bv2133_dyxrbr_pet_poll_four_winners_bv_export.json`](bv2133_dyxrbr_pet_poll_four_winners_bv_export.json).
+Frozen export: [`bv2133_dyxrbr_pet_poll_four_winners_bv_export.json`](cases/bv2133_dyxrbr_pet_poll_four_winners_bv_export.json).
 
 ## The electorate
 
@@ -21,10 +21,10 @@ Four pets (Dog, Cat, Fish, Bird), 32 voters in four blocs:
 
 | Race | Winner | Our engine | BetterVoting | Why | yaml |
 |------|:---:|:---:|:---:|-----|:--:|
-| **Plurality** | **Dog** | Dog | Dog | most first choices (13) — but 19 rank Dog last | [`.yaml`](bv2133_dyxrbr_pet2_plurality.yaml) |
-| **RCV-IRV** | **Fish** | Fish | Fish | Bird then Cat eliminated; transfers pile on Fish (19–13) | [`.yaml`](bv2133_dyxrbr_pet2_irv.yaml) |
-| **Approval** | **Bird** | Bird | Bird | widely approved (19) at the 3+ threshold | [`.yaml`](bv2133_dyxrbr_pet2_approval.yaml) |
-| **STAR** | **Cat** | Cat | Cat | score leaders Cat (84) & Fish (72) advance; Cat wins runoff 22–10 | [`.yaml`](bv2133_dyxrbr_pet2_star.yaml) |
+| **Plurality** | **Dog** | Dog | Dog | most first choices (13) — but 19 rank Dog last | [`.yaml`](cases/bv2133_dyxrbr_pet2_plurality.yaml) |
+| **RCV-IRV** | **Fish** | Fish | Fish | Bird then Cat eliminated; transfers pile on Fish (19–13) | [`.yaml`](cases/bv2133_dyxrbr_pet2_irv.yaml) |
+| **Approval** | **Bird** | Bird | Bird | widely approved (19) at the 3+ threshold | [`.yaml`](cases/bv2133_dyxrbr_pet2_approval.yaml) |
+| **STAR** | **Cat** | Cat | Cat | score leaders Cat (84) & Fish (72) advance; Cat wins runoff 22–10 | [`.yaml`](cases/bv2133_dyxrbr_pet2_star.yaml) |
 
 Every race is cross-checked **LH engine = BetterVoting**. Four methods, four different pets — nobody wins twice.
 

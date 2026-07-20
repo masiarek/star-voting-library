@@ -6,9 +6,9 @@ Read the reader-friendly **pages** (`center_squeeze_pages/`); the `.yaml` beside
 
 | Page (read this) | What it shows | src |
 |---|---|:--:|
-| [the 1-D spectrum](center_squeeze_pages/center_squeeze_voteline_1d.md) | the Red / Green / Yellow voteline that sets up the squeeze | [`.yaml`](center_squeeze_voteline_1d.yaml) |
-| [RCV-IRV squeezes the center](center_squeeze_pages/center_squeeze_irv.md) | minimal 27-voter case — the moderate is eliminated first | [`.yaml`](center_squeeze_irv.yaml) |
-| [STAR elects the center](center_squeeze_pages/center_squeeze_star.md) | the same electorate — STAR's runoff picks the consensus | [`.yaml`](center_squeeze_star.yaml) |
+| [the 1-D spectrum](cases/cases_pages/center_squeeze_voteline_1d.md) | the Red / Green / Yellow voteline that sets up the squeeze | [`.yaml`](cases/center_squeeze_voteline_1d.yaml) |
+| [RCV-IRV squeezes the center](cases/cases_pages/center_squeeze_irv.md) | minimal 27-voter case — the moderate is eliminated first | [`.yaml`](cases/center_squeeze_irv.yaml) |
+| [STAR elects the center](cases/cases_pages/center_squeeze_star.md) | the same electorate — STAR's runoff picks the consensus | [`.yaml`](cases/center_squeeze_star.yaml) |
 
 Concept hub: [center squeeze](../../00_start_here/RCV_IRV/glossary_rcv_irv.md) · up: [method_comparisons — same ballots, different methods](../)
 

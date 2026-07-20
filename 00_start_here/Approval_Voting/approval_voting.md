@@ -2,7 +2,7 @@
 
 *The simplest equal-vote upgrade to Choose-One: mark **every** candidate you approve (**1**) and leave the rest (**0**); the most-approved candidate wins. It's Score voting at **one-bit resolution** — a big jump in expressiveness over "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
+→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
@@ -26,11 +26,11 @@ Because the ballot is binary, Approval forces exactly one genuinely hard call: *
 
 ## Approval is Score at 1-bit resolution
 
-An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/_main/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)).
+An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/_main/cases/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)).
 
 ## Reading an Approval result
 
-An approval count is more than "who got the most marks." Three numbers tell the story — here they are for the [`approval_101` example](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) (5 voters, candidates Ann/Bob/Cal):
+An approval count is more than "who got the most marks." Three numbers tell the story — here they are for the [`approval_101` example](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md) (5 voters, candidates Ann/Bob/Cal):
 
 ```text
    Bob -- 4 (80%) -- Elected
@@ -54,7 +54,7 @@ An approval count is more than "who got the most marks." Three numbers tell the 
 - **The approval distribution — the strategy signal.** How many candidates *each ballot* approved. If most voters **bullet-voted** (approved exactly one), the electorate is behaving like Choose-One and the "approve as many as you like" freedom went unused; a healthy spread (here, an average of 1.8 of 3) means voters actually expressed acceptance of more than one option. This is the approval analogue of STAR's [score distribution](../STAR_Voting/the_count/STAR_Scoring_Round.md).
 - **The co-approval matrix — the coalitions.** Of the voters who approved A, what fraction *also* approved B. It exposes structure the totals hide: blocs that move together, and "bridge" candidates approved across camps. (Ann's approvers back Bob 67% of the time; Cal's split evenly.) It's the approval analogue of STAR's [preference matrix](../STAR_Voting/the_count/STAR_Automatic_Runoff.md) — coalition shape, not just a winner.
 
-The share and distribution print on every result; the co-approval matrix is opt-in on screen (`options: { show_matrix: true }`) and always in the full [`_tabulated`](../../04_Approval/_main/_main_tabulated/approval_101_c3_b5_tabulated.txt) mirror. For a **visual** version of exactly these statistics — bar charts, an approval-distribution histogram, and a co-approval correlation table — the [Center for Election Science's polling tool](https://vote.electionscience.org/) renders them live (an Approval-advocacy site; the numbers are the numbers).
+The share and distribution print on every result; the co-approval matrix is opt-in on screen (`options: { show_matrix: true }`) and always in the full [`_tabulated`](../../04_Approval/_main/cases/cases_tabulated/approval_101_c3_b5_tabulated.txt) mirror. For a **visual** version of exactly these statistics — bar charts, an approval-distribution histogram, and a co-approval correlation table — the [Center for Election Science's polling tool](https://vote.electionscience.org/) renders them live (an Approval-advocacy site; the numbers are the numbers).
 
 ## How it compares
 

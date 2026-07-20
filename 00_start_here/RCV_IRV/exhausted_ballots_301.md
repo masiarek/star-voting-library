@@ -91,7 +91,7 @@ The honest version is: *which* of your rankings get counted depends on the **ord
 
 ### A concrete example — *which* ranks IRV threw away
 
-27 voters, three candidates on a spectrum ([`center_squeeze_star.yaml`](../../method_comparisons/center_squeeze/center_squeeze_star.yaml)):
+27 voters, three candidates on a spectrum ([`center_squeeze_star.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_star.yaml)):
 
 | Voters | Their ballot (full ranking) | What IRV did with it | Rank IRV **never read** |
 |---|---|---|---|

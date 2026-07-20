@@ -94,11 +94,11 @@ The buried half stays freezable *despite* the known LH/BV tiebreak divergence ([
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/burial/bv2208_7q6by8_burial_sincere.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/burial/bv2209_fxhw6g_burial_pays.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/burial/cases/bv2208_7q6by8_burial_sincere.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/burial/cases/bv2209_fxhw6g_burial_pays.yaml
 ```
 
-Sources: [bv2208_7q6by8_burial_sincere.yaml](bv2208_7q6by8_burial_sincere.yaml) · [bv2209_fxhw6g_burial_pays.yaml](bv2209_fxhw6g_burial_pays.yaml). Full mirrors: [`burial_tabulated/`](burial_tabulated/).
+Sources: [bv2208_7q6by8_burial_sincere.yaml](cases/bv2208_7q6by8_burial_sincere.yaml) · [bv2209_fxhw6g_burial_pays.yaml](cases/bv2209_fxhw6g_burial_pays.yaml). Full mirrors: [`burial_tabulated/`](cases/cases_tabulated/).
 
 ---
 

@@ -22,9 +22,9 @@ A real BetterVoting STAR election (**BV id `3w6v4b`**, captured 2026-06-28), two
 | 4 | 5 | 0 | prefers **A** |
 | 5 | — | — | blank — the one true **abstention** |
 
-- Frozen raw export: [`small_abstention_c2_b5_bv_export.json`](small_abstention_c2_b5_bv_export.json)
-- Converted election (LH-tabulatable): [`small_abstention_c2_b5.yaml`](small_abstention_c2_b5.yaml)
-- Full engine report: [`small_abstention_c2_b5_tabulated.txt`](pet_real_bv_election_tabulated/small_abstention_c2_b5_tabulated.txt)
+- Frozen raw export: [`small_abstention_c2_b5_bv_export.json`](cases/small_abstention_c2_b5_bv_export.json)
+- Converted election (LH-tabulatable): [`small_abstention_c2_b5.yaml`](cases/small_abstention_c2_b5.yaml)
+- Full engine report: [`small_abstention_c2_b5_tabulated.txt`](cases/cases_tabulated/small_abstention_c2_b5_tabulated.txt)
 
 ## Two reports — one ballot of disagreement
 
@@ -79,7 +79,7 @@ Read it: **5 cast, 1 abstention** (the blank). The `5,5` and the blank both scor
 ## See also
 
 - Richer 3-candidate version (the canonical lesson): [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)
-- Synthetic illustration (adds an explicit `0,0` row): [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
+- Synthetic illustration (adds an explicit `0,0` row): [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml)
 - Full 461-ballot race + frozen BV evidence: [A real BetterVoting election, end to end — "What Makes the Best Pet?"](README.md) · [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md)
 - The reconciliation / issue write-up: [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md) (→ [#1407](https://github.com/Equal-Vote/bettervoting/issues/1407))
 - How it was reproduced on BetterVoting: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)

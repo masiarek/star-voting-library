@@ -50,7 +50,7 @@ BetterVoting's [results](https://bettervoting.com/3r3yf7/results) confirm the ti
 
 ![BV Ranked Robin result for 3r3yf7 — Ava and Bianca tie at 3 wins; Ava elected by random tiebreak](img/REPLACE_3r3yf7_result.png)
 
-The frozen export ([`bv2141_3r3yf7_four_degree_tie_bv_export.json`](bv2141_3r3yf7_four_degree_tie_bv_export.json)) records BV's random `perm` order `[Fabio, Eli, Cedric, Deegan, Ava, Bianca]` — Ava precedes Bianca, so Ava won this draw.
+The frozen export ([`bv2141_3r3yf7_four_degree_tie_bv_export.json`](cases/bv2141_3r3yf7_four_degree_tie_bv_export.json)) records BV's random `perm` order `[Fabio, Eli, Cedric, Deegan, Ava, Bianca]` — Ava precedes Bianca, so Ava won this draw.
 
 ## View 2 — the LH tabulation engine
 
@@ -85,7 +85,7 @@ Winner — Ranked Robin (RCV-RR): Ava
    *** 2 candidates tie for the most wins (Ava, Bianca) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
 
-Full detail: [`bv2141_3r3yf7_four_degree_tie_tabulated.txt`](rr_tiebreaks_tabulated/bv2141_3r3yf7_four_degree_tie_tabulated.txt).
+Full detail: [`bv2141_3r3yf7_four_degree_tie_tabulated.txt`](cases/cases_tabulated/bv2141_3r3yf7_four_degree_tie_tabulated.txt).
 
 ## The Ava–Bianca head-to-head is itself a tie
 

@@ -8,7 +8,7 @@
 
 [BV2145](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_felsenthal_ex2.md) → [BV2146](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) is Felsenthal's Example 2, run for real on BetterVoting. Under plurality-with-runoff (= IRV for three candidates), **Ben wins** the first election. Then two voters raise Ben from `Cleo>Ben>Ada` to `Ben>Cleo>Ada` — and **Ben loses**: his extra first-choice votes drain Cleo below Ada, the elimination flips from Ada to Cleo, and Ada beats Ben 9–8 in the final pair. More support, worse result.
 
-The repo also has a standalone constructed pair: [the monotonicity set](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) (RCV-IRV flips; STAR, on the same story, doesn't).
+The repo also has a standalone constructed pair: [the monotonicity set](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) (RCV-IRV flips; STAR, on the same story, doesn't).
 
 ## Where it comes from
 

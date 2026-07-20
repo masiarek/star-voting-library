@@ -85,14 +85,14 @@ Cycles among top candidates are real but rare in large electorates (and this one
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex09_game_night_cycle.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex09_game_night_cycle.yaml
 ```
 
-Source: [ex09_game_night_cycle.yaml](ex09_game_night_cycle.yaml). Full audit report: [mirror](exercises_tabulated/ex09_game_night_cycle_tabulated.txt).
+Source: [ex09_game_night_cycle.yaml](cases/ex09_game_night_cycle.yaml). Full audit report: [mirror](cases/cases_tabulated/ex09_game_night_cycle_tabulated.txt).
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast — the candidates are board games so the cycle reads as fun, not politics). Concept homes: [Ranked Robin vs Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md), [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md), and the worked [Smith-set case](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md).
+**Where this comes from.** Original to this repo (ballots and cast — the candidates are board games so the cycle reads as fun, not politics). Concept homes: [Ranked Robin vs Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md), [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md), and the worked [Smith-set case](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

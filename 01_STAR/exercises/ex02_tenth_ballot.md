@@ -131,12 +131,12 @@ A constructed classroom electorate with one-point margins — it demonstrates th
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex02_nine_ballots.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex02_tenth_ballot.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex02_bella_exits.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex02_nine_ballots.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex02_tenth_ballot.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex02_bella_exits.yaml
 ```
 
-Sources: [ex02_nine_ballots.yaml](ex02_nine_ballots.yaml) · [ex02_tenth_ballot.yaml](ex02_tenth_ballot.yaml) · [ex02_bella_exits.yaml](ex02_bella_exits.yaml). Full audit reports: [nine ballots](exercises_tabulated/ex02_nine_ballots_tabulated.txt) · [ten ballots](exercises_tabulated/ex02_tenth_ballot_tabulated.txt) · [Bella withdraws](exercises_tabulated/ex02_bella_exits_tabulated.txt).
+Sources: [ex02_nine_ballots.yaml](cases/ex02_nine_ballots.yaml) · [ex02_tenth_ballot.yaml](cases/ex02_tenth_ballot.yaml) · [ex02_bella_exits.yaml](cases/ex02_bella_exits.yaml). Full audit reports: [nine ballots](cases/cases_tabulated/ex02_nine_ballots_tabulated.txt) · [ten ballots](cases/cases_tabulated/ex02_tenth_ballot_tabulated.txt) · [Bella withdraws](cases/cases_tabulated/ex02_bella_exits_tabulated.txt).
 
 ---
 

@@ -18,7 +18,7 @@ Seven elections, five of them created for this investigation. Every crash and ev
 | [`39py93`](https://bettervoting.com/39py93/results) | BV2204 | 2 seats, 4 cand, 13 voters — config identical to BV2201 | both seats fill with two hopefuls **standing** | ✅ computes (Angelou + Cummings) |
 | [`8xwx43`](https://bettervoting.com/8xwx43/results) | BV2205 | **1 seat**, 3 cand, 6 voters | Ash elected as sole survivor | 💥 error |
 
-Repo case files: [bv2203_gvtg2h_flag_probe.yaml](bv2203_gvtg2h_flag_probe.yaml) · [bv2204_39py93_control_standing_hopefuls.yaml](bv2204_39py93_control_standing_hopefuls.yaml) · [bv2205_8xwx43_minimal_sole_survivor.yaml](bv2205_8xwx43_minimal_sole_survivor.yaml) — each LH-tabulated (mirrors in `bv_stv_sole_survivor_crash_tabulated/`), so the seats BetterVoting *should* return are on record.
+Repo case files: [bv2203_gvtg2h_flag_probe.yaml](cases/bv2203_gvtg2h_flag_probe.yaml) · [bv2204_39py93_control_standing_hopefuls.yaml](cases/bv2204_39py93_control_standing_hopefuls.yaml) · [bv2205_8xwx43_minimal_sole_survivor.yaml](cases/bv2205_8xwx43_minimal_sole_survivor.yaml) — each LH-tabulated (mirrors in `bv_stv_sole_survivor_crash_tabulated/`), so the seats BetterVoting *should* return are on record.
 
 ## How the bisection ran
 

@@ -2,7 +2,7 @@
 
 *A clean Bloc STAR result where the second seat is decided by the **score** tiebreaker (deterministic — no lot). LH and BetterVoting agree: **Carmen, Andre**. BV129's "Failed" is only the method-name label ([#1086](https://github.com/Equal-Vote/bettervoting/issues/1086)), not the count.*
 
-Reference files: [`bv129_score_tiebreak_bloc.yaml`](bv129_score_tiebreak_bloc.yaml) (`expected_winners: [Carmen, Andre]`) · frozen export [`bv129_score_tiebreak_bloc_bv_export.json`](bv129_score_tiebreak_bloc_bv_export.json) (BV `btmydt`). Backs sheet row **BV129**.
+Reference files: [`bv129_score_tiebreak_bloc.yaml`](cases/bv129_score_tiebreak_bloc.yaml) (`expected_winners: [Carmen, Andre]`) · frozen export [`bv129_score_tiebreak_bloc_bv_export.json`](cases/bv129_score_tiebreak_bloc_bv_export.json) (BV `btmydt`). Backs sheet row **BV129**.
 
 ## The election
 
@@ -65,11 +65,11 @@ Winners — Bloc STAR Voting Method (2 winners)
  Andre
 ```
 
-Full audit copy: [`_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt`](_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt`](cases/cases_tabulated/bv129_score_tiebreak_bloc_tabulated.txt).
 
 ## The #1086 method-name issue — and why it's slippery
 
-In the frozen export ([`bv129_score_tiebreak_bloc_bv_export.json`](bv129_score_tiebreak_bloc_bv_export.json)), the method is stored as plain **`"STAR"`** in two places, with the seat count kept in a *separate* field:
+In the frozen export ([`bv129_score_tiebreak_bloc_bv_export.json`](cases/bv129_score_tiebreak_bloc_bv_export.json)), the method is stored as plain **`"STAR"`** in two places, with the seat count kept in a *separate* field:
 
 ```json
 Election.races[0].voting_method : "STAR"     num_winners : 2

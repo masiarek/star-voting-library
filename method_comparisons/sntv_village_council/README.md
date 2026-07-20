@@ -4,7 +4,7 @@ A clean, self-contained SNTV showcase: 9 residents, a 2-seat council. The Downto
 
 | | |
 |---|---|
-| Method | SNTV (single non-transferable vote) — [`.yaml`](sntv_village_council.yaml) |
+| Method | SNTV (single non-transferable vote) — [`.yaml`](cases/sntv_village_council.yaml) |
 | Seats | 2 · Winners: **Priya (4), Nora (3)** |
 | On BV | multi-winner Plurality (BV2136) |
 

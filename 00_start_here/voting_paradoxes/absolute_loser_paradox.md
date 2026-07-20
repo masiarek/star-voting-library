@@ -18,4 +18,4 @@ The immunities mirror the Condorcet loser paradox, since electing an absolute lo
 
 ## Why it matters
 
-"The majority's last choice won" is the one-sentence indictment of choose-one voting — no pairwise table needed, no criterion jargon. It's the sharpest single fact to hand a debate audience, and it takes only seven ballots to make it real: [run the case](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_plurality.yaml) or see it [live on BetterVoting](https://bettervoting.com/mxfmhm/results).
+"The majority's last choice won" is the one-sentence indictment of choose-one voting — no pairwise table needed, no criterion jargon. It's the sharpest single fact to hand a debate audience, and it takes only seven ballots to make it real: [run the case](../../method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_plurality.yaml) or see it [live on BetterVoting](https://bettervoting.com/mxfmhm/results).

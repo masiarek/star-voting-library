@@ -2,7 +2,7 @@
 
 *A clean, standalone look at the one property that made SNTV famous: with a single vote per voter, a disciplined minority can win representation a majority would otherwise sweep. Nine residents, two council seats.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y3tvxm) · **[results ↗](https://bettervoting.com/y3tvxm/results)** (election `y3tvxm`, Test ID **BV2136**). Frozen export: [`sntv_village_council_y3tvxm_bv_export.json`](sntv_village_council_y3tvxm_bv_export.json).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y3tvxm) · **[results ↗](https://bettervoting.com/y3tvxm/results)** (election `y3tvxm`, Test ID **BV2136**). Frozen export: [`sntv_village_council_y3tvxm_bv_export.json`](cases/sntv_village_council_y3tvxm_bv_export.json).
 
 ## The election
 

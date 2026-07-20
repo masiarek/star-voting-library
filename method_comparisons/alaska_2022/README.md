@@ -55,7 +55,7 @@ Two of the four elect **Peltola**; the two that read the whole ballot elect **Be
 
 ## View 1 — on BetterVoting (the live election)
 
-Four races on the one electorate, live: **[bettervoting.com/k3fmwv/results](https://bettervoting.com/k3fmwv/results)**. BetterVoting's own counts return **Plurality Peltola · IRV Peltola · Ranked Robin Begich · STAR Begich**, matching the independent count below exactly. Frozen export: [`bv2213_k3fmwv_alaska_2022_bv_export.json`](bv2213_k3fmwv_alaska_2022_bv_export.json).
+Four races on the one electorate, live: **[bettervoting.com/k3fmwv/results](https://bettervoting.com/k3fmwv/results)**. BetterVoting's own counts return **Plurality Peltola · IRV Peltola · Ranked Robin Begich · STAR Begich**, matching the independent count below exactly. Frozen export: [`bv2213_k3fmwv_alaska_2022_bv_export.json`](cases/bv2213_k3fmwv_alaska_2022_bv_export.json).
 
 ## View 2 — an independent count (the full tabulation)
 
@@ -111,7 +111,7 @@ Blank Votes  12  Rejected  # ballots that exhausted when Begich was eliminated
 
 Peltola's 96 is only **48% of the 200 ballots cast** — a "majority" of the *surviving* ballots, on a denominator shrunk by exhaustion (the paper's *majoritarian failure*).
 
-Full engine detail: [`alaska_2022_tabulated/`](alaska_2022_tabulated/) · run it: [`bv2213_k3fmwv_alaska_2022.yaml`](bv2213_k3fmwv_alaska_2022.yaml).
+Full engine detail: [`alaska_2022_tabulated/`](cases/cases_tabulated/) · run it: [`bv2213_k3fmwv_alaska_2022.yaml`](cases/bv2213_k3fmwv_alaska_2022.yaml).
 
 ---
 

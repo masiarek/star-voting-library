@@ -18,7 +18,7 @@ Alex, Blair, Cleo
 3, 3, 3      flat — every candidate equal
 ```
 
-Source: [`Runoff_07_flat_ballot_bv_bug_tf73v9.yaml`](Runoff_07_flat_ballot_bv_bug_tf73v9.yaml) · frozen export: [`Runoff_07_flat_ballot_bv_bug_tf73v9_bv_export.json`](Runoff_07_flat_ballot_bv_bug_tf73v9_bv_export.json).
+Source: [`Runoff_07_flat_ballot_bv_bug_tf73v9.yaml`](cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml) · frozen export: [`Runoff_07_flat_ballot_bv_bug_tf73v9_bv_export.json`](cases/Runoff_07_flat_ballot_bv_bug_tf73v9_bv_export.json).
 
 ## Where the two reports diverge (the whole point)
 
@@ -61,7 +61,7 @@ The Runoff Table seals it: **Total 3** (not 4) and **Equal Support 0** — the `
 
 ## View 2 — the LH engine
 
-All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
+All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](cases/cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
 
 ```
 [Score Distribution] (number of ballots giving each score)

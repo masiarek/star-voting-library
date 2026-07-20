@@ -38,7 +38,7 @@ Five voters, three flavors:
     4       5        0      ×2     (collapsed: appears twice)
 ```
 
-→ run [`runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml`](../../../01_STAR/runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml)
+→ run [`runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml`](../../../01_STAR/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)
 
 - **Scoring Round** finds the finalists: Almond (13 stars) and Brownie (11).
 - **Automatic Runoff** picks the winner: 2 of 3 voters prefer **Brownie**, so Brownie wins 2–1 — even though Almond had more total stars.

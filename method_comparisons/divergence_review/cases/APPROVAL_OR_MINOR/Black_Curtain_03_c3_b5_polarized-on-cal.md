@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Cal**. Only **Approval** differs, 
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml`](../../../../method_comparisons/black_curtain/Black_Curtain_03_c3_b5_polarized-on-cal.yaml)  ·  **STAR tabulated mirror:** [`Black_Curtain_03_c3_b5_polarized-on-cal_tabulated.txt`](../../../../method_comparisons/black_curtain/black_curtain_tabulated/Black_Curtain_03_c3_b5_polarized-on-cal_tabulated.txt)
+**Source election:** [`method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml`](../../../../method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml)  ·  **STAR tabulated mirror:** [`Black_Curtain_03_c3_b5_polarized-on-cal_tabulated.txt`](../../../../method_comparisons/black_curtain/cases/cases_tabulated/Black_Curtain_03_c3_b5_polarized-on-cal_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

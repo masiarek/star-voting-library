@@ -24,7 +24,7 @@ The paper treats *"ignore those voters"* as a feature. Most people's intuition �
 
 ## The countable check: the opposition decides the A-vs-B race
 
-The paper's plain-English summary promises that ordered majority rule "ensures the election of a candidate from the majority coalition while **preventing opposition voters from influencing the choice of candidate from the faction they oppose**." Toby's counterexample shows the sentence failing on its own terms. Three candidates, 100 voters, C a third bloc that ranks both frontrunners last ([`omr_opposition_decides.yaml`](../../../method_comparisons/ordered_majority_rule/omr_opposition_decides.yaml)):
+The paper's plain-English summary promises that ordered majority rule "ensures the election of a candidate from the majority coalition while **preventing opposition voters from influencing the choice of candidate from the faction they oppose**." Toby's counterexample shows the sentence failing on its own terms. Three candidates, 100 voters, C a third bloc that ranks both frontrunners last ([`omr_opposition_decides.yaml`](../../../method_comparisons/ordered_majority_rule/cases/omr_opposition_decides.yaml)):
 
 ```
 35 × A > B > C
@@ -61,7 +61,7 @@ Win–loss record — Copeland score:
 Winner — Ranked Robin (RCV-RR): B — the Condorcet winner.
 ```
 
-Full engine detail: [`_tabulated` mirror](../../../method_comparisons/ordered_majority_rule/ordered_majority_rule_tabulated/omr_opposition_decides_tabulated.txt).
+Full engine detail: [`_tabulated` mirror](../../../method_comparisons/ordered_majority_rule/cases/cases_tabulated/omr_opposition_decides_tabulated.txt).
 
 ## STAR's answer to the honest core
 

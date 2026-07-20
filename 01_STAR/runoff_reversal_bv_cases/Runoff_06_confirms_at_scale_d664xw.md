@@ -19,7 +19,7 @@ Wren, Yarrow, Zinnia
 2, 1, 5      prefers Wren (over Yarrow)
 ```
 
-Source: [`Runoff_06_confirms_at_scale_d664xw.yaml`](Runoff_06_confirms_at_scale_d664xw.yaml) · frozen export: [`Runoff_06_confirms_at_scale_d664xw_bv_export.json`](Runoff_06_confirms_at_scale_d664xw_bv_export.json).
+Source: [`Runoff_06_confirms_at_scale_d664xw.yaml`](cases/Runoff_06_confirms_at_scale_d664xw.yaml) · frozen export: [`Runoff_06_confirms_at_scale_d664xw_bv_export.json`](cases/Runoff_06_confirms_at_scale_d664xw_bv_export.json).
 
 ## View 1 — BetterVoting
 
@@ -45,7 +45,7 @@ Wren leads the Scoring Round (21) **and** wins the Automatic Runoff 4–1. Sourc
 
 ## View 2 — the LH engine
 
-Same ballots, the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) mirror adds the funnel):
+Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) mirror adds the funnel):
 
 ```
 [Condorcet Winner]

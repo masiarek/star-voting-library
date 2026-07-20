@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ykjjhy) · **[results ↗](https://bettervoting.com/ykjjhy/results)** (election `ykjjhy`, Test ID **BV2132**).
 
-Frozen export: [`bv2132_ykjjhy_pet_poll_four_methods_bv_export.json`](bv2132_ykjjhy_pet_poll_four_methods_bv_export.json).
+Frozen export: [`bv2132_ykjjhy_pet_poll_four_methods_bv_export.json`](cases/bv2132_ykjjhy_pet_poll_four_methods_bv_export.json).
 
 ## The electorate
 
@@ -22,10 +22,10 @@ Twenty-two voters in three blocs, each with a clear preference order:
 
 | Race | Reads | Winner | Our engine | BetterVoting | yaml |
 |------|-------|:---:|:---:|:---:|:--:|
-| **Plurality** (choose one) | first choices | **Dog** | Dog | Dog | [`…_plurality.yaml`](bv2132_ykjjhy_pet_plurality.yaml) |
-| **RCV-IRV** | ranked, elimination | **Fish** | Fish | Fish | [`…_irv.yaml`](bv2132_ykjjhy_pet_irv.yaml) |
-| **Approval** | approve any | **Cat** | Cat | Cat | [`…_approval.yaml`](bv2132_ykjjhy_pet_approval.yaml) |
-| **STAR** | score 0–5 | **Cat** | Cat | Cat | [`…_star.yaml`](bv2132_ykjjhy_pet_star.yaml) |
+| **Plurality** (choose one) | first choices | **Dog** | Dog | Dog | [`…_plurality.yaml`](cases/bv2132_ykjjhy_pet_plurality.yaml) |
+| **RCV-IRV** | ranked, elimination | **Fish** | Fish | Fish | [`…_irv.yaml`](cases/bv2132_ykjjhy_pet_irv.yaml) |
+| **Approval** | approve any | **Cat** | Cat | Cat | [`…_approval.yaml`](cases/bv2132_ykjjhy_pet_approval.yaml) |
+| **STAR** | score 0–5 | **Cat** | Cat | Cat | [`…_star.yaml`](cases/bv2132_ykjjhy_pet_star.yaml) |
 
 Every race's winner is cross-checked: our LH engine (`starvote_larry_hastings.py`) and BetterVoting's tabulator **agree on all four**.
 
@@ -41,10 +41,10 @@ So the candidate a majority actually prefers head-to-head (**Cat**) wins **Appro
 
 Each race's full LH tabulation is in its `_tabulated` mirror:
 
-- Plurality → [`…_plurality_tabulated.txt`](pet_poll_four_methods_tabulated/bv2132_ykjjhy_pet_plurality_tabulated.txt) (Dog 9, Fish 7, Cat 6)
-- RCV-IRV → [`…_irv_tabulated.txt`](pet_poll_four_methods_tabulated/bv2132_ykjjhy_pet_irv_tabulated.txt) (Cat eliminated R1 → Fish 13, Dog 9)
-- Approval → [`…_approval_tabulated.txt`](pet_poll_four_methods_tabulated/bv2132_ykjjhy_pet_approval_tabulated.txt) (Cat 22, Fish 13, Dog 9)
-- STAR → [`…_star_tabulated.txt`](pet_poll_four_methods_tabulated/bv2132_ykjjhy_pet_star_tabulated.txt) (Cat 78 & Fish 62 advance; Cat wins runoff 15–7)
+- Plurality → [`…_plurality_tabulated.txt`](cases/cases_tabulated/bv2132_ykjjhy_pet_plurality_tabulated.txt) (Dog 9, Fish 7, Cat 6)
+- RCV-IRV → [`…_irv_tabulated.txt`](cases/cases_tabulated/bv2132_ykjjhy_pet_irv_tabulated.txt) (Cat eliminated R1 → Fish 13, Dog 9)
+- Approval → [`…_approval_tabulated.txt`](cases/cases_tabulated/bv2132_ykjjhy_pet_approval_tabulated.txt) (Cat 22, Fish 13, Dog 9)
+- STAR → [`…_star_tabulated.txt`](cases/cases_tabulated/bv2132_ykjjhy_pet_star_tabulated.txt) (Cat 78 & Fish 62 advance; Cat wins runoff 15–7)
 
 ## Provenance
 

@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Ada**. Only **Approval** differs, 
 
 **Flags:** 2 tied-score ballot(s)
 
-**Source election:** [`01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml`](../../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.yaml)  ·  **STAR tabulated mirror:** [`bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](../../../../01_STAR/majority_criterion/majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt)
+**Source election:** [`01_STAR/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml`](../../../../01_STAR/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml)  ·  **STAR tabulated mirror:** [`bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](../../../../01_STAR/majority_criterion/cases/cases_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

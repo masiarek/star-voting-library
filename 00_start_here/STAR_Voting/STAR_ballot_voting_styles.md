@@ -28,15 +28,15 @@ Same six candidates for every voter: **Allen, Bianca, Chris, Desi, Edith, Frank*
 
 Every one of these is legal, and every one is counted. A few are worth a second look:
 
-- **Traditional / choose-one** works exactly as the voter intends — but it's a bullet vote, and it under-uses the ballot: if Bianca doesn't reach the runoff, this ballot has no say in the final head-to-head. (The dedicated small demo: [`03a_c3_b3_style-bullet-vote.yaml`](../../01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml).)
+- **Traditional / choose-one** works exactly as the voter intends — but it's a bullet vote, and it under-uses the ballot: if Bianca doesn't reach the runoff, this ballot has no say in the final head-to-head. (The dedicated small demo: [`03a_c3_b3_style-bullet-vote.yaml`](../../01_STAR/_main/cases/03a_c3_b3_style-bullet-vote.yaml).)
 - **Backups are free.** The strong-backup and weak-backup ballots are the everyday super-power of a scored ballot: supporting a second choice can never hurt your first choice in the scoring round — a 5 is a 5 no matter what else you mark. (Honest fine print: the runoff compares your two scores, so *if both* end up finalists, your 4 says "prefer Bianca, but Frank is fine." That's the message the voter chose to send. See [STAR's honest limits](properties_and_limits/STAR_honest_limits.md).)
 - **Ranked-style is legal but never required.** Using each score exactly once mimics a ranking. STAR reads it happily — but you've volunteered a constraint the ballot doesn't impose. The nuanced ballot right below it carries *more* honest information (equal 3s where the voter is truly indifferent) with *less* effort.
 - **Partisan and "anyone but" ballots score equal 5s** — and that's fine. If two of those 5s become the finalists, the ballot is **Equal Support** in the runoff: no preference between the finalists, by the voter's own choice. It still counted fully in the scoring round, where it helped decide *who* the finalists were. An equal-score ballot is never discarded.
-- **The protest vote still works.** All 0s and a single 1 registers a least-bad preference and can decide a race. Caveat: compressing your scores into the bottom of the range also shrinks your voice in the scoring round — a least-bad choice counts, but the full range counts louder. ([`03b_c3_b3_1_style-protest-vote.yaml`](../../01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml).)
+- **The protest vote still works.** All 0s and a single 1 registers a least-bad preference and can decide a race. Caveat: compressing your scores into the bottom of the range also shrinks your voice in the scoring round — a least-bad choice counts, but the full range counts louder. ([`03b_c3_b3_1_style-protest-vote.yaml`](../../01_STAR/_main/cases/03b_c3_b3_1_style-protest-vote.yaml).)
 
 ## All eight styles in one election
 
-The gallery above is a real, tabulatable election: [`03c_c6_b8_style-gallery.yaml`](../../01_STAR/_main/03c_c6_b8_style-gallery.yaml). Bianca and Frank reach the runoff on scores; Bianca wins it 4–2, with the partisan and "anyone but Chris" voters counted as Equal Support (they scored both finalists 5):
+The gallery above is a real, tabulatable election: [`03c_c6_b8_style-gallery.yaml`](../../01_STAR/_main/cases/03c_c6_b8_style-gallery.yaml). Bianca and Frank reach the runoff on scores; Bianca wins it 4–2, with the partisan and "anyone but Chris" voters counted as Equal Support (they scored both finalists 5):
 
 ```
 Scoring Round
@@ -59,7 +59,7 @@ Automatic Runoff Round
    Bianca 4 (67%) vs Frank 2 (33%); majority = 4.
 ```
 
-Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../../01_STAR/_main/_main_tabulated/03c_c6_b8_style-gallery_tabulated.txt).
+Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../../01_STAR/_main/cases/cases_tabulated/03c_c6_b8_style-gallery_tabulated.txt).
 
 ## Blanks, and what they mean
 
@@ -82,7 +82,7 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 - [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
 - [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
 - [Curriculum 101.3 — How you're allowed to vote](../CURRICULUM.md) — this page's slot in the learning path
-- Small demos: [`03a` bullet vote](../../01_STAR/_main/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../../01_STAR/_main/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../../01_STAR/_main/03c_c6_b8_style-gallery.yaml)
+- Small demos: [`03a` bullet vote](../../01_STAR/_main/cases/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../../01_STAR/_main/cases/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../../01_STAR/_main/cases/03c_c6_b8_style-gallery.yaml)
 
 ## Learn more
 

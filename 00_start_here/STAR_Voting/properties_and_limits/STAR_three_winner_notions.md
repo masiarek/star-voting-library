@@ -16,7 +16,7 @@ When these three agree — which is common — STAR, score, and Condorcet all na
 
 ## One election, three winners
 
-→ [`three_winners_cw_score_runoff.yaml`](../../../01_STAR/_main/three_winners_cw_score_runoff.yaml) — five voters, three candidates:
+→ [`three_winners_cw_score_runoff.yaml`](../../../01_STAR/_main/cases/three_winners_cw_score_runoff.yaml) — five voters, three candidates:
 
 ```
   Ann  Bob  Carl

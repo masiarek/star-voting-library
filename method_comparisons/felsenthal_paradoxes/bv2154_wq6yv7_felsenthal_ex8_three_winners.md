@@ -30,4 +30,4 @@ The ranked races disagree with Approval *and with each other*: IRV deletes the C
 | IRV | **Clara** (Bruce deleted; 9–6) | Clara | ✓ |
 | Ranked Robin | **Bruce** (Condorcet winner) | Bruce | ✓ |
 
-Files: [approval yaml](bv2154_wq6yv7_approval.yaml) · [irv yaml](bv2154_wq6yv7_irv.yaml) · [rr yaml](bv2154_wq6yv7_ranked_robin.yaml) · [frozen export](bv2154_wq6yv7_bv_export.json) · mirrors: [approval](felsenthal_paradoxes_tabulated/bv2154_wq6yv7_approval_tabulated.txt), [irv](felsenthal_paradoxes_tabulated/bv2154_wq6yv7_irv_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2154_wq6yv7_ranked_robin_tabulated.txt).
+Files: [approval yaml](cases/bv2154_wq6yv7_approval.yaml) · [irv yaml](cases/bv2154_wq6yv7_irv.yaml) · [rr yaml](cases/bv2154_wq6yv7_ranked_robin.yaml) · [frozen export](cases/bv2154_wq6yv7_bv_export.json) · mirrors: [approval](cases/cases_tabulated/bv2154_wq6yv7_approval_tabulated.txt), [irv](cases/cases_tabulated/bv2154_wq6yv7_irv_tabulated.txt), [rr](cases/cases_tabulated/bv2154_wq6yv7_ranked_robin_tabulated.txt).

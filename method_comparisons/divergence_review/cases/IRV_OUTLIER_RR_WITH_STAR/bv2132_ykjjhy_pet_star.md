@@ -21,7 +21,7 @@ STAR elects **Cat** — and so do Ranked Robin and Condorcet, because **Cat is t
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml`](../../../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_star.yaml)  ·  **STAR tabulated mirror:** [`bv2132_ykjjhy_pet_star_tabulated.txt`](../../../../method_comparisons/pet_poll_four_methods/pet_poll_four_methods_tabulated/bv2132_ykjjhy_pet_star_tabulated.txt)
+**Source election:** [`method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml`](../../../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml)  ·  **STAR tabulated mirror:** [`bv2132_ykjjhy_pet_star_tabulated.txt`](../../../../method_comparisons/pet_poll_four_methods/cases/cases_tabulated/bv2132_ykjjhy_pet_star_tabulated.txt)
 
 _3 candidates, 22 ballots._
 

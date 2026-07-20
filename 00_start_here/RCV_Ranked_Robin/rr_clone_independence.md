@@ -71,5 +71,5 @@ Ranked Robin passes vote-splitting clone independence outright: **cloning a cand
 
 ## In this repo
 
-- LH-only case pair (deterministic teaming via margin): [`clone_teaming_01_pre`](../../05_Ranked_Robin/clone_independence/clone_teaming_01_pre.yaml) → A (lot), [`clone_teaming_02_post`](../../05_Ranked_Robin/clone_independence/clone_teaming_02_post.yaml) → A1 (margin).
+- LH-only case pair (deterministic teaming via margin): [`clone_teaming_01_pre`](../../05_Ranked_Robin/clone_independence/cases/clone_teaming_01_pre.yaml) → A (lot), [`clone_teaming_02_post`](../../05_Ranked_Robin/clone_independence/cases/clone_teaming_02_post.yaml) → A1 (margin).
 - BetterVoting companions (the divergence, where teaming fails): [BV2142 — pre](../../05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.md) (BV random → C) and [BV2143 — teaming](../../05_Ranked_Robin/clone_independence/bv2143_9pr3wr_teaming_fails.md) (BV head-to-head → C, teaming fails). Confirmed live: BV `4gfwdq` / `9pr3wr`.

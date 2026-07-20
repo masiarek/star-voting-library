@@ -2,7 +2,7 @@
 
 *The same 0/1 ballot fills more than one seat. The simple version — **bloc (at-large) Approval**, the `seats` most-approved candidates win — is exactly as easy as single-winner Approval, and exactly as **majoritarian**: a cohesive majority can sweep every seat. Proportional adaptations (SPAV, PAV) exist and trade that simplicity for fair minority representation.*
 
-→ **Run it / examples:** [multi-winner Approval](../../../04_Approval/multiwinner/) ([`approval_bloc_2seats_c4_b6.yaml`](../../../04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml)) · Overview: [Approval Voting](../approval_voting.md) · The same majoritarian-vs-proportional fork for score ballots: [Bloc STAR](../../../02_STAR_Bloc/) vs [proportional STAR](../../../03_STAR_PR/) · Concepts: [proportional representation](../../proportional_representation/).
+→ **Run it / examples:** [multi-winner Approval](../../../04_Approval/multiwinner/) ([`approval_bloc_2seats_c4_b6.yaml`](../../../04_Approval/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml)) · Overview: [Approval Voting](../approval_voting.md) · The same majoritarian-vs-proportional fork for score ballots: [Bloc STAR](../../../02_STAR_Bloc/) vs [proportional STAR](../../../03_STAR_PR/) · Concepts: [proportional representation](../../proportional_representation/).
 
 ---
 
@@ -27,7 +27,7 @@ Adams,Brown,Clark,Davis,Evans,Foster
 0,0,1,1,1,0
 ```
 
-Sum the columns; the top 3 win — Adams, Brown, Clark (3 approvals each). Runnable: [`approval_bloc_3seats_c6_b5.yaml`](../../../04_Approval/multiwinner/approval_bloc_3seats_c6_b5.yaml).
+Sum the columns; the top 3 win — Adams, Brown, Clark (3 approvals each). Runnable: [`approval_bloc_3seats_c6_b5.yaml`](../../../04_Approval/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml).
 
 ## Bloc Approval is majoritarian — the sweep
 
@@ -83,7 +83,7 @@ The repo's other runnable proportional methods are the STAR-PR family ([proporti
 
 ## The literature's running example (Lackner & Skowron)
 
-The standard textbook for this whole field is Lackner & Skowron, ***Multi-Winner Voting with Approval Preferences*** (SpringerBriefs, 2023 — open access, [doi:10.1007/978-3-031-09016-5](https://doi.org/10.1007/978-3-031-09016-5)); the `abcvoting` library is its computational companion. Its running example (Example 2.1) is in this repo as [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml): an academic society elects a **k = 4** steering committee from seven candidates, 12 ballots — `3 × {A,B} · 3 × {A,C} · 2 × {A,D} · 1 × {B,C,F} · 1 × {E} · 1 × {F} · 1 × {G}`.
+The standard textbook for this whole field is Lackner & Skowron, ***Multi-Winner Voting with Approval Preferences*** (SpringerBriefs, 2023 — open access, [doi:10.1007/978-3-031-09016-5](https://doi.org/10.1007/978-3-031-09016-5)); the `abcvoting` library is its computational companion. Its running example (Example 2.1) is in this repo as [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../../../04_Approval/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml): an academic society elects a **k = 4** steering committee from seven candidates, 12 ballots — `3 × {A,B} · 3 × {A,C} · 2 × {A,D} · 1 × {B,C,F} · 1 × {E} · 1 × {F} · 1 × {G}`.
 
 Approval counts: A = 8, B = 4, C = 4, D = 2, F = 2, E = 1, G = 1. So bloc AV seats A, B, C and then **ties D and F** for the last seat — and the book (Example 2.2) points out the tie matters: `{A,B,C,D}` leaves *three* voters with no representative at all, `{A,B,C,F}` only *two*. Bloc AV can't see that difference; a tiebreak just picks blindly (the LH engine's priority order happens to pick D, the worse of the two). **PAV** (book Example 2.4) elects `{A,B,C,F}` outright — it maximises harmonic satisfaction, which is exactly the quantity that notices those unrepresented voters. Interestingly, seq-Phragmén sides with D here — even good proportional rules can disagree on the margins:
 

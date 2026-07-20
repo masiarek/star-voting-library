@@ -164,12 +164,12 @@ A classroom construction, and it shows: mirror-image districts, three ballot sty
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex01_district_west.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex01_district_east.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex01_district_combined.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex01_district_west.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex01_district_east.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex01_district_combined.yaml
 ```
 
-Sources: [ex01_district_west.yaml](ex01_district_west.yaml) · [ex01_district_east.yaml](ex01_district_east.yaml) · [ex01_district_combined.yaml](ex01_district_combined.yaml). Full audit reports: [west](exercises_tabulated/ex01_district_west_tabulated.txt) · [east](exercises_tabulated/ex01_district_east_tabulated.txt) · [combined](exercises_tabulated/ex01_district_combined_tabulated.txt).
+Sources: [ex01_district_west.yaml](cases/ex01_district_west.yaml) · [ex01_district_east.yaml](cases/ex01_district_east.yaml) · [ex01_district_combined.yaml](cases/ex01_district_combined.yaml). Full audit reports: [west](cases/cases_tabulated/ex01_district_west_tabulated.txt) · [east](cases/cases_tabulated/ex01_district_east_tabulated.txt) · [combined](cases/cases_tabulated/ex01_district_combined_tabulated.txt).
 
 ---
 

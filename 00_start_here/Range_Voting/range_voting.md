@@ -2,7 +2,7 @@
 
 *Every voter **grades each candidate** on a fixed scale (say 0–5); the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) ([tabulated](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting). · Family: [Approval](../Approval_Voting/approval_voting.md) · [STAR](../STAR_Voting) · [fidelity ladder](../scores_and_ranks/fidelity_ladder.md).
+→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) ([tabulated](../../06_Other/Range/cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting). · Family: [Approval](../Approval_Voting/approval_voting.md) · [STAR](../STAR_Voting) · [fidelity ladder](../scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches *about* it rather than promoting it — it lives in [other methods](../../06_Other/), not the numbered root folders. The honest comparison is the point.
 
@@ -66,12 +66,12 @@ Total score (sum of all grades):
 
 The lesson: **the cardinal ballot's *resolution* can change the winner.** Collapse the 0–10 scale down to a single approve / don't-approve bit and **A** — with more *approvers* but fewer *enthusiasts* — overtakes C. Give voters room to say *how much*, and C's wall of 10s wins under Range, median-Range, and STAR alike. (Mean and median happen to agree here, but they needn't — some Score variants use the median precisely because a few extreme scores can't drag it the way they drag an average. Medians: A 7.0, B 5.0, **C 8.5**, D 5.5.)
 
-**Run it:** [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) ([tabulated](../../06_Other/Range/Range_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt)) — the range engine (pref_voting `score_voting`) confirms C by both the hand sum and the median cross-check. STAR on the same ballots also elects C — worked, with the how-to for running LH on a non-standard scale, in [Unorthodox STAR — a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md).
+**Run it:** [`range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) ([tabulated](../../06_Other/Range/cases/cases_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt)) — the range engine (pref_voting `score_voting`) confirms C by both the hand sum and the median cross-check. STAR on the same ballots also elects C — worked, with the how-to for running LH on a non-standard scale, in [Unorthodox STAR — a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md).
 
 ## Ballot examples
 
-- [`06_Other/Range/range_101_c3_b5.yaml`](../../06_Other/Range/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
-- [`06_Other/Range/range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/range_sullivan_score_c4_b10.yaml) — Sullivan's Example 5.2 (0–10, four candidates; the worked comparison above).
+- [`06_Other/Range/cases/range_101_c3_b5.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) — the intro above (0–5, three candidates).
+- [`06_Other/Range/cases/range_sullivan_score_c4_b10.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) — Sullivan's Example 5.2 (0–10, four candidates; the worked comparison above).
 - **Black Curtain, read as Range** — the four Black Curtain elections tabulated by the range engine: [The Black Curtain, read as Range / Score voting](../../method_comparisons/black_curtain/black_curtain_range.md). Range elects the broadly-liked candidate (Bob, Cal, Ann…) where STAR's runoff hands the seat to the majority's favorite — the sharpest illustration of the Range-vs-STAR trade-off.
 
 ## Links
@@ -82,7 +82,7 @@ The lesson: **the cardinal ballot's *resolution* can change the winner.** Collap
 
 ## Tabulation (the details)
 
-Range files here are tabulated by [Range / Score voting tabulation engine](../../06_Other/Range/Range_tabulation_engine/), which wraps **pref_voting**'s `score_voting` and cross-checks it against a hand sum. Full report for the 101 case: [`range_101_c3_b5_RANGE_tabulated.txt`](../../06_Other/Range/Range_tabulated/range_101_c3_b5_RANGE_tabulated.txt).
+Range files here are tabulated by [Range / Score voting tabulation engine](../../06_Other/Range/Range_tabulation_engine/), which wraps **pref_voting**'s `score_voting` and cross-checks it against a hand sum. Full report for the 101 case: [`range_101_c3_b5_RANGE_tabulated.txt`](../../06_Other/Range/cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt).
 
 ```text
 --- Range / Score Voting (single winner) ---

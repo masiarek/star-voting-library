@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Blair**. Only **Approval** differs
 
 **Flags:** 1 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml)  ·  **STAR tabulated mirror:** [`Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/runoff_reversal_bv_cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt)
+**Source election:** [`01_STAR/runoff_reversal_bv_cases/cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/cases/Runoff_07_flat_ballot_bv_bug_tf73v9.yaml)  ·  **STAR tabulated mirror:** [`Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/cases/cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt)
 
 _3 candidates, 4 ballots._
 

@@ -19,7 +19,7 @@ Because every step is additive and there's nothing to "transfer," the backwards 
 
 Take the exact ballots that make RCV-IRV fail (see the IRV page), translated to 0–5 scores (1st → 5, 2nd → 3, unranked → 0), and run STAR before and after **4 voters raise X**:
 
-→ [`monotonicity_star_before.yaml`](../../../method_comparisons/monotonicity/monotonicity_star_before.yaml) · [`monotonicity_star_after.yaml`](../../../method_comparisons/monotonicity/monotonicity_star_after.yaml)
+→ [`monotonicity_star_before.yaml`](../../../method_comparisons/monotonicity/cases/monotonicity_star_before.yaml) · [`monotonicity_star_after.yaml`](../../../method_comparisons/monotonicity/cases/monotonicity_star_after.yaml)
 
 ```
             BEFORE                         AFTER (4 voters raise X)
@@ -46,7 +46,7 @@ The catch is that this bundles **two** moves — raise X *and* bury everyone the
 
 This doesn't walk back STAR's monotonicity. The everyday promise — *"score your favorite at the top, it can only help them"* — holds exactly, because that's the standard criterion, and voters don't perform the composite raise-and-delete operation. It's simply the honest, precise statement: **STAR satisfies mono-raise; it does not satisfy every stronger monotonicity variant.** (The same care cuts the other way for IRV — which fails even plain mono-raise, the far more damaging failure.)
 
-**See it, runnable:** a worked before/after pair where raising X and deleting the loser below X flips the winner from X to Z — [`mono_raise_delete_before.yaml`](../../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) (X wins) · [`mono_raise_delete_after.yaml`](../../../method_comparisons/monotonicity/mono_raise_delete_after.yaml) (X raised, Y deleted → **Z** wins). The only change is nine ballots going `Z=5,X=3,Y=2` → `Z=5,X=4,Y=0`; burying Y drops it below Z, so the runoff becomes X vs Z, which X loses.
+**See it, runnable:** a worked before/after pair where raising X and deleting the loser below X flips the winner from X to Z — [`mono_raise_delete_before.yaml`](../../../method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml) (X wins) · [`mono_raise_delete_after.yaml`](../../../method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml) (X raised, Y deleted → **Z** wins). The only change is nine ballots going `Z=5,X=3,Y=2` → `Z=5,X=4,Y=0`; burying Y drops it below Z, so the runoff becomes X vs Z, which X loses.
 
 *Source: D. R. Woodall, ["Monotonicity and Single-Seat Election Rules"](http://www.votingmatters.org.uk/ISSUE6/P4.HTM), Voting Matters, Issue 6 (1996).*
 

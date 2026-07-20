@@ -33,8 +33,8 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 
 | Use… | For… |
 |---|---|
-| **[The team lunch](../../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md)** | your go-to intro — 5 voters, politics-free, relatable, and the compromise wins. |
-| **[Tennessee capital](../../../01_STAR/_main/_main_pages/09_c4_b100_tennessee-capital.md)** | the classic textbook case — same shape as the lunch, at scale. |
+| **[The team lunch](../../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md)** | your go-to intro — 5 voters, politics-free, relatable, and the compromise wins. |
+| **[Tennessee capital](../../../01_STAR/_main/cases/cases_pages/09_c4_b100_tennessee-capital.md)** | the classic textbook case — same shape as the lunch, at scale. |
 | **[Runoff reversal](../../../01_STAR/runoff_overturns_leader/)** | the "aha" — the top scorer can *lose* the runoff. The most important single lesson; use it *after* the basics land. |
 | **[Ways to vote](../STAR_ballot_voting_styles.md)** | reassuring voters there's no wrong ballot (bullet, equal scores, "anyone but…"). |
 | **[Count by hand](count_star_by_hand.md)** | a hands-on demystifier — tally a tiny election live. |

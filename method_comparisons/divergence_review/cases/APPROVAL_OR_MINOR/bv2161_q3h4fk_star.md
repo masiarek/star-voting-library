@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **C**. Only **Approval** differs, el
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_star.yaml)  ·  **STAR tabulated mirror:** [`bv2161_q3h4fk_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2161_q3h4fk_star_tabulated.txt)
+**Source election:** [`method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml)  ·  **STAR tabulated mirror:** [`bv2161_q3h4fk_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/cases/cases_tabulated/bv2161_q3h4fk_star_tabulated.txt)
 
 _3 candidates, 7 ballots._
 

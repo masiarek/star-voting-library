@@ -88,10 +88,10 @@ The strongest footing an example can have: **it really happened** — real ballo
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex04_olympics_1994.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex04_olympics_1994.yaml
 ```
 
-Source: [ex04_olympics_1994.yaml](ex04_olympics_1994.yaml). Full audit report: [mirror](exercises_tabulated/ex04_olympics_1994_tabulated.txt).
+Source: [ex04_olympics_1994.yaml](cases/ex04_olympics_1994.yaml). Full audit report: [mirror](cases/cases_tabulated/ex04_olympics_1994_tabulated.txt).
 
 ---
 

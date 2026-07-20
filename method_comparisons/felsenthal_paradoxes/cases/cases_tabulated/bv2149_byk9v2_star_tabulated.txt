@@ -1,0 +1,148 @@
+======================================================================
+SOURCE FILE:     bv2149_byk9v2_star.yaml
+TABULATED FILE:  bv2149_byk9v2_star_tabulated.txt
+======================================================================
+
+election_title: "Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts"
+scenario_description: |-
+  Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2149_byk9v2_irv.yaml for the setup.
+  The same 32 ballots with ranks mapped 5/3/1. Scores: Alma 88, Bruno 98, Cora 102 — Cora and Bruno advance, and Bruno wins the automatic runoff 18–14. STAR elects Bruno in District I, District II, AND the combined electorate — consistent where the runoff procedure flips to Alma. (Honesty note: STAR is consistent in THIS election, but methods with a runoff stage are not reinforcement-proof in general.)
+  Live results: https://bettervoting.com/byk9v2/results
+bv_test_id: BV2149
+bv_election_id: byk9v2
+bv_results_url: https://bettervoting.com/byk9v2/results
+paradoxes: [multiple-districts]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Alma,Bruno,Cora
+  5,3,1
+  5,3,1
+  5,3,1
+  5,3,1
+  5,1,3
+  5,1,3
+  5,1,3
+  5,1,3
+  5,1,3
+  5,1,3
+  3,5,1
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  1,5,3
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  3,1,5
+  1,3,5
+expected_winners:
+  - Bruno
+
+# file: bv2149_byk9v2_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts ===
+  Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2149_byk9v2_irv.yaml for the setup.
+  The same 32 ballots with ranks mapped 5/3/1. Scores: Alma 88, Bruno 98, Cora 102 — Cora and Bruno advance, and Bruno wins the automatic runoff 18–14. STAR elects Bruno in District I, District II, AND the combined electorate — consistent where the runoff procedure flips to Alma. (Honesty note: STAR is consistent in THIS election, but methods with a runoff stage are not reinforcement-proof in general.)
+  Live results: https://bettervoting.com/byk9v2/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Alma    |  * Bruno    |   * Cora    |
+-------------------------------------------------------------
+          Alma > |     ---      |17 -  0 - 15 |11 -  0 - 21 |
+       * Bruno > | 15 -  0 - 17 |    ---      |18 -  0 - 14 |
+        * Cora > | 21 -  0 - 11 |14 -  0 - 18 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Alma > Bruno > Cora > Alma)
+
+[Divergence from STAR]
+  STAR     = Bruno
+  RCV-IRV  = Alma   (differs from STAR)
+  Approval = Cora   (differs from STAR)
+  RCV-RR   = Cora   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2149_byk9v2_star_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/bv2149_byk9v2_star_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Cora)
+ - Runoff Round Winner   = (Bruno)
+  Candidate Cora earned the highest total score, but
+  Candidate Bruno won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 32 ballots.
+Count × Alma,Bruno,Cora
+   13 ×    1,    5,   3
+    7 ×    3,    1,   5
+    6 ×    5,    1,   3
+    4 ×    5,    3,   1
+    1 ×    3,    5,   1
+    1 ×    1,    3,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Alma       10   0   8   0  14   0  |    88   2.8
+Bruno      14   0   5   0  13   0  |    98   3.1
+Cora        8   0  19   0   5   0  |   102   3.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cora          -- 102 -- First place
+   Bruno         --  98 -- Second place
+   Alma          --  88
+ Cora and Bruno advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 18 -- First place
+   Cora          -- 14
+   Equal Support --  0
+ Bruno wins.
+   Runoff math:
+     32  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     32  voters with a preference  (majority = 17)
+           Bruno 18 (56%)  ·  Cora 14 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bruno

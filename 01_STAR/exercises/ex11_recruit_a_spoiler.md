@@ -90,11 +90,11 @@ A *strategic* construction, flagged as such per the [four-part test](../../metho
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex11_two_way_base.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex11_spoiler_added.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex11_two_way_base.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex11_spoiler_added.yaml
 ```
 
-Sources: [ex11_two_way_base.yaml](ex11_two_way_base.yaml) · [ex11_spoiler_added.yaml](ex11_spoiler_added.yaml). Full audit reports: [base](exercises_tabulated/ex11_two_way_base_tabulated.txt) · [spoiler added](exercises_tabulated/ex11_spoiler_added_tabulated.txt).
+Sources: [ex11_two_way_base.yaml](cases/ex11_two_way_base.yaml) · [ex11_spoiler_added.yaml](cases/ex11_spoiler_added.yaml). Full audit reports: [base](cases/cases_tabulated/ex11_two_way_base_tabulated.txt) · [spoiler added](cases/cases_tabulated/ex11_spoiler_added_tabulated.txt).
 
 ---
 

@@ -82,12 +82,12 @@ Winner — Ranked Robin (RCV-RR): Blue
 
 | Race | YAML | `_tabulated` mirror |
 |---|---|---|
-| STAR (lead) | [bv2178_8kg698_star.yaml](bv2178_8kg698_star.yaml) | [txt](postit_rcv_example_tabulated/bv2178_8kg698_star_tabulated.txt) |
-| RCV-IRV | [bv2178_8kg698_irv.yaml](bv2178_8kg698_irv.yaml) | [txt](postit_rcv_example_tabulated/bv2178_8kg698_irv_tabulated.txt) |
-| Ranked Robin | [bv2178_8kg698_ranked_robin.yaml](bv2178_8kg698_ranked_robin.yaml) | [txt](postit_rcv_example_tabulated/bv2178_8kg698_ranked_robin_tabulated.txt) |
+| STAR (lead) | [bv2178_8kg698_star.yaml](cases/bv2178_8kg698_star.yaml) | [txt](cases/cases_tabulated/bv2178_8kg698_star_tabulated.txt) |
+| RCV-IRV | [bv2178_8kg698_irv.yaml](cases/bv2178_8kg698_irv.yaml) | [txt](cases/cases_tabulated/bv2178_8kg698_irv_tabulated.txt) |
+| Ranked Robin | [bv2178_8kg698_ranked_robin.yaml](cases/bv2178_8kg698_ranked_robin.yaml) | [txt](cases/cases_tabulated/bv2178_8kg698_ranked_robin_tabulated.txt) |
 | Choose-One | (documented in the STAR mirror's divergence block: Purple) | — |
 
-Frozen BetterVoting export (Election + Ballots + Results): [bv2178_8kg698_bv_export.json](bv2178_8kg698_bv_export.json) — BV's stored winners match every LH prediction (STAR / Ranked Robin / RCV-IRV all Blue; Choose-One Purple).
+Frozen BetterVoting export (Election + Ballots + Results): [bv2178_8kg698_bv_export.json](cases/bv2178_8kg698_bv_export.json) — BV's stored winners match every LH prediction (STAR / Ranked Robin / RCV-IRV all Blue; Choose-One Purple).
 
 Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [seven ways (BV2177)](bv2177_v8r66y_seven_methods.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../)
 

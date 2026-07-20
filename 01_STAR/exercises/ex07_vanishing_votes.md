@@ -67,7 +67,7 @@ Automatic Runoff Round
 <details>
 <summary><b>(d) Zero vs blank — same bucket here, different everywhere else</b></summary>
 
-In *this* runoff they coincide (both Equal Support), but the count still tells them apart. Ballot 7 is a **cast vote**: its Cedar 5 counted in the scoring round, and had Cedar been a finalist, ballot 7 would have had a preference to give. Ballot 9 is a **true abstention**: it contributed nothing anywhere and is flagged by the abstention note — it exists so turnout-style questions ([quorum](../../00_start_here/topics/quorum.md)) can be answered honestly. Zero is an opinion; blank is the absence of one. (Canonical tiny demo: [the abstentions example](../../01_STAR/_main/_main_pages/abstentions.md).)
+In *this* runoff they coincide (both Equal Support), but the count still tells them apart. Ballot 7 is a **cast vote**: its Cedar 5 counted in the scoring round, and had Cedar been a finalist, ballot 7 would have had a preference to give. Ballot 9 is a **true abstention**: it contributed nothing anywhere and is flagged by the abstention note — it exists so turnout-style questions ([quorum](../../00_start_here/topics/quorum.md)) can be answered honestly. Zero is an opinion; blank is the absence of one. (Canonical tiny demo: [the abstentions example](../_main/cases/cases_pages/abstentions.md).)
 
 </details>
 
@@ -85,10 +85,10 @@ No paradox here at all — this drill exists because the *reporting* is where re
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex07_vanishing_votes.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex07_vanishing_votes.yaml
 ```
 
-Source: [ex07_vanishing_votes.yaml](ex07_vanishing_votes.yaml). Full audit report: [mirror](exercises_tabulated/ex07_vanishing_votes_tabulated.txt).
+Source: [ex07_vanishing_votes.yaml](cases/ex07_vanishing_votes.yaml). Full audit report: [mirror](cases/cases_tabulated/ex07_vanishing_votes_tabulated.txt).
 
 ---
 

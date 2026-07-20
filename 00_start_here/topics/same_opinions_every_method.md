@@ -8,7 +8,7 @@
 
 ## One electorate, honest opinions
 
-Five coworkers pick the team lunch — Sushi, Tacos, or Pizza. Everyone scores each option 0–5, honestly (this is the repo's [canonical lunch vote](../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md), [runnable](../../01_STAR/_main/bv2184_fyy886_lunch_vote.yaml) · [live on BetterVoting ↗](https://bettervoting.com/fyy886/results)):
+Five coworkers pick the team lunch — Sushi, Tacos, or Pizza. Everyone scores each option 0–5, honestly (this is the repo's [canonical lunch vote](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md), [runnable](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) · [live on BetterVoting ↗](https://bettervoting.com/fyy886/results)):
 
 | Voter | Sushi | Tacos | Pizza |
 |---|:--:|:--:|:--:|

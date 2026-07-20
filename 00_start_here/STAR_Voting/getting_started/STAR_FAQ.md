@@ -12,7 +12,7 @@ New to the terms? Start with [Ballot & Terminology Basics](../../topics/ballot_a
 
 Most of the runoff questions below are really the same question. Here's a 10-voter STAR election that shows all of them at once — **Berry** is broadly liked and wins the Scoring Round, but more voters *strictly prefer* **Almond**, who wins the Automatic Runoff. One voter scores both finalists 5 (Equal Support).
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (BV2182, election `tg4779`). Reader page: [Almond vs Berry — a runoff reversal](../../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md) · run it locally: [`bv2182_tg4779_faq_runoff_reversal.yaml`](../../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (BV2182, election `tg4779`). Reader page: [Almond vs Berry — a runoff reversal](../../../01_STAR/_main/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md) · run it locally: [`bv2182_tg4779_faq_runoff_reversal.yaml`](../../../01_STAR/_main/cases/bv2182_tg4779_faq_runoff_reversal.yaml).
 
 ```
 Count × Almond,Berry,Cocoa

@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Allison**. Only **Approval** diffe
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml`](../../../../method_comparisons/BV_Library/BV_Library_star_runoff_score_tie_five_star.yaml)  ·  **STAR tabulated mirror:** [`BV_Library_star_runoff_score_tie_five_star_tabulated.txt`](../../../../method_comparisons/BV_Library/BV_Library_tabulated/BV_Library_star_runoff_score_tie_five_star_tabulated.txt)
+**Source election:** [`method_comparisons/BV_Library/cases/BV_Library_star_runoff_score_tie_five_star.yaml`](../../../../method_comparisons/BV_Library/cases/BV_Library_star_runoff_score_tie_five_star.yaml)  ·  **STAR tabulated mirror:** [`BV_Library_star_runoff_score_tie_five_star_tabulated.txt`](../../../../method_comparisons/BV_Library/cases/cases_tabulated/BV_Library_star_runoff_score_tie_five_star_tabulated.txt)
 
 _2 candidates, 2 ballots._
 

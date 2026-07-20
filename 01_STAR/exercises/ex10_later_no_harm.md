@@ -108,11 +108,11 @@ Sincere ballots throughout — the "failure" in (c) needs no strategy, which per
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex10_reticent.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex10_generous.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex10_reticent.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex10_generous.yaml
 ```
 
-Sources: [ex10_reticent.yaml](ex10_reticent.yaml) · [ex10_generous.yaml](ex10_generous.yaml). Full audit reports: [reticent](exercises_tabulated/ex10_reticent_tabulated.txt) · [generous](exercises_tabulated/ex10_generous_tabulated.txt).
+Sources: [ex10_reticent.yaml](cases/ex10_reticent.yaml) · [ex10_generous.yaml](cases/ex10_generous.yaml). Full audit reports: [reticent](cases/cases_tabulated/ex10_reticent_tabulated.txt) · [generous](cases/cases_tabulated/ex10_generous_tabulated.txt).
 
 ---
 

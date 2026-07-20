@@ -15,7 +15,7 @@ Aral, Baikal, Crater
 5, 0, 0
 ```
 
-Source: [`Flat_scores_ties_04_scoring_tie_2way.yaml`](Flat_scores_ties_04_scoring_tie_2way.yaml).
+Source: [`Flat_scores_ties_04_scoring_tie_2way.yaml`](cases/Flat_scores_ties_04_scoring_tie_2way.yaml).
 
 ## What LH does
 
@@ -45,7 +45,7 @@ Automatic Runoff Round
  Aral wins.
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_04_scoring_tie_2way_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_04_scoring_tie_2way_tabulated.txt).
 
 ## The takeaway
 

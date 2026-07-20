@@ -36,7 +36,7 @@ LH ranks the tie by total win margin — and A and B tie there too (**+101** eac
 Winner — Ranked Robin (RCV-RR): A
 ```
 
-The divergence is real, not just a different coin: **LH's margin rung would never elect C** (lowest margin), yet BV's random draw did. Frozen export: [`bv2142_4gfwdq_clone_cycle_pre_bv_export.json`](bv2142_4gfwdq_clone_cycle_pre_bv_export.json). Full LH detail: [`_tabulated`](clone_independence_tabulated/bv2142_4gfwdq_clone_cycle_pre_tabulated.txt).
+The divergence is real, not just a different coin: **LH's margin rung would never elect C** (lowest margin), yet BV's random draw did. Frozen export: [`bv2142_4gfwdq_clone_cycle_pre_bv_export.json`](cases/bv2142_4gfwdq_clone_cycle_pre_bv_export.json). Full LH detail: [`_tabulated`](cases/cases_tabulated/bv2142_4gfwdq_clone_cycle_pre_tabulated.txt).
 
 ## Next
 

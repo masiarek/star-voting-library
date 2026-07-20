@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml`](../../../../06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml)  ·  **STAR tabulated mirror:** [`03_c4_b33_bullet-storm_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/03_c4_b33_bullet-storm_tabulated.txt)
+**Source election:** [`06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml`](../../../../06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml)  ·  **STAR tabulated mirror:** [`03_c4_b33_bullet-storm_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/03_c4_b33_bullet-storm_tabulated.txt)
 
 _4 candidates, 33 ballots._
 

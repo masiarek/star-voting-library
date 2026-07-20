@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Almond**. Only **Approval** differ
 
 **Flags:** 1 tied-score ballot(s)
 
-**Source election:** [`01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml`](../../../../01_STAR/_main/bv2182_tg4779_faq_runoff_reversal.yaml)  ·  **STAR tabulated mirror:** [`bv2182_tg4779_faq_runoff_reversal_tabulated.txt`](../../../../01_STAR/_main/_main_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt)
+**Source election:** [`01_STAR/_main/cases/bv2182_tg4779_faq_runoff_reversal.yaml`](../../../../01_STAR/_main/cases/bv2182_tg4779_faq_runoff_reversal.yaml)  ·  **STAR tabulated mirror:** [`bv2182_tg4779_faq_runoff_reversal_tabulated.txt`](../../../../01_STAR/_main/cases/cases_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt)
 
 _3 candidates, 10 ballots._
 

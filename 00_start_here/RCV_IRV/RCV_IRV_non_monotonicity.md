@@ -26,7 +26,7 @@ That's the trap: changing how many first-choices a candidate has changes *who is
 
 The classic 3-candidate case, as two elections that differ by **one change**: 4 voters raise X from second to first.
 
-→ [`monotonicity_irv_before.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_before.yaml) · [`monotonicity_irv_after.yaml`](../../method_comparisons/monotonicity/monotonicity_irv_after.yaml)
+→ [`monotonicity_irv_before.yaml`](../../method_comparisons/monotonicity/cases/monotonicity_irv_before.yaml) · [`monotonicity_irv_after.yaml`](../../method_comparisons/monotonicity/cases/monotonicity_irv_after.yaml)
 
 ```
 BEFORE                              AFTER  (4 voters raise X: Y>Z → X>Y)

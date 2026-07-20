@@ -88,16 +88,16 @@ The **Results page** (left) is the friendly, readable write-up — start there; 
 
 | Results page (read this) | Method | Winner | Shows | Source |
 |---|---|---|---|---|
-| [**01** — hidden consensus](black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | STAR | Cal | Majority favorite beats the everyone's-second consensus | [`.yaml`](Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
-| [**01a** — approval variant](black_curtain_pages/Black_Curtain_01a_c3_b5_approval.md) | Approval | **Bob** | Same 5 voters, different method, different winner | [`.yaml`](Black_Curtain_01a_c3_b5_approval.yaml) |
-| [**02** — near-clones](black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md) | STAR | Cal | Two loved near-clones; approval can't tell them apart | [`.yaml`](Black_Curtain_02_c3_b5_near-clones.yaml) |
-| [**03** — polarized on Cal](black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | STAR | Cal | The "landslide" winner is zeroed by 40% of voters | [`.yaml`](Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
-| [**04** — four candidates](black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md) | STAR | Cal | Four candidates, same curtain; score near-tie lost at 0–5 | [`.yaml`](Black_Curtain_04_c4_b5_four-candidates.yaml) |
+| [**01** — hidden consensus](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | STAR | Cal | Majority favorite beats the everyone's-second consensus | [`.yaml`](cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
+| [**01a** — approval variant](cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) | Approval | **Bob** | Same 5 voters, different method, different winner | [`.yaml`](cases/Black_Curtain_01a_c3_b5_approval.yaml) |
+| [**02** — near-clones](cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | STAR | Cal | Two loved near-clones; approval can't tell them apart | [`.yaml`](cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
+| [**03** — polarized on Cal](cases/cases_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | STAR | Cal | The "landslide" winner is zeroed by 40% of voters | [`.yaml`](cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
+| [**04** — four candidates](cases/cases_pages/Black_Curtain_04_c4_b5_four-candidates.md) | STAR | Cal | Four candidates, same curtain; score near-tie lost at 0–5 | [`.yaml`](cases/Black_Curtain_04_c4_b5_four-candidates.yaml) |
 
 Each Results page carries the full tabulation (scoring round, runoff, matrix, winner). Candidate names follow the BetterVoting template cast: Ann, Bob, Cal (+ Dee). Run any file:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/black_curtain/Black_Curtain_01_c3_b5_hidden-consensus.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml
 ```
 
 ## Related

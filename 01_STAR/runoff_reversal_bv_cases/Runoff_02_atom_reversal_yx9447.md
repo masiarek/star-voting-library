@@ -17,7 +17,7 @@ Austin, Boston, Cairo
 4, 5, 0
 ```
 
-Source: [`Runoff_02_atom_reversal_yx9447.yaml`](Runoff_02_atom_reversal_yx9447.yaml) · frozen export: [`Runoff_02_atom_reversal_yx9447_bv_export.json`](Runoff_02_atom_reversal_yx9447_bv_export.json).
+Source: [`Runoff_02_atom_reversal_yx9447.yaml`](cases/Runoff_02_atom_reversal_yx9447.yaml) · frozen export: [`Runoff_02_atom_reversal_yx9447_bv_export.json`](cases/Runoff_02_atom_reversal_yx9447_bv_export.json).
 
 ## View 1 — BetterVoting
 
@@ -34,7 +34,7 @@ Austin leads the Scoring Round (13) but **loses** the Automatic Runoff 1–2; Be
 
 ## View 2 — the LH engine
 
-Same ballots, the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
+Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
 
 ```
 --- Runoff (Preference) Matrix ---

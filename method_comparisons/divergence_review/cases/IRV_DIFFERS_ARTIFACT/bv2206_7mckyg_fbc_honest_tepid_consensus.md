@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Bluebell** rather than STAR's **Clover**, but
 
 **Flags:** 9 tied-score ballot(s)
 
-**Source election:** [`01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../../../../01_STAR/favorite_betrayal/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml)  ·  **STAR tabulated mirror:** [`bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt`](../../../../01_STAR/favorite_betrayal/favorite_betrayal_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt)
+**Source election:** [`01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../../../../01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml)  ·  **STAR tabulated mirror:** [`bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt`](../../../../01_STAR/favorite_betrayal/cases/cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt)
 
 _3 candidates, 57 ballots._
 

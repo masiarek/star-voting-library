@@ -40,7 +40,7 @@ Automatic Runoff Round
    A 3 (60%) vs B 2 (40%); majority = 3.
 ```
 
-B piles up 22 points — every single voter gives B a 4 or 5 — yet a 3-of-5 **majority scores A above B**, so A wins the runoff. The engine prints its `[Runoff Reversal]` block and the standard "not a malfunction" note. (Runnable: [ex08_minimal_reversal_3c.yaml](ex08_minimal_reversal_3c.yaml).)
+B piles up 22 points — every single voter gives B a 4 or 5 — yet a 3-of-5 **majority scores A above B**, so A wins the runoff. The engine prints its `[Runoff Reversal]` block and the standard "not a malfunction" note. (Runnable: [ex08_minimal_reversal_3c.yaml](cases/ex08_minimal_reversal_3c.yaml).)
 
 </details>
 
@@ -64,7 +64,7 @@ Squeeze those two facts together — every voter generous to B, a majority still
 | **A** | 5 | 0 |
 | **B** | 4 | 5 |
 
-Totals: B 13, A 10 — B leads. Runoff: the two A-first voters outvote the one B-only voter, 2–1 — **A wins**. ([ex08_minimal_reversal_2c.yaml](ex08_minimal_reversal_2c.yaml); with two candidates the finalist matrix is trivial, so the file follows house style and turns it off.)
+Totals: B 13, A 10 — B leads. Runoff: the two A-first voters outvote the one B-only voter, 2–1 — **A wins**. ([ex08_minimal_reversal_2c.yaml](cases/ex08_minimal_reversal_2c.yaml); with two candidates the finalist matrix is trivial, so the file follows house style and turns it off.)
 
 **Why not 2 voters?** For a reversal you need a strict runoff majority for A (with 2 voters that means *both* prefer A — 1–1 is a tie, which the constraints forbid) *and* a strict score lead for B. But if both voters score A above B, then A's total is strictly larger on each ballot, so A leads the sum too — contradiction. One voter is a contradiction even faster. So **3 voters is the floor**, and 2 candidates is the floor by definition. You cannot make this phenomenon smaller.
 
@@ -84,11 +84,11 @@ A construction exercise *is* the four-part test's second rule in action: everyth
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex08_minimal_reversal_2c.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex08_minimal_reversal_3c.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex08_minimal_reversal_2c.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex08_minimal_reversal_3c.yaml
 ```
 
-Sample solutions: [ex08_minimal_reversal_2c.yaml](ex08_minimal_reversal_2c.yaml) · [ex08_minimal_reversal_3c.yaml](ex08_minimal_reversal_3c.yaml). Full audit reports: [2-candidate](exercises_tabulated/ex08_minimal_reversal_2c_tabulated.txt) · [3-candidate](exercises_tabulated/ex08_minimal_reversal_3c_tabulated.txt).
+Sample solutions: [ex08_minimal_reversal_2c.yaml](cases/ex08_minimal_reversal_2c.yaml) · [ex08_minimal_reversal_3c.yaml](cases/ex08_minimal_reversal_3c.yaml). Full audit reports: [2-candidate](cases/cases_tabulated/ex08_minimal_reversal_2c_tabulated.txt) · [3-candidate](cases/cases_tabulated/ex08_minimal_reversal_3c_tabulated.txt).
 
 ---
 

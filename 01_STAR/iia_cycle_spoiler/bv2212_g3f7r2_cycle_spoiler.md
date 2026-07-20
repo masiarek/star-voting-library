@@ -64,7 +64,7 @@ Because the Ranked Robin result is a **tie-break**, it is **not freezable on Bet
 
 ## View 1 — BetterVoting
 
-Live results: **[bettervoting.com/g3f7r2/results](https://bettervoting.com/g3f7r2/results)**. BetterVoting's STAR count agrees with LH exactly — **elected: Alice**, finalists Alice (71) & Ben (60), runoff 17–6, `tieBreakType: none`. The frozen export (Election + Ballots + Results) is [`bv2212_g3f7r2_cycle_spoiler_bv_export.json`](bv2212_g3f7r2_cycle_spoiler_bv_export.json); its `winsAgainst` data encodes the same cycle (Alice▸Ben, Ben▸Carla, Carla▸Alice).
+Live results: **[bettervoting.com/g3f7r2/results](https://bettervoting.com/g3f7r2/results)**. BetterVoting's STAR count agrees with LH exactly — **elected: Alice**, finalists Alice (71) & Ben (60), runoff 17–6, `tieBreakType: none`. The frozen export (Election + Ballots + Results) is [`bv2212_g3f7r2_cycle_spoiler_bv_export.json`](cases/bv2212_g3f7r2_cycle_spoiler_bv_export.json); its `winsAgainst` data encodes the same cycle (Alice▸Ben, Ben▸Carla, Carla▸Alice).
 
 ## View 2 — the LH tabulation (on-screen report)
 
@@ -115,4 +115,4 @@ Winner — STAR Voting Method (single winner)
  Alice
 ```
 
-Full engine detail: [`iia_cycle_spoiler_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](iia_cycle_spoiler_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt) · run it: [`bv2212_g3f7r2_cycle_spoiler.yaml`](bv2212_g3f7r2_cycle_spoiler.yaml).
+Full engine detail: [`iia_cycle_spoiler_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](cases/cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt) · run it: [`bv2212_g3f7r2_cycle_spoiler.yaml`](cases/bv2212_g3f7r2_cycle_spoiler.yaml).

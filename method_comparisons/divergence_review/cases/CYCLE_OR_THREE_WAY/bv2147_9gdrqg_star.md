@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_star.yaml)  ·  **STAR tabulated mirror:** [`bv2147_9gdrqg_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2147_9gdrqg_star_tabulated.txt)
+**Source election:** [`method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml)  ·  **STAR tabulated mirror:** [`bv2147_9gdrqg_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/cases/cases_tabulated/bv2147_9gdrqg_star_tabulated.txt)
 
 _3 candidates, 17 ballots._
 

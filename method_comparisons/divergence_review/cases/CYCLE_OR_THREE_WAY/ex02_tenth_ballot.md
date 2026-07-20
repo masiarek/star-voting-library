@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex02_tenth_ballot.yaml`](../../../../01_STAR/exercises/ex02_tenth_ballot.yaml)  ·  **STAR tabulated mirror:** [`ex02_tenth_ballot_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex02_tenth_ballot_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex02_tenth_ballot.yaml`](../../../../01_STAR/exercises/cases/ex02_tenth_ballot.yaml)  ·  **STAR tabulated mirror:** [`ex02_tenth_ballot_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex02_tenth_ballot_tabulated.txt)
 
 _5 candidates, 10 ballots._
 

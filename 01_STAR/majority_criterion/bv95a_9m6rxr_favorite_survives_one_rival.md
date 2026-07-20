@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr`).
 
-Reference files: [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](bv95a_9m6rxr_favorite_survives_one_rival.yaml) (`expected_winners: [Ada]`) · frozen export [`bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json`](bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json). Backs sheet row **BV95a**.
+Reference files: [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml) (`expected_winners: [Ada]`) · frozen export [`bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json`](cases/bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json). Backs sheet row **BV95a**.
 
 ## The ballots
 
@@ -39,7 +39,7 @@ Automatic Runoff — who do more voters prefer, head to head?
 Winner — STAR Voting Method (single winner):  Ada
 ```
 
-Full audit copy: [`majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt).
+Full audit copy: [`majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](cases/cases_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt).
 
 ## Why Ada wins
 

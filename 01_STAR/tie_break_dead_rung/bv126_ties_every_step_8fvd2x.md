@@ -2,7 +2,7 @@
 
 *The worst case for the tie-break ladder: three candidates tie at **every** step, so the lot decides — and BetterVoting also drops the five flat ballots as abstentions. LH and BV agree on the winner (**Amy**), but only because the flat ballots can't change it.*
 
-Reference files: [`bv126_ties_every_step_8fvd2x.yaml`](bv126_ties_every_step_8fvd2x.yaml) (`expected_winners: [Amy]`) · frozen export [`bv126_ties_every_step_8fvd2x_bv_export.json`](bv126_ties_every_step_8fvd2x_bv_export.json) (BV `8fvd2x`). Backs sheet row **BV126** (single-winner STAR, despite the sheet's "STAR Bloc" label).
+Reference files: [`bv126_ties_every_step_8fvd2x.yaml`](cases/bv126_ties_every_step_8fvd2x.yaml) (`expected_winners: [Amy]`) · frozen export [`bv126_ties_every_step_8fvd2x_bv_export.json`](cases/bv126_ties_every_step_8fvd2x_bv_export.json) (BV `8fvd2x`). Backs sheet row **BV126** (single-winner STAR, despite the sheet's "STAR Bloc" label).
 
 ## The election
 
@@ -72,7 +72,7 @@ Winner — STAR Voting Method (single winner)
  Amy
 ```
 
-Full audit copy: [`tie_break_dead_rung_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt`](tie_break_dead_rung_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt).
+Full audit copy: [`tie_break_dead_rung_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt`](cases/cases_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt).
 
 ## Two findings
 

@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Peltola**. Only **Approval** diffe
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general.yaml`](../../../../method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general.yaml)  ·  **STAR tabulated mirror:** [`bv2214_m3hb6y_alaska_2022_general_tabulated.txt`](../../../../method_comparisons/alaska_2022_general/alaska_2022_general_tabulated/bv2214_m3hb6y_alaska_2022_general_tabulated.txt)
+**Source election:** [`method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml`](../../../../method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml)  ·  **STAR tabulated mirror:** [`bv2214_m3hb6y_alaska_2022_general_tabulated.txt`](../../../../method_comparisons/alaska_2022_general/cases/cases_tabulated/bv2214_m3hb6y_alaska_2022_general_tabulated.txt)
 
 _3 candidates, 200 ballots._
 

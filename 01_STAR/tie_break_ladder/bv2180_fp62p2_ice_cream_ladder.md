@@ -14,7 +14,7 @@ Chocolate, Chocolate Chip, Fudge Brownie, Vanilla, Strawberry, Mango
 1,         0,              0,             4,       5,          4
 ```
 
-(`-` = left blank ≡ 0.) Source: [`bv2180_fp62p2_ice_cream_ladder.yaml`](bv2180_fp62p2_ice_cream_ladder.yaml).
+(`-` = left blank ≡ 0.) Source: [`bv2180_fp62p2_ice_cream_ladder.yaml`](cases/bv2180_fp62p2_ice_cream_ladder.yaml).
 
 ## How the winner is found — the ladder in action
 
@@ -93,11 +93,11 @@ Mango           0  1  0  0  0  0    1  |     4   4.0
  Strawberry
 ```
 
-Full audit copy: [`_tabulated`](tie_break_ladder_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt).
 
 ## BV vs LH
 
-Both engines elect **Strawberry** — confirmed against BetterVoting's frozen export ([`_bv_export.json`](bv2180_fp62p2_ice_cream_ladder_bv_export.json)), whose Results record `tieBreakType: five_star` for the scoring round: BV broke the three-way tie by the five-star count, exactly as LH does. Unlike the 3-way dead heat, they *must* agree here: every tie is broken by a deterministic rung (five-star, then score), so no random shuffle is reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) is LH-only.
+Both engines elect **Strawberry** — confirmed against BetterVoting's frozen export ([`_bv_export.json`](cases/bv2180_fp62p2_ice_cream_ladder_bv_export.json)), whose Results record `tieBreakType: five_star` for the scoring round: BV broke the three-way tie by the five-star count, exactly as LH does. Unlike the 3-way dead heat, they *must* agree here: every tie is broken by a deterministic rung (five-star, then score), so no random shuffle is reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) is LH-only.
 
 ## See also
 

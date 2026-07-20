@@ -21,7 +21,7 @@ STAR elects **Casey** — and so do Ranked Robin and Condorcet, because **Casey 
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml`](../../../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_star.yaml)  ·  **STAR tabulated mirror:** [`bv2171_h93tm4_star_tabulated.txt`](../../../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_tabulated/bv2171_h93tm4_star_tabulated.txt)
+**Source election:** [`method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml`](../../../../method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml)  ·  **STAR tabulated mirror:** [`bv2171_h93tm4_star_tabulated.txt`](../../../../method_comparisons/symmetric_centrist_all_methods/cases/cases_tabulated/bv2171_h93tm4_star_tabulated.txt)
 
 _3 candidates, 8 ballots._
 

@@ -17,7 +17,7 @@ The cleanest way to see it is the **same three candidates, two different elector
 
 ## Case 1 — a Condorcet winner exists → they agree
 
-Five voters, candidates Ada / Ben / Cara ([`01_condorcet_winner.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/01_condorcet_winner.yaml)):
+Five voters, candidates Ada / Ben / Cara ([`01_condorcet_winner.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/01_condorcet_winner.yaml)):
 
 ```
 3 × Ada > Ben > Cara
@@ -40,7 +40,7 @@ Winner — Ranked Robin (RCV-RR): Ada
 
 ## Case 2 — a cycle (rock-paper-scissors) → they part ways
 
-Now seven voters, same three candidates ([`02_cycle_no_condorcet.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/02_cycle_no_condorcet.yaml)):
+Now seven voters, same three candidates ([`02_cycle_no_condorcet.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/02_cycle_no_condorcet.yaml)):
 
 ```
 3 × Ada > Ben > Cara
@@ -70,7 +70,7 @@ This is the whole distinction in one election: **Condorcet = (blank), Ranked Rob
 
 ## In the wild — record 0 from the random sweep
 
-This isn't just a contrived 3-candidate trick. It's why the **Condorcet column was blank** in the random STAR sweep you ran (`tools_adam/random_star_divergence.py`). Take its very first divergent election — **record 0**, 6 candidates, 5 voters ([`03_real_record0_c6_b5.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/03_real_record0_c6_b5.yaml)):
+This isn't just a contrived 3-candidate trick. It's why the **Condorcet column was blank** in the random STAR sweep you ran (`tools_adam/random_star_divergence.py`). Take its very first divergent election — **record 0**, 6 candidates, 5 voters ([`03_real_record0_c6_b5.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/03_real_record0_c6_b5.yaml)):
 
 ```
      A  B  C  D  E  F

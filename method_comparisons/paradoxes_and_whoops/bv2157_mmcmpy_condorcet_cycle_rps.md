@@ -17,7 +17,7 @@ Rock, Paper, Scissors
 32 × 3, 0, 5      # Scissors > Rock > Paper
 ```
 
-The cast is the lesson: it really is rock-paper-scissors. Source: [`bv2157_mmcmpy_condorcet_cycle_rps.yaml`](bv2157_mmcmpy_condorcet_cycle_rps.yaml).
+The cast is the lesson: it really is rock-paper-scissors. Source: [`bv2157_mmcmpy_condorcet_cycle_rps.yaml`](cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml).
 
 ## Majority rule eats its own tail
 
@@ -35,7 +35,7 @@ Scoring Round:    Rock 271 · Paper 270 · Scissors 259   (Rock & Paper advance)
 Automatic Runoff: Rock beats Paper  → Rock wins (by a single point upstream)
 ```
 
-The **score methods still finish** — STAR elects **Rock** (271 vs Paper's 270, razor thin), Approval picks **Paper** — but notice they don't agree *either*, and the Condorcet method can't even start. Full audit copy: [`_tabulated`](paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt).
+The **score methods still finish** — STAR elects **Rock** (271 vs Paper's 270, razor thin), Approval picks **Paper** — but notice they don't agree *either*, and the Condorcet method can't even start. Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt).
 
 ## The teaching moment
 

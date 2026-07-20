@@ -21,7 +21,7 @@ STAR elects **B** — and so do Ranked Robin and Condorcet, because **B is the h
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/felsenthal_paradoxes/bv2162_4htk44_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_star.yaml)  ·  **STAR tabulated mirror:** [`bv2162_4htk44_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2162_4htk44_star_tabulated.txt)
+**Source election:** [`method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml)  ·  **STAR tabulated mirror:** [`bv2162_4htk44_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/cases/cases_tabulated/bv2162_4htk44_star_tabulated.txt)
 
 _4 candidates, 103 ballots._
 

@@ -19,7 +19,7 @@ To win one of *k* seats you need a **Droop quota** = `votes / (k+1)`, rounded up
 
 Proportionally, 58% / 42% over 3 seats ≈ **2 progressive + 1 business**. (The "Better elections are possible" video gives only first-choice % and STV outcomes, not ballots — so this is an illustrative reconstruction, not a transcription.)
 
-→ Run them: [`03a_stv_3seats.yaml`](../../../06_Other/STV/03a_stv_3seats.yaml) (ranked, STV) · [`03b_star_pr_3seats.yaml`](../../../03_STAR_PR/_main/03b_star_pr_3seats.yaml) (scored, STAR-PR)
+→ Run them: [`03a_stv_3seats.yaml`](../../../06_Other/STV/cases/03a_stv_3seats.yaml) (ranked, STV) · [`03b_star_pr_3seats.yaml`](../../../03_STAR_PR/_main/cases/03b_star_pr_3seats.yaml) (scored, STAR-PR)
 
 ## Results — proportional methods agree; majoritarian doesn't
 

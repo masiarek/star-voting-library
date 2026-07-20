@@ -30,4 +30,4 @@ Pairwise: **Bert beats Anna 27–20 and Carla 32–15** — the Condorcet winner
 | Approval (the text's sets) | Anna (28/14/21) | Anna | ✓ |
 | Ranked Robin (same voters' rankings) | Bert | Bert | ✓ |
 
-Files: [approval yaml](bv2152_r6ctvy_approval.yaml) · [rr yaml](bv2152_r6ctvy_ranked_robin.yaml) · [frozen export](bv2152_r6ctvy_bv_export.json) · mirrors: [approval](felsenthal_paradoxes_tabulated/bv2152_r6ctvy_approval_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2152_r6ctvy_ranked_robin_tabulated.txt). Related LH-only case: [Ex.6 — Approval can elect a Pareto-dominated candidate](felsenthal_ex6_pareto.md).
+Files: [approval yaml](cases/bv2152_r6ctvy_approval.yaml) · [rr yaml](cases/bv2152_r6ctvy_ranked_robin.yaml) · [frozen export](cases/bv2152_r6ctvy_bv_export.json) · mirrors: [approval](cases/cases_tabulated/bv2152_r6ctvy_approval_tabulated.txt), [rr](cases/cases_tabulated/bv2152_r6ctvy_ranked_robin_tabulated.txt). Related LH-only case: [Ex.6 — Approval can elect a Pareto-dominated candidate](felsenthal_ex6_pareto.md).

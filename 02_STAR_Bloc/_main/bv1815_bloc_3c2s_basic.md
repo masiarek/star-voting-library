@@ -2,7 +2,7 @@
 
 *A real BetterVoting election (id `fk38pk`, marked **Passed**) labeled "basic / simple" — but it quietly exercises the **score tiebreaker** at the second seat. LH and BetterVoting agree: winners **A, C**.*
 
-Reference files: [`bv1815_bloc_3c2s_basic.yaml`](bv1815_bloc_3c2s_basic.yaml) (`expected_winners: [A, C]`) · frozen export [`bv1815_bloc_3c2s_basic_bv_export.json`](bv1815_bloc_3c2s_basic_bv_export.json) (BV `fk38pk`). Backs sheet row **BV1815**.
+Reference files: [`bv1815_bloc_3c2s_basic.yaml`](cases/bv1815_bloc_3c2s_basic.yaml) (`expected_winners: [A, C]`) · frozen export [`bv1815_bloc_3c2s_basic_bv_export.json`](cases/bv1815_bloc_3c2s_basic_bv_export.json) (BV `fk38pk`). Backs sheet row **BV1815**.
 
 ## The election
 
@@ -73,10 +73,10 @@ Winners — Bloc STAR Voting Method (2 winners)
  C
 ```
 
-Full audit copy: [`_main_tabulated/bv1815_bloc_3c2s_basic_tabulated.txt`](_main_tabulated/bv1815_bloc_3c2s_basic_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv1815_bloc_3c2s_basic_tabulated.txt`](cases/cases_tabulated/bv1815_bloc_3c2s_basic_tabulated.txt).
 
 ## Related
 
-- The pure no-tie control: [`00_c3_b3_bloc-baseline-2-seats.yaml`](00_c3_b3_bloc-baseline-2-seats.yaml) (both seats decided by the ballots, no rung consulted).
+- The pure no-tie control: [`00_c3_b3_bloc-baseline-2-seats.yaml`](cases/00_c3_b3_bloc-baseline-2-seats.yaml) (both seats decided by the ballots, no rung consulted).
 - The tie-break ladder these seats descend: [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
 - [#904](https://github.com/Equal-Vote/bettervoting/issues/904) — the method-name label ("STAR" vs "Bloc STAR").

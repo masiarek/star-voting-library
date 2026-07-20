@@ -82,10 +82,10 @@ The squeeze is the rare "whoops" that passes the whole [four-part test](../../me
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex05_center_squeeze.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex05_center_squeeze.yaml
 ```
 
-Source: [ex05_center_squeeze.yaml](ex05_center_squeeze.yaml). Full audit report: [mirror](exercises_tabulated/ex05_center_squeeze_tabulated.txt).
+Source: [ex05_center_squeeze.yaml](cases/ex05_center_squeeze.yaml). Full audit report: [mirror](cases/cases_tabulated/ex05_center_squeeze_tabulated.txt).
 
 ---
 

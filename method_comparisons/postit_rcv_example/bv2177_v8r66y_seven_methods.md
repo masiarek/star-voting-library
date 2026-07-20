@@ -36,12 +36,12 @@ The seven races use three ballot forms derived from one set of preferences — a
 
 | Race | YAML | `_tabulated` mirror |
 |---|---|---|
-| STAR / RCV-IRV / Ranked Robin / STV | identical ballots to BV2176 — [star](bv2176_p8dp28_star.yaml) · [irv](bv2176_p8dp28_irv.yaml) · [ranked_robin](bv2176_p8dp28_ranked_robin.yaml) | in `postit_rcv_example_tabulated/` |
-| Approval | [bv2177_v8r66y_approval.yaml](bv2177_v8r66y_approval.yaml) | [txt](postit_rcv_example_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
-| Choose-One | [bv2177_v8r66y_plurality.yaml](bv2177_v8r66y_plurality.yaml) | [txt](postit_rcv_example_tabulated/bv2177_v8r66y_plurality_tabulated.txt) |
+| STAR / RCV-IRV / Ranked Robin / STV | identical ballots to BV2176 — [star](cases/bv2176_p8dp28_star.yaml) · [irv](cases/bv2176_p8dp28_irv.yaml) · [ranked_robin](cases/bv2176_p8dp28_ranked_robin.yaml) | in `postit_rcv_example_tabulated/` |
+| Approval | [bv2177_v8r66y_approval.yaml](cases/bv2177_v8r66y_approval.yaml) | [txt](cases/cases_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
+| Choose-One | [bv2177_v8r66y_plurality.yaml](cases/bv2177_v8r66y_plurality.yaml) | [txt](cases/cases_tabulated/bv2177_v8r66y_plurality_tabulated.txt) |
 | STAR-PR (1 seat) | BV-only (LH's allocated requires ≥ 2 seats); scoring round = the STAR yaml's | — |
 
-Frozen BetterVoting export (Election + Ballots + Results): [bv2177_v8r66y_bv_export.json](bv2177_v8r66y_bv_export.json) — BV's stored winners match every prediction across all seven races.
+Frozen BetterVoting export (Election + Ballots + Results): [bv2177_v8r66y_bv_export.json](cases/bv2177_v8r66y_bv_export.json) — BV's stored winners match every prediction across all seven races.
 
 Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [the switch, made real (BV2178)](bv2178_8kg698_switch_made_real.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../)
 

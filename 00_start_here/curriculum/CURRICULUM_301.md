@@ -10,7 +10,7 @@
 
 - **Objective:** give a cohesive minority the representation it earned.
 - **Key terms:** proportional representation, Droop quota, Allocated Score, Sequentially Spent Score (SSS), Reweighted Range Voting (RRV), STV.
-- **See it:** the proportional trio in [`03_STAR_PR/`](../../03_STAR_PR/) — [allocated](../../03_STAR_PR/_main/_main_pages/02a_c5_b63_proportional-allocated-score.md) / [SSS](../../03_STAR_PR/_main/_main_pages/02b_c5_b63_proportional-sss.md) / [RRV](../../03_STAR_PR/_main/_main_pages/02c_c5_b63_proportional-rrv.md), and [STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) on the same electorate. Contrast with [Bloc STAR](../../02_STAR_Bloc/). Exercises: [Two seats, one neighborhood (ex12)](../../01_STAR/exercises/ex12_bloc_vs_proportional.md) — the Bloc sweep vs the Allocated share on ten ballots — and [The transfer machine (ex14)](../../01_STAR/exercises/ex14_transfer_machine.md) — STV's quota and transfers by hand.
+- **See it:** the proportional trio in [`03_STAR_PR/`](../../03_STAR_PR/) — [allocated](../../03_STAR_PR/_main/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) / [SSS](../../03_STAR_PR/_main/cases/cases_pages/02b_c5_b63_proportional-sss.md) / [RRV](../../03_STAR_PR/_main/cases/cases_pages/02c_c5_b63_proportional-rrv.md), and [STV vs STAR-PR](../proportional_representation/stv/proportional_stv_vs_star.md) on the same electorate. Contrast with [Bloc STAR](../../02_STAR_Bloc/). Exercises: [Two seats, one neighborhood (ex12)](../../01_STAR/exercises/ex12_bloc_vs_proportional.md) — the Bloc sweep vs the Allocated share on ten ballots — and [The transfer machine (ex14)](../../01_STAR/exercises/ex14_transfer_machine.md) — STV's quota and transfers by hand.
 - **The point:** STV is the proportional multi-winner *cousin of IRV*, not IRV; proportional methods seat coalitions in proportion, while Bloc STAR lets a majority sweep.
 - **Deeper math:** [the math behind proportional STAR](../proportional_representation/STAR_PR/the_math_behind_proportional_star.md) — quotas, D'Hondt reweighting, JR/EJR, fair division.
 - **ABC rules & the utilitarian–egalitarian spectrum:** [ABC rules](../Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén) and the shadow-STAR bridge (Bloc STAR = AV, RRV = PAV), verified with `abcvoting`.
@@ -25,7 +25,7 @@
 ## 301.3 — "Are equal-score votes discounted?"
 
 - **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
-- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md); drill: [The vanishing votes (ex07)](../../01_STAR/exercises/ex07_vanishing_votes.md).
+- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md); drill: [The vanishing votes (ex07)](../../01_STAR/exercises/ex07_vanishing_votes.md).
 - **In the result display:** [Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
 
 ## 301.4 — The honest limits & theory
@@ -34,7 +34,7 @@
 - **Material:** [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); "resistant, not proof." Worked gamble: [Bullet voting backfires (ex06)](../../01_STAR/exercises/ex06_bullet_backfire.md).
 - **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
 - **Deeper math:** [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite).
-- **The generalized Condorcet winner:** [The Smith set — the smallest club that beats everyone outside it](../topics/smith_set.md) — when a cycle erases the Condorcet winner, the smallest set that beats everyone outside it is the principled "still in contention" list; the Smith-efficiency scorecard (Ranked Robin ✅, Minimax ❌, STAR ❌ by design), the Smith//X constructions, and ISDA — worked on a runnable 4-candidate cycle ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/condorcet_vs_ranked_robin_pages/04_smith_set_c4_b7.md)).
+- **The generalized Condorcet winner:** [The Smith set — the smallest club that beats everyone outside it](../topics/smith_set.md) — when a cycle erases the Condorcet winner, the smallest set that beats everyone outside it is the principled "still in contention" list; the Smith-efficiency scorecard (Ranked Robin ✅, Minimax ❌, STAR ❌ by design), the Smith//X constructions, and ISDA — worked on a runnable 4-candidate cycle ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md)).
 
 ## 301.5 — The vote-splitting formula (blocs)
 
@@ -59,7 +59,7 @@
 
 - **Objective:** a score scale's *resolution* (0–5 vs 0–9…) is a modeling choice; when the top contenders are bunched, compressing the scale can move a **finalist** and flip the **STAR** winner — even though rescaling never reorders any voter's own preferences.
 - **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
-- **Material:** [Scale granularity can flip the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md); case [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) (0–5 → Orange5, 0–9 → Orange1).
+- **Material:** [Scale granularity can flip the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md); case [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/cases/rrv_sample_c15_b13_three-parties.yaml) (0–5 → Orange5, 0–9 → Orange1).
 - **Companion — "unorthodox STAR":** [Running STAR on a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md) — the 0–5 range is a *convention*, not a rule; which round the scale touches (finalists, never the runoff), the honest tradeoff, and how to make LH tabulate a 0–10 STAR election (`maximum_score=N`).
 - **The point:** a *fragile, mapping-dependent* divergence — present both counts, never quote one.
 

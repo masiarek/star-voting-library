@@ -2,7 +2,7 @@
 
 Method-specific terms for **Approval**. Shared, cross-method vocabulary (spoiler / vote-splitting, monotonicity, summability, the Equal Vote criterion…) lives in the [main glossary](../GLOSSARY.md).
 
-- **Approval voting** — mark each candidate 0 or 1 (approve / not); the most approvals wins. Score voting at 1-bit resolution. → [Approval Voting](approval_voting.md); demo [`approval_101_c3_b5`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md)
+- **Approval voting** — mark each candidate 0 or 1 (approve / not); the most approvals wins. Score voting at 1-bit resolution. → [Approval Voting](approval_voting.md); demo [`approval_101_c3_b5`](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md)
 - **Approval threshold ("where's my line?")** — the one hard choice an Approval ballot forces: how good must a candidate be to earn your approval. Shift the line and the result can change — Approval's central limitation. → [Approval Voting — Honest Limits](approval_honest_limits.md)
 - **Double-bubble (Yes/No) ballot** — an Approval ballot with an explicit Yes *and* No bubble per candidate, so a blank is distinguishable from a deliberate "No" (a ballot-security hardening).
 - **Approval + Top-Two ("unified primary")** — a nonpartisan Approval primary whose two most-approved candidates meet in a head-to-head general (St. Louis since 2021; Oregon's 2014 Unified Primary proposal). The runoff must be a *second election* — re-counting the same 0/1 ballots head-to-head just returns the approval margin — which is the gap STAR's 0–5 ballot closes. → [Approval + Top-Two](approval_top_two.md)

@@ -34,4 +34,4 @@ Nobody holds a first-choice majority (11/14/4/4), so Coombs deletes the candidat
 | Ranked Robin | Arlo | Arlo | ✓ |
 | Coombs *(paper only)* | — | Bree (Arlo deleted first) | n/a |
 
-No IRV race: its first elimination is a random Cole/Dana 4–4 tie on BV. Files: [star](bv2164_xbqq8t_star.yaml) · [plurality](bv2164_xbqq8t_plurality.yaml) · [rr](bv2164_xbqq8t_ranked_robin.yaml) · [frozen export](bv2164_xbqq8t_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2164_xbqq8t_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2164_xbqq8t_plurality_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2164_xbqq8t_ranked_robin_tabulated.txt).
+No IRV race: its first elimination is a random Cole/Dana 4–4 tie on BV. Files: [star](cases/bv2164_xbqq8t_star.yaml) · [plurality](cases/bv2164_xbqq8t_plurality.yaml) · [rr](cases/bv2164_xbqq8t_ranked_robin.yaml) · [frozen export](cases/bv2164_xbqq8t_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2164_xbqq8t_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2164_xbqq8t_plurality_tabulated.txt), [rr](cases/cases_tabulated/bv2164_xbqq8t_ranked_robin_tabulated.txt).

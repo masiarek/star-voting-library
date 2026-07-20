@@ -26,7 +26,7 @@ A, B, C, D, E
 5, 5, 5, 4, 4
 ```
 
-Source: [`Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml`](Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml) · BV: <https://bettervoting.com/xmyf7k/results>.
+Source: [`Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml`](cases/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml) · BV: <https://bettervoting.com/xmyf7k/results>.
 
 ## Where the two engines diverge
 
@@ -76,7 +76,7 @@ Automatic Runoff Round
 Winner: A
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_05_scoring_tie_3way_xmyf7k_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_05_scoring_tie_3way_xmyf7k_tabulated.txt).
 
 ## The two open threads on BetterVoting
 

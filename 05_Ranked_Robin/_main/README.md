@@ -4,7 +4,7 @@ The single worked introduction to Ranked Robin: the consensus candidate that RCV
 
 | Case (page) | What it shows | src |
 |---|---|:--:|
-| [the consensus center wins](_main_pages/ranked_robin_consensus_center.md) | RR elects the broadly-preferred center that IRV squeezes out | [`.yaml`](ranked_robin_consensus_center.yaml) |
+| [the consensus center wins](cases/cases_pages/ranked_robin_consensus_center.md) | RR elects the broadly-preferred center that IRV squeezes out | [`.yaml`](cases/ranked_robin_consensus_center.yaml) |
 
 Up: [05_Ranked_Robin — Ranked Robin (RCV-RR / Copeland)](../)
 

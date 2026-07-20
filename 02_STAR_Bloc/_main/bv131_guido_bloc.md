@@ -2,7 +2,7 @@
 
 *Marked "Passed" in the sheet, but seat 1 is a **perfect lot-decided tie** — the Bloc analog of [`jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md). BetterVoting broke it with a random draw (Cand2), and — the reporting catch — its top-level `tieBreakType` says "none" anyway.*
 
-Reference files: [`bv131_guido_bloc.yaml`](bv131_guido_bloc.yaml) (`expected_winners: [Cand2, Cand3]`) · frozen export [`bv131_guido_bloc_bv_export.json`](bv131_guido_bloc_bv_export.json) (BV `kbh3d9`). Backs sheet row **BV131**.
+Reference files: [`bv131_guido_bloc.yaml`](cases/bv131_guido_bloc.yaml) (`expected_winners: [Cand2, Cand3]`) · frozen export [`bv131_guido_bloc_bv_export.json`](cases/bv131_guido_bloc_bv_export.json) (BV `kbh3d9`). Backs sheet row **BV131**.
 
 ## The election
 
@@ -74,7 +74,7 @@ Winners — Bloc STAR Voting Method (2 winners)
  Cand3
 ```
 
-Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](_main_tabulated/bv131_guido_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](cases/cases_tabulated/bv131_guido_bloc_tabulated.txt).
 
 ## Two findings
 

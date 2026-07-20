@@ -11,7 +11,7 @@ Reproduces the bug where an explicit **all-zero ("equal opposition")** ballot is
 | Voter intent | **actively rejects** both | **no preference** (abstains) |
 | BetterVoting label | "Abstained — No preference" ❌ | "Abstained — No preference" ✅ |
 
-The two races produce the *same* "Abstained" label, but they mean different things — that's the bug. This page reproduces **Race 1** as the tabulatable case; the raw export ([`_bv_export.json`](bv655_jfrk9t_equal_opposition_bv_export.json)) contains both races.
+The two races produce the *same* "Abstained" label, but they mean different things — that's the bug. This page reproduces **Race 1** as the tabulatable case; the raw export ([`_bv_export.json`](cases/bv655_jfrk9t_equal_opposition_bv_export.json)) contains both races.
 
 ## What it teaches
 
@@ -56,6 +56,6 @@ Winner — STAR Voting Method (single winner)
 
 (The `Abs = 1` on Option 2 is Ballot 2's `&` — a *per-candidate* blank — not a whole-ballot abstention. LH's whole-ballot abstention count here is 0; BetterVoting's is 1.)
 
-Full engine detail: [`bv655_jfrk9t_equal_opposition_tabulated.txt`](abstain_bugs_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt). Tabulatable source: [`bv655_jfrk9t_equal_opposition.yaml`](bv655_jfrk9t_equal_opposition.yaml).
+Full engine detail: [`bv655_jfrk9t_equal_opposition_tabulated.txt`](cases/cases_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt). Tabulatable source: [`bv655_jfrk9t_equal_opposition.yaml`](cases/bv655_jfrk9t_equal_opposition.yaml).
 
 Part of the BetterVoting abstain/blank/zero cluster — see the [issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).

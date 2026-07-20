@@ -5,8 +5,8 @@
 - **Captured:** 2026-06-28
 - **BetterVoting election id:** `pet` ("What Makes the Best Pet?")
 - **Live result (may change):** <https://bettervoting.com/pet/results>
-- **Frozen raw export (this folder):** [`best_pet_c7_b461_bv_export.json`](best_pet_c7_b461_bv_export.json) — the full BetterVoting JSON (461 ballots + BetterVoting's own `Results`).
-- **Converted election (tabulated by the LH engine):** [`best_pet_c7_b461.yaml`](best_pet_c7_b461.yaml)
+- **Frozen raw export (this folder):** [`best_pet_c7_b461_bv_export.json`](cases/best_pet_c7_b461_bv_export.json) — the full BetterVoting JSON (461 ballots + BetterVoting's own `Results`).
+- **Converted election (tabulated by the LH engine):** [`best_pet_c7_b461.yaml`](cases/best_pet_c7_b461.yaml)
 
 ## BetterVoting's reported result (frozen)
 
@@ -50,7 +50,7 @@ The whole gap is one classification choice: BetterVoting files **flat / Equal Su
 - The correctness/reconciliation write-up: [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md) → filed as [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)
 - **Canonical small case (a lesson in itself): [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) as abstentions
 - Even-simpler 2-candidate capture (BV calls a `5,5` an abstention): [The minimal case](small_abstention_c2_b5_lesson.md)
-- Minimal synthetic illustration (LH-correct behavior): [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
+- Minimal synthetic illustration (LH-correct behavior): [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml)
 - How that small case was reproduced on BetterVoting: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
 - Worked lesson: [A real BetterVoting election, end to end — "What Makes the Best Pet?"](README.md)
 - Concept: [BetterVoting and the LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) · [Runoff percentages](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md)

@@ -24,7 +24,7 @@ Simpson      35  Rejected
 WriteIn      36  Rejected
 ```
 
-Montroll — the one candidate a majority preferred to each rival — had the fewest of the top three *first* choices, so IRV cut him in the semifinal. That is the **[center squeeze](../../00_start_here/topics/center_squeeze/README.md)**, not as a whiteboard construction but as a certified municipal result. ([Run it](burlington_2009_irv.yaml).)
+Montroll — the one candidate a majority preferred to each rival — had the fewest of the top three *first* choices, so IRV cut him in the semifinal. That is the **[center squeeze](../../00_start_here/topics/center_squeeze/README.md)**, not as a whiteboard construction but as a certified municipal result. ([Run it](cases/burlington_2009_irv.yaml).)
 
 ## The pairwise truth
 
@@ -42,11 +42,11 @@ Round-Robin — every pair, head-to-head (For – Against):
     3  Wright     3–2–0         3   +8850   <- the plurality leader
 ```
 
-A perfect 5–0 record ([run it](burlington_2009_ranked_robin.yaml)). Wright voters preferred Montroll to Kiss 3-to-1 among those expressing a preference; Kiss voters preferred Montroll to Wright. The middle of the electorate agreed on the Democrat — and the count in force never asked the question.
+A perfect 5–0 record ([run it](cases/burlington_2009_ranked_robin.yaml)). Wright voters preferred Montroll to Kiss 3-to-1 among those expressing a preference; Kiss voters preferred Montroll to Wright. The middle of the electorate agreed on the Democrat — and the count in force never asked the question.
 
 ## The raise: Kiss gains 750 votes and loses
 
-Non-monotonicity, built from the same real profile ([run it](burlington_2009_raise_kiss_nonmono.yaml)). Let 750 Wright-first voters **raise the winner Kiss to first** — all 281 who already ranked Kiss second (their top two swap) plus 469 of the 840 Wright-only bullet voters (now `Kiss > Wright`):
+Non-monotonicity, built from the same real profile ([run it](cases/burlington_2009_raise_kiss_nonmono.yaml)). Let 750 Wright-first voters **raise the winner Kiss to first** — all 281 who already ranked Kiss second (their top two swap) plus 469 of the 840 Wright-only bullet voters (now `Kiss > Wright`):
 
 ```text
 SEMIFINAL                        FINAL
@@ -67,12 +67,12 @@ Kiss's new support knocks *Wright* below Montroll in the semifinal; Montroll sur
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/burlington_2009_irv.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/burlington_2009_ranked_robin.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/burlington_2009_raise_kiss_nonmono.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/cases/burlington_2009_irv.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/cases/burlington_2009_ranked_robin.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml
 ```
 
-Full mirrors: [`burlington_2009_tabulated/`](burlington_2009_tabulated/). LH-only (no BetterVoting election — 8,974 weighted ballots across 378 patterns; the value here is fidelity to the record, not castability).
+Full mirrors: [`burlington_2009_tabulated/`](cases/cases_tabulated/). LH-only (no BetterVoting election — 8,974 weighted ballots across 378 patterns; the value here is fidelity to the record, not castability).
 
 ---
 

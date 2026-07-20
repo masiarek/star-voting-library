@@ -20,15 +20,15 @@ The 20-voter election from Equal Vote's video **["Updated: How does RCV work? �
 
 | Race | Page | src | LH winner | BV winner |
 |---|---|:--:|:--:|:--:|
-| BV2176/77 — STAR | [page](postit_rcv_example_pages/bv2176_p8dp28_star.md) | [`.yaml`](bv2176_p8dp28_star.yaml) | Blue | Blue |
-| BV2176/77 — RCV-IRV (& STV 1-seat) | [page](postit_rcv_example_pages/bv2176_p8dp28_irv.md) | [`.yaml`](bv2176_p8dp28_irv.yaml) | Purple | Purple |
-| BV2176/77 — Ranked Robin | [page](postit_rcv_example_pages/bv2176_p8dp28_ranked_robin.md) | [`.yaml`](bv2176_p8dp28_ranked_robin.yaml) | **Blue** | **Green** |
-| BV2177 — Approval (any support) | [page](postit_rcv_example_pages/bv2177_v8r66y_approval.md) | [`.yaml`](bv2177_v8r66y_approval.yaml) | Pink | Pink |
-| BV2177 — Choose-One | [page](postit_rcv_example_pages/bv2177_v8r66y_plurality.md) | [`.yaml`](bv2177_v8r66y_plurality.yaml) | Purple | Purple |
+| BV2176/77 — STAR | [page](cases/cases_pages/bv2176_p8dp28_star.md) | [`.yaml`](cases/bv2176_p8dp28_star.yaml) | Blue | Blue |
+| BV2176/77 — RCV-IRV (& STV 1-seat) | [page](cases/cases_pages/bv2176_p8dp28_irv.md) | [`.yaml`](cases/bv2176_p8dp28_irv.yaml) | Purple | Purple |
+| BV2176/77 — Ranked Robin | [page](cases/cases_pages/bv2176_p8dp28_ranked_robin.md) | [`.yaml`](cases/bv2176_p8dp28_ranked_robin.yaml) | **Blue** | **Green** |
+| BV2177 — Approval (any support) | [page](cases/cases_pages/bv2177_v8r66y_approval.md) | [`.yaml`](cases/bv2177_v8r66y_approval.yaml) | Pink | Pink |
+| BV2177 — Choose-One | [page](cases/cases_pages/bv2177_v8r66y_plurality.md) | [`.yaml`](cases/bv2177_v8r66y_plurality.yaml) | Purple | Purple |
 | BV2177 — STAR-PR, 1 seat | (BV-only: LH's allocated needs ≥ 2 seats) | — | — | Purple |
-| BV2178 — STAR | [page](postit_rcv_example_pages/bv2178_8kg698_star.md) | [`.yaml`](bv2178_8kg698_star.yaml) | Blue | Blue |
-| BV2178 — RCV-IRV | [page](postit_rcv_example_pages/bv2178_8kg698_irv.md) | [`.yaml`](bv2178_8kg698_irv.yaml) | Blue | Blue |
-| BV2178 — Ranked Robin | [page](postit_rcv_example_pages/bv2178_8kg698_ranked_robin.md) | [`.yaml`](bv2178_8kg698_ranked_robin.yaml) | Blue | Blue |
+| BV2178 — STAR | [page](cases/cases_pages/bv2178_8kg698_star.md) | [`.yaml`](cases/bv2178_8kg698_star.yaml) | Blue | Blue |
+| BV2178 — RCV-IRV | [page](cases/cases_pages/bv2178_8kg698_irv.md) | [`.yaml`](cases/bv2178_8kg698_irv.yaml) | Blue | Blue |
+| BV2178 — Ranked Robin | [page](cases/cases_pages/bv2178_8kg698_ranked_robin.md) | [`.yaml`](cases/bv2178_8kg698_ranked_robin.yaml) | Blue | Blue |
 | BV2178 — Choose-One | (in the STAR mirror's divergence block) | — | Purple | Purple |
 
 Related: [LH vs BV on Ranked Robin ties](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) (the same "eliminated the head-to-head winner" mechanic with a clean Condorcet winner) · up: [method_comparisons — same ballots, different methods](../)

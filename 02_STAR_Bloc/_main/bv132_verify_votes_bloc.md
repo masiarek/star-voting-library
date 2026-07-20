@@ -2,7 +2,7 @@
 
 *BetterVoting reports the wrong number of voters on a Bloc STAR election: it drops the two "flat" ballots (every candidate scored the same) as abstentions. The winners are still correct — the bug is the vote count / turnout, not the result.*
 
-Reference files: [`bv132_verify_votes_bloc.yaml`](bv132_verify_votes_bloc.yaml) (LH, `expected_winners: [C, B]`) · frozen export [`bv132_verify_votes_bloc_bv_export.json`](bv132_verify_votes_bloc_bv_export.json) (BV election `3494cb`). Backs sheet row **BV132**.
+Reference files: [`bv132_verify_votes_bloc.yaml`](cases/bv132_verify_votes_bloc.yaml) (LH, `expected_winners: [C, B]`) · frozen export [`bv132_verify_votes_bloc_bv_export.json`](cases/bv132_verify_votes_bloc_bv_export.json) (BV election `3494cb`). Backs sheet row **BV132**.
 
 ## The election
 
@@ -69,7 +69,7 @@ Winners — Bloc STAR Voting Method (2 winners)
  B
 ```
 
-Full audit copy: [`_main_tabulated/bv132_verify_votes_bloc_tabulated.txt`](_main_tabulated/bv132_verify_votes_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv132_verify_votes_bloc_tabulated.txt`](cases/cases_tabulated/bv132_verify_votes_bloc_tabulated.txt).
 
 ## The diagnostic (where the ballots go)
 

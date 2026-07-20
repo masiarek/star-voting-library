@@ -4,7 +4,7 @@
 
 → Companion to [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?" argument) and [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md). When the two counts elect *different* people, see [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**. <!-- terminology-ok: bare RCV is inside linked page titles -->
 
-Worked on one shared file: [`count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/count_simplicity_star_vs_irv.yaml) — 45 voters, 5 candidates (Andre, Blake, Carmen, Dana, Evan).
+Worked on one shared file: [`count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml) — 45 voters, 5 candidates (Andre, Blake, Carmen, Dana, Evan).
 
 ---
 

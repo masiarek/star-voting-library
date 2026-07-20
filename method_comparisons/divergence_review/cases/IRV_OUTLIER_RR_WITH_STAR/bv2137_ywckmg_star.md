@@ -21,7 +21,7 @@ STAR elects **Anderson** — and so do Ranked Robin and Condorcet, because **And
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml`](../../../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_star.yaml)  ·  **STAR tabulated mirror:** [`bv2137_ywckmg_star_tabulated.txt`](../../../../method_comparisons/center_squeeze_bv2137/center_squeeze_bv2137_tabulated/bv2137_ywckmg_star_tabulated.txt)
+**Source election:** [`method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml`](../../../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml)  ·  **STAR tabulated mirror:** [`bv2137_ywckmg_star_tabulated.txt`](../../../../method_comparisons/center_squeeze_bv2137/cases/cases_tabulated/bv2137_ywckmg_star_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

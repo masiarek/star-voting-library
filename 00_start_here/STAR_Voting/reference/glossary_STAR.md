@@ -3,7 +3,7 @@
 Method-specific terms for **STAR** (Score Then Automatic Runoff). Shared, cross-method vocabulary (monotonicity, Condorcet, summability, the Equal Vote criterion, spoiler / vote-splitting…) lives in the [main glossary](../../GLOSSARY.md) — this page only defines what's specific to STAR.
 
 - **STAR** — Score Then Automatic Runoff: score every candidate 0–5; the two highest totals advance to an automatic head-to-head runoff.
-- **Scoring round** — STAR's first round: add up each candidate's scores; the top two become finalists. → concept [The Scoring Round](../the_count/STAR_Scoring_Round.md); demo [`equal_support_runoff_demo`](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)
+- **Scoring round** — STAR's first round: add up each candidate's scores; the top two become finalists. → concept [The Scoring Round](../the_count/STAR_Scoring_Round.md); demo [`equal_support_runoff_demo`](../../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md)
 - **Finalists** — the two highest-scoring candidates, who advance to the runoff. → the round that *chooses* them, [The Scoring Round](../the_count/STAR_Scoring_Round.md); the round they *compete* in, [The Automatic Runoff](../the_count/STAR_Automatic_Runoff.md).
 - **Automatic runoff** — STAR's second round: each ballot counts as a full vote for whichever finalist it scored higher; the preferred finalist wins.
 - **Equal Support** — scoring the two finalists the same; counts as "no preference" between them in the runoff (still fully counted in the scoring round). The aka is documented once in the [main glossary](../../GLOSSARY.md). → ["Aren't Equal-Score Votes Just Discounted?"](are_equal_score_votes_discounted.md)

@@ -4,7 +4,7 @@
 
 > **Which BV130 is this?** This is **BV130-r2** (the retest, election `9ff9jk`, marked **Passed**) — a *different* election from the original **BV130**, which is a 9-ballot "Someone I Like / Santa Claus / The Lesser Evil" case backing the star-server#731 *reporting* issue (tabs → numbered pages). See [`bv130_bloc_pagination_731.md`](bv130_bloc_pagination_731.md) for that one. This page is purely about the tie behavior; the outcome itself is valid (a random draw among a genuine tie), which is why the tracker marks it Passed.
 
-Reference files: [`bv130r2_dead_rung_bloc.yaml`](bv130r2_dead_rung_bloc.yaml) (`expected_winners: [Dan, Ada, Eve]`) · frozen export [`bv130r2_dead_rung_bloc_bv_export.json`](bv130r2_dead_rung_bloc_bv_export.json) (BV `9ff9jk`). Backs sheet row **BV130-r2**.
+Reference files: [`bv130r2_dead_rung_bloc.yaml`](cases/bv130r2_dead_rung_bloc.yaml) (`expected_winners: [Dan, Ada, Eve]`) · frozen export [`bv130r2_dead_rung_bloc_bv_export.json`](cases/bv130r2_dead_rung_bloc_bv_export.json) (BV `9ff9jk`). Backs sheet row **BV130-r2**.
 
 ## The election
 
@@ -74,7 +74,7 @@ Winners — Bloc STAR Voting Method (3 winners)
  Eve
 ```
 
-Full audit copy: [`_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt`](_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt`](cases/cases_tabulated/bv130r2_dead_rung_bloc_tabulated.txt).
 
 ## Two findings
 

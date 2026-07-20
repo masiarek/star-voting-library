@@ -2,7 +2,7 @@
 
 *You've read the [plain-language 101](alaska_101.md). Now we count it exactly: the IRV transfers, the exhausted ballots, the head-to-head grid, and the two pieces of vocabulary that name what happened — **Condorcet winner** and **center squeeze**. All numbers are the [reduced 200-voter model](README.md); the real election is the same story ~943× bigger.*
 
-Run it: [`bv2213_k3fmwv_alaska_2022.yaml`](bv2213_k3fmwv_alaska_2022.yaml) · live BV counts: [results ↗](https://bettervoting.com/k3fmwv/results).
+Run it: [`bv2213_k3fmwv_alaska_2022.yaml`](cases/bv2213_k3fmwv_alaska_2022.yaml) · live BV counts: [results ↗](https://bettervoting.com/k3fmwv/results).
 
 ---
 

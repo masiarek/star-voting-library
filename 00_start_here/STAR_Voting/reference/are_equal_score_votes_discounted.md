@@ -2,7 +2,7 @@
 
 *The objection, in its strongest form: in STAR, a ballot that scores both finalists the same (a 5/5, a 0/0) is tagged **Equal Support** — "no preference" between the two — and moves nothing in the Automatic Runoff. Sometimes that's a lot of ballots. Isn't that just a discounted vote? This page answers honestly: it concedes the mechanical fact, shows why "discounted" is the wrong word, proves with a runnable election that these ballots do real work, and names the one version of the criticism that genuinely lands.*
 
-→ Companions: [Equal Support in both rounds (the demo)](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](../the_count/STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](../getting_started/common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
+→ Companions: [Equal Support in both rounds (the demo)](../../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md) · [the Automatic Runoff](../the_count/STAR_Automatic_Runoff.md) · ["exhausted ballots," untangled](../../RCV_IRV/exhausted_ballots_301.md) · [common misunderstandings](../getting_started/common_misunderstandings.md) · Glossary: [`Equal Support`](glossary_STAR.md)
 
 ---
 
@@ -27,7 +27,7 @@ One is missing data; the other is present data that happens to be neutral. Treat
 
 ## Proof they're counted: an election where equal-score ballots pick the finalists
 
-Run [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/equal_support_runoff_demo.yaml) ([reader page](../../../01_STAR/_main/_main_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
+Run [`equal_support_runoff_demo.yaml`](../../../01_STAR/_main/cases/equal_support_runoff_demo.yaml) ([reader page](../../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
 
 ```text
 --- STAR Voting Method (single winner) ---

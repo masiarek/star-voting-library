@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Boston**. Only **Approval** differ
 
 **Flags:** none
 
-**Source election:** [`01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.yaml)  ·  **STAR tabulated mirror:** [`Runoff_02_atom_reversal_yx9447_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/runoff_reversal_bv_cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt)
+**Source election:** [`01_STAR/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml`](../../../../01_STAR/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml)  ·  **STAR tabulated mirror:** [`Runoff_02_atom_reversal_yx9447_tabulated.txt`](../../../../01_STAR/runoff_reversal_bv_cases/cases/cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt)
 
 _3 candidates, 3 ballots._
 

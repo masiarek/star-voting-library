@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Ada** rather than STAR's **Bruno**, but this 
 
 **Flags:** 2 tied-score ballot(s)
 
-**Source election:** [`01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/majority_criterion/majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
+**Source election:** [`01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/majority_criterion/cases/cases_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

@@ -15,4 +15,4 @@ No. of voters    Preference ordering
 
 This is the strongest possible district-level verdict — a majority favorite *and* Condorcet winner — which is what makes the sequel sting: Bruno also wins [District I](bv2147_9gdrqg_felsenthal_ex3_district1.md), yet [the combined electorate](bv2149_byk9v2_felsenthal_ex3_reinforcement.md) elects Alma. Teaching page: [multiple_districts.md](../../00_start_here/voting_paradoxes/multiple_districts.md).
 
-Files: [bv2148_h87k6v_irv.yaml](bv2148_h87k6v_irv.yaml) · [bv2148_h87k6v_star.yaml](bv2148_h87k6v_star.yaml) · [frozen export](bv2148_h87k6v_bv_export.json) · mirrors: [IRV](felsenthal_paradoxes_tabulated/bv2148_h87k6v_irv_tabulated.txt), [STAR](felsenthal_paradoxes_tabulated/bv2148_h87k6v_star_tabulated.txt).
+Files: [bv2148_h87k6v_irv.yaml](cases/bv2148_h87k6v_irv.yaml) · [bv2148_h87k6v_star.yaml](cases/bv2148_h87k6v_star.yaml) · [frozen export](cases/bv2148_h87k6v_bv_export.json) · mirrors: [IRV](cases/cases_tabulated/bv2148_h87k6v_irv_tabulated.txt), [STAR](cases/cases_tabulated/bv2148_h87k6v_star_tabulated.txt).

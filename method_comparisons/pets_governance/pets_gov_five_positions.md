@@ -2,7 +2,7 @@
 
 *One electorate elects a whole pet government six different ways. The lesson is the sharpest divide in multi-winner voting: **majoritarian methods hand every seat to the majority; proportional methods seat the minority.** All six races are reproducible on BetterVoting (see "On BetterVoting" below), and all six are cross-checked against our LH engine.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`, Test ID **BV2134**). Frozen export: [`pets_gov_bv2134_kcf8vf_bv_export.json`](pets_gov_bv2134_kcf8vf_bv_export.json).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`, Test ID **BV2134**). Frozen export: [`pets_gov_bv2134_kcf8vf_bv_export.json`](cases/pets_gov_bv2134_kcf8vf_bv_export.json).
 
 ## The electorate
 
@@ -17,12 +17,12 @@ The majority is 59%, the minority 41% — so a fair 3-seat body "should" be roug
 
 | Position | Method | Seats | Winners | Character |
 |----------|--------|:---:|---------|-----------|
-| **Mayor** | [Ranked Robin](pets_gov_ranked_robin.yaml) | 1 | **Dog** | Condorcet — majority's consensus |
-| **Council** | [Bloc STAR](pets_gov_bloc_star.yaml) | 3 | **Dog, Fish, Cat** | majoritarian — **majority sweeps** |
-| **Committee** | [Approval](pets_gov_approval.yaml) | 2 | **Dog, Cat** | majoritarian — majority again |
-| **Council (PR)** | [STAR-PR](pets_gov_star_pr.yaml) | 3 | **Bird, Dog, Fish** | proportional — **minority seated** |
-| **Delegates** | [STV](pets_gov_stv.yaml) | 3 | **Dog, Bird, Cat** | proportional — minority seated |
-| **Neighborhood Reps** | [Bloc Plurality (SNTV)](pets_gov_bloc_plurality.yaml) | 2 | **Dog, Bird** | concentrated votes → minority seated |
+| **Mayor** | [Ranked Robin](cases/pets_gov_ranked_robin.yaml) | 1 | **Dog** | Condorcet — majority's consensus |
+| **Council** | [Bloc STAR](cases/pets_gov_bloc_star.yaml) | 3 | **Dog, Fish, Cat** | majoritarian — **majority sweeps** |
+| **Committee** | [Approval](cases/pets_gov_approval.yaml) | 2 | **Dog, Cat** | majoritarian — majority again |
+| **Council (PR)** | [STAR-PR](cases/pets_gov_star_pr.yaml) | 3 | **Bird, Dog, Fish** | proportional — **minority seated** |
+| **Delegates** | [STV](cases/pets_gov_stv.yaml) | 3 | **Dog, Bird, Cat** | proportional — minority seated |
+| **Neighborhood Reps** | [Bloc Plurality (SNTV)](cases/pets_gov_bloc_plurality.yaml) | 2 | **Dog, Bird** | concentrated votes → minority seated |
 
 Every winner is tabulated by the LH engine (`starvote_larry_hastings.py`); mirrors are in `pets_governance_tabulated/`.
 

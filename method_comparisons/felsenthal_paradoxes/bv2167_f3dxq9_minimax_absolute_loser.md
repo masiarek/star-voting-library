@@ -35,4 +35,4 @@ With no Condorcet winner, Minimax elects the candidate whose **worst pairwise lo
 
 Choose-One and Minimax converge on the absolute loser from opposite directions — one counts only D's five committed fans, the other only D's narrow defeats. STAR elects a top-cycle member. No Ranked Robin race (the A/B/C Copeland tie → BV random) and no IRV race (a random transfer tie), per the freezability rule.
 
-Files: [star yaml](bv2167_f3dxq9_star.yaml) · [plurality yaml](bv2167_f3dxq9_plurality.yaml) · [frozen export](bv2167_f3dxq9_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2167_f3dxq9_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2167_f3dxq9_plurality_tabulated.txt).
+Files: [star yaml](cases/bv2167_f3dxq9_star.yaml) · [plurality yaml](cases/bv2167_f3dxq9_plurality.yaml) · [frozen export](cases/bv2167_f3dxq9_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2167_f3dxq9_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2167_f3dxq9_plurality_tabulated.txt).

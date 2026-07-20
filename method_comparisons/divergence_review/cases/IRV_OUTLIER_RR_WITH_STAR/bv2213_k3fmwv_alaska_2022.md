@@ -21,7 +21,7 @@ STAR elects **Begich** — and so do Ranked Robin and Condorcet, because **Begic
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022.yaml`](../../../../method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022.yaml)  ·  **STAR tabulated mirror:** [`bv2213_k3fmwv_alaska_2022_tabulated.txt`](../../../../method_comparisons/alaska_2022/alaska_2022_tabulated/bv2213_k3fmwv_alaska_2022_tabulated.txt)
+**Source election:** [`method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml`](../../../../method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml)  ·  **STAR tabulated mirror:** [`bv2213_k3fmwv_alaska_2022_tabulated.txt`](../../../../method_comparisons/alaska_2022/cases/cases_tabulated/bv2213_k3fmwv_alaska_2022_tabulated.txt)
 
 _3 candidates, 200 ballots._
 

@@ -8,7 +8,7 @@ The [electowiki Ranked Robin worked example](https://electowiki.org/wiki/Ranked_
 
 Ranked Robin (RCV-RR / Copeland) reads the whole ballot and runs a round-robin: every candidate is compared head-to-head with every other, and whoever wins the **most** matchups is elected. Here **Ava wins 3 of her 4 matchups** (beating Cedric, Deegan, and Eli) and is elected.
 
-The twist: **there is no Condorcet winner.** A Condorcet winner beats *everyone* head-to-head, and nobody here does — **Ava herself loses to Bianca, 15–14.** In fact the top three form a rock-paper-scissors cycle: Ava beats Cedric, Cedric beats Bianca, and Bianca beats Ava. So "who beats everyone?" has no answer, but "who wins the most matchups?" still does — that's the question Ranked Robin asks, and why it always produces a winner where a strict Condorcet rule would stall. (Compare the two companions in this folder: [`01_condorcet_winner`](01_condorcet_winner.yaml), where a clean Condorcet winner exists, and [`02_cycle_no_condorcet`](02_cycle_no_condorcet.yaml), a pure 3-way tie.)
+The twist: **there is no Condorcet winner.** A Condorcet winner beats *everyone* head-to-head, and nobody here does — **Ava herself loses to Bianca, 15–14.** In fact the top three form a rock-paper-scissors cycle: Ava beats Cedric, Cedric beats Bianca, and Bianca beats Ava. So "who beats everyone?" has no answer, but "who wins the most matchups?" still does — that's the question Ranked Robin asks, and why it always produces a winner where a strict Condorcet rule would stall. (Compare the two companions in this folder: [`01_condorcet_winner`](cases/01_condorcet_winner.yaml), where a clean Condorcet winner exists, and [`02_cycle_no_condorcet`](cases/02_cycle_no_condorcet.yaml), a pure 3-way tie.)
 
 ## The ballots
 
@@ -93,7 +93,7 @@ Winner — Ranked Robin (RCV-RR): Ava
    the most head-to-head wins (3).
 ```
 
-Full detail (forced-maximal) in the `_tabulated` mirror: [`bv2140_48hjkv_most_pairwise_wins_tabulated.txt`](condorcet_vs_ranked_robin_tabulated/bv2140_48hjkv_most_pairwise_wins_tabulated.txt).
+Full detail (forced-maximal) in the `_tabulated` mirror: [`bv2140_48hjkv_most_pairwise_wins_tabulated.txt`](cases/cases_tabulated/bv2140_48hjkv_most_pairwise_wins_tabulated.txt).
 
 ## Reading the matrix
 
@@ -102,6 +102,6 @@ Each cell is `For – Equal Support – Against` for the row candidate vs the co
 ## Cross-checks
 
 - **LH native** `run_ranked_robin` — Ava, 3 wins (above).
-- **BetterVoting** `RankedRobin.ts` — Ava, 3 wins; records identical to LH (View 1). Frozen: [`bv2140_48hjkv_most_pairwise_wins_bv_export.json`](bv2140_48hjkv_most_pairwise_wins_bv_export.json).
+- **BetterVoting** `RankedRobin.ts` — Ava, 3 wins; records identical to LH (View 1). Frozen: [`bv2140_48hjkv_most_pairwise_wins_bv_export.json`](cases/bv2140_48hjkv_most_pairwise_wins_bv_export.json).
 - **pref_voting** Copeland — the pref_voting wrapper currently shares the YAML reader that predates the `=` split, so this equal-rank profile isn't yet cross-checkable there; tracked separately. The pairwise records are independently confirmed by BV (above) and by a score-encoding of the same weak orders through LH.
 

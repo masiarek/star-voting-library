@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Bruno** rather than STAR's **Clara**, but thi
 
 **Flags:** 9 tied-score ballot(s); RR conversion-sensitive (weak=Clara, strict=Bruno)
 
-**Source election:** [`06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml`](../../../../06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml)  ·  **STAR tabulated mirror:** [`01_c3_b31_graders-divide_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/01_c3_b31_graders-divide_tabulated.txt)
+**Source election:** [`06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml`](../../../../06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml)  ·  **STAR tabulated mirror:** [`01_c3_b31_graders-divide_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/01_c3_b31_graders-divide_tabulated.txt)
 
 _3 candidates, 31 ballots._
 

@@ -31,4 +31,4 @@ Borda points (2/1/0): **A 6, B 7, C 8 → C elected.** Now let B — who *lost* 
 | Choose-One (Plurality) | **C** (3 of 7) | C | ✓ |
 | Borda *(paper only)* | — | C 8 → B exits → A 4–3 | n/a |
 
-Files: [star yaml](bv2161_q3h4fk_star.yaml) · [plurality yaml](bv2161_q3h4fk_plurality.yaml) · [frozen export](bv2161_q3h4fk_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2161_q3h4fk_star_tabulated.txt), [plurality](felsenthal_paradoxes_tabulated/bv2161_q3h4fk_plurality_tabulated.txt).
+Files: [star yaml](cases/bv2161_q3h4fk_star.yaml) · [plurality yaml](cases/bv2161_q3h4fk_plurality.yaml) · [frozen export](cases/bv2161_q3h4fk_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2161_q3h4fk_star_tabulated.txt), [plurality](cases/cases_tabulated/bv2161_q3h4fk_plurality_tabulated.txt).

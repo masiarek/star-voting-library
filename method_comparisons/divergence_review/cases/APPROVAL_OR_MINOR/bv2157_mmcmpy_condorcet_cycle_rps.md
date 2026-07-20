@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Rock**. Only **Approval** differs,
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../../../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.yaml)  ·  **STAR tabulated mirror:** [`bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt)
+**Source election:** [`method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../../../../method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml)  ·  **STAR tabulated mirror:** [`bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/cases/cases_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

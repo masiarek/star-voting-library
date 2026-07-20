@@ -1,0 +1,140 @@
+======================================================================
+SOURCE FILE:     ex13_opinions.yaml
+TABULATED FILE:  ex13_opinions_tabulated.txt
+======================================================================
+
+election_title: "Exercise 13 — Where do you draw the line? The honest opinions (STAR)"
+bv_test_id: BV2200
+bv_election_id: qdtqf2
+bv_results_url: https://bettervoting.com/qdtqf2/results
+
+scenario_description: |-
+  The reference election for the approval-threshold exercise: nine voters'
+  honest 0-5 opinions about Ash, Beck, and Cora — 3×(Ash 5, Beck 4),
+  2×(Beck 5, Cora 3), 4×(Cora 5, Ash 3). On the full scores, STAR
+  advances Ash (27) and Cora (26) and Cora wins the runoff 6-3; plain
+  Score voting would say Ash. The exercise then converts these SAME
+  opinions to Approval ballots under three defensible thresholds — and
+  gets three different Approval winners: approve 3+ elects Ash (7 of 9),
+  approve 4+ elects Beck (5), approve only 5s elects Cora (4). The
+  instructions, not the opinions, pick the winner. Companion files:
+  ex13_approve3.yaml / ex13_approve4.yaml / ex13_bullet.yaml. Exercise:
+  ex13_draw_the_line.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — one election, four races (STAR + the three approval thresholds); BV
+  agrees on all four winners.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ash,Beck,Cora
+  5,4,0 # 3 voters: Ash first, Beck a strong second
+  5,4,0
+  5,4,0
+  0,5,3 # 2 voters: Beck first, Cora mild
+  0,5,3
+  3,0,5 # 4 voters: Cora first, Ash tolerable
+  3,0,5
+  3,0,5
+  3,0,5
+expected_winners:
+  - Cora
+
+# file: ex13_opinions.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Exercise 13 — Where do you draw the line? The honest opinions (STAR) ===
+  The reference election for the approval-threshold exercise: nine voters'
+  honest 0-5 opinions about Ash, Beck, and Cora — 3×(Ash 5, Beck 4),
+  2×(Beck 5, Cora 3), 4×(Cora 5, Ash 3). On the full scores, STAR
+  advances Ash (27) and Cora (26) and Cora wins the runoff 6-3; plain
+  Score voting would say Ash. The exercise then converts these SAME
+  opinions to Approval ballots under three defensible thresholds — and
+  gets three different Approval winners: approve 3+ elects Ash (7 of 9),
+  approve 4+ elects Beck (5), approve only 5s elects Cora (4). The
+  instructions, not the opinions, pick the winner. Companion files:
+  ex13_approve3.yaml / ex13_approve4.yaml / ex13_bullet.yaml. Exercise:
+  ex13_draw_the_line.md. Ballots and cast are this repo's own.
+  Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
+  — one election, four races (STAR + the three approval thresholds); BV
+  agrees on all four winners.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ash    |    Beck   |  * Cora   |
+-----------------------------------------------------
+       * Ash > |    ---     |7 - 0 - 2  |3 - 0 - 6  |
+        Beck > | 2 - 0 - 7  |   ---     |5 - 0 - 4  |
+      * Cora > | 6 - 0 - 3  |4 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Ash > Beck > Cora > Ash)
+
+[Divergence from STAR]
+  STAR     = Cora
+  Approval = Ash   (differs from STAR)
+  RCV-RR   = Ash   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: cases_tabulated/ex13_opinions_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ash)
+ - Runoff Round Winner   = (Cora)
+  Candidate Ash earned the highest total score, but
+  Candidate Cora won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ash,Beck,Cora
+    4 ×   3,   0,   5
+    3 ×   5,   4,   0
+    2 ×   0,   5,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ash        3  0  4  0  0  2  |    27   3.0
+Beck       2  3  0  0  0  4  |    22   2.4
+Cora       4  0  2  0  0  3  |    26   2.9
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ash           -- 27 -- First place
+   Cora          -- 26 -- Second place
+   Beck          -- 22
+ Ash and Cora advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cora          -- 6 -- First place
+   Ash           -- 3
+   Equal Support -- 0
+ Cora wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cora 6 (67%)  ·  Ash 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cora

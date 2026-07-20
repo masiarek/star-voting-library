@@ -67,5 +67,5 @@ BetterVoting natively runs **four** of the ~15 methods (IRV, Ranked Robin, STV, 
 ## Sources
 
 - Robert LeGrand, ranked-ballot calculator — [calc.html](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) · [method descriptions](https://cs.angelo.edu/~rlegrand/rbvote/desc.html)
-- Live results: [bettervoting.com/cxrf8v/results](https://bettervoting.com/cxrf8v/results) · frozen export: [`bv2138_cxrf8v_bv_export.json`](bv2138_cxrf8v_bv_export.json)
-- Tabulatable sources: [IRV](bv2138_cxrf8v_irv.yaml) · [Ranked Robin](bv2138_cxrf8v_ranked_robin.yaml) · [STV](bv2138_cxrf8v_stv.yaml) · [STAR](bv2138_cxrf8v_star.yaml) · full detail in the sibling `_tabulated` mirrors
+- Live results: [bettervoting.com/cxrf8v/results](https://bettervoting.com/cxrf8v/results) · frozen export: [`bv2138_cxrf8v_bv_export.json`](cases/bv2138_cxrf8v_bv_export.json)
+- Tabulatable sources: [IRV](cases/bv2138_cxrf8v_irv.yaml) · [Ranked Robin](cases/bv2138_cxrf8v_ranked_robin.yaml) · [STV](cases/bv2138_cxrf8v_stv.yaml) · [STAR](cases/bv2138_cxrf8v_star.yaml) · full detail in the sibling `_tabulated` mirrors

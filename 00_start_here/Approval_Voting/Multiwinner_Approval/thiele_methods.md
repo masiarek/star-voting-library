@@ -66,7 +66,7 @@ So the honest map:
 ```bash
 pip install abcvoting
 python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
-  04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
+  04_Approval/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
   --rules av,pav,seqpav,revseqpav,cc,seqphragmen
 # pav = seqpav = revseqpav -> {A,B,C,F} ; cc -> {A,E,F,G} ; av -> {A,B,C,D}|{A,B,C,F}
 ```

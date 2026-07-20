@@ -32,4 +32,4 @@ Felsenthal reuses exactly this 51/48/1 profile as **Example 13** (Appendix §A5)
 | Ranked Robin | Amos | Amos | ✓ |
 | Borda *(paper only, Ex.13)* | — | Bella (102/148/50) | n/a |
 
-Files: [approval yaml](bv2153_pcttmr_approval.yaml) · [irv yaml](bv2153_pcttmr_irv.yaml) · [rr yaml](bv2153_pcttmr_ranked_robin.yaml) · [frozen export](bv2153_pcttmr_bv_export.json) · mirrors: [approval](felsenthal_paradoxes_tabulated/bv2153_pcttmr_approval_tabulated.txt), [irv](felsenthal_paradoxes_tabulated/bv2153_pcttmr_irv_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2153_pcttmr_ranked_robin_tabulated.txt).
+Files: [approval yaml](cases/bv2153_pcttmr_approval.yaml) · [irv yaml](cases/bv2153_pcttmr_irv.yaml) · [rr yaml](cases/bv2153_pcttmr_ranked_robin.yaml) · [frozen export](cases/bv2153_pcttmr_bv_export.json) · mirrors: [approval](cases/cases_tabulated/bv2153_pcttmr_approval_tabulated.txt), [irv](cases/cases_tabulated/bv2153_pcttmr_irv_tabulated.txt), [rr](cases/cases_tabulated/bv2153_pcttmr_ranked_robin_tabulated.txt).

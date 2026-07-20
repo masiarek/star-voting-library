@@ -15,7 +15,7 @@ A, B, C
 0, 5, 0
 ```
 
-Deliberately abstract (bare `A, B, C`) — the mechanism is the whole lesson. Source: [`bv830_vb3xv2_no_condorcet_tie_score.yaml`](bv830_vb3xv2_no_condorcet_tie_score.yaml).
+Deliberately abstract (bare `A, B, C`) — the mechanism is the whole lesson. Source: [`bv830_vb3xv2_no_condorcet_tie_score.yaml`](cases/bv830_vb3xv2_no_condorcet_tie_score.yaml).
 
 ## A tie, not a cycle
 
@@ -43,7 +43,7 @@ The runoff tie breaks at the **first** deterministic rung — the score total �
 
 ## View 1 — BetterVoting (`vb3xv2`)
 
-BetterVoting runs the same STAR protocol and, because no random rung is reached, elects **B** too. Its frozen [`_bv_export.json`](bv830_vb3xv2_no_condorcet_tie_score_bv_export.json) Results record B as elected with `score: 7` over C's `score: 3`, and `winsAgainst` shows B and C each **false** against the other — the same head-to-head tie, broken by the same score total.
+BetterVoting runs the same STAR protocol and, because no random rung is reached, elects **B** too. Its frozen [`_bv_export.json`](cases/bv830_vb3xv2_no_condorcet_tie_score_bv_export.json) Results record B as elected with `score: 7` over C's `score: 3`, and `winsAgainst` shows B and C each **false** against the other — the same head-to-head tie, broken by the same score total.
 
 **The tally, honestly.** The Race Details tables carry the whole result: B and C tie the runoff 1-1 (each "50% Between Finalists"), and B wins on the score total, 7 to 3.
 
@@ -102,7 +102,7 @@ Winner — STAR Voting Method (single winner)
  B
 ```
 
-Note the B > C row of the matrix: `1 - 1 - 1` — one For, one Against, one Equal Support. That single Equal Support ballot (voter 2, who scored B and C both 2) is *why* the head-to-head can't break the deadlock, and why the score rung has to. Full audit copy: [`_tabulated`](tie_break_ladder_tabulated/bv830_vb3xv2_no_condorcet_tie_score_tabulated.txt).
+Note the B > C row of the matrix: `1 - 1 - 1` — one For, one Against, one Equal Support. That single Equal Support ballot (voter 2, who scored B and C both 2) is *why* the head-to-head can't break the deadlock, and why the score rung has to. Full audit copy: [`_tabulated`](cases/cases_tabulated/bv830_vb3xv2_no_condorcet_tie_score_tabulated.txt).
 
 ## BV vs LH
 

@@ -4,7 +4,7 @@ Ranked Robin usually just elects the Condorcet winner. This set is about the **e
 
 | Case (page) | What it shows | Winner | BV-backed? | src |
 |------|---------------|:---:|:---:|:--:|
-| [Dead heat → lot order](dead_heat_lot_tiebreak.md) | Equal Support + ½-Copeland + the full ladder to **lot** | Ada (by lot) | **No — divergent** | [`.yaml`](dead_heat_lot_tiebreak.yaml) |
+| [Dead heat → lot order](dead_heat_lot_tiebreak.md) | Equal Support + ½-Copeland + the full ladder to **lot** | Ada (by lot) | **No — divergent** | [`.yaml`](cases/dead_heat_lot_tiebreak.yaml) |
 
 **The divergence in one table:**
 

@@ -21,7 +21,7 @@ RCV-IRV and Ranked Robin both elect **Eli**, the Condorcet (pairwise) winner. ST
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex02_bella_exits.yaml`](../../../../01_STAR/exercises/ex02_bella_exits.yaml)  ·  **STAR tabulated mirror:** [`ex02_bella_exits_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex02_bella_exits_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex02_bella_exits.yaml`](../../../../01_STAR/exercises/cases/ex02_bella_exits.yaml)  ·  **STAR tabulated mirror:** [`ex02_bella_exits_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex02_bella_exits_tabulated.txt)
 
 _4 candidates, 9 ballots._
 

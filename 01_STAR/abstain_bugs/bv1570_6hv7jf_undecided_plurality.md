@@ -36,4 +36,4 @@ Winner  (Plurality)
 
 BetterVoting result: `elected: ["Approve"]`, `nTallyVotes: 0`, `nAbstentions: 3`, results view "2 voters".
 
-Full engine detail: [`bv1570_6hv7jf_undecided_plurality_tabulated.txt`](abstain_bugs_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) · source [`.yaml`](bv1570_6hv7jf_undecided_plurality.yaml). Part of the [BV abstain issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).
+Full engine detail: [`bv1570_6hv7jf_undecided_plurality_tabulated.txt`](cases/cases_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) · source [`.yaml`](cases/bv1570_6hv7jf_undecided_plurality.yaml). Part of the [BV abstain issue index](../../00_start_here/tabulation_engines/BV/abstain_issues_index.md).

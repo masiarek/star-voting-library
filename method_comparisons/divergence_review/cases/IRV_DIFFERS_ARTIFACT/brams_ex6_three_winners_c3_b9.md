@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Amos** rather than STAR's **Cole**, but this 
 
 **Flags:** 9 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Cole, strict=Amos)
 
-**Source election:** [`method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml`](../../../../method_comparisons/brams_grading_paradox/brams_ex6_three_winners_c3_b9.yaml)  ·  **STAR tabulated mirror:** [`brams_ex6_three_winners_c3_b9_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/brams_grading_paradox_tabulated/brams_ex6_three_winners_c3_b9_tabulated.txt)
+**Source election:** [`method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml`](../../../../method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml)  ·  **STAR tabulated mirror:** [`brams_ex6_three_winners_c3_b9_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/cases/cases_tabulated/brams_ex6_three_winners_c3_b9_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

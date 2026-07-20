@@ -16,7 +16,7 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 
 | Criterion | Approval | STAR | Ranked Robin | RCV-IRV |
 |---|:---:|:---:|:---:|:---:|
-| [**Monotonicity**](monotonicity) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../../method_comparisons/monotonicity/monotonicity_pages/monotonicity_irv_after.md) |
+| [**Monotonicity**](monotonicity) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) |
 | [**Condorcet winner**](condorcet) (elects a beats-all candidate) | ✗ | [✗](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) | ✓ | [✗](../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | [**Condorcet loser**](../voting_paradoxes/condorcet_loser_paradox.md) (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
 | [**Majority favorite**](majority_criterion) (a majority's 1st choice wins) | ✗ † | [✗](../../01_STAR/majority_criterion) | ✓ | ✓ |
@@ -47,7 +47,7 @@ None of that ranks the methods. It tells you *which trade you're making*.
 The value of this repo isn't the ✗ — it's the countable election behind it:
 
 - **RCV-IRV fails monotonicity** → the [before/after pair](../../method_comparisons/monotonicity) (raise the winner, they lose).
-- **STAR fails monotonicity's *stronger* variant** (mono-raise-delete, though it passes the standard one) → the [mono-raise-delete pair](../../method_comparisons/monotonicity/mono_raise_delete_before.yaml) · concept: [STAR & monotonicity](../STAR_Voting/properties_and_limits/STAR_monotonicity.md).
+- **STAR fails monotonicity's *stronger* variant** (mono-raise-delete, though it passes the standard one) → the [mono-raise-delete pair](../../method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml) · concept: [STAR & monotonicity](../STAR_Voting/properties_and_limits/STAR_monotonicity.md).
 - **STAR fails the majority criterion** → [the favorite loses to two rivals](../../01_STAR/majority_criterion) (bv95a/bv95b).
 - **STAR & IRV fail the Condorcet winner** → [three notions of "winner"](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) · [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md).
 - **STAR, IRV & Ranked Robin fail participation** → the live [no-show pair](../../method_comparisons/participation_no_show) (showing up flips the result).

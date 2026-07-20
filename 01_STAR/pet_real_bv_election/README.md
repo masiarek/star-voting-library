@@ -2,8 +2,8 @@
 
 This is a **real STAR election run on BetterVoting** (BV id `pet`): 7 candidates, **461 ballots**, single winner. It's the worked example behind the screenshots in the [runoff percentages lesson](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) and the [BetterVoting ↔ the open-source engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) page — here you get the **whole thing**: the election file and the full report from the tabulation engine this repo runs — Larry Hastings' `starvote`, extended here (the "LH" engine) — side by side, so you can read a real result from raw ballots to winner.
 
-- **The election file:** [`best_pet_c7_b461.yaml`](best_pet_c7_b461.yaml) — the actual BetterVoting JSON export, converted to YAML (461 score ballots, 0–5, with blanks).
-- **The full engine report:** [`best_pet_c7_b461_tabulated.txt`](pet_real_bv_election_tabulated/best_pet_c7_b461_tabulated.txt) — matrix, Condorcet check, score distribution, both rounds, winner.
+- **The election file:** [`best_pet_c7_b461.yaml`](cases/best_pet_c7_b461.yaml) — the actual BetterVoting JSON export, converted to YAML (461 score ballots, 0–5, with blanks).
+- **The full engine report:** [`best_pet_c7_b461_tabulated.txt`](cases/cases_tabulated/best_pet_c7_b461_tabulated.txt) — matrix, Condorcet check, score distribution, both rounds, winner.
 - **The live BetterVoting result:** [bettervoting.com/pet/results](https://bettervoting.com/pet/results).
 
 This is **Voting 201** — reading a real, full audit report. (A 101 viewer needs only the last three lines: Scoring Round → Automatic Runoff → winner.) For the section-by-section method, see [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md).
@@ -68,7 +68,7 @@ BetterVoting reports this race as **6 abstentions, 455 ballots tallied**; the en
 - **Canonical small case (a lesson in itself): [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md)** — real BV election `dq2dmm`, 3 candidates / 8 ballots, where BV files 3 flat ballots (incl. an engaged `3,3,3`) under "abstention"
 - Frozen BetterVoting result + raw export (this 461-ballot race): [BetterVoting result — frozen snapshot (pet race)](BV_result_snapshot.md)
 - Write-up & GitHub issue → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
-- Even-simpler 2-candidate lesson + synthetic illustration: [The minimal case](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml)
+- Even-simpler 2-candidate lesson + synthetic illustration: [The minimal case](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml)
 - Reproduce it on BetterVoting yourself: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
 - Concept: [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support)
 

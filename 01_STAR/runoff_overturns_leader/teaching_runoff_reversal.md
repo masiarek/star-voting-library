@@ -30,7 +30,7 @@ Almost every reversal is one of these (both are the same lesson — stars measur
 
 ## Step by step
 
-### Step 1 — the atom (3 voters): [`01a`](01a_c3_b3_more-stars-fewer-voters.yaml)
+### Step 1 — the atom (3 voters): [`01a`](cases/01a_c3_b3_more-stars-fewer-voters.yaml)
 
 Show the ballots, then the result. Everyone likes Almond — but two of the three *prefer* Brownie:
 
@@ -55,7 +55,7 @@ Automatic Runoff Round
 
 Talking point: Almond's 13 is real — it *is* broadly liked. But when each voter must pick between the two finalists, the majority chose Brownie. Stars found the finalists; the runoff picked the winner.
 
-### Step 2 — the control (same machinery, leader CONFIRMED): [`04`](04_c4_b3_runoff-confirms-leader.yaml)
+### Step 2 — the control (same machinery, leader CONFIRMED): [`04`](cases/04_c4_b3_runoff-confirms-leader.yaml)
 
 Immediately defuse "the runoff is rigged against the leader" by showing the *same* process keep a leader who *is* most-preferred:
 
@@ -80,9 +80,9 @@ Talking point: the runoff isn't biased against the leader — it just *checks* t
 
 ### Step 3 — it holds at scale, and it's real
 
-- [`01b`](01b_c3_b9_overturn-holds-at-scale.yaml) — the same election with more voters: 67% / 33%. The atom wasn't a small-numbers fluke.
-- [`02`](02_c5_b5_leader-overturned.yaml) — 5 candidates: a high-ceiling favorite (the *narrow-but-deep* pattern) loses to the broad compromise.
-- [`03`](03_c7_b3_ice-cream-live.yaml) (real BV `4c7kp9`) and [`05`](05_c3_b5_low-scores-bv1265.yaml) (real BV `BV1265`) — actual recorded elections; `05` is the one that triggers BetterVoting's own "why is the top scorer different?" popover.
+- [`01b`](cases/01b_c3_b9_overturn-holds-at-scale.yaml) — the same election with more voters: 67% / 33%. The atom wasn't a small-numbers fluke.
+- [`02`](cases/02_c5_b5_leader-overturned.yaml) — 5 candidates: a high-ceiling favorite (the *narrow-but-deep* pattern) loses to the broad compromise.
+- [`03`](cases/03_c7_b3_ice-cream-live.yaml) (real BV `4c7kp9`) and [`05`](cases/05_c3_b5_low-scores-bv1265.yaml) (real BV `BV1265`) — actual recorded elections; `05` is the one that triggers BetterVoting's own "why is the top scorer different?" popover.
 
 ## Devil's-advocate questions (with answers)
 

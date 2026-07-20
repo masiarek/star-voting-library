@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Ada**. Only **Approval** differs, 
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml`](../../../../method_comparisons/edelman_condorcet_myth/bv2173_gmfv4c_edelman_saari_cancellation.yaml)  ·  **STAR tabulated mirror:** [`bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt`](../../../../method_comparisons/edelman_condorcet_myth/edelman_condorcet_myth_tabulated/bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt)
+**Source election:** [`method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml`](../../../../method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml)  ·  **STAR tabulated mirror:** [`bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt`](../../../../method_comparisons/edelman_condorcet_myth/cases/cases_tabulated/bv2173_gmfv4c_edelman_saari_cancellation_tabulated.txt)
 
 _3 candidates, 81 ballots._
 

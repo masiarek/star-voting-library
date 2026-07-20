@@ -1,0 +1,150 @@
+======================================================================
+SOURCE FILE:     bv2175_9dhv8y_noshow_showup.yaml
+TABULATED FILE:  bv2175_9dhv8y_noshow_showup_tabulated.txt
+======================================================================
+
+election_title: "No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice"
+
+scenario_description: |-
+  The Participation criterion, live — the show-up half of the matched pair
+  (see 00_start_here/topics/participation/). Identical to
+  bv2174_yyhr66_noshow_baseline.yaml plus 8 more sincere April>Bruno>Celia
+  ballots: 62 voters — 24 April>Bruno>Celia, 18 Bruno>Celia>April,
+  20 Celia>April>Bruno.
+
+  What showing up buys the 8, by method:
+  - Choose-One: Celia -> April. Helped — last choice replaced by favorite.
+  - STAR: Bruno -> April (scores 160/138/136; runoff April 44-18). Helped —
+    their favorite wins; more sincere support moved the result their way.
+  - RCV-IRV: Bruno -> CELIA. HURT — their extra first-choice votes kept
+    April alive past round one, which got Bruno (their fallback) eliminated
+    at 18 instead; Bruno's transfers then elect Celia 38-24, their LAST
+    choice. Voting sincerely for their favorite made their outcome worse
+    than staying home — the no-show paradox, and (read forward) the Twin
+    paradox: 8 voters identical to the 16 arrived, and the group did worse.
+  Same Condorcet cycle as the baseline (April 44-18, Bruno 42-20, Celia
+  38-24); no Ranked Robin BV race for the same freezability reason (LH's
+  margin tiebreak: April, +6 — shown in this file's mirror).
+
+  LIVE on BetterVoting as BV2175 (three races: STAR, RCV-IRV, Choose-One).
+  Live results: https://bettervoting.com/9dhv8y/results
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [no-show, twin, condorcet-cycle]
+
+bv_test_id: BV2175
+bv_election_id: 9dhv8y
+bv_results_url: https://bettervoting.com/9dhv8y/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:April,Bruno,Celia
+  24:5,2,0   # April > Bruno > Celia   (16 + the 8 who showed up)
+  18:0,5,2   # Bruno > Celia > April
+  20:2,0,5   # Celia > April > Bruno
+
+expected_winners:
+  - April
+
+# file: bv2175_9dhv8y_noshow_showup.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice ===
+  The Participation criterion, live — the show-up half of the matched pair
+  (see 00_start_here/topics/participation/). Identical to
+  bv2174_yyhr66_noshow_baseline.yaml plus 8 more sincere April>Bruno>Celia
+  ballots: 62 voters — 24 April>Bruno>Celia, 18 Bruno>Celia>April,
+  20 Celia>April>Bruno.
+
+  What showing up buys the 8, by method:
+  - Choose-One: Celia -> April. Helped — last choice replaced by favorite.
+  - STAR: Bruno -> April (scores 160/138/136; runoff April 44-18). Helped —
+    their favorite wins; more sincere support moved the result their way.
+  - RCV-IRV: Bruno -> CELIA. HURT — their extra first-choice votes kept
+    April alive past round one, which got Bruno (their fallback) eliminated
+    at 18 instead; Bruno's transfers then elect Celia 38-24, their LAST
+    choice. Voting sincerely for their favorite made their outcome worse
+    than staying home — the no-show paradox, and (read forward) the Twin
+    paradox: 8 voters identical to the 16 arrived, and the group did worse.
+  Same Condorcet cycle as the baseline (April 44-18, Bruno 42-20, Celia
+  38-24); no Ranked Robin BV race for the same freezability reason (LH's
+  margin tiebreak: April, +6 — shown in this file's mirror).
+
+  LIVE on BetterVoting as BV2175 (three races: STAR, RCV-IRV, Choose-One).
+  Live results: https://bettervoting.com/9dhv8y/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * April    |  * Bruno    |    Celia    |
+-------------------------------------------------------------
+       * April > |     ---      |44 -  0 - 18 |24 -  0 - 38 |
+       * Bruno > | 18 -  0 - 44 |    ---      |42 -  0 - 20 |
+         Celia > | 38 -  0 - 24 |20 -  0 - 42 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: April > Bruno > Celia > April)
+
+[Divergence from STAR]
+  STAR    = April
+  RCV-IRV = Celia   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2175_9dhv8y_noshow_showup_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 62 ballots.
+Count × April,Bruno,Celia
+   24 ×     5,    2,    0
+   20 ×     2,    0,    5
+   18 ×     0,    5,    2
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+April      24   0   0  20   0  18  |   160   2.6
+Bruno      18   0   0  24   0  20  |   138   2.2
+Celia      20   0   0  18   0  24  |   136   2.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   April         -- 160 -- First place
+   Bruno         -- 138 -- Second place
+   Celia         -- 136
+ April and Bruno advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   April         -- 44 -- First place
+   Bruno         -- 18
+   Equal Support --  0
+ April wins.
+   Runoff math:
+     62  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     62  voters with a preference  (majority = 32)
+           April 44 (71%)  ·  Bruno 18 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ April

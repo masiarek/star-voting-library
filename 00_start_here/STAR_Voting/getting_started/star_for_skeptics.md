@@ -8,7 +8,7 @@
 It's two steps of grade-school arithmetic: add up the 0–5 scores, then the top two have a runoff. You can [count it by hand](../hands_on/count_star_by_hand.md) — it's *simpler* to tally than most reforms, including RCV.
 
 **"Why change at all — what's actually broken?"**
-Choose-one voting splits similar candidates and can elect the option most people *didn't* want — the [spoiler effect](../../topics/spoiler_effect.md). That's why people vote "lesser evil" instead of who they like. See it in 60 seconds: [the team lunch](../../../01_STAR/_main/_main_pages/bv2184_fyy886_lunch_vote.md).
+Choose-one voting splits similar candidates and can elect the option most people *didn't* want — the [spoiler effect](../../topics/spoiler_effect.md). That's why people vote "lesser evil" instead of who they like. See it in 60 seconds: [the team lunch](../../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md).
 
 **"Isn't ranked-choice (RCV) already the fix everyone's pushing?"**
 RCV-IRV is better than choose-one, but it has real, specific failures: it can eliminate the broadly-preferred centrist ([center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md)); ranking a candidate *higher* can make them *lose* ([non-monotonic](../../RCV_IRV/RCV_IRV_non_monotonicity.md) — [watch it flip](../../../method_comparisons/monotonicity/)); and it isn't precinct-summable, so it's hard to hand-count and audit. Those aren't STAR talking points — they're in the neutral [criteria table](../../topics/criteria_at_a_glance.md) as runnable elections. STAR isn't RCV-IRV.

@@ -6,9 +6,9 @@ The textbook **two-poles-plus-a-centrist** profile (47/47/3/3), reproduced on Be
 
 | Race | Method | Winner | src |
 |---|---|---|:--:|
-| STAR | STAR (ranks→scores) | **Casey** (Condorcet) | [`.yaml`](bv2170_pp2q4q_star.yaml) |
-| Ranked Robin | Copeland | **Casey** | [`.yaml`](bv2170_pp2q4q_ranked_robin.yaml) |
-| RCV-IRV | IRV (Hare) | tie 50–50 (BV→Blake, LH→Avery) | [`.yaml`](bv2170_pp2q4q_irv.yaml) |
-| Choose-One | Plurality | tie 47–47 (BV→Blake) | [`.yaml`](bv2170_pp2q4q_plurality.yaml) |
+| STAR | STAR (ranks→scores) | **Casey** (Condorcet) | [`.yaml`](cases/bv2170_pp2q4q_star.yaml) |
+| Ranked Robin | Copeland | **Casey** | [`.yaml`](cases/bv2170_pp2q4q_ranked_robin.yaml) |
+| RCV-IRV | IRV (Hare) | tie 50–50 (BV→Blake, LH→Avery) | [`.yaml`](cases/bv2170_pp2q4q_irv.yaml) |
+| Choose-One | Plurality | tie 47–47 (BV→Blake) | [`.yaml`](cases/bv2170_pp2q4q_plurality.yaml) |
 
 Up: [method_comparisons](../) · **all-seven-methods + minimal/full twins:** [symmetric_centrist_all_methods](../symmetric_centrist_all_methods/) (BV2171 / BV2172) · sibling: [center_squeeze_bv2137](../center_squeeze_bv2137/) (asymmetric center squeeze) · [fairvote_condorcet_claims](../fairvote_condorcet_claims/)

@@ -4,9 +4,9 @@ The three multi-member plurality methods on **one** 60/40 electorate (6-voter Ho
 
 | Method | Votes/voter | Winners | Home : Away | src |
 |--------|:---:|---------|:---:|:--:|
-| Block Voting (plurality-at-large) | 3 | Ada, Ben, Cal | **3 : 0** | [`.yaml`](mmp_block_voting.yaml) |
-| Limited Voting | 2 | Ada, Ben, Uma | 2 : 1 | [`.yaml`](mmp_limited_voting.yaml) |
-| SNTV | 1 | Uma, Ada, Ben | 2 : 1 (Uma leads) | [`.yaml`](mmp_sntv.yaml) |
+| Block Voting (plurality-at-large) | 3 | Ada, Ben, Cal | **3 : 0** | [`.yaml`](cases/mmp_block_voting.yaml) |
+| Limited Voting | 2 | Ada, Ben, Uma | 2 : 1 | [`.yaml`](cases/mmp_limited_voting.yaml) |
+| SNTV | 1 | Uma, Ada, Ben | 2 : 1 (Uma leads) | [`.yaml`](cases/mmp_sntv.yaml) |
 
 Confirms our engine's multi-winner Plurality (`run_plurality_multi`) tabulates the whole family (it auto-detects Block / Limited / SNTV from votes-per-voter).
 

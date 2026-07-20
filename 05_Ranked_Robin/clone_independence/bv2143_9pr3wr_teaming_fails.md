@@ -25,7 +25,7 @@ BV breaks the 2-way tie by head-to-head, and **C beats A1, 21–12**:
 
 ![BV result for 9pr3wr — A1 and C tie at 5 wins; C elected on head-to-head](img/REPLACE_9pr3wr_result.png)
 
-So on BetterVoting the clones did **not** help the A-faction — C wins. Deterministic and freezable: [`bv2143_9pr3wr_teaming_fails_bv_export.json`](bv2143_9pr3wr_teaming_fails_bv_export.json).
+So on BetterVoting the clones did **not** help the A-faction — C wins. Deterministic and freezable: [`bv2143_9pr3wr_teaming_fails_bv_export.json`](cases/bv2143_9pr3wr_teaming_fails_bv_export.json).
 
 ## View 2 — LH: margin → A1 (teaming succeeds)
 
@@ -40,7 +40,7 @@ LH breaks the tie by total margin, and A1 (**+134**) beats C (**+104**):
 Winner — Ranked Robin (RCV-RR): A1
 ```
 
-By running clones the A-faction pushed B out of the top tier and lifted A1's margin above C — under a **margin** tiebreak the teaming **succeeds** (A1 wins). Full LH detail: [`_tabulated`](clone_independence_tabulated/bv2143_9pr3wr_teaming_fails_tabulated.txt).
+By running clones the A-faction pushed B out of the top tier and lifted A1's margin above C — under a **margin** tiebreak the teaming **succeeds** (A1 wins). Full LH detail: [`_tabulated`](cases/cases_tabulated/bv2143_9pr3wr_teaming_fails_tabulated.txt).
 
 ## The takeaway
 

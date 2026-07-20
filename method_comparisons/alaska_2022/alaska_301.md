@@ -8,7 +8,7 @@ Sources: Graham-Squire & McCune, [arXiv:2301.12075](https://arxiv.org/abs/2301.1
 
 ## Part 1 — one election, four failures
 
-Alaska is the most-cited real IRV misfire because it triggered several distinct pathologies in a single high-profile race. All four are reproducible in the [200-voter model](bv2213_k3fmwv_alaska_2022.yaml).
+Alaska is the most-cited real IRV misfire because it triggered several distinct pathologies in a single high-profile race. All four are reproducible in the [200-voter model](cases/bv2213_k3fmwv_alaska_2022.yaml).
 
 **1. Condorcet failure.** Begich beats both rivals head-to-head (93–84 and 107–68) but isn't elected. The consensus candidate loses. *(This is the headline — see [201](alaska_201.md).)*
 

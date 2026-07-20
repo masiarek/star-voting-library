@@ -4,7 +4,7 @@
 
 **Level 301 · the sampler platter.** Steven Brams' famous example (*Notices of the AMS*, 1982; via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) packs **several** IRV anomalies into one 21-voter election. IRV elects **B**, but **G is the Condorcet winner** — and the same ballots demonstrate a no-show paradox, a truncation incentive, favorite-betrayal, and non-monotonicity.
 
-A ranked-ballot case (no scores invented). → fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · [`README`](README.md) · (the repo's standalone monotonicity demo: [`monotonicity_irv_before.yaml`](../monotonicity/monotonicity_irv_before.yaml)).
+A ranked-ballot case (no scores invented). → fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · [`README`](README.md) · (the repo's standalone monotonicity demo: [`monotonicity_irv_before.yaml`](../monotonicity/cases/monotonicity_irv_before.yaml)).
 
 ---
 
@@ -17,7 +17,7 @@ A ranked-ballot case (no scores invented). → fairness test: [Reading these fai
 3 : F>N>G>B
 ```
 
-Source: [`bv2159_f4cjpy_brams_irv_pathologies.yaml`](bv2159_f4cjpy_brams_irv_pathologies.yaml).
+Source: [`bv2159_f4cjpy_brams_irv_pathologies.yaml`](cases/bv2159_f4cjpy_brams_irv_pathologies.yaml).
 
 ## G beats everyone — and IRV still drops it
 

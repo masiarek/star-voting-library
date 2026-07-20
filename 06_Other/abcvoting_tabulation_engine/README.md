@@ -10,7 +10,7 @@ It does two jobs:
 ```bash
 pip install abcvoting        # optional dependency — everything guards on it
 
-python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml
+python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml
 python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py FILE.yaml --rules av,seqpav,pav,seqphragmen --seats 3
 ```
 

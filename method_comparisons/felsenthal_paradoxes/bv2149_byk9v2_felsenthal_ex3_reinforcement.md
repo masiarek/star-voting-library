@@ -40,7 +40,7 @@ Live results: **[bettervoting.com/byk9v2/results ↗](https://bettervoting.com/b
 
 ## View 2 — LH engine
 
-Runoff/IRV race ([bv2149_byk9v2_irv.yaml](bv2149_byk9v2_irv.yaml)):
+Runoff/IRV race ([bv2149_byk9v2_irv.yaml](cases/bv2149_byk9v2_irv.yaml)):
 
 ```
  Tabulating 32 ballots (ranked ballots).
@@ -63,7 +63,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Alma
 ```
 
-STAR race ([bv2149_byk9v2_star.yaml](bv2149_byk9v2_star.yaml)) → **Bruno** (102/98/88; runoff 18–14). Full detail: [IRV mirror](felsenthal_paradoxes_tabulated/bv2149_byk9v2_irv_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2149_byk9v2_star_tabulated.txt).
+STAR race ([bv2149_byk9v2_star.yaml](cases/bv2149_byk9v2_star.yaml)) → **Bruno** (102/98/88; runoff 18–14). Full detail: [IRV mirror](cases/cases_tabulated/bv2149_byk9v2_irv_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2149_byk9v2_star_tabulated.txt).
 
 ## Agreement
 
@@ -76,4 +76,4 @@ STAR race ([bv2149_byk9v2_star.yaml](bv2149_byk9v2_star.yaml)) → **Bruno** (10
 | BV2149 Combined | Runoff (IRV) | **Alma** | **Alma** | ✓ |
 | BV2149 Combined | STAR | Bruno | Bruno | ✓ |
 
-Frozen export: [bv2149_byk9v2_bv_export.json](bv2149_byk9v2_bv_export.json) · The districts: [BV2147](bv2147_9gdrqg_felsenthal_ex3_district1.md) · [BV2148](bv2148_h87k6v_felsenthal_ex3_district2.md).
+Frozen export: [bv2149_byk9v2_bv_export.json](cases/bv2149_byk9v2_bv_export.json) · The districts: [BV2147](bv2147_9gdrqg_felsenthal_ex3_district1.md) · [BV2148](bv2148_h87k6v_felsenthal_ex3_district2.md).

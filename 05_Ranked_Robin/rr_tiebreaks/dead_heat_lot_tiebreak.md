@@ -2,7 +2,7 @@
 
 *Four score ballots, three candidates, engineered so **every** deterministic rung ties. Ada and Ben tie each other head-to-head **and** tie on total margin, and both beat Cara — so Ranked Robin walks its full ladder (most wins → total margin → **lot order**) and only the pre-published lot settles it. This is the one case in the set that exercises the **Equal Support** column and the **+½ Copeland** credit — and the one case that is **LH-only on purpose**, because it's exactly where the LH and BetterVoting tiebreaks diverge.*
 
-Reference: [`dead_heat_lot_tiebreak.yaml`](dead_heat_lot_tiebreak.yaml) (`expected_winners: [Ada]`). No BetterVoting election — see "Why LH-only" below.
+Reference: [`dead_heat_lot_tiebreak.yaml`](cases/dead_heat_lot_tiebreak.yaml) (`expected_winners: [Ada]`). No BetterVoting election — see "Why LH-only" below.
 
 ## The ballots
 
@@ -18,7 +18,7 @@ Ada,Ben,Cara
 
 ## The tabulation (LH native)
 
-Full report in the [`_tabulated` mirror](rr_tiebreaks_tabulated/dead_heat_lot_tiebreak_tabulated.txt):
+Full report in the [`_tabulated` mirror](cases/cases_tabulated/dead_heat_lot_tiebreak_tabulated.txt):
 
 ```text
 Round-Robin — every pair, head-to-head (For – Against):

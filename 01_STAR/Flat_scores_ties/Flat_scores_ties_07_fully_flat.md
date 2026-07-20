@@ -16,7 +16,7 @@ Ararat, Blanc, Cook
 5, 5, 5
 ```
 
-Source: [`Flat_scores_ties_07_fully_flat.yaml`](Flat_scores_ties_07_fully_flat.yaml).
+Source: [`Flat_scores_ties_07_fully_flat.yaml`](cases/Flat_scores_ties_07_fully_flat.yaml).
 
 ## What LH does
 
@@ -48,7 +48,7 @@ Automatic Runoff Round
 Winner: Ararat
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_07_fully_flat_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_07_fully_flat_tabulated.txt).
 
 ## The takeaway
 

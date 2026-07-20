@@ -6,7 +6,7 @@ Backs the "dead rung" section of the canonical [STAR Tie-Breaking — The Full C
 
 ```bash
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
-  01_STAR/tie_break_dead_rung/tie_break_01_scoring_five_star_breaks.yaml
+  01_STAR/tie_break_dead_rung/cases/tie_break_01_scoring_five_star_breaks.yaml
 ```
 
 ## The two ladders (recap)
@@ -51,9 +51,9 @@ The most common confusion: *if the 5s tie, doesn't STAR then look at the 4s?* **
 
 | Cap | Ballots (Ann, Ben, Cara) | Five-star rung | Decided by | Page |
 |:--:|--------------------------|:--:|---|---|
-| 4 | `4,4,1` / `4,0,3` | 0–0 | lot | [cap 4](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap4.md) |
-| 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap3.md) |
-| 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](tie_break_dead_rung_pages/dead_rung_scoring_dead_cap2.md) |
+| 4 | `4,4,1` / `4,0,3` | 0–0 | lot | [cap 4](cases/cases_pages/dead_rung_scoring_dead_cap4.md) |
+| 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](cases/cases_pages/dead_rung_scoring_dead_cap3.md) |
+| 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](cases/cases_pages/dead_rung_scoring_dead_cap2.md) |
 
 Only an actual **5** revives the rung (that's the `alive` case). These were built with [`generate_dead_rung_scenarios.py`](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.py) (`--round scoring --rung dead --cap {4,3,2}`); see its [write-up](../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) for the alive/tied/adversarial variants.
 

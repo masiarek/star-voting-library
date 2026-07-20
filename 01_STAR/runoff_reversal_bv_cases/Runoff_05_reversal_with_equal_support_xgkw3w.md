@@ -17,7 +17,7 @@ Rosa, Sage, Tulip
 5, 5, 2      Equal Support (Rosa = Sage)
 ```
 
-Source: [`Runoff_05_reversal_with_equal_support_xgkw3w.yaml`](Runoff_05_reversal_with_equal_support_xgkw3w.yaml) · frozen export: [`Runoff_05_reversal_with_equal_support_xgkw3w_bv_export.json`](Runoff_05_reversal_with_equal_support_xgkw3w_bv_export.json).
+Source: [`Runoff_05_reversal_with_equal_support_xgkw3w.yaml`](cases/Runoff_05_reversal_with_equal_support_xgkw3w.yaml) · frozen export: [`Runoff_05_reversal_with_equal_support_xgkw3w_bv_export.json`](cases/Runoff_05_reversal_with_equal_support_xgkw3w_bv_export.json).
 
 ## View 1 — BetterVoting
 
@@ -46,7 +46,7 @@ Watch the Runoff Table here: **% Between Finalists** is out of 3 (67% / 33%), bu
 
 ## View 2 — the LH engine
 
-Same ballots, the full text report (the saved [`_tabulated`](runoff_reversal_bv_cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) mirror adds the funnel):
+Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) mirror adds the funnel):
 
 ```
 [Condorcet Winner]

@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj`).
 
-Reference file: [`bv15_4h89vj_plurality_abstain.yaml`](bv15_4h89vj_plurality_abstain.yaml) (`expected_winners: [Andre]`). Frozen export: [`bv15_4h89vj_plurality_abstain_bv_export.json`](bv15_4h89vj_plurality_abstain_bv_export.json). Backs sheet row **BV15**. Issue: [bettervoting#740](https://github.com/Equal-Vote/bettervoting/issues/740) (*"Add 'stats for nerds' widget including abstentions"*).
+Reference file: [`bv15_4h89vj_plurality_abstain.yaml`](cases/bv15_4h89vj_plurality_abstain.yaml) (`expected_winners: [Andre]`). Frozen export: [`bv15_4h89vj_plurality_abstain_bv_export.json`](cases/bv15_4h89vj_plurality_abstain_bv_export.json). Backs sheet row **BV15**. Issue: [bettervoting#740](https://github.com/Equal-Vote/bettervoting/issues/740) (*"Add 'stats for nerds' widget including abstentions"*).
 
 ## The finding (label it right)
 
@@ -62,7 +62,7 @@ Winner — Choose-One / Plurality Voting Method (single winner)
  Andre
 ```
 
-The `Abs` column (5 for each candidate = the 5 blank ballots) and the runoff line **`7 of 12 (5 Equal Support)`** are precisely the "stats for nerds" turnout breakdown #740 asks BetterVoting to add — LH reconciles `12 = 7 + 5` on the page. Full audit copy: [`_tabulated` mirror](pet_real_bv_election_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt).
+The `Abs` column (5 for each candidate = the 5 blank ballots) and the runoff line **`7 of 12 (5 Equal Support)`** are precisely the "stats for nerds" turnout breakdown #740 asks BetterVoting to add — LH reconciles `12 = 7 + 5` on the page. Full audit copy: [`_tabulated` mirror](cases/cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt).
 
 ## LH ↔ BetterVoting
 
@@ -78,5 +78,5 @@ Both engines agree on every number. The **only** gap is display: LH puts `12 = 7
 ## See also
 
 - [This set's lesson (README)](README.md) · [small_case abstention lesson](small_case_abstention_lesson.md) — the LH↔BV "no-preference" reconciliation these cases share.
-- [Abstention vs Equal Support — minimal STAR test](pet_real_bv_election_pages/small_abstention_c2_b5.md) — the STAR sibling of this counting question.
+- [Abstention vs Equal Support — minimal STAR test](cases/cases_pages/small_abstention_c2_b5.md) — the STAR sibling of this counting question.
 - [Ballot & terminology basics](../../00_start_here/topics/ballot_and_terminology_basics.md) · [Glossary](../../00_start_here/GLOSSARY.md) · [BV registry](../../00_start_here/YAML_test_case_index/BV_registry.md).

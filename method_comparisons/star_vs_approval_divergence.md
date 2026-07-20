@@ -49,7 +49,7 @@ So the classic split is: a **broadly-tolerable consensus** candidate (Approval's
 
 The [**Black Curtain**](black_curtain/) set is exactly this, made countable: the *same* small electorate counted by Approval, STAR (and RCV-IRV / Range), so you can see where they agree and where they part:
 
-- [Hidden consensus](black_curtain/black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) — a broadly-liked compromise that Approval elects and STAR's runoff can pass over.
+- [Hidden consensus](black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) — a broadly-liked compromise that Approval elects and STAR's runoff can pass over.
 - [Near-clones](black_curtain/) and [polarized](black_curtain/) variants — how the split appears (or doesn't) as the preference structure changes.
 - [Range vs the rest](black_curtain/black_curtain_range.md) — the same ballots under Score, for contrast.
 

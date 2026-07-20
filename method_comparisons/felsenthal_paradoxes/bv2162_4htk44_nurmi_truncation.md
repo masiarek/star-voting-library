@@ -28,4 +28,4 @@ No. of voters    Preference ordering
 | RCV-IRV | **A** | **A** | ✓ |
 | Ranked Robin | B | B | ✓ |
 
-Files: [star](bv2162_4htk44_star.yaml) · [irv](bv2162_4htk44_irv.yaml) · [rr](bv2162_4htk44_ranked_robin.yaml) · [frozen export](bv2162_4htk44_bv_export.json) · mirrors: [star](felsenthal_paradoxes_tabulated/bv2162_4htk44_star_tabulated.txt), [irv](felsenthal_paradoxes_tabulated/bv2162_4htk44_irv_tabulated.txt), [rr](felsenthal_paradoxes_tabulated/bv2162_4htk44_ranked_robin_tabulated.txt) · Part 2: [BV2163 — the truncation](bv2163_74j6vv_nurmi_truncation.md).
+Files: [star](cases/bv2162_4htk44_star.yaml) · [irv](cases/bv2162_4htk44_irv.yaml) · [rr](cases/bv2162_4htk44_ranked_robin.yaml) · [frozen export](cases/bv2162_4htk44_bv_export.json) · mirrors: [star](cases/cases_tabulated/bv2162_4htk44_star_tabulated.txt), [irv](cases/cases_tabulated/bv2162_4htk44_irv_tabulated.txt), [rr](cases/cases_tabulated/bv2162_4htk44_ranked_robin_tabulated.txt) · Part 2: [BV2163 — the truncation](bv2163_74j6vv_nurmi_truncation.md).

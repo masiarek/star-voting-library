@@ -50,7 +50,7 @@ Every case in this gallery is now a **real BetterVoting election** (created 2026
 
 ```
 cd STARVote_LH_tabulation_engine
-python starvote_larry_hastings.py "../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml"
+python starvote_larry_hastings.py "../method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml"
 ```
 
 Each writes a full audit copy to `paradoxes_and_whoops_tabulated/`. All three also live as flat-schema positive test cases in `YAML_library/1_positive/` (each verifies the **STAR** winner — the gallery is about *disagreement*, so the test pins STAR's answer, and the lesson narrates the others).

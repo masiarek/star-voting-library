@@ -21,7 +21,7 @@ STAR elects **Cherry** — and so do Ranked Robin and Condorcet, because **Cherr
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex03_five_verdicts.yaml`](../../../../01_STAR/exercises/ex03_five_verdicts.yaml)  ·  **STAR tabulated mirror:** [`ex03_five_verdicts_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex03_five_verdicts_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex03_five_verdicts.yaml`](../../../../01_STAR/exercises/cases/ex03_five_verdicts.yaml)  ·  **STAR tabulated mirror:** [`ex03_five_verdicts_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex03_five_verdicts_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

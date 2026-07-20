@@ -6,7 +6,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2130 — Presidential Board Election
 
-**Election** [`bvhchj`](https://bettervoting.com/bvhchj/results) · **2 races** · **102 ballots** · [frozen export](../../03_STAR_PR/_main/bv2130_presidential_board_star_pr_bv_export.json)
+**Election** [`bvhchj`](https://bettervoting.com/bvhchj/results) · **2 races** · **102 ballots** · [frozen export](../../03_STAR_PR/_main/cases/bv2130_presidential_board_star_pr_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -15,7 +15,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2132 — Pet poll: four methods, three winners
 
-**Election** [`ykjjhy`](https://bettervoting.com/ykjjhy/results) · **4 races** · **22 ballots** · [frozen export](../../method_comparisons/pet_poll_four_methods/bv2132_ykjjhy_pet_poll_four_methods_bv_export.json)
+**Election** [`ykjjhy`](https://bettervoting.com/ykjjhy/results) · **4 races** · **22 ballots** · [frozen export](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_poll_four_methods_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -26,7 +26,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2133 — Pet poll II: four methods, four winners
 
-**Election** [`dyxrbr`](https://bettervoting.com/dyxrbr/results) · **4 races** · **32 ballots** · [frozen export](../../method_comparisons/pet_poll_four_winners/bv2133_dyxrbr_pet_poll_four_winners_bv_export.json)
+**Election** [`dyxrbr`](https://bettervoting.com/dyxrbr/results) · **4 races** · **32 ballots** · [frozen export](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet_poll_four_winners_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -37,7 +37,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2134 — Pets Governance: six positions, six methods
 
-**Election** [`kcf8vf`](https://bettervoting.com/kcf8vf/results) · **6 races** · **22 ballots** · [frozen export](../../method_comparisons/pets_governance/pets_gov_bv2134_kcf8vf_bv_export.json)
+**Election** [`kcf8vf`](https://bettervoting.com/kcf8vf/results) · **6 races** · **22 ballots** · [frozen export](../../method_comparisons/pets_governance/cases/pets_gov_bv2134_kcf8vf_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -50,7 +50,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2135 — Block & Limited voting, reproduced as bloc Approval
 
-**Election** [`3x4vrv`](https://bettervoting.com/3x4vrv/results) · **2 races** · **10 ballots** · [frozen export](../../method_comparisons/multi_member_plurality/mmp_bv2135_3x4vrv_bv_export.json)
+**Election** [`3x4vrv`](https://bettervoting.com/3x4vrv/results) · **2 races** · **10 ballots** · [frozen export](../../method_comparisons/multi_member_plurality/cases/mmp_bv2135_3x4vrv_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -59,7 +59,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates
 
-**Election** [`ywckmg`](https://bettervoting.com/ywckmg/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/center_squeeze_bv2137/bv2137_ywckmg_bv_export.json)
+**Election** [`ywckmg`](https://bettervoting.com/ywckmg/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -70,7 +70,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2138 — One Ranked Electorate, Many Tabulations — the winner depends on the method
 
-**Election** [`cxrf8v`](https://bettervoting.com/cxrf8v/results) · **4 races** · **921 ballots** · [frozen export](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_bv_export.json)
+**Election** [`cxrf8v`](https://bettervoting.com/cxrf8v/results) · **4 races** · **921 ballots** · [frozen export](../../method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -81,7 +81,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner
 
-**Election** [`mxfmhm`](https://bettervoting.com/mxfmhm/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_bv_export.json)
+**Election** [`mxfmhm`](https://bettervoting.com/mxfmhm/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -90,7 +90,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner
 
-**Election** [`6fj2kg`](https://bettervoting.com/6fj2kg/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2145_6fj2kg_bv_export.json)
+**Election** [`6fj2kg`](https://bettervoting.com/6fj2kg/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -100,7 +100,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity)
 
-**Election** [`krk2px`](https://bettervoting.com/krk2px/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_bv_export.json)
+**Election** [`krk2px`](https://bettervoting.com/krk2px/results) · **3 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -110,7 +110,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno
 
-**Election** [`9gdrqg`](https://bettervoting.com/9gdrqg/results) · **2 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2147_9gdrqg_bv_export.json)
+**Election** [`9gdrqg`](https://bettervoting.com/9gdrqg/results) · **2 races** · **17 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -119,7 +119,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2148 — Felsenthal's Reinforcement paradox (II of III) — District II: Bruno wins outright
 
-**Election** [`h87k6v`](https://bettervoting.com/h87k6v/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_bv_export.json)
+**Election** [`h87k6v`](https://bettervoting.com/h87k6v/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -128,7 +128,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2149 — Felsenthal's Reinforcement paradox (III of III) — Combined: Bruno won both districts, Alma wins the whole
 
-**Election** [`byk9v2`](https://bettervoting.com/byk9v2/results) · **2 races** · **32 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_bv_export.json)
+**Election** [`byk9v2`](https://bettervoting.com/byk9v2/results) · **2 races** · **32 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -137,7 +137,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2150 — Felsenthal's No-Show paradox (1 of 2) — everyone votes, and the runoff elects their worst choice
 
-**Election** [`dxg8pb`](https://bettervoting.com/dxg8pb/results) · **3 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2150_dxg8pb_bv_export.json)
+**Election** [`dxg8pb`](https://bettervoting.com/dxg8pb/results) · **3 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -147,7 +147,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better
 
-**Election** [`97hbpw`](https://bettervoting.com/97hbpw/results) · **3 races** · **9 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_bv_export.json)
+**Election** [`97hbpw`](https://bettervoting.com/97hbpw/results) · **3 races** · **9 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -157,7 +157,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner loses the approval count
 
-**Election** [`r6ctvy`](https://bettervoting.com/r6ctvy/results) · **2 races** · **47 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_bv_export.json)
+**Election** [`r6ctvy`](https://bettervoting.com/r6ctvy/results) · **2 races** · **47 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2152_r6ctvy_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -166,7 +166,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count
 
-**Election** [`pcttmr`](https://bettervoting.com/pcttmr/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_bv_export.json)
+**Election** [`pcttmr`](https://bettervoting.com/pcttmr/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2153_pcttmr_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -176,7 +176,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners
 
-**Election** [`wq6yv7`](https://bettervoting.com/wq6yv7/results) · **3 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2154_wq6yv7_bv_export.json)
+**Election** [`wq6yv7`](https://bettervoting.com/wq6yv7/results) · **3 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2154_wq6yv7_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -186,7 +186,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2155 — Tennessee capital, four ways — one electorate; Memphis, Knoxville or Nashville depending on the count
 
-**Election** [`cphxpt`](https://bettervoting.com/cphxpt/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_bv_export.json)
+**Election** [`cphxpt`](https://bettervoting.com/cphxpt/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -197,7 +197,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff
 
-**Election** [`3grpbb`](https://bettervoting.com/3grpbb/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_bv_export.json)
+**Election** [`3grpbb`](https://bettervoting.com/3grpbb/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/cases/bv2156_3grpbb_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -206,7 +206,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper
 
-**Election** [`mmcmpy`](https://bettervoting.com/mmcmpy/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_bv_export.json)
+**Election** [`mmcmpy`](https://bettervoting.com/mmcmpy/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -216,7 +216,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2158 — Ossipoff's buried centrist — the candidate who beats everyone is eliminated by instant runoff
 
-**Election** [`gr72hd`](https://bettervoting.com/gr72hd/results) · **4 races** · **303 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2158_gr72hd_bv_export.json)
+**Election** [`gr72hd`](https://bettervoting.com/gr72hd/results) · **4 races** · **303 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/cases/bv2158_gr72hd_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -227,7 +227,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2159 — Brams' 21-voter sampler — IRV elects B while G beats everyone head-to-head
 
-**Election** [`f4cjpy`](https://bettervoting.com/f4cjpy/results) · **3 races** · **21 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_bv_export.json)
+**Election** [`f4cjpy`](https://bettervoting.com/f4cjpy/results) · **3 races** · **21 ballots** · [frozen export](../../method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -237,7 +237,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper
 
-**Election** [`r6qc8h`](https://bettervoting.com/r6qc8h/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_bv_export.json)
+**Election** [`r6qc8h`](https://bettervoting.com/r6qc8h/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -246,7 +246,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2161 — Borda's SCC paradox electorate — the winner flips when a loser exits (STAR agrees on the pick)
 
-**Election** [`q3h4fk`](https://bettervoting.com/q3h4fk/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2161_q3h4fk_bv_export.json)
+**Election** [`q3h4fk`](https://bettervoting.com/q3h4fk/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -255,7 +255,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner
 
-**Election** [`4htk44`](https://bettervoting.com/4htk44/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2162_4htk44_bv_export.json)
+**Election** [`4htk44`](https://bettervoting.com/4htk44/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -265,7 +265,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2163 — Nurmi's truncation electorate (2 of 2) — 17 voters rank ONLY their favorite, and do better
 
-**Election** [`74j6vv`](https://bettervoting.com/74j6vv/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2163_74j6vv_bv_export.json)
+**Election** [`74j6vv`](https://bettervoting.com/74j6vv/results) · **3 races** · **103 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -275,7 +275,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him
 
-**Election** [`xbqq8t`](https://bettervoting.com/xbqq8t/results) · **3 races** · **33 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_bv_export.json)
+**Election** [`xbqq8t`](https://bettervoting.com/xbqq8t/results) · **3 races** · **33 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -285,7 +285,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass
 
-**Election** [`9vxcj7`](https://bettervoting.com/9vxcj7/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2165_9vxcj7_bv_export.json)
+**Election** [`9vxcj7`](https://bettervoting.com/9vxcj7/results) · **2 races** · **15 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -294,7 +294,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2166 — Coombs' No-Show electorate (2 of 2) — two voters stay home and their favorite wins (STAR flips too)
 
-**Election** [`b7b8dv`](https://bettervoting.com/b7b8dv/results) · **2 races** · **13 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_bv_export.json)
+**Election** [`b7b8dv`](https://bettervoting.com/b7b8dv/results) · **2 races** · **13 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -303,7 +303,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2167 — Minimax elects the absolute loser — the candidate who loses every matchup has the smallest worst loss
 
-**Election** [`f3dxq9`](https://bettervoting.com/f3dxq9/results) · **2 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_bv_export.json)
+**Election** [`f3dxq9`](https://bettervoting.com/f3dxq9/results) · **2 races** · **11 ballots** · [frozen export](../../method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -312,7 +312,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice
 
-**Election** [`6w2gq7`](https://bettervoting.com/6w2gq7/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_bv_export.json)
+**Election** [`6w2gq7`](https://bettervoting.com/6w2gq7/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -321,7 +321,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner
 
-**Election** [`2jrfpg`](https://bettervoting.com/2jrfpg/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_bv_export.json)
+**Election** [`2jrfpg`](https://bettervoting.com/2jrfpg/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -330,7 +330,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2170 — The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways
 
-**Election** [`pp2q4q`](https://bettervoting.com/pp2q4q/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_bv_export.json)
+**Election** [`pp2q4q`](https://bettervoting.com/pp2q4q/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -341,7 +341,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2171 — The Condorcet centrist, minimal form (8 voters) — squeezed out by first-choice methods, elected by the rest
 
-**Election** [`h93tm4`](https://bettervoting.com/h93tm4/results) · **7 races** · **8 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/bv2171_h93tm4_bv_export.json)
+**Election** [`h93tm4`](https://bettervoting.com/h93tm4/results) · **7 races** · **8 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -355,7 +355,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2172 — The Condorcet centrist, full form (100 voters) — squeezed out by first-choice methods, elected by the rest
 
-**Election** [`bkwfjr`](https://bettervoting.com/bkwfjr/results) · **7 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_bv_export.json)
+**Election** [`bkwfjr`](https://bettervoting.com/bkwfjr/results) · **7 races** · **100 ballots** · [frozen export](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -369,7 +369,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue
 
-**Election** [`p8dp28`](https://bettervoting.com/p8dp28/results) · **3 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_bv_export.json)
+**Election** [`p8dp28`](https://bettervoting.com/p8dp28/results) · **3 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -379,7 +379,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method
 
-**Election** [`v8r66y`](https://bettervoting.com/v8r66y/results) · **7 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_bv_export.json)
+**Election** [`v8r66y`](https://bettervoting.com/v8r66y/results) · **7 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -393,7 +393,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue
 
-**Election** [`8kg698`](https://bettervoting.com/8kg698/results) · **4 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/bv2178_8kg698_bv_export.json)
+**Election** [`8kg698`](https://bettervoting.com/8kg698/results) · **4 races** · **20 ballots** · [frozen export](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -404,7 +404,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2188 — Two Districts, One Mayor (I of III) — West District: STAR elects Avery
 
-**Election** [`d3b9wc`](https://bettervoting.com/d3b9wc/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_west_bv_export.json)
+**Election** [`d3b9wc`](https://bettervoting.com/d3b9wc/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_west_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -413,7 +413,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again
 
-**Election** [`rhbfj7`](https://bettervoting.com/rhbfj7/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_east_bv_export.json)
+**Election** [`rhbfj7`](https://bettervoting.com/rhbfj7/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_east_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -422,7 +422,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts
 
-**Election** [`923q3d`](https://bettervoting.com/923q3d/results) · **2 races** · **18 ballots** · [frozen export](../../01_STAR/exercises/ex01_district_combined_bv_export.json)
+**Election** [`923q3d`](https://bettervoting.com/923q3d/results) · **2 races** · **18 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_combined_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -431,7 +431,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways
 
-**Election** [`ywqhq4`](https://bettervoting.com/ywqhq4/results) · **5 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex03_five_verdicts_bv_export.json)
+**Election** [`ywqhq4`](https://bettervoting.com/ywqhq4/results) · **5 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex03_five_verdicts_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -443,7 +443,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination
 
-**Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex05_center_squeeze_bv_export.json)
+**Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex05_center_squeeze_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -453,7 +453,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise
 
-**Election** [`x4dkfd`](https://bettervoting.com/x4dkfd/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex06_bullet_honest_bv_export.json)
+**Election** [`x4dkfd`](https://bettervoting.com/x4dkfd/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex06_bullet_honest_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -463,7 +463,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare
 
-**Election** [`7f4f7q`](https://bettervoting.com/7f4f7q/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex06_bullet_backfire_bv_export.json)
+**Election** [`7f4f7q`](https://bettervoting.com/7f4f7q/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex06_bullet_backfire_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -473,7 +473,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir
 
-**Election** [`g6q42v`](https://bettervoting.com/g6q42v/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex10_reticent_bv_export.json)
+**Election** [`g6q42v`](https://bettervoting.com/g6q42v/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex10_reticent_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -482,7 +482,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess
 
-**Election** [`yyhj9x`](https://bettervoting.com/yyhj9x/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex10_generous_bv_export.json)
+**Election** [`yyhj9x`](https://bettervoting.com/yyhj9x/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex10_generous_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -491,7 +491,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race
 
-**Election** [`ggg7hd`](https://bettervoting.com/ggg7hd/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex11_two_way_base_bv_export.json)
+**Election** [`ggg7hd`](https://bettervoting.com/ggg7hd/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex11_two_way_base_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -500,7 +500,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it
 
-**Election** [`93gjx6`](https://bettervoting.com/93gjx6/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex11_spoiler_added_bv_export.json)
+**Election** [`93gjx6`](https://bettervoting.com/93gjx6/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex11_spoiler_added_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -511,7 +511,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2199 — Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares
 
-**Election** [`89wwvr`](https://bettervoting.com/89wwvr/results) · **2 races** · **10 ballots** · [frozen export](../../01_STAR/exercises/ex12_bloc_vs_proportional_bv_export.json)
+**Election** [`89wwvr`](https://bettervoting.com/89wwvr/results) · **2 races** · **10 ballots** · [frozen export](../../01_STAR/exercises/cases/ex12_bloc_vs_proportional_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -520,7 +520,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2200 — Where Do You Draw the Line? — one electorate, three approval thresholds
 
-**Election** [`qdtqf2`](https://bettervoting.com/qdtqf2/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/ex13_draw_the_line_bv_export.json)
+**Election** [`qdtqf2`](https://bettervoting.com/qdtqf2/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex13_draw_the_line_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -531,7 +531,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut
 
-**Election** [`k3fmwv`](https://bettervoting.com/k3fmwv/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022/bv2213_k3fmwv_alaska_2022_bv_export.json)
+**Election** [`k3fmwv`](https://bettervoting.com/k3fmwv/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -542,7 +542,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola
 
-**Election** [`m3hb6y`](https://bettervoting.com/m3hb6y/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022_general/bv2214_m3hb6y_alaska_2022_general_bv_export.json)
+**Election** [`m3hb6y`](https://bettervoting.com/m3hb6y/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -553,7 +553,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers
 
-**Election** [`2p33qq`](https://bettervoting.com/2p33qq/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner/bv2215_2p33qq_minority_winner_bv_export.json)
+**Election** [`2p33qq`](https://bettervoting.com/2p33qq/results) · **3 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -563,7 +563,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2216 — Pineapple progression 1/3 — Choose-One elects Pineapple on 34%, but STAR, Approval & Ranked Robin elect Cheese
 
-**Election** [`ht2c3g`](https://bettervoting.com/ht2c3g/results) · **4 races** · **99 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_34pct_bv_export.json)
+**Election** [`ht2c3g`](https://bettervoting.com/ht2c3g/results) · **4 races** · **99 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/cases/pineapple_34pct_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -574,7 +574,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2217 — Pineapple progression 2/3 — Choose-One elects Pineapple on 25%, but STAR, Approval & Ranked Robin elect Cheese
 
-**Election** [`mvxbxr`](https://bettervoting.com/mvxbxr/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_25pct_bv_export.json)
+**Election** [`mvxbxr`](https://bettervoting.com/mvxbxr/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/cases/pineapple_25pct_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -585,7 +585,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2218 — Pineapple progression 3/3 — Choose-One elects Pineapple on 11%, but STAR, Approval & Ranked Robin elect Cheese
 
-**Election** [`h34pp9`](https://bettervoting.com/h34pp9/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/pineapple_11pct_bv_export.json)
+**Election** [`h34pp9`](https://bettervoting.com/h34pp9/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/minority_winner_progression/cases/pineapple_11pct_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -596,7 +596,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
-**Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition_bv_export.json)
+**Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -605,7 +605,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## — — 2026 California Governor Election
 
-**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_reversal_bv_cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
+**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_reversal_bv_cases/cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|

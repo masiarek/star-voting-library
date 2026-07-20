@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Beth** rather than STAR's **Caleb**, but this
 
 **Flags:** 13 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml`](../../../../06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml)  ·  **STAR tabulated mirror:** [`04_c4_b47_noise-soup_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/04_c4_b47_noise-soup_tabulated.txt)
+**Source election:** [`06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml`](../../../../06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml)  ·  **STAR tabulated mirror:** [`04_c4_b47_noise-soup_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/04_c4_b47_noise-soup_tabulated.txt)
 
 _4 candidates, 47 ballots._
 

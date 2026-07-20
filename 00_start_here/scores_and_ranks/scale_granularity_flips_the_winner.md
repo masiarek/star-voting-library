@@ -4,7 +4,7 @@
 
 → Companions: [the fidelity ladder](fidelity_ladder.md) · [scores vs. ranks](scores_vs_ranks.md) · Black Curtain lesson #5 (the 0–9 → 0–5 problem) in [The Black Curtain — one electorate, four "identical" landslides](../../method_comparisons/black_curtain/) · Curriculum: [301.1 (RRV/proportional)](../CURRICULUM.md) and [301.6 (when Score/Runoff/Condorcet disagree)](../CURRICULUM.md)
 
-Files: [`rrv_sample_c15_b13_three-parties.yaml`](../../03_STAR_PR/_main/rrv_sample_c15_b13_three-parties.yaml) · full report [`…_tabulated.txt`](../../03_STAR_PR/_main/_main_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt)
+Files: [`rrv_sample_c15_b13_three-parties.yaml`](../../03_STAR_PR/_main/cases/rrv_sample_c15_b13_three-parties.yaml) · full report [`…_tabulated.txt`](../../03_STAR_PR/_main/cases/cases_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt)
 
 ---
 

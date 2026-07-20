@@ -24,7 +24,7 @@ The runoff answers, head-on, the two biggest questions an approval count leaves 
 
 ## Why the runoff has to be a *second election*
 
-Here's the instructive part. Suppose you tried to spare everyone the second trip by making the runoff **automatic** — advance the two most-approved, then re-count *the same approval ballots* head-to-head. Try it on the flagship Approval example, [`approval_101`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) (5 voters, live on BetterVoting — [results ↗](https://bettervoting.com/ff6mk3/results)). The LH engine's report:
+Here's the instructive part. Suppose you tried to spare everyone the second trip by making the runoff **automatic** — advance the two most-approved, then re-count *the same approval ballots* head-to-head. Try it on the flagship Approval example, [`approval_101`](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md) (5 voters, live on BetterVoting — [results ↗](https://bettervoting.com/ff6mk3/results)). The LH engine's report:
 
 ```text
 --- Approval Voting (single winner) ---
@@ -76,7 +76,7 @@ The approval order held, but an 11-point approval gap shrank to under 4 points h
 
 ## STAR: the same package, one trip
 
-STAR *is* Approval + Top-Two folded into a single ballot — historically, not just conceptually. When the Unified Primary campaign ended in 2014, the Equal Vote Conference in Eugene kept its architecture — a broad, expressive first round, then a top-two majority check — and asked what round-1 ballot would let the runoff run **automatically** ([STAR voting — Wikipedia](https://en.wikipedia.org/wiki/STAR_voting)). The answer was to replace the checkmark with a **0–5 score**. The score round finds the two strongest candidates (the primary's job), and because every ballot now records *degrees* of support, the runoff reads each voter's preference between the finalists off the ballot they already cast (the general's job) — [Score Then Automatic Runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md). One trip, one electorate, no second campaign; ballots that scored the finalists equal are counted openly as Equal Support ([Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md)). And unlike the approval echo above, STAR's runoff has real information to consult — it can even overturn the scoring-round leader, which is the whole point of having it ([the runoff reversal](../../01_STAR/_main/_main_pages/bv2182_tg4779_faq_runoff_reversal.md)).
+STAR *is* Approval + Top-Two folded into a single ballot — historically, not just conceptually. When the Unified Primary campaign ended in 2014, the Equal Vote Conference in Eugene kept its architecture — a broad, expressive first round, then a top-two majority check — and asked what round-1 ballot would let the runoff run **automatically** ([STAR voting — Wikipedia](https://en.wikipedia.org/wiki/STAR_voting)). The answer was to replace the checkmark with a **0–5 score**. The score round finds the two strongest candidates (the primary's job), and because every ballot now records *degrees* of support, the runoff reads each voter's preference between the finalists off the ballot they already cast (the general's job) — [Score Then Automatic Runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md). One trip, one electorate, no second campaign; ballots that scored the finalists equal are counted openly as Equal Support ([Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md)). And unlike the approval echo above, STAR's runoff has real information to consult — it can even overturn the scoring-round leader, which is the whole point of having it ([the runoff reversal](../../01_STAR/_main/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md)).
 
 | | Choose-One + Top-Two | Approval + Top-Two | STAR |
 |---|---|---|---|
@@ -94,7 +94,7 @@ The [fidelity ladder](../scores_and_ranks/fidelity_ladder.md) says the same thin
 
 - [Approval Voting](approval_voting.md) — the overview, including the stepping-stone argument (the [Equal Vote Approval page](https://www.equal.vote/approval) advocates exactly this primary + top-two package; advocacy lean disclosed)
 - [Approval — Honest Limits](approval_honest_limits.md) — the gaps the runoff patches (§2 the threshold, §4 the missed majority favorite)
-- [`approval_101_c3_b5`](../../04_Approval/_main/_main_pages/approval_101_c3_b5.md) — the featured election (BV-backed, frozen ballots)
+- [`approval_101_c3_b5`](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md) — the featured election (BV-backed, frozen ballots)
 - [Alternate ballot styles](../topics/ballot_styles.md) — one voter, every ballot style, side by side
 - [Brams' grading paradox, counted](../../method_comparisons/brams_grading_paradox/) — the echo identity as an Approval advocate's theorem: "Approval prevents score-vs-Condorcet discrepancies" is true precisely because 0/1 ballots can't disagree with themselves
 - [Unified primary (Wikipedia)](https://en.wikipedia.org/wiki/Unified_primary) · [St. Louis Prop D (Ballotpedia)](https://ballotpedia.org/St._Louis,_Missouri,_Proposition_D,_Approval_Voting_Initiative_%28November_2020%29) · [2021 St. Louis mayoral election (Wikipedia)](https://en.wikipedia.org/wiki/2021_St._Louis_mayoral_election)

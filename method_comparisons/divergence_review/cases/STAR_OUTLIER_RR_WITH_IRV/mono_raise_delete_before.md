@@ -21,7 +21,7 @@ RCV-IRV and Ranked Robin both elect **Z**, the Condorcet (pairwise) winner. STAR
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/monotonicity/mono_raise_delete_before.yaml`](../../../../method_comparisons/monotonicity/mono_raise_delete_before.yaml)  ·  **STAR tabulated mirror:** [`mono_raise_delete_before_tabulated.txt`](../../../../method_comparisons/monotonicity/monotonicity_tabulated/mono_raise_delete_before_tabulated.txt)
+**Source election:** [`method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml`](../../../../method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml)  ·  **STAR tabulated mirror:** [`mono_raise_delete_before_tabulated.txt`](../../../../method_comparisons/monotonicity/cases/cases_tabulated/mono_raise_delete_before_tabulated.txt)
 
 _3 candidates, 30 ballots._
 

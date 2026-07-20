@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Baker**. Only **Approval** differs
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`method_comparisons/brams_grading_paradox/brams_grading_paradox_c3_b3.yaml`](../../../../method_comparisons/brams_grading_paradox/brams_grading_paradox_c3_b3.yaml)  ·  **STAR tabulated mirror:** [`brams_grading_paradox_c3_b3_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/brams_grading_paradox_tabulated/brams_grading_paradox_c3_b3_tabulated.txt)
+**Source election:** [`method_comparisons/brams_grading_paradox/cases/brams_grading_paradox_c3_b3.yaml`](../../../../method_comparisons/brams_grading_paradox/cases/brams_grading_paradox_c3_b3.yaml)  ·  **STAR tabulated mirror:** [`brams_grading_paradox_c3_b3_tabulated.txt`](../../../../method_comparisons/brams_grading_paradox/cases/cases_tabulated/brams_grading_paradox_c3_b3_tabulated.txt)
 
 _3 candidates, 3 ballots._
 

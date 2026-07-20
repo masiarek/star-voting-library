@@ -16,7 +16,7 @@ Almond, Brownie
 5, 5
 ```
 
-Source: [`Flat_scores_ties_02_runoff_tie_2cand.yaml`](Flat_scores_ties_02_runoff_tie_2cand.yaml).
+Source: [`Flat_scores_ties_02_runoff_tie_2cand.yaml`](cases/Flat_scores_ties_02_runoff_tie_2cand.yaml).
 
 ## What LH does
 
@@ -49,7 +49,7 @@ Automatic Runoff Round
 Winner: Almond
 ```
 
-Full audit copy: [`_tabulated`](Flat_scores_ties_tabulated/Flat_scores_ties_02_runoff_tie_2cand_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/Flat_scores_ties_02_runoff_tie_2cand_tabulated.txt).
 
 ## The takeaway
 

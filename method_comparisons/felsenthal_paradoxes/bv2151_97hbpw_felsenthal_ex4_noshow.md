@@ -34,7 +34,7 @@ Live results: **[bettervoting.com/97hbpw/results ↗](https://bettervoting.com/9
 
 ## View 2 — LH engine
 
-Runoff/IRV race ([bv2151_97hbpw_irv.yaml](bv2151_97hbpw_irv.yaml)):
+Runoff/IRV race ([bv2151_97hbpw_irv.yaml](cases/bv2151_97hbpw_irv.yaml)):
 
 ```
  Tabulating 9 ballots (ranked ballots).
@@ -57,7 +57,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Beth
 ```
 
-Ranked Robin ([bv2151_97hbpw_ranked_robin.yaml](bv2151_97hbpw_ranked_robin.yaml)) → **Beth** (6–3, 5–4). STAR ([bv2151_97hbpw_star.yaml](bv2151_97hbpw_star.yaml)): **Andy 19, Beth 31, Carl 31** — Beth and Carl advance over Andy, Beth wins the runoff **5–4**. Full detail: [IRV mirror](felsenthal_paradoxes_tabulated/bv2151_97hbpw_irv_tabulated.txt) · [RR mirror](felsenthal_paradoxes_tabulated/bv2151_97hbpw_ranked_robin_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2151_97hbpw_star_tabulated.txt).
+Ranked Robin ([bv2151_97hbpw_ranked_robin.yaml](cases/bv2151_97hbpw_ranked_robin.yaml)) → **Beth** (6–3, 5–4). STAR ([bv2151_97hbpw_star.yaml](cases/bv2151_97hbpw_star.yaml)): **Andy 19, Beth 31, Carl 31** — Beth and Carl advance over Andy, Beth wins the runoff **5–4**. Full detail: [IRV mirror](cases/cases_tabulated/bv2151_97hbpw_irv_tabulated.txt) · [RR mirror](cases/cases_tabulated/bv2151_97hbpw_ranked_robin_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2151_97hbpw_star_tabulated.txt).
 
 ## Agreement
 
@@ -68,4 +68,4 @@ Ranked Robin ([bv2151_97hbpw_ranked_robin.yaml](bv2151_97hbpw_ranked_robin.yaml)
 | BV2150 / BV2151 | Ranked Robin | Beth / Beth | Beth / Beth | ✓ |
 | BV2150 / BV2151 | STAR | Beth / Beth | Beth / Beth | ✓ |
 
-Frozen export: [bv2151_97hbpw_bv_export.json](bv2151_97hbpw_bv_export.json) · Part 1: [BV2150 — everyone votes](bv2150_dxg8pb_felsenthal_ex4_noshow.md).
+Frozen export: [bv2151_97hbpw_bv_export.json](cases/bv2151_97hbpw_bv_export.json) · Part 1: [BV2150 — everyone votes](bv2150_dxg8pb_felsenthal_ex4_noshow.md).

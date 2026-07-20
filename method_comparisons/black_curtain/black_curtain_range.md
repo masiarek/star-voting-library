@@ -37,7 +37,7 @@ Ann,Bob,Cal
 Total score:  Bob 20 ← winner · Cal 15 · Ann 10   (pref_voting ✓ Bob)
 ```
 
-[`Black_Curtain_01_c3_b5_hidden-consensus.yaml`](Black_Curtain_01_c3_b5_hidden-consensus.yaml) · [full range report](black_curtain_tabulated/Black_Curtain_01_c3_b5_hidden-consensus_RANGE_tabulated.txt) · [STAR page](black_curtain_pages/Black_Curtain_01_c3_b5_hidden-consensus.md)
+[`Black_Curtain_01_c3_b5_hidden-consensus.yaml`](cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) · [full range report](cases/cases_tabulated/Black_Curtain_01_c3_b5_hidden-consensus_RANGE_tabulated.txt) · [STAR page](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md)
 
 ### 2 — near-clones → **Cal**
 
@@ -51,7 +51,7 @@ Ann,Bob,Cal
 Total score:  Cal 23 ← winner · Ann 22 · Bob 0   (pref_voting ✓ Cal)
 ```
 
-[`Black_Curtain_02_c3_b5_near-clones.yaml`](Black_Curtain_02_c3_b5_near-clones.yaml) · [full range report](black_curtain_tabulated/Black_Curtain_02_c3_b5_near-clones_RANGE_tabulated.txt) · [STAR page](black_curtain_pages/Black_Curtain_02_c3_b5_near-clones.md)
+[`Black_Curtain_02_c3_b5_near-clones.yaml`](cases/Black_Curtain_02_c3_b5_near-clones.yaml) · [full range report](cases/cases_tabulated/Black_Curtain_02_c3_b5_near-clones_RANGE_tabulated.txt) · [STAR page](cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md)
 
 ### 3 — polarized on Cal → **Ann**
 
@@ -65,7 +65,7 @@ Ann,Bob,Cal
 Total score:  Ann 22 ← winner · Cal 15 · Bob 2   (pref_voting ✓ Ann)
 ```
 
-[`Black_Curtain_03_c3_b5_polarized-on-cal.yaml`](Black_Curtain_03_c3_b5_polarized-on-cal.yaml) · [full range report](black_curtain_tabulated/Black_Curtain_03_c3_b5_polarized-on-cal_RANGE_tabulated.txt) · [STAR page](black_curtain_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md)
+[`Black_Curtain_03_c3_b5_polarized-on-cal.yaml`](cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) · [full range report](cases/cases_tabulated/Black_Curtain_03_c3_b5_polarized-on-cal_RANGE_tabulated.txt) · [STAR page](cases/cases_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md)
 
 ### 4 — four candidates → **Cal**
 
@@ -79,7 +79,7 @@ Ann,Bob,Cal,Dee
 Total score:  Cal 15 ← winner · Bob 14 · Dee 11 · Ann 10   (pref_voting ✓ Cal)
 ```
 
-[`Black_Curtain_04_c4_b5_four-candidates.yaml`](Black_Curtain_04_c4_b5_four-candidates.yaml) · [full range report](black_curtain_tabulated/Black_Curtain_04_c4_b5_four-candidates_RANGE_tabulated.txt) · [STAR page](black_curtain_pages/Black_Curtain_04_c4_b5_four-candidates.md)
+[`Black_Curtain_04_c4_b5_four-candidates.yaml`](cases/Black_Curtain_04_c4_b5_four-candidates.yaml) · [full range report](cases/cases_tabulated/Black_Curtain_04_c4_b5_four-candidates_RANGE_tabulated.txt) · [STAR page](cases/cases_pages/Black_Curtain_04_c4_b5_four-candidates.md)
 
 ---
 

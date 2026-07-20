@@ -14,7 +14,7 @@ BV's `runBlocTabulator` is the shared engine: it drives multi-winner **STAR, App
 
 ## Confirmed both ways
 
-- **SNTV = BV Plurality multi-winner.** Verified directly: a 3-candidate, 2-winner Plurality election with single marks (a=1, b=2, c=3) elected **c, b** on BV — exactly what our engine's SNTV tally gives. (Also live as the [BV2134 governance Bloc Plurality race](../pets_governance/pets_gov_bloc_plurality.yaml).)
+- **SNTV = BV Plurality multi-winner.** Verified directly: a 3-candidate, 2-winner Plurality election with single marks (a=1, b=2, c=3) elected **c, b** on BV — exactly what our engine's SNTV tally gives. (Also live as the [BV2134 governance Bloc Plurality race](../pets_governance/cases/pets_gov_bloc_plurality.yaml).)
 - **Block & Limited = BV Approval multi-winner.** The BV election **BV2135** ([`3x4vrv`](https://bettervoting.com/3x4vrv/results)) reproduces both on the same 60/40 electorate as bloc Approval and elects **exactly** the same seats our Plurality-family cases do — Block → majority sweep (Ada, Ben, Cal), Limited → 2-1 (Ada, Ben, Uma). Confirmed: BV = LH on both races. See the [set lead page](multi_member_plurality.md).
 
 ## So why keep LH yamls at all?

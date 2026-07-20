@@ -224,14 +224,21 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   not every occurrence; (4) prefer the **topic hub** if one exists, else the concept
   page, else the glossary. When in doubt, fewer links read better than a wall of blue.
   (Not machine-checked — the failure mode is over-linking, not under-linking.)
-- **`_tabulated`** files are generated into a `<folder>_tabulated/` subfolder
-  **nested inside the source file's own folder** (e.g.
-  `01_Single_winner/black_curtain/black_curtain_tabulated/`); regenerate by
-  re-running the YAMLs after engine changes. They always show full context.
-  Loose top-level election files are grouped under a `_main/` subfolder so their
-  mirrors nest the same way (`.../_main/_main_tabulated/`). The path is computed by
-  `tabulated_output_path` / `aux_tabulated_path` in the engine as
-  `p.parent / (p.parent.name + "_tabulated")`.
+- **Case-folder layout — README-alone, sources in `cases/` (repo standard, 2026-07-20).**
+  In a teaching case folder, the **source files (`.yaml`, `_bv_export.json`) live in a
+  `cases/` subfolder**, and only the `README.md` (plus any hand-authored teaching `.md`)
+  sits at the folder top — so opening the folder shows the *explanation*, not a wall of
+  data. Because the engine derives output paths from the yaml's parent
+  (`p.parent / (p.parent.name + "_tabulated")`, and the parent is now `cases`), the
+  generated **`_tabulated`** mirrors and built **`_pages`** nest *inside* `cases/` as
+  **`cases/cases_tabulated/`** and **`cases/cases_pages/`** (e.g.
+  `method_comparisons/black_curtain/cases/cases_tabulated/`). Regenerate mirrors by
+  re-running the YAMLs; pages via `build_yaml_pages.py`; both always show full context.
+  **New case folders follow this** (README at top, sources in `cases/`). Folders
+  **without** a `README.md` keep the flat layout (yamls at top — e.g. the `jfk7pd` /
+  `three_way_dead_rung_tie` sub-cases, `split_voting/_main`); **engine/tool folders and
+  test-fixture folders (`2_negative`, `harness_cases`) are never reorganized.** Test
+  discovery and `discover()` glob both `*.yaml` and `cases/*.yaml`, so either layout works.
 - **Markdown prose: do NOT hard-wrap paragraphs (Adam's preference).** Write each
   paragraph as a single unwrapped line (soft wrap) — no fixed ~76/80-char line limit. Hard-wrapping is cosmetic: Markdown collapses single newlines inside a paragraph into spaces, so wrapped and unwrapped prose render identically. Keep real line breaks only where they're semantic: blank lines between paragraphs, fenced code blocks, tables, and list items.
 - **Embed LH output as text in Markdown (Adam's preference), sized to the election.**

@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vqyqkr) · **[results ↗](https://bettervoting.com/vqyqkr/results)** (election `vqyqkr`).
 
-Reference files: [`bv2131_tennessee_condorcet_center_vqyqkr.yaml`](bv2131_tennessee_condorcet_center_vqyqkr.yaml) (`expected_winners: [Nashville]`) · frozen export [`bv2131_tennessee_condorcet_center_vqyqkr_bv_export.json`](bv2131_tennessee_condorcet_center_vqyqkr_bv_export.json). Test ID **BV2131** (= `BV` + the BetterVoting election id `vqyqkr`).
+Reference files: [`bv2131_tennessee_condorcet_center_vqyqkr.yaml`](cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) (`expected_winners: [Nashville]`) · frozen export [`bv2131_tennessee_condorcet_center_vqyqkr_bv_export.json`](cases/bv2131_tennessee_condorcet_center_vqyqkr_bv_export.json). Test ID **BV2131** (= `BV` + the BetterVoting election id `vqyqkr`).
 
 ## The ballots
 
@@ -29,7 +29,7 @@ The center-squeeze is the story: Nashville is the second choice of almost everyo
 
 ## View 1 — Ranked Robin (LH native `run_ranked_robin`)
 
-Full report in the [`_tabulated` mirror](rr_vs_irv_plurality_tabulated/bv2131_tennessee_condorcet_center_vqyqkr_tabulated.txt):
+Full report in the [`_tabulated` mirror](cases/cases_tabulated/bv2131_tennessee_condorcet_center_vqyqkr_tabulated.txt):
 
 ```text
 Round-Robin — every pair, head-to-head (For – Against):
@@ -72,7 +72,7 @@ A third, independent tally guards against the LH native code misbehaving: `pref_
 
 ```bash
 uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py \
-  05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.yaml
+  05_Ranked_Robin/rr_vs_irv_plurality/cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml
 ```
 
 > _pref_voting cross-check output — paste here after running `uv sync` locally. Expected: `pref_voting Copeland leader(s): Nashville` · `AGREE ✓ (unique Copeland winner)`._

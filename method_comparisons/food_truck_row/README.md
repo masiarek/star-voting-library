@@ -79,14 +79,14 @@ All five live races agree with the LH engine, with no genuine tie anywhere (ever
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_sntv_split.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_bloc_star_sweep.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_bloc_rr_sweep.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_star_pr_share.yaml
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/bv2210_fvg8y8_stv_share.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_sntv_split.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_star_sweep.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_star_pr_share.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_stv_share.yaml
 ```
 
-Full mirrors: [`food_truck_row_tabulated/`](food_truck_row_tabulated/).
+Full mirrors: [`food_truck_row_tabulated/`](cases/cases_tabulated/).
 
 ---
 

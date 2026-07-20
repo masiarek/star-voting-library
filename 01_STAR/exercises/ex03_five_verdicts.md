@@ -107,10 +107,10 @@ Engineered, and openly so: the ballots are built so the verdicts fan out (a real
 ## Run it yourself
 
 ```
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/ex03_five_verdicts.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercises/cases/ex03_five_verdicts.yaml
 ```
 
-Source: [ex03_five_verdicts.yaml](ex03_five_verdicts.yaml). Full audit report: [mirror](exercises_tabulated/ex03_five_verdicts_tabulated.txt).
+Source: [ex03_five_verdicts.yaml](cases/ex03_five_verdicts.yaml). Full audit report: [mirror](cases/cases_tabulated/ex03_five_verdicts_tabulated.txt).
 
 ---
 

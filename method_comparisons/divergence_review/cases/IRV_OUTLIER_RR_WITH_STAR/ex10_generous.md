@@ -21,7 +21,7 @@ STAR elects **Bess** — and so do Ranked Robin and Condorcet, because **Bess is
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex10_generous.yaml`](../../../../01_STAR/exercises/ex10_generous.yaml)  ·  **STAR tabulated mirror:** [`ex10_generous_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex10_generous_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex10_generous.yaml`](../../../../01_STAR/exercises/cases/ex10_generous.yaml)  ·  **STAR tabulated mirror:** [`ex10_generous_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex10_generous_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

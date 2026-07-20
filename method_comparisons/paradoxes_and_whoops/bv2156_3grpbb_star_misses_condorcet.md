@@ -17,7 +17,7 @@ Ada, Bruno, Cleo
 25 × 3, 3, 5      # Cleo > (Ada = Bruno)
 ```
 
-Cleo is everyone's acceptable middle — but the two wings only score her a **2**. Source: [`bv2156_3grpbb_star_misses_condorcet.yaml`](bv2156_3grpbb_star_misses_condorcet.yaml).
+Cleo is everyone's acceptable middle — but the two wings only score her a **2**. Source: [`bv2156_3grpbb_star_misses_condorcet.yaml`](cases/bv2156_3grpbb_star_misses_condorcet.yaml).
 
 ## Cleo wins every head-to-head — and still loses
 
@@ -37,7 +37,7 @@ Automatic Runoff: Ada 40 (53%) vs Bruno 35 (47%)   (Cleo isn't in it) → Ada wi
 
 Cleo (275) lands just behind Ada (310) and Bruno (290), so the **two polarizing wings advance instead of the consensus pick**, and the runoff is held between them. The candidate a majority actually preferred over both finalists never got to the final.
 
-Full audit copy: [`_tabulated`](paradoxes_and_whoops_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt).
+Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt).
 
 ## Why this one matters (don't bury it)
 

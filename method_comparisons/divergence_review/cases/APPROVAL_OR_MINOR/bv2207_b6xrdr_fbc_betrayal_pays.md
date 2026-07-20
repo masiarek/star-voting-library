@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Bluebell**. Only **Approval** diff
 
 **Flags:** none
 
-**Source election:** [`01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml`](../../../../01_STAR/favorite_betrayal/bv2207_b6xrdr_fbc_betrayal_pays.yaml)  ·  **STAR tabulated mirror:** [`bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt`](../../../../01_STAR/favorite_betrayal/favorite_betrayal_tabulated/bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt)
+**Source election:** [`01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml`](../../../../01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml)  ·  **STAR tabulated mirror:** [`bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt`](../../../../01_STAR/favorite_betrayal/cases/cases_tabulated/bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt)
 
 _3 candidates, 57 ballots._
 

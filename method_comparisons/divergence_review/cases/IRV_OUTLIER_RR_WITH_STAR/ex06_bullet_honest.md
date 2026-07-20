@@ -21,7 +21,7 @@ STAR elects **Bree** — and so do Ranked Robin and Condorcet, because **Bree is
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/ex06_bullet_honest.yaml`](../../../../01_STAR/exercises/ex06_bullet_honest.yaml)  ·  **STAR tabulated mirror:** [`ex06_bullet_honest_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex06_bullet_honest_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex06_bullet_honest.yaml`](../../../../01_STAR/exercises/cases/ex06_bullet_honest.yaml)  ·  **STAR tabulated mirror:** [`ex06_bullet_honest_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex06_bullet_honest_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

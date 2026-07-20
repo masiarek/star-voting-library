@@ -1,12 +1,12 @@
 # Small case — reproduce the abstention mislabel on BetterVoting
 
-> **✅ DONE (2026-06-28), captured twice.** Filed with BetterVoting as [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407). - **Canonical (3 candidates, `dq2dmm`):** BV reported **3 abstentions / 5 tallied** — it filed three *flat* ballots (the blank, `0,0,0`, and an engaged `3,3,3`) as abstentions. Full lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md) · [`flat_scores_abstention_c3_b8.yaml`](flat_scores_abstention_c3_b8.yaml). - **Even simpler (2 candidates, `3w6v4b`):** BV reported **2 abstentions / 3 tallied** — it filed the `5,5` *and* the blank. [`small_abstention_c2_b5.yaml`](small_abstention_c2_b5.yaml).
+> **✅ DONE (2026-06-28), captured twice.** Filed with BetterVoting as [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407). - **Canonical (3 candidates, `dq2dmm`):** BV reported **3 abstentions / 5 tallied** — it filed three *flat* ballots (the blank, `0,0,0`, and an engaged `3,3,3`) as abstentions. Full lesson: [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md) · [`flat_scores_abstention_c3_b8.yaml`](cases/flat_scores_abstention_c3_b8.yaml). - **Even simpler (2 candidates, `3w6v4b`):** BV reported **2 abstentions / 3 tallied** — it filed the `5,5` *and* the blank. [`small_abstention_c2_b5.yaml`](cases/small_abstention_c2_b5.yaml).
 >
 > The steps below are kept as the repeatable recipe.
 
 **Goal:** capture a *real* BetterVoting result for the smallest election that shows the bug, so we have a frozen BV artifact (not just the synthetic LH file). Pairs with the 461-ballot pet race as the "small + large" evidence set.
 
-The synthetic LH version also exists and shows the **correct** behavior: [`abstention_reconciliation_min_c2_b6.yaml`](abstention_reconciliation_min_c2_b6.yaml). This file is the recipe to get BetterVoting's (incorrect) version next to it.
+The synthetic LH version also exists and shows the **correct** behavior: [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml). This file is the recipe to get BetterVoting's (incorrect) version next to it.
 
 ## Steps
 

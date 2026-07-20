@@ -6,10 +6,10 @@ Read the reader-friendly **pages** (`monotonicity_pages/`); the `.yaml` beside e
 
 | Page (read this) | What it shows | src |
 |---|---|:--:|
-| [RCV-IRV — before](monotonicity_pages/monotonicity_irv_before.md) | baseline: X wins | [`.yaml`](monotonicity_irv_before.yaml) |
-| [RCV-IRV — after](monotonicity_pages/monotonicity_irv_after.md) | some voters **raise X** → X now **loses** (the paradox) | [`.yaml`](monotonicity_irv_after.yaml) |
-| [STAR — before](monotonicity_pages/monotonicity_star_before.md) | the STAR counterpart: X wins | [`.yaml`](monotonicity_star_before.yaml) |
-| [STAR — after](monotonicity_pages/monotonicity_star_after.md) | raising X keeps X winning — no paradox | [`.yaml`](monotonicity_star_after.yaml) |
+| [RCV-IRV — before](cases/cases_pages/monotonicity_irv_before.md) | baseline: X wins | [`.yaml`](cases/monotonicity_irv_before.yaml) |
+| [RCV-IRV — after](cases/cases_pages/monotonicity_irv_after.md) | some voters **raise X** → X now **loses** (the paradox) | [`.yaml`](cases/monotonicity_irv_after.yaml) |
+| [STAR — before](cases/cases_pages/monotonicity_star_before.md) | the STAR counterpart: X wins | [`.yaml`](cases/monotonicity_star_before.yaml) |
+| [STAR — after](cases/cases_pages/monotonicity_star_after.md) | raising X keeps X winning — no paradox | [`.yaml`](cases/monotonicity_star_after.yaml) |
 
 The lesson: read the two IRV pages back to back, then confirm STAR is unmoved by the same change.
 
@@ -19,8 +19,8 @@ STAR passes the standard monotonicity criterion (*mono-raise*), as the pair abov
 
 | Page (read this) | What it shows | src |
 |---|---|:--:|
-| [STAR mono-raise-delete — before](monotonicity_pages/mono_raise_delete_before.md) | baseline: finalists X & Y, X wins the runoff | [`.yaml`](mono_raise_delete_before.yaml) |
-| [STAR mono-raise-delete — after](monotonicity_pages/mono_raise_delete_after.md) | raise X, delete Y (now below X) → Y drops below Z, finalists become X & Z, **X loses** | [`.yaml`](mono_raise_delete_after.yaml) |
+| [STAR mono-raise-delete — before](cases/cases_pages/mono_raise_delete_before.md) | baseline: finalists X & Y, X wins the runoff | [`.yaml`](cases/mono_raise_delete_before.yaml) |
+| [STAR mono-raise-delete — after](cases/cases_pages/mono_raise_delete_after.md) | raise X, delete Y (now below X) → Y drops below Z, finalists become X & Z, **X loses** | [`.yaml`](cases/mono_raise_delete_after.yaml) |
 
 Concept & why this is a *lab-grade* failure (not the everyday promise): [STAR & monotonicity](../../00_start_here/STAR_Voting/properties_and_limits/STAR_monotonicity.md). Up: [method_comparisons — same ballots, different methods](../)
 

@@ -44,7 +44,7 @@ Live results: **[bettervoting.com/mxfmhm/results ↗](https://bettervoting.com/m
 
 ## View 2 — LH engine
 
-Choose-One race ([bv2144_mxfmhm_plurality.yaml](bv2144_mxfmhm_plurality.yaml)):
+Choose-One race ([bv2144_mxfmhm_plurality.yaml](cases/bv2144_mxfmhm_plurality.yaml)):
 
 ```
 --- Choose-One / Plurality Voting Method (single winner) ---
@@ -72,9 +72,9 @@ Winner — Choose-One / Plurality Voting Method (single winner)
  Ana
 ```
 
-(The Bo/Cal tie for the *second finalist slot* runs down LH's tie ladder to the pre-published lot — irrelevant to the winner: Ana beats either finalist. Full ladder in the [tabulated mirror](felsenthal_paradoxes_tabulated/bv2144_mxfmhm_plurality_tabulated.txt).)
+(The Bo/Cal tie for the *second finalist slot* runs down LH's tie ladder to the pre-published lot — irrelevant to the winner: Ana beats either finalist. Full ladder in the [tabulated mirror](cases/cases_tabulated/bv2144_mxfmhm_plurality_tabulated.txt).)
 
-STAR race ([bv2144_mxfmhm_star.yaml](bv2144_mxfmhm_star.yaml)):
+STAR race ([bv2144_mxfmhm_star.yaml](cases/bv2144_mxfmhm_star.yaml)):
 
 ```
 --- STAR Voting Method (single winner) ---
@@ -114,4 +114,4 @@ Winner — STAR Voting Method (single winner)
 | Choose-One (Plurality) | Ana | Ana | ✓ |
 | STAR (ranks→scores) | Bo | Bo | ✓ |
 
-Frozen export: [bv2144_mxfmhm_bv_export.json](bv2144_mxfmhm_bv_export.json). Full engine detail: [plurality mirror](felsenthal_paradoxes_tabulated/bv2144_mxfmhm_plurality_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2144_mxfmhm_star_tabulated.txt).
+Frozen export: [bv2144_mxfmhm_bv_export.json](cases/bv2144_mxfmhm_bv_export.json). Full engine detail: [plurality mirror](cases/cases_tabulated/bv2144_mxfmhm_plurality_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2144_mxfmhm_star_tabulated.txt).

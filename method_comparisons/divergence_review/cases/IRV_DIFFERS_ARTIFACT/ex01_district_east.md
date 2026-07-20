@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Elena** rather than STAR's **Avery**, but thi
 
 **Flags:** 9 tied-score ballot(s)
 
-**Source election:** [`01_STAR/exercises/ex01_district_east.yaml`](../../../../01_STAR/exercises/ex01_district_east.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_east_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex01_district_east_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex01_district_east.yaml`](../../../../01_STAR/exercises/cases/ex01_district_east.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_east_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex01_district_east_tabulated.txt)
 
 _5 candidates, 9 ballots._
 

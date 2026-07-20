@@ -21,7 +21,7 @@ STAR elects **Nashville** — and so do Ranked Robin and Condorcet, because **Na
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml`](../../../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.yaml)  ·  **STAR tabulated mirror:** [`bv2155_cphxpt_tennessee_four_ways_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/paradoxes_and_whoops_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt)
+**Source election:** [`method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml`](../../../../method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml)  ·  **STAR tabulated mirror:** [`bv2155_cphxpt_tennessee_four_ways_tabulated.txt`](../../../../method_comparisons/paradoxes_and_whoops/cases/cases_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt)
 
 _4 candidates, 100 ballots._
 

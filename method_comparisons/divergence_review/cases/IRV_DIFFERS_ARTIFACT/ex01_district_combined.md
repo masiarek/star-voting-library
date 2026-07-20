@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Elena** rather than STAR's **Carmen**, but th
 
 **Flags:** 18 tied-score ballot(s)
 
-**Source election:** [`01_STAR/exercises/ex01_district_combined.yaml`](../../../../01_STAR/exercises/ex01_district_combined.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_combined_tabulated.txt`](../../../../01_STAR/exercises/exercises_tabulated/ex01_district_combined_tabulated.txt)
+**Source election:** [`01_STAR/exercises/cases/ex01_district_combined.yaml`](../../../../01_STAR/exercises/cases/ex01_district_combined.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_combined_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex01_district_combined_tabulated.txt)
 
 _5 candidates, 18 ballots._
 

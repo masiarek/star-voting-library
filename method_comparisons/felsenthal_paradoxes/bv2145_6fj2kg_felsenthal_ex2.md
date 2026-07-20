@@ -38,7 +38,7 @@ Live results: **[bettervoting.com/6fj2kg/results ↗](https://bettervoting.com/6
 
 ## View 2 — LH engine
 
-Runoff/IRV race ([bv2145_6fj2kg_irv.yaml](bv2145_6fj2kg_irv.yaml)):
+Runoff/IRV race ([bv2145_6fj2kg_irv.yaml](cases/bv2145_6fj2kg_irv.yaml)):
 
 ```
  Tabulating 17 ballots (ranked ballots).
@@ -61,7 +61,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ben
 ```
 
-Ranked Robin ([bv2145_6fj2kg_ranked_robin.yaml](bv2145_6fj2kg_ranked_robin.yaml)) elects **Ada** — 2 pairwise wins (9–8, 9–8), the Condorcet winner. STAR ([bv2145_6fj2kg_star.yaml](bv2145_6fj2kg_star.yaml)) with the 5/3/1 rank→score map: **Ada 53, Ben 51, Cleo 49**; Ada wins the automatic runoff **9–8**. Full detail: [IRV mirror](felsenthal_paradoxes_tabulated/bv2145_6fj2kg_irv_tabulated.txt) · [RR mirror](felsenthal_paradoxes_tabulated/bv2145_6fj2kg_ranked_robin_tabulated.txt) · [STAR mirror](felsenthal_paradoxes_tabulated/bv2145_6fj2kg_star_tabulated.txt).
+Ranked Robin ([bv2145_6fj2kg_ranked_robin.yaml](cases/bv2145_6fj2kg_ranked_robin.yaml)) elects **Ada** — 2 pairwise wins (9–8, 9–8), the Condorcet winner. STAR ([bv2145_6fj2kg_star.yaml](cases/bv2145_6fj2kg_star.yaml)) with the 5/3/1 rank→score map: **Ada 53, Ben 51, Cleo 49**; Ada wins the automatic runoff **9–8**. Full detail: [IRV mirror](cases/cases_tabulated/bv2145_6fj2kg_irv_tabulated.txt) · [RR mirror](cases/cases_tabulated/bv2145_6fj2kg_ranked_robin_tabulated.txt) · [STAR mirror](cases/cases_tabulated/bv2145_6fj2kg_star_tabulated.txt).
 
 ## Agreement
 
@@ -71,4 +71,4 @@ Ranked Robin ([bv2145_6fj2kg_ranked_robin.yaml](bv2145_6fj2kg_ranked_robin.yaml)
 | Ranked Robin | Ada | Ada | ✓ |
 | STAR (ranks→scores) | Ada | Ada | ✓ |
 
-Frozen export: [bv2145_6fj2kg_bv_export.json](bv2145_6fj2kg_bv_export.json) · Part 2: [BV2146 — the non-monotonicity flip](bv2146_krk2px_felsenthal_ex2_monotonicity.md).
+Frozen export: [bv2145_6fj2kg_bv_export.json](cases/bv2145_6fj2kg_bv_export.json) · Part 2: [BV2146 — the non-monotonicity flip](bv2146_krk2px_felsenthal_ex2_monotonicity.md).

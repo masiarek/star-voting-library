@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Rye**. Only **Approval** differs, 
 
 **Flags:** none
 
-**Source election:** [`01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml`](../../../../01_STAR/runoff_overturns_leader/reversal_jarring_c3_b100.yaml)  ·  **STAR tabulated mirror:** [`reversal_jarring_c3_b100_tabulated.txt`](../../../../01_STAR/runoff_overturns_leader/runoff_overturns_leader_tabulated/reversal_jarring_c3_b100_tabulated.txt)
+**Source election:** [`01_STAR/runoff_overturns_leader/cases/reversal_jarring_c3_b100.yaml`](../../../../01_STAR/runoff_overturns_leader/cases/reversal_jarring_c3_b100.yaml)  ·  **STAR tabulated mirror:** [`reversal_jarring_c3_b100_tabulated.txt`](../../../../01_STAR/runoff_overturns_leader/cases/cases_tabulated/reversal_jarring_c3_b100_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

@@ -116,11 +116,11 @@ A genuine 50–50 tie. LH's IRV breaks it with a stable seed → Avery; BetterVo
 
 | Race | YAML | `_tabulated` mirror |
 |---|---|---|
-| STAR (lead) | [bv2170_pp2q4q_star.yaml](bv2170_pp2q4q_star.yaml) | [txt](symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_star_tabulated.txt) |
-| RCV-IRV | [bv2170_pp2q4q_irv.yaml](bv2170_pp2q4q_irv.yaml) | [txt](symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_irv_tabulated.txt) |
-| Ranked Robin | [bv2170_pp2q4q_ranked_robin.yaml](bv2170_pp2q4q_ranked_robin.yaml) | [txt](symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_ranked_robin_tabulated.txt) |
-| Choose-One | [bv2170_pp2q4q_plurality.yaml](bv2170_pp2q4q_plurality.yaml) | [txt](symmetric_centrist_bv2170_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) |
+| STAR (lead) | [bv2170_pp2q4q_star.yaml](cases/bv2170_pp2q4q_star.yaml) | [txt](cases/cases_tabulated/bv2170_pp2q4q_star_tabulated.txt) |
+| RCV-IRV | [bv2170_pp2q4q_irv.yaml](cases/bv2170_pp2q4q_irv.yaml) | [txt](cases/cases_tabulated/bv2170_pp2q4q_irv_tabulated.txt) |
+| Ranked Robin | [bv2170_pp2q4q_ranked_robin.yaml](cases/bv2170_pp2q4q_ranked_robin.yaml) | [txt](cases/cases_tabulated/bv2170_pp2q4q_ranked_robin_tabulated.txt) |
+| Choose-One | [bv2170_pp2q4q_plurality.yaml](cases/bv2170_pp2q4q_plurality.yaml) | [txt](cases/cases_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) |
 
-Frozen BetterVoting export (Election + Ballots + Results): [bv2170_pp2q4q_bv_export.json](bv2170_pp2q4q_bv_export.json).
+Frozen BetterVoting export (Election + Ballots + Results): [bv2170_pp2q4q_bv_export.json](cases/bv2170_pp2q4q_bv_export.json).
 
 *BetterVoting result screenshots (View 1) can be dropped into `img/` as `img/pp2q4q_<what>.png` and linked here.*

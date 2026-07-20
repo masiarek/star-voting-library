@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Bruno**. Only **Approval** differs
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/bv2148_h87k6v_star.yaml)  ·  **STAR tabulated mirror:** [`bv2148_h87k6v_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/felsenthal_paradoxes_tabulated/bv2148_h87k6v_star_tabulated.txt)
+**Source election:** [`method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml`](../../../../method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml)  ·  **STAR tabulated mirror:** [`bv2148_h87k6v_star_tabulated.txt`](../../../../method_comparisons/felsenthal_paradoxes/cases/cases_tabulated/bv2148_h87k6v_star_tabulated.txt)
 
 _3 candidates, 15 ballots._
 

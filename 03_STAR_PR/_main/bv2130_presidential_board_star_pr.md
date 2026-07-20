@@ -2,7 +2,7 @@
 
 *A real 7-seat Proportional STAR election on BetterVoting (`bvhchj`): 51 candidates, 102 sparse ballots. LH's `allocated` engine reproduces BetterVoting's **first six seats exactly**; the **seventh diverges** (LH → Claudia De La Cruz, BV → Karina Garcia — both Socialism & Liberation).*
 
-Reference files: [`bv2130_presidential_board_star_pr.yaml`](bv2130_presidential_board_star_pr.yaml) (`voting_method: allocated`, 7 winners) · frozen export [`bv2130_presidential_board_star_pr_bv_export.json`](bv2130_presidential_board_star_pr_bv_export.json) (BV `bvhchj`). Backs sheet row **BV2130**. The election also has a second race (party-alignment **Plurality**) that elects **Democrat**.
+Reference files: [`bv2130_presidential_board_star_pr.yaml`](cases/bv2130_presidential_board_star_pr.yaml) (`voting_method: allocated`, 7 winners) · frozen export [`bv2130_presidential_board_star_pr_bv_export.json`](cases/bv2130_presidential_board_star_pr_bv_export.json) (BV `bvhchj`). Backs sheet row **BV2130**. The election also has a second race (party-alignment **Plurality**) that elects **Democrat**.
 
 ## Method mapping — BV `STAR_PR` = Allocated Score
 
@@ -24,7 +24,7 @@ The highest-scoring candidate wins a seat.
  Claudia De La Cruz wins a seat.
 ```
 
-Full audit copy: [`_main_tabulated/bv2130_presidential_board_star_pr_tabulated.txt`](_main_tabulated/bv2130_presidential_board_star_pr_tabulated.txt).
+Full audit copy: [`_main_tabulated/bv2130_presidential_board_star_pr_tabulated.txt`](cases/cases_tabulated/bv2130_presidential_board_star_pr_tabulated.txt).
 
 ## The finding
 
@@ -37,5 +37,5 @@ Either way, the first six seats are a clean cross-check that LH `allocated` == B
 
 ## Related
 
-- Proportional STAR variants in LH: [`02a` allocated](02a_c5_b63_proportional-allocated-score.yaml) · [`02b` sss](02b_c5_b63_proportional-sss.yaml) · [`02c` rrv](02c_c5_b63_proportional-rrv.yaml).
+- Proportional STAR variants in LH: [`02a` allocated](cases/02a_c5_b63_proportional-allocated-score.yaml) · [`02b` sss](cases/02b_c5_b63_proportional-sss.yaml) · [`02c` rrv](cases/02c_c5_b63_proportional-rrv.yaml).
 - The same random-tie-break family (single-winner / Bloc): [BV `jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) · [BV131](../../02_STAR_Bloc/_main/bv131_guido_bloc.md) · [BV750](../../02_STAR_Bloc/_main/bv750_tie_breaking_bloc.md).

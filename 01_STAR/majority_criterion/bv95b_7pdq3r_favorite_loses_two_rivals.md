@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r`).
 
-Reference files: [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](bv95b_7pdq3r_favorite_loses_two_rivals.yaml) (`expected_winners: [Bruno]`) · frozen export [`bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json`](bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json). Backs sheet row **BV95b**.
+Reference files: [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) (`expected_winners: [Bruno]`) · frozen export [`bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json`](cases/bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json). Backs sheet row **BV95b**.
 
 ## The ballots
 
@@ -41,7 +41,7 @@ Automatic Runoff:
 Winner — STAR Voting Method (single winner):  Bruno
 ```
 
-Full audit copy: [`majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt).
+Full audit copy: [`majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](cases/cases_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt).
 
 ## Why Ada loses — and why it's mild
 
