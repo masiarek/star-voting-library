@@ -61,6 +61,8 @@ This is the same fix as Quinn's **3-2-1 voting**: a final head-to-head step mean
 
 So STAR keeps the chicken dilemma's *non-slippery* form (which Quinn argues "isn't really Moloch at all") while shedding the slippery Approval version. Honest cooperation is a stable, safe default.
 
+Game-theoretically, chicken/snowdrift has **two strong equilibria** (A concedes, or B concedes) — and coordination games like this only stay cooperative when defection is *punished*. STAR builds the punishment in: over-bulleting your ally toward 0 risks putting the majority-opposed C in the runoff against your favorite, so the method itself penalizes the defection that would unravel cooperation. No outside enforcement or "social glue" required.
+
 ## Keep it fair
 
 - **This is a genuine Approval/Score seam** — the honest concession the [scorecard](../../00_start_here/topics/strategic_pathologies.md) makes for the score family. Approval's simplicity has a cost: with only a yes/no cut, allies can't say "I back you, but my favorite more" without risking a tie.

@@ -28,6 +28,11 @@
 
 **The honest tally: STAR escapes three cleanly, softens one, and shares one with every method that exists.** Ranked Robin escapes four and shares the fifth. Neither is strategy-*proof* — Gibbard forbids that for any real method — but both dodge the traps that actually bite in practice.
 
+> **Fine print (three caveats the scorecard glosses, raised in the discussion of Quinn's originals):**
+> - **PR doesn't fully kill Lesser Evil.** Proportional representation softens it, but any **threshold** recreates a milder wasted-vote fear — a small new party below the cutoff still feels unsafe to support. Escape is partial, not total.
+> - **Ranked Robin has its own, sincere dark horse.** RR escapes the *strategic Borda* Dark Horse (above), but a Condorcet method can crown a **thinly-supported unknown** everyone merely tolerates as a second choice — a real [RR limit](../RCV_Ranked_Robin/RCV_RR_honest_limits.md). STAR resists *both*, because it reads **support**, not just order ([preference vs support](../scores_and_ranks/preference_vs_support.md)). So on Dark Horse, STAR is a touch ahead of RR.
+> - **Arrow only binds ordinal methods.** The impossibility that dooms *ranked* methods (Arrow) doesn't apply to a cardinal ballot — which is why STAR escapes Arrow but **not** Gibbard ([STAR escapes Arrow, not Gibbard](arrow_theorem_and_star.md)). The Condorcet-cycle row is a **Gibbard** limit, not an Arrow one.
+
 ## The five, one paragraph each
 
 **Lesser Evil (FPTP).** The one you already live under. When you can only pick one, voting your true favorite "wastes" your vote, so you're pushed to the least-bad *viable* option — and the field collapses toward two poles. Score and pairwise ballots remove the wasted-vote fear entirely. → [spoiler effect](spoiler_effect.md).
