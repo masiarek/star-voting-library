@@ -74,19 +74,25 @@ def scan():
 
 
 # --------------------------------------------------------------------------- #
-# Relative-link checker: every [text](relative/path) in a tracked .md must
-# resolve. Folder reorganizations silently break these; this catches them.
-# (External http(s)/mailto links and pure #anchors are not checked.)
+# Relative-link checker: every relative path in a tracked .md must resolve —
+# markdown `[text](path)`, AND raw HTML `<img src=…>` / `<a href=…>` (plus
+# other src-bearing tags), which the repo uses for sized images and anchors.
+# Folder reorganizations silently break these; this catches them. (External
+# http(s)/mailto/data links and pure #anchors are not checked.)
 # --------------------------------------------------------------------------- #
 MD_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
-_EXTERNAL = re.compile(r"(?i)^\s*(https?:|mailto:|#)")
+# href on <a>, src on <img>/<source>/<video>/<audio>/<embed>/<iframe>
+_HTML_PATH = re.compile(
+    r"""(?ix) < (?: a | img | source | video | audio | embed | iframe ) \b
+        [^>]*? \b (?: href | src ) \s* = \s* (["']) (.+?) \1""")
+_EXTERNAL = re.compile(r"(?i)^\s*(https?:|mailto:|data:|tel:|//|#)")
 _FENCED = re.compile(r"```.*?```", re.S)
 _INLINE_CODE = re.compile(r"`[^`\n]*`")
 
 
 def check_links():
-    """Return sorted [(md_file, raw_link)] for every relative link that does
-    not resolve to an existing file or directory."""
+    """Return sorted [(md_file, raw_link)] for every relative link — markdown
+    or HTML src/href — that does not resolve to an existing file or directory."""
     from urllib.parse import unquote
     broken = []
     for dirpath, dirnames, filenames in os.walk(REPO):
@@ -105,8 +111,9 @@ def check_links():
                 continue
             # Links inside code blocks / inline code are examples, not links.
             text = _INLINE_CODE.sub("", _FENCED.sub("", text))
-            for m in MD_LINK.finditer(text):
-                raw = m.group(1).strip()
+            raws = [m.group(1).strip() for m in MD_LINK.finditer(text)]
+            raws += [m.group(2).strip() for m in _HTML_PATH.finditer(text)]
+            for raw in raws:
                 if _EXTERNAL.match(raw):
                     continue
                 target = raw.split()[0].strip("<>")     # drop optional "title"
@@ -468,8 +475,8 @@ def main(argv):
         print("repo-hygiene: ✓ all relative Markdown links resolve.")
     else:
         rc = 1
-        print(f"repo-hygiene: ⚠️  broken relative links ({len(dead)}) — a folder "
-              "move probably left these behind:")
+        print(f"repo-hygiene: ⚠️  broken relative links ({len(dead)}) — markdown or "
+              "HTML src/href; a folder move probably left these behind:")
         for rel, raw in dead:
             print(f"   • {rel}  →  ({raw})")
     bad_anchors = check_anchors()
