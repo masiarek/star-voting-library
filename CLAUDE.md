@@ -392,10 +392,12 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
 7. **Regenerate indexes + mirrors** (AI). Run the yaml through the engine (writes
    its `_tabulated` mirror), then `tools_adam/scripts/build_yaml_index.py`, the
    folder `README.md` table, and `build_divergence_index.py` if it diverges.
-8. **Verify + commit** (AI). The pre-commit hook runs the STAR suite + repo-hygiene;
-   commit with a descriptive message. **Adam pushes** (the sandbox has no push
-   credentials — always hand Adam the `git push
-   https://github.com/masiarek/star-voting-library.git master` line). (The repo was
+8. **Verify + commit + push** (AI). The pre-commit hook runs the STAR suite + repo-hygiene;
+   commit with a descriptive message, then **push** — Adam granted standing
+   authorization (2026-07-20: *"feel free to push always — we can always undo... these
+   are test cases and some descriptions"*), and pushing works from the sandbox:
+   `git push https://github.com/masiarek/star-voting-library.git master`. (No need to
+   hand Adam the push line anymore; just push and report the new SHA. The repo was
    renamed from `masiarek/YAML` on 2026-07-16; old URLs redirect. NEVER create a new
    repo named `YAML` — that would sever the redirects.)
 9. **Registry regenerates itself** (AI). `build_bv_registry.py` writes
