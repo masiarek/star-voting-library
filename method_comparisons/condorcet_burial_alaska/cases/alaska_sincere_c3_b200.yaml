@@ -1,0 +1,23 @@
+election_title: "Alaska 2022 (sincere) — Begich is the Condorcet winner"
+scenario_description: |-
+  The August 2022 Alaska US House special, reduced to a faithful 200-voter
+  teaching model (Peltola / Begich / Palin), as RANKED ballots. Sincere: Begich
+  is the Condorcet winner — he beats Peltola 9 and Palin 39 head-to-head. Every
+  Condorcet method (MinMax, Schulze, Ranked Pairs, and Condorcet-Hare) elects
+  Begich; RCV-IRV alone eliminates him first (fewest first-choices) and elects
+  Peltola. The burial twin shows rb-j's strategy: 20 Peltola voters rank Begich
+  last, manufacturing a cycle. See the write-up: condorcet_burial_alaska/README.md
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  50:Peltola>Begich>Palin
+  36:Palin>Begich>Peltola
+  29:Begich>Palin>Peltola
+  25:Peltola
+  23:Palin
+  16:Begich>Peltola>Palin
+  12:Begich
+  5:Peltola>Palin>Begich
+  4:Palin>Peltola>Begich
+expected_winners:
+- Peltola

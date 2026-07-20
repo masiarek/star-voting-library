@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**347 election files** (297 single-winner, 50 multi-winner) across 15 method(s).
+**349 election files** (299 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 189 |
-| RCV-IRV (Hare) | 18 |
+| RCV-IRV (Hare) | 20 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
 | STV (proportional RCV) | 10 |
@@ -222,7 +222,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml) |
 
-## RCV-IRV (Hare)  (18)
+## RCV-IRV (Hare)  (20)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -232,6 +232,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`burlington_2009_irv`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_irv.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third) → _Kiss_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_irv.yaml) |
 | [`burlington_2009_raise_kiss_nonmono`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_raise_kiss_nonmono.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml) |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/cases/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_irv.yaml) |
+| [`alaska_buried_c3_b200`](../../method_comparisons/condorcet_burial_alaska/cases/cases_pages/alaska_buried_c3_b200.md) | `method_comparisons/condorcet_burial_alaska/cases/` | 1 | Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't → _Peltola_ | [`.yaml`](../../method_comparisons/condorcet_burial_alaska/cases/alaska_buried_c3_b200.yaml) |
+| [`alaska_sincere_c3_b200`](../../method_comparisons/condorcet_burial_alaska/cases/cases_pages/alaska_sincere_c3_b200.md) | `method_comparisons/condorcet_burial_alaska/cases/` | 1 | Alaska 2022 (sincere) — Begich is the Condorcet winner → _Peltola_ | [`.yaml`](../../method_comparisons/condorcet_burial_alaska/cases/alaska_sincere_c3_b200.yaml) |
 | [`monotonicity_irv_after`](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) | `method_comparisons/monotonicity/cases/` | 1 | Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/cases/monotonicity_irv_after.yaml) |
 | [`monotonicity_irv_before`](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_before.md) | `method_comparisons/monotonicity/cases/` | 1 | Non-monotonicity (RCV-IRV) — part 1: baseline, X wins → _X_ | [`.yaml`](../../method_comparisons/monotonicity/cases/monotonicity_irv_before.yaml) |
 | [`bv2158_gr72hd_ossipoff_centrist_irv`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2158_gr72hd_ossipoff_centrist_irv.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158) | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2158_gr72hd_ossipoff_centrist_irv.yaml) |

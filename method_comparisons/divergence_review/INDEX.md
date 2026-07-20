@@ -6,7 +6,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **189** single-winner STAR elections (skipped 109 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- Scanned **189** single-winner STAR elections (skipped 111 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
 - **111** (59%) diverge from STAR under at least one method; **78** agree across the board.
 
 | Bucket | Count |

@@ -1,0 +1,57 @@
+======================================================================
+SOURCE FILE:     alaska_buried_c3_b200.yaml
+TABULATED FILE:  alaska_buried_c3_b200_tabulated.txt
+======================================================================
+
+election_title: "Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't"
+scenario_description: |-
+  The same electorate, but 20 of the 50 Peltola>Begich>Palin voters BURY Begich —
+  insincerely ranking him last (Peltola>Palin>Begich). That single move flips the
+  Begich-vs-Palin pairwise from Begich +39 to Palin +1, creating a Condorcet cycle
+  (Begich>Peltola>Palin>Begich, no Condorcet winner). Now the completion methods
+  DIVERGE: MinMax / Schulze / Ranked Pairs (margin-based) drop Palin's weak +1
+  defeat and still elect Begich — the burial FAILS. But Condorcet-Hare / Condorcet-
+  Top-Two-Runoff (= RCV-IRV in a 3-way cycle) elects Peltola — the burial SUCCEEDS.
+  rb-j's point: even Condorcet methods can be gamed by burial, and margin-based
+  completion resists it far better than a runoff/Hare completion.
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  30:Peltola>Begich>Palin
+  36:Palin>Begich>Peltola
+  29:Begich>Palin>Peltola
+  25:Peltola
+  23:Palin
+  16:Begich>Peltola>Palin
+  12:Begich
+  25:Peltola>Palin>Begich
+  4:Palin>Peltola>Begich
+expected_winners:
+- Peltola
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't
+ Tabulating 200 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           80  Hopeful
+Palin             63  Hopeful
+Begich            57  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           96  Elected
+Palin             92  Rejected
+Begich             0  Rejected
+Blank Votes       12  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Peltola
