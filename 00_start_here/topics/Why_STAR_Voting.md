@@ -4,7 +4,7 @@
 
 The case for **STAR Voting** — *Score Then Automatic Runoff* — laid out as regular reading. This page makes the argument in **eleven plain points**, then answers the objections it tends to draw, sorted from the unshakeable to the genuinely contested. A better ballot, a fairer winner, and a count anyone can verify: that's the whole promise, and the sections below unpack each part with the honest caveats attached.
 
-*Prefer it spoken or on slides? The narrated companion is [What's so good about STAR](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md); the scannable benefit list is [The benefits of STAR Voting](../STAR_Voting/getting_started/STAR_benefits.md).*
+*Prefer it spoken or on slides? The narrated companion is [What's so good about STAR](../STAR_Voting/reference/whats_so_good_about_STAR_Voting.md); the quick, positive hook is [The benefits of STAR Voting](../STAR_Voting/getting_started/STAR_benefits.md).*
 
 ---
 
