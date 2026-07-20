@@ -632,6 +632,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | RCV-IRV — the shared rankings | IRV | 3 | **Alex** |
 | Ranked Robin — the shared rankings | RankedRobin | 3 | **Blair** |
 
+## BV2227 — Favorite Betrayal — honest ballots (STAR & Ranked Robin elect the compromise; RCV-IRV elects a wing)
+
+**Election** [`3xgkck`](https://bettervoting.com/3xgkck/results) · **3 races** · **34 ballots** · [frozen export](../../method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| STAR — honest scores (favorite 5, compromise 3, worst 0) | STAR | 3 | **Center** |
+| RCV-IRV — the same honest preferences as ranks | IRV | 3 | **Right** |
+| Ranked Robin — the same honest preferences as ranks | RankedRobin | 3 | **Center** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
