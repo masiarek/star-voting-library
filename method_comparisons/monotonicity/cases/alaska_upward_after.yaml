@@ -1,0 +1,52 @@
+election_title: "Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses"
+
+scenario_description: |-
+  The BEFORE file (alaska_upward_before) exactly, with ONE change: 7 of the 23
+  Palin-only ("bullet") ballots are switched to Peltola>Palin. Nothing else moves.
+  This gives the previous winner Peltola MORE first-place support (80 -> 87) — yet
+  she now LOSES. Why: the shifted votes pull Palin's first-round count (63 -> 56)
+  below Begich's 57, so PALIN is eliminated first instead of Begich; Palin's
+  ballots transfer 36 to Begich, and Begich beats Peltola in the final, 93-91.
+  Ranking the winner higher made the winner lose — the upward monotonicity paradox
+  (Graham-Squire & McCune, arXiv:2301.12075; realrcv.equal.vote/alaska22).
+  Model note: at this 200-voter reduction, moving 6 ballots makes an exact 57-57
+  Begich/Palin tie (a coarse-model artifact); 7 clears it cleanly for a tie-free,
+  engine-independent demonstration. The real election's figure is ~6,000 Palin-only
+  ballots, which crosses the threshold comfortably. Companion page:
+  upward_monotonicity_alaska.md.
+
+video_script: |-
+  Same election as BEFORE — we only moved 7 Palin-only voters up to rank the
+  WINNER, Peltola, first. Round 1 now: Peltola 87, Begich 57, Palin 56. Palin is
+  out this time, not Begich. Palin's 36 Palin>Begich ballots swing to Begich, and
+  Begich wins 93-91. Peltola gained support and lost. That's the paradox: a method
+  should never punish a candidate for being ranked higher. STAR and Ranked Robin
+  can't do this.
+
+paradoxes: [monotonicity]
+voting_method: RCV_IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_irv: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  50:Peltola>Begich>Palin
+  36:Palin>Begich>Peltola
+  29:Begich>Palin>Peltola
+  25:Peltola
+  16:Palin
+  16:Begich>Peltola>Palin
+  12:Begich
+  7:Peltola>Palin
+  5:Peltola>Palin>Begich
+  4:Palin>Peltola>Begich
+
+expected_winners:
+  - Begich
+
+# file: alaska_upward_after.yaml

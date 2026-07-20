@@ -16,6 +16,8 @@
 
 So unlike [center squeeze](../center_squeeze/) (which is *Hare-specific*), non-monotonicity is shared by **all** the sequential-elimination methods — only the non-eliminating methods (STAR, Ranked Robin) escape it.
 
+**Worked real example:** [The Upward Monotonicity Paradox — Alaska 2022](../../../method_comparisons/monotonicity/upward_monotonicity_alaska.md). Ranking the winner (Peltola) *higher* would have made her *lose* — reproduced on a faithful model of the real ballots, with Ranked Robin electing the Condorcet winner (Begich) unmoved both times. The two flavours: **upward** ("more is less" — raise the winner, she loses) and **downward** ("less is more" — lower a loser, they win).
+
 Glossary: [`monotonicity`](../../GLOSSARY.md).
 
 ---

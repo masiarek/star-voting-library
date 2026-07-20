@@ -166,6 +166,8 @@ LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minim
 LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
 LH:alaska_buried_c3_b200,"Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't",1,single-race,200,IRV,LH-only
 LH:alaska_sincere_c3_b200,Alaska 2022 (sincere) — Begich is the Condorcet winner,1,single-race,200,IRV,LH-only
+LH:alaska_upward_after,"Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses",1,single-race,200,IRV,LH-only
+LH:alaska_upward_before,Upward monotonicity (Alaska 2022) — BEFORE: Peltola wins,1,single-race,200,IRV,LH-only
 LH:approval_bloc_2seats_c4_b6,"Bloc Approval — 2 seats, majority sweep",1,single-race,6,Approval,LH-only
 LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,single-race,5,Approval,LH-only
 LH:balance_base_irv_c3_b9,"Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)",1,single-race,9,IRV,LH-only

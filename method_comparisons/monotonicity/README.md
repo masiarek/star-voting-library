@@ -13,6 +13,17 @@ Read the reader-friendly **pages** (`monotonicity_pages/`); the `.yaml` beside e
 
 The lesson: read the two IRV pages back to back, then confirm STAR is unmoved by the same change.
 
+## The real one — the Upward Monotonicity Paradox, Alaska 2022
+
+The synthetic pair above shows the mechanism; **[Alaska 2022 is a real election that did it](upward_monotonicity_alaska.md).** Had ~6,000 Palin-only voters ranked the *winner* Peltola first — giving her **more** first-place support — Peltola would have **lost** (those votes eliminate Palin first, and Begich then beats Peltola). This is the **upward** monotonicity paradox ("more is less"); its mirror is the **downward** paradox ("less is more"). Reproduced on a faithful 200-voter model:
+
+| Page (read this) | What it shows | src |
+|---|---|:--:|
+| [Upward monotonicity (Alaska) — before](cases/cases_pages/alaska_upward_before.md) | RCV-IRV: **Peltola** wins (96–92) | [`.yaml`](cases/alaska_upward_before.yaml) |
+| [Upward monotonicity (Alaska) — after](cases/cases_pages/alaska_upward_after.md) | raise Peltola on 7 ballots → **Begich** wins; Peltola **loses** | [`.yaml`](cases/alaska_upward_after.yaml) |
+
+**[→ Full walk-through, mechanism, and why STAR / Ranked Robin can't do it](upward_monotonicity_alaska.md)** (Ranked Robin elects Begich — the Condorcet winner — *both* times, completely unmoved).
+
 ## The 301 nuance — STAR fails a *stronger* variant
 
 STAR passes the standard monotonicity criterion (*mono-raise*), as the pair above shows. But it does **not** pass the stronger **mono-raise-delete** (Woodall 1996): raising X *and* deleting the candidates now below X on those ballots can harm X — because burying the losers can change which candidate joins X in the runoff. This pair demonstrates it on a real election (X wins → raise X and delete the loser below X → **Z** wins):
