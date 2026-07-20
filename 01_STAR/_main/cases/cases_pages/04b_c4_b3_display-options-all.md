@@ -99,7 +99,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/_main/ca
 
 ## See also
 
-- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/04b_c4_b3_display-options-all.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

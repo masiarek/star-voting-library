@@ -142,6 +142,7 @@ CYCLE_OR_THREE_WAY,method_comparisons/paradoxes_and_whoops/cases/bv2156_3grpbb_s
 CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml,3,54,Bruno,Bruno,Bruno,Celia,Celia,Celia,Celia,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml,3,62,April,Celia,Celia,April,April,April,April,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml,4,20,Blue,Purple,Purple,Blue,Blue,Pink,Purple,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml,3,36,Alex,Alex,Alex,Blair,Blair,Alex,Alex,Blair,Blair,0,False,False,False
 CYCLE_OR_THREE_WAY,method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml,3,100,Ana,Ana,Ana,Beth,Beth,Ana,Ana,Beth,Beth,0,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/cases/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/_main/cases/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
@@ -179,6 +180,7 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/cases/pi
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml,3,22,Cat,Fish,Fish,Cat,Cat,Cat,Cat,Cat,Cat,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml,4,32,Cat,Fish,Fish,Cat,Cat,Bird,Cat,Cat,Cat,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml,3,36,Blair,Alex,Alex,Blair,Blair,Blair,Blair,Blair,Blair,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml,3,100,Leia,Skywalker,Skywalker,Leia,Leia,Skywalker,Leia,Leia,Leia,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml,3,100,Beth,Ana,Ana,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml,3,100,Beth,Ana,Ana,Beth,Beth,Ana,Ana,Beth,Beth,0,False,False,False

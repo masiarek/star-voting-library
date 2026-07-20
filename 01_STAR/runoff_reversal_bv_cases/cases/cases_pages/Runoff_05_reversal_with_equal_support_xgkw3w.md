@@ -114,7 +114,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_r
 
 ## See also
 
-- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/Runoff_05_reversal_with_equal_support_xgkw3w.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/Runoff_05_reversal_with_equal_support_xgkw3w.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)

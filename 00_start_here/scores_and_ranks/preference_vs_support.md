@@ -25,6 +25,18 @@ The ranking **cannot tell them apart.** The reluctant voter and the enthusiastic
 
 And here's the part that makes this a *clean* example, not a lucky one: **the gaps are identical too.** Every preference on both ballots is a one-point preference (A is exactly one above B on each). So the two ballots share their order **and** their pairwise margins — even a hypothetical method that read cardinal *margins* couldn't split them. The **only** thing that differs is the *level*: are these 1s-and-0s, or 5s-and-4s? That's the isolation. This example changes nothing but support, and shows that support is precisely what an order can't hold.
 
+## The same thing, as a live election
+
+The single-ballot version is the *idea*; here it is as a real 36-voter election you can re-run — the [**Preference vs. Support** case](../../method_comparisons/preference_vs_support/) (live on BetterVoting, [BV2225](https://bettervoting.com/ywx39y/results) / [BV2226](https://bettervoting.com/82gg36/results)). Two elections with **byte-identical rankings** — the only change is how hard the two wings score the centrist **Blair**: a grudging **1**, or a genuine **4**.
+
+| Method | Reads… | Blair scored **1** (tolerated) | Blair scored **4** (supported) | Moved? |
+|---|---|:--:|:--:|:--:|
+| **RCV-IRV** | order only | Alex | Alex | ❌ can't |
+| **Ranked Robin** | order only | Blair | Blair | ❌ can't |
+| **STAR** | order **+ support** | **Alex** | **Blair** | ✅ **only method that responds** |
+
+Because the *rankings* never change, IRV and Ranked Robin return byte-identical results in both — they cannot tell a tolerated centrist from a beloved one. STAR reads the support, so it alone moves. That's this whole page, as ballots: same preference, different support, and only the score-ballot method can see it.
+
 ## The two questions, named
 
 - **Preference** — *which* do you like more? A **relative / order** question: "A over B." Every ballot format captures at least a slice of it — choose-one only your favorite, approval a two-level cut, ranks and scores the full order.

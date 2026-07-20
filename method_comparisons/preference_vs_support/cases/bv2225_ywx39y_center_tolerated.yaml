@@ -1,0 +1,55 @@
+election_title: "Preference vs Support — the center TOLERATED (wings score Blair 1)"
+
+scenario_description: |-
+  The "tolerated" half of a matched pair (companion: the SUPPORTED election,
+  bv2226_82gg36_center_supported). Three candidates on a spectrum — Alex (a pole),
+  Blair (the center), Cole (the other pole). Blair is every faction's second choice
+  and the Condorcet winner, but the two wings score him only a GRUDGING 1.
+  The rankings here are byte-identical to the SUPPORTED election; the ONLY thing
+  that changes between the two is Blair's score from the wings (1 here, 4 there).
+  Because the orders are identical, the ranked methods can't tell the two elections
+  apart: RCV-IRV center-squeezes Blair both times (-> Alex); Ranked Robin finds Blair
+  the Condorcet winner both times (-> Blair). Only STAR responds to the support level:
+  with Blair at a thin 1 he misses the runoff, and STAR elects the candidate with a
+  real base, Alex. Flip the wings' Blair score to 4 (the companion) and STAR alone
+  moves to Blair. That is the whole preference-vs-support lesson as a live election.
+  Live results: https://bettervoting.com/ywx39y/results
+
+video_script: |-
+  Same election as its twin in every ranked respect — read the orders off the ballots
+  and they're identical. All that changed is how hard the wings back Blair. Ask the
+  room: "If Blair only earns 1s from the wings — barely tolerated — has he earned the
+  seat?" STAR says no: elect Alex, who has a real base. IRV agrees (for the wrong
+  reason — it squeezed Blair out). Ranked Robin says yes on order alone — and it says
+  the SAME yes when Blair earns real 4s next door, unable to see the difference.
+
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+bv_test_id: BV2225
+bv_election_id: ywx39y
+bv_results_url: https://bettervoting.com/ywx39y/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Alex,Blair,Cole
+  15:5,1,0   # Alex > Blair > Cole   (Blair a grudging 2nd — scored 1)
+  6:1,5,0    # Blair > Alex > Cole   (Blair's base — unchanged in both elections)
+  15:0,1,5   # Cole > Blair > Alex   (Blair a grudging 2nd — scored 1)
+
+expected_winners:
+  - Alex
+
+# file: bv2225_ywx39y_center_tolerated.yaml

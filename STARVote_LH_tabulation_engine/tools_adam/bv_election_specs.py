@@ -3666,4 +3666,78 @@ S510_REAL_SPEC = {
                 "eliminated first). STAR != IRV under the SAME 5-1-0 ballots.",
 }
 
-ELECTIONS: list = []   # reset (BV2221->2kcwbw, BV2222->rfyk46, BV2223->dyh93j done 2026-07-20)
+# --- BV2225 / BV2226 — Preference vs Support (center tolerated vs. supported) -----
+# The matched pair for 00_start_here/scores_and_ranks/preference_vs_support.md.
+# THREE candidates on a spectrum: Alex (pole), Blair (center), Cole (pole).
+# The TWO elections share BYTE-IDENTICAL rankings (Alex>Blair>Cole / Blair>Alex>Cole
+# / Cole>Blair>Alex). The ONLY difference is how hard the two wings SCORE Blair as
+# their 2nd choice: a grudging 1 ("tolerated") vs. a genuine 4 ("supported").
+# Because the orders are identical, IRV and Ranked Robin CANNOT move between the two
+# elections — IRV center-squeezes Blair both times (-> Alex); RR finds Blair the
+# Condorcet winner both times (-> Blair). Only STAR responds to the support change:
+# thin -> Alex (Blair misses the runoff), full -> Blair (real support lifts him in).
+# That is the whole preference-vs-support lesson as a live election. NOTE: unlike the
+# _four_races demos, the STAR scores are set EXPLICITLY here (not derived from ranks)
+# — differing STAR scores over identical ranks is the entire point. LH-verified
+# pre-creation (see the case .md). RR is a clean Condorcet win (deterministic/freezable).
+_PVS_CANDS = ["Alex", "Blair", "Cole"]
+#              (count, ranks[A,B,C],  thin STAR,   full STAR)
+_PVS_BLOCS = [(15, [1, 2, 3], [5, 1, 0], [5, 4, 0]),   # Alex > Blair > Cole
+              (6,  [2, 1, 3], [1, 5, 0], [1, 5, 0]),   # Blair > Alex > Cole  (base, unchanged)
+              (15, [3, 2, 1], [0, 1, 5], [0, 4, 5])]   # Cole > Blair > Alex
+
+
+def _pvs(which):
+    rows = []
+    for cnt, rank, thin, full in _PVS_BLOCS:
+        rows += [{"rank": rank, "thin": thin, "full": full}[which]] * cnt
+    return rows
+
+
+_PVS_RANK, _PVS_THIN_STAR, _PVS_FULL_STAR = _pvs("rank"), _pvs("thin"), _pvs("full")
+
+PVS_THIN_SPEC = {
+    "test_id": "BV2225",
+    "title": "Preference vs Support — the center TOLERATED (wings score Blair 1)",
+    "description": ("Same rankings as the companion 'center SUPPORTED' election, but the two "
+        "wings score the centrist Blair a grudging 1. Three races on these ballots: STAR "
+        "(explicit scores), RCV-IRV and Ranked Robin (the identical rankings). STAR -> Alex "
+        "(Blair's thin support leaves him out of the runoff); RCV-IRV -> Alex (center squeeze); "
+        "Ranked Robin -> Blair (the Condorcet winner). Compare STAR here with the SUPPORTED "
+        "election, where only Blair's scores change 1->4 and STAR alone flips to Blair — the "
+        "ranked methods can't tell the two electorates apart."),
+    "races": [
+        {"title": "STAR — Blair merely tolerated (wings score him 1)", "method": "STAR",
+         "num_winners": 1, "candidates": _PVS_CANDS, "ballots": _PVS_THIN_STAR},
+        {"title": "RCV-IRV — the shared rankings", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _PVS_CANDS, "ballots": _PVS_RANK},
+        {"title": "Ranked Robin — the shared rankings", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _PVS_CANDS, "ballots": _PVS_RANK},
+    ],
+    "expected": "STAR -> Alex (scoring round Alex 81, Cole 75, Blair 60 excluded; runoff Alex 21-15). "
+                "IRV -> Alex (Blair fewest firsts, eliminated). Ranked Robin -> Blair (Condorcet, beats both 21-15).",
+}
+
+PVS_FULL_SPEC = {
+    "test_id": "BV2226",
+    "title": "Preference vs Support — the center SUPPORTED (wings score Blair 4)",
+    "description": ("Byte-identical rankings to the companion 'center TOLERATED' election — the "
+        "ONLY change is the two wings now score the centrist Blair a genuine 4. Three races: STAR "
+        "(explicit scores), RCV-IRV and Ranked Robin (the identical rankings). STAR -> Blair (real "
+        "support lifts him into the runoff, which he wins); RCV-IRV -> Alex (center squeeze, unchanged); "
+        "Ranked Robin -> Blair (Condorcet winner, unchanged). IRV and RR return the SAME winners as the "
+        "tolerated election because the orders are identical — only STAR responds to the support change."),
+    "races": [
+        {"title": "STAR — Blair genuinely supported (wings score him 4)", "method": "STAR",
+         "num_winners": 1, "candidates": _PVS_CANDS, "ballots": _PVS_FULL_STAR},
+        {"title": "RCV-IRV — the shared rankings", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _PVS_CANDS, "ballots": _PVS_RANK},
+        {"title": "Ranked Robin — the shared rankings", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _PVS_CANDS, "ballots": _PVS_RANK},
+    ],
+    "expected": "STAR -> Blair (scoring round Blair 150, Alex 81; runoff Blair 21-15). IRV -> Alex "
+                "(unchanged — center squeeze). Ranked Robin -> Blair (unchanged — Condorcet). Same ranks as "
+                "the tolerated election; only STAR moved.",
+}
+
+ELECTIONS: list = [PVS_THIN_SPEC, PVS_FULL_SPEC]   # create BV2225 (thin) + BV2226 (full)

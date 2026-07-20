@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**349 election files** (299 single-winner, 50 multi-winner) across 15 method(s).
+**351 election files** (301 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 189 |
+| STAR | 191 |
 | RCV-IRV (Hare) | 20 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RANGE | 2 |
 | RR | 1 |
 
-## STAR  (189)
+## STAR  (191)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -205,6 +205,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2133_dyxrbr_pet2_star`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_star.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (STAR): the consensus Cat wins → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml) |
 | [`bv2176_p8dp28_star`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_star.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml) |
 | [`bv2178_8kg698_star`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_star.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — STAR: Blue, now also the score co-leader → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml) |
+| [`bv2225_ywx39y_center_tolerated`](../../method_comparisons/preference_vs_support/cases/cases_pages/bv2225_ywx39y_center_tolerated.md) | `method_comparisons/preference_vs_support/cases/` | 1 | Preference vs Support — the center TOLERATED (wings score Blair 1) → _Alex_ | [`.yaml`](../../method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml) |
+| [`bv2226_82gg36_center_supported`](../../method_comparisons/preference_vs_support/cases/cases_pages/bv2226_82gg36_center_supported.md) | `method_comparisons/preference_vs_support/cases/` | 1 | Preference vs Support — the center SUPPORTED (wings score Blair 4) → _Blair_ | [`.yaml`](../../method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml) |
 | [`00_plurality_vs_majority`](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) | `method_comparisons/split_voting/_main/` | 1 | Plurality vs Majority — most votes isn't more than half → _Blake_ | [`.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) |
 | [`01_political_left_split`](../../method_comparisons/split_voting/_main/_main_pages/01_political_left_split.md) | `method_comparisons/split_voting/_main/` | 1 | Spoiler — a split coalition hands the seat to the minority → _Labour_ | [`.yaml`](../../method_comparisons/split_voting/_main/01_political_left_split.yaml) |
 | [`02_icecream_chocolate_split`](../../method_comparisons/split_voting/_main/_main_pages/02_icecream_chocolate_split.md) | `method_comparisons/split_voting/_main/` | 1 | Spoiler — chocolate's majority splits, vanilla steals the win → _MilkChoco_ | [`.yaml`](../../method_comparisons/split_voting/_main/02_icecream_chocolate_split.yaml) |

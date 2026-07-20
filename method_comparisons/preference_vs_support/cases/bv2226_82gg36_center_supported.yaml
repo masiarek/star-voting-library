@@ -1,0 +1,52 @@
+election_title: "Preference vs Support — the center SUPPORTED (wings score Blair 4)"
+
+scenario_description: |-
+  The "supported" half of a matched pair (companion: the TOLERATED election,
+  bv2225_ywx39y_center_tolerated). Same three candidates on a spectrum — Alex (a pole),
+  Blair (the center), Cole (the other pole) — and BYTE-IDENTICAL rankings to the
+  tolerated election. The ONLY change: the two wings now score the centrist Blair a
+  genuine 4 instead of a grudging 1. Because the orders didn't move, the ranked methods
+  don't move either: RCV-IRV still center-squeezes Blair (-> Alex); Ranked Robin still
+  finds him the Condorcet winner (-> Blair). But STAR reads the support — Blair's real
+  4s lift him into the runoff, which he wins — so STAR flips from Alex (tolerated) to
+  Blair (supported). Two elections, identical ranks, and only the score-reading method
+  can tell that in one Blair is merely tolerated and in the other he is genuinely backed.
+  Live results: https://bettervoting.com/82gg36/results
+
+video_script: |-
+  Hold the twin election up beside this one. Every ranking is the same; the ranked
+  tallies (IRV, Ranked Robin) print the same winners. The only thing that moved is
+  Blair's score from the wings — 1 to 4 — and STAR moved with it, from Alex to Blair.
+  That's the payoff line: "The rank couldn't see it. The score did." Support is the
+  information a ranking throws away.
+
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+bv_test_id: BV2226
+bv_election_id: 82gg36
+bv_results_url: https://bettervoting.com/82gg36/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Alex,Blair,Cole
+  15:5,4,0   # Alex > Blair > Cole   (SAME order — Blair now a strong 2nd, scored 4)
+  6:1,5,0    # Blair > Alex > Cole   (Blair's base — unchanged in both elections)
+  15:0,4,5   # Cole > Blair > Alex   (SAME order — Blair now a strong 2nd, scored 4)
+
+expected_winners:
+  - Blair
+
+# file: bv2226_82gg36_center_supported.yaml

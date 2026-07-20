@@ -1,0 +1,29 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+ Tabulating 36 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alex, Blair, Cole
+    15 ×   Alex > Blair      (5, 4, 0)
+     6 ×   Blair > Alex      (1, 5, 0)
+    15 ×   Cole > Blair      (0, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Alex              15  Hopeful
+Cole              15  Hopeful
+Blair              6  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alex              21  Elected
+Cole              15  Rejected
+Blair              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alex
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
