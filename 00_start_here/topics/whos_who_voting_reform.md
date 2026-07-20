@@ -21,6 +21,7 @@ These are the mathematicians and economists whose results define the whole field
 | **Michel Balinski** (1933–2019) | Apportionment theory; **Majority Judgment** (with Rida Laraki) | [Wikipedia](https://en.wikipedia.org/wiki/Michel_Balinski) |
 | **Nicolaus Tideman** | **Ranked Pairs** (a Condorcet method); Virginia Tech economist | [Wikipedia](https://en.wikipedia.org/wiki/Nicolaus_Tideman) |
 | **Markus Schulze** | The **Schulze method** (a widely-used Condorcet method) | [Wikipedia](https://en.wikipedia.org/wiki/Schulze_method) |
+| **Richard B. Darlington** | Cornell psychology **emeritus**; modern champion of **minimax** (a Condorcet method). His simulations argue Condorcet/minimax best recover the "true" Condorcet winner — the case that led the Condorcet Internet Voting Service (CIVS) to switch its default to minimax; advocates **Smith//Minimax** with Tideman. A pro-Condorcet steelman worth reading against the STAR case. | [arXiv:1807.01366](https://arxiv.org/abs/1807.01366) |
 
 ## Modern reform — by method camp
 

@@ -3569,4 +3569,42 @@ _PINEAPPLE = [
 #   BV2217 -> mvxbxr (25%, 5 toppings, 100 voters)
 #   BV2218 -> h34pp9 (11%, 11 toppings, 100 voters)
 # Each: Plurality -> Pineapple; Approval / RankedRobin / STAR -> Cheese. Do NOT re-run.
+# BV2219/BV2220 — Equally Weighted Vote (the Equal Vote "Test of Balance").
+# Cast Astra…Flux. The 'plus' election adds two voters whose ballots are exact
+# opposites (each candidate's two scores sum to 5); every total rises by 5 and
+# the runoff cancels 1-1, so STAR elects the same winner (Comet) either way.
+# Reproduces 01_STAR/equal_and_opposite/. Ready to create — see EQO note below.
+_EQO_CANDS = ["Astra", "Bolt", "Comet", "Dune", "Echo", "Flux"]
+_EQO_BASE = [[3, 2, 5, 1, 4, 0], [2, 4, 5, 0, 3, 1], [4, 1, 4, 2, 5, 0]]
+_EQO_MIRROR = [[2, 1, 0, 1, 5, 4], [3, 4, 5, 4, 0, 1]]  # two exact-opposite ballots
+
+EQO_BASE_SPEC = {
+    "test_id": "BV2219",
+    "title": "Equally Weighted Vote — base election (STAR elects Comet)",
+    "description": ("The 'before' half of the Equal Vote Test of Balance. Three "
+        "voters, six candidates; STAR elects Comet (score total 14, automatic "
+        "runoff 2-1 over Echo). Its twin (BV2220) adds two exact-opposite ballots "
+        "and shows the winner never moves — an equally weighted vote."),
+    "method": "STAR", "num_winners": 1,
+    "candidates": _EQO_CANDS, "ballots": _EQO_BASE,
+    "expected": "STAR -> Comet (14; runoff 2-1 over Echo).",
+}
+
+EQO_PLUS_SPEC = {
+    "test_id": "BV2220",
+    "title": "Equally Weighted Vote — add two exact-opposite ballots (Comet still wins)",
+    "description": ("The base election (BV2219) plus two voters with exact-opposite "
+        "opinions on every candidate (each candidate's two scores sum to 5). Every "
+        "score total rises by exactly 5 and the runoff cancels 1-1, so STAR still "
+        "elects Comet: an equally weighted vote, demonstrated — any ballot can be "
+        "perfectly cancelled by its opposite, which is why STAR has no forced "
+        "vote-splitting."),
+    "method": "STAR", "num_winners": 1,
+    "candidates": _EQO_CANDS, "ballots": _EQO_BASE + _EQO_MIRROR,
+    "expected": "STAR -> Comet (19; runoff 3-2 over Echo). Same winner as BV2219.",
+}
+
+# To create (mints TWO permanent public BV elections), set:
+#   ELECTIONS = [EQO_BASE_SPEC, EQO_PLUS_SPEC]
+# then `uv run …/create_bv_test_election.py`. Left empty until go.
 ELECTIONS: list = []   # reset to safe empty state (BV2216-2218 done 2026-07-19)
