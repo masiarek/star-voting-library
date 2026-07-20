@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**340 election files** (290 single-winner, 50 multi-winner) across 15 method(s).
+**342 election files** (292 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 186 |
-| RCV-IRV (Hare) | 14 |
+| RCV-IRV (Hare) | 16 |
 | Ranked Robin (RCV-RR / Copeland) | 39 |
 | Approval | 13 |
 | STV (proportional RCV) | 10 |
@@ -69,8 +69,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vote_splitting_scenario3_outsider_wins`](../../01_STAR/_main/_main_pages/vote_splitting_scenario3_outsider_wins.md) | `01_STAR/_main/` | 1 | Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins) → _Vanilla_ | [`.yaml`](../../01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/abstain_bugs/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/abstain_bugs/abstain_bugs_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/abstain_bugs/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml) |
-| [`bv2219_36f4v2_equal_opposite_base`](../../01_STAR/equal_and_opposite/equal_and_opposite_pages/bv2219_36f4v2_equal_opposite_base.md) | `01_STAR/equal_and_opposite/` | 1 | Equal & opposite — the base election (Comet wins) → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/bv2219_36f4v2_equal_opposite_base.yaml) |
-| [`bv2220_q8q9m7_equal_opposite_plus_cancel`](../../01_STAR/equal_and_opposite/equal_and_opposite_pages/bv2220_q8q9m7_equal_opposite_plus_cancel.md) | `01_STAR/equal_and_opposite/` | 1 | Equal & opposite — add two mirror ballots, Comet still wins → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) |
+| [`bv2219_36f4v2_equal_opposite_base`](../../01_STAR/equal_and_opposite/cases/cases_pages/bv2219_36f4v2_equal_opposite_base.md) | `01_STAR/equal_and_opposite/cases/` | 1 | Equal & opposite — the base election (Comet wins) → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/cases/bv2219_36f4v2_equal_opposite_base.yaml) |
+| [`bv2220_q8q9m7_equal_opposite_plus_cancel`](../../01_STAR/equal_and_opposite/cases/cases_pages/bv2220_q8q9m7_equal_opposite_plus_cancel.md) | `01_STAR/equal_and_opposite/cases/` | 1 | Equal & opposite — add two mirror ballots, Comet still wins → _Comet_ | [`.yaml`](../../01_STAR/equal_and_opposite/cases/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) |
 | [`ex01_district_combined`](../../01_STAR/exercises/exercises_pages/ex01_district_combined.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: the COMBINED city → _Carmen_ | [`.yaml`](../../01_STAR/exercises/ex01_district_combined.yaml) |
 | [`ex01_district_east`](../../01_STAR/exercises/exercises_pages/ex01_district_east.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: EAST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_east.yaml) |
 | [`ex01_district_west`](../../01_STAR/exercises/exercises_pages/ex01_district_west.md) | `01_STAR/exercises/` | 1 | Exercise 1 — Two districts, one mayor: WEST district → _Avery_ | [`.yaml`](../../01_STAR/exercises/ex01_district_west.yaml) |
@@ -219,11 +219,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/symmetric_centrist_all_methods_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/symmetric_centrist_bv2170_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/bv2170_pp2q4q_star.yaml) |
 
-## RCV-IRV (Hare)  (14)
+## RCV-IRV (Hare)  (16)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`RCV_ballot_example`](../../06_Other/RCV_IRV/RCV_IRV_pages/RCV_ballot_example.md) | `06_Other/RCV_IRV/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../06_Other/RCV_IRV/RCV_ballot_example.yaml) |
+| [`balance_base_irv_c3_b9`](../../06_Other/RCV_IRV/equal_vote_balance/equal_vote_balance_pages/balance_base_irv_c3_b9.md) | `06_Other/RCV_IRV/equal_vote_balance/` | 1 | Equal-vote balance — base (IRV elects the Condorcet winner, Bruno) → _Bruno_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/balance_base_irv_c3_b9.yaml) |
+| [`balance_plus_opposite_c3_b15`](../../06_Other/RCV_IRV/equal_vote_balance/equal_vote_balance_pages/balance_plus_opposite_c3_b15.md) | `06_Other/RCV_IRV/equal_vote_balance/` | 1 | Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada) → _Ada_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/balance_plus_opposite_c3_b15.yaml) |
 | [`burlington_2009_irv`](../../method_comparisons/burlington_2009/burlington_2009_pages/burlington_2009_irv.md) | `method_comparisons/burlington_2009/` | 1 | Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third) → _Kiss_ | [`.yaml`](../../method_comparisons/burlington_2009/burlington_2009_irv.yaml) |
 | [`burlington_2009_raise_kiss_nonmono`](../../method_comparisons/burlington_2009/burlington_2009_pages/burlington_2009_raise_kiss_nonmono.md) | `method_comparisons/burlington_2009/` | 1 | Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/burlington_2009_raise_kiss_nonmono.yaml) |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/center_squeeze_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/center_squeeze_irv.yaml) |

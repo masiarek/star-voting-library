@@ -118,7 +118,9 @@ def _single_winner_positive_files():
     for d in SINGLE_WINNER_DIRS:
         if not d.is_dir():
             continue
-        for p in sorted(d.glob("*.yaml")):
+        # Source yamls live either directly in the case folder (legacy layout)
+        # or in its `cases/` subfolder (the README-alone layout). Check both.
+        for p in sorted(list(d.glob("*.yaml")) + list(d.glob("cases/*.yaml"))):
             view = _star_single_view(_load(p))
             if view is None:
                 continue

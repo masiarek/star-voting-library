@@ -2,7 +2,7 @@
 
 *Generated from [`bv2220_q8q9m7_equal_opposite_plus_cancel.yaml`](../bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Comet
+**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Comet
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (election `q8q9m7`).
 
@@ -105,19 +105,18 @@ Flux       0  1  0  0  2  2  |     6   1.2
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../equal_and_opposite_tabulated/bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_and_opposite/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_and_opposite/cases/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml
 ```
 
 ## See also
 
-- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
-- [Vote splitting (worked set)](../../../method_comparisons/split_voting/README.md)
-- [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
-- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+- [Vote splitting (worked set)](../../../../method_comparisons/split_voting/README.md)
+- [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
+- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2219_36f4v2_equal_opposite_base](bv2219_36f4v2_equal_opposite_base.md)
