@@ -79,7 +79,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | yyhj9x | BV2196 — Later-No-Harm (2 of 2) — the generous ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
 | 26khr3 | NOTA test — None of the Above wins (with a null abst | 1 | single-race | 6 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
-| 36f4v2 | Equal & opposite — the base election (Comet wins) | 1 | single-race | 3 | STAR | BV |
+| 36f4v2 | BV2219 — Equally Weighted Vote — base election (STAR | 1 | single-race | 3 | STAR | BV |
 | 39py93 | BV2204 — Poets on the shelf: the control (STV 2 seat | 1 | single-race | 13 | STV | BV |
 | 3r3yf7 | BV2141 — Ranked Robin — a Copeland tie that needs al | 1 | single-race | 81 | RankedRobin | BV |
 | 3w6v4b | Equal Support vs Abstention — minimal STAR test (A/B | 1 | single-race | 5 | STAR | BV |
@@ -277,7 +277,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | kbh3d9 | Guido example - bloc STAR | 1 | single-race | 3 | STAR | BV |
 | my82v6 | 01a_c2_b2 — two candidates, two ballots (Chocolate/V | 1 | single-race | 2 | STAR | BV |
 | pet | What Makes the Best Pet? | 1 | single-race | 461 | STAR | BV |
-| q8q9m7 | Equal & opposite — add two mirror ballots, Comet sti | 1 | single-race | 5 | STAR | BV |
+| q8q9m7 | BV2220 — Equally Weighted Vote — add two exact-oppos | 1 | single-race | 5 | STAR | BV |
 | qrw6wb | Ann, Bob, Cal - the canonical leading example (singl | 1 | single-race | 3 | STAR | BV |
 | r2pvc9 | Runoff confirms the leader (control)  | 1 | single-race | 3 | STAR | BV |
 | r4dqvd | BV2105 - Favorite ice cream (Bloc STAR) - without en | 1 | single-race | 4 | STAR | BV |

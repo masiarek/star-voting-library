@@ -63,7 +63,7 @@ ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
-36f4v2,Equal & opposite — the base election (Comet wins),1,single-race,3,STAR,BV
+36f4v2,BV2219 — Equally Weighted Vote — base election (STAR elects Comet),1,single-race,3,STAR,BV
 39py93,"BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)",1,single-race,13,STV,BV
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
@@ -261,7 +261,7 @@ jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-ra
 kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV
 my82v6,"01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",1,single-race,2,STAR,BV
 pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
-q8q9m7,"Equal & opposite — add two mirror ballots, Comet still wins",1,single-race,5,STAR,BV
+q8q9m7,BV2220 — Equally Weighted Vote — add two exact-opposite ballots (Comet still wins),1,single-race,5,STAR,BV
 qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
