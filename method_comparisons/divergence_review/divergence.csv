@@ -27,6 +27,8 @@ AGREE,01_STAR/_main/vote_splitting_scenario2_bloc_leads.yaml,3,36,DarkChoco,Dark
 AGREE,01_STAR/_main/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,0,False,False,False
 AGREE,01_STAR/abstain_bugs/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/abstain_bugs/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
+AGREE,01_STAR/equal_and_opposite/equal_and_opposite_01_base_c6_b3.yaml,6,3,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,1,False,False,False
+AGREE,01_STAR/equal_and_opposite/equal_and_opposite_02_plus_cancel_c6_b5.yaml,6,5,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,3,False,False,False
 AGREE,01_STAR/exercises/ex07_vanishing_votes.yaml,3,9,Aspen,Aspen,Birch,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,3,True,False,False
 AGREE,01_STAR/exercises/ex10_reticent.yaml,3,9,Amir,Amir,Amir,Amir,Amir,Amir,Amir,,,0,False,False,True
 AGREE,01_STAR/exercises/ex11_spoiler_added.yaml,3,9,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,Alba,0,False,False,False

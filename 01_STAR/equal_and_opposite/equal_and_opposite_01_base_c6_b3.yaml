@@ -1,0 +1,39 @@
+election_title: "Equal & opposite — the base election (Comet wins)"
+
+scenario_description: |-
+  Three voters, six candidates (Astra, Bolt, Comet, Dune, Echo, Flux). STAR
+  elects Comet — highest score total (14) and winner of the automatic runoff
+  over Echo, 2–1. This is the "before" half of the Equally Weighted Vote
+  demonstration: its twin adds two voters with exact-opposite ballots and shows
+  the winner never moves. See the lesson: equal_and_opposite/README.md.
+
+video_script: |-
+  Pair file 1 of 2. The clean base election with a decisive STAR winner (Comet).
+  File 2 (plus_cancel) adds two mirror ballots that sum to 5 on every candidate
+  and shows Comet still wins — an equally weighted vote, demonstrated.
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Astra, Bolt, Comet, Dune, Echo, Flux
+  3, 2, 5, 1, 4, 0
+  2, 4, 5, 0, 3, 1
+  4, 1, 4, 2, 5, 0
+
+expected_winners:
+- Comet
+
+# file: equal_and_opposite_01_base_c6_b3.yaml

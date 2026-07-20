@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 275 elections, 408 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 277 elections, 410 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -194,6 +194,8 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | dead_rung_scoring_dead_cap4 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | display_options_demo | Display options demo | 1 | single-race | 4 | STAR | LH-only |
 | edelman_perfect_component_c3_b30 | A perfect 'Condorcet component' (30 voters) — every  | 1 | single-race | 30 | STAR | LH-only |
+| equal_and_opposite_01_base_c6_b3 | Equal & opposite — the base election (Comet wins) | 1 | single-race | 3 | STAR | LH-only |
+| equal_and_opposite_02_plus_cancel_c6_b5 | Equal & opposite — add two mirror ballots, Comet sti | 1 | single-race | 5 | STAR | LH-only |
 | equal_support_runoff_demo | Equal Support — counted in both rounds, neutral only | 1 | single-race | 100 | STAR | LH-only |
 | ex02_bella_exits | Exercise 2 — The tenth ballot: Bella withdraws | 1 | single-race | 9 | STAR | LH-only |
 | ex02_nine_ballots | Exercise 2 — The tenth ballot: the nine counted ball | 1 | single-race | 9 | STAR | LH-only |
@@ -301,7 +303,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 213 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| single-race | 215 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | contested (multi-race) | 195 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
 
 ### By seat class
@@ -310,7 +312,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | seat class | # races | example elections |
 |---|--:|---|
-| single-winner | 358 | 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_condorcet_winner, 01_political_left_split |
+| single-winner | 360 | 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_condorcet_winner, 01_political_left_split |
 | multi-winner | 50 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss |
 
 ### By ballot type
@@ -319,7 +321,7 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 
 | ballot type | # races | example elections |
 |---|--:|---|
-| score | 225 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| score | 227 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | ranked | 123 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 03a_stv_3seats |
 | choose-one | 35 | 2p33qq, 3x4vrv, 4h89vj, 6hv7jf |
 | approval | 24 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
@@ -331,7 +333,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 316 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| majoritarian | 318 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | Condorcet | 61 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
 | proportional | 31 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
 
@@ -341,7 +343,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | method (family) | # races | example elections |
 |---|--:|---|
-| STAR | 205 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| STAR | 207 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | RankedRobin | 61 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
 | IRV | 49 | 2jrfpg, 4htk44, 6bry7c, 6fj2kg |
 | Plurality | 35 | 2p33qq, 3x4vrv, 4h89vj, 6hv7jf |
@@ -358,7 +360,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
 | BV | 179 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
-| LH-only | 159 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| LH-only | 161 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 69 | 2jrfpg, 2p33qq, 3grpbb, 6bry7c |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 
