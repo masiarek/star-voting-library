@@ -1,8 +1,10 @@
 # Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win
 
-*Generated from [`fb_irv_betray.yaml`](../fb_irv_betray.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2228_bgcmxx_betray_irv.yaml`](../bv2228_bgcmxx_betray_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Center
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx`).
 
 ## Scenario
 
@@ -30,7 +32,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/fb_irv_betray_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2228_bgcmxx_betray_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -59,11 +61,11 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_irv_betray.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2228_bgcmxx_betray_irv.yaml
 ```
 
 ## See also
 
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [fb_irv_honest](fb_irv_honest.md) · [fb_star_honest](fb_star_honest.md)
+More cases in this set: [bv2227_3xgkck_honest_irv](bv2227_3xgkck_honest_irv.md) · [bv2227_3xgkck_honest_star](bv2227_3xgkck_honest_star.md)

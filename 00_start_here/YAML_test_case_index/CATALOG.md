@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 293 elections, 432 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 292 elections, 432 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -19,6 +19,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 2p33qq | BV2215 — Minority winner — 34% wins Choose-One, but  | 3 | contested (multi-race) | 100 | Plurality, RankedRobin, STAR | BV |
 | 3grpbb | BV2156 — STAR's own miss — the Condorcet winner scor | 2 | contested (multi-race) | 100 | RankedRobin, STAR | BV |
 | 3x4vrv | BV2135 — Block & Limited voting, reproduced as bloc  | 2 | contested (multi-race) | 10 | Plurality | BV |
+| 3xgkck | Favorite betrayal (RCV-IRV) — HONEST: Left voters ra | 2 | contested (multi-race) | 34 | IRV, STAR | BV |
 | 4htk44 | BV2162 — Nurmi's truncation electorate (1 of 2) — ev | 3 | contested (multi-race) | 103 | IRV, RankedRobin, STAR | BV |
 | 6bry7c | BV2192 — The Squeezed Bridge-Builder — everyone's se | 3 | contested (multi-race) | 9 | IRV, RankedRobin, STAR | BV |
 | 6fj2kg | BV2145 — Felsenthal's runoff paradoxes (1 of 2) — th | 3 | contested (multi-race) | 17 | IRV, RankedRobin, STAR | BV |
@@ -215,9 +216,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ex08_minimal_reversal_2c | Exercise 8 — a smallest runoff reversal (sample solu | 1 | single-race | 3 | STAR | LH-only |
 | ex08_minimal_reversal_3c | Exercise 8 — a small runoff reversal (sample solutio | 1 | single-race | 5 | STAR | LH-only |
 | ex09_game_night_cycle | Exercise 9 — Game night: nobody is unbeatable (a Ran | 1 | single-race | 10 | RankedRobin | LH-only |
-| fb_irv_betray | Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters  | 1 | single-race | 34 | IRV | LH-only |
-| fb_irv_honest | Favorite betrayal (RCV-IRV) — HONEST: Left voters ra | 1 | single-race | 34 | IRV | LH-only |
-| fb_star_honest | Favorite betrayal — the fix: STAR & Ranked Robin ele | 1 | single-race | 34 | STAR | LH-only |
 | felsenthal_ex6_pareto_approval | Felsenthal Ex.6 — Approval can elect a Pareto-domina | 1 | single-race | 3 | Approval | LH-only |
 | felsenthal_ex6_ranked_robin | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant  | 1 | single-race | 3 | RankedRobin | LH-only |
 | irv_combined | Summability demo — RCV-IRV combined A+B (B eliminate | 1 | single-race | 26 | IRV | LH-only |
@@ -274,6 +272,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vote_splitting_scenario3_outsider_wins | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
 | b6xrdr | Favorite betrayal in STAR (2 of 2) — nine voters dem | 1 | single-race | 57 | STAR | BV |
 | bfjqmg | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
+| bgcmxx | Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters  | 1 | single-race | 34 | IRV | BV |
 | bj8dfc | BV2202 — The Transfer Machine, fully ranked — a book | 1 | single-race | 9 | STV | BV |
 | btmydt | BV129 - 3 cand - 2 winners (Bloc STAR) | 1 | single-race | 5 | STAR | BV |
 | d664xw | Runoff_06 - Runoff confirms the leader at scale (con | 1 | single-race | 5 | STAR | BV |
@@ -319,8 +318,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 227 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
-| contested (multi-race) | 205 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
+| single-race | 225 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| contested (multi-race) | 207 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
 
 ### By seat class
 
@@ -361,7 +360,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 |---|--:|---|
 | STAR | 213 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | RankedRobin | 63 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
-| IRV | 63 | 2jrfpg, 4htk44, 6bry7c, 6fj2kg |
+| IRV | 63 | 2jrfpg, 3xgkck, 4htk44, 6bry7c |
 | Plurality | 35 | 2p33qq, 3x4vrv, 4h89vj, 6hv7jf |
 | Approval | 24 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
 | STAR_PR | 18 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03b_star_pr_3seats |
@@ -375,8 +374,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| BV | 188 | 26khr3, 2jrfpg, 2kcwbw, 2p33qq |
-| LH-only | 170 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| BV | 191 | 26khr3, 2jrfpg, 2kcwbw, 2p33qq |
+| LH-only | 167 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 73 | 2jrfpg, 2p33qq, 3grpbb, 6bry7c |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

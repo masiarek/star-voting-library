@@ -171,7 +171,7 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/cases/center_squeeze_
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml,3,100,Anderson,Carter,Carter,Anderson,Anderson,Anderson,Anderson,Anderson,Anderson,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml,3,100,Moderate,Liberal,Liberal,Moderate,Moderate,Liberal,Liberal,Moderate,Moderate,0,False,False,False
-IRV_OUTLIER_RR_WITH_STAR,method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml,3,34,Center,Right,Right,Center,Center,Center,Center,Center,Center,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml,3,34,Center,Right,Right,Center,Center,Center,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_star.yaml,3,17,Ada,Ben,Ben,Ada,Ada,Ada,Ada,Ada,Ada,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_star.yaml,3,11,Beth,Carl,Carl,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml,4,103,B,A,A,B,B,B,B,B,B,0,False,False,False

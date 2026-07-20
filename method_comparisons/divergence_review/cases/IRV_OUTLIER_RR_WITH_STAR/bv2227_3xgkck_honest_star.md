@@ -21,7 +21,7 @@ STAR elects **Center** — and so do Ranked Robin and Condorcet, because **Cente
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml`](../../../../method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml)  ·  **STAR tabulated mirror:** [`fb_star_honest_tabulated.txt`](../../../../method_comparisons/favorite_betrayal_irv/cases/cases_tabulated/fb_star_honest_tabulated.txt)
+**Source election:** [`method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml`](../../../../method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml)  ·  **STAR tabulated mirror:** [`bv2227_3xgkck_honest_star_tabulated.txt`](../../../../method_comparisons/favorite_betrayal_irv/cases/cases_tabulated/bv2227_3xgkck_honest_star_tabulated.txt)
 
 _3 candidates, 34 ballots._
 

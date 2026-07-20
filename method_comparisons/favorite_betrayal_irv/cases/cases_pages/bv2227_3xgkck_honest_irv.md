@@ -1,8 +1,10 @@
 # Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins
 
-*Generated from [`fb_irv_honest.yaml`](../fb_irv_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2227_3xgkck_honest_irv.yaml`](../bv2227_3xgkck_honest_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Right
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`).
 
 ## Scenario
 
@@ -29,7 +31,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/fb_irv_honest_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2227_3xgkck_honest_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -58,7 +60,7 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_irv_honest.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_irv.yaml
 ```
 
 ## See also
@@ -67,4 +69,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [fb_irv_betray](fb_irv_betray.md) · [fb_star_honest](fb_star_honest.md)
+More cases in this set: [bv2227_3xgkck_honest_star](bv2227_3xgkck_honest_star.md) · [bv2228_bgcmxx_betray_irv](bv2228_bgcmxx_betray_irv.md)

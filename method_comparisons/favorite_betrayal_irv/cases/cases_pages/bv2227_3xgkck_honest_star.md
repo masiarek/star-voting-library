@@ -1,8 +1,10 @@
 # Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots
 
-*Generated from [`fb_star_honest.yaml`](../fb_star_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2227_3xgkck_honest_star.yaml`](../bv2227_3xgkck_honest_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Center
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`).
 
 ## Scenario
 
@@ -42,7 +44,7 @@ The count, step by step — the rounds and how the winner is reached:
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/fb_star_honest_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2227_3xgkck_honest_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 
@@ -102,19 +104,19 @@ Center      9   0  25   0   0   0  |   120   3.5
 Right      13   0   5   0   0  16  |    80   2.4
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/fb_star_honest_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2227_3xgkck_honest_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/fb_star_honest.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2227_3xgkck_honest_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [fb_irv_betray](fb_irv_betray.md) · [fb_irv_honest](fb_irv_honest.md)
+More cases in this set: [bv2227_3xgkck_honest_irv](bv2227_3xgkck_honest_irv.md) · [bv2228_bgcmxx_betray_irv](bv2228_bgcmxx_betray_irv.md)

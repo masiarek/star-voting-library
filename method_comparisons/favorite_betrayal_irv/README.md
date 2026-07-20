@@ -2,6 +2,10 @@
 
 *The question RCV voters keep asking — and the honest answer is **sometimes, yes.** Under RCV-IRV, ranking your true favorite first can elect your **worst** candidate; ranking the compromise first can rescue them. This is **favorite betrayal**, and here it is in the simplest possible 3-bloc form you can run yourself. Then: **STAR and Ranked Robin elect the compromise from the honest ballots — no betrayal required.***
 
+**▶ Live on BetterVoting:**
+- **Honest ballots** (STAR + RCV-IRV + Ranked Robin, same voters): [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`, BV2227)
+- **The betrayal** (RCV-IRV, 2 voters rank the compromise first): [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx`, BV2228)
+
 → The deep-dive concept page: [Favorite Betrayal — the full explainer](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md). Related: [center squeeze](../center_squeeze/) · [strategic voting](../../00_start_here/topics/strategic_voting.md) · [what makes a good winner?](../../00_start_here/topics/what_makes_a_good_winner.md).
 
 ---
@@ -17,7 +21,7 @@ Three candidates on a spectrum — **Left**, **Center**, **Right** — and 34 vo
 | 5 | Center > Right > Left |
 | 13 | Right > Center > Left |
 
-## 1. Honest ballots → RCV-IRV elects your *worst* ([`fb_irv_honest`](cases/cases_pages/fb_irv_honest.md))
+## 1. Honest ballots → RCV-IRV elects your *worst* ([`bv2227_3xgkck_honest_irv`](cases/cases_pages/bv2227_3xgkck_honest_irv.md))
 
 The 12 Left voters vote sincerely, favorite first:
 
@@ -32,7 +36,7 @@ Left    16   Rejected
 
 Center — the candidate a majority prefers to *either* wing — is eliminated first, and **Right wins**. The Left voters' honest ballots elected their **least-favorite** candidate. (Right was their bottom choice.)
 
-## 2. Rank your favorite *second* → you win ([`fb_irv_betray`](cases/cases_pages/fb_irv_betray.md))
+## 2. Rank your favorite *second* → you win ([`bv2228_bgcmxx_betray_irv`](cases/cases_pages/bv2228_bgcmxx_betray_irv.md))
 
 Change **just 2** of the 12 Left voters: they betray their favorite and rank **Center first**, Left second (`Center > Left > Right`). Nothing else moves.
 
@@ -47,7 +51,7 @@ Right   13   Rejected
 
 Now **Left** is squeezed out, their ballots flow to Center, and **Center wins 21–13**. Two voters, by *hiding* who they actually liked best, flipped the result from their worst choice to their compromise. That is favorite betrayal — and it's exactly why the advice under IRV is *"putting your favorite first is only safe when they're either very strong or have no chance at all."*
 
-## 3. The fix: STAR & Ranked Robin elect Center from the *honest* ballots ([`fb_star_honest`](cases/cases_pages/fb_star_honest.md))
+## 3. The fix: STAR & Ranked Robin elect Center from the *honest* ballots ([`bv2227_3xgkck_honest_star`](cases/cases_pages/bv2227_3xgkck_honest_star.md))
 
 Score the **same honest preferences** 0–5 (favorite 5, compromise 3, worst 0) — no strategy:
 
@@ -79,7 +83,7 @@ Automatic Runoff Round
 ## Reproduce it
 
 ```
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_irv_honest.yaml
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_irv_betray.yaml
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_irv.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2228_bgcmxx_betray_irv.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml
 ```

@@ -55,7 +55,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Anderson** · IRV=Carter · RR=Anderson · Approval=Anderson · Score=Anderson · Condorcet=Anderson
 - **[bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  
     STAR=**Moderate** · IRV=Liberal · RR=Moderate · Approval=Liberal · Score=Liberal · Condorcet=Moderate
-- **[fb_star_honest](cases/IRV_OUTLIER_RR_WITH_STAR/fb_star_honest.md)** — `method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml` (3c/34b)  
+- **[bv2227_3xgkck_honest_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2227_3xgkck_honest_star.md)** — `method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml` (3c/34b)  
     STAR=**Center** · IRV=Right · RR=Center · Approval=Center · Score=Center · Condorcet=Center
 - **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_star.yaml` (3c/17b)  
     STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada

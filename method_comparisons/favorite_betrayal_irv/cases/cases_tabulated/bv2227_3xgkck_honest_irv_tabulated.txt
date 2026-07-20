@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     fb_irv_honest.yaml
-TABULATED FILE:  fb_irv_honest_tabulated.txt
+SOURCE FILE:     bv2227_3xgkck_honest_irv.yaml
+TABULATED FILE:  bv2227_3xgkck_honest_irv_tabulated.txt
 ======================================================================
 
 election_title: "Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins"
@@ -26,6 +26,10 @@ video_script: |-
 paradoxes: [condorcet-winner]
 voting_method: RCV_IRV
 num_winners: 1
+
+bv_test_id: BV2227
+bv_election_id: 3xgkck
+bv_results_url: https://bettervoting.com/3xgkck/results
 
 options:
   show_description: false

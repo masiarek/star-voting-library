@@ -3740,4 +3740,75 @@ PVS_FULL_SPEC = {
                 "the tolerated election; only STAR moved.",
 }
 
-ELECTIONS: list = [PVS_THIN_SPEC, PVS_FULL_SPEC]   # create BV2225 (thin) + BV2226 (full)
+# --- BV2227 / BV2228 — Favorite betrayal, the plain RCV-IRV incentive ------------
+# Backs method_comparisons/favorite_betrayal_irv/. Left/Center/Right, 34 voters.
+# HONEST election (BV2227), 3 races on the SAME honest ballots: STAR (explicit 5/3/0
+# scores) + IRV + Ranked Robin (the ranks those scores imply). STAR & RR elect the
+# compromise Center (the Condorcet winner); IRV elects the wing Right (center squeeze).
+# BETRAY election (BV2228), IRV only: 2 of the 12 Left voters rank Center FIRST — Left
+# is eliminated instead of Center, and Center wins. Same voters, one strategic move,
+# opposite result. Explicit STAR scores (bottom = 0, not the rank-map's 1), so this
+# does NOT use _mk_ranked_and_star. LH-verified pre-creation; RR is a clean Condorcet win.
+_FB_CANDS = ["Left", "Center", "Right"]
+#               (count, STAR[L,C,R], rank[L,C,R] 1=top)
+_FB_HONEST = [(12, [5, 3, 0], [1, 2, 3]),   # Left > Center > Right
+              (4,  [3, 5, 0], [2, 1, 3]),   # Center > Left > Right
+              (5,  [0, 5, 3], [3, 1, 2]),   # Center > Right > Left
+              (13, [0, 3, 5], [3, 2, 1])]   # Right > Center > Left
+_FB_BETRAY = [(10, [1, 2, 3]),   # Left > Center > Right   (10 loyal)
+              (6,  [2, 1, 3]),   # Center > Left > Right    (4 + 2 betrayers)
+              (5,  [3, 1, 2]),   # Center > Right > Left
+              (13, [3, 2, 1])]   # Right > Center > Left
+
+
+def _fb_expand(which):
+    rows = []
+    for row in _FB_HONEST:
+        cnt = row[0]
+        rows += [{"star": row[1], "rank": row[2]}[which]] * cnt
+    return rows
+
+
+_FB_HONEST_STAR = _fb_expand("star")
+_FB_HONEST_RANK = _fb_expand("rank")
+_FB_BETRAY_RANK = sum(([rk] * cnt for cnt, rk in _FB_BETRAY), [])
+
+FB_HONEST_SPEC = {
+    "test_id": "BV2227",
+    "title": "Favorite Betrayal — honest ballots (STAR & Ranked Robin elect the compromise; RCV-IRV elects a wing)",
+    "description": ("The plain favorite-betrayal question, three ways on the SAME honest ballots. "
+        "Left/Center/Right, 34 voters; Center is the compromise everyone ranks second and the "
+        "Condorcet winner, but has the fewest first-choices. STAR (honest 5/3/0 scores) and Ranked "
+        "Robin elect Center; RCV-IRV squeezes Center out and elects the wing Right. Companion "
+        "election shows that under RCV-IRV, 2 Left voters ranking Center FIRST (betraying their "
+        "favorite) flips it to Center — a move STAR and RR never require."),
+    "races": [
+        {"title": "STAR — honest scores (favorite 5, compromise 3, worst 0)", "method": "STAR",
+         "num_winners": 1, "candidates": _FB_CANDS, "ballots": _FB_HONEST_STAR},
+        {"title": "RCV-IRV — the same honest preferences as ranks", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _FB_CANDS, "ballots": _FB_HONEST_RANK},
+        {"title": "Ranked Robin — the same honest preferences as ranks", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _FB_CANDS, "ballots": _FB_HONEST_RANK},
+    ],
+    "expected": "STAR -> Center (score 120 vs Right 80; runoff 21-13). Ranked Robin -> Center "
+                "(Condorcet winner). RCV-IRV -> Right (Center fewest first-choices, squeezed; final 18-16).",
+}
+
+FB_BETRAY_SPEC = {
+    "test_id": "BV2228",
+    "title": "Favorite Betrayal — the RCV-IRV betrayal (2 voters rank the compromise first, and it wins)",
+    "description": ("The honest RCV-IRV election (companion BV2227) with ONE change: 2 of the 12 Left "
+        "voters betray their favorite and rank Center FIRST. That is enough to eliminate Left instead "
+        "of Center; Left's ballots flow to Center, and Center wins 21-13 — the outcome those voters "
+        "wanted, obtained only by hiding who they truly preferred. Under RCV-IRV, ranking your favorite "
+        "first is safe only when they're very strong or hopeless. STAR & Ranked Robin (BV2227) elect "
+        "Center from the honest ballots, no betrayal needed."),
+    "races": [
+        {"title": "RCV-IRV — 2 Left voters rank Center first (the betrayal)", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _FB_CANDS, "ballots": _FB_BETRAY_RANK},
+    ],
+    "expected": "RCV-IRV -> Center (Left now fewest first-choices at 10, eliminated; Center wins 21-13). "
+                "Contrast BV2227 honest RCV-IRV -> Right.",
+}
+
+ELECTIONS: list = [FB_HONEST_SPEC, FB_BETRAY_SPEC]   # create BV2227 (honest) + BV2228 (betray)

@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     fb_star_honest.yaml
-TABULATED FILE:  fb_star_honest_tabulated.txt
+SOURCE FILE:     bv2227_3xgkck_honest_star.yaml
+TABULATED FILE:  bv2227_3xgkck_honest_star_tabulated.txt
 ======================================================================
 
 election_title: "Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots"
@@ -26,6 +26,10 @@ paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2227
+bv_election_id: 3xgkck
+bv_results_url: https://bettervoting.com/3xgkck/results
+
 options:
   show_description: false
   show_matrix: true
@@ -48,7 +52,7 @@ ballots: |-
 expected_winners:
   - Center
 
-# file: fb_star_honest.yaml
+# file: bv2227_3xgkck_honest_star.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -87,7 +91,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/fb_star_honest_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2227_3xgkck_honest_star_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

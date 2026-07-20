@@ -3,6 +3,7 @@
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
+3xgkck,"Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins",2,contested (multi-race),34,"IRV, STAR",BV
 4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
 6bry7c,"BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
@@ -199,9 +200,6 @@ LH:ex07_vanishing_votes,Exercise 7 — The vanishing votes that never vanished (
 LH:ex08_minimal_reversal_2c,"Exercise 8 — a smallest runoff reversal (sample solution, two candidates)",1,single-race,3,STAR,LH-only
 LH:ex08_minimal_reversal_3c,"Exercise 8 — a small runoff reversal (sample solution, three candidates)",1,single-race,5,STAR,LH-only
 LH:ex09_game_night_cycle,Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill),1,single-race,10,RankedRobin,LH-only
-LH:fb_irv_betray,"Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win",1,single-race,34,IRV,LH-only
-LH:fb_irv_honest,"Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins",1,single-race,34,IRV,LH-only
-LH:fb_star_honest,Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots,1,single-race,34,STAR,LH-only
 LH:felsenthal_ex6_pareto_approval,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),1,single-race,3,Approval,LH-only
 LH:felsenthal_ex6_ranked_robin,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),1,single-race,3,RankedRobin,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
@@ -258,6 +256,7 @@ LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
 b6xrdr,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,1,single-race,57,STAR,BV
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
+bgcmxx,"Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win",1,single-race,34,IRV,BV
 bj8dfc,"BV2202 — The Transfer Machine, fully ranked — a book club buys two novels by STV",1,single-race,9,STV,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV

@@ -1,8 +1,3 @@
-======================================================================
-SOURCE FILE:     fb_irv_betray.yaml
-TABULATED FILE:  fb_irv_betray_tabulated.txt
-======================================================================
-
 election_title: "Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win"
 
 scenario_description: |-
@@ -28,6 +23,10 @@ paradoxes: [condorcet-winner]
 voting_method: RCV_IRV
 num_winners: 1
 
+bv_test_id: BV2228
+bv_election_id: bgcmxx
+bv_results_url: https://bettervoting.com/bgcmxx/results
+
 options:
   show_description: false
   show_irv: true
@@ -45,29 +44,3 @@ expected_winners:
   - Center
 
 # file: fb_irv_betray.yaml
-
-======================================================================
-TABULATION RESULTS
-======================================================================
-
---- RCV / Instant-Runoff Voting (single winner) ---
-  Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win
- Tabulating 34 ballots (ranked ballots).
-
-ROUND 1
-Candidate      Votes  Status
------------  -------  --------
-Right             13  Hopeful
-Center            11  Hopeful
-Left              10  Rejected
-
-FINAL RESULT
-Candidate      Votes  Status
------------  -------  --------
-Center            21  Elected
-Right             13  Rejected
-Left               0  Rejected
-
-
-Winner(s) — RCV / Instant-Runoff Voting (single winner)
-  Center

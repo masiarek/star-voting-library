@@ -22,6 +22,10 @@ paradoxes: [condorcet-winner]
 voting_method: RCV_IRV
 num_winners: 1
 
+bv_test_id: BV2227
+bv_election_id: 3xgkck
+bv_results_url: https://bettervoting.com/3xgkck/results
+
 options:
   show_description: false
   show_irv: true
