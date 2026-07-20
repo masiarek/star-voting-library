@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyh93j) · **[results ↗](https://bettervoting.com/dyh93j/results)** (election `dyh93j`).
+
 ## Scenario
 
 The real-moderate electorate (40/35/25) as ranked ballots under RCV-IRV. Beth

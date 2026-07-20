@@ -8,6 +8,9 @@ scenario_description: |-
   IRV. Confirmed identical to RCV-IRV on this electorate (s3).
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2222
+bv_election_id: rfyk46
+bv_results_url: https://bettervoting.com/rfyk46/results
 options:
   show_description: false
   show_matrix: true

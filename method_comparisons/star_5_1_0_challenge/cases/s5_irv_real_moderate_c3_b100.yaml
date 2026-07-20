@@ -7,6 +7,9 @@ scenario_description: |-
   SAME electorate under strategic-5-1-0 STAR elects Beth, the Condorcet winner.
 voting_method: RCV_IRV
 num_winners: 1
+bv_test_id: BV2223
+bv_election_id: dyh93j
+bv_results_url: https://bettervoting.com/dyh93j/results
 ballots: |-
   40:Ana>Beth>Cole
   35:Cole>Beth>Ana

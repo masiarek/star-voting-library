@@ -9,6 +9,9 @@ scenario_description: |-
   instead. Part of the rb-j "does STAR collapse to IRV under 5-1-0?" claim-check.
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2221
+bv_election_id: 2kcwbw
+bv_results_url: https://bettervoting.com/2kcwbw/results
 options:
   show_description: false
   show_matrix: true

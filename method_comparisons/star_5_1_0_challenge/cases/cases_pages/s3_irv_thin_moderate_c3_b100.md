@@ -4,6 +4,8 @@
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46`).
+
 ## Scenario
 
 The thin-moderate electorate as ranked ballots under RCV-IRV. Beth has the

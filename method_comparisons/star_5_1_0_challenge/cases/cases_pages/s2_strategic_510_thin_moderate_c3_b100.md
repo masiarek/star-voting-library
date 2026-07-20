@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46`).
+
 ## Scenario
 
 The SAME electorate as s1, but every voter min-maxes rb-j's way: favorite 5,
@@ -105,6 +107,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/s2_strategic_510_thin_moderate_c3_b100.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)

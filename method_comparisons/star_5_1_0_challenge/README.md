@@ -4,6 +4,8 @@
 
 → Related: [strategic voting](../../00_start_here/topics/strategic_voting.md) · [favorite betrayal (301)](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) · [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) · real cases: [Alaska 2022](../alaska_2022/), [Burlington 2009](../burlington_2009/).
 
+**▶ Live on BetterVoting** (the 5-1-0 elections each carry a **STAR** race and an **RCV-IRV** race on the same voter preferences, side by side): sincere → **[results ↗](https://bettervoting.com/2kcwbw/results)** (`2kcwbw`, BV2221) · thin-moderate 5-1-0 → **[results ↗](https://bettervoting.com/rfyk46/results)** (`rfyk46`, BV2222) · real-moderate 5-1-0 → **[results ↗](https://bettervoting.com/dyh93j/results)** (`dyh93j`, BV2223).
+
 ---
 
 ## The argument (steelmanned)

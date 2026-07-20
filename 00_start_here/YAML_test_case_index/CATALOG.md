@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 284 elections, 417 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 282 elections, 417 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -41,6 +41,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | cxrf8v | BV2138 — One Ranked Electorate, Many Tabulations — t | 4 | contested (multi-race) | 921 | IRV, RankedRobin, STAR, STV | BV |
 | d3b9wc | BV2188 — Two Districts, One Mayor (I of III) — West  | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | dxg8pb | BV2150 — Felsenthal's No-Show paradox (1 of 2) — eve | 3 | contested (multi-race) | 11 | IRV, RankedRobin, STAR | BV |
+| dyh93j | Strategic 5-1-0 STAR, real moderate base — STAR STIL | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | dyxrbr | BV2133 — Pet poll II: four methods, four winners | 4 | contested (multi-race) | 32 | Approval, IRV, Plurality, STAR | BV |
 | f3dxq9 | BV2167 — Minimax elects the absolute loser — the can | 2 | contested (multi-race) | 11 | Plurality, STAR | BV |
 | f4cjpy | BV2159 — Brams' 21-voter sampler — IRV elects B whil | 3 | contested (multi-race) | 21 | IRV, RankedRobin, STAR | BV |
@@ -68,6 +69,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | qdtqf2 | BV2200 — Where Do You Draw the Line? — one electorat | 4 | contested (multi-race) | 9 | Approval, STAR | BV |
 | r6ctvy | BV2152 — Felsenthal & Maoz's Approval paradox — the  | 2 | contested (multi-race) | 47 | Approval, RankedRobin | BV |
 | r6qc8h | BV2160 — Fishburn's Borda truncation electorate — ST | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
+| rfyk46 | Strategic 5-1-0 STAR — the center is squeezed out (f | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | rhbfj7 | BV2189 — Two Districts, One Mayor (II of III) — East | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | v8r66y | BV2177 — The Post-it election, seven ways — all four | 7 | contested (multi-race) | 20 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
 | wq6yv7 | BV2154 — Felsenthal's Approval paradox — the absolut | 3 | contested (multi-race) | 15 | Approval, IRV, RankedRobin | BV |
@@ -78,6 +80,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ywqhq4 | BV2191 — One Electorate, Five Verdicts — the snack v | 5 | contested (multi-race) | 9 | Approval, IRV, Plurality, RankedRobin, STAR | BV |
 | yyhj9x | BV2196 — Later-No-Harm (2 of 2) — the generous ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
 | 26khr3 | NOTA test — None of the Above wins (with a null abst | 1 | single-race | 6 | STAR | BV |
+| 2kcwbw | Sincere STAR — the center wins (Beth is the Condorce | 1 | single-race | 100 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
 | 36f4v2 | BV2219 — Equally Weighted Vote — base election (STAR | 1 | single-race | 3 | STAR | BV |
 | 39py93 | BV2204 — Poets on the shelf: the control (STV 2 seat | 1 | single-race | 13 | STV | BV |
@@ -235,11 +238,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | rr_district_A | Summability demo — District A, counted by Ranked Rob | 1 | single-race | 13 | RankedRobin | LH-only |
 | rr_district_B | Summability demo — District B, counted by Ranked Rob | 1 | single-race | 13 | RankedRobin | LH-only |
 | rrv_sample_c15_b13_three-parties | RRV sample as single-winner STAR — three parties (Pu | 1 | single-race | 13 | STAR | LH-only |
-| s1_sincere_thin_moderate_c3_b100 | Sincere STAR — the center wins (Beth is the Condorce | 1 | single-race | 100 | STAR | LH-only |
-| s2_strategic_510_thin_moderate_c3_b100 | Strategic 5-1-0 STAR — the center is squeezed out (f | 1 | single-race | 100 | STAR | LH-only |
-| s3_irv_thin_moderate_c3_b100 | RCV-IRV on the same electorate — also squeezes the c | 1 | single-race | 100 | IRV | LH-only |
-| s4_strategic_510_real_moderate_c3_b100 | Strategic 5-1-0 STAR, real moderate base — STAR STIL | 1 | single-race | 100 | STAR | LH-only |
-| s5_irv_real_moderate_c3_b100 | RCV-IRV, real moderate base — still squeezes the cen | 1 | single-race | 100 | IRV | LH-only |
 | star_ala_approval | STAR à la Approval — 0/1 & marker ballots are legal  | 1 | single-race | 8 | STAR | LH-only |
 | star_combined | Summability demo — STAR combined A+B (Oak; precinct  | 1 | single-race | 6 | STAR | LH-only |
 | star_district_A | Summability demo — STAR district A (Maple wins outri | 1 | single-race | 3 | STAR | LH-only |
@@ -310,8 +308,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 222 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
-| contested (multi-race) | 195 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
+| single-race | 218 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| contested (multi-race) | 199 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
 
 ### By seat class
 
@@ -366,8 +364,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| BV | 181 | 26khr3, 2jrfpg, 2p33qq, 3494cb |
-| LH-only | 166 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| BV | 186 | 26khr3, 2jrfpg, 2kcwbw, 2p33qq |
+| LH-only | 161 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 69 | 2jrfpg, 2p33qq, 3grpbb, 6bry7c |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

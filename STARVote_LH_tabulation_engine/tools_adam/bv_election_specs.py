@@ -3604,7 +3604,66 @@ EQO_PLUS_SPEC = {
     "expected": "STAR -> Comet (19; runoff 3-2 over Echo). Same winner as BV2219.",
 }
 
-# To create (mints TWO permanent public BV elections), set:
-#   ELECTIONS = [EQO_BASE_SPEC, EQO_PLUS_SPEC]
-# then `uv run …/create_bv_test_election.py`. Left empty until go.
-ELECTIONS: list = []   # reset to safe empty state (BV2219 -> 36f4v2, BV2220 -> q8q9m7 done 2026-07-20)
+# BV2221/2222/2223 — rb-j's "5-1-0" strategic challenge (star_5_1_0_challenge/).
+# Beth is the Condorcet winner. Same preferences expressed as STAR scores and as
+# IRV ranks so the two counts sit side by side on one BV election.
+_S510_CANDS = ["Ana", "Beth", "Cole"]
+# sincere STAR (poles score the moderate a 3) -> Beth
+_S510_SINCERE = [[5, 3, 0]] * 48 + [[0, 3, 5]] * 47 + [[2, 5, 0]] * 5
+# strategic 5-1-0, thin moderate base (48/47/5)
+_S510_THIN_STAR = [[5, 1, 0]] * 48 + [[0, 1, 5]] * 47 + [[1, 5, 0]] * 5
+_S510_THIN_RANK = [[1, 2, 3]] * 48 + [[3, 2, 1]] * 47 + [[2, 1, 3]] * 5
+# strategic 5-1-0, real moderate base (40/35/25)
+_S510_REAL_STAR = [[5, 1, 0]] * 40 + [[0, 1, 5]] * 35 + [[1, 5, 0]] * 25
+_S510_REAL_RANK = [[1, 2, 3]] * 40 + [[3, 2, 1]] * 35 + [[2, 1, 3]] * 25
+
+S510_SINCERE_SPEC = {
+    "test_id": "BV2221",
+    "title": "STAR vs strategy — sincere ballots elect the Condorcet winner (Beth)",
+    "description": ("Center-squeeze electorate; Beth is the Condorcet winner. On "
+        "SINCERE STAR ballots the poles score the moderate a genuine 3, so Beth "
+        "leads the scoring round and wins the runoff. The strategic-5-1-0 twins "
+        "(BV2222/BV2223) show what min-max voting does instead."),
+    "method": "STAR", "num_winners": 1,
+    "candidates": _S510_CANDS, "ballots": _S510_SINCERE,
+    "expected": "STAR -> Beth (the Condorcet winner; scoring 310, runoff 52-48 over Ana).",
+}
+
+S510_THIN_SPEC = {
+    "test_id": "BV2222",
+    "title": "STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate)",
+    "description": ("rb-j's 5-1-0 challenge, thin moderate base. Every voter min-maxes "
+        "(favorite 5, lesser-evil 1, hated 0). Two races on the SAME preferences: "
+        "STAR (5-1-0 scores) and RCV-IRV (the same order as ranks). Both elect Ana, "
+        "a pole — the moderate Condorcet winner Beth is squeezed out. STAR = IRV here."),
+    "races": [
+        {"title": "STAR — strategic 5-1-0 scores", "method": "STAR",
+         "num_winners": 1, "candidates": _S510_CANDS, "ballots": _S510_THIN_STAR},
+        {"title": "RCV-IRV — the same preferences as ranks", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _S510_CANDS,
+         "ballots": _S510_THIN_RANK},
+    ],
+    "expected": "STAR -> Ana (Beth 120, squeezed out of the runoff). IRV -> Ana (Beth "
+                "eliminated first, 5 firsts). Same failure — STAR = IRV under 5-1-0 here.",
+}
+
+S510_REAL_SPEC = {
+    "test_id": "BV2223",
+    "title": "STAR vs strategy — 5-1-0 min-max, real moderate: STAR keeps the CW, IRV doesn't",
+    "description": ("rb-j's 5-1-0 challenge, but the moderate Beth has a real "
+        "first-choice base (25 vs poles 40/35). Same min-max ballots; two races on the "
+        "same preferences. STAR: the pooled '1's lift Beth into the runoff and she wins "
+        "(the Condorcet winner). IRV: Beth still has the fewest firsts and is eliminated. "
+        "So 5-1-0 STAR is IRV-LIKE, not IRV-identical — the '1's carry real weight."),
+    "races": [
+        {"title": "STAR — strategic 5-1-0 scores", "method": "STAR",
+         "num_winners": 1, "candidates": _S510_CANDS, "ballots": _S510_REAL_STAR},
+        {"title": "RCV-IRV — the same preferences as ranks", "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _S510_CANDS,
+         "ballots": _S510_REAL_RANK},
+    ],
+    "expected": "STAR -> Beth (CW; the 1s lift her, runoff 60-40). IRV -> Ana (Beth "
+                "eliminated first). STAR != IRV under the SAME 5-1-0 ballots.",
+}
+
+ELECTIONS: list = []   # reset (BV2221->2kcwbw, BV2222->rfyk46, BV2223->dyh93j done 2026-07-20)

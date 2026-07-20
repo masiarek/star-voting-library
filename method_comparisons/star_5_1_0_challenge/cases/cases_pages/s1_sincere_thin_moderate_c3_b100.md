@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2kcwbw) · **[results ↗](https://bettervoting.com/2kcwbw/results)** (election `2kcwbw`).
+
 ## Scenario
 
 A 1-D center-squeeze electorate: Ana (left) and Cole (right) are the poles;
@@ -111,6 +113,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/s1_sincere_thin_moderate_c3_b100.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)

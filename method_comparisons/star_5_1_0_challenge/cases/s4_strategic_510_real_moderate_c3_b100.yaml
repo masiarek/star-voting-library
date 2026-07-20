@@ -9,6 +9,9 @@ scenario_description: |-
   So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2223
+bv_election_id: dyh93j
+bv_results_url: https://bettervoting.com/dyh93j/results
 options:
   show_description: false
   show_matrix: true
