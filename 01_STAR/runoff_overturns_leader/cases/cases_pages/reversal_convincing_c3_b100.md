@@ -64,8 +64,7 @@ Count × Max,Nora,Cal
  Nora
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -88,8 +87,6 @@ Max        45   0   0  55   0   0  |   335   3.4
 Nora        0   0  55  45   0   0  |   255   2.6
 Cal         0   0   0   0  55  45  |    55   0.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/reversal_convincing_c3_b100_tabulated.txt) (regenerated on every run; every analysis forced on).
 

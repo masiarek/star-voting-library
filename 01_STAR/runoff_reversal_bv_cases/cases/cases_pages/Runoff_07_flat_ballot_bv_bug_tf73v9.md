@@ -78,8 +78,7 @@ Count × Alex,Blair,Cleo
  Blair
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Alex       1  2  1  0  0  0  |    16   4.0
 Blair      2  0  1  0  1  0  |    14   3.5
 Cleo       0  0  1  1  0  2  |     5   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) (regenerated on every run; every analysis forced on).
 

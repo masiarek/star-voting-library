@@ -93,8 +93,7 @@ Count × Purple,Green,Blue,Pink
  Purple
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -119,8 +118,6 @@ Green       0   0   0   0   6  14  |     6   0.3
 Blue        0   0   0   0   4  16  |     4   0.2
 Pink        0   0   0   0   3  17  |     3   0.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2177_v8r66y_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 

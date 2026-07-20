@@ -114,8 +114,7 @@ Ann,Bob,Cal,Don
  Cal
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -140,8 +139,6 @@ Bob        0  0  0  1  0  1  |     2   1.0
 Cal        0  2  0  0  0  0  |     8   4.0
 Don        2  0  0  0  0  0  |    10   5.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/01_c4_b2_bloc-star-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -71,8 +71,7 @@ A,B,C
  B
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -95,8 +94,6 @@ A          0  0  0  0  0  3  |     0   0.0
 B          1  0  0  1  0  1  |     7   2.3
 C          0  0  0  1  1  1  |     3   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv830_vb3xv2_no_condorcet_tie_score_tabulated.txt) (regenerated on every run; every analysis forced on).
 

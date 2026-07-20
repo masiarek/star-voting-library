@@ -104,8 +104,7 @@ Count × Arepa,Bao,Churro,Donut,Eclair
  Bao
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -132,8 +131,6 @@ Churro     18   0  39   0   0  43  |   207   2.1
 Donut      22  21   0   0   0  57  |   194   1.9
 Eclair     21  22   0   0   0  57  |   193   1.9
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2210_fvg8y8_bloc_star_sweep_tabulated.txt) (regenerated on every run; every analysis forced on).
 

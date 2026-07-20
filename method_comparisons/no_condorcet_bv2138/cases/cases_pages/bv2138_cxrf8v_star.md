@@ -100,8 +100,7 @@ Count × Abby,Brad,Cora,Dave,Erin
  Brad
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -128,8 +127,6 @@ Cora       200  260    0  260  201    0  |  2761   3.0
 Dave       311    0  125  323  162    0  |  2738   3.0
 Erin         0  312  396   51  162    0  |  2700   2.9
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2138_cxrf8v_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

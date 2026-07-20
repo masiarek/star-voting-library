@@ -70,8 +70,7 @@ Dog,Cat
  Dog
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -92,8 +91,6 @@ Candidate  5  4  3  2  1  0  Abs  | Total   Avg
 Dog        2  1  0  0  0  2    1  |    14   2.8
 Cat        2  0  0  0  0  3    1  |    10   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/abstentions_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -94,8 +94,7 @@ Count × Aster,Bluebell,Clover
  Bluebell
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -118,8 +117,6 @@ Aster       6   9   0   0   0  42  |    66   1.2
 Bluebell    9   0   0   0  24  24  |    69   1.2
 Clover      0  18   0   0   0  39  |    72   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt) (regenerated on every run; every analysis forced on).
 

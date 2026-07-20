@@ -85,8 +85,7 @@ Ann,Ben,Cara
  Ann
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ Ann        0  2  0  0  0  0  |     8   4.0
 Ben        0  1  0  0  0  1  |     4   2.0
 Cara       0  0  1  0  1  0  |     4   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/dead_rung_scoring_dead_cap4_tabulated.txt) (regenerated on every run; every analysis forced on).
 

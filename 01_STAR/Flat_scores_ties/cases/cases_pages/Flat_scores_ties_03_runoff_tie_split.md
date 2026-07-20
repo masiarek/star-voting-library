@@ -78,8 +78,7 @@ Athens,Berlin,Cairo
  Athens
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Athens     1  1  0  0  0  0  |     9   4.5
 Berlin     1  1  0  0  0  0  |     9   4.5
 Cairo      0  0  0  0  0  2  |     0   0.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_03_runoff_tie_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -85,8 +85,7 @@ Count × Ann,Bob,Cal,Don
  Don
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -111,8 +110,6 @@ Bob        1  3  0  0  0  0  |    17   4.3
 Cal        0  0  0  4  0  0  |     8   2.0
 Don        2  1  1  0  0  0  |    17   4.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/display_options_demo_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -1011,8 +1011,7 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
  Kamala Harris (Democrat)
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -1652,8 +1651,6 @@ Cornel West (Independent)                      14  10   9  13  11  11   34  |   
    Virgil Goode (Constitution)                   --  1+  135/224
  Claudia De La Cruz (Socialism and Liberation) wins a seat.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2130_presidential_board_star_pr_tabulated.txt) (regenerated on every run; every analysis forced on).
 

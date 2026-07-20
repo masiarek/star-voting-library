@@ -150,8 +150,7 @@ Count × Astrid,Boris,Carla,Dolores
  Carla
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -176,8 +175,6 @@ Boris       7   0   0   2   0  15    9  |    39   1.6
 Carla      11   4   0   1   0  12    5  |    73   2.6
 Dolores     3   3   0   0   0  16   11  |    27   1.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03_c4_b33_bullet-storm_tabulated.txt) (regenerated on every run; every analysis forced on).
 

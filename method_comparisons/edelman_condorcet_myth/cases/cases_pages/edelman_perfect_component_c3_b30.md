@@ -106,8 +106,7 @@ Count × Ada,Ben,Cara
  Ada
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -130,8 +129,6 @@ Ada        10   0   0  10   0  10  |    70   2.3
 Ben        10   0   0  10   0  10  |    70   2.3
 Cara       10   0   0  10   0  10  |    70   2.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/edelman_perfect_component_c3_b30_tabulated.txt) (regenerated on every run; every analysis forced on).
 

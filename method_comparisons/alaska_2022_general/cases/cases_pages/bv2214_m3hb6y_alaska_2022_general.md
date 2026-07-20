@@ -290,8 +290,7 @@ Count × Peltola,Begich,Palin
  Peltola
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -314,8 +313,6 @@ Peltola     98    9    0    0    0   93  |   526   2.6
 Begich      50   74    0    0    0   76  |   546   2.7
 Palin       52   39    0    0    0  109  |   416   2.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2214_m3hb6y_alaska_2022_general_tabulated.txt) (regenerated on every run; every analysis forced on).
 

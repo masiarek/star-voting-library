@@ -263,8 +263,7 @@ Count × Aspen,Birch,Cedar,Dogwood,Elm,Fir,Ginkgo
  Cedar
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -295,8 +294,6 @@ Elm        13   6   5   0   2  10    8  |   106   2.9
 Fir        13   4   1   6   5  14    1  |   101   2.3
 Ginkgo      8   0   0   4   4  20    8  |    52   1.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/09_c7_b44_park-bloc-4-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

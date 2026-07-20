@@ -103,8 +103,7 @@ Count × Asa,Bram,Cleo,Dane
  Bram
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -129,8 +128,6 @@ Bram       0  6  0  0  0  4  |    24   2.4
 Cleo       4  0  0  0  0  6  |    20   2.0
 Dane       0  4  0  0  0  6  |    16   1.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex12_bloc_sweep_tabulated.txt) (regenerated on every run; every analysis forced on).
 

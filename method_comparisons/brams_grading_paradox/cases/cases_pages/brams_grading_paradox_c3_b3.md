@@ -79,8 +79,7 @@ Adams,Baker,Chen
  Baker
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -103,8 +102,6 @@ Adams      0  0  1  1  1  0  |     6   2.0
 Baker      0  0  1  1  0  1  |     5   1.7
 Chen       0  0  1  0  1  1  |     4   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/brams_grading_paradox_c3_b3_tabulated.txt) (regenerated on every run; every analysis forced on).
 

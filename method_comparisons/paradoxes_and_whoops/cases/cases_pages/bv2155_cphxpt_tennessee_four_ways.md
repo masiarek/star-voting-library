@@ -80,8 +80,7 @@ Count × Memphis,Nashville,Chattanooga,Knoxville
  Nashville
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -106,8 +105,6 @@ Nashville    26   0  32  42   0   0  |   310   3.1
 Chattanooga  15  17  26   0  42   0  |   263   2.6
 Knoxville    17  15   0  26   0  42  |   197   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2155_cphxpt_tennessee_four_ways_tabulated.txt) (regenerated on every run; every analysis forced on).
 

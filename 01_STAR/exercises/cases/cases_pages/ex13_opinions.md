@@ -93,8 +93,7 @@ Count × Ash,Beck,Cora
  Cora
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -117,8 +116,6 @@ Ash        3  0  4  0  0  2  |    27   3.0
 Beck       2  3  0  0  0  4  |    22   2.4
 Cora       4  0  2  0  0  3  |    26   2.9
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex13_opinions_tabulated.txt) (regenerated on every run; every analysis forced on).
 

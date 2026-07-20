@@ -106,8 +106,7 @@ Count × Alice,Ben,Cara,Dan,Eve
  Dan
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -164,8 +163,6 @@ Eve         9  15   0   0   0  39  |   105   1.7
    Eve           -- 15
  Alice wins a seat.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02a_c5_b63_proportional-allocated-score_tabulated.txt) (regenerated on every run; every analysis forced on).
 

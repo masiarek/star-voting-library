@@ -152,8 +152,7 @@ Count × Azure,Beige,Coral,Dune
  Beige
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -178,8 +177,6 @@ Beige       8   3   2   1   1   9  |    61   2.5
 Coral       3   9   2   2   0   8  |    61   2.5
 Dune        9   1   2   1   0  11  |    57   2.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/06_c4_b24_narrow-bands_tabulated.txt) (regenerated on every run; every analysis forced on).
 

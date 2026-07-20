@@ -175,8 +175,7 @@ Count × Arepa,Bao,Churro,Dumpling
  Churro
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -201,8 +200,6 @@ Bao        15   4   3   0   0  17    1  |   100   2.6
 Churro      9  12   2   0   0  15    2  |    99   2.6
 Dumpling    4   5   2   0   0  27    2  |    46   1.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02_c4_b40_cliff-city_tabulated.txt) (regenerated on every run; every analysis forced on).
 

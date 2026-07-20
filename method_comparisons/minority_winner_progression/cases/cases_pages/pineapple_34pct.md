@@ -78,8 +78,7 @@ Count × Pineapple,Anchovy,Mushroom,Cheese
  Cheese
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -104,8 +103,6 @@ Anchovy    33   0   0   0   0  66  |   165   1.7
 Mushroom   32   0   0   0   0  67  |   160   1.6
 Cheese      0  99   0   0   0   0  |   396   4.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/pineapple_34pct_tabulated.txt) (regenerated on every run; every analysis forced on).
 

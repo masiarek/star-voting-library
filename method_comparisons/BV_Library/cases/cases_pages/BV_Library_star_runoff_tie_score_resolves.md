@@ -63,8 +63,7 @@ Allison,Bill
  Bill
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -85,8 +84,6 @@ Candidate  5  4  3  2  1  0  | Total   Avg
 Allison    0  0  1  0  0  1  |     3   1.5
 Bill       1  0  0  1  0  0  |     7   3.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/BV_Library_star_runoff_tie_score_resolves_tabulated.txt) (regenerated on every run; every analysis forced on).
 

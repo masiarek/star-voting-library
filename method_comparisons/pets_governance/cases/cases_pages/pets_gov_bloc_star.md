@@ -114,8 +114,7 @@ Count × Dog,Cat,Fish,Bird,Rabbit,Hamster
  Cat
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -144,8 +143,6 @@ Bird        9   0   0   0  13   0  |    58   2.6
 Rabbit      0   9   0   0   0  13  |    36   1.6
 Hamster     0   9   0   0   0  13  |    36   1.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/pets_gov_bloc_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

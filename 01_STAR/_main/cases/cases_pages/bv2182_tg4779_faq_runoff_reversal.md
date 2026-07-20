@@ -85,8 +85,7 @@ Count × Almond,Berry,Cocoa
  Almond
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ Almond     7  0  0  0  0  3  |    35   3.5
 Berry      4  6  0  0  0  0  |    44   4.4
 Cocoa      0  0  0  3  4  3  |    10   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2182_tg4779_faq_runoff_reversal_tabulated.txt) (regenerated on every run; every analysis forced on).
 

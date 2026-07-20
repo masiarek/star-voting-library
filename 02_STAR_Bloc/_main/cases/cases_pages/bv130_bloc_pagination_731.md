@@ -133,8 +133,7 @@ Count × Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Ap
  The Lesser Evil
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -163,8 +162,6 @@ The Lesser Evil  0  4  3  2  0  0  |    29   3.2
 Someone I Like   5  0  4  0  0  0  |    37   4.1
 Apocalypse Now   0  0  0  4  0  5  |     8   0.9
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv130_bloc_pagination_731_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -76,8 +76,7 @@ Count × Democrat,Republican,Libertarian,Green,Constitution,Socialism and Libera
  Democrat
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -110,8 +109,6 @@ Socialism and Liberation    0    0    0    0   15   87  |    15   0.1
 Solidarity                  0    0    0    0    7   95  |     7   0.1
 Independent                 0    0    0    0   14   88  |    14   0.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2130_bvhchj_party_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 

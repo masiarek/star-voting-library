@@ -76,8 +76,7 @@ Count × Ana,Bo,Cal
  Bo
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -100,8 +99,6 @@ Ana        3  0  0  0  4  0  |    19   2.7
 Bo         2  0  5  0  0  0  |    25   3.6
 Cal        2  0  2  0  3  0  |    19   2.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2144_mxfmhm_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

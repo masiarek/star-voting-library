@@ -135,8 +135,7 @@ Cand1,Cand2,Cand3
  Cand3
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -159,8 +158,6 @@ Cand1      1  0  0  0  1  1  |     6   2.0
 Cand2      1  0  0  0  1  1  |     6   2.0
 Cand3      0  0  0  2  1  0  |     5   1.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv131_guido_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

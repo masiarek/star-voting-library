@@ -184,8 +184,7 @@ Count × First,Condorcet Loser,Second,Third,Fourth
  Fourth
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -212,8 +211,6 @@ Second            1   0   2   0   8   5  |    19   1.2
 Third             0   1   0   2   8   5  |    16   1.0
 Fourth            0   0   1   0  10   5  |    13   0.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

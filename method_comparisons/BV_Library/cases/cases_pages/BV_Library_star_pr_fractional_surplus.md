@@ -79,8 +79,7 @@ Count × Allison,Bill,Carmen,Doug
  Doug
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -106,8 +105,6 @@ Carmen     0  4  0  0  7  1  |    23   1.9
 Doug       3  0  1  0  0  8  |    18   1.5
  Hare quota is 6.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/BV_Library_star_pr_fractional_surplus_tabulated.txt) (regenerated on every run; every analysis forced on).
 

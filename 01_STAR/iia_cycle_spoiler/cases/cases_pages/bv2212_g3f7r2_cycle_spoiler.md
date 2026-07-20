@@ -114,8 +114,7 @@ Count × Alice,Ben,Carla
  Alice
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -138,8 +137,6 @@ Alice      10   0   7   0   0   6  |    71   3.1
 Ben         6   0  10   0   0   7  |    60   2.6
 Carla       7   0   6   0   0  10  |    53   2.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt) (regenerated on every run; every analysis forced on).
 

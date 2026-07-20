@@ -71,8 +71,7 @@ Count × Allison,Bill,Carmen,Doug
  Allison
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -97,8 +96,6 @@ Bill       1  1  1  4  2  1  |    22   2.2
 Carmen     3  3  0  0  4  0  |    31   3.1
 Doug       1  1  0  0  1  7  |    10   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/BV_Library_star_condorcet_winner_tabulated.txt) (regenerated on every run; every analysis forced on).
 

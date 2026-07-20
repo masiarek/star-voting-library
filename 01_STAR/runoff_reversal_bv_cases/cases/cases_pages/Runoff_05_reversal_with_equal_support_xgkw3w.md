@@ -80,8 +80,7 @@ Count × Rosa,Sage,Tulip
  Sage
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -104,8 +103,6 @@ Rosa       2  2  1  0  0  0  |    21   4.2
 Sage       3  0  1  0  1  0  |    19   3.8
 Tulip      0  0  0  1  1  3  |     3   0.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) (regenerated on every run; every analysis forced on).
 

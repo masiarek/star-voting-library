@@ -61,8 +61,7 @@ Aspen,Birch,Cedar
  Aspen
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -85,8 +84,6 @@ Aspen      2  0  0  1  0  0  |    12   4.0
 Birch      1  0  1  1  0  0  |    10   3.3
 Cedar      0  0  0  0  1  2  |     1   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) (regenerated on every run; every analysis forced on).
 

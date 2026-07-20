@@ -73,8 +73,7 @@ Alice,Ben,Cara
  Alice
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -97,8 +96,6 @@ Alice      2  0  0  0  0  0  |    10   5.0
 Ben        1  0  0  0  1  0  |     6   3.0
 Cara       0  0  2  0  0  0  |     6   3.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/tie_break_01_scoring_five_star_breaks_tabulated.txt) (regenerated on every run; every analysis forced on).
 

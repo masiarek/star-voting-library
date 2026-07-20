@@ -68,8 +68,7 @@ Count × Uma,Rye,Tao
  Rye
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -92,8 +91,6 @@ Uma        49  51   0   0   0   0  |   449   4.5
 Rye        51   0   0   0   0  49  |   255   2.6
 Tao         0   0   0   0  49  51  |    49   0.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/reversal_jarring_c3_b100_tabulated.txt) (regenerated on every run; every analysis forced on).
 

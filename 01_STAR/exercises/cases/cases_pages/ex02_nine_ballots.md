@@ -83,8 +83,7 @@ Count × Alex,Bella,Chris,Dana,Eli
  Alex
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -111,8 +110,6 @@ Chris      0  6  0  0  0  3  |    24   2.7
 Dana       4  0  0  0  0  5  |    20   2.2
 Eli        2  3  0  0  0  4  |    22   2.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex02_nine_ballots_tabulated.txt) (regenerated on every run; every analysis forced on).
 

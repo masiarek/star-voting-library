@@ -129,8 +129,7 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
  Orange5
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -177,8 +176,6 @@ Yellow3    0  3  0  1  1  8  |    15   1.2
 Yellow4    2  2  0  0  2  7  |    20   1.5
 Yellow5    2  2  0  0  2  7  |    20   1.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt) (regenerated on every run; every analysis forced on).
 

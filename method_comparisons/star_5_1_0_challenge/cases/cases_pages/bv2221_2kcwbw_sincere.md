@@ -76,8 +76,7 @@ Count × Ana,Beth,Cole
  Beth
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Beth        5   0  95   0   0   0  |   310   3.1
 Cole       47   0   0   0   0  53  |   235   2.4
 ```
 
-</details>
-
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2221_2kcwbw_sincere_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
@@ -113,6 +110,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2221_2kcwbw_sincere.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)

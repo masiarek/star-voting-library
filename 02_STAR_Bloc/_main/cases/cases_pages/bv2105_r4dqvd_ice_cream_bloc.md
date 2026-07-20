@@ -135,8 +135,7 @@ Vanilla,Chocolate,Strawberry
  Strawberry
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -159,8 +158,6 @@ Vanilla     1  0  0  1  1  0    1  |     8   2.7
 Chocolate   2  0  0  0  0  0    2  |    10   5.0
 Strawberry  1  1  0  0  0  0    2  |     9   4.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

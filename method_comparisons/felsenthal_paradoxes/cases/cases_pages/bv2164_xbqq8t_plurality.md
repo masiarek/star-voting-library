@@ -75,8 +75,7 @@ Count × Arlo,Bree,Cole,Dana
  Bree
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Bree        0   0   0   0  14  19  |    14   0.4
 Cole        0   0   0   0   4  29  |     4   0.1
 Dana        0   0   0   0   4  29  |     4   0.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 

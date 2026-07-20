@@ -83,8 +83,7 @@ A,B
  A
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -105,8 +104,6 @@ Candidate  5  4  3  2  1  0  Abs  | Total   Avg
 A          2  1  0  0  0  1    1  |    14   3.5
 B          2  0  0  0  0  2    1  |    10   2.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/small_abstention_c2_b5_tabulated.txt) (regenerated on every run; every analysis forced on).
 

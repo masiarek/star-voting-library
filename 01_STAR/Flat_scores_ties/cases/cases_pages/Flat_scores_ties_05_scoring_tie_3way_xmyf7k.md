@@ -116,8 +116,7 @@ Count × A,B,C,D,E
  A
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -144,8 +143,6 @@ C          2  0  0  0  0  0  |    10   5.0
 D          0  2  0  0  0  0  |     8   4.0
 E          0  2  0  0  0  0  |     8   4.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_05_scoring_tie_3way_xmyf7k_tabulated.txt) (regenerated on every run; every analysis forced on).
 

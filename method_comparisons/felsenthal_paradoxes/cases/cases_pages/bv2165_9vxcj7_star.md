@@ -90,8 +90,7 @@ Count × Amy,Boone,Cass
  Boone
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -114,8 +113,6 @@ Amy        4  0  5  0  6  0  |    41   2.7
 Boone      4  0  6  0  5  0  |    43   2.9
 Cass       7  0  4  0  4  0  |    51   3.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2165_9vxcj7_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

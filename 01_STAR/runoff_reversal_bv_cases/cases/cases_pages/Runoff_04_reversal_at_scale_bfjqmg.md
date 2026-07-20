@@ -80,8 +80,7 @@ Count × Maple,Olive,Pine
  Olive
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -104,8 +103,6 @@ Maple      3  6  0  0  0  0  |    39   4.3
 Olive      6  0  0  0  3  0  |    33   3.7
 Pine       0  0  0  3  0  6  |     6   0.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -109,8 +109,7 @@ Count × Ava,Ben,Cara,Dan,Eve
  Ava
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -137,8 +136,6 @@ Cara       2  0  0  0  0  0  |    10   5.0
 Dan        2  0  0  0  0  0  |    10   5.0
 Eve        0  0  0  0  2  0  |     2   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_06_scoring_tie_4way_tabulated.txt) (regenerated on every run; every analysis forced on).
 

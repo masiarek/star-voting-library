@@ -304,7 +304,8 @@ def render(yaml_path, siblings):
         mirror_rel = os.path.relpath(_mirror_path(yaml_path), page_dir).replace(os.sep, "/")
         lead, audit = _split_report(report)
         if audit:
-            # Progressive disclosure: lead with the count, fold the audit detail.
+            # Lead with the count; then the full audit inline (no collapsing — a
+            # teaching page reads better with nothing hidden).
             L.append("The count, step by step — the rounds and how the winner is "
                      "reached:")
             L.append("")
@@ -312,15 +313,11 @@ def render(yaml_path, siblings):
             L.append(lead)
             L.append("```")
             L.append("")
-            L.append("<details>")
-            L.append("<summary>Full audit — preference matrix, Condorcet, and "
-                     "score distribution</summary>")
+            L.append("### Full audit — preference matrix, Condorcet, and score distribution")
             L.append("")
             L.append("```text")
             L.append(audit)
             L.append("```")
-            L.append("")
-            L.append("</details>")
             L.append("")
             L.append(f"Everything in one file: the [`_tabulated` mirror]({mirror_rel}) "
                      f"(regenerated on every run; every analysis forced on).")

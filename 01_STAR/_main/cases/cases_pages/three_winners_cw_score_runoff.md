@@ -93,8 +93,7 @@ Count × Ann,Bob,Carl
  Bob
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -117,8 +116,6 @@ Ann        3  0  0  0  0  2  |    15   3.0
 Bob        0  3  2  0  0  0  |    18   3.6
 Carl       2  0  3  0  0  0  |    19   3.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/three_winners_cw_score_runoff_tabulated.txt) (regenerated on every run; every analysis forced on).
 

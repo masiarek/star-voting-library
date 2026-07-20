@@ -77,8 +77,7 @@ Count × A,B,C
  A
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ A          3  0  0  0  0  2  |    15   3.0
 B          2  3  0  0  0  0  |    22   4.4
 C          0  0  0  0  2  3  |     2   0.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex08_minimal_reversal_3c_tabulated.txt) (regenerated on every run; every analysis forced on).
 

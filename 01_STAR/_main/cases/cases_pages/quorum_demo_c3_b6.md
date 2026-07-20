@@ -79,8 +79,7 @@ Anna,Ben,Cara
  Anna
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -103,8 +102,6 @@ Anna       2  1  0  0  1  1    1  |    15   3.0
 Ben        1  1  0  0  1  2    1  |    10   2.0
 Cara       0  0  0  0  1  4    1  |     1   0.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/quorum_demo_c3_b6_tabulated.txt) (regenerated on every run; every analysis forced on).
 

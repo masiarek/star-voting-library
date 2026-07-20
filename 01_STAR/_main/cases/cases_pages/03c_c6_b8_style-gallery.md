@@ -78,8 +78,7 @@ Allen,Bianca,Chris,Desi,Edith,Frank
  Bianca
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -108,8 +107,6 @@ Desi       1  0  2  0  0  5  |    11   1.4
 Edith      1  0  0  0  2  5  |     7   0.9
 Frank      3  2  0  0  2  1  |    25   3.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03c_c6_b8_style-gallery_tabulated.txt) (regenerated on every run; every analysis forced on).
 

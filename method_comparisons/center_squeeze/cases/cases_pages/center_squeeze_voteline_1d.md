@@ -78,8 +78,7 @@ Count × Red,Green,Yellow
  Green
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Red        332    0  138    0  175  353  |  2249   2.3
 Green      313    0  685    0    0    0  |  3620   3.6
 Yellow     353    0  175    0  138  332  |  2428   2.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/center_squeeze_voteline_1d_tabulated.txt) (regenerated on every run; every analysis forced on).
 

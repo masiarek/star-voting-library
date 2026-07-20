@@ -72,8 +72,7 @@ Astra,Bolt,Comet,Dune,Echo,Flux
  Comet
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Dune       0  1  0  1  2  1  |     8   1.6
 Echo       2  1  1  0  0  1  |    17   3.4
 Flux       0  1  0  0  2  2  |     6   1.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt) (regenerated on every run; every analysis forced on).
 

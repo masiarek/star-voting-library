@@ -89,8 +89,7 @@ Count × Apple,Banana,Cherry
  Cherry
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -113,8 +112,6 @@ Apple      4  0  0  0  0  5  |    20   2.2
 Banana     3  0  0  0  2  4  |    17   1.9
 Cherry     2  3  4  0  0  0  |    34   3.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex03_five_verdicts_tabulated.txt) (regenerated on every run; every analysis forced on).
 

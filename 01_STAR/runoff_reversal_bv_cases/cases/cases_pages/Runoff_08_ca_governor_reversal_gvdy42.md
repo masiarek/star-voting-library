@@ -629,8 +629,7 @@ Count × Akinyemi Agbede (D),Mohammad Arif (D),Larry Azevedo (D),Xavier Becerra 
  Tom Steyer (D)
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -769,8 +768,6 @@ Frederic C. Schultz (NPP)              1   1   1   1   3  29  283  |    17   0.5
 Margret Trowe (NPP)                    2   2   1   1   4  28  281  |    27   0.7
 Nancy D. Young (NPP)                   1   0   1   1   6  28  282  |    16   0.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_08_ca_governor_reversal_gvdy42_tabulated.txt) (regenerated on every run; every analysis forced on).
 

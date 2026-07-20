@@ -112,8 +112,7 @@ Anchovy,Basil,Caper
  Anchovy
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -136,8 +135,6 @@ Anchovy    1  1  1  1  1  0  |    15   3.0
 Basil      1  1  1  1  1  0  |    15   3.0
 Caper      1  1  1  1  1  0  |    15   3.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_08_all_flat_zero_count_tabulated.txt) (regenerated on every run; every analysis forced on).
 

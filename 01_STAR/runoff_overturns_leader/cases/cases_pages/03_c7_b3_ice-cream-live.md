@@ -80,8 +80,7 @@ ChocoDrk,ChocoAlm,ChocoHzn,VanillaClssc,VanillaFrnch,Mango,Peach
  ChocoAlm
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -112,8 +111,6 @@ VanillaFrnch  0  0  0  0  1  2  |     1   0.3
 Mango         0  0  0  1  0  2  |     2   0.7
 Peach         0  0  0  0  0  3  |     0   0.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03_c7_b3_ice-cream-live_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -80,8 +80,7 @@ Count × Arepa,Bao,Churro,Donut,Eclair
  Donut
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -124,8 +123,6 @@ Eclair     21  22   0   0   0  57  |   193   1.9
    Churro        --  27+30/37
  Donut wins a seat.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2210_fvg8y8_star_pr_share_tabulated.txt) (regenerated on every run; every analysis forced on).
 

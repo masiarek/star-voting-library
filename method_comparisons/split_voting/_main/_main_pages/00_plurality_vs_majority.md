@@ -82,8 +82,7 @@ Count × Andre,Blake,Carmen
  Blake
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -106,8 +105,6 @@ Andre      40   0   0   0   0  60  |   200   2.0
 Blake      35  25   0   0   0  40  |   275   2.8
 Carmen     25  35   0   0   0  40  |   265   2.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../_main_tabulated/00_plurality_vs_majority_tabulated.txt) (regenerated on every run; every analysis forced on).
 

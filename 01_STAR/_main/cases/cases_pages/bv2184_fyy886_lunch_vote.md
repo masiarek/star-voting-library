@@ -80,8 +80,7 @@ Count × Sushi,Tacos,Pizza
  Pizza
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -104,8 +103,6 @@ Sushi      2  0  1  0  0  2  |    13   2.6
 Tacos      2  0  0  0  1  2  |    11   2.2
 Pizza      1  0  4  0  0  0  |    17   3.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2184_fyy886_lunch_vote_tabulated.txt) (regenerated on every run; every analysis forced on).
 

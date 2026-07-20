@@ -58,8 +58,7 @@ Choco,Vanilla
  Choco
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -80,8 +79,6 @@ Candidate  5  4  3  2  1  0  | Total   Avg
 Choco      3  0  0  0  0  0  |    15   5.0
 Vanilla    1  0  1  0  0  1  |     8   2.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/01c_c2_b3_two-candidates_tabulated.txt) (regenerated on every run; every analysis forced on).
 

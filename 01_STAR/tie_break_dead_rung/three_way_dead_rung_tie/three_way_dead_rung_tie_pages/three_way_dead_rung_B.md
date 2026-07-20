@@ -112,8 +112,7 @@ A,B,C
  B
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -136,8 +135,6 @@ A          0  1  0  0  0  2  |     4   1.3
 B          0  1  0  0  0  2  |     4   1.3
 C          0  1  0  0  0  2  |     4   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../three_way_dead_rung_tie_tabulated/three_way_dead_rung_B_tabulated.txt) (regenerated on every run; every analysis forced on).
 

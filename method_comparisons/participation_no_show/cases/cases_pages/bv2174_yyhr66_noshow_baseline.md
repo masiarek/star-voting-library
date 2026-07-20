@@ -92,8 +92,7 @@ Count × April,Bruno,Celia
  Bruno
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -116,8 +115,6 @@ April      16   0   0  20   0  18  |   120   2.2
 Bruno      18   0   0  16   0  20  |   122   2.3
 Celia      20   0   0  18   0  16  |   136   2.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2174_yyhr66_noshow_baseline_tabulated.txt) (regenerated on every run; every analysis forced on).
 

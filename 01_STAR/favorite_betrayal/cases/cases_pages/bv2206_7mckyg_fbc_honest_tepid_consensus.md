@@ -102,8 +102,7 @@ Count × Aster,Bluebell,Clover
  Clover
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -126,8 +125,6 @@ Aster      15   0   0   0   0  42  |    75   1.3
 Bluebell    9   0   0   0  24  24  |    69   1.2
 Clover      0  18   0   0   0  39  |    72   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt) (regenerated on every run; every analysis forced on).
 

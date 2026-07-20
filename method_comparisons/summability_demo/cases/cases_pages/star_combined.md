@@ -74,8 +74,7 @@ Maple,Oak,Pine
  Oak
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -98,8 +97,6 @@ Maple      2  1  0  0  1  2  |    15   2.5
 Oak        2  1  1  1  0  1  |    19   3.2
 Pine       2  1  1  0  1  1  |    18   3.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/star_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
 

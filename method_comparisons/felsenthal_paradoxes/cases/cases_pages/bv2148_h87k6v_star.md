@@ -77,8 +77,7 @@ Count × Alma,Bruno,Cora
  Bruno
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Alma        6   0   1   0   8   0  |    41   2.7
 Bruno       8   0   0   0   7   0  |    47   3.1
 Cora        1   0  14   0   0   0  |    47   3.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2148_h87k6v_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

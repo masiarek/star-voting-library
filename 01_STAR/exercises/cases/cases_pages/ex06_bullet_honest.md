@@ -86,8 +86,7 @@ Count × Ari,Bree,Cash
  Bree
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -110,8 +109,6 @@ Ari        4  0  0  0  0  5  |    20   2.2
 Bree       1  0  4  4  0  0  |    25   2.8
 Cash       4  0  0  0  1  4  |    21   2.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex06_bullet_honest_tabulated.txt) (regenerated on every run; every analysis forced on).
 

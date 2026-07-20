@@ -81,8 +81,7 @@ Count × Andre,Blake,Carmen,Dana,Evan
  Carmen
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ Carmen     10  30   0   0   0   0  |   170   4.3
 Dana        7   0   0  27   6   0  |    95   2.4
 Evan        6   0   0   0  34   0  |    64   1.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/count_simplicity_star_vs_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -100,8 +100,7 @@ Count × Andre,Blake
  Andre
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -122,8 +121,6 @@ Candidate  5  4  3  2  1  0  Abs  | Total   Avg
 Andre      0  0  0  0  5  2    5  |     5   0.7
 Blake      0  0  0  0  2  5    5  |     2   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on).
 

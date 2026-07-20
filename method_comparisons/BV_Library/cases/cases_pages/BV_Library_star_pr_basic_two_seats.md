@@ -75,8 +75,7 @@ Count × Allison,Bill,Carmen,Doug
  Doug
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -115,8 +114,6 @@ Doug       4  0  1  0  0  5  |    23   2.3
    Bill          --  0
  Doug wins a seat.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/BV_Library_star_pr_basic_two_seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

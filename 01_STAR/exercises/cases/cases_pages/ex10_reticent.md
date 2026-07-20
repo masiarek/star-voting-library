@@ -78,8 +78,7 @@ Count × Amir,Bess,Cato
  Amir
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Amir       4  0  0  2  0  3  |    24   2.7
 Bess       2  0  0  0  3  4  |    13   1.4
 Cato       3  0  0  0  0  6  |    15   1.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex10_reticent_tabulated.txt) (regenerated on every run; every analysis forced on).
 

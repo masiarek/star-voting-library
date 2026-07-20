@@ -77,8 +77,7 @@ Count × Ada,Ben,Cara
  Cara
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Ada        35   0   0   0   0  65  |   175   1.8
 Ben        25   0   0   0   0  75  |   125   1.3
 Cara       40   0   0   0   0  60  |   200   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../_main_tabulated/05a_residual_split_bullet-voting_tabulated.txt) (regenerated on every run; every analysis forced on).
 

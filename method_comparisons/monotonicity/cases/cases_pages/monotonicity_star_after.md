@@ -74,8 +74,7 @@ Count × X,Y,Z
  X
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -98,8 +97,6 @@ X          16   0  10   0   0   8  |   110   3.2
 Y           8   0  16   0   0  10  |    88   2.6
 Z          10   0   8   0   0  16  |    74   2.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/monotonicity_star_after_tabulated.txt) (regenerated on every run; every analysis forced on).
 

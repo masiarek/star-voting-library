@@ -105,8 +105,7 @@ Count × Ararat,Blanc,Cook
  Ararat
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -129,8 +128,6 @@ Ararat     2  0  0  0  0  0  |    10   5.0
 Blanc      2  0  0  0  0  0  |    10   5.0
 Cook       2  0  0  0  0  0  |    10   5.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_07_fully_flat_tabulated.txt) (regenerated on every run; every analysis forced on).
 

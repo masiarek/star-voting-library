@@ -62,8 +62,7 @@ Count × Choco,Almond,Vanilla
  Almond
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -86,8 +85,6 @@ Choco      0  0  0  0  0  3  |     0   0.0
 Almond     0  0  0  0  2  1  |     2   0.7
 Vanilla    0  0  0  0  1  2  |     1   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03b_c3_b3_1_style-protest-vote_tabulated.txt) (regenerated on every run; every analysis forced on).
 

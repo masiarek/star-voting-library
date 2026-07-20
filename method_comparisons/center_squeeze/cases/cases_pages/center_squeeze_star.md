@@ -78,8 +78,7 @@ Count × Left,Center,Right
  Center
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -102,8 +101,6 @@ Left       12   6   9   0   0   0  |   111   4.1
 Center      6  21   0   0   0   0  |   114   4.2
 Right       9   0  18   0   0   0  |    99   3.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/center_squeeze_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

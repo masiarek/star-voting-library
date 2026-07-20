@@ -83,8 +83,7 @@ Count × VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
  VeggieCurry
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ TofuStirFry  28  26   0  16   0  30  |   276   2.8
 GardenSalad  16  26   0  28   0  30  |   240   2.4
 BeefBurger   30   0   0   0   0  70  |   150   1.5
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../_main_tabulated/03_lunch_veggie_vs_meat_tabulated.txt) (regenerated on every run; every analysis forced on).
 

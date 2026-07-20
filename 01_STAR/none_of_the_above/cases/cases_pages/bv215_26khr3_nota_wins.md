@@ -82,8 +82,7 @@ Count × Ada,Bruno,None of the Above
  None of the Above
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -106,8 +105,6 @@ Ada                2  0  0  0  0  4    0  |    10   1.7
 Bruno              0  0  0  0  2  4    0  |     2   0.3
 None of the Above  4  0  0  0  0  1    1  |    20   4.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt) (regenerated on every run; every analysis forced on).
 

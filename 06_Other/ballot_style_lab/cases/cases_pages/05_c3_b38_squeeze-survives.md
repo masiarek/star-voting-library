@@ -167,8 +167,7 @@ Count × Ava,Ben,Cora
  Ben
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -191,8 +190,6 @@ Ava        12   0   6   1   0  13    6  |    80   2.5
 Ben         7  14   1   3  11   2    0  |   111   2.9
 Cora       19   0   7   3   2   5    2  |   124   3.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/05_c3_b38_squeeze-survives_tabulated.txt) (regenerated on every run; every analysis forced on).
 

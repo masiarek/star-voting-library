@@ -97,8 +97,7 @@ Count × Andre,Blake,Carmen
  Andre
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -121,8 +120,6 @@ Andre      0  2  3  0  0  0  |    17   3.4
 Blake      0  3  1  0  1  0  |    16   3.2
 Carmen     5  0  0  0  0  0  |    25   5.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv129_score_tiebreak_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

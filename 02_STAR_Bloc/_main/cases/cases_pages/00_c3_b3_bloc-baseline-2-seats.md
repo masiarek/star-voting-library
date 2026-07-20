@@ -92,8 +92,7 @@ Alice,Bruno,Clara
  Bruno
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -116,8 +115,6 @@ Alice      2  1  0  0  0  0  |    14   4.7
 Bruno      1  1  1  0  0  0  |    12   4.0
 Clara      0  0  0  1  1  1  |     3   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/00_c3_b3_bloc-baseline-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

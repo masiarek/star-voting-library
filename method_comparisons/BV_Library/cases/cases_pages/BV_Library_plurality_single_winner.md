@@ -84,8 +84,7 @@ Count × Alice,Bob,Carol,Dave
  Dave
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -110,8 +109,6 @@ Bob         0   0   0   0   2  11    1  |     2   0.2
 Carol       0   0   0   0   3  10    1  |     3   0.2
 Dave        0   0   0   0   5   8    1  |     5   0.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/BV_Library_plurality_single_winner_tabulated.txt) (regenerated on every run; every analysis forced on).
 

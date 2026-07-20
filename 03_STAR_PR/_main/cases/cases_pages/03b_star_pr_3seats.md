@@ -104,8 +104,7 @@ Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
  SmallBiz
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -137,8 +136,6 @@ BigBiz     17  22   3   0   0  58  |   182   1.8
 TaxCuts     3   0  39   0   0  58  |   132   1.3
  Hare score quota is 166+2/3.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03b_star_pr_3seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

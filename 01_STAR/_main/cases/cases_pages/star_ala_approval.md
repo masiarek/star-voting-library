@@ -90,8 +90,7 @@ A,B,C,D
  D
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -116,8 +115,6 @@ B          1  0  0  0  1  2    4  |     6   1.5
 C          1  0  0  0  1  4    2  |     6   1.0
 D          1  0  0  0  3  2    2  |     8   1.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/star_ala_approval_tabulated.txt) (regenerated on every run; every analysis forced on).
 

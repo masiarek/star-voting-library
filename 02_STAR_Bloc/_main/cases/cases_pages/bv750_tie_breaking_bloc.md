@@ -161,8 +161,7 @@ Count × a,b,c
  a
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -185,8 +184,6 @@ a          3  0  0  0  0  0  |    15   5.0
 b          3  0  0  0  0  0  |    15   5.0
 c          3  0  0  0  0  0  |    15   5.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv750_tie_breaking_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

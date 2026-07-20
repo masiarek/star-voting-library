@@ -64,8 +64,7 @@ Amber,Blue,Coral,Dune
  Blue
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -90,8 +89,6 @@ Blue       2  1  0  0  0  0  |    14   4.7
 Coral      0  0  0  0  1  2  |     1   0.3
 Dune       0  0  0  0  1  2  |     1   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/04_c4_b3_runoff-confirms-leader_tabulated.txt) (regenerated on every run; every analysis forced on).
 

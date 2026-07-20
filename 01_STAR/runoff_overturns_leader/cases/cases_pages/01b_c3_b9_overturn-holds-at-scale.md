@@ -77,8 +77,7 @@ Count × Almond,Brownie,Cocoa
  Brownie
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Almond     3  6  0  0  0  0  |    39   4.3
 Brownie    6  0  0  0  3  0  |    33   3.7
 Cocoa      0  0  0  0  0  9  |     0   0.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/01b_c3_b9_overturn-holds-at-scale_tabulated.txt) (regenerated on every run; every analysis forced on).
 

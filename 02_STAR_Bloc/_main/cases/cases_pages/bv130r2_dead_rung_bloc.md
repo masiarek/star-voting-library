@@ -156,8 +156,7 @@ Ada,Ben,Cara,Dan,Eve,Finn
  Eve
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -186,8 +185,6 @@ Dan        0  3  1  0  0  0  |    15   3.8
 Eve        0  0  2  2  0  0  |    10   2.5
 Finn       0  0  0  1  2  1  |     4   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv130r2_dead_rung_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -89,8 +89,7 @@ Count × Ada,Ben,Cleo
  Ada
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -113,8 +112,6 @@ Ada        5  0  8  0  4  0  |    53   3.1
 Ben        8  0  3  0  6  0  |    55   3.2
 Cleo       4  0  6  0  7  0  |    45   2.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2146_krk2px_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

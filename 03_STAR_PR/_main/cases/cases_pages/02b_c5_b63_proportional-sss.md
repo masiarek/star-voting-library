@@ -88,8 +88,7 @@ Count × Alice,Ben,Cara,Dan,Eve
  Dan
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -117,8 +116,6 @@ Dan        15   9   0   0   0  39  |   111   1.8
 Eve         9  15   0   0   0  39  |   105   1.7
  Hare score quota is 105.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02b_c5_b63_proportional-sss_tabulated.txt) (regenerated on every run; every analysis forced on).
 

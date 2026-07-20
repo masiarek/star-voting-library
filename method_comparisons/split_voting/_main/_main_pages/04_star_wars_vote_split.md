@@ -90,8 +90,7 @@ Count × Skywalker,Leia,Vader
  Leia
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -114,8 +113,6 @@ Skywalker  33  27   0   0   0  40  |   273   2.7
 Leia       27  33   0   0  40   0  |   307   3.1
 Vader      40   0   0   0   0  60  |   200   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../_main_tabulated/04_star_wars_vote_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 

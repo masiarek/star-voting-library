@@ -93,8 +93,7 @@ Count × Avery,Blake,Carmen,Diego,Elena
  Avery
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -121,8 +120,6 @@ Carmen     0  5  4  0  0  0  |    32   3.6
 Diego      3  0  6  0  0  0  |    33   3.7
 Elena      5  0  0  0  0  4  |    25   2.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex01_district_east_tabulated.txt) (regenerated on every run; every analysis forced on).
 

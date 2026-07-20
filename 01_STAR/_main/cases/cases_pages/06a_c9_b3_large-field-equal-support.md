@@ -78,8 +78,7 @@ Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
  Carmen
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -114,8 +113,6 @@ Gabe       2  0  0  0  1  0  |    11   3.7
 Helena     0  3  0  0  0  0  |    12   4.0
 Ira        0  0  0  0  1  2  |     1   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/06a_c9_b3_large-field-equal-support_tabulated.txt) (regenerated on every run; every analysis forced on).
 

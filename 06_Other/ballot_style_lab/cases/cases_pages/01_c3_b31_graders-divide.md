@@ -133,8 +133,7 @@ Count × Abby,Bruno,Clara
  Clara
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -157,8 +156,6 @@ Abby        0   0  16  15   0   0  |    78   2.5
 Bruno      16   0   0   0   0  15  |    80   2.6
 Clara       5   8   3   1  12   2  |    80   2.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/01_c3_b31_graders-divide_tabulated.txt) (regenerated on every run; every analysis forced on).
 

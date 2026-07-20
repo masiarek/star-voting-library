@@ -69,8 +69,7 @@ Count × A,B,C
  C
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -93,8 +92,6 @@ A          2  0  2  0  3  0  |    19   2.7
 B          2  0  3  0  2  0  |    21   3.0
 C          3  0  2  0  2  0  |    23   3.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2161_q3h4fk_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

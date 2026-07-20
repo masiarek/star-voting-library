@@ -66,8 +66,7 @@ Count × Wren,Yarrow,Zinnia
  Wren
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -90,8 +89,6 @@ Wren       3  1  0  1  0  0  |    21   4.2
 Yarrow     1  0  1  2  1  0  |    13   2.6
 Zinnia     1  0  0  0  1  3  |     6   1.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) (regenerated on every run; every analysis forced on).
 

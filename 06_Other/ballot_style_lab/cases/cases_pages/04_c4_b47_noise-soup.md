@@ -207,8 +207,7 @@ Count × Aaron,Beth,Caleb,Dana
  Caleb
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -233,8 +232,6 @@ Beth       15   5   5   5   0  13    4  |   120   2.8
 Caleb      12   5   6   6   3  11    4  |   113   2.6
 Dana       12   4   7   7   1  12    4  |   112   2.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/04_c4_b47_noise-soup_tabulated.txt) (regenerated on every run; every analysis forced on).
 

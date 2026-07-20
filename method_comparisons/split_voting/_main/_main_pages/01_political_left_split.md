@@ -83,8 +83,7 @@ Count × Green,Labour,SocialDem,Conservative
  Labour
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ Labour        22  44   0   0   0  34  |   286   2.9
 SocialDem     20  22   0  24   0  34  |   236   2.4
 Conservative  34   0   0   0   0  66  |   170   1.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../_main_tabulated/01_political_left_split_tabulated.txt) (regenerated on every run; every analysis forced on).
 

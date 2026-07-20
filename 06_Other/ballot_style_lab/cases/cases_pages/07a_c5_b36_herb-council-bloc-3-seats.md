@@ -196,8 +196,7 @@ Count × Anise,Basil,Chive,Dill,Endive
  Dill
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -224,8 +223,6 @@ Chive      15   0   1   3   3  10    4  |    87   2.7
 Dill       12   3   1   1   6   9    4  |    83   2.6
 Endive     11   4   3   0   0  11    7  |    80   2.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/07a_c5_b36_herb-council-bloc-3-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

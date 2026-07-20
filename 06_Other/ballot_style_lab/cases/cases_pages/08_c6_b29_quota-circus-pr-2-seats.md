@@ -146,8 +146,7 @@ Count × Amir,Bree,Cato,Della,Enzo,Faye
  Bree
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -177,8 +176,6 @@ Enzo        2   0   5   1   0  19    2  |    27   1.0
 Faye        0   4   3   0   1  19    2  |    26   1.0
  Hare quota is 29/2.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/08_c6_b29_quota-circus-pr-2-seats_tabulated.txt) (regenerated on every run; every analysis forced on).
 

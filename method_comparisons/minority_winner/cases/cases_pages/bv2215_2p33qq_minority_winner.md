@@ -77,8 +77,7 @@ Count × Ada,Ben,Cleo
  Cleo
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Ada        34   0   0  33   0  33  |   236   2.4
 Ben        33   0   0   0  33  34  |   198   2.0
 Cleo       33  67   0   0   0   0  |   433   4.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2215_2p33qq_minority_winner_tabulated.txt) (regenerated on every run; every analysis forced on).
 

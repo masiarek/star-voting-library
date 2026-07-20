@@ -129,8 +129,7 @@ Count × Amy,Brian,Chuck
  Amy
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -153,8 +152,6 @@ Amy        5  0  1  0  1  0  |    29   4.1
 Brian      5  0  0  2  0  0  |    29   4.1
 Chuck      5  0  1  0  1  0  |    29   4.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt) (regenerated on every run; every analysis forced on).
 

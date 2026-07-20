@@ -59,8 +59,7 @@ Count × Dog,Cat,Fish
  Dog
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -83,8 +82,6 @@ Dog         0   0   0   0   9  13  |     9   0.4
 Cat         0   0   0   0   6  16  |     6   0.3
 Fish        0   0   0   0   7  15  |     7   0.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2132_ykjjhy_pet_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 

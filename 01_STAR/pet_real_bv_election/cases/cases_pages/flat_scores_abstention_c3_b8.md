@@ -92,8 +92,7 @@ Apple,Banana,Cherry
  Banana
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -116,8 +115,6 @@ Apple      2  1  2  0  0  2    1  |    20   2.9
 Banana     4  1  1  0  0  1    1  |    27   3.9
 Cherry     0  0  1  1  2  3    1  |     7   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) (regenerated on every run; every analysis forced on).
 

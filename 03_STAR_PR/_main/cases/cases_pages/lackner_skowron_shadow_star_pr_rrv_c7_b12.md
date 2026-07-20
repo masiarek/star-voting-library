@@ -133,8 +133,7 @@ Count × A,B,C,D,E,F,G
  F
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -165,8 +164,6 @@ E           1   0   0   0   0  11  |     5   0.4
 F           2   0   0   0   0  10  |    10   0.8
 G           1   0   0   0   0  11  |     5   0.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/lackner_skowron_shadow_star_pr_rrv_c7_b12_tabulated.txt) (regenerated on every run; every analysis forced on).
 

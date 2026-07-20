@@ -77,8 +77,7 @@ Count × Alan,Beth
  Beth
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -99,8 +98,6 @@ Candidate  5  4  3  2  1  0  | Total   Avg
 Alan       0  0  0  2  0  3  |     4   0.8
 Beth       0  0  0  0  3  2  |     3   0.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/brams_ex3_two_candidates_c2_b5_tabulated.txt) (regenerated on every run; every analysis forced on).
 

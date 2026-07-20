@@ -156,8 +156,7 @@ Count × A,B,C,D,E,F,G
  D
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -224,8 +223,6 @@ G           1   0   0   0   0  11  |     5   0.4
    G             -- 5
  D wins a seat.
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/lackner_skowron_shadow_star_pr_c7_b12_tabulated.txt) (regenerated on every run; every analysis forced on).
 

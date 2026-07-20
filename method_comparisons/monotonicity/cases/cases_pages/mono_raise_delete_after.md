@@ -81,8 +81,7 @@ Count × X,Y,Z
  Z
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -105,8 +104,6 @@ X          12   9   0   0   0   9  |    96   3.2
 Y           0  12   0   9   0   9  |    66   2.2
 Z           9   0   9   0   0  12  |    72   2.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/mono_raise_delete_after_tabulated.txt) (regenerated on every run; every analysis forced on).
 

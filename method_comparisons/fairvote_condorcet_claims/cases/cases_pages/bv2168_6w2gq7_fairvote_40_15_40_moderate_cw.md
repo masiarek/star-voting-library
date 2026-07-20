@@ -108,8 +108,7 @@ Count × Liberal,Moderate,Conservative
  Moderate
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -132,8 +131,6 @@ Liberal       45   0   0   6   0  49  |   237   2.4
 Moderate      12   0   0  88   0   0  |   236   2.4
 Conservative  43   0   0   6   0  51  |   227   2.3
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -84,8 +84,7 @@ Count × Alice,Ben,Cara,Dan,Eve
  Dan
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -112,8 +111,6 @@ Cara        9   0  30   0   0  24  |   135   2.1
 Dan        15   9   0   0   0  39  |   111   1.8
 Eve         9  15   0   0   0  39  |   105   1.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02c_c5_b63_proportional-rrv_tabulated.txt) (regenerated on every run; every analysis forced on).
 

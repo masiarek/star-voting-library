@@ -56,8 +56,7 @@ Count × Apple,Banana,Cherry
  Apple
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -80,8 +79,6 @@ Apple      2  0  0  0  0  0  |    10   5.0
 Banana     0  0  2  0  0  0  |     6   3.0
 Cherry     0  0  0  0  2  0  |     2   1.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_01_baseline_clean_tabulated.txt) (regenerated on every run; every analysis forced on).
 

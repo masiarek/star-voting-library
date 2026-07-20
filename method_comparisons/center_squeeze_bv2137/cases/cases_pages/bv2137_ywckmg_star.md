@@ -77,8 +77,7 @@ Count × Reagan,Anderson,Carter
  Anderson
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -101,8 +100,6 @@ Reagan     45   0   0   0  55   0  |   280   2.8
 Anderson   20   0  80   0   0   0  |   340   3.4
 Carter     35   0  20   0  45   0  |   280   2.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2137_ywckmg_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

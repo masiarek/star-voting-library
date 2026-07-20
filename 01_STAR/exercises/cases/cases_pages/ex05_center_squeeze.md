@@ -87,8 +87,7 @@ Count × Avi,Brook,Cole
  Brook
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -111,8 +110,6 @@ Avi        4  0  1  0  0  4  |    23   2.6
 Brook      2  0  7  0  0  0  |    31   3.4
 Cole       3  0  1  0  0  5  |    18   2.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex05_center_squeeze_tabulated.txt) (regenerated on every run; every analysis forced on).
 

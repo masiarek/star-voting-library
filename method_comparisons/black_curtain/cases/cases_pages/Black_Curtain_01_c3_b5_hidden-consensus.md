@@ -83,8 +83,7 @@ Count × Ann,Bob,Cal
  Cal
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -107,8 +106,6 @@ Ann        2  0  0  0  0  3  |    10   2.0
 Bob        0  5  0  0  0  0  |    20   4.0
 Cal        3  0  0  0  0  2  |    15   3.0
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Black_Curtain_01_c3_b5_hidden-consensus_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -105,8 +105,7 @@ Count × Amos,Bree,Cole
  Cole
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -129,8 +128,6 @@ Amos       0  0  0  2  7  0  |    11   1.2
 Bree       0  0  0  5  0  4  |    10   1.1
 Cole       0  0  0  3  4  2  |    10   1.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/brams_ex6_three_winners_c3_b9_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -81,8 +81,7 @@ Dakota,Eden,Flynn,Gale,Hazel
  Eden
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -109,8 +108,6 @@ Flynn      0  0  0  0  2  3  |     2   0.4
 Gale       0  0  0  0  2  3  |     2   0.4
 Hazel      0  0  0  0  1  4  |     1   0.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt) (regenerated on every run; every analysis forced on).
 

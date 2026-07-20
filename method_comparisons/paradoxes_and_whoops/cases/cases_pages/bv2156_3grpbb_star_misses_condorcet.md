@@ -72,8 +72,7 @@ Count × Ada,Bruno,Cleo
  Ada
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -96,8 +95,6 @@ Ada        40   0  25   0  35   0  |   310   3.1
 Bruno      35   0  25   0  40   0  |   290   2.9
 Cleo       25   0   0  75   0   0  |   275   2.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2156_3grpbb_star_misses_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on).
 

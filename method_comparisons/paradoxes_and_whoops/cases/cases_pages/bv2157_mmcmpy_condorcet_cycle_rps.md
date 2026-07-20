@@ -69,8 +69,7 @@ Count × Rock,Paper,Scissors
  Rock
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -93,8 +92,6 @@ Rock       35   0  32   0   0  33  |   271   2.7
 Paper      33   0  35   0   0  32  |   270   2.7
 Scissors   32   0  33   0   0  35  |   259   2.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2157_mmcmpy_condorcet_cycle_rps_tabulated.txt) (regenerated on every run; every analysis forced on).
 

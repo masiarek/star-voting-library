@@ -106,8 +106,7 @@ Count × Avery,Blake,Casey
  Casey
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -130,8 +129,6 @@ Avery      47   0   3   0  50   0  |   294   2.9
 Blake      47   0   3   0  50   0  |   294   2.9
 Casey       6   0  94   0   0   0  |   312   3.1
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2172_bkwfjr_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

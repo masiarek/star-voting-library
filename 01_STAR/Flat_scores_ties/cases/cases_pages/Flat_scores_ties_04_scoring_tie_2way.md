@@ -87,8 +87,7 @@ Count × Aral,Baikal,Crater
  Aral
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -111,8 +110,6 @@ Aral       3  0  0  0  0  0  |    15   5.0
 Baikal     0  2  0  0  0  1  |     8   2.7
 Crater     0  2  0  0  0  1  |     8   2.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/Flat_scores_ties_04_scoring_tie_2way_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -79,8 +79,7 @@ Austin,Boston,Chicago,Denver,Erie
  Boston
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -107,8 +106,6 @@ Chicago    0  0  0  0  2  3  |     2   0.4
 Denver     0  0  0  1  1  3  |     3   0.6
 Erie       0  0  0  1  1  3  |     3   0.6
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02_c5_b5_leader-overturned_tabulated.txt) (regenerated on every run; every analysis forced on).
 

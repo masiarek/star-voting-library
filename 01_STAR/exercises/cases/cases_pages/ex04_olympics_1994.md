@@ -87,8 +87,7 @@ Count × Baiul,Kerrigan,Lu
  Baiul
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -111,8 +110,6 @@ Baiul      5  0  2  0  2  0  |    33   3.7
 Kerrigan   4  0  5  0  0  0  |    35   3.9
 Lu         0  0  2  0  7  0  |    13   1.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex04_olympics_1994_tabulated.txt) (regenerated on every run; every analysis forced on).
 

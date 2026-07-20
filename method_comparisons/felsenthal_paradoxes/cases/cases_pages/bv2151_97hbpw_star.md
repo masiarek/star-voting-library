@@ -72,8 +72,7 @@ Count × Andy,Beth,Carl
  Beth
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -96,8 +95,6 @@ Andy       2  0  1  0  6  0  |    19   2.1
 Beth       3  0  5  0  1  0  |    31   3.4
 Carl       4  0  3  0  2  0  |    31   3.4
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2151_97hbpw_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 

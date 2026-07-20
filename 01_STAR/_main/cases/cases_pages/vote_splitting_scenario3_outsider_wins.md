@@ -75,8 +75,7 @@ Count × DarkChoco,MilkChoco,Vanilla
  Vanilla
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -99,8 +98,6 @@ DarkChoco  12  10   0   0  40   0  |   140   2.3
 MilkChoco  10  12   0   0   0  40  |    98   1.6
 Vanilla    40   0   0   0   0  22  |   200   3.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/vote_splitting_scenario3_outsider_wins_tabulated.txt) (regenerated on every run; every analysis forced on).
 

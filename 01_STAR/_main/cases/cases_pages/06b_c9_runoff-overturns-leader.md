@@ -83,8 +83,7 @@ Andre,Blake,Carmen,David,Ella,Fernando,Gabe,Helena,Ira
  Carmen
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -119,8 +118,6 @@ Gabe       0  0  0  1  1  1  |     3   1.0
 Helena     0  0  0  0  2  1  |     2   0.7
 Ira        0  0  0  0  2  1  |     2   0.7
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/06b_c9_runoff-overturns-leader_tabulated.txt) (regenerated on every run; every analysis forced on).
 

@@ -86,8 +86,7 @@ Count × Alba,Axl,Brett
  Alba
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -110,8 +109,6 @@ Alba       3  2  0  0  0  4  |    23   2.6
 Axl        2  3  0  0  0  4  |    22   2.4
 Brett      4  0  0  0  0  5  |    20   2.2
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex11_spoiler_added_tabulated.txt) (regenerated on every run; every analysis forced on).
 

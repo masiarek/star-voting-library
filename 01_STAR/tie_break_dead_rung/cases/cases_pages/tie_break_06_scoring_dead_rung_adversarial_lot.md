@@ -111,8 +111,7 @@ Ann,Ben,Cara
  Ann
 ```
 
-<details>
-<summary>Full audit — preference matrix, Condorcet, and score distribution</summary>
+### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
 --- Runoff (Preference) Matrix ---
@@ -135,8 +134,6 @@ Ann        0  2  2  0  0  1  |    14   2.8
 Ben        0  2  0  0  1  2  |     9   1.8
 Cara       0  1  1  0  2  1  |     9   1.8
 ```
-
-</details>
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/tie_break_06_scoring_dead_rung_adversarial_lot_tabulated.txt) (regenerated on every run; every analysis forced on).
 
