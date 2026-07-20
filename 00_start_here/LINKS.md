@@ -115,6 +115,8 @@ _Last full review: 2026-06-21._
 | **Ranked Robin (electowiki)** | The *branded method* definition (name coined by Sara Wolk, Equal Vote, 2021). Community wiki + Equal-Vote-adjacent — cite as definition, not authority; prefer academic sources for critical claims | https://electowiki.org/wiki/Ranked_Robin |
 | **Ranked Robin (Equal Vote)** | Equal Vote's own Ranked Robin page (advocacy framing) | https://www.equal.vote/ranked_robin |
 | **Ballotpedia — RCV** | Encyclopedia overview; source of the Atkinson/Foley/Ganz (U. Ill. L. Rev.) Condorcet quote used in `ranked_robin.md` | https://ballotpedia.org/Ranked-choice_voting_(RCV) |
+| **Nicky Case — better ballot** | Interactive, playable guide to alternative voting systems (plurality/IRV/approval/score, spatial simulations). Excellent newcomer explainer — reform-friendly but even-handed across methods | https://ncase.me/ballot/ |
+| **Darlington — Condorcet/Minimax "best"?** | Academic argument *for* Condorcet/Minimax over IRV and score methods (arXiv 1807.01366) — a pro-Condorcet steelman; read alongside `method_comparisons/edelman_condorcet_myth/` and `topics/condorcet/` | https://arxiv.org/abs/1807.01366 |
 
 ## Software / code
 
@@ -122,6 +124,7 @@ _Last full review: 2026-06-21._
 |------------|---------|-----|
 | **starvote (upstream)** | Larry Hastings' original STAR tabulation library | https://github.com/larryhastings/starvote |
 | **YAML fork (Adam)** | This repo — CSV parsing + extra reporting/options | https://github.com/masiarek/star-voting-library |
+| **NIST VotingMethods** | US NIST reference tabulation implementations + election-data **interoperability** (Common Data Format) work. Neutral government source; the interop angle pairs with this repo's ABIF / ballot-format notes (`scores_and_ranks/abif_format.md`) | https://github.com/usnistgov/VotingMethods |
 | **RCVis** | RCV-IRV results *visualizer* (Sankey / bar / table). Note: a visualizer, not a tabulator, and **strong-copyleft (AGPL-style)** — use the hosted site, don't vendor the code | https://rcvis.com |
 | **maxhully/rcv** | BSD-3 Python RCV tabulation library (safe to borrow from, if ever needed) | https://github.com/maxhully/rcv |
 

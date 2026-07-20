@@ -87,6 +87,14 @@ Three rounds, and to follow it you have to track *which* ballots moved *where* e
 
 Same answer — but one count you can do with a calculator and a precinct sheet, the other needs the full ballot set and software to walk the rounds.
 
+### Is "shorter program = simpler"? (the Kolmogorov-complexity claim)
+
+A common talking point tries to make that table *objective*: write a program to tabulate each method and STAR's will be shorter and faster — "Kolmogorov complexity," billed as the standard scientific measure of simplicity. There's a real kernel here: the *minimal* STAR count is two column sums and one head-to-head compare — no loop, no state — while the minimal RCV-IRV count needs an elimination loop that re-tallies after every transfer. STAR genuinely is the algorithmically simpler tabulation.
+
+But "program length" is a slippery yardstick, and this repo is its own counterexample: the STAR engine here is ~3,300 lines while the vendored IRV counter is ~280 — because line-count measures the *implementation* (ours is a full reporting suite), not the algorithm. Kolmogorov complexity is also uncomputable in general and language-dependent in practice, so "*the* objective metric" oversells it. And taken literally it proves too much: the shortest tabulation program of all is **[plurality's](plurality.md)** (add the marks, done) — so "shortest program wins" would crown Choose-One, which no STAR advocate intends.
+
+The rigorous, consequential version of "IRV is harder to count" isn't program length — it's **[summability](../STAR_Voting/properties_and_limits/STAR_summability.md)**: STAR's subtotals add up precinct-by-precinct and IRV's can't (the row above). That's a real auditing-and-transparency difference, not a rhetorical one. Keep the kernel; drop the "objective metric" dressing.
+
 ## When the rounds change the *winner*
 
 Here the methods agree, and Carmen even led the first round — but **the first-round leader is not always the winner.** In a **center squeeze**, the consensus candidate is almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while STAR's scoring round keeps her in and she wins. Same ballots, different count, **different winner** — traced in [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) (demos `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV results have to be read to the *final* round, never reported from first choices alone.
