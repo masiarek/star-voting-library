@@ -54,6 +54,8 @@ The six new ballots put their first-choices on the two **extremes** (Ada +3, Cyr
 
 That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../../06_Other/RCV_IRV/equal_vote_balance/) (base → Bruno, plus-balanced → Ada).
 
+**Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
+
 ## Vote-splitting and exhaustion, precisely
 
 - **Vote-splitting.** Elimination order means a faction that runs *more* candidates is statistically disadvantaged; opposite preferences don't cancel, they interact with who gets eliminated when. (This is the same root cause as [center squeeze](RCV_IRV_center_squeeze.md).)
