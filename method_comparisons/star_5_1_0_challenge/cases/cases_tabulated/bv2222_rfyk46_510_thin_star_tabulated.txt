@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     s2_strategic_510_thin_moderate_c3_b100.yaml
-TABULATED FILE:  s2_strategic_510_thin_moderate_c3_b100_tabulated.txt
+SOURCE FILE:     bv2222_rfyk46_510_thin_star.yaml
+TABULATED FILE:  bv2222_rfyk46_510_thin_star_tabulated.txt
 ======================================================================
 
 election_title: "Strategic 5-1-0 STAR — the center is squeezed out (fails the CW)"
@@ -13,6 +13,9 @@ scenario_description: |-
   IRV. Confirmed identical to RCV-IRV on this electorate (s3).
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2222
+bv_election_id: rfyk46
+bv_results_url: https://bettervoting.com/rfyk46/results
 options:
   show_description: false
   show_matrix: true
@@ -32,7 +35,7 @@ ballots: |-
 expected_winners:
 - Ana
 
-# file: s2_strategic_510_thin_moderate_c3_b100.yaml
+# file: bv2222_rfyk46_510_thin_star.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -63,7 +66,7 @@ Legend: For - Equal Support - Against
   STAR               = Ana
   RCV-RR (Condorcet) = Beth   (differs from STAR)
   Full round-by-round reports (generated for review):
-  RCV-RR round-robin: cases_tabulated/s2_strategic_510_thin_moderate_c3_b100_RCV-RR_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/bv2222_rfyk46_510_thin_star_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

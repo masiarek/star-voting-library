@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     s3_irv_thin_moderate_c3_b100.yaml
-TABULATED FILE:  s3_irv_thin_moderate_c3_b100_tabulated.txt
+SOURCE FILE:     bv2222_rfyk46_510_thin_irv.yaml
+TABULATED FILE:  bv2222_rfyk46_510_thin_irv_tabulated.txt
 ======================================================================
 
 election_title: "RCV-IRV on the same electorate — also squeezes the center (→ Ana)"
@@ -12,6 +12,9 @@ scenario_description: |-
   and IRV fail the SAME way — rb-j's core point, confirmed.
 voting_method: RCV_IRV
 num_winners: 1
+bv_test_id: BV2222
+bv_election_id: rfyk46
+bv_results_url: https://bettervoting.com/rfyk46/results
 ballots: |-
   48:Ana>Beth>Cole
   47:Cole>Beth>Ana

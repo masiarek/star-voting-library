@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     s1_sincere_thin_moderate_c3_b100.yaml
-TABULATED FILE:  s1_sincere_thin_moderate_c3_b100_tabulated.txt
+SOURCE FILE:     bv2221_2kcwbw_sincere.yaml
+TABULATED FILE:  bv2221_2kcwbw_sincere_tabulated.txt
 ======================================================================
 
 election_title: "Sincere STAR — the center wins (Beth is the Condorcet winner)"
@@ -14,6 +14,9 @@ scenario_description: |-
   instead. Part of the rb-j "does STAR collapse to IRV under 5-1-0?" claim-check.
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2221
+bv_election_id: 2kcwbw
+bv_results_url: https://bettervoting.com/2kcwbw/results
 options:
   show_description: false
   show_matrix: true
@@ -33,7 +36,7 @@ ballots: |-
 expected_winners:
 - Beth
 
-# file: s1_sincere_thin_moderate_c3_b100.yaml
+# file: bv2221_2kcwbw_sincere.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -70,7 +73,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/s1_sincere_thin_moderate_c3_b100_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2221_2kcwbw_sincere_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

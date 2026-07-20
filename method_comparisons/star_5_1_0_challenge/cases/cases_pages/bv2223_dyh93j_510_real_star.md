@@ -1,6 +1,6 @@
 # Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW
 
-*Generated from [`s4_strategic_510_real_moderate_c3_b100.yaml`](../s4_strategic_510_real_moderate_c3_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2223_dyh93j_510_real_star.yaml`](../bv2223_dyh93j_510_real_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
 
@@ -42,7 +42,7 @@ The count, step by step — the rounds and how the winner is reached:
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/s4_strategic_510_real_moderate_c3_b100_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2223_dyh93j_510_real_star_RCV-IRV_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ana)
@@ -112,19 +112,18 @@ Cole       35   0   0   0   0  65  |   175   1.8
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/s4_strategic_510_real_moderate_c3_b100_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2223_dyh93j_510_real_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/s4_strategic_510_real_moderate_c3_b100.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [s1_sincere_thin_moderate_c3_b100](s1_sincere_thin_moderate_c3_b100.md) · [s2_strategic_510_thin_moderate_c3_b100](s2_strategic_510_thin_moderate_c3_b100.md) · [s3_irv_thin_moderate_c3_b100](s3_irv_thin_moderate_c3_b100.md) · [s5_irv_real_moderate_c3_b100](s5_irv_real_moderate_c3_b100.md)
+More cases in this set: [bv2221_2kcwbw_sincere](bv2221_2kcwbw_sincere.md) · [bv2222_rfyk46_510_thin_irv](bv2222_rfyk46_510_thin_irv.md) · [bv2222_rfyk46_510_thin_star](bv2222_rfyk46_510_thin_star.md) · [bv2223_dyh93j_510_real_irv](bv2223_dyh93j_510_real_irv.md)

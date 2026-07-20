@@ -1,6 +1,6 @@
 # Sincere STAR — the center wins (Beth is the Condorcet winner)
 
-*Generated from [`s1_sincere_thin_moderate_c3_b100.yaml`](../s1_sincere_thin_moderate_c3_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2221_2kcwbw_sincere.yaml`](../bv2221_2kcwbw_sincere.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
 
@@ -41,7 +41,7 @@ The count, step by step — the rounds and how the winner is reached:
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/s1_sincere_thin_moderate_c3_b100_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2221_2kcwbw_sincere_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 
@@ -103,20 +103,19 @@ Cole       47   0   0   0   0  53  |   235   2.4
 
 </details>
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/s1_sincere_thin_moderate_c3_b100_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2221_2kcwbw_sincere_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/s1_sincere_thin_moderate_c3_b100.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [s2_strategic_510_thin_moderate_c3_b100](s2_strategic_510_thin_moderate_c3_b100.md) · [s3_irv_thin_moderate_c3_b100](s3_irv_thin_moderate_c3_b100.md) · [s4_strategic_510_real_moderate_c3_b100](s4_strategic_510_real_moderate_c3_b100.md) · [s5_irv_real_moderate_c3_b100](s5_irv_real_moderate_c3_b100.md)
+More cases in this set: [bv2222_rfyk46_510_thin_irv](bv2222_rfyk46_510_thin_irv.md) · [bv2222_rfyk46_510_thin_star](bv2222_rfyk46_510_thin_star.md) · [bv2223_dyh93j_510_real_irv](bv2223_dyh93j_510_real_irv.md) · [bv2223_dyh93j_510_real_star](bv2223_dyh93j_510_real_star.md)

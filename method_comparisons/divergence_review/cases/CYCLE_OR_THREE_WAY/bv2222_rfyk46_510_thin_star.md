@@ -21,7 +21,7 @@ The methods split: STAR=Ana, RCV-IRV=Ana, Ranked Robin=Beth; the Condorcet (pair
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100.yaml`](../../../../method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100.yaml)  ·  **STAR tabulated mirror:** [`s2_strategic_510_thin_moderate_c3_b100_tabulated.txt`](../../../../method_comparisons/star_5_1_0_challenge/cases/cases_tabulated/s2_strategic_510_thin_moderate_c3_b100_tabulated.txt)
+**Source election:** [`method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml`](../../../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml)  ·  **STAR tabulated mirror:** [`bv2222_rfyk46_510_thin_star_tabulated.txt`](../../../../method_comparisons/star_5_1_0_challenge/cases/cases_tabulated/bv2222_rfyk46_510_thin_star_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

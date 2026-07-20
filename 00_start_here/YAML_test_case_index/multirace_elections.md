@@ -596,7 +596,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2222 — STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate)
 
-**Election** [`rfyk46`](https://bettervoting.com/rfyk46/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/s2_strategic_510_thin_moderate_c3_b100_bv_export.json)
+**Election** [`rfyk46`](https://bettervoting.com/rfyk46/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -605,7 +605,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2223 — STAR vs strategy — 5-1-0 min-max, real moderate: STAR keeps the CW, IRV doesn't
 
-**Election** [`dyh93j`](https://bettervoting.com/dyh93j/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/s4_strategic_510_real_moderate_c3_b100_bv_export.json)
+**Election** [`dyh93j`](https://bettervoting.com/dyh93j/results) · **2 races** · **100 ballots** · [frozen export](../../method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|

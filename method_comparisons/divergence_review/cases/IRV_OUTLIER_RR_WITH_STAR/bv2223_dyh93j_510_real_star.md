@@ -1,4 +1,4 @@
-# Sincere STAR — the center wins (Beth is the Condorcet winner)
+# Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW
 
 **Bucket — IRV_OUTLIER_RR_WITH_STAR:** RCV-IRV is the outlier (center squeeze)
 
@@ -15,13 +15,13 @@ STAR elects **Beth** — and so do Ranked Robin and Condorcet, because **Beth is
 | STAR | **Beth** |
 | RCV-IRV | Ana |
 | Ranked Robin (RCV-RR) | Beth |
-| Approval | Beth |
-| Range / Score | Beth |
+| Approval | Ana |
+| Range / Score | Ana |
 | Condorcet | Beth |
 
 **Flags:** none
 
-**Source election:** [`method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml`](../../../../method_comparisons/star_5_1_0_challenge/cases/s1_sincere_thin_moderate_c3_b100.yaml)  ·  **STAR tabulated mirror:** [`s1_sincere_thin_moderate_c3_b100_tabulated.txt`](../../../../method_comparisons/star_5_1_0_challenge/cases/cases_tabulated/s1_sincere_thin_moderate_c3_b100_tabulated.txt)
+**Source election:** [`method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml`](../../../../method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml)  ·  **STAR tabulated mirror:** [`bv2223_dyh93j_510_real_star_tabulated.txt`](../../../../method_comparisons/star_5_1_0_challenge/cases/cases_tabulated/bv2223_dyh93j_510_real_star_tabulated.txt)
 
 _3 candidates, 100 ballots._
 
@@ -31,17 +31,17 @@ Each row is a group of identical score ballots (0 = no support, 5 = max).
 
 | Count | Ana | Beth | Cole |
 |---:|:--:|:--:|:--:|
-| 48 | 5 | 3 | 0 |
-| 47 | 0 | 3 | 5 |
-| 5 | 2 | 5 | 0 |
+| 40 | 5 | 1 | 0 |
+| 35 | 0 | 1 | 5 |
+| 25 | 1 | 5 | 0 |
 
 ## STAR result (official)
 
-**Scoring round (sum of scores):** Beth 310, Ana 250, Cole 235
+**Scoring round (sum of scores):** Ana 225, Beth 200, Cole 175
 
-**Finalists (top two):** Beth and Ana
+**Finalists (top two):** Ana and Beth
 
-**Automatic runoff:** Beth 52 vs Ana 48
+**Automatic runoff:** Ana 40 vs Beth 60
 
 **STAR winner: Beth**
 
@@ -54,47 +54,57 @@ Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
                  |    * Ana     |   * Beth    |
 -----------------------------------------------
-         * Ana > |     ---      |48 -  0 - 52 |
-        * Beth > | 52 -  0 - 48 |    ---      |
+         * Ana > |     ---      |40 -  0 - 60 |
+        * Beth > | 60 -  0 - 40 |    ---      |
 
 [Divergence from STAR]
   STAR                   = Beth
   Choose-One (Plurality) = Ana   (differs from STAR)
   RCV-IRV                = Ana   (differs from STAR)
+  Approval               = Ana   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
 
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ana)
+ - Runoff Round Winner   = (Beth)
+  Candidate Ana earned the highest total score, but
+  Candidate Beth won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
 --- STAR Voting Method (single winner) ---
  Tabulating 100 ballots.
 Count × Ana,Beth,Cole
-   48 ×   5,   3,   0
-   47 ×   0,   3,   5
-    5 ×   2,   5,   0
+   40 ×   5,   1,   0
+   35 ×   0,   1,   5
+   25 ×   1,   5,   0
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
 Candidate   5   4   3   2   1   0  | Total   Avg
-Ana        48   0   0   5   0  47  |   250   2.5
-Beth        5   0  95   0   0   0  |   310   3.1
-Cole       47   0   0   0   0  53  |   235   2.4
+Ana        40   0   0   0  25  35  |   225   2.3
+Beth       25   0   0   0  75   0  |   200   2.0
+Cole       35   0   0   0   0  65  |   175   1.8
 
 Scoring Round
  The two highest-scoring candidates advance to the next round.
-   Beth          -- 310 -- First place
-   Ana           -- 250 -- Second place
-   Cole          -- 235
- Beth and Ana advance.
+   Ana           -- 225 -- First place
+   Beth          -- 200 -- Second place
+   Cole          -- 175
+ Ana and Beth advance.
 
 Automatic Runoff Round
  The candidate preferred in the most head-to-head matchups wins.
-   Beth          -- 52 -- First place
-   Ana           -- 48
+   Beth          -- 60 -- First place
+   Ana           -- 40
    Equal Support --  0
  Beth wins.
    Voters with a preference: 100 of 100 (no Equal Support).
-   Beth 52 (52%) vs Ana 48 (48%); majority = 51.
+   Beth 60 (60%) vs Ana 40 (40%); majority = 51.
 
 Winner — STAR Voting Method (single winner)
  Beth
@@ -109,22 +119,22 @@ Winner — STAR Voting Method (single winner)
 Ballots:
    the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
    the source score ballot follows in () per column: Ana, Beth, Cole
-    48 ×   Ana > Beth      (5, 3, 0)
-    47 ×   Cole > Beth      (0, 3, 5)
-     5 ×   Beth > Ana      (2, 5, 0)
+    40 ×   Ana > Beth      (5, 1, 0)
+    35 ×   Cole > Beth      (0, 1, 5)
+    25 ×   Beth > Ana      (1, 5, 0)
 
 ROUND 1
 Candidate      Votes  Status
 -----------  -------  --------
-Ana               48  Hopeful
-Cole              47  Hopeful
-Beth               5  Rejected
+Ana               40  Hopeful
+Cole              35  Hopeful
+Beth              25  Rejected
 
 FINAL RESULT
 Candidate      Votes  Status
 -----------  -------  --------
-Ana               53  Elected
-Cole              47  Rejected
+Ana               65  Elected
+Cole              35  Rejected
 Beth               0  Rejected
 
 
@@ -142,29 +152,29 @@ NOTE: a generated cross-method view of the STAR ballots, for comparison only —
 
 Ballots:
    the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Ana, Beth, Cole
-    48 × Ana > Beth > Cole      (5, 3, 0)
-    47 × Cole > Beth > Ana      (0, 3, 5)
-     5 × Beth > Ana > Cole      (2, 5, 0)
+    40 × Ana > Beth > Cole      (5, 1, 0)
+    35 × Cole > Beth > Ana      (0, 1, 5)
+    25 × Beth > Ana > Cole      (1, 5, 0)
 
 Round-Robin — every pair, head-to-head (For – Against):
-   Beth  beats Ana    52 – 48
-   Ana   beats Cole   53 – 47
-   Beth  beats Cole   53 – 47
+   Beth  beats Ana    60 – 40
+   Ana   beats Cole   65 – 35
+   Beth  beats Cole   65 – 35
 
 --- Pairwise (Round-Robin) Matrix ---
 Head-to-head / pairwise comparison — the Ranked Robin tally
 Legend: For - Equal Support - Against   (row vs column)
          |     Ana      |    Beth     |    Cole     |
 -----------------------------------------------------
-   Ana > |     ---      |48 -  0 - 52 |53 -  0 - 47 |
-  Beth > | 52 -  0 - 48 |    ---      |53 -  0 - 47 |
-  Cole > | 47 -  0 - 53 |47 -  0 - 53 |    ---      |
+   Ana > |     ---      |40 -  0 - 60 |65 -  0 - 35 |
+  Beth > | 60 -  0 - 40 |    ---      |65 -  0 - 35 |
+  Cole > | 35 -  0 - 65 |35 -  0 - 65 |    ---      |
 
 Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Beth       2–0–0         2     +10  Ana, Cole
-    2  Ana        1–1–0         1      +2  Cole
-    3  Cole       0–2–0         0     -12  —
+    1  Beth       2–0–0         2     +50  Ana, Cole
+    2  Ana        1–1–0         1     +10  Cole
+    3  Cole       0–2–0         0     -60  —
 
 Winner — Ranked Robin (RCV-RR): Beth
    beats every opponent head-to-head — the Condorcet winner.

@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     s4_strategic_510_real_moderate_c3_b100.yaml
-TABULATED FILE:  s4_strategic_510_real_moderate_c3_b100_tabulated.txt
+SOURCE FILE:     bv2223_dyh93j_510_real_star.yaml
+TABULATED FILE:  bv2223_dyh93j_510_real_star_tabulated.txt
 ======================================================================
 
 election_title: "Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW"
@@ -14,6 +14,9 @@ scenario_description: |-
   So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
 voting_method: STAR
 num_winners: 1
+bv_test_id: BV2223
+bv_election_id: dyh93j
+bv_results_url: https://bettervoting.com/dyh93j/results
 options:
   show_description: false
   show_matrix: true
@@ -33,7 +36,7 @@ ballots: |-
 expected_winners:
 - Beth
 
-# file: s4_strategic_510_real_moderate_c3_b100.yaml
+# file: bv2223_dyh93j_510_real_star.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -71,7 +74,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/s4_strategic_510_real_moderate_c3_b100_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2223_dyh93j_510_real_star_RCV-IRV_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ana)
