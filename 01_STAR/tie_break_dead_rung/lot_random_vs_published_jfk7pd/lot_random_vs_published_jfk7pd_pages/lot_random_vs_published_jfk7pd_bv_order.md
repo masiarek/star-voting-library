@@ -129,6 +129,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 ## See also
 
+- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
