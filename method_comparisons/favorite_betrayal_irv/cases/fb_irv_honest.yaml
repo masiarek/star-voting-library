@@ -1,0 +1,41 @@
+election_title: "Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins"
+
+scenario_description: |-
+  The plainest form of the favorite-betrayal incentive, the one RCV voters keep asking
+  about ("is it smart to rank my favorite second?"). Three candidates on a spectrum:
+  Left, Center, Right. 34 voters. The 12 Left voters vote honestly — Left > Center >
+  Right. But Center, everyone's second choice and the Condorcet winner, has the FEWEST
+  first-choices (9) and is eliminated first; Center's ballots split, and RIGHT wins the
+  final 18-16. The Left voters' sincere ballots elected their LEAST-favorite candidate.
+  See the companion fb_irv_betray (2 of those Left voters rank Center first and Center
+  wins) and fb_star_honest (STAR/Ranked Robin elect Center from these same honest
+  preferences — no betrayal needed). Concept: favorite_betrayal_voting_301.md.
+
+video_script: |-
+  Twelve Left voters, all honest: Left first, Center second, Right last. Center is the
+  compromise everyone can live with — and beats both wings head-to-head. But under
+  instant-runoff, first-choices decide who's cut, and Center has the fewest. Center is
+  out; Right wins 18-16. The Left voters got their worst outcome by voting sincerely.
+  That is the trap the next file escapes — by betraying the favorite.
+
+paradoxes: [condorcet-winner]
+voting_method: RCV_IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_irv: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  12:Left>Center>Right
+  5:Center>Right>Left
+  4:Center>Left>Right
+  13:Right>Center>Left
+
+expected_winners:
+  - Right
+
+# file: fb_irv_honest.yaml

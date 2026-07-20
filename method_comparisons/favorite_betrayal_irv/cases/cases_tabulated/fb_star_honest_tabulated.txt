@@ -1,0 +1,129 @@
+======================================================================
+SOURCE FILE:     fb_star_honest.yaml
+TABULATED FILE:  fb_star_honest_tabulated.txt
+======================================================================
+
+election_title: "Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots"
+
+scenario_description: |-
+  The same electorate as fb_irv_honest / fb_irv_betray, scored honestly (favorite 5,
+  compromise 3, worst 0). No strategy: the Left voters give Left 5, Center 3, Right 0.
+  STAR elects CENTER — the Condorcet winner — with no betrayal required (scoring round
+  Center 120, Right 80; runoff Center 21-13). The [Divergence from STAR] block confirms
+  the contrast on these very ballots: STAR = Center, Ranked Robin = Center, but
+  RCV-IRV = Right. That is the whole lesson: under RCV-IRV the Left voters had to rank
+  their favorite second to get a good outcome (fb_irv_betray); under STAR and Ranked
+  Robin they simply vote their honest preferences and the compromise wins. Honesty is
+  the best ballot. Concept: favorite_betrayal_voting_301.md.
+
+video_script: |-
+  Here are the same voters, scoring honestly on 0-5: favorite 5, the compromise 3, the
+  worst 0. Nobody games anything. STAR adds the scores — Center leads — and Center wins
+  the runoff 21-13. Ranked Robin agrees. Only instant-runoff needed the betrayal. That's
+  the pitch: with STAR you rank — or rather score — your honest favorite first, safely.
+
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Left,Center,Right
+  12:5,3,0   # Left > Center > Right   (honest — favorite 5, compromise 3, worst 0)
+  4:3,5,0    # Center > Left > Right
+  5:0,5,3    # Center > Right > Left
+  13:0,3,5   # Right > Center > Left
+
+expected_winners:
+  - Center
+
+# file: fb_star_honest.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots ===
+  The same electorate as fb_irv_honest / fb_irv_betray, scored honestly (favorite 5,
+  compromise 3, worst 0). No strategy: the Left voters give Left 5, Center 3, Right 0.
+  STAR elects CENTER — the Condorcet winner — with no betrayal required (scoring round
+  Center 120, Right 80; runoff Center 21-13). The [Divergence from STAR] block confirms
+  the contrast on these very ballots: STAR = Center, Ranked Robin = Center, but
+  RCV-IRV = Right. That is the whole lesson: under RCV-IRV the Left voters had to rank
+  their favorite second to get a good outcome (fb_irv_betray); under STAR and Ranked
+  Robin they simply vote their honest preferences and the compromise wins. Honesty is
+  the best ballot. Concept: favorite_betrayal_voting_301.md.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Left    |  * Center   |  * Right    |
+-------------------------------------------------------------
+          Left > |     ---      |12 -  0 - 22 |16 -  0 - 18 |
+      * Center > | 22 -  0 - 12 |    ---      |21 -  0 - 13 |
+       * Right > | 18 -  0 - 16 |13 -  0 - 21 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Center — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Center
+  Choose-One (Plurality) = Right   (differs from STAR)
+  RCV-IRV                = Right   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/fb_star_honest_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 34 ballots.
+Count × Left,Center,Right
+   13 ×    0,     3,    5
+   12 ×    5,     3,    0
+    5 ×    0,     5,    3
+    4 ×    3,     5,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Left       12   0   4   0   0  18  |    72   2.1
+Center      9   0  25   0   0   0  |   120   3.5
+Right      13   0   5   0   0  16  |    80   2.4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Center        -- 120 -- First place
+   Right         --  80 -- Second place
+   Left          --  72
+ Center and Right advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Center        -- 21 -- First place
+   Right         -- 13
+   Equal Support --  0
+ Center wins.
+   Runoff math:
+     34  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     34  voters with a preference  (majority = 18)
+           Center 21 (62%)  ·  Right 13 (38%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Center

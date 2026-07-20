@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots
+ Tabulating 34 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Left, Center, Right
+    12 ×   Left > Center      (5, 3, 0)
+     4 ×   Center > Left      (3, 5, 0)
+     5 ×   Center > Right      (0, 5, 3)
+    13 ×   Right > Center      (0, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Right             13  Hopeful
+Left              12  Hopeful
+Center             9  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Right             18  Elected
+Left              16  Rejected
+Center             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Right
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

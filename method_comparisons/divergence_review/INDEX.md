@@ -6,12 +6,12 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **191** single-winner STAR elections (skipped 115 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **113** (59%) diverge from STAR under at least one method; **78** agree across the board.
+- Scanned **192** single-winner STAR elections (skipped 117 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **114** (59%) diverge from STAR under at least one method; **78** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 28 |
+| IRV_OUTLIER_RR_WITH_STAR | 29 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 15 |
 | CYCLE_OR_THREE_WAY | 28 |
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (109 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (110 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 26
+### IRV_OUTLIER_RR_WITH_STAR — 27
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -55,6 +55,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Anderson** · IRV=Carter · RR=Anderson · Approval=Anderson · Score=Anderson · Condorcet=Anderson
 - **[bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  
     STAR=**Moderate** · IRV=Liberal · RR=Moderate · Approval=Liberal · Score=Liberal · Condorcet=Moderate
+- **[fb_star_honest](cases/IRV_OUTLIER_RR_WITH_STAR/fb_star_honest.md)** — `method_comparisons/favorite_betrayal_irv/cases/fb_star_honest.yaml` (3c/34b)  
+    STAR=**Center** · IRV=Right · RR=Center · Approval=Center · Score=Center · Condorcet=Center
 - **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_star.yaml` (3c/17b)  
     STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada
 - **[bv2150_dxg8pb_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2150_dxg8pb_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_star.yaml` (3c/11b)  
