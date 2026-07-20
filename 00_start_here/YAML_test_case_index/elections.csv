@@ -182,9 +182,12 @@ LH:burlington_2009_ranked_robin,"Burlington 2009 mayor — Ranked Robin: Montrol
 LH:center_squeeze_irv,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),1,single-race,27,IRV,LH-only
 LH:center_squeeze_star,Center squeeze — STAR elects the consensus (Center),1,single-race,27,STAR,LH-only
 LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),1,single-race,998,STAR,LH-only
+LH:chicken_approval,"Chicken / Burr dilemma — Approval, honest: A and B tie 60-60 (the trap)",1,single-race,100,Approval,LH-only
+LH:chicken_star,Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly),1,single-race,100,STAR,LH-only
 LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
 LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
+LH:dark_horse_star,Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D),1,single-race,100,STAR,LH-only
 LH:dead_heat_lot_tiebreak,Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only),1,single-race,4,RankedRobin,LH-only
 LH:dead_rung_scoring_dead_cap2,"Dead rung — scoring round, dead five-star rung, cap 2",1,single-race,2,STAR,LH-only
 LH:dead_rung_scoring_dead_cap3,"Dead rung — scoring round, dead five-star rung, cap 3",1,single-race,2,STAR,LH-only

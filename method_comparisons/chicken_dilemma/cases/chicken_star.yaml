@@ -1,0 +1,49 @@
+election_title: "Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly)"
+
+scenario_description: |-
+  The chicken (a.k.a. Burr) dilemma from Jameson Quinn's strategic-pathology set. Two
+  similar candidates A and B must team up to beat a third, C, whom the majority opposes:
+    35: A>B>C (A9 B8 C0)   25: B>A>C (A8 B9 C0)   40: C (C9, A0 B0)
+  Under APPROVAL voting this is a trap: if the 60 A/B voters honestly approve both A and
+  B, the result is an exact 60-60 A/B TIE (the "Burr dilemma", after the 1800 Jefferson-
+  Burr tie) — and each side is tempted to bullet-vote only its favorite, a slippery slope
+  that can hand the win to C if too many defect. See the companion chicken_approval.yaml.
+  STAR removes the slope. Scored honestly on 0-5, A and B voters give BOTH allies high
+  marks (no bullet needed — the runoff, not the sum, decides between them). C is beaten
+  in the scoring round (A 275, B 265, C 200), and A — the honest pairwise winner — takes
+  the runoff 35-25. Honesty is safe. The [Divergence from STAR] block confirms Ranked
+  Robin also elects A. Concept: ../../00_start_here/topics/strategic_pathologies.md.
+
+video_script: |-
+  A and B are allies; together they crush C, but they have to cooperate. Under approval
+  it's a game of chicken: approve both and you might tie; bullet-vote and you might win —
+  or, if both sides bullet, hand it to C. STAR ends the standoff. Score both allies high;
+  the runoff sorts A from B by real preference, so there's no reason to bullet. C loses,
+  A wins, nobody had to blink.
+
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:A,B,C
+  35:5,4,0   # A > B > C
+  25:4,5,0   # B > A > C
+  40:0,0,5   # C
+
+expected_winners:
+  - A
+
+# file: chicken_star.yaml

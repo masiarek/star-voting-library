@@ -62,6 +62,8 @@ AGREE,method_comparisons/BV_Library/cases/BV_Library_star_condorcet_winner.yaml,
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False
 AGREE,method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
+AGREE,method_comparisons/chicken_dilemma/cases/chicken_star.yaml,3,100,A,A,A,A,A,A,A,A,A,0,False,False,False
+AGREE,method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml,4,100,A,A,B,A,A,A,A,A,A,66,True,False,False
 AGREE,method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml,3,30,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml,3,100,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_star.yaml,3,7,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,0,False,False,False

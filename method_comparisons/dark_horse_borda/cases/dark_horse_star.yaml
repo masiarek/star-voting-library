@@ -1,0 +1,54 @@
+election_title: "Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D)"
+
+scenario_description: |-
+  The "Dark Horse 3" scenario (Jameson Quinn's strategic-pathology set). Four
+  candidates; D is a nobody — the honest LAST choice of every voter (zero honest
+  support). Three factions, each with its own favorite:
+    34: A>B>C>D    33: B>A>C>D    33: C>A>B>D
+  Under the BORDA count, each faction can bury its rivals by ranking the nobody D
+  SECOND; if all three do it, D wins with a total of 200 to A's 168 — elected with
+  literally zero honest support (verified with pref_voting; see the README). That is
+  the Dark Horse pathology, and it is a prisoner's dilemma: any one faction defecting
+  profits, but if all defect, they all lose to D.
+  This file shows the fix. Scored honestly on 0-5 (favorite 5, the compromise ~1, the
+  nobody 0), STAR elects the honest utilitarian/Condorcet winner A (scoring round
+  A 236, B 232, C 198; runoff A 34-33). The [Divergence from STAR] block confirms
+  Ranked Robin also elects A. Neither method rewards burying a rival behind D — under
+  a score ballot you give BOTH your rival and D a 0, so D never rises. Quinn's own
+  prescription: "don't force people to dishonestly support D merely to oppose someone."
+  Concept: ../../00_start_here/topics/strategic_pathologies.md.
+
+video_script: |-
+  Meet D, the dark horse — everybody's last choice, zero real support. Under Borda,
+  the only way to hurt your rival is to rank someone above them, and the safe someone
+  is D. Everyone does it, and D backs into the win. Now score honestly on five stars:
+  your rival gets a 0, D gets a 0 — you never have to prop up the nobody. STAR elects
+  A, the candidate people actually want. That's the whole trick: scores let you oppose
+  without being forced to support.
+
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:A,B,C,D
+  34:5,1,0,0   # A > B > C > D   (honest — favorite 5, nobody D 0)
+  33:1,5,1,0   # B > A > C > D
+  33:1,1,5,0   # C > A > B > D
+
+expected_winners:
+  - A
+
+# file: dark_horse_star.yaml
