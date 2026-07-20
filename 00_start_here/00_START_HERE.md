@@ -11,7 +11,7 @@ This is the **STAR Voting education library** — for learning, teaching, and de
 The main event.
 
 - **New here? — the gentle on-ramp** (what STAR is and why it matters, before any mechanics) → [STAR — start here](STAR_Voting/STAR_start_here.md)
-- **The argument for STAR — the case, in plain points** → [Why STAR Voting](topics/Why_STAR_Voting.md) · in brief → [the benefits of STAR](STAR_Voting/getting_started/STAR_benefits.md). *Prefer ranked ballots?* → [Why Ranked Robin](RCV_Ranked_Robin/why_ranked_robin.md), the friendly upgrade that counts them so the consensus wins.
+- **Why STAR? — start with the quick, exciting wins** → [the benefits of STAR](STAR_Voting/getting_started/STAR_benefits.md); then the *complete* case in plain points → [Why STAR Voting](topics/Why_STAR_Voting.md). *Prefer ranked ballots?* → [Why Ranked Robin](RCV_Ranked_Robin/why_ranked_robin.md), the friendly upgrade that counts them so the consensus wins.
 - **How the count works** → [the Scoring Round](STAR_Voting/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
 - **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/getting_started/STAR_FAQ.md)
 - **Do it, don't just read it** → [Hands-on](STAR_Voting/hands_on/README.md): [run a paper-ballot demo](STAR_Voting/hands_on/running_a_paper_ballot_demo.md) (print real ballots from a BetterVoting election, vote, hand-count, compare) · [count a STAR election by hand](STAR_Voting/hands_on/count_star_by_hand.md) · [teach it](STAR_Voting/hands_on/teaching_star_voting.md)

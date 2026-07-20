@@ -2,7 +2,7 @@
 
 > **New to STAR Voting?** It's a simple, expressive way to run an election: **score every candidate 0–5, then an automatic runoff between the two highest-scoring picks the winner.** It's [easy to vote in and easy to count](00_start_here/STAR_Voting/getting_started/STAR_benefits.md), and [relatively new](00_start_here/STAR_Voting/STAR_history.md) — first proposed in 2014. **Start with the five-minute intro → [Welcome to STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md).**
 >
-> **Why should you care? → [The case for STAR Voting](00_start_here/topics/Why_STAR_Voting.md)** — the whole argument in plain points. Prefer ranked ballots? → **[Why Ranked Robin](00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins.
+> **Why should you care? → [The benefits of STAR Voting](00_start_here/STAR_Voting/getting_started/STAR_benefits.md)** — the quick, exciting version: vote your heart, no more spoilers, a winner the majority actually likes. Want the *complete* case with every objection answered? → **[Why STAR Voting](00_start_here/topics/Why_STAR_Voting.md)**. Prefer ranked ballots? → **[Why Ranked Robin](00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins.
 
 A library for learning, teaching, and debating **[STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). It puts STAR first — and earns your trust by testing STAR honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness *is* the argument: the STAR case is stronger because you can check it yourself.
 
@@ -38,7 +38,7 @@ expected_winners:
 - Bob
 ```
 
-This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/_main/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/_main/_main_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](00_start_here/tips/TIPS_canonical_elections.md).
+This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](00_start_here/tips/TIPS_canonical_elections.md).
 
 The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](00_start_here/about_this_repo/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](00_start_here/tips/TIPS_choosing_voter_counts.md).
 
