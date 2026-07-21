@@ -19,6 +19,8 @@ The same 27-voter election runs through every method on the [RCV-IRV-Hare page](
 
 **And it happened for real:** [Burlington 2009](../../../method_comparisons/burlington_2009/README.md) — the actual 8,980 ballots, runnable in this repo. Montroll beats everyone head-to-head (5–0), IRV eliminates him in the semifinal, and a 750-voter raise built from the same profile makes the winner lose (non-monotonicity on certified ballots).
 
+**And the critique is ~240 years old.** When the [Marquis de Condorcet](https://en.wikipedia.org/wiki/Marquis_de_Condorcet) — the man the Condorcet criterion is named for — considered the eliminate-the-fewest-first-choices idea in the 1780s, he **rejected it** for exactly this flaw: that *"the real wish of the plurality may be for a candidate who had none of the votes in the first ballot."* Center squeeze, diagnosed two centuries before Burlington and Alaska made it concrete. (Via [Wikipedia's IRV history](https://en.wikipedia.org/wiki/Instant-runoff_voting#History); surfaced in [Frohnmayer's *Demystifying STAR Voting*](https://nardopolo.medium.com/demystifying-star-voting-3ae6142a0d32).)
+
 Closely related: [monotonicity](../monotonicity/) and [Condorcet efficiency](../condorcet/). Glossary: [`center squeeze`](../../GLOSSARY.md).
 
 ---

@@ -18,7 +18,7 @@ Around 2017, modeling work from the Center for Election Science — the kind of 
 | **~2017** | Modeling favors the score-plus-runoff design; the coalition adopts the **0–5 ballot** and the name **STAR**. |
 | **Nov 2018** | **Lane County, Oregon — Measure 20-290**, STAR's first ballot measure. It **failed**, 47.6% yes to 52.4% no. |
 | **2019** | Equal Vote Coalition incorporates as a 501(c)(3) (founders **Sara Wolk** & Brian Skinner). The **Multnomah County Democratic Party** adopts STAR for internal elections. |
-| **2020** | **STAR Voting Action** (a 501(c)(4) advocacy arm) is formed. The **Independent Party of Oregon** uses STAR in its primary; the **Democratic Party of Oregon** uses it for national-convention delegate elections. A **Eugene** referral dies on a 4–4 city-council deadlock. |
+| **2020** | **STAR Voting Action** (a 501(c)(4) advocacy arm) is formed. The **Independent Party of Oregon** uses STAR in its primary — its first statewide binding use; per Frohnmayer, ~**90% of voters used the full 0–5 range** and the star (approval) ratings tracked public approval polling. The **Democratic Party of Oregon** uses it for national-convention delegate elections. A **Eugene** referral dies on a 4–4 city-council deadlock. |
 | **2022–23** | The **Libertarian Party of Oregon** authorizes STAR for internal elections. |
 | **Nov 2024** | **Oakridge, Oregon** measure fails (~46% yes). |
 
@@ -42,5 +42,6 @@ The richest origin narrative is the coalition's own [Equal Vote — Origins](htt
 ## Sources
 
 - [Equal Vote Coalition — Origins](https://www.equal.vote/origins) (advocacy source; used for the origin narrative and dates)
+- Mark Frohnmayer, [*Demystifying STAR Voting*](https://nardopolo.medium.com/demystifying-star-voting-3ae6142a0d32) — the founder's own first-person origin account (the 2014 Equal Vote Conference, Rob Richie's approval-plus-preference challenge, and the five-star-ballot breakthrough with Clay Shentrup). Advocacy source; the fullest *narrative* of how STAR came to be.
 - [Wikipedia — STAR voting](https://en.wikipedia.org/wiki/STAR_voting) (neutral cross-check for measures and adoptions)
 - [Wikipedia — Mark Frohnmayer](https://en.wikipedia.org/wiki/Mark_Frohnmayer)
