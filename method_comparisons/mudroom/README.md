@@ -30,6 +30,12 @@
 
 These pages are **mean, unfair, and one-sided by design** — they'd misrepresent the state of the art if anyone read one thinking it was balanced. So we don't *hide* them (nothing here is secret, and it stays in the published site), we just keep them **low-profile and unmistakably labeled**: off the main navigation, named with a leading underscore, and every one opens with a plain "this is deliberately mean and unfair" warning. Findable if you go looking or follow the one tucked-away link from [paradoxes & whoopses](../paradoxes_and_whoops/); never presented as the honest picture. The balanced, cite-in-a-debate versions live where they should — [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md), each method's honest-limits page, and [how to read these fairly](../paradoxes_and_whoops/reading_these_fairly.md).
 
+## Where this sits — the "Level 401" safety check
+
+Think of the library as a course. **101** teaches how a method *works* (fill out the ballot, run the count). **201 / 301** teach its *properties* — pros, cons, the criteria it meets. The Mudroom is the unofficial **"401": the safety check.** Once you understand a method and like it, the last responsible step before you'd *adopt* it is to ask **"how does this go bad?"** — to walk its failure modes with clear eyes. Every method has whoops; a grown-up chooses one knowing exactly which.
+
+The **fair** version of that 401 already runs through the repo — each method's honest-limits page, [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md), the [four-part test](../paradoxes_and_whoops/reading_these_fairly.md). The Mudroom is the *same* safety-check material with the bedside manner removed: the failure modes curated one-sidedly, for sport. Read it for the reels; do the actual 401 on the fair pages.
+
 ## The actual lesson (if you want one)
 
 Strip the mud off and the Mudroom teaches the single most important fact in voting theory: **there is no perfect method.** Every ballot design and every count trades something away — the honest question isn't "which method is flawless?" (none is) but "which failures can you live with, and how often do they actually bite?" That's the [four-part test](../paradoxes_and_whoops/reading_these_fairly.md) and the whole reason this library exists. The reels just make the impossibility *concrete* — and, by refusing to spare anyone, keep the rest of the repo honest.
