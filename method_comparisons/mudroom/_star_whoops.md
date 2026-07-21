@@ -1,7 +1,7 @@
 <!-- Unlisted, deliberately. Not linked from the folder README or any nav. The self-slinging counterpart to _irv_nonmonotonicity_collection.md -->
 # The STAR Whoops Files 🍿 — the manufactured hit-reel *against* STAR
 
-> **⚠️ Deliberately unfair, by design — and it's ours.** This is the mud-slinging reel a STAR *opponent* would compile: every warped, contrived, worst-day case against STAR Voting, curated with zero charity. We wrote it about our own method on purpose, because the [companion reel](_irv_nonmonotonicity_collection.md) does the same to RCV-IRV, and **every voting method has a hit-reel** — mud is mud. Two honest promises, same as the other page: **every "whoops" below is real and documented in this repo** (STAR's limits are conceded openly, not hidden — that's what makes the fair case trustworthy), and the grown-up version is always one click away in [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md). Enjoy watching us throw mud at ourselves.
+> **⚠️ Deliberately unfair, by design — and it's ours.** This is the mud-slinging reel a STAR *opponent* would compile: every warped, contrived, worst-day case against STAR Voting, curated with zero charity. We wrote it about our own method on purpose, because the [companion reel](_irv_nonmonotonicity.md) does the same to RCV-IRV, and **every voting method has a hit-reel** — mud is mud. Two honest promises, same as the other page: **every "whoops" below is real and documented in this repo** (STAR's limits are conceded openly, not hidden — that's what makes the fair case trustworthy), and the grown-up version is always one click away in [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md). Enjoy watching us throw mud at ourselves.
 
 *STAR is a very good method that this whole library argues for. So here, for balance and sport, is the case for the prosecution — assembled as unfairly as we assembled the one against IRV.*
 
@@ -35,7 +35,7 @@
 Fine — the fair version, because turnabout demands it:
 
 - **STAR's limits are real, and STAR concedes them out loud** — that candor is a strength, not a weakness. The whole [honest-limits page](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) exists so nobody has to compile this reel in secret.
-- **But apply the [four-part test](reading_these_fairly.md) and the asymmetry shows:** most of the above are *contrived, strategic, knife-edge, and never observed in a real STAR election.* The [IRV reel's](_irv_nonmonotonicity_collection.md) headliners — Burlington 2009, Alaska 2022, San Francisco 2020 — are *structural, sincere, and actually happened on certified ballots.* Both reels are unfair; only one has real bodies.
+- **But apply the [four-part test](../paradoxes_and_whoops/reading_these_fairly.md) and the asymmetry shows:** most of the above are *contrived, strategic, knife-edge, and never observed in a real STAR election.* The [IRV reel's](_irv_nonmonotonicity.md) headliners — Burlington 2009, Alaska 2022, San Francisco 2020 — are *structural, sincere, and actually happened on certified ballots.* Both reels are unfair; only one has real bodies.
 - A couple of the "whoops" are **features a critic reframes as bugs** — failing Later-No-Harm is *how* STAR rescues a compromise; runoff reversal is the runoff *working*.
 - And STAR still beats Choose-One by a mile. The honest debate is between good options.
 
