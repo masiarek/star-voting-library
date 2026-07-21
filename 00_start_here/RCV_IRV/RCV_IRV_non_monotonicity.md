@@ -57,6 +57,19 @@ Per a study of US RCV-IRV elections 2004–2022 (Graham-Squire & McCune, arXiv 2
 
 **Burlington, VT 2009 (mayor).** Kiss won, but the result was **non-monotonic** — and it was also a [center squeeze](RCV_IRV_center_squeeze.md): the Condorcet winner Montroll (who beat every rival head-to-head) was eliminated early. Voters who ranked Kiss *lower* could have made him win. Burlington **repealed IRV in 2010** over this race.
 
+## A sharper critique — and where it overreaches (reading advocacy critically)
+
+A well-known argument from **rangevoting.org** ([*"The logic behind IRV is flawed"*](https://www.rangevoting.org/IrvLogicBogus.html), after Blake Cretney) puts the point aggressively: IRV advocates spend their breath arguing that *most* first-choices ≠ best — then, without justification, IRV *eliminates* on *fewest* first-choices, as if fewest first-choices = worst. And IRV is "not self-consistent": use IRV to pick who to eliminate and you can eliminate the IRV *winner*. Range/Score voting, by contrast, **is** self-consistent — drop the lowest-scored candidate and the score winner still wins.
+
+**The kernel is right — and this page is the proof.** IRV's fewest-first-choices elimination *is* the mechanical root of center squeeze and non-monotonicity, and there's a genuine tension between IRV's anti-plurality rhetoric and its plurality-based first cut. We agree, and demonstrate it above.
+
+**But it overreaches three ways, and the fairness cuts our way too:**
+- **It strawmans IRV's premise.** IRV doesn't claim "fewest first-choices = worst"; it claims "fewest *current* support can't win *this round*, so transfer those voters' next preference" — ordinary runoff logic. The *result* can still cut the best candidate (the valid complaint), but that's not what IRV *asserts*.
+- **"Not self-consistent" is a method-class distinction, not "bogus logic."** Self-consistency is a property of **additive** methods (drop the lowest total, the winner's total is untouched); elimination methods lack it because eliminating a candidate *transfers* votes. That's an argument *for* additive methods, not proof IRV is irrational.
+- **The "magician's trick" framing** imputes deliberate deception — polemic, not argument.
+
+**Disclose the lean:** rangevoting.org is **Warren Smith / the Center for Range Voting** — the most aggressive pro-**Range** advocacy source (advocacy-adjacent; strong for mechanics, weak for verdicts — see [how to read the sources](../topics/how_to_learn_about_voting_methods.md)). And note it cuts against **STAR** as well: STAR's *scoring round* is additive/self-consistent, but its **runoff** is a non-additive pairwise step, so a Range purist levels the same charge at STAR. This isn't a pro-STAR argument — it's a Score-maximalist jab at *every* method with an elimination or runoff. We include it because the library checks pro-Range anti-IRV arguments by the same standard it checks the [pro-RCV ones](../../method_comparisons/fairvote_star_whitepaper/).
+
 ## Don't confuse it with Later-No-Harm
 
 A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).)
