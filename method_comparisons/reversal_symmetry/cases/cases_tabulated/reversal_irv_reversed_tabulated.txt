@@ -1,0 +1,56 @@
+======================================================================
+SOURCE FILE:     reversal_irv_reversed.yaml
+TABULATED FILE:  reversal_irv_reversed_tabulated.txt
+======================================================================
+
+election_title: "Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)"
+scenario_description: |-
+  The original election (reversal_irv_original) with EVERY voter's ballot reversed — each now
+  expresses the exact opposite preference, as if trying to elect the WORST candidate. You would
+  expect A (the original winner) to now finish last. Instead RCV-IRV elects A AGAIN (16-8): B has
+  the fewest first-choices, is eliminated, and B's ballots flow to A. So IRV's "best" candidate and
+  its "worst" candidate are the same — a reversal symmetry FAILURE. This is a real, IRV-specific
+  defect (concede it). Caveats on ../README.md: the electorate is a Condorcet cycle, so there is no
+  "correct" winner; STAR gives B then A (no winner=loser); source is Range-advocacy (lean disclosed).
+paradoxes: [condorcet-cycle]
+voting_method: RCV_IRV
+num_winners: 1
+options:
+  show_description: false
+  show_irv: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  9:A>C>B
+  8:C>B>A
+  7:B>A>C
+expected_winners:
+  - A
+# file: reversal_irv_reversed.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)
+ Tabulating 24 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                  9  Hopeful
+C                  8  Hopeful
+B                  7  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 16  Elected
+C                  8  Rejected
+B                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A

@@ -1,0 +1,109 @@
+======================================================================
+SOURCE FILE:     reversal_star_reversed.yaml
+TABULATED FILE:  reversal_star_reversed_tabulated.txt
+======================================================================
+
+election_title: "Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)"
+scenario_description: |-
+  The STAR original (reversal_star_original) with every preference reversed (scores re-mapped
+  5/3/0 to the reversed ranking). STAR elects A — different from the original winner B — so unlike
+  RCV-IRV (which elects A both ways), STAR's "best" and "worst" here are not the same candidate.
+  Scope note per ../README.md: this demonstrates STAR avoiding the winner=loser on this example,
+  not a general reversal-symmetry proof. Condorcet cycle electorate.
+paradoxes: [condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:A,B,C
+  9:5,0,3
+  8:0,3,5
+  7:3,5,0
+expected_winners:
+  - A
+
+# file: reversal_star_reversed.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser) ===
+  The STAR original (reversal_star_original) with every preference reversed (scores re-mapped
+  5/3/0 to the reversed ranking). STAR elects A — different from the original winner B — so unlike
+  RCV-IRV (which elects A both ways), STAR's "best" and "worst" here are not the same candidate.
+  Scope note per ../README.md: this demonstrates STAR avoiding the winner=loser on this example,
+  not a general reversal-symmetry proof. Condorcet cycle electorate.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |      B      |    * C      |
+-------------------------------------------------------------
+           * A > |     ---      | 9 -  0 - 15 |16 -  0 -  8 |
+             B > | 15 -  0 -  9 |    ---      | 7 -  0 - 17 |
+           * C > |  8 -  0 - 16 |17 -  0 -  7 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: A > C > B > A)
+
+[Divergence from STAR]
+  STAR     = A
+  Approval = C   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (C)
+ - Runoff Round Winner   = (A)
+  Candidate C earned the highest total score, but
+  Candidate A won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 24 ballots.
+Count × A,B,C
+    9 × 5,0,3
+    8 × 0,3,5
+    7 × 3,5,0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          9  0  7  0  0  8  |    66   2.8
+B          7  0  8  0  0  9  |    59   2.5
+C          8  0  9  0  0  7  |    67   2.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 67 -- First place
+   A             -- 66 -- Second place
+   B             -- 59
+ C and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 16 -- First place
+   C             --  8
+   Equal Support --  0
+ A wins.
+   Runoff math:
+     24  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     24  voters with a preference  (majority = 13)
+           A 16 (67%)  ·  C 8 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A

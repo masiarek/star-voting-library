@@ -1,0 +1,31 @@
+election_title: "Reversal symmetry — STAR, original: B (STAR does not winner=loser here)"
+scenario_description: |-
+  The same 24-voter cycle scored 0-5 (rank->score 5/3/0). STAR elects B (scoring round B 69,
+  runoff 17-7). The companion reversal_star_reversed reverses every preference and STAR elects
+  A — a DIFFERENT winner, so STAR does not exhibit the winner=loser failure RCV-IRV shows on this
+  example (see ../README.md). Honest scope note: this shows STAR AVOIDS the failure on these
+  ballots; it is not a claim that STAR satisfies the reversal-symmetry criterion in general (STAR
+  is a hybrid — additive scoring round + pairwise runoff — and the rank->score mapping is a modeling
+  choice). The electorate is a Condorcet cycle, so no winner is "correct."
+paradoxes: [condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:A,B,C
+  9:0,5,3
+  8:5,3,0
+  7:3,0,5
+expected_winners:
+  - B
+
+# file: reversal_star_original.yaml

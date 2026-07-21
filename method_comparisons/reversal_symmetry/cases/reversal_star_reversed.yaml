@@ -1,0 +1,29 @@
+election_title: "Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)"
+scenario_description: |-
+  The STAR original (reversal_star_original) with every preference reversed (scores re-mapped
+  5/3/0 to the reversed ranking). STAR elects A — different from the original winner B — so unlike
+  RCV-IRV (which elects A both ways), STAR's "best" and "worst" here are not the same candidate.
+  Scope note per ../README.md: this demonstrates STAR avoiding the winner=loser on this example,
+  not a general reversal-symmetry proof. Condorcet cycle electorate.
+paradoxes: [condorcet-cycle]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:A,B,C
+  9:5,0,3
+  8:0,3,5
+  7:3,5,0
+expected_winners:
+  - A
+
+# file: reversal_star_reversed.yaml

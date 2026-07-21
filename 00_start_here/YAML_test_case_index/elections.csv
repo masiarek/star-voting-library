@@ -230,7 +230,11 @@ LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,singl
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
 LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
+LH:reversal_irv_original,"Reversal symmetry — RCV-IRV, original: A wins (best)",1,single-race,24,IRV,LH-only
+LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",1,single-race,24,IRV,LH-only
 LH:reversal_jarring_c3_b100,"Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival",1,single-race,100,STAR,LH-only
+LH:reversal_star_original,"Reversal symmetry — STAR, original: B (STAR does not winner=loser here)",1,single-race,24,STAR,LH-only
+LH:reversal_star_reversed,"Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)",1,single-race,24,STAR,LH-only
 LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only

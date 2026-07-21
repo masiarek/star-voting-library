@@ -1,0 +1,27 @@
+election_title: "Reversal symmetry — RCV-IRV, original: A wins (best)"
+scenario_description: |-
+  A reversal-symmetry demonstration (from rangevoting.org / Warren Smith — a Range-advocacy
+  source, so advocacy-leaning; disclosed). 24 voters, three candidates, a Condorcet CYCLE
+  (A>B>C>A — no candidate beats all others). Counted by RCV-IRV, A wins: C has the fewest
+  first-choices, is eliminated, and C's ballots flow to A (15-9). The companion
+  reversal_irv_reversed reverses EVERY ballot — as if voters were choosing the WORST
+  candidate — and A wins AGAIN. That winner=loser outcome is a failure of the reversal
+  symmetry criterion, which RCV-IRV and plurality fail but additive methods (Range, Borda,
+  Approval) and some Condorcet methods (Ranked Pairs, Schulze) satisfy. See ../README.md;
+  STAR and Ranked Robin do NOT reproduce the winner=loser on this example.
+paradoxes: [condorcet-cycle]
+voting_method: RCV_IRV
+num_winners: 1
+options:
+  show_description: false
+  show_irv: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  9:B>C>A
+  8:A>B>C
+  7:C>A>B
+expected_winners:
+  - A
+# file: reversal_irv_original.yaml

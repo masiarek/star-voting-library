@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **198** single-winner STAR elections (skipped 118 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **116** (59%) diverge from STAR under at least one method; **82** agree across the board.
+- Scanned **200** single-winner STAR elections (skipped 120 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **118** (59%) diverge from STAR under at least one method; **82** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 29 |
 | STAR_OUTLIER_RR_WITH_IRV | 3 |
 | IRV_DIFFERS_ARTIFACT | 16 |
-| CYCLE_OR_THREE_WAY | 29 |
-| APPROVAL_OR_MINOR | 39 |
+| CYCLE_OR_THREE_WAY | 30 |
+| APPROVAL_OR_MINOR | 40 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (112 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (114 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -153,7 +153,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
 
-### CYCLE_OR_THREE_WAY — 27
+### CYCLE_OR_THREE_WAY — 28
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -212,10 +212,12 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
 - **[bv2225_ywx39y_center_tolerated](cases/CYCLE_OR_THREE_WAY/bv2225_ywx39y_center_tolerated.md)** — `method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml` (3c/36b)  
     STAR=**Alex** · IRV=Alex · RR=Blair · Approval=Alex · Score=Alex · Condorcet=Blair
+- **[reversal_star_original](cases/CYCLE_OR_THREE_WAY/reversal_star_original.md)** — `method_comparisons/reversal_symmetry/cases/reversal_star_original.yaml` (3c/24b)  
+    STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=none
 - **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 
-### APPROVAL_OR_MINOR — 39
+### APPROVAL_OR_MINOR — 40
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -302,6 +304,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Rock** · IRV=Rock · RR=Rock · Approval=Paper · Score=Rock · Condorcet=none
 - **[bv2178_8kg698_star](cases/APPROVAL_OR_MINOR/bv2178_8kg698_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Blue · RR=Blue · Approval=Pink · Score=Purple · Condorcet=Blue
+- **[reversal_star_reversed](cases/APPROVAL_OR_MINOR/reversal_star_reversed.md)** — `method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml` (3c/24b)  
+    STAR=**A** · IRV=A · RR=A · Approval=C · Score=C · Condorcet=none
 - **[star_district_B](cases/APPROVAL_OR_MINOR/star_district_B.md)** — `method_comparisons/summability_demo/cases/star_district_B.yaml` (3c/3b)  
     STAR=**Oak** · IRV=Oak · RR=Oak · Approval=Pine · Score=Pine · Condorcet=Oak
 
