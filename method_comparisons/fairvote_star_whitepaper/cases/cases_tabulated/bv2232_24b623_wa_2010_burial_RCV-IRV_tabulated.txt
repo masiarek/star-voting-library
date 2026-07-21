@@ -1,0 +1,30 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  FairVote white paper — Washington 2010 (BURIAL): the squeeze works on STAR, but IRV resists it
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Berkey, Harper, Rieger
+    35 ×   Berkey > Harper > Rieger      (5, 3, 1)
+    40 ×   Harper > Rieger      (0, 5, 4)
+    25 ×   Rieger > Berkey      (2, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Harper            40  Hopeful
+Berkey            35  Hopeful
+Rieger            25  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Berkey            60  Elected
+Harper            40  Rejected
+Rieger             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Berkey
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

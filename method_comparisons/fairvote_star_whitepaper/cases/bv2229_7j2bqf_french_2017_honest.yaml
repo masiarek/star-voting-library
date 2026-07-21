@@ -1,0 +1,48 @@
+election_title: "FairVote white paper — French 2017 (HONEST): STAR elects the centrist Macron"
+
+scenario_description: |-
+  FairVote's July 2018 white paper "Explaining FairVote's position on STAR Voting"
+  (Richie & Penrose) argues STAR's strategy incentives could squeeze a strong centrist
+  out of the runoff, using the 2017 French presidential race as its example (four
+  strong candidates ~20% each; Macron the broadly-preferred centrist). This is the
+  HONEST half: voters score sincerely (favorite 5, the compromise Macron 4, the far
+  wing 0). STAR elects Macron — the Condorcet winner (he beats Le Pen, Fillon and
+  Melenchon head-to-head) — scoring round Macron 351, runoff 51-49. RCV-IRV also
+  elects Macron here. The companion french_2017_strategic shows FairVote's coordinated
+  burial (everyone scores Macron 0 and inflates the other wings) knocking Macron out —
+  which STAR concedes is possible, but which requires implausible coordinated dishonesty
+  and is not STAR's sincere behavior. Simplified 100-voter model of the ~20%-each field.
+  Concept: ../README.md.
+video_script: |-
+  FairVote says STAR could squeeze the centrist. Here's the honest count: everyone
+  scores their favorite 5 and the moderate Macron a 4, and Macron wins — he's everyone's
+  strong second and beats each rival one-on-one. That's STAR getting it right sincerely.
+  The next file is what it takes to break that: a coordinated burial.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+bv_test_id: BV2229
+bv_election_id: 7j2bqf
+bv_results_url: https://bettervoting.com/7j2bqf/results
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Macron,LePen,Fillon,Melenchon
+  26:5,0,3,3   # Macron base
+  25:4,0,1,5   # Melenchon (left) — Macron is their compromise 2nd
+  24:4,2,5,0   # Fillon (center-right) — Macron 2nd
+  25:1,5,3,0   # Le Pen (far right)
+expected_winners:
+  - Macron
+
+# file: bv2229_7j2bqf_french_2017_honest.yaml

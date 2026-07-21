@@ -3811,4 +3811,63 @@ FB_BETRAY_SPEC = {
                 "Contrast BV2227 honest RCV-IRV -> Right.",
 }
 
-ELECTIONS: list = [FB_HONEST_SPEC, FB_BETRAY_SPEC]   # create BV2227 (honest) + BV2228 (betray)
+# --- BV2229-2232 — FairVote white-paper claim-check (French 2017, Washington 2010) ---
+# Backs method_comparisons/fairvote_star_whitepaper/. Each is a single STAR race.
+# Honest vs. the coordinated burial FairVote's paper describes. LH-verified pre-creation.
+def _rows(blocs):
+    out = []
+    for cnt, scores in blocs:
+        out += [scores] * cnt
+    return out
+
+_FR_CANDS = ["Macron", "LePen", "Fillon", "Melenchon"]
+_WA_CANDS = ["Berkey", "Harper", "Rieger"]
+
+FR_HONEST_SPEC = {
+    "test_id": "BV2229",
+    "title": "FairVote-vs-STAR check: French 2017 honest — STAR elects the centrist Macron",
+    "description": ("FairVote's 2018 white paper says STAR could squeeze a strong centrist. The 2017 "
+        "French field (~20% each), scored honestly (favorite 5, the compromise Macron 4). STAR elects "
+        "Macron, the Condorcet winner (runoff 51-49). Companion BV2230 shows the coordinated burial. "
+        "Simplified 100-voter teaching model. Backs method_comparisons/fairvote_star_whitepaper."),
+    "method": "STAR", "num_winners": 1, "candidates": _FR_CANDS,
+    "ballots": _rows([(26, [5, 0, 3, 3]), (25, [4, 0, 1, 5]), (24, [4, 2, 5, 0]), (25, [1, 5, 3, 0])]),
+    "expected": "STAR -> Macron (351; runoff 51-49 over Fillon). The Condorcet winner, elected sincerely.",
+}
+FR_STRAT_SPEC = {
+    "test_id": "BV2230",
+    "title": "FairVote-vs-STAR check: French 2017 coordinated burial — Macron squeezed out",
+    "description": ("The burial FairVote's white paper describes: every non-Macron faction scores Macron 0 "
+        "and inflates the rival wings to 4 (even ideological enemies) to keep him out of the runoff. Same "
+        "honest first choices as BV2229. It works: Macron collapses (130) and STAR elects Melenchon — "
+        "FairVote's claim, conceded. But it needs a coordinated conspiracy, honest STAR elects Macron, and "
+        "RCV-IRV on these ballots elects Le Pen (worse). Backs method_comparisons/fairvote_star_whitepaper."),
+    "method": "STAR", "num_winners": 1, "candidates": _FR_CANDS,
+    "ballots": _rows([(26, [5, 0, 3, 3]), (25, [0, 4, 4, 5]), (24, [0, 4, 5, 4]), (25, [0, 5, 4, 4])]),
+    "expected": "STAR -> Melenchon (Macron 130, squeezed out of the runoff). Honest STAR -> Macron (BV2229).",
+}
+WA_HONEST_SPEC = {
+    "test_id": "BV2231",
+    "title": "FairVote-vs-STAR check: Washington 2010 honest — STAR elects the moderate Berkey",
+    "description": ("FairVote's white paper cites the 2010 WA State Senate race (moderate Berkey, progressive "
+        "Harper, long-shot conservative Rieger) as a squeeze STAR would make easy. Scored honestly, STAR "
+        "elects Berkey, the moderate Condorcet winner (runoff 60-40). Companion BV2232 shows the burial. "
+        "Backs method_comparisons/fairvote_star_whitepaper."),
+    "method": "STAR", "num_winners": 1, "candidates": _WA_CANDS,
+    "ballots": _rows([(35, [5, 3, 1]), (40, [4, 5, 0]), (25, [2, 0, 5])]),
+    "expected": "STAR -> Berkey (385; runoff 60-40 over Harper). The moderate Condorcet winner.",
+}
+WA_STRAT_SPEC = {
+    "test_id": "BV2232",
+    "title": "FairVote-vs-STAR check: Washington 2010 burial — squeeze works on STAR, IRV resists",
+    "description": ("The squeeze FairVote describes: the Harper faction scores Harper 5, conservative Rieger 4, "
+        "moderate Berkey 0, to push Berkey out. Same honest first choices as BV2231. It works under STAR "
+        "(Berkey 225, squeezed; Harper wins) — conceded. But honest STAR elects Berkey, the burial risks "
+        "electing Rieger, and RCV-IRV on these very ballots STILL elects Berkey. A case that cuts fairly. "
+        "Backs method_comparisons/fairvote_star_whitepaper."),
+    "method": "STAR", "num_winners": 1, "candidates": _WA_CANDS,
+    "ballots": _rows([(35, [5, 3, 1]), (40, [0, 5, 4]), (25, [2, 0, 5])]),
+    "expected": "STAR -> Harper (Berkey 225, squeezed). Honest STAR -> Berkey (BV2231); RCV-IRV here -> Berkey.",
+}
+
+ELECTIONS: list = [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]   # BV2229-2232

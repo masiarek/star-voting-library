@@ -66,7 +66,9 @@ ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-
 ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways",5,contested (multi-race),9,"Approval, IRV, Plurality, RankedRobin, STAR",BV
 ywx39y,BV2225 — Preference vs Support — the center TOLERATED (wings score Blair 1),3,contested (multi-race),36,"IRV, RankedRobin, STAR",BV
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
+24b623,"FairVote white paper — Washington 2010 (BURIAL): the squeeze works on STAR, but IRV resists it",1,single-race,100,STAR,BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
+2hqmrd,FairVote white paper — French 2017 (BURIAL): coordinated strategy squeezes Macron out,1,single-race,100,STAR,BV
 2kcwbw,BV2221 — STAR vs strategy — sincere ballots elect the Condorcet winner (Beth),1,single-race,100,STAR,BV
 3494cb,BV132 - verify number of votes vast - bloc STAR voting,1,single-race,4,STAR,BV
 36f4v2,BV2219 — Equally Weighted Vote — base election (STAR elects Comet),1,single-race,3,STAR,BV
@@ -79,6 +81,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
+7j2bqf,FairVote white paper — French 2017 (HONEST): STAR elects the centrist Macron,1,single-race,100,STAR,BV
 7mckyg,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,1,single-race,57,STAR,BV
 7pdq3r,BV95b - Majority Criterion: favorite loses (backs two rivals),1,single-race,5,STAR,BV
 7q6by8,"BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone",1,single-race,42,RankedRobin,BV
@@ -257,6 +260,7 @@ LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single
 LH:vote_splitting_scenario1_spoiler,Vote splitting — scenario 1 of 3 — the spoiler strikes,1,single-race,90,STAR,LH-only
 LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway),1,single-race,36,STAR,LH-only
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
+b4yr3v,FairVote white paper — Washington 2010 (HONEST): STAR elects the moderate Berkey,1,single-race,100,STAR,BV
 b6xrdr,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,1,single-race,57,STAR,BV
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 bgcmxx,"BV2228 — Favorite Betrayal — the RCV-IRV betrayal (2 voters rank the compromise first, and it wins)",1,single-race,34,IRV,BV

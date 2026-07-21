@@ -66,6 +66,8 @@ AGREE,method_comparisons/chicken_dilemma/cases/chicken_star.yaml,3,100,A,A,A,A,A
 AGREE,method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml,4,100,A,A,B,A,A,A,A,A,A,66,True,False,False
 AGREE,method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml,3,30,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml,3,100,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,0,False,False,False
+AGREE,method_comparisons/fairvote_star_whitepaper/cases/bv2229_7j2bqf_french_2017_honest.yaml,4,100,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,26,False,False,False
+AGREE,method_comparisons/fairvote_star_whitepaper/cases/bv2231_b4yr3v_wa_2010_honest.yaml,3,100,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_star.yaml,3,7,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,Bo,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_star.yaml,3,17,Ada,Ada,Ada,Ada,Ada,Ada,Ben,Ada,Ada,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_star.yaml,3,9,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
@@ -132,6 +134,7 @@ CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way
 CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml,4,33,Carla,Astrid,Astrid,Carla,Carla,Carla,Carla,,,0,False,False,True
 CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml,3,100,Harper,Berkey,Berkey,Harper,Harper,Harper,Rieger,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml,3,17,Bruno,Bruno,Bruno,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml,3,32,Bruno,Alma,Alma,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_star.yaml,4,7,B,A,A,C,C,B,B,,,0,False,False,True
@@ -161,6 +164,7 @@ IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml,4
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml,4,24,Beige,Azure,Dune,Coral,Azure,Azure,Azure,,Azure,16,True,True,True
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml,4,100,Melenchon,LePen,Melenchon,Melenchon,Fillon,Fillon,Melenchon,Melenchon,,100,True,True,True
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/cases/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False

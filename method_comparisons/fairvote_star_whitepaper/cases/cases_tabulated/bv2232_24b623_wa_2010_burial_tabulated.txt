@@ -1,0 +1,139 @@
+======================================================================
+SOURCE FILE:     bv2232_24b623_wa_2010_burial.yaml
+TABULATED FILE:  bv2232_24b623_wa_2010_burial_tabulated.txt
+======================================================================
+
+election_title: "FairVote white paper — Washington 2010 (BURIAL): the squeeze works on STAR, but IRV resists it"
+
+scenario_description: |-
+  The coordinated squeeze from FairVote's white paper: the Harper faction, to unseat the
+  moderate Berkey, scores Harper 5, the conservative Rieger 4, and Berkey 0 — inflating
+  Rieger to push Berkey below him. Same voters/first-choices as wa_2010_honest. It works
+  under STAR: Berkey collapses to 225 and misses the runoff (Rieger 320, Harper 305),
+  and STAR elects Harper — FairVote's claim, CONCEDED. But the honest full picture matters
+  (see ../README.md): honest STAR elects Berkey; the burial requires the Harper faction to
+  rate the conservative Rieger a 4 (a risky move that could elect Rieger outright in a
+  redder electorate); AND RCV-IRV on these very strategic ballots STILL elects Berkey,
+  because Rieger's transfers flow back to her. So this case cuts fairly: STAR is
+  manipulable here and IRV happens to resist THIS burial — but IRV squeezes centrists
+  under sincere voting (its systematic flaw), where STAR needs a conspiracy. Concept: ../README.md.
+video_script: |-
+  The squeeze: Harper's faction buries Berkey at 0 and lifts the conservative Rieger to 4.
+  Under STAR it works — Berkey drops out, Harper wins. FairVote's right. And here's the
+  honest kicker we won't hide: RCV-IRV on these same ballots still elects Berkey. One
+  case, told straight — STAR fell for a coordinated lie that IRV happened to resist. The
+  difference that matters: IRV squeezes the center when voters are HONEST.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+bv_test_id: BV2232
+bv_election_id: 24b623
+bv_results_url: https://bettervoting.com/24b623/results
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Berkey,Harper,Rieger
+  35:5,3,1   # Berkey base — honest
+  40:0,5,4   # Harper faction buries Berkey, boosts the conservative Rieger
+  25:2,0,5   # Rieger base — honest
+expected_winners:
+  - Harper
+
+# file: bv2232_24b623_wa_2010_burial.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== FairVote white paper — Washington 2010 (BURIAL): the squeeze works on STAR, but IRV resists it ===
+  The coordinated squeeze from FairVote's white paper: the Harper faction, to unseat the
+  moderate Berkey, scores Harper 5, the conservative Rieger 4, and Berkey 0 — inflating
+  Rieger to push Berkey below him. Same voters/first-choices as wa_2010_honest. It works
+  under STAR: Berkey collapses to 225 and misses the runoff (Rieger 320, Harper 305),
+  and STAR elects Harper — FairVote's claim, CONCEDED. But the honest full picture matters
+  (see ../README.md): honest STAR elects Berkey; the burial requires the Harper faction to
+  rate the conservative Rieger a 4 (a risky move that could elect Rieger outright in a
+  redder electorate); AND RCV-IRV on these very strategic ballots STILL elects Berkey,
+  because Rieger's transfers flow back to her. So this case cuts fairly: STAR is
+  manipulable here and IRV happens to resist THIS burial — but IRV squeezes centrists
+  under sincere voting (its systematic flaw), where STAR needs a conspiracy. Concept: ../README.md.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     Berkey   |  * Harper   |  * Rieger   |
+-------------------------------------------------------------
+        Berkey > |     ---      |60 -  0 - 40 |35 -  0 - 65 |
+      * Harper > | 40 -  0 - 60 |    ---      |75 -  0 - 25 |
+      * Rieger > | 65 -  0 - 35 |25 -  0 - 75 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Berkey > Harper > Rieger > Berkey)
+
+[Divergence from STAR]
+  STAR    = Harper
+  RCV-IRV = Berkey   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2232_24b623_wa_2010_burial_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Rieger)
+ - Runoff Round Winner   = (Harper)
+  Candidate Rieger earned the highest total score, but
+  Candidate Harper won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Berkey,Harper,Rieger
+   40 ×      0,     5,     4
+   35 ×      5,     3,     1
+   25 ×      2,     0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Berkey     35   0   0  25   0  40  |   225   2.3
+Harper     40   0  35   0   0  25  |   305   3.1
+Rieger     25  40   0   0  35   0  |   320   3.2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Rieger        -- 320 -- First place
+   Harper        -- 305 -- Second place
+   Berkey        -- 225
+ Rieger and Harper advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Harper        -- 75 -- First place
+   Rieger        -- 25
+   Equal Support --  0
+ Harper wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Harper 75 (75%)  ·  Rieger 25 (25%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Harper

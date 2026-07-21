@@ -1,0 +1,47 @@
+election_title: "FairVote white paper — Washington 2010 (BURIAL): the squeeze works on STAR, but IRV resists it"
+
+scenario_description: |-
+  The coordinated squeeze from FairVote's white paper: the Harper faction, to unseat the
+  moderate Berkey, scores Harper 5, the conservative Rieger 4, and Berkey 0 — inflating
+  Rieger to push Berkey below him. Same voters/first-choices as wa_2010_honest. It works
+  under STAR: Berkey collapses to 225 and misses the runoff (Rieger 320, Harper 305),
+  and STAR elects Harper — FairVote's claim, CONCEDED. But the honest full picture matters
+  (see ../README.md): honest STAR elects Berkey; the burial requires the Harper faction to
+  rate the conservative Rieger a 4 (a risky move that could elect Rieger outright in a
+  redder electorate); AND RCV-IRV on these very strategic ballots STILL elects Berkey,
+  because Rieger's transfers flow back to her. So this case cuts fairly: STAR is
+  manipulable here and IRV happens to resist THIS burial — but IRV squeezes centrists
+  under sincere voting (its systematic flaw), where STAR needs a conspiracy. Concept: ../README.md.
+video_script: |-
+  The squeeze: Harper's faction buries Berkey at 0 and lifts the conservative Rieger to 4.
+  Under STAR it works — Berkey drops out, Harper wins. FairVote's right. And here's the
+  honest kicker we won't hide: RCV-IRV on these same ballots still elects Berkey. One
+  case, told straight — STAR fell for a coordinated lie that IRV happened to resist. The
+  difference that matters: IRV squeezes the center when voters are HONEST.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+
+bv_test_id: BV2232
+bv_election_id: 24b623
+bv_results_url: https://bettervoting.com/24b623/results
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Berkey,Harper,Rieger
+  35:5,3,1   # Berkey base — honest
+  40:0,5,4   # Harper faction buries Berkey, boosts the conservative Rieger
+  25:2,0,5   # Rieger base — honest
+expected_winners:
+  - Harper
+
+# file: bv2232_24b623_wa_2010_burial.yaml

@@ -1,0 +1,41 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  FairVote white paper — French 2017 (BURIAL): coordinated strategy squeezes Macron out
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Macron, LePen, Fillon, Melenchon
+    26 ×   Macron > Fillon > Melenchon      (5, 0, 3, 3)
+    25 ×   Melenchon > LePen > Fillon      (0, 4, 4, 5)
+    24 ×   Fillon > LePen > Melenchon      (0, 4, 5, 4)
+    25 ×   LePen > Fillon > Melenchon      (0, 5, 4, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Macron            26  Hopeful
+LePen             25  Hopeful
+Melenchon         25  Hopeful
+Fillon            24  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+LePen             49  Hopeful
+Macron            26  Hopeful
+Melenchon         25  Rejected
+Fillon             0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+LePen             74  Elected
+Macron            26  Rejected
+Melenchon          0  Rejected
+Fillon             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  LePen
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
