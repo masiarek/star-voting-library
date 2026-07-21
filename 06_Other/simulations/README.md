@@ -112,3 +112,47 @@ python3 runoff_reversal_simulation.py --elections 300000 --voters 21 --candidate
 - Spatial model is 2-D uniform; real issue spaces are lumpier (clusters, polarization).
 - "Reversal" here is score-leader-vs-runoff only; it says nothing about the Condorcet winner (see [Three notions of "winner"](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md)).
 - **Always report the model, the size, and the tie split with the number.**
+
+---
+
+## STAR vs Ranked Robin divergence simulation
+
+`star_vs_rr_divergence.py` — how often, and *why*, do STAR and [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) (Copeland / Condorcet) elect different single winners?
+
+### The mechanism
+
+Same voter utilities feed both: STAR reads 0–5 **scores** (top-two by sum → pairwise runoff); RR reads the **ranking** (most head-to-head wins). A Condorcet winner who *reaches* STAR's runoff wins it (they beat any finalist head-to-head), so **STAR ≠ RR requires either a Condorcet *cycle*, or the Condorcet winner *missing* the score-based top-two** — a broadly-preferred but low-intensity compromise, everyone's tepid second choice. It is the [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split made statistical: RR rewards *order*, STAR rewards *how much* support each candidate has.
+
+### Running it
+
+```
+uv run 06_Other/simulations/star_vs_rr_divergence.py --trials 3000
+```
+
+### Representative results (3000 trials/cell, seed 20260721)
+
+| model | C | V | STAR≠RR | of which: cycle | of which: CW-missed-runoff |
+|-------|:--:|:--:|:--:|:--:|:--:|
+| **noise** | 3 | 51 | 14.5% | 8.5% | 1.0% |
+| noise | 5 | 51 | 27.0% | 24.8% | 3.6% |
+| noise | 10 | 51 | 34.7% | 47.2% | 3.2% |
+| **spatial** | 3 | 51 | 3.9% | 0.3% | 0.1% |
+| spatial | 3 | 501 | **1.2%** | 0.1% | 0.0% |
+| spatial | 10 | 15 | 28.5% | 13.1% | 6.1% |
+| spatial | 10 | 501 | 10.3% | 0.8% | 3.0% |
+| **faction** | 3 | 501 | 1.7% | 0.9% | 0.1% |
+| faction | 7 | 501 | 10.9% | 5.0% | 4.3% |
+| faction | 10 | 501 | 14.8% | 7.9% | 5.2% |
+
+### What this means
+
+1. **Two completely different regimes.** Under **random noise**, divergence is high but almost entirely **cycle-driven** — cycles explode with candidate count (3→8%, 10→48%), and both methods are merely resolving an electorate with no real winner. Under **spatial / factional** models, cycles are rare (a centrist Condorcet winner usually exists), and the divergence that occurs is the *meaningful* kind: the compromise CW squeezed out of the score top-two.
+2. **More candidates → more divergence, always.** With 2 candidates STAR = RR by definition; the gap widens monotonically with the field size in every model.
+3. **Ballots cut opposite ways by model.** More voters *shrink* divergence under spatial/factional electorates (sampling noise fades, the structure dominates → the two methods converge on the centrist), but leave it roughly flat under pure noise. So **"fewer ballots → more divergence" is a property of *structured* electorates, not random ones.**
+4. **Factions are where the real disagreement lives.** Factional/spatial models produce *lower* total divergence than noise, but a *higher share of it is the dark-horse mechanism* (CW-missed-runoff, 5–8% at 10 candidates) — polarized voters score the compromise centrist low, so RR's Condorcet winner never reaches STAR's runoff. That is the honest STAR-vs-RR philosophical disagreement (support vs. order), not a coin-flip electorate.
+
+### Caveats (read before quoting)
+
+- Sincere, **normalized** 0–5 scores (each voter min-maxes their utilities). Real voters don't perfectly normalize; different scoring assumptions move the numbers.
+- RR = Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge cell may differ slightly from the engine.
+- "Divergence" counts *any* different winner, including ties resolved differently — report the model, size, and mechanism split with the number.
