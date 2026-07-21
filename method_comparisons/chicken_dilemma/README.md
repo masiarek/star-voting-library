@@ -54,7 +54,7 @@ No bullet-voting incentive: giving your ally a 4 instead of a 0 **cannot** cost 
 
 ## Why STAR converts slippery → non-slippery
 
-This is the same fix as Quinn's **3-2-1 voting**: a final head-to-head step means a small number of defectors can't start an avalanche. In this scenario a *determined* bloc of 21+ B-voters could still rate A a 0 to try to force B through — STAR is **not** strategy-proof ([Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) forbids that) — but:
+This is the same fix as Quinn's [**3-2-1 voting**](../../00_start_here/topics/three_two_one_voting.md): a final head-to-head step means a small number of defectors can't start an avalanche. In this scenario a *determined* bloc of 21+ B-voters could still rate A a 0 to try to force B through — STAR is **not** strategy-proof ([Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) forbids that) — but:
 
 - **it takes a large, coordinated, risky defection**, not a one-voter nudge that snowballs; and
 - **the risk is real**: over-bulleting your ally down to 0 can put *C* in the runoff against your favorite and cost you the election.
