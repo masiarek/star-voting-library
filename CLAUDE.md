@@ -252,6 +252,16 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
     **`_tabulated`** report, or just the specific section being discussed.
 
   Either way, keep a link to the full `_tabulated` mirror too.
+  - **Route the short snippet to the full report (Adam likes the long LH reports).** When a
+    hand-authored teaching page embeds a *short* on-screen snippet **and the example is a real
+    case file**, add a one-click pointer to that case's **full generated page**
+    (`…/cases_pages/<stem>.md`, which carries the matrix / Condorcet / score-distribution audit)
+    or its `_tabulated` mirror — e.g. *"Want the whole count? [see the full LH report](…)."* Keep
+    the crisp snippet for the lesson; the full report stays one click away and never drifts (the
+    link auto-updates; a pasted long report would go stale). **Skip this for *generic
+    illustrations*** (invented candidates with no backing case file) — a "full report" link there
+    is a dead end. Prefer the generated page over pasting the long report inline on a teaching
+    page, which buries the lesson (e.g. the runoff page is *about* the reversal, not the matrix).
 - **BV screenshots live in the case folder's `img/` subfolder, prefixed with the
   BetterVoting election ID** — `img/<bv_id>_<what>.png` (e.g.
   `img/r2pvc9_result_bars.png`, `img/r2pvc9_runoff_pct.png`, `img/r2pvc9_runoff_pie.png`,
