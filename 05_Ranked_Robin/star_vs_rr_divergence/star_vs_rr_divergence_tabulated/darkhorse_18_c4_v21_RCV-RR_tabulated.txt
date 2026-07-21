@@ -1,0 +1,48 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 21 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D
+     2 × C > A > D > B      (3, 0, 5, 1)
+     1 × B=C > A > D      (1, 5, 5, 0)
+     3 × D > A > C > B      (3, 0, 2, 5)
+     1 × D > C > A > B      (1, 0, 2, 5)
+     1 × C > A > D > B      (4, 0, 5, 2)
+     2 × A > D > C > B      (5, 0, 3, 4)
+     2 × D > A > C > B      (2, 0, 1, 5)
+     1 × B=D > A=C      (0, 5, 0, 5)
+     1 × D > C > A > B      (2, 0, 3, 5)
+     1 × A > C > D > B      (5, 0, 4, 2)
+     2 × A > C=D > B      (5, 0, 4, 4)
+     1 × A > D > C > B      (5, 0, 2, 4)
+     1 × C > A > B=D      (2, 0, 5, 0)
+     1 × C > A=B > D      (3, 3, 5, 0)
+     1 × C > A > D > B      (4, 0, 5, 1)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  beats B   18 –  2
+   A  beats C   11 –  9
+   A  beats D   13 –  8
+   C  beats B   19 –  1
+   D  beats B   17 –  2
+   D  beats C   11 –  8
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |
+----------------------------------------------------------------
+  A > |     ---      |18 -  1 -  2 |11 -  1 -  9 |13 -  0 -  8 |
+  B > |  2 -  1 - 18 |    ---      | 1 -  1 - 19 | 2 -  2 - 17 |
+  C > |  9 -  1 - 11 |19 -  1 -  1 |    ---      | 8 -  2 - 11 |
+  D > |  8 -  0 - 13 |17 -  2 -  2 |11 -  2 -  8 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  A          3–0–0         3     +23  D, C, B
+    2  D          2–1–0         2     +13  C, B
+    3  C          1–2–0         1     +13  B
+    4  B          0–3–0         0     -49  —
+
+Winner — Ranked Robin (RCV-RR): A
+   beats every opponent head-to-head — the Condorcet winner.

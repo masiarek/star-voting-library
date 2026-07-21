@@ -1,0 +1,58 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs Ranked Robin divergence — cycle_07_c4_v21 (STAR C, RR B)
+ Tabulating 21 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D
+     1 ×   D > C > B      (0, 1, 3, 5)
+     1 ×   C > B      (0, 2, 5, 0)
+     1 ×   C > B > D      (0, 4, 5, 1)
+     1 ×   D > A > C      (4, 0, 1, 5)
+     1 ×   B > C > D      (0, 5, 4, 3)
+     1 ×   A > C > B      (5, 3, 5, 0)
+     2 ×   A > B > C      (5, 3, 2, 0)
+     1 ×   C > B > D      (0, 4, 5, 4)
+     1 ×   B > C > D      (0, 5, 5, 1)
+     1 ×   C > A > B      (1, 1, 5, 0)
+     1 ×   A > D > C      (5, 0, 1, 5)
+     1 ×   A > C > D      (5, 0, 5, 5)
+     1 ×   A > B > D      (5, 3, 0, 3)
+     1 ×   A > B > C      (5, 5, 3, 0)
+     1 ×   B > A > D      (3, 5, 0, 2)
+     1 ×   D > A > C      (4, 0, 2, 5)
+     1 ×   C > B > D      (0, 1, 5, 1)
+     1 ×   D > A > B      (2, 2, 0, 5)
+     1 ×   B > D      (0, 5, 0, 3)
+     1 ×   B > D > A      (1, 5, 0, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                  7  Hopeful
+B                  5  Hopeful
+C                  5  Hopeful
+D                  4  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+A                 10  Hopeful
+C                  6  Hopeful
+B                  5  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 12  Elected
+C                  8  Rejected
+B                  0  Rejected
+D                  0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

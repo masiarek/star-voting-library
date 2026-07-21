@@ -1,0 +1,116 @@
+======================================================================
+SOURCE FILE:     cycle_16_c3_v15.yaml
+TABULATED FILE:  cycle_16_c3_v15_tabulated.txt
+======================================================================
+
+election_title: "STAR vs Ranked Robin divergence — cycle_16_c3_v15 (STAR A, RR C)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence sample (cycle). 3 candidates, 15 voters, noise model. STAR elects A; Ranked Robin elects C; no Condorcet winner (cycle). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C
+  1:4,0,5
+  1:5,0,2
+  1:0,4,5
+  1:0,3,5
+  1:3,5,0
+  1:5,1,0
+  1:2,0,5
+  1:4,5,0
+  1:0,5,1
+  1:0,3,5
+  1:5,5,0
+  1:5,0,2
+  1:5,0,2
+  1:0,5,2
+  1:5,0,4
+expected_winners:
+  - A
+
+# file: cycle_16_c3_v15.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== STAR vs Ranked Robin divergence — cycle_16_c3_v15 (STAR A, RR C) ===
+  Auto-generated STAR-vs-Ranked-Robin divergence sample (cycle). 3 candidates, 15 voters, noise model. STAR elects A; Ranked Robin elects C; no Condorcet winner (cycle). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    * A     |     B     |   * C     |
+-----------------------------------------------------
+         * A > |    ---     |7 - 1 - 7  |8 - 0 - 7  |
+           B > | 7 - 1 - 7  |   ---     |6 - 0 - 9  |
+         * C > | 7 - 0 - 8  |9 - 0 - 6  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: A — matches the STAR winner
+
+[Divergence from STAR]
+  STAR   = A
+  RCV-RR = C   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_16_c3_v15_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 15 ballots.
+Count x A,B,C
+    3 x 5,0,2
+    2 x 0,3,5
+    1 x 4,0,5
+    1 x 0,4,5
+    1 x 3,5,0
+    1 x 5,1,0
+    1 x 2,0,5
+    1 x 4,5,0
+    1 x 0,5,1
+    1 x 5,5,0
+    1 x 0,5,2
+    1 x 5,0,4
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+A          6  2  1  1  0  5  |    43   2.9
+B          5  1  2  0  1  6  |    36   2.4
+C          5  1  0  4  1  4  |    38   2.5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 43 -- First place
+   C             -- 38 -- Second place
+   B             -- 36
+ A and C advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 8 -- First place
+   C             -- 7
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     15  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     15  voters with a preference  (majority = 8)
+           A 8 (53%)  ·  C 7 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A

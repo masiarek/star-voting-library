@@ -1,0 +1,35 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs Ranked Robin divergence — darkhorse_04_c4_v21 (STAR D, RR A)
+ Tabulating 21 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D
+     5 ×   A > D > B      (5, 3, 0, 4)
+     1 ×   A > D > B      (5, 4, 0, 5)
+     1 ×   A > D > B      (5, 3, 0, 5)
+     1 ×   B > C > D      (0, 5, 3, 2)
+     2 ×   B > D > A      (3, 5, 0, 4)
+     1 ×   B > D > A      (3, 5, 0, 5)
+     1 ×   B > C > D      (0, 5, 5, 2)
+     2 ×   A > B > D      (5, 4, 0, 4)
+     1 ×   A > D > B      (5, 2, 0, 5)
+     1 ×   B > D      (0, 5, 0, 2)
+     2 ×   A > D > B      (5, 2, 0, 4)
+     1 ×   A > B > D      (5, 5, 0, 5)
+     1 ×   C > B > D      (0, 3, 5, 3)
+     1 ×   B > C      (0, 5, 4, 0)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 13  Elected
+B                  7  Rejected
+C                  1  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

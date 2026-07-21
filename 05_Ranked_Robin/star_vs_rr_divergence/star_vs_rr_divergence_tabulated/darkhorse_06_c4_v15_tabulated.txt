@@ -1,0 +1,129 @@
+======================================================================
+SOURCE FILE:     darkhorse_06_c4_v15.yaml
+TABULATED FILE:  darkhorse_06_c4_v15_tabulated.txt
+======================================================================
+
+election_title: "STAR vs Ranked Robin divergence — darkhorse_06_c4_v15 (STAR D, RR B)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence sample (darkhorse). 4 candidates, 15 voters, faction2d model. STAR elects D; Ranked Robin elects B; Condorcet winner B. See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D
+  1:5,0,4,3
+  1:5,4,0,5
+  1:4,5,0,5
+  1:3,5,0,3
+  1:3,5,0,4
+  1:2,2,0,5
+  1:2,5,0,4
+  1:1,5,0,4
+  1:5,0,4,2
+  1:2,5,0,4
+  1:3,5,0,5
+  1:2,5,0,4
+  1:5,5,0,5
+  1:5,0,2,0
+  1:5,0,1,2
+expected_winners:
+  - D
+
+# file: darkhorse_06_c4_v15.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== STAR vs Ranked Robin divergence — darkhorse_06_c4_v15 (STAR D, RR B) ===
+  Auto-generated STAR-vs-Ranked-Robin divergence sample (darkhorse). 4 candidates, 15 voters, faction2d model. STAR elects D; Ranked Robin elects B; Condorcet winner B. See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |      B      |      C      |    * D      |
+---------------------------------------------------------------------------
+           * A > |     ---      | 5 -  2 -  8 |15 -  0 -  0 | 4 -  3 -  8 |
+             B > |  8 -  2 -  5 |    ---      |11 -  0 -  4 | 6 -  4 -  5 |
+             C > |  0 -  0 - 15 | 4 -  0 - 11 |    ---      | 3 -  0 - 12 |
+           * D > |  8 -  3 -  4 | 5 -  4 -  6 |12 -  0 -  3 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: B — STAR elected D instead (B was eliminated in the scoring round)
+
+[Divergence from STAR]
+  STAR                   = D
+  Choose-One (Plurality) = B   (differs from STAR)
+  RCV-IRV                = B   (differs from STAR)
+  RCV-RR (Condorcet)     = B   (differs from STAR)
+  Note: 6 of 15 ballots (40%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: star_vs_rr_divergence_tabulated/darkhorse_06_c4_v15_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/darkhorse_06_c4_v15_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 15 ballots.
+Count x A,B,C,D
+    3 x 2,5,0,4
+    1 x 5,0,4,3
+    1 x 5,4,0,5
+    1 x 4,5,0,5
+    1 x 3,5,0,3
+    1 x 3,5,0,4
+    1 x 2,2,0,5
+    1 x 1,5,0,4
+    1 x 5,0,4,2
+    1 x 3,5,0,5
+    1 x 5,5,0,5
+    1 x 5,0,2,0
+    1 x 5,0,1,2
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           6   1   3   4   1   0  |    52   3.5
+B           9   1   0   1   0   4  |    51   3.4
+C           0   2   0   1   1  11  |    11   0.7
+D           5   5   2   2   0   1  |    55   3.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   D             -- 55 -- First place
+   A             -- 52 -- Second place
+   B             -- 51
+   C             -- 11
+ D and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   D             -- 8 -- First place
+   A             -- 4
+   Equal Support -- 3
+ D wins.
+   Runoff math:
+     15  ballots cast
+   −  3  Equal Support (no preference between the two finalists)
+     ──
+     12  voters with a preference  (majority = 7)
+           D 8 (67%)  ·  A 4 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ D

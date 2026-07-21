@@ -1,0 +1,46 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 15 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D
+     1 × A > C > D > B      (5, 0, 4, 3)
+     1 × A=D > B > C      (5, 4, 0, 5)
+     1 × B=D > A > C      (4, 5, 0, 5)
+     1 × B > A=D > C      (3, 5, 0, 3)
+     1 × B > D > A > C      (3, 5, 0, 4)
+     1 × D > A=B > C      (2, 2, 0, 5)
+     3 × B > D > A > C      (2, 5, 0, 4)
+     1 × B > D > A > C      (1, 5, 0, 4)
+     1 × A > C > D > B      (5, 0, 4, 2)
+     1 × B=D > A > C      (3, 5, 0, 5)
+     1 × A=B=D > C      (5, 5, 0, 5)
+     1 × A > C > B=D      (5, 0, 2, 0)
+     1 × A > D > C > B      (5, 0, 1, 2)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   B  beats A    8 –  5
+   A  beats C   15 –  0
+   D  beats A    8 –  4
+   B  beats C   11 –  4
+   B  beats D    6 –  5
+   D  beats C   12 –  3
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |
+----------------------------------------------------------------
+  A > |     ---      | 5 -  2 -  8 |15 -  0 -  0 | 4 -  3 -  8 |
+  B > |  8 -  2 -  5 |    ---      |11 -  0 -  4 | 6 -  4 -  5 |
+  C > |  0 -  0 - 15 | 4 -  0 - 11 |    ---      | 3 -  0 - 12 |
+  D > |  8 -  3 -  4 | 5 -  4 -  6 |12 -  0 -  3 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  B          3–0–0         3     +11  D, A, C
+    2  D          2–1–0         2     +12  A, C
+    3  A          1–2–0         1      +8  C
+    4  C          0–3–0         0     -31  —
+
+Winner — Ranked Robin (RCV-RR): B
+   beats every opponent head-to-head — the Condorcet winner.

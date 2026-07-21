@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 303 elections, 444 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 333 elections, 474 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -206,7 +206,37 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | clone_teaming_01_pre | Clone independence (1/2) — before cloning: A, B, C t | 1 | single-race | 33 | RankedRobin | LH-only |
 | clone_teaming_02_post | Clone independence (2/2) — teaming: A runs clones an | 1 | single-race | 33 | RankedRobin | LH-only |
 | count_simplicity_star_vs_irv | Same winner, very different counts — STAR adds, IRV  | 1 | single-race | 40 | STAR | LH-only |
+| cycle_01_c5_v21 | STAR vs Ranked Robin divergence — cycle_01_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_02_c5_v15 | STAR vs Ranked Robin divergence — cycle_02_c5_v15 (S | 1 | single-race | 15 | STAR | LH-only |
+| cycle_03_c5_v21 | STAR vs Ranked Robin divergence — cycle_03_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_04_c5_v21 | STAR vs Ranked Robin divergence — cycle_04_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_05_c5_v15 | STAR vs Ranked Robin divergence — cycle_05_c5_v15 (S | 1 | single-race | 15 | STAR | LH-only |
+| cycle_06_c4_v21 | STAR vs Ranked Robin divergence — cycle_06_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_07_c4_v21 | STAR vs Ranked Robin divergence — cycle_07_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_09_c3_v21 | STAR vs Ranked Robin divergence — cycle_09_c3_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_10_c4_v15 | STAR vs Ranked Robin divergence — cycle_10_c4_v15 (S | 1 | single-race | 15 | STAR | LH-only |
+| cycle_11_c4_v21 | STAR vs Ranked Robin divergence — cycle_11_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_12_c3_v15 | STAR vs Ranked Robin divergence — cycle_12_c3_v15 (S | 1 | single-race | 15 | STAR | LH-only |
+| cycle_13_c5_v21 | STAR vs Ranked Robin divergence — cycle_13_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_14_c3_v21 | STAR vs Ranked Robin divergence — cycle_14_c3_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_15_c5_v21 | STAR vs Ranked Robin divergence — cycle_15_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
+| cycle_16_c3_v15 | STAR vs Ranked Robin divergence — cycle_16_c3_v15 (S | 1 | single-race | 15 | STAR | LH-only |
 | dark_horse_star | Dark Horse — STAR elects the honest winner A (Borda  | 1 | single-race | 100 | STAR | LH-only |
+| darkhorse_01_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_01_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_02_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_02_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_03_c5_v15 | STAR vs Ranked Robin divergence — darkhorse_03_c5_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_04_c4_v21 | STAR vs Ranked Robin divergence — darkhorse_04_c4_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_05_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_05_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_06_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_06_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_08_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_08_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_10_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_10_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_11_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_11_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_12_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_12_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_15_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_15_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_16_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_16_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_18_c4_v21 | STAR vs Ranked Robin divergence — darkhorse_18_c4_v2 | 1 | single-race | 21 | STAR | LH-only |
+| darkhorse_19_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_19_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_20_c5_v15 | STAR vs Ranked Robin divergence — darkhorse_20_c5_v1 | 1 | single-race | 15 | STAR | LH-only |
 | dead_heat_lot_tiebreak | Ranked Robin — a dead heat that runs the whole tiebr | 1 | single-race | 4 | RankedRobin | LH-only |
 | dead_rung_scoring_dead_cap2 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | dead_rung_scoring_dead_cap3 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
@@ -329,7 +359,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 236 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| single-race | 266 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | contested (multi-race) | 208 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
 
 ### By seat class
@@ -338,7 +368,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | seat class | # races | example elections |
 |---|--:|---|
-| single-winner | 394 | 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_condorcet_winner, 01_political_left_split |
+| single-winner | 424 | 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_condorcet_winner, 01_political_left_split |
 | multi-winner | 50 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss |
 
 ### By ballot type
@@ -347,7 +377,7 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 
 | ballot type | # races | example elections |
 |---|--:|---|
-| score | 241 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| score | 271 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | ranked | 142 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 03a_stv_3seats |
 | choose-one | 35 | 2p33qq, 3x4vrv, 4h89vj, 6hv7jf |
 | approval | 25 | BV_Library_approval_single_winner, Black_Curtain_01a_c3_b5_approval, approval_bloc_2seats_c4_b6, approval_bloc_3seats_c6_b5 |
@@ -359,7 +389,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 349 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| majoritarian | 379 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | Condorcet | 64 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
 | proportional | 31 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
 
@@ -369,7 +399,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | method (family) | # races | example elections |
 |---|--:|---|
-| STAR | 221 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
+| STAR | 251 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | IRV | 65 | 2jrfpg, 3xgkck, 4htk44, 6bry7c |
 | RankedRobin | 64 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
 | Plurality | 35 | 2p33qq, 3x4vrv, 4h89vj, 6hv7jf |
@@ -385,8 +415,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
+| LH-only | 204 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV | 195 | 24b623, 26khr3, 2hqmrd, 2jrfpg |
-| LH-only | 174 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c3_b31_graders-divide, 01_c4_b2_bloc-star-2-seats |
 | BV (no yaml) | 74 | 2jrfpg, 2p33qq, 3grpbb, 3xgkck |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

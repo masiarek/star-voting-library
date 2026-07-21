@@ -1,0 +1,44 @@
+election_title: "STAR vs Ranked Robin divergence — cycle_07_c4_v21 (STAR C, RR B)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence sample (cycle). 4 candidates, 21 voters, noise model. STAR elects C; Ranked Robin elects B; no Condorcet winner (cycle). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D
+  1:0,1,3,5
+  1:0,2,5,0
+  1:0,4,5,1
+  1:4,0,1,5
+  1:0,5,4,3
+  1:5,3,5,0
+  1:5,3,2,0
+  1:0,4,5,4
+  1:0,5,5,1
+  1:1,1,5,0
+  1:5,0,1,5
+  1:5,0,5,5
+  1:5,3,2,0
+  1:5,3,0,3
+  1:5,5,3,0
+  1:3,5,0,2
+  1:4,0,2,5
+  1:0,1,5,1
+  1:2,2,0,5
+  1:0,5,0,3
+  1:1,5,0,4
+expected_winners:
+  - C
+
+# file: cycle_07_c4_v21.yaml

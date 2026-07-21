@@ -1,0 +1,71 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs Ranked Robin divergence — cycle_03_c5_v21 (STAR E, RR A)
+ Tabulating 21 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D, E
+     1 ×   A > C > E > D      (5, 0, 5, 3, 4)
+     1 ×   E > A      (1, 0, 0, 0, 5)
+     1 ×   C > E > A > B      (2, 2, 5, 0, 5)
+     1 ×   C > D > B > A      (1, 2, 5, 4, 0)
+     1 ×   B > D > C      (0, 5, 1, 4, 0)
+     1 ×   D > A > B > E      (3, 2, 0, 5, 1)
+     1 ×   D > A > E > B      (4, 1, 0, 5, 3)
+     1 ×   C > B > E      (0, 2, 5, 0, 2)
+     1 ×   E > B > C > D      (0, 3, 2, 1, 5)
+     1 ×   D > B > E > A      (2, 3, 0, 5, 3)
+     1 ×   D > A > E > B      (4, 2, 0, 5, 4)
+     1 ×   C > A      (1, 0, 5, 0, 0)
+     1 ×   A > B > C > E      (5, 4, 3, 0, 2)
+     1 ×   D > E > B > A      (2, 4, 0, 5, 5)
+     1 ×   D > E      (0, 0, 0, 5, 5)
+     1 ×   B > C > A > E      (2, 5, 3, 0, 2)
+     1 ×   B > A > D > C      (4, 5, 1, 2, 0)
+     1 ×   E > B > D > C      (0, 4, 1, 4, 5)
+     1 ×   A > B > E > D      (5, 5, 0, 4, 5)
+     1 ×   A > B > C > D      (5, 4, 1, 1, 0)
+     1 ×   A > D > E      (5, 0, 0, 3, 2)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+D                  6  Hopeful
+A                  5  Hopeful
+C                  4  Hopeful
+B                  3  Hopeful
+E                  3  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+A                  6  Hopeful
+D                  6  Hopeful
+B                  5  Hopeful
+C                  4  Rejected
+E                  0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+A                  8  Hopeful
+D                  7  Hopeful
+B                  6  Rejected
+C                  0  Rejected
+E                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 10  Elected
+D                 10  Rejected
+B                  0  Rejected
+C                  0  Rejected
+E                  0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
