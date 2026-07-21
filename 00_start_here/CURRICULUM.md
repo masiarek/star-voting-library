@@ -29,6 +29,13 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 *Skeptics, academics, RCV advocates, deep self-study.* Proportional STAR & STV, favorite betrayal, the honest limits, when Condorcet/Score/Runoff disagree, the simulation foundations of VSE, and worked claim-checks. Concede limits honestly — that candor is the credibility.
 → **[Start Voting 301](curriculum/CURRICULUM_301.md)**
 
+<a id="voting-401"></a>
+
+## 🟣 [Voting 401 — failure modes & the safety check](curriculum/CURRICULUM_401.md)
+
+*Anyone about to **choose or adopt** a method. The responsible last step before you stake an election on one.* No method is perfect (Arrow / Gibbard), so the skill is knowing **how** your favorite fails, whether the failure is real-world or lab-grade, and which whoops you can live with. The four-part test, each method's safety datasheet, the failures that really happened, and the runnable criterion-failure gallery. (Its unfair, for-sport twin is the [Mudroom](../method_comparisons/mudroom/).)
+→ **[Start Voting 401](curriculum/CURRICULUM_401.md)**
+
 *Prefer learning by doing? The **[exercises set](../01_STAR/exercises/README.md)** — predict-then-peek problems with tested answer keys — practices the criteria on paper-sized elections.*
 
 ---
