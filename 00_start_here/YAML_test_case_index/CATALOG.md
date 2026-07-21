@@ -82,9 +82,9 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ywqhq4 | BV2191 — One Electorate, Five Verdicts — the snack v | 5 | contested (multi-race) | 9 | Approval, IRV, Plurality, RankedRobin, STAR | BV |
 | ywx39y | BV2225 — Preference vs Support — the center TOLERATE | 3 | contested (multi-race) | 36 | IRV, RankedRobin, STAR | BV |
 | yyhj9x | BV2196 — Later-No-Harm (2 of 2) — the generous ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
-| 24b623 | FairVote white paper — Washington 2010 (BURIAL): the | 1 | single-race | 100 | STAR | BV |
+| 24b623 | BV2232 — FairVote-vs-STAR check: Washington 2010 bur | 1 | single-race | 100 | STAR | BV |
 | 26khr3 | NOTA test — None of the Above wins (with a null abst | 1 | single-race | 6 | STAR | BV |
-| 2hqmrd | FairVote white paper — French 2017 (BURIAL): coordin | 1 | single-race | 100 | STAR | BV |
+| 2hqmrd | BV2230 — FairVote-vs-STAR check: French 2017 coordin | 1 | single-race | 100 | STAR | BV |
 | 2kcwbw | BV2221 — STAR vs strategy — sincere ballots elect th | 1 | single-race | 100 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
 | 36f4v2 | BV2219 — Equally Weighted Vote — base election (STAR | 1 | single-race | 3 | STAR | BV |
@@ -97,7 +97,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 4h89vj | B15 - Basic - 2 candidates - Plurality - Abstain | 1 | single-race | 12 | Plurality | BV |
 | 6hv7jf | BV1570 - deactivate selection - plurality voting - C | 1 | single-race | 3 | Plurality | BV |
 | 6xhfp8 | BV11 - Valid Ballot - Full and Equal Support (2 Cand | 1 | single-race | 3 | STAR | BV |
-| 7j2bqf | FairVote white paper — French 2017 (HONEST): STAR el | 1 | single-race | 100 | STAR | BV |
+| 7j2bqf | BV2229 — FairVote-vs-STAR check: French 2017 honest  | 1 | single-race | 100 | STAR | BV |
 | 7mckyg | Favorite betrayal in STAR (1 of 2) — honest ballots: | 1 | single-race | 57 | STAR | BV |
 | 7pdq3r | BV95b - Majority Criterion: favorite loses (backs tw | 1 | single-race | 5 | STAR | BV |
 | 7q6by8 | BV2208 — Burial in Ranked Robin (1/2): sincere ballo | 1 | single-race | 42 | RankedRobin | BV |
@@ -276,7 +276,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vote_splitting_scenario1_spoiler | Vote splitting — scenario 1 of 3 — the spoiler strik | 1 | single-race | 90 | STAR | LH-only |
 | vote_splitting_scenario2_bloc_leads | Vote splitting — scenario 2 of 3 — no spoiler (bloc  | 1 | single-race | 36 | STAR | LH-only |
 | vote_splitting_scenario3_outsider_wins | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
-| b4yr3v | FairVote white paper — Washington 2010 (HONEST): STA | 1 | single-race | 100 | STAR | BV |
+| b4yr3v | BV2231 — FairVote-vs-STAR check: Washington 2010 hon | 1 | single-race | 100 | STAR | BV |
 | b6xrdr | Favorite betrayal in STAR (2 of 2) — nine voters dem | 1 | single-race | 57 | STAR | BV |
 | bfjqmg | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
 | bgcmxx | BV2228 — Favorite Betrayal — the RCV-IRV betrayal (2 | 1 | single-race | 34 | IRV | BV |
