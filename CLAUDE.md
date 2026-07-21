@@ -256,7 +256,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
     hand-authored teaching page embeds a *short* on-screen snippet **and the example is a real
     case file**, add a one-click pointer to that case's **full generated page**
     (`…/cases_pages/<stem>.md`, which carries the matrix / Condorcet / score-distribution audit)
-    or its `_tabulated` mirror — e.g. *"Want the whole count? [see the full LH report](…)."* Keep
+    or its `_tabulated` mirror — e.g. *"Want the whole count? see the full LH report → `…/cases_pages/<stem>.md`."* Keep
     the crisp snippet for the lesson; the full report stays one click away and never drifts (the
     link auto-updates; a pasted long report would go stale). **Skip this for *generic
     illustrations*** (invented candidates with no backing case file) — a "full report" link there
