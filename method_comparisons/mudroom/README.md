@@ -8,7 +8,7 @@
 2. **Every reel links its own conscience clause** and the grown-up version you'd actually cite in a debate.
 3. **No method is spared** — that's the point. If a reel for a method we like looks thin, that's a *to-do*, not a verdict.
 
-*This folder is kept off the main navigation on purpose (see [why](#why-its-tucked-away)). You found it; enjoy responsibly.*
+*Plain warning, up front: **these pages are deliberately mean, unfair, and one-sided.** They are not balanced and are not for citing. They're kept [low-profile](#why-its-low-profile-not-hidden) and clearly labeled for exactly that reason — not hidden, just not featured.*
 
 ---
 
@@ -26,9 +26,9 @@
 
 *(The empty rows are honest to-dos — a method missing from the room isn't innocent, just un-curated yet.)*
 
-## Why it's tucked away
+## Why it's low-profile (not hidden)
 
-These pages are **crazy, unfair, and one-sided by design** — they'd misrepresent the state of the art if anyone stumbled on them thinking they were balanced. So they're unlisted from the main navigation and named with a leading underscore: **findable if you go looking, not featured on the front door.** The balanced, cite-in-a-debate versions live where they should — [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md), each method's honest-limits page, and [how to read these fairly](../paradoxes_and_whoops/reading_these_fairly.md).
+These pages are **mean, unfair, and one-sided by design** — they'd misrepresent the state of the art if anyone read one thinking it was balanced. So we don't *hide* them (nothing here is secret, and it stays in the published site), we just keep them **low-profile and unmistakably labeled**: off the main navigation, named with a leading underscore, and every one opens with a plain "this is deliberately mean and unfair" warning. Findable if you go looking or follow the one tucked-away link from [paradoxes & whoopses](../paradoxes_and_whoops/); never presented as the honest picture. The balanced, cite-in-a-debate versions live where they should — [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md), each method's honest-limits page, and [how to read these fairly](../paradoxes_and_whoops/reading_these_fairly.md).
 
 ## The actual lesson (if you want one)
 
