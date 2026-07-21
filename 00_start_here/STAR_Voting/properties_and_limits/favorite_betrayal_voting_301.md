@@ -137,6 +137,8 @@ Read across the STAR row: it commits to neither criterion fully, accepting rare 
 
 **The reframe to leave them with:** Later-No-Harm sounds nice, but it's the very property that *forces* center squeeze — guaranteeing your later choices never help your favorite is mathematically the same as guaranteeing a broadly-liked compromise can't be rescued by being everyone's strong second. STAR gives that up on purpose, because "your honest support for a compromise should be allowed to help elect them" is the *better* value.
 
+> **The sharp-end version of this point** comes from STAR's own co-inventor: Clay Shentrup, [*Later-no-harm is a bug, not a feature*](https://medium.com/@ClayShentrup/later-no-harm-72c44e145510). His argument is exactly the reframe above — a criterion that *guarantees* your backup support can never help your favorite is precisely the mechanism that lets a factional candidate beat a broadly-preferred one, so passing LNH is a **cost**, not a virtue. (Advocacy source — Shentrup co-founded the Center for Election Science and helped originate STAR — but the logical point stands on its own, and it's the honest counter to "but RCV keeps Later-No-Harm.")
+
 ---
 
 ## 7. The debate — an RCV advocate vs a STAR advocate
