@@ -42,6 +42,8 @@ Each method optimizes a different, defensible goal, so disagreement is informati
 
 Here Ann (Condorcet) is shut out only because she's nudged into *third by total score* and never reaches the runoff. That's the design tradeoff in one picture: **STAR is not a Condorcet method**, and it doesn't pretend to be — it's a *score-then-majority* method, and Bob is exactly who that procedure is meant to elect.
 
+**This is exactly where STAR and Ranked Robin part ways.** On these same ballots, [**Ranked Robin**](../../RCV_Ranked_Robin/README.md) — a Condorcet method — elects **Ann** (the head-to-head winner), while STAR elects **Bob** (the score-then-runoff winner). "RR = Condorcet winner, STAR = the runoff winner" is the whole STAR-vs-RR fault line, and it's the [preference-vs-support](../../scores_and_ranks/preference_vs_support.md) split: RR rewards *order*, STAR rewards *how much support* each candidate has. A gallery of 30 more elections where this happens (cycles *and* dark-horse Condorcet winners, each with its cause spelled out): [STAR vs Ranked Robin — divergence samples](../../../05_Ranked_Robin/star_vs_rr_divergence/). The full list of criteria STAR gives up (with receipts): [Every criterion STAR fails](star_criteria_failures.md).
+
 ## The takeaway for a debate
 
 When someone says "but STAR didn't pick the Condorcet winner!", the honest answer isn't a dodge — it's: *correct, and on purpose.* STAR trades guaranteed Condorcet compliance for expressiveness plus a majority runoff. This little five-voter election is the cleanest way to show all three notions of "winner" at once, and to be precise about which one STAR targets.

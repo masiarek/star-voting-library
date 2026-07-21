@@ -26,7 +26,7 @@
 
 - **Objective:** read the conceded failure list for each method straight from its own honest-limits page — the fair 401, method by method.
 - **Material:**
-  - **STAR** → [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) (not Condorcet-compliant; trades Later-No-Harm; rare majority / participation / mono-raise-delete failures).
+  - **STAR** → [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) (the *why*) and [every criterion STAR fails](../STAR_Voting/properties_and_limits/star_criteria_failures.md) (the *index, with a runnable example + BV id for each*): not Condorcet-compliant; trades Later-No-Harm; rare majority / participation / mono-raise-delete / IIA / consistency failures.
   - **Ranked Robin / Condorcet** → [RR's honest limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) (cycles; blind to intensity — the sincere dark horse).
   - **RCV-IRV** → [non-monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md), [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md), [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md).
   - **Approval / Score** → [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) and the "where do you draw the line?" threshold question ([are equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md)).
