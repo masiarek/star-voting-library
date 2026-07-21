@@ -108,6 +108,8 @@ Automatic Runoff Round
 
 **Almond** has the most stars (13) but **Brownie** wins — more voters prefer Brownie head-to-head. This is **not a malfunction**: the runoff is enforcing majority preference between the finalists. (BetterVoting itself pops up *"Why is the top-scoring candidate different from the winner?"* here.)
 
+*Want the whole count — the preference matrix, the Condorcet line, the score distribution? This is a real election: [see the full LH report](../../../01_STAR/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md) (or run [`01a_c3_b3_more-stars-fewer-voters.yaml`](../../../01_STAR/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)).*
+
 **The name:** the house term is **Runoff Reversal**; in technical/debate writing use the plain phrasing "**the runoff overturns the score leader**" (it avoids colliding with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-candidate progression, plus a voter-facing explanation: [Runoff Reversal](../../../01_STAR/runoff_overturns_leader/). Teaching it (step-by-step, why it's good, devil's-advocate Q&A): [Teaching Runoff Reversal — a step-by-step guide](../../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md). Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) · the three different "winners" (score / runoff / Condorcet): [three winner notions](../properties_and_limits/STAR_three_winner_notions.md).
 
 ## Variation 2 — exact ties
