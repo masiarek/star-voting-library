@@ -51,7 +51,7 @@ Living advocates and the methods they champion. Grouped by camp *and disclosed a
 
 | Person | Role / contribution | Links |
 |---|---|---|
-| **Mark Frohnmayer** | Primary progenitor / discoverer of **STAR** (with Clay Shentrup) and conceiver of the **[Equal Vote Coalition](https://equal.vote)** (2014); Oregon entrepreneur (GarageGames, Arcimoto). Engages the method debates directly — posts as **nardo_polo** on r/EndFPTP. | [Wikipedia](https://en.wikipedia.org/wiki/Mark_Frohnmayer) · [Equal Vote origins](https://www.equal.vote/origins) |
+| **Mark Frohnmayer** | Primary progenitor / discoverer of **STAR** (with Clay Shentrup) and conceiver of the **[Equal Vote Coalition](https://equal.vote)** (2014); Oregon entrepreneur (GarageGames, Arcimoto). Engages the method debates directly — posts as **nardo_polo** on r/EndFPTP. | [Wikipedia](https://en.wikipedia.org/wiki/Mark_Frohnmayer) · [Equal Vote origins](https://www.equal.vote/origins) · ["What the heck happened in Alaska?"](https://nardopolo.medium.com/what-the-heck-happened-in-alaska-3c2d7318decc) |
 | **Sara Wolk** | Executive director & founding member, Equal Vote Coalition; peer-reviewed co-author on STAR & voter satisfaction (2023). | [starvoting.org/about](https://www.starvoting.org/about) |
 
 ### Metrics & simulation (how methods get compared)

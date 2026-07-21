@@ -132,6 +132,8 @@ Methods that read the whole ballot — Ranked Robin, any Condorcet method, and S
 
 - **Three-level explainer:** [101](alaska_101.md) · [201](alaska_201.md) · [301](alaska_301.md)
 - **Equal Vote's Real RCV tool:** [this election](https://realrcv.equal.vote/alaska22) · [browse every real US RCV election](https://realrcv.equal.vote) — worth doing: most of them worked fine, which is the honest backdrop for why Alaska stands out (see [301](alaska_301.md) on rarity)
+- **Founder's narrative writeup:** Mark Frohnmayer, ["What the heck happened in Alaska?"](https://nardopolo.medium.com/what-the-heck-happened-in-alaska-3c2d7318decc) — the accessible, story-first version (STAR-founder source, so **advocacy-leaning**; its facts match the academic analyses above, and it adds the "breadth of support" lens now in [301](alaska_301.md))
+- **Reproduce from the raw ballots:** the public [Cast Vote Record + tabulation code](https://github.com/nardo/Equal.Vote/tree/master/alaska) and Alaska's [official RCV detailed report](https://www.elections.alaska.gov/results/22SSPG/RcvDetailedReport.pdf) — the actual data behind this case's reduced model
 - [Alaska 2022 — RCV-IRV case study](../../00_start_here/RCV_IRV/case_studies/RCV_IRV_alaska_2022.md) (the prose write-up with the real vote totals)
 - [Burlington 2009](../burlington_2009/README.md) — the other canonical real IRV center squeeze, also runnable
 - [Center squeeze](../../00_start_here/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md)

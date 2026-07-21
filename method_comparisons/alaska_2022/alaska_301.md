@@ -22,6 +22,8 @@ Alaska is the most-cited real IRV misfire because it triggered several distinct 
 
 Every one of these traces to the **same** mechanism: **eliminating candidates on first-choice counts.** Methods that read the whole ballot — Ranked Robin, any [Condorcet method](../../00_start_here/topics/condorcet/), and STAR through its runoff — avoid all five, because none of them gate survival on first choices.
 
+**Another way to see it — breadth of support.** Working the same Cast Vote Record, STAR's founder Mark Frohnmayer highlights a measure IRV never looks at: how many voters backed each candidate as *either* first **or** second choice. A **super-majority** of Alaskans put **Begich** in their top two; by contrast a **majority expressed no support at all** for Peltola, and a majority none for Palin. IRV eliminated the one candidate with broad support precisely because it counts only *first* choices each round and ignores every "backup" expression until a ballot's top choice is gone — the [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) blind spot, live in a real election. *(Source: Frohnmayer, [What the heck happened in Alaska?](https://nardopolo.medium.com/what-the-heck-happened-in-alaska-3c2d7318decc) — a STAR-founder writeup, so **advocacy-leaning**, but its factual core matches the [Clelland](https://arxiv.org/abs/2303.00108) and [Graham-Squire & McCune](https://arxiv.org/abs/2301.12075) analyses this page is built on.)*
+
 ---
 
 ## Part 1½ — what if Alaska had used STAR or Approval? (Clelland's counterfactual)
