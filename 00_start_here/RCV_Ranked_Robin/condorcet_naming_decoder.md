@@ -25,6 +25,15 @@ They're at *different levels of generality* — a category, a specific method in
 
 Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../topics/ranked_ballot_methods_zoo.md).
 
+## Looks like Condorcet — but isn't (STAR, 3-2-1)
+
+Two **rated** methods *end* with a head-to-head step, which can fool you into filing them under Condorcet. They aren't. Both first narrow the field, then run a pairwise comparison only among the **survivors** — so the true Condorcet winner can be eliminated *before* the final:
+
+- **STAR** — add 0–5 scores, take the top two by total, then a pairwise automatic runoff. The runoff is pairwise, but the *finalists* are chosen by score sum, not by beating everyone — so STAR is **not** Condorcet-compliant. → [STAR](../STAR_Voting/STAR_start_here.md) · [three notions of winner](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md).
+- **3-2-1** — Good/OK/Bad, then most-Good → fewest-Bad → pairwise. Same shape: a pairwise *final*, but the two finalists come from the rating steps, so a Condorcet winner outside them never gets there. **Not** Condorcet. → [3-2-1 voting](../topics/three_two_one_voting.md).
+
+**The tell:** a Condorcet method compares *every* pair across the *whole* field; these compare *one* pair among *pre-selected* finalists. A pairwise step ≠ a Condorcet method.
+
 ## Why the two Wikipedia articles overlap (the trap you hit)
 
 [Round-robin voting](https://en.wikipedia.org/wiki/Round-robin_voting) and [Copeland's method](https://en.wikipedia.org/wiki/Copeland%27s_method) feel redundant for a concrete reason: **one is the family, the other is its simplest member** — and Copeland is the method that most *literally* implements "round-robin tournament standings," so the category name and the method sound identical. Two extra wrinkles:

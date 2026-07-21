@@ -59,6 +59,22 @@ Verdict tags: ✅ **fair** · ⚠️ **fair but loaded** · ❗ **overclaim**.
 
 **Net:** a useful, good-faith summary that a reader can trust for **direction**. A careful reader should mentally soften the two "NO"s to "greatly reduced," and read the percentages as "under this model." That's not a knock on STAR — STAR's honest case is strong enough that it doesn't need the absolutes.
 
+## Beyond the three — where Ranked Robin and 3-2-1 would land
+
+Equal Vote's card compares only Plurality, RCV-IRV, and STAR. For a fuller picture, here's where two other good rated/ranked methods sit on the **same qualitative dimensions** — [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) (Condorcet) and [3-2-1](../../00_start_here/topics/three_two_one_voting.md) (Quinn's Good/OK/Bad method). *(Our extension, not EVC's — and we leave the numeric VSE / honesty-incentive rows blank rather than invent figures the original card didn't measure for these two.)*
+
+| Dimension | Ranked Robin | 3-2-1 |
+|---|---|---|
+| **Spoiler / vote-splitting** | 🟩 No | 🟩 No |
+| **Advantages some candidate types** | 🟩 No — elects the consensus/Condorcet winner | 🟩 No |
+| **Voided ballots** | 🟢 Rare — equal ranks allowed (no overvote trap) | 🟢 Rare — only three levels to mark |
+| **Wasted / exhausted ballots** | 🟩 No — reads every rank | 🟩 No |
+| **Ballots tabulated locally?** | 🟩 Local — pairwise matrix is summable | 🟩 Local — Good/Bad tallies + pairwise matrix |
+| **Tabulation complexity** | 🟧 Build the pairwise grid, count wins | 🟧 Three steps + the clone/dark-horse guards |
+| **VSE / honesty incentive** | high (Condorcet-efficient); not on EVC's card | high (STAR-like); not on EVC's card |
+
+Both clear the bar the scorecard is really drawing — **summable, center-squeeze-free, no wasted votes, honesty-friendly** — which is the company STAR keeps. Where they differ from STAR is the fine detail the [strategic-pathologies scorecard](../../00_start_here/topics/strategic_pathologies.md) lays out (RR's sincere dark-horse seam; 3-2-1's coarser 3-level ballot). The headline: the real divide isn't STAR-vs-these — it's **all four** (STAR, RR, 3-2-1, Approval) versus Plurality and IRV.
+
 ## The longer version — Equal Vote's prose pros/cons, and its sources
 
 The scorecard is the graphic; Equal Vote's [**STAR vs RCV pros & cons**](https://www.equal.vote/star_rcv_pros_cons) is the prose expansion — same lean, more detail, and, to its credit, **actual citations**. That makes it checkable. Here is what's behind the headline numbers, and where the citation is stronger than the study it rests on:

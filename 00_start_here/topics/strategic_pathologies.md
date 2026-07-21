@@ -16,17 +16,19 @@
 | **Chicken / Burr** | chicken (snowdrift) | Approval / Score | [the chicken dilemma](../../method_comparisons/chicken_dilemma/) |
 | **Condorcet Cycle** | Gibbard-universal | *every* method | [cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) |
 
-## The scorecard — STAR and Ranked Robin on each
+## The scorecard — STAR, Ranked Robin, and 3-2-1 on each
 
-| Moloch | STAR | Ranked Robin | Why |
-|---|:--:|:--:|---|
-| **Lesser Evil** | ✅ escapes | ✅ escapes | no wasted vote — score/rank everyone honestly; a third candidate never spoils |
-| **Center Squeeze** | ✅ escapes | ✅ escapes | the scoring round + runoff (STAR) and pairwise wins (RR) find the broadly-liked center IRV eliminates |
-| **Dark Horse** | ✅ escapes | ✅ escapes | a score lets you zero-out a rival *without* propping up the nobody; RR rewards no such burial |
-| **Chicken / Burr** | ⚠️ softens | ✅ escapes | STAR's runoff makes the slippery Approval slope *non-slippery*; RR just lets the majority beat the third candidate |
-| **Condorcet Cycle** | ➖ shares | ➖ shares | [Gibbard](gibbard_satterthwaite_theorem.md): no method escapes; cycles are rare (~1–5%) and must be resolved somehow |
+*Legend:* ✅ escapes · ⚠️ softens (non-slippery, not immune) · ➖ shares (nobody escapes). [3-2-1](three_two_one_voting.md) is Jameson Quinn's own rated method, included because it's the one he built to fight these very Molochs.
 
-**The honest tally: STAR escapes three cleanly, softens one, and shares one with every method that exists.** Ranked Robin escapes four and shares the fifth. Neither is strategy-*proof* — Gibbard forbids that for any real method — but both dodge the traps that actually bite in practice.
+| Moloch | STAR | Ranked Robin | 3-2-1 | Notes |
+|---|:--:|:--:|:--:|---|
+| **Lesser Evil** | ✅ | ✅ | ✅ | rated/ranked ballots remove the wasted-vote fear; a third candidate never spoils |
+| **Center Squeeze** | ✅ | ✅ | ✅ | STAR's runoff, RR's pairwise wins, and 3-2-1's fewest-**Bad** finalist step all keep the broadly-liked center IRV eliminates |
+| **Dark Horse** | ✅ | ✅ | ✅ | STAR reads support; RR rewards no burial (but has its *own* sincere seam — fine print); 3-2-1 bolts on an explicit ½-Good guard |
+| **Chicken / Burr** | ⚠️ | ✅ | ⚠️ | STAR & 3-2-1 make the slippery Approval slope *non-slippery* via a final head-to-head step; RR just lets the majority beat the third candidate |
+| **Condorcet Cycle** | ➖ | ➖ | ➖ | [Gibbard](gibbard_satterthwaite_theorem.md): no method escapes; cycles are rare (~1–5%) and must be resolved somehow |
+
+**The honest tally: STAR and 3-2-1 score *identically* — escape three, soften one (non-slippery chicken), share the cycle.** That's no accident: both are **rated ballots with a final pairwise step**, close cousins compared head-on on the [3-2-1 page](three_two_one_voting.md). **Ranked Robin** escapes four and shares only the cycle — at the cost of its own sincere dark-horse seam (fine print). None is strategy-*proof* — Gibbard forbids that for any real method — but all three dodge the traps that actually bite in practice, which is exactly what separates them from Plurality, IRV, and Borda.
 
 > **Fine print (three caveats the scorecard glosses, raised in the discussion of Quinn's originals):**
 > - **PR doesn't fully kill Lesser Evil.** Proportional representation softens it, but any **threshold** recreates a milder wasted-vote fear — a small new party below the cutoff still feels unsafe to support. Escape is partial, not total.
