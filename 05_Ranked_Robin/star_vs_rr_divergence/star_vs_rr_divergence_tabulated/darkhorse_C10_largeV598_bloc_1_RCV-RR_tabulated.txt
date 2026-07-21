@@ -1,0 +1,88 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 598 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F, G, H, I, J
+   288 × F > B=E=G > D > A=C=H=J > I      (2, 4, 2, 3, 4, 5, 4, 2, 0, 2)
+   219 × A=C=H > I=J > B=D=G > E > F      (5, 2, 5, 2, 1, 0, 2, 5, 4, 4)
+    66 × D=E > G > J > F > A=B=C=H > I      (1, 1, 1, 5, 5, 2, 4, 1, 0, 3)
+    25 × B=C > A=H > D=F=G=J > E > I      (4, 5, 5, 3, 2, 3, 3, 4, 0, 3)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   B  beats A   313 – 219
+   C  beats A    25 –   0
+   D  beats A   354 – 244
+   E  beats A   354 – 244
+   F  beats A   354 – 244
+   G  beats A   354 – 244
+   A  ties  H     0 –   0
+   A  beats I   598 –   0
+   A  beats J   244 –  66
+   B  beats C   288 – 219
+   B  beats D   313 –  66
+   B  beats E   244 –  66
+   F  beats B   354 – 244
+   G  beats B    66 –  25
+   B  beats H   313 – 219
+   B  beats I   379 – 219
+   B  beats J   313 – 285
+   D  beats C   354 – 244
+   E  beats C   354 – 244
+   F  beats C   354 – 244
+   G  beats C   354 – 244
+   C  beats H    25 –   0
+   C  beats I   598 –   0
+   C  beats J   244 –  66
+   E  beats D   288 – 244
+   F  beats D   288 – 285
+   G  beats D   288 –  66
+   D  beats H   354 – 244
+   D  beats I   379 – 219
+   D  beats J   354 – 219
+   F  beats E   313 – 285
+   G  beats E   244 –  66
+   E  beats H   354 – 244
+   E  beats I   379 – 219
+   E  beats J   354 – 244
+   F  beats G   288 – 285
+   F  beats H   354 – 244
+   F  beats I   379 – 219
+   F  beats J   288 – 285
+   G  beats H   354 – 244
+   G  beats I   379 – 219
+   G  beats J   354 – 219
+   H  beats I   598 –   0
+   H  beats J   244 –  66
+   J  beats I   379 –   0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |        A        |       B        |       C        |       D        |       E        |       F        |       G        |       H        |       I        |       J        |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  A > |       ---       |219 -  66 - 313 |  0 - 573 -  25 |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 |  0 - 598 -   0 |598 -   0 -   0 |244 - 288 -  66 |
+  B > | 313 -  66 - 219 |      ---       |288 -  91 - 219 |313 - 219 -  66 |244 - 288 -  66 |244 -   0 - 354 | 25 - 507 -  66 |313 -  66 - 219 |379 -   0 - 219 |313 -   0 - 285 |
+  C > |  25 - 573 -   0 |219 -  91 - 288 |      ---       |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 | 25 - 573 -   0 |598 -   0 -   0 |244 - 288 -  66 |
+  D > | 354 -   0 - 244 | 66 - 219 - 313 |354 -   0 - 244 |      ---       |244 -  66 - 288 |285 -  25 - 288 | 66 - 244 - 288 |354 -   0 - 244 |379 -   0 - 219 |354 -  25 - 219 |
+  E > | 354 -   0 - 244 | 66 - 288 - 244 |354 -   0 - 244 |288 -  66 - 244 |      ---       |285 -   0 - 313 | 66 - 288 - 244 |354 -   0 - 244 |379 -   0 - 219 |354 -   0 - 244 |
+  F > | 354 -   0 - 244 |354 -   0 - 244 |354 -   0 - 244 |288 -  25 - 285 |313 -   0 - 285 |      ---       |288 -  25 - 285 |354 -   0 - 244 |379 -   0 - 219 |288 -  25 - 285 |
+  G > | 354 -   0 - 244 | 66 - 507 -  25 |354 -   0 - 244 |288 - 244 -  66 |244 - 288 -  66 |285 -  25 - 288 |      ---       |354 -   0 - 244 |379 -   0 - 219 |354 -  25 - 219 |
+  H > |   0 - 598 -   0 |219 -  66 - 313 |  0 - 573 -  25 |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 |244 -   0 - 354 |      ---       |598 -   0 -   0 |244 - 288 -  66 |
+  I > |   0 -   0 - 598 |219 -   0 - 379 |  0 -   0 - 598 |219 -   0 - 379 |219 -   0 - 379 |219 -   0 - 379 |219 -   0 - 379 |  0 -   0 - 598 |      ---       |  0 - 219 - 379 |
+  J > |  66 - 288 - 244 |285 -   0 - 313 | 66 - 288 - 244 |219 -  25 - 354 |244 -   0 - 354 |285 -  25 - 288 |219 -  25 - 354 | 66 - 288 - 244 |379 - 219 -   0 |      ---       |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  F          9–0–0         9    +637  G, B, E, D, C, A, H, J, I
+    2  G          8–1–0         8   +1063  B, E, D, C, A, H, J, I
+    3  B          7–2–0         7    +719  E, D, C, A, H, J, I
+    4  E          6–3–0         6    +260  D, C, A, H, J, I
+    5  D          5–4–0         5    +109  C, A, H, J, I
+    6  C          4–5–0         4    +317  A, H, J, I
+    7  A          2–6–1       2.5    +217  J, I
+    8  H          2–6–1       2.5    +217  J, I
+    9  J          1–8–0         1    -566  I
+   10  I          0–9–0         0   -2973  —
+
+Winner — Ranked Robin (RCV-RR): F
+   beats every opponent head-to-head — the Condorcet winner.

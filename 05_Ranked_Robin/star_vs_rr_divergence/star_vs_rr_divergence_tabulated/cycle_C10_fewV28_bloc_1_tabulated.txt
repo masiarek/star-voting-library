@@ -1,0 +1,166 @@
+======================================================================
+SOURCE FILE:     cycle_C10_fewV28_bloc_1.yaml
+TABULATED FILE:  cycle_C10_fewV28_bloc_1_tabulated.txt
+======================================================================
+
+election_title: "STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects C; Ranked Robin elects F. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (F); STAR runs its two score-leaders off (C). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D,E,F,G,H,I,J
+  7:0,1,3,3,4,3,5,3,2,3
+  7:0,1,4,4,5,5,4,5,3,4
+  7:2,2,5,5,3,5,0,3,3,3
+  7:4,4,5,5,3,4,0,4,4,4
+expected_winners:
+  - C
+
+# file: cycle_C10_fewV28_bloc_1.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F) ===
+  Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects C; Ranked Robin elects F. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (F); STAR runs its two score-leaders off (C). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |       A      |      B      |    * C      |    * D      |      E      |      F      |      G      |      H      |      I      |      J      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+             A > |     ---      | 0 - 14 - 14 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  0 - 21 | 0 -  7 - 21 |14 -  0 - 14 | 0 -  7 - 21 | 0 -  7 - 21 | 0 -  7 - 21 |
+             B > | 14 - 14 -  0 |    ---      | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  0 - 21 | 0 -  7 - 21 |14 -  0 - 14 | 0 -  7 - 21 | 0 -  7 - 21 | 0 -  7 - 21 |
+           * C > | 28 -  0 -  0 |28 -  0 -  0 |    ---      | 0 - 28 -  0 |14 -  0 - 14 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |28 -  0 -  0 |14 - 14 -  0 |
+           * D > | 28 -  0 -  0 |28 -  0 -  0 | 0 - 28 -  0 |    ---      |14 -  0 - 14 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |28 -  0 -  0 |14 - 14 -  0 |
+             E > | 21 -  0 -  7 |21 -  0 -  7 |14 -  0 - 14 |14 -  0 - 14 |    ---      | 7 -  7 - 14 |21 -  0 -  7 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |
+             F > | 21 -  7 -  0 |21 -  7 -  0 | 7 - 14 -  7 | 7 - 14 -  7 |14 -  7 -  7 |    ---      |21 -  0 -  7 | 7 - 21 -  0 |21 -  7 -  0 |14 - 14 -  0 |
+             G > | 14 -  0 - 14 |14 -  0 - 14 | 7 -  7 - 14 | 7 -  7 - 14 | 7 -  0 - 21 | 7 -  0 - 21 |    ---      | 7 -  0 - 21 |14 -  0 - 14 | 7 -  7 - 14 |
+             H > | 21 -  7 -  0 |21 -  7 -  0 | 7 -  7 - 14 | 7 -  7 - 14 | 7 - 14 -  7 | 0 - 21 -  7 |21 -  0 -  7 |    ---      |14 - 14 -  0 | 7 - 21 -  0 |
+             I > | 21 -  7 -  0 |21 -  7 -  0 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  7 - 14 | 0 -  7 - 21 |14 -  0 - 14 | 0 - 14 - 14 |    ---      | 0 - 14 - 14 |
+             J > | 21 -  7 -  0 |21 -  7 -  0 | 0 - 14 - 14 | 0 - 14 - 14 | 7 -  7 - 14 | 0 - 14 - 14 |14 -  7 -  7 | 0 - 21 -  7 |14 - 14 -  0 |    ---      |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: C, D, F (pairwise ties)
+
+[Divergence from STAR]
+  STAR   = C
+  RCV-RR = F   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C10_fewV28_bloc_1_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 28 ballots.
+Count x A,B,C,D,E,F,G,H,I,J
+    7 x 0,1,3,3,4,3,5,3,2,3
+    7 x 0,1,4,4,5,5,4,5,3,4
+    7 x 2,2,5,5,3,5,0,3,3,3
+    7 x 4,4,5,5,3,4,0,4,4,4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           0   7   0   7   0  14  |    42   1.5
+B           0   7   0   7  14   0  |    56   2.0
+C          14   7   7   0   0   0  |   119   4.3
+D          14   7   7   0   0   0  |   119   4.3
+E           7   7  14   0   0   0  |   105   3.8
+F          14   7   7   0   0   0  |   119   4.3
+G           7   7   0   0   0  14  |    63   2.3
+H           7   7  14   0   0   0  |   105   3.8
+I           0   7  14   7   0   0  |    84   3.0
+J           0  14  14   0   0   0  |    98   3.5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 119 -- Tied for first place
+   D             -- 119 -- Tied for first place
+   F             -- 119 -- Tied for first place
+   E             -- 105
+   H             -- 105
+   J             --  98
+   I             --  84
+   G             --  63
+   B             --  56
+   A             --  42
+ There's a three-way tie for first.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The two candidates preferred in the most head-to-head matchups advance.
+   F             -- 14 -- First place
+   C             --  7 -- Tied for second place
+   D             --  7 -- Tied for second place
+   Equal Support -- 14
+ F advances, but there's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   C             -- 14 -- Tied for second place
+   D             -- 14 -- Tied for second place
+ There's still a two-way tie for second.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['C', 'D']
+  Resolved: ['C'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   C             -- 7 -- Tied for first place
+   F             -- 7 -- Tied for first place
+   Equal Support -- 14
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   C             -- 119 -- Tied for first place
+   F             -- 119 -- Tied for first place
+ There's still a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   C             -- 14 -- Tied for first place
+   F             -- 14 -- Tied for first place
+ There's still a two-way tie for first.
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['C', 'F']
+  Resolved: ['C'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ C

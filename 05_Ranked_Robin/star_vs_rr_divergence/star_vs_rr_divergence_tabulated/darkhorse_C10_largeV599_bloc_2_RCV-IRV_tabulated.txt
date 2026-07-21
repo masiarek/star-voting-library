@@ -1,0 +1,59 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)
+ Tabulating 599 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D, E, F, G, H, I, J
+   209 ×   E > B > C > F > H > I > J > A > G      (3, 4, 4, 0, 5, 4, 1, 4, 4, 4)
+   173 ×   C > J > A > B > E > F > H > I > D      (4, 4, 5, 1, 4, 4, 0, 2, 2, 5)
+   158 ×   B > F > G > I > A > C > E > H > J      (2, 5, 2, 0, 2, 5, 4, 2, 3, 2)
+    59 ×   H > I > E > B > C > F > J > A > G      (2, 3, 3, 0, 4, 3, 2, 5, 5, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+E                209  Hopeful
+C                173  Hopeful
+B                158  Hopeful
+H                 59  Rejected
+J                  0  Rejected
+F                  0  Rejected
+I                  0  Rejected
+A                  0  Rejected
+G                  0  Rejected
+D                  0  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+E                268  Hopeful
+C                173  Hopeful
+B                158  Rejected
+H                  0  Rejected
+J                  0  Rejected
+F                  0  Rejected
+I                  0  Rejected
+A                  0  Rejected
+G                  0  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+C                331  Elected
+E                268  Rejected
+B                  0  Rejected
+H                  0  Rejected
+J                  0  Rejected
+F                  0  Rejected
+I                  0  Rejected
+A                  0  Rejected
+G                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  C
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

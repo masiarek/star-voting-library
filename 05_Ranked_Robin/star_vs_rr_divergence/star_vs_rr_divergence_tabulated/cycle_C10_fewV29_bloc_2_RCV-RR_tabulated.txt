@@ -1,0 +1,87 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 29 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F, G, H, I, J
+    11 × B=G > A=C=F > D=E=I > H > J      (4, 5, 4, 3, 3, 4, 5, 1, 3, 0)
+     9 × J > E > A=D=I > C=F > G > B=H      (3, 0, 2, 3, 4, 2, 1, 0, 3, 5)
+     9 × B=C=F=H=I > A=D=G > E > J      (4, 5, 5, 4, 3, 5, 4, 5, 5, 0)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   B  beats A   20 –  9
+   A  ties  C    9 –  9
+   A  beats D   11 –  0
+   A  beats E   20 –  9
+   A  ties  F    9 –  9
+   G  beats A   11 –  9
+   A  beats H   20 –  9
+   A  beats I   11 –  9
+   A  beats J   20 –  9
+   B  beats C   11 –  9
+   B  beats D   20 –  9
+   B  beats E   20 –  9
+   B  beats F   11 –  9
+   B  ties  G    9 –  9
+   B  beats H   11 –  0
+   B  beats I   11 –  9
+   B  beats J   20 –  9
+   C  beats D   20 –  9
+   C  beats E   20 –  9
+   C  ties  F    0 –  0
+   C  beats G   18 – 11
+   C  beats H   20 –  0
+   C  beats I   11 –  9
+   C  beats J   20 –  9
+   D  ties  E    9 –  9
+   F  beats D   20 –  9
+   G  beats D   11 –  9
+   D  beats H   20 –  9
+   I  beats D    9 –  0
+   D  beats J   20 –  9
+   F  beats E   20 –  9
+   G  beats E   20 –  9
+   E  beats H   20 –  9
+   E  ties  I    9 –  9
+   E  beats J   20 –  9
+   F  beats G   18 – 11
+   F  beats H   20 –  0
+   F  beats I   11 –  9
+   F  beats J   20 –  9
+   G  beats H   20 –  9
+   I  beats G   18 – 11
+   G  beats J   20 –  9
+   I  beats H   20 –  0
+   H  beats J   20 –  9
+   I  beats J   20 –  9
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |     E       |     F       |     G       |     H       |     I       |     J       |
+----------------------------------------------------------------------------------------------------------------------------------------------------
+  A > |     ---      | 9 -  0 - 20 | 9 - 11 -  9 |11 - 18 -  0 |20 -  0 -  9 | 9 - 11 -  9 | 9 -  9 - 11 |20 -  0 -  9 |11 -  9 -  9 |20 -  0 -  9 |
+  B > | 20 -  0 -  9 |    ---      |11 -  9 -  9 |20 -  0 -  9 |20 -  0 -  9 |11 -  9 -  9 | 9 - 11 -  9 |11 - 18 -  0 |11 -  9 -  9 |20 -  0 -  9 |
+  C > |  9 - 11 -  9 | 9 -  9 - 11 |    ---      |20 -  0 -  9 |20 -  0 -  9 | 0 - 29 -  0 |18 -  0 - 11 |20 -  9 -  0 |11 -  9 -  9 |20 -  0 -  9 |
+  D > |  0 - 18 - 11 | 9 -  0 - 20 | 9 -  0 - 20 |    ---      | 9 - 11 -  9 | 9 -  0 - 20 | 9 -  9 - 11 |20 -  0 -  9 | 0 - 20 -  9 |20 -  0 -  9 |
+  E > |  9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 - 11 -  9 |    ---      | 9 -  0 - 20 | 9 -  0 - 20 |20 -  0 -  9 | 9 - 11 -  9 |20 -  0 -  9 |
+  F > |  9 - 11 -  9 | 9 -  9 - 11 | 0 - 29 -  0 |20 -  0 -  9 |20 -  0 -  9 |    ---      |18 -  0 - 11 |20 -  9 -  0 |11 -  9 -  9 |20 -  0 -  9 |
+  G > | 11 -  9 -  9 | 9 - 11 -  9 |11 -  0 - 18 |11 -  9 -  9 |20 -  0 -  9 |11 -  0 - 18 |    ---      |20 -  0 -  9 |11 -  0 - 18 |20 -  0 -  9 |
+  H > |  9 -  0 - 20 | 0 - 18 - 11 | 0 -  9 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 0 -  9 - 20 | 9 -  0 - 20 |    ---      | 0 -  9 - 20 |20 -  0 -  9 |
+  I > |  9 -  9 - 11 | 9 -  9 - 11 | 9 -  9 - 11 | 9 - 20 -  0 | 9 - 11 -  9 | 9 -  9 - 11 |18 -  0 - 11 |20 -  9 -  0 |    ---      |20 -  0 -  9 |
+  J > |  9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 | 9 -  0 - 20 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  B          8–0–1       8.5     +61  C, F, A, I, D, E, H, J
+    2  C          6–1–2         7     +60  G, I, D, E, H, J
+    3  F          6–1–2         7     +60  G, I, D, E, H, J
+    4  A          5–2–2         6     +33  I, D, E, H, J
+    5  G          5–3–1       5.5     +16  A, D, E, H, J
+    6  I          4–4–1       4.5     +39  G, D, H, J
+    7  D          2–6–1       2.5     -33  H, J
+    8  E          2–5–2         3     -33  H, J
+    9  H          1–8–0         1    -104  J
+   10  J          0–9–0         0     -99  —
+
+Winner — Ranked Robin (RCV-RR): B
+   beats every opponent head-to-head — the Condorcet winner.

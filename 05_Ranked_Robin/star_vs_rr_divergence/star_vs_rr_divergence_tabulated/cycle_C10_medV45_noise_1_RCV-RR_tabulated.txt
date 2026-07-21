@@ -1,0 +1,129 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 45 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F, G, H, I, J
+     1 × A=G=H > E > C > D=F=I=J > B      (4, 0, 2, 1, 3, 1, 4, 4, 1, 1)
+     1 × C > B=D > F=H=J > A=I > G > E      (2, 4, 5, 4, 0, 3, 1, 3, 2, 3)
+     1 × A=B=E > F > G=J > C=D=I > H      (4, 4, 1, 1, 4, 3, 2, 0, 1, 2)
+     1 × E=F > C=I=J > A=B > G > D > H      (3, 3, 4, 1, 5, 5, 2, 0, 4, 4)
+     1 × A=F=J > B=C=G > E=I > D=H      (4, 3, 3, 1, 2, 4, 3, 1, 2, 4)
+     1 × C=G=H > B=J > D > A=E > F=I      (2, 4, 5, 3, 2, 1, 5, 5, 1, 4)
+     1 × C=E > A=I > F=H > D=G > B > J      (4, 1, 5, 2, 5, 3, 2, 3, 4, 0)
+     1 × D=I=J > B > A=E=G=H > C=F      (1, 4, 0, 5, 1, 0, 1, 1, 5, 5)
+     1 × A=B=H > C=E=G > I > J > D=F      (4, 4, 3, 0, 3, 0, 3, 4, 2, 1)
+     1 × B=D=J > E > F > A=G=H=I > C      (2, 5, 1, 5, 4, 3, 2, 2, 2, 5)
+     1 × C=F=I > J > B=D=E=H > G > A      (0, 2, 5, 2, 2, 5, 1, 2, 5, 3)
+     1 × I > F > E > A=B=C=D=H > G=J      (2, 2, 2, 2, 3, 4, 1, 2, 5, 1)
+     1 × A=I > C > B=J > D=E=H > F=G      (5, 3, 4, 2, 2, 1, 1, 2, 5, 3)
+     1 × G > B=D > E > A=C=F=H=I > J      (1, 3, 1, 3, 2, 1, 4, 1, 1, 0)
+     1 × G > A=D=F=I > B=C=E > H=J      (3, 2, 2, 3, 2, 3, 4, 1, 3, 1)
+     1 × E=G > B=F=I=J > A=C=D=H      (1, 2, 1, 1, 4, 2, 4, 1, 2, 2)
+     1 × C > A=B=E=G > D=I > H=J > F      (4, 4, 5, 3, 4, 1, 4, 2, 3, 2)
+     1 × E=F > B > I > C=D=H=J > A=G      (0, 4, 2, 2, 5, 5, 0, 2, 3, 2)
+     1 × A=D=E > F=G=H > C=J > I > B      (5, 1, 3, 5, 5, 4, 4, 4, 2, 3)
+     1 × A=G > B=H=J > I > C=E > D > F      (5, 4, 2, 1, 2, 0, 5, 4, 3, 4)
+     1 × B=C > A=E=F=G > D=J > I > H      (3, 4, 4, 2, 3, 3, 3, 0, 1, 2)
+     1 × G > A=C=E > H=J > I > B=D=F      (4, 1, 4, 1, 4, 1, 5, 3, 2, 3)
+     1 × D=F > E=G > B=C=I > A=H=J      (2, 3, 3, 5, 4, 5, 4, 2, 3, 2)
+     1 × A=I > C > F=J > D=G > B=E=H      (5, 1, 4, 2, 1, 3, 2, 1, 5, 3)
+     1 × D > G=I > E=F=J > A=B=C > H      (2, 2, 2, 5, 3, 3, 4, 1, 4, 3)
+     1 × A=C > G=I > F > E=H > B=J > D      (5, 1, 5, 0, 2, 3, 4, 2, 4, 1)
+     1 × E > D=G > B=I > F=H=J > A=C      (1, 3, 1, 4, 5, 2, 4, 2, 3, 2)
+     1 × D=I > B=C=F=G > A > H=J > E      (2, 3, 3, 4, 0, 3, 3, 1, 4, 1)
+     1 × F > B > C=J > G=H=I > D=E > A      (0, 4, 3, 1, 1, 5, 2, 2, 2, 3)
+     1 × D=G > H > E=I=J > A > B=F > C      (2, 1, 0, 5, 3, 1, 5, 4, 3, 3)
+     1 × A=H > J > C=D=E > B=F=G > I      (5, 2, 3, 3, 3, 2, 2, 5, 1, 4)
+     1 × E=F > A=H > B=I > C=D=G=J      (3, 2, 1, 1, 4, 4, 1, 3, 2, 1)
+     1 × E > I > G=J > A=B=D > C=F > H      (2, 2, 1, 2, 5, 1, 3, 0, 4, 3)
+     1 × C=F=G > A=B > I > D=H=J > E      (3, 3, 4, 1, 0, 4, 4, 1, 2, 1)
+     1 × H=I > C > F=J > A=B=D=E=G      (0, 0, 3, 0, 0, 1, 0, 4, 4, 1)
+     1 × C > E=G=I=J > A=B=F=H > D      (2, 2, 4, 1, 3, 2, 3, 2, 3, 3)
+     1 × C > D=E=F=G=I=J > A > B=H      (3, 0, 5, 4, 4, 4, 4, 0, 4, 4)
+     1 × A=C=D=H > E=J > B=F=G=I      (4, 1, 4, 4, 3, 1, 1, 4, 1, 3)
+     1 × G=H > I > A=D=F=J > B=E > C      (3, 2, 0, 3, 2, 3, 5, 5, 4, 3)
+     1 × A=E=H > D > J > B > F=G=I > C      (5, 2, 0, 4, 5, 1, 1, 5, 1, 3)
+     1 × G=J > C=H > A > E=I > F > B=D      (3, 0, 4, 0, 2, 1, 5, 4, 2, 5)
+     1 × E=J > A=B=C > F=G > D=H=I      (3, 3, 3, 1, 4, 2, 2, 1, 1, 4)
+     1 × A > C=E=F=H=J > B=D > G=I      (5, 3, 4, 3, 4, 4, 1, 4, 1, 4)
+     1 × H > C=I=J > G > A=D=E > B > F      (2, 1, 4, 2, 2, 0, 3, 5, 4, 4)
+     1 × A > D=G > B=C=H=J > E > F > I      (5, 3, 3, 4, 2, 1, 4, 3, 0, 3)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  beats B   21 – 13
+   A  beats C   19 – 17
+   A  beats D   22 – 14
+   E  beats A   18 – 17
+   A  beats F   23 – 16
+   G  beats A   19 – 18
+   A  beats H   21 – 11
+   A  beats I   20 – 18
+   A  beats J   23 – 19
+   C  beats B   21 – 15
+   D  beats B   18 – 17
+   E  beats B   24 – 14
+   F  beats B   21 – 17
+   G  beats B   23 – 16
+   B  beats H   21 – 16
+   I  beats B   22 – 18
+   J  beats B   22 – 16
+   C  beats D   24 – 14
+   C  ties  E   19 – 19
+   C  beats F   21 – 17
+   C  beats G   20 – 19
+   C  beats H   22 – 14
+   C  beats I   21 – 18
+   C  beats J   22 – 15
+   E  beats D   22 – 15
+   D  ties  F   19 – 19
+   G  beats D   22 – 15
+   D  beats H   19 – 17
+   I  beats D   22 – 15
+   J  beats D   21 – 15
+   E  beats F   25 – 13
+   G  beats E   19 – 17
+   E  beats H   22 – 16
+   E  beats I   24 – 16
+   E  beats J   20 – 18
+   G  beats F   20 – 15
+   F  beats H   21 – 17
+   I  beats F   20 – 16
+   J  beats F   18 – 16
+   G  beats H   24 – 14
+   G  beats I   22 – 14
+   G  beats J   21 – 17
+   I  beats H   23 – 17
+   J  beats H   17 – 16
+   I  beats J   20 – 17
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |     E       |     F       |     G       |     H       |     I       |     J       |
+----------------------------------------------------------------------------------------------------------------------------------------------------
+  A > |     ---      |21 - 11 - 13 |19 -  9 - 17 |22 -  9 - 14 |17 - 10 - 18 |23 -  6 - 16 |18 -  8 - 19 |21 - 13 - 11 |20 -  7 - 18 |23 -  3 - 19 |
+  B > | 13 - 11 - 21 |    ---      |15 -  9 - 21 |17 - 10 - 18 |14 -  7 - 24 |17 -  7 - 21 |16 -  6 - 23 |21 -  8 - 16 |18 -  5 - 22 |16 -  7 - 22 |
+  C > | 17 -  9 - 19 |21 -  9 - 15 |    ---      |24 -  7 - 14 |19 -  7 - 19 |21 -  7 - 17 |20 -  6 - 19 |22 -  9 - 14 |21 -  6 - 18 |22 -  8 - 15 |
+  D > | 14 -  9 - 22 |18 - 10 - 17 |14 -  7 - 24 |    ---      |15 -  8 - 22 |19 -  7 - 19 |15 -  8 - 22 |19 -  9 - 17 |15 -  8 - 22 |15 -  9 - 21 |
+  E > | 18 - 10 - 17 |24 -  7 - 14 |19 -  7 - 19 |22 -  8 - 15 |    ---      |25 -  7 - 13 |17 -  9 - 19 |22 -  7 - 16 |24 -  5 - 16 |20 -  7 - 18 |
+  F > | 16 -  6 - 23 |21 -  7 - 17 |17 -  7 - 21 |19 -  7 - 19 |13 -  7 - 25 |    ---      |15 - 10 - 20 |21 -  7 - 17 |16 -  9 - 20 |16 - 11 - 18 |
+  G > | 19 -  8 - 18 |23 -  6 - 16 |19 -  6 - 20 |22 -  8 - 15 |19 -  9 - 17 |20 - 10 - 15 |    ---      |24 -  7 - 14 |22 -  9 - 14 |21 -  7 - 17 |
+  H > | 11 - 13 - 21 |16 -  8 - 21 |14 -  9 - 22 |17 -  9 - 19 |16 -  7 - 22 |17 -  7 - 21 |14 -  7 - 24 |    ---      |17 -  5 - 23 |16 - 12 - 17 |
+  I > | 18 -  7 - 20 |22 -  5 - 18 |18 -  6 - 21 |22 -  8 - 15 |16 -  5 - 24 |20 -  9 - 16 |14 -  9 - 22 |23 -  5 - 17 |    ---      |20 -  8 - 17 |
+  J > | 19 -  3 - 23 |22 -  7 - 16 |15 -  8 - 22 |21 -  9 - 15 |18 -  7 - 20 |18 - 11 - 16 |17 -  7 - 21 |17 - 12 - 16 |17 -  8 - 20 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  G          8–1–0         8     +43  E, A, I, J, F, D, B, H
+    2  E          7–1–1       7.5     +44  A, I, J, F, D, B, H
+    3  A          7–2–0         7     +39  C, I, J, F, D, B, H
+    4  C          7–1–1       7.5     +37  G, I, J, F, D, B, H
+    5  I          5–4–0         5      +3  J, F, D, B, H
+    6  J          4–5–0         4      -5  F, D, B, H
+    7  F          2–6–1       2.5     -26  B, H
+    8  D          2–6–1       2.5     -42  B, H
+    9  B          1–8–0         1     -41  H
+   10  H          0–9–0         0     -52  —
+
+Winner — Ranked Robin (RCV-RR): G
+   the most head-to-head wins (8).

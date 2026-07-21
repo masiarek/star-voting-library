@@ -1,0 +1,87 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 149 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F, G, H, I, J
+    61 × C=F=G=H > E=I=J > A > B > D      (3, 1, 5, 0, 4, 5, 5, 5, 4, 4)
+    50 × A > D > G=H=I > B=C=F=J > E      (5, 1, 1, 4, 0, 1, 2, 2, 2, 1)
+    38 × I > A=J > B=C=H > E > D=G > F      (4, 3, 3, 1, 2, 0, 1, 3, 5, 4)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  beats B   149 –   0
+   A  beats C    88 –  61
+   A  beats D   149 –   0
+   A  beats E    88 –  61
+   A  beats F    88 –  61
+   A  beats G    88 –  61
+   A  beats H    88 –  61
+   I  beats A    99 –  50
+   J  beats A    61 –  50
+   C  beats B    61 –   0
+   B  beats D    99 –  50
+   B  beats E    88 –  61
+   F  beats B    61 –  38
+   G  beats B   111 –  38
+   H  beats B   111 –   0
+   I  beats B   149 –   0
+   J  beats B    99 –   0
+   C  beats D    99 –  50
+   C  beats E   149 –   0
+   C  beats F    38 –   0
+   G  beats C    50 –  38
+   H  beats C    50 –   0
+   I  beats C    88 –  61
+   C  beats J    61 –  38
+   E  beats D    99 –  50
+   D  beats F    88 –  61
+   G  beats D    61 –  50
+   H  beats D    99 –  50
+   I  beats D    99 –  50
+   J  beats D    99 –  50
+   F  beats E   111 –  38
+   G  beats E   111 –  38
+   H  beats E   149 –   0
+   I  beats E    88 –   0
+   J  beats E    88 –   0
+   G  beats F    88 –   0
+   H  beats F    88 –   0
+   I  beats F    88 –  61
+   F  beats J    61 –  38
+   H  beats G    38 –   0
+   G  beats I    61 –  38
+   G  beats J   111 –  38
+   H  beats I    61 –  38
+   H  beats J   111 –  38
+   I  beats J    88 –   0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |        A        |       B        |       C        |       D        |       E        |       F        |       G        |       H        |       I        |       J        |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  A > |       ---       |149 -   0 -   0 | 88 -   0 -  61 |149 -   0 -   0 | 88 -   0 -  61 | 88 -   0 -  61 | 88 -   0 -  61 | 88 -   0 -  61 | 50 -   0 -  99 | 50 -  38 -  61 |
+  B > |   0 -   0 - 149 |      ---       |  0 -  88 -  61 | 99 -   0 -  50 | 88 -   0 -  61 | 38 -  50 -  61 | 38 -   0 - 111 |  0 -  38 - 111 |  0 -   0 - 149 |  0 -  50 -  99 |
+  C > |  61 -   0 -  88 | 61 -  88 -   0 |      ---       | 99 -   0 -  50 |149 -   0 -   0 | 38 - 111 -   0 | 38 -  61 -  50 |  0 -  99 -  50 | 61 -   0 -  88 | 61 -  50 -  38 |
+  D > |   0 -   0 - 149 | 50 -   0 -  99 | 50 -   0 -  99 |      ---       | 50 -   0 -  99 | 88 -   0 -  61 | 50 -  38 -  61 | 50 -   0 -  99 | 50 -   0 -  99 | 50 -   0 -  99 |
+  E > |  61 -   0 -  88 | 61 -   0 -  88 |  0 -   0 - 149 | 99 -   0 -  50 |      ---       | 38 -   0 - 111 | 38 -   0 - 111 |  0 -   0 - 149 |  0 -  61 -  88 |  0 -  61 -  88 |
+  F > |  61 -   0 -  88 | 61 -  50 -  38 |  0 - 111 -  38 | 61 -   0 -  88 |111 -   0 -  38 |      ---       |  0 -  61 -  88 |  0 -  61 -  88 | 61 -   0 -  88 | 61 -  50 -  38 |
+  G > |  61 -   0 -  88 |111 -   0 -  38 | 50 -  61 -  38 | 61 -  38 -  50 |111 -   0 -  38 | 88 -  61 -   0 |      ---       |  0 - 111 -  38 | 61 -  50 -  38 |111 -   0 -  38 |
+  H > |  61 -   0 -  88 |111 -  38 -   0 | 50 -  99 -   0 | 99 -   0 -  50 |149 -   0 -   0 | 88 -  61 -   0 | 38 - 111 -   0 |      ---       | 61 -  50 -  38 |111 -   0 -  38 |
+  I > |  99 -   0 -  50 |149 -   0 -   0 | 88 -   0 -  61 | 99 -   0 -  50 | 88 -  61 -   0 | 88 -   0 -  61 | 38 -  50 -  61 | 38 -  50 -  61 |      ---       | 88 -  61 -   0 |
+  J > |  61 -  38 -  50 | 99 -  50 -   0 | 38 -  50 -  61 | 99 -   0 -  50 | 88 -  61 -   0 | 38 -  50 -  61 | 38 -   0 - 111 | 38 -   0 - 111 |  0 -  61 -  88 |      ---       |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  H          8–1–0         8    +554  I, G, C, J, F, B, D, E
+    2  I          7–2–0         7    +431  A, C, J, F, B, D, E
+    3  A          7–2–0         7    +373  H, G, C, F, B, D, E
+    4  G          7–2–0         7    +288  I, C, J, F, B, D, E
+    5  C          5–4–0         5    +204  J, F, B, D, E
+    6  J          4–5–0         4     -33  A, B, D, E
+    7  F          3–6–0         3    -176  J, B, E
+    8  B          2–7–0         2    -589  D, E
+    9  D          1–8–0         1    -427  F
+   10  E          1–8–0         1    -625  D
+
+Winner — Ranked Robin (RCV-RR): H
+   the most head-to-head wins (8).

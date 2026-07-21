@@ -1,0 +1,109 @@
+======================================================================
+SOURCE FILE:     cycle_C07_medV149_bloc_2.yaml
+TABULATED FILE:  cycle_C07_medV149_bloc_2_tabulated.txt
+======================================================================
+
+election_title: "STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence. 7 candidates, 149 voters, grouped (a few voter factions/blocs). STAR elects F; Ranked Robin elects C. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (C); STAR runs its two score-leaders off (F). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D,E,F,G
+  52:5,0,5,1,2,1,2
+  52:2,0,3,3,1,5,1
+  45:0,5,0,4,3,3,3
+expected_winners:
+  - F
+
+# file: cycle_C07_medV149_bloc_2.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C) ===
+  Auto-generated STAR-vs-Ranked-Robin divergence. 7 candidates, 149 voters, grouped (a few voter factions/blocs). STAR elects F; Ranked Robin elects C. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (C); STAR runs its two score-leaders off (F). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |         A       |        B       |      * C       |        D       |        E       |      * F       |        G       |
+---------------------------------------------------------------------------------------------------------------------------------------------
+                A > |       ---       |104 -   0 -  45 |  0 -  97 -  52 | 52 -   0 -  97 |104 -   0 -  45 | 52 -   0 -  97 |104 -   0 -  45 |
+                B > |  45 -   0 - 104 |      ---       | 45 -   0 - 104 | 45 -   0 - 104 | 45 -   0 - 104 | 45 -   0 - 104 | 45 -   0 - 104 |
+              * C > |  52 -  97 -   0 |104 -   0 -  45 |      ---       | 52 -  52 -  45 |104 -   0 -  45 | 52 -   0 -  97 |104 -   0 -  45 |
+                D > |  97 -   0 -  52 |104 -   0 -  45 | 45 -  52 -  52 |      ---       | 97 -   0 -  52 | 45 -  52 -  52 | 97 -   0 -  52 |
+                E > |  45 -   0 - 104 |104 -   0 -  45 | 45 -   0 - 104 | 52 -   0 -  97 |      ---       | 52 -  45 -  52 |  0 - 149 -   0 |
+              * F > |  97 -   0 -  52 |104 -   0 -  45 | 97 -   0 -  52 | 52 -  52 -  45 | 52 -  45 -  52 |      ---       | 52 -  45 -  52 |
+                G > |  45 -   0 - 104 |104 -   0 -  45 | 45 -   0 - 104 | 52 -   0 -  97 |  0 - 149 -   0 | 52 -  45 -  52 |      ---       |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: F — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = F
+  Choose-One (Plurality) = A   (differs from STAR)
+  Approval               = C   (differs from STAR)
+  RCV-RR                 = C   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C07_medV149_bloc_2_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 149 ballots.
+Count x A,B,C,D,E,F,G
+   52 x 5,0,5,1,2,1,2
+   52 x 2,0,3,3,1,5,1
+   45 x 0,5,0,4,3,3,3
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+A           52    0    0   52    0   45  |   364   2.4
+B           45    0    0    0    0  104  |   225   1.5
+C           52    0   52    0    0   45  |   416   2.8
+D            0   45   52    0   52    0  |   388   2.6
+E            0    0   45   52   52    0  |   291   2.0
+F           52    0   45    0   52    0  |   447   3.0
+G            0    0   45   52   52    0  |   291   2.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   F             -- 447 -- First place
+   C             -- 416 -- Second place
+   D             -- 388
+   A             -- 364
+   E             -- 291
+   G             -- 291
+   B             -- 225
+ F and C advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   F             -- 97 -- First place
+   C             -- 52
+   Equal Support --  0
+ F wins.
+   Runoff math:
+     149  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     149  voters with a preference  (majority = 75)
+           F 97 (65%)  ·  C 52 (35%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ F

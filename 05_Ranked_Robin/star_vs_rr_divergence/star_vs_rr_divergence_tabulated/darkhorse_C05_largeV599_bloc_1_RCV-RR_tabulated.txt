@@ -1,0 +1,43 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 599 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E
+   257 × B > D > C > E > A      (0, 5, 3, 4, 1)
+   230 × A > E > C > B=D      (5, 0, 1, 0, 3)
+    80 × C=E > A > B > D      (3, 2, 5, 0, 5)
+    32 × A > D=E > B=C      (5, 0, 0, 1, 1)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  beats B   342 – 257
+   C  beats A   337 – 262
+   A  beats D   342 – 257
+   E  beats A   337 – 262
+   C  beats B   310 – 257
+   B  beats D   337 –  32
+   E  beats B   342 – 257
+   C  beats D   310 – 289
+   E  beats C   262 – 257
+   E  beats D   310 – 257
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |        A        |       B        |       C        |       D        |       E        |
+---------------------------------------------------------------------------------------------
+  A > |       ---       |342 -   0 - 257 |262 -   0 - 337 |342 -   0 - 257 |262 -   0 - 337 |
+  B > | 257 -   0 - 342 |      ---       |257 -  32 - 310 |337 - 230 -  32 |257 -   0 - 342 |
+  C > | 337 -   0 - 262 |310 -  32 - 257 |      ---       |310 -   0 - 289 |257 -  80 - 262 |
+  D > | 257 -   0 - 342 | 32 - 230 - 337 |289 -   0 - 310 |      ---       |257 -  32 - 310 |
+  E > | 337 -   0 - 262 |342 -   0 - 257 |262 -  80 - 257 |310 -  32 - 257 |      ---       |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  E          4–0–0         4    +218  C, A, B, D
+    2  C          3–1–0         3    +144  A, B, D
+    3  A          2–2–0         2     +20  B, D
+    4  B          1–3–0         1     +82  D
+    5  D          0–4–0         0    -464  —
+
+Winner — Ranked Robin (RCV-RR): E
+   beats every opponent head-to-head — the Condorcet winner.

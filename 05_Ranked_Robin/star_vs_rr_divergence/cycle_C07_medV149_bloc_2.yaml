@@ -1,0 +1,26 @@
+election_title: "STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence. 7 candidates, 149 voters, grouped (a few voter factions/blocs). STAR elects F; Ranked Robin elects C. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (C); STAR runs its two score-leaders off (F). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D,E,F,G
+  52:5,0,5,1,2,1,2
+  52:2,0,3,3,1,5,1
+  45:0,5,0,4,3,3,3
+expected_winners:
+  - F
+
+# file: cycle_C07_medV149_bloc_2.yaml

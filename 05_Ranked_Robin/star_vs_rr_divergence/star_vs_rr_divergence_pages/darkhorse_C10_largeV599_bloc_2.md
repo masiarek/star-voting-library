@@ -1,0 +1,157 @@
+# STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)
+
+*Generated from [`darkhorse_C10_largeV599_bloc_2.yaml`](../darkhorse_C10_largeV599_bloc_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** B
+
+## Scenario
+
+Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 599 voters, grouped (a few voter factions/blocs). STAR elects B; Ranked Robin elects E. CAUSE = DARK HORSE: E is the Condorcet winner (beats every rival head-to-head) but only #3 of 10 by score total (2289 vs leader B 2495) -- a broadly-liked, low-intensity compromise that misses STAR's score finalists (B, F). STAR elects runoff winner B; RR elects the Condorcet winner E. Preference-vs-support: RR rewards ORDER, STAR rewards SUPPORT strength. See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Count:A,B,C,D,E,F,G,H,I,J
+209:3,4,4,0,5,4,1,4,4,4
+173:4,4,5,1,4,4,0,2,2,5
+158:2,5,2,0,2,5,4,2,3,2
+59:2,3,3,0,4,3,2,5,5,3
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+```text
+[Divergence from STAR]
+  STAR                   = B
+  Choose-One (Plurality) = E   (differs from STAR)
+  RCV-IRV                = C   (differs from STAR)
+  RCV-RR (Condorcet)     = E   (differs from STAR)
+  Note: 599 of 599 ballots (100%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: star_vs_rr_divergence_tabulated/darkhorse_C10_largeV599_bloc_2_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/darkhorse_C10_largeV599_bloc_2_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 599 ballots.
+Count x A,B,C,D,E,F,G,H,I,J
+  209 x 3,4,4,0,5,4,1,4,4,4
+  173 x 4,4,5,1,4,4,0,2,2,5
+  158 x 2,5,2,0,2,5,4,2,3,2
+   59 x 2,3,3,0,4,3,2,5,5,3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 2495 -- First place
+   F             -- 2495 -- Second place
+   E             -- 2289
+   C             -- 2194
+   J             -- 2194
+   I             -- 1951
+   H             -- 1793
+   A             -- 1753
+   G             --  959
+   D             --  173
+ B and F advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   B             -- 0 -- Tied for first place
+   F             -- 0 -- Tied for first place
+   Equal Support -- 599
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   B             -- 2495 -- Tied for first place
+   F             -- 2495 -- Tied for first place
+ There's still a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   B             -- 158 -- Tied for first place
+   F             -- 158 -- Tied for first place
+ There's still a two-way tie for first.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['B', 'F']
+  Resolved: ['B'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ B
+```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |         A       |      * B       |        C       |        D       |        E       |      * F       |        G       |        H       |        I       |        J       |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                A > |       ---       |  0 - 173 - 426 |  0 - 158 - 441 |599 -   0 -   0 |  0 - 331 - 268 |  0 - 173 - 426 |382 -  59 - 158 |173 - 158 - 268 |173 -   0 - 426 |  0 - 158 - 441 |
+              * B > | 426 - 173 -   0 |      ---       |158 - 268 - 173 |599 -   0 -   0 |158 - 173 - 268 |  0 - 599 -   0 |599 -   0 -   0 |331 - 209 -  59 |331 - 209 -  59 |158 - 268 - 173 |
+                C > | 441 - 158 -   0 |173 - 268 - 158 |      ---       |599 -   0 -   0 |173 - 158 - 268 |173 - 268 - 158 |441 -   0 - 158 |173 - 367 -  59 |173 - 209 - 217 |  0 - 599 -   0 |
+                D > |   0 -   0 - 599 |  0 -   0 - 599 |  0 -   0 - 599 |      ---       |  0 -   0 - 599 |  0 -   0 - 599 |173 -   0 - 426 |  0 -   0 - 599 |  0 -   0 - 599 |  0 -   0 - 599 |
+                E > | 268 - 331 -   0 |268 - 173 - 158 |268 - 158 - 173 |599 -   0 -   0 |      ---       |268 - 173 - 158 |441 -   0 - 158 |382 - 158 -  59 |382 -   0 - 217 |268 - 158 - 173 |
+              * F > | 426 - 173 -   0 |  0 - 599 -   0 |158 - 268 - 173 |599 -   0 -   0 |158 - 173 - 268 |      ---       |599 -   0 -   0 |331 - 209 -  59 |331 - 209 -  59 |158 - 268 - 173 |
+                G > | 158 -  59 - 382 |  0 -   0 - 599 |158 -   0 - 441 |426 -   0 - 173 |158 -   0 - 441 |  0 -   0 - 599 |      ---       |158 -   0 - 441 |158 -   0 - 441 |158 -   0 - 441 |
+                H > | 268 - 158 - 173 | 59 - 209 - 331 | 59 - 367 - 173 |599 -   0 -   0 | 59 - 158 - 382 | 59 - 209 - 331 |441 -   0 - 158 |      ---       |  0 - 441 - 158 | 59 - 367 - 173 |
+                I > | 426 -   0 - 173 | 59 - 209 - 331 |217 - 209 - 173 |599 -   0 -   0 |217 -   0 - 382 | 59 - 209 - 331 |441 -   0 - 158 |158 - 441 -   0 |      ---       |217 - 209 - 173 |
+                J > | 441 - 158 -   0 |173 - 268 - 158 |  0 - 599 -   0 |599 -   0 -   0 |173 - 158 - 268 |173 - 268 - 158 |441 -   0 - 158 |173 - 367 -  59 |173 - 209 - 217 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: E — STAR elected B instead (E was eliminated in the scoring round)
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+A            0  173  209  217    0    0  |  1753   2.9
+B          158  382   59    0    0    0  |  2495   4.2
+C          173  209   59  158    0    0  |  2194   3.7
+D            0    0    0    0  173  426  |   173   0.3
+E          209  232    0  158    0    0  |  2289   3.8
+F          158  382   59    0    0    0  |  2495   4.2
+G            0  158    0   59  209  173  |   959   1.6
+H           59  209    0  331    0    0  |  1793   3.0
+I           59  209  158  173    0    0  |  1951   3.3
+J          173  209   59  158    0    0  |  2194   3.7
+```
+
+Everything in one file: the [`_tabulated` mirror](../star_vs_rr_divergence_tabulated/darkhorse_C10_largeV599_bloc_2_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C10_largeV599_bloc_2.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [cycle_C03_fewV15_noise_1](cycle_C03_fewV15_noise_1.md) · [cycle_C03_fewV15_noise_2](cycle_C03_fewV15_noise_2.md) · [cycle_C03_medV45_noise_1](cycle_C03_medV45_noise_1.md) · [cycle_C03_medV45_noise_2](cycle_C03_medV45_noise_2.md) · [cycle_C05_fewV15_noise_1](cycle_C05_fewV15_noise_1.md) · [cycle_C05_fewV15_noise_2](cycle_C05_fewV15_noise_2.md) · [cycle_C05_fewV28_bloc_1](cycle_C05_fewV28_bloc_1.md) · [cycle_C05_medV45_noise_1](cycle_C05_medV45_noise_1.md) · [cycle_C05_medV45_noise_2](cycle_C05_medV45_noise_2.md) · [cycle_C07_fewV15_noise_1](cycle_C07_fewV15_noise_1.md) · [cycle_C07_fewV28_bloc_2](cycle_C07_fewV28_bloc_2.md) · [cycle_C07_largeV598_bloc_1](cycle_C07_largeV598_bloc_1.md) · [cycle_C07_medV149_bloc_2](cycle_C07_medV149_bloc_2.md) · [cycle_C10_fewV15_noise_1](cycle_C10_fewV15_noise_1.md) · [cycle_C10_fewV15_noise_2](cycle_C10_fewV15_noise_2.md) · [cycle_C10_fewV28_bloc_1](cycle_C10_fewV28_bloc_1.md) · [cycle_C10_fewV29_bloc_2](cycle_C10_fewV29_bloc_2.md) · [cycle_C10_medV148_bloc_1](cycle_C10_medV148_bloc_1.md) · [cycle_C10_medV149_bloc_2](cycle_C10_medV149_bloc_2.md) · [cycle_C10_medV45_noise_1](cycle_C10_medV45_noise_1.md) · [cycle_C10_medV45_noise_2](cycle_C10_medV45_noise_2.md) · [darkhorse_C03_fewV15_noise_1](darkhorse_C03_fewV15_noise_1.md) · [darkhorse_C05_largeV599_bloc_1](darkhorse_C05_largeV599_bloc_1.md) · [darkhorse_C07_fewV30_bloc_1](darkhorse_C07_fewV30_bloc_1.md) · [darkhorse_C07_largeV597_bloc_1](darkhorse_C07_largeV597_bloc_1.md) · [darkhorse_C07_largeV598_bloc_2](darkhorse_C07_largeV598_bloc_2.md) · [darkhorse_C07_medV147_bloc_1](darkhorse_C07_medV147_bloc_1.md) · [darkhorse_C07_medV45_noise_1](darkhorse_C07_medV45_noise_1.md) · [darkhorse_C10_largeV598_bloc_1](darkhorse_C10_largeV598_bloc_1.md)

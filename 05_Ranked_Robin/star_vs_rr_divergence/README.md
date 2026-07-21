@@ -1,66 +1,69 @@
 # STAR vs Ranked Robin — 30 divergence samples (auto-generated)
 
-*A dump of **30 small elections where STAR and [Ranked Robin](../README.md) elect different winners**, with the same ballots run through **RCV-IRV, Approval and Plurality** so you can see who sides with whom. The empirical companion to the [STAR-vs-RR divergence simulation](../../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation); every winner here is the **LH engine's**, read from each case's `_tabulated` mirror (`[Divergence from STAR]` block).*
+*30 small elections where **STAR and [Ranked Robin](../README.md) elect different winners**, deliberately spread across candidate-field size, electorate size, and structure — with **RCV-IRV, Approval and Plurality** on the same ballots. Every winner is the LH engine's (from each case's `_tabulated` mirror). **Each YAML's `scenario_description` states the exact cause of its divergence.** Empirical companion to the [STAR-vs-RR simulation](../../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation).*
 
-## The two flavors (why STAR ≠ RR)
+## The spread (what varies)
 
-A Condorcet winner who reaches STAR's runoff wins it, so STAR ≠ RR needs one of two things — and this dump has **15 of each**:
-- **Cycle** — no Condorcet winner exists; RR (Copeland) and STAR resolve the unresolvable differently.
-- **Dark horse** — a Condorcet winner exists but **misses STAR's score top-two** (a broadly-preferred, low-intensity compromise). The [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split; a real [RR limit](../../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md).
+- **Candidate field:** 5 × 3, 6 × 5, 9 × 7, 10 × 10 (few → large).
+- **Electorate:** few (~15–30), medium (~45–150), and large (up to ~600) voters.
+- **Structure:** 15 **grouped** (a few voter factions/blocs) vs 15 **ungrouped** (independent random ballots).
+- **Flavor:** 21 **cycles** + 9 **dark horses** — dark horses are rarer and cluster at *higher candidate counts and grouped electorates* (a broadly-liked compromise only emerges when there's structure to compromise around).
 
-## Who sides with whom (the interesting part)
+## The two causes (also spelled out per file)
 
-On these 30 STAR≠RR elections, the other methods split along the **support-vs-order axis**:
+- **Cycle** — no Condorcet winner (rock-paper-scissors). RR resolves by Copeland/margin; STAR by score-runoff. A structural coin-flip electorate.
+- **Dark horse** — a Condorcet winner exists but **misses STAR's score top-two**: a broadly-preferred, low-intensity compromise. The [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split; a real [RR limit](../../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md).
 
-| method | sides with… |
-|---|---|
-| **Approval** | STAR **15** · RR **6** · neither 9 — the *score* family leans **STAR** |
-| **RCV-IRV** | STAR **9** · RR **16** · neither 5 — the *order* family leans **Ranked Robin** |
-| **Plurality** | STAR **7** · RR **15** · neither 8 — also leans **RR** here |
+## Who sides with whom
 
-**Approval (a score ballot) tracks STAR; IRV and Plurality (which read only order/first-choices) track Ranked Robin.** The STAR-vs-RR fault line *is* the support-vs-order fault line, and the other methods fall on the side that matches how they read the ballot.
+On these 30 STAR≠RR elections, the other three methods **scatter** — there is *no* clean alignment:
+
+| method | agrees w/ STAR | agrees w/ RR | picks a **third** candidate |
+|---|:--:|:--:|:--:|
+| **Approval** | 12 | 8 | **10** |
+| **RCV-IRV** | 12 | 8 | **10** |
+| **Plurality** | 13 | 8 | **9** |
+
+The honest read: all three lean *mildly* toward STAR's winner over RR's, but the striking fact is that **about a third of the time each of them elects a candidate that is *neither* STAR's nor RR's winner** — the field fragments, especially with more candidates. (In a *narrower* 3–5-candidate sample the split looks cleaner — Approval→STAR, IRV/Plurality→RR, matching the support-vs-order intuition — but that alignment **washes out** once large fields are included. So the robust claim is only the modest one: STAR and RR genuinely disagree here, and the other methods don't reliably break the tie for either side.)
 
 ## The table
 
-| file | flavor | STAR | RR | IRV | Approval | Plurality |
-|---|---|:--:|:--:|:--:|:--:|:--:|
-| [`darkhorse_01_c5_v21`](star_vs_rr_divergence_pages/darkhorse_01_c5_v21.md) | dark horse (CW≠STAR) | **A** | **B** | B | A | A |
-| [`darkhorse_02_c4_v15`](star_vs_rr_divergence_pages/darkhorse_02_c4_v15.md) | dark horse (CW≠STAR) | **A** | **C** | C | D | C |
-| [`darkhorse_03_c5_v15`](star_vs_rr_divergence_pages/darkhorse_03_c5_v15.md) | dark horse (CW≠STAR) | **E** | **C** | C | E | C |
-| [`darkhorse_04_c4_v21`](star_vs_rr_divergence_pages/darkhorse_04_c4_v21.md) | dark horse (CW≠STAR) | **D** | **A** | A | B | A |
-| [`darkhorse_05_c5_v21`](star_vs_rr_divergence_pages/darkhorse_05_c5_v21.md) | dark horse (CW≠STAR) | **E** | **B** | B | E | B |
-| [`darkhorse_06_c4_v15`](star_vs_rr_divergence_pages/darkhorse_06_c4_v15.md) | dark horse (CW≠STAR) | **D** | **B** | B | D | B |
-| [`darkhorse_08_c5_v21`](star_vs_rr_divergence_pages/darkhorse_08_c5_v21.md) | dark horse (CW≠STAR) | **C** | **D** | D | C | D |
-| [`darkhorse_10_c5_v21`](star_vs_rr_divergence_pages/darkhorse_10_c5_v21.md) | dark horse (CW≠STAR) | **D** | **E** | C | D | D |
-| [`darkhorse_11_c5_v21`](star_vs_rr_divergence_pages/darkhorse_11_c5_v21.md) | dark horse (CW≠STAR) | **D** | **E** | A | C | A |
-| [`darkhorse_12_c5_v21`](star_vs_rr_divergence_pages/darkhorse_12_c5_v21.md) | dark horse (CW≠STAR) | **B** | **C** | B | B | C |
-| [`darkhorse_15_c5_v21`](star_vs_rr_divergence_pages/darkhorse_15_c5_v21.md) | dark horse (CW≠STAR) | **B** | **A** | A | E | A |
-| [`darkhorse_16_c4_v15`](star_vs_rr_divergence_pages/darkhorse_16_c4_v15.md) | dark horse (CW≠STAR) | **C** | **D** | D | B | D |
-| [`darkhorse_18_c4_v21`](star_vs_rr_divergence_pages/darkhorse_18_c4_v21.md) | dark horse (CW≠STAR) | **D** | **A** | D | A | D |
-| [`darkhorse_19_c4_v15`](star_vs_rr_divergence_pages/darkhorse_19_c4_v15.md) | dark horse (CW≠STAR) | **C** | **D** | D | B | B |
-| [`darkhorse_20_c5_v15`](star_vs_rr_divergence_pages/darkhorse_20_c5_v15.md) | dark horse (CW≠STAR) | **B** | **C** | B | B | B |
-| [`cycle_01_c5_v21`](star_vs_rr_divergence_pages/cycle_01_c5_v21.md) | cycle (no CW) | **D** | **C** | B | D | B |
-| [`cycle_02_c5_v15`](star_vs_rr_divergence_pages/cycle_02_c5_v15.md) | cycle (no CW) | **D** | **C** | C | C | C |
-| [`cycle_03_c5_v21`](star_vs_rr_divergence_pages/cycle_03_c5_v21.md) | cycle (no CW) | **E** | **A** | A | D | D |
-| [`cycle_04_c5_v21`](star_vs_rr_divergence_pages/cycle_04_c5_v21.md) | cycle (no CW) | **E** | **A** | A | E | A |
-| [`cycle_05_c5_v15`](star_vs_rr_divergence_pages/cycle_05_c5_v15.md) | cycle (no CW) | **B** | **D** | A | D | B |
-| [`cycle_06_c4_v21`](star_vs_rr_divergence_pages/cycle_06_c4_v21.md) | cycle (no CW) | **C** | **D** | C | C | D |
-| [`cycle_07_c4_v21`](star_vs_rr_divergence_pages/cycle_07_c4_v21.md) | cycle (no CW) | **C** | **B** | A | B | A |
-| [`cycle_09_c3_v21`](star_vs_rr_divergence_pages/cycle_09_c3_v21.md) | cycle (no CW) | **A** | **B** | B | C | B |
-| [`cycle_10_c4_v15`](star_vs_rr_divergence_pages/cycle_10_c4_v15.md) | cycle (no CW) | **C** | **A** | C | A | A |
-| [`cycle_11_c4_v21`](star_vs_rr_divergence_pages/cycle_11_c4_v21.md) | cycle (no CW) | **D** | **A** | D | A | B |
-| [`cycle_12_c3_v15`](star_vs_rr_divergence_pages/cycle_12_c3_v15.md) | cycle (no CW) | **B** | **C** | C | B | A |
-| [`cycle_13_c5_v21`](star_vs_rr_divergence_pages/cycle_13_c5_v21.md) | cycle (no CW) | **E** | **A** | A | B | A |
-| [`cycle_14_c3_v21`](star_vs_rr_divergence_pages/cycle_14_c3_v21.md) | cycle (no CW) | **A** | **B** | A | A | A |
-| [`cycle_15_c5_v21`](star_vs_rr_divergence_pages/cycle_15_c5_v21.md) | cycle (no CW) | **C** | **D** | C | C | B |
-| [`cycle_16_c3_v15`](star_vs_rr_divergence_pages/cycle_16_c3_v15.md) | cycle (no CW) | **A** | **C** | A | A | A |
+| flavor | cands | voters | electorate | STAR | RR | IRV | Appr | Plur | file |
+|---|:--:|:--:|---|:--:|:--:|:--:|:--:|:--:|---|
+| cycle | 3 | 15 | random | **A** | **B** | A | A | A | [`cycle_C03_fewV15_noise_1`](star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_1.md) |
+| cycle | 3 | 15 | random | **A** | **C** | A | A | A | [`cycle_C03_fewV15_noise_2`](star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_2.md) |
+| cycle | 3 | 45 | random | **A** | **B** | A | B | A | [`cycle_C03_medV45_noise_1`](star_vs_rr_divergence_pages/cycle_C03_medV45_noise_1.md) |
+| cycle | 3 | 45 | random | **B** | **C** | A | C | A | [`cycle_C03_medV45_noise_2`](star_vs_rr_divergence_pages/cycle_C03_medV45_noise_2.md) |
+| cycle | 5 | 15 | random | **B** | **E** | A | E | B | [`cycle_C05_fewV15_noise_1`](star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md) |
+| cycle | 5 | 15 | random | **A** | **E** | A | D | A | [`cycle_C05_fewV15_noise_2`](star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_2.md) |
+| cycle | 5 | 28 | grouped | **A** | **C** | A | A | A | [`cycle_C05_fewV28_bloc_1`](star_vs_rr_divergence_pages/cycle_C05_fewV28_bloc_1.md) |
+| cycle | 5 | 45 | random | **A** | **B** | A | E | A | [`cycle_C05_medV45_noise_1`](star_vs_rr_divergence_pages/cycle_C05_medV45_noise_1.md) |
+| cycle | 5 | 45 | random | **D** | **B** | B | B | A | [`cycle_C05_medV45_noise_2`](star_vs_rr_divergence_pages/cycle_C05_medV45_noise_2.md) |
+| cycle | 7 | 15 | random | **D** | **A** | A | A | A | [`cycle_C07_fewV15_noise_1`](star_vs_rr_divergence_pages/cycle_C07_fewV15_noise_1.md) |
+| cycle | 7 | 28 | grouped | **D** | **A** | D | A | D | [`cycle_C07_fewV28_bloc_2`](star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md) |
+| cycle | 7 | 149 | grouped | **F** | **C** | F | C | A | [`cycle_C07_medV149_bloc_2`](star_vs_rr_divergence_pages/cycle_C07_medV149_bloc_2.md) |
+| cycle | 7 | 598 | grouped | **C** | **E** | F | A | A | [`cycle_C07_largeV598_bloc_1`](star_vs_rr_divergence_pages/cycle_C07_largeV598_bloc_1.md) |
+| cycle | 10 | 15 | random | **A** | **C** | H | A | A | [`cycle_C10_fewV15_noise_1`](star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_1.md) |
+| cycle | 10 | 15 | random | **J** | **F** | B | F | G | [`cycle_C10_fewV15_noise_2`](star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_2.md) |
+| cycle | 10 | 28 | grouped | **C** | **F** | C | C | C | [`cycle_C10_fewV28_bloc_1`](star_vs_rr_divergence_pages/cycle_C10_fewV28_bloc_1.md) |
+| cycle | 10 | 29 | grouped | **C** | **B** | B | A | B | [`cycle_C10_fewV29_bloc_2`](star_vs_rr_divergence_pages/cycle_C10_fewV29_bloc_2.md) |
+| cycle | 10 | 45 | random | **E** | **G** | A | C | A | [`cycle_C10_medV45_noise_1`](star_vs_rr_divergence_pages/cycle_C10_medV45_noise_1.md) |
+| cycle | 10 | 45 | random | **A** | **I** | A | A | A | [`cycle_C10_medV45_noise_2`](star_vs_rr_divergence_pages/cycle_C10_medV45_noise_2.md) |
+| cycle | 10 | 148 | grouped | **E** | **G** | J | B | J | [`cycle_C10_medV148_bloc_1`](star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md) |
+| cycle | 10 | 149 | grouped | **I** | **H** | A | A | C | [`cycle_C10_medV149_bloc_2`](star_vs_rr_divergence_pages/cycle_C10_medV149_bloc_2.md) |
+| dark horse | 3 | 15 | random | **A** | **C** | A | A | A | [`darkhorse_C03_fewV15_noise_1`](star_vs_rr_divergence_pages/darkhorse_C03_fewV15_noise_1.md) |
+| dark horse | 5 | 599 | grouped | **A** | **E** | A | A | A | [`darkhorse_C05_largeV599_bloc_1`](star_vs_rr_divergence_pages/darkhorse_C05_largeV599_bloc_1.md) |
+| dark horse | 7 | 30 | grouped | **D** | **C** | C | D | C | [`darkhorse_C07_fewV30_bloc_1`](star_vs_rr_divergence_pages/darkhorse_C07_fewV30_bloc_1.md) |
+| dark horse | 7 | 45 | random | **E** | **A** | A | E | A | [`darkhorse_C07_medV45_noise_1`](star_vs_rr_divergence_pages/darkhorse_C07_medV45_noise_1.md) |
+| dark horse | 7 | 147 | grouped | **F** | **D** | D | F | D | [`darkhorse_C07_medV147_bloc_1`](star_vs_rr_divergence_pages/darkhorse_C07_medV147_bloc_1.md) |
+| dark horse | 7 | 597 | grouped | **D** | **E** | B | C | B | [`darkhorse_C07_largeV597_bloc_1`](star_vs_rr_divergence_pages/darkhorse_C07_largeV597_bloc_1.md) |
+| dark horse | 7 | 598 | grouped | **E** | **G** | G | A | G | [`darkhorse_C07_largeV598_bloc_2`](star_vs_rr_divergence_pages/darkhorse_C07_largeV598_bloc_2.md) |
+| dark horse | 10 | 598 | grouped | **G** | **F** | F | D | F | [`darkhorse_C10_largeV598_bloc_1`](star_vs_rr_divergence_pages/darkhorse_C10_largeV598_bloc_1.md) |
+| dark horse | 10 | 599 | grouped | **B** | **E** | C | B | E | [`darkhorse_C10_largeV599_bloc_2`](star_vs_rr_divergence_pages/darkhorse_C10_largeV599_bloc_2.md) |
 
 ## Caveats (read before quoting)
 
-- **Auto-generated, tiny electorates** (15–21 voters, 3–5 candidates, sincere normalized 0–5 scores) — a stress test, not real elections. They exist to *show the mechanism*, not to estimate a rate (that's the [simulation](../../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation)).
-- **The IRV column is noisy.** With so few voters and a 0–5 scale, many ballots have **equal scores**, so the rank IRV reads is often decided by candidate-priority tie-breaking — the engine flags this per case (`Note: … equal non-zero scores … may be an artifact`). STAR, RR and Approval read the scores/pairwise directly and are robust; treat IRV here as indicative.
-- RR = Copeland (LH's margin-then-lot tiebreak); STAR and RR winners are the engine's.
-
-## Reproduce / regenerate
-
-The generator and the winner-parser are ad-hoc (scratch) scripts; the *reproducible* study is [`06_Other/simulations/star_vs_rr_divergence.py`](../../06_Other/simulations/star_vs_rr_divergence.py). Each case here is a normal STAR YAML — re-run any with the LH engine to see the full `[Divergence from STAR]` block, the pairwise matrix, and the IRV rounds.
+- **Auto-generated stress tests, not real elections** — they show the *mechanism*; for a *rate*, use the [simulation](../../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation).
+- **The IRV column is noisy.** On small/tied score ballots the rank IRV reads is often decided by candidate-priority tie-breaking (the engine flags it per case). STAR, RR and Approval read scores/pairwise directly and are robust.
+- RR = Copeland (LH's margin-then-lot tiebreak); STAR/RR winners are the engine's. Sincere normalized 0–5 scores.
+- Each case is a normal STAR YAML — re-run it with the LH engine to see the full `[Divergence from STAR]` block, the pairwise matrix, and the IRV rounds.

@@ -1,0 +1,27 @@
+election_title: "STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)"
+scenario_description: |-
+  Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 599 voters, grouped (a few voter factions/blocs). STAR elects B; Ranked Robin elects E. CAUSE = DARK HORSE: E is the Condorcet winner (beats every rival head-to-head) but only #3 of 10 by score total (2289 vs leader B 2495) -- a broadly-liked, low-intensity compromise that misses STAR's score finalists (B, F). STAR elects runoff winner B; RR elects the Condorcet winner E. Preference-vs-support: RR rewards ORDER, STAR rewards SUPPORT strength. See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+paradoxes: [condorcet-winner]
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "x"
+ballots: |-
+  Count:A,B,C,D,E,F,G,H,I,J
+  209:3,4,4,0,5,4,1,4,4,4
+  173:4,4,5,1,4,4,0,2,2,5
+  158:2,5,2,0,2,5,4,2,3,2
+  59:2,3,3,0,4,3,2,5,5,3
+expected_winners:
+  - B
+
+# file: darkhorse_C10_largeV599_bloc_2.yaml

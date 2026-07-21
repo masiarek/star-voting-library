@@ -1,0 +1,124 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs RR divergence -- 7 cands, 45 voters, darkhorse (STAR E, RR A)
+ Tabulating 45 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D, E, F, G
+     1 ×   D > A > C > E > G > B      (3, 1, 3, 5, 3, 0, 3)
+     1 ×   A > F > G > B      (5, 1, 0, 0, 0, 2, 2)
+     1 ×   C > D > A > B > E > F > G      (3, 2, 4, 4, 2, 2, 2)
+     1 ×   A > D > E > B > F > G      (4, 1, 0, 2, 2, 1, 1)
+     1 ×   F > A > B > C > D > E > G      (2, 2, 2, 2, 1, 4, 1)
+     1 ×   F > G > C > A > B > D > E      (2, 1, 3, 1, 1, 4, 4)
+     1 ×   E > A > D > F > G > B > C      (3, 1, 1, 3, 5, 3, 3)
+     1 ×   F > A > B > G > C > D > E      (4, 3, 1, 1, 1, 5, 3)
+     1 ×   B > F > E > G > D > A      (1, 4, 0, 2, 3, 4, 3)
+     1 ×   G > A > D > C > E > F      (4, 0, 3, 4, 2, 1, 5)
+     1 ×   C > E > A > D > F > B > G      (3, 1, 4, 3, 4, 2, 1)
+     1 ×   A > B > D > E > C > G > F      (4, 3, 2, 3, 3, 1, 2)
+     1 ×   B > D > G > E > C      (0, 5, 1, 4, 3, 0, 4)
+     1 ×   D > F > C > E > G > B > A      (1, 2, 4, 5, 4, 5, 4)
+     1 ×   G > C > E > B > D > F      (0, 3, 4, 3, 4, 2, 5)
+     1 ×   A > G > D > F > B > C      (5, 1, 1, 2, 0, 2, 3)
+     1 ×   B > C > E > G > F      (0, 4, 4, 0, 4, 1, 4)
+     1 ×   A > D > F > C > E > G > B      (5, 1, 2, 5, 2, 4, 2)
+     1 ×   F > D > E > C > A > G      (1, 0, 2, 3, 3, 4, 1)
+     1 ×   G > B > A > C > E > D > F      (3, 4, 3, 1, 3, 1, 5)
+     1 ×   A > C > E > G > F > B > D      (5, 1, 4, 1, 4, 2, 4)
+     1 ×   B > C > A > E > G      (2, 3, 3, 0, 2, 0, 2)
+     1 ×   C > E > D > F > G      (0, 0, 3, 2, 3, 1, 1)
+     1 ×   A > G > E > C > F > B > D      (4, 1, 2, 1, 3, 2, 4)
+     1 ×   B > D > A > E > G > C      (3, 4, 1, 4, 2, 0, 2)
+     1 ×   A > F > E > D > G > B      (4, 1, 0, 2, 3, 4, 2)
+     1 ×   D > F > B > C > G > A      (2, 4, 4, 5, 0, 5, 3)
+     1 ×   B > D > F > A > C > E      (2, 5, 1, 3, 1, 3, 0)
+     1 ×   E > F > A > B > C > D > G      (2, 1, 1, 1, 4, 3, 1)
+     1 ×   A > C > D > E > F      (1, 0, 1, 1, 1, 1, 0)
+     1 ×   E > G > F > D > B > C      (0, 1, 1, 2, 4, 3, 4)
+     1 ×   E > C > F > G > A > D      (2, 0, 4, 2, 5, 4, 4)
+     1 ×   B > A > D > E > F > C      (3, 4, 1, 2, 2, 2, 0)
+     1 ×   A > G > C > D > E > B      (4, 1, 3, 2, 2, 0, 4)
+     1 ×   B > E > G > D > A > F      (1, 4, 0, 2, 4, 1, 3)
+     1 ×   C > F > E > G > A > D      (1, 0, 5, 1, 3, 4, 2)
+     1 ×   C > D > G > A > E > F      (1, 0, 5, 5, 1, 1, 3)
+     1 ×   A > B > F > D > C > E > G      (4, 4, 2, 3, 2, 4, 1)
+     1 ×   D > G > B > E > A > C > F      (1, 3, 1, 4, 3, 1, 4)
+     1 ×   E > F > G > A > B > C > D      (1, 1, 1, 1, 5, 3, 3)
+     1 ×   A > E > C > F > B > D > G      (4, 1, 2, 1, 4, 2, 1)
+     1 ×   A > C > E > F > G > D      (5, 0, 4, 2, 4, 3, 3)
+     1 ×   E > B > D      (0, 1, 0, 1, 3, 0, 0)
+     1 ×   E > A > D > G > C > F > B      (4, 2, 3, 4, 5, 3, 4)
+     1 ×   B > F > A > E > G > C      (2, 3, 1, 0, 2, 3, 2)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                 13  Hopeful
+B                  9  Hopeful
+E                  7  Hopeful
+C                  5  Hopeful
+F                  4  Hopeful
+D                  4  Hopeful
+G                  3  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+A                 14  Hopeful
+B                 10  Hopeful
+E                  7  Hopeful
+C                  6  Hopeful
+D                  4  Hopeful
+F                  4  Rejected
+G                  0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+A                 16  Hopeful
+B                 10  Hopeful
+E                  7  Hopeful
+C                  7  Hopeful
+D                  5  Rejected
+F                  0  Rejected
+G                  0  Rejected
+
+ROUND 4
+Candidate      Votes  Status
+-----------  -------  --------
+A                 17  Hopeful
+B                 12  Hopeful
+E                  8  Hopeful
+C                  8  Rejected
+D                  0  Rejected
+F                  0  Rejected
+G                  0  Rejected
+
+ROUND 5
+Candidate      Votes  Status
+-----------  -------  --------
+A                 20  Hopeful
+E                 13  Hopeful
+B                 12  Rejected
+C                  0  Rejected
+D                  0  Rejected
+F                  0  Rejected
+G                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 27  Elected
+E                 18  Rejected
+B                  0  Rejected
+C                  0  Rejected
+D                  0  Rejected
+F                  0  Rejected
+G                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

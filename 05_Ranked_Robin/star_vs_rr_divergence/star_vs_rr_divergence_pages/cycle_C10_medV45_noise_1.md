@@ -1,0 +1,225 @@
+# STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR E, RR G)
+
+*Generated from [`cycle_C10_medV45_noise_1.yaml`](../cycle_C10_medV45_noise_1.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** E
+
+## Scenario
+
+Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 45 voters, ungrouped (independent random ballots). STAR elects E; Ranked Robin elects G. CAUSE = CONDORCET CYCLE: no candidate beats all others (A>C>G>A), so there is no 'right' winner. RR falls back on Copeland/margin (G); STAR runs its two score-leaders off (E). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Count:A,B,C,D,E,F,G,H,I,J
+1:4,0,2,1,3,1,4,4,1,1
+1:2,4,5,4,0,3,1,3,2,3
+1:4,4,1,1,4,3,2,0,1,2
+1:3,3,4,1,5,5,2,0,4,4
+1:4,3,3,1,2,4,3,1,2,4
+1:2,4,5,3,2,1,5,5,1,4
+1:4,1,5,2,5,3,2,3,4,0
+1:1,4,0,5,1,0,1,1,5,5
+1:4,4,3,0,3,0,3,4,2,1
+1:2,5,1,5,4,3,2,2,2,5
+1:0,2,5,2,2,5,1,2,5,3
+1:2,2,2,2,3,4,1,2,5,1
+1:5,3,4,2,2,1,1,2,5,3
+1:1,3,1,3,2,1,4,1,1,0
+1:3,2,2,3,2,3,4,1,3,1
+1:1,2,1,1,4,2,4,1,2,2
+1:4,4,5,3,4,1,4,2,3,2
+1:0,4,2,2,5,5,0,2,3,2
+1:5,1,3,5,5,4,4,4,2,3
+1:5,4,2,1,2,0,5,4,3,4
+1:3,4,4,2,3,3,3,0,1,2
+1:4,1,4,1,4,1,5,3,2,3
+1:2,3,3,5,4,5,4,2,3,2
+1:5,1,4,2,1,3,2,1,5,3
+1:2,2,2,5,3,3,4,1,4,3
+1:5,1,5,0,2,3,4,2,4,1
+1:1,3,1,4,5,2,4,2,3,2
+1:2,3,3,4,0,3,3,1,4,1
+1:0,4,3,1,1,5,2,2,2,3
+1:2,1,0,5,3,1,5,4,3,3
+1:5,2,3,3,3,2,2,5,1,4
+1:3,2,1,1,4,4,1,3,2,1
+1:2,2,1,2,5,1,3,0,4,3
+1:3,3,4,1,0,4,4,1,2,1
+1:0,0,3,0,0,1,0,4,4,1
+1:2,2,4,1,3,2,3,2,3,3
+1:3,0,5,4,4,4,4,0,4,4
+1:4,1,4,4,3,1,1,4,1,3
+1:3,2,0,3,2,3,5,5,4,3
+1:5,2,0,4,5,1,1,5,1,3
+1:3,0,4,0,2,1,5,4,2,5
+1:3,3,3,1,4,2,2,1,1,4
+1:5,3,4,3,4,4,1,4,1,4
+1:2,1,4,2,2,0,3,5,4,4
+1:5,3,3,4,2,1,4,3,0,3
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+```text
+[Divergence from STAR]
+  STAR                   = E
+  Choose-One (Plurality) = A   (differs from STAR)
+  RCV-IRV                = A   (differs from STAR)
+  Approval               = C   (differs from STAR)
+  RCV-RR                 = G   (differs from STAR)
+  Note: 45 of 45 ballots (100%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: star_vs_rr_divergence_tabulated/cycle_C10_medV45_noise_1_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C10_medV45_noise_1_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (A)
+ - Runoff Round Winner   = (E)
+  Candidate A earned the highest total score, but
+  Candidate E won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 45 ballots.
+A,B,C,D,E,F,G,H,I,J
+4,0,2,1,3,1,4,4,1,1
+2,4,5,4,0,3,1,3,2,3
+4,4,1,1,4,3,2,0,1,2
+3,3,4,1,5,5,2,0,4,4
+4,3,3,1,2,4,3,1,2,4
+2,4,5,3,2,1,5,5,1,4
+4,1,5,2,5,3,2,3,4,0
+1,4,0,5,1,0,1,1,5,5
+4,4,3,0,3,0,3,4,2,1
+2,5,1,5,4,3,2,2,2,5
+0,2,5,2,2,5,1,2,5,3
+2,2,2,2,3,4,1,2,5,1
+5,3,4,2,2,1,1,2,5,3
+1,3,1,3,2,1,4,1,1,0
+3,2,2,3,2,3,4,1,3,1
+1,2,1,1,4,2,4,1,2,2
+4,4,5,3,4,1,4,2,3,2
+0,4,2,2,5,5,0,2,3,2
+5,1,3,5,5,4,4,4,2,3
+5,4,2,1,2,0,5,4,3,4
+3,4,4,2,3,3,3,0,1,2
+4,1,4,1,4,1,5,3,2,3
+2,3,3,5,4,5,4,2,3,2
+5,1,4,2,1,3,2,1,5,3
+2,2,2,5,3,3,4,1,4,3
+5,1,5,0,2,3,4,2,4,1
+1,3,1,4,5,2,4,2,3,2
+2,3,3,4,0,3,3,1,4,1
+0,4,3,1,1,5,2,2,2,3
+2,1,0,5,3,1,5,4,3,3
+5,2,3,3,3,2,2,5,1,4
+3,2,1,1,4,4,1,3,2,1
+2,2,1,2,5,1,3,0,4,3
+3,3,4,1,0,4,4,1,2,1
+0,0,3,0,0,1,0,4,4,1
+2,2,4,1,3,2,3,2,3,3
+3,0,5,4,4,4,4,0,4,4
+4,1,4,4,3,1,1,4,1,3
+3,2,0,3,2,3,5,5,4,3
+5,2,0,4,5,1,1,5,1,3
+3,0,4,0,2,1,5,4,2,5
+3,3,3,1,4,2,2,1,1,4
+5,3,4,3,4,4,1,4,1,4
+2,1,4,2,2,0,3,5,4,4
+5,3,3,4,2,1,4,3,0,3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 130 -- First place
+   E             -- 129 -- Second place
+   C             -- 128
+   G             -- 128
+   I             -- 121
+   J             -- 119
+   D             -- 109
+   F             -- 109
+   B             -- 108
+   H             -- 108
+ A and E advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   E             -- 18 -- First place
+   A             -- 17
+   Equal Support -- 10
+ E wins.
+   Runoff math:
+     45  ballots cast
+   − 10  Equal Support (no preference between the two finalists)
+     ──
+     35  voters with a preference  (majority = 18)
+           E 18 (51%)  ·  A 17 (49%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ E
+```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |     * A      |      B      |      C      |      D      |    * E      |      F      |      G      |      H      |      I      |      J      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+           * A > |     ---      |21 - 11 - 13 |19 -  9 - 17 |22 -  9 - 14 |17 - 10 - 18 |23 -  6 - 16 |18 -  8 - 19 |21 - 13 - 11 |20 -  7 - 18 |23 -  3 - 19 |
+             B > | 13 - 11 - 21 |    ---      |15 -  9 - 21 |17 - 10 - 18 |14 -  7 - 24 |17 -  7 - 21 |16 -  6 - 23 |21 -  8 - 16 |18 -  5 - 22 |16 -  7 - 22 |
+             C > | 17 -  9 - 19 |21 -  9 - 15 |    ---      |24 -  7 - 14 |19 -  7 - 19 |21 -  7 - 17 |20 -  6 - 19 |22 -  9 - 14 |21 -  6 - 18 |22 -  8 - 15 |
+             D > | 14 -  9 - 22 |18 - 10 - 17 |14 -  7 - 24 |    ---      |15 -  8 - 22 |19 -  7 - 19 |15 -  8 - 22 |19 -  9 - 17 |15 -  8 - 22 |15 -  9 - 21 |
+           * E > | 18 - 10 - 17 |24 -  7 - 14 |19 -  7 - 19 |22 -  8 - 15 |    ---      |25 -  7 - 13 |17 -  9 - 19 |22 -  7 - 16 |24 -  5 - 16 |20 -  7 - 18 |
+             F > | 16 -  6 - 23 |21 -  7 - 17 |17 -  7 - 21 |19 -  7 - 19 |13 -  7 - 25 |    ---      |15 - 10 - 20 |21 -  7 - 17 |16 -  9 - 20 |16 - 11 - 18 |
+             G > | 19 -  8 - 18 |23 -  6 - 16 |19 -  6 - 20 |22 -  8 - 15 |19 -  9 - 17 |20 - 10 - 15 |    ---      |24 -  7 - 14 |22 -  9 - 14 |21 -  7 - 17 |
+             H > | 11 - 13 - 21 |16 -  8 - 21 |14 -  9 - 22 |17 -  9 - 19 |16 -  7 - 22 |17 -  7 - 21 |14 -  7 - 24 |    ---      |17 -  5 - 23 |16 - 12 - 17 |
+             I > | 18 -  7 - 20 |22 -  5 - 18 |18 -  6 - 21 |22 -  8 - 15 |16 -  5 - 24 |20 -  9 - 16 |14 -  9 - 22 |23 -  5 - 17 |    ---      |20 -  8 - 17 |
+             J > | 19 -  3 - 23 |22 -  7 - 16 |15 -  8 - 22 |21 -  9 - 15 |18 -  7 - 20 |18 - 11 - 16 |17 -  7 - 21 |17 - 12 - 16 |17 -  8 - 20 |    ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: A > C > G > A)
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+A           9   8   9  11   4   4  |   130   2.9
+B           1  10  11  11   8   4  |   108   2.4
+C           7  11  10   6   7   4  |   128   2.8
+D           6   7   7   9  12   4  |   109   2.4
+E           7  10   9  12   3   4  |   129   2.9
+F           5   7  11   5  13   4  |   109   2.4
+G           6  13   7   8   9   2  |   128   2.8
+H           5   9   5  11  10   5  |   108   2.4
+I           5  10   8  11  10   1  |   121   2.7
+J           3   9  15   7   9   2  |   119   2.6
+```
+
+Everything in one file: the [`_tabulated` mirror](../star_vs_rr_divergence_tabulated/cycle_C10_medV45_noise_1_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_medV45_noise_1.yaml
+```
+
+## See also
+
+- [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
+- [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
+
+More cases in this set: [cycle_C03_fewV15_noise_1](cycle_C03_fewV15_noise_1.md) · [cycle_C03_fewV15_noise_2](cycle_C03_fewV15_noise_2.md) · [cycle_C03_medV45_noise_1](cycle_C03_medV45_noise_1.md) · [cycle_C03_medV45_noise_2](cycle_C03_medV45_noise_2.md) · [cycle_C05_fewV15_noise_1](cycle_C05_fewV15_noise_1.md) · [cycle_C05_fewV15_noise_2](cycle_C05_fewV15_noise_2.md) · [cycle_C05_fewV28_bloc_1](cycle_C05_fewV28_bloc_1.md) · [cycle_C05_medV45_noise_1](cycle_C05_medV45_noise_1.md) · [cycle_C05_medV45_noise_2](cycle_C05_medV45_noise_2.md) · [cycle_C07_fewV15_noise_1](cycle_C07_fewV15_noise_1.md) · [cycle_C07_fewV28_bloc_2](cycle_C07_fewV28_bloc_2.md) · [cycle_C07_largeV598_bloc_1](cycle_C07_largeV598_bloc_1.md) · [cycle_C07_medV149_bloc_2](cycle_C07_medV149_bloc_2.md) · [cycle_C10_fewV15_noise_1](cycle_C10_fewV15_noise_1.md) · [cycle_C10_fewV15_noise_2](cycle_C10_fewV15_noise_2.md) · [cycle_C10_fewV28_bloc_1](cycle_C10_fewV28_bloc_1.md) · [cycle_C10_fewV29_bloc_2](cycle_C10_fewV29_bloc_2.md) · [cycle_C10_medV148_bloc_1](cycle_C10_medV148_bloc_1.md) · [cycle_C10_medV149_bloc_2](cycle_C10_medV149_bloc_2.md) · [cycle_C10_medV45_noise_2](cycle_C10_medV45_noise_2.md) · [darkhorse_C03_fewV15_noise_1](darkhorse_C03_fewV15_noise_1.md) · [darkhorse_C05_largeV599_bloc_1](darkhorse_C05_largeV599_bloc_1.md) · [darkhorse_C07_fewV30_bloc_1](darkhorse_C07_fewV30_bloc_1.md) · [darkhorse_C07_largeV597_bloc_1](darkhorse_C07_largeV597_bloc_1.md) · [darkhorse_C07_largeV598_bloc_2](darkhorse_C07_largeV598_bloc_2.md) · [darkhorse_C07_medV147_bloc_1](darkhorse_C07_medV147_bloc_1.md) · [darkhorse_C07_medV45_noise_1](darkhorse_C07_medV45_noise_1.md) · [darkhorse_C10_largeV598_bloc_1](darkhorse_C10_largeV598_bloc_1.md) · [darkhorse_C10_largeV599_bloc_2](darkhorse_C10_largeV599_bloc_2.md)

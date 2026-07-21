@@ -1,0 +1,58 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 598 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E, F, G
+   215 × A=C > E > B=F > G > D      (5, 3, 5, 0, 4, 3, 1)
+   177 × B > C=E=F > A > D > G      (3, 5, 4, 2, 4, 4, 0)
+   146 × F > B=E > A=C > D > G      (3, 4, 3, 2, 4, 5, 0)
+    60 × F > E > A=C=G > B > D      (3, 2, 3, 0, 4, 5, 3)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   B  beats A   323 – 275
+   C  beats A   177 –   0
+   A  beats D   598 –   0
+   E  beats A   383 – 215
+   F  beats A   383 – 215
+   A  beats G   538 –   0
+   B  beats C   323 – 275
+   B  beats D   598 –   0
+   E  beats B   275 – 177
+   F  beats B   206 – 177
+   B  beats G   538 –  60
+   C  beats D   598 –   0
+   C  beats E   215 – 206
+   C  beats F   215 – 206
+   C  beats G   538 –   0
+   E  beats D   598 –   0
+   F  beats D   598 –   0
+   D  beats G   323 – 275
+   E  beats F   215 – 206
+   E  beats G   598 –   0
+   F  beats G   598 –   0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |        A        |       B        |       C        |       D        |       E        |       F        |       G        |
+-------------------------------------------------------------------------------------------------------------------------------
+  A > |       ---       |275 -   0 - 323 |  0 - 421 - 177 |598 -   0 -   0 |215 -   0 - 383 |215 -   0 - 383 |538 -  60 -   0 |
+  B > | 323 -   0 - 275 |      ---       |323 -   0 - 275 |598 -   0 -   0 |177 - 146 - 275 |177 - 215 - 206 |538 -   0 -  60 |
+  C > | 177 - 421 -   0 |275 -   0 - 323 |      ---       |598 -   0 -   0 |215 - 177 - 206 |215 - 177 - 206 |538 -  60 -   0 |
+  D > |   0 -   0 - 598 |  0 -   0 - 598 |  0 -   0 - 598 |      ---       |  0 -   0 - 598 |  0 -   0 - 598 |323 -   0 - 275 |
+  E > | 383 -   0 - 215 |275 - 146 - 177 |206 - 177 - 215 |598 -   0 -   0 |      ---       |215 - 177 - 206 |598 -   0 -   0 |
+  F > | 383 -   0 - 215 |206 - 215 - 177 |206 - 177 - 215 |598 -   0 -   0 |206 - 177 - 215 |      ---       |598 -   0 -   0 |
+  G > |   0 -  60 - 538 | 60 -   0 - 538 |  0 -  60 - 538 |275 -   0 - 323 |  0 -   0 - 598 |  0 -   0 - 598 |      ---       |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  E          5–1–0         5   +1462  F, B, A, D, G
+    2  C          5–1–0         5   +1283  E, F, A, D, G
+    3  F          4–2–0         4   +1375  B, A, D, G
+    4  B          4–2–0         4   +1045  C, A, D, G
+    5  A          2–4–0         2    +575  D, G
+    6  D          1–5–0         1   -2942  G
+    7  G          0–6–0         0   -2798  —
+
+Winner — Ranked Robin (RCV-RR): E
+   *** 2 candidates tie for the most wins (C, E) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

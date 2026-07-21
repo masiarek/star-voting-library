@@ -206,37 +206,37 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | clone_teaming_01_pre | Clone independence (1/2) — before cloning: A, B, C t | 1 | single-race | 33 | RankedRobin | LH-only |
 | clone_teaming_02_post | Clone independence (2/2) — teaming: A runs clones an | 1 | single-race | 33 | RankedRobin | LH-only |
 | count_simplicity_star_vs_irv | Same winner, very different counts — STAR adds, IRV  | 1 | single-race | 40 | STAR | LH-only |
-| cycle_01_c5_v21 | STAR vs Ranked Robin divergence — cycle_01_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_02_c5_v15 | STAR vs Ranked Robin divergence — cycle_02_c5_v15 (S | 1 | single-race | 15 | STAR | LH-only |
-| cycle_03_c5_v21 | STAR vs Ranked Robin divergence — cycle_03_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_04_c5_v21 | STAR vs Ranked Robin divergence — cycle_04_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_05_c5_v15 | STAR vs Ranked Robin divergence — cycle_05_c5_v15 (S | 1 | single-race | 15 | STAR | LH-only |
-| cycle_06_c4_v21 | STAR vs Ranked Robin divergence — cycle_06_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_07_c4_v21 | STAR vs Ranked Robin divergence — cycle_07_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_09_c3_v21 | STAR vs Ranked Robin divergence — cycle_09_c3_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_10_c4_v15 | STAR vs Ranked Robin divergence — cycle_10_c4_v15 (S | 1 | single-race | 15 | STAR | LH-only |
-| cycle_11_c4_v21 | STAR vs Ranked Robin divergence — cycle_11_c4_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_12_c3_v15 | STAR vs Ranked Robin divergence — cycle_12_c3_v15 (S | 1 | single-race | 15 | STAR | LH-only |
-| cycle_13_c5_v21 | STAR vs Ranked Robin divergence — cycle_13_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_14_c3_v21 | STAR vs Ranked Robin divergence — cycle_14_c3_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_15_c5_v21 | STAR vs Ranked Robin divergence — cycle_15_c5_v21 (S | 1 | single-race | 21 | STAR | LH-only |
-| cycle_16_c3_v15 | STAR vs Ranked Robin divergence — cycle_16_c3_v15 (S | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C03_fewV15_noise_1 | STAR vs RR divergence -- 3 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C03_fewV15_noise_2 | STAR vs RR divergence -- 3 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C03_medV45_noise_1 | STAR vs RR divergence -- 3 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
+| cycle_C03_medV45_noise_2 | STAR vs RR divergence -- 3 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
+| cycle_C05_fewV15_noise_1 | STAR vs RR divergence -- 5 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C05_fewV15_noise_2 | STAR vs RR divergence -- 5 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C05_fewV28_bloc_1 | STAR vs RR divergence -- 5 cands, 28 voters, cycle ( | 1 | single-race | 28 | STAR | LH-only |
+| cycle_C05_medV45_noise_1 | STAR vs RR divergence -- 5 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
+| cycle_C05_medV45_noise_2 | STAR vs RR divergence -- 5 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
+| cycle_C07_fewV15_noise_1 | STAR vs RR divergence -- 7 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C07_fewV28_bloc_2 | STAR vs RR divergence -- 7 cands, 28 voters, cycle ( | 1 | single-race | 28 | STAR | LH-only |
+| cycle_C07_largeV598_bloc_1 | STAR vs RR divergence -- 7 cands, 598 voters, cycle  | 1 | single-race | 598 | STAR | LH-only |
+| cycle_C07_medV149_bloc_2 | STAR vs RR divergence -- 7 cands, 149 voters, cycle  | 1 | single-race | 149 | STAR | LH-only |
+| cycle_C10_fewV15_noise_1 | STAR vs RR divergence -- 10 cands, 15 voters, cycle  | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C10_fewV15_noise_2 | STAR vs RR divergence -- 10 cands, 15 voters, cycle  | 1 | single-race | 15 | STAR | LH-only |
+| cycle_C10_fewV28_bloc_1 | STAR vs RR divergence -- 10 cands, 28 voters, cycle  | 1 | single-race | 28 | STAR | LH-only |
+| cycle_C10_fewV29_bloc_2 | STAR vs RR divergence -- 10 cands, 29 voters, cycle  | 1 | single-race | 29 | STAR | LH-only |
+| cycle_C10_medV148_bloc_1 | STAR vs RR divergence -- 10 cands, 148 voters, cycle | 1 | single-race | 148 | STAR | LH-only |
+| cycle_C10_medV149_bloc_2 | STAR vs RR divergence -- 10 cands, 149 voters, cycle | 1 | single-race | 149 | STAR | LH-only |
+| cycle_C10_medV45_noise_1 | STAR vs RR divergence -- 10 cands, 45 voters, cycle  | 1 | single-race | 45 | STAR | LH-only |
+| cycle_C10_medV45_noise_2 | STAR vs RR divergence -- 10 cands, 45 voters, cycle  | 1 | single-race | 45 | STAR | LH-only |
 | dark_horse_star | Dark Horse — STAR elects the honest winner A (Borda  | 1 | single-race | 100 | STAR | LH-only |
-| darkhorse_01_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_01_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_02_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_02_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
-| darkhorse_03_c5_v15 | STAR vs Ranked Robin divergence — darkhorse_03_c5_v1 | 1 | single-race | 15 | STAR | LH-only |
-| darkhorse_04_c4_v21 | STAR vs Ranked Robin divergence — darkhorse_04_c4_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_05_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_05_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_06_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_06_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
-| darkhorse_08_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_08_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_10_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_10_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_11_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_11_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_12_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_12_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_15_c5_v21 | STAR vs Ranked Robin divergence — darkhorse_15_c5_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_16_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_16_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
-| darkhorse_18_c4_v21 | STAR vs Ranked Robin divergence — darkhorse_18_c4_v2 | 1 | single-race | 21 | STAR | LH-only |
-| darkhorse_19_c4_v15 | STAR vs Ranked Robin divergence — darkhorse_19_c4_v1 | 1 | single-race | 15 | STAR | LH-only |
-| darkhorse_20_c5_v15 | STAR vs Ranked Robin divergence — darkhorse_20_c5_v1 | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_C03_fewV15_noise_1 | STAR vs RR divergence -- 3 cands, 15 voters, darkhor | 1 | single-race | 15 | STAR | LH-only |
+| darkhorse_C05_largeV599_bloc_1 | STAR vs RR divergence -- 5 cands, 599 voters, darkho | 1 | single-race | 599 | STAR | LH-only |
+| darkhorse_C07_fewV30_bloc_1 | STAR vs RR divergence -- 7 cands, 30 voters, darkhor | 1 | single-race | 30 | STAR | LH-only |
+| darkhorse_C07_largeV597_bloc_1 | STAR vs RR divergence -- 7 cands, 597 voters, darkho | 1 | single-race | 597 | STAR | LH-only |
+| darkhorse_C07_largeV598_bloc_2 | STAR vs RR divergence -- 7 cands, 598 voters, darkho | 1 | single-race | 598 | STAR | LH-only |
+| darkhorse_C07_medV147_bloc_1 | STAR vs RR divergence -- 7 cands, 147 voters, darkho | 1 | single-race | 147 | STAR | LH-only |
+| darkhorse_C07_medV45_noise_1 | STAR vs RR divergence -- 7 cands, 45 voters, darkhor | 1 | single-race | 45 | STAR | LH-only |
+| darkhorse_C10_largeV598_bloc_1 | STAR vs RR divergence -- 10 cands, 598 voters, darkh | 1 | single-race | 598 | STAR | LH-only |
+| darkhorse_C10_largeV599_bloc_2 | STAR vs RR divergence -- 10 cands, 599 voters, darkh | 1 | single-race | 599 | STAR | LH-only |
 | dead_heat_lot_tiebreak | Ranked Robin — a dead heat that runs the whole tiebr | 1 | single-race | 4 | RankedRobin | LH-only |
 | dead_rung_scoring_dead_cap2 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | dead_rung_scoring_dead_cap3 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |

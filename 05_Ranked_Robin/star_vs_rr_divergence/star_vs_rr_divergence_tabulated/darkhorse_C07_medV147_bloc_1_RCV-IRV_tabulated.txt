@@ -1,0 +1,29 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  STAR vs RR divergence -- 7 cands, 147 voters, darkhorse (STAR F, RR D)
+ Tabulating 147 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D, E, F, G
+    46 ×   D > E > C > F > A      (2, 0, 3, 5, 4, 3, 0)
+    43 ×   D > E > C > F > A      (2, 0, 4, 5, 5, 4, 0)
+    35 ×   A > B > F > G > C      (5, 4, 2, 0, 0, 3, 3)
+    12 ×   G > C > E > F      (0, 0, 4, 0, 2, 2, 5)
+    11 ×   G > C > A > B > E > F      (1, 1, 3, 0, 1, 1, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+D                 89  Elected
+A                 35  Rejected
+G                 23  Rejected
+E                  0  Rejected
+B                  0  Rejected
+C                  0  Rejected
+F                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  D
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
