@@ -19,6 +19,8 @@ Because Approval has no canonical sincere ballot, the honest way to report this 
 
 **3 candidates** — divergence by where the approval line is drawn:
 
+> **The two columns are two assumptions about the electorate.** **Spatial (realistic)** is the [issue-space model](../00_start_here/topics/spatial_voting_model.md) — voters and candidates are points on a map, you prefer whoever's closest; real electorates have this structure (a center), so paradoxes are relatively rare, and this column ≈ *what you'd actually expect*. **Impartial (stress)** is [impartial culture](../00_start_here/topics/election_simulation_models.md) — every preference independent and random, no structure at all; it manufactures far more disagreement than reality and is a deliberate *worst-case ceiling*, not a prediction. The truth for a real electorate sits **between** the two, much closer to spatial — which is why both are shown rather than one number.
+
 | Approve scores ≥ | Spatial (realistic) | Impartial (stress) |
 |---|:---:|:---:|
 | **5** — only your top (near-bullet) | 14% | 22% |
