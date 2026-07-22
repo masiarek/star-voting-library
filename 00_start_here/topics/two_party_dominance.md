@@ -38,6 +38,18 @@ So the honest claim, which cuts against a common overreach:
 
 This is why Australia is two-party in its AV House but multiparty in its **STV** Senate. If your goal is specifically to *break* two-party dominance, single-winner reform is necessary-but-not-sufficient; the lever is proportional multi-winner elections. If your goal is honest, spoiler-free single-winner elections (a worthy goal on its own), STAR/Approval/Ranked Robin deliver that whether or not the party system ever changes.
 
+## How do you *count* parties? (ENP)
+
+"Two-party" and "multiparty" sound obvious until you try to measure them — a country with two giants and five specks isn't a seven-party system in any meaningful sense. The standard fix is the **[Effective Number of Parties](../GLOSSARY.md)** (Laakso–Taagepera):
+
+```
+ENP = 1 / Σ(sᵢ²)      where sᵢ is party i's share of votes or seats
+```
+
+Squaring the shares makes big parties dominate the sum, so tiny parties barely move it. Four equal parties give ENP = 4; one dominant party with three specks gives barely above 1. In practice the **US sits near 2**, while highly proportional systems like **Israel exceed 6**.
+
+Two things this buys you. First, it makes the claim above **testable** rather than rhetorical: you can check whether a reform actually changed the party system, instead of arguing about it. Second, it reframes the trade-off on this page as a *dial*, not a binary — the [Lijphart](#the-case-for-two-party-systems) argument is really about where on that dial a country wants to sit. [Jameson Quinn](in_memoriam_jameson_quinn.md) has argued the sweet spot is around **3–4**: enough parties to escape zero-sum, us-versus-them politics, but few enough that each must still assemble a broad coalition rather than campaign on one narrow issue. That figure is a judgment call, not a finding — but the *metric* is standard.
+
 ## Takeaway
 
 Two-party dominance is a genuine trade-off, not a self-evident evil — it buys governability and accountability at the cost of choice and representation, and reasonable people weigh those differently. And whatever you think of it, be precise about the mechanism: **the spoiler effect is method-caused and fixable with better single-winner voting; the deeper two-party tendency of single-member districts is structural and only proportional representation changes it.**
