@@ -21,7 +21,7 @@ The debate doc once claimed STAR is *"~98% favorite-betrayal-proof."* That numbe
 2. **Works : backfires ratio.** Over every `(voter, betrayal ballot)` pair, count how many strictly **help** the voter vs strictly **hurt** them (by sincere utilities). Reported per method. This is the brute-force cousin of Equal Vote's "honesty" stat — note it counts *all possible* betrayals, so it is a superset of the realistic strategies a real faction would attempt (read it as "if you betray blindly, how often does it pay?").
 
 ### Electorate models (both run by default)
-- **spatial** — voters & candidates are points in issue space; utility = −distance. The realistic model (what VSE uses).
+- **spatial** — voters & candidates are points in issue space; utility = −distance. The realistic model (what [VSE / Bayesian Regret](../../00_start_here/topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) uses).
 - **impartial** — each utility is uniform[0,1], independent. An adversarial stress test that manufactures far more paradoxes; treat its FBC rate as a rough lower bound.
 
 Sincere ballots are derived deterministically: STAR scores = per-voter min-max scaling of utilities onto 0–5; IRV ranks candidates by utility. Tie-breaks are fixed and documented in the script header. Everything is seeded (`--seed`).
