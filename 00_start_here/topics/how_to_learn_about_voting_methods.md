@@ -64,6 +64,13 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 - **Simulations & data** — [Jameson Quinn](in_memoriam_jameson_quinn.md)'s [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) (background: [social utility efficiency](https://en.wikipedia.org/wiki/Social_utility_efficiency)) · [PrefLib](https://www.preflib.org/) — a database of real ranked-preference elections.
 - **Independent tabulation libraries** (used to cross-check this repo's engine) — [pref_voting](https://pref-voting.readthedocs.io/) and [abcvoting](https://abcvoting.readthedocs.io/).
 - **Reference** — [electowiki](https://electowiki.org) for the method encyclopedia.
+- **Finding the primary literature yourself** — voting research is split across three literatures that barely cite each other, and each is indexed differently:
+  - **Economics / social choice** → search [RePEc-IDEAS](https://ideas.repec.org/), EconLit or [SSRN](https://www.ssrn.com/) by **JEL code**. The ones that matter: **D71** (social choice — the theory core), **D72** (political processes: *elections and voting behavior* — the most on-target single code), **D63** (equity/justice and other normative criteria — where welfare metrics like VSE sit), **C70/C72** (game theory — strategic voting), plus **D70/D79** (the general and catch-all buckets), **D02** (institutions) and **D82** (mechanism design). Worked example: [Wolk, Quinn & Ogren](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) classify themselves **D72 · D63 · D71 · C70**.
+  - **Math & computer science** (algorithms, complexity, *computational* social choice) → [arXiv](https://arxiv.org/), categories **cs.GT** (game theory), **econ.TH** (theoretical economics) and **cs.MA** (multiagent systems). Much of the newest work appears here first, free.
+  - **Political science** (empirical: real elections, turnout, adoption, ballot errors) → not JEL-indexed; look to *Electoral Studies* and *Journal of Theoretical Politics*.
+  - **Journals that regularly carry method papers:** *Social Choice and Welfare* (the flagship), *Public Choice*, *Constitutional Political Economy*, *Mathematical Social Sciences*, *Electoral Studies*.
+
+  Same discipline as everywhere else here: an academic paper earns trust for *rigor*, not for agreeing with you — check who funded it and what the model assumes before you quote its number.
 - **Watch** — [PBS *Infinite Series*: Voting Systems and the Condorcet Paradox](https://www.youtube.com/watch?v=HoAnYQZrNrQ) — a clear explainer of why majority preferences can cycle.
 
 *(These include strong advocates on several sides. Read them the way this repo reads FairVote — critically, and for the argument, not the conclusion.)*
