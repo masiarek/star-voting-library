@@ -13,7 +13,7 @@
 Two numbers used throughout this repo trace back to here:
 
 - **VSE** — the utilitarian-accuracy score behind "STAR tops the accuracy charts" (100% = always elect the utility-maximizing winner, 0% = a random winner). It is the modern form of [Bayesian Regret](../../topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret).
-- **PVSI** — the *Pivotal Voter Strategic Incentive*: how much a pivotal voter gains on average by voting strategically rather than honestly. Near **0%** means strategy rarely pays; **negative** means it backfires more often than it works. This is the peer-reviewed source behind the repo's "**STAR ≈ 1:1, IRV ≈ 3:1, Plurality ≈ 17:1** backfire ratios."
+- **[PVSI](../../topics/pvsi_strategic_incentive.md)** — the *Pivotal Voter Strategic Incentive*: how much a pivotal voter gains on average by voting strategically rather than honestly. Near **0%** means strategy rarely pays; **negative** means it backfires more often than it works. This is the peer-reviewed source behind the repo's "**STAR ≈ 1:1, IRV ≈ 3:1, Plurality ≈ 17:1** backfire ratios."
 
 Until now the library used these figures while citing only a project website. This page anchors them to the peer-reviewed original.
 

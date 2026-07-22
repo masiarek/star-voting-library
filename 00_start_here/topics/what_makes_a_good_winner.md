@@ -89,6 +89,8 @@ This sidesteps the "which winner is correct?" argument by asking a measurable qu
 
 In these studies the ordering is consistently roughly **STAR ≳ Approval > RCV-IRV > Plurality**, plurality falls sharply as the field grows past two candidates, and STAR's edge is *largest in big, competitive fields* (score-plus-runoff was in fact *predicted* to top the list by Bayesian-Regret work around 2000). Caveats that keep it honest: the result **depends on the voter model and on how strategic voters are** (honest vs. fully strategic reshuffles the middle of the pack; STAR stays near the top across both), and every simulation is only as good as its assumptions. VSE is the closest thing to an objective score, but it's why "STAR tops the accuracy charts" is a claim about *simulated voter satisfaction under a model*, not a claim that its winner is metaphysically "correct."
 
+VSE measures only *accuracy*. Its companion metric, **[PVSI](pvsi_strategic_incentive.md)** (Pivotal Voter Strategic Incentive), measures the other axis — how much a method **rewards voting dishonestly** — and the two are judged together, since a method that invites strategy erodes its own accuracy in practice.
+
 *(Related: the "Yee diagram" visualizes the same idea in 2-D — for a given method, it colors each point of a policy space by who would win if the electorate centered there; good methods elect near the center of the voters, and the pictures show where plurality/IRV veer away. How these synthetic electorates are generated — Impartial Culture, spatial, Mallows, urn models — and why the results depend on that choice: [Election simulation models](election_simulation_models.md).)*
 
 ## Multi-winner: "good" changes meaning
