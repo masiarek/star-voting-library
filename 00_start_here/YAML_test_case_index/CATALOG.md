@@ -393,6 +393,15 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 | Condorcet | 64 | 01_condorcet_winner, 02_cycle_no_condorcet, 03_real_record0_c6_b5, 04_smith_set_c4_b7 |
 | proportional | 31 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
 
+### By multi-winner style
+
+*Multi-winner races only.* The distinction that decides whether a minority gets represented: **bloc / at-large** (Bloc STAR, Bloc Approval, Bloc RR, SNTV — no reweighting, so a cohesive majority can sweep **every** seat) vs **proportional** (STAR-PR, STV — seats track factions). This is the one cut the method-family view below hides, since Bloc STAR normalizes to STAR. Note multi-winner Ranked Robin is **Bloc RR** and lands here as bloc, not Condorcet. → [bloc vs proportional, worked](../../01_STAR/exercises/ex12_bloc_vs_proportional.md)
+
+| multi-winner style | # races | example elections |
+|---|--:|---|
+| bloc / at-large | 28 | 00_c3_b3_bloc-baseline-2-seats, 01_c4_b2_bloc-star-2-seats, 07a_c5_b36_herb-council-bloc-3-seats, 09_c7_b44_park-bloc-4-seats |
+| proportional | 22 | 02a_c5_b63_proportional-allocated-score, 02b_c5_b63_proportional-sss, 02c_c5_b63_proportional-rrv, 03a_stv_3seats |
+
 ### By method (family)
 
 Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allocated/sss/rrv to STAR_PR.

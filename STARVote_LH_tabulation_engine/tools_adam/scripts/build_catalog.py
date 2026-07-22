@@ -16,8 +16,10 @@ want to slice by:
 
 Derived facets per race: ballot_type (score / ranked / approval / choose-one),
 seat_class (single-winner / multi-winner), character (majoritarian / proportional
-/ Condorcet). Covers BOTH yaml-backed races AND BV-only races read from the frozen
-exports (e.g. Bloc Plurality, which has no yaml).
+/ Condorcet), mw_style (multi-winner only: bloc-at-large vs proportional — the cut
+that surfaces Bloc STAR, which the method-family view folds into STAR). Covers BOTH
+yaml-backed races AND BV-only races read from the frozen exports (e.g. Bloc
+Plurality, which has no yaml).
 
 Writes:
   * 00_start_here/YAML_test_case_index/races.csv        — the full sortable fact table
@@ -84,6 +86,19 @@ def _character(canon, seats):
 
 def _seat_class(seats):
     return "single-winner" if (seats or 1) == 1 else "multi-winner"
+
+
+def _mw_style(canon, seats):
+    """For multi-winner races only: can a majority sweep every seat, or not?
+
+    Note this deliberately disagrees with _character() for multi-winner
+    Ranked Robin: that's Bloc RR (top-N by record), which a majority *can*
+    sweep, so it belongs with the bloc methods here even though its
+    single-winner character is 'Condorcet'.
+    """
+    if (seats or 1) == 1:
+        return "n/a (single-winner)"
+    return "proportional" if canon in PROPORTIONAL else "bloc / at-large"
 
 
 def _ballot_shape(ballots):
@@ -213,6 +228,7 @@ def collect():
                 "ballot_type": BALLOT_TYPE.get(canon, "?"),
                 "seats": seats, "seat_class": _seat_class(seats),
                 "character": _character(canon, seats),
+                "mw_style": _mw_style(canon, seats),
                 "candidates": ncand, "voters": nvoters, "winners": winners,
                 "backing": backing, "lh_only_reason": lh_reason or "",
                 "yaml": rel,
@@ -242,6 +258,7 @@ def collect():
                 "ballot_type": BALLOT_TYPE.get(r["canon"], "?"),
                 "seats": seats, "seat_class": _seat_class(seats),
                 "character": _character(r["canon"], seats),
+                "mw_style": _mw_style(r["canon"], seats),
                 "candidates": r["ncand"], "voters": m["nvoters"],
                 "winners": r["winners"], "backing": "BV (no yaml)", "yaml": "",
             })
@@ -292,7 +309,7 @@ def main():
     os.makedirs(IDXDIR, exist_ok=True)
     # races.csv
     cols = ["election_id", "election_title", "race_title", "method", "canon",
-            "ballot_type", "seats", "seat_class", "character", "candidates",
+            "ballot_type", "seats", "seat_class", "character", "mw_style", "candidates",
             "voters", "winners", "backing", "lh_only_reason", "yaml"]
     with open(os.path.join(IDXDIR, "races.csv"), "w", newline="", encoding="utf-8-sig") as fh:
         wr = csv.DictWriter(fh, fieldnames=cols)
@@ -357,6 +374,16 @@ def main():
                     "A rough teaching cut: **majoritarian** (a majority can take every "
                     "seat), **proportional** (seats track factions — STAR-PR, STV), or "
                     "**Condorcet** (elects the pairwise winner — Ranked Robin)."))
+    M.append(_facet([r for r in races if r["seat_class"] == "multi-winner"],
+                    "mw_style", "multi-winner style",
+                    "*Multi-winner races only.* The distinction that decides whether a "
+                    "minority gets represented: **bloc / at-large** (Bloc STAR, Bloc "
+                    "Approval, Bloc RR, SNTV — no reweighting, so a cohesive majority can "
+                    "sweep **every** seat) vs **proportional** (STAR-PR, STV — seats track "
+                    "factions). This is the one cut the method-family view below hides, "
+                    "since Bloc STAR normalizes to STAR. Note multi-winner Ranked Robin is "
+                    "**Bloc RR** and lands here as bloc, not Condorcet. → "
+                    "[bloc vs proportional, worked](../../01_STAR/exercises/ex12_bloc_vs_proportional.md)"))
     M.append(_facet(races, "canon", "method (family)",
                     "Canonical method family — e.g. Bloc STAR and STAR both normalize to "
                     "STAR; allocated/sss/rrv to STAR_PR."))
