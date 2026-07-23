@@ -66,4 +66,10 @@ The teaching point: **Memphis has the most first-choice support (42) and would w
 - **Strategy-resistant** in Quinn's [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) simulations — it's one of the methods where honesty is the practical best play (see [strategic voting](../../00_start_here/topics/strategic_voting.md)).
 - A **rated** method with a small 3-level scale, and a runoff-style final step (a distant cousin of STAR's score-then-runoff).
 
+## An opinionated take (clearly labelled as such)
+
+[**3-2-1 Voting — an AI assessment**](opus_4_8_review.md) — a signed, dated review by Claude Opus 4.8: what 3-2-1 gets right (explicit dark-horse guards you can point at; a ballot with no arithmetic tax), where it's weak (a simple ballot paired with a three-stage count; the three-level tie in the deciding step), and the lens it yields — **ballot simplicity and count simplicity are two different axes**, and reform arguments conflate them constantly.
+
+It's **commentary, not repo canon** — judgement rather than measurement, quarantined on its own page with its sources and biases disclosed, and offered as something to argue with.
+
 **See also:** [Choosing among the Equal Vote methods](../../00_start_here/topics/choosing_among_evc_methods.md) · [Strategic voting](../../00_start_here/topics/strategic_voting.md) · [electowiki: 3-2-1 voting](https://electowiki.org/wiki/3-2-1_voting) · [Jameson Quinn — Make All Votes Count](https://medium.com/@jameson.quinn/make-all-votes-count-part-2-single-winner-5a2fb47123d5)
