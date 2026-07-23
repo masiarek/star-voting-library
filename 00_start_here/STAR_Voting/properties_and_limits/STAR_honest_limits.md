@@ -32,6 +32,14 @@ The 0–5 ballot invites **[min-maxing](../../topics/strategic_voting.md)** — 
 
 A 0–5 grid is more to explain than "pick one," and some voters under-use the scale (only 0s and 5s), losing expressiveness. It's still a familiar five-star pattern, but it is more cognitive load than plurality and a legitimate adoption hurdle.
 
+**And a second cost that's easy to miss: the ballot is more work to *verify*.** Where elections use a **ballot marking device (BMD)**, the voter marks choices on screen and the machine prints a paper record — and that paper is the legal ballot, so the whole security argument depends on voters actually reading it. Independent research (Center for Civic Design, published by **NIST**) finds voters frequently *don't* review the printout carefully, and often fail to catch deliberately introduced errors; how the ballot is designed and how the process prompts them measurably changes whether they check at all:
+
+- [Voter review and verification of ballots — literature review](https://civicdesign.org/?post_type=report&p=11167) (NIST GCR 24-052)
+- [How voters review & verify ballots from BMDs](https://civicdesign.org/reports/how-voters-review-and-verify-ballots/) (NIST GCR 24-051)
+- [Legibility of summary-style printed ballots](https://civicdesign.org/reports/summary-ballot-legibility/) (NIST VTS 100-4)
+
+The STAR-specific implication is straightforward and unflattering: a **summary ballot** for a scored race prints a score for *every* candidate, not one mark for one contest — so there is simply more to read and check than under choose-one, in a step voters are already known to rush. That is an argument for careful ballot and interface design in any STAR rollout, not against STAR — but it is a real implementation cost, and it belongs on this page rather than in a footnote. (Note this is **verifiability**, about the individual ballot, and is separate from STAR's strength on **[auditability](../../topics/summability/)** — being summable, its *count* is unusually easy to check. A method can be strong on one and weaker on the other.)
+
 ## 7. Tie-breaking is more machinery
 
 Resolving ties runs a chain (pairwise → most five-star scores → lot), which is more moving parts than "most votes wins." Rare in large electorates, but real complexity to specify and explain. See [tie-breaking](../Tie_Breaking_STAR/).
