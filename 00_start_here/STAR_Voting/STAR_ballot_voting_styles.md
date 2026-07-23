@@ -7,7 +7,7 @@
 STAR uses a **5-star ballot**: you give every candidate an independent score from 0 to 5, like rating movies. Two facts do most of the work on this page:
 
 - **Equal scores are allowed.** Two candidates can both get a 5 (or a 0). You're never forced to invent a difference you don't feel.
-- **Skipping is allowed.** A candidate you leave blank simply counts as 0. You can't spoil the ballot by skipping, doubling, or "over-voting."
+- **Skipping is allowed.** A candidate you leave blank simply counts as 0 — skipping can't spoil anything. On a **digital** ballot there is no way to mis-mark at all, since each row takes one score. On **paper** exactly one error is possible: marking *two bubbles in the same row*, which spoils **that candidate's score** (counted 0) — not the ballot. Even then the damage is *contained to one candidate*, where a ranked-ballot overvote can stop the count for the whole ballot from that rank on. See [running a paper-ballot demo](hands_on/running_a_paper_ballot_demo.md).
 
 Because each score stands alone, filling the ballot out is quick: give your favorite a 5, your least favorite a 0, then place everyone else relative to those two. You never have to hold the whole field in your head at once — even in a 20-candidate race you're only ever comparing a candidate against your two anchors. (Contrast a ranked ballot, where each slot means re-scanning everyone you haven't ranked yet.)
 

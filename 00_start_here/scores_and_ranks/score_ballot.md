@@ -54,7 +54,7 @@ Every row is **independent** — there is no grid constraint tying your candidat
 
 - **Equal scores are allowed.** Two 5s, three 3s, whatever you feel. You're never forced to invent a preference — and never punished for feeling a tie.
 - **Blanks count as 0.** Skipping a candidate can't spoil anything.
-- **No overvotes, no skipped-rank traps.** There is nothing to "double-mark": each row is its own question. Reported spoilage runs roughly **0–2% for rated ballots vs. 4–9% for ranked** (see [scores vs. ranks](scores_vs_ranks.md)).
+- **No skipped-rank traps, and overvotes are contained.** Each row is its own question, so there are no cross-candidate overvotes and no skipped-rank rules. On paper you *can* still mark two bubbles in one row — that spoils **that candidate's score** (counted 0), not the ballot, where a ranked-ballot overvote can end the count for the whole ballot. Reported spoilage runs roughly **0–2% for rated vs. 4–9% for ranked**, though the rated figure is thinly evidenced and comes from an advocacy compilation — see [scores vs. ranks](scores_vs_ranks.md).
 
 Filling it out is anchor-based, not field-scanning: give your favorite a 5, your last choice a 0, then place everyone else against those two anchors. Even a 20-candidate race never asks you to hold the whole field in your head — contrast each ranked slot, which means re-scanning everyone you haven't placed yet. The full gallery of legal styles (bullet votes, protest ballots, "anyone but…") is [filling out the 5-star ballot](../STAR_Voting/STAR_ballot_voting_styles.md).
 
