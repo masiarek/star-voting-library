@@ -25,6 +25,8 @@ They're at *different levels of generality* — a category, a specific method in
 
 Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../topics/ranked_ballot_methods_zoo.md).
 
+> **"RR" ≠ "round robin" — the abbreviation collision.** In this repo **RR** always abbreviates **Ranked Robin**, one branded method. **Round robin** is the tournament *format* (everyone plays everyone) and, as "round-robin voting," a name for the **whole family**. So *every* Condorcet method is a round-robin count; only one of them is Ranked Robin. Using "RR" for "round robin" silently promotes a brand to the family name — the exact error this page exists to prevent. (And `RCV-RR` is **house** shorthand, built to parallel `RCV-IRV`; say **Ranked Robin** to people and **Copeland** to academics and the engine.)
+
 ## The tier the brands never mention (C1 / C2 / C3)
 
 The table above maps the *marketing* names. The academic literature sorts the same family a different way — by **how much of the pairwise data a rule actually needs** — and knowing this one scheme, from [Fishburn (1977)](../topics/condorcet/condorcet_reading_list.md), stops most cross-talk before it starts:
