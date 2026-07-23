@@ -32,6 +32,8 @@ Because differences are meaningful only for scores, you can **average** scores (
 
 A common point of confusion: **Ranked Robin allows equal rankings, so why isn't it a scoring method?** Because the method only ever reads the *order* (who beats whom), never a magnitude. Allowing ties in a ranking doesn't turn order into strength. The line between ranked and scored is **what information the tabulation uses** — pure order (ranked) vs. degree of support (scored) — not merely how the bubbles look.
 
+**But how the bubbles look changes what voters *think* they're doing.** That definition is about the tabulation; the ballot is about the human. A row of bare numerals — `0 1 2 3 4 5` — invites people to fill it in like a ranking: first choice, second choice, third, each number used once. Equal Vote's **STAR ballot design standards** exist largely to fight that instinct: label the ends **Worst / Best** and draw the scale as **star icons**, explicitly to reinforce the star scale *as opposed to ranking*. Stars say *rate each candidate on its own, reuse values freely*; bare numerals say *put them in order*. The tabulation is identical either way — but a ballot that **reads** as a ranking gets **filled in** as one, and that discards precisely the intensity information the method exists to capture. Ballot design isn't decoration here; it's what makes the ballot honest.
+
 ## Why the distinction has real consequences
 
 **Different winners from identical voters.** A candidate who wins under a ranked method can lose under a scored method on the very same electorate, because the two are measuring different things. Treating "ranked = scored" hides that.
