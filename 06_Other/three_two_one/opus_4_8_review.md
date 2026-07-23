@@ -49,17 +49,9 @@ That is not a criticism of the method — plenty of good ideas lack a campaign �
 
 ## What I actually take from it
 
-The most valuable thing about 3-2-1 isn't the method. It's that 3-2-1 **breaks "simplicity" into two axes that reform debates constantly conflate**:
+The most valuable thing about 3-2-1 isn't the method. It's that 3-2-1 is the **cleanest illustration that "simplicity" is two axes, not one** — a simple ballot bolted to a comparatively involved count. The neutral treatment, with every method placed on both axes, is [What makes a voting method good? §2](../../00_start_here/topics/what_makes_a_voting_method_good.md) (see also [Is RCV "simple"? — which half?](../../00_start_here/RCV_IRV/RCV_IRV_is_simple.md)).
 
-| | Ballot simplicity | Count simplicity |
-|---|---|---|
-| **Choose-One** | maximal | maximal (and still a bad method — simplicity isn't sufficient) |
-| **RCV-IRV** | high (just rank them) | **low** — not summable, central tabulation, rounds |
-| **Approval** | maximal | maximal — pays instead in expressiveness |
-| **3-2-1** | high (three words) | **medium** — three stages, tuned constants |
-| **STAR** | medium (0–5) | high — add, then one runoff |
-
-Once you see these as two axes, several arguments get clearer. "RCV is as easy as 1-2-3" is true on one axis and false on the other — which is why that claim is [half-true rather than false](../../00_start_here/RCV_IRV/RCV_IRV_is_simple.md). And the STAR-vs-3-2-1 disagreement stops being *"which is simpler?"* (unanswerable) and becomes *"which kind of simplicity is worth more?"* — a question you can actually argue.
+Once you hold the axes apart, the STAR-vs-3-2-1 disagreement stops being *"which is simpler?"* — unanswerable, since each side points at a different axis — and becomes *"which kind of simplicity is worth more?"*, which you can actually argue.
 
 My answer: **count simplicity is worth more**, because it's the axis that determines whether officials can administer the method, auditors can verify it, and opponents can misrepresent it. Ballot complexity is a one-time explanation cost. Count complexity is a permanent attack surface.
 

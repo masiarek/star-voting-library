@@ -23,6 +23,23 @@ How hard is it to **vote** and to **count**?
 - **Results viewability** — can a citizen look at the published totals and see *why* someone won?
 - **Machine requirement** — hand-countable, or does it need software?
 
+**Ballot and tabulation simplicity are two axes, not one — and a method can be excellent on one and poor on the other.** Most arguments about whether a method is "simple" are really two people each pointing at a different axis, which is why the question is unanswerable as posed. Placing the methods on both at once makes the trade visible:
+
+| Method | Ballot simplicity | Tabulation simplicity |
+|---|---|---|
+| **Choose-One** | maximal — one mark | maximal — one pile per candidate |
+| **Approval** | maximal — mark any number | maximal — one sum per candidate |
+| **RCV-IRV** | high — just rank them | **low** — rounds of eliminate-and-transfer, [not summable](summability), needs central tabulation |
+| **[3-2-1](three_two_one_voting.md)** | high — three words (Good/OK/Bad) | medium — three stages with a tuned threshold |
+| **STAR** | medium — 0–5 per candidate | high — add the scores, then one pairwise runoff |
+| **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** | high — just rank them | high — one pairwise matrix, which [adds across precincts](summability) |
+
+Three things follow:
+
+1. **"Simple" claims must say which half.** *"RCV is as easy as 1-2-3"* is true of the ballot and false of the count — which is why the repo rates it [half-true rather than false](../RCV_IRV/RCV_IRV_is_simple.md).
+2. **The two axes are paid for by different people.** A voter meets the ballot once, in private, with instructions in front of them. Officials, auditors, journalists, courts and opponents meet the count repeatedly, forever. So ballot complexity is a one-time explanation cost while tabulation complexity is a permanent operational and rhetorical surface — a reason many reformers weight the second axis more heavily, though it's a judgement call, not a theorem.
+3. **Simplicity isn't sufficient.** Choose-One is maximal on both axes and is still the method everything here exists to replace. Simplicity is a constraint to satisfy, not the objective to maximize.
+
 ### 3. Summability (precinct-level counting)
 Can each precinct publish a fixed-size tally that **adds up** to the national result, or must every ballot flow to one place? STAR and Approval are **summable** (a small matrix / totals per precinct); RCV-IRV and STV are **not** (transfers need the full ballot set centrally), which delays results and complicates audits. See [summability (topic hub)](summability).
 

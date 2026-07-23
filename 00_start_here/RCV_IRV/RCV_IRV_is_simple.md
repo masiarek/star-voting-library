@@ -19,6 +19,8 @@ The slip is in the next step. "Simple" is really **two different claims**, and o
 
 A method is a ballot **and** a count (see the 101 page). "Look how simple the ballot is" tells you nothing about the count — and the count is where the winner actually comes from.
 
+→ **This page argues the point for IRV; the cross-method version is a table.** Every method placed on *both* axes at once — where Choose-One, Approval, RCV-IRV, 3-2-1, STAR and Ranked Robin each land — is in [What makes a voting method good? §2](../topics/what_makes_a_voting_method_good.md).
+
 ## Why IRV's count is the hard half
 
 To find an IRV winner you can't just add a column. You:
