@@ -13,6 +13,41 @@ There are two fundamentally different ways a ballot can ask for your opinion, an
 
 A rank answers *"which do you prefer?"* A score answers *"how much do you like each one?"* Those are different questions, and a ballot that asks one cannot be silently treated as if it asked the other.
 
+## The map — from one voter's opinion to a method
+
+Read it in two steps, and **keep the two steps separate**: first the **ballot** (what the voter is asked to record), then the **tabulation** (what the count does with it). Nearly every taxonomy error comes from mixing those two levels.
+
+```mermaid
+flowchart LR
+    P["<b>Voter preferences</b>"]
+
+    P --> RATED["<b>RATED ballot</b> — cardinal<br/><i>score each candidate independently<br/>· equal scores allowed · blank = 0</i>"]
+    P --> RANKED["<b>RANKED ballot</b> — ordinal<br/><i>order only, never degree<br/>· 'RCV' names THIS, not any one method</i>"]
+
+    RATED --> ADD["<b>Single-round · additive</b>"]
+    RATED --> RUN["<b>Score, then runoff</b>"]
+    ADD --> SCORE["Score / Range Voting<br/><i>highest total wins</i>"]
+    ADD --> APPR["Approval<br/><i>= Score on a 0–1 scale</i>"]
+    ADD --> MJ["Majority Judgment<br/><i>median, not sum</i>"]
+    RUN --> STAR["<b>STAR Voting</b><br/>R1 Scoring — sum, top two advance<br/>R2 <b>Automatic Runoff</b> — majority<br/>preference between those two"]
+
+    RANKED --> COND["<b>Condorcet / pairwise</b><br/><i>beats-all winner · summable</i>"]
+    RANKED --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer · not summable</i>"]
+    RANKED --> POS["<b>Positional</b><br/><i>points by rank position</i>"]
+    COND --> RR["<b>Ranked Robin</b> (RCV-RR)<br/>Ranked Pairs · Schulze · Minimax"]
+    ELIM --> IRV["<b>RCV-IRV</b> — single-winner<br/><b>STV</b> — multi-winner, proportional"]
+    POS --> BB["Borda · Bucklin"]
+```
+
+Four things this diagram is careful about, because popular versions of it usually aren't:
+
+- **STAR's second round is a *runoff*, not a ranking.** It counts, for each ballot, which of the **two finalists** that voter scored higher — a majority preference, not an ordering of the field. Calling it "ranking" feeds the very confusion this page exists to clear up.
+- **Both sides branch by *tabulation*.** Whether a ballot permits **equal ranks** is a *ballot rule*, not a method family — most US RCV-IRV forbids them, [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) allows them, and the same is true of truncation limits. Those belong as footnotes on the ballot, not as branches. (What defines IRV is *sequential elimination*, not its equal-ranks rule.)
+- **Condorcet is a *family*, not a method.** Ranked Robin sits **inside** it, alongside Ranked Pairs, Schulze and Minimax — it isn't a sibling of "Condorcet."
+- **A ranked ballot is not one method.** IRV, Ranked Robin and STV read *the same ballot* and can elect *different winners*. The full ranked breakdown — with aliases and the summability split — is the canonical [ranked-method family tree](../tips/TIPS_terminology.md).
+
+*(Single-winner unless marked; STV is the proportional multi-winner branch. The rated side has proportional forms too — [STAR-PR](../proportional_representation/STAR_PR/README.md) — and a majoritarian multi-winner one, Bloc STAR.)*
+
 > **The naming trap.** *Rank* and *rate* sound almost identical and get swapped constantly — but they are opposites in what they measure. This library uses **rank** only for ordering and **score** (synonyms: rate, grade) only for independent values. If you remember one thing: **equal rankings are still rankings; a score is not a ranking.**
 
 ## Relative vs. absolute preference
