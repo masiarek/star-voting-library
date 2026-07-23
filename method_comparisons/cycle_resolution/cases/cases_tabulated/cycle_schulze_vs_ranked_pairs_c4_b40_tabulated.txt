@@ -1,0 +1,36 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 40 ballots (ranked ballots).
+
+Ballots:
+     7 × Ana > Bruno > Chloe > Diego
+     8 × Bruno > Ana > Chloe > Diego
+    14 × Diego > Bruno > Ana > Chloe
+    11 × Chloe > Ana > Diego > Bruno
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Bruno  beats Ana     22 – 18
+   Ana    beats Chloe   29 – 11
+   Ana    beats Diego   26 – 14
+   Bruno  beats Chloe   29 – 11
+   Diego  beats Bruno   25 – 15
+   Chloe  beats Diego   26 – 14
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |     Ana      |   Bruno     |   Chloe     |   Diego     |
+--------------------------------------------------------------------
+    Ana > |     ---      |18 -  0 - 22 |29 -  0 - 11 |26 -  0 - 14 |
+  Bruno > | 22 -  0 - 18 |    ---      |29 -  0 - 11 |15 -  0 - 25 |
+  Chloe > | 11 -  0 - 29 |11 -  0 - 29 |    ---      |26 -  0 - 14 |
+  Diego > | 14 -  0 - 26 |25 -  0 - 15 |14 -  0 - 26 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ana        2–1–0         2     +26  Diego, Chloe
+    2  Bruno      2–1–0         2     +12  Ana, Chloe
+    3  Diego      1–2–0         1     -14  Bruno
+    4  Chloe      1–2–0         1     -24  Diego
+
+Winner — Ranked Robin (RCV-RR): Ana
+   *** 2 candidates tie for the most wins (Ana, Bruno) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

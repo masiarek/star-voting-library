@@ -1,0 +1,68 @@
+election_title: "A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity"
+
+scenario_description: |-
+  A runnable counterexample for Holliday & Pacuit's central claim in "Split Cycle"
+  (arXiv:2004.02350; Public Choice 197, 2023): that Schulze/beat-path is NOT immune
+  to spoilers, and Split Cycle is. Reproduced independently — this is not the
+  paper's own profile — with pref_voting, on the smallest electorate a search
+  turned up. 40 hikers rank five national parks.
+
+  Cascade beats Bryce 40-0: NOT ONE VOTER prefers Bryce to Cascade. Bryce wins
+  under no method, in any field. And yet:
+
+      Schulze WITHOUT Bryce on the ballot  ->  Cascade
+      Schulze WITH    Bryce on the ballot  ->  Everglade
+
+  Bryce's mere presence takes the win away from a park she is unanimously behind,
+  and hands it to a third party. That is exactly the paper's Definition 4.1: Bryce
+  spoils the election for Cascade — Cascade wins without Bryce, a majority (here,
+  everyone) prefers Cascade to Bryce, and with Bryce present neither of them wins.
+
+  Split Cycle does not do this. It returns {Cascade, Everglade} with Bryce present
+  and {Cascade} without — Cascade is never dropped, so no spoiler effect occurs.
+  That is the paper's "stability for winners" in action, and the reason the authors
+  argue the criterion is worth the cost (Split Cycle sometimes declines to break a
+  tie that Schulze and Ranked Pairs break by convention).
+
+  Read the honest fine print on the lesson page: this is a five-candidate profile
+  with no Condorcet winner and a Smith set of ALL FIVE parks — a genuinely knotted
+  election, not an everyday one. Ranked Pairs happens to elect Cascade here too, so
+  this profile does not exhibit its (separately proven) spoiler failure. Nothing
+  here is evidence about STAR or Ranked Robin, neither of which is a C2 method.
+
+  Verified with pref_voting, both fields:
+    uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
+      method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml
+    uv run …/cycle_resolution_report.py …/split_cycle_schulze_spoiler_c5_b40.yaml --drop Bryce
+
+  LH-only (no BetterVoting election): neither BV nor the LH engine implements
+  Schulze or Split Cycle, and the LH Copeland result here is a tie. Lesson page:
+  00_start_here/topics/condorcet/split_cycle.md
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Arches, Bryce, Cascade, Denali, Everglade]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  11:Everglade>Denali>Cascade>Bryce>Arches
+  11:Arches>Denali>Cascade>Everglade>Bryce
+  8:Everglade>Cascade>Bryce>Arches>Denali
+  10:Cascade>Bryce>Arches>Denali>Everglade
+
+expected_winners:
+  - Cascade

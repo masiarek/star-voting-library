@@ -211,6 +211,8 @@ LH:cycle_C10_medV148_bloc_1,"STAR vs RR divergence -- 10 cands, 148 voters, cycl
 LH:cycle_C10_medV149_bloc_2,"STAR vs RR divergence -- 10 cands, 149 voters, cycle (STAR I, RR H)",1,single-race,149,STAR,LH-only
 LH:cycle_C10_medV45_noise_1,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR E, RR G)",1,single-race,45,STAR,LH-only
 LH:cycle_C10_medV45_noise_2,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR A, RR I)",1,single-race,45,STAR,LH-only
+LH:cycle_copeland_ties_c4_b21,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",1,single-race,21,RankedRobin,LH-only
+LH:cycle_schulze_vs_ranked_pairs_c4_b40,"Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both",1,single-race,40,RankedRobin,LH-only
 LH:dark_horse_star,Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D),1,single-race,100,STAR,LH-only
 LH:darkhorse_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, darkhorse (STAR A, RR C)",1,single-race,15,STAR,LH-only
 LH:darkhorse_C05_largeV599_bloc_1,"STAR vs RR divergence -- 5 cands, 599 voters, darkhorse (STAR A, RR E)",1,single-race,599,STAR,LH-only
@@ -271,6 +273,7 @@ LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,si
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
+LH:split_cycle_schulze_spoiler_c5_b40,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",1,single-race,40,RankedRobin,LH-only
 LH:star_ala_approval,STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot,1,single-race,8,STAR,LH-only
 LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals add up),1,single-race,6,STAR,LH-only
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only

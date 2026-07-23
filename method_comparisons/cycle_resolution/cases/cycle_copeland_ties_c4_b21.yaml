@@ -1,0 +1,57 @@
+election_title: "A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder"
+
+scenario_description: |-
+  The first worked profile from "Cycle Resolution — why Minimax, Ranked Pairs,
+  and Schulze exist" (00_start_here/RCV_Ranked_Robin/cycle_resolution.md), now
+  runnable. 21 hikers rank four trails; Dogwood is everyone's last choice, and
+  the other three form a majority CYCLE:
+
+      Alder beats Birch by 9 · Birch beats Cedar by 11 · Cedar beats Alder by 1
+
+  So there is no Condorcet winner, and Ranked Robin's underlying Copeland count
+  (pairwise wins minus losses) ties Alder, Birch and Cedar at +1 each — the
+  simple count cannot pick. That tie-proneness is exactly why the refined
+  cycle-resolution rules exist.
+
+  Every one of them then agrees on Alder, whose only defeat (to Cedar, by 1) is
+  the mildest loss in the cycle: Minimax picks Alder ("least badly beaten"),
+  Ranked Pairs locks Birch>Cedar and Alder>Birch and skips the cycle-closing
+  Cedar>Alder, Schulze's strongest beat-paths run Alder's way, and Split Cycle
+  discards the weakest defeat in the cycle — Cedar>Alder — leaving Alder
+  undefeated. Four different philosophies, one winner.
+
+  Verified with pref_voting:
+    uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
+      method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml
+
+  LH-only (no BetterVoting election): LH and BV break a Copeland tie differently
+  — LH by margin then lot, BV at random — so a tie-deciding case cannot be frozen
+  on BV. The companion case where the refined rules DISAGREE:
+  cycle_schulze_vs_ranked_pairs_c4_b40.yaml
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Alder, Birch, Cedar, Dogwood]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  10:Alder>Birch>Cedar>Dogwood
+  6:Birch>Cedar>Alder>Dogwood
+  5:Cedar>Alder>Birch>Dogwood
+
+expected_winners:
+  - Alder

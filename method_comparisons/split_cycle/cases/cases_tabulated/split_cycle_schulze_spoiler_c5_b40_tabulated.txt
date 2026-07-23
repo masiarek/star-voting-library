@@ -1,0 +1,42 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 40 ballots (ranked ballots).
+
+Ballots:
+    11 × Everglade > Denali > Cascade > Bryce > Arches
+    11 × Arches > Denali > Cascade > Everglade > Bryce
+     8 × Everglade > Cascade > Bryce > Arches > Denali
+    10 × Cascade > Bryce > Arches > Denali > Everglade
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Denali     beats Everglade   21 – 19
+   Cascade    beats Everglade   21 – 19
+   Everglade  beats Bryce       30 – 10
+   Arches     beats Everglade   21 – 19
+   Denali     beats Cascade     22 – 18
+   Denali     beats Bryce       22 – 18
+   Arches     beats Denali      29 – 11
+   Cascade    beats Bryce       40 –  0
+   Cascade    beats Arches      29 – 11
+   Bryce      beats Arches      29 – 11
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+              |  Everglade   |   Denali    |  Cascade    |   Bryce     |   Arches    |
+--------------------------------------------------------------------------------------
+  Everglade > |     ---      |19 -  0 - 21 |19 -  0 - 21 |30 -  0 - 10 |19 -  0 - 21 |
+     Denali > | 21 -  0 - 19 |    ---      |22 -  0 - 18 |22 -  0 - 18 |11 -  0 - 29 |
+    Cascade > | 21 -  0 - 19 |18 -  0 - 22 |    ---      |40 -  0 -  0 |29 -  0 - 11 |
+      Bryce > | 10 -  0 - 30 |18 -  0 - 22 | 0 -  0 - 40 |    ---      |29 -  0 - 11 |
+     Arches > | 21 -  0 - 19 |29 -  0 - 11 |11 -  0 - 29 |11 -  0 - 29 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Cascade    3–1–0         3     +56  Arches, Everglade, Bryce
+    2  Denali     3–1–0         3      -8  Cascade, Everglade, Bryce
+    3  Arches     2–2–0         2     -16  Denali, Everglade
+    4  Everglade  1–3–0         1     +14  Bryce
+    5  Bryce      1–3–0         1     -46  Arches
+
+Winner — Ranked Robin (RCV-RR): Cascade
+   *** 2 candidates tie for the most wins (Denali, Cascade) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

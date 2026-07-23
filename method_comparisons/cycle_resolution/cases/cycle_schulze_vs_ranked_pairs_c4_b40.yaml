@@ -1,0 +1,66 @@
+election_title: "Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both"
+
+scenario_description: |-
+  The second worked profile behind "Cycle Resolution — why Minimax, Ranked Pairs,
+  and Schulze exist" (00_start_here/RCV_Ranked_Robin/cycle_resolution.md): the
+  point at which the Condorcet family stops agreeing. 40 members of a mural
+  committee rank four designs. Majority preference cycles:
+
+      Ana beats Diego by 12 · Diego beats Bruno by 10 · Bruno beats Ana by 4
+
+  with Chloe hanging off the side (she loses to Ana and Bruno by 18 each, but
+  beats Diego by 12 — which is what pulls the whole field into the Smith set).
+  There is no Condorcet winner, and Copeland — the count under Ranked Robin —
+  ties Ana and Bruno at +1 each.
+
+  Now the refined rules split, on identical ballots:
+
+      Minimax       Ana      (her worst defeat, 4, is the mildest in the field)
+      Schulze       Ana
+      Ranked Pairs  Bruno    (locks the big margins first, and they favor Bruno)
+      Split Cycle   Ana AND Bruno
+
+  Split Cycle is the interesting one, and not because it is indecisive: it
+  discards the weakest defeat in every cycle, which erases Bruno>Ana (4) and
+  Diego>Bruno (10) alike, leaving BOTH Ana and Bruno undefeated. Its claim is
+  that Schulze and Ranked Pairs are not discovering a winner here — they are
+  applying a convention to a tie the ballots genuinely do not break. Split Cycle
+  hands the tie back rather than resolving it silently, which is why its winner
+  set is always a superset of theirs.
+
+  Verified with pref_voting:
+    uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
+      method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
+
+  LH-only (no BetterVoting election): the LH result is a Copeland tie, broken by
+  margin then lot, and BV breaks the same tie at random — so this one cannot be
+  frozen on BV. The companion case where every rule agrees:
+  cycle_copeland_ties_c4_b21.yaml
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ana, Bruno, Chloe, Diego]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  7:Ana>Bruno>Chloe>Diego
+  8:Bruno>Ana>Chloe>Diego
+  14:Diego>Bruno>Ana>Chloe
+  11:Chloe>Ana>Diego>Bruno
+
+expected_winners:
+  - Ana

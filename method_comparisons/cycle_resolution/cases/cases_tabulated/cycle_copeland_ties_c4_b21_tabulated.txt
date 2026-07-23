@@ -1,0 +1,35 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 21 ballots (ranked ballots).
+
+Ballots:
+    10 × Alder > Birch > Cedar > Dogwood
+     6 × Birch > Cedar > Alder > Dogwood
+     5 × Cedar > Alder > Birch > Dogwood
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Alder    beats Birch     15 –  6
+   Cedar    beats Alder     11 – 10
+   Alder    beats Dogwood   21 –  0
+   Birch    beats Cedar     16 –  5
+   Birch    beats Dogwood   21 –  0
+   Cedar    beats Dogwood   21 –  0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+            |    Alder     |   Birch     |   Cedar     |  Dogwood    |
+----------------------------------------------------------------------
+    Alder > |     ---      |15 -  0 -  6 |10 -  0 - 11 |21 -  0 -  0 |
+    Birch > |  6 -  0 - 15 |    ---      |16 -  0 -  5 |21 -  0 -  0 |
+    Cedar > | 11 -  0 - 10 | 5 -  0 - 16 |    ---      |21 -  0 -  0 |
+  Dogwood > |  0 -  0 - 21 | 0 -  0 - 21 | 0 -  0 - 21 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Alder      2–1–0         2     +29  Birch, Dogwood
+    2  Birch      2–1–0         2     +23  Cedar, Dogwood
+    3  Cedar      2–1–0         2     +11  Alder, Dogwood
+    4  Dogwood    0–3–0         0     -63  —
+
+Winner — Ranked Robin (RCV-RR): Alder
+   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
