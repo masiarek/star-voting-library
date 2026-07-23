@@ -2,7 +2,7 @@
 
 ### Voting 201/301 · a claim-by-claim index — each common claim mapped to its precise rebuttal
 
-A single place to look up the claims you'll hear about "RCV" and see, for each, **what's true, what's oversold, and where the repo rebuts it in detail.** This is an *index*, not the argument — follow the links for the worked examples and numbers.
+A single place to look up the claims you'll hear about "RCV" and see, for each, **what's true, what's oversold, and where the repo rebuts it in detail.** This is an *index*, not the argument — follow the links for the worked examples and numbers. It cuts **both ways**: the first table corrects RCV advocates, [the mirror](#the-mirror-claims-our-own-side-oversells-about-irv) corrects reform advocates.
 
 ## Read this first (so you stay fair and precise)
 
@@ -25,6 +25,33 @@ A single place to look up the claims you'll hear about "RCV" and see, for each, 
 | "RCV is **easy to count / audit** (precinct-summable)." | **False** | IRV is **not summable** — who's eliminated depends on the whole electorate, so ballots must be counted centrally and a recount re-runs the rounds. | [Lack of summability](RCV_IRV_lack_of_summability.md) · [Central tabulation](../topics/central_tabulation.md) |
 | "RCV **breaks two-party domination**." | **Disputed / unproven** | Where IRV has been used longest (Australia's House, a century) two-party dominance persists; center squeeze actively disadvantages the third/center candidate. Treat as an empirical claim, not a given. | [Center squeeze](RCV_IRV_center_squeeze.md) (polarization notes) |
 
+## The mirror — claims *our own side* oversells about IRV
+
+The table above corrects RCV advocates. This one corrects **us**. Reform arguments have their own overreach, and an opponent who knows the literature will find it in seconds — so audit your own lines first. (Same discipline as [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); same reason [Alaska 301](../../method_comparisons/alaska_2022/alaska_301.md) keeps the rarity numbers in view.)
+
+| Claim you'll hear reformers make | Verdict | What survives cross-examination | See |
+|---|---|---|---|
+| "**Forcing voters to take sides destroys consensus** — so IRV is anti-consensus." | **Half-right, wrongly aimed** | The forced ordering is a property of the *ranked ballot*; **Ranked Robin counts the identical ballot and finds the consensus.** What discards consensus is *sequential elimination* + later-no-harm, not ranking. Say "IRV has no mechanism for finding the consensus candidate," not "ranking destroys consensus." | §below |
+| "IRV **usually** elects the wrong winner." | **False** | Condorcet failures showed up in **2 of 182** US RCV elections (Graham-Squire & McCune). The failure is *predictable in close three-ways*, not common. Overstating frequency is the fastest way to lose a technical audience. | [Alaska case studies](case_studies/alaska_rcv_elections.md) |
+| "IRV is **worse than what we have now**." | **False** | Choose-One forces sides far harder — one mark, no later preference at all. IRV is a real improvement on that axis; the argument for STAR is *further*, not *back*. | [RCV-IRV and plurality](RCV_IRV_and_plurality.md) |
+| "STAR **eliminates** favorite betrayal / vote-splitting / the spoiler." | **Oversold** | Resistant, not proof — STAR fails FBC in rare constructions and keeps a residual chicken-dilemma. Concede it before they raise it. | [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) §2, §4 |
+
+### The flagship: "IRV is anti-consensus"
+
+**The valid kernel — and it's stronger than the usual phrasing.** IRV is *designed* to satisfy [Later-No-Harm](../GLOSSARY.md): adding a lower preference can never hurt your favorite. The only way to deliver that guarantee is to refuse to read your 2nd choice until your 1st is eliminated. But "consensus" simply **is** the aggregate of those lower preferences. So the tension isn't rhetoric, it's a design fork: a method that protects your later ranks from ever helping someone else must also decline to use them to find the candidate most voters agree on. IRV took Later-No-Harm; STAR and Ranked Robin took the agreements. (Woodall's incompatibility makes the sharp version: no monotonic method satisfies both Later-No-Harm and Condorcet — see the [Majority Criterion hub](../topics/majority_criterion/#the-same-fork-as-later-no-harm), which works the same fork from STAR's side.)
+
+**The observable consequence** is [center squeeze](RCV_IRV_center_squeeze.md): the candidate acceptable to nearly everyone collects few *first* preferences — precisely because nobody had to take sides *for* them — and is eliminated before those preferences are ever read. Burlington 2009, Alaska 2022.
+
+**And ordinal ballots genuinely can't say "these are both fine."** A ranking expresses A > B; it cannot express *equal* support, or the gap between "great," "tolerable," and "intolerable." Most IRV implementations forbid equal ranks, so voters must manufacture a preference they may not hold. That's why STAR's ballot has an [Equal Support](../GLOSSARY.md) bucket and why the repo separates [preference from support](../scores_and_ranks/preference_vs_support.md).
+
+**Where the claim breaks.** The corollary does not follow from the premise. "Forcing voters to take sides" indicts the **ballot**; "anti-consensus" indicts the **count**. Ranked Robin is the counterexample sitting in this repo — same forced ordering, opposite behavior, because it reads *every* pairwise agreement on *every* ballot. And "destroys" overstates frequency (2 of 182). "Anti-consensus" also implies an active push; *structurally indifferent to consensus* is what's defensible.
+
+**The version that survives cross-examination:**
+
+> Ranked ballots can't express equal support, and IRV's count discards your later preferences until your favorite is out — that's the price of Later-No-Harm. So IRV has no mechanism for finding the candidate most voters agree on, and in close three-way races it predictably squeezes that candidate out. The fix isn't abandoning ranked ballots — **Ranked Robin counts the same ballot and finds the consensus.** The fix is abandoning sequential elimination.
+
+That phrasing also does the [olive-branch](../RCV_Ranked_Robin/) work: it hands an RCV supporter a reform that keeps their ballot.
+
 ## The umbrella term (so the exhausted-ballot claims stay precise)
 
 "Exhausted" is **too fuzzy** — it bundles unlike cases. Use **inactive ballots** as the umbrella, with sub-types: *voter-side* (overvotes, skipped/undervotes, voluntary bullet voting — roughly comparable to Choose-One) vs *count-artifact* (involuntary truncation from a ranking limit; exhausted-untransferable; non-exhausted-untransferred). The count-artifact cases hit voters who ranked **fully and correctly** — that's the asymmetry the vague word hides. Full taxonomy: [Exhausted / inactive ballots](exhausted_ballots_301.md) §2. *(Coinages like "stalled / stuck ballot" are useful in teaching but aren't standard — flag them as your own label.)*
@@ -40,6 +67,7 @@ A single place to look up the claims you'll hear about "RCV" and see, for each, 
 - [Favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) — "safe to vote your conscience."
 - [Is RCV "simple"?](RCV_IRV_is_simple.md) · [Tabulation, step by step](../topics/tabulation_star_vs_irv.md) — "easy as 1-2-3."
 - [Center squeeze](RCV_IRV_center_squeeze.md) · [Lack of summability](RCV_IRV_lack_of_summability.md) — "non-polarizing," "ends the spoiler," "easy to count."
+- [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Majority Criterion hub](../topics/majority_criterion/) · [Alaska 301](../../method_comparisons/alaska_2022/alaska_301.md) — the mirror section: our own overreach, the Later-No-Harm fork, the rarity numbers.
 - `LINKS.md` → Full Deck **"RCV Common False Claims"** slide; the RCV-IRV source-note tables.
 
 # file: rcv_irv_false_claims.md
