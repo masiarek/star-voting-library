@@ -11,11 +11,11 @@
 Kenneth Arrow's Impossibility Theorem (1951) is a statement about aggregating individual **rankings** into a social **ranking**. For three or more candidates, no such *ranked* rule can satisfy all of a short list of reasonable-sounding conditions at once:
 
 - **Unanimity (Pareto)** — if every voter ranks A over B, the result does too.
-- **Independence of Irrelevant Alternatives (IIA)** — whether A finishes above B shouldn't flip because of some third candidate C.
+- **Independence of Irrelevant Alternatives (IIA)** — whether A finishes above B shouldn't flip because of some third candidate C. (Violating this is exactly the [spoiler effect](spoiler_effect.md).)
 - **Non-dictatorship** — no single voter's ranking simply *is* the outcome.
 - …over an unrestricted domain of possible rankings.
 
-The load-bearing word is **rankings**. Arrow's theorem is a theorem about *ordinal* input — ballots that carry only order, never degree.
+The load-bearing word is **rankings**. Arrow's theorem is a theorem about *ordinal* input — ballots that carry only order, never degree. (That [ordinal-vs-cardinal line](../scores_and_ranks/scores_vs_ranks.md) is the whole hinge of this page.)
 
 ## Why cardinal methods fall outside it
 
@@ -28,7 +28,7 @@ This isn't a fringe reading. Arrow himself, late in life, favored score-style me
 Here is where cardinal advocates sometimes overreach, and where staying precise keeps the point winning. Escaping Arrow does **not** make STAR strategy-proof or paradox-free:
 
 - **Gibbard's theorem still applies.** Gibbard (1973), extended by Gibbard (1978) to cardinal and game-form methods, proves that *every* non-dictatorial deterministic method with 3+ outcomes is **manipulable** — some situation always exists where a voter gains by voting insincerely. STAR is no exception ([strategic voting](strategic_voting.md); the worked [5-1-0 challenge](../../method_comparisons/star_5_1_0_challenge/)). So "STAR escapes **Arrow**" is true; "STAR escapes **every** impossibility theorem" is not. The one it doesn't escape is Gibbard.
-- **IIA isn't free either.** The pure score *sum* is IIA-clean — adding a hopeless candidate doesn't change anyone else's total (unless voters renormalize). But STAR's *runoff* is IIA-sensitive inside a Condorcet cycle: a candidate who can't win can still change *which two* reach the runoff, and flip the result — worked, on sincere ballots, in [the cycle spoiler (BV2212)](../../01_STAR/iia_cycle_spoiler/).
+- **IIA isn't free either.** The pure score *sum* is IIA-clean — adding a hopeless candidate doesn't change anyone else's total (unless voters renormalize). But STAR's *runoff* is IIA-sensitive inside a [Condorcet cycle](../RCV_Ranked_Robin/cycle_resolution.md): a candidate who can't win can still change *which two* reach the runoff, and flip the result — worked, on sincere ballots, in [the cycle spoiler (BV2212)](../../01_STAR/iia_cycle_spoiler/).
 - **Strategic normalization pulls cardinal back toward ordinal.** If voters min/max (bullet-vote all 0s and 5s), a rated ballot collapses into an essentially ordinal one — and some Arrow-flavored tensions creep back in. The clean escape assumes reasonably sincere scoring.
 - **Interpersonal comparison.** Summing scores across voters leans on comparing one person's "5" to another's — a genuine philosophical wrinkle Arrow's ordinal framework deliberately sidestepped. It's a feature (it lets intensity count) with a cost worth naming.
 
