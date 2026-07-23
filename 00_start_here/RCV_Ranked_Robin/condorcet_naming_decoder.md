@@ -25,6 +25,31 @@ They're at *different levels of generality* — a category, a specific method in
 
 Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../topics/ranked_ballot_methods_zoo.md).
 
+## The word "consensus" carries three different jobs
+
+The table above lists *Consensus Voting* as a brand. But the word shows up in this repo, and across the web, in **three senses at different altitudes** — and sliding between them is the single most common source of confusion in this family:
+
+| Sense | What it means | Careful |
+|---|---|---|
+| **Technical** | "consensus winner" = the **Condorcet winner** — beats every other candidate head-to-head | A *definition*, not a description. It's a stipulated label for a pairwise-majority fact. |
+| **Brand** | **Consensus Voting** = Equal Vote's alias for Ranked Robin; **Consensus Choice** = *Better Choices for Democracy*'s sibling brand (same family, different cycle rule) | Two different organizations, two different tiebreaks. Not interchangeable at the byte level. |
+| **Ordinary English** | broad, warm, genuinely-shared agreement — everyone is *content* | **Condorcet methods cannot see this.** A ranked ballot carries order, not intensity, so the count can't tell a warm second choice from grudging tolerance — see [honest limits](RCV_RR_honest_limits.md). |
+
+**The claim to watch for**, common on advocacy sites and forums:
+
+> "Condorcet methods are designed to make the best use of limited ranking information to find the consensus."
+
+The **first half is a fair steelman** — and worth conceding cleanly. It admits ranking is *limited* information and claims Condorcet extracts the most available from it, which is true: a round-robin reads every rank against every opponent, and nothing exhausts. That's a real advantage over IRV, which reads one rank per ballot per round.
+
+The **second half slides from sense 1 to sense 3.** "Finds the consensus" is true by *definition* (whoever wins the pairwise comparisons is *called* the consensus winner) and unproven in ordinary English (that person may be everyone's tepid second choice). The method doesn't discover consensus; it elects the pairwise-majority winner and the brand supplies the warmer word.
+
+**Where the two reform camps part ways** is exactly here — and both answers are respectable:
+
+- **Ranked Robin / Condorcet:** *extract maximum value from limited information.* Keep the familiar ranked ballot; count all of it.
+- **STAR:** *don't limit the information.* Let the ballot carry degree (0–5), not just order, so intensity is visible at all.
+
+That's a genuine design disagreement about ballots, not a dispute about counting — see [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) and [preference vs. support](../scores_and_ranks/preference_vs_support.md).
+
 ## Looks like Condorcet — but isn't (STAR, 3-2-1)
 
 Two **rated** methods *end* with a head-to-head step, which can fool you into filing them under Condorcet. They aren't. Both first narrow the field, then run a pairwise comparison only among the **survivors** — so the true Condorcet winner can be eliminated *before* the final:
