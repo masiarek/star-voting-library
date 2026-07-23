@@ -5,6 +5,7 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
+- **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py` ([jump to section](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
 
@@ -156,3 +157,73 @@ uv run 06_Other/simulations/star_vs_rr_divergence.py --trials 3000
 - Sincere, **normalized** 0–5 scores (each voter min-maxes their utilities). Real voters don't perfectly normalize; different scoring assumptions move the numbers.
 - RR = Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge cell may differ slightly from the engine.
 - "Divergence" counts *any* different winner, including ties resolved differently — report the model, size, and mechanism split with the number.
+
+---
+
+## Qualifying-round (primary method) simulation
+
+`primary_method_simulation.py` measures how often a **two-stage reform loses the consensus winner in its own primary** — and whether the method used for the qualifying round matters.
+
+### Why this exists
+
+Several reform packages narrow a crowded open field to the top N (usually 4) before running a good method in the general. [Consensus Choice](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md) is the live example: step 1 is *"an open qualifying election ... [that] determines at least four of the strongest candidates,"* and the published materials **do not say which method that round uses**.
+
+That gap produced a genuine disagreement among people who know the field, with **no published numbers on either side**:
+
+- **It matters a lot** — if the primary doesn't eliminate vote-splitting, the general's accuracy is capped by whatever the primary already distorted.
+- **It matters little** — with *four* candidates advancing, it's unlikely the consensus candidate fails to advance even under Plurality; four slots is a lot of slack.
+
+This script measures it instead of arguing about it.
+
+### The structural fact that makes this the whole question
+
+If the general is a **Condorcet** method (Ranked Robin / Consensus Choice), a full-field Condorcet winner who *advances* **always wins** — they beat everyone head-to-head, so they beat every survivor, so they're the Condorcet winner of the surviving subset too. (This is checked as a self-test invariant, not assumed.)
+
+So with a Condorcet general, **the qualifying round is the only place the consensus winner can be lost.** "How often does the primary drop the CW?" *is* the accuracy question — which is exactly why an unspecified primary method is not a footnote. (Run `--general star` and this stops holding: a CW can advance and still miss the score-based top two.)
+
+### Running it
+
+```bash
+uv run 06_Other/simulations/primary_method_simulation.py --selftest
+uv run 06_Other/simulations/primary_method_simulation.py
+uv run 06_Other/simulations/primary_method_simulation.py --candidates 12 --advance 3 4 5
+uv run 06_Other/simulations/primary_method_simulation.py --general star
+```
+
+`--selftest` checks four invariants: a Condorcet qualifying round never drops the CW; `N ≥ C` advances everyone; an advanced CW always wins a Condorcet general; and a hand-built 5-ballot center squeeze is dropped by a Plurality top-2.
+
+### Representative results
+
+**How often the qualifying round drops the Condorcet winner** — field of 9 candidates, 501 voters, 2000 trials/cell, seed 20260723, general = Ranked Robin.
+
+| primary method | N=2 | N=3 | **N=4** | N=5 |
+|---|:--:|:--:|:--:|:--:|
+| **spatial** — Plurality | 45.5% | 30.7% | **17.3%** | 11.8% |
+| spatial — Approval (≥4) | 5.9% | 1.3% | **0.4%** | 0.1% |
+| spatial — Score (STAR round) | 3.5% | 0.5% | **0.0%** | 0.1% |
+| spatial — Ranked Robin | 0.0% | 0.0% | **0.0%** | 0.0% |
+| **faction** — Plurality | 30.4% | 13.9% | **7.8%** | 3.9% |
+| faction — Approval (≥4) | 10.7% | 4.6% | **2.4%** | 1.4% |
+| faction — Score | 5.4% | 1.7% | **0.5%** | 0.1% |
+| **noise** — Plurality | 38.1% | 26.4% | **15.7%** | 11.5% |
+| noise — Approval (≥4) | 19.1% | 10.5% | **3.6%** | 1.8% |
+
+End-to-end VSE at N=4 (spatial): Plurality **0.962**, Approval ≥4 **0.997**, Score **0.999**, no primary at all **0.999**.
+
+### What this means
+
+1. **Both sides of the argument were partly right, and the optimistic one was too optimistic.** Four slots *is* real slack — Plurality's drop rate falls from 45.5% at N=2 to 17.3% at N=4 under the realistic spatial model. But **1 in 6 is not "very unlikely."** A reform whose whole selling point is electing the consensus candidate would discard that candidate in roughly a sixth of elections, in its own first round, before the good method ever runs.
+
+2. **The fix is nearly free.** Swapping Plurality for **Approval** in the qualifying round cuts the drop rate from 17.3% to **0.4%** — a ~40× improvement, for a ballot change no harder to explain or administer. Score (STAR's scoring round) is comparable; a Condorcet qualifying round is 0% by construction. There is no accuracy argument for Choose-One in the primary and a large one against it.
+
+3. **Polarization cuts both ways.** The factional model shows *lower* Plurality drop rates (7.8% at N=4) — clustered voters make the centrist's support less fragmented — but it's also the only model where the **looser** approval cutoff is *worse* than the tighter one (≥3: 4.0% vs ≥4: 2.4% at N=4). Approval's cutoff is a modelling choice that moves the answer, exactly as in the [STAR vs Approval](../../method_comparisons/star_vs_approval_divergence.md) study.
+
+4. **Advancing more candidates helps, but slower than switching methods.** Going from N=4 to N=5 under Plurality buys you 17.3% → 11.8%. Going from Plurality to Approval at the *same* N=4 buys you 17.3% → 0.4%. **The method matters far more than the number of slots** — which is the practical answer to "how many should advance?"
+
+### Caveats (read before quoting)
+
+- Sincere ballots only, no strategy, no candidate entry/exit effects. The real Alaska-style worry — parties pressuring co-partisans to drop out *before* the primary — is **not modelled**, and it cuts toward broad-support methods even more strongly.
+- "Accuracy" here means matching the full-field **Condorcet** winner. That's the right benchmark for a Condorcet general but bakes in a Condorcet definition of the right answer; the VSE column is the utilitarian cross-check.
+- Cycles are counted, not hidden: the "CW exists" column runs ~99% (spatial), ~93% (faction), ~54% (noise). Noise-model rates are an adversarial upper bound, not a forecast.
+- Fixed tiebreak (stable argsort → lower candidate index) rather than a lot draw; identical across methods, so cross-method comparison stays fair.
+- **Always report the model, field size, and N with the number.**

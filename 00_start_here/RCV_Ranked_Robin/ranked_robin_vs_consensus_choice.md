@@ -43,7 +43,22 @@ Two defensible positions on how much this matters, both held by serious people i
 - **It matters a lot.** If the primary doesn't eliminate vote-splitting, the general election's accuracy is capped by whatever the primary already distorted. Pair a top-4/5 open primary with a good method (STAR, Approval, Ranked Robin) or don't bother.
 - **It matters little in practice.** With **four** candidates advancing, it's unlikely the consensus candidate fails to advance even under Plurality — four slots is a lot of slack. The sharper risk is *pre-primary* pressure on co-partisans to drop out, which a broad-support method (Approval) in the primary would blunt.
 
-This is an **open empirical question, not a settled one** — and it's simulatable. A natural repo contribution: take a spatial electorate, run a Plurality top-4 primary vs. an Approval top-4 primary, and measure how often the Condorcet winner fails to advance. The tools are here ([election simulation models](../topics/election_simulation_models.md), [simulate utilities, not ballots](../topics/simulate_utilities_not_ballots.md)).
+**We measured it** rather than leaving it as opinion — [`primary_method_simulation.py`](../../06_Other/simulations/primary_method_simulation.py), written up at [Qualifying-round simulation](../../06_Other/simulations/README.md#qualifying-round-primary-method-simulation). Field of 9 candidates, 501 voters, realistic spatial model, general = Ranked Robin:
+
+| Qualifying method, **top 4 advance** | Consensus (Condorcet) winner dropped |
+|---|:--:|
+| **Plurality** | **17.3%** |
+| Approval (≥4) | 0.4% |
+| Score (STAR's scoring round) | 0.0% |
+| Ranked Robin | 0.0% (by construction) |
+
+Three things follow, and they matter for how to talk about this reform:
+
+1. **Four slots is real slack — and not enough.** Plurality's drop rate falls from 45.5% at top-2 to 17.3% at top-4, so the optimistic view is directionally right. But a reform whose selling point is electing the consensus candidate would discard that candidate in **about one election in six**, in its own first round, before the pairwise count ever runs.
+2. **The fix is nearly free.** Approval in the qualifying round cuts 17.3% → 0.4% — roughly 40×, for a ballot no harder to explain or administer. There is no accuracy argument for Choose-One in the primary and a large one against it.
+3. **The method matters more than the number of slots.** Top-4 → top-5 under Plurality buys 17.3% → 11.8%. Plurality → Approval at the *same* top-4 buys 17.3% → 0.4%.
+
+There's also a structural reason this is the whole ballgame: with a **Condorcet general**, a consensus winner who *advances* always wins (they beat every survivor by definition). So the qualifying round is the **only** place accuracy can be lost — which is exactly why an unspecified primary method isn't a footnote. Caveats and the full sweep (factional and noise models, VSE, N=2–5) are in the writeup; sincere ballots only, and pre-primary candidate drop-outs are not modelled.
 
 ## The example everyone uses (verified)
 

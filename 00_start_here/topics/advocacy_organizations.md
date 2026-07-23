@@ -6,13 +6,16 @@ Each major single-winner reform has a national organization behind it. Knowing w
 |---|---|---|---|
 | [Ranked Choice Voting](../RCV_IRV/RCV-IRV-Hare.md) (RCV-IRV) | **FairVote** | [fairvote.org](https://fairvote.org) | Popularized the "RCV" brand for instant-runoff voting; the largest, oldest US reform group. |
 | [Approval Voting](../Approval_Voting/approval_voting.md) | **The Center for Election Science** (CES) | [electionscience.org](https://electionscience.org) | Champions Approval as the simplest high-impact upgrade; backed the Fargo and St. Louis wins. |
-| [STAR Voting](../STAR_Voting/STAR_start_here.md) | **Equal Vote Coalition** | [equal.vote](https://equal.vote) | Developed and advocates STAR (Score Then Automatic Runoff); home of the "equally weighted vote" standard. |
+| [STAR Voting](../STAR_Voting/STAR_start_here.md) | **Equal Vote Coalition** | [equal.vote](https://equal.vote) | Developed and advocates STAR (Score Then Automatic Runoff); home of the "equally weighted vote" standard. Also promotes [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) as the ranked-ballot option. |
+| [Consensus Choice](../RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md) (Condorcet) | **Better Choices for Democracy** | [betterchoices.vote](https://www.betterchoices.vote/consensus-choice) | Newer group advocating a Condorcet method under the "Consensus Choice" brand, packaged with an open qualifying election sending 4+ candidates to the general. |
 
 ## Notes on the terminology
 
 "RCV" is a **ballot** (ranked), and FairVote's usage made it a near-synonym for one **tabulation** of that ballot — instant-runoff voting (IRV). That's why this repo writes **RCV-IRV** when precision matters: other tabulations of the same ranked ballot (Ranked Robin, STV) are not what "RCV" colloquially means. Background: [why the name is confusing](../RCV_IRV/RCV-IRV-confusing-name.md).
 
 STAR and the Equal Vote Coalition grew out of the same community; the consumer-facing STAR campaign also operates as **STAR Voting** ([starvoting.org](https://starvoting.org)).
+
+**Two brands, one Condorcet method.** Equal Vote's **Ranked Robin** and Better Choices' **Consensus Choice** are the same core count (Copeland — every pair head-to-head, most wins). They differ in their cycle tiebreak and in proposal scope, not in the ballot or the basic tally: [Ranked Robin vs. Consensus Choice](../RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md). Note this means Equal Vote appears twice in the table above — it champions STAR *and* a Condorcet option, which is unusual among these groups.
 
 ## Beyond the three
 
