@@ -39,6 +39,18 @@ Two things to read off this (verified on the engine):
 
 Also note the proportional twist that matches the video: **BigBiz (17 first-choices) wins no seat, while Schools (15) does** — breadth of support beats raw first-place count once seats are shared.
 
+## So which proportional method is *best*?
+
+Notice that all four proportional methods above elect the **identical slate**. That's typical, not a fluke — and it raises the obvious question: if they agree, how would you ever rank them?
+
+The honest answer is that **there's no settled way to measure it.** Single-winner methods have a standard yardstick — [VSE](../../topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) for accuracy, [PVSI](../../topics/pvsi_strategic_incentive.md) for strategy resistance. Multi-winner has no accepted equivalent.
+
+The most serious attempt is **AVEC** (Average Voter Effective Choice) by [Jameson Quinn](../../topics/in_memoriam_jameson_quinn.md) — the same person who built VSE. It multiplies two factors: **AVE** (how much of the electorate's voting power actually elected *someone* — votes wasted below a [party threshold](../../GLOSSARY.md) drag it down) and **AVC** (how much real choice voters had). Scored examples: Israel's April 2019 election ≈ **84%** (91.5% AVE × 92% AVC — 8.5% of votes fell below the threshold and were simply discarded), versus single-seat plurality districts at roughly **44%**.
+
+But Quinn **shelved it**: he marked the work "[not ongoing]," left several sections unwritten, and conceded it stacks "5 different levels/types of approximation" on top of a one-dimensional-ideology assumption. Treat AVEC as a serious sketch of the right question, not a number to quote.
+
+**What follows for this library.** When someone asks "is STAR-PR better than STV?", the defensible comparisons are *mechanical and administrative* — [summability](../../topics/summability/), ballot expressiveness (scores capture strength, ranks capture order), how easily a voter can check the count, and whether the jurisdiction can run it — **not** a satisfaction score. Anyone quoting a precise "proportional accuracy" figure is ahead of the evidence. That applies to STAR-PR exactly as much as to STV.
+
 ## STV is not IRV
 
 **STV = the proportional, multi-winner cousin of IRV.** Same ranked ballot and transfer idea, but it fills several seats against a quota instead of one. Reserve "IRV" for the single-winner case. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../tips/TIPS_terminology.md).)
