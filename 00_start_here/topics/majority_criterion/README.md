@@ -50,6 +50,20 @@ Look at *what it took* to make Ada lose: her own majority had to spread real sup
 
 And notice *why* Ada loses in Election B: **almost everyone likes Bruno** (the majority gave him a 4, the minority a 5), while 40% of voters actively reject Ada. STAR is deciding that a broadly-liked candidate nobody hates (Bruno) is a better representative than a divisive one that 40% score at rock bottom (Ada). Whether that's a bug or a feature is the whole debate. FairVote sees "the majority was overruled." Equal Vote sees "a polarizing candidate was correctly passed over for a consensus one."
 
+## A sharper version of the objection — *whose* majority is it?
+
+There's a deeper critique worth knowing, because it cuts under the whole argument rather than picking a side in it. It runs like this:
+
+A ranked ballot only ever records **pairwise** side-taking — A over B. So the dividing line that produces a "majority" is drawn by **which candidates happen to be running**, not by any pre-existing split among the voters. Change the candidates and the majority changes, even though nobody's opinions moved. On that reading, the ordinal majority is a property of *the candidates*; a **majority of consensus** — the smallest group of 50%+1 voters clustered around where opinion actually concentrates — would be a property of *the voters*, and only a rated ballot can see it, because it measures every candidate on one common scale instead of slicing the field two at a time.
+
+A related trap the same argument exposes: **consensus is not the same as "centrism."** Most real consensus positions are *extreme* — that murder should be illegal, that children should be educated — not moderate. And under genuine polarization the "centre" is where almost nobody is. So "the consensus candidate" and "the moderate candidate" are different claims, and conflating them muddles this whole debate.
+
+**Three honest caveats before deploying it:**
+
+- **It concedes the practical point.** The same argument grants that majority-of-preference is *"a very good rule of thumb"* — a candidate near the consensus will usually be on the majority's side anyway. So the critique is conceptual, not a claim that ranked methods routinely elect the wrong person. Anyone citing it as a knockout is overreading it.
+- **It is an argument for Score, not for STAR.** STAR's [automatic runoff](../../STAR_Voting/the_count/STAR_Automatic_Runoff.md) is *itself* a pairwise majority step — precisely the mechanism the critique targets. A STAR advocate cannot adopt this wholesale without arguing against STAR's own second round. (It fits pure Score, and to a degree Approval.)
+- **Source and lean.** The clearest write-up is [Lucasvb's essay on electowiki](https://electowiki.org/wiki/User:Lucasvb/Majority_and_consensus_under_ordinal_and_cardinal_perspectives) — a **personal user page**, not a community-reviewed article, by a cardinal-methods advocate. Its geometric argument is genuinely illuminating; its behavioural claim (that ranked ballots make voters *become* more factionalist) is asserted, not evidenced. Treat the first as an idea worth thinking with and the second as a hypothesis.
+
 ## The Relaxed Majority Criterion — Equal Vote's answer
 
 Equal Vote argues the *strict* rule is the wrong yardstick, and proposes a gentler one that captures what actually matters. Their **Relaxed Majority Criterion (RMC)** asks: can a majority safely give their second choice a *high-but-not-top* score without accidentally sinking their favorite?
