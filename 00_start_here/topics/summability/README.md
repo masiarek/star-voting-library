@@ -40,6 +40,21 @@ Summability makes a result locally checkable; the [`pref_voting` cross-check](..
 
 External: [Is STAR Voting Precinct Summable? (starvoting.org)](https://www.starvoting.org/summable). Glossary: [`summability`](../../GLOSSARY.md).
 
+### The cryptographic payoff — summable means *encryptable*
+
+Summability has a consequence that rarely gets stated: it is what makes a method cheap to make **end-to-end verifiable** with cryptography.
+
+[Additively homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption) lets you **add encrypted numbers without decrypting them** — combine every voter's encrypted ballot into an encrypted total, then decrypt only the *total*. Each voter can confirm their own ballot was included, and anyone can verify the tally, while no individual ballot is ever opened. That is precisely [Microsoft's ElectionGuard](https://github.com/Election-Tech-Initiative/electionguard) (open source; homomorphic ElGamal, designed by Josh Benaloh), and it works because a plurality tally **is just addition**.
+
+The asymmetry that follows:
+
+- **Summable methods (STAR, Approval, Score, Choose-One)** — the tally is a fixed set of sums, known in advance. They map directly onto additive encryption; only **partial** homomorphic encryption is needed (adding, not multiplying), which is decades-old, well-understood maths. STAR's scoring round is the same construction as ElectionGuard's, just with scores 0–5 instead of 0/1.
+- **Non-summable methods (RCV-IRV, STV)** — the count is **sequential and adaptive**: you cannot know what to tally in round 3 until rounds 1–2 are decrypted. There is no fixed sum to compute homomorphically, so verifiable implementations fall back on **mixnets** — shuffling and then decrypting individual ballots with proofs that the shuffle was honest. That is heavier machinery, and it means individual ballots *do* get opened.
+
+So the [central-tabulation](../central_tabulation.md) cost of non-summability shows up a second time in cryptography. It's the same structural property, and it's an argument for summable methods that has nothing to do with who wins.
+
+*Caveat, stated plainly:* none of this makes **internet** voting safe. Homomorphic tallying protects the *count*; it does nothing about malware on the voter's own device, or about coercion and vote-buying when people vote unobserved. The [US Vote Foundation's E2E-V study](https://www.usvotefoundation.org/E2E-VIV) (2015) and the National Academies' *Securing the Vote* (2018) both concluded internet voting is not ready for public elections **even with** end-to-end verifiability. The technology is far better suited to in-person paper systems and to lower-stakes organizational elections.
+
 ---
 
 *This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above; this page just gathers the summability angle in one place for folks browsing by topic. See [the topics index](../) for the other topic hubs.*
