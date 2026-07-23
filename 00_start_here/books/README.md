@@ -69,6 +69,12 @@ Zoom out from single-winner: how whole systems compare, how seats get apportione
 
 Cover thumbnails are from the [Open Library](https://openlibrary.org) covers API (community-maintained, freely reusable), shown small for identification in this annotated bibliography. Editions and cover art vary; the year given is the first edition unless noted. No endorsement by any author or publisher is implied.
 
+## Going deeper on one family
+
+This shelf is organized for breadth. When you want the literature on a *single* family — books, journal papers, and the free online surveys together — see the method-specific reading lists:
+
+- [Condorcet methods — a reading list](../topics/condorcet/condorcet_reading_list.md) — with Fishburn's C1/C2/C3 taxonomy up front, because in this family the names are the hard part.
+
 ## Related
 
 - [How to Learn About Voting Methods](../topics/how_to_learn_about_voting_methods.md) — the runnable, example-first reading path (books complement it)

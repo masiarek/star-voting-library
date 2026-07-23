@@ -25,6 +25,18 @@ They're at *different levels of generality* — a category, a specific method in
 
 Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../topics/ranked_ballot_methods_zoo.md).
 
+## The tier the brands never mention (C1 / C2 / C3)
+
+The table above maps the *marketing* names. The academic literature sorts the same family a different way — by **how much of the pairwise data a rule actually needs** — and knowing this one scheme, from [Fishburn (1977)](../topics/condorcet/condorcet_reading_list.md), stops most cross-talk before it starts:
+
+| Class | Reads | Members |
+|---|---|---|
+| **C1** | only **who beat whom** (the tournament; margins discarded) | **Copeland** → **Ranked Robin**, Smith set, Schwartz set, Top Cycle |
+| **C2** | the **margins** too | Minimax, Ranked Pairs, Schulze, Kemeny, Split Cycle |
+| **C3** | must return to the ballots and iterate | Dodgson, Young |
+
+Two things fall out of it. **"Tournament solution" means the C1 tier specifically** — not the whole family — so a theorem proved about tournament solutions doesn't automatically apply to Minimax. And **the tiers only diverge in a cycle**: when a Condorcet winner exists, every rule in every tier elects the same person, which is why so much of the literature argues about a rare case. → [the full reading list, with sources and leans](../topics/condorcet/condorcet_reading_list.md).
+
 ## The word "consensus" carries three different jobs
 
 The table above lists *Consensus Voting* as a brand. But the word shows up in this repo, and across the web, in **three senses at different altitudes** — and sliding between them is the single most common source of confusion in this family:
@@ -76,6 +88,7 @@ Two **rated** methods *end* with a head-to-head step, which can fool you into fi
 
 ## The clear version, in this repo
 
+- [Condorcet methods — a reading list](../topics/condorcet/condorcet_reading_list.md) — the sources behind this page: books, papers, and the free surveys, each with its lean marked
 - [Ranked Robin](ranked_robin.md) — the method, taught (with the "Names & family" section this page expands)
 - [Terminology — the ranked-method family tree](../tips/TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
 - [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) — why a *cycle* leaves "the Condorcet winner" blank while Ranked Robin still elects one

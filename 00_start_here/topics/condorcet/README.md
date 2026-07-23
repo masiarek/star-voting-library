@@ -24,6 +24,8 @@ When there's **no** Condorcet winner (a cycle), the principled "still in content
 
 > **"But a paper proves Condorcet, IIA, and monotonicity aren't even desirable?"** That's the most sophisticated form of the argument — an arXiv paper defining "ordered majority rule" and claiming IRV uniquely satisfies it. The catch: the property is IRV's own algorithm restated, defined circularly, so the "uniqueness" is a mirror. Taken apart (with the honest core — the case for *cardinal* ballots — kept) in [Ordered majority rule and the "Condorcet isn't desirable" argument](ordered_majority_rule_irv.md).
 
+> **"Where do I go to read about this properly?"** [Condorcet methods — a reading list](condorcet_reading_list.md): the books, papers, and free surveys worth your time, each with its lean marked — and, first, the one taxonomy (Fishburn's C1/C2/C3) that makes the family's names stop sliding. Start there if the *nomenclature* is what's blocking you.
+
 Glossary: [`Condorcet`](../../GLOSSARY.md).
 
 ---
