@@ -42,6 +42,8 @@ External: [Is STAR Voting Precinct Summable? (starvoting.org)](https://www.starv
 
 ### The cryptographic payoff — summable means *encryptable*
 
+*Full treatment, including why STAR's **runoff** is the hard part and how it's resolved: [Counting under encryption](../homomorphic_tallying.md).*
+
 Summability has a consequence that rarely gets stated: it is what makes a method cheap to make **end-to-end verifiable** with cryptography.
 
 [Additively homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption) lets you **add encrypted numbers without decrypting them** — combine every voter's encrypted ballot into an encrypted total, then decrypt only the *total*. Each voter can confirm their own ballot was included, and anyone can verify the tally, while no individual ballot is ever opened. That is precisely [Microsoft's ElectionGuard](https://github.com/Election-Tech-Initiative/electionguard) (open source; homomorphic ElGamal, designed by Josh Benaloh), and it works because a plurality tally **is just addition**.
