@@ -43,7 +43,7 @@ Step 3  → A beats B, 35 to 25   → A wins
 - **Non-slippery chicken** — like STAR, a few defectors can't start an avalanche (a final head-to-head means small defections don't snowball).
 - **Explicit dark-horse and clone guards** — where STAR resists dark horse *implicitly* (via support-reading), 3-2-1 bolts on rules that do it explicitly.
 - **Genuinely explainable** — "your worst candidate gets knocked out before the finals" is an intuitive, even chantable pitch; several people find it the easiest good method to explain across the aisle.
-- **Summable** — precincts can report Good tallies, Bad tallies, and the pairwise matrix; the winner is computable from those aggregates (no need to centralize raw ballots). Same virtue STAR has.
+- **[Summable](summability/)** — precincts can report Good tallies, Bad tallies, and the pairwise matrix; the winner is computable from those aggregates (no need to centralize raw ballots). Same virtue STAR has.
 
 ## 3-2-1 vs. STAR — close cousins, real trade-offs
 
