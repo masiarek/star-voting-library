@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**403 election files** (353 single-winner, 50 multi-winner) across 15 method(s).
+**404 election files** (354 single-winner, 50 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 230 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 43 |
+| Ranked Robin (RCV-RR / Copeland) | 44 |
 | Approval | 14 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -296,12 +296,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (43)
+## Ranked Robin (RCV-RR / Copeland)  (44)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex09_game_night_cycle`](../../01_STAR/exercises/cases/cases_pages/ex09_game_night_cycle.md) | `01_STAR/exercises/cases/` | 1 | Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill) → _Azul_ | [`.yaml`](../../01_STAR/exercises/cases/ex09_game_night_cycle.yaml) |
 | [`ranked_robin_consensus_center`](../../05_Ranked_Robin/_main/cases/cases_pages/ranked_robin_consensus_center.md) | `05_Ranked_Robin/_main/cases/` | 1 | Ranked Robin (RCV-RR) — the consensus center wins the round-robin → _Ben_ | [`.yaml`](../../05_Ranked_Robin/_main/cases/ranked_robin_consensus_center.yaml) |
+| [`rr_blank_is_last_c4_b3`](../../05_Ranked_Robin/_main/cases/cases_pages/rr_blank_is_last_c4_b3.md) | `05_Ranked_Robin/_main/cases/` | 1 | Ranked Robin — a blank is ranked LAST (and rank numbers don't matter) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/_main/cases/rr_blank_is_last_c4_b3.yaml) |
 | [`bv2208_7q6by8_burial_sincere`](../../05_Ranked_Robin/burial/cases/cases_pages/bv2208_7q6by8_burial_sincere.md) | `05_Ranked_Robin/burial/cases/` | 1 | BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone → _Beryl_ | [`.yaml`](../../05_Ranked_Robin/burial/cases/bv2208_7q6by8_burial_sincere.yaml) |
 | [`bv2209_fxhw6g_burial_pays`](../../05_Ranked_Robin/burial/cases/cases_pages/bv2209_fxhw6g_burial_pays.md) | `05_Ranked_Robin/burial/cases/` | 1 | BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank the leader last, and it pays → _Amber_ | [`.yaml`](../../05_Ranked_Robin/burial/cases/bv2209_fxhw6g_burial_pays.yaml) |
 | [`bv2142_4gfwdq_clone_cycle_pre`](../../05_Ranked_Robin/clone_independence/cases/cases_pages/bv2142_4gfwdq_clone_cycle_pre.md) | `05_Ranked_Robin/clone_independence/cases/` | 1 | BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak → _A_ | [`.yaml`](../../05_Ranked_Robin/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml) |

@@ -9,6 +9,7 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 - [**Why Ranked Robin**](why_ranked_robin.md) — the positive case: the friendly upgrade for ranked ballots (start here for the "why").
 - [Ranked Robin (aka Consensus Voting)](ranked_robin.md) — the pairwise round-robin and the win-count
 - [A naming decoder](condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what
+- [A blank is ranked *last*](rr_blank_means_last.md) — what a blank means, why rank *numbers* don't matter (it's not Borda), and the universal ballot wording
 - [Condorcet methods — a reading list](../topics/condorcet/condorcet_reading_list.md) — the books and papers behind the decoder, each with its lean marked
 - [Ranked Robin vs. Consensus Choice](ranked_robin_vs_consensus_choice.md) — the sibling brand: same count, different cycle rule, different proposal scope
 - [Summability](RCV_RR_summability.md) — the pairwise matrix adds (unlike IRV)

@@ -10,7 +10,8 @@ Method-specific terms for **Ranked Robin** (RCV-RR) and the broader Condorcet fa
 - **Ranked Pairs (Tideman)** — lock in the strongest pairwise victories first, skipping any that would create a cycle.
 - **Schulze (beatpath)** — decides via the strongest "beatpaths" between candidates.
 - **Minimax (Simpson–Kramer)** — elect the candidate whose *worst* pairwise loss is smallest.
-- **Borda** — a positional ranked method (points by rank); ranked but **not** Condorcet-compliant.
+- **Borda** — a positional ranked method (points by rank); ranked but **not** Condorcet-compliant. *Contrast with Ranked Robin, which is often mistaken for it:* Borda scores rank **numbers**; Ranked Robin uses only each ballot's **order** to decide pairwise winners — see [a blank is ranked last](rr_blank_means_last.md).
+- **Blank / unranked (ranked last)** — a candidate you leave off a ranked ballot is placed **below every candidate you did rank** (not a specific tier like "5th" or "6th" — the numeric label is irrelevant to the count). Multiple blanks are **tied** with one another ([Equal Support](../GLOSSARY.md)). → [a blank is ranked last](rr_blank_means_last.md)
 - **Bucklin (Grand Junction)** — a ranked, median-style method; ranked but **not** Condorcet. (Spelled *Bucklin*, not "Buckling".) <!-- terminology-ok: teaches the correct spelling -->
 
 
