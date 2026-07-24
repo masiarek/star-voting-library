@@ -6,7 +6,7 @@
 
 ## Example 17 — the Condorcet winner is deleted *first* (live: [BV2164](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_coombs_cw.md))
 
-33 voters, four candidates; Arlo is the Condorcet winner *and* the most-frequent last choice (12 ballots). Coombs deletes Arlo first and elects Bree. Felsenthal conjectures **four candidates are the minimum** for a Coombs Condorcet failure (most Condorcet-inconsistent procedures manage it with three). Live: STAR and Ranked Robin elect Arlo; Choose-One agrees with Coombs on Bree.
+33 voters, four candidates; Arlo is the Condorcet winner *and* the most-frequent last choice (12 ballots). Coombs deletes Arlo first and elects Bree. Felsenthal conjectures **four candidates are the minimum** for a Coombs Condorcet failure (most Condorcet-inconsistent procedures manage it with three) — but this **conjecture is false**: Brandt, Matthäus & Saile (2022, [Minimal voting paradoxes](https://pub.dss.in.tum.de/brandt-research/minpara.pdf), Table 3) exhibit a Coombs Condorcet-winner failure with **just three candidates and 13 voters** (and a four-candidate one needs only 9 voters, not 33). So this example is memorable but far from minimal — see the [minimal-instances cross-check](README.md#minimal-instances-and-how-our-examples-compare). Live: STAR and Ranked Robin elect Arlo; Choose-One agrees with Coombs on Bree.
 
 ## Example 18 — non-monotonicity (paper only; same electorate as Ex.17)
 

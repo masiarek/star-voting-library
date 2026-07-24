@@ -255,6 +255,10 @@ LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,si
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
+LH:reinf_combined_c3_b9_rr,"Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)",1,single-race,9,RankedRobin,LH-only
+LH:reinf_combined_c3_b9_star,"Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)",1,single-race,9,STAR,LH-only
+LH:reinf_north_c3_b6_rr,"Reinforcement — North district alone (6 voters, a perfect cycle)",1,single-race,6,RankedRobin,LH-only
+LH:reinf_south_c3_b3_rr,"Reinforcement — South district alone (3 voters, Ada is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
 LH:reversal_irv_original,"Reversal symmetry — RCV-IRV, original: A wins (best)",1,single-race,24,IRV,LH-only
 LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",1,single-race,24,IRV,LH-only

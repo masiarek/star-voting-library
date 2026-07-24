@@ -6,8 +6,8 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **200** single-winner STAR elections (skipped 124 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **118** (59%) diverge from STAR under at least one method; **82** agree across the board.
+- Scanned **201** single-winner STAR elections (skipped 127 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **119** (59%) diverge from STAR under at least one method; **82** agree across the board.
 
 | Bucket | Count |
 |---|---:|
@@ -15,7 +15,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 | STAR_OUTLIER_RR_WITH_IRV | 8 |
 | IRV_DIFFERS_ARTIFACT | 8 |
 | CYCLE_OR_THREE_WAY | 33 |
-| APPROVAL_OR_MINOR | 40 |
+| APPROVAL_OR_MINOR | 41 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (114 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (115 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -217,7 +217,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 
-### APPROVAL_OR_MINOR — 40
+### APPROVAL_OR_MINOR — 41
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -304,6 +304,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Rock** · IRV=Rock · RR=Rock · Approval=Paper · Score=Rock · Condorcet=none
 - **[bv2178_8kg698_star](cases/APPROVAL_OR_MINOR/bv2178_8kg698_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml` (4c/20b)  
     STAR=**Blue** · IRV=Blue · RR=Blue · Approval=Pink · Score=Purple · Condorcet=Blue
+- **[reinf_combined_c3_b9_star](cases/APPROVAL_OR_MINOR/reinf_combined_c3_b9_star.md)** — `method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml` (3c/9b)  
+    STAR=**Cara** · IRV=Cara · RR=Cara · Approval=Ada · Score=Ada · Condorcet=Cara
 - **[reversal_star_reversed](cases/APPROVAL_OR_MINOR/reversal_star_reversed.md)** — `method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml` (3c/24b)  
     STAR=**A** · IRV=A · RR=A · Approval=C · Score=C · Condorcet=none
 - **[star_district_B](cases/APPROVAL_OR_MINOR/star_district_B.md)** — `method_comparisons/summability_demo/cases/star_district_B.yaml` (3c/3b)  
