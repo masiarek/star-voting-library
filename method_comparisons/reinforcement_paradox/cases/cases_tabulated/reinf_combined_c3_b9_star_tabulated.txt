@@ -1,0 +1,123 @@
+======================================================================
+SOURCE FILE:     reinf_combined_c3_b9_star.yaml
+TABULATED FILE:  reinf_combined_c3_b9_star_tabulated.txt
+======================================================================
+
+election_title: "Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)"
+
+scenario_description: |-
+  The same merged 9-voter electorate as reinf_combined_c3_b9_rr.yaml, on STAR
+  score ballots (top = 5, middle = 3, last = 0 — the natural encoding of each
+  voter's ranking). It shows exactly where STAR sits on the reinforcement
+  question from Brandt, Dong & Peters (2024):
+
+    - Scoring Round: Ada 29, Cara 27, Ben 16 — Ada leads. This is the pure
+      Score/Range result, and it AGREES with Ada winning both districts:
+      additive point methods satisfy reinforcement (Young 1975), so no paradox.
+    - Automatic Runoff: Cara beats Ada 5–4. STAR's runoff is a pairwise step,
+      and it catches Cara's head-to-head win — flipping the result to Cara.
+
+  So STAR's scoring round is consistent, but its runoff re-imports the same
+  Condorcet flip Ranked Robin shows: a Runoff Reversal, with Cara the Condorcet
+  winner. The engine's divergence block also reports Choose-One = Ada and
+  Approval = Ada — the additive methods that keep the reinforcement promise here.
+  Full discussion: the folder README.
+
+paradoxes: [reinforcement, runoff-reversal]
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Ada,Ben,Cara
+  2:5,3,0
+  2:0,5,3
+  3:3,0,5
+  2:5,0,3
+
+expected_winners:
+  - Cara
+
+# file: reinf_combined_c3_b9_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Ada    |    Ben    |  * Cara   |
+-----------------------------------------------------
+       * Ada > |    ---     |7 - 0 - 2  |4 - 0 - 5  |
+         Ben > | 2 - 0 - 7  |   ---     |4 - 0 - 5  |
+      * Cara > | 5 - 0 - 4  |5 - 0 - 4  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Cara — matches the STAR winner
+
+[Divergence from STAR]
+  STAR                   = Cara
+  Choose-One (Plurality) = Ada   (differs from STAR)
+  Approval               = Ada   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ada)
+ - Runoff Round Winner   = (Cara)
+  Candidate Ada earned the highest total score, but
+  Candidate Cara won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ada,Ben,Cara
+    3 ×   3,  0,   5
+    2 ×   5,  3,   0
+    2 ×   0,  5,   3
+    2 ×   5,  0,   3
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        4  0  3  0  0  2  |    29   3.2
+Ben        2  0  2  0  0  5  |    16   1.8
+Cara       3  0  4  0  0  2  |    27   3.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ada           -- 29 -- First place
+   Cara          -- 27 -- Second place
+   Ben           -- 16
+ Ada and Cara advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cara          -- 5 -- First place
+   Ada           -- 4
+   Equal Support -- 0
+ Cara wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cara 5 (56%)  ·  Ada 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cara

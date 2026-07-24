@@ -1,0 +1,44 @@
+election_title: "Reinforcement — North district alone (6 voters, a perfect cycle)"
+
+scenario_description: |-
+  District 1 of the reinforcement-paradox pair from Brandt, Dong & Peters,
+  "Condorcet-Consistent Choice Among Three Candidates" (2024), Theorem 2 —
+  the "double Condorcet cycle" P1. Six voters split evenly three ways, so the
+  three candidates form a perfect rock-paper-scissors tie:
+
+      Ada beats Ben · Ben beats Cara · Cara beats Ada   (each 4–2)
+
+  Every method reports a three-way tie here (Ranked Robin's Copeland count ties
+  them 1–1 and falls to lot). The point of this district is only that **Ada is
+  among its winners** — which, with South (where Ada wins outright), is what sets
+  up the paradox when the two are combined. See the folder README.
+
+  Companion cases: reinf_south_c3_b3_rr.yaml (Ada wins outright),
+  reinf_combined_c3_b9_rr.yaml and reinf_combined_c3_b9_star.yaml (Cara wins).
+
+paradoxes: [condorcet-cycle, reinforcement]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ada, Ben, Cara]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  2:Ada>Ben>Cara
+  2:Ben>Cara>Ada
+  2:Cara>Ada>Ben
+
+expected_winners:
+  - Ada

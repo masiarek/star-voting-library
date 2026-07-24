@@ -12,7 +12,7 @@ Two candidates are trivial: majority rule satisfies essentially every fairness p
 
 ## The two paradoxes, and the findings
 
-**Reinforcement paradox** (a.k.a. consistency / [multiple-districts](../../voting_paradoxes/multiple_districts.md), Young–Levenglick 1978): two separate groups of voters each elect A, but the *combined* electorate does not. A rule that does this contradicts what every sub-group agreed on.
+**Reinforcement paradox** (a.k.a. consistency / [multiple-districts](../../voting_paradoxes/multiple_districts.md), Young–Levenglick 1978): two separate groups of voters each elect A, but the *combined* electorate does not. A rule that does this contradicts what every sub-group agreed on. **Runnable** — the paper's own Theorem 2 profile, cast as two towns whose merger flips the winner from Ada to Cara, counted across every method: [Reinforcement paradox — when both halves pick Ada but the whole picks Cara](../../../method_comparisons/reinforcement_paradox/README.md).
 
 > **Finding:** with three candidates, the reinforcement paradox **must occur for *every* Condorcet extension once there are ≥ 8 voters** — no escape, for anyone. But **certain refinements of maximin are immune when there are ≤ 7 voters.**
 

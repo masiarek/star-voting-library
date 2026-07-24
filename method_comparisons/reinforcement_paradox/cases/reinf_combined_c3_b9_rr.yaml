@@ -1,0 +1,48 @@
+election_title: "Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)"
+
+scenario_description: |-
+  North (6 voters) + South (3 voters) merged, from Brandt, Dong & Peters,
+  "Condorcet-Consistent Choice Among Three Candidates" (2024), Theorem 2
+  (P1 + P2). Ada was a winner in BOTH districts (outright in South, a co-winner
+  in North's dead-heat cycle) — so reinforcement/consistency says Ada should win
+  the merged election. Instead a NEW Condorcet winner appears:
+
+      Cara beats Ada 5–4 · Cara beats Ben 5–4 · Ada beats Ben 7–2
+
+  Cara beats everyone head-to-head, so every Condorcet method — Ranked Robin
+  included — elects Cara. Ada, the only candidate who won both parts, loses. That
+  is the reinforcement paradox, which the paper proves is unavoidable for EVERY
+  Condorcet extension once there are ≥ 8 voters.
+
+  The same 9 ballots counted by STAR: reinf_combined_c3_b9_star.yaml (the
+  scoring round leads Ada, but the runoff flips to Cara — STAR's runoff catches
+  the same pairwise flip). Additive methods (Score/Approval/Plurality) instead
+  keep Ada and show no paradox — see the folder README.
+
+paradoxes: [reinforcement]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ada, Ben, Cara]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  2:Ada>Ben>Cara
+  2:Ben>Cara>Ada
+  3:Cara>Ada>Ben
+  2:Ada>Cara>Ben
+
+expected_winners:
+  - Cara
