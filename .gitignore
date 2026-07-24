@@ -29,6 +29,7 @@ __pycache__/
 **/four_way_hits.csv
 **/star_irv_divergence_*.csv
 **/star_irv_divergence_*_ballots.txt
+**/random_star_divergence_*.csv
 **/*_ballots.txt
 **/star_irv_log.txt
 **/four_way_log.txt
