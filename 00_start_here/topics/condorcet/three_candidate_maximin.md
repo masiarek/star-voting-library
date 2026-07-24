@@ -29,6 +29,8 @@ Add the trivial fact that any Condorcet extension elects the Condorcet winner wh
 | Immune to the **reinforcement** paradox, ≤ 7 voters | ✅ | ❌ (in general) |
 | Immune to the **reinforcement** paradox, ≥ 8 voters | ❌ | ❌ — *nobody is* |
 
+A companion fact from the same paper's Fig. 2 makes the family tractable: at three candidates, **maximin = Ranked Pairs = Schulze = Kemeny = Dodgson = Young** are one and the same rule — the [three-candidate collapse](three_candidate_collapse.md).
+
 The paper then gives **axiomatic characterizations** of maximin, Nanson's rule, and leximin — short lists of independently reasonable axioms that *uniquely* pin down each rule. That's the honest form of "use this rule": not "trust us," but "here are principles you'd likely accept, and this is the only rule satisfying all of them."
 
 ## What maximin and its refinements are

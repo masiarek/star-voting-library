@@ -47,6 +47,7 @@
 - **Material:** [three winner notions](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)). Exercises: [Lillehammer 1994 (ex04)](../../01_STAR/exercises/ex04_olympics_1994.md) — Score vs STAR on real Olympic ballots — and the construction capstone [Build your own reversal (ex08)](../../01_STAR/exercises/ex08_build_a_reversal.md).
 - **Frequency:** [`06_Other/simulations/`](../../06_Other/simulations/) measures how often score and runoff diverge — and shows the rate swings with the model, the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
 - **Ranked Robin vs. Condorcet:** [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one.
+- **Which Condorcet rule, though?** For three candidates, mostly a non-question: [the famous Condorcet methods collapse into one](../topics/condorcet/three_candidate_collapse.md) (maximin = Ranked Pairs = Schulze = Kemeny = Dodgson = Young), and the one *best-justified* against the variable-electorate paradoxes is the maximin family — [Brandt, Dong & Peters (2024)](../topics/condorcet/three_candidate_maximin.md).
 
 ## 301.7 — "Exhausted ballots": what FairVote's word hides
 
@@ -88,12 +89,14 @@
 - **Objective:** the Participation criterion and the no-show / Twin paradoxes — "vote, it can only help your side" is a promise some methods structurally can't make.
 - **Material:** the [Participation topic hub](../topics/participation/) + the live pair [`method_comparisons/participation_no_show/`](../../method_comparisons/participation_no_show/); catalog: [no-show paradox](../voting_paradoxes/no_show.md); the rare STAR-side failure, as a predict-then-peek exercise: [The tenth ballot](../../01_STAR/exercises/ex02_tenth_ballot.md).
 - **The point:** the honest scorecard — only pure summation (Score/Approval) and Choose-One are immune; STAR's runoff costs it the formal guarantee too, just far more rarely than IRV's elimination machinery. Frame per [reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md).
+- **The three-candidate twist:** Moulin's theorem (every Condorcet method fails no-show) needs ≥ 4 candidates. At *exactly three*, [Brandt, Dong & Peters (2024)](../topics/condorcet/three_candidate_maximin.md) prove there **is** a no-show-immune family — the refinements of maximin (leximin, Nanson), and *uniquely* so. A rare case where restricting the problem buys a clean escape.
 
 ## 301.13 — Consistency: winning every district ≠ winning the whole
 
 - **Objective:** the consistency criterion (join-consistency / reinforcement) — if every district separately elects X, must the combined electorate? Point-summing rules must, by arithmetic; STAR (like RCV-IRV, top-two, and Condorcet methods) need not, because "who advances to the runoff" is not additive.
 - **Key terms:** consistency / reinforcement, runoff pairing, precinct-summable (the contrast).
 - **Material:** the predict-then-peek exercise [Two districts, one mayor](../../01_STAR/exercises/ex01_two_districts.md) (live on BetterVoting as BV2188–90); catalog: [the multiple-districts (reinforcement) paradox](../voting_paradoxes/multiple_districts.md), whose Felsenthal trio (BV2147–49) is the IRV-side sibling; contrast [STAR Is Summable](../STAR_Voting/properties_and_limits/STAR_summability.md) — the *tallies* add across precincts even though the *winner inference* doesn't.
+- **Run it across every method:** [Reinforcement paradox — both halves pick Ada, the whole picks Cara](../../method_comparisons/reinforcement_paradox/README.md) — the same 9 voters counted five ways: Score/Approval/Plurality keep the promise (additive), Ranked Robin can't, and STAR's *scoring round* keeps it but the *runoff* breaks it (a live Runoff Reversal). The concrete instance of a theorem: [Brandt, Dong & Peters (2024)](../topics/condorcet/three_candidate_maximin.md) prove **every** Condorcet method must show this paradox once there are ≥ 8 voters.
 - **The point:** "she carried both districts and still lost" is a headline risk, not a tabulation risk — no one tallies a citywide seat district-by-district. Carry the worked answer.
 
 ---

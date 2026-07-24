@@ -28,11 +28,17 @@ When there's **no** Condorcet winner (a cycle), the principled "still in content
 
 > **"Which Condorcet rule is *best* — is that even answerable?"** For **exactly three candidates**, yes, and there's a neutral 2024 theorem for it: Brandt, Dong & Peters prove that **maximin and its refinements** (leximin, Nanson) are the *uniquely* best-defended Condorcet extensions against the no-show and reinforcement paradoxes — the tractable small case where [Moulin's impossibility](../../voting_paradoxes/no_show.md) hasn't yet bitten. Summarized with the fine print (3-candidate-only; it's the tie-broken refinements that are characterized; STAR isn't a Condorcet extension so it's out of scope): [Condorcet-Consistent Choice Among Three Candidates](three_candidate_maximin.md).
 
+> **"There are dozens of Condorcet methods — do I have to learn them all?"** For a three-way race, no: **most of the famous ones are literally the same rule.** Maximin, Ranked Pairs, Schulze, Kemeny, Dodgson, and Young all coincide at three candidates and only diverge at four-plus. What's left to choose is small and nameable: [At three candidates, the famous Condorcet methods collapse into one](three_candidate_collapse.md).
+
+> **"Show me a Condorcet method actually *misbehaving*."** Two towns, each of which elects Ada, that merge into an electorate electing Cara — the reinforcement paradox, run across every method (additive rules keep the promise, Condorcet rules can't, STAR's runoff breaks it): [Reinforcement paradox — both halves pick Ada, the whole picks Cara](../../../method_comparisons/reinforcement_paradox/README.md).
+
 > **"When there's no Condorcet winner, who decides — the ballots or the rule?"** In a cycle the family splits, and the newest member says so out loud: [Split Cycle, claim-checked](split_cycle.md) discards each cycle's weakest defeat and *returns every candidate left undefeated*, rather than applying a convention. Includes a tabulated election where a candidate **no voter ranks above the winner** still flips Schulze's result — plus the four things that case doesn't show.
 
 > **"Where do I go to read about this properly?"** [Condorcet methods — a reading list](condorcet_reading_list.md): the books, papers, and free surveys worth your time, each with its lean marked — and, first, the one taxonomy (Fishburn's C1/C2/C3) that makes the family's names stop sliding. Start there if the *nomenclature* is what's blocking you.
 
 Glossary: [`Condorcet`](../../GLOSSARY.md).
+
+**Learn it by depth.** The concept ladders across the curriculum: **101** — the [Condorcet winner](../../curriculum/CURRICULUM_101.md) as "the majority's head-to-head choice" (intuition only); **201** — what a [Condorcet *extension* is and the three-candidate collapse](../../curriculum/CURRICULUM_201.md) (§201.6); **301** — the variable-electorate paradoxes and the maximin result ([§301.6](../../curriculum/CURRICULUM_301.md) disagreement, §301.12 no-show, §301.13 reinforcement).
 
 ---
 

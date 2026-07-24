@@ -30,6 +30,8 @@
 
 **The point:** adding a candidate you love never splits your vote.
 
+**A name for the compromise:** the candidate who would beat *each* rival one-on-one is the **[Condorcet winner](../topics/condorcet/)** — "the majority's head-to-head choice." At 101 that's the whole idea; usually one exists and every good method (STAR, Ranked Robin) picks it. What happens when *no* such candidate exists is a 201/301 story.
+
 ## 101.3 — How you're allowed to vote
 
 **What clicks:** there's no "wrong" way to fill it in — give your favorite 5, your worst 0 (or blank), and everyone else where they honestly land. Equal scores are allowed.

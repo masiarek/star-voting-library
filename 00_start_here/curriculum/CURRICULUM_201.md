@@ -50,6 +50,7 @@
 - **Pages:** [What makes a good winner?](../topics/what_makes_a_good_winner.md) (four ideals; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](../topics/what_makes_a_voting_method_good.md).
 - **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](../topics/expert_consensus_and_irv.md) — the pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked.
 - **Criteria side by side:** [Criteria at a glance](../topics/criteria_at_a_glance.md) — Approval / STAR / Ranked Robin / RCV-IRV pass/fail across every major criterion, each failure linked to a runnable election (with the "a table is a map, not a verdict" caveat up front).
+- **"Condorcet extension" — the family, made simple:** [the Condorcet topic hub](../topics/condorcet/) defines a Condorcet extension (elect the head-to-head winner when one exists; break cycles somehow) and — the calming fact — [at three candidates the famous ones all collapse into one rule](../topics/condorcet/three_candidate_collapse.md), so "which Condorcet method?" barely matters for a three-way race. The deep paradox theory (reinforcement, no-show) is **301.12–301.13**.
 - **The point:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301**.
 
 ---
