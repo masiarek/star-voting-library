@@ -21,9 +21,7 @@ On these ballots RCV-IRV reports **Cora** rather than STAR's **Ben**, but this i
 
 **Flags:** 2 tied-score ballot(s)
 
-**Source election:** [`06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml`](../../../../06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml)  ·  **STAR tabulated mirror:** [`05_c3_b38_squeeze-survives_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/05_c3_b38_squeeze-survives_tabulated.txt)
-
-_Also present (identical ballots) at: `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml`._
+**Source election:** [`06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml`](../../../../06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml)  ·  **STAR tabulated mirror:** [`05_c3_b38_squeeze-survives_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/05_c3_b38_squeeze-survives_tabulated.txt)
 
 _3 candidates, 38 ballots._
 
