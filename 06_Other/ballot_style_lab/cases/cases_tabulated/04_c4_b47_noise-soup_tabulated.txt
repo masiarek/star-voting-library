@@ -48,12 +48,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit noise_soup
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "This is what a real messy electorate looks like on paper - abstentions, a spoiled ballot, blanks, noise voters. The count stays calm: every marker tabulates as 0 and is reported honestly."
-  WHY: Stress fixture: markers, blanks, flat ballots and noise all in one file
-  - if a reporting change survives Noise Soup, it survives.
-
 options:
   show_description: false
   show_matrix: true

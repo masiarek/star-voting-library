@@ -21,16 +21,6 @@ scenario_description: |-
   Sequentially Spent Score (SSS), a modern proportional-score method. The
   minority bloc again earns a seat that Bloc STAR would deny.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Same election, a different proportional method - Sequentially Spent
-       Score. Same fair outcome: the minority still earns a seat."
-  HOW: Run right after Allocated Score; emphasize the winners match. The point
-       is that 'proportional' isn't one trick - several methods achieve it.
-  WHY: Show robustness - fair representation isn't an artifact of one algorithm.
-  TRANSITION: "One more, for comparison: Reweighted Range Voting - older, not
-       part of the STAR family, but it lands in the same place here."
-
 num_winners: 3
 voting_method: sss
 

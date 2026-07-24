@@ -44,13 +44,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit bullet_storm
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Everybody bullet-votes except a thoughtful few... and when the runoff comes, an entire brigade discovers their ballots say nothing about the two finalists. The nuanced folks decide it."
-  WHY: The concrete answer to 'won't everyone just bullet-vote?' - STAR
-  doesn't punish it, it just quietly hands the decision to voters who
-  expressed more.
-
 options:
   show_description: false
   show_matrix: true

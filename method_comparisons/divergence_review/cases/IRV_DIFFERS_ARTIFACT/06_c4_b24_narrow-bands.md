@@ -21,7 +21,9 @@ On these ballots RCV-IRV reports **Azure** rather than STAR's **Beige**, but thi
 
 **Flags:** 16 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Coral, strict=Azure)
 
-**Source election:** [`06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml`](../../../../06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml)  ·  **STAR tabulated mirror:** [`06_c4_b24_narrow-bands_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/06_c4_b24_narrow-bands_tabulated.txt)
+**Source election:** [`06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml`](../../../../06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml)  ·  **STAR tabulated mirror:** [`06_c4_b24_narrow-bands_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/06_c4_b24_narrow-bands_tabulated.txt)
+
+_Also present (identical ballots) at: `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml`._
 
 _4 candidates, 24 ballots._
 

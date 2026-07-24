@@ -16,20 +16,6 @@ scenario_description: |-
 # STAR lets you score each candidate 0–5 independently, so several styles are
 # all legal on the same ballot set.
 
-
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "There's no single 'right' way to fill out a STAR ballot. Here are three
-       legal styles on one ballot set: a full ballot using the whole range, a
-       ballot with equal scores, and a 'bullet vote' that scores only one."
-  HOW: Walk down the three ballots, naming each style.
-  WHY: Address the most common voter anxiety - 'am I doing this right?' - and
-       introduce 'bullet voting' so you can warn against it.
-  POINT OUT: Bullet voting is legal but weak: if your one pick doesn't reach the
-       runoff, your ballot has no say in the final head-to-head.
-  TRANSITION: "Bullet voting under-uses the ballot. Next: what about the opposite
-       worry - what if you dislike everyone?"
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

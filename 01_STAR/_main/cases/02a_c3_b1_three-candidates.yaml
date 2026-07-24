@@ -12,16 +12,6 @@ scenario_description: |-
   the automatic runoff can't change that. This is our baseline before we add
   more voters in the next example.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "We now have THREE flavors but, for one moment, just one voter. With one
-       ballot the winner is obviously her favorite, Choco."
-  HOW: Keep it brief - this is a setup slide, not the payoff.
-  WHY: Hold candidates at 3 but voters at 1, so the next example changes exactly
-       ONE thing (a second voter) and the winner can flip cleanly.
-  TRANSITION: "Remember Choco wins here. Watch what happens when one more person
-       votes - the winner is about to change."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

@@ -44,12 +44,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit narrow_bands
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Twenty-four voters and not one uses the whole ballot. Squeezed totals mean tiny gaps - watch how the report keeps the photo finish legible."
-  WHY: If a display or rounding change ever misbehaves on compressed, bunched
-  totals, this file catches it.
-
 options:
   show_description: false
   show_matrix: true

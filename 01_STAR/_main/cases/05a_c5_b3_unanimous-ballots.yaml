@@ -4,16 +4,6 @@ scenario_description: |-
   finalists are never in doubt. A simple sanity check / smallest-contrast case
   for the five-candidate display.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "An edge case for completeness: everyone votes identically. The result is
-       unanimous - no drama, no ties. Useful as a sanity check."
-  HOW: Quick. Skip in a time-limited session.
-  WHY: Shows STAR behaves sensibly in the degenerate 'everyone agrees' case, and
-       gives a clean five-candidate display to point at.
-  TRANSITION: "Now a famous real-world-flavored example before we leave
-       single-winner: the Tennessee state-capital problem."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true

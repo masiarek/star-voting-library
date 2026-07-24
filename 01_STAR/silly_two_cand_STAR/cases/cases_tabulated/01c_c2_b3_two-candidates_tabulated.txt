@@ -10,20 +10,6 @@ scenario_description: |-
   Because she scores the two finalists the same, her ballot counts as
   "Equal Support = 1" in the Automatic Runoff Round.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Julia scores both flavors a 5 - she genuinely has no preference. STAR
-       lets her do that. Watch the runoff: her ballot shows up as 'Equal
-       Support', not a vote for either finalist."
-  HOW: Pause on the 'Equal Support = 1' line; this is the first new vocabulary.
-  WHY: Introduce equal scores and the 'Equal Support' bucket on a tiny, safe
-       example so the term is familiar before it appears in bigger elections.
-  POINT OUT: Equal scores are allowed and honest - you are never forced to
-       invent a preference you don't feel.
-  TRANSITION: "That's the full mechanics with two candidates: scoring, the top
-       two, and an automatic runoff that can register 'no preference'. Now the
-       payoff - let's add a THIRD flavor and watch the winner change."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: false   # show the Runoff (Preference) Matrix

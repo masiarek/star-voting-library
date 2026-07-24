@@ -9,16 +9,6 @@ scenario_description: |-
   can see exactly what each one does. Single-winner STAR over four candidates;
   the finalists-only matrix, Condorcet line, and score distribution are all on.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "This is the 'everything on' reference - the full score distribution, the
-       matrix, the Condorcet check, verbose round headers."
-  HOW: Reference slide, not a teaching beat. Use it to point people at the
-       options they can toggle in their own files.
-  WHY: One place that shows every supported option in action.
-  TRANSITION: "That's single-winner STAR end to end. Next we elect MULTIPLE
-       winners - first Bloc STAR, then the proportional methods."
-
 num_winners: 1        # 1 = single-winner STAR; >=2 requires voting_method: bloc
 voting_method: STAR   # STAR (single winner) or bloc (multi-winner Bloc STAR)
 

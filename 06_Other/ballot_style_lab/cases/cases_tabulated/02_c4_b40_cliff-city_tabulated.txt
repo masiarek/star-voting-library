@@ -43,12 +43,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit cliff_city
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Four food trucks, forty voters, and not a single 1 or 2 on any ballot - you're in, or you're out. Look at the score distribution table: the middle rows are empty."
-  WHY: Shows a score electorate voluntarily collapsing toward Approval - and
-  what STAR still extracts from the 3-4-5 gradations that survive.
-
 options:
   show_description: false
   show_matrix: true

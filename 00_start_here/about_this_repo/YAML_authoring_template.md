@@ -42,10 +42,6 @@ scenario_description: |-
   for in the result. Printable (shown when show_description: true, and always
   included in the _tabulated copy).
 
-# Presenter notes (ignored by the engine; never shown to the audience).
-video_script: |-
-  SAY / HOW / WHY / POINT OUT / TRANSITION notes for whoever presents this.
-
 # Output options — what the SHORT on-screen report shows. House default below
 # ("less is more"). The saved _tabulated copy always shows maximum detail
 # regardless of these flags, so only turn on the section your case teaches.
@@ -120,7 +116,7 @@ Full rundown of the whole block, option by option: **[LH reporting options](../S
 | `expected_results` | optional | Richer answer key — per-round scores, the runoff, turnout/quorum figures — beyond the bare winner. Emitted by the BetterVoting converter; the engine reads it the same way. |
 | `election_title` | optional | One-line human title, printed as the report header. |
 | `scenario_description` | optional | Printable context (shown only if `show_description: true`; always in `_tabulated`). |
-| `video_script` | optional | Presenter notes. Never shown on screen. |
+| `video_script` | optional (discouraged) | Free-text authoring note; never shown on screen. Keep it a terse factual note if used at all — **do not** write scripted "SAY / HOW / WHY / POINT OUT / TRANSITION" presenter copy (that style was removed repo-wide, 2026-07-23). |
 | `options` | optional | On-screen display flags (see template comments). The `_tabulated` copy ignores them and always shows everything. |
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |

@@ -17,19 +17,6 @@ scenario_description: |-
   with Reweighted Range Voting (RRV). Older and not part of STAR's score-then-
   runoff family, but it also seats the minority bloc — included for comparison.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Finally, an older method - Reweighted Range Voting - for comparison.
-       It's not part of the STAR family and has weaker guarantees, but on this
-       election it reaches the same fair result."
-  HOW: Optional / comparative. Good for an audience that asks 'what about other
-       methods?'. Be honest that it's included for contrast, not endorsed.
-  WHY: Round out the proportional picture and show STAR's allocated/SSS aren't
-       the only options - while flagging that not all methods are equal.
-  TRANSITION: "That wraps the tour: single-winner STAR, Bloc STAR, and three
-       ways to do proportional representation. Back to Lesson 0's promise - one
-       honest ballot, fair results, whether for one seat or many."
-
 num_winners: 3
 voting_method: rrv
 

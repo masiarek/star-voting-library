@@ -44,12 +44,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit quota_circus
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Watch the allocation rounds: the north side's 5s spend their quota loudly; the south side's gentle 4s still add up. The second seat comes down to what the reweighted leftovers agree on."
-  WHY: Stress fixture for the Allocated Score path: fractional surplus,
-  reweighting, and compressed-band ballots all in one small file.
-
 options:
   show_description: false
   show_matrix: false

@@ -699,18 +699,11 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
         f"renderings), not a method-welfare comparison. Regenerate "
         f"byte-identically: python generate_ballot_styles.py --emit {name}"))
 
-    video = (f"SAY: \"{spec['say']}\"\n"
-             f"WHY: {wrap(spec['why'], 71)}")
-
     parts = [
         f"election_title: {title or spec['title']}",
         "",
         "scenario_description: |-",
         indent("\n".join(desc)),
-        "",
-        "# Presenter notes (ignored by the engine; not shown to the audience).",
-        "video_script: |-",
-        indent(video),
         "",
         "options:",
         opt_lines,

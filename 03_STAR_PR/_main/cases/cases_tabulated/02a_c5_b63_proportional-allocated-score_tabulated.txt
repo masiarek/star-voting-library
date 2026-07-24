@@ -28,22 +28,6 @@ scenario_description: |-
   Bloc STAR would sweep all three to the majority. Switch voting_method to bloc
   to see the contrast.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Two-thirds of voters love A/B/C; one-third love D/E. Three seats. Bloc
-       STAR would give the majority ALL three. Proportional STAR gives the
-       minority the seat they earned - here Dan wins one."
-  HOW: First run this (proportional), note the winners include Dan. Then change
-       voting_method to 'bloc', rerun, and show the minority gets shut out. The
-       side-by-side is the whole lesson.
-  WHY: This is the case FOR proportional representation - it's the payoff of the
-       multi-winner section, mirroring how single-winner's payoff was the
-       compromise winner.
-  HOW IT WORKS (1 line): after each seat, the ballots that won it are partly
-       'spent', so later seats reflect the voters not yet represented.
-  TRANSITION: "Allocated Score is the canonical method. There are alternatives -
-       SSS and RRV - that reach the same fair result by different math."
-
 num_winners: 3
 voting_method: allocated
 

@@ -44,13 +44,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit park_bloc
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Four consecutive STAR elections, one ballot set. Watch the per-seat runoffs tighten as the strong candidates leave the field - the last seat is where the drama lives."
-  WHY: Exercises the repeated-STAR bloc path at depth (4 rounds, 7 candidates)
-  with realistic noise - per-seat runoff margins, Equal Support shifts,
-  and late-round tiebreak pressure.
-
 options:
   show_description: false
   show_matrix: false

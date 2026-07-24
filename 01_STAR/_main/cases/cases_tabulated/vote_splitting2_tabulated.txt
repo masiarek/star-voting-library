@@ -20,24 +20,6 @@ scenario_description: |-
   instead of choosing between them. The two highest totals advance to an
   automatic runoff, and the winner has majority support head-to-head.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Two hundred twenty of our three hundred sixty voters love chocolate — a
-       clear majority. But there are two chocolates on the menu, DarkChoco and
-       MilkChoco, and under today's Choose-One rules each fan can pick only one.
-       So the chocolate vote splits, one hundred twenty to one hundred — and
-       Vanilla wins with a hundred forty votes, a dessert a sixty-one percent
-       majority didn't even want."
-  HOW: Show the Choose-One tally FIRST (Vanilla 140, DarkChoco 120, MilkChoco
-       100) and let the wrong winner sting for a beat before STAR appears. Then
-       reveal the same 360 ballots as 0–5 scores.
-  WHY: This is the payoff scenario — the entire case for STAR in one race. Hold
-       the candidates at three so the ONLY things that change are the ballot and
-       the count, not the field.
-  TRANSITION: "Now watch the SAME 360 voters fill out a STAR ballot — giving
-       both chocolates a score instead of choosing between them — and see who
-       actually wins."
-
 blocs:
   Chocolate: [DarkChoco, MilkChoco]
 

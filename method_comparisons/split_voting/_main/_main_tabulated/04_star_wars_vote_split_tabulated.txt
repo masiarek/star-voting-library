@@ -20,21 +20,6 @@ scenario_description: |-
   beats every other head-to-head (the Condorcet winner). The one you actually
   preferred wins. Watch the [Vote-splitting check] confirm it.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Skywalker and Vader look like the frontrunners — but your heart is with
-       Leia. In a Choose-One election, voting Leia feels like 'wasting' your vote,
-       so Rebels hold their nose and split between Skywalker and Leia. Vader walks
-       in with 40%."
-  HOW: [DEMO] Run this file. Point at the [Vote-splitting check]: the Rebellion
-       bloc's combined support dwarfs Vader, yet Choose-One would split it.
-  WHY: STAR lets you score Skywalker AND Leia, so the coalition isn't divided.
-       Leia advances and wins the runoff — the consensus pick.
-  TRANSITION: "Same voters, no split, no spoiler: STAR elects the candidate the
-       majority actually preferred."
-  SLIDE: Full Deck 2025 — "THE VOTING DILEMMA" (Skywalker / Vader / Leia) and
-       "PROBLEM: VOTE-SPLITTING".
-
 blocs:
   Rebellion: [Skywalker, Leia]
 

@@ -21,7 +21,9 @@ On these ballots RCV-IRV reports **Bao** rather than STAR's **Churro**, but this
 
 **Flags:** 10 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Churro, strict=Bao)
 
-**Source election:** [`06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml`](../../../../06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml)  ·  **STAR tabulated mirror:** [`02_c4_b40_cliff-city_tabulated.txt`](../../../../06_Other/ballot_style_lab/cases/cases_tabulated/02_c4_b40_cliff-city_tabulated.txt)
+**Source election:** [`06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml`](../../../../06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml)  ·  **STAR tabulated mirror:** [`02_c4_b40_cliff-city_tabulated.txt`](../../../../06_Other/ballot_style_lab/ballot_style_lab_tabulated/02_c4_b40_cliff-city_tabulated.txt)
+
+_Also present (identical ballots) at: `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml`._
 
 _4 candidates, 40 ballots._
 

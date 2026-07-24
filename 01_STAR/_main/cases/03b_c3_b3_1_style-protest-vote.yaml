@@ -8,19 +8,6 @@ scenario_description: |-
 #  0-5 range also shrinks your ballot's influence in the score round. Expressing
 #  a "least-bad" choice counts - but using the full range expresses it louder.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "The opposite of a bullet vote: what if you dislike everyone? You can
-       still vote. Even all 0s and 1s register a relative preference, and STAR
-       counts it - here Almond wins on the 1s."
-  HOW: Reassuring tone - this answers 'do I have to like someone?'. No.
-  WHY: Show that minimal, low-score ballots are valid and still decide outcomes.
-  POINT OUT: Honest caveat - scoring everyone low also shrinks your influence in
-       the scoring round. A least-bad choice counts; the full range counts
-       louder. (Don't sell low-scoring as a smart strategy.)
-  TRANSITION: "Does the absolute number matter, or just the order? Let's test
-       that next by raising those scores."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

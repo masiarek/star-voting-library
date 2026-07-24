@@ -44,13 +44,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit herb_council
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Same 36 ballots, twice. Bloc STAR: the kitchen majority sweeps all three seats. STAR-PR: the tea drinkers' quota seats one of their own. Neither count is wrong - they answer different questions."
-  WHY: THE multi-winner lesson (majoritarian vs proportional) as a
-  same-ballots pair, at individual-ballot scale with realistic style
-  mixing - the style-lab twin of the hand-built 03_STAR_PR/02a-02c set.
-
 options:
   show_description: false
   show_matrix: false

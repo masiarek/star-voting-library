@@ -30,19 +30,6 @@ scenario_description: |-
   CANONICAL = FROZEN: never edit these ballots. A lesson needing different
   ballots gets a new scenario with a new cast of names.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Three voters, three candidates - small enough to count in your head.
-       Add the stars: Bob 12, Ann 8, Cal 7. Bob and Ann are the finalists.
-       Now each ballot becomes one vote for the finalist it scored higher:
-       Ann gets voter 1 (5 beats 4), Bob gets voters 2 and 3. Bob wins 2 to 1."
-  HOW: Walk voter 1's ballot slowly - she scored Bob a friendly 4, yet her
-       runoff vote goes to Ann. Scores pick the finalists; preferences pick
-       the winner.
-  WHY: This is the mechanics demo, not a persuasion demo - nothing surprising
-       happens on purpose. Save the "winner flips" drama for the lunch vote
-       and the runoff-reversal cases.
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

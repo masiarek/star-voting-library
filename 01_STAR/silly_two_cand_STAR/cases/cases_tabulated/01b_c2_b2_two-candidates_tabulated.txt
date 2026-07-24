@@ -15,18 +15,6 @@ scenario_description: |-
 
   We are adding up the scores given to each candidate (Tallying = Scoring Round).
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Same election, but now a second voter, George. Watch the Scoring Round:
-       we simply add each candidate's scores across all ballots."
-  HOW: Point at the running totals. Emphasize 'just addition' - it's not magic.
-  WHY: Reinforce what the Scoring Round actually does before counts get bigger.
-  POINT OUT: Both voters happen to prefer Choco, so Choco still wins - two
-       candidates rarely produce drama. That's expected.
-  TRANSITION: "Still Choco. Two candidates can't really surprise us. Let's add
-       one more voter (Julia), then a third flavor - that's where it gets
-       interesting."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: false   # show the Runoff (Preference) Matrix

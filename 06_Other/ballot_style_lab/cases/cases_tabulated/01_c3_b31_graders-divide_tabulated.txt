@@ -39,13 +39,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit graders_divide
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Two departments pick a team lead. The Abby camp grades harshly - even Abby only earns a 2 from her own fans. The Bruno camp grades gently - even Abby gets a 3 from them. Watch the totals bunch together, then watch the runoff ignore the volume knob entirely."
-  WHY: Scale-use asymmetry is the standard objection to score ballots; STAR's
-  answer is the runoff. This file makes the objection concrete and lets
-  the runoff answer it.
-
 options:
   show_description: false
   show_matrix: true

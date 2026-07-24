@@ -43,13 +43,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit squeeze_survives
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Every classroom center-squeeze uses three tidy blocs. This one uses thirty-eight noisy, differently-styled ballots - and the squeeze happens anyway. It's not an artifact of clean examples."
-  WHY: Robustness check for the repo's center-squeeze teaching: the phenomenon
-  survives noise and style mixing, so the tidy demos aren't
-  cherry-picked.
-
 options:
   show_description: false
   show_matrix: true

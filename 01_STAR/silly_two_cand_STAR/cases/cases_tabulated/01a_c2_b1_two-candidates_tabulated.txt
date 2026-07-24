@@ -13,7 +13,6 @@ scenario_description: |-
   anything interesting happens. With two candidates STAR always agrees with
   Choose-One; the interesting cases start at three.
 
-# Presenter notes (ignored by the engine; not shown to the audience).
 video_script: |-
   This example is as minimal as it gets.
   It is unusual — illustration-only — it is kept as small and simple as possible.

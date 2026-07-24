@@ -20,20 +20,6 @@ scenario_description: |-
   instead of a 1 adds more weight in the score round relative to other voters'
   ballots.)
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "Same voters, same preferences - I just changed every 1 to a 2. Does the
-       winner change? No - still Almond. STAR cares about the RELATIVE ordering,
-       not the absolute number."
-  HOW: Run it right after the previous file so the audience sees identical
-       results. The non-change IS the lesson.
-  WHY: Dispel the idea that bigger numbers = a different outcome when everyone
-       scales the same way. Sets up the nuance that differences BETWEEN voters
-       are what carry weight.
-  TRANSITION: "So scores are relative. Next, let's turn on STAR's analysis views
-       - the preference matrix and the Condorcet check - to see the head-to-head
-       under the hood."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

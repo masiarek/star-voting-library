@@ -11,19 +11,6 @@ scenario_description: |-
   still helped pick the finalists.
   Lesson: 00_start_here/STAR_Voting/STAR_ballot_voting_styles.md
 
-# Presenter notes (ignored by the engine; not shown to the audience).
-video_script: |-
-  SAY: "There is no wrong way to fill out a STAR ballot. Here are eight voters,
-       each using a different style — from a plain old choose-one vote to a
-       full 'ranked-style' spread — all on the same six candidates."
-  HOW: Walk down the eight ballots, naming each style as you go.
-  WHY: Remove the fear of 'voting wrong' — every style is legal and counted.
-  POINT OUT: The partisan and 'anyone but Chris' voters gave both finalists a 5,
-       so they're Equal Support in the runoff — no preference between the
-       finalists, but their scores still chose WHO the finalists were.
-  TRANSITION: "Legal isn't the same as expressive. Which of these styles gets
-       the most out of the ballot? That's the lesson doc's job."
-
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
   show_matrix: true   # show the Runoff (Preference) Matrix

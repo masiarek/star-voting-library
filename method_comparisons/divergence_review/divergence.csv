@@ -132,6 +132,7 @@ CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/cases/tie_break_09_five_star_tied
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml,3,3,A,B,B,A,A,A,A,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml,3,3,C,B,B,C,C,C,C,,,0,False,False,True
+CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml,4,33,Carla,Astrid,Astrid,Carla,Carla,Carla,Carla,,,0,False,False,True
 CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml,4,33,Carla,Astrid,Astrid,Carla,Carla,Carla,Carla,,,0,False,False,True
 CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
@@ -160,6 +161,11 @@ IRV_DIFFERS_ARTIFACT,01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_te
 IRV_DIFFERS_ARTIFACT,01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml,3,5,Ann,Cara,Ben,Ann,Cara,Ann,Ann,,,2,True,True,True
+IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml,3,31,Clara,Bruno,Bruno,Clara,Bruno,Abby,Bruno,,Bruno,9,False,True,True
+IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml,4,40,Churro,Bao,Churro,Churro,Bao,Churro,Bao,Churro,Bao,10,True,True,False
+IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml,4,47,Caleb,Beth,Dana,Beth,Beth,Beth,Beth,,Beth,13,True,False,True
+IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False
+IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml,4,24,Beige,Azure,Dune,Coral,Azure,Azure,Azure,,Azure,16,True,True,True
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml,3,31,Clara,Bruno,Bruno,Clara,Bruno,Abby,Bruno,,Bruno,9,False,True,True
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml,4,40,Churro,Bao,Churro,Churro,Bao,Churro,Bao,Churro,Bao,10,True,True,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml,4,47,Caleb,Beth,Dana,Beth,Beth,Beth,Beth,,Beth,13,True,False,True
