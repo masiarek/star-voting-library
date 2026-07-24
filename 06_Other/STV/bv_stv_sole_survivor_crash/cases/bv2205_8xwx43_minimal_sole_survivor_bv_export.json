@@ -1,0 +1,208 @@
+{
+  "Election": {
+    "election_id": "8xwx43",
+    "title": "BV2205 — The sole-survivor STV finish — six voters, one seat, a tabulator edge case",
+    "description": "From the exercises set of the STAR education repo (github.com/masiarek/star-voting-library, 01_STAR/exercises/) — predict-then-peek problems with hidden solutions; this election is the live, vote-able copy of its exercise. Minimal reproduction of the BetterVoting STV sole-survivor crash: 1 seat, 3 candidates, 6 fully deterministic ballots — 3x(Ash), 2x(Birch>Ash), 1x(Cedar). Droop quota 4. Round 1: Ash 3 / Birch 2 / Cedar 1, nobody at quota, Cedar eliminated (ballot exhausts). Round 2: Birch eliminated, both ballots transfer to Ash. Round 3: Ash, now the ONLY remaining candidate, holds 5 >= 4 — the elect-branch removes him and redistributes his surplus over an EMPTY candidate list, and distributeVotes' remainingCandidates.reduce(...) has no initial value, so [].reduce throws (IRV.ts, packages/backend/src/Tabulators). Expected here: the results page errors until the bug is fixed; any STV engine elects Ash. Proves the crash needs neither multi-seat, nor truncation-exhaustion mid-transfer, nor the write-in flag — only an endgame where eliminations leave one hopeful who then reaches quota. LH-verified winner: Ash.",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "One seat, three trees — STV (sole-survivor finish)",
+        "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+        "num_winners": 1,
+        "voting_method": "STV",
+        "candidates": [
+          {
+            "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+            "candidate_name": "Ash"
+          },
+          {
+            "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+            "candidate_name": "Birch"
+          },
+          {
+            "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+            "candidate_name": "Cedar"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false,
+        "max_rankings": 3
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-17T22:24:38.724Z",
+    "update_date": "1784327078724",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-c8dc33vr",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 2
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 1
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-98hbvrhv",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 0
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 0
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-kmjjmqq7",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 1
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 0
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-pbd2y9hq",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 1
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 0
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-93d2thcp",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 1
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 0
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-2tdry43k",
+      "election_id": "8xwx43",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "9107d623-3659-49b1-a831-d5869e5c85c9",
+          "scores": [
+            {
+              "candidate_id": "2b09ecca-54c0-41b4-b2c0-8fa02a49a368",
+              "score": 2
+            },
+            {
+              "candidate_id": "fa34b392-dae0-466f-970c-6de428d32b3e",
+              "score": 1
+            },
+            {
+              "candidate_id": "f646df64-4370-4c91-adb2-17f9ae22ab87",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [],
+  "_note": "Results omitted: GET /API/ElectionResult/8xwx43 returned HTTP 500 at freeze time (known-crash election). Re-fetch without --without-results once BV fixes the tabulator."
+}

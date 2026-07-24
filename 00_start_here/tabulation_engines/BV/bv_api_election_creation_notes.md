@@ -13,6 +13,15 @@ The election's `owner_id` is whatever the script's `BV_USER_ID` says. **Set it t
 - **Creation + ballot casting** via `POST /API/Elections` and `POST /API/Election/{id}/vote`.
 - **Public visibility**: the election is live at `bettervoting.com/<id>`, votes tabulate, and the results are exportable (Election + Ballots + Results) from the UI.
 - **`/manage` listing**: with `owner_id` = your account, the election appears in *My Elections & Polls* and is searchable by title. (Before this fix, script elections were owned by a throwaway identity and were invisible there.)
+- **Full-export download WITHOUT the UI (found 2026-07-23).** The results page's "Download → Download JSON" file is reconstructible from three **anonymous** GETs — no login, no admin role:
+
+  | export section | endpoint | note |
+  |---|---|---|
+  | `Election` | `GET /API/Election/{id}` → `.election` | config only on its own |
+  | `Ballots` | `GET /API/Election/{id}/anonymizedBallots` → `.ballots` | public; the admin `GET …/ballots` returns **401** anonymously |
+  | `Results` | `GET /API/ElectionResult/{id}` → `.results` | tabulated on demand — the election does **not** need to be closed |
+
+  `tools_adam/fetch_bv_export.py` assembles these into the house frozen-export shape (`{"Election":…, "Ballots":…, "Results":…}`). Verified against the UI-downloaded `vqyqkr` export: Election and Results **byte-identical**, Ballots identical up to order (ballot order always varied between UI downloads too). `create_bv_test_election.py` now calls it automatically after casting, so a freshly minted election lands in `_demo_dropbox/` with its full export already frozen. Crash-case elections whose ElectionResult 500s (the STV sole-survivor pair) freeze with `--without-results` (`Results: []` + a self-documenting `_note`).
 
 ## Ballot-data export format — the `precinct` column
 

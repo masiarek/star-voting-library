@@ -330,9 +330,17 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   `bettervoting.com/<id>` URLs. Auth is asymmetric **RS256** (the API requires a
   PEM public key in `auth_key`; the script mints a fresh keypair and signs the
   `custom_id_token` with the private key — no real account credential needed). It
-  saves the election object to `06_Other/_demo_dropbox/`, but that plain GET lacks
-  `Ballots`/`Results`; for the **frozen `_bv_export.json`** grab the full export
-  from the BV UI (Election + Ballots + Results). Proven end-to-end (BV95a `9m6rxr`,
+  saves the election object to `06_Other/_demo_dropbox/` AND auto-freezes the full
+  export beside it. **The UI "Download JSON" click is obsolete (2026-07-23):**
+  sibling `fetch_bv_export.py` assembles the exact same
+  `{Election, Ballots, Results}` JSON from three ANONYMOUS GETs —
+  `/API/Election/{id}` + `/API/Election/{id}/anonymizedBallots` (public; the
+  admin `/ballots` 401s) + `/API/ElectionResult/{id}` — verified byte-equivalent
+  to the UI export on `vqyqkr` (ballot order may differ; that always varied).
+  For any existing election: `uv run …/fetch_bv_export.py <bvid> -o
+  <case>/cases/<yaml stem>_bv_export.json` (refuses to overwrite without
+  `--force`; `--without-results` freezes crash-case elections whose
+  ElectionResult 500s). Proven end-to-end (BV95a `9m6rxr`,
   BV95b `7pdq3r`). The old API doc's HS256 "secret == user id" trick is **stale** —
   the backend now demands RS256.
   - **BV methods & multi-winner (correction — 2026-07).** BV's seven
@@ -387,9 +395,11 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    list to that spec, then `uv run …/create_bv_test_election.py` — it creates the election **and casts the
    ballots** via the API and prints `bettervoting.com/<id>`. Never build it by
    hand in the UI. (Auth is asymmetric RS256; no real credential is stored.)
-4. **Export the full JSON** (Adam). The API GET returns only the election *config*,
-   so export the full **Election + Ballots + Results** from the BV UI and drop it
-   in `06_Other/_demo_dropbox/`.
+4. **Freeze the full JSON** (AI — automated since 2026-07-23). The create script
+   now auto-freezes the full **Election + Ballots + Results** export into
+   `06_Other/_demo_dropbox/`; for any election it can also be fetched on demand
+   with `uv run …/fetch_bv_export.py <bvid> -o <path>` (three anonymous GETs —
+   no UI click, no login; Adam is out of this step entirely).
 5. **Reproduce in LH** (AI). Convert/import the export into a `.yaml` (converter:
    `YAML_library/1_positive/01_convert_json_yaml.py`); for a random tie-break, pin
    `lot_numbers` to BV's `perm`. Confirm LH's winner(s) match — or characterize the

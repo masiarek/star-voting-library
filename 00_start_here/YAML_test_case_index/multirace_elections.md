@@ -529,6 +529,18 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Draw the line — Approval, approve 4 and up | Approval | 3 | **Beck** |
 | Draw the line — Approval, favorites only | Approval | 3 | **Cora** |
 
+## BV2210 — Food-Truck Row — two spots, five counts: vote-splitting, sweeps, and shares
+
+**Election** [`fvg8y8`](https://bettervoting.com/fvg8y8/results) · **5 races** · **100 ballots** · [frozen export](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_food_truck_row_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Two spots — SNTV (choose one truck) | Plurality | 5 | **Donut, Eclair** |
+| Two spots — Bloc STAR | STAR | 5 | **Arepa, Bao** |
+| Two spots — Bloc Ranked Robin | RankedRobin | 5 | **Arepa, Bao** |
+| Two spots — STAR-PR / Allocated Score | STAR_PR | 5 | **Arepa, Donut** |
+| Two spots — STV | STV | 5 | **Arepa, Donut** |
+
 ## BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut
 
 **Election** [`k3fmwv`](https://bettervoting.com/k3fmwv/results) · **4 races** · **200 ballots** · [frozen export](../../method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022_bv_export.json)

@@ -378,6 +378,27 @@ def create(spec):
     with open(out, "w") as fh:
         fh.write(final.text)
     print(f"  saved -> {out}")
+
+    # Auto-freeze the FULL export (Election + Ballots + Results) alongside it.
+    # The plain GET above is config-only; sibling fetch_bv_export.py assembles the
+    # exact JSON the UI's "Download JSON" button gives, from three anonymous GETs
+    # (Election, anonymizedBallots, ElectionResult) — no UI click needed anymore.
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from fetch_bv_export import fetch_export
+        export, notes = fetch_export(eid)
+        full = os.path.join(OUT_DIR, f"{safe_title}-{eid}_bv_export.json")
+        with open(full, "w", encoding="utf-8") as fh:
+            json.dump(export, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
+        print(f"  frozen full export -> {full}")
+        print("    (copy into the case folder as <yaml stem>_bv_export.json)")
+        for n in notes:
+            print(f"    ⚠ {n}")
+    except Exception as ex:
+        print(f"  ⚠ full-export auto-freeze failed ({ex!r}) — run manually: "
+              f"uv run fetch_bv_export.py {eid}")
+
     print(f"  expected: {spec.get('expected', '?')}  |  URL: "
           f"https://bettervoting.com/{eid}")
     return eid

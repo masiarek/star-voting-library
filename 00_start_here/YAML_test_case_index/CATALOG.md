@@ -57,7 +57,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | dyxrbr | BV2133 — Pet poll II: four methods, four winners | 4 | contested (multi-race) | 32 | Approval, IRV, Plurality, STAR | BV |
 | f3dxq9 | BV2167 — Minimax elects the absolute loser — the can | 2 | contested (multi-race) | 11 | Plurality, STAR | BV |
 | f4cjpy | BV2159 — Brams' 21-voter sampler — IRV elects B whil | 3 | contested (multi-race) | 21 | IRV, RankedRobin, STAR | BV |
-| fvg8y8 | Food-Truck Row — Bloc Ranked Robin: ranked ballots s | 5 | contested (multi-race) | 100 | Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
+| fvg8y8 | BV2210 — Food-Truck Row — two spots, five counts: vo | 5 | contested (multi-race) | 100 | Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
 | g6q42v | BV2195 — Later-No-Harm (1 of 2) — the reticent ballo | 2 | contested (multi-race) | 9 | IRV, STAR | BV |
 | ggg7hd | BV2197 — Recruit a Spoiler (1 of 2) — the two-way ba | 2 | contested (multi-race) | 9 | Plurality, STAR | BV |
 | gr72hd | BV2158 — Ossipoff's buried centrist — the candidate  | 4 | contested (multi-race) | 303 | IRV, Plurality, RankedRobin, STAR | BV |
@@ -98,7 +98,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 2kcwbw | BV2221 — STAR vs strategy — sincere ballots elect th | 1 | single-race | 100 | STAR | BV |
 | 3494cb | BV132 - verify number of votes vast - bloc STAR voti | 1 | single-race | 4 | STAR | BV |
 | 36f4v2 | BV2219 — Equally Weighted Vote — base election (STAR | 1 | single-race | 3 | STAR | BV |
-| 39py93 | BV2204 — Poets on the shelf: the control (STV 2 seat | 1 | single-race | 13 | STV | BV |
+| 39py93 | BV2204 — The Transfer Machine, control — an STV fini | 1 | single-race | 13 | STV | BV |
 | 3r3yf7 | BV2141 — Ranked Robin — a Copeland tie that needs al | 1 | single-race | 81 | RankedRobin | BV |
 | 3w6v4b | Equal Support vs Abstention — minimal STAR test (A/B | 1 | single-race | 5 | STAR | BV |
 | 3yr2qd | Block STAR | 1 | single-race | 3 | STAR | BV |
@@ -108,11 +108,11 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | 6hv7jf | BV1570 - deactivate selection - plurality voting - C | 1 | single-race | 3 | Plurality | BV |
 | 6xhfp8 | BV11 - Valid Ballot - Full and Equal Support (2 Cand | 1 | single-race | 3 | STAR | BV |
 | 7j2bqf | BV2229 — FairVote-vs-STAR check: French 2017 honest  | 1 | single-race | 100 | STAR | BV |
-| 7mckyg | Favorite betrayal in STAR (1 of 2) — honest ballots: | 1 | single-race | 57 | STAR | BV |
+| 7mckyg | BV2206 — Favorite betrayal in STAR, 1 of 2 — honest  | 1 | single-race | 57 | STAR | BV |
 | 7pdq3r | BV95b - Majority Criterion: favorite loses (backs tw | 1 | single-race | 5 | STAR | BV |
-| 7q6by8 | BV2208 — Burial in Ranked Robin (1/2): sincere ballo | 1 | single-race | 42 | RankedRobin | BV |
+| 7q6by8 | BV2208 — Burial in Ranked Robin, 1 of 2 — sincere ba | 1 | single-race | 42 | RankedRobin | BV |
 | 8fvd2x | BV126 - “ties every time - every step” - Multiple ti | 1 | single-race | 7 | STAR | BV |
-| 8xwx43 | BV2205 — The smallest sole-survivor STV election (1  | 1 | single-race | 6 | STV | BV |
+| 8xwx43 | BV2205 — The sole-survivor STV finish — six voters,  | 1 | single-race | 6 | STV | BV |
 | 9dhv8y | No-show paradox (2 of 2) — the 8 April fans vote; RC | 1 | single-race | 62 | STAR | BV |
 | 9ff9jk | BV130 — 6 candidates / 3 winners, Bloc STAR | 1 | single-race | 4 | STAR | BV |
 | 9m6rxr | BV95a - Majority Criterion: favorite survives (backs | 1 | single-race | 5 | STAR | BV |
@@ -314,7 +314,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vote_splitting_scenario2_bloc_leads | Vote splitting — scenario 2 of 3 — no spoiler (bloc  | 1 | single-race | 36 | STAR | LH-only |
 | vote_splitting_scenario3_outsider_wins | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
 | b4yr3v | BV2231 — FairVote-vs-STAR check: Washington 2010 hon | 1 | single-race | 100 | STAR | BV |
-| b6xrdr | Favorite betrayal in STAR (2 of 2) — nine voters dem | 1 | single-race | 57 | STAR | BV |
+| b6xrdr | BV2207 — Favorite betrayal in STAR, 2 of 2 — nine vo | 1 | single-race | 57 | STAR | BV |
 | bfjqmg | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
 | bgcmxx | BV2228 — Favorite Betrayal — the RCV-IRV betrayal (2 | 1 | single-race | 34 | IRV | BV |
 | bj8dfc | BV2202 — The Transfer Machine, fully ranked — a book | 1 | single-race | 9 | STV | BV |
@@ -326,11 +326,11 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | ff6mk3 | BV135 - Approval 101 — most approvals wins | 1 | single-race | 5 | Approval | BV |
 | fk38pk | BV1815 - STAR Bloc - 3 candidates - 2 seats (basic / | 1 | single-race | 3 | STAR | BV |
 | fp62p2 | BV2180 — Ice Cream, six flavors — a STAR tie in both | 1 | single-race | 2 | STAR | BV |
-| fxhw6g | BV2209 — Burial in Ranked Robin (2/2): fifteen voter | 1 | single-race | 42 | RankedRobin | BV |
+| fxhw6g | BV2209 — Burial in Ranked Robin, 2 of 2 — fifteen vo | 1 | single-race | 42 | RankedRobin | BV |
 | fyy886 | BV2184 — The Team Lunch Vote — a beginner's STAR exa | 1 | single-race | 5 | STAR | BV |
 | g3f7r2 | BV2212 — STAR IIA under a Condorcet cycle — a losing | 1 | single-race | 23 | STAR | BV |
 | gmfv4c | Edelman's 'Myth of the Condorcet Winner' 81 voters — | 1 | single-race | 81 | STAR | BV |
-| gvtg2h | BV2203 — The transfer machine, flag probe (STV 2 sea | 1 | single-race | 9 | STV | BV |
+| gvtg2h | BV2203 — The Transfer Machine, flag probe — same STV | 1 | single-race | 9 | STV | BV |
 | jfk7pd | The BV recipe (the "crazy" scenario) | 1 | single-race | 2 | STAR | BV |
 | jt6r76 | BV27 - Lackner & Skowron steering committee (Approva | 1 | single-race | 12 | Approval | BV |
 | kbh3d9 | Guido example - bloc STAR | 1 | single-race | 3 | STAR | BV |
