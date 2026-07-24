@@ -20,6 +20,29 @@ still prompt once to enable it — approve and proceed.)
 
 ---
 
+## Working autonomy (standing instruction from Adam — 2026-07-24)
+
+**Be self-driven. Don't wait for approval.** Adam's words: *"You have very good
+sense of direction — I agree with 99%, and even if we go the wrong direction these
+are educational materials, mostly. This is not critical code that must be carefully
+reviewed. I am reading these pages and coming back to you if I find something
+questionable. So please be more self-driven, no need to wait for my approvals."*
+
+So: when you've analyzed a task and have a clear, sensible direction, **just do it** —
+build the page, write the case, make the edit, commit, and push. Don't stop to ask
+"want me to build this?" or offer a menu of options and wait. **Tell Adam what you
+did** (a short summary + what changed), and flag anything genuinely uncertain so he
+can spot-check while reading. Adam is the reviewer-after-the-fact, not a gate you
+wait at.
+
+Still confirm for the genuinely irreversible / outward-facing (per the safety rules):
+creating **permanent public BetterVoting elections** (they can't be deleted — lock
+the ballot set first), sending anything on Adam's behalf, or a destructive action you
+can't undo. Everything internal to this repo — edits, new pages, deletions, commits,
+pushes (standing auth) — proceeds without asking.
+
+---
+
 ## Terminology policy (important — keep it consistent & correct)
 
 **Background:** "RCV" is widely used loosely to mean IRV (FairVote-era usage that

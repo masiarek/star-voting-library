@@ -268,6 +268,7 @@ LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN 
 LH:reversal_jarring_c3_b100,"Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival",1,single-race,100,STAR,LH-only
 LH:reversal_star_original,"Reversal symmetry — STAR, original: B (STAR does not winner=loser here)",1,single-race,24,STAR,LH-only
 LH:reversal_star_reversed,"Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)",1,single-race,24,STAR,LH-only
+LH:rr_blank_is_last_c4_b3,Ranked Robin — a blank is ranked LAST (and rank numbers don't matter),1,single-race,3,RankedRobin,LH-only
 LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
