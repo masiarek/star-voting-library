@@ -28,7 +28,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 
 ## Concept pages in this folder
 
-**The problem, and the case for reform:** [the spoiler effect](spoiler_effect.md) · [wasted votes](wasted_votes.md) · [two-party dominance](two_party_dominance.md) · [plurality](plurality.md) · [strategic voting](strategic_voting.md) · [Why STAR Voting](Why_STAR_Voting.md) · [RCV-IRV vs STAR](rcv_irv_vs_star.md)
+**The problem, and the case for reform:** [the spoiler effect](spoiler_effect.md) · [wasted votes](wasted_votes.md) · [two-party dominance](two_party_dominance.md) · [does a better ballot end polarization?](does_better_voting_end_polarization.md) · [plurality](plurality.md) · [strategic voting](strategic_voting.md) · [Why STAR Voting](Why_STAR_Voting.md) · [RCV-IRV vs STAR](rcv_irv_vs_star.md)
 
 **Ballots & what they capture:** [what is a voting method?](what_is_a_voting_method.md) · [a ballot and a count](voting_method_ballot_and_count.md) · [ballot & terminology basics](ballot_and_terminology_basics.md) · [alternate ballot styles](ballot_styles.md) · [same opinions, every method — the line-up](same_opinions_every_method.md) · [preference](preference.md) · [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · [the ranked-ballot method zoo](ranked_ballot_methods_zoo.md) · [3-2-1 voting (vs. STAR)](three_two_one_voting.md) · [tabulation, step by step](tabulation_star_vs_irv.md) · [pairwise counting & the preference matrix](pairwise_counting.md) · [central tabulation](central_tabulation.md)
 
