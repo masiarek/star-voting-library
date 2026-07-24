@@ -489,8 +489,12 @@ def case_md(r, dupes):
 
 def _dedupe(diverged):
     """Group identical elections (same candidates + ballots). Returns a list of
-    (primary_row, [duplicate_file_paths]); primary prefers the non-YAML_library
-    copy so the teaching doc lives with the curated example."""
+    (primary_row, [duplicate_file_paths]); the primary is the copy whose source
+    and tabulated mirror actually exist on disk, so the generated case links
+    resolve. Preference order: non-YAML_library over YAML_library (teaching doc
+    lives with the curated example), then the canonical `cases/`-subfolder layout
+    over a stale flat sibling (per CLAUDE.md's case-folder rule — the mirror only
+    exists next to the `cases/` copy, at `cases/cases_tabulated/`)."""
     groups = {}
     for r in diverged:
         src = REPO / r["file"]
@@ -503,7 +507,9 @@ def _dedupe(diverged):
         groups.setdefault(key, []).append(r)
     out = []
     for members in groups.values():
-        members.sort(key=lambda r: ("YAML_library" in r["file"], r["file"]))
+        members.sort(key=lambda r: ("YAML_library" in r["file"],
+                                    Path(r["file"]).parent.name != "cases",
+                                    r["file"]))
         primary = members[0]
         dupes = [m["file"] for m in members[1:]]
         out.append((primary, dupes))

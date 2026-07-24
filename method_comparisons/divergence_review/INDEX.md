@@ -131,26 +131,26 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[tie_break_06_scoring_dead_rung_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_06_scoring_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
-- **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml` (3c/31b)  
+- **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml` (3c/31b)  
     STAR=**Clara** · IRV=Bruno · RR=Clara · Approval=Abby · Score=Bruno · Condorcet=none  
     _flags: 9 tied-score ballot(s); RR conv-sensitive (weak=Clara, strict=Bruno)_  
-    _also at: `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml`_
-- **[02_c4_b40_cliff-city](cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md)** — `06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml` (4c/40b)  
+    _also at: `06_Other/ballot_style_lab/01_c3_b31_graders-divide.yaml`_
+- **[02_c4_b40_cliff-city](cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md)** — `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml` (4c/40b)  
     STAR=**Churro** · IRV=Bao · RR=Churro · Approval=Churro · Score=Bao · Condorcet=Churro  
     _flags: 10 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Churro, strict=Bao)_  
-    _also at: `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml`_
-- **[04_c4_b47_noise-soup](cases/IRV_DIFFERS_ARTIFACT/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml` (4c/47b)  
+    _also at: `06_Other/ballot_style_lab/02_c4_b40_cliff-city.yaml`_
+- **[04_c4_b47_noise-soup](cases/IRV_DIFFERS_ARTIFACT/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml` (4c/47b)  
     STAR=**Caleb** · IRV=Beth · RR=Beth · Approval=Beth · Score=Beth · Condorcet=none  
     _flags: 13 tied-score ballot(s); IRV flips on reversed priority_  
-    _also at: `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml`_
-- **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml` (3c/38b)  
+    _also at: `06_Other/ballot_style_lab/04_c4_b47_noise-soup.yaml`_
+- **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml` (3c/38b)  
     STAR=**Ben** · IRV=Cora · RR=Ben · Approval=Cora · Score=Cora · Condorcet=Ben  
     _flags: 2 tied-score ballot(s)_  
-    _also at: `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml`_
-- **[06_c4_b24_narrow-bands](cases/IRV_DIFFERS_ARTIFACT/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml` (4c/24b)  
+    _also at: `06_Other/ballot_style_lab/05_c3_b38_squeeze-survives.yaml`_
+- **[06_c4_b24_narrow-bands](cases/IRV_DIFFERS_ARTIFACT/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml` (4c/24b)  
     STAR=**Beige** · IRV=Azure · RR=Coral · Approval=Azure · Score=Azure · Condorcet=none  
     _flags: 16 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Coral, strict=Azure)_  
-    _also at: `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml`_
+    _also at: `06_Other/ballot_style_lab/06_c4_b24_narrow-bands.yaml`_
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
@@ -184,9 +184,9 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[three_way_dead_rung_A](cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md)** — `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml` (3c/3b)  
     STAR=**A** · IRV=B · RR=A · Approval=A · Score=A · Condorcet=none  
     _also at: `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`_
-- **[03_c4_b33_bullet-storm](cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md)** — `06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml` (4c/33b)  
+- **[03_c4_b33_bullet-storm](cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md)** — `06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml` (4c/33b)  
     STAR=**Carla** · IRV=Astrid · RR=Carla · Approval=Carla · Score=Carla · Condorcet=none  
-    _also at: `06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml`_
+    _also at: `06_Other/ballot_style_lab/03_c4_b33_bullet-storm.yaml`_
 - **[BV_Library_star_runoff_tie_score_resolves](cases/CYCLE_OR_THREE_WAY/BV_Library_star_runoff_tie_score_resolves.md)** — `method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml` (2c/2b)  
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
 - **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  
