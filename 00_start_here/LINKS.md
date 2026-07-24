@@ -25,6 +25,7 @@ _Last full review: 2026-06-21._
 | **Automatic Runoff** | Deep-dive visuals for the runoff (Segment 5) | https://docs.google.com/presentation/d/1DNJg5kbsNbNQFV3bosm4KZmgJtNfIbQdpirhm5XlCqY/edit | 2026-06-21 |
 | **Scores vs Rankings** | "What is the difference?" — ranks vs scores (Segment 3) | https://docs.google.com/presentation/d/1vu3i7gMV-P87SDosWJe6P-y3h21Bloc2_Ovhyf4yOLQ/edit | 2026-06-21 |
 | **STAR-vs-RCV Template** | Equal Vote's STAR-vs-RCV talk; source of the "Results" pie (Equal Support = supported both / neither) | https://docs.google.com/presentation/d/1G40n79tcUPdVkZWr-tNXSz7q9ddbwOUw4Ev0G_jKq6I/edit | 2026-06-22 |
+| **Voting Methods 101 (DPO)** | Methods-survey talk for the Democratic Party of Oregon's voting-methods committee — vote-splitting case, per-method pros/cons (cons for STAR included), Oregon reform timeline (Portland RCV+PR, Measure 117, Eugene, Oakridge, Astoria). Claim-checked in `STAR_Voting/reference/STAR_resources.md` | https://docs.google.com/presentation/d/1vm41jc8N7qsi7QZvMNS27500gUYggZc4kL3mp-LAcHY/edit | 2026-07-24 |
 
 ## Core docs
 
