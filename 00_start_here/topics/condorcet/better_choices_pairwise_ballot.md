@@ -44,6 +44,8 @@ The methods only part company in a **[cycle](../../RCV_Ranked_Robin/cycle_resolu
 
 ## Claim check
 
+> **The rigorous backing for the minimax choice.** Better Choices' "least bad loss" count isn't just intuitive — there's a neutral 2024 social-choice result that at **exactly three candidates**, maximin and its refinements (leximin, Nanson) are the *uniquely* best-defended Condorcet rule against the no-show and reinforcement paradoxes. Summarized, with the honest caveats (it's a 3-candidate-only result; it characterizes the *tie-broken* refinements, not bare minimax; and it says nothing about score methods like STAR): [Condorcet-Consistent Choice Among Three Candidates — the maximin result](three_candidate_maximin.md).
+
 ### Claim 1 — "At three candidates, Minimax agrees with Ranked Pairs and Schulze."
 
 Verbatim, Minimax "agrees with Ranked Pairs and Schulze, which are top-shelf Condorcet methods."

@@ -4,6 +4,8 @@
 
 > **The one idea to take away:** *"vote — it can only help your side" is a promise a voting method can keep or break.* Pure score-summing methods keep it structurally; every method with an elimination or runoff stage — RCV-IRV, Coombs, plurality-runoff, **and STAR** — plus every Condorcet-consistent method (Moulin's theorem) can break it in some electorate. The differences are *how often* and *how visibly*.
 
+> **The three-candidate exception.** Moulin's theorem needs **≥ 4 candidates**. Restricted to *exactly three*, Brandt, Dong & Peters (2024) prove there **is** a no-show-immune family of Condorcet extensions — the refinements of [maximin](../../voting_paradoxes/minimax.md) (leximin, Nanson), and *uniquely* so among homogeneous rules. The escape hatch closes again at four candidates. See [Condorcet-Consistent Choice Among Three Candidates](../condorcet/three_candidate_maximin.md).
+
 ## The live demonstration — one electorate, told twice (BV2174 / BV2175)
 
 The centerpiece pair: 8 voters who love April (sincere ranking April > Bruno > Celia) decide whether to show up. Same three candidates, same everyone-else, **three races on each election** — and the methods split:

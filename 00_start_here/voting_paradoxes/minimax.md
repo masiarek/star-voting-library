@@ -4,6 +4,8 @@
 
 **Source:** Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A10, Examples 29–33.
 
+> **Candidate-count fine print (important).** Every damning example below uses **four candidates**. Restrict to **exactly three** and the verdict flips: Brandt, Dong & Peters (2024) prove that at three candidates, **refinements of maximin (leximin, Nanson) are *uniquely* immune to the no-show paradox** among homogeneous Condorcet extensions, and immune to reinforcement for ≤ 7 voters — the small case where [Moulin's impossibility](no_show.md) hasn't yet applied. Minimax looks paradox-prone in the general (4+) case and uniquely well-behaved in the three-candidate case; both are true. See [Condorcet-Consistent Choice Among Three Candidates](../topics/condorcet/three_candidate_maximin.md).
+
 ## Example 29 — Minimax elects the Condorcet AND absolute loser (live: [BV2167](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_minimax_absolute_loser.md))
 
 ```
