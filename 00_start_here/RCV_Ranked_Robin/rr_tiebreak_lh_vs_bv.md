@@ -65,6 +65,7 @@ Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a
 
 ## Related
 
+- **The tie-break itself can't be made strategyproof** — Brandt, Saile & Stricker, *"Strategyproof social choice when preferences and outcomes may contain ties"* (*Journal of Economic Theory* 202, 2022, [105447](https://doi.org/10.1016/j.jet.2022.105447)) prove that *no* anonymous, Pareto-optimal tie-breaking rule — a fixed order (LH's lot) *or* a coin flip (BV's random) — escapes manipulability once voters may express ties, so the LH-vs-BV choice above is a design trade-off, not a solved problem.
 - [Ranked Robin (the method)](ranked_robin.md) · [cycle resolution](cycle_resolution.md) · [ranked_robin_vs_condorcet.md](ranked_robin_vs_condorcet.md)
 - **This same Copeland-margin logic is offered as an optional *STAR* tiebreaker** — Equal Vote's [Condorcet Tiebreaker](../STAR_Voting/Tie_Breaking_STAR/condorcet_tiebreaker.md) runs a mini round-robin (most head-to-head wins → margin) among candidates STAR's own rounds left tied. Ranked Robin is this arithmetic as a *whole method*; there it is a *subroutine* firing only on an exact STAR tie.
 - BetterVoting tabulation engine notes: [`tabulation_engines/BV/tabulation_engine/README.md`](../tabulation_engines/BV/tabulation_engine/README.md) (the `RankedRobin.ts` row: *"2-way tie → head-to-head; else random"*)
