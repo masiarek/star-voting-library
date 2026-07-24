@@ -1,5 +1,5 @@
 # Favorite Betrayal — Does *Only* RCV Avoid It?
-### Voting 301 · advanced · the deep-dive behind Slide 4
+### Voting 301 · advanced · the deep-dive behind the *"You Never Have to Betray Your Favorite"* slide
 
 This is the hardest-to-keep-straight idea in the whole STAR-vs-RCV debate, so this file goes slow and over-explains on purpose. If you only remember one thing:
 
@@ -16,7 +16,7 @@ RCV advocates say *"you never have to betray your favorite"* — that's the **fr
 
 ## 1. The context — what was actually challenged
 
-**The slide.** In the deck [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md), **Slide 4** is titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."*
+**The slide.** The deck [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md) has a slide titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."* (House style references slides by title, not number — see [LINKS.md](../../LINKS.md).) This page is the deep-dive that backs that claim up under cross-examination.
 
 **The challenge to the slide.** *"Isn't this overstated? RCV-IRV proponents claim that **only** in IRV do you never betray your favorite, and that STAR *can* make you betray your favorite. Are they right?"*
 
@@ -111,7 +111,7 @@ So instead of quoting a number we can't defend, we **measured** FBC directly —
 
 So STAR's FBC leak is a **deliberate trade**: it gives up a sliver of FBC to buy a genuine majority finish and immunity to score-exaggeration.
 
-**Why the two failures aren't the same animal** (this, not frequency, is the point):
+**Why the two failures differ in kind — not merely in frequency** (this is the point):
 - STAR's failures are **fragile and unactionable** — extreme ballots, perfect information, and a betrayal that backfires ~98% of the time you'd try it. They essentially don't occur in real elections.
 - RCV-IRV's failure is **systematic and predictable** — the *center squeeze* — and it bites in exactly the competitive 3-viable-candidate races reform is meant to fix, where a squeezed wing can often see it coming (Alaska, Burlington).
 
@@ -177,7 +177,7 @@ The claim in the wild is rarely a calm question; it's an argument. So here's the
 
 ## 8. How to deploy it
 
-- **Don't open with this.** It's Voting 301. Raise it only when an RCV advocate makes the "only RCV avoids favorite betrayal" claim. With a general audience, Slide 4 stands on its own.
+- **Don't open with this.** It's Voting 301. Raise it only when an RCV advocate makes the "only RCV avoids favorite betrayal" claim. With a general audience, the *"You Never Have to Betray Your Favorite"* slide stands on its own.
 - **Lead by separating the two criteria** before you argue — half the disagreement evaporates once "first mark" vs "later marks" is on the table.
 - **Concede STAR fails FBC too — immediately, and without a percentage.** Say "betrayal almost always backfires in STAR," not "STAR is 98% compliant." Your candor is the credibility that makes the center-squeeze point land.
 - **End on the value, not the math:** Later-No-Harm *causes* center squeeze; STAR trades it away so a consensus candidate can actually win.
@@ -192,7 +192,7 @@ The claim in the wild is rarely a calm question; it's an argument. So here's the
 
 ## Cross-references
 - **[The worked STAR favorite-betrayal pair](../../../01_STAR/favorite_betrayal/README.md)** — BV2206 (honest: the tepid Condorcet winner misses the runoff) / BV2207 (nine voters demote their favorite and it pays), live on BetterVoting and LH-verified. The numeric backing for §5's "the leak is the runoff."
-- Slide 4 in [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
+- The *"You Never Have to Betray Your Favorite"* slide in [`Why_STAR_Voting.md`](../../topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
 - [`are_equal_score_votes_discounted.md`](../reference/are_equal_score_votes_discounted.md) — the runoff / Equal-Support sibling of this concede-then-reframe argument.
 - [`LINKS.md`](../../LINKS.md) → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
 - [`fbc_simulation.py`](../../../06_Other/simulations/fbc_simulation.py) + [`06_Other/simulations/README.md`](../../../06_Other/simulations/README.md) — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).

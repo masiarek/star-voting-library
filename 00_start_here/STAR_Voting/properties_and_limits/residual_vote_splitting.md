@@ -33,7 +33,7 @@ In 05a the engine's `[Vote-splitting check]` is honest: it flags the majority co
 
 ## Why it's a narrow edge case, not the spoiler all over again
 
-- **The ordinary spoiler is automatic** — it needs no coordination and happens whenever similar candidates run. Splitting is the *default*.
+- **The ordinary spoiler is automatic** — no one has to coordinate or even intend it: under Choose-One the split happens *on its own* whenever similar candidates run (whether it actually flips the winner then depends on the margins). Splitting is the *default*, not a strategy someone has to execute.
 - **STAR's residual is the exception** — it needs a near-tie for the second runoff slot, accurate prediction, coordinated mis-scoring, and it **backfires if you're wrong**. The [brute-force simulation](../../../06_Other/simulations/README.md) finds that a favorite-betrayal-style play in STAR helps only ~2% of the time it changes the result — it backfires ~98% of the time. So honest, expressive scoring stays your safest ballot.
 
 Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md) and [center-squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) edge cases: all three come from "only the top two advance."
@@ -41,3 +41,5 @@ Same root cause as STAR's [favorite-betrayal](favorite_betrayal_voting_301.md) a
 ## How to say it honestly
 
 Not *"STAR eliminates vote-splitting"* (full stop) but *"STAR ends forced vote-splitting and shrinks the rest to a narrow, hard-to-coordinate, backfire-prone edge case — dramatically reduces, doesn't claim to eliminate."* The honest version is still the winning version.
+
+This is the same discipline the rest of the library applies to every claim: concede the real limit, then make the (still strong) accurate case. See [STAR's honest limits](STAR_honest_limits.md) for the full set, and — for the mirror image, *our own side's* overclaims about the other methods — the ["claims our own side oversells"](../../RCV_IRV/rcv_irv_false_claims.md#the-mirror-claims-our-own-side-oversells-about-irv) section. "Dramatically reduces, doesn't eliminate" is exactly the honest register that keeps the whole case credible.

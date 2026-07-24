@@ -14,7 +14,21 @@ Pass that **Test of Balance** and you satisfy the **Equal Vote Criterion** (a.k.
 
 ## The picture: two exactly opposite ballots
 
-Two voters who disagree on *every* candidate, on a 0–5 ballot. Their scores are exact opposites — each pair sums to 5 (an opposite score is `5 − s`):
+Two voters who disagree on *every* candidate, on a 0–5 ballot. Here are their two actual ballots — filled stars are the score given (★ = 1, out of 5). Voter 2's ballot is the mirror of Voter 1's: wherever one fills *s* stars, the other fills `5 − s`.
+
+```
+        VOTER 1                              VOTER 2  (the exact opposite)
+  ┌─────────────────────────┐          ┌─────────────────────────┐
+  │ Abby     ★★☆☆☆   2 │          │ Abby     ★★★☆☆   3 │
+  │ Ben      ★☆☆☆☆   1 │          │ Ben      ★★★★☆   4 │
+  │ Carmen   ☆☆☆☆☆   0 │          │ Carmen   ★★★★★   5 │
+  │ DeAndre  ★☆☆☆☆   1 │          │ DeAndre  ★★★★☆   4 │
+  │ Eric     ★★★★★   5 │          │ Eric     ☆☆☆☆☆   0 │
+  │ Freya    ★★★★☆   4 │          │ Freya    ★☆☆☆☆   1 │
+  └─────────────────────────┘          └─────────────────────────┘
+```
+
+Line them up and every row sums to 5 (an opposite score is `5 − s`):
 
 | Candidate | Voter 1 | Voter 2 | Sum |
 |-----------|:------:|:------:|:---:|
@@ -36,7 +50,7 @@ So if the race was tied before these two ballots, it is still tied after. Neithe
 
 ## Why this is the root of vote-splitting
 
-Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there is no ballot anyone can cast to cancel it — a Choose-One ballot can only *add* a mark to some candidate, never subtract from A. With no balancing vote available, a cluster of similar candidates splits its shared supporters and a less-preferred candidate can slip through. Vote-splitting and the spoiler effect are not separate bugs; they are the visible symptom of an **unequal vote**. STAR ends forced vote-splitting for exactly one reason: every ballot can be perfectly cancelled, so adding a similar candidate can't dilute anyone.
+Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there is no ballot anyone can cast to cancel it — a Choose-One ballot can only *add* a mark to some candidate, never subtract from A. With no balancing vote available, a cluster of similar candidates splits its shared supporters and a less-preferred candidate can slip through. [Vote-splitting and the spoiler effect](../../topics/spoiler_effect.md) are not separate bugs; they are the visible symptom of an **unequal vote**. STAR ends forced vote-splitting for exactly one reason: every ballot can be perfectly cancelled, so adding a similar candidate can't dilute anyone. (Watch it happen across methods: [the split-voting set](../../../method_comparisons/split_voting/README.md); the narrow residue STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md).)
 
 ## Which methods pass, which fail
 
