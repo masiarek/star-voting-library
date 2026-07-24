@@ -8,6 +8,7 @@ Both are **LH-only**: the LH engine's Ranked Robin is Copeland, and in a cycle C
 |---|:--:|---|
 | [`cycle_copeland_ties_c4_b21.yaml`](cases/cycle_copeland_ties_c4_b21.yaml) | 21 | Copeland ties **Alder, Birch, Cedar** at 2–1 each — the simple count can't pick. All four refined rules then agree on **Alder**, whose only defeat (margin 1) is the mildest in the cycle. |
 | [`cycle_schulze_vs_ranked_pairs_c4_b40.yaml`](cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml) | 40 | The two "serious" cycle-resolvers **disagree outright**: Schulze elects **Ana**, Ranked Pairs elects **Bruno**, on identical ballots. Split Cycle returns **both**, on the grounds that the ballots don't separate them. |
+| [`cycle_family_splits_c5_b77.yaml`](cases/cycle_family_splits_c5_b77.yaml) | 77 | Five candidates, Smith set = everyone, no Condorcet winner. **Ranked Pairs alone picks Ben**; Ranked Robin (margin tiebreak), Minimax, Schulze and Stable Voting all pick **Ava**; Split Cycle returns both. Replaces an earlier unsourced "Heitzig" profile — this one is search-built and `pref_voting`-verified. |
 
 ## Running them
 

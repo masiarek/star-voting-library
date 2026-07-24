@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**412 election files** (358 single-winner, 54 multi-winner) across 15 method(s).
+**413 election files** (359 single-winner, 54 multi-winner) across 15 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 236 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 42 |
+| Ranked Robin (RCV-RR / Copeland) | 43 |
 | Approval | 14 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -302,7 +302,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (42)
+## Ranked Robin (RCV-RR / Copeland)  (43)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -326,6 +326,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`burlington_2009_ranked_robin`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_ranked_robin.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_ranked_robin.yaml) |
 | [`bv2137_ywckmg_ranked_robin`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_ranked_robin.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_ranked_robin.yaml) |
 | [`cycle_copeland_ties_c4_b21`](../../method_comparisons/cycle_resolution/cases/cases_pages/cycle_copeland_ties_c4_b21.md) | `method_comparisons/cycle_resolution/cases/` | 1 | A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder → _Alder_ | [`.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml) |
+| [`cycle_family_splits_c5_b77.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml) | `method_comparisons/cycle_resolution/cases/` | 1 | The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots → _Ava_ | — |
 | [`cycle_schulze_vs_ranked_pairs_c4_b40`](../../method_comparisons/cycle_resolution/cases/cases_pages/cycle_schulze_vs_ranked_pairs_c4_b40.md) | `method_comparisons/cycle_resolution/cases/` | 1 | Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both → _Ana_ | [`.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml) |
 | [`bv2145_6fj2kg_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2145_6fj2kg_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.2 — Ranked Robin: the Condorcet winner survives → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_ranked_robin.yaml) |
 | [`bv2146_krk2px_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2146_krk2px_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_ranked_robin.yaml) |

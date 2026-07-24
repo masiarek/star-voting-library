@@ -1,0 +1,46 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 77 ballots (ranked ballots).
+
+Ballots:
+    12 × Ezra > Ava > Dana > Ben > Cole
+     7 × Ezra > Cole > Ava > Dana > Ben
+    14 × Ben > Ava > Ezra > Cole > Dana
+     8 × Dana > Ben > Ava > Ezra > Cole
+     5 × Cole > Ava > Dana > Ezra > Ben
+    11 × Dana > Ben > Ava > Cole > Ezra
+    13 × Ezra > Cole > Ava > Ben > Dana
+     7 × Ben > Ava > Cole > Ezra > Dana
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ava   beats Ezra   45 – 32
+   Ezra  beats Dana   53 – 24
+   Ben   beats Ezra   40 – 37
+   Ezra  beats Cole   54 – 23
+   Ava   beats Dana   58 – 19
+   Ben   beats Ava    40 – 37
+   Ava   beats Cole   52 – 25
+   Dana  beats Ben    43 – 34
+   Cole  beats Dana   46 – 31
+   Ben   beats Cole   52 – 25
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |     Ezra     |    Ava      |    Dana     |    Ben      |    Cole     |
+---------------------------------------------------------------------------------
+  Ezra > |     ---      |32 -  0 - 45 |53 -  0 - 24 |37 -  0 - 40 |54 -  0 - 23 |
+   Ava > | 45 -  0 - 32 |    ---      |58 -  0 - 19 |37 -  0 - 40 |52 -  0 - 25 |
+  Dana > | 24 -  0 - 53 |19 -  0 - 58 |    ---      |43 -  0 - 34 |31 -  0 - 46 |
+   Ben > | 40 -  0 - 37 |40 -  0 - 37 |34 -  0 - 43 |    ---      |52 -  0 - 25 |
+  Cole > | 23 -  0 - 54 |25 -  0 - 52 |46 -  0 - 31 |25 -  0 - 52 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ava        3–1–0         3     +76  Ezra, Cole, Dana
+    2  Ben        3–1–0         3     +24  Ava, Ezra, Cole
+    3  Ezra       2–2–0         2     +44  Cole, Dana
+    4  Cole       1–3–0         1     -70  Dana
+    5  Dana       1–3–0         1     -74  Ben
+
+Winner — Ranked Robin (RCV-RR): Ava
+   *** 2 candidates tie for the most wins (Ava, Ben) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

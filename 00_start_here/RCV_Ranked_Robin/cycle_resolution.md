@@ -71,16 +71,19 @@ Same ballots, and the two "serious" cycle-resolvers **disagree outright** — Sc
 
 **Split Cycle's answer is the interesting one**, and it isn't indecision: its winner set is always a **superset** of Schulze's and Ranked Pairs'. Where those two produce a single name, Split Cycle is claiming they did so by *convention* rather than by evidence — the ballots here genuinely fail to separate A from B, and it hands that back rather than resolving it silently. Whether that's honesty or buck-passing is a real disagreement, and it's the subject of [its own page](../topics/condorcet/split_cycle.md).
 
-An older, nastier 5-candidate cycle (the classic "Heitzig–Schulze–Tideman disagree" profile, 100 voters) splits them the same way:
+A nastier **five-candidate** cycle drives the point home — 77 voters, [runnable](../../method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml) as Ava / Ben / Cole / Dana / Ezra, with **no** Condorcet winner and a Smith set of *all five*:
 
-| Method | Winner |
-|---|---|
-| Ranked Robin / **Copeland** | **B** |
-| **Ranked Pairs** | **B** |
-| **Minimax** | **A** |
-| **Schulze** | **A** |
+| Method | Winner | |
+|---|---|---|
+| Ranked Robin / **Copeland** | **Ava** | Copeland ties Ava & Ben (both 3–1); the margin tiebreak picks Ava (+76 vs +24) |
+| **Minimax** | **Ava** | her worst defeat (to Ben, by 3) is the field's mildest |
+| **Schulze** | **Ava** | strongest beatpaths run Ava's way |
+| **Ranked Pairs** | **Ben** | locks the biggest margins first, and they carry Ben |
+| **Split Cycle** | **Ava, Ben** | discarding each cycle's weakest defeat leaves both |
 
-Same ballots, **two different winners** depending on the cycle-resolution rule. This is the whole point: "Condorcet method" names a *family*, and once you're inside a cycle, the family splits. (Outside cycles — i.e. almost always — they're identical.)
+Same ballots, and **Ranked Pairs stands alone at Ben** while every other rule leans Ava — the two "serious" cycle-resolvers, Schulze and Ranked Pairs, disagree outright again. This is the whole point: "Condorcet method" names a *family*, and once you're inside a cycle, the family splits. (Outside cycles — i.e. almost always — they're identical.)
+
+> *An earlier draft here showed an unsourced "100-voter Heitzig" profile from memory; it's replaced by this one, [built by search and verified with `pref_voting`](../../method_comparisons/cycle_resolution/README.md). If you want a **named** profile from the literature, the canonical Schulze-vs-Ranked-Pairs disagreement examples live in [Schulze's own paper](https://arxiv.org/abs/1804.02973) and on [electowiki](https://electowiki.org/wiki/Schulze_method).*
 
 ## What they share (the good news)
 

@@ -1,0 +1,65 @@
+election_title: "The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots"
+
+scenario_description: |-
+  The five-candidate profile behind the "…but they don't always agree" table in
+  00_start_here/RCV_Ranked_Robin/cycle_resolution.md. 77 members of a program
+  committee rank five finalists, and majority preference is knotted about as
+  badly as it can be: there is no Condorcet winner and the Smith set is ALL FIVE
+  candidates — every finalist is in a beat-cycle with the rest.
+
+  On these identical ballots the Condorcet family gives four different answers:
+
+      Copeland (Ranked Robin)  Ava, Ben   (tie — both go 2-2; LH breaks it by margin)
+      Minimax                  Ava
+      Schulze (beat path)      Ava
+      Ranked Pairs             Ben
+      Split Cycle              Ava, Ben
+
+  Minimax and Schulze land on Ava (her worst defeat is the mildest); Ranked Pairs
+  locks the biggest margins first and they carry Ben; Copeland can't separate the
+  two, and Split Cycle deliberately returns both. That is the entire lesson of the
+  cycle-resolution page in one election: "Condorcet method" names a FAMILY, and
+  inside a cycle the family stops agreeing.
+
+  The LH engine tabulates the Copeland column (= Ranked Robin) and breaks the
+  Ava/Ben tie by total margin, then lot. The other four rules are printed by:
+    uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
+      method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
+
+  LH-only (no BetterVoting election): the result is a Copeland tie, and BV breaks
+  Copeland ties at random, so this can't be frozen on BV. Constructed by search
+  and verified with pref_voting (it is NOT a profile from the literature — an
+  earlier draft mis-attributed a 100-voter version to Heitzig; this replaces it
+  with a real, reproducible one). Companion: cycle_schulze_vs_ranked_pairs_c4_b40.yaml.
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ava, Ben, Cole, Dana, Ezra]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  12:Ezra>Ava>Dana>Ben>Cole
+  7:Ezra>Cole>Ava>Dana>Ben
+  14:Ben>Ava>Ezra>Cole>Dana
+  8:Dana>Ben>Ava>Ezra>Cole
+  5:Cole>Ava>Dana>Ezra>Ben
+  11:Dana>Ben>Ava>Cole>Ezra
+  13:Ezra>Cole>Ava>Ben>Dana
+  7:Ben>Ava>Cole>Ezra>Dana
+
+expected_winners:
+  - Ava

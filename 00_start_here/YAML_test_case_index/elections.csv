@@ -212,6 +212,7 @@ LH:cycle_C10_medV149_bloc_2,"STAR vs RR divergence -- 10 cands, 149 voters, cycl
 LH:cycle_C10_medV45_noise_1,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR E, RR G)",1,single-race,45,STAR,LH-only
 LH:cycle_C10_medV45_noise_2,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR A, RR I)",1,single-race,45,STAR,LH-only
 LH:cycle_copeland_ties_c4_b21,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",1,single-race,21,RankedRobin,LH-only
+LH:cycle_family_splits_c5_b77,"The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots",1,single-race,77,RankedRobin,LH-only
 LH:cycle_schulze_vs_ranked_pairs_c4_b40,"Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both",1,single-race,40,RankedRobin,LH-only
 LH:dark_horse_star,Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D),1,single-race,100,STAR,LH-only
 LH:darkhorse_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, darkhorse (STAR A, RR C)",1,single-race,15,STAR,LH-only
