@@ -24,7 +24,7 @@ video_script: |-
   Engardio loses. Now watch the AFTER file: move 800 Engardio voters to rank him
   SECOND instead of first — less support for Engardio — and he wins.
 
-paradoxes: [monotonicity]
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV
 num_winners: 1
 

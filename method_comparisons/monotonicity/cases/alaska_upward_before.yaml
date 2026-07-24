@@ -17,7 +17,7 @@ video_script: |-
   Peltola wins. Hold that result — then watch what happens when a few Palin-only
   voters decide they like the winner after all and rank her first.
 
-paradoxes: [monotonicity]
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV
 num_winners: 1
 

@@ -23,7 +23,7 @@ video_script: |-
   should never punish a candidate for being ranked higher. STAR and Ranked Robin
   can't do this.
 
-paradoxes: [monotonicity]
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV
 num_winners: 1
 
