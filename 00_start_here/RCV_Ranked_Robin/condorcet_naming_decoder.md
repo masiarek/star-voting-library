@@ -92,6 +92,7 @@ Two **rated** methods *end* with a head-to-head step, which can fool you into fi
 
 - [Condorcet methods — a reading list](../topics/condorcet/condorcet_reading_list.md) — the sources behind this page: books, papers, and the free surveys, each with its lean marked
 - [Ranked Robin](ranked_robin.md) — the method, taught (with the "Names & family" section this page expands)
+- [A blank is ranked *last*](rr_blank_means_last.md) — the C1 point made concrete: Ranked Robin reads *who beat whom*, never rank **numbers**, so it isn't Borda — and a blank simply ranks below everyone you ranked
 - [Terminology — the ranked-method family tree](../tips/TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
 - [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) — why a *cycle* leaves "the Condorcet winner" blank while Ranked Robin still elects one
 - [The math behind Condorcet](the_math_behind_condorcet.md) — tournaments, Smith/Schwartz, the impossibility theorems
