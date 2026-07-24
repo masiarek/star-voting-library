@@ -136,7 +136,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite
 
 ## See also
 
-- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/bv2206_7mckyg_fbc_honest_tepid_consensus.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/bv2206_7mckyg_fbc_honest_tepid_consensus.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)

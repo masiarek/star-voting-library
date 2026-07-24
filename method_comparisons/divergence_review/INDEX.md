@@ -12,9 +12,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 29 |
-| STAR_OUTLIER_RR_WITH_IRV | 3 |
-| IRV_DIFFERS_ARTIFACT | 16 |
-| CYCLE_OR_THREE_WAY | 30 |
+| STAR_OUTLIER_RR_WITH_IRV | 8 |
+| IRV_DIFFERS_ARTIFACT | 8 |
+| CYCLE_OR_THREE_WAY | 33 |
 | APPROVAL_OR_MINOR | 40 |
 
 ## Score→rank conversion (recorded both ways)
@@ -89,18 +89,33 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey  
     _also at: `method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml`_
 
-### STAR_OUTLIER_RR_WITH_IRV — 3
+### STAR_OUTLIER_RR_WITH_IRV — 8
 
 _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for evenhandedness: STAR isn't always the Condorcet pick)_
 
 - **[three_winners_cw_score_runoff](cases/STAR_OUTLIER_RR_WITH_IRV/three_winners_cw_score_runoff.md)** — `01_STAR/_main/cases/three_winners_cw_score_runoff.yaml` (3c/5b)  
     STAR=**Bob** · IRV=Ann · RR=Ann · Approval=Bob · Score=Carl · Condorcet=Ann
+- **[ex01_district_combined](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_combined.md)** — `01_STAR/exercises/cases/ex01_district_combined.yaml` (5c/18b)  
+    STAR=**Carmen** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
+    _flags: 18 tied-score ballot(s)_
+- **[ex01_district_east](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_east.md)** — `01_STAR/exercises/cases/ex01_district_east.yaml` (5c/9b)  
+    STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
+    _flags: 9 tied-score ballot(s)_
+- **[ex01_district_west](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_west.md)** — `01_STAR/exercises/cases/ex01_district_west.yaml` (5c/9b)  
+    STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
+    _flags: 9 tied-score ballot(s)_
 - **[ex02_bella_exits](cases/STAR_OUTLIER_RR_WITH_IRV/ex02_bella_exits.md)** — `01_STAR/exercises/cases/ex02_bella_exits.yaml` (4c/9b)  
     STAR=**Chris** · IRV=Eli · RR=Eli · Approval=Alex · Score=Alex · Condorcet=Eli
+- **[bv2206_7mckyg_fbc_honest_tepid_consensus](cases/STAR_OUTLIER_RR_WITH_IRV/bv2206_7mckyg_fbc_honest_tepid_consensus.md)** — `01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml` (3c/57b)  
+    STAR=**Clover** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Aster · Condorcet=Bluebell  
+    _flags: 9 tied-score ballot(s)_
+- **[bv95b_7pdq3r_favorite_loses_two_rivals](cases/STAR_OUTLIER_RR_WITH_IRV/bv95b_7pdq3r_favorite_loses_two_rivals.md)** — `01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml` (3c/5b)  
+    STAR=**Bruno** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
+    _flags: 2 tied-score ballot(s)_
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
 
-### IRV_DIFFERS_ARTIFACT — 16
+### IRV_DIFFERS_ARTIFACT — 8
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -110,24 +125,6 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[star_ala_approval](cases/IRV_DIFFERS_ARTIFACT/star_ala_approval.md)** — `01_STAR/_main/cases/star_ala_approval.yaml` (4c/8b)  
     STAR=**D** · IRV=A · RR=D · Approval=A · Score=D · Condorcet=D  
     _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=D, strict=A)_
-- **[ex01_district_combined](cases/IRV_DIFFERS_ARTIFACT/ex01_district_combined.md)** — `01_STAR/exercises/cases/ex01_district_combined.yaml` (5c/18b)  
-    STAR=**Carmen** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
-    _flags: 18 tied-score ballot(s)_
-- **[ex01_district_east](cases/IRV_DIFFERS_ARTIFACT/ex01_district_east.md)** — `01_STAR/exercises/cases/ex01_district_east.yaml` (5c/9b)  
-    STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
-    _flags: 9 tied-score ballot(s)_
-- **[ex01_district_west](cases/IRV_DIFFERS_ARTIFACT/ex01_district_west.md)** — `01_STAR/exercises/cases/ex01_district_west.yaml` (5c/9b)  
-    STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
-    _flags: 9 tied-score ballot(s)_
-- **[bv2206_7mckyg_fbc_honest_tepid_consensus](cases/IRV_DIFFERS_ARTIFACT/bv2206_7mckyg_fbc_honest_tepid_consensus.md)** — `01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml` (3c/57b)  
-    STAR=**Clover** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Aster · Condorcet=Bluebell  
-    _flags: 9 tied-score ballot(s)_
-- **[bv95b_7pdq3r_favorite_loses_two_rivals](cases/IRV_DIFFERS_ARTIFACT/bv95b_7pdq3r_favorite_loses_two_rivals.md)** — `01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml` (3c/5b)  
-    STAR=**Bruno** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
-    _flags: 2 tied-score ballot(s)_
-- **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
-    STAR=**Ben** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
-    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
 - **[tie_break_06_scoring_dead_rung_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_06_scoring_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
@@ -137,15 +134,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[02_c4_b40_cliff-city](cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md)** — `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml` (4c/40b)  
     STAR=**Churro** · IRV=Bao · RR=Churro · Approval=Churro · Score=Bao · Condorcet=Churro  
     _flags: 10 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Churro, strict=Bao)_
-- **[04_c4_b47_noise-soup](cases/IRV_DIFFERS_ARTIFACT/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml` (4c/47b)  
-    STAR=**Caleb** · IRV=Beth · RR=Beth · Approval=Beth · Score=Beth · Condorcet=none  
-    _flags: 13 tied-score ballot(s); IRV flips on reversed priority_
 - **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml` (3c/38b)  
     STAR=**Ben** · IRV=Cora · RR=Ben · Approval=Cora · Score=Cora · Condorcet=Ben  
     _flags: 2 tied-score ballot(s)_
-- **[06_c4_b24_narrow-bands](cases/IRV_DIFFERS_ARTIFACT/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml` (4c/24b)  
-    STAR=**Beige** · IRV=Azure · RR=Coral · Approval=Azure · Score=Azure · Condorcet=none  
-    _flags: 16 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Coral, strict=Azure)_
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
@@ -153,7 +144,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
 
-### CYCLE_OR_THREE_WAY — 28
+### CYCLE_OR_THREE_WAY — 31
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -167,6 +158,9 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Alice** · IRV=Carla · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[tie_break_04_runoff_five_star_breaks](cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_04_runoff_five_star_breaks.yaml` (2c/2b)  
     STAR=**Alice** · IRV=Ben · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
+- **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
+    STAR=**Ben** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
+    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
 - **[tie_break_07_runoff_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_07_runoff_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml` (2c/2b)  
     STAR=**Ann** · IRV=Ben · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
 - **[tie_break_08_runoff_dead_rung_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_08_runoff_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_08_runoff_dead_rung_adversarial_lot.yaml` (2c/2b)  
@@ -181,6 +175,12 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     _also at: `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`_
 - **[03_c4_b33_bullet-storm](cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md)** — `06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml` (4c/33b)  
     STAR=**Carla** · IRV=Astrid · RR=Carla · Approval=Carla · Score=Carla · Condorcet=none
+- **[04_c4_b47_noise-soup](cases/CYCLE_OR_THREE_WAY/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml` (4c/47b)  
+    STAR=**Caleb** · IRV=Beth · RR=Beth · Approval=Beth · Score=Beth · Condorcet=none  
+    _flags: 13 tied-score ballot(s); IRV flips on reversed priority_
+- **[06_c4_b24_narrow-bands](cases/CYCLE_OR_THREE_WAY/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml` (4c/24b)  
+    STAR=**Beige** · IRV=Azure · RR=Coral · Approval=Azure · Score=Azure · Condorcet=none  
+    _flags: 16 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Coral, strict=Azure)_
 - **[BV_Library_star_runoff_tie_score_resolves](cases/CYCLE_OR_THREE_WAY/BV_Library_star_runoff_tie_score_resolves.md)** — `method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml` (2c/2b)  
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
 - **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  

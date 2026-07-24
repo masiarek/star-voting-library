@@ -241,7 +241,12 @@ def classify(r):
     rr_diff = rr is not None and rr != r["STAR"]
     appr_diff = r["Approval"] is not None and r["Approval"] != r["STAR"]
 
-    if irv_diff and (r["tie_ballots"] or r["irv_fragile"]):
+    # The "IRV divergence is just a score->rank tie-break artifact" story only holds
+    # when Ranked Robin STILL sides with STAR — i.e. IRV *alone* moved. If RR also
+    # leaves STAR, the ranked family genuinely disagrees with STAR (a real STAR-outlier
+    # or cycle case), NOT an IRV artifact; keeping such cases here made the page assert
+    # "Ranked Robin and Condorcet agree with STAR" against its own winners table.
+    if irv_diff and (r["tie_ballots"] or r["irv_fragile"]) and not rr_diff:
         return "IRV_DIFFERS_ARTIFACT"          # tie-break artifact, not a cycle
     if r["cycle"] and (irv_diff or rr_diff):
         return "CYCLE_OR_THREE_WAY"
@@ -386,10 +391,23 @@ def _explanation(r):
         if r["irv_fragile"]:
             detail.append("the RCV-IRV winner flips when that priority order is reversed")
         why = "; ".join(detail) or "the score→rank conversion is ambiguous here"
+        # State the actual Ranked Robin / Condorcet result — don't assume they back
+        # STAR. (The classifier keeps a case here only when RR agrees with STAR, but
+        # the pairwise winner can still be absent under a cycle.)
+        if C is None:
+            anchor = (f"Ranked Robin still elects **{RR or S}**, and there is **no "
+                      f"Condorcet winner** — the pairwise results cycle, so no ranked "
+                      f"method has a clean anchor")
+        elif C == S:
+            anchor = (f"Ranked Robin and the Condorcet (pairwise) winner both agree "
+                      f"with STAR (**{S}**)")
+        else:
+            anchor = (f"Ranked Robin lands on **{RR}** and the Condorcet winner is "
+                      f"**{C}**")
         return (
             f"On these ballots RCV-IRV reports **{I}** rather than STAR's **{S}**, but "
             f"this is an **artifact of score→rank conversion**, not a robust method "
-            f"difference: {why}. Ranked Robin and Condorcet agree with STAR (**{S}**). "
+            f"difference: {why}. {anchor}. "
             f"**Do not use this case to criticize RCV-IRV** — the disagreement is a "
             f"coin-flip created by equal scores and would vanish under a different "
             f"(equally arbitrary) tie-break.")

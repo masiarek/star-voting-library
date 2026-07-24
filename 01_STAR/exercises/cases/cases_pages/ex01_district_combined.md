@@ -154,7 +154,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercise
 
 ## See also
 
-- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/ex01_district_combined.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_combined.md) — its entry in the divergence review ledger
 - [Summability (topic hub)](../../../../00_start_here/topics/summability/README.md)
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
