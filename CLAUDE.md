@@ -325,6 +325,27 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   Always link `/<bvid>/results` (the tabulated outcome), and mirror it in the YAML
   (`election_description` / a `Live results:` line pointing at the same
   `/results` URL). LH-only references with no BV election skip this.
+- **The reverse link too — every NEW BV election's *description* points back at the
+  repo teaching page (BV → repo).** The repo→BV direction (above) is only half the
+  loop; a voter who lands on a public BV election should be able to click through to
+  the lesson. So the `description` you pass to the create script must end with the
+  case's **public site URL**:
+  `Full lesson & tabulation: https://masiarek.github.io/star-voting-library/<page path>.html`
+  where `<page path>` is the generated page's repo-relative path with `.md`→`.html`
+  (the site is `use_directory_urls: false`, so paths map 1:1) — e.g.
+  `…/06_Other/ballot_style_lab/cases/cases_pages/05_c3_b38_squeeze-survives.html`.
+  **This MUST be set on the first create — BV descriptions are PERMANENT and CANNOT be
+  edited via the API afterward** (verified 2026-07-24: `PUT /API/Election/<id>` 404,
+  `POST …/edit` 502 — no owner-editable path; API-created elections aren't
+  administrable). So cases minted *without* the backlink can't be retrofitted (the
+  ballot_style_lab set BV2234–2247 is in that boat — repo→BV works, BV→repo doesn't).
+- **`BV<n>` in both artifacts — yes, keep it.** The human-readable Test ID belongs in
+  *both* places so each side is findable from the other: on BV it rides the **election
+  title** prefix only (`BV<n> — <real title>`, once — NOT also in the race title, which
+  stays clean); in the repo it's the `bv_test_id:` field + the registry. The `<bvid>`
+  (e.g. `td7jfy`) is the machine-stable link; `BV<n>` is the searchable cross-reference.
+  Together with the two description/results links above, the BV election and its repo
+  page fully point at each other.
 - **Machine-readable BV fields + the repo registry.** A case `.yaml` may carry
   `bv_test_id`, `bv_election_id`, and `bv_results_url` as top-level fields — the
   tabulation engine ignores them; `tools_adam/scripts/build_bv_registry.py` reads
