@@ -4,6 +4,9 @@ TABULATED FILE:  04_c4_b47_noise-soup_tabulated.txt
 ======================================================================
 
 election_title: Noise Soup — weak factions, cross-winds, flat-liners and static
+bv_test_id: BV2237
+bv_election_id: 74pbyg
+bv_results_url: https://bettervoting.com/74pbyg/results
 
 scenario_description: |-
   The messy-reality fixture: two loose leans instead of crisp camps, a

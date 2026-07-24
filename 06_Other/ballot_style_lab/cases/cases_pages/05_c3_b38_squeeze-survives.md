@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ben
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/td7jfy) · **[results ↗](https://bettervoting.com/td7jfy/results)** (election `td7jfy`).
+
 ## Scenario
 
 The center-squeeze profile - two big poles who each rate consensus-Ben an

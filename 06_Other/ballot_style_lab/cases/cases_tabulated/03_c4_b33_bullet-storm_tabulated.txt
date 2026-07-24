@@ -4,6 +4,9 @@ TABULATED FILE:  03_c4_b33_bullet-storm_tabulated.txt
 ======================================================================
 
 election_title: Bullet Storm — a bullet-voting electorate and the few who spread
+bv_test_id: BV2236
+bv_election_id: w9f4vd
+bv_results_url: https://bettervoting.com/w9f4vd/results
 
 scenario_description: |-
   Three brigades bullet-vote their champion (5 and silence - many literally

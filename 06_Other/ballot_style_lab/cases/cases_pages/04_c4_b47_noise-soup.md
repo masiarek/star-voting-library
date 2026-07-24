@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Caleb
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74pbyg) · **[results ↗](https://bettervoting.com/74pbyg/results)** (election `74pbyg`).
+
 ## Scenario
 
 The messy-reality fixture: two loose leans instead of crisp camps, a

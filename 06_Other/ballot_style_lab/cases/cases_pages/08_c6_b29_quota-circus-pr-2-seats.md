@@ -4,6 +4,8 @@
 
 **Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Amir, Bree
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdh9qp) · **[results ↗](https://bettervoting.com/qdh9qp/results)** (election `qdh9qp`).
+
 ## Scenario
 
 Proportional STAR meets the style circus: a north side voting in cliffs,

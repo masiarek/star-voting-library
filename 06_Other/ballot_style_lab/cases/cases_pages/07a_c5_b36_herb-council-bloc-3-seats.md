@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Basil, Chive, Dill
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dx494) · **[results ↗](https://bettervoting.com/9dx494/results)** (election `9dx494`).
+
 ## Scenario
 
 One garden, 36 ballots, three seats - and TWO philosophies of 'three

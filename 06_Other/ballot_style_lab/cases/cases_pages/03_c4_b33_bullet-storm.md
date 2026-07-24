@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Carla
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/w9f4vd) · **[results ↗](https://bettervoting.com/w9f4vd/results)** (election `w9f4vd`).
+
 ## Scenario
 
 Three brigades bullet-vote their champion (5 and silence - many literally

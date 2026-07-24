@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Churro
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fm8cbv) · **[results ↗](https://bettervoting.com/fm8cbv/results)** (election `fm8cbv`).
+
 ## Scenario
 
 A whole town votes like it's Approval-with-a-volume-knob: every ballot is

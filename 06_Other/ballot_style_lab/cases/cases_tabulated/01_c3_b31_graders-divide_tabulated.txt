@@ -4,6 +4,9 @@ TABULATED FILE:  01_c3_b31_graders-divide_tabulated.txt
 ======================================================================
 
 election_title: The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp
+bv_test_id: BV2234
+bv_election_id: 4jmgrd
+bv_results_url: https://bettervoting.com/4jmgrd/results
 
 scenario_description: |-
   Two camps, two GRADING CULTURES. The Abby camp are harsh graders: even their

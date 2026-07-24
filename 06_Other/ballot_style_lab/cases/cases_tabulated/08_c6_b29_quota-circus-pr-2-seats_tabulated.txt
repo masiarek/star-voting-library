@@ -4,6 +4,9 @@ TABULATED FILE:  08_c6_b29_quota-circus-pr-2-seats_tabulated.txt
 ======================================================================
 
 election_title: Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)
+bv_test_id: BV2246
+bv_election_id: qdh9qp
+bv_results_url: https://bettervoting.com/qdh9qp/results
 
 scenario_description: |-
   Proportional STAR meets the style circus: a north side voting in cliffs,

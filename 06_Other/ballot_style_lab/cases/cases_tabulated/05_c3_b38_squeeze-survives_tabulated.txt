@@ -4,6 +4,9 @@ TABULATED FILE:  05_c3_b38_squeeze-survives_tabulated.txt
 ======================================================================
 
 election_title: Does the squeeze survive noise? Two poles, one consensus middle
+bv_test_id: BV2238
+bv_election_id: td7jfy
+bv_results_url: https://bettervoting.com/td7jfy/results
 
 scenario_description: |-
   The center-squeeze profile - two big poles who each rate consensus-Ben an

@@ -4,6 +4,9 @@ TABULATED FILE:  07a_c5_b36_herb-council-bloc-3-seats_tabulated.txt
 ======================================================================
 
 election_title: The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep)
+bv_test_id: BV2244
+bv_election_id: 9dx494
+bv_results_url: https://bettervoting.com/9dx494/results
 
 scenario_description: |-
   One garden, 36 ballots, three seats - and TWO philosophies of 'three

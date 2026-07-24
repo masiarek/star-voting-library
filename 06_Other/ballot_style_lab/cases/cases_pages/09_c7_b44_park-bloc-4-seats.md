@@ -4,6 +4,8 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v9rhhr) · **[results ↗](https://bettervoting.com/v9rhhr/results)** (election `v9rhhr`).
+
 ## Scenario
 
 The big-field crazy one: seven trees, FOUR seats, forty-four ballots. An

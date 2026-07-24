@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Clara
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4jmgrd) · **[results ↗](https://bettervoting.com/4jmgrd/results)** (election `4jmgrd`).
+
 ## Scenario
 
 Two camps, two GRADING CULTURES. The Abby camp are harsh graders: even their

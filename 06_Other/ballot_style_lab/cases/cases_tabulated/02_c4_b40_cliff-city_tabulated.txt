@@ -4,6 +4,9 @@ TABULATED FILE:  02_c4_b40_cliff-city_tabulated.txt
 ======================================================================
 
 election_title: Cliff City food trucks — everyone scores 0 or 3-5, nothing between
+bv_test_id: BV2235
+bv_election_id: fm8cbv
+bv_results_url: https://bettervoting.com/fm8cbv/results
 
 scenario_description: |-
   A whole town votes like it's Approval-with-a-volume-knob: every ballot is

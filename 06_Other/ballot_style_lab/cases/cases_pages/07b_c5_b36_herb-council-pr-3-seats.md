@@ -4,6 +4,8 @@
 
 **Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Anise, Basil, Chive
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pmrq4q) · **[results ↗](https://bettervoting.com/pmrq4q/results)** (election `pmrq4q`).
+
 ## Scenario
 
 One garden, 36 ballots, three seats - and TWO philosophies of 'three

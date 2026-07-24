@@ -4,6 +4,9 @@ TABULATED FILE:  09_c7_b44_park-bloc-4-seats_tabulated.txt
 ======================================================================
 
 election_title: Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards
+bv_test_id: BV2247
+bv_election_id: v9rhhr
+bv_results_url: https://bettervoting.com/v9rhhr/results
 
 scenario_description: |-
   The big-field crazy one: seven trees, FOUR seats, forty-four ballots. An

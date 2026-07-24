@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beige
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt`).
+
 ## Scenario
 
 The scale-abuse special: nobody here uses the 0-5 ballot as designed. One
