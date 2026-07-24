@@ -2,16 +2,28 @@
 
 Working notes to pick up later. Not site content (excluded in `mkdocs.yml`). Delete sections as they're done.
 
-## 1. The headline task: take the ballot-style lab live on BetterVoting
+## 1. The headline task: take the ballot-style lab live on BetterVoting — ✅ DONE (2026-07-24, commit `895a65c`)
 
-`06_Other/ballot_style_lab/` holds ten frozen scenario yamls with **no BV elections yet** — the single-winner set (01–06) and the new multi-winner wing (07a/07b Herb Garden Council Bloc-vs-PR same-ballots pair, 08 Quota Circus STAR-PR, 09 Park Bloc 4-seats). Migrate them the way the exercises set went live (BV2191–2202): specs in `bv_election_specs.py`, next free Test IDs from the registry (**BV2211+** as of this writing), create via `create_bv_test_election.py`, verify winners via `/API/ElectionResult/<id>`, freeze UI exports, wire `bv_*` fields into the yamls, regen registry, note BV-vs-LH agreement per case page.
+All ten cases migrated and BV==LH verified (winners fetched via `/API/ElectionResult`):
 
-Cautions, learned 2026-07-17:
+| case | Test ID | bvid | method | BV = LH |
+|---|---|---|---|---|
+| 01 graders-divide | BV2234 | `4jmgrd` | STAR | Clara |
+| 02 cliff-city | BV2235 | `fm8cbv` | STAR | Churro |
+| 03 bullet-storm | BV2236 | `w9f4vd` | STAR | Carla (runoff tie → score tiebreak; BV agrees) |
+| 04 noise-soup | BV2237 | `74pbyg` | STAR | Caleb |
+| 05 squeeze-survives | BV2238 | `td7jfy` | STAR | Ben |
+| 06 narrow-bands | BV2239 | `gyv2qt` | STAR | Beige (scoring tie → head-to-head; BV agrees) |
+| 07a herb-bloc | BV2244 | `9dx494` | Bloc STAR 3 | Basil, Chive, Dill (the 83–82 rung; BV agrees) |
+| 07b herb-PR | BV2245 | `pmrq4q` | STAR_PR 3 | Anise, Basil, Chive (LH `allocated` == BV `STAR_PR`) |
+| 08 quota-circus | BV2246 | `qdh9qp` | STAR_PR 2 | Amir, Bree |
+| 09 park-bloc | BV2247 | `v9rhhr` | Bloc STAR 4 | Aspen, Cedar, Dogwood, Elm |
 
-- **07a's Bloc final seat hangs on an 83–82 score rung** — confirm the whole ladder resolves deterministically on BV before freezing; any lot/random-decided seat stays **LH-only** (don't migrate it). The lab's hunter already rejected lot-decided seeds, but verify one champion by hand.
-- **Every STAR_PR race will banner "Tied!" spuriously** (`tieBreakType: random`, no tie) — the serializer quirk with three confirmed instances (`89wwvr`, `jwxr3j`, `fvg8y8`). Seats compute correctly; note the quirk in each case page rather than treating it as a divergence.
-- **If any scenario ever gets an STV race:** a count whose eliminations leave one hopeful who then reaches quota **crashes BV** (`06_Other/STV/bv_stv_sole_survivor_crash/`) — design the endgame with a hopeful standing, or wait for the fix.
-- **Coordination:** the lab is another session's active thread (commit `51f0a30`); pick this up there or after its index churn settles.
+Resolved cautions: **07a's 83–82 rung resolves deterministically on BV** (Dill, by scoring-round score) — migrated, not LH-only. **No case turned out BV-random**; BV's STAR tiebreaker and STAR-PR both matched LH, so all ten are BV-backed. The spurious STAR_PR "Tied!" banner is cosmetic (seats compute correctly). No STV races, so the sole-survivor crash didn't apply.
+
+Method note: minting was done with a standalone driver (`scratchpad/mint_lab.py`) that builds each spec straight from the frozen yaml via the engine's parser (BV ballots provably == LH), calling `create_bv_test_election.create()` directly — no edits to the shared `bv_election_specs.ELECTIONS`.
+
+**Orphans (disclosed in `bv_api_election_creation_notes.md`):** the four multi-winner cases were first minted single-winner because the driver read the raw `num_winners:` key instead of the engine-normalized `seats:` — undeletable wrong-seat elections `6btm9k`/`g6x8b9`/`f2vtc9`/`xm93tw` (titled BV2240–2243), superseded by the correct BV2244–2247.
 
 ## 2. Loose ends from the 2026-07-17 session (BV2203–BV2210 + Burlington)
 
