@@ -2,6 +2,8 @@
 
 *Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../00_start_here/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../00_start_here/STAR_Voting/README.md)'s second round is **for**.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
+
 → Related: [Borda count](../../00_start_here/other_ranked_methods/borda.md) · [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
 
 ---
@@ -48,7 +50,9 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 | [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) | Peter | ✓ |
 | [STAR](../../00_start_here/STAR_Voting/README.md) | Peter | ✓ |
 
-**Keep it fair — this is not an IRV failure case.** RCV-IRV gets it right: James is eliminated with 2 first choices, both his ballots transfer to Peter, and Peter wins 6–5. The methods that miss the Condorcet winner in this particular election are plurality, Borda and approval. (IRV's own Condorcet failures need a [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md), which this profile doesn't contain.)
+**Keep it fair — this is not an IRV failure case.** RCV-IRV gets it right: James is eliminated with 2 first choices, both his ballots transfer to Peter, and Peter wins 6–5 ([`condorcet_1788_irv.md`](cases/cases_pages/condorcet_1788_irv.md)). The methods that miss the Condorcet winner in this particular election are plurality, Borda and approval. (IRV's own Condorcet failures need a [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md), which this profile doesn't contain.) The IRV race is on the live BetterVoting election deliberately, so nobody can accuse the demo of hiding it.
+
+**BetterVoting agrees with the LH engine on all three races** — STAR, Ranked Robin and RCV-IRV each elect Peter, with the same pairwise counts (Peter over Paul 6–5, over James 6–5) and the same first-round IRV elimination of James. The frozen export is [`condorcet_1788_star_bv_export.json`](cases/condorcet_1788_star_bv_export.json).
 
 ## The STAR lesson: the scoring round *is* Borda, and then the runoff checks it
 

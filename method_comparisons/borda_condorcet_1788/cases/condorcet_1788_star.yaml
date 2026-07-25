@@ -41,6 +41,9 @@ video_script: |-
   Names are Condorcet's own (Peter/Paul/James), kept for fidelity to the source
   even though Peter/Paul share an initial, which the house naming rule normally
   avoids.
+bv_test_id: BV2250
+bv_election_id: khcwm4
+bv_results_url: https://bettervoting.com/khcwm4/results
 voting_method: STAR
 num_winners: 1
 options:

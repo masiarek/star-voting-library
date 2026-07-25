@@ -4,6 +4,8 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Peter
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`).
+
 ## Scenario
 
 The same election as condorcet_1788_star.yaml, kept in its original RANKED form
@@ -85,4 +87,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [condorcet_1788_star](condorcet_1788_star.md)
+More cases in this set: [condorcet_1788_irv](condorcet_1788_irv.md) · [condorcet_1788_star](condorcet_1788_star.md)

@@ -1,0 +1,50 @@
+election_title: "Condorcet's 1788 rebuttal to Borda — RCV-IRV agrees here"
+scenario_description: |-
+  The third race of BV2250: the same 11 ranked ballots, counted by instant runoff.
+
+      4 : Peter > Paul  > James
+      3 : Paul  > James > Peter
+      2 : Paul  > Peter > James
+      2 : James > Peter > Paul
+
+  This case exists to keep the comparison honest. Condorcet's 1788 example is a
+  counterexample to BORDA (and to plurality) — not to IRV. James has the fewest
+  first choices (2) and is eliminated; both of his ballots rank Peter next, so
+  they transfer and Peter wins 6-5. RCV-IRV lands on the Condorcet winner here,
+  exactly as Ranked Robin and STAR do.
+
+  IRV's own Condorcet failures require a center squeeze — a strong middle
+  candidate with few first choices, eliminated before the head-to-head that
+  would have shown their strength. This profile does not contain one: Peter is
+  not squeezed, he leads the first-choice count among the two finalists' bloc
+  and simply starts second. Citing this election as an IRV failure would be
+  wrong, and the repo says so on the folder page.
+video_script: |-
+  The fairness beat in the Borda/Condorcet lesson. When we show that plurality
+  and Borda both miss the Condorcet winner, the obvious next question from an
+  RCV audience is "and IRV?" — answer it before it is asked, and answer it
+  honestly: IRV gets this one right. That earns the credibility to be believed
+  later when IRV genuinely does fail (see the center squeeze cases).
+bv_test_id: BV2250
+bv_election_id: khcwm4
+bv_results_url: https://bettervoting.com/khcwm4/results
+voting_method: IRV
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Peter>Paul>James
+  3:Paul>James>Peter
+  2:Paul>Peter>James
+  2:James>Peter>Paul
+expected_winners:
+  - Peter

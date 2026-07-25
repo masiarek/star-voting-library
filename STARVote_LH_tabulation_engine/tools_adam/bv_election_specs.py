@@ -60,6 +60,20 @@ you need not hoard every spec here.
 # 2026-07-25: BV's /vote page leads with the race title, so each race must be
 # self-identifying; the pre-check hard-stops if a race title would go out bare).
 
+# DESCRIPTION BACKLINK — get the URL right the FIRST time; BV descriptions are
+# PERMANENT and cannot be edited via the API. Every description must end with
+#   "Full lesson & tabulation: https://masiarek.github.io/star-voting-library/<path>.html"
+# GOTCHA (found 2026-07-25): when the lesson page is a folder README.md, the site
+# serves it as <folder>/index.html — README.html 404s. MkDocs renames a folder
+# README to index; use_directory_urls:false only stops the directory-style URL, it
+# does NOT keep the README name. So:
+#   folder README.md      -> .../method_comparisons/<folder>/index.html   ✓
+#   any other page X.md   -> .../<path>/X.html                            ✓
+# BV2249's description shipped .../weak_condorcet_loser/README.html, which is a
+# permanent 404 (unfixable — no owner-editable path for descriptions). BV2250 uses
+# index.html and was verified live BEFORE the mint. VERIFY THE URL WITH curl FIRST:
+#   curl -s -o /dev/null -w '%{http_code}' <url>   # must be 200, not 404
+
 # --- BV2137 / BV2138 — LeGrand rbvote examples: one ranked electorate, many -----
 # tabulations. Both come from Robert LeGrand's ranked-ballot calculator
 # (cs.angelo.edu/~rlegrand/rbvote/). Each is ONE election with FOUR races on the
@@ -3933,5 +3947,75 @@ WCL_SPEC = {
 }
 
 
-ELECTIONS: list = [WCL_SPEC]   # BV2249 — weak Condorcet loser
+# --- BV2250 — Condorcet's 1788 rebuttal to Borda (3 races) -------------------
+# Backs method_comparisons/borda_condorcet_1788/. Condorcet's own counterexample
+# to the Borda count, in the simplified 11-voter form textbooks use. Candidate
+# names are Condorcet's (Peter/Paul/James), kept for fidelity to the source even
+# though Peter/Paul share an initial.
+#   4 : Peter > Paul  > James        Plurality -> Paul (5 first choices)
+#   3 : Paul  > James > Peter        Borda     -> Paul (14 vs Peter 12, James 7)
+#   2 : Paul  > Peter > James        but Peter beats Paul 6-5 AND James 6-5,
+#   2 : James > Peter > Paul         so PETER is the Condorcet winner.
+#   STAR        -> Peter  (scoring round Paul 37 / Peter 32 / James 19 — i.e. it
+#                          reproduces Borda's answer — then the runoff reverses
+#                          it 6-5. Under a uniform spacing the scoring round IS a
+#                          Borda count, so STAR = Borda's step + Condorcet's check.)
+#   RankedRobin -> Peter  (2-0-0, the Condorcet winner)
+#   IRV         -> Peter  (James eliminated on 2, both ballots transfer, 6-5)
+# IRV is included ON PURPOSE: it AGREES here, which keeps the comparison honest —
+# this is a Borda/plurality failure, not an IRV one.
+# All three races are fully deterministic (no ties at any rung), so the BV result
+# is freezable and reproducible against LH.
+# Ranks are aligned to the candidate order [Peter, Paul, James]; 1 = top choice.
+_C1788_CANDS = ["Peter", "Paul", "James"]
+_C1788_STAR = ([[5, 3, 0]] * 4) + ([[0, 5, 3]] * 3) + ([[3, 5, 0]] * 2) + ([[3, 0, 5]] * 2)
+_C1788_RANK = ([[1, 2, 3]] * 4) + ([[3, 1, 2]] * 3) + ([[2, 1, 3]] * 2) + ([[2, 3, 1]] * 2)
+
+C1788_SPEC = {
+    "test_id": "BV2250",
+    "title": "Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from",
+    "description": (
+        "In 1770 Borda argued his rank-points rule was better than plurality, because the "
+        "plurality winner can lose a direct majority contest to somebody else. Condorcet's "
+        "reply was that Borda's own rule has the same disease — and this is the election he "
+        "used to prove it, in the simplified 11-voter form textbooks still use. The names are "
+        "Condorcet's own. Four blocs vote: 4 rank Peter > Paul > James, 3 rank Paul > James > "
+        "Peter, 2 rank Paul > Peter > James, and 2 rank James > Peter > Paul. Plurality elects "
+        "Paul on 5 first choices. Borda ALSO elects Paul, 14 points to Peter's 12 and James's 7. "
+        "Yet Peter beats Paul head-to-head 6-5, and beats James 6-5 as well — Peter beats "
+        "everybody one-on-one, which is exactly what we now call the Condorcet winner. Borda "
+        "diagnosed plurality's disease correctly and then caught it himself, and that objection "
+        "is where the Condorcet criterion comes from. Three races here count the same 11 voters. "
+        "Ranked Robin elects Peter, the Condorcet winner. RCV-IRV also elects Peter (James is "
+        "eliminated on 2 first choices and both ballots transfer) — included deliberately, "
+        "because this is a Borda and plurality failure, NOT an IRV one. STAR elects Peter too, "
+        "and how it gets there is the lesson: under an even spacing STAR's scoring round IS a "
+        "Borda count, so round one reproduces Borda's answer and puts Paul first on 37 points, "
+        "and then the automatic runoff runs precisely the direct majority contest Condorcet "
+        "demanded, which Peter wins 6-5. STAR is Borda's scoring step followed by Condorcet's "
+        "check, answering a 238-year-old objection on screen. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/borda_condorcet_1788/index.html"
+    ),
+    "enable_write_in": False,
+    "races": [
+        {"title": "Condorcet 1788 — STAR (the runoff overturns Borda's winner)",
+         "method": "STAR",
+         "num_winners": 1, "candidates": _C1788_CANDS, "ballots": _C1788_STAR},
+        {"title": "Condorcet 1788 — Ranked Robin (Copeland)",
+         "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _C1788_CANDS, "ballots": _C1788_RANK},
+        {"title": "Condorcet 1788 — RCV-IRV (agrees here)",
+         "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _C1788_CANDS, "ballots": _C1788_RANK},
+    ],
+    "expected": ("STAR -> Peter (scoring round Paul 37 / Peter 32 / James 19; runoff Peter 6-5 "
+                 "— a runoff reversal of Borda's winner); Ranked Robin -> Peter (2-0-0, the "
+                 "Condorcet winner); RCV-IRV -> Peter (6-5 after James is eliminated). "
+                 "For contrast, plurality and Borda both elect Paul. Test ID BV2250."),
+}
+
+
+ELECTIONS: list = [C1788_SPEC]   # BV2250 — Condorcet's 1788 rebuttal to Borda
+# Previously: [WCL_SPEC]  # BV2249 — weak Condorcet loser (created)
 # Previously: [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]  # BV2229-2232 (created)

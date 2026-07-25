@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Peter
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`).
+
 ## Scenario
 
 Condorcet's own counterexample to the Borda count, in the simplified 11-voter
@@ -139,4 +141,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [condorcet_1788_ranked_robin](condorcet_1788_ranked_robin.md)
+More cases in this set: [condorcet_1788_irv](condorcet_1788_irv.md) · [condorcet_1788_ranked_robin](condorcet_1788_ranked_robin.md)
