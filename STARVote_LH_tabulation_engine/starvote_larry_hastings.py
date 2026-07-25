@@ -195,8 +195,10 @@ def _find_race(data, race_index=0):
 # Output-control options a YAML file may set (under `options:` or top level).
 OPTION_KEYS = (
     "show_matrix",
+    "matrix_finalists_only",
     "show_condorcet",
     "show_score_counts",
+    "show_runoff_percent",
     "brief",
     "collapse_ballots",
     "count_separator",
