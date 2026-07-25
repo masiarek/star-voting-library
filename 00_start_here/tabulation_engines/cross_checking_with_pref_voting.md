@@ -19,7 +19,7 @@ A tabulation engine that only checks itself can be *consistently wrong*. `pref_v
 | **Plurality** | ✅ | first-choice (top score) winner |
 | **Copeland (= Ranked Robin)** | ➕ bonus | `pref_voting` computes it; the LH engine doesn't — shown for interest |
 | **Borda** | ➕ bonus | same |
-| **STAR** | ❌ | `pref_voting` has **no STAR** (score-then-runoff). STAR's runoff is covered by the [STAR positive tests](../../STARVote_LH_tabulation_engine/tests/test_single_winner_positive.py) instead. |
+| **STAR** | ❌ not wired | `pref_voting` **does** have STAR — `grade_methods.star` on a `GradeProfile` (verified on 1.18.1) — but our guard script doesn't feed it scores yet (it derives rankings). Until it's wired, STAR's runoff is covered by the [STAR positive tests](../../STARVote_LH_tabulation_engine/tests/test_single_winner_positive.py). |
 
 So this validates the *machinery around* STAR (the pairwise matrix, the RCV-IRV cross-count, first-choice tallies) — exactly the parts most prone to subtle bugs.
 
@@ -53,6 +53,20 @@ uv run …/pref_voting_tabulation_engine/cycle_resolution_report.py FILE.yaml --
 `cycle_resolution_report.py` is what makes the [cycle-resolution](../RCV_Ranked_Robin/cycle_resolution.md) and [Split Cycle](../topics/condorcet/split_cycle.md) pages runnable rather than asserted: it prints the pairwise margins, the Smith set, and every cycle-resolution rule's winner *set*, tagged by [Fishburn class](../topics/condorcet/condorcet_reading_list.md). The `--drop` flag re-runs the same ballots with a candidate removed, which is how a spoiler or IIA failure gets demonstrated. It's a *report*, not a guard — there's no LH result to compare against.
 
 The pytest **skips cleanly** if `pref_voting` isn't installed, so it never blocks the core suite. Declared as the `crosscheck` optional-dependency extra in the engine's `pyproject.toml` (`pip install -e .[crosscheck]`).
+
+## Speaking `pref_voting`: its five election-data classes, in our vocabulary
+
+`pref_voting`'s [election-data overview](https://pref-voting.readthedocs.io/en/latest/edata_overview.html) organizes everything around five input classes. They map cleanly onto this library's terms — useful when reading its docs or wiring a new cross-check:
+
+| `pref_voting` class | Their definition (paraphrased) | Our term, in STAR context |
+|---|---|---|
+| `Profile` | each voter submits a **linear order** | a **strict, complete ranked profile** — the theory default the [glossary's profile entry](../GLOSSARY.md) warns is *silently* assumed; our guard script builds one from scores when ballots have no ties |
+| `ProfileWithTies` | a **(truncated) ranking** | **weak ranks** / truncated ballots — what real ranked ballots look like; `ranked_robin_report.py` switches to it the moment ballots tie or truncate |
+| `GradeProfile` | an **assignment of grades** to each candidate | the **score ballot itself** — a STAR 0–5 ballot *is* a grade profile ([score ballot](../scores_and_ranks/score_ballot.md); the grade-primitive view: [grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md)) |
+| `UtilityProfile` | each voter submits a **utility function** (real numbers) | not a ballot — the **simulation-side latent preference** behind [VSE](../topics/what_makes_a_good_winner.md) (a ballot is a lossy encoding of it: [the fidelity ladder](../scores_and_ranks/fidelity_ladder.md)) |
+| `SpatialProfile` | voters & candidates as points in **issue space** | the **[spatial model](../topics/spatial_voting_model.md)** — utility = −distance; the electorate model behind the simulations and the median voter theorem |
+
+Note the wording shift in their own definitions: classes 1–3 "represent **an election**" (things voters actually submit), classes 4–5 "represent **a situation**" (models of the electorate you can't collect on a ballot). That's the same line this library draws between ballot types and simulation models.
 
 ## Other independent calculators (quick hand-checks)
 
