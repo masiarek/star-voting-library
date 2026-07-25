@@ -67,10 +67,12 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 ## In this repo
 
 - The engine can *optionally* show this on a ranked Ranked Robin ballot — set `options: { show_borda: true }` to annotate each ballot with its positional points, clearly labeled as Borda (not scores, and not what RR actually counts — RR uses pairwise).
-- Borda is **not Condorcet**; its Condorcet-fixing cousins are [Baldwin & Nanson](../RCV_IRV/variants/RCV-IRV-Baldwin-Nanson.md).
+- Borda is **not Condorcet** — and that's not an abstract criterion note, it's the objection Condorcet himself raised in 1788, with a worked 11-voter election you can run: [Condorcet's rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md). Borda's Condorcet-fixing cousins are [Baldwin & Nanson](../RCV_IRV/variants/RCV-IRV-Baldwin-Nanson.md).
 
 ## Related
 
+- [Condorcet's 1788 rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md) — the historical counterexample: plurality *and* Borda elect Paul, but Peter beats everyone head-to-head
+- [The dark horse](../../method_comparisons/dark_horse_borda/README.md) — Borda's *strategic* pathology, as opposed to the sincere one above
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the reverse direction, and why scores are the richer object
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — why ties matter (the ladder above)
 - [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — where the weak-rank reduction shows up live
