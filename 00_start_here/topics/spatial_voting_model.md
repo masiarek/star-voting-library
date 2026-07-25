@@ -64,5 +64,5 @@ So: use the map to build intuition and to *predict*, then check the prediction a
 - [Election simulation models](election_simulation_models.md) — the full menu (spatial is model **B**), with the math prerequisites
 - [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — why you sample spatial *utilities* and derive ballots
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) · [What makes a good winner?](what_makes_a_good_winner.md) — where the spatial picture pays off
-- [Metric distortion](metric_distortion.md) — the theory that takes this model literally: the triangle inequality caps how much a ranked ballot can lose (3×, exactly)
+- [Distortion](distortion.md) — the theory that takes this model literally: the triangle inequality caps how much a ranked ballot can lose (3×, exactly)
 - External: [median voter theorem](https://en.wikipedia.org/wiki/Median_voter_theorem) · [Ka-Ping Yee's voting-simulation diagrams](http://zesty.ca/voting/) · [cdsmith, *Simulating Elections with Spatial Voter Models*](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390)
