@@ -448,7 +448,30 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    candidates, ballots, method, seats — in the scratch file and tabulate it with
    the LH engine until it demonstrates the intended behavior (a tie rung, a
    method divergence, a criterion failure…). Nothing here is permanent; iterate
-   freely, keep examples small.
+   freely, keep examples small. **Ready-to-paste scratch skeleton** (the two
+   gotchas: there is **no separate `candidates:` key** — the **first line of the
+   `ballots:` block is the candidate header**, comma-separated; and weighted rows
+   use a `Count:` header — `Count:Ada,Ben,Cara` then `15:5,2,0` per bloc):
+
+   ```yaml
+   title: Scratch (delete me)
+   voting_method: STAR
+   num_winners: 1
+   options:            # house minimal block — see "Repo conventions"
+     show_runoff_percent: true
+     brief: true
+   ballots: |-
+     Ada,Ben,Cara
+     5,2,0
+     0,4,5
+     2,5,4
+   expected_winners: [Ben]
+   ```
+
+   Tabulate with `.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py trash_delete.yaml`.
+   The run writes `_tabulated` mirrors into a sibling `<parentdir>_tabulated/`
+   folder — for a scratch file at the repo root that's a junk `YAML_tabulated/`
+   directory; **delete it (and the scratch files) when done, never commit them.**
 2. **Go / no-go** (Adam decides). If the scenario earns its keep, promote it to a
    real case; otherwise it stays scratch / gets discarded.
    - **LOCK THE SMALLEST BALLOT SET *before* creating BV — BV elections are
