@@ -2,7 +2,7 @@
 
 *For anyone who already loves ranked ballots. Ranked Robin keeps the exact ballot you know — rank the candidates in your honest order — and counts it so the candidate a **majority prefers over everyone** wins. Same ballot, a count that finds the consensus. This is the positive case; the [method page](ranked_robin.md) has the mechanics and the [honest limits](RCV_RR_honest_limits.md) are stated plainly at the end.*
 
-→ Companion: [Why STAR Voting](../topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family.
+→ Companion: [Why STAR Voting](../topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family. Heard this method called Copeland, Condorcet, round-robin voting, or Consensus Voting? Same neighborhood, different levels of the name — the [naming decoder](condorcet_naming_decoder.md) sorts them out.
 
 ---
 
@@ -48,4 +48,4 @@ If you love ranked ballots, **Ranked Robin is your upgrade**: the ballot you kno
 
 The point was never to run down anyone's favorite reform. It's that the ranked ballot deserves a count worthy of it, and Ranked Robin is one.
 
-→ See it happen: [a worked example where the consensus center wins](ranked_robin.md#a-worked-example-the-consensus-center-wins-the-round-robin) · the full method: [Ranked Robin (RCV-RR)](ranked_robin.md).
+→ See it happen: [a worked example where the consensus center wins](ranked_robin.md#a-worked-example-the-consensus-center-wins-the-round-robin) · the full method: [Ranked Robin (RCV-RR)](ranked_robin.md) · tangled in the names (Ranked Robin vs. Copeland vs. Condorcet vs. round-robin vs. Consensus)? → [the naming decoder](condorcet_naming_decoder.md).
