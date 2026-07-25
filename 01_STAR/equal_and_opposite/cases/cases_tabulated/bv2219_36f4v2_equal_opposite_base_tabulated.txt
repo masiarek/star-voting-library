@@ -74,6 +74,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Comet — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Flux — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 3 ballots.

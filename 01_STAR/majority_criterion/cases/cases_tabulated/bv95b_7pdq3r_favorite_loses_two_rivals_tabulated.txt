@@ -90,6 +90,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ada — STAR elected Bruno instead (Ada was eliminated in the scoring round)
 
+[Condorcet Loser]
+  Condorcet Loser: Cleo — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Bruno
   Choose-One (Plurality) = Ada   (differs from STAR)

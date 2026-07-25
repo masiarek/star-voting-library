@@ -115,6 +115,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: First — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; weak Condorcet loser: Condorcet Loser (never wins a matchup)
+
 --- Bloc STAR Voting Method (4 winners) ---
 [Bloc STAR]
  Tabulating 16 ballots to fill 4 seats.

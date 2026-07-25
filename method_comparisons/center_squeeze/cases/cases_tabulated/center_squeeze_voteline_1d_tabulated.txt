@@ -65,6 +65,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Green — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Red — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Green
   Choose-One (Plurality) = Yellow   (differs from STAR)

@@ -164,6 +164,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Churro — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Dumpling — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Churro
   Choose-One (Plurality) = Bao   (differs from STAR)

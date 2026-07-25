@@ -26,7 +26,7 @@ video_script: |-
   Alaska paradox: a method should never reward a candidate for being ranked lower.
   STAR and Ranked Robin can't do this.
 
-paradoxes: [monotonicity]
+paradoxes: [non-monotonicity]
 voting_method: RCV_IRV
 num_winners: 1
 

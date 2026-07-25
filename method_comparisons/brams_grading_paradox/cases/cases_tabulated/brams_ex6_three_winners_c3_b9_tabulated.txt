@@ -86,6 +86,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Cole — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Bree — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Cole
   Choose-One (Plurality) = Amos   (differs from STAR)

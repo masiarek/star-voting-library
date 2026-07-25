@@ -79,6 +79,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Bree — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Ari — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Bree
   Choose-One (Plurality) = Ari   (differs from STAR)

@@ -63,6 +63,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Don — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Cal — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Don
   Choose-One (Plurality) = Bob   (differs from STAR)

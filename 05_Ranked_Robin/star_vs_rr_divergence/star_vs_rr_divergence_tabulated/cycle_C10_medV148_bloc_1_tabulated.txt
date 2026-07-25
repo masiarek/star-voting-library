@@ -58,6 +58,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: E — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; weak Condorcet loser: C (never wins a matchup)
+
 [Divergence from STAR]
   STAR                   = E
   Choose-One (Plurality) = J   (differs from STAR)

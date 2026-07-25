@@ -73,6 +73,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: DarkChoco — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Vanilla — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = DarkChoco
   Choose-One (Plurality) = Vanilla   (differs from STAR)

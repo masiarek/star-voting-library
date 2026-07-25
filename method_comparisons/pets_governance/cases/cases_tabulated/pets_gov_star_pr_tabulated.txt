@@ -63,6 +63,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dog — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Rabbit, Hamster (winless — pairwise ties)
+
 --- Allocated Score Voting Method (3 winners) ---
 [Allocated Score Voting]
  Tabulating 22 ballots to fill 3 seats.

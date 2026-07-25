@@ -150,6 +150,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: Azure > Beige > Coral > Azure)
 
+[Condorcet Loser]
+  Condorcet Loser: Dune — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Beige
   Choose-One (Plurality) = Azure   (differs from STAR)

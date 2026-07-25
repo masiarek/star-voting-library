@@ -62,6 +62,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: A — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: D — loses every head-to-head matchup
+
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 7 ballots.

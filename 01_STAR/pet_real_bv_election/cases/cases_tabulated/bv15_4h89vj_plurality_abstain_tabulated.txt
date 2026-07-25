@@ -129,6 +129,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Andre — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Blake — loses every head-to-head matchup
+
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 12 ballots. Note: 5 of 12 ballots are marked as abstentions.

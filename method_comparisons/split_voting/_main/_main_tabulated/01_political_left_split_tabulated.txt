@@ -79,6 +79,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Labour — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Conservative — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Labour
   Choose-One (Plurality) = Conservative   (differs from STAR)

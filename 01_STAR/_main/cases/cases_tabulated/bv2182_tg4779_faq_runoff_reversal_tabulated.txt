@@ -77,6 +77,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Almond — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Cocoa — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = Almond
   Approval = Berry   (differs from STAR)

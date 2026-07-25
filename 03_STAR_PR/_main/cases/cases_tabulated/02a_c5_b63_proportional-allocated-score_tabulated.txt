@@ -83,6 +83,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ben — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Eve — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)

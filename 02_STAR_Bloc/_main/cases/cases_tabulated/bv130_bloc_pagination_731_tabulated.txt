@@ -93,6 +93,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Someone I Like — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Apocalypse Now — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Someone I Like
   Choose-One (Plurality) = The Lesser Evil   (differs from STAR)

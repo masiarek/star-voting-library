@@ -159,6 +159,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Astrid, Carla (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: Dolores — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Carla
   Choose-One (Plurality) = Astrid   (differs from STAR)

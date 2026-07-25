@@ -66,6 +66,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: A > C > B > A)
 
+[Condorcet Loser]
+  Condorcet Loser: D — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = B
   Choose-One (Plurality) = D   (differs from STAR)

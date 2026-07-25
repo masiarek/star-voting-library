@@ -66,6 +66,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: ChocoAlm — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: VanillaClssc, Peach (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR     = ChocoAlm
   Approval = ChocoDrk   (differs from STAR)

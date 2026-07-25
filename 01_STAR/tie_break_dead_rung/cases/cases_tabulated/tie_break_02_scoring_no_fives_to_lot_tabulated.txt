@@ -65,6 +65,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Alice — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Ben, Cara (winless — pairwise ties)
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 2 ballots.

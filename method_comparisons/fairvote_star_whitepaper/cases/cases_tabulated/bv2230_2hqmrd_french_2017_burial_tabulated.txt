@@ -83,6 +83,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Melenchon — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Macron — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Melenchon
   Choose-One (Plurality) = Macron   (differs from STAR)

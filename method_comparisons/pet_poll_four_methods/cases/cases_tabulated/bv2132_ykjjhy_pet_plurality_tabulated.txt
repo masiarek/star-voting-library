@@ -52,6 +52,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dog — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Cat — loses every head-to-head matchup
+
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 22 ballots.

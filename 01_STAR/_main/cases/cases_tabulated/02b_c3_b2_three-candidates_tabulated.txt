@@ -70,6 +70,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Choco, Vanilla (pairwise ties)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Choco, Almond (winless — pairwise ties) — Choco elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Vanilla
   Choose-One (Plurality) = Choco   (differs from STAR)

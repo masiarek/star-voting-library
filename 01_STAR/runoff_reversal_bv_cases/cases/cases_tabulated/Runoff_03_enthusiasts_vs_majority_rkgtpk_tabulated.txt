@@ -65,6 +65,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Eden — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Hazel — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = Eden
   Approval = Dakota   (differs from STAR)

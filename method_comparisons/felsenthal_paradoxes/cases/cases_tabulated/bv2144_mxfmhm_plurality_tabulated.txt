@@ -64,6 +64,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ana — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Bo, Cal (winless — pairwise ties)
+
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 7 ballots.

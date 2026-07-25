@@ -78,6 +78,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ann — STAR elected Bob instead (Ann was eliminated in the scoring round)
 
+[Condorcet Loser]
+  Condorcet Loser: Carl — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Bob
   Choose-One (Plurality) = Ann   (differs from STAR)

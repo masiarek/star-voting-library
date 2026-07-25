@@ -53,6 +53,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: Oak — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; weak Condorcet loser: Maple (never wins a matchup) — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Oak
   Choose-One (Plurality) = Maple   (differs from STAR)

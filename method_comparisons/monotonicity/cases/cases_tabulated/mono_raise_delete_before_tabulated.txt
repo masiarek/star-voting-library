@@ -82,6 +82,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Z — STAR elected X instead (Z was eliminated in the scoring round)
 
+[Condorcet Loser]
+  Condorcet Loser: Y — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = X
   Choose-One (Plurality) = Z   (differs from STAR)

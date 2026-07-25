@@ -59,6 +59,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Ava, Ben, Cara, Dan (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: Eve — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 2 ballots.

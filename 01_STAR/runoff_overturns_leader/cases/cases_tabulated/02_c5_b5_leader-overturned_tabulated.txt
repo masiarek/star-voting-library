@@ -60,6 +60,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Boston — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Chicago, Denver (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR     = Boston
   Approval = Austin   (differs from STAR)

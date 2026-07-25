@@ -71,6 +71,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Chocolate, Chocolate Chip, Strawberry (pairwise ties)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Fudge Brownie, Mango (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR                   = Strawberry
   Choose-One (Plurality) = Chocolate Chip   (differs from STAR)

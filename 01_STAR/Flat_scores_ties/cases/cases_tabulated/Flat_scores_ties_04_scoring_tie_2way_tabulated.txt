@@ -58,6 +58,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Aral — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Baikal, Crater (winless — pairwise ties)
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 3 ballots.

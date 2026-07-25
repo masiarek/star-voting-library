@@ -55,6 +55,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: D — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: B — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = D
   Approval = A   (differs from STAR)

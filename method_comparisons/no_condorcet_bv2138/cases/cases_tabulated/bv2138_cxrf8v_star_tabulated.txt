@@ -64,6 +64,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: Abby > Dave > Brad > Abby)
 
+[Condorcet Loser]
+  Condorcet Loser: Cora — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = Brad
   RCV-IRV  = Dave   (differs from STAR)

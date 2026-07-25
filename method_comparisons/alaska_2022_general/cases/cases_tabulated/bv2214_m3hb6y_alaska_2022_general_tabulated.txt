@@ -282,6 +282,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Peltola — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Palin — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = Peltola
   Approval = Begich   (differs from STAR)

@@ -66,6 +66,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: DarkChoco — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Vanilla — loses every head-to-head matchup
+
 [Vote-splitting check]
   Choose-One first choices: DarkChoco 8, MilkChoco 7, Vanilla 6
   Plurality winner: DarkChoco (8, 38.1%)

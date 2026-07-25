@@ -82,6 +82,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Carmen — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Ella, Helena, Ira (winless — pairwise ties)
+
 [Runoff Reversal]
  - Score Round Winner(s) = (Andre)
  - Runoff Round Winner   = (Carmen)

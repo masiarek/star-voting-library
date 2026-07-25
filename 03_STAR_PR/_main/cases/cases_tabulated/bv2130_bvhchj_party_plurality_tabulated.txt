@@ -61,6 +61,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Democrat — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Republican, Constitution (winless — pairwise ties)
+
 --- Choose-One / Plurality Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 102 ballots.

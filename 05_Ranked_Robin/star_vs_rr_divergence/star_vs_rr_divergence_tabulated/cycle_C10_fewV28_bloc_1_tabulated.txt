@@ -58,6 +58,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: C, D, F (pairwise ties)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: A, G (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR   = C
   RCV-RR = F   (differs from STAR)

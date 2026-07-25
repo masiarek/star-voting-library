@@ -96,6 +96,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Elena — STAR elected Carmen instead (Elena was eliminated in the scoring round)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Blake, Diego (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR                   = Carmen
   Choose-One (Plurality) = Elena   (differs from STAR)

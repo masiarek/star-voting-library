@@ -977,12 +977,64 @@ def print_matrix(
         print(row_str)
 
 
-def print_condorcet(candidates, matrix, star_winner=None, finalists=None):
-    """Print the Condorcet analysis line on its own (independent of the matrix)."""
+def print_condorcet(candidates, matrix, star_winner=None, finalists=None,
+                    ballots=None, priority=None):
+    """Print the Condorcet analysis line on its own (independent of the matrix).
+
+    Also prints a `[Condorcet Loser]` block — but ONLY when a (strict or weak)
+    Condorcet loser exists, so elections without one stay unchanged. STAR and
+    Ranked Robin structurally can't elect a strict Condorcet loser (the runoff /
+    the zero-win Copeland record filters them), so the line's audit value is for
+    the comparison methods: Choose-One (Plurality) can elect the Condorcet loser
+    outright (Burlington 2009), Approval can in constructions, and STAR can seat
+    a WEAK Condorcet loser via the score tiebreaker — those get flagged inline.
+    """
     if not candidates or not matrix:
         return
     print("\n[Condorcet Winner]")
     print(f"  {analyze_condorcet(candidates, matrix, star_winner, finalists)}")
+
+    found = analyze_condorcet_loser(candidates, matrix)
+    if not found:
+        return
+    losers, kind = found
+
+    # Which methods (if any) elected one of these losers — the audit flag.
+    method_winners = []
+    if star_winner is not None:
+        method_winners.append(("STAR", star_winner))
+    if ballots:
+        fc_counts, _ = first_choice_counts(candidates, ballots, priority)
+        _order = [c for c in (priority or candidates) if c in candidates]
+        for _c in candidates:
+            if _c not in _order:
+                _order.append(_c)
+        _prank = {c: i for i, c in enumerate(_order)}
+        plurality = (min(candidates, key=lambda c: (-fc_counts[c], _prank[c]))
+                     if any(v > 0 for v in fc_counts.values()) else None)
+        if plurality is not None:
+            method_winners.append(("Choose-One (Plurality)", plurality))
+        appr = approval_winner(candidates, ballots, priority)
+        if appr is not None:
+            method_winners.append(("Approval", appr))
+    flags = []
+    for loser in losers:
+        methods = [m for m, w in method_winners if w == loser]
+        if methods:
+            who = f"{loser} " if len(losers) > 1 else ""
+            flags.append(f"{who}elected by {', '.join(methods)}")
+    flag = f" — {'; '.join(flags)}!" if flags else ""
+
+    print("\n[Condorcet Loser]")
+    if kind == "strict":
+        print(f"  Condorcet Loser: {losers[0]} — loses every head-to-head "
+              f"matchup{flag}")
+    elif kind == "weak":
+        print(f"  No strict Condorcet loser; weak Condorcet loser: {losers[0]} "
+              f"(never wins a matchup){flag}")
+    else:
+        print(f"  No strict Condorcet loser; jointly weak Condorcet losers: "
+              f"{', '.join(losers)} (winless — pairwise ties){flag}")
 
 
 def compute_irv_winner(candidates, ballots, priority):
@@ -2120,6 +2172,44 @@ def analyze_condorcet(candidates, matrix, star_winner=None, finalists=None):
     return "No Condorcet winner (every candidate loses at least one matchup)"
 
 
+def analyze_condorcet_loser(candidates, matrix):
+    """Mirror of analyze_condorcet for the losing end of the pairwise table.
+
+    Returns ([candidate], "strict") for a strict Condorcet loser (loses every
+    head-to-head matchup), ([candidate], "weak") for a UNIQUE weak Condorcet
+    loser (never wins a matchup, ties at least one), ([candidates], "joint")
+    when SEVERAL candidates are winless (jointly weak Condorcet losers — the
+    weak notion need not be unique; mirror of the winner side's "unbeaten
+    candidates" case), or None when everyone wins at least one matchup.
+    Everyone-winless (total pairwise indifference) also returns None — calling
+    the whole field "losers" would mislead.
+    """
+    if len(candidates) < 2:
+        return None
+    wins = {c: 0 for c in candidates}
+    losses = {c: 0 for c in candidates}
+    for c1 in candidates:
+        for c2 in candidates:
+            if c1 == c2:
+                continue
+            for_c1, against_c1, _ = matrix[c1][c2]
+            if for_c1 > against_c1:
+                wins[c1] += 1
+            elif against_c1 > for_c1:
+                losses[c1] += 1
+
+    n_others = len(candidates) - 1
+    for c in candidates:
+        if losses[c] == n_others:
+            return ([c], "strict")
+    winless = [c for c in candidates if wins[c] == 0]
+    if len(winless) == 1:
+        return (winless, "weak")
+    if 1 < len(winless) < len(candidates):
+        return (winless, "joint")
+    return None
+
+
 def _find_beats_cycle(candidates, beats):
     """DFS for a directed cycle in the 'beats' graph.
     Returns the cycle as a list like ['A', 'B', 'C', 'A'], or None."""
@@ -2510,7 +2600,8 @@ def run_election(
                 finalists_only=matrix_finalists_only,
             )
         if show_condorcet:
-            print_condorcet(candidates, matrix, star_winner, finalists)
+            print_condorcet(candidates, matrix, star_winner, finalists,
+                            ballots=ballots, priority=priority)
 
         # Always show the RCV-IRV / STAR / Approval comparison (Condorcet line
         # appears only when it differs from all three). priority == STAR's

@@ -99,6 +99,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: A, I (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: B — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR   = A
   RCV-RR = I   (differs from STAR)

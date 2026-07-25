@@ -66,6 +66,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Bree — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Cole, Dana (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR     = Bree
   Approval = Arlo   (differs from STAR)

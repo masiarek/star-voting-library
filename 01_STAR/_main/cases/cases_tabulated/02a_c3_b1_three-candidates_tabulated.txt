@@ -69,6 +69,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Choco — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Almond — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 1 ballot.

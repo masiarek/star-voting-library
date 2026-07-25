@@ -63,6 +63,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Allison, Doug (pairwise ties)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Bill, Carmen, Doug (winless — pairwise ties)
+
 --- Allocated Score Voting Method (2 winners) ---
 [Allocated Score Voting]
  Tabulating 10 ballots to fill 2 seats.

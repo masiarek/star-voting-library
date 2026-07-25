@@ -117,6 +117,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Moderate — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Conservative — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Moderate
   Choose-One (Plurality) = Liberal   (differs from STAR)

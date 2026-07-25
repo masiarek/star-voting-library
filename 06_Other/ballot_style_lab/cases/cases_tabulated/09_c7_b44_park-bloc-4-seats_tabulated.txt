@@ -176,6 +176,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dogwood — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Birch — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Dogwood
   Choose-One (Plurality) = Aspen   (differs from STAR)

@@ -78,6 +78,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Bianca — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Chris — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 8 ballots.

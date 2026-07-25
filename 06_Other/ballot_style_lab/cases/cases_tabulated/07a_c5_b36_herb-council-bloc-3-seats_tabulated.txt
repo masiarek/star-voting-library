@@ -167,6 +167,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Basil — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Dill, Endive (winless — pairwise ties)
+
 --- Bloc STAR Voting Method (3 winners) ---
 [Bloc STAR]
  Tabulating 36 ballots to fill 3 seats.

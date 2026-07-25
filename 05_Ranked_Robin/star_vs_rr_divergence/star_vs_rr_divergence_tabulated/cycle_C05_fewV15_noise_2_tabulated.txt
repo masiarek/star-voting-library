@@ -64,6 +64,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: A, E (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: B — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR     = A
   Approval = D   (differs from STAR)

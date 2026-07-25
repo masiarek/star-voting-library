@@ -50,6 +50,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Allison, Bill (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: Doug — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 10 ballots.

@@ -94,6 +94,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: B — STAR elected D instead
 
+[Condorcet Loser]
+  Condorcet Loser: A — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = D
   Choose-One (Plurality) = A   (differs from STAR)

@@ -67,6 +67,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Casey — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Avery, Blake (winless — pairwise ties) — Blake elected by Choose-One (Plurality)!
+
 [Divergence from STAR]
   STAR                   = Casey
   Choose-One (Plurality) = Blake   (differs from STAR)

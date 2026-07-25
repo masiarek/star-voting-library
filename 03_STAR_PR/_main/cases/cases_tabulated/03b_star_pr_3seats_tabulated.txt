@@ -79,6 +79,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Housing — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: TaxCuts — loses every head-to-head matchup
+
 --- Sequentially Spent Score Voting Method (3 winners) ---
 [Sequentially Spent Score]
  Tabulating 100 ballots to fill 3 seats.

@@ -80,6 +80,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Aspen — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Cedar — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 9 ballots. Note: 1 of 9 ballots is marked as an abstention.

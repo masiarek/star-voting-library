@@ -57,6 +57,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: D — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: B, C (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR                   = D
   Choose-One (Plurality) = A   (differs from STAR)

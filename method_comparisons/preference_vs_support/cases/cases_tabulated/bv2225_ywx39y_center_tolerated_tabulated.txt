@@ -63,6 +63,21 @@ expected_winners:
 TABULATION RESULTS
 ======================================================================
 
+=== Preference vs Support — the center TOLERATED (wings score Blair 1) ===
+  The "tolerated" half of a matched pair (companion: the SUPPORTED election,
+  bv2226_82gg36_center_supported). Three candidates on a spectrum — Alex (a pole),
+  Blair (the center), Cole (the other pole). Blair is every faction's second choice
+  and the Condorcet winner, but the two wings score him only a GRUDGING 1.
+  The rankings here are byte-identical to the SUPPORTED election; the ONLY thing
+  that changes between the two is Blair's score from the wings (1 here, 4 there).
+  Because the orders are identical, the ranked methods can't tell the two elections
+  apart: RCV-IRV center-squeezes Blair both times (-> Alex); Ranked Robin finds Blair
+  the Condorcet winner both times (-> Blair). Only STAR responds to the support level:
+  with Blair at a thin 1 he misses the runoff, and STAR elects the candidate with a
+  real base, Alex. Flip the wings' Blair score to 4 (the companion) and STAR alone
+  moves to Blair. That is the whole preference-vs-support lesson as a live election.
+  Live results: https://bettervoting.com/ywx39y/results
+
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
@@ -75,6 +90,9 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   Condorcet Winner: Blair — STAR elected Alex instead (Blair was eliminated in the scoring round)
+
+[Condorcet Loser]
+  Condorcet Loser: Cole — loses every head-to-head matchup
 
 [Divergence from STAR]
   STAR               = Alex

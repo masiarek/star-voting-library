@@ -65,6 +65,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Cheese — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Anchovy, Mushroom, Olive (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR                   = Cheese
   Choose-One (Plurality) = Pineapple   (differs from STAR)

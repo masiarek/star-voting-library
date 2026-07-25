@@ -68,6 +68,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: A, B, C (pairwise ties)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: D, E (winless — pairwise ties)
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 2 ballots.

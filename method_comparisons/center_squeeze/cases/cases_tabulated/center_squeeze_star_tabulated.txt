@@ -71,6 +71,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Center — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Right — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Center
   Choose-One (Plurality) = Left   (differs from STAR)

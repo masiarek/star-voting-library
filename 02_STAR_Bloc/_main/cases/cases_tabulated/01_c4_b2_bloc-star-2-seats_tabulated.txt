@@ -56,6 +56,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Don — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Ann, Bob (winless — pairwise ties)
+
 [Divergence from STAR]
   STAR     = Don
   Approval = Cal   (differs from STAR)

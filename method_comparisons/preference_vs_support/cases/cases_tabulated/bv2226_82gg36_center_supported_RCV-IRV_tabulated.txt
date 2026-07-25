@@ -1,4 +1,5 @@
 --- RCV / Instant-Runoff Voting (single winner) ---
+  Preference vs Support — the center SUPPORTED (wings score Blair 4)
  Tabulating 36 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:

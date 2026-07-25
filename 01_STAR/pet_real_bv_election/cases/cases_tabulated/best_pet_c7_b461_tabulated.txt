@@ -529,6 +529,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dog — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Python — loses every head-to-head matchup
+
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 461 ballots. Note: 1 of 461 ballots is marked as an abstention.

@@ -53,6 +53,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: E — STAR elected A instead (E was eliminated in the scoring round)
 
+[Condorcet Loser]
+  Condorcet Loser: D — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR               = A
   RCV-RR (Condorcet) = E   (differs from STAR)

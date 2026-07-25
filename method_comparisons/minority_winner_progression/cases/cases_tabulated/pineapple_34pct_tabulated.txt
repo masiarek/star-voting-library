@@ -66,6 +66,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Cheese — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Mushroom — loses every head-to-head matchup
+
 [Divergence from STAR]
   STAR                   = Cheese
   Choose-One (Plurality) = Pineapple   (differs from STAR)
