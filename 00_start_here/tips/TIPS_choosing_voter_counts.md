@@ -38,12 +38,39 @@ makes the reader pause — *is that 5 voters, or a 5-star score?* That's the men
 - The **`Count:` header** labels the weight column explicitly.
 - The **runoff** and **score-distribution** numbers are vote *counts*; keep the total small enough that those stay checkable if you'll narrate them.
 
+## Automation changed one cost, not the other three
+
+Ballots used to be typed into the BetterVoting builder by hand, so "keep it small" felt like a labor rule. It wasn't. Since `create_bv_test_election.py` casts ballots through the API, the typing cost is gone — and the three costs that actually mattered are all still there:
+
+| Cost | Who pays | Removed by automation? |
+|------|----------|------------------------|
+| Entering the ballots | the author, once | **yes** |
+| Holding the example in your head | every reader, forever | no |
+| Hand-auditing the tally | every skeptic | no |
+| A permanent, undeletable public election | BetterVoting's servers | no |
+
+The audit cost is the important one. A reader who can recount ten ballots and confirm "b beats c, 7–3" *believes* the result; at 204–100 they can only take our word for it. Small examples are what keep a demonstration falsifiable — which is the whole point of a claim-check library. And BV elections can't be deleted, so 300 ballots for a 10-ballot lesson is a permanent footprint on someone else's public infrastructure.
+
+**So the honest post-automation shift is toward *individual* ballots, not bigger ones.** The `Count ≥ 6` rule above exists because weighted blocs were the cheap way to get scale by hand, at the price of the count-vs-score collision. Now that the script does the casting, ten individual rows cost the same as one weighted bloc and read better. Reach for a `Count:` column when the lesson genuinely needs *proportions* — not to save keystrokes.
+
+### Lifting a profile out of a paper
+
+Academic social-choice papers print electorate-sized profiles (102 / 101 / 100 / 1) largely by convention; the numbers are usually decorative and shrink without loss. Check before copying: scale all blocs down and confirm the pairwise winners, the cycle (if any), and the method rankings survive. They normally do — only lessons that turn on a **ratio** (center-squeeze thresholds, proportional seat shares, "a 61% majority") actually need the voters.
+
+When the source's exact numbers are worth preserving for reproducibility, **don't mint two BetterVoting elections.** Keep:
+
+- the **small version on BV** — permanent, public, linked from the lesson;
+- the **paper-exact version as an LH-only sibling `.yaml`** (no `<bvid>` segment, skips steps 3–4 of the workflow) — fully tabulatable, zero permanent footprint, and the page can note "the source prints this at N ballots; same winner, same structure."
+
+A deliberate large/small **pair** earns its own page only when scale-invariance *is* the lesson — answering "would this still hold in a real election?" That's one page, not a policy.
+
 ## Rules of thumb
 
 1. **Never put a weighted count in 1–5.** Either switch to individual ballots, or use counts ≥ 6.
 2. **Match the total to the story** — round numbers for percentages, small numbers for live arithmetic.
 3. **Keep the scoring-round product easy** if you want the audience to verify it (count × top score should be a number they can do in their head).
 4. **Be consistent within a lesson sequence**, so the *magnitude* doesn't become an extra variable the audience has to track from one example to the next.
+5. **Size for the reader and the auditor, never for the author.** Automated casting is not a licence to scale up — the ballot count still has to be locked at its smallest *before* a BV election is created, because BV elections are permanent.
 
 ## Worked feel for each style
 
