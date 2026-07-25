@@ -8,7 +8,7 @@
 
 ## What Arrow actually says
 
-Kenneth Arrow's Impossibility Theorem (1951) is a statement about aggregating individual **rankings** into a social **ranking**. For three or more candidates, no such *ranked* rule can satisfy all of a short list of reasonable-sounding conditions at once:
+Kenneth Arrow's Impossibility Theorem (1951) is a statement about aggregating individual **rankings** into a social **ranking** — formally, about a [**social welfare function**](social_welfare_function.md), as distinct from the winner-picking *social choice function* most methods on this site are. For three or more candidates, no such *ranked* rule can satisfy all of a short list of reasonable-sounding conditions at once:
 
 - **Unanimity (Pareto)** — if every voter ranks A over B, the result does too.
 - **Independence of Irrelevant Alternatives (IIA)** — whether A finishes above B shouldn't flip because of some third candidate C. (Violating this is exactly the [spoiler effect](spoiler_effect.md).)

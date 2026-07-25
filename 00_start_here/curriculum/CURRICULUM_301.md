@@ -116,6 +116,14 @@
 - **The point:** *"preference = ordering"* is a **contested modeling choice with a serious academic rival**, not the neutral default — which is the citable backing for [preference vs. support](../scores_and_ranks/preference_vs_support.md) and for refusing to cede the word "preference" to ranked ballots.
 - **Keep it honest:** Balinski & Laraki argue the **median over the sum**, so they cut against STAR's Scoring Round as much as against IRV; MJ fails the majority *and* Condorcet criteria by design; and a 2026 experiment (Delemazure, Brunetti, Baujard & Bouveret, N = 1955) **rejects** the common-language premise that the comparability argument rests on.
 
+## 301.16 — The social welfare function (what Arrow's theorem is about)
+
+- **Objective:** learn the type distinction that most impossibility debate skips — a rule that outputs a **ranking** (SWF) vs one that outputs a **winner** (SCF) — and stop both over- and under-applying Arrow.
+- **Key terms:** social welfare function `f : L(A)ⁿ → R(A)`, social choice function, social preference order, weak vs strong Pareto, IIA, decisive coalition, Contagion / Splitting Lemma, welfarist social welfare.
+- **Page:** [Social welfare function](../topics/social_welfare_function.md) — the two objects, both axioms stated at both levels, who actually fails Pareto, and the two senses of "social welfare."
+- **The point:** **majority rule is both Paretian and IIA, and escapes Arrow only because it is not an SWF** — its output can cycle, so it isn't a ranking at all. That reframes Condorcet methods correctly: a completion like [Ranked Robin](../RCV_Ranked_Robin/) *is* an SWF, so Arrow applies in full, and the cycle-resolution rule is what costs it IIA. Patching the cycle doesn't buy an exemption.
+- **Keep it honest:** Pareto **forbids, it does not require** — plurality is Paretian and still elects poorly; and **a dictatorship is Paretian**, which is exactly why Arrow's conclusion bites. Pairs with 301.4's Arrow/Gibbard framing and with [Does Arrow apply to STAR?](../topics/arrow_theorem_and_star.md) — that page's ordinal/cardinal escape is a claim about the SWF's *domain*, and this page supplies the type it escapes from.
+
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 201](CURRICULUM_201.md) · Next: [Voting 401 — failure modes & the safety check](CURRICULUM_401.md).*
