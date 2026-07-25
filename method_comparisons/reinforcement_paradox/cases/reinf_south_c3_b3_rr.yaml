@@ -15,7 +15,7 @@ scenario_description: |-
   Companion cases: reinf_north_c3_b6_rr.yaml (a 3-way tie),
   reinf_combined_c3_b9_rr.yaml and reinf_combined_c3_b9_star.yaml (Cara wins).
 
-paradoxes: [reinforcement]
+paradoxes: [multiple-districts]
 
 voting_method: RankedRobin
 num_winners: 1

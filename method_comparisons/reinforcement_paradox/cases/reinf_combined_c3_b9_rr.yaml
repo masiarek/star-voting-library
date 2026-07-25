@@ -19,7 +19,7 @@ scenario_description: |-
   the same pairwise flip). Additive methods (Score/Approval/Plurality) instead
   keep Ada and show no paradox — see the folder README.
 
-paradoxes: [reinforcement]
+paradoxes: [multiple-districts]
 
 voting_method: RankedRobin
 num_winners: 1

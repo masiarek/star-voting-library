@@ -16,7 +16,7 @@ scenario_description: |-
   Companion cases: reinf_south_c3_b3_rr.yaml (Ada wins outright),
   reinf_combined_c3_b9_rr.yaml and reinf_combined_c3_b9_star.yaml (Cara wins).
 
-paradoxes: [condorcet-cycle, reinforcement]
+paradoxes: [condorcet-cycle, multiple-districts]
 
 voting_method: RankedRobin
 num_winners: 1

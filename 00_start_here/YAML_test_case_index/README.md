@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**404 election files** (354 single-winner, 50 multi-winner) across 15 method(s).
+**410 election files** (360 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 230 |
+| STAR | 231 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 44 |
+| Ranked Robin (RCV-RR / Copeland) | 48 |
 | Approval | 14 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -26,9 +26,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | IRV | 17 |
 | PLURALITY | 21 |
 | RANGE | 2 |
+| RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (230)
+## STAR  (231)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -244,6 +245,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_star`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_star.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — STAR: Blue, now also the score co-leader → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml) |
 | [`bv2225_ywx39y_center_tolerated`](../../method_comparisons/preference_vs_support/cases/cases_pages/bv2225_ywx39y_center_tolerated.md) | `method_comparisons/preference_vs_support/cases/` | 1 | Preference vs Support — the center TOLERATED (wings score Blair 1) → _Alex_ | [`.yaml`](../../method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml) |
 | [`bv2226_82gg36_center_supported`](../../method_comparisons/preference_vs_support/cases/cases_pages/bv2226_82gg36_center_supported.md) | `method_comparisons/preference_vs_support/cases/` | 1 | Preference vs Support — the center SUPPORTED (wings score Blair 4) → _Blair_ | [`.yaml`](../../method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml) |
+| [`reinf_combined_c3_b9_star`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_c3_b9_star.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara) → _Cara_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml) |
 | [`reversal_star_original`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_star_original.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — STAR, original: B (STAR does not winner=loser here) → _B_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_star_original.yaml) |
 | [`reversal_star_reversed`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_star_reversed.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml) |
 | [`00_plurality_vs_majority`](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) | `method_comparisons/split_voting/_main/` | 1 | Plurality vs Majority — most votes isn't more than half → _Blake_ | [`.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) |
@@ -296,7 +298,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (44)
+## Ranked Robin (RCV-RR / Copeland)  (48)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -334,10 +336,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2163_74j6vv_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2163_74j6vv_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_ranked_robin.yaml) |
 | [`bv2164_xbqq8t_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2164_xbqq8t_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_ranked_robin.yaml) |
 | [`felsenthal_ex6_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only) → _Aria_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_ranked_robin.yaml) |
+| [`tilted_cycle_c3_b5_rr`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_rr.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin) → _Ada_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_rr.yaml) |
 | [`bv2138_cxrf8v_ranked_robin`](../../method_comparisons/no_condorcet_bv2138/cases/cases_pages/bv2138_cxrf8v_ranked_robin.md) | `method_comparisons/no_condorcet_bv2138/cases/` | 1 | No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently → _Abby_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_ranked_robin.yaml) |
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/cases/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_ranked_robin.yaml) |
 | [`bv2176_p8dp28_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml) |
 | [`bv2178_8kg698_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — Ranked Robin: Blue, now the outright Condorcet winner → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_ranked_robin.yaml) |
+| [`reinf_combined_c3_b9_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_c3_b9_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins) → _Cara_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_rr.yaml) |
+| [`reinf_north_c3_b6_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — North district alone (6 voters, a perfect cycle) → _Ada_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_north_c3_b6_rr.yaml) |
+| [`reinf_south_c3_b3_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_south_c3_b3_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — South district alone (3 voters, Ada is the clear Condorcet winner) → _Ada_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_south_c3_b3_rr.yaml) |
 | [`split_cycle_schulze_spoiler_c5_b40`](../../method_comparisons/split_cycle/cases/cases_pages/split_cycle_schulze_spoiler_c5_b40.md) | `method_comparisons/split_cycle/cases/` | 1 | A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity → _Cascade_ | [`.yaml`](../../method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml) |
 | [`rr_combined`](../../method_comparisons/summability_demo/cases/cases_pages/rr_combined.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — Combined (A+B), counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_combined.yaml) |
 | [`rr_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/rr_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — District A, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_district_A.yaml) |
@@ -500,6 +506,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`range_101_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) |
 | [`range_sullivan_score_c4_b10`](../../06_Other/Range/cases/cases_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) |
+
+## RCV-IRV  (1)
+
+| Case (page) | Folder | Winners | Title / expected | src |
+|------|--------|:------:|------------------|:--:|
+| [`tilted_cycle_c3_b5_irv`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_irv.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV) → _Cara_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml) |
 
 ## RR  (1)
 

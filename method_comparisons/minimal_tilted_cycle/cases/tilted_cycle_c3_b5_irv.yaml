@@ -1,0 +1,44 @@
+election_title: "Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)"
+
+scenario_description: |-
+  The same five ballots as tilted_cycle_c3_b5_rr.yaml — the minimal tilted
+  Condorcet cycle from Brandt, Dong & Peters (arXiv:2411.19857), Fig. 1 —
+  counted by instant runoff instead.
+
+  Ben holds just one first choice, so IRV eliminates him first; his ballot
+  (Ben > Cara > Ada) transfers to Cara, who wins 3–2 over Ada.
+
+  Worth noting what IRV does NOT see: Ada's 4–1 crushing of Ben is the largest
+  majority anywhere on these ballots, and it never enters the count. IRV reads
+  first preferences; the cycle lives in the pairwise margins.
+
+  In a cycle there is no Condorcet winner, so IRV cannot be accused of missing
+  one — this is a legitimate answer, not a failure. It simply lands on a
+  different candidate than Copeland's margins tiebreak (Ada) and than leximin
+  (Ada), and agrees with Nanson (Cara). Five voters, four defensible answers:
+  that is what a cycle costs. See the folder README.
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RCV-IRV
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  2:Ada>Ben>Cara
+  1:Ben>Cara>Ada
+  2:Cara>Ada>Ben
+
+expected_winners:
+  - Cara

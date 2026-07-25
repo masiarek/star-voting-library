@@ -18,7 +18,7 @@ scenario_description: |-
   Approval = Ada — the additive methods that keep the reinforcement promise here.
   Full discussion: the folder README.
 
-paradoxes: [reinforcement, runoff-reversal]
+paradoxes: [multiple-districts]
 
 voting_method: STAR
 num_winners: 1

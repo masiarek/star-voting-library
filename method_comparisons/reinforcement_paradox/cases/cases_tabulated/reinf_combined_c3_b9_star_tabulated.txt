@@ -23,7 +23,7 @@ scenario_description: |-
   Approval = Ada — the additive methods that keep the reinforcement promise here.
   Full discussion: the folder README.
 
-paradoxes: [reinforcement, runoff-reversal]
+paradoxes: [multiple-districts]
 
 voting_method: STAR
 num_winners: 1
@@ -55,6 +55,24 @@ expected_winners:
 ======================================================================
 TABULATION RESULTS
 ======================================================================
+
+=== Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara) ===
+  The same merged 9-voter electorate as reinf_combined_c3_b9_rr.yaml, on STAR
+  score ballots (top = 5, middle = 3, last = 0 — the natural encoding of each
+  voter's ranking). It shows exactly where STAR sits on the reinforcement
+  question from Brandt, Dong & Peters (2024):
+
+    - Scoring Round: Ada 29, Cara 27, Ben 16 — Ada leads. This is the pure
+      Score/Range result, and it AGREES with Ada winning both districts:
+      additive point methods satisfy reinforcement (Young 1975), so no paradox.
+    - Automatic Runoff: Cara beats Ada 5–4. STAR's runoff is a pairwise step,
+      and it catches Cara's head-to-head win — flipping the result to Cara.
+
+  So STAR's scoring round is consistent, but its runoff re-imports the same
+  Condorcet flip Ranked Robin shows: a Runoff Reversal, with Cara the Condorcet
+  winner. The engine's divergence block also reports Choose-One = Ada and
+  Approval = Ada — the additive methods that keep the reinforcement promise here.
+  Full discussion: the folder README.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

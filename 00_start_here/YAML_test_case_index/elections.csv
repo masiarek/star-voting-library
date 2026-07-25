@@ -290,6 +290,8 @@ LH:tie_break_06_scoring_dead_rung_adversarial_lot,"Dead rung 02 — same tie, bu
 LH:tie_break_07_runoff_five_star_vs_adversarial_lot,Dead rung 03 — runoff tie broken by five-star,1,single-race,2,STAR,LH-only
 LH:tie_break_08_runoff_dead_rung_adversarial_lot,"Dead rung 04 — runoff tie, nobody scored a 5, lot decides",1,single-race,2,STAR,LH-only
 LH:tie_break_09_five_star_tied_nonzero,Dead rung 05 — five-star rung alive but non-separating,1,single-race,2,STAR,LH-only
+LH:tilted_cycle_c3_b5_irv,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",1,single-race,5,RCV-IRV,LH-only
+LH:tilted_cycle_c3_b5_rr,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",1,single-race,5,RankedRobin,LH-only
 LH:vote_splitting,Vote splitting — two chocolates split the majority,1,single-race,36,STAR,LH-only
 LH:vote_splitting2,Vote splitting — two chocolates split the majority,1,single-race,360,STAR,LH-only
 LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single-race,21,STAR,LH-only
