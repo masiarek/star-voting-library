@@ -674,6 +674,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2250 — Condorcet 1788 — Ranked Robin (Copeland) | RankedRobin | 3 | **Peter** |
 | BV2250 — Condorcet 1788 — RCV-IRV (agrees here) | IRV | 3 | **Peter** |
 
+## BV2251 — Margins matter — one electorate, four different answers
+
+**Election** [`kdjjkq`](https://bettervoting.com/kdjjkq/results) · **4 races** · **12 ballots** · [frozen export](../../method_comparisons/copeland_vs_borda_margins/cases/margins_star_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2251 — Margins — Choose-One (Plurality): first choices only | Plurality | 3 | **Almond** |
+| BV2251 — Margins — STAR (the scoring round is Borda, then a head-to-head) | STAR | 3 | **Almond** |
+| BV2251 — Margins — RCV-IRV (eliminates the Borda winner first) | IRV | 3 | **Cocoa** |
+| BV2251 — Margins — Ranked Robin (Copeland ties all three; read the table, not the winner) | RankedRobin | 3 | **Almond** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

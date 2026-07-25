@@ -2,6 +2,8 @@
 
 *Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) throws the margins away and ties all three. [Borda](../../00_start_here/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../00_start_here/RCV_IRV/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`, Test ID **BV2251** — four races on the same 12 ballots: Choose-One, STAR, RCV-IRV, Ranked Robin).
+
 → **Level: Voting 301.** See also: [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md) · [the minimal tilted cycle](../minimal_tilted_cycle/README.md) (five voters — the smallest lopsided cycle) · [Condorcet's 1788 rebuttal to Borda](../borda_condorcet_1788/README.md) (the mirror image: Borda's *sincere* failure) · [the social welfare function](../../00_start_here/topics/social_welfare_function.md)
 
 ---
@@ -71,6 +73,23 @@ Winner — Ranked Robin (RCV-RR): Berry
 The **Copeland** column ties at 1. The **Margin** column reads `+2 / 0 / −2` — and that is precisely the symmetric Borda score computed above. So **the LH engine's cycle tiebreak is a Borda count**, applied only after Copeland has failed to decide. That is a real and slightly surprising fact about how this repo's Ranked Robin behaves in a cycle, and it is worth knowing before you cite an RR result from a cycling election.
 
 BetterVoting does *not* do this. Its ladder tries a head-to-head between the tied candidates, which only works for a clean two-way tie; on a three-way tie it falls through to a **random** pick. See [RR tiebreak — LH vs BV](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+
+## BetterVoting vs. the LH engine — and one race that can't be frozen
+
+All four races ran live on BetterVoting ([BV2251 `kdjjkq`](https://bettervoting.com/kdjjkq/results)) on the same twelve ballots:
+
+| Race | BetterVoting | LH engine | |
+|---|---|---|---|
+| Choose-One (Plurality) | Almond | Almond | ✓ agree |
+| STAR | Almond | Almond | ✓ agree |
+| RCV-IRV | Cocoa | Cocoa | ✓ agree |
+| Ranked Robin | Almond — `tieBreakType: random` | **Berry** (total margin) | **documented divergence** |
+
+The three deterministic races agree exactly. The Ranked Robin race is the one that cannot be frozen, and BetterVoting's own export says so: the result carries **`tieBreakType: random`**. Its ladder has a head-to-head rung that only works for a clean *two*-way tie; on this genuine three-way tie it falls through to a random pick. LH's ladder instead uses total margin — the symmetric Borda score — and elects Berry.
+
+**So on the live results page, read the Ranked Robin *pairwise table*, not its crowned winner.** The table is deterministic and is the artifact; the name at the top of that one race is a coin flip and would land differently if the election were re-run. This is the same LH-vs-BV split written up in [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), and it is worth seeing live: a real public election where the platform itself flags that it guessed.
+
+Frozen export: [`margins_star_bv_export.json`](cases/margins_star_bv_export.json).
 
 ## STAR, and an honest caveat
 

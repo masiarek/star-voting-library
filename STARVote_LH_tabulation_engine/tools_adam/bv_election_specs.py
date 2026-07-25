@@ -4016,6 +4016,89 @@ C1788_SPEC = {
 }
 
 
-ELECTIONS: list = [C1788_SPEC]   # BV2250 — Condorcet's 1788 rebuttal to Borda
+# --- BV2251 — Margins matter: Copeland vs Borda (4 races) --------------------
+# Backs method_comparisons/copeland_vs_borda_margins/. Zwicker's profile P2 from
+# "Introduction to the Theory of Voting" (Handbook of Computational Social Choice
+# ch. 2), shrunk from its printed 304 ballots to 12 with the symmetric Borda
+# scores preserved EXACTLY (0 / +2 / -2) and the Copeland three-way tie intact.
+# Flavour initials map onto the book's a/b/c: Almond, Berry, Cocoa.
+#   5 : Almond > Berry  > Cocoa      Almond beats Berry  7-5  (margin +2)
+#   3 : Berry  > Cocoa  > Almond     Berry  beats Cocoa  8-4  (margin +4)
+#   2 : Cocoa  > Almond > Berry      Cocoa  beats Almond 7-5  (margin +2)
+#   2 : Cocoa  > Berry  > Almond     -> a cycle; NO Condorcet winner.
+# Four races, four different answers from one electorate:
+#   Plurality   -> Almond (5 first choices vs Cocoa 4, Berry 3)
+#   IRV         -> Cocoa  (Berry eliminated FIRST on 3; all 3 transfer to Cocoa)
+#   STAR (5/3/0)-> Almond (scoring round = Borda -> Berry first; runoff 7-5)
+#   RankedRobin -> a genuine 3-way Copeland tie (all 1-1-0).
+# CAVEAT, deliberate and disclosed in the description: the Ranked Robin race is
+# the ONE non-freezable race here. LH breaks the Copeland tie by total margin
+# (= the symmetric Borda score) and elects Berry; BetterVoting's ladder only has
+# a head-to-head rung for a clean 2-WAY tie, so on a 3-way tie it falls through
+# to RANDOM. The pairwise MATRIX is deterministic and is the actual artifact —
+# BV's crowned winner in that race is a coin flip and must not be cited as a
+# result. See 00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md.
+# Ranks are aligned to the candidate order [Almond, Berry, Cocoa]; 1 = top.
+_MARG_CANDS = ["Almond", "Berry", "Cocoa"]
+_MARG_STAR = ([[5, 3, 0]] * 5) + ([[0, 5, 3]] * 3) + ([[3, 0, 5]] * 2) + ([[0, 3, 5]] * 2)
+_MARG_RANK = ([[1, 2, 3]] * 5) + ([[3, 1, 2]] * 3) + ([[2, 3, 1]] * 2) + ([[3, 2, 1]] * 2)
+_MARG_PLUR = ([[1, 0, 0]] * 5) + ([[0, 1, 0]] * 3) + ([[0, 0, 1]] * 4)
+
+MARGINS_SPEC = {
+    "test_id": "BV2251",
+    "title": "Margins matter — one electorate, four different answers",
+    "description": (
+        "Twelve voters rank three gelato flavours, and the head-to-head results form a loop: "
+        "Almond beats Berry 7-5, Berry beats Cocoa 8-4, and Cocoa beats Almond 7-5. Nobody "
+        "beats everybody, so there is no Condorcet winner and every voting rule has to fall "
+        "back on its own idea of what to do next. What separates them is one question: does "
+        "the rule look at the SIZE of each victory, or only at who won? The Copeland rule "
+        "counts wins and throws the margins away, so all three flavours go 1-1-0 and it ties "
+        "every one of them. The Borda count is that same tournament WEIGHTED by those margins "
+        "— add up each flavour's signed margins and you get Almond 0, Berry +2, Cocoa -2 — so "
+        "Borda separates them and elects Berry. Four races here count the very same twelve "
+        "ballots and produce four different answers. Choose-One elects Almond on 5 first "
+        "choices. RCV-IRV eliminates Berry FIRST, because Berry has the fewest first choices "
+        "(3) despite winning every margin-weighted measure; all three of those ballots "
+        "transfer to Cocoa, which wins 7-5. STAR elects Almond: converting the rankings to "
+        "scores on an even 5/3/0 spacing makes the scoring round a Borda count, so Berry leads "
+        "round one, and then the automatic runoff holds the direct contest Borda never holds "
+        "and Almond takes it 7-5. Ranked Robin is the interesting one — it reports the genuine "
+        "three-way Copeland tie, and please read its PAIRWISE TABLE rather than its crowned "
+        "winner: BetterVoting resolves a three-way tie at random, so that one name is a coin "
+        "flip, not a result. This profile is the twelve-ballot version of a 304-voter textbook "
+        "profile, shrunk so you can check every number by hand while the Borda scores stay "
+        "identical. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/copeland_vs_borda_margins/index.html"
+    ),
+    "enable_write_in": False,
+    "races": [
+        {"title": "Margins — Choose-One (Plurality): first choices only",
+         "method": "Plurality",
+         "num_winners": 1, "candidates": _MARG_CANDS, "ballots": _MARG_PLUR},
+        {"title": "Margins — STAR (the scoring round is Borda, then a head-to-head)",
+         "method": "STAR",
+         "num_winners": 1, "candidates": _MARG_CANDS, "ballots": _MARG_STAR},
+        {"title": "Margins — RCV-IRV (eliminates the Borda winner first)",
+         "method": "IRV",
+         "num_winners": 1, "max_rankings": 3, "candidates": _MARG_CANDS, "ballots": _MARG_RANK},
+        {"title": "Margins — Ranked Robin (Copeland ties all three; read the table, not the winner)",
+         "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _MARG_CANDS, "ballots": _MARG_RANK},
+    ],
+    "expected": ("Plurality -> Almond (5/4/3 first choices); STAR -> Almond (scoring round "
+                 "Berry 36 / Almond 31 / Cocoa 29 — a Borda count — then the runoff reverses "
+                 "it, Almond 7-5); RCV-IRV -> Cocoa (Berry eliminated first on 3, all three "
+                 "ballots transfer, Cocoa 7-5); Ranked Robin -> a genuine 3-way Copeland tie "
+                 "(each 1-1-0). LH breaks that tie by total margin (= the symmetric Borda "
+                 "score) and elects Berry; BV falls through to RANDOM, so only the pairwise "
+                 "matrix is freezable from the BV side. Borda (no BV race, cross-checked in "
+                 "pref_voting) -> Berry, 13 to Almond's 12 and Cocoa's 11. Test ID BV2251."),
+}
+
+
+ELECTIONS: list = [MARGINS_SPEC]   # BV2251 — Margins matter: Copeland vs Borda
+# Previously: [C1788_SPEC]  # BV2250 — Condorcet's 1788 rebuttal to Borda (created)
 # Previously: [WCL_SPEC]  # BV2249 — weak Condorcet loser (created)
 # Previously: [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]  # BV2229-2232 (created)

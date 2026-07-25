@@ -6,6 +6,9 @@ TABULATED FILE:  margins_irv_tabulated.txt
 election_title: "Margins matter — RCV-IRV elects the third answer (Cocoa)"
 scenario_description: |-
   The same twelve gelato ballots, counted by instant runoff. First choices are Almond 5, Cocoa 4, Berry 3, so Berry — the BORDA winner and the margin-weighted Copeland winner — is eliminated FIRST. All three of Berry's ballots rank Cocoa next, so they transfer intact and Cocoa wins 7-5. This is the fourth distinct answer the same electorate produces: Plurality says Almond, RCV-IRV says Cocoa, Borda says Berry, and Copeland says nobody (a three-way tie). Not a center-squeeze case — there is no Condorcet winner for IRV to miss, because the pairwise contests form a cycle.
+bv_test_id: BV2251
+bv_election_id: kdjjkq
+bv_results_url: https://bettervoting.com/kdjjkq/results
 voting_method: IRV
 num_winners: 1
 options:

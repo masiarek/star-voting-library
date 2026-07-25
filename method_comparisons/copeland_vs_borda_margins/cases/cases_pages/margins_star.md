@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Almond
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`).
+
 ## Scenario
 
 The same twelve gelato voters, with each ranking converted to scores on an even 5/3/0 spacing so a SCORE method can run on a RANKED profile. Under a uniform spacing the STAR scoring round IS a Borda count, so round one reproduces Borda's answer — Berry first — and then the automatic runoff runs the head-to-head Borda never runs: Almond beats Berry 7-5, and Almond wins. Honest caveat, stated on the page: unlike Condorcet's 1788 profile, this outcome is NOT robust to the spacing. 5/3/0, 5/4/0, 5/2/0 and 4/2/0 all give Almond, but a polarized 5/1/0 makes Cocoa a finalist instead of Berry and elects Cocoa. With no Condorcet winner to anchor it (the pairwise contests cycle), the rank-to-score mapping is doing real work — which is exactly the objection the Borda page raises against inventing intensities.
@@ -120,6 +122,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/margins_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
