@@ -144,6 +144,15 @@
 - **Keep it honest:** "forced" means *some* profile ties, **not** that ties are likely — exact ties stay astronomically rare in large electorates, and the theorem ranks no method above another (all are caught). It also costs only **resoluteness**, which has four known workarounds; do not cite it as though it were [Arrow](../topics/arrow_theorem_and_star.md). Note too that the proposition is stated for **ordinal** rules — what carries over to STAR's score ballot is the *symmetry argument*, not the proposition itself.
 - **Read with 301.17:** May's **positive responsiveness** breaks every tie that isn't forced, which is why majority rule is resolute on an *odd* electorate and cannot be on an even one. The 50/50 split is this theorem's two-candidate face.
 
+## 301.19 — Campbell–Kelly: May's theorem for three or more alternatives
+
+- **Objective:** finish the arc 301.16–301.18 with the one **positive** characterization result at three-plus candidates — and learn to state it at full strength *and* name its price, which is the whole skill.
+- **Key terms:** Pairwise Majority Rule (PMR), Condorcet domain, Condorcet extension, strategyproofness on a restricted domain, group strategyproofness, nonimposition.
+- **Page:** [The Campbell–Kelly theorem](../topics/condorcet/campbell_kelly_theorem.md) — the statement, the May comparison, the one-line strategyproofness proof, and four ways it gets overstated.
+- **The point:** on the **full domain** there is *no* satisfactory extension of May's theorem to 3+ alternatives. Restrict to the **Condorcet domain** (profiles where a Condorcet winner exists) and uniqueness returns: PMR is resolute, anonymous, neutral and **strategyproof** there, uniquely so for odd `n`. The axiom swap isn't a swap — **at two candidates monotonicity *is* strategyproofness**, so Campbell–Kelly keeps May's fourth condition in the form that still has teeth at three.
+- **The lesson that generalizes:** it does **not** contradict [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md), because restricted-domain strategyproofness requires the sincere *and* manipulated profiles to stay inside the domain. So — **G–S's bite comes from the full domain, not from having three or more candidates.** Same shape as [301.18](#30118-ties-are-forced-the-small-impossibility-theorem): insisting on a total function is what costs you the axiom.
+- **Keep it honest:** the restriction does enormous work — `𝒟_Condorcet` is exactly the set of *easy* profiles, so the theorem is silent on [cycles](../RCV_Ranked_Robin/cycle_resolution.md), which is where every real disagreement lives. It also cannot rank Ranked Robin above Minimax above Schulze (all agree on that domain by definition). And it lands against us: **STAR is not a Condorcet extension**, so a Condorcet advocate citing this theorem is citing it correctly — say so, then argue the axis rather than the fact.
+
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 201](CURRICULUM_201.md) · Next: [Voting 401 — failure modes & the safety check](CURRICULUM_401.md).*

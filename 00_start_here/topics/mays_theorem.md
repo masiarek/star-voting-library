@@ -17,6 +17,18 @@ Two alternatives, `x` and `y`. Each voter reports a preference for `x`, a prefer
 
 May proved these conditions **independent** — drop any one and majority rule is no longer unique. That's the point of his title.
 
+### The theorem has two forms, and the difference is the tie
+
+The list above is the version usually quoted, but the precise statement comes in a **matched pair**, and seeing both is what makes the role of ties clear:
+
+> **(a) For two alternatives and an *odd* number of voters,** majority rule is the unique **resolute, anonymous, neutral, and *monotonic*** SCF.
+>
+> **(b) For two alternatives and *any* number of voters,** it is the unique **anonymous, neutral, and *positively responsive*** SCF.
+
+The two forms trade the same thing in opposite directions. Form (a) assumes the *weaker* fourth axiom ([monotonicity](monotonicity)) and buys the difference back by assuming resoluteness outright and restricting to odd `n` — where no tie can arise. Form (b) assumes the *stronger* fourth axiom (positive responsiveness), which breaks every avoidable tie by itself, so resoluteness need not be assumed and every `n` is allowed. **Either you exclude ties by arithmetic, or you use an axiom strong enough to break them.**
+
+The proof of uniqueness is short enough to carry: under any other rule, pick a profile where `x` wins with fewer votes than `y`; switch enough ballots from `y` to `x` to exactly reverse the two totals. Monotonicity says `x` still wins — but neutrality plus anonymity say the reversed profile must elect `y`. Contradiction. The positive-responsiveness form runs the same argument starting from a tie.
+
 **Why the fourth condition is the strong one.** Plain [monotonicity](monotonicity) is enough to exclude the frankly perverse — *elect whichever alternative receives an odd number of votes* is the textbook specimen it kills. **Positive responsiveness does strictly more: it also breaks every tie that isn't mathematically forced.** With an odd number of voters that's enough to make majority rule *resolute* — it always names one winner. With an even number it isn't, and can't be: the 50/50 split is a tie no axiom can dissolve. That single exception is the two-candidate face of a general result — **no anonymous, neutral, Pareto rule is resolute on an even electorate** — worked out in [Ties Are Forced](ties/ties_are_forced.md).
 
 ## What each condition rules out
@@ -58,6 +70,16 @@ Worth checking, because it's easy to assume the methods differ everywhere:
 So the repo's own convention that [two-candidate intro files suppress the finalists matrix](../../CLAUDE.md) — because it merely echoes the runoff — isn't a display quirk. It's May's Theorem showing up in the output: at two candidates there is only one thing any of these methods can be doing.
 
 **The honest limit.** This makes May's Theorem a *baseline*, not an argument for any method. It says nothing whatsoever about which multi-candidate rule is better, because its whole content evaporates at three. Anyone citing May to defend a particular reform has overreached.
+
+## Who inherits the mantle at three candidates?
+
+The obvious follow-up question, and it has a two-part answer worth keeping straight.
+
+**On the full domain: nobody.** There is no completely satisfactory extension of May's Theorem to three or more alternatives for social choice functions defined on every profile. The conditions stop pinning anything down. And since essentially every method here reduces to majority rule at `m = 2` in some natural way, *all* of them can claim the mantle on that basis — which is another way of saying none of them can.
+
+**On a restricted domain: pairwise majority rule.** Give up answering *every* profile — restrict to those where a [Condorcet winner](condorcet/) exists — and a genuine uniqueness theorem returns. The **[Campbell–Kelly theorem](condorcet/campbell_kelly_theorem.md)** (2003) proves that on that domain, electing the Condorcet winner is resolute, anonymous, neutral and **strategyproof**, and for odd `n` is the *only* such rule.
+
+The substitution of **strategyproofness** for **monotonicity** is not a change of subject: **at two candidates the two axioms are equivalent** — with only two options the sole manipulation available is voting for the one you like less, and monotonicity is exactly what makes that pointless. So Campbell–Kelly keeps May's fourth condition and restates it in the form that still has teeth at three. That is what earns it the title "May's Theorem for three or more alternatives" — and its price, paid in full, is the restricted domain.
 
 ## The hinge into Arrow
 

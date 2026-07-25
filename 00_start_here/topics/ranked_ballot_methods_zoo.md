@@ -23,6 +23,20 @@ With only **two** candidates they all agree (they all elect the majority winner)
 
 ## Family 1 — Positional (Borda-based)
 
+> **First, the unification that makes this whole family one method.** A **scoring rule** is defined by a single **score vector** `w = (w₁, w₂, …, w_m)`: each voter awards `w₁` points to their top-ranked candidate, `w₂` to their second, and so on; highest total wins. The vector is *proper* when `w₁ ≥ w₂ ≥ … ≥ w_m` and `w₁ > w_m`. Change the numbers and you change the method — and several rules you'd never file together turn out to be the same machine on a different setting:
+>
+> | Rule | Score vector `w` |
+> |---|---|
+> | **[Plurality](plurality.md)** / Choose-One | `(1, 0, 0, …, 0)` |
+> | **Anti-plurality** (veto) | `(1, 1, 1, …, 1, 0)` |
+> | **k-Approval** | `(1, …, 1, 0, …, 0)` — `k` ones |
+> | **Borda** | `(m−1, m−2, …, 1, 0)` |
+> | **Formula One World Championship** | `(25, 18, 15, 12, 10, 8, 6, 4, 2, 1, 0, …)` |
+>
+> That last row is not a joke, and it's the best hook in this section: since 2010 an F1 driver scores 25 points for a win, 18 for second, and so on, and the championship goes to the highest season total. **The races are the voters and the drivers are the candidates** — the World Championship is a positional voting rule, and every criticism on this page applies to it. It's the cleanest proof that voting rules are not a niche of politics.
+>
+> The teaching payoff: **Plurality is not a different *kind* of thing from Borda.** It is the most extreme proper score vector there is — all the weight on first place, nothing anywhere else — which is precisely why it discards so much of the ballot. "Choose-One vs ranked" is really a question about *how flat the weights are*, and that reframes the whole debate as a dial rather than a wall. (Same-ballot, different-count is the theme of [Same opinions, every method](same_opinions_every_method.md).)
+
 **Borda** gives each candidate points for its rank position: in LeGrand's form, (times ranked over another) − (times ranked under another). It's often the *best* method when everyone votes sincerely — and *the most easily manipulated* when they don't. Its signature flaw is **clone dependence**: a party can win simply by running extra similar candidates (LeGrand's Eric/Fran/Gary example — Eric has 63% of first places but Borda hands it to Fran because Gary pads her totals). Borda is a **ranked** method but **not** Condorcet-consistent.
 
 Three methods bolt recursive elimination onto Borda and, in doing so, *become* Condorcet-consistent:

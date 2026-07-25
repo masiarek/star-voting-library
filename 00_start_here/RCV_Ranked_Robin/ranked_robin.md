@@ -85,6 +85,13 @@ Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). R
 
 Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only, not strength** — it can't tell a near-tie from a landslide ([scores_vs_ranks.md](../scores_and_ranks/scores_vs_ranks.md)) — so it carries less information than a scored method like STAR. When there's a **Condorcet cycle** (A beats B, B beats C, C beats A, with no candidate beating all others), there is no Condorcet winner and the method falls back on a tiebreak rule (sum of margins), which reasonable people can debate. And no method escapes Gibbard–Satterthwaite. Its real-world **adoption is limited** so far compared with IRV.
 
+**Name the tie-proneness properly: Copeland is a known-indecisive rule.** This is the sharpest version of the cycle limit above, and it is a documented property of the count, not a quirk of this repo's engine or a symptom of unusually contrived examples. Copeland scores are **whole wins**, so it can only ever distinguish candidates by *how many* matchups they took, never by how much they won or lost each one by — and in a cycle every candidate has the same record. Two consequences worth stating out loud:
+
+- **[Minimax / Simpson](../voting_paradoxes/minimax.md) is strictly more decisive**, precisely because it reads *margins* rather than win counts, and margins survive a cycle when win counts don't. The [minimal tilted cycle](../../method_comparisons/minimal_tilted_cycle/README.md) is the runnable proof: five voters, Copeland ties all three, minimax names a winner — and the information minimax used was on the ballots the whole time.
+- **Copeland winners always lie inside the [top cycle / Smith set](../topics/smith_set.md)**, so Copeland never elects badly in that sense; it just frequently declines to narrow the field further on its own.
+
+That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. LH's ladder (margin → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../topics/ties/ties_are_forced.md).
+
 ## Now you can tabulate it — the `pref_voting` engine
 
 The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) computes this method on any example election, under its **academic name, Copeland**.
