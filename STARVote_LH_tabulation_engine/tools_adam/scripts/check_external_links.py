@@ -146,6 +146,13 @@ def extract_urls():
                     for lineno, line in enumerate(fh, 1):
                         for m in URL_RE.finditer(line):
                             url = _clean_url(m.group(0))
+                            # A '<' means we caught a TEMPLATE, not a link —
+                            # e.g. CLAUDE.md's `…/star-voting-library/<page
+                            # path>.html`, which the regex truncates at the '>'.
+                            # Placeholders are never fetchable; don't report them
+                            # as dead. (Real URLs percent-encode '<' as %3C.)
+                            if "<" in url:
+                                continue
                             seen.setdefault(url, set()).add((rel, lineno))
             except OSError:
                 continue
