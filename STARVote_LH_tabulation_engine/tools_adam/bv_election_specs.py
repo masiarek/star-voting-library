@@ -54,6 +54,11 @@ you need not hoard every spec here.
 # races must have the SAME number of ballots (aligned by voter index). Score
 # ranges per method: Approval/Plurality = 0/1 ; STAR/Bloc/STAR_PR = 0-5 ; ranked
 # (RankedRobin/IRV/STV) = ranks 1..max_rankings (0 = unranked).
+#
+# RACE TITLES: write them WITHOUT the BV<n> prefix — the create script prepends
+# the election's test_id to EVERY race title automatically (rule flipped by Adam
+# 2026-07-25: BV's /vote page leads with the race title, so each race must be
+# self-identifying; the pre-check hard-stops if a race title would go out bare).
 
 # --- BV2137 / BV2138 — LeGrand rbvote examples: one ranked electorate, many -----
 # tabulations. Both come from Robert LeGrand's ranked-ballot calculator

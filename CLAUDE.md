@@ -366,11 +366,17 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   ballot_style_lab set BV2234–2247 is in that boat — repo→BV works, BV→repo doesn't).
 - **`BV<n>` in both artifacts — yes, keep it.** The human-readable Test ID belongs in
   *both* places so each side is findable from the other: on BV it rides the **election
-  title** prefix only (`BV<n> — <real title>`, once — NOT also in the race title, which
-  stays clean); in the repo it's the `bv_test_id:` field + the registry. The `<bvid>`
-  (e.g. `td7jfy`) is the machine-stable link; `BV<n>` is the searchable cross-reference.
-  Together with the two description/results links above, the BV election and its repo
-  page fully point at each other.
+  title** prefix (`BV<n> — <real title>`) **and every race title** (rule flipped by
+  Adam 2026-07-25 — BV's `/vote` page leads with the *race* title in its big box, so
+  a "clean" race title loses the cross-reference; BV2249 `c73pfw` is the example).
+  `create_bv_test_election.py` auto-prepends it to each race via
+  `_effective_race_title()` and the pre-check hard-stops if any race title would go
+  out bare — don't hand-add the prefix in `bv_election_specs.py` race titles (the
+  script adds it; elections up to BV2249 keep the old clean-race titles — permanent,
+  can't be re-minted). In the repo it's the `bv_test_id:` field + the registry. The
+  `<bvid>` (e.g. `td7jfy`) is the machine-stable link; `BV<n>` is the searchable
+  cross-reference. Together with the two description/results links above, the BV
+  election and its repo page fully point at each other.
 - **Machine-readable BV fields + the repo registry.** A case `.yaml` may carry
   `bv_test_id`, `bv_election_id`, and `bv_results_url` as top-level fields — the
   tabulation engine ignores them; `tools_adam/scripts/build_bv_registry.py` reads

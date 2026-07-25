@@ -224,7 +224,7 @@ def build_payload(template, spec):
     races_out = []
     for rs in _race_specs(spec):
         r = json.loads(json.dumps(base))           # a fresh clone of the template race
-        r["title"] = rs.get("title", title)
+        r["title"] = _effective_race_title(spec, rs)
         r["voting_method"] = rs.get("method", "STAR")
         r["num_winners"] = rs.get("num_winners", 1)
         # Write-ins default ON so online (QR) voters can add a choice that's not on
@@ -410,6 +410,21 @@ def _effective_title(spec):
     return TITLE_PREFIX + (f"{tid} — " if tid else "") + spec.get("title", "")
 
 
+def _effective_race_title(spec, rs):
+    """The exact RACE title BV will store. Rule change (Adam, 2026-07-25): the
+    BV<n> Test ID rides EVERY race title too, not just the election title — the
+    /vote page leads with the race title in its big box, so a "clean" race title
+    loses the cross-reference (BV2249 c73pfw is the example that prompted this).
+    Elections up to BV2249 follow the old clean-race convention; don't re-mint
+    them (titles are permanent). Prepended here so both build_payload and the
+    pre-check share one source of truth."""
+    tid = spec.get("test_id")
+    base = rs.get("title") or spec.get("title", "")
+    if tid and not base.startswith(str(tid)):
+        base = f"{tid} — {base}"
+    return base
+
+
 def _existing_titles():
     """Titles of elections already created (read from the saved exports in OUT_DIR)
     → their election ids. Lets the pre-check warn before minting a *duplicate* public
@@ -493,6 +508,31 @@ def _preflight_test_ids(elections):
                 sys.exit("Aborted — reuse the existing election (see the ids above), or "
                          "change the title. Set BV_ALLOW_DUP_TITLE=1 to force a duplicate.")
         print("  Proceeding — a duplicate will be created.\n")
+
+    # Race-title Test-ID guard (Adam, 2026-07-25). The BV<n> must ride EVERY race
+    # title (the /vote page leads with the race title, so a clean race title loses
+    # the cross-reference — see BV2249 c73pfw). _effective_race_title() prepends it
+    # automatically; this check proves the invariant on the exact titles about to
+    # be stored (they're as permanent as the election title) and shows them for a
+    # last eyeball. Hard stop on violation — no env-var override, since a miss can
+    # only mean the auto-prepend was bypassed/broken.
+    for s in elections:
+        tid = s.get("test_id")
+        if not tid:
+            continue                      # handled by the missing-test_id gate below
+        rtitles = [_effective_race_title(s, rs) for rs in _race_specs(s)]
+        bare = [t for t in rtitles if not t.startswith(str(tid))]
+        if bare:
+            print(f"\n⚠ PRE-CHECK — race title(s) in “{_effective_title(s)}” missing "
+                  f"the {tid} prefix (race titles are PERMANENT too):")
+            for t in bare:
+                print(f"    • “{t}”")
+            sys.exit("Aborted — every race title must carry the election's BV<n> "
+                     "prefix (auto-prepended by _effective_race_title; this should "
+                     "be unreachable unless that path was bypassed).")
+        print(f"  race titles for {tid}:")
+        for t in rtitles:
+            print(f"    • {t}")
 
     missing = [s.get("title", "<untitled>") for s in elections if not s.get("test_id")]
     odd = [(s.get("test_id"), s.get("title", "<untitled>"))
