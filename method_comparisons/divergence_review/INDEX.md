@@ -6,13 +6,13 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **201** single-winner STAR elections (skipped 129 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **119** (59%) diverge from STAR under at least one method; **82** agree across the board.
+- Scanned **202** single-winner STAR elections (skipped 130 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **120** (59%) diverge from STAR under at least one method; **82** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 29 |
-| STAR_OUTLIER_RR_WITH_IRV | 8 |
+| STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 8 |
 | CYCLE_OR_THREE_WAY | 33 |
 | APPROVAL_OR_MINOR | 41 |
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (115 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (116 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -89,7 +89,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey  
     _also at: `method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml`_
 
-### STAR_OUTLIER_RR_WITH_IRV — 8
+### STAR_OUTLIER_RR_WITH_IRV — 9
 
 _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for evenhandedness: STAR isn't always the Condorcet pick)_
 
@@ -114,6 +114,9 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     _flags: 2 tied-score ballot(s)_
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
+- **[wcl_c3_b5_star](cases/STAR_OUTLIER_RR_WITH_IRV/wcl_c3_b5_star.md)** — `method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml` (3c/5b)  
+    STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
+    _flags: 1 tied-score ballot(s)_
 
 ### IRV_DIFFERS_ARTIFACT — 8
 

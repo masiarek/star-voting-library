@@ -20,7 +20,7 @@
 
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.
 - **Material:** [favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md). Companion exercise: [Later-no-harm, both readings (ex10)](../../01_STAR/exercises/ex10_later_no_harm.md) — the criterion IRV keeps and STAR trades, live in one election.
-- **The point:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally (Alaska '22), STAR only in lab constructions.
+- **The point:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally ([Alaska '22](../../method_comparisons/alaska_2022/alaska_301.md)), STAR only in lab constructions.
 
 ## 301.3 — "Are equal-score votes discounted?"
 

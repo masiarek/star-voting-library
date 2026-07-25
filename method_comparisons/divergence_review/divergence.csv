@@ -200,3 +200,4 @@ STAR_OUTLIER_RR_WITH_IRV,01_STAR/exercises/cases/ex02_bella_exits.yaml,4,9,Chris
 STAR_OUTLIER_RR_WITH_IRV,01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml,3,57,Clover,Bluebell,Bluebell,Bluebell,Bluebell,Clover,Aster,Bluebell,Bluebell,9,False,False,False
 STAR_OUTLIER_RR_WITH_IRV,01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml,3,5,Bruno,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 STAR_OUTLIER_RR_WITH_IRV,method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml,3,30,X,Z,Z,Z,Z,X,X,Z,Z,0,False,False,False
+STAR_OUTLIER_RR_WITH_IRV,method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml,3,5,Ben,Ada,Ada,Ada,Ada,Ben,Ben,Ada,Ada,1,False,False,False
