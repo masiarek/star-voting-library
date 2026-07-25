@@ -262,8 +262,16 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   *aid*, not decorate — skip common words and what the audience plainly knows;
   (2) **never self-link** the page's own subject; (3) link a term **once** per page,
   not every occurrence; (4) prefer the **topic hub** if one exists, else the concept
-  page, else the glossary. When in doubt, fewer links read better than a wall of blue.
-  (Not machine-checked — the failure mode is over-linking, not under-linking.)
+  page, else the glossary; (5) **in a parallel list, link all or none** — when a
+  bullet list, table column, or run-on sentence names several methods side by side
+  (STAR · RCV-IRV · Ranked Robin · Plurality), linking only some of them reads as
+  arbitrary even when each individual choice was defensible. Decide once for the
+  whole list. (Rule 3 still wins: a term already linked earlier on the page stays
+  unlinked, and the list is consistent *because* of that, not in spite of it — say
+  so in the commit if it looks uneven.) When in doubt, fewer links read better than
+  a wall of blue. (Not machine-checked — the failure mode is over-linking, not
+  under-linking; rule 5 is the exception, where the failure mode is *partial*
+  linking, and only a human reading the rendered page will catch it.)
 - **Case-folder layout — README-alone, sources in `cases/` (repo standard, 2026-07-20).**
   In a teaching case folder, the **source files (`.yaml`, `_bv_export.json`) live in a
   `cases/` subfolder**, and only the `README.md` (plus any hand-authored teaching `.md`)
