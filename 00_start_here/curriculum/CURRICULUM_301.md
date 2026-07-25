@@ -106,6 +106,7 @@
 - **Page:** [Distortion](../topics/distortion.md) — the two models and why the model decides the verdict, the scoreboard (Copeland/**Ranked Robin** ≤ 5 constant · **STV/IRV** O(log m), *not* constant · Plurality & Borda linear in the field · approval-only input **unbounded**), and the result that most supports score ballots: rankings **plus a few numeric queries** collapse the worst case from Θ(m²) to *constant*.
 - **The point:** distortion is [VSE](../topics/what_makes_a_good_winner.md)'s academic sibling — same premise (utility is the target, a ballot is a lossy channel), opposite instrument (proved worst case vs simulated average case). Useful when someone dismisses VSE as reform-movement math: the peer-reviewed literature made the identical modeling choice.
 - **Keep it honest:** the metric bound is only **3**, so rankings are not hopeless; the best *strategyproof* mechanisms are essentially ordinal; and **no published distortion bound for STAR** exists that we could find — an open gap, not a result to cite. Frame per [reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md).
+- **The deep dive — how a bound of 3 is even possible:** [Metric distortion](../topics/metric_distortion.md) — the three-line Condorcet-winner ≤ 3 proof (triangle inequality + "a majority said so"), the midpoint-voters lower bound (near-indifference is the one thing a ranking cannot say), and where STAR's rounds sit: the **automatic runoff is pairwise majority, so the ≤ 3 lemma plugs straight in between the finalists** — a conditional guarantee, since the scoring round's worst case lies outside the ordinal theory entirely.
 
 ## 301.15 — Grading as a rival primitive (Balinski & Laraki)
 
@@ -114,13 +115,6 @@
 - **Page:** [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md); the case against, worked: [Majority Judgment's paradoxes](../voting_paradoxes/majority_judgment.md); the reading-list entry: [rated & score methods](../books/rated_and_score_methods.md).
 - **The point:** *"preference = ordering"* is a **contested modeling choice with a serious academic rival**, not the neutral default — which is the citable backing for [preference vs. support](../scores_and_ranks/preference_vs_support.md) and for refusing to cede the word "preference" to ranked ballots.
 - **Keep it honest:** Balinski & Laraki argue the **median over the sum**, so they cut against STAR's Scoring Round as much as against IRV; MJ fails the majority *and* Condorcet criteria by design; and a 2026 experiment (Delemazure, Brunetti, Baujard & Bouveret, N = 1955) **rejects** the common-language premise that the comparability argument rests on.
-
-## 301.14 — Distortion: the formal price of a ranked ballot (and why it's only 3×)
-
-- **Objective:** the theorem behind both camps' slogans — mainstream computational social choice models a ranking as *lossy compression of utility* (the cardinal premise, conceded), yet proves that under the spatial model the best ordinal rules elect within **3×** of the utilitarian optimum, and 3 is optimal ("rankings are lossy" ≠ "rankings lose much").
-- **Key terms:** (metric) distortion, social cost, triangle inequality, Plurality Veto, worst-case vs. average-case (VSE).
-- **Page:** [Metric distortion](../topics/metric_distortion.md) — the three-line Condorcet-winner ≤ 3 proof, the midpoint-voters lower bound (near-indifference is what rankings can't say), the rule scoreboard (Plurality Veto 3 · Copeland 5 · IRV ~log m · Plurality 2m−1), and where STAR sits: the **runoff is pairwise majority, so the ≤ 3 lemma plugs straight in** between the finalists — while the scoring round's worst case lies outside the ordinal theory entirely (no unconditional STAR number exists; don't quote one).
-- **The point:** the metric assumption is the [spatial model](../topics/spatial_voting_model.md) doing the work — geometry converts majority counts into utility bounds. Prereq for reading distortion claims fairly in either camp's literature; pairs with 301.9 (VSE = the average-case companion).
 
 ---
 
