@@ -25,8 +25,8 @@ Why: any candidate to the median's left is beaten by one just to their right (a 
 Because the spatial model tells you *who the Condorcet winner is* (the center), it tells you which methods will find them and which will miss:
 
 - **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) / Condorcet methods** elect the median candidate by construction — they're built to find the beats-all winner.
-- **STAR** usually elects near the median too: the broadly-liked center piles up scores and wins the runoff.
-- **RCV-IRV can *squeeze* the center out.** A centrist is many voters' *second* choice but few voters' *first*, so IRV eliminates them early — even though they'd beat everyone head-to-head. That's **[center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)**, and it's fundamentally a *spatial* phenomenon: you can only see it clearly on the map. (Alaska 2022 is the real-world case.)
+- **[STAR](../STAR_Voting/STAR_start_here.md)** usually elects near the median too: the broadly-liked center piles up scores and wins the runoff.
+- **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) can *squeeze* the center out.** A centrist is many voters' *second* choice but few voters' *first*, so IRV eliminates them early — even though they'd beat everyone head-to-head. That's **[center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)**, and it's fundamentally a *spatial* phenomenon: you can only see it clearly on the map. (Alaska 2022 is the real-world case.)
 - **[Plurality](plurality.md)** splits one side and hands it to the other — the [spoiler effect](spoiler_effect.md), also easiest to see spatially.
 
 So "which method elects the compromise vs. squeezes it" isn't a matter of opinion in the spatial model — it's geometry.
