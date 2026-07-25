@@ -65,7 +65,7 @@ These build a **pairwise matrix** in one pass — for every pair, how many voter
 
 - **Copeland** — most pairwise wins (ties = ½). This is exactly the core of the repo's **Ranked Robin (RCV-RR)** (win–loss record). Transparent, but *indecisive* — it ties often, ignoring how *big* each win was.
 - **Small** — Copeland, then break Copeland ties by eliminating the non-top-scorers and recomputing until it can't. A more *decisive* Copeland.
-- **Dodgson** (Lewis Carroll) — the candidate needing the fewest ballot-swaps to *become* a Condorcet winner; equivalently, smallest **sum** of defeat margins. Rarely, it can pick a **Condorcet loser** (LeGrand's Cora, who loses every duel but each by a hair).
+- **Dodgson** (Lewis Carroll) — the candidate needing the fewest ballot-swaps to *become* a Condorcet winner. Rarely, it can pick a **Condorcet loser** (LeGrand's Cora, who loses every duel but each by a hair). **Not** the same as "smallest sum of defeat margins": that gloss describes a *different, simpler* rule (LeGrand's simplification), and the difference matters — true Dodgson needs the ballots themselves, not just the pairwise matrix, which is why it sits in **C3** alongside Young rather than with the margin-reading C2 methods ([the tiers](condorcet/condorcet_reading_list.md)).
 - **Simpson** (a.k.a. **Minimax** / Simpson–Kramer) — smallest **single worst** pairwise defeat. Also rarely picks a Condorcet loser.
 - **Raynaud** — elimination on Simpson: repeatedly drop the candidate with the **largest single defeat** until one remains.
 - **Schulze** (beatpaths / CSSD) — resolves cycles via **strongest indirect paths** of victories. Clone-independent, monotonic, and **never** picks a Condorcet loser.
