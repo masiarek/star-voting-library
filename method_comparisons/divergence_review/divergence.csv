@@ -140,6 +140,7 @@ CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml,4,4
 CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml,4,24,Beige,Azure,Dune,Coral,Azure,Azure,Azure,,Azure,16,True,True,True
 CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml,3,12,Almond,Cocoa,Cocoa,Berry,Berry,Berry,Berry,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml,3,100,Harper,Berkey,Berkey,Harper,Harper,Harper,Rieger,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml,3,17,Bruno,Bruno,Bruno,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml,3,32,Bruno,Alma,Alma,Cora,Cora,Cora,Cora,,,0,False,False,True

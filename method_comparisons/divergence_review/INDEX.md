@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **203** single-winner STAR elections (skipped 134 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **121** (60%) diverge from STAR under at least one method; **82** agree across the board.
+- Scanned **204** single-winner STAR elections (skipped 135 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **122** (60%) diverge from STAR under at least one method; **82** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 29 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 8 |
-| CYCLE_OR_THREE_WAY | 33 |
+| CYCLE_OR_THREE_WAY | 34 |
 | APPROVAL_OR_MINOR | 42 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (117 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (118 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -147,7 +147,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
 
-### CYCLE_OR_THREE_WAY — 31
+### CYCLE_OR_THREE_WAY — 32
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -186,6 +186,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     _flags: 16 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Coral, strict=Azure)_
 - **[BV_Library_star_runoff_tie_score_resolves](cases/CYCLE_OR_THREE_WAY/BV_Library_star_runoff_tie_score_resolves.md)** — `method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml` (2c/2b)  
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
+- **[margins_star](cases/CYCLE_OR_THREE_WAY/margins_star.md)** — `method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml` (3c/12b)  
+    STAR=**Almond** · IRV=Cocoa · RR=Berry · Approval=Berry · Score=Berry · Condorcet=none
 - **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  
     STAR=**Harper** · IRV=Berkey · RR=Harper · Approval=Harper · Score=Rieger · Condorcet=none
 - **[bv2147_9gdrqg_star](cases/CYCLE_OR_THREE_WAY/bv2147_9gdrqg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml` (3c/17b)  

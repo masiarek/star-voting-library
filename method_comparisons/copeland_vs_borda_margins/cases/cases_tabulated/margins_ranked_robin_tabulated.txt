@@ -1,0 +1,31 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 12 ballots (ranked ballots).
+
+Ballots:
+     5 × Almond > Berry > Cocoa
+     3 × Berry > Cocoa > Almond
+     2 × Cocoa > Almond > Berry
+     2 × Cocoa > Berry > Almond
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Almond  beats Berry    7 – 5
+   Cocoa   beats Almond   7 – 5
+   Berry   beats Cocoa    8 – 4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |  Almond   |  Berry   |  Cocoa   |
+----------------------------------------------
+  Almond > |    ---    |7 - 0 - 5 |5 - 0 - 7 |
+   Berry > | 5 - 0 - 7 |   ---    |8 - 0 - 4 |
+   Cocoa > | 7 - 0 - 5 |4 - 0 - 8 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Berry      1–1–0         1      +2  Cocoa
+    2  Almond     1–1–0         1      +0  Berry
+    3  Cocoa      1–1–0         1      -2  Almond
+
+Winner — Ranked Robin (RCV-RR): Berry
+   *** 3 candidates tie for the most wins (Almond, Berry, Cocoa) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

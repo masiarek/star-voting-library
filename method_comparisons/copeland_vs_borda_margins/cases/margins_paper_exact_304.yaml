@@ -1,0 +1,27 @@
+election_title: "Margins matter — the textbook profile at its printed size (304 ballots, LH-only)"
+scenario_description: |-
+  The source profile exactly as it is printed in the textbook: 102 a>b>c, 101 b>c>a, 100 c>a>b, 1 c>b>a, with a/b/c kept as the book's own placeholder letters. Reference artifact for reproducibility — LH-only, no BetterVoting election, because the twelve-ballot version (margins_ranked_robin.yaml) is the teaching copy. Everything structural matches: Copeland ties all three, the symmetric Borda scores are 0 / +2 / -2, plurality elects a, RCV-IRV elects c. Two things this size shows that the small one cannot. First, the margins are 100 / 102 / 100 — near-identical, so margin-weighting breaks a dead heat by a HAIR, where the shrunk version's 2 / 4 / 2 makes the gap look decisive. Second, the bloc counts are coprime (gcd 1), so this profile is not a scaled-up copy of anything smaller — and the lone 1-voter is load-bearing: delete it and the symmetric Borda scores become +2 / +2 / -4, a TIE between a and b, and RCV-IRV flips from c to a.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [a, b, c]
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  102:a>b>c
+  101:b>c>a
+  100:c>a>b
+  1:c>b>a
+
+expected_winners:
+  - b
+
+# file: margins_paper_exact_304.yaml

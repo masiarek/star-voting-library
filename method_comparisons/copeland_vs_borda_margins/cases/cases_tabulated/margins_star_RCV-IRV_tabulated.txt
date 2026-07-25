@@ -1,0 +1,31 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Margins matter — STAR on the same twelve ballots (rank converted 5/3/0)
+ Tabulating 12 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Almond, Berry, Cocoa
+     5 ×   Almond > Berry      (5, 3, 0)
+     3 ×   Berry > Cocoa      (0, 5, 3)
+     2 ×   Cocoa > Almond      (3, 0, 5)
+     2 ×   Cocoa > Berry      (0, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Almond             5  Hopeful
+Cocoa              4  Hopeful
+Berry              3  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cocoa              7  Elected
+Almond             5  Rejected
+Berry              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cocoa
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
