@@ -43,9 +43,9 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 
 | Method | Winner | Elects the Condorcet winner? |
 |---|---|---|
-| Choose-One (Plurality) | Paul | ✗ |
-| **Borda** | **Paul** | **✗ — Condorcet's target** |
-| Approval | Paul | ✗ |
+| [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | Paul | ✗ |
+| [**Borda**](../../00_start_here/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
+| [Approval](../../00_start_here/Approval_Voting/README.md) | Paul | ✗ |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | Peter | ✓ |
 | [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) | Peter | ✓ |
 | [STAR](../../00_start_here/STAR_Voting/README.md) | Peter | ✓ |

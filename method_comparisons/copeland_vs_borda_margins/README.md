@@ -43,10 +43,10 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 
 | Method | Winner | What it is looking at |
 |---|---|---|
-| Choose-One (Plurality) | **Almond** | first choices only (5 / 3 / 4) |
+| [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | **Almond** | first choices only (5 / 3 / 4) |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | **Cocoa** | first choices, then transfers |
 | [Borda](../../00_start_here/other_ranked_methods/borda.md) | **Berry** | every margin, weighted |
-| Copeland (raw) | **nobody** — 3-way tie | who won each pair, not by how much |
+| [Copeland (raw)](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) | **nobody** — 3-way tie | who won each pair, not by how much |
 | [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) (LH) | **Berry** | Copeland, then total margin as tiebreak |
 | [STAR](../../00_start_here/STAR_Voting/README.md) (ranks → 5/3/0) | **Almond** | Borda's scoring round, then a head-to-head |
 
