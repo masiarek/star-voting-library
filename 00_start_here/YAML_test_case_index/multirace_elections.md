@@ -654,6 +654,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | RCV-IRV — the same honest preferences as ranks | IRV | 3 | **Right** |
 | Ranked Robin — the same honest preferences as ranks | RankedRobin | 3 | **Center** |
 
+## BV2249 — Weak Condorcet loser — when both STAR finalists beat nobody
+
+**Election** [`c73pfw`](https://bettervoting.com/c73pfw/results) · **3 races** · **5 ballots** · [frozen export](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| Weak Condorcet loser — STAR | STAR | 3 | **Ben** |
+| Weak Condorcet loser — Approval | Approval | 3 | **Ben** |
+| Weak Condorcet loser — Ranked Robin (Copeland) | RankedRobin | 3 | **Ada** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -3870,4 +3870,63 @@ WA_STRAT_SPEC = {
     "expected": "STAR -> Harper (Berkey 225, squeezed). Honest STAR -> Berkey (BV2231); RCV-IRV here -> Berkey.",
 }
 
-ELECTIONS: list = [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]   # BV2229-2232
+
+# --- BV2249 — Weak Condorcet loser (3 races) ---------------------------------
+# Backs method_comparisons/weak_condorcet_loser/. Five voters, three candidates.
+# Pairwise: Ada beats Ben 3-2, Ada beats Cora 3-2, Ben TIES Cora 2-2 — so Ada is
+# the Condorcet winner and BOTH Ben and Cora beat nobody (jointly weak Condorcet
+# losers; unlike a strict one, a weak one need not be unique).
+#   STAR      -> Ben  (Ada eliminated on score; Ben-Cora runoff ties 2-2, score
+#                      tiebreaker decides — rung "Runoff 1", identical in LH and BV,
+#                      so this is reproducible and does NOT reach BV's random floor)
+#   Approval  -> Ben  (5-4-3, no tie)
+#   RankedRobin -> Ada (2-0-0; Ben and Cora both 0-1-1, "Beats: —")
+# The ranked ballots carry voter 1's Ben=Cora EQUAL RANK (both rank 2) — BV
+# preserves equal ranks on creation and counts them like LH (confirmed BV2140
+# 48hjkv), which is what keeps the 2-2 pairwise tie intact on the ranked race.
+# IRV/Plurality are deliberately NOT included: both elect Ada for reasons
+# unrelated to this criterion (she leads first choices 3-2), and an equal rank is
+# an overvote under most deployed IRV rules, so a live IRV race would model
+# something real IRV does not do.
+_WCL_CANDS = ["Ada", "Ben", "Cora"]
+_WCL_STAR = [[5, 4, 4], [5, 4, 1], [5, 4, 3], [0, 3, 4], [0, 3, 4]]
+_WCL_APPR = [[1, 1, 1], [1, 1, 0], [1, 1, 1], [0, 1, 1], [0, 1, 1]]
+_WCL_RANK = [[1, 2, 2], [1, 2, 3], [1, 2, 3], [3, 2, 1], [3, 2, 1]]
+
+WCL_SPEC = {
+    "test_id": "BV2249",
+    "title": "Weak Condorcet loser \u2014 when both STAR finalists beat nobody",
+    "description": (
+        "Five voters, three candidates, and a criterion most people have never heard of. "
+        "A CONDORCET LOSER loses every head-to-head matchup. A WEAK Condorcet loser is the "
+        "ties-allowed version: they lose OR TIE every matchup \u2014 meaning they beat nobody. "
+        "Here Ada beats Ben 3-2 and beats Cora 3-2, while Ben and Cora tie each other 2-2, so "
+        "Ada is the Condorcet winner and BOTH Ben and Cora beat nobody. Ranked Robin elects "
+        "Ada. STAR and Approval both elect Ben, a weak Condorcet loser: Ada is polarizing "
+        "(three voters score her 5, two score her 0), so she is eliminated on total score "
+        "before the runoff, and the Ben-vs-Cora runoff then ties 2-2 and is settled by STAR's "
+        "score tiebreaker. The point is precise: STAR can NEVER elect a STRICT Condorcet "
+        "loser, because a strict loser loses the runoff by definition \u2014 but a tie is not a "
+        "loss, so the weak version slips through. Read it as a possibility result, not a "
+        "warning: it needs an exact pairwise tie between the two finalists, which is "
+        "vanishingly rare in any electorate large enough to matter. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/weak_condorcet_loser/README.html"
+    ),
+    "enable_write_in": False,
+    "races": [
+        {"title": "Weak Condorcet loser \u2014 STAR", "method": "STAR",
+         "num_winners": 1, "candidates": _WCL_CANDS, "ballots": _WCL_STAR},
+        {"title": "Weak Condorcet loser \u2014 Approval", "method": "Approval",
+         "num_winners": 1, "candidates": _WCL_CANDS, "ballots": _WCL_APPR},
+        {"title": "Weak Condorcet loser \u2014 Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _WCL_CANDS, "ballots": _WCL_RANK},
+    ],
+    "expected": ("STAR -> Ben (weak Condorcet loser, via the 2-2 runoff tie + score tiebreak); "
+                 "Approval -> Ben 5-4-3; Ranked Robin -> Ada (the Condorcet winner, 2-0-0). "
+                 "Test ID BV2249."),
+}
+
+
+ELECTIONS: list = [WCL_SPEC]   # BV2249 — weak Condorcet loser
+# Previously: [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]  # BV2229-2232 (created)

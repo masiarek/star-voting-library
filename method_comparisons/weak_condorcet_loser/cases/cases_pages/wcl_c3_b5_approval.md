@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Ben
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`).
+
 ## Scenario
 
 The Approval companion to wcl_c3_b5_star.yaml. Same five voters, same

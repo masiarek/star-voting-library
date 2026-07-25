@@ -35,6 +35,13 @@ scenario_description: |-
   large enough to matter. Read it as "the criterion is failed" (a possibility
   result), not as "this happens in practice."
 
+bv_test_id: BV2249
+bv_election_id: c73pfw
+bv_results_url: https://bettervoting.com/c73pfw/results
+# Live on BetterVoting as BV2249 (election c73pfw) — the STAR race of a three-race
+# election (STAR / Approval / Ranked Robin) on these same five voters.
+# Frozen export: wcl_c3_b5_star_bv_export.json (one export covers all three races).
+
 voting_method: STAR
 num_winners: 1
 

@@ -2,6 +2,8 @@
 
 *A **Condorcet loser** loses every head-to-head. A **weak Condorcet loser** is the ties-allowed version: they lose **or tie** every head-to-head — equivalently, **they beat nobody.** The gap between the two is exactly one pairwise tie, and that single word "or ties" is the difference between a criterion **STAR passes** and one it **fails**. This page defines the term and then shows it happening, on five voters you can re-run, across STAR, Ranked Robin, Approval, RCV-IRV and Plurality.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`, BV2249) — one election, **three races** on these same five voters: STAR, Approval, and Ranked Robin.
+
 → Sibling: [the Condorcet loser paradox](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) (the strict version, and a method electing one anyway) · [Condorcet topic hub](../../00_start_here/topics/condorcet/README.md) · [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md) · Glossary: [`weak Condorcet winner / weak Condorcet loser`](../../00_start_here/GLOSSARY.md).
 
 ---
@@ -120,6 +122,16 @@ So Approval doesn't so much *choose* the weak Condorcet loser as **lose the info
 Ada is the first choice of three of five voters — an outright majority — so Plurality elects her immediately and IRV never reaches a second round. Both dodge the weak Condorcet loser here, but neither is *protecting* against one; they simply happen to agree with the pairwise winner because she leads on first choices. Change the profile so Ada is many voters' second choice instead of their first and IRV squeezes her out ([center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)) — which is the far more common real-world failure.
 
 *(One engine note, carried honestly: voter 1 scored Ben and Cora equally, so converting that ballot to a strict ranking required a tiebreak, and the engine flags it. It doesn't affect these winners — Ada leads first choices 3–2 no matter how that one tie is ordered, and Ada's 2–0 pairwise record is likewise untouched — but it is exactly the [strict-vs-weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) problem: most IRV rules cannot record "these two are equal.")*
+
+## Cross-checked against BetterVoting
+
+The case is live as **BV2249** (`c73pfw`), and BetterVoting's independent tabulator agrees with the LH engine on **all three races** — winners, scores, and Copeland records. Two details in BV's own export are worth pulling out, because they corroborate this page rather than merely matching it:
+
+**BV records *which rung* broke the tie.** The STAR race's result carries `tieBreakType: "score"` — exactly the LH ladder's *Runoff 1* rung (higher total score). That matters for reproducibility: LH and BetterVoting [differ at only two rungs](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ), the 3-way scoring tie and the terminal floor, where BV shuffles **randomly** and a result can't be frozen. This election resolves well above that floor, so its winner is a function of the ballots in both engines — unlike a case that ties all the way down, which has to stay LH-only.
+
+**BV's own data says Ben beats nobody.** Each candidate in the export carries a `winsAgainst` map. In the STAR race, Ben's and Cora's are all `false` while Ada's are `true, true` — BetterVoting is independently publishing the weak-Condorcet-loser fact this page is built on. The Ranked Robin race prints it as Copeland scores: Ada **2**, Ben **0.5**, Cora **0.5** — the halves being ties, not wins.
+
+**And the Approval race confirms the ballot-blindness point.** In *that* race BV computes `winsAgainst` from the **approval** ballots — where Ben `winsAgainst` Ada is **`true`**. Same voters, same election, opposite pairwise verdict, purely because the yes/no ballot cannot record `Ada 5, Ben 4`. That is the "Approval can't even see the problem" claim above, verified by an engine that isn't ours.
 
 ## Reading this fairly
 
