@@ -16,6 +16,7 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 
 | Criterion | Approval | STAR | Ranked Robin | RCV-IRV |
 |---|:---:|:---:|:---:|:---:|
+| [**Pareto**](social_welfare_function.md) (never elects a unanimously-beaten candidate) § | [✗](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_pareto_approval.md) | ✓ | ✓ | ✓ |
 | [**Monotonicity**](monotonicity) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) |
 | [**Condorcet winner**](condorcet) (elects a beats-all candidate) | ✗ | [✗](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) | ✓ | [✗](../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | [**Condorcet loser**](../voting_paradoxes/condorcet_loser_paradox.md) (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
@@ -33,6 +34,8 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 
 **‡ Weak Condorcet loser (Ranked Robin) passes with one degenerate exception.** RR elects the candidate with the most *wins*, and a weak Condorcet loser has zero — so RR can only elect one when **every** candidate has zero wins (a total pairwise tie), where every candidate is simultaneously a weak Condorcet *winner* and *loser* and the distinction has collapsed anyway. Outside that case the pass is unconditional. Note this row is **strictly stronger** than the Condorcet-loser row above it: STAR passes that one absolutely (a strict loser always loses the runoff) and fails this one, because *a tie is not a loss* — the runoff doesn't resolve and the score tiebreaker decides. See [the worked election](../../method_comparisons/weak_condorcet_loser/).
 
+**§ Pareto is the floor, and it's the one row where Approval is the outlier.** If *every* voter prefers A to B, B must not win. Almost everything passes — it's mild enough that even a **dictatorship** passes it, which is exactly why [Arrow's conclusion](arrow_theorem_and_star.md) is devastating rather than reassuring. Approval fails, and the reason is about the *ballot*, not the count: an approval ballot cannot record a strict preference *within* the approved set, so "everyone prefers A to B" is a fact the ballots never carried ([worked: Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md)). STAR passes because the scoring round and runoff work *together* — a unanimously-preferred A always outscores B, so B reaches the runoff only against A and loses it unanimously. Ranked Robin passes because b's pairwise wins are always a subset of a's; RCV-IRV passes because a unanimously-beaten candidate holds no first preferences while their dominator survives. **Careful, though: Pareto forbids, it does not require** — [plurality](plurality.md) passes this row and still elects badly. A ✓ here is a floor, not a recommendation. Full treatment: [social welfare function](social_welfare_function.md).
+
 **† Majority favorite (Approval) is definition-dependent.** Approval fails it when voters approve candidates *beyond* their favorite (a majority can prefer A yet elect B they also approved); it passes if that majority bullet-votes A alone. Sources genuinely differ on how to score this cell — hence the flag rather than a bare mark.
 
 ## What the pattern actually says
@@ -43,7 +46,22 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 - **RCV-IRV's strengths are later-no-harm, clone independence, and the majority guarantees**; its costs are monotonicity, the Condorcet winner (center squeeze), and summability.
 - **Approval and STAR** trade expressiveness and simplicity for the majoritarian criteria; **STAR's runoff buys back Condorcet-*loser* protection** that plain Score voting lacks (a Condorcet loser can top the scores but always loses the runoff).
 
+- **The Pareto row is the one place STAR beats Approval on a *fairness axiom* rather than a majoritarian one.** Everywhere else Approval's ✗s are about majorities (majority favorite, mutual majority, Condorcet); here it fails the most basic requirement in the table, and STAR's runoff is what saves it. Worth knowing when the comparison is Approval-vs-STAR specifically.
+
 None of that ranks the methods. It tells you *which trade you're making*.
+
+## Which of these are actually Arrow's conditions? (none of the differentiating ones)
+
+A trap worth naming, because circulated criterion grids routinely blur it. **Arrow's theorem** uses exactly five: unrestricted domain, a transitive-and-complete output, **weak Pareto**, **IIA**, and non-dictatorship. Of the rows above, **only Pareto is one of them.** Monotonicity, Condorcet-efficiency, later-no-harm, participation and the rest are ordinary fairness criteria — real, but not what the impossibility theorem is about. Putting them in the same grid implies Arrow rules them out too. It doesn't.
+
+Two more axioms are missing from the table on purpose, because **all four methods pass them** and a row of four ✓s tells you nothing:
+
+- **Anonymity** — permuting *which voter* cast which ballot never changes the result (one person, one vote).
+- **Neutrality** — swapping two candidates' *names* swaps the result; no default, no incumbent bonus.
+
+They're invisible here precisely because they're uncontroversial in a single-winner election — but they are not trivial. They're the two conditions [May's Theorem](mays_theorem.md) holds fixed to prove that **at two candidates majority rule is the unique reasonable rule**, and a [supermajority threshold](mays_theorem.md) is a deliberate, common violation of neutrality. Everything in this table exists only because May's third condition — *only two alternatives* — stops holding.
+
+One last check when reading any such grid, ours included: **are the rows the same kind of object?** "Elects the Condorcet winner" is a property of a winner-picking rule; "produces a transitive ranking" is a property of a ranking-producing rule. Mixing them compares different things — see [social welfare function](social_welfare_function.md).
 
 ## Watch the failures happen (runnable)
 
