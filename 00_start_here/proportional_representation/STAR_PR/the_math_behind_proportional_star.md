@@ -30,9 +30,11 @@ The whole game: when a candidate wins, the ballots that elected them must be **p
 
 | Method (engine) | How it spends / deweights | The math it is |
 |---|---|---|
-| **Allocated Score** (`allocated`) — *Proportional STAR* | remove one **quota** of the winner's strongest ballots | quota + (fractional) surplus allocation |
-| **Sequentially Spent Score** (`sss`) | each ballot has a **budget** it spends on winners | budget / flow, surplus scaling |
-| **Reweighted Range Voting** (`rrv`) | **deweight** ballots by how satisfied they already are | D'Hondt divisor on scores |
+| [**Allocated Score**](../../../03_STAR_PR/_main/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) (`allocated`) — *Proportional STAR* | remove one **quota** of the winner's strongest ballots | quota + (fractional) surplus allocation |
+| [**Sequentially Spent Score**](../../../03_STAR_PR/_main/cases/cases_pages/02b_c5_b63_proportional-sss.md) (`sss`) | each ballot has a **budget** it spends on winners | budget / flow, surplus scaling |
+| [**Reweighted Range Voting**](../../../03_STAR_PR/_main/cases/cases_pages/02c_c5_b63_proportional-rrv.md) (`rrv`) | **deweight** ballots by how satisfied they already are | D'Hondt divisor on scores |
+
+(The three links run the **same 63 ballots** through each method — the cleanest way to see what the reweighting rule actually changes.)
 
 The key structural fact: representation has **diminishing returns** — your 2nd and 3rd winners "count less" (harmonic weights `1, ½, ⅓, …`). That **concavity** — a fancy word for *diminishing returns*, where each extra unit gives less benefit than the last — is *why* the method is proportional instead of majoritarian.
 

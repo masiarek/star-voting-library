@@ -40,11 +40,11 @@ num_winners: 3
 
 Worked examples in [`03_STAR_PR/`](../../../03_STAR_PR):
 
-- [`02a_c5_b63_proportional-allocated-score.yaml`](../../../03_STAR_PR/_main/cases/02a_c5_b63_proportional-allocated-score.yaml) — Allocated Score
-- [`02b_c5_b63_proportional-sss.yaml`](../../../03_STAR_PR/_main/cases/02b_c5_b63_proportional-sss.yaml) — SSS
-- [`02c_c5_b63_proportional-rrv.yaml`](../../../03_STAR_PR/_main/cases/02c_c5_b63_proportional-rrv.yaml) — RRV
-- [`03b_star_pr_3seats.yaml`](../../../03_STAR_PR/_main/cases/03b_star_pr_3seats.yaml) — STAR-PR vs the STV file in the same race
-- [`01_c4_b2_bloc-star-2-seats.yaml`](../../../02_STAR_Bloc/_main/cases/01_c4_b2_bloc-star-2-seats.yaml) — Bloc STAR (majoritarian contrast)
+- [Allocated Score](../../../03_STAR_PR/_main/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) — the same 63 ballots, seat by seat ([yaml](../../../03_STAR_PR/_main/cases/02a_c5_b63_proportional-allocated-score.yaml))
+- [SSS](../../../03_STAR_PR/_main/cases/cases_pages/02b_c5_b63_proportional-sss.md) — same ballots, budget-spending reweight ([yaml](../../../03_STAR_PR/_main/cases/02b_c5_b63_proportional-sss.yaml))
+- [RRV](../../../03_STAR_PR/_main/cases/cases_pages/02c_c5_b63_proportional-rrv.md) — same ballots, D'Hondt divisor ([yaml](../../../03_STAR_PR/_main/cases/02c_c5_b63_proportional-rrv.yaml))
+- [STAR-PR, 3 seats](../../../03_STAR_PR/_main/cases/cases_pages/03b_star_pr_3seats.md) — the same race as the STV file ([yaml](../../../03_STAR_PR/_main/cases/03b_star_pr_3seats.yaml))
+- [Bloc STAR, 2 seats](../../../02_STAR_Bloc/_main/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) — the majoritarian contrast ([yaml](../../../02_STAR_Bloc/_main/cases/01_c4_b2_bloc-star-2-seats.yaml))
 
 The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../stv/proportional_stv_vs_star.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
 
