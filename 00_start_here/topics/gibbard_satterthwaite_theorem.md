@@ -44,6 +44,16 @@ This is the theoretical backbone of the repo's honesty stance — **"resistant, 
 
 Those are exactly what [Voter Satisfaction Efficiency](election_simulation_models.md) simulations and the [strategic-voting analysis](strategic_voting.md) measure. Gibbard–Satterthwaite doesn't end the debate — it *starts* it correctly, by ruling out the fantasy of an unmanipulable method and forcing the argument onto *degrees* of strategy-resistance. STAR's own advocates concede the point openly; the honest case for any method has to. See [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
 
+## Allowing ties does not escape it (Duggan and Schwartz)
+
+G-S assumes every election has a **unique** winner. That looks like a loophole: could a rule that sometimes returns a *set* of tied winners be strategyproof? It's a fair question, since real methods do produce ties and need [tiebreakers](ties).
+
+**Duggan–Schwartz (2000) closes it.** For rules that may return a tied set: if the rule can elect at least three candidates and is strategyproof, then some single voter is a **nominator** — their top choice is *always* in the winning set. Not literally a dictator, but the same shape of failure, and no real method would accept it. Allowing ties buys indecisiveness, not honesty.
+
+(One genuine subtlety worth stating: "strategyproof" needs more care here, because a voter comparing two *sets* of tied winners has to be assumed to compare them somehow — optimistically, pessimistically, or by expected utility. The result holds across those readings, which is what makes it a closed door rather than a technicality.)
+
+The practical reading is the same one this repo takes everywhere: **you cannot tiebreak your way out of manipulability.** Consistent with the [Ranked Robin tiebreak analysis](../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), where Brandt, Saile & Stricker prove no anonymous, Pareto-optimal tiebreaking rule — fixed order *or* coin flip — escapes manipulability once voters may express ties.
+
 ## Relation to Arrow's theorem
 
 Arrow (1951) and Gibbard–Satterthwaite are close cousins — G-S can even be derived from Arrow. Roughly:
@@ -58,6 +68,7 @@ Two faces of the same fact — **there is no perfect voting method** — which i
 - A. Gibbard, "Manipulation of Voting Schemes: A General Result," *Econometrica* 41 (1973).
 - M. Satterthwaite, "Strategy-proofness and Arrow's Conditions," *Journal of Economic Theory* 10 (1975).
 - A. Gibbard, "Manipulation of Schemes That Mix Voting with Chance," *Econometrica* 45 (1977).
+- J. Duggan & T. Schwartz, "Strategic manipulability without resoluteness or shared beliefs: Gibbard–Satterthwaite generalized," *Social Choice and Welfare* 17 (2000), pp. 85–93 — the tied-set generalization above.
 - [Gibbard–Satterthwaite theorem (Wikipedia)](https://en.wikipedia.org/wiki/Gibbard%E2%80%93Satterthwaite_theorem) · [Gibbard's theorem (Wikipedia)](https://en.wikipedia.org/wiki/Gibbard%27s_theorem)
 
 ## Related

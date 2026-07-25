@@ -124,6 +124,16 @@
 - **The point:** **majority rule is both Paretian and IIA, and escapes Arrow only because it is not an SWF** — its output can cycle, so it isn't a ranking at all. That reframes Condorcet methods correctly: a completion like [Ranked Robin](../RCV_Ranked_Robin/) *is* an SWF, so Arrow applies in full, and the cycle-resolution rule is what costs it IIA. Patching the cycle doesn't buy an exemption.
 - **Keep it honest:** Pareto **forbids, it does not require** — plurality is Paretian and still elects poorly; and **a dictatorship is Paretian**, which is exactly why Arrow's conclusion bites. Pairs with 301.4's Arrow/Gibbard framing and with [Does Arrow apply to STAR?](../topics/arrow_theorem_and_star.md) — that page's ordinal/cardinal escape is a claim about the SWF's *domain*, and this page supplies the type it escapes from.
 
+## 301.17 — May's Theorem: why the hard part starts at three
+
+- **Objective:** meet the **positive** result the impossibility theorems are measured against, and get the fairest available framing of Choose-One voting.
+- **Key terms:** May's theorem, anonymity, neutrality, positive responsiveness, decisiveness, the two-alternative case.
+- **Page:** [May's Theorem](../topics/mays_theorem.md) — the four conditions, what giving up each one buys you, and the hinge into Arrow.
+- **The point:** with exactly two alternatives, majority rule is **provably the unique** reasonable rule — so **[FPTP](../topics/plurality.md) *is* majority rule at two candidates and cannot be improved on there.** Every spoiler, vote-split and wasted-vote pathology comes from running a two-candidate rule on three or more. That's a stronger and fairer critique than "FPTP is broken," and it reframes [two-party dominance](../topics/two_party_dominance.md) as the system being pushed back toward the only domain where it works.
+- **Read as a pair with 301.16:** *majority rule is uniquely right for two alternatives (May), and cannot be coherently extended to three ([Condorcet's paradox](../topics/condorcet/), then [Arrow](../topics/arrow_theorem_and_star.md)).* Every method in this library is a proposal for what to do about that gap.
+- **Keep it honest:** May's theorem says **nothing** about which multi-candidate method is better — its content evaporates at three. Citing it to defend a particular reform is overreach. Useful sibling fact: at two candidates STAR, RCV-IRV, Ranked Robin and Approval all collapse to majority rule.
+- **Also new here:** the **[Duggan–Schwartz theorem](../topics/gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz)** — allowing tied winners does *not* escape Gibbard–Satterthwaite. You cannot tiebreak your way out of manipulability.
+
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 201](CURRICULUM_201.md) · Next: [Voting 401 — failure modes & the safety check](CURRICULUM_401.md).*

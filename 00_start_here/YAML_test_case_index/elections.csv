@@ -44,6 +44,7 @@ ht2c3g,"BV2216 — Pineapple progression 1/3 — Choose-One elects Pineapple on 
 jfrk9t,BV655 - “equal opposition” vote - the “Same-Score Ballots” ,2,contested (multi-race),2,STAR,BV
 k3fmwv,"BV2213 — Alaska 2022 special, scaled model: STAR & Ranked Robin elect the Condorcet winner IRV cut",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 kcf8vf,"BV2134 — Pets Governance: six positions, six methods",6,contested (multi-race),22,"Approval, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
+khcwm4,BV2250 — Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from,3,contested (multi-race),11,"IRV, RankedRobin, STAR",BV
 krk2px,BV2146 — Felsenthal's runoff paradoxes (2 of 2) — more support makes the winner lose (non-monotonicity),3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 m3hb6y,"BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola",4,contested (multi-race),200,"IRV, Plurality, RankedRobin, STAR",BV
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
@@ -183,8 +184,6 @@ LH:chicken_approval,"Chicken / Burr dilemma — Approval, honest: A and B tie 60
 LH:chicken_star,Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly),1,single-race,100,STAR,LH-only
 LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
 LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
-LH:condorcet_1788_ranked_robin,"Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise",1,single-race,11,RankedRobin,LH-only
-LH:condorcet_1788_star,Condorcet's 1788 rebuttal to Borda — STAR elects the Condorcet winner,1,single-race,11,STAR,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
 LH:cycle_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",1,single-race,15,STAR,LH-only
 LH:cycle_C03_fewV15_noise_2,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",1,single-race,15,STAR,LH-only

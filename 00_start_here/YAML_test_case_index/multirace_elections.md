@@ -664,6 +664,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | Weak Condorcet loser — Approval | Approval | 3 | **Ben** |
 | Weak Condorcet loser — Ranked Robin (Copeland) | RankedRobin | 3 | **Ada** |
 
+## BV2250 — Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from
+
+**Election** [`khcwm4`](https://bettervoting.com/khcwm4/results) · **3 races** · **11 ballots** · [frozen export](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_star_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2250 — Condorcet 1788 — STAR (the runoff overturns Borda's winner) | STAR | 3 | **Peter** |
+| BV2250 — Condorcet 1788 — Ranked Robin (Copeland) | RankedRobin | 3 | **Peter** |
+| BV2250 — Condorcet 1788 — RCV-IRV (agrees here) | IRV | 3 | **Peter** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
