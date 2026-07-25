@@ -2,6 +2,8 @@
 
 *The **Majority Judgment (MJ)** procedure (Balinski & Laraki): voters grade every candidate on a common ordinal scale; the highest **median** grade wins, with an iterative tie-breaking algorithm when medians match.* Felsenthal lists MJ as vulnerable to the Condorcet Winner, Condorcet Loser, Absolute Winner, Absolute Loser, Truncation, Reinforcement, No-Show, and Twin paradoxes — the longest list of any procedure in the appendix except successive elimination. Like Range Voting, most of them need only **two candidates**. MJ has no tabulator on BetterVoting or in the LH engine, so §A9 stays on paper. In each table below, **later letters are higher grades**.
 
+→ **The case *for* the method, and the argument underneath it:** [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — Balinski & Laraki's claim that the preference *order* is the wrong primitive, the common-language-of-grades move that buys interpersonal comparability, the Orsay 2007 field experiment, and the 2026 study that tests the premise and rejects it. Read the case for before the paradoxes below.
+
 **Sources:** Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A9 — drawing on **Felsenthal & Machover (2008)**, *"The Majority Judgement voting procedure: a critical evaluation"* (the paper that discusses MJ's paradoxes at length). Balinski & Laraki's *Majority Judgment* (2011) is the case *for* the method — see the [books list](../../method_comparisons/paradoxes_and_whoops/README.md).
 
 ## Example 25 — the absolute winner loses (Felsenthal & Machover 2008: 330)

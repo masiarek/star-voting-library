@@ -88,6 +88,8 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 - [The ranked ballot](ranked_ballot.md) · [the score ballot](score_ballot.md) — one anatomy page per ballot type
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — equal ranks & pairwise comparison: which ranked methods allow them (IRV doesn't)
 - [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md) — why Approval & STAR sit *outside* the RCV family
+- [Grading as a rival primitive (301)](grading_as_a_rival_primitive.md) — Balinski & Laraki argue the preference *order* is the wrong primitive, not merely a lossy one
+- [Distortion (301)](../topics/distortion.md) — what the ordinal restriction costs, with theorems: the price of rankings is a factor of 3 in the realistic model, quadratic in the adversarial one
 - [Is RCV "simple"? (201)](../RCV_IRV/RCV_IRV_is_simple.md) — the five-star mental model vs. ordering strangers
 - [Tabulation, step by step](../topics/tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
 - [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — how order-only ballots can bury a strong compromise candidate
