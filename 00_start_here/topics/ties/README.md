@@ -21,6 +21,8 @@ Runnable tie cases (flat-score ballots engineered to tie) live in [`Flat_scores_
 
 **Why the contrived cases?** [Why Build "Silly" Tie Elections?](why_contrived_tie_cases.md) — the value of deliberately-degenerate probes (`5,5,5 / 4,4,4`, rotations), plus a flow-chart map of every single-winner STAR tie case and the test that covers it.
 
+**Why ties exist at all:** [Ties Are Forced](ties_are_forced.md) — the small impossibility theorem (Moulin 1983) proving that anonymity + neutrality + Pareto cannot coexist with always naming one winner, and that **every even electorate has a forced tie**. It supplies the theory the rest of this hub assumes: the four ways out, what each one costs, and why LH (fixed lot order), BetterVoting (random) and `pref_voting` (returns the tied set) are three defensible answers to a choice the theorem makes unavoidable.
+
 Glossary: [`lot numbers`](../../GLOSSARY.md) · [`dead rung`](../../GLOSSARY.md).
 
 ---

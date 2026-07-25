@@ -17,6 +17,8 @@ Two alternatives, `x` and `y`. Each voter reports a preference for `x`, a prefer
 
 May proved these conditions **independent** — drop any one and majority rule is no longer unique. That's the point of his title.
 
+**Why the fourth condition is the strong one.** Plain [monotonicity](monotonicity) is enough to exclude the frankly perverse — *elect whichever alternative receives an odd number of votes* is the textbook specimen it kills. **Positive responsiveness does strictly more: it also breaks every tie that isn't mathematically forced.** With an odd number of voters that's enough to make majority rule *resolute* — it always names one winner. With an even number it isn't, and can't be: the 50/50 split is a tie no axiom can dissolve. That single exception is the two-candidate face of a general result — **no anonymous, neutral, Pareto rule is resolute on an even electorate** — worked out in [Ties Are Forced](ties/ties_are_forced.md).
+
 ## What each condition rules out
 
 The conditions are worth reading as a list of things you *could* build, and why you generally don't:
@@ -29,6 +31,8 @@ The conditions are worth reading as a list of things you *could* build, and why 
 | **Decisiveness** | a rule that sometimes returns "no decision" | occasionally honest |
 
 The neutrality row is the interesting one. **A ⅔ threshold to amend a constitution is not neutral** — it privileges the status quo by construction. That isn't a bug someone failed to notice; it's the entire purpose. May's Theorem is what lets you name the price precisely: a supermajority rule buys status-quo protection and pays for it in neutrality, and nothing else about majority rule needs to change. Being able to state the trade exactly is more useful than arguing about whether supermajorities are "fair."
+
+**Legislatures break both axioms routinely, and mean to.** A chamber voting `{yes, no}` on a bill is running a two-alternative rule, so May applies directly — and real legislative rules fail his conditions on purpose. Any status-quo bias (a supermajority to amend, a filibuster, a veto override bar) is a **neutrality** failure. A **bicameral** legislature is an **anonymity** failure: a senator's vote is not interchangeable with a representative's, because passage requires both chambers. So "this rule violates May's conditions" is a description, not an indictment. The axioms are how you *name* a design choice, not a test it has to pass.
 
 ## Why this reframes Choose-One fairly
 

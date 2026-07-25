@@ -125,6 +125,8 @@ Ranked Robin's tie here has the shape of [the three-way dead rung](../../01_STAR
 
 So the tilt is doing double duty: it is what lets maximin separate the candidates, *and* it is what lets Ranked Robin finish deterministically instead of falling to a coin. The dead rung is real but shallow.
 
+**And there's a theorem under that table.** The six-voter tie isn't merely deeper — it is **mathematically forced**: no anonymous, neutral, Pareto rule can name a single winner whenever the voter count `n` has a divisor `r` with `1 < r ≤ m` candidates (Moulin, 1983). At `n = 6, m = 3` both 2 and 3 qualify, so *every* defensible rule ties there and the lot isn't a shortcut — it's the only thing left. At **`n = 5, m = 3` nothing is forced** (5 is prime and exceeds 3), which is exactly why five voters is the interesting number: the ballots still carry an asymmetry, and a rule that *can't* find it is discarding information rather than running out of it. That's the difference between the dead margin row and the live one. Full treatment: [Ties Are Forced](../../00_start_here/topics/ties/ties_are_forced.md).
+
 ## Why this case is LH-only
 
 No BetterVoting election backs it, deliberately. A Copeland three-way tie is precisely the case where [BV breaks the tie at **random**](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) (head-to-head, then random) while LH breaks it by margin, then lot. A random BV result cannot be frozen into a stable teaching artifact, so minting a permanent public election here would produce an unreproducible page. The [tie-break divergence page](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) covers that difference on its own terms.

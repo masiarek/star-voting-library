@@ -28,6 +28,9 @@ Because there are two types of object, each axiom has two readings. Conflating t
 - **SWF (weak Pareto):** if `a ≻ᵢ b` for *every* voter `i`, then `a ≻ b` in the social ranking.
 - **SCF (Pareto criterion):** if every voter prefers `a` to `b`, then `b` is not elected. A candidate is **Pareto optimal** if no rival is unanimously preferred over them.
 - **Strong Pareto:** all weakly prefer `a`, at least one strictly ⟹ `a ≻ b`. Arrow only needs the weak form — assuming *less* makes the theorem *stronger*.
+- **Nonimposition** is the weakest relative in the family: no candidate is *unelectable* (for every candidate there's some profile that elects them outright). **Pareto implies nonimposition** — a unanimously top-ranked candidate must win — so it's rarely assumed separately.
+
+**Why a criterion this weak is worth stating at all** is clearest from the rule it excludes. Consider **reverse Borda**: elect whoever has the **lowest** Borda count. It is perfectly anonymous and perfectly neutral — the two axioms people reach for first — and it is transparently backwards. Nothing but Pareto rules it out. That's the honest job description: Pareto doesn't identify good winners, it excludes rules that are *inverted*. Which is also why passing it proves so little (see [below](#the-asymmetry-that-keeps-pareto-from-being-oversold)).
 
 **Independence of Irrelevant Alternatives (IIA):** the social ranking of `a` vs `b` depends only on how individuals rank `a` vs `b` — never on where anyone puts a third candidate `c`. Violating this is precisely the [spoiler effect](spoiler_effect.md).
 
@@ -70,6 +73,8 @@ A short list, because "fails Pareto" sounds worse than it usually is — most me
 **Why Approval fails and STAR doesn't** is the instructive pair, and it's a ballot-expressiveness point, not a tabulation one. An approval ballot cannot record a strict preference *within* the approved set, so "every voter prefers A to C" is a fact the ballots never carried and the count cannot honor.
 
 STAR passes, and the argument is short. If every voter scores `a` strictly above `b`, then `a`'s score total strictly exceeds `b`'s — so `b` can only reach the runoff alongside `a`, and there every voter prefers `a`. `b` never wins. Note this leans on the [scoring round](../STAR_Voting/the_count/) and the runoff *together*: the runoff alone wouldn't do it.
+
+**Don't run this row on a multi-winner rule — it's a type error.** Every table above is about a **single-winner** SCF. Apply the same definition candidate-by-candidate to a committee election and every bloc rule "fails" trivially: [Bloc STAR, Bloc Approval, Bloc Ranked Robin and SNTV](electing_more_than_one.md) must fill `N` seats, so if fewer than `N` candidates are Pareto optimal, one of the seated candidates is necessarily dominated. Zwicker gives the crisp specimen — seat candidates in descending [Copeland](../RCV_Ranked_Robin/ranked_robin.md) order until the committee is full, which is exactly what this repo's Bloc RR does — and immediately supplies the correction: for a committee election the *alternatives* are **committees**, not candidates, so a committee-level Pareto criterion is the one that applies. The apparent failure is an artifact of comparing objects of the wrong type — the same trap this page opens with, one level up.
 
 ## Two senses of "social welfare" — don't cross them
 

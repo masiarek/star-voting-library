@@ -134,6 +134,16 @@
 - **Keep it honest:** May's theorem says **nothing** about which multi-candidate method is better — its content evaporates at three. Citing it to defend a particular reform is overreach. Useful sibling fact: at two candidates STAR, RCV-IRV, Ranked Robin and Approval all collapse to majority rule.
 - **Also new here:** the **[Duggan–Schwartz theorem](../topics/gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz)** — allowing tied winners does *not* escape Gibbard–Satterthwaite. You cannot tiebreak your way out of manipulability.
 
+## 301.18 — Ties are forced (the small impossibility theorem)
+
+- **Objective:** stop treating ties as an engineering wart. Learn the theorem that makes them unavoidable, the arithmetic that says exactly *when*, and the four-way menu every real system has to pick from.
+- **Key terms:** resolute / irresolute SCF, nonimposition, reverse Borda, Moulin's proposition, the `P₄` rotation profile, set extension principle.
+- **Page:** [Ties Are Forced](../topics/ties/ties_are_forced.md) — the theorem, the witness profile (which this repo already runs), the four ways out and what each costs.
+- **The point:** **anonymity + neutrality + Pareto are incompatible with always naming one winner** whenever the voter count `n` has a divisor `r` with `1 < r ≤ m` candidates (Moulin, 1983). Restated: *ties are forced exactly when the smallest prime factor of `n` is at most `m`* — so **every even electorate has a forced tie**, for any number of candidates. The design question was never "how do we avoid ties," it's "which axiom do we spend."
+- **The repo payoff:** the three engines here have each already answered it differently — **LH** breaks ties by a pre-published lot order (spends **neutrality**), **BetterVoting** breaks them at **random** (spends **determinism**, which is why a random BV tie can't be frozen into an export), and **`pref_voting`** returns the whole tied **leader set** (spends decisiveness, and by [Duggan–Schwartz](../topics/gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz) buys no strategyproofness for it). The [LH-vs-BV divergence](../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) is three defensible answers to a forced choice, not a bug. And the "contrived" [tie probes](../topics/ties/why_contrived_tie_cases.md) turn out to be the theorem's own witness profile.
+- **Keep it honest:** "forced" means *some* profile ties, **not** that ties are likely — exact ties stay astronomically rare in large electorates, and the theorem ranks no method above another (all are caught). It also costs only **resoluteness**, which has four known workarounds; do not cite it as though it were [Arrow](../topics/arrow_theorem_and_star.md). Note too that the proposition is stated for **ordinal** rules — what carries over to STAR's score ballot is the *symmetry argument*, not the proposition itself.
+- **Read with 301.17:** May's **positive responsiveness** breaks every tie that isn't forced, which is why majority rule is resolute on an *odd* electorate and cannot be on an even one. The 50/50 split is this theorem's two-candidate face.
+
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 201](CURRICULUM_201.md) · Next: [Voting 401 — failure modes & the safety check](CURRICULUM_401.md).*
