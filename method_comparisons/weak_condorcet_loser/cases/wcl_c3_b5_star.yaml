@@ -1,0 +1,64 @@
+election_title: Weak Condorcet loser — STAR elects a candidate who beats nobody
+scenario_description: |-
+  Five voters, three candidates: Ada, Ben, Cora.
+
+  A CONDORCET LOSER loses every head-to-head. A WEAK Condorcet loser is the
+  ties-allowed version: they lose OR TIE every head-to-head — that is, they
+  BEAT NOBODY. Every strict Condorcet loser is a weak one; the converse fails,
+  and the gap between the two is exactly one pairwise tie.
+
+  Here the pairwise results are:
+    Ada beats Ben  3-2      Ada beats Cora 3-2      Ben ties Cora 2-2
+  So Ada is the (strict) Condorcet winner, and BOTH Ben and Cora beat nobody —
+  they are jointly weak Condorcet losers. Note the non-uniqueness: unlike a
+  strict Condorcet loser, a weak one need not be alone.
+
+  Scoring Round: Ben 18, Cora 16, Ada 15. Ada is polarizing — three voters give
+  her a 5 and two give her a 0 — so the broadly-acceptable pair advances and the
+  Condorcet winner is eliminated before the runoff.
+
+  Automatic Runoff: Ben vs Cora is the 2-2 pairwise TIE (one voter scored both
+  4, so they are Equal Support). STAR's first tiebreaker is the higher score,
+  and Ben wins it.
+
+  The result: STAR elects Ben, a weak Condorcet loser. And it had no choice —
+  BOTH finalists beat nobody, so whichever won the tiebreak was going to be one.
+
+  Why this cannot happen with a STRICT Condorcet loser: a strict loser loses the
+  runoff to the other finalist by definition, so STAR can never elect one. The
+  weak version slips through precisely because a TIE is not a loss, and a tie
+  hands the decision to the tiebreaker instead. That single word — "or ties" —
+  is the whole difference between a criterion STAR passes and one it fails.
+
+  Honest framing: this is a knife-edge construction. It needs an exact pairwise
+  tie between the two finalists, which is vanishingly rare in any electorate
+  large enough to matter. Read it as "the criterion is failed" (a possibility
+  result), not as "this happens in practice."
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false   # the full grid IS the lesson — you must see all three pairings
+  show_condorcet: true           # names Ada, and says STAR elected someone else
+  show_score_counts: false
+  show_irv: true                 # RR / IRV / Plurality all elect Ada; STAR is the outlier
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false        # five distinct teaching ballots, one row per voter
+  count_separator: "×"
+
+ballots: |-
+  Ada,Ben,Cora
+  5,4,4   # loves Ada; Ben and Cora equally acceptable -> Equal Support in the runoff
+  5,4,1   # loves Ada, tolerates Ben, dislikes Cora
+  5,4,3   # loves Ada, tolerates Ben and Cora
+  0,3,4   # rejects Ada, prefers Cora over Ben
+  0,3,4   # rejects Ada, prefers Cora over Ben
+
+expected_winners:
+  - Ben
+
+# file: wcl_c3_b5_star.yaml

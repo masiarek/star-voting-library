@@ -19,6 +19,7 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 | [**Monotonicity**](monotonicity) (raising a candidate can't hurt them) | ✓ | ✓ | ✓ | [✗](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) |
 | [**Condorcet winner**](condorcet) (elects a beats-all candidate) | ✗ | [✗](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) | ✓ | [✗](../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | [**Condorcet loser**](../voting_paradoxes/condorcet_loser_paradox.md) (never elects a loses-to-all candidate) | ✗ | ✓ | ✓ | ✓ |
+| [**Weak Condorcet loser**](../../method_comparisons/weak_condorcet_loser/) (never elects a beats-*nobody* candidate) | [✗](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_approval.md) | [✗](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | ✓ ‡ | ✓ |
 | [**Majority favorite**](majority_criterion) (a majority's 1st choice wins) | ✗ † | [✗](../../01_STAR/majority_criterion) | ✓ | ✓ |
 | [**Mutual majority**](../GLOSSARY.md) | ✗ | ✗ | ✓ | ✓ |
 | [**Participation**](participation) (showing up can't backfire) | ✓ | [✗](../../method_comparisons/participation_no_show) | ✗ | [✗](../../method_comparisons/participation_no_show) |
@@ -29,6 +30,8 @@ Each **criterion name** links to an explanation of that criterion; where a cell'
 | [**Summable**](summability) (precinct subtotals; easy audit) | ✓ | ✓ | ✓ | [✗](../STAR_Voting/properties_and_limits/STAR_summability.md) |
 
 *(Ranked Robin = the repo's Copeland-based Condorcet method. "RCV-IRV" = ranked ballots counted by instant runoff.)*
+
+**‡ Weak Condorcet loser (Ranked Robin) passes with one degenerate exception.** RR elects the candidate with the most *wins*, and a weak Condorcet loser has zero — so RR can only elect one when **every** candidate has zero wins (a total pairwise tie), where every candidate is simultaneously a weak Condorcet *winner* and *loser* and the distinction has collapsed anyway. Outside that case the pass is unconditional. Note this row is **strictly stronger** than the Condorcet-loser row above it: STAR passes that one absolutely (a strict loser always loses the runoff) and fails this one, because *a tie is not a loss* — the runoff doesn't resolve and the score tiebreaker decides. See [the worked election](../../method_comparisons/weak_condorcet_loser/).
 
 **† Majority favorite (Approval) is definition-dependent.** Approval fails it when voters approve candidates *beyond* their favorite (a majority can prefer A yet elect B they also approved); it passes if that majority bullet-votes A alone. Sources genuinely differ on how to score this cell — hence the flag rather than a bare mark.
 

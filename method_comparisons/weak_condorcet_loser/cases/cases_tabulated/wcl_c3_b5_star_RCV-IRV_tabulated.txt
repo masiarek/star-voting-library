@@ -1,0 +1,24 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Weak Condorcet loser — STAR elects a candidate who beats nobody
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Ben, Cora
+     1 ×   Ada > Ben > Cora      (5, 4, 4)
+     1 ×   Ada > Ben > Cora      (5, 4, 1)
+     1 ×   Ada > Ben > Cora      (5, 4, 3)
+     2 ×   Cora > Ben      (0, 3, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ada                3  Elected
+Cora               2  Rejected
+Ben                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ada
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
