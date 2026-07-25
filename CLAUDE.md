@@ -213,6 +213,23 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   false` — don't flip it). Local preview: `uvx --with mkdocs-same-dir --with
   "mkdocs-material>=9.5" mkdocs serve`. `site/` is generated output — never commit.
   Details + known nits: `00_start_here/about_this_repo/website_build.md`.
+- **Companion repo — research-paper topics live OUTSIDE this repo.**
+  <https://github.com/masiarek/star-voting-research-topics> (**private**) holds the
+  vetted research-paper prospectuses that use this library as their reproducibility
+  artifact — one `topics/NN_<slug>.md` per topic, plus a `README.md` slate table.
+  Each topic page follows a fixed structure: status/venues/supporting-library header,
+  Abstract, Research question, Methodology, Literature gap and closest prior work,
+  Cautions and framing corrections, Supporting assets in star-voting-library (links
+  into *this* repo at `blob/master/…`), Execution sketch. Topics 1–5 were produced by
+  a 12-agent workflow (2026-07-24) and each passed a five-agent **adversarial novelty
+  check**; anything added later must state its vetting level honestly rather than
+  inherit that badge (topic 6, the metric distortion of STAR, carries a *preliminary*
+  check and says so in four places). **Don't search this repo for research topics —
+  they aren't here**; clone the companion, match the house structure, update the
+  README slate table, and keep the two repos pointing at each other. Working the
+  other direction: when a teaching page states an open gap in print (as
+  `topics/distortion.md` does for STAR's missing distortion bound), that's exactly
+  the raw material for a new topic page.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by
