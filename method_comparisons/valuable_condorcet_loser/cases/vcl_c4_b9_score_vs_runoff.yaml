@@ -1,0 +1,56 @@
+title: The valuable Condorcet loser — Score elects her, the runoff rejects her
+voting_method: STAR
+num_winners: 1
+
+scenario_description: |
+  The "valuable Condorcet loser" instance from Ebadian, Latifian & Shah,
+  "The Distortion of Approval Voting with Runoff" (AAMAS 2023, Example 5.1),
+  scaled down to nine countable ballots. Amy is adored by a 4-voter minority
+  (5s across the board) and scored zero by the 5-voter majority, who spread
+  mild support over Ben, Cora, and Dan. Amy has nearly DOUBLE anyone else's
+  score total (20 vs 11) — she is the utilitarian (Score-voting) winner —
+  and she is simultaneously the CONDORCET LOSER: head-to-head she loses to
+  every rival 4:5. Any method with a majority runoff (STAR here; approval-
+  with-runoff in the paper; St. Louis-style top-two) therefore rejects her:
+  she reaches the STAR runoff on her score total and loses it 4:5 to Ben,
+  the Condorcet winner. In the paper's unit-sum worst case this scenario is
+  exactly why ADDING a majority runoff RAISES approval voting's distortion
+  from Theta(m) to Theta(m^2): the runoff structurally blocks the high-
+  welfare candidate. One election, two defensible verdicts — the
+  majoritarian one (Ben) and the utilitarian one (Amy) — and which is
+  "right" is the values question, not arithmetic.
+
+video_script: |
+  Lead with the score bars: Amy 20, Ben 11 — landslide. Then the runoff:
+  Ben 5, Amy 4 — reversal. Pause on "both counts are correct." Then the
+  paper's point: a runoff is a majority check, and a majority check is
+  precisely what a beloved-minority candidate can never pass, no matter
+  how much total happiness she represents.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Amy,Ben,Cora,Dan
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  5,0,0,0
+  0,2,2,2
+  0,2,2,2
+  0,2,2,2
+  0,2,2,2
+  0,3,2,1
+
+expected_winners: [Ben]
+
+# file: vcl_c4_b9_score_vs_runoff.yaml

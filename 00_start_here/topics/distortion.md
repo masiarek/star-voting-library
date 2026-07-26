@@ -114,7 +114,7 @@ Read all of it the repo's way ([severity × frequency](../../method_comparisons/
 
 ## Does STAR's runoff change the math? (Yes — it's where the lemma plugs in)
 
-STAR isn't in the tables because its ballot is **cardinal** — the framework analyzes rules that see only rankings, so it doesn't directly score STAR at all. **No unconditional worst-case distortion number for STAR exists in this literature; don't quote one.** The nearest published relative is [*The Distortion of Approval Voting with Runoff*](https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1752.pdf) (Ebadian et al., AAMAS 2023) — same score-then-runoff shape, cruder ballot. **That's a real, citable open gap**, and a good candidate for the kind of runnable follow-up this library is for.
+STAR isn't in the tables because its ballot is **cardinal** — the framework analyzes rules that see only rankings, so it doesn't directly score STAR at all. **No unconditional worst-case distortion number for STAR exists in this literature; don't quote one.** The nearest published relative is [*The Distortion of Approval Voting with Runoff*](https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1752.pdf) (Ebadian et al., AAMAS 2023) — same score-then-runoff shape, cruder ballot. **That's a real, citable open gap.** That paper now has a [runnable companion in this library](../../method_comparisons/valuable_condorcet_loser/), and its headline is the *unit-sum mirror image* of the metric insurance worked below: there, adding a majority runoff makes approval voting's distortion **worse** — Θ(m) → Θ(m²) — because a majority check structurally blocks the *valuable Condorcet loser*, the beloved-of-a-minority candidate with the highest welfare in the race (their Example 5.1, counted on nine ballots in the companion). Majority runoff = liability in the unit-sum model, insurance in the metric one; both are theorems, and the model decides.
 
 What *can* be said rigorously is conditional, and the machinery maps onto STAR's two rounds surprisingly cleanly:
 
@@ -185,7 +185,7 @@ Don't say *"academics have shown scores are better"* — Approval's unbounded di
 - Gkatzelis, Halpern & Shah, [*Resolving the Optimal Metric Distortion Conjecture*](https://arxiv.org/abs/2004.07447) (FOCS 2020) — distortion 3, achieved.
 - Kizilkaya & Kempe, [*Plurality Veto: A Simple Voting Rule Achieving Optimal Metric Distortion*](https://arxiv.org/abs/2206.07098) (IJCAI 2022).
 - Amanatidis, Birmpas, Filos-Ratsikas & Voudouris, [*Peeking Behind the Ordinal Curtain: Improving Distortion via Cardinal Queries*](https://arxiv.org/abs/1907.08165) (AIJ 2021) — the query results.
-- Ebadian et al., [*The Distortion of Approval Voting with Runoff*](https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1752.pdf) (AAMAS 2023) — the closest published analogue to STAR's shape.
+- Ebadian et al., [*The Distortion of Approval Voting with Runoff*](https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1752.pdf) (AAMAS 2023) — the closest published analogue to STAR's shape; runnable companion: [the valuable Condorcet loser, counted](../../method_comparisons/valuable_condorcet_loser/).
 
 **Lean disclosure:** this is peer-reviewed CS/economics with no stake in the US reform fight — the most neutral tier available on this question, and unusually so for voting-method material. Its blind spot is the opposite of advocacy's: it optimizes worst cases over models chosen for tractability, and says nothing about ballot usability, spoilage, or whether voters can actually fill the thing in.
 
