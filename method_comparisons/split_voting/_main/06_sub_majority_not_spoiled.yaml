@@ -1,0 +1,48 @@
+election_title: A 41% winner that nothing spoiled — sub-majority is not the same as split
+scenario_description: |-
+  The counter-example to the "winner under 50% = vote split election" test.
+
+  44 residents pick the tree for the new Main Street: Aspen, Birch, Cedar.
+  Under Choose-One the first choices are Aspen 18 (41%), Birch 14, Cedar 12.
+  The winner is well under half, and the two losers combined (26) are a
+  majority — so by the usual screening rule this race counts as a "vote split
+  election."
+
+  But read the whole ballot and nothing was split at all. Aspen leads the
+  scoring round (180), wins the automatic runoff over Birch 30-14, beats BOTH
+  rivals head-to-head (the Condorcet winner), and also wins under RCV-IRV once
+  Cedar's ballots transfer. Every method agrees: Aspen is the majority's
+  genuine choice, who simply led a three-way field without clearing 50% of
+  FIRST choices.
+
+  The lesson: a sub-majority plurality winner means the race was EXPOSED to
+  vote splitting, not that vote splitting changed the outcome. Telling the two
+  apart needs preference data — exactly what a one-mark ballot never collects.
+  Compare 01_political_left_split.yaml, where the same 41%-ish arithmetic DOES
+  hide a flipped result.
+
+options:
+  show_description: false   # show the scenario context on screen (study/reference)
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: false   # full N×N grid — the lesson is that Aspen beats BOTH rivals
+  show_condorcet: true   # the sub-majority winner IS the Condorcet winner
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: true   # [Divergence from STAR] — silent here, because RCV-IRV agrees (Aspen 18 -> 30)
+  show_runoff_percent: true   # self-reconciling runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Count:Aspen,Birch,Cedar
+  18:5,4,0   # Aspen first, Birch a close second
+  14:3,5,1   # Birch first, Aspen acceptable
+  12:4,0,5   # Cedar first, Aspen the clear second
+
+expected_winners:
+  - Aspen
+
+# file: 06_sub_majority_not_spoiled.yaml

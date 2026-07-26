@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **209** single-winner STAR elections (skipped 148 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **124** (59%) diverge from STAR under at least one method; **85** agree across the board.
+- Scanned **213** single-winner STAR elections (skipped 152 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **125** (59%) diverge from STAR under at least one method; **88** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 28 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 8 |
-| CYCLE_OR_THREE_WAY | 36 |
+| CYCLE_OR_THREE_WAY | 37 |
 | APPROVAL_OR_MINOR | 43 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (121 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (122 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -146,7 +146,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
 
-### CYCLE_OR_THREE_WAY — 34
+### CYCLE_OR_THREE_WAY — 35
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -224,6 +224,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=none
 - **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
+- **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
+    STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
 ### APPROVAL_OR_MINOR — 43
 

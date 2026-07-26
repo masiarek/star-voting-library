@@ -1,0 +1,133 @@
+======================================================================
+SOURCE FILE:     06_sub_majority_not_spoiled.yaml
+TABULATED FILE:  06_sub_majority_not_spoiled_tabulated.txt
+======================================================================
+
+election_title: A 41% winner that nothing spoiled — sub-majority is not the same as split
+scenario_description: |-
+  The counter-example to the "winner under 50% = vote split election" test.
+
+  44 residents pick the tree for the new Main Street: Aspen, Birch, Cedar.
+  Under Choose-One the first choices are Aspen 18 (41%), Birch 14, Cedar 12.
+  The winner is well under half, and the two losers combined (26) are a
+  majority — so by the usual screening rule this race counts as a "vote split
+  election."
+
+  But read the whole ballot and nothing was split at all. Aspen leads the
+  scoring round (180), wins the automatic runoff over Birch 30-14, beats BOTH
+  rivals head-to-head (the Condorcet winner), and also wins under RCV-IRV once
+  Cedar's ballots transfer. Every method agrees: Aspen is the majority's
+  genuine choice, who simply led a three-way field without clearing 50% of
+  FIRST choices.
+
+  The lesson: a sub-majority plurality winner means the race was EXPOSED to
+  vote splitting, not that vote splitting changed the outcome. Telling the two
+  apart needs preference data — exactly what a one-mark ballot never collects.
+  Compare 01_political_left_split.yaml, where the same 41%-ish arithmetic DOES
+  hide a flipped result.
+
+options:
+  show_description: false   # show the scenario context on screen (study/reference)
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: false   # full N×N grid — the lesson is that Aspen beats BOTH rivals
+  show_condorcet: true   # the sub-majority winner IS the Condorcet winner
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: true   # show RCV-IRV agreeing too
+  show_runoff_percent: true   # self-reconciling runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Count:Aspen,Birch,Cedar
+  18:5,4,0   # Aspen first, Birch a close second
+  14:3,5,1   # Birch first, Aspen acceptable
+  12:4,0,5   # Cedar first, Aspen the clear second
+
+expected_winners:
+  - Aspen
+
+# file: 06_sub_majority_not_spoiled.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== A 41% winner that nothing spoiled — sub-majority is not the same as split ===
+  The counter-example to the "winner under 50% = vote split election" test.
+
+  44 residents pick the tree for the new Main Street: Aspen, Birch, Cedar.
+  Under Choose-One the first choices are Aspen 18 (41%), Birch 14, Cedar 12.
+  The winner is well under half, and the two losers combined (26) are a
+  majority — so by the usual screening rule this race counts as a "vote split
+  election."
+
+  But read the whole ballot and nothing was split at all. Aspen leads the
+  scoring round (180), wins the automatic runoff over Birch 30-14, beats BOTH
+  rivals head-to-head (the Condorcet winner), and also wins under RCV-IRV once
+  Cedar's ballots transfer. Every method agrees: Aspen is the majority's
+  genuine choice, who simply led a three-way field without clearing 50% of
+  FIRST choices.
+
+  The lesson: a sub-majority plurality winner means the race was EXPOSED to
+  vote splitting, not that vote splitting changed the outcome. Telling the two
+  apart needs preference data — exactly what a one-mark ballot never collects.
+  Compare 01_political_left_split.yaml, where the same 41%-ish arithmetic DOES
+  hide a flipped result.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Aspen    |  * Birch    |    Cedar    |
+-------------------------------------------------------------
+       * Aspen > |     ---      |30 -  0 - 14 |32 -  0 - 12 |
+       * Birch > | 14 -  0 - 30 |    ---      |32 -  0 - 12 |
+         Cedar > | 12 -  0 - 32 |12 -  0 - 32 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Aspen — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Cedar — loses every head-to-head matchup
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 44 ballots.
+Count × Aspen,Birch,Cedar
+   18 ×     5,    4,    0
+   14 ×     3,    5,    1
+   12 ×     4,    0,    5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Aspen      18  12  14   0   0   0  |   180   4.1
+Birch      14  18   0   0   0  12  |   142   3.2
+Cedar      12   0   0   0  14  18  |    74   1.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Aspen         -- 180 -- First place
+   Birch         -- 142 -- Second place
+   Cedar         --  74
+ Aspen and Birch advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Aspen         -- 30 -- First place
+   Birch         -- 14
+   Equal Support --  0
+ Aspen wins.
+   Runoff math:
+     44  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     44  voters with a preference  (majority = 23)
+           Aspen 30 (68%)  ·  Birch 14 (32%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Aspen

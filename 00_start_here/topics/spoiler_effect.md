@@ -2,7 +2,7 @@
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md)
 
 ---
 
@@ -25,6 +25,12 @@ The spoiler comes from **vote splitting** — similar candidates sharing one poo
 | **[Ranked Robin / RCV-RR](../RCV_Ranked_Robin/ranked_robin.md)** | Reads the whole ballot and elects the head-to-head (Condorcet) winner — no elimination rounds, so no vote splitting or center squeeze. Only a rare **Condorcet cycle** can produce a spoiler. |
 | **[Approval](../Approval_Voting/approval_voting.md)** | Approve *both* similar candidates — they no longer split, since a supporter can back all of them. |
 | **[Score / Range](../Range_Voting/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md)** | Score each candidate independently, so running an ally doesn't bleed your support. STAR adds a majoritarian runoff on top. |
+
+## How often is the setup there?
+
+**Constantly.** Of all 5,662 US national primaries in 2022 — congressional, statewide, state legislative — about **11.9%** had multiple candidates and a winner without a majority, meaning the losing candidates' voters together outnumbered the winner's ([Center for Election Science, *America (Mis)Represented*](https://electionscience.org/research-hub/2022-america-(mis)represented-report)). That is the exact configuration a spoiler needs.
+
+It is *not*, however, a count of spoiled elections — a sub-majority winner can still be the candidate a majority genuinely prefers, and under a one-mark ballot there is no way to tell which case you're in. Both readings, and two runnable counter-examples, are in [How often does vote splitting actually happen?](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md).
 
 ## Spoiler ≠ center squeeze
 

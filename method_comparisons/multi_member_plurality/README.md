@@ -8,6 +8,8 @@ The three multi-member plurality methods on **one** 60/40 electorate (6-voter Ho
 | Limited Voting | 2 | Ada, Ben, Uma | 2 : 1 | [`.yaml`](cases/mmp_limited_voting.yaml) |
 | SNTV | 1 | Uma, Ada, Ben | 2 : 1 (Uma leads) | [`.yaml`](cases/mmp_sntv.yaml) |
 
+Plus a fourth case on the same family — **[the majority ceiling](cases/cases_pages/mmp_majority_ceiling.md)**: with *k* marks per voter no candidate can exceed **1/k** of the votes cast, so a *unanimous* candidate still shows 33.3% at 3 seats. That kills the common "the winner got under 50%, so the vote was split" reading in any multi-seat race — see [How often does vote splitting actually happen?](../split_voting/how_often_does_vote_splitting_happen.md).
+
 Confirms our engine's multi-winner Plurality (`run_plurality_multi`) tabulates the whole family (it auto-detects Block / Limited / SNTV from votes-per-voter).
 
 **All BV-confirmed** (not exceptions). BV has no method *named* Block/Limited Voting, but all three are "mark k, top N win" = BV's **multi-winner Approval** with each voter approving k (full slate = block, k<N = limited, 1 = SNTV). Block & Limited are backed by BV election **BV2135** ([`3x4vrv`](https://bettervoting.com/3x4vrv/results)) — same ballots, same winners; SNTV by the BV2134 governance Bloc Plurality race. The LH yamls carry the Plurality-family teaching label; BV runs them as Approval. Full recipe: [running it on BetterVoting](running_on_bettervoting.md).

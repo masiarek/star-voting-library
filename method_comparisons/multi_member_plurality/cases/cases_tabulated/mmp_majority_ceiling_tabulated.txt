@@ -1,0 +1,14 @@
+--- Block Voting (plurality-at-large) — 3 winners ---
+ Tabulating 30 ballots (3 votes/voter).
+
+Votes (most votes fill the seats):
+   Alice    30  <- Elected
+   Bruno    22  <- Elected
+   Cleo     20  <- Elected
+   Dev      10
+   Esme      8
+
+Winners — Block Voting (plurality-at-large), 3 seats:
+   1. Alice   (30 votes)
+   2. Bruno   (22 votes)
+   3. Cleo   (20 votes)

@@ -67,4 +67,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [mmp_block_voting](mmp_block_voting.md) · [mmp_sntv](mmp_sntv.md)
+More cases in this set: [mmp_block_voting](mmp_block_voting.md) · [mmp_majority_ceiling](mmp_majority_ceiling.md) · [mmp_sntv](mmp_sntv.md)

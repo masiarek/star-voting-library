@@ -15,7 +15,7 @@ Each voter marks **one** candidate. Add up the marks. The candidate with the **m
 The single mark is the root of a whole family of problems:
 
 - **Vote splitting & spoilers.** Similar candidates divide their shared supporters, so a less-preferred candidate can win with a minority. A candidate who can't win still changes who does — the [spoiler effect](spoiler_effect.md). Plurality is the method *most* susceptible to it.
-- **Minority winners.** With three or more candidates, the winner routinely has **less than half** the vote — a *plurality/minority winner* a majority actively voted against.
+- **Minority winners.** With three or more candidates, the winner routinely has **less than half** the vote — a *plurality/minority winner* a majority actively voted against. "Routinely" is measurable: **11.9% of all 5,662 US national primaries in 2022** had multiple candidates and a sub-majority winner ([how to read that number honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md)).
 - **Lesser-evil voting & favorite betrayal.** Because backing your true favorite can "waste" your vote or help your worst choice, voters are pressured to abandon their favorite for a viable front-runner — the [favorite-betrayal](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) incentive.
 - **No expression.** One mark captures neither *order* (who's your second choice?) nor *strength* (how much do you like them?) — see [ballot styles](ballot_styles.md).
 - **Two-party entrenchment.** These pressures push the field toward two viable candidates over time (**Duverger's law**).
