@@ -283,6 +283,32 @@ def create(spec):
     eid = elec["election_id"]
     print(f"  created election_id = {eid}   ({'https://bettervoting.com/' + eid})")
 
+    # From HERE ON the election EXISTS and is permanent. Anything that fails below
+    # (a bad race count, a ragged ballot row, a network drop mid-cast) must still
+    # surface the id — otherwise the summary prints a bare [FAIL], the export is
+    # never written to _demo_dropbox, and a real public election is orphaned with no
+    # local record: invisible to the Test-ID collision pre-check, which reads those
+    # exports. So every raise past this point is wrapped to carry the id up.
+    try:
+        return _finish_create(spec, eid)
+    except PartialCreate:
+        raise
+    except Exception as ex:
+        raise PartialCreate(eid, ex) from ex
+
+
+class PartialCreate(RuntimeError):
+    """The election WAS created but the run failed afterwards. Carries the id so the
+    caller can print it — an orphan you don't know the id of is the worst outcome
+    here, since API-created elections can't be renamed or deleted."""
+
+    def __init__(self, eid, cause):
+        super().__init__(f"election {eid} was created, then: {cause!r}")
+        self.eid = eid
+        self.cause = cause
+
+
+def _finish_create(spec, eid):
     # Re-fetch to learn the assigned race_ids + candidate ids (per race).
     g = requests.get(f"{API}/Election/{eid}")
     full = json.loads(g.text)
@@ -672,13 +698,28 @@ def dry_run(spec):
         print(f"          cands   : {len(rs['candidates'])} — "
               + ", ".join(rs["candidates"]))
         print(f"          ballots : {len(rs['ballots'])}")
+        # Write-ins resolve PER RACE in build_payload (race → election → default
+        # True), and None means "omit the key entirely". Report the same three-state
+        # resolution here — an election-level summary would sign off on a setting
+        # that isn't the one being sent, and race objects can never be edited.
+        ewi = rs.get("enable_write_in", spec.get("enable_write_in", True))
+        print("          write-ins: " + ("key omitted (BV default)" if ewi is None
+                                         else "ON" if ewi else "off"))
+        # A ragged ballot row is only caught by the SERVER, i.e. after the election
+        # is already permanent. Catch it here, while it's still free.
+        ragged = [j for j, row in enumerate(rs["ballots"])
+                  if len(row) != len(rs["candidates"])]
+        if ragged:
+            print(f"          ⚠ {len(ragged)} ballot row(s) don't match the candidate "
+                  f"count ({len(rs['candidates'])}): rows {ragged[:8]}"
+                  + ("…" if len(ragged) > 8 else "")
+                  + " — FIX BEFORE CREATING; the election would be minted and only "
+                    "then fail to accept its ballots.")
     if len(nb) > 1:
         print(f"  ⚠ races disagree on ballot count {sorted(nb)} — the create will fail "
               f"(every voter votes every race).")
     if nb == {0}:
         print("  note: zero ballots — minted empty, for a poll that collects real votes.")
-    ewi = spec.get("enable_write_in", True)
-    print(f"  write-ins       : {'ON' if ewi else 'off'}")
 
     desc = spec.get("description", "")
     print(f"  description     : {len(desc)} chars")
@@ -713,14 +754,54 @@ def dry_run(spec):
           f"bv_ballot_sheet.py --spec <SPEC_NAME> --copies 1")
 
 
-def _dry_run_targets():
+KNOWN_FLAGS = ("--dry-run",)
+
+
+def _parse_argv():
+    """Return (dry, names) — and HARD-STOP on any flag we don't recognize.
+
+    This function is a SAFETY GATE, not convenience parsing. The script's live path
+    POSTs permanent, public, undeletable elections, and the dry run is the only
+    thing standing in front of it. A membership test like `"--dry-run" in sys.argv`
+    treats every near-miss spelling — `--dry-run=SPEC`, `--dryrun`, `--dry_run`,
+    `-n`, even `--dry-run-only` — as "no flag given", i.e. as MINT. Someone typing a
+    cautious-sounding flag must never get the irreversible path; so an unrecognized
+    dash-token exits non-zero, and `--dry-run=NAME` is accepted as the equivalent
+    form it obviously is. (Found by an adversarial review, 2026-07-25, which
+    reproduced five spellings that each reached POST /API/Elections.)"""
+    dry = os.environ.get("BV_DRY_RUN") == "1"
+    names, unknown = [], []
+    for a in sys.argv[1:]:
+        if not a.startswith("-"):
+            names.append(a)
+        elif a == "--dry-run":
+            dry = True
+        elif a.startswith("--dry-run="):
+            dry = True
+            names += [p for p in a.split("=", 1)[1].split(",") if p]
+        else:
+            unknown.append(a)
+    if unknown:
+        sys.exit(f"unknown option(s): {', '.join(unknown)}\n"
+                 f"This tool creates PERMANENT public elections, so an unrecognized "
+                 f"flag is refused rather than ignored — a misspelled --dry-run must "
+                 f"never fall through to the create path.\n"
+                 f"Known flags: {', '.join(KNOWN_FLAGS)}  (plus spec NAMEs to inspect)")
+    if names and not dry:
+        sys.exit(f"positional spec name(s) given without --dry-run: {', '.join(names)}\n"
+                 f"Naming a spec only selects what to INSPECT. To create, point "
+                 f"ELECTIONS at the spec in bv_election_specs.py and run with no "
+                 f"arguments.")
+    return dry, names
+
+
+def _dry_run_targets(names=()):
     """What --dry-run should inspect: the names given on the command line, else
     ELECTIONS. `ELECTIONS` is normally EMPTY (its resting state — you point it at a
     spec only for the run that mints it), so `--dry-run NAME [NAME…]` inspects a
     spec straight from bv_election_specs.py without touching that list. With no
     names and an empty ELECTIONS, list what's available instead of doing nothing."""
     from bv_election_specs import spec_names
-    names = [a for a in sys.argv[1:] if not a.startswith("-") and a != "--dry-run"]
     catalog = spec_names()
     if names:
         picked, missing = [], []
@@ -757,11 +838,11 @@ def _print_catalog(catalog):
 
 
 if __name__ == "__main__":
-    DRY = "--dry-run" in sys.argv or os.environ.get("BV_DRY_RUN") == "1"
+    DRY, DRY_NAMES = _parse_argv()   # exits on an unknown flag — never falls through
     print(f"BetterVoting API @ {API}")
     print(f"identity BV_USER_ID={USER_ID}  template={TEMPLATE_ID}")
     if DRY:
-        targets = _dry_run_targets()      # named spec(s), else ELECTIONS (or exits)
+        targets = _dry_run_targets(DRY_NAMES)   # named spec(s), else ELECTIONS
         print(f"DRY RUN — inspecting {len(targets)} election(s); nothing will be "
               f"created.\n")
         # The pre-check's gates exist to stop an irreversible POST. In a dry run
@@ -769,6 +850,7 @@ if __name__ == "__main__":
         # you still SEE every warning, which is the point of looking first.
         os.environ.setdefault("BV_ALLOW_DUP_TITLE", "1")
         os.environ.setdefault("BV_ALLOW_NO_TESTID", "1")
+        os.environ.setdefault("BV_ALLOW_JUNK_TITLE", "1")
         _preflight_test_id_collisions(targets, fatal=False)
         _preflight_test_ids(targets)
         for spec in targets:
@@ -782,27 +864,43 @@ if __name__ == "__main__":
     _preflight_test_id_collisions(ELECTIONS)  # gate: BV<n> must not already exist
     _preflight_test_ids(ELECTIONS)          # gate: confirm any missing BV Test IDs
 
-    summary = []  # (title, eid_or_None, expected)
+    summary = []  # (title, eid_or_None, expected, partial?)
     for spec in ELECTIONS:
         try:
             eid = create(spec)
-            summary.append((spec["title"], eid, spec.get("expected", "?")))
+            summary.append((spec["title"], eid, spec.get("expected", "?"), False))
+        except PartialCreate as ex:        # the election EXISTS — never hide its id
+            print(f"  !! failed AFTER the election was created: {ex.cause!r}")
+            print(f"  !! https://bettervoting.com/{ex.eid} is LIVE and permanent — "
+                  f"freeze it:  uv run fetch_bv_export.py {ex.eid}")
+            summary.append((spec["title"], ex.eid, spec.get("expected", "?"), True))
         except Exception as ex:            # keep going to the next election
             print(f"  !! failed: {ex!r}")
-            summary.append((spec["title"], None, spec.get("expected", "?")))
+            summary.append((spec["title"], None, spec.get("expected", "?"), False))
 
     created = [s for s in summary if s[1]]
+    partial = [s for s in summary if s[3]]
     print("\n" + "=" * 72)
-    print(f"SUMMARY — {len(created)} of {len(ELECTIONS)} election(s) created")
+    print(f"SUMMARY — {len(created)} of {len(ELECTIONS)} election(s) created"
+          + (f" ({len(partial)} INCOMPLETE)" if partial else ""))
     print("=" * 72)
-    for title, eid, expected in summary:
-        if eid:
+    for title, eid, expected, is_partial in summary:
+        if eid and not is_partial:
             print(f"  [OK]   {title}")
             print(f"           vote:     https://bettervoting.com/{eid}")
             print(f"           results:  https://bettervoting.com/{eid}/results")
             print(f"           expected: {expected}")
+        elif eid:
+            print(f"  [PARTIAL] {title}")
+            print(f"           ⚠ the election WAS created and cannot be deleted; its "
+                  f"ballots may be missing or incomplete.")
+            print(f"           vote:     https://bettervoting.com/{eid}")
+            print(f"           freeze:   uv run fetch_bv_export.py {eid}")
         else:
-            print(f"  [FAIL] {title}")
+            print(f"  [FAIL] {title}   (nothing was created)")
     print("=" * 72)
+    if partial:
+        print("\n⚠ Re-running will mint a DUPLICATE — the id(s) above already exist. "
+              "Cast any missing ballots against the existing election instead.")
     print("\nDone. If a JSON lacks Results, close the election in the UI once, "
           "then re-run the final GET (or export from the URL above).")

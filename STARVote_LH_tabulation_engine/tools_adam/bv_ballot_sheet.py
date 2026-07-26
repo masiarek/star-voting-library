@@ -8,19 +8,38 @@ then print matching paper ballots so a room can vote by hand, hand-count the res
 (see 00_start_here/STAR_Voting/hands_on/count_star_by_hand.md), and compare to BV's official
 tally. Output is a **print-ready PDF** (the only format), rendered from the ballot
 HTML via headless Chromium. Each ballot carries the STAR instructions, a 0-5 bubble
-grid per candidate, two QRs (vote + results), and the BV election id — so paper and
-platform stay linked. Default is one ballot per page.
+grid per candidate, ONE big "scan to vote" QR (--results-qr adds a small results
+code in the footer), and the BV election id — so paper and platform stay linked.
+Default is one ballot per page.
 
-ONE input route (by design — see bv_ballot_sheet_FSD.md §5.1):
+TWO routes — one prints a REAL ballot, one previews before the election exists
+(see bv_ballot_sheet_FSD.md §5.1 and §5.7):
   --bv-export FILE     a BetterVoting export JSON. Everything the ballot needs —
                        title, candidates, election id, and the election + race
                        descriptions — comes from the export. So the workflow is
                        always: create the election on BV -> export its JSON ->
                        print from that. (`create_bv_test_election.py` saves the
                        JSON automatically when it creates the election.)
+  --spec [NAME]        PRE-MINT PREVIEW from bv_election_specs.py, before the
+                       election exists. BV elections are permanent and undeletable,
+                       so look at the paper first. No real id -> the QR is a
+                       stand-in pointing at a CLOSED election, the sheet is stamped
+                       TEST ONLY, and the notice says DO NOT HAND OUT.
   --title / --question / --blurb  optional overrides (e.g. a cleaner ballot title
-                        than the verbose BV one; --blurb "" prints no description
-                        blurb). Output styling flags: see --help.
+                        than the verbose BV one). The election description is NOT
+                        printed as a blurb by default — it's written for the BV
+                        voting page and is usually long; --blurb-auto prints it
+                        anyway. Output styling flags: see --help.
+
+  --cover              print a PREAMBLE page ahead of the ballots, carrying the
+                       election description an online voter reads on the BV vote
+                       page. Recommended whenever the ballots carry a QR code:
+                       without it the phone voter gets a long briefing and the
+                       paper voter gets none. Off by default (it adds a sheet);
+                       the tool NOTES the asymmetry when it applies.
+  --open / --no-open   open the finished PDF in the default viewer. Defaults ON
+                       for a preview/test render, OFF for a production run, and
+                       never fires when stdout isn't a TTY.
 
 Requires `playwright` (PDF render) and `segno` (QR — every ballot links to a live BV
 election, so it must be scannable; missing segno is an error unless --no-qr).
@@ -31,6 +50,7 @@ Examples
   python3 bv_ballot_sheet.py --bv-export path/to/<election>_bv_export.json \\
       --title "Best Ice Cream Flavor" --serials --logo assets/BW_long_form.jpg \\
       --verify-bv --out ballots.pdf
+  python3 bv_ballot_sheet.py --bv-export <election>_bv_export.json --cover --out b.pdf
   python3 bv_ballot_sheet.py --selftest
 """
 
@@ -265,6 +285,41 @@ def logo_data_uri(path):
     return f"data:{mime};base64,{base64.b64encode(data).decode('ascii')}"
 
 
+def open_in_viewer(path):
+    """Open the finished PDF in the OS default viewer.
+
+    For the TEST/PREVIEW loop (Adam, 2026-07-25): when you are iterating on a
+    ballot you want to SEE it, and hopping to Finder every render is friction.
+    Deliberately NOT on for a production print run — that would pop a window in
+    the middle of a batch — and never when stdout isn't a TTY, so cron, CI and
+    agent runs stay silent. Failure is non-fatal: the PDF is already written and
+    its path was printed, so a missing viewer is a note, not an error."""
+    import subprocess
+    cmd = ({"darwin": ["open"], "win32": ["cmd", "/c", "start", ""]}
+           .get(sys.platform, ["xdg-open"]))
+    try:
+        subprocess.run(cmd + [path], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+    except Exception as ex:
+        print(f"[open] Couldn't launch a PDF viewer ({ex}). The file is at {path}.")
+        return False
+
+
+def pdf_page_count(path):
+    """How many pages the rendered PDF actually has, or None if it can't be told.
+
+    Counted by scanning the raw bytes for /Type /Page objects — no new dependency
+    for a number we only use to warn the operator. Deliberately conservative: an
+    unreadable or unexpected file returns None and the caller stays quiet."""
+    try:
+        blob = open(path, "rb").read()
+    except OSError:
+        return None
+    n = len(re.findall(rb"/Type\s*/Page[^s]", blob))
+    return n or None
+
+
 def html_to_pdf(html_str, pdf_path):
     """Render the ballot HTML to a print-ready PDF via headless Chromium (the
     required `playwright` dep). Returns True on success, False if playwright isn't
@@ -312,6 +367,31 @@ EXPLAIN_LINES = [
     "Your full vote goes to the finalist you prefer.",
     "The finalist with the most votes wins.",
 ]
+
+COVER_CSS = """
+/* No min-height here on purpose. An election description can run to 1500+
+   characters (Goodberry's does), and forcing a full-page box made the content
+   overflow onto a second sheet with the "how it is counted" list orphaned. Let
+   the box size to its content: a short preamble gives a light page, a long one
+   fills it, and neither spills. */
+.cover { page-break-after: always; padding: 16px 24px; margin: 12px;
+         border: 3px solid #111; border-radius: 10px;
+         display: flex; flex-direction: column; }
+.cover-head { display: flex; align-items: flex-start; justify-content: space-between;
+              gap: 18px; }
+.cover-title { font-size: 27px; line-height: 1.15; margin: 12px 0 5px; }
+.cover-q { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+.cover-body { font-size: 14px; line-height: 1.38; }
+.cover-body p { margin: 0 0 7px; }
+.cover-how { padding-top: 8px; }
+.cover-how h2 { font-size: 14px; margin: 8px 0 2px; text-transform: uppercase;
+                letter-spacing: .04em; }
+.cover-how .inst { font-size: 14px; margin: 2px 0 2px 22px; }
+.cover-url { font-size: 13px; margin: 12px 0 4px; font-family: ui-monospace,
+             SFMono-Regular, Menlo, monospace; }
+.cover-foot { font-size: 12.5px; font-style: italic; color: #555; margin: 2px 0 0;
+              border-top: 1px solid #ccc; padding-top: 6px; }
+"""
 
 CSS = """
 :root { color-scheme: light; }
@@ -468,10 +548,56 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
 </div>"""
 
 
+def render_cover(title, preamble, bv_id, vote_qr_uri=None, logo_uri="",
+                 qr_size=220, notice="", question=""):
+    """A first page carrying the election's PREAMBLE — the same text an online
+    voter reads before voting.
+
+    Why this exists (Adam, 2026-07-25): a BetterVoting election's `description`
+    is shown in full on the /vote page, so anyone who scans the ballot's QR code
+    gets a long preamble. The printed ballot showed NONE of it — `--blurb` is off
+    by default because a 1500-character description makes a terrible ballot
+    header. So the paper voter and the phone voter were reading two different
+    elections. This page fixes the asymmetry without cramming the text into every
+    ballot: the preamble prints ONCE, up front, where a voter at the table can
+    read it before taking a ballot.
+
+    Deliberately NOT a ballot: no bubble grid, no serial, and it says so, so it
+    can never be mistaken for one and hand-counted."""
+    logo_content = (f'<img class="blogo" src="{logo_uri}" alt="STAR Voting">' if logo_uri
+                    else (f'{STAR_LOGO}<div><div class="word">STAR VOTING</div>'
+                          f'<div class="tag">SCORE · THEN · AUTOMATIC · RUNOFF</div></div>'))
+    qr_block = (f'<div class="qr" style="width:{qr_size}px">'
+                f'<img src="{vote_qr_uri}" alt="QR code — vote online" '
+                f'style="width:{qr_size}px;height:{qr_size}px">'
+                f'<span class="cta">Scan to vote online</span></div>'
+                if vote_qr_uri else "")
+    # Blank lines in the description become paragraphs; single newlines are soft.
+    paras = "".join(f'<p>{html.escape(p.strip())}</p>'
+                    for p in re.split(r"\n\s*\n", (preamble or "").strip()) if p.strip())
+    notice_block = f'<div class="notice">{html.escape(notice)}</div>' if notice else ""
+    q_block = f'<p class="cover-q">{html.escape(question)}</p>' if question else ""
+    bullets = "".join(f"<li>{html.escape(b)}</li>" for b in INSTRUCTION_BULLETS)
+    explain = "".join(f"<li>{html.escape(b)}</li>" for b in EXPLAIN_LINES)
+    url_line = (f'<p class="cover-url">Vote online: bettervoting.com/{html.escape(bv_id)}'
+                f' &nbsp;·&nbsp; Results: bettervoting.com/{html.escape(bv_id)}/results</p>'
+                if bv_id else "")
+    return (f'<div class="cover">{notice_block}'
+            f'<div class="cover-head"><div class="logo-slot">{logo_content}</div>{qr_block}</div>'
+            f'<h1 class="cover-title">{html.escape(title or "")}</h1>{q_block}'
+            f'<div class="cover-body">{paras}</div>'
+            f'<div class="cover-how"><h2>How to vote</h2><ul class="inst">{bullets}</ul>'
+            f'<h2>How it is counted</h2><ul class="inst">{explain}</ul></div>'
+            f'{url_line}'
+            f'<p class="cover-foot">This page is information only — it is NOT a ballot. '
+            f'Ballots follow.</p></div>')
+
+
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, notice="", blurb="",
                  promo="", logo_uri="", qr_size=176, results_qr=False,
-                 fill_page=True, placeholder_qr=None, watermark=""):
+                 fill_page=True, placeholder_qr=None, watermark="",
+                 cover=False, cover_text=""):
     # ONE QR by default — the big "scan to vote" code. The results URL prints as
     # text in the footer, and --results-qr adds a small code beside it.
     # (bv_id is None only when --verify-bv found the id doesn't resolve → no QR.)
@@ -510,9 +636,20 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     if fill_page:
         avail = (10.2 / pp) - 0.18
         fill_css = f"\n.ballot {{ min-height: {avail:.2f}in; }}\n"
+    # Cover CSS ships ONLY when a cover is actually rendered. It carries its own
+    # min-height, which would otherwise defeat the --no-fill-page selftest (that
+    # check asserts the string is absent from a no-fill sheet) — and shipping dead
+    # rules on every ballot run is pointless anyway.
+    cover_html = ""
+    cover_css = ""
+    if cover:
+        cover_html = render_cover(title, cover_text, bv_id, vote_qr_uri=vote_qr_uri,
+                                  logo_uri=logo_uri, notice=notice, question=question)
+        cover_css = COVER_CSS
     return (f'<!doctype html><html><head><meta charset="utf-8">'
             f'<title>STAR ballots — {html.escape(title or bv_id or "demo")}</title>'
-            f'<style>{CSS}{fill_css}</style></head><body>{ballots}</body></html>')
+            f'<style>{CSS}{cover_css}{fill_css}</style></head>'
+            f'<body>{cover_html}{ballots}</body></html>')
 
 
 # --------------------------------------------------------------------------- #
@@ -698,6 +835,32 @@ def selftest():
     for label, cond in notice_checks:
         print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
         ok &= cond
+
+    # Cover page (--cover). The preamble an online voter sees must be printable for
+    # the paper voter too, and the page must never be mistakable for a ballot.
+    PRE = "Score every flavour you have an opinion about.\n\nSecond paragraph here."
+    html_c = render_sheet("Flavours", "Which is best?", ["A", "B"], "abc123",
+                          copies=2, per_page=1, qr=False, cover=True, cover_text=PRE)
+    html_nc = render_sheet("Flavours", "Which is best?", ["A", "B"], "abc123",
+                           copies=2, per_page=1, qr=False)
+    cover_checks = [
+        ("cover: --cover emits the page", 'class="cover"' in html_c),
+        ("cover: preamble text prints", "opinion about" in html_c),
+        ("cover: blank lines become separate paragraphs",
+         html_c.count("<p>") >= 2 and "Second paragraph" in html_c),
+        ("cover: says it is NOT a ballot", "NOT a ballot" in html_c),
+        ("cover: carries how-to-vote bullets", INSTRUCTION_BULLETS[0] in html_c),
+        ("cover: breaks to its own page", "page-break-after" in html_c),
+        ("cover: ballots still render alongside it",
+         html_c.count('class="ballot') >= 2),
+        ("cover: OFF by default", 'class="cover"' not in html_nc),
+        ("cover: cover CSS ships only when used",
+         "cover-title" in html_c and "cover-title" not in html_nc),
+    ]
+    for label, cond in cover_checks:
+        print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+        ok &= cond
+
     print(f"[selftest] {'ALL PASS' if ok else 'FAILURES PRESENT'}")
     return ok
 
@@ -728,6 +891,22 @@ def main():
                          "by default — a BV election description is written for the "
                          "voting page (long, and often narrates the expected outcome), "
                          "which makes for a poor ballot. --blurb-auto prints it anyway.")
+    ap.add_argument("--open", dest="open_pdf", action="store_true", default=None,
+                    help="open the finished PDF in the default viewer. Default: ON "
+                         "for a preview/test render (--preview / --spec) when run "
+                         "interactively, OFF for a production print run.")
+    ap.add_argument("--no-open", dest="open_pdf", action="store_false",
+                    help="never open the PDF, even on a preview render.")
+    ap.add_argument("--cover", action="store_true",
+                    help="print a PREAMBLE page before the ballots, carrying the "
+                         "election description an online voter reads on the BV vote "
+                         "page, plus how-to-vote and how-it-is-counted. Off by "
+                         "default; recommended whenever the ballots carry a QR code, "
+                         "so paper and phone voters get the same briefing.")
+    ap.add_argument("--cover-text", metavar="TEXT",
+                    help="optional: override the cover page's preamble text "
+                         "(default: the export's election description). Implies "
+                         "nothing on its own — pass --cover to print the page.")
     ap.add_argument("--blurb-auto", action="store_true",
                     help="use the export's election description as the blurb (the old "
                          "default; verbose — check it doesn't spoil a live vote)")
@@ -876,6 +1055,26 @@ def main():
              if promo_parts else "")
     logo_uri = logo_data_uri(args.logo) if args.logo else ""
 
+    # Cover page: the PREAMBLE an online voter reads before voting. A BV election's
+    # description is shown in full on the /vote page, so anyone scanning the ballot's
+    # QR gets it — while the printed ballot showed none of it (blurb is off by
+    # default, and rightly: 1500 characters makes a terrible ballot header). Printing
+    # it once, up front, gives the paper voter the same briefing as the phone voter.
+    cover_text = (args.cover_text if args.cover_text is not None else edesc) or ""
+    cover_text = cover_text.strip()
+    cover = bool(args.cover and cover_text)
+    if args.cover and not cover_text:
+        print("[cover] No description available to print — skipping the cover page "
+              "(pass --cover-text to supply your own).")
+    # The asymmetry that motivated --cover is invisible until someone scans the QR on
+    # a printed ballot, so say it out loud at generation time rather than letting it
+    # be discovered on a phone.
+    if edesc and not cover and not blurb and bv_id and not args.no_qr:
+        print(f"[cover] NOTE: this election has a {len(edesc)}-character description "
+              f"that online voters see in full on bettervoting.com/{bv_id} — the "
+              f"printed ballots show NONE of it. Add --cover for a preamble page "
+              f"(or --blurb-auto to squeeze it under the ballot title).")
+
     sheet = render_sheet(title, question, candidates, bv_id, args.copies,
                          args.per_page, qr=not args.no_qr, serials=args.serials,
                          write_ins=args.write_ins, notice=notice,
@@ -884,7 +1083,8 @@ def main():
                          fill_page=not args.no_fill_page,
                          placeholder_qr=(args.preview_qr or PREVIEW_QR_URL) if preview else None,
                          watermark=(PREVIEW_WATERMARK
-                                    if (preview and not args.no_watermark) else ""))
+                                    if (preview and not args.no_watermark) else ""),
+                         cover=cover, cover_text=cover_text)
 
     # PDF is the only output. It's rendered from the ballot HTML via headless
     # Chromium (playwright), which is therefore required.
@@ -893,7 +1093,14 @@ def main():
     default_out = (f"{(args.spec or 'spec').lower()}_preview.pdf" if preview
                    else "ballots.pdf")
     out = args.out or default_out
-    out = out if out.lower().endswith(".pdf") else os.path.splitext(out)[0] + ".pdf"
+    # APPEND .pdf; never rewrite the stem. Swapping the extension collapses any
+    # name with a dot in it — `ballots_v1.2_classroom` became `ballots_v1.pdf`, so
+    # two deliberately-different print runs silently overwrote each other. Only a
+    # recognized document extension is replaced; anything else keeps its whole name.
+    SWAPPABLE = (".html", ".htm", ".txt", ".md")
+    if not out.lower().endswith(".pdf"):
+        stem, ext = os.path.splitext(out)
+        out = (stem + ".pdf") if ext.lower() in SWAPPABLE else (out + ".pdf")
     if not html_to_pdf(sheet, out):
         raise SystemExit(
             "PDF render needs `playwright`. Install it once:\n"
@@ -903,6 +1110,18 @@ def main():
     layout = "one per page" if pp == 1 else f"{pp} per page"
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, {layout}) "
           f"to {os.path.abspath(out)}")
+    # Report the pages actually produced, not the layout we asked for. A tall ballot
+    # (many candidates, or --per-page 2+) overflows Letter and the footer spills onto
+    # a near-blank extra sheet — printing "one per page" then makes the operator size
+    # the paper stack wrong and hand out stray sheets. Say what really came out.
+    pages = pdf_page_count(out)
+    want = -(-args.copies // pp)                     # ceil
+    if pages and pages != want:
+        per = pages / args.copies if args.copies else 0
+        print(f"  ⚠ that's {pages} PDF pages, not {want}: this ballot doesn't fit the "
+              f"requested layout (~{per:.1f} pages per ballot). Fewer candidates, "
+              f"--per-page 1, or --no-fill-page will tighten it; otherwise expect "
+              f"{pages} sheets from the printer.")
     if preview:
         qr_note = ("the ballot has no QR" if args.no_qr else
                    f"its QR is a stand-in pointing at {args.preview_qr or PREVIEW_QR_URL} "
@@ -915,6 +1134,15 @@ def main():
     if bv_id:
         print(f"Linked to BetterVoting election {bv_id} "
               f"(results: https://bettervoting.com/{bv_id}/results).")
+
+    # Auto-open: default ON for a preview (the test/iterate loop), OFF for a real
+    # print run. --open / --no-open force either way. The TTY guard keeps agent,
+    # cron and CI runs from trying to pop a window.
+    want_open = args.open_pdf if args.open_pdf is not None else bool(preview)
+    if want_open and not sys.stdout.isatty() and args.open_pdf is None:
+        want_open = False
+    if want_open:
+        open_in_viewer(os.path.abspath(out))
 
 
 if __name__ == "__main__":

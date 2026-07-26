@@ -4,7 +4,7 @@
 
 **Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
-![A generated STAR paper ballot — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](../img/star_paper_ballot_example.png)
+![A generated STAR paper ballot (this image predates the 2026-07-25 single-QR layout) — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](../img/star_paper_ballot_example.png)
 
 *A real generated ballot (the [Best Ice Cream Flavor](https://bettervoting.com/2wfth7) demo, B&W long-form logo). Every element below is configurable — see the checklist.*
 
@@ -51,7 +51,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --copies 30 --out ballots.pdf
 ```
 
-`--title` / `--question` are optional overrides (e.g. a shorter ballot title than the verbose BV one); everything else is output styling. Old placeholder for the manual/YAML routes:
+`--title` / `--question` are optional overrides (e.g. a shorter ballot title than the verbose BV one); everything else is output styling. (The old `--candidates` and `--yaml` routes were removed — see FSD §5.1.)
 
 **Ready-made live elections to demo with** — each has a BV export you can print from (and a live results page to check against):
 - **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets, single-winner STAR, a classroom crowd-pleaser.
@@ -61,7 +61,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 **Output — a print-ready PDF** (`--out ballots.pdf`), one ballot per page, straight to the printer. It's rendered from the ballot HTML by headless Chromium, so the **`playwright`** library is required (`playwright install chromium` once); if it's missing the tool tells you the install command. Each ballot carries:
 
-- the **election & race descriptions** (if your BV election has them) — the election description prints as a blurb under the title, the race description as the ballot question,
+- the **race description** (if your BV election has one) as the ballot **question**. The **election description is NOT printed** by default — it's written for the BV voting page, so it's usually long and often narrates the expected outcome. Pass `--blurb "TEXT"` for a blurb of your own, or `--blurb-auto` to print the export's,
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
@@ -86,7 +86,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --out ballots.pdf
 ```
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out ballots.pdf`, `--no-qr`, `--qr-size PX` (vote QR size, default 176), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
+Useful flags: `--blurb "TEXT"` / `--blurb-auto` (see above), `--results-qr` (small results code in the footer), `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out ballots.pdf`, `--no-qr`, `--qr-size PX` (vote QR size, default 176), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
 
 **The id always comes from a real, already-created election** — that's the point of the single route. Because you print from a BetterVoting export, the QR and `…/results` link are real by construction. To be safe before a print run, add **`--verify-bv`**: it pings BetterVoting to confirm the id resolves and, if it somehow doesn't (a stale or hand-edited export), drops the QR + results link automatically — so no one ever scans a dead link.
 
@@ -124,7 +124,7 @@ Once the ballots are marked, count via **BetterVoting** — two complementary wa
 
 ## Design notes — the flow, and how a mistake becomes a score
 
-**The ballot is always tied to a BV election** (the export supplies the id), so every ballot prints the id, the results URL, and two scannable **QRs** (vote + results) — paper and platform stay linked. The only time a ballot prints *without* the QR/results is when **`--verify-bv`** finds the id doesn't resolve; then it degrades to a plain STAR ballot so nothing points at a dead link.
+**The ballot is always tied to a BV election** (the export supplies the id), so every ballot prints the id, the results URL, and one big scannable **vote QR** — paper and platform stay linked. (`--results-qr` adds a small results code beside the footer URL; it's off by default so the sheet carries a single call to action.) The only time a ballot prints *without* the QR/results is when **`--verify-bv`** finds the id doesn't resolve; then it degrades to a plain STAR ballot so nothing points at a dead link.
 
 **Flagging mistakes when you enter a ballot into BetterVoting.** An ambiguous mark maps cleanly to a BV score (0–5), with a note for the log:
 
