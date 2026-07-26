@@ -199,5 +199,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     6  Mango           0–2–3       1.5      -3  —
 
 Winner — Ranked Robin (RCV-RR): Strawberry
-   beats every opponent head-to-head — the Condorcet winner.
+   undefeated, but ties Chocolate, Chocolate Chip, Fudge Brownie — a weak Condorcet winner (beats or ties every opponent), not the strict Condorcet winner.
 ```

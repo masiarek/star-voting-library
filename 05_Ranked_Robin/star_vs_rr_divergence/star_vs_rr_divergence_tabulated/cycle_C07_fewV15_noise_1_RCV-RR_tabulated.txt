@@ -66,4 +66,4 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     7  F          0–6–0         0     -19  —
 
 Winner — Ranked Robin (RCV-RR): A
-   beats every opponent head-to-head — the Condorcet winner.
+   undefeated, but ties D — a weak Condorcet winner (beats or ties every opponent), not the strict Condorcet winner.

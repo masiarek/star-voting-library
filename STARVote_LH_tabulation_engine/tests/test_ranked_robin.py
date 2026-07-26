@@ -181,3 +181,85 @@ def test_equal_rankings_are_ties(tmp_path):
         assert phantom not in out, f"phantom equal-rank candidate leaked: {phantom!r}"
     # The tie is scored as Equal Support in the matrix (middle column).
     assert "Equal Support" in out
+
+
+# --- Weak vs strict Condorcet winner in the RR verdict line -------------------
+# The report used to test only "no losses", so an UNDEFEATED-BUT-TIED winner was
+# announced as "beats every opponent head-to-head — the Condorcet winner" —
+# contradicting the pairwise table printed a few lines above it, and (because
+# engine output gets pasted verbatim into teaching pages) propagating a false
+# claim into published material. Both branches are locked below; the strings
+# must be changed here and in run_ranked_robin() together.
+
+STRICT_WHY = "beats every opponent head-to-head — the Condorcet winner."
+WEAK_WHY = ("undefeated, but ties Ben — a weak Condorcet winner "
+            "(beats or ties every opponent), not the strict Condorcet winner.")
+
+# Ben ties Cal 2-2 and ties Ada 2-2; Cal beats Ada 4-0. Cal is therefore 1-0-1:
+# undefeated, but NOT a strict Condorcet winner — a weak one.
+WEAK_BALLOTS = ("voting_method: RankedRobin\nnum_winners: 1\nballots: |-\n"
+                "  2:Ben>Cal>Ada\n  2:Cal>Ada>Ben\n")
+
+
+def test_weak_condorcet_winner_is_not_called_the_condorcet_winner(tmp_path):
+    """Undefeated + at least one DRAW = a *weak* Condorcet winner. Saying it
+    'beats every opponent head-to-head' contradicts the report's own table:
+    a tie is not a win (cf. the weak-Condorcet-loser footnote in
+    00_start_here/topics/criteria_at_a_glance.md)."""
+    f = tmp_path / "weak_cw.yaml"
+    f.write_text(WEAK_BALLOTS)
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    assert "Winner — Ranked Robin (RCV-RR): Cal" in out
+    # The table itself says Cal is 1-0-1 and ties Ben — the premise of the test.
+    assert "Cal        1–0–1" in out
+    assert "Ben  ties  Cal" in out
+    assert WEAK_WHY in out
+    assert STRICT_WHY not in out, "weak Condorcet winner announced as the strict one"
+    # The _tabulated mirror is what gets pasted into teaching pages — it must
+    # carry the corrected verdict too, not just the on-screen echo.
+    hits = list(tmp_path.parent.rglob("weak_cw_tabulated.txt"))
+    assert hits, "no _tabulated mirror was written"
+    mirror = hits[0].read_text()
+    assert WEAK_WHY in mirror
+    assert STRICT_WHY not in mirror
+
+
+def test_strict_condorcet_winner_keeps_its_wording(tmp_path):
+    """The other branch is unchanged: a winner who actually beats everyone
+    head-to-head (no losses AND no ties) is still the Condorcet winner."""
+    f = tmp_path / "strict_cw.yaml"
+    f.write_text("voting_method: RankedRobin\nnum_winners: 1\nballots: |-\n"
+                 "  3:Ada>Ben>Cara\n  2:Ben>Cara>Ada\n  2:Cara>Ben>Ada\n")
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    # Ben beats Cara and Ada: 2-0-0, a strict Condorcet winner.
+    assert "Winner — Ranked Robin (RCV-RR): Ben" in out
+    assert "Ben        2–0–0" in out
+    assert STRICT_WHY in out
+    assert "weak Condorcet winner" not in out
+
+
+def test_winner_with_losses_still_reports_most_wins(tmp_path):
+    """Third branch, unchanged: a winner who LOSES a matchup claims neither the
+    strict nor the weak Condorcet title — just the most head-to-head wins."""
+    # Ben is 2-1-0 — the unique leader on raw wins AND on Copeland (2.0 vs 1.5,
+    # 1.5, 1.0), so this fixture stays valid whichever of the two the sort key
+    # ends up using.
+    f = tmp_path / "most_wins.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara, Dan]\nballots: |-\n"
+        "  2:Ada>Ben>Cara>Dan\n  1:Ben>Cara>Ada>Dan\n  1:Ben>Dan>Cara>Ada\n"
+        "  2:Dan>Cara>Ada>Ben\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    assert "Winner — Ranked Robin (RCV-RR): Ben" in out
+    assert "Ben        2–1–0" in out
+    assert "the most head-to-head wins (2)." in out
+    assert STRICT_WHY not in out
+    assert "weak Condorcet winner" not in out

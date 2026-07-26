@@ -107,8 +107,16 @@ def report(path):
     leaders = [c for c in cands if len(wins[c]) == top_wins]
     winner = ranked[0]
     if len(leaders) == 1:
-        if len(losses[winner]) == 0:
+        # Mirror of the native engine's three-way split (starvote_larry_hastings
+        # run_ranked_robin): undefeated-with-a-draw is a *weak* Condorcet winner,
+        # not the Condorcet winner — a tie is not a win. Terms per GLOSSARY.md.
+        if not losses[winner] and not ties[winner]:
             why = "beats every opponent head-to-head — the Condorcet winner."
+        elif not losses[winner]:
+            drew = ", ".join(sorted(ties[winner], key=lambda x: ranked.index(x)))
+            why = (f"undefeated, but ties {drew} — a weak Condorcet winner "
+                   "(beats or ties every opponent), not the strict "
+                   "Condorcet winner.")
         else:
             why = f"the most head-to-head wins ({top_wins})."
         out.append(f"Winner — Ranked Robin: {winner}\n   {why}")

@@ -1546,8 +1546,21 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 L.append(f"   *** the last seat was a tie ({a} and {b} share wins and "
                          f"margin) — decided by lot order.")
         elif len(leaders) == 1:
-            why = ("beats every opponent head-to-head — the Condorcet winner."
-                   if not losses[winner] else f"the most head-to-head wins ({top}).")
+            # Three distinct outcomes — do NOT collapse the middle one into the
+            # first. "Undefeated" is not "beats everyone": *a tie is not a win*
+            # (the same distinction the weak-Condorcet-LOSER footnote in
+            # 00_start_here/topics/criteria_at_a_glance.md turns on). Calling a
+            # drawn matchup a head-to-head victory would contradict the pairwise
+            # table printed a few lines above. Terms per GLOSSARY.md.
+            if not losses[winner] and not ties[winner]:
+                why = "beats every opponent head-to-head — the Condorcet winner."
+            elif not losses[winner]:
+                drew = ", ".join(sorted(ties[winner], key=lambda x: order.index(x)))
+                why = (f"undefeated, but ties {drew} — a weak Condorcet winner "
+                       "(beats or ties every opponent), not the strict "
+                       "Condorcet winner.")
+            else:
+                why = f"the most head-to-head wins ({top})."
             L.append(f"Winner — Ranked Robin (RCV-RR): {winner}")
             L.append(f"   {why}")
         else:
