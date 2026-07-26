@@ -13,10 +13,12 @@ Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**
 They vote the usual way: **everyone names one favorite.** Five ballots, each just one X:
 
 ```
-                    Sushi   Tacos   Pizza
-  2 Sushi-lovers      X       -       -
-  2 Taco-lovers       -       X       -
-  1 Pizza-fan         -       -       X
+                  Sushi   Tacos   Pizza
+  Sushi-lover       X       -       -
+  Sushi-lover       X       -       -
+  Taco-lover        -       X       -
+  Taco-lover        -       X       -
+  Pizza-fan         -       -       X
 
   Count the marks:  Sushi 2 · Tacos 2 · Pizza 1
 ```
@@ -54,10 +56,12 @@ Same five people, same feelings — but now each of them **rates all three** (5 
 Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) · [reader page](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
 
 ```
-                    Sushi   Tacos   Pizza
-  2 Sushi-lovers      5       0       3
-  2 Taco-lovers       0       5       3
-  1 Pizza-fan         3       1       5
+                  Sushi   Tacos   Pizza
+  Sushi-lover       5       0       3
+  Sushi-lover       5       0       3
+  Taco-lover        0       5       3
+  Taco-lover        0       5       3
+  Pizza-fan         3       1       5
 
   Round 1 — add the stars:  Pizza 17 · Sushi 13 · Tacos 11   → Pizza & Sushi advance
   Round 2 — the final two:  Pizza 3  vs  Sushi 2             → Pizza wins
