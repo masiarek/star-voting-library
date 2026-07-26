@@ -703,6 +703,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Tom Steyer (D) — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Rafael M. Hernandez (R) — loses every head-to-head matchup
+
 [Score Distribution] (how many ballots gave each star rating)
                                               Score
 Candidate                              5   4   3   2   1   0  Abs  | Total   Avg

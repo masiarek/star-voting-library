@@ -88,6 +88,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Allison — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Doug — loses every head-to-head matchup
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg

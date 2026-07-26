@@ -87,6 +87,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: B, C (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: A — loses every head-to-head matchup
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg

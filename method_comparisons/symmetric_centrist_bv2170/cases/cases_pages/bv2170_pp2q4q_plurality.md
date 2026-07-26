@@ -116,6 +116,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Avery, Blake (pairwise ties)
 
+[Condorcet Loser]
+  Condorcet Loser: Casey — loses every head-to-head matchup — elected by Approval!
+
 [Score Distribution] (how many ballots gave each star rating)
                    Score
 Candidate   5   4   3   2   1   0  | Total   Avg

@@ -151,6 +151,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Cand3 — STAR elected Cand2 instead (Cand3 was eliminated in the scoring round)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Cand1, Cand2 (winless — pairwise ties) — Cand2 elected by STAR, Choose-One (Plurality), Approval!
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg

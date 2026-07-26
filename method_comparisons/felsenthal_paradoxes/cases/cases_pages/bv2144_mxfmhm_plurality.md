@@ -111,6 +111,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ana — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Bo, Cal (winless — pairwise ties)
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg

@@ -101,6 +101,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Dave — matches the STAR winner
 
+[Condorcet Loser]
+  Condorcet Loser: Alice — loses every head-to-head matchup — elected by Approval!
+
 [Score Distribution] (how many ballots gave each star rating)
                    Score
 Candidate   5   4   3   2   1   0  Abs  | Total   Avg

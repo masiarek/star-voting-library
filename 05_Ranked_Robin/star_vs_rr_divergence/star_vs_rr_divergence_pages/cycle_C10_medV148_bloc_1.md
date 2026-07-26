@@ -103,6 +103,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: E — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; weak Condorcet loser: C (never wins a matchup)
+
 [Score Distribution] (how many ballots gave each star rating)
                       Score
 Candidate    5    4    3    2    1    0  | Total   Avg
