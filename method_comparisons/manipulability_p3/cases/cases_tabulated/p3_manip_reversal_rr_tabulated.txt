@@ -1,0 +1,42 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 7 ballots (ranked ballots).
+
+Ballots:
+     2 × Edinburgh > Cork > Athens > Dublin > Bergen
+     3 × Dublin > Edinburgh > Bergen > Cork > Athens
+     1 × Athens > Bergen > Cork > Dublin > Edinburgh
+     1 × Edinburgh > Dublin > Cork > Bergen > Athens
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Edinburgh  beats Cork        6 – 1
+   Edinburgh  beats Athens      6 – 1
+   Dublin     beats Edinburgh   4 – 3
+   Edinburgh  beats Bergen      6 – 1
+   Cork       beats Athens      6 – 1
+   Dublin     beats Cork        4 – 3
+   Bergen     beats Cork        4 – 3
+   Dublin     beats Athens      4 – 3
+   Bergen     beats Athens      4 – 3
+   Dublin     beats Bergen      6 – 1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+              |  Edinburgh  |   Cork     |  Athens    |  Dublin    |  Bergen    |
+---------------------------------------------------------------------------------
+  Edinburgh > |     ---     | 6 - 0 - 1  | 6 - 0 - 1  | 3 - 0 - 4  | 6 - 0 - 1  |
+       Cork > |  1 - 0 - 6  |    ---     | 6 - 0 - 1  | 3 - 0 - 4  | 3 - 0 - 4  |
+     Athens > |  1 - 0 - 6  | 1 - 0 - 6  |    ---     | 3 - 0 - 4  | 3 - 0 - 4  |
+     Dublin > |  4 - 0 - 3  | 4 - 0 - 3  | 4 - 0 - 3  |    ---     | 6 - 0 - 1  |
+     Bergen > |  1 - 0 - 6  | 4 - 0 - 3  | 4 - 0 - 3  | 1 - 0 - 6  |    ---     |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Dublin     4–0–0         4      +8  Edinburgh, Bergen, Cork, Athens
+    2  Edinburgh  3–1–0         3     +14  Bergen, Cork, Athens
+    3  Bergen     2–2–0         2      -8  Cork, Athens
+    4  Cork       1–3–0         1      -2  Athens
+    5  Athens     0–4–0         0     -12  —
+
+Winner — Ranked Robin (RCV-RR): Dublin
+   beats every opponent head-to-head — the Condorcet winner.

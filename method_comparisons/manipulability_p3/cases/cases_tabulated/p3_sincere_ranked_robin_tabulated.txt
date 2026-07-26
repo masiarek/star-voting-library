@@ -1,0 +1,41 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 7 ballots (ranked ballots).
+
+Ballots:
+     2 × Edinburgh > Cork > Athens > Dublin > Bergen
+     3 × Dublin > Edinburgh > Bergen > Cork > Athens
+     2 × Athens > Bergen > Cork > Dublin > Edinburgh
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Edinburgh  beats Cork        5 – 2
+   Edinburgh  beats Athens      5 – 2
+   Dublin     beats Edinburgh   5 – 2
+   Edinburgh  beats Bergen      5 – 2
+   Cork       beats Athens      5 – 2
+   Cork       beats Dublin      4 – 3
+   Bergen     beats Cork        5 – 2
+   Athens     beats Dublin      4 – 3
+   Athens     beats Bergen      4 – 3
+   Dublin     beats Bergen      5 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+              |  Edinburgh  |   Cork     |  Athens    |  Dublin    |  Bergen    |
+---------------------------------------------------------------------------------
+  Edinburgh > |     ---     | 5 - 0 - 2  | 5 - 0 - 2  | 2 - 0 - 5  | 5 - 0 - 2  |
+       Cork > |  2 - 0 - 5  |    ---     | 5 - 0 - 2  | 4 - 0 - 3  | 2 - 0 - 5  |
+     Athens > |  2 - 0 - 5  | 2 - 0 - 5  |    ---     | 4 - 0 - 3  | 4 - 0 - 3  |
+     Dublin > |  5 - 0 - 2  | 3 - 0 - 4  | 3 - 0 - 4  |    ---     | 5 - 0 - 2  |
+     Bergen > |  2 - 0 - 5  | 5 - 0 - 2  | 3 - 0 - 4  | 2 - 0 - 5  |    ---     |
+
+Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Edinburgh  3–1–0         3      +6  Cork, Athens, Bergen
+    2  Dublin     2–2–0         2      +4  Edinburgh, Bergen
+    3  Cork       2–2–0         2      -2  Dublin, Athens
+    4  Athens     2–2–0         2      -4  Dublin, Bergen
+    5  Bergen     1–3–0         1      -4  Cork
+
+Winner — Ranked Robin (RCV-RR): Edinburgh
+   the most head-to-head wins (3).

@@ -1,0 +1,27 @@
+election_title: "P3 manipulated — the mild version: three adjacent swaps, no burial, same result"
+scenario_description: |-
+  The manipulation that should worry us more than the book's. The complete reversal is a curiosity — no real voter submits their preferences backwards. But the SAME voter can achieve the SAME outcome with ordinary compromising: submit Dublin>Athens>Bergen>Cork>Edinburgh. That is three adjacent swaps. Nothing is buried, the sincere last choice Edinburgh stays last, and only the compromise candidate Dublin is lifted. Dublin goes 4-0 and wins outright. Exhaustively, 52 of the 119 alternative rankings available to this voter strictly improve their result (44 decided outright or by margin, 8 more only after the lot). Note this is COMPROMISING, not burial — Ranked Robin's documented resistance to burial is untouched and remains true, which makes this worse news rather than better, because compromising is the strategy ordinary voters actually reach for.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Athens, Bergen, Cork, Dublin, Edinburgh]
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  2:Edinburgh>Cork>Athens>Dublin>Bergen
+  3:Dublin>Edinburgh>Bergen>Cork>Athens
+  1:Athens>Bergen>Cork>Dublin>Edinburgh
+  1:Dublin>Athens>Bergen>Cork>Edinburgh
+
+expected_winners:
+  - Dublin
+
+# file: p3_manip_compromise_rr.yaml

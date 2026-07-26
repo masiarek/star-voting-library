@@ -1,0 +1,102 @@
+======================================================================
+SOURCE FILE:     p3_sincere_star.yaml
+TABULATED FILE:  p3_sincere_star_tabulated.txt
+======================================================================
+
+election_title: "P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0)"
+scenario_description: |-
+  The same seven sincere voters under STAR, with each ranking converted to scores on a 5/4/3/2/0 spacing (five candidates will not fit 0-5 evenly, so some spacing must be chosen; this outcome is robust — 5/4/3/1/0 and 5/3/2/1/0 also elect Dublin). Scoring round: Dublin 23, Edinburgh 22, Cork 20, Bergen 17, Athens 16. Finalists Dublin and Edinburgh; the runoff goes to Dublin 5-2, because Dublin beats Edinburgh head-to-head. So STAR and plurality agree on Dublin here while Copeland/Ranked Robin and Borda both say Edinburgh. The manipulated counterpart is p3_manip_star.yaml — STAR is manipulable on this profile too.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Athens,Bergen,Cork,Dublin,Edinburgh
+  2:3,0,4,2,5
+  3:0,3,2,5,4
+  2:5,4,3,2,0
+
+expected_winners:
+  - Dublin
+
+# file: p3_sincere_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0) ===
+  The same seven sincere voters under STAR, with each ranking converted to scores on a 5/4/3/2/0 spacing (five candidates will not fit 0-5 evenly, so some spacing must be chosen; this outcome is robust — 5/4/3/1/0 and 5/3/2/1/0 also elect Dublin). Scoring round: Dublin 23, Edinburgh 22, Cork 20, Bergen 17, Athens 16. Finalists Dublin and Edinburgh; the runoff goes to Dublin 5-2, because Dublin beats Edinburgh head-to-head. So STAR and plurality agree on Dublin here while Copeland/Ranked Robin and Borda both say Edinburgh. The manipulated counterpart is p3_manip_star.yaml — STAR is manipulable on this profile too.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                  |     Athens    |    Bergen    |     Cork     |  * Dublin    | * Edinburgh  |
+-----------------------------------------------------------------------------------------------
+         Athens > |      ---      |  4 - 0 - 3   |  2 - 0 - 5   |  4 - 0 - 3   |  2 - 0 - 5   |
+         Bergen > |   3 - 0 - 4   |     ---      |  5 - 0 - 2   |  2 - 0 - 5   |  2 - 0 - 5   |
+           Cork > |   5 - 0 - 2   |  2 - 0 - 5   |     ---      |  4 - 0 - 3   |  2 - 0 - 5   |
+       * Dublin > |   3 - 0 - 4   |  5 - 0 - 2   |  3 - 0 - 4   |     ---      |  5 - 0 - 2   |
+    * Edinburgh > |   5 - 0 - 2   |  5 - 0 - 2   |  5 - 0 - 2   |  2 - 0 - 5   |     ---      |
+
+[Condorcet Winner]
+  No Condorcet winner (majority cycle: Athens > Bergen > Cork > Athens)
+
+[Divergence from STAR]
+  STAR     = Dublin
+  Approval = Bergen   (differs from STAR)
+  RCV-RR   = Edinburgh   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: cases_tabulated/p3_sincere_star_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × Athens,Bergen,Cork,Dublin,Edinburgh
+    3 ×      0,     3,   2,     5,        4
+    2 ×      3,     0,   4,     2,        5
+    2 ×      5,     4,   3,     2,        0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Athens     2  0  2  0  0  3  |    16   2.3
+Bergen     0  2  3  0  0  2  |    17   2.4
+Cork       0  2  2  3  0  0  |    20   2.9
+Dublin     3  0  0  4  0  0  |    23   3.3
+Edinburgh  2  3  0  0  0  2  |    22   3.1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Dublin        -- 23 -- First place
+   Edinburgh     -- 22 -- Second place
+   Cork          -- 20
+   Bergen        -- 17
+   Athens        -- 16
+ Dublin and Edinburgh advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Dublin        -- 5 -- First place
+   Edinburgh     -- 2
+   Equal Support -- 0
+ Dublin wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Dublin 5 (71%)  ·  Edinburgh 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Dublin

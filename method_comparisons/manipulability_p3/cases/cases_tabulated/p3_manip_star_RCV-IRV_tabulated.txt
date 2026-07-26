@@ -1,0 +1,34 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  P3 manipulated — two voters bury their 4th choice and STAR elects their favourite
+ Tabulating 7 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Athens, Bergen, Cork, Dublin, Edinburgh
+     2 ×   Edinburgh > Cork > Athens      (3, 0, 4, 0, 5)
+     3 ×   Dublin > Edinburgh > Bergen > Cork      (0, 3, 2, 5, 4)
+     2 ×   Athens > Bergen > Cork > Dublin      (5, 4, 3, 2, 0)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Dublin             3  Hopeful
+Edinburgh          2  Hopeful
+Athens             2  Rejected
+Bergen             0  Rejected
+Cork               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Dublin             5  Elected
+Edinburgh          2  Rejected
+Athens             0  Rejected
+Bergen             0  Rejected
+Cork               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Dublin
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

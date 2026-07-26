@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **204** single-winner STAR elections (skipped 135 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **122** (60%) diverge from STAR under at least one method; **82** agree across the board.
+- Scanned **206** single-winner STAR elections (skipped 139 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **124** (60%) diverge from STAR under at least one method; **82** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 29 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 8 |
-| CYCLE_OR_THREE_WAY | 34 |
+| CYCLE_OR_THREE_WAY | 36 |
 | APPROVAL_OR_MINOR | 42 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (118 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (120 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -147,7 +147,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
 
-### CYCLE_OR_THREE_WAY — 32
+### CYCLE_OR_THREE_WAY — 34
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -200,6 +200,10 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Boone** · IRV=Boone · RR=Cass · Approval=Cass · Score=Cass · Condorcet=none
 - **[bv2167_f3dxq9_star](cases/CYCLE_OR_THREE_WAY/bv2167_f3dxq9_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml` (4c/11b)  
     STAR=**B** · IRV=C · RR=A · Approval=B · Score=B · Condorcet=none
+- **[p3_manip_star](cases/CYCLE_OR_THREE_WAY/p3_manip_star.md)** — `method_comparisons/manipulability_p3/cases/p3_manip_star.yaml` (5c/7b)  
+    STAR=**Edinburgh** · IRV=Dublin · RR=Edinburgh · Approval=Bergen · Score=Edinburgh · Condorcet=none
+- **[p3_sincere_star](cases/CYCLE_OR_THREE_WAY/p3_sincere_star.md)** — `method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml` (5c/7b)  
+    STAR=**Dublin** · IRV=Dublin · RR=Edinburgh · Approval=Bergen · Score=Dublin · Condorcet=none
 - **[monotonicity_star_after](cases/CYCLE_OR_THREE_WAY/monotonicity_star_after.md)** — `method_comparisons/monotonicity/cases/monotonicity_star_after.yaml` (3c/34b)  
     STAR=**X** · IRV=Z · RR=X · Approval=X · Score=X · Condorcet=none
 - **[monotonicity_star_before](cases/CYCLE_OR_THREE_WAY/monotonicity_star_before.md)** — `method_comparisons/monotonicity/cases/monotonicity_star_before.yaml` (3c/34b)  
