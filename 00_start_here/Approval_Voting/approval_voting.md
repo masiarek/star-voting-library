@@ -2,11 +2,13 @@
 
 *The simplest equal-vote upgrade to Choose-One: mark **every** candidate you approve (**1**) and leave the rest (**0**); the most-approved candidate wins. It's Score voting at **one-bit resolution** — a big jump in expressiveness over "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
+→ **Run it / examples:** the 101 case in [the Approval examples](../../04_Approval/) ([`approval_101_c3_b5.yaml`](../../04_Approval/_main/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [in the theory literature](approval_in_the_literature.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 
 **Approval Voting** hands every voter a checklist instead of a single choice. You approve as many candidates as you like — one, three, all of them — and each approval is worth one point. Add up the checkmarks; **whoever has the most wins.** No ranking, no scores, no runoff: a normal ballot with the "vote for only one" restriction removed.
+
+It has no single inventor: Brams and Fishburn credit **five groups who arrived at the idea independently in the 1970s** — which is itself a hint that it's a natural rule to land on. How the academic literature argues about it (and what a checkmark is even taken to *mean*) is a page of its own: [Approval in the theory literature](approval_in_the_literature.md).
 
 ## The ballot
 
@@ -89,6 +91,7 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 ## See also
 
 - [Approval — Honest Limits](approval_honest_limits.md) — the critique companion
+- [Approval in the theory literature](approval_in_the_literature.md) — the arguments and criticisms as the academic surveys state them, the three readings of "approve," and *Approval = Borda = Condorcet* on dichotomous preferences
 - [Approval + Top-Two](approval_top_two.md) — the two-round package (St. Louis; Oregon's Unified Primary) and why its runoff can't be automatic — the gap STAR closes
 - [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [the Approval examples](../../04_Approval/) — the method's example folder
