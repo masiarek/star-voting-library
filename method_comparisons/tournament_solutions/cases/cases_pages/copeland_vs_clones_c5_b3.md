@@ -80,4 +80,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
-More cases in this set: [five_answers_one_election_c4_b3](five_answers_one_election_c4_b3.md)
+More cases in this set: [five_answers_one_election_c4_b3](five_answers_one_election_c4_b3.md) · [star_elects_a_covered_candidate_c4_b5](star_elects_a_covered_candidate_c4_b5.md)

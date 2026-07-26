@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**440 election files** (390 single-winner, 50 multi-winner) across 16 method(s).
+**446 election files** (395 single-winner, 51 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 239 |
+| STAR | 243 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 63 |
-| Approval | 15 |
+| Approval | 16 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -24,12 +24,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 17 |
 | IRV | 19 |
-| PLURALITY | 25 |
+| PLURALITY | 26 |
 | RANGE | 2 |
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (239)
+## STAR  (243)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -92,6 +92,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex11_spoiler_added`](../../01_STAR/exercises/cases/cases_pages/ex11_spoiler_added.md) | `01_STAR/exercises/cases/` | 1 | Exercise 11 — Recruit a spoiler: Axl enters the race → _Alba_ | [`.yaml`](../../01_STAR/exercises/cases/ex11_spoiler_added.yaml) |
 | [`ex11_two_way_base`](../../01_STAR/exercises/cases/cases_pages/ex11_two_way_base.md) | `01_STAR/exercises/cases/` | 1 | Exercise 11 — Recruit a spoiler: the two-way base race → _Alba_ | [`.yaml`](../../01_STAR/exercises/cases/ex11_two_way_base.yaml) |
 | [`ex13_opinions`](../../01_STAR/exercises/cases/cases_pages/ex13_opinions.md) | `01_STAR/exercises/cases/` | 1 | Exercise 13 — Where do you draw the line? The honest opinions (STAR) → _Cora_ | [`.yaml`](../../01_STAR/exercises/cases/ex13_opinions.yaml) |
+| [`ex15_approval_pairwise`](../../01_STAR/exercises/cases/cases_pages/ex15_approval_pairwise.md) | `01_STAR/exercises/cases/` | 1 | Exercise 15a, second look — the same Yes/No ballots read pairwise → _Blair_ | [`.yaml`](../../01_STAR/exercises/cases/ex15_approval_pairwise.yaml) |
+| [`ex15_score_profile`](../../01_STAR/exercises/cases/cases_pages/ex15_score_profile.md) | `01_STAR/exercises/cases/` | 1 | Exercise 15b — a 0–5 score profile (which method is this?) → _Clara_ | [`.yaml`](../../01_STAR/exercises/cases/ex15_score_profile.yaml) |
 | [`bv2206_7mckyg_fbc_honest_tepid_consensus`](../../01_STAR/favorite_betrayal/cases/cases_pages/bv2206_7mckyg_fbc_honest_tepid_consensus.md) | `01_STAR/favorite_betrayal/cases/` | 1 | Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff → _Clover_ | [`.yaml`](../../01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) |
 | [`bv2207_b6xrdr_fbc_betrayal_pays`](../../01_STAR/favorite_betrayal/cases/cases_pages/bv2207_b6xrdr_fbc_betrayal_pays.md) | `01_STAR/favorite_betrayal/cases/` | 1 | Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays → _Bluebell_ | [`.yaml`](../../01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml) |
 | [`bv2212_g3f7r2_cycle_spoiler`](../../01_STAR/iia_cycle_spoiler/cases/cases_pages/bv2212_g3f7r2_cycle_spoiler.md) | `01_STAR/iia_cycle_spoiler/cases/` | 1 | STAR's runoff is spoiler-sensitive under a Condorcet cycle — a losing candidate (Ben) flips Alice vs Carla (BV2212, g3f7r2) → _Alice_ | [`.yaml`](../../01_STAR/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml) |
@@ -261,6 +263,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`04_star_wars_vote_split`](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) | `method_comparisons/split_voting/_main/` | 1 | The Voting Dilemma — Skywalker & Leia split the Rebel vote → _Leia_ | [`.yaml`](../../method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml) |
 | [`05a_residual_split_bullet-voting`](../../method_comparisons/split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md) | `method_comparisons/split_voting/_main/` | 1 | STAR's residual split — a coalition bullet-votes itself apart → _Cara_ | [`.yaml`](../../method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml) |
 | [`05b_residual_split_expressive-fix`](../../method_comparisons/split_voting/_main/_main_pages/05b_residual_split_expressive-fix.md) | `method_comparisons/split_voting/_main/` | 1 | The cure — score your ally, and STAR's split disappears → _Ada_ | [`.yaml`](../../method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml) |
+| [`06_sub_majority_not_spoiled`](../../method_comparisons/split_voting/_main/_main_pages/06_sub_majority_not_spoiled.md) | `method_comparisons/split_voting/_main/` | 1 | A 41% winner that nothing spoiled — sub-majority is not the same as split → _Aspen_ | [`.yaml`](../../method_comparisons/split_voting/_main/06_sub_majority_not_spoiled.yaml) |
 | [`bv2221_2kcwbw_sincere`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2221_2kcwbw_sincere.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Sincere STAR — the center wins (Beth is the Condorcet winner) → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml) |
 | [`bv2222_rfyk46_510_thin_star`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2222_rfyk46_510_thin_star.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR — the center is squeezed out (fails the CW) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml) |
 | [`bv2223_dyh93j_510_real_star`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2223_dyh93j_510_real_star.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml) |
@@ -270,6 +273,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2171_h93tm4_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2171_h93tm4_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, minimal form (8 voters) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml) |
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml) |
+| [`star_elects_a_covered_candidate_c4_b5`](../../method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md) | `method_comparisons/tournament_solutions/cases/` | 1 | STAR elects a covered candidate — five ballots, four cities → _Denver_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml) |
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
@@ -374,13 +378,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (15)
+## Approval  (16)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex13_approve3`](../../01_STAR/exercises/cases/cases_pages/ex13_approve3.md) | `01_STAR/exercises/cases/` | 1 | Exercise 13 — Where do you draw the line? Approve 3 and up → _Ash_ | [`.yaml`](../../01_STAR/exercises/cases/ex13_approve3.yaml) |
 | [`ex13_approve4`](../../01_STAR/exercises/cases/cases_pages/ex13_approve4.md) | `01_STAR/exercises/cases/` | 1 | Exercise 13 — Where do you draw the line? Approve 4 and up → _Beck_ | [`.yaml`](../../01_STAR/exercises/cases/ex13_approve4.yaml) |
 | [`ex13_bullet`](../../01_STAR/exercises/cases/cases_pages/ex13_bullet.md) | `01_STAR/exercises/cases/` | 1 | Exercise 13 — Where do you draw the line? Favorites only → _Cora_ | [`.yaml`](../../01_STAR/exercises/cases/ex13_bullet.yaml) |
+| [`ex15_approval_yes_no`](../../01_STAR/exercises/cases/cases_pages/ex15_approval_yes_no.md) | `01_STAR/exercises/cases/` | 1 | Exercise 15a — a Yes/No profile (which method is this?) → _Blair_ | [`.yaml`](../../01_STAR/exercises/cases/ex15_approval_yes_no.yaml) |
 | [`approval_101_c3_b5`](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md) | `04_Approval/_main/cases/` | 1 | Approval 101 — most approvals wins → _Bob_ | [`.yaml`](../../04_Approval/_main/cases/approval_101_c3_b5.yaml) |
 | [`BV_Library_approval_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_approval_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Approval: most approvals wins (single winner) → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_approval_single_winner.yaml) |
 | [`Black_Curtain_01a_c3_b5_approval`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01a_c3_b5_approval.yaml) |
@@ -500,7 +505,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (25)
+## PLURALITY  (26)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -528,6 +533,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`sntv_village_council`](../../method_comparisons/sntv_village_council/cases/cases_pages/sntv_village_council.md) | `method_comparisons/sntv_village_council/cases/` | 2 | Village Council by SNTV — a concentrated minority wins a seat → _Priya, Nora_ | [`.yaml`](../../method_comparisons/sntv_village_council/cases/sntv_village_council.yaml) |
 | [`mmp_block_voting`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_block_voting.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — Block Voting (3 seats): majority sweeps → _Ada, Ben, Cal_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_block_voting.yaml) |
 | [`mmp_limited_voting`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_limited_voting.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1 → _Ada, Ben, Uma_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_limited_voting.yaml) |
+| [`mmp_majority_ceiling`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_majority_ceiling.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33% → _Alice, Bruno, Cleo_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_majority_ceiling.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_sntv.yaml) |
 
 ## RANGE  (2)

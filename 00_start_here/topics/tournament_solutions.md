@@ -43,7 +43,7 @@ All of them agree — trivially — whenever a [Condorcet winner](../RCV_Ranked_
 | Solution | Picks | Cost |
 |---|---|---|
 | **Top cycle** (Smith set) | the smallest group that beats everyone outside it | linear |
-| **Uncovered set** | everyone who reaches every rival in **≤ 2 steps** — "I beat you, or I beat someone who beat you" | polynomial |
+| **[Uncovered set](uncovered_set.md)** | everyone who reaches every rival in **≤ 2 steps** — "I beat you, or I beat someone who beat you" | polynomial |
 | **Banks set** | the tops of the maximal transitive sub-tournaments | **NP-complete** |
 | **Bipartisan set** | the support of the win-graph game's unique Nash equilibrium | polynomial (LP) |
 | **Copeland set** | **most head-to-head wins** ← this one is Ranked Robin | linear |
@@ -135,7 +135,7 @@ The footnote a critic will find, so here it is: on the **Brams–Fishburn dichot
 Honest answer: mostly the second, with three exceptions that are genuinely load-bearing.
 
 1. **It names Ranked Robin's limits precisely.** "Copeland fails composition-consistency and isn't idempotent" is a real, citable statement about the method this repo recommends, and it is better to say it ourselves than to be told it. It also pins where the limits *aren't*: monotonic, Condorcet-consistent, linear-time, and every one of these failures needs a cycle to fire.
-2. **The uncovered set is the one concept with a plain-language payoff.** "Nobody should win who is *covered* — beaten by someone who also beats everyone they beat" is an argument a normal person accepts on hearing, and it turns out to be equivalent to being reachable-in-two-steps, and to being Pareto-optimal in the tournament sense. If you take one idea from the chapter, take that one.
+2. **The uncovered set is the one concept with a plain-language payoff.** "Nobody should win who is *covered* — beaten by someone who also beats everyone they beat" is an argument a normal person accepts on hearing, it is equivalent to being reachable-in-two-steps, and it is exactly the line between Pareto-optimal and not. If you take one idea from the chapter, take that one — **it has [its own page](uncovered_set.md)**, with the three equivalent definitions, the Pareto theorem, the proof that Ranked Robin never elects a covered candidate, and a five-ballot election where STAR does.
 3. **It disciplines claims.** "Method X uniquely satisfies criterion Y" arguments are common in voting debates and often [built to fit the method](condorcet/ordered_majority_rule_irv.md). This literature is where you learn how many mutually incompatible "reasonable" answers a single election admits — five, in a three-ballot example — which is a permanent inoculation against anyone claiming their rule is *the* answer.
 
 What it is **not** good for: choosing a voting method for a real jurisdiction. Nothing in the chapter argues for a public method, and most of its refinements are unexplainable at a town-hall meeting or intractable to compute. Ranked Robin's case rests on being explainable and summable, not on winning an axiom scorecard.
@@ -149,6 +149,7 @@ What it is **not** good for: choosing a voting method for a real jurisdiction. N
 
 ## Related
 
+- [The uncovered set](uncovered_set.md) — the one member of this family with a plain-language payoff, in full
 - [What a method reads](what_a_method_reads.md) — C1/C2/C3, and why STAR has no class · [the Condorcet reading list](condorcet/condorcet_reading_list.md)
 - [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) — the Smith/Schwartz half · [the Smith set](smith_set.md)
 - [Cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) — the C2 methods that read the margins these rules throw away

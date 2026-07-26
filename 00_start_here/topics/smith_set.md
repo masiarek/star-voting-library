@@ -2,7 +2,7 @@
 
 *What "the strongest candidate" means when no single candidate beats everyone. When a cycle erases the Condorcet winner, the principled fallback isn't a person — it's a **set**: the smallest group whose every member beats every outsider head-to-head. Once you have that club, "any decent method should at least pick from inside it" becomes a testable criterion — and it neatly sorts the Condorcet family.*
 
-→ **Level: Voting 301** — Curriculum [301.4](../CURRICULUM.md) (limits & theory) · Glossary: [`Smith set`](../GLOSSARY.md) · the tournament math: [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md)
+→ **Level: Voting 301** — Curriculum [301.4](../CURRICULUM.md) (limits & theory) · Glossary: [`Smith set`](../GLOSSARY.md) · the tournament math: [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) · the *other* generalized Condorcet winner: [the uncovered set](uncovered_set.md) (always a **subset** of the Smith set, and the Pareto line)
 
 ---
 
