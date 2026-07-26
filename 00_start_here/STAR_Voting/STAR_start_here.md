@@ -8,17 +8,24 @@ Here's the plan: we'll start with a small, familiar problem, watch the usual way
 
 ## First, a problem you already know: the team lunch
 
-Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**, and everyone — every single person — is perfectly happy with **Pizza**.
+Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**, one likes **Pizza** best — and everyone, every single person, is perfectly happy with Pizza.
 
-They vote the usual way: **everyone names one favorite.**
+They vote the usual way: **everyone names one favorite.** Five ballots, each just one X:
 
-> **Sushi 2 · Tacos 2 · Pizza 1**
+```
+                    Sushi   Tacos   Pizza
+  2 Sushi-lovers      X       -       -
+  2 Taco-lovers       -       X       -
+  1 Pizza-fan         -       -       X
+
+  Count the marks:  Sushi 2 · Tacos 2 · Pizza 1
+```
 
 The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want.
 
 That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../topics/spoiler_effect.md).)
 
-The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite.
+The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite — every dash in that grid is a real opinion the ballot never asked about.
 
 ## Meet STAR — in one breath
 
