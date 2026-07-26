@@ -1,4 +1,5 @@
 ﻿election_id,title,races,kind,voters,methods,backing
+2jpcxd,"BV2255 — One mark each: the traditional choose-one ballot, counted four ways",4,contested (multi-race),3,"IRV, Plurality, RankedRobin, STAR",BV
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV

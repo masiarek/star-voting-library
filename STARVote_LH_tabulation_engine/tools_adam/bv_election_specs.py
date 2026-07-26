@@ -4225,7 +4225,99 @@ P3_SPEC = {
 }
 
 
-ELECTIONS: list = []   # nothing to create
+# --- BV2254 — Reinforcement paradox (Brandt, Dong & Peters 2024, Theorem 2) ---
+# Backs method_comparisons/reinforcement_paradox/. One election, two races on the
+# SAME 9 combined ballots (index-aligned): North (6) + South (3) merged. Ada wins
+# both districts, but the union elects Cara. STAR (scoring round -> Ada, runoff ->
+# Cara) and Ranked Robin (Cara, the combined Condorcet winner) both land on Cara.
+# LH-verified pre-creation; both races deterministic/freezable (no tiebreak).
+_REINF_CANDS = ["Ada", "Ben", "Cara"]
+#                Ada>Ben>Cara Ada>Ben>Cara Ben>Cara>Ada Ben>Cara>Ada Cara>Ada>Ben Cara>Ada>Ben Cara>Ada>Ben Ada>Cara>Ben Ada>Cara>Ben
+_REINF_STAR = [[5,3,0], [5,3,0], [0,5,3], [0,5,3], [3,0,5], [3,0,5], [3,0,5], [5,0,3], [5,0,3]]
+_REINF_RANK = [[1,2,3], [1,2,3], [3,1,2], [3,1,2], [2,3,1], [2,3,1], [2,3,1], [1,3,2], [1,3,2]]
+REINFORCEMENT_SPEC = {
+    "test_id": "BV2254",
+    "title": "Reinforcement paradox: two towns pick Ada, together pick Cara",
+    "description": (
+        "Two towns each elect Ada, but merged they elect Cara — the reinforcement paradox "
+        "(Brandt, Dong & Peters, 2024): every Condorcet method must show it once there are 8 or "
+        "more voters. STAR's scoring round keeps Ada, but its automatic runoff flips to Cara. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/reinforcement_paradox/index.html"),
+    "races": [
+        {"title": "STAR — scoring round leads Ada, the runoff flips to Cara",
+         "method": "STAR", "num_winners": 1, "candidates": _REINF_CANDS, "ballots": _REINF_STAR},
+        {"title": "Ranked Robin — Cara is the combined Condorcet winner",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+         "candidates": _REINF_CANDS, "ballots": _REINF_RANK},
+    ],
+    "expected": "STAR -> Cara (score round Ada 29 vs Cara 27; runoff Cara 5-4). "
+                "Ranked Robin -> Cara (beats Ada 5-4 and Ben 5-4). Ada won both districts.",
+}
+
+# --- BV2255 — The "traditional" style, all the way down (four ballots, one bit) ---
+# Backs 00_start_here/STAR_Voting/voting_styles/traditional.md — the choose-one habit
+# transplanted onto a 5-star ballot. Here EVERY voter votes that way: 3 voters, 5
+# candidates, one mark each (Carmen 1, Ella 2). The same single mark is then encoded on
+# all three ballot formats — choose-one, 0-5 score, ranked — and counted four ways. All
+# four elect Ella, and that is the point: a ballot carrying one bit per voter gives every
+# method the same thing to read, so the methods cannot disagree. Andre, Blake and David
+# get literally zero information expressed about them. LH-verified pre-creation; every
+# race deterministic (Ella is the Condorcet winner and has a round-1 IRV majority; only
+# the three winless also-rans tie, which cannot touch the winner).
+_TRAD_CANDS = ["Andre", "Blake", "Carmen", "David", "Ella"]
+#                        Carmen        Ella          Ella
+_TRAD_STAR = [[0, 0, 5, 0, 0], [0, 0, 0, 0, 5], [0, 0, 0, 0, 5]]
+_TRAD_ONE = [[0, 0, 1, 0, 0], [0, 0, 0, 0, 1], [0, 0, 0, 0, 1]]   # choose-one: 0/1
+_TRAD_RANK = [[0, 0, 1, 0, 0], [0, 0, 0, 0, 1], [0, 0, 0, 0, 1]]  # rank 1 only; 0 = unranked
+TRADITIONAL_SPEC = {
+    "test_id": "BV2255",
+    "title": "One mark each: the traditional choose-one ballot, counted four ways",
+    "description": (
+        "Three voters, five candidates, and every voter uses the 'traditional' style — one "
+        "mark for a favorite, nothing for anyone else (Carmen 1, Ella 2). The same single "
+        "mark is then written on all three ballot formats: choose-one, a 0-5 STAR ballot "
+        "(a lone 5, four blanks), and a ranked ballot (one first choice, four blanks). Four "
+        "counts, one answer — Ella wins every race. That is the lesson, and it is not a "
+        "point in STAR's favour: when every ballot carries a single bit, every method has "
+        "the same one bit to read, so no method can do better than choose-one. Andre, Blake "
+        "and David finish on zero with nothing ever said about them, and STAR's automatic "
+        "runoff has nothing left to add. A bullet vote is legal, full-weight and unspoilable "
+        "— it just hands back the expressiveness the ballot was offering. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/00_start_here/STAR_Voting/voting_styles/traditional.html"),
+    "races": [
+        {"title": "Choose-One (Plurality) — the traditional ballot itself",
+         "method": "Plurality", "num_winners": 1,
+         "candidates": _TRAD_CANDS, "ballots": _TRAD_ONE},
+        {"title": "STAR — the same single mark on a 0-5 score ballot",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _TRAD_CANDS, "ballots": _TRAD_STAR},
+        {"title": "RCV-IRV — the same single mark on a ranked ballot",
+         "method": "IRV", "num_winners": 1, "max_rankings": 5,
+         "candidates": _TRAD_CANDS, "ballots": _TRAD_RANK},
+        {"title": "Ranked Robin — the same ranked ballot, every pair head-to-head",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 5,
+         "candidates": _TRAD_CANDS, "ballots": _TRAD_RANK},
+    ],
+    "enable_write_in": False,
+    "expected": "All four races -> Ella. Choose-One: Ella 2 of 3. STAR: scoring round "
+                "Ella 10, Carmen 5, everyone else 0; runoff Ella 2-1 (no Equal Support). "
+                "RCV-IRV: Ella has a round-1 majority (2 of 3). Ranked Robin: Ella beats "
+                "all four head-to-head (the Condorcet winner); Andre, Blake and David are "
+                "jointly winless.",
+}
+
+# RESULTS (2026-07-26): BV2255 -> 2jpcxd — created + 3/3 ballots × 4 races OK. All four
+# races elected Ella, as predicted. Backs 00_start_here/STAR_Voting/voting_styles/
+# traditional.md and 01_STAR/_main/cases/bv2255_2jpcxd_all-traditional-ballots.yaml.
+# Note: the three winless also-rans (Andre/Blake/David) come back in a different order in
+# each race's standings — BV breaks that all-zero tie randomly. It cannot touch the winner.
+# Do NOT re-run.
+
+ELECTIONS: list = []   # nothing to create (BV2255 minted -> 2jpcxd)
+# Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four ballots (created)
+# Previously: [REINFORCEMENT_SPEC]  # BV2254 — reinforcement paradox (created -> t4by6x)
 # Previously: [P3_SPEC]  # BV2253 — Manipulability P3, sincere baseline (created)
 # Previously: [GOODBERRYS_SPEC]  # BV2252 — Goodberry's Best Flavor 2026 (created, live poll)
 # Previously: [MARGINS_SPEC]  # BV2251 — Margins matter: Copeland vs Borda (created)

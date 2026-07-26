@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**435 election files** (385 single-winner, 50 multi-winner) across 16 method(s).
+**436 election files** (386 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 237 |
+| STAR | 238 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 61 |
 | Approval | 15 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (237)
+## STAR  (238)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -56,6 +56,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2182_tg4779_faq_runoff_reversal`](../../01_STAR/_main/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md) | `01_STAR/_main/cases/` | 1 | BV2182 — why the automatic runoff (and Equal Support) → _Almond_ | [`.yaml`](../../01_STAR/_main/cases/bv2182_tg4779_faq_runoff_reversal.yaml) |
 | [`bv2184_fyy886_lunch_vote`](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) | `01_STAR/_main/cases/` | 1 | BV2184 — The team lunch vote → _Pizza_ | [`.yaml`](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) |
 | [`bv2187_qrw6wb_ann-bob-cal`](../../01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) | `01_STAR/_main/cases/` | 1 | Ann, Bob, Cal - the canonical leading example (single-winner STAR) → _Bob_ | [`.yaml`](../../01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml) |
+| [`bv2255_2jpcxd_all-traditional-ballots`](../../01_STAR/_main/cases/cases_pages/bv2255_2jpcxd_all-traditional-ballots.md) | `01_STAR/_main/cases/` | 1 | Everyone voted "traditional" — one mark each, and every method agrees (BV2255, 2jpcxd) → _Ella_ | [`.yaml`](../../01_STAR/_main/cases/bv2255_2jpcxd_all-traditional-ballots.yaml) |
 | [`display_options_demo`](../../01_STAR/_main/cases/cases_pages/display_options_demo.md) | `01_STAR/_main/cases/` | 1 | Display options demo → _Don_ | [`.yaml`](../../01_STAR/_main/cases/display_options_demo.yaml) |
 | [`equal_support_runoff_demo`](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md) | `01_STAR/_main/cases/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/_main/cases/equal_support_runoff_demo.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/_main/cases/cases_pages/quorum_demo_c3_b6.md) | `01_STAR/_main/cases/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/_main/cases/quorum_demo_c3_b6.yaml) |
