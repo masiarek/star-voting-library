@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **213** single-winner STAR elections (skipped 152 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **125** (59%) diverge from STAR under at least one method; **88** agree across the board.
+- Scanned **216** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **128** (59%) diverge from STAR under at least one method; **88** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 28 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
-| IRV_DIFFERS_ARTIFACT | 8 |
+| IRV_DIFFERS_ARTIFACT | 10 |
 | CYCLE_OR_THREE_WAY | 37 |
-| APPROVAL_OR_MINOR | 43 |
+| APPROVAL_OR_MINOR | 44 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (122 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (125 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -117,7 +117,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
-### IRV_DIFFERS_ARTIFACT — 8
+### IRV_DIFFERS_ARTIFACT — 10
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -127,6 +127,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[star_ala_approval](cases/IRV_DIFFERS_ARTIFACT/star_ala_approval.md)** — `01_STAR/_main/cases/star_ala_approval.yaml` (4c/8b)  
     STAR=**D** · IRV=A · RR=D · Approval=A · Score=D · Condorcet=D  
     _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=D, strict=A)_
+- **[majority_vs_consensus_51_49](cases/IRV_DIFFERS_ARTIFACT/majority_vs_consensus_51_49.md)** — `01_STAR/majority_criterion/cases/majority_vs_consensus_51_49.yaml` (3c/100b)  
+    STAR=**Celia** · IRV=Alma · RR=Celia · Approval=Celia · Score=Celia · Condorcet=Celia  
+    _flags: 3 tied-score ballot(s); RR conv-sensitive (weak=Celia, strict=Alma)_
 - **[tie_break_06_scoring_dead_rung_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_06_scoring_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
@@ -139,6 +142,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml` (3c/38b)  
     STAR=**Ben** · IRV=Cora · RR=Ben · Approval=Cora · Score=Cora · Condorcet=Ben  
     _flags: 2 tied-score ballot(s)_
+- **[hh41_03_marks_read_pairwise](cases/IRV_DIFFERS_ARTIFACT/hh41_03_marks_read_pairwise.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml` (3c/100b)  
+    STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=B  
+    _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=B, strict=A)_
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
@@ -227,7 +233,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
-### APPROVAL_OR_MINOR — 43
+### APPROVAL_OR_MINOR — 44
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -287,6 +293,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Carmen** · IRV=Carmen · RR=Carmen · Approval=Andre · Score=Carmen · Condorcet=Carmen
 - **[bv2214_m3hb6y_alaska_2022_general](cases/APPROVAL_OR_MINOR/bv2214_m3hb6y_alaska_2022_general.md)** — `method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml` (3c/200b)  
     STAR=**Peltola** · IRV=Peltola · RR=Peltola · Approval=Begich · Score=Begich · Condorcet=Peltola
+- **[hh41_04_stipulated_utilities_star](cases/APPROVAL_OR_MINOR/hh41_04_stipulated_utilities_star.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml` (3c/100b)  
+    STAR=**A** · IRV=A · RR=A · Approval=B · Score=A · Condorcet=A
 - **[Black_Curtain_01_c3_b5_hidden-consensus](cases/APPROVAL_OR_MINOR/Black_Curtain_01_c3_b5_hidden-consensus.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml` (3c/5b)  
     STAR=**Cal** · IRV=Cal · RR=Cal · Approval=Bob · Score=Bob · Condorcet=Cal
 - **[Black_Curtain_02_c3_b5_near-clones](cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml` (3c/5b)  

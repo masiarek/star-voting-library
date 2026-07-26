@@ -1,0 +1,23 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Majority criterion vs. the consensus candidate — the 51/49 polarized electorate
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alma, Bruno, Celia
+    48 ×   Alma > Celia      (5, 0, 4)
+     3 ×   Alma > Celia      (5, 0, 5)
+    49 ×   Bruno > Celia      (0, 5, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alma              51  Elected
+Bruno             49  Rejected
+Celia              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alma
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,0 +1,58 @@
+election_title: Majority criterion vs. the consensus candidate — the 51/49 polarized electorate
+scenario_description: |-
+  The textbook argument AGAINST the majority criterion, made runnable.
+
+  100 voters, sharply polarized. 51 love Alma and loathe Bruno; 49 love Bruno
+  and loathe Alma. Celia is nobody's champion but everybody's genuinely good
+  outcome — a 4 out of 5 from both camps, and a full 5 from the three Alma
+  voters who honestly have no preference between Alma and Celia.
+
+  Alma is max-scored by 51 voters — an outright MAJORITY. So any method
+  satisfying the majority criterion MUST elect Alma:
+    - Choose-One: Alma 51 first choices, wins outright.
+    - RCV-IRV: Alma has a first-round majority, wins in round 1.
+
+  Methods that read the whole ballot elect Celia instead:
+    - Score (utilitarian sum): Celia 403, Alma 255, Bruno 245.
+    - STAR: Celia and Alma are the finalists; the runoff is Celia 49, Alma 48,
+      with 3 voters expressing Equal Support. Celia wins.
+    - Ranked Robin: Celia beats Alma 49-48 and Bruno 51-49 — Condorcet winner.
+
+  THE THRESHOLD. Celia only overtakes Alma head-to-head because 3 of the 51
+  majority voters rate Alma and Celia equally. At 2 such voters the pairwise
+  count is 49-49, a tie, and Celia is no longer the Condorcet winner. So the
+  crossover sits just above 2% of the electorate — roughly 4% of the majority
+  bloc, which is exactly what the electowiki cardinal-voting article claims.
+  Verified, not assumed.
+
+  This case is deliberately double-edged. It shows what the majority criterion
+  costs (a candidate 100 out of 100 voters are content with, blocked by a bare
+  51% bloc) WITHOUT pretending the majority has no claim: Alma really is the
+  sincere favorite of more than half the room, and "the majority should win"
+  is a serious position, not a mistake. See the claim-check page for both sides.
+
+options:
+  show_description: false   # show the scenario context on screen (study/reference)
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: false   # full N×N grid — Celia's two head-to-heads are the lesson
+  show_condorcet: true   # Celia is the Condorcet winner despite Alma's majority
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: true   # RCV-IRV diverges — Alma wins on a first-round majority
+  show_runoff_percent: true   # the 49 / 48 / 3-Equal-Support split is the whole point
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Count:Alma,Bruno,Celia
+  48:5,0,4   # Alma camp — prefer Alma, content with Celia
+  3:5,0,5    # Alma camp — honestly no preference between Alma and Celia
+  49:0,5,4   # Bruno camp — prefer Bruno, content with Celia
+
+expected_winners:
+  - Celia
+
+# file: majority_vs_consensus_51_49.yaml

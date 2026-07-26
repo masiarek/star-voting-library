@@ -704,6 +704,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2254 — STAR — scoring round leads Ada, the runoff flips to Cara | STAR | 3 | **Cara** |
 | BV2254 — Ranked Robin — Cara is the combined Condorcet winner | RankedRobin | 3 | **Cara** |
 
+## BV2258 — Read the ballot, name the method: 35 voters say only Yes or No
+
+**Election** [`d4v2dh`](https://bettervoting.com/d4v2dh/results) · **2 races** · **35 ballots** · [frozen export](../../01_STAR/exercises/cases/ex15_approval_yes_no_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2258 — Which method is this? — the Yes/No count (Approval): Blair 28 of 35 | Approval | 3 | **Blair** |
+| BV2258 — The same 35 ballots head-to-head — Blair beats Cosmo 13-7, 15 no preference | STAR | 3 | **Blair** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
