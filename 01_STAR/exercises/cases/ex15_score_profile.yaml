@@ -1,0 +1,53 @@
+election_title: Exercise 15b — a 0–5 score profile (which method is this?)
+
+scenario_description: |-
+  Part (b) of Exercise 15 — "Read the ballot, name the method."
+
+  Four voters rate four candidates 0-5, each candidate judged on its own scale
+  with no ordering required. That is a CARDINAL ballot, and adding the columns
+  is SCORE VOTING (aka Range): Clara 19, Diego 13, Bruno 11, Alice 7. Clara
+  wins.
+
+  The file runs as STAR because the teaching CLI has no first-class
+  voting_method: Score — and that turns out to be the useful part. STAR's
+  Scoring Round IS the score-voting tally, so the totals printed below are the
+  Score result; the runoff is the extra step Score doesn't take. Here it
+  changes nothing: Clara also wins the runoff 4-0, is the Condorcet winner, and
+  the engine prints no [Divergence from STAR] block at all because every method
+  agrees.
+
+  Kept deliberately: an election where nothing diverges is a fair baseline for
+  a library full of elections that do. Clara is scored top or joint-top by all
+  four voters, so there is no question for a method to disagree about.
+
+  A textbook-style prompt, rebuilt with named candidates so the rows line up
+  A/B/C/D -> Alice/Bruno/Clara/Diego. Part (a) is ex15_approval_yes_no.yaml.
+
+  Exercise page: ../ex15_read_the_ballot.md
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false   # four voters, one row each — the profile IS the lesson
+  count_separator: "×"
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Alice,Bruno,Clara,Diego
+  0,2,5,4   # voter 1
+  3,5,5,3   # voter 2
+  0,1,5,4   # voter 3
+  4,3,4,2   # voter 4
+
+expected_winners:
+  - Clara
+
+# file: ex15_score_profile.yaml

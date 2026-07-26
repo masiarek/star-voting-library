@@ -1,0 +1,49 @@
+election_title: Exercise 15a, second look — the same Yes/No ballots read pairwise
+
+scenario_description: |-
+  The SAME 35 ballots as ex15_approval_yes_no.yaml, with each approval written
+  as a 5 and each non-approval as a 0, so the engine prints the pairwise matrix
+  and names the Condorcet winner. The magnitudes carry no information here —
+  every head-to-head count depends only on the two-class order (approved above
+  not-approved), which is what makes this a DICHOTOMOUS PROFILE.
+
+  The payoff: the head-to-head order reproduces the approval order exactly.
+  Blair beats Cosmo 13-7 (15 voters approved both, so they express no
+  preference) and beats Ada 20-7; Cosmo beats Ada 15-8. Blair > Cosmo > Ada,
+  the same ranking as the approval totals 28 > 22 > 15.
+
+  That is guaranteed, not luck. On a dichotomous profile "more voters strictly
+  prefer x to y" reduces to "more voters approve x than y", so a Condorcet
+  winner always exists and approval voting agrees with every Condorcet method.
+  The caveat lives one folder over: real approval ballots are compressed from
+  richer opinions, and the Condorcet winner of the uncompressed opinions can be
+  someone else — see method_comparisons/black_curtain/condorcet_compression.md.
+
+  Exercise page: ../ex15_read_the_ballot.md
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false   # the full pairwise grid is the point
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Count:Ada,Blair,Cosmo
+  15:0,5,5
+  8:5,5,0
+  7:5,0,5
+  5:0,5,0
+
+expected_winners:
+  - Blair
+
+# file: ex15_approval_pairwise.yaml

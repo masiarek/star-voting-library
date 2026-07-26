@@ -1,0 +1,46 @@
+election_title: Exercise 15a — a Yes/No profile (which method is this?)
+
+scenario_description: |-
+  Part (a) of Exercise 15 — "Read the ballot, name the method."
+
+  35 voters, three candidates, and a ballot that records only Yes or No per
+  candidate — no ranking, no scores, and voters approve different NUMBERS of
+  candidates. That combination identifies the method: this is APPROVAL VOTING.
+  Blair wins with 28 approvals of 35 ballots (80%), ahead of Cosmo 22 and
+  Ada 15.
+
+  Note the shares add to well over 100% — approval percentages are shares of
+  BALLOTS, not of a divided pie, and that is the tell most readers miss.
+
+  A textbook-style prompt (a Yes/No table with weighted voter blocs), rebuilt
+  here with named candidates so the columns line up A/B/C -> Ada/Blair/Cosmo.
+  Companion file ex15_approval_pairwise.yaml re-reads these same ballots
+  pairwise; part (b) is ex15_score_profile.yaml.
+
+  Exercise page: ../ex15_read_the_ballot.md
+
+options:
+  show_description: false
+  show_matrix: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+voting_method: Approval
+num_winners: 1
+
+ballots: |-
+  Count:Ada,Blair,Cosmo
+  15:0,1,1
+  8:1,1,0
+  7:1,0,1
+  5:0,1,0
+
+expected_winners:
+  - Blair
+
+# file: ex15_approval_yes_no.yaml
