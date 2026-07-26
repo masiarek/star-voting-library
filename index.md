@@ -30,7 +30,6 @@ Score every candidate **0–5**; the two highest-scoring meet in an **automatic 
 
 <div class="star-hero-img" markdown="1">
 <img src="00_start_here/img/star_ballot_example.png" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
-<p class="star-hero-credit">Official ballot design — © <a href="https://www.equal.vote/star">Equal Vote Coalition</a>, used by permission.</p>
 </div>
 
 </div>

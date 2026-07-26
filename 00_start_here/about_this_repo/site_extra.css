@@ -78,12 +78,6 @@
   border-radius: 0.4rem;
   box-shadow: var(--md-shadow-z2);
 }
-.star-hero-credit {
-  font-size: 0.6rem;
-  color: var(--md-default-fg-color--light);
-  text-align: center;
-  margin: 0.5rem auto 0;
-}
 @media screen and (max-width: 44.9375em) {
   .star-hero {
     grid-template-columns: 1fr;
