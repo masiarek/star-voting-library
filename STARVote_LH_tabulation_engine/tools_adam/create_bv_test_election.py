@@ -713,24 +713,68 @@ def dry_run(spec):
           f"bv_ballot_sheet.py --spec <SPEC_NAME> --copies 1")
 
 
+def _dry_run_targets():
+    """What --dry-run should inspect: the names given on the command line, else
+    ELECTIONS. `ELECTIONS` is normally EMPTY (its resting state — you point it at a
+    spec only for the run that mints it), so `--dry-run NAME [NAME…]` inspects a
+    spec straight from bv_election_specs.py without touching that list. With no
+    names and an empty ELECTIONS, list what's available instead of doing nothing."""
+    from bv_election_specs import spec_names
+    names = [a for a in sys.argv[1:] if not a.startswith("-") and a != "--dry-run"]
+    catalog = spec_names()
+    if names:
+        picked, missing = [], []
+        for n in names:
+            (picked.append(catalog[n]) if n in catalog else missing.append(n))
+        if missing:
+            print(f"\n⚠ no such spec in bv_election_specs.py: {', '.join(missing)}")
+            _print_catalog(catalog)
+            sys.exit(1)
+        return picked
+    if ELECTIONS:
+        return list(ELECTIONS)
+    print("\nELECTIONS is empty — nothing is queued to create (that's the normal "
+          "resting state).\nInspect any spec by name:  --dry-run <SPEC_NAME> "
+          "[<SPEC_NAME>…]")
+    _print_catalog(catalog)
+    sys.exit(0)
+
+
+def _print_catalog(catalog):
+    """List the specs defined in the data module, newest (highest BV<n>) first."""
+    if not catalog:
+        print("  (bv_election_specs.py defines no election specs.)")
+        return
+    def _key(item):
+        tid = str(item[1].get("test_id") or "")
+        m = re.search(r"\d+", tid)
+        return (-int(m.group()) if m else 0, item[0])
+    print(f"\n  {len(catalog)} spec(s) defined in bv_election_specs.py:")
+    for name, spec in sorted(catalog.items(), key=_key):
+        tid = spec.get("test_id") or "—"
+        nraces = len(spec.get("races") or [1])
+        print(f"    {name:<24} {tid:<8} {nraces} race(s)  {spec.get('title', '')[:56]}")
+
+
 if __name__ == "__main__":
     DRY = "--dry-run" in sys.argv or os.environ.get("BV_DRY_RUN") == "1"
     print(f"BetterVoting API @ {API}")
     print(f"identity BV_USER_ID={USER_ID}  template={TEMPLATE_ID}")
     if DRY:
-        print(f"DRY RUN — inspecting {len(ELECTIONS)} election(s); nothing will be "
+        targets = _dry_run_targets()      # named spec(s), else ELECTIONS (or exits)
+        print(f"DRY RUN — inspecting {len(targets)} election(s); nothing will be "
               f"created.\n")
         # The pre-check's gates exist to stop an irreversible POST. In a dry run
         # there is no POST, so report and keep going instead of prompting/aborting —
         # you still SEE every warning, which is the point of looking first.
         os.environ.setdefault("BV_ALLOW_DUP_TITLE", "1")
         os.environ.setdefault("BV_ALLOW_NO_TESTID", "1")
-        _preflight_test_id_collisions(ELECTIONS, fatal=False)
-        _preflight_test_ids(ELECTIONS)
-        for spec in ELECTIONS:
+        _preflight_test_id_collisions(targets, fatal=False)
+        _preflight_test_ids(targets)
+        for spec in targets:
             dry_run(spec)
         print("\n" + "=" * 72)
-        print(f"DRY RUN complete — {len(ELECTIONS)} election(s) inspected, 0 created.")
+        print(f"DRY RUN complete — {len(targets)} election(s) inspected, 0 created.")
         print("=" * 72)
         sys.exit(0)
     print(f"Creating {len(ELECTIONS)} election(s)...\n")

@@ -145,18 +145,21 @@ def from_spec(name=None, race_index=0):
         import bv_election_specs as specs
     except ImportError as ex:                                  # pragma: no cover
         raise SystemExit(f"Could not import bv_election_specs.py ({ex}).")
+    catalog = specs.spec_names()
     if name:
-        spec = getattr(specs, name, None)
-        if not isinstance(spec, dict):
+        spec = catalog.get(name)
+        if spec is None:
             raise SystemExit(f"bv_election_specs.py has no election spec named "
-                             f"{name!r}. Try one of: " + ", ".join(
-                                 k for k, v in vars(specs).items()
-                                 if isinstance(v, dict) and "candidates" in str(v)))
+                             f"{name!r}.\nAvailable: " + ", ".join(sorted(catalog)))
     else:
+        # ELECTIONS is normally EMPTY (you point it at a spec only for the run that
+        # mints it), so bare --spec usually can't guess — name one.
         pool = list(getattr(specs, "ELECTIONS", []) or [])
         if len(pool) != 1:
-            raise SystemExit(f"ELECTIONS holds {len(pool)} election(s) — name the one "
-                             f"to preview: --spec NAME (e.g. --spec GOODBERRYS_SPEC).")
+            raise SystemExit(
+                f"ELECTIONS holds {len(pool)} election(s), so there's nothing to "
+                f"preview by default — name a spec: --spec NAME\nAvailable: "
+                + ", ".join(sorted(catalog)))
         spec = pool[0]
 
     races = spec.get("races") or [{"title": spec.get("title"),
@@ -368,7 +371,7 @@ def _colhead(n):
 def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
                   results_qr_uri=None, serial=None, write_ins=0,
                   break_after=False, notice="", blurb="", promo="", logo_uri="",
-                  qr_size=88):
+                  qr_size=176, qr_caption="Scan to vote online"):
     bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
     rows = []
     for i, c in enumerate(candidates):
@@ -411,7 +414,7 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
     vote_qr = (f'<div class="qr" style="width:{qr_size}px">'
                f'<img src="{vote_qr_uri}" alt="QR code — vote online" '
                f'style="width:{qr_size}px;height:{qr_size}px">'
-               f'<span class="cta">Scan to vote online</span></div>'
+               f'<span class="cta">{html.escape(qr_caption)}</span></div>'
                if vote_qr_uri else "")
     header = (f'<div class="head">'
               f'<div class="head-main">'
@@ -446,7 +449,7 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, notice="", blurb="",
                  promo="", logo_uri="", qr_size=176, results_qr=False,
-                 fill_page=True):
+                 fill_page=True, placeholder_qr=None):
     # ONE QR by default — the big "scan to vote" code. The results URL prints as
     # text in the footer, and --results-qr adds a small code beside it.
     # (bv_id is None only when --verify-bv found the id doesn't resolve → no QR.)
@@ -455,10 +458,20 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     vote_qr_uri = qr_data_uri(vote_url) if (vote_url and qr) else None
     results_qr_uri = (qr_data_uri(results_url)
                       if (results_url and qr and results_qr) else None)
+    # A PREVIEW has no election id, so normally there's no QR at all — which makes
+    # the layout hard to judge. `placeholder_qr` prints a stand-in code at the real
+    # size, captioned so it can't be read as a vote link. It encodes a URL you pass
+    # (default: BetterVoting's home page) and NEVER a made-up election id — a
+    # fabricated id is the dead-link failure FR-12 exists to prevent.
+    caption = "Scan to vote online"
+    if placeholder_qr and not bv_id and qr:
+        vote_qr_uri = qr_data_uri(placeholder_qr)
+        caption = "Sample QR — layout only"
     pp = max(1, per_page)
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id,
                       vote_qr_uri=vote_qr_uri, results_qr_uri=results_qr_uri,
+                      qr_caption=caption,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
                       notice=notice, blurb=blurb, promo=promo,
                       logo_uri=logo_uri, qr_size=qr_size,
@@ -573,6 +586,24 @@ def selftest():
         two = (both.count('class="qr"') == 2 * 2 and ">results<" in both)
         print(f"[selftest] --results-qr adds the footer code: {'OK' if two else 'FAIL'}")
         ok &= two
+        # Placeholder QR: preview-only, captioned as a stand-in, and it must never
+        # override a real election's own code.
+        ph = render_sheet("T", "q", ["A"], None, copies=1, per_page=1,
+                          placeholder_qr="https://bettervoting.com")
+        real = render_sheet("T", "q", ["A"], "abc123", copies=1, per_page=1,
+                            placeholder_qr="https://example.com/nope")
+        phk = [
+            ("placeholder QR prints on a preview (no bv_id)",
+             ph.count('class="qr"') == 1 and "Sample QR" in ph),
+            ("placeholder never displaces a real election's QR",
+             "Sample QR" not in real and "Scan to vote online" in real),
+            ("no placeholder + no id -> still no QR",
+             'class="qr"' not in render_sheet("T", "q", ["A"], None, copies=1,
+                                              per_page=1)),
+        ]
+        for label, cond in phk:
+            print(f"[selftest] {label}: {'OK' if cond else 'FAIL'}")
+            ok &= cond
     else:
         no_qr = 'class="qr"' not in html_out
         print(f"[selftest] graceful no-QR (segno absent): {'OK' if no_qr else 'FAIL'}")
@@ -684,13 +715,21 @@ def main():
     ap.add_argument("--per-page", type=int, default=1,
                     help="ballots per printed page (default 1 — one ballot per page, "
                          "the right choice for ballots you hand out individually)")
-    ap.add_argument("--out", default="ballots.pdf",
-                    help="output PDF path (default ballots.pdf). PDF is the only "
+    ap.add_argument("--out", default=None,
+                    help="output PDF path (default ballots.pdf, or "
+                         "<spec>_preview.pdf for a --spec preview). PDF is the only "
                          "format; rendered via headless Chromium (needs `playwright`).")
     ap.add_argument("--no-qr", action="store_true",
                     help="deliberately print without the vote QR. (Otherwise a QR is "
                          "required — a ballot with a live BV id must be scannable — so "
                          "a missing `segno` library is an error, not a QR-less ballot.)")
+    ap.add_argument("--preview-qr", nargs="?", const="https://bettervoting.com",
+                    metavar="URL",
+                    help="PREVIEW ONLY: print a stand-in QR so you can judge the "
+                         "layout before the election exists. Captioned \"Sample QR — "
+                         "layout only\", and it encodes the URL you give (default "
+                         "bettervoting.com) — never a made-up election id, which "
+                         "would print a scannable dead link.")
     ap.add_argument("--results-qr", action="store_true",
                     help="also print a small results QR beside the results URL in the "
                          "footer (off by default — the URL already prints as text, and "
@@ -742,6 +781,10 @@ def main():
         raise SystemExit("Pick one route: --bv-export (a real, created election) or "
                          "--spec (a pre-mint preview of a spec).")
     preview = args.spec is not None
+    # A real ballot's QR must point at its own election — never a stand-in.
+    if args.preview_qr and not preview:
+        raise SystemExit("--preview-qr is for --spec previews only. A ballot printed "
+                         "from a real election must carry that election's own QR.")
     if preview:
         t2, bv_id, candidates, edesc, rdesc = from_spec(args.spec or None, args.race)
     elif args.bv_export:
@@ -812,11 +855,17 @@ def main():
                          write_ins=args.write_ins, notice=notice,
                          blurb=blurb, promo=promo, logo_uri=logo_uri,
                          qr_size=args.qr_size, results_qr=args.results_qr,
-                         fill_page=not args.no_fill_page)
+                         fill_page=not args.no_fill_page,
+                         placeholder_qr=args.preview_qr)
 
     # PDF is the only output. It's rendered from the ballot HTML via headless
     # Chromium (playwright), which is therefore required.
-    out = args.out if args.out.lower().endswith(".pdf") else os.path.splitext(args.out)[0] + ".pdf"
+    # A preview gets its own filename so it can't be mistaken for — or overwrite —
+    # the real print run sitting next to it.
+    default_out = (f"{(args.spec or 'spec').lower()}_preview.pdf" if preview
+                   else "ballots.pdf")
+    out = args.out or default_out
+    out = out if out.lower().endswith(".pdf") else os.path.splitext(out)[0] + ".pdf"
     if not html_to_pdf(sheet, out):
         raise SystemExit(
             "PDF render needs `playwright`. Install it once:\n"
@@ -827,9 +876,12 @@ def main():
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, {layout}) "
           f"to {os.path.abspath(out)}")
     if preview:
-        print("PREVIEW ONLY — this election does not exist on BetterVoting yet, so the "
-              "ballot has no QR and no results link.\nHappy with it? Create the election "
-              "(create_bv_test_election.py), then reprint from its export.")
+        qr_note = (f"the QR is a stand-in for {args.preview_qr} (layout only — it does "
+                   f"NOT lead to this election)" if args.preview_qr
+                   else "the ballot has no QR and no results link")
+        print(f"PREVIEW ONLY — this election does not exist on BetterVoting yet, so "
+              f"{qr_note}.\nHappy with it? Create the election "
+              f"(create_bv_test_election.py), then reprint from its export.")
     else:
         print("Print-ready PDF — send it straight to the printer.")
     if bv_id:

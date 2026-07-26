@@ -33,7 +33,7 @@ Before you run the tool, decide:
 - **Promo / chapter footer?** — `--promo` + `--chapter "…"`.
 - **Copies / layout** — the output is always a print-ready **PDF** (`--out ballots.pdf`).
 - **Is the id live?** — add `--verify-bv` so no one scans a dead QR.
-- **Not created yet?** — `--spec [NAME]` prints a **PREVIEW** ballot straight from the election spec, before it exists on BetterVoting. A BV election is permanent and can never be edited or deleted, so look at the paper first; the companion check is `create_bv_test_election.py --dry-run`, which shows the exact title, race titles, candidates and description that would be sent (and pings the description's backlink URL).
+- **Not created yet?** — `--spec NAME` prints a **PREVIEW** ballot straight from the election spec, before it exists on BetterVoting (add `--preview-qr` for a stand-in code if you want to judge the layout with one). A BV election is permanent and can never be edited or deleted, so look at the paper first; the companion check is `create_bv_test_election.py --dry-run`, which shows the exact title, race titles, candidates and description that would be sent (and pings the description's backlink URL).
 
 ## Step 1 — create the election and export its JSON
 

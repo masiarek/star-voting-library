@@ -4232,3 +4232,21 @@ ELECTIONS: list = []   # nothing to create
 # Previously: [C1788_SPEC]  # BV2250 — Condorcet's 1788 rebuttal to Borda (created)
 # Previously: [WCL_SPEC]  # BV2249 — weak Condorcet loser (created)
 # Previously: [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]  # BV2229-2232 (created)
+
+
+def spec_names(module=None):
+    """Every election spec defined in this module, as {NAME: spec}.
+
+    `ELECTIONS` is normally EMPTY (its resting state — you point it at a spec only
+    for the run that creates it), so both tools need a way to find a spec by name:
+    `create_bv_test_election.py --dry-run NAME` and `bv_ballot_sheet.py --spec NAME`.
+    A spec is a module-level dict with a title and either candidates or races."""
+    import sys as _sys
+    mod = module or _sys.modules[__name__]
+    out = {}
+    for name, val in vars(mod).items():
+        if name.startswith("_") or not isinstance(val, dict):
+            continue
+        if val.get("title") and (val.get("candidates") or val.get("races")):
+            out[name] = val
+    return out
