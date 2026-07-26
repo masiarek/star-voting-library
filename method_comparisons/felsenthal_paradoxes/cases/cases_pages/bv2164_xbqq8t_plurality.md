@@ -33,78 +33,23 @@ Arlo,Bree,Cole,Dana
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
-[Divergence from STAR]
-  STAR     = Bree
-  Approval = Arlo   (differs from STAR)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 33 ballots.
-Count × Arlo,Bree,Cole,Dana
-   14 ×    0,   1,   0,   0
-   11 ×    1,   0,   0,   0
-    4 ×    0,   0,   1,   0
-    4 ×    0,   0,   0,   1
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Bree          -- 14 -- First place
-   Arlo          -- 11 -- Second place
-   Cole          --  4
-   Dana          --  4
- Bree and Arlo advance.
+                    Arlo   Bree   Cole   Dana 
+  11 ×               X      -      -      -   
+  14 ×               -      X      -      -   
+  4 ×                -      -      X      -   
+  4 ×                -      -      -      X   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Bree          -- 14 -- First place
-   Arlo          -- 11
-   Equal Support --  8
- Bree wins.
-   Runoff math:
-     33  ballots cast
-   −  8  Equal Support (no preference between the two finalists)
-     ──
-     25  voters with a preference  (majority = 13)
-           Bree 14 (56%)  ·  Arlo 11 (44%)
+  Count the marks:  Bree 14 · Arlo 11 · Cole 4 · Dana 4
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Bree
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Bree   (14 of 33 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Arlo    |   * Bree    |     Cole    |     Dana    |
----------------------------------------------------------------------------
-        * Arlo > |     ---      |11 -  8 - 14 |11 - 18 -  4 |11 - 18 -  4 |
-        * Bree > | 14 -  8 - 11 |    ---      |14 - 15 -  4 |14 - 15 -  4 |
-          Cole > |  4 - 18 - 11 | 4 - 15 - 14 |    ---      | 4 - 25 -  4 |
-          Dana > |  4 - 18 - 11 | 4 - 15 - 14 | 4 - 25 -  4 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Bree — matches the STAR winner
-
-[Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Cole, Dana (winless — pairwise ties)
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Arlo        0   0   0   0  11  22  |    11   0.3
-Bree        0   0   0   0  14  19  |    14   0.4
-Cole        0   0   0   0   4  29  |     4   0.1
-Dana        0   0   0   0   4  29  |     4   0.1
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

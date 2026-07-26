@@ -23,73 +23,22 @@ Dog,Cat,Fish,Bird
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2133_dyxrbr_pet2_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 32 ballots.
-Count × Dog,Cat,Fish,Bird
-   13 ×   1,  0,   0,   0
-   10 ×   0,  0,   1,   0
-    9 ×   0,  0,   0,   1
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Dog           -- 13 -- First place
-   Fish          -- 10 -- Second place
-   Bird          --  9
-   Cat           --  0
- Dog and Fish advance.
+                    Dog    Cat    Fish   Bird 
+  9 ×                -      -      -      X   
+  10 ×               -      -      X      -   
+  13 ×               X      -      -      -   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Dog           -- 13 -- First place
-   Fish          -- 10
-   Equal Support --  9
- Dog wins.
-   Runoff math:
-     32  ballots cast
-   −  9  Equal Support (no preference between the two finalists)
-     ──
-     23  voters with a preference  (majority = 12)
-           Dog 13 (57%)  ·  Fish 10 (43%)
+  Count the marks:  Dog 13 · Fish 10 · Bird 9 · Cat 0
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Dog
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Dog   (13 of 32 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Dog     |     Cat     |   * Fish    |     Bird    |
----------------------------------------------------------------------------
-         * Dog > |     ---      |13 - 19 -  0 |13 -  9 - 10 |13 - 10 -  9 |
-           Cat > |  0 - 19 - 13 |    ---      | 0 - 22 - 10 | 0 - 23 -  9 |
-        * Fish > | 10 -  9 - 13 |10 - 22 -  0 |    ---      |10 - 13 -  9 |
-          Bird > |  9 - 10 - 13 | 9 - 23 -  0 | 9 - 13 - 10 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Dog — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Cat — loses every head-to-head matchup
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Dog         0   0   0   0  13  19  |    13   0.4
-Cat         0   0   0   0   0  32  |     0   0.0
-Fish        0   0   0   0  10  22  |    10   0.3
-Bird        0   0   0   0   9  23  |     9   0.3
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2133_dyxrbr_pet2_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

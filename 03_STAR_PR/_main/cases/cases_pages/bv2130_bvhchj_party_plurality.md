@@ -29,91 +29,29 @@ Democrat,Republican,Libertarian,Green,Constitution,Socialism and Liberation,Soli
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2130_bvhchj_party_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 102 ballots.
-Count × Democrat,Republican,Libertarian,Green,Constitution,Socialism and Liberation,Solidarity,Independent
-   39 ×        1,         0,          0,    0,           0,                       0,         0,          0
-   15 ×        0,         0,          0,    0,           0,                       1,         0,          0
-   14 ×        0,         0,          0,    0,           0,                       0,         0,          1
-   11 ×        0,         0,          1,    0,           0,                       0,         0,          0
-   11 ×        0,         0,          0,    1,           0,                       0,         0,          0
-    7 ×        0,         0,          0,    0,           0,                       0,         1,          0
-    2 ×        0,         1,          0,    0,           0,                       0,         0,          0
-    2 ×        0,         0,          0,    0,           1,                       0,         0,          0
-    1 ×        0,         0,          0,    0,           0,                       0,         0,          0
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Democrat                 -- 39 -- First place
-   Socialism and Liberation -- 15 -- Second place
-   Independent              -- 14
-   Green                    -- 11
-   Libertarian              -- 11
-   Solidarity               --  7
-   Constitution             --  2
-   Republican               --  2
- Democrat and Socialism and Liberation advance.
+                   Democrat  Republican  Libertarian  Green  Constitution  Socialism and Liberation  Solidarity  Independent 
+  39 ×                X          -            -         -         -                   -                  -            -      
+  15 ×                -          -            -         -         -                   X                  -            -      
+  14 ×                -          -            -         -         -                   -                  -            X      
+  11 ×                -          -            X         -         -                   -                  -            -      
+  11 ×                -          -            -         X         -                   -                  -            -      
+  7 ×                 -          -            -         -         -                   -                  X            -      
+  2 ×                 -          X            -         -         -                   -                  -            -      
+  2 ×                 -          -            -         -         X                   -                  -            -      
+  1 ×                 -          -            -         -         -                   -                  -            -      
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Democrat                 -- 39 -- First place
-   Socialism and Liberation -- 15
-   Equal Support            -- 48
- Democrat wins.
-   Runoff math:
-     102  ballots cast
-   −  48  Equal Support (no preference between the two finalists)
-     ───
-      54  voters with a preference  (majority = 28)
-           Democrat 39 (72%)  ·  Socialism and Liberation 15 (28%)
+  Count the marks:  Democrat 39 · Socialism and Liberation 15 · Independent 14 · Libertarian 11 · Green 11 · Solidarity 7 · Republican 2 · Constitution 2
+  (1 ballot(s) marked nobody.)
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Democrat
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Democrat   (39 of 102 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                                 |          * Democrat          |          Republican         |         Libertarian         |            Green            |         Constitution        | * Socialism and Liberation  |          Solidarity         |         Independent         |
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                    * Democrat > |             ---              |        39 - 61 -  2         |        39 - 52 - 11         |        39 - 52 - 11         |        39 - 61 -  2         |        39 - 48 - 15         |        39 - 56 -  7         |        39 - 49 - 14         |
-                    Republican > |          2 - 61 - 39         |            ---              |         2 - 89 - 11         |         2 - 89 - 11         |         2 - 98 -  2         |         2 - 85 - 15         |         2 - 93 -  7         |         2 - 86 - 14         |
-                   Libertarian > |         11 - 52 - 39         |        11 - 89 -  2         |            ---              |        11 - 80 - 11         |        11 - 89 -  2         |        11 - 76 - 15         |        11 - 84 -  7         |        11 - 77 - 14         |
-                         Green > |         11 - 52 - 39         |        11 - 89 -  2         |        11 - 80 - 11         |            ---              |        11 - 89 -  2         |        11 - 76 - 15         |        11 - 84 -  7         |        11 - 77 - 14         |
-                  Constitution > |          2 - 61 - 39         |         2 - 98 -  2         |         2 - 89 - 11         |         2 - 89 - 11         |            ---              |         2 - 85 - 15         |         2 - 93 -  7         |         2 - 86 - 14         |
-    * Socialism and Liberation > |         15 - 48 - 39         |        15 - 85 -  2         |        15 - 76 - 11         |        15 - 76 - 11         |        15 - 85 -  2         |            ---              |        15 - 80 -  7         |        15 - 73 - 14         |
-                    Solidarity > |          7 - 56 - 39         |         7 - 93 -  2         |         7 - 84 - 11         |         7 - 84 - 11         |         7 - 93 -  2         |         7 - 80 - 15         |            ---              |         7 - 81 - 14         |
-                   Independent > |         14 - 49 - 39         |        14 - 86 -  2         |        14 - 77 - 11         |        14 - 77 - 11         |        14 - 86 -  2         |        14 - 73 - 15         |        14 - 81 -  7         |            ---              |
-
-[Condorcet Winner]
-  Condorcet Winner: Democrat — matches the STAR winner
-
-[Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Republican, Constitution (winless — pairwise ties)
-
-[Score Distribution] (how many ballots gave each star rating)
-                                     Score
-Candidate                   5    4    3    2    1    0  | Total   Avg
-Democrat                    0    0    0    0   39   63  |    39   0.4
-Republican                  0    0    0    0    2  100  |     2   0.0
-Libertarian                 0    0    0    0   11   91  |    11   0.1
-Green                       0    0    0    0   11   91  |    11   0.1
-Constitution                0    0    0    0    2  100  |     2   0.0
-Socialism and Liberation    0    0    0    0   15   87  |    15   0.1
-Solidarity                  0    0    0    0    7   95  |     7   0.1
-Independent                 0    0    0    0   14   88  |    14   0.1
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2130_bvhchj_party_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

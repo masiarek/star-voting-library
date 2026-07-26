@@ -32,102 +32,29 @@ Count:Avery,Blake,Casey
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
-[Divergence from STAR]
-  STAR     = Blake
-  RCV-IRV  = Avery   (differs from STAR)
-  Approval = Casey   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-  Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/bv2170_pp2q4q_plurality_RCV-IRV_tabulated.txt
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 100 ballots.
-Count × Avery,Blake,Casey
-   47 ×     1,    0,    0
-   47 ×     0,    1,    0
-    6 ×     0,    0,    1
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Avery         -- 47 -- First place
-   Blake         -- 47 -- Second place
-   Casey         --  6
- Avery and Blake advance.
+                   Avery  Blake  Casey 
+  47 ×               X      -      -   
+  47 ×               -      X      -   
+  6 ×                -      -      X   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Avery         -- 47 -- Tied for first place
-   Blake         -- 47 -- Tied for first place
-   Equal Support --  6
- There's a two-way tie for first.
+  Count the marks:  Blake 47 · Avery 47 · Casey 6
 
-[STAR Voting: Automatic Runoff Round: First tiebreaker]
- The highest-scoring candidate wins.
-   Avery         -- 47 -- Tied for first place
-   Blake         -- 47 -- Tied for first place
- There's still a two-way tie for first.
-
-[STAR Voting: Automatic Runoff Round: Second tiebreaker]
- The candidate with the most votes of score 5 wins.
-   Avery         -- 0 -- Tied for first place
-   Blake         -- 0 -- Tied for first place
- There's still a two-way tie for first.
-
-*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
-    Lot-number priority order: ['Casey', 'Blake', 'Avery']
-
-[Tiebreaker: Lot Number Priority]
-  Tie among: ['Avery', 'Blake']
-  Resolved: ['Blake'] (selected by lot-number priority).
+ A 2-way tie for first: Blake, Avery — 47 mark(s) each.
+   Counting the marks is all a choose-one ballot can do, so the ballots cannot break it;
+   the pre-published lot order decides: ['Casey', 'Blake', 'Avery'].
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The result here was set by lot, not by the votes.
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Blake
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Blake   (47 of 100 marks, by lot)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Avery    |  * Blake    |    Casey    |
--------------------------------------------------------------
-       * Avery > |     ---      |47 -  6 - 47 |47 - 47 -  6 |
-       * Blake > | 47 -  6 - 47 |    ---      |47 - 47 -  6 |
-         Casey > |  6 - 47 - 47 | 6 - 47 - 47 |    ---      |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Avery, Blake (pairwise ties)
-
-[Condorcet Loser]
-  Condorcet Loser: Casey — loses every head-to-head matchup — elected by Approval!
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Avery       0   0   0   0  47  53  |    47   0.5
-Blake       0   0   0   0  47  53  |    47   0.5
-Casey       0   0   0   0   6  94  |     6   0.1
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2170_pp2q4q_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

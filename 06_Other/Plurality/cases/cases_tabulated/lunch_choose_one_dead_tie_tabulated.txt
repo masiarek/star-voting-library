@@ -1,0 +1,21 @@
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 5 ballots.
+
+                   Sushi  Tacos  Pizza 
+  Sushi-lover        X      -      -   
+  Sushi-lover        X      -      -   
+  Taco-lover         -      X      -   
+  Taco-lover         -      X      -   
+  Pizza-fan          -      -      X   
+
+  Count the marks:  Sushi 2 · Tacos 2 · Pizza 1
+
+ A 2-way tie for first: Sushi, Tacos — 2 mark(s) each.
+   Counting the marks is all a choose-one ballot can do, so the ballots cannot break it;
+   the pre-published lot order decides: ['Sushi', 'Tacos', 'Pizza'].
+
+[Lot-decided tie — rare]
+  ⚠ The result here was set by lot, not by the votes.
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Sushi   (2 of 5 marks, by lot)

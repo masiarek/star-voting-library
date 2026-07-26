@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**436 election files** (386 single-winner, 50 multi-winner) across 16 method(s).
+**437 election files** (387 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -24,7 +24,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 17 |
 | IRV | 19 |
-| PLURALITY | 24 |
+| PLURALITY | 25 |
 | RANGE | 2 |
 | RCV-IRV | 1 |
 | RR | 1 |
@@ -497,13 +497,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (24)
+## PLURALITY  (25)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`bv1570_6hv7jf_undecided_plurality`](../../01_STAR/abstain_bugs/cases/cases_pages/bv1570_6hv7jf_undecided_plurality.md) | `01_STAR/abstain_bugs/cases/` | 1 | BV1570 — undecided plurality election still declares a winner → _Approve_ | [`.yaml`](../../01_STAR/abstain_bugs/cases/bv1570_6hv7jf_undecided_plurality.yaml) |
 | [`bv15_4h89vj_plurality_abstain`](../../01_STAR/pet_real_bv_election/cases/cases_pages/bv15_4h89vj_plurality_abstain.md) | `01_STAR/pet_real_bv_election/cases/` | 1 | BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) → _Andre_ | [`.yaml`](../../01_STAR/pet_real_bv_election/cases/bv15_4h89vj_plurality_abstain.yaml) |
 | [`bv2130_bvhchj_party_plurality`](../../03_STAR_PR/_main/cases/cases_pages/bv2130_bvhchj_party_plurality.md) | `03_STAR_PR/_main/cases/` | 1 | BV2130 — Presidential Board: party alignment (Plurality) → _Democrat_ | [`.yaml`](../../03_STAR_PR/_main/cases/bv2130_bvhchj_party_plurality.yaml) |
+| [`lunch_choose_one_dead_tie`](../../06_Other/Plurality/cases/cases_pages/lunch_choose_one_dead_tie.md) | `06_Other/Plurality/cases/` | 1 | Team lunch on a choose-one ballot — a dead tie → _Sushi_ | [`.yaml`](../../06_Other/Plurality/cases/lunch_choose_one_dead_tie.yaml) |
 | [`BV_Library_plurality_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_plurality_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Plurality (choose-one): most first-marks wins → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_plurality_single_winner.yaml) |
 | [`bv2144_mxfmhm_plurality`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2144_mxfmhm_plurality.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins → _Ana_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_plurality.yaml) |
 | [`bv2160_r6qc8h_plurality`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2160_r6qc8h_plurality.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Fishburn Ex.14 — Choose-One: A wins on first choices → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_plurality.yaml) |

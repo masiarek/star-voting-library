@@ -4,6 +4,7 @@ Standalone demos of methods this library teaches *about* but does not promote: t
 
 | Method | Case (page) | What it shows | src |
 |---|---|---|:--:|
+| **[Choose-One (Plurality)](Plurality)** | [Team lunch — a dead tie](Plurality/cases/cases_pages/lunch_choose_one_dead_tie.md) | mark one box, count the marks — and a 2–2 tie the ballots can't break | [`.yaml`](Plurality/cases/lunch_choose_one_dead_tie.yaml) |
 | **[RCV-IRV](RCV_IRV)** | [RCV ballot example](RCV_IRV/cases/cases_pages/RCV_ballot_example.md) | a plain ranked-ballot instant-runoff count | [`.yaml`](RCV_IRV/cases/RCV_ballot_example.yaml) |
 | **[STV](STV)** | [STV — 3 seats](STV/cases/cases_pages/03a_stv_3seats.md) | proportional seats from ranked ballots (compare [proportional STAR](../03_STAR_PR/) on score ballots) | [`.yaml`](STV/cases/03a_stv_3seats.yaml) |
 | **[Range / Score](Range)** | [Range / Score 101](Range/cases/cases_pages/range_101_c3_b5.md) | highest total score wins — STAR without the runoff | [`.yaml`](Range/cases/range_101_c3_b5.yaml) |

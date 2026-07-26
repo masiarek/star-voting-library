@@ -26,74 +26,22 @@ Count:Ada,Ben,Cal
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/same_matrix_p3_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
-[Divergence from STAR]
-  STAR     = Cal
-  Approval = Ada   (differs from STAR)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 12 ballots.
-Count × Ada,Ben,Cal
-    5 ×   0,  0,  1
-    4 ×   0,  1,  0
-    3 ×   1,  0,  0
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Cal           -- 5 -- First place
-   Ben           -- 4 -- Second place
-   Ada           -- 3
- Cal and Ben advance.
+                    Ada    Ben    Cal  
+  3 ×                X      -      -   
+  5 ×                -      -      X   
+  4 ×                -      X      -   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Cal           -- 5 -- First place
-   Ben           -- 4
-   Equal Support -- 3
- Cal wins.
-   Runoff math:
-     12  ballots cast
-   −  3  Equal Support (no preference between the two finalists)
-     ──
-      9  voters with a preference  (majority = 5)
-           Cal 5 (56%)  ·  Ben 4 (44%)
+  Count the marks:  Cal 5 · Ben 4 · Ada 3
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Cal
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Cal   (5 of 12 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ada    |  * Ben    |  * Cal    |
------------------------------------------------------
-         Ada > |    ---     |3 - 5 - 4  |3 - 4 - 5  |
-       * Ben > | 4 - 5 - 3  |   ---     |4 - 3 - 5  |
-       * Cal > | 5 - 4 - 3  |5 - 3 - 4  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Cal — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Ada — loses every head-to-head matchup — elected by Approval!
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        0  0  0  0  3  9  |     3   0.3
-Ben        0  0  0  0  4  8  |     4   0.3
-Cal        0  0  0  0  5  7  |     5   0.4
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/same_matrix_p3_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -55,74 +55,39 @@ Purple,Green,Blue,Pink
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2177_v8r66y_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 20 ballots.
-Count × Purple,Green,Blue,Pink
-    7 ×      1,    0,   0,   0
-    6 ×      0,    1,   0,   0
-    4 ×      0,    0,   1,   0
-    3 ×      0,    0,   0,   1
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Purple        -- 7 -- First place
-   Green         -- 6 -- Second place
-   Blue          -- 4
-   Pink          -- 3
- Purple and Green advance.
+                   Purple  Green   Blue   Pink 
+                     X       -      -      -   
+                     X       -      -      -   
+                     X       -      -      -   
+                     X       -      -      -   
+                     X       -      -      -   
+                     X       -      -      -   
+                     X       -      -      -   
+                     -       X      -      -   
+                     -       X      -      -   
+                     -       X      -      -   
+                     -       X      -      -   
+                     -       X      -      -   
+                     -       X      -      -   
+                     -       -      X      -   
+                     -       -      X      -   
+                     -       -      X      -   
+                     -       -      X      -   
+                     -       -      -      X   
+                     -       -      -      X   
+                     -       -      -      X   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Purple        -- 7 -- First place
-   Green         -- 6
-   Equal Support -- 7
- Purple wins.
-   Runoff math:
-     20  ballots cast
-   −  7  Equal Support (no preference between the two finalists)
-     ──
-     13  voters with a preference  (majority = 7)
-           Purple 7 (54%)  ·  Green 6 (46%)
+  Count the marks:  Purple 7 · Green 6 · Blue 4 · Pink 3
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Purple
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Purple   (7 of 20 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Purple   |  * Green    |     Blue    |     Pink    |
----------------------------------------------------------------------------
-      * Purple > |     ---      | 7 -  7 -  6 | 7 -  9 -  4 | 7 - 10 -  3 |
-       * Green > |  6 -  7 -  7 |    ---      | 6 - 10 -  4 | 6 - 11 -  3 |
-          Blue > |  4 -  9 -  7 | 4 - 10 -  6 |    ---      | 4 - 13 -  3 |
-          Pink > |  3 - 10 -  7 | 3 - 11 -  6 | 3 - 13 -  4 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Purple — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Pink — loses every head-to-head matchup
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Purple      0   0   0   0   7  13  |     7   0.4
-Green       0   0   0   0   6  14  |     6   0.3
-Blue        0   0   0   0   4  16  |     4   0.2
-Pink        0   0   0   0   3  17  |     3   0.2
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2177_v8r66y_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

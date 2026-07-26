@@ -37,86 +37,30 @@ Approve,Reject
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 3 ballots.
 
-[STAR Voting]
- Tabulating 3 ballots. Note: 1 of 3 ballots is marked as an abstention.
-Approve,Reject
-      0,     &
-      &,     &
-      &,     0
+                   Approve  Reject 
+                      -       -    
+                      -       -    
+                      -       -    
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Approve       -- 0 -- First place
-   Reject        -- 0 -- Second place
- Approve and Reject advance.
+  Count the marks:  Approve 0 · Reject 0
+  (3 ballot(s) marked nobody.)
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Approve       -- 0 -- Tied for first place
-   Reject        -- 0 -- Tied for first place
-   Equal Support -- 3
- There's a two-way tie for first.
-
-[STAR Voting: Automatic Runoff Round: First tiebreaker]
- The highest-scoring candidate wins.
-   Approve       -- 0 -- Tied for first place
-   Reject        -- 0 -- Tied for first place
- There's still a two-way tie for first.
-
-[STAR Voting: Automatic Runoff Round: Second tiebreaker]
- The candidate with the most votes of score 5 wins.
-   Approve       -- 0 -- Tied for first place
-   Reject        -- 0 -- Tied for first place
- There's still a two-way tie for first.
-
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
-    Lot-number priority order: ['Approve', 'Reject']
-
-[Tiebreaker: Lot Number Priority]
-  Tie among: ['Approve', 'Reject']
-  Resolved: ['Approve'] (selected by lot-number priority).
+ A 2-way tie for first: Approve, Reject — 0 mark(s) each.
+   Counting the marks is all a choose-one ballot can do, so the ballots cannot break it;
+   the pre-published lot order decides: ['Approve', 'Reject'].
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The result here was set by lot, not by the votes.
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Approve
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Approve   (0 of 3 marks, by lot)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Approve  | * Reject   |
---------------------------------------------
-    * Approve > |     ---     | 0 - 3 - 0  |
-     * Reject > |  0 - 3 - 0  |    ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: Approve, Reject (pairwise ties)
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Approve    0  0  0  0  0  1    2  |     0   0.0
-Reject     0  0  0  0  0  1    2  |     0   0.0
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

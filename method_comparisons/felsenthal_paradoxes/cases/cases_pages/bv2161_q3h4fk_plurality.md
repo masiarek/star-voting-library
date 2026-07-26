@@ -29,103 +29,26 @@ A,B,C
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2161_q3h4fk_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
-[Divergence from STAR]
-  STAR     = C
-  Approval = A   (differs from STAR)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 7 ballots.
-Count × A,B,C
-    3 × 0,0,1
-    2 × 1,0,0
-    2 × 0,1,0
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   C             -- 3 -- First place
-   A             -- 2 -- Tied for second place
-   B             -- 2 -- Tied for second place
- C advances, but there's a two-way tie for second.
+                     A      B      C   
+                     X      -      -   
+                     X      -      -   
+                     -      X      -   
+                     -      X      -   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
 
-[STAR Voting: Scoring Round: First tiebreaker]
- The candidate preferred in the most head-to-head matchups advances.
-   A             -- 2 -- Tied for second place
-   B             -- 2 -- Tied for second place
-   Equal Support -- 3
- There's still a two-way tie for second.
+  Count the marks:  C 3 · A 2 · B 2
 
-[STAR Voting: Scoring Round: Second tiebreaker]
- The candidate with the most votes of score 5 advances.
-   A             -- 0 -- Tied for second place
-   B             -- 0 -- Tied for second place
- There's still a two-way tie for second.
-
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
-    Lot-number priority order: ['A', 'B', 'C']
-
-[Tiebreaker: Lot Number Priority]
-  Tie among: ['A', 'B']
-  Resolved: ['A'] (selected by lot-number priority).
-
-[Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
-
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   C             -- 3 -- First place
-   A             -- 2
-   Equal Support -- 2
- C wins.
-   Runoff math:
-     7  ballots cast
-   − 2  Equal Support (no preference between the two finalists)
-     ─
-     5  voters with a preference  (majority = 3)
-           C 3 (60%)  ·  A 2 (40%)
-
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- C
+Winner — Choose-One / Plurality Voting Method (single winner)
+ C   (3 of 7 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * A     |     B     |   * C     |
------------------------------------------------------
-         * A > |    ---     |2 - 3 - 2  |2 - 2 - 3  |
-           B > | 2 - 3 - 2  |   ---     |2 - 2 - 3  |
-         * C > | 3 - 2 - 2  |3 - 2 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: C — matches the STAR winner
-
-[Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: A, B (winless — pairwise ties) — A elected by Approval!
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          0  0  0  0  2  5  |     2   0.3
-B          0  0  0  0  2  5  |     2   0.3
-C          0  0  0  0  3  4  |     3   0.4
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2161_q3h4fk_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

@@ -27,70 +27,22 @@ Count:Ada,Ben,Cal
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/same_matrix_p1_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 12 ballots.
-Count × Ada,Ben,Cal
-    5 ×   1,  0,  0
-    4 ×   0,  0,  1
-    3 ×   0,  1,  0
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Ada           -- 5 -- First place
-   Cal           -- 4 -- Second place
-   Ben           -- 3
- Ada and Cal advance.
+                    Ada    Ben    Cal  
+  5 ×                X      -      -   
+  4 ×                -      -      X   
+  3 ×                -      X      -   
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Ada           -- 5 -- First place
-   Cal           -- 4
-   Equal Support -- 3
- Ada wins.
-   Runoff math:
-     12  ballots cast
-   −  3  Equal Support (no preference between the two finalists)
-     ──
-      9  voters with a preference  (majority = 5)
-           Ada 5 (56%)  ·  Cal 4 (44%)
+  Count the marks:  Ada 5 · Cal 4 · Ben 3
 
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Ada
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Ada   (5 of 12 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    |    Ben    |  * Cal    |
------------------------------------------------------
-       * Ada > |    ---     |5 - 4 - 3  |5 - 3 - 4  |
-         Ben > | 3 - 4 - 5  |   ---     |3 - 5 - 4  |
-       * Cal > | 4 - 3 - 5  |4 - 5 - 3  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Ada — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Ben — loses every head-to-head matchup
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        0  0  0  0  5  7  |     5   0.4
-Ben        0  0  0  0  3  9  |     3   0.3
-Cal        0  0  0  0  4  8  |     4   0.3
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/same_matrix_p1_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

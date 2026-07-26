@@ -1597,6 +1597,107 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     return winners if num_winners > 1 else winner
 
 
+def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
+                         silent=False, out_path=None):
+    """Single-winner Choose-One (Plurality) — counted the way it is actually run:
+    show the marked ballots, count the marks, most marks wins.
+
+    This used to fall through to the STAR path, which is arithmetically
+    equivalent for single-mark ballots but prints a Scoring Round and an
+    Automatic Runoff — machinery choose-one does not have, and confusing on the
+    one method that has none. Row labels come from each ballot row's trailing
+    `#` comment when present ("# Sushi-lover"), so the printed grid matches the
+    ballot as a reader would draw it.
+    """
+    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
+    priority = [c for c in (lot_numbers or candidates) if c in candidates]
+    for c in candidates:
+        if c not in priority:
+            priority.append(c)
+
+    # parse_ballots_from_string ALREADY expands weighted rows ("3:1,0,0" -> three
+    # ballots), so every parsed ballot counts as exactly one voter. Never re-apply
+    # the row weights on top of that.
+    marks = [[c for c in candidates if b.get(c, 0) > 0] for b in ballots]
+    over = [i for i, m in enumerate(marks) if len(m) > 1]      # overvote -> spoiled
+    blank = [i for i, m in enumerate(marks) if not m]
+    votes = {c: sum(1 for m in marks if len(m) == 1 and m[0] == c)
+             for c in candidates}
+    n = len(ballots)
+    order = sorted(candidates, key=lambda c: (-votes[c], priority.index(c)))
+
+    # Row labels come from each raw row's trailing `#` comment — usable only when
+    # the rows map 1:1 to ballots (i.e. no weighted rows). Otherwise collapse
+    # identical ballots and label them "N ×".
+    labels = []
+    for raw in ballots_text.strip().split("\n")[1:]:
+        body, _, comment = raw.partition("#")
+        if body.strip():
+            labels.append(comment.strip())
+    if len(labels) == len(ballots):
+        rows = [(labels[i], marks[i]) for i in range(len(ballots))]
+    else:
+        rows, seen = [], {}
+        for m in marks:
+            key = tuple(m)
+            if key in seen:
+                rows[seen[key]] = (rows[seen[key]][0] + 1, m)
+            else:
+                seen[key] = len(rows)
+                rows.append((1, m))
+        rows = [(f"{cnt} ×", m) for cnt, m in rows]
+    top = votes[order[0]]
+    tied = [c for c in order if votes[c] == top]
+    winner = tied[0] if len(tied) == 1 else min(tied, key=priority.index)
+
+    banner = "--- Choose-One / Plurality Voting Method (single winner) ---"
+    lw = max([len(str(lbl)) for lbl, _ in rows] + [len("Count the marks:")])
+    cw = [max(len(c), 5) + 2 for c in candidates]
+    L = [banner, f" Tabulating {n} ballots.", ""]
+    L.append("  " + " " * lw + "".join(c.center(w) for c, w in zip(candidates, cw)))
+    for lbl, m in rows:
+        cells = "".join(("X" if c in m else "-").center(w) for c, w in zip(candidates, cw))
+        L.append(f"  {str(lbl):<{lw}}" + cells)
+    L.append("")
+    L.append("  Count the marks:  "
+             + " · ".join(f"{c} {votes[c]}" for c in order))
+    if blank:
+        L.append(f"  ({len(blank)} ballot(s) marked nobody.)")
+    if over:
+        L.append(f"  ({len(over)} ballot(s) marked more than one candidate — "
+                 f"an overvote, which spoils a choose-one ballot; not counted.)")
+    L.append("")
+    if len(tied) > 1:
+        L.append(f" A {len(tied)}-way tie for first: "
+                 + ", ".join(tied) + f" — {top} mark(s) each.")
+        L.append("   Counting the marks is all a choose-one ballot can do, so the "
+                 "ballots cannot break it;")
+        L.append(f"   the pre-published lot order decides: {priority}.")
+        L.append("")
+        L.append("[Lot-decided tie — rare]")
+        L.append("  ⚠ The result here was set by lot, not by the votes.")
+        L.append("")
+    L.append(f"Winner — Choose-One / Plurality Voting Method (single winner)")
+    L.append(f" {winner}"
+             + (f"   ({votes[winner]} of {n} marks"
+                + (", by lot" if len(tied) > 1 else "") + ")"))
+    report = "\n".join(L)
+    if not silent:
+        print(report.replace(banner, f"{COLOR_HEADER}{banner}{COLOR_RESET}"))
+    if out_path is not None:
+        try:
+            Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+            Path(out_path).write_text(strip_ansi(report), encoding="utf-8")
+        except Exception:
+            pass
+    elif file_path:
+        try:
+            write_tabulated_copy(file_path, report)
+        except Exception:
+            pass
+    return winner
+
+
 def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
                         num_winners=2, silent=False, out_path=None):
     """Multi-winner Plurality — SNTV / Bloc Plurality (single non-transferable
@@ -3207,12 +3308,19 @@ Memphis,Nashville,Chattanooga,Knoxville
                              num_winners=(election.get("seats") or 1))
             sys.exit(0)
 
-        # Multi-winner Plurality = SNTV / Bloc Plurality (top-N first choices).
-        # Single-winner Plurality falls through to the STAR path (equivalent).
-        if _is_plurality and (election.get("seats") or 1) > 1:
-            run_plurality_multi(csv_input, BALLOTS_FILE,
-                                lot_numbers=election.get("lot_numbers"),
-                                num_winners=election.get("seats") or 1)
+        # Choose-One / Plurality gets its own report at BOTH seat counts:
+        # multi-winner = SNTV / Bloc Plurality (top-N first choices); single-winner
+        # = count the marks, most marks wins. (Single-winner used to fall through
+        # to the STAR path — arithmetically equivalent, but it printed a Scoring
+        # Round and an Automatic Runoff that choose-one simply does not have.)
+        if _is_plurality:
+            if (election.get("seats") or 1) > 1:
+                run_plurality_multi(csv_input, BALLOTS_FILE,
+                                    lot_numbers=election.get("lot_numbers"),
+                                    num_winners=election.get("seats") or 1)
+            else:
+                run_plurality_single(csv_input, BALLOTS_FILE,
+                                     lot_numbers=election.get("lot_numbers"))
             sys.exit(0)
 
         if _is_rcv or _ranked_ballots:
@@ -3302,10 +3410,6 @@ Memphis,Nashville,Chattanooga,Knoxville
             except Exception:
                 pass
             sys.exit(0)
-
-        if _is_plurality:
-            print(f"{COLOR_DIM}(Choose-one / Plurality ballots: tabulated via the "
-                  f"STAR path — equivalent for single-mark 0/1 ballots.){COLOR_RESET}")
 
         if election["seats"] is not None:
             SEATS = election["seats"]

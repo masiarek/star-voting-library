@@ -37,103 +37,34 @@ Amy,Boone,Cass
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
-[Divergence from STAR]
-  STAR     = Cass
-  Approval = Amy   (differs from STAR)
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-
-[STAR Voting]
  Tabulating 15 ballots.
-Count × Amy,Boone,Cass
-    7 ×   0,    0,   1
-    4 ×   1,    0,   0
-    4 ×   0,    1,   0
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Cass          -- 7 -- First place
-   Amy           -- 4 -- Tied for second place
-   Boone         -- 4 -- Tied for second place
- Cass advances, but there's a two-way tie for second.
+                    Amy   Boone   Cass 
+                     X      -      -   
+                     X      -      -   
+                     X      -      -   
+                     X      -      -   
+                     -      X      -   
+                     -      X      -   
+                     -      X      -   
+                     -      X      -   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
+                     -      -      X   
 
-[STAR Voting: Scoring Round: First tiebreaker]
- The candidate preferred in the most head-to-head matchups advances.
-   Amy           -- 4 -- Tied for second place
-   Boone         -- 4 -- Tied for second place
-   Equal Support -- 7
- There's still a two-way tie for second.
+  Count the marks:  Cass 7 · Amy 4 · Boone 4
 
-[STAR Voting: Scoring Round: Second tiebreaker]
- The candidate with the most votes of score 5 advances.
-   Amy           -- 0 -- Tied for second place
-   Boone         -- 0 -- Tied for second place
- There's still a two-way tie for second.
-
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
-    Lot-number priority order: ['Amy', 'Boone', 'Cass']
-
-[Tiebreaker: Lot Number Priority]
-  Tie among: ['Amy', 'Boone']
-  Resolved: ['Amy'] (selected by lot-number priority).
-
-[Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
-
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Cass          -- 7 -- First place
-   Amy           -- 4
-   Equal Support -- 4
- Cass wins.
-   Runoff math:
-     15  ballots cast
-   −  4  Equal Support (no preference between the two finalists)
-     ──
-     11  voters with a preference  (majority = 6)
-           Cass 7 (64%)  ·  Amy 4 (36%)
-
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Cass
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Cass   (7 of 15 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Amy    |   Boone   |  * Cass   |
------------------------------------------------------
-       * Amy > |    ---     |4 - 7 - 4  |4 - 4 - 7  |
-       Boone > | 4 - 7 - 4  |   ---     |4 - 4 - 7  |
-      * Cass > | 7 - 4 - 4  |7 - 4 - 4  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Cass — matches the STAR winner
-
-[Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Amy, Boone (winless — pairwise ties) — Amy elected by Approval!
-
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Amy         0   0   0   0   4  11  |     4   0.3
-Boone       0   0   0   0   4  11  |     4   0.3
-Cass        0   0   0   0   7   8  |     7   0.5
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
