@@ -29,6 +29,8 @@ STAR asks for a little more, using two things you already know:
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
+**Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** A rating judges each option on its own (that's the "Score" in STAR's name — and two favorites can honestly both earn a 5); a ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../scores_and_ranks/scores_vs_ranks.md).
+
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
 - Give your **favorite** **5 stars**.
