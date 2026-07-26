@@ -13,30 +13,39 @@ Because each score stands alone, filling the ballot out is quick: give your favo
 
 ## The style gallery — eight voters, eight legal ballots
 
-Same six candidates for every voter: **Allen, Bianca, Chris, Desi, Edith, Frank**. Each row below is one voter's complete, valid ballot.
+Eight common ways people fill out the same 5-star ballot — every one legal, every one counted. **Click any style for its own page:** what the ballot says, when it fits, the honest trade-off, and how that exact ballot fared in a real election.
 
-| Style | Allen | Bianca | Chris | Desi | Edith | Frank | What the voter is saying |
-|---|--:|--:|--:|--:|--:|--:|---|
-| **Traditional (choose-one)** | 0 | 5 | 0 | 0 | 0 | 0 | "Bianca. Period." — the familiar single-choice vote, transplanted. |
-| **Strong backup** | 0 | 5 | 0 | 0 | 0 | 4 | "Bianca — and if not her, Frank is nearly as good." |
-| **Weak backup** | 0 | 5 | 0 | 0 | 0 | 1 | "Bianca — and Frank only over the rest, reluctantly." |
-| **Partisan slate** | 5 | 5 | 0 | 0 | 0 | 5 | "My party's three candidates, full support; nobody else." |
-| **Ranked-style** | 2 | 5 | 0 | 3 | 1 | 4 | "I'll use each score once, like a ranking: B > F > D > A > E > C." |
-| **Nuanced** | 3 | 4 | 0 | 3 | 1 | 5 | "Full range, and Allen = Desi because I truly can't split them." |
-| **"Anyone but…"** | 5 | 5 | 0 | 5 | 5 | 5 | "Anyone but Chris." |
-| **Protest / least-bad** | 0 | 0 | 0 | 0 | 0 | 1 | "I dislike them all; Frank is the least bad." |
+| Ballot | Style | What the voter is saying |
+|---|---|---|
+| <img src="voting_styles/img/style_traditional.png" width="190" alt="Traditional-style ballot: Carmen 5, everything else blank"> | **[Traditional](voting_styles/traditional.md)** | "Carmen. Period." — the familiar single-choice vote, transplanted. |
+| <img src="voting_styles/img/style_decent_backup.png" width="190" alt="Decent-backup ballot: Carmen 5, Ella 4, rest blank"> | **[Decent Backup](voting_styles/decent_backup.md)** | "Carmen — and if not her, Ella is nearly as good." |
+| <img src="voting_styles/img/style_not_much_of_a_backup.png" width="190" alt="Weak-backup ballot: Carmen 5, Ella 1, rest blank"> | **[Not Much of a Backup](voting_styles/not_much_of_a_backup.md)** | "Carmen — and Ella only over the rest, reluctantly." |
+| <img src="voting_styles/img/style_partisan.png" width="190" alt="Partisan ballot: Andre, Carmen, and David all 5, rest blank"> | **[Partisan](voting_styles/partisan.md)** | "My side's three, full support; nobody else." |
+| <img src="voting_styles/img/style_ranked.png" width="190" alt="Ranked-style ballot: each score used once — Carmen 5, Blake 4, David 3, Andre 2, Ella 1"> | **[Ranked](voting_styles/ranked.md)** | "I'll use each score once, like a ranking: Carmen > Blake > David > Andre > Ella." |
+| <img src="voting_styles/img/style_nuanced.png" width="190" alt="Nuanced ballot: Carmen 5, Blake and Ella both 4, Andre 1, David blank"> | **[Nuanced](voting_styles/nuanced.md)** | "Full range — and Blake = Ella because I truly can't split them." |
+| <img src="voting_styles/img/style_anyone_but.png" width="190" alt="Anyone-but ballot: everyone 5 except Blake, who is left blank"> | **[Anyone But…](voting_styles/anyone_but.md)** | "Anyone but Blake." |
+| <img src="voting_styles/img/style_protest_vote.png" width="190" alt="Protest ballot: Blake 1, everyone else blank"> | **[Protest Vote](voting_styles/protest_vote.md)** | "I dislike them all; Blake is the least bad." |
 
-Every one of these is legal, and every one is counted. A few are worth a second look:
+*Ballot graphics built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission. One-page-per-style index: [voting_styles/](voting_styles/).*
 
-- **Traditional / choose-one** works exactly as the voter intends — but it's a bullet vote, and it under-uses the ballot: if Bianca doesn't reach the runoff, this ballot has no say in the final head-to-head. (The dedicated small demo: [`03a_c3_b3_style-bullet-vote.yaml`](../../01_STAR/_main/cases/03a_c3_b3_style-bullet-vote.yaml).)
-- **Backups are free.** The strong-backup and weak-backup ballots are the everyday super-power of a scored ballot: supporting a second choice can never hurt your first choice in the scoring round — a 5 is a 5 no matter what else you mark. (Honest fine print: the runoff compares your two scores, so *if both* end up finalists, your 4 says "prefer Bianca, but Frank is fine." That's the message the voter chose to send. See [STAR's honest limits](properties_and_limits/STAR_honest_limits.md).)
-- **Ranked-style is legal but never required.** Using each score exactly once mimics a ranking. STAR reads it happily — but you've volunteered a constraint the ballot doesn't impose. The **Nuanced** ballot (the very next row in the gallery — `3 4 0 3 1 5`) carries *more* honest information than the ranked-style row above it: it repeats a 3 for Allen and Desi to say "I genuinely can't split these two," a distinction the one-score-each ranking is forbidden to express — and it takes *less* effort, because you never have to break a tie you don't feel.
-- **Partisan and "anyone but" ballots score equal 5s** — and that's fine. If two of those 5s become the finalists, the ballot is **Equal Support** in the runoff: no preference between the finalists, by the voter's own choice. It still counted fully in the scoring round, where it helped decide *who* the finalists were. An equal-score ballot is never discarded.
-- **The protest vote still works.** All 0s and a single 1 registers a least-bad preference and can decide a race. Caveat: compressing your scores into the bottom of the range also shrinks your voice in the scoring round — a least-bad choice counts, but the full range counts louder. ([`03b_c3_b3_1_style-protest-vote.yaml`](../../01_STAR/_main/cases/03b_c3_b3_1_style-protest-vote.yaml).)
+Every one of these is legal, none can spoil the ballot, and none carries secret extra weight. The per-style pages hold the full discussion — the fine print on backups, where equal scores land in the runoff, why the ranked style volunteers a constraint the ballot doesn't impose, and how quiet a protest vote really is.
 
 ## All eight styles in one election
 
-The gallery above is a real, tabulatable election: [`03c_c6_b8_style-gallery.yaml`](../../01_STAR/_main/cases/03c_c6_b8_style-gallery.yaml). Bianca and Frank reach the runoff on scores; Bianca wins it 4–2, with the partisan and "anyone but Chris" voters counted as Equal Support (they scored both finalists 5):
+The gallery above is a real, tabulatable election — one ballot per style, six candidates (**Allen, Bianca, Chris, Desi, Edith, Frank**): [reader page](../../01_STAR/_main/cases/cases_pages/03c_c6_b8_style-gallery.md) · [`03c_c6_b8_style-gallery.yaml`](../../01_STAR/_main/cases/03c_c6_b8_style-gallery.yaml).
+
+| Style | Allen | Bianca | Chris | Desi | Edith | Frank |
+|---|--:|--:|--:|--:|--:|--:|
+| Traditional | 0 | 5 | 0 | 0 | 0 | 0 |
+| Decent Backup | 0 | 5 | 0 | 0 | 0 | 4 |
+| Not Much of a Backup | 0 | 5 | 0 | 0 | 0 | 1 |
+| Partisan | 5 | 5 | 0 | 0 | 0 | 5 |
+| Ranked | 2 | 5 | 0 | 3 | 1 | 4 |
+| Nuanced | 3 | 4 | 0 | 3 | 1 | 5 |
+| Anyone But… | 5 | 5 | 0 | 5 | 5 | 5 |
+| Protest Vote | 0 | 0 | 0 | 0 | 0 | 1 |
+
+Bianca and Frank reach the runoff on scores; Bianca wins it 4–2, with the Partisan and Anyone-But voters counted as Equal Support (they scored both finalists 5):
 
 ```
 Scoring Round
