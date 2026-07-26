@@ -63,6 +63,7 @@ AGREE,YAML_library/1_positive/trash_delete.yaml,5,3,Ella,Ella,Ella,Ella,Ella,Ell
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_condorcet_winner.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,1,False,False,False
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False
+AGREE,method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml,3,5,Bob,Bob,Cal,Bob,Bob,Bob,Bob,Bob,Bob,5,True,False,False
 AGREE,method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
 AGREE,method_comparisons/chicken_dilemma/cases/chicken_star.yaml,3,100,A,A,A,A,A,A,A,A,A,0,False,False,False
 AGREE,method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml,4,100,A,A,B,A,A,A,A,A,A,66,True,False,False

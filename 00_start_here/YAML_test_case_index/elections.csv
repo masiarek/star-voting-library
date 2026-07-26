@@ -153,6 +153,7 @@ LH:BV_Library_star_runoff_score_tie_five_star,"BV parity — STAR: runoff & scor
 LH:BV_Library_star_runoff_tie_score_resolves,BV parity — STAR: runoff tie broken by score,1,single-race,2,STAR,LH-only
 LH:Black_Curtain_01_c3_b5_hidden-consensus,The Black Curtain,1,single-race,5,STAR,LH-only
 LH:Black_Curtain_01a_c3_b5_approval,The Black Curtain,1,single-race,5,Approval,LH-only
+LH:Black_Curtain_01b_c3_b5_dichotomous,The Black Curtain,1,single-race,5,STAR,LH-only
 LH:Black_Curtain_02_c3_b5_near-clones,The Black Curtain,1,single-race,5,STAR,LH-only
 LH:Black_Curtain_03_c3_b5_polarized-on-cal,The Black Curtain,1,single-race,5,STAR,LH-only
 LH:Black_Curtain_04_c4_b5_four-candidates,The Black Curtain,1,single-race,5,STAR,LH-only

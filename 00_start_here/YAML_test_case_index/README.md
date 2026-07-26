@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**437 election files** (387 single-winner, 50 multi-winner) across 16 method(s).
+**438 election files** (388 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 238 |
+| STAR | 239 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 61 |
 | Approval | 15 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (238)
+## STAR  (239)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -190,6 +190,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2213_k3fmwv_alaska_2022`](../../method_comparisons/alaska_2022/cases/cases_pages/bv2213_k3fmwv_alaska_2022.md) | `method_comparisons/alaska_2022/cases/` | 1 | Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut → _Begich_ | [`.yaml`](../../method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml) |
 | [`bv2214_m3hb6y_alaska_2022_general`](../../method_comparisons/alaska_2022_general/cases/cases_pages/bv2214_m3hb6y_alaska_2022_general.md) | `method_comparisons/alaska_2022_general/cases/` | 1 | Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola → _Peltola_ | [`.yaml`](../../method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml) |
 | [`Black_Curtain_01_c3_b5_hidden-consensus`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
+| [`Black_Curtain_01b_c3_b5_dichotomous`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml) |
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
 | [`Black_Curtain_03_c3_b5_polarized-on-cal`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
 | [`Black_Curtain_04_c4_b5_four-candidates`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_04_c4_b5_four-candidates.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml) |

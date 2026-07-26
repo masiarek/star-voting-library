@@ -90,6 +90,7 @@ The **Results page** (left) is the friendly, readable write-up — start there; 
 |---|---|---|---|---|
 | [**01** — hidden consensus](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | STAR | Cal | Majority favorite beats the everyone's-second consensus | [`.yaml`](cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
 | [**01a** — approval variant](cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) | Approval | **Bob** | Same 5 voters, different method, different winner | [`.yaml`](cases/Black_Curtain_01a_c3_b5_approval.yaml) |
+| [**01b** — the compressed ballot](cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md) | STAR (0/5) | **Bob** | The approval marks read pairwise: **the Condorcet winner moves from Cal to Bob** — see [the write-up](condorcet_compression.md) | [`.yaml`](cases/Black_Curtain_01b_c3_b5_dichotomous.yaml) |
 | [**02** — near-clones](cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | STAR | Cal | Two loved near-clones; approval can't tell them apart | [`.yaml`](cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
 | [**03** — polarized on Cal](cases/cases_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | STAR | Cal | The "landslide" winner is zeroed by 40% of voters | [`.yaml`](cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
 | [**04** — four candidates](cases/cases_pages/Black_Curtain_04_c4_b5_four-candidates.md) | STAR | Cal | Four candidates, same curtain; score near-tie lost at 0–5 | [`.yaml`](cases/Black_Curtain_04_c4_b5_four-candidates.yaml) |
@@ -103,6 +104,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## Related
 
 - [**How often do STAR and Approval disagree?**](../star_vs_approval_divergence.md) — these hand-picked cases show *that* they can diverge; this measures *how often* (a seeded simulation), and explains why
+- [**When compression moves the Condorcet winner**](condorcet_compression.md) — Election 1 read three ways. Cal is the Condorcet winner of the score ballots; **Bob** is the Condorcet winner of the same voters' *approval* ballots, and the pairwise matrix shows exactly where the deciding preference went (the Equal Support column). Also the runnable limit of the theory result that Approval = Borda = Condorcet on dichotomous preferences
 - [**Read as Range / Score voting**](black_curtain_range.md) — the same four elections tabulated by the [range engine](../../06_Other/Range/Range_tabulation_engine/) (pref_voting); Range and STAR part ways in elections 1 and 3
 - [`../../00_start_here/scores_and_ranks/`](../../00_start_here/scores_and_ranks) — scores vs ranks, the fidelity ladder
 - [RCV-IRV vs. STAR — A Side-by-Side](../../00_start_here/topics/rcv_irv_vs_star.md) — method comparison

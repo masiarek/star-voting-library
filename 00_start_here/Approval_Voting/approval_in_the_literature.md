@@ -109,12 +109,14 @@ Both results are correct, and together they are the theorem *and* its limit in f
 
 | | Underlying scores/rankings | The same voters, compressed to approval |
 |---|---|---|
-| Cal vs Bob | Cal wins **3–2** (voters 1–3 score Cal above Bob) | Bob wins **2–0** — voters 1–3 approve *both*, so they express no preference |
-| Bob vs Ann | Bob **3–2** | Bob **3–0** |
+| Cal vs Bob | Cal wins **3–2** (voters 1–3 score Cal above Bob) | Bob wins **2–0**, with **3 Equal Support** — voters 1–3 approve *both*, so they express no preference |
+| Bob vs Ann | Bob **3–2** | Bob **3–0**, with **2 Equal Support** |
 | Condorcet winner | **Cal** | **Bob** |
-| Method winner | Cal (STAR, RCV-IRV, Choose-One) | **Bob** (Approval) |
+| Method winner | Cal (STAR, RCV-IRV, Choose-One) | **Bob** (Approval — *and* STAR, and every Condorcet method) |
 
-On the compressed ballots Bob really is the Condorcet winner, exactly as the theorem promises — the dichotomous domain has no cycles and Approval finds its winner. But the preference that decided the original election, *Cal over Bob*, was thrown away by three voters who approved both. Argument 5 ("likely to elect the Condorcet winner") survives as a statement about tendencies; it is not a guarantee, and the gap is the compression itself. Full detail: the [Black Curtain set](../../method_comparisons/black_curtain/) counts these five voters four different ways.
+On the compressed ballots Bob really is the Condorcet winner, exactly as the theorem promises — the dichotomous domain has no cycles, and Approval finds its winner. But the preference that decided the original election, *Cal over Bob*, was thrown away by the three voters who approved both. Argument 5 ("likely to elect the Condorcet winner") survives as a statement about tendencies; it is not a guarantee, and the gap is the compression itself.
+
+Both columns are engine output, not arithmetic done here: the right-hand one is [case 01b](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md), the same five approval ballots read pairwise. **Worked in full, with both matrices side by side and what the Equal Support column is doing: [When compression moves the Condorcet winner](../../method_comparisons/black_curtain/condorcet_compression.md).**
 
 ## What to take from all this
 
