@@ -33,12 +33,12 @@ The trouble isn't the voters. It's the *ballot*: "pick one" throws away everythi
 
 STAR asks for a little more, using two things you already know:
 
-- **Rate every option 0 to 5 stars** — exactly like a Yelp or Amazon review. (Give your favorite 5, something you can't stand 0, and everything else wherever it honestly lands.)
-- **Then the two highest-rated options have a final runoff** — head-to-head, like a championship.
+- **Score every option 0 to 5 stars** — exactly like a star rating on Yelp or Amazon. (Give your favorite 5, something you can't stand 0, and everything else wherever it honestly lands.)
+- **Then the two highest-scoring options have a final runoff** — head-to-head, like a championship.
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
-**Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** A rating judges each option on its own (that's the "Score" in STAR's name — and two favorites can honestly both earn a 5); a ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../scores_and_ranks/scores_vs_ranks.md).
+**Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** Rating and **scoring** are the same thing (that's the "Score" in STAR's name — and it's the word this library uses): each option judged on its own, so two favorites can honestly both earn a 5. A ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../scores_and_ranks/scores_vs_ranks.md).
 
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
 
@@ -49,7 +49,7 @@ The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four 
 
 Here's the whole thing on paper — one voter's finished ballot:
 
-<img src="../img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates rated 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
+<img src="../img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
 
 *One voter's finished ballot — order **and** strength, at a glance. Official design © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
 
@@ -57,7 +57,7 @@ Here's the whole thing on paper — one voter's finished ballot:
 
 ## Watch STAR fix the lunch
 
-Same five people, same feelings — but now each of them **rates all three** (5 = love it, 3 = fine, 0 = no):
+Same five people, same feelings — but now each of them **scores all three** (5 = love it, 3 = fine, 0 = no):
 
 Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) · [reader page](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
 
@@ -82,7 +82,7 @@ Here's that exact election counted on real software — the same two rounds, liv
 In plain English:
 
 - **Round 1 just adds up the stars.** Pizza collects 17 (a 3 or a 5 from *everyone*), the most — so Pizza and Sushi become the two finalists, and Tacos is out.
-- **Round 2 is a simple head-to-head between those two finalists.** Each person's ballot counts as **one vote**, for whichever finalist they rated higher. **Three** people scored Pizza above Sushi; **two** scored Sushi above Pizza. So **Pizza wins the final, 3 to 2** — an actual majority.
+- **Round 2 is a simple head-to-head between those two finalists.** Each person's ballot counts as **one vote**, for whichever finalist they scored higher. **Three** people scored Pizza above Sushi; **two** scored Sushi above Pizza. So **Pizza wins the final, 3 to 2** — an actual majority.
 
 **Pizza wins** — the option *everyone* was happy with. It got only one first-place vote, so "pick one" buried it; but because STAR reads the *whole* ballot, the broad, quiet support shows up. Nobody had to vote strategically, and nobody's stuck with a 0.
 
@@ -93,7 +93,7 @@ In plain English:
 Because the two rounds measure two different things:
 
 - **The Scoring Round measures *how much* support** — add up the stars, and the two strongest options become finalists.
-- **The Automatic Runoff measures *how many* supporters** — each ballot goes to whichever finalist it rated higher; the finalist more people preferred wins.
+- **The Automatic Runoff measures *how many* supporters** — each ballot goes to whichever finalist it scored higher; the finalist more people preferred wins.
 
 > Strength of support finds the real contenders → number of supporters decides between them.
 
@@ -101,13 +101,13 @@ The part that takes a moment to click is what happens to *your* ballot in the se
 
 <img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Sofia's ballot scores Sushi 5, Tacos 0, Pizza 3. Round 1 (Scoring Round): her stars are added to each option's total — Sushi +5, Pizza +3, Tacos +0 — and the two highest overall, Pizza and Sushi, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Sushi higher than Pizza (5 > 3), so her whole ballot becomes a single vote for Sushi. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
 
-So your scores do two jobs: their *size* helps pick the two finalists, and then, in the runoff, they shrink to a single **vote for whichever finalist you rated higher**. A 5-vs-3 and a 5-vs-0 count exactly the same in that final step — one vote each. Once that lands, STAR makes sense.
+So your scores do two jobs: their *size* helps pick the two finalists, and then, in the runoff, they shrink to a single **vote for whichever finalist you scored higher**. A 5-vs-3 and a 5-vs-0 count exactly the same in that final step — one vote each. Once that lands, STAR makes sense.
 
 And notice how Sofia's story ends: her runoff vote went to Sushi, and Sushi still lost the final, 2 to 3. She wasn't cheated — she was **outvoted**, fair and square. Meanwhile the 3 stars she gave Pizza had already done real work in Round 1, helping the option she was happy with reach the final at all. That's an honest ballot doing exactly what it should: full say in who the finalists are, one equal vote between them.
 
-Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **honest rating is also the smart rating** — you never have to exaggerate or hold back.
+Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **an honest score is also the smart score** — you never have to exaggerate or hold back.
 
-One nuance you can now name: if you rate the **two finalists** the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Either way your ratings still counted fully in Round 1, where they helped choose the finalists.
+One nuance you can now name: if you score the **two finalists** the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Either way your scores still counted fully in Round 1, where they helped choose the finalists.
 
 ## What this means for you
 
