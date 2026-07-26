@@ -47,7 +47,13 @@ The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four 
 - **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
 - **Score everyone else** wherever they honestly land, 0 to 5.
 
-→ See the ballot itself, with a few filled-out examples: [The STAR Voting Ballot](STAR_ballot.md). *(For every legal way to fill it out — backups, equal scores, "anyone but…" — the fuller [voting-styles gallery](STAR_ballot_voting_styles.md).)*
+Here's the whole thing on paper — one voter's finished ballot:
+
+<img src="../img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates rated 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
+
+*One voter's finished ballot — order **and** strength, at a glance. Official design © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
+
+→ More filled-out examples, one per situation: [The STAR Voting Ballot](STAR_ballot.md). *(For every legal way to fill it out — backups, equal scores, "anyone but…" — the fuller [voting-styles gallery](STAR_ballot_voting_styles.md).)*
 
 ## Watch STAR fix the lunch
 
