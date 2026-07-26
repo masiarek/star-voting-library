@@ -223,8 +223,9 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   into *this* repo at `blob/master/…`), Execution sketch. Topics 1–5 were produced by
   a 12-agent workflow (2026-07-24) and each passed a five-agent **adversarial novelty
   check**; anything added later must state its vetting level honestly rather than
-  inherit that badge (topic 6, the metric distortion of STAR, carries a *preliminary*
-  check and says so in four places). **Don't search this repo for research topics —
+  inherit that badge (topic 6, the metric distortion of STAR, started with a
+  *preliminary* check and passed the full five-agent protocol on 2026-07-26 —
+  its status line records the run and the residual caveats). **Don't search this repo for research topics —
   they aren't here**; clone the companion, match the house structure, update the
   README slate table, and keep the two repos pointing at each other. Working the
   other direction: when a teaching page states an open gap in print (as
