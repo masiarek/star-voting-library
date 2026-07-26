@@ -2,6 +2,11 @@
 
 **Score every candidate 0–5; the two highest-scoring candidates meet in an automatic runoff; whichever finalist more voters scored higher wins.** That's **STAR Voting** — one better ballot that [quietly fixes a whole list of election problems](00_start_here/STAR_Voting/getting_started/STAR_benefits.md): **vote your heart, no more spoilers, a winner the majority actually likes.** And it's [refreshingly new](00_start_here/STAR_Voting/STAR_history.md) — first proposed in 2014, with the lessons of a century of older methods baked in.
 
+<!-- --8<-- [start:below-hero] -->
+<!-- Invisible marker: the website homepage (index.md) inlines everything from here
+     to the matching [end:below-hero] marker at the bottom of this file, placing its
+     own graphical hero above it. Don't delete these comment lines. -->
+
 **New to STAR? This is your path — four short stops:**
 
 <div class="star-path" markdown="1">
@@ -77,3 +82,4 @@ expected_winners:
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](00_start_here/tips/TIPS_canonical_elections.md).
 
 The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](00_start_here/about_this_repo/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](00_start_here/tips/TIPS_choosing_voter_counts.md).
+<!-- --8<-- [end:below-hero] -->

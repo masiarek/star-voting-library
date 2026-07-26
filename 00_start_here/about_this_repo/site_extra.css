@@ -37,3 +37,59 @@
 .star-path > p:hover {
   border-left-color: var(--md-accent-fg-color);
 }
+
+/* Site-only homepage hero (index.md) — big headline + CTA buttons on the left,
+   the official EVC ballot image on the right; stacks on mobile. Everything uses
+   Material's theme variables so light and dark schemes both work. */
+.star-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 0.8rem 0 2rem;
+}
+.star-hero-kicker {
+  color: var(--md-typeset-a-color);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.2rem;
+}
+.star-hero h1 {
+  font-size: 2.6em;
+  font-weight: 700; /* Roboto's heaviest loaded weight — 800 would render synthetic */
+  line-height: 1.12;
+  color: var(--md-typeset-color);
+  margin: 0.15em 0 0.45em;
+}
+.star-hero-text > p {
+  font-size: 1.05em;
+}
+.star-hero .md-button {
+  margin: 0.3em 0.6em 0.3em 0;
+}
+.star-hero-img img {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  box-shadow: var(--md-shadow-z2);
+}
+.star-hero-credit {
+  font-size: 0.6rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+  margin: 0.5rem auto 0;
+}
+@media screen and (max-width: 44.9375em) {
+  .star-hero {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .star-hero h1 {
+    font-size: 2em;
+  }
+}
