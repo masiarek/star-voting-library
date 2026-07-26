@@ -67,8 +67,12 @@ NOTES / CAVEATS (read these)
 
 import json
 import os
+import re
 import sys
+import textwrap
 import time
+import urllib.error
+import urllib.request
 import uuid
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -448,6 +452,87 @@ def _existing_titles():
     return seen
 
 
+def _minted_test_ids():
+    """Every BV Test ID that has ALREADY been minted, mapped to its election id(s).
+
+    Why this exists (2026-07-25): BV numbers were being chosen by reading the
+    "next free number" line in BV_registry.md, which is regenerated from
+    *committed* repo files. Concurrent sessions share this checkout, so a session
+    that mints BV<n> and hasn't committed yet is invisible to that line — and the
+    number gets handed out twice. It happened: BV2252 went to Goodberry's
+    (6tthfv) while another session was building a case it believed was BV2252.
+
+    The fix is to read the strongest evidence that needs no git operation at all.
+    Every created election is saved to OUT_DIR by this script AT MINT TIME, and
+    its stored title always begins "BV<n> — " (see _effective_title). So the
+    dropbox is a near-real-time ledger of minted numbers, visible to every
+    session on this filesystem the instant the election exists.
+
+    Also folds in `bv_test_id:` from the repo's case YAMLs, which covers older
+    elections whose export predates the dropbox convention."""
+    used: dict = {}
+    for title, ids in _existing_titles().items():
+        m = re.match(r"^\s*(BV\w+)\s*[—–-]", title)
+        if m:
+            used.setdefault(m.group(1), []).extend(ids)
+    repo = os.path.join(os.path.dirname(__file__), "..", "..")
+    for root, dirs, files in os.walk(repo):
+        dirs[:] = [d for d in dirs if d not in
+                   (".git", ".venv", "site", "node_modules", "__pycache__")]
+        for fn in files:
+            if not fn.endswith(".yaml"):
+                continue
+            try:
+                with open(os.path.join(root, fn), encoding="utf-8") as fh:
+                    for line in fh:
+                        m = re.match(r"^\s*bv_test_id:\s*(\S+)", line)
+                        if m:
+                            used.setdefault(m.group(1).strip('"\''), []).append(fn)
+                            break
+                        if line.startswith("ballots:"):
+                            break
+            except Exception:
+                continue
+    return used
+
+
+def _next_free_test_id(used):
+    """Highest numeric BV<n> seen, plus one. Advisory only — the master sheet is
+    authoritative for the sequence; this just avoids collisions with reality."""
+    nums = [int(m.group(1)) for t in used
+            if (m := re.fullmatch(r"BV(\d+)", str(t)))]
+    return f"BV{max(nums) + 1}" if nums else None
+
+
+def _preflight_test_id_collisions(elections, fatal=True):
+    """HARD STOP if a spec reuses a Test ID that is already live on BetterVoting.
+
+    A duplicate BV<n> is not recoverable: the number rides the permanent election
+    title AND every permanent race title, and BV descriptions/titles cannot be
+    edited or deleted through the API. Two elections sharing a number destroys the
+    one property the Test ID exists for — that BV<n> names exactly one election
+    and is findable from either side."""
+    used = _minted_test_ids()
+    clash = [(s.get("test_id"), s.get("title", "<untitled>"), used[s["test_id"]])
+             for s in elections
+             if s.get("test_id") and s["test_id"] in used]
+    nxt = _next_free_test_id(used)
+    if clash:
+        print("\n⛔ PRE-CHECK — these Test IDs are ALREADY MINTED and cannot be reused:")
+        for tid, ttl, where in clash:
+            print(f"    • {tid} on “{ttl}”")
+            print(f"        already used by: {', '.join(sorted(set(map(str, where)))[:4])}")
+        if nxt:
+            print(f"\n  Next free Test ID looks like: {nxt}")
+        if fatal:
+            sys.exit("Aborted — a BV<n> is permanent and must name exactly ONE election. "
+                     "Renumber the spec (and its repo case files) and re-run.")
+        print("  (dry run — reporting only, not aborting)")
+        return
+    if nxt:
+        print(f"  test-id check: {len(used)} BV numbers already minted; next free ≈ {nxt}")
+
+
 def _preflight_test_ids(elections):
     """PRE-CHECK (before any network call). Elections created via the API are
     PUBLIC and CANNOT be renamed, closed, or deleted afterward (only a BV admin
@@ -563,11 +648,94 @@ def _preflight_test_ids(elections):
     print("  Confirmed — proceeding without a BV number.\n")
 
 
+def dry_run(spec):
+    """TEST MODE — show exactly what would be sent to BetterVoting, and check the
+    things that are UNFIXABLE once sent. Nothing is created; no POST is made.
+
+    Everything about a BV election is permanent: the title, the race titles, the
+    description (and therefore the backlink URL inside it — BV2249 shipped a 404
+    that can never be corrected), and the candidate list. This prints all of them,
+    resolves the description's "Full lesson & tabulation:" URL, and reports the
+    ballot count, so the irreversible step is the SECOND thing you do, not the
+    first. (An offline check existed early on and was removed in the 2026-07
+    simplification; restored deliberately — a dry run costs nothing and the
+    mistakes it catches cost a permanent public artifact.)"""
+    print(f"\n=== [DRY RUN] {spec['title']} ===")
+    print(f"  election title  : {_effective_title(spec)}")
+    races = _race_specs(spec)
+    nb = {len(rs["ballots"]) for rs in races}
+    for i, rs in enumerate(races):
+        print(f"  race[{i}] title  : {_effective_race_title(spec, rs)}")
+        print(f"          method  : {rs.get('method', 'STAR')}  "
+              f"seats={rs.get('num_winners', 1)}"
+              + (f"  max_rankings={rs['max_rankings']}" if "max_rankings" in rs else ""))
+        print(f"          cands   : {len(rs['candidates'])} — "
+              + ", ".join(rs["candidates"]))
+        print(f"          ballots : {len(rs['ballots'])}")
+    if len(nb) > 1:
+        print(f"  ⚠ races disagree on ballot count {sorted(nb)} — the create will fail "
+              f"(every voter votes every race).")
+    if nb == {0}:
+        print("  note: zero ballots — minted empty, for a poll that collects real votes.")
+    ewi = spec.get("enable_write_in", True)
+    print(f"  write-ins       : {'ON' if ewi else 'off'}")
+
+    desc = spec.get("description", "")
+    print(f"  description     : {len(desc)} chars")
+    for line in textwrap.wrap(desc, 88)[:4]:
+        print(f"      {line}")
+    if len(textwrap.wrap(desc, 88)) > 4:
+        print("      …")
+    # The one permanent mistake a dry run can actually catch: a backlink that 404s.
+    m = re.search(r"https?://\S+", desc[desc.rfind("Full lesson"):]) if "Full lesson" in desc else None
+    if not m:
+        print("  ⚠ description has no 'Full lesson & tabulation: <url>' backlink — house "
+              "rule; BV descriptions can NEVER be edited, so add it before creating.")
+    else:
+        url = m.group(0).rstrip(").,")
+        try:
+            with urllib.request.urlopen(url, timeout=10) as r:
+                code = r.status
+        except urllib.error.HTTPError as e:
+            code = e.code
+        except Exception as e:
+            code = f"unreachable ({e.__class__.__name__})"
+        good = code == 200
+        print(f"  backlink        : {'✓' if good else '⚠'} HTTP {code}  {url}")
+        if not good:
+            print("      ^ fix this BEFORE creating — the description is permanent and "
+                  "the API offers no edit path (this is exactly how BV2249 got a "
+                  "forever-404). A folder README publishes as .../index.html, not "
+                  ".../README.html.")
+    print(f"  expected        : {spec.get('expected', '?')}")
+    print("  --> nothing created (dry run). Re-run without --dry-run to mint.")
+    print("      Want to see the paper ballot first too? "
+          f"bv_ballot_sheet.py --spec <SPEC_NAME> --copies 1")
+
+
 if __name__ == "__main__":
+    DRY = "--dry-run" in sys.argv or os.environ.get("BV_DRY_RUN") == "1"
     print(f"BetterVoting API @ {API}")
     print(f"identity BV_USER_ID={USER_ID}  template={TEMPLATE_ID}")
+    if DRY:
+        print(f"DRY RUN — inspecting {len(ELECTIONS)} election(s); nothing will be "
+              f"created.\n")
+        # The pre-check's gates exist to stop an irreversible POST. In a dry run
+        # there is no POST, so report and keep going instead of prompting/aborting —
+        # you still SEE every warning, which is the point of looking first.
+        os.environ.setdefault("BV_ALLOW_DUP_TITLE", "1")
+        os.environ.setdefault("BV_ALLOW_NO_TESTID", "1")
+        _preflight_test_id_collisions(ELECTIONS, fatal=False)
+        _preflight_test_ids(ELECTIONS)
+        for spec in ELECTIONS:
+            dry_run(spec)
+        print("\n" + "=" * 72)
+        print(f"DRY RUN complete — {len(ELECTIONS)} election(s) inspected, 0 created.")
+        print("=" * 72)
+        sys.exit(0)
     print(f"Creating {len(ELECTIONS)} election(s)...\n")
 
+    _preflight_test_id_collisions(ELECTIONS)  # gate: BV<n> must not already exist
     _preflight_test_ids(ELECTIONS)          # gate: confirm any missing BV Test IDs
 
     summary = []  # (title, eid_or_None, expected)

@@ -33,6 +33,7 @@ Before you run the tool, decide:
 - **Promo / chapter footer?** — `--promo` + `--chapter "…"`.
 - **Copies / layout** — the output is always a print-ready **PDF** (`--out ballots.pdf`).
 - **Is the id live?** — add `--verify-bv` so no one scans a dead QR.
+- **Not created yet?** — `--spec [NAME]` prints a **PREVIEW** ballot straight from the election spec, before it exists on BetterVoting. A BV election is permanent and can never be edited or deleted, so look at the paper first; the companion check is `create_bv_test_election.py --dry-run`, which shows the exact title, race titles, candidates and description that would be sent (and pings the description's backlink URL).
 
 ## Step 1 — create the election and export its JSON
 
@@ -40,7 +41,7 @@ Create your election at [bettervoting.com](https://bettervoting.com) — or, fas
 
 ## Step 2 — print ballots from the export
 
-The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). It has **one input route** — a BetterVoting export — so there's nothing to hand-type; title, candidates, id, and descriptions all come from the JSON:
+The tool is [`STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py). It has **one input route for a real ballot** — a BetterVoting export — so there's nothing to hand-type; title, candidates, id, and descriptions all come from the JSON:
 
 ```bash
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
@@ -64,7 +65,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 - the **0–5 bubble grid** (one row per candidate — voters fill one bubble),
 - the **STAR instructions** ("give your favorite 5… the two highest-scoring have an automatic runoff"),
 - the **BV election id and results URL** printed on every ballot, so paper and platform stay linked, and
-- **two QR codes** (top corners) — *scan to vote* and *scan for results* — so a class can vote **on paper *and* online**, then compare. (QRs use the pure-Python `segno` library, which is required — a ballot that links to a live election must be scannable; if segno is missing the tool tells you to `uv pip install segno`, or pass `--no-qr` to skip on purpose.)
+- **one big QR** (top right, captioned *Scan to vote online*) — so a class can vote **on paper *and* online**, then compare. It's the only call to action on the sheet; the results URL prints as text in the footer, and `--results-qr` adds a small results code there if you want one. (QRs use the pure-Python `segno` library, which is required — a ballot that links to a live election must be scannable; if segno is missing the tool tells you to `uv pip install segno`, or pass `--no-qr` to skip on purpose.)
 
 The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes (in the official ballot grays: bubbles `#666`, stars `#ccc`, highlight `#ececec`), and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
 
@@ -85,7 +86,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
     --out ballots.pdf
 ```
 
-Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out ballots.pdf`, `--no-qr`, `--qr-size PX` (QR size, default 88 — bump up for easier scanning), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
+Useful flags: `--copies N` (how many ballots), `--per-page N` (ballots per printed page — **default 1**, one per page; bump to 2+ to save paper), `--out ballots.pdf`, `--no-qr`, `--qr-size PX` (vote QR size, default 176), `--serials` (numbered "receipt" ballots — see *Verifiability* below), `--write-ins N` (blank write-in rows), `--promo` (footer line linking starvoting.org · equal.vote · bettervoting.com), `--chapter "TEXT"` (append your local chapter), `--logo FILE` (embed your own SVG/PNG logo in the header, replacing the drawn wordmark), `--verify-bv` (check the BV id is real; drop the QR/results link if not — see below), and `--selftest`. Run `--help` for all of them.
 
 **The id always comes from a real, already-created election** — that's the point of the single route. Because you print from a BetterVoting export, the QR and `…/results` link are real by construction. To be safe before a print run, add **`--verify-bv`**: it pings BetterVoting to confirm the id resolves and, if it somehow doesn't (a stale or hand-edited export), drops the QR + results link automatically — so no one ever scans a dead link.
 

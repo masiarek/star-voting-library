@@ -364,6 +364,19 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   `POST …/edit` 502 — no owner-editable path; API-created elections aren't
   administrable). So cases minted *without* the backlink can't be retrofitted (the
   ballot_style_lab set BV2234–2247 is in that boat — repo→BV works, BV→repo doesn't).
+- **Never choose a `BV<n>` by reading `BV_registry.md`'s "next free number."** That
+  line is regenerated from *committed* files, so a concurrent session that has minted
+  but not yet committed is invisible to it — and the number gets handed out twice. It
+  happened (2026-07-25): BV2252 went to Goodberry's `6tthfv` while another session was
+  building a case it believed was BV2252. A duplicate is **unrecoverable** — the number
+  rides the permanent election title *and* every permanent race title, and neither can
+  be edited or deleted. **`create_bv_test_election.py` now hard-stops on a reused Test
+  ID** (`_preflight_test_id_collisions`, before any network call) and prints the next
+  free number on every run; it reads minted numbers from the `BV<n> — ` title prefix of
+  the saved exports in `06_Other/_demo_dropbox/`, which this script writes **at mint
+  time** on the shared filesystem — so a concurrent session's election is visible the
+  instant it exists, with no git operation needed. **Take the number from that printed
+  line, not from the registry**, and don't disable the gate.
 - **`BV<n>` in both artifacts — yes, keep it.** The human-readable Test ID belongs in
   *both* places so each side is findable from the other: on BV it rides the **election
   title** prefix (`BV<n> — <real title>`) **and every race title** (rule flipped by
@@ -490,7 +503,13 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
      elections you can't take back.
 3. **Create the BV election** (AI runs it; Adam must be signed in to BV). Add the
    election spec to the data module `bv_election_specs.py`, set its `ELECTIONS`
-   list to that spec, then `uv run …/create_bv_test_election.py` — it creates the election **and casts the
+   list to that spec, then **dry-run first** — `uv run …/create_bv_test_election.py
+   --dry-run` prints the exact title, every race title, candidates, ballot count and
+   description that would be sent, and **pings the description's backlink URL** (a
+   404 there is permanent — that's how BV2249 got one); it creates nothing. If the
+   case will be printed on paper, `bv_ballot_sheet.py --spec <SPEC_NAME> --copies 1`
+   shows the ballot itself before the election exists. Then run it for real:
+   `uv run …/create_bv_test_election.py` creates the election **and casts the
    ballots** via the API and prints `bettervoting.com/<id>`. Never build it by
    hand in the UI. (Auth is asymmetric RS256; no real credential is stored.)
 4. **Freeze the full JSON** (AI — automated since 2026-07-23). The create script

@@ -38,13 +38,13 @@ That second step is what a plain star-rating poll lacks: the winner is the flavo
 
 ## Paper ballots
 
-`goodberrys_best_flavor_2026_ballots.pdf` — 25 print-ready STAR ballots, one per page, each with the 0–5 bubble grid, serial number, and two QR codes (vote / results) pointing at `6tthfv`. Built PDFs are generated artifacts (`*_ballots.pdf` is gitignored), so regenerate it from the frozen export with [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py):
+`goodberrys_best_flavor_2026_ballots.pdf` — 30 print-ready STAR ballots, one per page, each with the 0–5 bubble grid and one big *Scan to vote online* QR pointing at `6tthfv` (the results URL prints as text in the footer). Built PDFs are generated artifacts (`*_ballots.pdf` is gitignored), so regenerate it from the frozen export with [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py):
 
 ```bash
-.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py --bv-export 06_Other/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --title "Goodberry's Frozen Custard — Best Flavor 2026" --question "Which Goodberry's flavor is the best? Score every flavor 0-5 stars." --blurb "" --copies 25 --per-page 1 --serials --logo STARVote_LH_tabulation_engine/tools_adam/assets/NC_STAR_Logo1.jpg --chapter "STAR Voting NC (facebook.com/groups/starvotingnc)" --notice "UNOFFICIAL FLAVOR POLL — COUNTED WITH STAR VOTING. NOT A SECRET BALLOT." --verify-bv --out 06_Other/goodberrys_best_flavor/goodberrys_best_flavor_2026_ballots.pdf
+.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py --bv-export 06_Other/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --logo STARVote_LH_tabulation_engine/tools_adam/assets/NC_STAR_Logo1.jpg --notice "UNOFFICIAL FLAVOR POLL — COUNTED WITH STAR VOTING." --verify-bv --out 06_Other/goodberrys_best_flavor/goodberrys_best_flavor_2026_ballots.pdf
 ```
 
-Change `--copies` for a bigger table. Paper and platform stay linked: the QR voters and the bubble-fillers are casting the same ballot into the same count. The full workflow (print → vote → hand-count → compare to BetterVoting) is in [running a paper-ballot demo](../../00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md); the by-hand count is in [count STAR by hand](../../00_start_here/STAR_Voting/hands_on/count_star_by_hand.md).
+Change `--copies` for a bigger or smaller table (default 30). Paper and platform stay linked: the QR voters and the bubble-fillers are casting the same ballot into the same count. The full workflow (print → vote → hand-count → compare to BetterVoting) is in [running a paper-ballot demo](../../00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md); the by-hand count is in [count STAR by hand](../../00_start_here/STAR_Voting/hands_on/count_star_by_hand.md).
 
 ## What to watch for when the votes come in
 
@@ -56,7 +56,7 @@ Change `--copies` for a bigger table. Paper and platform stay linked: the QR vot
 
 | File | What it is |
 |------|-----------|
-| `goodberrys_best_flavor_2026_ballots.pdf` | the printable ballots (25 pages) — generated, not committed |
+| `goodberrys_best_flavor_2026_ballots.pdf` | the printable ballots (30 pages) — generated, not committed |
 | [cases/goodberrys_best_flavor_2026_bv_export.json](cases/goodberrys_best_flavor_2026_bv_export.json) | frozen BV export at mint time (zero ballots — the poll had not started) |
 
 Re-freeze the export once real votes are in, and the results are tabulatable in this repo's engine:
