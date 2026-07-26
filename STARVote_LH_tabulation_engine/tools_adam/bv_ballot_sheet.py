@@ -207,6 +207,16 @@ INSTRUCTIONS = ("Score each candidate 0 to 5 (fill ONE bubble per row). "
 # Kept simple 7-bit ASCII (plain '-') for maximum print/font compatibility.
 DEFAULT_NOTICE = "EDUCATION ONLY - a STAR Voting teaching demo, not a secret ballot."
 
+# Where a PREVIEW ballot's stand-in QR points. Deliberately a real but **CLOSED**
+# BetterVoting election (BV151 — "Compare RCV-IRV and STAR", state: closed), so a
+# scan lands somewhere honest where **no vote can be cast**. The alternatives are
+# both worse: an invented election id prints a scannable dead link (the failure
+# FR-12 exists to prevent), and an OPEN election would invite a stray vote into
+# someone else's tally. Override with --preview-qr URL.
+PREVIEW_QR_URL = "https://bettervoting.com/qp8w68/results"
+PREVIEW_QR_CAPTION = "TEST ONLY - sample QR"
+PREVIEW_WATERMARK = "TEST ONLY"
+
 
 def qr_data_uri(url):
     """An inline QR (data: URI) for `url` via the pure-python `segno` library, or
@@ -311,7 +321,11 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
        margin: 0; color: #111; }
 .ballot { position: relative; border: 3px solid #111; border-radius: 10px;
           padding: 16px 22px 14px; margin: 12px; page-break-inside: avoid;
-          display: flex; flex-direction: column; }
+          display: flex; flex-direction: column; overflow: hidden; }
+/* overflow:hidden is load-bearing, not cosmetic: the rotated nowrap watermark is
+   wider than the page, and Chromium's page.pdf() SCALES the whole document down to
+   fit its widest content — which silently shrank every ballot and undid the
+   page-fill. Clipping to the ballot box keeps the sheet at 100%. */
 .notice { border: 1.5px solid #c0392b; border-radius: 5px; padding: 3px 8px;
           margin: 0 0 10px; font-size: 10.5px; font-weight: 700; color: #c0392b;
           text-align: center; text-transform: uppercase; letter-spacing: .4px; }
@@ -333,6 +347,12 @@ body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-seri
 .qr img { display: block; margin: 0 auto; }
 .qr .cta { display: block; margin-top: 3px; font-size: 14px; font-weight: 800; color: #111; line-height: 1.15; }
 .gridwrap { flex: 1 1 auto; display: flex; }
+/* PREVIEW watermark: unmissable on paper, and it can't be cropped off the way a
+   header notice can. print-color-adjust keeps Chromium from dropping the color. */
+.wm { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      font-size: 104px; font-weight: 900; color: #c0392b; opacity: .13; letter-spacing: 8px;
+      transform: rotate(-28deg); pointer-events: none; z-index: 5; white-space: nowrap;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 table.grid { border-collapse: collapse; width: 100%; margin: 4px 0 6px; }
 .grid td, .grid th { text-align: center; padding: 0; vertical-align: middle; }
 .grid td.cand, .grid th.chl { text-align: left; width: 30%; font-weight: 800; font-size: 17px; padding-left: 6px; }
@@ -371,7 +391,7 @@ def _colhead(n):
 def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
                   results_qr_uri=None, serial=None, write_ins=0,
                   break_after=False, notice="", blurb="", promo="", logo_uri="",
-                  qr_size=176, qr_caption="Scan to vote online"):
+                  qr_size=176, qr_caption="Scan to vote online", watermark=""):
     bubbles = "".join(f'<td><span class="bub">{n}</span></td>' for n in range(6))
     rows = []
     for i, c in enumerate(candidates):
@@ -431,8 +451,10 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
     # `.ballot` is a flex column and `.gridwrap` is flex:1, so on a one-ballot page
     # the score grid stretches into the leftover height (taller rows) instead of
     # leaving the bottom third of the sheet blank. See render_sheet's min-height.
+    wm_block = f'<div class="wm">{html.escape(watermark)}</div>' if watermark else ""
     return f"""
 <div class="{cls}">
+  {wm_block}
   {notice_block}
   {header}
   <div class="gridwrap"><table class="grid">
@@ -449,7 +471,7 @@ def render_ballot(title, question, candidates, bv_id, vote_qr_uri=None,
 def render_sheet(title, question, candidates, bv_id, copies, per_page,
                  qr=True, serials=False, write_ins=0, notice="", blurb="",
                  promo="", logo_uri="", qr_size=176, results_qr=False,
-                 fill_page=True, placeholder_qr=None):
+                 fill_page=True, placeholder_qr=None, watermark=""):
     # ONE QR by default — the big "scan to vote" code. The results URL prints as
     # text in the footer, and --results-qr adds a small code beside it.
     # (bv_id is None only when --verify-bv found the id doesn't resolve → no QR.)
@@ -466,12 +488,12 @@ def render_sheet(title, question, candidates, bv_id, copies, per_page,
     caption = "Scan to vote online"
     if placeholder_qr and not bv_id and qr:
         vote_qr_uri = qr_data_uri(placeholder_qr)
-        caption = "Sample QR — layout only"
+        caption = PREVIEW_QR_CAPTION
     pp = max(1, per_page)
     ballots = "\n".join(
         render_ballot(title, question, candidates, bv_id,
                       vote_qr_uri=vote_qr_uri, results_qr_uri=results_qr_uri,
-                      qr_caption=caption,
+                      qr_caption=caption, watermark=watermark,
                       serial=(i + 1 if serials else None), write_ins=write_ins,
                       notice=notice, blurb=blurb, promo=promo,
                       logo_uri=logo_uri, qr_size=qr_size,
@@ -589,14 +611,16 @@ def selftest():
         # Placeholder QR: preview-only, captioned as a stand-in, and it must never
         # override a real election's own code.
         ph = render_sheet("T", "q", ["A"], None, copies=1, per_page=1,
-                          placeholder_qr="https://bettervoting.com")
+                          placeholder_qr=PREVIEW_QR_URL, watermark=PREVIEW_WATERMARK)
         real = render_sheet("T", "q", ["A"], "abc123", copies=1, per_page=1,
                             placeholder_qr="https://example.com/nope")
         phk = [
             ("placeholder QR prints on a preview (no bv_id)",
-             ph.count('class="qr"') == 1 and "Sample QR" in ph),
+             ph.count('class="qr"') == 1 and PREVIEW_QR_CAPTION in ph),
+            ("preview watermark rendered", 'class="wm">TEST ONLY<' in ph),
+            ("real ballots carry no watermark", 'class="wm"' not in real),
             ("placeholder never displaces a real election's QR",
-             "Sample QR" not in real and "Scan to vote online" in real),
+             PREVIEW_QR_CAPTION not in real and "Scan to vote online" in real),
             ("no placeholder + no id -> still no QR",
              'class="qr"' not in render_sheet("T", "q", ["A"], None, copies=1,
                                               per_page=1)),
@@ -723,13 +747,15 @@ def main():
                     help="deliberately print without the vote QR. (Otherwise a QR is "
                          "required — a ballot with a live BV id must be scannable — so "
                          "a missing `segno` library is an error, not a QR-less ballot.)")
-    ap.add_argument("--preview-qr", nargs="?", const="https://bettervoting.com",
-                    metavar="URL",
-                    help="PREVIEW ONLY: print a stand-in QR so you can judge the "
-                         "layout before the election exists. Captioned \"Sample QR — "
-                         "layout only\", and it encodes the URL you give (default "
-                         "bettervoting.com) — never a made-up election id, which "
-                         "would print a scannable dead link.")
+    ap.add_argument("--preview-qr", nargs="?", const=PREVIEW_QR_URL, metavar="URL",
+                    help=f"PREVIEW ONLY: the stand-in QR's target. Defaults to "
+                         f"{PREVIEW_QR_URL} — a real but CLOSED BV election, so a "
+                         f"scan lands somewhere honest where no vote can be cast. "
+                         f"A preview prints this automatically; pass a URL to point "
+                         f"it elsewhere, or --no-qr for none. Never encodes a made-up "
+                         f"election id (that would be a scannable dead link).")
+    ap.add_argument("--no-watermark", action="store_true",
+                    help="omit the diagonal TEST ONLY watermark on a --spec preview")
     ap.add_argument("--results-qr", action="store_true",
                     help="also print a small results QR beside the results URL in the "
                          "footer (off by default — the URL already prints as text, and "
@@ -856,7 +882,9 @@ def main():
                          blurb=blurb, promo=promo, logo_uri=logo_uri,
                          qr_size=args.qr_size, results_qr=args.results_qr,
                          fill_page=not args.no_fill_page,
-                         placeholder_qr=args.preview_qr)
+                         placeholder_qr=(args.preview_qr or PREVIEW_QR_URL) if preview else None,
+                         watermark=(PREVIEW_WATERMARK
+                                    if (preview and not args.no_watermark) else ""))
 
     # PDF is the only output. It's rendered from the ballot HTML via headless
     # Chromium (playwright), which is therefore required.
@@ -876,9 +904,9 @@ def main():
     print(f"Wrote {args.copies} STAR ballots ({len(candidates)} candidates, {layout}) "
           f"to {os.path.abspath(out)}")
     if preview:
-        qr_note = (f"the QR is a stand-in for {args.preview_qr} (layout only — it does "
-                   f"NOT lead to this election)" if args.preview_qr
-                   else "the ballot has no QR and no results link")
+        qr_note = ("the ballot has no QR" if args.no_qr else
+                   f"its QR is a stand-in pointing at {args.preview_qr or PREVIEW_QR_URL} "
+                   f"(a CLOSED election — nothing can be voted from it)")
         print(f"PREVIEW ONLY — this election does not exist on BetterVoting yet, so "
               f"{qr_note}.\nHappy with it? Create the election "
               f"(create_bv_test_election.py), then reprint from its export.")
