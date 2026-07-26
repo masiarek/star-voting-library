@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cara
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`).
+
 ## Scenario
 
 The same merged 9-voter electorate as reinf_combined_c3_b9_rr.yaml, on STAR

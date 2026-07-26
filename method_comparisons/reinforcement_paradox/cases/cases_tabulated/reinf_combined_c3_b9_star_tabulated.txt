@@ -25,6 +25,13 @@ scenario_description: |-
 
 paradoxes: [multiple-districts]
 
+bv_test_id: BV2254
+bv_election_id: t4by6x
+bv_results_url: https://bettervoting.com/t4by6x/results
+# Live results: https://bettervoting.com/t4by6x/results — this election's STAR race
+# (one of two on the combined 9 ballots; the sibling Ranked Robin race is
+# reinf_combined_c3_b9_rr.yaml). Frozen export: reinf_combined_c3_b9_bv_export.json.
+
 voting_method: STAR
 num_winners: 1
 

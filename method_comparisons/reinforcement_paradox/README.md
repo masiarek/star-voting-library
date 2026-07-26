@@ -2,7 +2,7 @@
 
 *Two districts. Ada wins both. Merge them, and **Cara** wins — the one thing a voting rule's "reinforcement" (a.k.a. **consistency**) promise says can't happen. This is a live, countable demonstration of a theorem from [Brandt, Dong & Peters, "Condorcet-Consistent Choice Among Three Candidates"](../../00_start_here/topics/condorcet/three_candidate_maximin.md) (2024): **every** [Condorcet method](../../00_start_here/topics/condorcet/README.md) must show this paradox once there are ≥ 8 voters. The lesson is fair to a fault — it cuts against STAR too, and shows exactly which methods keep the promise and which don't.*
 
-**▶ Live on BetterVoting:** _(pending — a combined STAR + Ranked Robin election is being minted; results link will be added here.)_
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`, BV2254) — the combined 9-voter electorate as two races (STAR + Ranked Robin); both elect **Cara**, matching the counts below.
 
 → The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../00_start_here/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../00_start_here/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../00_start_here/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 
