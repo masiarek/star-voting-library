@@ -98,7 +98,7 @@ It also isn't an argument that Cal is the "right" answer. Bob is unanimously app
 
 ## What it says about "Approval = Borda = Condorcet"
 
-There's a clean theory result behind this: on the domain of **dichotomous preferences** — weak rankings with exactly two indifference classes, which is precisely what an approval ballot is — approval voting coincides with [Borda](../../00_start_here/other_ranked_methods/borda.md) *and* with every Condorcet method, and a Condorcet winner is guaranteed to exist. No cycles are possible there.
+There's a clean theory result behind this: on the domain of **[dichotomous preferences](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice)** — weak rankings with exactly two indifference classes, which is precisely what an approval ballot is — approval voting coincides with [Borda](../../00_start_here/other_ranked_methods/borda.md) *and* with every Condorcet method, and a Condorcet winner is guaranteed to exist. No cycles are possible there.
 
 Reading 3 satisfies that theorem exactly: the compressed profile has a Condorcet winner (Bob), and the approval count picks him. So the theorem is not in question — this case is an instance of it.
 
