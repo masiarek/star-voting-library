@@ -26,6 +26,15 @@ site_dir: site
 # shift every page one level deeper and 404 the folder-style links.
 use_directory_urls: false
 
+# Built and linkable, but hidden from the auto-generated left sidebar — internal
+# or duplicate pages that would otherwise greet a newcomer at the very top of
+# the nav: CLAUDE.md (house conventions), the license inventory, and readme.md
+# (whose content already IS the homepage — index.md inlines it at build time).
+not_in_nav: |
+  /CLAUDE.md
+  /THIRD_PARTY_LICENSES.md
+  /readme.md
+
 theme:
   name: material
   icon:

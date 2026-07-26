@@ -14,3 +14,26 @@
 .md-footer__inner {
   display: none !important;
 }
+
+/* Homepage "New to STAR?" path — readme.md wraps its four entry links in
+   <div class="star-path" markdown="1">, one paragraph per stop. Here (Material)
+   they render as a card grid; on GitHub the class is ignored and the same
+   markup degrades gracefully to a plain stacked list. Colors use Material's
+   own CSS variables so light and dark schemes both work. */
+.star-path {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0 1.2rem;
+}
+.star-path > p {
+  margin: 0;
+  padding: 0.75rem 0.95rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-left: 0.2rem solid var(--md-typeset-a-color);
+  border-radius: 0.25rem;
+  background: var(--md-code-bg-color);
+}
+.star-path > p:hover {
+  border-left-color: var(--md-accent-fg-color);
+}

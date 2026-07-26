@@ -1,12 +1,34 @@
 # STAR Voting — Education & Test-Case Library
 
-> **New to STAR Voting?** It's a simple, expressive way to run an election: **score every candidate 0–5, then an automatic runoff between the two highest-scoring picks the winner.** One better ballot that [quietly fixes a whole list of election problems](00_start_here/STAR_Voting/getting_started/STAR_benefits.md) — **vote your heart, no more spoilers, a winner the majority actually likes** — and it's [relatively new](00_start_here/STAR_Voting/STAR_history.md), first proposed in 2014. **Start with the five-minute intro → [Welcome to STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md).**
->
-> **Want the whole argument, every objection answered? → [Why STAR Voting](00_start_here/topics/Why_STAR_Voting.md).** Prefer ranked ballots? → **[Why Ranked Robin](00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins.
+**Score every candidate 0–5; the two highest-scoring candidates meet in an automatic runoff; whichever finalist more voters scored higher wins.** That's **STAR Voting** — one better ballot that [quietly fixes a whole list of election problems](00_start_here/STAR_Voting/getting_started/STAR_benefits.md): **vote your heart, no more spoilers, a winner the majority actually likes.** And it's [refreshingly new](00_start_here/STAR_Voting/STAR_history.md) — first proposed in 2014, with the lessons of a century of older methods baked in.
+
+**New to STAR? This is your path — four short stops:**
+
+<div class="star-path" markdown="1">
+
+⭐ **[1 · What is STAR? — the five-minute intro](00_start_here/STAR_Voting/STAR_start_here.md)**<br>
+Watch "pick one" ruin a team lunch, then watch STAR fix it. No background needed, not a word of politics.
+
+🚀 **[2 · The benefits — why people switch](00_start_here/STAR_Voting/getting_started/STAR_benefits.md)**<br>
+Vote your heart, no spoilers, majority winners, one election instead of two. The quick, exciting wins — *the proponents' pitch, and proudly so.*
+
+🗳️ **[3 · Try it for real ↗](https://bettervoting.com)**<br>
+Cast a STAR ballot or run your own free election on BetterVoting — or [print real paper ballots](00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md) and count them by hand.
+
+🤨 **[4 · Skeptical? Good.](00_start_here/STAR_Voting/getting_started/star_for_skeptics.md)**<br>
+"What's the catch?" answered without cheerleading — including [what STAR *doesn't* fix](00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+
+</div>
+
+**Want the whole argument, every objection answered? → [Why STAR Voting](00_start_here/topics/Why_STAR_Voting.md).** Prefer ranked ballots? → **[Why Ranked Robin](00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins. Ready for the full course? → [Voting 101 / 201 / 301](00_start_here/CURRICULUM.md).
+
+---
+
+## What this library is
 
 A library for learning, teaching, and debating **[STAR Voting](00_start_here/STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). It puts STAR first — and earns your trust by testing STAR honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness *is* the argument: the STAR case is stronger because you can check it yourself.
 
-**New here? → [Start Here](00_start_here/00_START_HERE.md)** routes you by what you want — learn STAR, see what's broken about voting today, compare methods even-handedly, or run the engine yourself.
+**Looking for something specific? → [Start Here](00_start_here/00_START_HERE.md)** routes you by what you want — learn STAR, see what's broken about voting today, compare methods even-handedly, or run the engine yourself.
 
 Under the hood it does three things:
 
@@ -17,6 +39,20 @@ Under the hood it does three things:
 Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.
 
 > **Contributors / running it locally →** the [**Repository & Engine Guide**](00_start_here/about_this_repo/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](00_start_here/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
+
+---
+
+## Learn more
+
+- [Start Here](00_start_here/00_START_HERE.md) — guided entry point
+- [Hands-on — do STAR, don't just read about it](00_start_here/STAR_Voting/hands_on/README.md) — [**print real paper ballots**](00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md) from a BetterVoting election (live "scan to vote" QR, election id baked in), then vote, hand-count, and check it against the official tally
+- [A short history of STAR Voting](00_start_here/STAR_Voting/STAR_history.md) — how new it is, the origin story, and the adoption timeline
+- [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
+- [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
+- [Scored (rated) vs. ranked ballots](00_start_here/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
+- [Concepts — deep-dive pages for the important terms](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
+- [Repository & Engine Guide](00_start_here/about_this_repo/repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
+- [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently
 
 ---
 
@@ -41,17 +77,3 @@ expected_winners:
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](00_start_here/tips/TIPS_canonical_elections.md).
 
 The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](00_start_here/about_this_repo/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](00_start_here/tips/TIPS_choosing_voter_counts.md).
-
----
-
-## Learn more
-
-- [Start Here](00_start_here/00_START_HERE.md) — guided entry point
-- [Hands-on — do STAR, don't just read about it](00_start_here/STAR_Voting/hands_on/README.md) — [**print real paper ballots**](00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.md) from a BetterVoting election (live "scan to vote" QR, election id baked in), then vote, hand-count, and check it against the official tally
-- [A short history of STAR Voting](00_start_here/STAR_Voting/STAR_history.md) — how new it is, the origin story, and the adoption timeline
-- [STAR Voting — Curriculum (Voting 101 / 201 / 301)](00_start_here/CURRICULUM.md) — levels 101 / 201 / 301
-- [Glossary — voting methods & criteria](00_start_here/GLOSSARY.md) — terms, precisely defined
-- [Scored (rated) vs. ranked ballots](00_start_here/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
-- [Concepts — deep-dive pages for the important terms](00_start_here/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
-- [Repository & Engine Guide](00_start_here/about_this_repo/repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
-- [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently

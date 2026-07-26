@@ -21,6 +21,8 @@ uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" mkdocs serve
 - **Every content folder has a `README.md`** (the existing house rule). MkDocs turns each one into that folder's `index.html`, which is what makes the repo's *folder-style* links (`../center_squeeze_bv2137/`) resolve on the website too.
 - **Plain `.html` URLs** (`use_directory_urls: false`). The repo's cross-links were authored for GitHub's file-relative rendering; pretty directory URLs would shift every page one level deeper and 404 the folder-style links. Don't flip this back without fixing hundreds of links.
 - **The homepage** is [`index.md`](../../index.md), which inlines [`readme.md`](../../readme.md) at build time (snippet include). GitHub ignores `index.md`; MkDocs doesn't recognize the lowercase `readme.md` as an index. One source, two front doors.
+- **The homepage's "New to STAR?" card row** is a `<div class="star-path" markdown="1">` in `readme.md`, styled by `site_extra.css` (a 2×2 card grid on the site). On GitHub the class is ignored and it degrades to a plain stacked list — that's intentional; keep any future hero markup dual-renderable the same way.
+- **Hidden from the sidebar, still built** (`not_in_nav` in `mkdocs.yml`): `CLAUDE.md`, `THIRD_PARTY_LICENSES.md`, and `readme.md` (its content is already the homepage). Links to them keep working; they just no longer appear in the left nav ahead of the teaching content.
 - **Excluded from the site**: dot-dirs, `site/`, `AGENTS.md` (agent-facing duplicate of `CLAUDE.md`), `_demo_dropbox/` staging, and generated ballot printouts — see `exclude_docs` in `mkdocs.yml`.
 
 ## Known nits (accepted for v1)
