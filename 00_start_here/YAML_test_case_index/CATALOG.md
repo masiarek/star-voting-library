@@ -265,7 +265,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | lot_random_vs_published_jfk7pd_published_order | Lot-decided tie (BV jfk7pd) — following a determinis | 1 | single-race | 2 | STAR | LH-only |
 | lot_tiebreak_bv_order | Lot tiebreak — following BetterVoting's drawn order | 1 | single-race | 2 | STAR | LH-only |
 | lot_tiebreak_published_order | Lot tiebreak — following the new published-lot appro | 1 | single-race | 2 | STAR | LH-only |
-| lunch_choose_one_dead_tie | Team lunch on a choose-one ballot — a dead tie | 1 | single-race | 5 | Plurality | LH-only |
 | margins_paper_exact_304 | Margins matter — the textbook profile at its printed | 1 | single-race | 304 | RankedRobin | LH-only |
 | mmp_sntv | Multi-member plurality — SNTV (3 seats): the minorit | 1 | single-race | 10 | Plurality | LH-only |
 | monotonicity_irv_after | Non-monotonicity (RCV-IRV) — part 2: raising X makes | 1 | single-race | 34 | IRV | LH-only |
@@ -361,6 +360,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | my82v6 | 01a_c2_b2 — two candidates, two ballots (Chocolate/V | 1 | single-race | 2 | STAR | BV |
 | pet | What Makes the Best Pet? | 1 | single-race | 461 | STAR | BV |
 | pmrq4q | BV2245 — The Herb Garden Council — Allocated Score / | 1 | single-race | 36 | STAR_PR | BV |
+| q2rkfm | BV2257 — Choose-One lunch vote: five coworkers, one  | 1 | single-race | 5 | Plurality | BV |
 | q8q9m7 | BV2220 — Equally Weighted Vote — add two exact-oppos | 1 | single-race | 5 | STAR | BV |
 | qdh9qp | BV2246 — Quota Circus — STAR-PR with cliff, slate an | 1 | single-race | 29 | STAR_PR | BV |
 | qrw6wb | Ann, Bob, Cal - the canonical leading example (singl | 1 | single-race | 3 | STAR | BV |
@@ -457,8 +457,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 219 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 218 | 24b623, 26khr3, 2hqmrd, 2jrfpg |
+| BV | 219 | 24b623, 26khr3, 2hqmrd, 2jrfpg |
+| LH-only | 218 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
 | BV (no yaml) | 78 | 2jrfpg, 2p33qq, 3grpbb, 3xgkck |
 | LH-only (exception) | 1 | dead_heat_lot_tiebreak |
 

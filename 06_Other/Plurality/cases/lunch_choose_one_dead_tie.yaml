@@ -1,4 +1,7 @@
-election_title: "Team lunch on a choose-one ballot — a dead tie"
+bv_test_id: BV2257
+bv_election_id: q2rkfm
+bv_results_url: https://bettervoting.com/q2rkfm/results
+election_title: "Team lunch on a choose-one ballot — a dead tie (BV2257, q2rkfm)"
 
 scenario_description: |-
   Five coworkers, three lunches, and the old ballot: mark one box.
@@ -11,6 +14,15 @@ scenario_description: |-
   Same five people, same opinions, on a 5-star ballot:
   01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml — where STAR elects Pizza,
   the compromise everyone is happy with.
+
+  TIEBREAK — this case is NOT deterministic, on purpose. LH resolves the 2-2 tie
+  with the pre-published lot order below and elects Sushi. BetterVoting resolves
+  it at RANDOM (its frozen export records tieBreakType: "random"); the live run
+  happened to land on Sushi too, but a re-run could just as well say Tacos. That
+  is the honest state of a tied choose-one election, not an engine disagreement.
+
+  Live results (BV2257): https://bettervoting.com/q2rkfm/results
+  Lesson: 06_Other/Plurality/README.md
 
 voting_method: Plurality
 num_winners: 1

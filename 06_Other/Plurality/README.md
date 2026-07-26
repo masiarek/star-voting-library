@@ -6,6 +6,8 @@ Choose-One (also **Plurality**, **First-Past-The-Post**, or just "the ballot you
 
 ---
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm`, Test ID BV2257).
+
 ## The silly election
 
 Five coworkers are picking lunch. Three options. One box each.
@@ -40,6 +42,17 @@ Winner — Choose-One / Plurality Voting Method (single winner)
 Five people, one lunch, and the answer came out of a hat.
 
 **Run it:** [reader page](cases/cases_pages/lunch_choose_one_dead_tie.md) · [`lunch_choose_one_dead_tie.yaml`](cases/lunch_choose_one_dead_tie.yaml)
+
+### "Out of a hat" is literal — and the two engines disagree by design
+
+This is the rare case in this library with **no deterministic winner**, and the two tabulators handle it differently:
+
+| | how the tie is broken | winner |
+|---|---|:--:|
+| **This repo (LH engine)** | the case's **pre-published lot order** `Sushi > Tacos > Pizza` | Sushi, every run |
+| **[BetterVoting](https://bettervoting.com/q2rkfm/results)** | **at random** — the frozen export literally records `tieBreakType: "random"` | Sushi *this* time; a re-run could say Tacos |
+
+Neither is wrong. A tied choose-one election has no answer inside the ballots, so *something outside them* has to choose, and the only real question is whether that something was published before the vote. It's why real choose-one jurisdictions have coin-toss and drawn-lot statutes on the books — they are not folklore, they are the documented consequence of a one-bit ballot.
 
 ## The voter who could have fixed it
 

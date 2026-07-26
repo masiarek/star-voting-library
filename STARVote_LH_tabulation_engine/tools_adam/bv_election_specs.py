@@ -4353,7 +4353,55 @@ TRADITIONAL_STAR_SPEC = {
                 "runoff Ella 2 - Carmen 1, no Equal Support (majority = 2).",
 }
 
-ELECTIONS: list = [TRADITIONAL_STAR_SPEC]   # BV2256 — traditional style, one STAR race
+# RESULTS (2026-07-26): BV2256 -> c8h3tb — created + 3/3 ballots OK, STAR -> Ella.
+# The plain single-race redo of BV2255. Do NOT re-run.
+
+
+# --- BV2257 — Choose-One lunch vote: the simplest count, and a dead tie ----------
+# Backs 06_Other/Plurality/README.md. Five coworkers, three lunches, ONE box each —
+# the canonical team-lunch electorate handed the old ballot. Sushi 2 · Tacos 2 ·
+# Pizza 1, and the ballots have nothing left to say. CAVEAT, deliberate: the result
+# is a TIE, so unlike every other case here the winner is NOT deterministic — LH uses
+# the case's pre-published lot order (-> Sushi); BV breaks a Plurality tie at RANDOM,
+# so the live BV winner may be Sushi or Tacos and cannot be frozen. That divergence is
+# the lesson, not a defect: with one bit per voter there is nothing to break a tie with.
+_LUNCH1_CANDS = ["Sushi", "Tacos", "Pizza"]
+_LUNCH1_ONE = [[1, 0, 0], [1, 0, 0], [0, 1, 0], [0, 1, 0], [0, 0, 1]]
+LUNCH_CHOOSE_ONE_SPEC = {
+    "test_id": "BV2257",
+    "title": "Choose-One lunch vote: five coworkers, one box each, and a 2-2 tie",
+    "description": (
+        "The simplest voting method there is, doing its best. Five coworkers pick lunch "
+        "from three options on the ballot everyone already knows: mark ONE box. Two mark "
+        "Sushi, two mark Tacos, one marks Pizza. Count the marks — Sushi 2, Tacos 2, "
+        "Pizza 1 — and that is the entire count. It is a dead tie, and the ballots have "
+        "nothing left to say: there is no second preference to look at and no head-to-head "
+        "to check, because a choose-one ballot never collected any. So a coin, or a "
+        "pre-published lot order, picks lunch for five people. Note the Pizza voter: "
+        "theirs is the ONE ballot that could break this tie, since they are the only person "
+        "in the room with no stake in Sushi-vs-Tacos — and the ballot gave them no way to "
+        "say so. Hand these same five people a 5-star ballot and they settle it themselves, "
+        "with no lot at all: four of them quietly rate Pizza a 3, and STAR elects Pizza, the "
+        "lunch nobody objects to (see BV2184, election fyy886). Same voters, same opinions, "
+        "no strategy — the whole difference is how much the ballot let them say. This is not "
+        "a knock on Choose-One: it counted its ballots perfectly, it just wasn't given much "
+        "to count. Heads up: because this race is a genuine tie, BetterVoting breaks it at "
+        "RANDOM, so the winner shown here may differ from the repo's copy, which uses the "
+        "pre-published lot order Sushi > Tacos > Pizza. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/06_Other/Plurality/index.html"),
+    "method": "Plurality",
+    "num_winners": 1,
+    "candidates": _LUNCH1_CANDS,
+    "ballots": _LUNCH1_ONE,
+    "enable_write_in": False,
+    "expected": "Sushi 2 · Tacos 2 · Pizza 1 — a 2-2 tie. NOT deterministic: BV breaks "
+                "the tie at random (Sushi or Tacos); LH's copy uses the published lot "
+                "order and elects Sushi.",
+}
+
+ELECTIONS: list = [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie
+# Previously: [TRADITIONAL_STAR_SPEC]  # BV2256 — traditional style, one STAR race (created)
 # Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four races (created; ORPHANED)
 # Previously: [REINFORCEMENT_SPEC]  # BV2254 — reinforcement paradox (created -> t4by6x)
 # Previously: [P3_SPEC]  # BV2253 — Manipulability P3, sincere baseline (created)

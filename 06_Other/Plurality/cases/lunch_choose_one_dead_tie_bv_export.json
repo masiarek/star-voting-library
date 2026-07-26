@@ -1,0 +1,396 @@
+{
+  "Election": {
+    "election_id": "q2rkfm",
+    "title": "BV2257 — Choose-One lunch vote: five coworkers, one box each, and a 2-2 tie",
+    "description": "The simplest voting method there is, doing its best. Five coworkers pick lunch from three options on the ballot everyone already knows: mark ONE box. Two mark Sushi, two mark Tacos, one marks Pizza. Count the marks — Sushi 2, Tacos 2, Pizza 1 — and that is the entire count. It is a dead tie, and the ballots have nothing left to say: there is no second preference to look at and no head-to-head to check, because a choose-one ballot never collected any. So a coin, or a pre-published lot order, picks lunch for five people. Note the Pizza voter: theirs is the ONE ballot that could break this tie, since they are the only person in the room with no stake in Sushi-vs-Tacos — and the ballot gave them no way to say so. Hand these same five people a 5-star ballot and they settle it themselves, with no lot at all: four of them quietly rate Pizza a 3, and STAR elects Pizza, the lunch nobody objects to (see BV2184, election fyy886). Same voters, same opinions, no strategy — the whole difference is how much the ballot let them say. This is not a knock on Choose-One: it counted its ballots perfectly, it just wasn't given much to count. Heads up: because this race is a genuine tie, BetterVoting breaks it at RANDOM, so the winner shown here may differ from the repo's copy, which uses the pre-published lot order Sushi > Tacos > Pizza. Full lesson & tabulation: https://masiarek.github.io/star-voting-library/06_Other/Plurality/index.html",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2257 — Choose-One lunch vote: five coworkers, one box each, and a 2-2 tie",
+        "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+        "num_winners": 1,
+        "voting_method": "Plurality",
+        "candidates": [
+          {
+            "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+            "candidate_name": "Sushi"
+          },
+          {
+            "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+            "candidate_name": "Tacos"
+          },
+          {
+            "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+            "candidate_name": "Pizza"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-26T17:13:56.934Z",
+    "update_date": "1785086036934",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-8cfkf2dr",
+      "election_id": "q2rkfm",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+          "scores": [
+            {
+              "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "score": 0
+            },
+            {
+              "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "score": 1
+            },
+            {
+              "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-rvrwvg2h",
+      "election_id": "q2rkfm",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+          "scores": [
+            {
+              "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "score": 0
+            },
+            {
+              "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "score": 1
+            },
+            {
+              "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-d827jbyc",
+      "election_id": "q2rkfm",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+          "scores": [
+            {
+              "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "score": 1
+            },
+            {
+              "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "score": 0
+            },
+            {
+              "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-qr7rwvtg",
+      "election_id": "q2rkfm",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+          "scores": [
+            {
+              "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "score": 1
+            },
+            {
+              "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "score": 0
+            },
+            {
+              "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-pgy2bfcv",
+      "election_id": "q2rkfm",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "4c7f8297-8c17-440d-918d-9e682f056339",
+          "scores": [
+            {
+              "candidate_id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "score": 0
+            },
+            {
+              "candidate_id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "score": 0
+            },
+            {
+              "candidate_id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "Plurality",
+      "elected": [
+        {
+          "id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+          "name": "Sushi",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": 0,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 2
+          },
+          "winsAgainst": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+          },
+          "score": 2
+        }
+      ],
+      "tied": [
+        {
+          "id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+          "name": "Sushi",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": 0,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 2
+          },
+          "winsAgainst": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+          },
+          "score": 2
+        },
+        {
+          "id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+          "name": "Tacos",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": 2,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 0
+          },
+          "winsAgainst": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+          },
+          "score": 2
+        }
+      ],
+      "other": [
+        {
+          "id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+          "name": "Tacos",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": 2,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 0
+          },
+          "winsAgainst": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+          },
+          "score": 2
+        },
+        {
+          "id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+          "name": "Pizza",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": 1,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": 0,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 1
+          },
+          "winsAgainst": {
+            "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+            "983b8898-2673-4549-8aca-2e0fc709c2ec": false,
+            "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+          },
+          "score": 1
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "name": "Sushi",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": 0,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 2
+              },
+              "winsAgainst": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+              },
+              "score": 2
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Sushi and Tacos all tied with the most votes",
+            "Sushi wins the round after a random tiebreaker"
+          ],
+          "tieBreakType": "random",
+          "tied": [
+            {
+              "id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+              "name": "Sushi",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": 0,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 2
+              },
+              "winsAgainst": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+              },
+              "score": 2
+            },
+            {
+              "id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+              "name": "Tacos",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": 2,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 0
+              },
+              "winsAgainst": {
+                "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+                "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+                "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+              },
+              "score": 2
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "0361bf32-db82-45ec-b871-f4c07efa71b7",
+            "name": "Sushi",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": 0,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 2
+            },
+            "winsAgainst": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+            },
+            "score": 2
+          },
+          {
+            "id": "afc08d44-87b8-43f9-9dac-2222c4c50d5e",
+            "name": "Tacos",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": 2,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": 2,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 0
+            },
+            "winsAgainst": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": true,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+            },
+            "score": 2
+          },
+          {
+            "id": "983b8898-2673-4549-8aca-2e0fc709c2ec",
+            "name": "Pizza",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": 1,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": 0,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": 1
+            },
+            "winsAgainst": {
+              "0361bf32-db82-45ec-b871-f4c07efa71b7": false,
+              "983b8898-2673-4549-8aca-2e0fc709c2ec": false,
+              "afc08d44-87b8-43f9-9dac-2222c4c50d5e": false
+            },
+            "score": 1
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nOvervotes": 0,
+        "nTallyVotes": 5
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "0361bf32-db82-45ec-b871-f4c07efa71b7",
+        "983b8898-2673-4549-8aca-2e0fc709c2ec",
+        "afc08d44-87b8-43f9-9dac-2222c4c50d5e"
+      ]
+    }
+  ]
+}
