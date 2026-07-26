@@ -29,6 +29,18 @@ And the result card has two **chart views** (the toggle in its corner) — same 
 
 ![BetterVoting pie view of the runoff: Dog 52% vs Cat 48%, with the footnote "20.2% of voters expressed no preference between the two finalists"](../img/pets_rounds_pie.png)
 
+*(One wording wrinkle, so it doesn't trip you: the pie's footnote says "expressed **no preference**," while the Race Details table calls the very same bucket **Equal Support** — one concept, two labels on one screen. Equal Support is the term this library and current Equal Vote materials standardize on; we've asked BetterVoting to unify the results page's wording: [Equal-Vote/bettervoting#1457](https://github.com/Equal-Vote/bettervoting/issues/1457).)*
+
+## Percent or raw counts? The toggle
+
+The bar view has one more switch: clicking the chart flips its labels between **percentages and raw vote counts**. Same bars, same dashed threshold — two labelings. Here it is on a *different, deliberately tiny* election — the [five-voter team lunch](../STAR_start_here.md) (`fyy886`), Pizza vs Sushi in the runoff:
+
+<img src="../../tabulation_engines/BV/img/fyy886_runoff_bars_percent.png" width="420" alt="BetterVoting runoff bar view for the team lunch in percent mode: Pizza 60%, Sushi 40%, an empty Equal Support row, and the dashed majority-threshold line just past Pizza's bar.">
+
+<img src="../../tabulation_engines/BV/img/fyy886_runoff_bars_counts.png" width="420" alt="The same runoff bar view toggled to raw counts: Pizza 3, Sushi 2 — the dashed majority line crosses Pizza's bar at two and a half votes.">
+
+Which labeling reads better depends on the size of the electorate. At 455 voters, "52%" carries more meaning than "190." At **five** voters it flips: **Pizza 3, Sushi 2** is the whole story told in its own units, while "60% vs 40%" dresses five people up as a statistic — and the counts view is quietly satisfying here, because half of the 5 voters with a preference is 2.5 and you can *see* Pizza's third vote cross the line. Small teaching elections in this library lean on the counts view for exactly this reason.
+
 ## The two denominators
 
 This is the whole lesson. **190 votes for Dog is both 42% and 52%** — nothing changed but what you divide by.

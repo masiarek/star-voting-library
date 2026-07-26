@@ -77,7 +77,7 @@ Here's that exact election counted on real software — the same two rounds, liv
 
 <img src="img/fyy886_lunch_results.png" width="640" alt="BetterVoting results for the team lunch vote. Left panel, Scoring Round: bars showing Pizza 17, Sushi 13, Tacos 11 — 'add the stars from all the ballots; the two highest scoring candidates are the finalists.' Right panel, Automatic Runoff Round: Pizza 60% vs Sushi 40% with a dashed majority-threshold line just past Pizza's bar — 'each vote goes to the voter's preferred finalist; finalist with most votes wins.' Pizza is starred as the winner.">
 
-*(The runoff bars read **60% vs 40%** — that's the same **3 of the 5 people vs 2** from Round 2, just shown as a share.)*
+*(The runoff bars read **60% vs 40%** — that's the same **3 of the 5 people vs 2** from Round 2, just shown as a share. BetterVoting can flip those bars to raw counts, a pie, or audit tables — the tour of the runoff's displays, and which to reach for when, is [Reading the Runoff Percentages](the_count/runoff_percentages.md).)*
 
 In plain English:
 

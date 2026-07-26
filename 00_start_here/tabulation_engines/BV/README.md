@@ -2,7 +2,7 @@
 
 [BetterVoting.com](https://bettervoting.com) is the web app voters use to run a real STAR election (help & FAQ: [docs.bettervoting.com](https://docs.bettervoting.com)). Its result is the **visual** report — the Scoring Round / Automatic Runoff charts and the Race Details tables.
 
-**Live result for the worked pets example:** [bettervoting.com/pet/results](https://bettervoting.com/pet/results) — the interactive version of the screenshots used throughout these pages (toggle the bar/pie views there).
+**Live result for the worked pets example:** [bettervoting.com/pet/results](https://bettervoting.com/pet/results) — the interactive version of the screenshots used throughout these pages (toggle the bar/pie views there; the **percent ↔ raw-counts** flip on the bar view is walked through, on the five-voter lunch election, in [Reading the Runoff Percentages](../../STAR_Voting/the_count/runoff_percentages.md#percent-or-raw-counts-the-toggle)).
 
 For the worked pets example, BetterVoting's own screenshots live in `00_start_here/STAR_Voting/img/` — `pets_rounds_bars.png`, `pets_rounds_pie.png`, `pets_race_details_tables.png` — and are walked through in the overview, [BetterVoting and the LH Engine — One Election, Two Reports](../bettervoting_and_the_engine.md), and in [Reading the Runoff Percentages — Two Denominators, One Winner](../../STAR_Voting/the_count/runoff_percentages.md).
 
