@@ -58,6 +58,52 @@ The split is not an accident of these numbers; it's structural.
 
 - **Condorcet methods count *head-to-head majorities*, which don't add up.** Merging two electorates can create a pairwise majority that existed in neither half — here, Cara's 5–4 edges over both rivals emerge only in the union. Brandt, Dong & Peters prove this is **unavoidable**: at three candidates, *every* Condorcet extension shows the reinforcement paradox once there are ≥ 8 voters (found via a SAT solver; the bound is tight).
 
+### Two older theorems that sharpen both halves
+
+The Brandt–Dong–Peters result above is a *tight three-candidate* statement. The classical literature bounds the same two claims more broadly, and the pair is worth having side by side.
+
+**The Condorcet half generalizes past three candidates.** Zwicker's **Proposition 2.5** states it without any ceiling: *all Condorcet extension SCFs for **three or more** alternatives violate reinforcement.* The proof is elementary — no SAT solver — and it runs on **exactly the profiles in this folder**: the symmetric 6-voter cycle as one electorate, a 3-voter district with a clear Condorcet winner as the other. (The convergence is worth noting: two papers three decades apart reach for the same construction. It is the canonical witness, which is why the same ballots keep reappearing.) So what BDP add is *tightness at m = 3*; what Zwicker adds is *no upper limit on m* — with Pareto assumed, extending the proof to four or more candidates is straightforward.
+
+**The additive half is an exact characterization, not just "scoring rules pass."** The version usually quoted — Young's — runs one direction: additive scoring rules are reinforcing. The full result is an **iff**, and it names the whole class:
+
+> **Theorem (Smith 1973; Young 1975).** The anonymous, neutral, and reinforcing SCFs are **exactly the compound scoring rules.**
+
+A **compound scoring rule** allows a cascade of [score vectors](../../00_start_here/topics/ranked_ballot_methods_zoo.md): ties under `w₁` are broken by score differences under a second vector `w₂` (say, plurality score to separate tied Borda winners), a third if any remain, and so on for any finite number. Add one further axiom — **continuity**, aka the **Archimedean property** (for any `s` and any `t` with a unique winner `x`, enough copies of `t` eventually carry the merged election: `f(s + j·t) = {x}` for all large `j`) — and the class narrows to the *simple*, one-vector scoring rules.
+
+That converse is what makes this page's verdict sharp rather than anecdotal. **STAR fails reinforcement, so STAR is provably not a compound scoring rule** — no cascade of score vectors, however elaborate, reproduces it. Its scoring round is a scoring rule; the automatic runoff is not, and the theorem says that is exactly the step where the promise had to break. Same for [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md), [RCV-IRV](../../00_start_here/RCV_IRV/), and every other method here with an elimination or runoff stage. Conversely it explains why Score, Approval and Plurality can *never* be paradoxed this way: they are simple scoring rules, and the theorem covers them by construction.
+
+## Whichever way the cycle falls — the other two branches
+
+One detail the table above glosses, and it matters for anyone reproducing this.
+
+North is a **perfect three-way tie**, so an anonymous, neutral rule can only return *all three* candidates as co-winners — and then the single South district above is enough, because Ada is inside that set. But the LH engine is **resolute**: it must print one name, and it gets there by spending neutrality on a published lot order (the [`lot_numbers`](../../00_start_here/topics/ties/ties_are_forced.md) field). With `[Ada, Ben, Cara]` it prints **Ada** — which is why the original trio works.
+
+Change the lot and the original South no longer springs the trap: if North resolved to Ben, then North and South would share no winner at all, reinforcement's hypothesis would never fire, and nothing would look wrong. That is not a hole in the theorem — Zwicker's proof handles it by permuting the second district — but it *is* a hole in a demonstration built from one pair. So the other two branches are now built too. North is unchanged and invariant under the rotation Ada→Ben→Cara→Ada, so rotating South gives each branch:
+
+| If the cycle resolves to… | South district | South elects | **Merged 9 voters elect** |
+|---|---|:--:|:--:|
+| **Ada** | [`reinf_south_c3_b3_rr`](cases/reinf_south_c3_b3_rr.yaml) | Ada | **Cara** ⚠️ |
+| **Ben** | [`reinf_south_ben_c3_b3_rr`](cases/reinf_south_ben_c3_b3_rr.yaml) | Ben | **Ada** ⚠️ |
+| **Cara** | [`reinf_south_cara_c3_b3_rr`](cases/reinf_south_cara_c3_b3_rr.yaml) | Cara | **Ben** ⚠️ |
+
+Every row is engine-verified, and every merged winner is a *strict* Condorcet winner with the same 5–4 / 5–4 / 7–2 signature, rotated:
+
+```
+Ben branch  (cases/reinf_combined_ben_c3_b9_rr.yaml)
+   Ada   beats Ben    5 – 4
+   Ada   beats Cara   5 – 4
+   Ben   beats Cara   7 – 2
+Winner — Ranked Robin: Ada   (both halves had said Ben)
+
+Cara branch (cases/reinf_combined_cara_c3_b9_rr.yaml)
+   Ben   beats Ada    5 – 4
+   Ben   beats Cara   5 – 4
+   Cara  beats Ada    7 – 2
+Winner — Ranked Robin: Ben   (both halves had said Cara)
+```
+
+So the failure does not depend on a lucky lot draw. **Whichever candidate the cycle is resolved to, there is a South district that agrees with that choice and a merged electorate that overturns it** — which is the case analysis in Zwicker's proof, made runnable.
+
 ## Where STAR lands — and the honest catch
 
 STAR is a score ballot **plus** an automatic runoff, so it's half-and-half — and this case pins down exactly which half wins. On the combined 9 ballots:
@@ -89,4 +135,6 @@ Want the whole count? Full LH report → [`cases/cases_tabulated/reinf_combined_
 
 ---
 
-*Cases (all engine-verified): [`reinf_north_c3_b6_rr.yaml`](cases/reinf_north_c3_b6_rr.yaml) · [`reinf_south_c3_b3_rr.yaml`](cases/reinf_south_c3_b3_rr.yaml) · [`reinf_combined_c3_b9_rr.yaml`](cases/reinf_combined_c3_b9_rr.yaml) · [`reinf_combined_c3_b9_star.yaml`](cases/reinf_combined_c3_b9_star.yaml). Source: Felix Brandt, Chris Dong & Dominik Peters, "Condorcet-Consistent Choice Among Three Candidates" (arXiv:2411.19857, 2024); profiles P1/P2 from the Theorem 2 proof, cast as Ada/Ben/Cara across North/South towns.*
+*Cases (all engine-verified) — the original trio: [`reinf_north_c3_b6_rr.yaml`](cases/reinf_north_c3_b6_rr.yaml) · [`reinf_south_c3_b3_rr.yaml`](cases/reinf_south_c3_b3_rr.yaml) · [`reinf_combined_c3_b9_rr.yaml`](cases/reinf_combined_c3_b9_rr.yaml) · [`reinf_combined_c3_b9_star.yaml`](cases/reinf_combined_c3_b9_star.yaml); the two rotated branches: [`reinf_south_ben_c3_b3_rr.yaml`](cases/reinf_south_ben_c3_b3_rr.yaml) · [`reinf_combined_ben_c3_b9_rr.yaml`](cases/reinf_combined_ben_c3_b9_rr.yaml) · [`reinf_south_cara_c3_b3_rr.yaml`](cases/reinf_south_cara_c3_b3_rr.yaml) · [`reinf_combined_cara_c3_b9_rr.yaml`](cases/reinf_combined_cara_c3_b9_rr.yaml).*
+
+*Sources: Felix Brandt, Chris Dong & Dominik Peters, "Condorcet-Consistent Choice Among Three Candidates" (arXiv:2411.19857, 2024) — profiles P1/P2 from the Theorem 2 proof, cast as Ada/Ben/Cara across North/South towns; the tight ≥ 8-voter bound at three candidates. **Lean:** neutral. · William S. Zwicker, "Introduction to the Theory of Voting," in *Handbook of Computational Social Choice* (CUP 2016), §2.6 — Proposition 2.5 (no ceiling on the candidate count) and Theorem 2.4 (Smith 1973; Young 1975), the compound-scoring-rule characterization and the continuity/Archimedean axiom. **Lean:** neutral.*

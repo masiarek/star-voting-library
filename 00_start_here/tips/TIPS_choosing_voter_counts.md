@@ -57,6 +57,8 @@ The audit cost is the important one. A reader who can recount ten ballots and co
 
 Academic social-choice papers print electorate-sized profiles (102 / 101 / 100 / 1) largely by convention; the numbers are usually decorative and shrink without loss. Check before copying: scale all blocs down and confirm the pairwise winners, the cycle (if any), and the method rankings survive. They normally do — only lessons that turn on a **ratio** (center-squeeze thresholds, proportional seat shares, "a 61% majority") actually need the voters.
 
+> **The scaling rule has a name, and it isn't free.** Replacing every voter with `k` identical copies and expecting the same winner is the **homogeneity** axiom — `f(ks) = f(s)` — the weakest member of the [reinforcement / consistency](../../method_comparisons/reinforcement_paradox/README.md) family. Every method in this repo satisfies it, which is why "scale all blocs ×N" is a safe habit here. But it is an *axiom*, not arithmetic: any rule with an absolute voter threshold ("elect X if at least 100 people approve", a fixed quorum in raw votes rather than a fraction) is **not** homogeneous, and scaling such a profile silently changes the lesson. Worth a moment's check whenever a rule mentions a raw count. → [quorum](../topics/quorum.md), where this repo does use an absolute threshold.
+
 When the source's exact numbers are worth preserving for reproducibility, **don't mint two BetterVoting elections.** Keep:
 
 - the **small version on BV** — permanent, public, linked from the lesson;
