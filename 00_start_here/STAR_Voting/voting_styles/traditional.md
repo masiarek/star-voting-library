@@ -6,8 +6,6 @@
 
 <img src="img/style_traditional.png" width="420" alt="A STAR ballot marked traditional-style: Carmen scored 5; Andre, Blake, David, and Ella left blank, which counts as 0 for each.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Carmen. Period."** Carmen gets the full 5; every other row is blank, and a blank simply counts as 0. To the count, this voter loves Carmen and rates everyone else at the very bottom — even candidates they may never have thought about.

@@ -6,8 +6,6 @@
 
 <img src="img/style_anyone_but.png" width="420" alt="A STAR ballot marked anyone-but-style: Andre, Carmen, David, and Ella all scored 5; Blake left blank, which counts as 0.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Anyone but Blake."** Four candidates at the maximum, Blake at 0. This voter isn't choosing a champion — they're drawing a line, and the ballot lets them draw it at full strength.

@@ -6,8 +6,6 @@
 
 <img src="img/style_decent_backup.png" width="420" alt="A STAR ballot marked with a decent backup: Carmen scored 5, Ella scored 4; Andre, Blake, and David left blank, which counts as 0 for each.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Carmen — and if not her, Ella is nearly as good."** The 5 gives Carmen everything; the 4 tells the count that Ella is a genuinely acceptable outcome; the blanks put everyone else at 0.

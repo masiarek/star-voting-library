@@ -10,5 +10,3 @@ The gallery hub is **[Filling Out the 5-Star Ballot — Voting Styles](../STAR_b
 6. [Nuanced](nuanced.md) — the full range, honestly
 7. [Anyone But…](anyone_but.md) — every candidate at 5 except the one
 8. [Protest Vote](protest_vote.md) — nothing for anyone, except one least-bad 1
-
-Ballot graphics built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission (`img/` in this folder).

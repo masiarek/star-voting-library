@@ -6,8 +6,6 @@
 
 <img src="img/style_nuanced.png" width="420" alt="A STAR ballot marked nuanced-style: Carmen 5, Blake 4, Ella 4 — an honest tie — Andre 1, and David left blank, which counts as 0.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Carmen first; Blake and Ella both strong — and I truly can't split them; Andre barely; David no."** The equal 4s are the signature move: a real tie, recorded as one, because equal scores are allowed and no rule forces you to invent a preference you don't feel.

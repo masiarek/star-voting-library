@@ -6,8 +6,6 @@
 
 <img src="img/style_not_much_of_a_backup.png" width="420" alt="A STAR ballot marked with a weak backup: Carmen scored 5, Ella scored just 1; Andre, Blake, and David left blank, which counts as 0 for each.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Carmen — and Ella only over the rest, reluctantly."** The 1 is a real preference: in any Ella-versus-someone-else [runoff](../the_count/STAR_Automatic_Runoff.md), this ballot's full vote goes to Ella (1 beats 0). But in the scoring round it gives Ella almost nothing — one point instead of the four a "decent backup" would send.

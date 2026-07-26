@@ -6,8 +6,6 @@
 
 <img src="img/style_partisan.png" width="420" alt="A STAR ballot marked partisan-style: Andre, Carmen, and David all scored 5; Blake and Ella left blank, which counts as 0 for each.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"My side's three — Andre, Carmen, David — full support. Nobody else."** Equal 5s are allowed and honest: this voter refuses to rank teammates against each other, and the blanks put everyone outside the slate at 0.

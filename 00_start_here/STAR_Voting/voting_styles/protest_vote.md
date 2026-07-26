@@ -6,8 +6,6 @@
 
 <img src="img/style_protest_vote.png" width="420" alt="A STAR ballot marked as a protest vote: Blake scored 1; Andre, Carmen, David, and Ella all left blank, which counts as 0 for each.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"I'm unhappy with this whole field — and if you make me pick, Blake is the least bad."** The near-empty ballot is the protest; the single 1 is the safety valve that keeps the protest from being silence.

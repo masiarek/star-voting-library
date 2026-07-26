@@ -6,8 +6,6 @@
 
 <img src="img/style_ranked.png" width="420" alt="A STAR ballot filled in like a ranking, each score used once: Carmen 5, Blake 4, David 3, Andre 2, Ella 1.">
 
-*Ballot graphic built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
-
 ## What this ballot says
 
 **"Carmen > Blake > David > Andre > Ella."** By spending each score exactly once, the voter has written a strict 1st-through-5th ranking in stars. STAR reads it happily — every gap is a real preference in the [runoff](../the_count/STAR_Automatic_Runoff.md), and the scoring round hears a clear spread.

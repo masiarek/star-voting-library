@@ -1,10 +1,23 @@
-# Filling Out the 5-Star Ballot — Voting Styles
+# The STAR Ballot — and every legal way to fill it out
 
-*There is no wrong way to fill out a STAR ballot. This page is the gallery of legal styles — from a plain old choose-one vote to a fully expressive spread — and what each one actually says to the count.*
+*One ballot, scored 0–5. This page shows what a STAR ballot actually looks like, then the gallery of legal ways to fill it out — from a plain choose-one vote to a fully expressive spread — and what each one says to the count. There is no wrong way to fill out a STAR ballot.*
 
 ---
 
-STAR uses a **5-star ballot**: you give every candidate an independent score from 0 to 5, like rating movies. Two facts do most of the work on this page:
+## What the ballot looks like
+
+STAR uses a **5-star ballot**: you give every candidate an independent score from 0 to 5, exactly like rating movies or restaurants. Here is a finished one — this voter gave their favorite (Andre) a 5, their last choice (Ella) a 0, and scored everyone else honestly in between:
+
+<img src="../img/star_ballot_example.png" width="460" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero. Footer: the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
+
+The instructions printed on it are the whole method:
+
+- Give your **favorite 5 stars**.
+- Give your **last choice 0** (or just leave it blank).
+- **Equal scores are allowed.**
+- **Score everyone else** wherever they honestly land.
+
+Two of those rules do most of the work on this page:
 
 - **Equal scores are allowed.** Two candidates can both get a 5 (or a 0). You're never forced to invent a difference you don't feel.
 - **Skipping is allowed.** A candidate you leave blank simply counts as 0 — skipping can't spoil anything. On a **digital** ballot there is no way to mis-mark at all, since each row takes one score. On **paper** exactly one error is possible: marking *two bubbles in the same row*, which spoils **that candidate's score** (counted 0) — not the ballot. Even then the damage is *contained to one candidate*, where a ranked-ballot overvote can stop the count for the whole ballot from that rank on. See [running a paper-ballot demo](hands_on/running_a_paper_ballot_demo.md).
@@ -13,7 +26,7 @@ Because each score stands alone, filling the ballot out is quick: give your favo
 
 ## The style gallery — eight voters, eight legal ballots
 
-Eight common ways people fill out the same 5-star ballot — every one legal, every one counted. **Click any style for its own page:** what the ballot says, when it fits, the honest trade-off, and how that exact ballot fared in a real election.
+Eight common ways people fill out that same ballot — same five candidates, every one legal, every one counted. **Click any style for its own page:** what the ballot says, when it fits, the honest trade-off, and how that exact ballot fared in a real election.
 
 | Ballot | Style | What the voter is saying |
 |---|---|---|
@@ -26,9 +39,9 @@ Eight common ways people fill out the same 5-star ballot — every one legal, ev
 | <img src="voting_styles/img/style_anyone_but.png" width="190" alt="Anyone-but ballot: everyone 5 except Blake, who is left blank"> | **[Anyone But…](voting_styles/anyone_but.md)** | "Anyone but Blake." |
 | <img src="voting_styles/img/style_protest_vote.png" width="190" alt="Protest ballot: Blake 1, everyone else blank"> | **[Protest Vote](voting_styles/protest_vote.md)** | "I dislike them all; Blake is the least bad." |
 
-*Ballot graphics built on the official STAR ballot design — © [Equal Vote Coalition](https://www.equal.vote/star), used by permission. One-page-per-style index: [voting_styles/](voting_styles/).*
+*One page per style: [voting_styles/](voting_styles/).*
 
-Every one of these is legal, none can spoil the ballot, and none carries secret extra weight. The per-style pages hold the full discussion — the fine print on backups, where equal scores land in the runoff, why the ranked style volunteers a constraint the ballot doesn't impose, and how quiet a protest vote really is.
+Every one of these is legal, none can spoil the ballot, and none carries secret extra weight. Two things are worth knowing before you pick one. A **backup score can never hurt your favorite**: the 4 you give your second choice does nothing to your favorite's 5 in the scoring round, so honest rating is also the smart rating — you never have to exaggerate or hold back. And a ballot that scores *both* finalists the same lands as [Equal Support](the_count/STAR_Automatic_Runoff.md) in the runoff — it still helped choose the finalists, it just voices no preference between them. The per-style pages hold the full discussion: the fine print on backups, where equal scores land, why the ranked style volunteers a constraint the ballot doesn't impose, and how quiet a protest vote really is.
 
 ## All eight styles in one election
 
@@ -89,6 +102,7 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 ## Related concepts in this library
 
 - [Scores vs. Ranks](../scores_and_ranks/scores_vs_ranks.md) — the ballot-design distinction underneath this whole page
+- [The Score Ballot](../scores_and_ranks/score_ballot.md) — this ballot in its family · [one voter, three ballot formats](../topics/ballot_styles.md)
 - [STAR's Automatic Runoff](the_count/STAR_Automatic_Runoff.md) — where Equal Support ballots land
 - [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
 - [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
@@ -97,6 +111,8 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 
 ## Learn more
 
+- [Equal Vote Coalition — STAR Voting](https://www.equal.vote/star) — the official ballot design and marking rules
 - [Voting Scenarios — traditional, partisan, "ranked" — ballot examples](https://docs.google.com/document/d/1jrRYt7NhCKEBqnBZCzjx_9eTVBlENfIHl8bahjH8g4k/edit?tab=t.0) (Adam's source notes for this page)
 - [Why I like STAR voting: the 5-star ballot](https://bternarytau.github.io/2021/06/06/why-i-like-star-voting-the-5-star-ballot) — BTernaryTau, *Technically Exists* (spoilage rates, ratings validity, expressiveness)
 - [Ballot spoilage rate summary](https://www.rangevoting.org/SPRatesSumm.html) — rangevoting.org
+- Back to the five-minute intro: [Welcome to STAR Voting](STAR_start_here.md)

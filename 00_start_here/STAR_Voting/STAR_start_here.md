@@ -51,9 +51,9 @@ Here's the whole thing on paper — one voter's finished ballot:
 
 <img src="../img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
 
-*One voter's finished ballot — order **and** strength, at a glance. Official design © [Equal Vote Coalition](https://www.equal.vote/star), used by permission.*
+*One voter's finished ballot — order **and** strength, at a glance.*
 
-→ More filled-out examples, one per situation: [The STAR Voting Ballot](STAR_ballot.md). *(For every legal way to fill it out — backups, equal scores, "anyone but…" — the fuller [voting-styles gallery](STAR_ballot_voting_styles.md).)*
+→ Every legal way to fill it out — bullet votes, backups, equal scores, "anyone but…", protest votes, eight styles with a worked election: [The STAR ballot & voting styles](STAR_ballot_voting_styles.md).
 
 ## Watch STAR fix the lunch
 
