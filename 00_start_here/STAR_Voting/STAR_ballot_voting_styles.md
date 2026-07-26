@@ -12,10 +12,11 @@ STAR uses a **5-star ballot**: you give every candidate an independent score fro
 
 The instructions printed on it are the whole method:
 
-- Give your **favorite 5 stars**.
-- Give your **last choice 0** (or just leave it blank).
-- **Equal scores are allowed.**
-- **Score everyone else** wherever they honestly land.
+- Give your **favorite(s) five stars**.
+- Give your **last choice(s) zero stars** — or just leave them blank.
+- **Show preference order and level of support** — order *and* strength, on one ballot.
+- **Equal scores indicate no preference.**
+- **Those left blank receive zero stars.**
 
 Two of those rules do most of the work on this page:
 

@@ -40,7 +40,7 @@ That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "r
 
 **Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** Rating and **scoring** are the same thing (that's the "Score" in STAR's name — and it's the word this library uses): each option judged on its own, so two favorites can honestly both earn a 5. A ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../scores_and_ranks/scores_vs_ranks.md).
 
-The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in four lines:
+The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in plain language:
 
 - Give your **favorite** **5 stars**.
 - Give your **last choice 0** (or just leave it blank).
