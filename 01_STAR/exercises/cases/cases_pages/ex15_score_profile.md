@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Clara
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tfm64p) · **[results ↗](https://bettervoting.com/tfm64p/results)** (election `tfm64p`).
+
 ## Scenario
 
 Part (b) of Exercise 15 — "Read the ballot, name the method."
@@ -29,6 +31,8 @@ A textbook-style prompt, rebuilt with named candidates so the rows line up
 A/B/C/D -> Alice/Bruno/Clara/Diego. Part (a) is ex15_approval_yes_no.yaml.
 
 Exercise page: ../ex15_read_the_ballot.md
+Live results: https://bettervoting.com/tfm64p/results (BV2259 — BetterVoting's
+own STAR count agrees: Clara.)
 
 ## Ballots
 

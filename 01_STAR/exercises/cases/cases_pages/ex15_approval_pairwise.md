@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Blair
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`).
+
 ## Scenario
 
 The SAME 35 ballots as ex15_approval_yes_no.yaml, with each approval written
@@ -25,6 +27,10 @@ richer opinions, and the Condorcet winner of the uncompressed opinions can be
 someone else — see method_comparisons/black_curtain/condorcet_compression.md.
 
 Exercise page: ../ex15_read_the_ballot.md
+Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 2 of 2 —
+the same 35 ballots as race 1, cast as 5/0 scores; BV's STAR count agrees:
+Blair. The frozen export sits beside the sibling yaml,
+ex15_approval_yes_no_bv_export.json — one export covers both races.)
 
 ## Ballots
 

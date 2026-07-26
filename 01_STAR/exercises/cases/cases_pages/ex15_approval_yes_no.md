@@ -4,6 +4,8 @@
 
 **Method:** [Approval Voting](../../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Blair
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`).
+
 ## Scenario
 
 Part (a) of Exercise 15 — "Read the ballot, name the method."
@@ -23,6 +25,8 @@ Companion file ex15_approval_pairwise.yaml re-reads these same ballots
 pairwise; part (b) is ex15_score_profile.yaml.
 
 Exercise page: ../ex15_read_the_ballot.md
+Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 1 of 2 —
+BetterVoting's own Approval count agrees: Blair.)
 
 ## Ballots
 

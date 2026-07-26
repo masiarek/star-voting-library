@@ -2,6 +2,8 @@
 
 *Every other exercise in this set hands you the method and asks who wins. This one runs backwards. You get two filled-in profiles and no method name — just the marks. Name the method from the shape of the ballot, then count. Then the part the textbooks stop before: one of these two profiles has a property that guarantees its winner is also the **[Condorcet winner](../../00_start_here/topics/condorcet/)**, and the other has a winner so uncontested that no method in the library disagrees. Work out which is which, and why.*
 
+**▶ Live on BetterVoting:** profile (a) — [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`, Test ID BV2258 — two races on the same 35 ballots: the Yes/No count, then the identical marks as 5/0 scores so the head-to-head view prints). Profile (b) — [vote](https://bettervoting.com/tfm64p) · **[results ↗](https://bettervoting.com/tfm64p/results)** (election `tfm64p`, Test ID BV2259). **BetterVoting's own count agrees with the engine on all three races** — Blair, Blair, Clara. Two elections rather than one because the profiles have different electorates (35 voters and 4), and every BV voter votes every race.
+
 **You practice:** reading a ballot as evidence — what a set of marks can and cannot record — plus the vocabulary that names each shape: **dichotomous** vs **cardinal**, approval shares vs vote shares, and the guarantee that comes free on a [dichotomous profile](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice).
 
 Work each part on paper before opening its solution. All three YAMLs are runnable and their answer keys are regression-tested.

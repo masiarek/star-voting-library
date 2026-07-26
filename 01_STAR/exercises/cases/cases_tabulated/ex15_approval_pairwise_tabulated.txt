@@ -25,6 +25,14 @@ scenario_description: |-
   someone else — see method_comparisons/black_curtain/condorcet_compression.md.
 
   Exercise page: ../ex15_read_the_ballot.md
+  Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 2 of 2 —
+  the same 35 ballots as race 1, cast as 5/0 scores; BV's STAR count agrees:
+  Blair. The frozen export sits beside the sibling yaml,
+  ex15_approval_yes_no_bv_export.json — one export covers both races.)
+
+bv_test_id: BV2258
+bv_election_id: d4v2dh
+bv_results_url: https://bettervoting.com/d4v2dh/results
 
 options:
   show_description: false
@@ -77,6 +85,10 @@ TABULATION RESULTS
   someone else — see method_comparisons/black_curtain/condorcet_compression.md.
 
   Exercise page: ../ex15_read_the_ballot.md
+  Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 2 of 2 —
+  the same 35 ballots as race 1, cast as 5/0 scores; BV's STAR count agrees:
+  Blair. The frozen export sits beside the sibling yaml,
+  ex15_approval_yes_no_bv_export.json — one export covers both races.)
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

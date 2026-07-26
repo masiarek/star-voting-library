@@ -4400,7 +4400,105 @@ LUNCH_CHOOSE_ONE_SPEC = {
                 "order and elects Sushi.",
 }
 
-ELECTIONS: list = [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie
+# --- BV2258 / BV2259 — Exercise 15, "Read the ballot, name the method" ---
+# Backs 01_STAR/exercises/ex15_read_the_ballot.md. Two SEPARATE elections because
+# the two profiles have different electorates (35 voters vs 4) — they cannot be
+# races of one election, since every BV voter votes every race.
+# BV2258 = profile (a): 35 voters, Yes/No, two races on the SAME index-aligned
+# ballots (Approval, then the identical marks as 5/0 scores so the head-to-head
+# view prints). BV2259 = profile (b): 4 voters, 0-5 scores.
+# No Ranked Robin race on either: both profiles carry ties that a ranked ballot
+# cannot express without inventing preferences the voters never gave.
+_EX15A_CANDS = ["Ada", "Blair", "Cosmo"]
+_EX15A_APPROVE = ([[0, 1, 1]] * 15) + ([[1, 1, 0]] * 8) + ([[1, 0, 1]] * 7) + ([[0, 1, 0]] * 5)
+_EX15A_STAR = ([[0, 5, 5]] * 15) + ([[5, 5, 0]] * 8) + ([[5, 0, 5]] * 7) + ([[0, 5, 0]] * 5)
+EX15A_SPEC = {
+    "test_id": "BV2258",
+    "title": "Read the ballot, name the method: 35 voters say only Yes or No",
+    "description": (
+        "A puzzle before it is an election. You are handed a filled-in ballot and no method "
+        "name: 35 voters, three candidates, and every voter has marked each candidate Yes or "
+        "No. Which voting method is this? Two features settle it. Each candidate is marked "
+        "independently with only two states, so there are no rankings and no degrees of "
+        "support — that rules out every ranked and every scored method. And voters mark "
+        "DIFFERENT NUMBERS of candidates: 30 of them approve two, five approve just one — "
+        "which rules out choose-one and vote-for-exactly-k. Independent, binary, unlimited "
+        "marks is the definition of an APPROVAL ballot. Count the Yeses and Blair wins with "
+        "28 of 35, ahead of Cosmo 22 and Ada 15. Read those percentages carefully: 80 percent "
+        "approve Blair and 63 percent approve Cosmo, which sums past 100 and is perfectly "
+        "correct, because an approval share is a share of BALLOTS, not a slice of one pie. "
+        "The second race re-reads the very same 35 ballots with each Yes written as five "
+        "stars and each No as zero — nothing about any voter changes — so the head-to-head "
+        "view prints. Blair beats Cosmo 13 to 7, with 15 voters expressing no preference "
+        "because they approved both, and Blair beats Ada 20 to 7. The head-to-head order, "
+        "Blair then Cosmo then Ada, is exactly the order of the approval totals, and that is "
+        "guaranteed rather than lucky: on a ballot with only two levels, 'more voters prefer "
+        "x to y' just means 'more voters approve x than y', so a Condorcet winner always "
+        "exists and approval agrees with every head-to-head method. The catch worth carrying "
+        "away: that guarantee is about the BALLOTS, not about the voters. Real approval "
+        "ballots are compressed from richer opinions, and the compression can move the "
+        "answer. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/01_STAR/exercises/ex15_read_the_ballot.html"
+    ),
+    "enable_write_in": False,
+    "races": [
+        {"title": "Which method is this? — the Yes/No count (Approval): Blair 28 of 35",
+         "method": "Approval",
+         "num_winners": 1, "candidates": _EX15A_CANDS, "ballots": _EX15A_APPROVE},
+        {"title": "The same 35 ballots head-to-head — Blair beats Cosmo 13-7, 15 no preference",
+         "method": "STAR",
+         "num_winners": 1, "candidates": _EX15A_CANDS, "ballots": _EX15A_STAR},
+    ],
+    "expected": ("Approval -> Blair 28 (80%), Cosmo 22 (63%), Ada 15 (43%). STAR on the same "
+                 "marks as 5/0 -> Blair (scoring round Blair 140 / Cosmo 110 / Ada 75; runoff "
+                 "Blair 13, Cosmo 7, Equal Support 15). Blair is the Condorcet winner of the "
+                 "dichotomous profile (20-7 over Ada, 13-7 over Cosmo); Cosmo beats Ada 15-8. "
+                 "Both races deterministic. Test ID BV2258."),
+}
+
+_EX15B_CANDS = ["Alice", "Bruno", "Clara", "Diego"]
+_EX15B_STAR = [[0, 2, 5, 4], [3, 5, 5, 3], [0, 1, 5, 4], [4, 3, 4, 2]]
+EX15B_SPEC = {
+    "test_id": "BV2259",
+    "title": "Read the ballot, name the method: four voters score four candidates 0 to 5",
+    "description": (
+        "The companion puzzle to BV2258, and a deliberately uneventful election. Four voters "
+        "rate four candidates on a 0 to 5 scale. Which method is this? Adding the columns and "
+        "electing the highest total is SCORE voting, also called Range — and it is called a "
+        "CARDINAL method because each candidate is judged against the scale rather than "
+        "against the other candidates. That is what lets voter 2 rate Bruno and Clara both a "
+        "five, a statement no ranking can make: a ranked ballot can only say which came "
+        "first, never that two are equal or that one is far better than another. Totals: "
+        "Clara 19, Diego 13, Bruno 11, Alice 7. Clara wins. This race is run as STAR because "
+        "the scoring round of a STAR count IS the score-voting tally — the numbers you see "
+        "in the first round are the Score result — and here the automatic runoff changes "
+        "nothing at all: Clara wins it 4 to 0, and she is also the candidate who beats every "
+        "rival head-to-head. Choose-one, instant runoff, approval, score and STAR all elect "
+        "her, because all four voters score her top or joint-top. Nothing diverges, and that "
+        "is why it is published: a library that only ever shows elections where the methods "
+        "disagree would be telling you half the truth. One thing the table cannot tell you, "
+        "though — who is each voter's FAVOURITE? For voters 1 and 3 it is clearly Clara, but "
+        "voter 2 ties Bruno with Clara and voter 4 ties Alice with Clara, and the ballot "
+        "offers no tiebreaker. You cannot rebuild a choose-one count from these ballots "
+        "without inventing information the voters never gave. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/01_STAR/exercises/ex15_read_the_ballot.html"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": _EX15B_CANDS,
+    "ballots": _EX15B_STAR,
+    "enable_write_in": False,
+    "expected": ("STAR -> Clara. Scoring round Clara 19 / Diego 13 / Bruno 11 / Alice 7 (that "
+                 "round is the Score-voting result); runoff Clara 4, Diego 0, no Equal "
+                 "Support. Clara is also the Condorcet winner and Alice the Condorcet loser. "
+                 "No method diverges. Deterministic. Test ID BV2259."),
+}
+
+
+ELECTIONS: list = [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
+# Previously: [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie (created -> q2rkfm)
 # Previously: [TRADITIONAL_STAR_SPEC]  # BV2256 — traditional style, one STAR race (created)
 # Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four races (created; ORPHANED)
 # Previously: [REINFORCEMENT_SPEC]  # BV2254 — reinforcement paradox (created -> t4by6x)
