@@ -6,6 +6,13 @@ _generated/
 _generated_tabulated/
 processed/
 
+# Engine/tool output derived from the ignored *.yaml above. Tracking these
+# stranded them as permanent ORPHANS in every fresh clone (the source yaml is
+# ignored, so it never arrives) — which is what made
+# tests/test_yaml_pages_current.py fail on a clean checkout of master.
+_demo_dropbox_pages/
+_demo_dropbox_tabulated/
+
 # but always track the tooling + docs
 !Run BV Demo Watcher.command
 !watch_bv.py
