@@ -72,7 +72,7 @@ Legend: For - Equal Support - Against   (row vs column)
   D > | 16 -  7 - 22 |14 - 10 - 21 |16 -  5 - 24 |    ---      |18 -  5 - 22 |
   E > | 17 -  7 - 21 |19 -  8 - 18 |18 - 14 - 13 |22 -  5 - 18 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  B          3–1–0         3     +12  A, C, D
     2  A          3–1–0         3      +7  E, C, D
@@ -81,4 +81,4 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     5  D          0–4–0         0     -25  —
 
 Winner — Ranked Robin (RCV-RR): B
-   *** 3 candidates tie for the most wins (A, B, E) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the top Copeland score, 3 (A, B, E) — a Condorcet cycle (A → E → B → A: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)

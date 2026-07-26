@@ -71,18 +71,18 @@ Legend: For - Equal Support - Against   (row vs column)
   I > | 21 -  7 -  0 |21 -  7 -  0 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  7 - 14 | 0 -  7 - 21 |14 -  0 - 14 | 0 - 14 - 14 |    ---      | 0 - 14 - 14 |
   J > | 21 -  7 -  0 |21 -  7 -  0 | 0 - 14 - 14 | 0 - 14 - 14 | 7 -  7 - 14 | 0 - 14 - 14 |14 -  7 -  7 | 0 - 21 -  7 |14 - 14 -  0 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  F          7–0–2         8    +105  H, E, J, I, B, G, A
-    2  C          6–0–3       7.5    +112  H, J, I, B, G, A
-    3  D          6–0–3       7.5    +112  H, J, I, B, G, A
-    4  H          5–3–1       5.5     +56  J, I, B, G, A
-    5  E          5–1–3       6.5     +49  J, I, B, G, A
-    6  J          4–5–0         4      +7  I, B, G, A
+    1  F          7–0–2         8    +105  E, H, J, I, G, B, A
+    2  C          6–0–3       7.5    +112  H, J, I, G, B, A
+    3  D          6–0–3       7.5    +112  H, J, I, G, B, A
+    4  E          5–1–3       6.5     +49  J, I, G, B, A
+    5  H          5–3–1       5.5     +56  J, I, G, B, A
+    6  J          4–5–0         4      +7  I, G, B, A
     7  I          2–6–1       2.5     -70  B, A
-    8  B          1–7–1       1.5    -140  A
-    9  G          0–6–3       1.5     -63  —
+    8  G          0–6–3       1.5     -63  —
+    9  B          1–7–1       1.5    -140  A
    10  A          0–8–1       0.5    -168  —
 
 Winner — Ranked Robin (RCV-RR): F
-   beats every opponent head-to-head — the Condorcet winner.
+   is never beaten head-to-head (7 wins, 2 drawn) — a weak Condorcet winner, and the top Copeland score (8).

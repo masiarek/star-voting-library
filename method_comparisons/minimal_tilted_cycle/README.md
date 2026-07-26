@@ -33,7 +33,7 @@ Win–loss record — Copeland score = wins + ½·ties:
     3  Ben        1–1–0         1      -2  Cara
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins — a Condorcet cycle.
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others).
 ```
 
 Nobody is a [Condorcet winner](../../00_start_here/topics/condorcet/README.md); nobody is a Condorcet loser. Every individual ballot is transitive. The intransitivity is manufactured purely by aggregation — that is the whole content of the word *cycle*.

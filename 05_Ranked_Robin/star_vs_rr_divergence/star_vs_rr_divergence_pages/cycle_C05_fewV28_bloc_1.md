@@ -27,7 +27,7 @@ The count, step by step — the rounds and how the winner is reached:
 ```text
 [Divergence from STAR]
   STAR   = A
-  RCV-RR = C   (differs from STAR)
+  RCV-RR = E   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C05_fewV28_bloc_1_RCV-RR_tabulated.txt
 
@@ -97,6 +97,9 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: A, E (pairwise ties)
+
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: A, B, D (winless — pairwise ties) — A elected by STAR, Choose-One (Plurality), Approval!
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score

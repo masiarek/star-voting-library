@@ -94,7 +94,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Bryce > | 10 -  0 - 30 |18 -  0 - 22 | 0 -  0 - 40 |    ---      |29 -  0 - 11 |
      Arches > | 21 -  0 - 19 |29 -  0 - 11 |11 -  0 - 29 |11 -  0 - 29 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cascade    3–1–0         3     +56  Arches, Everglade, Bryce
     2  Denali     3–1–0         3      -8  Cascade, Everglade, Bryce
@@ -103,7 +103,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     5  Bryce      1–3–0         1     -46  Arches
 
 Winner — Ranked Robin (RCV-RR): Cascade
-   *** 2 candidates tie for the most wins (Denali, Cascade) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 3 (Denali, Cascade) — a Condorcet cycle (Denali → Bryce → Arches → Denali: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:

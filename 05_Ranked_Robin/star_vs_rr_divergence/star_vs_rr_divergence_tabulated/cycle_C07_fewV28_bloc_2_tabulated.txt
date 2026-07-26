@@ -61,9 +61,6 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR     = D
   Approval = A   (differs from STAR)
-  RCV-RR   = A   (differs from STAR)
-  Full round-by-round reports (generated for review):
-  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C07_fewV28_bloc_2_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

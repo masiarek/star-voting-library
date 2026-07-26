@@ -189,7 +189,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Strawberry > |    1 - 0 - 1     |   1 - 0 - 1     |   1 - 0 - 1     |   2 - 0 - 0     |      ---        |   2 - 0 - 0     |
            Mango > |    1 - 0 - 1     |   1 - 0 - 1     |   1 - 0 - 1     |   0 - 1 - 1     |   0 - 0 - 2     |      ---        |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate       W–L–T  Copeland  Margin  Beats
     1  Strawberry      2–0–3       3.5      +4  Vanilla, Mango
     2  Chocolate       1–0–4         3      +1  Fudge Brownie
@@ -199,5 +199,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     6  Mango           0–2–3       1.5      -3  —
 
 Winner — Ranked Robin (RCV-RR): Strawberry
-   beats every opponent head-to-head — the Condorcet winner.
+   is never beaten head-to-head (2 wins, 3 drawn) — a weak Condorcet winner, and the top Copeland score (3.5).
 ```

@@ -161,7 +161,7 @@ Legend: For - Equal Support - Against   (row vs column)
        Leia > | 67 -  0 - 33 |    ---      |60 -  0 - 40 |
       Vader > | 40 -  0 - 60 |40 -  0 - 60 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Leia       2–0–0         2     +54  Skywalker, Vader
     2  Skywalker  1–1–0         1     -14  Vader

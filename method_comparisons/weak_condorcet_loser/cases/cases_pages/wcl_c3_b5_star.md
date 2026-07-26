@@ -126,6 +126,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Ada — STAR elected Ben instead (Ada was eliminated in the scoring round)
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Ben, Cora (winless — pairwise ties) — Ben elected by STAR, Approval!
+
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg

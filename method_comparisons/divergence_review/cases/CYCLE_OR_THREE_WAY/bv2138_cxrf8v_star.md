@@ -225,7 +225,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Dave > | 436 -   0 - 485 |609 -   0 - 312 |461 -   0 - 460 |      ---       |311 -   0 - 610 |
   Erin > | 410 -   0 - 511 |298 -   0 - 623 |461 -   0 - 460 |610 -   0 - 311 |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Abby       3–1–0         3    +146  Dave, Erin, Cora
     2  Brad       3–1–0         3     +34  Abby, Erin, Cora
@@ -234,5 +234,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     5  Cora       0–4–0         0      -4  —
 
 Winner — Ranked Robin (RCV-RR): Abby
-   *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 3 (Abby, Brad) — a Condorcet cycle (Abby → Dave → Brad → Abby: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```

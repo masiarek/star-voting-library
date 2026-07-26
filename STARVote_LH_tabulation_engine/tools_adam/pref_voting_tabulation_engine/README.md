@@ -45,7 +45,7 @@ The **LH engine now tabulates Ranked Robin first-class** — set `voting_method:
 python ranked_robin_report.py ../01_Single_winner/ranked_robin_consensus_center.yaml
 ```
 
-It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when the leaders tie on wins — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
+It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when candidates tie on the top Copeland score *and* a DFS finds a real directed loop in the beat relation (a tie without a loop is reported as a dead heat, not a cycle) — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
 
 ## Files
 

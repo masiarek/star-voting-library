@@ -393,7 +393,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Basil > |  9 - 80 - 11 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 | 9 - 81 - 10 |    ---      | 9 -  0 - 91 |
      Cheese > | 89 -  0 - 11 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |90 -  0 - 10 |91 -  0 -  9 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T   Copeland  Margin  Beats
     1  Cheese     10–0–0        10    +800  Pineapple, Anchovy, Mushroom, Olive, Sausage, Spinach, Jalapeno, Onion, Pepper, Basil
     2  Pineapple  9–1–0          9     -68  Anchovy, Mushroom, Olive, Sausage, Spinach, Jalapeno, Onion, Pepper, Basil

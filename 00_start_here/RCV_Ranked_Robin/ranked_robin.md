@@ -6,7 +6,7 @@
 
 ---
 
-**Ranked Robin** (also marketed as **Consensus Voting**, and abbreviated **RCV-RR**) is a **Condorcet** method: it's a round-robin tournament among the candidates. You rank the candidates — and crucially, **you may rank candidates equally** — then the count compares **every pair** of candidates head-to-head and elects the one who **wins the most matchups** (ties broken by the sum of win margins).
+**Ranked Robin** (also marketed as **Consensus Voting**, and abbreviated **RCV-RR**) is a **Condorcet** method: it's a round-robin tournament among the candidates. You rank the candidates — and crucially, **you may rank candidates equally** — then the count compares **every pair** of candidates head-to-head and elects the one who **takes the most matchups** — a win counts 1 and a **drawn matchup counts ½ to each side**, the standard Copeland score (remaining ties broken by the sum of win margins).
 
 Because it's computed entirely from the **pairwise matrix** (for each pair, how many voters preferred A to B), it has the properties IRV lacks while using essentially the same ballot voters already know.
 
@@ -92,11 +92,21 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 
 That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. LH's ladder (margin → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../topics/ties/ties_are_forced.md).
 
+**And one more limit, on the half-credit itself.** A **strict** Condorcet winner — someone who *beats* every rival — always tops the Copeland table, so Ranked Robin passes the Condorcet criterion outright. A **weak** Condorcet winner — never beaten, but drawn with someone — is a different animal: a draw is only worth ½, so an unbeaten record full of draws can be tied or even out-scored by a candidate who lost a matchup. (Two draws score 1, the same as one win; three draws score 1.5, less than two wins.) That is a property of Copeland, not a bug in the count, and it is the price of the half-credit convention that keeps the score a single readable number. The engine's response is disclosure rather than a special case: when the winner has a loss and someone else went unbeaten, the report names them out loud —
+
+```text
+*** note: Dev is never beaten head-to-head (a weak Condorcet winner) yet did not win — Copeland
+    counts a draw as only half a win, so an unbeaten record full of draws can be tied or
+    out-scored by a candidate who lost a matchup.
+```
+
+— so the reader can see the trade instead of inferring it. (Adding a rule that *forced* the unbeaten candidate through would break agreement with BetterVoting and `pref_voting`, both of which score plain Copeland; we'd rather diverge in wording than in winners.)
+
 ## Now you can tabulate it — the `pref_voting` engine
 
 The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) computes this method on any example election, under its **academic name, Copeland**.
 
-> **The LH engine now tabulates Ranked Robin first-class.** Set `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) and the engine prints the **round-robin report** — ballots, the full pairwise table, and each candidate's win-loss record — instead of the RCV-IRV elimination rounds: ``` python starvote_larry_hastings.py 01_Single_winner/ranked_robin_consensus_center.yaml ``` It flags a **cycle** (when the top candidates tie on wins) and points to [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check, [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py) (in the `pref_voting` engine) computes the same result a second way.
+> **The LH engine now tabulates Ranked Robin first-class.** Set `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) and the engine prints the **round-robin report** — ballots, the full pairwise table, and each candidate's win-loss record — instead of the RCV-IRV elimination rounds: ``` python starvote_larry_hastings.py 01_Single_winner/ranked_robin_consensus_center.yaml ``` It flags a **cycle** (when candidates tie on the top Copeland score *and* the beat relation really contains a directed loop) and points to [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check, [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py) (in the `pref_voting` engine) computes the same result a second way.
 
 ### Options for an RCV-RR YAML file — and what shows where
 
@@ -121,7 +131,7 @@ ballots: |-
   2:Cara>Ben>Ada
 ```
 
-The **on-screen report** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
+The **on-screen report** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin — and that score is the column that **decides**: the table is sorted by it, so what you read at the top is what won. (Half-credit only matters when a matchup is *drawn*; with no draws, `wins + ½·ties` and a raw win count rank identically, which is why the table below looks the same either way.)
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -137,7 +147,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Cara  beats Ada    4 – 3
    Ben   beats Cara   5 – 2
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        2–0–0         2      +4  Cara, Ada
     2  Cara       1–1–0         1      -2  Ada
@@ -162,7 +172,7 @@ Legend: For - Equal Support - Against   (row vs column)
 
 Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which is what [`ranked_robin_consensus_center.yaml`](../../05_Ranked_Robin/_main/cases/ranked_robin_consensus_center.yaml) does, since the matrix is the point of that worked example.
 
-> **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
+> **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. **That column is the ranking key, not decoration** — the engine sorts by it, so an unbeaten candidate whose record includes draws is never quietly out-ranked by someone with more raw wins. It is also what the two cross-check engines use, so all three agree: BetterVoting's `RankedRobin.ts` scores "win +1, tie +0.5", and `pref_voting`'s Copeland (`wins − losses`) is the same ordering rescaled. Our tie-break *below* the score is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md) and [LH vs BetterVoting tiebreaks](rr_tiebreak_lh_vs_bv.md).
 
 **Copeland = Ranked Robin = Consensus Voting = RCV-RR** — *the same core method wearing different brand names from different proponent groups:*
 

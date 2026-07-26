@@ -95,7 +95,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 40 -  0 - 37 |40 -  0 - 37 |34 -  0 - 43 |    ---      |52 -  0 - 25 |
   Cole > | 23 -  0 - 54 |25 -  0 - 52 |46 -  0 - 31 |25 -  0 - 52 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ava        3–1–0         3     +76  Ezra, Cole, Dana
     2  Ben        3–1–0         3     +24  Ava, Ezra, Cole
@@ -104,7 +104,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     5  Dana       1–3–0         1     -74  Ben
 
 Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie for the most wins (Ava, Ben) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 3 (Ava, Ben) — a Condorcet cycle (Ava → Cole → Dana → Ben → Ava: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:

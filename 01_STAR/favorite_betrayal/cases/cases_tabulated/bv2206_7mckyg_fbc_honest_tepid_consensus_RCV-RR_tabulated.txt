@@ -22,7 +22,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bluebell > | 24 - 27 -  6 |    ---      |33 -  6 - 18 |
     Clover > | 18 - 24 - 15 |18 -  6 - 33 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bluebell   2–0–0         2     +33  Clover, Aster
     2  Clover     1–1–0         1     -12  Aster

@@ -192,14 +192,14 @@ Legend: For - Equal Support - Against   (row vs column)
    Dana > | 4 - 0 - 6 |4 - 1 - 5 |4 - 3 - 3 |   ---    |4 - 1 - 5 |
     Eli > | 5 - 0 - 5 |2 - 1 - 7 |5 - 0 - 5 |5 - 1 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Chris      2–1–1       2.5      +5  Alex, Bella
     2  Alex       2–1–1       2.5      +4  Bella, Dana
-    3  Bella      2–2–0         2      -2  Dana, Eli
-    4  Dana       1–3–0         1      -3  Chris
-    5  Eli        1–1–2         2      -4  Dana
+    3  Bella      2–2–0         2      -2  Eli, Dana
+    4  Eli        1–1–2         2      -4  Dana
+    5  Dana       1–3–0         1      -3  Chris
 
 Winner — Ranked Robin (RCV-RR): Chris
-   *** 3 candidates tie for the most wins (Alex, Bella, Chris) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 2.5 (Alex, Chris) — a Condorcet cycle (Alex → Bella → Dana → Chris → Alex: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```

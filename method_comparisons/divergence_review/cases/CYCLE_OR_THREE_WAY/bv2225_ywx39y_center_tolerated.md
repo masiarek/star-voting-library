@@ -155,7 +155,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Blair > | 21 -  0 - 15 |    ---      |21 -  0 - 15 |
    Cole > | 15 -  0 - 21 |15 -  0 - 21 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Blair      2–0–0         2     +12  Alex, Cole
     2  Alex       1–1–0         1      +0  Cole

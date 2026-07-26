@@ -64,11 +64,12 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Cara   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
   Approval               = Ann   (differs from STAR)
-  RCV-RR                 = Ann   (differs from STAR)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ann)
@@ -181,12 +182,12 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 3 - 0 - 2 |   ---    |2 - 1 - 2 |
   Cara > | 1 - 1 - 3 |2 - 1 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ann        1–1–0         1      +1  Cara
-    2  Ben        1–0–1       1.5      +1  Ann
+    1  Ben        1–0–1       1.5      +1  Ann
+    2  Ann        1–1–0         1      +1  Cara
     3  Cara       0–1–1       0.5      -2  —
 
-Winner — Ranked Robin (RCV-RR): Ann
-   *** 2 candidates tie for the most wins (Ann, Ben) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+Winner — Ranked Robin (RCV-RR): Ben
+   is never beaten head-to-head (1 win, 1 drawn) — a weak Condorcet winner, and the top Copeland score (1.5).
 ```

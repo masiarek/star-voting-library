@@ -21,11 +21,11 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 1 - 2 - 1 |   ---    |4 - 0 - 0 |
   Cara > | 0 - 0 - 4 |0 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ada        1–0–1       1.5      +4  Cara
     2  Ben        1–0–1       1.5      +4  Cara
     3  Cara       0–2–0         0      -8  —
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the top Copeland score, 1.5 (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.

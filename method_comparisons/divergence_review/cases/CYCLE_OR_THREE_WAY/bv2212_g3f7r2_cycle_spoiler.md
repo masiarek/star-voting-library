@@ -159,12 +159,12 @@ Legend: For - Equal Support - Against   (row vs column)
     Ben > |  6 -  0 - 17 |    ---      |16 -  0 -  7 |
   Carla > | 13 -  0 - 10 | 7 -  0 - 16 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Alice      1–1–0         1      +8  Ben
     2  Ben        1–1–0         1      -2  Carla
     3  Carla      1–1–0         1      -6  Alice
 
 Winner — Ranked Robin (RCV-RR): Alice
-   *** 3 candidates tie for the most wins (Alice, Ben, Carla) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the top Copeland score, 1 (Alice, Ben, Carla) — a Condorcet cycle (Alice → Ben → Carla → Alice: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```

@@ -40,14 +40,14 @@ The count, step by step — the rounds and how the winner is reached:
   STAR     = B
   RCV-IRV  = A   (differs from STAR)
   Approval = E   (differs from STAR)
-  RCV-RR   = E   (differs from STAR)
   Note: 15 of 15 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be
         an artifact of score-to-rank tie-breaking rather than a deep
         difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: star_vs_rr_divergence_tabulated/cycle_C05_fewV15_noise_1_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C05_fewV15_noise_1_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (E)
@@ -121,6 +121,9 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: B — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: D — loses every head-to-head matchup
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score

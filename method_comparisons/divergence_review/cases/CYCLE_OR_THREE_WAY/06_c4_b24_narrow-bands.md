@@ -242,7 +242,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
    Dune > |  9 -  4 - 11 | 4 - 15 -  5 | 8 -  7 -  9 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Coral      2–1–0         2      +4  Azure, Dune
     2  Beige      2–1–0         2      +1  Coral, Dune
@@ -250,5 +250,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Dune       0–3–0         0      -4  —
 
 Winner — Ranked Robin (RCV-RR): Coral
-   *** 3 candidates tie for the most wins (Azure, Beige, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the top Copeland score, 2 (Azure, Beige, Coral) — a Condorcet cycle (Azure → Beige → Coral → Azure: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```

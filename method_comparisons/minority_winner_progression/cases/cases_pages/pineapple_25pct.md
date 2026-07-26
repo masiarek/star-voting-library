@@ -99,6 +99,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   Condorcet Winner: Cheese — matches the STAR winner
 
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Anchovy, Mushroom, Olive (winless — pairwise ties)
+
 [Score Distribution] (how many ballots gave each star rating)
                    Score
 Candidate   5   4   3   2   1   0  | Total   Avg

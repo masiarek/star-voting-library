@@ -59,15 +59,14 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 Look at the Ranked Robin output ([full report →](cases/cases_pages/margins_ranked_robin.md)):
 
 ```
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Berry      1–1–0         1      +2  Cocoa
     2  Almond     1–1–0         1      +0  Berry
     3  Cocoa      1–1–0         1      -2  Almond
 
 Winner — Ranked Robin (RCV-RR): Berry
-   *** 3 candidates tie for the most wins (Almond, Berry, Cocoa) — a Condorcet cycle.
-       Resolved by total margin, then lot order.
+   *** 3 candidates tie for the top Copeland score, 1 (Almond, Berry, Cocoa) — a Condorcet cycle (Almond → Berry → Cocoa → Almond: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 The **Copeland** column ties at 1. The **Margin** column reads `+2 / 0 / −2` — and that is precisely the symmetric Borda score computed above. So **the LH engine's cycle tiebreak is a Borda count**, applied only after Copeland has failed to decide. That is a real and slightly surprising fact about how this repo's Ranked Robin behaves in a cycle, and it is worth knowing before you cite an RR result from a cycling election.

@@ -157,7 +157,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Kerrigan > | 4 - 0 - 5  |   ---     |9 - 0 - 0  |
         Lu > | 2 - 0 - 7  |0 - 0 - 9  |   ---     |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Baiul      2–0–0         2      +6  Kerrigan, Lu
     2  Kerrigan   1–1–0         1      +8  Lu

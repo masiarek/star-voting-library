@@ -47,7 +47,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Ben   beats Dave   7 – 0
    Cara  beats Dave   7 – 0
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ada        2–1–0         2      +9  Ben, Dave
     2  Ben        2–1–0         2      +7  Cara, Dave
@@ -55,7 +55,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Dave       0–3–0         0     -21  —
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others).
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Now run the club-membership check, smallest group first:

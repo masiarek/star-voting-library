@@ -72,7 +72,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Carol > | 1 - 1 - 9 |1 - 1 - 9 |   ---    |9 - 1 - 1 |
    Dave > | 1 - 1 - 9 |1 - 1 - 9 |1 - 1 - 9 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Alice      3–0–0         3     +20  Bob, Carol, Dave
     2  Bob        2–1–0         2     +12  Carol, Dave

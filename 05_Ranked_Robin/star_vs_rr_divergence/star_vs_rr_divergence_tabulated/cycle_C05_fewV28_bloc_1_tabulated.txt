@@ -58,7 +58,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR   = A
-  RCV-RR = C   (differs from STAR)
+  RCV-RR = E   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C05_fewV28_bloc_1_RCV-RR_tabulated.txt
 

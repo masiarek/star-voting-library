@@ -76,14 +76,14 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Cara   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
   Approval               = Ann   (differs from STAR)
-  RCV-RR                 = Ann   (differs from STAR)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ann)

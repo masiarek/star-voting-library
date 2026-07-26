@@ -144,7 +144,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Almond > | 2 - 1 - 0 |   ---    |2 - 0 - 1 |
   Vanilla > | 1 - 2 - 0 |1 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Almond     2–0–0         2      +3  Vanilla, Choco
     2  Vanilla    1–1–0         1      +0  Choco

@@ -91,33 +91,56 @@ def report(path):
                 out.append(f"   {a} ties {b}    {fa} – {aa}")
     out.append("")
 
-    # Win–loss record; Ranked Robin = most wins, then highest total margin.
-    out.append("Win–loss record (most head-to-head wins wins; ties broken by total margin):")
-    ranked = sorted(cands, key=lambda c: (-len(wins[c]), -margin[c],
+    # Win–loss record; Ranked Robin = highest Copeland score (win 1, DRAW ½ each),
+    # then highest total margin — the same key `run_ranked_robin` sorts by, and the
+    # same one pref_voting's Copeland (wins − losses) induces. Ranking by RAW wins
+    # instead would disagree with both the moment any matchup is drawn.
+    cope = {c: len(wins[c]) + 0.5 * len(ties[c]) for c in cands}
+    out.append("Win–loss record — Copeland score = wins + ½·ties "
+               "(highest score wins; ties broken by total margin):")
+    ranked = sorted(cands, key=lambda c: (-cope[c], -margin[c],
                                           priority.index(c) if c in priority else 1e9))
     for c in ranked:
         w, l, t = len(wins[c]), len(losses[c]), len(ties[c])
         rec = f"{w}–{l}" + (f"–{t}t" if t else "")
         beat = f"   (beats: {', '.join(wins[c])})" if wins[c] else ""
-        out.append(f"   {c:<8} {rec:<6} margin {margin[c]:+d}{beat}")
+        out.append(f"   {c:<8} {rec:<6} Copeland {cope[c]:<4g} "
+                   f"margin {margin[c]:+d}{beat}")
     out.append("")
 
     # Winner + why.
-    top_wins = len(wins[ranked[0]])
-    leaders = [c for c in cands if len(wins[c]) == top_wins]
+    top = cope[ranked[0]]
+    leaders = [c for c in cands if cope[c] == top]
     winner = ranked[0]
     if len(leaders) == 1:
-        if len(losses[winner]) == 0:
+        if not losses[winner] and not ties[winner]:
             why = "beats every opponent head-to-head — the Condorcet winner."
+        elif not losses[winner]:
+            _w, _t = len(wins[winner]), len(ties[winner])
+            why = (f"is never beaten head-to-head ({_w} win{'' if _w == 1 else 's'}, "
+                   f"{_t} drawn) — a weak Condorcet winner, and "
+                   f"the top Copeland score ({top:g}).")
         else:
-            why = f"the most head-to-head wins ({top_wins})."
+            why = f"the top Copeland score ({top:g})."
         out.append(f"Winner — Ranked Robin: {winner}\n   {why}")
     else:
+        # "Cycle" only when the beat relation really contains a loop — leaders
+        # first, then the whole field (a loop can run through a non-leader). A
+        # leader merely DRAWN with someone is not a cycle (see run_ranked_robin).
+        lead = set(leaders)
+        cyc = LH._find_beats_cycle(
+            leaders, {c: [x for x in wins[c] if x in lead] for c in leaders})
+        if not cyc:
+            cyc = LH._find_beats_cycle(
+                leaders + [c for c in cands if c not in lead], wins)
         out.append(f"Winner — Ranked Robin: {winner}")
-        out.append(f"   ⚠️  {len(leaders)} candidates tie on wins ({', '.join(leaders)}) — "
-                   "a cycle. Broken by total margin, then lot order. "
-                   "(This is where Minimax / Ranked Pairs / Schulze differ — see "
-                   "cycle_resolution.md.)")
+        tail = ("Broken by total margin, then lot order. "
+                "(This is where Minimax / Ranked Pairs / Schulze differ — see "
+                "cycle_resolution.md.)")
+        shape = (f"a cycle ({' → '.join(cyc)})" if cyc
+                 else "NOT a cycle (no loop among them)")
+        out.append(f"   ⚠️  {len(leaders)} candidates tie on Copeland score "
+                   f"{top:g} ({', '.join(leaders)}) — {shape}. {tail}")
 
     # --- Independent third opinion: pref_voting's Copeland (see module docstring).
     # Loud, not silent: if the library is missing we SAY so, so a skipped check is

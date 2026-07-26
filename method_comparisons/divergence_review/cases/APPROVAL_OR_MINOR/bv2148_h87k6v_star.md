@@ -148,7 +148,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 8 - 0 - 7 |   ---    |8 - 0 - 7 |
    Cora > | 9 - 0 - 6 |7 - 0 - 8 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bruno      2–0–0         2      +2  Cora, Alma
     2  Cora       1–1–0         1      +2  Alma

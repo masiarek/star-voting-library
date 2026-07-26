@@ -53,7 +53,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Diamond > | 15 -  0 - 27 |18 -  0 - 24 |    ---      |30 -  0 - 12 |
     Beryl > | 27 -  0 - 15 |18 -  0 - 24 |12 -  0 - 30 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Amber      2–1–0         2     +12  Coral, Diamond
     2  Coral      2–1–0         2      +0  Diamond, Beryl
@@ -61,7 +61,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Beryl      1–2–0         1     -12  Amber
 
 Winner — Ranked Robin (RCV-RR): Amber
-   *** 2 candidates tie for the most wins (Amber, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 2 (Amber, Coral) — a Condorcet cycle (Amber → Coral → Beryl → Amber: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:

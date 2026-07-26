@@ -132,7 +132,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Green   beats Pink      7 –  5
    Blue    beats Pink     10 –  3
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Blue       2–1–0         2      +5  Purple, Pink
     2  Green      2–1–0         2      +4  Blue, Pink
@@ -140,8 +140,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Pink       1–2–0         1      -5  Purple
 
 Winner — Ranked Robin (RCV-RR): Blue
-   *** 2 candidates tie for the most wins (Green, Blue) — a Condorcet cycle
-   (no candidate beats all others). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the top Copeland score, 2 (Green, Blue) — a Condorcet cycle (Green → Blue → Pink → Purple → Green: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 BetterVoting's live result for the same race: **Green** (Copeland 2, elected via the head-to-head rung of its ladder).

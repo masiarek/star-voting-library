@@ -66,8 +66,7 @@ Win–loss record:
     4  Beryl      1–2–0         1     -12  Amber
 
 Winner — Ranked Robin (RCV-RR): Amber
-   *** 2 candidates tie for the most wins (Amber, Coral) — a Condorcet cycle
-   (no candidate beats all others). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the top Copeland score, 2 (Amber, Coral) — a Condorcet cycle (Amber → Coral → Beryl → Amber: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Beryl falls from 3–0 to 1–2. Amber and Coral tie on top at 2–1 — and **Amber takes the tie on every metric**: total pairwise margin +12 vs 0 (the LH engine's rung), the direct head-to-head 27–15 (BetterVoting's rung), first choices 15 vs 9. Note the fine print of the mechanics: Amber *never beats Beryl directly* — the buriers can demolish Beryl's record but cannot flip her win over their own candidate. Burial wins through the standings, not the matchup.

@@ -70,8 +70,7 @@ Win–loss record — Copeland score = wins + ½·ties:
     3  Cara       1–1–0         1      +0  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle
-       (no candidate beats all others). Resolved by total margin, then lot order.
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 `n = 6`, `m = 3`; 2 and 3 both divide 6 and both sit in `(1, 3]`. The theorem says a tie is unavoidable here, and the engine lands on one: three candidates, identical records, identical margins. Ada wins **only** because the lot order says so. Full report: [the generated page](../../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md).

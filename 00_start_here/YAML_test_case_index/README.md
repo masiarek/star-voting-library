@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**410 election files** (360 single-winner, 50 multi-winner) across 16 method(s).
+**419 election files** (369 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 231 |
+| STAR | 234 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 48 |
-| Approval | 14 |
+| Ranked Robin (RCV-RR / Copeland) | 51 |
+| Approval | 15 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -23,13 +23,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 17 |
-| IRV | 17 |
+| IRV | 19 |
 | PLURALITY | 21 |
 | RANGE | 2 |
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (231)
+## STAR  (234)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -192,6 +192,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
 | [`Black_Curtain_03_c3_b5_polarized-on-cal`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_03_c3_b5_polarized-on-cal.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml) |
 | [`Black_Curtain_04_c4_b5_four-candidates`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_04_c4_b5_four-candidates.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml) |
+| [`condorcet_1788_star`](../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_star.md) | `method_comparisons/borda_condorcet_1788/cases/` | 1 | Condorcet's 1788 rebuttal to Borda — STAR elects the Condorcet winner → _Peter_ | [`.yaml`](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_star.yaml) |
 | [`brams_ex3_two_candidates_c2_b5`](../../method_comparisons/brams_grading_paradox/cases/cases_pages/brams_ex3_two_candidates_c2_b5.md) | `method_comparisons/brams_grading_paradox/cases/` | 1 | Brams Example 3 — two candidates: two loud fans vs three mild preferences → _Beth_ | [`.yaml`](../../method_comparisons/brams_grading_paradox/cases/brams_ex3_two_candidates_c2_b5.yaml) |
 | [`brams_ex6_three_winners_c3_b9`](../../method_comparisons/brams_grading_paradox/cases/cases_pages/brams_ex6_three_winners_c3_b9.md) | `method_comparisons/brams_grading_paradox/cases/` | 1 | Brams Example 6 — three counts, three winners (STAR sides with head-to-head) → _Cole_ | [`.yaml`](../../method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml) |
 | [`brams_grading_paradox_c3_b3`](../../method_comparisons/brams_grading_paradox/cases/cases_pages/brams_grading_paradox_c3_b3.md) | `method_comparisons/brams_grading_paradox/cases/` | 1 | Brams' grading paradox — the grade leader loses the runoff → _Baker_ | [`.yaml`](../../method_comparisons/brams_grading_paradox/cases/brams_grading_paradox_c3_b3.yaml) |
@@ -199,6 +200,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/cases/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml) |
 | [`bv2137_ywckmg_star`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_star.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml) |
 | [`chicken_star`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_star.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly) → _A_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_star.yaml) |
+| [`margins_star`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_star.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — STAR on the same twelve ballots (rank converted 5/3/0) → _Almond_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml) |
 | [`dark_horse_star`](../../method_comparisons/dark_horse_borda/cases/cases_pages/dark_horse_star.md) | `method_comparisons/dark_horse_borda/cases/` | 1 | Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D) → _A_ | [`.yaml`](../../method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml) |
 | [`bv2173_gmfv4c_edelman_saari_cancellation`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/bv2173_gmfv4c_edelman_saari_cancellation.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml) |
 | [`edelman_perfect_component_c3_b30`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/edelman_perfect_component_c3_b30.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml) |
@@ -264,6 +266,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2171_h93tm4_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2171_h93tm4_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, minimal form (8 voters) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml) |
 | [`bv2172_bkwfjr_star`](../../method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2172_bkwfjr_star.md) | `method_comparisons/symmetric_centrist_all_methods/cases/` | 1 | Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml) |
 | [`bv2170_pp2q4q_star`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml) |
+| [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
 ## RCV-IRV (Hare)  (28)
 
@@ -298,7 +301,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (48)
+## Ranked Robin (RCV-RR / Copeland)  (51)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -320,8 +323,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/cases/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_ties.yaml) |
+| [`condorcet_1788_ranked_robin`](../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_ranked_robin.md) | `method_comparisons/borda_condorcet_1788/cases/` | 1 | Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise → _Peter_ | [`.yaml`](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_ranked_robin.yaml) |
 | [`burlington_2009_ranked_robin`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_ranked_robin.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_ranked_robin.yaml) |
 | [`bv2137_ywckmg_ranked_robin`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_ranked_robin.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_ranked_robin.yaml) |
+| [`margins_paper_exact_304`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_paper_exact_304.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — the textbook profile at its printed size (304 ballots, LH-only) → _b_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_paper_exact_304.yaml) |
+| [`margins_ranked_robin`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_ranked_robin.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — Ranked Robin (Copeland) ties all three → _Berry_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_ranked_robin.yaml) |
 | [`cycle_copeland_ties_c4_b21`](../../method_comparisons/cycle_resolution/cases/cases_pages/cycle_copeland_ties_c4_b21.md) | `method_comparisons/cycle_resolution/cases/` | 1 | A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder → _Alder_ | [`.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml) |
 | [`cycle_family_splits_c5_b77`](../../method_comparisons/cycle_resolution/cases/cases_pages/cycle_family_splits_c5_b77.md) | `method_comparisons/cycle_resolution/cases/` | 1 | The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots → _Ava_ | [`.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml) |
 | [`cycle_schulze_vs_ranked_pairs_c4_b40`](../../method_comparisons/cycle_resolution/cases/cases_pages/cycle_schulze_vs_ranked_pairs_c4_b40.md) | `method_comparisons/cycle_resolution/cases/` | 1 | Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both → _Ana_ | [`.yaml`](../../method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml) |
@@ -351,7 +357,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2170_pp2q4q_ranked_robin`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_ranked_robin.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_ranked_robin.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (14)
+## Approval  (15)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -369,6 +375,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |
+| [`wcl_c3_b5_approval`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_approval.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — the same five voters, on Approval ballots → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_approval.yaml) |
 
 ## STV (proportional RCV)  (10)
 
@@ -452,11 +459,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/_main/cases/cases_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/_main/cases/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/_main/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 | [`09_c7_b44_park-bloc-4-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/09_c7_b44_park-bloc-4-seats.md) | `06_Other/ballot_style_lab/cases/` | 4 | Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards → _Dogwood, Aspen, Elm, Cedar_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/09_c7_b44_park-bloc-4-seats.yaml) |
 
-## IRV  (17)
+## IRV  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`condorcet_1788_irv`](../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_irv.md) | `method_comparisons/borda_condorcet_1788/cases/` | 1 | Condorcet's 1788 rebuttal to Borda — RCV-IRV agrees here → _Peter_ | [`.yaml`](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_irv.yaml) |
 | [`bv2137_ywckmg_irv`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_irv.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — IRV (Hare): the center gets squeezed out → _Carter_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_irv.yaml) |
+| [`margins_irv`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_irv.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — RCV-IRV elects the third answer (Cocoa) → _Cocoa_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_irv.yaml) |
 | [`bv2145_6fj2kg_irv`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2145_6fj2kg_irv.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first → _Ben_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_irv.yaml) |
 | [`bv2146_krk2px_irv`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2146_krk2px_irv.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support → _Ada_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_irv.yaml) |
 | [`bv2147_9gdrqg_irv`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2147_9gdrqg_irv.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff → _Bruno_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_irv.yaml) |

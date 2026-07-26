@@ -87,7 +87,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Chloe > | 11 -  0 - 29 |11 -  0 - 29 |    ---      |26 -  0 - 14 |
   Diego > | 14 -  0 - 26 |25 -  0 - 15 |14 -  0 - 26 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ana        2–1–0         2     +26  Diego, Chloe
     2  Bruno      2–1–0         2     +12  Ana, Chloe
@@ -95,7 +95,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Chloe      1–2–0         1     -24  Diego
 
 Winner — Ranked Robin (RCV-RR): Ana
-   *** 2 candidates tie for the most wins (Ana, Bruno) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the top Copeland score, 2 (Ana, Bruno) — a Condorcet cycle (Ana → Chloe → Diego → Bruno → Ana: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:

@@ -63,7 +63,7 @@ Now the head-to-heads chase each other in a circle — exactly like rock-paper-s
     3  Cara       1–1–0         1      -2  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie on wins — a Condorcet cycle. Resolved by total margin, then lot order.
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others). Resolved by total margin, then lot order.
 ```
 
 This is the whole distinction in one election: **Condorcet = (blank), Ranked Robin = Ada.** (*How a cycle gets resolved is itself a design choice — Minimax, Ranked Pairs, and Schulze each break it differently. See [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md).*)

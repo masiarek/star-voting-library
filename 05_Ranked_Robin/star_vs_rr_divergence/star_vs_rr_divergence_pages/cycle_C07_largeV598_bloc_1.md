@@ -97,6 +97,9 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: B > C > E > B)
 
+[Condorcet Loser]
+  Condorcet Loser: G — loses every head-to-head matchup
+
 [Score Distribution] (how many ballots gave each star rating)
                       Score
 Candidate    5    4    3    2    1    0  | Total   Avg

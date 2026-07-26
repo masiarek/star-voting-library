@@ -69,17 +69,17 @@ Legend: For - Equal Support - Against   (row vs column)
   E > | 3 - 0 - 2 |2 - 0 - 3 |3 - 0 - 2 |2 - 0 - 3 |   ---    |2 - 0 - 3 |
   F > | 1 - 3 - 1 |1 - 1 - 3 |3 - 0 - 2 |2 - 0 - 3 |3 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  B          3–1–1       3.5      +3  D, E, F
+    1  B          3–1–1       3.5      +3  F, D, E
     2  A          2–1–2         3      +1  C, D
-    3  C          2–3–0         2      -1  B, D
-    4  D          2–3–0         2      -1  E, F
-    5  E          2–3–0         2      -1  A, C
-    6  F          2–2–1       2.5      -1  C, E
+    3  F          2–2–1       2.5      -1  C, E
+    4  C          2–3–0         2      -1  B, D
+    5  D          2–3–0         2      -1  F, E
+    6  E          2–3–0         2      -1  A, C
 
 Winner — Ranked Robin (RCV-RR): B
-   the most head-to-head wins (3).
+   the top Copeland score (3.5).
 ```
 
 Run it yourself:

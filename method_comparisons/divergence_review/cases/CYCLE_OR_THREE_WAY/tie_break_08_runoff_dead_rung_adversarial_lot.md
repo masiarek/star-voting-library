@@ -167,11 +167,11 @@ Legend: For - Equal Support - Against   (row vs column)
   Ann > |    ---    |1 - 0 - 1 |
   Ben > | 1 - 0 - 1 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        0–0–1       0.5      +0  —
     2  Ann        0–0–1       0.5      +0  —
 
 Winner — Ranked Robin (RCV-RR): Ben
-   *** 2 candidates tie for the most wins (Ann, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the top Copeland score, 0.5 (Ann, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```

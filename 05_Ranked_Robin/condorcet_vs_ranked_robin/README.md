@@ -50,7 +50,7 @@ Win–loss record:
     3  Cara       1–1–0         1      -2  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie on wins — a Condorcet cycle. Resolved by total margin, then lot order.
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others). Resolved by total margin, then lot order.
 ```
 
 Full report: [`…_tabulated/02_cycle_no_condorcet_tabulated.txt`](cases/cases_tabulated/02_cycle_no_condorcet_tabulated.txt)
@@ -96,7 +96,7 @@ Win–loss record:
     4  Dave       0–3–0         0     -21  —
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle.
+   *** 3 candidates tie for the top Copeland score, 1 (Ada, Ben, Cara) — a Condorcet cycle (Ada → Ben → Cara → Ada: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 (LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie randomly, so this deliberate three-way tie isn't freezable there.) Full report: [`…_tabulated/04_smith_set_c4_b7_tabulated.txt`](cases/cases_tabulated/04_smith_set_c4_b7_tabulated.txt) · full lesson: [The Smith set — the smallest club that beats everyone outside it](../../00_start_here/topics/smith_set.md)

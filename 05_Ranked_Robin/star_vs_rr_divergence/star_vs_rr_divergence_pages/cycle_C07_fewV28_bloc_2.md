@@ -28,9 +28,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR     = D
   Approval = A   (differs from STAR)
-  RCV-RR   = A   (differs from STAR)
-  Full round-by-round reports (generated for review):
-  RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C07_fewV28_bloc_2_RCV-RR_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 
@@ -89,6 +86,9 @@ Legend: For - Equal Support - Against
 
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: D — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: B — loses every head-to-head matchup
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score

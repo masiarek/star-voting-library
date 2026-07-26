@@ -157,7 +157,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Oak > | 2 - 0 - 1 |   ---    |2 - 0 - 1 |
    Pine > | 3 - 0 - 0 |1 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Oak        2–0–0         2      +2  Pine, Maple
     2  Pine       1–1–0         1      +2  Maple

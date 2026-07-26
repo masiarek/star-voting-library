@@ -174,12 +174,12 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > |  7 -  0 - 10 |    ---      |10 -  0 -  7 |
    Cora > | 12 -  0 -  5 | 7 -  0 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cora       1–1–0         1      +4  Alma
     2  Bruno      1–1–0         1      +0  Cora
     3  Alma       1–1–0         1      -4  Bruno
 
 Winner — Ranked Robin (RCV-RR): Cora
-   *** 3 candidates tie for the most wins (Alma, Bruno, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the top Copeland score, 1 (Alma, Bruno, Cora) — a Condorcet cycle (Alma → Bruno → Cora → Alma: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```

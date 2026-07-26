@@ -77,7 +77,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Cedar > | 11 -  0 - 10 | 5 -  0 - 16 |    ---      |21 -  0 -  0 |
   Dogwood > |  0 -  0 - 21 | 0 -  0 - 21 | 0 -  0 - 21 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Alder      2–1–0         2     +29  Birch, Dogwood
     2  Birch      2–1–0         2     +23  Cedar, Dogwood
@@ -85,7 +85,7 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Dogwood    0–3–0         0     -63  —
 
 Winner — Ranked Robin (RCV-RR): Alder
-   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the top Copeland score, 2 (Alder, Birch, Cedar) — a Condorcet cycle (Alder → Birch → Cedar → Alder: no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
 
 Run it yourself:

@@ -6,13 +6,15 @@
 
 ## The two ladders
 
-Both engines score Copeland the same way — **win = 1, tie = ½** — and elect the highest. They differ only in the **tiebreak** when the top Copeland score is shared:
+Both engines score Copeland the same way — **win = 1, drawn matchup = ½ to each side** — and elect the highest. They differ only in the **tiebreak** when the top Copeland score is shared:
 
 | Rung | **LH** `run_ranked_robin` (`starvote_larry_hastings.py`) | **BetterVoting** `RankedRobin.ts` |
 |---|---|---|
-| 1 | most head-to-head **wins** | most head-to-head **wins** (Copeland) |
+| 1 | highest **Copeland score** (win 1, draw ½) | highest **Copeland score** (win +1, tie +0.5) |
 | 2 | total **margin** (sum of For − Against) | **head-to-head** — *only if exactly 2 are tied* |
 | 3 | **lot order** (pre-published `lot_numbers`) | **random** |
+
+> **Rung 1 used to be the divergence nobody had noticed.** Until 2026-07-25 LH *printed* the Copeland score but *sorted* by the raw win count — identical rankings as long as every matchup had a winner, and silently different the moment one was drawn. On such a profile LH could elect a candidate who had lost head-to-head to the one at the top of its own Copeland column, while BetterVoting and `pref_voting` (whose Copeland is `wins − losses`, the same ordering rescaled) both elected the latter. LH now sorts by the score it prints, so all three agree at rung 1 and the divergence below is genuinely only about rungs 2–3. Regression-locked by `tests/test_ranked_robin.py::test_copeland_score_decides_not_raw_wins`.
 
 Consequence: **LH is fully deterministic** at every rung (margin, then a pre-published lot). **BetterVoting is deterministic only for a clean 2-way tie that the head-to-head resolves** — otherwise (3+ tied, or a 2-way tie whose head-to-head is *itself* a tie) it falls through to a **random** choice.
 
@@ -43,19 +45,36 @@ The **[Post-it RCV example (BV2176, `p8dp28`)](../../method_comparisons/postit_r
 
 ## Engine wording (fixed)
 
-The winner line now distinguishes a dead heat from a real cycle. `run_ranked_robin`
-tests whether the tied leaders **draw** their head-to-heads (dead heat) or **beat
-around a loop** (cycle):
+The winner line distinguishes a dead heat from a real cycle. `run_ranked_robin` runs
+a **DFS over the beat-edges** and only says "cycle" when it finds an actual directed
+loop — which it then prints. Two passes: among the tied **leaders** first (the loop
+that most directly explains their tie), then across the **whole field**, because a
+loop can run through a non-leader — exactly what happens in BV2176 below, where
+co-leaders Green and Blue sit inside a cycle that also passes through Purple and Pink:
 
 ```
 # co-top dead heat (leaders draw each other, both beat the rest):
-*** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+*** 2 candidates tie for the top Copeland score, 1.5 (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 
 # genuine rock-paper-scissors cycle (directed loop, no Condorcet winner):
-*** 3 candidates tie for the most wins (Rock, Scissors, Paper) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
+*** 3 candidates tie for the top Copeland score, 1 (Rock, Scissors, Paper) — a Condorcet cycle (Rock → Scissors → Paper → Rock: no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
+
+# a loop that runs through non-leaders (BV2176 — the second DFS pass finds it):
+*** 2 candidates tie for the top Copeland score, 2 (Green, Blue) — a Condorcet cycle (Green → Blue → Pink → Purple → Green: no candidate beats all others). Resolved by total margin, then lot order. (…)
+
+# tied on score, no loop anywhere (neither of the above):
+*** 2 candidates tie for the top Copeland score, 2 (Ada, Dev) — not a cycle (no loop among them; their wins and draws simply add up the same). Resolved by total margin, then lot order.
 ```
 
-Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a genuine loop. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
+All four lead with "**tie for the top Copeland score**" — accurate, because that score is what the ranking is on. (They used to lead with "tie for the most wins," which was only true while the sort key was the raw win count.) The earlier draw-only test was a good discriminator but an incomplete one: it caught leaders who *draw each other*, and left a leader **drawn with a non-leader** to fall through to the cycle branch — which is how an acyclic profile could be announced as a Condorcet cycle. Asking the beat-graph directly answers the actual question, in both directions. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat and acyclic cases assert *not* "Condorcet cycle").
+
+There is one further line, printed whenever the winner has a loss and somebody else went unbeaten — Copeland's half-credit means an unbeaten record full of draws can be tied or out-scored, so the report discloses it rather than passing the candidate over in silence:
+
+```
+*** note: Dev is never beaten head-to-head (a weak Condorcet winner) yet did not win — Copeland counts a draw as only half a win, so an unbeaten record full of draws can be tied or out-scored by a candidate who lost a matchup.
+```
+
+That is a **disclosure, not a different rule**: forcing the unbeaten candidate through would put LH back out of step with BetterVoting and `pref_voting`, which is the trade this whole page exists to keep honest.
 
 ## Tested cases
 
