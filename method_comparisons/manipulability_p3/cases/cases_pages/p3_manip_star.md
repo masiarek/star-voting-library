@@ -109,6 +109,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/p3_manip_star.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

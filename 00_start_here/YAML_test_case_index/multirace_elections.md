@@ -685,6 +685,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2251 — Margins — RCV-IRV (eliminates the Borda winner first) | IRV | 3 | **Cocoa** |
 | BV2251 — Margins — Ranked Robin (Copeland ties all three; read the table, not the winner) | RankedRobin | 3 | **Almond** |
 
+## BV2253 — Where should the committee meet? — the sincere baseline behind a textbook manipulation
+
+**Election** [`4w96tr`](https://bettervoting.com/4w96tr/results) · **3 races** · **7 ballots** · [frozen export](../../method_comparisons/manipulability_p3/cases/p3_sincere_ranked_robin_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2253 — Meeting city — Choose-One (Plurality): Dublin on 3 first choices | Plurality | 5 | **Dublin** |
+| BV2253 — Meeting city — STAR (Dublin 23, Edinburgh 22, runoff 5-2) | STAR | 5 | **Dublin** |
+| BV2253 — Meeting city — Ranked Robin (Edinburgh wins 3 of 4 head-to-heads) | RankedRobin | 5 | **Edinburgh** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

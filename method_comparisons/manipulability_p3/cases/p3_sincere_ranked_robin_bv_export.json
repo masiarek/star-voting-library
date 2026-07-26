@@ -1,0 +1,1565 @@
+{
+  "Election": {
+    "election_id": "4w96tr",
+    "title": "BV2253 — Where should the committee meet? — the sincere baseline behind a textbook manipulation",
+    "description": "Seven committee members rank five cities for a meeting. This is the SINCERE vote — everyone's honest ranking, nobody playing games — and it is the baseline that a famous textbook example attacks. Two members rank Edinburgh > Cork > Athens > Dublin > Bergen, three rank Dublin > Edinburgh > Bergen > Cork > Athens, and two rank Athens > Bergen > Cork > Dublin > Edinburgh. Three races count those same seven ballots and they do not all agree. Choose-One elects Dublin, which has the most first choices (3 against 2 and 2). STAR also elects Dublin: converting each ranking to scores puts Dublin first on 23 points with Edinburgh close behind on 22, and Dublin then wins the automatic runoff 5-2 because more voters prefer Dublin to Edinburgh than the other way round. Ranked Robin disagrees and elects Edinburgh, because Edinburgh wins three of its four head-to-head matchups while Dublin wins only two. Notice that neither of them beats everybody: Dublin beats Edinburgh 5-2, but Edinburgh beats the other three, so there is no Condorcet winner in this election. That fragility is exactly why the profile is famous. In the textbook it is used to define what it means for a voting rule to be MANIPULABLE: one of the two Athens-first voters, watching their least favourite city Edinburgh about to win, can submit a dishonest ballot and change the outcome to one they prefer. The full lesson works that manipulation through — and shows the same thing being done to STAR, because every voting method can be gamed by somebody. No instant runoff race is included here, deliberately: the first elimination would be a two-way tie decided by chance rather than by the ballots, so there is no honest IRV answer to publish. Full lesson & tabulation: https://masiarek.github.io/star-voting-library/method_comparisons/manipulability_p3/index.html",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2253 — Meeting city — Choose-One (Plurality): Dublin on 3 first choices",
+        "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+        "num_winners": 1,
+        "voting_method": "Plurality",
+        "candidates": [
+          {
+            "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+            "candidate_name": "Athens"
+          },
+          {
+            "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+            "candidate_name": "Bergen"
+          },
+          {
+            "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+            "candidate_name": "Cork"
+          },
+          {
+            "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+            "candidate_name": "Dublin"
+          },
+          {
+            "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+            "candidate_name": "Edinburgh"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      },
+      {
+        "title": "BV2253 — Meeting city — STAR (Dublin 23, Edinburgh 22, runoff 5-2)",
+        "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+            "candidate_name": "Athens"
+          },
+          {
+            "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+            "candidate_name": "Bergen"
+          },
+          {
+            "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+            "candidate_name": "Cork"
+          },
+          {
+            "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+            "candidate_name": "Dublin"
+          },
+          {
+            "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+            "candidate_name": "Edinburgh"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      },
+      {
+        "title": "BV2253 — Meeting city — Ranked Robin (Edinburgh wins 3 of 4 head-to-heads)",
+        "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+        "num_winners": 1,
+        "voting_method": "RankedRobin",
+        "candidates": [
+          {
+            "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+            "candidate_name": "Athens"
+          },
+          {
+            "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+            "candidate_name": "Bergen"
+          },
+          {
+            "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+            "candidate_name": "Cork"
+          },
+          {
+            "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+            "candidate_name": "Dublin"
+          },
+          {
+            "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+            "candidate_name": "Edinburgh"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false,
+        "max_rankings": 5
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-26T02:19:14.987Z",
+    "update_date": "1785032354987",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-f3d749xh",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 0
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 0
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 3
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 0
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 4
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 2
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 3
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 5
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 2
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 4
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-x4fkhxjk",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 0
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 1
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 0
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 3
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 2
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 5
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 5
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 3
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 4
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 1
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-b6cyjfc4",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 1
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 0
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 5
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 4
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 3
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 2
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 1
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 2
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 3
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 4
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-dkdtc4cy",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 1
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 0
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 5
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 4
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 3
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 2
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 1
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 2
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 3
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 4
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-2vqmvthf",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 0
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 0
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 3
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 0
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 4
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 2
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 3
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 5
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 2
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 4
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-m6xhdgdw",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 0
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 1
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 0
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 3
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 2
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 5
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 5
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 3
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 4
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 1
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-c3c27yhf",
+      "election_id": "4w96tr",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "96e15496-9332-4250-b93d-6acc346e095e",
+          "scores": [
+            {
+              "candidate_id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+              "score": 0
+            },
+            {
+              "candidate_id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+              "score": 0
+            },
+            {
+              "candidate_id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+              "score": 0
+            },
+            {
+              "candidate_id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "score": 1
+            },
+            {
+              "candidate_id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "6f67b6a9-62df-45cc-b58b-d338738380d0",
+          "scores": [
+            {
+              "candidate_id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+              "score": 0
+            },
+            {
+              "candidate_id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+              "score": 3
+            },
+            {
+              "candidate_id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+              "score": 2
+            },
+            {
+              "candidate_id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "score": 5
+            },
+            {
+              "candidate_id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "7cf307dd-39ce-4876-b49f-df97477a77bb",
+          "scores": [
+            {
+              "candidate_id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+              "score": 5
+            },
+            {
+              "candidate_id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+              "score": 3
+            },
+            {
+              "candidate_id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+              "score": 4
+            },
+            {
+              "candidate_id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+              "score": 1
+            },
+            {
+              "candidate_id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "score": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "Plurality",
+      "elected": [
+        {
+          "id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+          "name": "Dublin",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 3,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 3,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 3,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 3
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": true,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": true
+          },
+          "score": 3
+        }
+      ],
+      "tied": [
+        {
+          "id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+          "name": "Dublin",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 3,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 3,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 3,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 3
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": true,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": true
+          },
+          "score": 3
+        }
+      ],
+      "other": [
+        {
+          "id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+          "name": "Edinburgh",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 2,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 2,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 2,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 2
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+          },
+          "score": 2
+        },
+        {
+          "id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+          "name": "Athens",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 2,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 2,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 2,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 2,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+          },
+          "score": 2
+        },
+        {
+          "id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+          "name": "Bergen",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 0,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 0,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": false,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": false,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+          },
+          "score": 0
+        },
+        {
+          "id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+          "name": "Cork",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 0,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": 0,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+          },
+          "winsAgainst": {
+            "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": false,
+            "61553ce3-df07-4af1-a1f4-92adcc753495": false,
+            "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+            "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+            "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+          },
+          "score": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "name": "Dublin",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 3,
+                "61553ce3-df07-4af1-a1f4-92adcc753495": 3,
+                "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+                "f677bfe1-e2af-484f-96f1-e5914e059d25": 3,
+                "b10b7dec-0af4-461f-a906-b8000d0bc279": 3
+              },
+              "winsAgainst": {
+                "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+                "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+                "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+                "f677bfe1-e2af-484f-96f1-e5914e059d25": true,
+                "b10b7dec-0af4-461f-a906-b8000d0bc279": true
+              },
+              "score": 3
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Dublin has the most votes and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+              "name": "Dublin",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 3,
+                "61553ce3-df07-4af1-a1f4-92adcc753495": 3,
+                "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+                "f677bfe1-e2af-484f-96f1-e5914e059d25": 3,
+                "b10b7dec-0af4-461f-a906-b8000d0bc279": 3
+              },
+              "winsAgainst": {
+                "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+                "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+                "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+                "f677bfe1-e2af-484f-96f1-e5914e059d25": true,
+                "b10b7dec-0af4-461f-a906-b8000d0bc279": true
+              },
+              "score": 3
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+            "name": "Dublin",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 3,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": 3,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": 3,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": 3
+            },
+            "winsAgainst": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": true,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": true
+            },
+            "score": 3
+          },
+          {
+            "id": "f677bfe1-e2af-484f-96f1-e5914e059d25",
+            "name": "Edinburgh",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 2,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": 2,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": 2,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": 2
+            },
+            "winsAgainst": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+            },
+            "score": 2
+          },
+          {
+            "id": "b10b7dec-0af4-461f-a906-b8000d0bc279",
+            "name": "Athens",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 2,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": 2,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": 2,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": 2,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+            },
+            "winsAgainst": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": true,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": true,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+            },
+            "score": 2
+          },
+          {
+            "id": "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+            "name": "Bergen",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 0,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": 0,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+            },
+            "winsAgainst": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": false,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": false,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+            },
+            "score": 0
+          },
+          {
+            "id": "61553ce3-df07-4af1-a1f4-92adcc753495",
+            "name": "Cork",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": 0,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": 0,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": 0,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": 0,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": 0
+            },
+            "winsAgainst": {
+              "1de950d1-b2c3-4cfe-af6e-1fbd7675b490": false,
+              "61553ce3-df07-4af1-a1f4-92adcc753495": false,
+              "787a201d-a825-4291-b4a9-f9d12b8f87ec": false,
+              "f677bfe1-e2af-484f-96f1-e5914e059d25": false,
+              "b10b7dec-0af4-461f-a906-b8000d0bc279": false
+            },
+            "score": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nOvervotes": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "1de950d1-b2c3-4cfe-af6e-1fbd7675b490",
+        "61553ce3-df07-4af1-a1f4-92adcc753495",
+        "787a201d-a825-4291-b4a9-f9d12b8f87ec",
+        "f677bfe1-e2af-484f-96f1-e5914e059d25",
+        "b10b7dec-0af4-461f-a906-b8000d0bc279"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+          "name": "Dublin",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": 0,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 3,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": 5,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 3
+          },
+          "winsAgainst": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": true,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+          },
+          "score": 23,
+          "fiveStarCount": 3
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+          "name": "Edinburgh",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": 2,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 5,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": 0,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 5
+          },
+          "winsAgainst": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": true,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": true
+          },
+          "score": 22,
+          "fiveStarCount": 2
+        },
+        {
+          "id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+          "name": "Cork",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 2,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": 4,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 0,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 5
+          },
+          "winsAgainst": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": false,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": true,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": true
+          },
+          "score": 20,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+          "name": "Bergen",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 0,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": 2,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 5,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 3
+          },
+          "winsAgainst": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": false,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": true,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+          },
+          "score": 17,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+          "name": "Athens",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 4,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": 4,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 2,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 0
+          },
+          "winsAgainst": {
+            "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+            "1f8b6149-cc86-4329-ac6a-51b6d3990432": true,
+            "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+            "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+            "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+          },
+          "score": 16,
+          "fiveStarCount": 2
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+              "name": "Dublin",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+                "1f8b6149-cc86-4329-ac6a-51b6d3990432": 0,
+                "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 3,
+                "78bd7679-6ac6-4a83-b053-b4e654878b31": 5,
+                "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 3
+              },
+              "winsAgainst": {
+                "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+                "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+                "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+                "78bd7679-6ac6-4a83-b053-b4e654878b31": true,
+                "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+              },
+              "score": 23,
+              "fiveStarCount": 3
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+              "name": "Edinburgh",
+              "tieBreakOrder": 3,
+              "votesPreferredOver": {
+                "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+                "1f8b6149-cc86-4329-ac6a-51b6d3990432": 2,
+                "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 5,
+                "78bd7679-6ac6-4a83-b053-b4e654878b31": 0,
+                "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 5
+              },
+              "winsAgainst": {
+                "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+                "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+                "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": true,
+                "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+                "3700e8ad-97f4-4c54-9ff8-e2d35679c643": true
+              },
+              "score": 22,
+              "fiveStarCount": 2
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Dublin",
+                "Edinburgh"
+              ],
+              "stars": [
+                "23",
+                "22"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Dublin",
+              "runner_up": "Edinburgh",
+              "winner_votes": 5,
+              "runner_up_votes": 2,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+            "name": "Dublin",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": 0,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 3,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": 5,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 3
+            },
+            "winsAgainst": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": true,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+            },
+            "score": 23,
+            "fiveStarCount": 3
+          },
+          {
+            "id": "78bd7679-6ac6-4a83-b053-b4e654878b31",
+            "name": "Edinburgh",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 5,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": 2,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 5,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": 0,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 5
+            },
+            "winsAgainst": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": true,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": true
+            },
+            "score": 22,
+            "fiveStarCount": 2
+          },
+          {
+            "id": "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+            "name": "Cork",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 2,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": 4,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 0,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 5
+            },
+            "winsAgainst": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": false,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": true,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": true
+            },
+            "score": 20,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+            "name": "Bergen",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 0,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": 2,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 5,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 3
+            },
+            "winsAgainst": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": false,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": false,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": true,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+            },
+            "score": 17,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "3700e8ad-97f4-4c54-9ff8-e2d35679c643",
+            "name": "Athens",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": 4,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": 4,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": 2,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": 2,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": 0
+            },
+            "winsAgainst": {
+              "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd": true,
+              "1f8b6149-cc86-4329-ac6a-51b6d3990432": true,
+              "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1": false,
+              "78bd7679-6ac6-4a83-b053-b4e654878b31": false,
+              "3700e8ad-97f4-4c54-9ff8-e2d35679c643": false
+            },
+            "score": 16,
+            "fiveStarCount": 2
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "6f81c4c6-727f-4fd6-a14b-c4fca821d8dd",
+        "1f8b6149-cc86-4329-ac6a-51b6d3990432",
+        "7da1270a-d1dd-43fa-8cd9-98166ac7c7d1",
+        "78bd7679-6ac6-4a83-b053-b4e654878b31",
+        "3700e8ad-97f4-4c54-9ff8-e2d35679c643"
+      ]
+    },
+    {
+      "votingMethod": "RankedRobin",
+      "elected": [
+        {
+          "id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+          "name": "Edinburgh",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": 0,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": 5,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 5,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": 2,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": 5
+          },
+          "winsAgainst": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": true,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": true
+          },
+          "copelandScore": 3
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+          "name": "Athens",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": 0,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 4,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": 4,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": 2
+          },
+          "winsAgainst": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": true,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": false
+          },
+          "copelandScore": 2
+        },
+        {
+          "id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+          "name": "Dublin",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": 5,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": 3,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 5,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": 0,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": 3
+          },
+          "winsAgainst": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": true,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": false
+          },
+          "copelandScore": 2
+        },
+        {
+          "id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+          "name": "Cork",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": 5,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 2,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": 4,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": 0
+          },
+          "winsAgainst": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": true,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": false,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": true,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": false
+          },
+          "copelandScore": 2
+        },
+        {
+          "id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+          "name": "Bergen",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": 3,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 0,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": 2,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": 5
+          },
+          "winsAgainst": {
+            "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+            "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+            "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": false,
+            "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+            "af685d25-cf56-414a-8f78-f20c14ca7090": true
+          },
+          "copelandScore": 1
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+              "name": "Edinburgh",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "1403d0a2-71a4-47ea-8566-81c83d70ccef": 0,
+                "d796085d-1fea-43ec-90d3-80ce9dddcf16": 5,
+                "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 5,
+                "1d4b039f-9eed-4284-b5b6-1762a96e1027": 2,
+                "af685d25-cf56-414a-8f78-f20c14ca7090": 5
+              },
+              "winsAgainst": {
+                "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+                "d796085d-1fea-43ec-90d3-80ce9dddcf16": true,
+                "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+                "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+                "af685d25-cf56-414a-8f78-f20c14ca7090": true
+              },
+              "copelandScore": 3
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            "Edinburgh wins round with highest number of wins."
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+            "name": "Edinburgh",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": 0,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": 5,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 5,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": 2,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": 5
+            },
+            "winsAgainst": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": true,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": true
+            },
+            "copelandScore": 3
+          },
+          {
+            "id": "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+            "name": "Athens",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": 0,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 4,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": 4,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": 2
+            },
+            "winsAgainst": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": true,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": false
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+            "name": "Dublin",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": 5,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": 3,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 5,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": 0,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": 3
+            },
+            "winsAgainst": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": true,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": true,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": false
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "af685d25-cf56-414a-8f78-f20c14ca7090",
+            "name": "Cork",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": 5,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 2,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": 4,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": 0
+            },
+            "winsAgainst": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": true,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": false,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": true,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": false
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+            "name": "Bergen",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": 2,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": 3,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": 0,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": 2,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": 5
+            },
+            "winsAgainst": {
+              "1403d0a2-71a4-47ea-8566-81c83d70ccef": false,
+              "d796085d-1fea-43ec-90d3-80ce9dddcf16": false,
+              "6ac9cb46-9648-4be4-9a4a-937f229cb2a6": false,
+              "1d4b039f-9eed-4284-b5b6-1762a96e1027": false,
+              "af685d25-cf56-414a-8f78-f20c14ca7090": true
+            },
+            "copelandScore": 1
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "1403d0a2-71a4-47ea-8566-81c83d70ccef",
+        "d796085d-1fea-43ec-90d3-80ce9dddcf16",
+        "6ac9cb46-9648-4be4-9a4a-937f229cb2a6",
+        "1d4b039f-9eed-4284-b5b6-1762a96e1027",
+        "af685d25-cf56-414a-8f78-f20c14ca7090"
+      ]
+    }
+  ]
+}

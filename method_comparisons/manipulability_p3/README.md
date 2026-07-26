@@ -2,6 +2,8 @@
 
 *Seven voters, five cities, and a definition. Zwicker's Definition 2.3 calls a rule **single voter manipulable** if some voter can get a better result by lying. The profile he uses to illustrate it, `P₃`, shows a voter overturning the **Copeland** winner by submitting their ballot completely backwards. Here is the part that matters for this library: **Ranked Robin is Copeland.** The showcase manipulation in the textbook is a manipulation of one of the two methods we advocate — so this page leads with our own failure, then shows STAR's, then everyone else's.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`, Test ID **BV2253** — the **sincere** baseline only, three races: Choose-One, STAR, Ranked Robin). The manipulated ballots below are counterfactual and stay LH-only; casting deliberate lies as a real public election would misrepresent what this profile is.
+
 → **Level: Voting 301.** The theorem behind it: [Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) · the taxonomy: [strategic voting](../../00_start_here/topics/strategic_voting.md) · [strategic pathologies scorecard](../../00_start_here/topics/strategic_pathologies.md) · same chapter, different profile: [margins matter](../copeland_vs_borda_margins/README.md) · [the social welfare function](../../00_start_here/topics/social_welfare_function.md) · related failures: [monotonicity](../monotonicity/README.md) · [reversal symmetry](../reversal_symmetry/README.md)
 
 ---
@@ -29,6 +31,16 @@ Sincerely, here is where everyone lands:
 There is **no Condorcet winner**: Edinburgh beats Cork, Athens and Bergen but loses to Dublin 5–2. Edinburgh's symmetric Copeland score is **+2**, Bergen's is **−2**, and the other three are **0** — exactly the numbers the chapter prints.
 
 **RCV-IRV has no sincere answer here, and that is not a dodge.** First choices are Dublin 3, Athens 2, Edinburgh 2 — a genuine two-way tie for elimination. Which of Athens or Edinburgh is dropped decides the election, and nothing in the ballots decides it. We report IRV as indeterminate rather than quoting whichever winner a particular tiebreak produced.
+
+**The baseline is live and independently confirmed.** All three sincere races ran on BetterVoting ([BV2253 `4w96tr`](https://bettervoting.com/4w96tr/results)) and agree with the LH engine exactly:
+
+| Race | BetterVoting | LH engine | |
+|---|---|---|---|
+| Choose-One (Plurality) | Dublin | Dublin | ✓ |
+| STAR | Dublin | Dublin | ✓ |
+| Ranked Robin | Edinburgh | Edinburgh | ✓ |
+
+Every race carries `tieBreakType: none` — nothing here was decided by chance, so unlike some Ranked Robin cases in this repo the whole result is freezable. Frozen export: [`p3_sincere_ranked_robin_bv_export.json`](cases/p3_sincere_ranked_robin_bv_export.json).
 
 ## What Zwicker's example actually does
 

@@ -4145,7 +4145,88 @@ GOODBERRYS_SPEC = {
     "expected": "no seed ballots; live poll — winner decided by real votes",
 }
 
-ELECTIONS: list = [GOODBERRYS_SPEC]   # BV2252 — Goodberry's Best Flavor 2026 (live poll)
+# --- BV2253 — Manipulability P3: the SINCERE baseline (3 races) --------------
+# Backs method_comparisons/manipulability_p3/. Zwicker's profile P3 from
+# "Introduction to the Theory of Voting" (HCSC ch. 2), used for Definition 2.3
+# (single voter manipulability). 7 voters, 5 candidates, cities A-E.
+#   2 : Edinburgh > Cork > Athens > Dublin > Bergen
+#   3 : Dublin > Edinburgh > Bergen > Cork > Athens
+#   2 : Athens > Bergen > Cork > Dublin > Edinburgh
+# ONLY THE SINCERE PROFILE IS MINTED. The teaching page's manipulated variants
+# are counterfactual (deliberately insincere ballots) and stay LH-only — casting
+# lies as a real public election would misrepresent what the profile is.
+#   Plurality   -> Dublin (3 first choices vs Athens 2, Edinburgh 2)
+#   STAR        -> Dublin (5/4/3/2/0 conversion: D23 E22 C20 B17 A16;
+#                          finalists Dublin & Edinburgh; runoff Dublin 5-2)
+#   RankedRobin -> Edinburgh (3-1; symmetric Copeland +2, with Bergen -2 and the
+#                          other three 0 — exactly the numbers the chapter prints)
+# NO IRV RACE ON PURPOSE: first choices are 3/2/2, so the first elimination is a
+# genuine two-way tie between Athens and Edinburgh and the IRV result would be a
+# coin flip — not freezable. The repo page reports IRV as INDETERMINATE rather
+# than quoting whichever winner a tiebreak produced.
+# All three minted races are deterministic: Ranked Robin's Edinburgh wins
+# outright on 3 wins (no Copeland tie, so no BV random tiebreak), and the STAR
+# and plurality margins are clean.
+# NUMBERING NOTE: this case was requested as BV2252, but BV2252 had already been
+# consumed by GOODBERRYS_SPEC (election 6tthfv) in a concurrent session, so it
+# was minted as BV2253. Test IDs are permanent and must not collide.
+# Ranks aligned to [Athens, Bergen, Cork, Dublin, Edinburgh]; 1 = top choice.
+_P3_CANDS = ["Athens", "Bergen", "Cork", "Dublin", "Edinburgh"]
+_P3_RANK = ([[3, 5, 2, 4, 1]] * 2) + ([[5, 3, 4, 1, 2]] * 3) + ([[1, 2, 3, 4, 5]] * 2)
+_P3_STAR = ([[3, 0, 4, 2, 5]] * 2) + ([[0, 3, 2, 5, 4]] * 3) + ([[5, 4, 3, 2, 0]] * 2)
+_P3_PLUR = ([[0, 0, 0, 0, 1]] * 2) + ([[0, 0, 0, 1, 0]] * 3) + ([[1, 0, 0, 0, 0]] * 2)
+
+P3_SPEC = {
+    "test_id": "BV2253",
+    "title": "Where should the committee meet? — the sincere baseline behind a textbook manipulation",
+    "description": (
+        "Seven committee members rank five cities for a meeting. This is the SINCERE vote — "
+        "everyone's honest ranking, nobody playing games — and it is the baseline that a famous "
+        "textbook example attacks. Two members rank Edinburgh > Cork > Athens > Dublin > Bergen, "
+        "three rank Dublin > Edinburgh > Bergen > Cork > Athens, and two rank Athens > Bergen > "
+        "Cork > Dublin > Edinburgh. Three races count those same seven ballots and they do not "
+        "all agree. Choose-One elects Dublin, which has the most first choices (3 against 2 and "
+        "2). STAR also elects Dublin: converting each ranking to scores puts Dublin first on 23 "
+        "points with Edinburgh close behind on 22, and Dublin then wins the automatic runoff 5-2 "
+        "because more voters prefer Dublin to Edinburgh than the other way round. Ranked Robin "
+        "disagrees and elects Edinburgh, because Edinburgh wins three of its four head-to-head "
+        "matchups while Dublin wins only two. Notice that neither of them beats everybody: "
+        "Dublin beats Edinburgh 5-2, but Edinburgh beats the other three, so there is no "
+        "Condorcet winner in this election. That fragility is exactly why the profile is famous. "
+        "In the textbook it is used to define what it means for a voting rule to be MANIPULABLE: "
+        "one of the two Athens-first voters, watching their least favourite city Edinburgh about "
+        "to win, can submit a dishonest ballot and change the outcome to one they prefer. The "
+        "full lesson works that manipulation through — and shows the same thing being done to "
+        "STAR, because every voting method can be gamed by somebody. No instant runoff race is "
+        "included here, deliberately: the first elimination would be a two-way tie decided by "
+        "chance rather than by the ballots, so there is no honest IRV answer to publish. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/manipulability_p3/index.html"
+    ),
+    "enable_write_in": False,
+    "races": [
+        {"title": "Meeting city — Choose-One (Plurality): Dublin on 3 first choices",
+         "method": "Plurality",
+         "num_winners": 1, "candidates": _P3_CANDS, "ballots": _P3_PLUR},
+        {"title": "Meeting city — STAR (Dublin 23, Edinburgh 22, runoff 5-2)",
+         "method": "STAR",
+         "num_winners": 1, "candidates": _P3_CANDS, "ballots": _P3_STAR},
+        {"title": "Meeting city — Ranked Robin (Edinburgh wins 3 of 4 head-to-heads)",
+         "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 5, "candidates": _P3_CANDS, "ballots": _P3_RANK},
+    ],
+    "expected": ("Plurality -> Dublin (3 first choices vs Athens 2, Edinburgh 2); STAR -> Dublin "
+                 "(scoring round Dublin 23 / Edinburgh 22 / Cork 20 / Bergen 17 / Athens 16; "
+                 "finalists Dublin and Edinburgh; runoff Dublin 5-2); Ranked Robin -> Edinburgh "
+                 "(3-1 head-to-head, symmetric Copeland +2, with Bergen -2 and Athens/Cork/Dublin "
+                 "all 0 — the exact vector the chapter prints). No Condorcet winner (Dublin beats "
+                 "Edinburgh 5-2). All three races deterministic; no IRV race because its first "
+                 "elimination is a 2-way tie. Test ID BV2253."),
+}
+
+
+ELECTIONS: list = [P3_SPEC]   # BV2253 — Manipulability P3, sincere baseline
+# Previously: [GOODBERRYS_SPEC]  # BV2252 — Goodberry's Best Flavor 2026 (created, live poll)
 # Previously: [MARGINS_SPEC]  # BV2251 — Margins matter: Copeland vs Borda (created)
 # Previously: [C1788_SPEC]  # BV2250 — Condorcet's 1788 rebuttal to Borda (created)
 # Previously: [WCL_SPEC]  # BV2249 — weak Condorcet loser (created)

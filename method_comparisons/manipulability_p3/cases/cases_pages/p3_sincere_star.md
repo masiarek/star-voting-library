@@ -4,6 +4,8 @@
 
 **Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Dublin
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`).
+
 ## Scenario
 
 The same seven sincere voters under STAR, with each ranking converted to scores on a 5/4/3/2/0 spacing (five candidates will not fit 0-5 evenly, so some spacing must be chosen; this outcome is robust — 5/4/3/1/0 and 5/3/2/1/0 also elect Dublin). Scoring round: Dublin 23, Edinburgh 22, Cork 20, Bergen 17, Athens 16. Finalists Dublin and Edinburgh; the runoff goes to Dublin 5-2, because Dublin beats Edinburgh head-to-head. So STAR and plurality agree on Dublin here while Copeland/Ranked Robin and Borda both say Edinburgh. The manipulated counterpart is p3_manip_star.yaml — STAR is manipulable on this profile too.
@@ -104,6 +106,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/p3_sincere_star.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

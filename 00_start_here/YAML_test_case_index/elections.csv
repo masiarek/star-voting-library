@@ -5,6 +5,7 @@
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 3xgkck,BV2227 — Favorite Betrayal — honest ballots (STAR & Ranked Robin elect the compromise; RCV-IRV elects a wing),3,contested (multi-race),34,"IRV, RankedRobin, STAR",BV
 4htk44,BV2162 — Nurmi's truncation electorate (1 of 2) — everyone ranks fully; IRV misses the Condorcet winner,3,contested (multi-race),103,"IRV, RankedRobin, STAR",BV
+4w96tr,BV2253 — Where should the committee meet? — the sincere baseline behind a textbook manipulation,3,contested (multi-race),7,"Plurality, RankedRobin, STAR",BV
 6bry7c,"BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 6fj2kg,BV2145 — Felsenthal's runoff paradoxes (1 of 2) — the runoff eliminates the Condorcet winner,3,contested (multi-race),17,"IRV, RankedRobin, STAR",BV
 6w2gq7,"BV2168 — FairVote's Condorcet hypothetical, counted — the Moderate is the majority's head-to-head choice",2,contested (multi-race),100,"IRV, STAR",BV
@@ -258,8 +259,6 @@ LH:options_examples,Display-options reference — every reporting toggle (STAR),
 LH:p3_manip_compromise_rr,"P3 manipulated — the mild version: three adjacent swaps, no burial, same result",1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_reversal_rr,P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner,1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_star,P3 manipulated — two voters bury their 4th choice and STAR elects their favourite,1,single-race,7,STAR,LH-only
-LH:p3_sincere_ranked_robin,P3 sincere — Ranked Robin elects Edinburgh (the baseline every manipulation attacks),1,single-race,7,RankedRobin,LH-only
-LH:p3_sincere_star,P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0),1,single-race,7,STAR,LH-only
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
