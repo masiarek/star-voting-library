@@ -1,0 +1,50 @@
+election_title: "Hamlin & Hua §4.1 — the assumed preferences, counted pairwise: A is the Condorcet winner"
+
+scenario_description: |-
+  The SAME electorate as hh41_01_approval_as_printed.yaml, but reading the
+  paper's ASSUMED PREFERENCES as ranked ballots instead of the approval marks
+  they were compressed into:
+    60 voters: A > B > C
+    30 voters: B > C > A
+    10 voters: C > B > A
+
+  The paper opens §4.1 by observing that "there is not always a Condorcet
+  winner." True in general — but this profile has one, and it is A: A beats B
+  60-40 and beats C 60-40. So A is not merely the first choice of a majority
+  (the majority criterion), A is also the candidate a majority prefers in every
+  head-to-head. Ranked Robin, Choose-One and RCV-IRV all elect A here; the
+  approval count elects B.
+
+  This file exists to establish that fact from the engine rather than by hand,
+  because it is the one thing the paper's own framing does not say about its
+  own example.
+
+  Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+  Set overview: ../README.md
+
+voting_method: RankedRobin
+num_winners: 1
+paradoxes: [condorcet-winner]
+lot_numbers: [A, B, C]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false   # the full pairwise grid IS the lesson
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  60:A>B>C
+  30:B>C>A
+  10:C>B>A
+
+expected_winners:
+  - A
+
+# file: hh41_02_preferences_ranked_robin.yaml

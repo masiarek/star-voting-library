@@ -1,0 +1,54 @@
+election_title: "Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference"
+
+scenario_description: |-
+  The SAME approval marks as hh41_01_approval_as_printed.yaml, read as a score
+  ballot (approved = 5, not approved = 0) so the engine prints the pairwise
+  matrix and the runoff line. Magnitude is irrelevant — every head-to-head count
+  below depends only on the two-class ORDER — but 5/0 is used rather than 1/0
+  because the engine's built-in Approval cross-check reads "a score of 3+ is an
+  approval" and would misread a 1/0 ballot. Same convention, same reason, as
+  ../../black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml.
+
+  This answers the obvious follow-up question: if approval misses the majority
+  favorite, would bolting a runoff onto the approval ballot fix it? No — and the
+  runoff line says exactly why:
+
+    Voters with a preference: 40 of 100 (60 Equal Support).
+
+  The 60 voters who prefer A to B approved BOTH, so in a head-to-head between
+  them they say nothing. B wins the runoff 40-0. The deciding preference wasn't
+  outvoted, it was never recorded — the information was lost when the ballot was
+  marked, not when it was counted. On these ballots B is legitimately the
+  Condorcet winner; on the underlying preferences (hh41_02) A is. That gap is
+  the compression.
+
+  Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+  Companion set: ../../black_curtain/condorcet_compression.md
+  Set overview: ../README.md
+
+voting_method: STAR
+num_winners: 1
+paradoxes: [majority-failure, condorcet-winner]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false   # the Equal Support column IS the lesson
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:A,B,C
+  60:5,5,0   # approved A and B — and no preference between them
+  30:0,5,5   # approved B and C
+  10:0,5,5   # approved C and B
+
+expected_winners:
+  - B
+
+# file: hh41_03_marks_read_pairwise.yaml

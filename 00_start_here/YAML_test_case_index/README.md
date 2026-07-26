@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**446 election files** (395 single-winner, 51 multi-winner) across 16 method(s).
+**452 election files** (401 single-winner, 51 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 243 |
+| STAR | 246 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 63 |
-| Approval | 16 |
+| Ranked Robin (RCV-RR / Copeland) | 64 |
+| Approval | 18 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (243)
+## STAR  (246)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -99,6 +99,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2212_g3f7r2_cycle_spoiler`](../../01_STAR/iia_cycle_spoiler/cases/cases_pages/bv2212_g3f7r2_cycle_spoiler.md) | `01_STAR/iia_cycle_spoiler/cases/` | 1 | STAR's runoff is spoiler-sensitive under a Condorcet cycle — a losing candidate (Ben) flips Alice vs Carla (BV2212, g3f7r2) → _Alice_ | [`.yaml`](../../01_STAR/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml) |
 | [`bv95a_9m6rxr_favorite_survives_one_rival`](../../01_STAR/majority_criterion/cases/cases_pages/bv95a_9m6rxr_favorite_survives_one_rival.md) | `01_STAR/majority_criterion/cases/` | 1 | BV95a — Majority Criterion: favorite survives when the majority backs ONE rival → _Ada_ | [`.yaml`](../../01_STAR/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml) |
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/majority_criterion/cases/cases_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/majority_criterion/cases/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
+| [`majority_vs_consensus_51_49`](../../01_STAR/majority_criterion/cases/cases_pages/majority_vs_consensus_51_49.md) | `01_STAR/majority_criterion/cases/` | 1 | Majority criterion vs. the consensus candidate — the 51/49 polarized electorate → _Celia_ | [`.yaml`](../../01_STAR/majority_criterion/cases/majority_vs_consensus_51_49.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/none_of_the_above/cases/cases_pages/bv215_26khr3_nota_wins.md) | `01_STAR/none_of_the_above/cases/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/none_of_the_above/cases/bv215_26khr3_nota_wins.yaml) |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/pet_real_bv_election/cases/cases_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/pet_real_bv_election/cases/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml) |
 | [`best_pet_c7_b461`](../../01_STAR/pet_real_bv_election/cases/cases_pages/best_pet_c7_b461.md) | `01_STAR/pet_real_bv_election/cases/` | 1 | What Makes the Best Pet? → _Dog_ | [`.yaml`](../../01_STAR/pet_real_bv_election/cases/best_pet_c7_b461.yaml) |
@@ -191,6 +192,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`count_simplicity_star_vs_irv`](../../method_comparisons/_main/cases/cases_pages/count_simplicity_star_vs_irv.md) | `method_comparisons/_main/cases/` | 1 | Same winner, very different counts — STAR adds, IRV eliminates → _Carmen_ | [`.yaml`](../../method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml) |
 | [`bv2213_k3fmwv_alaska_2022`](../../method_comparisons/alaska_2022/cases/cases_pages/bv2213_k3fmwv_alaska_2022.md) | `method_comparisons/alaska_2022/cases/` | 1 | Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut → _Begich_ | [`.yaml`](../../method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml) |
 | [`bv2214_m3hb6y_alaska_2022_general`](../../method_comparisons/alaska_2022_general/cases/cases_pages/bv2214_m3hb6y_alaska_2022_general.md) | `method_comparisons/alaska_2022_general/cases/` | 1 | Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola → _Peltola_ | [`.yaml`](../../method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml) |
+| [`hh41_03_marks_read_pairwise`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_03_marks_read_pairwise.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference → _B_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml) |
+| [`hh41_04_stipulated_utilities_star`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — their own utility stipulation, on a 0-5 ballot: A 380, B 370, A wins → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml) |
 | [`Black_Curtain_01_c3_b5_hidden-consensus`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
 | [`Black_Curtain_01b_c3_b5_dichotomous`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml) |
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
@@ -310,7 +313,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (63)
+## Ranked Robin (RCV-RR / Copeland)  (64)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -332,6 +335,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/cases/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_ties.yaml) |
+| [`hh41_02_preferences_ranked_robin`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the assumed preferences, counted pairwise: A is the Condorcet winner → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_02_preferences_ranked_robin.yaml) |
 | [`condorcet_1788_ranked_robin`](../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_ranked_robin.md) | `method_comparisons/borda_condorcet_1788/cases/` | 1 | Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise → _Peter_ | [`.yaml`](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_ranked_robin.yaml) |
 | [`burlington_2009_ranked_robin`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_ranked_robin.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_ranked_robin.yaml) |
 | [`bv2137_ywckmg_ranked_robin`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_ranked_robin.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_ranked_robin.yaml) |
@@ -378,7 +382,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (16)
+## Approval  (18)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -388,6 +392,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex15_approval_yes_no`](../../01_STAR/exercises/cases/cases_pages/ex15_approval_yes_no.md) | `01_STAR/exercises/cases/` | 1 | Exercise 15a — a Yes/No profile (which method is this?) → _Blair_ | [`.yaml`](../../01_STAR/exercises/cases/ex15_approval_yes_no.yaml) |
 | [`approval_101_c3_b5`](../../04_Approval/_main/cases/cases_pages/approval_101_c3_b5.md) | `04_Approval/_main/cases/` | 1 | Approval 101 — most approvals wins → _Bob_ | [`.yaml`](../../04_Approval/_main/cases/approval_101_c3_b5.yaml) |
 | [`BV_Library_approval_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_approval_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Approval: most approvals wins (single winner) → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_approval_single_winner.yaml) |
+| [`hh41_01_approval_as_printed`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_01_approval_as_printed.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the approval count as printed: B wins with 100% → _B_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_01_approval_as_printed.yaml) |
+| [`hh41_05_majority_bullet_votes`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_05_majority_bullet_votes.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_05_majority_bullet_votes.yaml) |
 | [`Black_Curtain_01a_c3_b5_approval`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01a_c3_b5_approval.yaml) |
 | [`chicken_approval`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_approval.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — Approval, honest: A and B tie 60-60 (the trap) → _A_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_approval.yaml) |
 | [`bv2152_r6ctvy_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2152_r6ctvy_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.5 — Approval: the Condorcet winner loses the approval count → _Anna_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2152_r6ctvy_approval.yaml) |

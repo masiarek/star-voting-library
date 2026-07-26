@@ -2,7 +2,7 @@
 
 *The academic treatment of Approval says something the advocacy pages on both sides tend to skip: the deepest disagreement isn't whether Approval works, it's **what a checkmark means**. Three incompatible answers are in circulation, and which one you hold decides whether Approval is nearly strategy-free or entirely strategic — before any simulation is run. This page walks the standard survey treatment: the arguments made for Approval, the criticisms made against it, which criticisms survive scrutiny, and one elegant result — on a restricted domain, Approval **is** Borda **is** Condorcet.*
 
-→ Overview: [Approval Voting](approval_voting.md) (the ballot and the count) · critique companion: [honest limits](approval_honest_limits.md) · run it: [the Approval examples](../../04_Approval/) · [Black Curtain](../../method_comparisons/black_curtain/). Source and its lean: the last section. Curriculum: [301.4](../CURRICULUM.md).
+→ Overview: [Approval Voting](approval_voting.md) (the ballot and the count) · critique companion: [honest limits](approval_honest_limits.md) · the advocacy side's *own* academic case, claim-checked: [Hamlin & Hua (2023)](hamlin_hua_2023.md) · run it: [the Approval examples](../../04_Approval/) · [Black Curtain](../../method_comparisons/black_curtain/). Source and its lean: the last section. Curriculum: [301.4](../CURRICULUM.md).
 
 ---
 

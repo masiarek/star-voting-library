@@ -1,0 +1,54 @@
+election_title: "Hamlin & Hua §4.1 — the approval count as printed: B wins with 100%"
+
+scenario_description: |-
+  The worked example from section 4.1 ("The majority criterion") of Hamlin, A. &
+  Hua, W. (2023), "The case for approval voting," Constitutional Political
+  Economy 34: 335-345 — reproduced exactly as printed, candidate labels and all.
+
+  The paper's assumed preferences:
+    60 voters: A > B > C
+    30 voters: B > C > A
+    10 voters: C > B > A
+  and the approval ballots it assumes those voters cast (each bloc approves its
+  top two):
+    60 voters: A + B
+    30 voters: B + C
+    10 voters: C + B
+
+  A is the first choice of 60% of voters, so the majority criterion says A must
+  win. B is approved on every ballot and wins with 100% approval. The paper
+  concedes the failure and argues it is of trivial consequence; this folder
+  runs the argument.
+
+  Note what the approval ballots can no longer distinguish: the 30 B>C>A voters
+  and the 10 C>B>A voters cast IDENTICAL ballots, so the engine collapses them
+  to a single 40-voter row. That erasure is the lesson, not a display quirk.
+
+  Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+  Set overview: ../README.md
+
+voting_method: Approval
+num_winners: 1
+paradoxes: [majority-failure, condorcet-winner]
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:A,B,C
+  60:1,1,0   # A > B > C — approves A and B
+  30:0,1,1   # B > C > A — approves B and C
+  10:0,1,1   # C > B > A — approves C and B
+
+expected_winners:
+  - B
+
+# file: hh41_01_approval_as_printed.yaml

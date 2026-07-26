@@ -57,3 +57,5 @@ A strong, genuinely peer-reviewed contribution that hands the field two durable 
 ---
 
 *See also: [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md) · [What makes a good winner?](../../topics/what_makes_a_good_winner.md) · [In memoriam, Jameson Quinn](../../topics/in_memoriam_jameson_quinn.md) · [STAR resources](STAR_resources.md).*
+
+> **The companion article.** The next ten pages of the same issue — *Constitutional Political Economy* **34(3): 335–345** — are the Approval camp's parallel case: **Hamlin & Hua, "The case for approval voting."** Same journal, same issue, the rival cardinal method, argued by its own advocacy organisation. It gets [the same treatment](../../Approval_Voting/hamlin_hua_2023.md), and its §4.1 example is [runnable here](../../../method_comparisons/approval_majority_criterion/README.md).

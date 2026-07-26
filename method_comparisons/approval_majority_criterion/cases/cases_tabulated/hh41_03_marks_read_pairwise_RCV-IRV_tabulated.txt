@@ -1,0 +1,22 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C
+    60 ×   A > B      (5, 5, 0)
+    40 ×   B > C      (0, 5, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 60  Elected
+B                 40  Rejected
+C                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

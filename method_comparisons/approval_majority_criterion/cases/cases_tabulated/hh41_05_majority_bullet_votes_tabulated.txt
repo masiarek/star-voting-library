@@ -1,0 +1,92 @@
+======================================================================
+SOURCE FILE:     hh41_05_majority_bullet_votes.yaml
+TABULATED FILE:  hh41_05_majority_bullet_votes_tabulated.txt
+======================================================================
+
+election_title: "Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate"
+
+scenario_description: |-
+  The SAME 100 voters with the SAME preferences as hh41_01_approval_as_printed.yaml.
+  One thing changes: the 60-voter majority draws its approval line one candidate
+  higher and approves only A. Nobody's opinion moved.
+
+    60 voters: A          (was A + B)
+    30 voters: B + C
+    10 voters: C + B
+
+  Now A wins with 60 approvals to B's 40, and the majority-criterion violation
+  disappears. This is a counterfactual — the paper's assumed ballots are the
+  ones in hh41_01 — and it is here to isolate what the §4.1 example actually
+  turns on. Not the electorate's preferences, which are unchanged: the
+  threshold. The violation exists only while the majority is generous.
+
+  Worth reading against the paper's own §4.3, which reports 1.6 to 3.15
+  approvals per ballot in real elections and surveys. Those numbers are cited
+  there to answer the bullet-voting critique — but they are also the frequency
+  estimate for THIS precondition. By the paper's own data, majorities usually
+  do approve a second candidate, so the §4.1 configuration is the common case,
+  not the exotic one.
+
+  Compare with STAR, where the same class of failure requires the majority to
+  support TWO rivals, not one — the Relaxed Majority Criterion:
+  ../../../00_start_here/topics/majority_criterion/README.md
+
+  Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+  Set overview: ../README.md
+
+voting_method: Approval
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:A,B,C
+  60:1,0,0   # A > B > C — bullet-votes A
+  30:0,1,1   # B > C > A — approves B and C
+  10:0,1,1   # C > B > A — approves C and B
+
+expected_winners:
+  - A
+
+# file: hh41_05_majority_bullet_votes.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 100 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = A, B, C      (1 = approve; 0 / blank / marker = not approved)
+    60 × 1,0,0
+    40 × 0,1,1
+
+   A -- 60 (60%) -- Elected
+   B -- 40 (40%)
+   C -- 40 (40%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   140 approvals across 100 ballots — average 1.4 of 3 (range 1–2).
+     approved 1: 60 ballots
+     approved 2: 40 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+      |   A    |   B    |   C    |
+   -------------------------------
+   A  |   --   |   0%   |   0%   |
+   B  |   0%   |   --   |  100%  |
+   C  |   0%   |  100%  |   --   |
+
+Winner — Approval Voting (single winner)
+  A
