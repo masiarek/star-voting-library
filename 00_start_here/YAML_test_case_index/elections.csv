@@ -1,5 +1,4 @@
 ﻿election_id,title,races,kind,voters,methods,backing
-2jpcxd,"BV2255 — One mark each: the traditional choose-one ballot, counted four ways",4,contested (multi-race),3,"IRV, Plurality, RankedRobin, STAR",BV
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
@@ -324,6 +323,7 @@ bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV
 bgcmxx,"BV2228 — Favorite Betrayal — the RCV-IRV betrayal (2 voters rank the compromise first, and it wins)",1,single-race,34,IRV,BV
 bj8dfc,"BV2202 — The Transfer Machine, fully ranked — a book club buys two novels by STV",1,single-race,9,STV,BV
 btmydt,BV129 - 3 cand - 2 winners (Bloc STAR),1,single-race,5,STAR,BV
+c8h3tb,BV2256 — Traditional voting style: one mark each,1,single-race,3,STAR,BV
 d664xw,Runoff_06 - Runoff confirms the leader at scale (control),1,single-race,5,STAR,BV
 dfw8rj,BV2183 — Forced Ballot Exhaustion — a 2-rank cap discards more ballots than the winner receives (constructed IRV example),1,single-race,50,IRV,BV
 dkj9dx,"BV1525 - Condorcet loser ties for seat 1 (Bloc STAR, k=4)",1,single-race,16,STAR,BV

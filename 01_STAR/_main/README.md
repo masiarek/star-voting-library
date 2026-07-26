@@ -22,7 +22,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 - [A valid bullet vote](cases/cases_pages/03a_c3_b3_style-bullet-vote.md) · [Low-score "protest" ballots](cases/cases_pages/03b_c3_b3_1_style-protest-vote.md) · […low-score ballots, continued](cases/cases_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [Eight ways to fill out one ballot](cases/cases_pages/03c_c6_b8_style-gallery.md)
 - [STAR à la Approval](cases/cases_pages/star_ala_approval.md) — scoring only 0/5 (Approval-style)
-- [When *everyone* votes "traditional"](cases/cases_pages/bv2255_2jpcxd_all-traditional-ballots.md) — one mark each, counted four ways; all four methods agree, because a one-bit ballot gives every method the same one bit · **[live ↗](https://bettervoting.com/2jpcxd/results)**
+- [Traditional style — one mark each](cases/cases_pages/bv2256_c8h3tb_traditional_style.md) — every voter bullet-votes, so the scoring round is just a first-choice count · **[live ↗](https://bettervoting.com/c8h3tb/results)**
 
 **Equal support & abstentions.** How "no preference" and blank scores are counted.
 

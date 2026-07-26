@@ -704,17 +704,6 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2254 — STAR — scoring round leads Ada, the runoff flips to Cara | STAR | 3 | **Cara** |
 | BV2254 — Ranked Robin — Cara is the combined Condorcet winner | RankedRobin | 3 | **Cara** |
 
-## BV2255 — One mark each: the traditional choose-one ballot, counted four ways
-
-**Election** [`2jpcxd`](https://bettervoting.com/2jpcxd/results) · **4 races** · **3 ballots** · [frozen export](../../01_STAR/_main/cases/bv2255_2jpcxd_all-traditional-ballots_bv_export.json)
-
-| Race | Method | Candidates | Winner |
-|------|--------|:----------:|--------|
-| BV2255 — Choose-One (Plurality) — the traditional ballot itself | Plurality | 5 | **Ella** |
-| BV2255 — STAR — the same single mark on a 0-5 score ballot | STAR | 5 | **Ella** |
-| BV2255 — RCV-IRV — the same single mark on a ranked ballot | IRV | 5 | **Ella** |
-| BV2255 — Ranked Robin — the same ranked ballot, every pair head-to-head | RankedRobin | 5 | **Ella** |
-
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -4308,15 +4308,53 @@ TRADITIONAL_SPEC = {
                 "jointly winless.",
 }
 
-# RESULTS (2026-07-26): BV2255 -> 2jpcxd — created + 3/3 ballots × 4 races OK. All four
-# races elected Ella, as predicted. Backs 00_start_here/STAR_Voting/voting_styles/
-# traditional.md and 01_STAR/_main/cases/bv2255_2jpcxd_all-traditional-ballots.yaml.
-# Note: the three winless also-rans (Andre/Blake/David) come back in a different order in
-# each race's standings — BV breaks that all-zero tie randomly. It cannot touch the winner.
-# Do NOT re-run.
+# RESULTS (2026-07-26): BV2255 -> 2jpcxd — created + 3/3 ballots × 4 races OK; all four
+# races elected Ella. But the ELECTION IS ORPHANED: Adam wanted a plain single-race STAR
+# illustration of the traditional voting style, not a four-method comparison. The ballots
+# are right, the framing is over-built. Superseded by BV2256 (single STAR race, same
+# ballots). Logged in tabulation_engines/BV/bv_api_election_creation_notes.md. Do NOT re-run.
+# (Lesson: when the ask is "an example OF a ballot style," one race is the deliverable —
+# a method line-up is a different lesson, and BV titles are permanent.)
 
-ELECTIONS: list = []   # nothing to create (BV2255 minted -> 2jpcxd)
-# Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four ballots (created)
+
+# --- BV2256 — Traditional voting style: one mark each (the BV2255 redo) -----------
+# The plain version: ONE STAR race, the same three bullet ballots. Backs the "What if
+# everyone voted this way?" example on 00_start_here/STAR_Voting/voting_styles/
+# traditional.md — every voter fills the 5-star ballot the old choose-one way (one 5, four
+# blanks), so the scoring round is just a first-choice count and the runoff has nothing
+# left to add. LH-verified: Ella 10, Carmen 5, everyone else 0; runoff Ella 2-1.
+TRADITIONAL_STAR_SPEC = {
+    "test_id": "BV2256",
+    "title": "Traditional voting style: one mark each",
+    "description": (
+        "Three voters, five candidates, and every voter fills out the 5-star STAR ballot the "
+        "old familiar way — one 5 for a favorite, the other four rows left blank (a blank "
+        "counts as 0). One marks Carmen, two mark Ella. This is the 'traditional' voting "
+        "style, and this election is deliberately an example of it done to the hilt. "
+        "PLAINLY: as an approach and as a strategy this is a POOR use of a STAR ballot — "
+        "unless one candidate really is your only acceptable choice, period, in which case "
+        "it is exactly honest and you should vote it. Otherwise you spend 5 of the 25 points "
+        "the ballot offers, say nothing about the rest of the field, and if your one pick "
+        "misses the runoff your ballot has no voice in the final head-to-head. Nothing is "
+        "penalized — a bullet vote is legal, full-weight and impossible to spoil, and a "
+        "backup score can never hurt your favorite — you are simply choosing not to use the "
+        "ballot. Watch what it costs the count: STAR's scoring round becomes nothing but a "
+        "first-choice tally (Ella 10, Carmen 5, and Andre, Blake and David on 0 with nothing "
+        "ever said about them), and the automatic runoff has nothing left to add — Ella "
+        "beats Carmen 2-1, with nobody at Equal Support. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/00_start_here/STAR_Voting/voting_styles/traditional.html"),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": _TRAD_CANDS,
+    "ballots": _TRAD_STAR,
+    "enable_write_in": False,
+    "expected": "STAR -> Ella. Scoring round Ella 10, Carmen 5, Andre/Blake/David 0; "
+                "runoff Ella 2 - Carmen 1, no Equal Support (majority = 2).",
+}
+
+ELECTIONS: list = [TRADITIONAL_STAR_SPEC]   # BV2256 — traditional style, one STAR race
+# Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four races (created; ORPHANED)
 # Previously: [REINFORCEMENT_SPEC]  # BV2254 — reinforcement paradox (created -> t4by6x)
 # Previously: [P3_SPEC]  # BV2253 — Manipulability P3, sincere baseline (created)
 # Previously: [GOODBERRYS_SPEC]  # BV2252 — Goodberry's Best Flavor 2026 (created, live poll)

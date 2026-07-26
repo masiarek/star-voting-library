@@ -27,24 +27,13 @@ In the runnable [style-gallery election](../../../01_STAR/_main/cases/cases_page
 
 Then the 5-star ballot has nothing left to work with. Here is that election, live on BetterVoting — three voters, the same five candidates, every voter marking exactly one:
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2jpcxd) · **[results ↗](https://bettervoting.com/2jpcxd/results)** (election `2jpcxd`, Test ID BV2255).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c8h3tb) · **[results ↗](https://bettervoting.com/c8h3tb/results)** (election `c8h3tb`, Test ID BV2256).
 
 | Voter | Andre | Blake | Carmen | David | Ella |
 |---|:--:|:--:|:--:|:--:|:--:|
 | 1 — *"Carmen. Period."* | – | – | **5** | – | – |
 | 2 — *"Ella. Period."* | – | – | – | – | **5** |
 | 3 — *"Ella. Period."* | – | – | – | – | **5** |
-
-That single mark was then written on **all three ballot formats** — choose-one, 0–5 score, and ranked — and counted four ways. Every count returns the same name:
-
-| Method | Ballot it reads | Winner |
-|---|---|:--:|
-| **[Choose-One (Plurality)](../../topics/plurality.md)** | one mark | Ella |
-| **[STAR](../STAR_start_here.md)** | scores, then a runoff | Ella |
-| **[RCV-IRV](../../RCV_IRV/README.md)** | a ranking, eliminate-and-transfer | Ella |
-| **[Ranked Robin](../../RCV_Ranked_Robin/why_ranked_robin.md)** | a ranking, every pair head-to-head | Ella |
-
-**And that agreement is the whole point — it is not a win for STAR.** When every ballot carries one bit, every method has the same one bit to read, so none of them can do better than choose-one. STAR's scoring round is just a first-choice count here; its runoff still runs, but the two finalists were already the only candidates anyone said anything about:
 
 ```
 Scoring Round
@@ -64,9 +53,9 @@ Automatic Runoff Round
    Ella 2 (67%) vs Carmen 1 (33%); majority = 2.
 ```
 
-Andre, Blake and David finish on zero having had *nothing* said about them — not "we considered them and rated them last," simply nothing. Want the whole count? See the full LH report → [`bv2255_2jpcxd_all-traditional-ballots.md`](../../../01_STAR/_main/cases/cases_pages/bv2255_2jpcxd_all-traditional-ballots.md).
+The scoring round has become nothing but a first-choice tally, and the runoff has nothing left to add — the two finalists were already the only candidates anyone said anything about. Andre, Blake and David finish on zero having had *nothing* said about them: not "we considered them and rated them last," simply nothing. A ballot carrying one bit per voter gives the method one bit to read, so this count could not have done better than the choose-one ballot it is imitating.
 
-The mirror image is worth clicking too: in [minority winner](../../../method_comparisons/minority_winner/README.md) the voters *do* use the range, the methods promptly disagree, and the fuller counts find a candidate a majority actually prefers. Same five-minute setup, opposite lesson — the method can only ever read what the ballot says.
+**Said plainly: as an approach and as a strategy, this is a poor use of a STAR ballot** — *unless* one candidate really is your only acceptable choice, period, in which case it is exactly honest and you should vote it. Everything on this page still holds: nothing is penalized, nothing can be spoiled, and a backup score can never hurt your favorite. You are simply choosing not to use the ballot. (Full count: [`bv2256_c8h3tb_traditional_style.md`](../../../01_STAR/_main/cases/cases_pages/bv2256_c8h3tb_traditional_style.md).)
 
 ## Related
 

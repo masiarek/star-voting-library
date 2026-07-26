@@ -108,7 +108,6 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 - [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
 - [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
 - [Curriculum 101.3 — How you're allowed to vote](../CURRICULUM.md) — this page's slot in the learning path
-- [When *everyone* votes traditional](../../01_STAR/_main/cases/cases_pages/bv2255_2jpcxd_all-traditional-ballots.md) — one mark each, counted four ways, and all four methods agree (BV2255) — because a one-bit ballot gives every method the same one bit
 - Small demos: [`03a` bullet vote](../../01_STAR/_main/cases/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../../01_STAR/_main/cases/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../../01_STAR/_main/cases/03c_c6_b8_style-gallery.yaml)
 
 ## Learn more
