@@ -1,0 +1,904 @@
+{
+  "Election": {
+    "election_id": "6tthfv",
+    "title": "BV2252 — Goodberry's Frozen Custard, Cary NC — Best Flavor 2026",
+    "description": "Which Goodberry's flavor is the best? This is a real poll, counted with STAR Voting (Score Then Automatic Runoff). Ten flavors from the Cary menu board are on the ballot, and write-ins are open if your favorite isn't listed. Score EVERY flavor you have an opinion about from 0 to 5 stars — give your favorite 5, give anything you'd be unhappy with 0, and use the middle for the ones you'd happily eat but wouldn't pick first. You are rating, not ranking, so giving two flavors the same score is perfectly fine and is not a wasted vote. The count then happens in two steps. First the scoring round adds up every star, and the two highest-scoring flavors become the finalists. Then the automatic runoff counts every ballot once more, for whichever of those two finalists that ballot scored higher; the finalist preferred by more voters wins. That second step is what a plain star-rating poll is missing — it means the winning flavor is the one more people actually preferred, not merely the one that collected the most generous ratings. It also means a long menu is safe: adding a tenth flavor similar to the ninth cannot split their support the way a pick-one poll would, so you never have to vote strategically against a flavor you like. Paper ballots for this election are printed straight from its own data, so a table at the shop and the online voters are casting the very same ballot into the very same count. Full lesson & tabulation: https://masiarek.github.io/star-voting-library/00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.html",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2252 — Goodberry's Frozen Custard, Cary NC — Best Flavor 2026",
+        "race_id": "47b74204-9e93-42b1-9cf9-0e4532105e56",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "0a395add-30e1-44c9-94c9-1b954507fbf3",
+            "candidate_name": "Banana Pudding"
+          },
+          {
+            "candidate_id": "f11edca0-48b4-49a7-b521-5f565c90f166",
+            "candidate_name": "Butter Pecan"
+          },
+          {
+            "candidate_id": "6eef2880-d9aa-4ff1-8a96-10eb9061adeb",
+            "candidate_name": "Chocolate Malt"
+          },
+          {
+            "candidate_id": "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1",
+            "candidate_name": "Cookie Dough"
+          },
+          {
+            "candidate_id": "c4336489-40ea-4bb6-93c6-7a93c60262fa",
+            "candidate_name": "Jamocha"
+          },
+          {
+            "candidate_id": "50af3368-7f37-46d6-8310-20a6caa1665b",
+            "candidate_name": "Key Lime"
+          },
+          {
+            "candidate_id": "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8",
+            "candidate_name": "Mint Chocolate Chip"
+          },
+          {
+            "candidate_id": "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1",
+            "candidate_name": "Peanut Butter"
+          },
+          {
+            "candidate_id": "f665a5bf-8a76-47c2-8333-edbaefcb2585",
+            "candidate_name": "Salted Caramel"
+          },
+          {
+            "candidate_id": "1b123498-3ef0-4811-8148-4ef3f8e829f4",
+            "candidate_name": "Sweet Cream"
+          }
+        ],
+        "description": "",
+        "enable_write_in": true
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-07-26T01:52:09.747Z",
+    "update_date": "1785030729747",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "6eef2880-d9aa-4ff1-8a96-10eb9061adeb",
+          "name": "Chocolate Malt",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "1b123498-3ef0-4811-8148-4ef3f8e829f4",
+          "name": "Sweet Cream",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "f11edca0-48b4-49a7-b521-5f565c90f166",
+          "name": "Butter Pecan",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "f665a5bf-8a76-47c2-8333-edbaefcb2585",
+          "name": "Salted Caramel",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "0a395add-30e1-44c9-94c9-1b954507fbf3",
+          "name": "Banana Pudding",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1",
+          "name": "Peanut Butter",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "c4336489-40ea-4bb6-93c6-7a93c60262fa",
+          "name": "Jamocha",
+          "tieBreakOrder": 6,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8",
+          "name": "Mint Chocolate Chip",
+          "tieBreakOrder": 7,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "50af3368-7f37-46d6-8310-20a6caa1665b",
+          "name": "Key Lime",
+          "tieBreakOrder": 8,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1",
+          "name": "Cookie Dough",
+          "tieBreakOrder": 9,
+          "votesPreferredOver": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+          },
+          "winsAgainst": {
+            "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+            "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+            "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+            "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+            "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+            "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+            "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+            "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+            "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+            "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "6eef2880-d9aa-4ff1-8a96-10eb9061adeb",
+              "name": "Chocolate Malt",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+                "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+                "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+                "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+                "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+                "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+                "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+                "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+                "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+                "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+              },
+              "winsAgainst": {
+                "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+                "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+                "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+                "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+                "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+                "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+                "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+                "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+                "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+                "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "1b123498-3ef0-4811-8148-4ef3f8e829f4",
+              "name": "Sweet Cream",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+                "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+                "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+                "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+                "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+                "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+                "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+                "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+                "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+                "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+              },
+              "winsAgainst": {
+                "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+                "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+                "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+                "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+                "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+                "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+                "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+                "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+                "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+                "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+              },
+              "score": 0,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream",
+                "Butter Pecan",
+                "Salted Caramel",
+                "Banana Pudding",
+                "Peanut Butter",
+                "Jamocha",
+                "Mint Chocolate Chip",
+                "Key Lime",
+                "Cookie Dough"
+              ],
+              "score": 0
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_too_many_candidates"
+            },
+            {
+              "key": "tabulation_logs.star.five_star_tied",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream",
+                "Butter Pecan",
+                "Salted Caramel",
+                "Banana Pudding",
+                "Peanut Butter",
+                "Jamocha",
+                "Mint Chocolate Chip",
+                "Key Lime",
+                "Cookie Dough"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.random_first",
+              "name": "Chocolate Malt",
+              "tiebreak_candidate_names": "Chocolate Malt, Sweet Cream, Butter Pecan, Salted Caramel, Banana Pudding, Peanut Butter, Jamocha, Mint Chocolate Chip, Key Lime, Cookie Dough"
+            },
+            {
+              "key": "tabulation_logs.star.random_second",
+              "name": "Sweet Cream",
+              "tiebreak_candidate_names": "Chocolate Malt, Sweet Cream, Butter Pecan, Salted Caramel, Banana Pudding, Peanut Butter, Jamocha, Mint Chocolate Chip, Key Lime, Cookie Dough"
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream"
+              ],
+              "votes": 0,
+              "equal_votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream"
+              ],
+              "stars": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "Chocolate Malt",
+                "Sweet Cream"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "Chocolate Malt",
+              "runner_up": "Sweet Cream",
+              "tiebreak_candidate_names": "Chocolate Malt, Sweet Cream, Butter Pecan, Salted Caramel, Banana Pudding, Peanut Butter, Jamocha, Mint Chocolate Chip, Key Lime, Cookie Dough"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "Chocolate Malt",
+              "runner_up": "Sweet Cream"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "6eef2880-d9aa-4ff1-8a96-10eb9061adeb",
+            "name": "Chocolate Malt",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "1b123498-3ef0-4811-8148-4ef3f8e829f4",
+            "name": "Sweet Cream",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "f11edca0-48b4-49a7-b521-5f565c90f166",
+            "name": "Butter Pecan",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "f665a5bf-8a76-47c2-8333-edbaefcb2585",
+            "name": "Salted Caramel",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "0a395add-30e1-44c9-94c9-1b954507fbf3",
+            "name": "Banana Pudding",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1",
+            "name": "Peanut Butter",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c4336489-40ea-4bb6-93c6-7a93c60262fa",
+            "name": "Jamocha",
+            "tieBreakOrder": 6,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8",
+            "name": "Mint Chocolate Chip",
+            "tieBreakOrder": 7,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "50af3368-7f37-46d6-8310-20a6caa1665b",
+            "name": "Key Lime",
+            "tieBreakOrder": 8,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1",
+            "name": "Cookie Dough",
+            "tieBreakOrder": 9,
+            "votesPreferredOver": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": 0,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": 0,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": 0,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": 0,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": 0,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": 0,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": 0,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": 0,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": 0,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": 0
+            },
+            "winsAgainst": {
+              "6eef2880-d9aa-4ff1-8a96-10eb9061adeb": false,
+              "1b123498-3ef0-4811-8148-4ef3f8e829f4": false,
+              "f11edca0-48b4-49a7-b521-5f565c90f166": false,
+              "f665a5bf-8a76-47c2-8333-edbaefcb2585": false,
+              "0a395add-30e1-44c9-94c9-1b954507fbf3": false,
+              "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1": false,
+              "c4336489-40ea-4bb6-93c6-7a93c60262fa": false,
+              "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8": false,
+              "50af3368-7f37-46d6-8310-20a6caa1665b": false,
+              "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 0
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "6eef2880-d9aa-4ff1-8a96-10eb9061adeb",
+        "1b123498-3ef0-4811-8148-4ef3f8e829f4",
+        "f11edca0-48b4-49a7-b521-5f565c90f166",
+        "f665a5bf-8a76-47c2-8333-edbaefcb2585",
+        "0a395add-30e1-44c9-94c9-1b954507fbf3",
+        "ac10c4c9-79a8-4f5d-a95a-a9f25f71aab1",
+        "c4336489-40ea-4bb6-93c6-7a93c60262fa",
+        "4cbb16e4-5e20-4d6d-ad2f-69397f8bb9a8",
+        "50af3368-7f37-46d6-8310-20a6caa1665b",
+        "aa73e465-32f6-4b4f-88bb-d2c658a8c0f1"
+      ],
+      "writeInDiagnostics": {
+        "numScoresDisregardedForUnprocessed": 0,
+        "numScoresDisregarded": 0
+      }
+    }
+  ]
+}

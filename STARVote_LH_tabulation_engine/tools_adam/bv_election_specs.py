@@ -4098,7 +4098,55 @@ MARGINS_SPEC = {
 }
 
 
-ELECTIONS: list = [MARGINS_SPEC]   # BV2251 — Margins matter: Copeland vs Borda
+# --- BV2252 — Goodberry's Frozen Custard (Cary, NC): Best Flavor 2026 ---------
+# A REAL, live poll — not a constructed teaching case. No seed ballots: the
+# election is minted empty and collects actual votes (paper ballots printed from
+# the export with bv_ballot_sheet.py, plus the QR/online route). Ten flavors off
+# the Cary shop's permanent menu board, spread across its families (custard
+# classic, chocolate, nut, coffee, citrus, mix-in, Southern signature); write-ins
+# stay ON so a voter whose favorite is Blueberry, Nutella or a calendar special
+# (Lavender Limoncello, Piña Colada, Tiramisu…) can still say so.
+# Name note: Goodberry's sells FROZEN CUSTARD, not ice cream — the title says so.
+_GOODBERRY_CANDS = [
+    "Banana Pudding", "Butter Pecan", "Chocolate Malt", "Cookie Dough",
+    "Jamocha", "Key Lime", "Mint Chocolate Chip", "Peanut Butter",
+    "Salted Caramel", "Sweet Cream",
+]
+
+GOODBERRYS_SPEC = {
+    "test_id": "BV2252",
+    "title": "Goodberry's Frozen Custard, Cary NC — Best Flavor 2026",
+    "description": (
+        "Which Goodberry's flavor is the best? This is a real poll, counted with STAR Voting "
+        "(Score Then Automatic Runoff). Ten flavors from the Cary menu board are on the ballot, "
+        "and write-ins are open if your favorite isn't listed. Score EVERY flavor you have an "
+        "opinion about from 0 to 5 stars — give your favorite 5, give anything you'd be unhappy "
+        "with 0, and use the middle for the ones you'd happily eat but wouldn't pick first. You "
+        "are rating, not ranking, so giving two flavors the same score is perfectly fine and is "
+        "not a wasted vote. The count then happens in two steps. First the scoring round adds up "
+        "every star, and the two highest-scoring flavors become the finalists. Then the automatic "
+        "runoff counts every ballot once more, for whichever of those two finalists that ballot "
+        "scored higher; the finalist preferred by more voters wins. That second step is what a "
+        "plain star-rating poll is missing — it means the winning flavor is the one more people "
+        "actually preferred, not merely the one that collected the most generous ratings. It also "
+        "means a long menu is safe: adding a tenth flavor similar to the ninth cannot split their "
+        "support the way a pick-one poll would, so you never have to vote strategically against a "
+        "flavor you like. Paper ballots for this election are printed straight from its own data, "
+        "so a table at the shop and the online voters are casting the very same ballot into the "
+        "very same count. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/00_start_here/STAR_Voting/hands_on/running_a_paper_ballot_demo.html"
+    ),
+    "enable_write_in": True,
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": _GOODBERRY_CANDS,
+    "ballots": [],          # minted EMPTY — real voters fill it
+    "expected": "no seed ballots; live poll — winner decided by real votes",
+}
+
+ELECTIONS: list = [GOODBERRYS_SPEC]   # BV2252 — Goodberry's Best Flavor 2026 (live poll)
+# Previously: [MARGINS_SPEC]  # BV2251 — Margins matter: Copeland vs Borda (created)
 # Previously: [C1788_SPEC]  # BV2250 — Condorcet's 1788 rebuttal to Borda (created)
 # Previously: [WCL_SPEC]  # BV2249 — weak Condorcet loser (created)
 # Previously: [FR_HONEST_SPEC, FR_STRAT_SPEC, WA_HONEST_SPEC, WA_STRAT_SPEC]  # BV2229-2232 (created)

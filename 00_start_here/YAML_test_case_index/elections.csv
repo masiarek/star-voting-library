@@ -84,6 +84,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 4jmgrd,BV2234 — The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp,1,single-race,31,STAR,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
+6tthfv,"BV2252 — Goodberry's Frozen Custard, Cary NC — Best Flavor 2026",1,single-race,0,STAR,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 74pbyg,"BV2237 — Noise Soup — weak factions, cross-winds, flat-liners and static",1,single-race,47,STAR,BV
 7j2bqf,BV2229 — FairVote-vs-STAR check: French 2017 honest — STAR elects the centrist Macron,1,single-race,100,STAR,BV
@@ -267,9 +268,11 @@ LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center 
 LH:reinf_combined_ben_c3_b9_rr,"Reinforcement — Combined, Ben branch (9 voters; both halves say Ben, the whole says Ada)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_combined_c3_b9_rr,"Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_combined_c3_b9_star,"Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)",1,single-race,9,STAR,LH-only
+LH:reinf_combined_cara_c3_b9_rr,"Reinforcement — Combined, Cara branch (9 voters; both halves say Cara, the whole says Ben)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_north_c3_b6_rr,"Reinforcement — North district alone (6 voters, a perfect cycle)",1,single-race,6,RankedRobin,LH-only
 LH:reinf_south_ben_c3_b3_rr,"Reinforcement — South district, Ben branch (3 voters, Ben is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:reinf_south_c3_b3_rr,"Reinforcement — South district alone (3 voters, Ada is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
+LH:reinf_south_cara_c3_b3_rr,"Reinforcement — South district, Cara branch (3 voters, Cara is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
 LH:reversal_irv_original,"Reversal symmetry — RCV-IRV, original: A wins (best)",1,single-race,24,IRV,LH-only
 LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",1,single-race,24,IRV,LH-only
