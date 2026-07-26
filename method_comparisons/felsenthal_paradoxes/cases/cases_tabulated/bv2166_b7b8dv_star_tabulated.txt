@@ -67,10 +67,6 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: Amy > Boone > Cass > Amy)
 
-[Divergence from STAR]
-  STAR     = Cass
-  Approval = Amy   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 13 ballots.

@@ -30,7 +30,6 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = D
   Choose-One (Plurality) = B   (differs from STAR)
   RCV-IRV                = B   (differs from STAR)
-  Approval               = C   (differs from STAR)
   RCV-RR (Condorcet)     = E   (differs from STAR)
   Note: 429 of 597 ballots (72%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be

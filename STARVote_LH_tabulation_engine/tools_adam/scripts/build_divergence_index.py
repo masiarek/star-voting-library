@@ -425,7 +425,8 @@ def _explanation(r):
             f"showing that the choice of method matters most exactly when voters are split.")
     return (
         f"STAR, RCV-IRV and Ranked Robin all agree on **{S}**. Only **Approval** differs, "
-        f"electing **{A}**: Approval counts every score of 3–5 as one equal 'approve' and "
+        f"electing **{A}**: Approval counts every score in the upper half of the ballot's "
+        f"scale (3–5 on a 0–5 ballot) as one equal 'approve' and "
         f"ignores intensity, rewarding {A}'s *breadth* of acceptability over {S}'s stronger "
         f"but more concentrated support. A **threshold story about Approval**, not a "
         f"STAR-vs-IRV teaching case.")

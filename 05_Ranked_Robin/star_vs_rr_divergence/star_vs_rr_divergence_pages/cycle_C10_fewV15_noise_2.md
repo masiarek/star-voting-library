@@ -40,7 +40,6 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = J
   Choose-One (Plurality) = G   (differs from STAR)
   RCV-IRV                = B   (differs from STAR)
-  Approval               = F   (differs from STAR)
   RCV-RR                 = F   (differs from STAR)
   Note: 15 of 15 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be

@@ -87,10 +87,6 @@ Legend: For - Equal Support - Against
 [Condorcet Loser]
   Condorcet Loser: Evan — loses every head-to-head matchup
 
-[Divergence from STAR]
-  STAR     = Carmen
-  Approval = Andre   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 40 ballots.

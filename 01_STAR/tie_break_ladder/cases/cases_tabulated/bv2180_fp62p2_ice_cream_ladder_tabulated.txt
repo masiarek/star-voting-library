@@ -77,7 +77,6 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = Strawberry
   Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
-  Approval               = Chocolate   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

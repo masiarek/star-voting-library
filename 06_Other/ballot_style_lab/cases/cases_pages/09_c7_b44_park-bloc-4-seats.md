@@ -109,7 +109,6 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Dogwood
   Choose-One (Plurality) = Aspen   (differs from STAR)
   RCV-IRV                = Aspen   (differs from STAR)
-  Approval               = Aspen   (differs from STAR)
   Note: 26 of 44 ballots (59%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be
         an artifact of score-to-rank tie-breaking rather than a deep

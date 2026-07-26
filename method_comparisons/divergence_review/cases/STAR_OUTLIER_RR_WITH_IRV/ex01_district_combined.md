@@ -64,7 +64,6 @@ Legend: For - Equal Support - Against
   STAR                   = Carmen
   Choose-One (Plurality) = Elena   (differs from STAR)
   RCV-IRV                = Elena   (differs from STAR)
-  Approval               = Avery   (differs from STAR)
   RCV-RR (Condorcet)     = Elena   (differs from STAR)
   Note: 18 of 18 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be

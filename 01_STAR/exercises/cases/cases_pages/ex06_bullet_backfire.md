@@ -47,7 +47,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Cash
   Choose-One (Plurality) = Ari   (differs from STAR)
-  Approval               = Ari   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 
@@ -99,7 +98,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Cash — matches the STAR winner
 
 [Condorcet Loser]
-  Condorcet Loser: Ari — loses every head-to-head matchup — elected by Choose-One (Plurality), Approval!
+  Condorcet Loser: Ari — loses every head-to-head matchup — elected by Choose-One (Plurality)!
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score

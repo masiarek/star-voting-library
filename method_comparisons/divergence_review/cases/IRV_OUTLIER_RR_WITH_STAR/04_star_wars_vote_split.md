@@ -61,7 +61,6 @@ Legend: For - Equal Support - Against
   STAR                   = Leia
   Choose-One (Plurality) = Vader   (differs from STAR)
   RCV-IRV                = Skywalker   (differs from STAR)
-  Approval               = Skywalker   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone

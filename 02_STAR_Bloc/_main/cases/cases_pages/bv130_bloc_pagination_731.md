@@ -46,7 +46,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Someone I Like
   Choose-One (Plurality) = The Lesser Evil   (differs from STAR)
-  Approval               = Santa Claus   (differs from STAR)
 
 --- Bloc STAR Voting Method (3 winners) ---
 

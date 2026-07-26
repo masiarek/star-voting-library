@@ -81,7 +81,6 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
-  Approval               = Alice   (differs from STAR)
 
 --- Reweighted Range Voting Method (3 winners) ---
 [Reweighted Range Voting]

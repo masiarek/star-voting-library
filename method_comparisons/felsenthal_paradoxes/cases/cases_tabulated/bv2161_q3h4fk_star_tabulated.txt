@@ -61,10 +61,6 @@ Legend: For - Equal Support - Against
 [Condorcet Winner]
   No Condorcet winner (majority cycle: A > C > B > A)
 
-[Divergence from STAR]
-  STAR     = C
-  Approval = B   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 7 ballots.

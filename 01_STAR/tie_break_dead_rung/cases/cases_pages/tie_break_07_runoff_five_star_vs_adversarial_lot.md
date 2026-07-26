@@ -32,7 +32,6 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Ann
   Choose-One (Plurality) = Ben   (differs from STAR)
   RCV-IRV                = Ben   (differs from STAR)
-  Approval               = Ben   (differs from STAR)
   RCV-RR                 = Ben   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

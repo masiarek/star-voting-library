@@ -60,7 +60,6 @@ Legend: For - Equal Support - Against
   STAR                   = Ann
   Choose-One (Plurality) = Ben   (differs from STAR)
   RCV-IRV                = Ben   (differs from STAR)
-  Approval               = Ben   (differs from STAR)
   RCV-RR                 = Ben   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.

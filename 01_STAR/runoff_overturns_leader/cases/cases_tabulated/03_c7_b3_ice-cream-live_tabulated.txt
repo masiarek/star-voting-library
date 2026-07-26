@@ -69,10 +69,6 @@ Legend: For - Equal Support - Against
 [Condorcet Loser]
   No strict Condorcet loser; jointly weak Condorcet losers: VanillaClssc, Peach (winless — pairwise ties)
 
-[Divergence from STAR]
-  STAR     = ChocoAlm
-  Approval = ChocoDrk   (differs from STAR)
-
 [Runoff Reversal]
  - Score Round Winner(s) = (ChocoDrk)
  - Runoff Round Winner   = (ChocoAlm)

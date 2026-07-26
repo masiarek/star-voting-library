@@ -54,7 +54,7 @@ Legend: For - Equal Support - Against
   No strict Condorcet winner; unbeaten candidates: A, E (pairwise ties)
 
 [Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: A, B, D (winless — pairwise ties) — A elected by STAR, Choose-One (Plurality), Approval!
+  No strict Condorcet loser; jointly weak Condorcet losers: A, B, D (winless — pairwise ties) — A elected by STAR, Choose-One (Plurality)!
 
 [Divergence from STAR]
   STAR   = A

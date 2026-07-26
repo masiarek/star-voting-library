@@ -36,10 +36,6 @@ Ann,Bob,Cal
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Cal
-  Approval = Ann   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]

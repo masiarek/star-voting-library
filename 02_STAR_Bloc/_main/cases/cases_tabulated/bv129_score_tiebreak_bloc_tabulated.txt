@@ -79,11 +79,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Carmen — matches the STAR winner
 
 [Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Andre, Blake (winless — pairwise ties) — Andre elected by Approval!
-
-[Divergence from STAR]
-  STAR     = Carmen
-  Approval = Andre   (differs from STAR)
+  No strict Condorcet loser; jointly weak Condorcet losers: Andre, Blake (winless — pairwise ties)
 
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]

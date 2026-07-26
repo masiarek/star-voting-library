@@ -47,7 +47,7 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Cole
   Choose-One (Plurality) = Amos   (differs from STAR)
   RCV-IRV                = Amos   (differs from STAR)
-  Approval               = Amos   (differs from STAR)
+  Approval               = Bree   (differs from STAR)
   Note: 9 of 9 ballots (100%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
@@ -122,7 +122,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Cole — matches the STAR winner
 
 [Condorcet Loser]
-  Condorcet Loser: Bree — loses every head-to-head matchup
+  Condorcet Loser: Bree — loses every head-to-head matchup — elected by Approval!
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score

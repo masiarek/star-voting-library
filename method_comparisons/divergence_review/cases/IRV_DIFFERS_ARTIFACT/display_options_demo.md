@@ -61,7 +61,6 @@ Legend: For - Equal Support - Against
   STAR                   = Don
   Choose-One (Plurality) = Bob   (differs from STAR)
   RCV-IRV                = Bob   (differs from STAR)
-  Approval               = Ann   (differs from STAR)
   Note: 2 of 4 ballots (50%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep

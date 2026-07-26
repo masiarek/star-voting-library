@@ -38,10 +38,6 @@ Amy,Boone,Cass
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Cass
-  Approval = Amy   (differs from STAR)
-
 --- STAR Voting Method (single winner) ---
 
 [STAR Voting]

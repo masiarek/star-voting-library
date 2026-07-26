@@ -65,7 +65,6 @@ Legend: For - Equal Support - Against
   STAR                   = G
   Choose-One (Plurality) = F   (differs from STAR)
   RCV-IRV                = F   (differs from STAR)
-  Approval               = D   (differs from STAR)
   RCV-RR (Condorcet)     = F   (differs from STAR)
   Note: 598 of 598 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be

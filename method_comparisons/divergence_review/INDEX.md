@@ -7,15 +7,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 ## Base rate
 
 - Scanned **209** single-winner STAR elections (skipped 150 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **124** (59%) diverge from STAR under at least one method; **85** agree across the board.
+- **123** (59%) diverge from STAR under at least one method; **86** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 28 |
+| IRV_OUTLIER_RR_WITH_STAR | 29 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 8 |
 | CYCLE_OR_THREE_WAY | 36 |
-| APPROVAL_OR_MINOR | 43 |
+| APPROVAL_OR_MINOR | 41 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (121 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (119 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -35,7 +35,8 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
 - **[09_c4_b100_tennessee-capital](cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md)** — `01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
 - **[bv2184_fyy886_lunch_vote](cases/IRV_OUTLIER_RR_WITH_STAR/bv2184_fyy886_lunch_vote.md)** — `01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml` (3c/5b)  
-    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza
+    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza  
+    _also at: `YAML_library/1_positive/trash_delete.yaml`_
 - **[ex03_five_verdicts](cases/IRV_OUTLIER_RR_WITH_STAR/ex03_five_verdicts.md)** — `01_STAR/exercises/cases/ex03_five_verdicts.yaml` (3c/9b)  
     STAR=**Cherry** · IRV=Banana · RR=Cherry · Approval=Cherry · Score=Cherry · Condorcet=Cherry
 - **[ex05_center_squeeze](cases/IRV_OUTLIER_RR_WITH_STAR/ex05_center_squeeze.md)** — `01_STAR/exercises/cases/ex05_center_squeeze.yaml` (3c/9b)  
@@ -140,7 +141,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Ben** · IRV=Cora · RR=Ben · Approval=Cora · Score=Cora · Condorcet=Ben  
     _flags: 2 tied-score ballot(s)_
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
-    STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
+    STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Bree · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
 - **[bv2230_2hqmrd_french_2017_burial](cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml` (4c/100b)  
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
@@ -225,14 +226,10 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 
-### APPROVAL_OR_MINOR — 43
+### APPROVAL_OR_MINOR — 41
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
-- **[03b_c3_b3_1_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_1_style-protest-vote.md)** — `01_STAR/_main/cases/03b_c3_b3_1_style-protest-vote.yaml` (3c/3b)  
-    STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
-- **[03b_c3_b3_2_expand_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_2_expand_style-protest-vote.md)** — `01_STAR/_main/cases/03b_c3_b3_2_expand_style-protest-vote.yaml` (3c/3b)  
-    STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[04b_c4_b3_display-options-all](cases/APPROVAL_OR_MINOR/04b_c4_b3_display-options-all.md)** — `01_STAR/_main/cases/04b_c4_b3_display-options-all.yaml` (4c/3b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Vanilla · Score=Strawberry · Condorcet=Strawberry
 - **[bv2182_tg4779_faq_runoff_reversal](cases/APPROVAL_OR_MINOR/bv2182_tg4779_faq_runoff_reversal.md)** — `01_STAR/_main/cases/bv2182_tg4779_faq_runoff_reversal.yaml` (3c/10b)  

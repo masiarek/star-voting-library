@@ -1014,8 +1014,12 @@ def print_condorcet(candidates, matrix, star_winner=None, finalists=None,
                      if any(v > 0 for v in fc_counts.values()) else None)
         if plurality is not None:
             method_winners.append(("Choose-One (Plurality)", plurality))
-        appr = approval_winner(candidates, ballots, priority)
-        if appr is not None:
+        # Only name Approval here when its tally actually singles someone out.
+        # An empty or tied-at-the-top tally would otherwise flag whoever sits
+        # in the first CSV column as having "elected the Condorcet loser" —
+        # an accusation manufactured entirely by the tiebreak.
+        appr, appr_tied, _, _ = approval_top(candidates, ballots, priority)
+        if appr is not None and len(appr_tied) == 1:
             method_winners.append(("Approval", appr))
     flags = []
     for loser in losers:
@@ -1085,26 +1089,90 @@ def compute_irv_winner(candidates, ballots, priority):
         return None, 0, 0
 
 
-def approval_winner(candidates, ballots, priority):
+def approval_threshold(candidates, ballots):
     """
-    Approval winner (single): a candidate is approved on a ballot for every
-    score of 3, 4, or 5 (stars). The candidate with the most approvals wins;
-    a tie is broken by `priority` order (left-to-right CSV column sequence) —
-    the same tiebreak STAR uses — so a single winner is returned.
+    The score at which a ballot counts as an approval, fitted to the ballot
+    set in front of us instead of assumed to be 3 (the midpoint of 0..5).
+
+    The 0..5 convention is kept — 3, 4 or 5 stars is an approval — with one
+    correction: the threshold is never allowed above the highest score anyone
+    actually used, and it scales up for ballots wider than 0..5.
+
+        0..5  -> 3   the usual STAR ballot (unchanged)
+        0..4  -> 3   a 0..5 ballot where nobody used the top rung: still 3
+        0..2  -> 2   a compressed scale: only the top grade clears
+        0/1   -> 1   approval-style ballots: ANY mark approves
+        0..10 -> 5   a wider range ballot (3 would be a very low bar)
+
+    The clamp is the actual bug fix. A threshold ABOVE every score on the
+    ballot cannot be met by anyone, so the tally comes out all-zero, and an
+    all-zero tally has no winner to report — but it used to fall through to
+    priority order and print the first CSV column as a confident result. On a
+    0/1 ballot the clamp gives 1, which is exactly `tabulate_approval`'s rule
+    ("any non-zero score = approval"); since that tabulator accepts ONLY 0/1
+    ballots, the two can no longer disagree about what an approval is.
+
+    Deliberately NOT scaled to the observed maximum in the 0..4 band: a STAR
+    ballot on which nobody happened to award a 5 is still a 0..5 ballot (the
+    `tie_break_dead_rung` "no fives" cases are exactly this), and dropping its
+    threshold to 2 would silently reinterpret the election.
     """
-    approvals = {
-        c: sum(1 for b in ballots if b.get(c, 0) >= 3) for c in candidates
+    top_score = max((b.get(c, 0) for b in ballots for c in candidates),
+                    default=0)
+    # ceil(n/2) of the ballot's scale, treating anything up to 0..5 as 0..5,
+    # then clamped so the bar is always reachable.
+    half = (max(top_score, 5) + 1) // 2
+    return max(1, min(half, top_score))
+
+
+def approval_counts(candidates, ballots):
+    """
+    Approval tally for `candidates`: how many ballots approve each one, using
+    the scale-aware threshold above. Returns `(counts, threshold)`.
+    """
+    threshold = approval_threshold(candidates, ballots)
+    counts = {
+        c: sum(1 for b in ballots if b.get(c, 0) >= threshold)
+        for c in candidates
     }
-    if not approvals:
-        return None
-    top = max(approvals.values())
+    return counts, threshold
+
+
+def approval_top(candidates, ballots, priority):
+    """
+    Approval result with enough detail for a caller to tell a real result from
+    a tie-break artifact. Returns `(winner, tied, counts, threshold)` where
+    `tied` is every candidate sharing the most approvals.
+
+    `winner` is the `priority`-first member of `tied` (left-to-right CSV column
+    order — the same tiebreak STAR uses), or **None when nobody was approved at
+    all**: an all-zero tally carries no information, so naming its "winner"
+    would just be reporting the first column.
+    """
+    counts, threshold = approval_counts(candidates, ballots)
+    if not counts:
+        return None, [], {}, threshold
     order = [c for c in (priority or candidates) if c in candidates]
     for c in candidates:  # any candidate missing from priority falls in last
         if c not in order:
             order.append(c)
-    tied = [c for c in candidates if approvals[c] == top]
-    tied.sort(key=lambda c: order.index(c))
-    return tied[0]
+    top = max(counts.values())
+    tied = sorted((c for c in candidates if counts[c] == top),
+                  key=order.index)
+    if top == 0:
+        return None, tied, counts, threshold
+    return tied[0], tied, counts, threshold
+
+
+def approval_winner(candidates, ballots, priority):
+    """
+    Approval winner (single): the candidate with the most approvals, where an
+    approval is any score at or above `approval_threshold` for this ballot set.
+    A tie is broken by `priority` order (left-to-right CSV column sequence) —
+    the same tiebreak STAR uses — so a single winner is returned. Returns None
+    when no ballot approved anyone (see `approval_top`).
+    """
+    return approval_top(candidates, ballots, priority)[0]
 
 
 def _approval_raw_problems(ballots_text):
@@ -1157,8 +1225,9 @@ def _approval_raw_problems(ballots_text):
 def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     """
     Tabulate an Approval Voting election. Ballots are approvals, so ANY non-zero
-    score counts as one approval (unlike the 3+ stars threshold the STAR
-    comparison block uses on 0..5 score ballots).
+    score counts as one approval — the same rule the STAR report's Approval
+    cross-check applies, which on these validated 0/1 rows scales its threshold
+    to 1 (see `approval_threshold`).
 
     Single-winner: the most-approved candidate wins. Multi-winner (seats >= 2)
     uses block/at-large approval: the `seats` most-approved candidates win.
@@ -1189,7 +1258,10 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
         print("Error: No valid ballots found in input.\n       Separate columns with commas (recommended), tabs, or consistent spaces —\n       e.g. a header 'A, B, C' then rows like '5, 4, 0'. Other delimiters (like\n       '|' or ';') aren't supported, and every row needs the same number of\n       values as the header.")
         sys.exit(1)
 
-    counts = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
+    # Shared with the STAR report's Approval cross-check so the two can never
+    # drift apart again. These rows are validated 0/1, so the scale-aware
+    # threshold is 1 and this stays exactly "any non-zero score = approval".
+    counts, _ = approval_counts(candidates, ballots)
     order = [c for c in (priority or candidates) if c in candidates]
     for c in candidates:
         if c not in order:
@@ -1845,7 +1917,7 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
     differ from STAR and agree with each other, they print as one combined line.
     """
     irv, tie_ballots, total = compute_irv_winner(candidates, ballots, priority)
-    approval = approval_winner(candidates, ballots, priority)
+    approval, approval_tied, _, _ = approval_top(candidates, ballots, priority)
     rr = copeland_winner(candidates, ballots, priority)
     condorcet = condorcet_winner(candidates, ballots)
 
@@ -1863,7 +1935,12 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
 
     plurality_diff = plurality is not None and plurality != star_winner
     irv_diff = irv is not None and irv != star_winner
-    approval_diff = approval is not None and approval != star_winner
+    # Approval only "disagrees" when its tally genuinely puts the STAR winner
+    # behind someone. If the STAR winner is tied for the most approvals,
+    # Approval is indifferent between them and the apparent divergence is just
+    # the column-order tiebreak — not a method difference worth printing.
+    approval_diff = (approval is not None and approval != star_winner
+                     and star_winner not in approval_tied)
     rr_diff = rr is not None and rr != star_winner
     condorcet_diff = condorcet is not None and condorcet != star_winner
 

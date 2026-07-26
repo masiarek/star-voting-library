@@ -41,7 +41,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Strawberry
   Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
-  Approval               = Chocolate   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---
 

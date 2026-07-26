@@ -37,10 +37,6 @@ Andre,Blake,Carmen
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Carmen
-  Approval = Andre   (differs from STAR)
-
 --- Bloc STAR Voting Method (2 winners) ---
 
 [Bloc STAR]
@@ -114,7 +110,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Carmen — matches the STAR winner
 
 [Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Andre, Blake (winless — pairwise ties) — Andre elected by Approval!
+  No strict Condorcet loser; jointly weak Condorcet losers: Andre, Blake (winless — pairwise ties)
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score

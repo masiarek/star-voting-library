@@ -45,7 +45,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Cara
   Choose-One (Plurality) = Ada   (differs from STAR)
-  Approval               = Ada   (differs from STAR)
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Ada)

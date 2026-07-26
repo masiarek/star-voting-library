@@ -15,7 +15,7 @@ On these ballots RCV-IRV reports **Amos** rather than STAR's **Cole**, but this 
 | STAR | **Cole** |
 | RCV-IRV | Amos |
 | Ranked Robin (RCV-RR) | Cole |
-| Approval | Amos |
+| Approval | Bree |
 | Range / Score | Amos |
 | Condorcet | Cole |
 
@@ -61,7 +61,7 @@ Legend: For - Equal Support - Against
   STAR                   = Cole
   Choose-One (Plurality) = Amos   (differs from STAR)
   RCV-IRV                = Amos   (differs from STAR)
-  Approval               = Amos   (differs from STAR)
+  Approval               = Bree   (differs from STAR)
   Note: 9 of 9 ballots (100%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep

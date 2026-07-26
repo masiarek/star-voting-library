@@ -25,10 +25,6 @@ Ann,Bob,Cal,Don
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Don
-  Approval = Cal   (differs from STAR)
-
 --- Bloc STAR Voting Method (2 winners) ---
 
 [Bloc STAR]

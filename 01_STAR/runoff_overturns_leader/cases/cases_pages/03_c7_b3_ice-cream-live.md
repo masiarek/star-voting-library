@@ -31,10 +31,6 @@ ChocoDrk, ChocoAlm, ChocoHzn, VanillaClssc, VanillaFrnch, Mango, Peach
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = ChocoAlm
-  Approval = ChocoDrk   (differs from STAR)
-
 [Runoff Reversal]
  - Score Round Winner(s) = (ChocoDrk)
  - Runoff Round Winner   = (ChocoAlm)

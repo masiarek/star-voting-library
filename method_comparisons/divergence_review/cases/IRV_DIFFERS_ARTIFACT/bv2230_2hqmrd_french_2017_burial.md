@@ -62,7 +62,6 @@ Legend: For - Equal Support - Against
   STAR                   = Melenchon
   Choose-One (Plurality) = Macron   (differs from STAR)
   RCV-IRV                = LePen   (differs from STAR)
-  Approval               = Fillon   (differs from STAR)
   Note: 100 of 100 ballots (100%) had equal non-zero scores, so their ranks
         were decided by candidate priority order. The RCV-IRV result may be
         an artifact of score-to-rank tie-breaking rather than a deep

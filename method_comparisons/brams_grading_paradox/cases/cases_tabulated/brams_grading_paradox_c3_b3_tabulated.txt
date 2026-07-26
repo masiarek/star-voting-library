@@ -75,11 +75,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Baker — matches the STAR winner
 
 [Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Adams, Chen (winless — pairwise ties) — Adams elected by Approval!
-
-[Divergence from STAR]
-  STAR     = Baker
-  Approval = Adams   (differs from STAR)
+  No strict Condorcet loser; jointly weak Condorcet losers: Adams, Chen (winless — pairwise ties)
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Adams)

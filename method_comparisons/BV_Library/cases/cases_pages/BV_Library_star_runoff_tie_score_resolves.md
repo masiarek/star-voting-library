@@ -27,7 +27,6 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR                   = Bill
   Choose-One (Plurality) = Allison   (differs from STAR)
-  Approval               = Allison   (differs from STAR)
   RCV-RR                 = Allison   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: cases_tabulated/BV_Library_star_runoff_tie_score_resolves_RCV-RR_tabulated.txt

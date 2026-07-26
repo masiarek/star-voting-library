@@ -59,7 +59,6 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = Bill
   Choose-One (Plurality) = Allison   (differs from STAR)
-  Approval               = Allison   (differs from STAR)
   RCV-RR                 = Allison   (differs from STAR)
 
 --- STAR Voting Method (single winner) ---

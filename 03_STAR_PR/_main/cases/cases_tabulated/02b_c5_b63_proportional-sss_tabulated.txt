@@ -80,7 +80,6 @@ Legend: For - Equal Support - Against
 [Divergence from STAR]
   STAR                   = Ben
   Choose-One (Plurality) = Alice   (differs from STAR)
-  Approval               = Alice   (differs from STAR)
 
 --- Sequentially Spent Score Voting Method (3 winners) ---
 [Sequentially Spent Score]

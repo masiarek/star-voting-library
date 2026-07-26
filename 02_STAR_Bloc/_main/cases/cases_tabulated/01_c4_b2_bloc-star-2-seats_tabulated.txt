@@ -59,10 +59,6 @@ Legend: For - Equal Support - Against
 [Condorcet Loser]
   No strict Condorcet loser; jointly weak Condorcet losers: Ann, Bob (winless — pairwise ties)
 
-[Divergence from STAR]
-  STAR     = Don
-  Approval = Cal   (differs from STAR)
-
 --- Bloc STAR Voting Method (2 winners) ---
 [Bloc STAR]
  Tabulating 2 ballots to fill 2 seats.

@@ -89,7 +89,6 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = Clara
   Choose-One (Plurality) = Bruno   (differs from STAR)
   RCV-IRV                = Bruno   (differs from STAR)
-  Approval               = Abby   (differs from STAR)
   Note: 9 of 31 ballots (29%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep

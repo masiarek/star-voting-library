@@ -34,10 +34,6 @@ Adams,Baker,Chen
 The count, step by step — the rounds and how the winner is reached:
 
 ```text
-[Divergence from STAR]
-  STAR     = Baker
-  Approval = Adams   (differs from STAR)
-
 [Runoff Reversal]
  - Score Round Winner(s) = (Adams)
  - Runoff Round Winner   = (Baker)
@@ -96,7 +92,7 @@ Legend: For - Equal Support - Against
   Condorcet Winner: Baker — matches the STAR winner
 
 [Condorcet Loser]
-  No strict Condorcet loser; jointly weak Condorcet losers: Adams, Chen (winless — pairwise ties) — Adams elected by Approval!
+  No strict Condorcet loser; jointly weak Condorcet losers: Adams, Chen (winless — pairwise ties)
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
