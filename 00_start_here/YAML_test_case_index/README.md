@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**438 election files** (388 single-winner, 50 multi-winner) across 16 method(s).
+**440 election files** (390 single-winner, 50 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 239 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 61 |
+| Ranked Robin (RCV-RR / Copeland) | 63 |
 | Approval | 15 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -306,7 +306,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (61)
+## Ranked Robin (RCV-RR / Copeland)  (63)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -370,6 +370,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`rr_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/rr_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — District A, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_district_A.yaml) |
 | [`rr_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/rr_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — District B, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_district_B.yaml) |
 | [`bv2170_pp2q4q_ranked_robin`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_ranked_robin.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head → _Casey_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_ranked_robin.yaml) |
+| [`copeland_vs_clones_c5_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/copeland_vs_clones_c5_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Copeland picks one, composition-consistency demands all five (tournament solutions) → _D_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/copeland_vs_clones_c5_b3.yaml) |
+| [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
 ## Approval  (15)

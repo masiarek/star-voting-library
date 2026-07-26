@@ -14,6 +14,8 @@ Every pair of candidates has a head-to-head winner, so the pairwise results form
 - A **Condorcet loser** points to no one.
 - A **cycle** (A→B→C→A) means the "beats" relation is **not transitive** — the famous **Condorcet paradox** (Condorcet, 1785). Majority rule, applied pairwise, can contradict itself. This is a property of the *voters' preferences*, not a flaw in any one method.
 
+**There is a whole academic field about just this graph** — rules that read the arrows and nothing else, Ranked Robin/Copeland among them. → [Tournament solutions](../topics/tournament_solutions.md), with the uncovered/Banks/bipartisan/Slater/Markov sets, McGarvey's theorem, and a [three-ballot election with five defensible winners](../../method_comparisons/tournament_solutions/).
+
 ## When there's no single winner: the Smith and Schwartz sets
 
 These generalize "the Condorcet winner" to the case where none exists.

@@ -24,7 +24,7 @@ Peter Fishburn (1977) sorted rules by how much of the **pairwise** data they nee
 
 | Tier | Reads | Members you'll meet |
 |:---:|---|---|
-| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../RCV_Ranked_Robin/)), Smith set, Top Cycle, uncovered set |
+| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../RCV_Ranked_Robin/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
 | **C2** | the **weighted tournament** — the same graph *with the margins on it* | Minimax/Simpson, Ranked Pairs, Schulze, Kemeny, Split Cycle — and Borda |
 | **C3** | more than the pairwise matrix contains | Dodgson, Young, **plurality**, RCV-IRV |
 
@@ -101,6 +101,7 @@ It is positive rather than an attack: it says what pairwise and score counting *
 ## Related
 
 - [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/) — the runnable exhibit
+- [Tournament solutions](tournament_solutions.md) — the C1 tier as its own field: what the rules that read *only* the tournament actually do, and where Ranked Robin steps outside it
 - [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/) — C1 vs C2, worked · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — the theorem underneath
 - [Summability](summability/) — the *how big* question · [pairwise counting](pairwise_counting.md) — what the matrix is
 - [The Condorcet reading list](condorcet/condorcet_reading_list.md) — the tiers applied to the Condorcet family · [the ranked-ballot zoo](ranked_ballot_methods_zoo.md)
