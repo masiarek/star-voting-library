@@ -61,6 +61,7 @@ r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner 
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
 rfyk46,BV2222 — STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate),2,contested (multi-race),100,"IRV, STAR",BV
 rhbfj7,"BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",2,contested (multi-race),9,"RankedRobin, STAR",BV
+t4by6x,"BV2254 — Reinforcement paradox: two towns pick Ada, together pick Cara",2,contested (multi-race),9,"RankedRobin, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
@@ -265,8 +266,6 @@ LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,singl
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
 LH:reinf_combined_ben_c3_b9_rr,"Reinforcement — Combined, Ben branch (9 voters; both halves say Ben, the whole says Ada)",1,single-race,9,RankedRobin,LH-only
-LH:reinf_combined_c3_b9_rr,"Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)",1,single-race,9,RankedRobin,LH-only
-LH:reinf_combined_c3_b9_star,"Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)",1,single-race,9,STAR,LH-only
 LH:reinf_combined_cara_c3_b9_rr,"Reinforcement — Combined, Cara branch (9 voters; both halves say Cara, the whole says Ben)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_north_c3_b6_rr,"Reinforcement — North district alone (6 voters, a perfect cycle)",1,single-race,6,RankedRobin,LH-only
 LH:reinf_south_ben_c3_b3_rr,"Reinforcement — South district, Ben branch (3 voters, Ben is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
@@ -283,6 +282,12 @@ LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
+LH:same_matrix_p1_plurality,"Same matrix, different plurality — electorate P1: Choose-One",1,single-race,12,Plurality,LH-only
+LH:same_matrix_p1_ranked_robin,"Same matrix, different plurality — electorate P1: Ranked Robin",1,single-race,12,RankedRobin,LH-only
+LH:same_matrix_p2_plurality,"Same matrix, different plurality — electorate P2: Choose-One",1,single-race,12,Plurality,LH-only
+LH:same_matrix_p2_ranked_robin,"Same matrix, different plurality — electorate P2: Ranked Robin",1,single-race,12,RankedRobin,LH-only
+LH:same_matrix_p3_plurality,"Same matrix, different plurality — electorate P3: Choose-One",1,single-race,12,Plurality,LH-only
+LH:same_matrix_p3_ranked_robin,"Same matrix, different plurality — electorate P3: Ranked Robin",1,single-race,12,RankedRobin,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
 LH:split_cycle_schulze_spoiler_c5_b40,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",1,single-race,40,RankedRobin,LH-only
@@ -305,6 +310,7 @@ LH:tie_break_08_runoff_dead_rung_adversarial_lot,"Dead rung 04 — runoff tie, n
 LH:tie_break_09_five_star_tied_nonzero,Dead rung 05 — five-star rung alive but non-separating,1,single-race,2,STAR,LH-only
 LH:tilted_cycle_c3_b5_irv,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",1,single-race,5,RCV-IRV,LH-only
 LH:tilted_cycle_c3_b5_rr,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",1,single-race,5,RankedRobin,LH-only
+LH:vcl_c4_b9_score_vs_runoff,"The valuable Condorcet loser — Score elects her, the runoff rejects her",1,single-race,9,STAR,LH-only
 LH:vote_splitting,Vote splitting — two chocolates split the majority,1,single-race,36,STAR,LH-only
 LH:vote_splitting2,Vote splitting — two chocolates split the majority,1,single-race,360,STAR,LH-only
 LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single-race,21,STAR,LH-only

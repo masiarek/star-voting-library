@@ -1,0 +1,104 @@
+======================================================================
+SOURCE FILE:     same_matrix_p2_plurality.yaml
+TABULATED FILE:  same_matrix_p2_plurality_tabulated.txt
+======================================================================
+
+election_title: "Same matrix, different plurality — electorate P2: Choose-One"
+scenario_description: |-
+  The same electorate P2, voting Choose-One: each voter marks only their first
+  choice, so the ballot keeps the top of the ranking and discards the rest. Tally:
+  Ben 5, Cal 4, Ada 3 — winner Ben. The Ranked Robin file on this same electorate
+  elects Ben, and all three electorates in this folder share one pairwise table
+  while their plurality winners differ. Plurality's winner is not a function of
+  the pairwise matrix.
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Ada,Ben,Cal
+  3:1,0,0
+  4:0,0,1
+  5:0,1,0
+expected_winners: [Ben]
+
+# file: same_matrix_p2_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Same matrix, different plurality — electorate P2: Choose-One ===
+  The same electorate P2, voting Choose-One: each voter marks only their first
+  choice, so the ballot keeps the top of the ranking and discards the rest. Tally:
+  Ben 5, Cal 4, Ada 3 — winner Ben. The Ranked Robin file on this same electorate
+  elects Ben, and all three electorates in this folder share one pairwise table
+  while their plurality winners differ. Plurality's winner is not a function of
+  the pairwise matrix.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |     Ada    |  * Ben    |  * Cal    |
+-----------------------------------------------------
+         Ada > |    ---     |3 - 4 - 5  |3 - 5 - 4  |
+       * Ben > | 5 - 4 - 3  |   ---     |5 - 3 - 4  |
+       * Cal > | 4 - 5 - 3  |4 - 3 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ben — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Ada — loses every head-to-head matchup — elected by Approval!
+
+[Divergence from STAR]
+  STAR     = Ben
+  Approval = Ada   (differs from STAR)
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 12 ballots.
+Count × Ada,Ben,Cal
+    5 ×   0,  1,  0
+    4 ×   0,  0,  1
+    3 ×   1,  0,  0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        0  0  0  0  3  9  |     3   0.3
+Ben        0  0  0  0  5  7  |     5   0.4
+Cal        0  0  0  0  4  8  |     4   0.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 5 -- First place
+   Cal           -- 4 -- Second place
+   Ada           -- 3
+ Ben and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ben           -- 5 -- First place
+   Cal           -- 4
+   Equal Support -- 3
+ Ben wins.
+   Runoff math:
+     12  ballots cast
+   −  3  Equal Support (no preference between the two finalists)
+     ──
+      9  voters with a preference  (majority = 5)
+           Ben 5 (56%)  ·  Cal 4 (44%)
+
+[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
+ Ben

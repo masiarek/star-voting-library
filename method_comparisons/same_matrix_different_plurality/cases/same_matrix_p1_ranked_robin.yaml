@@ -1,0 +1,29 @@
+election_title: "Same matrix, different plurality — electorate P1: Ranked Robin"
+scenario_description: |-
+  One of three 12-ballot electorates (P1) that produce the *identical* pairwise
+  table: Ben beats Ada 7-5, Ada ties Cal 6-6, Ben beats Cal 7-5. Every method that
+  reads only the pairwise matrix — Ranked Robin, Minimax, Ranked Pairs, Kemeny — and
+  Borda too, must return the same answer on all three. Ben, here. The companion
+  Plurality file on this same electorate returns Ada, and the three electorates
+  give three different plurality winners. That is what it means for plurality to sit
+  outside the pairwise matrix (Fishburn C3).
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Ada>Ben>Cal
+  4:Cal>Ben>Ada
+  2:Ben>Cal>Ada
+  1:Ben>Ada>Cal
+  1:Ada>Cal>Ben
+expected_winners: [Ben]

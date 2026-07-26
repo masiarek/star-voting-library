@@ -695,6 +695,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2253 — Meeting city — STAR (Dublin 23, Edinburgh 22, runoff 5-2) | STAR | 5 | **Dublin** |
 | BV2253 — Meeting city — Ranked Robin (Edinburgh wins 3 of 4 head-to-heads) | RankedRobin | 5 | **Edinburgh** |
 
+## BV2254 — Reinforcement paradox: two towns pick Ada, together pick Cara
+
+**Election** [`t4by6x`](https://bettervoting.com/t4by6x/results) · **2 races** · **9 ballots** · [frozen export](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2254 — STAR — scoring round leads Ada, the runoff flips to Cara | STAR | 3 | **Cara** |
+| BV2254 — Ranked Robin — Cara is the combined Condorcet winner | RankedRobin | 3 | **Cara** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

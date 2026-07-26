@@ -176,6 +176,14 @@
 - **Monotonicity, said properly:** "raise the winner" means **lifting simply** — `x` moves up while *the relative order of every pair not involving `x` is unchanged*. **Smith (1980):** every **scoring run-off rule** violates monotonicity — the general theorem behind [Alaska 2022](../../method_comparisons/monotonicity/upward_monotonicity_alaska.md) and [SF D7](../../method_comparisons/monotonicity/downward_monotonicity_sf.md). STAR sits **outside** that class: Smith's family re-tallies scores after each elimination; STAR scores once, then compares two candidates pairwise.
 - **Keep it honest — the criterion-scepticism lesson:** the standard *resolute* monotonicity definition can be satisfied **vacuously**, by modifying any rule at all to add one tied alternative to every outcome. **Peleg (1981)** repairs it (`x` stays a winner *and no new winners appear*). So "method M satisfies criterion C" is only ever as strong as C's definition — ask which version is claimed. Files next to [ordered majority rule](../topics/condorcet/ordered_majority_rule_irv.md) as a second, literature-sourced case of a criterion that flatters by construction.
 
+## 301.22 — What a method reads (the informational basis)
+
+- **Objective:** separate three questions that get conflated — **which** statistic a rule reads, **how big** that statistic is, and **how hard** it is to compute from.
+- **Key terms:** informational basis, tournament, weighted tournament, Fishburn C1/C2/C3, sufficient statistic.
+- **Page:** [What a method reads](../topics/what_a_method_reads.md). **Runnable:** [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/) — three 12-ballot electorates with the *identical* pairwise table and **three different plurality winners**, one per candidate.
+- **The point:** the debate-usable question is *"how much of my ballot does your method actually look at?"* — positive rather than an attack, and it makes vote-splitting precise instead of rhetorical.
+- **Keep it honest:** **do not say plurality "needs more information" than Borda** — the two statistics are *incomparable, not nested*, and C3 is a residual class, not a higher rung. The tiers are **not** a summability, difficulty, or quality ladder: plurality is C3 and the cheapest summable method there is; Kemeny is C2 and NP-hard; Copeland and Schulze publish the identical matrix. And **STAR/Score/Approval have no Fishburn class at all** — not a hedged one — because STAR is not a function of the ranked profile (two score profiles inducing the same pairwise matrix elect different STAR winners).
+
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 201](CURRICULUM_201.md) · Next: [Voting 401 — failure modes & the safety check](CURRICULUM_401.md).*

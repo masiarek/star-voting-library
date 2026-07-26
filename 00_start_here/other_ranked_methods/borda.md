@@ -83,3 +83,15 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 - [Ranked Robin vs. Condorcet](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — where the weak-rank reduction shows up live
 - [Agenda voting](agenda_voting.md) — the other classic "ranked but not neutral" procedure in this folder
 - [Which RCV-IRV?](../RCV_IRV/variants/RCV_IRV_variants.md) · Glossary: [`Borda`](../GLOSSARY.md)
+
+## Borda is the pairwise table, added up
+
+A Borda score is not a separate thing from the head-to-head numbers — it *is* them, summed. Writing `M(x,y)` for the margin of `x` over `y`, `n` for ballots and `m` for candidates:
+
+> **Borda(x) = ½ · Σ M(x,y) + n(m−1)/2**
+
+The right-hand term is the same for every candidate, so **the pairwise margins alone fix the entire Borda ranking**. Equivalently and more simply: add up `x`'s head-to-head vote totals against each opponent, and that sum *is* `x`'s Borda score.
+
+This is why Borda sits in Fishburn's **C2** tier — it reads the weighted tournament, exactly like Minimax and Ranked Pairs do, despite not being a Condorcet method. Three conditions: standard equally-spaced points; ties handled by splitting points evenly; and **truncation breaks it** — under the usual "unranked get 0" rule Borda is no longer margin-determined, so real truncated-ballot Borda is not C2.
+
+The structural payoff: because Borda reads the table through a *sum* while Condorcet methods read it through *signs*, their disagreement isn't random — it lives entirely in the [circulating component of the margins](../topics/cycle_cocycle_decomposition.md). Worked on twelve ballots in [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/), and framed in [what a method reads](../topics/what_a_method_reads.md).

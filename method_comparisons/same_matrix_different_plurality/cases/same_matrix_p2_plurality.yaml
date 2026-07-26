@@ -1,0 +1,29 @@
+election_title: "Same matrix, different plurality — electorate P2: Choose-One"
+scenario_description: |-
+  The same electorate P2, voting Choose-One: each voter marks only their first
+  choice, so the ballot keeps the top of the ranking and discards the rest. Tally:
+  Ben 5, Cal 4, Ada 3 — winner Ben. The Ranked Robin file on this same electorate
+  elects Ben, and all three electorates in this folder share one pairwise table
+  while their plurality winners differ. Plurality's winner is not a function of
+  the pairwise matrix.
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Ada,Ben,Cal
+  3:1,0,0
+  4:0,0,1
+  5:0,1,0
+expected_winners: [Ben]
+
+# file: same_matrix_p2_plurality.yaml

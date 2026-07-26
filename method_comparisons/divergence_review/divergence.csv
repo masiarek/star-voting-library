@@ -123,6 +123,7 @@ APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star
 APPROVAL_OR_MINOR,method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml,3,9,Cara,Cara,Cara,Cara,Cara,Ada,Ada,Cara,Cara,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml,3,24,A,A,A,A,A,C,C,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/summability_demo/cases/star_district_B.yaml,3,3,Oak,Oak,Oak,Oak,Oak,Pine,Pine,Oak,Oak,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml,4,9,Ben,Ben,Dan,Ben,Ben,Amy,Amy,Ben,Ben,4,True,False,False
 CYCLE_OR_THREE_WAY,01_STAR/exercises/cases/ex02_nine_ballots.yaml,5,9,Alex,Bella,Bella,Eli,Eli,Alex,Alex,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/exercises/cases/ex02_tenth_ballot.yaml,5,10,Chris,Bella,Bella,Chris,Chris,Alex,Alex,,,0,False,False,True
 CYCLE_OR_THREE_WAY,01_STAR/exercises/cases/ex13_opinions.yaml,3,9,Cora,Cora,Cora,Ash,Ash,Ash,Ash,,,0,False,False,True

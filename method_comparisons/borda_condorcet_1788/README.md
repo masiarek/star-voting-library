@@ -127,3 +127,16 @@ condorcet    -> Peter
 The profile is the simplified 11-voter version of an example Condorcet described in **1788**, the form standard textbooks use when they introduce the Condorcet criterion. Condorcet formalized the head-to-head idea in **1785**; Borda had proposed his rank-points rule in **1770**, arguing from an example much like [Pliny the Younger's](../../00_start_here/RCV_IRV/case_studies/RCV_IRV_history.md).
 
 The candidate names are Condorcet's own (Peter / Paul / James) and are kept for fidelity to the source, even though Peter and Paul share an initial — which this repo's [naming rule](../../00_start_here/tips/TIPS_canonical_elections.md) would otherwise avoid.
+
+## Why Borda misses Peter — the mechanism, not just the result
+
+Condorcet's objection isn't that Borda "got it wrong" here; it's that Borda reads the pairwise numbers through a **sum**, and a sum can be dominated by one lopsided pairing.
+
+Peter's margins: **+1** over Paul, **+1** over James — he wins both, narrowly. Sum: **+2**.
+Paul's margins: **−1** to Peter, **+7** over James. Sum: **+6**.
+
+Paul *loses* the only matchup that decides a head-to-head champion, and still finishes ahead on Borda — because crushing James by 7 more than repays losing to Peter by 1. That is the whole disagreement in two lines of arithmetic. Borda asks *how much did you beat people by, on aggregate*; Condorcet asks *did you beat each of them*.
+
+(The margins are exactly what a Borda score is made of: [`Borda(x) = ½·Σ M(x,y) + n(m−1)/2`](../../00_start_here/other_ranked_methods/borda.md), and the constant is the same for everyone.)
+
+Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/) makes you choose at, with [the structural version](../../00_start_here/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../00_start_here/topics/what_a_method_reads.md).
