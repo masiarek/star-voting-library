@@ -23,8 +23,8 @@ hide:
 
 Score every candidate **0–5**; the two highest-scoring meet in an **automatic runoff**; whichever finalist more voters scored higher **wins**. One better ballot — and a winner the majority actually likes.
 
-[⭐ The five-minute intro](00_start_here/STAR_Voting/STAR_start_here.md){ .md-button .md-button--primary }
-[🗳️ Try it live ↗](https://bettervoting.com){ .md-button }
+[⭐ See how it works](00_start_here/STAR_Voting/STAR_start_here.md){ .md-button .md-button--primary }
+[🗳️ Cast a ballot ↗](https://bettervoting.com){ .md-button }
 
 </div>
 
