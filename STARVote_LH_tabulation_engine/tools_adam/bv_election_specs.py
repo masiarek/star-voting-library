@@ -4225,7 +4225,8 @@ P3_SPEC = {
 }
 
 
-ELECTIONS: list = [P3_SPEC]   # BV2253 — Manipulability P3, sincere baseline
+ELECTIONS: list = []   # nothing to create
+# Previously: [P3_SPEC]  # BV2253 — Manipulability P3, sincere baseline (created)
 # Previously: [GOODBERRYS_SPEC]  # BV2252 — Goodberry's Best Flavor 2026 (created, live poll)
 # Previously: [MARGINS_SPEC]  # BV2251 — Margins matter: Copeland vs Borda (created)
 # Previously: [C1788_SPEC]  # BV2250 — Condorcet's 1788 rebuttal to Borda (created)
