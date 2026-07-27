@@ -164,7 +164,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Brook > | 5 - 0 - 4 |   ---    |6 - 0 - 3 |
    Cole > | 4 - 0 - 5 |3 - 0 - 6 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Brook      2–0–0         2      +4  Avi, Cole
     2  Avi        1–1–0         1      +0  Cole

@@ -156,7 +156,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bree > | 5 - 0 - 4 |   ---    |1 - 4 - 4 |
   Cash > | 5 - 0 - 4 |4 - 4 - 1 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cash       2–0–0         2      +4  Bree, Ari
     2  Bree       1–1–0         1      -2  Ari

@@ -67,7 +67,7 @@ Legend: For - Equal Support - Against   (row vs column)
      Catan > |  6 -  0 -  4 | 3 -  0 -  7 |    ---      |10 -  0 -  0 |
   Dominion > |  0 -  0 - 10 | 0 -  0 - 10 | 0 -  0 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Azul       2–1–0         2     +12  Boggle, Dominion
     2  Boggle     2–1–0         2     +10  Catan, Dominion

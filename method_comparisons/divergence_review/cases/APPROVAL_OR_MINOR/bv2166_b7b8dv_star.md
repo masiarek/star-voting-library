@@ -155,7 +155,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Boone > | 4 - 0 - 9 |   ---    |8 - 0 - 5 |
    Cass > | 9 - 0 - 4 |5 - 0 - 8 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cass       1–1–0         1      +2  Amy
     2  Amy        1–1–0         1      +0  Boone

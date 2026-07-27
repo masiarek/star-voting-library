@@ -153,7 +153,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Brownie > | 6 - 0 - 3 |   ---    |9 - 0 - 0 |
     Cocoa > | 0 - 0 - 9 |0 - 0 - 9 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Brownie    2–0–0         2     +12  Almond, Cocoa
     2  Almond     1–1–0         1      +6  Cocoa

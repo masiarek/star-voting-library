@@ -130,9 +130,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[majority_vs_consensus_51_49](cases/IRV_DIFFERS_ARTIFACT/majority_vs_consensus_51_49.md)** — `01_STAR/majority_criterion/cases/majority_vs_consensus_51_49.yaml` (3c/100b)  
     STAR=**Celia** · IRV=Alma · RR=Celia · Approval=Celia · Score=Celia · Condorcet=Celia  
     _flags: 3 tied-score ballot(s); RR conv-sensitive (weak=Celia, strict=Alma)_
-- **[tie_break_06_scoring_dead_rung_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_06_scoring_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml` (3c/5b)  
-    STAR=**Ann** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
-    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
+- **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
+    STAR=**Ben** · IRV=Cara · RR=Ben · Approval=Ann · Score=Ann · Condorcet=none  
+    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ben, strict=Cara)_
 - **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml` (3c/31b)  
     STAR=**Clara** · IRV=Bruno · RR=Clara · Approval=Abby · Score=Bruno · Condorcet=none  
     _flags: 9 tied-score ballot(s); RR conv-sensitive (weak=Clara, strict=Bruno)_
@@ -166,9 +166,9 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Alice** · IRV=Carla · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[tie_break_04_runoff_five_star_breaks](cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_04_runoff_five_star_breaks.yaml` (2c/2b)  
     STAR=**Alice** · IRV=Ben · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
-- **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
-    STAR=**Ben** · IRV=Cara · RR=Ann · Approval=Ann · Score=Ann · Condorcet=none  
-    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ann, strict=Cara)_
+- **[tie_break_06_scoring_dead_rung_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_06_scoring_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml` (3c/5b)  
+    STAR=**Ann** · IRV=Cara · RR=Ben · Approval=Ann · Score=Ann · Condorcet=none  
+    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ben, strict=Cara)_
 - **[tie_break_07_runoff_five_star_vs_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_07_runoff_five_star_vs_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml` (2c/2b)  
     STAR=**Ann** · IRV=Ben · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
 - **[tie_break_08_runoff_dead_rung_adversarial_lot](cases/CYCLE_OR_THREE_WAY/tie_break_08_runoff_dead_rung_adversarial_lot.md)** — `01_STAR/tie_break_dead_rung/cases/tie_break_08_runoff_dead_rung_adversarial_lot.yaml` (2c/2b)  

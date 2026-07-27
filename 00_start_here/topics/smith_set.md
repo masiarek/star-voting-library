@@ -47,7 +47,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Ben   beats Dave   7 – 0
    Cara  beats Dave   7 – 0
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ada        2–1–0         2      +9  Ben, Dave
     2  Ben        2–1–0         2      +7  Cara, Dave

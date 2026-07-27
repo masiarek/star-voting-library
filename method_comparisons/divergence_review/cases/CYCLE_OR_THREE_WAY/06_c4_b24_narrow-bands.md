@@ -242,7 +242,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
    Dune > |  9 -  4 - 11 | 4 - 15 -  5 | 8 -  7 -  9 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Coral      2–1–0         2      +4  Azure, Dune
     2  Beige      2–1–0         2      +1  Coral, Dune

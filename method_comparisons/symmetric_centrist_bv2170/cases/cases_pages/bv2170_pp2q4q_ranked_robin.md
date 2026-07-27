@@ -55,7 +55,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Casey > | 53 -  0 - 47 |    ---      |53 -  0 - 47 |
   Blake > | 50 -  0 - 50 |47 -  0 - 53 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Casey      2–0–0         2     +12  Avery, Blake
     2  Avery      0–1–1       0.5      -6  —

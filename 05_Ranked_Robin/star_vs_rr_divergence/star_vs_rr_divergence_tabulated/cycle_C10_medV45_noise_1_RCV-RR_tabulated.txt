@@ -112,12 +112,12 @@ Legend: For - Equal Support - Against   (row vs column)
   I > | 18 -  7 - 20 |22 -  5 - 18 |18 -  6 - 21 |22 -  8 - 15 |16 -  5 - 24 |20 -  9 - 16 |14 -  9 - 22 |23 -  5 - 17 |    ---      |20 -  8 - 17 |
   J > | 19 -  3 - 23 |22 -  7 - 16 |15 -  8 - 22 |21 -  9 - 15 |18 -  7 - 20 |18 - 11 - 16 |17 -  7 - 21 |17 - 12 - 16 |17 -  8 - 20 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  G          8–1–0         8     +43  E, A, I, J, F, D, B, H
     2  E          7–1–1       7.5     +44  A, I, J, F, D, B, H
-    3  A          7–2–0         7     +39  C, I, J, F, D, B, H
-    4  C          7–1–1       7.5     +37  G, I, J, F, D, B, H
+    3  C          7–1–1       7.5     +37  G, I, J, F, D, B, H
+    4  A          7–2–0         7     +39  C, I, J, F, D, B, H
     5  I          5–4–0         5      +3  J, F, D, B, H
     6  J          4–5–0         4      -5  F, D, B, H
     7  F          2–6–1       2.5     -26  B, H

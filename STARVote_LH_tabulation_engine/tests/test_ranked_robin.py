@@ -102,6 +102,11 @@ def test_ranked_robin_aliases_and_cycle(tmp_path):
     assert r.returncode == 0, r.stderr
     assert "Ranked Robin (RCV-RR / Copeland) Method" in r.stdout
     assert "Condorcet cycle" in r.stdout
+    # No DRAWS anywhere in a clean RPS loop, so tying on Copeland is tying on wins
+    # and the report keeps the plainer phrasing. It switches to naming the Copeland
+    # score only when a draw makes "most wins" untrue — see the dead-heat test.
+    assert "tie for the most wins (Rock, Scissors, Paper)" in r.stdout, r.stdout
+    assert "Copeland score" not in r.stdout.split("***")[1]
 
 
 def test_ranked_robin_bloc_multiwinner(tmp_path):
@@ -150,10 +155,61 @@ def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
     )
     r = _run(f)
     assert r.returncode == 0, r.stderr
-    assert "tie for the most wins" in r.stdout
+    assert "tie on the highest Copeland score" in r.stdout
     assert "dead heat" in r.stdout
     assert "Condorcet cycle" not in r.stdout
     assert "Ranked Robin (RCV-RR): Ada" in r.stdout
+
+
+def test_ranked_robin_ranks_by_copeland_not_raw_wins(tmp_path):
+    """The ranking key must be the Copeland score (wins + ½·ties), i.e. the very
+    column the report prints — NOT the raw win count.
+
+    Regression for a bug where `order` sorted on `len(wins[c])` while the table
+    printed wins + ½·ties, so the two disagreed as soon as a pairwise DRAW existed.
+    On this profile B holds 1 win / 2 losses (Copeland 1) while A and D are each
+    unbeaten at 1–0–2 (Copeland 2); the raw-wins key tied all three at one win,
+    then handed the election to B on margin — a candidate its own table ranked
+    third, and one that loses two of its three matchups. A must win, and the
+    printed order must be non-increasing in the Copeland column."""
+    f = tmp_path / "copeland_key.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [A, B, C, D]\nballots: |-\n"
+        "  6:A=B=D>C\n  7:A=C=D>B\n  6:B>C>A=D\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "Ranked Robin (RCV-RR): A" in r.stdout, r.stdout
+    assert "Ranked Robin (RCV-RR): B" not in r.stdout
+    # Only A and D share the top Copeland score, and they DRAW — a dead heat.
+    assert "tie on the highest Copeland score (2): A, D" in r.stdout, r.stdout
+    # The table must never rank a lower Copeland score above a higher one.
+    rows = [ln.split() for ln in r.stdout.splitlines()
+            if ln.strip().startswith(("1  ", "2  ", "3  ", "4  "))]
+    scores = [float(cols[3]) for cols in rows if len(cols) > 3]
+    assert scores == sorted(scores, reverse=True), scores
+
+
+def test_weak_condorcet_winner_is_not_called_the_condorcet_winner(tmp_path):
+    """An unbeaten candidate who DRAWS someone is a *weak* Condorcet winner, and the
+    report must not claim they "beat every opponent head-to-head".
+
+    Regression for a guard that tested only `not losses[winner]`. Cal goes 1–0–1 —
+    beating Ada, drawing Ben — and was announced as "the Condorcet winner", which is
+    false: a draw is not a win. Smith vs Schwartz turns on exactly this distinction."""
+    f = tmp_path / "weak_condorcet.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cal]\nballots: |-\n"
+        "  2:Ben>Cal>Ada\n  2:Cal>Ada>Ben\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "Ranked Robin (RCV-RR): Cal" in r.stdout, r.stdout
+    assert "beats every opponent head-to-head" not in r.stdout, r.stdout
+    assert "weak" in r.stdout and "not a strict one" in r.stdout, r.stdout
+    assert "draws Ben" in r.stdout, r.stdout
 
 
 def test_equal_rankings_are_ties(tmp_path):

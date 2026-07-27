@@ -8,9 +8,11 @@
 
 Both engines score Copeland the same way — **win = 1, tie = ½** — and elect the highest. They differ only in the **tiebreak** when the top Copeland score is shared:
 
+> **Fixed 2026-07-26.** LH's rung 1 used to sort on the **raw win count** while printing the wins + ½·ties column beside it, so the two disagreed whenever a pairwise **draw** existed — the report could contradict its own table and elect a candidate it had ranked third. Rung 1 is now the Copeland score, as this table always claimed. Ranking by wins + ½·ties and by wins − losses are affine transforms of each other and always agree; the raw win count was the outlier.
+
 | Rung | **LH** `run_ranked_robin` (`starvote_larry_hastings.py`) | **BetterVoting** `RankedRobin.ts` |
 |---|---|---|
-| 1 | most head-to-head **wins** | most head-to-head **wins** (Copeland) |
+| 1 | highest **Copeland score** (wins + ½·ties) | highest **Copeland score** (wins + ½·ties) |
 | 2 | total **margin** (sum of For − Against) | **head-to-head** — *only if exactly 2 are tied* |
 | 3 | **lot order** (pre-published `lot_numbers`) | **random** |
 
@@ -26,8 +28,8 @@ When a Condorcet winner exists there's no tie to break, so every engine agrees. 
 
 The LH-only **[dead-heat case](../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_tiebreak.md)** is engineered to tie every deterministic rung. Ada and Ben each go 1–0–1 (Copeland 1.5), both beat Cara, and their margins are identical (+4). What each engine does:
 
-- **LH:** wins tie (1 = 1) → margin tie (+4 = +4) → **lot order** `[Ada, Ben, Cara]` → **Ada**. Reproducible every run.
-- **BetterVoting:** wins tie → tries the 2-way head-to-head… but **Ada vs Ben is itself a tie** (1–1, with 2 Equal Support) → falls through to **random**. Not reproducible; can't be frozen into a `_bv_export.json`.
+- **LH:** Copeland tie (1.5 = 1.5) → margin tie (+4 = +4) → **lot order** `[Ada, Ben, Cara]` → **Ada**. Reproducible every run.
+- **BetterVoting:** Copeland tie → tries the 2-way head-to-head… but **Ada vs Ben is itself a tie** (1–1, with 2 Equal Support) → falls through to **random**. Not reproducible; can't be frozen into a `_bv_export.json`.
 
 That's why the dead-heat case has **no BetterVoting election**: there is no stable BV result to record. It documents the **LH** ladder specifically. (BetterVoting would agree Ada and Ben are co-leaders; it just wouldn't deterministically choose between them.)
 
@@ -49,13 +51,13 @@ around a loop** (cycle):
 
 ```
 # co-top dead heat (leaders draw each other, both beat the rest):
-*** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+*** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 
 # genuine rock-paper-scissors cycle (directed loop, no Condorcet winner):
 *** 3 candidates tie for the most wins (Rock, Scissors, Paper) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
 ```
 
-Both lead with "**tie for the most wins**" (accurate); "cycle" is reserved for a genuine loop. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
+Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop. The lead phrasing adapts: with no **draws** among the leaders it says "**tie for the most wins**" (then tying on Copeland *is* tying on wins), and once a draw is in play — as in the dead heat above, where Ada and Ben draw each other — it names the **Copeland score** instead, because "most wins" would no longer be true. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
 
 ## Tested cases
 

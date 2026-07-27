@@ -64,7 +64,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bianca > | 15 -  6 - 14 | 4 - 23 -  8 |10 -  6 - 19 |    ---      |24 -  0 - 11 |
      Eli > | 17 -  0 - 18 |15 -  0 - 20 |19 -  2 - 14 |11 -  0 - 24 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ava        3–1–0         3     +20  Cedric, Deegan, Eli
     2  Cedric     2–2–0         2      +1  Bianca, Eli

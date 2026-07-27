@@ -171,7 +171,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Dana > | 4 - 0 - 5 |4 - 3 - 2 |   ---    |4 - 0 - 5 |
     Eli > | 5 - 0 - 4 |5 - 0 - 4 |5 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Eli        3–0–0         3      +3  Chris, Dana, Alex
     2  Chris      1–2–0         1      +0  Alex

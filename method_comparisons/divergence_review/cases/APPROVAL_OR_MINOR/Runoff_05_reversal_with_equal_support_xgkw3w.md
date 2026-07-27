@@ -163,7 +163,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Sage > | 2 - 2 - 1 |   ---    |5 - 0 - 0 |
   Tulip > | 0 - 0 - 5 |0 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Sage       2–0–0         2      +6  Rosa, Tulip
     2  Rosa       1–1–0         1      +4  Tulip

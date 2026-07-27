@@ -168,7 +168,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 16 -  0 - 15 |    ---      |11 -  7 - 13 |
   Clara > | 13 -  4 - 14 |13 -  7 - 11 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Clara      1–1–0         1      +1  Bruno
     2  Abby       1–1–0         1      +0  Clara

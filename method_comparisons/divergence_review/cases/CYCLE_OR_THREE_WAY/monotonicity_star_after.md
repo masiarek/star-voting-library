@@ -159,7 +159,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Y > |  8 -  0 - 26 |    ---      |24 -  0 - 10 |
   Z > | 18 -  0 - 16 |10 -  0 - 24 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  X          1–1–0         1     +16  Y
     2  Y          1–1–0         1      -4  Z

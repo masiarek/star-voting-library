@@ -71,10 +71,10 @@ Legend: For - Equal Support - Against   (row vs column)
   I > |  55 -  41 -  52 |  0 -  96 -  52 | 74 -   0 -  74 |  0 -  96 -  52 |  0 -   0 - 148 | 96 -   0 -  52 |  0 -   0 - 148 | 41 -  88 -  19 |      ---       |  0 -  74 -  74 |
   J > |  74 -  41 -  33 | 55 -  41 -  52 |148 -   0 -   0 | 55 -  60 -  33 | 74 -   0 -  74 |115 -   0 -  33 | 55 -   0 -  93 | 96 -  33 -  19 | 74 -  74 -   0 |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  G          8–1–0         8    +709  J, B, D, I, H, A, F, C
-    2  E          8–0–1       8.5    +658  G, B, D, I, H, A, F, C
+    1  E          8–0–1       8.5    +658  G, B, D, I, H, A, F, C
+    2  G          8–1–0         8    +709  J, B, D, I, H, A, F, C
     3  J          7–1–1       7.5    +409  B, D, I, H, A, F, C
     4  B          6–3–0         6    +243  D, I, H, A, F, C
     5  D          5–4–0         5    +167  I, H, A, F, C
@@ -84,5 +84,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     9  F          1–8–0         1    -539  C
    10  C          0–8–1       0.5    -486  —
 
-Winner — Ranked Robin (RCV-RR): G
-   *** 2 candidates tie for the most wins (E, G) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+Winner — Ranked Robin (RCV-RR): E
+   unbeaten, but draws J — a *weak* Condorcet winner, not a strict one (highest Copeland score, 8.5).

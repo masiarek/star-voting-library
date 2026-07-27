@@ -261,7 +261,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Churro > | 17 - 16 -  7 |15 - 11 - 14 |    ---      |18 - 16 -  6 |
   Dumpling > |  8 - 23 -  9 | 6 - 14 - 20 | 6 - 16 - 18 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Churro     3–0–0         3     +23  Bao, Arepa, Dumpling
     2  Bao        2–1–0         2     +23  Arepa, Dumpling

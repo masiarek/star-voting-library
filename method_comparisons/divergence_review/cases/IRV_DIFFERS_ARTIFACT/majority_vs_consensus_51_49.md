@@ -155,7 +155,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 49 -  0 - 51 |    ---      |49 -  0 - 51 |
   Celia > | 49 -  3 - 48 |51 -  0 - 49 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Celia      2–0–0         2      +3  Alma, Bruno
     2  Alma       1–1–0         1      +1  Bruno

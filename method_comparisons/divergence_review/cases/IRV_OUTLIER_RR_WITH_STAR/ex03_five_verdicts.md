@@ -160,7 +160,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Banana > | 5 - 0 - 4 |   ---    |3 - 0 - 6 |
   Cherry > | 5 - 0 - 4 |6 - 0 - 3 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cherry     2–0–0         2      +4  Banana, Apple
     2  Banana     1–1–0         1      -2  Apple

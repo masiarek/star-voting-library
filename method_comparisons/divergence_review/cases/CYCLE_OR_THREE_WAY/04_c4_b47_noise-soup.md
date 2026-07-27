@@ -335,7 +335,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Caleb > | 19 -  8 - 20 |18 - 13 - 16 |    ---      |18 - 11 - 18 |
    Dana > | 20 - 11 - 16 |12 - 17 - 18 |18 - 11 - 18 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Beth       2–1–0         2      +9  Dana, Aaron
     2  Caleb      1–1–1       1.5      +1  Beth

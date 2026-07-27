@@ -53,7 +53,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Bert > | 27 -  0 - 20 |    ---      |32 -  0 - 15 |
   Carla > | 21 -  0 - 26 |15 -  0 - 32 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bert       2–0–0         2     +24  Anna, Carla
     2  Anna       1–1–0         1      -2  Carla

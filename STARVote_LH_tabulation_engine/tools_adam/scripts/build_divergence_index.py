@@ -92,12 +92,19 @@ def star_winner(path):
 def _copeland_winner(candidates, score_ballots, order):
     """Ranked Robin (Copeland) winner from {cand: value} ballots.
 
-    Mirrors run_ranked_robin's tally: most pairwise wins, then total margin,
-    then lot/priority order. Returns (winner, is_cycle)."""
+    Mirrors run_ranked_robin's tally: highest Copeland score (wins + ½·ties),
+    then total margin, then lot/priority order. Returns (winner, is_cycle).
+
+    This is a reimplementation, so it has to track the engine. It previously ranked
+    on the RAW win count — the same bug the engine had — which is why this ledger
+    kept reporting the old RR winners after the engine was fixed. A drawn matchup
+    is worth ½, so an unbeaten-but-drawing candidate must outrank someone holding
+    more wins AND a loss."""
     matrix = w.calculate_preference_matrix(candidates, score_ballots)
     if not matrix:
         return None, False
     wins = {c: 0 for c in candidates}
+    ties = {c: 0 for c in candidates}
     margin = {c: 0 for c in candidates}
     for i, a in enumerate(candidates):
         for b in candidates[i + 1:]:
@@ -108,11 +115,15 @@ def _copeland_winner(candidates, score_ballots, order):
                 wins[a] += 1
             elif ag > fa:
                 wins[b] += 1
-    ranked = sorted(candidates, key=lambda c: (-wins[c], -margin[c], order.index(c)))
-    top = wins[ranked[0]]
-    leaders = [c for c in candidates if wins[c] == top]
-    # A cycle: nobody wins all their matchups yet several share the top win count.
-    is_cycle = len(leaders) > 1 and top < len(candidates) - 1
+            else:
+                ties[a] += 1
+                ties[b] += 1
+    cope = {c: wins[c] + 0.5 * ties[c] for c in candidates}
+    ranked = sorted(candidates, key=lambda c: (-cope[c], -margin[c], order.index(c)))
+    top = cope[ranked[0]]
+    leaders = [c for c in candidates if cope[c] == top]
+    # A cycle: nobody beats every rival outright yet several share the top score.
+    is_cycle = len(leaders) > 1 and wins[ranked[0]] < len(candidates) - 1
     return ranked[0], is_cycle
 
 

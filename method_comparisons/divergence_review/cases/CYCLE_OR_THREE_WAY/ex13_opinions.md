@@ -165,7 +165,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Beck > | 2 - 0 - 7 |   ---    |5 - 0 - 4 |
   Cora > | 6 - 0 - 3 |4 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ash        1–1–0         1      +2  Beck
     2  Cora       1–1–0         1      +2  Ash

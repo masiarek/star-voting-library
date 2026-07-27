@@ -210,7 +210,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Carla > | 13 -  7 - 13 |16 -  9 -  8 |    ---      |14 - 15 -  4 |
   Dolores > |  5 - 15 - 13 | 6 - 20 -  7 | 4 - 15 - 14 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Carla      2–0–1       2.5     +18  Boris, Dolores
     2  Astrid     2–0–1       2.5     +15  Boris, Dolores
@@ -218,5 +218,5 @@ Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties bro
     4  Dolores    0–3–0         0     -19  —
 
 Winner — Ranked Robin (RCV-RR): Carla
-   *** 2 candidates tie for the most wins (Astrid, Carla) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (2.5): Astrid, Carla — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```

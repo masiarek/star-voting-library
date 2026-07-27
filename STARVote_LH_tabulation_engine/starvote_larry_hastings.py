@@ -1417,13 +1417,24 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 ties[a].append(b); ties[b].append(a)
                 raw_pairs.append((a, "ties", b, fa, ag))
 
-    # Copeland score = wins + ½·ties (the academic standard tally). Rank by most
-    # wins, then total margin, then lot order.
+    # Copeland score = wins + ½·ties (the academic standard tally, and what
+    # BetterVoting and pref_voting both score). Rank by that score, then total
+    # margin, then lot order.
+    #
+    # Rank by `cope`, NOT by the raw win count. Those two agree whenever every
+    # head-to-head is decided, and come apart the moment a pairwise TIE exists —
+    # a drawn matchup is worth ½ to the Copeland score and nothing to a raw win
+    # count. Ranking on raw wins while printing the Copeland column made the
+    # report contradict its own table, and could elect a candidate the table
+    # ranked below two others (e.g. 6:A=B=D>C / 7:A=C=D>B / 6:B>C>A=D elected B
+    # at Copeland 1 over A and D at 2). Note wins+½·ties and the other common
+    # convention wins−losses are affine transforms of each other, so they always
+    # give the SAME ranking; raw wins is the odd one out.
     cope = {c: len(wins[c]) + 0.5 * len(ties[c]) for c in candidates}
-    order = sorted(candidates, key=lambda c: (-len(wins[c]), -margin[c],
+    order = sorted(candidates, key=lambda c: (-cope[c], -margin[c],
                                               priority.index(c)))
-    top = len(wins[order[0]])
-    leaders = [c for c in candidates if len(wins[c]) == top]
+    top = cope[order[0]]
+    leaders = [c for c in candidates if cope[c] == top]
     winner = order[0]
     # Bloc Ranked Robin: for N seats, elect the top N by the same rule (most wins,
     # then total margin, then lot). num_winners is clamped to the field size.
@@ -1431,9 +1442,9 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     winners = order[:num_winners]
     seats_label = "single winner" if num_winners == 1 else f"{num_winners} winners"
     # Did the last seat come down to a lot tie-break? (Nth and (N+1)th identical on
-    # wins AND margin, so only the pre-published lot order separated them.)
+    # Copeland score AND margin, so only the pre-published lot order separated them.)
     cutoff_lot_tie = (num_winners < len(candidates)
-                      and len(wins[order[num_winners - 1]]) == len(wins[order[num_winners]])
+                      and cope[order[num_winners - 1]] == cope[order[num_winners]]
                       and margin[order[num_winners - 1]] == margin[order[num_winners]])
 
     # --- Aligned head-to-head list (names padded into columns) ---
@@ -1531,7 +1542,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             L += _matrix_lines()
             L.append("")
         L.append("Win–loss record — Copeland score = wins + ½·ties "
-                 "(most wins wins; ties broken by total margin, then lot order):")
+                 "(highest score wins; ties broken by total margin, then lot order):")
         L += record_lines
         L.append("")
         if num_winners > 1:
@@ -1546,8 +1557,25 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 L.append(f"   *** the last seat was a tie ({a} and {b} share wins and "
                          f"margin) — decided by lot order.")
         elif len(leaders) == 1:
-            why = ("beats every opponent head-to-head — the Condorcet winner."
-                   if not losses[winner] else f"the most head-to-head wins ({top}).")
+            # A STRICT Condorcet winner must beat every opponent — no losses AND no
+            # DRAWS. Testing only `not losses[winner]` called an unbeaten-but-drawing
+            # candidate "the Condorcet winner", which is false: a draw is not a win.
+            # That candidate is a WEAK Condorcet winner, and the difference is exactly
+            # what Smith vs Schwartz turns on, so the report has to keep them apart.
+            if not losses[winner] and not ties[winner]:
+                why = "beats every opponent head-to-head — the Condorcet winner."
+            elif not losses[winner]:
+                drawn = ", ".join(sorted(ties[winner], key=lambda x: order.index(x)))
+                why = (f"unbeaten, but draws {drawn} — a *weak* Condorcet winner, not a "
+                       f"strict one (highest Copeland score, {top:g}).")
+            elif not ties[winner]:
+                # No draws for the winner ⇒ their Copeland score IS their win count,
+                # and no rival can hold more raw wins (more wins with a tied-or-lower
+                # Copeland score is impossible). So the plainer phrasing is exact here,
+                # which is nearly every election.
+                why = f"the most head-to-head wins ({top:g})."
+            else:
+                why = f"the highest Copeland score ({top:g} = wins + ½·ties)."
             L.append(f"Winner — Ranked Robin (RCV-RR): {winner}")
             L.append(f"   {why}")
         else:
@@ -1558,14 +1586,23 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             # a cycle (e.g. two candidates who tie each other and both beat the rest).
             draw_only = all(l2 in ties[l1]
                             for l1 in leaders for l2 in leaders if l1 != l2)
+            # Lead with "most wins" only when it is literally true: with no draws
+            # anywhere among the leaders, tying on Copeland IS tying on wins, and
+            # that phrasing is the friendlier one. Once a draw is in play the two
+            # differ, and naming the Copeland score is the only accurate option.
+            tie_on = ("tie for the most wins ("
+                      + ", ".join(leaders) + ")"
+                      if not any(ties[l] for l in leaders) else
+                      f"tie on the highest Copeland score ({top:g}): "
+                      + ", ".join(leaders))
             if draw_only:
-                L.append(f"   *** {len(leaders)} candidates tie for the most wins "
-                         f"({', '.join(leaders)}) — a dead heat (they draw head-to-head, "
-                         "not a cycle). Resolved by total margin, then lot order.")
+                L.append(f"   *** {len(leaders)} candidates {tie_on} — a dead heat (they "
+                         "draw head-to-head, not a cycle). Resolved by total margin, then "
+                         "lot order.")
             else:
-                L.append(f"   *** {len(leaders)} candidates tie for the most wins "
-                         f"({', '.join(leaders)}) — a Condorcet cycle (no candidate beats "
-                         "all others). Resolved by total margin, then lot order. (This is "
+                L.append(f"   *** {len(leaders)} candidates {tie_on} — a Condorcet cycle "
+                         "(no candidate beats all others). Resolved by total margin, then "
+                         "lot order. (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
                          "00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)")
         return "\n".join(L)

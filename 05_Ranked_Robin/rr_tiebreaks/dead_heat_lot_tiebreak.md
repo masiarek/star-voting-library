@@ -34,7 +34,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 1 - 2 - 1 |   ---    |4 - 0 - 0 |
   Cara > | 0 - 0 - 4 |0 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ada        1–0–1       1.5      +4  Cara
     2  Ben        1–0–1       1.5      +4  Cara
@@ -63,7 +63,7 @@ Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't res
 The winner note distinguishes a dead heat from a real cycle:
 
 ```text
-*** 2 candidates tie for the most wins (Ada, Ben) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+*** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
 
 Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop), so the engine says **dead heat**, not "Condorcet cycle" — the latter is reserved for a genuine directed loop (rock-paper-scissors). See [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
