@@ -1,5 +1,5 @@
 --- RCV / Instant-Runoff Voting (single winner) ---
-  STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR A, RR B)
+  STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR C, RR B)
  Tabulating 29 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
 
 Ballots:

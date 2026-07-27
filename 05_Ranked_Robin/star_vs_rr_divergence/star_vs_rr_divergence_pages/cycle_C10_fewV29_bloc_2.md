@@ -1,12 +1,12 @@
-# STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR A, RR B)
+# STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR C, RR B)
 
 *Generated from [`cycle_C10_fewV29_bloc_2.yaml`](../cycle_C10_fewV29_bloc_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** A
+**Method:** [STAR (single winner)](../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** C
 
 ## Scenario
 
-Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 29 voters, grouped (a few voter factions/blocs). STAR elects A; Ranked Robin elects B. CAUSE = CONDORCET CYCLE: no candidate beats all others (A>I>G>A), so there is no 'right' winner. RR falls back on Copeland/margin (B); STAR runs its two score-leaders off (A). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 29 voters, grouped (a few voter factions/blocs). STAR elects C; Ranked Robin elects B. CAUSE = CONDORCET CYCLE: no candidate beats all others (A>I>G>A), so there is no 'right' winner. RR falls back on Copeland/margin (B); STAR runs its two score-leaders off (C). TIE-HEAVY, so read the rungs: A, C and F all tie at 107 in the scoring round, and C and F are exact clones (identical score columns, 0-29-0 head-to-head), so the lot that seats C over F does not change the outcome. The A-vs-C runoff is then tied 9-9, and the ballots do break it — on the five-star count (C 9, A 0). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 
 ## Ballots
 
@@ -169,6 +169,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 - [This set's lesson (README)](../README.md) — the hand-written teaching context for every case in this folder
 - [Condorcet efficiency (topic hub)](../../../00_start_here/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../00_start_here/topics/ties/README.md)
+- [Runoff reversal (worked set)](../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [cycle_C03_fewV15_noise_1](cycle_C03_fewV15_noise_1.md) · [cycle_C03_fewV15_noise_2](cycle_C03_fewV15_noise_2.md) · [cycle_C03_medV45_noise_1](cycle_C03_medV45_noise_1.md) · [cycle_C03_medV45_noise_2](cycle_C03_medV45_noise_2.md) · [cycle_C05_fewV15_noise_1](cycle_C05_fewV15_noise_1.md) · [cycle_C05_fewV15_noise_2](cycle_C05_fewV15_noise_2.md) · [cycle_C05_fewV28_bloc_1](cycle_C05_fewV28_bloc_1.md) · [cycle_C05_medV45_noise_1](cycle_C05_medV45_noise_1.md) · [cycle_C05_medV45_noise_2](cycle_C05_medV45_noise_2.md) · [cycle_C07_fewV15_noise_1](cycle_C07_fewV15_noise_1.md) · [cycle_C07_fewV28_bloc_2](cycle_C07_fewV28_bloc_2.md) · [cycle_C07_largeV598_bloc_1](cycle_C07_largeV598_bloc_1.md) · [cycle_C07_medV149_bloc_2](cycle_C07_medV149_bloc_2.md) · [cycle_C10_fewV15_noise_1](cycle_C10_fewV15_noise_1.md) · [cycle_C10_fewV15_noise_2](cycle_C10_fewV15_noise_2.md) · [cycle_C10_fewV28_bloc_1](cycle_C10_fewV28_bloc_1.md) · [cycle_C10_medV148_bloc_1](cycle_C10_medV148_bloc_1.md) · [cycle_C10_medV149_bloc_2](cycle_C10_medV149_bloc_2.md) · [cycle_C10_medV45_noise_1](cycle_C10_medV45_noise_1.md) · [cycle_C10_medV45_noise_2](cycle_C10_medV45_noise_2.md) · [darkhorse_C03_fewV15_noise_1](darkhorse_C03_fewV15_noise_1.md) · [darkhorse_C05_largeV599_bloc_1](darkhorse_C05_largeV599_bloc_1.md) · [darkhorse_C07_fewV30_bloc_1](darkhorse_C07_fewV30_bloc_1.md) · [darkhorse_C07_largeV597_bloc_1](darkhorse_C07_largeV597_bloc_1.md) · [darkhorse_C07_largeV598_bloc_2](darkhorse_C07_largeV598_bloc_2.md) · [darkhorse_C07_medV147_bloc_1](darkhorse_C07_medV147_bloc_1.md) · [darkhorse_C07_medV45_noise_1](darkhorse_C07_medV45_noise_1.md) · [darkhorse_C10_largeV598_bloc_1](darkhorse_C10_largeV598_bloc_1.md) · [darkhorse_C10_largeV599_bloc_2](darkhorse_C10_largeV599_bloc_2.md)

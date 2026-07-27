@@ -129,6 +129,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/hh41_04_stipulated_utilities_star.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
