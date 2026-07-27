@@ -25,7 +25,7 @@ Ada,Ben,Cara
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/dead_heat_lot_tiebreak_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -60,6 +60,30 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Ada
    *** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (2 of 3): Ada, Ben
+   Outside (1):        Cara
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Ranked Robin (RCV-RR) winner Ada is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/dead_heat_lot_tiebreak_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

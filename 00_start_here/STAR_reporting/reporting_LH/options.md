@@ -32,6 +32,7 @@ options:
 | `brief` | `true` collapses repeated section headers so the report is shorter | [brief (with/without)](brief.md) |
 | `collapse_ballots` | `false` lists every ballot; `true` groups identical ones as `count × scores` | — |
 | `show_runoff_percent` | the `Voters with a preference: N of TOTAL …` line | [runoff percentages](../../STAR_Voting/the_count/runoff_percentages.md) |
+| `show_smith_set` | **Ranked Robin only** — the `--- Smith Set ---` block (who is still in contention, and whether the winner is inside it) | [Smith set](../../topics/smith_set.md) |
 
 ## What this block produces
 

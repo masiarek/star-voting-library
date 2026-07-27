@@ -100,3 +100,11 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 3 seats)
   Housing
   Schools
   SmallBiz
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 7): Housing
+   Outside (6):        Schools, Parks, Transit, SmallBiz, BigBiz, TaxCuts
+   One member ⇒ Housing is the Condorcet winner, beating every rival head-to-head.
+   More: 00_start_here/topics/smith_set.md

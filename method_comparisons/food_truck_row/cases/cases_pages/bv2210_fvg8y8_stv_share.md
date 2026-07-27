@@ -24,7 +24,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/bv2210_fvg8y8_stv_share_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
@@ -73,6 +73,20 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 2 seats)
   Arepa
   Donut
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): Arepa
+   Outside (4):        Bao, Churro, Donut, Eclair
+   One member ⇒ Arepa is the Condorcet winner, beating every rival head-to-head.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2210_fvg8y8_stv_share_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

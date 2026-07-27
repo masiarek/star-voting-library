@@ -20,7 +20,7 @@ D>A>B>C
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/five_answers_one_election_c4_b3_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -59,6 +59,29 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): B
    *** 2 candidates tie for the most wins (A, B) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): A, B, C, D
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (A, B) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner B is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/five_answers_one_election_c4_b3_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

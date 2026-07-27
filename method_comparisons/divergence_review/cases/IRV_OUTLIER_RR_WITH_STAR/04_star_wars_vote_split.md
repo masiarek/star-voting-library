@@ -132,6 +132,18 @@ Leia               0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Skywalker
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Leia
+   Outside (2):        Skywalker, Vader
+   One member ⇒ Leia is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Skywalker is OUTSIDE the Smith set. ✗
+      Every member of the set (Leia) beats Skywalker head-to-head, yet
+      RCV-IRV elected Skywalker anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
 
@@ -169,4 +181,16 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 
 Winner — Ranked Robin (RCV-RR): Leia
    beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Leia
+   Outside (2):        Skywalker, Vader
+   One member ⇒ Leia is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Leia is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
 ```

@@ -53,7 +53,7 @@ Pink
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -90,6 +90,27 @@ Blank Votes        3  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Purple
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): Green, Blue, Purple, Pink
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Green, Blue) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Purple is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

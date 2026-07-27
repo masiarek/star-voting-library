@@ -26,4 +26,14 @@ F                  0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   D
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 7): D
+   Outside (6):        A, B, C, E, F, G
+   One member ⇒ D is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner D is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

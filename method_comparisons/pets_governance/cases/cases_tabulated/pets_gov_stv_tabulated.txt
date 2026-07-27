@@ -61,3 +61,11 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 3 seats)
   Dog
   Bird
   Cat
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 6): Dog
+   Outside (5):        Cat, Fish, Bird, Rabbit, Hamster
+   One member ⇒ Dog is the Condorcet winner, beating every rival head-to-head.
+   More: 00_start_here/topics/smith_set.md

@@ -160,6 +160,17 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   copy forces it on AND expands it into a "Runoff math" funnel (`461 − 98 = 363`,
   majority) — don't hand-set that. The wording/funnel are locked by
   `tests/test_runoff_percent.py`; change them together.
+- **`show_smith_set`** (Ranked Robin only): same contract as `show_runoff_percent` —
+  engine default `false` on screen, **always forced on in the `_tabulated` mirror**.
+  Prints the **Smith set** (the smallest group whose every member beats every
+  candidate outside it), says whether that's a lone Condorcet winner or a top cycle,
+  and whether the winner landed inside it. Deliberately separate from `show_matrix`
+  so a file can opt the echo into one without the other, and **not** in the house
+  minimal block (the mirror already carries it). **RCV-IRV mirrors get the same block
+  automatically** (no option — the IRV path has no options plumbing). The two uses are
+  opposite: RR is Smith-efficient so the block is descriptive; RCV-IRV is not, so it's
+  a genuine pass/fail. Wording locked by `tests/test_smith_set.py`; concept page
+  `00_start_here/topics/smith_set.md`.
 - **Voter counts — keep examples SMALL.** Default to the *fewest ballots* that
   make the point; prefer **individual ballots** (one row per voter, a handful of
   them) over large weighted blocs. A 3-voter example that shows the effect beats a

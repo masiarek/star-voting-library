@@ -88,6 +88,31 @@ Two footnotes to the table. First, the criterion has spawned a whole constructio
 - **The [Schwartz set](https://electowiki.org/wiki/Schwartz_set)** (a.k.a. GOCHA) is the Smith set's slightly tighter cousin: always **Schwartz ⊆ Smith**, and the two differ *only* when pairwise **ties** are involved (a tie is enough to keep you in Smith, not in Schwartz). With an odd number of voters and full rankings — like our 7 ballots — no pairwise ties are possible and the two sets coincide.
 - **"Smith's method"** — electing the Smith set *itself* — is set-valued: fine for shortlists, but a single-winner election still needs a rule for inside the club. That's exactly the [cycle-resolution](../RCV_Ranked_Robin/cycle_resolution.md) split, and why the [ranked-ballot method zoo](ranked_ballot_methods_zoo.md) files Smith/Schwartz under "set-valued, usually used as a filter."
 - **Computing it is graph theory, and cheap:** the Smith set is the **top strongly connected component** of the pairwise-results tournament — or, equivalently, walk down the Copeland standings until the block above the line beats everyone below it. Standard algorithms, quadratic work; [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) maps this corner (tournaments, SCCs, and friends).
+- **The Copeland standings can understate the club.** The leaders of the win–loss table are always *inside* the Smith set, but they need not *be* it. Five candidates where E loses to everyone and, among the rest, A beats B and C, B beats C and D, C beats D, D beats A: the Copeland leaders are just A and B at 3 wins each, while the Smith set is all of `{A, B, C, D}`. So "who tied at the top?" is a narrower question than "who is still in contention?" — which is why the engine prints the set explicitly rather than leaving you to read it off the standings.
+
+## The engine reports it
+
+Every `_tabulated` mirror for a **Ranked Robin** or **RCV-IRV** election now ends with a Smith-set block — the set, whether it is a lone Condorcet winner or a top cycle, and whether the method's winner landed inside it. It is off in the compact on-screen echo (house rule: minimal echo, full mirror); a YAML can opt the echo in with `options: { show_smith_set: true }`.
+
+The two methods put the block to opposite uses. For Ranked Robin it is **descriptive** — RR passes by construction, so the line states the guarantee. For RCV-IRV it is a real **pass/fail**, and the repo's most basic ranked example ([`RCV_ballot_example`](../../06_Other/RCV_IRV/cases/cases_pages/RCV_ballot_example.md)) turns out to fail it:
+
+```text
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): C
+   Outside (2):        A, B
+   One member ⇒ C is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner A is OUTSIDE the Smith set. ✗
+      Every member of the set (C) beats A head-to-head, yet
+      RCV-IRV elected A anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+```
+
+Forty voters rank `A>C>B`, thirty-five `B>C>A`, twenty-five `C>A>B`. C beats A 60–40 and B 65–35 — the Condorcet winner — but holds only 25 first preferences, so C is eliminated in round one and A takes it 65–35. A textbook [center squeeze](center_squeeze/), and the Smith line is what makes it visible without hand-computing the matrix.
 
 ## How big is the club in practice?
 

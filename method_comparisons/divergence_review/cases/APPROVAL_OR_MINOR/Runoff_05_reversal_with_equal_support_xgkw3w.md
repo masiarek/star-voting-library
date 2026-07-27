@@ -133,6 +133,16 @@ Tulip              0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Sage
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Sage
+   Outside (2):        Rosa, Tulip
+   One member ⇒ Sage is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Sage is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
 
@@ -171,4 +181,16 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 
 Winner — Ranked Robin (RCV-RR): Sage
    beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Sage
+   Outside (2):        Rosa, Tulip
+   One member ⇒ Sage is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Sage is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
 ```

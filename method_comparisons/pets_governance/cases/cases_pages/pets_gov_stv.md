@@ -27,7 +27,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/pets_gov_stv_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- STV / Single Transferable Vote (multi-winner — 3 seats) ---
@@ -61,6 +61,20 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 3 seats)
   Bird
   Cat
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 6): Dog
+   Outside (5):        Cat, Fish, Bird, Rabbit, Hamster
+   One member ⇒ Dog is the Condorcet winner, beating every rival head-to-head.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/pets_gov_stv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

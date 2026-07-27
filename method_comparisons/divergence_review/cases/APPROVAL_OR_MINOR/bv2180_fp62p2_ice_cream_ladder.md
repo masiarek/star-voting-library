@@ -146,6 +146,24 @@ Mango                 0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Strawberry
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (6 of 6): Strawberry, Chocolate, Chocolate Chip, Vanilla, Fudge Brownie, Mango
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Strawberry) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Strawberry is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
 
@@ -200,4 +218,24 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 
 Winner — Ranked Robin (RCV-RR): Strawberry
    unbeaten, but draws Chocolate, Chocolate Chip, Fudge Brownie — a *weak* Condorcet winner, not a strict one (highest Copeland score, 3.5).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (6 of 6): Strawberry, Chocolate, Chocolate Chip, Vanilla, Fudge Brownie, Mango
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Strawberry) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Strawberry is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 00_start_here/topics/smith_set.md
 ```

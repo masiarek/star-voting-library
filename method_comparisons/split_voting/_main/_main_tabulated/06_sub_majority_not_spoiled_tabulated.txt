@@ -32,7 +32,7 @@ options:
   matrix_finalists_only: false   # full N×N grid — the lesson is that Aspen beats BOTH rivals
   show_condorcet: true   # the sub-majority winner IS the Condorcet winner
   show_score_counts: false   # show the per-candidate [Score Distribution] table
-  show_irv: true   # show RCV-IRV agreeing too
+  show_irv: true   # [Divergence from STAR] — silent here, because RCV-IRV agrees (Aspen 18 -> 30)
   show_runoff_percent: true   # self-reconciling runoff summary
   brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
   collapse_ballots: true   # true = group identical ballots as "count <sep> scores"

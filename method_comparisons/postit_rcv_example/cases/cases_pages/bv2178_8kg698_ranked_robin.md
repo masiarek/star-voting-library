@@ -56,7 +56,7 @@ Pink
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/bv2178_8kg698_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -100,6 +100,24 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Blue
    beats every opponent head-to-head — the Condorcet winner.
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Blue
+   Outside (3):        Purple, Green, Pink
+   One member ⇒ Blue is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Blue is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2178_8kg698_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

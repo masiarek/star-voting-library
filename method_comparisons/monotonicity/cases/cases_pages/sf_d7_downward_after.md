@@ -34,7 +34,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/sf_d7_downward_after_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -60,6 +60,24 @@ Blank Votes     5652  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Engardio
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Melgar
+   Outside (2):        Engardio, Nguyen
+   One member ⇒ Melgar is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Engardio is OUTSIDE the Smith set. ✗
+      Every member of the set (Melgar) beats Engardio head-to-head, yet
+      RCV-IRV elected Engardio anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/sf_d7_downward_after_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

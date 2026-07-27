@@ -31,7 +31,7 @@ Cocoa>Berry>Almond
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/margins_irv_tabulated.txt) (regenerated on every run; every analysis forced on):
+The count, step by step — the rounds and how the winner is reached:
 
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
@@ -56,6 +56,25 @@ Berry              0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Cocoa
 ```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): Almond, Berry, Cocoa
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   RCV-IRV winner Cocoa is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/margins_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

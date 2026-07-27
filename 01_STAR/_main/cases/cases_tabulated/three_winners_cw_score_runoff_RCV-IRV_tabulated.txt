@@ -19,4 +19,14 @@ Bob                0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ann
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Ann
+   Outside (2):        Bob, Carl
+   One member ⇒ Ann is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Ann is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

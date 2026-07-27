@@ -177,6 +177,21 @@ Erin               0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Dave
 
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 5): Abby, Brad, Dave, Erin
+   Outside (1):        Cora
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Abby, Brad) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Dave is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 00_start_here/topics/smith_set.md
+
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
 
@@ -235,4 +250,21 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 
 Winner — Ranked Robin (RCV-RR): Abby
    *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 5): Abby, Brad, Dave, Erin
+   Outside (1):        Cora
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Abby, Brad) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Abby is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
 ```

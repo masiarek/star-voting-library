@@ -204,6 +204,10 @@ OPTION_KEYS = (
     "count_separator",
     "show_irv",
     "show_description",
+    # Ranked Robin only: the Smith-set analysis in the on-screen echo. OFF by
+    # default (the _tabulated mirror always carries it), and deliberately separate
+    # from show_matrix so a file can opt into one without the other.
+    "show_smith_set",
 )
 
 
@@ -685,6 +689,16 @@ def build_irv_report(candidates, ballots, priority, title=None):
     winners = result.get_winners()
     L += [f"  {wn.name}" for wn in winners] or ["  (no winner)"]
     L.append("")
+    # RCV-IRV is NOT Smith-efficient, so this block is a real pass/fail rather than
+    # a restatement: it says whether the eliminations walked out of the set of
+    # candidates that collectively beat everyone else.
+    smith_block = format_smith_set(
+        candidates, calculate_preference_matrix(candidates, ballots),
+        winner=winners[0].name if winners else None,
+        method_label="RCV-IRV", smith_efficient=False)
+    if smith_block:
+        L += smith_block
+        L.append("")
     L.append("NOTE: a generated cross-method view of the STAR ballots, for "
              "comparison only — not the official STAR result.")
     return "\n".join(L)
@@ -896,6 +910,131 @@ def calculate_preference_matrix(candidates, ballots):
             matrix[c_i][c_j] = (for_i, against_i, no_pref)
 
     return matrix
+
+
+def smith_set(candidates, matrix):
+    """The Smith set: the smallest non-empty group of candidates such that every
+    member beats every candidate OUTSIDE the group head-to-head.
+
+    Returned as a list, ordered by Copeland score (the report's own standings
+    order), so the caller can print it top-down.
+
+    Why walking the standings is enough: if the Smith set has k of n candidates,
+    every member beats all n-k outsiders (score >= n-k) while an outsider can only
+    beat other outsiders (score <= n-k-1). So every member STRICTLY outscores every
+    non-member, which makes the Smith set a prefix of the Copeland ordering. We
+    still *verify* dominance for each prefix rather than trusting the order, and
+    return the smallest prefix that dominates — dominating sets are nested, so the
+    smallest dominating set is the Smith set.
+
+    A pairwise DRAW does not qualify as "beats", so a drawn matchup keeps both
+    candidates in the set. That is exactly where Smith and Schwartz part company.
+    """
+    if not candidates or not matrix:
+        return []
+    beats, wins, draws = set(), {c: 0 for c in candidates}, {c: 0 for c in candidates}
+    for a in candidates:
+        for b in candidates:
+            if a == b:
+                continue
+            fa, ag, _ = matrix[a][b]
+            if fa > ag:
+                beats.add((a, b))
+                wins[a] += 1
+            elif fa == ag:
+                draws[a] += 1
+    cope = {c: wins[c] + 0.5 * draws[c] for c in candidates}
+    order = sorted(candidates, key=lambda c: (-cope[c], candidates.index(c)))
+    for k in range(1, len(order) + 1):
+        inside, outside = order[:k], order[k:]
+        if all((a, b) in beats for a in inside for b in outside):
+            return inside
+    return list(order)                      # unreachable: the full field dominates
+
+
+def format_smith_set(candidates, matrix, winner=None, method_label=None,
+                     smith_efficient=False):
+    """Report block naming the Smith set, whether it is a lone Condorcet winner or
+    a top cycle, and whether `winner` landed inside it.
+
+    `smith_efficient` marks methods that CANNOT leave the set (Ranked Robin /
+    Copeland), so the line can say "guaranteed" instead of "it happened to hold".
+    Returns a list of lines (empty when there is nothing to say).
+    """
+    if not candidates or not matrix or len(candidates) < 2:
+        return []
+    club = smith_set(candidates, matrix)
+    if not club:
+        return []
+    outside = [c for c in candidates if c not in club]
+    n, k = len(candidates), len(club)
+
+    L = ["--- Smith Set (the generalized Condorcet winner) ---",
+         "The smallest group whose every member beats every candidate outside it —",
+         "the honest answer to \"who is even in contention?\".",
+         f"   Smith set ({k} of {n}): {', '.join(club)}"]
+    L.append(f"   Outside ({len(outside)}):{' ' * max(1, 9 - len(str(len(outside))))}"
+             f"{', '.join(outside) if outside else '—'}")
+    if k == 1:
+        L.append(f"   One member ⇒ {club[0]} is the Condorcet winner, beating every "
+                 "rival head-to-head.")
+    else:
+        L.append("   More than one member ⇒ NO Condorcet winner: the top of the "
+                 "tournament is a")
+        L.append("   cycle, so the strongest \"candidate\" is a set, not a person. "
+                 "Which member of")
+        L.append("   the set should win is exactly what Minimax / Ranked Pairs / "
+                 "Schulze disagree")
+        L.append("   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.")
+
+    # The Copeland leaders are always inside the Smith set, but need not BE it —
+    # the win-loss table's top block can understate how wide the contention is.
+    wins = {c: sum(1 for b in candidates
+                   if b != c and matrix[c][b][0] > matrix[c][b][1]) for c in candidates}
+    draws = {c: sum(1 for b in candidates
+                    if b != c and matrix[c][b][0] == matrix[c][b][1]) for c in candidates}
+    cope = {c: wins[c] + 0.5 * draws[c] for c in candidates}
+    best = max(cope.values())
+    leaders = [c for c in club if cope[c] == best]
+    if len(leaders) < k:
+        L.append(f"   Note: the Copeland leaders ({', '.join(leaders)}) are only part of "
+                 "the set — the")
+        L.append("   win–loss table's top block understates how wide the contention is.")
+
+    if winner is not None and winner in candidates:
+        label = method_label or "Winner"
+        if winner in club:
+            L.append(f"   {label} winner {winner} is INSIDE the Smith set. ✓")
+            if smith_efficient:
+                L.append("      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — "
+                         "every member of")
+                L.append("      the set outscores every outsider, so the top of the "
+                         "win–loss table is")
+                L.append("      always inside the set, however the tie among them is "
+                         "then broken.")
+            else:
+                L.append(f"      Not guaranteed — {label} is not Smith-efficient — but "
+                         "it holds here.")
+        else:
+            beaters = ", ".join(club)
+            L.append(f"   {label} winner {winner} is OUTSIDE the Smith set. ✗")
+            L.append(f"      Every member of the set ({beaters}) beats {winner} "
+                     "head-to-head, yet")
+            L.append(f"      {label} elected {winner} anyway. {label} is not "
+                     "Smith-efficient (nor")
+            L.append("      Condorcet-efficient) — this is the shape a center squeeze "
+                     "leaves behind.")
+
+    # A draw can only ever happen INSIDE the set (members beat outsiders strictly),
+    # and a draw is enough to keep a candidate in Smith but not in Schwartz.
+    if any(matrix[a][b][0] == matrix[a][b][1] for a in club for b in club if a != b):
+        L.append("   Fine print: this set contains a pairwise DRAW, and a draw is enough "
+                 "to keep a")
+        L.append("   candidate in the Smith set but not in the tighter Schwartz set — "
+                 "so Schwartz")
+        L.append("   may be smaller here.")
+    L.append("   More: 00_start_here/topics/smith_set.md")
+    return L
 
 
 def get_top_two_finalists(ballots, order_map=None):
@@ -1322,26 +1461,20 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     print(f"  {', '.join(winners)}")
 
 
-def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=None,
-                     silent=False, out_path=None, num_winners=1):
-    """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
+def ballots_for_pairwise(ballots_text):
+    """Parse RANKED ('A>B>C', '=' for an equal rank) or SCORE ballots into the
+    (candidates, ballots) pair the pairwise matrix reads.
 
-    Ranked Robin reads the *whole* ballot: it compares every pair of candidates
-    head-to-head and elects whoever wins the most matchups (ties broken by total
-    margin, then by lot order). Prints the ballots, the round-robin (pairwise)
-    table, and each candidate's win-loss record. Accepts ranked ballots
-    ("A>B>C") or score ballots; both reduce to the same pairwise comparison.
+    Ranked ballots become rank *scores* (top rank = highest number, unranked = 0),
+    which is exactly what a head-to-head comparison reads: only the ORDER matters,
+    and equal ranks land as Equal Support. Score ballots pass through unchanged.
 
-    `silent=True` suppresses the on-screen echo (used when generating the report
-    as an auxiliary mirror during a STAR run). `out_path` overrides the mirror
-    location (default: the standard '<stem>_tabulated.txt'); pass the method-tagged
-    aux path so the RR report doesn't clobber the STAR copy.
+    Returns (candidates, ballots, display_rows, is_ranked) — `display_rows` is the
+    human-readable ballot line each method's report echoes.
     """
     import re as _re
-    from collections import Counter as _Counter
 
     clean = "\n".join(ln.split("#")[0] for ln in ballots_text.splitlines())
-    display_rows = None
     if ">" in clean:                                    # ranked ballots
         # Each ballot is a weak order: '>' separates rank levels (most→least
         # preferred), '=' ties candidates within a level (Ava=Bianca>Cara).
@@ -1374,22 +1507,43 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                     ranked[c] = ng - i                  # tied candidates share a rank
             ballots.append({c: ranked.get(c, 0) for c in candidates})
         display_rows = [" > ".join("=".join(g) for g in groups) for groups in voters]
-    else:                                               # score ballots
-        candidates, ballots, _ = parse_ballots_from_string(ballots_text)
+        return candidates, ballots, display_rows, True
 
-        def _weak_rank(b):
-            # The ranking Ranked Robin actually reads from a score ballot: order by
-            # score (high to low); EQUAL scores are a tie ("=") — no head-to-head
-            # preference — which is exactly how the pairwise matrix treats them.
-            groups = {}
-            for c in candidates:
-                groups.setdefault(b.get(c, 0), []).append(c)
-            return " > ".join("=".join(groups[s]) for s in sorted(groups, reverse=True))
+    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
 
-        display_rows = [_weak_rank(b)
-                        + "      (" + ", ".join(str(b.get(c, 0)) for c in candidates) + ")"
-                        for b in ballots]
+    def _weak_rank(b):
+        # The ranking a pairwise count actually reads from a score ballot: order by
+        # score (high to low); EQUAL scores are a tie ("=") — no head-to-head
+        # preference — which is exactly how the pairwise matrix treats them.
+        groups = {}
+        for c in candidates:
+            groups.setdefault(b.get(c, 0), []).append(c)
+        return " > ".join("=".join(groups[s]) for s in sorted(groups, reverse=True))
 
+    display_rows = [_weak_rank(b)
+                    + "      (" + ", ".join(str(b.get(c, 0)) for c in candidates) + ")"
+                    for b in ballots]
+    return candidates, ballots, display_rows, False
+
+
+def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=None,
+                     silent=False, out_path=None, num_winners=1):
+    """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
+
+    Ranked Robin reads the *whole* ballot: it compares every pair of candidates
+    head-to-head and elects whoever wins the most matchups (ties broken by total
+    margin, then by lot order). Prints the ballots, the round-robin (pairwise)
+    table, and each candidate's win-loss record. Accepts ranked ballots
+    ("A>B>C") or score ballots; both reduce to the same pairwise comparison.
+
+    `silent=True` suppresses the on-screen echo (used when generating the report
+    as an auxiliary mirror during a STAR run). `out_path` overrides the mirror
+    location (default: the standard '<stem>_tabulated.txt'); pass the method-tagged
+    aux path so the RR report doesn't clobber the STAR copy.
+    """
+    from collections import Counter as _Counter
+
+    candidates, ballots, display_rows, _is_ranked = ballots_for_pairwise(ballots_text)
     n = len(ballots)
     priority = [c for c in (lot_numbers or candidates) if c in candidates]
     for c in candidates:
@@ -1511,6 +1665,11 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             return v.strip().lower() not in {"false", "f", "no", "n", "0", "off"}
         return default if v is None else bool(v)
     _echo_full = _truthy(_opts.get("show_matrix"), default=False)  # full matrix on screen?
+    # show_smith_set: the Smith-set analysis. OFF on screen by default (house rule:
+    # minimal echo), ALWAYS on in the _tabulated mirror — same contract as
+    # show_runoff_percent. Kept separate from show_matrix so a file can opt the
+    # echo into one without dragging in the other.
+    _show_smith = _truthy(_opts.get("show_smith_set"), default=False)
     # collapse_ballots: default ON — show "N × ballot"; OFF — one row per voter.
     _collapse = _truthy(_opts.get("collapse_ballots"))
     # count_separator: the glyph between count and ballot (× : x X); default ×.
@@ -1519,9 +1678,9 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     def _build(full):
         L = [f"--- Ranked Robin (RCV-RR / Copeland) Method ({seats_label}) ---",
              f" Tabulating {n} ballots "
-             f"({'ranked' if '>' in clean else 'score'} ballots).", ""]
+             f"({'ranked' if _is_ranked else 'score'} ballots).", ""]
         L.append("Ballots:")
-        if ">" not in clean:        # score input: show how scores become RR's ranking
+        if not _is_ranked:          # score input: show how scores become RR's ranking
             L.append("   the ranking Ranked Robin reads (\"=\" = tied);"
                      f" source scores follow in () per column: {', '.join(candidates)}")
         if _collapse:
@@ -1605,6 +1764,18 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                          "lot order. (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
                          "00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)")
+        if full or _show_smith:
+            # The Smith set reads the same pairwise matrix Ranked Robin counts, so
+            # nothing is discarded in the translation — it is RR's native yardstick,
+            # and RR always passes it. Single-winner only: with several seats
+            # "the winner is inside the set" has no single referent.
+            block = format_smith_set(
+                candidates, matrix,
+                winner=winner if num_winners == 1 else None,
+                method_label="Ranked Robin (RCV-RR)", smith_efficient=True)
+            if block:
+                L.append("")
+                L += block
         return "\n".join(L)
 
     # On-screen echo is compact by default (house rule), but the file can opt
@@ -3377,8 +3548,34 @@ Memphis,Nashville,Chattanooga,Knoxville
                     raise
                 _out = _buf.getvalue()
                 sys.stdout.write(_out)
+                # Append the Smith-set analysis to the MIRROR only (the on-screen
+                # echo stays minimal, house rule). RCV-IRV is not Smith-efficient,
+                # so this is a genuine pass/fail: did the eliminations walk out of
+                # the set that collectively beats everyone else? The winner is read
+                # back from the vendored engine's own report rather than recomputed,
+                # so the two can never contradict each other on a tie-break.
+                _mirror = _out
                 try:
-                    write_composed_tabulated(BALLOTS_FILE, _out)
+                    _cands, _bals, _, _ = ballots_for_pairwise(csv_input)
+                    _wnames = []
+                    _lines = _out.splitlines()
+                    for _i, _ln in enumerate(_lines):
+                        if _ln.startswith("Winner(s) —"):
+                            for _nxt in _lines[_i + 1:]:
+                                if not _nxt.strip():
+                                    break
+                                _wnames.append(_nxt.strip())
+                            break
+                    _blk = format_smith_set(
+                        _cands, calculate_preference_matrix(_cands, _bals),
+                        winner=_wnames[0] if len(_wnames) == 1 else None,
+                        method_label="RCV-IRV", smith_efficient=False)
+                    if _blk:
+                        _mirror = _out.rstrip("\n") + "\n\n" + "\n".join(_blk) + "\n"
+                except Exception:
+                    pass
+                try:
+                    write_composed_tabulated(BALLOTS_FILE, _mirror)
                 except Exception:
                     pass
                 sys.exit(0)
