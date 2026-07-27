@@ -48,7 +48,9 @@ from collections import Counter
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
-from pref_voting_tabulation import parse_election  # noqa: E402
+from pref_voting_tabulation import (  # noqa: E402
+    format_levels, parse_election, ranked_profile,
+)
 
 try:
     from pref_voting.profiles import Profile
@@ -92,11 +94,6 @@ AXIOMS = {
 }
 
 
-def build_profile(cands, ranks):
-    idx = {c: i for i, c in enumerate(cands)}
-    return Profile([[idx[c] for c in order] for order in ranks])
-
-
 def build_graph_from_scores(cands, score_dicts):
     """The tournament implied by SCORE ballots: a > b iff more ballots score a above b.
 
@@ -132,13 +129,16 @@ def report(path):
     out.append("=== Tournament solutions — every C1 rule on one election ===")
 
     if ranks is not None:
-        prof = build_profile(cands, ranks)
+        # ProfileWithTies, so a '=' level or a truncated ballot stays what the voter
+        # cast. A drawn PAIR then shows up as margin 0 and is reported as a weak
+        # tournament below, rather than being silently turned into a strict edge.
+        prof, _keep = ranked_profile(cands, dicts)
         ties = [(cands[i], cands[j]) for i, j in itertools.combinations(range(m), 2)
                 if prof.margin(i, j) == 0]
         graph = prof
         out.append(f" {len(ranks)} ranked ballots, {m} candidates.\n")
         out.append("Ballots:")
-        for order, cnt in Counter(" > ".join(o) for o in ranks).most_common():
+        for order, cnt in Counter(format_levels(o) for o in ranks).most_common():
             out.append(f"   {cnt:>3} x {order}")
     else:
         # SCORE ballots (STAR / Approval / Score). The rules below cannot CLASSIFY such a
@@ -226,10 +226,10 @@ def report(path):
     co = sorted(copeland(graph))
     if len(co) > 1:
         names = ", ".join(cands[c] for c in co)
-        # Margins exist only for a ranked Profile; a MajorityGraph has thrown them away
-        # (its .margin() raises), which is precisely the point being made below.
+        # Margins exist only on the ranked profile; the score path's MajorityGraph has
+        # thrown them away (its .margin() raises), which is the point made just below.
         margins = ({cands[c]: sum(graph.margin(c, o) for o in range(len(cands)) if o != c)
-                    for c in co} if isinstance(graph, Profile) else None)
+                    for c in co} if ranks is not None else None)
         best = max(margins, key=margins.get) if margins else None
         out.append(f"The tournament does NOT decide this election: Copeland ties {{{names}}}.")
         if margins:
