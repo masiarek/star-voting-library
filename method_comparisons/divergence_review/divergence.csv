@@ -61,7 +61,6 @@ AGREE,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_p
 AGREE,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml,3,3,B,B,B,B,B,B,B,,,0,False,False,True
 AGREE,01_STAR/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml,3,3,B,B,C,B,B,B,B,,B,1,True,False,True
 AGREE,YAML_library/1_positive/lot_tiebreak_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
-AGREE,YAML_library/1_positive/trash_delete.yaml,5,3,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,0,False,False,False
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_condorcet_winner.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,1,False,False,False
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False
@@ -184,6 +183,7 @@ IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/cases/ex03_five_verdicts.yaml,3,9,Che
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/cases/ex05_center_squeeze.yaml,3,9,Brook,Avi,Avi,Brook,Brook,Brook,Brook,Brook,Brook,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/cases/ex06_bullet_honest.yaml,3,9,Bree,Cash,Cash,Bree,Bree,Bree,Bree,Bree,Bree,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/exercises/cases/ex10_generous.yaml,3,9,Bess,Amir,Amir,Bess,Bess,Bess,Bess,Bess,Bess,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,YAML_library/1_positive/trash_delete.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml,3,200,Begich,Peltola,Peltola,Begich,Begich,Begich,Begich,Begich,Begich,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/cases/center_squeeze_star.yaml,3,27,Center,Left,Left,Center,Center,Left,Center,Center,Center,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml,3,998,Green,Yellow,Yellow,Green,Green,Green,Green,Green,Green,0,False,False,False
