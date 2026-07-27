@@ -130,6 +130,18 @@ Same voter utilities feed both: STAR reads 0–5 **scores** (top-two by sum → 
 uv run 06_Other/simulations/star_vs_rr_divergence.py --trials 3000
 ```
 
+### Two models of STAR — screening vs. answer keys
+
+The sweep needs to tabulate ~135,000 elections, so it uses **`star_winner_approx()`**: numpy, top-two by score sum, pairwise runoff. That model is fine for *counting* divergence and wrong for *naming* a winner — it settles ties by column order, where the engine goes on to pairwise wins, five-star count, then lot. **`star_winner_engine()`** is the real thing, for anything that gets written down.
+
+How big is the gap? Measure it:
+
+```
+uv run 06_Other/simulations/star_vs_rr_divergence.py --audit-model 400
+```
+
+About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 voters — precisely the corner the [30 divergence samples](../../05_Ranked_Robin/star_vs_rr_divergence/README.md) live in, and one of those 30 was in fact born mislabelled (`cycle_C10_fewV29_bloc_2` claimed "STAR A"; the engine elects C). Their labels now come from the engine and are held there by `tools_adam/scripts/check_star_vs_rr_labels.py` + `tests/test_star_vs_rr_labels.py`.
+
 ### Representative results (3000 trials/cell, seed 20260721)
 
 | model | C | V | STAR≠RR | of which: cycle | of which: CW-missed-runoff |

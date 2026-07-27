@@ -62,6 +62,18 @@ import starvote_larry_hastings as w  # noqa: E402
 SCAN_DIRS = ["01_STAR", "method_comparisons", "YAML_library/1_positive",
              "06_Other/ballot_style_lab"]
 
+# ...but a scratch file sitting in one of those folders is NOT a curated case.
+# CLAUDE.md's workflow step 1 says to brainstorm new scenarios in
+# `trash_delete.yaml` and never commit it, so whatever is parked there is
+# transient by definition — and it kept leaking in here: when the scratch copy
+# duplicated a real case, _dedupe() hung an "_also at: …trash_delete.yaml_" note
+# on that case's page, and the base rate counted the same election twice.
+# The sibling generators already drop these names (build_yaml_index.py,
+# build_catalog.py, build_paradox_index.py); match them. Deliberately NOT
+# matching "delete" the way build_catalog.py does — that also swallows the real
+# monotonicity cases `mono_raise_delete_before/after.yaml`, which belong here.
+SCRATCH_NAMES = ("temp", "trash", "scratch")
+
 OUT_DIR = REPO / "method_comparisons" / "divergence_review"
 
 
@@ -552,7 +564,8 @@ def main():
         base = REPO / d
         if base.exists():
             files += [p for p in sorted(base.rglob("*.y*ml"))
-                      if "_tabulated" not in p.parts]
+                      if "_tabulated" not in p.parts
+                      and not any(t in p.name.lower() for t in SCRATCH_NAMES)]
 
     rows, skipped = [], 0
     for f in files:

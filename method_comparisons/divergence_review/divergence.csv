@@ -61,7 +61,6 @@ AGREE,01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_p
 AGREE,01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml,3,3,B,B,B,B,B,B,B,,,0,False,False,True
 AGREE,01_STAR/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml,3,3,B,B,C,B,B,B,B,,B,1,True,False,True
 AGREE,YAML_library/1_positive/lot_tiebreak_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
-AGREE,YAML_library/1_positive/trash_delete.yaml,5,3,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,0,False,False,False
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_condorcet_winner.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,Allison,1,False,False,False
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runnerup_tie.yaml,4,10,Allison,Allison,Allison,Allison,Allison,Allison,Allison,,,3,False,False,True
 AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml,2,2,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,Bill,0,False,False,False

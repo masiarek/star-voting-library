@@ -29,18 +29,87 @@ sharply under spatial/factional models (less sampling noise, structure dominates
 stays roughly flat under pure noise. So "fewer ballots -> more divergence" holds for
 structured electorates, not for random ones.
 
+*** ANSWER KEYS: NEVER LABEL A SAMPLE WITH star_winner_approx(). ***
+This module has TWO models of STAR, and they are not interchangeable:
+  * star_winner_approx()  -- fast numpy. For SCREENING (the sweep below) only.
+  * star_winner_engine()  -- the real LH engine. For LABELS / answer keys.
+The approximation resolves ties by numpy index order; the engine has further
+tie-break rungs. A sample labelled from the approximation can therefore claim a
+winner the engine does not elect -- which is exactly what happened to
+05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV29_bloc_2.yaml (labelled
+"STAR A"; the engine elects C -- fixed in commit 7ddde36). Any generator that
+writes election_title / scenario_description / expected_winners MUST take those
+strings from star_winner_engine() (or from the case's `_tabulated` mirror), and
+the result is guarded by
+STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_labels.py.
+
 Usage:  uv run 06_Other/simulations/star_vs_rr_divergence.py [--trials N] [--seed S]
+        uv run 06_Other/simulations/star_vs_rr_divergence.py --audit-model 400
 """
 import argparse
+import sys
+from pathlib import Path
+
 import numpy as np
 
+ENGINE_DIR = Path(__file__).resolve().parents[2] / "STARVote_LH_tabulation_engine"
 
-def star_winner(scores):
+
+def star_winner_approx(scores):
+    """FAST, APPROXIMATE STAR winner -- for divergence SCREENING, never for labels.
+
+    Top-two by score sum, then a pairwise runoff. Where it parts company with the
+    real engine is the TIE-BREAKS, and it does so silently:
+      * finalist selection -- a tie on score sum is settled here by numpy's stable
+        argsort (i.e. by column order); the engine goes to pairwise wins, then
+        five-star count, then lot.
+      * the runoff -- `va >= vb` hands a tied runoff to the higher-scored finalist;
+        the engine decides it ON THE BALLOTS by five-star count, then by lot.
+    Good enough to count how OFTEN STAR and RR disagree (ties are rare and the
+    error is unbiased across many trials); wrong to state WHO won a given election.
+    Use star_winner_engine() for that, and see --audit-model for the actual
+    disagreement rate between the two.
+    """
     tot = scores.sum(0)
     a, b = np.argsort(-tot, kind="stable")[:2]              # two finalists by score sum
     va = int((scores[:, a] > scores[:, b]).sum())
     vb = int((scores[:, b] > scores[:, a]).sum())
     return int(a) if va >= vb else int(b)                   # runoff; tie -> higher-scored finalist
+
+
+def star_winner_engine(scores, lot_numbers=None):
+    """The REAL LH-engine STAR winner for a 0-5 score matrix -- USE THIS FOR LABELS.
+
+    Runs the same call the CLI and the test suite run (see tools_adam/scenario_eval.py):
+    every tie-break rung the engine has applies, so the answer is the one a reader
+    will see in the `_tabulated` mirror. Returns the winner's column INDEX, matching
+    star_winner_approx()'s return type.
+
+    Orders of magnitude slower than the approximation -- call it once per sample you
+    are about to label, never inside a sweep.
+    """
+    if str(ENGINE_DIR) not in sys.path:
+        sys.path.insert(0, str(ENGINE_DIR))
+    try:
+        import starvote
+        from starvote_larry_hastings import LotNumberTiebreaker
+    except ImportError as e:                                # pragma: no cover - env guard
+        raise ImportError(
+            f"star_winner_engine() needs the LH engine at {ENGINE_DIR} ({e}). "
+            "Run this script from a repo checkout with the project's venv "
+            "(.venv/bin/python), not a bare `uv run`."
+        ) from e
+
+    names = [chr(ord("A") + i) for i in range(scores.shape[1])]
+    rows = [{n: int(v) for n, v in zip(names, row)} for row in scores]
+    winners = starvote.election(
+        starvote.star, rows, seats=1, maximum_score=5,
+        tiebreaker=LotNumberTiebreaker(lot_numbers=lot_numbers or [], silent=True),
+        verbosity=1,                                        # match the wrapper exactly
+        print=lambda *a, **k: None,
+    )
+    won = winners[0] if isinstance(winners, (list, tuple)) else winners
+    return names.index(str(won))
 
 
 def pairwise(util):
@@ -84,7 +153,7 @@ def run(rng, model, V, C, trials):
     for _ in range(trials):
         u = gen(rng, model, V, C)
         s = scores_from_util(u)
-        sw = star_winner(s)
+        sw = star_winner_approx(s)                          # screening only -- see the docstring
         rw, cw = rr_winner_and_cw(u)
         diff += sw != rw
         if cw == -1:
@@ -94,12 +163,44 @@ def run(rng, model, V, C, trials):
     return diff / trials, cyc / trials, cw_missed / trials
 
 
+def audit_model(rng, trials):
+    """How often does the fast screening model MISLABEL a winner?
+
+    Runs both models on the same elections and reports where they part. This is the
+    measured size of the answer-key hazard: the sweep's percentages tolerate it, a
+    per-file label does not.
+    """
+    print(f"Screening model vs LH engine — {trials} elections per cell\n")
+    print(f"{'model':10} {'C':>3} {'V':>5} | {'approx != engine':>16}")
+    total = bad_total = 0
+    for model in ["noise", "spatial2d", "faction2d"]:
+        for C in [3, 5, 10]:
+            for V in [15, 51]:
+                bad = 0
+                for _ in range(trials):
+                    s = scores_from_util(gen(rng, model, V, C))
+                    bad += star_winner_approx(s) != star_winner_engine(s)
+                total += trials
+                bad_total += bad
+                print(f"{model:10} {C:>3} {V:>5} | {bad*100/trials:15.1f}%")
+        print()
+    print(f"overall: {bad_total}/{total} = {bad_total*100/total:.2f}% mislabelled "
+          f"if the screening model were used as an answer key")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--trials", type=int, default=3000)
     ap.add_argument("--seed", type=int, default=20260721)
+    ap.add_argument("--audit-model", type=int, metavar="N", default=None,
+                    help="instead of the sweep, run N elections per cell through BOTH "
+                         "the screening model and the real engine and report how often "
+                         "they disagree (the answer-key hazard, measured)")
     a = ap.parse_args()
     rng = np.random.default_rng(a.seed)
+    if a.audit_model:
+        audit_model(rng, a.audit_model)
+        return
     print(f"STAR vs Ranked Robin divergence — {a.trials} trials/cell, seed {a.seed}\n")
     print(f"{'model':10} {'C':>3} {'V':>5} | {'STAR!=RR':>9} {'cycle':>7} {'CW-missed-runoff':>17}")
     for model in ["noise", "spatial2d", "faction2d"]:
