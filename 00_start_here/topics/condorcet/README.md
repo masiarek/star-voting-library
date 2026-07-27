@@ -10,7 +10,7 @@
 |--------|:---:|------|-----------|
 | **Ranked Robin / Copeland** | ✅ always | it *is* a Condorcet method — most pairwise wins | [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md) |
 | **BTR / Baldwin / Nanson** | ✅ always | Condorcet-safe IRV variants | [Which RCV-IRV?](../../RCV_IRV/variants/RCV_IRV_variants.md) |
-| **STAR** | ⚠️ very often | highly Condorcet-efficient, not guaranteed; the runoff usually recovers it | [STAR automatic runoff](../../STAR_Voting/the_count/STAR_Automatic_Runoff.md) |
+| **STAR** | ⚠️ very often | not guaranteed; the runoff usually recovers it. [Measured](condorcet_efficiency_measured.md): 74–99% | [STAR automatic runoff](../../STAR_Voting/the_count/STAR_Automatic_Runoff.md) |
 | **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
 | **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 
@@ -37,6 +37,8 @@ The mirror image of this table is the **Condorcet loser** — the candidate who 
 > **"Show me a Condorcet method actually *misbehaving*."** Two towns, each of which elects Ada, that merge into an electorate electing Cara — the reinforcement paradox, run across every method (additive rules keep the promise, Condorcet rules can't, STAR's runoff breaks it): [Reinforcement paradox — both halves pick Ada, the whole picks Cara](../../../method_comparisons/reinforcement_paradox/README.md).
 
 > **"When there's no Condorcet winner, who decides — the ballots or the rule?"** In a cycle the family splits, and the newest member says so out loud: [Split Cycle, claim-checked](split_cycle.md) discards each cycle's weakest defeat and *returns every candidate left undefeated*, rather than applying a convention. Includes a tabulated election where a candidate **no voter ranks above the winner** still flips Schulze's result — plus the four things that case doesn't show.
+
+> **"Fine — but *how often*, actually?"** Measured, not asserted: [Condorcet efficiency, measured](condorcet_efficiency_measured.md) runs six methods over the same sampled electorates and reports the rate for each, with Ranked Robin's mandatory 100% as the control. The headline is that **there is no single number** — the electorate model swings the answer by more than the gap between methods. STAR runs 74–99%; RCV-IRV *beats* STAR under impartial culture and drops below 50% on a crowded single-issue spectrum. Includes the surprise in STAR's shortfall: most of it is preference the 0–5 ballot could not carry, not the top-two rule.
 
 > **"Where do I go to read about this properly?"** [Condorcet methods — a reading list](condorcet_reading_list.md): the books, papers, and free surveys worth your time, each with its lean marked — and, first, the one taxonomy (Fishburn's C1/C2/C3) that makes the family's names stop sliding. Start there if the *nomenclature* is what's blocking you.
 

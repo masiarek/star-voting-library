@@ -5,6 +5,7 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
+- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../00_start_here/topics/condorcet/condorcet_efficiency_measured.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
@@ -214,3 +215,50 @@ uv run 06_Other/simulations/primary_method_simulation.py --general star
 **Full writeup, with the measured rates, the interpretation, and the caveats: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md)** — kept there rather than duplicated here so the numbers have one home.
 
 The headline, for orientation (9 candidates, 501 voters, spatial model, top-4 advancing, Ranked Robin general): a **Plurality** qualifying round drops the Condorcet winner **17.3%** of the time; **Approval** drops it **0.4%**; **Score** 0.0%; a Condorcet qualifying round 0% by construction. Four slots is real slack but not enough, the fix is nearly free, and the *method* matters far more than the number of slots.
+
+---
+
+## Condorcet efficiency simulation
+
+`condorcet_efficiency_simulation.py` — how often does each method elect the [Condorcet winner](../../00_start_here/topics/condorcet/)? The claim "STAR's Condorcet efficiency is very high" was asserted in four places in this repo with no reproducible number behind it; this script supplies one, and the answer is more qualified than the slogan.
+
+### The definition, and the trap in it
+
+**Condorcet efficiency = P(elects the CW | a CW exists).** The conditional is load-bearing. Elections with a **cycle** have no Condorcet winner, so no method can elect one — folding them into the denominator would drag every method down by the cycle rate and measure the *electorate*, not the method. Cycles are excluded and reported separately as the `CW exists` column, which is itself revealing: impartial culture manufactures cycles at rates (down to 63.6% CW-exists at 7 candidates) that no structured model comes close to.
+
+### Ranked Robin is the control, not a result
+
+Copeland is Condorcet-efficient by construction, so its column **must** read exactly 100.0%. It is printed so a reader can check the harness: any cell below 100.0% means the pairwise code and the method code disagree, and every other number in the run is suspect. `--selftest` asserts it.
+
+### One STAR, not two
+
+The script does **not** define its own STAR — it imports `star_winner()` from `star_vs_rr_divergence.py`, which implements the LH engine's tie-break rungs and is held to the real engine by `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py`. A second copy would be a second thing to drift. The finalist set used for the mechanism split comes from the same helpers, so it matches the finalists STAR really advanced (an `argsort` shortcut silently disagrees exactly when the score round ties for second — which is the situation the grid-loss column is about).
+
+### Running it
+
+```
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py                  # the sweep
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --selftest       # known answers
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --mechanism      # why STAR misses
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff 3
+```
+
+### Results, and what they mean
+
+**Full writeup, with the table, the interpretation, and the caveats: [Condorcet efficiency, measured](../../00_start_here/topics/condorcet/condorcet_efficiency_measured.md)** — kept there rather than duplicated here so the numbers have one home.
+
+The headlines, for orientation:
+
+1. **No single number.** The electorate model swings the answer by more than the gap between any two methods — RCV-IRV spans 96.7% to 47.0% across the sweep. STAR runs 74–99%.
+2. **Under impartial culture, RCV-IRV beats STAR** (96.7% vs 89.7% at 3 candidates). Printed rather than buried — but the same model produces cycles in a third of elections, so it is not one either camp should argue from.
+3. **On a 1-D spectrum the ordering reverses and widens** — at 7 candidates RCV-IRV elects the head-to-head winner **less than half the time** (47.0%) against STAR's 74–79%. That is [center squeeze](../../00_start_here/topics/center_squeeze/) as a statistic rather than an anecdote.
+4. **Most of STAR's shortfall is the ballot, not the rule.** `--mechanism` splits the cases where the CW *reached* STAR's runoff and lost: about two-thirds are outright pairwise **reversals** on the 0–5 ballot, not ties. Rounding can never flip an individual ballot (scores are a monotone transform of utilities) but it flattens different voters at different rates, and that moves the aggregate. Score and Approval inherit the same effect.
+
+### Caveats (read before quoting)
+
+- **Sincere ballots only** — no strategy anywhere in this script.
+- **Ballot resolution is not held constant across methods.** Ranked methods get full-resolution preferences; score methods get six rungs. Realistic (a 0–5 ballot genuinely cannot rank seven candidates), but part of the STAR-vs-RR gap at large fields is **ballot expressiveness, not tabulation rule**. This is the biggest caveat on the whole exercise.
+- **Approval's column is a cutoff artifact** — there is no "Approval's Condorcet efficiency" without naming the cutoff rule. Sweep `--approval-cutoff`.
+- **The CW is computed from utilities, not from any ballot** — reading it off the 0–5 ballot would grade STAR against a target its own ballot had shaped, and flatter Approval the same way.
+- Scores are min-max normalized per voter; that assumption is what produces the grid-loss effect above.
+- **Always report the model, the field size, and the voter count with the number.**

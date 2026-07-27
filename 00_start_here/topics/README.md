@@ -19,7 +19,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 | **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [Summability](summability/) |
 | **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [Monotonicity](monotonicity/) |
 | **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [Center squeeze](center_squeeze/) |
-| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) | [Condorcet efficiency](condorcet/) |
+| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) — and [how often, measured](condorcet/condorcet_efficiency_measured.md) | [Condorcet efficiency](condorcet/) |
 | **Ties & tie-breaking** | where ties arise and how the lot order settles them | [Ties & tie-breaking](ties/) |
 | **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/) |
 | **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/) |

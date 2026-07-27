@@ -87,7 +87,7 @@ Center squeeze is a depolarization argument, not just a fairness one. A simulati
 
 ## How STAR avoids it
 
-STAR's scoring round advances the **two highest totals**, so a broadly-liked candidate (lots of 4s and 5s) reaches the runoff on *strength of support*, not just first-place counts — exactly the support a moderate has and IRV ignores. STAR is highly **Condorcet-efficient**: it usually elects the head-to-head winner.
+STAR's scoring round advances the **two highest totals**, so a broadly-liked candidate (lots of 4s and 5s) reaches the runoff on *strength of support*, not just first-place counts — exactly the support a moderate has and IRV ignores. STAR is highly **Condorcet-efficient**: it usually elects the head-to-head winner. Measured on the same sampled electorates, on a 1-D spectrum with seven candidates — the sharpest squeeze conditions — STAR elects the head-to-head winner 74% of the time against RCV-IRV's 52%, and the gap widens as the field grows: [Condorcet efficiency, measured](../topics/condorcet/condorcet_efficiency_measured.md).
 
 → More source notes: **RCV-IRV center-squeeze & polarization** group in [the slide-links index](../LINKS.md).
 

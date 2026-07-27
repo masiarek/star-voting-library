@@ -71,7 +71,7 @@ Stated plainly, because this repo's rule is that [fairness has to cut against ST
 Three things worth saying alongside that, none of which are dodges:
 
 - **The theorem's axis is one axis.** It says nothing about [center squeeze](../center_squeeze/), [distortion](../distortion.md), expressiveness, or [strategic incentive](../pvsi_strategic_incentive.md) in the full-domain world elections actually inhabit. STAR's case has never rested on Condorcet efficiency, and this theorem doesn't move it.
-- **STAR's Condorcet efficiency is empirically high** — it elects the Condorcet winner on the overwhelming majority of realistic profiles — so "not a Condorcet extension" is a statement about a guarantee, not about typical behaviour. Guarantee ≠ frequency, in both directions; that cuts against overstating STAR's misses *and* against overstating the guarantee's practical value.
+- **STAR's Condorcet efficiency is empirically high** — it elects the Condorcet winner on the large majority of realistic profiles ([measured](condorcet_efficiency_measured.md): 74–99%, depending on the field size and the electorate model) — so "not a Condorcet extension" is a statement about a guarantee, not about typical behaviour. Guarantee ≠ frequency, in both directions; that cuts against overstating STAR's misses *and* against overstating the guarantee's practical value.
 - **This is exactly why [Ranked Robin is the olive branch](../../RCV_Ranked_Robin/ranked_robin.md)** in this library's comparisons. If Condorcet consistency is the property you can't give up, there's a method here that has it, on the same ranked ballot, without IRV's elimination pathologies. Campbell–Kelly is the formal statement of what that buys.
 
 ## The bookend
