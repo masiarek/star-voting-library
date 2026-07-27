@@ -166,7 +166,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Cora > | 5 - 0 - 4 |0 - 8 - 1 |   ---    |1 - 8 - 0 |
    Dan > | 5 - 0 - 4 |0 - 8 - 1 |0 - 8 - 1 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        3–0–0         3      +3  Cora, Dan, Amy
     2  Cora       2–1–0         2      +1  Dan, Amy

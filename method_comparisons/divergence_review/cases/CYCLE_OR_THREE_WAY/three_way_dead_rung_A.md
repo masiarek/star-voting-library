@@ -214,12 +214,12 @@ Legend: For - Equal Support - Against   (row vs column)
   B > | 1 - 1 - 1 |   ---    |1 - 1 - 1 |
   C > | 1 - 1 - 1 |1 - 1 - 1 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  A          0–0–2         1      +0  —
     2  B          0–0–2         1      +0  —
     3  C          0–0–2         1      +0  —
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 3 candidates tie for the most wins (A, B, C) — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 3 candidates tie on the highest Copeland score (1): A, B, C — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```

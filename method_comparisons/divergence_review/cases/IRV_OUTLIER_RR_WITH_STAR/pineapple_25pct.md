@@ -206,7 +206,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Olive > | 23 - 52 - 25 |23 - 54 - 23 |23 - 54 - 23 |    ---      |23 -  0 - 77 |
      Cheese > | 75 -  0 - 25 |77 -  0 - 23 |77 -  0 - 23 |77 -  0 - 23 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cheese     4–0–0         4    +212  Pineapple, Anchovy, Mushroom, Olive
     2  Pineapple  3–1–0         3     -44  Anchovy, Mushroom, Olive

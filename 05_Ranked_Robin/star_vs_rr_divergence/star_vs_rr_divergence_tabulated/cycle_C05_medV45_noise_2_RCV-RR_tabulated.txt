@@ -72,13 +72,13 @@ Legend: For - Equal Support - Against   (row vs column)
   D > | 20 -  9 - 16 |20 -  5 - 20 |22 -  6 - 17 |    ---      |17 - 10 - 18 |
   E > | 23 -  7 - 15 |18 -  4 - 23 |16 -  9 - 20 |18 - 10 - 17 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  B          3–0–1       3.5     +10  C, E, A
-    2  C          2–2–0         2      +9  E, A
-    3  D          2–1–1       2.5      +8  C, A
+    2  D          2–1–1       2.5      +8  C, A
+    3  C          2–2–0         2      +9  E, A
     4  E          2–2–0         2      +0  D, A
     5  A          0–4–0         0     -27  —
 
 Winner — Ranked Robin (RCV-RR): B
-   beats every opponent head-to-head — the Condorcet winner.
+   unbeaten, but draws D — a *weak* Condorcet winner, not a strict one (highest Copeland score, 3.5).

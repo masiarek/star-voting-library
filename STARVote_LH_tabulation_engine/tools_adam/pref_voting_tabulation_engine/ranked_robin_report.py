@@ -91,33 +91,43 @@ def report(path):
                 out.append(f"   {a} ties {b}    {fa} – {aa}")
     out.append("")
 
-    # Win–loss record; Ranked Robin = most wins, then highest total margin.
-    out.append("Win–loss record (most head-to-head wins wins; ties broken by total margin):")
-    ranked = sorted(cands, key=lambda c: (-len(wins[c]), -margin[c],
+    # Win–loss record; Ranked Robin = highest Copeland score, then total margin.
+    # Copeland = wins + ½·ties, matching the LH engine, BetterVoting and
+    # pref_voting. Ranking on the RAW win count instead makes this disagree with
+    # all three the moment a pairwise tie exists (a draw is worth ½, not 0).
+    cope = {c: len(wins[c]) + 0.5 * len(ties[c]) for c in cands}
+    out.append("Win–loss record — Copeland = wins + ½·ties "
+               "(highest score wins; ties broken by total margin):")
+    ranked = sorted(cands, key=lambda c: (-cope[c], -margin[c],
                                           priority.index(c) if c in priority else 1e9))
     for c in ranked:
         w, l, t = len(wins[c]), len(losses[c]), len(ties[c])
         rec = f"{w}–{l}" + (f"–{t}t" if t else "")
         beat = f"   (beats: {', '.join(wins[c])})" if wins[c] else ""
-        out.append(f"   {c:<8} {rec:<6} margin {margin[c]:+d}{beat}")
+        out.append(f"   {c:<8} {rec:<6} Copeland {cope[c]:<4g} margin {margin[c]:+d}{beat}")
     out.append("")
 
     # Winner + why.
-    top_wins = len(wins[ranked[0]])
-    leaders = [c for c in cands if len(wins[c]) == top_wins]
+    top = cope[ranked[0]]
+    leaders = [c for c in cands if cope[c] == top]
     winner = ranked[0]
     if len(leaders) == 1:
-        if len(losses[winner]) == 0:
+        # Strict Condorcet winner = no losses AND no draws. A draw is not a win, so
+        # an unbeaten-but-drawing candidate is only a WEAK Condorcet winner.
+        if not losses[winner] and not ties[winner]:
             why = "beats every opponent head-to-head — the Condorcet winner."
+        elif not losses[winner]:
+            why = (f"unbeaten, but draws {', '.join(sorted(ties[winner]))} — a *weak* "
+                   f"Condorcet winner, not a strict one (Copeland {top:g}).")
         else:
-            why = f"the most head-to-head wins ({top_wins})."
+            why = f"the highest Copeland score ({top:g} = wins + ½·ties)."
         out.append(f"Winner — Ranked Robin: {winner}\n   {why}")
     else:
         out.append(f"Winner — Ranked Robin: {winner}")
-        out.append(f"   ⚠️  {len(leaders)} candidates tie on wins ({', '.join(leaders)}) — "
-                   "a cycle. Broken by total margin, then lot order. "
-                   "(This is where Minimax / Ranked Pairs / Schulze differ — see "
-                   "cycle_resolution.md.)")
+        out.append(f"   ⚠️  {len(leaders)} candidates tie on Copeland {top:g} "
+                   f"({', '.join(leaders)}) — a cycle or a dead heat. Broken by total "
+                   "margin, then lot order. (This is where Minimax / Ranked Pairs / "
+                   "Schulze differ — see cycle_resolution.md.)")
 
     # --- Independent third opinion: pref_voting's Copeland (see module docstring).
     # Loud, not silent: if the library is missing we SAY so, so a skipped check is

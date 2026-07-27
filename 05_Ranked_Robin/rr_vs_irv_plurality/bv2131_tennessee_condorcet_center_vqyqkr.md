@@ -40,7 +40,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Nashville    beats Knoxville     68 – 32
    Chattanooga  beats Knoxville     83 – 17
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate    W–L–T  Copeland  Margin  Beats
     1  Nashville    3–0–0         3     +88  Chattanooga, Knoxville, Memphis
     2  Chattanooga  2–1–0         2     +46  Knoxville, Memphis

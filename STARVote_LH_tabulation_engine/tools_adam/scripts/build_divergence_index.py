@@ -62,6 +62,18 @@ import starvote_larry_hastings as w  # noqa: E402
 SCAN_DIRS = ["01_STAR", "method_comparisons", "YAML_library/1_positive",
              "06_Other/ballot_style_lab"]
 
+# ...but a scratch file sitting in one of those folders is NOT a curated case.
+# CLAUDE.md's workflow step 1 says to brainstorm new scenarios in
+# `trash_delete.yaml` and never commit it, so whatever is parked there is
+# transient by definition — and it kept leaking in here: when the scratch copy
+# duplicated a real case, _dedupe() hung an "_also at: …trash_delete.yaml_" note
+# on that case's page, and the base rate counted the same election twice.
+# The sibling generators already drop these names (build_yaml_index.py,
+# build_catalog.py, build_paradox_index.py); match them. Deliberately NOT
+# matching "delete" the way build_catalog.py does — that also swallows the real
+# monotonicity cases `mono_raise_delete_before/after.yaml`, which belong here.
+SCRATCH_NAMES = ("temp", "trash", "scratch")
+
 OUT_DIR = REPO / "method_comparisons" / "divergence_review"
 
 
@@ -92,12 +104,19 @@ def star_winner(path):
 def _copeland_winner(candidates, score_ballots, order):
     """Ranked Robin (Copeland) winner from {cand: value} ballots.
 
-    Mirrors run_ranked_robin's tally: most pairwise wins, then total margin,
-    then lot/priority order. Returns (winner, is_cycle)."""
+    Mirrors run_ranked_robin's tally: highest Copeland score (wins + ½·ties),
+    then total margin, then lot/priority order. Returns (winner, is_cycle).
+
+    This is a reimplementation, so it has to track the engine. It previously ranked
+    on the RAW win count — the same bug the engine had — which is why this ledger
+    kept reporting the old RR winners after the engine was fixed. A drawn matchup
+    is worth ½, so an unbeaten-but-drawing candidate must outrank someone holding
+    more wins AND a loss."""
     matrix = w.calculate_preference_matrix(candidates, score_ballots)
     if not matrix:
         return None, False
     wins = {c: 0 for c in candidates}
+    ties = {c: 0 for c in candidates}
     margin = {c: 0 for c in candidates}
     for i, a in enumerate(candidates):
         for b in candidates[i + 1:]:
@@ -108,11 +127,15 @@ def _copeland_winner(candidates, score_ballots, order):
                 wins[a] += 1
             elif ag > fa:
                 wins[b] += 1
-    ranked = sorted(candidates, key=lambda c: (-wins[c], -margin[c], order.index(c)))
-    top = wins[ranked[0]]
-    leaders = [c for c in candidates if wins[c] == top]
-    # A cycle: nobody wins all their matchups yet several share the top win count.
-    is_cycle = len(leaders) > 1 and top < len(candidates) - 1
+            else:
+                ties[a] += 1
+                ties[b] += 1
+    cope = {c: wins[c] + 0.5 * ties[c] for c in candidates}
+    ranked = sorted(candidates, key=lambda c: (-cope[c], -margin[c], order.index(c)))
+    top = cope[ranked[0]]
+    leaders = [c for c in candidates if cope[c] == top]
+    # A cycle: nobody beats every rival outright yet several share the top score.
+    is_cycle = len(leaders) > 1 and wins[ranked[0]] < len(candidates) - 1
     return ranked[0], is_cycle
 
 
@@ -541,7 +564,8 @@ def main():
         base = REPO / d
         if base.exists():
             files += [p for p in sorted(base.rglob("*.y*ml"))
-                      if "_tabulated" not in p.parts]
+                      if "_tabulated" not in p.parts
+                      and not any(t in p.name.lower() for t in SCRATCH_NAMES)]
 
     rows, skipped = [], 0
     for f in files:

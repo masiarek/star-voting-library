@@ -153,7 +153,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Rye > |  51 -   0 -  49 |      ---       | 51 -   0 -  49 |
   Tao > |   0 -   0 - 100 | 49 -   0 -  51 |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Rye        2–0–0         2      +4  Uma, Tao
     2  Uma        1–1–0         1     +98  Tao

@@ -2,6 +2,14 @@
 
 *30 small elections where **STAR and [Ranked Robin](../README.md) elect different winners**, deliberately spread across candidate-field size, electorate size, and structure — with **RCV-IRV, Approval and Plurality** on the same ballots. Every winner is the LH engine's (from each case's `_tabulated` mirror). **Each YAML's `scenario_description` states the exact cause of its divergence.** Empirical companion to the [STAR-vs-RR simulation](../../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation).*
 
+> **Regenerating this folder?** Take the winners from the **engine** — `star_winner_engine()` in the simulation, or each case's `_tabulated` mirror. The simulation's fast numpy model (`star_winner()`) now implements the engine's tie-breaks and is test-checked against it, but the engine is right by construction and cannot drift; an earlier version of that model did drift, and mislabelled one of these 30 at birth. Then verify with:
+>
+> ```bash
+> python STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_labels.py
+> ```
+>
+> It checks all five places a sample names a winner — `expected_winners`, the title, the description, the `_tabulated` mirror and the table below — against a real tabulation (`--fix` relabels the yamls). `tests/test_star_vs_rr_labels.py` runs it on every commit.
+
 ## The spread (what varies)
 
 - **Candidate field:** 5 × 3, 6 × 5, 9 × 7, 10 × 10 (few → large).

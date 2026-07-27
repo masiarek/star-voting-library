@@ -59,7 +59,7 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 Look at the Ranked Robin output ([full report →](cases/cases_pages/margins_ranked_robin.md)):
 
 ```
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Berry      1–1–0         1      +2  Cocoa
     2  Almond     1–1–0         1      +0  Berry

@@ -155,7 +155,7 @@ Legend: For - Equal Support - Against   (row vs column)
      Paper > | 33 -  0 - 67 |    ---      |68 -  0 - 32 |
   Scissors > | 65 -  0 - 35 |32 -  0 - 68 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Rock       1–1–0         1      +4  Paper
     2  Paper      1–1–0         1      +2  Scissors

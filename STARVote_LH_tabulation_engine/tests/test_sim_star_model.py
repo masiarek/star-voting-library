@@ -13,6 +13,10 @@ the engine elects C (fixed 2026-07-26).
 So the model is only allowed to exist if it agrees with the engine. This test
 runs both on deliberately tie-heavy random profiles (few voters, narrow score
 range) plus the 30 committed samples, and fails the moment they diverge.
+
+Scope: this checks the MODEL against the engine. Whether the samples' prose and
+answer keys match the engine is a separate question, covered more thoroughly by
+test_star_vs_rr_labels.py (title, description, key, mirror and README row).
 """
 import importlib.util
 import random
@@ -122,28 +126,7 @@ def test_model_matches_the_dumped_samples():
             SAMPLES / "star_vs_rr_divergence_tabulated" / f"{y.stem}_tabulated.txt"
         ).read_text()
         engine = re.search(r"^  STAR +=\s*(\S+)", mirror_text, re.M).group(1)
-        key = re.search(r"expected_winners:\s*\n\s*-\s*(\S+)", text).group(1)
 
-        assert model == engine == key, (
-            f"{y.name}: model={model} engine(mirror)={engine} expected_winners={key} "
-            "— all three must agree."
-        )
-
-        # The prose is what actually lied last time: the title said "STAR A" while
-        # the mirror beside it said C. Every sample's title ends "(STAR x, RR y)".
-        title = re.search(r"^election_title:\s*(.+)$", text, re.M).group(1)
-        claimed = re.search(r"\(STAR (\w+), RR (\w+)\)", title)
-        assert claimed, f"{y.name}: title should end with '(STAR x, RR y)' — got {title}"
-        # The engine labels this line "RCV-RR" on a cycle and "RCV-RR (Condorcet)"
-        # when a Condorcet winner exists, so match both — a regex that only caught
-        # one would silently skip nine of the thirty samples.
-        rr = re.search(r"^  RCV-RR\b[^=]*=\s*(\S+)", mirror_text, re.M)
-        assert rr, f"{y.name}: no RCV-RR result in the mirror to check the title against"
-        assert claimed.group(1) == engine, (
-            f"{y.name}: title claims STAR elects {claimed.group(1)}, "
-            f"engine elects {engine}."
-        )
-        assert claimed.group(2) == rr.group(1), (
-            f"{y.name}: title claims RR elects {claimed.group(2)}, "
-            f"engine elects {rr.group(1)}."
+        assert model == engine, (
+            f"{y.name}: model says {model}, the engine's own mirror says {engine}."
         )

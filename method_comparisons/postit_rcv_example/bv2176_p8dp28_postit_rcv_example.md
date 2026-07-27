@@ -132,7 +132,7 @@ Round-Robin — every pair, head-to-head (For – Against):
    Green   beats Pink      7 –  5
    Blue    beats Pink     10 –  3
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Blue       2–1–0         2      +5  Purple, Pink
     2  Green      2–1–0         2      +4  Blue, Pink

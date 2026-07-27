@@ -34,7 +34,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      |22 -  0 -  0 |
   Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 -  0 - 22 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Dog        5–0–0         5     +20  Cat, Fish, Bird, Rabbit, Hamster
     2  Cat        4–1–0         4     +12  Fish, Bird, Rabbit, Hamster

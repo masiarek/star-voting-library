@@ -170,7 +170,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Beth > | 60 -  0 - 40 |    ---      |65 -  0 - 35 |
   Cole > | 35 -  0 - 65 |35 -  0 - 65 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Beth       2–0–0         2     +50  Ana, Cole
     2  Ana        1–1–0         1     +10  Cole

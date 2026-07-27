@@ -159,7 +159,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Ben > |  6 -  0 - 17 |    ---      |16 -  0 -  7 |
   Carla > | 13 -  0 - 10 | 7 -  0 - 16 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Alice      1–1–0         1      +8  Ben
     2  Ben        1–1–0         1      -2  Carla

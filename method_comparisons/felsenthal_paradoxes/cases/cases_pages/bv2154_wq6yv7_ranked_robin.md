@@ -51,7 +51,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruce > |  8 -  0 -  7 |    ---      |10 -  0 -  5 |
   Clara > |  9 -  0 -  6 | 5 -  0 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bruce      2–0–0         2      +6  Clara, April
     2  Clara      1–1–0         1      -2  April

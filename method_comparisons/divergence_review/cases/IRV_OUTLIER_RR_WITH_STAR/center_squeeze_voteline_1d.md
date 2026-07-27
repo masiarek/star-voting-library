@@ -164,7 +164,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Green > | 666 -   0 - 332 |      ---       |645 -   0 - 353 |
   Yellow > | 528 -   0 - 470 |353 -   0 - 645 |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Green      2–0–0         2    +626  Yellow, Red
     2  Yellow     1–1–0         1    -234  Red

@@ -94,7 +94,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Bryce > | 10 -  0 - 30 |18 -  0 - 22 | 0 -  0 - 40 |    ---      |29 -  0 - 11 |
      Arches > | 21 -  0 - 19 |29 -  0 - 11 |11 -  0 - 29 |11 -  0 - 29 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cascade    3–1–0         3     +56  Arches, Everglade, Bryce
     2  Denali     3–1–0         3      -8  Cascade, Everglade, Bryce

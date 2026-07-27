@@ -87,7 +87,19 @@ def parse_election(path):
                 w, order = int(m.group(1)), [c.strip() for c in m.group(2).split(">")]
             else:
                 w, order = 1, [c.strip() for c in ln.split(">")]
+            # '=' equal-rankings (Ava=Bianca>Cara) are valid in this repo's ranked
+            # ballots and the LH engine handles them — but this tool builds a
+            # pref_voting Profile, which takes strict linear orders only. Splitting
+            # on '>' alone silently turned a level into a CANDIDATE NAMED "A=B=D",
+            # producing a confident, wrong report. Refuse loudly instead; proper
+            # support needs ProfileWithTies throughout.
             for c in order:
+                if "=" in c:
+                    raise SystemExit(
+                        f"{path}: ballot {ln!r} uses '=' equal-rankings, which this "
+                        "pref_voting tool cannot represent (it builds strict linear "
+                        "orders). The LH engine does handle them — tabulate with "
+                        "starvote_larry_hastings.py instead.")
                 if c not in cset:
                     cset.append(c)
             voters += [order] * w

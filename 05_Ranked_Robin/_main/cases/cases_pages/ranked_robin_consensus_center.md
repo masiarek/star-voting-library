@@ -51,7 +51,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Cara > | 9 - 0 - 4 |6 - 0 - 7 |   ---    |9 - 0 - 4 |
    Dan > | 6 - 0 - 7 |4 - 0 - 9 |4 - 0 - 9 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        3–0–0         3     +11  Cara, Ada, Dan
     2  Cara       2–1–0         2      +9  Ada, Dan

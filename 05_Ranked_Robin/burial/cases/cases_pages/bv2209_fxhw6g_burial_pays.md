@@ -53,7 +53,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Diamond > | 15 -  0 - 27 |18 -  0 - 24 |    ---      |30 -  0 - 12 |
     Beryl > | 27 -  0 - 15 |18 -  0 - 24 |12 -  0 - 30 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (most wins wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Amber      2–1–0         2     +12  Coral, Diamond
     2  Coral      2–1–0         2      +0  Diamond, Beryl
