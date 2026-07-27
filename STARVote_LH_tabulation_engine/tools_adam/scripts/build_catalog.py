@@ -182,7 +182,15 @@ def collect():
         if any(s in "/" + rel for s in EXCLUDE):
             continue
         name = os.path.basename(rel).lower()
-        if any(t in name for t in ("temp", "trash", "scratch", "delete")):
+        # Scratch files are not curated cases. Match the sibling generators'
+        # tuple exactly (build_yaml_index.py, build_divergence_index.py's
+        # SCRATCH_NAMES, build_bv_registry.py). Do NOT add "delete": "trash"
+        # already catches the one file this filter exists for
+        # (YAML_library/1_positive/trash_delete.yaml), while "delete" also
+        # swallowed the real curated monotonicity cases
+        # `method_comparisons/monotonicity/cases/mono_raise_delete_{before,after}.yaml`,
+        # which silently went missing from CATALOG.md / elections.csv.
+        if any(t in name for t in ("temp", "trash", "scratch")):
             continue
         try:
             d = yaml.safe_load(open(p, encoding="utf-8"))

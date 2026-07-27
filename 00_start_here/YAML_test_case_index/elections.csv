@@ -263,6 +263,8 @@ LH:majority_vs_consensus_51_49,Majority criterion vs. the consensus candidate �
 LH:margins_paper_exact_304,"Margins matter — the textbook profile at its printed size (304 ballots, LH-only)",1,single-race,304,RankedRobin,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
+LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only
+LH:mono_raise_delete_before,"STAR mono-raise-delete — part 1: baseline, X wins",1,single-race,30,STAR,LH-only
 LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose,1,single-race,34,IRV,LH-only
 LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only
 LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still wins),1,single-race,34,STAR,LH-only
