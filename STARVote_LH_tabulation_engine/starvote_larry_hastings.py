@@ -571,7 +571,14 @@ def write_tabulated_copy(src_path, output_text):
 def write_composed_tabulated(src_path, results_text):
     """Write the standard '_tabulated' mirror: a provenance header, the ORIGINAL
     election file copied as-is, then the (ANSI-stripped) tabulation results.
-    Shared by the STAR and Approval paths. Returns the path written.
+    Returns the path written.
+
+    House rule: EVERY tabulated YAML gets this full-context mirror, so every
+    method path that writes a PRIMARY mirror goes through here — STAR, Approval,
+    RCV-IRV, Ranked Robin (incl. Bloc RR) and Plurality (incl. SNTV / Block /
+    Limited voting). Only AUXILIARY mirrors (the method-tagged RCV-IRV / RCV-RR
+    reports generated alongside a STAR run, written via `out_path`) stay bare:
+    the primary mirror beside them already carries the source file.
 
     The header carries NO wall-clock or mtime stamps: mirrors are committed to
     git, and regenerating them must yield byte-identical files whenever the
@@ -1591,7 +1598,9 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             pass
     elif file_path:
         try:
-            write_tabulated_copy(file_path, _build(full=True))   # full mirror
+            # PRIMARY mirror: same composed format as the STAR / Approval paths
+            # (provenance header + the original file + the results), always full.
+            write_composed_tabulated(file_path, _build(full=True))
         except Exception:
             pass
     return winners if num_winners > 1 else winner
@@ -1692,7 +1701,8 @@ def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
             pass
     elif file_path:
         try:
-            write_tabulated_copy(file_path, report)
+            # PRIMARY mirror: composed like the STAR / Approval paths.
+            write_composed_tabulated(file_path, report)
         except Exception:
             pass
     return winner
@@ -1765,7 +1775,8 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
             pass
     elif file_path:
         try:
-            write_tabulated_copy(file_path, report)
+            # PRIMARY mirror: composed like the STAR / Approval paths.
+            write_composed_tabulated(file_path, report)
         except Exception:
             pass
     return winners

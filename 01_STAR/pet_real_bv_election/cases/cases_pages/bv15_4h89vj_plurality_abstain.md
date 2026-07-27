@@ -35,10 +35,13 @@ turnout.
 
 This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
 version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
-no Plurality method — it does: single-winner Plurality tabulates via the STAR
-path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
-accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
-preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
+no Plurality method — it does: `run_plurality_single` for one seat, SNTV for
+several.) The choose-one report prints the accounting #740 is missing, in the
+form choose-one actually has — marks, blanks, and the total, which reconcile:
+"Andre 5 · Blake 2", "(5 ballot(s) marked nobody.)", "Andre (5 of 12 marks)" —
+5 + 2 + 5 = 12. That is the "stats for nerds" turnout breakdown #740 asks BV to
+add: the 5 abstentions are named, and the winner's share is stated against all
+12 ballots cast rather than against the 7 that BV displays as turnout.
 
 ## Ballots
 
@@ -64,68 +67,32 @@ Andre,Blake
 
 ## What the engine says
 
-The count, step by step — the rounds and how the winner is reached:
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 12 ballots.
 
-[STAR Voting]
- Tabulating 12 ballots. Note: 5 of 12 ballots are marked as abstentions.
-Count × Andre,Blake
-    5 ×     1,    0
-    5 ×     -,    -
-    2 ×     0,    1
-  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+                   Andre  Blake 
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     -      X   
+                     -      X   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Andre         -- 5 -- First place
-   Blake         -- 2 -- Second place
- Andre and Blake advance.
+  Count the marks:  Andre 5 · Blake 2
+  (5 ballot(s) marked nobody.)
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Andre         -- 5 -- First place
-   Blake         -- 2
-   Equal Support -- 5
- Andre wins.
-   Runoff math:
-     12  ballots cast
-   −  5  Equal Support (no preference between the two finalists)
-     ──
-      7  voters with a preference  (majority = 4)
-           Andre 5 (71%)  ·  Blake 2 (29%)
-
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Andre
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Andre   (5 of 12 marks)
 ```
-
-### Full audit — preference matrix, Condorcet, and score distribution
-
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Andre   | * Blake   |
------------------------------------------
-     * Andre > |    ---     |5 - 5 - 2  |
-     * Blake > | 2 - 5 - 5  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Andre — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Blake — loses every head-to-head matchup
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Andre      0  0  0  0  5  2    5  |     5   0.7
-Blake      0  0  0  0  2  5    5  |     2   0.3
-```
-
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 

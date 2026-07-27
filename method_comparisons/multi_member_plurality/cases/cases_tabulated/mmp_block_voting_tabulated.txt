@@ -1,3 +1,48 @@
+======================================================================
+SOURCE FILE:     mmp_block_voting.yaml
+TABULATED FILE:  mmp_block_voting_tabulated.txt
+======================================================================
+
+election_title: "Multi-member plurality — Block Voting (3 seats): majority sweeps"
+scenario_description: |-
+  One of three races comparing the multi-member plurality family on the SAME 60/40
+  electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
+  (Home party: Ada, Ben, Cal) and a 4-voter MINORITY (Away party: Uma, Val, Wren).
+
+  BLOCK VOTING (plurality-at-large): each voter casts as many votes as there are
+  seats (3) and votes their full slate. So every Home candidate gets all 6 majority
+  votes and every Away candidate all 4 minority votes — Ada, Ben, Cal (6 each) beat
+  Uma, Val, Wren (4 each) and the majority SWEEPS all three seats, 3-0. The 40%
+  minority is shut out entirely. Contrast SNTV and Limited Voting (same electorate),
+  where the minority earns a seat.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
+# LH tabulates this as Block Voting (the Plurality family, auto-labelled from the
+# full-slate ballots). It is BV-BACKED: BetterVoting runs the same ballots as
+# multi-winner Approval (BV has no "Block Voting" method name) and elects the same
+# seats — see the BV2135 "Block Voting (as bloc Approval)" race.
+bv_test_id: BV2135
+bv_election_id: 3x4vrv
+bv_results_url: https://bettervoting.com/3x4vrv/results
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Ada,Ben,Cal,Uma,Val,Wren
+  6: 1,1,1,0,0,0
+  4: 0,0,0,1,1,1
+expected_winners:
+  - Ada
+  - Ben
+  - Cal
+
+# file: mmp_block_voting.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Block Voting (plurality-at-large) — 3 winners ---
  Tabulating 10 ballots (3 votes/voter).
 

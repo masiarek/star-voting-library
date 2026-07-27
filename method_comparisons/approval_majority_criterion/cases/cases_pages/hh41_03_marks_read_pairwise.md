@@ -129,6 +129,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/IRV_DIFFERS_ARTIFACT/hh41_03_marks_read_pairwise.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [The Black Curtain (worked set)](../../../black_curtain/README.md)

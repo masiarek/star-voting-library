@@ -1,3 +1,64 @@
+======================================================================
+SOURCE FILE:     condorcet_1788_ranked_robin.yaml
+TABULATED FILE:  condorcet_1788_ranked_robin_tabulated.txt
+======================================================================
+
+election_title: "Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise"
+scenario_description: |-
+  The same election as condorcet_1788_star.yaml, kept in its original RANKED form
+  and counted the way Condorcet said it should be: every pair, head-to-head.
+
+      4 : Peter > Paul  > James
+      3 : Paul  > James > Peter
+      2 : Paul  > Peter > James
+      2 : James > Peter > Paul
+
+  The round-robin table is the argument. Peter beats Paul 6-5 and beats James 6-5,
+  so Peter is the Condorcet winner. Borda's positional count elects Paul (14 points
+  to Peter's 12), and plurality elects Paul too (5 first choices) — both crown a
+  candidate who loses a direct majority contest, which was precisely the defect
+  Borda had accused plurality of.
+
+  Ranked Robin reads only the ORDER on each ballot, never the rank numbers, so it
+  cannot be led astray by positional points the way Borda is. That distinction —
+  same ranked ballot, different tabulation — is the whole reason "RCV" names a
+  ballot and not a count.
+video_script: |-
+  Show the pairwise table and let it speak. Peter loses both the plurality count
+  and the Borda count while beating every opponent one-on-one. This is where the
+  Condorcet criterion comes from — it is not a modern invention, it is Condorcet's
+  1788 objection written down as a rule.
+
+  The engine has no Borda tabulator; the Borda figures are cross-checked with
+  pref_voting (see the folder README for the runnable snippet).
+bv_test_id: BV2250
+bv_election_id: khcwm4
+bv_results_url: https://bettervoting.com/khcwm4/results
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  4:Peter>Paul>James
+  3:Paul>James>Peter
+  2:Paul>Peter>James
+  2:James>Peter>Paul
+expected_winners:
+  - Peter
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 11 ballots (ranked ballots).
 

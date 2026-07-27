@@ -1,3 +1,51 @@
+======================================================================
+SOURCE FILE:     mmp_majority_ceiling.yaml
+TABULATED FILE:  mmp_majority_ceiling_tabulated.txt
+======================================================================
+
+election_title: "Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%"
+scenario_description: |-
+  Why "the winner got less than half the votes" cannot be read as vote splitting
+  in a MULTI-SEAT choose-one race — the arithmetic forbids it.
+
+  30 voters, 3 seats, 5 candidates. Each voter marks 3 names (Block Voting), so
+  90 votes are cast in total. Alice is on EVERY single ballot — literal
+  unanimity, the most consensus a candidate can possibly have.
+
+  And Alice's share of votes cast is 30 / 90 = 33.3%.
+
+  With k marks per voter the total is k x voters, so no candidate can exceed
+  1/k of votes cast no matter how popular: 33% at 3 seats, 25% at 4, 9% at 11.
+  A screening rule that flags every race whose leader is under 50% therefore
+  flags 100% of multi-seat block-vote races — including unanimous ones. That is
+  a denominator artifact, not evidence of a split.
+
+  This does NOT clear Block Voting. Its real defect is the opposite one: a
+  bare majority sweeps every seat (see mmp_block_voting.yaml, 60/40 -> 3-0).
+  The point is narrower and cuts both ways — the sub-majority test is blind
+  here, missing the actual pathology while flagging consensus as a failure.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Alice, Bruno, Cleo, Dev, Esme]
+options:
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Alice,Bruno,Cleo,Dev,Esme
+  12: 1,1,1,0,0
+  10: 1,1,0,1,0
+  8:  1,0,1,0,1
+expected_winners:
+  - Alice
+  - Bruno
+  - Cleo
+
+# file: mmp_majority_ceiling.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Block Voting (plurality-at-large) — 3 winners ---
  Tabulating 30 ballots (3 votes/voter).
 

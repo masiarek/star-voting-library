@@ -38,21 +38,27 @@ election:
 
     This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
     version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
-    no Plurality method — it does: single-winner Plurality tabulates via the STAR
-    path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
-    accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
-    preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
+    no Plurality method — it does: `run_plurality_single` for one seat, SNTV for
+    several.) The choose-one report prints the accounting #740 is missing, in the
+    form choose-one actually has — marks, blanks, and the total, which reconcile:
+    "Andre 5 · Blake 2", "(5 ballot(s) marked nobody.)", "Andre (5 of 12 marks)" —
+    5 + 2 + 5 = 12. That is the "stats for nerds" turnout breakdown #740 asks BV to
+    add: the 5 abstentions are named, and the winner's share is stated against all
+    12 ballots cast rather than against the 7 that BV displays as turnout.
 
+  # NOTE: the choose-one report has no scoring round, runoff or matrix, so it
+  # ignores the display flags below — they are kept only so the file still reads
+  # the same as its STAR-method siblings in this folder.
   options:
     show_description: false
-    show_matrix: false   # only two candidates: the finalists matrix just echoes the runoff
+    show_matrix: false   # only two candidates: a finalists matrix would just echo the marks
     matrix_finalists_only: false
     show_condorcet: false
-    show_score_counts: true    # this case is about the count — show the per-score + abstention column
+    show_score_counts: true
     show_irv: false
-    show_runoff_percent: true  # the self-reconciling turnout line is the whole point
+    show_runoff_percent: true
     brief: true
-    collapse_ballots: true     # weighted blocs (5 / 2 / 5) — group them so the turnout split is legible
+    collapse_ballots: true
     count_separator: "×"
 
   races:
@@ -84,87 +90,25 @@ election:
 TABULATION RESULTS
 ======================================================================
 
-=== BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots) ===
-  A REAL BetterVoting election (BV id 4h89vj), "B15 - Basic - 2 candidates -
-  Plurality - Abstain". Live results: https://bettervoting.com/4h89vj/results
-  Frozen raw export: bv15_4h89vj_plurality_abstain_bv_export.json.
-
-  This is the Plurality instance of BetterVoting issue #740
-  (github.com/Equal-Vote/bettervoting/issues/740 — note: bettervoting#740, the
-  repo moved from star-server, the NUMBER stayed). #740 is a REPORTING gap, not
-  a tabulation error: BetterVoting's results widget shows only the MEANINGFUL
-  ballots as "voters" and drops the fully-abstained ones from the headline
-  turnout. The winner is right; the displayed voter count is short by exactly
-  the number of abstentions.
-
-  Twelve ballots, two candidates (choose-one):
-
-    Andre,Blake
-    1,0   × 5   Andre  (a choose-one vote for Andre)
-    0,1   × 2   Blake  (a choose-one vote for Blake)
-    -,-   × 5   blank  — true abstentions (no vote for anyone)
-
-  BetterVoting's own summaryData (in the frozen export) counts it CORRECTLY:
-  nTallyVotes = 7, nAbstentions = 5 (7 + 5 = 12 cast). Andre 5, Blake 2 -> Andre
-  wins. So the data is present; #740 is only that the results UI never surfaces
-  the 5 abstentions / the 12-ballot total — it reports the 7 as if that were
-  turnout.
-
-  This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
-  version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
-  no Plurality method — it does: single-winner Plurality tabulates via the STAR
-  path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
-  accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
-  preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
-
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Andre   | * Blake   |
------------------------------------------
-     * Andre > |    ---     |5 - 5 - 2  |
-     * Blake > | 2 - 5 - 5  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Andre — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Blake — loses every head-to-head matchup
-
 --- Choose-One / Plurality Voting Method (single winner) ---
-[STAR Voting]
- Tabulating 12 ballots. Note: 5 of 12 ballots are marked as abstentions.
-Count × Andre,Blake
-    5 ×     1,    0
-    5 ×     -,    -
-    2 ×     0,    1
-  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+ Tabulating 12 ballots.
 
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Andre      0  0  0  0  5  2    5  |     5   0.7
-Blake      0  0  0  0  2  5    5  |     2   0.3
+                   Andre  Blake 
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     -      X   
+                     -      X   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
 
-[STAR Voting: Scoring Round]
- The two highest-scoring candidates advance to the next round.
-   Andre         -- 5 -- First place
-   Blake         -- 2 -- Second place
- Andre and Blake advance.
+  Count the marks:  Andre 5 · Blake 2
+  (5 ballot(s) marked nobody.)
 
-[STAR Voting: Automatic Runoff Round]
- The candidate preferred in the most head-to-head matchups wins.
-   Andre         -- 5 -- First place
-   Blake         -- 2
-   Equal Support -- 5
- Andre wins.
-   Runoff math:
-     12  ballots cast
-   −  5  Equal Support (no preference between the two finalists)
-     ──
-      7  voters with a preference  (majority = 4)
-           Andre 5 (71%)  ·  Blake 2 (29%)
-
-[STAR Voting: Winner — Choose-One / Plurality Voting Method (single winner)]
- Andre
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Andre   (5 of 12 marks)

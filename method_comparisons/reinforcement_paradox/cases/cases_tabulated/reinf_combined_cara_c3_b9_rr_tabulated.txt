@@ -1,3 +1,62 @@
+======================================================================
+SOURCE FILE:     reinf_combined_cara_c3_b9_rr.yaml
+TABULATED FILE:  reinf_combined_cara_c3_b9_rr_tabulated.txt
+======================================================================
+
+election_title: "Reinforcement — Combined, Cara branch (9 voters; both halves say Cara, the whole says Ben)"
+
+scenario_description: |-
+  North (6 voters, the symmetric cycle) merged with the CARA-branch South
+  (reinf_south_cara_c3_b3_rr.yaml). Cara is a co-winner of North's three-way tie
+  and the outright Condorcet winner of South — a winner in both halves — so
+  reinforcement (consistency) demands Cara win the union.
+
+  She doesn't. A NEW Condorcet winner appears in the merged electorate:
+
+      Ben beats Ada 5–4 · Ben beats Cara 5–4 · Cara beats Ada 7–2
+
+  so every Condorcet method elects BEN. Rotated one more step from the Ben branch,
+  and the mechanism is identical: the two 5–4 pairwise majorities that decide the
+  merged election exist in neither half by itself. Head-to-head majorities are not
+  additive across electorates, and that non-additivity is precisely what Zwicker's
+  Proposition 2.5 turns into an impossibility — no Condorcet extension is
+  reinforcing, at any number of candidates from three up.
+
+  Branch companions: reinf_combined_c3_b9_rr.yaml (Ada branch → Cara wins),
+  reinf_combined_ben_c3_b9_rr.yaml (Ben branch → Ada wins).
+
+paradoxes: [multiple-districts]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ada, Ben, Cara]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  2:Ada>Ben>Cara
+  3:Ben>Cara>Ada
+  2:Cara>Ada>Ben
+  2:Cara>Ben>Ada
+
+expected_winners:
+  - Ben
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 9 ballots (ranked ballots).
 
