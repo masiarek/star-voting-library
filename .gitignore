@@ -24,6 +24,15 @@ __pycache__/
 **/Screen Shot*.png
 **/* - Copy*
 
+# Scratch brainstorming file (CLAUDE.md workflow step 1: "Nothing here is permanent...
+# delete it when done, never commit them") and the _tabulated mirrors a scratch run
+# leaves behind. It was tracked by accident, so whatever scenario happened to be parked
+# in it got scanned as if it were a curated case. The generators skip temp/trash/scratch
+# names on their own, so this is belt-and-braces: the file stays usable as scratch, it
+# just can't be committed.
+**/trash_delete.yaml
+**/trash_delete*_tabulated.txt
+
 # Generated search outputs from the divergence-finder tools (regenerable)
 **/star_irv_hits.csv
 **/four_way_hits.csv

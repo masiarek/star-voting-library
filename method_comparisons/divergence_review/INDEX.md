@@ -6,12 +6,12 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **216** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **129** (60%) diverge from STAR under at least one method; **87** agree across the board.
+- Scanned **215** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **128** (60%) diverge from STAR under at least one method; **87** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 29 |
+| IRV_OUTLIER_RR_WITH_STAR | 28 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 10 |
 | CYCLE_OR_THREE_WAY | 37 |
@@ -35,8 +35,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
 - **[09_c4_b100_tennessee-capital](cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md)** — `01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
 - **[bv2184_fyy886_lunch_vote](cases/IRV_OUTLIER_RR_WITH_STAR/bv2184_fyy886_lunch_vote.md)** — `01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml` (3c/5b)  
-    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza  
-    _also at: `YAML_library/1_positive/trash_delete.yaml`_
+    STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza
 - **[ex03_five_verdicts](cases/IRV_OUTLIER_RR_WITH_STAR/ex03_five_verdicts.md)** — `01_STAR/exercises/cases/ex03_five_verdicts.yaml` (3c/9b)  
     STAR=**Cherry** · IRV=Banana · RR=Cherry · Approval=Cherry · Score=Cherry · Condorcet=Cherry
 - **[ex05_center_squeeze](cases/IRV_OUTLIER_RR_WITH_STAR/ex05_center_squeeze.md)** — `01_STAR/exercises/cases/ex05_center_squeeze.yaml` (3c/9b)  
