@@ -6,9 +6,10 @@
 >
 > ```bash
 > python STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_labels.py
+> python STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_causes.py
 > ```
 >
-> It checks all five places a sample names a winner — `expected_winners`, the title, the description, the `_tabulated` mirror and the table below — against a real tabulation (`--fix` relabels the yamls). `tests/test_star_vs_rr_labels.py` runs it on every commit.
+> The first checks all five places a sample names a **winner** — `expected_winners`, the title, the description, the `_tabulated` mirror and the table below — against a real tabulation (`--fix` relabels the yamls). The second checks what the descriptions claim about **why** the methods diverge: that each cycle chain (`A>I>G>A`) is a real chain of pairwise wins that closes, that a cycle sample really has no Condorcet winner, and that a dark horse really is the Condorcet winner with the score rank, totals and missed finalists it claims. A sample can name both winners correctly and still assert a link that does not exist, so the two are complementary — winners vs. causes. `tests/test_star_vs_rr_labels.py` and `tests/test_star_vs_rr_causes.py` run them on every commit.
 
 ## The spread (what varies)
 
