@@ -34,7 +34,9 @@ from collections import Counter
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
-from pref_voting_tabulation import parse_election  # noqa: E402
+from pref_voting_tabulation import (  # noqa: E402
+    format_levels, parse_election, ranked_profile,
+)
 
 try:
     from pref_voting.profiles import Profile
@@ -58,12 +60,12 @@ METHODS = [
 ]
 
 
-def build_profile(cands, ranks, drop=None):
-    """A pref_voting Profile from this repo's ranked ballots, optionally minus one candidate."""
-    keep = [c for c in cands if c != drop]
-    idx = {c: i for i, c in enumerate(keep)}
-    rankings = [[idx[c] for c in order if c != drop] for order in ranks]
-    return Profile(rankings), keep
+def build_profile(cands, dicts, drop=None):
+    """A pref_voting profile from this repo's ranked ballots, optionally minus one
+    candidate. Delegates to the shared helper, which preserves indifference — so
+    '=' equal-rank levels and truncated ballots are both represented honestly
+    instead of being flattened into an invented strict order."""
+    return ranked_profile(cands, dicts, drop)
 
 
 def _names(winners, keep):
@@ -79,14 +81,14 @@ def report(path, drop=None):
     if drop is not None and drop not in cands:
         raise SystemExit(f"{path}: no candidate named {drop!r} "
                          f"(candidates: {', '.join(cands)})")
-    prof, keep = build_profile(cands, ranks, drop)
+    prof, keep = build_profile(cands, dicts, drop)
 
     out = []
     out.append("=== Cycle resolution — the Condorcet family, side by side ===")
     label = f" (with {drop} REMOVED from every ballot)" if drop else ""
     out.append(f" {len(ranks)} ranked ballots, {len(keep)} candidates{label}.\n")
 
-    collapsed = Counter(" > ".join(c for c in o if c != drop) for o in ranks)
+    collapsed = Counter(format_levels(o, drop=drop) for o in ranks)
     out.append("Ballots:")
     for order, cnt in collapsed.most_common():
         out.append(f"   {cnt:>3} × {order}")

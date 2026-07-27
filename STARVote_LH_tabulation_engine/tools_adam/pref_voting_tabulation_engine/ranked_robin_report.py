@@ -9,8 +9,10 @@ the **third opinion** used to guard against that native code misbehaving: it
 prints the Ranked Robin view (ballots, full pairwise table, win–loss record,
 winner) and — critically — cross-checks the winner against Eric Pacuit's
 `pref_voting` library, whose Copeland is computed **independently** from a fresh
-`Profile` built off the raw ballots (it does NOT reuse LH's matrix), so a bug in
-the shared helper can't hide.
+profile built off the raw ballots (it does NOT reuse LH's matrix), so a bug in
+the shared helper can't hide. That profile is a `ProfileWithTies`, so truncated
+ballots and `=` equal-rank levels are represented as the indifference they are
+rather than flattened into an invented strict order.
 
 So a Ranked Robin case can be tallied three ways that must agree:
   1. LH native  — starvote_larry_hastings.run_ranked_robin()
@@ -31,7 +33,9 @@ from collections import Counter
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
 # parse_election (handles nested/flat YAML, ranked + score) needs no pref_voting.
-from pref_voting_tabulation import parse_election  # noqa: E402
+from pref_voting_tabulation import (  # noqa: E402
+    format_levels, parse_election, ranked_profile,
+)
 sys.path.insert(0, os.path.join(os.path.dirname(_HERE), "STARVote_LH_tabulation_engine"))
 import starvote_larry_hastings as LH  # noqa: E402
 
@@ -41,7 +45,7 @@ def _ballot_lines(cands, dicts, ranks):
     rows = []
     if ranks is not None:
         for order in ranks:
-            rows.append(" > ".join(order))
+            rows.append(format_levels(order))
     else:
         for b in dicts:
             rows.append(", ".join(str(b.get(c, 0)) for c in cands))
@@ -146,21 +150,14 @@ def report(path):
                    "independent Copeland check runs on ranked ballots.]")
         return "\n".join(out)
 
-    I = {c: i for i, c in enumerate(cands)}
     try:
-        if any(len(o) != len(cands) for o in ranks):
-            # Truncated ballots: a strict Profile needs complete rankings, so use
-            # ProfileWithTies. Extended strict preference counts ranked-over-unranked
-            # (and unranked pairs as no preference) — the same pairwise rule LH and
-            # BetterVoting apply, so the Copeland tally stays comparable.
-            from pref_voting.profiles_with_ties import ProfileWithTies
-            prof = ProfileWithTies(
-                [{I[c]: i + 1 for i, c in enumerate(o)} for o in ranks],
-                candidates=list(range(len(cands))))
-            prof.use_extended_strict_preference()
-        else:
-            prof = Profile([[I[c] for c in o] for o in ranks])
-        pv_winners = sorted(cands[x] for x in copeland(prof))
+        # One path for every ballot shape. ProfileWithTies built from the score dicts
+        # represents truncation (unranked share the bottom level, so ranked beats
+        # unranked and unranked pairs are no preference — the pairwise rule LH and
+        # BetterVoting both apply) AND '=' equal-rank levels. A strict Profile could
+        # express neither without inventing preferences nobody cast.
+        prof, keep = ranked_profile(cands, dicts)
+        pv_winners = sorted(keep[x] for x in copeland(prof))
     except Exception as ex:
         out.append(f" [pref_voting cross-check ERROR: {ex!r}]")
         return "\n".join(out)

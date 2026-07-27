@@ -83,36 +83,78 @@ def parse_election(path):
             if not ln:
                 continue
             m = re.match(r"(\d+)\s*[:xX×]\s*(.+)", ln)
-            if m:
-                w, order = int(m.group(1)), [c.strip() for c in m.group(2).split(">")]
-            else:
-                w, order = 1, [c.strip() for c in ln.split(">")]
-            # '=' equal-rankings (Ava=Bianca>Cara) are valid in this repo's ranked
-            # ballots and the LH engine handles them — but this tool builds a
-            # pref_voting Profile, which takes strict linear orders only. Splitting
-            # on '>' alone silently turned a level into a CANDIDATE NAMED "A=B=D",
-            # producing a confident, wrong report. Refuse loudly instead; proper
-            # support needs ProfileWithTies throughout.
-            for c in order:
-                if "=" in c:
-                    raise SystemExit(
-                        f"{path}: ballot {ln!r} uses '=' equal-rankings, which this "
-                        "pref_voting tool cannot represent (it builds strict linear "
-                        "orders). The LH engine does handle them — tabulate with "
-                        "starvote_larry_hastings.py instead.")
-                if c not in cset:
-                    cset.append(c)
-            voters += [order] * w
+            body, w = (m.group(2), int(m.group(1))) if m else (ln, 1)
+            # '>' separates rank LEVELS; '=' ties candidates *within* a level
+            # (Ava=Bianca>Cara), which is valid in this repo's ranked ballots and
+            # which the LH engine has always honoured. Splitting on '>' alone left
+            # "Ava=Bianca" standing as a single phantom candidate, so every tally
+            # downstream was computed over a cast that never existed.
+            levels = [[c.strip() for c in lvl.split("=") if c.strip()]
+                      for lvl in body.split(">")]
+            levels = [lvl for lvl in levels if lvl]
+            for lvl in levels:
+                for c in lvl:
+                    if c not in cset:
+                        cset.append(c)
+            voters += [levels] * w
         cands = sorted(cset)
-        dicts = [{c: (len(o) - i if c in o else 0) for i, c in enumerate(o)}
-                 for o in voters]
-        return cands, dicts, voters, (lot or cands), False, vm
+        # Pseudo-scores descend per LEVEL, so candidates sharing a level get the SAME
+        # score and read downstream as genuine indifference. That is precisely what
+        # makes calculate_preference_matrix report the pair as Equal Support and
+        # _pv_ties build a weak order instead of inventing a strict one. Unranked
+        # candidates stay absent (callers read them as 0).
+        dicts = [{c: len(levels) - i for i, lvl in enumerate(levels) for c in lvl}
+                 for levels in voters]
+        has_equal = any(len(lvl) > 1 for levels in voters for lvl in levels)
+        return cands, dicts, voters, (lot or cands), has_equal, vm
     # score ballots
     cands, dicts, _ = LH.parse_ballots_from_string(ballots_txt)
     has_ties = any(
         len([s for s in b.values() if s > 0]) != len({s for s in b.values() if s > 0})
         for b in dicts)
     return cands, dicts, None, (lot or cands), has_ties, vm
+
+
+# --------------------------------------------------------------------------- #
+# Shared helpers for ranked ballots that may contain '=' levels
+# --------------------------------------------------------------------------- #
+def format_levels(levels, drop=None):
+    """A ballot of rank levels back into repo notation: [[A,B],[C]] -> 'A=B>C'.
+
+    `levels` may also be a flat list of names (a strict ballot), which is returned
+    joined by '>' — so callers can hand this either shape."""
+    out = []
+    for lvl in levels:
+        names = [lvl] if isinstance(lvl, str) else list(lvl)
+        names = [c for c in names if c != drop]
+        if names:
+            out.append("=".join(names))
+    return " > ".join(out)
+
+
+def ranked_profile(cands, dicts, drop=None):
+    """A pref_voting profile over `cands` that PRESERVES indifference.
+
+    Built from the per-voter score dicts, so it is correct for score ballots and for
+    ranked ballots with '=' levels alike: equal scores become equal ranks. Returns
+    (ProfileWithTies, kept_candidates). Every C1 and margin-based method used in this
+    folder accepts ProfileWithTies (verified), and unlike a strict Profile it cannot
+    silently invent a preference the voter did not express.
+
+    Use this instead of hand-building a strict Profile from ballot order — that path
+    cannot represent a drawn pair, and a drawn pair is exactly where the Condorcet
+    family gets interesting."""
+    if not PREF_VOTING_AVAILABLE:
+        raise RuntimeError("ranked_profile needs pref_voting (declared in "
+                           "pyproject.toml; run `uv sync`).")
+    keep = [c for c in cands if c != drop]
+    idx = {c: i for i, c in enumerate(keep)}
+    rmaps = []
+    for b in dicts:
+        uniq = sorted({b.get(c, 0) for c in keep}, reverse=True)
+        rank = {s: i for i, s in enumerate(uniq)}
+        rmaps.append({idx[c]: rank[b.get(c, 0)] for c in keep})
+    return ProfileWithTies(rmaps, candidates=list(range(len(keep)))), keep
 
 
 # --------------------------------------------------------------------------- #
