@@ -5,8 +5,8 @@ The 30 auto-generated samples in 05_Ranked_Robin/star_vs_rr_divergence/ must
 name the winners the ENGINE elects — in every place they name one.
 
 WHY. Those samples were labelled from a numpy model of STAR
-(06_Other/simulations/star_vs_rr_divergence.py, star_winner_approx()), whose
-tie-breaks are not the engine's. One of the 30 came out wrong at birth:
+(06_Other/simulations/star_vs_rr_divergence.py, star_winner()) whose tie-breaks
+were not the engine's. One of the 30 came out wrong at birth:
 cycle_C10_fewV29_bloc_2 claimed "STAR A" while its own _tabulated mirror printed
 "STAR = C" (fixed in 7ddde36). test_method_positive.py caught the yaml's
 `expected_winners`, but the wrong TITLE and DESCRIPTION sailed past it — nothing

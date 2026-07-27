@@ -7,8 +7,9 @@ engine — every place a sample *names* its STAR or Ranked Robin winner.
 
 WHY THIS EXISTS. The 30 samples are auto-generated, and the generator that made
 them modelled STAR in numpy (06_Other/simulations/star_vs_rr_divergence.py,
-star_winner_approx()). That model resolves ties by column order; the real engine
-has further rungs — pairwise wins, five-star count, then lot. So the model can
+star_winner(), since corrected). That model resolved ties by column order; the
+real engine has further rungs — pairwise wins, five-star count, then lot. So a
+model that does not implement those rungs can
 name a winner the engine does not elect, and the generator wrote that name into
 the title, the description AND expected_winners. It happened once:
 cycle_C10_fewV29_bloc_2 claimed "STAR A" while its own `_tabulated` mirror — in
