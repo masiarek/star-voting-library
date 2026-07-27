@@ -35,12 +35,91 @@ import argparse
 import numpy as np
 
 
+MAX_SCORE = 5
+
+# --- STAR, with the LH engine's tie-break rungs -------------------------------
+# These MUST agree with starvote's star() (STARVote_LH_tabulation_engine/starvote/
+# __init__.py, ~L1837). An earlier version of this file resolved every tie by
+# numpy index order, which disagrees with the engine whenever a tie is actually
+# reached — that mislabelled one of the 30 dumped samples (cycle_C10_fewV29_bloc_2:
+# this file said A, the engine elects C). tests/test_sim_star_model.py cross-checks
+# the two on random profiles, so the drift cannot come back silently.
+#   Scoring round : top two by score sum. Tie -> (1) most head-to-head wins among
+#                   the tied, (2) most 5-star votes, (3) lot.
+#   Runoff        : pairwise preference. Tie -> (1) higher score sum, (2) most
+#                   5-star votes, (3) lot.
+# "Lot" here is the lowest column index, which is what the engine falls back to
+# when a file publishes no lot_numbers (its LotNumberTiebreaker defaults to CSV
+# column order). A lot-decided cell is arbitrary in BOTH, just consistently so.
+
+
+def _totals(scores, idx):
+    return {i: int(scores[:, i].sum()) for i in idx}
+
+
+def _pairwise_wins(scores, idx):
+    """Ballots preferring i, summed over the other candidates in idx."""
+    return {i: sum(int((scores[:, i] > scores[:, j]).sum()) for j in idx if j != i)
+            for i in idx}
+
+
+def _five_star(scores, idx):
+    return {i: int((scores[:, i] == MAX_SCORE).sum()) for i in idx}
+
+
+def _leaders(tally):
+    best = max(tally.values())
+    return sorted(i for i, v in tally.items() if v == best)
+
+
+def _fill(tally, needed):
+    """Seat `needed` candidates from ONE rung's tally, the way the engine's
+    _compute_first_and_second_from_score does: take the leaders, and if they
+    under-fill the slots, seat them and keep reading DOWN THE SAME TALLY. Only a
+    group that over-fills the remaining slots is still tied, and only that group
+    goes on to the next rung.
+
+    Returns (seated, still_tied)."""
+    seated, pool = [], dict(tally)
+    while pool and len(seated) < needed:
+        top = _leaders(pool)
+        if len(top) > needed - len(seated):
+            return seated, top
+        seated += top
+        for i in top:
+            del pool[i]
+    return seated, []
+
+
+def _resolve(scores, tied, needed):
+    """Cut `tied` down to `needed`, walking the engine's rungs then falling to lot."""
+    seated = []
+    for rung in (_pairwise_wins, _five_star):
+        got, tied = _fill(rung(scores, tied), needed - len(seated))
+        seated += got
+        if not tied:
+            return seated
+    return (seated + sorted(tied))[:needed]                 # lot: lowest column index
+
+
+def _runoff(scores, a, b):
+    tallies = [{i: int((scores[:, i] > scores[:,
+                        b if i == a else a]).sum()) for i in (a, b)},
+               _totals(scores, (a, b)), _five_star(scores, (a, b))]
+    for tally in tallies:
+        if tally[a] != tally[b]:
+            return a if tally[a] > tally[b] else b
+    return min(a, b)                                        # lot: lowest column index
+
+
 def star_winner(scores):
-    tot = scores.sum(0)
-    a, b = np.argsort(-tot, kind="stable")[:2]              # two finalists by score sum
-    va = int((scores[:, a] > scores[:, b]).sum())
-    vb = int((scores[:, b] > scores[:, a]).sum())
-    return int(a) if va >= vb else int(b)                   # runoff; tie -> higher-scored finalist
+    C = scores.shape[1]
+    if C < 2:
+        return 0
+    finalists, tied = _fill(_totals(scores, range(C)), 2)    # top two by score sum
+    if tied:
+        finalists += _resolve(scores, tied, 2 - len(finalists))
+    return _runoff(scores, finalists[0], finalists[1])
 
 
 def pairwise(util):

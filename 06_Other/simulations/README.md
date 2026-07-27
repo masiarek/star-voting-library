@@ -134,28 +134,31 @@ uv run 06_Other/simulations/star_vs_rr_divergence.py --trials 3000
 
 | model | C | V | STAR≠RR | of which: cycle | of which: CW-missed-runoff |
 |-------|:--:|:--:|:--:|:--:|:--:|
-| **noise** | 3 | 51 | 14.5% | 8.5% | 1.0% |
-| noise | 5 | 51 | 27.0% | 24.8% | 3.6% |
-| noise | 10 | 51 | 34.7% | 47.2% | 3.2% |
+| **noise** | 3 | 51 | 14.7% | 8.5% | 1.0% |
+| noise | 5 | 51 | 27.1% | 24.8% | 3.4% |
+| noise | 10 | 51 | 35.0% | 47.2% | 3.0% |
 | **spatial** | 3 | 51 | 3.9% | 0.3% | 0.1% |
 | spatial | 3 | 501 | **1.2%** | 0.1% | 0.0% |
-| spatial | 10 | 15 | 28.5% | 13.1% | 6.1% |
+| spatial | 10 | 15 | 29.3% | 13.1% | 5.8% |
 | spatial | 10 | 501 | 10.3% | 0.8% | 3.0% |
 | **faction** | 3 | 501 | 1.7% | 0.9% | 0.1% |
 | faction | 7 | 501 | 10.9% | 5.0% | 4.3% |
-| faction | 10 | 501 | 14.8% | 7.9% | 5.2% |
+| faction | 10 | 501 | 14.8% | 7.9% | 5.1% |
+
+*(Refreshed 2026-07-26, when `star_winner()` was corrected to use the engine's tie-break rungs — see the caveats. Five of the ten cells moved, by 0.1–0.8pp; the cycle column is unaffected, since cycles don't depend on how STAR breaks a tie. No conclusion below changes.)*
 
 ### What this means
 
 1. **Two completely different regimes.** Under **random noise**, divergence is high but almost entirely **cycle-driven** — cycles explode with candidate count (3→8%, 10→48%), and both methods are merely resolving an electorate with no real winner. Under **spatial / factional** models, cycles are rare (a centrist Condorcet winner usually exists), and the divergence that occurs is the *meaningful* kind: the compromise CW squeezed out of the score top-two.
 2. **More candidates → more divergence, always.** With 2 candidates STAR = RR by definition; the gap widens monotonically with the field size in every model.
 3. **Ballots cut opposite ways by model.** More voters *shrink* divergence under spatial/factional electorates (sampling noise fades, the structure dominates → the two methods converge on the centrist), but leave it roughly flat under pure noise. So **"fewer ballots → more divergence" is a property of *structured* electorates, not random ones.**
-4. **Factions are where the real disagreement lives.** Factional/spatial models produce *lower* total divergence than noise, but a *higher share of it is the dark-horse mechanism* (CW-missed-runoff, 5–8% at 10 candidates) — polarized voters score the compromise centrist low, so RR's Condorcet winner never reaches STAR's runoff. That is the honest STAR-vs-RR philosophical disagreement (support vs. order), not a coin-flip electorate.
+4. **Factions are where the real disagreement lives.** Factional/spatial models produce *lower* total divergence than noise, but a *higher share of it is the dark-horse mechanism* (CW-missed-runoff, 3–7% at 10 candidates) — polarized voters score the compromise centrist low, so RR's Condorcet winner never reaches STAR's runoff. That is the honest STAR-vs-RR philosophical disagreement (support vs. order), not a coin-flip electorate.
 
 ### Caveats (read before quoting)
 
 - Sincere, **normalized** 0–5 scores (each voter min-maxes their utilities). Real voters don't perfectly normalize; different scoring assumptions move the numbers.
-- RR = Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge cell may differ slightly from the engine.
+- **STAR here matches the LH engine exactly.** `star_winner()` implements starvote's tie-break rungs — head-to-head wins among the tied, then five-star counts, then lot (lowest column index, the engine's own fallback when a file publishes no lot numbers). It did not always: until 2026-07-26 it resolved every tie by numpy index order, which disagreed with the engine on ~2% of tie-heavy profiles and mislabelled one of the [30 dumped samples](../../05_Ranked_Robin/star_vs_rr_divergence/README.md). `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py` now cross-checks the model against the real engine, so that drift cannot return silently.
+- **RR is still a model, not the engine.** Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge RR cell may still differ slightly from the engine.
 - "Divergence" counts *any* different winner, including ties resolved differently — report the model, size, and mechanism split with the number.
 
 ---
