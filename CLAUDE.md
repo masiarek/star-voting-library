@@ -216,14 +216,28 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   docs under descriptive names (e.g. `README_larry_hastings.md`, `FORK_NOTES.md`), but
   the one overview is always `README.md`.
 - **The repo publishes as a searchable website** — <https://masiarek.github.io/star-voting-library/>,
-  built by root `mkdocs.yml` (MkDocs Material + `mkdocs-same-dir`) straight from the
+  built by root `mkdocs.yml` (MkDocs Material + `mkdocs-same-dir` + `mkdocs-redirects`)
+  straight from the
   repo's own Markdown (no `docs/` copy; `.yaml` / `_tabulated` files carried through)
   and deployed by `.github/workflows/docs.yml` on every push to master. Folder
   `README.md`s become the site's section index pages (one more reason that naming rule
   matters), and links keep GitHub's file-relative semantics (`use_directory_urls:
   false` — don't flip it). Local preview: `uvx --with mkdocs-same-dir --with
-  "mkdocs-material>=9.5" mkdocs serve`. `site/` is generated output — never commit.
+  "mkdocs-material>=9.5" --with mkdocs-redirects mkdocs serve`. `site/` is generated
+  output — never commit.
   Details + known nits: `00_start_here/about_this_repo/website_build.md`.
+  **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
+  They replace the *built* page at a URL while leaving the `.md` on disk intact, so
+  GitHub still renders the source but **the site never shows it**. Live case:
+  `05_Ranked_Robin/README.md` → `00_start_here/RCV_Ranked_Robin/ranked_robin.md`, because
+  the case folder is a top-level nav section and is where visitors land wanting "Ranked
+  Robin," but the page that *teaches* the method is the concept page. Whenever you add a
+  redirect, **move or mirror whatever the source said onto the destination** (here the
+  case index is mirrored under "Worked examples" on `ranked_robin.md`) and leave a
+  maintainer note in the redirected README — otherwise edits there silently never ship.
+  Adding a plugin means updating **four** places: `mkdocs.yml` plugins, the preview
+  command in its header comment, `.github/workflows/docs.yml`'s `pip install`, and
+  `website_build.md`.
 - **Companion repo — research-paper topics live OUTSIDE this repo.**
   <https://github.com/masiarek/star-voting-research-topics> (**private**) holds the
   vetted research-paper prospectuses that use this library as their reproducibility

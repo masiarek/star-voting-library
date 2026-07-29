@@ -188,6 +188,23 @@ Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **indep
 
 ---
 
+## Worked examples — run them yourself
+
+Every claim on this page has a runnable election behind it. The case folders live in `05_Ranked_Robin/` — each isolates one idea, and each tabulates on the engines above:
+
+| Case folder | What it shows |
+|---|---|
+| [The worked intro](../../05_Ranked_Robin/_main/) | the election above: the consensus center wins 3–0 over the two poles that hold more first choices |
+| [Condorcet vs. Ranked Robin](../../05_Ranked_Robin/condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record |
+| [RR vs. IRV vs. plurality](../../05_Ranked_Robin/rr_vs_irv_plurality/) | one ranked ballot set, three different winners — the Tennessee center squeeze, where RR and IRV genuinely part ways |
+| [The Copeland score — a draw is worth half a win](../../05_Ranked_Robin/copeland_score/) | why "most head-to-head wins" is a shorthand: the ½-credit elects a candidate who *lost* a matchup |
+| [Most matchups won ≠ Condorcet winner](../../05_Ranked_Robin/most_wins_vs_condorcet/) | its mirror image — strictly the most wins, and still beaten head-to-head; only Copeland decides |
+| [Tiebreaks](../../05_Ranked_Robin/rr_tiebreaks/) | the Equal Support column and the full ladder down to lot order |
+| [Burial](../../05_Ranked_Robin/burial/) | the signature wart, worked as a sincere/buried pair on both engines |
+| [STAR vs RR — 30 divergence samples](../../05_Ranked_Robin/star_vs_rr_divergence/) | 30 elections where STAR and RR elect different winners, each stating its own cause |
+
+---
+
 ## Related concept pages
 
 - [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../topics/summability/))

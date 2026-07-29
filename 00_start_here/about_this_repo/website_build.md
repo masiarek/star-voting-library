@@ -11,7 +11,7 @@ There is **no separate docs source**. The site is built from the repo root itsel
 ## Local preview
 
 ```sh
-uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" mkdocs serve
+uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" --with mkdocs-redirects mkdocs serve
 ```
 
 (or `mkdocs build`, which writes the static site into `site/` — gitignored, never commit it). No project dependency is involved; `uvx` runs the doc tools in their own isolated environment.

@@ -1,7 +1,7 @@
 # MkDocs Material site for the whole repo — publishes every Markdown page (teaching
 # docs + the generated per-election pages) as a searchable website on GitHub Pages.
 #
-#   Local preview:  uvx --with mkdocs-same-dir --with mkdocs-material mkdocs serve
+#   Local preview:  uvx --with mkdocs-same-dir --with mkdocs-material --with mkdocs-redirects mkdocs serve
 #   Deploy:         .github/workflows/docs.yml builds on every push to master
 #                   (one-time setup: repo Settings → Pages → Source: GitHub Actions)
 #
@@ -70,6 +70,19 @@ extra_css:
 plugins:
   - search
   - same-dir
+  # Site-only URL redirects. The source .md keeps its content on disk (GitHub's
+  # folder view still renders it in full); only the BUILT page at that URL is
+  # replaced by a redirect stub. Use sparingly — a redirected folder README is
+  # unreachable on the site, so whatever it said must live at the destination.
+  - redirects:
+      redirect_maps:
+        # The Ranked Robin section's front door is the method page, not the
+        # case index: 05_Ranked_Robin/ is a *worked examples* folder, but it is
+        # a top-level nav section, so it is where visitors land when they want
+        # "Ranked Robin." Send them to the concept page that actually teaches
+        # it. The case index it replaces is mirrored on the destination page
+        # under "Worked examples", so nothing is lost.
+        05_Ranked_Robin/README.md: 00_start_here/RCV_Ranked_Robin/ranked_robin.md
 
 markdown_extensions:
   - admonition

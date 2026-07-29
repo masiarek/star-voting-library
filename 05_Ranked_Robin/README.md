@@ -84,4 +84,8 @@ Same ballot, different count: RCV-IRV (elimination rounds) lives in [other metho
 
 **Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../00_start_here/about_this_repo/conversation_scripts.md).
 
+---
+
+*Maintainer note: on the published website this URL **redirects** to the method page ([`ranked_robin.md`](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)) — see the `redirects` plugin in `mkdocs.yml`. That page carries its own copy of the case index above, so edits here show on GitHub but **not** on the site; keep the two lists in step, or move the content to the method page.*
+
 # file: README.md

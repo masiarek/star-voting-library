@@ -25,7 +25,7 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 
 ## Worked examples — run them yourself
 
-Every claim on these pages has a runnable election behind it. The case folders live in **[`05_Ranked_Robin/`](../../05_Ranked_Robin/)**:
+Every claim on these pages has a runnable election behind it — one case folder per idea:
 
 - [The worked intro](../../05_Ranked_Robin/_main/) — RR elects the consensus center 3–0 over the two poles that hold more first choices
 - [Condorcet vs. Ranked Robin](../../05_Ranked_Robin/condorcet_vs_ranked_robin/) — a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record
