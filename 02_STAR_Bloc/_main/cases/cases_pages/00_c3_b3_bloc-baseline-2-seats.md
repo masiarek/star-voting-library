@@ -2,7 +2,7 @@
 
 *Generated from [`00_c3_b3_bloc-baseline-2-seats.yaml`](../00_c3_b3_bloc-baseline-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Alice, Bruno
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Alice, Bruno
 
 ## Scenario
 

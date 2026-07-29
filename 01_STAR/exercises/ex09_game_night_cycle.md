@@ -2,7 +2,7 @@
 
 *Ten friends rank four board games for the club's game night. When the count is done, every one of the top three games loses some head-to-head matchup — rock, paper, scissors, with a fourth game everyone ranks last. If nobody beats everybody, who deserves to win? Predict what Ranked Robin does before you peek — including every rung of its ladder.*
 
-**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../00_start_here/GLOSSARY.md) exists** · walking [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.
+**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../00_start_here/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; the `_tabulated` mirror is the full audit report. This is the set's one **ranked-ballot** exercise — the ballots are `Azul>Boggle>Catan>Dominion`-style rankings, not scores.
 
@@ -67,14 +67,14 @@ Azul 2–1, Boggle 2–1, Catan 2–1, Dominion 0–3. "Most pairwise wins" alon
 Winner — Ranked Robin (RCV-RR): Azul
 ```
 
-Total win margins: Azul (+4 −2 +10) = **+12**, Boggle (−4 +4 +10) = **+10**, Catan (−4 +2 +10) = **+8**. Azul's one loss is the *narrowest* (6–4) and its win the widest (7–3), so Azul tops the margin rung — **Azul wins, deterministically**; the lot rung is never reached. The engine's own note points out this is exactly where Condorcet methods diverge from each other — Minimax, Ranked Pairs, and Schulze each resolve cycles their own way: [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
+Total win margins: Azul (+4 −2 +10) = **+12**, Boggle (−4 +4 +10) = **+10**, Catan (−4 +2 +10) = **+8**. Azul's one loss is the *narrowest* (6–4) and its win the widest (7–3), so Azul tops the margin rung — **Azul wins, deterministically**; the lot rung is never reached. The engine's own note points out this is exactly where Condorcet methods diverge from each other — Minimax, Ranked Pairs, and Schulze each resolve cycles their own way: [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md).
 
 </details>
 
 <details>
 <summary><b>(e) Why LH-only</b></summary>
 
-BetterVoting's Ranked Robin breaks a **three-way** wins tie at *random* (its ladder is wins → two-way head-to-head → random — the caveat documented on the repo's BV2142 clone case), so a BV run of this election could name any of the three cyclists and can't be frozen as a stable teaching result. The LH engine's wins → **margin** → lot ladder is deterministic here, so the exercise lives where its answer is reproducible. The two engines' tiebreak ladders are compared in [rr_tiebreak_lh_vs_bv](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+BetterVoting's Ranked Robin breaks a **three-way** wins tie at *random* (its ladder is wins → two-way head-to-head → random — the caveat documented on the repo's BV2142 clone case), so a BV run of this election could name any of the three cyclists and can't be frozen as a stable teaching result. The LH engine's wins → **margin** → lot ladder is deterministic here, so the exercise lives where its answer is reproducible. The two engines' tiebreak ladders are compared in [rr_tiebreak_lh_vs_bv](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
 
 </details>
 
@@ -92,7 +92,7 @@ Source: [ex09_game_night_cycle.yaml](cases/ex09_game_night_cycle.yaml). Full aud
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast — the candidates are board games so the cycle reads as fun, not politics). Concept homes: [Ranked Robin vs Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md), [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md), and the worked [Smith-set case](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md).
+**Where this comes from.** Original to this repo (ballots and cast — the candidates are board games so the cycle reads as fun, not politics). Concept homes: [Ranked Robin vs Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md), [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md), and the worked [Smith-set case](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

@@ -27,7 +27,7 @@ marked, not when it was counted. On these ballots B is legitimately the
 Condorcet winner; on the underlying preferences (hh41_02) A is. That gap is
 the compression.
 
-Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
 Companion set: ../../black_curtain/condorcet_compression.md
 Set overview: ../README.md
 

@@ -2,7 +2,7 @@
 
 *Four runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, a real 6-candidate case, plus the cycle with a dominated fourth candidate — the **Smith set** demo.*
 
-→ **Full lesson (the teaching write-up):** [Ranked Robin vs. Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../../00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md)
+→ **Full lesson (the teaching write-up):** [Ranked Robin vs. Condorcet](../concepts/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../concepts/the_math_behind_condorcet.md)
 
 | Case (page) | What it shows | Condorcet winner | Ranked Robin | src |
 |------|---------------|:---:|:---:|:--:|
@@ -103,4 +103,4 @@ Winner — Ranked Robin (RCV-RR): Ada
 
 ---
 
-*Regenerate any report by re-running the `.yaml` through the LH engine; the `…_tabulated.txt` mirrors are generated siblings. Full teaching write-up: [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).*
+*Regenerate any report by re-running the `.yaml` through the LH engine; the `…_tabulated.txt` mirrors are generated siblings. Full teaching write-up: [ranked_robin_vs_condorcet.md](../concepts/ranked_robin_vs_condorcet.md).*

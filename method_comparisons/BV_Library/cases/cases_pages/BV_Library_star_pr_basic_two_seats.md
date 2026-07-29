@@ -2,7 +2,7 @@
 
 *Generated from [`BV_Library_star_pr_basic_two_seats.yaml`](../BV_Library_star_pr_basic_two_seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Allison, Doug
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Allison, Doug
 
 ## Scenario
 

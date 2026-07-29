@@ -40,7 +40,7 @@ Here it is with real numbers — the exact mirror of the STAR case where opposit
 
 **Before.** Bruno is the [Condorcet winner](../topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
 
-Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
+Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
 
 But watch RCV-IRV:
 
@@ -54,7 +54,7 @@ The six new ballots put their first-choices on the two **extremes** (Ada +3, Cyr
 
 That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../../06_Other/RCV_IRV/equal_vote_balance/) (base → Bruno, plus-balanced → Ada).
 
-**Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
+**Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
 
 ## Vote-splitting and exhaustion, precisely
 

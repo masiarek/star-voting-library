@@ -2,7 +2,7 @@
 
 *Generated from [`pets_gov_star_pr.yaml`](../pets_gov_star_pr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Bird, Dog, Fish
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Bird, Dog, Fish
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
 

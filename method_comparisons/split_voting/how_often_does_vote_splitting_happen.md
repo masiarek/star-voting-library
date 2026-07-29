@@ -22,7 +22,7 @@ Its state breakdown (limited to states that ran all three election types):
 
 The report also notes that in the **New Hampshire State House**, candidates advanced to the general election with **as little as 8.8%** of the primary vote — because those are multi-seat districts where voters select several candidates.
 
-> **Source lean, disclosed** (house rule): CES is the national advocacy organization for [Approval Voting](../../00_start_here/Approval_Voting/approval_voting.md) — see [advocacy organizations](../../00_start_here/topics/advocacy_organizations.md). The *count* is a straightforward tabulation of public results and there's no reason to doubt it. The *framing* — calling every such race a "vote split election" — is where an advocacy report and a teaching library should part company, and the rest of this page is why.
+> **Source lean, disclosed** (house rule): CES is the national advocacy organization for [Approval Voting](../../04_Approval/concepts/approval_voting.md) — see [advocacy organizations](../../00_start_here/topics/advocacy_organizations.md). The *count* is a straightforward tabulation of public results and there's no reason to doubt it. The *framing* — calling every such race a "vote split election" — is where an advocacy report and a teaching library should part company, and the rest of this page is why.
 
 ## The definition worth borrowing
 
@@ -66,7 +66,7 @@ Automatic Runoff Round
    Aspen 30 (68%) vs Birch 14 (32%); majority = 23.
 ```
 
-[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md), [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md) and [RCV-IRV](../../00_start_here/RCV_IRV/RCV-IRV-Hare.md) (Aspen 18 → 30 after Cedar's transfers) all elect Aspen — the same candidate Choose-One elected on 41%. The race was *exposed* to vote splitting; the outcome was not *changed* by it.
+[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md), [Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md) and [RCV-IRV](../../00_start_here/RCV_IRV/RCV-IRV-Hare.md) (Aspen 18 → 30 after Cedar's transfers) all elect Aspen — the same candidate Choose-One elected on 41%. The race was *exposed* to vote splitting; the outcome was not *changed* by it.
 
 → Source: [`06_sub_majority_not_spoiled.yaml`](_main/06_sub_majority_not_spoiled.yaml) · full report: [page](_main/_main_pages/06_sub_majority_not_spoiled.md) · [`_tabulated`](_main/_main_tabulated/06_sub_majority_not_spoiled_tabulated.txt)
 

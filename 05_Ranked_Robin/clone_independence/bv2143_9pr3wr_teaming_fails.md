@@ -2,7 +2,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr`).
 
-Part 2 of the electowiki clone-independence pair (the "after"). Same electorate as [BV2142](bv2142_4gfwdq_clone_cycle_pre.md), but the A-faction runs clones — and **the two engines elect different winners from identical ballots.** Full lesson: [rr_clone_independence.md](../../00_start_here/RCV_Ranked_Robin/rr_clone_independence.md).
+Part 2 of the electowiki clone-independence pair (the "after"). Same electorate as [BV2142](bv2142_4gfwdq_clone_cycle_pre.md), but the A-faction runs clones — and **the two engines elect different winners from identical ballots.** Full lesson: [rr_clone_independence.md](../concepts/rr_clone_independence.md).
 
 ## The teaming ballots
 
@@ -46,4 +46,4 @@ By running clones the A-faction pushed B out of the top tier and lifted A1's mar
 
 ## The takeaway
 
-Same ballots, opposite winners: **LH (margin) → A1**, **BV (head-to-head) → C**. The clone-independence *failure* is a property of the margin tiebreak (LH, and the Equal Vote protocol), not of Ranked Robin as such — BV's head-to-head rung happens to resist this teaming. See [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+Same ballots, opposite winners: **LH (margin) → A1**, **BV (head-to-head) → C**. The clone-independence *failure* is a property of the margin tiebreak (LH, and the Equal Vote protocol), not of Ranked Robin as such — BV's head-to-head rung happens to resist this teaming. See [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md).

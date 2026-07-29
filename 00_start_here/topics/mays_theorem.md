@@ -64,8 +64,8 @@ Worth checking, because it's easy to assume the methods differ everywhere:
 
 - **[STAR](../STAR_Voting/)** — with two candidates both are automatically finalists, so the scoring round decides nothing and the [automatic runoff](../STAR_Voting/the_count/) is a straight pairwise majority vote.
 - **[RCV-IRV](../RCV_IRV/)** — no one can be eliminated before someone has a majority; round one settles it.
-- **[Ranked Robin](../RCV_Ranked_Robin/)** — one pairwise matchup *is* the whole round robin.
-- **[Approval](../Approval_Voting/)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
+- **[Ranked Robin](../../05_Ranked_Robin/concepts/)** — one pairwise matchup *is* the whole round robin.
+- **[Approval](../../04_Approval/concepts/)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
 
 So the repo's own convention that [two-candidate intro files suppress the finalists matrix](../../CLAUDE.md) — because it merely echoes the runoff — isn't a display quirk. It's May's Theorem showing up in the output: at two candidates there is only one thing any of these methods can be doing.
 
@@ -85,13 +85,13 @@ The substitution of **strategyproofness** for **monotonicity** is not a change o
 
 Now relax exactly one condition — the third, "only two alternatives" — while keeping anonymity and neutrality. That single move is what turns a clean uniqueness theorem into an impossibility theorem.
 
-At three or more alternatives you need a rule that produces a coherent group *ranking*, not just a binary verdict — a [social welfare function](social_welfare_function.md) — and Arrow proves that no such rule can be weakly Paretian and IIA without being a dictatorship. Pairwise majority rule itself survives at three candidates only by ceasing to be a ranking at all: it can [cycle](../RCV_Ranked_Robin/cycle_resolution.md).
+At three or more alternatives you need a rule that produces a coherent group *ranking*, not just a binary verdict — a [social welfare function](social_welfare_function.md) — and Arrow proves that no such rule can be weakly Paretian and IIA without being a dictatorship. Pairwise majority rule itself survives at three candidates only by ceasing to be a ranking at all: it can [cycle](../../05_Ranked_Robin/concepts/cycle_resolution.md).
 
 Read as a pair, the two theorems say something sharper than either alone:
 
 > **Majority rule is uniquely right for two alternatives (May), and cannot be coherently extended to three (Condorcet's paradox, then Arrow).**
 
-Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../STAR_Voting/), [Ranked Robin](../RCV_Ranked_Robin/), [Approval](../Approval_Voting/), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
+Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../STAR_Voting/), [Ranked Robin](../../05_Ranked_Robin/concepts/), [Approval](../../04_Approval/concepts/), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
 
 ## Sources
 

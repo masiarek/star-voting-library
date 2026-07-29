@@ -108,11 +108,11 @@ Zwicker lists the four approaches the literature takes. The useful part is that 
 |:--:|---|---|---|
 | 1 | **Fixed ordering** of the candidates | **neutrality** — a pre-published order is a thumb on the scale, by construction | LH's `lot_numbers:`; [STAR's official tiebreak protocol](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) |
 | 1′ | A **designated voter** breaks all ties | **anonymity** — one ballot now counts differently | not used here (a casting-vote chair does this) |
-| 2 | **Randomize** | determinism — the rule becomes *indeterminate*, and "did strategy work?" gets harder to even define | [BetterVoting's `tieBreakType: random`](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) |
+| 2 | **Randomize** | determinism — the rule becomes *indeterminate*, and "did strategy work?" gets harder to even define | [BetterVoting's `tieBreakType: random`](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) |
 | 3 | **Return the tied set** | you now need a *set extension principle* to say what a voter prefers between two tied sets — and [Duggan–Schwartz](../gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz) proves this buys indecisiveness, not strategyproofness | `pref_voting`'s Copeland, which reports a **leader set** `{Blue, Green}` and stops |
 | 4 | **Assume ties don't happen** | nothing, until it decides a seat | the honest default for a first pass at a new concept |
 
-**This reframes the LH-vs-BetterVoting divergence.** [That page](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) documents the two engines electing different winners from identical ballots and treats it as a discrepancy to pin down. It is better read as **two defensible answers to a forced choice**: LH took approach 1 and paid in neutrality; BetterVoting took approach 2 and paid in determinism; `pref_voting`, consulted as the third opinion, takes approach 3 and declines to choose at all. Nobody is wrong. The theorem says one of them had to give something up, and they gave up different things.
+**This reframes the LH-vs-BetterVoting divergence.** [That page](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) documents the two engines electing different winners from identical ballots and treats it as a discrepancy to pin down. It is better read as **two defensible answers to a forced choice**: LH took approach 1 and paid in neutrality; BetterVoting took approach 2 and paid in determinism; `pref_voting`, consulted as the third opinion, takes approach 3 and declines to choose at all. Nobody is wrong. The theorem says one of them had to give something up, and they gave up different things.
 
 That also explains an operational fact the repo discovered the hard way: a randomly-broken BV tie **cannot be frozen into a `_bv_export.json`**, which is why the [dead-heat case](../../../05_Ranked_Robin/rr_tiebreaks/dead_heat_lot_tiebreak.md) is LH-only. Approach 2's cost isn't abstract — it shows up as an election you can't reproduce.
 
@@ -150,7 +150,7 @@ The rotation that page calls "a perfect rotation: three equal, mutually symmetri
 Three, because this result is easy to overstate:
 
 1. **"Forced" means *some* profile, not *this* profile.** The theorem is a statement about the rule's domain. It says a tie exists somewhere; it says nothing about probability. In a public election with thousands of ballots, exact ties remain astronomically rare — the [existing caveat](why_contrived_tie_cases.md) stands unchanged. What the theorem removes is the option of claiming your method has *no* tie case.
-2. **It doesn't rank methods.** Every method in this library is caught. Nothing here favors STAR over [Ranked Robin](../../RCV_Ranked_Robin/) over [RCV-IRV](../../RCV_IRV/). Methods differ in *how often* ties arise and how gracefully they're resolved — see [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md) — but not in whether they're subject to this.
+2. **It doesn't rank methods.** Every method in this library is caught. Nothing here favors STAR over [Ranked Robin](../../../05_Ranked_Robin/concepts/) over [RCV-IRV](../../RCV_IRV/). Methods differ in *how often* ties arise and how gracefully they're resolved — see [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md) — but not in whether they're subject to this.
 3. **It's a small impossibility, not Arrow.** It costs you *resoluteness*, which is an inconvenience with four known workarounds. [Arrow](../arrow_theorem_and_star.md) and [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) cost you things you can't work around. Don't let the shared word "impossibility" flatten that difference — this one is the mild member of the family, and citing it as though it were Arrow is exactly the overreach [criteria at a glance](../criteria_at_a_glance.md) warns about.
 
 ## Sources
@@ -165,6 +165,6 @@ Three, because this result is easy to overstate:
 - [Ties & Tie-Breaking hub](README.md) · [Why build "silly" tie elections?](why_contrived_tie_cases.md) · [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md)
 - [May's theorem](../mays_theorem.md) — the two-candidate positive result, whose *positive responsiveness* condition is exactly what breaks the ties this theorem doesn't force
 - [Social welfare function](../social_welfare_function.md) — Pareto and IIA stated properly · [Does Arrow apply to STAR?](../arrow_theorem_and_star.md) · [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md)
-- [Ranked Robin tiebreaks — LH vs BetterVoting](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../RCV_Ranked_Robin/cycle_resolution.md)
+- [Ranked Robin tiebreaks — LH vs BetterVoting](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md)
 - [The minimal tilted cycle](../../../method_comparisons/minimal_tilted_cycle/README.md) · [the reinforcement paradox pair](../../../method_comparisons/reinforcement_paradox/README.md) · [the three-way dead rung](../../../01_STAR/tie_break_dead_rung/README.md)
 - [Glossary](../../GLOSSARY.md) — anonymity, neutrality, nonimposition, resolute, lot numbers

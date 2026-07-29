@@ -9,7 +9,7 @@ crowded field to the top N (usually 4), then a good method runs the general.
 Better Choices for Democracy's *Consensus Choice* is the current example — step 1
 is "an open qualifying election ... [that] determines at least four of the
 strongest candidates," and their published materials do NOT say which method that
-round uses. (See 00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md.)
+round uses. (See 05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md.)
 
 That gap provoked a real disagreement among people who know this field well:
 

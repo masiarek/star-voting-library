@@ -2,7 +2,7 @@
 
 *Generated from [`07b_c5_b36_herb-council-pr-3-seats.yaml`](../07b_c5_b36_herb-council-pr-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Anise, Basil, Chive
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Anise, Basil, Chive
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/pmrq4q) · **[results ↗](https://bettervoting.com/pmrq4q/results)** (election `pmrq4q`).
 

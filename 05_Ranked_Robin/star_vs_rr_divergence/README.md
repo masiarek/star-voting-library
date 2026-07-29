@@ -21,7 +21,7 @@
 ## The two causes (also spelled out per file)
 
 - **Cycle** — no Condorcet winner (rock-paper-scissors). RR resolves by Copeland/margin; STAR by score-runoff. A structural coin-flip electorate.
-- **Dark horse** — a Condorcet winner exists but **misses STAR's score top-two**: a broadly-preferred, low-intensity compromise. The [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split; a real [RR limit](../../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md).
+- **Dark horse** — a Condorcet winner exists but **misses STAR's score top-two**: a broadly-preferred, low-intensity compromise. The [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split; a real [RR limit](../concepts/RCV_RR_honest_limits.md).
 
 ## Who sides with whom
 

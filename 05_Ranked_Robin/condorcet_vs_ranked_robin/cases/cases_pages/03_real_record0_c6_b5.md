@@ -2,7 +2,7 @@
 
 *Generated from [`03_real_record0_c6_b5.yaml`](../03_real_record0_c6_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** B
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** B
 
 **Official tie-break (lot) order:** A > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -93,7 +93,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (B) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner B is INSIDE the Smith set. ✓

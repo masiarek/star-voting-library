@@ -43,7 +43,7 @@ Now count the *same* five ballots every way. (Every winner here is engine-verifi
 | **Choose-One (Plurality)** | first choices only | Sushi |
 | **RCV-IRV (Hare)** | first choices, then eliminate the lowest | Sushi |
 | **Approval** | how many are OK with each | 🍕 **Pizza** |
-| **[Ranked Robin](../RCV_Ranked_Robin/why_ranked_robin.md)** | every head-to-head matchup | 🍕 **Pizza** |
+| **[Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md)** | every head-to-head matchup | 🍕 **Pizza** |
 | **[STAR](Why_STAR_Voting.md)** | total scores, then an automatic runoff | 🍕 **Pizza** |
 
 ## What the line-up shows

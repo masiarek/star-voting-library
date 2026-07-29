@@ -82,5 +82,5 @@ Each cell was cross-checked against Wikipedia's [Comparison of electoral systems
 
 - [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) — the "which criteria matter" question
 - [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — why a table like this isn't a verdict
-- Per-method honest limits: [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](../Approval_Voting/approval_honest_limits.md) · [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md)
+- Per-method honest limits: [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](../../04_Approval/concepts/approval_honest_limits.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md)
 - [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — the wider family and its own criterion table

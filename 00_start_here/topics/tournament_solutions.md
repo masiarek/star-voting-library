@@ -1,8 +1,8 @@
 # Tournament solutions — the theory of the win-loss graph
 
-*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md), [STAR](../STAR_Voting/) and [Approval](../Approval_Voting/).*
+*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [STAR](../STAR_Voting/) and [Approval](../../04_Approval/concepts/).*
 
-→ Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: Voting 301**
+→ Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: Voting 301**
 
 **Runnable:** [Tournament solutions, counted](../../method_comparisons/tournament_solutions/) — five defensible winners from a three-ballot election, both engines agreeing.
 
@@ -38,7 +38,7 @@ Two structural facts frame everything else:
 
 ## The solutions, coarse to fine
 
-All of them agree — trivially — whenever a [Condorcet winner](../RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) exists: every one returns just that candidate. They only differ in a cycle, which is the recurring theme of this whole subject.
+All of them agree — trivially — whenever a [Condorcet winner](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) exists: every one returns just that candidate. They only differ in a cycle, which is the recurring theme of this whole subject.
 
 | Solution | Picks | Cost |
 |---|---|---|
@@ -56,7 +56,7 @@ The three axioms the literature actually argues about:
 
 - **Monotonicity** — gaining a win never costs you your place in the choice set. Nearly everything satisfies it. (This is a much weaker condition than [monotonicity as we use it elsewhere](monotonicity/).)
 - **Stability** — chosen from `B` and chosen from `C` if and only if chosen from `B ∪ C`. Demanding; fails for most solutions.
-- **Composition-consistency** — "choose the best from the best components," the strong form of [clone-independence](../RCV_Ranked_Robin/rr_clone_independence.md). Satisfied by the uncovered, Banks and bipartisan sets. **Failed by Copeland**, which is the interesting part for us.
+- **Composition-consistency** — "choose the best from the best components," the strong form of [clone-independence](../../05_Ranked_Robin/concepts/rr_clone_independence.md). Satisfied by the uncovered, Banks and bipartisan sets. **Failed by Copeland**, which is the interesting part for us.
 
 ## What this has to do with Ranked Robin: everything
 
@@ -65,8 +65,8 @@ The three axioms the literature actually argues about:
 Which means the literature's verdicts on Copeland land directly on Ranked Robin, and they're mixed — honestly, that's the value of reading it:
 
 - **Copeland is monotonic, Condorcet-consistent, and linear-time.** For a public method that has to be explained in one sentence and hand-counted, those are the properties that matter, and it's why Ranked Robin is the repo's practical recommendation.
-- **Copeland is coarse.** It ties easily in a cycle, because cycling candidates tend to share a win-loss record — [already documented here](../RCV_Ranked_Robin/cycle_resolution.md), and the reason the refined methods exist.
-- **Copeland fails composition-consistency, and even the weak version.** This is the theoretical name for Ranked Robin's one real clone weakness, [teaming](../RCV_Ranked_Robin/rr_clone_independence.md) — and it only bites in a cycle.
+- **Copeland is coarse.** It ties easily in a cycle, because cycling candidates tend to share a win-loss record — [already documented here](../../05_Ranked_Robin/concepts/cycle_resolution.md), and the reason the refined methods exist.
+- **Copeland fails composition-consistency, and even the weak version.** This is the theoretical name for Ranked Robin's one real clone weakness, [teaming](../../05_Ranked_Robin/concepts/rr_clone_independence.md) — and it only bites in a cycle.
 - **Copeland is not stable** — it isn't even idempotent: applying it to its own output can shrink the set again.
 
 And one sharp point that falls out of the runnable case, which we haven't stated anywhere else in the repo:
@@ -151,6 +151,6 @@ What it is **not** good for: choosing a voting method for a real jurisdiction. N
 
 - [The uncovered set](uncovered_set.md) — the one member of this family with a plain-language payoff, in full
 - [What a method reads](what_a_method_reads.md) — C1/C2/C3, and why STAR has no class · [the Condorcet reading list](condorcet/condorcet_reading_list.md)
-- [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) — the Smith/Schwartz half · [the Smith set](smith_set.md)
-- [Cycle resolution](../RCV_Ranked_Robin/cycle_resolution.md) — the C2 methods that read the margins these rules throw away
-- [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) · [its honest limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [clone independence](../RCV_Ranked_Robin/rr_clone_independence.md)
+- [The math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) — the Smith/Schwartz half · [the Smith set](smith_set.md)
+- [Cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — the C2 methods that read the margins these rules throw away
+- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [its honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) · [clone independence](../../05_Ranked_Robin/concepts/rr_clone_independence.md)

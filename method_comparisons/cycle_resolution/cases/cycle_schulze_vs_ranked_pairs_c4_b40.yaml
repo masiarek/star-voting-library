@@ -2,7 +2,7 @@ election_title: "Same ballots, different Condorcet rule — Schulze says Ana, Ra
 
 scenario_description: |-
   The second worked profile behind "Cycle Resolution — why Minimax, Ranked Pairs,
-  and Schulze exist" (00_start_here/RCV_Ranked_Robin/cycle_resolution.md): the
+  and Schulze exist" (05_Ranked_Robin/concepts/cycle_resolution.md): the
   point at which the Condorcet family stops agreeing. 40 members of a mural
   committee rank four designs. Majority preference cycles:
 

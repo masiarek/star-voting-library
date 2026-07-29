@@ -17,7 +17,7 @@ scenario_description: |-
   SAME ballots (SPAV, PAV, seq-Phragmén — run them via
   06_Other/abcvoting_tabulation_engine/) instead elect Amy + Cora decisively,
   giving the minority its seat; see
-  00_start_here/Approval_Voting/approval_multiwinner.md.
+  04_Approval/concepts/approval_multiwinner.md.
 
 options:
   show_description: false

@@ -2,7 +2,7 @@
 
 *Generated from [`03a_stv_3seats.yaml`](../03a_stv_3seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Housing, Schools, SmallBiz
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Housing, Schools, SmallBiz
 
 ## Scenario
 

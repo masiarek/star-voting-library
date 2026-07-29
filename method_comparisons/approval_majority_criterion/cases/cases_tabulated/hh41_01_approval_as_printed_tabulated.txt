@@ -29,7 +29,7 @@ scenario_description: |-
   and the 10 C>B>A voters cast IDENTICAL ballots, so the engine collapses them
   to a single 40-voter row. That erasure is the lesson, not a display quirk.
 
-  Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+  Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
   Set overview: ../README.md
 
 voting_method: Approval

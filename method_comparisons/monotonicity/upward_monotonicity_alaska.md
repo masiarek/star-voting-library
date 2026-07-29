@@ -60,7 +60,7 @@ Both methods are **monotonic** in this sense — raising a candidate on some bal
 
 - **This is a real, documented failure**, not a hypothetical — Alaska 2022 is one of the clearest real-world monotonicity failures on record, which is exactly why it's worth teaching.
 - **But it is rare.** Monotonicity failures need a near-three-way race with a specific transfer structure; most IRV elections never trigger one. Don't oversell frequency — sell the *structural* point: IRV's winner can depend on elimination order, and elimination order can move the wrong way.
-- **It is IRV-specific, not "ranked voting" writ large.** The same ranked ballots counted by [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) are monotonic. Saying "ranked voting is non-monotonic" is imprecise; it's *instant-runoff* that is.
+- **It is IRV-specific, not "ranked voting" writ large.** The same ranked ballots counted by [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) are monotonic. Saying "ranked voting is non-monotonic" is imprecise; it's *instant-runoff* that is.
 - **STAR is not perfectly immune to every monotonicity variant.** It passes mono-raise (no upward paradox), but fails the stronger **mono-raise-delete** in lab constructions — conceded and shown in the [worked set](README.md#the-301-nuance-star-fails-a-stronger-variant). Honesty is naming both.
 
 The takeaway isn't "IRV is bad." It's that **a voter should be able to rank their favourite honestly without the ranking backfiring** — and STAR and Ranked Robin deliver that guarantee where instant-runoff can't.

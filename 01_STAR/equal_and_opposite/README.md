@@ -60,7 +60,7 @@ The [source graphic](../../00_start_here/STAR_Voting/properties_and_limits/equal
 
 ## The parallel in ranked methods
 
-Balance isn't unique to scores. A ranked ballot and its **exact reverse** also cancel: in every head-to-head pair, one ballot's `X > Y` is met by the other's `Y > X`, so the pairwise margin is unchanged. So [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) passes the Test of Balance too. The method that *fails* it is [Choose-One](../../00_start_here/topics/plurality.md): a single mark can only *add* to one candidate, never subtract — there is no ballot anyone can cast to cancel it, which is exactly why plurality splits votes. ([RCV-IRV](../../00_start_here/RCV_IRV/RCV_IRV_equal_vote.md) is the subtle one — opposite ballots don't reliably cancel under sequential elimination.)
+Balance isn't unique to scores. A ranked ballot and its **exact reverse** also cancel: in every head-to-head pair, one ballot's `X > Y` is met by the other's `Y > X`, so the pairwise margin is unchanged. So [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) passes the Test of Balance too. The method that *fails* it is [Choose-One](../../00_start_here/topics/plurality.md): a single mark can only *add* to one candidate, never subtract — there is no ballot anyone can cast to cancel it, which is exactly why plurality splits votes. ([RCV-IRV](../../00_start_here/RCV_IRV/RCV_IRV_equal_vote.md) is the subtle one — opposite ballots don't reliably cancel under sequential elimination.)
 
 ## Files
 

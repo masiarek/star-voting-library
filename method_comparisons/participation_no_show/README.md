@@ -6,7 +6,7 @@ The tabulatable evidence behind the [Participation topic hub](../../00_start_her
 - **BV2174** (8 fans stay home) — [vote](https://bettervoting.com/yyhr66) · **[results ↗](https://bettervoting.com/yyhr66/results)** (election `yyhr66`)
 - **BV2175** (8 fans vote) — [vote](https://bettervoting.com/9dhv8y) · **[results ↗](https://bettervoting.com/9dhv8y/results)** (election `9dhv8y`)
 
-No Ranked Robin races: both electorates are a Condorcet cycle (that's the soil the paradox grows in), and BV resolves a Copeland tie at random — not freezable. The LH engine's margin tiebreak resolves it deterministically (Celia in BV2174, April in BV2175); see the `_tabulated` mirrors and [LH vs BV on RR ties](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+No Ranked Robin races: both electorates are a Condorcet cycle (that's the soil the paradox grows in), and BV resolves a Copeland tie at random — not freezable. The LH engine's margin tiebreak resolves it deterministically (Celia in BV2174, April in BV2175); see the `_tabulated` mirrors and [LH vs BV on RR ties](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
 
 Read the reader-friendly **pages** (`participation_no_show_pages/`); the `.yaml` beside each is the tabulatable source.
 

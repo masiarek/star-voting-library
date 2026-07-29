@@ -69,8 +69,8 @@ The matrix doesn't care which ballot style fed it, only *order*:
 ## Why this one idea earns its keep
 
 1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/_main/cases/cases_pages/04b_c4_b3_display-options-all.md) (`show_matrix`).
-2. **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) reads its whole result off it** — most head-to-head wins takes the seat. The matrix isn't a supporting exhibit there; it *is* the tally.
-3. **It's why these counts are [summable](summability/).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../RCV_Ranked_Robin/RCV_RR_summability.md) and [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../RCV_IRV/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
+2. **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) reads its whole result off it** — most head-to-head wins takes the seat. The matrix isn't a supporting exhibit there; it *is* the tally.
+3. **It's why these counts are [summable](summability/).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) and [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../RCV_IRV/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
 
 ## Further afield (301): write-ins and bookkeeping variants
 
@@ -82,6 +82,6 @@ Real election offices hit a wrinkle: a **write-in** candidate discovered mid-cou
 
 - [Ann, Bob, Cal — the canonical leading example](../../01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) — the election used above (frozen ballots; [canonical registry](../tips/TIPS_canonical_elections.md))
 - [How the count works — STAR vs RCV-IRV, step by step](tabulation_star_vs_irv.md) — the two counts this matrix feeds and contrasts
-- [Summability topic hub](summability/) · [Ranked Robin is summable](../RCV_Ranked_Robin/RCV_RR_summability.md) — the precinct-level payoff
-- [The math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) — the 301 sequel: the matrix as a *graph* (tournaments, Smith set, cycles)
+- [Summability topic hub](summability/) · [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) — the precinct-level payoff
+- [The math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) — the 301 sequel: the matrix as a *graph* (tournaments, Smith set, cycles)
 - Glossary: [`preference matrix`, `Equal Support`, `summability`](../GLOSSARY.md)

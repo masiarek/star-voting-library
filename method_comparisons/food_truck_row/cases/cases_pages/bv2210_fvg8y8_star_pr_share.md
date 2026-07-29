@@ -2,7 +2,7 @@
 
 *Generated from [`bv2210_fvg8y8_star_pr_share.yaml`](../bv2210_fvg8y8_star_pr_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Arepa, Donut
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Arepa, Donut
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
 

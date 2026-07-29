@@ -85,7 +85,7 @@ The gentlest *rigorous* book on the shelf — an undergraduate text (SIAM, from 
 
 **The lean:** Neutral textbook — it teaches the mathematics and sells no method. Its voting coverage is classical (ranked methods and their theory); rated methods like score and STAR aren't its subject, so read it for the Condorcet-family foundations, not a method comparison.
 
-**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
+**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
 
 </td>
 </tr>
@@ -117,9 +117,9 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 
 *The Potential for Public Choice.* The most comprehensive single-author survey on the shelf — Tideman works through criteria, methods, and the design of collective decision procedures with unusual care about *what we should want* from them before asking which method delivers it.
 
-**The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md), this repo's Condorcet method.
+**The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), this repo's Condorcet method.
 
-**In this repo:** [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
+**In this repo:** [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
 
 </td>
 </tr>

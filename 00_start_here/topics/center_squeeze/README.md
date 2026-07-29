@@ -12,7 +12,7 @@
 | **Contingent / Supplementary** | ❌ yes | one-shot top-two — same first-choice cut | [Contingent & SV](../../RCV_IRV/variants/RCV-IRV-contingent-supplementary.md) |
 | **BTR / Baldwin / Nanson** | ✅ no | Condorcet-safe IRV variants — read the whole ballot | [Which RCV-IRV?](../../RCV_IRV/variants/RCV_IRV_variants.md) |
 | **Coombs** | ✅ no | eliminates on *last* choices, so the moderate survives | [Coombs](../../RCV_IRV/variants/RCV-IRV-Coombs.md) |
-| **Ranked Robin / Condorcet** | ✅ no | elects the head-to-head winner directly — never eliminates them | [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md) |
+| **Ranked Robin / Condorcet** | ✅ no | elects the head-to-head winner directly — never eliminates them | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) |
 | **STAR** | ✅ no | the scoring round advances a candidate on *strength* of support, not first-place counts | [Center squeeze § how STAR avoids it](../../RCV_IRV/RCV_IRV_center_squeeze.md#how-star-avoids-it) |
 
 The same 27-voter election runs through every method on the [RCV-IRV-Hare page](../../RCV_IRV/RCV-IRV-Hare.md): Hare elects Left, everyone who reads the whole ballot elects the Condorcet winner, Center.

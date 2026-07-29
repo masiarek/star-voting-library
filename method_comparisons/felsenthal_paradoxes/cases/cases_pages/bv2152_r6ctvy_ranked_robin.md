@@ -2,7 +2,7 @@
 
 *Generated from [`bv2152_r6ctvy_ranked_robin.yaml`](../bv2152_r6ctvy_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Bert
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Bert
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r6ctvy) · **[results ↗](https://bettervoting.com/r6ctvy/results)** (election `r6ctvy`).
 

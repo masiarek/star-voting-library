@@ -2,7 +2,7 @@ election_title: Bloc Approval — 3-seat city council at-large
 
 scenario_description: |-
   A 3-seat at-large council race matching the multi-winner ballot mockup
-  (00_start_here/Approval_Voting/img/approval_ballot_multiwinner_3seats.png):
+  (04_Approval/concepts/img/approval_ballot_multiwinner_3seats.png):
   six candidates, five voters, each approving any number of candidates.
   Sum the columns; the three most-approved win. Adams, Brown, and Clark
   take the seats (3 approvals each) — no tie, no drama: the plain

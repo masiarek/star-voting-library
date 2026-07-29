@@ -24,7 +24,7 @@ Why: any candidate to the median's left is beaten by one just to their right (a 
 
 Because the spatial model tells you *who the Condorcet winner is* (the center), it tells you which methods will find them and which will miss:
 
-- **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) / Condorcet methods** elect the median candidate by construction — they're built to find the beats-all winner.
+- **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) / Condorcet methods** elect the median candidate by construction — they're built to find the beats-all winner.
 - **[STAR](../STAR_Voting/STAR_start_here.md)** usually elects near the median too: the broadly-liked center piles up scores and wins the runoff.
 - **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) can *squeeze* the center out.** A centrist is many voters' *second* choice but few voters' *first*, so IRV eliminates them early — even though they'd beat everyone head-to-head. That's **[center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)**, and it's fundamentally a *spatial* phenomenon: you can only see it clearly on the map. (Alaska 2022 is the real-world case.)
 - **[Plurality](plurality.md)** splits one side and hands it to the other — the [spoiler effect](spoiler_effect.md), also easiest to see spatially.
@@ -54,7 +54,7 @@ The spatial model is a **lens, not reality**:
 
 - **Valence / quality is missing.** Voters also care about competence, honesty, charisma — things that aren't a "position." Pure distance ignores them.
 - **How many dimensions, and which?** Results can hinge on the dimensionality and on how much each axis *weighs* (salience). One-dimensional results (a guaranteed Condorcet winner) can break in higher dimensions — where cycles reappear.
-- **It can suppress the hard cases.** Precisely because a 1-D spatial model guarantees a Condorcet winner, it makes **[cycles](../RCV_Ranked_Robin/cycle_resolution.md) nearly impossible** — so a purely spatial simulation never stress-tests cycle-resolution. (Impartial culture over-produces them; the truth is between.)
+- **It can suppress the hard cases.** Precisely because a 1-D spatial model guarantees a Condorcet winner, it makes **[cycles](../../05_Ranked_Robin/concepts/cycle_resolution.md) nearly impossible** — so a purely spatial simulation never stress-tests cycle-resolution. (Impartial culture over-produces them; the truth is between.)
 - **Real ballots aren't utilities.** Distance gives a *utility*; turning it into a ballot (min-max scores, an approval cutoff, a ranking) is a separate modeling step — the one that actually drives method differences.
 
 So: use the map to build intuition and to *predict*, then check the prediction against countable elections and against a second, adversarial model. The geometry is a guide, not a verdict.

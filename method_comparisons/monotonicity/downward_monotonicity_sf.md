@@ -60,7 +60,7 @@ Both methods are **monotonic** — lowering a candidate can never *help* them, a
 
 - **Real and documented** — SF D7 2020 is a genuine recorded election, one of the cleanest downward-paradox cases in the literature. That's why it teaches well.
 - **But rare.** Like its mirror, the downward paradox needs a near-three-way race with a specific transfer structure; most IRV elections never trigger one. The durable point is *structural*: IRV's winner depends on elimination order, which can move the wrong way in **both** directions.
-- **IRV-specific, not "ranked voting."** The same ballots under [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) are monotonic. It's *instant-runoff* that fails here, not ranked ballots as such.
+- **IRV-specific, not "ranked voting."** The same ballots under [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) are monotonic. It's *instant-runoff* that fails here, not ranked ballots as such.
 - **STAR's own limit stays on the table.** STAR passes mono-raise but fails the stronger **mono-raise-delete** in lab constructions — [conceded in the worked set](README.md#the-301-nuance-star-fails-a-stronger-variant). Naming both sides is the point.
 
 The takeaway matches the upward page: **a voter's honest ranking shouldn't be able to backfire** — up *or* down — and STAR and Ranked Robin give that guarantee where instant-runoff can't.

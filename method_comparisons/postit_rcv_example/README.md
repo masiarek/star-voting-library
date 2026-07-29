@@ -12,7 +12,7 @@ The 20-voter election from Equal Vote's video **["Updated: How does RCV work? �
 
 | Case page (read these) | What it shows |
 |---|---|
-| [BV2176 — the Post-it RCV example](bv2176_p8dp28_postit_rcv_example.md) | The video, live: IRV → Purple (7/6/4/3 → 8/7/4 → 9–8); STAR → Blue (44–44 finalist tie breaks head-to-head, runoff 10–9 — a Runoff Reversal); Ranked Robin → the first live sighting of the [LH-vs-BV tiebreak-ladder divergence](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) (Green on BV, Blue in LH) |
+| [BV2176 — the Post-it RCV example](bv2176_p8dp28_postit_rcv_example.md) | The video, live: IRV → Purple (7/6/4/3 → 8/7/4 → 9–8); STAR → Blue (44–44 finalist tie breaks head-to-head, runoff 10–9 — a Runoff Reversal); Ranked Robin → the first live sighting of the [LH-vs-BV tiebreak-ladder divergence](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) (Green on BV, Blue in LH) |
 | [BV2177 — the single-winner methods, side by side](bv2177_v8r66y_seven_methods.md) | The same 20 ballots under STAR, Ranked Robin, Approval, RCV-IRV and Choose-One: **all four candidates win somewhere** — incl. Approval's threshold trap (approve ≥1/≥4/=5 → Pink/Blue/Purple). (STV and STAR-PR also run at 1 seat as completeness footnotes: STV(1) = IRV; STAR-PR(1) = Score voting, no runoff.) |
 | [BV2178 — the switch, made real](bv2178_8kg698_switch_made_real.md) | Two of six Green>Blue>Pink voters flip their top two → IRV really does eliminate Green in round 2 and lands the video's exact hypothetical (Blue 10, Purple 9); Blue becomes a clean 3–0 Condorcet winner; only Choose-One still says Purple |
 
@@ -31,6 +31,6 @@ The 20-voter election from Equal Vote's video **["Updated: How does RCV work? �
 | BV2178 — Ranked Robin | [page](cases/cases_pages/bv2178_8kg698_ranked_robin.md) | [`.yaml`](cases/bv2178_8kg698_ranked_robin.yaml) | Blue | Blue |
 | BV2178 — Choose-One | (in the STAR mirror's divergence block) | — | Purple | Purple |
 
-Related: [LH vs BV on Ranked Robin ties](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) (the same "eliminated the head-to-head winner" mechanic with a clean Condorcet winner) · up: [method_comparisons — same ballots, different methods](../)
+Related: [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) (the same "eliminated the head-to-head winner" mechanic with a clean Condorcet winner) · up: [method_comparisons — same ballots, different methods](../)
 
 # file: README.md

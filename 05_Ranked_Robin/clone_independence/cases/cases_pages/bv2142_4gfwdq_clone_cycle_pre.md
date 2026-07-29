@@ -2,7 +2,7 @@
 
 *Generated from [`bv2142_4gfwdq_clone_cycle_pre.yaml`](../bv2142_4gfwdq_clone_cycle_pre.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** A
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** A
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).
 
@@ -10,7 +10,7 @@
 
 ## Scenario
 
-The electowiki clone-independence example, part 1 (before cloning), BV-backed. 33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C is lower (+95) — so LH drops C and coin-flips A/B by lot (this file pins A). But BetterVoting has no margin rung for a 3-way tie: it picks at RANDOM among A, B, C, and its log says so ("C picked in random tie-breaker, more robust tiebreaker not yet implemented") — this draw elected C, a candidate LH's margin rung would eliminate. Part 2 (BV2143) adds the clones. LH-only clean pair: clone_teaming_01_pre.yaml. Lesson: 00_start_here/RCV_Ranked_Robin/rr_clone_independence.md Live results: https://bettervoting.com/4gfwdq/results
+The electowiki clone-independence example, part 1 (before cloning), BV-backed. 33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C is lower (+95) — so LH drops C and coin-flips A/B by lot (this file pins A). But BetterVoting has no margin rung for a 3-way tie: it picks at RANDOM among A, B, C, and its log says so ("C picked in random tie-breaker, more robust tiebreaker not yet implemented") — this draw elected C, a candidate LH's margin rung would eliminate. Part 2 (BV2143) adds the clones. LH-only clean pair: clone_teaming_01_pre.yaml. Lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md Live results: https://bettervoting.com/4gfwdq/results
 
 ## Ballots
 
@@ -74,7 +74,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     6  F          0–5–0         0    -165  —
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -88,7 +88,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

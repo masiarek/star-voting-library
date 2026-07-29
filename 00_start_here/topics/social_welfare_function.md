@@ -2,7 +2,7 @@
 
 *Almost every impossibility argument you'll meet turns on a distinction that debate rarely bothers to state: does a voting rule output a **winner**, or a **ranking**? Arrow's theorem is about the second kind. Get the type wrong and you'll either over-apply the theorem ("Arrow proved every method is unfair") or miss why some methods dodge it on a technicality. This page pins down the two objects, states the Pareto and IIA axioms at both levels, and shows the trap: **majority rule is both Paretian and IIA, and escapes Arrow only because it is not a social welfare function at all.***
 
-→ Related: [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — the ordinal/cardinal escape · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — the other impossibility · [distortion](distortion.md) — social welfare as a *number* · [criteria at a glance](criteria_at_a_glance.md) · [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md).
+→ Related: [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — the ordinal/cardinal escape · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — the other impossibility · [distortion](distortion.md) — social welfare as a *number* · [criteria at a glance](criteria_at_a_glance.md) · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md).
 
 ---
 
@@ -17,7 +17,7 @@ Fix a set of voters `N = {1,…,n}` and a set of candidates `A`. A voter's ballo
 
 The SWF's output is called the **social preference order**. Note the asymmetry in Arrow's setup: individual ballots may *not* contain ties, but the social result *may*. That's a modeling convenience, not a law of nature — real ballots routinely permit equal ranks ([weak ranks](../scores_and_ranks/weak_ranks.md)), and STAR's [Equal Support](../GLOSSARY.md) bucket exists precisely because voters do want to say "these two are the same to me."
 
-Nearly every method taught in this repo is an **SCF** — STAR, Approval, RCV-IRV, Plurality all name a winner. [Ranked Robin](../RCV_Ranked_Robin/) is the interesting hybrid: its pairwise win-loss record *is* a social ranking, and the winner is read off the top of it.
+Nearly every method taught in this repo is an **SCF** — STAR, Approval, RCV-IRV, Plurality all name a winner. [Ranked Robin](../../05_Ranked_Robin/concepts/) is the interesting hybrid: its pairwise win-loss record *is* a social ranking, and the winner is read off the top of it.
 
 ## The two axioms, stated at both levels
 
@@ -46,7 +46,7 @@ Pairwise majority rule satisfies both axioms, easily. So why isn't it a countere
 
 This is the correct frame for [Condorcet methods](condorcet/) generally, and it cuts against a sloppy claim in both directions:
 
-- **Against the critics:** "Condorcet methods sometimes elect nobody" is false for real methods. Bare "elect the Condorcet winner" is a partial rule; [Ranked Robin](../RCV_Ranked_Robin/), Ranked Pairs, and Schulze are *completions* that always return a winner. Any criterion table with a "Condorcet Method — Always a Winner: NO" row needs that row split.
+- **Against the critics:** "Condorcet methods sometimes elect nobody" is false for real methods. Bare "elect the Condorcet winner" is a partial rule; [Ranked Robin](../../05_Ranked_Robin/concepts/), Ranked Pairs, and Schulze are *completions* that always return a winner. Any criterion table with a "Condorcet Method — Always a Winner: NO" row needs that row split.
 - **Against the advocates:** a completion doesn't dodge Arrow either. Once a Condorcet method always outputs a ranking, it *is* an SWF, and Arrow applies in full — so it must fail IIA or Pareto or be a dictatorship. [Ranked Robin fails IIA](../../01_STAR/iia_cycle_spoiler/), which is exactly where cycle-resolution rules live. Patching the cycle is what *costs* you IIA; it doesn't buy an exemption.
 
 ## The asymmetry that keeps Pareto from being oversold
@@ -68,13 +68,13 @@ A short list, because "fails Pareto" sounds worse than it usually is — most me
 | **Imposed / constant rule** ("X always wins"; "everything ties") | ✗ | ignores the ballots entirely |
 | **[Sequential pairwise / agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md)** | ✗ | a unanimously-preferred candidate can be eliminated early — runnable at [agenda_voting.md](../../06_Other/other_ranked_methods/agenda_voting.md) |
 | **Anti-plurality** | ✗ | on unanimous `A>B>C` it elects A *and* B; B is dominated |
-| **[Approval](../Approval_Voting/)** | ✗ | worked: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
+| **[Approval](../../04_Approval/concepts/)** | ✗ | worked: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
 
 **Why Approval fails and STAR doesn't** is the instructive pair, and it's a ballot-expressiveness point, not a tabulation one. An approval ballot cannot record a strict preference *within* the approved set, so "every voter prefers A to C" is a fact the ballots never carried and the count cannot honor.
 
 STAR passes, and the argument is short. If every voter scores `a` strictly above `b`, then `a`'s score total strictly exceeds `b`'s — so `b` can only reach the runoff alongside `a`, and there every voter prefers `a`. `b` never wins. Note this leans on the [scoring round](../STAR_Voting/the_count/) and the runoff *together*: the runoff alone wouldn't do it.
 
-**Don't run this row on a multi-winner rule — it's a type error.** Every table above is about a **single-winner** SCF. Apply the same definition candidate-by-candidate to a committee election and every bloc rule "fails" trivially: [Bloc STAR, Bloc Approval, Bloc Ranked Robin and SNTV](electing_more_than_one.md) must fill `N` seats, so if fewer than `N` candidates are Pareto optimal, one of the seated candidates is necessarily dominated. Zwicker gives the crisp specimen — seat candidates in descending [Copeland](../RCV_Ranked_Robin/ranked_robin.md) order until the committee is full, which is exactly what this repo's Bloc RR does — and immediately supplies the correction: for a committee election the *alternatives* are **committees**, not candidates, so a committee-level Pareto criterion is the one that applies. The apparent failure is an artifact of comparing objects of the wrong type — the same trap this page opens with, one level up.
+**Don't run this row on a multi-winner rule — it's a type error.** Every table above is about a **single-winner** SCF. Apply the same definition candidate-by-candidate to a committee election and every bloc rule "fails" trivially: [Bloc STAR, Bloc Approval, Bloc Ranked Robin and SNTV](electing_more_than_one.md) must fill `N` seats, so if fewer than `N` candidates are Pareto optimal, one of the seated candidates is necessarily dominated. Zwicker gives the crisp specimen — seat candidates in descending [Copeland](../../05_Ranked_Robin/concepts/ranked_robin.md) order until the committee is full, which is exactly what this repo's Bloc RR does — and immediately supplies the correction: for a committee election the *alternatives* are **committees**, not candidates, so a committee-level Pareto criterion is the one that applies. The apparent failure is an artifact of comparing objects of the wrong type — the same trap this page opens with, one level up.
 
 ## Two senses of "social welfare" — don't cross them
 
@@ -83,7 +83,7 @@ The phrase does double duty, and the repo uses both:
 1. **Arrow's SWF** — the *ordinal* object above. A function producing a social ranking. No utilities anywhere; Arrow deliberately avoided interpersonal comparison.
 2. **Welfarist social welfare** — a *cardinal* quantity, `W(u₁,…,uₙ)`, aggregating voter utilities. Utilitarian (sum), egalitarian (max-min), or Nash (product).
 
-Sense 2 is the hidden spine of three pages that otherwise look unrelated: [distortion](distortion.md) (a candidate's social welfare = the sum of voter utilities; the optimum minimizes total cost), [VSE](what_makes_a_good_winner.md) (the 100% mark *is* the utilitarian optimum), and the [ABC rules spectrum](../Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md) (AV / PAV / Chamberlin–Courant are one family differing only in the aggregator — see **welfarist rule** in the [glossary](../GLOSSARY.md)). Same object, three aggregators.
+Sense 2 is the hidden spine of three pages that otherwise look unrelated: [distortion](distortion.md) (a candidate's social welfare = the sum of voter utilities; the optimum minimizes total cost), [VSE](what_makes_a_good_winner.md) (the 100% mark *is* the utilitarian optimum), and the [ABC rules spectrum](../../04_Approval/concepts/Multiwinner_Approval/abc_rules_spectrum.md) (AV / PAV / Chamberlin–Courant are one family differing only in the aggregator — see **welfarist rule** in the [glossary](../GLOSSARY.md)). Same object, three aggregators.
 
 The cleanest way to hold the two apart: **Arrow's SWF asks "what order?"; welfarist social welfare asks "how much?"** — and [cardinal ballots are exactly what lets you ask the second question](../scores_and_ranks/scores_vs_ranks.md), which is why STAR sits [outside Arrow's frame](arrow_theorem_and_star.md) but squarely inside the distortion literature.
 
@@ -102,4 +102,4 @@ Per [reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading
 - Kenneth J. Arrow, *Social Choice and Individual Values* (1951) — the theorem ([book note](../books/social_choice_theory.md)). **Lean:** neutral, foundational.
 - Peter C. Fishburn, "Condorcet Social Choice Functions," *SIAM J. Appl. Math.* 33(3), 1977 — the precise SCF vocabulary ([reading list](condorcet/condorcet_reading_list.md)).
 - Amartya Sen, *Collective Choice and Social Welfare* (1970; exp. ed. 2017) — the welfarist sense, and the bridge between the two ([book note](../books/social_choice_theory.md)).
-- The decisive-coalition proof (Contagion / Splitting Lemmas) is the standard modern presentation in the computational-social-choice textbooks; see [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) for how it sits alongside Gibbard–Satterthwaite.
+- The decisive-coalition proof (Contagion / Splitting Lemmas) is the standard modern presentation in the computational-social-choice textbooks; see [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) for how it sits alongside Gibbard–Satterthwaite.

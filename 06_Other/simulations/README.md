@@ -119,7 +119,7 @@ python3 runoff_reversal_simulation.py --elections 300000 --voters 21 --candidate
 
 ## STAR vs Ranked Robin divergence simulation
 
-`star_vs_rr_divergence.py` — how often, and *why*, do STAR and [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) (Copeland / Condorcet) elect different single winners?
+`star_vs_rr_divergence.py` — how often, and *why*, do STAR and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) (Copeland / Condorcet) elect different single winners?
 
 ### The mechanism
 
@@ -184,7 +184,7 @@ About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 
 
 ### Why this exists
 
-Several reform packages narrow a crowded open field to the top N (usually 4) before running a good method in the general. [Consensus Choice](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md) is the live example: step 1 is *"an open qualifying election ... [that] determines at least four of the strongest candidates,"* and the published materials **do not say which method that round uses**.
+Several reform packages narrow a crowded open field to the top N (usually 4) before running a good method in the general. [Consensus Choice](../../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) is the live example: step 1 is *"an open qualifying election ... [that] determines at least four of the strongest candidates,"* and the published materials **do not say which method that round uses**.
 
 That gap produced a genuine disagreement among people who know the field, with **no published numbers on either side**:
 

@@ -58,7 +58,7 @@ Read the third row slowly. It is not "Plurality is bad." It is: **no determinist
 | **any** deterministic rule reading only rankings | **≥ 3** (matching lower bound) | Anshelevich et al. 2015 |
 | Plurality Matching | **= 3** — optimal, conjecture resolved | [Gkatzelis, Halpern & Shah 2020 (FOCS)](https://arxiv.org/abs/2004.07447) |
 | Plurality Veto | **= 3** — same bound, far simpler rule | [Kizilkaya & Kempe 2022](https://arxiv.org/abs/2206.07098) |
-| **Copeland** — i.e. [**Ranked Robin**](../RCV_Ranked_Robin/ranked_robin.md) | **≤ 5** | Anshelevich et al. 2015 |
+| **Copeland** — i.e. [**Ranked Robin**](../../05_Ranked_Robin/concepts/ranked_robin.md) | **≤ 5** | Anshelevich et al. 2015 |
 | Munagala & Wang's rule | 4.236 — first break below 5 | 2019 |
 | Ranked Pairs | **Θ(√m)** — *not* constant | Goel et al. 2017; Kempe 2020 |
 | **STV** (⇒ [**RCV-IRV**](../RCV_IRV/README.md) single-winner) | between Ω(√log m) and **O(log m)** — *not* constant | [Skowron & Elkind 2017](https://ojs.aaai.org/index.php/AAAI/article/view/10591) |
@@ -102,9 +102,9 @@ Look where the loss lives: the midpoint voters are **essentially indifferent** �
 
 ## What this says about the methods in this library
 
-**Ranked Robin has a constant metric-distortion bound; RCV-IRV does not.** Copeland — which is exactly what [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) tabulates — stays within a factor of **5** of the welfare optimum no matter how many candidates run. STV/IRV's bound **grows with the field** (O(log m), with a super-constant floor, so it isn't an artifact of loose analysis). Elimination leaks: the [center squeeze](center_squeeze/) is *exactly* a distortion event — the low-cost central candidate discarded for lacking first choices. And Plurality's 2m − 1 prices first-choice-only as the *most* lossy compression of all.
+**Ranked Robin has a constant metric-distortion bound; RCV-IRV does not.** Copeland — which is exactly what [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) tabulates — stays within a factor of **5** of the welfare optimum no matter how many candidates run. STV/IRV's bound **grows with the field** (O(log m), with a super-constant floor, so it isn't an artifact of loose analysis). Elimination leaks: the [center squeeze](center_squeeze/) is *exactly* a distortion event — the low-cost central candidate discarded for lacking first choices. And Plurality's 2m − 1 prices first-choice-only as the *most* lossy compression of all.
 
-That is a mainstream-academic argument for **Condorcet over instant runoff, on the same ballot** — from a literature with no stake in the American reform fight. It fits this library's standing preference for [singing the virtues rather than attacking RCV](../RCV_Ranked_Robin/ranked_robin.md): the ballot is fine, the *count* is where the welfare goes.
+That is a mainstream-academic argument for **Condorcet over instant runoff, on the same ballot** — from a literature with no stake in the American reform fight. It fits this library's standing preference for [singing the virtues rather than attacking RCV](../../05_Ranked_Robin/concepts/ranked_robin.md): the ballot is fine, the *count* is where the welfare goes.
 
 **Condorcet-consistency is not what earns the 5.** Careful here. A Condorcet *winner*, when one exists, is within 3 — that's the lemma above. But a Condorcet-consistent *rule* must also do something sensible when no Condorcet winner exists, and that's where rules diverge: Copeland's bound runs through the **uncovered set** (it always elects from it), while Ranked Pairs is equally Condorcet-consistent and still lands at Θ(√m). "It's a Condorcet method, so it has low distortion" is a claim the literature does not support; don't make it.
 
@@ -196,5 +196,5 @@ Don't say *"academics have shown scores are better"* — Approval's unbounded di
 - [Preference vs. support](../scores_and_ranks/preference_vs_support.md) — the intensity information rankings drop, on countable ballots
 - [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — the *other* academic assault on ordinal ballots, from Balinski & Laraki
 - [Election simulation models](election_simulation_models.md) · [Simulate utilities, not ballots](simulate_utilities_not_ballots.md)
-- [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) · [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) · [Scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md)
+- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) · [Scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md)
 - [Reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md)

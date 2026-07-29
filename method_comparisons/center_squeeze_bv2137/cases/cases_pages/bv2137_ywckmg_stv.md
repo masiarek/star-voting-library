@@ -2,7 +2,7 @@
 
 *Generated from [`bv2137_ywckmg_stv.yaml`](../bv2137_ywckmg_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../00_start_here/proportional_representation) · **1 seat** · **Expected winner:** Carter
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/concepts) · **1 seat** · **Expected winner:** Carter
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywckmg) · **[results ↗](https://bettervoting.com/ywckmg/results)** (election `ywckmg`).
 

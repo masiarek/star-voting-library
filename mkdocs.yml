@@ -76,13 +76,12 @@ plugins:
   # unreachable on the site, so whatever it said must live at the destination.
   - redirects:
       redirect_maps:
-        # The Ranked Robin section's front door is the method page, not the
-        # case index: 05_Ranked_Robin/ is a *worked examples* folder, but it is
-        # a top-level nav section, so it is where visitors land when they want
-        # "Ranked Robin." Send them to the concept page that actually teaches
-        # it. The case index it replaces is mirrored on the destination page
-        # under "Worked examples", so nothing is lost.
-        05_Ranked_Robin/README.md: 00_start_here/RCV_Ranked_Robin/ranked_robin.md
+        # (A redirect from 05_Ranked_Robin/README.md to the Ranked Robin method
+        # page used to live here, back when that method page sat in a separate
+        # 00_start_here tree and the case folder was the only top-level door.
+        # The reorganization below moved the concepts INTO 05_Ranked_Robin, so
+        # the folder's own README is now the method front door in the right
+        # place and the redirect would only push readers past it. Retired.)
 
         # --- Concept pages relocated from 00_start_here into their method
         # folders (the "one door per method" reorganization). Every moved page
@@ -94,6 +93,36 @@ plugins:
         00_start_here/Range_Voting/range_voting.md: 06_Other/Range/concepts/range_voting.md
         00_start_here/other_ranked_methods/agenda_voting.md: 06_Other/other_ranked_methods/agenda_voting.md
         00_start_here/other_ranked_methods/borda.md: 06_Other/other_ranked_methods/borda.md
+        00_start_here/proportional_representation/README.md: 03_STAR_PR/concepts/README.md
+        00_start_here/proportional_representation/STAR_PR/README.md: 03_STAR_PR/concepts/STAR_PR/README.md
+        00_start_here/proportional_representation/STAR_PR/the_math_behind_proportional_star.md: 03_STAR_PR/concepts/STAR_PR/the_math_behind_proportional_star.md
+        00_start_here/proportional_representation/stv/proportional_stv_vs_star.md: 03_STAR_PR/concepts/stv/proportional_stv_vs_star.md
+        00_start_here/Approval_Voting/Multiwinner_Approval/README.md: 04_Approval/concepts/Multiwinner_Approval/README.md
+        00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_intro.md: 04_Approval/concepts/Multiwinner_Approval/abc_rules_intro.md
+        00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_spectrum.md: 04_Approval/concepts/Multiwinner_Approval/abc_rules_spectrum.md
+        00_start_here/Approval_Voting/Multiwinner_Approval/approval_multiwinner.md: 04_Approval/concepts/Multiwinner_Approval/approval_multiwinner.md
+        00_start_here/Approval_Voting/Multiwinner_Approval/thiele_methods.md: 04_Approval/concepts/Multiwinner_Approval/thiele_methods.md
+        00_start_here/Approval_Voting/README.md: 04_Approval/concepts/README.md
+        00_start_here/Approval_Voting/approval_honest_limits.md: 04_Approval/concepts/approval_honest_limits.md
+        00_start_here/Approval_Voting/approval_in_the_literature.md: 04_Approval/concepts/approval_in_the_literature.md
+        00_start_here/Approval_Voting/approval_top_two.md: 04_Approval/concepts/approval_top_two.md
+        00_start_here/Approval_Voting/approval_voting.md: 04_Approval/concepts/approval_voting.md
+        00_start_here/Approval_Voting/glossary_approval.md: 04_Approval/concepts/glossary_approval.md
+        00_start_here/Approval_Voting/hamlin_hua_2023.md: 04_Approval/concepts/hamlin_hua_2023.md
+        00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md: 05_Ranked_Robin/concepts/RCV_RR_honest_limits.md
+        00_start_here/RCV_Ranked_Robin/RCV_RR_summability.md: 05_Ranked_Robin/concepts/RCV_RR_summability.md
+        00_start_here/RCV_Ranked_Robin/README.md: 05_Ranked_Robin/concepts/README.md
+        00_start_here/RCV_Ranked_Robin/condorcet_naming_decoder.md: 05_Ranked_Robin/concepts/condorcet_naming_decoder.md
+        00_start_here/RCV_Ranked_Robin/cycle_resolution.md: 05_Ranked_Robin/concepts/cycle_resolution.md
+        00_start_here/RCV_Ranked_Robin/glossary_ranked_robin.md: 05_Ranked_Robin/concepts/glossary_ranked_robin.md
+        00_start_here/RCV_Ranked_Robin/ranked_robin.md: 05_Ranked_Robin/concepts/ranked_robin.md
+        00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md: 05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md
+        00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md: 05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md
+        00_start_here/RCV_Ranked_Robin/rr_blank_means_last.md: 05_Ranked_Robin/concepts/rr_blank_means_last.md
+        00_start_here/RCV_Ranked_Robin/rr_clone_independence.md: 05_Ranked_Robin/concepts/rr_clone_independence.md
+        00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md: 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md
+        00_start_here/RCV_Ranked_Robin/the_math_behind_condorcet.md: 05_Ranked_Robin/concepts/the_math_behind_condorcet.md
+        00_start_here/RCV_Ranked_Robin/why_ranked_robin.md: 05_Ranked_Robin/concepts/why_ranked_robin.md
 
 markdown_extensions:
   - admonition

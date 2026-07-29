@@ -14,7 +14,7 @@ options:
 #   Tiebreak = total margin: Ada +2, Ben 0, Cara -2  ->  RANKED ROBIN WINNER: Ada.
 #   There is NO Condorcet winner (no one beats both rivals).
 # Companion file: 01_condorcet_winner.yaml (same three candidates, Ada IS the Condorcet winner).
-# Lesson: 00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md
+# Lesson: 05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md
 ballots: |-
   Ada>Ben>Cara
   Ada>Ben>Cara

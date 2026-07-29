@@ -69,7 +69,7 @@ That's called the **center squeeze**: the broadly-liked middle is "squeezed out"
 
 No — and that's the point of this whole library:
 
-- **[Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md)** (a different way to count the *same* ranked ballots) checks every one-on-one matchup directly. It sees Begich beat both → **Begich wins.**
+- **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (a different way to count the *same* ranked ballots) checks every one-on-one matchup directly. It sees Begich beat both → **Begich wins.**
 - **[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md)** (a scored ballot) adds up how highly everyone rated each candidate. Begich's pile of "2nd-choice" support shows up as lots of 4s → he reaches the final → **Begich wins.**
 
 Same voters, same opinions. The **ballot** wasn't the problem; the **way IRV counts it** — eliminating on first choices — was.

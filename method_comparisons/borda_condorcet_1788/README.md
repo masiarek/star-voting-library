@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
 
-→ Related: [Borda count](../../06_Other/other_ranked_methods/borda.md) · [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
+→ Related: [Borda count](../../06_Other/other_ranked_methods/borda.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
 
 ---
 
@@ -45,9 +45,9 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 |---|---|---|
 | [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | Paul | ✗ |
 | [**Borda**](../../06_Other/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
-| [Approval](../../00_start_here/Approval_Voting/README.md) | Paul | ✗ |
+| [Approval](../../04_Approval/concepts/README.md) | Paul | ✗ |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | Peter | ✓ |
-| [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) | Peter | ✓ |
+| [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) | Peter | ✓ |
 | [STAR](../../00_start_here/STAR_Voting/README.md) | Peter | ✓ |
 
 **Keep it fair — this is not an IRV failure case.** RCV-IRV gets it right: James is eliminated with 2 first choices, both his ballots transfer to Peter, and Peter wins 6–5 ([`condorcet_1788_irv.md`](cases/cases_pages/condorcet_1788_irv.md)). The methods that miss the Condorcet winner in this particular election are plurality, Borda and approval. (IRV's own Condorcet failures need a [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md), which this profile doesn't contain.) The IRV race is on the live BetterVoting election deliberately, so nobody can accuse the demo of hiding it.

@@ -56,7 +56,7 @@ The LH engine and BetterVoting resolve this **differently**, which is the whole 
 | **LH** `run_ranked_robin` | most wins → total **margin** → **lot order** — fully deterministic |
 | **BetterVoting** `RankedRobin.ts` | most wins → **head-to-head** (2-way only) → **random** |
 
-Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't resolve them and it falls through to a **random** pick — which can't be frozen into a reproducible `_bv_export.json`. So this case documents the **LH** ladder specifically; BetterVoting would agree that Ada and Ben are co-leaders but would not deterministically choose between them. Full write-up: [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't resolve them and it falls through to a **random** pick — which can't be frozen into a reproducible `_bv_export.json`. So this case documents the **LH** ladder specifically; BetterVoting would agree that Ada and Ben are co-leaders but would not deterministically choose between them. Full write-up: [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md).
 
 ### Engine wording
 
@@ -66,10 +66,10 @@ The winner note distinguishes a dead heat from a real cycle:
 *** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
 
-Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop), so the engine says **dead heat**, not "Condorcet cycle" — the latter is reserved for a genuine directed loop (rock-paper-scissors). See [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop), so the engine says **dead heat**, not "Condorcet cycle" — the latter is reserved for a genuine directed loop (rock-paper-scissors). See [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md).
 
 ## See also
 
 - Folder overview: [rr_tiebreaks — README](README.md)
 - The agreement counterpart (a clean Condorcet winner, all three engines agree): [BV2131 — Tennessee](../rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md)
-- Cycle resolution in depth: [cycle_resolution.md](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md)
+- Cycle resolution in depth: [cycle_resolution.md](../concepts/cycle_resolution.md)

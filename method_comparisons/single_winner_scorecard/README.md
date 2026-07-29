@@ -61,7 +61,7 @@ Verdict tags: ✅ **fair** · ⚠️ **fair but loaded** · ❗ **overclaim**.
 
 ## Beyond the three — where Ranked Robin and 3-2-1 would land
 
-Equal Vote's card compares only Plurality, RCV-IRV, and STAR. For a fuller picture, here's where two other good rated/ranked methods sit on the **same qualitative dimensions** — [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) (Condorcet) and [3-2-1](../../00_start_here/topics/three_two_one_voting.md) (Quinn's Good/OK/Bad method). *(Our extension, not EVC's — and we leave the numeric VSE / honesty-incentive rows blank rather than invent figures the original card didn't measure for these two.)*
+Equal Vote's card compares only Plurality, RCV-IRV, and STAR. For a fuller picture, here's where two other good rated/ranked methods sit on the **same qualitative dimensions** — [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) (Condorcet) and [3-2-1](../../00_start_here/topics/three_two_one_voting.md) (Quinn's Good/OK/Bad method). *(Our extension, not EVC's — and we leave the numeric VSE / honesty-incentive rows blank rather than invent figures the original card didn't measure for these two.)*
 
 | Dimension | Ranked Robin | 3-2-1 |
 |---|---|---|

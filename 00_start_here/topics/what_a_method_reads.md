@@ -24,7 +24,7 @@ Peter Fishburn (1977) sorted rules by how much of the **pairwise** data they nee
 
 | Tier | Reads | Members you'll meet |
 |:---:|---|---|
-| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../RCV_Ranked_Robin/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
+| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../../05_Ranked_Robin/concepts/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
 | **C2** | the **weighted tournament** — the same graph *with the margins on it* | Minimax/Simpson, Ranked Pairs, Schulze, Kemeny, Split Cycle — and Borda |
 | **C3** | more than the pairwise matrix contains | Dodgson, Young, **plurality**, RCV-IRV |
 

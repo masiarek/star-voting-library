@@ -129,13 +129,13 @@ Full rundown of the whole block, option by option: **[LH reporting options](../S
 | Value | Ballot | Counts as |
 |---|---|---|
 | `STAR` | scores 0–5 | [Score Then Automatic Runoff](../STAR_Voting/STAR_start_here.md) (single-winner default) |
-| `Approval` | `0`/`1` only | [Most approvals wins](../Approval_Voting/approval_voting.md) |
-| `RankedRobin` (aka `RCV_RR`, `Copeland`, `Consensus`) | scores 0–5 (read as an order) | [Head-to-head round robin](../RCV_Ranked_Robin/ranked_robin.md); best win–loss record wins |
+| `Approval` | `0`/`1` only | [Most approvals wins](../../04_Approval/concepts/approval_voting.md) |
+| `RankedRobin` (aka `RCV_RR`, `Copeland`, `Consensus`) | scores 0–5 (read as an order) | [Head-to-head round robin](../../05_Ranked_Robin/concepts/ranked_robin.md); best win–loss record wins |
 | `RCV_IRV` | ranked, `A>C>B` | [Instant runoff](../RCV_IRV/RCV-IRV-Hare.md) (elimination rounds) |
 | `bloc` | scores 0–5 | [Bloc STAR](../../02_STAR_Bloc/README.md) (multi-winner, majoritarian) |
-| `sss` | scores 0–5 | [Sequentially Spent Score](../proportional_representation/STAR_PR/README.md) (proportional) |
-| `rrv` | scores 0–5 | [Reweighted Range Voting](../proportional_representation/STAR_PR/README.md) (proportional) |
-| `allocated` | scores 0–5 | [Allocated Score](../proportional_representation/STAR_PR/README.md) (proportional) |
+| `sss` | scores 0–5 | [Sequentially Spent Score](../../03_STAR_PR/concepts/STAR_PR/README.md) (proportional) |
+| `rrv` | scores 0–5 | [Reweighted Range Voting](../../03_STAR_PR/concepts/STAR_PR/README.md) (proportional) |
+| `allocated` | scores 0–5 | [Allocated Score](../../03_STAR_PR/concepts/STAR_PR/README.md) (proportional) |
 
 A file whose ballots contain ranked `A>C>B` lines routes to RCV-IRV automatically. (Rank notes inside `# comments` are ignored.)
 

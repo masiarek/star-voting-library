@@ -1,6 +1,6 @@
 # Copeland score — why a drawn matchup is worth half a win
 
-[Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) is usually explained as "whoever wins the most head-to-head matchups wins." That is a shorthand, and it is very nearly always right. This page is about the case where it isn't — where the actual rule, the **Copeland score**, elects someone the shorthand would not.
+[Ranked Robin](../concepts/ranked_robin.md) is usually explained as "whoever wins the most head-to-head matchups wins." That is a shorthand, and it is very nearly always right. This page is about the case where it isn't — where the actual rule, the **Copeland score**, elects someone the shorthand would not.
 
 ## The rule
 
@@ -14,7 +14,7 @@ Every candidate plays every other candidate head-to-head. Score the results like
 
 **Copeland score = wins + ½·ties.** Highest score wins. That half-point for a draw is the entire subject of this page.
 
-You will also see Copeland written as **wins − losses**, and the repo's own [glossary](../../00_start_here/RCV_Ranked_Robin/glossary_ranked_robin.md) uses that form. The two are not in conflict: with every candidate playing the same number of matchups, `wins − losses = 2·(wins + ½·ties) − (n−1)`. That is an affine transform — multiply by two, shift by a constant — so the two formulas **always produce the same ranking**. Pick whichever you find easier to explain; the winner never changes.
+You will also see Copeland written as **wins − losses**, and the repo's own [glossary](../concepts/glossary_ranked_robin.md) uses that form. The two are not in conflict: with every candidate playing the same number of matchups, `wins − losses = 2·(wins + ½·ties) − (n−1)`. That is an affine transform — multiply by two, shift by a constant — so the two formulas **always produce the same ranking**. Pick whichever you find easier to explain; the winner never changes.
 
 What *is* different is the raw win count. Ignore draws entirely and you get a third ordering, one that can disagree with both. Raw wins is the odd one out — and since a report that prints "W–L–T" invites you to read the W column as the answer, it is worth seeing exactly how that goes wrong.
 
@@ -66,7 +66,7 @@ Read the W column alone and Alice looks unremarkable: **two wins, exactly like C
 
 Now count the draw. Alice's tie with Bruno is worth ½, so Alice sits on **2.5** while Carmen, Dmitri and Bruno are all on exactly **2.0**. Nobody else has 2 wins *and* a draw. The half-point is not a tiebreaker here — it is the whole margin of victory.
 
-And note what Alice's record actually contains: **a loss.** Carmen beat Alice 21–9, a thumping. Ranked Robin still elects Alice, because nobody in this election beat everybody — there is no [Condorcet winner](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) at all. The [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates: the whole field is one big [cycle](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md). When no one beats everyone, Ranked Robin falls back to the best overall record — and the best overall record can belong to someone who lost a match.
+And note what Alice's record actually contains: **a loss.** Carmen beat Alice 21–9, a thumping. Ranked Robin still elects Alice, because nobody in this election beat everybody — there is no [Condorcet winner](../concepts/ranked_robin_vs_condorcet.md) at all. The [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates: the whole field is one big [cycle](../concepts/cycle_resolution.md). When no one beats everyone, Ranked Robin falls back to the best overall record — and the best overall record can belong to someone who lost a match.
 
 ## What the half-point costs
 
@@ -114,10 +114,10 @@ Want the whole count — the full pairwise grid, the Smith-set audit, the ballot
 ## See also
 
 - [Tiebreaks — dead heat → lot](../rr_tiebreaks/) — the sibling case, where the ½-credit produces a *tie* instead of a decisive winner and the full ladder (wins → margin → lot) has to finish the job
-- [Ranked Robin vs. "the Condorcet winner"](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
-- [Honest limits](../../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md) — where Ranked Robin is genuinely weak
-- [A naming decoder](../../00_start_here/RCV_Ranked_Robin/condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what
+- [Ranked Robin vs. "the Condorcet winner"](../concepts/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
+- [Honest limits](../concepts/RCV_RR_honest_limits.md) — where Ranked Robin is genuinely weak
+- [A naming decoder](../concepts/condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what
 
-*(Up: [05_Ranked_Robin](../README.md) · concept docs: [Ranked Robin (RCV-RR)](../../00_start_here/RCV_Ranked_Robin/README.md))*
+*(Up: [05_Ranked_Robin](../README.md) · concept docs: [Ranked Robin (RCV-RR)](../concepts/README.md))*
 
 # file: README.md

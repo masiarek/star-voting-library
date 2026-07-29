@@ -83,7 +83,7 @@ Per this repo's [cross-checking habit](../../00_start_here/tabulation_engines/cr
 | sincere | Beryl (3–0) | Beryl (unique leader) | **Beryl**, `tieBreakType: none` |
 | buried | Amber (margin rung) | leader set {Amber, Coral} | **Amber**, `tieBreakType: none` |
 
-The buried half stays freezable *despite* the known LH/BV tiebreak divergence ([rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md)) because a **2-way** record tie resolves deterministically on both ladders — LH by total margin (+12 vs 0), BV by the direct head-to-head (27–15) — and both point at Amber. Contrast [BV2142](../clone_independence/bv2142_4gfwdq_clone_cycle_pre.md), where a **3-way** tie sent BetterVoting to a random draw. (One erratum for the record: the *live BV descriptions* of this pair carry a slim-vs-blowout aside that mislabels which wins flip; BV descriptions are permanent, so this page and the yamls are the corrected analysis.)
+The buried half stays freezable *despite* the known LH/BV tiebreak divergence ([rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md)) because a **2-way** record tie resolves deterministically on both ladders — LH by total margin (+12 vs 0), BV by the direct head-to-head (27–15) — and both point at Amber. Contrast [BV2142](../clone_independence/bv2142_4gfwdq_clone_cycle_pre.md), where a **3-way** tie sent BetterVoting to a random draw. (One erratum for the record: the *live BV descriptions* of this pair carry a slim-vs-blowout aside that mislabels which wins flip; BV descriptions are permanent, so this page and the yamls are the corrected analysis.)
 
 ## Reading this fairly
 
@@ -102,6 +102,6 @@ Sources: [bv2208_7q6by8_burial_sincere.yaml](cases/bv2208_7q6by8_burial_sincere.
 
 ---
 
-**Where this comes from.** Ballots and cast are this repo's own, built so the burial's anatomy is visible in the pairwise table (which wins the buriers sit inside, which they don't). Method home: [Ranked Robin](../README.md) · cycle handling: [cycle_resolution.md](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md) · the LH-vs-BV tiebreak caveat: [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+**Where this comes from.** Ballots and cast are this repo's own, built so the burial's anatomy is visible in the pairwise table (which wins the buriers sit inside, which they don't). Method home: [Ranked Robin](../README.md) · cycle handling: [cycle_resolution.md](../concepts/cycle_resolution.md) · the LH-vs-BV tiebreak caveat: [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md).
 
 # file: README.md

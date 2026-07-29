@@ -95,6 +95,6 @@ The widely-shared figures **STAR 1:1 · Approval 2.6:1 · RCV-IRV 2.7:1 · Plura
 - [What makes a good winner?](what_makes_a_good_winner.md) — VSE / Bayesian Regret, the accuracy half of the pair
 - [Strategic voting](strategic_voting.md) · [the five strategic pathologies](strategic_pathologies.md) — the behaviours PVSI puts a number on
 - [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — why no method scores a true zero
-- [The Smith set](smith_set.md) · [Ranked Robin](../RCV_Ranked_Robin/README.md) — the Condorcet family that scores best here
+- [The Smith set](smith_set.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) — the Condorcet family that scores best here
 - [Single-winner scorecard](../../method_comparisons/single_winner_scorecard/README.md) — where these figures sit among the other criteria
 - [Wolk, Quinn & Ogren (2023), claim-checked](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) — the source paper

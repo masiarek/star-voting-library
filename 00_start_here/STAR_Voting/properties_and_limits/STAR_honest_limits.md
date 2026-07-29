@@ -4,7 +4,7 @@
 
 → **The checklist with receipts:** [Every voting criterion STAR fails](star_criteria_failures.md) — a table of each criterion, a runnable example, and its `.yaml` / BV id / `_bv_export.json`. (This page is the *prose* — the why; that page is the *index* — the where.)
 
-→ Companion critical pages so every method gets the same treatment: [Approval's limits](../../Approval_Voting/approval_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../../RCV_Ranked_Robin/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../../RCV_IRV/RCV_IRV_equal_vote.md). Curriculum: [301.4 — honest limits](../../CURRICULUM.md).
+→ Companion critical pages so every method gets the same treatment: [Approval's limits](../../../04_Approval/concepts/approval_honest_limits.md) · [Ranked Robin (RCV-RR) limits](../../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) · [RCV-IRV fails the Equal Vote](../../RCV_IRV/RCV_IRV_equal_vote.md). Curriculum: [301.4 — honest limits](../../CURRICULUM.md).
 
 ---
 

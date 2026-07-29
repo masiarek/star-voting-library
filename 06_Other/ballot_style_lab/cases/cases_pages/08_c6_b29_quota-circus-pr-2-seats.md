@@ -2,7 +2,7 @@
 
 *Generated from [`08_c6_b29_quota-circus-pr-2-seats.yaml`](../08_c6_b29_quota-circus-pr-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Amir, Bree
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Amir, Bree
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdh9qp) · **[results ↗](https://bettervoting.com/qdh9qp/results)** (election `qdh9qp`).
 

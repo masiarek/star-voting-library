@@ -48,7 +48,7 @@ First-choice ranks: Apple 4, Banana 3, Cherry 2 → **Cherry is eliminated first
 <details>
 <summary><b>(c) Approval — Cherry, unanimously</b></summary>
 
-Approve = 3+: the ×4 bloc approves {Apple, Cherry}, the ×3 bloc {Banana, Cherry}, the ×2 bloc {Cherry}. Totals: **Cherry 9 of 9**, Apple 4, Banana 3. The candidate with the *fewest* first choices carries *every single voter* — that's the information Choose-One throws away. (More on the bridge rule and its lean: [Approval Voting](../../00_start_here/Approval_Voting/README.md).)
+Approve = 3+: the ×4 bloc approves {Apple, Cherry}, the ×3 bloc {Banana, Cherry}, the ×2 bloc {Cherry}. Totals: **Cherry 9 of 9**, Apple 4, Banana 3. The candidate with the *fewest* first choices carries *every single voter* — that's the information Choose-One throws away. (More on the bridge rule and its lean: [Approval Voting](../../04_Approval/concepts/README.md).)
 
 </details>
 

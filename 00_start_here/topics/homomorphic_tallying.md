@@ -51,7 +51,7 @@ Trivial sizes for an organizational election.
 
 **The real work** is proving the matrix is **consistent with the scores** — otherwise a malicious client submits scores saying one thing and comparisons saying another. That's another disjunctive proof, over the possible score pairs. This is the genuine engineering task, and it is tractable.
 
-**The bonus:** those indicators *are* the full [pairwise preference matrix](pairwise_counting.md). So a verifiable STAR election gets the **Condorcet check** — and [Ranked Robin](../RCV_Ranked_Robin/README.md) itself — for free, on the same encrypted data.
+**The bonus:** those indicators *are* the full [pairwise preference matrix](pairwise_counting.md). So a verifiable STAR election gets the **Condorcet check** — and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) itself — for free, on the same encrypted data.
 
 ## Why this is an argument for STAR
 

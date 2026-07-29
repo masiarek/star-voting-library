@@ -72,7 +72,7 @@ The wrapper reads `voting_method` and routes to the right tabulator, so the *sam
 - **STAR** (single), **Bloc STAR**, and proportional **Allocated / SSS / RRV** (multi).
 - **RCV-IRV (Hare)** — ranked ballots (`A>B>C`) route to the vendored RCV-IRV engine.
 - **Approval** — single or explicit multi-winner.
-- **Ranked Robin (RCV-RR / Copeland)** — *first-class*: `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and writes its own `_tabulated` mirror — it does **not** fall through to the IRV rounds. See [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md).
+- **Ranked Robin (RCV-RR / Copeland)** — *first-class*: `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and writes its own `_tabulated` mirror — it does **not** fall through to the IRV rounds. See [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md).
 
 It also runs an extra **`blocs:` vote-splitting check** and supports **quorum** / eligible-voter accounting on STAR races.
 

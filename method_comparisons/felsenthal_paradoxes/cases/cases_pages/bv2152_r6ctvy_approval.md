@@ -2,7 +2,7 @@
 
 *Generated from [`bv2152_r6ctvy_approval.yaml`](../bv2152_r6ctvy_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../00_start_here/Approval_Voting) · **1 seat** · **Expected winner:** Anna
+**Method:** [Approval Voting](../../../../04_Approval/concepts) · **1 seat** · **Expected winner:** Anna
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r6ctvy) · **[results ↗](https://bettervoting.com/r6ctvy/results)** (election `r6ctvy`).
 

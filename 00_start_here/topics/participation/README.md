@@ -21,7 +21,7 @@ The IRV mechanism, in one sentence: the 8 extra April-first ballots keep April a
 
 Two footnotes on the pair, both deliberate:
 
-- **Both electorates are a Condorcet cycle** (April > Bruno > Celia > April) — that's the soil no-show paradoxes grow in, and it's why there is **no Ranked Robin race on BetterVoting**: a Copeland three-way tie resolves by *random draw* there (not freezable), while the LH engine's margin tiebreak resolves it deterministically (Celia before, April after — see the `_tabulated` mirrors, and [LH vs BV on RR ties](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md)).
+- **Both electorates are a Condorcet cycle** (April > Bruno > Celia > April) — that's the soil no-show paradoxes grow in, and it's why there is **no Ranked Robin race on BetterVoting**: a Copeland three-way tie resolves by *random draw* there (not freezable), while the LH engine's margin tiebreak resolves it deterministically (Celia before, April after — see the `_tabulated` mirrors, and [LH vs BV on RR ties](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md)).
 - **BV2174's STAR count is a [Runoff Reversal](../../GLOSSARY.md)** — Celia tops the scores 136/122/120, Bruno wins the runoff 34–20. One pair, two lessons.
 
 ## Which methods can punish participation — and where each is treated

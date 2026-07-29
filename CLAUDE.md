@@ -229,7 +229,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
   They replace the *built* page at a URL while leaving the `.md` on disk intact, so
   GitHub still renders the source but **the site never shows it**. Live case:
-  `05_Ranked_Robin/README.md` → `00_start_here/RCV_Ranked_Robin/ranked_robin.md`, because
+  `05_Ranked_Robin/README.md` → `05_Ranked_Robin/concepts/ranked_robin.md`, because
   the case folder is a top-level nav section and is where visitors land wanting "Ranked
   Robin," but the page that *teaches* the method is the concept page. Whenever you add a
   redirect, **move or mirror whatever the source said onto the destination** (here the
@@ -413,7 +413,7 @@ reproduce loop is in the **`bettervoting` skill**.
   `pyproject.toml`; `uv sync` then `uv run …`). **Tiebreak caveat — LH and BV
   diverge:** LH breaks a Copeland tie by margin → **lot** (deterministic); BV by
   head-to-head → **random**. So a tie-deciding case is **LH-only** (a random BV
-  result can't be frozen). Worked: `00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md`.
+  result can't be frozen). Worked: `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

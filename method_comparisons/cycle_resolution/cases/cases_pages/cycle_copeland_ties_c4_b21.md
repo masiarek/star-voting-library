@@ -2,14 +2,14 @@
 
 *Generated from [`cycle_copeland_ties_c4_b21.yaml`](../cycle_copeland_ties_c4_b21.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Alder
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Alder
 
 **Official tie-break (lot) order:** Alder > Birch > Cedar > Dogwood — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 The first worked profile from "Cycle Resolution — why Minimax, Ranked Pairs,
-and Schulze exist" (00_start_here/RCV_Ranked_Robin/cycle_resolution.md), now
+and Schulze exist" (05_Ranked_Robin/concepts/cycle_resolution.md), now
 runnable. 21 hikers rank four trails; Dogwood is everyone's last choice, and
 the other three form a majority CYCLE:
 
@@ -85,7 +85,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  Dogwood    0–3–0         0     -63  —
 
 Winner — Ranked Robin (RCV-RR): Alder
-   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -99,7 +99,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner Alder is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

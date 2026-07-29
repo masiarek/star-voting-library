@@ -22,7 +22,7 @@
 
 ## Notes
 
-- **Condorcet, majority-favorite, and mutual-majority are the *same mechanism*** three ways: STAR's finalists come from the *score* round, so a broadly-preferred-but-low-intensity candidate — or a divisive majority-favorite — can miss the top two. That's the [preference-vs-support](../../scores_and_ranks/preference_vs_support.md) tradeoff, and it's what separates STAR from [Ranked Robin](../../RCV_Ranked_Robin/README.md) (which elects the Condorcet winner) — see the [30 STAR-vs-RR divergence samples](../../../05_Ranked_Robin/star_vs_rr_divergence/).
+- **Condorcet, majority-favorite, and mutual-majority are the *same mechanism*** three ways: STAR's finalists come from the *score* round, so a broadly-preferred-but-low-intensity candidate — or a divisive majority-favorite — can miss the top two. That's the [preference-vs-support](../../scores_and_ranks/preference_vs_support.md) tradeoff, and it's what separates STAR from [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) (which elects the Condorcet winner) — see the [30 STAR-vs-RR divergence samples](../../../05_Ranked_Robin/star_vs_rr_divergence/).
 - **Later-No-Harm and FBC are the deliberate half.** STAR *chooses* to fail LNH to keep favorite-betrayal resistance; RCV-IRV makes the opposite choice. The "failure" is a value pick, and [Shentrup argues LNH is a bug, not a feature](https://medium.com/@ClayShentrup/later-no-harm-72c44e145510).
 - **The mean, one-sided version** of this list (curated for sport) is the [Mudroom's STAR reel](../../../method_comparisons/mudroom/_star_whoops.md); the fair, cite-in-a-debate version is this page + [honest limits](STAR_honest_limits.md).
 

@@ -44,14 +44,14 @@ GENERATED_SUFFIXES = ("_tabulated", "_generated", "_pages")
 # --- method → (display name, concept-docs path relative to repo root) --------
 METHOD_DOCS = {
     "star":        ("STAR (single winner)", "00_start_here/STAR_Voting"),
-    "approval":    ("Approval Voting", "00_start_here/Approval_Voting"),
-    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "00_start_here/RCV_Ranked_Robin"),
+    "approval":    ("Approval Voting", "04_Approval/concepts"),
+    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/concepts"),
     "rcv_irv":     ("RCV-IRV (Instant Runoff)", "00_start_here/RCV_IRV"),
-    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "00_start_here/proportional_representation"),
-    "sss":         ("Sequentially Spent Score (proportional STAR)", "00_start_here/proportional_representation"),
-    "rrv":         ("Reweighted Range Voting (proportional STAR)", "00_start_here/proportional_representation"),
-    "allocated":   ("Allocated Score (proportional STAR)", "00_start_here/proportional_representation"),
-    "stv":         ("STV (proportional, ranked ballots)", "00_start_here/proportional_representation"),
+    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/concepts"),
+    "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/concepts"),
+    "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/concepts"),
+    "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/concepts"),
+    "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/concepts"),
 }
 METHOD_ALIASES = {
     "rcv_rr": "rankedrobin", "copeland": "rankedrobin", "consensus": "rankedrobin",

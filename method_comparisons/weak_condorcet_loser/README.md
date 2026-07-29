@@ -146,6 +146,6 @@ The case is live as **BV2249** (`c73pfw`), and BetterVoting's independent tabula
 - [The Condorcet loser paradox](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) — the strict version, worked on 7 voters
 - [Three notions of "winner"](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) — why the Condorcet winner can miss STAR's runoff
 - [The Smith set](../../00_start_here/topics/smith_set.md) — the generalized Condorcet winner; a Condorcet loser is never in it
-- [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) · [cycle resolution](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md) — ties and cycles are different things
+- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — ties and cycles are different things
 - [Criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md) · [STAR's criteria failures](../../00_start_here/STAR_Voting/properties_and_limits/star_criteria_failures.md)
 - [Reading these fairly](../paradoxes_and_whoops/reading_these_fairly.md)

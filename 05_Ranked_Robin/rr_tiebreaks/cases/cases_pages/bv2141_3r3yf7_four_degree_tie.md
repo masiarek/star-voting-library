@@ -2,7 +2,7 @@
 
 *Generated from [`bv2141_3r3yf7_four_degree_tie.yaml`](../bv2141_3r3yf7_four_degree_tie.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Ava
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** Ava
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3r3yf7) · **[results ↗](https://bettervoting.com/3r3yf7/results)** (election `3r3yf7`).
 
@@ -10,7 +10,7 @@
 
 ## Scenario
 
-The electowiki Ranked Robin "all four tie-breaking degrees" example (electowiki.org/wiki/Ranked_Robin). 81 voters, six candidates, with equal rankings and partial (truncated) ballots. Ava and Bianca TIE for the most pairwise wins (3 each), and they also tie on total win margin (+55) AND on votes-against (149) — so the first three degrees of the Equal Vote Coalition's Ranked Robin tiebreak protocol all fail to separate them. Only the 4th-degree beatpath comparison resolves it, to Bianca (14 vs 7). Neither engine here implements that 4-degree protocol: LH breaks the (wins, then margin) tie by pre-published lot, and BetterVoting breaks it at RANDOM — its results log even says so: "Ava picked in random tie-breaker, more robust tiebreaker not yet implemented." This file pins lot_numbers to BV's recorded random order (perm) so LH reproduces BV's frozen instance (Ava). A re-tally on BV could elect Bianca instead. See 00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md. Live results: https://bettervoting.com/3r3yf7/results
+The electowiki Ranked Robin "all four tie-breaking degrees" example (electowiki.org/wiki/Ranked_Robin). 81 voters, six candidates, with equal rankings and partial (truncated) ballots. Ava and Bianca TIE for the most pairwise wins (3 each), and they also tie on total win margin (+55) AND on votes-against (149) — so the first three degrees of the Equal Vote Coalition's Ranked Robin tiebreak protocol all fail to separate them. Only the 4th-degree beatpath comparison resolves it, to Bianca (14 vs 7). Neither engine here implements that 4-degree protocol: LH breaks the (wins, then margin) tie by pre-published lot, and BetterVoting breaks it at RANDOM — its results log even says so: "Ava picked in random tie-breaker, more robust tiebreaker not yet implemented." This file pins lot_numbers to BV's recorded random order (perm) so LH reproduces BV's frozen instance (Ava). A re-tally on BV could elect Bianca instead. See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md. Live results: https://bettervoting.com/3r3yf7/results
 
 ## Ballots
 
@@ -108,7 +108,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (Ava, Bianca) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Ava is INSIDE the Smith set. ✓

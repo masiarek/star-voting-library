@@ -18,7 +18,7 @@ The tie runs so deep that BetterVoting gives up and rolls dice. Its own results 
 
 > **"Ava picked in random tie-breaker, more robust tiebreaker not yet implemented."**
 
-So BetterVoting **does not implement** the Equal Vote 4-degree protocol this example was written to demonstrate — it detects the Copeland tie (`tieBreakType: random`) and picks at random. This run landed on Ava; a re-tally could elect Bianca. That non-determinism is exactly why a tie-deciding Ranked Robin result **can't be frozen** as a stable BV outcome — see [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+So BetterVoting **does not implement** the Equal Vote 4-degree protocol this example was written to demonstrate — it detects the Copeland tie (`tieBreakType: random`) and picks at random. This run landed on Ava; a re-tally could elect Bianca. That non-determinism is exactly why a tie-deciding Ranked Robin result **can't be frozen** as a stable BV outcome — see [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md).
 
 ## The ballots
 

@@ -2,7 +2,7 @@
 
 *The same voter's opinion, expressed on three different ballots: **Ranking**, **Yes/No** (Approval), and **Scoring**. Seeing them side by side is the clearest way to grasp what each ballot **captures** and what it **throws away**.*
 
-→ Its **method-side twin** — the *same electorate* run through every count, so the winners line up: [same opinions, every method](same_opinions_every_method.md). The core distinction — order vs. strength: [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · **deep dives, one per ballot:** [the ranked ballot](../scores_and_ranks/ranked_ballot.md) · [the score ballot](../scores_and_ranks/score_ballot.md) · [Approval](../Approval_Voting/approval_voting.md)
+→ Its **method-side twin** — the *same electorate* run through every count, so the winners line up: [same opinions, every method](same_opinions_every_method.md). The core distinction — order vs. strength: [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · why Approval & STAR aren't "RCV": [scoring methods vs. ranked voting](scoring-methods-vs-ranked-voting.md) · **deep dives, one per ballot:** [the ranked ballot](../scores_and_ranks/ranked_ballot.md) · [the score ballot](../scores_and_ranks/score_ballot.md) · [Approval](../../04_Approval/concepts/approval_voting.md)
 
 ![Three ballot styles side by side for the same five candidates (Andre, Blake, Carmen, David, Ella): a Ranking ballot with a 1st–5th grid, a Yes/No (Approval) ballot with one filled or open bubble per candidate, and a Scoring ballot rating each candidate 0 (Worst) to 5 (Best)](../img/ballot_styles_ranking_yesno_scoring.png)
 
@@ -24,7 +24,7 @@ Meet one voter deciding among five candidates — Andre, Blake, Carmen, David, E
 | David | ○ | ○ | ● | ○ | ○ |
 | Ella | ○ | ○ | ○ | ○ | ● |
 
-**Yes/No** — approve each candidate, or don't. One bit per candidate. *(Deep dive: [Approval voting](../Approval_Voting/approval_voting.md) — including its **two ballot designs**: a single bubble per candidate, or an explicit Yes/No pair, which distinguishes a deliberate "No" from a blank.)*
+**Yes/No** — approve each candidate, or don't. One bit per candidate. *(Deep dive: [Approval voting](../../04_Approval/concepts/approval_voting.md) — including its **two ballot designs**: a single bubble per candidate, or an explicit Yes/No pair, which distinguishes a deliberate "No" from a blank.)*
 
 | Candidate | Approve? |
 |---|:--:|
@@ -64,8 +64,8 @@ Line them up and the trade-offs jump out:
 
 | Ballot style | Cardinal or ordinal? | Methods that use it |
 |---|:--:|---|
-| Ranking | ordinal | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md), STV, Condorcet ([Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)), Borda, Bucklin |
-| Yes/No | cardinal (1-bit) | [Approval](../Approval_Voting/approval_voting.md) |
+| Ranking | ordinal | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md), STV, Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)), Borda, Bucklin |
+| Yes/No | cardinal (1-bit) | [Approval](../../04_Approval/concepts/approval_voting.md) |
 | Scoring | cardinal (graded, e.g. 0–5) | [Score / Range](../../06_Other/Range/concepts/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md) (a [hybrid](../STAR_Voting/the_count/STAR_hybrid_nature.md) — score ballot **+ runoff**) |
 
 The ballot is *what the voter marks*; the **tabulation** is *how it's counted* — and the same ballot can be counted more than one way (a ranked ballot by IRV, Ranked Robin, or STV). See [ballot vs tabulation](what_is_a_voting_method.md) and the [glossary](../GLOSSARY.md).

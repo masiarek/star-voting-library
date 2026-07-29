@@ -25,7 +25,7 @@ That is a **feature or a bug depending on what you're electing:**
 - **Use Bloc STAR** when you *want* the body to reflect the majority as a unit — e.g. a slate of officers who must govern together, or any at-large seat where "the candidates most voters prefer" is the goal.
 - **Don't use it** when you want minorities represented — a legislature, a diverse committee. There, a majority sweep is exactly the wrong outcome, and you want **[Proportional STAR (STAR-PR)](../03_STAR_PR/)** instead.
 
-This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../00_start_here/Approval_Voting/Multiwinner_Approval/abc_rules_intro.md). Concept hub: [proportional representation](../00_start_here/proportional_representation/).
+This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../04_Approval/concepts/Multiwinner_Approval/abc_rules_intro.md). Concept hub: [proportional representation](../03_STAR_PR/concepts/).
 
 ## Learning path
 
@@ -67,7 +67,7 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 
 ## Related
 
-- **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../00_start_here/proportional_representation/)
+- **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../03_STAR_PR/concepts/)
 - **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/) · [a six-method governance election](../method_comparisons/pets_governance/)
 - **Single-winner foundation:** [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md) · [the benefits of STAR](../00_start_here/STAR_Voting/getting_started/STAR_benefits.md)
 - **Conversation scripts:** [What's so good about STAR](../00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)

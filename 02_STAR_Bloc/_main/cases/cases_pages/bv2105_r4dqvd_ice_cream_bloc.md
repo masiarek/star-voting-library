@@ -2,7 +2,7 @@
 
 *Generated from [`bv2105_r4dqvd_ice_cream_bloc.yaml`](../bv2105_r4dqvd_ice_cream_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Chocolate, Strawberry
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Chocolate, Strawberry
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).
 

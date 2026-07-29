@@ -10,7 +10,7 @@ election_description: >-
   FAILS on BV. Same ballots, different tiebreak, different winner: the clone
   failure is a property of the margin rule, not of Ranked Robin as such. LH-only
   clean pair: clone_teaming_02_post.yaml. Lesson:
-  00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+  05_Ranked_Robin/concepts/rr_clone_independence.md
   Live results: https://bettervoting.com/9pr3wr/results
 bv_test_id: BV2143
 bv_election_id: 9pr3wr

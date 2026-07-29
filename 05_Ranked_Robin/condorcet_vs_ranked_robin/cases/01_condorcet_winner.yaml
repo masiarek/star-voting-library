@@ -11,7 +11,7 @@ options:
 # Pairwise: Ada beats Ben 3-2 and beats Cara 5-0; Ben beats Cara 5-0.
 #   Win-loss: Ada 2-0, Ben 1-1, Cara 0-2  ->  RANKED ROBIN WINNER: Ada (= Condorcet winner).
 # Companion file: 02_cycle_no_condorcet.yaml (same three candidates, no Condorcet winner).
-# Lesson: 00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md
+# Lesson: 05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md
 ballots: |-
   Ada>Ben>Cara
   Ada>Ben>Cara

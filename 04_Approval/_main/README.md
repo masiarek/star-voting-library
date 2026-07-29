@@ -6,4 +6,4 @@ The minimal single-winner Approval election: three candidates, five Yes/No ballo
 |---|---|---|
 | Approval 101 — most approvals wins | [page](cases/cases_pages/approval_101_c3_b5.md) | [`approval_101_c3_b5.yaml`](cases/approval_101_c3_b5.yaml) |
 
-The frozen BetterVoting export sits next to the yaml; the full audit mirror is in `_main_tabulated/`. Concepts: [Approval Voting](../../00_start_here/Approval_Voting/README.md) · multi-winner cases: [multiwinner](../multiwinner/README.md).
+The frozen BetterVoting export sits next to the yaml; the full audit mirror is in `_main_tabulated/`. Concepts: [Approval Voting](../concepts/README.md) · multi-winner cases: [multiwinner](../multiwinner/README.md).

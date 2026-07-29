@@ -4,7 +4,7 @@
 
 **Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../00_start_here/topics/condorcet/README.md)), Ranked Robin elects them.
 
-This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)** (the positive case), **[honest limits](../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](../00_start_here/RCV_Ranked_Robin/README.md).
+This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
 
 ---
 
@@ -61,7 +61,7 @@ Same ranked ballot, opposite counting philosophy — read the whole ballot again
 | [Precinct-summable](../00_start_here/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
 | [Exhausted ballots](../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
-*(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).)*
+*(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](concepts/ranked_robin.md).)*
 
 ---
 
@@ -74,7 +74,7 @@ Runnable elections, each isolating one idea. Tabulate any of them yourself.
 | [The worked intro — the consensus center wins](_main/) | the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices |
 | [Condorcet vs. Ranked Robin — worked examples](condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 | [RR vs. IRV vs. plurality — same ballots](rr_vs_irv_plurality/) | one ranked ballot set, three winners — the Tennessee center-squeeze (BV-backed, triple-checked: LH / BetterVoting / pref_voting) |
-| [Tiebreaks — dead heat → lot](rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) |
+| [Tiebreaks — dead heat → lot](rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](concepts/rr_tiebreak_lh_vs_bv.md) |
 | [**The Copeland score — a draw is worth half a win**](copeland_score/) | why "most head-to-head wins" is a shorthand and not the rule: a single ½-credit elects a candidate who ties on raw wins *and lost a matchup* — and puts Copeland alone against every other Condorcet method, which is the C1/C2 divide made visible |
 | [**Most matchups won ≠ Condorcet winner**](most_wins_vs_condorcet/) | the claim-check companion: 18 voters, no drawn matchups at all, and the candidate with strictly the most wins still loses a head-to-head. Every margin is 12–6, so Minimax / Ranked Pairs / Schulze / Split Cycle all tie five ways and only Copeland decides — the mirror image of the case above |
 | [**Burial — RR's signature wart, worked**](burial/) | the sincere/buried pair (BV2208/BV2209): fifteen voters rank the Condorcet winner last, manufacture a cycle, and win the record tie — triple-checked, deterministic on both engines |
@@ -83,9 +83,5 @@ Runnable elections, each isolating one idea. Tabulate any of them yourself.
 Same ballot, different count: RCV-IRV (elimination rounds) lives in [other methods](../06_Other/) and inside the comparison sets.
 
 **Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../00_start_here/about_this_repo/conversation_scripts.md).
-
----
-
-*Maintainer note: on the published website this URL **redirects** to the method page ([`ranked_robin.md`](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)) — see the `redirects` plugin in `mkdocs.yml`. That page carries its own copy of the case index above, so edits here show on GitHub but **not** on the site; keep the two lists in step, or move the content to the method page.*
 
 # file: README.md

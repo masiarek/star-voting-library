@@ -2,7 +2,7 @@
 
 *Generated from [`bv2130_presidential_board_star_pr.yaml`](../bv2130_presidential_board_star_pr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../00_start_here/proportional_representation) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)
+**Method:** [Allocated Score (proportional STAR)](../../../concepts) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)
 
 ## Scenario
 

@@ -2,7 +2,7 @@
 
 *Generated from [`bv2203_gvtg2h_flag_probe.yaml`](../bv2203_gvtg2h_flag_probe.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** Austen, Camus
+**Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Austen, Camus
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvtg2h) · **[results ↗](https://bettervoting.com/gvtg2h/results)** (election `gvtg2h`).
 

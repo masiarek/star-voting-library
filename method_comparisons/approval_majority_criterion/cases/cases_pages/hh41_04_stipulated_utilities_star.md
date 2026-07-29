@@ -36,7 +36,7 @@ block cuts these scores at the approval line (3+) and reports Approval = B —
 i.e. these 0-5 ballots reproduce the paper's assumed approval ballots exactly.
 This is not a different election. It is their election at higher resolution.
 
-Claim-check page: ../../../00_start_here/Approval_Voting/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
 Set overview: ../README.md
 
 ## Ballots

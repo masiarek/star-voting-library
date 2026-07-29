@@ -2,7 +2,7 @@
 
 *Generated from [`pets_gov_bloc_star.yaml`](../pets_gov_bloc_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **3 seats** · **Expected winners:** Dog, Fish, Cat
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Dog, Fish, Cat
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
 

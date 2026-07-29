@@ -2,7 +2,7 @@
 
 *Generated from [`approval_bloc_2seats_c4_b6.yaml`](../approval_bloc_2seats_c4_b6.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../00_start_here/Approval_Voting) · **2 seats** · **Expected winners:** Amy, Ben
+**Method:** [Approval Voting](../../../concepts) · **2 seats** · **Expected winners:** Amy, Ben
 
 ## Scenario
 
@@ -17,7 +17,7 @@ same trade-off as Bloc STAR (02_STAR_Bloc). Proportional rules on the
 SAME ballots (SPAV, PAV, seq-Phragmén — run them via
 06_Other/abcvoting_tabulation_engine/) instead elect Amy + Cora decisively,
 giving the minority its seat; see
-00_start_here/Approval_Voting/approval_multiwinner.md.
+04_Approval/concepts/approval_multiwinner.md.
 
 ## Ballots
 

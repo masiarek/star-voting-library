@@ -2,7 +2,7 @@
 
 *Generated from [`bv132_verify_votes_bloc.yaml`](../bv132_verify_votes_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** C, B
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** C, B
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/verify) · **[results ↗](https://bettervoting.com/verify/results)** (election `verify`).
 

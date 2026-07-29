@@ -1,6 +1,6 @@
 # 04_Approval / multiwinner — Bloc Approval
 
-Multi-winner Approval with the same 0/1 ballot: the `num_winners` most-approved candidates win (bloc / at-large counting). Declared as `voting_method: Approval_Multi_Winner` with `num_winners: ≥ 2`. Ballot mockup: [3-seat council ballot](../../00_start_here/Approval_Voting/img/approval_ballot_multiwinner_3seats.png).
+Multi-winner Approval with the same 0/1 ballot: the `num_winners` most-approved candidates win (bloc / at-large counting). Declared as `voting_method: Approval_Multi_Winner` with `num_winners: ≥ 2`. Ballot mockup: [3-seat council ballot](../concepts/img/approval_ballot_multiwinner_3seats.png).
 
 Three cases, in teaching order:
 
@@ -47,6 +47,6 @@ pip install abcvoting   # once
 python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py 04_Approval/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml
 ```
 
-Same trade-off, score-ballot edition: Bloc STAR sweeps too ([Bloc STAR](../../02_STAR_Bloc/)); the proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/)). Concepts: [Approval — Multi-Winner](../../00_start_here/Approval_Voting/Multiwinner_Approval/approval_multiwinner.md).
+Same trade-off, score-ballot edition: Bloc STAR sweeps too ([Bloc STAR](../../02_STAR_Bloc/)); the proportional STAR methods fix it ([proportional STAR](../../03_STAR_PR/)). Concepts: [Approval — Multi-Winner](../concepts/Multiwinner_Approval/approval_multiwinner.md).
 
 # file: README.md

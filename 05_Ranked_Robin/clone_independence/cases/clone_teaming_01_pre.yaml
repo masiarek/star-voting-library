@@ -10,7 +10,7 @@ election_description: >-
   the A-faction runs clones to convert this 50/50 into a certain win. This is a
   clone-independence (teaming) FAILURE, and it can only happen when there is no
   Condorcet winner. Companion: clone_teaming_02_post.yaml · lesson:
-  00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+  05_Ranked_Robin/concepts/rr_clone_independence.md
 paradoxes: [clone-teaming, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1

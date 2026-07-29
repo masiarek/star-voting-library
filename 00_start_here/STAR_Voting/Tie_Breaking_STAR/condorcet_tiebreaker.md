@@ -14,7 +14,7 @@ It is an **optional** protocol for **hand counts**, offered as an alternative to
 
 It reads the election's **preference (head-to-head) matrix** and applies four steps **in order**, stopping at the first that separates the tied candidates:
 
-1. **Matches won** — favor the candidate who wins the most head-to-head matchups (this is the **[Copeland](../../RCV_Ranked_Robin/README.md)** score, and it is the "Condorcet" in the name: a candidate who beats every other *tied* candidate head-to-head wins here immediately).
+1. **Matches won** — favor the candidate who wins the most head-to-head matchups (this is the **[Copeland](../../../05_Ranked_Robin/concepts/README.md)** score, and it is the "Condorcet" in the name: a candidate who beats every other *tied* candidate head-to-head wins here immediately).
 2. **Total preference votes** — still tied? favor the candidate preferred by more voters *summed across all* their head-to-head matchups.
 3. **Win margin** — still tied? favor the candidate with the largest margin (preferring votes minus opposing votes).
 4. **Random** — a coin toss / draw is the floor, exactly as the other protocols bottom out at a random shuffle or a pre-drawn lot.
@@ -23,14 +23,14 @@ It reads the election's **preference (head-to-head) matrix** and applies four st
 
 ## Why it looks like Ranked Robin — because mechanically it *is* one
 
-If this ladder feels like it belongs to a different method, that instinct is correct. "Most head-to-head matchups won, break ties by margin" **is** the [Ranked Robin](../../RCV_Ranked_Robin/README.md) (Copeland) algorithm. Equal Vote's Condorcet Tiebreaker is Ranked Robin's own logic **borrowed to settle a STAR tie** — a miniature round-robin run *only among the tied candidates*, and *only* when STAR's normal rounds (score, then head-to-head) finish exactly even.
+If this ladder feels like it belongs to a different method, that instinct is correct. "Most head-to-head matchups won, break ties by margin" **is** the [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) (Copeland) algorithm. Equal Vote's Condorcet Tiebreaker is Ranked Robin's own logic **borrowed to settle a STAR tie** — a miniature round-robin run *only among the tied candidates*, and *only* when STAR's normal rounds (score, then head-to-head) finish exactly even.
 
 Keep the two roles distinct:
 
 - **STAR the method** is unchanged — voters score 0–5, the top two by score meet in an automatic runoff. This protocol never touches a decided election.
 - **The Condorcet Tiebreaker** is a *tie-break* deployed inside STAR (per Equal Vote's own doc, for both scoring-round and runoff ties). It happens to run RR-style pairwise arithmetic because that is a natural, matrix-based way to rank candidates STAR's own rungs couldn't separate.
 
-So Ranked Robin is where this arithmetic *lives as a whole method*; here the same arithmetic is a *subroutine* that only fires on an exact STAR tie. (Ranked Robin's own tie-break story — Copeland ties broken by margin, and where LH and BetterVoting diverge — is [rr_tiebreak_lh_vs_bv.md](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).)
+So Ranked Robin is where this arithmetic *lives as a whole method*; here the same arithmetic is a *subroutine* that only fires on an exact STAR tie. (Ranked Robin's own tie-break story — Copeland ties broken by margin, and where LH and BetterVoting diverge — is [rr_tiebreak_lh_vs_bv.md](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).)
 
 ## It is a *tiebreaker*, not Condorcet compliance
 
@@ -103,7 +103,7 @@ Every voter scored A, B and C **equally**, so in every matchup among them the ta
 | **BetterVoting** ([protocol](https://docs.bettervoting.com/help/ties.html)) | pairwise (2-way only) / score | five-star | — | **random** shuffle |
 | **Equal Vote Condorcet Tiebreaker** ([protocol](https://www.starvoting.org/condorcet_tiebreaker)) | matches won | total preference votes | win margin | **random** |
 
-They agree on almost every real election (ties are rare, and most ties are broken at rung 1). They can diverge only on a genuinely tied race — and, as example 1 shows, the differing rung 2/3 means the *same* tied ballots can yield different winners. So a case that **turns on the terminal tiebreak** is protocol-specific: state which one you are using. See [LH vs BetterVoting — where the two STAR ladders differ](tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ) for the LH/BV half of this, and its Ranked Robin analog [rr_tiebreak_lh_vs_bv.md](../../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md).
+They agree on almost every real election (ties are rare, and most ties are broken at rung 1). They can diverge only on a genuinely tied race — and, as example 1 shows, the differing rung 2/3 means the *same* tied ballots can yield different winners. So a case that **turns on the terminal tiebreak** is protocol-specific: state which one you are using. See [LH vs BetterVoting — where the two STAR ladders differ](tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ) for the LH/BV half of this, and its Ranked Robin analog [rr_tiebreak_lh_vs_bv.md](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
 
 ---
 

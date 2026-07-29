@@ -10,7 +10,7 @@
 
 ABIF was designed by **Rob Lanphier** (`robla`) under the [electorama](https://electorama.com) umbrella, with a published spec ([electowiki](https://electowiki.org/wiki/ABIF)), a reference toolchain (`abiftool`), and a live editor at [abif.electorama.com](https://abif.electorama.com). Its stated job: *"a concise, aggregated, text-based document to describe the ballots cast in range-based or ranked elections, as well as approval-based and choose-one balloting systems."*
 
-That "as well as" is the whole point. The **same** set of voter opinions can be tabulated by STAR, RCV-IRV, [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md), Approval, or Condorcet — and ABIF's ambition is to be the one file all of those tools read, so you can hold the voters constant and swap the method. (That is exactly Lanphier's [Tennessee example](https://abif.electorama.com/id/TNexampleSTAR), the same "three methods, three winners" puzzle this repo tells in [BV2155](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.md).)
+That "as well as" is the whole point. The **same** set of voter opinions can be tabulated by STAR, RCV-IRV, [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Approval, or Condorcet — and ABIF's ambition is to be the one file all of those tools read, so you can hold the voters constant and swap the method. (That is exactly Lanphier's [Tennessee example](https://abif.electorama.com/id/TNexampleSTAR), the same "three methods, three winners" puzzle this repo tells in [BV2155](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.md).)
 
 ## The grammar, decoded
 

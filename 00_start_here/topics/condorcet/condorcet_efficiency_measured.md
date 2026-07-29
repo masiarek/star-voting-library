@@ -16,7 +16,7 @@ That conditional carries real weight and is the most common place these numbers 
 
 Six methods read **the same sampled electorate**, each through its own ballot, so the comparison is apples-to-apples. Voter utilities are sampled first and every ballot is derived from them — never the reverse ([simulate utilities, not ballots](../simulate_utilities_not_ballots.md)).
 
-**Ranked Robin is the control, not a result.** [Copeland](../../RCV_Ranked_Robin/ranked_robin.md) is Condorcet-efficient by construction, so its column *must* read exactly 100.0%. It is printed precisely so that a reader can check the harness: any cell below 100.0% would mean the pairwise code and the method code disagree, and every other number in the run would be worthless.
+**Ranked Robin is the control, not a result.** [Copeland](../../../05_Ranked_Robin/concepts/ranked_robin.md) is Condorcet-efficient by construction, so its column *must* read exactly 100.0%. It is printed precisely so that a reader can check the harness: any cell below 100.0% would mean the pairwise code and the method code disagree, and every other number in the run would be worthless.
 
 ## The measured table
 
@@ -132,7 +132,7 @@ STAR is **not** Condorcet-compliant and this repo does not claim otherwise ([STA
 
 > In realistic electorates, STAR elects the Condorcet winner **most of the time** — 92–99% at three candidates, 74–92% as the field grows — and it is the **most Condorcet-efficient non-Condorcet method measured here in every structured model**. Under impartial culture at small fields, RCV-IRV does better; under a single-issue spectrum with a crowded field, RCV-IRV elects the head-to-head winner less than half the time.
 
-If what you want is a *guarantee* rather than a rate, that is what [Ranked Robin](../../RCV_Ranked_Robin/ranked_robin.md) is for — and the 100.0% control column is the proof. The price of that guarantee, and why STAR does not pay it, is the subject of [what makes a good winner](../what_makes_a_good_winner.md).
+If what you want is a *guarantee* rather than a rate, that is what [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) is for — and the 100.0% control column is the proof. The price of that guarantee, and why STAR does not pay it, is the subject of [what makes a good winner](../what_makes_a_good_winner.md).
 
 ---
 

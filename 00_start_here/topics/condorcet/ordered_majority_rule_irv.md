@@ -69,7 +69,7 @@ The paper's defensible instinct is real: a voter's *support vs. opposition* matt
 
 ## The precision nit: Arrow is ordinal-only
 
-Jack Waugh's other point is correct and worth keeping straight: the paper leans on impossibility results as if they condemn *all* voting systems, but **Arrow's theorem applies only to ranked (ordinal) systems.** Cardinal systems — Score, Approval, STAR — sidestep Arrow entirely (Gibbard's strategy theorem still bites, but that is a *different* claim about manipulability, not about IIA). Overstating Arrow's scope is the kind of impossibility-theorem sloppiness this repo flags for the rigor tier — see [the math behind Condorcet](../../RCV_Ranked_Robin/the_math_behind_condorcet.md).
+Jack Waugh's other point is correct and worth keeping straight: the paper leans on impossibility results as if they condemn *all* voting systems, but **Arrow's theorem applies only to ranked (ordinal) systems.** Cardinal systems — Score, Approval, STAR — sidestep Arrow entirely (Gibbard's strategy theorem still bites, but that is a *different* claim about manipulability, not about IIA). Overstating Arrow's scope is the kind of impossibility-theorem sloppiness this repo flags for the rigor tier — see [the math behind Condorcet](../../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md).
 
 ## Net assessment
 

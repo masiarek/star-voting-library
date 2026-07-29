@@ -47,7 +47,7 @@ Winner — Ranked Robin (RCV-RR): Cora
 
 **And Amy beats Cora, 12–6.**
 
-So Cora is not the Condorcet winner. There is no Condorcet winner here at all: the [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates, one big [cycle](../../00_start_here/RCV_Ranked_Robin/cycle_resolution.md).
+So Cora is not the Condorcet winner. There is no Condorcet winner here at all: the [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates, one big [cycle](../concepts/cycle_resolution.md).
 
 ## Which step fails
 
@@ -82,7 +82,7 @@ Taking them one at a time:
 
 **"A candidate can have the uniquely highest Copeland score without being a Condorcet winner"** is the correction that resolves the whole confusion, and it is exactly what this page demonstrates. Cora scores 3 against everyone else's 2 or 1 — unique, not tied — and is still beaten by Amy.
 
-**"Ranked Robin is Copeland with Borda Count as a tiebreaker"** described an earlier specification. The Borda tiebreak has since been struck from Equal Vote's own description, and neither implementation we test against uses it: this repo's engine breaks ties by total margin, then by pre-published lot order; BetterVoting's `RankedRobin.ts` uses head-to-head, then random. [Those two ladders diverge](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), which is its own documented case — but neither ladder is Borda.
+**"Ranked Robin is Copeland with Borda Count as a tiebreaker"** described an earlier specification. The Borda tiebreak has since been struck from Equal Vote's own description, and neither implementation we test against uses it: this repo's engine breaks ties by total margin, then by pre-published lot order; BetterVoting's `RankedRobin.ts` uses head-to-head, then random. [Those two ladders diverge](../concepts/rr_tiebreak_lh_vs_bv.md), which is its own documented case — but neither ladder is Borda.
 
 One more that's defensible but softer than it sounds: **"all Condorcet methods have roughly the same VSE."** True in aggregate, and true *because* the disagreements are rare — they agree by definition whenever a Condorcet winner exists. It isn't evidence that the methods are interchangeable. This page and its companion are both profiles where they diverge completely: here four of them return a five-way tie while Copeland decides; there Copeland is overruled by every one of them.
 
@@ -98,7 +98,7 @@ This case closes that escape route. No draws, no half-points, no tie-breaking �
 
 Look at the blocs again. They lead with Blake, Amy and Diego. First choices split **6–6–6–0–0**: Cora and Erin are nobody's favorite.
 
-Cora is the broadly-acceptable second choice — ranked 2nd by twelve of the eighteen voters — and that is exactly why Cora wins the round robin while collecting no first-place support at all. It's the same reason [Ranked Robin resists center squeeze](../../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md): it never asks "who is your favorite?", only "which of these two do you prefer?"
+Cora is the broadly-acceptable second choice — ranked 2nd by twelve of the eighteen voters — and that is exactly why Cora wins the round robin while collecting no first-place support at all. It's the same reason [Ranked Robin resists center squeeze](../concepts/why_ranked_robin.md): it never asks "who is your favorite?", only "which of these two do you prefer?"
 
 It also means **Choose-One and RCV-IRV cannot produce an answer here without a coin flip.** Both deadlock three ways at 6 — Choose-One immediately, IRV after eliminating the two candidates with no first choices. That's why this case is a single Ranked Robin race and not a method line-up: the other methods' results here aren't reproducible, so there'd be nothing honest to freeze.
 
@@ -127,7 +127,7 @@ Equal Vote's own [Ranked Robin description](https://www.equal.vote/ranked_robin)
 
 > "The candidate who wins the most one-on-one matchups is elected."
 
-As a description of *the tabulation*, that is correct — it is what the method does, and it's what elected Cora above. The trouble is only when it gets read as a description of *the outcome* ("…and that candidate is therefore the Condorcet winner"). The method is a [Condorcet method](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) because it elects the Condorcet winner **whenever one exists** — which is a promise about a conditional, not a guarantee that its winner always beat everybody.
+As a description of *the tabulation*, that is correct — it is what the method does, and it's what elected Cora above. The trouble is only when it gets read as a description of *the outcome* ("…and that candidate is therefore the Condorcet winner"). The method is a [Condorcet method](../concepts/ranked_robin_vs_condorcet.md) because it elects the Condorcet winner **whenever one exists** — which is a promise about a conditional, not a guarantee that its winner always beat everybody.
 
 There's also a small internal tension worth noticing: the same page advertises that Ranked Robin lets voters rank candidates equally — and equal rankings are what produce drawn matchups, which is what "most matchups won" doesn't account for. The feature and the shorthand pull against each other.
 
@@ -139,7 +139,7 @@ Three independent implementations, one winner:
 - **`pref_voting`** (independent library, Copeland as wins − losses) → Cora, `AGREE ✓ (unique Copeland winner)`
 - **BetterVoting** (`RankedRobin.ts`, live election `gg9qh9`) → **Cora** — frozen in [`…_bv_export.json`](cases/bgg9qh9_most_wins_is_not_condorcet_bv_export.json)
 
-Fully deterministic: Cora is the unique Copeland leader, so no tiebreak rung is reached and the result does not depend on lot order. That matters here, because [LH and BetterVoting break Ranked Robin ties differently](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) — this case never reaches the rung where they'd disagree, which is why it was safe to put on BetterVoting at all.
+Fully deterministic: Cora is the unique Copeland leader, so no tiebreak rung is reached and the result does not depend on lot order. That matters here, because [LH and BetterVoting break Ranked Robin ties differently](../concepts/rr_tiebreak_lh_vs_bv.md) — this case never reaches the rung where they'd disagree, which is why it was safe to put on BetterVoting at all.
 
 ## Run it yourself
 
@@ -152,10 +152,10 @@ Want the whole count — full pairwise grid, Smith-set audit, ballot listing? Se
 ## See also
 
 - [The Copeland score — a draw is worth half a win](../copeland_score/) — the companion case: the *other* way "most matchups won" comes apart
-- [Ranked Robin vs. "the Condorcet winner"](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
+- [Ranked Robin vs. "the Condorcet winner"](../concepts/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
 - [The Smith set](../../00_start_here/topics/smith_set.md) — the generalized Condorcet winner, which is what "best" means when nobody is undefeated
-- [Honest limits](../../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md)
+- [Honest limits](../concepts/RCV_RR_honest_limits.md)
 
-*(Up: [05_Ranked_Robin](../README.md) · concept docs: [Ranked Robin (RCV-RR)](../../00_start_here/RCV_Ranked_Robin/README.md))*
+*(Up: [05_Ranked_Robin](../README.md) · concept docs: [Ranked Robin (RCV-RR)](../concepts/README.md))*
 
 # file: README.md

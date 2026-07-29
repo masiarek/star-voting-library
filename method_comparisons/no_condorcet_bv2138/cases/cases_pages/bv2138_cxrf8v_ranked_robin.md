@@ -2,7 +2,7 @@
 
 *Generated from [`bv2138_cxrf8v_ranked_robin.yaml`](../bv2138_cxrf8v_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Abby
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Abby
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
 
@@ -87,7 +87,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     5  Cora       0–4–0         0      -4  —
 
 Winner — Ranked Robin (RCV-RR): Abby
-   *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -101,7 +101,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (Abby, Brad) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Abby is INSIDE the Smith set. ✓

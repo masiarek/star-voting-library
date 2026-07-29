@@ -2,11 +2,11 @@
 
 *Several reform packages are two-stage: an open qualifying election narrows a crowded field to the top few, then a good method runs the general. That design has a quiet assumption baked into it — that the primary won't discard the very candidate the reform exists to elect. This page measures whether that assumption holds, and finds that **it depends almost entirely on a design choice most proposals leave unspecified.***
 
-**Level: 301.** Companions: [election simulation models](../00_start_here/topics/election_simulation_models.md) · [simulate utilities, not ballots](../00_start_here/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
+**Level: 301.** Companions: [election simulation models](../00_start_here/topics/election_simulation_models.md) · [simulate utilities, not ballots](../00_start_here/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
 
 ## The question, and why it isn't rhetorical
 
-[Consensus Choice](../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_consensus_choice.md), promoted by Better Choices for Democracy, is the live example. Step 1 of the proposal is *"an open qualifying election—without party restrictions—[that] determines at least four of the strongest candidates who advance to the general election."* Step 2 onward is the pairwise Condorcet count.
+[Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md), promoted by Better Choices for Democracy, is the live example. Step 1 of the proposal is *"an open qualifying election—without party restrictions—[that] determines at least four of the strongest candidates who advance to the general election."* Step 2 onward is the pairwise Condorcet count.
 
 Neither their [main page](https://www.betterchoices.vote/consensus-choice) nor their [FAQ](https://www.betterchoices.vote/faqs) says **which voting method the qualifying round uses.** Alaska's top-4 uses Choose-One. If a reform's own first round runs on the method the reform exists to replace, the obvious worry is that it discards the consensus candidate before the good count ever sees the ballot.
 

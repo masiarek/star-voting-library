@@ -25,7 +25,7 @@ Cast a STAR ballot or run your own free election on BetterVoting — or [print r
 
 </div>
 
-**Want the whole argument, every objection answered? → [Why STAR Voting](00_start_here/topics/Why_STAR_Voting.md).** Prefer ranked ballots? → **[Why Ranked Robin](00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins. Ready for the full course? → [Voting 101 / 201 / 301](00_start_here/CURRICULUM.md).
+**Want the whole argument, every objection answered? → [Why STAR Voting](00_start_here/topics/Why_STAR_Voting.md).** Prefer ranked ballots? → **[Why Ranked Robin](05_Ranked_Robin/concepts/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins. Ready for the full course? → [Voting 101 / 201 / 301](00_start_here/CURRICULUM.md).
 
 ---
 

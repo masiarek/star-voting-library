@@ -24,7 +24,7 @@ The final tally — Blue 10, Purple 9 — is digit-for-digit the video's hypothe
 | Method | BV2176/77 (the video) | BV2178 (switch) |
 |---|:--:|:--:|
 | STAR | **Blue** (scores 46/38/44/44; runoff 10–9 — a Runoff Reversal) | **Blue** (scores Blue 46, Purple 46, Pink 44, Green 36 — the co-leaders *are* the finalists; same runoff 10–9) |
-| Ranked Robin | **Green** on BV / **Blue** in LH (2–1 tie, [two ladders](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md)) | **Blue** everywhere — Condorcet winner 3–0, no tie, no ladder |
+| Ranked Robin | **Green** on BV / **Blue** in LH (2–1 tie, [two ladders](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md)) | **Blue** everywhere — Condorcet winner 3–0, no tie, no ladder |
 | RCV-IRV | **Purple** (9–8) | **Blue** (10–9) — the video's hypothetical, real |
 | Choose-One | **Purple** (7) | **Purple** (7 vs 6) — still reading only first choices |
 

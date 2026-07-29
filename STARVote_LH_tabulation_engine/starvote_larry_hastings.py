@@ -985,7 +985,7 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
                  "Which member of")
         L.append("   the set should win is exactly what Minimax / Ranked Pairs / "
                  "Schulze disagree")
-        L.append("   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.")
+        L.append("   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.")
 
     # The Copeland leaders are always inside the Smith set, but need not BE it —
     # the win-loss table's top block can understate how wide the contention is.
@@ -1763,7 +1763,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                          "(no candidate beats all others). Resolved by total margin, then "
                          "lot order. (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
-                         "00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)")
+                         "05_Ranked_Robin/concepts/cycle_resolution.md.)")
         if full or _show_smith:
             # The Smith set reads the same pairwise matrix Ranked Robin counts, so
             # nothing is discarded in the translation — it is RR's native yardstick,

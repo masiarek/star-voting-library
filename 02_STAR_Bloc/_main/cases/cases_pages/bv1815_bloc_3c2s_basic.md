@@ -2,7 +2,7 @@
 
 *Generated from [`bv1815_bloc_3c2s_basic.yaml`](../bv1815_bloc_3c2s_basic.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **2 seats** · **Expected winners:** A, C
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** A, C
 
 ## Scenario
 

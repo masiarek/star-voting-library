@@ -12,7 +12,7 @@ IRV only ever looks at each ballot's **top remaining** choice, and each round it
 
 **So when a page says "center squeeze," assume Hare.** It's a property of the fewest-first-choices elimination rule — the one US "RCV" uses — and it is **not** a property of ranked ballots in general, nor even of every instant-runoff variant:
 
-- **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
+- **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
 - The **Condorcet-safe IRV variants** — **BTR-IRV, Baldwin, Nanson** — keep the instant-runoff *shape* but stop eliminating on first-choices alone, so a Condorcet winner can never be squeezed out. Fittingly, **Nanson** — quoted at the bottom of this page warning about exactly this flaw in **1882** — designed one of those fixes.
 
 So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) and [the terminology tips](../tips/TIPS_terminology.md).

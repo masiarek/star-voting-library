@@ -9,7 +9,7 @@ repo's approval YAML files. Two jobs:
    (top-`num_winners` by approvals). This wrapper adds the PROPORTIONAL
    rules on the same ballots — **SPAV** (seqpav), **PAV** (pav),
    **seq-Phragmén** (seqphragmen) — the rules described in
-   `00_start_here/Approval_Voting/approval_multiwinner.md`.
+   `04_Approval/concepts/approval_multiwinner.md`.
 2. **Cross-check**: abcvoting's plain `av` rule must match the LH engine's
    bloc-Approval result (see `tests/test_abcvoting_crosscheck.py`).
 

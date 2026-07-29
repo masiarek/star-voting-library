@@ -50,7 +50,7 @@ The table above corrects RCV advocates. This one corrects **us**. Reform argumen
 
 > Ranked ballots can't express equal support, and IRV's count discards your later preferences until your favorite is out — that's the price of Later-No-Harm. So IRV has no mechanism for finding the candidate most voters agree on, and in close three-way races it predictably squeezes that candidate out. The fix isn't abandoning ranked ballots — **Ranked Robin counts the same ballot and finds the consensus.** The fix is abandoning sequential elimination.
 
-That phrasing also does the [olive-branch](../RCV_Ranked_Robin/) work: it hands an RCV supporter a reform that keeps their ballot.
+That phrasing also does the [olive-branch](../../05_Ranked_Robin/concepts/) work: it hands an RCV supporter a reform that keeps their ballot.
 
 ## The umbrella term (so the exhausted-ballot claims stay precise)
 

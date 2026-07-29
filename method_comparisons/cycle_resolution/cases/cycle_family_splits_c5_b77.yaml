@@ -2,7 +2,7 @@ election_title: "The whole Condorcet family splits — Minimax & Schulze pick Av
 
 scenario_description: |-
   The five-candidate profile behind the "…but they don't always agree" table in
-  00_start_here/RCV_Ranked_Robin/cycle_resolution.md. 77 members of a program
+  05_Ranked_Robin/concepts/cycle_resolution.md. 77 members of a program
   committee rank five finalists, and majority preference is knotted about as
   badly as it can be: there is no Condorcet winner and the Smith set is ALL FIVE
   candidates — every finalist is in a beat-cycle with the rest.

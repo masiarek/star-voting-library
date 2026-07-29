@@ -2,13 +2,13 @@
 
 *Generated from [`clone_teaming_02_post.yaml`](../clone_teaming_02_post.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** A1
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** A1
 
 **Official tie-break (lot) order:** A1 > A2 > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
-The electowiki Ranked Robin clone-independence example, part 2 of 2 (the "after"). Same election as part 1, but the A-faction now runs two clones, A1 and A2 (voters rank them together, A1>A2, in A's old slot). This "teaming" reshapes the margins: A1's total win margin jumps to +134, and by absorbing votes it pushes B out of the top tier (B falls to 4 wins while A1 and C reach 5). A1 now beats C on margin outright — no lot needed — so A1 wins deterministically. The A-faction converted part 1's 50/50 coin flip (A or B) into a guaranteed A1 win by "sacrificing" A2 to crowd out B. That is a clone-independence (teaming) failure: running clones changed the winner in the cloning faction's favor. It works only because there is no Condorcet winner (a top cycle). NOTE the tiebreak sensitivity: this failure is specific to a MARGIN tiebreak (LH here, and the Equal Vote protocol). An engine that breaks a 2-way tie by head-to-head instead (BetterVoting) elects C, not A1 — the attack fails there. Companion: clone_teaming_01_pre.yaml · lesson: 00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+The electowiki Ranked Robin clone-independence example, part 2 of 2 (the "after"). Same election as part 1, but the A-faction now runs two clones, A1 and A2 (voters rank them together, A1>A2, in A's old slot). This "teaming" reshapes the margins: A1's total win margin jumps to +134, and by absorbing votes it pushes B out of the top tier (B falls to 4 wins while A1 and C reach 5). A1 now beats C on margin outright — no lot needed — so A1 wins deterministically. The A-faction converted part 1's 50/50 coin flip (A or B) into a guaranteed A1 win by "sacrificing" A2 to crowd out B. That is a clone-independence (teaming) failure: running clones changed the winner in the cloning faction's favor. It works only because there is no Condorcet winner (a top cycle). NOTE the tiebreak sensitivity: this failure is specific to a MARGIN tiebreak (LH here, and the Equal Vote protocol). An engine that breaks a 2-way tie by head-to-head instead (BetterVoting) elects C, not A1 — the attack fails there. Companion: clone_teaming_01_pre.yaml · lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md
 
 ## Ballots
 
@@ -80,7 +80,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     7  F          0–6–0         0    -198  —
 
 Winner — Ranked Robin (RCV-RR): A1
-   *** 2 candidates tie for the most wins (A1, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (A1, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -94,7 +94,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (A1, C) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner A1 is INSIDE the Smith set. ✓

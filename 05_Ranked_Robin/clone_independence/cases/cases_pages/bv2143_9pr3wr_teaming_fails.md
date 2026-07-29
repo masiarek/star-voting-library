@@ -2,7 +2,7 @@
 
 *Generated from [`bv2143_9pr3wr_teaming_fails.yaml`](../bv2143_9pr3wr_teaming_fails.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** A1
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** A1
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr`).
 
@@ -10,7 +10,7 @@
 
 ## Scenario
 
-The electowiki clone-independence example, part 2 (teaming), BV-backed. Same election as BV2142 but the A-faction runs clones A1, A2. The two engines reach OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by total margin — A1 +134 beats C +104 — so LH elects A1, and the teaming attack SUCCEEDS (this file pins lot but margin already decides). BetterVoting breaks the 2-way tie by head-to-head instead, and C beats A1 21-12, so BV elects C (tieBreakType "none", log "C preferred over A1 in runoff") — the teaming attack FAILS on BV. Same ballots, different tiebreak, different winner: the clone failure is a property of the margin rule, not of Ranked Robin as such. LH-only clean pair: clone_teaming_02_post.yaml. Lesson: 00_start_here/RCV_Ranked_Robin/rr_clone_independence.md Live results: https://bettervoting.com/9pr3wr/results
+The electowiki clone-independence example, part 2 (teaming), BV-backed. Same election as BV2142 but the A-faction runs clones A1, A2. The two engines reach OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by total margin — A1 +134 beats C +104 — so LH elects A1, and the teaming attack SUCCEEDS (this file pins lot but margin already decides). BetterVoting breaks the 2-way tie by head-to-head instead, and C beats A1 21-12, so BV elects C (tieBreakType "none", log "C preferred over A1 in runoff") — the teaming attack FAILS on BV. Same ballots, different tiebreak, different winner: the clone failure is a property of the margin rule, not of Ranked Robin as such. LH-only clean pair: clone_teaming_02_post.yaml. Lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md Live results: https://bettervoting.com/9pr3wr/results
 
 ## Ballots
 
@@ -82,7 +82,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     7  F          0–6–0         0    -198  —
 
 Winner — Ranked Robin (RCV-RR): A1
-   *** 2 candidates tie for the most wins (A1, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (A1, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -96,7 +96,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (A1, C) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner A1 is INSIDE the Smith set. ✓

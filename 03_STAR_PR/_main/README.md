@@ -2,7 +2,7 @@
 
 The proportional STAR (STAR-PR) cases: the same 0–5 score ballot, counted so seats reflect the electorate's *proportions* rather than handing every seat to the largest bloc. Read the reader-friendly **pages** (`_main_pages/`); the `.yaml` beside each is the tabulatable source, and the always-full audit copy is in `_main_tabulated/`.
 
-Concept first: [STAR-PR — the three methods](../../00_start_here/proportional_representation/STAR_PR/README.md) · [the math behind proportional STAR](../../00_start_here/proportional_representation/STAR_PR/the_math_behind_proportional_star.md) · [STV vs STAR-PR](../../00_start_here/proportional_representation/stv/proportional_stv_vs_star.md). Parent folder: [`03_STAR_PR`](../README.md).
+Concept first: [STAR-PR — the three methods](../concepts/STAR_PR/README.md) · [the math behind proportional STAR](../concepts/STAR_PR/the_math_behind_proportional_star.md) · [STV vs STAR-PR](../concepts/stv/proportional_stv_vs_star.md). Parent folder: [`03_STAR_PR`](../README.md).
 
 ## Same election, three methods (the 63-ballot trio)
 

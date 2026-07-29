@@ -51,7 +51,7 @@ Winner — Ranked Robin (RCV-RR): Nashville
    beats every opponent head-to-head — the Condorcet winner.
 ```
 
-Nashville is 3–0–0 (Copeland 3): no tiebreak is invoked, so the LH margin→lot ladder never comes into play here — this is the *agreement* case, not the divergence one. (For where the LH and BetterVoting tiebreak rules diverge, see [the tiebreak note](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) and its LH-only [dead-heat case](../rr_tiebreaks/).)
+Nashville is 3–0–0 (Copeland 3): no tiebreak is invoked, so the LH margin→lot ladder never comes into play here — this is the *agreement* case, not the divergence one. (For where the LH and BetterVoting tiebreak rules diverge, see [the tiebreak note](../concepts/rr_tiebreak_lh_vs_bv.md) and its LH-only [dead-heat case](../rr_tiebreaks/).)
 
 ## View 2 — BetterVoting (`RankedRobin.ts`, frozen results)
 
@@ -90,6 +90,6 @@ All three agree on the Condorcet winner — while plurality (Memphis) and RCV-IR
 ## See also
 
 - Folder overview: [rr_vs_irv_plurality — README](README.md)
-- The RR-vs-Condorcet distinction (cycles): [condorcet_vs_ranked_robin](../condorcet_vs_ranked_robin/) · lesson [ranked_robin_vs_condorcet.md](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md)
-- The tiebreak divergence (LH margin→lot vs BV head-to-head→random): [rr_tiebreak_lh_vs_bv.md](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md)
+- The RR-vs-Condorcet distinction (cycles): [condorcet_vs_ranked_robin](../condorcet_vs_ranked_robin/) · lesson [ranked_robin_vs_condorcet.md](../concepts/ranked_robin_vs_condorcet.md)
+- The tiebreak divergence (LH margin→lot vs BV head-to-head→random): [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md)
 - [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/README.md) · [Glossary](../../00_start_here/GLOSSARY.md)

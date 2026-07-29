@@ -10,6 +10,6 @@ Where the [Condorcet vs. Ranked Robin](../condorcet_vs_ranked_robin/) set asks *
 
 Each case here is **triple-checked**: LH native `run_ranked_robin`, BetterVoting's `RankedRobin.ts` (frozen `_bv_export.json`), and `pref_voting`'s independent Copeland — all must agree on the winner. See each page's "Agreement" table.
 
-**Concept docs:** [Ranked Robin (the method)](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) · [Condorcet efficiency (topic hub)](../../00_start_here/topics/condorcet/README.md) · why IRV is fragile here: center squeeze in [Ranked Robin vs. Condorcet](../../00_start_here/RCV_Ranked_Robin/ranked_robin_vs_condorcet.md).
+**Concept docs:** [Ranked Robin (the method)](../concepts/ranked_robin.md) · [Condorcet efficiency (topic hub)](../../00_start_here/topics/condorcet/README.md) · why IRV is fragile here: center squeeze in [Ranked Robin vs. Condorcet](../concepts/ranked_robin_vs_condorcet.md).
 
 # file: README.md

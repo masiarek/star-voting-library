@@ -2,13 +2,13 @@
 
 *Generated from [`clone_teaming_01_pre.yaml`](../clone_teaming_01_pre.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** A
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** A
 
 **Official tie-break (lot) order:** A > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
-The electowiki Ranked Robin clone-independence example, part 1 of 2 (the "before"). 33 voters, six candidates; A, B, C sit in a top cycle (A beats B, B beats C, C beats A) and tie for the most pairwise wins (4 each). Ranked Robin's tiebreak looks at total win margin: A and B tie there too (+101 each), C is lower (+95), so C is dropped and the A-vs-B tie is settled by lot — a coin flip. This file pins the lot to A. The point of the pair is what a faction can do about that coin flip: see part 2, clone_teaming_02_post, where the A-faction runs clones to convert this 50/50 into a certain win. This is a clone-independence (teaming) FAILURE, and it can only happen when there is no Condorcet winner. Companion: clone_teaming_02_post.yaml · lesson: 00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+The electowiki Ranked Robin clone-independence example, part 1 of 2 (the "before"). 33 voters, six candidates; A, B, C sit in a top cycle (A beats B, B beats C, C beats A) and tie for the most pairwise wins (4 each). Ranked Robin's tiebreak looks at total win margin: A and B tie there too (+101 each), C is lower (+95), so C is dropped and the A-vs-B tie is settled by lot — a coin flip. This file pins the lot to A. The point of the pair is what a faction can do about that coin flip: see part 2, clone_teaming_02_post, where the A-faction runs clones to convert this 50/50 into a certain win. This is a clone-independence (teaming) FAILURE, and it can only happen when there is no Condorcet winner. Companion: clone_teaming_02_post.yaml · lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md
 
 ## Ballots
 
@@ -72,7 +72,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     6  F          0–5–0         0    -165  —
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -86,7 +86,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

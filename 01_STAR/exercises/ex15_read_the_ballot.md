@@ -45,7 +45,7 @@ The column headings are how many voters cast that ballot.
 
 **Approval voting.** Two features settle it:
 
-1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../00_start_here/RCV_IRV/), [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md), Borda — and every score method.
+1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../00_start_here/RCV_IRV/), [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Borda — and every score method.
 2. **Voters mark different *numbers* of candidates.** The ×15 bloc approves two, the ×5 bloc approves one. That rules out [Choose-One](../../00_start_here/topics/plurality.md) (exactly one mark) and k-approval (exactly k marks).
 
 Independent, binary, unlimited marks — that is the definition of an approval ballot. The theorists' name for a profile of them is a **[dichotomous profile](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice)**: every voter's ballot is a ranking with exactly two levels and nothing said inside either one.
@@ -151,7 +151,7 @@ What's true is: **Approval elects the Condorcet winner of the approval ballots.*
 
 What does *not* follow: that it elects the Condorcet winner of what the voters actually think. Real approval ballots aren't cast by a dichotomous electorate — they're cast by people with richer opinions who compress them on the spot, and the compression can move the answer. The worked counterexample is five ballots long: in [Black Curtain #1](../../method_comparisons/black_curtain/condorcet_compression.md), Cal is the engine-confirmed Condorcet winner of the score ballots, Bob is the Condorcet winner of the same voters' approval ballots, and Bob wins — legitimately, because the three voters who prefer Cal approved both of them.
 
-So the honest phrasing of the guarantee names its domain: *on a dichotomous profile*, Approval is Condorcet-consistent. Drop those four words and you've promised something the method can't deliver. → [Approval in the theory literature](../../00_start_here/Approval_Voting/approval_in_the_literature.md) · [Approval's honest limits](../../00_start_here/Approval_Voting/approval_honest_limits.md)
+So the honest phrasing of the guarantee names its domain: *on a dichotomous profile*, Approval is Condorcet-consistent. Drop those four words and you've promised something the method can't deliver. → [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md) · [Approval's honest limits](../../04_Approval/concepts/approval_honest_limits.md)
 
 </details>
 
@@ -175,7 +175,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercise
 
 - [Exercise 3 — one electorate, five verdicts](ex03_five_verdicts.md) — the same ballot, five methods, five answers
 - [Exercise 13 — where do you draw the line?](ex13_draw_the_line.md) — the other half of the approval story: one honest electorate, three thresholds, three winners
-- [Approval Voting](../../00_start_here/Approval_Voting/approval_voting.md) · [Approval in the theory literature](../../00_start_here/Approval_Voting/approval_in_the_literature.md)
+- [Approval Voting](../../04_Approval/concepts/approval_voting.md) · [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md)
 - [Scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [the fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md)
 - [When compression moves the Condorcet winner](../../method_comparisons/black_curtain/condorcet_compression.md) — part (f), worked in full
 

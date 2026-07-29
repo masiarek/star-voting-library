@@ -2,7 +2,7 @@
 
 *Generated from [`bv2131_tennessee_condorcet_center_vqyqkr.yaml`](../bv2131_tennessee_condorcet_center_vqyqkr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Nashville
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../concepts) · **1 seat** · **Expected winner:** Nashville
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vqyqkr) · **[results ↗](https://bettervoting.com/vqyqkr/results)** (election `vqyqkr`).
 

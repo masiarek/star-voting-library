@@ -2,12 +2,12 @@
 
 *Generated from [`approval_bloc_3seats_c6_b5.yaml`](../approval_bloc_3seats_c6_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../00_start_here/Approval_Voting) · **3 seats** · **Expected winners:** Adams, Brown, Clark
+**Method:** [Approval Voting](../../../concepts) · **3 seats** · **Expected winners:** Adams, Brown, Clark
 
 ## Scenario
 
 A 3-seat at-large council race matching the multi-winner ballot mockup
-(00_start_here/Approval_Voting/img/approval_ballot_multiwinner_3seats.png):
+(04_Approval/concepts/img/approval_ballot_multiwinner_3seats.png):
 six candidates, five voters, each approving any number of candidates.
 Sum the columns; the three most-approved win. Adams, Brown, and Clark
 take the seats (3 approvals each) — no tie, no drama: the plain

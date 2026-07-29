@@ -275,7 +275,7 @@ _CREATED_BV2141 = [
 #     (LH / Equal Vote) A1 wins (+134) — teaming succeeds. But A1 and C tie at 5
 #     wins and C beats A1 head-to-head 21-12, so BV's 2-way head-to-head tiebreak
 #     elects C — the teaming attack FAILS on BV. Live probe of that divergence.
-# All strict full rankings (no ties). Lesson: 00_start_here/RCV_Ranked_Robin/
+# All strict full rankings (no ties). Lesson: 05_Ranked_Robin/concepts/
 # rr_clone_independence.md ; LH-only pair: 05_Ranked_Robin/clone_independence/.
 _C5_CANDS = ["A", "B", "C", "D", "E", "F"]
 _C5_LEVELS = [
@@ -1934,7 +1934,7 @@ _CREATED_BV2174_75 = [
 # 2-1. The tie is FREEZABLE on BV: exactly 2 tied -> BV's ladder goes to their
 # head-to-head, Green beats Blue 7-4 -> GREEN, deterministic. LH's ladder
 # (total margin) picks BLUE (+5 vs +4) — the documented RankedRobin.ts-vs-LH
-# ladder divergence (00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md),
+# ladder divergence (05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md),
 # live for the first time. All LH-verified 2026-07-10.
 # Already created -> p8dp28 (BV2176). Reference only — do NOT re-run (permanent).
 
@@ -4037,7 +4037,7 @@ C1788_SPEC = {
 # a head-to-head rung for a clean 2-WAY tie, so on a 3-way tie it falls through
 # to RANDOM. The pairwise MATRIX is deterministic and is the actual artifact —
 # BV's crowned winner in that race is a coin flip and must not be cited as a
-# result. See 00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md.
+# result. See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
 # Ranks are aligned to the candidate order [Almond, Berry, Cocoa]; 1 = top.
 _MARG_CANDS = ["Almond", "Berry", "Cocoa"]
 _MARG_STAR = ([[5, 3, 0]] * 5) + ([[0, 5, 3]] * 3) + ([[3, 0, 5]] * 2) + ([[0, 3, 5]] * 2)

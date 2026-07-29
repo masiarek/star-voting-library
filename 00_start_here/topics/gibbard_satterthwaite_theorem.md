@@ -52,7 +52,7 @@ G-S assumes every election has a **unique** winner. That looks like a loophole: 
 
 (One genuine subtlety worth stating: "strategyproof" needs more care here, because a voter comparing two *sets* of tied winners has to be assumed to compare them somehow — optimistically, pessimistically, or by expected utility. The result holds across those readings, which is what makes it a closed door rather than a technicality.)
 
-The practical reading is the same one this repo takes everywhere: **you cannot tiebreak your way out of manipulability.** Consistent with the [Ranked Robin tiebreak analysis](../RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), where Brandt, Saile & Stricker prove no anonymous, Pareto-optimal tiebreaking rule — fixed order *or* coin flip — escapes manipulability once voters may express ties.
+The practical reading is the same one this repo takes everywhere: **you cannot tiebreak your way out of manipulability.** Consistent with the [Ranked Robin tiebreak analysis](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md), where Brandt, Saile & Stricker prove no anonymous, Pareto-optimal tiebreaking rule — fixed order *or* coin flip — escapes manipulability once voters may express ties.
 
 ## Relation to Arrow's theorem
 
@@ -61,7 +61,7 @@ Arrow (1951) and Gibbard–Satterthwaite are close cousins — G-S can even be d
 - **Arrow** is about *aggregation*: no rule can combine individual rankings into a group ranking while satisfying a short list of fairness conditions.
 - **Gibbard–Satterthwaite** is about *incentives*: no rule can make honest voting a dominant strategy.
 
-Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](../RCV_Ranked_Robin/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
+Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
 
 ## Sources
 

@@ -19,11 +19,11 @@ Start here with zero background.
 - **The problem being solved** → [Choose-One / Plurality](plurality.md) and [the spoiler effect](spoiler_effect.md).
 - **Two kinds of ballot** → [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the split that sorts every method below.
 - **The single-winner methods**, one page each:
-  - [Approval](../Approval_Voting/approval_voting.md) — mark the ones you like.
+  - [Approval](../../04_Approval/concepts/approval_voting.md) — mark the ones you like.
   - [STAR](../STAR_Voting/STAR_start_here.md) — score 0–5, then an automatic runoff.
   - [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) — rank, then eliminate-and-transfer.
-  - [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) — rank, then compare every pair (a Condorcet method).
-- **Multi-winner / proportional** → [proportional STAR](../proportional_representation/STAR_PR/README.md) and [STV](../proportional_representation/stv/proportional_stv_vs_star.md) — how representation (not just a single winner) is chosen.
+  - [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — rank, then compare every pair (a Condorcet method).
+- **Multi-winner / proportional** → [proportional STAR](../../03_STAR_PR/concepts/STAR_PR/README.md) and [STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md) — how representation (not just a single winner) is chosen.
 
 ---
 
@@ -49,7 +49,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 - **Impossibility theorems** → Arrow and Gibbard–Satterthwaite (defined in the [Glossary](../GLOSSARY.md)) — why *no* method is perfect, so every choice is a trade-off.
 - **The method zoo** → beyond the headline four: [3-2-1 voting](../../06_Other/three_two_one/README.md), [Borda](../../06_Other/other_ranked_methods/borda.md), [agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md), and the ranked-method family in the [Glossary](../GLOSSARY.md#other-methods-for-contrast) (Ranked Pairs, Schulze, Minimax…).
 - **Opposing viewpoints (read these on purpose):**
-  - Each method's honest limits — [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Approval](../Approval_Voting/approval_honest_limits.md), [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
+  - Each method's honest limits — [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Approval](../../04_Approval/concepts/approval_honest_limits.md), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
   - Claims we check both ways — [RCV-IRV claims, fact-checked](../RCV_IRV/rcv_irv_false_claims.md).
   - **Marcus's own guide** for a **Condorcet-preferring** perspective different from this library's STAR emphasis — [How to Learn About Voting Methods](https://voting-in-the-abstract.medium.com/how-to-learn-about-voting-methods-4e6c0e4d38d9).
 

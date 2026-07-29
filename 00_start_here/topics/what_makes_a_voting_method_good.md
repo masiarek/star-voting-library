@@ -32,7 +32,7 @@ How hard is it to **vote** and to **count**?
 | **RCV-IRV** | high — just rank them | **low** — rounds of eliminate-and-transfer, [not summable](summability), needs central tabulation |
 | **[3-2-1](three_two_one_voting.md)** | high — three words (Good/OK/Bad) | medium — three stages with a tuned threshold |
 | **STAR** | medium — 0–5 per candidate | high — add the scores, then one pairwise runoff |
-| **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** | high — just rank them | high — one pairwise matrix, which [adds across precincts](summability) |
+| **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** | high — just rank them | high — one pairwise matrix, which [adds across precincts](summability) |
 
 Three things follow:
 

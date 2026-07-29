@@ -2,7 +2,7 @@
 
 *Generated from [`09_c7_b44_park-bloc-4-seats.yaml`](../09_c7_b44_park-bloc-4-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../00_start_here/proportional_representation) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/v9rhhr) · **[results ↗](https://bettervoting.com/v9rhhr/results)** (election `v9rhhr`).
 

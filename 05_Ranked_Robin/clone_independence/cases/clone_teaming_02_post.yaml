@@ -14,7 +14,7 @@ election_description: >-
   MARGIN tiebreak (LH here, and the Equal Vote protocol). An engine that breaks a
   2-way tie by head-to-head instead (BetterVoting) elects C, not A1 — the attack
   fails there. Companion: clone_teaming_01_pre.yaml · lesson:
-  00_start_here/RCV_Ranked_Robin/rr_clone_independence.md
+  05_Ranked_Robin/concepts/rr_clone_independence.md
 paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1

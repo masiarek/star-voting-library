@@ -14,7 +14,7 @@ election_description: >-
   RankedRobin.ts: most wins -> head-to-head (2-way only) -> RANDOM. Here the two
   leaders tie each other head-to-head too, so BV would fall through to a random
   pick — un-freezable — which is why there is no BV election for this case. See
-  00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md.
+  05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
 
 voting_method: RankedRobin
 num_winners: 1

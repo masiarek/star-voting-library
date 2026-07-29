@@ -1,6 +1,6 @@
 # Choosing Among the Equal Vote Methods — STAR, Approval, Ranked Robin
 
-The [Equal Vote Coalition](https://www.equal.vote) endorses three single-winner methods, and this repo teaches all three: **[STAR](../STAR_Voting/STAR_start_here.md)** (score, then automatic runoff), **[Approval](../Approval_Voting/approval_voting.md)** (mark the ones you like, most marks win), and **[Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md)** (rank them, most head-to-head wins). All three clear the low bar that matters most — they end the [spoiler effect](spoiler_effect.md) and the [choose-one](plurality.md) status quo, and they let you support a favorite without betraying them the way [RCV-IRV](rcv_irv_vs_star.md) can.
+The [Equal Vote Coalition](https://www.equal.vote) endorses three single-winner methods, and this repo teaches all three: **[STAR](../STAR_Voting/STAR_start_here.md)** (score, then automatic runoff), **[Approval](../../04_Approval/concepts/approval_voting.md)** (mark the ones you like, most marks win), and **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (rank them, most head-to-head wins). All three clear the low bar that matters most — they end the [spoiler effect](spoiler_effect.md) and the [choose-one](plurality.md) status quo, and they let you support a favorite without betraying them the way [RCV-IRV](rcv_irv_vs_star.md) can.
 
 This page is **not** "which one is best." That answer depends on what you weigh, and reasonable people land differently. It's a map of the **tradeoffs** — where each method genuinely shines, and what each gives up — so you can choose with eyes open. It aims to be even-handed to all three; each has a companion *honest-limits* page, linked throughout.
 
@@ -46,13 +46,13 @@ Four arguments recur, and they are strongest as reasons to prefer STAR over **Ra
 
 Approval's case is the mirror image of STAR's #1 and #4: it is **the simplest method that fixes the spoiler effect.** One binary mark per candidate, the lowest possible cognitive load, an instantly auditable count, and precinct-summable. For a low-stakes poll, a first rollout, or an audience with zero appetite for voting theory, "simplest thing that works" is a strong argument.
 
-**What Approval gives up:** it captures neither order nor strength (a 5-star favorite and a barely-acceptable candidate get the same mark), it forces the awkward **approval-threshold** decision on every voter, it can elect a lowest-common-denominator winner over a majority favorite, and it too fails Later-No-Harm. Full list: [Approval's honest limits](../Approval_Voting/approval_honest_limits.md).
+**What Approval gives up:** it captures neither order nor strength (a 5-star favorite and a barely-acceptable candidate get the same mark), it forces the awkward **approval-threshold** decision on every voter, it can elect a lowest-common-denominator winner over a majority favorite, and it too fails Later-No-Harm. Full list: [Approval's honest limits](../../04_Approval/concepts/approval_honest_limits.md).
 
 ### Ranked Robin — the precision
 
 Ranked Robin's case is the one STAR's #2 argues *against*, and it's a serious one: when a **Condorcet winner exists, Ranked Robin elects it** — the candidate a majority prefers over every single rival, one-on-one. That is the least arbitrary, most defensible definition of "the people's choice," and it needs no talk of scores or intensity. If you believe pairwise majority rule is the gold standard, Ranked Robin delivers it directly.
 
-**What Ranked Robin gives up:** when there's **no** Condorcet winner (a [cycle](../RCV_Ranked_Robin/ranked_robin.md)), it needs a tiebreak and the "clear winner" evaporates; it ignores preference strength (the "milquetoast winner" critique STAR presses); its count is the hardest of the three to explain to a newcomer; and it also fails Later-No-Harm. Full list: [Ranked Robin's honest limits](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
+**What Ranked Robin gives up:** when there's **no** Condorcet winner (a [cycle](../../05_Ranked_Robin/concepts/ranked_robin.md)), it needs a tiebreak and the "clear winner" evaporates; it ignores preference strength (the "milquetoast winner" critique STAR presses); its count is the hardest of the three to explain to a newcomer; and it also fails Later-No-Harm. Full list: [Ranked Robin's honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
 
 ## A practitioner's perspective
 

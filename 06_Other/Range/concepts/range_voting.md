@@ -2,7 +2,7 @@
 
 *Every voter **grades each candidate** on a fixed scale (say 0–5); the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/) (pref_voting). · Family: [Approval](../../../00_start_here/Approval_Voting/approval_voting.md) · [STAR](../../../00_start_here/STAR_Voting) · [fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md).
+→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/) (pref_voting). · Family: [Approval](../../../04_Approval/concepts/approval_voting.md) · [STAR](../../../00_start_here/STAR_Voting) · [fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches *about* it rather than promoting it — it lives in [other methods](../../), not the numbered root folders. The honest comparison is the point.
 
@@ -35,7 +35,7 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 |---|---|
 | ✅ **Maximally expressive** — say *how much* you like each candidate, independently. | ⚠️ **Strategy-exposed.** A voter's rational play is often to give only max/min (exaggerate), which **collapses Range toward Approval**. |
 | ✅ **No vote-splitting / spoiler** in the choose-one sense — scoring a new candidate never lowers another's score. | ⚠️ **Not majoritarian.** A candidate a slim majority *strongly* prefers can lose to one a broad group *mildly* likes. Range fails the **Majority Criterion**. |
-| ✅ **Precinct-summable & simple to tally** — just add columns; none of RCV-IRV's round-by-round machinery. | ⚠️ **The scale / normalization problem.** Honest voters using the scale differently — or a shifted "where's my line" — changes results (the [approval-line](../../../00_start_here/Approval_Voting/approval_honest_limits.md) issue, one notch up). |
+| ✅ **Precinct-summable & simple to tally** — just add columns; none of RCV-IRV's round-by-round machinery. | ⚠️ **The scale / normalization problem.** Honest voters using the scale differently — or a shifted "where's my line" — changes results (the [approval-line](../../../04_Approval/concepts/approval_honest_limits.md) issue, one notch up). |
 | ✅ **Monotone** — more support never hurts a candidate (unlike IRV). | ⚠️ **Fails Later-No-Harm** — grading a compromise can cost your favorite. |
 | ✅ **Passes the [Equal Vote / balance test](../../../00_start_here/STAR_Voting/properties_and_limits/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md). |
 

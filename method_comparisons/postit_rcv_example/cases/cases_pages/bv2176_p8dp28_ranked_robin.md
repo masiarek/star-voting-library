@@ -2,7 +2,7 @@
 
 *Generated from [`bv2176_p8dp28_ranked_robin.yaml`](../bv2176_p8dp28_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Blue
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Blue
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/p8dp28) · **[results ↗](https://bettervoting.com/p8dp28/results)** (election `p8dp28`).
 
@@ -17,7 +17,7 @@ Purple beats Green 9-8, Green beats Blue 7-4, Blue beats Purple 10-9 (and
 Pink beats Purple 12-8) — so no candidate beats all others, and Green and
 Blue tie on record at 2-1 (Copeland 2). This is the documented spot where
 the two engines' tiebreak ladders part ways
-(00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), and BOTH stay
+(05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md), and BOTH stay
 deterministic here: BetterVoting's ladder (exactly 2 tied -> their own
 head-to-head) elects GREEN, who beats Blue 7-4 — BV-confirmed, freezable;
 the LH ladder below (total margin, then lot) elects BLUE (+5 vs Green's +4).
@@ -100,7 +100,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  Pink       1–2–0         1      -5  Purple
 
 Winner — Ranked Robin (RCV-RR): Blue
-   *** 2 candidates tie for the most wins (Green, Blue) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Green, Blue) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
 ```
 
 ### Full audit — preference matrix, Condorcet, and score distribution
@@ -114,7 +114,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    Note: the Copeland leaders (Green, Blue) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Blue is INSIDE the Smith set. ✓

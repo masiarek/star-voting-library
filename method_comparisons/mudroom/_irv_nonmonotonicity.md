@@ -29,7 +29,7 @@ A spatial-model study (**Ornstein & Norman, *Public Choice* 2014**) estimates a 
 Okay, fine — the fair version, because the repo insists and it's the honest one:
 
 - Monotonicity failures are **real but concentrated in close, near-three-way races**; most IRV elections never trip one.
-- The failure is **IRV-specific**, not "ranked voting" — [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) and other whole-ballot methods are monotonic.
+- The failure is **IRV-specific**, not "ranked voting" — [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) and other whole-ballot methods are monotonic.
 - **STAR isn't perfectly clean either** — it passes mono-raise but fails the stronger *mono-raise-delete* in lab constructions ([conceded here](../monotonicity/README.md)).
 - Both STAR and IRV beat Choose-One by a mile; the honest debate is between good options.
 

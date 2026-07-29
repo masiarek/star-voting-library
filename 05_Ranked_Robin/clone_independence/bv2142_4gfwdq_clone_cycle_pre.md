@@ -2,7 +2,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).
 
-Part 1 of the electowiki clone-independence pair (the "before"). It sets up the teaming attack in [BV2143](bv2143_9pr3wr_teaming_fails.md), and on its own it already shows LH and BetterVoting breaking a tie **differently**. Full lesson: [rr_clone_independence.md](../../00_start_here/RCV_Ranked_Robin/rr_clone_independence.md).
+Part 1 of the electowiki clone-independence pair (the "before"). It sets up the teaming attack in [BV2143](bv2143_9pr3wr_teaming_fails.md), and on its own it already shows LH and BetterVoting breaking a tie **differently**. Full lesson: [rr_clone_independence.md](../concepts/rr_clone_independence.md).
 
 ## The setup
 
