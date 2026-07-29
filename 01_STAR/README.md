@@ -2,11 +2,11 @@
 
 The library's headline method: **STAR** (Score Then Automatic Runoff) for one seat. You score every candidate **0–5**; the two highest-scoring candidates become finalists, and an **automatic runoff** gives each ballot's full vote to whichever finalist it scored higher. Two rounds, one ballot.
 
-This folder is the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [STAR Voting concepts folder](../00_start_here/STAR_Voting/README.md). New to STAR? Read those first:
+This folder is the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [STAR Voting concepts folder](concepts/README.md). New to STAR? Read those first:
 
-- **[STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md)** — the "why" before the "how."
-- **[The benefits of STAR](../00_start_here/STAR_Voting/getting_started/STAR_benefits.md)** — the case for it, in brief.
-- **[The second round — FAQ](../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md)** — what the automatic runoff does, and the objections answered honestly.
+- **[STAR — start here](concepts/STAR_start_here.md)** — the "why" before the "how."
+- **[The benefits of STAR](concepts/getting_started/STAR_benefits.md)** — the case for it, in brief.
+- **[The second round — FAQ](concepts/the_count/STAR_second_round_FAQ.md)** — what the automatic runoff does, and the objections answered honestly.
 
 ---
 
@@ -16,7 +16,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 ### Voting 101 — the basics (the ballot, the two rounds, the spoiler)
 
-1. **The ballot and the two rounds.** Five coworkers, three lunches — the compromise everyone likes wins, shown on real BetterVoting results → [the team-lunch example](_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md). *(The running example paired with [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md).)*
+1. **The ballot and the two rounds.** Five coworkers, three lunches — the compromise everyone likes wins, shown on real BetterVoting results → [the team-lunch example](_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md). *(The running example paired with [STAR — start here](concepts/STAR_start_here.md).)*
 2. **The broad compromise, again.** A second three-candidate case to make the pattern stick → [three candidates](_main/cases/cases_pages/02a_c3_b1_three-candidates.md).
 3. **How you're allowed to vote.** Bullet votes, equal scores, low-score "protest" ballots, the eight-style gallery → [ballot styles](_main/cases/cases_pages/03a_c3_b3_style-bullet-vote.md).
 4. **The headline lesson — top scorer ≠ winner.** STAR's single most important behavior, as a 3→9-candidate progression with a control case → **[Runoff Reversal](runoff_overturns_leader/)**.
@@ -33,7 +33,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 9. **The Majority Criterion** (and the "relaxed" version) → [the two 5-voter elections](majority_criterion/).
 10. **The "dead rung"** — when STAR's five-star tiebreaker can't fire and the tie falls to the lot → [the dead-rung case](tie_break_dead_rung/).
 11. **None of the Above** — a protest electorate where NOTA actually wins → [the NOTA election](none_of_the_above/).
-12. **The honest limits & the reversal debate** → [STAR's honest limits](../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [the second-round FAQ](../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md).
+12. **The honest limits & the reversal debate** → [STAR's honest limits](concepts/properties_and_limits/STAR_honest_limits.md) · [the second-round FAQ](concepts/the_count/STAR_second_round_FAQ.md).
 13. **Practice — predict, then peek.** Fourteen worked problems with hidden, tested solutions — reading drills, criteria probes (consistency, participation, later-no-harm), strategy gambles, the real 1994 Olympics ballots, a Ranked Robin cycle, build-your-own constructions, a multi-winner wing (Bloc vs proportional, STV transfers), and Approval's threshold dilemma → **[the exercises set](exercises/README.md)**.
 
 ---
@@ -68,9 +68,9 @@ Every file writes a full audit report to its `_tabulated.txt` sibling — watch 
 
 ## Related
 
-- **Concept docs:** [the STAR Voting concepts folder](../00_start_here/STAR_Voting/README.md) · the curriculum: [CURRICULUM.md](../00_start_here/CURRICULUM.md)
+- **Concept docs:** [the STAR Voting concepts folder](concepts/README.md) · the curriculum: [CURRICULUM.md](../00_start_here/CURRICULUM.md)
 - **STAR vs other methods** (RCV-IRV, Approval, Score): [the method-comparisons folder](../method_comparisons/)
 - **Multi-winner STAR:** [Bloc STAR](../02_STAR_Bloc/) · [Proportional STAR](../03_STAR_PR/)
-- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](../00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../00_start_here/STAR_Voting/reference/why_do_you_love_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
+- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](concepts/reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](concepts/reference/why_do_you_love_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
 
 # file: README.md

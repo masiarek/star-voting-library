@@ -2,7 +2,7 @@
 
 *Generated from [`bv215_26khr3_nota_wins.yaml`](../bv215_26khr3_nota_wins.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** None of the Above
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** None of the Above
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3`).
 

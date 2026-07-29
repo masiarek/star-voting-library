@@ -61,7 +61,7 @@ Four things this diagram is careful about, because popular versions of it usuall
 | Familiar from | A race: 1st, 2nd, 3rd | Amazon / movie **five-star** reviews |
 | Methods | RCV-IRV, STV, Condorcet (Ranked Robin), Borda | STAR, Score, Approval (0/1) |
 
-Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md).)
+Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md).)
 
 ## Why "ranked" is about the *data*, not just the ballot
 
@@ -73,7 +73,7 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 
 **Different winners from identical voters.** A candidate who wins under a ranked method can lose under a scored method on the very same electorate, because the two are measuring different things. Treating "ranked = scored" hides that.
 
-**Expressiveness — preference vs. support.** A rank carries order only; a score carries order *and* how strongly you feel. The sharpest way to see it: ballots `1,0,1,0` and `5,4,5,4` state the *same preference* but *opposite support*, yet as ranks they're the identical `A=C > B=D` — the ranking literally can't tell "I tolerate them" from "I love them." That gap is its own page: [**Preference vs. Support**](preference_vs_support.md). A broadly-liked compromise candidate can look weak on first-choice ranks yet clearly strong on scores — which is part of why IRV suffers [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and STAR doesn't.
+**Expressiveness — preference vs. support.** A rank carries order only; a score carries order *and* how strongly you feel. The sharpest way to see it: ballots `1,0,1,0` and `5,4,5,4` state the *same preference* but *opposite support*, yet as ranks they're the identical `A=C > B=D` — the ranking literally can't tell "I tolerate them" from "I love them." That gap is its own page: [**Preference vs. Support**](preference_vs_support.md). A broadly-liked compromise candidate can look weak on first-choice ranks yet clearly strong on scores — which is part of why IRV suffers [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) and STAR doesn't.
 
 **You can go one way but not the other.** Scores → ranks is easy (just read off the order). Ranks → scores is **impossible** without inventing information, because the strength was never collected.
 
@@ -90,10 +90,10 @@ A common point of confusion: **Ranked Robin allows equal rankings, so why isn't 
 - [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md) — why Approval & STAR sit *outside* the RCV family
 - [Grading as a rival primitive (301)](grading_as_a_rival_primitive.md) — Balinski & Laraki argue the preference *order* is the wrong primitive, not merely a lossy one
 - [Distortion (301)](../topics/distortion.md) — what the ordinal restriction costs, with theorems: the price of rankings is a factor of 3 in the realistic model, quadratic in the adversarial one
-- [Is RCV "simple"? (201)](../RCV_IRV/RCV_IRV_is_simple.md) — the five-star mental model vs. ordering strangers
+- [Is RCV "simple"? (201)](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) — the five-star mental model vs. ordering strangers
 - [Tabulation, step by step](../topics/tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
-- [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — how order-only ballots can bury a strong compromise candidate
-- [RCV vs. IRV vs. RCV-IRV — terminology](../RCV_IRV/RCV-IRV-confusing-name.md)
+- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — how order-only ballots can bury a strong compromise candidate
+- [RCV vs. IRV vs. RCV-IRV — terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
 
 ## Learn more
 

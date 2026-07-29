@@ -9,7 +9,7 @@ own methodology page (00_start_here/topics/simulate_utilities_not_ballots.md):
                           (slants/bias + personal noise, a few true-noise voters)
     layer 2 — EXPRESSION: render those utilities through a BALLOT STYLE — the
                           legal styles from the style gallery
-                          (00_start_here/STAR_Voting/STAR_ballot_voting_styles.md)
+                          (01_STAR/concepts/STAR_ballot_voting_styles.md)
                           plus deliberately compressed ranges (all-zeros-plus-0..2
                           "harsh graders", 3..5-only "gentle souls", 0-or-3..5
                           "cliff" voters, etc.)
@@ -679,7 +679,7 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
     desc.append(f"The electorate ({len(rows)} ballots, all individual rows):")
     desc.extend(census_lines(spec, census))
     desc.append("")
-    desc.append("Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/")
+    desc.append("Ballot styles in play (taxonomy: 01_STAR/concepts/")
     desc.append("STAR_ballot_voting_styles.md):")
     desc.extend(styles_used(census))
     desc.append("")

@@ -84,5 +84,5 @@ Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](cases/cases_
 ## Related
 
 - [BV `jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) — the single-winner original of this exact phenomenon.
-- [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+- [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md).
 - [#904](https://github.com/Equal-Vote/bettervoting/issues/904) — the export also labels `votingMethod: "STAR"`, not "Bloc STAR".

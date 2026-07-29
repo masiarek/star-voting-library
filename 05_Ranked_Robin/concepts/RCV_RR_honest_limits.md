@@ -2,7 +2,7 @@
 
 **One line:** Ranked Robin (RCV-RR) is a strong Condorcet method — it reads every rank, allows equal ranks, passes the Equal Vote, and has **no center squeeze** — but it inherits the two structural limits of ranked, Condorcet counting: it can hit a **cycle** with no clear winner, and it sees only **order, not strength**, so it can crown a bland compromise.
 
-→ Companion critical pages (parity across methods): [STAR's limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval's limits](../../04_Approval/concepts/approval_honest_limits.md) · [RCV-IRV fails the Equal Vote](../../00_start_here/RCV_IRV/RCV_IRV_equal_vote.md). What RCV-RR *is*: [Ranked Robin](ranked_robin.md). Curriculum: [301.4](../../00_start_here/CURRICULUM.md).
+→ Companion critical pages (parity across methods): [STAR's limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [Approval's limits](../../04_Approval/concepts/approval_honest_limits.md) · [RCV-IRV fails the Equal Vote](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md). What RCV-RR *is*: [Ranked Robin](ranked_robin.md). Curriculum: [301.4](../../00_start_here/CURRICULUM.md).
 
 ---
 

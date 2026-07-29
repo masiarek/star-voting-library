@@ -2,7 +2,7 @@
 
 *Generated from [`quorum_demo_c3_b6.yaml`](../quorum_demo_c3_b6.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Anna
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Anna
 
 ## Scenario
 

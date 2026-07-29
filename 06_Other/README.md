@@ -14,6 +14,6 @@ Range overview: [Range / Score Voting](Range/concepts/range_voting.md); engine: 
 
 Two lab-style subfolders round this folder out: [`simulations/`](simulations/README.md) — brute-force, utility-first method-comparison sims (FBC, runoff reversal, STAR-vs-Approval divergence) — and the [`ballot_style_lab/`](ballot_style_lab/README.md) — a seeded generator of random-but-HUMAN electorates (style-gallery renderings over slanted faction utilities: harsh 0–2 graders, gentle 3–5 souls, cliff voters, bullet brigades) frozen into ten stress cases with ties, cycles and reversals: six single-winner STAR plus a multi-winner wing (a same-ballots Bloc-vs-STAR-PR twin pair, a 2-seat quota stress, and a 7-candidate / 4-seat Bloc run).
 
-Most non-EVC material lives where it teaches best: inside [method comparisons](../method_comparisons/), where RCV-IRV and choose-one serve as the foil to the equal-vote methods. Concept docs: [RCV-IRV (Hare)](../00_start_here/RCV_IRV/RCV-IRV-Hare.md), [Borda](other_ranked_methods/borda.md), and [Agenda voting](other_ranked_methods/agenda_voting.md).
+Most non-EVC material lives where it teaches best: inside [method comparisons](../method_comparisons/), where RCV-IRV and choose-one serve as the foil to the equal-vote methods. Concept docs: [RCV-IRV (Hare)](RCV_IRV/concepts/RCV-IRV-Hare.md), [Borda](other_ranked_methods/borda.md), and [Agenda voting](other_ranked_methods/agenda_voting.md).
 
 # file: README.md

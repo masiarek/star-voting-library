@@ -62,7 +62,7 @@ There's also a structural reason this is the whole ballgame: with a **Condorcet 
 
 ## The example everyone uses (verified)
 
-The minimal abstract [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) — five ballots, three candidates. B is nobody's rallying point and everybody's acceptable second:
+The minimal abstract [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — five ballots, three candidates. B is nobody's rallying point and everybody's acceptable second:
 
 ```
 A>B>C
@@ -119,6 +119,6 @@ Note this example has **no cycle**, so it demonstrates the *shared* behavior of 
 - [Ranked Robin](ranked_robin.md) — the method, with the sibling-branding note
 - [Cycle resolution](cycle_resolution.md) — where the two tiebreaks actually differ
 - [Ranked Robin's honest limits](RCV_RR_honest_limits.md) — what a ranked ballot can't see, for either brand
-- [Center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) — what both methods avoid and IRV doesn't
+- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — what both methods avoid and IRV doesn't
 
 *Sources: [betterchoices.vote/consensus-choice](https://www.betterchoices.vote/consensus-choice) and [/faqs](https://www.betterchoices.vote/faqs) (advocacy — the source for their brand and rule, not a neutral referee); [equal.vote/ranked_robin](https://www.equal.vote/ranked_robin) (likewise, the other camp). Both retrieved 2026-07-23. Neutral ground for the family: [Wikipedia — Condorcet method](https://en.wikipedia.org/wiki/Condorcet_method).*

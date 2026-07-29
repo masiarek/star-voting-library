@@ -39,7 +39,7 @@ Step 3  → A beats B, 35 to 25   → A wins
 
 ## What 3-2-1 is good at
 
-- **No center squeeze** — the finalist step is by fewest-Bad, not fewest-first-choices, so a broadly-liked centrist isn't eliminated for lacking first-place love the way [IRV](../RCV_IRV/RCV_IRV_center_squeeze.md) does.
+- **No center squeeze** — the finalist step is by fewest-Bad, not fewest-first-choices, so a broadly-liked centrist isn't eliminated for lacking first-place love the way [IRV](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) does.
 - **Non-slippery chicken** — like STAR, a few defectors can't start an avalanche (a final head-to-head means small defections don't snowball).
 - **Explicit dark-horse and clone guards** — where STAR resists dark horse *implicitly* (via support-reading), 3-2-1 bolts on rules that do it explicitly.
 - **Genuinely explainable** — "your worst candidate gets knocked out before the finals" is an intuitive, even chantable pitch; several people find it the easiest good method to explain across the aisle.
@@ -72,4 +72,4 @@ Neither is strictly better. **STAR** is finer-grained and structurally simpler (
 
 - [3-2-1 voting — electowiki](https://electowiki.org/wiki/3-2-1_voting) — the clearest mechanics reference for this niche/branded method (**advocacy-adjacent**: electowiki leans reformer, and 3-2-1 is a Center for Election Science proposal — cite it for *how it works*, not for verdicts).
 - Jameson Quinn, *The Six Voting Molochs* — where 3-2-1 is proposed as the non-slippery fix to the [chicken dilemma](../../method_comparisons/chicken_dilemma/); Quinn is CES-aligned (Approval/3-2-1), which is exactly why his praise of methods he *didn't* design carries weight.
-- Contrast within this library: [STAR](../STAR_Voting/STAR_start_here.md) · [Approval](../../04_Approval/concepts/approval_voting.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) · glossary [`3-2-1 voting`](../GLOSSARY.md).
+- Contrast within this library: [STAR](../../01_STAR/concepts/STAR_start_here.md) · [Approval](../../04_Approval/concepts/approval_voting.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) · glossary [`3-2-1 voting`](../GLOSSARY.md).

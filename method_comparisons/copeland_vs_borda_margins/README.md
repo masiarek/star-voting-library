@@ -1,6 +1,6 @@
 # Margins matter — one electorate, four different answers
 
-*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../05_Ranked_Robin/concepts/ranked_robin.md) throws the margins away and ties all three. [Borda](../../06_Other/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../00_start_here/RCV_IRV/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
+*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../05_Ranked_Robin/concepts/ranked_robin.md) throws the margins away and ties all three. [Borda](../../06_Other/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`, Test ID **BV2251** — four races on the same 12 ballots: Choose-One, STAR, RCV-IRV, Ranked Robin).
 
@@ -44,11 +44,11 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 | Method | Winner | What it is looking at |
 |---|---|---|
 | [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | **Almond** | first choices only (5 / 3 / 4) |
-| [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | **Cocoa** | first choices, then transfers |
+| [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | **Cocoa** | first choices, then transfers |
 | [Borda](../../06_Other/other_ranked_methods/borda.md) | **Berry** | every margin, weighted |
 | [Copeland (raw)](../../05_Ranked_Robin/concepts/ranked_robin.md) | **nobody** — 3-way tie | who won each pair, not by how much |
 | [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) (LH) | **Berry** | Copeland, then total margin as tiebreak |
-| [STAR](../../00_start_here/STAR_Voting/README.md) (ranks → 5/3/0) | **Almond** | Borda's scoring round, then a head-to-head |
+| [STAR](../../01_STAR/concepts/README.md) (ranks → 5/3/0) | **Almond** | Borda's scoring round, then a head-to-head |
 
 **RCV-IRV eliminates the Borda winner first.** Berry has the fewest first choices (3), so instant runoff drops the flavour that wins every margin-weighted measure before the count really begins. All three Berry ballots transfer intact to Cocoa, which wins 7–5. Full round-by-round → [`margins_irv.md`](cases/cases_pages/margins_irv.md).
 

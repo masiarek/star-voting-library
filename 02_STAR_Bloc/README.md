@@ -2,7 +2,7 @@
 
 Filling **several seats at once** — a city council, a board, a committee — with the same expressive STAR ballot. Bloc STAR is the *majoritarian* multi-winner method: it asks "who does the majority most want?" for every seat. Its proportional cousin, [STAR-PR](../03_STAR_PR/), instead tries to give every faction its fair share. Which you want depends on the body you're electing — this folder teaches the majoritarian one and, just as importantly, **when not to use it**.
 
-New to STAR itself? Learn the single-winner method first — [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md) — because Bloc STAR is just that method, run once per seat.
+New to STAR itself? Learn the single-winner method first — [STAR — start here](../01_STAR/concepts/STAR_start_here.md) — because Bloc STAR is just that method, run once per seat.
 
 ---
 
@@ -69,7 +69,7 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 
 - **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../03_STAR_PR/concepts/)
 - **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/) · [a six-method governance election](../method_comparisons/pets_governance/)
-- **Single-winner foundation:** [STAR — start here](../00_start_here/STAR_Voting/STAR_start_here.md) · [the benefits of STAR](../00_start_here/STAR_Voting/getting_started/STAR_benefits.md)
-- **Conversation scripts:** [What's so good about STAR](../00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
+- **Single-winner foundation:** [STAR — start here](../01_STAR/concepts/STAR_start_here.md) · [the benefits of STAR](../01_STAR/concepts/getting_started/STAR_benefits.md)
+- **Conversation scripts:** [What's so good about STAR](../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
 
 # file: README.md

@@ -25,8 +25,8 @@ Why: any candidate to the median's left is beaten by one just to their right (a 
 Because the spatial model tells you *who the Condorcet winner is* (the center), it tells you which methods will find them and which will miss:
 
 - **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) / Condorcet methods** elect the median candidate by construction — they're built to find the beats-all winner.
-- **[STAR](../STAR_Voting/STAR_start_here.md)** usually elects near the median too: the broadly-liked center piles up scores and wins the runoff.
-- **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) can *squeeze* the center out.** A centrist is many voters' *second* choice but few voters' *first*, so IRV eliminates them early — even though they'd beat everyone head-to-head. That's **[center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)**, and it's fundamentally a *spatial* phenomenon: you can only see it clearly on the map. (Alaska 2022 is the real-world case.)
+- **[STAR](../../01_STAR/concepts/STAR_start_here.md)** usually elects near the median too: the broadly-liked center piles up scores and wins the runoff.
+- **[RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) can *squeeze* the center out.** A centrist is many voters' *second* choice but few voters' *first*, so IRV eliminates them early — even though they'd beat everyone head-to-head. That's **[center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)**, and it's fundamentally a *spatial* phenomenon: you can only see it clearly on the map. (Alaska 2022 is the real-world case.)
 - **[Plurality](plurality.md)** splits one side and hands it to the other — the [spoiler effect](spoiler_effect.md), also easiest to see spatially.
 
 So "which method elects the compromise vs. squeezes it" isn't a matter of opinion in the spatial model — it's geometry.
@@ -63,6 +63,6 @@ So: use the map to build intuition and to *predict*, then check the prediction a
 
 - [Election simulation models](election_simulation_models.md) — the full menu (spatial is model **B**), with the math prerequisites
 - [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — why you sample spatial *utilities* and derive ballots
-- [Center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) · [What makes a good winner?](what_makes_a_good_winner.md) — where the spatial picture pays off
+- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [What makes a good winner?](what_makes_a_good_winner.md) — where the spatial picture pays off
 - [Distortion](distortion.md) — the theory that takes this model literally: the triangle inequality caps how much a ranked ballot can lose (3×, exactly)
 - External: [median voter theorem](https://en.wikipedia.org/wiki/Median_voter_theorem) · [Ka-Ping Yee's voting-simulation diagrams](http://zesty.ca/voting/) · [cdsmith, *Simulating Elections with Spatial Voter Models*](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390)

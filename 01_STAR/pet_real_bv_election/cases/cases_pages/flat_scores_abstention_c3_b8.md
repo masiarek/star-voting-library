@@ -2,7 +2,7 @@
 
 *Generated from [`flat_scores_abstention_c3_b8.yaml`](../flat_scores_abstention_c3_b8.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Banana
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Banana
 
 ## Scenario
 
@@ -27,7 +27,7 @@ flat_scores_abstention_c3_b8_bv_export.json. Full write-up:
 small_case_abstention_lesson.md.
 
 BetterVoting issue: https://github.com/Equal-Vote/bettervoting/issues/1407
-How to read this report (LH): 00_start_here/STAR_reporting/reporting_LH/
+How to read this report (LH): 01_STAR/concepts/reporting/reporting_LH/
 The reporting options used below: STAR_reporting/reporting_LH/options.md
 
 ## Ballots

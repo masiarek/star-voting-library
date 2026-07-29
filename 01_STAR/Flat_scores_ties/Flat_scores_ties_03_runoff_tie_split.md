@@ -2,7 +2,7 @@
 
 **Level 201 · the other flavor of runoff tie.** Unlike case 02 (everyone *equal*), here two voters have **real, opposing preferences**: one prefers Athens, one prefers Berlin. The two finalists are chosen cleanly, then the runoff splits **1–1** and the cascade decides: highest score (tied) → most 5s (tied) → **lot number** → Athens.
 
-→ [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · BV: pre-published lot rule [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063), tie-break export [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371) (closed) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ [STAR Tie-Breaking](../concepts/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../concepts/reporting/reporting_ties.md) · BV: pre-published lot rule [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063), tie-break export [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371) (closed) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

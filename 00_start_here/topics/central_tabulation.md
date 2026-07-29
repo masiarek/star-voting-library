@@ -11,9 +11,9 @@
 - **Precinct (local) count:** each precinct tallies its own ballots into a small fixed-size table — score totals, approval counts, a [pairwise matrix](pairwise_counting.md) — publishes it, and the jurisdiction **adds the tables**. The ballots never have to leave. Any method whose count works this way is [**summable**](summability/).
 - **Central tabulation:** the ballots themselves — or their electronic images, the **cast-vote records (CVRs)**, one record per ballot listing everything that voter marked — must be **gathered in one place** and run through one count, because no precinct subtotal can stand in for them.
 
-Which one a jurisdiction *needs* is a property of the voting method's count. IRV (and STV, and every sequential-elimination variant) is the prominent method that structurally **requires** central tabulation: who gets eliminated in round 2 depends on the *combined* round-1 totals of every precinct, so the count can't start until every ballot's full ranking is in one system. The worked two-district demonstration — B wins both districts, B is eliminated when they merge — is on [IRV is not summable](../RCV_IRV/RCV_IRV_lack_of_summability.md); this page is about what the centralization itself costs.
+Which one a jurisdiction *needs* is a property of the voting method's count. IRV (and STV, and every sequential-elimination variant) is the prominent method that structurally **requires** central tabulation: who gets eliminated in round 2 depends on the *combined* round-1 totals of every precinct, so the count can't start until every ballot's full ranking is in one system. The worked two-district demonstration — B wins both districts, B is eliminated when they merge — is on [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md); this page is about what the centralization itself costs.
 
-The methods that *don't* need it publish an artifact that adds: [STAR](../STAR_Voting/properties_and_limits/STAR_summability.md) (score totals + the pairwise matrix), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) (the pairwise matrix alone — the *same ranked ballots* IRV must pool), Approval and Plurality (one count per candidate).
+The methods that *don't* need it publish an artifact that adds: [STAR](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) (score totals + the pairwise matrix), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) (the pairwise matrix alone — the *same ranked ballots* IRV must pool), Approval and Plurality (one count per candidate).
 
 ## Cost 1 — a single point of failure
 
@@ -46,7 +46,7 @@ And the *results themselves* are slower and murkier along the way: partial count
 
 **And real errors amplify the story.** When a central count does stumble — NYC's 135,000 test ballots, Alameda's misconfiguration — the error is singular and big, so it becomes a national talking point that damages confidence far beyond its actual scope (neither incident changed a properly-certified final statewide outcome; each is still cited as evidence that "the machines can't be trusted"). Distributed counts make distributed mistakes; central counts make headlines.
 
-**The fair counterpoint.** Centralization is not inherently fatal to trust. Australia has run centralized preferential (IRV) counts for over a century, largely by hand at division counting centres with party scrutineers watching every transfer — it works, because the trust infrastructure and norms grew up around it ([Australia case study](../RCV_IRV/case_studies/RCV_IRV_australia.md)). The US-specific problem is *sequencing*: deploying a structurally central, software-run count into an environment that is already low-trust and heavily litigated — giving up the distributed, anyone-can-check property at exactly the moment it is most valuable.
+**The fair counterpoint.** Centralization is not inherently fatal to trust. Australia has run centralized preferential (IRV) counts for over a century, largely by hand at division counting centres with party scrutineers watching every transfer — it works, because the trust infrastructure and norms grew up around it ([Australia case study](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_australia.md)). The US-specific problem is *sequencing*: deploying a structurally central, software-run count into an environment that is already low-trust and heavily litigated — giving up the distributed, anyone-can-check property at exactly the moment it is most valuable.
 
 ## The honest caveats
 
@@ -59,10 +59,10 @@ And the *results themselves* are slower and murkier along the way: partial count
 ## Cross-references
 
 - [Summability topic hub](summability/) — the mathematical property whose absence forces central tabulation (STAR / Ranked Robin / IRV side by side, and the multi-winner seat-capping story)
-- [IRV is not summable](../RCV_IRV/RCV_IRV_lack_of_summability.md) — *why* no precinct subtotal exists, with the two-districts worked example this page leans on
-- [STAR is summable](../STAR_Voting/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) — the methods that keep the local count
+- [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) — *why* no precinct subtotal exists, with the two-districts worked example this page leans on
+- [STAR is summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) — the methods that keep the local count
 - [Pairwise counting — every ballot is a tiny matrix](pairwise_counting.md) — the artifact precincts publish instead of shipping ballots
 - [What makes a voting method good?](what_makes_a_voting_method_good.md) — where auditability and summability sit among the criteria
-- [Is RCV "simple"?](../RCV_IRV/RCV_IRV_is_simple.md) — the ballot-vs-count distinction this page's costs hang off ("the ballot is simple; the count needs a computer and a central tally")
-- [Australia case study](../RCV_IRV/case_studies/RCV_IRV_australia.md) — a century of centralized preferential counting that *does* hold public trust, and why that took its own infrastructure
+- [Is RCV "simple"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) — the ballot-vs-count distinction this page's costs hang off ("the ballot is simple; the count needs a computer and a central tally")
+- [Australia case study](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_australia.md) — a century of centralized preferential counting that *does* hold public trust, and why that took its own infrastructure
 - Glossary: [`summability`, `preference matrix`](../GLOSSARY.md)

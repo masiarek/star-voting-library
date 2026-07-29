@@ -2,7 +2,7 @@
 
 *Generated from [`center_squeeze_voteline_1d.yaml`](../center_squeeze_voteline_1d.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Green
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Green
 
 ## Scenario
 
@@ -14,7 +14,7 @@ FEWEST first choices (31.3%), so RCV-IRV eliminates Green first and YELLOW wins
 the runoff 65-35. Plurality also picks Yellow. Approval / Borda / Condorcet /
 Ranked Robin all pick Green. Scores are a reasonable 1-D spatial model (own side
 5, adjacent center 3, far side 0-1). Weights are percentages x10. Level 201/301.
-Lesson: 00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md
+Lesson: 06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md
 
 ## Ballots
 

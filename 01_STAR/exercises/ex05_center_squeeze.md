@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6bry7c) · **[results ↗](https://bettervoting.com/6bry7c/results)** (election `6bry7c`, Test ID BV2192 — STAR, RCV-IRV, and Ranked Robin races on the same opinions: the squeeze happens live).
 
-**You practice:** the **[center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)** mechanism — predicting *when* first-choice elimination discards a consensus candidate — and how a scoring round reads the support that first choices can't see.
+**You practice:** the **[center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)** mechanism — predicting *when* first-choice elimination discards a consensus candidate — and how a scoring round reads the support that first choices can't see.
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; its `expected_winners` key is regression-tested, and the `_tabulated` mirror is the full audit report.
 
@@ -89,7 +89,7 @@ Source: [ex05_center_squeeze.yaml](cases/ex05_center_squeeze.yaml). Full audit r
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast); the mechanism it drills is the classic center squeeze — concept home [RCV-IRV center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md), live comparison set [method_comparisons/center_squeeze](../../method_comparisons/center_squeeze/README.md) (BV2137).
+**Where this comes from.** Original to this repo (ballots and cast); the mechanism it drills is the classic center squeeze — concept home [RCV-IRV center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md), live comparison set [method_comparisons/center_squeeze](../../method_comparisons/center_squeeze/README.md) (BV2137).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

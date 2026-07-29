@@ -2,11 +2,11 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (BV2183, election `dfw8rj`).
 
-> **Read this fairly.** This is a *deliberately constructed* worst case, built to show the **ceiling** of RCV-IRV ballot exhaustion under a ranking cap — **not** a claim that real elections look like this. Real exhaustion runs milder (roughly 10–27%; see the [real rates](../../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md#how-common-is-it-real-elections)). The point is what the *mechanism permits*, and that the cause is the **ballot cap**, not the voters. It sits in [`paradoxes_and_whoops/`](README.md) under the same [reading-these-fairly](reading_these_fairly.md) discipline as the Felsenthal/Nurmi cases.
+> **Read this fairly.** This is a *deliberately constructed* worst case, built to show the **ceiling** of RCV-IRV ballot exhaustion under a ranking cap — **not** a claim that real elections look like this. Real exhaustion runs milder (roughly 10–27%; see the [real rates](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md#how-common-is-it-real-elections)). The point is what the *mechanism permits*, and that the cause is the **ballot cap**, not the voters. It sits in [`paradoxes_and_whoops/`](README.md) under the same [reading-these-fairly](reading_these_fairly.md) discipline as the Felsenthal/Nurmi cases.
 
 ## The setup
 
-50 voters, five candidates — but the ballot **caps every voter at 2 rankings** (like a tight [ranking limit](../../00_start_here/RCV_IRV/forced_vs_voluntary_exhaustion.md); NYC caps at 5, Minneapolis at 3). Three minor candidates (Cleo, Dev, Eli) form a rotating bloc; their voters spend both of their allowed ranks on minor candidates.
+50 voters, five candidates — but the ballot **caps every voter at 2 rankings** (like a tight [ranking limit](../../06_Other/RCV_IRV/concepts/forced_vs_voluntary_exhaustion.md); NYC caps at 5, Minneapolis at 3). Three minor candidates (Cleo, Dev, Eli) form a rotating bloc; their voters spend both of their allowed ranks on minor candidates.
 
 ```
 15:Ada>Cleo      ← two real contenders, Ada & Ben, lead on first choices
@@ -27,7 +27,7 @@ FINAL     Ada 15 (Elected) | Ben 14 | Blank Votes 21
 
 **Winner: Ada, 15 to 14 — a margin of one.** And **21 ballots (42%) were exhausted** — *more than the winner's own 15 votes.* Ada's "majority" (15 of the 29 still active) is really **30% of the 50 voters**. The margin is 1; the exhaustion is 21.
 
-The kicker: **lift the 2-rank cap** — let those 21 voters rank all five candidates — and in single-winner IRV *no ballot can exhaust at all*, because there is always a continuing candidate. The exhaustion here is manufactured entirely by the **ballot design**, not by anything the voters did. That's [**forced** exhaustion](../../00_start_here/RCV_IRV/forced_vs_voluntary_exhaustion.md), the involuntary kind — the voters were as expressive as the rules allowed.
+The kicker: **lift the 2-rank cap** — let those 21 voters rank all five candidates — and in single-winner IRV *no ballot can exhaust at all*, because there is always a continuing candidate. The exhaustion here is manufactured entirely by the **ballot design**, not by anything the voters did. That's [**forced** exhaustion](../../06_Other/RCV_IRV/concepts/forced_vs_voluntary_exhaustion.md), the involuntary kind — the voters were as expressive as the rules allowed.
 
 ## BetterVoting confirms it
 
@@ -51,7 +51,7 @@ Full report: [`…_tabulated.txt`](cases/cases_tabulated/bv2183_dfw8rj_forced_ex
 
 ## Related
 
-- [Forced vs. Voluntary Exhaustion](../../00_start_here/RCV_IRV/forced_vs_voluntary_exhaustion.md) — the concept this case makes concrete
-- [Exhausted (Inactive) Ballots](../../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md) — the full picture, including the **real** election rates
+- [Forced vs. Voluntary Exhaustion](../../06_Other/RCV_IRV/concepts/forced_vs_voluntary_exhaustion.md) — the concept this case makes concrete
+- [Exhausted (Inactive) Ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — the full picture, including the **real** election rates
 - [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — reads every ballot in every pair, so it never exhausts
 - [Reading these paradoxes fairly](reading_these_fairly.md)

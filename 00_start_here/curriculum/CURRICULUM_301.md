@@ -19,20 +19,20 @@
 ## 301.2 — Favorite betrayal: does *only* "RCV" avoid it?
 
 - **Key terms:** Favorite-Betrayal Criterion, Later-No-Harm, center squeeze, the incompatibility theorem.
-- **Material:** [favorite betrayal (301)](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md). Companion exercise: [Later-no-harm, both readings (ex10)](../../01_STAR/exercises/ex10_later_no_harm.md) — the criterion IRV keeps and STAR trades, live in one election.
+- **Material:** [favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md). Companion exercise: [Later-no-harm, both readings (ex10)](../../01_STAR/exercises/ex10_later_no_harm.md) — the criterion IRV keeps and STAR trades, live in one election.
 - **The point:** neither STAR nor RCV-IRV is FBC-proof; RCV-IRV fails it structurally ([Alaska '22](../../method_comparisons/alaska_2022/alaska_301.md)), STAR only in lab constructions.
 
 ## 301.3 — "Are equal-score votes discounted?"
 
 - **Key terms:** Equal Support / No Preference, exhausted vs no-preference.
-- **Material:** [Aren't equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md); drill: [The vanishing votes (ex07)](../../01_STAR/exercises/ex07_vanishing_votes.md).
-- **In the result display:** [Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
+- **Material:** [Aren't equal-score votes discounted?](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md); demo [equal_support_runoff_demo](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md); drill: [The vanishing votes (ex07)](../../01_STAR/exercises/ex07_vanishing_votes.md).
+- **In the result display:** [Two Denominators, One Winner](../../01_STAR/concepts/the_count/runoff_percentages.md) shows exactly where Equal Support lands — counted in full in the score round, then set aside to form the "voters with a preference" denominator.
 
 ## 301.4 — The honest limits & theory
 
 - **Key terms:** Gibbard / Gibbard–Satterthwaite, strategy resistance vs proofness, Condorcet efficiency, Test of Balance.
-- **Material:** [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md); "resistant, not proof." Worked gamble: [Bullet voting backfires (ex06)](../../01_STAR/exercises/ex06_bullet_backfire.md).
-- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../RCV_IRV/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
+- **Material:** [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md); "resistant, not proof." Worked gamble: [Bullet voting backfires (ex06)](../../01_STAR/exercises/ex06_bullet_backfire.md).
+- **The Equal Vote / Test of Balance:** [The Equally Weighted Vote](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) (why STAR passes) and [RCV-IRV Fails the Equal Vote Criterion](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) (why RCV-IRV fails — stated fairly, with the honest caveats).
 - **Deeper math:** [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) (tournaments, Smith/Schwartz, Arrow & Gibbard–Satterthwaite).
 - **Approval's limits, from the literature rather than from STAR advocates:** [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md) — the six standard arguments and five standard criticisms (**two of the five don't survive scrutiny** — "unfair to voters who approve more" dies on a symmetry argument), the **three incompatible readings of what "approve" means**, and why the strategy question is downstream of that choice rather than of any simulation. Ends on *Approval = Borda = Condorcet* under **dichotomous preferences** — true, elegant, and shown in five runnable ballots not to transfer to an election where voters compress their own rankings.
 - **The generalized Condorcet winner:** [The Smith set — the smallest club that beats everyone outside it](../topics/smith_set.md) — when a cycle erases the Condorcet winner, the smallest set that beats everyone outside it is the principled "still in contention" list; the Smith-efficiency scorecard (Ranked Robin ✅, Minimax ❌, STAR ❌ by design), the Smith//X constructions, and ISDA — worked on a runnable 4-candidate cycle ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md)).
@@ -45,7 +45,7 @@
 ## 301.6 — When Condorcet, Score, and Runoff disagree (and how often)
 
 - **Objective:** "Winner" isn't one thing — three reasonable definitions can name three different candidates; STAR targets the runoff winner *by design* (it is not a Condorcet method).
-- **Material:** [three winner notions](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)). Exercises: [Lillehammer 1994 (ex04)](../../01_STAR/exercises/ex04_olympics_1994.md) — Score vs STAR on real Olympic ballots — and the construction capstone [Build your own reversal (ex08)](../../01_STAR/exercises/ex08_build_a_reversal.md).
+- **Material:** [three winner notions](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md); builds on the 101.4 Runoff Reversal lesson ([`01_STAR/runoff_overturns_leader/`](../../01_STAR/runoff_overturns_leader/)). Exercises: [Lillehammer 1994 (ex04)](../../01_STAR/exercises/ex04_olympics_1994.md) — Score vs STAR on real Olympic ballots — and the construction capstone [Build your own reversal (ex08)](../../01_STAR/exercises/ex08_build_a_reversal.md).
 - **Frequency:** [`06_Other/simulations/`](../../06_Other/simulations/) measures how often score and runoff diverge — and shows the rate swings with the model, the electorate size, and the tie rule. **Lesson: never quote a rate without the model + size + tie split.**
 - **Ranked Robin vs. Condorcet:** [Ranked Robin vs. Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) — why a cycle leaves "the Condorcet winner" blank while Ranked Robin still elects one.
 - **Which Condorcet rule, though?** For three candidates, mostly a non-question: [the famous Condorcet methods collapse into one](../topics/condorcet/three_candidate_collapse.md) (maximin = Ranked Pairs = Schulze = Kemeny = Dodgson = Young), and the one *best-justified* against the variable-electorate paradoxes is the maximin family — [Brandt, Dong & Peters (2024)](../topics/condorcet/three_candidate_maximin.md).
@@ -54,7 +54,7 @@
 
 - **Objective:** untangle the overloaded RCV-IRV term — separate the fair, voter-side cases from the method-caused ones a fully and correctly ranked ballot still suffers.
 - **Key terms:** ballot exhaustion, inactive ballot, ranking limit, majority-of-remaining-ballots, forced vs voluntary exhaustion.
-- **Material:** [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) · [forced vs voluntary exhaustion](../RCV_IRV/forced_vs_voluntary_exhaustion.md); contrast [are equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md).
+- **Material:** [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) · [forced vs voluntary exhaustion](../../06_Other/RCV_IRV/concepts/forced_vs_voluntary_exhaustion.md); contrast [are equal-score votes discounted?](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md).
 - **The point:** exhaustion is **IRV**-specific (Ranked Robin reads every rank); STAR counts every ballot in both rounds, so nothing exhausts.
 
 ## 301.8 — Scale granularity can flip the winner
@@ -62,7 +62,7 @@
 - **Objective:** a score scale's *resolution* (0–5 vs 0–9…) is a modeling choice; when the top contenders are bunched, compressing the scale can move a **finalist** and flip the **STAR** winner — even though rescaling never reorders any voter's own preferences.
 - **Key terms:** score resolution / granularity, finalist selection, near-tie, quantization.
 - **Material:** [Scale granularity can flip the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md); case [`rrv_sample_c15_b13_three-parties`](../../03_STAR_PR/_main/cases/rrv_sample_c15_b13_three-parties.yaml) (0–5 → Orange5, 0–9 → Orange1).
-- **Companion — "unorthodox STAR":** [Running STAR on a scale wider than 0–5](../STAR_Voting/properties_and_limits/STAR_nonstandard_scale.md) — the 0–5 range is a *convention*, not a rule; which round the scale touches (finalists, never the runoff), the honest tradeoff, and how to make LH tabulate a 0–10 STAR election (`maximum_score=N`).
+- **Companion — "unorthodox STAR":** [Running STAR on a scale wider than 0–5](../../01_STAR/concepts/properties_and_limits/STAR_nonstandard_scale.md) — the 0–5 range is a *convention*, not a rule; which round the scale touches (finalists, never the runoff), the honest tradeoff, and how to make LH tabulate a 0–10 STAR election (`maximum_score=N`).
 - **The point:** a *fragile, mapping-dependent* divergence — present both counts, never quote one.
 
 ## 301.9 — How the simulations are built (VSE's foundation)
@@ -83,7 +83,7 @@
 
 - **Objective:** practice checking a voting-method claim against a countable election — quote it verbatim, build the smallest electorate that tests it, tabulate.
 - **Material:** [FairVote's Condorcet article, claim-checked](../topics/condorcet/fairvote_condorcet_claim_check.md); the steelman companion [Edelman's "Myth of the Condorcet Winner," tabulated](../topics/condorcet/edelman_condorcet_myth.md).
-- **The point:** steelman first — the "hated least ≠ liked most" point is *true* (the cardinal critique, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+- **The point:** steelman first — the "hated least ≠ liked most" point is *true* (the cardinal critique, which cuts against IRV too). The habit generalizes to pro-STAR literature; see [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
 
 ## 301.12 — Participation: can showing up ever hurt you?
 
@@ -96,7 +96,7 @@
 
 - **Objective:** the consistency criterion (join-consistency / reinforcement) — if every district separately elects X, must the combined electorate? Point-summing rules must, by arithmetic; STAR (like RCV-IRV, top-two, and Condorcet methods) need not, because "who advances to the runoff" is not additive.
 - **Key terms:** consistency / reinforcement, runoff pairing, precinct-summable (the contrast).
-- **Material:** the predict-then-peek exercise [Two districts, one mayor](../../01_STAR/exercises/ex01_two_districts.md) (live on BetterVoting as BV2188–90); catalog: [the multiple-districts (reinforcement) paradox](../voting_paradoxes/multiple_districts.md), whose Felsenthal trio (BV2147–49) is the IRV-side sibling; contrast [STAR Is Summable](../STAR_Voting/properties_and_limits/STAR_summability.md) — the *tallies* add across precincts even though the *winner inference* doesn't.
+- **Material:** the predict-then-peek exercise [Two districts, one mayor](../../01_STAR/exercises/ex01_two_districts.md) (live on BetterVoting as BV2188–90); catalog: [the multiple-districts (reinforcement) paradox](../voting_paradoxes/multiple_districts.md), whose Felsenthal trio (BV2147–49) is the IRV-side sibling; contrast [STAR Is Summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) — the *tallies* add across precincts even though the *winner inference* doesn't.
 - **Run it across every method:** [Reinforcement paradox — both halves pick Ada, the whole picks Cara](../../method_comparisons/reinforcement_paradox/README.md) — the same 9 voters counted five ways: Score/Approval/Plurality keep the promise (additive), Ranked Robin can't, and STAR's *scoring round* keeps it but the *runoff* breaks it (a live Runoff Reversal). The concrete instance of a theorem: [Brandt, Dong & Peters (2024)](../topics/condorcet/three_candidate_maximin.md) prove **every** Condorcet method must show this paradox once there are ≥ 8 voters.
 - **The point:** "she carried both districts and still lost" is a headline risk, not a tabulation risk — no one tallies a citywide seat district-by-district. Carry the worked answer.
 

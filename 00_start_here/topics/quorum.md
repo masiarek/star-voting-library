@@ -2,7 +2,7 @@
 
 **One line:** **quorum** is a *turnout* threshold, separate from who wins: enough of the **eligible electorate** must participate for the election to count. It's **opt-in** (set `eligible_voters` and/or `quorum`), and a **cast abstention counts toward it** — showing up and turning in a blank ballot is still participation.
 
-→ What an abstention is: [`GLOSSARY`](../GLOSSARY.md) · the abstention vs Equal Support distinction: [the abstention lesson](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md) · how results are reported: [STAR Reporting](../STAR_reporting).
+→ What an abstention is: [`GLOSSARY`](../GLOSSARY.md) · the abstention vs Equal Support distinction: [the abstention lesson](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md) · how results are reported: [STAR Reporting](../../01_STAR/concepts/reporting).
 
 ---
 
@@ -57,6 +57,6 @@ Don't confuse these (they answer different questions):
 |---|---|
 | **Eligible voters** | how many *could* vote (the electorate) — the quorum denominator |
 | **Ballots cast** (incl. abstentions) | how many *did* participate — the quorum numerator |
-| **Voters with a preference** | of those, how many picked between the two finalists — the [runoff percentage](../STAR_Voting/the_count/runoff_percentages.md) denominator |
+| **Voters with a preference** | of those, how many picked between the two finalists — the [runoff percentage](../../01_STAR/concepts/the_count/runoff_percentages.md) denominator |
 
-An **abstention** drops out of the *runoff* denominator (no preference) but stays in the *quorum* numerator (still participated). That's the whole reason the two counts can differ — see [Equal Support vs abstention](../STAR_Voting/the_count/runoff_percentages.md).
+An **abstention** drops out of the *runoff* denominator (no preference) but stays in the *quorum* numerator (still participated). That's the whole reason the two counts can differ — see [Equal Support vs abstention](../../01_STAR/concepts/the_count/runoff_percentages.md).

@@ -2,7 +2,7 @@
 
 *Generated from [`ex10_generous.yaml`](../ex10_generous.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bess
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Bess
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhj9x) · **[results ↗](https://bettervoting.com/yyhj9x/results)** (election `yyhj9x`).
 

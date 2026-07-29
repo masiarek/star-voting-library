@@ -2,7 +2,7 @@
 
 *A park board votes on which tree to plant. Nine ballot papers come back — two score the top pair equal, one bullet-votes Cedar, one is all zeros, one is completely blank. The runoff summary then announces: "Voters with a preference: 3 of 9." A board member stands up: "Six votes just vanished!" Your job: predict every number on that summary line before you see it — and then answer the board member.*
 
-**You practice:** reading STAR's two-line runoff summary — the **decided-voters denominator**, **[Equal Support](../../00_start_here/GLOSSARY.md)**, and the difference between a *zero*, an *equal score*, and a *blank* (see [Two Denominators, One Winner](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md)).
+**You practice:** reading STAR's two-line runoff summary — the **decided-voters denominator**, **[Equal Support](../../00_start_here/GLOSSARY.md)**, and the difference between a *zero*, an *equal score*, and a *blank* (see [Two Denominators, One Winner](../concepts/the_count/runoff_percentages.md)).
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; its `expected_winners` key is regression-tested, and the `_tabulated` mirror is the full audit report.
 
@@ -74,7 +74,7 @@ In *this* runoff they coincide (both Equal Support), but the count still tells t
 <details>
 <summary><b>(e) Answering "six votes vanished!"</b></summary>
 
-"All nine papers were counted — every score they contain is in the totals that chose the finalists (Cedar's 13 includes the bullet vote). Six of them scored Aspen and Birch *equally*, so in an Aspen-vs-Birch runoff they have no preference to express — the report says so on its face: 3 of 9 with a preference, 6 Equal Support, 3 + 6 = 9." Nothing vanished; the deeper treatment of why an equal-scores ballot is a *counted voice*, not a discount, is [Aren't equal-score votes discounted?](../../00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md)
+"All nine papers were counted — every score they contain is in the totals that chose the finalists (Cedar's 13 includes the bullet vote). Six of them scored Aspen and Birch *equally*, so in an Aspen-vs-Birch runoff they have no preference to express — the report says so on its face: 3 of 9 with a preference, 6 Equal Support, 3 + 6 = 9." Nothing vanished; the deeper treatment of why an equal-scores ballot is a *counted voice*, not a discount, is [Aren't equal-score votes discounted?](../concepts/reference/are_equal_score_votes_discounted.md)
 
 </details>
 
@@ -92,7 +92,7 @@ Source: [ex07_vanishing_votes.yaml](cases/ex07_vanishing_votes.yaml). Full audit
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast); the concept homes are [Two Denominators, One Winner](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md) and the [equal-score votes FAQ](../../00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md).
+**Where this comes from.** Original to this repo (ballots and cast); the concept homes are [Two Denominators, One Winner](../concepts/the_count/runoff_percentages.md) and the [equal-score votes FAQ](../concepts/reference/are_equal_score_votes_discounted.md).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

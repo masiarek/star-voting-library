@@ -1,7 +1,7 @@
 <!-- Unlisted, deliberately. This page is not linked from the folder README or any nav. -->
 # The Non-Monotonicity Files 🍿 — a (guilty-pleasure) collection
 
-> **⚠️ House-rules exemption in effect.** This page is the repo's guilty pleasure: a deliberately *one-sided* montage of RCV-IRV punishing candidates for gaining support — and rewarding them for losing it. It breaks the library's own [fairness rule](../paradoxes_and_whoops/reading_these_fairly.md) **on purpose**, and it isn't linked from any index. Two honest promises anyway: **every example below is real and verified elsewhere in this repo** (the curation is the unfair part, never the facts), and the grown-up, even-handed version — rarity stated, STAR's own limits conceded — is always one click away in [the monotonicity worked set](../monotonicity/) and the [concept page](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md). Read it as a highlight reel, not a courtroom. **And for turnabout:** we threw the same unfair mud at *our own* method in the [STAR Whoops reel](_star_whoops.md) — because every method has one.
+> **⚠️ House-rules exemption in effect.** This page is the repo's guilty pleasure: a deliberately *one-sided* montage of RCV-IRV punishing candidates for gaining support — and rewarding them for losing it. It breaks the library's own [fairness rule](../paradoxes_and_whoops/reading_these_fairly.md) **on purpose**, and it isn't linked from any index. Two honest promises anyway: **every example below is real and verified elsewhere in this repo** (the curation is the unfair part, never the facts), and the grown-up, even-handed version — rarity stated, STAR's own limits conceded — is always one click away in [the monotonicity worked set](../monotonicity/) and the [concept page](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md). Read it as a highlight reel, not a courtroom. **And for turnabout:** we threw the same unfair mud at *our own* method in the [STAR Whoops reel](_star_whoops.md) — because every method has one.
 
 *Monotonicity is the one property you'd swear any voting method has: **ranking a candidate higher can't make them lose, and lower can't make them win.** Instant-runoff cheerfully violates both directions, because it eliminates on first-choice counts and elimination order is fragile. Here's the reel.*
 
@@ -20,7 +20,7 @@
 
 ## 🥉 …and it's not even rare
 
-A spatial-model study (**Ornstein & Norman, *Public Choice* 2014**) estimates a **lower bound of ~15%** monotonicity failure in *competitive* three-candidate IRV races — climbing toward 50% as the race tightens. Not a freak coincidence; a structural feature of eliminate-and-transfer. → [the concept, with the citation](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md#how-often-does-this-happen-not-rare).
+A spatial-model study (**Ornstein & Norman, *Public Choice* 2014**) estimates a **lower bound of ~15%** monotonicity failure in *competitive* three-candidate IRV races — climbing toward 50% as the race tightens. Not a freak coincidence; a structural feature of eliminate-and-transfer. → [the concept, with the citation](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md#how-often-does-this-happen-not-rare).
 
 ---
 

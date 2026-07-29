@@ -2,7 +2,7 @@
 
 *Generated from [`02_c4_b40_cliff-city.yaml`](../02_c4_b40_cliff-city.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Churro
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Churro
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fm8cbv) · **[results ↗](https://bettervoting.com/fm8cbv/results)** (election `fm8cbv`).
 
@@ -21,7 +21,7 @@ The electorate (40 ballots, all individual rows):
   - Churro crowd: 9 voters (5 slate, 3 cliff34, 1 cliff35)
   - grazers: 7 voters (3 cliff34, 2 chaos, 1 anyone_but, 1 flat)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - slate: partisan slate: equal 5s for the in-group, 0 outside

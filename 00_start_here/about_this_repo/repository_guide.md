@@ -11,7 +11,7 @@ How this repo is laid out, how to run it, how the voting methods dispatch, and w
 | Area | What's there |
 |---|---|
 | [**STAR engine** (LH `starvote` fork)](../../STARVote_LH_tabulation_engine/) | The STAR engine (single-winner STAR, Bloc / proportional STAR, Approval, **Ranked Robin**), reporting options, the preference matrix, the `[Divergence from STAR]` comparison, the optional `show_runoff_percent` runoff summary, and the `lot_numbers` tie-break. Vendored fork of `starvote`; see [Fork Notes — starvote (vendored fork)](../../STARVote_LH_tabulation_engine/FORK_NOTES.md). |
-| [**RCV-IRV engine** (pyrankvote)](../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/) | Vendored RCV-IRV engine. Ranked ballots (`A>B>C`) route here automatically. Concept pages: [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md). |
+| [**RCV-IRV engine** (pyrankvote)](../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/) | Vendored RCV-IRV engine. Ranked ballots (`A>B>C`) route here automatically. Concept pages: [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md). |
 | [**pref_voting cross-check engine**](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) | Independent cross-check engine — wraps Eric Pacuit's `pref_voting` to verify the LH engine's Condorcet / IRV / Plurality (and report Copeland = Ranked Robin). Optional dep. |
 | [**abcvoting engine**](../../06_Other/abcvoting_tabulation_engine/) | Multi-winner **Approval / ABC** rules (Martin Lackner's `abcvoting`) — SPAV / PAV / Phragmén and an AV cross-check of the LH bloc-Approval count. Optional dep. |
 | [**YAML library — imports & converter**](../../YAML_library/) | BetterVoting JSON → YAML converter ([`01_convert_json_yaml.py`](../../YAML_library/1_positive/01_convert_json_yaml.py)) and imported elections (`YAML_library/1_positive/`). |
@@ -78,11 +78,11 @@ incompatible with the project's Python requirement: >=3.10, <3.14
 
 Dispatched automatically from the file's `voting_method` (or from the ballot style — ranked `A>B>C` always routes to RCV-IRV):
 
-- **STAR** — single-winner Score Then Automatic Runoff (the default). → [learn](../STAR_Voting/STAR_start_here.md)
+- **STAR** — single-winner Score Then Automatic Runoff (the default). → [learn](../../01_STAR/concepts/STAR_start_here.md)
 - **Bloc STAR** / **proportional STAR** (`bloc`, `sss`, `rrv`, `allocated`) — multi-winner variants. → [Bloc](../../02_STAR_Bloc/README.md) · [proportional](../../03_STAR_PR/concepts/STAR_PR/README.md)
 - **Approval** — score each candidate 0/1; most approvals wins. → [learn](../../04_Approval/concepts/approval_voting.md)
 - **Ranked Robin** (`RankedRobin`, aka RCV-RR / Copeland / Consensus) — every pair of candidates compared head-to-head; best win–loss record wins. Prints the full pairwise table and flags Condorcet cycles. → [learn](../../05_Ranked_Robin/concepts/ranked_robin.md)
-- **RCV-IRV** — ranked ballots, tabulated by the vendored RCV-IRV engine. → [learn](../RCV_IRV/RCV-IRV-Hare.md)
+- **RCV-IRV** — ranked ballots, tabulated by the vendored RCV-IRV engine. → [learn](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)
 
 > Terminology: this repo says **RCV-IRV** (or **IRV**) for the instant-runoff count, reserving bare **RCV** for the ranked-ballot family. "RCV" loosely means IRV in US usage; we clarify once, then use the precise term. See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md).
 

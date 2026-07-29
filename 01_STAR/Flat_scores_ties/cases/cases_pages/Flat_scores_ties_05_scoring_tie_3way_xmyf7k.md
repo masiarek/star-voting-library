@@ -2,7 +2,7 @@
 
 *Generated from [`Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml`](../Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** A
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** A
 
 ## Scenario
 
@@ -158,7 +158,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/Flat_sco
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [Flat_scores_ties_01_baseline_clean](Flat_scores_ties_01_baseline_clean.md) · [Flat_scores_ties_02_runoff_tie_2cand](Flat_scores_ties_02_runoff_tie_2cand.md) · [Flat_scores_ties_03_runoff_tie_split](Flat_scores_ties_03_runoff_tie_split.md) · [Flat_scores_ties_04_scoring_tie_2way](Flat_scores_ties_04_scoring_tie_2way.md) · [Flat_scores_ties_06_scoring_tie_4way](Flat_scores_ties_06_scoring_tie_4way.md) · [Flat_scores_ties_07_fully_flat](Flat_scores_ties_07_fully_flat.md) · [Flat_scores_ties_08_all_flat_zero_count](Flat_scores_ties_08_all_flat_zero_count.md)

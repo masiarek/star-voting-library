@@ -98,4 +98,4 @@ BetterVoting instead silently reads "STAR" + 2 seats *as* Bloc STAR — the coun
 - [BV1815](bv1815_bloc_3c2s_basic.md) — the other Bloc score-tiebreak reference (also Passed on the count).
 - [BV131](bv131_guido_bloc.md) — by contrast, a seat decided by the *lot* (all rungs tied).
 - [#1086](https://github.com/Equal-Vote/bettervoting/issues/1086) / [#904](https://github.com/Equal-Vote/bettervoting/issues/904) — the "STAR" vs "Bloc STAR" method-name label.
-- [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+- [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md).

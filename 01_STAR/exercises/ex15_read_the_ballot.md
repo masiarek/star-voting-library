@@ -45,7 +45,7 @@ The column headings are how many voters cast that ballot.
 
 **Approval voting.** Two features settle it:
 
-1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../00_start_here/RCV_IRV/), [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Borda — and every score method.
+1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../06_Other/RCV_IRV/concepts/), [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Borda — and every score method.
 2. **Voters mark different *numbers* of candidates.** The ×15 bloc approves two, the ×5 bloc approves one. That rules out [Choose-One](../../00_start_here/topics/plurality.md) (exactly one mark) and k-approval (exactly k marks).
 
 Independent, binary, unlimited marks — that is the definition of an approval ballot. The theorists' name for a profile of them is a **[dichotomous profile](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice)**: every voter's ballot is a ranking with exactly two levels and nothing said inside either one.
@@ -84,7 +84,7 @@ Full report: [`ex15_approval_yes_no`](cases/cases_pages/ex15_approval_yes_no.md)
 
 It's **cardinal** because each candidate is judged **against the scale, not against the other candidates** — the ballot records *how much* a voter likes each one, independently, so it can say "these two are exactly equal" and "this one is far better than that one." An ordinal ballot can only say *which comes first*; it has no way to distinguish a hair's-breadth preference from a chasm. (Voter 2 rating Bruno and Clara both 5 is a statement no ranking can make.) → [scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [scoring methods vs ranked voting](../../00_start_here/topics/scoring-methods-vs-ranked-voting.md)
 
-The giveaway that it isn't [STAR](../../00_start_here/STAR_Voting/STAR_start_here.md), by the way, is that nothing in the prompt mentions a runoff — the ballots are identical. **A ballot alone never fully identifies the method**; Score and STAR share this one, which is the whole point of [exercise 3](ex03_five_verdicts.md).
+The giveaway that it isn't [STAR](../concepts/STAR_start_here.md), by the way, is that nothing in the prompt mentions a runoff — the ballots are identical. **A ballot alone never fully identifies the method**; Score and STAR share this one, which is the whole point of [exercise 3](ex03_five_verdicts.md).
 
 </details>
 

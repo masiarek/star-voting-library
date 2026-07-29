@@ -78,10 +78,10 @@ So if you say *"RCV has center squeeze,"* a sharp opponent can correctly reply *
 
 | Situation | Use | Why |
 |-----------|-----|-----|
-| US public audience, naming the thing they know | **[RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md)** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
-| Technical / comparison / criticism of the method | **[IRV](../RCV_IRV/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
-| Naming the elimination *rule* itself | **[Hare](../RCV_IRV/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
-| Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../RCV_IRV/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
+| US public audience, naming the thing they know | **[RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (or "IRV — what's usually called RCV") | familiar *and* precise; signals you mean the eliminate-and-transfer method, not the ballot family |
+| Technical / comparison / criticism of the method | **[IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
+| Naming the elimination *rule* itself | **[Hare](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
+| Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
 | A Condorcet count of a ranked ballot | **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
 | Proportional multi-winner ranked | **[STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
 
@@ -120,4 +120,4 @@ The distinction is even load-bearing in this repo's tooling: our `pref_voting` c
 
 And the ladder extends in both directions. *Below* the strict ranking sits the theory's **"order zoo"** — total → top-truncated → weak → partial orders ([arXiv:1907.00752](https://arxiv.org/abs/1907.00752), Fig. 1) — cataloguing how much less than a complete strict ranking a real preference can be (their split of *why* is useful too: **intrinsic** incompleteness = the voter doesn't have a full ranking, vs **epistemic** = they have one but it wasn't captured). *Above* the score ballot sits electowiki's [rated pairwise preference ballot](https://electowiki.org/wiki/Rated_pairwise_preference_ballot) — a strength for every head-to-head matchup, generalizing every common ballot type (so expressive a single voter can submit their own Condorcet cycle, i.e. it stops being an "order" at all). Every ballot design is a choice of rung on this ladder — and "preference profile," unqualified, silently names just one of them.
 
-See also: [GLOSSARY.md](../GLOSSARY.md) (precise definitions) · [CURRICULUM.md](../CURRICULUM.md) · the nomenclature episode ["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](../RCV_IRV/RCV_or_IRV_whats_the_right_word.md).
+See also: [GLOSSARY.md](../GLOSSARY.md) (precise definitions) · [CURRICULUM.md](../CURRICULUM.md) · the nomenclature episode ["Is It RCV or IRV? Why Do You Keep Saying RCV-IRV?"](../../06_Other/RCV_IRV/concepts/RCV_or_IRV_whats_the_right_word.md).

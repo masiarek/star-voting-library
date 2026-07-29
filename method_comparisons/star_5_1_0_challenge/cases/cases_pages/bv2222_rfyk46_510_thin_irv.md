@@ -2,7 +2,7 @@
 
 *Generated from [`bv2222_rfyk46_510_thin_irv.yaml`](../bv2222_rfyk46_510_thin_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ana
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ana
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46`).
 

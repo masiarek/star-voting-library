@@ -2,7 +2,7 @@
 
 *Generated from [`balance_base_irv_c3_b9.yaml`](../balance_base_irv_c3_b9.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Bruno
+**Method:** [RCV-IRV (Instant Runoff)](../../../concepts) · **1 seat** · **Expected winner:** Bruno
 
 ## Scenario
 
@@ -12,7 +12,7 @@ Cyrus has the fewest first-choices and is eliminated, his ballots flow to Bruno,
 who wins 6-3. The twin file adds three EXACT-OPPOSITE ballot pairs; they cancel
 under Condorcet / Ranked Robin / STAR (Bruno stays the winner) but under RCV-IRV
 they squeeze Bruno out and elect Ada — so RCV-IRV fails the Equal Vote / Test of
-Balance. Lesson: 00_start_here/RCV_IRV/RCV_IRV_equal_vote.md
+Balance. Lesson: 06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 
 ## Ballots
 

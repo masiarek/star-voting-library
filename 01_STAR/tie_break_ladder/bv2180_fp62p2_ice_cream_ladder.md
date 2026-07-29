@@ -2,7 +2,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).
 
-> 🪜 **The happy-path tiebreak.** This is the worked example from **[the STAR tie-breaking ladder](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)**, now a live election. It ties in **both** rounds — a three-way tie for the second finalist, then a two-way tie in the runoff — and settles **both with deterministic rungs** (five-star, then score). The pre-published **lot order is never consulted**, so LH and BetterVoting agree and the result is fully reproducible. It's the deliberate contrast to **[BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md)**, where every rung ties down to the random floor.
+> 🪜 **The happy-path tiebreak.** This is the worked example from **[the STAR tie-breaking ladder](../concepts/Tie_Breaking_STAR/tie_breaking.md)**, now a live election. It ties in **both** rounds — a three-way tie for the second finalist, then a two-way tie in the runoff — and settles **both with deterministic rungs** (five-star, then score). The pre-published **lot order is never consulted**, so LH and BetterVoting agree and the result is fully reproducible. It's the deliberate contrast to **[BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md)**, where every rung ties down to the random floor.
 
 **Level 201/301.** Two voters, six ice-cream flavors. Winner: **Strawberry**.
 
@@ -101,6 +101,6 @@ Both engines elect **Strawberry** — confirmed against BetterVoting's frozen ex
 
 ## See also
 
-- [The STAR tie-breaking ladder (full chain)](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) — this is its worked example
+- [The STAR tie-breaking ladder (full chain)](../concepts/Tie_Breaking_STAR/tie_breaking.md) — this is its worked example
 - [BV555 / `xmyf7k` — the 3-way tie that reaches the random floor](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) (the contrast case)
 - [Dead-rung tie-breaks](../tie_break_dead_rung/) — when five-star has no 5s to weigh

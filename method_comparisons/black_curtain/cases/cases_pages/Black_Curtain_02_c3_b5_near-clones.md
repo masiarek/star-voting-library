@@ -2,7 +2,7 @@
 
 *Generated from [`Black_Curtain_02_c3_b5_near-clones.yaml`](../Black_Curtain_02_c3_b5_near-clones.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cal
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Cal
 
 ## Scenario
 

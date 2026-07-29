@@ -2,7 +2,7 @@
 
 *Generated from [`ex05_center_squeeze.yaml`](../ex05_center_squeeze.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Brook
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Brook
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6bry7c) · **[results ↗](https://bettervoting.com/6bry7c/results)** (election `6bry7c`).
 

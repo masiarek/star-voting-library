@@ -2,7 +2,7 @@
 
 *Two different ideas wear the same four words, and conflating them causes half the arguments about voting methods. **One is settled constitutional law; the other is a method-design criterion.** This page keeps them apart — because "RCV upholds one person, one vote" and "RCV fails the equal vote" can *both* be true, and are.*
 
-→ Companions: [The Equally Weighted Vote (Test of Balance)](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) · [RCV-IRV fails the Equal Vote](../RCV_IRV/RCV_IRV_equal_vote.md) · [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md). Glossary: [`equally weighted vote`](../GLOSSARY.md).
+→ Companions: [The Equally Weighted Vote (Test of Balance)](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) · [RCV-IRV fails the Equal Vote](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) · [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md). Glossary: [`equally weighted vote`](../GLOSSARY.md).
 
 ---
 
@@ -14,18 +14,18 @@ Crucially, this is about **districting and vote-counting equality**, not about *
 
 ## Sense 2 — the reformer's "equally weighted vote" (a stronger, different bar)
 
-Voting-reform advocates — especially the [Equal Vote Coalition](https://equal.vote) — use the same phrase for a **stronger, mathematical** idea: the [**Equal Vote / cancellation criterion**, the "Test of Balance."](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) It asks: *for any ballot one voter casts, can another voter cast an exact-opposite ballot so the two together change nothing?* If yes, no voter's ballot can outweigh another's.
+Voting-reform advocates — especially the [Equal Vote Coalition](https://equal.vote) — use the same phrase for a **stronger, mathematical** idea: the [**Equal Vote / cancellation criterion**, the "Test of Balance."](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) It asks: *for any ballot one voter casts, can another voter cast an exact-opposite ballot so the two together change nothing?* If yes, no voter's ballot can outweigh another's.
 
 This is a **property of the tabulation**, not a legal standard — and the methods split on it:
 
 | | Legal OPOV (Sense 1) | Test of Balance (Sense 2) |
 |---|:--:|:--:|
 | Choose-One (Plurality) | ✅ passes | ❌ fails (a mark can only *add*, never cancel) |
-| RCV-IRV | ✅ passes | ❌ fails ([opposite ballots don't cancel under sequential elimination](../RCV_IRV/RCV_IRV_equal_vote.md)) |
+| RCV-IRV | ✅ passes | ❌ fails ([opposite ballots don't cancel under sequential elimination](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md)) |
 | Ranked Robin (Condorcet) | ✅ passes | ✅ passes (opposites cancel in the pairwise matrix) |
 | Score / STAR / Approval | ✅ passes | ✅ passes (opposite scores cancel in the sum) |
 
-Note what that table shows: the balance failure is **not** "ranked ballots are worse than scored ones" — Ranked Robin is ranked and passes. It's specific to methods whose count is a **sequential elimination** (or a single mark), where only the top of each ballot drives the result. See the worked, runnable example: [balanced ballots flip the RCV-IRV winner](../RCV_IRV/RCV_IRV_equal_vote.md).
+Note what that table shows: the balance failure is **not** "ranked ballots are worse than scored ones" — Ranked Robin is ranked and passes. It's specific to methods whose count is a **sequential elimination** (or a single mark), where only the top of each ballot drives the result. See the worked, runnable example: [balanced ballots flip the RCV-IRV winner](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md).
 
 ## Why the two get tangled — and how to keep them straight
 
@@ -36,7 +36,7 @@ The confusion runs both directions:
 
 ## The honest caveats (stated out loud)
 
-- **The balance criterion isn't neutral.** It's promoted mainly by cardinal-method advocates, and cardinal methods pass it essentially by construction; even its formalizer notes it may not fully capture the informal intent. So "RCV-IRV fails *our* criterion" carries method-favoring flavor — it's largely the [spoiler](spoiler_effect.md) / [center-squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) critique in equal-vote language, not a wholly separate defect. (Ranked Robin passing it is the reminder that it isn't a scores-only trophy.)
+- **The balance criterion isn't neutral.** It's promoted mainly by cardinal-method advocates, and cardinal methods pass it essentially by construction; even its formalizer notes it may not fully capture the informal intent. So "RCV-IRV fails *our* criterion" carries method-favoring flavor — it's largely the [spoiler](spoiler_effect.md) / [center-squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) critique in equal-vote language, not a wholly separate defect. (Ranked Robin passing it is the reminder that it isn't a scores-only trophy.)
 - **The legal principle is genuinely settled** and shouldn't be waved away either. "One person, one vote" as the courts mean it is a real, hard-won standard; every reform on this site clears it.
 
 So the precise sentence is: **all these methods give one person one vote in the legal sense; they differ on whether every voter's vote carries equal *weight through the count*, which is the reformers' bar — and there, Choose-One and RCV-IRV fall short while Score, STAR, Approval, and Ranked Robin hold up.**
@@ -45,4 +45,4 @@ So the precise sentence is: **all these methods give one person one vote in the 
 
 - *Gray v. Sanders* (1963), *Wesberry v. Sanders* (1964), *Reynolds v. Sims* (1964) — the reapportionment cases that established the legal principle.
 - FairVote, ["How ranked choice voting survives the one-person-one-vote challenge"](https://fairvote.org/how_ranked_choice_voting_survives_the_one_person_one_vote_challenge/) — the RCV-IRV legal defense.
-- Equal Vote Coalition — the [equally weighted vote / Test of Balance](../STAR_Voting/properties_and_limits/equally_weighted_vote.md) (after Mark Frohnmayer).
+- Equal Vote Coalition — the [equally weighted vote / Test of Balance](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) (after Mark Frohnmayer).

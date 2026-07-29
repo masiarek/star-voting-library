@@ -76,7 +76,7 @@ This isn't STAR dodging a question. It's the same type distinction as the [SWF/S
 
 ## Why C3 is not a demerit
 
-C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../RCV_IRV/)**, the one method here whose count [doesn't summarize into precinct subtotals](../STAR_Voting/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
+C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)**, the one method here whose count [doesn't summarize into precinct subtotals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
 
 Which is exactly why the tiers must not be read as a ladder:
 

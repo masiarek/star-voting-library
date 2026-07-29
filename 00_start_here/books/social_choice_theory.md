@@ -15,7 +15,7 @@ These are the books the whole field cites: *why* no voting method is perfect, pr
 
 The book that founded modern social choice theory and won a Nobel Prize. Arrow's **impossibility theorem**: no *ranked* voting method can satisfy a short list of obviously-reasonable fairness conditions at once. Slim and formal — you can read the key argument in an afternoon, and everything else on this shelf is a response to it.
 
-**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../../06_Other/Range/concepts/range_voting.md) and [STAR](../STAR_Voting/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
+**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../../06_Other/Range/concepts/range_voting.md) and [STAR](../../01_STAR/concepts/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
 
 **In this repo:** [Arrow's theorem](../GLOSSARY.md) (glossary) · [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md) · [what makes a voting method good](../topics/what_makes_a_voting_method_good.md)
 
@@ -102,7 +102,7 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 
 **The lean:** Reference-neutral; Nurmi surveys rather than advocates. Pairs naturally with this repo's own [paradoxes collection](../../method_comparisons/paradoxes_and_whoops/README.md).
 
-**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [monotonicity](../topics/monotonicity/) · [participation](../topics/participation/) · [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md)
+**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [monotonicity](../topics/monotonicity/) · [participation](../topics/participation/) · [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)
 
 </td>
 </tr>

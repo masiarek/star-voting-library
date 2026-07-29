@@ -4,7 +4,7 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Cascade
 
-**Official tie-break (lot) order:** Arches > Bryce > Cascade > Denali > Everglade — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Arches > Bryce > Cascade > Denali > Everglade — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 

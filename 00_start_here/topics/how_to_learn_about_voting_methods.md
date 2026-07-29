@@ -20,8 +20,8 @@ Start here with zero background.
 - **Two kinds of ballot** → [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the split that sorts every method below.
 - **The single-winner methods**, one page each:
   - [Approval](../../04_Approval/concepts/approval_voting.md) — mark the ones you like.
-  - [STAR](../STAR_Voting/STAR_start_here.md) — score 0–5, then an automatic runoff.
-  - [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) — rank, then eliminate-and-transfer.
+  - [STAR](../../01_STAR/concepts/STAR_start_here.md) — score 0–5, then an automatic runoff.
+  - [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — rank, then eliminate-and-transfer.
   - [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — rank, then compare every pair (a Condorcet method).
 - **Multi-winner / proportional** → [proportional STAR](../../03_STAR_PR/concepts/STAR_PR/README.md) and [STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md) — how representation (not just a single winner) is chosen.
 
@@ -32,9 +32,9 @@ Start here with zero background.
 Now the tools for judging methods against each other. *(Prereq: Level 1.)*
 
 - **Strategic voting** → [strategic voting across the Equal Vote methods](strategic_voting.md) — the four kinds of insincere vote, and when honesty pays.
-- **The classic failure scenarios** → [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the chicken-dilemma / [residual vote-splitting](../STAR_Voting/properties_and_limits/residual_vote_splitting.md).
-- **Simulations & VSE** → [Voter Satisfaction Efficiency and the favorite-betrayal simulation](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md), built on the repo's [Monte-Carlo scripts](../../06_Other/simulations/README.md).
-- **Three notions of "winner"** → [Condorcet vs. score vs. runoff](../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) — why "best" is ambiguous.
+- **The classic failure scenarios** → [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) and the chicken-dilemma / [residual vote-splitting](../../01_STAR/concepts/properties_and_limits/residual_vote_splitting.md).
+- **Simulations & VSE** → [Voter Satisfaction Efficiency and the favorite-betrayal simulation](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md), built on the repo's [Monte-Carlo scripts](../../06_Other/simulations/README.md).
+- **Three notions of "winner"** → [Condorcet vs. score vs. runoff](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) — why "best" is ambiguous.
 - **The head-to-head comparisons** → [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) (STAR / Approval / Ranked Robin, even-handed) and [RCV-IRV vs. STAR](rcv_irv_vs_star.md).
 - **Where methods disagree, worked** → [method comparisons](../../method_comparisons/README.md) and the [paradoxes & whoops](../../method_comparisons/paradoxes_and_whoops/README.md) collection (read under its [reading-these-fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) discipline).
 
@@ -44,13 +44,13 @@ Now the tools for judging methods against each other. *(Prereq: Level 1.)*
 
 Empirical evidence, theory, more methods, and — deliberately — the arguments *against* the methods this repo emphasizes. *(Prereq: Levels 1–2.)*
 
-- **Real-world evidence** → [the Alternative Vote in Australia](../RCV_IRV/case_studies/RCV_IRV_australia.md) (a century, assessed evenhandedly), [Alaska 2022](../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md), and [North Carolina](../RCV_IRV/case_studies/RCV_IRV_north_carolina.md).
+- **Real-world evidence** → [the Alternative Vote in Australia](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_australia.md) (a century, assessed evenhandedly), [Alaska 2022](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md), and [North Carolina](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_north_carolina.md).
 - **The party-system question** → [Two-Party Dominance — pros, cons, and what changes it](two_party_dominance.md), and why *proportional* (not single-winner) reform is the lever.
 - **Impossibility theorems** → Arrow and Gibbard–Satterthwaite (defined in the [Glossary](../GLOSSARY.md)) — why *no* method is perfect, so every choice is a trade-off.
 - **The method zoo** → beyond the headline four: [3-2-1 voting](../../06_Other/three_two_one/README.md), [Borda](../../06_Other/other_ranked_methods/borda.md), [agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md), and the ranked-method family in the [Glossary](../GLOSSARY.md#other-methods-for-contrast) (Ranked Pairs, Schulze, Minimax…).
 - **Opposing viewpoints (read these on purpose):**
-  - Each method's honest limits — [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Approval](../../04_Approval/concepts/approval_honest_limits.md), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
-  - Claims we check both ways — [RCV-IRV claims, fact-checked](../RCV_IRV/rcv_irv_false_claims.md).
+  - Each method's honest limits — [STAR](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md), [Approval](../../04_Approval/concepts/approval_honest_limits.md), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
+  - Claims we check both ways — [RCV-IRV claims, fact-checked](../../06_Other/RCV_IRV/concepts/rcv_irv_false_claims.md).
   - **Marcus's own guide** for a **Condorcet-preferring** perspective different from this library's STAR emphasis — [How to Learn About Voting Methods](https://voting-in-the-abstract.medium.com/how-to-learn-about-voting-methods-4e6c0e4d38d9).
 
 ---
@@ -66,7 +66,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 - **Independent tabulation libraries** (used to cross-check this repo's engine) — [pref_voting](https://pref-voting.readthedocs.io/) and [abcvoting](https://abcvoting.readthedocs.io/).
 - **Reference** — [electowiki](https://electowiki.org) for the method encyclopedia.
 - **Finding the primary literature yourself** — voting research is split across three literatures that barely cite each other, and each is indexed differently:
-  - **Economics / social choice** → search [RePEc-IDEAS](https://ideas.repec.org/), EconLit or [SSRN](https://www.ssrn.com/) by **JEL code**. The ones that matter: **D71** (social choice — the theory core), **D72** (political processes: *elections and voting behavior* — the most on-target single code), **D63** (equity/justice and other normative criteria — where welfare metrics like VSE sit), **C70/C72** (game theory — strategic voting), plus **D70/D79** (the general and catch-all buckets), **D02** (institutions) and **D82** (mechanism design). Worked example: [Wolk, Quinn & Ogren](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) classify themselves **D72 · D63 · D71 · C70**.
+  - **Economics / social choice** → search [RePEc-IDEAS](https://ideas.repec.org/), EconLit or [SSRN](https://www.ssrn.com/) by **JEL code**. The ones that matter: **D71** (social choice — the theory core), **D72** (political processes: *elections and voting behavior* — the most on-target single code), **D63** (equity/justice and other normative criteria — where welfare metrics like VSE sit), **C70/C72** (game theory — strategic voting), plus **D70/D79** (the general and catch-all buckets), **D02** (institutions) and **D82** (mechanism design). Worked example: [Wolk, Quinn & Ogren](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) classify themselves **D72 · D63 · D71 · C70**.
   - **Math & computer science** (algorithms, complexity, *computational* social choice) → [arXiv](https://arxiv.org/), categories **cs.GT** (game theory), **econ.TH** (theoretical economics) and **cs.MA** (multiagent systems). Much of the newest work appears here first, free.
   - **Political science** (empirical: real elections, turnout, adoption, ballot errors) → not JEL-indexed; look to *Electoral Studies* and *Journal of Theoretical Politics*.
   - **Journals that regularly carry method papers:** *Social Choice and Welfare* (the flagship), *Public Choice*, *Constitutional Political Economy*, *Mathematical Social Sciences*, *Electoral Studies*.

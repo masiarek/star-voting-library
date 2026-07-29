@@ -7,7 +7,7 @@
 An **election instance** is `E = (A, k)`: an approval profile `A` (each voter `i` submits an approval set `A(i) ⊆ C`) and a target committee size `k`. An **ABC rule** maps `E` to one or more **winning committees** — size-`k` subsets of `C`.
 
 - A rule is **resolute** if it always returns exactly one committee, **irresolute** if it may return several **tied** committees.
-- Real systems force a single outcome with a **tie-breaking order**. Modelling all randomness as *fixed before the election* (a pre-published linear order over committees, "maximal committee wins") turns a randomised tiebreak into a deterministic one. **This is precisely the "published lot" discipline STAR uses** for its single-winner ties (see [STAR tie-breaking](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)) — same idea, lifted to committees.
+- Real systems force a single outcome with a **tie-breaking order**. Modelling all randomness as *fixed before the election* (a pre-published linear order over committees, "maximal committee wins") turns a randomised tiebreak into a deterministic one. **This is precisely the "published lot" discipline STAR uses** for its single-winner ties (see [STAR tie-breaking](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)) — same idea, lifted to committees.
 
 ## The running instance (Example 2.1)
 

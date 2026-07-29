@@ -184,7 +184,7 @@ The complete audit copy is regenerated into `lot_random_vs_published_jfk7pd_tabu
 
 ## Background (concepts)
 
-- STAR's tie-break ladder and the **dead rung** (why five-star counts only 5s, never steps down to 4s): [The "dead rung"](../README.md) · [STAR Tie-Breaking — The Full Chain](../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+- STAR's tie-break ladder and the **dead rung** (why five-star counts only 5s, never steps down to 4s): [The "dead rung"](../README.md) · [STAR Tie-Breaking — The Full Chain](../../concepts/Tie_Breaking_STAR/tie_breaking.md).
 - Generate more of these scenarios: [`generate_dead_rung_scenarios.py`](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md).
 
 *This is a real, frozen BetterVoting election; the ballots, `perm`, and elected winner are exactly as exported (`…_bv_export.json`). The independent tabulations are reproducible from the two YAML files in this folder.*

@@ -69,7 +69,7 @@ Voting theory is rife with mathematical anomalies, and several books catalogue t
 ## More whoopses to mine (sources)
 
 - **rangevoting.org** (Warren Smith, the Center for Range Voting) — a deep trove of method-failure constructions and paradoxes.
-- Burlington 2009, Alaska 2022 (real center-squeeze elections — see [Center Squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md)).
+- Burlington 2009, Alaska 2022 (real center-squeeze elections — see [Center Squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)).
 - Classic social-choice paradoxes (Condorcet, Arrow, no-show, monotonicity).
 
 > Adding one? Run it through the engine, write the fairness box, and make sure the camp it embarrasses isn't always the same one.

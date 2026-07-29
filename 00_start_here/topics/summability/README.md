@@ -8,11 +8,11 @@
 
 | Method | Summable? | The summable artifact (what precincts publish & add) | Full page |
 |--------|:---:|------------------------------------------------------|-----------|
-| **STAR** | ✅ | score totals **+** the For/Equal/Against pairwise matrix | [STAR is summable](../../STAR_Voting/properties_and_limits/STAR_summability.md) |
+| **STAR** | ✅ | score totals **+** the For/Equal/Against pairwise matrix | [STAR is summable](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md) |
 | **Ranked Robin / Condorcet** | ✅ | the pairwise matrix (adds cell by cell) | [RR is summable](../../../05_Ranked_Robin/concepts/RCV_RR_summability.md) |
 | **Approval** | ✅ | one approval count per candidate | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **Plurality** | ✅ | one vote count per candidate | — |
-| **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../RCV_IRV/RCV_IRV_lack_of_summability.md) |
+| **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) |
 
 What "needs every ballot centrally" costs in practice — the courier runs, the single point of failure, the heavier audit, and the real incidents (Maine's process, NYC 2021, Alameda 2022) — is its own page: [**Central tabulation — when every ballot must travel**](../central_tabulation.md).
 
@@ -20,8 +20,8 @@ What "needs every ballot centrally" costs in practice — the courier runs, the 
 
 The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo):
 
-- **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses)
-- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../STAR_Voting/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)
+- **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses)
+- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)
 - **Ranked Robin (summable):** the *same ranked ballots* IRV couldn't combine — the pairwise matrices add cell by cell and recover the winner. → [RR is summable](../../../05_Ranked_Robin/concepts/RCV_RR_summability.md#worked-example-the-same-ballots-irv-couldnt-combine)
 
 ## How much summing? (order of summability, and multi-winner)

@@ -4,7 +4,7 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Azul
 
-**Official tie-break (lot) order:** Azul > Boggle > Catan > Dominion — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Azul > Boggle > Catan > Dominion — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 

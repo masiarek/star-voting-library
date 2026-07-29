@@ -17,7 +17,7 @@ Peltola beats Palin    +4
 → Begich is the Condorcet winner
 ```
 
-Every Condorcet method elects **Begich**. Only **RCV-IRV** elects **Peltola** — it eliminates Begich first for having the fewest first-choices ([the center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md); the whole point of the [Alaska case](../alaska_2022/)).
+Every Condorcet method elects **Begich**. Only **RCV-IRV** elects **Peltola** — it eliminates Begich first for having the fewest first-choices ([the center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md); the whole point of the [Alaska case](../alaska_2022/)).
 
 ## The burial: 20 voters rank the winner last
 

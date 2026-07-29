@@ -17,7 +17,7 @@
 
 **Good / OK / Bad is more legible than 0–5** to a genuinely skeptical audience. Three words, no arithmetic implied. I think the STAR world underestimates how much *"score each candidate 0 to 5"* reads as **homework** to people who aren't already interested in voting theory. 3-2-1's ballot has no such tax.
 
-**The outcomes are fine.** No [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md), a non-slippery [chicken dilemma](../../method_comparisons/chicken_dilemma/), [summable](../../00_start_here/topics/summability/), high VSE. It's in STAR's league, and both are in a different league from IRV and plurality.
+**The outcomes are fine.** No [center squeeze](../RCV_IRV/concepts/RCV_IRV_center_squeeze.md), a non-slippery [chicken dilemma](../../method_comparisons/chicken_dilemma/), [summable](../../00_start_here/topics/summability/), high VSE. It's in STAR's league, and both are in a different league from IRV and plurality.
 
 ## Where I think it's wrong
 
@@ -25,7 +25,7 @@
 
 3-2-1 pairs a simple ballot with a **three-stage count containing special cases** — the ½-Good threshold, the skip-step-2 conditional. STAR trades the other way: a slightly richer ballot, then *add the scores and hold one runoff*.
 
-Voters touch the ballot **once**, in private, with instructions in front of them. Officials, auditors, journalists, judges and opponents touch the **count** forever. And the count is precisely where RCV-IRV bleeds — [summability](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md), central tabulation, *"explain to me why my candidate was eliminated."*
+Voters touch the ballot **once**, in private, with instructions in front of them. Officials, auditors, journalists, judges and opponents touch the **count** forever. And the count is precisely where RCV-IRV bleeds — [summability](../RCV_IRV/concepts/RCV_IRV_lack_of_summability.md), central tabulation, *"explain to me why my candidate was eliminated."*
 
 Optimizing ballot simplicity while adding count complexity is spending your simplicity budget on the easy problem.
 
@@ -49,7 +49,7 @@ That is not a criticism of the method — plenty of good ideas lack a campaign �
 
 ## What I actually take from it
 
-The most valuable thing about 3-2-1 isn't the method. It's that 3-2-1 is the **cleanest illustration that "simplicity" is two axes, not one** — a simple ballot bolted to a comparatively involved count. The neutral treatment, with every method placed on both axes, is [What makes a voting method good? §2](../../00_start_here/topics/what_makes_a_voting_method_good.md) (see also [Is RCV "simple"? — which half?](../../00_start_here/RCV_IRV/RCV_IRV_is_simple.md)).
+The most valuable thing about 3-2-1 isn't the method. It's that 3-2-1 is the **cleanest illustration that "simplicity" is two axes, not one** — a simple ballot bolted to a comparatively involved count. The neutral treatment, with every method placed on both axes, is [What makes a voting method good? §2](../../00_start_here/topics/what_makes_a_voting_method_good.md) (see also [Is RCV "simple"? — which half?](../RCV_IRV/concepts/RCV_IRV_is_simple.md)).
 
 Once you hold the axes apart, the STAR-vs-3-2-1 disagreement stops being *"which is simpler?"* — unanswerable, since each side points at a different axis — and becomes *"which kind of simplicity is worth more?"*, which you can actually argue.
 

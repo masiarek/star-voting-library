@@ -15,7 +15,7 @@
 - **Two reports, one count:** the same election appears both as BetterVoting's visual display and the LH engine's text report — why there are two, how they map, and the convert→validate→test pipeline: [BetterVoting and the LH Engine — One Election, Two Reports](../tabulation_engines/bettervoting_and_the_engine.md).
 - **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/runoff_overturns_leader/)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
 - **Worked walkthrough:** [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md) — a full LH report annotated section by section, with a "which parts to show at 101 / 201 / 301" table.
-- **Reading the runoff percentages:** [Two Denominators, One Winner](../STAR_Voting/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.3 (Equal Support).
+- **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/concepts/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.3 (Equal Support).
 - **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/pet_real_bv_election/) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
 
 ## 201.2 — Edge cases & trust
@@ -26,7 +26,7 @@
 ## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
 
 - **Objective:** stop conflating the ranked *ballot* (RCV) with one *count* (IRV).
-- **Material:** [terminology basics](../topics/ballot_and_terminology_basics.md) · [why the name is confusing](../RCV_IRV/RCV-IRV-confusing-name.md).
+- **Material:** [terminology basics](../topics/ballot_and_terminology_basics.md) · [why the name is confusing](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md).
 - **The point:** center squeeze / exhausted ballots are **IRV**-specific, not properties of all ranked methods (Ranked Robin isn't squeezed).
 
 ## 201.4 — STAR vs RCV-IRV (the honest comparison)

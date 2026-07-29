@@ -27,7 +27,7 @@ election:
     small_case_abstention_lesson.md.
 
     BetterVoting issue: https://github.com/Equal-Vote/bettervoting/issues/1407
-    How to read this report (LH): 00_start_here/STAR_reporting/reporting_LH/
+    How to read this report (LH): 01_STAR/concepts/reporting/reporting_LH/
     The reporting options used below: STAR_reporting/reporting_LH/options.md
 
   options:

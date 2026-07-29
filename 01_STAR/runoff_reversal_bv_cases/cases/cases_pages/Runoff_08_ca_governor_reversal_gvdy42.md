@@ -2,7 +2,7 @@
 
 *Generated from [`Runoff_08_ca_governor_reversal_gvdy42.yaml`](../Runoff_08_ca_governor_reversal_gvdy42.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Tom Steyer (D)
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Tom Steyer (D)
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvdy42) · **[results ↗](https://bettervoting.com/gvdy42/results)** (election `gvdy42`).
 

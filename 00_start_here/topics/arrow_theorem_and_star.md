@@ -2,7 +2,7 @@
 
 *A recurring debate move: "Arrow proved no voting method can be fair, so STAR can't escape it either." The precise answer is more interesting than the slogan. **Arrow's theorem is about *ranked* (ordinal) methods — and cardinal methods like STAR, Score, and Approval genuinely fall outside its scope.** But escaping Arrow is not escaping *all* impossibility: cardinal methods still run into Gibbard's manipulability theorem. This page draws that line honestly — the real pro-STAR point, and its real bound.*
 
-→ Related: [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) · [what makes a voting method good](what_makes_a_voting_method_good.md) · [strategic voting](strategic_voting.md) · [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [distortion](distortion.md) — what the ordinal restriction costs, measured · [grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — Balinski & Laraki's sharper version of the same escape.
+→ Related: [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) · [what makes a voting method good](what_makes_a_voting_method_good.md) · [strategic voting](strategic_voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [distortion](distortion.md) — what the ordinal restriction costs, measured · [grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — Balinski & Laraki's sharper version of the same escape.
 
 ---
 

@@ -79,7 +79,7 @@ First choices: Alba 3, Axl 2, Brett 4. **Axl is eliminated first**, and both of 
 <details>
 <summary><b>(e) The reply memo</b></summary>
 
-"The plan only works if the town counts Choose-One ballots — the one design where a voter's support for Axl is *subtracted* from Alba. Under STAR the clones pool rather than split (both finalist slots go to their camp and we finish third); under RCV-IRV the transfers just reassemble Alba's five. And if anyone audits *why* we recruited a candidate we hope loses, we've handed the story to the opposition. Recommend we spend the budget persuading an actual voter — under every ballot here, that's worth strictly more than a fake candidate." — The general lesson, minus the intrigue: *how much a spoiler can extract is a property of the ballot*, which is why [the Equal Vote criterion](../../00_start_here/STAR_Voting/properties_and_limits/equally_weighted_vote.md) centers on it.
+"The plan only works if the town counts Choose-One ballots — the one design where a voter's support for Axl is *subtracted* from Alba. Under STAR the clones pool rather than split (both finalist slots go to their camp and we finish third); under RCV-IRV the transfers just reassemble Alba's five. And if anyone audits *why* we recruited a candidate we hope loses, we've handed the story to the opposition. Recommend we spend the budget persuading an actual voter — under every ballot here, that's worth strictly more than a fake candidate." — The general lesson, minus the intrigue: *how much a spoiler can extract is a property of the ballot*, which is why [the Equal Vote criterion](../concepts/properties_and_limits/equally_weighted_vote.md) centers on it.
 
 </details>
 
@@ -98,7 +98,7 @@ Sources: [ex11_two_way_base.yaml](cases/ex11_two_way_base.yaml) · [ex11_spoiler
 
 ---
 
-**Where this comes from.** Original to this repo (ballots, cast, and the intern). Concept homes: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md), [the split-voting set](../../method_comparisons/split_voting/README.md), and [the equally weighted vote](../../00_start_here/STAR_Voting/properties_and_limits/equally_weighted_vote.md).
+**Where this comes from.** Original to this repo (ballots, cast, and the intern). Concept homes: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md), [the split-voting set](../../method_comparisons/split_voting/README.md), and [the equally weighted vote](../concepts/properties_and_limits/equally_weighted_vote.md).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

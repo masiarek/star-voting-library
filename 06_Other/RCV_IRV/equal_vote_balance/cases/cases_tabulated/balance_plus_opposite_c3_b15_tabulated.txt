@@ -14,7 +14,7 @@ scenario_description: |-
   (Bruno +0): Bruno now has the fewest first-choices, is eliminated first, and Ada
   wins 10-5. Balanced ballots that should cancel instead flip the winner — RCV-IRV
   fails the Test of Balance, by the center-squeeze mechanism. Lesson:
-  00_start_here/RCV_IRV/RCV_IRV_equal_vote.md
+  06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 
 video_script: |-
   Twin of the balance pair. Same base plus three exact-opposite pairs. Under IRV

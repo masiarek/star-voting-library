@@ -96,7 +96,7 @@ Automatic Runoff Round
 | STAR | **Cherry** |
 | Ranked Robin | **Cherry** |
 
-Three different winners from one electorate (the engine's `[Divergence from STAR]` block prints exactly this on screen). The strongest statement against Apple: **Apple is the [Condorcet loser](../../00_start_here/GLOSSARY.md)** — Apple loses head-to-head to Cherry (4–5) *and* to Banana (4–5), yet Choose-One elects it. Cherry, meanwhile, is the Condorcet winner. Which verdict is "right" is a genuine question with three defensible answers — see [three winner notions](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) — but "the candidate a majority beats head-to-head twice over" is a hard winner to defend.
+Three different winners from one electorate (the engine's `[Divergence from STAR]` block prints exactly this on screen). The strongest statement against Apple: **Apple is the [Condorcet loser](../../00_start_here/GLOSSARY.md)** — Apple loses head-to-head to Cherry (4–5) *and* to Banana (4–5), yet Choose-One elects it. Cherry, meanwhile, is the Condorcet winner. Which verdict is "right" is a genuine question with three defensible answers — see [three winner notions](../concepts/properties_and_limits/STAR_three_winner_notions.md) — but "the candidate a majority beats head-to-head twice over" is a hard winner to defend.
 
 </details>
 

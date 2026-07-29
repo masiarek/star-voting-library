@@ -4,7 +4,7 @@
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** Dublin
 
-**Official tie-break (lot) order:** Athens > Bergen > Cork > Dublin > Edinburgh — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Athens > Bergen > Cork > Dublin > Edinburgh — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -98,7 +98,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [p3_manip_compromise_rr](p3_manip_compromise_rr.md) · [p3_manip_star](p3_manip_star.md) · [p3_sincere_ranked_robin](p3_sincere_ranked_robin.md) · [p3_sincere_star](p3_sincere_star.md)

@@ -2,7 +2,7 @@
 
 *Generated from [`reinf_combined_c3_b9_star.yaml`](../reinf_combined_c3_b9_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cara
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Cara
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`).
 

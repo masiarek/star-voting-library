@@ -40,4 +40,4 @@ Every claim on these pages has a runnable election behind it — one case folder
 
 - Glossary: [Ranked Robin & the Condorcet family](glossary_ranked_robin.md)
 
-*(Other tabulations of the same ranked ballot: [RCV-IRV](../../00_start_here/RCV_IRV/README.md) (instant runoff), [STV](../../03_STAR_PR/concepts/) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../00_start_here/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) (instant runoff), [STV](../../03_STAR_PR/concepts/) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../00_start_here/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*

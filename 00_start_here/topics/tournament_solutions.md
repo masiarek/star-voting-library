@@ -1,6 +1,6 @@
 # Tournament solutions — the theory of the win-loss graph
 
-*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [STAR](../STAR_Voting/) and [Approval](../../04_Approval/concepts/).*
+*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [STAR](../../01_STAR/concepts/) and [Approval](../../04_Approval/concepts/).*
 
 → Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: Voting 301**
 
@@ -122,7 +122,7 @@ That said, there is one real and rather elegant connection worth teaching:
 
 > **STAR's runoff consults exactly one edge of the tournament.** The scoring round uses cardinal information the graph doesn't contain to choose *which* head-to-head to read; then it reads that one arrow and obeys it.
 
-So STAR isn't outside pairwise reasoning — it uses a single pairwise comparison, chosen by score. That's why STAR can be *diagnosed* in this language even though it can't be classified by it: when people say "STAR elected someone who loses a head-to-head," they mean STAR's chosen edge wasn't the graph's top, and our reports print the matrix that shows it. The [Condorcet tiebreaker](../STAR_Voting/Tie_Breaking_STAR/condorcet_tiebreaker.md) — Equal Vote's optional STAR add-on — is literally a mini Copeland run, i.e. a tournament solution used as a subroutine.
+So STAR isn't outside pairwise reasoning — it uses a single pairwise comparison, chosen by score. That's why STAR can be *diagnosed* in this language even though it can't be classified by it: when people say "STAR elected someone who loses a head-to-head," they mean STAR's chosen edge wasn't the graph's top, and our reports print the matrix that shows it. The [Condorcet tiebreaker](../../01_STAR/concepts/Tie_Breaking_STAR/condorcet_tiebreaker.md) — Equal Vote's optional STAR add-on — is literally a mini Copeland run, i.e. a tournament solution used as a subroutine.
 
 ## What this has to do with Approval: outside too, with one footnote
 

@@ -4,7 +4,7 @@
 
 Two views of the **same election** (BV id [`r2pvc9`](https://bettervoting.com/r2pvc9/results)): BetterVoting's display and the LH engine's text report. Same ballots, same result.
 
-→ The reversal that contrasts with this: [the atom — the smallest reversal](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
+→ The reversal that contrasts with this: [the atom — the smallest reversal](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../concepts/the_count/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -65,7 +65,7 @@ Automatic Runoff Round
    Aspen 2 (67%) vs Birch 1 (33%); majority = 2.
 ```
 
-> **BV ↔ LH wording.** The line `Aspen 2 (67%) vs Birch 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
+> **BV ↔ LH wording.** The line `Aspen 2 (67%) vs Birch 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../concepts/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The point
 

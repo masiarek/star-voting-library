@@ -8,7 +8,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 **⭐ The running example — the team lunch.** The one a newcomer meets first: five coworkers, three lunches, and the compromise everyone likes wins. Live on BetterVoting.
 
-- **[The team lunch vote](cases/cases_pages/bv2184_fyy886_lunch_vote.md)** — *the* beginner example (paired with [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
+- **[The team lunch vote](cases/cases_pages/bv2184_fyy886_lunch_vote.md)** — *the* beginner example (paired with [STAR — start here](../concepts/STAR_start_here.md)) · **[live ↗](https://bettervoting.com/fyy886/results)**
 
 **The canonical mechanics demo.** The exact election quoted in the [root README](../../readme.md) and the authoring docs — three voters, three candidates, both rounds doing visible work, no twist on purpose.
 
@@ -48,6 +48,6 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 ---
 
-Up: [01_STAR — single-winner STAR Voting](../) · Concept docs: [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)
+Up: [01_STAR — single-winner STAR Voting](../) · Concept docs: [STAR — start here](../concepts/STAR_start_here.md)
 
 # file: README.md

@@ -2,9 +2,9 @@
 
 *Generated from [`bv126_ties_every_step_8fvd2x.yaml`](../bv126_ties_every_step_8fvd2x.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Amy
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Amy
 
-**Official tie-break (lot) order:** Amy > Chuck > Brian — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Amy > Chuck > Brian — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -164,7 +164,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../../method_comparisons/split_voting/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)

@@ -8,7 +8,7 @@ scenario_description: |-
   beats Cara in the runoff 3-1.
   One point of enthusiasm is the whole difference: case 01 is decided by
   ballots (five-star), case 02 by the pre-drawn lot. See
-  00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+  01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 options:
   show_description: false

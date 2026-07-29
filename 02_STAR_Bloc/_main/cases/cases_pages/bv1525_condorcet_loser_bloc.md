@@ -6,7 +6,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx`).
 
-**Official tie-break (lot) order:** First > Condorcet Loser > Second > Third > Fourth — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** First > Condorcet Loser > Second > Third > Fourth — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 

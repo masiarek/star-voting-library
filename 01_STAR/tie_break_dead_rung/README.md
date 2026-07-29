@@ -2,7 +2,7 @@
 
 *Four tiny constructed elections that isolate one fact: STAR's **five-star** tiebreaker counts votes equal to the **scale maximum (5)**. If none of the tied candidates earned a 5, the rung reads `0–0` and the tie falls through to the **lot** — in **both** rounds.*
 
-Backs the "dead rung" section of the canonical [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) (Level 301). Run any file:
+Backs the "dead rung" section of the canonical [STAR Tie-Breaking — The Full Chain](../concepts/Tie_Breaking_STAR/tie_breaking.md) (Level 301). Run any file:
 
 ```bash
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \

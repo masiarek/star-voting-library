@@ -51,7 +51,7 @@
 
 The Molochs aren't a reason to despair of voting reform — they're a **method-selection tool**. Four of the five can be *designed away*; only the Condorcet cycle is permanent, and it's both rare and mild. The lesson Quinn draws, and the one this library's cases keep landing on:
 
-> **Don't force voters to dishonestly support one candidate merely to oppose another.** A ballot that lets you say *how much* you like each option — independently — sidesteps Dark Horse and softens Chicken; a runoff or pairwise check sidesteps Center Squeeze and Lesser Evil. That's [STAR](../STAR_Voting/STAR_start_here.md) and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md), and it's why they hold up against a scorecard built by someone rooting for neither.
+> **Don't force voters to dishonestly support one candidate merely to oppose another.** A ballot that lets you say *how much* you like each option — independently — sidesteps Dark Horse and softens Chicken; a runoff or pairwise check sidesteps Center Squeeze and Lesser Evil. That's [STAR](../../01_STAR/concepts/STAR_start_here.md) and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md), and it's why they hold up against a scorecard built by someone rooting for neither.
 
 ## Sources
 

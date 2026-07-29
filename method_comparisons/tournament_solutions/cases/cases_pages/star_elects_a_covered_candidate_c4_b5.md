@@ -2,7 +2,7 @@
 
 *Generated from [`star_elects_a_covered_candidate_c4_b5.yaml`](../star_elects_a_covered_candidate_c4_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Denver
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Denver
 
 ## Scenario
 
@@ -123,10 +123,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Exhausted ballots (conversation)](../../../../00_start_here/RCV_IRV/exhausted_ballots_301.md)
+- [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [copeland_vs_clones_c5_b3](copeland_vs_clones_c5_b3.md) · [five_answers_one_election_c4_b3](five_answers_one_election_c4_b3.md)

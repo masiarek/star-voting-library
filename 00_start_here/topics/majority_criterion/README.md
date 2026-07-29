@@ -2,7 +2,7 @@
 
 *Plain-language first, jargon and references at the very bottom. This is the "a majority scored them highest but they still lost?!" idea — the objection FairVote raises most against STAR — and Equal Vote's answer to it.*
 
-Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -61,7 +61,7 @@ A related trap the same argument exposes: **consensus is not the same as "centri
 **Three honest caveats before deploying it:**
 
 - **It concedes the practical point.** The same argument grants that majority-of-preference is *"a very good rule of thumb"* — a candidate near the consensus will usually be on the majority's side anyway. So the critique is conceptual, not a claim that ranked methods routinely elect the wrong person. Anyone citing it as a knockout is overreading it.
-- **It is an argument for Score, not for STAR.** STAR's [automatic runoff](../../STAR_Voting/the_count/STAR_Automatic_Runoff.md) is *itself* a pairwise majority step — precisely the mechanism the critique targets. A STAR advocate cannot adopt this wholesale without arguing against STAR's own second round. (It fits pure Score, and to a degree Approval.)
+- **It is an argument for Score, not for STAR.** STAR's [automatic runoff](../../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) is *itself* a pairwise majority step — precisely the mechanism the critique targets. A STAR advocate cannot adopt this wholesale without arguing against STAR's own second round. (It fits pure Score, and to a degree Approval.)
 - **Source and lean.** The clearest write-up is [Lucasvb's essay on electowiki](https://electowiki.org/wiki/User:Lucasvb/Majority_and_consensus_under_ordinal_and_cardinal_perspectives) — a **personal user page**, not a community-reviewed article, by a cardinal-methods advocate. Its geometric argument is genuinely illuminating; its behavioural claim (that ranked ballots make voters *become* more factionalist) is asserted, not evidenced. Treat the first as an idea worth thinking with and the second as a hypothesis.
 
 ## The Relaxed Majority Criterion — Equal Vote's answer
@@ -76,7 +76,7 @@ Methods that **pass** RMC: RCV-IRV, **STAR**, Unified Primary, 3-2-1. Methods th
 
 ## The same fork as Later-No-Harm
 
-Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md)) are *the same event*, described two ways.
+Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md)) are *the same event*, described two ways.
 
 - **Later-No-Harm** (a voter's-eye view): "scoring my *later* choices should never hurt my favorite." STAR breaks this.
 - **Majority Criterion** (the electorate's view): "a majority's favorite should win." STAR can break this.
@@ -98,7 +98,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 |--------|:--:|:--:|--------------------|
 | Choose-One (plurality) | ✅ | ✅ | [plurality](../plurality.md) |
 | RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
-| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md) |
+| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) |
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../../06_Other/Range/concepts/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../../04_Approval/concepts/) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
 

@@ -16,7 +16,7 @@ Two passes, in this order (the order matters):
 
   2. LITERAL PASS — plain-replace any remaining literal `OLD/` strings. These
      are prose and source-code mentions written as repo-relative paths
-     ("see 00_start_here/RCV_IRV/foo.md"), plus published site URLs. Safe only
+     ("see 06_Other/RCV_IRV/concepts/foo.md"), plus published site URLs. Safe only
      because pass 1 already rewrote real links into new relative paths that no
      longer contain the old prefix.
 """

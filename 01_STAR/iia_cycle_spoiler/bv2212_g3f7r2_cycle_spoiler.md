@@ -4,7 +4,7 @@
 
 **One line:** when the head-to-head results form a Condorcet cycle, a candidate who *cannot win* can still decide *who does* — because their presence changes which two candidates meet in STAR's automatic runoff. This is STAR's honest Independence-of-Irrelevant-Alternatives (IIA) limit, shown mechanically, on perfectly sincere ballots.
 
-This is the sharpest fair criticism of STAR from the [r/EndFPTP thread](https://www.reddit.com/r/EndFPTP/comments/1uyjqgf/) that prompted it (user *Excellent_Air8235*) — not a strawman, and worth teaching honestly alongside STAR's strengths. See also the broader [STAR — Honest Limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+This is the sharpest fair criticism of STAR from the [r/EndFPTP thread](https://www.reddit.com/r/EndFPTP/comments/1uyjqgf/) that prompted it (user *Excellent_Air8235*) — not a strawman, and worth teaching honestly alongside STAR's strengths. See also the broader [STAR — Honest Limits](../concepts/properties_and_limits/STAR_honest_limits.md).
 
 ---
 

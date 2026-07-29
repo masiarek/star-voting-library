@@ -2,7 +2,7 @@
 
 *Generated from [`wcl_c3_b5_star.yaml`](../wcl_c3_b5_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ben
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Ben
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`).
 
@@ -150,7 +150,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Methods disagree on this election](../../../divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/wcl_c3_b5_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

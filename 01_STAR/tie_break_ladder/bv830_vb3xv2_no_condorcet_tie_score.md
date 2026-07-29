@@ -2,9 +2,9 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (election `vb3xv2`).
 
-> ⚖️ **Where head-to-head runs out of data, score finishes the job.** The two finalists, B and C, **tie 1-1-1 head-to-head**, so there is **no strict Condorcet winner**. But the ballots left more on the table — B pulled **7 points to C's 3** — and STAR reads it, electing **B**. As Kellyn Standley put it: *within a Condorcet tie the head-to-head method doesn't have enough data to name the preferred candidate when there clearly is one — and there, STAR's score intensity is the stronger standard.* (Scoped to Condorcet **non-decisions**; when a strict Condorcet winner exists, STAR-vs-Condorcet is a real debate — see [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).)
+> ⚖️ **Where head-to-head runs out of data, score finishes the job.** The two finalists, B and C, **tie 1-1-1 head-to-head**, so there is **no strict Condorcet winner**. But the ballots left more on the table — B pulled **7 points to C's 3** — and STAR reads it, electing **B**. As Kellyn Standley put it: *within a Condorcet tie the head-to-head method doesn't have enough data to name the preferred candidate when there clearly is one — and there, STAR's score intensity is the stronger standard.* (Scoped to Condorcet **non-decisions**; when a strict Condorcet winner exists, STAR-vs-Condorcet is a real debate — see [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md).)
 
-**Level 201/301.** Three voters, three candidates. Winner: **B**. This is a **happy-path** tie: it settles at a **deterministic** [rung](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) (the runoff score total), never reaching the lot — so LH and BetterVoting agree.
+**Level 201/301.** Three voters, three candidates. Winner: **B**. This is a **happy-path** tie: it settles at a **deterministic** [rung](../concepts/Tie_Breaking_STAR/tie_breaking.md) (the runoff score total), never reaching the lot — so LH and BetterVoting agree.
 
 ## The ballots (3 voters)
 
@@ -111,6 +111,6 @@ Both engines elect **B**, confirmed against BetterVoting's frozen export. B and 
 ## See also
 
 - [Why STAR Voting](../../00_start_here/topics/Why_STAR_Voting.md) — the STAR-vs-Condorcet tradeoff, argued both ways (point 6)
-- [The STAR tie-breaking ladder (full chain)](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) — the deterministic rungs, in order
+- [The STAR tie-breaking ladder (full chain)](../concepts/Tie_Breaking_STAR/tie_breaking.md) — the deterministic rungs, in order
 - [Ice cream ladder (BV2180, `fp62p2`)](bv2180_fp62p2_ice_cream_ladder.md) — the folder's other happy-path case (ties in *both* rounds, settled without the lot)
-- [Condorcet winner (topic hub)](../../00_start_here/topics/condorcet/) · [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md)
+- [Condorcet winner (topic hub)](../../00_start_here/topics/condorcet/) · [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md)

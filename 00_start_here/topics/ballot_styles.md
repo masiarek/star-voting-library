@@ -64,9 +64,9 @@ Line them up and the trade-offs jump out:
 
 | Ballot style | Cardinal or ordinal? | Methods that use it |
 |---|:--:|---|
-| Ranking | ordinal | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md), STV, Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)), Borda, Bucklin |
+| Ranking | ordinal | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md), STV, Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)), Borda, Bucklin |
 | Yes/No | cardinal (1-bit) | [Approval](../../04_Approval/concepts/approval_voting.md) |
-| Scoring | cardinal (graded, e.g. 0–5) | [Score / Range](../../06_Other/Range/concepts/range_voting.md), [STAR](../STAR_Voting/STAR_start_here.md) (a [hybrid](../STAR_Voting/the_count/STAR_hybrid_nature.md) — score ballot **+ runoff**) |
+| Scoring | cardinal (graded, e.g. 0–5) | [Score / Range](../../06_Other/Range/concepts/range_voting.md), [STAR](../../01_STAR/concepts/STAR_start_here.md) (a [hybrid](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md) — score ballot **+ runoff**) |
 
 The ballot is *what the voter marks*; the **tabulation** is *how it's counted* — and the same ballot can be counted more than one way (a ranked ballot by IRV, Ranked Robin, or STV). See [ballot vs tabulation](what_is_a_voting_method.md) and the [glossary](../GLOSSARY.md).
 

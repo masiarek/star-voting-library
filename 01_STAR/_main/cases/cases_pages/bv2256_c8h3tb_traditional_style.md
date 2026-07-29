@@ -2,7 +2,7 @@
 
 *Generated from [`bv2256_c8h3tb_traditional_style.yaml`](../bv2256_c8h3tb_traditional_style.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ella
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Ella
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/c8h3tb) · **[results ↗](https://bettervoting.com/c8h3tb/results)** (election `c8h3tb`).
 
@@ -30,7 +30,7 @@ gives the method one bit to read, so this count could not have done better than
 the choose-one ballot it is imitating.
 
 Live results (BV2256): https://bettervoting.com/c8h3tb/results
-Lesson: 00_start_here/STAR_Voting/voting_styles/traditional.md
+Lesson: 01_STAR/concepts/voting_styles/traditional.md
 
 ## Ballots
 

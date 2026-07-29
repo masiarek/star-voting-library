@@ -12,9 +12,9 @@ Because they use a fundamentally different ballot, scoring methods sit **outside
 
 | | Ballot | What it captures | Examples |
 |---|---|---|---|
-| **[Ranked (ordinal)](../scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md), [STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [Schulze](../../05_Ranked_Robin/concepts/cycle_resolution.md), [Ranked Pairs](../../05_Ranked_Robin/concepts/cycle_resolution.md)), [Borda](../../06_Other/other_ranked_methods/borda.md), [Bucklin](../../05_Ranked_Robin/concepts/glossary_ranked_robin.md) |
+| **[Ranked (ordinal)](../scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md), [STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [Schulze](../../05_Ranked_Robin/concepts/cycle_resolution.md), [Ranked Pairs](../../05_Ranked_Robin/concepts/cycle_resolution.md)), [Borda](../../06_Other/other_ranked_methods/borda.md), [Bucklin](../../05_Ranked_Robin/concepts/glossary_ranked_robin.md) |
 | **[Scored (cardinal)](../scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](../../04_Approval/concepts/approval_voting.md), [Score](../../06_Other/Range/concepts/range_voting.md) |
-| **[Hybrid](../STAR_Voting/the_count/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5 ([scoring round](../STAR_Voting/the_count/STAR_Scoring_Round.md)), then an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md) between the top two | Strength of support **and** a majority check | **[STAR](../STAR_Voting/STAR_start_here.md)** |
+| **[Hybrid](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5 ([scoring round](../../01_STAR/concepts/the_count/STAR_Scoring_Round.md)), then an [automatic runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) between the top two | Strength of support **and** a majority check | **[STAR](../../01_STAR/concepts/STAR_start_here.md)** |
 
 ## Approval Voting
 
@@ -22,7 +22,7 @@ Voters simply mark every candidate they approve of — no ranking, no scoring be
 
 ## STAR Voting (Score Then Automatic Runoff)
 
-Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check — a deliberate **hybrid** of a scored ballot and a majority runoff, which is why it sits in its own row above. Full explanation: [STAR's hybrid nature](../STAR_Voting/the_count/STAR_hybrid_nature.md).
+Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check — a deliberate **hybrid** of a scored ballot and a majority runoff, which is why it sits in its own row above. Full explanation: [STAR's hybrid nature](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md).
 
 ## Where scoring methods are weak (for balance)
 
@@ -34,9 +34,9 @@ Scoring isn't free of trade-offs, and an honest case names them. **STAR and Scor
 
 - [Alternate ballot styles — one voter, three ballots](ballot_styles.md) — ranking vs. yes/no vs. scoring, side by side on the same opinion
 - [Scores vs. ranks — don't confuse ranks and ratings](../scores_and_ranks/scores_vs_ranks.md) — the core ballot distinction: order vs. strength
-- [Is RCV "simple"? (201)](../RCV_IRV/RCV_IRV_is_simple.md) — the five-star/scoring mental model vs. ranking a field of strangers
+- [Is RCV "simple"? (201)](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) — the five-star/scoring mental model vs. ranking a field of strangers
 - [Tabulation, step by step](tabulation_star_vs_irv.md) — the same ballots counted as scores vs. ranks
-- [RCV vs. IRV vs. RCV-IRV — A Note on Terminology](../RCV_IRV/RCV-IRV-confusing-name.md)
+- [RCV vs. IRV vs. RCV-IRV — A Note on Terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
 
 ## Learn more
 

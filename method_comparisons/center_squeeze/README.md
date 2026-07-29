@@ -10,6 +10,6 @@ Read the reader-friendly **pages** (`center_squeeze_pages/`); the `.yaml` beside
 | [RCV-IRV squeezes the center](cases/cases_pages/center_squeeze_irv.md) | minimal 27-voter case — the moderate is eliminated first | [`.yaml`](cases/center_squeeze_irv.yaml) |
 | [STAR elects the center](cases/cases_pages/center_squeeze_star.md) | the same electorate — STAR's runoff picks the consensus | [`.yaml`](cases/center_squeeze_star.yaml) |
 
-Concept hub: [center squeeze](../../00_start_here/RCV_IRV/glossary_rcv_irv.md) · up: [method_comparisons — same ballots, different methods](../)
+Concept hub: [center squeeze](../../06_Other/RCV_IRV/concepts/glossary_rcv_irv.md) · up: [method_comparisons — same ballots, different methods](../)
 
 # file: README.md

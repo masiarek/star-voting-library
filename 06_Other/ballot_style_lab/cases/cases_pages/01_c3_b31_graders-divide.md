@@ -2,7 +2,7 @@
 
 *Generated from [`01_c3_b31_graders-divide.yaml`](../01_c3_b31_graders-divide.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Clara
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Clara
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4jmgrd) · **[results ↗](https://bettervoting.com/4jmgrd/results)** (election `4jmgrd`).
 
@@ -19,7 +19,7 @@ The electorate (31 ballots, all individual rows):
   - Abby camp: 15 voters (15 harsh)
   - Bruno camp: 16 voters (16 gentle)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - gentle: gentle soul: everything squeezed into 3-5, no zeros
   - harsh: harsh grader: everything squeezed into 0-2

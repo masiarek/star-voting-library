@@ -58,7 +58,7 @@ Debating "should four or five advance?" is optimizing the wrong variable. Fixing
 
 - **Sincere ballots only**, no strategy, no candidate entry/exit effects.
 - **Pre-primary drop-out pressure is not modelled** — parties pressuring co-partisans to withdraw *before* the qualifying round, the real Alaska failure mode. This is the biggest gap, and it cuts *toward* broad-support methods, so the numbers above understate the case for a good primary method rather than overstating it.
-- **"Accuracy" means matching the full-field Condorcet winner.** That's the right benchmark for a Condorcet general, but it bakes in a Condorcet definition of the right answer; the VSE column is the utilitarian cross-check. See [three notions of "winner"](../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md).
+- **"Accuracy" means matching the full-field Condorcet winner.** That's the right benchmark for a Condorcet general, but it bakes in a Condorcet definition of the right answer; the VSE column is the utilitarian cross-check. See [three notions of "winner"](../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md).
 - **Cycles are counted, not hidden.** A Condorcet winner exists in ~99% of spatial, ~93% of factional, and ~54% of noise-model elections; rates are computed over elections where one exists.
 - Fixed tiebreak (stable sort → lower candidate index) rather than a lot draw — identical across methods, so cross-method comparison stays fair.
 - **Always report the model, field size, and N with the number.**
@@ -72,7 +72,7 @@ uv run 06_Other/simulations/primary_method_simulation.py --candidates 12 --advan
 uv run 06_Other/simulations/primary_method_simulation.py --general star
 ```
 
-`--selftest` checks four invariants: a Condorcet qualifying round never drops the Condorcet winner; `N ≥ C` advances everyone; an advanced Condorcet winner always wins a Condorcet general; and a hand-built 5-ballot [center squeeze](../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) is dropped by a Plurality top-2.
+`--selftest` checks four invariants: a Condorcet qualifying round never drops the Condorcet winner; `N ≥ C` advances everyone; an advanced Condorcet winner always wins a Condorcet general; and a hand-built 5-ballot [center squeeze](../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) is dropped by a Plurality top-2.
 
 Full sweep across all three electorate models: [simulations README](../06_Other/simulations/README.md#qualifying-round-primary-method-simulation).
 

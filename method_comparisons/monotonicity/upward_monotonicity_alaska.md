@@ -2,7 +2,7 @@
 
 *A voting method should never punish a candidate for gaining support. RCV-IRV can. In the real **Alaska 2022** US House special, had about **6,000** Palin-only voters instead ranked the eventual winner **Peltola** first — giving her *more* first-place support and changing nothing else — **Peltola would have lost**. This is the **upward monotonicity paradox**, and this page reproduces it on a faithful model of the real ballots, then shows that **STAR and Ranked Robin cannot do it.***
 
-→ Part of the [monotonicity worked set](README.md). Companions: [**Downward** paradox — San Francisco 2020](downward_monotonicity_sf.md) (its mirror) · [Alaska 2022 (the full case)](../alaska_2022/) · [the burial attack on the same numbers](../condorcet_burial_alaska/) · [non-monotonicity (concept)](../../00_start_here/RCV_IRV/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../00_start_here/topics/monotonicity/README.md).
+→ Part of the [monotonicity worked set](README.md). Companions: [**Downward** paradox — San Francisco 2020](downward_monotonicity_sf.md) (its mirror) · [Alaska 2022 (the full case)](../alaska_2022/) · [the burial attack on the same numbers](../condorcet_burial_alaska/) · [non-monotonicity (concept)](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../00_start_here/topics/monotonicity/README.md).
 
 ---
 
@@ -13,7 +13,7 @@ Non-monotonicity comes in a matched pair (Graham-Squire & McCune, [arXiv:2301.12
 - **Upward monotonicity paradox** ("more is less"): shift the **winner up** the rankings on some ballots — keeping every other candidate's relative order the same — and the winner *loses*. Giving a candidate **more** support defeats them. **← this page.**
 - **Downward monotonicity paradox** ("less is more"): shift a **loser down** on some ballots and that loser *wins*. Giving a candidate **less** support elects them. → [San Francisco D7 2020](downward_monotonicity_sf.md).
 
-Both are failures of the **monotonicity criterion**: raising a candidate should never hurt them, and lowering one should never help them. (Note: monotonicity is **not** the same as [Later-No-Harm](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) — a common conflation.)
+Both are failures of the **monotonicity criterion**: raising a candidate should never hurt them, and lowering one should never help them. (Note: monotonicity is **not** the same as [Later-No-Harm](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) — a common conflation.)
 
 ## The real example: Alaska 2022
 
@@ -54,7 +54,7 @@ The winner's fate under IRV depends on *who gets eliminated first*, and that dep
 Both methods are **monotonic** in this sense — raising a candidate on some ballots can never cost them the election — so **neither has an upward monotonicity paradox.**
 
 - **Ranked Robin** (Condorcet / Copeland) reads the *whole* pairwise picture, not just who's eliminated first, so the shift doesn't move it at all. On the **same** ballots it elects **Begich both times** — before *and* after — because Begich is the [Condorcet winner](../../00_start_here/topics/condorcet/) who beats each rival head-to-head (Begich > Peltola, Begich > Palin). It's completely unmoved by the raise. (Same ballot as RCV-IRV, a monotonic count — the olive branch to ranked-choice voters.)
-- **STAR** passes **mono-raise**: raising your score for a candidate can only ever help them reach and win the runoff. (See the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md) and [STAR & monotonicity](../../00_start_here/STAR_Voting/properties_and_limits/STAR_monotonicity.md).)
+- **STAR** passes **mono-raise**: raising your score for a candidate can only ever help them reach and win the runoff. (See the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md) and [STAR & monotonicity](../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md).)
 
 ## Keep it in proportion — the fair reading
 

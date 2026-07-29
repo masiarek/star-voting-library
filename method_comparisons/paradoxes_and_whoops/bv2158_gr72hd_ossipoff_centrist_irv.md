@@ -4,7 +4,7 @@
 
 **Level 301 · the "core support" defense, demolished.** IRV defenders excuse center squeeze by saying the eliminated moderate "lacked core support" (first-choice votes). This example (Mike Ossipoff, via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) kills that defense: candidate **C has the *most* first choices of anyone *and* beats every rival head-to-head — and IRV eliminates C anyway**, electing D.
 
-A ranked-ballot case (no scores invented). → fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · cousin: [center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) · [`README`](README.md).
+A ranked-ballot case (no scores invented). → fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · cousin: [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [`README`](README.md).
 
 ---
 

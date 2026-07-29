@@ -2,7 +2,7 @@
 
 *Generated from [`bv2159_f4cjpy_brams_irv_pathologies.yaml`](../bv2159_f4cjpy_brams_irv_pathologies.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** B
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** B
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`).
 

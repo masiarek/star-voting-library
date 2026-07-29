@@ -2,7 +2,7 @@
 
 *Generated from [`06_c4_b24_narrow-bands.yaml`](../06_c4_b24_narrow-bands.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beige
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Beige
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt`).
 
@@ -20,7 +20,7 @@ The electorate (24 ballots, all individual rows):
   - warm tilt: 10 voters (5 cliff35, 5 gentle)
   - drift: 5 voters (3 flat, 2 ranked_style)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - cliff34: sliver ballot: 0 or 3-4 only
@@ -196,7 +196,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/06_c4_b24_narrow-bands.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

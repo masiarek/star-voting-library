@@ -68,7 +68,7 @@ That's a genuine design disagreement about ballots, not a dispute about counting
 
 Two **rated** methods *end* with a head-to-head step, which can fool you into filing them under Condorcet. They aren't. Both first narrow the field, then run a pairwise comparison only among the **survivors** — so the true Condorcet winner can be eliminated *before* the final:
 
-- **STAR** — add 0–5 scores, take the top two by total, then a pairwise automatic runoff. The runoff is pairwise, but the *finalists* are chosen by score sum, not by beating everyone — so STAR is **not** Condorcet-compliant. → [STAR](../../00_start_here/STAR_Voting/STAR_start_here.md) · [three notions of winner](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md).
+- **STAR** — add 0–5 scores, take the top two by total, then a pairwise automatic runoff. The runoff is pairwise, but the *finalists* are chosen by score sum, not by beating everyone — so STAR is **not** Condorcet-compliant. → [STAR](../../01_STAR/concepts/STAR_start_here.md) · [three notions of winner](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md).
 - **3-2-1** — Good/OK/Bad, then most-Good → fewest-Bad → pairwise. Same shape: a pairwise *final*, but the two finalists come from the rating steps, so a Condorcet winner outside them never gets there. **Not** Condorcet. → [3-2-1 voting](../../00_start_here/topics/three_two_one_voting.md).
 
 **The tell:** a Condorcet method compares *every* pair across the *whole* field; these compare *one* pair among *pre-selected* finalists. A pairwise step ≠ a Condorcet method.

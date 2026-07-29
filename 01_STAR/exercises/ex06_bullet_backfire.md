@@ -110,7 +110,7 @@ Sources: [ex06_bullet_honest.yaml](cases/ex06_bullet_honest.yaml) · [ex06_bulle
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [strategic voting across the Equal Vote methods](../../00_start_here/topics/strategic_voting.md) and the [second-round FAQ](../../00_start_here/STAR_Voting/the_count/STAR_second_round_FAQ.md) (why the runoff exists).
+**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [strategic voting across the Equal Vote methods](../../00_start_here/topics/strategic_voting.md) and the [second-round FAQ](../concepts/the_count/STAR_second_round_FAQ.md) (why the runoff exists).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

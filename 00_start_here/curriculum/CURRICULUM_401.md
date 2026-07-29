@@ -26,10 +26,10 @@
 
 - **Objective:** read the conceded failure list for each method straight from its own honest-limits page — the fair 401, method by method.
 - **Material:**
-  - **STAR** → [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) (the *why*) and [every criterion STAR fails](../STAR_Voting/properties_and_limits/star_criteria_failures.md) (the *index, with a runnable example + BV id for each*): not Condorcet-compliant; trades Later-No-Harm; rare majority / participation / mono-raise-delete / IIA / consistency failures.
+  - **STAR** → [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) (the *why*) and [every criterion STAR fails](../../01_STAR/concepts/properties_and_limits/star_criteria_failures.md) (the *index, with a runnable example + BV id for each*): not Condorcet-compliant; trades Later-No-Harm; rare majority / participation / mono-raise-delete / IIA / consistency failures.
   - **Ranked Robin / Condorcet** → [RR's honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) (cycles; blind to intensity — the sincere dark horse).
-  - **RCV-IRV** → [non-monotonicity](../RCV_IRV/RCV_IRV_non_monotonicity.md), [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md), [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md).
-  - **Approval / Score** → [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) and the "where do you draw the line?" threshold question ([are equal-score votes discounted?](../STAR_Voting/reference/are_equal_score_votes_discounted.md)).
+  - **RCV-IRV** → [non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md), [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md), [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md).
+  - **Approval / Score** → [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) and the "where do you draw the line?" threshold question ([are equal-score votes discounted?](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md)).
   - **Plurality / Choose-One** → the [spoiler effect](../topics/spoiler_effect.md) and [wasted votes](../topics/wasted_votes.md) — the failures the whole reform movement exists to fix.
 - **The point:** a method that lists its own limits out loud is more trustworthy, not less. Candor is the credibility (it's [301](CURRICULUM_301.md)'s rule, carried to the capstone).
 
@@ -49,7 +49,7 @@
 ## 401.6 — Reading the advocacy (claim-checking)
 
 - **Objective:** apply the safety check to the *literature*, not just the methods — every camp's white paper leans, and each is worth checking with the ballots in hand.
-- **Material:** the worked claim-checks — [FairVote's official position on STAR](../../method_comparisons/fairvote_star_whitepaper/) (pro-RCV), the [FairVote Condorcet article](../topics/condorcet/fairvote_condorcet_claim_check.md), and the [rangevoting.org "IRV logic" critique](../RCV_IRV/RCV_IRV_non_monotonicity.md#a-sharper-critique-and-where-it-overreaches-reading-advocacy-critically) (pro-Range). Each concedes the valid core, runs the testable claims, flags the overreach, discloses the lean — and lets the fairness cut against STAR too.
+- **Material:** the worked claim-checks — [FairVote's official position on STAR](../../method_comparisons/fairvote_star_whitepaper/) (pro-RCV), the [FairVote Condorcet article](../topics/condorcet/fairvote_condorcet_claim_check.md), and the [rangevoting.org "IRV logic" critique](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md#a-sharper-critique-and-where-it-overreaches-reading-advocacy-critically) (pro-Range). Each concedes the valid core, runs the testable claims, flags the overreach, discloses the lean — and lets the fairness cut against STAR too.
 - **The point:** the same discipline that grades a *method's* failure grades an *argument's*: concede the kernel, test it, name the overclaim, disclose who's talking.
 
 ## 401.7 — The synthesis: choosing responsibly

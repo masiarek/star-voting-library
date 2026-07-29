@@ -122,11 +122,11 @@ Structurally immune to participation failures: the pure point-summing methods �
 
 ## Five methods, four winners
 
-A closing curiosity from the engine's `[Divergence from STAR]` block on the *base* nine ballots: this little electorate splits the methods four ways — Choose-One elects **Dana**, RCV-IRV elects **Bella**, Ranked Robin elects **Eli**, and STAR (with Score agreeing) elects **Alex**. Engineered ballots disagree loudly; which notion of "best winner" should prevail is [three winner notions](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md)' question.
+A closing curiosity from the engine's `[Divergence from STAR]` block on the *base* nine ballots: this little electorate splits the methods four ways — Choose-One elects **Dana**, RCV-IRV elects **Bella**, Ranked Robin elects **Eli**, and STAR (with Score agreeing) elects **Alex**. Engineered ballots disagree loudly; which notion of "best winner" should prevail is [three winner notions](../concepts/properties_and_limits/STAR_three_winner_notions.md)' question.
 
 ## Reading this fairly
 
-A constructed classroom electorate with one-point margins — it demonstrates the *mechanism* honestly and says nothing about *frequency*. Every method fails something; what matters is which failures, how often, under sincere votes. Apply [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) before turning any single construction into a verdict, and see [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) for the balanced scorecard.
+A constructed classroom electorate with one-point margins — it demonstrates the *mechanism* honestly and says nothing about *frequency*. Every method fails something; what matters is which failures, how often, under sincere votes. Apply [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) before turning any single construction into a verdict, and see [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md) for the balanced scorecard.
 
 ## Run it yourself
 

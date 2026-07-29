@@ -63,4 +63,4 @@ Nice-to-haves: name the rung that decided it ("five-star was 0–0, so the lot d
 ### Further reading (background docs)
 
 - Worked example, both views (BV screenshots + the independent report): <https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md>
-- STAR tie-breaking — the full chain (the ladder + the "dead rung"): <https://github.com/masiarek/YAML/blob/master/00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md>
+- STAR tie-breaking — the full chain (the ladder + the "dead rung"): <https://github.com/masiarek/YAML/blob/master/01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md>

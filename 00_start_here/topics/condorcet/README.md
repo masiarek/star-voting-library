@@ -9,9 +9,9 @@
 | Method | Condorcet winner? | Notes | Full page |
 |--------|:---:|------|-----------|
 | **Ranked Robin / Copeland** | ✅ always | it *is* a Condorcet method — most pairwise wins | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) |
-| **BTR / Baldwin / Nanson** | ✅ always | Condorcet-safe IRV variants | [Which RCV-IRV?](../../RCV_IRV/variants/RCV_IRV_variants.md) |
-| **STAR** | ⚠️ very often | not guaranteed; the runoff usually recovers it. [Measured](condorcet_efficiency_measured.md): 74–99% | [STAR automatic runoff](../../STAR_Voting/the_count/STAR_Automatic_Runoff.md) |
-| **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
+| **BTR / Baldwin / Nanson** | ✅ always | Condorcet-safe IRV variants | [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) |
+| **STAR** | ⚠️ very often | not guaranteed; the runoff usually recovers it. [Measured](condorcet_efficiency_measured.md): 74–99% | [STAR automatic runoff](../../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) |
+| **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) |
 | **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 
 When there's **no** Condorcet winner (a cycle), the principled "still in contention" list is [the Smith set](../smith_set.md), and methods differ in how they pick from it — see [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md).

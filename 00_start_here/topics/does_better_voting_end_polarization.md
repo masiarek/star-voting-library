@@ -16,7 +16,7 @@ Strip the branding and there is a real, important truth here, and it's the hones
 
 - **No vote-splitting / no [spoiler](spoiler_effect.md).** Cardinal ballots genuinely remove the structural penalty for a crowded field. A consensus candidate can't be "split out" the way [Plurality](plurality.md) splits one side.
 - **The moderate survives instead of being squeezed.** Whole-ballot methods don't eliminate the broadly-liked centrist early the way Hare/IRV does — see [center squeeze](center_squeeze/). The candidate a majority would accept can actually win.
-- **No lesser-evil trap.** Voters can support several candidates, or score an honest favorite *and* a safe compromise, without [betraying](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) either. That defuses the "vote for the frontrunner you hate least" dynamic that hardens two camps.
+- **No lesser-evil trap.** Voters can support several candidates, or score an honest favorite *and* a safe compromise, without [betraying](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) either. That defuses the "vote for the frontrunner you hate least" dynamic that hardens two camps.
 
 Together these remove the **incentives** that reward running to the base and punish the compromiser. That is a legitimate, structural anti-polarization mechanism — and it's enough of a claim on its own. It doesn't need inflating.
 

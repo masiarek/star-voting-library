@@ -2,7 +2,7 @@
 
 *Generated from [`05a_residual_split_bullet-voting.yaml`](../05a_residual_split_bullet-voting.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Cara
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Cara
 
 ## Scenario
 

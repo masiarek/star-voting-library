@@ -2,7 +2,7 @@
 
 *[VSE](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) asks **"does this method pick a good winner?"** PVSI asks the other half of the question: **"does this method reward you for lying on your ballot?"** It is VSE's companion metric, introduced in the same peer-reviewed paper, and it's the number behind claims like "in STAR, strategy is as likely to backfire as to work."*
 
-**Level: 301.** Source: [Wolk, Quinn & Ogren (2023)](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) — peer-reviewed, open access, and claim-checked here (the authors are STAR advocates; lean disclosed).
+**Level: 301.** Source: [Wolk, Quinn & Ogren (2023)](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) — peer-reviewed, open access, and claim-checked here (the authors are STAR advocates; lean disclosed).
 
 ---
 
@@ -62,7 +62,7 @@ Two findings do more work than the individual numbers:
 1. **In STAR, Approval Top Two and Smith/Minimax, every strategy that gives *less than full support to your favorite* is disincentivized.** That is the measurable version of "vote your conscience": favorite betrayal, burial and bullet voting are all *strongly* disincentivized in STAR.
 2. **STAR's only surviving incentive is honesty-preserving.** The ~2% rewards exaggerating *magnitudes* (5s and 0s rather than 4s and 1s), not reordering your preferences. Your honest ranking still decides the runoff — so the residual strategy doesn't corrupt the information the method relies on.
 
-Note the direction of the IRV result: because IRV's most-rewarded strategy *is* favorite betrayal, the method that's marketed as letting you "vote your heart" measurably rewards not doing so. See [favorite betrayal](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) and [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) for the mechanism.
+Note the direction of the IRV result: because IRV's most-rewarded strategy *is* favorite betrayal, the method that's marketed as letting you "vote your heart" measurably rewards not doing so. See [favorite betrayal](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) and [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) for the mechanism.
 
 ## How PVSI relates to VSE
 
@@ -87,8 +87,8 @@ The widely-shared figures **STAR 1:1 · Approval 2.6:1 · RCV-IRV 2.7:1 · Plura
 - **It assumes decent polling.** Every viability-aware strategy depends on knowing who the frontrunners are. Real polls carry error (the paper models 5% noise); worse information makes strategy riskier than PVSI suggests.
 - **A live running tally is a *perfect* poll — and that cuts the other way.** The measured figures assume noisy pre-election polling. Show voters the tally *as they vote* and you have removed the uncertainty that makes strategy risky, so the real incentive rises **above** the number in the table. Add the ability to **change a ballot** before close and it rises further: a faction can watch, see its candidate trailing, and switch together in the final minutes. The published incentives are therefore a **floor for a zero-information election**, not a constant — which is why running a serious election with live results *and* editable ballots quietly forfeits much of the strategy resistance the method was chosen for. (Both settings are common on online platforms; see [BetterVoting's own warning](https://docs.bettervoting.com/help/preliminary_results.html).)
 - **It's a marginal measure, not a coordination cost.** PVSI describes the single decisive voter, and deliberately says nothing about how hard it is to organize a whole faction to strategize in unison — which in practice is the bigger barrier.
-- **Low is the goal; zero is impossible.** [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) guarantees every method with 3+ candidates is manipulable, so STAR's ~2% is *small, not nil* — see [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md).
-- **Advocate-authored.** The metric is sound and the code is published, but it was introduced by STAR proponents; on their own data a Condorcet method (Smith/Minimax) beats STAR on this very metric — which the [claim-check](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) reports rather than buries.
+- **Low is the goal; zero is impossible.** [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) guarantees every method with 3+ candidates is manipulable, so STAR's ~2% is *small, not nil* — see [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+- **Advocate-authored.** The metric is sound and the code is published, but it was introduced by STAR proponents; on their own data a Condorcet method (Smith/Minimax) beats STAR on this very metric — which the [claim-check](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) reports rather than buries.
 
 ## Related
 
@@ -97,4 +97,4 @@ The widely-shared figures **STAR 1:1 · Approval 2.6:1 · RCV-IRV 2.7:1 · Plura
 - [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — why no method scores a true zero
 - [The Smith set](smith_set.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) — the Condorcet family that scores best here
 - [Single-winner scorecard](../../method_comparisons/single_winner_scorecard/README.md) — where these figures sit among the other criteria
-- [Wolk, Quinn & Ogren (2023), claim-checked](../STAR_Voting/reference/wolk_quinn_ogren_2023.md) — the source paper
+- [Wolk, Quinn & Ogren (2023), claim-checked](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) — the source paper

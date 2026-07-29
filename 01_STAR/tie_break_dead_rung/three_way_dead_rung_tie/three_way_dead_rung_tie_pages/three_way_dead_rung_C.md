@@ -2,9 +2,9 @@
 
 *Generated from [`three_way_dead_rung_C.yaml`](../three_way_dead_rung_C.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** C
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** C
 
-**Official tie-break (lot) order:** C > A > B — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** C > A > B — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -158,7 +158,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [three_way_dead_rung_A](three_way_dead_rung_A.md) · [three_way_dead_rung_B](three_way_dead_rung_B.md)

@@ -10,7 +10,7 @@
 
 ## What it gets right
 
-- **The "pure" vs. "semi-cardinal" split.** [Approval](../../04_Approval/concepts/approval_voting.md) and [Score](../../06_Other/Range/concepts/range_voting.md) are pure — each candidate's total depends only on the scores given to *that* candidate. [STAR](../STAR_Voting/STAR_start_here.md) is not, because the runoff reintroduces a comparison between candidates. This is the cleanest one-line explanation of why Score and Approval satisfy the [favorite betrayal criterion](../STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) and **STAR does not**. Worth knowing — though note "semi-cardinal" is electowiki's own coinage, not standard vocabulary, so don't expect a political scientist to recognize it.
+- **The "pure" vs. "semi-cardinal" split.** [Approval](../../04_Approval/concepts/approval_voting.md) and [Score](../../06_Other/Range/concepts/range_voting.md) are pure — each candidate's total depends only on the scores given to *that* candidate. [STAR](../../01_STAR/concepts/STAR_start_here.md) is not, because the runoff reintroduces a comparison between candidates. This is the cleanest one-line explanation of why Score and Approval satisfy the [favorite betrayal criterion](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) and **STAR does not**. Worth knowing — though note "semi-cardinal" is electowiki's own coinage, not standard vocabulary, so don't expect a political scientist to recognize it.
 - **Scale invariance.** For sum, average, or median aggregation, 0–5 vs. 0–100 vs. −42–7 changes nothing; only the *psychology* of the voter changes. Correct.
 - **Gradation is what matters, not range.** To carry strictly *more* information than a ranking, the number of score levels must exceed the number of candidates. Correct as stated — *n* levels are exactly enough to express any strict ranking of *n* candidates, so beating a ranking takes more than *n*. The practical consequence for this library: **STAR's 0–5 is six levels, so it can express any strict ranking of up to six candidates exactly**; from seven candidates on, some voters are forced into ties. That's the ceiling behind [scale granularity can flip the winner](scale_granularity_flips_the_winner.md).
 - **The majority-criterion critique**, including the arithmetic — see the runnable case below.
@@ -22,7 +22,7 @@ The article argues that increasing a candidate's score can only help them, calls
 
 **That implication is invalid.** Monotonicity and IIA are logically independent — neither entails the other. The counterexample is already in this repo: **the [Borda count](../../method_comparisons/dark_horse_borda/) is monotone and fails IIA spectacularly**, which is the whole dark-horse story. A method can also satisfy IIA and fail monotonicity; the article itself later cites **Ebert's method** as a cardinal rule that fails monotonicity, which contradicts its own reasoning two sections earlier.
 
-The **conclusion** is fine — Score and Approval do satisfy both. The **reason** is different: in a pure cardinal method each candidate's total is computed from the scores given to that candidate alone. That single property (separability) yields monotonicity *and* IIA independently. Neither is derived from the other, and the derivation matters, because it tells you exactly where the guarantee stops: at [STAR's runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md), which compares two candidates and is therefore not separable.
+The **conclusion** is fine — Score and Approval do satisfy both. The **reason** is different: in a pure cardinal method each candidate's total is computed from the scores given to that candidate alone. That single property (separability) yields monotonicity *and* IIA independently. Neither is derived from the other, and the derivation matters, because it tells you exactly where the guarantee stops: at [STAR's runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md), which compares two candidates and is therefore not separable.
 
 ## Error 2 — the Bayesian Regret sign is backwards
 
@@ -82,7 +82,7 @@ Automatic Runoff Round
  Celia wins.
 ```
 
-**Alma is max-scored by an outright majority**, so [Choose-One](../topics/plurality.md) and [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) — both of which satisfy the majority criterion — elect Alma, IRV in the first round. **Score, STAR and [Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md) all elect Celia.**
+**Alma is max-scored by an outright majority**, so [Choose-One](../topics/plurality.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — both of which satisfy the majority criterion — elect Alma, IRV in the first round. **Score, STAR and [Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md) all elect Celia.**
 
 Drop the indifferent voters from three to two and Alma–Celia becomes a **49–49 pairwise tie**, Celia is no longer the Condorcet winner, and Ranked Robin flips to Alma. So the crossover sits just above 2 voters in 100 — **above 3.92% of the 51-voter majority bloc**, which is what "4% or more of the majority" claims. Verified.
 
@@ -102,6 +102,6 @@ Borrow the taxonomy, the pure/semi-cardinal distinction, the gradation rule, and
 
 ---
 
-**See also:** [the majority criterion set](../../01_STAR/majority_criterion/README.md) · [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [criteria at a glance](../topics/criteria_at_a_glance.md) · [how to learn about voting methods](../topics/how_to_learn_about_voting_methods.md) — the source-tier policy this page applies
+**See also:** [the majority criterion set](../../01_STAR/majority_criterion/README.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [criteria at a glance](../topics/criteria_at_a_glance.md) · [how to learn about voting methods](../topics/how_to_learn_about_voting_methods.md) — the source-tier policy this page applies
 
 # file: cardinal_voting_claims_checked.md

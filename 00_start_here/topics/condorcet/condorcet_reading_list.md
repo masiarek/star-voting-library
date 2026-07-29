@@ -85,7 +85,7 @@ The Condorcet camp argues well, and the strongest version deserves a serious rea
 | Split Cycle, and "immunity to spoilers" | [Split Cycle, claim-checked](split_cycle.md) — the paper's central claim, run |
 | Clone independence | [clone independence in Ranked Robin](../../../05_Ranked_Robin/concepts/rr_clone_independence.md) |
 | Why the brands differ | [the naming decoder](../../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) · [Ranked Robin vs. Consensus Choice](../../../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) |
-| Whether a *rated* method should chase the Condorcet winner at all | [three notions of winner](../../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md) · [scores vs. ranks](../../scores_and_ranks/scores_vs_ranks.md) |
+| Whether a *rated* method should chase the Condorcet winner at all | [three notions of winner](../../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) · [scores vs. ranks](../../scores_and_ranks/scores_vs_ranks.md) |
 | Cross-checking a real count three ways | [cross-checking with pref_voting](../../tabulation_engines/cross_checking_with_pref_voting.md) |
 
 ---

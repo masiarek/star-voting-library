@@ -2,13 +2,13 @@
 
 *Generated from [`best_pet_c7_b461.yaml`](../best_pet_c7_b461.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Dog
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Dog
 
 ## Scenario
 
 A real BetterVoting STAR election (BV id: pet) — 7 pets, 461 ballots.
 Converted from the BetterVoting JSON export; winner: Dog.
-How to read this report (LH): 00_start_here/STAR_reporting/reporting_LH/
+How to read this report (LH): 01_STAR/concepts/reporting/reporting_LH/
 
 ## Ballots
 

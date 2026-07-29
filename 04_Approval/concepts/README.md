@@ -10,7 +10,7 @@ Everything explaining **Approval** (mark every candidate you approve — **1** �
 - [Approval + Top-Two](approval_top_two.md) — the reform package (St. Louis): an Approval primary feeding a head-to-head general, and why the runoff **must** be a second election — the exact package STAR folds into one ballot
 - [Honest limits](approval_honest_limits.md) — no preference strength or order, and the unavoidable threshold choice (the gap STAR was designed to close)
 - [Approval in the theory literature (301)](approval_in_the_literature.md) — the six arguments and five criticisms as academia states them (two of the five don't survive), the **three incompatible readings of what "approve" means** and why the strategy argument can't settle until you pick one, and *Approval = Borda = Condorcet* on dichotomous preferences — with the runnable case that shows why that equivalence doesn't transfer to a real election
-- [The case for approval voting — Hamlin & Hua (2023), claim-checked (301)](hamlin_hua_2023.md) — the Approval camp's own academic case, and the companion article to [the STAR paper](../../00_start_here/STAR_Voting/reference/wolk_quinn_ogren_2023.md) in the same journal issue. Section 4 answers four critiques (majority criterion, later-no-harm, bullet voting, expressiveness); its §4.1 example is fully runnable, so the page is mostly engine output — including the paper's own utility defence, written down and counted
+- [The case for approval voting — Hamlin & Hua (2023), claim-checked (301)](hamlin_hua_2023.md) — the Approval camp's own academic case, and the companion article to [the STAR paper](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) in the same journal issue. Section 4 answers four critiques (majority criterion, later-no-harm, bullet voting, expressiveness); its §4.1 example is fully runnable, so the page is mostly engine output — including the paper's own utility defence, written down and counted
 
 ## Multi-winner & committees
 
@@ -25,4 +25,4 @@ The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multi
 
 - Glossary: [Approval terms](glossary_approval.md)
 
-*(Parallel method hub: [STAR Voting](../../00_start_here/STAR_Voting/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*
+*(Parallel method hub: [STAR Voting](../../01_STAR/concepts/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*

@@ -2,7 +2,7 @@
 
 *Generated from [`01a_c2_b2_two-candidates.yaml`](../01a_c2_b2_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Chocolate
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Chocolate
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/my82v6) · **[results ↗](https://bettervoting.com/my82v6/results)** (election `my82v6`).
 

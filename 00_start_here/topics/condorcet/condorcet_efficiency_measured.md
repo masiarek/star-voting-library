@@ -128,7 +128,7 @@ For the modern empirical treatment, [Green-Armytage, Tideman & Cosman (2016)](co
 
 ## Where this lands
 
-STAR is **not** Condorcet-compliant and this repo does not claim otherwise ([STAR's honest limits](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Campbell–Kelly](campbell_kelly_theorem.md)). What these numbers support is narrower and more defensible than the slogan:
+STAR is **not** Condorcet-compliant and this repo does not claim otherwise ([STAR's honest limits](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md), [Campbell–Kelly](campbell_kelly_theorem.md)). What these numbers support is narrower and more defensible than the slogan:
 
 > In realistic electorates, STAR elects the Condorcet winner **most of the time** — 92–99% at three candidates, 74–92% as the field grows — and it is the **most Condorcet-efficient non-Condorcet method measured here in every structured model**. Under impartial culture at small fields, RCV-IRV does better; under a single-issue spectrum with a crowded field, RCV-IRV elects the head-to-head winner less than half the time.
 

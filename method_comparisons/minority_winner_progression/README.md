@@ -18,7 +18,7 @@ At the bottom rung, **eleven diners out of a hundred** decide the whole pizza �
 
 Meanwhile **nothing changes for the whole-ballot methods.** Cheese is everybody's easy second at every rung, so:
 
-- **[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md)** — Cheese runs away with the scoring round and wins the runoff. → Cheese, every time.
+- **[STAR](../../01_STAR/concepts/STAR_start_here.md)** — Cheese runs away with the scoring round and wins the runoff. → Cheese, every time.
 - **[Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md)** — Cheese beats every topping head-to-head (the Condorcet winner). → Cheese, every time.
 - **Approval** — nearly everyone approves Cheese; the niche toppings each get only their fan club. → Cheese, every time.
 

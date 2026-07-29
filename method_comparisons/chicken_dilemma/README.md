@@ -2,7 +2,7 @@
 
 *A strategic seam of **Approval** (and pure Score): two similar candidates who must cooperate to beat a third can end up in a **game of chicken** — approve both ally and you risk a tie; bullet-vote your favorite and you might win, or, if both sides defect, hand victory to the candidate the majority opposes. Named the **Burr dilemma** after the 1800 Jefferson–Burr tie. **STAR turns the slippery slope into a non-slippery one** — the runoff lets you support both allies honestly without ever needing to bullet.*
 
-→ Part of the strategic-pathology set: [The strategic pathologies — five Molochs, and where STAR stands](../../00_start_here/topics/strategic_pathologies.md). Framing from Jameson Quinn. Related: [Approval voting](../../04_Approval/concepts/approval_voting.md) · [strategic voting](../../00_start_here/topics/strategic_voting.md) · [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+→ Part of the strategic-pathology set: [The strategic pathologies — five Molochs, and where STAR stands](../../00_start_here/topics/strategic_pathologies.md). Framing from Jameson Quinn. Related: [Approval voting](../../04_Approval/concepts/approval_voting.md) · [strategic voting](../../00_start_here/topics/strategic_voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
 
 ---
 

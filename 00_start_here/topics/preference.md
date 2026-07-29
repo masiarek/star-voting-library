@@ -37,7 +37,7 @@ The same word trips people elsewhere too: a **"preference ballot"** is ambiguous
 
 ## Related concept pages
 
-- [RCV vs. IRV vs. RCV-IRV — terminology](../RCV_IRV/RCV-IRV-confusing-name.md) — the parallel naming mess
+- [RCV vs. IRV vs. RCV-IRV — terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md) — the parallel naming mess
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — why "preference" includes strength, which ranks drop
 - [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md) — equal ranks, and what a ranking can/can't say
 - [Ranked Robin (Consensus Voting)](../../05_Ranked_Robin/concepts/ranked_robin.md)

@@ -12,7 +12,7 @@ scenario_description: |-
   reads 0-0 — it cannot separate them — so the tie falls through to the LOT.
   lot_numbers pins the order, so Ben advances by lot priority (not by five-star).
   The eventual winner is still Alice; what changed is WHICH rung chose the second
-  finalist. See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+  finalist. See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 options:
   show_description: false
@@ -50,7 +50,7 @@ TABULATION RESULTS
   reads 0-0 — it cannot separate them — so the tie falls through to the LOT.
   lot_numbers pins the order, so Ben advances by lot priority (not by five-star).
   The eventual winner is still Alice; what changed is WHICH rung chose the second
-  finalist. See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+  finalist. See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

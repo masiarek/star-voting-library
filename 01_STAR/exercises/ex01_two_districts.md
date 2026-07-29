@@ -127,7 +127,7 @@ This is the **consistency** criterion (also *join-consistency* or *reinforcement
 
 Two honest cautions before this becomes a talking point:
 
-- **This is not a summability failure.** STAR remains fully [precinct-summable](../../00_start_here/STAR_Voting/properties_and_limits/STAR_summability.md): score totals and the [preference matrix](../../00_start_here/GLOSSARY.md) add across precincts, and officials run the two rounds *once* on the summed tallies. Nobody tabulates a citywide STAR seat district-by-district. What fails is only the *inference* "won every district ⇒ wins the whole."
+- **This is not a summability failure.** STAR remains fully [precinct-summable](../concepts/properties_and_limits/STAR_summability.md): score totals and the [preference matrix](../../00_start_here/GLOSSARY.md) add across precincts, and officials run the two rounds *once* on the summed tallies. Nobody tabulates a citywide STAR seat district-by-district. What fails is only the *inference* "won every district ⇒ wins the whole."
 - **What the criterion actually threatens is the headline.** "She carried both districts and still lost!" is a real communications liability after a close election — this exercise is the worked answer to it: carrying a district means winning *that district's runoff pairing*, and the pairing itself is what changed.
 - **The paradox has a catalog page and an IRV-side sibling.** The general phenomenon is Felsenthal's *multiple-districts / reinforcement* paradox — see [the catalog page](../../00_start_here/voting_paradoxes/multiple_districts.md) — and the repo already runs the classic IRV-side demonstration live ([Felsenthal's reinforcement trio](../../method_comparisons/felsenthal_paradoxes/README.md), BV2147–49), where plurality-with-runoff commits the paradox and STAR happens to stay consistent. This exercise's trio (BV2188–90) is the other shoe: the constructive proof that STAR is not reinforcement-proof either.
 
@@ -136,7 +136,7 @@ Two honest cautions before this becomes a talking point:
 <details>
 <summary><b>(f) Bonus — the 1-of-9 runoff</b></summary>
 
-Eight West ballots score the two finalists identically (the ×5 bloc gives 3-3, the ×3 bloc gives 5-5). They count at full weight in the scoring round — they are much of *why* Avery and Blake are the finalists — but in a head-to-head between equals they have no preference to give: they are **Equal Support**, not discounted and not "lost." The runoff summary line is built to self-reconcile so this never looks like missing votes: `Voters with a preference: 1 of 9 (8 Equal Support)`. See [Two Denominators, One Winner](../../00_start_here/STAR_Voting/the_count/runoff_percentages.md).
+Eight West ballots score the two finalists identically (the ×5 bloc gives 3-3, the ×3 bloc gives 5-5). They count at full weight in the scoring round — they are much of *why* Avery and Blake are the finalists — but in a head-to-head between equals they have no preference to give: they are **Equal Support**, not discounted and not "lost." The runoff summary line is built to self-reconcile so this never looks like missing votes: `Voters with a preference: 1 of 9 (8 Equal Support)`. See [Two Denominators, One Winner](../concepts/the_count/runoff_percentages.md).
 
 </details>
 
@@ -153,13 +153,13 @@ The on-screen report's `[Divergence from STAR]` block will have already whispere
   RCV-RR (Condorcet)     = Elena   (differs from STAR)
 ```
 
-Elena is the *first choice* of 10 of the 18 voters and the Condorcet winner (she beats every rival head-to-head), yet she finishes third on points: her supporters also scored Carmen generously (4) and Avery moderately (3), while her opponents gave her straight 0s. So this one engineered electorate splits the three defensible notions of "best winner" three ways — Score says Avery, majority/Condorcet logic says Elena, STAR's broad-compromise runoff says Carmen. Which notion *should* prevail is its own lesson: [three winner notions](../../00_start_here/STAR_Voting/properties_and_limits/STAR_three_winner_notions.md). The lesson *here* is narrower and method-internal: STAR's own answer changed when the electorate was sliced.
+Elena is the *first choice* of 10 of the 18 voters and the Condorcet winner (she beats every rival head-to-head), yet she finishes third on points: her supporters also scored Carmen generously (4) and Avery moderately (3), while her opponents gave her straight 0s. So this one engineered electorate splits the three defensible notions of "best winner" three ways — Score says Avery, majority/Condorcet logic says Elena, STAR's broad-compromise runoff says Carmen. Which notion *should* prevail is its own lesson: [three winner notions](../concepts/properties_and_limits/STAR_three_winner_notions.md). The lesson *here* is narrower and method-internal: STAR's own answer changed when the electorate was sliced.
 
 The live BetterVoting trio makes Elena visible too: each election carries a second race — the same opinions cast as ranked ballots (equal rankings allowed) under Ranked Robin — and Elena wins it 4–0 in West, East, and the city alike.
 
 ## Reading this fairly
 
-A classroom construction, and it shows: mirror-image districts, three ballot styles, and (as the engine's own caveat notes) every ballot carrying tied scores somewhere. It demonstrates the *mechanism* of a consistency failure honestly; it says nothing about *frequency* in real electorates. Every method fails something — apply [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) before turning any single construction into a verdict, and see [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) for the balanced scorecard.
+A classroom construction, and it shows: mirror-image districts, three ballot styles, and (as the engine's own caveat notes) every ballot carrying tied scores somewhere. It demonstrates the *mechanism* of a consistency failure honestly; it says nothing about *frequency* in real electorates. Every method fails something — apply [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) before turning any single construction into a verdict, and see [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md) for the balanced scorecard.
 
 ## Run it yourself
 

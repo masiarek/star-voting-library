@@ -2,7 +2,7 @@
 
 *Generated from [`tie_break_04_runoff_five_star_breaks.yaml`](../tie_break_04_runoff_five_star_breaks.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Alice
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Alice
 
 ## Scenario
 
@@ -10,7 +10,7 @@ The runoff ladder's working case. Two candidates tie head-to-head (1-1) and tie
 on total score (5-5), so the runoff falls to its second rung — most score-5
 votes. Alice has one 5, Ben has none, so Alice wins WITHOUT reaching the lot.
 Contrast tie_break_03 (same tie, no 5 exists -> the lot decides).
-See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 ## Ballots
 
@@ -108,7 +108,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

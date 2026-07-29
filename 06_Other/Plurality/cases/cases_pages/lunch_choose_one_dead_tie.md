@@ -6,7 +6,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm`).
 
-**Official tie-break (lot) order:** Sushi > Tacos > Pizza — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Sushi > Tacos > Pizza — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -80,5 +80,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Plurali
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)

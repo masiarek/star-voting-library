@@ -30,7 +30,7 @@ A ranking is a *grid constraint*: on the common **strict** ballot, one mark per 
 
 - **Duplicate ranks (an "overvote")** — mark two candidates 2nd and, in most US RCV-IRV rules, that portion of your ballot (or all of it) is void. You weren't allowed to feel a tie.
 - **Skipped ranks** — jump from 2nd to 4th and jurisdictions differ: some ignore the gap, some stop reading your ballot right there.
-- **Rank caps** — many real ballots only offer 3–5 rank columns in a large field. Whatever you couldn't rank, the count treats as silence — a ballot-format path into [exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md).
+- **Rank caps** — many real ballots only offer 3–5 rank columns in a large field. Whatever you couldn't rank, the count treats as silence — a ballot-format path into [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md).
 
 These aren't hypotheticals: reported spoilage runs roughly **4–9% for ranked ballots vs. 0–2% for rated ballots** (see [scores vs. ranks](scores_vs_ranks.md)), and the errors fall hardest on voters with the least practice navigating grids.
 
@@ -46,7 +46,7 @@ This is the repo's core terminology point: **RCV names the ballot, not the count
 
 | Count it with | Family | Notes |
 |---|---|---|
-| [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) | elimination rounds | what "RCV" usually means in the US |
+| [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) | elimination rounds | what "RCV" usually means in the US |
 | [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) | Condorcet / round-robin | reads every pairwise matchup; allows equal ranks |
 | STV | proportional | multi-winner transfers ([STV vs proportional STAR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md)) |
 | [Borda](../../06_Other/other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../topics/ranked_ballot_methods_zoo.md) runs 15+ on one screen |
@@ -58,5 +58,5 @@ Different tabulations of the same ballots routinely elect **different winners** 
 - [The score ballot](score_ballot.md) — the twin page: independent 0–5 values instead of an order
 - [Alternate ballot styles](../topics/ballot_styles.md) — the same voter on ranking / Yes-No / scoring, side by side
 - [Scores vs. ranks](scores_vs_ranks.md) — why order and strength are different data
-- [Exhausted ballots](../RCV_IRV/RCV_IRV_exhausted_ballots.md) — where unranked finalists end up under IRV
-- [Which RCV-IRV?](../RCV_IRV/variants/RCV_IRV_variants.md) · Glossary: [`ranked ballot`](../GLOSSARY.md)
+- [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — where unranked finalists end up under IRV
+- [Which RCV-IRV?](../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) · Glossary: [`ranked ballot`](../GLOSSARY.md)

@@ -2,7 +2,7 @@
 
 *Generated from [`bv2182_tg4779_faq_runoff_reversal.yaml`](../bv2182_tg4779_faq_runoff_reversal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Almond
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Almond
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (election `tg4779`).
 

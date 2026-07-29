@@ -32,8 +32,8 @@ python pref_voting_tabulation.py ../../../method_comparisons/summability_demo/ca
 
 ## The three write-ups
 
-- [STAR is summable](../../00_start_here/STAR_Voting/properties_and_limits/STAR_summability.md)
+- [STAR is summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md)
 - [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md)
-- [IRV is *not* summable](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md)
+- [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)
 
 The STAR files are guarded by the positive test harness; the `rr_*` files carry `expected_winners` (B for all three) and tabulate to it on the LH engine, confirmed independently by the [`pref_voting` cross-check](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).

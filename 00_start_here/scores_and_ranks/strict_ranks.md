@@ -24,6 +24,6 @@ The alternative — letting voters mark candidates equal — is a [weak rank](we
 
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — the head-to-head, with the method table
 - [Weak ranks](weak_ranks.md) · [Scores vs. ranks](scores_vs_ranks.md)
-- [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) — the strict-rank, non-pairwise method on US ballots
+- [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — the strict-rank, non-pairwise method on US ballots
 
 # file: strict_ranks.md

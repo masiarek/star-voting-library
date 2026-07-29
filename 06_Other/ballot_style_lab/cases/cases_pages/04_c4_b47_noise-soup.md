@@ -2,7 +2,7 @@
 
 *Generated from [`04_c4_b47_noise-soup.yaml`](../04_c4_b47_noise-soup.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Caleb
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Caleb
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/74pbyg) · **[results ↗](https://bettervoting.com/74pbyg/results)** (election `74pbyg`).
 
@@ -22,7 +22,7 @@ The electorate (47 ballots, all individual rows):
   - static: 11 voters (6 ranked_style, 3 chaos, 2 flat)
   - plus 2 marker row(s): 1 spoiled ballot, 1 race abstention
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - slate: partisan slate: equal 5s for the in-group, 0 outside
   - flat: flat-liner: same score for everyone

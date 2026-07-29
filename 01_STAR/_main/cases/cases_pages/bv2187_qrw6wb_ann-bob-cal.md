@@ -2,7 +2,7 @@
 
 *Generated from [`bv2187_qrw6wb_ann-bob-cal.yaml`](../bv2187_qrw6wb_ann-bob-cal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bob
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Bob
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/qrw6wb) · **[results ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`).
 

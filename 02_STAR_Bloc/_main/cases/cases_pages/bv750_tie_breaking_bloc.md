@@ -4,7 +4,7 @@
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** c, a
 
-**Official tie-break (lot) order:** c > a > b — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** c > a > b — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -196,7 +196,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/_ma
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

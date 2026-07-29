@@ -2,7 +2,7 @@
 
 *Generated from [`small_abstention_c2_b5.yaml`](../small_abstention_c2_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** A
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** A
 
 ## Scenario
 
@@ -11,7 +11,7 @@ smallest case that proves how BetterVoting and the LH engine differ on a
 "no-preference" ballot. Frozen raw export:
 small_abstention_c2_b5_bv_export.json. Full write-up:
 small_case_abstention_lesson.md.
-How to read this report (LH): 00_start_here/STAR_reporting/reporting_LH/
+How to read this report (LH): 01_STAR/concepts/reporting/reporting_LH/
 
 Five ballots, two candidates:
 

@@ -8,14 +8,14 @@
 
 | Method | Squeezes the center? | Why | Full page |
 |--------|:---:|-----|-----------|
-| **RCV-IRV (Hare)** | ❌ yes | eliminates on *first* choices, so the moderate is cut before their breadth counts | [Center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md) |
-| **Contingent / Supplementary** | ❌ yes | one-shot top-two — same first-choice cut | [Contingent & SV](../../RCV_IRV/variants/RCV-IRV-contingent-supplementary.md) |
-| **BTR / Baldwin / Nanson** | ✅ no | Condorcet-safe IRV variants — read the whole ballot | [Which RCV-IRV?](../../RCV_IRV/variants/RCV_IRV_variants.md) |
-| **Coombs** | ✅ no | eliminates on *last* choices, so the moderate survives | [Coombs](../../RCV_IRV/variants/RCV-IRV-Coombs.md) |
+| **RCV-IRV (Hare)** | ❌ yes | eliminates on *first* choices, so the moderate is cut before their breadth counts | [Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) |
+| **Contingent / Supplementary** | ❌ yes | one-shot top-two — same first-choice cut | [Contingent & SV](../../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-contingent-supplementary.md) |
+| **BTR / Baldwin / Nanson** | ✅ no | Condorcet-safe IRV variants — read the whole ballot | [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) |
+| **Coombs** | ✅ no | eliminates on *last* choices, so the moderate survives | [Coombs](../../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-Coombs.md) |
 | **Ranked Robin / Condorcet** | ✅ no | elects the head-to-head winner directly — never eliminates them | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) |
-| **STAR** | ✅ no | the scoring round advances a candidate on *strength* of support, not first-place counts | [Center squeeze § how STAR avoids it](../../RCV_IRV/RCV_IRV_center_squeeze.md#how-star-avoids-it) |
+| **STAR** | ✅ no | the scoring round advances a candidate on *strength* of support, not first-place counts | [Center squeeze § how STAR avoids it](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md#how-star-avoids-it) |
 
-The same 27-voter election runs through every method on the [RCV-IRV-Hare page](../../RCV_IRV/RCV-IRV-Hare.md): Hare elects Left, everyone who reads the whole ballot elects the Condorcet winner, Center.
+The same 27-voter election runs through every method on the [RCV-IRV-Hare page](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md): Hare elects Left, everyone who reads the whole ballot elects the Condorcet winner, Center.
 
 **And it happened for real:** [Burlington 2009](../../../method_comparisons/burlington_2009/README.md) — the actual 8,980 ballots, runnable in this repo. Montroll beats everyone head-to-head (5–0), IRV eliminates him in the semifinal, and a 750-voter raise built from the same profile makes the winner lose (non-monotonicity on certified ballots).
 

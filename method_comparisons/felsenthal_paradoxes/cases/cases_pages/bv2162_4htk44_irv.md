@@ -2,7 +2,7 @@
 
 *Generated from [`bv2162_4htk44_irv.yaml`](../bv2162_4htk44_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** A
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** A
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
 

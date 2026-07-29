@@ -21,7 +21,7 @@ The electorate (29 ballots, all individual rows):
   - south side: 8 voters (4 gentle, 3 cliff34, 1 nuanced)
   - floaters: 4 voters (2 chaos, 1 anyone_but, 1 flat)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - cliff34: sliver ballot: 0 or 3-4 only

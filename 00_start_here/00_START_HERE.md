@@ -1,6 +1,6 @@
 # Start Here
 
-This is the **STAR Voting education library** — for learning, teaching, and debating **[STAR Voting](STAR_Voting/STAR_start_here.md)** (Score Then Automatic Runoff). STAR comes first here. What makes the case for it trustworthy is that we *don't hide the ball*: STAR is tested honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness **is** the argument — the STAR case is stronger because you can check it yourself.
+This is the **STAR Voting education library** — for learning, teaching, and debating **[STAR Voting](../01_STAR/concepts/STAR_start_here.md)** (Score Then Automatic Runoff). STAR comes first here. What makes the case for it trustworthy is that we *don't hide the ball*: STAR is tested honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness **is** the argument — the STAR case is stronger because you can check it yourself.
 
 **Pick your path — what brings you here?**
 
@@ -10,11 +10,11 @@ This is the **STAR Voting education library** — for learning, teaching, and de
 
 The main event.
 
-- **New here? — the gentle on-ramp** (what STAR is and why it matters, before any mechanics) → [STAR — start here](STAR_Voting/STAR_start_here.md)
-- **Why STAR? — start with the quick, exciting wins** → [the benefits of STAR](STAR_Voting/getting_started/STAR_benefits.md); then the *complete* case in plain points → [Why STAR Voting](topics/Why_STAR_Voting.md). *Prefer ranked ballots?* → [Why Ranked Robin](../05_Ranked_Robin/concepts/why_ranked_robin.md), the friendly upgrade that counts them so the consensus wins.
-- **How the count works** → [the Scoring Round](STAR_Voting/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](STAR_Voting/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
-- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](STAR_Voting/getting_started/STAR_FAQ.md)
-- **Do it, don't just read it** → [Hands-on](STAR_Voting/hands_on/README.md): [run a paper-ballot demo](STAR_Voting/hands_on/running_a_paper_ballot_demo.md) (print real ballots from a BetterVoting election, vote, hand-count, compare) · [count a STAR election by hand](STAR_Voting/hands_on/count_star_by_hand.md) · [teach it](STAR_Voting/hands_on/teaching_star_voting.md)
+- **New here? — the gentle on-ramp** (what STAR is and why it matters, before any mechanics) → [STAR — start here](../01_STAR/concepts/STAR_start_here.md)
+- **Why STAR? — start with the quick, exciting wins** → [the benefits of STAR](../01_STAR/concepts/getting_started/STAR_benefits.md); then the *complete* case in plain points → [Why STAR Voting](topics/Why_STAR_Voting.md). *Prefer ranked ballots?* → [Why Ranked Robin](../05_Ranked_Robin/concepts/why_ranked_robin.md), the friendly upgrade that counts them so the consensus wins.
+- **How the count works** → [the Scoring Round](../01_STAR/concepts/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
+- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](../01_STAR/concepts/getting_started/STAR_FAQ.md)
+- **Do it, don't just read it** → [Hands-on](../01_STAR/concepts/hands_on/README.md): [run a paper-ballot demo](../01_STAR/concepts/hands_on/running_a_paper_ballot_demo.md) (print real ballots from a BetterVoting election, vote, hand-count, compare) · [count a STAR election by hand](../01_STAR/concepts/hands_on/count_star_by_hand.md) · [teach it](../01_STAR/concepts/hands_on/teaching_star_voting.md)
 - **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
 
 ## What's wrong with how we vote now?
@@ -23,9 +23,9 @@ The problem STAR is built to fix — start here if you're new to voting reform.
 
 - [Choose-One / Plurality (FPTP)](topics/plurality.md) — the status quo, and why it breaks with more than two candidates
 - [The spoiler effect](topics/spoiler_effect.md) — the core failure
-- [Center squeeze](RCV_IRV/RCV_IRV_center_squeeze.md) — how even ranked methods can eliminate the consensus candidate
+- [Center squeeze](../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — how even ranked methods can eliminate the consensus candidate
 - [Two-party dominance](topics/two_party_dominance.md) — is it good or bad, and what actually changes it
-- [Alaska 2022](RCV_IRV/case_studies/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
+- [Alaska 2022](../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md) — a real RCV-IRV failure (spoiler + center squeeze + non-monotonicity in one race)
 
 ## Why STAR over the alternatives?
 
@@ -35,7 +35,7 @@ The honest comparison — where STAR's case is actually made.
 - [Choosing among the Equal Vote methods](topics/choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
 - [RCV-IRV vs. STAR](topics/rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
 - [Strategic voting](topics/strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
-- **Skeptical?** [STAR for skeptics — the honest 5-minute path](STAR_Voting/getting_started/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
+- **Skeptical?** [STAR for skeptics — the honest 5-minute path](../01_STAR/concepts/getting_started/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
 - **More than one seat?** [Electing more than one, simply](topics/electing_more_than_one.md) — majoritarian vs. proportional, in plain language
 
 ## The whole field, even-handed
@@ -45,7 +45,7 @@ The credibility layer — read the arguments *against*, too.
 - [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
 - [Books on Voting Methods](books/README.md) — an annotated shelf of the popular and scholarly books, with covers and an honest "the lean" on each
 - [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
-- **Honest limits** — every method's weaknesses, stated plainly: [STAR](STAR_Voting/properties_and_limits/STAR_honest_limits.md) · [Approval](../04_Approval/concepts/approval_honest_limits.md) · [Ranked Robin](../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md)
+- **Honest limits** — every method's weaknesses, stated plainly: [STAR](../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [Approval](../04_Approval/concepts/approval_honest_limits.md) · [Ranked Robin](../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md)
 - [Who champions each method](topics/advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
 
 ## Run & verify elections (the library + engine)
@@ -65,11 +65,11 @@ The thing that makes every claim above checkable.
 
 | Method | Ballot | Learn more |
 |---|---|---|
-| **STAR** | score 0–5, then automatic runoff | [STAR — start here →](STAR_Voting/STAR_start_here.md) |
+| **STAR** | score 0–5, then automatic runoff | [STAR — start here →](../01_STAR/concepts/STAR_start_here.md) |
 | **Approval** | approve any number (0/1) | [Approval overview →](../04_Approval/concepts/approval_voting.md) |
 | **Range / Score** | grade each; highest total wins | [Range / Score overview →](../06_Other/Range/concepts/range_voting.md) |
 | **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [Ranked Robin overview →](../05_Ranked_Robin/concepts/ranked_robin.md) |
-| **RCV-IRV** | rank; instant runoff | [RCV-IRV (Hare) →](RCV_IRV/RCV-IRV-Hare.md) |
+| **RCV-IRV** | rank; instant runoff | [RCV-IRV (Hare) →](../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) |
 | **3-2-1** | Good / OK / Bad | [3-2-1 overview →](../06_Other/three_two_one/README.md) |
 
 # file: 00_START_HERE.md

@@ -4,7 +4,7 @@
 
 > ⚠️ **BV reporting bug (pending).** When ties hit every step, BetterVoting has shown the wrong message **"no ballots have been cast"** even though ballots exist — tracked as **[BV126 / #1052](https://github.com/Equal-Vote/bettervoting/issues/1052)**. Same underlying gap as case 05: wrong finalists / no human-readable tie-break explanation [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379). (The tie-break sequence is now in BV's JSON export — [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), closed.)
 
-→ [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ [STAR Tie-Breaking](../concepts/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../concepts/reporting/reporting_ties.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

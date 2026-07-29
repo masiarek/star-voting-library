@@ -26,7 +26,7 @@ scenario_description: |-
   the choose-one ballot it is imitating.
 
   Live results (BV2256): https://bettervoting.com/c8h3tb/results
-  Lesson: 00_start_here/STAR_Voting/voting_styles/traditional.md
+  Lesson: 01_STAR/concepts/voting_styles/traditional.md
 
 voting_method: STAR
 num_winners: 1

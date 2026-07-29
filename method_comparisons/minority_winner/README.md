@@ -38,7 +38,7 @@ Choose-One counts **only your top pick.** So it only sees the first choices:
 
 Now count the *same* ballots with a method that reads all of them:
 
-- **[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md):** Cleo leads the scoring round with **433**, then wins the automatic runoff over Ada **66–34**. → **Cleo.**
+- **[STAR](../../01_STAR/concepts/STAR_start_here.md):** Cleo leads the scoring round with **433**, then wins the automatic runoff over Ada **66–34**. → **Cleo.**
 - **[Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md):** Cleo beats Ada head-to-head (66–34) *and* Ben (67–33) — she's the **Condorcet winner**. → **Cleo.**
 
 Both find **Cleo** — the candidate most people are genuinely happy with.
@@ -49,7 +49,7 @@ Both find **Cleo** — the candidate most people are genuinely happy with.
 |---|---|:--:|
 | **Choose-One (Plurality)** | first choices only | Ada — *34%* |
 | **[Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md)** | every head-to-head | ✅ **Cleo** |
-| **[STAR](../../00_start_here/STAR_Voting/STAR_start_here.md)** | scores, then a runoff | ✅ **Cleo** |
+| **[STAR](../../01_STAR/concepts/STAR_start_here.md)** | scores, then a runoff | ✅ **Cleo** |
 
 ## The one big idea
 

@@ -2,7 +2,7 @@
 
 *Generated from [`03_c4_b33_bullet-storm.yaml`](../03_c4_b33_bullet-storm.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Carla
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Carla
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/w9f4vd) · **[results ↗](https://bettervoting.com/w9f4vd/results)** (election `w9f4vd`).
 
@@ -22,7 +22,7 @@ The electorate (33 ballots, all individual rows):
   - Carla brigade: 8 voters (8 bullet)
   - the thoughtful few: 6 voters (5 nuanced, 1 ranked_style)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - weak_backup: 5 + a grudging 1 backup, rest 0/blank
   - strong_backup: 5 + a strong 4 backup, rest 0/blank
@@ -194,7 +194,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)

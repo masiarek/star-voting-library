@@ -2,7 +2,7 @@
 
 *In praise of the contrived example. The tiny, symmetric elections in this repo — `5,5,5 / 4,4,4`, or `4,0,0 / 0,4,0 / 0,0,4` — will never show up at a polling place. That's the point: they're **probes**, built on purpose to drive a tabulation algorithm into its corners so we can see exactly what it does there.*
 
-Part of the [Ties & Tie-Breaking](README.md) hub · companion to [STAR Tie-Breaking — The Full Chain](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+Part of the [Ties & Tie-Breaking](README.md) hub · companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md).
 
 ---
 
@@ -76,6 +76,6 @@ Generate your own along any branch with [`generate_dead_rung_scenarios.py`](../.
 
 ## See also
 
-- [STAR Tie-Breaking — The Full Chain](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) — the ladders in words.
+- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) — the ladders in words.
 - [The "dead rung" case set](../../../01_STAR/tie_break_dead_rung/README.md) and [Flat scores, ties & tie-breaking](../../../01_STAR/Flat_scores_ties/README.md) — the probes themselves.
 - [Tie-Breaking: STAR vs. RCV-IRV](tiebreaking_star_vs_irv.md) — why strict ranks make ties harder, not easier.

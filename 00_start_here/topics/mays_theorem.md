@@ -62,8 +62,8 @@ That is a considerably stronger argument than "FPTP is broken," and a fairer one
 
 Worth checking, because it's easy to assume the methods differ everywhere:
 
-- **[STAR](../STAR_Voting/)** — with two candidates both are automatically finalists, so the scoring round decides nothing and the [automatic runoff](../STAR_Voting/the_count/) is a straight pairwise majority vote.
-- **[RCV-IRV](../RCV_IRV/)** — no one can be eliminated before someone has a majority; round one settles it.
+- **[STAR](../../01_STAR/concepts/)** — with two candidates both are automatically finalists, so the scoring round decides nothing and the [automatic runoff](../../01_STAR/concepts/the_count/) is a straight pairwise majority vote.
+- **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)** — no one can be eliminated before someone has a majority; round one settles it.
 - **[Ranked Robin](../../05_Ranked_Robin/concepts/)** — one pairwise matchup *is* the whole round robin.
 - **[Approval](../../04_Approval/concepts/)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
 
@@ -91,7 +91,7 @@ Read as a pair, the two theorems say something sharper than either alone:
 
 > **Majority rule is uniquely right for two alternatives (May), and cannot be coherently extended to three (Condorcet's paradox, then Arrow).**
 
-Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../STAR_Voting/), [Ranked Robin](../../05_Ranked_Robin/concepts/), [Approval](../../04_Approval/concepts/), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
+Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../../01_STAR/concepts/), [Ranked Robin](../../05_Ranked_Robin/concepts/), [Approval](../../04_Approval/concepts/), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
 
 ## Sources
 

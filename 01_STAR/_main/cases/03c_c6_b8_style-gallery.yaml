@@ -9,7 +9,7 @@ scenario_description: |-
   in the runoff: the partisan and "anyone but" voters scored both finalists
   the same, so they expressed no preference between them — but their scores
   still helped pick the finalists.
-  Lesson: 00_start_here/STAR_Voting/STAR_ballot_voting_styles.md
+  Lesson: 01_STAR/concepts/STAR_ballot_voting_styles.md
 
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen

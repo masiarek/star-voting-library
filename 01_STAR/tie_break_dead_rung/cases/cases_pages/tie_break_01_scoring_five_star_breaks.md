@@ -2,7 +2,7 @@
 
 *Generated from [`tie_break_01_scoring_five_star_breaks.yaml`](../tie_break_01_scoring_five_star_breaks.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Alice
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Alice
 
 ## Scenario
 
@@ -11,7 +11,7 @@ resolve, because a max-score (5) vote exists. Alice leads (10); Ben and Cara
 tie at 6 and are also tied head-to-head (pairwise 1-1), so the tie falls to the
 second rung — most score-5 votes. Ben has one 5, Cara has none, so Ben advances.
 Contrast with tie_break_02 (same shape, capped so no 5 exists -> the lot decides).
-See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
+See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
 
 ## Ballots
 
@@ -111,7 +111,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [bv126_ties_every_step_8fvd2x](bv126_ties_every_step_8fvd2x.md) · [dead_rung_scoring_dead_cap2](dead_rung_scoring_dead_cap2.md) · [dead_rung_scoring_dead_cap3](dead_rung_scoring_dead_cap3.md) · [dead_rung_scoring_dead_cap4](dead_rung_scoring_dead_cap4.md) · [tie_break_02_scoring_no_fives_to_lot](tie_break_02_scoring_no_fives_to_lot.md) · [tie_break_03_runoff_no_fives_to_lot](tie_break_03_runoff_no_fives_to_lot.md) · [tie_break_04_runoff_five_star_breaks](tie_break_04_runoff_five_star_breaks.md) · [tie_break_05_scoring_five_star_vs_adversarial_lot](tie_break_05_scoring_five_star_vs_adversarial_lot.md) · [tie_break_06_scoring_dead_rung_adversarial_lot](tie_break_06_scoring_dead_rung_adversarial_lot.md) · [tie_break_07_runoff_five_star_vs_adversarial_lot](tie_break_07_runoff_five_star_vs_adversarial_lot.md) · [tie_break_08_runoff_dead_rung_adversarial_lot](tie_break_08_runoff_dead_rung_adversarial_lot.md) · [tie_break_09_five_star_tied_nonzero](tie_break_09_five_star_tied_nonzero.md)

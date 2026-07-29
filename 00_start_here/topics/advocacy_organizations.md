@@ -4,14 +4,14 @@ Each major single-winner reform has a national organization behind it. Knowing w
 
 | Method | Organization | Site | In one line |
 |---|---|---|---|
-| [Ranked Choice Voting](../RCV_IRV/RCV-IRV-Hare.md) (RCV-IRV) | **FairVote** | [fairvote.org](https://fairvote.org) | Popularized the "RCV" brand for instant-runoff voting; the largest, oldest US reform group. |
+| [Ranked Choice Voting](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) (RCV-IRV) | **FairVote** | [fairvote.org](https://fairvote.org) | Popularized the "RCV" brand for instant-runoff voting; the largest, oldest US reform group. |
 | [Approval Voting](../../04_Approval/concepts/approval_voting.md) | **The Center for Election Science** (CES) | [electionscience.org](https://electionscience.org) | Champions Approval as the simplest high-impact upgrade; backed the Fargo and St. Louis wins. |
-| [STAR Voting](../STAR_Voting/STAR_start_here.md) | **Equal Vote Coalition** | [equal.vote](https://equal.vote) | Developed and advocates STAR (Score Then Automatic Runoff); home of the "equally weighted vote" standard. Also promotes [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) as the ranked-ballot option. |
+| [STAR Voting](../../01_STAR/concepts/STAR_start_here.md) | **Equal Vote Coalition** | [equal.vote](https://equal.vote) | Developed and advocates STAR (Score Then Automatic Runoff); home of the "equally weighted vote" standard. Also promotes [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) as the ranked-ballot option. |
 | [Consensus Choice](../../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) (Condorcet) | **Better Choices for Democracy** | [betterchoices.vote](https://www.betterchoices.vote/consensus-choice) | Newer group advocating a Condorcet method under the "Consensus Choice" brand, packaged with an open qualifying election sending 4+ candidates to the general. |
 
 ## Notes on the terminology
 
-"RCV" is a **ballot** (ranked), and FairVote's usage made it a near-synonym for one **tabulation** of that ballot — instant-runoff voting (IRV). That's why this repo writes **RCV-IRV** when precision matters: other tabulations of the same ranked ballot (Ranked Robin, STV) are not what "RCV" colloquially means. Background: [why the name is confusing](../RCV_IRV/RCV-IRV-confusing-name.md).
+"RCV" is a **ballot** (ranked), and FairVote's usage made it a near-synonym for one **tabulation** of that ballot — instant-runoff voting (IRV). That's why this repo writes **RCV-IRV** when precision matters: other tabulations of the same ranked ballot (Ranked Robin, STV) are not what "RCV" colloquially means. Background: [why the name is confusing](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md).
 
 STAR and the Equal Vote Coalition grew out of the same community; the consumer-facing STAR campaign also operates as **STAR Voting** ([starvoting.org](https://starvoting.org)).
 

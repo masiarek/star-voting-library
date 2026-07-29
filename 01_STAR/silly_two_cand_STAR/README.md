@@ -11,7 +11,7 @@ With only **two candidates**, STAR has nothing distinctive to show a newcomer:
 
 In other words, a two-candidate STAR example teaches the *mechanics of the count* but hides the whole reason STAR exists: reading a **full ballot across three or more candidates** so the broad compromise can surface and vote-splitting can't bury it. Leading a first-time learner with one of these is actively misleading — it makes STAR look like a fancy way to do something they already know.
 
-That's why the [`STAR — start here`](../../00_start_here/STAR_Voting/STAR_start_here.md) page and the [teaching progression](../_main/) now open on the **three-candidate team-lunch example** instead.
+That's why the [`STAR — start here`](../concepts/STAR_start_here.md) page and the [teaching progression](../_main/) now open on the **three-candidate team-lunch example** instead.
 
 ## Why they're kept
 
@@ -31,4 +31,4 @@ Equal Support and the runoff denominator are taught *properly* — with a real f
 
 ---
 
-Up: [01_STAR — single-winner STAR Voting](../) · Concept docs: [STAR — start here](../../00_start_here/STAR_Voting/STAR_start_here.md)
+Up: [01_STAR — single-winner STAR Voting](../) · Concept docs: [STAR — start here](../concepts/STAR_start_here.md)

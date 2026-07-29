@@ -6,7 +6,7 @@ scenario_description: |-
   tie at 6 and are also tied head-to-head (pairwise 1-1), so the tie falls to the
   second rung — most score-5 votes. Ben has one 5, Cara has none, so Ben advances.
   Contrast with tie_break_02 (same shape, capped so no 5 exists -> the lot decides).
-  See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
+  See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
 
 options:
   show_description: false

@@ -2,7 +2,7 @@
 
 *If a **score** ballot can be reduced to a **ranking** (drop the intensity), can you go the other way — turn a ranking back into scores? You can. The one principled way to do it is the **Borda count**, and the act of doing it is exactly **inventing** the intensity the voter never gave.*
 
-→ The reverse direction: [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) · Borda-elimination methods: [Baldwin & Nanson](../../00_start_here/RCV_IRV/variants/RCV-IRV-Baldwin-Nanson.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
+→ The reverse direction: [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) · Borda-elimination methods: [Baldwin & Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
 
 ---
 
@@ -60,7 +60,7 @@ That asymmetry is why **STAR → ranks works but ranks → STAR doesn't recover 
 
 ## Is Borda "bad," then?
 
-No — Borda is a real, century-old, sometimes-used method (it sits in the **Positional** branch of the [methods family tree](../../00_start_here/RCV_IRV/variants/RCV_methods_family_tree.mermaid)). It's even the engine inside the Condorcet-safe IRV variants [Baldwin and Nanson](../../00_start_here/RCV_IRV/variants/RCV-IRV-Baldwin-Nanson.md), which eliminate by Borda score. The honest rule is just about **labeling**:
+No — Borda is a real, century-old, sometimes-used method (it sits in the **Positional** branch of the [methods family tree](../RCV_IRV/concepts/variants/RCV_methods_family_tree.mermaid)). It's even the engine inside the Condorcet-safe IRV variants [Baldwin and Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md), which eliminate by Borda score. The honest rule is just about **labeling**:
 
 > **Manufacturing scores from ranks is fine — call them "Borda / positional points," never "the voter's scores."** The only real error is printing invented numbers next to the word *scores* as if the voter had typed them.
 
@@ -72,7 +72,7 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 ## In this repo
 
 - The engine can *optionally* show this on a ranked Ranked Robin ballot — set `options: { show_borda: true }` to annotate each ballot with its positional points, clearly labeled as Borda (not scores, and not what RR actually counts — RR uses pairwise).
-- Borda is **not Condorcet** — and that's not an abstract criterion note, it's the objection Condorcet himself raised in 1788, with a worked 11-voter election you can run: [Condorcet's rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md). Borda's Condorcet-fixing cousins are [Baldwin & Nanson](../../00_start_here/RCV_IRV/variants/RCV-IRV-Baldwin-Nanson.md).
+- Borda is **not Condorcet** — and that's not an abstract criterion note, it's the objection Condorcet himself raised in 1788, with a worked 11-voter election you can run: [Condorcet's rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md). Borda's Condorcet-fixing cousins are [Baldwin & Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md).
 
 ## Related
 
@@ -82,7 +82,7 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 - [Strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) — why ties matter (the ladder above)
 - [Ranked Robin vs. Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) — where the weak-rank reduction shows up live
 - [Agenda voting](agenda_voting.md) — the other classic "ranked but not neutral" procedure in this folder
-- [Which RCV-IRV?](../../00_start_here/RCV_IRV/variants/RCV_IRV_variants.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
+- [Which RCV-IRV?](../RCV_IRV/concepts/variants/RCV_IRV_variants.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
 
 ## Borda is the pairwise table, added up
 

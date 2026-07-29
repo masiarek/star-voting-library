@@ -2,7 +2,7 @@
 
 *Generated from [`brams_ex3_two_candidates_c2_b5.yaml`](../brams_ex3_two_candidates_c2_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Beth
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Beth
 
 ## Scenario
 

@@ -2,7 +2,7 @@
 
 *Generated from [`05a_c5_b3_unanimous-ballots.yaml`](../05a_c5_b3_unanimous-ballots.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Andre
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Andre
 
 ## Scenario
 

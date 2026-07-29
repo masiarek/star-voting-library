@@ -2,9 +2,9 @@
 
 *Generated from [`lot_random_vs_published_jfk7pd_published_order.yaml`](../lot_random_vs_published_jfk7pd_published_order.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Ada
 
-**Official tie-break (lot) order:** Ada > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Ada > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 

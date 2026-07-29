@@ -19,7 +19,7 @@ scores are equal -> break it by PAIRWISE (the runoff's question). The runoff
 decides by PAIRWISE preference, so a runoff tie means preference is equal ->
 break it by SCORE (the scoring round's measure). Five-star is the shared second
 rung; the lot is the floor of both. (Full write-up:
-00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.)
+01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.)
 
 This script builds a tie that lands on the five-star rung, and lets you set what
 that rung finds:
@@ -261,7 +261,7 @@ def render_yaml(t: Template, names: list[str], scale: int, round_: str, rung: st
             "(pairwise, five-star) can separate them and the pre-published lot order "
             "picks the winner. This is the k-candidate analog of BV jfk7pd. "
             "See 01_STAR/tie_break_dead_rung/README.md and "
-            "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md."
+            "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md."
         )
     else:
         description = (
@@ -271,7 +271,7 @@ def render_yaml(t: Template, names: list[str], scale: int, round_: str, rung: st
             "STAR's second rung counts only score-5 votes and never steps down to 4s; "
             "when it can't separate the tied candidates the lot decides. "
             "See 01_STAR/tie_break_dead_rung/README.md and "
-            "00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md."
+            "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md."
         )
 
     # Flat schema (top-level keys) to match tie_break_dead_rung/ cases 01-09,

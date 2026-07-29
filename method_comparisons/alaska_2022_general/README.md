@@ -4,7 +4,7 @@
 
 **▶ Runnable companion to a published analysis.** [Clelland (2023)](https://arxiv.org/abs/2303.00108) analyzed this general election too (her §6 postscript): unlike the special, it had *no* Condorcet failure — Peltola was the Condorcet winner and every method agrees. This case makes that hands-on, on ballots that match her Table 8.
 
-> **Which Alaska election is this?** The **November 2022 US House *general*** — the one where RCV-IRV worked *fine*. It is the companion to the [August *special*](../alaska_2022/README.md) (where IRV misfired). Confused? See the [full map](../../00_start_here/RCV_IRV/case_studies/alaska_rcv_elections.md).
+> **Which Alaska election is this?** The **November 2022 US House *general*** — the one where RCV-IRV worked *fine*. It is the companion to the [August *special*](../alaska_2022/README.md) (where IRV misfired). Confused? See the [full map](../../06_Other/RCV_IRV/concepts/case_studies/alaska_rcv_elections.md).
 
 **One line:** same three candidates as the special, six months later — and this time **all four counts agree on Peltola.** Because the electorate had shifted, **Peltola was now the Condorcet winner** (she beats both rivals head-to-head), so Plurality, RCV-IRV, Ranked Robin, and STAR *all* elect her. This is the honest other half of the story: IRV's [center-squeeze](../../00_start_here/topics/center_squeeze/README.md) failure is **real but conditional** — it strikes only when a centrist Condorcet winner has too few first choices, which was true in August and *not* true in November.
 
@@ -96,5 +96,5 @@ This case exists to keep the [Alaska critique](../alaska_2022/alaska_301.md) **h
 ## Related
 
 - **The special (where IRV misfired):** [runnable model](../alaska_2022/README.md) · [101](../alaska_2022/alaska_101.md) · [201](../alaska_2022/alaska_201.md) · [301 + fairness](../alaska_2022/alaska_301.md)
-- **The map:** [Alaska's RCV elections — the whole picture](../../00_start_here/RCV_IRV/case_studies/alaska_rcv_elections.md)
+- **The map:** [Alaska's RCV elections — the whole picture](../../06_Other/RCV_IRV/concepts/case_studies/alaska_rcv_elections.md)
 - Source visualization: Equal Vote's [Real RCV — Alaska 2022 general](https://realrcv.equal.vote/alaska22general)

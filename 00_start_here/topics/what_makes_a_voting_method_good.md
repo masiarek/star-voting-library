@@ -36,7 +36,7 @@ How hard is it to **vote** and to **count**?
 
 Three things follow:
 
-1. **"Simple" claims must say which half.** *"RCV is as easy as 1-2-3"* is true of the ballot and false of the count — which is why the repo rates it [half-true rather than false](../RCV_IRV/RCV_IRV_is_simple.md).
+1. **"Simple" claims must say which half.** *"RCV is as easy as 1-2-3"* is true of the ballot and false of the count — which is why the repo rates it [half-true rather than false](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md).
 2. **The two axes are paid for by different people.** A voter meets the ballot once, in private, with instructions in front of them. Officials, auditors, journalists, courts and opponents meet the count repeatedly, forever. So ballot complexity is a one-time explanation cost while tabulation complexity is a permanent operational and rhetorical surface — a reason many reformers weight the second axis more heavily, though it's a judgement call, not a theorem.
 3. **Simplicity isn't sufficient.** Choose-One is maximal on both axes and is still the method everything here exists to replace. Simplicity is a constraint to satisfy, not the objective to maximize.
 
@@ -84,7 +84,7 @@ These are genuine, unsettled disputes — presented as the case each side makes,
 
 ## Where the STAR case lands (stated as advocacy)
 
-STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](../STAR_Voting/properties_and_limits/STAR_honest_limits.md) argue the trade-off both ways.
+STAR-Voting advocates argue it balances the list well: an expressive 0–5 ballot that wastes no data, a two-step tally (score, then automatic runoff) that's **summable** and audit-friendly, strong VSE, and elimination of vote-splitting/spoilers — "Fair, Accurate, Equal." That's a *case*, not a theorem; opponents weigh ballot/tally complexity, or prefer a Condorcet guarantee (Ranked Robin) or proportionality (STV). This page's job is the criteria; [Why STAR](Why_STAR_Voting.md) and [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) argue the trade-off both ways.
 
 ## Sources — and which way each leans
 

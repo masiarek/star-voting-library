@@ -2,7 +2,7 @@
 
 *Generated from [`bv2229_7j2bqf_french_2017_honest.yaml`](../bv2229_7j2bqf_french_2017_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Macron
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Macron
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7j2bqf) · **[results ↗](https://bettervoting.com/7j2bqf/results)** (election `7j2bqf`).
 

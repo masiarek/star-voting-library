@@ -21,7 +21,7 @@ The electorate (36 ballots, all individual rows):
   - kitchen bloc: 20 voters (10 slate, 4 bullet, 4 nuanced, 2 gentle)
   - tea caucus: 16 voters (9 nuanced, 4 slate, 3 cliff35)
 
-Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+Ballot styles in play (taxonomy: 01_STAR/concepts/
 STAR_ballot_voting_styles.md):
   - nuanced: full 0-5 range, honest gaps, ties allowed
   - bullet: choose-one transplant: favorite 5, rest 0/blank
@@ -240,7 +240,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)

@@ -2,7 +2,7 @@
 
 **One line:** the *same* ballots, counted two ways. **STAR** scores then holds one runoff — **two steps.** **RCV-IRV** runs rounds of eliminate-and-transfer — here **three.** In this example both elect **Carmen**, so the page isolates the *process* (how each count works and what it costs), not the winner.
 
-→ Companion to [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) (the "which half is simple?" argument) and [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md). When the two counts elect *different* people, see [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md). Level **201**. <!-- terminology-ok: bare RCV is inside linked page titles -->
+→ Companion to [Is RCV "Simple"? — Which Half?](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) (the "which half is simple?" argument) and [STAR Is Summable — Add Up Precinct Totals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md). When the two counts elect *different* people, see [Center Squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md). Level **201**. <!-- terminology-ok: bare RCV is inside linked page titles -->
 
 Worked on one shared file: [`count_simplicity_star_vs_irv.yaml`](../../method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml) — 45 voters, 5 candidates (Andre, Blake, Carmen, Dana, Evan).
 
@@ -27,7 +27,7 @@ Carmen is almost everyone's strong **second** choice but few voters' **first** �
 
 ## STAR — two steps
 
-**Step 1 — [Scoring Round](../STAR_Voting/the_count/STAR_Scoring_Round.md).** Add each candidate's scores (a column sum). The two highest advance.
+**Step 1 — [Scoring Round](../../01_STAR/concepts/the_count/STAR_Scoring_Round.md).** Add each candidate's scores (a column sum). The two highest advance.
 
 ```
 Carmen  -- 194  -- First place
@@ -38,7 +38,7 @@ Evan    --  65
  Carmen and Andre advance.
 ```
 
-**Step 2 — [Automatic Runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md).** On every ballot, see which *finalist* it scored higher. That's one head-to-head tally.
+**Step 2 — [Automatic Runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md).** On every ballot, see which *finalist* it scored higher. That's one head-to-head tally.
 
 ```
 Carmen        -- 35  -- First place
@@ -70,7 +70,7 @@ Evan      5  Rejected        Evan      0  Rejected        Evan      0  Rejected
 
 Three rounds, and to follow it you have to track *which* ballots moved *where* each time. That bookkeeping is why an IRV count is **not summable** — a precinct can't report a partial result that adds up, because who gets eliminated depends on the whole electorate. Every ballot has to be in one place.
 
-> **Exhausted (inactive) ballots.** This example is tidy because every voter ranked all five candidates, so no ballot ever runs out of choices. In real RCV-IRV elections a ballot whose remaining ranks are all eliminated **stops counting** ("exhausted" / "inactive"), which is why an IRV winner's final-round majority is a majority of *continuing* ballots, not of everyone who voted. A faithful display should show the exhausted pile each round. STAR has no equivalent: every ballot's full score is read in the scoring round, and every ballot counts in the runoff. (See ["Exhausted Ballots" — What FairVote's Word Actually Hides](../RCV_IRV/exhausted_ballots_301.md).)
+> **Exhausted (inactive) ballots.** This example is tidy because every voter ranked all five candidates, so no ballot ever runs out of choices. In real RCV-IRV elections a ballot whose remaining ranks are all eliminated **stops counting** ("exhausted" / "inactive"), which is why an IRV winner's final-round majority is a majority of *continuing* ballots, not of everyone who voted. A faithful display should show the exhausted pile each round. STAR has no equivalent: every ballot's full score is read in the scoring round, and every ballot counts in the runoff. (See ["Exhausted Ballots" — What FairVote's Word Actually Hides](../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md).)
 
 ---
 
@@ -93,11 +93,11 @@ A common talking point tries to make that table *objective*: write a program to 
 
 But "program length" is a slippery yardstick, and this repo is its own counterexample: the STAR engine here is ~3,300 lines while the vendored IRV counter is ~280 — because line-count measures the *implementation* (ours is a full reporting suite), not the algorithm. Kolmogorov complexity is also uncomputable in general and language-dependent in practice, so "*the* objective metric" oversells it. And taken literally it proves too much: the shortest tabulation program of all is **[plurality's](plurality.md)** (add the marks, done) — so "shortest program wins" would crown Choose-One, which no STAR advocate intends.
 
-The rigorous, consequential version of "IRV is harder to count" isn't program length — it's **[summability](../STAR_Voting/properties_and_limits/STAR_summability.md)**: STAR's subtotals add up precinct-by-precinct and IRV's can't (the row above). That's a real auditing-and-transparency difference, not a rhetorical one. Keep the kernel; drop the "objective metric" dressing.
+The rigorous, consequential version of "IRV is harder to count" isn't program length — it's **[summability](../../01_STAR/concepts/properties_and_limits/STAR_summability.md)**: STAR's subtotals add up precinct-by-precinct and IRV's can't (the row above). That's a real auditing-and-transparency difference, not a rhetorical one. Keep the kernel; drop the "objective metric" dressing.
 
 ## When the rounds change the *winner*
 
-Here the methods agree, and Carmen even led the first round — but **the first-round leader is not always the winner.** In a **center squeeze**, the consensus candidate is almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while STAR's scoring round keeps her in and she wins. Same ballots, different count, **different winner** — traced in [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) (demos `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV results have to be read to the *final* round, never reported from first choices alone.
+Here the methods agree, and Carmen even led the first round — but **the first-round leader is not always the winner.** In a **center squeeze**, the consensus candidate is almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while STAR's scoring round keeps her in and she wins. Same ballots, different count, **different winner** — traced in [Center Squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) (demos `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV results have to be read to the *final* round, never reported from first choices alone.
 
 > **On displaying RCV-IRV results.** The round-by-round table above follows the standard best practice (FairVote; Center for Civic Design): show every round with a written explanation, name the majority threshold, and treat the final round — not the first-choice lead — as the result. We deliberately show *all* the rounds rather than de-emphasizing the eliminations, because the whole point here is to see how the count works. See `00_start_here/LINKS.md` → "FairVote: displaying RCV results."
 
@@ -111,7 +111,7 @@ python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_S
 ---
 
 ## Cross-references
-- [Is RCV "Simple"? — Which Half?](../RCV_IRV/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
-- [STAR Is Summable — Add Up Precinct Totals](../STAR_Voting/properties_and_limits/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
-- [Center Squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
+- [Is RCV "Simple"? — Which Half?](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) — the simplicity argument this trace backs up.
+- [STAR Is Summable — Add Up Precinct Totals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) — why STAR's count adds up locally and IRV's doesn't.
+- [Center Squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — when the two counts elect different people.
 - [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](what_is_a_voting_method.md) — ballot vs count, the 101 foundation.

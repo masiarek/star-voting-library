@@ -2,7 +2,7 @@
 
 *Generated from [`balance_plus_opposite_c3_b15.yaml`](../balance_plus_opposite_c3_b15.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Ada
+**Method:** [RCV-IRV (Instant Runoff)](../../../concepts) · **1 seat** · **Expected winner:** Ada
 
 ## Scenario
 
@@ -14,7 +14,7 @@ ballots pile onto the extremes (Ada +3, Cyrus +3) and none onto the center
 (Bruno +0): Bruno now has the fewest first-choices, is eliminated first, and Ada
 wins 10-5. Balanced ballots that should cancel instead flip the winner — RCV-IRV
 fails the Test of Balance, by the center-squeeze mechanism. Lesson:
-00_start_here/RCV_IRV/RCV_IRV_equal_vote.md
+06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 
 ## Ballots
 

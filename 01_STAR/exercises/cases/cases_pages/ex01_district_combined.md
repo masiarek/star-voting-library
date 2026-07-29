@@ -2,7 +2,7 @@
 
 *Generated from [`ex01_district_combined.yaml`](../ex01_district_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Carmen
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Carmen
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/923q3d) · **[results ↗](https://bettervoting.com/923q3d/results)** (election `923q3d`).
 

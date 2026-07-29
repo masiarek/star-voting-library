@@ -2,17 +2,17 @@
 
 **One line:** **RCV-RR (Ranked Robin / Copeland) is precinct-summable.** Its whole tally is the **pairwise matrix** — for every pair of candidates, how many ballots rank A over B, B over A, or neither — and those matrices **add across precincts**. So the *same ranked ballot* IRV must count centrally, Ranked Robin can tally locally and add up.
 
-→ Cross-method **topic hub**: [Summability](../../00_start_here/topics/summability/) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../../00_start_here/STAR_Voting/properties_and_limits/STAR_summability.md) · Glossary: [`summability`](../../00_start_here/GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../../00_start_here/topics/summability/) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) · Glossary: [`summability`](../../00_start_here/GLOSSARY.md).
 
 ---
 
 ## Why it's summable
 
-Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-preference) matrix**: most head-to-head wins takes it. (How that matrix is built, one ballot at a time: [pairwise counting](../../00_start_here/topics/pairwise_counting.md) — each ballot is a tiny matrix, and the election's matrix is the ballots' sum; a precinct's matrix is just that same sum stopped partway.) That matrix is a small fixed-size table (C×C), and each precinct can build its own and publish it — the statewide matrix is just the **sum**. No elimination order, no transfers, nothing that depends on the *other* precincts' ballots. (This is the very property [IRV lacks](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md): summability is about the **count**, not the ballot.)
+Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-preference) matrix**: most head-to-head wins takes it. (How that matrix is built, one ballot at a time: [pairwise counting](../../00_start_here/topics/pairwise_counting.md) — each ballot is a tiny matrix, and the election's matrix is the ballots' sum; a precinct's matrix is just that same sum stopped partway.) That matrix is a small fixed-size table (C×C), and each precinct can build its own and publish it — the statewide matrix is just the **sum**. No elimination order, no transfers, nothing that depends on the *other* precincts' ballots. (This is the very property [IRV lacks](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md): summability is about the **count**, not the ballot.)
 
 ## Worked example — the same ballots IRV couldn't combine
 
-Take the [two districts IRV can't sum](../../00_start_here/RCV_IRV/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Here are the actual ranked ballots — 13 voters in each district ([`summability_demo/`](../../method_comparisons/summability_demo)):
+Take the [two districts IRV can't sum](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Here are the actual ranked ballots — 13 voters in each district ([`summability_demo/`](../../method_comparisons/summability_demo)):
 
 ```
 District A (13 voters)        District B (13 voters)

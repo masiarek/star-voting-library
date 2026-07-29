@@ -64,7 +64,7 @@ The fair conclusion isn't "STAR never fails." It's: **STAR's failures are contri
 
 ### It is fair *because STAR's real cost is conceded, openly*
 
-STAR is **not** perfect, and this library says so on its own pages. STAR's genuine honest limit is the [runoff reversal](../../01_STAR/runoff_overturns_leader/README.md): a broadly-liked, high-average candidate can lose the automatic runoff to a *polarizing* candidate a bare majority ranks higher. That's a real philosophical cost (utility vs. majority), documented plainly in [STAR's Honest Limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md) — STAR is also not [Condorcet-compliant](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md), not favorite-betrayal-proof, and gives up Later-No-Harm by design. Teaching Alaska *next to* those admissions is what makes the comparison trustworthy rather than a sales pitch.
+STAR is **not** perfect, and this library says so on its own pages. STAR's genuine honest limit is the [runoff reversal](../../01_STAR/runoff_overturns_leader/README.md): a broadly-liked, high-average candidate can lose the automatic runoff to a *polarizing* candidate a bare majority ranks higher. That's a real philosophical cost (utility vs. majority), documented plainly in [STAR's Honest Limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) — STAR is also not [Condorcet-compliant](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md), not favorite-betrayal-proof, and gives up Later-No-Harm by design. Teaching Alaska *next to* those admissions is what makes the comparison trustworthy rather than a sales pitch.
 
 ### So how do you answer FairVote?
 
@@ -123,4 +123,4 @@ Because in the general the Condorcet winner was **Peltola**, not Begich — the 
 
 ---
 
-*Back to [the model & four counts](README.md) · [101](alaska_101.md) · [201](alaska_201.md) · the prose write-up with real vote totals: [RCV-IRV case study](../../00_start_here/RCV_IRV/case_studies/RCV_IRV_alaska_2022.md).*
+*Back to [the model & four counts](README.md) · [101](alaska_101.md) · [201](alaska_201.md) · the prose write-up with real vote totals: [RCV-IRV case study](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md).*

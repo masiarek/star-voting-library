@@ -106,7 +106,7 @@ Zwicker lists the four approaches the literature takes. The useful part is that 
 
 | # | Approach | What it costs | Where it lives here |
 |:--:|---|---|---|
-| 1 | **Fixed ordering** of the candidates | **neutrality** — a pre-published order is a thumb on the scale, by construction | LH's `lot_numbers:`; [STAR's official tiebreak protocol](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) |
+| 1 | **Fixed ordering** of the candidates | **neutrality** — a pre-published order is a thumb on the scale, by construction | LH's `lot_numbers:`; [STAR's official tiebreak protocol](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) |
 | 1′ | A **designated voter** breaks all ties | **anonymity** — one ballot now counts differently | not used here (a casting-vote chair does this) |
 | 2 | **Randomize** | determinism — the rule becomes *indeterminate*, and "did strategy work?" gets harder to even define | [BetterVoting's `tieBreakType: random`](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) |
 | 3 | **Return the tied set** | you now need a *set extension principle* to say what a voter prefers between two tied sets — and [Duggan–Schwartz](../gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz) proves this buys indecisiveness, not strategyproofness | `pref_voting`'s Copeland, which reports a **leader set** `{Blue, Green}` and stops |
@@ -150,7 +150,7 @@ The rotation that page calls "a perfect rotation: three equal, mutually symmetri
 Three, because this result is easy to overstate:
 
 1. **"Forced" means *some* profile, not *this* profile.** The theorem is a statement about the rule's domain. It says a tie exists somewhere; it says nothing about probability. In a public election with thousands of ballots, exact ties remain astronomically rare — the [existing caveat](why_contrived_tie_cases.md) stands unchanged. What the theorem removes is the option of claiming your method has *no* tie case.
-2. **It doesn't rank methods.** Every method in this library is caught. Nothing here favors STAR over [Ranked Robin](../../../05_Ranked_Robin/concepts/) over [RCV-IRV](../../RCV_IRV/). Methods differ in *how often* ties arise and how gracefully they're resolved — see [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md) — but not in whether they're subject to this.
+2. **It doesn't rank methods.** Every method in this library is caught. Nothing here favors STAR over [Ranked Robin](../../../05_Ranked_Robin/concepts/) over [RCV-IRV](../../../06_Other/RCV_IRV/concepts/). Methods differ in *how often* ties arise and how gracefully they're resolved — see [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md) — but not in whether they're subject to this.
 3. **It's a small impossibility, not Arrow.** It costs you *resoluteness*, which is an inconvenience with four known workarounds. [Arrow](../arrow_theorem_and_star.md) and [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) cost you things you can't work around. Don't let the shared word "impossibility" flatten that difference — this one is the mild member of the family, and citing it as though it were Arrow is exactly the overreach [criteria at a glance](../criteria_at_a_glance.md) warns about.
 
 ## Sources

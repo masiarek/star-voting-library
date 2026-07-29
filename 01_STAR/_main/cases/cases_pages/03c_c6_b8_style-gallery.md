@@ -2,7 +2,7 @@
 
 *Generated from [`03c_c6_b8_style-gallery.yaml`](../03c_c6_b8_style-gallery.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Bianca
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Bianca
 
 ## Scenario
 
@@ -14,7 +14,7 @@ skipped candidates can't spoil a ballot. Note the two Equal Support ballots
 in the runoff: the partisan and "anyone but" voters scored both finalists
 the same, so they expressed no preference between them — but their scores
 still helped pick the finalists.
-Lesson: 00_start_here/STAR_Voting/STAR_ballot_voting_styles.md
+Lesson: 01_STAR/concepts/STAR_ballot_voting_styles.md
 
 ## Ballots
 

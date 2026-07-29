@@ -2,7 +2,7 @@
 
 *Generated from [`bv2173_gmfv4c_edelman_saari_cancellation.yaml`](../bv2173_gmfv4c_edelman_saari_cancellation.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Ada
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gmfv4c) · **[results ↗](https://bettervoting.com/gmfv4c/results)** (election `gmfv4c`).
 

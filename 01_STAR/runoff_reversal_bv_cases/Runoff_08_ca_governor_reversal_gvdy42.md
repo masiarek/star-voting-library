@@ -21,7 +21,7 @@ The runoff's neutral bucket differs between the engines, and the gap is exactly 
 | **Equal Support** | **141** | **124** |
 | denominator | 178 of **319** | 178 of **302** |
 
-`141 − 124 = 17` = the 17 fully-blank **abstention** ballots. LH counts a blank ballot as Equal Support in the runoff; BetterVoting sets abstentions aside. Same winner, same 98/80 — only the neutral bucket's bookkeeping differs. This is the exact rule in **[reporting_diff_BV_LH.md](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md)**, here on a 319-ballot real election.
+`141 − 124 = 17` = the 17 fully-blank **abstention** ballots. LH counts a blank ballot as Equal Support in the runoff; BetterVoting sets abstentions aside. Same winner, same 98/80 — only the neutral bucket's bookkeeping differs. This is the exact rule in **[reporting_diff_BV_LH.md](../concepts/reporting/reporting_diff_BV_LH.md)**, here on a 319-ballot real election.
 
 ### 3. The #1390 reporting bug — the graph that showed 5 of 124
 On this election, BetterVoting's **"Distribution of Equal Support" graph** (Stats for Nerds) displayed a single bar built from only **5** ballots, though the runoff correctly reported **124** equal-support. Cause: the widget compared raw scores, so 117 ballots that skipped **both** finalists hit `null == null` (a phantom bucket) and 2 more failed `null == 0` — all silently dropped. Fixed in **[PR #1431](https://github.com/Equal-Vote/bettervoting/pull/1431)** by coercing skipped scores to `0` (`?? 0`) to match the tabulator. Tracked in **[#1390](https://github.com/Equal-Vote/bettervoting/issues/1390)**. It's the same **blank-vs-zero** rule the rest of this repo turns on — the tabulator was always right; only the chart was wrong.
@@ -78,5 +78,5 @@ Both elect **Tom Steyer (D)**, with identical finalists and identical runoff pre
 ## See also
 
 - [The Runoff-Reversal set (README)](README.md) — every case where the score leader and runoff winner diverge (or don't)
-- [Where the two reports differ — abstentions vs Equal Support](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md)
-- [STAR reporting hub](../../00_start_here/STAR_reporting/README.md) · [#1390](https://github.com/Equal-Vote/bettervoting/issues/1390) · [PR #1431](https://github.com/Equal-Vote/bettervoting/pull/1431)
+- [Where the two reports differ — abstentions vs Equal Support](../concepts/reporting/reporting_diff_BV_LH.md)
+- [STAR reporting hub](../concepts/reporting/README.md) · [#1390](https://github.com/Equal-Vote/bettervoting/issues/1390) · [PR #1431](https://github.com/Equal-Vote/bettervoting/pull/1431)

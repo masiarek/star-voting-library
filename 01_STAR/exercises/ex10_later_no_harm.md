@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** reticent [vote](https://bettervoting.com/g6q42v) · **[results ↗](https://bettervoting.com/g6q42v/results)** · generous [vote](https://bettervoting.com/yyhj9x) · **[results ↗](https://bettervoting.com/yyhj9x/results)** (elections `g6q42v` / `yyhj9x`, Test IDs BV2195–96; each carries an RCV-IRV race — no Ranked Robin races on purpose: the reticent profile's rank conversion hides a Condorcet cycle BetterVoting would resolve at random).
 
-**You practice:** the **[later-no-harm](../../00_start_here/GLOSSARY.md)** criterion — the one RCV-IRV keeps and STAR deliberately gives up — run live in both directions, and the discipline of keeping it distinct from [favorite betrayal](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md).
+**You practice:** the **[later-no-harm](../../00_start_here/GLOSSARY.md)** criterion — the one RCV-IRV keeps and STAR deliberately gives up — run live in both directions, and the discipline of keeping it distinct from [favorite betrayal](../concepts/properties_and_limits/favorite_betrayal_voting_301.md).
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports.
 
@@ -95,8 +95,8 @@ Look at what the honest ballots reveal: **every one of the nine voters scores Be
 <details>
 <summary><b>(e) The ledger</b></summary>
 
-- **STAR fails later-no-harm** (this exercise) — knowingly: [equal.vote's own materials concede it](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md), because honoring compromise support is the design goal.
-- **RCV-IRV keeps later-no-harm but fails [favorite betrayal](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md)** structurally (center squeeze pushes lesser-evil ranking), plus the squeeze itself — the price of not counting lower preferences until eliminations force it.
+- **STAR fails later-no-harm** (this exercise) — knowingly: [equal.vote's own materials concede it](../concepts/properties_and_limits/STAR_honest_limits.md), because honoring compromise support is the design goal.
+- **RCV-IRV keeps later-no-harm but fails [favorite betrayal](../concepts/properties_and_limits/favorite_betrayal_voting_301.md)** structurally (center squeeze pushes lesser-evil ranking), plus the squeeze itself — the price of not counting lower preferences until eliminations force it.
 - They can't both be had in a method worth having: later-no-harm *requires* the count to ignore your compromise until your favorite is dead; using that information *at all* — which is what makes broad winners findable — is what LNH forbids. Keep the two criteria distinct (the repo's standing rule): LNH is about your *lower* rankings hurting your *top*; favorite betrayal is about needing to *demote your top* to get a tolerable result. A method's choice between them is a values statement, not a bug on either side.
 
 </details>
@@ -116,7 +116,7 @@ Sources: [ex10_reticent.yaml](cases/ex10_reticent.yaml) · [ex10_generous.yaml](
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast). Concept homes: the glossary's [later-no-harm entry](../../00_start_here/GLOSSARY.md), [favorite betrayal 301](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) (why the two criteria must not be conflated), and [STAR's honest limits](../../00_start_here/STAR_Voting/properties_and_limits/STAR_honest_limits.md).
+**Where this comes from.** Original to this repo (ballots and cast). Concept homes: the glossary's [later-no-harm entry](../../00_start_here/GLOSSARY.md), [favorite betrayal 301](../concepts/properties_and_limits/favorite_betrayal_voting_301.md) (why the two criteria must not be conflated), and [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md).
 
 *Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
 

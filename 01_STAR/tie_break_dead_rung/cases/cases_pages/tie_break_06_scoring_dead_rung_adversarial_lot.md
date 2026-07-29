@@ -2,9 +2,9 @@
 
 *Generated from [`tie_break_06_scoring_dead_rung_adversarial_lot.yaml`](../tie_break_06_scoring_dead_rung_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ann
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Ann
 
-**Official tie-break (lot) order:** Cara > Ann > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Cara > Ann > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -15,7 +15,7 @@ a DEAD RUNG. The tie falls through to the lot, which favors Cara; Ann then
 beats Cara in the runoff 3-1.
 One point of enthusiasm is the whole difference: case 01 is decided by
 ballots (five-star), case 02 by the pre-drawn lot. See
-00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 ## Ballots
 
@@ -150,7 +150,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/tie_break_06_scoring_dead_rung_adversarial_lot.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

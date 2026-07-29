@@ -88,7 +88,7 @@ Compare the two matrices in one place. The Equal Support column was **zero every
 | **Cal vs Ann** | Cal **3–2** | Cal **3–2** — unchanged; nobody approved both |
 | **Condorcet winner** | **Cal** | **Bob** |
 
-Read the pattern: the compression didn't blur things at random. It erased, for every single voter, the distinction between **their favorite and their acceptable compromise** — and preserved perfectly the distinction between the candidates they love and the one they loathe. That is what a one-bit ballot is *for*, and it is also exactly the distinction [STAR's automatic runoff](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) uses to decide the election. Take it away and the runoff has nothing left to read.
+Read the pattern: the compression didn't blur things at random. It erased, for every single voter, the distinction between **their favorite and their acceptable compromise** — and preserved perfectly the distinction between the candidates they love and the one they loathe. That is what a one-bit ballot is *for*, and it is also exactly the distinction [STAR's automatic runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) uses to decide the election. Take it away and the runoff has nothing left to read.
 
 ## This is not an indictment of Approval
 

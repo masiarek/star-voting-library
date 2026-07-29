@@ -77,7 +77,7 @@ The repo's [reading-these-fairly discipline](../../../method_comparisons/paradox
 No, and it's worth being explicit about why, because "Condorcet method fails a criterion" arguments get recycled loosely:
 
 - **Ranked Robin** is Copeland — a **C1** method that reads only who-beat-whom, with a margins tiebreak. It is not Schulze and does not inherit Schulze's failure. Its own honest limits are [documented separately](../../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
-- **STAR** is not a Condorcet method at all ([why](../../STAR_Voting/properties_and_limits/STAR_three_winner_notions.md)), so a criterion defined over pairwise margins in a cycle isn't the right lens. STAR's analogous weakness is a different one, tabulated at [the IIA cycle spoiler](../../../01_STAR/iia_cycle_spoiler/README.md).
+- **STAR** is not a Condorcet method at all ([why](../../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md)), so a criterion defined over pairwise margins in a cycle isn't the right lens. STAR's analogous weakness is a different one, tabulated at [the IIA cycle spoiler](../../../01_STAR/iia_cycle_spoiler/README.md).
 
 What the paper *does* offer this library is precision. It is the clearest available account of the difference between "the ballots chose" and "the rule chose," and that distinction — not Split Cycle the method — is the part worth teaching.
 

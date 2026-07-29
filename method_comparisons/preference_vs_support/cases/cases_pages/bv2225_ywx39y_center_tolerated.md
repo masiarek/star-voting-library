@@ -2,7 +2,7 @@
 
 *Generated from [`bv2225_ywx39y_center_tolerated.yaml`](../bv2225_ywx39y_center_tolerated.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Alex
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Alex
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywx39y) · **[results ↗](https://bettervoting.com/ywx39y/results)** (election `ywx39y`).
 

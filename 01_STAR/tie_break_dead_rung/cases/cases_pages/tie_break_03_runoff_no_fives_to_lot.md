@@ -2,9 +2,9 @@
 
 *Generated from [`tie_break_03_runoff_no_fives_to_lot.yaml`](../tie_break_03_runoff_no_fives_to_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Alice
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Alice
 
-**Official tie-break (lot) order:** Alice > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Alice > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -13,7 +13,7 @@ head-to-head (1-1) AND tie on total score (4-4), so the runoff falls to its
 second rung — most score-5 votes. But neither earned a 5, so five-star reads
 0-0 and the LOT decides. lot_numbers pins Alice ahead of Ben, so Alice wins.
 Contrast tie_break_04 (same tie, but a 5 exists -> five-star decides).
-See 00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md.
+See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
 ## Ballots
 
@@ -115,7 +115,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 

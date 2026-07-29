@@ -85,7 +85,7 @@ The tie-break **logic** question is settled — WAI — so what remains is not "
 - **Transparency** — surface the tie-break steps in BV's human-readable report and JSON. BV already builds them internally (`roundResults.logs` + `tieBreakType` in `Star.ts`); the ask is to expose them. Tracked in **[#1432](https://github.com/Equal-Vote/bettervoting/issues/1432)**, which builds on the JSON-v2 export in **[PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)**. (The earlier export-of-the-tie-break-sequence work landed in [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), now closed.)
 - **Pre-published lot** — a body-established lot order instead of a post-hoc random shuffle, so a fully-tied race is reproducible across engines. Tracked in **[#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)**.
 
-→ the cascade: [STAR Tie-Breaking](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../../00_start_here/STAR_reporting/reporting_ties.md) · the RR analog: [rr_tiebreak_lh_vs_bv.md](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ the cascade: [STAR Tie-Breaking](../concepts/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../concepts/reporting/reporting_ties.md) · the RR analog: [rr_tiebreak_lh_vs_bv.md](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ## The takeaway
 

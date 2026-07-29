@@ -4,7 +4,7 @@
 
 It's natural to assume that because RCV-IRV uses plain rankings, breaking a tie should be simpler than in a score method. The reverse is closer to the truth, for three reasons: **where** ties happen, **what** you have to break them with, and **how much** a tie changes the outcome.
 
-→ Companion to [STAR Tie-Breaking — The Full Chain](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) and [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md). Part of the [Ties & Tie-Breaking](README.md) topic hub. Level **301**.
+→ Companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) and [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md). Part of the [Ties & Tie-Breaking](README.md) topic hub. Level **301**.
 
 ---
 
@@ -32,7 +32,7 @@ The headline: **more information means more deterministic rungs, so the lot is r
 
 A STAR **scoring-round** tie usually just decides *which of two finalists advances*; the runoff still runs, and the winner is whichever finalist more voters prefer. The tie rarely decides the winner by itself.
 
-An **IRV elimination tie decides who gets removed** — and removing a different candidate **transfers different ballots**, which can change every later round and **flip the winner**. This is the same order-sensitivity that produces IRV's [non-monotonicity](../../../method_comparisons/monotonicity/README.md) and [center squeeze](../../RCV_IRV/RCV_IRV_center_squeeze.md). So the one tie RCV-IRV has tends to matter more, and is harder to reason about, than either of STAR's.
+An **IRV elimination tie decides who gets removed** — and removing a different candidate **transfers different ballots**, which can change every later round and **flip the winner**. This is the same order-sensitivity that produces IRV's [non-monotonicity](../../../method_comparisons/monotonicity/README.md) and [center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md). So the one tie RCV-IRV has tends to matter more, and is harder to reason about, than either of STAR's.
 
 ## 4. The unavoidable floor
 
@@ -67,8 +67,8 @@ The single-rule simplicity is a **real virtue**: "eliminate the candidate with t
 
 ## See also
 
-- [STAR Tie-Breaking — The Full Chain](../../STAR_Voting/Tie_Breaking_STAR/tie_breaking.md) — STAR's two ladders and the "dead rung."
-- [Which RCV-IRV? — variants & tie-breaks](../../RCV_IRV/variants/RCV_IRV_variants.md) — how ranked-ballot methods differ, including tie handling.
+- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) — STAR's two ladders and the "dead rung."
+- [Which RCV-IRV? — variants & tie-breaks](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) — how ranked-ballot methods differ, including tie handling.
 - [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md) — why RCV-IRV's strict ranks carry less information than scores.
 - [How the Count Works — STAR vs RCV-IRV](../tabulation_star_vs_irv.md) — the two counts side by side (the non-tie case).
 - Worked lot-decided ties: [BetterVoting `jfk7pd`](../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) · [the dead-rung set](../../../01_STAR/tie_break_dead_rung/README.md).

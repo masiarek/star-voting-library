@@ -2,7 +2,7 @@
 
 *Generated from [`bv2226_82gg36_center_supported.yaml`](../bv2226_82gg36_center_supported.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Blair
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Blair
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/82gg36) · **[results ↗](https://bettervoting.com/82gg36/results)** (election `82gg36`).
 

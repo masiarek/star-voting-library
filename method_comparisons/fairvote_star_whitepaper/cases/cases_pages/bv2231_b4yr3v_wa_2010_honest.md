@@ -2,7 +2,7 @@
 
 *Generated from [`bv2231_b4yr3v_wa_2010_honest.yaml`](../bv2231_b4yr3v_wa_2010_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Berkey
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Berkey
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/b4yr3v) · **[results ↗](https://bettervoting.com/b4yr3v/results)** (election `b4yr3v`).
 

@@ -1,6 +1,6 @@
 # 01_STAR/favorite_betrayal — the worked STAR favorite-betrayal pair
 
-The rare construction [favorite_betrayal_voting_301.md](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) describes but — until now — never showed with numbers: **STAR is not formally FBC-compliant, and its leak lives in the runoff.** Your scores don't just support candidates; they pick the two *finalists*. In a delicately balanced electorate, the score you give your favorite can be exactly what keeps your compromise **out** of the runoff — and then the only repair is scoring your favorite lower. That's a favorite betrayal, it happens here, and it pays.
+The rare construction [favorite_betrayal_voting_301.md](../concepts/properties_and_limits/favorite_betrayal_voting_301.md) describes but — until now — never showed with numbers: **STAR is not formally FBC-compliant, and its leak lives in the runoff.** Your scores don't just support candidates; they pick the two *finalists*. In a delicately balanced electorate, the score you give your favorite can be exactly what keeps your compromise **out** of the runoff — and then the only repair is scoring your favorite lower. That's a favorite betrayal, it happens here, and it pays.
 
 This is the repo's concession case. We show STAR's own criterion failure at full volume, with the live elections to click — because the credibility of every center-squeeze page in this repo is bought by pages like this one.
 
@@ -81,7 +81,7 @@ The runoff pairing flips from Aster-vs-Clover to Clover-vs-Bluebell, and the Con
 
 ## Why this is a lab specimen, not a strategy
 
-The [301 page](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) claims STAR's FBC failures are "fragile and unactionable." This case *demonstrates* the fragility rather than asserting it:
+The [301 page](../concepts/properties_and_limits/favorite_betrayal_voting_301.md) claims STAR's FBC failures are "fragile and unactionable." This case *demonstrates* the fragility rather than asserting it:
 
 - **It takes 7 of the 9.** Each betrayer moves Aster down one point. Seven or more: the flip works. Exactly six: Aster and Bluebell **tie at 69** for the last runoff seat and the outcome falls to a tie-break. Five or fewer: nothing changes — Clover still wins, and the betrayers gave up score-support for their favorite for free.
 - **It needs the standings to 3 points.** The whole construction balances on Aster 75 / Clover 72 / Bluebell 69. Real electorates don't publish their totals in advance; polling error alone swamps a 3-point gap in a 57-voter race.
@@ -104,6 +104,6 @@ Sources: [bv2206_7mckyg_fbc_honest_tepid_consensus.yaml](cases/bv2206_7mckyg_fbc
 
 ---
 
-**Where this comes from.** Ballots and cast are this repo's own, built to instantiate the finalist-pairing mechanism described in [favorite_betrayal_voting_301.md §5](../../00_start_here/STAR_Voting/properties_and_limits/favorite_betrayal_voting_301.md) ("your scores can change *which two candidates are finalists*"). Related: [runoff reversal](../runoff_overturns_leader/README.md) (the benign face of the same score-vs-runoff two-step) · [residual vote splitting](../../00_start_here/STAR_Voting/properties_and_limits/residual_vote_splitting.md) (the other runoff-born edge case) · [monotonicity](../../method_comparisons/monotonicity/README.md) (STAR's clean bill on the *raise* direction).
+**Where this comes from.** Ballots and cast are this repo's own, built to instantiate the finalist-pairing mechanism described in [favorite_betrayal_voting_301.md §5](../concepts/properties_and_limits/favorite_betrayal_voting_301.md) ("your scores can change *which two candidates are finalists*"). Related: [runoff reversal](../runoff_overturns_leader/README.md) (the benign face of the same score-vs-runoff two-step) · [residual vote splitting](../concepts/properties_and_limits/residual_vote_splitting.md) (the other runoff-born edge case) · [monotonicity](../../method_comparisons/monotonicity/README.md) (STAR's clean bill on the *raise* direction).
 
 # file: README.md

@@ -2,7 +2,7 @@
 
 *Generated from [`bv2154_wq6yv7_irv.yaml`](../bv2154_wq6yv7_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../../../00_start_here/RCV_IRV) · **1 seat** · **Expected winner:** Clara
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Clara
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
 

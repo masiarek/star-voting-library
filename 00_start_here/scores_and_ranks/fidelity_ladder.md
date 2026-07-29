@@ -41,7 +41,7 @@ Same ballot; the more strictness or intensity the method demands, the more it ha
 ## Why this matters in practice
 
 - **You can hand STAR scores to Ranked Robin or RCV-IRV** (derive ranks) — but **you cannot run STAR on ranked ballots**, because there are no scores to add. The richer object only flows downhill.
-- **RCV-IRV's fragility is rung 2 in action** — the tie-break it's forced to invent. See [center squeeze](../RCV_IRV/RCV_IRV_center_squeeze.md) and the [RR-vs-Condorcet side-by-side](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md), which shows rung 1 and rung 2 on the same ballot.
+- **RCV-IRV's fragility is rung 2 in action** — the tie-break it's forced to invent. See [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) and the [RR-vs-Condorcet side-by-side](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md), which shows rung 1 and rung 2 on the same ballot.
 - **STAR's ballot sits above the whole ladder** — it carries the intensity natively, so it never has to drop or invent anything to *be* itself; it only converts *downward* when compared against ranked methods.
 
 ## Related

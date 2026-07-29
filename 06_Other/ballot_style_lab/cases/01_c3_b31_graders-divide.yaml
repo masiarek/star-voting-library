@@ -15,7 +15,7 @@ scenario_description: |-
     - Abby camp: 15 voters (15 harsh)
     - Bruno camp: 16 voters (16 gentle)
 
-  Ballot styles in play (taxonomy: 00_start_here/STAR_Voting/
+  Ballot styles in play (taxonomy: 01_STAR/concepts/
   STAR_ballot_voting_styles.md):
     - gentle: gentle soul: everything squeezed into 3-5, no zeros
     - harsh: harsh grader: everything squeezed into 0-2

@@ -78,5 +78,5 @@ Full audit copy: [`_main_tabulated/bv1815_bloc_3c2s_basic_tabulated.txt`](cases/
 ## Related
 
 - The pure no-tie control: [`00_c3_b3_bloc-baseline-2-seats.yaml`](cases/00_c3_b3_bloc-baseline-2-seats.yaml) (both seats decided by the ballots, no rung consulted).
-- The tie-break ladder these seats descend: [STAR Tie-Breaking — The Full Chain](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md).
+- The tie-break ladder these seats descend: [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md).
 - [#904](https://github.com/Equal-Vote/bettervoting/issues/904) — the method-name label ("STAR" vs "Bloc STAR").

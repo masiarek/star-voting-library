@@ -43,13 +43,13 @@ Two house-style clarifications on that quote: (1) it describes the Condorcet **w
 | Elects the Condorcet winner? | Not always (can center-squeeze) | ✅ Yes, when one exists |
 | Monotonic? | ❌ No | ✅ Yes |
 | Precinct-summable? | ❌ No | ✅ Yes (add pairwise matrices) |
-| [Exhausted ballots](../../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
+| [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
-The headline: the two things people *assume* "RCV" does — let you mark ties and compare candidates head-to-head — are exactly what **RCV-RR (Ranked Robin)** does and what **RCV-IRV (Instant-Runoff Voting)** does not. (See [strict_vs_weak_ranks.md](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) and [RCV_IRV_and_plurality.md](../../00_start_here/RCV_IRV/RCV_IRV_and_plurality.md).)
+The headline: the two things people *assume* "RCV" does — let you mark ties and compare candidates head-to-head — are exactly what **RCV-RR (Ranked Robin)** does and what **RCV-IRV (Instant-Runoff Voting)** does not. (See [strict_vs_weak_ranks.md](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) and [RCV_IRV_and_plurality.md](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md).)
 
 ## Why it matters
 
-Because it reads every ranking against every opponent, Ranked Robin elects the candidate **most voters prefer in head-to-head comparison** — the "consensus" / Condorcet winner — which is precisely the broadly-liked moderate that IRV can [center-squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) out. It's also **monotonic** and **summable** by adding precinct pairwise matrices, so it avoids two of IRV's biggest mechanical problems while keeping a familiar ranked ballot.
+Because it reads every ranking against every opponent, Ranked Robin elects the candidate **most voters prefer in head-to-head comparison** — the "consensus" / Condorcet winner — which is precisely the broadly-liked moderate that IRV can [center-squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) out. It's also **monotonic** and **summable** by adding precinct pairwise matrices, so it avoids two of IRV's biggest mechanical problems while keeping a familiar ranked ballot.
 
 ## A worked example — the consensus center wins the round-robin
 
@@ -211,12 +211,12 @@ Every claim on this page has a runnable election behind it. The case folders liv
 - [Cycle resolution](cycle_resolution.md) — why Copeland is tie-prone, and why Minimax / Ranked Pairs / Schulze exist (they differ only on cycles)
 - [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md) — RR passes vote-splitting but can fail teaming in a no-Condorcet-winner cycle (and only under a margin tiebreak)
 - [Strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
-- [Center squeeze](../../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't
-- [Exhausted ballots](../../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md) — the IRV ballots that stop counting; Ranked Robin never exhausts one (every ballot is read in every pair)
-- [Is IRV "just plurality"?](../../00_start_here/RCV_IRV/RCV_IRV_and_plurality.md) — why IRV isn't pairwise
+- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't
+- [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — the IRV ballots that stop counting; Ranked Robin never exhausts one (every ballot is read in every pair)
+- [Is IRV "just plurality"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md) — why IRV isn't pairwise
 - [Scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — RR is still order-only, unlike STAR
 - [RCV-IRV vs. STAR (side-by-side)](../../00_start_here/topics/rcv_irv_vs_star.md)
-- [RCV vs. IRV vs. RCV-IRV — terminology](../../00_start_here/RCV_IRV/RCV-IRV-confusing-name.md)
+- [RCV vs. IRV vs. RCV-IRV — terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
 
 ## Learn more — external
 

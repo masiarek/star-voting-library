@@ -2,11 +2,11 @@
 
 *Generated from [`lot_random_vs_published_jfk7pd_bv_order.yaml`](../lot_random_vs_published_jfk7pd_bv_order.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ben
+**Method:** [STAR (single winner)](../../../concepts) · **1 seat** · **Expected winner:** Ben
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfk7pd) · **[results ↗](https://bettervoting.com/jfk7pd/results)** (election `jfk7pd`).
 
-**Official tie-break (lot) order:** Ben > Ada — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Ben > Ada — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -131,7 +131,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
 
 More cases in this set: [lot_random_vs_published_jfk7pd_published_order](lot_random_vs_published_jfk7pd_published_order.md)

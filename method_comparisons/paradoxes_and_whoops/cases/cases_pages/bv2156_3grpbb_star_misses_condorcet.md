@@ -2,7 +2,7 @@
 
 *Generated from [`bv2156_3grpbb_star_misses_condorcet.yaml`](../bv2156_3grpbb_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../00_start_here/STAR_Voting) · **1 seat** · **Expected winner:** Ada
+**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Ada
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3grpbb) · **[results ↗](https://bettervoting.com/3grpbb/results)** (election `3grpbb`).
 

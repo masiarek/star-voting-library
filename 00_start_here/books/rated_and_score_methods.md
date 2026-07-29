@@ -1,6 +1,6 @@
 # ⭐ Rated & score methods — this repo's home turf
 
-The *cardinal* family: ballots where you **grade** candidates (approve / score 0–5 / grade Reject–Excellent) rather than only **rank** them. [STAR](../STAR_Voting/STAR_start_here.md) lives here — a score ballot plus an automatic runoff — so these are the books that argue the case STAR builds on. Read them to understand *why scoring instead of ranking*, and where the scholars who pioneered it think it still falls short.
+The *cardinal* family: ballots where you **grade** candidates (approve / score 0–5 / grade Reject–Excellent) rather than only **rank** them. [STAR](../../01_STAR/concepts/STAR_start_here.md) lives here — a score ballot plus an automatic runoff — so these are the books that argue the case STAR builds on. Read them to understand *why scoring instead of ranking*, and where the scholars who pioneered it think it still falls short.
 
 ← Back to [Books on Voting Methods](README.md)
 
@@ -82,5 +82,5 @@ The scholarly reference: an edited volume collecting the theory, experiments, an
 
 - The theory *under* all cardinal methods (why none escapes trade-offs) → **[Social choice theory](social_choice_theory.md)**.
 - The gentle on-ramp if this was too dense → **[Popular introductions](popular_introductions.md)**.
-- STAR itself, runnable → [STAR — start here](../STAR_Voting/STAR_start_here.md) · [why STAR](../topics/Why_STAR_Voting.md).
+- STAR itself, runnable → [STAR — start here](../../01_STAR/concepts/STAR_start_here.md) · [why STAR](../topics/Why_STAR_Voting.md).
 - Back to the full shelf → **[Books on Voting Methods](README.md)**.

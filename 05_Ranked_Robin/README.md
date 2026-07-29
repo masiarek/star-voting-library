@@ -43,7 +43,7 @@ Winner — Ranked Robin (RCV-RR): Ben
 
 **Ben wins 3–0.** A majority prefers him to each rival, one on one — so he's the Condorcet winner, and Ranked Robin elects him. The lesson: RR elects the **consensus** candidate, not the largest faction's favorite. Nobody had to be eliminated, and no ballot went uncounted.
 
-*(Honest footnote: RCV-IRV elects Ben here too — Cara is eliminated first and her ballots flow to Ben. This election separates Ranked Robin from **plurality**, not from IRV. For the case where RR and IRV genuinely part ways, see the Tennessee [center squeeze](../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) in the examples below.)*
+*(Honest footnote: RCV-IRV elects Ben here too — Cara is eliminated first and her ballots flow to Ben. This election separates Ranked Robin from **plurality**, not from IRV. For the case where RR and IRV genuinely part ways, see the Tennessee [center squeeze](../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) in the examples below.)*
 
 Want the whole count — the pairwise matrix, the [Smith set](../00_start_here/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](_main/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](_main/cases/ranked_robin_consensus_center.yaml)
 
@@ -59,7 +59,7 @@ Same ranked ballot, opposite counting philosophy — read the whole ballot again
 | Elects the Condorcet winner? | Not always (can center-squeeze) | ✅ Yes, when one exists |
 | Monotonic? | ❌ No | ✅ Yes |
 | [Precinct-summable](../00_start_here/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
-| [Exhausted ballots](../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
+| [Exhausted ballots](../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
 *(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](concepts/ranked_robin.md).)*
 

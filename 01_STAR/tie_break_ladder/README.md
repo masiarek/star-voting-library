@@ -1,6 +1,6 @@
 # 01_STAR/tie_break_ladder — the STAR tiebreak ladder, worked
 
-The **happy-path** side of STAR tie-breaking: elections that **tie but never reach the lot**, because the deterministic rungs (pairwise / score, then five-star) settle everything. This is the live, BV-backed home for the worked example in **[the tie-breaking ladder doc](../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)**.
+The **happy-path** side of STAR tie-breaking: elections that **tie but never reach the lot**, because the deterministic rungs (pairwise / score, then five-star) settle everything. This is the live, BV-backed home for the worked example in **[the tie-breaking ladder doc](../concepts/Tie_Breaking_STAR/tie_breaking.md)**.
 
 Contrast the two neighbours:
 - **[Flat_scores_ties/…05 — BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md)** — every rung ties down to the **random floor** (LH-only).

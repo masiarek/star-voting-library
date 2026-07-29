@@ -4,7 +4,7 @@
 
 **Method:** [plurality](../../../../00_start_here) · **3 seats** · **Expected winners:** Uma, Ada, Ben
 
-**Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 

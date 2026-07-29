@@ -81,7 +81,7 @@ Same two ballots, opposite winner, decided entirely by the tie-break order. File
 
 ### Root cause (not a bug in the count)
 
-This is the [**"dead rung"**](https://github.com/masiarek/YAML/blob/master/00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md#edge-case-five-star-is-a-dead-rung-when-nobody-scored-the-max) case: STAR's second tie-break rung counts votes equal to the scale maximum (5), and here nobody scored a 5, so it reads 0–0 and can't separate the candidates. That's expected and correct. The remaining question — who wins a genuine tie — is answered by `random`, which is the reproducibility problem.
+This is the [**"dead rung"**](https://github.com/masiarek/YAML/blob/master/01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md#edge-case-five-star-is-a-dead-rung-when-nobody-scored-the-max) case: STAR's second tie-break rung counts votes equal to the scale maximum (5), and here nobody scored a 5, so it reads 0–0 and can't separate the candidates. That's expected and correct. The remaining question — who wins a genuine tie — is answered by `random`, which is the reproducibility problem.
 
 ### Proposed fix / acceptance criteria
 
@@ -94,7 +94,7 @@ This is the [**"dead rung"**](https://github.com/masiarek/YAML/blob/master/00_st
 
 Fuller write-ups behind this report, in case they're useful:
 
-- **STAR Tie-Breaking — the full chain** (the ladder, the "dead rung", and why each round breaks its tie with the *other* round's measure): <https://github.com/masiarek/YAML/blob/master/00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md>
+- **STAR Tie-Breaking — the full chain** (the ladder, the "dead rung", and why each round breaks its tie with the *other* round's measure): <https://github.com/masiarek/YAML/blob/master/01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md>
 - **This case, in full** (View 1 = BV screenshots, View 2 = the independent report, plus the reproduction commands): <https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md>
 - **The dead-rung case set** (the concept + a "cap ladder" showing the rung ignores 4s): <https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/README.md>
 - **Does it scale past two candidates?** A 3-candidate analog — three candidates, three possible winners by lot; divergence is `(k−1)/k`: <https://github.com/masiarek/YAML/blob/master/01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md>

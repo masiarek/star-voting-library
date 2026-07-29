@@ -45,8 +45,8 @@ Because ranks and scores are both first-class, ABIF has three registers:
 
 | Register | Looks like | This is a… |
 |---|---|---|
-| **Ranked** (order only) | `Allie > Billy = Candace > Dennis` | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) / Ranked Robin ballot |
-| **Rated** (strength only) | `Allie/5, Billy/5, Candace/4, Dennis/3` | [STAR](../STAR_Voting/STAR_start_here.md) / Score / Approval ballot |
+| **Ranked** (order only) | `Allie > Billy = Candace > Dennis` | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) / Ranked Robin ballot |
+| **Rated** (strength only) | `Allie/5, Billy/5, Candace/4, Dennis/3` | [STAR](../../01_STAR/concepts/STAR_start_here.md) / Score / Approval ballot |
 | **Hybrid** (both at once) | `Allie/5 =Billy/5 >Candace/4` | scores **and** explicit operators — `test003` above |
 
 The first two are clean. The **hybrid** is what tripped you up, and the confusion is legitimate: it encodes the ordering **twice** — once in the numbers (`5`, `5`, `4`) and again in the operators (`=`, `>`). In `test003` the two agree by construction (every `=` sits between equal scores, every `>` between descending ones), so it's a tidy belt-and-suspenders demo. But nothing in the *syntax* forces agreement — `Allie/5 >Billy/6` is writable, and now the operator says "Allie beats Billy" while the scores say the opposite. A reader (or parser) has to know which wins. **Two sources of truth for one fact is a footgun**, and the hybrid form is where ABIF looks most like line noise for the least added information.

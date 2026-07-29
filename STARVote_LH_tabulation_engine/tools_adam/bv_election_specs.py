@@ -4256,7 +4256,7 @@ REINFORCEMENT_SPEC = {
 }
 
 # --- BV2255 — The "traditional" style, all the way down (four ballots, one bit) ---
-# Backs 00_start_here/STAR_Voting/voting_styles/traditional.md — the choose-one habit
+# Backs 01_STAR/concepts/voting_styles/traditional.md — the choose-one habit
 # transplanted onto a 5-star ballot. Here EVERY voter votes that way: 3 voters, 5
 # candidates, one mark each (Carmen 1, Ella 2). The same single mark is then encoded on
 # all three ballot formats — choose-one, 0-5 score, ranked — and counted four ways. All
@@ -4319,7 +4319,7 @@ TRADITIONAL_SPEC = {
 
 # --- BV2256 — Traditional voting style: one mark each (the BV2255 redo) -----------
 # The plain version: ONE STAR race, the same three bullet ballots. Backs the "What if
-# everyone voted this way?" example on 00_start_here/STAR_Voting/voting_styles/
+# everyone voted this way?" example on 01_STAR/concepts/voting_styles/
 # traditional.md — every voter fills the 5-star ballot the old choose-one way (one 5, four
 # blanks), so the scoring round is just a first-choice count and the runoff has nothing
 # left to add. LH-verified: Ella 10, Carmen 5, everyone else 0; runoff Ella 2-1.

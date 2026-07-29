@@ -2,7 +2,7 @@
 
 **Level 101 · the atom, blown up to a crowd.** Same shape as [Runoff 02](Runoff_02_atom_reversal_yx9447.md), now with nine voters: three love **Maple** (5s) and push Maple's total to the top of the Scoring Round (39), but six prefer **Olive**, who wins the Automatic Runoff **6–3** — a clean **2-to-1 majority** (67 / 33). Proof a reversal isn't a small-numbers fluke. (Olive is the Condorcet winner.)
 
-→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
+→ teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../concepts/the_count/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../00_start_here/GLOSSARY.md).
 
 ---
 
@@ -73,7 +73,7 @@ Automatic Runoff Round
    Olive 6 (67%) vs Maple 3 (33%); majority = 5.
 ```
 
-> **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../00_start_here/STAR_reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
+> **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../concepts/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway
 
