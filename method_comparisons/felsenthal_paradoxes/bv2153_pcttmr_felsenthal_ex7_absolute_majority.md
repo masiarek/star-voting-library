@@ -17,7 +17,7 @@ No. of voters    Ranking                    Approves (top two)
       1          Chad  > Bella > Amos       {Chad, Bella}
 ```
 
-Approval totals: **Amos 51, Bella 100, Chad 49** → Bella. The top-two cutoff makes a 51-voter majority's *first-vs-second* distinction invisible: their ballots support Bella exactly as strongly as Amos. Under any count that reads that distinction, Amos wins — IRV seats him in round one (51 is a majority) and Ranked Robin elects him as Condorcet winner (beats Bella 51–49, Chad 51–49). Tag: [majority-failure](../../00_start_here/YAML_test_case_index/PARADOX_index.md); note this is a *strategy-profile* paradox — it needs every voter to approve two — where [Ex.5's](bv2152_r6ctvy_felsenthal_ex5_approval_cw.md) cutoffs were mixed.
+Approval totals: **Amos 51, Bella 100, Chad 49** → Bella. The top-two cutoff makes a 51-voter majority's *first-vs-second* distinction invisible: their ballots support Bella exactly as strongly as Amos. Under any count that reads that distinction, Amos wins — IRV seats him in round one (51 is a majority) and Ranked Robin elects him as Condorcet winner (beats Bella 51–49, Chad 51–49). Tag: [majority-failure](../../07_Concepts/YAML_test_case_index/PARADOX_index.md); note this is a *strategy-profile* paradox — it needs every voter to approve two — where [Ex.5's](bv2152_r6ctvy_felsenthal_ex5_approval_cw.md) cutoffs were mixed.
 
 ## Borda, worked (Felsenthal Ex.13 — the same electorate)
 

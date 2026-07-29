@@ -126,8 +126,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md) — its entry in the divergence review ledger
-- [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
+- [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2229_7j2bqf_french_2017_honest](bv2229_7j2bqf_french_2017_honest.md) · [bv2231_b4yr3v_wa_2010_honest](bv2231_b4yr3v_wa_2010_honest.md) · [bv2232_24b623_wa_2010_burial](bv2232_24b623_wa_2010_burial.md)

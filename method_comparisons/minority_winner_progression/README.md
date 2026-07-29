@@ -30,4 +30,4 @@ Meanwhile **nothing changes for the whole-ballot methods.** Cheese is everybody'
 
 ---
 
-*Run any rung: the `.yaml` files above. The clean 34% teaching case: [the minority winner](../minority_winner/README.md). Every method on one electorate: [same opinions, every method](../../00_start_here/topics/same_opinions_every_method.md). The concept: [Choose-One / Plurality](../../00_start_here/topics/plurality.md).*
+*Run any rung: the `.yaml` files above. The clean 34% teaching case: [the minority winner](../minority_winner/README.md). Every method on one electorate: [same opinions, every method](../../07_Concepts/topics/same_opinions_every_method.md). The concept: [Choose-One / Plurality](../../07_Concepts/topics/plurality.md).*

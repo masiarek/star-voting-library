@@ -6,7 +6,7 @@
 
 ## Source
 
-Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A10 ("Demonstrating Paradoxes Afflicting the Condorcet (aka Minimax or Simpson-Kramer) Procedure"), **Example 29**. Full §A10 treatment: [minimax.md](../../00_start_here/voting_paradoxes/minimax.md).
+Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A10 ("Demonstrating Paradoxes Afflicting the Condorcet (aka Minimax or Simpson-Kramer) Procedure"), **Example 29**. Full §A10 treatment: [minimax.md](../../07_Concepts/voting_paradoxes/minimax.md).
 
 ## The election
 
@@ -23,7 +23,7 @@ Pairwise: **B>A 7–4, A>C 8–3, C>B 7–4** — a top cycle among A, B, C — 
 
 ## Minimax, worked (the paper paradox)
 
-With no Condorcet winner, Minimax elects the candidate whose **worst pairwise loss margin is smallest**: A's worst is 7 (vs B), B's is 7 (vs C), C's is 8 (vs A) — and **D's is 6** (all three losses). **D elected.** Losing to everyone *narrowly* beats winning twice and losing once *badly* — the [Condorcet loser](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) and [absolute loser](../../00_start_here/voting_paradoxes/absolute_loser_paradox.md) paradoxes inside a genuine Condorcet method. Contrast **Copeland** (Ranked Robin's rule, most pairwise *wins*): D has zero wins and can never top a Copeland count — the two cycle-breakers differ in kind, not taste (see [cycle_resolution.md](../../05_Ranked_Robin/concepts/cycle_resolution.md)).
+With no Condorcet winner, Minimax elects the candidate whose **worst pairwise loss margin is smallest**: A's worst is 7 (vs B), B's is 7 (vs C), C's is 8 (vs A) — and **D's is 6** (all three losses). **D elected.** Losing to everyone *narrowly* beats winning twice and losing once *badly* — the [Condorcet loser](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) and [absolute loser](../../07_Concepts/voting_paradoxes/absolute_loser_paradox.md) paradoxes inside a genuine Condorcet method. Contrast **Copeland** (Ranked Robin's rule, most pairwise *wins*): D has zero wins and can never top a Copeland count — the two cycle-breakers differ in kind, not taste (see [cycle_resolution.md](../../05_Ranked_Robin/concepts/cycle_resolution.md)).
 
 ## Agreement
 

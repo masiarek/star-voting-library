@@ -85,7 +85,7 @@ That's the honest comparison to draw here — not "Choose-One is stupid." It cou
 
 ## Related
 
-- [Plurality — the topic page](../../00_start_here/topics/plurality.md) — the family, the terms, the failure modes
+- [Plurality — the topic page](../../07_Concepts/topics/plurality.md) — the family, the terms, the failure modes
 - [Minority winner](../../method_comparisons/minority_winner/README.md) — the other classic Choose-One story: 34% wins while two-thirds wanted someone else
 - [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/README.md) — three electorates that look identical to Choose-One
 - [Multi-member plurality](../../method_comparisons/multi_member_plurality/README.md) — Block Voting, Limited Voting, SNTV

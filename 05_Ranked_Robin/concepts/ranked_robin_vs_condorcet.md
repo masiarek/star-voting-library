@@ -2,7 +2,7 @@
 
 *A question that trips up almost everyone: aren't **Ranked Robin (RCV-RR)** and **Condorcet** the same thing? Almost — and the gap between them is the whole lesson.*
 
-→ Topic hub: [Condorcet efficiency](../../00_start_here/topics/condorcet/) · cycles in depth: [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md) · the method: [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md) · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md) · **Level: Voting 301** — Curriculum [301.6](../../00_start_here/CURRICULUM.md)
+→ Topic hub: [Condorcet efficiency](../../07_Concepts/topics/condorcet/) · cycles in depth: [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md) · the method: [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md) · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md) · **Level: Voting 301** — Curriculum [301.6](../../07_Concepts/CURRICULUM.md)
 
 ---
 
@@ -112,7 +112,7 @@ Neither method reads *scores* — they read *ranks*, so a score ballot is conver
 
 Ranked Robin keeps equal scores **tied** — no head-to-head preference — which is exactly what its pairwise count uses. RCV-IRV **can't represent a tie**, so it *invents* a strict order: it breaks `A=B=F` by candidate priority into `A > B > F`, and treats C's 0 as *unranked* (so the ballot can later exhaust). That manufactured order is precisely why IRV is fragile — **reverse the priority and `A > B > F` becomes `F > B > A`**, which can change who gets eliminated and flip the winner. Ranked Robin never has to invent an order it wasn't given.
 
-→ More on this: [strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md).
+→ More on this: [strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md).
 
 ## So which should I say?
 
@@ -124,9 +124,9 @@ Ranked Robin keeps equal scores **tied** — no head-to-head preference — whic
 
 ## Related
 
-- [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/)
 - [Ranked Robin (the method)](ranked_robin.md) · [Cycle resolution](cycle_resolution.md)
 - [Which RCV-IRV?](../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) — the BTR/Baldwin/Nanson variants are also Condorcet methods
 - Generator: `STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py`
 
-Glossary: [`Condorcet`](../../00_start_here/GLOSSARY.md).
+Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md).

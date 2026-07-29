@@ -2,7 +2,7 @@
 
 **One line:** a broadly-liked moderate is eliminated *early* because few voters rank/score them **first**, so a more polarizing candidate the majority actually opposed goes on to win. It's an **[RCV-IRV (Hare)](RCV-IRV-Hare.md)** failure — a property of the *eliminate-the-fewest-first-choices* rule specifically, not of ranked ballots in general (and not of every instant-runoff variant); STAR avoids it.
 
-→ Glossary: [`center squeeze`](../../../00_start_here/GLOSSARY.md) · deeper debate version: [Favorite betrayal (301)](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md)
+→ Glossary: [`center squeeze`](../../../07_Concepts/GLOSSARY.md) · deeper debate version: [Favorite betrayal (301)](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md)
 
 ---
 
@@ -15,7 +15,7 @@ IRV only ever looks at each ballot's **top remaining** choice, and each round it
 - **[Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
 - The **Condorcet-safe IRV variants** — **BTR-IRV, Baldwin, Nanson** — keep the instant-runoff *shape* but stop eliminating on first-choices alone, so a Condorcet winner can never be squeezed out. Fittingly, **Nanson** — quoted at the bottom of this page warning about exactly this flaw in **1882** — designed one of those fixes.
 
-So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) and [the terminology tips](../../../00_start_here/tips/TIPS_terminology.md).
+So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) and [the terminology tips](../../../07_Concepts/tips/TIPS_terminology.md).
 
 ## Minimal test case — run it
 
@@ -47,7 +47,7 @@ green > red > yellow : 13.8%      yellow > green > red : 35.3%
 - But **Green is the Condorcet winner** — it beats Red (66.6 vs 33.2) *and* Yellow (64.5 vs 35.3) head-to-head. IRV threw out the one candidate a majority preferred over each rival.
 - **STAR** advances Green on its scores (lots of 3s from both wings + 5s from the center) and wins the runoff **65–35**.
 
-Run it: [`center_squeeze_voteline_1d.yaml`](../../../method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml) (scores are a simple 1-D [spatial model](../../../00_start_here/topics/spatial_voting_model.md): own side 5, the adjacent center 3, the far side 0–1; weights are the percentages ×10). The engine's own divergence block:
+Run it: [`center_squeeze_voteline_1d.yaml`](../../../method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml) (scores are a simple 1-D [spatial model](../../../07_Concepts/topics/spatial_voting_model.md): own side 5, the adjacent center 3, the far side 0–1; weights are the percentages ×10). The engine's own divergence block:
 
 ```
 [Divergence from STAR]
@@ -87,9 +87,9 @@ Center squeeze is a depolarization argument, not just a fairness one. A simulati
 
 ## How STAR avoids it
 
-STAR's scoring round advances the **two highest totals**, so a broadly-liked candidate (lots of 4s and 5s) reaches the runoff on *strength of support*, not just first-place counts — exactly the support a moderate has and IRV ignores. STAR is highly **Condorcet-efficient**: it usually elects the head-to-head winner. Measured on the same sampled electorates, on a 1-D spectrum with seven candidates — the sharpest squeeze conditions — STAR elects the head-to-head winner 74% of the time against RCV-IRV's 52%, and the gap widens as the field grows: [Condorcet efficiency, measured](../../../00_start_here/topics/condorcet/condorcet_efficiency_measured.md).
+STAR's scoring round advances the **two highest totals**, so a broadly-liked candidate (lots of 4s and 5s) reaches the runoff on *strength of support*, not just first-place counts — exactly the support a moderate has and IRV ignores. STAR is highly **Condorcet-efficient**: it usually elects the head-to-head winner. Measured on the same sampled electorates, on a 1-D spectrum with seven candidates — the sharpest squeeze conditions — STAR elects the head-to-head winner 74% of the time against RCV-IRV's 52%, and the gap widens as the field grows: [Condorcet efficiency, measured](../../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md).
 
-→ More source notes: **RCV-IRV center-squeeze & polarization** group in [the slide-links index](../../../00_start_here/LINKS.md).
+→ More source notes: **RCV-IRV center-squeeze & polarization** group in [the slide-links index](../../../07_Concepts/LINKS.md).
 
 **Watch it happen (simulation).** endolith's *elsim* has animated 2-D spatial simulations of the worst-case **"core collapse"** center squeeze. As its write-up puts it:
 

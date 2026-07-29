@@ -6,7 +6,7 @@
 
 > Why this page matters: most people are never told this. "Rank your honest favorite first, it can't backfire" is the core promise of IRV — and non-monotonicity is the case where that promise breaks. It's the single most underappreciated structural problem with the method.
 
-→ STAR doesn't have this failure — see [`STAR is monotone`](../../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md). Glossary: [`monotonicity`](../../../00_start_here/GLOSSARY.md).
+→ STAR doesn't have this failure — see [`STAR is monotone`](../../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md). Glossary: [`monotonicity`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -68,12 +68,12 @@ A well-known argument from **rangevoting.org** ([*"The logic behind IRV is flawe
 - **"Not self-consistent" is a method-class distinction, not "bogus logic."** Self-consistency is a property of **additive** methods (drop the lowest total, the winner's total is untouched); elimination methods lack it because eliminating a candidate *transfers* votes. That's an argument *for* additive methods, not proof IRV is irrational.
 - **The "magician's trick" framing** imputes deliberate deception — polemic, not argument.
 
-**Disclose the lean:** rangevoting.org is **Warren Smith / the Center for Range Voting** — the most aggressive pro-**Range** advocacy source (advocacy-adjacent; strong for mechanics, weak for verdicts — see [how to read the sources](../../../00_start_here/topics/how_to_learn_about_voting_methods.md)). And note it cuts against **STAR** as well: STAR's *scoring round* is additive/self-consistent, but its **runoff** is a non-additive pairwise step, so a Range purist levels the same charge at STAR. This isn't a pro-STAR argument — it's a Score-maximalist jab at *every* method with an elimination or runoff. We include it because the library checks pro-Range anti-IRV arguments by the same standard it checks the [pro-RCV ones](../../../method_comparisons/fairvote_star_whitepaper/).
+**Disclose the lean:** rangevoting.org is **Warren Smith / the Center for Range Voting** — the most aggressive pro-**Range** advocacy source (advocacy-adjacent; strong for mechanics, weak for verdicts — see [how to read the sources](../../../07_Concepts/topics/how_to_learn_about_voting_methods.md)). And note it cuts against **STAR** as well: STAR's *scoring round* is additive/self-consistent, but its **runoff** is a non-additive pairwise step, so a Range purist levels the same charge at STAR. This isn't a pro-STAR argument — it's a Score-maximalist jab at *every* method with an elimination or runoff. We include it because the library checks pro-Range anti-IRV arguments by the same standard it checks the [pro-RCV ones](../../../method_comparisons/fairvote_star_whitepaper/).
 
 ## Don't confuse it with Later-No-Harm
 
 A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md).)
 
-→ More source notes: **RCV-IRV monotonicity** group in [LINKS — source-of-truth registry](../../../00_start_here/LINKS.md).
+→ More source notes: **RCV-IRV monotonicity** group in [LINKS — source-of-truth registry](../../../07_Concepts/LINKS.md).
 
 Sources: [Ornstein & Norman 2014 (Public Choice)](https://link.springer.com/article/10.1007/s11127-013-0118-2), [Graham-Squire & McCune, RCV in the US 2004–2022 (arXiv)](https://arxiv.org/pdf/2301.12075.pdf), [Burlington 2009 (Wikipedia)](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election), [monotonicity criterion (Wikipedia)](https://en.wikipedia.org/wiki/Monotonicity_criterion).

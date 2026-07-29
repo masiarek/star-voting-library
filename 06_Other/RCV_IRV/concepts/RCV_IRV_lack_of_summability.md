@@ -6,7 +6,7 @@
 
 > Why this page matters: summability sounds like a dry administrative detail, but it drives real things voters care about — how elections are audited, whether a precinct can verify its own result, and whether early/partial counts mean anything. IRV quietly gives all of that up.
 
-→ Cross-method **topic hub**: [Summability](../../../00_start_here/topics/summability/) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md). Glossary: [`summability`](../../../00_start_here/GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../../../07_Concepts/topics/summability/) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md). Glossary: [`summability`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -34,7 +34,7 @@ IRV: C out → B 7, A 6   IRV: A out → B 7, C 6   first-choices: A 9, C 9, B 8
 
 ## What that costs
 
-- **[Central tabulation](../../../00_start_here/topics/central_tabulation.md)** — ballots (or full cast-vote records) must be gathered in one place, a single point of failure and a heavier, slower audit. (Expanded on its own page: Maine's courier operation, the NYC 2021 and Alameda 2022 central-count errors, and why IRV audits need heavier machinery.)
+- **[Central tabulation](../../../07_Concepts/topics/central_tabulation.md)** — ballots (or full cast-vote records) must be gathered in one place, a single point of failure and a heavier, slower audit. (Expanded on its own page: Maine's courier operation, the NYC 2021 and Alameda 2022 central-count errors, and why IRV audits need heavier machinery.)
 - **No meaningful precinct subtotals** — a precinct can't certify its own contribution to the outcome the way it can under summable methods.
 - **Partial counts can mislead** — the candidate "ahead" in first-choices partway through can lose once transfers run, so early IRV numbers are easy to misread.
 
@@ -42,7 +42,7 @@ IRV: C out → B 7, A 6   IRV: A out → B 7, C 6   first-choices: A 9, C 9, B 8
 
 ## The nuance — it's IRV's count, not ranked ballots
 
-Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../00_start_here/tips/TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md).)
+Summability is about the **tabulation**, not the ballot. The *same* ranked ballot, counted by a **Condorcet** method (Ranked Robin), **is** summable — via a pairwise matrix that adds across precincts. So "ranked ballots can't be summed" is wrong; it's **IRV's elimination count** specifically that can't. (See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../07_Concepts/tips/TIPS_terminology.md) and the STAR counterpart, [`STAR is summable`](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md).)
 
 ### Same ballots, summed — Ranked Robin on the example above
 

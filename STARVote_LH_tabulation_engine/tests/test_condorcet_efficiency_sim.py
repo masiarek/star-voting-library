@@ -1,6 +1,6 @@
 """Guards the Condorcet-efficiency simulation's harness.
 
-The numbers published in 00_start_here/topics/condorcet/condorcet_efficiency_measured.md
+The numbers published in 07_Concepts/topics/condorcet/condorcet_efficiency_measured.md
 are only worth anything if the harness is sound, and the harness has exactly one
 self-evident check: **Ranked Robin (Copeland) is Condorcet-efficient by construction, so
 its column must read 100.0%.** Any cell below that means the pairwise code and the method

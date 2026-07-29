@@ -47,6 +47,6 @@ Two pages here answer a "how often?" question with a seeded, runnable simulation
 | [How often do STAR and Approval disagree?](star_vs_approval_divergence.md) | there is no single rate — it depends on the electorate model *and* on where each voter draws their approval cutoff |
 | [Does the qualifying round throw away the consensus winner?](qualifying_round_primary_method.md) | in a two-stage reform (open primary → top N → good general), a **Plurality** primary drops the consensus winner 17.3% of the time at top-4; **Approval** drops it 0.4%. The method matters far more than the number of slots |
 
-The by-method view of every file in the repo is auto-generated at [the by-method index](../00_start_here/YAML_test_case_index/).
+The by-method view of every file in the repo is auto-generated at [the by-method index](../07_Concepts/YAML_test_case_index/).
 
 # file: README.md

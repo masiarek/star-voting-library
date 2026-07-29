@@ -21,7 +21,7 @@ A 236, B 232, C 198; runoff A 34-33). The [Divergence from STAR] block confirms
 Ranked Robin also elects A. Neither method rewards burying a rival behind D — under
 a score ballot you give BOTH your rival and D a 0, so D never rises. Quinn's own
 prescription: "don't force people to dishonestly support D merely to oppose someone."
-Concept: ../../00_start_here/topics/strategic_pathologies.md.
+Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 ## Ballots
 
@@ -112,6 +112,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

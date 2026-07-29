@@ -66,6 +66,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2133_dyxrbr_pet2_irv](bv2133_dyxrbr_pet2_irv.md) · [bv2133_dyxrbr_pet2_plurality](bv2133_dyxrbr_pet2_plurality.md) · [bv2133_dyxrbr_pet2_star](bv2133_dyxrbr_pet2_star.md)

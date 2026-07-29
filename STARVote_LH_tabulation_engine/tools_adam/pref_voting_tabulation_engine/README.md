@@ -35,7 +35,7 @@ When `pref_voting` reports a **tie** (a set of co-winners), the cross-check only
 
 ## Status
 
-Run across the repo's single-winner elections: **0 mismatches** — the LH engine's Condorcet / IRV / Plurality machinery is independently confirmed. Wired into [`tests/test_pref_voting_crosscheck.py`](../../tests/test_pref_voting_crosscheck.py) (skips cleanly if `pref_voting` isn't installed). Full write-up: [Cross-checking the LH engine with pref_voting](../../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
+Run across the repo's single-winner elections: **0 mismatches** — the LH engine's Condorcet / IRV / Plurality machinery is independently confirmed. Wired into [`tests/test_pref_voting_crosscheck.py`](../../tests/test_pref_voting_crosscheck.py) (skips cleanly if `pref_voting` isn't installed). Full write-up: [Cross-checking the LH engine with pref_voting](../../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md).
 
 ## Ranked Robin report (independent cross-check)
 

@@ -23,7 +23,7 @@ Source: https://bettervoting.org (RRV sample election)
 TEACHING NOTE: on this 0-5 scale STAR elects Orange5, but on the source 0-9
 scale it elects Orange1 — the scale's granularity moves the second finalist.
 Worked as a 301 lesson in
-00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md (see also
+07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md (see also
 Curriculum 301.8).
 
 ## Ballots
@@ -190,6 +190,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/_main
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [03b_star_pr_3seats](03b_star_pr_3seats.md) · [bv2130_bvhchj_party_plurality](bv2130_bvhchj_party_plurality.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [lackner_skowron_shadow_star_pr_c7_b12](lackner_skowron_shadow_star_pr_c7_b12.md) · [lackner_skowron_shadow_star_pr_rrv_c7_b12](lackner_skowron_shadow_star_pr_rrv_c7_b12.md)

@@ -2,7 +2,7 @@
 
 *The mirror of the [upward paradox](upward_monotonicity_alaska.md). A voting method should never **reward** a candidate for losing support. RCV-IRV can. In the real **2020 San Francisco Board of Supervisors, District 7** race, shifting the losing candidate **Engardio** *down* one rank on about **800** ballots — giving him **less** first-place support and changing nothing else — would have made **Engardio the winner**. This page reproduces it on the real full-scale counts, then shows that **STAR and Ranked Robin cannot do it.***
 
-→ Part of the [monotonicity worked set](README.md). Companions: [**Upward** paradox — Alaska 2022](upward_monotonicity_alaska.md) (its mirror) · [non-monotonicity (concept)](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../00_start_here/topics/monotonicity/README.md).
+→ Part of the [monotonicity worked set](README.md). Companions: [**Upward** paradox — Alaska 2022](upward_monotonicity_alaska.md) (its mirror) · [non-monotonicity (concept)](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [monotonicity topic hub](../../07_Concepts/topics/monotonicity/README.md).
 
 ---
 
@@ -53,7 +53,7 @@ Exactly as in [Alaska](upward_monotonicity_alaska.md), the trick is the **order 
 
 Both methods are **monotonic** — lowering a candidate can never *help* them, and raising one can never *hurt* — so **neither has a downward (or upward) monotonicity paradox.**
 
-- **Ranked Robin** (Condorcet / Copeland) reads every head-to-head, so the elimination-order trick has no purchase. On the **same** ballots it elects **Melgar both times** — before *and* after — because Melgar is the [Condorcet winner](../../00_start_here/topics/condorcet/) (he beats Engardio 18561–16370 and Nguyen 24971–11655). Note the sharp contrast: RCV-IRV's result *moves off* the Condorcet winner under the paradox; Ranked Robin stays on him. (Same ranked ballot, a monotonic count.)
+- **Ranked Robin** (Condorcet / Copeland) reads every head-to-head, so the elimination-order trick has no purchase. On the **same** ballots it elects **Melgar both times** — before *and* after — because Melgar is the [Condorcet winner](../../07_Concepts/topics/condorcet/) (he beats Engardio 18561–16370 and Nguyen 24971–11655). Note the sharp contrast: RCV-IRV's result *moves off* the Condorcet winner under the paradox; Ranked Robin stays on him. (Same ranked ballot, a monotonic count.)
 - **STAR** passes **mono-raise** and its downward form: a candidate losing points can only ever *hurt* their own total, never help. (See [STAR & monotonicity](../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md) and the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md).)
 
 ## Keep it in proportion — the fair reading

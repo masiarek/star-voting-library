@@ -67,7 +67,7 @@ the honest answer to "who is even in contention?".
    One member ⇒ Ash is the Condorcet winner, beating every rival head-to-head.
    RCV-IRV winner Ash is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2205_8xwx43_minimal_sole_survivor_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -80,8 +80,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/bv_
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
 - [Exhausted ballots (conversation)](../../../../RCV_IRV/concepts/exhausted_ballots_301.md)
-- [Glossary](../../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2203_gvtg2h_flag_probe](bv2203_gvtg2h_flag_probe.md) · [bv2204_39py93_control_standing_hopefuls](bv2204_39py93_control_standing_hopefuls.md)

@@ -68,7 +68,7 @@ the honest answer to "who is even in contention?".
       Every member of the set (Casey) beats Avery head-to-head, yet
       RCV-IRV elected Avery anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2170_pp2q4q_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -81,11 +81,11 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2170_pp2q4q_plurality](bv2170_pp2q4q_plurality.md) · [bv2170_pp2q4q_ranked_robin](bv2170_pp2q4q_ranked_robin.md) · [bv2170_pp2q4q_star](bv2170_pp2q4q_star.md)

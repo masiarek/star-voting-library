@@ -19,7 +19,7 @@ What it prints, for any ranked-ballot YAML in this repo:
     which is how a spoiler / IIA failure is demonstrated
 
 Sorted by Fishburn's classification (see
-00_start_here/topics/condorcet/condorcet_reading_list.md): C1 methods read only
+07_Concepts/topics/condorcet/condorcet_reading_list.md): C1 methods read only
 who-beat-whom, C2 methods read the margins too.
 
 Usage:

@@ -1,7 +1,7 @@
 # CLAUDE.md — working guidance for this repo
 
 Standing instructions for Claude when working in this project. Prefer the
-canonical docs in `00_start_here/` over memory; this file is the index + the
+canonical docs in `07_Concepts/` over memory; this file is the index + the
 non-obvious house rules.
 
 ## What this is
@@ -52,7 +52,7 @@ public audience, who only know "RCV." So:
   Then use the familiar word.
 
 Family tree, when-to-use table, and glossary are canonical — **do not restate the
-taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`.
+taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY.md`.
 
 **Other voting-term canon:**
 - **STAR** = Score Then Automatic Runoff (a *score* ballot + that tabulation; the
@@ -145,7 +145,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   100-voter one. Only scale up when a larger electorate is genuinely essential
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
-  preserves STAR/proportional winners. See `00_start_here/tips/TIPS_choosing_voter_counts.md`.
+  preserves STAR/proportional winners. See `07_Concepts/tips/TIPS_choosing_voter_counts.md`.
 - **Candidate names — a fresh, easy cast per scenario; the same cast within one.**
   Prefer a *new* set of names for each scenario (memorable beats uniform — "the
   Ada/Ben/Cara split," "the Tennessee cities") over one fixed roster. Four rules:
@@ -161,13 +161,13 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
 - **Markers (all tabulate as 0):** `-` blank · `~` race abstention · `&` candidate
   abstention · `?` spoiled · `%` spoiled+reissued. **No `^`** (removed). Approval
   ballots accept only `0`/`1` (+ blank/marker = not approved).
-- **Levels (101/201/301)** live ONLY in `00_start_here/CURRICULUM.md`
+- **Levels (101/201/301)** live ONLY in `07_Concepts/CURRICULUM.md`
   (authoritative). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
-  see next bullet). See `00_start_here/about_this_repo/ORGANIZATION.md`.
+  see next bullet). See `07_Concepts/about_this_repo/ORGANIZATION.md`.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
   The generated per-election pages (`<set>_pages/<name>.md`, built by
@@ -213,7 +213,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   tabulatable `…_<bvid>.yaml`, and the frozen `…_<bvid>_bv_export.json`. Filenames carry
   the order/meaning; the BV id lives on the images, in the filename suffix, and in the
   YAML (`election_description` + the results URL).
-- **Cross-reference slides by title** via `00_start_here/LINKS.md`
+- **Cross-reference slides by title** via `07_Concepts/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
 
 ## Engines
@@ -256,4 +256,4 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
 
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention
-question isn't covered by the `00_start_here/` docs, ask rather than guess.
+question isn't covered by the `07_Concepts/` docs, ask rather than guess.

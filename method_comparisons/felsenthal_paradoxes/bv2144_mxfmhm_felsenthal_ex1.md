@@ -27,10 +27,10 @@ All four are *simple* paradoxes in Felsenthal's classification — the surprisin
 
 | Paradox | What happens here | Teaching page |
 |---|---|---|
-| Condorcet winner paradox | Bo beats everyone head-to-head, yet loses | [condorcet_winner_paradox.md](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md) |
-| Condorcet loser paradox | Ana loses to everyone head-to-head, yet wins | [condorcet_loser_paradox.md](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) |
-| Absolute loser paradox | A majority ranks Ana *last*, yet Ana wins | [absolute_loser_paradox.md](../../00_start_here/voting_paradoxes/absolute_loser_paradox.md) |
-| SCC / spoiler | If Cal drops out, Bo beats Ana 4–3 | [spoiler_scc.md](../../00_start_here/voting_paradoxes/spoiler_scc.md) |
+| Condorcet winner paradox | Bo beats everyone head-to-head, yet loses | [condorcet_winner_paradox.md](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md) |
+| Condorcet loser paradox | Ana loses to everyone head-to-head, yet wins | [condorcet_loser_paradox.md](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) |
+| Absolute loser paradox | A majority ranks Ana *last*, yet Ana wins | [absolute_loser_paradox.md](../../07_Concepts/voting_paradoxes/absolute_loser_paradox.md) |
+| SCC / spoiler | If Cal drops out, Bo beats Ana 4–3 | [spoiler_scc.md](../../07_Concepts/voting_paradoxes/spoiler_scc.md) |
 
 Choose-One counts only first choices: **Ana 3, Bo 2, Cal 2 → Ana wins** — the candidate a majority ranked last.
 

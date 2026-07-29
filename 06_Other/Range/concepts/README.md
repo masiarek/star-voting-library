@@ -5,4 +5,4 @@ Everything explaining **Range (Score) voting** — grade each candidate on a fix
 - [Range / Score Voting](range_voting.md) — the ballot, the count, the exaggeration problem, and where it sits in the scored family
 - Glossary: [Range / Score terms](glossary_range.md)
 
-*(Range is the top rung of the scored family **Approval → Range → STAR** — see the [fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md). The runoff STAR adds on top of a Range ballot is what makes honest scoring safer: [STAR Voting](../../../01_STAR/concepts/README.md). Up: the docs hub [`00_START_HERE`](../../../00_start_here/00_START_HERE.md).)*
+*(Range is the top rung of the scored family **Approval → Range → STAR** — see the [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md). The runoff STAR adds on top of a Range ballot is what makes honest scoring safer: [STAR Voting](../../../01_STAR/concepts/README.md). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*

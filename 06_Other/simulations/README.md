@@ -1,11 +1,11 @@
 # Simulations — measure it, don't guess it
 
-This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../00_start_here/topics/simulate_utilities_not_ballots.md).
+This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md).
 
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
-- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../00_start_here/topics/condorcet/condorcet_efficiency_measured.md).
+- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
@@ -23,7 +23,7 @@ The debate doc once claimed STAR is *"~98% favorite-betrayal-proof."* That numbe
 2. **Works : backfires ratio.** Over every `(voter, betrayal ballot)` pair, count how many strictly **help** the voter vs strictly **hurt** them (by sincere utilities). Reported per method. This is the brute-force cousin of Equal Vote's "honesty" stat — note it counts *all possible* betrayals, so it is a superset of the realistic strategies a real faction would attempt (read it as "if you betray blindly, how often does it pay?").
 
 ### Electorate models (both run by default)
-- **spatial** — voters & candidates are points in issue space; utility = −distance. The realistic model (what [VSE / Bayesian Regret](../../00_start_here/topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) uses).
+- **spatial** — voters & candidates are points in issue space; utility = −distance. The realistic model (what [VSE / Bayesian Regret](../../07_Concepts/topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) uses).
 - **impartial** — each utility is uniform[0,1], independent. An adversarial stress test that manufactures far more paradoxes; treat its FBC rate as a rough lower bound.
 
 Sincere ballots are derived deterministically: STAR scores = per-voter min-max scaling of utilities onto 0–5; IRV ranks candidates by utility. Tie-breaks are fixed and documented in the script header. Everything is seeded (`--seed`).
@@ -123,7 +123,7 @@ python3 runoff_reversal_simulation.py --elections 300000 --voters 21 --candidate
 
 ### The mechanism
 
-Same voter utilities feed both: STAR reads 0–5 **scores** (top-two by sum → pairwise runoff); RR reads the **ranking** (most head-to-head wins). A Condorcet winner who *reaches* STAR's runoff wins it (they beat any finalist head-to-head), so **STAR ≠ RR requires either a Condorcet *cycle*, or the Condorcet winner *missing* the score-based top-two** — a broadly-preferred but low-intensity compromise, everyone's tepid second choice. It is the [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) split made statistical: RR rewards *order*, STAR rewards *how much* support each candidate has.
+Same voter utilities feed both: STAR reads 0–5 **scores** (top-two by sum → pairwise runoff); RR reads the **ranking** (most head-to-head wins). A Condorcet winner who *reaches* STAR's runoff wins it (they beat any finalist head-to-head), so **STAR ≠ RR requires either a Condorcet *cycle*, or the Condorcet winner *missing* the score-based top-two** — a broadly-preferred but low-intensity compromise, everyone's tepid second choice. It is the [preference-vs-support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) split made statistical: RR rewards *order*, STAR rewards *how much* support each candidate has.
 
 ### Running it
 
@@ -220,7 +220,7 @@ The headline, for orientation (9 candidates, 501 voters, spatial model, top-4 ad
 
 ## Condorcet efficiency simulation
 
-`condorcet_efficiency_simulation.py` — how often does each method elect the [Condorcet winner](../../00_start_here/topics/condorcet/)? The claim "STAR's Condorcet efficiency is very high" was asserted in four places in this repo with no reproducible number behind it; this script supplies one, and the answer is more qualified than the slogan.
+`condorcet_efficiency_simulation.py` — how often does each method elect the [Condorcet winner](../../07_Concepts/topics/condorcet/)? The claim "STAR's Condorcet efficiency is very high" was asserted in four places in this repo with no reproducible number behind it; this script supplies one, and the answer is more qualified than the slogan.
 
 ### The definition, and the trap in it
 
@@ -245,13 +245,13 @@ uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff
 
 ### Results, and what they mean
 
-**Full writeup, with the table, the interpretation, and the caveats: [Condorcet efficiency, measured](../../00_start_here/topics/condorcet/condorcet_efficiency_measured.md)** — kept there rather than duplicated here so the numbers have one home.
+**Full writeup, with the table, the interpretation, and the caveats: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md)** — kept there rather than duplicated here so the numbers have one home.
 
 The headlines, for orientation:
 
 1. **No single number.** The electorate model swings the answer by more than the gap between any two methods — RCV-IRV spans 96.7% to 47.0% across the sweep. STAR runs 74–99%.
 2. **Under impartial culture, RCV-IRV beats STAR** (96.7% vs 89.7% at 3 candidates). Printed rather than buried — but the same model produces cycles in a third of elections, so it is not one either camp should argue from.
-3. **On a 1-D spectrum the ordering reverses and widens** — at 7 candidates RCV-IRV elects the head-to-head winner **less than half the time** (47.0%) against STAR's 74–79%. That is [center squeeze](../../00_start_here/topics/center_squeeze/) as a statistic rather than an anecdote.
+3. **On a 1-D spectrum the ordering reverses and widens** — at 7 candidates RCV-IRV elects the head-to-head winner **less than half the time** (47.0%) against STAR's 74–79%. That is [center squeeze](../../07_Concepts/topics/center_squeeze/) as a statistic rather than an anecdote.
 4. **Most of STAR's shortfall is the ballot, not the rule.** `--mechanism` splits the cases where the CW *reached* STAR's runoff and lost: about two-thirds are outright pairwise **reversals** on the 0–5 ballot, not ties. Rounding can never flip an individual ballot (scores are a monotone transform of utilities) but it flattens different voters at different rates, and that moves the aggregate. Score and Approval inherit the same effect.
 
 ### Caveats (read before quoting)

@@ -13,7 +13,7 @@ No. Score the ones you have an opinion about; leave the rest blank (a blank coun
 Yes — and this is a real advantage over ranking. If you honestly like two candidates equally, score them both a 5 (or both a 2). You're **never forced to invent a preference** you don't feel. → [Equal Support](../reference/are_equal_score_votes_discounted.md)
 
 **"Isn't giving someone a 0 throwing my vote away?"**
-No. A 0 is a real, expressed score — "I do not support this candidate" — not a non-vote. And because you score everyone *independently*, supporting your favorite never helps your worst choice. You literally **cannot split your own vote**. → [no "wasted" votes](../../../00_start_here/topics/wasted_votes.md)
+No. A 0 is a real, expressed score — "I do not support this candidate" — not a non-vote. And because you score everyone *independently*, supporting your favorite never helps your worst choice. You literally **cannot split your own vote**. → [no "wasted" votes](../../../07_Concepts/topics/wasted_votes.md)
 
 ## About how it's counted
 
@@ -29,7 +29,7 @@ Only if no one is genuinely preferred over them. If a majority rates candidate A
 ## About strategy ("won't people game it?")
 
 **"Won't everyone just vote all 5s and 0s?"**
-The runoff removes the *reward* for that. In a pure score/average system, min-maxing (all 5s and 0s) is the winning move, so everyone does it. Under STAR, the final winner is decided by simple preference between the top two, so your honest in-between scores (a 3, a 4) still do real work — and **exaggerating doesn't pay**. Simulations find STAR the most **strategy-resistant** of the common methods (honest voting is about as likely to help as to hurt). And the worst case is mild: if voters *did* all bullet-vote, STAR just behaves like [Approval voting](../../../04_Approval/concepts/approval_voting.md) — still a good method, not a broken one. → [strategic voting](../../../00_start_here/topics/strategic_voting.md)
+The runoff removes the *reward* for that. In a pure score/average system, min-maxing (all 5s and 0s) is the winning move, so everyone does it. Under STAR, the final winner is decided by simple preference between the top two, so your honest in-between scores (a 3, a 4) still do real work — and **exaggerating doesn't pay**. Simulations find STAR the most **strategy-resistant** of the common methods (honest voting is about as likely to help as to hurt). And the worst case is mild: if voters *did* all bullet-vote, STAR just behaves like [Approval voting](../../../04_Approval/concepts/approval_voting.md) — still a good method, not a broken one. → [strategic voting](../../../07_Concepts/topics/strategic_voting.md)
 
 **"My favorite can't win — should I score my realistic choice a 5 instead?"**
 No need. You can safely give your **true favorite a 5** *and* your realistic backup a **4**. Supporting your favorite can't hurt your backup, and supporting your backup can't hurt your favorite reaching the runoff. You almost never have to [betray your favorite](../properties_and_limits/favorite_betrayal_voting_301.md) — a trap that "pick one" and even RCV can force on you.
@@ -40,7 +40,7 @@ Almost never. In the runoff, your ballot backs whichever of the two finalists yo
 ## About the bigger picture
 
 **"Isn't this the same as ranked-choice voting (RCV)?"**
-No. The method usually *called* "RCV" in the US — **[RCV-IRV](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (instant-runoff) — uses a **ranked** ballot (1st, 2nd, 3rd) counted by round-by-round elimination; STAR uses a **scored** ballot (0–5) with an automatic runoff. Different ballot, different count, different behavior — STAR isn't instant-runoff. → [scores vs. ranks](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md)
+No. The method usually *called* "RCV" in the US — **[RCV-IRV](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (instant-runoff) — uses a **ranked** ballot (1st, 2nd, 3rd) counted by round-by-round elimination; STAR uses a **scored** ballot (0–5) with an automatic runoff. Different ballot, different count, different behavior — STAR isn't instant-runoff. → [scores vs. ranks](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)
 
 **"Scoring is for restaurants and movies — is it serious enough for elections?"**
 Rating 0–5 is a *more* expressive, not less serious, way to say what you think — it captures both *who* you prefer and *how strongly*, which "pick one" throws away. It's the same intuition you already use everywhere; STAR just adds the runoff to make it a fair election method.

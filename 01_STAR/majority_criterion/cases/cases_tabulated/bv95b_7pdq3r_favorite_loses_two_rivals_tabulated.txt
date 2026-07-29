@@ -18,7 +18,7 @@ scenario_description: |-
   the majority had to support TWO other candidates to lose their favorite (Score
   and Approval can drop the favorite on just ONE). That is the point of the
   Relaxed Majority Criterion, which STAR passes. See
-  ../../00_start_here/topics/majority_criterion/README.md.
+  ../../07_Concepts/topics/majority_criterion/README.md.
 
   Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
   (nTallyVotes 5), confirming the LH result. Frozen export:
@@ -70,7 +70,7 @@ TABULATION RESULTS
   the majority had to support TWO other candidates to lose their favorite (Score
   and Approval can drop the favorite on just ONE). That is the point of the
   Relaxed Majority Criterion, which STAR passes. See
-  ../../00_start_here/topics/majority_criterion/README.md.
+  ../../07_Concepts/topics/majority_criterion/README.md.
 
   Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
   (nTallyVotes 5), confirming the LH result. Frozen export:

@@ -47,4 +47,4 @@ the honest answer to "who is even in contention?".
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md

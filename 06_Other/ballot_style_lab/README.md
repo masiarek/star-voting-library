@@ -2,7 +2,7 @@
 
 *What happens when you fill a whole election with the ballot styles real people actually use — bullet votes, partisan slates, harsh graders who top out at 2, gentle souls who never score below 3, cliff voters who jump straight from 0 to "one of mine"? This folder is a seeded generator plus ten frozen elections it found — six single-winner STAR, plus a multi-winner wing (Bloc STAR and STAR-PR, up to 7 candidates and 4 seats): random enough to surprise, human enough to mean something, deterministic enough to be test cases.*
 
-→ The style taxonomy these voters follow: [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/concepts/STAR_ballot_voting_styles.md) · the methodology this generator obeys: [Simulate utilities, not ballots](../../00_start_here/topics/simulate_utilities_not_ballots.md) · one voter's opinion across ballot *formats*: [Alternate ballot styles](../../00_start_here/topics/ballot_styles.md)
+→ The style taxonomy these voters follow: [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/concepts/STAR_ballot_voting_styles.md) · the methodology this generator obeys: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md) · one voter's opinion across ballot *formats*: [Alternate ballot styles](../../07_Concepts/topics/ballot_styles.md)
 
 ---
 
@@ -13,7 +13,7 @@ Pure-uniform random ballots correspond to no electorate on Earth, and the method
 1. **Opinion (layer 1):** each voter's underlying 0–1 *utilities* are sampled from a **faction model** — slanted camps with a shared lean, personal noise on top, plus a few genuinely noisy voters.
 2. **Expression (layer 2):** those utilities are then *rendered* through the voter's **ballot style** — the legal styles from the [style gallery](../../01_STAR/concepts/STAR_ballot_voting_styles.md) (bullet, backups, slate, ranked-style, nuanced, anyone-but, protest) plus deliberately compressed scale habits (0–2 harsh, 3–5 gentle, 0-or-3–5 cliff, 3–4 sliver, flat lines, pure noise).
 
-Same opinion, different rendering — the [same-opinion line-up idea](../../00_start_here/topics/ballot_styles.md), scaled up to a whole electorate. Per the methodology page, this sits in the honest **"stress-test the tabulator"** job (not a method-welfare comparison): the ballots exist to exercise the count, and the human shaping makes the exercises look like elections instead of dice.
+Same opinion, different rendering — the [same-opinion line-up idea](../../07_Concepts/topics/ballot_styles.md), scaled up to a whole electorate. Per the methodology page, this sits in the honest **"stress-test the tabulator"** job (not a method-welfare comparison): the ballots exist to exercise the count, and the human shaping makes the exercises look like elections instead of dice.
 
 **Full disclosure — the seeds are hunted.** The generator tabulates hundreds of seeds with the real LH engine and keeps the *interesting* draws: runoff reversals, Condorcet cycles, tie rungs, photo finishes, Equal-Support blowouts. A typical random seed is boring; these six are champions selected across 250 seeds each, then frozen. That selection bias is the point of a test fixture — and it's disclosed here and inside every file.
 
@@ -30,7 +30,7 @@ Every file records its scenario + seed and regenerates byte-identically (`--emit
 | 5 | [Does the squeeze survive noise?](cases/cases_pages/05_c3_b38_squeeze-survives.md) | The center-squeeze profile rebuilt from noisy utilities + mixed styles (nuanced, ranked-style, backups, harsh, slate, gentle) | **Yes.** Consensus-Ben trails the scoring round, wins the runoff 19–18, and is the Condorcet winner; RCV-IRV eliminates him and elects Cora — the tidy classroom demos aren't cherry-picked, the squeeze survives real-world mess | [`yaml`](cases/05_c3_b38_squeeze-survives.yaml) · [`report`](cases/cases_tabulated/05_c3_b38_squeeze-survives_tabulated.txt) |
 | 6 | [Narrow Bands](cases/cases_pages/06_c4_b24_narrow-bands.md) | 24 paint-swatch voters and *nobody* uses the whole ballot: 0–2 camp, 3–5 camp, cliff & sliver voters, flat-liners, one protest | Compressed totals produce a **three-way scoring tie 61–61–61**; the official head-to-head tiebreaker picks the finalists, the runoff lands 9–8, and there's no Condorcet winner. Plurality, RCV-IRV and Approval-thinking all say Azure; STAR says Beige, Ranked Robin says Coral | [`yaml`](cases/06_c4_b24_narrow-bands.yaml) · [`report`](cases/cases_tabulated/06_c4_b24_narrow-bands_tabulated.txt) |
 
-Voter counts here (24–47) deliberately sit *above* the repo's keep-it-small default ([choosing voter counts](../../00_start_here/tips/TIPS_choosing_voter_counts.md)): statistical style patterns need a crowd, and 20–50 is still small enough to eyeball every row.
+Voter counts here (24–47) deliberately sit *above* the repo's keep-it-small default ([choosing voter counts](../../07_Concepts/tips/TIPS_choosing_voter_counts.md)): statistical style patterns need a crowd, and 20–50 is still small enough to eyeball every row.
 
 ## The frozen elections — multi-winner wing
 
@@ -112,8 +112,8 @@ Stdlib-only; runs with the repo `.venv` (or any Python 3) and calls `starvote_la
 ## Related
 
 - [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/concepts/STAR_ballot_voting_styles.md) — the human taxonomy these voters follow
-- [Simulate utilities, not ballots](../../00_start_here/topics/simulate_utilities_not_ballots.md) — why layer 1 exists at all
-- [Election simulation models](../../00_start_here/topics/election_simulation_models.md) — the menu of utility models beyond this lab's faction-Gaussian
+- [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md) — why layer 1 exists at all
+- [Election simulation models](../../07_Concepts/topics/election_simulation_models.md) — the menu of utility models beyond this lab's faction-Gaussian
 - [`06_Other/simulations/`](../simulations/README.md) — the brute-force method-comparison sims (utility-first, like this lab)
 - [Divergence review index](../../method_comparisons/divergence_review/INDEX.md) — where these cases' method disagreements are ledgered
 

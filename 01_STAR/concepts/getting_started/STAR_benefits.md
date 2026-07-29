@@ -2,9 +2,9 @@
 
 *One better ballot, and a whole list of election problems just… go away. You score each candidate 0–5 — like a five-star review — and the count does the rest. Here's the quick, exciting version of what that buys you.*
 
-→ Want the **complete case, with every objection answered**? That's [Why STAR Voting](../../../00_start_here/topics/Why_STAR_Voting.md). Just want the **mechanics**? [STAR — start here](../STAR_start_here.md).
+→ Want the **complete case, with every objection answered**? That's [Why STAR Voting](../../../07_Concepts/topics/Why_STAR_Voting.md). Just want the **mechanics**? [STAR — start here](../STAR_start_here.md).
 
-<img src="../../../00_start_here/img/star_ballot_example.png" width="460" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
+<img src="../../../07_Concepts/img/star_ballot_example.png" width="460" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer">
 
 *Rate each candidate 0–5 — equal scores allowed, blanks count as zero. That's the whole ballot. Everything below is what it gets you.*
 
@@ -16,7 +16,7 @@ Give the candidate you actually love a 5 **and** the front-runner you also like 
 
 ## No more spoilers
 
-Because you rate every candidate on their own, a newcomer entering the race can't bleed support away from someone you already like. Vote-splitting — the reason a third candidate gets blamed for "spoiling" an election — stops happening, so new voices can run on their merits. → [the spoiler effect](../../../00_start_here/topics/spoiler_effect.md)
+Because you rate every candidate on their own, a newcomer entering the race can't bleed support away from someone you already like. Vote-splitting — the reason a third candidate gets blamed for "spoiling" an election — stops happening, so new voices can run on their merits. → [the spoiler effect](../../../07_Concepts/topics/spoiler_effect.md)
 
 ## The winner really has majority support
 
@@ -32,11 +32,11 @@ The runoff is built into the count — there's no separate second election. Wher
 
 ## Anyone can check the count
 
-STAR is [summable](../../../00_start_here/topics/summability/): each precinct posts its score totals and a small head-to-head tally, and those numbers **add up — by hand — to the final result.** No shipping every ballot to one central computer. Transparent and auditable by design.
+STAR is [summable](../../../07_Concepts/topics/summability/): each precinct posts its score totals and a small head-to-head tally, and those numbers **add up — by hand — to the final result.** No shipping every ballot to one central computer. Transparent and auditable by design.
 
 ## Campaigns get nicer
 
-To win, you need decent scores from your *opponents'* supporters too — so trashing a rival backfires when their voters can score you down. The rewarded move is outreach, not mudslinging, and the tendency is toward [broadly-liked winners](../../../00_start_here/topics/what_makes_a_good_winner.md).
+To win, you need decent scores from your *opponents'* supporters too — so trashing a rival backfires when their voters can score you down. The rewarded move is outreach, not mudslinging, and the tendency is toward [broadly-liked winners](../../../07_Concepts/topics/what_makes_a_good_winner.md).
 
 ## One method for one seat or many
 
@@ -53,6 +53,6 @@ Cast a STAR ballot right now at **[BetterVoting.com](https://bettervoting.com)**
 ## Go deeper
 
 - **How it works:** [STAR — start here](../STAR_start_here.md) · [STAR's hybrid nature](../the_count/STAR_hybrid_nature.md)
-- **The complete case + every objection answered:** [Why STAR Voting](../../../00_start_here/topics/Why_STAR_Voting.md)
+- **The complete case + every objection answered:** [Why STAR Voting](../../../07_Concepts/topics/Why_STAR_Voting.md)
 - **Narrated, for presenting:** [What's so good about STAR](../reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../reference/why_do_you_love_STAR_Voting.md)
 - **External:** [Equal Vote Coalition — STAR overview](https://www.equal.vote/star)

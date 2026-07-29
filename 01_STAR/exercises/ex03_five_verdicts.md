@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywqhq4) · **[results ↗](https://bettervoting.com/ywqhq4/results)** (election `ywqhq4`, Test ID BV2191 — one election, **five races**, all five verdicts live; BV agrees with the LH engine on every race).
 
-**You practice:** reading one electorate through five tabulations — [Choose-One](../../00_start_here/topics/plurality.md), RCV-IRV, Approval, Score, and STAR — and the core lesson that **the method, not the ballot, picks the winner** ([ballot vs count](../../00_start_here/topics/rcv_irv_vs_star.md)).
+**You practice:** reading one electorate through five tabulations — [Choose-One](../../07_Concepts/topics/plurality.md), RCV-IRV, Approval, Score, and STAR — and the core lesson that **the method, not the ballot, picks the winner** ([ballot vs count](../../07_Concepts/topics/rcv_irv_vs_star.md)).
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; its `expected_winners` key is regression-tested, and the `_tabulated` mirror is the full audit report.
 
@@ -34,7 +34,7 @@ For the ranked methods, read each column top-to-bottom by score (the ×4 bloc ra
 <details>
 <summary><b>(a) Choose-One — Apple</b></summary>
 
-First choices: Apple 4, Banana 3, Cherry 2. **Apple wins** with 44% — and a majority of the office (5 of 9) scored Apple a flat zero. This is the [wasted-votes](../../00_start_here/topics/wasted_votes.md) baseline every other method is reacting to.
+First choices: Apple 4, Banana 3, Cherry 2. **Apple wins** with 44% — and a majority of the office (5 of 9) scored Apple a flat zero. This is the [wasted-votes](../../07_Concepts/topics/wasted_votes.md) baseline every other method is reacting to.
 
 </details>
 
@@ -96,7 +96,7 @@ Automatic Runoff Round
 | STAR | **Cherry** |
 | Ranked Robin | **Cherry** |
 
-Three different winners from one electorate (the engine's `[Divergence from STAR]` block prints exactly this on screen). The strongest statement against Apple: **Apple is the [Condorcet loser](../../00_start_here/GLOSSARY.md)** — Apple loses head-to-head to Cherry (4–5) *and* to Banana (4–5), yet Choose-One elects it. Cherry, meanwhile, is the Condorcet winner. Which verdict is "right" is a genuine question with three defensible answers — see [three winner notions](../concepts/properties_and_limits/STAR_three_winner_notions.md) — but "the candidate a majority beats head-to-head twice over" is a hard winner to defend.
+Three different winners from one electorate (the engine's `[Divergence from STAR]` block prints exactly this on screen). The strongest statement against Apple: **Apple is the [Condorcet loser](../../07_Concepts/GLOSSARY.md)** — Apple loses head-to-head to Cherry (4–5) *and* to Banana (4–5), yet Choose-One elects it. Cherry, meanwhile, is the Condorcet winner. Which verdict is "right" is a genuine question with three defensible answers — see [three winner notions](../concepts/properties_and_limits/STAR_three_winner_notions.md) — but "the candidate a majority beats head-to-head twice over" is a hard winner to defend.
 
 </details>
 
@@ -116,6 +116,6 @@ Source: [ex03_five_verdicts.yaml](cases/ex03_five_verdicts.yaml). Full audit rep
 
 **Where this comes from.** The one-electorate-many-methods format follows the worked comparisons in Brendan W. Sullivan, *An Introduction to the Math of Voting Methods* (619 Wreath Publishing, 2022), ch. 5 (his Indian/Pizza/Thai running example, where the Plurality loser sweeps the cardinal methods); the ballots and cast here are this repo's own, built on the STAR 0–5 scale.
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex03_five_verdicts.md

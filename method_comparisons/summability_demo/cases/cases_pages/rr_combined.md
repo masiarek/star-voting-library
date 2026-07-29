@@ -79,7 +79,7 @@ the honest answer to "who is even in contention?".
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/rr_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -92,8 +92,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Summability (topic hub)](../../../../00_start_here/topics/summability/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Summability (topic hub)](../../../../07_Concepts/topics/summability/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [irv_combined](irv_combined.md) · [irv_district_A](irv_district_A.md) · [irv_district_B](irv_district_B.md) · [rr_district_A](rr_district_A.md) · [rr_district_B](rr_district_B.md) · [star_combined](star_combined.md) · [star_district_A](star_district_A.md) · [star_district_B](star_district_B.md)

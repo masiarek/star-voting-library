@@ -35,7 +35,7 @@ Matched file: bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml (same
 cast, electorate shifts left — the "strong liberal" becomes the Condorcet
 winner).
 Full claim-by-claim reading of the article:
-00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
 ## Ballots
 
@@ -146,10 +146,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) — its entry in the divergence review ledger
-- [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
+- [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2169_2jrfpg_fairvote_shifted_left_liberal_cw](bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md)

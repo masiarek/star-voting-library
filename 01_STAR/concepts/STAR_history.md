@@ -6,9 +6,9 @@
 
 ## Where it came from
 
-STAR grew out of Oregon's electoral-reform scene. In 2014, after an Oregon campaign for a "Unified Primary" (an approval ballot with a top-two runoff), **Mark Frohnmayer** conceived the **[Equal Vote Coalition](https://www.equal.vote)** and proposed a new method he first called **Score Runoff Voting (SRV)**. The core idea was to bolt an automatic runoff onto ordinary [score voting](../../00_start_here/topics/scoring-methods-vs-ranked-voting.md) — using the runoff to blunt the strategic incentive to exaggerate scores. (Frohnmayer is credited as STAR's primary progenitor, with **Clay Shentrup** of the Center for Election Science; see [who's who in voting reform](../../00_start_here/topics/whos_who_voting_reform.md).)
+STAR grew out of Oregon's electoral-reform scene. In 2014, after an Oregon campaign for a "Unified Primary" (an approval ballot with a top-two runoff), **Mark Frohnmayer** conceived the **[Equal Vote Coalition](https://www.equal.vote)** and proposed a new method he first called **Score Runoff Voting (SRV)**. The core idea was to bolt an automatic runoff onto ordinary [score voting](../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md) — using the runoff to blunt the strategic incentive to exaggerate scores. (Frohnmayer is credited as STAR's primary progenitor, with **Clay Shentrup** of the Center for Election Science; see [who's who in voting reform](../../07_Concepts/topics/whos_who_voting_reform.md).)
 
-Around 2017, modeling work from the Center for Election Science — the kind of [Voter Satisfaction Efficiency](../../00_start_here/topics/election_simulation_models.md) simulation that scores methods on how happy they leave the electorate — reportedly showed the score-plus-runoff design outperforming both [RCV-IRV](../../06_Other/RCV_IRV/concepts) and [Approval](../../04_Approval/concepts/approval_voting.md), and found a **0–5** ballot worked about as well as the original wider scale. The coalition adopted the simpler 0–5 star ballot and the name we use today: **STAR — Score Then Automatic Runoff.** By its first public ballot appearance in 2018 it was campaigning under that name.
+Around 2017, modeling work from the Center for Election Science — the kind of [Voter Satisfaction Efficiency](../../07_Concepts/topics/election_simulation_models.md) simulation that scores methods on how happy they leave the electorate — reportedly showed the score-plus-runoff design outperforming both [RCV-IRV](../../06_Other/RCV_IRV/concepts) and [Approval](../../04_Approval/concepts/approval_voting.md), and found a **0–5** ballot worked about as well as the original wider scale. The coalition adopted the simpler 0–5 star ballot and the name we use today: **STAR — Score Then Automatic Runoff.** By its first public ballot appearance in 2018 it was campaigning under that name.
 
 ## Timeline
 
@@ -36,8 +36,8 @@ The richest origin narrative is the coalition's own [Equal Vote — Origins](htt
 
 - [Welcome to STAR Voting](STAR_start_here.md) — the five-minute intro to how it works
 - [The benefits of STAR Voting](getting_started/STAR_benefits.md) — the case for it, with the honest caveats
-- [Who's who in voting reform](../../00_start_here/topics/whos_who_voting_reform.md) — the people and organizations named above
-- [Advocacy organizations](../../00_start_here/topics/advocacy_organizations.md) — reading claims with the affiliation in view
+- [Who's who in voting reform](../../07_Concepts/topics/whos_who_voting_reform.md) — the people and organizations named above
+- [Advocacy organizations](../../07_Concepts/topics/advocacy_organizations.md) — reading claims with the affiliation in view
 
 ## Sources
 

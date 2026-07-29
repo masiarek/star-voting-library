@@ -4,7 +4,7 @@
 
 In the formal language of the field, that means STAR combines a **cardinal** ballot (scores — *how much*) with an **ordinal** decision (the head-to-head runoff — *which one*). As Clelland (2023) puts it, STAR is *"a combination of cardinal and ordinal voting systems,"* first introduced in 2014 — ([arXiv:2303.00108](https://arxiv.org/abs/2303.00108); she uses it to explain why STAR gave a robust result on the [Alaska 2022 ballots](../../../method_comparisons/alaska_2022/README.md) where pure-cardinal Approval did not).
 
-→ The payoff this design produces: [Runoff Reversal](../../runoff_overturns_leader/) and [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md). Glossary: [`STAR`](../../../00_start_here/GLOSSARY.md).
+→ The payoff this design produces: [Runoff Reversal](../../runoff_overturns_leader/) and [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md). Glossary: [`STAR`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -26,7 +26,7 @@ Each "pure" approach has a known weakness; STAR's hybrid covers both.
 
 STAR's move is to **use each idea for the job it's good at**: scores *measure support* and surface the two genuine front-runners; the runoff then applies a *majority check* so the winner can't be a minority-intense pick. You get strength-of-support **and** a majority finish on a single, simple ballot.
 
-In the vocabulary of [what makes a "good" winner](../../../00_start_here/topics/what_makes_a_good_winner.md), that's a deliberate **blend of two ideals**: the scoring round targets the **utilitarian** winner (highest total support — the broadly-liked candidate), and the automatic runoff confirms it against the **majority** winner (preferred head-to-head). Score to nominate; majority to decide. Neither pure ideal alone lands there — which is the whole point of the hybrid.
+In the vocabulary of [what makes a "good" winner](../../../07_Concepts/topics/what_makes_a_good_winner.md), that's a deliberate **blend of two ideals**: the scoring round targets the **utilitarian** winner (highest total support — the broadly-liked candidate), and the automatic runoff confirms it against the **majority** winner (preferred head-to-head). Score to nominate; majority to decide. Neither pure ideal alone lands there — which is the whole point of the hybrid.
 
 ## The hybrid in one tiny election
 
@@ -49,6 +49,6 @@ That's the hybrid working as designed: scores *nominated* the two finalists; the
 
 - When the scoring leader and the runoff winner **differ**, that's [**Runoff Reversal**](../../runoff_overturns_leader/) — the most important consequence of the hybrid design.
 - When **Condorcet, Score, and Runoff** point at three different candidates, see [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md).
-- For where STAR sits relative to ranked methods, see [Scoring methods aren't RCV](../../../00_start_here/topics/scoring-methods-vs-ranked-voting.md) and the step-by-step [STAR vs RCV-IRV count](../../../00_start_here/topics/tabulation_star_vs_irv.md).
+- For where STAR sits relative to ranked methods, see [Scoring methods aren't RCV](../../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md) and the step-by-step [STAR vs RCV-IRV count](../../../07_Concepts/topics/tabulation_star_vs_irv.md).
 
 Sources: [STAR Voting (Wikipedia)](https://en.wikipedia.org/wiki/STAR_voting), [Equal Vote Coalition — STAR Voting](https://www.starvoting.org/star).

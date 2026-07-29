@@ -2,7 +2,7 @@
 
 *Generated from [`mmp_majority_ceiling.yaml`](../mmp_majority_ceiling.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../00_start_here) · **3 seats** · **Expected winners:** Alice, Bruno, Cleo
+**Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Alice, Bruno, Cleo
 
 **Official tie-break (lot) order:** Alice > Bruno > Cleo > Dev > Esme — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -69,6 +69,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Vote splitting (worked set)](../../../split_voting/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [mmp_block_voting](mmp_block_voting.md) · [mmp_limited_voting](mmp_limited_voting.md) · [mmp_sntv](mmp_sntv.md)

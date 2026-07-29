@@ -69,7 +69,7 @@ the honest answer to "who is even in contention?".
       Every member of the set (B) beats A head-to-head, yet
       RCV-IRV elected A anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/irv_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -82,9 +82,9 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Summability (topic hub)](../../../../00_start_here/topics/summability/README.md)
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Summability (topic hub)](../../../../07_Concepts/topics/summability/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [irv_district_A](irv_district_A.md) · [irv_district_B](irv_district_B.md) · [rr_combined](rr_combined.md) · [rr_district_A](rr_district_A.md) · [rr_district_B](rr_district_B.md) · [star_combined](star_combined.md) · [star_district_A](star_district_A.md) · [star_district_B](star_district_B.md)

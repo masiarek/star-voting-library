@@ -137,9 +137,9 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/majority
 ## See also
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/majority_vs_consensus_51_49.md) — its entry in the divergence review ledger
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv95a_9m6rxr_favorite_survives_one_rival](bv95a_9m6rxr_favorite_survives_one_rival.md) · [bv95b_7pdq3r_favorite_loses_two_rivals](bv95b_7pdq3r_favorite_loses_two_rivals.md)

@@ -2,7 +2,7 @@
 
 **One line:** a method is *summable* (precinct-summable) if you can get the final result by **adding up independent precinct totals**. STAR is summable, which makes it precinct-auditable and gives meaningful early/partial results.
 
-→ Cross-method **topic hub**: [Summability](../../../00_start_here/topics/summability/) (STAR / Ranked Robin / IRV side by side). The method that is *not* summable is RCV-IRV — [`IRV's lack of summability`](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md). Glossary: [`summability`](../../../00_start_here/GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../../../07_Concepts/topics/summability/) (STAR / Ranked Robin / IRV side by side). The method that is *not* summable is RCV-IRV — [`IRV's lack of summability`](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md). Glossary: [`summability`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -41,10 +41,10 @@ Every number the statewide result needs — score totals and the For/Equal/Again
 
 ## Verifiable, not just summable
 
-Because the whole count is **addition**, STAR is hand-countable, runs on existing optical-scan equipment, and supports paper-ballot recounts and risk-limiting audits — a precinct can verify its own contribution. Independent confirmation that the engine's pairwise/runoff math (the summable artifact) is correct comes from the [`pref_voting` cross-check](../../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md) — a second, independent engine agrees on every example.
+Because the whole count is **addition**, STAR is hand-countable, runs on existing optical-scan equipment, and supports paper-ballot recounts and risk-limiting audits — a precinct can verify its own contribution. Independent confirmation that the engine's pairwise/runoff math (the summable artifact) is correct comes from the [`pref_voting` cross-check](../../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md) — a second, independent engine agrees on every example.
 
 External references (advocacy, but the summability math is standard): [Is STAR Voting Precinct Summable? (starvoting.org)](https://www.starvoting.org/summable) · [STAR Voting security & audits](https://www.starvoting.org/security) · [STAR Voting — Equal Vote Coalition](https://www.equal.vote/star).
 
 ## The nuance — it's about the tabulation, not the ballot
 
-Summability is a property of the **count**, not the ballot. A *ranked* ballot counted by a **Condorcet** method (Ranked Robin) is also summable, via the very same pairwise matrix. So "ranked ballots aren't summable" is wrong — it's **IRV's elimination count** specifically that isn't (see the [IRV page](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)). More on keeping the terms straight: [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../00_start_here/tips/TIPS_terminology.md).
+Summability is a property of the **count**, not the ballot. A *ranked* ballot counted by a **Condorcet** method (Ranked Robin) is also summable, via the very same pairwise matrix. So "ranked ballots aren't summable" is wrong — it's **IRV's elimination count** specifically that isn't (see the [IRV page](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)). More on keeping the terms straight: [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../07_Concepts/tips/TIPS_terminology.md).

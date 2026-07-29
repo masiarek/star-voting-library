@@ -169,7 +169,7 @@ the honest answer to "who is even in contention?".
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
    candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
    may be smaller here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
@@ -239,5 +239,5 @@ the honest answer to "who is even in contention?".
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
    candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
    may be smaller here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```

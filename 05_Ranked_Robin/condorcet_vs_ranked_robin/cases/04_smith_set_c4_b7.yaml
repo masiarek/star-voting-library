@@ -19,7 +19,7 @@ options:
 # Companion file: 02_cycle_no_condorcet.yaml (the same election without Dave).
 # LH-only case (no BetterVoting election): BV's RankedRobin breaks a Copeland tie
 #   randomly, so this deliberate three-way tie isn't freezable on BV.
-# Lesson: 00_start_here/topics/smith_set.md
+# Lesson: 07_Concepts/topics/smith_set.md
 ballots: |-
   Ada>Ben>Cara>Dave
   Ada>Ben>Cara>Dave

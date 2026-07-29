@@ -24,7 +24,7 @@
 
 - **Equal Support = "your vote didn't count."** Score both finalists the same and you don't tip their runoff — which an opponent frames as *nullifying* your vote. → [are equal-score votes discounted?](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md).
 - **Runoff reversal.** The candidate with the *most stars overall* can **lose** the automatic runoff. (It's the runoff doing its job — catching a polarizing score-leader — but "the top-scorer lost!" makes a fine attack line.) → [runoff-reversal cases](../../01_STAR/runoff_reversal_bv_cases/).
-- **Scale granularity flips the winner.** The *same* opinions on a 0–5 vs. a wider scale can elect different candidates — so the ballot's resolution is part of the outcome. → [scale granularity](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md).
+- **Scale granularity flips the winner.** The *same* opinions on a 0–5 vs. a wider scale can elect different candidates — so the ballot's resolution is part of the outcome. → [scale granularity](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md).
 - **Ties and dead rungs.** STAR can land on genuine ties that need a tiebreak (lot). → [tie-break / dead-rung cases](../../01_STAR/tie_break_dead_rung/).
 - **Participation / no-show.** In rare constructions, STAR can hand a voter a worse result for showing up. → [participation paradox set](../participation_no_show/).
 

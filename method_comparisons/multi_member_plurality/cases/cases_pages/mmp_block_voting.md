@@ -2,7 +2,7 @@
 
 *Generated from [`mmp_block_voting.yaml`](../mmp_block_voting.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../00_start_here) · **3 seats** · **Expected winners:** Ada, Ben, Cal
+**Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Ada, Ben, Cal
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv`).
 
@@ -61,6 +61,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [mmp_limited_voting](mmp_limited_voting.md) · [mmp_majority_ceiling](mmp_majority_ceiling.md) · [mmp_sntv](mmp_sntv.md)

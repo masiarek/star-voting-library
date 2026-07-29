@@ -2,7 +2,7 @@
 
 *Generated from [`bv15_4h89vj_plurality_abstain.yaml`](../bv15_4h89vj_plurality_abstain.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../00_start_here) · **1 seat** · **Expected winner:** Andre
+**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Andre
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj`).
 
@@ -99,7 +99,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/pet_real
 
 ## See also
 
-- [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [flat_scores_abstention_c3_b8](flat_scores_abstention_c3_b8.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)

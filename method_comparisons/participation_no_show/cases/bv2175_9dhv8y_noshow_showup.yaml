@@ -2,7 +2,7 @@ election_title: "No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV han
 
 scenario_description: |-
   The Participation criterion, live — the show-up half of the matched pair
-  (see 00_start_here/topics/participation/). Identical to
+  (see 07_Concepts/topics/participation/). Identical to
   bv2174_yyhr66_noshow_baseline.yaml plus 8 more sincere April>Bruno>Celia
   ballots: 62 voters — 24 April>Bruno>Celia, 18 Bruno>Celia>April,
   20 Celia>April>Bruno.

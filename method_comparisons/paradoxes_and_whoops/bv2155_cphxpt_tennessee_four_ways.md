@@ -4,7 +4,7 @@
 
 **Level 201 · the headline whoops.** The classic Tennessee state-capital puzzle. Four cities, one set of sincere ballots — and **three different methods crown three different cities.** It's the cleanest demonstration that "the winner" isn't a property of the voters; it's a property of the *rule*.
 
-→ fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · the set: [`README`](README.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md). ↔ BV QA tracker: **BV150** (Lanphier — STAR/IRV/Condorcet give different winners; [ABIF Tennessee example](https://abif.electorama.com/id/TNexampleSTAR)).
+→ fairness test: [Reading these fairly — the test for an honest "whoops"](reading_these_fairly.md) · the set: [`README`](README.md) · [`GLOSSARY`](../../07_Concepts/GLOSSARY.md). ↔ BV QA tracker: **BV150** (Lanphier — STAR/IRV/Condorcet give different winners; [ABIF Tennessee example](https://abif.electorama.com/id/TNexampleSTAR)).
 
 ---
 

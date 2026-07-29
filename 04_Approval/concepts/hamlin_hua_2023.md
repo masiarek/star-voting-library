@@ -12,7 +12,7 @@
 
 Volume 34, issue 3 of *Constitutional Political Economy* carries both sides of the cardinal-voting argument back to back: **Wolk, Quinn & Ogren at 310–334** making the case for STAR, **Hamlin & Hua at 335–345** making the case for Approval. This library already claim-checks [the first](../../01_STAR/concepts/reference/wolk_quinn_ogren_2023.md) — including where its own numbers overreach. Doing the same to the second is not even-handedness for its own sake; it is the only way the first page keeps its credibility.
 
-It also closes a real gap. This repo has asserted that Approval fails the [majority criterion](../../00_start_here/topics/majority_criterion/README.md) — it's a row in the criterion table — while only ever *working* STAR's version of the failure. Section 4.1 supplies the missing demonstration, chosen by the approval side itself.
+It also closes a real gap. This repo has asserted that Approval fails the [majority criterion](../../07_Concepts/topics/majority_criterion/README.md) — it's a row in the criterion table — while only ever *working* STAR's version of the failure. Section 4.1 supplies the missing demonstration, chosen by the approval side itself.
 
 ## §4.1 — the majority criterion, counted
 
@@ -35,7 +35,7 @@ The paper's example, reproduced with its own labels ([case 01](../../method_comp
 
 A is the first choice of 60% and loses. The paper states this plainly and does not hedge it — which is to its credit, and is why the section is worth engaging with rather than rebutting.
 
-**One fact the section doesn't mention about its own example.** It opens by observing that a [Condorcet winner](../../00_start_here/topics/condorcet/) need not exist. True in general — but this profile has one, and it is A ([case 02](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md)):
+**One fact the section doesn't mention about its own example.** It opens by observing that a [Condorcet winner](../../07_Concepts/topics/condorcet/) need not exist. True in general — but this profile has one, and it is A ([case 02](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md)):
 
 ```text
 Round-Robin — every pair, head-to-head (For – Against):
@@ -49,11 +49,11 @@ So the loser here isn't only "the candidate a majority ranked first." It is the 
 ## The kernel — what's solid (concede it)
 
 - **The example is correct as printed**, and conceded without spin. Advocacy writing that publishes its own method's clearest failure is doing something right.
-- **"Frequency × severity, not pass/fail" is the correct framework** — and it is this library's own. It's exactly what stops [the majority-criterion page](../../00_start_here/topics/majority_criterion/README.md) treating "STAR fails the majority criterion" as a knockout, and what the [criteria table](../../00_start_here/topics/criteria_at_a_glance.md) is built on. A criterion checklist with no frequencies attached is a debating device, not an evaluation.
+- **"Frequency × severity, not pass/fail" is the correct framework** — and it is this library's own. It's exactly what stops [the majority-criterion page](../../07_Concepts/topics/majority_criterion/README.md) treating "STAR fails the majority criterion" as a knockout, and what the [criteria table](../../07_Concepts/topics/criteria_at_a_glance.md) is built on. A criterion checklist with no frequencies attached is a debating device, not an evaluation.
 - **The severity claim checks out.** §4.1 argues that for B to be genuinely worse than A, the 60 would have to strongly prefer A and barely accept B, and the rest would have to barely disapprove of A — and that such a scenario has no large utility gap. Write those stipulations on a 0–5 ballot (5 / 3 at the approval line / 2 just under it) and the scoring round says [A 380, B 370](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md) — ten points in five hundred. **They're right: the gap is tiny.**
 - **§4.2's answer to later-no-harm is the same one this repo gives for STAR.** "At worst, a candidate acceptable to the voter still wins" is precisely the [later-no-harm-is-a-bug-not-a-feature](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) argument, made by STAR's own co-inventor. A STAR advocate cannot accept it there and reject it here.
 - **§4.3's bullet-voting data is real, and it settles a bad argument.** 2.3 marks per ballot in Fargo 2020, ~1.6 in St. Louis 2021, 2.23–3.15 in the French surveys, ~2 in the German study. "Everyone will just bullet vote" is an empirical claim, and the empirics say no. Note the two US figures are the Center for Election Science's own data from campaigns it ran — self-collected, though nothing suggests they're wrong.
-- **§4.4's claims 1, 2 and 4 are true and are this repo's own critiques of ranked ballots.** Approval can express [equal support](../../00_start_here/GLOSSARY.md); it never forces truncation; and it never discards recorded ballot information mid-count — unlike IRV, which does exactly that ([exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md), [no summability](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)).
+- **§4.4's claims 1, 2 and 4 are true and are this repo's own critiques of ranked ballots.** Approval can express [equal support](../../07_Concepts/GLOSSARY.md); it never forces truncation; and it never discards recorded ballot information mid-count — unlike IRV, which does exactly that ([exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md), [no summability](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)).
 
 ## Read it critically — where §4 doesn't hold
 
@@ -76,7 +76,7 @@ Automatic Runoff Round
 
 **3. The frequency leg of their own test goes unargued.** §4.1 proposes judging violations by frequency *and* severity, then argues only severity. The frequency question here is: how often does a majority approve a second candidate? Their §4.3 answers it — **1.6 to 3.15 approvals per ballot** — which is to say, usually. The paper's bullet-voting section is a good answer to one critique and, unremarked, the frequency estimate that undercuts its answer to another.
 
-**4. §4.1 and §4.2 are the same event, presented as two.** The 60 voters' approval of B is a *later* preference that harms their favorite — a later-no-harm failure — and it is *why* the majority favorite loses. This library already makes that identification for STAR ("[they are one phenomenon](../../00_start_here/topics/majority_criterion/README.md#the-same-fork-as-later-no-harm)"); it holds identically here. Which means §4.2's answer is really §4.1's answer given a second time, and the paper's four critiques are closer to three.
+**4. §4.1 and §4.2 are the same event, presented as two.** The 60 voters' approval of B is a *later* preference that harms their favorite — a later-no-harm failure — and it is *why* the majority favorite loses. This library already makes that identification for STAR ("[they are one phenomenon](../../07_Concepts/topics/majority_criterion/README.md#the-same-fork-as-later-no-harm)"); it holds identically here. Which means §4.2's answer is really §4.1's answer given a second time, and the paper's four critiques are closer to three.
 
 **5. The violation lives in the threshold, not in the electorate.** Move one line — the 60 approve only A — and [A wins 60–40](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_05_majority_bullet_votes.md) with nobody's opinion changed. The outcome is decided by where 60 voters draw a line they were given no rule for drawing. That is [honest limits §2](approval_honest_limits.md#2-the-approval-threshold-dilemma-the-central-critique), and the paper's §4.3 (voters approve widely) and §4.1 (approving widely costs the majority its favorite) are the two horns of it.
 
@@ -107,7 +107,7 @@ STAR fails the majority criterion too, and this repo works that failure in full:
 | **STAR** | the majority gives real support to **two** other candidates |
 | **RCV-IRV / Choose-One** | never (they pass the criterion outright) |
 
-That's the [Relaxed Majority Criterion](../../00_start_here/topics/majority_criterion/README.md#the-relaxed-majority-criterion-equal-votes-answer), and it is a difference of degree. Note also that case 04 shows STAR electing the majority favorite in *this* profile — it does not show STAR always does.
+That's the [Relaxed Majority Criterion](../../07_Concepts/topics/majority_criterion/README.md#the-relaxed-majority-criterion-equal-votes-answer), and it is a difference of degree. Note also that case 04 shows STAR electing the majority favorite in *this* profile — it does not show STAR always does.
 
 ## Test it — the runnable companions here
 
@@ -118,7 +118,7 @@ That's the [Relaxed Majority Criterion](../../00_start_here/topics/majority_crit
 | §4.1's "no meaningfully large utility discrepancy" | [case 04](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md) — true (380 v 370), and A still wins |
 | §4.3's bullet-voting frequencies, applied to §4.1 | [case 05](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_05_majority_bullet_votes.md) |
 | "approval voting is not an ordinal method" (§4.1) | [case 03](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_03_marks_read_pairwise.md) · [Black Curtain](../../method_comparisons/black_curtain/condorcet_compression.md) |
-| §4.4 expressiveness, against a score ballot | [scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [preference vs support](../../00_start_here/scores_and_ranks/preference_vs_support.md) |
+| §4.4 expressiveness, against a score ballot | [scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [preference vs support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) |
 | The critiques as the *neutral* literature states them | [Approval in the theory literature](approval_in_the_literature.md) (Zwicker, 2016) |
 
 ## The honest bottom line
@@ -129,6 +129,6 @@ What doesn't survive is the §4.1 defence, and it fails on its own terms. The se
 
 ---
 
-*See also: [Approval — honest limits](approval_honest_limits.md) · [Approval in the theory literature](approval_in_the_literature.md) · [the majority criterion](../../00_start_here/topics/majority_criterion/README.md) · [the runnable case set](../../method_comparisons/approval_majority_criterion/README.md) · [claim-checking as a habit](../../method_comparisons/fairvote_star_whitepaper/).*
+*See also: [Approval — honest limits](approval_honest_limits.md) · [Approval in the theory literature](approval_in_the_literature.md) · [the majority criterion](../../07_Concepts/topics/majority_criterion/README.md) · [the runnable case set](../../method_comparisons/approval_majority_criterion/README.md) · [claim-checking as a habit](../../method_comparisons/fairvote_star_whitepaper/).*
 
 # file: hamlin_hua_2023.md

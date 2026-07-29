@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`, Test ID **BV2253** — the **sincere** baseline only, three races: Choose-One, STAR, Ranked Robin). The manipulated ballots below are counterfactual and stay LH-only; casting deliberate lies as a real public election would misrepresent what this profile is.
 
-→ **Level: Voting 301.** The theorem behind it: [Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) · the taxonomy: [strategic voting](../../00_start_here/topics/strategic_voting.md) · [strategic pathologies scorecard](../../00_start_here/topics/strategic_pathologies.md) · same chapter, different profile: [margins matter](../copeland_vs_borda_margins/README.md) · [the social welfare function](../../00_start_here/topics/social_welfare_function.md) · related failures: [monotonicity](../monotonicity/README.md) · [reversal symmetry](../reversal_symmetry/README.md)
+→ **Level: Voting 301.** The theorem behind it: [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · the taxonomy: [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [strategic pathologies scorecard](../../07_Concepts/topics/strategic_pathologies.md) · same chapter, different profile: [margins matter](../copeland_vs_borda_margins/README.md) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md) · related failures: [monotonicity](../monotonicity/README.md) · [reversal symmetry](../reversal_symmetry/README.md)
 
 ---
 
@@ -117,7 +117,7 @@ This is the useful takeaway about *how* the two rules differ, and it generalises
 
 ## The honest frame
 
-**Every method on this page is manipulable, including both of ours.** [Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) settles it for ranked rules and Gibbard's 1978 result covers the score-ballot ones: any non-dictatorial method with three or more viable candidates can be gamed by someone, somewhere. Nothing on this page is a defect unique to Copeland, and nothing here makes STAR the safe choice.
+**Every method on this page is manipulable, including both of ours.** [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) settles it for ranked rules and Gibbard's 1978 result covers the score-ballot ones: any non-dictatorial method with three or more viable candidates can be gamed by someone, somewhere. Nothing on this page is a defect unique to Copeland, and nothing here makes STAR the safe choice.
 
 So the useful questions are not "is it manipulable?" but:
 
@@ -125,7 +125,7 @@ So the useful questions are not "is it manipulable?" but:
 - **How badly does it backfire?** Burial in STAR can elect the buried candidate's rival; compromising in Ranked Robin risks electing the compromise you only lukewarmly wanted.
 - **How often does the situation arise?** This profile has no Condorcet winner. That is what makes it fragile — with a Condorcet winner present, Ranked Robin is far harder to move.
 
-Those are quantitative questions, and the repo answers them elsewhere: [VSE and PVSI](../../00_start_here/topics/pvsi_strategic_incentive.md) measure strategic incentive across many simulated elections instead of one hand-picked profile. **A single constructed example proves a method *can* fail. It never establishes how often, and this page does not claim otherwise.**
+Those are quantitative questions, and the repo answers them elsewhere: [VSE and PVSI](../../07_Concepts/topics/pvsi_strategic_incentive.md) measure strategic incentive across many simulated elections instead of one hand-picked profile. **A single constructed example proves a method *can* fail. It never establishes how often, and this page does not claim otherwise.**
 
 ## Reproduce it
 
@@ -141,11 +141,11 @@ Those are quantitative questions, and the repo answers them elsewhere: [VSE and 
 | Sincere STAR | [`p3_sincere_star.md`](cases/cases_pages/p3_sincere_star.md) |
 | STAR manipulated by burial | [`p3_manip_star.md`](cases/cases_pages/p3_manip_star.md) |
 
-Borda has no LH tabulator; its figures are cross-checked with [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
+Borda has no LH tabulator; its figures are cross-checked with [`pref_voting`](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md).
 
 ## Notes on the source
 
-Profile `P₃` and Definition 2.3 are from **William S. Zwicker, "Introduction to the Theory of Voting,"** Chapter 2 of the *Handbook of Computational Social Choice* — the same chapter behind [margins matter](../copeland_vs_borda_margins/README.md) and this repo's [social welfare function](../../00_start_here/topics/social_welfare_function.md) page.
+Profile `P₃` and Definition 2.3 are from **William S. Zwicker, "Introduction to the Theory of Voting,"** Chapter 2 of the *Handbook of Computational Social Choice* — the same chapter behind [margins matter](../copeland_vs_borda_margins/README.md) and this repo's [social welfare function](../../07_Concepts/topics/social_welfare_function.md) page.
 
 **One discrepancy worth recording.** The chapter's prose refers to "the two `e ≻ c ≻ a ≻ b ≻ d` voters," but the printed profile table gives that column as `e ≻ c ≻ a ≻ d ≻ b` — the last two are transposed. The book's own arithmetic settles it: only the **table** reading reproduces the stated Copeland scores (`e = 2`, `b = −2`, others `0`); the prose reading gives `d = −2` and `b = 0` instead. We use the table. The transposition does not affect the plurality claim, since those voters rank Athens above Dublin under either reading.
 

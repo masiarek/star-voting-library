@@ -2,7 +2,7 @@
 
 **One line:** STAR-PR fills **several seats proportionally** using ordinary STAR **score ballots** (0–5). After each seat is awarded, the ballots that helped win it are **reweighted** (their remaining influence is reduced), so the next seat reflects the voters who haven't been represented yet. Same scored ballot as single-winner STAR — different counting, run as many times as there are seats.
 
-→ STV (the ranked-ballot proportional method) side by side with STAR-PR: [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · Glossary: [`Proportional STAR`](../../../00_start_here/GLOSSARY.md) · Curriculum: [`301.1`](../../../00_start_here/CURRICULUM.md) · Level: **Voting 301**
+→ STV (the ranked-ballot proportional method) side by side with STAR-PR: [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301**
 
 ---
 

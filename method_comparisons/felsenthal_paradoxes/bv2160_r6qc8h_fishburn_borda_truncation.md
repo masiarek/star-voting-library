@@ -20,7 +20,7 @@ V6–V7      C > D > A > B
 
 ## Borda, worked (the paper paradox)
 
-Borda with *k* points for a top rank … 0 for unranked: **A 19, B 19, C 20, D 12 → C elected.** Now let V1–V3 — unhappy with C — **truncate C** from their ballots: **A 16, B 16, C 14, D 12** — C falls to third and A/B tie for the win. Revealing *less* of their ballots got the truncators a result they prefer: the [Truncation paradox](../../00_start_here/voting_paradoxes/truncation.md) under Borda. (Borda's vulnerability comes from unranked candidates scoring 0 — truncation is a weapon aimed at whoever you leave off.)
+Borda with *k* points for a top rank … 0 for unranked: **A 19, B 19, C 20, D 12 → C elected.** Now let V1–V3 — unhappy with C — **truncate C** from their ballots: **A 16, B 16, C 14, D 12** — C falls to third and A/B tie for the win. Revealing *less* of their ballots got the truncators a result they prefer: the [Truncation paradox](../../07_Concepts/voting_paradoxes/truncation.md) under Borda. (Borda's vulnerability comes from unranked candidates scoring 0 — truncation is a weapon aimed at whoever you leave off.)
 
 ## The live races
 

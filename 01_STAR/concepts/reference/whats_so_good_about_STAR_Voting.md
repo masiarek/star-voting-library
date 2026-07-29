@@ -21,7 +21,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** Deal. Let's start with the problem it fixes — because once you *feel* the problem, STAR stops looking clever and starts looking obvious.
 
-> [SLIDE] Full Deck — "Why STAR Voting?" title + the one-line pitch. [REPO] `00_start_here/00_START_HERE.md` (the one-sentence pitch).
+> [SLIDE] Full Deck — "Why STAR Voting?" title + the one-line pitch. [REPO] `07_Concepts/00_START_HERE.md` (the one-sentence pitch).
 
 ---
 
@@ -29,7 +29,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** Okay, what's actually broken about how we vote now?
 
-**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../../../00_start_here/topics/spoiler_effect.md).
+**Adam:** Our Choose-One ballot is only accurate when there are exactly two candidates. The moment a third shows up, votes split. Two similar candidates can divide the people who like both of them, and a candidate the *majority* didn't want slips through the middle. That's the [spoiler effect](../../../07_Concepts/topics/spoiler_effect.md).
 
 **Larry:** Give me the cartoon version.
 
@@ -43,7 +43,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam (after the demo):** Notice what just happened. Nobody was dishonest. The majority just got divided and conquered by their own ballot. That's not a freak event — it can happen in *any* race with more than two candidates.
 
-> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `00_start_here/topics/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
+> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `07_Concepts/topics/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
 
 ---
 
@@ -51,7 +51,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Larry:** People say "just use Ranked Choice." Isn't ranking already more expressive than picking one?
 
-**Adam:** It's more expressive than Choose-One, yes. But there's a deeper fork in the road here, and it's the thing most people never get told: there are two *families* of better ballots — **ranked** and **scored** ([the core distinction](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md)) — and they're not the same tool.
+**Adam:** It's more expressive than Choose-One, yes. But there's a deeper fork in the road here, and it's the thing most people never get told: there are two *families* of better ballots — **ranked** and **scored** ([the core distinction](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)) — and they're not the same tool.
 
 **Larry:** What's the difference, concretely?
 
@@ -65,7 +65,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** Essentially — from a score ballot you can always read off the ranking, but from a ranking you can never recover the scores. That's why STAR uses a score ballot as its raw material.
 
-> [SLIDE] Full Deck — "INTRODUCING: ALTERNATIVE VOTING! (Rating vs Ranking)" and "That changed with the invention of STAR Voting… Score + Instant Runoff." [REPO] `00_start_here/GLOSSARY.md` — "Scored (cardinal)" vs "Ranked (ordinal)."
+> [SLIDE] Full Deck — "INTRODUCING: ALTERNATIVE VOTING! (Rating vs Ranking)" and "That changed with the invention of STAR Voting… Score + Instant Runoff." [REPO] `07_Concepts/GLOSSARY.md` — "Scored (cardinal)" vs "Ranked (ordinal)."
 
 ---
 
@@ -111,7 +111,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** The smallest election possible.
 
-> [DEMO] `01_Single_winner/00a_c2_b1_two-candidates.yaml` — one voter, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then `01_Single_winner/vote_splitting2.yaml` (or `split_voting/02…`) — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] `00_start_here/00_START_HERE.md` — "Why TWO rounds and not just scores?"
+> [DEMO] `01_Single_winner/00a_c2_b1_two-candidates.yaml` — one voter, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then `01_Single_winner/vote_splitting2.yaml` (or `split_voting/02…`) — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] `07_Concepts/00_START_HERE.md` — "Why TWO rounds and not just scores?"
 
 **Adam (tie-in):** There's a lovely way the core Python developer Tim Peters put it: STAR treats your scores as *numbers* to pick the finalists, then treats the same scores as mere *order* to decide the runoff. The big "5" is decisive in step one and irrelevant in step two — and that's exactly what makes it hard to game.
 
@@ -132,7 +132,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** This is the sleeper feature. STAR is **[precinct-summable](../properties_and_limits/STAR_summability.md)** — each precinct reports its score totals and a small for/equal/against table, and you just add precincts together. No shipping every ballot to one central computer. That means fast results, easy audits, and it works with paper ballots and vote- by-mail. Any citizen can re-add the numbers.
 
-> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `00_start_here/topics/Why_STAR_Voting.md` — Slides 5–9 bullets.
+> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `07_Concepts/topics/Why_STAR_Voting.md` — Slides 5–9 bullets.
 
 ---
 
@@ -152,7 +152,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 **Larry:** Do you have a real election, not a thought experiment?
 
 **Adam:** Two famous ones.
-- **[Burlington, Vermont, 2009](../../../00_start_here/topics/spoiler_effect.md#a-real-irv-spoiler-burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
+- **[Burlington, Vermont, 2009](../../../07_Concepts/topics/spoiler_effect.md#a-real-irv-spoiler-burlington-2009):** Montroll was preferred head-to-head over *both* opponents — the candidate the majority actually wanted — but he had fewer first-choice votes, so RCV-IRV eliminated him early and Kiss won. The city repealed RCV-IRV afterward.
 - **[Alaska 2022 special](../../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md):** Begich would have beaten either opponent head-to-head, but the two Republicans split and Begich was eliminated; Peltola won and the seat flipped. Voters who ranked Palin first effectively helped elect their last choice — favorite betrayal, live.
 
 **Larry:** So how does STAR avoid all that?
@@ -175,7 +175,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** No method is perfect — that's a theorem, not an opinion (Gibbard). STAR isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it diverges, it's choosing a candidate with broad, strong support over a weakly-liked compromise ([three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug. Saying that out loud is what earns you the room.
 
-> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `00_start_here/topics/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `00_start_here/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
+> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `07_Concepts/topics/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `07_Concepts/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
 
 ---
 
@@ -204,4 +204,4 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 
-See `00_start_here/about_this_repo/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.
+See `07_Concepts/about_this_repo/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.

@@ -9,11 +9,11 @@
 
 ## 🥇 The signature flaw: cycles
 
-- **No Condorcet winner exists.** A majority prefers A>B, B>C, *and* C>A — rock-paper-scissors, so "elect the head-to-head winner" has nothing to elect. Ranked Robin falls back on a tiebreak (most wins → margin → lot), which is a *choice*, not a discovery. → [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md); a live one in the [reversal-symmetry case](../reversal_symmetry/) (that 24-voter electorate is a cycle). This is [Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) collecting his due — no method escapes it, RR included.
+- **No Condorcet winner exists.** A majority prefers A>B, B>C, *and* C>A — rock-paper-scissors, so "elect the head-to-head winner" has nothing to elect. Ranked Robin falls back on a tiebreak (most wins → margin → lot), which is a *choice*, not a discovery. → [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md); a live one in the [reversal-symmetry case](../reversal_symmetry/) (that 24-voter electorate is a cycle). This is [Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) collecting his due — no method escapes it, RR included.
 
 ## 🥈 Order without strength
 
-- **The sincere dark horse.** Because a ranked ballot sees *order, not intensity*, RR can crown a **thinly-supported unknown** everyone merely tolerates as a second choice over a candidate a majority passionately prefers — "somebody 90% of voters never heard of," each side ranking them above the *other* side. → [RR's honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) and [the sincere dark horse](../dark_horse_borda/). (This is exactly the [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) blind spot — the one thing STAR reads and RR can't.)
+- **The sincere dark horse.** Because a ranked ballot sees *order, not intensity*, RR can crown a **thinly-supported unknown** everyone merely tolerates as a second choice over a candidate a majority passionately prefers — "somebody 90% of voters never heard of," each side ranking them above the *other* side. → [RR's honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) and [the sincere dark horse](../dark_horse_borda/). (This is exactly the [preference-vs-support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) blind spot — the one thing STAR reads and RR can't.)
 
 ## 🥉 The bureaucratic whoops
 

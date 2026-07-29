@@ -65,7 +65,7 @@ theme:
         name: Switch to light mode
 
 extra_css:
-  - 00_start_here/about_this_repo/site_extra.css
+  - 07_Concepts/about_this_repo/site_extra.css
 
 plugins:
   - search
@@ -151,6 +151,154 @@ plugins:
         00_start_here/RCV_IRV/variants/RCV_IRV_variants.md: 06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md
         00_start_here/RCV_IRV/variants/README.md: 06_Other/RCV_IRV/concepts/variants/README.md
         00_start_here/STAR_reporting/README.md: 01_STAR/concepts/reporting/README.md
+
+        # --- 00_start_here/ renamed to 07_Concepts/ (2026-07-29): it holds only
+        # cross-method material now, and belongs after the methods rather than
+        # ahead of them. Same permanence rule as above — never delete these.
+        00_start_here/00_START_HERE.md: 07_Concepts/00_START_HERE.md
+        00_start_here/CURRICULUM.md: 07_Concepts/CURRICULUM.md
+        00_start_here/GLOSSARY.md: 07_Concepts/GLOSSARY.md
+        00_start_here/LINKS.md: 07_Concepts/LINKS.md
+        00_start_here/README.md: 07_Concepts/README.md
+        00_start_here/YAML_test_case_index/BV_registry.md: 07_Concepts/YAML_test_case_index/BV_registry.md
+        00_start_here/YAML_test_case_index/CATALOG.md: 07_Concepts/YAML_test_case_index/CATALOG.md
+        00_start_here/YAML_test_case_index/PARADOX_index.md: 07_Concepts/YAML_test_case_index/PARADOX_index.md
+        00_start_here/YAML_test_case_index/README.md: 07_Concepts/YAML_test_case_index/README.md
+        00_start_here/YAML_test_case_index/multirace_elections.md: 07_Concepts/YAML_test_case_index/multirace_elections.md
+        00_start_here/about_this_repo/ORGANIZATION.md: 07_Concepts/about_this_repo/ORGANIZATION.md
+        00_start_here/about_this_repo/YAML_authoring_template.md: 07_Concepts/about_this_repo/YAML_authoring_template.md
+        00_start_here/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/conversation_scripts.md
+        00_start_here/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/repository_guide.md
+        00_start_here/about_this_repo/website_build.md: 07_Concepts/about_this_repo/website_build.md
+        00_start_here/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/why_yaml_test_cases.md
+        00_start_here/books/README.md: 07_Concepts/books/README.md
+        00_start_here/books/electoral_systems_and_pr.md: 07_Concepts/books/electoral_systems_and_pr.md
+        00_start_here/books/popular_introductions.md: 07_Concepts/books/popular_introductions.md
+        00_start_here/books/rated_and_score_methods.md: 07_Concepts/books/rated_and_score_methods.md
+        00_start_here/books/social_choice_theory.md: 07_Concepts/books/social_choice_theory.md
+        00_start_here/curriculum/CURRICULUM_101.md: 07_Concepts/curriculum/CURRICULUM_101.md
+        00_start_here/curriculum/CURRICULUM_201.md: 07_Concepts/curriculum/CURRICULUM_201.md
+        00_start_here/curriculum/CURRICULUM_301.md: 07_Concepts/curriculum/CURRICULUM_301.md
+        00_start_here/curriculum/CURRICULUM_401.md: 07_Concepts/curriculum/CURRICULUM_401.md
+        00_start_here/scores_and_ranks/README.md: 07_Concepts/scores_and_ranks/README.md
+        00_start_here/scores_and_ranks/abif_format.md: 07_Concepts/scores_and_ranks/abif_format.md
+        00_start_here/scores_and_ranks/cardinal_voting_claims_checked.md: 07_Concepts/scores_and_ranks/cardinal_voting_claims_checked.md
+        00_start_here/scores_and_ranks/fidelity_ladder.md: 07_Concepts/scores_and_ranks/fidelity_ladder.md
+        00_start_here/scores_and_ranks/grading_as_a_rival_primitive.md: 07_Concepts/scores_and_ranks/grading_as_a_rival_primitive.md
+        00_start_here/scores_and_ranks/preference_vs_support.md: 07_Concepts/scores_and_ranks/preference_vs_support.md
+        00_start_here/scores_and_ranks/ranked_ballot.md: 07_Concepts/scores_and_ranks/ranked_ballot.md
+        00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md: 07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md
+        00_start_here/scores_and_ranks/score_ballot.md: 07_Concepts/scores_and_ranks/score_ballot.md
+        00_start_here/scores_and_ranks/scores_vs_ranks.md: 07_Concepts/scores_and_ranks/scores_vs_ranks.md
+        00_start_here/scores_and_ranks/strict_ranks.md: 07_Concepts/scores_and_ranks/strict_ranks.md
+        00_start_here/scores_and_ranks/strict_vs_weak_ranks.md: 07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md
+        00_start_here/scores_and_ranks/weak_ranks.md: 07_Concepts/scores_and_ranks/weak_ranks.md
+        00_start_here/tabulation_engines/BV/BV_website_TODO.md: 07_Concepts/tabulation_engines/BV/BV_website_TODO.md
+        00_start_here/tabulation_engines/BV/README.md: 07_Concepts/tabulation_engines/BV/README.md
+        00_start_here/tabulation_engines/BV/abstain_issues_index.md: 07_Concepts/tabulation_engines/BV/abstain_issues_index.md
+        00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md: 07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md
+        00_start_here/tabulation_engines/BV/database_schema/README.md: 07_Concepts/tabulation_engines/BV/database_schema/README.md
+        00_start_here/tabulation_engines/BV/database_schema/ballotDB.md: 07_Concepts/tabulation_engines/BV/database_schema/ballotDB.md
+        00_start_here/tabulation_engines/BV/database_schema/electionDB.md: 07_Concepts/tabulation_engines/BV/database_schema/electionDB.md
+        00_start_here/tabulation_engines/BV/database_schema/electionRollDB.md: 07_Concepts/tabulation_engines/BV/database_schema/electionRollDB.md
+        00_start_here/tabulation_engines/BV/database_schema/emailEventsDB.md: 07_Concepts/tabulation_engines/BV/database_schema/emailEventsDB.md
+        00_start_here/tabulation_engines/BV/tabulation_engine/README.md: 07_Concepts/tabulation_engines/BV/tabulation_engine/README.md
+        00_start_here/tabulation_engines/BV/tabulation_engine/contributing_to_bettervoting.md: 07_Concepts/tabulation_engines/BV/tabulation_engine/contributing_to_bettervoting.md
+        00_start_here/tabulation_engines/BV/tabulation_engine/running_bettervoting_locally.md: 07_Concepts/tabulation_engines/BV/tabulation_engine/running_bettervoting_locally.md
+        00_start_here/tabulation_engines/LH_starvote/README.md: 07_Concepts/tabulation_engines/LH_starvote/README.md
+        00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md: 07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md
+        00_start_here/tabulation_engines/RCV_IRV/README.md: 07_Concepts/tabulation_engines/RCV_IRV/README.md
+        00_start_here/tabulation_engines/bettervoting_and_the_engine.md: 07_Concepts/tabulation_engines/bettervoting_and_the_engine.md
+        00_start_here/tabulation_engines/cross_checking_with_pref_voting.md: 07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md
+        00_start_here/tips/TIPS_canonical_elections.md: 07_Concepts/tips/TIPS_canonical_elections.md
+        00_start_here/tips/TIPS_choosing_voter_counts.md: 07_Concepts/tips/TIPS_choosing_voter_counts.md
+        00_start_here/tips/TIPS_terminology.md: 07_Concepts/tips/TIPS_terminology.md
+        00_start_here/topics/README.md: 07_Concepts/topics/README.md
+        00_start_here/topics/Why_STAR_Voting.md: 07_Concepts/topics/Why_STAR_Voting.md
+        00_start_here/topics/advocacy_organizations.md: 07_Concepts/topics/advocacy_organizations.md
+        00_start_here/topics/arrow_theorem_and_star.md: 07_Concepts/topics/arrow_theorem_and_star.md
+        00_start_here/topics/ballot_and_terminology_basics.md: 07_Concepts/topics/ballot_and_terminology_basics.md
+        00_start_here/topics/ballot_styles.md: 07_Concepts/topics/ballot_styles.md
+        00_start_here/topics/center_squeeze/README.md: 07_Concepts/topics/center_squeeze/README.md
+        00_start_here/topics/central_tabulation.md: 07_Concepts/topics/central_tabulation.md
+        00_start_here/topics/choosing_among_evc_methods.md: 07_Concepts/topics/choosing_among_evc_methods.md
+        00_start_here/topics/condorcet/README.md: 07_Concepts/topics/condorcet/README.md
+        00_start_here/topics/condorcet/better_choices_pairwise_ballot.md: 07_Concepts/topics/condorcet/better_choices_pairwise_ballot.md
+        00_start_here/topics/condorcet/campbell_kelly_theorem.md: 07_Concepts/topics/condorcet/campbell_kelly_theorem.md
+        00_start_here/topics/condorcet/condorcet_efficiency_measured.md: 07_Concepts/topics/condorcet/condorcet_efficiency_measured.md
+        00_start_here/topics/condorcet/condorcet_reading_list.md: 07_Concepts/topics/condorcet/condorcet_reading_list.md
+        00_start_here/topics/condorcet/edelman_condorcet_myth.md: 07_Concepts/topics/condorcet/edelman_condorcet_myth.md
+        00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md: 07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
+        00_start_here/topics/condorcet/ordered_majority_rule_irv.md: 07_Concepts/topics/condorcet/ordered_majority_rule_irv.md
+        00_start_here/topics/condorcet/split_cycle.md: 07_Concepts/topics/condorcet/split_cycle.md
+        00_start_here/topics/condorcet/three_candidate_collapse.md: 07_Concepts/topics/condorcet/three_candidate_collapse.md
+        00_start_here/topics/condorcet/three_candidate_maximin.md: 07_Concepts/topics/condorcet/three_candidate_maximin.md
+        00_start_here/topics/criteria_at_a_glance.md: 07_Concepts/topics/criteria_at_a_glance.md
+        00_start_here/topics/cycle_cocycle_decomposition.md: 07_Concepts/topics/cycle_cocycle_decomposition.md
+        00_start_here/topics/distortion.md: 07_Concepts/topics/distortion.md
+        00_start_here/topics/does_better_voting_end_polarization.md: 07_Concepts/topics/does_better_voting_end_polarization.md
+        00_start_here/topics/electing_more_than_one.md: 07_Concepts/topics/electing_more_than_one.md
+        00_start_here/topics/election_simulation_models.md: 07_Concepts/topics/election_simulation_models.md
+        00_start_here/topics/expert_consensus_and_irv.md: 07_Concepts/topics/expert_consensus_and_irv.md
+        00_start_here/topics/gibbard_satterthwaite_theorem.md: 07_Concepts/topics/gibbard_satterthwaite_theorem.md
+        00_start_here/topics/homomorphic_tallying.md: 07_Concepts/topics/homomorphic_tallying.md
+        00_start_here/topics/how_to_learn_about_voting_methods.md: 07_Concepts/topics/how_to_learn_about_voting_methods.md
+        00_start_here/topics/in_memoriam_jameson_quinn.md: 07_Concepts/topics/in_memoriam_jameson_quinn.md
+        00_start_here/topics/majority_criterion/README.md: 07_Concepts/topics/majority_criterion/README.md
+        00_start_here/topics/mays_theorem.md: 07_Concepts/topics/mays_theorem.md
+        00_start_here/topics/monotonicity/README.md: 07_Concepts/topics/monotonicity/README.md
+        00_start_here/topics/one_person_one_vote.md: 07_Concepts/topics/one_person_one_vote.md
+        00_start_here/topics/our_voting_system_is_broken.md: 07_Concepts/topics/our_voting_system_is_broken.md
+        00_start_here/topics/pairwise_counting.md: 07_Concepts/topics/pairwise_counting.md
+        00_start_here/topics/participation/README.md: 07_Concepts/topics/participation/README.md
+        00_start_here/topics/plurality.md: 07_Concepts/topics/plurality.md
+        00_start_here/topics/preference.md: 07_Concepts/topics/preference.md
+        00_start_here/topics/pvsi_strategic_incentive.md: 07_Concepts/topics/pvsi_strategic_incentive.md
+        00_start_here/topics/quorum.md: 07_Concepts/topics/quorum.md
+        00_start_here/topics/ranked_ballot_methods_zoo.md: 07_Concepts/topics/ranked_ballot_methods_zoo.md
+        00_start_here/topics/rcv_irv_vs_star.md: 07_Concepts/topics/rcv_irv_vs_star.md
+        00_start_here/topics/same_opinions_every_method.md: 07_Concepts/topics/same_opinions_every_method.md
+        00_start_here/topics/scoring-methods-vs-ranked-voting.md: 07_Concepts/topics/scoring-methods-vs-ranked-voting.md
+        00_start_here/topics/simulate_utilities_not_ballots.md: 07_Concepts/topics/simulate_utilities_not_ballots.md
+        00_start_here/topics/smith_set.md: 07_Concepts/topics/smith_set.md
+        00_start_here/topics/social_welfare_function.md: 07_Concepts/topics/social_welfare_function.md
+        00_start_here/topics/spatial_voting_model.md: 07_Concepts/topics/spatial_voting_model.md
+        00_start_here/topics/spoiler_effect.md: 07_Concepts/topics/spoiler_effect.md
+        00_start_here/topics/statistics_for_voting.md: 07_Concepts/topics/statistics_for_voting.md
+        00_start_here/topics/strategic_pathologies.md: 07_Concepts/topics/strategic_pathologies.md
+        00_start_here/topics/strategic_voting.md: 07_Concepts/topics/strategic_voting.md
+        00_start_here/topics/summability/README.md: 07_Concepts/topics/summability/README.md
+        00_start_here/topics/tabulation_star_vs_irv.md: 07_Concepts/topics/tabulation_star_vs_irv.md
+        00_start_here/topics/the_pipeline.md: 07_Concepts/topics/the_pipeline.md
+        00_start_here/topics/three_two_one_voting.md: 07_Concepts/topics/three_two_one_voting.md
+        00_start_here/topics/ties/README.md: 07_Concepts/topics/ties/README.md
+        00_start_here/topics/ties/tiebreaking_star_vs_irv.md: 07_Concepts/topics/ties/tiebreaking_star_vs_irv.md
+        00_start_here/topics/ties/ties_are_forced.md: 07_Concepts/topics/ties/ties_are_forced.md
+        00_start_here/topics/ties/why_contrived_tie_cases.md: 07_Concepts/topics/ties/why_contrived_tie_cases.md
+        00_start_here/topics/tournament_solutions.md: 07_Concepts/topics/tournament_solutions.md
+        00_start_here/topics/two_party_dominance.md: 07_Concepts/topics/two_party_dominance.md
+        00_start_here/topics/uncovered_set.md: 07_Concepts/topics/uncovered_set.md
+        00_start_here/topics/voting_method_ballot_and_count.md: 07_Concepts/topics/voting_method_ballot_and_count.md
+        00_start_here/topics/wasted_votes.md: 07_Concepts/topics/wasted_votes.md
+        00_start_here/topics/what_a_method_reads.md: 07_Concepts/topics/what_a_method_reads.md
+        00_start_here/topics/what_is_a_voting_method.md: 07_Concepts/topics/what_is_a_voting_method.md
+        00_start_here/topics/what_makes_a_good_winner.md: 07_Concepts/topics/what_makes_a_good_winner.md
+        00_start_here/topics/what_makes_a_voting_method_good.md: 07_Concepts/topics/what_makes_a_voting_method_good.md
+        00_start_here/topics/whos_who_voting_reform.md: 07_Concepts/topics/whos_who_voting_reform.md
+        00_start_here/voting_paradoxes/README.md: 07_Concepts/voting_paradoxes/README.md
+        00_start_here/voting_paradoxes/absolute_loser_paradox.md: 07_Concepts/voting_paradoxes/absolute_loser_paradox.md
+        00_start_here/voting_paradoxes/condorcet_loser_paradox.md: 07_Concepts/voting_paradoxes/condorcet_loser_paradox.md
+        00_start_here/voting_paradoxes/condorcet_winner_paradox.md: 07_Concepts/voting_paradoxes/condorcet_winner_paradox.md
+        00_start_here/voting_paradoxes/coombs.md: 07_Concepts/voting_paradoxes/coombs.md
+        00_start_here/voting_paradoxes/majority_judgment.md: 07_Concepts/voting_paradoxes/majority_judgment.md
+        00_start_here/voting_paradoxes/minimax.md: 07_Concepts/voting_paradoxes/minimax.md
+        00_start_here/voting_paradoxes/multiple_districts.md: 07_Concepts/voting_paradoxes/multiple_districts.md
+        00_start_here/voting_paradoxes/no_show.md: 07_Concepts/voting_paradoxes/no_show.md
+        00_start_here/voting_paradoxes/non_monotonicity.md: 07_Concepts/voting_paradoxes/non_monotonicity.md
+        00_start_here/voting_paradoxes/range_voting.md: 07_Concepts/voting_paradoxes/range_voting.md
+        00_start_here/voting_paradoxes/spoiler_scc.md: 07_Concepts/voting_paradoxes/spoiler_scc.md
+        00_start_here/voting_paradoxes/successive_elimination.md: 07_Concepts/voting_paradoxes/successive_elimination.md
+        00_start_here/voting_paradoxes/truncation.md: 07_Concepts/voting_paradoxes/truncation.md
         00_start_here/STAR_reporting/reporting_BV/README.md: 01_STAR/concepts/reporting/reporting_BV/README.md
         00_start_here/STAR_reporting/reporting_LH/README.md: 01_STAR/concepts/reporting/reporting_LH/README.md
         00_start_here/STAR_reporting/reporting_LH/brief.md: 01_STAR/concepts/reporting/reporting_LH/brief.md

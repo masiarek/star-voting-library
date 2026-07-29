@@ -2,7 +2,7 @@
 
 *Rank the candidates. Compare every pair head-to-head. Whoever beats the most rivals wins.*
 
-**Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../00_start_here/topics/condorcet/README.md)), Ranked Robin elects them.
+**Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
 
 This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
 
@@ -45,7 +45,7 @@ Winner — Ranked Robin (RCV-RR): Ben
 
 *(Honest footnote: RCV-IRV elects Ben here too — Cara is eliminated first and her ballots flow to Ben. This election separates Ranked Robin from **plurality**, not from IRV. For the case where RR and IRV genuinely part ways, see the Tennessee [center squeeze](../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) in the examples below.)*
 
-Want the whole count — the pairwise matrix, the [Smith set](../00_start_here/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](_main/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](_main/cases/ranked_robin_consensus_center.yaml)
+Want the whole count — the pairwise matrix, the [Smith set](../07_Concepts/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](_main/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](_main/cases/ranked_robin_consensus_center.yaml)
 
 ## How it differs from RCV-IRV
 
@@ -53,12 +53,12 @@ Same ranked ballot, opposite counting philosophy — read the whole ballot again
 
 | | **RCV-IRV (Hare)** | **Ranked Robin (RCV-RR)** |
 |---|---|---|
-| Ballot | Rank, **no equal ranks** | Rank, **[equal ranks](../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) allowed** |
+| Ballot | Rank, **no equal ranks** | Rank, **[equal ranks](../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) allowed** |
 | How it counts | Eliminate fewest-first-choices, transfer, repeat | Compare **every pair**; most head-to-head wins |
 | Uses your lower ranks? | Only after higher ones are eliminated | **Always** — every ranking counts against every opponent |
 | Elects the Condorcet winner? | Not always (can center-squeeze) | ✅ Yes, when one exists |
 | Monotonic? | ❌ No | ✅ Yes |
-| [Precinct-summable](../00_start_here/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
+| [Precinct-summable](../07_Concepts/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
 | [Exhausted ballots](../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
 *(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](concepts/ranked_robin.md).)*
@@ -82,6 +82,6 @@ Runnable elections, each isolating one idea. Tabulate any of them yourself.
 
 Same ballot, different count: RCV-IRV (elimination rounds) lives in [other methods](../06_Other/) and inside the comparison sets.
 
-**Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../00_start_here/about_this_repo/conversation_scripts.md).
+**Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../07_Concepts/about_this_repo/conversation_scripts.md).
 
 # file: README.md

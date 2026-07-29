@@ -16,7 +16,7 @@ RCV advocates say *"you never have to betray your favorite"* — that's the **fr
 
 ## 1. The context — what was actually challenged
 
-**The slide.** The deck [`Why_STAR_Voting.md`](../../../00_start_here/topics/Why_STAR_Voting.md) has a slide titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."* (House style references slides by title, not number — see [LINKS.md](../../../00_start_here/LINKS.md).) This page is the deep-dive that backs that claim up under cross-examination.
+**The slide.** The deck [`Why_STAR_Voting.md`](../../../07_Concepts/topics/Why_STAR_Voting.md) has a slide titled **"You Never Have to Betray Your Favorite,"** with bullets like *"Score both high — no forced ranking, no wasted vote"* and *"Honesty is your best ballot."* (House style references slides by title, not number — see [LINKS.md](../../../07_Concepts/LINKS.md).) This page is the deep-dive that backs that claim up under cross-examination.
 
 **The challenge to the slide.** *"Isn't this overstated? RCV-IRV proponents claim that **only** in IRV do you never betray your favorite, and that STAR *can* make you betray your favorite. Are they right?"*
 
@@ -76,7 +76,7 @@ This is the cleanest real-world proof. Three candidates, roughly on a spectrum:
 - Begich beats Peltola (~53–47).
 - Begich beats Palin (~61–39).
 
-So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the [Condorcet winner](../../../00_start_here/topics/condorcet/)). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **[center squeeze](../../../00_start_here/topics/center_squeeze/).**
+So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the [Condorcet winner](../../../07_Concepts/topics/condorcet/)). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **[center squeeze](../../../07_Concepts/topics/center_squeeze/).**
 
 **Now the favorite-betrayal part — the key move, read slowly:**
 
@@ -192,8 +192,8 @@ The claim in the wild is rarely a calm question; it's an argument. So here's the
 
 ## Cross-references
 - **[The worked STAR favorite-betrayal pair](../../favorite_betrayal/README.md)** — BV2206 (honest: the tepid Condorcet winner misses the runoff) / BV2207 (nine voters demote their favorite and it pays), live on BetterVoting and LH-verified. The numeric backing for §5's "the leak is the runoff."
-- The *"You Never Have to Betray Your Favorite"* slide in [`Why_STAR_Voting.md`](../../../00_start_here/topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
+- The *"You Never Have to Betray Your Favorite"* slide in [`Why_STAR_Voting.md`](../../../07_Concepts/topics/Why_STAR_Voting.md) (the claim this defends) and its Part 2 talking point **#12**.
 - [`are_equal_score_votes_discounted.md`](../reference/are_equal_score_votes_discounted.md) — the runoff / Equal-Support sibling of this concede-then-reframe argument.
-- [`LINKS.md`](../../../00_start_here/LINKS.md) → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
+- [`LINKS.md`](../../../07_Concepts/LINKS.md) → **Full Deck 2025** ("RCV Common False Claims", "Alaska '22", "Burlington 2009", the pass/fail criteria slides); **Why STAR 2**.
 - [`fbc_simulation.py`](../../../06_Other/simulations/fbc_simulation.py) + [`06_Other/simulations/README.md`](../../../06_Other/simulations/README.md) — the brute-force FBC measurement behind Section 5 (FBC compliance frequency and the betrayal works:backfires ratio, STAR vs RCV-IRV).
 - [`residual_vote_splitting.md`](residual_vote_splitting.md) — the same "only top-two advance" root cause seen as vote-splitting: STAR's self-inflicted bullet-voting / chicken-dilemma edge case, with the [`split_voting/05a`](../../../method_comparisons/split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md)–[`05b`](../../../method_comparisons/split_voting/_main/_main_pages/05b_residual_split_expressive-fix.md) matched demo.

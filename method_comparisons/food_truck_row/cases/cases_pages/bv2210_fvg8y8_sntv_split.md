@@ -2,7 +2,7 @@
 
 *Generated from [`bv2210_fvg8y8_sntv_split.yaml`](../bv2210_fvg8y8_sntv_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../00_start_here) · **2 seats** · **Expected winners:** Donut, Eclair
+**Method:** [plurality](../../../../07_Concepts) · **2 seats** · **Expected winners:** Donut, Eclair
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
 
@@ -51,8 +51,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2210_fvg8y8_bloc_rr_sweep](bv2210_fvg8y8_bloc_rr_sweep.md) · [bv2210_fvg8y8_bloc_star_sweep](bv2210_fvg8y8_bloc_star_sweep.md) · [bv2210_fvg8y8_star_pr_share](bv2210_fvg8y8_star_pr_share.md) · [bv2210_fvg8y8_stv_share](bv2210_fvg8y8_stv_share.md)

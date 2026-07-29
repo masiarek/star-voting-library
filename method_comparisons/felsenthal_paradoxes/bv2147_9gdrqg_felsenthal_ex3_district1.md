@@ -17,6 +17,6 @@ No first-round majority (Alma 4, Bruno 6, Cora 7), so plurality-with-runoff (= I
 
 Worth noticing: this district's pairwise preferences are a Condorcet **cycle** — Alma>Bruno 10–7, Bruno>Cora 10–7, Cora>Alma 12–5 — so no Condorcet winner exists here. (That's also why the trio carries no Ranked Robin race: BV would break the cyclic tie at random, which can't be frozen.)
 
-Bruno also wins [District II](bv2148_h87k6v_felsenthal_ex3_district2.md) outright — and then [the combined electorate](bv2149_byk9v2_felsenthal_ex3_reinforcement.md) elects Alma. Teaching page: [multiple_districts.md](../../00_start_here/voting_paradoxes/multiple_districts.md).
+Bruno also wins [District II](bv2148_h87k6v_felsenthal_ex3_district2.md) outright — and then [the combined electorate](bv2149_byk9v2_felsenthal_ex3_reinforcement.md) elects Alma. Teaching page: [multiple_districts.md](../../07_Concepts/voting_paradoxes/multiple_districts.md).
 
 Files: [bv2147_9gdrqg_irv.yaml](cases/bv2147_9gdrqg_irv.yaml) · [bv2147_9gdrqg_star.yaml](cases/bv2147_9gdrqg_star.yaml) · [frozen export](cases/bv2147_9gdrqg_bv_export.json) · mirrors: [IRV](cases/cases_tabulated/bv2147_9gdrqg_irv_tabulated.txt), [STAR](cases/cases_tabulated/bv2147_9gdrqg_star_tabulated.txt).

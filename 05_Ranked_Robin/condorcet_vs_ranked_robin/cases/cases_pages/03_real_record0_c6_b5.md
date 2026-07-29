@@ -103,7 +103,7 @@ the honest answer to "who is even in contention?".
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
    candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
    may be smaller here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03_real_record0_c6_b5_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -116,8 +116,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [01_condorcet_winner](01_condorcet_winner.md) · [02_cycle_no_condorcet](02_cycle_no_condorcet.md) · [04_smith_set_c4_b7](04_smith_set_c4_b7.md) · [bv2140_48hjkv_most_pairwise_wins](bv2140_48hjkv_most_pairwise_wins.md)

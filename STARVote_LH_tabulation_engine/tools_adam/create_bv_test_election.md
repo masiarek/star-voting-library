@@ -48,9 +48,9 @@ The plain API GET the script saves lacks `Ballots`/`Results`. For the **frozen `
 
 ## Known limitation
 
-API-created elections are **public, listable, and exportable** — but **not UI-administrable** (you can't edit / close / delete them from `/admin`, even as the owner). BV authorizes admin off a server-side role binding written only by the authenticated create flow, not off `owner_id`/`admin_ids`. Full write-up + a ready-to-file BV issue: [Creating BetterVoting elections via the API](../../00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md).
+API-created elections are **public, listable, and exportable** — but **not UI-administrable** (you can't edit / close / delete them from `/admin`, even as the owner). BV authorizes admin off a server-side role binding written only by the authenticated create flow, not off `owner_id`/`admin_ids`. Full write-up + a ready-to-file BV issue: [Creating BetterVoting elections via the API](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md).
 
 ## See also
 
-- [BV — BetterVoting (the live web app)](../../00_start_here/tabulation_engines/BV/README.md)
+- [BV — BetterVoting (the live web app)](../../07_Concepts/tabulation_engines/BV/README.md)
 - Repo `CLAUDE.md` — the full 9-step BV-backed case workflow.

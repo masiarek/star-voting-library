@@ -20,7 +20,7 @@ These are properties of **IRV the tabulation**, not of ranked ballots in general
 
 - [Center squeeze](RCV_IRV_center_squeeze.md) — the moderate eliminated early
 - [Non-monotonicity](RCV_IRV_non_monotonicity.md) — when *more* support makes you lose
-- [Not summable](RCV_IRV_lack_of_summability.md) — every ballot must be counted centrally, and [that central count has costs](../../../00_start_here/topics/central_tabulation.md)
+- [Not summable](RCV_IRV_lack_of_summability.md) — every ballot must be counted centrally, and [that central count has costs](../../../07_Concepts/topics/central_tabulation.md)
 - [Fails the Equal Vote criterion](RCV_IRV_equal_vote.md)
 - [Exhausted ballots (301)](exhausted_ballots_301.md) · [forced vs. voluntary exhaustion](forced_vs_voluntary_exhaustion.md)
 - [Misconceptions & false claims — an index](rcv_irv_false_claims.md)
@@ -44,4 +44,4 @@ The [**case_studies/**](case_studies/) subfolder — real elections:
 
 - Glossary: [RCV-IRV & ranked-ballot terms](glossary_rcv_irv.md)
 
-*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/concepts/) (proportional). Up: the docs hub [`00_START_HERE`](../../../00_start_here/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/concepts/) (proportional). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*

@@ -5,7 +5,7 @@ The single question STAR raises most often: *"Why didn't the candidate with the 
 - Concept hub: [The Automatic Runoff Round](../concepts/the_count/STAR_Automatic_Runoff.md) (has the flow diagram)
 - The concept lesson + all cases: [When the top-scoring candidate isn't the winner](README.md)
 - Voter-facing one-paragraph version (and a BetterVoting popover fix): [Explaining Runoff Reversal to Voters](explaining_to_voters.md)
-- Glossary: [`Runoff Reversal`](../../00_start_here/GLOSSARY.md)
+- Glossary: [`Runoff Reversal`](../../07_Concepts/GLOSSARY.md)
 
 ---
 

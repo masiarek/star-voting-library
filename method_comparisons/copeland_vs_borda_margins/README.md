@@ -1,10 +1,10 @@
 # Margins matter — one electorate, four different answers
 
-*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../05_Ranked_Robin/concepts/ranked_robin.md) throws the margins away and ties all three. [Borda](../../06_Other/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
+*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../07_Concepts/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../05_Ranked_Robin/concepts/ranked_robin.md) throws the margins away and ties all three. [Borda](../../06_Other/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`, Test ID **BV2251** — four races on the same 12 ballots: Choose-One, STAR, RCV-IRV, Ranked Robin).
 
-→ **Level: Voting 301.** See also: [the cycle–cocycle decomposition](../../00_start_here/topics/cycle_cocycle_decomposition.md) (the theorem behind this page) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [the minimal tilted cycle](../minimal_tilted_cycle/README.md) (five voters — the smallest lopsided cycle) · [Condorcet's 1788 rebuttal to Borda](../borda_condorcet_1788/README.md) (the mirror image: Borda's *sincere* failure) · [the social welfare function](../../00_start_here/topics/social_welfare_function.md)
+→ **Level: Voting 301.** See also: [the cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) (the theorem behind this page) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [the minimal tilted cycle](../minimal_tilted_cycle/README.md) (five voters — the smallest lopsided cycle) · [Condorcet's 1788 rebuttal to Borda](../borda_condorcet_1788/README.md) (the mirror image: Borda's *sincere* failure) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md)
 
 ---
 
@@ -43,7 +43,7 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 
 | Method | Winner | What it is looking at |
 |---|---|---|
-| [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | **Almond** | first choices only (5 / 3 / 4) |
+| [Choose-One (Plurality)](../../07_Concepts/topics/plurality.md) | **Almond** | first choices only (5 / 3 / 4) |
 | [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | **Cocoa** | first choices, then transfers |
 | [Borda](../../06_Other/other_ranked_methods/borda.md) | **Berry** | every margin, weighted |
 | [Copeland (raw)](../../05_Ranked_Robin/concepts/ranked_robin.md) | **nobody** — 3-way tie | who won each pair, not by how much |
@@ -134,7 +134,7 @@ Identical symmetric Borda scores, identical Copeland tie, identical winners — 
 1. **The margins are near-identical** — 100 / 102 / 100. Margin-weighting breaks a dead heat *by a hair*. At twelve ballots the same structure reads 2 / 4 / 2, which makes Berry's edge look decisive when the original's point is that it is razor-thin.
 2. **The bloc counts are coprime** (gcd = 1), so the printed profile is not a scaled-up copy of anything smaller — and the lone 1-voter is **load-bearing**, not decoration. Delete it and the symmetric Borda scores become `+2 / +2 / −4`: a **tie** between a and b, destroying the "unique Borda winner" the passage is built on, while RCV-IRV flips from c to a.
 
-So this is a shrink that preserves *structure*, not a rescaling — there is no rescaling to be had. The reference copy lives at [`margins_paper_exact_304.md`](cases/cases_pages/margins_paper_exact_304.md) (LH-only, no BetterVoting election). The general rule this case worked out is written up in [TIPS — choosing voter counts](../../00_start_here/tips/TIPS_choosing_voter_counts.md#lifting-a-profile-out-of-a-paper).
+So this is a shrink that preserves *structure*, not a rescaling — there is no rescaling to be had. The reference copy lives at [`margins_paper_exact_304.md`](cases/cases_pages/margins_paper_exact_304.md) (LH-only, no BetterVoting election). The general rule this case worked out is written up in [TIPS — choosing voter counts](../../07_Concepts/tips/TIPS_choosing_voter_counts.md#lifting-a-profile-out-of-a-paper).
 
 ## Reproduce it
 
@@ -142,7 +142,7 @@ So this is a shrink that preserves *structure*, not a rescaling — there is no 
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/copeland_vs_borda_margins/cases/margins_ranked_robin.yaml
 ```
 
-The LH engine has no Borda tabulator, so the Borda and Copeland figures are cross-checked with [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md):
+The LH engine has no Borda tabulator, so the Borda and Copeland figures are cross-checked with [`pref_voting`](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md):
 
 ```bash
 uv run python -c "
@@ -171,6 +171,6 @@ An independent engine, the same four verdicts.
 
 ## Notes on the source
 
-The 304-voter profile is `P₂` from **William S. Zwicker, "Introduction to the Theory of Voting,"** Chapter 2 of the *Handbook of Computational Social Choice* — the chapter that also gives this repo its [social welfare function](../../00_start_here/topics/social_welfare_function.md) definitions. The chapter uses `P₂` to contrast the Copeland rule (which "disregards the margins of victory or defeat") with the symmetric Borda score defined as the sum of net preferences, and reports the Copeland three-way tie and the Borda winner set `{b}`.
+The 304-voter profile is `P₂` from **William S. Zwicker, "Introduction to the Theory of Voting,"** Chapter 2 of the *Handbook of Computational Social Choice* — the chapter that also gives this repo its [social welfare function](../../07_Concepts/topics/social_welfare_function.md) definitions. The chapter uses `P₂` to contrast the Copeland rule (which "disregards the margins of victory or defeat") with the symmetric Borda score defined as the sum of net preferences, and reports the Copeland three-way tie and the Borda winner set `{b}`.
 
 The flavour names are this repo's; the source uses bare `a` / `b` / `c`, which the [reference copy](cases/cases_pages/margins_paper_exact_304.md) keeps for fidelity. The initials are preserved on purpose — **A**lmond, **B**erry, **C**ocoa map onto the book's a, b, c.

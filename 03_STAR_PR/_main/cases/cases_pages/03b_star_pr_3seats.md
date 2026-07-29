@@ -14,7 +14,7 @@ Progressive cluster (Housing, Schools, Parks, Transit) ≈ 58%; Business cluster
 larger cluster and ~1 to the smaller — like STV, and unlike Bloc STAR (which
 would let the 58% majority sweep all 3). Switch voting_method between `sss`,
 `allocated`, and `rrv` to compare; `bloc` shows the majoritarian contrast.
-STV counterpart: 03a_stv_3seats.yaml. See 00_start_here/proportional_stv_vs_star.md.
+STV counterpart: 03a_stv_3seats.yaml. See 07_Concepts/proportional_stv_vs_star.md.
 
 ## Ballots
 
@@ -150,6 +150,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/_main
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [02a_c5_b63_proportional-allocated-score](02a_c5_b63_proportional-allocated-score.md) · [02b_c5_b63_proportional-sss](02b_c5_b63_proportional-sss.md) · [02c_c5_b63_proportional-rrv](02c_c5_b63_proportional-rrv.md) · [bv2130_bvhchj_party_plurality](bv2130_bvhchj_party_plurality.md) · [bv2130_presidential_board_star_pr](bv2130_presidential_board_star_pr.md) · [lackner_skowron_shadow_star_pr_c7_b12](lackner_skowron_shadow_star_pr_c7_b12.md) · [lackner_skowron_shadow_star_pr_rrv_c7_b12](lackner_skowron_shadow_star_pr_rrv_c7_b12.md) · [rrv_sample_c15_b13_three-parties](rrv_sample_c15_b13_three-parties.md)

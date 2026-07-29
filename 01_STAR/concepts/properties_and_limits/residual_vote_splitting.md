@@ -2,7 +2,7 @@
 
 **One line:** STAR removes the *forced* vote-splitting that wrecks Choose-One — you can score two similar candidates both high, so running an ally doesn't bleed your support. What survives is a **narrow, self-inflicted** residual in the top-two runoff: a faction can still split itself if it refuses to use the score ballot, or tries to game which ally claims the second finalist slot.
 
-→ Glossary: [`spoiler effect`](../../../00_start_here/GLOSSARY.md) · related: [Center Squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · debate version: [Favorite Betrayal — Does *Only* RCV Avoid It?](favorite_betrayal_voting_301.md)
+→ Glossary: [`spoiler effect`](../../../07_Concepts/GLOSSARY.md) · related: [Center Squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · debate version: [Favorite Betrayal — Does *Only* RCV Avoid It?](favorite_betrayal_voting_301.md)
 
 ---
 

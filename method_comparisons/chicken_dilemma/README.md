@@ -2,7 +2,7 @@
 
 *A strategic seam of **Approval** (and pure Score): two similar candidates who must cooperate to beat a third can end up in a **game of chicken** — approve both ally and you risk a tie; bullet-vote your favorite and you might win, or, if both sides defect, hand victory to the candidate the majority opposes. Named the **Burr dilemma** after the 1800 Jefferson–Burr tie. **STAR turns the slippery slope into a non-slippery one** — the runoff lets you support both allies honestly without ever needing to bullet.*
 
-→ Part of the strategic-pathology set: [The strategic pathologies — five Molochs, and where STAR stands](../../00_start_here/topics/strategic_pathologies.md). Framing from Jameson Quinn. Related: [Approval voting](../../04_Approval/concepts/approval_voting.md) · [strategic voting](../../00_start_here/topics/strategic_voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+→ Part of the strategic-pathology set: [The strategic pathologies — five Molochs, and where STAR stands](../../07_Concepts/topics/strategic_pathologies.md). Framing from Jameson Quinn. Related: [Approval voting](../../04_Approval/concepts/approval_voting.md) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -54,7 +54,7 @@ No bullet-voting incentive: giving your ally a 4 instead of a 0 **cannot** cost 
 
 ## Why STAR converts slippery → non-slippery
 
-This is the same fix as Quinn's [**3-2-1 voting**](../../00_start_here/topics/three_two_one_voting.md): a final head-to-head step means a small number of defectors can't start an avalanche. In this scenario a *determined* bloc of 21+ B-voters could still rate A a 0 to try to force B through — STAR is **not** strategy-proof ([Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) forbids that) — but:
+This is the same fix as Quinn's [**3-2-1 voting**](../../07_Concepts/topics/three_two_one_voting.md): a final head-to-head step means a small number of defectors can't start an avalanche. In this scenario a *determined* bloc of 21+ B-voters could still rate A a 0 to try to force B through — STAR is **not** strategy-proof ([Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) forbids that) — but:
 
 - **it takes a large, coordinated, risky defection**, not a one-voter nudge that snowballs; and
 - **the risk is real**: over-bulleting your ally down to 0 can put *C* in the runoff against your favorite and cost you the election.
@@ -65,7 +65,7 @@ Game-theoretically, chicken/snowdrift has **two strong equilibria** (A concedes,
 
 ## Keep it fair
 
-- **This is a genuine Approval/Score seam** — the honest concession the [scorecard](../../00_start_here/topics/strategic_pathologies.md) makes for the score family. Approval's simplicity has a cost: with only a yes/no cut, allies can't say "I back you, but my favorite more" without risking a tie.
+- **This is a genuine Approval/Score seam** — the honest concession the [scorecard](../../07_Concepts/topics/strategic_pathologies.md) makes for the score family. Approval's simplicity has a cost: with only a yes/no cut, allies can't say "I back you, but my favorite more" without risking a tie.
 - **STAR mitigates but does not abolish it.** The claim is "non-slippery, honesty-stable," not "immune." Naming that limit is the point.
 - **IRV abolishes the chicken dilemma outright** — but only by creating a [center squeeze](../center_squeeze/) instead (a defector in the chicken dilemma looks exactly like a fringe first-choice under IRV). Quinn argues that trade is worse; the [monotonicity](../monotonicity/) and [favorite-betrayal](../favorite_betrayal_irv/) pages show why.
 

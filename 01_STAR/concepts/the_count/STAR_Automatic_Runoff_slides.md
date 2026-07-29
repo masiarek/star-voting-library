@@ -56,7 +56,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - STAR's runoff removes that incentive: it only asks *which finalist you scored higher*, so your honest **3s and 4s still do real work.**
 - **The runoff is what lets STAR keep an expressive ballot people can use honestly.**
 
-> Notes: The "strategic scoring degenerates to Approval" argument. Powerful with a technical crowd; for a public crowd, the one-liner is "you never have to exaggerate." Glossary: [Approval](../../../00_start_here/GLOSSARY.md).
+> Notes: The "strategic scoring degenerates to Approval" argument. Powerful with a technical crowd; for a public crowd, the one-liner is "you never have to exaggerate." Glossary: [Approval](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -139,7 +139,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - It is **not an abstention**: it counts fully in the Scoring Round; only a fully-blank ballot abstains.
 - **Runoff 05.** Rosa leads (21), but two voters rate Rosa = Sage, so **3 of 5** decide — and they pick **Sage 2–1.**
 
-> Notes: The single most-confused term in STAR. Hammer "cast vote, no preference ≠ didn't vote." This is the bridge to the two-denominator slide. Live result: <https://bettervoting.com/xgkw3w/results> Lesson: [Runoff 05 — reversal with Equal Support](../../runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md) · term: [`GLOSSARY`](../../../00_start_here/GLOSSARY.md).
+> Notes: The single most-confused term in STAR. Hammer "cast vote, no preference ≠ didn't vote." This is the bridge to the two-denominator slide. Live result: <https://bettervoting.com/xgkw3w/results> Lesson: [Runoff 05 — reversal with Equal Support](../../runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md) · term: [`GLOSSARY`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 

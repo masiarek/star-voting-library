@@ -1,6 +1,6 @@
 # Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from
 
-*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../00_start_here/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../01_STAR/concepts/README.md)'s second round is **for**.*
+*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../07_Concepts/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../01_STAR/concepts/README.md)'s second round is **for**.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
 
@@ -43,7 +43,7 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 
 | Method | Winner | Elects the Condorcet winner? |
 |---|---|---|
-| [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | Paul | ✗ |
+| [Choose-One (Plurality)](../../07_Concepts/topics/plurality.md) | Paul | ✗ |
 | [**Borda**](../../06_Other/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
 | [Approval](../../04_Approval/concepts/README.md) | Paul | ✗ |
 | [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | Peter | ✓ |
@@ -92,7 +92,7 @@ Automatic Runoff Round
 
 Want the whole count? See the full LH reports → [`condorcet_1788_star.md`](cases/cases_pages/condorcet_1788_star.md) · [`condorcet_1788_ranked_robin.md`](cases/cases_pages/condorcet_1788_ranked_robin.md).
 
-One more thing the pairwise table shows: **James is the [Condorcet loser](../../00_start_here/topics/condorcet/)** — he loses every matchup. No method here elects him, but it is worth noticing that Borda ranks him *above* nobody while plurality's 2 first-choice votes are all he has.
+One more thing the pairwise table shows: **James is the [Condorcet loser](../../07_Concepts/topics/condorcet/)** — he loses every matchup. No method here elects him, but it is worth noticing that Borda ranks him *above* nobody while plurality's 2 first-choice votes are all he has.
 
 ## Reproduce it
 
@@ -100,7 +100,7 @@ One more thing the pairwise table shows: **James is the [Condorcet loser](../../
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/borda_condorcet_1788/cases/condorcet_1788_star.yaml
 ```
 
-The LH engine has no Borda tabulator, so the Borda figures are cross-checked with [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md):
+The LH engine has no Borda tabulator, so the Borda figures are cross-checked with [`pref_voting`](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md):
 
 ```bash
 uv run python -c "
@@ -126,7 +126,7 @@ condorcet    -> Peter
 
 The profile is the simplified 11-voter version of an example Condorcet described in **1788**, the form standard textbooks use when they introduce the Condorcet criterion. Condorcet formalized the head-to-head idea in **1785**; Borda had proposed his rank-points rule in **1770**, arguing from an example much like [Pliny the Younger's](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_history.md).
 
-The candidate names are Condorcet's own (Peter / Paul / James) and are kept for fidelity to the source, even though Peter and Paul share an initial — which this repo's [naming rule](../../00_start_here/tips/TIPS_canonical_elections.md) would otherwise avoid.
+The candidate names are Condorcet's own (Peter / Paul / James) and are kept for fidelity to the source, even though Peter and Paul share an initial — which this repo's [naming rule](../../07_Concepts/tips/TIPS_canonical_elections.md) would otherwise avoid.
 
 ## Why Borda misses Peter — the mechanism, not just the result
 
@@ -139,4 +139,4 @@ Paul *loses* the only matchup that decides a head-to-head champion, and still fi
 
 (The margins are exactly what a Borda score is made of: [`Borda(x) = ½·Σ M(x,y) + n(m−1)/2`](../../06_Other/other_ranked_methods/borda.md), and the constant is the same for everyone.)
 
-Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/) makes you choose at, with [the structural version](../../00_start_here/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../00_start_here/topics/what_a_method_reads.md).
+Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/) makes you choose at, with [the structural version](../../07_Concepts/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../07_Concepts/topics/what_a_method_reads.md).

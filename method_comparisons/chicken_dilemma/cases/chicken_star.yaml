@@ -12,7 +12,7 @@ scenario_description: |-
   marks (no bullet needed — the runoff, not the sum, decides between them). C is beaten
   in the scoring round (A 275, B 265, C 200), and A — the honest pairwise winner — takes
   the runoff 35-25. Honesty is safe. The [Divergence from STAR] block confirms Ranked
-  Robin also elects A. Concept: ../../00_start_here/topics/strategic_pathologies.md.
+  Robin also elects A. Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 video_script: |-
   A and B are allies; together they crush C, but they have to cooperate. Under approval

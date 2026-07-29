@@ -1,6 +1,6 @@
 # 05_Ranked_Robin/burial — the worked burial pair
 
-**Burial is to Condorcet methods what [center squeeze](../../00_start_here/topics/center_squeeze/README.md) is to IRV: the signature strategic wart.** Rank the frontrunner *last* — below candidates you honestly like less — manufacture a cycle, and win on the record. This repo shows IRV's wart loudly and often, so it shows Ranked Robin's the same way: a sincere election a compromise wins cleanly, and the coordinated lie that takes it from her. Live, triple-checked, deterministic on every engine.
+**Burial is to Condorcet methods what [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) is to IRV: the signature strategic wart.** Rank the frontrunner *last* — below candidates you honestly like less — manufacture a cycle, and win on the record. This repo shows IRV's wart loudly and often, so it shows Ranked Robin's the same way: a sincere election a compromise wins cleanly, and the coordinated lie that takes it from her. Live, triple-checked, deterministic on every engine.
 
 **▶ Live on BetterVoting:**
 - Part 1, sincere: [vote](https://bettervoting.com/7q6by8) · **[results ↗](https://bettervoting.com/7q6by8/results)** (election `7q6by8`, Test ID BV2208)
@@ -76,7 +76,7 @@ Beryl falls from 3–0 to 1–2. Amber and Coral tie on top at 2–1 — and **A
 
 ## The triple-check
 
-Per this repo's [cross-checking habit](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md), both halves ran through three independent tabulators:
+Per this repo's [cross-checking habit](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md), both halves ran through three independent tabulators:
 
 | Half | LH native | pref_voting Copeland | BetterVoting live |
 |---|---|---|---|
@@ -89,7 +89,7 @@ The buried half stays freezable *despite* the known LH/BV tiebreak divergence ([
 
 - **Burial leaves fingerprints.** Sincere ballots showed no cycle; the buried ballots show one. A cycle appearing in a race whose polling showed a clear Condorcet winner *is* the anomaly — the printed round-robin table is where you'd catch it.
 - **It needs a lot to go right:** a large bloc (here 15 of 42 — over a third of the electorate) sitting *inside* the leader's own majorities, coordination, decent polling, and a willingness to rank a liked candidate last. Fail any of those and the burial fizzles or backfires (bury into the wrong cycle and you elect Coral, the buriers' *third* choice — one mis-aim away).
-- **Every method has its wart.** IRV: [center squeeze](../../00_start_here/topics/center_squeeze/README.md). STAR: the [runoff-born favorite-betrayal sliver](../../01_STAR/favorite_betrayal/README.md). Approval: the [threshold dilemma](../../01_STAR/exercises/ex13_draw_the_line.md). Ranked Robin and all Condorcet methods: burial. The honest comparison is *which warts are systematic and which need a heist* — this one is a heist, but a real one.
+- **Every method has its wart.** IRV: [center squeeze](../../07_Concepts/topics/center_squeeze/README.md). STAR: the [runoff-born favorite-betrayal sliver](../../01_STAR/favorite_betrayal/README.md). Approval: the [threshold dilemma](../../01_STAR/exercises/ex13_draw_the_line.md). Ranked Robin and all Condorcet methods: burial. The honest comparison is *which warts are systematic and which need a heist* — this one is a heist, but a real one.
 
 ## Run it yourself
 

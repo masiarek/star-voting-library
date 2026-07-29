@@ -13,7 +13,7 @@ candidates, how many ballots, who won?".
 Source of truth is the frozen export (Election.races[], Ballots[], Results[]),
 not the YAMLs, so the ballot count is the real voter count (not line count).
 
-Writes:  00_start_here/YAML_test_case_index/multirace_elections.md
+Writes:  07_Concepts/YAML_test_case_index/multirace_elections.md
 Run:     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py
 """
 import glob
@@ -23,7 +23,7 @@ import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
-OUT = os.path.join(REPO, "00_start_here", "YAML_test_case_index", "multirace_elections.md")
+OUT = os.path.join(REPO, "07_Concepts", "YAML_test_case_index", "multirace_elections.md")
 
 
 def _find_exports():

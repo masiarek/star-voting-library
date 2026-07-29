@@ -2,7 +2,7 @@
 
 **One line:** the **Score Distribution** is the LH engine's breakdown of *how many ballots gave each score* to each candidate — the raw shape behind the score totals. It's where you can see at a glance whether a candidate is broadly liked, polarizing, or unknown — and it keeps an honest line between an explicit **0** and a **blank**.
 
-→ Hub: [STAR Reporting](../) · the full report: [How the LH engine reports](README.md) · what counts as a blank: [`GLOSSARY`](../../../../00_start_here/GLOSSARY.md).
+→ Hub: [STAR Reporting](../) · the full report: [How the LH engine reports](README.md) · what counts as a blank: [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).
 
 Turn it on with `options: { show_score_counts: true }` (the saved `_tabulated.txt` always includes it).
 

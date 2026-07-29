@@ -22,7 +22,7 @@ difference is how much of the ballot the method reads. (It can be worse: with a
 bigger field, Choose-One winners can take office on 10-20%. A third is just the
 most common, most believable version.)
 Live results (BV2215): https://bettervoting.com/2p33qq/results
-Lesson: 00_start_here/topics/plurality.md · README.md
+Lesson: 07_Concepts/topics/plurality.md · README.md
 
 ## Ballots
 
@@ -114,6 +114,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

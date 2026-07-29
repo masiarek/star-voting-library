@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-The blanks are real information — *"everyone else: 0"* — whether or not you meant them that deeply. If Carmen makes the [runoff](../the_count/STAR_Automatic_Runoff.md), your full vote backs her there. But if she doesn't, your ballot scores both finalists 0 — [Equal Support](../../../00_start_here/GLOSSARY.md), no preference — and you sit out the final head-to-head by your own choice. A single mark spends one point of voice out of the twenty-five the ballot offers. Nothing about that is penalized; it's just under-used.
+The blanks are real information — *"everyone else: 0"* — whether or not you meant them that deeply. If Carmen makes the [runoff](../the_count/STAR_Automatic_Runoff.md), your full vote backs her there. But if she doesn't, your ballot scores both finalists 0 — [Equal Support](../../../07_Concepts/GLOSSARY.md), no preference — and you sit out the final head-to-head by your own choice. A single mark spends one point of voice out of the twenty-five the ballot offers. Nothing about that is penalized; it's just under-used.
 
 ## This exact style in a real election
 

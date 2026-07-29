@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-Against Blake, this ballot is maximal: every rival gets full scoring help, and in any Blake-versus-anyone [runoff](../the_count/STAR_Automatic_Runoff.md), your whole vote lands on the anyone. The cost cuts the other way: if Blake *misses* the final — partly thanks to ballots like yours — the runoff is between two of your identical 5s, and yours is an [Equal Support](../../../00_start_here/GLOSSARY.md) ballot with no say between them. You also boosted candidates you may only tepidly accept on equal footing with ones you genuinely like. If you can feel *any* daylight between the acceptables, score it — a 5-4-4-3 "anyone but" keeps all the stopping power and adds a voice in the aftermath.
+Against Blake, this ballot is maximal: every rival gets full scoring help, and in any Blake-versus-anyone [runoff](../the_count/STAR_Automatic_Runoff.md), your whole vote lands on the anyone. The cost cuts the other way: if Blake *misses* the final — partly thanks to ballots like yours — the runoff is between two of your identical 5s, and yours is an [Equal Support](../../../07_Concepts/GLOSSARY.md) ballot with no say between them. You also boosted candidates you may only tepidly accept on equal footing with ones you genuinely like. If you can feel *any* daylight between the acceptables, score it — a 5-4-4-3 "anyone but" keeps all the stopping power and adds a voice in the aftermath.
 
 ## This exact style in a real election
 

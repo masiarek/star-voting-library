@@ -1,8 +1,8 @@
 # When compression moves the Condorcet winner — Black Curtain #1, read three ways
 
-*Five voters, one set of opinions, three ways of writing them down. On the full score ballot **Cal** is the [Condorcet winner](../../00_start_here/topics/condorcet/) — he beats everyone head-to-head. Compress those same opinions into approve / don't-approve and the Condorcet winner becomes **Bob** — legitimately, on the ballots as recorded. Neither count is wrong. The difference is the compression, and you can watch exactly where it happens: in the **Equal Support** column of the pairwise matrix.*
+*Five voters, one set of opinions, three ways of writing them down. On the full score ballot **Cal** is the [Condorcet winner](../../07_Concepts/topics/condorcet/) — he beats everyone head-to-head. Compress those same opinions into approve / don't-approve and the Condorcet winner becomes **Bob** — legitimately, on the ballots as recorded. Neither count is wrong. The difference is the compression, and you can watch exactly where it happens: in the **Equal Support** column of the pairwise matrix.*
 
-→ The set: [The Black Curtain](README.md) · the theory this is the limit of: [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md) · [Approval's honest limits](../../04_Approval/concepts/approval_honest_limits.md) · [scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md). Cases: [01 full scores](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) · [01a the approval count](cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) · [01b the compressed ballot](cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md).
+→ The set: [The Black Curtain](README.md) · the theory this is the limit of: [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md) · [Approval's honest limits](../../04_Approval/concepts/approval_honest_limits.md) · [scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md). Cases: [01 full scores](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) · [01a the approval count](cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) · [01b the compressed ballot](cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md).
 
 ---
 
@@ -98,7 +98,7 @@ It also isn't an argument that Cal is the "right" answer. Bob is unanimously app
 
 ## What it says about "Approval = Borda = Condorcet"
 
-There's a clean theory result behind this: on the domain of **[dichotomous preferences](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice)** — weak rankings with exactly two indifference classes, which is precisely what an approval ballot is — approval voting coincides with [Borda](../../06_Other/other_ranked_methods/borda.md) *and* with every Condorcet method, and a Condorcet winner is guaranteed to exist. No cycles are possible there.
+There's a clean theory result behind this: on the domain of **[dichotomous preferences](../../07_Concepts/GLOSSARY.md#the-wider-field-computational-social-choice)** — weak rankings with exactly two indifference classes, which is precisely what an approval ballot is — approval voting coincides with [Borda](../../06_Other/other_ranked_methods/borda.md) *and* with every Condorcet method, and a Condorcet winner is guaranteed to exist. No cycles are possible there.
 
 Reading 3 satisfies that theorem exactly: the compressed profile has a Condorcet winner (Bob), and the approval count picks him. So the theorem is not in question — this case is an instance of it.
 
@@ -118,7 +118,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md) — where the dichotomous-domain result comes from, and the three readings of what "approve" means
 - [Approval — Honest Limits](../../04_Approval/concepts/approval_honest_limits.md) §4 — "can miss a majority favorite," of which this is the worked case
 - [Approval + Top-Two](../../04_Approval/concepts/approval_top_two.md) — what a second head-to-head round recovers, and why it can't be automatic from 0/1 ballots
-- [The fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md) · [scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — converting between ballot resolutions, and what each conversion costs
+- [The fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md) · [scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — converting between ballot resolutions, and what each conversion costs
 - [Read as Range / Score voting](black_curtain_range.md) — the same four elections through the range engine
 
 # file: condorcet_compression.md

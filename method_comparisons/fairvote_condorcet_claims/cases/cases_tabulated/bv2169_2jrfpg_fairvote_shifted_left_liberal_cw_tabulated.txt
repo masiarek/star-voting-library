@@ -25,7 +25,7 @@ scenario_description: |-
   STAR race plus an RCV-IRV race that agrees (first-choice majority).
   Live results: https://bettervoting.com/2jrfpg/results
   Full claim-by-claim reading of the article:
-  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+  07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
 voting_method: STAR
 num_winners: 1
@@ -85,7 +85,7 @@ TABULATION RESULTS
   STAR race plus an RCV-IRV race that agrees (first-choice majority).
   Live results: https://bettervoting.com/2jrfpg/results
   Full claim-by-claim reading of the article:
-  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+  07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

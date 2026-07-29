@@ -85,7 +85,7 @@ Even two elections that both run plain Hare IRV can disagree, because real ballo
 - **Batch vs. one-at-a-time elimination.** Dropping several hopeless candidates at once usually matches single elimination, but not always at the margins.
 - **What "majority" counts against.** A **majority of *continuing* ballots** (exhausted ballots excluded) vs. a **majority of *all* ballots cast** are different thresholds — the first is how most US IRV laws declare a winner.
 - **Equal ranks and skipped rankings.** Pure IRV forbids equal ranks; jurisdictions differ on whether a skipped rank ends the ballot or is passed over.
-- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result. Because ranks carry no strength signal, there's often little to break the tie *with*, so it falls to chance sooner than in a score method — see [Tie-Breaking: STAR vs. RCV-IRV](../../../../00_start_here/topics/ties/tiebreaking_star_vs_irv.md) for why strict ranks make ties *harder* to resolve, not easier.
+- **Tie-breaks.** Who gets eliminated when two candidates are tied for last is set by statute (lot, prior round, etc.) and can flip a close result. Because ranks carry no strength signal, there's often little to break the tie *with*, so it falls to chance sooner than in a score method — see [Tie-Breaking: STAR vs. RCV-IRV](../../../../07_Concepts/topics/ties/tiebreaking_star_vs_irv.md) for why strict ranks make ties *harder* to resolve, not easier.
 
 This is why a precise reference says not just "IRV" but the **whole rule set** — the elimination rule *plus* the ballot rules.
 
@@ -117,7 +117,7 @@ For several seats at once, the Hare idea becomes the **Single Transferable Vote 
 - [RCV-IRV center squeeze](../RCV_IRV_center_squeeze.md) — the flaw the Condorcet-safe variants fix
 - [RCV-IRV exhausted ballots](../RCV_IRV_exhausted_ballots.md) — the ranking-limit knob, in depth
 - [RCV-IRV non-monotonicity](../RCV_IRV_non_monotonicity.md)
-- See also the repo terminology canon: `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`
+- See also the repo terminology canon: `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY.md`
 
 ## Learn more — external resources
 

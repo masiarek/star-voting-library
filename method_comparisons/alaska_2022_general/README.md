@@ -6,7 +6,7 @@
 
 > **Which Alaska election is this?** The **November 2022 US House *general*** — the one where RCV-IRV worked *fine*. It is the companion to the [August *special*](../alaska_2022/README.md) (where IRV misfired). Confused? See the [full map](../../06_Other/RCV_IRV/concepts/case_studies/alaska_rcv_elections.md).
 
-**One line:** same three candidates as the special, six months later — and this time **all four counts agree on Peltola.** Because the electorate had shifted, **Peltola was now the Condorcet winner** (she beats both rivals head-to-head), so Plurality, RCV-IRV, Ranked Robin, and STAR *all* elect her. This is the honest other half of the story: IRV's [center-squeeze](../../00_start_here/topics/center_squeeze/README.md) failure is **real but conditional** — it strikes only when a centrist Condorcet winner has too few first choices, which was true in August and *not* true in November.
+**One line:** same three candidates as the special, six months later — and this time **all four counts agree on Peltola.** Because the electorate had shifted, **Peltola was now the Condorcet winner** (she beats both rivals head-to-head), so Plurality, RCV-IRV, Ranked Robin, and STAR *all* elect her. This is the honest other half of the story: IRV's [center-squeeze](../../07_Concepts/topics/center_squeeze/README.md) failure is **real but conditional** — it strikes only when a centrist Condorcet winner has too few first choices, which was true in August and *not* true in November.
 
 ---
 

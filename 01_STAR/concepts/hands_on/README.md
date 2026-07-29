@@ -6,4 +6,4 @@ Do STAR, don't just read about it. Three ways to make the method tangible for a 
 - **[Count a STAR election by hand](count_star_by_hand.md)** — tally a real election with pencil and paper (add the stars → top two → count the runoff), so "STAR is simple and hand-countable" stops being a claim and becomes something you've done.
 - **[Teaching STAR Voting](teaching_star_voting.md)** — the presenter's companion: the order to teach it in, the terms to use, which examples to reach for, and the misconceptions to head off.
 
-*(Up: [STAR Voting — concept pages](../README.md) · the docs hub [`00_START_HERE`](../../../00_start_here/00_START_HERE.md).)*
+*(Up: [STAR Voting — concept pages](../README.md) · the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*

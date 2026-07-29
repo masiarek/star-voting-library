@@ -48,4 +48,4 @@ Created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/t
 ## See also
 
 - Folder overview: [pet_poll_four_winners — README](README.md)
-- [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/README.md) · [Glossary](../../00_start_here/GLOSSARY.md)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md) · [Glossary](../../07_Concepts/GLOSSARY.md)

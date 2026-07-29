@@ -67,7 +67,7 @@ the honest answer to "who is even in contention?".
       Every member of the set (Bruno) beats Ada head-to-head, yet
       RCV-IRV elected Ada anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/balance_plus_opposite_c3_b15_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -80,8 +80,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/RCV_IRV
 
 ## See also
 
-- [Center squeeze (topic hub)](../../../../../00_start_here/topics/center_squeeze/README.md)
-- [Condorcet efficiency (topic hub)](../../../../../00_start_here/topics/condorcet/README.md)
-- [Glossary](../../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../../00_start_here/YAML_test_case_index/README.md)
+- [Center squeeze (topic hub)](../../../../../07_Concepts/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [balance_base_irv_c3_b9](balance_base_irv_c3_b9.md)

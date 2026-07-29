@@ -8,7 +8,7 @@ hide:
      and doesn't recognize the lowercase readme.md as one.
 
      This page adds the SITE-ONLY graphical hero (big headline, CTA buttons, the official
-     EVC ballot image — styled by 00_start_here/about_this_repo/site_extra.css), then
+     EVC ballot image — styled by 07_Concepts/about_this_repo/site_extra.css), then
      inlines everything below readme.md's own text hero via the snippet-section markers
      inside readme.md ([start:below-hero] … [end:below-hero]) — so the shared body still
      has one source and the repo front page and site homepage can't drift. -->
@@ -29,7 +29,7 @@ Score every candidate **0–5**; the two highest-scoring meet in an **automatic 
 </div>
 
 <div class="star-hero-img" markdown="1">
-<img src="00_start_here/img/star_ballot_example.png" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
+<img src="07_Concepts/img/star_ballot_example.png" alt="A real STAR ballot: five candidates (Andre, Blake, Carmen, David, Ella) each rated 0–5 stars, with the instructions — give your favorite(s) five stars, your last choice(s) zero; equal scores mean no preference; blanks count as zero; the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
 </div>
 
 </div>

@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** honest [vote](https://bettervoting.com/x4dkfd) · **[results ↗](https://bettervoting.com/x4dkfd/results)** · strategic [vote](https://bettervoting.com/7f4f7q) · **[results ↗](https://bettervoting.com/7f4f7q/results)** (elections `x4dkfd` / `7f4f7q`, Test IDs BV2193–94; each also carries RCV-IRV and Ranked Robin races).
 
-**You practice:** [strategic voting](../../00_start_here/topics/strategic_voting.md) in STAR — specifically **bullet voting** (supporting only your favorite) — and *why* the automatic runoff makes it a gamble rather than a free lift.
+**You practice:** [strategic voting](../../07_Concepts/topics/strategic_voting.md) in STAR — specifically **bullet voting** (supporting only your favorite) — and *why* the automatic runoff makes it a gamble rather than a free lift.
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports.
 
@@ -91,7 +91,7 @@ The first half works perfectly: Bree crashes 25 → 13, out of the runoff; Ari i
 <details>
 <summary><b>(d) The general rule</b></summary>
 
-Bullet voting is *safe* only when your favorite would **win the runoff against whoever replaces the candidate you zeroed** — which is exactly what these fans never checked (Ari loses to Cash 4–5 no matter what). Zeroing a compromise you actually prefer to the field does two things at once: it may promote your favorite into the runoff, and it *simultaneously* removes your insurance if your favorite still loses there. That double edge is by design — the runoff is why STAR "discourages bullet voting" (glossary: [bullet voting / tactical minimization](../../00_start_here/GLOSSARY.md)) — and it's the honest version of that claim: not *impossible* to game (nothing is — [Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md)), but a strategy that pays only with information voters rarely have, and costs dearly when the guess is wrong. The balanced treatment across methods is [strategic voting](../../00_start_here/topics/strategic_voting.md).
+Bullet voting is *safe* only when your favorite would **win the runoff against whoever replaces the candidate you zeroed** — which is exactly what these fans never checked (Ari loses to Cash 4–5 no matter what). Zeroing a compromise you actually prefer to the field does two things at once: it may promote your favorite into the runoff, and it *simultaneously* removes your insurance if your favorite still loses there. That double edge is by design — the runoff is why STAR "discourages bullet voting" (glossary: [bullet voting / tactical minimization](../../07_Concepts/GLOSSARY.md)) — and it's the honest version of that claim: not *impossible* to game (nothing is — [Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md)), but a strategy that pays only with information voters rarely have, and costs dearly when the guess is wrong. The balanced treatment across methods is [strategic voting](../../07_Concepts/topics/strategic_voting.md).
 
 </details>
 
@@ -110,8 +110,8 @@ Sources: [ex06_bullet_honest.yaml](cases/ex06_bullet_honest.yaml) · [ex06_bulle
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [strategic voting across the Equal Vote methods](../../00_start_here/topics/strategic_voting.md) and the [second-round FAQ](../concepts/the_count/STAR_second_round_FAQ.md) (why the runoff exists).
+**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [strategic voting across the Equal Vote methods](../../07_Concepts/topics/strategic_voting.md) and the [second-round FAQ](../concepts/the_count/STAR_second_round_FAQ.md) (why the runoff exists).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex06_bullet_backfire.md

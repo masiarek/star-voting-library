@@ -19,7 +19,7 @@ The 0–5 range is a **usability** choice, not a mathematical one. It maps onto 
 STAR has two rounds, and they react to the scale very differently:
 
 - **The automatic runoff is scale-agnostic.** The runoff asks one question per ballot: *which finalist did you score higher?* That's a **preference**, and a preference doesn't care whether the gap was 5-vs-4 or 50-vs-40. Widen the scale and the runoff step is untouched.
-- **The scoring round is where granularity bites.** Who the **top two finalists** are depends on total scores, and a wider scale gives intensity more room to move those totals. A candidate with a few passionate max-scores can climb past a broadly-but-mildly-liked rival when the max is 10 that they couldn't reach when the max was 5. So a wider scale can change *who advances* — and therefore, sometimes, who wins. That's exactly the effect worked in [Scale granularity can flip the winner](../../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md).
+- **The scoring round is where granularity bites.** Who the **top two finalists** are depends on total scores, and a wider scale gives intensity more room to move those totals. A candidate with a few passionate max-scores can climb past a broadly-but-mildly-liked rival when the max is 10 that they couldn't reach when the max was 5. So a wider scale can change *who advances* — and therefore, sometimes, who wins. That's exactly the effect worked in [Scale granularity can flip the winner](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md).
 
 So "unorthodox STAR" isn't just cosmetic: it's a real knob that trades **more expressiveness** for **more room to exaggerate** and a **less familiar ballot**.
 
@@ -92,10 +92,10 @@ Rarely, and only on purpose. The honest ledger:
 ## Where this fits
 
 - **Level:** Voting 301 — advanced / "what if." Read after the [scoring round](../the_count/STAR_Scoring_Round.md) and [automatic runoff](../the_count/STAR_Automatic_Runoff.md) are second nature.
-- **Pairs with:** [Scale granularity can flip the winner](../../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md) (the case where the scale *does* change the outcome) and the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (the same 0–10 electorate as pure Score).
+- **Pairs with:** [Scale granularity can flip the winner](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md) (the case where the scale *does* change the outcome) and the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (the same 0–10 electorate as pure Score).
 - **Engine note:** the 0–5 cap is the fork's teaching guardrail, not a limit of Larry's engine — see the Engines section of the repo's working notes.
 
 Cross-references:
 - [STAR — start here](../STAR_start_here.md) · [the scoring round](../the_count/STAR_Scoring_Round.md) · [the automatic runoff](../the_count/STAR_Automatic_Runoff.md)
-- [Range / Score voting](../../../06_Other/Range/concepts/range_voting.md) · [the fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md)
-- [Curriculum 301](../../../00_start_here/curriculum/CURRICULUM_301.md)
+- [Range / Score voting](../../../06_Other/Range/concepts/range_voting.md) · [the fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md)
+- [Curriculum 301](../../../07_Concepts/curriculum/CURRICULUM_301.md)

@@ -123,8 +123,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2223_dyh93j_510_real_star.md) — its entry in the divergence review ledger
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2221_2kcwbw_sincere](bv2221_2kcwbw_sincere.md) · [bv2222_rfyk46_510_thin_irv](bv2222_rfyk46_510_thin_irv.md) · [bv2222_rfyk46_510_thin_star](bv2222_rfyk46_510_thin_star.md) · [bv2223_dyh93j_510_real_irv](bv2223_dyh93j_510_real_irv.md)

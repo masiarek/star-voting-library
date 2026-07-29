@@ -55,7 +55,7 @@ The pairwise matrix behind it (the engine's full view — note Bluebell's row):
   eliminated in the scoring round)
 ```
 
-The compromise a majority prefers to *everyone* misses the runoff by three points. (This half is also a clean [Condorcet-winner paradox](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md) instance for STAR, alongside [BV2156](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md).)
+The compromise a majority prefers to *everyone* misses the runoff by three points. (This half is also a clean [Condorcet-winner paradox](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md) instance for STAR, alongside [BV2156](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md).)
 
 ## Half 2 — nine voters demote their favorite, and it pays
 
@@ -87,7 +87,7 @@ The [301 page](../concepts/properties_and_limits/favorite_betrayal_voting_301.md
 - **It needs the standings to 3 points.** The whole construction balances on Aster 75 / Clover 72 / Bluebell 69. Real electorates don't publish their totals in advance; polling error alone swamps a 3-point gap in a 57-voter race.
 - **It needs the compromise pre-maxed.** If the nine had any room to raise Bluebell instead, that honest, non-betrayal repair would come first — STAR's equal-top is free. The betrayal is only *forced* because the honest fix is already spent.
 
-Measured across thousands of random elections, betrayals that actually pay are the ~2% tail in STAR — the other ~98% backfire ([fbc_simulation.py](../../06_Other/simulations/fbc_simulation.py)). This page is what one of the 2% looks like: engineered, coordinated, knife-edged. Compare the RCV-IRV failure mode — the [center squeeze](../../00_start_here/topics/center_squeeze/README.md) — which is *systematic*, arrives in ordinary competitive three-way races, and gives a whole political wing a standing reason to betray (Alaska 2022, worked on the 301 page).
+Measured across thousands of random elections, betrayals that actually pay are the ~2% tail in STAR — the other ~98% backfire ([fbc_simulation.py](../../06_Other/simulations/fbc_simulation.py)). This page is what one of the 2% looks like: engineered, coordinated, knife-edged. Compare the RCV-IRV failure mode — the [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) — which is *systematic*, arrives in ordinary competitive three-way races, and gives a whole political wing a standing reason to betray (Alaska 2022, worked on the 301 page).
 
 ## Reading this fairly
 

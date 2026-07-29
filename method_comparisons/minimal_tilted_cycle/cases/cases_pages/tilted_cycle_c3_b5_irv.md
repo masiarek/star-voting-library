@@ -2,7 +2,7 @@
 
 *Generated from [`tilted_cycle_c3_b5_irv.yaml`](../tilted_cycle_c3_b5_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [rcv-irv](../../../../00_start_here) · **1 seat** · **Expected winner:** Cara
+**Method:** [rcv-irv](../../../../07_Concepts) · **1 seat** · **Expected winner:** Cara
 
 ## Scenario
 
@@ -75,7 +75,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    RCV-IRV winner Cara is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/tilted_cycle_c3_b5_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -88,10 +88,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [tilted_cycle_c3_b5_rr](tilted_cycle_c3_b5_rr.md)

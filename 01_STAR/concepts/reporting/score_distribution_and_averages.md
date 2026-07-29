@@ -2,7 +2,7 @@
 
 *How the `[Score Distribution]` block is built, why the engine is otherwise obsessively float-free (exact `Fraction` arithmetic, mixed-number display), and why the **Avg** column is the single place that quietly breaks that rule — which is exactly why `1.25` can print as `1.2`.*
 
-Part of the [STAR reporting](reporting_ties.md) notes. Companion to [Reading a STAR report](../../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md).
+Part of the [STAR reporting](reporting_ties.md) notes. Companion to [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).
 
 ---
 
@@ -104,6 +104,6 @@ Recommended split: use the exact `Fraction` as the source of truth everywhere (h
 
 ## See also
 
-- [Reading a STAR report](../../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) — the rest of the output blocks.
+- [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) — the rest of the output blocks.
 - [BV2130 — Proportional STAR](../../../03_STAR_PR/_main/bv2130_presidential_board_star_pr.md) — where the exact-`Fraction` mixed number (`34 +5745/21952`) earns its keep.
 - [Reporting true ties](reporting_ties.md) · [BV vs LH reporting differences](reporting_diff_BV_LH.md).

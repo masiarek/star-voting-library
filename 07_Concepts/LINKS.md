@@ -138,10 +138,10 @@ These live in this repo and stay exactly in sync (prefer them for live demos):
 
 | Short name | Path |
 |------------|------|
-| **Start Here** | `00_start_here/00_START_HERE.md` |
-| **Why STAR (repo)** | `00_start_here/topics/Why_STAR_Voting.md` (+ `.html` presenter view) |
-| **Glossary** | `00_start_here/GLOSSARY.md` |
-| **Curriculum** | `00_start_here/CURRICULUM.md` |
+| **Start Here** | `07_Concepts/00_START_HERE.md` |
+| **Why STAR (repo)** | `07_Concepts/topics/Why_STAR_Voting.md` (+ `.html` presenter view) |
+| **Glossary** | `07_Concepts/GLOSSARY.md` |
+| **Curriculum** | `07_Concepts/CURRICULUM.md` |
 | **Flagship script** | `01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md` |
 | **Spoiler demos** | `split_voting/` |
 | **Two-round demo** | `01_Single_winner/00a_c2_b1_two-candidates.yaml` |

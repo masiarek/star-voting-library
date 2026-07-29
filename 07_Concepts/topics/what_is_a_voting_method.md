@@ -25,7 +25,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 **Adam:** Exactly. Someone says "ranked-choice is great" and they've described the *ballot* — they haven't told you how it's counted, which is the part that decides the election. The trick isn't to admire the two parts apart; it's to never let them be split — when someone praises a ballot, ask, "fine, now how do you count it?"
 
-> [REPO] `CLAUDE.md` terminology policy and `00_start_here/GLOSSARY.md` — "Ballot," "Tabulation," "Voting method."
+> [REPO] `CLAUDE.md` terminology policy and `07_Concepts/GLOSSARY.md` — "Ballot," "Tabulation," "Voting method."
 
 ---
 
@@ -55,7 +55,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 **Adam:** That gap *is* the trouble. Let me show you the smallest version.
 
-> [REPO] `00_start_here/GLOSSARY.md` — "Plurality / minority winner," "Majority finish."
+> [REPO] `07_Concepts/GLOSSARY.md` — "Plurality / minority winner," "Majority finish."
 
 ---
 
@@ -88,8 +88,8 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 - **Terminology:** keep `Choose-One` / `Plurality` for a public audience. Hold the ballot-vs-tabulation distinction precisely — it's the spine of the whole curriculum.
 
 Cross-references:
-- `00_start_here/GLOSSARY.md` — "Ballot," "Tabulation," "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Majority finish," "Vote splitting."
-- `00_start_here/topics/our_voting_system_is_broken.md` — the next episode (1.5).
+- `07_Concepts/GLOSSARY.md` — "Ballot," "Tabulation," "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Majority finish," "Vote splitting."
+- `07_Concepts/topics/our_voting_system_is_broken.md` — the next episode (1.5).
 - `split_voting/00_plurality_vs_majority.yaml` — the live demo for Segment 4.
 - `LINKS.md` → **Full Deck 2025** ("Rating vs Ranking," "Problem: Vote-Splitting").
 - Source: Google Doc **"Voting Method - what is it?"** (the ballot/count framing and the Andre/Blake/Carmen plurality table this episode is built from).

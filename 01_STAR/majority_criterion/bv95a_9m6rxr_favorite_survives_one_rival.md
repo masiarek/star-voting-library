@@ -1,6 +1,6 @@
 # BV95a — Majority Criterion: the favorite survives (majority backs ONE rival)
 
-*A 5-voter STAR election. A 3-voter majority scores **Ada** highest (5). They also honestly support **one** other candidate — Bruno gets a 4 — and leave Cleo at 0. Question: does supporting a compromise candidate cost the majority their favorite? **No — Ada wins.** This is the "safe" half of the [Majority Criterion](../../00_start_here/topics/majority_criterion/README.md) pair; its twin [BV95b](bv95b_7pdq3r_favorite_loses_two_rivals.md) shows what tips it over.*
+*A 5-voter STAR election. A 3-voter majority scores **Ada** highest (5). They also honestly support **one** other candidate — Bruno gets a 4 — and leave Cleo at 0. Question: does supporting a compromise candidate cost the majority their favorite? **No — Ada wins.** This is the "safe" half of the [Majority Criterion](../../07_Concepts/topics/majority_criterion/README.md) pair; its twin [BV95b](bv95b_7pdq3r_favorite_loses_two_rivals.md) shows what tips it over.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr`).
 
@@ -51,6 +51,6 @@ Reproduced live at [**bettervoting.com/9m6rxr/results**](https://bettervoting.co
 
 ## See also
 
-- The concept, the Relaxed Majority Criterion, and the Later-No-Harm link: **[Majority Criterion topic hub](../../00_start_here/topics/majority_criterion/README.md)**.
+- The concept, the Relaxed Majority Criterion, and the Later-No-Harm link: **[Majority Criterion topic hub](../../07_Concepts/topics/majority_criterion/README.md)**.
 - The twin that flips: [BV95b — the favorite loses when the majority backs *two* rivals](bv95b_7pdq3r_favorite_loses_two_rivals.md).
 - [STAR's honest limits #8](../concepts/properties_and_limits/STAR_honest_limits.md).

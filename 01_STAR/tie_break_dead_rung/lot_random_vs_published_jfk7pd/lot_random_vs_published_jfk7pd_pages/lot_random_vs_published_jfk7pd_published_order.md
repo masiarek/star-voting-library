@@ -115,7 +115,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/tie_brea
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [lot_random_vs_published_jfk7pd_bv_order](lot_random_vs_published_jfk7pd_bv_order.md)

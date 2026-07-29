@@ -10,7 +10,7 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 - [Ranked Robin (aka Consensus Voting)](ranked_robin.md) — the pairwise round-robin and the win-count
 - [A naming decoder](condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what
 - [A blank is ranked *last*](rr_blank_means_last.md) — what a blank means, why rank *numbers* don't matter (it's not Borda), and the universal ballot wording
-- [Condorcet methods — a reading list](../../00_start_here/topics/condorcet/condorcet_reading_list.md) — the books and papers behind the decoder, each with its lean marked
+- [Condorcet methods — a reading list](../../07_Concepts/topics/condorcet/condorcet_reading_list.md) — the books and papers behind the decoder, each with its lean marked
 - [Ranked Robin vs. Consensus Choice](ranked_robin_vs_consensus_choice.md) — the sibling brand: same count, different cycle rule, different proposal scope
 - [Summability](RCV_RR_summability.md) — the pairwise matrix adds (unlike IRV)
 - [Clone independence](rr_clone_independence.md) — crowding, teaming, and the tiebreak that matters
@@ -40,4 +40,4 @@ Every claim on these pages has a runnable election behind it — one case folder
 
 - Glossary: [Ranked Robin & the Condorcet family](glossary_ranked_robin.md)
 
-*(Other tabulations of the same ranked ballot: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) (instant runoff), [STV](../../03_STAR_PR/concepts/) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../00_start_here/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) (instant runoff), [STV](../../03_STAR_PR/concepts/) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../07_Concepts/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../07_Concepts/00_START_HERE.md).)*

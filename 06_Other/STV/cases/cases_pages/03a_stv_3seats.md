@@ -97,7 +97,7 @@ the honest answer to "who is even in contention?".
    Smith set (1 of 7): Housing
    Outside (6):        Schools, Parks, Transit, SmallBiz, BigBiz, TaxCuts
    One member ⇒ Housing is the Condorcet winner, beating every rival head-to-head.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03a_stv_3seats_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -110,4 +110,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/cas
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

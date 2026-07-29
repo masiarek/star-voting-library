@@ -2,7 +2,7 @@
 
 *A small club elects its coordinator with STAR Voting. Nine ballots are counted and a winner is announced — and then a tenth ballot turns up, cast on time and mislaid in the envelope pile. The tenth voter's favorite is the announced winner. Recount with their ballot included: can anything change?*
 
-**You practice:** the scoring round · the runoff pairing · the **[participation criterion](../../00_start_here/topics/participation/README.md)** (the [no-show paradox](../../00_start_here/voting_paradoxes/no_show.md)) · the runoff-slot [spoiler](../../00_start_here/topics/spoiler_effect.md).
+**You practice:** the scoring round · the runoff pairing · the **[participation criterion](../../07_Concepts/topics/participation/README.md)** (the [no-show paradox](../../07_Concepts/voting_paradoxes/no_show.md)) · the runoff-slot [spoiler](../../07_Concepts/topics/spoiler_effect.md).
 
 Work each part on paper before opening its solution. The YAML files at the bottom are runnable; their `expected_winners` answer keys are regression-tested, and each `_tabulated` mirror is the full audit report.
 
@@ -116,7 +116,7 @@ Automatic Runoff Round
 
 Both flips are **runoff-slot events**: nothing changed Alex's standing in the scoring round (he leads it in all three variants), but a one-or-two-point perturbation — one extra ballot, one withdrawn also-ran — swapped **who he must face**, and Chris beats him head-to-head in every variant. The runoff is the same feature that gives STAR its majoritarian bite (see [Runoff Reversal](../runoff_overturns_leader/README.md)); these are the criteria it costs.
 
-Structurally immune to participation failures: the pure point-summing methods — **Score** and **Approval** (and Choose-One) — where an extra supportive ballot can only add to your favorite's total. Score elects Alex in all three variants of this exercise. Not immune: STAR, RCV-IRV, top-two runoffs, and Condorcet methods. The honest scorecard, including how *rarely* STAR's version bites compared to IRV's elimination machinery, is the [Participation topic hub](../../00_start_here/topics/participation/README.md)'s job — and note the repo's live multi-method pair ([participation_no_show](../../method_comparisons/participation_no_show/README.md)), where the *same* sincere ballots reward the voters under STAR and punish them under RCV-IRV. This exercise is the deliberately-constructed counterpoint: the rare STAR-side failure, so the claim "STAR fails participation too, far more rarely" comes with a runnable example instead of a hand-wave.
+Structurally immune to participation failures: the pure point-summing methods — **Score** and **Approval** (and Choose-One) — where an extra supportive ballot can only add to your favorite's total. Score elects Alex in all three variants of this exercise. Not immune: STAR, RCV-IRV, top-two runoffs, and Condorcet methods. The honest scorecard, including how *rarely* STAR's version bites compared to IRV's elimination machinery, is the [Participation topic hub](../../07_Concepts/topics/participation/README.md)'s job — and note the repo's live multi-method pair ([participation_no_show](../../method_comparisons/participation_no_show/README.md)), where the *same* sincere ballots reward the voters under STAR and punish them under RCV-IRV. This exercise is the deliberately-constructed counterpoint: the rare STAR-side failure, so the claim "STAR fails participation too, far more rarely" comes with a runnable example instead of a hand-wave.
 
 </details>
 
@@ -142,6 +142,6 @@ Sources: [ex02_nine_ballots.yaml](cases/ex02_nine_ballots.yaml) · [ex02_tenth_b
 
 **Where these ballots come from.** Adapted (candidates renamed, prose our own) from a worked example published on [RangeVoting.org](https://rangevoting.org) — a Score-voting advocacy site, so its framing favors Score; the arithmetic is method-neutral — and posed as an add-a-voter exercise in Brendan W. Sullivan, *An Introduction to the Math of Voting Methods* (619 Wreath Publishing, 2022), ch. 5, a method-neutral general-education textbook whose practice-problems-with-solutions format this exercises set borrows.
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex02_tenth_ballot.md

@@ -18,7 +18,7 @@ No. of voters    Preference ordering
      17          D > C > B > A
 ```
 
-**B is the Condorcet winner**: beats A 70–33, C 62–41, D 86–17. Under RCV-IRV nobody holds a first-count majority (33/29/24/17), so **D** is eliminated — his 17 ballots transfer to C (41) — then **B** (29) is eliminated, and **A wins 62**. A [Condorcet winner failure](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md) on sincere, complete ballots; STAR (5/4/2/1 map: 346/407/312/171, runoff 70–33) and Ranked Robin both elect B.
+**B is the Condorcet winner**: beats A 70–33, C 62–41, D 86–17. Under RCV-IRV nobody holds a first-count majority (33/29/24/17), so **D** is eliminated — his 17 ballots transfer to C (41) — then **B** (29) is eliminated, and **A wins 62**. A [Condorcet winner failure](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md) on sincere, complete ballots; STAR (5/4/2/1 map: 346/407/312/171, runoff 70–33) and Ranked Robin both elect B.
 
 ## Agreement
 

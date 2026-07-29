@@ -23,7 +23,7 @@ scenario_description: |-
   bigger field, Choose-One winners can take office on 10-20%. A third is just the
   most common, most believable version.)
   Live results (BV2215): https://bettervoting.com/2p33qq/results
-  Lesson: 00_start_here/topics/plurality.md · README.md
+  Lesson: 07_Concepts/topics/plurality.md · README.md
 voting_method: STAR
 num_winners: 1
 options:
@@ -66,7 +66,7 @@ TABULATION RESULTS
   bigger field, Choose-One winners can take office on 10-20%. A third is just the
   most common, most believable version.)
   Live results (BV2215): https://bettervoting.com/2p33qq/results
-  Lesson: 00_start_here/topics/plurality.md · README.md
+  Lesson: 07_Concepts/topics/plurality.md · README.md
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

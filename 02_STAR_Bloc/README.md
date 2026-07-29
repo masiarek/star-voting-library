@@ -34,7 +34,7 @@ This tension is the whole reason proportional methods exist. Gentle intro to the
 3. **Watch a majority sweep** — internalize why Bloc is majoritarian, then contrast with the same electorate under [STAR-PR](../03_STAR_PR/) and [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/).
 4. **Edge cases & trust (201/301)** — how ties resolve seat-by-seat, and where BetterVoting's display diverges: the reference cases below.
 
-Curriculum context: [201.5 — Multi-winner intro: Bloc STAR](../00_start_here/CURRICULUM.md).
+Curriculum context: [201.5 — Multi-winner intro: Bloc STAR](../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -70,6 +70,6 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 - **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../03_STAR_PR/concepts/)
 - **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/) · [a six-method governance election](../method_comparisons/pets_governance/)
 - **Single-winner foundation:** [STAR — start here](../01_STAR/concepts/STAR_start_here.md) · [the benefits of STAR](../01_STAR/concepts/getting_started/STAR_benefits.md)
-- **Conversation scripts:** [What's so good about STAR](../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) · [full index](../00_start_here/about_this_repo/conversation_scripts.md)
+- **Conversation scripts:** [What's so good about STAR](../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) · [full index](../07_Concepts/about_this_repo/conversation_scripts.md)
 
 # file: README.md

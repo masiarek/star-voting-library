@@ -10,7 +10,7 @@ scenario_description: |-
   the majority-opposed C slip through. The A/B tie is the whole point (as with Jefferson &
   Burr in 1800), so this case is LH/pref_voting-verified rather than frozen from a random
   BetterVoting tie-break. STAR removes the slope entirely — see chicken_star.yaml.
-  Concept: ../../00_start_here/topics/strategic_pathologies.md.
+  Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 paradoxes: []
 voting_method: Approval

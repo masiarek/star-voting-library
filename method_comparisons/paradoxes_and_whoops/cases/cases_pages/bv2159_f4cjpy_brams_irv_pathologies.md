@@ -79,7 +79,7 @@ the honest answer to "who is even in contention?".
       Every member of the set (G) beats B head-to-head, yet
       RCV-IRV elected B anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2159_f4cjpy_brams_irv_pathologies_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -92,8 +92,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Monotonicity (topic hub)](../../../../00_start_here/topics/monotonicity/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Monotonicity (topic hub)](../../../../07_Concepts/topics/monotonicity/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2155_cphxpt_tennessee_four_ways](bv2155_cphxpt_tennessee_four_ways.md) · [bv2156_3grpbb_star_misses_condorcet](bv2156_3grpbb_star_misses_condorcet.md) · [bv2157_mmcmpy_condorcet_cycle_rps](bv2157_mmcmpy_condorcet_cycle_rps.md) · [bv2158_gr72hd_ossipoff_centrist_irv](bv2158_gr72hd_ossipoff_centrist_irv.md) · [bv2183_dfw8rj_forced_exhaustion_ceiling](bv2183_dfw8rj_forced_exhaustion_ceiling.md)

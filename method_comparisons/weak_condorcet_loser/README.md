@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`, BV2249) — one election, **three races** on these same five voters: STAR, Approval, and Ranked Robin.
 
-→ Sibling: [the Condorcet loser paradox](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) (the strict version, and a method electing one anyway) · [Condorcet topic hub](../../00_start_here/topics/condorcet/README.md) · [criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md) · Glossary: [`weak Condorcet winner / weak Condorcet loser`](../../00_start_here/GLOSSARY.md).
+→ Sibling: [the Condorcet loser paradox](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) (the strict version, and a method electing one anyway) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/README.md) · [criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) · Glossary: [`weak Condorcet winner / weak Condorcet loser`](../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -99,7 +99,7 @@ Two things had to go wrong together, and both are visible above.
 
 **The Condorcet winner was eliminated in the scoring round.** Ada's 5/5/5/0/0 profile totals 15 — less than either moderate. That part is ordinary STAR behavior and has its own page ([three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md)).
 
-**Then the runoff tied.** One voter scored Ben and Cora both 4 — [Equal Support](../../00_start_here/GLOSSARY.md) — leaving 2 vs 2 among the voters with a preference. STAR's first tiebreaker is the higher score, and Ben takes it.
+**Then the runoff tied.** One voter scored Ben and Cora both 4 — [Equal Support](../../07_Concepts/GLOSSARY.md) — leaving 2 vs 2 among the voters with a preference. STAR's first tiebreaker is the higher score, and Ben takes it.
 
 Here is the precise reason this is a **weak**-only failure, and it's worth stating carefully because it's the sharpest thing on this page:
 
@@ -115,13 +115,13 @@ Approval elects Ben 5–4–3, on the same voters approving everyone they scored
 
 But the interesting part isn't the scoreboard. Run the pairwise comparison on the **approval ballots alone** and **Ben beats Ada 2–0** — because three voters approved both, and a yes/no ballot records that as a tie. Coarsening 0–5 down to 0–1 destroyed the very margins (`Ada 5, Ben 4`) that made Ada the Condorcet winner in the first place.
 
-So Approval doesn't so much *choose* the weak Condorcet loser as **lose the information that would have identified one**. That's a [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) point, not a scoreboard point — and it's the same fragility the [approval-cutoff sweep](../star_vs_approval_divergence.md) measures from the other direction. A different cutoff gives a different election; that ambiguity is Approval's standing caveat, not a quirk of this case.
+So Approval doesn't so much *choose* the weak Condorcet loser as **lose the information that would have identified one**. That's a [preference-vs-support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) point, not a scoreboard point — and it's the same fragility the [approval-cutoff sweep](../star_vs_approval_divergence.md) measures from the other direction. A different cutoff gives a different election; that ambiguity is Approval's standing caveat, not a quirk of this case.
 
 ### RCV-IRV and Plurality — right answer, unrelated reason
 
 Ada is the first choice of three of five voters — an outright majority — so Plurality elects her immediately and IRV never reaches a second round. Both dodge the weak Condorcet loser here, but neither is *protecting* against one; they simply happen to agree with the pairwise winner because she leads on first choices. Change the profile so Ada is many voters' second choice instead of their first and IRV squeezes her out ([center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)) — which is the far more common real-world failure.
 
-*(One engine note, carried honestly: voter 1 scored Ben and Cora equally, so converting that ballot to a strict ranking required a tiebreak, and the engine flags it. It doesn't affect these winners — Ada leads first choices 3–2 no matter how that one tie is ordered, and Ada's 2–0 pairwise record is likewise untouched — but it is exactly the [strict-vs-weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) problem: most IRV rules cannot record "these two are equal.")*
+*(One engine note, carried honestly: voter 1 scored Ben and Cora equally, so converting that ballot to a strict ranking required a tiebreak, and the engine flags it. It doesn't affect these winners — Ada leads first choices 3–2 no matter how that one tie is ordered, and Ada's 2–0 pairwise record is likewise untouched — but it is exactly the [strict-vs-weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) problem: most IRV rules cannot record "these two are equal.")*
 
 ## Cross-checked against BetterVoting
 
@@ -143,9 +143,9 @@ The case is live as **BV2249** (`c73pfw`), and BetterVoting's independent tabula
 
 ## See also
 
-- [The Condorcet loser paradox](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) — the strict version, worked on 7 voters
+- [The Condorcet loser paradox](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) — the strict version, worked on 7 voters
 - [Three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) — why the Condorcet winner can miss STAR's runoff
-- [The Smith set](../../00_start_here/topics/smith_set.md) — the generalized Condorcet winner; a Condorcet loser is never in it
+- [The Smith set](../../07_Concepts/topics/smith_set.md) — the generalized Condorcet winner; a Condorcet loser is never in it
 - [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — ties and cycles are different things
-- [Criteria at a glance](../../00_start_here/topics/criteria_at_a_glance.md) · [STAR's criteria failures](../../01_STAR/concepts/properties_and_limits/star_criteria_failures.md)
+- [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) · [STAR's criteria failures](../../01_STAR/concepts/properties_and_limits/star_criteria_failures.md)
 - [Reading these fairly](../paradoxes_and_whoops/reading_these_fairly.md)

@@ -4,7 +4,7 @@
 
 *Robert LeGrand's flagship "the method decides everything" example, from his [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). 921 voters rank five candidates, and there is **no Condorcet winner** — a top cycle. Across the ~15 ranked methods the win splits **five ways**. Run through the four tabulations BetterVoting supports, one electorate yields **three different winners** — and one of them is a documented LH-vs-BetterVoting tiebreak divergence.*
 
-→ **Level: Voting 301** — Curriculum [301.10](../../00_start_here/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../00_start_here/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [RR tiebreak: LH vs BV](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
+→ **Level: Voting 301** — Curriculum [301.10](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [RR tiebreak: LH vs BV](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
 
 ## The electorate
 
@@ -62,7 +62,7 @@ STAR then gives Abby the top score total (2836) but the automatic runoff flips t
 
 ## Which methods are on BetterVoting — and which aren't
 
-BetterVoting natively runs **four** of the ~15 methods (IRV, Ranked Robin, STV, STAR-via-scores). The other eleven — Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small — have no BetterVoting equivalent and are verified with [`pref_voting`](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md) and LeGrand's calculator. That's why the table above lists more winners than BetterVoting alone can show: it's a limit of BV's method menu, not of the election.
+BetterVoting natively runs **four** of the ~15 methods (IRV, Ranked Robin, STV, STAR-via-scores). The other eleven — Borda, Bucklin, Coombs, Dodgson, Simpson, Schulze, Tideman, Nanson, Baldwin, Raynaud, Small — have no BetterVoting equivalent and are verified with [`pref_voting`](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md) and LeGrand's calculator. That's why the table above lists more winners than BetterVoting alone can show: it's a limit of BV's method menu, not of the election.
 
 ## Sources
 

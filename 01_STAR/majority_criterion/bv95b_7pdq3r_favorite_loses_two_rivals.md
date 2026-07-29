@@ -1,6 +1,6 @@
 # BV95b — Majority Criterion: the favorite LOSES (majority backs TWO rivals)
 
-*The same 5-voter STAR election as [BV95a](bv95a_9m6rxr_favorite_survives_one_rival.md), changed in one spot: the 3-voter majority that scores **Ada** highest now *also* gives **Cleo** a 3 (a second honestly-liked candidate) instead of 0. That one change makes **Ada — the top choice of a clear majority — lose.** This is STAR's [Majority-Criterion](../../00_start_here/topics/majority_criterion/README.md) failure, and it shows exactly how narrow it is.*
+*The same 5-voter STAR election as [BV95a](bv95a_9m6rxr_favorite_survives_one_rival.md), changed in one spot: the 3-voter majority that scores **Ada** highest now *also* gives **Cleo** a 3 (a second honestly-liked candidate) instead of 0. That one change makes **Ada — the top choice of a clear majority — lose.** This is STAR's [Majority-Criterion](../../07_Concepts/topics/majority_criterion/README.md) failure, and it shows exactly how narrow it is.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r`).
 
@@ -47,7 +47,7 @@ Full audit copy: [`majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_
 
 By also giving Cleo a 3, the majority pushed **Cleo's** total to 19 — above **Ada's** 15. Now the top two by score are Bruno (22) and Cleo (19), so **Ada never reaches the runoff**, despite being the outright favorite of 3 of 5 voters. The winner (Bruno) is the candidate almost everyone rates highly; the majority's own favorite (Ada) is the one 40% of voters score at 0.
 
-The key lesson: it took the majority supporting **two** other candidates (Bruno *and* Cleo) to lose Ada. In BV95a, supporting only **one** left Ada safe. That gap — "needs two rivals, not one" — is exactly what Equal Vote's **Relaxed Majority Criterion** measures, and it's why STAR's majority-criterion failure is considered mild (Score and Approval can drop the favorite on a single supported rival). It is also the same event as a **Later-No-Harm** failure: the majority's honest 3 for Cleo (a *later* preference) is what harmed their favorite Ada. See the [topic hub](../../00_start_here/topics/majority_criterion/README.md).
+The key lesson: it took the majority supporting **two** other candidates (Bruno *and* Cleo) to lose Ada. In BV95a, supporting only **one** left Ada safe. That gap — "needs two rivals, not one" — is exactly what Equal Vote's **Relaxed Majority Criterion** measures, and it's why STAR's majority-criterion failure is considered mild (Score and Approval can drop the favorite on a single supported rival). It is also the same event as a **Later-No-Harm** failure: the majority's honest 3 for Cleo (a *later* preference) is what harmed their favorite Ada. See the [topic hub](../../07_Concepts/topics/majority_criterion/README.md).
 
 ## Confirmed on BetterVoting
 
@@ -55,6 +55,6 @@ Reproduced live at [`bettervoting.com/7pdq3r`](https://bettervoting.com/7pdq3r):
 
 ## See also
 
-- The concept, the Relaxed Majority Criterion, and the Later-No-Harm link: **[Majority Criterion topic hub](../../00_start_here/topics/majority_criterion/README.md)**.
+- The concept, the Relaxed Majority Criterion, and the Later-No-Harm link: **[Majority Criterion topic hub](../../07_Concepts/topics/majority_criterion/README.md)**.
 - The twin where the favorite survives: [BV95a — majority backs only one rival](bv95a_9m6rxr_favorite_survives_one_rival.md).
 - [STAR's honest limits #8](../concepts/properties_and_limits/STAR_honest_limits.md).

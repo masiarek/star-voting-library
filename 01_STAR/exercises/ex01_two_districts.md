@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** West [vote](https://bettervoting.com/d3b9wc) · **[results ↗](https://bettervoting.com/d3b9wc/results)** · East [vote](https://bettervoting.com/rhbfj7) · **[results ↗](https://bettervoting.com/rhbfj7/results)** · Combined [vote](https://bettervoting.com/923q3d) · **[results ↗](https://bettervoting.com/923q3d/results)** (elections `d3b9wc` / `rhbfj7` / `923q3d`, Test IDs BV2188–90; each also runs a **Ranked Robin** race on the same opinions — see "What about Elena?" below).
 
-**You practice:** the scoring round · how the runoff pairing is chosen · the **consistency** criterion ([glossary](../../00_start_here/GLOSSARY.md)) — and why it is *not* the same thing as [summability](../../00_start_here/topics/summability/README.md).
+**You practice:** the scoring round · how the runoff pairing is chosen · the **consistency** criterion ([glossary](../../07_Concepts/GLOSSARY.md)) — and why it is *not* the same thing as [summability](../../07_Concepts/topics/summability/README.md).
 
 Work each part on paper before opening its solution. The YAML files at the bottom are the same elections in runnable form; their `expected_winners` answer keys are regression-tested, and each `_tabulated` mirror is the full audit report.
 
@@ -127,9 +127,9 @@ This is the **consistency** criterion (also *join-consistency* or *reinforcement
 
 Two honest cautions before this becomes a talking point:
 
-- **This is not a summability failure.** STAR remains fully [precinct-summable](../concepts/properties_and_limits/STAR_summability.md): score totals and the [preference matrix](../../00_start_here/GLOSSARY.md) add across precincts, and officials run the two rounds *once* on the summed tallies. Nobody tabulates a citywide STAR seat district-by-district. What fails is only the *inference* "won every district ⇒ wins the whole."
+- **This is not a summability failure.** STAR remains fully [precinct-summable](../concepts/properties_and_limits/STAR_summability.md): score totals and the [preference matrix](../../07_Concepts/GLOSSARY.md) add across precincts, and officials run the two rounds *once* on the summed tallies. Nobody tabulates a citywide STAR seat district-by-district. What fails is only the *inference* "won every district ⇒ wins the whole."
 - **What the criterion actually threatens is the headline.** "She carried both districts and still lost!" is a real communications liability after a close election — this exercise is the worked answer to it: carrying a district means winning *that district's runoff pairing*, and the pairing itself is what changed.
-- **The paradox has a catalog page and an IRV-side sibling.** The general phenomenon is Felsenthal's *multiple-districts / reinforcement* paradox — see [the catalog page](../../00_start_here/voting_paradoxes/multiple_districts.md) — and the repo already runs the classic IRV-side demonstration live ([Felsenthal's reinforcement trio](../../method_comparisons/felsenthal_paradoxes/README.md), BV2147–49), where plurality-with-runoff commits the paradox and STAR happens to stay consistent. This exercise's trio (BV2188–90) is the other shoe: the constructive proof that STAR is not reinforcement-proof either.
+- **The paradox has a catalog page and an IRV-side sibling.** The general phenomenon is Felsenthal's *multiple-districts / reinforcement* paradox — see [the catalog page](../../07_Concepts/voting_paradoxes/multiple_districts.md) — and the repo already runs the classic IRV-side demonstration live ([Felsenthal's reinforcement trio](../../method_comparisons/felsenthal_paradoxes/README.md), BV2147–49), where plurality-with-runoff commits the paradox and STAR happens to stay consistent. This exercise's trio (BV2188–90) is the other shoe: the constructive proof that STAR is not reinforcement-proof either.
 
 </details>
 
@@ -175,6 +175,6 @@ Sources: [ex01_district_west.yaml](cases/ex01_district_west.yaml) · [ex01_distr
 
 **Where these ballots come from.** Adapted (candidates renamed, prose our own) from a worked example published on [RangeVoting.org](https://rangevoting.org) — a Score-voting advocacy site, so its framing favors Score; the arithmetic is method-neutral — and posed as a districts exercise in Brendan W. Sullivan, *An Introduction to the Math of Voting Methods* (619 Wreath Publishing, 2022), ch. 5, a method-neutral general-education textbook whose practice-problems-with-solutions format this exercises set borrows.
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex01_two_districts.md

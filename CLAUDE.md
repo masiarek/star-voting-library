@@ -73,7 +73,7 @@ public audience, who only know "RCV." So:
   Then use the familiar word.
 
 Family tree, when-to-use table, and glossary are canonical — **do not restate the
-taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSARY.md`.
+taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY.md`.
 
 **Other voting-term canon:**
 - **STAR** = Score Then Automatic Runoff (a *score* ballot + that tabulation; the
@@ -170,14 +170,14 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   automatically** (no option — the IRV path has no options plumbing). The two uses are
   opposite: RR is Smith-efficient so the block is descriptive; RCV-IRV is not, so it's
   a genuine pass/fail. Wording locked by `tests/test_smith_set.py`; concept page
-  `00_start_here/topics/smith_set.md`.
+  `07_Concepts/topics/smith_set.md`.
 - **Voter counts — keep examples SMALL.** Default to the *fewest ballots* that
   make the point; prefer **individual ballots** (one row per voter, a handful of
   them) over large weighted blocs. A 3-voter example that shows the effect beats a
   100-voter one. Only scale up when a larger electorate is genuinely essential
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
-  preserves STAR/proportional winners. See `00_start_here/tips/TIPS_choosing_voter_counts.md`.
+  preserves STAR/proportional winners. See `07_Concepts/tips/TIPS_choosing_voter_counts.md`.
 - **Candidate names — a fresh, easy cast per scenario; the same cast within one.**
   Prefer a *new* set of names for each scenario (memorable beats uniform — "the
   Ada/Ben/Cara split," "the Tennessee cities") over one fixed roster. Four rules:
@@ -191,7 +191,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   election with one thing changed, so new names would imply a different election. Use
   bare `A/B/C/D` only for purely abstract/academic illustrations where names are noise.
   **Canonical reusable elections** (Ann/Bob/Cal, the team lunch, the runoff reversal,
-  Tennessee, the pets) are registered in `00_start_here/tips/TIPS_canonical_elections.md`
+  Tennessee, the pets) are registered in `07_Concepts/tips/TIPS_canonical_elections.md`
   with their jobs and the two rules — *one election per page* and *canonical = frozen
   ballots* (same cast ⇒ same election; a new lesson gets a new cast, never a tweak).
   Reuse a canonical for generic examples instead of minting a new cast.
@@ -199,8 +199,8 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   abstention · `?` spoiled · `%` spoiled+reissued. **No `^`** (removed). Approval
   ballots accept only `0`/`1` (+ blank/marker = not approved).
 - **Levels (101/201/301)** live ONLY in the curriculum — now a hub
-  (`00_start_here/CURRICULUM.md`) plus one page per level
-  (`00_start_here/curriculum/CURRICULUM_101.md` / `_201.md` / `_301.md`); the hub links them and holds no
+  (`07_Concepts/CURRICULUM.md`) plus one page per level
+  (`07_Concepts/curriculum/CURRICULUM_101.md` / `_201.md` / `_301.md`); the hub links them and holds no
   level content itself, so there's a single source of truth per level (no sync
   drift). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
@@ -210,8 +210,8 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   `04_Approval/concepts/`, `05_Ranked_Robin/concepts/`,
   `06_Other/RCV_IRV/concepts/`, `06_Other/Range/concepts/`. The folder's
   `README.md` is that method's **start-here** (what it is → its concepts → its
-  runnable examples). They previously lived in a parallel `00_start_here/<Method>/`
-  tree, which gave each method two competing front doors. **`00_start_here/` is now
+  runnable examples). They previously lived in a parallel `07_Concepts/<Method>/`
+  tree, which gave each method two competing front doors. **`07_Concepts/` is now
   cross-method only** (topics, paradoxes, scores_and_ranks, curriculum, glossary,
   engines, tips, books) — don't put method-specific pages back into it.
   **Moving concept pages again?** Use
@@ -223,7 +223,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
-  see next bullet). See `00_start_here/about_this_repo/ORGANIZATION.md`.
+  see next bullet). See `07_Concepts/about_this_repo/ORGANIZATION.md`.
 - **Folder overview pages are named exactly `README.md`** (not `README_<folder>.md`).
   GitHub only auto-renders a file named `README.md` in a folder's tree view, so each
   folder's landing/overview page **must** be `README.md` — that's what makes the folder
@@ -241,7 +241,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   false` — don't flip it). Local preview: `uvx --with mkdocs-same-dir --with
   "mkdocs-material>=9.5" --with mkdocs-redirects mkdocs serve`. `site/` is generated
   output — never commit.
-  Details + known nits: `00_start_here/about_this_repo/website_build.md`.
+  Details + known nits: `07_Concepts/about_this_repo/website_build.md`.
   **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
   They replace the *built* page at a URL while leaving the `.md` on disk intact, so
   GitHub still renders the source but **the site never shows it**. Live case:
@@ -352,7 +352,7 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
     illustrations*** (invented candidates with no backing case file) — a "full report" link there
     is a dead end. Prefer the generated page over pasting the long report inline on a teaching
     page, which buries the lesson (e.g. the runoff page is *about* the reversal, not the matrix).
-- **Cross-reference slides by title** via `00_start_here/LINKS.md`
+- **Cross-reference slides by title** via `07_Concepts/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
 - **Case-file naming.** **LH-only** cases (no BV election) → descriptive name, no bvid
   segment. **BV-backed** cases lead with the bvid — `b<bvid>_<descriptor>`, or
@@ -491,4 +491,4 @@ reproduce loop is in the **`bettervoting` skill**.
 
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention
-question isn't covered by the `00_start_here/` docs, ask rather than guess.
+question isn't covered by the `07_Concepts/` docs, ask rather than guess.

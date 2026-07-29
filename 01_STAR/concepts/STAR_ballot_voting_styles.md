@@ -8,7 +8,7 @@
 
 STAR uses a **5-star ballot**: you give every candidate an independent score from 0 to 5, exactly like rating movies or restaurants. Here is a finished one — this voter gave their favorite (Andre) a 5, their last choice (Ella) a 0, and scored everyone else honestly in between:
 
-<img src="../../00_start_here/img/star_ballot_example.png" width="460" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero. Footer: the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
+<img src="../../07_Concepts/img/star_ballot_example.png" width="460" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero. Footer: the two highest-scoring candidates are finalists and your full vote goes to the finalist you prefer.">
 
 The instructions printed on it are the whole method:
 
@@ -86,7 +86,7 @@ Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../_main/cases/cases_tabu
 
 ## Blanks, and what they mean
 
-Leaving a candidate's line blank counts as **0** — always, with no penalty to the rest of the ballot. In this library's YAML files a blank is written `-`, and there are markers for the other real-world cases (race abstention `~`, candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all tabulate as 0 but are reported honestly. See [Ballot & Terminology Basics](../../00_start_here/topics/ballot_and_terminology_basics.md) and the [GLOSSARY](../../00_start_here/GLOSSARY.md).
+Leaving a candidate's line blank counts as **0** — always, with no penalty to the rest of the ballot. In this library's YAML files a blank is written `-`, and there are markers for the other real-world cases (race abstention `~`, candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all tabulate as 0 but are reported honestly. See [Ballot & Terminology Basics](../../07_Concepts/topics/ballot_and_terminology_basics.md) and the [GLOSSARY](../../07_Concepts/GLOSSARY.md).
 
 Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballot *errors* — one reason reported spoilage runs roughly **4–9% for ranked ballots vs. 0–2% for rated ballots** (and 1–4% for the familiar single-mark ballot).[^spoilage] A scored ballot is very hard to fill out wrong.
 
@@ -96,18 +96,18 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 
 **Expressive.** A choose-one ballot carries one bit of your opinion; an approval ballot, one yes/no per candidate; a ranked ballot, order but never strength. The 0–5 ballot carries order *and* strength — "Bianca by a mile" and "Bianca by a hair" are finally different votes. Six levels (0–5) sits near the sweet spot: enough resolution to matter, few enough that every step means something.
 
-**Accurate.** Research comparing **ratings and rankings** finds ratings have superior validity — forced full rankings capture *noise*, differences voters don't actually feel. (*"Ratings"* is the measurement literature's term for what STAR calls **scores** — a 0–5 rating *is* a score; we keep the research word here because that's how the studies name it.) Equal scores let voters express exactly the distinctions that matter to them and no more. (The deep dive: [Scores vs. Ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md).)
+**Accurate.** Research comparing **ratings and rankings** finds ratings have superior validity — forced full rankings capture *noise*, differences voters don't actually feel. (*"Ratings"* is the measurement literature's term for what STAR calls **scores** — a 0–5 rating *is* a score; we keep the research word here because that's how the studies name it.) Equal scores let voters express exactly the distinctions that matter to them and no more. (The deep dive: [Scores vs. Ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md).)
 
 **Equal.** Any way you fill out your ballot, someone else can fill theirs out in the equal and opposite way — no style has secret extra weight. That's the [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md), and it's why the gallery above is safe to publish as a how-to: there is no trick style to teach.
 
 ## Related concepts in this library
 
-- [Scores vs. Ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — the ballot-design distinction underneath this whole page
-- [The Score Ballot](../../00_start_here/scores_and_ranks/score_ballot.md) — this ballot in its family · [one voter, three ballot formats](../../00_start_here/topics/ballot_styles.md)
+- [Scores vs. Ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — the ballot-design distinction underneath this whole page
+- [The Score Ballot](../../07_Concepts/scores_and_ranks/score_ballot.md) — this ballot in its family · [one voter, three ballot formats](../../07_Concepts/topics/ballot_styles.md)
 - [STAR's Automatic Runoff](the_count/STAR_Automatic_Runoff.md) — where Equal Support ballots land
 - [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
 - [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
-- [Curriculum 101.3 — How you're allowed to vote](../../00_start_here/CURRICULUM.md) — this page's slot in the learning path
+- [Curriculum 101.3 — How you're allowed to vote](../../07_Concepts/CURRICULUM.md) — this page's slot in the learning path
 - Small demos: [`03a` bullet vote](../_main/cases/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../_main/cases/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../_main/cases/03c_c6_b8_style-gallery.yaml)
 
 ## Learn more

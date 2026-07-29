@@ -19,7 +19,7 @@ scenario_description: |-
   you must track every transfer, and you need every ballot in one place. Same winner,
   far more count.
 
-  Deep dive: 00_start_here/is_rcv_simple.md (the "simple — which half?" point).
+  Deep dive: 07_Concepts/is_rcv_simple.md (the "simple — which half?" point).
 
 options:
   show_description: false
@@ -67,7 +67,7 @@ TABULATION RESULTS
   you must track every transfer, and you need every ballot in one place. Same winner,
   far more count.
 
-  Deep dive: 00_start_here/is_rcv_simple.md (the "simple — which half?" point).
+  Deep dive: 07_Concepts/is_rcv_simple.md (the "simple — which half?" point).
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

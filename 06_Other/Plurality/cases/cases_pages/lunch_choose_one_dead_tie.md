@@ -2,7 +2,7 @@
 
 *Generated from [`lunch_choose_one_dead_tie.yaml`](../lunch_choose_one_dead_tie.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../00_start_here) · **1 seat** · **Expected winner:** Sushi
+**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Sushi
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm`).
 
@@ -79,6 +79,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Plurali
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

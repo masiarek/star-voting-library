@@ -90,6 +90,6 @@ Full mirrors: [`food_truck_row_tabulated/`](cases/cases_tabulated/).
 
 ---
 
-**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/) (block & limited voting), [pets_governance](../pets_governance/) (six methods, one electorate), [exercise 12](../../01_STAR/exercises/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../00_start_here/topics/electing_more_than_one.md).
+**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/) (block & limited voting), [pets_governance](../pets_governance/) (six methods, one electorate), [exercise 12](../../01_STAR/exercises/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
 
 # file: README.md

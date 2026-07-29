@@ -2,7 +2,7 @@
 
 *The "graduate seminar" companion to Ranked Robin. None of this is needed to run or advocate for a Condorcet election — [Ranked Robin](ranked_robin.md) ("most head-to-head wins") is the practical, explainable method. But once you ask **what is the structure of the pairwise results**, you walk straight into graph theory, game theory, and a few famous impossibility theorems. Here's the map.*
 
-→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../00_start_here/topics/condorcet/) · **Level: Voting 301** — Curriculum [301.4](../../00_start_here/CURRICULUM.md) (limits & theory), [301.6](../../00_start_here/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
+→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/) · **Level: Voting 301** — Curriculum [301.4](../../07_Concepts/CURRICULUM.md) (limits & theory), [301.6](../../07_Concepts/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
 
 ---
 
@@ -14,7 +14,7 @@ Every pair of candidates has a head-to-head winner, so the pairwise results form
 - A **Condorcet loser** points to no one.
 - A **cycle** (A→B→C→A) means the "beats" relation is **not transitive** — the famous **Condorcet paradox** (Condorcet, 1785). Majority rule, applied pairwise, can contradict itself. This is a property of the *voters' preferences*, not a flaw in any one method.
 
-**There is a whole academic field about just this graph** — rules that read the arrows and nothing else, Ranked Robin/Copeland among them. → [Tournament solutions](../../00_start_here/topics/tournament_solutions.md), with the uncovered/Banks/bipartisan/Slater/Markov sets, McGarvey's theorem, and a [three-ballot election with five defensible winners](../../method_comparisons/tournament_solutions/).
+**There is a whole academic field about just this graph** — rules that read the arrows and nothing else, Ranked Robin/Copeland among them. → [Tournament solutions](../../07_Concepts/topics/tournament_solutions.md), with the uncovered/Banks/bipartisan/Slater/Markov sets, McGarvey's theorem, and a [three-ballot election with five defensible winners](../../method_comparisons/tournament_solutions/).
 
 ## When there's no single winner: the Smith and Schwartz sets
 
@@ -26,7 +26,7 @@ These generalize "the Condorcet winner" to the case where none exists.
 
 **The math to compute them is graph theory:** the Smith set is the **top strongly connected component** of the dominance graph. You find it with standard algorithms — Tarjan's or Kosaraju's SCC, or by taking the transitive closure (Floyd–Warshall) and reading off the maximal candidates. "Find the Smith set" = "find the top SCC."
 
-**The concept, worked:** [The Smith set — the smallest club that beats everyone outside it](../../00_start_here/topics/smith_set.md) — the club-membership walkthrough on a runnable 4-candidate election (a 3-cycle plus a dominated outsider), the Smith-efficiency scorecard, and ISDA.
+**The concept, worked:** [The Smith set — the smallest club that beats everyone outside it](../../07_Concepts/topics/smith_set.md) — the club-membership walkthrough on a runnable 4-candidate election (a 3-cycle plus a dominated outsider), the Smith-efficiency scorecard, and ISDA.
 
 ## The cycle-resolving methods, mapped to their math
 
@@ -44,7 +44,7 @@ The last row is the gem: treat the margin matrix as a **symmetric zero-sum game*
 ## The load-bearing theorems
 
 - **Arrow's impossibility theorem** — no rank-aggregation rule can satisfy a short list of obviously-fair conditions at once.
-- **[Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md)** — every reasonable non-dictatorial method is **manipulable**; strategy-proofness is impossible. (This is *why* favorite-betrayal incentives exist.)
+- **[Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md)** — every reasonable non-dictatorial method is **manipulable**; strategy-proofness is impossible. (This is *why* favorite-betrayal incentives exist.)
 - **McKelvey–Schofield chaos theorem** — in 2+ spatial dimensions, when there's no Condorcet winner the top cycle can wander *anywhere*, so agenda-setting power becomes decisive.
 - **Probability of cycles** — under random ("impartial culture") preferences, a 3-candidate Condorcet cycle occurs ~**8.8%** of the time with many voters, and the chance of *no* Condorcet winner climbs toward 1 as candidates increase. (Exactly why a random 6-candidate, 5-ballot sweep leaves the Condorcet column blank so often — see `tools_adam/random_star_divergence.py`.)
 
@@ -64,5 +64,5 @@ You need **none** of this to run or advocate for a Condorcet election. **Ranked 
 ## Related
 
 - [Ranked Robin (the method)](ranked_robin.md) · [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md)
-- [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/)
-- Glossary: [`Condorcet`](../../00_start_here/GLOSSARY.md)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/)
+- Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md)

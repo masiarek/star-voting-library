@@ -2,7 +2,7 @@
 
 *Generated from [`range_101_c3_b5.yaml`](../range_101_c3_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [range](../../../../00_start_here) · **1 seat** · **Expected winner:** Beth
+**Method:** [range](../../../../07_Concepts) · **1 seat** · **Expected winner:** Beth
 
 ## Scenario
 
@@ -38,6 +38,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Range/c
 ## See also
 
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [range_sullivan_score_c4_b10](range_sullivan_score_c4_b10.md)

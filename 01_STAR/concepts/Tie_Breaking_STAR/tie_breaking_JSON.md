@@ -123,4 +123,4 @@ The third row is the important caveat: without an official sequence we **cannot*
 - **BetterVoting's official tie-breaking protocol** — the source of the order carried in the export (their "Random Tie-breakers" section describes the candidate shuffle that becomes `perm`): <https://docs.bettervoting.com/help/ties.html>
 - [STAR Tie-Breaking — The Full Chain](tie_breaking.md) — the tiebreak ladder (both rounds) and what you may set in a **hand-written** YAML.
 - [STAR Voting — Education & Test-Case Library](../../../readme.md) — the converter in the overall pipeline.
-- Glossary: **Tiebreaker** — [Glossary — voting methods & criteria](../../../00_start_here/GLOSSARY.md)
+- Glossary: **Tiebreaker** — [Glossary — voting methods & criteria](../../../07_Concepts/GLOSSARY.md)

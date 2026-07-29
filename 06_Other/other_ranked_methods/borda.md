@@ -2,7 +2,7 @@
 
 *If a **score** ballot can be reduced to a **ranking** (drop the intensity), can you go the other way — turn a ranking back into scores? You can. The one principled way to do it is the **Borda count**, and the act of doing it is exactly **inventing** the intensity the voter never gave.*
 
-→ The reverse direction: [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) · Borda-elimination methods: [Baldwin & Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
+→ The reverse direction: [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) · Borda-elimination methods: [Baldwin & Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md) · Glossary: [`Borda`](../../07_Concepts/GLOSSARY.md)
 
 ---
 
@@ -66,8 +66,8 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 
 **Two facts that keep the criticism calibrated.** Borda's failures are usually cited without their bounds, so here are both directions:
 
-- **Borda can deny a majority favorite.** Five voters: three rank `a ≻ b ≻ c`, two rank `b ≻ c ≻ a`. With weights `(2,1,0)`, `b` wins **7 to 6** — even though `a` is top-ranked by an outright majority *and* is the [Condorcet winner](../../00_start_here/topics/condorcet/). This is Borda failing the majority criterion in the smallest possible way, and it's why "Borda isn't Condorcet" isn't a technicality. Note also the sympathetic reading, which is genuinely held: some describe Borda as **a compromise that takes minority views into account, even when a majority completely agrees with one another** — whether that's a bug depends on what you think an election is for.
-- **But Borda can never elect a Condorcet loser.** A Condorcet winner's Borda score is always *strictly above* the average, and a [Condorcet loser](../../00_start_here/GLOSSARY.md)'s is always *strictly below* it — so a Borda winner, being at or above average, can never be the candidate who loses every head-to-head. That's a real guarantee, and one [Choose-One plurality](../../00_start_here/topics/plurality.md) does **not** have.
+- **Borda can deny a majority favorite.** Five voters: three rank `a ≻ b ≻ c`, two rank `b ≻ c ≻ a`. With weights `(2,1,0)`, `b` wins **7 to 6** — even though `a` is top-ranked by an outright majority *and* is the [Condorcet winner](../../07_Concepts/topics/condorcet/). This is Borda failing the majority criterion in the smallest possible way, and it's why "Borda isn't Condorcet" isn't a technicality. Note also the sympathetic reading, which is genuinely held: some describe Borda as **a compromise that takes minority views into account, even when a majority completely agrees with one another** — whether that's a bug depends on what you think an election is for.
+- **But Borda can never elect a Condorcet loser.** A Condorcet winner's Borda score is always *strictly above* the average, and a [Condorcet loser](../../07_Concepts/GLOSSARY.md)'s is always *strictly below* it — so a Borda winner, being at or above average, can never be the candidate who loses every head-to-head. That's a real guarantee, and one [Choose-One plurality](../../07_Concepts/topics/plurality.md) does **not** have.
 
 ## In this repo
 
@@ -78,11 +78,11 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 
 - [Condorcet's 1788 rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md) — the historical counterexample: plurality *and* Borda elect Paul, but Peter beats everyone head-to-head
 - [The dark horse](../../method_comparisons/dark_horse_borda/README.md) — Borda's *strategic* pathology, as opposed to the sincere one above
-- [Scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — the reverse direction, and why scores are the richer object
-- [Strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) — why ties matter (the ladder above)
+- [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — the reverse direction, and why scores are the richer object
+- [Strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) — why ties matter (the ladder above)
 - [Ranked Robin vs. Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) — where the weak-rank reduction shows up live
 - [Agenda voting](agenda_voting.md) — the other classic "ranked but not neutral" procedure in this folder
-- [Which RCV-IRV?](../RCV_IRV/concepts/variants/RCV_IRV_variants.md) · Glossary: [`Borda`](../../00_start_here/GLOSSARY.md)
+- [Which RCV-IRV?](../RCV_IRV/concepts/variants/RCV_IRV_variants.md) · Glossary: [`Borda`](../../07_Concepts/GLOSSARY.md)
 
 ## Borda is the pairwise table, added up
 
@@ -94,4 +94,4 @@ The right-hand term is the same for every candidate, so **the pairwise margins a
 
 This is why Borda sits in Fishburn's **C2** tier — it reads the weighted tournament, exactly like Minimax and Ranked Pairs do, despite not being a Condorcet method. Three conditions: standard equally-spaced points; ties handled by splitting points evenly; and **truncation breaks it** — under the usual "unranked get 0" rule Borda is no longer margin-determined, so real truncated-ballot Borda is not C2.
 
-The structural payoff: because Borda reads the table through a *sum* while Condorcet methods read it through *signs*, their disagreement isn't random — it lives entirely in the [circulating component of the margins](../../00_start_here/topics/cycle_cocycle_decomposition.md). Worked on twelve ballots in [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/), and framed in [what a method reads](../../00_start_here/topics/what_a_method_reads.md).
+The structural payoff: because Borda reads the table through a *sum* while Condorcet methods read it through *signs*, their disagreement isn't random — it lives entirely in the [circulating component of the margins](../../07_Concepts/topics/cycle_cocycle_decomposition.md). Worked on twelve ballots in [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/), and framed in [what a method reads](../../07_Concepts/topics/what_a_method_reads.md).

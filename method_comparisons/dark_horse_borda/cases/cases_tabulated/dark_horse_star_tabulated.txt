@@ -21,7 +21,7 @@ scenario_description: |-
   Ranked Robin also elects A. Neither method rewards burying a rival behind D — under
   a score ballot you give BOTH your rival and D a 0, so D never rises. Quinn's own
   prescription: "don't force people to dishonestly support D merely to oppose someone."
-  Concept: ../../00_start_here/topics/strategic_pathologies.md.
+  Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 video_script: |-
   Meet D, the dark horse — everybody's last choice, zero real support. Under Borda,
@@ -78,7 +78,7 @@ TABULATION RESULTS
   Ranked Robin also elects A. Neither method rewards burying a rival behind D — under
   a score ballot you give BOTH your rival and D a 0, so D never rises. Quinn's own
   prescription: "don't force people to dishonestly support D merely to oppose someone."
-  Concept: ../../00_start_here/topics/strategic_pathologies.md.
+  Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

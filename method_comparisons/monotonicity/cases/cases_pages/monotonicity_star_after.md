@@ -13,7 +13,7 @@ STAR still elects X — raising the winner did not hurt them. Compare the RCV-IR
 twin (01_Single_winner/monotonicity_irv_after.yaml), where the same change makes
 X LOSE to Z. The [Divergence from STAR] block below shows RCV-IRV electing Z on
 these very ballots: STAR is monotone, RCV-IRV is not.
-See 00_start_here/monotonicity.md.
+See 07_Concepts/monotonicity.md.
 
 ## Ballots
 
@@ -109,7 +109,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/monotonicity_star_after.md) — its entry in the divergence review ledger
-- [Monotonicity (topic hub)](../../../../00_start_here/topics/monotonicity/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Monotonicity (topic hub)](../../../../07_Concepts/topics/monotonicity/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [alaska_upward_after](alaska_upward_after.md) · [alaska_upward_before](alaska_upward_before.md) · [mono_raise_delete_after](mono_raise_delete_after.md) · [mono_raise_delete_before](mono_raise_delete_before.md) · [monotonicity_irv_after](monotonicity_irv_after.md) · [monotonicity_irv_before](monotonicity_irv_before.md) · [monotonicity_star_before](monotonicity_star_before.md) · [sf_d7_downward_after](sf_d7_downward_after.md) · [sf_d7_downward_before](sf_d7_downward_before.md)

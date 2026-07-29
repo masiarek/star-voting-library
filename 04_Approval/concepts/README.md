@@ -25,4 +25,4 @@ The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multi
 
 - Glossary: [Approval terms](glossary_approval.md)
 
-*(Parallel method hub: [STAR Voting](../../01_STAR/concepts/README.md). Up: the docs hub [`00_START_HERE`](../../00_start_here/00_START_HERE.md).)*
+*(Parallel method hub: [STAR Voting](../../01_STAR/concepts/README.md). Up: the docs hub [`00_START_HERE`](../../07_Concepts/00_START_HERE.md).)*

@@ -10,7 +10,7 @@ The same ranked ballot can be counted other ways entirely: **Ranked Robin** (a C
 
 ## Why the precision isn't pedantry
 
-It protects you from a real trap. The sharpest criticisms — [center squeeze](../../../00_start_here/topics/center_squeeze/), [exhausted ballots](exhausted_ballots_301.md) — are failures of *IRV's elimination count*, not of ranked ballots in general. Ranked Robin uses the exact same ranked ballot and has **no** center squeeze. So a loose "RCV has center squeeze" hands a well-informed opponent an easy correction — "Ranked Robin is RCV and it doesn't" — whereas "**IRV** has center squeeze" is precisely, unarguably right. <!-- terminology-ok: quoting the imprecise "RCV has center squeeze" in order to correct it -->  Precision is armor — the same discipline STAR's critics should use to separate "the score ballot" from "the runoff."
+It protects you from a real trap. The sharpest criticisms — [center squeeze](../../../07_Concepts/topics/center_squeeze/), [exhausted ballots](exhausted_ballots_301.md) — are failures of *IRV's elimination count*, not of ranked ballots in general. Ranked Robin uses the exact same ranked ballot and has **no** center squeeze. So a loose "RCV has center squeeze" hands a well-informed opponent an easy correction — "Ranked Robin is RCV and it doesn't" — whereas "**IRV** has center squeeze" is precisely, unarguably right. <!-- terminology-ok: quoting the imprecise "RCV has center squeeze" in order to correct it -->  Precision is armor — the same discipline STAR's critics should use to separate "the score ballot" from "the runoff."
 
 ## So what do I actually say?
 
@@ -27,7 +27,7 @@ The same ballot-then-tabulation split works on STAR: a **score ballot** counted 
 
 ---
 
-**This page is the short version.** The full **family tree**, the **when-to-use table**, and the reasoning behind the house style are canonical in **[TIPS — Terminology (RCV vs IRV vs RCV-IRV, and friends)](../../../00_start_here/tips/TIPS_terminology.md)**, with per-term definitions in the [GLOSSARY](../../../00_start_here/GLOSSARY.md) (RCV / IRV / RCV-IRV / Ranked Robin / STV). One extra distinction the family tree draws: Borda and Bucklin are *ranked* methods but **not** Condorcet — they can miss the head-to-head winner, so they don't behave like Ranked Robin either.
+**This page is the short version.** The full **family tree**, the **when-to-use table**, and the reasoning behind the house style are canonical in **[TIPS — Terminology (RCV vs IRV vs RCV-IRV, and friends)](../../../07_Concepts/tips/TIPS_terminology.md)**, with per-term definitions in the [GLOSSARY](../../../07_Concepts/GLOSSARY.md) (RCV / IRV / RCV-IRV / Ranked Robin / STV). One extra distinction the family tree draws: Borda and Bucklin are *ranked* methods but **not** Condorcet — they can miss the head-to-head winner, so they don't behave like Ranked Robin either.
 
 - **Level:** Voting 201 — right after the 101 mechanics, before the 301 theory. Every later topic (spoiler, favorite betrayal, discounted votes) is cleaner once the audience won't conflate "RCV" with "IRV."
-- Cross-reference: [LINKS.md](../../../00_start_here/LINKS.md) → **Full Deck 2025** ("About Ranked Choice"), **Beyond RCV zine**.
+- Cross-reference: [LINKS.md](../../../07_Concepts/LINKS.md) → **Full Deck 2025** ("About Ranked Choice"), **Beyond RCV zine**.

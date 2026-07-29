@@ -42,11 +42,11 @@ A runnable, BetterVoting-backed version of exactly this — where forced exhaust
 ## Methods that don't force-exhaust
 
 - **[Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md)** (Condorcet) reads every ballot in every pairwise contest — no eliminations, so nothing exhausts, forced or voluntary.
-- **Scored methods** (STAR, Score, Approval) never drop a ballot: a blank reads as **0** and still counts. (A different trade-off — a 0 is a real lowest score, not a neutral abstention — but the ballot never *leaves* the count.) See [scores vs. ranks](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md).
+- **Scored methods** (STAR, Score, Approval) never drop a ballot: a blank reads as **0** and still counts. (A different trade-off — a 0 is a real lowest score, not a neutral abstention — but the ballot never *leaves* the count.) See [scores vs. ranks](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md).
 
 ## Related
 
 - [Exhausted (Inactive) Ballots — the full picture](RCV_IRV_exhausted_ballots.md) (the two-failures section, real-election rates, and the proponent's fair rebuttal)
-- [Strict vs. weak ranks](../../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) — ranking limits and forbidden equal ranks
+- [Strict vs. weak ranks](../../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) — ranking limits and forbidden equal ranks
 - [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) — reads the whole ballot, never exhausts
-- [Glossary](../../../00_start_here/GLOSSARY.md)
+- [Glossary](../../../07_Concepts/GLOSSARY.md)

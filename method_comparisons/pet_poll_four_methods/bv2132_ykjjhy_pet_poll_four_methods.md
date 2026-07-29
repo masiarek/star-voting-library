@@ -61,4 +61,4 @@ Created via [`create_bv_test_election.py`](../../STARVote_LH_tabulation_engine/t
 - Folder overview: [pet_poll_four_methods — README](README.md)
 - The single-method center-squeeze counterpart: [BV2131 — Tennessee (Ranked Robin)](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md)
 - The real inspiration: Equal.Vote's `meta_pets` ("What Makes the Best Pet?"), whose four methods barely diverge — this case tunes the ballots so they do.
-- [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/README.md) · [Glossary](../../00_start_here/GLOSSARY.md)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md) · [Glossary](../../07_Concepts/GLOSSARY.md)

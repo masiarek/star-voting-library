@@ -2,7 +2,7 @@
 
 **One line:** BetterVoting and the LH engine **agree on the winner and the runoff margin** on every election. They can differ in one bookkeeping detail — **how a "no preference" ballot is classified** — which shifts the abstention count, the tally total, and the score totals, but never the result.
 
-→ Hub: [STAR Reporting](README.md) · canonical write-up: [BetterVoting and the LH engine — when the reports differ](../../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support).
+→ Hub: [STAR Reporting](README.md) · canonical write-up: [BetterVoting and the LH engine — when the reports differ](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support).
 
 ---
 
@@ -21,7 +21,7 @@ The whole gap is one rule: **BetterVoting files a flat ballot (every candidate s
 
 ## Why "no preference" ≠ "abstention"
 
-A ballot that scores everyone the same is a **cast vote** with no preference between the finalists — that's **Equal Support**, which is correctly *neutral in the runoff denominator* but still **counts in the score round**. An **abstention** is a ballot with no score recorded at all (a blank). Folding the first into the second mislabels engaged voters and makes published score totals miss a hand count. (Terms: [`GLOSSARY`](../../../00_start_here/GLOSSARY.md) · the denominator: [Runoff percentages](../the_count/runoff_percentages.md).)
+A ballot that scores everyone the same is a **cast vote** with no preference between the finalists — that's **Equal Support**, which is correctly *neutral in the runoff denominator* but still **counts in the score round**. An **abstention** is a ballot with no score recorded at all (a blank). Folding the first into the second mislabels engaged voters and makes published score totals miss a hand count. (Terms: [`GLOSSARY`](../../../07_Concepts/GLOSSARY.md) · the denominator: [Runoff percentages](../the_count/runoff_percentages.md).)
 
 ## Two views of the same election
 

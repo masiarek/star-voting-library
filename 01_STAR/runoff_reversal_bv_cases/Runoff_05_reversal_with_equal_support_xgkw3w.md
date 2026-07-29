@@ -2,7 +2,7 @@
 
 **Level 201 · the first reversal where some voters have no preference.** Rosa leads the Scoring Round (21), but two voters scored **Rosa and Sage equally** — *Equal Support* — so they sit out the runoff. Of the **three** who did pick between the finalists, two prefer **Sage**, so Sage wins. The runoff is decided by **3 of 5** voters, not all five — the bridge to the two-denominator idea.
 
-→ what an Equal Support ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md) · the two denominators: [Runoff percentages](../concepts/the_count/runoff_percentages.md) · concept: [The Automatic Runoff Round](../concepts/the_count/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
+→ what an Equal Support ballot is: [`GLOSSARY`](../../07_Concepts/GLOSSARY.md) · the two denominators: [Runoff percentages](../concepts/the_count/runoff_percentages.md) · concept: [The Automatic Runoff Round](../concepts/the_count/STAR_Automatic_Runoff.md) · teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 

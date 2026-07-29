@@ -6,7 +6,7 @@ The same election as [BV2165](bv2165_9vxcj7_coombs_noshow.md) with one change, *
 
 ## Source
 
-Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A7, **Example 19** (continued — Felsenthal notes the same flip arises from *truncation* to Cass-only: the Truncation paradox). Full §A7 treatment: [coombs.md](../../00_start_here/voting_paradoxes/coombs.md).
+Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A7, **Example 19** (continued — Felsenthal notes the same flip arises from *truncation* to Cass-only: the Truncation paradox). Full §A7 treatment: [coombs.md](../../07_Concepts/voting_paradoxes/coombs.md).
 
 ## The one changed datum
 
@@ -18,7 +18,7 @@ No. of voters    BV2165 (all vote)       BV2166 (two stay home)
       2          Cass > Boone > Amy      —      (abstain)
 ```
 
-**Coombs, worked:** on 13 ballots the last-place counts become Amy 4, **Boone 5**, Cass 4 — now *Boone* is deleted, and **Cass wins**. The abstainers' ordering was `Cass>Boone>Amy`: full turnout bought their second choice (BV2165), staying home buys their first — the [No-Show paradox](../../00_start_here/voting_paradoxes/no_show.md) under Coombs.
+**Coombs, worked:** on 13 ballots the last-place counts become Amy 4, **Boone 5**, Cass 4 — now *Boone* is deleted, and **Cass wins**. The abstainers' ordering was `Cass>Boone>Amy`: full turnout bought their second choice (BV2165), staying home buys their first — the [No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md) under Coombs.
 
 ## The live STAR flip — shown honestly
 

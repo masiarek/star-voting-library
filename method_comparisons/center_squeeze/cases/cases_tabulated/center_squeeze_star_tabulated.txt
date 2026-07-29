@@ -14,7 +14,7 @@ scenario_description: |-
   strength of support and wins. The [Divergence from STAR] and [Condorcet Winner]
   lines below show Choose-One = Left, RCV-IRV = Left, STAR = Center = Condorcet
   winner (also what Ranked Robin would elect).
-  See 00_start_here/center_squeeze.md.
+  See 07_Concepts/center_squeeze.md.
 
 options:
   show_description: false
@@ -56,7 +56,7 @@ TABULATION RESULTS
   strength of support and wins. The [Divergence from STAR] and [Condorcet Winner]
   lines below show Choose-One = Left, RCV-IRV = Left, STAR = Center = Condorcet
   winner (also what Ranked Robin would elect).
-  See 00_start_here/center_squeeze.md.
+  See 07_Concepts/center_squeeze.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

@@ -7,7 +7,7 @@ election-methods community's interchange format: one grammar for ranked AND
 rated ballots. This library authors in a spreadsheet-style YAML grid instead.
 The two correspond at the *ballot* layer — ABIF votelines ↔ our `ballots:` block
 — so this tool bridges exactly that layer, in both directions. See the explainer:
-00_start_here/scores_and_ranks/abif_format.md
+07_Concepts/scores_and_ranks/abif_format.md
 
     # ABIF -> tabulatable YAML (direction inferred from the .abif extension)
     python convert_abif.py testfiles/test003.abif -o test003.yaml

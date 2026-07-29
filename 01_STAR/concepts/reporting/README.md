@@ -14,7 +14,7 @@ A STAR result is a short funnel, and every report shows the same stages:
 2. **Finalists** — the two highest scorers advance.
 3. **Automatic Runoff** — each ballot goes to whichever finalist it scored higher.
 4. **Percentages** — the winner needs a majority of the voters **with a preference** between the two finalists. (→ [Runoff percentages — two denominators](../the_count/runoff_percentages.md))
-5. **No-preference ballots** — ballots that score the two finalists equally are **Equal Support** (counted in the score round, set aside from the runoff percentage); a fully blank ballot is an **abstention**. (→ [`GLOSSARY`](../../../00_start_here/GLOSSARY.md))
+5. **No-preference ballots** — ballots that score the two finalists equally are **Equal Support** (counted in the score round, set aside from the runoff percentage); a fully blank ballot is an **abstention**. (→ [`GLOSSARY`](../../../07_Concepts/GLOSSARY.md))
 
 ## The two reports
 
@@ -35,10 +35,10 @@ A STAR result is a short funnel, and every report shows the same stages:
 
 ## Canonical deep-dives (linked, not duplicated)
 
-- [Reading a STAR report](../../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) — the LH report, section by section.
-- [BetterVoting and the LH engine](../../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) — why one election has two reports, and how they map.
+- [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) — the LH report, section by section.
+- [BetterVoting and the LH engine](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) — why one election has two reports, and how they map.
 - [Runoff percentages](../the_count/runoff_percentages.md) — the two-denominator idea.
-- [Tabulation, step by step](../../../00_start_here/topics/tabulation_star_vs_irv.md) — STAR's two steps vs IRV's rounds.
+- [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) — STAR's two steps vs IRV's rounds.
 
 ## Worked examples — always two views
 

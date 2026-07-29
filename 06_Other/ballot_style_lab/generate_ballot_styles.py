@@ -3,7 +3,7 @@
 
 The idea (Adam's): random ballots make good stress fixtures, but pure uniform
 noise looks like no electorate on Earth. So this generator follows the repo's
-own methodology page (00_start_here/topics/simulate_utilities_not_ballots.md):
+own methodology page (07_Concepts/topics/simulate_utilities_not_ballots.md):
 
     layer 1 — OPINION:    sample each voter's utilities from a faction model
                           (slants/bias + personal noise, a few true-noise voters)
@@ -694,7 +694,7 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
         f"06_Other/ballot_style_lab/generate_ballot_styles.py "
         f"(scenario '{name}', seed {seed}) - utilities sampled from the "
         f"faction model above, then rendered through each voter's ballot "
-        f"style. Per 00_start_here/topics/simulate_utilities_not_ballots.md "
+        f"style. Per 07_Concepts/topics/simulate_utilities_not_ballots.md "
         f"this is the 'stress-test the tabulator' job (with human-shaped "
         f"renderings), not a method-welfare comparison. Regenerate "
         f"byte-identically: python generate_ballot_styles.py --emit {name}"))

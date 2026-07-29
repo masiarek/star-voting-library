@@ -36,6 +36,6 @@ the honest answer to "who is even in contention?".
       Every member of the set (E) beats B head-to-head, yet
       RCV-IRV elected B anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

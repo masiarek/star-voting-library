@@ -27,7 +27,7 @@ LIVE on BetterVoting as BV2169 — two races on the same 100 voters: this
 STAR race plus an RCV-IRV race that agrees (first-choice majority).
 Live results: https://bettervoting.com/2jrfpg/results
 Full claim-by-claim reading of the article:
-00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
 ## Ballots
 
@@ -117,7 +117,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)

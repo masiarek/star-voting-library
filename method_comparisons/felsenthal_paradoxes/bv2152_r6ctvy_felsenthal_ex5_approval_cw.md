@@ -21,7 +21,7 @@ No. of voters    Ranking                     Approves
      13          Carla > Bert  > Anna        {Carla}
 ```
 
-Pairwise: **Bert beats Anna 27–20 and Carla 32–15** — the Condorcet winner (social ordering Bert > Anna > Carla). Approval totals: **Anna 28, Bert 14, Carla 21** → Anna wins. The 18 Anna-bullet and 13 Carla-bullet voters rank Bert second but approve only their favorite, so the pairwise favorite finishes *last* on approvals — the [Condorcet winner paradox](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md) under Approval.
+Pairwise: **Bert beats Anna 27–20 and Carla 32–15** — the Condorcet winner (social ordering Bert > Anna > Carla). Approval totals: **Anna 28, Bert 14, Carla 21** → Anna wins. The 18 Anna-bullet and 13 Carla-bullet voters rank Bert second but approve only their favorite, so the pairwise favorite finishes *last* on approvals — the [Condorcet winner paradox](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md) under Approval.
 
 ## The races
 

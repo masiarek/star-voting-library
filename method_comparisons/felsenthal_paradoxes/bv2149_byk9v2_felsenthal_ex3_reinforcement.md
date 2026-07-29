@@ -26,7 +26,7 @@ Under plurality-with-runoff (= IRV for three candidates): District I has no firs
 
 ## Why this is the Reinforcement paradox
 
-The Reinforcement postulate says: if two disjoint electorates each elect X, their union must elect X. Both districts elected Bruno; the union elects Alma. Nothing subjective is needed to call this wrong — the procedure contradicts *its own* two verdicts. The mechanism is the elimination step again: amalgamation flips *who gets deleted* (Alma in District I, Cora in the combined count), and the deletion decides the final pair. Teaching page: [multiple_districts.md](../../00_start_here/voting_paradoxes/multiple_districts.md).
+The Reinforcement postulate says: if two disjoint electorates each elect X, their union must elect X. Both districts elected Bruno; the union elects Alma. Nothing subjective is needed to call this wrong — the procedure contradicts *its own* two verdicts. The mechanism is the elimination step again: amalgamation flips *who gets deleted* (Alma in District I, Cora in the combined count), and the deletion decides the final pair. Teaching page: [multiple_districts.md](../../07_Concepts/voting_paradoxes/multiple_districts.md).
 
 A subtlety the case pages flag: District I and the Combined electorate are Condorcet **cycles** (combined: Alma>Bruno 17–15, Bruno>Cora 18–14, Cora>Alma 21–11), so there's no "true winner" to appeal to — which is exactly why the paradox is stated as self-inconsistency, not as missing a Condorcet winner. (District II does have a Condorcet winner: Bruno. No Ranked Robin races in this trio — BV would resolve the cyclic ties at random, which can't be frozen; see the [BV2142 caveat](../../05_Ranked_Robin/clone_independence/bv2142_4gfwdq_clone_cycle_pre.md).)
 

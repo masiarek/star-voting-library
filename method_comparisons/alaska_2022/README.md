@@ -6,7 +6,7 @@
 
 > **Which Alaska election is this?** The **August 2022 US House *special*** — the one where RCV-IRV misfired. It is *not* the November general (which worked fine — that's the [runnable counterpart](../alaska_2022_general/README.md)). Confused by all the Alaska elections? See the map: **[Alaska's RCV elections — the whole picture](../../06_Other/RCV_IRV/concepts/case_studies/alaska_rcv_elections.md)**.
 
-**One line:** in the August 2022 Alaska US House special election, **Begich beat both other candidates head-to-head** — a majority preferred him to Peltola *and* to Palin — yet **RCV-IRV eliminated him first** for having the fewest first choices, and Peltola won. Count the *same ballots* with a method that reads the whole ballot — **Ranked Robin** or **STAR** — and Begich, the Condorcet winner, wins. That is the [center squeeze](../../00_start_here/topics/center_squeeze/README.md), in a real federal race.
+**One line:** in the August 2022 Alaska US House special election, **Begich beat both other candidates head-to-head** — a majority preferred him to Peltola *and* to Palin — yet **RCV-IRV eliminated him first** for having the fewest first choices, and Peltola won. Count the *same ballots* with a method that reads the whole ballot — **Ranked Robin** or **STAR** — and Begich, the Condorcet winner, wins. That is the [center squeeze](../../07_Concepts/topics/center_squeeze/README.md), in a real federal race.
 
 This folder reproduces it as a **runnable, reduced 200-voter model** so you can tabulate it yourself and see all four methods diverge.
 
@@ -136,4 +136,4 @@ Methods that read the whole ballot — Ranked Robin, any Condorcet method, and S
 - **Reproduce from the raw ballots:** the public [Cast Vote Record + tabulation code](https://github.com/nardo/Equal.Vote/tree/master/alaska) and Alaska's [official RCV detailed report](https://www.elections.alaska.gov/results/22SSPG/RcvDetailedReport.pdf) — the actual data behind this case's reduced model
 - [Alaska 2022 — RCV-IRV case study](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md) (the prose write-up with the real vote totals)
 - [Burlington 2009](../burlington_2009/README.md) — the other canonical real IRV center squeeze, also runnable
-- [Center squeeze](../../00_start_here/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md)
+- [Center squeeze](../../07_Concepts/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md)

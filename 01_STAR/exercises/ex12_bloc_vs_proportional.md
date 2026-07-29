@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr`, Test ID BV2199 — both races in one election; BV agrees on both seat pairs, and banners the STAR-PR race "Tied!" — a documented serializer quirk, see solution (d)).
 
-**You practice:** [multi-winner thinking](../../00_start_here/topics/electing_more_than_one.md) — **Bloc STAR** (run STAR once per seat) versus **Allocated Score** (STAR-PR: winners *spend* their supporters' ballot weight) — and the majoritarian-vs-proportional design question underneath.
+**You practice:** [multi-winner thinking](../../07_Concepts/topics/electing_more_than_one.md) — **Bloc STAR** (run STAR once per seat) versus **Allocated Score** (STAR-PR: winners *spend* their supporters' ballot weight) — and the majoritarian-vs-proportional design question underneath.
 
 Work each part on paper before opening its solution. Both YAMLs are runnable (the same ballots, different `voting_method`); the `_tabulated` mirrors are the full audit reports.
 
@@ -130,8 +130,8 @@ Sources: [ex12_bloc_sweep.yaml](cases/ex12_bloc_sweep.yaml) · [ex12_proportiona
 
 ---
 
-**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [electing more than one](../../00_start_here/topics/electing_more_than_one.md), [Bloc STAR](../../02_STAR_Bloc/README.md), [proportional STAR](../../03_STAR_PR/README.md).
+**Where this comes from.** Original to this repo (ballots and cast). Concept homes: [electing more than one](../../07_Concepts/topics/electing_more_than_one.md), [Bloc STAR](../../02_STAR_Bloc/README.md), [proportional STAR](../../03_STAR_PR/README.md).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex12_bloc_vs_proportional.md

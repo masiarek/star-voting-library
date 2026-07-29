@@ -71,7 +71,7 @@ Take any one of the five `Austen > Brontë > Camus > Dickens` ballots. **4/5 of 
 <details>
 <summary><b>(e) The proportionality check</b></summary>
 
-With quota 4, the 5-voter Austen bloc funds exactly one seat (and its leftover 1 vote correctly *failed* to buy Brontë a second); the 3-voter Camus camp — just under quota on its own — reaches a seat with the transferred remainders. One seat per ~4 voters: **proportional to the room**, as designed. A Bloc-style count on these preferences would hand the Austen majority *both* seats ([exercise 12](ex12_bloc_vs_proportional.md)'s sweep, in ranked clothing). STV is the ranked-ballot route to the same proportional philosophy as Allocated Score — the side-by-side is worked in [STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), and the family map lives at [electing more than one](../../00_start_here/topics/electing_more_than_one.md).
+With quota 4, the 5-voter Austen bloc funds exactly one seat (and its leftover 1 vote correctly *failed* to buy Brontë a second); the 3-voter Camus camp — just under quota on its own — reaches a seat with the transferred remainders. One seat per ~4 voters: **proportional to the room**, as designed. A Bloc-style count on these preferences would hand the Austen majority *both* seats ([exercise 12](ex12_bloc_vs_proportional.md)'s sweep, in ranked clothing). STV is the ranked-ballot route to the same proportional philosophy as Allocated Score — the side-by-side is worked in [STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), and the family map lives at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
 
 </details>
 
@@ -88,7 +88,7 @@ One more symptom for the report: the BV UI *export* of both elections silently o
 
 ## Reading this fairly
 
-A tidy electorate: full rankings (nothing exhausts), one surplus, one meaningful elimination — chosen so every moving part fires exactly once. Real STV counts inherit RCV-IRV's operational caveats ([central tabulation](../../00_start_here/GLOSSARY.md), exhaustion under rank limits) alongside the genuine proportionality shown here; the balanced comparison with the score-ballot PR family is [STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md).
+A tidy electorate: full rankings (nothing exhausts), one surplus, one meaningful elimination — chosen so every moving part fires exactly once. Real STV counts inherit RCV-IRV's operational caveats ([central tabulation](../../07_Concepts/GLOSSARY.md), exhaustion under rank limits) alongside the genuine proportionality shown here; the balanced comparison with the score-ballot PR family is [STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md).
 
 ## Run it yourself
 
@@ -102,6 +102,6 @@ Source: [ex14_two_novels.yaml](cases/ex14_two_novels.yaml). Full report: [mirror
 
 **Where this comes from.** Original to this repo (ballots and cast — novelists as candidates, so the ranked ballot reads like a bookshelf). Concept homes: [STV](../../06_Other/STV/README.md), [STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex14_transfer_machine.md

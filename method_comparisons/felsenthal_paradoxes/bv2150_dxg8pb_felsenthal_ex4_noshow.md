@@ -18,11 +18,11 @@ No. of voters    Preference ordering
       3          Carl > Beth > Andy
 ```
 
-First choices: **Andy 4, Beth 3, Carl 4** — no majority, so plurality-with-runoff (= IRV for three candidates) deletes **Beth**, and Carl beats Andy **7–4**. Meanwhile **Beth is the Condorcet winner** (beats Andy 6–5, Carl 7–4) — so the runoff race also exhibits the [Condorcet winner paradox](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md), electing Carl, whom Beth beats 7–4.
+First choices: **Andy 4, Beth 3, Carl 4** — no majority, so plurality-with-runoff (= IRV for three candidates) deletes **Beth**, and Carl beats Andy **7–4**. Meanwhile **Beth is the Condorcet winner** (beats Andy 6–5, Carl 7–4) — so the runoff race also exhibits the [Condorcet winner paradox](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md), electing Carl, whom Beth beats 7–4.
 
 ## The paradoxes this pair demonstrates
 
-The **[No-Show paradox](../../00_start_here/voting_paradoxes/no_show.md)** (conditional): the four `Andy>Beth>Carl` voters would have done *better* if two of them hadn't voted — see [BV2151](bv2151_97hbpw_felsenthal_ex4_noshow.md), where the same procedure elects Beth. The **Twin paradox** (weak form) is the same pair read forward: start from the 9-voter electorate and add two "twins" identical to the Andy pair — their arrival elects Carl, the twins' common worst choice. Both live on one teaching page: [no_show.md](../../00_start_here/voting_paradoxes/no_show.md).
+The **[No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md)** (conditional): the four `Andy>Beth>Carl` voters would have done *better* if two of them hadn't voted — see [BV2151](bv2151_97hbpw_felsenthal_ex4_noshow.md), where the same procedure elects Beth. The **Twin paradox** (weak form) is the same pair read forward: start from the 9-voter electorate and add two "twins" identical to the Andy pair — their arrival elects Carl, the twins' common worst choice. Both live on one teaching page: [no_show.md](../../07_Concepts/voting_paradoxes/no_show.md).
 
 ## View 1 — BetterVoting
 

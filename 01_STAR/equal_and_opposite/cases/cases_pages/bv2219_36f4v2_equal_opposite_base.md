@@ -110,6 +110,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_an
 ## See also
 
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2220_q8q9m7_equal_opposite_plus_cancel](bv2220_q8q9m7_equal_opposite_plus_cancel.md)

@@ -71,7 +71,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
    RCV-IRV winner Cocoa is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/margins_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -84,10 +84,10 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [margins_paper_exact_304](margins_paper_exact_304.md) · [margins_ranked_robin](margins_ranked_robin.md) · [margins_star](margins_star.md)

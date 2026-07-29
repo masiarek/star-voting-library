@@ -66,4 +66,4 @@ Full audit copy: [`_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt`](cases
 - [BV126](../../01_STAR/tie_break_dead_rung/bv126_ties_every_step_8fvd2x.md) — the single-winner "ties every step" version (some flat ballots dropped).
 - [BV132](bv132_verify_votes_bloc.md) — the Bloc flat-ballot-drop bug with only *some* flat ballots.
 - [BV131](bv131_guido_bloc.md) — a Bloc seat decided by the lot.
-- [The "dead rung" case set](../../01_STAR/tie_break_dead_rung/README.md) · [why flat ballots don't change the winner](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
+- [The "dead rung" case set](../../01_STAR/tie_break_dead_rung/README.md) · [why flat ballots don't change the winner](../../07_Concepts/topics/ties/why_contrived_tie_cases.md).

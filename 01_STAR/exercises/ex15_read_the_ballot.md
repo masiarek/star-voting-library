@@ -1,10 +1,10 @@
 # Exercise 15 — Read the ballot, name the method
 
-*Every other exercise in this set hands you the method and asks who wins. This one runs backwards. You get two filled-in profiles and no method name — just the marks. Name the method from the shape of the ballot, then count. Then the part the textbooks stop before: one of these two profiles has a property that guarantees its winner is also the **[Condorcet winner](../../00_start_here/topics/condorcet/)**, and the other has a winner so uncontested that no method in the library disagrees. Work out which is which, and why.*
+*Every other exercise in this set hands you the method and asks who wins. This one runs backwards. You get two filled-in profiles and no method name — just the marks. Name the method from the shape of the ballot, then count. Then the part the textbooks stop before: one of these two profiles has a property that guarantees its winner is also the **[Condorcet winner](../../07_Concepts/topics/condorcet/)**, and the other has a winner so uncontested that no method in the library disagrees. Work out which is which, and why.*
 
 **▶ Live on BetterVoting:** profile (a) — [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`, Test ID BV2258 — two races on the same 35 ballots: the Yes/No count, then the identical marks as 5/0 scores so the head-to-head view prints). Profile (b) — [vote](https://bettervoting.com/tfm64p) · **[results ↗](https://bettervoting.com/tfm64p/results)** (election `tfm64p`, Test ID BV2259). **BetterVoting's own count agrees with the engine on all three races** — Blair, Blair, Clara. Two elections rather than one because the profiles have different electorates (35 voters and 4), and every BV voter votes every race.
 
-**You practice:** reading a ballot as evidence — what a set of marks can and cannot record — plus the vocabulary that names each shape: **dichotomous** vs **cardinal**, approval shares vs vote shares, and the guarantee that comes free on a [dichotomous profile](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice).
+**You practice:** reading a ballot as evidence — what a set of marks can and cannot record — plus the vocabulary that names each shape: **dichotomous** vs **cardinal**, approval shares vs vote shares, and the guarantee that comes free on a [dichotomous profile](../../07_Concepts/GLOSSARY.md#the-wider-field-computational-social-choice).
 
 Work each part on paper before opening its solution. All three YAMLs are runnable and their answer keys are regression-tested.
 
@@ -46,9 +46,9 @@ The column headings are how many voters cast that ballot.
 **Approval voting.** Two features settle it:
 
 1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../06_Other/RCV_IRV/concepts/), [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Borda — and every score method.
-2. **Voters mark different *numbers* of candidates.** The ×15 bloc approves two, the ×5 bloc approves one. That rules out [Choose-One](../../00_start_here/topics/plurality.md) (exactly one mark) and k-approval (exactly k marks).
+2. **Voters mark different *numbers* of candidates.** The ×15 bloc approves two, the ×5 bloc approves one. That rules out [Choose-One](../../07_Concepts/topics/plurality.md) (exactly one mark) and k-approval (exactly k marks).
 
-Independent, binary, unlimited marks — that is the definition of an approval ballot. The theorists' name for a profile of them is a **[dichotomous profile](../../00_start_here/GLOSSARY.md#the-wider-field-computational-social-choice)**: every voter's ballot is a ranking with exactly two levels and nothing said inside either one.
+Independent, binary, unlimited marks — that is the definition of an approval ballot. The theorists' name for a profile of them is a **[dichotomous profile](../../07_Concepts/GLOSSARY.md#the-wider-field-computational-social-choice)**: every voter's ballot is a ranking with exactly two levels and nothing said inside either one.
 
 </details>
 
@@ -82,7 +82,7 @@ Full report: [`ex15_approval_yes_no`](cases/cases_pages/ex15_approval_yes_no.md)
 
 **Score voting**, also called Range: rate every candidate on a fixed scale, add the columns, highest total wins.
 
-It's **cardinal** because each candidate is judged **against the scale, not against the other candidates** — the ballot records *how much* a voter likes each one, independently, so it can say "these two are exactly equal" and "this one is far better than that one." An ordinal ballot can only say *which comes first*; it has no way to distinguish a hair's-breadth preference from a chasm. (Voter 2 rating Bruno and Clara both 5 is a statement no ranking can make.) → [scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [scoring methods vs ranked voting](../../00_start_here/topics/scoring-methods-vs-ranked-voting.md)
+It's **cardinal** because each candidate is judged **against the scale, not against the other candidates** — the ballot records *how much* a voter likes each one, independently, so it can say "these two are exactly equal" and "this one is far better than that one." An ordinal ballot can only say *which comes first*; it has no way to distinguish a hair's-breadth preference from a chasm. (Voter 2 rating Bruno and Clara both 5 is a statement no ranking can make.) → [scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [scoring methods vs ranked voting](../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md)
 
 The giveaway that it isn't [STAR](../concepts/STAR_start_here.md), by the way, is that nothing in the prompt mentions a runoff — the ballots are identical. **A ballot alone never fully identifies the method**; Score and STAR share this one, which is the whole point of [exercise 3](ex03_five_verdicts.md).
 
@@ -112,7 +112,7 @@ Automatic Runoff Round
 
 Clara wins **4–0**, and she's the Condorcet winner too. The engine prints **no `[Divergence from STAR]` block at all** — Choose-One, RCV-IRV, Approval and Score all land on Clara. She is scored top or joint-top by every single voter, so there is nothing for the methods to disagree about. Worth keeping one of these around: [most curated elections in this library diverge](../../method_comparisons/divergence_review/INDEX.md), and it would be dishonest to only ever show those.
 
-**Can you tell each voter's favorite?** Only for two of them. Voter 1 and voter 3 give Clara a clear 5. But voter 2 rates Bruno and Clara both 5, and voter 4 rates Alice and Clara both 4 — **tied at the top, with no tiebreaker on the ballot.** So you cannot reconstruct a Choose-One tally from these ballots without inventing information the voters didn't give you. (On profile (a) it's worse: an approval ballot has no top at all.) That asymmetry — score ballots can be read down to cruder ones, but never perfectly — is the [fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md).
+**Can you tell each voter's favorite?** Only for two of them. Voter 1 and voter 3 give Clara a clear 5. But voter 2 rates Bruno and Clara both 5, and voter 4 rates Alice and Clara both 4 — **tied at the top, with no tiebreaker on the ballot.** So you cannot reconstruct a Choose-One tally from these ballots without inventing information the voters didn't give you. (On profile (a) it's worse: an approval ballot has no top at all.) That asymmetry — score ballots can be read down to cruder ones, but never perfectly — is the [fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
 
 Full report: [`ex15_score_profile`](cases/cases_pages/ex15_score_profile.md).
 
@@ -176,7 +176,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/exercise
 - [Exercise 3 — one electorate, five verdicts](ex03_five_verdicts.md) — the same ballot, five methods, five answers
 - [Exercise 13 — where do you draw the line?](ex13_draw_the_line.md) — the other half of the approval story: one honest electorate, three thresholds, three winners
 - [Approval Voting](../../04_Approval/concepts/approval_voting.md) · [Approval in the theory literature](../../04_Approval/concepts/approval_in_the_literature.md)
-- [Scores vs ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) · [the fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md)
+- [Scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [the fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md)
 - [When compression moves the Condorcet winner](../../method_comparisons/black_curtain/condorcet_compression.md) — part (f), worked in full
 
 # file: ex15_read_the_ballot.md

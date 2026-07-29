@@ -66,7 +66,7 @@ Winner — Ranked Robin (RCV-RR): Ada
    beats every opponent head-to-head — the Condorcet winner.
 ```
 
-Look at Dan's column: **"Ada beats Dan 3 – 0"** — *all three* voters are counted as preferring Ada to Dan, including the two who left Dan blank. Blank = below every ranked candidate, exactly as if written last. Dan loses every pairwise 3–0 and finishes last; Ada beats everyone (the [Condorcet winner](../../00_start_here/GLOSSARY.md#properties-criteria)) and wins outright. The rank *numbers* never entered the arithmetic.
+Look at Dan's column: **"Ada beats Dan 3 – 0"** — *all three* voters are counted as preferring Ada to Dan, including the two who left Dan blank. Blank = below every ranked candidate, exactly as if written last. Dan loses every pairwise 3–0 and finishes last; Ada beats everyone (the [Condorcet winner](../../07_Concepts/GLOSSARY.md#properties-criteria)) and wins outright. The rank *numbers* never entered the arithmetic.
 
 > Want the whole count? Full LH report → [`rr_blank_is_last_c4_b3_tabulated.txt`](../_main/cases/cases_tabulated/rr_blank_is_last_c4_b3_tabulated.txt) · source → [`rr_blank_is_last_c4_b3.yaml`](../_main/cases/rr_blank_is_last_c4_b3.yaml). Independently cross-checked with `pref_voting`'s Copeland (AGREE, unique winner).
 
@@ -74,7 +74,7 @@ Look at Dan's column: **"Ada beats Dan 3 – 0"** — *all three* voters are cou
 
 ## The one subtlety that *is* real — multiple blanks are **tied**
 
-Ranking your single worst choice "last" and leaving them "blank" are the same. But leaving **two or more** candidates blank is **not** the same as ranking them in some order — the blanks are all **tied for last** with each other. Two blanks means neither beats the other; you cast a pairwise *tie* between them (an [Equal Support](../../00_start_here/GLOSSARY.md) contest), not a preference. If you actually prefer one of your bottom two, you must rank them to say so.
+Ranking your single worst choice "last" and leaving them "blank" are the same. But leaving **two or more** candidates blank is **not** the same as ranking them in some order — the blanks are all **tied for last** with each other. Two blanks means neither beats the other; you cast a pairwise *tie* between them (an [Equal Support](../../07_Concepts/GLOSSARY.md) contest), not a preference. If you actually prefer one of your bottom two, you must rank them to say so.
 
 That's the honest thing a ballot instruction has to convey: *blanks rank below everyone you ranked, and blanks tie each other.*
 
@@ -84,7 +84,7 @@ That's the honest thing a ballot instruction has to convey: *blanks rank below e
 
 The trap wording is anything tier-specific — **"ranked last (i.e. 6th)"** bakes in an assumption that the ballot has exactly five tiers. It doesn't have to: five bubbles is a common, tested default, but a Ranked Robin contest can offer four, six, or as many tiers as there are candidates. The moment the tier count differs, "6th" is wrong.
 
-The universally-correct instruction is order-based, matching how the count works and how this repo already frames the no-preference bucket as **[Equal Support](../../00_start_here/GLOSSARY.md)**:
+The universally-correct instruction is order-based, matching how the count works and how this repo already frames the no-preference bucket as **[Equal Support](../../07_Concepts/GLOSSARY.md)**:
 
 > **Candidates left blank are ranked below all others (and tie one another).**
 
@@ -92,6 +92,6 @@ No tier number, so it survives any ballot and any contest — the same disciplin
 
 ---
 
-*See also: [Ranked Robin (the method)](ranked_robin.md) · [why it isn't Borda — the glossary](glossary_ranked_robin.md) · [Strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) (why equal ranks / ties are first-class here) · [Summability](RCV_RR_summability.md). Up: [Ranked Robin concept pages](README.md).*
+*See also: [Ranked Robin (the method)](ranked_robin.md) · [why it isn't Borda — the glossary](glossary_ranked_robin.md) · [Strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) (why equal ranks / ties are first-class here) · [Summability](RCV_RR_summability.md). Up: [Ranked Robin concept pages](README.md).*
 
 # file: rr_blank_means_last.md

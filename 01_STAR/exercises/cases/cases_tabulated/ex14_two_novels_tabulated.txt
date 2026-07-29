@@ -92,4 +92,4 @@ the honest answer to "who is even in contention?".
    Smith set (1 of 4): Austen
    Outside (3):        Bronte, Camus, Dickens
    One member ⇒ Austen is the Condorcet winner, beating every rival head-to-head.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md

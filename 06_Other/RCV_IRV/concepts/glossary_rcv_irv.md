@@ -1,8 +1,8 @@
 # Glossary — RCV-IRV (and ranked-ballot terms)
 
-Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cross-method vocabulary (monotonicity, summability, the Equal Vote criterion…) lives in the [main glossary](../../../00_start_here/GLOSSARY.md).
+Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cross-method vocabulary (monotonicity, summability, the Equal Vote criterion…) lives in the [main glossary](../../../07_Concepts/GLOSSARY.md).
 
-- **RCV (Ranked-Choice Voting)** — a ranked (**ordinal**) *ballot* type (rank 1st, 2nd, 3rd…): conveys order, not degree of support — the contrast with a *scored (cardinal)* ballot. A **family**, not one method; in US usage it's loosely used to mean IRV. → [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../00_start_here/tips/TIPS_terminology.md); scored vs ranked [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md)
+- **RCV (Ranked-Choice Voting)** — a ranked (**ordinal**) *ballot* type (rank 1st, 2nd, 3rd…): conveys order, not degree of support — the contrast with a *scored (cardinal)* ballot. A **family**, not one method; in US usage it's loosely used to mean IRV. → [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../../07_Concepts/tips/TIPS_terminology.md); scored vs ranked [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)
 - **IRV (Instant-Runoff Voting)** — *one tabulation* of a ranked ballot: eliminate the lowest first-choice, transfer, repeat until a majority. The single-winner method usually meant by "RCV."
 - **RCV-IRV** — this repo's disambiguating label for "the RCV that is IRV" (vs. the ballot family or the other ranked tabulations).
 - **ballot vs tabulation** — the ballot is *what the voter marks*; the tabulation is *how it's counted*. "RCV" names a ballot; "IRV" names a tabulation.
@@ -11,6 +11,6 @@ Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cros
 - **STV (Single Transferable Vote)** — the proportional, multi-winner tabulation of ranked ballots (the proportional cousin of IRV, not IRV itself).
 - **Hare** — the ranked-transfer idea; single-winner = IRV, multi-winner = STV.
 
-*The shared criteria RCV-IRV fails or passes — **monotonicity**, **summability** (and its operational cost, [central tabulation](../../../00_start_here/topics/central_tabulation.md)), the **Equal Vote criterion**, **later-no-harm** — are in the [main glossary](../../../00_start_here/GLOSSARY.md#properties-criteria) (stated fairly, with caveats).*
+*The shared criteria RCV-IRV fails or passes — **monotonicity**, **summability** (and its operational cost, [central tabulation](../../../07_Concepts/topics/central_tabulation.md)), the **Equal Vote criterion**, **later-no-harm** — are in the [main glossary](../../../07_Concepts/GLOSSARY.md#properties-criteria) (stated fairly, with caveats).*
 
 # file: glossary_rcv_irv.md

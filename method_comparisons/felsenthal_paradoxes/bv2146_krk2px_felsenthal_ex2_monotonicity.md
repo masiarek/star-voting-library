@@ -67,4 +67,4 @@ Ranked Robin ([bv2146_krk2px_ranked_robin.yaml](cases/bv2146_krk2px_ranked_robin
 | Ranked Robin | Ada | Ada | ✓ |
 | STAR (ranks→scores) | Ada | Ada | ✓ |
 
-Frozen export: [bv2146_krk2px_bv_export.json](cases/bv2146_krk2px_bv_export.json) · Part 1: [BV2145 — the Condorcet winner eliminated](bv2145_6fj2kg_felsenthal_ex2.md) · Teaching page: [non_monotonicity.md](../../00_start_here/voting_paradoxes/non_monotonicity.md).
+Frozen export: [bv2146_krk2px_bv_export.json](cases/bv2146_krk2px_bv_export.json) · Part 1: [BV2145 — the Condorcet winner eliminated](bv2145_6fj2kg_felsenthal_ex2.md) · Teaching page: [non_monotonicity.md](../../07_Concepts/voting_paradoxes/non_monotonicity.md).

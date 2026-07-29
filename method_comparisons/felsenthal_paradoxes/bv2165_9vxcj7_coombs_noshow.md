@@ -6,7 +6,7 @@
 
 ## Source
 
-Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A7 (Coombs' procedure), **Example 19**. Full §A7 treatment: [coombs.md](../../00_start_here/voting_paradoxes/coombs.md).
+Dan S. Felsenthal, *"Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected"*, University of Haifa / LSE, revised 26 May 2010; Appendix §A7 (Coombs' procedure), **Example 19**. Full §A7 treatment: [coombs.md](../../07_Concepts/voting_paradoxes/coombs.md).
 
 ## The election
 

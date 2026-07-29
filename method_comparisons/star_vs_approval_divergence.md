@@ -2,7 +2,7 @@
 
 *A common question with a deceptively honest answer: **there is no single number** — and the reason *why* is the actual lesson. This page measures the divergence rate (with a runnable, seeded simulation), explains why the two methods split, and links the worked elections where you can watch it happen on real ballots.*
 
-**Level: 301.** Companion: [What makes a good winner?](../00_start_here/topics/what_makes_a_good_winner.md) · [election simulation models](../00_start_here/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
+**Level: 301.** Companion: [What makes a good winner?](../07_Concepts/topics/what_makes_a_good_winner.md) · [election simulation models](../07_Concepts/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
 
 ## Why there's no single rate
 
@@ -11,15 +11,15 @@ STAR has a **canonical sincere ballot**: min-max your feelings onto 0–5. Appro
 1. the **electorate model** (how voters' preferences are generated), and
 2. the **approval-cutoff rule** (how a voter turns feelings into approvals).
 
-Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../00_start_here/curriculum/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
+Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../07_Concepts/curriculum/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
 
 ## The measured rates — the approval cutoff is the knob
 
-Because Approval has no canonical sincere ballot, the honest way to report this is to **sweep the cutoff**. Read each voter's 0–5 STAR ballot as approvals at threshold *N* (approve everything scored ≥ *N*): *ge5* = approve only your top (near-[bullet](../00_start_here/topics/plurality.md)), *ge1* = approve anyone but your worst. From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections, 51 voters, seed 12345, sincere):
+Because Approval has no canonical sincere ballot, the honest way to report this is to **sweep the cutoff**. Read each voter's 0–5 STAR ballot as approvals at threshold *N* (approve everything scored ≥ *N*): *ge5* = approve only your top (near-[bullet](../07_Concepts/topics/plurality.md)), *ge1* = approve anyone but your worst. From [`star_vs_approval_divergence.py`](../06_Other/simulations/star_vs_approval_divergence.py) (20,000 elections, 51 voters, seed 12345, sincere):
 
 **3 candidates** — divergence by where the approval line is drawn:
 
-> **The two columns are two assumptions about the electorate.** **Spatial (realistic)** is the [issue-space model](../00_start_here/topics/spatial_voting_model.md) — voters and candidates are points on a map, you prefer whoever's closest; real electorates have this structure (a center), so paradoxes are relatively rare, and this column ≈ *what you'd actually expect*. **Impartial (stress)** is [impartial culture](../00_start_here/topics/election_simulation_models.md) — every preference independent and random, no structure at all; it manufactures far more disagreement than reality and is a deliberate *worst-case ceiling*, not a prediction. The truth for a real electorate sits **between** the two, much closer to spatial — which is why both are shown rather than one number.
+> **The two columns are two assumptions about the electorate.** **Spatial (realistic)** is the [issue-space model](../07_Concepts/topics/spatial_voting_model.md) — voters and candidates are points on a map, you prefer whoever's closest; real electorates have this structure (a center), so paradoxes are relatively rare, and this column ≈ *what you'd actually expect*. **Impartial (stress)** is [impartial culture](../07_Concepts/topics/election_simulation_models.md) — every preference independent and random, no structure at all; it manufactures far more disagreement than reality and is a deliberate *worst-case ceiling*, not a prediction. The truth for a real electorate sits **between** the two, much closer to spatial — which is why both are shown rather than one number.
 
 | Approve scores ≥ | Spatial (realistic) | Impartial (stress) |
 |---|:---:|:---:|
@@ -45,7 +45,7 @@ Both methods reward broad support — that's why they agree most of the time. Th
 - **STAR reads intensity and runs a runoff.** Its 0–5 ballot records *how much*, and the automatic runoff then asks *how many prefer A to B* among the two strongest. So STAR leans toward the candidate a **majority actively prefers** head-to-head.
 - **Approval is a coarse 0/1 and has no runoff.** It elects whoever is **acceptable to the most voters** — the broadest common denominator — and can't distinguish "approve enthusiastically" from "approve as a tolerable compromise."
 
-So the classic split is: a **broadly-tolerable consensus** candidate (Approval's pick) vs. an **intensely-preferred majority favorite** (STAR's pick, surfaced by the runoff). Neither is "wrong" — it's the [good-winner](../00_start_here/topics/what_makes_a_good_winner.md) question (utilitarian-broad vs. majoritarian) showing up as a method disagreement.
+So the classic split is: a **broadly-tolerable consensus** candidate (Approval's pick) vs. an **intensely-preferred majority favorite** (STAR's pick, surfaced by the runoff). Neither is "wrong" — it's the [good-winner](../07_Concepts/topics/what_makes_a_good_winner.md) question (utilitarian-broad vs. majoritarian) showing up as a method disagreement.
 
 ## Watch it on real ballots — worked examples
 
@@ -81,4 +81,4 @@ It reuses the electorate models and STAR tabulator from [`fbc_simulation.py`](..
 - [Black Curtain](black_curtain/) — the worked STAR-vs-Approval(-vs-others) elections
 - [Brams' grading paradox, counted](brams_grading_paradox/) — the cutoff dependence in one 3-voter example: four reasonable 0/1 cuts of the same grades elect Adams, Baker, or a tie
 - [Runoff-reversal & FBC simulations](../06_Other/simulations/) — the sibling brute-force studies
-- [Choosing among the Equal Vote methods](../00_start_here/topics/choosing_among_evc_methods.md) · [Criteria at a glance](../00_start_here/topics/criteria_at_a_glance.md)
+- [Choosing among the Equal Vote methods](../07_Concepts/topics/choosing_among_evc_methods.md) · [Criteria at a glance](../07_Concepts/topics/criteria_at_a_glance.md)

@@ -1453,7 +1453,7 @@ _E29_PLUR = [(5, (0, 0, 0, 1)), (3, (0, 0, 1, 0)), (1, (0, 1, 0, 0)), (2, (1, 0,
 # regardless of the preferences of the electorate"; STAR and IRV both ->
 # Liberal (IRV: first-choice majority, round one). LH-verified:
 # method_comparisons/fairvote_condorcet_claims/ + the claim-check page
-# 00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md.
+# 07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md.
 
 _FV_CANDS = ["Liberal", "Moderate", "Conservative"]
 _FV1_STAR = [(45, (5, 2, 0)), (43, (0, 2, 5)), (6, (2, 5, 0)), (6, (0, 5, 2))]
@@ -3686,7 +3686,7 @@ S510_REAL_SPEC = {
 }
 
 # --- BV2225 / BV2226 — Preference vs Support (center tolerated vs. supported) -----
-# The matched pair for 00_start_here/scores_and_ranks/preference_vs_support.md.
+# The matched pair for 07_Concepts/scores_and_ranks/preference_vs_support.md.
 # THREE candidates on a spectrum: Alex (pole), Blair (center), Cole (pole).
 # The TWO elections share BYTE-IDENTICAL rankings (Alex>Blair>Cole / Blair>Alex>Cole
 # / Cole>Blair>Alex). The ONLY difference is how hard the two wings SCORE Blair as

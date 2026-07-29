@@ -55,7 +55,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 **Ready-made live elections to demo with** — each has a BV export you can print from (and a live results page to check against):
 - **[What Makes the Best Pet?](https://bettervoting.com/pet)** (`bettervoting.com/pet`) — 7 pets, single-winner STAR, a classroom crowd-pleaser.
-- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../../../00_start_here/topics/criteria_at_a_glance.md).
+- the **meta** version, [`bettervoting.com/meta_pets`](https://bettervoting.com/meta_pets) — the *same* pets voted **four ways** (Plurality / IRV / Approval / STAR), for a class to see how the method changes the winner. Pair it with [Criteria at a glance](../../../07_Concepts/topics/criteria_at_a_glance.md).
 - **[Bond Brothers Beer Picks](https://bettervoting.com/yt3232)** (`bettervoting.com/yt3232`) — 9 Bond Brothers (Cary, NC) beers across the whole spectrum, a crowded-field demo for a meetup.
 - **[Best Ice Cream Flavor](https://bettervoting.com/2wfth7)** (`bettervoting.com/2wfth7`) — 8 flavors with a **3-flavor chocolate cluster**, engineered to *show* vote-splitting; online write-ins on. ([results](https://bettervoting.com/2wfth7/results))
 
@@ -153,7 +153,7 @@ When that tool gets built, the right way is against a **local OCR engine** with 
 
 **Ballot receipts & verifiability** (`--serials`). Each ballot gets a number — *"Ballot #7 — keep this to verify it was counted."* After the count, publish the list of serials that were counted and have each voter confirm theirs is on it. That demonstrates a genuinely important property: **counted as cast** — you can check your ballot made it into the tally.
 
-But here's the honest catch, and it *is* the lesson: **a serial that anyone can link back to you breaks the [secret ballot](../../../00_start_here/GLOSSARY.md).** If a sign-in sheet maps *name → serial*, a coercer or vote-buyer could demand your number and check how you voted. Real elections resolve this tension with **end-to-end verifiability (E2E-V)** — cryptographic receipts that let you confirm your vote was counted *without* revealing (or being able to prove to anyone) how you voted. So the serial demo is the perfect way to introduce *why verifiability is hard*: you want **both** "confirm it counted" **and** "nobody can tell how I voted," and getting both at once takes real cryptography. (BetterVoting's per-voter unique numbers are the platform's version of this receipt.)
+But here's the honest catch, and it *is* the lesson: **a serial that anyone can link back to you breaks the [secret ballot](../../../07_Concepts/GLOSSARY.md).** If a sign-in sheet maps *name → serial*, a coercer or vote-buyer could demand your number and check how you voted. Real elections resolve this tension with **end-to-end verifiability (E2E-V)** — cryptographic receipts that let you confirm your vote was counted *without* revealing (or being able to prove to anyone) how you voted. So the serial demo is the perfect way to introduce *why verifiability is hard*: you want **both** "confirm it counted" **and** "nobody can tell how I voted," and getting both at once takes real cryptography. (BetterVoting's per-voter unique numbers are the platform's version of this receipt.)
 
 For a classroom: use serials to show "counted as cast," then ask *"what would go wrong if we posted a name-to-number list?"* — that discussion is the actual education. Keep serials **unlinked** to identity in any real use.
 
@@ -183,4 +183,4 @@ Numbering cuts both ways, so it's a deliberate choice — here's how to make it:
 
 - [Teaching STAR Voting](teaching_star_voting.md) — the presenter's guide (arc, terms, misconceptions)
 - [Count a STAR election by hand](count_star_by_hand.md) · [Summability](../properties_and_limits/STAR_summability.md) — why it scales
-- [BetterVoting and the LH engine — one election, two reports](../../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) — the digital cross-check
+- [BetterVoting and the LH engine — one election, two reports](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) — the digital cross-check

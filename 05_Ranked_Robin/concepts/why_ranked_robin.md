@@ -2,7 +2,7 @@
 
 *For anyone who already loves ranked ballots. Ranked Robin keeps the exact ballot you know — rank the candidates in your honest order — and counts it so the candidate a **majority prefers over everyone** wins. Same ballot, a count that finds the consensus. This is the positive case; the [method page](ranked_robin.md) has the mechanics and the [honest limits](RCV_RR_honest_limits.md) are stated plainly at the end.*
 
-→ Companion: [Why STAR Voting](../../00_start_here/topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family. Heard this method called Copeland, Condorcet, round-robin voting, or Consensus Voting? Same neighborhood, different levels of the name — the [naming decoder](condorcet_naming_decoder.md) sorts them out.
+→ Companion: [Why STAR Voting](../../07_Concepts/topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family. Heard this method called Copeland, Condorcet, round-robin voting, or Consensus Voting? Same neighborhood, different levels of the name — the [naming decoder](condorcet_naming_decoder.md) sorts them out.
 
 ---
 
@@ -38,13 +38,13 @@ The count is just pairwise tallies, and **they add up precinct by precinct** —
 
 ### 8. Honest about what it is — and isn't
 
-Ranked Robin captures your **order**, not your **strength** of feeling — it can't tell a squeaker from a landslide. If you want to express *how much* you prefer someone, a scored ballot like [STAR](../../00_start_here/topics/Why_STAR_Voting.md) carries more of your voice. And in the rare case of a [Condorcet cycle](cycle_resolution.md) (A beats B beats C beats A, with no one beating everyone), there's no consensus winner and the count falls back on a tiebreak reasonable people can debate. These are real, and small; naming them is part of why the rest is trustworthy.
+Ranked Robin captures your **order**, not your **strength** of feeling — it can't tell a squeaker from a landslide. If you want to express *how much* you prefer someone, a scored ballot like [STAR](../../07_Concepts/topics/Why_STAR_Voting.md) carries more of your voice. And in the rare case of a [Condorcet cycle](cycle_resolution.md) (A beats B beats C beats A, with no one beating everyone), there's no consensus winner and the count falls back on a tiebreak reasonable people can debate. These are real, and small; naming them is part of why the rest is trustworthy.
 
 ---
 
 ## Where it fits — we're all on the same side
 
-If you love ranked ballots, **Ranked Robin is your upgrade**: the ballot you know, counted so the consensus candidate wins, tallied transparently at the precinct. If you'd also like to say *how strongly* you feel, **[STAR](../../00_start_here/topics/Why_STAR_Voting.md)** is the scored cousin. Both are aiming at the same thing — an honest ballot and a winner with real majority support — and both are a world beyond Choose-One.
+If you love ranked ballots, **Ranked Robin is your upgrade**: the ballot you know, counted so the consensus candidate wins, tallied transparently at the precinct. If you'd also like to say *how strongly* you feel, **[STAR](../../07_Concepts/topics/Why_STAR_Voting.md)** is the scored cousin. Both are aiming at the same thing — an honest ballot and a winner with real majority support — and both are a world beyond Choose-One.
 
 The point was never to run down anyone's favorite reform. It's that the ranked ballot deserves a count worthy of it, and Ranked Robin is one.
 

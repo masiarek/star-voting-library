@@ -25,7 +25,7 @@ They vote the usual way: **everyone names one favorite.** Five ballots, each jus
 
 The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want.
 
-That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../../00_start_here/topics/spoiler_effect.md).)
+That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../../07_Concepts/topics/spoiler_effect.md).)
 
 The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite — every dash in that grid is a real opinion the ballot never asked about.
 
@@ -38,7 +38,7 @@ STAR asks for a little more, using two things you already know:
 
 That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "runoff" happens automatically in the count.
 
-**Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** Rating and **scoring** are the same thing (that's the "Score" in STAR's name — and it's the word this library uses): each option judged on its own, so two favorites can honestly both earn a 5. A ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../../00_start_here/scores_and_ranks/scores_vs_ranks.md).
+**Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** Rating and **scoring** are the same thing (that's the "Score" in STAR's name — and it's the word this library uses): each option judged on its own, so two favorites can honestly both earn a 5. A ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md).
 
 The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in plain language:
 
@@ -49,7 +49,7 @@ The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in plain
 
 Here's the whole thing on paper — one voter's finished ballot:
 
-<img src="../../00_start_here/img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
+<img src="../../07_Concepts/img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
 
 *One voter's finished ballot — order **and** strength, at a glance.*
 
@@ -112,7 +112,7 @@ One nuance you can now name: if you score the **two finalists** the *same*, your
 ## What this means for you
 
 - **You can be honest.** Score your favorite a 5 *and* a backup a 4 — you never split your own vote.
-- **No ["wasted" votes](../../00_start_here/topics/wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../../00_start_here/topics/spoiler_effect.md), gone.
+- **No ["wasted" votes](../../07_Concepts/topics/wasted_votes.md).** Supporting someone who can't win no longer helps elect someone you dislike — the [spoiler effect](../../07_Concepts/topics/spoiler_effect.md), gone.
 - **It's one ballot**, not a separate primary and general election.
 
 → Sold already? The quick, exciting wins: [The benefits of STAR Voting](getting_started/STAR_benefits.md).
@@ -130,7 +130,7 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 | **The classic** | [Tennessee capital](../_main/cases/cases_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 | **Do it yourself** | [Count a STAR election by hand](hands_on/count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
 
-Then, when you're ready: **the two rounds in depth** ([Scoring Round](the_count/STAR_Scoring_Round.md) · [Automatic Runoff](the_count/STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../../00_start_here/CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../../00_start_here/topics/two_party_dominance.md) and [Why STAR Voting](../../00_start_here/topics/Why_STAR_Voting.md).
+Then, when you're ready: **the two rounds in depth** ([Scoring Round](the_count/STAR_Scoring_Round.md) · [Automatic Runoff](the_count/STAR_Automatic_Runoff.md)), the [full learning path (101 / 201 / 301)](../../07_Concepts/CURRICULUM.md), and — if you want the *political* case — [two-party dominance](../../07_Concepts/topics/two_party_dominance.md) and [Why STAR Voting](../../07_Concepts/topics/Why_STAR_Voting.md).
 
 **Try it for real:** cast a STAR ballot or run your own election at [bettervoting.com](https://bettervoting.com).
 
@@ -143,4 +143,4 @@ Then, when you're ready: **the two rounds in depth** ([Scoring Round](the_count/
 
 ---
 
-*Up: [Start Here](../../00_start_here/00_START_HERE.md) (all methods, method-neutral) · [more STAR concept pages](README.md).*
+*Up: [Start Here](../../07_Concepts/00_START_HERE.md) (all methods, method-neutral) · [more STAR concept pages](README.md).*

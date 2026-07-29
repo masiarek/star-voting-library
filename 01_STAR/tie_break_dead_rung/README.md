@@ -27,7 +27,7 @@ AUTOMATIC RUNOFF winner:    score    → five-star → lot
 | `tie_break_03_runoff_no_fives_to_lot`   | Runoff  | no  | Alice 0, Ben 0 → still tied | **lot** | Alice |
 | `tie_break_04_runoff_five_star_breaks`  | Runoff  | yes | Alice 1, Ben 0 → Alice wins | **five-star** | Alice |
 
-Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/04 likewise. Note the eventual **winner is Alice in all four** — the point isn't who wins these toy races, it's **which rung decides**. In a closer election that difference chooses the winner (see the scale-granularity case in [Scale granularity can flip the winner (a 301 case)](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)).
+Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/04 likewise. Note the eventual **winner is Alice in all four** — the point isn't who wins these toy races, it's **which rung decides**. In a closer election that difference chooses the winner (see the scale-granularity case in [Scale granularity can flip the winner (a 301 case)](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md)).
 
 ## The adversarial set (05–09): the rung must CHANGE the winner
 
@@ -63,7 +63,7 @@ A live BetterVoting election that hit exactly this: two candidates, two ballots 
 
 **Does it scale past two candidates?** Yes — the phenomenon is about *symmetry*, not candidate count. The [three-way dead-rung tie](three_way_dead_rung_tie/three_way_dead_rung_tie.md) (A 4/0/0, B 0/4/0, C 0/0/4) is the 3-candidate analog: three candidates, **three** possible winners by lot, and a random draw now diverges from a published order **2/3** of the time — `(k−1)/k` for a `k`-way tie. More candidates never fix it; they can make the divergence worse and add a second place (the finalist choice) for the lot to bite.
 
-> **Why build these deliberately-degenerate elections at all?** They're *probes*, not forecasts — the fastest way to isolate one tie behavior, make a real bug reproducible, pin the spec, and lock a regression test. See [Why Build "Silly" Tie Elections?](../../00_start_here/topics/ties/why_contrived_tie_cases.md) (with a flow-chart map of every tie case).
+> **Why build these deliberately-degenerate elections at all?** They're *probes*, not forecasts — the fastest way to isolate one tie behavior, make a real bug reproducible, pin the spec, and lock a regression test. See [Why Build "Silly" Tie Elections?](../../07_Concepts/topics/ties/why_contrived_tie_cases.md) (with a flow-chart map of every tie case).
 
 ## Why it matters
 

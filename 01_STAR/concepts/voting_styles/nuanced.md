@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-There barely is one — that's the point of this page sitting beside the others. This ballot maximizes what the count can hear from you: full weight at the top, real distinctions where you feel them, none where you don't. The one consequence worth knowing: any two candidates you scored *equally* are an [Equal Support](../../../00_start_here/GLOSSARY.md) pair if they both reach the [runoff](../the_count/STAR_Automatic_Runoff.md) — you told the count you're happy either way, and it takes you at your word. That's not a flaw; it's your tie, honored.
+There barely is one — that's the point of this page sitting beside the others. This ballot maximizes what the count can hear from you: full weight at the top, real distinctions where you feel them, none where you don't. The one consequence worth knowing: any two candidates you scored *equally* are an [Equal Support](../../../07_Concepts/GLOSSARY.md) pair if they both reach the [runoff](../the_count/STAR_Automatic_Runoff.md) — you told the count you're happy either way, and it takes you at your word. That's not a flaw; it's your tie, honored.
 
 ## This exact style in a real election
 
@@ -26,4 +26,4 @@ In the runnable [style-gallery election](../../_main/cases/cases_pages/03c_c6_b8
 ## Related
 
 - [Ranked](ranked.md) — what this ballot looks like when you *don't* allow yourself ties
-- [Scores vs. Ranks](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — why ratings carry more honest information than forced rankings
+- [Scores vs. Ranks](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — why ratings carry more honest information than forced rankings

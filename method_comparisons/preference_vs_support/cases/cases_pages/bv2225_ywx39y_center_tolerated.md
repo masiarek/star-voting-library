@@ -115,9 +115,9 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/CYCLE_OR_THREE_WAY/bv2225_ywx39y_center_tolerated.md) — its entry in the divergence review ledger
-- [Center squeeze (topic hub)](../../../../00_start_here/topics/center_squeeze/README.md)
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
+- [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2226_82gg36_center_supported](bv2226_82gg36_center_supported.md)

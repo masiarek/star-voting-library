@@ -17,7 +17,7 @@ STAR removes the slope. Scored honestly on 0-5, A and B voters give BOTH allies 
 marks (no bullet needed — the runoff, not the sum, decides between them). C is beaten
 in the scoring round (A 275, B 265, C 200), and A — the honest pairwise winner — takes
 the runoff 35-25. Honesty is safe. The [Divergence from STAR] block confirms Ranked
-Robin also elects A. Concept: ../../00_start_here/topics/strategic_pathologies.md.
+Robin also elects A. Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 ## Ballots
 
@@ -109,8 +109,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [chicken_approval](chicken_approval.md)

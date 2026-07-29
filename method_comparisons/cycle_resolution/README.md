@@ -1,6 +1,6 @@
 # Cycle resolution, counted — where the Condorcet family stops agreeing
 
-The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/concepts/cycle_resolution.md). When a [Condorcet winner](../../00_start_here/topics/condorcet/) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these two elections are the split, made runnable.
+The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/concepts/cycle_resolution.md). When a [Condorcet winner](../../07_Concepts/topics/condorcet/) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these two elections are the split, made runnable.
 
 Both are **LH-only**: the LH engine's Ranked Robin is Copeland, and in a cycle Copeland usually ties, which LH breaks by margin then lot and BetterVoting breaks *at random*. A tie-deciding result can't be frozen on BV, so these cases stay in the library.
 
@@ -45,6 +45,6 @@ Winners by method:
    Stable Voting              [C2]  Ana
 ```
 
-The `[C1]` / `[C2]` tags are [Fishburn's classification](../../00_start_here/topics/condorcet/condorcet_reading_list.md): C1 rules read only who-beat-whom, C2 rules read the margins too.
+The `[C1]` / `[C2]` tags are [Fishburn's classification](../../07_Concepts/topics/condorcet/condorcet_reading_list.md): C1 rules read only who-beat-whom, C2 rules read the margins too.
 
-Concept pages: [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Split Cycle, claim-checked](../../00_start_here/topics/condorcet/split_cycle.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [Smith set](../../00_start_here/topics/smith_set.md) · up: [method_comparisons](../README.md)
+Concept pages: [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Split Cycle, claim-checked](../../07_Concepts/topics/condorcet/split_cycle.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [Smith set](../../07_Concepts/topics/smith_set.md) · up: [method_comparisons](../README.md)

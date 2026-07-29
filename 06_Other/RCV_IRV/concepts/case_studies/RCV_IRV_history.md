@@ -25,7 +25,7 @@ Australia adopted the **Alternative Vote** — its name for single-winner IRV �
 ## US momentum — the last ~20 years
 
 - **Local:** San Francisco (2004), Minneapolis, and New York City (2021 primaries), plus dozens of other cities.
-- **Statewide:** Maine (the first state, 2018 — whose ranked rounds run as a courier-to-Augusta [central tabulation](../../../../00_start_here/topics/central_tabulation.md) operation) and Alaska (2022, paired with a top-four primary — whose first race became a [textbook IRV failure](RCV_IRV_alaska_2022.md)).
+- **Statewide:** Maine (the first state, 2018 — whose ranked rounds run as a courier-to-Augusta [central tabulation](../../../../07_Concepts/topics/central_tabulation.md) operation) and Alaska (2022, paired with a top-four primary — whose first race became a [textbook IRV failure](RCV_IRV_alaska_2022.md)).
 - **Adopted then repealed:** North Carolina piloted IRV (2007–2013), including the **first statewide general election ever decided by IRV** (a 2010 Court of Appeals seat), before repealing the program — see [RCV-IRV in North Carolina](RCV_IRV_north_carolina.md).
 
 Adoption has continued to expand city by city; check [FairVote's "where it's used"](https://fairvote.org/our-reforms/ranked-choice-voting-information/) for the current list.

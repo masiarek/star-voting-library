@@ -101,7 +101,7 @@ when no candidates remain. Test gap: STV.test.ts's single test is this same
 
 ## The story, and the moral
 
-Exercise 14 was designed so every STV moving part fires exactly once — quota, surplus, two eliminations, a final quota election. That tidiness is precisely what walks the count into the sole-survivor finish, which real-world STV elections (big fields, standing also-rans) almost never reach. The exercise wasn't unlucky; it was *thorough*, and thoroughness is what found the edge. Methods are math, implementations are software — both need testing. That's the [triple-check habit](../../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md), doing its job.
+Exercise 14 was designed so every STV moving part fires exactly once — quota, surplus, two eliminations, a final quota election. That tidiness is precisely what walks the count into the sole-survivor finish, which real-world STV elections (big fields, standing also-rans) almost never reach. The exercise wasn't unlucky; it was *thorough*, and thoroughness is what found the edge. Methods are math, implementations are software — both need testing. That's the [triple-check habit](../../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md), doing its job.
 
 *Found from [exercise 14 — the transfer machine](../../../01_STAR/exercises/ex14_transfer_machine.md) · STV method home: [06_Other/STV](../README.md)*
 

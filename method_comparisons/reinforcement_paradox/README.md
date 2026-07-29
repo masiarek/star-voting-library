@@ -1,10 +1,10 @@
 # Reinforcement paradox — when both halves pick Ada, but the whole picks Cara
 
-*Two districts. Ada wins both. Merge them, and **Cara** wins — the one thing a voting rule's "reinforcement" (a.k.a. **consistency**) promise says can't happen. This is a live, countable demonstration of a theorem from [Brandt, Dong & Peters, "Condorcet-Consistent Choice Among Three Candidates"](../../00_start_here/topics/condorcet/three_candidate_maximin.md) (2024): **every** [Condorcet method](../../00_start_here/topics/condorcet/README.md) must show this paradox once there are ≥ 8 voters. The lesson is fair to a fault — it cuts against STAR too, and shows exactly which methods keep the promise and which don't.*
+*Two districts. Ada wins both. Merge them, and **Cara** wins — the one thing a voting rule's "reinforcement" (a.k.a. **consistency**) promise says can't happen. This is a live, countable demonstration of a theorem from [Brandt, Dong & Peters, "Condorcet-Consistent Choice Among Three Candidates"](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) (2024): **every** [Condorcet method](../../07_Concepts/topics/condorcet/README.md) must show this paradox once there are ≥ 8 voters. The lesson is fair to a fault — it cuts against STAR too, and shows exactly which methods keep the promise and which don't.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`, BV2254) — the combined 9-voter electorate as two races (STAR + Ranked Robin); both elect **Cara**, matching the counts below.
 
-→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../00_start_here/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../00_start_here/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../00_start_here/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
+→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../07_Concepts/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -54,7 +54,7 @@ Cara now beats *everyone* head-to-head, so every Condorcet method elects her —
 
 The split is not an accident of these numbers; it's structural.
 
-- **Score, Approval, and Plurality just *add points* across ballots.** A candidate's combined score is her South score plus her North score. Ada leads South and ties North, so she leads the sum — always. This is [Young's theorem (1975)](../../00_start_here/topics/condorcet/three_candidate_maximin.md): additive scoring rules satisfy reinforcement *by construction*. No electorate can ever paradox them.
+- **Score, Approval, and Plurality just *add points* across ballots.** A candidate's combined score is her South score plus her North score. Ada leads South and ties North, so she leads the sum — always. This is [Young's theorem (1975)](../../07_Concepts/topics/condorcet/three_candidate_maximin.md): additive scoring rules satisfy reinforcement *by construction*. No electorate can ever paradox them.
 
 - **Condorcet methods count *head-to-head majorities*, which don't add up.** Merging two electorates can create a pairwise majority that existed in neither half — here, Cara's 5–4 edges over both rivals emerge only in the union. Brandt, Dong & Peters prove this is **unavoidable**: at three candidates, *every* Condorcet extension shows the reinforcement paradox once there are ≥ 8 voters (found via a SAT solver; the bound is tight).
 
@@ -68,7 +68,7 @@ The Brandt–Dong–Peters result above is a *tight three-candidate* statement. 
 
 > **Theorem (Smith 1973; Young 1975).** The anonymous, neutral, and reinforcing SCFs are **exactly the compound scoring rules.**
 
-A **compound scoring rule** allows a cascade of [score vectors](../../00_start_here/topics/ranked_ballot_methods_zoo.md): ties under `w₁` are broken by score differences under a second vector `w₂` (say, plurality score to separate tied Borda winners), a third if any remain, and so on for any finite number. Add one further axiom — **continuity**, aka the **Archimedean property** (for any `s` and any `t` with a unique winner `x`, enough copies of `t` eventually carry the merged election: `f(s + j·t) = {x}` for all large `j`) — and the class narrows to the *simple*, one-vector scoring rules.
+A **compound scoring rule** allows a cascade of [score vectors](../../07_Concepts/topics/ranked_ballot_methods_zoo.md): ties under `w₁` are broken by score differences under a second vector `w₂` (say, plurality score to separate tied Borda winners), a third if any remain, and so on for any finite number. Add one further axiom — **continuity**, aka the **Archimedean property** (for any `s` and any `t` with a unique winner `x`, enough copies of `t` eventually carry the merged election: `f(s + j·t) = {x}` for all large `j`) — and the class narrows to the *simple*, one-vector scoring rules.
 
 That converse is what makes this page's verdict sharp rather than anecdotal. **STAR fails reinforcement, so STAR is provably not a compound scoring rule** — no cascade of score vectors, however elaborate, reproduces it. Its scoring round is a scoring rule; the automatic runoff is not, and the theorem says that is exactly the step where the promise had to break. Same for [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [RCV-IRV](../../06_Other/RCV_IRV/concepts/), and every other method here with an elimination or runoff stage. Conversely it explains why Score, Approval and Plurality can *never* be paradoxed this way: they are simple scoring rules, and the theorem covers them by construction.
 
@@ -76,7 +76,7 @@ That converse is what makes this page's verdict sharp rather than anecdotal. **S
 
 One detail the table above glosses, and it matters for anyone reproducing this.
 
-North is a **perfect three-way tie**, so an anonymous, neutral rule can only return *all three* candidates as co-winners — and then the single South district above is enough, because Ada is inside that set. But the LH engine is **resolute**: it must print one name, and it gets there by spending neutrality on a published lot order (the [`lot_numbers`](../../00_start_here/topics/ties/ties_are_forced.md) field). With `[Ada, Ben, Cara]` it prints **Ada** — which is why the original trio works.
+North is a **perfect three-way tie**, so an anonymous, neutral rule can only return *all three* candidates as co-winners — and then the single South district above is enough, because Ada is inside that set. But the LH engine is **resolute**: it must print one name, and it gets there by spending neutrality on a published lot order (the [`lot_numbers`](../../07_Concepts/topics/ties/ties_are_forced.md) field). With `[Ada, Ben, Cara]` it prints **Ada** — which is why the original trio works.
 
 Change the lot and the original South no longer springs the trap: if North resolved to Ben, then North and South would share no winner at all, reinforcement's hypothesis would never fire, and nothing would look wrong. That is not a hole in the theorem — Zwicker's proof handles it by permuting the second district — but it *is* a hole in a demonstration built from one pair. So the other two branches are now built too. North is unchanged and invariant under the rotation Ada→Ben→Cara→Ada, so rotating South gives each branch:
 
@@ -130,7 +130,7 @@ Want the whole count? Full LH report → [`cases/cases_tabulated/reinf_combined_
 ## What to take away
 
 1. **"Both halves agreed, so the whole must agree" is a promise only some methods keep.** Additive point methods (Score, Approval, Plurality) keep it; Condorcet methods provably cannot at ≥ 8 voters; STAR keeps it in the scoring round but can lose it in the runoff.
-2. **It's not a bug in Ranked Robin — it's a theorem about all of Condorcet.** The [three-candidate maximin result](../../00_start_here/topics/condorcet/three_candidate_maximin.md) is the rigorous frame; this is its smallest concrete instance.
+2. **It's not a bug in Ranked Robin — it's a theorem about all of Condorcet.** The [three-candidate maximin result](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) is the rigorous frame; this is its smallest concrete instance.
 3. **Fairness cuts both ways.** The same page that credits Condorcet methods for guaranteeing the head-to-head winner has to concede they break consistency — and that STAR, via its runoff, can too. That candor is the repo's whole method.
 
 ---

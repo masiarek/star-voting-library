@@ -17,7 +17,7 @@ Not every glossary term needs its own page — most are fine as a one-liner in [
 | **RCV-IRV** | [06_Other/RCV_IRV](../06_Other/RCV_IRV/README.md) | [`06_Other/RCV_IRV/concepts/`](../06_Other/RCV_IRV/concepts/README.md) |
 | **Range / Score** | [06_Other/Range](../06_Other/Range/README.md) | [`06_Other/Range/concepts/`](../06_Other/Range/concepts/README.md) |
 
-*(Until 2026-07-29 those pages lived here, in a parallel `00_start_here/<Method>/` tree — which meant every method had two front doors. Old links still work: every moved page keeps a permanent redirect.)*
+*(Until 2026-07-29 those pages lived here, in a parallel `07_Concepts/<Method>/` tree — which meant every method had two front doors. Old links still work: every moved page keeps a permanent redirect.)*
 
 ### General & cross-method
 

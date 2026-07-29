@@ -144,7 +144,7 @@ the honest answer to "who is even in contention?".
       Every member of the set (Beth) beats Carl head-to-head, yet
       RCV-IRV elected Carl anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
@@ -195,5 +195,5 @@ the honest answer to "who is even in contention?".
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```

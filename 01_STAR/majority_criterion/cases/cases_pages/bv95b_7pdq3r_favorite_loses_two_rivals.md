@@ -21,7 +21,7 @@ This is STAR's Majority-Criterion failure, and it shows exactly why it is mild:
 the majority had to support TWO other candidates to lose their favorite (Score
 and Approval can drop the favorite on just ONE). That is the point of the
 Relaxed Majority Criterion, which STAR passes. See
-../../00_start_here/topics/majority_criterion/README.md.
+../../07_Concepts/topics/majority_criterion/README.md.
 
 Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
 (nTallyVotes 5), confirming the LH result. Frozen export:
@@ -132,6 +132,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/majority
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/bv95b_7pdq3r_favorite_loses_two_rivals.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv95a_9m6rxr_favorite_survives_one_rival](bv95a_9m6rxr_favorite_survives_one_rival.md) · [majority_vs_consensus_51_49](majority_vs_consensus_51_49.md)

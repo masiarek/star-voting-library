@@ -2,7 +2,7 @@
 
 *Every exercise so far handed you the ballots. This one doesn't. Your task: **construct** an election where the scoring-round leader loses the automatic runoff — STAR's famous "top scorer ≠ winner" behavior ([Runoff Reversal](../runoff_overturns_leader/README.md)) — using as few voters and candidates as you can. Then prove your example is as small as possible.*
 
-**You practice:** designing elections instead of reading them — the fastest way to *own* the two-rounds mechanic. (House rules for good examples: [choosing voter counts](../../00_start_here/tips/TIPS_choosing_voter_counts.md).)
+**You practice:** designing elections instead of reading them — the fastest way to *own* the two-rounds mechanic. (House rules for good examples: [choosing voter counts](../../07_Concepts/tips/TIPS_choosing_voter_counts.md).)
 
 ## Your task
 
@@ -94,6 +94,6 @@ Sample solutions: [ex08_minimal_reversal_2c.yaml](cases/ex08_minimal_reversal_2c
 
 **Where this comes from.** Original to this repo; the constructive format follows the "modify the ballots so that…" exercises in Brendan W. Sullivan, *An Introduction to the Math of Voting Methods* (2022), ch. 5. Candidates are bare A/B/C on purpose — in a pure construction the names are noise (the house naming rule's one sanctioned exception).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex08_build_a_reversal.md

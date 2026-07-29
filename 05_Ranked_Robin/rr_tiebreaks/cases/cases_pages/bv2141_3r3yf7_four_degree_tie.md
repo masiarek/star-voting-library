@@ -118,7 +118,7 @@ the honest answer to "who is even in contention?".
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
    candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
    may be smaller here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2141_3r3yf7_four_degree_tie_tabulated.txt) (regenerated on every run; every analysis forced on).
@@ -131,8 +131,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [dead_heat_lot_tiebreak](dead_heat_lot_tiebreak.md)

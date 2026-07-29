@@ -1,12 +1,12 @@
 # The minimal case — BetterVoting calls a `5,5` an "abstention" (2 candidates)
 
-**One line:** the tightest possible demonstration. Two candidates, five ballots. One voter scores **both** candidates **5** — maximum support for everyone — and BetterVoting files that ballot as an **abstention**. An [independent STAR engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) (the [LH `starvote`](../../00_start_here/GLOSSARY.md) tabulator) counts it as **Equal Support** and still elects the same winner.
+**One line:** the tightest possible demonstration. Two candidates, five ballots. One voter scores **both** candidates **5** — maximum support for everyone — and BetterVoting files that ballot as an **abstention**. An [independent STAR engine](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) (the [LH `starvote`](../../07_Concepts/GLOSSARY.md) tabulator) counts it as **Equal Support** and still elects the same winner.
 
 > Filed with BetterVoting: **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**.
 
 This is the **2-candidate** member of the pair. Its richer sibling, which adds a third candidate to show that BetterVoting's rule is "*any* flat ballot = abstention" (it even drops an engaged `3,3,3`), is [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md). At full scale: the 461-ballot [pet race](README.md).
 
-→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) · [BetterVoting vs the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) · [Runoff percentages](../concepts/the_count/runoff_percentages.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md)
+→ Reading results: [How to read a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) · [BetterVoting vs the LH engine — when the reports differ](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) · [Runoff percentages](../concepts/the_count/runoff_percentages.md) · [`GLOSSARY`](../../07_Concepts/GLOSSARY.md)
 
 ---
 

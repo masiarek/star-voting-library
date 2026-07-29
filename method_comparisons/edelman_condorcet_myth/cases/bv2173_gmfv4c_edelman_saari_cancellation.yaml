@@ -19,7 +19,7 @@ scenario_description: |-
   in one method, the cancellation-respecting scoring round (Ben first) then
   the majoritarian runoff (Ada wins). A 240-year-old argument — Condorcet
   vs Borda — in one election. Full reading:
-  00_start_here/topics/condorcet/edelman_condorcet_myth.md
+  07_Concepts/topics/condorcet/edelman_condorcet_myth.md
 
   LIVE on BetterVoting as BV2173 — four races on the same 81 voters (STAR,
   Ranked Robin, RCV-IRV, Choose-One).

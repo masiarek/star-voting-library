@@ -65,7 +65,7 @@ ELECTORATE MODELS (same family as star_vs_rr_divergence.py)
 HOUSE RULES OBSERVED
 --------------------
 Utilities are sampled and every ballot is DERIVED from them — never draw random
-ballots (00_start_here/topics/simulate_utilities_not_ballots.md). Everything is
+ballots (07_Concepts/topics/simulate_utilities_not_ballots.md). Everything is
 seeded. Tie-breaks are fixed and documented. Never quote a rate without the model.
 
 USAGE

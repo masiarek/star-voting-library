@@ -1,12 +1,12 @@
 # A real BetterVoting election, end to end — "What Makes the Best Pet?"
 
-This is a **real STAR election run on BetterVoting** (BV id `pet`): 7 candidates, **461 ballots**, single winner. It's the worked example behind the screenshots in the [runoff percentages lesson](../concepts/the_count/runoff_percentages.md) and the [BetterVoting ↔ the open-source engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) page — here you get the **whole thing**: the election file and the full report from the tabulation engine this repo runs — Larry Hastings' `starvote`, extended here (the "LH" engine) — side by side, so you can read a real result from raw ballots to winner.
+This is a **real STAR election run on BetterVoting** (BV id `pet`): 7 candidates, **461 ballots**, single winner. It's the worked example behind the screenshots in the [runoff percentages lesson](../concepts/the_count/runoff_percentages.md) and the [BetterVoting ↔ the open-source engine](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) page — here you get the **whole thing**: the election file and the full report from the tabulation engine this repo runs — Larry Hastings' `starvote`, extended here (the "LH" engine) — side by side, so you can read a real result from raw ballots to winner.
 
 - **The election file:** [`best_pet_c7_b461.yaml`](cases/best_pet_c7_b461.yaml) — the actual BetterVoting JSON export, converted to YAML (461 score ballots, 0–5, with blanks).
 - **The full engine report:** [`best_pet_c7_b461_tabulated.txt`](cases/cases_tabulated/best_pet_c7_b461_tabulated.txt) — matrix, Condorcet check, score distribution, both rounds, winner.
 - **The live BetterVoting result:** [bettervoting.com/pet/results](https://bettervoting.com/pet/results).
 
-This is **Voting 201** — reading a real, full audit report. (A 101 viewer needs only the last three lines: Scoring Round → Automatic Runoff → winner.) For the section-by-section method, see [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md).
+This is **Voting 201** — reading a real, full audit report. (A 101 viewer needs only the last three lines: Scoring Round → Automatic Runoff → winner.) For the section-by-section method, see [How to read a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).
 
 ## 1. The scoring round — add every star
 
@@ -70,7 +70,7 @@ BetterVoting reports this race as **6 abstentions, 455 ballots tallied**; the en
 - Write-up & GitHub issue → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
 - Even-simpler 2-candidate lesson + synthetic illustration: [The minimal case](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml)
 - Reproduce it on BetterVoting yourself: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
-- Concept: [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support)
+- Concept: [BetterVoting and the LH engine — when the reports differ](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support)
 
 ## Run it yourself
 
@@ -80,4 +80,4 @@ From the engine directory:
 python starvote_larry_hastings.py "01_Single_winner/pet_real_bv_election/best_pet_c7_b461.yaml"
 ```
 
-Re-running rewrites the `_tabulated` sibling. Because this is a converted BetterVoting export, it uses the nested `election: → races:` schema (options live under `election.options`) — exactly the format the [convert → validate → tabulate pipeline](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md) produces and cross-checks against BetterVoting's own result.
+Re-running rewrites the `_tabulated` sibling. Because this is a converted BetterVoting export, it uses the nested `election: → races:` schema (options live under `election.options`) — exactly the format the [convert → validate → tabulate pipeline](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) produces and cross-checks against BetterVoting's own result.

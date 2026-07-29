@@ -23,13 +23,13 @@ They're at *different levels of generality* — a category, a specific method in
 | **Consensus Choice** | a **sibling brand** (Copeland-family, different tiebreak) | [Better Choices for Democracy](https://www.betterchoices.vote) | [betterchoices.vote](https://www.betterchoices.vote/consensus-choice) · [FAQ (the cycle rule)](https://www.betterchoices.vote/faqs) |
 | ~~**RCV-RR**~~ | *this repo's* house shorthand — **not** an external term | — | — |
 
-Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../../00_start_here/topics/ranked_ballot_methods_zoo.md).
+Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked Pairs**, **Schulze**, **Kemeny** — sit beside Copeland; they differ in *how* they use the same pairwise results (defeat-dropping or path strength rather than simple win-counting). See [the ranked-ballot zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md).
 
 > **"RR" ≠ "round robin" — the abbreviation collision.** In this repo **RR** always abbreviates **Ranked Robin**, one branded method. **Round robin** is the tournament *format* (everyone plays everyone) and, as "round-robin voting," a name for the **whole family**. So *every* Condorcet method is a round-robin count; only one of them is Ranked Robin. Using "RR" for "round robin" silently promotes a brand to the family name — the exact error this page exists to prevent. (And `RCV-RR` is **house** shorthand, built to parallel `RCV-IRV`; say **Ranked Robin** to people and **Copeland** to academics and the engine.)
 
 ## The tier the brands never mention (C1 / C2 / C3)
 
-The table above maps the *marketing* names. The academic literature sorts the same family a different way — by **how much of the pairwise data a rule actually needs** — and knowing this one scheme, from [Fishburn (1977)](../../00_start_here/topics/condorcet/condorcet_reading_list.md), stops most cross-talk before it starts:
+The table above maps the *marketing* names. The academic literature sorts the same family a different way — by **how much of the pairwise data a rule actually needs** — and knowing this one scheme, from [Fishburn (1977)](../../07_Concepts/topics/condorcet/condorcet_reading_list.md), stops most cross-talk before it starts:
 
 | Class | Reads | Members |
 |---|---|---|
@@ -37,7 +37,7 @@ The table above maps the *marketing* names. The academic literature sorts the sa
 | **C2** | the **margins** too | Minimax, Ranked Pairs, Schulze, Kemeny, Split Cycle |
 | **C3** | must return to the ballots and iterate | Dodgson, Young |
 
-Two things fall out of it. **"Tournament solution" means the C1 tier specifically** — not the whole family — so a theorem proved about tournament solutions doesn't automatically apply to Minimax. And **the tiers only diverge in a cycle**: when a Condorcet winner exists, every rule in every tier elects the same person, which is why so much of the literature argues about a rare case. → [the full reading list, with sources and leans](../../00_start_here/topics/condorcet/condorcet_reading_list.md).
+Two things fall out of it. **"Tournament solution" means the C1 tier specifically** — not the whole family — so a theorem proved about tournament solutions doesn't automatically apply to Minimax. And **the tiers only diverge in a cycle**: when a Condorcet winner exists, every rule in every tier elects the same person, which is why so much of the literature argues about a rare case. → [the full reading list, with sources and leans](../../07_Concepts/topics/condorcet/condorcet_reading_list.md).
 
 ## The word "consensus" carries three different jobs
 
@@ -62,14 +62,14 @@ The **second half slides from sense 1 to sense 3.** "Finds the consensus" is tru
 - **Ranked Robin / Condorcet:** *extract maximum value from limited information.* Keep the familiar ranked ballot; count all of it.
 - **STAR:** *don't limit the information.* Let the ballot carry degree (0–5), not just order, so intensity is visible at all.
 
-That's a genuine design disagreement about ballots, not a dispute about counting — see [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) and [preference vs. support](../../00_start_here/scores_and_ranks/preference_vs_support.md).
+That's a genuine design disagreement about ballots, not a dispute about counting — see [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) and [preference vs. support](../../07_Concepts/scores_and_ranks/preference_vs_support.md).
 
 ## Looks like Condorcet — but isn't (STAR, 3-2-1)
 
 Two **rated** methods *end* with a head-to-head step, which can fool you into filing them under Condorcet. They aren't. Both first narrow the field, then run a pairwise comparison only among the **survivors** — so the true Condorcet winner can be eliminated *before* the final:
 
 - **STAR** — add 0–5 scores, take the top two by total, then a pairwise automatic runoff. The runoff is pairwise, but the *finalists* are chosen by score sum, not by beating everyone — so STAR is **not** Condorcet-compliant. → [STAR](../../01_STAR/concepts/STAR_start_here.md) · [three notions of winner](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md).
-- **3-2-1** — Good/OK/Bad, then most-Good → fewest-Bad → pairwise. Same shape: a pairwise *final*, but the two finalists come from the rating steps, so a Condorcet winner outside them never gets there. **Not** Condorcet. → [3-2-1 voting](../../00_start_here/topics/three_two_one_voting.md).
+- **3-2-1** — Good/OK/Bad, then most-Good → fewest-Bad → pairwise. Same shape: a pairwise *final*, but the two finalists come from the rating steps, so a Condorcet winner outside them never gets there. **Not** Condorcet. → [3-2-1 voting](../../07_Concepts/topics/three_two_one_voting.md).
 
 **The tell:** a Condorcet method compares *every* pair across the *whole* field; these compare *one* pair among *pre-selected* finalists. A pairwise step ≠ a Condorcet method.
 
@@ -86,14 +86,14 @@ Two **rated** methods *end* with a head-to-head step, which can fool you into fi
 - **[equal.vote](https://www.equal.vote/ranked_robin)** is the promoter (**STAR / Equal Vote** camp) — the source for the brand, not a neutral referee.
 - **Wikipedia / academic** ("Condorcet method," "Copeland's method") is the neutral ground — but note the "round-robin voting" umbrella framing is itself contested.
 
-(Fuller roster of who-leans-where: [advocacy organizations](../../00_start_here/topics/advocacy_organizations.md) · [who's who](../../00_start_here/topics/whos_who_voting_reform.md).)
+(Fuller roster of who-leans-where: [advocacy organizations](../../07_Concepts/topics/advocacy_organizations.md) · [who's who](../../07_Concepts/topics/whos_who_voting_reform.md).)
 
 ## The clear version, in this repo
 
-- [Condorcet methods — a reading list](../../00_start_here/topics/condorcet/condorcet_reading_list.md) — the sources behind this page: books, papers, and the free surveys, each with its lean marked
+- [Condorcet methods — a reading list](../../07_Concepts/topics/condorcet/condorcet_reading_list.md) — the sources behind this page: books, papers, and the free surveys, each with its lean marked
 - [Ranked Robin](ranked_robin.md) — the method, taught (with the "Names & family" section this page expands)
 - [A blank is ranked *last*](rr_blank_means_last.md) — the C1 point made concrete: Ranked Robin reads *who beat whom*, never rank **numbers**, so it isn't Borda — and a blank simply ranks below everyone you ranked
-- [Terminology — the ranked-method family tree](../../00_start_here/tips/TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
+- [Terminology — the ranked-method family tree](../../07_Concepts/tips/TIPS_terminology.md#the-ranked-method-family-tree) — the diagram of where every method sits
 - [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) — why a *cycle* leaves "the Condorcet winner" blank while Ranked Robin still elects one
 - [The math behind Condorcet](the_math_behind_condorcet.md) — tournaments, Smith/Schwartz, the impossibility theorems
-- [Glossary](../../00_start_here/GLOSSARY.md)
+- [Glossary](../../07_Concepts/GLOSSARY.md)

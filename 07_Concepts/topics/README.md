@@ -1,6 +1,6 @@
 # Concepts — by topic (cross-method view)
 
-This folder holds the library's **cross-method concept pages** — the ideas that don't belong to any single method — in two forms: the flat **concept pages** (below) and the **topic hubs** (subfolders): thin index pages that gather one cross-method idea and link out to each method's authoritative treatment. Method-specific concept pages stay in the per-method folders under [00_start_here](../) (STAR_Voting/, RCV_IRV/, RCV_Ranked_Robin/…), because that's how most people arrive.
+This folder holds the library's **cross-method concept pages** — the ideas that don't belong to any single method — in two forms: the flat **concept pages** (below) and the **topic hubs** (subfolders): thin index pages that gather one cross-method idea and link out to each method's authoritative treatment. Method-specific concept pages stay in the per-method folders under [07_Concepts](../) (STAR_Voting/, RCV_IRV/, RCV_Ranked_Robin/…), because that's how most people arrive.
 
 **The hubs don't duplicate content** — the detailed write-ups stay in the per-method folders. A hub is just the shared definition plus a "which methods, and where" table, so there's almost nothing to keep in sync. Browse by method *or* by topic, whichever fits.
 

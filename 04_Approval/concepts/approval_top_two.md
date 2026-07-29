@@ -2,7 +2,7 @@
 
 *An Approval primary plus a head-to-head general between the two most-approved: a real, field-tested reform package — St. Louis runs on it — and the sharpest little lesson in ballot design, because the runoff **must** be a second election: re-counting the same 0/1 ballots head-to-head just returns the approval count. STAR is this exact package folded into one ballot.*
 
-→ Overview: [**Approval Voting**](approval_voting.md) (how the primary round works). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md). · Curriculum: [301.4](../../00_start_here/CURRICULUM.md).
+→ Overview: [**Approval Voting**](approval_voting.md) (how the primary round works). · Companions: [honest limits](approval_honest_limits.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md). · Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -63,7 +63,7 @@ What the runoff needs is information the checkmark never recorded: *which of two
 | Bob | ○ | ● | 3 |
 | Cal | ○ | ○ | 0 |
 
-The approval ballot records Ann = Bob, so in a runoff this voter has no voice. The second round therefore has to *collect new information* — either by bringing the voters back for another election (Approval + Top-Two), or by asking a richer question the first time (STAR). Ranked ballots carry the finalist preference too — that's what RCV-IRV's "instant" runoff consults; the 0/1 ballot is the one style with nothing to consult. (The full one-voter/three-ballots anatomy is [alternate ballot styles](../../00_start_here/topics/ballot_styles.md).)
+The approval ballot records Ann = Bob, so in a runoff this voter has no voice. The second round therefore has to *collect new information* — either by bringing the voters back for another election (Approval + Top-Two), or by asking a richer question the first time (STAR). Ranked ballots carry the finalist preference too — that's what RCV-IRV's "instant" runoff consults; the 0/1 ballot is the one style with nothing to consult. (The full one-voter/three-ballots anatomy is [alternate ballot styles](../../07_Concepts/topics/ballot_styles.md).)
 
 ## St. Louis in practice
 
@@ -88,14 +88,14 @@ STAR *is* Approval + Top-Two folded into a single ballot — historically, not j
 | Trips to the polls | 2 | 2 | **1** |
 | Electorates | two different turnouts | two different turnouts | identical by construction |
 
-The [fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md) says the same thing in one line: Approval is Score at 1-bit resolution — and one bit is one bit too few for a runoff.
+The [fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md) says the same thing in one line: Approval is Score at 1-bit resolution — and one bit is one bit too few for a runoff.
 
 ## See also
 
 - [Approval Voting](approval_voting.md) — the overview, including the stepping-stone argument (the [Equal Vote Approval page](https://www.equal.vote/approval) advocates exactly this primary + top-two package; advocacy lean disclosed)
 - [Approval — Honest Limits](approval_honest_limits.md) — the gaps the runoff patches (§2 the threshold, §4 the missed majority favorite)
 - [`approval_101_c3_b5`](../_main/cases/cases_pages/approval_101_c3_b5.md) — the featured election (BV-backed, frozen ballots)
-- [Alternate ballot styles](../../00_start_here/topics/ballot_styles.md) — one voter, every ballot style, side by side
+- [Alternate ballot styles](../../07_Concepts/topics/ballot_styles.md) — one voter, every ballot style, side by side
 - [Brams' grading paradox, counted](../../method_comparisons/brams_grading_paradox/) — the echo identity as an Approval advocate's theorem: "Approval prevents score-vs-Condorcet discrepancies" is true precisely because 0/1 ballots can't disagree with themselves
 - [Unified primary (Wikipedia)](https://en.wikipedia.org/wiki/Unified_primary) · [St. Louis Prop D (Ballotpedia)](https://ballotpedia.org/St._Louis,_Missouri,_Proposition_D,_Approval_Voting_Initiative_%28November_2020%29) · [2021 St. Louis mayoral election (Wikipedia)](https://en.wikipedia.org/wiki/2021_St._Louis_mayoral_election)
 

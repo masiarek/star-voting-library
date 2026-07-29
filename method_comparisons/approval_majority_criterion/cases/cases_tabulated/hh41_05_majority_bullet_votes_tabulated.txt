@@ -29,7 +29,7 @@ scenario_description: |-
 
   Compare with STAR, where the same class of failure requires the majority to
   support TWO rivals, not one — the Relaxed Majority Criterion:
-  ../../../00_start_here/topics/majority_criterion/README.md
+  ../../../07_Concepts/topics/majority_criterion/README.md
 
   Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
   Set overview: ../README.md

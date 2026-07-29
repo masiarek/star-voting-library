@@ -37,7 +37,7 @@ scenario_description: |-
   06_Other/ballot_style_lab/generate_ballot_styles.py (scenario
   'herb_council', seed 57) - utilities sampled from the faction model above,
   then rendered through each voter's ballot style. Per
-  00_start_here/topics/simulate_utilities_not_ballots.md this is the
+  07_Concepts/topics/simulate_utilities_not_ballots.md this is the
   'stress-test the tabulator' job (with human-shaped renderings), not a
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit herb_council

@@ -47,7 +47,7 @@ Winner — Ranked Robin (RCV-RR): Cora
 
 **And Amy beats Cora, 12–6.**
 
-So Cora is not the Condorcet winner. There is no Condorcet winner here at all: the [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates, one big [cycle](../concepts/cycle_resolution.md).
+So Cora is not the Condorcet winner. There is no Condorcet winner here at all: the [Smith set](../../07_Concepts/topics/smith_set.md) is all five candidates, one big [cycle](../concepts/cycle_resolution.md).
 
 ## Which step fails
 
@@ -119,7 +119,7 @@ Run it through the rest of the Condorcet family and that symmetry shows up immed
 
 Methods that decide by *margin* have nothing to work with when every margin is identical. Copeland, which counts only **how many** opponents you beat, is one of the few here that returns a decisive answer.
 
-This is worth setting beside the [companion case](../copeland_score/), which pushes in the opposite direction — there Copeland is the lone outlier and every margin-aware method overrules it. Together they're an honest picture of the [C1/C2 trade-off](../../00_start_here/topics/what_a_method_reads.md): discarding margins costs you in one profile and saves you in another. Neither case makes Copeland right or wrong; they show what the choice actually buys and spends.
+This is worth setting beside the [companion case](../copeland_score/), which pushes in the opposite direction — there Copeland is the lone outlier and every margin-aware method overrules it. Together they're an honest picture of the [C1/C2 trade-off](../../07_Concepts/topics/what_a_method_reads.md): discarding margins costs you in one profile and saves you in another. Neither case makes Copeland right or wrong; they show what the choice actually buys and spends.
 
 ## The shorthand shows up in official copy too
 
@@ -153,7 +153,7 @@ Want the whole count — full pairwise grid, Smith-set audit, ballot listing? Se
 
 - [The Copeland score — a draw is worth half a win](../copeland_score/) — the companion case: the *other* way "most matchups won" comes apart
 - [Ranked Robin vs. "the Condorcet winner"](../concepts/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
-- [The Smith set](../../00_start_here/topics/smith_set.md) — the generalized Condorcet winner, which is what "best" means when nobody is undefeated
+- [The Smith set](../../07_Concepts/topics/smith_set.md) — the generalized Condorcet winner, which is what "best" means when nobody is undefeated
 - [Honest limits](../concepts/RCV_RR_honest_limits.md)
 
 *(Up: [05_Ranked_Robin](../README.md) · concept docs: [Ranked Robin (RCV-RR)](../concepts/README.md))*

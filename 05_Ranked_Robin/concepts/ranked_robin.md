@@ -2,7 +2,7 @@
 
 *A ranked method that compares every candidate head-to-head and elects whoever beats the most rivals. Same ranked ballot as IRV, but a completely different — and far more transparent — way of counting it.*
 
-→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../00_start_here/topics/summability/).
+→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../07_Concepts/topics/summability/).
 
 ---
 
@@ -22,7 +22,7 @@ These terms are related but *not* interchangeable — they sit at different leve
 
 So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)). One nuance electowiki now records: in 2025 the term's originator clarified that she always intended **"Ranked Robin" as an approachable synonym for "Condorcet method"** in general — *not* one fixed algorithm. So the specific Copeland-plus-margins procedure on this page is the Equal Vote *default recommendation*, not the whole meaning of the name — which is exactly why "Ranked Robin" sits at the species level while "Condorcet" is the genus.
 
-**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../../00_start_here/tips/TIPS_terminology.md#the-ranked-method-family-tree). **Still tangled by the outside terminology** (and why Wikipedia's *Round-robin voting* and *Copeland's method* articles overlap)? → [Round-robin / Copeland / Ranked Robin — a naming decoder](condorcet_naming_decoder.md).
+**Where it sits in the whole ranked family** (diagram + alias table): [Terminology — the ranked-method family tree](../../07_Concepts/tips/TIPS_terminology.md#the-ranked-method-family-tree). **Still tangled by the outside terminology** (and why Wikipedia's *Round-robin voting* and *Copeland's method* articles overlap)? → [Round-robin / Copeland / Ranked Robin — a naming decoder](condorcet_naming_decoder.md).
 
 A law-review framing of the same idea (useful when an audience wants an authoritative source):
 
@@ -45,7 +45,7 @@ Two house-style clarifications on that quote: (1) it describes the Condorcet **w
 | Precinct-summable? | ❌ No | ✅ Yes (add pairwise matrices) |
 | [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
-The headline: the two things people *assume* "RCV" does — let you mark ties and compare candidates head-to-head — are exactly what **RCV-RR (Ranked Robin)** does and what **RCV-IRV (Instant-Runoff Voting)** does not. (See [strict_vs_weak_ranks.md](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) and [RCV_IRV_and_plurality.md](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md).)
+The headline: the two things people *assume* "RCV" does — let you mark ties and compare candidates head-to-head — are exactly what **RCV-RR (Ranked Robin)** does and what **RCV-IRV (Instant-Runoff Voting)** does not. (See [strict_vs_weak_ranks.md](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) and [RCV_IRV_and_plurality.md](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md).)
 
 ## Why it matters
 
@@ -79,18 +79,18 @@ Thirteen voters, four candidates on a left→right line (Ada, Ben, Cara, Dan). R
 | Ada | 1 | 2 | −1 |
 | Dan | 0 | 3 | −3 |
 
-**Ben wins Ranked Robin** by beating everyone head-to-head (he's the Condorcet winner). The kicker: **Ada and Dan each had *more* first-choice votes (4 apiece) than Ben (3)** — under Plurality or a first-past-the-post lens, Ben looks like an also-ran. Ranked Robin reads the *whole* ballot, so the candidate the majority prefers in every matchup wins, not the one with the biggest first-choice pile. (Verified on the engine; the [`pref_voting` cross-check](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md) confirms Copeland = Ben, and IRV happens to agree here too.)
+**Ben wins Ranked Robin** by beating everyone head-to-head (he's the Condorcet winner). The kicker: **Ada and Dan each had *more* first-choice votes (4 apiece) than Ben (3)** — under Plurality or a first-past-the-post lens, Ben looks like an also-ran. Ranked Robin reads the *whole* ballot, so the candidate the majority prefers in every matchup wins, not the one with the biggest first-choice pile. (Verified on the engine; the [`pref_voting` cross-check](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md) confirms Copeland = Ben, and IRV happens to agree here too.)
 
 ## For balance — its limits
 
-Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only, not strength** — it can't tell a near-tie from a landslide ([scores_vs_ranks.md](../../00_start_here/scores_and_ranks/scores_vs_ranks.md)) — so it carries less information than a scored method like STAR. When there's a **Condorcet cycle** (A beats B, B beats C, C beats A, with no candidate beating all others), there is no Condorcet winner and the method falls back on a tiebreak rule (sum of margins), which reasonable people can debate. And no method escapes Gibbard–Satterthwaite. Its real-world **adoption is limited** so far compared with IRV.
+Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only, not strength** — it can't tell a near-tie from a landslide ([scores_vs_ranks.md](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)) — so it carries less information than a scored method like STAR. When there's a **Condorcet cycle** (A beats B, B beats C, C beats A, with no candidate beating all others), there is no Condorcet winner and the method falls back on a tiebreak rule (sum of margins), which reasonable people can debate. And no method escapes Gibbard–Satterthwaite. Its real-world **adoption is limited** so far compared with IRV.
 
 **Name the tie-proneness properly: Copeland is a known-indecisive rule.** This is the sharpest version of the cycle limit above, and it is a documented property of the count, not a quirk of this repo's engine or a symptom of unusually contrived examples. Copeland scores are **whole wins**, so it can only ever distinguish candidates by *how many* matchups they took, never by how much they won or lost each one by — and in a cycle every candidate has the same record. Two consequences worth stating out loud:
 
-- **[Minimax / Simpson](../../00_start_here/voting_paradoxes/minimax.md) is strictly more decisive**, precisely because it reads *margins* rather than win counts, and margins survive a cycle when win counts don't. The [minimal tilted cycle](../../method_comparisons/minimal_tilted_cycle/README.md) is the runnable proof: five voters, Copeland ties all three, minimax names a winner — and the information minimax used was on the ballots the whole time.
-- **Copeland winners always lie inside the [top cycle / Smith set](../../00_start_here/topics/smith_set.md)**, so Copeland never elects badly in that sense; it just frequently declines to narrow the field further on its own.
+- **[Minimax / Simpson](../../07_Concepts/voting_paradoxes/minimax.md) is strictly more decisive**, precisely because it reads *margins* rather than win counts, and margins survive a cycle when win counts don't. The [minimal tilted cycle](../../method_comparisons/minimal_tilted_cycle/README.md) is the runnable proof: five voters, Copeland ties all three, minimax names a winner — and the information minimax used was on the ballots the whole time.
+- **Copeland winners always lie inside the [top cycle / Smith set](../../07_Concepts/topics/smith_set.md)**, so Copeland never elects badly in that sense; it just frequently declines to narrow the field further on its own.
 
-That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. LH's ladder (margin → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../../00_start_here/topics/ties/ties_are_forced.md).
+That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. LH's ladder (margin → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../../07_Concepts/topics/ties/ties_are_forced.md).
 
 ## Now you can tabulate it — the `pref_voting` engine
 
@@ -100,7 +100,7 @@ The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tool
 
 ### Options for an RCV-RR YAML file — and what shows where
 
-The Ranked Robin path follows the same **minimal on-screen report / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
+The Ranked Robin path follows the same **minimal on-screen report / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
 
 | Option | Default | Effect on RCV-RR |
 |--------|:-------:|------------------|
@@ -175,7 +175,7 @@ Add `options: { show_matrix: true }` to pull that matrix onto the screen too —
 
 They're the **same idea**: elect whoever wins the most head-to-head matchups (the Condorcet/Copeland winner). They agree on the winner whenever a Condorcet winner exists — i.e. almost always — and differ *only* in the **cycle/tie-break rule** (Ranked Robin: sum of margins; Consensus Choice: "Most Wins, Smallest Loss"; textbook Copeland: by score). So treat them as one method with several brands, not byte-identical algorithms.
 
-> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../00_start_here/tips/TIPS_terminology.md).)
+> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../07_Concepts/tips/TIPS_terminology.md).)
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:
@@ -184,7 +184,7 @@ python pref_voting_tabulation.py example_tennessee.yaml
 #   Copeland   pref_voting=Nashville   (= the Ranked Robin / Consensus winner)
 ```
 
-Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **independent Python reference** to reconcile BV's RCV-RR results against — the same cross-checking we do for STAR and RCV-IRV. Details: [Cross-checking the LH engine with pref_voting](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
+Since BetterVoting ships a Ranked Robin tabulator too, this gives you an **independent Python reference** to reconcile BV's RCV-RR results against — the same cross-checking we do for STAR and RCV-IRV. Details: [Cross-checking the LH engine with pref_voting](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md).
 
 ---
 
@@ -207,15 +207,15 @@ Every claim on this page has a runnable election behind it. The case folders liv
 
 ## Related concept pages
 
-- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../../00_start_here/topics/summability/))
+- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../../07_Concepts/topics/summability/))
 - [Cycle resolution](cycle_resolution.md) — why Copeland is tie-prone, and why Minimax / Ranked Pairs / Schulze exist (they differ only on cycles)
 - [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md) — RR passes vote-splitting but can fail teaming in a no-Condorcet-winner cycle (and only under a margin tiebreak)
-- [Strict vs. weak ranks](../../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
+- [Strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't
 - [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — the failure RR avoids and IRV doesn't
 - [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — the IRV ballots that stop counting; Ranked Robin never exhausts one (every ballot is read in every pair)
 - [Is IRV "just plurality"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md) — why IRV isn't pairwise
-- [Scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — RR is still order-only, unlike STAR
-- [RCV-IRV vs. STAR (side-by-side)](../../00_start_here/topics/rcv_irv_vs_star.md)
+- [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — RR is still order-only, unlike STAR
+- [RCV-IRV vs. STAR (side-by-side)](../../07_Concepts/topics/rcv_irv_vs_star.md)
 - [RCV vs. IRV vs. RCV-IRV — terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
 
 ## Learn more — external

@@ -19,7 +19,7 @@ No. of voters    Preference ordering
 
 ## Borda, worked (the paper paradox)
 
-Borda points (2/1/0): **A 6, B 7, C 8 → C elected.** Now let B — who *lost* — withdraw, *ceteris paribus*. Borda on the remaining pair: **A 4, C 3 → A elected.** A loser's exit flipped the winner: **SCC** (the subset choice condition — the formal [spoiler](../../00_start_here/voting_paradoxes/spoiler_scc.md)) violated by Borda's count.
+Borda points (2/1/0): **A 6, B 7, C 8 → C elected.** Now let B — who *lost* — withdraw, *ceteris paribus*. Borda on the remaining pair: **A 4, C 3 → A elected.** A loser's exit flipped the winner: **SCC** (the subset choice condition — the formal [spoiler](../../07_Concepts/voting_paradoxes/spoiler_scc.md)) violated by Borda's count.
 
 **Honest note:** with B gone, A beats C head-to-head 4–3, so *any* method elects A in the two-candidate contest — on a cyclic profile (B>A 5–2, A>C 4–3, C>B 5–2) every method's winner is exit-sensitive. Felsenthal's specific charge is that Borda's *point arithmetic* is what did the flipping. The cycle is also why no Ranked Robin or IRV race exists here (both would hit random ties on BV).
 

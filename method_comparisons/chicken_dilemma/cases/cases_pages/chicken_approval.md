@@ -15,7 +15,7 @@ favorite) to win outright — a slippery slope that, if both sides defect far en
 the majority-opposed C slip through. The A/B tie is the whole point (as with Jefferson &
 Burr in 1800), so this case is LH/pref_voting-verified rather than frozen from a random
 BetterVoting tie-break. STAR removes the slope entirely — see chicken_star.yaml.
-Concept: ../../00_start_here/topics/strategic_pathologies.md.
+Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
 ## Ballots
 
@@ -72,8 +72,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Ties & tie-breaking (topic hub)](../../../../00_start_here/topics/ties/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [chicken_star](chicken_star.md)

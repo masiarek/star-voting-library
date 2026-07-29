@@ -4,7 +4,7 @@ tournament_solutions_report.py — the C1 tournament solutions, side by side.
 
 A **tournament solution** is a rule that reads *only* the tournament: who beat
 whom, direction only, margins thrown away. That is Fishburn's C1 tier (see
-00_start_here/topics/what_a_method_reads.md), and the academic literature on it
+07_Concepts/topics/what_a_method_reads.md), and the academic literature on it
 is large — Brandt, Brill & Harrenstein, "Tournament Solutions," ch. 3 of the
 *Handbook of Computational Social Choice* (2016).
 
@@ -15,7 +15,7 @@ so the teaching pages can state verified choice sets instead of asserted ones.
 Works on RANKED ballots (where these rules genuinely apply) and on SCORE
 ballots (STAR / Approval / Score), where it prints the tournament those ballots
 imply and lets you ask whether the score method's winner is COVERED — see
-00_start_here/topics/uncovered_set.md. A score method has no Fishburn class and
+07_Concepts/topics/uncovered_set.md. A score method has no Fishburn class and
 is not one of the rules below; the tool says so on every score file.
 
 What it prints, for any election YAML in this repo:

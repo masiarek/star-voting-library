@@ -11,7 +11,7 @@ Two passes, in this order (the order matters):
      target against the *source file's* directory to a repo-relative path. If
      that path lands inside a moved folder, remap it and recompute the relative
      path from the source's own (possibly also moved) new location. This is the
-     only correct way to handle `../../00_start_here/X/y.md` style links, whose
+     only correct way to handle `../../07_Concepts/X/y.md` style links, whose
      correct rewrite depends on where the *linking* file sits.
 
   2. LITERAL PASS — plain-replace any remaining literal `OLD/` strings. These
@@ -98,7 +98,7 @@ def rewrite_link(target: str, src_rel: str, moves: list[tuple[str, str]]) -> str
     return out + frag
 
 
-def process(repo: Path, moves: list[tuple[str, str]], apply: bool):
+def process(repo: Path, moves: list[tuple[str, str]], apply: bool, exclude: set[str] | None = None):
     link_edits = 0
     literal_edits = 0
     files_changed: dict[Path, tuple[int, int]] = {}
@@ -109,6 +109,8 @@ def process(repo: Path, moves: list[tuple[str, str]], apply: bool):
         except (UnicodeDecodeError, OSError):
             continue
         src_rel = path.relative_to(repo).as_posix()
+        if exclude and src_rel in exclude:
+            continue
         original = text
         n_link = 0
 
@@ -184,6 +186,12 @@ def main():
     ap.add_argument("--repo", default=".")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--exclude", action="append", default=[],
+                    help="repo-relative file to leave completely untouched. Use for "
+                         "mkdocs.yml when renaming a folder: its redirect_maps SOURCE "
+                         "keys are historical URLs that must keep naming the old path, "
+                         "and rewriting them would point every redirect at a URL that "
+                         "never existed. Hand-edit such files instead.")
     args = ap.parse_args()
 
     repo = Path(args.repo).resolve()
@@ -194,7 +202,7 @@ def main():
     # Longest prefix first so nested moves resolve correctly.
     moves.sort(key=lambda t: len(t[0]), reverse=True)
 
-    files, nl, nlit = process(repo, moves, args.apply)
+    files, nl, nlit = process(repo, moves, args.apply, {e.strip('/') for e in args.exclude})
     verb = "REWROTE" if args.apply else "would rewrite"
     if not args.quiet:
         for p in sorted(files):

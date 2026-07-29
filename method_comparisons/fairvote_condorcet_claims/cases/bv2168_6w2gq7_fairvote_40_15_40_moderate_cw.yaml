@@ -28,7 +28,7 @@ scenario_description: |-
   cast, electorate shifts left — the "strong liberal" becomes the Condorcet
   winner).
   Full claim-by-claim reading of the article:
-  00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md
+  07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
 voting_method: STAR
 num_winners: 1

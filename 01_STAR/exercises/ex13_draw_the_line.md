@@ -93,7 +93,7 @@ Approve only your 5 and the "Approval election" is just **Choose-One plurality**
 <details>
 <summary><b>(e) The moral — the ballot outsources its precision to the voter</b></summary>
 
-One set of honest opinions produced **five defensible winners across five readings**: Ash (Score), Cora (STAR), Ash (approve-3+), Beck (approve-4+), Cora (favorites-only). Nothing was insincere anywhere — the Approval ballot simply asks each voter to *pre-aggregate* their own opinion into a yes/no, so the threshold is a free parameter the method never pins down. That is Approval's honest trade: maximal simplicity, bought by pushing the hard decision onto the voter — and it is why any "how often do STAR and Approval agree?" number depends on an assumed cutoff model ([the worked divergence study](../../method_comparisons/star_vs_approval_divergence.md); threshold strategy itself: [strategic voting](../../00_start_here/topics/strategic_voting.md)). A score ballot keeps the resolution and lets the *count* do the compressing; an approval ballot is a score ballot each voter compressed in their head.
+One set of honest opinions produced **five defensible winners across five readings**: Ash (Score), Cora (STAR), Ash (approve-3+), Beck (approve-4+), Cora (favorites-only). Nothing was insincere anywhere — the Approval ballot simply asks each voter to *pre-aggregate* their own opinion into a yes/no, so the threshold is a free parameter the method never pins down. That is Approval's honest trade: maximal simplicity, bought by pushing the hard decision onto the voter — and it is why any "how often do STAR and Approval agree?" number depends on an assumed cutoff model ([the worked divergence study](../../method_comparisons/star_vs_approval_divergence.md); threshold strategy itself: [strategic voting](../../07_Concepts/topics/strategic_voting.md)). A score ballot keeps the resolution and lets the *count* do the compressing; an approval ballot is a score ballot each voter compressed in their head.
 
 </details>
 
@@ -116,6 +116,6 @@ Sources: [opinions (STAR)](cases/ex13_opinions.yaml) · [approve 3+](cases/ex13_
 
 **Where this comes from.** Original to this repo (ballots and cast); the imposing-approvals-on-scores move follows Sullivan's *An Introduction to the Math of Voting Methods* (2022), ch. 5, which builds approval ballots from score ballots the same way. Concept homes: [Approval Voting](../../04_Approval/README.md) and [the STAR-vs-Approval divergence study](../../method_comparisons/star_vs_approval_divergence.md).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex13_draw_the_line.md

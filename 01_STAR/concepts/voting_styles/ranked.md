@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-You've volunteered a constraint the ballot doesn't impose. A ranking must invent a difference between every pair — even two candidates you honestly can't split — and must space all differences equally, even when your real gap between 1st and 2nd is a hair and between 2nd and 3rd is a canyon. That's the core [scores-vs-ranks](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md) distinction: a rating carries order *and* strength; a forced ranking carries order and *manufactures* the rest. The [Nuanced](nuanced.md) style says everything this one says, plus the ties and true distances — with less effort, because you never break a tie you don't feel.
+You've volunteered a constraint the ballot doesn't impose. A ranking must invent a difference between every pair — even two candidates you honestly can't split — and must space all differences equally, even when your real gap between 1st and 2nd is a hair and between 2nd and 3rd is a canyon. That's the core [scores-vs-ranks](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) distinction: a rating carries order *and* strength; a forced ranking carries order and *manufactures* the rest. The [Nuanced](nuanced.md) style says everything this one says, plus the ties and true distances — with less effort, because you never break a tie you don't feel.
 
 ## This exact style in a real election
 
@@ -26,4 +26,4 @@ In the runnable [style-gallery election](../../_main/cases/cases_pages/03c_c6_b8
 ## Related
 
 - [Nuanced](nuanced.md) — more information, less work: the ballot rankings wish they were
-- [Scores vs. Ranks](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md) — don't confuse ranks and ratings; the distinction this style blurs
+- [Scores vs. Ranks](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — don't confuse ranks and ratings; the distinction this style blurs

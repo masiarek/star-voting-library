@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** base — [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (`36f4v2`, BV2219) · plus-cancel — [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (`q8q9m7`, BV2220). Two elections differing only by the two mirror ballots — both elect Comet.
 
-→ Related: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md) (what an *unequal* vote causes) · [the Equal Vote scorecard](../../method_comparisons/single_winner_scorecard/) (row 1: "spoiler / vote splitting").
+→ Related: [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md) (what an *unequal* vote causes) · [the Equal Vote scorecard](../../method_comparisons/single_winner_scorecard/) (row 1: "spoiler / vote splitting").
 
 ---
 
@@ -60,7 +60,7 @@ The [source graphic](../concepts/properties_and_limits/equally_weighted_vote.md#
 
 ## The parallel in ranked methods
 
-Balance isn't unique to scores. A ranked ballot and its **exact reverse** also cancel: in every head-to-head pair, one ballot's `X > Y` is met by the other's `Y > X`, so the pairwise margin is unchanged. So [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) passes the Test of Balance too. The method that *fails* it is [Choose-One](../../00_start_here/topics/plurality.md): a single mark can only *add* to one candidate, never subtract — there is no ballot anyone can cast to cancel it, which is exactly why plurality splits votes. ([RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) is the subtle one — opposite ballots don't reliably cancel under sequential elimination.)
+Balance isn't unique to scores. A ranked ballot and its **exact reverse** also cancel: in every head-to-head pair, one ballot's `X > Y` is met by the other's `Y > X`, so the pairwise margin is unchanged. So [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) passes the Test of Balance too. The method that *fails* it is [Choose-One](../../07_Concepts/topics/plurality.md): a single mark can only *add* to one candidate, never subtract — there is no ballot anyone can cast to cancel it, which is exactly why plurality splits votes. ([RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) is the subtle one — opposite ballots don't reliably cancel under sequential elimination.)
 
 ## Files
 

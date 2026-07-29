@@ -12,7 +12,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 **The canonical mechanics demo.** The exact election quoted in the [root README](../../readme.md) and the authoring docs — three voters, three candidates, both rounds doing visible work, no twist on purpose.
 
-- [Ann, Bob, Cal — the canonical leading example](cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) · **[live ↗](https://bettervoting.com/qrw6wb/results)** — reuse rules & the full canonical set: [TIPS — Canonical Elections](../../00_start_here/tips/TIPS_canonical_elections.md)
+- [Ann, Bob, Cal — the canonical leading example](cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) · **[live ↗](https://bettervoting.com/qrw6wb/results)** — reuse rules & the full canonical set: [TIPS — Canonical Elections](../../07_Concepts/tips/TIPS_canonical_elections.md)
 
 **Intros — three candidates (101).** How a STAR ballot is scored and read, where the third option makes the two rounds matter.
 

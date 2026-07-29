@@ -24,5 +24,5 @@ Because the **teaching framing** is the Plurality family (votes-per-voter), and 
 ## See also
 
 - [multi_member_plurality — lead page](multi_member_plurality.md) · [README](README.md)
-- BV method notes: [`bv_api_election_creation_notes.md`](../../00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md)
+- BV method notes: [`bv_api_election_creation_notes.md`](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md)
 - References: [SNTV (WP)](https://en.wikipedia.org/wiki/Single_non-transferable_vote) · [Limited voting (WP)](https://en.wikipedia.org/wiki/Limited_voting) · [Plurality block voting (WP)](https://en.wikipedia.org/wiki/Plurality_block_voting)

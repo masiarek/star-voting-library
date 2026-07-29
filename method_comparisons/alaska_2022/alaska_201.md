@@ -66,11 +66,11 @@ Read the **Begich** row:
 - **Begich vs Peltola: 93 – 84** → Begich wins. (The right wing, plus Begich's own voters, prefer the center candidate to the left one.)
 - **Begich vs Palin: 107 – 68** → Begich wins big. (The left wing prefers the center candidate to the right one.)
 
-Begich wins **every** matchup. A candidate who beats each rival head-to-head is the **[Condorcet winner](../../00_start_here/topics/condorcet/)** — the "beats-everyone," consensus candidate. Alaska *had* one (Begich), and RCV-IRV **didn't elect him.** That's a **Condorcet failure**.
+Begich wins **every** matchup. A candidate who beats each rival head-to-head is the **[Condorcet winner](../../07_Concepts/topics/condorcet/)** — the "beats-everyone," consensus candidate. Alaska *had* one (Begich), and RCV-IRV **didn't elect him.** That's a **Condorcet failure**.
 
 ## Naming the mechanism: center squeeze
 
-Why did IRV miss him? Look back at Round 1: Begich had the fewest *first* choices, so he was eliminated **before** any head-to-head mattered. The broadly-liked centrist is knocked out early precisely because "everyone's acceptable second choice" earns few *firsts*. That specific pattern — the middle candidate eliminated between two wings despite beating both head-to-head — is the **[center squeeze](../../00_start_here/topics/center_squeeze/README.md)**. It is an **IRV-specific** flaw: it comes from eliminating on first-choice counts, not from ranked ballots themselves.
+Why did IRV miss him? Look back at Round 1: Begich had the fewest *first* choices, so he was eliminated **before** any head-to-head mattered. The broadly-liked centrist is knocked out early precisely because "everyone's acceptable second choice" earns few *firsts*. That specific pattern — the middle candidate eliminated between two wings despite beating both head-to-head — is the **[center squeeze](../../07_Concepts/topics/center_squeeze/README.md)**. It is an **IRV-specific** flaw: it comes from eliminating on first-choice counts, not from ranked ballots themselves.
 
 ## The same ballots, four ways
 

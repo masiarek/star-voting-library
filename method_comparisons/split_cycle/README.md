@@ -1,6 +1,6 @@
 # Split Cycle vs. Schulze — a spoiler nobody voted for
 
-The tabulatable evidence behind [Split Cycle — the method that hands the tie back, claim-checked](../../00_start_here/topics/condorcet/split_cycle.md). Holliday & Pacuit ([arXiv:2004.02350](https://arxiv.org/abs/2004.02350); *Public Choice* 197, 2023) claim that among clone-independent methods only **Split Cycle** is immune to spoilers, and that **Schulze** is not. This is that claim, run.
+The tabulatable evidence behind [Split Cycle — the method that hands the tie back, claim-checked](../../07_Concepts/topics/condorcet/split_cycle.md). Holliday & Pacuit ([arXiv:2004.02350](https://arxiv.org/abs/2004.02350); *Public Choice* 197, 2023) claim that among clone-independent methods only **Split Cycle** is immune to spoilers, and that **Schulze** is not. This is that claim, run.
 
 | Case (source) | Ballots | What it shows |
 |---|:--:|---|
@@ -22,4 +22,4 @@ uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cy
 
 **Read it fairly** — the lesson page states the limits, and they're real: this needs a five-candidate election with no Condorcet winner and a Smith set of *everyone*; Ranked Pairs isn't convicted by this particular profile; Split Cycle's escape is to return **two** winners, which a public election would then have to break somehow; and the criterion is narrower than IIA — it wouldn't flag [this library's own STAR spoiler case](../../01_STAR/iia_cycle_spoiler/README.md). Nothing here is evidence about STAR or Ranked Robin.
 
-Concept pages: [Split Cycle, claim-checked](../../00_start_here/topics/condorcet/split_cycle.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Condorcet reading list](../../00_start_here/topics/condorcet/condorcet_reading_list.md) · up: [method_comparisons](../README.md)
+Concept pages: [Split Cycle, claim-checked](../../07_Concepts/topics/condorcet/split_cycle.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Condorcet reading list](../../07_Concepts/topics/condorcet/condorcet_reading_list.md) · up: [method_comparisons](../README.md)

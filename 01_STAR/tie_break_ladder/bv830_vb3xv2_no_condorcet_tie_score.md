@@ -110,7 +110,7 @@ Both engines elect **B**, confirmed against BetterVoting's frozen export. B and 
 
 ## See also
 
-- [Why STAR Voting](../../00_start_here/topics/Why_STAR_Voting.md) — the STAR-vs-Condorcet tradeoff, argued both ways (point 6)
+- [Why STAR Voting](../../07_Concepts/topics/Why_STAR_Voting.md) — the STAR-vs-Condorcet tradeoff, argued both ways (point 6)
 - [The STAR tie-breaking ladder (full chain)](../concepts/Tie_Breaking_STAR/tie_breaking.md) — the deterministic rungs, in order
 - [Ice cream ladder (BV2180, `fp62p2`)](bv2180_fp62p2_ice_cream_ladder.md) — the folder's other happy-path case (ties in *both* rounds, settled without the lot)
-- [Condorcet winner (topic hub)](../../00_start_here/topics/condorcet/) · [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md)
+- [Condorcet winner (topic hub)](../../07_Concepts/topics/condorcet/) · [STAR's honest limits](../concepts/properties_and_limits/STAR_honest_limits.md)

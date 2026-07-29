@@ -120,6 +120,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/runoff_o
 
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/05_c3_b5_low-scores-bv1265.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [01a_c3_b3_more-stars-fewer-voters](01a_c3_b3_more-stars-fewer-voters.md) · [01b_c3_b9_overturn-holds-at-scale](01b_c3_b9_overturn-holds-at-scale.md) · [02_c5_b5_leader-overturned](02_c5_b5_leader-overturned.md) · [03_c7_b3_ice-cream-live](03_c7_b3_ice-cream-live.md) · [04_c4_b3_runoff-confirms-leader](04_c4_b3_runoff-confirms-leader.md) · [reversal_convincing_c3_b100](reversal_convincing_c3_b100.md) · [reversal_jarring_c3_b100](reversal_jarring_c3_b100.md)

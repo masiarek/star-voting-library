@@ -91,6 +91,6 @@ Source: [ex05_center_squeeze.yaml](cases/ex05_center_squeeze.yaml). Full audit r
 
 **Where this comes from.** Original to this repo (ballots and cast); the mechanism it drills is the classic center squeeze — concept home [RCV-IRV center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md), live comparison set [method_comparisons/center_squeeze](../../method_comparisons/center_squeeze/README.md) (BV2137).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex05_center_squeeze.md

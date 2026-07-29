@@ -5,12 +5,12 @@ build_paradox_index.py — group the repo's test cases by voting paradox.
 Scans the teaching/test YAML files for a top-level `paradoxes: [tag, …]` list
 (the tabulation engine ignores the field) and regenerates:
 
-  * 00_start_here/YAML_test_case_index/PARADOX_index.md — cases grouped by
-    paradox, each linked to its teaching page in 00_start_here/voting_paradoxes/
+  * 07_Concepts/YAML_test_case_index/PARADOX_index.md — cases grouped by
+    paradox, each linked to its teaching page in 07_Concepts/voting_paradoxes/
     (when one exists) and to the case's reader-friendly .md page (the sibling
     two-view page if present, else the generated <set>_pages page), with the
     raw .yaml demoted to the last column per house link style.
-  * 00_start_here/YAML_test_case_index/paradox_cases.csv — the same, flat.
+  * 07_Concepts/YAML_test_case_index/paradox_cases.csv — the same, flat.
 
 TAG VOCABULARY IS CONTROLLED. Tags must come from VOCAB below; unknown tags are
 reported loudly (and listed in a trailing section so nothing silently drops).
@@ -29,10 +29,10 @@ import sys
 import yaml
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-OUT_DIR = os.path.join(REPO, "00_start_here", "YAML_test_case_index")
+OUT_DIR = os.path.join(REPO, "07_Concepts", "YAML_test_case_index")
 OUT_MD = os.path.join(OUT_DIR, "PARADOX_index.md")
 OUT_CSV = os.path.join(OUT_DIR, "paradox_cases.csv")
-PAGES_DIR = "00_start_here/voting_paradoxes"
+PAGES_DIR = "07_Concepts/voting_paradoxes"
 
 EXCLUDE = ("_tabulated", "_generated", "_demo_dropbox", "/tests/", "/negative",
            "/2_negative", "harness_cases", "trash_delete",
@@ -148,7 +148,7 @@ def best_page(rel_yaml):
 
 
 def rel_from_index(rel):
-    """Path relative to OUT_DIR (00_start_here/YAML_test_case_index/)."""
+    """Path relative to OUT_DIR (07_Concepts/YAML_test_case_index/)."""
     return os.path.relpath(os.path.join(REPO, rel), OUT_DIR).replace(os.sep, "/")
 
 

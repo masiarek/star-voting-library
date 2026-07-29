@@ -66,7 +66,7 @@ Read the W column alone and Alice looks unremarkable: **two wins, exactly like C
 
 Now count the draw. Alice's tie with Bruno is worth ½, so Alice sits on **2.5** while Carmen, Dmitri and Bruno are all on exactly **2.0**. Nobody else has 2 wins *and* a draw. The half-point is not a tiebreaker here — it is the whole margin of victory.
 
-And note what Alice's record actually contains: **a loss.** Carmen beat Alice 21–9, a thumping. Ranked Robin still elects Alice, because nobody in this election beat everybody — there is no [Condorcet winner](../concepts/ranked_robin_vs_condorcet.md) at all. The [Smith set](../../00_start_here/topics/smith_set.md) is all five candidates: the whole field is one big [cycle](../concepts/cycle_resolution.md). When no one beats everyone, Ranked Robin falls back to the best overall record — and the best overall record can belong to someone who lost a match.
+And note what Alice's record actually contains: **a loss.** Carmen beat Alice 21–9, a thumping. Ranked Robin still elects Alice, because nobody in this election beat everybody — there is no [Condorcet winner](../concepts/ranked_robin_vs_condorcet.md) at all. The [Smith set](../../07_Concepts/topics/smith_set.md) is all five candidates: the whole field is one big [cycle](../concepts/cycle_resolution.md). When no one beats everyone, Ranked Robin falls back to the best overall record — and the best overall record can belong to someone who lost a match.
 
 ## What the half-point costs
 
@@ -90,7 +90,7 @@ Copeland reads only **who beat whom**. A win is a win; the size of it is invisib
 
 Copeland sees "one loss" versus "two losses" and prefers Alice. Every method in the right-hand column can see *margins*, and they see a candidate who was barely nudged out of two matchups versus one who was decisively beaten in another — and they prefer Carmen.
 
-That is the [C1 / C2 distinction](../../00_start_here/topics/what_a_method_reads.md) exactly: Copeland is a [tournament solution](../../00_start_here/topics/tournament_solutions.md), reading only the arrows; the others read the numbers on the arrows. Neither is obviously correct — discarding margins is a deliberate choice that buys resistance to certain manipulations — but a profile like this one is where the choice becomes visible, and it is a fair thing for a critic to raise.
+That is the [C1 / C2 distinction](../../07_Concepts/topics/what_a_method_reads.md) exactly: Copeland is a [tournament solution](../../07_Concepts/topics/tournament_solutions.md), reading only the arrows; the others read the numbers on the arrows. Neither is obviously correct — discarding margins is a deliberate choice that buys resistance to certain manipulations — but a profile like this one is where the choice becomes visible, and it is a fair thing for a critic to raise.
 
 ## Cross-checks
 

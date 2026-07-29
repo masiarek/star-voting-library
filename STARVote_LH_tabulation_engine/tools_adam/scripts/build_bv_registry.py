@@ -4,9 +4,9 @@ build_bv_registry.py — a repo-native registry of the BetterVoting test cases.
 
 Scans the YAML election files, pulls out each case's BV metadata, and writes:
 
-  * 00_start_here/YAML_test_case_index/bv_cases.csv   — sortable table (GitHub
+  * 07_Concepts/YAML_test_case_index/bv_cases.csv   — sortable table (GitHub
     renders CSV with clickable column-sort), one row per BV-tracked case.
-  * 00_start_here/YAML_test_case_index/BV_registry.md — the same as a Markdown
+  * 07_Concepts/YAML_test_case_index/BV_registry.md — the same as a Markdown
     table + a summary (methods breakdown, sorted Test IDs, and the free gaps in
     the repo's BV-number range) so "what BV numbers are taken?" is answerable
     from the repo, not only the Google Sheet.
@@ -43,14 +43,14 @@ EXCLUDE = ("/_tabulated", "_tabulated/", "/_demo_dropbox/", "/_generated",
 def _find_repo(start):
     d = start
     while d != os.path.dirname(d):
-        if os.path.isdir(os.path.join(d, "00_start_here")):
+        if os.path.isdir(os.path.join(d, "07_Concepts")):
             return d
         d = os.path.dirname(d)
-    sys.exit("could not locate repo root (no 00_start_here/ above this script)")
+    sys.exit("could not locate repo root (no 07_Concepts/ above this script)")
 
 
 REPO = _find_repo(os.path.dirname(os.path.abspath(__file__)))
-OUT_DIR = os.path.join(REPO, "00_start_here", "YAML_test_case_index")
+OUT_DIR = os.path.join(REPO, "07_Concepts", "YAML_test_case_index")
 
 # Test ID from a `bv<num>[letter|-rN]_...` filename. Election id is NEVER guessed
 # from the filename (descriptor words like "score"/"guido" would be mistaken for

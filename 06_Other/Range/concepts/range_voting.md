@@ -2,7 +2,7 @@
 
 *Every voter **grades each candidate** on a fixed scale (say 0–5); the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/) (pref_voting). · Family: [Approval](../../../04_Approval/concepts/approval_voting.md) · [STAR](../../../01_STAR/concepts) · [fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md).
+→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/) (pref_voting). · Family: [Approval](../../../04_Approval/concepts/approval_voting.md) · [STAR](../../../01_STAR/concepts) · [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches *about* it rather than promoting it — it lives in [other methods](../../), not the numbered root folders. The honest comparison is the point.
 
@@ -27,7 +27,7 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 
 - **Approval** is Range at **1-bit** resolution — grades restricted to `{0, max}`.
 - **STAR** is Range's **score round + an automatic runoff**. The runoff exists precisely to blunt Range's strategy problem (below).
-- So the three are one family at increasing resolution/robustness: **Approval → Range → STAR.** See the [fidelity ladder](../../../00_start_here/scores_and_ranks/fidelity_ladder.md).
+- So the three are one family at increasing resolution/robustness: **Approval → Range → STAR.** See the [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
 
 ## Pros and cons
 
@@ -37,7 +37,7 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 | ✅ **No vote-splitting / spoiler** in the choose-one sense — scoring a new candidate never lowers another's score. | ⚠️ **Not majoritarian.** A candidate a slim majority *strongly* prefers can lose to one a broad group *mildly* likes. Range fails the **Majority Criterion**. |
 | ✅ **Precinct-summable & simple to tally** — just add columns; none of RCV-IRV's round-by-round machinery. | ⚠️ **The scale / normalization problem.** Honest voters using the scale differently — or a shifted "where's my line" — changes results (the [approval-line](../../../04_Approval/concepts/approval_honest_limits.md) issue, one notch up). |
 | ✅ **Monotone** — more support never hurts a candidate (unlike IRV). | ⚠️ **Fails Later-No-Harm** — grading a compromise can cost your favorite. |
-| ✅ **Passes the [Equal Vote / balance test](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md). |
+| ✅ **Passes the [Equal Vote / balance test](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md). |
 
 **The one-line summary:** Range asks the richest question, but rewards exaggeration; **STAR keeps Range's expressive ballot and adds a runoff** to make honesty safer. Which trade-off you want is the whole debate.
 
@@ -78,7 +78,7 @@ The lesson: **the cardinal ballot's *resolution* can change the winner.** Collap
 
 - **[The Center for Range Voting — rangevoting.org](https://rangevoting.org/)** — Warren D. Smith's canonical range-voting site (research, Bayesian-regret simulations, and strong advocacy — read it as an *advocate's* case, alongside the cons above).
 - [Equal Vote Coalition](https://www.equal.vote/) — STAR and the scored family.
-- Glossary: **Score / Range voting** — [Glossary — voting methods & criteria](../../../00_start_here/GLOSSARY.md).
+- Glossary: **Score / Range voting** — [Glossary — voting methods & criteria](../../../07_Concepts/GLOSSARY.md).
 
 ## Tabulation (the details)
 

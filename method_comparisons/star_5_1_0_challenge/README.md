@@ -2,7 +2,7 @@
 
 *Robert Bristow-Johnson (**rb-j**), a longtime Condorcet advocate and the analyst of [Burlington 2009](../burlington_2009/), posed a sharp challenge on r/EndFPTP: a rational STAR voter with preferences A > B > C will score **`A:5, B:1, C:0`** — and if everyone votes that way, STAR behaves like IRV and [center-squeezes](../center_squeeze/) the Condorcet winner the same way. This page takes the argument seriously, runs it, and reports what's true, what's overstated, and where the honest line is. Short version: **the mechanism is real — and his "the 1s contribute little" is not.***
 
-→ Related: [strategic voting](../../00_start_here/topics/strategic_voting.md) · [favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · real cases: [Alaska 2022](../alaska_2022/), [Burlington 2009](../burlington_2009/).
+→ Related: [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · real cases: [Alaska 2022](../alaska_2022/), [Burlington 2009](../burlington_2009/).
 
 **▶ Live on BetterVoting** (the 5-1-0 elections each carry a **STAR** race and an **RCV-IRV** race on the same voter preferences, side by side): sincere → **[results ↗](https://bettervoting.com/2kcwbw/results)** (`2kcwbw`, BV2221) · thin-moderate 5-1-0 → **[results ↗](https://bettervoting.com/rfyk46/results)** (`rfyk46`, BV2222) · real-moderate 5-1-0 → **[results ↗](https://bettervoting.com/dyh93j/results)** (`dyh93j`, BV2223).
 
@@ -48,7 +48,7 @@ Scoring Round:  Ana 245 · Cole 235 · Beth 120   → Ana & Cole advance  (Beth 
 Automatic Runoff:  Ana 53 vs Cole 47            → Ana wins  (a pole — NOT the CW)
 ```
 
-That is **identical** to RCV-IRV on the same electorate ([`s3`](cases/cases_pages/bv2222_rfyk46_510_thin_irv.md)): Beth has the fewest first-choices (5), is eliminated first, and Ana wins 53–47. **So rb-j's core claim is confirmed:** under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes exactly like IRV — and yes, [Burlington 2009](../burlington_2009/) or [Alaska 2022](../alaska_2022/) voted 5-1-0 would fail under STAR too. We don't dodge that; it's ["strategy-resistant, not strategy-proof"](../../00_start_here/topics/strategic_voting.md) made concrete.
+That is **identical** to RCV-IRV on the same electorate ([`s3`](cases/cases_pages/bv2222_rfyk46_510_thin_irv.md)): Beth has the fewest first-choices (5), is eliminated first, and Ana wins 53–47. **So rb-j's core claim is confirmed:** under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes exactly like IRV — and yes, [Burlington 2009](../burlington_2009/) or [Alaska 2022](../alaska_2022/) voted 5-1-0 would fail under STAR too. We don't dodge that; it's ["strategy-resistant, not strategy-proof"](../../07_Concepts/topics/strategic_voting.md) made concrete.
 
 ## Where the argument overstates itself
 

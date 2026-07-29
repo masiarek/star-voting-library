@@ -2,7 +2,7 @@
 
 *rb-j (Robert Bristow-Johnson), arguing the Condorcet case on r/EndFPTP, walked through a **burial** attack on the real [Alaska 2022](../alaska_2022/) numbers: a bloc of Peltola voters insincerely rank the Condorcet winner **Begich** last, manufacturing a cycle to knock him out. His own honest finding — which this page reproduces and verifies — is that **the attack's success depends entirely on the completion method.** Margin-based Condorcet methods (MinMax, Schulze, Ranked Pairs) shrug it off; a runoff/Hare completion falls for it. The deeper lesson is the even-handed one this repo keeps landing on: **no method is strategy-proof — not even Condorcet.***
 
-→ Related: [Alaska 2022 (the honest case)](../alaska_2022/) · [the 5-1-0 challenge](../star_5_1_0_challenge/) (STAR's strategy edge) · [strategic voting](../../00_start_here/topics/strategic_voting.md) · [Gibbard–Satterthwaite](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) · [Condorcet](../../00_start_here/topics/condorcet/) · [burial vs Ranked Robin](../../05_Ranked_Robin/burial/).
+→ Related: [Alaska 2022 (the honest case)](../alaska_2022/) · [the 5-1-0 challenge](../star_5_1_0_challenge/) (STAR's strategy edge) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · [Condorcet](../../07_Concepts/topics/condorcet/) · [burial vs Ranked Robin](../../05_Ranked_Robin/burial/).
 
 ---
 
@@ -46,7 +46,7 @@ Why the margin-based methods hold: in the manufactured cycle, the **weakest defe
 
 ## The honest bottom line
 
-- **Conceded — and it's rb-j's own point:** Condorcet methods are **not strategy-proof.** Burial can manufacture a cycle to unseat the Condorcet winner. That's [Gibbard](../../00_start_here/topics/gibbard_satterthwaite_theorem.md) again — *every* deterministic method is manipulable, Condorcet included. So "just elect the Condorcet winner" is not a clean escape from strategy; it relocates the strategy to *cycle creation*.
+- **Conceded — and it's rb-j's own point:** Condorcet methods are **not strategy-proof.** Burial can manufacture a cycle to unseat the Condorcet winner. That's [Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) again — *every* deterministic method is manipulable, Condorcet included. So "just elect the Condorcet winner" is not a clean escape from strategy; it relocates the strategy to *cycle creation*.
 - **The completion method is the whole ballgame.** Among Condorcet methods, **margin-based completion (MinMax/Schulze/Ranked Pairs) is markedly more burial-resistant** than a Hare/runoff completion — because a burial that only *just* creates a cycle leaves a tell-tale weak defeat the margin methods throw out. If you're going to run a Condorcet method, this is a real argument for the margin-based ones.
 - **Keep it in proportion.** Real honest cycles are **very rare** — by FairVote's own count, about **2 of ~500** RCV elections. And burial is *risky*: misjudge the margins and you elect your less-preferred candidate. This is a reason to *choose the completion method well*, not a reason to fear Condorcet methods — just as STAR's [5-1-0 edge](../star_5_1_0_challenge/) is a strategy sub-region, not a reason to fear STAR. Every method has its strategic seam; honesty is naming them and their bounds.
 

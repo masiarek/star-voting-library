@@ -4,7 +4,7 @@
 
 > **Applies to:** the **count** of every sequential-elimination variant ([Hare](RCV-IRV-Hare.md) and the rest run multi-round elimination); the *ballot* is simple, the *tabulation* isn't. See [Which RCV-IRV?](variants/RCV_IRV_variants.md).
 
-→ Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../../../00_start_here/topics/what_is_a_voting_method.md) (a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md), [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts: [How the Count Works — STAR vs RCV-IRV, Step by Step](../../../00_start_here/topics/tabulation_star_vs_irv.md) · Level **201**.
+→ Builds on [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../../../07_Concepts/topics/what_is_a_voting_method.md) (a method = ballot **+** count) · related: [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md), [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) · step-by-step trace of both counts: [How the Count Works — STAR vs RCV-IRV, Step by Step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) · Level **201**.
 
 ---
 
@@ -19,7 +19,7 @@ The slip is in the next step. "Simple" is really **two different claims**, and o
 
 A method is a ballot **and** a count (see the 101 page). "Look how simple the ballot is" tells you nothing about the count — and the count is where the winner actually comes from.
 
-→ **This page argues the point for IRV; the cross-method version is a table.** Every method placed on *both* axes at once — where Choose-One, Approval, RCV-IRV, 3-2-1, STAR and Ranked Robin each land — is in [What makes a voting method good? §2](../../../00_start_here/topics/what_makes_a_voting_method_good.md).
+→ **This page argues the point for IRV; the cross-method version is a table.** Every method placed on *both* axes at once — where Choose-One, Approval, RCV-IRV, 3-2-1, STAR and Ranked Robin each land — is in [What makes a voting method good? §2](../../../07_Concepts/topics/what_makes_a_voting_method_good.md).
 
 ## Why IRV's count is the hard half
 
@@ -32,7 +32,7 @@ To find an IRV winner you can't just add a column. You:
 To follow it you have to track every transfer across every round. Three consequences, all working against "simple":
 
 - **Not summable.** A precinct's IRV result doesn't compose with another's — you can't add subtotals, because who's eliminated depends on the *whole* electorate. So every ballot has to travel to **one central count.** (See [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md).)
-- **Software-dependent and hard to hand-audit.** Rounds of transfers are not something poll workers reconcile on a precinct table; a recount means re-running the algorithm on all ballots at once. (What that costs operationally and for public trust — courier runs, single point of failure, the real incidents: [Central tabulation — when every ballot must travel](../../../00_start_here/topics/central_tabulation.md).)
+- **Software-dependent and hard to hand-audit.** Rounds of transfers are not something poll workers reconcile on a precinct table; a recount means re-running the algorithm on all ballots at once. (What that costs operationally and for public trust — courier runs, single point of failure, the real incidents: [Central tabulation — when every ballot must travel](../../../07_Concepts/topics/central_tabulation.md).)
 - **Counterintuitive even when correct.** More support can *hurt* a candidate ([monotonicity](RCV_IRV_non_monotonicity.md)) — so the count can behave in ways that are hard to explain to the voter whose ballot "did the opposite."
 
 So the honest picture: *the ballot is simple; the count needs a computer and a central tally.* That's the half "look how simple it is" leaves out.
@@ -40,7 +40,7 @@ So the honest picture: *the ballot is simple; the count needs a computer and a c
 ## STAR is simple on *both* halves
 
 **The ballot — at least as easy to mark:**
-- 0–5 is the familiar **five-star** mental model (every rating app you already use). (Why a score ballot differs from a rank ballot: [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../../../00_start_here/scores_and_ranks/scores_vs_ranks.md).)
+- 0–5 is the familiar **five-star** mental model (every rating app you already use). (Why a score ballot differs from a rank ballot: [Scores vs. Ranks — Don't Confuse Ranks and Ratings](../../../07_Concepts/scores_and_ranks/scores_vs_ranks.md).)
 - You **rate each candidate on their own** — no forcing a complete strict order among a field of strangers ("is she my 4th or my 5th?").
 - **Equal scores are allowed** — you can say "I like these two the same" (the repo's **Equal Support**). Standard IRV ballots forbid equal ranks, and many even cap how many you may rank.
 - One ballot carries **both preference *and* strength** — order *and* how much — where a rank carries only order.
@@ -75,7 +75,7 @@ Give credit on the ballot; hold the line on the count. That's the version no one
 ---
 
 ## Cross-references
-- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../../../00_start_here/topics/what_is_a_voting_method.md) — the 101 ballot-vs-count distinction this stands on.
+- [What Is a Voting Method? — Ballot vs Count, Plurality vs Majority](../../../07_Concepts/topics/what_is_a_voting_method.md) — the 101 ballot-vs-count distinction this stands on.
 - [IRV Is Not Summable — Every Ballot Must Be Counted Centrally](RCV_IRV_lack_of_summability.md) — why the IRV count can't be done locally.
 - [IRV Non-Monotonicity — When *More* Support Makes You Lose](RCV_IRV_non_monotonicity.md) — why the IRV count can also be counterintuitive.
 - Roadmap: pairs with **Episode 6** (Benefits — *Simple*) and **Episode 8** (Counting & trust). Glossary: "Summability," "Tabulation," "Equal Support."

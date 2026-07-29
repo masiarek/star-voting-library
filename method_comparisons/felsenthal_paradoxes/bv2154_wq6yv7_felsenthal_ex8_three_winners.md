@@ -18,9 +18,9 @@ No. of voters    Ranking                     Approves
       4          Clara > Bruce > April       {Clara}
 ```
 
-Social ordering **Bruce > Clara > April** (Bruce beats April 8–7 and Clara 10–5; Clara beats April 9–6). Approval totals: **April 7, Bruce 4, Clara 5** → April, the candidate a majority ranked last — the [Condorcet loser](../../00_start_here/voting_paradoxes/condorcet_loser_paradox.md) and [absolute loser](../../00_start_here/voting_paradoxes/absolute_loser_paradox.md) paradoxes under Approval, triggered by a single voter approving two. Compare [BV2144](bv2144_mxfmhm_felsenthal_ex1.md), where Choose-One does the same with bullet votes only.
+Social ordering **Bruce > Clara > April** (Bruce beats April 8–7 and Clara 10–5; Clara beats April 9–6). Approval totals: **April 7, Bruce 4, Clara 5** → April, the candidate a majority ranked last — the [Condorcet loser](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) and [absolute loser](../../07_Concepts/voting_paradoxes/absolute_loser_paradox.md) paradoxes under Approval, triggered by a single voter approving two. Compare [BV2144](bv2144_mxfmhm_felsenthal_ex1.md), where Choose-One does the same with bullet votes only.
 
-The ranked races disagree with Approval *and with each other*: IRV deletes the Condorcet winner Bruce (fewest first choices, 6/4/5) and elects **Clara** 9–6 — a [Condorcet winner paradox](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md) — while Ranked Robin elects **Bruce** directly. One electorate, three winners: the tabulation, not the ballot, decides.
+The ranked races disagree with Approval *and with each other*: IRV deletes the Condorcet winner Bruce (fewest first choices, 6/4/5) and elects **Clara** 9–6 — a [Condorcet winner paradox](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md) — while Ranked Robin elects **Bruce** directly. One electorate, three winners: the tabulation, not the ballot, decides.
 
 ## The races
 

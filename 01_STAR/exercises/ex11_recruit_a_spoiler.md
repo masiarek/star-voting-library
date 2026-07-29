@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** base race [vote](https://bettervoting.com/ggg7hd) · **[results ↗](https://bettervoting.com/ggg7hd/results)** · clone added [vote](https://bettervoting.com/93gjx6) · **[results ↗](https://bettervoting.com/93gjx6/results)** (elections `ggg7hd` / `93gjx6`, Test IDs BV2197–98; the clone election runs all four methods — watch Choose-One fall for it live while RCV-IRV, STAR, and Ranked Robin hold).
 
-**You practice:** the **[spoiler effect](../../00_start_here/topics/spoiler_effect.md)** as a *design property* — predicting which ballot designs a vote-splitting attack actually works against — and reading an Equal-Support runoff line. (Concept home: [vote-splitting](../../method_comparisons/split_voting/README.md); glossary: [clone independence](../../00_start_here/GLOSSARY.md).)
+**You practice:** the **[spoiler effect](../../07_Concepts/topics/spoiler_effect.md)** as a *design property* — predicting which ballot designs a vote-splitting attack actually works against — and reading an Equal-Support runoff line. (Concept home: [vote-splitting](../../method_comparisons/split_voting/README.md); glossary: [clone independence](../../07_Concepts/GLOSSARY.md).)
 
 Work each part on paper before opening its solution. Both YAMLs are runnable; their `expected_winners` keys are regression-tested, and the `_tabulated` mirrors are the full audit reports. (Axl shares Alba's initial *on purpose* — they're clones; the distinct-initials naming rule yields to the lesson.)
 
@@ -72,7 +72,7 @@ The camp's 4s and 5s pile onto *both* clones — Alba 23, Axl 22, **Brett 20 and
 <details>
 <summary><b>(d) Under RCV-IRV, the memo also fails — credit where due</b></summary>
 
-First choices: Alba 3, Axl 2, Brett 4. **Axl is eliminated first**, and both of his ballots transfer straight back to Alba (she's ranked next on them): final round **Alba 5, Brett 4**. Pure-clone *crowding* is the vote-splitting variant RCV-IRV genuinely handles — its transfers exist for exactly this case, and the honest scorecard says so (the glossary's [clone-independence entry](../../00_start_here/GLOSSARY.md) gives IRV this point). IRV's spoiler trouble is the *non-clone* case — a competitive third candidate who squeezes the middle ([exercise 5](ex05_center_squeeze.md)) — not this one.
+First choices: Alba 3, Axl 2, Brett 4. **Axl is eliminated first**, and both of his ballots transfer straight back to Alba (she's ranked next on them): final round **Alba 5, Brett 4**. Pure-clone *crowding* is the vote-splitting variant RCV-IRV genuinely handles — its transfers exist for exactly this case, and the honest scorecard says so (the glossary's [clone-independence entry](../../07_Concepts/GLOSSARY.md) gives IRV this point). IRV's spoiler trouble is the *non-clone* case — a competitive third candidate who squeezes the middle ([exercise 5](ex05_center_squeeze.md)) — not this one.
 
 </details>
 
@@ -98,8 +98,8 @@ Sources: [ex11_two_way_base.yaml](cases/ex11_two_way_base.yaml) · [ex11_spoiler
 
 ---
 
-**Where this comes from.** Original to this repo (ballots, cast, and the intern). Concept homes: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md), [the split-voting set](../../method_comparisons/split_voting/README.md), and [the equally weighted vote](../concepts/properties_and_limits/equally_weighted_vote.md).
+**Where this comes from.** Original to this repo (ballots, cast, and the intern). Concept homes: [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md), [the split-voting set](../../method_comparisons/split_voting/README.md), and [the equally weighted vote](../concepts/properties_and_limits/equally_weighted_vote.md).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex11_recruit_a_spoiler.md

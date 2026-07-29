@@ -18,7 +18,7 @@ No. of voters    BV2162 (full)         BV2163 (truncated)
      17          D > C > B > A   →→→   D                (only the favorite)
 ```
 
-D is eliminated first in both worlds — but here the 17 truncated ballots **exhaust** instead of transferring to C. So **C** (24) is eliminated instead of B, C's transfers flow to B, and **B wins**. The truncators' sincere ordering was `D>C>B>A`: they prefer B to A, so silence served them better than honesty — the [Truncation paradox](../../00_start_here/voting_paradoxes/truncation.md). (It also *accidentally repairs* BV2162's Condorcet failure: B, the pairwise champion, now wins the IRV race too.)
+D is eliminated first in both worlds — but here the 17 truncated ballots **exhaust** instead of transferring to C. So **C** (24) is eliminated instead of B, C's transfers flow to B, and **B wins**. The truncators' sincere ordering was `D>C>B>A`: they prefer B to A, so silence served them better than honesty — the [Truncation paradox](../../07_Concepts/voting_paradoxes/truncation.md). (It also *accidentally repairs* BV2162's Condorcet failure: B, the pairwise champion, now wins the IRV race too.)
 
 STAR (truncated ballots score only D: 329/373/244/171) and Ranked Robin (B still wins every head-to-head: 53–33 among voters with a preference, 62–24, 86–17) elect **B in both worlds** — pairwise and score counting give these 17 voters no truncation incentive; the elimination order is what their truncation exploits.
 

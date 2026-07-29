@@ -92,4 +92,4 @@ All three agree on the Condorcet winner — while plurality (Memphis) and RCV-IR
 - Folder overview: [rr_vs_irv_plurality — README](README.md)
 - The RR-vs-Condorcet distinction (cycles): [condorcet_vs_ranked_robin](../condorcet_vs_ranked_robin/) · lesson [ranked_robin_vs_condorcet.md](../concepts/ranked_robin_vs_condorcet.md)
 - The tiebreak divergence (LH margin→lot vs BV head-to-head→random): [rr_tiebreak_lh_vs_bv.md](../concepts/rr_tiebreak_lh_vs_bv.md)
-- [Condorcet efficiency — topic hub](../../00_start_here/topics/condorcet/README.md) · [Glossary](../../00_start_here/GLOSSARY.md)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md) · [Glossary](../../07_Concepts/GLOSSARY.md)

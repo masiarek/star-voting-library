@@ -62,22 +62,22 @@ METHOD_ALIASES = {
 
 # --- keyword → topic hub / concept page (relative to repo root) --------------
 TOPIC_LINKS = [
-    (r"center[ _-]?squeeze", "Center squeeze (topic hub)", "00_start_here/topics/center_squeeze/README.md"),
-    (r"monotonic",           "Monotonicity (topic hub)", "00_start_here/topics/monotonicity/README.md"),
-    (r"summab",              "Summability (topic hub)", "00_start_here/topics/summability/README.md"),
-    (r"condorcet|cycle",     "Condorcet efficiency (topic hub)", "00_start_here/topics/condorcet/README.md"),
-    (r"\btie|lot[ _]order|lot[ _]number|dead[ _]rung|tiebreak", "Ties & tie-breaking (topic hub)", "00_start_here/topics/ties/README.md"),
+    (r"center[ _-]?squeeze", "Center squeeze (topic hub)", "07_Concepts/topics/center_squeeze/README.md"),
+    (r"monotonic",           "Monotonicity (topic hub)", "07_Concepts/topics/monotonicity/README.md"),
+    (r"summab",              "Summability (topic hub)", "07_Concepts/topics/summability/README.md"),
+    (r"condorcet|cycle",     "Condorcet efficiency (topic hub)", "07_Concepts/topics/condorcet/README.md"),
+    (r"\btie|lot[ _]order|lot[ _]number|dead[ _]rung|tiebreak", "Ties & tie-breaking (topic hub)", "07_Concepts/topics/ties/README.md"),
     (r"tie[ _-]?break|dead[ _]rung", "The tie-breaking ladder (full chain)", "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md"),
-    (r"quorum",              "Quorum", "00_start_here/topics/quorum.md"),
+    (r"quorum",              "Quorum", "07_Concepts/topics/quorum.md"),
     (r"split|spoiler",       "Vote splitting (worked set)", "method_comparisons/split_voting/README.md"),
     (r"runoff",              "Runoff reversal (worked set)", "01_STAR/runoff_overturns_leader/README.md"),
-    (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "00_start_here/topics/ballot_and_terminology_basics.md"),
+    (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "07_Concepts/topics/ballot_and_terminology_basics.md"),
     (r"black[ _]curtain",    "The Black Curtain (worked set)", "method_comparisons/black_curtain/README.md"),
     (r"exhaust",             "Exhausted ballots (conversation)", "06_Other/RCV_IRV/concepts/exhausted_ballots_301.md"),
 ]
 
-GLOSSARY = "00_start_here/GLOSSARY.md"
-INDEX = "00_start_here/YAML_test_case_index/README.md"
+GLOSSARY = "07_Concepts/GLOSSARY.md"
+INDEX = "07_Concepts/YAML_test_case_index/README.md"
 
 MARKER_LEGEND = ("`-` blank · `~` race abstention · `&` candidate abstention · "
                  "`?` spoiled · `%` spoiled+reissued — all tabulate as 0 "
@@ -251,7 +251,7 @@ def render(yaml_path, siblings):
             winners = [str(x) for x in w]
     lot = data.get("lot_numbers") if isinstance(data, dict) else None
 
-    disp, docs = METHOD_DOCS.get(method, (str(method), "00_start_here"))
+    disp, docs = METHOD_DOCS.get(method, (str(method), "07_Concepts"))
     kind = _ballot_kind(ballots, method)
     ballots_text = str(ballots).rstrip("\n")
     has_markers = bool(re.search(r"[~&?%]|(^|,)\s*-\s*(,|$)", ballots_text, re.M))

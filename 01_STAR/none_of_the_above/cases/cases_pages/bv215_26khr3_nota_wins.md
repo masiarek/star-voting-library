@@ -121,5 +121,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/none_of_
 
 - [Vote splitting (worked set)](../../../../method_comparisons/split_voting/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
-- [Ballot & terminology basics](../../../../00_start_here/topics/ballot_and_terminology_basics.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

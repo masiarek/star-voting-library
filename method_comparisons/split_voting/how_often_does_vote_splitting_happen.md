@@ -2,7 +2,7 @@
 
 *The rest of this folder shows **what** vote splitting is, in elections built to make it visible. This page answers the other question a skeptic will ask first: **how often does it happen in real American elections?** There is a published count — and reading it honestly means separating what it proves from what it merely flags.*
 
-→ Concept: [the spoiler effect](../../00_start_here/topics/spoiler_effect.md) · [Choose-One / Plurality](../../00_start_here/topics/plurality.md) · how to read failure rates fairly: [severity × frequency](../paradoxes_and_whoops/reading_these_fairly.md)
+→ Concept: [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md) · [Choose-One / Plurality](../../07_Concepts/topics/plurality.md) · how to read failure rates fairly: [severity × frequency](../paradoxes_and_whoops/reading_these_fairly.md)
 
 ---
 
@@ -22,11 +22,11 @@ Its state breakdown (limited to states that ran all three election types):
 
 The report also notes that in the **New Hampshire State House**, candidates advanced to the general election with **as little as 8.8%** of the primary vote — because those are multi-seat districts where voters select several candidates.
 
-> **Source lean, disclosed** (house rule): CES is the national advocacy organization for [Approval Voting](../../04_Approval/concepts/approval_voting.md) — see [advocacy organizations](../../00_start_here/topics/advocacy_organizations.md). The *count* is a straightforward tabulation of public results and there's no reason to doubt it. The *framing* — calling every such race a "vote split election" — is where an advocacy report and a teaching library should part company, and the rest of this page is why.
+> **Source lean, disclosed** (house rule): CES is the national advocacy organization for [Approval Voting](../../04_Approval/concepts/approval_voting.md) — see [advocacy organizations](../../07_Concepts/topics/advocacy_organizations.md). The *count* is a straightforward tabulation of public results and there's no reason to doubt it. The *framing* — calling every such race a "vote split election" — is where an advocacy report and a teaching library should part company, and the rest of this page is why.
 
 ## The definition worth borrowing
 
-One thing the report gets exactly right, and states more crisply than most sources: **vote splitting is the mechanism; the [spoiler effect](../../00_start_here/topics/spoiler_effect.md) is the outcome it produces.** Votes divide among candidates who, combined, would have been a majority — and *that division* is what lets a less-preferred candidate win. Keeping the two words distinct is worth doing, and this repo now does it the same way.
+One thing the report gets exactly right, and states more crisply than most sources: **vote splitting is the mechanism; the [spoiler effect](../../07_Concepts/topics/spoiler_effect.md) is the outcome it produces.** Votes divide among candidates who, combined, would have been a majority — and *that division* is what lets a less-preferred candidate win. Keeping the two words distinct is worth doing, and this repo now does it the same way.
 
 Note also what the arithmetic of their test really says. "Winner under 50%" and "the losers combined are a majority" are *the same statement*. So the measure is well-defined and consistent with the prose definition.
 
@@ -99,7 +99,7 @@ And note this cuts *against* block voting too, not for it: the test is blind to 
 ## Two more things to keep straight
 
 - **The denominator is primaries, not all elections.** The 11.9% is 11.9% *of 2022 primaries*; the report's gloss "about one in ten national elections" quietly drops the qualifier. Primaries are the races **most** prone to splitting — crowded fields, no party label to guide voters — so this is close to an upper bound, not a general-election rate.
-- **Rarity cuts both ways, and we apply it symmetrically.** This library states rarity when it counts against our preferred conclusion — [2 Condorcet failures in 182 real IRV elections](../../06_Other/RCV_IRV/concepts/), [cycles at ~1–5%](../../00_start_here/topics/strategic_pathologies.md). The same discipline applies here: report the honest measure and say what it measures.
+- **Rarity cuts both ways, and we apply it symmetrically.** This library states rarity when it counts against our preferred conclusion — [2 Condorcet failures in 182 real IRV elections](../../06_Other/RCV_IRV/concepts/), [cycles at ~1–5%](../../07_Concepts/topics/strategic_pathologies.md). The same discipline applies here: report the honest measure and say what it measures.
 
 ## So what should we say?
 

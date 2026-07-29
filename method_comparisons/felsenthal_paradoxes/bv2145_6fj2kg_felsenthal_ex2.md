@@ -28,9 +28,9 @@ With three candidates, plurality-with-runoff and RCV-IRV are the same procedure:
 
 ## The paradoxes
 
-The **[Condorcet winner paradox](../../00_start_here/voting_paradoxes/condorcet_winner_paradox.md)**: the runoff eliminates Ada on first choices, and Ben beats Cleo 9–8. The electorate's pairwise favorite never reaches the runoff — the same center-squeeze mechanism as [BV2137](../center_squeeze_bv2137/bv2137_ywckmg_center_squeeze.md), at Felsenthal's minimal scale.
+The **[Condorcet winner paradox](../../07_Concepts/voting_paradoxes/condorcet_winner_paradox.md)**: the runoff eliminates Ada on first choices, and Ben beats Cleo 9–8. The electorate's pairwise favorite never reaches the runoff — the same center-squeeze mechanism as [BV2137](../center_squeeze_bv2137/bv2137_ywckmg_center_squeeze.md), at Felsenthal's minimal scale.
 
-The **[SCC / spoiler](../../00_start_here/voting_paradoxes/spoiler_scc.md)** (conditional): had Cleo withdrawn before the vote, Ada would have won the *first* round outright — 9 of 17 first choices, a majority. Cleo can't win, but her presence hands the election to Ben.
+The **[SCC / spoiler](../../07_Concepts/voting_paradoxes/spoiler_scc.md)** (conditional): had Cleo withdrawn before the vote, Ada would have won the *first* round outright — 9 of 17 first choices, a majority. Cleo can't win, but her presence hands the election to Ben.
 
 ## View 1 — BetterVoting
 

@@ -9,4 +9,4 @@ One symptom, the full BetterVoting method sweep, at two electorate sizes. Avery 
 
 Both run **all seven BV methods** (STAR, STAR-PR, Approval [approve top two], Ranked Robin, RCV-IRV, STV, Choose-One). Winners are identical in structure at both sizes: STAR / STAR-PR / Approval / Ranked Robin → **Casey**; RCV-IRV / STV / Choose-One → **random Avery/Blake tie**.
 
-Sibling: [symmetric_centrist_bv2170](../symmetric_centrist_bv2170/) — the original four-method cut of the same 47/47/3/3 profile (BV2170, `pp2q4q`). Debate context: [FairVote Condorcet claim-check](../../00_start_here/topics/condorcet/fairvote_condorcet_claim_check.md) · up: [method_comparisons](../).
+Sibling: [symmetric_centrist_bv2170](../symmetric_centrist_bv2170/) — the original four-method cut of the same 47/47/3/3 profile (BV2170, `pp2q4q`). Debate context: [FairVote Condorcet claim-check](../../07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md) · up: [method_comparisons](../).

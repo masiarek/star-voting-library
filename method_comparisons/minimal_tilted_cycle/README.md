@@ -1,8 +1,8 @@
 # The minimal tilted cycle — five voters, and already the methods disagree
 
-*Five voters. Three candidates. Every voter perfectly rational, the electorate not: **Ada beats Ben 4–1, Ben beats Cara 3–2, Cara beats Ada 3–2**. This is the smallest election in existence in which a majority cycle is **lopsided** — and that lopsidedness is exactly what pries the [Condorcet family](../../00_start_here/topics/condorcet/README.md) apart. [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)'s Copeland count still ties all three; the [maximin](../../00_start_here/voting_paradoxes/minimax.md) family drops Ben. Five ballots is all it takes. This page proves the minimality — by hand and by brute force — and runs every rule on it.*
+*Five voters. Three candidates. Every voter perfectly rational, the electorate not: **Ada beats Ben 4–1, Ben beats Cara 3–2, Cara beats Ada 3–2**. This is the smallest election in existence in which a majority cycle is **lopsided** — and that lopsidedness is exactly what pries the [Condorcet family](../../07_Concepts/topics/condorcet/README.md) apart. [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)'s Copeland count still ties all three; the [maximin](../../07_Concepts/voting_paradoxes/minimax.md) family drops Ben. Five ballots is all it takes. This page proves the minimality — by hand and by brute force — and runs every rule on it.*
 
-→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../00_start_here/topics/condorcet/three_candidate_maximin.md) · the collapse it complicates: [three-candidate collapse](../../00_start_here/topics/condorcet/three_candidate_collapse.md) · the symmetric sibling: [reinforcement paradox — North district](../reinforcement_paradox/README.md) · [cycle resolution at four candidates](../../05_Ranked_Robin/concepts/cycle_resolution.md) · the tie-break shape: [three-way dead rung](../../01_STAR/tie_break_dead_rung/README.md).
+→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · the collapse it complicates: [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) · the symmetric sibling: [reinforcement paradox — North district](../reinforcement_paradox/README.md) · [cycle resolution at four candidates](../../05_Ranked_Robin/concepts/cycle_resolution.md) · the tie-break shape: [three-way dead rung](../../01_STAR/tie_break_dead_rung/README.md).
 
 ---
 
@@ -36,7 +36,7 @@ Winner — Ranked Robin (RCV-RR): Ada
    *** 3 candidates tie for the most wins — a Condorcet cycle.
 ```
 
-Nobody is a [Condorcet winner](../../00_start_here/topics/condorcet/README.md); nobody is a Condorcet loser. Every individual ballot is transitive. The intransitivity is manufactured purely by aggregation — that is the whole content of the word *cycle*.
+Nobody is a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md); nobody is a Condorcet loser. Every individual ballot is transitive. The intransitivity is manufactured purely by aggregation — that is the whole content of the word *cycle*.
 
 ## Why five voters, and why 4–1 / 3–2 / 3–2
 
@@ -93,7 +93,7 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 | **Copeland / [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
 | ↳ LH's Ranked Robin, after tie-break | **Ada** | +margins | total margin +2 / 0 / −2 |
 | **Minimax** (maximin) | **Ada, Cara** | margins | worst loss −1 each; Ben's is −3 |
-| **Ranked Pairs** | Ada, Cara | margins | the [three-candidate collapse](../../00_start_here/topics/condorcet/three_candidate_collapse.md) — |
+| **Ranked Pairs** | Ada, Cara | margins | the [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) — |
 | **Schulze** (beat path) | Ada, Cara | margins | at *m* = 3 these are |
 | **Split Cycle** | Ada, Cara | margins | one and the same rule |
 | **Stable Voting** | Ada, Cara | margins | as maximin |
@@ -125,7 +125,7 @@ Ranked Robin's tie here has the shape of [the three-way dead rung](../../01_STAR
 
 So the tilt is doing double duty: it is what lets maximin separate the candidates, *and* it is what lets Ranked Robin finish deterministically instead of falling to a coin. The dead rung is real but shallow.
 
-**And there's a theorem under that table.** The six-voter tie isn't merely deeper — it is **mathematically forced**: no anonymous, neutral, Pareto rule can name a single winner whenever the voter count `n` has a divisor `r` with `1 < r ≤ m` candidates (Moulin, 1983). At `n = 6, m = 3` both 2 and 3 qualify, so *every* defensible rule ties there and the lot isn't a shortcut — it's the only thing left. At **`n = 5, m = 3` nothing is forced** (5 is prime and exceeds 3), which is exactly why five voters is the interesting number: the ballots still carry an asymmetry, and a rule that *can't* find it is discarding information rather than running out of it. That's the difference between the dead margin row and the live one. Full treatment: [Ties Are Forced](../../00_start_here/topics/ties/ties_are_forced.md).
+**And there's a theorem under that table.** The six-voter tie isn't merely deeper — it is **mathematically forced**: no anonymous, neutral, Pareto rule can name a single winner whenever the voter count `n` has a divisor `r` with `1 < r ≤ m` candidates (Moulin, 1983). At `n = 6, m = 3` both 2 and 3 qualify, so *every* defensible rule ties there and the lot isn't a shortcut — it's the only thing left. At **`n = 5, m = 3` nothing is forced** (5 is prime and exceeds 3), which is exactly why five voters is the interesting number: the ballots still carry an asymmetry, and a rule that *can't* find it is discarding information rather than running out of it. That's the difference between the dead margin row and the live one. Full treatment: [Ties Are Forced](../../07_Concepts/topics/ties/ties_are_forced.md).
 
 ## Why this case is LH-only
 
@@ -146,4 +146,4 @@ uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cy
 
 ---
 
-*Source: Felix Brandt, Chris Dong & Dominik Peters, ["Condorcet-Consistent Choice Among Three Candidates"](https://arxiv.org/abs/2411.19857) (arXiv:2411.19857, 2024; [author PDF](https://dominik-peters.de/publications/maximinpara.pdf)) — neutral academic social-choice theory, summarized [here](../../00_start_here/topics/condorcet/three_candidate_maximin.md). Cross-checks by [`pref_voting`](https://github.com/voting-tools/pref_voting) (Eric Pacuit & Wesley Holliday). Glossary: [`Condorcet cycle`](../../00_start_here/GLOSSARY.md) · [`Copeland`](../../00_start_here/GLOSSARY.md).*
+*Source: Felix Brandt, Chris Dong & Dominik Peters, ["Condorcet-Consistent Choice Among Three Candidates"](https://arxiv.org/abs/2411.19857) (arXiv:2411.19857, 2024; [author PDF](https://dominik-peters.de/publications/maximinpara.pdf)) — neutral academic social-choice theory, summarized [here](../../07_Concepts/topics/condorcet/three_candidate_maximin.md). Cross-checks by [`pref_voting`](https://github.com/voting-tools/pref_voting) (Eric Pacuit & Wesley Holliday). Glossary: [`Condorcet cycle`](../../07_Concepts/GLOSSARY.md) · [`Copeland`](../../07_Concepts/GLOSSARY.md).*

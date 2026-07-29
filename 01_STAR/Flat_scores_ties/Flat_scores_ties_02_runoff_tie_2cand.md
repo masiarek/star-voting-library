@@ -4,7 +4,7 @@
 
 > ⚠️ **BV reporting bug (pending).** On equal ties and equal preferences BetterVoting can display **`NaN`** instead of a clean tie result — tracked as **[BV200 / #1035](https://github.com/Equal-Vote/bettervoting/issues/1035)**. BV **now exports** its tie-break sequence ([#1371](https://github.com/Equal-Vote/bettervoting/issues/1371), recently added), so the result is reproducible by importing that order; the remaining ask is a **pre-published** lot number rather than a random shuffle ([#1063](https://github.com/Equal-Vote/bettervoting/issues/1063)).
 
-→ [STAR Tie-Breaking](../concepts/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../concepts/reporting/reporting_ties.md) · [`GLOSSARY` (Equal Support)](../../00_start_here/GLOSSARY.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
+→ [STAR Tie-Breaking](../concepts/Tie_Breaking_STAR/tie_breaking.md) · [reporting true ties](../concepts/reporting/reporting_ties.md) · [`GLOSSARY` (Equal Support)](../../07_Concepts/GLOSSARY.md) · [Flat scores, ties & tie-breaking (all cases)](README.md).
 
 ---
 

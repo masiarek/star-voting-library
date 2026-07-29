@@ -76,4 +76,4 @@ python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
 - [ABC rules & the utilitarian–egalitarian spectrum (301)](abc_rules_spectrum.md) · [gentle intro (101)](abc_rules_intro.md).
 - [Shadow STAR of the same profile](../../multiwinner/lackner_skowron_shadow_star.md) — where RRV = PAV shows up concretely.
 - [Proportional STAR (STAR-PR) methods](../../../03_STAR_PR/concepts/) — Allocated Score, SSS, RRV, and the STV comparison.
-- Glossary: [Thiele method, PAV, Chamberlin–Courant, welfare vector](../../../00_start_here/GLOSSARY.md).
+- Glossary: [Thiele method, PAV, Chamberlin–Courant, welfare vector](../../../07_Concepts/GLOSSARY.md).

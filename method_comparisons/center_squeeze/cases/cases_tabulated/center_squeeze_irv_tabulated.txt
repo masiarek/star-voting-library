@@ -21,7 +21,7 @@ num_winners: 1
 # Condorcet winner (beats Left 15–12, beats Right 18–9), but has the fewest
 # first-choices (6) — so IRV eliminates Center first and the polar Left wins.
 # STAR and Condorcet/Ranked Robin elect Center: see center_squeeze_star.yaml and
-# 00_start_here/center_squeeze.md.
+# 07_Concepts/center_squeeze.md.
 ballots: |-
   12:Left>Center>Right
   9:Right>Center>Left
@@ -68,4 +68,4 @@ the honest answer to "who is even in contention?".
       Every member of the set (Center) beats Left head-to-head, yet
       RCV-IRV elected Left anyway. RCV-IRV is not Smith-efficient (nor
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md

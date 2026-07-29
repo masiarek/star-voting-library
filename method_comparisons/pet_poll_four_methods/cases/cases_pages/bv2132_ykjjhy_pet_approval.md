@@ -61,7 +61,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Condorcet efficiency (topic hub)](../../../../00_start_here/topics/condorcet/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2132_ykjjhy_pet_irv](bv2132_ykjjhy_pet_irv.md) · [bv2132_ykjjhy_pet_plurality](bv2132_ykjjhy_pet_plurality.md) · [bv2132_ykjjhy_pet_star](bv2132_ykjjhy_pet_star.md)

@@ -2,7 +2,7 @@
 
 *The simplest equal-vote upgrade to Choose-One: mark **every** candidate you approve (**1**) and leave the rest (**0**); the most-approved candidate wins. It's Score voting at **one-bit resolution** — a big jump in expressiveness over "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../) ([`approval_101_c3_b5.yaml`](../_main/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [in the theory literature](approval_in_the_literature.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../../00_start_here/CURRICULUM.md).
+→ **Run it / examples:** the 101 case in [the Approval examples](../) ([`approval_101_c3_b5.yaml`](../_main/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [in the theory literature](approval_in_the_literature.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -28,7 +28,7 @@ Because the ballot is binary, Approval forces exactly one genuinely hard call: *
 
 ## Approval is Score at 1-bit resolution
 
-An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/_main/cases/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md)).
+An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/_main/cases/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)).
 
 ## Reading an Approval result
 
@@ -98,7 +98,7 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/) — a joint STAR + Approval essay (authors lead STAR Voting Action and Utah Approves — advocacy lean disclosed); cites the 2021 St. Louis Approval primary
 - [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score
-- [The fidelity ladder](../../00_start_here/scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../../00_start_here/scores_and_ranks/scores_vs_ranks.md)
-- Glossary: **Approval voting** — [Glossary — voting methods & criteria](../../00_start_here/GLOSSARY.md)
+- [The fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)
+- Glossary: **Approval voting** — [Glossary — voting methods & criteria](../../07_Concepts/GLOSSARY.md)
 
 # file: approval_voting.md

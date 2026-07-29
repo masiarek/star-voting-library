@@ -1,6 +1,6 @@
 # Summability demo — one example, three methods
 
-Runnable elections behind the **[Summability topic hub](../../00_start_here/topics/summability/)**. The point: *summability is a property of the **count**, not the ballot.* The same two districts are summable under STAR and Ranked Robin, and **not** under RCV-IRV.
+Runnable elections behind the **[Summability topic hub](../../07_Concepts/topics/summability/)**. The point: *summability is a property of the **count**, not the ballot.* The same two districts are summable under STAR and Ranked Robin, and **not** under RCV-IRV.
 
 ## Files
 
@@ -36,4 +36,4 @@ python pref_voting_tabulation.py ../../../method_comparisons/summability_demo/ca
 - [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md)
 - [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)
 
-The STAR files are guarded by the positive test harness; the `rr_*` files carry `expected_winners` (B for all three) and tabulate to it on the LH engine, confirmed independently by the [`pref_voting` cross-check](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md).
+The STAR files are guarded by the positive test harness; the `rr_*` files carry `expected_winners` (B for all three) and tabulate to it on the LH engine, confirmed independently by the [`pref_voting` cross-check](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md).

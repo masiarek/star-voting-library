@@ -2,7 +2,7 @@
 
 **One line:** a method gives an **equally weighted vote** if, however you fill out your ballot, someone else can fill out the *exact opposite* ballot and the two together change nothing. STAR passes this (so do Score and Approval); **Choose-One** and **RCV-IRV** do not — and that failure is precisely what causes vote-splitting and the spoiler effect.
 
-→ Curriculum: [301.4 — honest limits & theory](../../../00_start_here/CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../../../00_start_here/GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md).
+→ Curriculum: [301.4 — honest limits & theory](../../../07_Concepts/CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../../../07_Concepts/GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md).
 
 ---
 
@@ -50,7 +50,7 @@ So if the race was tied before these two ballots, it is still tied after. Neithe
 
 ## Why this is the root of vote-splitting
 
-Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there is no ballot anyone can cast to cancel it — a Choose-One ballot can only *add* a mark to some candidate, never subtract from A. With no balancing vote available, a cluster of similar candidates splits its shared supporters and a less-preferred candidate can slip through. [Vote-splitting and the spoiler effect](../../../00_start_here/topics/spoiler_effect.md) are not separate bugs; they are the visible symptom of an **unequal vote**. STAR ends forced vote-splitting for exactly one reason: every ballot can be perfectly cancelled, so adding a similar candidate can't dilute anyone. (Watch it happen across methods: [the split-voting set](../../../method_comparisons/split_voting/README.md); the narrow residue STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md).)
+Choose-One (plurality) **fails** the Test of Balance. If you vote for A, there is no ballot anyone can cast to cancel it — a Choose-One ballot can only *add* a mark to some candidate, never subtract from A. With no balancing vote available, a cluster of similar candidates splits its shared supporters and a less-preferred candidate can slip through. [Vote-splitting and the spoiler effect](../../../07_Concepts/topics/spoiler_effect.md) are not separate bugs; they are the visible symptom of an **unequal vote**. STAR ends forced vote-splitting for exactly one reason: every ballot can be perfectly cancelled, so adding a similar candidate can't dilute anyone. (Watch it happen across methods: [the split-voting set](../../../method_comparisons/split_voting/README.md); the narrow residue STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md).)
 
 ## Which methods pass, which fail
 
@@ -74,7 +74,7 @@ One caveat both sides agree on: with only **two** candidates, *every* method pas
 
 ## One person, one vote (the legal thread)
 
-→ The full disentangling — the *legal* principle (which every method passes) vs. this *balance* criterion — is its own page: [One person, one vote](../../../00_start_here/topics/one_person_one_vote.md).
+→ The full disentangling — the *legal* principle (which every method passes) vs. this *balance* criterion — is its own page: [One person, one vote](../../../07_Concepts/topics/one_person_one_vote.md).
 
 The equal-vote idea is the mathematical face of **"one person, one vote."** In *Wesberry v. Sanders* (1964) the U.S. Supreme Court held that the weight and worth of each citizen's vote must, as nearly as is practicable, be the same. Choose-One honors that only in a two-candidate race; with more candidates, voters who have several candidates "on their side" are systematically disadvantaged, which is why voters are pushed toward the "lesser of two evils" and third parties get blamed as spoilers. Advocates argue an equal vote is therefore not just a nicety but the constitutional standard, and that vote-splitting (unlike gerrymandering) is fully solvable.
 

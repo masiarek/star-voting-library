@@ -2,7 +2,7 @@
 
 *Ten friends rank four board games for the club's game night. When the count is done, every one of the top three games loses some head-to-head matchup — rock, paper, scissors, with a fourth game everyone ranks last. If nobody beats everybody, who deserves to win? Predict what Ranked Robin does before you peek — including every rung of its ladder.*
 
-**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../00_start_here/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.
+**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../07_Concepts/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; the `_tabulated` mirror is the full audit report. This is the set's one **ranked-ballot** exercise — the ballots are `Azul>Boggle>Catan>Dominion`-style rankings, not scores.
 
@@ -43,7 +43,7 @@ Azul beats Boggle **7–3** (the ×4 bloc plus the Catan bloc, which ranks Azul 
 <details>
 <summary><b>(b) No Condorcet winner — one very clear Condorcet loser</b></summary>
 
-Azul → Boggle → Catan → Azul is a genuine **cycle**: each of the three loses exactly one matchup, so *no one beats everyone* — there is no Condorcet winner to elect. Dominion, losing all three matchups 0–10, is the **Condorcet loser**. The three cyclists are precisely the [Smith set](../../00_start_here/topics/smith_set.md) — the smallest club that beats everyone outside it.
+Azul → Boggle → Catan → Azul is a genuine **cycle**: each of the three loses exactly one matchup, so *no one beats everyone* — there is no Condorcet winner to elect. Dominion, losing all three matchups 0–10, is the **Condorcet loser**. The three cyclists are precisely the [Smith set](../../07_Concepts/topics/smith_set.md) — the smallest club that beats everyone outside it.
 
 </details>
 
@@ -94,6 +94,6 @@ Source: [ex09_game_night_cycle.yaml](cases/ex09_game_night_cycle.yaml). Full aud
 
 **Where this comes from.** Original to this repo (ballots and cast — the candidates are board games so the cycle reads as fun, not politics). Concept homes: [Ranked Robin vs Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md), [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md), and the worked [Smith-set case](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md).
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex09_game_night_cycle.md

@@ -117,6 +117,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/equal_an
 
 - [Vote splitting (worked set)](../../../../method_comparisons/split_voting/README.md)
 - [Runoff reversal (worked set)](../../../runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2219_36f4v2_equal_opposite_base](bv2219_36f4v2_equal_opposite_base.md)

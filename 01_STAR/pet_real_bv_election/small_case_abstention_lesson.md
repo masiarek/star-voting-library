@@ -4,7 +4,7 @@
 
 > Filed with BetterVoting: **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**.
 
-→ Reading results: [How to read a STAR report](../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine) · [BetterVoting and the LH engine — when the reports differ](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) (both) · [Runoff percentages](../concepts/the_count/runoff_percentages.md) · What an "Equal Support" ballot is: [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
+→ Reading results: [How to read a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) (LH engine) · [BetterVoting and the LH engine — when the reports differ](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) (both) · [Runoff percentages](../concepts/the_count/runoff_percentages.md) · What an "Equal Support" ballot is: [`GLOSSARY`](../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -40,7 +40,7 @@ With only two candidates, "no preference," "flat ballot," and "abstention" all c
 | **Count** | **1** | **3** | **4** |
 
 - **BetterVoting** flags a ballot as an *abstention* when it is **flat** (every candidate equal) → it counts **3** (the blank, `0,0,0`, **and** `3,3,3`) and tallies 5.
-- **STAR / the [LH engine](../../00_start_here/tabulation_engines/bettervoting_and_the_engine.md)** only calls the **blank** an abstention (**1**); the runoff sets aside the **4** ballots with no preference *between the two finalists* as **Equal Support** — which includes `5,5,0` but counts all of them in the score round.
+- **STAR / the [LH engine](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)** only calls the **blank** an abstention (**1**); the runoff sets aside the **4** ballots with no preference *between the two finalists* as **Equal Support** — which includes `5,5,0` but counts all of them in the score round.
 
 So the two notions genuinely disagree on two ballots: `3,3,3` (a real, engaged vote BetterVoting drops) and `5,5,0` (Equal Support BetterVoting keeps).
 

@@ -70,7 +70,7 @@ Baiul took the gold on the real 5–4 judging split — the same five judges who
 <details>
 <summary><b>(d) The map matters for Score — and can't touch the runoff</b></summary>
 
-Try to help Baiul's total: stretch her supporters' ballots (B5, K1, L0) and compress her opponents' (K5, B4). That's still order-preserving for every judge, and now Baiul's total beats Kerrigan's — the **Score verdict flips with the map**. Now try the same trick on the **runoff**: impossible. The runoff only asks each judge *which finalist is higher*, and every order-preserving map keeps every judge's B-vs-K direction unchanged — judges 1–5 prefer Baiul under *any* honest scores, judges 6–9 prefer Kerrigan. As long as Baiul and Kerrigan are the finalists (and Lu's 13-ish total never threatens that), **STAR answers Baiul 5–4 under every consistent map.** Rank→score conversion injects an assumption; totals inherit it, pairwise comparisons don't. (The same moral as [scale granularity can flip the winner](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md) — score *magnitudes* are modeling choices.)
+Try to help Baiul's total: stretch her supporters' ballots (B5, K1, L0) and compress her opponents' (K5, B4). That's still order-preserving for every judge, and now Baiul's total beats Kerrigan's — the **Score verdict flips with the map**. Now try the same trick on the **runoff**: impossible. The runoff only asks each judge *which finalist is higher*, and every order-preserving map keeps every judge's B-vs-K direction unchanged — judges 1–5 prefer Baiul under *any* honest scores, judges 6–9 prefer Kerrigan. As long as Baiul and Kerrigan are the finalists (and Lu's 13-ish total never threatens that), **STAR answers Baiul 5–4 under every consistent map.** Rank→score conversion injects an assumption; totals inherit it, pairwise comparisons don't. (The same moral as [scale granularity can flip the winner](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md) — score *magnitudes* are modeling choices.)
 
 </details>
 
@@ -97,6 +97,6 @@ Source: [ex04_olympics_1994.yaml](cases/ex04_olympics_1994.yaml). Full audit rep
 
 **Where these ballots come from.** The 1994 Winter Olympics ladies figure-skating final ordinals, as reproduced (with the cardinal-methods exercise built on them) in Brendan W. Sullivan, *An Introduction to the Math of Voting Methods* (619 Wreath Publishing, 2022), ch. 5. Real names kept — they are the historical record, so the repo's fresh-cast rule doesn't apply.
 
-*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../00_start_here/curriculum/CURRICULUM_301.md)*
+*Back to [the exercises set](README.md) · curriculum home: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md)*
 
 # file: ex04_olympics_1994.md

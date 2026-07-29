@@ -12,15 +12,15 @@
 
 Two numbers used throughout this repo trace back to here:
 
-- **VSE** — the utilitarian-accuracy score behind "STAR tops the accuracy charts" (100% = always elect the utility-maximizing winner, 0% = a random winner). It is the modern form of [Bayesian Regret](../../../00_start_here/topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret).
-- **[PVSI](../../../00_start_here/topics/pvsi_strategic_incentive.md)** — the *Pivotal Voter Strategic Incentive*: how much a pivotal voter gains on average by voting strategically rather than honestly. Near **0%** means strategy rarely pays; **negative** means it backfires more often than it works. This is the peer-reviewed source behind the repo's "**STAR ≈ 1:1, IRV ≈ 3:1, Plurality ≈ 17:1** backfire ratios."
+- **VSE** — the utilitarian-accuracy score behind "STAR tops the accuracy charts" (100% = always elect the utility-maximizing winner, 0% = a random winner). It is the modern form of [Bayesian Regret](../../../07_Concepts/topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret).
+- **[PVSI](../../../07_Concepts/topics/pvsi_strategic_incentive.md)** — the *Pivotal Voter Strategic Incentive*: how much a pivotal voter gains on average by voting strategically rather than honestly. Near **0%** means strategy rarely pays; **negative** means it backfires more often than it works. This is the peer-reviewed source behind the repo's "**STAR ≈ 1:1, IRV ≈ 3:1, Plurality ≈ 17:1** backfire ratios."
 
 Until now the library used these figures while citing only a project website. This page anchors them to the peer-reviewed original.
 
 ## What the paper actually claims
 
 1. **STAR = a 0–5 score ballot + an automatic top-two runoff** — designed to capture *both* preference order and preference strength, to be **summable** (unlike IRV), and to run on existing machines by addition.
-2. **Reject pure pass/fail criteria; measure frequency × severity instead.** Following [Arrow (1950)](../../../00_start_here/topics/what_makes_a_voting_method_good.md), every method fails *some* criterion, so binary checklists are "more divisive than constructive." Their alternative is statistical: build a generative electorate model, simulate, and measure how *often* and how *badly* each pathology bites.
+2. **Reject pure pass/fail criteria; measure frequency × severity instead.** Following [Arrow (1950)](../../../07_Concepts/topics/what_makes_a_voting_method_good.md), every method fails *some* criterion, so binary checklists are "more divisive than constructive." Their alternative is statistical: build a generative electorate model, simulate, and measure how *often* and how *badly* each pathology bites.
 3. **Favorite Betrayal (FB) and Later-No-Harm (LNH) are incompatible**, so a method should maximize both statistically rather than pass one and fail the other badly. STAR keeps FB-resistance and gives up LNH; **IRV does the opposite — and, to pass LNH, it ignores down-ballot preferences, which (per Dempsey 2018) is precisely why it cannot eliminate vote-splitting or the [center-squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) spoiler.**
 4. **The Equality Criterion** (their framing of one-person-one-vote): for any ballot there exists an opposite ballot that exactly cancels it. **Approval, Score, Smith/Minimax and STAR pass; Plurality and IRV fail.** They tie this to *Wesberry v. Sanders* and show it implies the weak mutual-majority criterion.
 5. **Results.** On a clustered-spatial model (6 candidates, 101–5001 voters): **STAR and Smith/Minimax deliver the highest VSE** of all methods tested, Approval close behind — roughly **STAR ≈ Smith/Minimax > Approval Top Two > Approval > IRV > Plurality Top Two > Plurality**. On strategy (PVSI): STAR's only weak incentive (~2%) is to exaggerate scores *while keeping honest preference order*; **all dishonest STAR strategies — favorite betrayal, burial, bullet voting — are strongly disincentivized.** IRV's *most*-incentivized strategy is favorite betrayal; Plurality incentivizes it at ~14%; Approval's strongest is threshold-setting at ~10%.
@@ -28,8 +28,8 @@ Until now the library used these figures while citing only a project website. Th
 ## The kernel — what's solid (concede it)
 
 - **Genuinely peer-reviewed**, in an economics journal, and **open access** — a real citable anchor, not a campaign PDF.
-- **VSE and PVSI are rigorous, reusable and model-transparent.** Appendix B runs robustness checks across models and parameters, and the Python code is supplied. The VSE ordering (cardinal/Condorcet methods over IRV over Plurality) is **robust and independently corroborated** — see [expert consensus & IRV](../../../00_start_here/topics/expert_consensus_and_irv.md).
-- **Unusually candid about its own bias risk.** The authors state they "have done our best to avoid creating a model biased in favor of STAR," and note that Quinn's VSE work *predated* his STAR activism — he had **expected the data to favour Bucklin-style Majority Judgment, not STAR**. They deliberately chose a **clustered spatial model** so that Condorcet cycles occur at a *realistic* rate: neither the flood produced by [impartial culture](../../../00_start_here/topics/election_simulation_models.md) nor the near-zero of a plain [spatial model](../../../00_start_here/topics/spatial_voting_model.md). That is exactly the methodology this repo argues for.
+- **VSE and PVSI are rigorous, reusable and model-transparent.** Appendix B runs robustness checks across models and parameters, and the Python code is supplied. The VSE ordering (cardinal/Condorcet methods over IRV over Plurality) is **robust and independently corroborated** — see [expert consensus & IRV](../../../07_Concepts/topics/expert_consensus_and_irv.md).
+- **Unusually candid about its own bias risk.** The authors state they "have done our best to avoid creating a model biased in favor of STAR," and note that Quinn's VSE work *predated* his STAR activism — he had **expected the data to favour Bucklin-style Majority Judgment, not STAR**. They deliberately chose a **clustered spatial model** so that Condorcet cycles occur at a *realistic* rate: neither the flood produced by [impartial culture](../../../07_Concepts/topics/election_simulation_models.md) nor the near-zero of a plain [spatial model](../../../07_Concepts/topics/spatial_voting_model.md). That is exactly the methodology this repo argues for.
 - **The vote-splitting / center-squeeze critique of IRV is correct and load-bearing** — and it has actually happened: [Burlington 2009](../../../method_comparisons/burlington_2009/), [Alaska 2022](../../../method_comparisons/alaska_2022/).
 
 ## Test it — the runnable companions here
@@ -40,7 +40,7 @@ Until now the library used these figures while citing only a project website. Th
 | IRV's center-squeeze spoiler, on real ballots | [Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [Alaska 2022](../../../method_comparisons/alaska_2022/) · [Burlington 2009](../../../method_comparisons/burlington_2009/) |
 | The FB/LNH tradeoff — and that STAR is *not* FB-proof | [Favorite betrayal](../properties_and_limits/favorite_betrayal_voting_301.md) · [FBC simulation](../../../06_Other/simulations/README.md) |
 | STAR ≈ Smith/Minimax at the top → so where do they *disagree*? | [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) · [30 STAR≠RR divergence samples](../../../05_Ranked_Robin/star_vs_rr_divergence/) |
-| VSE/PVSI are model-dependent | [Election simulation models](../../../00_start_here/topics/election_simulation_models.md) · [the simulations](../../../06_Other/simulations/README.md) |
+| VSE/PVSI are model-dependent | [Election simulation models](../../../07_Concepts/topics/election_simulation_models.md) · [the simulations](../../../06_Other/simulations/README.md) |
 
 ## Read it critically — overreach, and the lean
 
@@ -56,6 +56,6 @@ A strong, genuinely peer-reviewed contribution that hands the field two durable 
 
 ---
 
-*See also: [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md) · [What makes a good winner?](../../../00_start_here/topics/what_makes_a_good_winner.md) · [In memoriam, Jameson Quinn](../../../00_start_here/topics/in_memoriam_jameson_quinn.md) · [STAR resources](STAR_resources.md).*
+*See also: [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md) · [What makes a good winner?](../../../07_Concepts/topics/what_makes_a_good_winner.md) · [In memoriam, Jameson Quinn](../../../07_Concepts/topics/in_memoriam_jameson_quinn.md) · [STAR resources](STAR_resources.md).*
 
 > **The companion article.** The next ten pages of the same issue — *Constitutional Political Economy* **34(3): 335–345** — are the Approval camp's parallel case: **Hamlin & Hua, "The case for approval voting."** Same journal, same issue, the rival cardinal method, argued by its own advocacy organisation. It gets [the same treatment](../../../04_Approval/concepts/hamlin_hua_2023.md), and its §4.1 example is [runnable here](../../../method_comparisons/approval_majority_criterion/README.md).

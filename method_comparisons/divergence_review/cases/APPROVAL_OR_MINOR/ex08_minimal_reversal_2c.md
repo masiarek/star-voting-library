@@ -130,7 +130,7 @@ the honest answer to "who is even in contention?".
    One member ⇒ A is the Condorcet winner, beating every rival head-to-head.
    RCV-IRV winner A is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 
 NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
 ```
@@ -175,5 +175,5 @@ the honest answer to "who is even in contention?".
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
-   More: 00_start_here/topics/smith_set.md
+   More: 07_Concepts/topics/smith_set.md
 ```

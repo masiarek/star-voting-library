@@ -71,4 +71,4 @@ A **pre-published permutation** makes which one occurs reproducible. A **random*
 
 - [BV130-r2 — dead-rung lot tie](bv130r2_dead_rung_bloc.md) and [BV131 — Guido example](bv131_guido_bloc.md) — other Bloc seats decided by the lot.
 - [BV `jfk7pd`](../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) — the single-winner original of the random-vs-published lot point.
-- [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) · [why contrived tie cases earn their keep](../../00_start_here/topics/ties/why_contrived_tie_cases.md).
+- [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) · [why contrived tie cases earn their keep](../../07_Concepts/topics/ties/why_contrived_tie_cases.md).

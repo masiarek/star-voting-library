@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-The protest is real but quiet. In the scoring round this ballot spends one point of the twenty-five it could carry, so it barely moves who the finalists are. Its strength arrives later: in any Blake-versus-anyone [runoff](../the_count/STAR_Automatic_Runoff.md), the 1-over-0 gap is a **full vote** for Blake — runoff votes don't care how big the gap is, only which way it points. And if Blake isn't in the final, the ballot is [Equal Support](../../../00_start_here/GLOSSARY.md) between two 0s — an abstention you chose. A protest ballot counts; it just counts the way a whisper counts.
+The protest is real but quiet. In the scoring round this ballot spends one point of the twenty-five it could carry, so it barely moves who the finalists are. Its strength arrives later: in any Blake-versus-anyone [runoff](../the_count/STAR_Automatic_Runoff.md), the 1-over-0 gap is a **full vote** for Blake — runoff votes don't care how big the gap is, only which way it points. And if Blake isn't in the final, the ballot is [Equal Support](../../../07_Concepts/GLOSSARY.md) between two 0s — an abstention you chose. A protest ballot counts; it just counts the way a whisper counts.
 
 ## This exact style in a real election
 

@@ -2,7 +2,7 @@
 
 *Several reform packages are two-stage: an open qualifying election narrows a crowded field to the top few, then a good method runs the general. That design has a quiet assumption baked into it — that the primary won't discard the very candidate the reform exists to elect. This page measures whether that assumption holds, and finds that **it depends almost entirely on a design choice most proposals leave unspecified.***
 
-**Level: 301.** Companions: [election simulation models](../00_start_here/topics/election_simulation_models.md) · [simulate utilities, not ballots](../00_start_here/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
+**Level: 301.** Companions: [election simulation models](../07_Concepts/topics/election_simulation_models.md) · [simulate utilities, not ballots](../07_Concepts/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
 
 ## The question, and why it isn't rhetorical
 
@@ -17,13 +17,13 @@ Two positions, both held by people who know this field well, and **neither previ
 
 ## The structural fact that makes this the whole question
 
-With a **Condorcet general** (Ranked Robin / Consensus Choice), a full-field [Condorcet winner](../00_start_here/topics/condorcet/README.md) who *advances* **always wins**. They beat every candidate head-to-head, so they beat every survivor, so they are the Condorcet winner of the surviving subset too.
+With a **Condorcet general** (Ranked Robin / Consensus Choice), a full-field [Condorcet winner](../07_Concepts/topics/condorcet/README.md) who *advances* **always wins**. They beat every candidate head-to-head, so they beat every survivor, so they are the Condorcet winner of the surviving subset too.
 
 Therefore **the qualifying round is the only place the consensus winner can be lost.** Not a footnote to the proposal — the entire accuracy question. (The simulation asserts this as a test invariant rather than assuming it. It stops holding for a STAR general, where a Condorcet winner can advance and still miss the score-based top two — run `--general star` to see that mode.)
 
 ## The measured answer
 
-From [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py): 9-candidate open field, 501 voters, 2000 trials per cell, seed 20260723, general = Ranked Robin. Voters' utilities are sampled from a 2-D [spatial model](../00_start_here/topics/spatial_voting_model.md) and every ballot is derived from them.
+From [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py): 9-candidate open field, 501 voters, 2000 trials per cell, seed 20260723, general = Ranked Robin. Voters' utilities are sampled from a 2-D [spatial model](../07_Concepts/topics/spatial_voting_model.md) and every ballot is derived from them.
 
 **How often the qualifying round drops the Condorcet winner:**
 
@@ -34,7 +34,7 @@ From [`primary_method_simulation.py`](../06_Other/simulations/primary_method_sim
 | Score (STAR's scoring round) | 3.5% | 0.5% | **0.0%** | 0.1% |
 | Ranked Robin | 0.0% | 0.0% | **0.0%** | 0.0% |
 
-End-to-end [VSE](../00_start_here/topics/what_makes_a_good_winner.md) at top-4: Plurality **0.962**, Approval **0.997**, Score **0.999**, no primary at all **0.999**.
+End-to-end [VSE](../07_Concepts/topics/what_makes_a_good_winner.md) at top-4: Plurality **0.962**, Approval **0.997**, Score **0.999**, no primary at all **0.999**.
 
 ## What it means
 

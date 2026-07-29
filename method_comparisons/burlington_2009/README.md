@@ -24,7 +24,7 @@ Simpson      35  Rejected
 WriteIn      36  Rejected
 ```
 
-Montroll — the one candidate a majority preferred to each rival — had the fewest of the top three *first* choices, so IRV cut him in the semifinal. That is the **[center squeeze](../../00_start_here/topics/center_squeeze/README.md)**, not as a whiteboard construction but as a certified municipal result. ([Run it](cases/burlington_2009_irv.yaml).)
+Montroll — the one candidate a majority preferred to each rival — had the fewest of the top three *first* choices, so IRV cut him in the semifinal. That is the **[center squeeze](../../07_Concepts/topics/center_squeeze/README.md)**, not as a whiteboard construction but as a certified municipal result. ([Run it](cases/burlington_2009_irv.yaml).)
 
 ## The pairwise truth
 
@@ -55,11 +55,11 @@ Montroll   2553                  Kiss      3945
 Wright     2543  Rejected
 ```
 
-Kiss's new support knocks *Wright* below Montroll in the semifinal; Montroll survives to the final and beats Kiss. **Kiss gained 750 first-place votes and lost the election he had won.** More support, worse result — the additional-support paradox on certified ballots. (The selection is engineered but not exotic: the 469 bullet-ballot moves erode Montroll's 587-vote head-to-head cushion by only 469, so his final-round win survives the raise. The mirror reading — roughly the same bloc *staying home* also elects Montroll, an outcome those Wright voters preferred to Kiss — is the [no-show paradox](../../00_start_here/voting_paradoxes/no_show.md); Alaska 2022 repeated both patterns, worked in [favorite_betrayal_voting_301.md §4](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md).)
+Kiss's new support knocks *Wright* below Montroll in the semifinal; Montroll survives to the final and beats Kiss. **Kiss gained 750 first-place votes and lost the election he had won.** More support, worse result — the additional-support paradox on certified ballots. (The selection is engineered but not exotic: the 469 bullet-ballot moves erode Montroll's 587-vote head-to-head cushion by only 469, so his final-round win survives the raise. The mirror reading — roughly the same bloc *staying home* also elects Montroll, an outcome those Wright voters preferred to Kiss — is the [no-show paradox](../../07_Concepts/voting_paradoxes/no_show.md); Alaska 2022 repeated both patterns, worked in [favorite_betrayal_voting_301.md §4](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md).)
 
 ## Reading this fairly
 
-- **Kiss won under the rules everyone campaigned under**, and IRV's defenders correctly note no method is paradox-free (Arrow — see the [social-choice shelf](../../00_start_here/books/social_choice_theory.md)). The claim this page supports is narrower and stronger: center squeeze, non-monotonicity, and no-show are **IRV-specific mechanics** — on these very ballots, Ranked Robin (and any Condorcet count) elects Montroll, and the paradox files above stop being constructible.
+- **Kiss won under the rules everyone campaigned under**, and IRV's defenders correctly note no method is paradox-free (Arrow — see the [social-choice shelf](../../07_Concepts/books/social_choice_theory.md)). The claim this page supports is narrower and stronger: center squeeze, non-monotonicity, and no-show are **IRV-specific mechanics** — on these very ballots, Ranked Robin (and any Condorcet count) elects Montroll, and the paradox files above stop being constructible.
 - **The voters did nothing wrong.** Every pathology here operates on *sincere* ballots. Wright voters ranking honestly got their last choice; had they insincerely ranked Montroll first, they'd have done better — a real-world [favorite-betrayal failure](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) in the system marketed as making honesty safe.
 - **Aftermath:** Burlington repealed IRV in 2010. (It later re-adopted ranked ballots for city-council races in 2021 — the debate continues, which is exactly why the ballots deserve to stay runnable.)
 - **Scope honesty:** these are ranked ballots, so only ranked-ballot counts run natively; a STAR count would require invented score levels, and this repo doesn't invent data. The score-ballot version of this electorate's lesson lives in [center squeeze](../../method_comparisons/center_squeeze_bv2137/) with designed ballots.

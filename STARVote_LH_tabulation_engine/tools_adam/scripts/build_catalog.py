@@ -22,9 +22,9 @@ yaml-backed races AND BV-only races read from the frozen exports (e.g. Bloc
 Plurality, which has no yaml).
 
 Writes:
-  * 00_start_here/YAML_test_case_index/races.csv        — the full sortable fact table
-  * 00_start_here/YAML_test_case_index/elections.csv    — one row per election
-  * 00_start_here/YAML_test_case_index/CATALOG.md       — the hub: descriptions,
+  * 07_Concepts/YAML_test_case_index/races.csv        — the full sortable fact table
+  * 07_Concepts/YAML_test_case_index/elections.csv    — one row per election
+  * 07_Concepts/YAML_test_case_index/CATALOG.md       — the hub: descriptions,
         the elections table, and every facet cut, + a "how it's organized" guide.
 
 Run: python STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py
@@ -43,7 +43,7 @@ except ImportError:
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
-IDXDIR = os.path.join(REPO, "00_start_here", "YAML_test_case_index")
+IDXDIR = os.path.join(REPO, "07_Concepts", "YAML_test_case_index")
 
 EXCLUDE = ("/.venv/", "/_tabulated", "_tabulated/", "/_pages/", "_pages/",
            "/_generated", "_generated/", "/tests/", "/2_negative/",

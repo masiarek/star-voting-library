@@ -2,7 +2,7 @@
 
 *You've counted the rounds ([201](alaska_201.md)). This page does two harder things: (1) shows that Alaska hit **several** of IRV's known failures at once, and (2) confronts the honest question — **is it fair to keep pointing at IRV's failures, when a critic could construct STAR failures too?** The second half matters more than the first.*
 
-Sources: Graham-Squire & McCune, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075) (the empirical database this case is scaled from) · [what makes a good winner](../../00_start_here/topics/what_makes_a_good_winner.md) · run it: [the model](README.md).
+Sources: Graham-Squire & McCune, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075) (the empirical database this case is scaled from) · [what makes a good winner](../../07_Concepts/topics/what_makes_a_good_winner.md) · run it: [the model](README.md).
 
 ---
 
@@ -12,7 +12,7 @@ Alaska is the most-cited real IRV misfire because it triggered several distinct 
 
 **1. Condorcet failure.** Begich beats both rivals head-to-head (93–84 and 107–68) but isn't elected. The consensus candidate loses. *(This is the headline — see [201](alaska_201.md).)*
 
-**2. Spoiler effect.** Remove the *losing* candidate Palin from the ballots entirely, and **Begich wins** (his voters plus Palin's transfers beat Peltola). Palin could not win — but her *presence* changed who did. That is the textbook definition of a [spoiler](../../00_start_here/topics/spoiler_effect.md), and RCV-IRV is marketed as the method that *ends* spoilers.
+**2. Spoiler effect.** Remove the *losing* candidate Palin from the ballots entirely, and **Begich wins** (his voters plus Palin's transfers beat Peltola). Palin could not win — but her *presence* changed who did. That is the textbook definition of a [spoiler](../../07_Concepts/topics/spoiler_effect.md), and RCV-IRV is marketed as the method that *ends* spoilers.
 
 **3. Upward monotonicity failure.** Take the real result (Peltola wins) and give the **winner** *more* support: had ~6,000 Palin-only voters (≈6 in the model) instead ranked **Peltola first**, Peltola would have **lost**. Why? Those votes pull Palin below Begich in Round 1, so **Palin** is eliminated instead of Begich; Begich then beats Peltola head-to-head in the final. **Ranking the winner higher made the winner lose.** A voting method should never punish a candidate for gaining support — IRV can.
 
@@ -20,9 +20,9 @@ Alaska is the most-cited real IRV misfire because it triggered several distinct 
 
 *(The paper documents a fifth, the no-show / truncation paradox: some `Palin>Begich` voters would have gotten a better result by **not voting** at all. Same root cause — elimination order is fragile.)*
 
-Every one of these traces to the **same** mechanism: **eliminating candidates on first-choice counts.** Methods that read the whole ballot — Ranked Robin, any [Condorcet method](../../00_start_here/topics/condorcet/), and STAR through its runoff — avoid all five, because none of them gate survival on first choices.
+Every one of these traces to the **same** mechanism: **eliminating candidates on first-choice counts.** Methods that read the whole ballot — Ranked Robin, any [Condorcet method](../../07_Concepts/topics/condorcet/), and STAR through its runoff — avoid all five, because none of them gate survival on first choices.
 
-**Another way to see it — breadth of support.** Working the same Cast Vote Record, STAR's founder Mark Frohnmayer highlights a measure IRV never looks at: how many voters backed each candidate as *either* first **or** second choice. A **super-majority** of Alaskans put **Begich** in their top two; by contrast a **majority expressed no support at all** for Peltola, and a majority none for Palin. IRV eliminated the one candidate with broad support precisely because it counts only *first* choices each round and ignores every "backup" expression until a ballot's top choice is gone — the [preference-vs-support](../../00_start_here/scores_and_ranks/preference_vs_support.md) blind spot, live in a real election. *(Source: Frohnmayer, [What the heck happened in Alaska?](https://nardopolo.medium.com/what-the-heck-happened-in-alaska-3c2d7318decc) — a STAR-founder writeup, so **advocacy-leaning**, but its factual core matches the [Clelland](https://arxiv.org/abs/2303.00108) and [Graham-Squire & McCune](https://arxiv.org/abs/2301.12075) analyses this page is built on.)*
+**Another way to see it — breadth of support.** Working the same Cast Vote Record, STAR's founder Mark Frohnmayer highlights a measure IRV never looks at: how many voters backed each candidate as *either* first **or** second choice. A **super-majority** of Alaskans put **Begich** in their top two; by contrast a **majority expressed no support at all** for Peltola, and a majority none for Palin. IRV eliminated the one candidate with broad support precisely because it counts only *first* choices each round and ignores every "backup" expression until a ballot's top choice is gone — the [preference-vs-support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) blind spot, live in a real election. *(Source: Frohnmayer, [What the heck happened in Alaska?](https://nardopolo.medium.com/what-the-heck-happened-in-alaska-3c2d7318decc) — a STAR-founder writeup, so **advocacy-leaning**, but its factual core matches the [Clelland](https://arxiv.org/abs/2303.00108) and [Graham-Squire & McCune](https://arxiv.org/abs/2301.12075) analyses this page is built on.)*
 
 ---
 
@@ -33,7 +33,7 @@ The reduced model above *shows* STAR electing Begich. [Clelland (2023)](https://
 - **Under STAR, Begich almost certainly wins.** He's the Condorcet winner, and STAR's runoff floor (a second choice earns 1–4 stars, never 0) means his overwhelming second-place support carries him. Clelland's conclusion: *"Begich would almost certainly win the election"* under STAR, and Palin — the Condorcet **loser** — *"could not win this election under any circumstances"* (the runoff guarantees no Condorcet loser).
 - **Under Approval, the outcome is indeterminate.** Her Table 5 shows the winner ranges across **all three candidates** depending on where voters set their approval threshold — it likely favors Peltola, but Begich is realistic, and it can't even structurally rule out the Condorcet *loser*, Palin.
 
-Same score ballots; the whole difference is the runoff. STAR converts an indeterminate result into a **robust, Condorcet-friendly** one. (That's also why this case runs STAR and Ranked Robin but *not* a single Approval race — a lone Approval instance would fake a determinacy the method doesn't have. It's a virtue worth stating plainly, not a knock on Approval, which earns its keep on simplicity — see [choosing among the Equal Vote methods](../../00_start_here/topics/choosing_among_evc_methods.md).)
+Same score ballots; the whole difference is the runoff. STAR converts an indeterminate result into a **robust, Condorcet-friendly** one. (That's also why this case runs STAR and Ranked Robin but *not* a single Approval race — a lone Approval instance would fake a determinacy the method doesn't have. It's a virtue worth stating plainly, not a knock on Approval, which earns its keep on simplicity — see [choosing among the Equal Vote methods](../../07_Concepts/topics/choosing_among_evc_methods.md).)
 
 ---
 

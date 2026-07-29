@@ -26,7 +26,7 @@ First choices go from Andy 4, Beth 3, Carl 4 to **Andy 2, Beth 3, Carl 4**. The 
 
 **Twin, weak form** (BV2151 → BV2150): read the other direction. Start here, with two `Andy>Beth>Carl` voters. Two *twins* — voters with the identical ordering — join the electorate. One would expect reinforcement of their shared preference; instead the twins' arrival elects **Carl**, the group's common worst choice.
 
-Both are elimination-order diseases, and both vanish on the same ballots under pairwise or score counting: Ranked Robin and STAR elect **Beth** in *both* electorates (Beth is the Condorcet winner both times — 6–5/7–4 with 11 voters, 6–3/5–4 with 9). Teaching page: [no_show.md](../../00_start_here/voting_paradoxes/no_show.md). (Condorcet methods are not participation-proof in general — Moulin's theorem — but this electorate doesn't trigger it.)
+Both are elimination-order diseases, and both vanish on the same ballots under pairwise or score counting: Ranked Robin and STAR elect **Beth** in *both* electorates (Beth is the Condorcet winner both times — 6–5/7–4 with 11 voters, 6–3/5–4 with 9). Teaching page: [no_show.md](../../07_Concepts/voting_paradoxes/no_show.md). (Condorcet methods are not participation-proof in general — Moulin's theorem — but this electorate doesn't trigger it.)
 
 ## View 1 — BetterVoting
 

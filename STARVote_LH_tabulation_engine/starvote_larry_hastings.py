@@ -1033,7 +1033,7 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
         L.append("   candidate in the Smith set but not in the tighter Schwartz set — "
                  "so Schwartz")
         L.append("   may be smaller here.")
-    L.append("   More: 00_start_here/topics/smith_set.md")
+    L.append("   More: 07_Concepts/topics/smith_set.md")
     return L
 
 

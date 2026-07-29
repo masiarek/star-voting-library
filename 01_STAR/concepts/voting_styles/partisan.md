@@ -17,7 +17,7 @@
 
 ## The trade-off, honestly
 
-Two edges, both by your own choice. If the [runoff](../the_count/STAR_Automatic_Runoff.md) is **your slate versus outside** — the fight this ballot was built for — your full vote lands on your candidate, every time. But if **two of your own 5s become the finalists**, your ballot is [Equal Support](../../../00_start_here/GLOSSARY.md): you said "no preference between them," so the choice among your teammates is made by voters who *did* express one. Same on the other side — two blanks in the final means you've no say at all. Equal scores are never discarded (they helped decide *who* made the final); they just decline the last question.
+Two edges, both by your own choice. If the [runoff](../the_count/STAR_Automatic_Runoff.md) is **your slate versus outside** — the fight this ballot was built for — your full vote lands on your candidate, every time. But if **two of your own 5s become the finalists**, your ballot is [Equal Support](../../../07_Concepts/GLOSSARY.md): you said "no preference between them," so the choice among your teammates is made by voters who *did* express one. Same on the other side — two blanks in the final means you've no say at all. Equal scores are never discarded (they helped decide *who* made the final); they just decline the last question.
 
 ## This exact style in a real election
 

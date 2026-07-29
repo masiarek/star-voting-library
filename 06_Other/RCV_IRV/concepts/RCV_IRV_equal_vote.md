@@ -2,7 +2,7 @@
 
 **One line:** RCV-IRV does **not** deliver an equally weighted vote. Because it counts only one ranking at a time and eliminates candidates sequentially, two voters with exactly opposite preferences often **cannot cancel each other out** — so vote-splitting and the spoiler effect survive. STAR, Score, and Approval pass this test; RCV-IRV does not.
 
-→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../../../00_start_here/CURRICULUM.md).
+→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -38,7 +38,7 @@ Here it is with real numbers — the exact mirror of the STAR case where opposit
 2: Cyrus > Bruno > Ada
 ```
 
-**Before.** Bruno is the [Condorcet winner](../../../00_start_here/topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
+**Before.** Bruno is the [Condorcet winner](../../../07_Concepts/topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
 
 Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
 

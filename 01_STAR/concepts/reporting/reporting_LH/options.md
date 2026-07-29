@@ -32,7 +32,7 @@ options:
 | `brief` | `true` collapses repeated section headers so the report is shorter | [brief (with/without)](brief.md) |
 | `collapse_ballots` | `false` lists every ballot; `true` groups identical ones as `count × scores` | — |
 | `show_runoff_percent` | the `Voters with a preference: N of TOTAL …` line | [runoff percentages](../../the_count/runoff_percentages.md) |
-| `show_smith_set` | **Ranked Robin only** — the `--- Smith Set ---` block (who is still in contention, and whether the winner is inside it) | [Smith set](../../../../00_start_here/topics/smith_set.md) |
+| `show_smith_set` | **Ranked Robin only** — the `--- Smith Set ---` block (who is still in contention, and whether the winner is inside it) | [Smith set](../../../../07_Concepts/topics/smith_set.md) |
 
 ## What this block produces
 
@@ -43,4 +43,4 @@ With the values above, the on-screen report shows: the **finalists-only matrix**
 1. **The winner and all the numbers** — options only hide or show sections, never alter the tabulation.
 2. **The `_tabulated.txt` mirror** — it always forces every analysis on (full matrix, Condorcet, score counts, IRV, the runoff funnel), so the saved audit copy is complete regardless of what the on-screen report chose to show.
 
-The recommended minimal block and the per-option house defaults live in [CLAUDE.md — working guidance for this repo](../../../../CLAUDE.md); the full report section-by-section is [Reading a STAR report](../../../../00_start_here/tabulation_engines/LH_starvote/reading_a_star_report.md).
+The recommended minimal block and the per-option house defaults live in [CLAUDE.md — working guidance for this repo](../../../../CLAUDE.md); the full report section-by-section is [Reading a STAR report](../../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).

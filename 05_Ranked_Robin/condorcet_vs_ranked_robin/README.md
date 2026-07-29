@@ -80,7 +80,7 @@ B went **3–1–1, not 5–0** (it loses to C, ties A), so no one beats everyon
 
 ## 4. The Smith set — the cycle plus an outsider
 
-Election 2 with **one change**: a fourth candidate, **Dave**, whom every voter ranks last. The Ada/Ben/Cara cycle is untouched, and all three beat Dave 7–0 — so the smallest group that beats everyone outside it is exactly **{Ada, Ben, Cara}**: the **[Smith set](../../00_start_here/topics/smith_set.md)**, the "generalized Condorcet winner." Dave is on every ballot yet provably out of contention. Ranked Robin's pick (Ada, on margins) comes from inside the set — Copeland is Smith-efficient.
+Election 2 with **one change**: a fourth candidate, **Dave**, whom every voter ranks last. The Ada/Ben/Cara cycle is untouched, and all three beat Dave 7–0 — so the smallest group that beats everyone outside it is exactly **{Ada, Ben, Cara}**: the **[Smith set](../../07_Concepts/topics/smith_set.md)**, the "generalized Condorcet winner." Dave is on every ballot yet provably out of contention. Ranked Robin's pick (Ada, on margins) comes from inside the set — Copeland is Smith-efficient.
 
 ```text
 Ballots:
@@ -99,7 +99,7 @@ Winner — Ranked Robin (RCV-RR): Ada
    *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle.
 ```
 
-(LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie randomly, so this deliberate three-way tie isn't freezable there.) Full report: [`…_tabulated/04_smith_set_c4_b7_tabulated.txt`](cases/cases_tabulated/04_smith_set_c4_b7_tabulated.txt) · full lesson: [The Smith set — the smallest club that beats everyone outside it](../../00_start_here/topics/smith_set.md)
+(LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie randomly, so this deliberate three-way tie isn't freezable there.) Full report: [`…_tabulated/04_smith_set_c4_b7_tabulated.txt`](cases/cases_tabulated/04_smith_set_c4_b7_tabulated.txt) · full lesson: [The Smith set — the smallest club that beats everyone outside it](../../07_Concepts/topics/smith_set.md)
 
 ---
 

@@ -72,4 +72,4 @@ The winner path matches; the **count** is where BV's (now-fixed) bug shows — i
 
 - [BV15 — Plurality abstain (bettervoting#740)](../../01_STAR/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) — the mirror-image abstention bug (turnout undercount).
 - [BV132 — verify number of votes cast (#1073)](bv132_verify_votes_bloc.md) — another Bloc count-verification case.
-- [02_STAR_Bloc README](README.md) · [BV registry](../../00_start_here/YAML_test_case_index/BV_registry.md).
+- [02_STAR_Bloc README](README.md) · [BV registry](../../07_Concepts/YAML_test_case_index/BV_registry.md).

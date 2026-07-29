@@ -6,7 +6,7 @@ Scope note — three related docs feed this one; this page is the union:
 
 - [`FORK_NOTES.md`](FORK_NOTES.md) — the *upstream* `starvote/` package baseline (tag `starvote-upstream-2.1.6`) and the handful of edits inside it.
 - [`README_larry_hastings.md`](README_larry_hastings.md) — the wrapper's display options + a running display change log.
-- [`../00_start_here/tabulation_engines/LH_starvote/README.md`](../00_start_here/tabulation_engines/LH_starvote/README.md) — the narrative "what we added" overview.
+- [`../07_Concepts/tabulation_engines/LH_starvote/README.md`](../07_Concepts/tabulation_engines/LH_starvote/README.md) — the narrative "what we added" overview.
 
 **The golden rule (unchanged):** the voting *algorithm* stays pristine. Larry Hastings' `starvote` core is edited almost never (see §1); every method dispatch, report, and fix below the STAR core lives in our wrapper `starvote_larry_hastings.py` or a separate vendored/cross-check engine. Full credit for STAR/Bloc/PR tabulation belongs upstream.
 

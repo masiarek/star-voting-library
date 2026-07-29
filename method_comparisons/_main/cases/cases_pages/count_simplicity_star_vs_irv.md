@@ -20,7 +20,7 @@ rechecks, and repeats — round after round — until someone clears half. To fo
 you must track every transfer, and you need every ballot in one place. Same winner,
 far more count.
 
-Deep dive: 00_start_here/is_rcv_simple.md (the "simple — which half?" point).
+Deep dive: 07_Concepts/is_rcv_simple.md (the "simple — which half?" point).
 
 ## Ballots
 
@@ -123,6 +123,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 ## See also
 
 - [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/count_simplicity_star_vs_irv.md) — its entry in the divergence review ledger
-- [Summability (topic hub)](../../../../00_start_here/topics/summability/README.md)
+- [Summability (topic hub)](../../../../07_Concepts/topics/summability/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

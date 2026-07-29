@@ -4,11 +4,11 @@
 >
 > **For the underlying math** — tournaments as graphs, the Smith & Schwartz sets, and each method mapped to its math (Floyd–Warshall, game theory, NP-hardness) — see [The Math Behind Condorcet](the_math_behind_condorcet.md).
 >
-> **For the wider field** — where Minimax/Ranked Pairs/Schulze sit among *all* the ranked tabulations (Borda, Bucklin, Coombs, Copeland, Dodgson…), see [The ranked-ballot method zoo](../../00_start_here/topics/ranked_ballot_methods_zoo.md).
+> **For the wider field** — where Minimax/Ranked Pairs/Schulze sit among *all* the ranked tabulations (Borda, Bucklin, Coombs, Copeland, Dodgson…), see [The ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md).
 
-**One line:** when a [Condorcet winner](../../00_start_here/GLOSSARY.md) exists, **every** Condorcet method elects them — Ranked Robin, Minimax, Ranked Pairs, Schulze all agree. They differ *only* when majority preference forms a **cycle** (A beats B, B beats C, C beats A, with no one beating all). "Cycle resolution" is the rule a method uses to pick a winner in that case — and it's the *entire* difference between these methods.
+**One line:** when a [Condorcet winner](../../07_Concepts/GLOSSARY.md) exists, **every** Condorcet method elects them — Ranked Robin, Minimax, Ranked Pairs, Schulze all agree. They differ *only* when majority preference forms a **cycle** (A beats B, B beats C, C beats A, with no one beating all). "Cycle resolution" is the rule a method uses to pick a winner in that case — and it's the *entire* difference between these methods.
 
-→ the cycle itself: [BV2157 — Condorcet cycle (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · the base method: [Ranked Robin](ranked_robin.md) · [`GLOSSARY`](../../00_start_here/GLOSSARY.md).
+→ the cycle itself: [BV2157 — Condorcet cycle (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · the base method: [Ranked Robin](ranked_robin.md) · [`GLOSSARY`](../../07_Concepts/GLOSSARY.md).
 
 > **Both profiles on this page are now runnable** — [method_comparisons/cycle_resolution](../../method_comparisons/cycle_resolution/README.md). Every winner below is printed by `cycle_resolution_report.py`, which runs all six rules through `pref_voting`; nothing here is asserted from memory.
 
@@ -44,7 +44,7 @@ On that same example, each refined method gives a **unique** winner — here, al
 
 **Schulze (beatpath)** — A "beats" B if the **strongest chain of defeats** from A to B (its weakest link is its strength) is stronger than the strongest chain back. Follow the strong links and **A wins** here too. (Widely used in practice — Debian, Wikimedia, Ubuntu.)
 
-**Split Cycle** *(newest)* — in **every** cycle, throw away that cycle's **weakest defeat**, then elect whoever is left undefeated. Here the only cycle is A>B>C>A, its weakest link is C>A (margin 1), so it goes — and **A wins**, undefeated. The rule comes from [Holliday & Pacuit (2023)](../../00_start_here/topics/condorcet/split_cycle.md), and its defining habit shows up in the next section: when the discarding leaves *two* candidates undefeated, Split Cycle **returns both** instead of picking one.
+**Split Cycle** *(newest)* — in **every** cycle, throw away that cycle's **weakest defeat**, then elect whoever is left undefeated. Here the only cycle is A>B>C>A, its weakest link is C>A (margin 1), so it goes — and **A wins**, undefeated. The rule comes from [Holliday & Pacuit (2023)](../../07_Concepts/topics/condorcet/split_cycle.md), and its defining habit shows up in the next section: when the discarding leaves *two* candidates undefeated, Split Cycle **returns both** instead of picking one.
 
 → runnable: [the 21-voter profile](../../method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml) (cast: Alder / Birch / Cedar / Dogwood).
 
@@ -69,7 +69,7 @@ In the example above all four landed on A. They **needn't.** A second profile �
 
 Same ballots, and the two "serious" cycle-resolvers **disagree outright** — Schulze elects A, Ranked Pairs elects B. That's the whole point of this page in one table.
 
-**Split Cycle's answer is the interesting one**, and it isn't indecision: its winner set is always a **superset** of Schulze's and Ranked Pairs'. Where those two produce a single name, Split Cycle is claiming they did so by *convention* rather than by evidence — the ballots here genuinely fail to separate A from B, and it hands that back rather than resolving it silently. Whether that's honesty or buck-passing is a real disagreement, and it's the subject of [its own page](../../00_start_here/topics/condorcet/split_cycle.md).
+**Split Cycle's answer is the interesting one**, and it isn't indecision: its winner set is always a **superset** of Schulze's and Ranked Pairs'. Where those two produce a single name, Split Cycle is claiming they did so by *convention* rather than by evidence — the ballots here genuinely fail to separate A from B, and it hands that back rather than resolving it silently. Whether that's honesty or buck-passing is a real disagreement, and it's the subject of [its own page](../../07_Concepts/topics/condorcet/split_cycle.md).
 
 A nastier **five-candidate** cycle drives the point home — 77 voters, [runnable](../../method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml) as Ava / Ben / Cole / Dana / Ezra, with **no** Condorcet winner and a Smith set of *all five*:
 
@@ -88,9 +88,9 @@ Same ballots, and **Ranked Pairs stands alone at Ben** while every other rule le
 ## What they share (the good news)
 
 - **Condorcet-consistent:** all elect the Condorcet winner whenever one exists — which, with many voters and realistic preferences, is the overwhelming majority of elections.
-- **Smith-efficient (the good ones):** Ranked Pairs, Schulze, and Copeland always elect from the **[Smith set](../../00_start_here/topics/smith_set.md)** (the smallest group that beats everyone outside it). Minimax can miss it.
+- **Smith-efficient (the good ones):** Ranked Pairs, Schulze, and Copeland always elect from the **[Smith set](../../07_Concepts/topics/smith_set.md)** (the smallest group that beats everyone outside it). Minimax can miss it.
 - **Clone-independent & monotone:** Ranked Pairs, Schulze **and Split Cycle** add these guarantees; that robustness is why they're the "serious" cycle-resolvers despite being harder to explain.
-- **Where they part company on criteria:** Split Cycle additionally satisfies *immunity to spoilers* and *positive/negative involvement*, which Schulze and Ranked Pairs fail — the price being those multi-winner answers. The [Split Cycle page](../../00_start_here/topics/condorcet/split_cycle.md) checks that trade with a tabulated election in which a candidate **no voter ranks above the winner** still flips Schulze's result.
+- **Where they part company on criteria:** Split Cycle additionally satisfies *immunity to spoilers* and *positive/negative involvement*, which Schulze and Ranked Pairs fail — the price being those multi-winner answers. The [Split Cycle page](../../07_Concepts/topics/condorcet/split_cycle.md) checks that trade with a tabulated election in which a candidate **no voter ranks above the winner** still flips Schulze's result.
 
 ## Where Ranked Robin and STAR fit
 
@@ -109,16 +109,16 @@ Both profiles on this page ship as runnable YAMLs in [method_comparisons/cycle_r
 uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
 ```
 
-It reports the margins, the Smith set, and Copeland / Minimax / Ranked Pairs / Schulze / Split Cycle / Stable Voting side by side, all computed by `pref_voting` ([cross-check engine](../../00_start_here/tabulation_engines/cross_checking_with_pref_voting.md)). The LH engine itself runs only the Copeland column — that's Ranked Robin. For a quick manual run without the repo, paste a `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html), which reports Minimax, Ranked Pairs, Schulze, Copeland and more side by side.
+It reports the margins, the Smith set, and Copeland / Minimax / Ranked Pairs / Schulze / Split Cycle / Stable Voting side by side, all computed by `pref_voting` ([cross-check engine](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md)). The LH engine itself runs only the Copeland column — that's Ranked Robin. For a quick manual run without the repo, paste a `count:A>B>C` block into [LeGrand's calculator](https://www.cs.angelo.edu/~rlegrand/rbvote/calc.html), which reports Minimax, Ranked Pairs, Schulze, Copeland and more side by side.
 
 ## Learn more (external)
 
 - Ranked Pairs — [Wikipedia](https://en.wikipedia.org/wiki/Ranked_pairs) · [electowiki](https://electowiki.org/wiki/Ranked_Pairs)
 - Schulze method — [Wikipedia](https://en.wikipedia.org/wiki/Schulze_method) · [electowiki](https://electowiki.org/wiki/Schulze_method)
 - Minimax — [Wikipedia](https://en.wikipedia.org/wiki/Minimax_Condorcet_method) · [electowiki](https://electowiki.org/wiki/Minimax)
-- Split Cycle — [Holliday & Pacuit, arXiv:2004.02350](https://arxiv.org/abs/2004.02350) (in this repo: [Split Cycle, claim-checked](../../00_start_here/topics/condorcet/split_cycle.md))
+- Split Cycle — [Holliday & Pacuit, arXiv:2004.02350](https://arxiv.org/abs/2004.02350) (in this repo: [Split Cycle, claim-checked](../../07_Concepts/topics/condorcet/split_cycle.md))
 - Smith set — [Wikipedia](https://en.wikipedia.org/wiki/Smith_set)
-- The whole family's literature, with leans marked — [Condorcet reading list](../../00_start_here/topics/condorcet/condorcet_reading_list.md)
+- The whole family's literature, with leans marked — [Condorcet reading list](../../07_Concepts/topics/condorcet/condorcet_reading_list.md)
 
 ---
 

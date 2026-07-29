@@ -4,7 +4,7 @@
 
 > **Which Alaska election is this?** The **August 2022 US House *special*** — the one that misfired. Alaska has run many other RCV races (the Nov 2022 general, the 2022 Senate, 2024) that worked fine. For the full map and honest scorecard, see **[Alaska's RCV elections — the whole picture](alaska_rcv_elections.md)**.
 
-→ **Run it yourself:** [Alaska 2022 — reduced 200-voter model, four counts](../../../../method_comparisons/alaska_2022/README.md) (BV-backed; STAR & Ranked Robin elect the Condorcet winner IRV cut) · Interactive breakdown (Equal Vote): [realrcv.equal.vote/alaska22](https://realrcv.equal.vote/alaska22) · concepts: [center squeeze](../RCV_IRV_center_squeeze.md) · [non-monotonicity](../RCV_IRV_non_monotonicity.md) · [the spoiler effect](../../../../00_start_here/topics/spoiler_effect.md)
+→ **Run it yourself:** [Alaska 2022 — reduced 200-voter model, four counts](../../../../method_comparisons/alaska_2022/README.md) (BV-backed; STAR & Ranked Robin elect the Condorcet winner IRV cut) · Interactive breakdown (Equal Vote): [realrcv.equal.vote/alaska22](https://realrcv.equal.vote/alaska22) · concepts: [center squeeze](../RCV_IRV_center_squeeze.md) · [non-monotonicity](../RCV_IRV_non_monotonicity.md) · [the spoiler effect](../../../../07_Concepts/topics/spoiler_effect.md)
 
 ---
 
@@ -29,7 +29,7 @@ Begich had the fewest first choices, so RCV-IRV eliminated him. His ballots spli
 
 **1. Center squeeze — the Condorcet winner was eliminated.** Head-to-head, **Begich beat *both* Peltola and Palin** — he was the [Condorcet winner](../../../../05_Ranked_Robin/concepts/ranked_robin.md), the candidate a majority preferred over each rival one-on-one. But because he was too few voters' *first* choice, IRV cut him in the first round. That's the textbook [center squeeze](../RCV_IRV_center_squeeze.md): the broadly-acceptable middle candidate is knocked out for lacking first-place "core support," even though he'd have won every direct matchup.
 
-**2. Spoiler — Palin spoiled the race for Begich.** Had Palin not run, Begich would have won (his support plus Palin's beats Peltola). Palin couldn't win, but her presence changed *who did* — the definition of a [spoiler](../../../../00_start_here/topics/spoiler_effect.md). So RCV-IRV did **not** deliver the spoiler-free election it's marketed as.
+**2. Spoiler — Palin spoiled the race for Begich.** Had Palin not run, Begich would have won (his support plus Palin's beats Peltola). Palin couldn't win, but her presence changed *who did* — the definition of a [spoiler](../../../../07_Concepts/topics/spoiler_effect.md). So RCV-IRV did **not** deliver the spoiler-free election it's marketed as.
 
 **3. Non-monotonicity / favorite betrayal.** The result was also a documented [monotonicity](../RCV_IRV_non_monotonicity.md) failure: a bloc of Palin-first voters would have gotten a **preferred** outcome (Begich instead of Peltola) by ranking Peltola *higher* — i.e. by **not** putting their favorite first. IRV punished sincere voting, exactly the [favorite-betrayal](../../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) incentive reform is supposed to remove.
 

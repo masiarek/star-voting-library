@@ -84,6 +84,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Glossary](../../../../00_start_here/GLOSSARY.md) · [all cases by method](../../../../00_start_here/YAML_test_case_index/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [hh41_02_preferences_ranked_robin](hh41_02_preferences_ranked_robin.md) · [hh41_03_marks_read_pairwise](hh41_03_marks_read_pairwise.md) · [hh41_04_stipulated_utilities_star](hh41_04_stipulated_utilities_star.md) · [hh41_05_majority_bullet_votes](hh41_05_majority_bullet_votes.md)
