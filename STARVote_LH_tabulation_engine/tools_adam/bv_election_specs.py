@@ -4546,7 +4546,79 @@ MOST_WINS_NOT_CONDORCET_SPEC = {
 }
 
 
-ELECTIONS: list = [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner
+# --- BV2261 — the random tiebreak is RECORDED, not lost ---------------------------
+# Purpose: a formal confirmation instrument. Both races are engineered so every
+# DETERMINISTIC rung of the Ranked Robin ladder ties, forcing each engine onto its
+# rung of last resort (BV: "random"; LH: pre-published lot). The question under test
+# is what the BV results export preserves — and the answer is: the whole order.
+# `shuffleCandidatesForRandomTiebreak.ts` seeds TinyRand with
+# (rawVoteCount + hash(raceId)) >>> 0, shuffles once, and writes each candidate's
+# index back as `tieBreakOrder`; the shuffled id order ships as `perm`. So the draw
+# is reproducible on re-tally AND fully published — winner and runners-up.
+#
+# TWO races on purpose, reaching the same dead end by different routes:
+#   race 1 — every pair DRAWS (all six rankings appear once: a perfectly balanced
+#            electorate). W-L-T 0-0-2, Copeland 1, margin 0 for all three.
+#   race 2 — every pair has a WINNER but they cycle (Anika>Beto>Cleo>Anika, all
+#            4-2). W-L-T 1-1-0, Copeland 1, margin 0 for all three.
+# The per-race offset in the seed should give the two races DIFFERENT perms — that
+# is itself part of what this election confirms.
+# LH-verified pre-creation: both races tie at Copeland 1 with margin +0 and fall to
+# the lot rung. LH labels them correctly and distinctly ("a dead heat (they draw
+# head-to-head, not a cycle)" vs "a Condorcet cycle").
+_RTB_CANDS = ["Anika", "Beto", "Cleo"]
+#  all six permutations, one voter each -> every matchup 3-3
+_RTB_BALANCED = [[1, 2, 3], [3, 2, 1], [3, 1, 2], [1, 3, 2], [2, 3, 1], [2, 1, 3]]
+#  2 x (Anika>Beto>Cleo), 2 x (Beto>Cleo>Anika), 2 x (Cleo>Anika>Beto) -> a cycle
+_RTB_CYCLE = ([[1, 2, 3]] * 2) + ([[3, 1, 2]] * 2) + ([[2, 3, 1]] * 2)
+RANDOM_TIEBREAK_RECORDED_SPEC = {
+    "test_id": "BV2261",
+    "title": "A three-way Ranked Robin tie: the random tiebreak is recorded, not lost",
+    "description": (
+        "Six voters, three candidates, two races — both built so that every "
+        "deterministic step of the Ranked Robin count ties and the result has to fall "
+        "through to a tiebreak of last resort. Race 1 is a perfectly balanced "
+        "electorate: all six possible rankings appear exactly once, so every "
+        "head-to-head draws 3-3 and all three candidates finish on a Copeland score "
+        "of 1. Race 2 is a Condorcet cycle: Anika beats Beto, Beto beats Cleo and "
+        "Cleo beats Anika, every one of them 4-2 — so again all three finish on 1, "
+        "with identical margins. Two different routes to the same dead end. "
+        "What this election is really testing is what the results export preserves. "
+        "BetterVoting's random tiebreak is deterministic by design: the candidate "
+        "order is shuffled once from a seed built out of the ballot count plus a "
+        "per-race offset, and that shuffled order is published in the results as "
+        "'perm', with each candidate's place in it stored as 'tieBreakOrder'. So the "
+        "export does not merely name a winner — it records the entire tiebreak "
+        "sequence, runners-up included, and re-running the count returns the same "
+        "answer. The two races use different offsets, so their orders should differ. "
+        "The library's own tabulation replays each recorded order as a pre-published "
+        "lot and reproduces BetterVoting's winner, and its full ordering, exactly. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/05_Ranked_Robin/rr_tiebreaks/index.html"),
+    "races": [
+        {"title": "Mural commission — a perfectly balanced electorate (every pair draws)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+         "candidates": _RTB_CANDS, "ballots": _RTB_BALANCED},
+        {"title": "Mural commission — a Condorcet cycle (every pair has a winner)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+         "candidates": _RTB_CANDS, "ballots": _RTB_CYCLE},
+    ],
+    "enable_write_in": False,
+    "expected": ("BOTH races: a three-way tie at Copeland 1 with margin +0 for Anika, "
+                 "Beto and Cleo, so no deterministic rung separates them. Race 1 is "
+                 "0-0-2 each (all pairs draw 3-3); race 2 is 1-1-0 each (Anika>Beto, "
+                 "Beto>Cleo, Cleo>Anika, all 4-2). BV must report tieBreakType "
+                 "'random' on both and publish `perm` + `tieBreakOrder`; the two "
+                 "races should get DIFFERENT perms (per-race seed offset). Winner is "
+                 "whichever candidate BV's perm puts first — not predictable from the "
+                 "ballots, but recorded and stable on re-tally. LH reproduces each "
+                 "race exactly when lot_numbers is pinned to that race's perm. "
+                 "Test ID BV2261."),
+}
+
+
+ELECTIONS: list = [RANDOM_TIEBREAK_RECORDED_SPEC]   # BV2261 — random tiebreak is recorded
+# Previously: [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner (created -> gg9qh9)
 # Previously: [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
 # Previously: [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie (created -> q2rkfm)
 # Previously: [TRADITIONAL_STAR_SPEC]  # BV2256 — traditional style, one STAR race (created)

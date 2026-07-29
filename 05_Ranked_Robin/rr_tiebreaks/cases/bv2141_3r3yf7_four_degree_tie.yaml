@@ -11,8 +11,11 @@ election_description: >-
   pre-published lot, and BetterVoting breaks it at RANDOM — its results log even
   says so: "Ava picked in random tie-breaker, more robust tiebreaker not yet
   implemented." This file pins lot_numbers to BV's recorded random order (perm)
-  so LH reproduces BV's frozen instance (Ava). A re-tally on BV could elect
-  Bianca instead. See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
+  so LH reproduces BV's frozen instance (Ava). Note BV's "random" is a SEEDED
+  shuffle: a re-tally of these same 81 ballots returns Ava again — the order moves
+  only if the ballot count changes. What it is not is derivable from the ballots.
+  See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md, and the case built to
+  confirm it: 05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md.
   Live results: https://bettervoting.com/3r3yf7/results
 
 # Machine-readable BV fields — build_bv_registry.py reads these.
