@@ -40,15 +40,18 @@ Group by **teaching role**, not by file type:
 Prominence follows the library's mission: the **equal-vote (EVC) methods get the numbered, front-rank folders**; other methods appear mainly as contrast material.
 
 ```
-00_start_here/        entry points only at the top level: guided start, glossary,
+00_start_here/        CROSS-METHOD material only: guided start, glossary,
                       curriculum, TIPS/authoring canon, conventions (Markdown)
   topics/             cross-method CONCEPT pages (spoiler effect, wasted votes,
                       ballot styles, criteria…) + per-topic hubs (summability/,
                       monotonicity/, center_squeeze/, …)
-  STAR_Voting/ RCV_IRV/ RCV_Ranked_Robin/ …   concept pages BY METHOD; the
-                      Larry↔Adam conversation scripts live beside their topics,
-                      indexed in conversation_scripts.md
+  voting_paradoxes/ scores_and_ranks/ tabulation_engines/ books/ …
+                      the rest of the material that belongs to no single method
 01_STAR/              single-winner STAR — the headline method
+  concepts/           concept pages FOR THIS METHOD (start here, the count,
+                      properties & limits, hands-on, reporting/); the
+                      Larry↔Adam conversation scripts live beside their
+                      topics, indexed in conversation_scripts.md
   _main/              loose files that belong to no themed set
   _main/_main_tabulated/          their generated _tabulated.txt mirrors
   runoff_overturns_leader/ …      themed sets: YAMLs + README (+ img/), each
@@ -74,7 +77,10 @@ STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
 ```
 
 - **`_tabulated` output nests INSIDE the source file's own folder** as `<folder>/<folder>_tabulated/` (the engine computes this: `tabulated_output_path`). Loose files live in a `_main/` subfolder so their mirrors nest the same way. Generated, regenerable, separate from source, but right next to the YAML it came from. (Committed by choice; they could be gitignored instead.)
-- **Markdown teaching docs cluster in `00_start_here/`** and in each folder's `README.md`, so the prose has a home that isn't tangled with the data.
+- **One door per voting method (2026-07-29).** A method's concept pages live in **that method's own folder**, under `concepts/` — `01_STAR/concepts/`, `04_Approval/concepts/`, `05_Ranked_Robin/concepts/`, `06_Other/RCV_IRV/concepts/`, and so on. The folder's `README.md` is the method's **start-here**: what the method is, then its concepts, then its runnable examples. They used to sit in a parallel `00_start_here/<Method>/` tree, which gave every method two competing front doors — the case folder was a top-level nav section, so that is where readers landed, but the page that actually taught the method was somewhere else entirely.
+- **`00_start_here/` is now cross-method material only** — topics, paradoxes, scores-and-ranks, curriculum, glossary, engines. Nothing in it competes with a method folder for the same reader.
+- **Every relocated page keeps a permanent redirect** in `mkdocs.yml`'s `redirect_maps` (120 of them). Published URLs are quoted in permanent BetterVoting election descriptions that cannot be edited after the election goes live, so those redirects are not housekeeping — deleting one creates an unfixable 404. Moving concept pages again? Use `tools_adam/scripts/migrate_concept_links.py`, which resolves relative links against each source file rather than blind-replacing strings, and add the new redirects.
+- **Markdown teaching docs cluster in `00_start_here/`** (cross-method) and in each method folder's `concepts/` and `README.md`, so the prose has a home that isn't tangled with the data.
 
 ## The clean-demo / recording recipe
 

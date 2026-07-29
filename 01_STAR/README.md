@@ -2,7 +2,7 @@
 
 The library's headline method: **STAR** (Score Then Automatic Runoff) for one seat. You score every candidate **0–5**; the two highest-scoring candidates become finalists, and an **automatic runoff** gives each ballot's full vote to whichever finalist it scored higher. Two rounds, one ballot.
 
-This folder is the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [STAR Voting concepts folder](concepts/README.md). New to STAR? Read those first:
+Everything about STAR lives in this one folder: the *concept* explanations in [`concepts/`](concepts/README.md), and the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea — in the subfolders below. New to STAR? Read the concepts first:
 
 - **[STAR — start here](concepts/STAR_start_here.md)** — the "why" before the "how."
 - **[The benefits of STAR](concepts/getting_started/STAR_benefits.md)** — the case for it, in brief.

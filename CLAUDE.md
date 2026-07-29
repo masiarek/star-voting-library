@@ -204,6 +204,22 @@ taxonomy from memory:** see `00_start_here/tips/TIPS_terminology.md` and `GLOSSA
   level content itself, so there's a single source of truth per level (no sync
   drift). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
+- **One door per voting method (reorganized 2026-07-29).** A method's concept
+  pages live **inside that method's folder**, under `concepts/` —
+  `01_STAR/concepts/` (incl. `concepts/reporting/`), `03_STAR_PR/concepts/`,
+  `04_Approval/concepts/`, `05_Ranked_Robin/concepts/`,
+  `06_Other/RCV_IRV/concepts/`, `06_Other/Range/concepts/`. The folder's
+  `README.md` is that method's **start-here** (what it is → its concepts → its
+  runnable examples). They previously lived in a parallel `00_start_here/<Method>/`
+  tree, which gave each method two competing front doors. **`00_start_here/` is now
+  cross-method only** (topics, paradoxes, scores_and_ranks, curriculum, glossary,
+  engines, tips, books) — don't put method-specific pages back into it.
+  **Moving concept pages again?** Use
+  `tools_adam/scripts/migrate_concept_links.py` (resolves relative links per
+  source file — a blind string replace corrupts them), run it **before** the
+  `git mv`, and add a `redirect_maps` entry per moved page. Those redirects are
+  **permanent**: published URLs are quoted in BetterVoting election descriptions
+  that can never be edited, so a deleted redirect is an unfixable 404.
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
