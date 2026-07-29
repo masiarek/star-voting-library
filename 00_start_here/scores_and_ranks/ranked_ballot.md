@@ -36,7 +36,7 @@ These aren't hypotheticals: reported spoilage runs roughly **4–9% for ranked b
 
 ## What it captures — and what it throws away
 
-A ranking records **relative order only**. It cannot say *how much* you prefer 1st over 2nd, and it spaces every rung equally even when the voter feels a cliff: this voter's real feeling might be "Andre, Carmen, David all great; Blake and Ella, no" — but 1st/2nd/3rd/4th/5th flattens that cliff into a smooth staircase. Any method that later needs strengths has to *invent* them (that's [Borda](../other_ranked_methods/borda.md), and why rank→score conversion fabricates information — the [fidelity ladder](fidelity_ladder.md)).
+A ranking records **relative order only**. It cannot say *how much* you prefer 1st over 2nd, and it spaces every rung equally even when the voter feels a cliff: this voter's real feeling might be "Andre, Carmen, David all great; Blake and Ella, no" — but 1st/2nd/3rd/4th/5th flattens that cliff into a smooth staircase. Any method that later needs strengths has to *invent* them (that's [Borda](../../06_Other/other_ranked_methods/borda.md), and why rank→score conversion fabricates information — the [fidelity ladder](fidelity_ladder.md)).
 
 **Strict vs. weak** is the one ballot-design fork inside the ranked family: a **weak** ranking allows equal ranks (`A = B`), a **strict** one forbids them. [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) happily reads weak rankings; typical US RCV-IRV ballots are strict, which is exactly the "forced to invent a preference" problem. Full story: [strict vs. weak ranks](strict_vs_weak_ranks.md).
 
@@ -49,7 +49,7 @@ This is the repo's core terminology point: **RCV names the ballot, not the count
 | [RCV-IRV (Hare)](../RCV_IRV/RCV-IRV-Hare.md) | elimination rounds | what "RCV" usually means in the US |
 | [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) | Condorcet / round-robin | reads every pairwise matchup; allows equal ranks |
 | STV | proportional | multi-winner transfers ([STV vs proportional STAR](../proportional_representation/stv/proportional_stv_vs_star.md)) |
-| [Borda](../other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../topics/ranked_ballot_methods_zoo.md) runs 15+ on one screen |
+| [Borda](../../06_Other/other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../topics/ranked_ballot_methods_zoo.md) runs 15+ on one screen |
 
 Different tabulations of the same ballots routinely elect **different winners** — which is why "the ballots decided" is never the whole story. See [what is a voting method? — a ballot and a count](../topics/voting_method_ballot_and_count.md).
 

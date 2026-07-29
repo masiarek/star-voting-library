@@ -2,7 +2,7 @@
 
 *Every tabulation is a two-step act: **compress** the ballots into some summary, then **decide** from the summary. Change the second step and you have a different method; change the first and you have changed what the method is even capable of noticing. This page is about the first step — which statistic a rule actually reads — the question Peter Fishburn turned into a classification in 1977. It answers a debate question worth having ("how much of my ballot does your method look at?") and defuses two claims that sound right and aren't.*
 
-→ Related: [the C1/C2/C3 tiers in the Condorcet reading list](condorcet/condorcet_reading_list.md) · [summability](summability/) — how *big* the summary is · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — how the pairwise summary splits · [Borda](../other_ranked_methods/borda.md) · [pairwise counting](pairwise_counting.md).
+→ Related: [the C1/C2/C3 tiers in the Condorcet reading list](condorcet/condorcet_reading_list.md) · [summability](summability/) — how *big* the summary is · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — how the pairwise summary splits · [Borda](../../06_Other/other_ranked_methods/borda.md) · [pairwise counting](pairwise_counting.md).
 
 **Runnable:** [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/) — three electorates, one pairwise table, three plurality winners.
 

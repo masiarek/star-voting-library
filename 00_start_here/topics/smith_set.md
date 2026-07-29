@@ -24,7 +24,7 @@ Three consequences fall straight out of the definition:
 - **In a cycle, the whole cyclic clump at the top is in the club.** You can't admit "just the strongest one" — whoever you pick, someone else in the cycle beats them.
 - **A [Condorcet loser](../GLOSSARY.md) can never make the club** — everyone beats them, so the club works fine without them.
 
-One set, several names — the literature is messy: **Smith set** (after mathematician John H. Smith, 1973 — no relation to Warren D. Smith of [range voting](../Range_Voting/range_voting.md)), **top cycle**, **GETCHA** ("Generalized Top-Choice Assumption," Schwartz's older coinage), and textbook framings like **"generalized Condorcet candidates"** (Börgers, [*Mathematics of Social Choice*](../books/social_choice_theory.md)).
+One set, several names — the literature is messy: **Smith set** (after mathematician John H. Smith, 1973 — no relation to Warren D. Smith of [range voting](../../06_Other/Range/concepts/range_voting.md)), **top cycle**, **GETCHA** ("Generalized Top-Choice Assumption," Schwartz's older coinage), and textbook framings like **"generalized Condorcet candidates"** (Börgers, [*Mathematics of Social Choice*](../books/social_choice_theory.md)).
 
 ## See it: a cycle plus an outsider (runnable)
 

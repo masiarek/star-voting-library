@@ -25,7 +25,7 @@ So "unorthodox STAR" isn't just cosmetic: it's a real knob that trades **more ex
 
 ## Worked example — STAR on a 0–10 ballot
 
-Take the ten 0–10 ballots from the [Range/Score worked comparison](../../Range_Voting/range_voting.md) (Sullivan's Example 5.2) and run them through **STAR** instead of pure Range — Larry Hastings' engine at `maximum_score=10`:
+Take the ten 0–10 ballots from the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (Sullivan's Example 5.2) and run them through **STAR** instead of pure Range — Larry Hastings' engine at `maximum_score=10`:
 
 ```text
 [STAR Voting: Scoring Round]
@@ -92,10 +92,10 @@ Rarely, and only on purpose. The honest ledger:
 ## Where this fits
 
 - **Level:** Voting 301 — advanced / "what if." Read after the [scoring round](../the_count/STAR_Scoring_Round.md) and [automatic runoff](../the_count/STAR_Automatic_Runoff.md) are second nature.
-- **Pairs with:** [Scale granularity can flip the winner](../../scores_and_ranks/scale_granularity_flips_the_winner.md) (the case where the scale *does* change the outcome) and the [Range/Score worked comparison](../../Range_Voting/range_voting.md) (the same 0–10 electorate as pure Score).
+- **Pairs with:** [Scale granularity can flip the winner](../../scores_and_ranks/scale_granularity_flips_the_winner.md) (the case where the scale *does* change the outcome) and the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (the same 0–10 electorate as pure Score).
 - **Engine note:** the 0–5 cap is the fork's teaching guardrail, not a limit of Larry's engine — see the Engines section of the repo's working notes.
 
 Cross-references:
 - [STAR — start here](../STAR_start_here.md) · [the scoring round](../the_count/STAR_Scoring_Round.md) · [the automatic runoff](../the_count/STAR_Automatic_Runoff.md)
-- [Range / Score voting](../../Range_Voting/range_voting.md) · [the fidelity ladder](../../scores_and_ranks/fidelity_ladder.md)
+- [Range / Score voting](../../../06_Other/Range/concepts/range_voting.md) · [the fidelity ladder](../../scores_and_ranks/fidelity_ladder.md)
 - [Curriculum 301](../../curriculum/CURRICULUM_301.md)

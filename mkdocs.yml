@@ -84,6 +84,17 @@ plugins:
         # under "Worked examples", so nothing is lost.
         05_Ranked_Robin/README.md: 00_start_here/RCV_Ranked_Robin/ranked_robin.md
 
+        # --- Concept pages relocated from 00_start_here into their method
+        # folders (the "one door per method" reorganization). Every moved page
+        # keeps a redirect FOREVER: published URLs are quoted in permanent
+        # BetterVoting election descriptions, which cannot be edited after the
+        # election goes live, so a 404 here is unfixable. Never delete these.
+        00_start_here/Range_Voting/README.md: 06_Other/Range/concepts/README.md
+        00_start_here/Range_Voting/glossary_range.md: 06_Other/Range/concepts/glossary_range.md
+        00_start_here/Range_Voting/range_voting.md: 06_Other/Range/concepts/range_voting.md
+        00_start_here/other_ranked_methods/agenda_voting.md: 06_Other/other_ranked_methods/agenda_voting.md
+        00_start_here/other_ranked_methods/borda.md: 06_Other/other_ranked_methods/borda.md
+
 markdown_extensions:
   - admonition
   - attr_list

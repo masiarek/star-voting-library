@@ -30,7 +30,7 @@
 - **Foods / flavors** → stakes-free hook scenarios where "no politics, no wrong answer" is the point: the lunch, the ice-cream progression ([02a](../../01_STAR/_main/cases/cases_pages/02a_c3_b1_three-candidates.md)/[02b](../../01_STAR/_main/cases/cases_pages/02b_c3_b2_three-candidates.md)).
 - **Human names** → mechanics, authoring, and anything that should *look like a real ballot* (Ann/Bob/Cal; the EVC cast for anatomy).
 - **Cities** → the historical classic (Tennessee) and geography-flavored scenarios.
-- **Bare A/B/C** → academic/theory notes only (e.g. the [agenda voting](../other_ranked_methods/agenda_voting.md) digest) — never learner-facing teaching pages.
+- **Bare A/B/C** → academic/theory notes only (e.g. the [agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md) digest) — never learner-facing teaching pages.
 
 ## Known warts (registered, not hidden)
 

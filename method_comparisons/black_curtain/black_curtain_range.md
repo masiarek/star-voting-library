@@ -2,7 +2,7 @@
 
 *The four [Black Curtain](README.md) elections, tabulated by the **range voting engine** (pref_voting `score_voting`, cross-checked against a hand sum). Same ballots as the STAR pages — but counted as pure **Range**: highest total score wins, no runoff. Watch Range and STAR **part ways** exactly where the runoff matters.*
 
-→ Method overview: [Range / Score voting](../../00_start_here/Range_Voting/range_voting.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) · The set's STAR write-up: [The Black Curtain — one electorate, four "identical" landslides](README.md).
+→ Method overview: [Range / Score voting](../../06_Other/Range/concepts/range_voting.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) · The set's STAR write-up: [The Black Curtain — one electorate, four "identical" landslides](README.md).
 
 ---
 
@@ -17,7 +17,7 @@ Range and STAR read the **same score ballots**. Range stops at the score total; 
 | 3 — polarized on Cal | Cal | **Ann** | ✗ Range picks the everyone-likes-her Ann; STAR's majority bloc keeps Cal |
 | 4 — four candidates | Cal | **Cal** | ✓ (Bob is a close 2nd, 14 vs 15 — see the [scale-granularity case](../../00_start_here/scores_and_ranks/scale_granularity_flips_the_winner.md)) |
 
-The takeaway: **Range answers "who has the broadest summed support?"** and STAR answers **"of the two strongest, whom does the majority prefer head-to-head?"** Elections 1 and 3 are precisely the "enthusiasts vs. consensus" split — Range rewards the mildly-liked-by-everyone candidate, which is either its virtue or its vulnerability depending on your values (see the [pros and cons](../../00_start_here/Range_Voting/range_voting.md#pros-and-cons)).
+The takeaway: **Range answers "who has the broadest summed support?"** and STAR answers **"of the two strongest, whom does the majority prefer head-to-head?"** Elections 1 and 3 are precisely the "enthusiasts vs. consensus" split — Range rewards the mildly-liked-by-everyone candidate, which is either its virtue or its vulnerability depending on your values (see the [pros and cons](../../06_Other/Range/concepts/range_voting.md#pros-and-cons)).
 
 ---
 

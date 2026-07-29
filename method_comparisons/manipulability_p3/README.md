@@ -23,7 +23,7 @@ Sincerely, here is where everyone lands:
 | Method | Sincere winner |
 |---|---|
 | Choose-One (Plurality) | **Dublin** (3 first choices) |
-| [Borda](../../00_start_here/other_ranked_methods/borda.md) | **Edinburgh** (17; Dublin 16, Cork 13, Athens 12, Bergen 12) |
+| [Borda](../../06_Other/other_ranked_methods/borda.md) | **Edinburgh** (17; Dublin 16, Cork 13, Athens 12, Bergen 12) |
 | Copeland / [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) | **Edinburgh** (3–1) |
 | [STAR](../../00_start_here/STAR_Voting/README.md) (ranks → 5/4/3/2/0) | **Dublin** (23; runoff 5–2 over Edinburgh) |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | **indeterminate** — see below |
@@ -100,7 +100,7 @@ Can a **single voter**, acting alone, change the winner to someone they sincerel
 | Method | Manipulable here by one voter? | How |
 |---|---|---|
 | Choose-One (Plurality) | **No** | a voter can't lower the leader's score without top-ranking them; at best she lifts her own favourite to a *tie*. Verified exhaustively over all 120 ballots for each of the 7 voters |
-| [Borda](../../00_start_here/other_ranked_methods/borda.md) | **Yes** | but **not** by reversal — Ali lifting Dublin to the top (`Dublin > Athens > Bergen > Cork > Edinburgh`) makes Dublin the unique Borda winner, 19 to Edinburgh's 17 |
+| [Borda](../../06_Other/other_ranked_methods/borda.md) | **Yes** | but **not** by reversal — Ali lifting Dublin to the top (`Dublin > Athens > Bergen > Cork > Edinburgh`) makes Dublin the unique Borda winner, 19 to Edinburgh's 17 |
 | Copeland / [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) | **Yes** | reversal *or* a three-swap compromise; 52 of 119 ballots work |
 | [STAR](../../00_start_here/STAR_Voting/README.md) | **Yes** | two voters burying one candidate by two points; single-voter routes exist but cost a favourite betrayal at this spacing |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | *not assessable here* | the sincere baseline is already a coin flip, so "did the manipulation change the winner" has no well-defined answer. This is an artifact of the profile, **not** evidence that IRV resists strategy |

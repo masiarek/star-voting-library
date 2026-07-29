@@ -29,7 +29,7 @@ Round-Robin — every pair, head-to-head (For – Against):
 
 Verified: the three reports are byte-identical on those lines. So **Ranked Robin elects Ben in all three** — and so would Minimax, Ranked Pairs, Schulze and Kemeny, because there is nothing in their input that differs.
 
-Borda too. A Borda score is just a row of that table added up: with margins Ada −2, Ben +4, Cal −2, the scores are **Ada 11, Ben 14, Cal 11** in every one of the three electorates ([why that identity holds](../../00_start_here/other_ranked_methods/borda.md)).
+Borda too. A Borda score is just a row of that table added up: with margins Ada −2, Ben +4, Cal −2, the scores are **Ada 11, Ben 14, Cal 11** in every one of the three electorates ([why that identity holds](../../06_Other/other_ranked_methods/borda.md)).
 
 ## Why the ballots differ but the table doesn't
 

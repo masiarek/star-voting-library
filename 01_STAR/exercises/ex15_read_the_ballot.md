@@ -138,7 +138,7 @@ Legend: For - Equal Support - Against
 
 Blair beats Ada 20–7 and Cosmo 13–7; Cosmo beats Ada 15–8. **Blair > Cosmo > Ada — exactly the order of the approval totals 28 > 22 > 15.**
 
-Not luck. On a dichotomous profile, "more voters strictly prefer x to y" reduces to **"more voters approve x than approve y"** — so the head-to-head order *is* the approval order, a Condorcet winner is guaranteed to exist, and no cycle is possible. (Approval also coincides with [Borda](../../00_start_here/other_ranked_methods/borda.md) on this domain, which is why the result is sometimes stated as *approval voting reconciles Borda and Condorcet*.)
+Not luck. On a dichotomous profile, "more voters strictly prefer x to y" reduces to **"more voters approve x than approve y"** — so the head-to-head order *is* the approval order, a Condorcet winner is guaranteed to exist, and no cycle is possible. (Approval also coincides with [Borda](../../06_Other/other_ranked_methods/borda.md) on this domain, which is why the result is sometimes stated as *approval voting reconciles Borda and Condorcet*.)
 
 Notice where the preferences went, though: Blair vs Cosmo is 13–7 with **15 Equal Support** — the ×15 bloc approved both and has no say in that matchup. That column is the compression, and it's the hinge of (f).
 

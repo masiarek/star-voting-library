@@ -15,7 +15,7 @@ These are the books the whole field cites: *why* no voting method is perfect, pr
 
 The book that founded modern social choice theory and won a Nobel Prize. Arrow's **impossibility theorem**: no *ranked* voting method can satisfy a short list of obviously-reasonable fairness conditions at once. Slim and formal — you can read the key argument in an afternoon, and everything else on this shelf is a response to it.
 
-**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../Range_Voting/range_voting.md) and [STAR](../STAR_Voting/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
+**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../../06_Other/Range/concepts/range_voting.md) and [STAR](../STAR_Voting/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
 
 **In this repo:** [Arrow's theorem](../GLOSSARY.md) (glossary) · [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md) · [what makes a voting method good](../topics/what_makes_a_voting_method_good.md)
 
@@ -51,7 +51,7 @@ The deeper companion to Saari's popular [*Chaotic Elections!*](popular_introduct
 
 **The lean:** Same as Saari's other work — brilliant on *why methods disagree*, but carries his **pro-Borda** thesis. Take the diagnosis (paradoxes are structural) more readily than the prescription (Borda solves them).
 
-**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../other_ranked_methods/borda.md) · [Condorcet](../topics/condorcet/)
+**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../../06_Other/other_ranked_methods/borda.md) · [Condorcet](../topics/condorcet/)
 
 </td>
 </tr>

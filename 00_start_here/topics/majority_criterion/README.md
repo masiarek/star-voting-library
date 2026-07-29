@@ -99,7 +99,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 | Choose-One (plurality) | ✅ | ✅ | [plurality](../plurality.md) |
 | RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
 | **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../STAR_Voting/properties_and_limits/STAR_honest_limits.md) |
-| Score | ❌ *(1 rival)* | ❌ | [range voting](../../Range_Voting/range_voting.md) |
+| Score | ❌ *(1 rival)* | ❌ | [range voting](../../../06_Other/Range/concepts/range_voting.md) |
 | Approval | ❌ *(1 rival)* | ❌ | [approval](../../Approval_Voting/) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
 
 Worked demonstrations in this repo — each with its own per-election page: [BV95a — favorite survives](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) / [BV95b — favorite loses](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md), plus the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus).

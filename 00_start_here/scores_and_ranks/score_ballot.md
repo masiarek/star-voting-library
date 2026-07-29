@@ -70,7 +70,7 @@ The same 0–5 grid above can be counted by:
 
 | Count it with | How it reads the ballot | Notes |
 |---|---|---|
-| [Score / Range](../Range_Voting/range_voting.md) | add the scores; highest total wins | STAR without the runoff |
+| [Score / Range](../../06_Other/Range/concepts/range_voting.md) | add the scores; highest total wins | STAR without the runoff |
 | [STAR](../STAR_Voting/STAR_start_here.md) | add the scores, then the top two meet in an [automatic runoff](../STAR_Voting/the_count/STAR_Automatic_Runoff.md) | equal scores on the two finalists = [Equal Support](../STAR_Voting/reference/glossary_STAR.md) — counted in round 1, neutral in the tie it had no stake in |
 | [Approval](../Approval_Voting/approval_voting.md) | as 0/1 (approve or don't) | the 1-bit special case |
 | STAR-PR and friends | proportional multi-winner | [proportional representation](../proportional_representation/) |

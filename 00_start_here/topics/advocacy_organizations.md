@@ -19,7 +19,7 @@ STAR and the Equal Vote Coalition grew out of the same community; the consumer-f
 
 ## Beyond the three
 
-Score/Range voting has no single dominant US campaign; its main hub is the [Center for Range Voting](https://rangevoting.org) (see the repo's [Range / Score overview](../Range_Voting/range_voting.md)). Broader reform coalitions (e.g. RepresentUS, Unite America) back multiple methods rather than one.
+Score/Range voting has no single dominant US campaign; its main hub is the [Center for Range Voting](https://rangevoting.org) (see the repo's [Range / Score overview](../../06_Other/Range/concepts/range_voting.md)). Broader reform coalitions (e.g. RepresentUS, Unite America) back multiple methods rather than one.
 
 ## Reading advocacy claims critically — a worked example
 

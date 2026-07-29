@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
 
-→ Related: [Borda count](../../00_start_here/other_ranked_methods/borda.md) · [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
+→ Related: [Borda count](../../06_Other/other_ranked_methods/borda.md) · [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
 
 ---
 
@@ -44,7 +44,7 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 | Method | Winner | Elects the Condorcet winner? |
 |---|---|---|
 | [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | Paul | ✗ |
-| [**Borda**](../../00_start_here/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
+| [**Borda**](../../06_Other/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
 | [Approval](../../00_start_here/Approval_Voting/README.md) | Paul | ✗ |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | Peter | ✓ |
 | [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/README.md) | Peter | ✓ |
@@ -56,7 +56,7 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 
 ## The STAR lesson: the scoring round *is* Borda, and then the runoff checks it
 
-Ranks carry no intensity, so running this ranked profile under STAR means converting rank to score — exactly the fabrication the [Borda page](../../00_start_here/other_ranked_methods/borda.md) warns about. We use an even 5 / 3 / 0 spacing, and the outcome is robust to the choice (5/4/0, 5/2/0, 5/1/0 and 4/2/0 all behave identically).
+Ranks carry no intensity, so running this ranked profile under STAR means converting rank to score — exactly the fabrication the [Borda page](../../06_Other/other_ranked_methods/borda.md) warns about. We use an even 5 / 3 / 0 spacing, and the outcome is robust to the choice (5/4/0, 5/2/0, 5/1/0 and 4/2/0 all behave identically).
 
 That conversion makes the point sharper rather than weaker: **under a uniform spacing, STAR's scoring round is a Borda count.** So STAR's first round reproduces Borda's answer exactly — Paul first — and then the automatic runoff runs the direct majority contest Condorcet demanded:
 
@@ -137,6 +137,6 @@ Paul's margins: **−1** to Peter, **+7** over James. Sum: **+6**.
 
 Paul *loses* the only matchup that decides a head-to-head champion, and still finishes ahead on Borda — because crushing James by 7 more than repays losing to Peter by 1. That is the whole disagreement in two lines of arithmetic. Borda asks *how much did you beat people by, on aggregate*; Condorcet asks *did you beat each of them*.
 
-(The margins are exactly what a Borda score is made of: [`Borda(x) = ½·Σ M(x,y) + n(m−1)/2`](../../00_start_here/other_ranked_methods/borda.md), and the constant is the same for everyone.)
+(The margins are exactly what a Borda score is made of: [`Borda(x) = ½·Σ M(x,y) + n(m−1)/2`](../../06_Other/other_ranked_methods/borda.md), and the constant is the same for everyone.)
 
 Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/) makes you choose at, with [the structural version](../../00_start_here/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../00_start_here/topics/what_a_method_reads.md).

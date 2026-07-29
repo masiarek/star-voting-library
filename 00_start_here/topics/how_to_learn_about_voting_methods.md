@@ -47,7 +47,7 @@ Empirical evidence, theory, more methods, and — deliberately — the arguments
 - **Real-world evidence** → [the Alternative Vote in Australia](../RCV_IRV/case_studies/RCV_IRV_australia.md) (a century, assessed evenhandedly), [Alaska 2022](../RCV_IRV/case_studies/RCV_IRV_alaska_2022.md), and [North Carolina](../RCV_IRV/case_studies/RCV_IRV_north_carolina.md).
 - **The party-system question** → [Two-Party Dominance — pros, cons, and what changes it](two_party_dominance.md), and why *proportional* (not single-winner) reform is the lever.
 - **Impossibility theorems** → Arrow and Gibbard–Satterthwaite (defined in the [Glossary](../GLOSSARY.md)) — why *no* method is perfect, so every choice is a trade-off.
-- **The method zoo** → beyond the headline four: [3-2-1 voting](../../06_Other/three_two_one/README.md), [Borda](../other_ranked_methods/borda.md), [agenda voting](../other_ranked_methods/agenda_voting.md), and the ranked-method family in the [Glossary](../GLOSSARY.md#other-methods-for-contrast) (Ranked Pairs, Schulze, Minimax…).
+- **The method zoo** → beyond the headline four: [3-2-1 voting](../../06_Other/three_two_one/README.md), [Borda](../../06_Other/other_ranked_methods/borda.md), [agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md), and the ranked-method family in the [Glossary](../GLOSSARY.md#other-methods-for-contrast) (Ranked Pairs, Schulze, Minimax…).
 - **Opposing viewpoints (read these on purpose):**
   - Each method's honest limits — [STAR](../STAR_Voting/properties_and_limits/STAR_honest_limits.md), [Approval](../Approval_Voting/approval_honest_limits.md), [Ranked Robin](../RCV_Ranked_Robin/RCV_RR_honest_limits.md).
   - Claims we check both ways — [RCV-IRV claims, fact-checked](../RCV_IRV/rcv_irv_false_claims.md).

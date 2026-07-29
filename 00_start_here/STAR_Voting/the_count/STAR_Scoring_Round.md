@@ -35,7 +35,7 @@ You may give two candidates the **same** score; you are never forced to invent a
 
 ## Is the Scoring Round just Range (Score) voting?
 
-Essentially **yes — Round 1 *is* a Range / Score election.** You score every candidate 0–5 and add up the totals, exactly as [Score / Range voting](../../Range_Voting/range_voting.md) does. The difference is what happens *next*:
+Essentially **yes — Round 1 *is* a Range / Score election.** You score every candidate 0–5 and add up the totals, exactly as [Score / Range voting](../../../06_Other/Range/concepts/range_voting.md) does. The difference is what happens *next*:
 
 - **Range voting stops here** and crowns the **highest total**. The scoring round *is* the whole election.
 - **STAR doesn't.** The top two totals are only **Finalists**; the [Automatic Runoff](STAR_Automatic_Runoff.md) then elects the majority-preferred one.

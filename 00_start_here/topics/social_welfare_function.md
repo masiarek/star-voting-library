@@ -66,7 +66,7 @@ A short list, because "fails Pareto" sounds worse than it usually is — most me
 | Plurality, Borda, IRV, STAR, Ranked Robin | ✓ | unanimous domination survives the count |
 | **Dictatorship** | ✓ | the dictator's favorite is never dominated |
 | **Imposed / constant rule** ("X always wins"; "everything ties") | ✗ | ignores the ballots entirely |
-| **[Sequential pairwise / agenda voting](../other_ranked_methods/agenda_voting.md)** | ✗ | a unanimously-preferred candidate can be eliminated early — runnable at [agenda_voting.md](../other_ranked_methods/agenda_voting.md) |
+| **[Sequential pairwise / agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md)** | ✗ | a unanimously-preferred candidate can be eliminated early — runnable at [agenda_voting.md](../../06_Other/other_ranked_methods/agenda_voting.md) |
 | **Anti-plurality** | ✗ | on unanimous `A>B>C` it elects A *and* B; B is dominated |
 | **[Approval](../Approval_Voting/)** | ✗ | worked: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
 

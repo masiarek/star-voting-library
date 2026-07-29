@@ -43,7 +43,7 @@ Every method this library teaches is, in part, a fix for one of plurality's fail
 | [Approval](../Approval_Voting/approval_voting.md) | Mark **as many** candidates as you like — similar candidates stop splitting. |
 | [RCV-IRV](../RCV_IRV/RCV-IRV-Hare.md) | **Rank** candidates; eliminate-and-transfer instead of one round. (In fact **plurality is just IRV with a ranking limit of 1** — see [RCV-IRV and plurality](../RCV_IRV/RCV_IRV_and_plurality.md).) |
 | [Ranked Robin](../RCV_Ranked_Robin/ranked_robin.md) | Rank, then compare **every pair head-to-head** — elects the majority-preferred candidate. |
-| [Score / Range](../Range_Voting/range_voting.md) · [STAR](../STAR_Voting/STAR_start_here.md) | **Rate** each candidate 0–5 — captures order *and* strength; STAR adds a runoff. |
+| [Score / Range](../../06_Other/Range/concepts/range_voting.md) · [STAR](../STAR_Voting/STAR_start_here.md) | **Rate** each candidate 0–5 — captures order *and* strength; STAR adds a runoff. |
 
 ## Where it's used
 

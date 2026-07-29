@@ -17,7 +17,7 @@ The books to read first, and the ones to lend. Narrative, example-driven, writte
 
 **The lean:** Openly pro-**range/score voting** — it argues score is the best single-winner method. That happens to align with the *cardinal* family [STAR](../STAR_Voting/STAR_start_here.md) belongs to, so enjoy it but notice the advocacy. STAR's automatic runoff is a later refinement Poundstone's range voting doesn't include.
 
-**In this repo:** [Range voting](../Range_Voting/range_voting.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [the spoiler effect](../topics/spoiler_effect.md)
+**In this repo:** [Range voting](../../06_Other/Range/concepts/range_voting.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [the spoiler effect](../topics/spoiler_effect.md)
 
 </td>
 </tr>
@@ -34,7 +34,7 @@ The books to read first, and the ones to lend. Narrative, example-driven, writte
 
 **The lean:** Broadly neutral and historical — no single method is being sold. Its job is context, not a verdict.
 
-**In this repo:** [Who's who in voting reform](../topics/whos_who_voting_reform.md) · [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../other_ranked_methods/borda.md)
+**In this repo:** [Who's who in voting reform](../topics/whos_who_voting_reform.md) · [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../../06_Other/other_ranked_methods/borda.md)
 
 </td>
 </tr>
@@ -51,7 +51,7 @@ Short, vivid, and slightly more mathematical than the two above — Saari uses g
 
 **The lean:** Saari is the field's most famous **defender of the Borda count**, and this book argues its case. Read it for the geometric intuition about *why methods disagree*; weigh the Borda advocacy against Borda's own well-known weaknesses (it's easy to strategize and isn't Condorcet-consistent — see the [ranked-method zoo](../topics/ranked_ballot_methods_zoo.md)).
 
-**In this repo:** [Borda](../other_ranked_methods/borda.md) · [what makes a good winner](../topics/what_makes_a_good_winner.md) · [voting paradoxes](../voting_paradoxes/README.md)
+**In this repo:** [Borda](../../06_Other/other_ranked_methods/borda.md) · [what makes a good winner](../topics/what_makes_a_good_winner.md) · [voting paradoxes](../voting_paradoxes/README.md)
 
 </td>
 </tr>

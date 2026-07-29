@@ -1,6 +1,6 @@
 # Margins matter — one electorate, four different answers
 
-*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) throws the margins away and ties all three. [Borda](../../00_start_here/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../00_start_here/RCV_IRV/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
+*Twelve voters rank three gelato flavours and the pairwise contests form a loop: **Almond beats Berry 7–5, Berry beats Cocoa 8–4, Cocoa beats Almond 7–5**. There is no [Condorcet winner](../../00_start_here/topics/condorcet/README.md). What happens next depends entirely on one question — **does your method look at the size of each victory, or only at who won?** [Copeland](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) throws the margins away and ties all three. [Borda](../../06_Other/other_ranked_methods/borda.md) is the same tournament weighted by those margins, and it separates them cleanly. Plurality and [RCV-IRV](../../00_start_here/RCV_IRV/README.md) each pick a third and fourth answer. Four rules, four verdicts, twelve ballots.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`, Test ID **BV2251** — four races on the same 12 ballots: Choose-One, STAR, RCV-IRV, Ranked Robin).
 
@@ -45,7 +45,7 @@ Those two paragraphs are the entire lesson. **Copeland and Borda are the same to
 |---|---|---|
 | [Choose-One (Plurality)](../../00_start_here/topics/plurality.md) | **Almond** | first choices only (5 / 3 / 4) |
 | [RCV-IRV](../../00_start_here/RCV_IRV/README.md) | **Cocoa** | first choices, then transfers |
-| [Borda](../../00_start_here/other_ranked_methods/borda.md) | **Berry** | every margin, weighted |
+| [Borda](../../06_Other/other_ranked_methods/borda.md) | **Berry** | every margin, weighted |
 | [Copeland (raw)](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) | **nobody** — 3-way tie | who won each pair, not by how much |
 | [Ranked Robin](../../00_start_here/RCV_Ranked_Robin/ranked_robin.md) (LH) | **Berry** | Copeland, then total margin as tiebreak |
 | [STAR](../../00_start_here/STAR_Voting/README.md) (ranks → 5/3/0) | **Almond** | Borda's scoring round, then a head-to-head |
@@ -110,7 +110,7 @@ Ranks carry no intensity, so running a score method on a ranked profile means in
   RCV-RR   = Berry   (differs from STAR)
 ```
 
-**The caveat, which belongs on the page and not in a footnote:** unlike [Condorcet's 1788 profile](../borda_condorcet_1788/README.md), this result is **not robust to the spacing**. Almond wins under 5/3/0, 5/4/0, 5/2/0 and 4/2/0 — but under a polarized **5/1/0** the scoring round promotes Cocoa over Berry into the runoff, and **Cocoa wins instead**. With no Condorcet winner to anchor the outcome, the rank-to-score conversion is doing real work. That is exactly the objection the [Borda page](../../00_start_here/other_ranked_methods/borda.md) raises against fabricating intensities, and it applies to our own method here. See [the 5/1/0 challenge](../star_5_1_0_challenge/README.md).
+**The caveat, which belongs on the page and not in a footnote:** unlike [Condorcet's 1788 profile](../borda_condorcet_1788/README.md), this result is **not robust to the spacing**. Almond wins under 5/3/0, 5/4/0, 5/2/0 and 4/2/0 — but under a polarized **5/1/0** the scoring round promotes Cocoa over Berry into the runoff, and **Cocoa wins instead**. With no Condorcet winner to anchor the outcome, the rank-to-score conversion is doing real work. That is exactly the objection the [Borda page](../../06_Other/other_ranked_methods/borda.md) raises against fabricating intensities, and it applies to our own method here. See [the 5/1/0 challenge](../star_5_1_0_challenge/README.md).
 
 Full report → [`margins_star.md`](cases/cases_pages/margins_star.md).
 
