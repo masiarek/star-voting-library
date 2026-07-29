@@ -67,6 +67,7 @@ v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win,
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him,3,contested (multi-race),33,"Plurality, RankedRobin, STAR",BV
+y2fbpc,"BV2261 — A three-way Ranked Robin tie: the random tiebreak is recorded, not lost",2,contested (multi-race),6,RankedRobin,BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
 ywqhq4,"BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways",5,contested (multi-race),9,"Approval, IRV, Plurality, RankedRobin, STAR",BV

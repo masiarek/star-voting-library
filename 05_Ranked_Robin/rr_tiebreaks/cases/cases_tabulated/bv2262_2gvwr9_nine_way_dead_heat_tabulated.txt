@@ -1,0 +1,96 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 9 ballots (ranked ballots).
+
+Ballots:
+     1 × Alice > Boris > Carmen > Dmitri > Elena > Felix > Greta > Hugo > Ivan
+     1 × Boris > Carmen > Dmitri > Elena > Felix > Greta > Hugo > Ivan > Alice
+     1 × Carmen > Dmitri > Elena > Felix > Greta > Hugo > Ivan > Alice > Boris
+     1 × Dmitri > Elena > Felix > Greta > Hugo > Ivan > Alice > Boris > Carmen
+     1 × Elena > Felix > Greta > Hugo > Ivan > Alice > Boris > Carmen > Dmitri
+     1 × Felix > Greta > Hugo > Ivan > Alice > Boris > Carmen > Dmitri > Elena
+     1 × Greta > Hugo > Ivan > Alice > Boris > Carmen > Dmitri > Elena > Felix
+     1 × Hugo > Ivan > Alice > Boris > Carmen > Dmitri > Elena > Felix > Greta
+     1 × Ivan > Alice > Boris > Carmen > Dmitri > Elena > Felix > Greta > Hugo
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Alice   beats Boris    8 – 1
+   Alice   beats Carmen   7 – 2
+   Alice   beats Dmitri   6 – 3
+   Alice   beats Elena    5 – 4
+   Felix   beats Alice    5 – 4
+   Greta   beats Alice    6 – 3
+   Hugo    beats Alice    7 – 2
+   Ivan    beats Alice    8 – 1
+   Boris   beats Carmen   8 – 1
+   Boris   beats Dmitri   7 – 2
+   Boris   beats Elena    6 – 3
+   Boris   beats Felix    5 – 4
+   Greta   beats Boris    5 – 4
+   Hugo    beats Boris    6 – 3
+   Ivan    beats Boris    7 – 2
+   Carmen  beats Dmitri   8 – 1
+   Carmen  beats Elena    7 – 2
+   Carmen  beats Felix    6 – 3
+   Carmen  beats Greta    5 – 4
+   Hugo    beats Carmen   5 – 4
+   Ivan    beats Carmen   6 – 3
+   Dmitri  beats Elena    8 – 1
+   Dmitri  beats Felix    7 – 2
+   Dmitri  beats Greta    6 – 3
+   Dmitri  beats Hugo     5 – 4
+   Ivan    beats Dmitri   5 – 4
+   Elena   beats Felix    8 – 1
+   Elena   beats Greta    7 – 2
+   Elena   beats Hugo     6 – 3
+   Elena   beats Ivan     5 – 4
+   Felix   beats Greta    8 – 1
+   Felix   beats Hugo     7 – 2
+   Felix   beats Ivan     6 – 3
+   Greta   beats Hugo     8 – 1
+   Greta   beats Ivan     7 – 2
+   Hugo    beats Ivan     8 – 1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |   Alice   |  Boris   | Carmen   | Dmitri   |  Elena   |  Felix   |  Greta   |  Hugo    |  Ivan    |
+----------------------------------------------------------------------------------------------------------------
+   Alice > |    ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |
+   Boris > | 1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |
+  Carmen > | 2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |
+  Dmitri > | 3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |
+   Elena > | 4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |
+   Felix > | 5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |
+   Greta > | 6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |7 - 0 - 2 |
+    Hugo > | 7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |
+    Ivan > | 8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Boris      4–4–0         4      +0  Felix, Dmitri, Carmen, Elena
+    2  Felix      4–4–0         4      +0  Greta, Alice, Ivan, Hugo
+    3  Greta      4–4–0         4      +0  Boris, Alice, Ivan, Hugo
+    4  Dmitri     4–4–0         4      +0  Felix, Greta, Elena, Hugo
+    5  Carmen     4–4–0         4      +0  Felix, Greta, Dmitri, Elena
+    6  Alice      4–4–0         4      +0  Boris, Dmitri, Carmen, Elena
+    7  Ivan       4–4–0         4      +0  Boris, Dmitri, Carmen, Alice
+    8  Elena      4–4–0         4      +0  Felix, Greta, Ivan, Hugo
+    9  Hugo       4–4–0         4      +0  Boris, Carmen, Alice, Ivan
+
+Winner — Ranked Robin (RCV-RR): Boris
+   *** 9 candidates tie for the most wins (Alice, Boris, Carmen, Dmitri, Elena, Felix, Greta, Hugo, Ivan) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (9 of 9): Alice, Boris, Carmen, Dmitri, Elena, Felix, Greta, Hugo, Ivan
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   Ranked Robin (RCV-RR) winner Boris is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

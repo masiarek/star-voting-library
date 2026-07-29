@@ -40,11 +40,15 @@ TWO GOTCHAS, both already handled here — don't "simplify" them back out:
   recharts' bar animation, and the shot lands with every bar at zero width — a
   chart with labels and no bars. Instead this script emulates a tall viewport
   (`--height`, default 2600) so the element fits on screen and clips inside it.
-* **Random tiebreaks are stable.** BV tabulates on demand, but a drawn result
-  (`tieBreakType: random`, e.g. `4gfwdq`, `3r3yf7`) is cached server-side and
-  keeps returning the same winner — verified byte-identical across repeated
-  fetches — so a screenshot won't contradict the frozen `_bv_export.json`.
-  Check against the export anyway before committing a tie case's shot.
+* **Random tiebreaks are stable — and not because of caching.** BV tabulates on
+  demand, and a drawn result (`tieBreakType: random`, e.g. `4gfwdq`, `3r3yf7`,
+  `y2fbpc`, `2gvwr9`) keeps returning the same winner because the tiebreak is a
+  SEEDED shuffle, not a coin flip: `seed = (rawVoteCount + hash(raceId)) >>> 0`,
+  shuffled once by TinyRand, with the drawn order published as `perm`. Verified
+  byte-identical across repeated fetches, and independently recomputed by
+  `bv_replay_tiebreak.py`. So a screenshot won't contradict the frozen
+  `_bv_export.json`. Check against the export anyway before committing a tie
+  case's shot — and note the order only moves if the BALLOT COUNT changes.
 
 House sizing: the repo's screenshots run ~1400-1600 px wide; downsample after
 capture if a shot comes out larger, e.g. `magick out.png -resize 1600x -strip out.png`.

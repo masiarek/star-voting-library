@@ -4617,7 +4617,71 @@ RANDOM_TIEBREAK_RECORDED_SPEC = {
 }
 
 
-ELECTIONS: list = [RANDOM_TIEBREAK_RECORDED_SPEC]   # BV2261 — random tiebreak is recorded
+# --- BV2262 — the same confirmation at NINE candidates ----------------------------
+# BV2261 proved the tiebreak order is recorded and replayable on 3 candidates. This
+# is the scale check Adam asked for: nine candidates, a nine-way dead end, does the
+# export still pin the winner?
+#
+# The profile is a round table. Nine club members are the nine candidates, and each
+# one ranks themselves first and then continues clockwise around the table — a single
+# cyclic rotation per voter. That construction makes the dead heat exact rather than
+# fiddled: for candidates X and Y at cyclic distance d, exactly 9-d voters prefer X,
+# so X beats the four members that follow them and loses to the four that precede
+# them. Every candidate finishes 4-4-0 (Copeland 4), and each one's margins are
+# +7,+5,+3,+1 against -7,-5,-3,-1 — a net of +0 for all nine. So Copeland ties, the
+# margin rung ties, and BV's head-to-head rung cannot apply (it is 2-way only, and
+# nine are tied). Both engines must reach their rung of last resort.
+# LH-verified pre-creation: 9-way tie at Copeland 4, margin +0 for all, falls to lot.
+_RT9_CANDS = ["Alice", "Boris", "Carmen", "Dmitri", "Elena",
+              "Felix", "Greta", "Hugo", "Ivan"]
+#  voter i ranks candidate i first, then clockwise: rank of candidate j is
+#  ((j - i) mod 9) + 1
+_RT9_RANKS = [[((j - i) % 9) + 1 for j in range(9)] for i in range(9)]
+RANDOM_TIEBREAK_NINE_SPEC = {
+    "test_id": "BV2262",
+    "title": "Nine candidates, a nine-way dead heat: does the recorded tiebreak still pin the winner?",
+    "description": (
+        "Nine club members sit around a table, and all nine are candidates for chair. "
+        "Each member ranks themselves first and then continues clockwise, so the nine "
+        "ballots are nine rotations of the same order. That makes the deadlock exact: "
+        "every member beats the four who follow them and loses to the four who "
+        "precede them, so all nine finish 4-4-0 on a Copeland score of 4, and every "
+        "single one has a net margin of exactly zero (+7, +5, +3, +1 against -7, -5, "
+        "-3, -1). Nothing in the ballots separates them, and no pairwise result is "
+        "even close to a draw — this is a nine-way Condorcet cycle, not a set of "
+        "tied matchups. "
+        "It is a scale test for a claim confirmed earlier at three candidates: that "
+        "BetterVoting's tiebreak of last resort, labelled 'random', is a seeded "
+        "shuffle whose result is published in the export as 'perm', with each "
+        "candidate's place stored as 'tieBreakOrder'. The export should therefore "
+        "record the full nine-deep order rather than just a winner, return the same "
+        "answer on a re-tally, and let an independent tabulation reproduce the "
+        "winner exactly by replaying that order as a pre-published lot. "
+        "Worth saying plainly: who wins here is decided by the shuffle, not by the "
+        "voters, and no argument about how people voted can rest on it. The point of "
+        "the election is what gets recorded, not who gets elected. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/05_Ranked_Robin/rr_tiebreaks/index.html"),
+    "races": [
+        {"title": "Club chair — nine members, nine candidates, one round table",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 9,
+         "candidates": _RT9_CANDS, "ballots": _RT9_RANKS},
+    ],
+    "enable_write_in": False,
+    "expected": ("A nine-way tie: every candidate 4-4-0, Copeland 4, net margin +0, so "
+                 "no deterministic rung separates anyone and BV's 2-way head-to-head "
+                 "rung cannot apply. BV must report tieBreakType 'random' and publish a "
+                 "nine-deep `perm` with matching `tieBreakOrder` values 0..8; `other[]` "
+                 "should list the eight losers in that same order. Winner = whoever "
+                 "`perm` puts first — recorded and stable on re-tally, but not "
+                 "derivable from the ballots. LH must reproduce that winner exactly "
+                 "when lot_numbers is pinned to `perm`, and bv_replay_tiebreak.py must "
+                 "recompute `perm` from (9 ballots + raceId) alone. Test ID BV2262."),
+}
+
+
+ELECTIONS: list = [RANDOM_TIEBREAK_NINE_SPEC]   # BV2262 — nine-way dead heat, scale check
+# Previously: [RANDOM_TIEBREAK_RECORDED_SPEC]   # BV2261 — random tiebreak is recorded (created -> y2fbpc)
 # Previously: [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner (created -> gg9qh9)
 # Previously: [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
 # Previously: [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie (created -> q2rkfm)

@@ -422,14 +422,41 @@ reproduce loop is in the **`bettervoting` skill**.
   Approval→**Approval_Multi_Winner**, RankedRobin→**Bloc RR**, Plurality→**SNTV**,
   plus STV and STAR_PR/allocated/sss/rrv. (The old "LH has no Plurality" caveat is
   retired — single-winner via STAR path, multi-winner via SNTV.)
-  **RR triple-check:** cross-verify RR cases three ways — this native tally,
-  BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json` Results), and
-  `pref_voting`'s independent Copeland via
+  **RR triple-check — always cross-verify a Ranked Robin case three ways:** this
+  native tally, BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json`
+  Results), and **`pref_voting`'s independent Copeland** via
   `tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py` (declared in
-  `pyproject.toml`; `uv sync` then `uv run …`). **Tiebreak caveat — LH and BV
-  diverge:** LH breaks a Copeland tie by margin → **lot** (deterministic); BV by
-  head-to-head → **random**. So a tie-deciding case is **LH-only** (a random BV
-  result can't be frozen). Worked: `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`.
+  `pyproject.toml`; `uv sync` then `uv run …`). The `pref_voting` leg is the
+  **third-party cross-check** — a library nobody here wrote — and it is the one that
+  makes an RR result trustworthy rather than self-confirming, so **run it on every
+  RR case, not just the awkward ones**. On a tie it reports the whole Copeland
+  **leader set** and declines to pick, then tells you whether LH's winner sits
+  inside that set (`CONSISTENT ✓`) — which is exactly the check you want, since the
+  disagreement between engines is never about the tally, only about the tiebreak.
+
+  **Tiebreak ladder — LH and BV diverge at rung 2:** LH breaks a Copeland tie by
+  total margin → **lot** (`lot_numbers`, published in the YAML); BV by head-to-head
+  (2-way only) → its rung of last resort.
+
+  **BV's JSON export records the tie-breaking SEQUENCE just fine — don't repeat the
+  old "can't be frozen" claim** (corrected 2026-07-29). BV's rung 3 is labelled
+  `"random"` but is a **seeded shuffle**, documented as deliberately deterministic in
+  `shuffleCandidatesForRandomTiebreak.ts`: `seed = (rawVoteCount + hash(raceId)) >>> 0`,
+  shuffled once by TinyRand, each candidate's index written back as `tieBreakOrder`.
+  The export publishes the **complete order** — `perm` (ids in tiebreak order),
+  per-candidate `tieBreakOrder`, `tied[]` and `other[]` sorted by it, `tieBreakType`,
+  and a `logs` line — so winner **and** runners-up survive, and a re-tally reproduces
+  them. Pin `lot_numbers:` to BV's `perm` and LH replays the draw exactly. Verified
+  live at 3 candidates (**BV2261** `y2fbpc`) and 9 (**BV2262** `2gvwr9`, all nine
+  positions matched). Replay the shuffle yourself with
+  `tools_adam/bv_replay_tiebreak.py <frozen export>` (stdlib-only Python port).
+  **The real limit is narrower:** BV's order is *recorded* but not *derivable* — a
+  function of the ballot **count** and the race id, **never of how anyone voted** —
+  so a case whose **winner** turns on it is still **LH-only** (only LH's published
+  lot lets a reader derive the result from the file). Publishing such a case on BV is
+  fine when the *recording mechanism* is the subject and the page says to ignore who
+  won. Worked: `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`,
+  `05_Ranked_Robin/rr_tiebreaks/bv2261_…md` / `bv2262_…md`.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**457 election files** (406 single-winner, 51 multi-winner) across 16 method(s).
+**458 election files** (407 single-winner, 51 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 246 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 69 |
+| Ranked Robin (RCV-RR / Copeland) | 70 |
 | Approval | 18 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -313,7 +313,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (69)
+## Ranked Robin (RCV-RR / Copeland)  (70)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -336,6 +336,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2141_3r3yf7_four_degree_tie`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2141_3r3yf7_four_degree_tie.yaml) |
 | [`bv2261_y2fbpc_tiebreak_recorded_cycle`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/bv2261_y2fbpc_tiebreak_recorded_cycle.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | BV2261 race 2 — a Condorcet cycle: every pair has a winner, and the tiebreak is still recorded → _Anika_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_cycle.yaml) |
 | [`bv2261_y2fbpc_tiebreak_recorded_draws`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/bv2261_y2fbpc_tiebreak_recorded_draws.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | BV2261 race 1 — a perfectly balanced electorate: every pair draws, the tiebreak is recorded → _Anika_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_draws.yaml) |
+| [`bv2262_2gvwr9_nine_way_dead_heat`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/bv2262_2gvwr9_nine_way_dead_heat.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | BV2262 — nine candidates, a nine-way dead heat: the recorded tiebreak still pins the winner → _Boris_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2262_2gvwr9_nine_way_dead_heat.yaml) |
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/dead_heat_lot_tiebreak.yaml) |
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/cases/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |

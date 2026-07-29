@@ -24,8 +24,9 @@ only what is BV-specific, so non-BV sessions don't pay for it.
     Presets: `result` (winner headline + chart), `race-details` (expands the accordion
     and grabs the table), `chart`, `page`; or pass your own `--clip` / `--prep`. The
     script's docstring documents the two traps (never `captureBeyondViewport` — it
-    restarts the chart animation and shoots empty bars; random-tiebreak results *are*
-    cached server-side, so a shot won't contradict the frozen export).
+    restarts the chart animation and shoots empty bars; a random-tiebreak result won't
+    contradict the frozen export — BV's "random" rung is a **seeded** shuffle, so it
+    re-tallies to the same order, see the tiebreak note in step 5).
   - **Embed with a sized `<img>`, not a bare `![]()`** — house style, so the picture
     doesn't render full-bleed: `<img alt="…" src="img/<bvid>_result.png" width="640">`.
     Rough widths: screenshot ≈640, panel ≈420, full ballot ≈460. Keep the PNG itself
@@ -235,6 +236,29 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    `YAML_library/1_positive/01_convert_json_yaml.py`); for a random tie-break, pin
    `lot_numbers` to BV's `perm`. Confirm LH's winner(s) match — or characterize the
    divergence. Freeze the export as `_bv_export.json`.
+   - **Tie-breaks: the export records the whole sequence — don't say it "can't be
+     frozen"** (corrected 2026-07-29). BV's `tieBreakType: "random"` is a **seeded**
+     shuffle (`seed = (rawVoteCount + hash(raceId)) >>> 0`, TinyRand, shuffled once),
+     deliberately deterministic per its own source. The export publishes **`perm`**
+     (ids in tiebreak order), per-candidate **`tieBreakOrder`**, `tied[]`/`other[]`
+     sorted by it, plus `tieBreakType` and a `logs` line — so winner *and* runners-up
+     survive and a re-tally reproduces them. Pinning `lot_numbers` to `perm` makes LH
+     replay the draw **exactly**. Recompute the shuffle independently with
+     `uv run …/bv_replay_tiebreak.py <frozen export>` (or plain `python3` — stdlib
+     only). Verified at 3 candidates (**BV2261** `y2fbpc`) and 9 (**BV2262**
+     `2gvwr9`). **The real limit is narrower:** the order is *recorded* but not
+     *derivable* — it depends on the ballot **count** and the race id, never on how
+     anyone voted. So a case whose **winner** turns on the tiebreak stays **LH-only**
+     (only LH's published lot lets a reader derive the result from the file); minting
+     one on BV is fine only when the *recording mechanism* is the subject and the page
+     says to ignore who won.
+   - **Ranked Robin → also run the third-party cross-check.** `uv run
+     …/pref_voting_tabulation_engine/ranked_robin_report.py <yaml>` tabulates Copeland
+     with a library nobody here wrote; on a tie it returns the whole **leader set**,
+     declines to pick, and reports whether LH's winner is inside it (`CONSISTENT ✓`).
+     Run it on every RR case — it is what makes an RR result trustworthy rather than
+     self-confirming. Full ladder + divergences:
+     `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`.
 6. **Build the case files** (AI). Name `bv<testid>_<bvid>_<descriptor>.{yaml,md,
    _bv_export.json}` (see naming rule above). The `.md` is the per-election page:
    the clickable `▶ … /results` lead line, ballots, the **inline LH tabulation

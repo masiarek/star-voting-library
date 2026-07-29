@@ -7,6 +7,7 @@ Ranked Robin usually just elects the Condorcet winner. This set is about the **e
 | [Dead heat → lot order](dead_heat_lot_tiebreak.md) | Equal Support + ½-Copeland + the full ladder to **lot** | Ada (by lot) | **No — divergent** | [`.yaml`](cases/dead_heat_lot_tiebreak.yaml) |
 | [BV2141 — all four Equal-Vote degrees](bv2141_3r3yf7_four_degree_tie.md) | a Copeland tie that survives three tiebreak degrees; only the 4th (beatpath) separates | Ava (by recorded draw) | **Yes** `3r3yf7` | [`.yaml`](cases/bv2141_3r3yf7_four_degree_tie.yaml) |
 | [BV2261 — the random tiebreak is **recorded**](bv2261_y2fbpc_tiebreak_recorded.md) | the export publishes the whole tiebreak order (`perm` / `tieBreakOrder`), stable on re-tally; two races reach the last rung by **draws** and by **cycle** | Anika (both races) | **Yes** `y2fbpc` | [draws](cases/bv2261_y2fbpc_tiebreak_recorded_draws.yaml) · [cycle](cases/bv2261_y2fbpc_tiebreak_recorded_cycle.yaml) |
+| [BV2262 — nine-way dead heat](bv2262_2gvwr9_nine_way_dead_heat.md) | the same at **9 candidates**: a nine-deep recorded order, a shuffle that really scrambles, four independent checks | Boris | **Yes** `2gvwr9` | [`.yaml`](cases/bv2262_2gvwr9_nine_way_dead_heat.yaml) |
 
 **The divergence in one table:**
 

@@ -6,7 +6,7 @@
 
 <img alt="BetterVoting results for BV2261 race 1: 'Tied! Anika won after tiebreaker', all three candidates at 50% head-to-head wins" src="img/y2fbpc_result.png" width="640">
 
-The results page is honest that a tiebreak happened — and it names only the winner. Everything below is about what the **export** carries that the page does not.
+The results page is honest that a tiebreak happened — and in words it names only the winner. Everything below is about what the **export** states explicitly that the page does not.
 
 ## The question
 
@@ -43,6 +43,23 @@ Two terms, each doing a job:
 [TinyRand](https://github.com/tim-one/tinyrand/tree/main) is deliberately small and language-agnostic, so the draw is reproducible outside JavaScript.
 
 **Verified on this election:** re-fetching `y2fbpc` through the API returned byte-identical `perm` and `tieBreakOrder` for both races. Same on Adam's earlier throwaway probe `7k2j6g` (a 3-way tie from a single all-equal ballot), re-fetched hours later — same `perm`, same winner.
+
+**And you can recompute the draw yourself.** [`bv_replay_tiebreak.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_replay_tiebreak.py) is a Python port of TinyRand + the BV shuffle; point it at a frozen export and it reproduces each race's `perm` from `(rawVoteCount, raceId)` alone — the ballots' *content* is never an input:
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/bv_replay_tiebreak.py 05_Ranked_Robin/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_bv_export.json
+```
+
+```
+race 5833e6ce-…   seed = (6 + hash(raceId)) >>> 0 = 3807750202
+  recomputed  : ['Anika', 'Beto', 'Cleo']
+  BV recorded : ['Anika', 'Beto', 'Cleo']      MATCH: yes ✓
+race acfc2475-…   seed = (6 + hash(raceId)) >>> 0 = 629628747
+  recomputed  : ['Anika', 'Cleo', 'Beto']
+  BV recorded : ['Anika', 'Cleo', 'Beto']      MATCH: yes ✓
+```
+
+**Scale check:** the same confirmation at **nine** candidates, with a shuffle that really scrambles the field, is [BV2262](bv2262_2gvwr9_nine_way_dead_heat.md).
 
 ## The two races
 
@@ -116,7 +133,7 @@ Being precise about the limits, because the distinction is easy to blur:
 1. **Recorded ≠ derivable.** `perm` is a function of the ballot **count** and the race id — not of the ballots' **content**. An independent engine reading only the ballots cannot predict it; it can only replay it after reading the export. That is the real reason a tie-deciding case can't be cross-verified from first principles, and it is a weaker claim than "the result can't be frozen."
 2. **The seed is not in the export.** You get `perm`, not the seed or the PRNG state. Reproducing the shuffle *from scratch* means re-implementing TinyRand with the same `(rawVoteCount + hash(raceId))`.
 3. **An open election's order moves.** `rawVoteCount` is in the seed, so every new ballot re-rolls the draw. A `perm` frozen mid-election describes that moment only. These two races are frozen at 6 ballots.
-4. **The results *page* shows only the winner.** "Anika won after tiebreaker" is all the UI says; the runner-up order is in the JSON alone.
+4. **The results *page* never labels the order.** "Anika won after tiebreaker" is all the UI states in words. The bar chart is in fact sorted by `tieBreakOrder` — visibly so once there are more candidates, as in [BV2262](bv2262_2gvwr9_nine_way_dead_heat.md) — but nothing on the page tells a reader that the row order *is* the tiebreak, so only the JSON says it explicitly.
 5. **Neither engine is more correct.** LH's fixed lot buys determinism and pays in neutrality (rename the candidates and the winner can move); BV's seeded shuffle is the randomized answer to the same forced choice. See [LH vs BetterVoting](../concepts/rr_tiebreak_lh_vs_bv.md).
 
 ## Related

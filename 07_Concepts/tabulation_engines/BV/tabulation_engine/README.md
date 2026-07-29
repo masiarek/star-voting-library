@@ -112,6 +112,22 @@ a deterministic PRNG (TinyRand, language-agnostic) is seeded with
 term re-rolls the order as new ballots arrive; the race hash keeps identical-candidate races from
 sharing a tie order. `electionCreateDate` is passed but currently unused (reserved for versioning).
 
+**The drawn order is published, and you can recompute it.** The shuffled id order ships in the
+results as **`perm`**, with each candidate's index stored as **`tieBreakOrder`**; `tied[]` and
+`other[]` are sorted by it, so the export carries the **whole tiebreak sequence**, not just the
+winner. `tools_adam/bv_replay_tiebreak.py` is a stdlib-only Python port of TinyRand + this
+shuffle — point it at a frozen `_bv_export.json` and it reproduces each race's `perm` from
+`(rawVoteCount, raceId)` and diffs it against BV's:
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/bv_replay_tiebreak.py <case>_bv_export.json
+```
+
+Confirmed live on [BV2261 `y2fbpc`](../../../../05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md)
+(3 candidates, two races) and [BV2262 `2gvwr9`](../../../../05_Ranked_Robin/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md)
+(9 candidates, a nine-deep order). Note what the seed inputs imply: the order is **recorded but
+not derivable** — it depends on the ballot *count* and the race id, never on how anyone voted.
+
 > This is exactly the surface area of open issue **#1417** — because the seed tracks the live
 > ballot count, the tie-break lot order isn't fixed until polls close. The issue proposes
 > deterministic **pre-published** lot numbers instead.
