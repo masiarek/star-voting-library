@@ -6,11 +6,21 @@
 
 *The ballot ([Equal Vote](https://www.equal.vote/ranked_robin)) — note Carmen and David share 2nd place: unlike RCV-IRV, Ranked Robin lets you rank candidates equally.*
 
-**Ranked Robin is a brand name, not a new method.** Underneath it is **Copeland's method** — compare every pair of candidates head-to-head, and whoever wins the most matchups wins — plus a defined rule for breaking cycles. Equal Vote's Sara Wolk coined the label in 2021 to make an old idea sayable; the idea itself dates to Ramon Llull in **1299**. Worth knowing, because "Ranked Robin" sounds like an invention and isn't: it's ~700-year-old Condorcet machinery with friendlier packaging.
+**Ranked Robin is a brand name, not a new method.** Peel it apart and only one layer is actually new:
 
-What it does is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
+| Layer | What it really is | Since | New? |
+|---|---|---|:--:|
+| Compare every pair head-to-head; whoever wins the most matchups wins | **Copeland's method** — the whole core of it | first described **1299** (Ramon Llull), rediscovered by Condorcet in the 1780s, formalised by Copeland in 1951 | no |
+| Ties broken by summing win margins | **Copeland//Borda** — a standard, long-known construction | — | no |
+| The words *"Ranked Robin"* | **Equal Vote's branding**, coined by Sara Wolk | **2021** | **yes — the name is the only new part** |
 
-*The same thing also travels as **Consensus Voting**, has a sibling brand in **Consensus Choice**, and sits inside the **Condorcet** / round-robin family. Which word means what — and why Copeland is `≈` rather than `=` Ranked Robin — is sorted out in [the naming decoder](concepts/condorcet_naming_decoder.md).*
+So the honest one-liner is *Copeland with a specified tiebreak, under a friendlier name.* We say `≈` rather than `=` only because plain Copeland leaves the cycle tiebreak unspecified and Ranked Robin pins one down.
+
+**Equal Vote says so too, now.** Their current page opens by calling it "a modern name for one of the oldest voting methods out there. First described in the literature in 1299" — wording their [previous version](https://www.equal.vote/ranked_robin_old) did not have; that page never mentioned Copeland or 1299 at all. And on electowiki's talk page in 2025 Sara Wolk, who coined the term, wrote that she "always intended the name Ranked Robin to be a rebrand of Condorcet," with the first takeaway: *"Ranked Robin is a synonym for Condorcet on a ranked ballot."* The Copeland-plus-margins procedure is Equal Vote's *default recommendation*, not the whole meaning of the name — and she notes it is under review. That same talk page opens with Markus Schulze objecting in 2021 that the title is misleading, since "round robin" has long covered Condorcet methods generally.
+
+What it *does* is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
+
+*Sources: [Ranked Robin (electowiki)](https://electowiki.org/wiki/Ranked_Robin) — the canonical definition of the name — and [its talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) for the exchange above. Both are a community wiki and Equal-Vote-adjacent: good for definitions, weak for verdicts. The same method also travels as **Consensus Voting**, has a sibling brand in **Consensus Choice**, and sits in the **Condorcet** / round-robin family. Which word means what → [the naming decoder](concepts/condorcet_naming_decoder.md).*
 
 This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
 
