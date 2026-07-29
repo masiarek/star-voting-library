@@ -191,6 +191,7 @@ LH:chicken_approval,"Chicken / Burr dilemma — Approval, honest: A and B tie 60
 LH:chicken_star,Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly),1,single-race,100,STAR,LH-only
 LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
 LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
+LH:copeland_half_credit_decides,Ranked Robin — the half-point for a draw decides the election (LH-only),1,single-race,30,RankedRobin,LH-only
 LH:copeland_vs_clones_c5_b3,"Copeland picks one, composition-consistency demands all five (tournament solutions)",1,single-race,3,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
 LH:cycle_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",1,single-race,15,STAR,LH-only

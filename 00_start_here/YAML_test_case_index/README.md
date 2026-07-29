@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**452 election files** (401 single-winner, 51 multi-winner) across 16 method(s).
+**453 election files** (402 single-winner, 51 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 246 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 64 |
+| Ranked Robin (RCV-RR / Copeland) | 65 |
 | Approval | 18 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -313,7 +313,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (64)
+## Ranked Robin (RCV-RR / Copeland)  (65)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -330,6 +330,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/cases/` | 1 | No Condorcet winner (a cycle) — Ranked Robin still elects one → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/02_cycle_no_condorcet.yaml) |
 | [`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/cases/` | 1 | The Smith set — the smallest club that beats everyone outside it → _Ada_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/04_smith_set_c4_b7.yaml) |
 | [`bv2140_48hjkv_most_pairwise_wins`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/bv2140_48hjkv_most_pairwise_wins.md) | `05_Ranked_Robin/condorcet_vs_ranked_robin/cases/` | 1 | BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/bv2140_48hjkv_most_pairwise_wins.yaml) |
+| [`copeland_half_credit_decides`](../../05_Ranked_Robin/copeland_score/cases/cases_pages/copeland_half_credit_decides.md) | `05_Ranked_Robin/copeland_score/cases/` | 1 | Ranked Robin — the half-point for a draw decides the election (LH-only) → _Alice_ | [`.yaml`](../../05_Ranked_Robin/copeland_score/cases/copeland_half_credit_decides.yaml) |
 | [`bv2141_3r3yf7_four_degree_tie`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees (electowiki) → _Ava_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2141_3r3yf7_four_degree_tie.yaml) |
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/rr_tiebreaks/cases/cases_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/rr_tiebreaks/cases/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/rr_tiebreaks/cases/dead_heat_lot_tiebreak.yaml) |
 | [`bv2131_tennessee_condorcet_center_vqyqkr`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | `05_Ranked_Robin/rr_vs_irv_plurality/cases/` | 1 | BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville) → _Nashville_ | [`.yaml`](../../05_Ranked_Robin/rr_vs_irv_plurality/cases/bv2131_tennessee_condorcet_center_vqyqkr.yaml) |
