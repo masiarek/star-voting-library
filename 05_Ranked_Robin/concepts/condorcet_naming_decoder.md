@@ -4,6 +4,8 @@
 
 **Level: reference** (a 201/301 aid). The teaching page for the method itself is [Ranked Robin](ranked_robin.md); this is just the terminology map.
 
+*This page maps what each word **means**. For the argument about which one we should **use** — and what each choice costs — see [What should we call this method?](what_to_call_this_method.md).*
+
 ## The one-line answer
 
 > **round-robin voting** (the family) ⊃ **Copeland's method** (the algorithm) ≈ **Ranked Robin** (a branded Copeland variant).
