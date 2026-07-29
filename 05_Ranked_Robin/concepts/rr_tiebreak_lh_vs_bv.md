@@ -40,6 +40,8 @@ The **[Post-it RCV example (BV2176, `p8dp28`)](../../method_comparisons/postit_r
 ## Practical guidance
 
 - For **teaching a clean outcome** (a Condorcet winner, or any un-tied Copeland ranking), any engine is fine and they agree — cross-check freely.
+> **Confirmed by Equal Vote — and scheduled to change (as of 2026-07-29).** On [electowiki's Ranked Robin talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) in 2025, Sara Wolk wrote that BetterVoting "currently has a random tiebreaker in place, but the plan is to allow users to select from a handful of tiebreaker options (Smith-Minimax, Copeland-Margins, Simple Favorite) before it goes to random." So the divergence this page documents is real and acknowledged by the people who built the other engine — **and it has an expiry date**. If BetterVoting ships a selectable Copeland-Margins option, its rung 1–2 could line up with LH's and the dead-heat case below may stop being LH-only. Re-check before relying on the table above.
+
 - For a case that **turns on the tiebreak**, state which engine's rule you're relying on. Only the **LH** rule (margin → lot) is reproducible from the ballots plus a published lot. If a real BetterVoting election could land on a Copeland tie, its winner may be **random**, not a function of the ballots.
 - When you *want* determinism from a tie, pin `lot_numbers` in the YAML and use the LH tally; the printed winner line names the rung that decided it.
 

@@ -54,6 +54,8 @@ The extra body reshapes the margins. A1's margin jumps to **+134**, and by absor
 
 By "sacrificing" A2 to crowd out B, the A-faction converted a 50/50 coin flip into a **guaranteed A1 win**. That is a clone-independence (teaming) failure: running clones changed the outcome in the cloning faction's favor.
 
+> **This is not our construction alone.** The same failure was raised on [electowiki's Ranked Robin talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) in November 2021 by the contributor Kristomun, questioning the article's claim that clone failures have a limited range. Their version separates the two channels cleanly: **crowding** fails the *Copeland* component, while ordinary **teaming inside the Smith set** fails the *Borda* (margins) component — which is precisely the rung our case turns on. Worth knowing that the wart was documented by the method's own community, not just by its critics.
+
 ## The catch: the failure depends on the tiebreak
 
 Here is the part that matters for this repo. The teaming attack only works because Ranked Robin broke the tie by **margin**. Engines don't agree on that rung (see [rr_tiebreak_lh_vs_bv.md](rr_tiebreak_lh_vs_bv.md)):

@@ -296,6 +296,7 @@ LH:rr_blank_is_last_c4_b3,Ranked Robin — a blank is ranked LAST (and rank numb
 LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
+LH:rr_vs_mwsl_cycle_c3_b32,"Ranked Robin vs Consensus Choice — the same cycle, two different winners",1,single-race,32,RankedRobin,LH-only
 LH:rrv_sample_c15_b13_three-parties,RRV sample as single-winner STAR — three parties (Purple/Orange/Yellow),1,single-race,13,STAR,LH-only
 LH:same_matrix_p1_plurality,"Same matrix, different plurality — electorate P1: Choose-One",1,single-race,12,Plurality,LH-only
 LH:same_matrix_p1_ranked_robin,"Same matrix, different plurality — electorate P1: Ranked Robin",1,single-race,12,RankedRobin,LH-only

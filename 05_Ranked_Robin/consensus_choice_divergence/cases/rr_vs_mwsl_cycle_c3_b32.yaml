@@ -1,0 +1,33 @@
+election_title: "Ranked Robin vs Consensus Choice — the same cycle, two different winners"
+election_description: >-
+  32 ranked ballots, 3 candidates, one Condorcet cycle: Ana beats Bruno by 20, Bruno beats
+  Celia by 4, Celia beats Ana by 8. Everyone finishes 1-1, so Copeland ties all three and the
+  CYCLE RULE alone decides the election. The two rival "consensus" brands answer differently
+  on these very same ballots. Equal Vote's Ranked Robin breaks the tie by net win margin and
+  elects ANA (+12). Better Choices for Democracy's Consensus Choice breaks it by "Most Wins,
+  Smallest Loss" and elects CELIA, whose single defeat is the mildest at 4 votes (Ana's is 8,
+  Bruno's is 20). The engine below computes the Ranked Robin answer; the Consensus Choice
+  answer is read straight off the same pairwise matrix.
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_matrix: true          # the full pairwise grid IS the lesson here
+  show_smith_set: true       # no Condorcet winner: the Smith set is all three
+# Cycle construction (see README): with blocs 12 / 6 / 14 the pairwise margins are
+#   Ana  beats Bruno  by 20      Bruno's only loss  = 20
+#   Bruno beats Celia by  4      Celia's only loss  =  4
+#   Celia beats Ana   by  8      Ana's only loss    =  8
+# Copeland: 1 win + 1 loss each -> three-way tie, so the cycle rule decides.
+#   Ranked Robin  (net win margin):  Ana +12, Celia +4, Bruno -16   -> ANA
+#   Consensus Choice (smallest loss): Celia 4, Ana 8, Bruno 20      -> CELIA
+# Source for the Most Wins, Smallest Loss rule: Wes Holliday, "How to Make Every Voter
+# Matter and Make Spoiler Effects Go Away" (Better Choices for Democracy, 2026), Appendix.
+ballots: |-
+  12:Ana>Bruno>Celia
+  6:Bruno>Celia>Ana
+  14:Celia>Ana>Bruno
+
+expected_winners:
+  - Ana
+
+# file: rr_vs_mwsl_cycle_c3_b32.yaml
