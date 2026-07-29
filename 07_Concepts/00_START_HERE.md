@@ -8,14 +8,11 @@ This is the **STAR Voting education library** — for learning, teaching, and de
 
 ## ⭐ Learn STAR Voting
 
-The main event.
+The main event — and it has its own front door now. **[01_STAR](../01_STAR/README.md)** carries the whole STAR reading path in one place: the gentle on-ramp, why STAR, how the two rounds work, the FAQ, the hands-on demos, and the runnable example elections, with the concept pages beside them in [`01_STAR/concepts/`](../01_STAR/concepts/README.md).
 
-- **New here? — the gentle on-ramp** (what STAR is and why it matters, before any mechanics) → [STAR — start here](../01_STAR/concepts/STAR_start_here.md)
-- **Why STAR? — start with the quick, exciting wins** → [the benefits of STAR](../01_STAR/concepts/getting_started/STAR_benefits.md); then the *complete* case in plain points → [Why STAR Voting](topics/Why_STAR_Voting.md). *Prefer ranked ballots?* → [Why Ranked Robin](../05_Ranked_Robin/concepts/why_ranked_robin.md), the friendly upgrade that counts them so the consensus wins.
-- **How the count works** → [the Scoring Round](../01_STAR/concepts/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot)
-- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](../01_STAR/concepts/getting_started/STAR_FAQ.md)
-- **Do it, don't just read it** → [Hands-on](../01_STAR/concepts/hands_on/README.md): [run a paper-ballot demo](../01_STAR/concepts/hands_on/running_a_paper_ballot_demo.md) (print real ballots from a BetterVoting election, vote, hand-count, compare) · [count a STAR election by hand](../01_STAR/concepts/hands_on/count_star_by_hand.md) · [teach it](../01_STAR/concepts/hands_on/teaching_star_voting.md)
-- **The full course** → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md)
+Straight to the on-ramp → **[STAR — start here](../01_STAR/concepts/STAR_start_here.md)**. The full course → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md).
+
+Everything below this line is the **cross-method** material: the problem STAR is built to fix, the honest comparisons, and the library itself.
 
 ## What's wrong with how we vote now?
 

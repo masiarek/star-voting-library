@@ -4,9 +4,12 @@ The library's headline method: **STAR** (Score Then Automatic Runoff) for one se
 
 Everything about STAR lives in this one folder: the *concept* explanations in [`concepts/`](concepts/README.md), and the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea — in the subfolders below. New to STAR? Read the concepts first:
 
-- **[STAR — start here](concepts/STAR_start_here.md)** — the "why" before the "how."
-- **[The benefits of STAR](concepts/getting_started/STAR_benefits.md)** — the case for it, in brief.
-- **[The second round — FAQ](concepts/the_count/STAR_second_round_FAQ.md)** — what the automatic runoff does, and the objections answered honestly.
+- **New here? — the gentle on-ramp** (what STAR is and why it matters, before any mechanics) → **[STAR — start here](concepts/STAR_start_here.md)**
+- **Why STAR? — the quick, exciting wins** → [the benefits of STAR](concepts/getting_started/STAR_benefits.md); then the *complete* case in plain points → [Why STAR Voting](../07_Concepts/topics/Why_STAR_Voting.md). *Prefer ranked ballots?* → [Why Ranked Robin](../05_Ranked_Robin/concepts/why_ranked_robin.md).
+- **How the count works** → [the Scoring Round](concepts/the_count/STAR_Scoring_Round.md) + [the Automatic Runoff](concepts/the_count/STAR_Automatic_Runoff.md) (two rounds, one ballot), and the objections answered honestly in [the second-round FAQ](concepts/the_count/STAR_second_round_FAQ.md)
+- **Have a specific question?** → [STAR FAQ — mechanics, with worked examples](concepts/getting_started/STAR_FAQ.md). **Skeptical?** → [STAR for skeptics](concepts/getting_started/star_for_skeptics.md)
+- **Do it, don't just read it** → [Hands-on](concepts/hands_on/README.md): [run a paper-ballot demo](concepts/hands_on/running_a_paper_ballot_demo.md) · [count a STAR election by hand](concepts/hands_on/count_star_by_hand.md) · [teach it](concepts/hands_on/teaching_star_voting.md)
+- **The full course** → [Curriculum — Voting 101 / 201 / 301](../07_Concepts/CURRICULUM.md)
 
 ---
 
