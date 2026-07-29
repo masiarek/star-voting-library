@@ -22,7 +22,7 @@ BV finds the 3-way tie and, with no margin rung for three tied candidates, picks
 - `tieBreakType: random`
 - `elected: [C]` (this draw); log: *"C picked in random tie-breaker, more robust tiebreaker not yet implemented."*
 
-![BV result for 4gfwdq — A, B, C tie at 4 wins; C elected by random tiebreak](img/REPLACE_4gfwdq_result.png)
+<img alt="BetterVoting result page for 4gfwdq: headline 'Tied! — C won after tiebreaker', 33 voters, Voting Method: Ranked Robin. Head-to-head wins bars — C, B and A all at 80% (4 of 5 matchups), D 40%, E 20%, F 0%." src="img/4gfwdq_result.png" width="640">
 
 ## View 2 — LH: margin, then lot
 
