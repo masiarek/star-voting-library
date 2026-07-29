@@ -23,7 +23,9 @@ BV breaks the 2-way tie by head-to-head, and **C beats A1, 21–12**:
 - `tied: []`, `tieBreakType: none`
 - `elected: [C]`; log: *"C preferred over A1 in runoff."*
 
-![BV result for 9pr3wr — A1 and C tie at 5 wins; C elected on head-to-head](img/REPLACE_9pr3wr_result.png)
+<img alt="BetterVoting result page for 9pr3wr: headline 'C wins!', 33 voters, Voting Method: Ranked Robin. Head-to-head wins bars — A1 83% and C 83% (5 of 6 matchups each), B 67%, A2 67%, D 33%, E 17%, F 0%." src="img/9pr3wr_result.png" width="640">
+
+Read the chart carefully: BV's ⭐ sits on the **top bar**, which here is **A1** — but the headline elects **C**. The bars only show the 5-wins tie; the head-to-head rung that settles it isn't in the chart.
 
 So on BetterVoting the clones did **not** help the A-faction — C wins. Deterministic and freezable: [`bv2143_9pr3wr_teaming_fails_bv_export.json`](cases/bv2143_9pr3wr_teaming_fails_bv_export.json).
 

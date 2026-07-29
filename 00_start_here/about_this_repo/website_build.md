@@ -29,7 +29,7 @@ uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" --with mkdocs-redirects
 
 - **Anchor slugs differ from GitHub's** for headings with `&`/em-dashes (GitHub's `#properties--criteria` style). Those links land at the top of the correct page instead of the exact section — about 30 across the repo.
 - **Search index is ~6 MB** (≈700 pages). Fine over gzip; if it ever feels slow, the generated `*_pages` could be excluded from indexing (not from the site).
-- The 5 build warnings about `img/REPLACE_*.png` are the known screenshot placeholders in the Ranked Robin cases, not site breakage.
+- **The build is warning-free** as of 2026-07-29. It used to emit 5 warnings for `img/REPLACE_*.png` — uncaptured screenshot placeholders on the Ranked Robin case pages — which rendered as broken images on the site; those shots are now captured (`05_Ranked_Robin/*/img/<bvid>_*.png`). If `REPLACE_*` warnings reappear, they mean the same thing: a page references a screenshot nobody took yet. Placeholders that are **commented out** (as on `teaching_runoff_reversal.md` and the two `STAR_reporting` pages) don't warn and don't break the site — they're inert until someone captures the image.
 
 ## The rename (2026-07-16)
 

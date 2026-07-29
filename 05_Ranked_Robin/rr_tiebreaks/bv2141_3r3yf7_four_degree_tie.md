@@ -48,7 +48,7 @@ BetterVoting's [results](https://bettervoting.com/3r3yf7/results) confirm the ti
 - `tieBreakType: random`
 - `elected: [Ava]` (this draw); log: *"Ava picked in random tie-breaker, more robust tiebreaker not yet implemented."*
 
-![BV Ranked Robin result for 3r3yf7 — Ava and Bianca tie at 3 wins; Ava elected by random tiebreak](img/REPLACE_3r3yf7_result.png)
+<img alt="BetterVoting result page for 3r3yf7: headline 'Tied! — Ava won after tiebreaker', 81 voters, Voting Method: Ranked Robin. Head-to-head wins bars — Ava 70%, Bianca 70%, Cedric 50%, Deegan 50%, Eli 40%, Fabio 20%." src="img/3r3yf7_result.png" width="640">
 
 The frozen export ([`bv2141_3r3yf7_four_degree_tie_bv_export.json`](cases/bv2141_3r3yf7_four_degree_tie_bv_export.json)) records BV's random `perm` order `[Fabio, Eli, Cedric, Deegan, Ava, Bianca]` — Ava precedes Bianca, so Ava won this draw.
 

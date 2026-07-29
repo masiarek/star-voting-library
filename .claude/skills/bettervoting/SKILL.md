@@ -16,7 +16,23 @@ only what is BV-specific, so non-BV sessions don't pay for it.
   `img/r2pvc9_race_details.png`). The id prefix keeps images traceable and collision-free;
   the `img/` subfolder keeps the lesson folder uncluttered. (PyCharm pastes generic
   `img_N.png` into the folder root; **move into `img/` and rename** to this convention
-  when incorporating the case, and give each `![alt](…)` a descriptive caption.)
+  when incorporating the case, and give each image a descriptive caption.)
+  - **Don't screenshot by hand — use `tools_adam/bv_result_screenshot.py`** (headless
+    Chrome over the DevTools Protocol; PEP 723, so `uv run` needs no venv). It clips to
+    the actual result card, so the shot has no nav bar or footer and needs no cropping:
+    `uv run …/bv_result_screenshot.py <bvid> --shot result -o <case>/img/<bvid>_result.png`.
+    Presets: `result` (winner headline + chart), `race-details` (expands the accordion
+    and grabs the table), `chart`, `page`; or pass your own `--clip` / `--prep`. The
+    script's docstring documents the two traps (never `captureBeyondViewport` — it
+    restarts the chart animation and shoots empty bars; random-tiebreak results *are*
+    cached server-side, so a shot won't contradict the frozen export).
+  - **Embed with a sized `<img>`, not a bare `![]()`** — house style, so the picture
+    doesn't render full-bleed: `<img alt="…" src="img/<bvid>_result.png" width="640">`.
+    Rough widths: screenshot ≈640, panel ≈420, full ballot ≈460. Keep the PNG itself
+    around 1400–1600 px wide (`magick shot.png -resize 1600x -strip shot.png`).
+  - **Never leave a `REPLACE_*` placeholder pointing at an image you didn't capture** —
+    it renders as a broken image on the website and warns on every docs build. Either
+    take the shot or comment the reference out (a commented-out slot is inert).
 - **BV-backed teaching cases (e.g. the Runoff Reversal set) → `Runoff_NN_<descriptor>_<bvid>`.**
   Zero-padded sequence (`Runoff_01`, `Runoff_02`, …) for sort order + the teaching
   progression, a short descriptor, and the BetterVoting election id as the final suffix
