@@ -4497,7 +4497,57 @@ EX15B_SPEC = {
 }
 
 
-ELECTIONS: list = [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
+# --- BV2260 — Most matchups won is NOT the Condorcet winner ------------------------
+# The counterexample to "if you beat more candidates head-to-head than anyone else, you
+# must be the Condorcet winner." Cora wins 3 of 4 matchups — strictly the most, not tied
+# — and is elected, yet Amy beats Cora 12-6. No Condorcet winner exists at all (the Smith
+# set is all five). Built with NO drawn matchups on purpose, so raw wins and the Copeland
+# score coincide exactly and the claim fails on its own terms rather than on tie-credit.
+#
+# SINGLE RankedRobin race on purpose. First choices split 6-6-6-0-0 (Cora and Erin are
+# nobody's favourite), so Choose-One and RCV-IRV both deadlock three ways — their results
+# here are not reproducible and there would be nothing honest to freeze. The RR race IS
+# deterministic: Cora is the unique Copeland leader at 3 against 2/2/2/1, so no tiebreak
+# rung is reached and LH and BetterVoting cannot diverge.
+# LH-verified pre-creation; pref_voting cross-check AGREE.
+_MWC_CANDS = ["Amy", "Blake", "Cora", "Diego", "Erin"]
+#                    Blake>Erin>Amy>Cora>Diego / Amy>Cora>Erin>Diego>Blake / Diego>Cora>Blake>Erin>Amy
+_MWC_RANK = ([[3, 1, 4, 5, 2]] * 6) + ([[1, 5, 2, 4, 3]] * 6) + ([[5, 3, 2, 1, 4]] * 6)
+MOST_WINS_NOT_CONDORCET_SPEC = {
+    "test_id": "BV2260",
+    "title": "Winning the most head-to-head matchups is not the same as being the Condorcet winner",
+    "description": (
+        "Eighteen voters, five candidates, three equal blocs — a counterexample to a claim "
+        "that circulates in voting-reform discussion: 'if you win head-to-head against more "
+        "candidates than anyone else, you must be the Condorcet winner.' Cora wins three of "
+        "four matchups, strictly more than anyone else and not tied, and is elected. And Amy "
+        "beats Cora 12-6, so Cora is not the Condorcet winner — in fact nobody is, the whole "
+        "field is one cycle. What IS true is only the one-way version: a Condorcet winner "
+        "always has the uniquely highest Copeland score; the converse does not follow. "
+        "Note there is not a single drawn matchup here, so raw wins and the Copeland score "
+        "agree exactly — the claim fails on its own terms, not on a technicality about how "
+        "ties are credited. A second lesson comes free: Cora has ZERO first-choice votes "
+        "(they split 6-6-6-0-0) and wins anyway, because a round robin never asks who your "
+        "favourite is, only which of two you prefer. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/05_Ranked_Robin/most_wins_vs_condorcet/index.html"),
+    "races": [
+        {"title": "Student council president — every pair head-to-head",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 5,
+         "candidates": _MWC_CANDS, "ballots": _MWC_RANK},
+    ],
+    "enable_write_in": False,
+    "expected": ("Ranked Robin -> Cora, 3-1-0, Copeland 3 (unique leader; Amy, Blake and Erin "
+                 "on 2, Diego on 1). Cora beats Blake, Erin and Diego 12-6 each and LOSES to "
+                 "Amy 6-12. No Condorcet winner; Smith set is all five. Every matchup is 12-6, "
+                 "so every margin is identical and Minimax / Ranked Pairs / Schulze / Split "
+                 "Cycle all return a five-way tie — only Copeland decides. Deterministic, no "
+                 "tiebreak rung reached. Test ID BV2260."),
+}
+
+
+ELECTIONS: list = [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner
+# Previously: [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
 # Previously: [LUNCH_CHOOSE_ONE_SPEC]   # BV2257 — choose-one lunch, dead tie (created -> q2rkfm)
 # Previously: [TRADITIONAL_STAR_SPEC]  # BV2256 — traditional style, one STAR race (created)
 # Previously: [TRADITIONAL_SPEC]  # BV2255 — traditional style, four races (created; ORPHANED)

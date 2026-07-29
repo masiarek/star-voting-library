@@ -286,7 +286,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | monotonicity_irv_before | Non-monotonicity (RCV-IRV) — part 1: baseline, X win | 1 | single-race | 34 | IRV | LH-only |
 | monotonicity_star_after | Monotonicity — STAR counterpart (AFTER — X still win | 1 | single-race | 34 | STAR | LH-only |
 | monotonicity_star_before | Monotonicity — STAR counterpart (BEFORE — X wins) | 1 | single-race | 34 | STAR | LH-only |
-| most_wins_is_not_condorcet | Ranked Robin — winning the most matchups does NOT ma | 1 | single-race | 18 | RankedRobin | LH-only |
 | omr_opposition_decides | Ordered majority rule — the opposition decides the A | 1 | single-race | 100 | IRV | LH-only |
 | options_examples | Display-options reference — every reporting toggle ( | 1 | single-race | 100 | STAR | LH-only |
 | p3_manip_compromise_rr | P3 manipulated — the mild version: three adjacent sw | 1 | single-race | 7 | RankedRobin | LH-only |
@@ -368,6 +367,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | fxhw6g | BV2209 — Burial in Ranked Robin, 2 of 2 — fifteen vo | 1 | single-race | 42 | RankedRobin | BV |
 | fyy886 | BV2184 — The Team Lunch Vote — a beginner's STAR exa | 1 | single-race | 5 | STAR | BV |
 | g3f7r2 | BV2212 — STAR IIA under a Condorcet cycle — a losing | 1 | single-race | 23 | STAR | BV |
+| gg9qh9 | BV2260 — Winning the most head-to-head matchups is n | 1 | single-race | 18 | RankedRobin | BV |
 | gmfv4c | Edelman's 'Myth of the Condorcet Winner' 81 voters — | 1 | single-race | 81 | STAR | BV |
 | gvtg2h | BV2203 — The Transfer Machine, flag probe — same STV | 1 | single-race | 9 | STV | BV |
 | gyv2qt | BV2239 — Narrow Bands — a paint-swatch election scor | 1 | single-race | 24 | STAR | BV |
@@ -475,8 +475,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 233 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 222 | 24b623, 26khr3, 2hqmrd, 2jrfpg |
+| LH-only | 232 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| BV | 223 | 24b623, 26khr3, 2hqmrd, 2jrfpg |
 | BV (no yaml) | 78 | 2jrfpg, 2p33qq, 3grpbb, 3xgkck |
 | LH-only (exception) | 2 | copeland_half_credit_decides, dead_heat_lot_tiebreak |
 

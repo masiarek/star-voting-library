@@ -1,8 +1,10 @@
 # Ranked Robin — winning the most matchups does NOT make you the Condorcet winner
 
-*Generated from [`most_wins_is_not_condorcet.yaml`](../most_wins_is_not_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bgg9qh9_most_wins_is_not_condorcet.yaml`](../bgg9qh9_most_wins_is_not_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../00_start_here/RCV_Ranked_Robin) · **1 seat** · **Expected winner:** Cora
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gg9qh9) · **[results ↗](https://bettervoting.com/gg9qh9/results)** (election `gg9qh9`).
 
 **Official tie-break (lot) order:** Amy > Blake > Cora > Diego > Erin — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../00_start_here/STAR_Voting/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -11,7 +13,8 @@
 18 ranked ballots, 5 candidates, three equal blocs. A counterexample to a claim that circulates in voting-reform discussion: "if you win head-to-head against more candidates than anyone else, you must be the Condorcet winner."
 Cora wins THREE of four matchups — strictly more than anyone else, not tied — and finishes 3-1-0 with a Copeland score of 3 against everyone else's 2 or 1. Cora is elected. And Amy beats Cora 12-6. So Cora is not the Condorcet winner, and in fact there is no Condorcet winner here at all: the Smith set is all five candidates.
 Note what this does NOT depend on. There is not a single drawn matchup in the profile, so the raw win count and the Copeland score coincide exactly. The claim fails on its own terms — it is the converse error, not a technicality about how draws are credited. What IS true is the one-way version: a Condorcet winner always has the uniquely highest Copeland score. The converse does not follow.
-Second lesson, free with the first: Cora has ZERO first-choice votes. The three blocs lead with Blake, Amy and Diego, so first choices split 6-6-6-0-0. Cora is the broadly-acceptable second choice nobody puts first, which is precisely why Cora wins the round robin — and precisely why Choose-One and RCV-IRV cannot even produce an answer here without a coin flip (both deadlock three ways at 6).
+Second lesson, free with the first: Cora has ZERO first-choice votes. The three blocs lead with Blake, Amy and Diego, so first choices split 6-6-6-0-0. Cora is the broadly-acceptable second choice nobody puts first, which is precisely why Cora wins the round robin — and precisely why Choose-One and RCV-IRV cannot even produce an answer here without a coin flip (both deadlock three ways at 6). That is also why this is a single Ranked Robin race on BetterVoting rather than a method line-up: the other methods' results here are not reproducible.
+Live results: https://bettervoting.com/gg9qh9/results (election gg9qh9, BV2260). Triple-checked — the LH engine, BetterVoting's RankedRobin.ts (see the frozen _bv_export.json) and pref_voting's independent Copeland all elect Cora.
 
 ## Ballots
 
@@ -92,12 +95,12 @@ the honest answer to "who is even in contention?".
    More: 00_start_here/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/most_wins_is_not_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bgg9qh9_most_wins_is_not_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/most_wins_vs_condorcet/cases/most_wins_is_not_condorcet.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/most_wins_vs_condorcet/cases/bgg9qh9_most_wins_is_not_condorcet.yaml
 ```
 
 ## See also

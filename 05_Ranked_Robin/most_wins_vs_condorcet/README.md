@@ -1,5 +1,7 @@
 # Winning the most matchups does *not* make you the Condorcet winner
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gg9qh9) · **[results ↗](https://bettervoting.com/gg9qh9/results)** (election `gg9qh9`, BV2260).
+
 A claim that circulates in voting-reform discussion, and is easy to believe:
 
 > If you win head-to-head against more candidates than anyone else, you must be the Condorcet winner. So adding up head-to-head victories just describes the Condorcet winner.
@@ -131,16 +133,21 @@ There's also a small internal tension worth noticing: the same page advertises t
 
 ## Cross-checks
 
-- **LH engine** → Cora, Copeland 3, unique leader
-- **`pref_voting`** (independent implementation, Copeland as wins − losses) → Cora, `AGREE ✓ (unique Copeland winner)`
+Three independent implementations, one winner:
 
-Fully deterministic — Cora is the unique Copeland leader, so no tiebreak rung is reached and the result does not depend on lot order.
+- **LH engine** (this repo) → Cora, Copeland 3, unique leader
+- **`pref_voting`** (independent library, Copeland as wins − losses) → Cora, `AGREE ✓ (unique Copeland winner)`
+- **BetterVoting** (`RankedRobin.ts`, live election `gg9qh9`) → **Cora** — frozen in [`…_bv_export.json`](cases/bgg9qh9_most_wins_is_not_condorcet_bv_export.json)
+
+Fully deterministic: Cora is the unique Copeland leader, so no tiebreak rung is reached and the result does not depend on lot order. That matters here, because [LH and BetterVoting break Ranked Robin ties differently](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) — this case never reaches the rung where they'd disagree, which is why it was safe to put on BetterVoting at all.
 
 ## Run it yourself
 
 ```bash
-.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/most_wins_vs_condorcet/cases/most_wins_is_not_condorcet.yaml
+.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/most_wins_vs_condorcet/cases/bgg9qh9_most_wins_is_not_condorcet.yaml
 ```
+
+Want the whole count — full pairwise grid, Smith-set audit, ballot listing? See the full LH report → [`bgg9qh9_most_wins_is_not_condorcet`](cases/cases_pages/bgg9qh9_most_wins_is_not_condorcet.md), or the [`_tabulated` mirror](cases/cases_tabulated/bgg9qh9_most_wins_is_not_condorcet_tabulated.txt). Source: [`bgg9qh9_most_wins_is_not_condorcet.yaml`](cases/bgg9qh9_most_wins_is_not_condorcet.yaml).
 
 ## See also
 
