@@ -2,7 +2,7 @@
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md) · where it sits among the other ways a vote loses its power: [the problem, in four causes](the_problem_in_four_causes.md)
 
 ---
 

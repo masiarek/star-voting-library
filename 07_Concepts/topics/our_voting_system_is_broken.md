@@ -5,6 +5,8 @@ The **diagnosis** — the "why fix anything at all?" that comes *before* the spo
 
 *Prefer it spoken? The narrated pitch is [What's so good about STAR](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md); the slide version is the [Why STAR Voting deck](Why_STAR_Voting.md).*
 
+*Want the problem broken into separable pieces instead? [The problem, in four causes](the_problem_in_four_causes.md) splits it into four independent failures — the closed primary, the single mark, vote splitting, and a count that ignores what you wrote — each with its own fix, and a grid showing which reform fixes which. This page argues **that** Choose-One is worth replacing; that one maps **where** the influence is lost.*
+
 ---
 
 ## Is the system actually broken?
