@@ -1,6 +1,16 @@
-# 05_Ranked_Robin — Ranked Robin (RCV-RR / Copeland)
+# 05_Ranked_Robin — Ranked Robin (RCV-RR / Copeland) worked examples
 
 Equal Vote's method for **ranked** ballots: compare every pair of candidates head-to-head; the candidate who wins the most matchups wins (a round robin, like a sports league). It reads the *whole* ballot — no eliminations, no center squeeze — and elects the Condorcet winner whenever one exists.
+
+This folder is the **runnable examples** — small elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [Ranked Robin concepts folder](../00_start_here/RCV_Ranked_Robin/README.md). New to Ranked Robin? Read those first:
+
+- **[Why Ranked Robin](../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)** — the "why" before the "how": the friendly upgrade for ranked ballots.
+- **[Ranked Robin (the method)](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)** — the pairwise round-robin, the win-count, and how it differs from IRV.
+- **[Honest limits](../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md)** — cycles, no preference strength, burial — stated plainly.
+
+---
+
+## The examples
 
 | Where | What |
 |---|---|
@@ -13,7 +23,7 @@ Equal Vote's method for **ranked** ballots: compare every pair of candidates hea
 | [**Burial — RR's signature wart, worked**](burial/) | the sincere/buried pair (BV2208/BV2209): fifteen voters rank the Condorcet winner last, manufacture a cycle, and win the record tie — triple-checked, deterministic on both engines |
 | [STAR vs RR — 30 divergence samples](star_vs_rr_divergence/) | an auto-generated dump of 30 elections where STAR and RR elect different winners, spread across candidate field (3/5/7/10), electorate size, and grouped-vs-random structure — each YAML states its own cause (cycle vs dark horse), with RCV-IRV / Approval / Plurality on the same ballots (they scatter — no clean alignment). Empirical companion to the [simulation](../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation) |
 
-Same ballot, different count: RCV-IRV (elimination rounds) lives in [other methods](../06_Other/) and inside the comparison sets. Concept docs: [Ranked Robin](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).
+Same ballot, different count: RCV-IRV (elimination rounds) lives in [other methods](../06_Other/) and inside the comparison sets.
 
 **Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../00_start_here/about_this_repo/conversation_scripts.md).
 
