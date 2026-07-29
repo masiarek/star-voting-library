@@ -26,6 +26,12 @@ def _run(path):
                           capture_output=True, text=True, cwd=str(ENGINE_DIR))
 
 
+# The exact strict-Condorcet claim. Named because it is asserted from BOTH sides:
+# present when the winner really beats everyone, absent otherwise. A one-sided
+# `not in` check would stay green if the phrase were dropped from the engine.
+STRICT_WHY = "beats every opponent head-to-head — the Condorcet winner."
+
+
 def test_canonical_ranked_robin_file():
     """The repo's worked RR example dispatches to the round-robin and elects Ben."""
     r = _run(CANON)
@@ -207,9 +213,84 @@ def test_weak_condorcet_winner_is_not_called_the_condorcet_winner(tmp_path):
     r = _run(f)
     assert r.returncode == 0, r.stderr
     assert "Ranked Robin (RCV-RR): Cal" in r.stdout, r.stdout
-    assert "beats every opponent head-to-head" not in r.stdout, r.stdout
+    assert STRICT_WHY not in r.stdout, r.stdout
     assert "weak" in r.stdout and "not a strict one" in r.stdout, r.stdout
     assert "draws Ben" in r.stdout, r.stdout
+    # The _tabulated mirror is what gets pasted verbatim into teaching pages, so
+    # the corrected verdict has to reach it too — not just the on-screen echo.
+    hits = list(tmp_path.parent.rglob("weak_condorcet_tabulated.txt"))
+    assert hits, "no _tabulated mirror was written"
+    mirror = hits[0].read_text()
+    assert STRICT_WHY not in mirror
+    assert "not a strict one" in mirror
+
+
+def test_strict_condorcet_winner_keeps_its_wording(tmp_path):
+    """The other side of the weak-Condorcet guard: a winner who really does beat
+    everyone head-to-head (no losses AND no draws) must still be announced as the
+    Condorcet winner.
+
+    Without this, the weak-winner test above is one-sided — deleting the strict
+    claim from the engine outright would leave the suite green."""
+    f = tmp_path / "strict_cw.yaml"
+    f.write_text("voting_method: RankedRobin\nnum_winners: 1\nballots: |-\n"
+                 "  3:Ada>Ben>Cara\n  2:Ben>Cara>Ada\n  2:Cara>Ben>Ada\n")
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    # Ben beats Cara and Ada outright: 2-0-0, a strict Condorcet winner.
+    assert "Ranked Robin (RCV-RR): Ben" in out, out
+    assert "Ben        2–0–0" in out, out
+    assert STRICT_WHY in out, out
+    assert "weak" not in out.split("Winner —")[1], out
+
+
+def test_winner_with_losses_still_reports_most_wins(tmp_path):
+    """Third verdict branch: a winner who LOSES a matchup claims neither the strict
+    nor the weak Condorcet title — just the most head-to-head wins."""
+    f = tmp_path / "most_wins.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara, Dan]\nballots: |-\n"
+        "  2:Ada>Ben>Cara>Dan\n  1:Ben>Cara>Ada>Dan\n  1:Ben>Dan>Cara>Ada\n"
+        "  2:Dan>Cara>Ada>Ben\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    assert "Ranked Robin (RCV-RR): Ben" in out, out
+    assert "Ben        2–1–0" in out, out
+    assert "the most head-to-head wins (2)." in out, out
+    assert STRICT_WHY not in out, out
+    assert "weak" not in out.split("Winner —")[1], out
+
+
+def test_copeland_verdict_when_winner_has_both_a_loss_and_a_draw(tmp_path):
+    """Fourth verdict branch: losses AND draws together, where neither the
+    Condorcet wording nor the raw win count is exact.
+
+    Ada goes 2-1-1 — she LOSES to Cara — yet wins on Copeland 2.5, because the
+    half-credit for her draw edges her past three rivals sitting on 2.0. So the
+    report must fall through to naming the Copeland score and its formula, and
+    must not imply she beat everyone or led on raw wins (Cara and Dan match her
+    two wins)."""
+    f = tmp_path / "cope_verdict.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara, Dan, Eve]\nballots: |-\n"
+        "  9:Ada>Eve>Dan>Ben>Cara\n  8:Cara>Ben>Ada>Eve>Dan\n"
+        "  7:Dan>Ben>Cara>Ada>Eve\n  6:Cara>Ada>Dan>Eve>Ben\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    out = r.stdout
+    assert "Ranked Robin (RCV-RR): Ada" in out, out
+    assert "Ada        2–1–1" in out, out
+    # The premise: she lost a matchup, and rivals tie her on raw wins.
+    assert "Cara       2–2–0" in out, out
+    assert "the highest Copeland score (2.5 = wins + ½·ties)." in out, out
+    assert STRICT_WHY not in out, out
+    assert "the most head-to-head wins" not in out, out
 
 
 def test_equal_rankings_are_ties(tmp_path):
