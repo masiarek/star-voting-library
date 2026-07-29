@@ -57,6 +57,33 @@ The true statement and the false one look almost identical, and only one directi
 
 That's the whole error: reading a one-way implication as an equivalence. It's an easy slip precisely because in the great majority of real elections a Condorcet winner does exist, and there the two descriptions genuinely do coincide.
 
+## Claims, checked
+
+These circulate together in reform discussion, usually in good faith and usually mixed in with correct statements. Sorted by verdict:
+
+| Claim | Verdict |
+|---|---|
+| "Adding up head-to-head victories just ends up describing the Condorcet winner." | **False** |
+| "If you win head-to-head against more candidates than anyone else, you must be the Condorcet winner." | **False** |
+| "The Copeland score subtracts pairwise losses." | **True**, as one of two conventions |
+| "A Condorcet winner always has the highest Copeland score." | **True** — and *uniquely* highest |
+| "A candidate can have the uniquely highest Copeland score and not be a Condorcet winner." | **True** — this page is the example |
+| "Ranked Robin is Copeland with Borda Count as a tiebreaker." | **Outdated** |
+
+Taking them one at a time:
+
+**"Adding up head-to-head victories just describes the Condorcet winner"** and **"most wins ⇒ Condorcet winner"** are the same error stated two ways, and the profile above refutes both: Cora has strictly the most wins and loses to Amy. The two descriptions coincide *whenever a Condorcet winner exists*, which is most of the time — that's why the claim feels safe. But "counting wins" and "identifying an undefeated candidate" are different operations, and they part company exactly when no one is undefeated. A method that merely counted wins wouldn't need a name; the reason Copeland is a *method* is that it still returns an answer when the Condorcet winner doesn't exist.
+
+**"Copeland subtracts pairwise losses"** is correct — that's the `wins − losses` convention. The other convention is `wins + ½·ties`, which is what this repo's engine, BetterVoting and `pref_voting` all print. They're affine transforms of each other, so they always rank identically. Worth knowing only so that seeing two formulas doesn't read as two sources disagreeing. (Neither equals the raw *win count* once draws exist — see [the companion case](../copeland_score/).)
+
+**"A Condorcet winner always has the highest Copeland score"** is true, and the sharper version is worth stating: *uniquely* highest, always, with no possibility of a tie at the top. A Condorcet winner takes all n−1 matchups; everyone else has lost at least that one, so nobody else can exceed n−2.
+
+**"A candidate can have the uniquely highest Copeland score without being a Condorcet winner"** is the correction that resolves the whole confusion, and it is exactly what this page demonstrates. Cora scores 3 against everyone else's 2 or 1 — unique, not tied — and is still beaten by Amy.
+
+**"Ranked Robin is Copeland with Borda Count as a tiebreaker"** described an earlier specification. The Borda tiebreak has since been struck from Equal Vote's own description, and neither implementation we test against uses it: this repo's engine breaks ties by total margin, then by pre-published lot order; BetterVoting's `RankedRobin.ts` uses head-to-head, then random. [Those two ladders diverge](../../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md), which is its own documented case — but neither ladder is Borda.
+
+One more that's defensible but softer than it sounds: **"all Condorcet methods have roughly the same VSE."** True in aggregate, and true *because* the disagreements are rare — they agree by definition whenever a Condorcet winner exists. It isn't evidence that the methods are interchangeable. This page and its companion are both profiles where they diverge completely: here four of them return a five-way tie while Copeland decides; there Copeland is overruled by every one of them.
+
 ## What the counterexample deliberately avoids
 
 There is **not a single drawn matchup** in this profile. Every pair has a clear winner, so `wins + ½·ties` and the raw win count are identical here.
