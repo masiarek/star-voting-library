@@ -94,7 +94,7 @@ Same ballots, and **Ranked Pairs stands alone at Ben** while every other rule le
 
 ## Where Ranked Robin and STAR fit
 
-- **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak** — a pragmatic choice: cycles are rare, so the simple win-loss count plus a sum-of-margins fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins, Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (aka Consensus Voting) — RCV-RR](ranked_robin.md).
+- **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak** — a pragmatic choice: cycles are rare, so the simple win-loss count plus a sum-of-margins fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins, Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (RCV-RR / Copeland)](ranked_robin.md).
 - **STAR is *not* a Condorcet method** and doesn't try to resolve cycles at all. Its score-then-runoff just produces a winner, which *can* differ from the Condorcet winner ([BV2156 (STAR's miss)](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md)). The trade: these ranked methods capture *pure majority preference* but ignore *intensity*; STAR captures intensity (how much, not just which) at the cost of strict Condorcet guarantees. Neither is "the" right answer — it's a values choice.
 
 ## How often do cycles even happen?

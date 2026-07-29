@@ -9,7 +9,7 @@ Which word to use when. The whole thing untangles once you separate **the ballot
 - **RCV (Ranked-Choice Voting)** = a *ballot type*: the voter ranks candidates (1st, 2nd, 3rd…). It's a **family**, not a single method.
 - **IRV (Instant-Runoff Voting)** = *one way to count* a ranked ballot: eliminate the lowest, transfer, repeat. The single-winner method people usually mean.
 - The **same ranked ballot** can be counted other ways:
-  - **Ranked Robin** — a Condorcet / "consensus" tabulation (most head-to-head wins). Sometimes written **RCV-RR** or "Consensus Voting."
+  - **Ranked Robin** — a Condorcet / "consensus" tabulation (most head-to-head wins). Sometimes written **RCV-RR**.
   - **STV (Single Transferable Vote)** — the *proportional, multi-winner* tabulation.
 
 So when someone says "RCV," they've named the *ballot* but implied a *count*. In the US, "RCV" has been hijacked to mean **IRV specifically** — that's the abuse.
@@ -27,7 +27,7 @@ flowchart LR
     R --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer ·<br/>order-dependent · NOT summable</i>"]
     R --> POS["<b>Positional</b><br/><i>points by rank position</i>"]
 
-    COND --> RR["<b>Ranked Robin</b> (RCV-RR)<br/>aka 'Consensus Voting'<br/>= Copeland + margin tiebreak"]
+    COND --> RR["<b>Ranked Robin</b> (RCV-RR)<br/>= Copeland + margin tiebreak"]
     COND --> RP["Ranked Pairs · aka Tideman"]
     COND --> SZ["Schulze · aka Beatpath"]
     COND --> MM["Minimax · aka Simpson–Kramer"]
@@ -58,7 +58,7 @@ The single biggest source of confusion is that one method has many names. This t
 | "RCV" (US / FairVote usage) | the eliminate-and-transfer single-winner method | **RCV-IRV** |
 | "Instant runoff", "Alternative Vote", "Hare" (single-winner) | the same eliminate-and-transfer method | **RCV-IRV** |
 | "Round-robin voting", "pairwise voting", "Condorcet" (used as *a* method) | the *family* that elects the head-to-head winner | **Condorcet methods** (a family, not one method) |
-| "Ranked Robin", "RCV-RR", "Consensus Voting" | Equal Vote's Copeland-plus-margin-tiebreak | **Ranked Robin** |
+| "Ranked Robin", "RCV-RR" | Equal Vote's Copeland-plus-margin-tiebreak | **Ranked Robin** |
 | "Consensus Choice" | Better Choices for Democracy's Condorcet variant (different cycle rule) | a **Condorcet cousin** — *not* identical to Ranked Robin |
 | "Copeland" | the win-minus-loss algorithm underneath Ranked Robin | **Copeland** |
 | "Beatpath" → Schulze · "Tideman" → Ranked Pairs · "Grand Junction" → Bucklin | older / academic names | as named |

@@ -7,7 +7,7 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 ## The method
 
 - [**Why Ranked Robin**](why_ranked_robin.md) — the positive case: the friendly upgrade for ranked ballots (start here for the "why").
-- [Ranked Robin (aka Consensus Voting)](ranked_robin.md) — the pairwise round-robin and the win-count
+- [Ranked Robin](ranked_robin.md) — the pairwise round-robin and the win-count
 - [A naming decoder](condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what
 - [What should we call this method?](what_to_call_this_method.md) — the naming options weighed, pros and cons: the brand, the algorithm, the family, and what each choice costs
 - [A blank is ranked *last*](rr_blank_means_last.md) — what a blank means, why rank *numbers* don't matter (it's not Borda), and the universal ballot wording

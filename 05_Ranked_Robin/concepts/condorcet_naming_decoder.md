@@ -21,7 +21,7 @@ They're at *different levels of generality* — a category, a specific method in
 | **Pairwise / paired-comparison** | the **family** (plain-descriptive) | general | — |
 | **Copeland's method** | the **algorithm** — most head-to-head wins (½ per tie) | academic; originated by [Ramon Llull](https://en.wikipedia.org/wiki/Ramon_Llull) ~1299 | [Wikipedia](https://en.wikipedia.org/wiki/Copeland%27s_method) |
 | **Ranked Robin** (**RCV-RR**) | a **branded method** — Copeland + a defined cycle tiebreak (sum of win margins) | [Equal Vote Coalition](https://equal.vote) (name coined by Sara Wolk, 2021) | [electowiki](https://electowiki.org/wiki/Ranked_Robin) · [equal.vote](https://www.equal.vote/ranked_robin) |
-| **Consensus Voting** | a **brand alias** for Ranked Robin | [Equal Vote Coalition](https://equal.vote) — STAR-adjacent marketing | [equal.vote](https://www.equal.vote/ranked_robin) |
+| ~~**Consensus Voting**~~ | **unsourced — do not use.** This library listed it for months as an Equal Vote alias. It is not on [equal.vote](https://www.equal.vote/ranked_robin), not on [electowiki's Ranked Robin page](https://electowiki.org/wiki/Ranked_Robin), and not used by Better Choices for Democracy (who say *Consensus Choice*). Checked 2026-07-29. Almost certainly a garbling of **Consensus Choice** below. | — | — |
 | **Consensus Choice** | a **sibling brand** (Copeland-family, different tiebreak) | [Better Choices for Democracy](https://www.betterchoices.vote) | [betterchoices.vote](https://www.betterchoices.vote/consensus-choice) · [FAQ (the cycle rule)](https://www.betterchoices.vote/faqs) |
 | ~~**RCV-RR**~~ | *this repo's* house shorthand — **not** an external term | — | — |
 

@@ -4,7 +4,7 @@
 
 ---
 
-"Ranked Choice Voting" (RCV) is **not a single voting method** — it's an umbrella term for any system that uses ranked ballots. The family includes Instant Runoff Voting (IRV), the Single Transferable Vote (STV) for multi-winner races, Condorcet methods (Schulze, Ranked Pairs, Minimax), Ranked Robin (Consensus Voting), Borda Count, and Bucklin. These methods can produce **different winners from the very same ballots**, so treating "RCV" as one thing obscures real and consequential differences.
+"Ranked Choice Voting" (RCV) is **not a single voting method** — it's an umbrella term for any system that uses ranked ballots. The family includes Instant Runoff Voting (IRV), the Single Transferable Vote (STV) for multi-winner races, Condorcet methods (Schulze, Ranked Pairs, Minimax), Ranked Robin, Borda Count, and Bucklin. These methods can produce **different winners from the very same ballots**, so treating "RCV" as one thing obscures real and consequential differences.
 
 > **Not even ranked:** Scoring methods like Approval Voting and STAR Voting are often lumped in with "RCV" too, but they don't use ranked ballots at all — voters score or approve candidates rather than ordering them — so they sit outside the ranked-voting family entirely.
 >
@@ -22,7 +22,7 @@ In the US specifically, the advocacy group FairVote popularized "Ranked Choice V
 
 When people say "RCV," they usually mean **IRV-Hare**: count everyone's first choices, eliminate the candidate with the fewest, redistribute those ballots to their next choice, and repeat until someone has a majority. (Other elimination rules exist — Coombs' method drops the candidate with the *most* last-place votes — which is why the fully precise label is **RCV-IRV (Hare)**.)
 
-This sequential, plurality-style elimination is also IRV's weak point: it can squeeze out a moderate "compromise" candidate who would beat every rival head-to-head, and it doesn't fully solve the spoiler problem that other ranked methods handle better. By contrast, methods that don't rely on sequential elimination tend to handle this far better: Condorcet methods like **RCV-RR** (Ranked Robin / Consensus Voting) elect the candidate who beats every other head-to-head, and scoring methods like **STAR** and **Approval** let voters support several candidates at once, so similar candidates no longer split each other's support.
+This sequential, plurality-style elimination is also IRV's weak point: it can squeeze out a moderate "compromise" candidate who would beat every rival head-to-head, and it doesn't fully solve the spoiler problem that other ranked methods handle better. By contrast, methods that don't rely on sequential elimination tend to handle this far better: Condorcet methods like **RCV-RR** (Ranked Robin) elect the candidate who beats every other head-to-head, and scoring methods like **STAR** and **Approval** let voters support several candidates at once, so similar candidates no longer split each other's support.
 
 ---
 

@@ -1,4 +1,4 @@
-# Ranked Robin (aka Consensus Voting) — RCV-RR
+# Ranked Robin (RCV-RR / Copeland)
 
 *A ranked method that compares every candidate head-to-head and elects whoever beats the most rivals. Same ranked ballot as IRV, but a completely different — and far more transparent — way of counting it.*
 
@@ -6,11 +6,11 @@
 
 ---
 
-**Ranked Robin** (also marketed as **Consensus Voting**, and abbreviated **RCV-RR**) is a **Condorcet** method: it's a round-robin tournament among the candidates. You rank the candidates — and crucially, **you may rank candidates equally** — then the count compares **every pair** of candidates head-to-head and elects the one who **wins the most matchups** (ties broken by the sum of win margins).
+**Ranked Robin** (abbreviated **RCV-RR**) is a **Condorcet** method: it's a round-robin tournament among the candidates. You rank the candidates — and crucially, **you may rank candidates equally** — then the count compares **every pair** of candidates head-to-head and elects the one who **wins the most matchups** (ties broken by the sum of win margins).
 
 Because it's computed entirely from the **pairwise matrix** (for each pair, how many voters preferred A to B), it has the properties IRV lacks while using essentially the same ballot voters already know.
 
-> **Sibling branding — "Consensus Choice."** The same core Condorcet idea is promoted by *Better Choices for Democracy* as **Consensus Choice** (often paired with a "Top 4" open primary front end). It allows equal ranks, compares every pair head-to-head, and is precinct-summable. It differs from Equal Vote's Ranked Robin mainly in packaging and in its **cycle-resolution rule** ("Most Wins, Smallest Loss" vs. RR's sum-of-margins). Treat "Ranked Robin," "Consensus Voting," and "Consensus Choice" as close cousins in the Condorcet family, not identical algorithms.
+> **Sibling branding — "Consensus Choice."** The same core Condorcet idea is promoted by *Better Choices for Democracy* as **Consensus Choice** (often paired with a "Top 4" open primary front end). It allows equal ranks, compares every pair head-to-head, and is precinct-summable. It differs from Equal Vote's Ranked Robin mainly in packaging and in its **cycle-resolution rule** ("Most Wins, Smallest Loss" vs. RR's sum-of-margins). Treat "Ranked Robin" and "Consensus Choice" as close cousins in the Condorcet family, not identical algorithms.
 
 ## Names & family (genus vs. species)
 
@@ -18,7 +18,7 @@ These terms are related but *not* interchangeable — they sit at different leve
 
 - **Round-robin voting** — the **general family**: any ranked method that compares every pair head-to-head (a.k.a. paired-comparison / tournament / **Condorcet** methods). The umbrella term. → [Round-robin voting (Wikipedia)](https://en.wikipedia.org/wiki/Round-robin_voting)
 - **Copeland's method** — the **algorithm** underneath: most head-to-head wins, ties count ½. → [Copeland's method (Wikipedia)](https://en.wikipedia.org/wiki/Copeland%27s_method)
-- **Ranked Robin (RCV-RR / "Consensus Voting")** — the **branded method**: essentially Copeland plus a defined cycle tiebreak (sum of win margins). The name was coined by Sara Wolk (Equal Vote Coalition) in 2021. The *idea* is ancient, though — the earliest known Condorcet method is Ramon Llull's *Ars Electionis* (1299), rediscovered by Condorcet and later by Copeland; a closely related Condorcet-with-margin method was popularized by Partha Dasgupta and Nobel laureate Eric Maskin in 2004. → [electowiki](https://electowiki.org/wiki/Ranked_Robin) · [Equal Vote](https://www.equal.vote/ranked_robin)
+- **Ranked Robin (RCV-RR)** — the **branded method**: essentially Copeland plus a defined cycle tiebreak (sum of win margins). The name was coined by Sara Wolk (Equal Vote Coalition) in 2021. The *idea* is ancient, though — the earliest known Condorcet method is Ramon Llull's *Ars Electionis* (1299), rediscovered by Condorcet and later by Copeland; a closely related Condorcet-with-margin method was popularized by Partha Dasgupta and Nobel laureate Eric Maskin in 2004. → [electowiki](https://electowiki.org/wiki/Ranked_Robin) · [Equal Vote](https://www.equal.vote/ranked_robin)
 
 So: *round-robin voting* (family) ⊃ *Copeland* (algorithm) ≈ *Ranked Robin* (the branded Copeland-plus-tiebreak). When you mean the family, say "round-robin" or "Condorcet"; when you mean this specific method, say "Ranked Robin." **On sources:** electowiki is the canonical definition for the "Ranked Robin" name, but it's a community wiki and Equal-Vote-adjacent — cite it for definitions, and lean on academic sources for critical/limits claims (see [honest limits](RCV_RR_honest_limits.md)). One nuance electowiki now records: in 2025 the term's originator clarified that she always intended **"Ranked Robin" as an approachable synonym for "Condorcet method"** in general — *not* one fixed algorithm. So the specific Copeland-plus-margins procedure on this page is the Equal Vote *default recommendation*, not the whole meaning of the name — which is exactly why "Ranked Robin" sits at the species level while "Condorcet" is the genus.
 
@@ -164,18 +164,18 @@ Add `options: { show_matrix: true }` to pull that matrix onto the screen too —
 
 > **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
 
-**Copeland = Ranked Robin = Consensus Voting = RCV-RR** — *the same core method wearing different brand names from different proponent groups:*
+**Copeland = Ranked Robin = RCV-RR** — *the same core method wearing different brand names from different proponent groups:*
 
 | Name | Who calls it that |
 |------|-------------------|
 | **[Copeland's method](https://en.wikipedia.org/wiki/Copeland%27s_method)** | academic social-choice literature (order candidates by pairwise **wins − losses**) |
 | **Ranked Robin** | the **Equal Vote Coalition** |
-| **Consensus Voting / Consensus Choice** | **Better Choices for Democracy** |
+| **Consensus Choice** | **Better Choices for Democracy** |
 | **RCV-RR** | this repo's house compound (ranked ballot + Ranked-Robin count) |
 
 They're the **same idea**: elect whoever wins the most head-to-head matchups (the Condorcet/Copeland winner). They agree on the winner whenever a Condorcet winner exists — i.e. almost always — and differ *only* in the **cycle/tie-break rule** (Ranked Robin: sum of margins; Consensus Choice: "Most Wins, Smallest Loss"; textbook Copeland: by score). So treat them as one method with several brands, not byte-identical algorithms.
 
-> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Voting / Consensus Choice** once as the advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../07_Concepts/tips/TIPS_terminology.md).)
+> **House naming (which word when).** Say **Ranked Robin (RR)** to people — it's the friendliest adopted name. Use **RCV-RR** in method comparisons and engine output, exactly parallel to **RCV-IRV** (ranked ballot + which count). Use **Copeland** when talking to the *engine* or academics (it's what `pref_voting` calls it). Mention **Consensus Choice** once as the sibling advocacy brand, then move on. (Same meet-them-where-they-are rule as [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../../07_Concepts/tips/TIPS_terminology.md).)
 
 ```bash
 # run Copeland (= Ranked Robin) on any election, beside the other methods:

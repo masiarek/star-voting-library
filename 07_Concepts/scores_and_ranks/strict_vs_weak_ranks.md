@@ -52,7 +52,7 @@ Forcing a **strict** order makes voters invent distinctions they don't feel — 
 - [Scores vs. ranks — don't confuse ranks and ratings](scores_vs_ranks.md)
 - [Scoring methods vs. ranked voting](../topics/scoring-methods-vs-ranked-voting.md)
 - [RCV vs. IRV vs. RCV-IRV — terminology](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
-- [Ranked Robin (Consensus Voting)](../../05_Ranked_Robin/concepts/ranked_robin.md) — the Condorcet method that *does* allow equal ranks and compares pairwise
+- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — the Condorcet method that *does* allow equal ranks and compares pairwise
 - [Is IRV "just plurality"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md) — why elimination is a first-choice plurality test (and where that claim overreaches)
 - [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — what strict-rank IRV does to a strong compromise candidate
 - [Is RCV "simple"? (201)](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md)

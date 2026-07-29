@@ -13,7 +13,7 @@
 | Core count | every pair head-to-head; most wins (Copeland) | every pair head-to-head; most wins (Copeland) |
 | **Cycle / tie rule** | **sum of win margins** | **"Most Wins, Smallest Loss"** |
 | **Scope of the proposal** | **a tabulation method** | **a multi-step reform package** (open qualifying election → 4+ advance → Consensus Choice general) |
-| Other names | Consensus Voting, RCV-RR, Copeland | — |
+| Other names | RCV-RR, Copeland | — |
 
 **Whenever a Condorcet winner exists, they elect the same person — always, identically.** They can only diverge in a cycle. So "same method" is a fair everyday summary and a wrong technical one, which is why the repo's house phrasing is *one method with several brands, not byte-identical algorithms*.
 

@@ -30,7 +30,7 @@ Not every glossary term needs its own page — most are fine as a one-liner in [
 | [**Approval + Top-Two**](../04_Approval/concepts/approval_top_two.md) | the St. Louis package — Approval primary, top-two general; why the runoff must be a *second* election (0/1 ballots re-counted head-to-head just echo the approval count), and how STAR folds it into one ballot |
 | [**Strict vs. weak ranks**](scores_and_ranks/strict_vs_weak_ranks.md) | many ranked methods allow equal ranks & compare pairwise — RCV-IRV does neither |
 | [**"Preference" (a slippery word)**](topics/preference.md) | everyday opinion vs. technical "ranking"; why "Preferential Voting" is a misnomer |
-| [**Ranked Robin / RCV-RR (Consensus Voting; = Copeland)**](../05_Ranked_Robin/concepts/ranked_robin.md) | a Condorcet method: ranks + equal ranks, every pair compared head-to-head; tabulable via the pref_voting engine |
+| [**Ranked Robin / RCV-RR (= Copeland)**](../05_Ranked_Robin/concepts/ranked_robin.md) | a Condorcet method: ranks + equal ranks, every pair compared head-to-head; tabulable via the pref_voting engine |
 | [**Ranked Robin (RCV-RR) — honest limits**](../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) | Condorcet cycles need a resolution rule; no preference strength (bland-compromise winner); burial |
 | [**Proportional Representation**](../03_STAR_PR/concepts/) ([STV vs STAR-PR](../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md) · [STAR-PR methods](../03_STAR_PR/concepts/STAR_PR/)) | multi-seat — coalitions get proportional seats; STV ≈ STAR-PR, Bloc differs (301) |
 | [**Tabulation, step by step (201)**](topics/tabulation_star_vs_irv.md) | the same ballots counted both ways — STAR's 2 steps vs IRV's elimination rounds |

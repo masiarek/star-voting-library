@@ -2,7 +2,7 @@
 
 *For anyone who already loves ranked ballots. Ranked Robin keeps the exact ballot you know — rank the candidates in your honest order — and counts it so the candidate a **majority prefers over everyone** wins. Same ballot, a count that finds the consensus. This is the positive case; the [method page](ranked_robin.md) has the mechanics and the [honest limits](RCV_RR_honest_limits.md) are stated plainly at the end.*
 
-→ Companion: [Why STAR Voting](../../07_Concepts/topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family. Heard this method called Copeland, Condorcet, round-robin voting, or Consensus Voting? Same neighborhood, different levels of the name — the [naming decoder](condorcet_naming_decoder.md) sorts them out.
+→ Companion: [Why STAR Voting](../../07_Concepts/topics/Why_STAR_Voting.md) (the scored ballot). Both aim past Choose-One; this page is for the ranked-ballot family. Heard this method called Copeland, Condorcet, or round-robin voting? Same neighborhood, different levels of the name — the [naming decoder](condorcet_naming_decoder.md) sorts them out.
 
 ---
 

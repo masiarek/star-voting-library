@@ -46,11 +46,15 @@ That last comparison should sting for us in particular, because **this repo's en
 
 **Against.** It is the least self-explanatory word of the lot to a general audience, it is a *family* rather than one method (so it under-specifies exactly when we need to be exact), and it too is a person's name.
 
-### "Consensus Voting" / "Consensus Choice"
+### "Consensus Choice" — and the phantom "Consensus Voting"
+
+**First, a correction this library owes.** Until 2026-07-29 these pages listed **"Consensus Voting"** as an Equal Vote alias for Ranked Robin, and the naming decoder cited equal.vote for it. That was wrong. The term appears **nowhere** on [equal.vote](https://www.equal.vote/ranked_robin), nowhere on [electowiki's Ranked Robin page](https://electowiki.org/wiki/Ranked_Robin), and nowhere on Better Choices for Democracy's site — every "consensus" on those pages is the ordinary English word. It was almost certainly a garbling of **Consensus Choice**, and it had propagated into a dozen pages including the canonical terminology tips. Treat "Consensus Voting" as a name nobody actually uses.
+
+**Consensus Choice** is real, and it belongs to someone else: it is [Better Choices for Democracy](https://www.betterchoices.vote/faqs)'s brand, usually paired with a "Top 4" primary.
 
 **For.** "Consensus" describes the *goal* in a word a voter understands, and it is the friendliest of the options to a non-technical audience.
 
-**Against.** It is not an escape from branding — "Consensus Voting" is *also* Equal Vote's label, and **Consensus Choice** is a different organisation's sibling brand ([Better Choices for Democracy](https://www.betterchoices.vote/faqs)) with a *different cycle rule*. Using "consensus" invites a collision between two proposals that are not the same algorithm. It also quietly asserts the method's central claim — that its winner is the consensus — as part of its name, which is exactly the kind of loaded label we flag when other camps do it.
+**Against.** It is not ours to adopt, and it is not the same algorithm — Consensus Choice resolves cycles by "Most Wins, Smallest Loss" where Ranked Robin sums margins, so borrowing the word merges two proposals that genuinely differ. It also quietly asserts the method's central claim — that its winner *is* the consensus — inside its own name, which is exactly the kind of loaded label we flag when other camps do it.
 
 ### "RCV-RR"
 
