@@ -74,6 +74,6 @@ Every file writes a full audit report to its `_tabulated.txt` sibling — watch 
 - **Concept docs:** [the STAR Voting concepts folder](concepts/README.md) · the curriculum: [CURRICULUM.md](../07_Concepts/CURRICULUM.md)
 - **STAR vs other methods** (RCV-IRV, Approval, Score): [the method-comparisons folder](../method_comparisons/)
 - **Multi-winner STAR:** [Bloc STAR](../02_STAR_Bloc/) · [Proportional STAR](../03_STAR_PR/)
-- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](concepts/reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](concepts/reference/why_do_you_love_STAR_Voting.md) · [full index](../07_Concepts/about_this_repo/conversation_scripts.md)
+- **Conversation scripts** (Larry ↔ Adam): [What's so good about STAR](concepts/reference/whats_so_good_about_STAR_Voting.md) · [full index](../07_Concepts/about_this_repo/conversation_scripts.md)
 
 # file: README.md

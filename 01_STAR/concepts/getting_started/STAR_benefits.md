@@ -54,5 +54,5 @@ Cast a STAR ballot right now at **[BetterVoting.com](https://bettervoting.com)**
 
 - **How it works:** [STAR — start here](../STAR_start_here.md) · [STAR's hybrid nature](../the_count/STAR_hybrid_nature.md)
 - **The complete case + every objection answered:** [Why STAR Voting](../../../07_Concepts/topics/Why_STAR_Voting.md)
-- **Narrated, for presenting:** [What's so good about STAR](../reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../reference/why_do_you_love_STAR_Voting.md)
+- **Narrated, for presenting:** [What's so good about STAR](../reference/whats_so_good_about_STAR_Voting.md)
 - **External:** [Equal Vote Coalition — STAR overview](https://www.equal.vote/star)

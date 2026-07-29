@@ -339,7 +339,12 @@ plugins:
         00_start_here/STAR_Voting/reference/are_equal_score_votes_discounted.md: 01_STAR/concepts/reference/are_equal_score_votes_discounted.md
         00_start_here/STAR_Voting/reference/glossary_STAR.md: 01_STAR/concepts/reference/glossary_STAR.md
         00_start_here/STAR_Voting/reference/whats_so_good_about_STAR_Voting.md: 01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md
-        00_start_here/STAR_Voting/reference/why_do_you_love_STAR_Voting.md: 01_STAR/concepts/reference/why_do_you_love_STAR_Voting.md
+        # why_do_you_love_STAR_Voting.md was retired 2026-07-29 (a first-person script
+        # putting personal statements in Adam's mouth). The old published URL must keep
+        # resolving — redirects here are permanent — so it now lands on the flagship
+        # script it used to hand off to.
+        00_start_here/STAR_Voting/reference/why_do_you_love_STAR_Voting.md: 01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md
+        01_STAR/concepts/reference/why_do_you_love_STAR_Voting.md: 01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md
         00_start_here/STAR_Voting/reference/wolk_quinn_ogren_2023.md: 01_STAR/concepts/reference/wolk_quinn_ogren_2023.md
         00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff.md: 01_STAR/concepts/the_count/STAR_Automatic_Runoff.md
         00_start_here/STAR_Voting/the_count/STAR_Automatic_Runoff_slides.md: 01_STAR/concepts/the_count/STAR_Automatic_Runoff_slides.md

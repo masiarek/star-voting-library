@@ -88,7 +88,7 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 
 ## Ready-made materials
 
-- **Scripts:** [What's so good about STAR](../reference/whats_so_good_about_STAR_Voting.md) · [Why do you love STAR](../reference/why_do_you_love_STAR_Voting.md) (conversation-style walkthroughs) · [the Automatic Runoff, as slides](../the_count/STAR_Automatic_Runoff_slides.md)
+- **Scripts:** [What's so good about STAR](../reference/whats_so_good_about_STAR_Voting.md) (a conversation-style walkthrough) · [the Automatic Runoff, as slides](../the_count/STAR_Automatic_Runoff_slides.md)
 - **The ballot image, the lunch diagram, and worked pages** in [STAR — start here](../STAR_start_here.md); the [FAQ](../getting_started/STAR_FAQ.md) and [second-round FAQ](../the_count/STAR_second_round_FAQ.md) for the questions that come up
 - **Videos & official guides:** [STAR resources](../reference/STAR_resources.md)
 - **Print paper ballots & run a hands-on demo:** [Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md) (QR, serial receipts, write-ins) + [Count a STAR election by hand](count_star_by_hand.md)
