@@ -6,7 +6,11 @@
 
 *The ballot ([Equal Vote](https://www.equal.vote/ranked_robin)) — note Carmen and David share 2nd place: unlike RCV-IRV, Ranked Robin lets you rank candidates equally.*
 
-**Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
+**Ranked Robin is a brand name, not a new method.** Underneath it is **Copeland's method** — compare every pair of candidates head-to-head, and whoever wins the most matchups wins — plus a defined rule for breaking cycles. Equal Vote's Sara Wolk coined the label in 2021 to make an old idea sayable; the idea itself dates to Ramon Llull in **1299**. Worth knowing, because "Ranked Robin" sounds like an invention and isn't: it's ~700-year-old Condorcet machinery with friendlier packaging.
+
+What it does is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
+
+*The same thing also travels as **Consensus Voting**, has a sibling brand in **Consensus Choice**, and sits inside the **Condorcet** / round-robin family. Which word means what — and why Copeland is `≈` rather than `=` Ranked Robin — is sorted out in [the naming decoder](concepts/condorcet_naming_decoder.md).*
 
 This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
 
