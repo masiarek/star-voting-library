@@ -1,6 +1,10 @@
 .idea/
-.claude/
+.claude/*
 .junie/
+
+# ...but DO version the shared Claude skills (on-demand context, part of house style).
+# Worktrees, launch.json and settings.local.json stay ignored (machine-local).
+!.claude/skills/
 
 # Converter staging output (regenerable from the JSON sources)
 **/_generated/
