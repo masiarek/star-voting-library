@@ -713,6 +713,15 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2258 — Which method is this? — the Yes/No count (Approval): Blair 28 of 35 | Approval | 3 | **Blair** |
 | BV2258 — The same 35 ballots head-to-head — Blair beats Cosmo 13-7, 15 no preference | STAR | 3 | **Blair** |
 
+## BV2261 — A three-way Ranked Robin tie: the random tiebreak is recorded, not lost
+
+**Election** [`y2fbpc`](https://bettervoting.com/y2fbpc/results) · **2 races** · **6 ballots** · [frozen export](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2261 — Mural commission — a perfectly balanced electorate (every pair draws) | RankedRobin | 3 | **Anika** |
+| BV2261 — Mural commission — a Condorcet cycle (every pair has a winner) | RankedRobin | 3 | **Anika** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
