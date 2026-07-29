@@ -912,6 +912,23 @@ def calculate_preference_matrix(candidates, ballots):
     return matrix
 
 
+def _all_pairs_draw(members, matrix):
+    """True when every head-to-head AMONG `members` is a pairwise DRAW.
+
+    This is the dead-heat / cycle test, and it lives in one place on purpose: a
+    group of co-top candidates who merely DRAW each other is a **dead heat**, not
+    a Condorcet cycle — nobody beats anybody, so there is no directed loop to
+    resolve. Both the Ranked Robin winner line and the Smith-set block ask this
+    question about the same matrix, so they share the answer; two independent
+    tests is exactly how the two lines came to contradict each other.
+
+    Vacuously True for a group of fewer than two (no pair to decide), so callers
+    should already know they have several members.
+    """
+    return all(matrix[a][b][0] == matrix[a][b][1]
+               for a in members for b in members if a != b)
+
+
 def smith_set(candidates, matrix):
     """The Smith set: the smallest non-empty group of candidates such that every
     member beats every candidate OUTSIDE the group head-to-head.
@@ -954,8 +971,8 @@ def smith_set(candidates, matrix):
 
 def format_smith_set(candidates, matrix, winner=None, method_label=None,
                      smith_efficient=False):
-    """Report block naming the Smith set, whether it is a lone Condorcet winner or
-    a top cycle, and whether `winner` landed inside it.
+    """Report block naming the Smith set, whether it is a lone Condorcet winner, a
+    top cycle or a dead heat, and whether `winner` landed inside it.
 
     `smith_efficient` marks methods that CANNOT leave the set (Ranked Robin /
     Copeland), so the line can say "guaranteed" instead of "it happened to hold".
@@ -979,13 +996,28 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
         L.append(f"   One member ⇒ {club[0]} is the Condorcet winner, beating every "
                  "rival head-to-head.")
     else:
+        # Several members means NO Condorcet winner — but not necessarily a cycle.
+        # If the set's members merely DRAW each other, no member beats another and
+        # there is no loop: that is a dead heat. Same predicate the Ranked Robin
+        # winner line uses (asked here about the SET, which is what this sentence
+        # is about), so the two lines cannot contradict each other.
         L.append("   More than one member ⇒ NO Condorcet winner: the top of the "
                  "tournament is a")
-        L.append("   cycle, so the strongest \"candidate\" is a set, not a person. "
-                 "Which member of")
-        L.append("   the set should win is exactly what Minimax / Ranked Pairs / "
-                 "Schulze disagree")
-        L.append("   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.")
+        if _all_pairs_draw(club, matrix):
+            L.append("   dead heat (its members DRAW each other head-to-head), so the "
+                     "strongest")
+            L.append("   \"candidate\" is a set, not a person. No member beats another, "
+                     "so there is no")
+            L.append("   loop for Minimax / Ranked Pairs / Schulze to disagree about — "
+                     "which member")
+            L.append("   wins is left to the tiebreak, not to a cycle rule. See")
+            L.append("   05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.")
+        else:
+            L.append("   cycle, so the strongest \"candidate\" is a set, not a person. "
+                     "Which member of")
+            L.append("   the set should win is exactly what Minimax / Ranked Pairs / "
+                     "Schulze disagree")
+            L.append("   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.")
 
     # The Copeland leaders are always inside the Smith set, but need not BE it —
     # the win-loss table's top block can understate how wide the contention is.
@@ -1743,8 +1775,10 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             # *Condorcet cycle* when the tied leaders actually beat around a loop;
             # if they merely DRAW their head-to-heads it's a co-top dead heat, not
             # a cycle (e.g. two candidates who tie each other and both beat the rest).
-            draw_only = all(l2 in ties[l1]
-                            for l1 in leaders for l2 in leaders if l1 != l2)
+            # One shared predicate, so the Smith-set block below reaches the same
+            # verdict about the same matrix (it asks about the Smith set, which the
+            # leaders are always inside).
+            draw_only = _all_pairs_draw(leaders, matrix)
             # Lead with "most wins" only when it is literally true: with no draws
             # anywhere among the leaders, tying on Copeland IS tying on wins, and
             # that phrasing is the friendlier one. Once a draw is in play the two

@@ -92,7 +92,7 @@ Two footnotes to the table. First, the criterion has spawned a whole constructio
 
 ## The engine reports it
 
-Every `_tabulated` mirror for a **Ranked Robin** or **RCV-IRV** election now ends with a Smith-set block — the set, whether it is a lone Condorcet winner or a top cycle, and whether the method's winner landed inside it. It is off in the compact on-screen echo (house rule: minimal echo, full mirror); a YAML can opt the echo in with `options: { show_smith_set: true }`.
+Every `_tabulated` mirror for a **Ranked Robin** or **RCV-IRV** election now ends with a Smith-set block — the set, whether it is a lone Condorcet winner, a top cycle or an all-draws **dead heat** (a multi-member set whose members merely *draw* each other: still no Condorcet winner, but no loop either — see [the tiebreak note](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md)), and whether the method's winner landed inside it. It is off in the compact on-screen echo (house rule: minimal echo, full mirror); a YAML can opt the echo in with `options: { show_smith_set: true }`.
 
 The two methods put the block to opposite uses. For Ranked Robin it is **descriptive** — RR passes by construction, so the line states the guarantee. For RCV-IRV it is a real **pass/fail**, and the repo's most basic ranked example ([`RCV_ballot_example`](../../06_Other/RCV_IRV/cases/cases_pages/RCV_ballot_example.md)) turns out to fail it:
 

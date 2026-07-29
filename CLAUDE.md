@@ -163,8 +163,10 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
 - **`show_smith_set`** (Ranked Robin only): same contract as `show_runoff_percent` —
   engine default `false` on screen, **always forced on in the `_tabulated` mirror**.
   Prints the **Smith set** (the smallest group whose every member beats every
-  candidate outside it), says whether that's a lone Condorcet winner or a top cycle,
-  and whether the winner landed inside it. Deliberately separate from `show_matrix`
+  candidate outside it), says whether that's a lone Condorcet winner, a top cycle or
+  an all-draws **dead heat**, and whether the winner landed inside it. The dead-heat /
+  cycle branch shares one predicate (`_all_pairs_draw`) with the Ranked Robin winner
+  line, so the two lines can't contradict each other — keep it that way. Deliberately separate from `show_matrix`
   so a file can opt the echo into one without the other, and **not** in the house
   minimal block (the mirror already carries it). **RCV-IRV mirrors get the same block
   automatically** (no option — the IRV path has no options plumbing). The two uses are

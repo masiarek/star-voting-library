@@ -104,6 +104,78 @@ def test_universal_cycle_puts_everyone_in_the_club():
 
 
 # --------------------------------------------------------------------------
+# cycle vs dead heat — the top sentence has to match the winner line
+# --------------------------------------------------------------------------
+
+def test_a_multi_member_set_that_cycles_is_called_a_cycle():
+    """A genuine directed loop: "cycle" is the right word, and the block points at
+    cycle resolution because that is exactly what Minimax / Ranked Pairs / Schulze
+    argue about."""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(
+        cands, _matrix(cands, {("A", "B"), ("B", "C"), ("C", "A")})))
+    assert "the top of the tournament is a\n   cycle," in block
+    assert "cycle_resolution.md" in block
+    assert "dead heat" not in block
+
+
+def test_an_all_draws_set_is_called_a_dead_heat_not_a_cycle():
+    """The bug this guards: every pair DRAWS, so there is no loop anywhere in the
+    matrix — calling that a "cycle" contradicted the Ranked Robin winner line a few
+    lines above, which already said "a dead heat (they draw head-to-head, not a
+    cycle)"."""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(cands, _matrix(cands, set())))
+    assert "the top of the tournament is a\n   dead heat" in block
+    assert "No member beats another" in block
+    assert "cycle_resolution.md" not in block         # no loop ⇒ nothing to resolve
+    assert "rr_tiebreak_lh_vs_bv.md" in block         # a tiebreak decides it instead
+    # "NO Condorcet winner" is still true, and so is the set-not-a-person clause.
+    assert "NO Condorcet winner" in block
+    assert 'is a set, not a person' in block
+
+
+def test_co_top_leaders_who_draw_are_a_dead_heat_even_with_an_outsider():
+    """The set need not be the whole field: A and B draw each other and both beat C,
+    so the club is {A, B} and it is still a dead heat, not a cycle. ("No member beats
+    another" is scoped to the SET — its members do beat the outsider.)"""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(cands, _matrix(
+        cands, {("A", "C"), ("B", "C")})))
+    assert "Smith set (2 of 3): A, B" in block
+    assert "dead heat" in block and "cycle_resolution.md" not in block
+
+
+def test_dead_heat_predicate_is_shared_with_the_winner_line(tmp_path):
+    """One predicate, two report lines: `_all_pairs_draw` answers the dead-heat
+    question for both the Ranked Robin winner line and the Smith block, so the two
+    can never disagree about the same matrix."""
+    cands = list("ABC")
+    assert lh._all_pairs_draw(cands, _matrix(cands, set())) is True
+    assert lh._all_pairs_draw(cands, _matrix(
+        cands, {("A", "B"), ("B", "C"), ("C", "A")})) is False
+    # ...and end-to-end on the live case: 6 voters, 3 candidates, every pair 3-3.
+    src = (REPO_ROOT / "05_Ranked_Robin" / "rr_tiebreaks" / "cases"
+           / "bv2261_y2fbpc_tiebreak_recorded_draws.yaml")
+    r = _run(src)
+    assert r.returncode == 0, r.stderr
+    text = (src.parent / "cases_tabulated"
+            / "bv2261_y2fbpc_tiebreak_recorded_draws_tabulated.txt"
+            ).read_text(encoding="utf-8")
+    assert "a dead heat (they draw head-to-head, not a cycle)" in text  # winner line
+    assert "the top of the tournament is a\n   dead heat" in text       # Smith block
+    assert "the top of the tournament is a\n   cycle," not in text      # the old bug
+    # The genuine-cycle companion keeps saying "cycle" — same wording, other branch.
+    cyc = (src.parent / "bv2261_y2fbpc_tiebreak_recorded_cycle.yaml")
+    assert _run(cyc).returncode == 0
+    ctext = (src.parent / "cases_tabulated"
+             / "bv2261_y2fbpc_tiebreak_recorded_cycle_tabulated.txt"
+             ).read_text(encoding="utf-8")
+    assert "a Condorcet cycle (no candidate beats all others)" in ctext
+    assert "the top of the tournament is a\n   cycle," in ctext
+
+
+# --------------------------------------------------------------------------
 # the verdict line
 # --------------------------------------------------------------------------
 

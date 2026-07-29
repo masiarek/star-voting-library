@@ -76,9 +76,11 @@ the honest answer to "who is even in contention?".
    Smith set (2 of 4): Alice, Bob
    Outside (2):        Carol, Dave
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
    Ranked Robin (RCV-RR) winner Alice is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
