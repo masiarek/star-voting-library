@@ -10,11 +10,18 @@
 
 | Layer | What it really is | Since | New? |
 |---|---|---|:--:|
-| Compare every pair head-to-head; whoever wins the most matchups wins | **Copeland's method** — the whole core of it | first described **1299** (Ramon Llull), rediscovered by Condorcet in the 1780s, formalised by Copeland in 1951 | no |
+| Compare every pair head-to-head; whoever wins the most matchups wins | **Copeland's method** — the count itself | first described **1299** (Ramon Llull), rediscovered by Condorcet in the 1780s, formalised by Copeland in 1951 | no |
 | Ties broken by summing win margins | **Copeland//Borda** — a standard, long-known construction | — | no |
 | The words *"Ranked Robin"* | **Equal Vote's branding**, coined by Sara Wolk | **2021** | **yes — the name is the only new part** |
 
-So the honest one-liner is *Copeland with a specified tiebreak, under a friendlier name.* We say `≈` rather than `=` only because plain Copeland leaves the cycle tiebreak unspecified and Ranked Robin pins one down.
+**The names stack like sports leagues.** Round-robin is a tournament *format*: everyone plays everyone, best record tops the table. Every league that uses the format has its own name and its own tiebreak fine print. These names work exactly that way:
+
+- **Condorcet** — the *format*, i.e. the family. Any rule that elects the candidate who beats all others head-to-head, whenever one exists. Members include Copeland, Schulze, Ranked Pairs, Minimax.
+- **Copeland** — one member: rank candidates by head-to-head wins. With the margins tiebreak the technical full name is *Copeland//Borda*.
+- **Ranked Robin** — a *campaign name* (Equal Vote, 2021) for Condorcet voting on a ranked ballot. Their recommended count as of 2026 is Copeland plus the margins tiebreak — a current default, which they say is under review, not a definition.
+- **Consensus Choice** — a *different campaign's* name (Better Choices for Democracy) for the same family, with a different cycle rule ("Most Wins, Smallest Loss"). Same tournament, different fine print.
+
+Spoken aloud in ten seconds: *Condorcet is the format, Copeland is the standings rule, Ranked Robin is the league we play under.* The members only disagree when nobody goes undefeated — otherwise they all crown the same winner.
 
 **Equal Vote says so too, now.** Their current page opens by calling it "a modern name for one of the oldest voting methods out there. First described in the literature in 1299" — wording their [previous version](https://www.equal.vote/ranked_robin_old) did not have; that page never mentioned Copeland or 1299 at all. And on electowiki's talk page in 2025 Sara Wolk, who coined the term, wrote that she "always intended the name Ranked Robin to be a rebrand of Condorcet," with the first takeaway: *"Ranked Robin is a synonym for Condorcet on a ranked ballot."* The Copeland-plus-margins procedure is Equal Vote's *default recommendation*, not the whole meaning of the name — and she notes it is under review. That same talk page opens with Markus Schulze objecting in 2021 that the title is misleading, since "round robin" has long covered Condorcet methods generally.
 
