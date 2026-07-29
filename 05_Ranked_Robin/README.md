@@ -1,20 +1,77 @@
-# 05_Ranked_Robin — Ranked Robin (RCV-RR / Copeland) worked examples
+# 05_Ranked_Robin — Ranked Robin (RCV-RR / Copeland)
 
-Equal Vote's method for **ranked** ballots: compare every pair of candidates head-to-head; the candidate who wins the most matchups wins (a round robin, like a sports league). It reads the *whole* ballot — no eliminations, no center squeeze — and elects the Condorcet winner whenever one exists.
+*Rank the candidates. Compare every pair head-to-head. Whoever beats the most rivals wins.*
 
-This folder is the **runnable examples** — small elections you can tabulate yourself, each isolating one idea. The *concept* explanations live next door in the [Ranked Robin concepts folder](../00_start_here/RCV_Ranked_Robin/README.md). New to Ranked Robin? Read those first:
+**Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../00_start_here/topics/condorcet/README.md)), Ranked Robin elects them.
 
-- **[Why Ranked Robin](../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)** — the "why" before the "how": the friendly upgrade for ranked ballots.
-- **[Ranked Robin (the method)](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)** — the pairwise round-robin, the win-count, and how it differs from IRV.
-- **[Honest limits](../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md)** — cycles, no preference strength, burial — stated plainly.
+This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](../00_start_here/RCV_Ranked_Robin/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](../00_start_here/RCV_Ranked_Robin/why_ranked_robin.md)** (the positive case), **[honest limits](../00_start_here/RCV_Ranked_Robin/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](../00_start_here/RCV_Ranked_Robin/README.md).
 
 ---
 
-## The examples
+## How it counts — a worked election
+
+Thirteen voters, four candidates on a left→right line: **Ada** (left), **Ben** (center-left), **Cara** (center-right), **Dan** (right). Each row is a bloc of identical ballots.
+
+```text
+4 : Ada > Ben > Cara > Dan
+4 : Dan > Cara > Ben > Ada
+3 : Ben > Cara > Ada > Dan
+2 : Cara > Ben > Dan > Ada
+```
+
+Count **first choices** and Ada and Dan lead with 4 each; Ben has only 3. Under Choose-One plurality, one of the two poles wins. Now compare every pair head-to-head instead:
+
+```text
+Round-Robin — every pair, head-to-head (For – Against):
+   Ben   beats Ada    9 – 4
+   Cara  beats Ada    9 – 4
+   Ada   beats Dan    7 – 6
+   Ben   beats Cara   7 – 6
+   Ben   beats Dan    9 – 4
+   Cara  beats Dan    9 – 4
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ben        3–0–0         3     +11  Cara, Ada, Dan
+    2  Cara       2–1–0         2      +9  Ada, Dan
+    3  Ada        1–2–0         1      -9  Dan
+    4  Dan        0–3–0         0     -11  —
+
+Winner — Ranked Robin (RCV-RR): Ben
+   beats every opponent head-to-head — the Condorcet winner.
+```
+
+**Ben wins 3–0.** A majority prefers him to each rival, one on one — so he's the Condorcet winner, and Ranked Robin elects him. The lesson: RR elects the **consensus** candidate, not the largest faction's favorite. Nobody had to be eliminated, and no ballot went uncounted.
+
+*(Honest footnote: RCV-IRV elects Ben here too — Cara is eliminated first and her ballots flow to Ben. This election separates Ranked Robin from **plurality**, not from IRV. For the case where RR and IRV genuinely part ways, see the Tennessee [center squeeze](../00_start_here/RCV_IRV/RCV_IRV_center_squeeze.md) in the examples below.)*
+
+Want the whole count — the pairwise matrix, the [Smith set](../00_start_here/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](_main/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](_main/cases/ranked_robin_consensus_center.yaml)
+
+## How it differs from RCV-IRV
+
+Same ranked ballot, opposite counting philosophy — read the whole ballot against everyone, or eliminate until someone has a majority of what's left:
+
+| | **RCV-IRV (Hare)** | **Ranked Robin (RCV-RR)** |
+|---|---|---|
+| Ballot | Rank, **no equal ranks** | Rank, **[equal ranks](../00_start_here/scores_and_ranks/strict_vs_weak_ranks.md) allowed** |
+| How it counts | Eliminate fewest-first-choices, transfer, repeat | Compare **every pair**; most head-to-head wins |
+| Uses your lower ranks? | Only after higher ones are eliminated | **Always** — every ranking counts against every opponent |
+| Elects the Condorcet winner? | Not always (can center-squeeze) | ✅ Yes, when one exists |
+| Monotonic? | ❌ No | ✅ Yes |
+| [Precinct-summable](../00_start_here/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
+| [Exhausted ballots](../00_start_here/RCV_IRV/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
+
+*(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](../00_start_here/RCV_Ranked_Robin/ranked_robin.md).)*
+
+---
+
+## The worked examples
+
+Runnable elections, each isolating one idea. Tabulate any of them yourself.
 
 | Where | What |
 |---|---|
-| [The worked intro — RR elects the consensus IRV eliminates](_main/) | the worked intro: RR elects the consensus candidate IRV eliminates |
+| [The worked intro — the consensus center wins](_main/) | the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices |
 | [Condorcet vs. Ranked Robin — worked examples](condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 | [RR vs. IRV vs. plurality — same ballots](rr_vs_irv_plurality/) | one ranked ballot set, three winners — the Tennessee center-squeeze (BV-backed, triple-checked: LH / BetterVoting / pref_voting) |
 | [Tiebreaks — dead heat → lot](rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](../00_start_here/RCV_Ranked_Robin/rr_tiebreak_lh_vs_bv.md) |

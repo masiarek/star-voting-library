@@ -27,7 +27,7 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 
 Every claim on these pages has a runnable election behind it. The case folders live in **[`05_Ranked_Robin/`](../../05_Ranked_Robin/)**:
 
-- [The worked intro](../../05_Ranked_Robin/_main/) — RR elects the consensus candidate IRV eliminates
+- [The worked intro](../../05_Ranked_Robin/_main/) — RR elects the consensus center 3–0 over the two poles that hold more first choices
 - [Condorcet vs. Ranked Robin](../../05_Ranked_Robin/condorcet_vs_ranked_robin/) — a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record
 - [RR vs. IRV vs. plurality](../../05_Ranked_Robin/rr_vs_irv_plurality/) — one ranked ballot set, three different winners (the Tennessee center squeeze)
 - [The Copeland score — a draw is worth half a win](../../05_Ranked_Robin/copeland_score/) — why "most head-to-head wins" is a shorthand, and the case where the ½-credit decides
