@@ -2,6 +2,10 @@
 
 *Rank the candidates. Compare every pair head-to-head. Whoever beats the most rivals wins.*
 
+<img src="img/ranked_robin_ballot_example.png" width="460" alt="A Ranked Robin ballot: five candidates — Andre, Blake, Carmen, David, Erin — each with columns 1st through 5th. Instructions at top: rank candidates in order of preference, equal ranks are allowed, candidates left blank are ranked last. This voter marks Andre 1st, Carmen and David both 2nd (an equal rank), Blake 3rd and Erin 4th. Footer: candidates are compared head-to-head in round robin matchups, and the candidate preferred over all others wins.">
+
+*The ballot ([Equal Vote](https://www.equal.vote/ranked_robin)) — note Carmen and David share 2nd place: unlike RCV-IRV, Ranked Robin lets you rank candidates equally.*
+
 **Ranked Robin** is Equal Vote's method for **ranked** ballots — the same ballot RCV-IRV uses, counted a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. The candidate who wins the most matchups wins the election. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
 
 This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
