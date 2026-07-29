@@ -1,0 +1,58 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 18 ballots (ranked ballots).
+
+Ballots:
+     6 × Blake > Erin > Amy > Cora > Diego
+     6 × Amy > Cora > Erin > Diego > Blake
+     6 × Diego > Cora > Blake > Erin > Amy
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Blake  beats Erin    12 –  6
+   Blake  beats Amy     12 –  6
+   Cora   beats Blake   12 –  6
+   Diego  beats Blake   12 –  6
+   Erin   beats Amy     12 –  6
+   Cora   beats Erin    12 –  6
+   Erin   beats Diego   12 –  6
+   Amy    beats Cora    12 –  6
+   Amy    beats Diego   12 –  6
+   Cora   beats Diego   12 –  6
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    Blake     |    Erin     |    Amy      |    Cora     |   Diego     |
+----------------------------------------------------------------------------------
+  Blake > |     ---      |12 -  0 -  6 |12 -  0 -  6 | 6 -  0 - 12 | 6 -  0 - 12 |
+   Erin > |  6 -  0 - 12 |    ---      |12 -  0 -  6 | 6 -  0 - 12 |12 -  0 -  6 |
+    Amy > |  6 -  0 - 12 | 6 -  0 - 12 |    ---      |12 -  0 -  6 |12 -  0 -  6 |
+   Cora > | 12 -  0 -  6 |12 -  0 -  6 | 6 -  0 - 12 |    ---      |12 -  0 -  6 |
+  Diego > | 12 -  0 -  6 | 6 -  0 - 12 | 6 -  0 - 12 | 6 -  0 - 12 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Cora       3–1–0         3     +12  Blake, Erin, Diego
+    2  Amy        2–2–0         2      +0  Cora, Diego
+    3  Blake      2–2–0         2      +0  Amy, Erin
+    4  Erin       2–2–0         2      +0  Amy, Diego
+    5  Diego      1–3–0         1     -12  Blake
+
+Winner — Ranked Robin (RCV-RR): Cora
+   the most head-to-head wins (3).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (5 of 5): Cora, Blake, Erin, Amy, Diego
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 00_start_here/RCV_Ranked_Robin/cycle_resolution.md.
+   Note: the Copeland leaders (Cora) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Cora is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 00_start_here/topics/smith_set.md
