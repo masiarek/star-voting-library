@@ -51,9 +51,7 @@ The **[Post-it RCV example (BV2176, `p8dp28`)](../../method_comparisons/postit_r
 
 ## Engine wording (fixed)
 
-The winner line now distinguishes a dead heat from a real cycle. `run_ranked_robin`
-tests whether the tied leaders **draw** their head-to-heads (dead heat) or **beat
-around a loop** (cycle):
+The winner line now names the *shape* of the tie — and there are **three** shapes, not two. `run_ranked_robin` asks `_group_shape` whether the tied leaders **draw** their head-to-heads (dead heat), **beat around a loop** (cycle), or **mix wins and draws without closing one** (neither of the above):
 
 ```
 # co-top dead heat (leaders draw each other, both beat the rest):
@@ -61,11 +59,16 @@ around a loop** (cycle):
 
 # genuine rock-paper-scissors cycle (directed loop, no Condorcet winner):
 *** 3 candidates tie for the most wins (Rock, Scissors, Paper) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
+
+# tied on the tally, but decided underneath it (Green beats Blue; nothing loops):
+*** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 ```
 
-Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop. The lead phrasing adapts: with no **draws** among the leaders it says "**tie for the most wins**" (then tying on Copeland *is* tying on wins), and once a draw is in play — as in the dead heat above, where Ada and Ben draw each other — it names the **Copeland score** instead, because "most wins" would no longer be true. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
+All three lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop. The lead phrasing adapts: with no **draws** among the leaders it says "**tie for the most wins**" (then tying on Copeland *is* tying on wins), and once a draw is in play — as in the dead heat above, where Ada and Ben draw each other — it names the **Copeland score** instead, because "most wins" would no longer be true. Locked by `tests/test_ranked_robin.py`: the RPS case asserts "Condorcet cycle", the dead-heat case asserts "dead heat", the decided-pair case asserts "tied on the tally" — and each asserts it is *not* the other two.
 
-**The Smith-set block agrees now too (fixed 2026-07-29).** The [Smith set](../../07_Concepts/topics/smith_set.md) analysis a few lines below the winner line used to hard-code *"the top of the tournament is a cycle"* for any multi-member set — which flatly contradicted the winner line on an all-draws race: [BV2261's draws race](../rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md) printed "a dead heat (they draw head-to-head, not a cycle)" and then called it a cycle four lines later. Both lines now ask the *same* predicate (`_all_pairs_draw`) about the same matrix, so they cannot disagree: when the set's members merely **draw** each other the block says **dead heat** and points here, because a **tiebreak** decides it and there is no loop for Minimax / Ranked Pairs / Schulze to argue over; when they **beat around a loop** it still says **cycle** and points at [cycle resolution](cycle_resolution.md). Locked by `tests/test_smith_set.py`. (Fine print on the fine print: a set that mixes draws *and* wins without closing a loop is a **third** shape — neither an all-draws dead heat nor a genuine loop — and the block still files that one under "cycle". A handful of library elections land there; no page's lesson rests on the word, but it's loose, and the honest fix would be a third branch.)
+**The Smith-set block agrees now too (fixed 2026-07-29).** The [Smith set](../../07_Concepts/topics/smith_set.md) analysis a few lines below the winner line used to hard-code *"the top of the tournament is a cycle"* for any multi-member set — which flatly contradicted the winner line on an all-draws race: [BV2261's draws race](../rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md) printed "a dead heat (they draw head-to-head, not a cycle)" and then called it a cycle four lines later. Both lines now ask the *same* classifier (`_group_shape`) about the same matrix, so they cannot disagree. When the members merely **draw** each other the block says **dead heat** and points here, because a **tiebreak** decides it and there is no loop for Minimax / Ranked Pairs / Schulze to argue over; when they **beat around a loop** it still says **cycle** and points at [cycle resolution](cycle_resolution.md); and when they **mix wins and draws without closing a loop** it says the set is a *group held open by draws* — no Condorcet winner, but no rock-paper-scissors either, so a tiebreak decides that one too and the cycle-resolution pointer would be a dead end.
+
+**The same false inference was in the winner line, more visibly (fixed 2026-07-29).** "Not all draws" never implied "cycle", and with only *two* tied leaders the old line announced *"a Condorcet cycle (no candidate beats all others)"* about two candidates one of whom plainly beat the other — a 2-cycle cannot exist at all, since it would need each to beat the other. [BV2176](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md) is exactly that case, and it is the one tabulated in the table below: Green and Blue tie on the tally and **Green beats Blue 7–4** — the decisive head-to-head *BetterVoting itself uses at rung 2* — printed under a sentence denying any candidate beat the others. Every winner line this corrected across the library — thirteen elections — was a two-candidate "cycle". Locked by `tests/test_smith_set.py` and `tests/test_ranked_robin.py`.
 
 ## Tested cases
 

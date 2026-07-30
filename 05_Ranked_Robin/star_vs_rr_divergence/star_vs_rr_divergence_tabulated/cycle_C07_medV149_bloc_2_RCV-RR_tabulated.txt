@@ -54,7 +54,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     7  B          0–6–0         0    -354  —
 
 Winner — Ranked Robin (RCV-RR): C
-   *** 2 candidates tie on the highest Copeland score (5): C, F — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
+   *** 2 candidates tie on the highest Copeland score (5): C, F — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -62,9 +62,12 @@ the honest answer to "who is even in contention?".
    Smith set (6 of 7): C, F, D, A, E, G
    Outside (1):        B
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (C, F) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner C is INSIDE the Smith set. ✓

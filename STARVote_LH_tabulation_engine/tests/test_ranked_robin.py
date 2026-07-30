@@ -167,6 +167,28 @@ def test_ranked_robin_dead_heat_is_not_called_a_cycle(tmp_path):
     assert "Ranked Robin (RCV-RR): Ada" in r.stdout
 
 
+def test_ranked_robin_decided_leaders_are_not_called_a_cycle(tmp_path):
+    """The THIRD shape of a tie, and the one that read worst: Cara and Dan tie on
+    the Copeland tally, and Cara BEATS Dan head-to-head (2-1). That is not a dead
+    heat (there is a win in it) and it cannot be a Condorcet cycle (a 2-cycle would
+    need each to beat the other), yet the line used to announce "a Condorcet cycle
+    (no candidate beats all others)" — about two candidates one of whom beat the
+    other. Tying on the overall tally says nothing about the shape underneath."""
+    f = tmp_path / "mixed_leaders.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara, Dan]\nballots: |-\n"
+        "  Ada,Ben,Cara,Dan\n  0,0,0,1\n  0,0,3,1\n  3,3,1,0\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "tie on the highest Copeland score" in r.stdout
+    assert "tied on the tally, not a cycle" in r.stdout
+    assert "Condorcet cycle" not in r.stdout
+    assert "dead heat" not in r.stdout
+    assert "Ranked Robin (RCV-RR): Cara" in r.stdout
+
+
 def test_ranked_robin_ranks_by_copeland_not_raw_wins(tmp_path):
     """The ranking key must be the Copeland score (wins + ½·ties), i.e. the very
     column the report prints — NOT the raw win count.

@@ -105,7 +105,9 @@ Win–loss record — Copeland score = wins + ½·ties:
     4  C          1–2–0         1      -3  D
 
 Winner — Ranked Robin (RCV-RR): B
-   *** 2 candidates tie for the most wins (A, B) — a Condorcet cycle. Resolved by total margin, then lot order.
+   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle
+   (some of them beat others head-to-head, but no loop closes). Resolved by total
+   margin, then lot order.
 ```
 
 **Ranked Robin elects B. Slater and Markov elect A.** Same ballots. B wins only because of the margin rung — the C2 step — and A beats B head-to-head. Neither answer is wrong; they optimize different things, and there is no fact of the matter to appeal to. Full report → [the runnable case](../../method_comparisons/tournament_solutions/README.md).

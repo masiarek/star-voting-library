@@ -929,6 +929,37 @@ def _all_pairs_draw(members, matrix):
                for a in members for b in members if a != b)
 
 
+def _group_shape(members, matrix):
+    """Classify a group of co-top candidates — the Ranked Robin leaders, or the
+    Smith set — into the THREE shapes it can actually take:
+
+        "dead heat"  every head-to-head among them DRAWS; nobody beats anybody.
+        "cycle"      their wins close a directed loop (rock-paper-scissors).
+        "mixed"      some beat others, but no loop closes — a group held open by
+                     draws rather than by a circle of wins.
+
+    That third shape is the easy one to miss, which is exactly why the test lives
+    in one place. **"Not all draws" does NOT imply "cycle":** `A beats B, B draws
+    C, C draws A` contains a win and still no loop, and a TWO-member group settled
+    by a single head-to-head can never be a loop at all (a 2-cycle would need A to
+    beat B and B to beat A at once). Calling either one a Condorcet cycle is not a
+    loose word — it is false, and it points the reader at cycle-resolution rules
+    that have no cycle to resolve.
+
+    Vacuously "dead heat" for a group of fewer than two, so callers should already
+    know they have several members.
+    """
+    if _all_pairs_draw(members, matrix):
+        return "dead heat"
+    # _find_beats_cycle wants an ADJACENCY dict (who does each member beat?),
+    # restricted to the group — a win over an outsider says nothing about whether
+    # the group itself closes a loop.
+    beats = {a: [b for b in members
+                 if b != a and matrix[a][b][0] > matrix[a][b][1]]
+             for a in members}
+    return "cycle" if _find_beats_cycle(list(members), beats) else "mixed"
+
+
 def smith_set(candidates, matrix):
     """The Smith set: the smallest non-empty group of candidates such that every
     member beats every candidate OUTSIDE the group head-to-head.
@@ -996,14 +1027,14 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
         L.append(f"   One member ⇒ {club[0]} is the Condorcet winner, beating every "
                  "rival head-to-head.")
     else:
-        # Several members means NO Condorcet winner — but not necessarily a cycle.
-        # If the set's members merely DRAW each other, no member beats another and
-        # there is no loop: that is a dead heat. Same predicate the Ranked Robin
+        # Several members means NO Condorcet winner — but not necessarily a cycle,
+        # and not necessarily a dead heat either. Same classifier the Ranked Robin
         # winner line uses (asked here about the SET, which is what this sentence
         # is about), so the two lines cannot contradict each other.
+        shape = _group_shape(club, matrix)
         L.append("   More than one member ⇒ NO Condorcet winner: the top of the "
                  "tournament is a")
-        if _all_pairs_draw(club, matrix):
+        if shape == "dead heat":
             L.append("   dead heat (its members DRAW each other head-to-head), so the "
                      "strongest")
             L.append("   \"candidate\" is a set, not a person. No member beats another, "
@@ -1011,6 +1042,17 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
             L.append("   loop for Minimax / Ranked Pairs / Schulze to disagree about — "
                      "which member")
             L.append("   wins is left to the tiebreak, not to a cycle rule. See")
+            L.append("   05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.")
+        elif shape == "mixed":
+            L.append("   group held open by draws, so the strongest \"candidate\" is a "
+                     "set, not a")
+            L.append("   person. Some members DO beat others, but no member beats them "
+                     "all — a draw")
+            L.append("   blocks the sweep. No loop closes either, so there is no cycle "
+                     "for Minimax /")
+            L.append("   Ranked Pairs / Schulze to resolve: which member wins is left "
+                     "to the")
+            L.append("   tiebreak, not to a cycle rule. See")
             L.append("   05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.")
         else:
             L.append("   cycle, so the strongest \"candidate\" is a set, not a person. "
@@ -1772,13 +1814,15 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
         else:
             L.append(f"Winner — Ranked Robin (RCV-RR): {winner}")
             # "Tie for the most wins" is the accurate lead. Only call it a
-            # *Condorcet cycle* when the tied leaders actually beat around a loop;
-            # if they merely DRAW their head-to-heads it's a co-top dead heat, not
-            # a cycle (e.g. two candidates who tie each other and both beat the rest).
-            # One shared predicate, so the Smith-set block below reaches the same
-            # verdict about the same matrix (it asks about the Smith set, which the
-            # leaders are always inside).
-            draw_only = _all_pairs_draw(leaders, matrix)
+            # *Condorcet cycle* when the tied leaders actually beat around a loop.
+            # Tying on the overall tally says nothing about the shape of the
+            # head-to-heads underneath it: the leaders may all DRAW (a co-top dead
+            # heat), or some may beat others without any loop closing — two
+            # leaders split by one decisive head-to-head are the common case, and
+            # a 2-cycle cannot exist. One shared classifier, so the Smith-set block
+            # below reaches the same verdict about the same matrix (it asks about
+            # the Smith set, which the leaders are always inside).
+            shape = _group_shape(leaders, matrix)
             # Lead with "most wins" only when it is literally true: with no draws
             # anywhere among the leaders, tying on Copeland IS tying on wins, and
             # that phrasing is the friendlier one. Once a draw is in play the two
@@ -1788,10 +1832,14 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                       if not any(ties[l] for l in leaders) else
                       f"tie on the highest Copeland score ({top:g}): "
                       + ", ".join(leaders))
-            if draw_only:
+            if shape == "dead heat":
                 L.append(f"   *** {len(leaders)} candidates {tie_on} — a dead heat (they "
                          "draw head-to-head, not a cycle). Resolved by total margin, then "
                          "lot order.")
+            elif shape == "mixed":
+                L.append(f"   *** {len(leaders)} candidates {tie_on} — tied on the tally, "
+                         "not a cycle (some of them beat others head-to-head, but no loop "
+                         "closes). Resolved by total margin, then lot order.")
             else:
                 L.append(f"   *** {len(leaders)} candidates {tie_on} — a Condorcet cycle "
                          "(no candidate beats all others). Resolved by total margin, then "
