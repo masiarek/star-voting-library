@@ -18,6 +18,8 @@ The books to read first, and the ones to lend. Narrative, example-driven, writte
 <a href="popular_introductions.md"><img src="img/gaming_the_vote_poundstone.jpg" width="96" alt="Gaming the Vote — Poundstone"></a>
 <a href="popular_introductions.md"><img src="img/numbers_rule_szpiro.jpg" width="96" alt="Numbers Rule — Szpiro"></a>
 <a href="popular_introductions.md"><img src="img/chaotic_elections_saari.jpg" width="96" alt="Chaotic Elections! — Saari"></a>
+<a href="popular_introductions.md"><img src="img/wisdom_of_crowds_surowiecki.jpg" width="96" alt="The Wisdom of Crowds — Surowiecki"></a>
+<a href="popular_introductions.md"><img src="img/democracy_for_realists_achen_bartels.jpg" width="96" alt="Democracy for Realists — Achen &amp; Bartels"></a>
 </p>
 
 ### ⭐ [Rated & score methods](rated_and_score_methods.md) — this repo's home turf
@@ -42,6 +44,8 @@ Arrow, Sen, Saari, and the rest: *why* no method is perfect, worked rigorously. 
 <a href="social_choice_theory.md"><img src="img/social_choice_manipulation_taylor.jpg" width="96" alt="Social Choice and the Mathematics of Manipulation — Taylor"></a>
 <a href="social_choice_theory.md"><img src="img/voting_paradoxes_nurmi.jpg" width="96" alt="Voting Paradoxes — Nurmi"></a>
 <a href="social_choice_theory.md"><img src="img/collective_decisions_voting_tideman.jpg" width="96" alt="Collective Decisions and Voting — Tideman"></a>
+<a href="social_choice_theory.md"><img src="img/theory_of_committees_black.jpg" width="96" alt="The Theory of Committees and Elections — Black"></a>
+<a href="social_choice_theory.md"><img src="img/handbook_social_choice_welfare_arrow_sen_suzumura.jpg" width="96" alt="Handbook of Social Choice and Welfare"></a>
 </p>
 
 ### 🗳️ [Electoral systems & proportional representation](electoral_systems_and_pr.md) — the comparative and civic view
@@ -50,6 +54,8 @@ Zoom out from single-winner: how whole systems compare, how seats get apportione
 
 <p>
 <a href="electoral_systems_and_pr.md"><img src="img/electoral_systems_farrell.jpg" width="96" alt="Electoral Systems — Farrell"></a>
+<a href="electoral_systems_and_pr.md"><img src="img/patterns_of_democracy_lijphart.jpg" width="96" alt="Patterns of Democracy — Lijphart"></a>
+<a href="electoral_systems_and_pr.md"><img src="img/politics_of_electoral_systems_gallagher_mitchell.jpg" width="96" alt="The Politics of Electoral Systems — Gallagher &amp; Mitchell"></a>
 <a href="electoral_systems_and_pr.md"><img src="img/behind_the_ballot_box_amy.jpg" width="96" alt="Behind the Ballot Box — Amy"></a>
 <a href="electoral_systems_and_pr.md"><img src="img/fair_representation_balinski_young.jpg" width="96" alt="Fair Representation — Balinski &amp; Young"></a>
 </p>
@@ -61,7 +67,9 @@ Zoom out from single-winner: how whole systems compare, how seats get apportione
 - **Curious voter, no math:** [*Gaming the Vote*](popular_introductions.md) (Poundstone). A page-turner that lands on score voting — the closest popular book to this repo's outlook.
 - **You want the STAR family's intellectual roots:** [*Approval Voting*](rated_and_score_methods.md) (Brams & Fishburn) and [*Majority Judgment*](rated_and_score_methods.md) (Balinski & Laraki).
 - **You keep hearing "no voting system is fair":** [*Chaotic Elections!*](popular_introductions.md) (Saari) for the intuition, [Arrow](social_choice_theory.md) for the proof.
-- **You care about seats, not just single winners:** [*Fair Representation*](electoral_systems_and_pr.md) (Balinski & Young).
+- **You care about seats, not just single winners:** [*Fair Representation*](electoral_systems_and_pr.md) (Balinski & Young) for apportionment, [*Patterns of Democracy*](electoral_systems_and_pr.md) (Lijphart) for whole systems compared.
+- **You want to know why "the center wins":** [*The Theory of Committees and Elections*](social_choice_theory.md) (Black) — the median voter theorem, at the source.
+- **You suspect reform won't change anything:** [*Democracy for Realists*](popular_introductions.md) (Achen & Bartels). The strongest argument against us on this shelf; read it before you promise too much.
 
 ---
 
@@ -74,6 +82,15 @@ Cover thumbnails are from the [Open Library](https://openlibrary.org) covers API
 This shelf is organized for breadth. When you want the literature on a *single* family — books, journal papers, and the free online surveys together — see the method-specific reading lists:
 
 - [Condorcet methods — a reading list](../topics/condorcet/condorcet_reading_list.md) — with Fishburn's C1/C2/C3 taxonomy up front, because in this family the names are the hard part.
+
+## Beyond the shelf — the political-science neighbors
+
+These two aren't voting-*methods* books, so they get no shelf entry — but they are the adjacent literature a reader of this shelf keeps bumping into, and naming them beats pretending the boundary is natural:
+
+- **James M. Buchanan & Gordon Tullock, *The Calculus of Consent* (1962)** — the founding text of **public choice**: what majority rule actually costs, why unanimity is expensive, how logrolling works, and why the *constitutional* choice of decision rule matters more than any single vote cast under it. **The lean:** public-choice, skeptical of majoritarianism — the adversarial view worth having in the room. (Duncan Black, on the [social choice shelf](social_choice_theory.md), is the other founder of this tradition.)
+- **David Estlund, *Democratic Authority: A Philosophical Framework* (2008)** — the standard modern statement of **epistemic** democracy (his term: *epistemic proceduralism*) — that democracy's authority rests on its tendency to reach just outcomes at better than chance, not on fair procedure alone. Philosophy rather than method design, but the best answer to "why should the count be *good*, and not merely agreed to?". **The lean:** pro-deliberative, and notably arguing *against* epistocracy — rule by the knowledgeable — which is the natural rival of his own epistemic framing.
+
+A fifth "epistemic / behavioral" shelf was considered and skipped: with [*The Wisdom of Crowds*](popular_introductions.md) and [*Democracy for Realists*](popular_introductions.md) sitting naturally among the popular introductions, it would have held two books, neither of them about a voting method.
 
 ## Related
 
