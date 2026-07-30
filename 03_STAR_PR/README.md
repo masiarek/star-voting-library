@@ -12,6 +12,6 @@ The same 0–5 score ballot, counted so that seats reflect the electorate's *pro
 
 Cases live in [`_main/`](_main) (the `02a/02b/02c` trio counts the SAME 63-ballot election three ways). Majoritarian multi-winner: [`../02_STAR_Bloc/`](../02_STAR_Bloc). STV, the proportional method for *ranked* ballots, lives in [`../06_Other/`](../06_Other).
 
-**Conversation scripts:** the Larry ↔ Adam STAR series is indexed in [Conversation scripts — index](../07_Concepts/about_this_repo/conversation_scripts.md).
+**Conversation scripts:** the Larry ↔ Adam STAR series is indexed in [Conversation scripts — index](../07_Concepts/about_this_repo/06_conversation_scripts.md).
 
 # file: README.md

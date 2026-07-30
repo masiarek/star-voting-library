@@ -204,4 +204,4 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 
-See `07_Concepts/about_this_repo/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.
+See `07_Concepts/about_this_repo/06_conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.

@@ -43,7 +43,7 @@ Under the hood it does three things:
 
 Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.
 
-> **Contributors / running it locally →** the [**Repository & Engine Guide**](07_Concepts/about_this_repo/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](07_Concepts/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
+> **Contributors / running it locally →** the [**Repository & Engine Guide**](07_Concepts/about_this_repo/02_repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](07_Concepts/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
 
 ---
 
@@ -56,14 +56,14 @@ Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larr
 - [Glossary — voting methods & criteria](07_Concepts/GLOSSARY.md) — terms, precisely defined
 - [Scored (rated) vs. ranked ballots](07_Concepts/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
 - [Concepts — deep-dive pages for the important terms](07_Concepts/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
-- [Repository & Engine Guide](07_Concepts/about_this_repo/repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
+- [Repository & Engine Guide](07_Concepts/about_this_repo/02_repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
 - [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently
 
 ---
 
 ## The YAML election file
 
-Want to author a case? The fill-in guide is [YAML Test Case — Authoring Template](07_Concepts/about_this_repo/YAML_authoring_template.md).
+Want to author a case? The fill-in guide is [YAML Test Case — Authoring Template](07_Concepts/about_this_repo/04_YAML_authoring_template.md).
 
 The schema is **flat**: a voting method, a seat count, and a ballot grid (a header row of candidate names, then one row of 0–5 scores per voter). Hand-written files add a top-level **`expected_winners:`** list — the key the positive pytest suite discovers and checks:
 
@@ -81,5 +81,5 @@ expected_winners:
 
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/_main/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/_main/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](07_Concepts/tips/TIPS_canonical_elections.md).
 
-The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](07_Concepts/about_this_repo/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](07_Concepts/tips/TIPS_choosing_voter_counts.md).
+The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](07_Concepts/about_this_repo/04_YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](07_Concepts/tips/TIPS_choosing_voter_counts.md).
 <!-- --8<-- [end:below-hero] -->

@@ -165,18 +165,26 @@ plugins:
         00_start_here/YAML_test_case_index/PARADOX_index.md: 07_Concepts/YAML_test_case_index/PARADOX_index.md
         00_start_here/YAML_test_case_index/README.md: 07_Concepts/YAML_test_case_index/README.md
         00_start_here/YAML_test_case_index/multirace_elections.md: 07_Concepts/YAML_test_case_index/multirace_elections.md
-        00_start_here/about_this_repo/ORGANIZATION.md: 07_Concepts/about_this_repo/ORGANIZATION.md
-        00_start_here/about_this_repo/YAML_authoring_template.md: 07_Concepts/about_this_repo/YAML_authoring_template.md
-        00_start_here/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/conversation_scripts.md
-        00_start_here/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/repository_guide.md
-        00_start_here/about_this_repo/website_build.md: 07_Concepts/about_this_repo/website_build.md
+        00_start_here/about_this_repo/ORGANIZATION.md: 07_Concepts/about_this_repo/03_ORGANIZATION.md
+        00_start_here/about_this_repo/YAML_authoring_template.md: 07_Concepts/about_this_repo/04_YAML_authoring_template.md
+        00_start_here/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/06_conversation_scripts.md
+        00_start_here/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/02_repository_guide.md
+        00_start_here/about_this_repo/website_build.md: 07_Concepts/about_this_repo/05_website_build.md
         00_start_here/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/01_why_yaml_test_cases.md
 
-        # --- "Why YAML?" numbered 01_ so the auto-built nav (alphabetical, no
-        # explicit `nav:` block) puts the founding-idea page first in
-        # about_this_repo instead of dead last. The un-numbered URL was live and
-        # linked, so it redirects FOREVER, same rule as the moves above.
+        # --- about_this_repo numbered 01_…06_ to fix its READING ORDER. There is
+        # no explicit `nav:` block, so MkDocs sorts the sidebar by filename — which
+        # put the founding-idea page ("Why YAML?") dead last and the presenter
+        # material in the middle. The numbers encode the order a newcomer should
+        # actually read them: why → how to run → conventions → how to author →
+        # how it publishes → presenter notes. Every un-numbered URL was live and
+        # linked, so all six redirect FOREVER, same rule as the moves above.
         07_Concepts/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/01_why_yaml_test_cases.md
+        07_Concepts/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/02_repository_guide.md
+        07_Concepts/about_this_repo/ORGANIZATION.md: 07_Concepts/about_this_repo/03_ORGANIZATION.md
+        07_Concepts/about_this_repo/YAML_authoring_template.md: 07_Concepts/about_this_repo/04_YAML_authoring_template.md
+        07_Concepts/about_this_repo/website_build.md: 07_Concepts/about_this_repo/05_website_build.md
+        07_Concepts/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/06_conversation_scripts.md
         00_start_here/books/README.md: 07_Concepts/books/README.md
         00_start_here/books/electoral_systems_and_pr.md: 07_Concepts/books/electoral_systems_and_pr.md
         00_start_here/books/popular_introductions.md: 07_Concepts/books/popular_introductions.md
