@@ -25,6 +25,23 @@ The book that founded modern social choice theory and won a Nobel Prize. Arrow's
 
 <table>
 <tr>
+<td width="150" valign="top"><img src="img/theory_of_committees_black.jpg" width="130" alt="Cover of The Theory of Committees and Elections by Duncan Black"></td>
+<td valign="top">
+
+### The Theory of Committees and Elections — Duncan Black (1958)
+
+The book that pulled **Condorcet** — and Borda, and Lewis Carroll's forgotten pamphlets — back into modern analysis, seven years after Arrow. It is also where the **[median voter theorem](../topics/spatial_voting_model.md)** is proved: if voters' preferences are *single-peaked* along one dimension, the candidate at the median beats every other head-to-head, so a [Condorcet winner](../topics/condorcet/README.md) is guaranteed to exist. Short, and still the clearest account of why "the center wins" under majority rule.
+
+**The lean:** Condorcet-sympathetic — Black takes pairwise majority comparison as the natural benchmark, which is the [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) camp's founding intuition. Notice the assumption doing all the work: **one** dimension, single-peaked. Add a second dimension and the guarantee collapses (McKelvey–Schofield chaos — see [the Smith set](../topics/smith_set.md)), which is exactly why the later literature needed "who is still in contention" sets at all.
+
+**In this repo:** [The spatial model & median voter](../topics/spatial_voting_model.md) · [Condorcet](../topics/condorcet/README.md) · [Condorcet reading list](../topics/condorcet/condorcet_reading_list.md) · [who's who](../topics/whos_who_voting_reform.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <td width="150" valign="top"><img src="img/collective_choice_social_welfare_sen.jpg" width="130" alt="Cover of Collective Choice and Social Welfare by Amartya Sen"></td>
 <td valign="top">
 
@@ -120,6 +137,23 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 **The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), this repo's Condorcet method.
 
 **In this repo:** [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="150" valign="top"><img src="img/handbook_social_choice_welfare_arrow_sen_suzumura.jpg" width="130" alt="Cover of Handbook of Social Choice and Welfare, Volume 1"></td>
+<td valign="top">
+
+### Handbook of Social Choice and Welfare, Vols. 1–2 — Kenneth J. Arrow, Amartya Sen & Kotaro Suzumura (eds.) (2002, 2011)
+
+The field's comprehensive academic reference: survey chapters written, in many cases, by the people who proved the results — Arrovian impossibility, strategy-proofness, social welfare functionals, fair allocation, and the voting rules themselves. Two volumes, nine years apart.
+
+**The lean:** Neutral by construction — a survey, not an argument, and the closest thing here to a settled account of what is known. **Not a cover-to-cover read:** this is the volume you cite when someone asks *where is that actually proved?* Priced for libraries; check yours.
+
+**In this repo:** [Arrow's theorem & STAR](../topics/arrow_theorem_and_star.md) · [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md) · [the social welfare function](../topics/social_welfare_function.md) · [May's theorem](../topics/mays_theorem.md)
 
 </td>
 </tr>

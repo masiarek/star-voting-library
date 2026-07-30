@@ -25,6 +25,40 @@ The standard survey course in a book: plurality, majority (including the alterna
 
 <table>
 <tr>
+<td width="150" valign="top"><img src="img/patterns_of_democracy_lijphart.jpg" width="130" alt="Cover of Patterns of Democracy by Arend Lijphart"></td>
+<td valign="top">
+
+### Patterns of Democracy — Arend Lijphart (1999; 2nd ed. 2012)
+
+*Government Forms and Performance in Thirty-Six Countries.* The standard empirical comparison of **majoritarian** against **consensus** democracy. Lijphart places 36 democracies (1945–2010 in the second edition) on two dimensions — executives-and-parties, federal-and-unitary — and then asks the question most comparisons dodge: which pattern actually *performs* better, on representation, on economic management, and on what he calls the kinder, gentler qualities.
+
+**The lean:** Pro-proportional / pro-consensus, and openly so — he concludes consensus democracies do at least as well on most measures and better on several. The durable contribution is the **dataset and the two-dimensional map**; the performance verdict is contested in the literature. This repo cites him for the *trade-off framing* on [two-party dominance](../topics/two_party_dominance.md), not for a verdict — the choice between breadth of representation and decisiveness is a values question, and that page says so.
+
+**In this repo:** [Two-party dominance](../topics/two_party_dominance.md) · [electing more than one](../topics/electing_more_than_one.md) · [proportional STAR](../../03_STAR_PR/concepts/README.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="150" valign="top"><img src="img/politics_of_electoral_systems_gallagher_mitchell.jpg" width="130" alt="Cover of The Politics of Electoral Systems edited by Michael Gallagher and Paul Mitchell"></td>
+<td valign="top">
+
+### The Politics of Electoral Systems — Michael Gallagher & Paul Mitchell (eds.) (2005)
+
+One chapter per country, each written by a specialist on that country: how its rules actually work, and what they do to parties, candidates, and campaigns in practice. Where Farrell gives you the thematic tour, this gives you the case studies at depth — the book to reach for when someone asks "but how does that work in Ireland / Germany / Japan?"
+
+**The lean:** Neutral comparative and descriptive; chapter authors differ in emphasis and no method is being promoted. (The foreword is Lijphart's, and his framing sits in the background.) Reference-shaped rather than a straight read — use the country index.
+
+**In this repo:** [Electing more than one](../topics/electing_more_than_one.md) · [STV vs. proportional STAR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md) · [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <td width="150" valign="top"><img src="img/behind_the_ballot_box_amy.jpg" width="130" alt="Cover of Behind the Ballot Box by Douglas Amy"></td>
 <td valign="top">
 

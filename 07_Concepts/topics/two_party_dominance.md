@@ -22,7 +22,7 @@ These aren't strawmen — they're the serious arguments, and some are backed by 
 
 ## Where the scholarship lands
 
-There's no free lunch. The standard framing (Arend Lijphart, *Patterns of Democracy*) contrasts **majoritarian** democracies (two-party, single-party governments, clear accountability) with **consensus** democracies (multiparty, proportional, broad power-sharing). Each buys something and pays for it: majoritarian systems trade breadth of representation for decisiveness and clarity; consensus systems trade decisiveness for inclusion and (Lijphart argues) at least as good policy outcomes on many measures. *Which* trade-off is "better" is a values question, not a settled fact — which is exactly why this page doesn't rule on it.
+There's no free lunch. The standard framing (Arend Lijphart, [*Patterns of Democracy*](../books/electoral_systems_and_pr.md)) contrasts **majoritarian** democracies (two-party, single-party governments, clear accountability) with **consensus** democracies (multiparty, proportional, broad power-sharing). Each buys something and pays for it: majoritarian systems trade breadth of representation for decisiveness and clarity; consensus systems trade decisiveness for inclusion and (Lijphart argues) at least as good policy outcomes on many measures. *Which* trade-off is "better" is a values question, not a settled fact — which is exactly why this page doesn't rule on it.
 
 ## The part that's about voting methods (and the honest caveat)
 
