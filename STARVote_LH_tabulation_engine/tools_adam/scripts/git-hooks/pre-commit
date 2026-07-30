@@ -19,6 +19,22 @@ ENGINE="$ROOT/STARVote_LH_tabulation_engine"
 PY="python3"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
 
+# Stage a generated index file (or folder) — and WARN, loudly, if it isn't there.
+# A bare `git add … 2>/dev/null || true` hides the one failure that matters: when
+# a generator's output moves (folder reorg), the refreshed file lands in the
+# working tree and is silently never staged, so the index drifts out of date
+# until a human notices. Warning-only — never blocks the commit.
+stage_generated() {
+  for f in "$@"; do
+    if [ -e "$f" ]; then
+      git add "$f" 2>/dev/null || echo "pre-commit: WARNING — could not stage ${f#"$ROOT"/}"
+    else
+      echo "pre-commit: WARNING — generated path missing, nothing staged: ${f#"$ROOT"/}"
+      echo "            The generator's output path probably moved — update this hook."
+    fi
+  done
+}
+
 # Repo hygiene: WARN (never block) about misplaced/junk pastes — generic img_N.png,
 # raw "Ballot Data*.json" drops, etc. — so a real file in the wrong place/name gets
 # noticed instead of silently ignored by .gitignore. Does not abort the commit.
@@ -33,7 +49,7 @@ fi
 # surface always matches the committed elections.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" ]; then
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" >/dev/null 2>&1; then
-    git add "$ROOT/method_comparisons/divergence_review" 2>/dev/null || true
+    stage_generated "$ROOT/method_comparisons/divergence_review"
   else
     echo "pre-commit: divergence ledger refresh failed — skipping (commit not blocked)."
   fi
@@ -44,7 +60,7 @@ fi
 # blocks the commit.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" ]; then
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" >/dev/null 2>&1; then
-    git add "$ROOT/00_start_here/YAML_test_case_index/multirace_elections.md" 2>/dev/null || true
+    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/multirace_elections.md"
   else
     echo "pre-commit: multirace index refresh failed — skipping (commit not blocked)."
   fi
@@ -54,9 +70,9 @@ fi
 # it. The single slice-and-dice view over every election & race. Never blocks.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" ]; then
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" >/dev/null 2>&1; then
-    git add "$ROOT/00_start_here/YAML_test_case_index/CATALOG.md" \
-            "$ROOT/00_start_here/YAML_test_case_index/races.csv" \
-            "$ROOT/00_start_here/YAML_test_case_index/elections.csv" 2>/dev/null || true
+    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/CATALOG.md" \
+                    "$ROOT/07_Concepts/YAML_test_case_index/races.csv" \
+                    "$ROOT/07_Concepts/YAML_test_case_index/elections.csv"
   else
     echo "pre-commit: catalog refresh failed — skipping (commit not blocked)."
   fi
