@@ -170,7 +170,13 @@ plugins:
         00_start_here/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/conversation_scripts.md
         00_start_here/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/repository_guide.md
         00_start_here/about_this_repo/website_build.md: 07_Concepts/about_this_repo/website_build.md
-        00_start_here/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/why_yaml_test_cases.md
+        00_start_here/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/01_why_yaml_test_cases.md
+
+        # --- "Why YAML?" numbered 01_ so the auto-built nav (alphabetical, no
+        # explicit `nav:` block) puts the founding-idea page first in
+        # about_this_repo instead of dead last. The un-numbered URL was live and
+        # linked, so it redirects FOREVER, same rule as the moves above.
+        07_Concepts/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/01_why_yaml_test_cases.md
         00_start_here/books/README.md: 07_Concepts/books/README.md
         00_start_here/books/electoral_systems_and_pr.md: 07_Concepts/books/electoral_systems_and_pr.md
         00_start_here/books/popular_introductions.md: 07_Concepts/books/popular_introductions.md

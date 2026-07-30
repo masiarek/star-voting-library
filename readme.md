@@ -38,7 +38,7 @@ A library for learning, teaching, and debating **[STAR Voting](01_STAR/concepts/
 Under the hood it does three things:
 
 1. **Teaches** — concept pages and worked examples, organized by level: [Voting 101](07_Concepts/curriculum/CURRICULUM_101.md) (the basics) · [201](07_Concepts/curriculum/CURRICULUM_201.md) (reading results & comparisons) · [301](07_Concepts/curriculum/CURRICULUM_301.md) (proportional, criteria, theory).
-2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](07_Concepts/about_this_repo/why_yaml_test_cases.md).
+2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](07_Concepts/about_this_repo/01_why_yaml_test_cases.md).
 3. **Cross-verifies with BetterVoting** — import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it independently, and confirm the official winner — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 
 Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.

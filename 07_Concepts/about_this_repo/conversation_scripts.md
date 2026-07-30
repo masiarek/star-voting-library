@@ -1,29 +1,32 @@
 # Conversation scripts — index
 
-A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../../01_STAR/concepts/), RCV-IRV episodes in [`RCV_IRV/`](../../06_Other/RCV_IRV/concepts/), and the foundational ones here in `07_Concepts/` — and this page indexes them. The demos come from `07_Concepts/`, `01_Single_winner/`, and `split_voting/`.
+A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts live **beside their topics**, not in this folder; this page is the index, the format policy, and the episode roadmap.
 
-Start here: [whats_so_good_about_STAR_Voting.md](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
+Start here: [What's so good about STAR Voting?](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
 
 ---
 
-## Format policy — scripts are for presenters; readers get educational pages (decided 2026-07)
+## The surviving scripts
 
-The Larry↔Adam dialogue format exists **for recording** — it is a presenter artifact, not the reading surface. A visitor landing on a topic should meet a normal educational page, not a screenplay. So:
+Three pages are still written as spoken dialogue, because in each of them the spoken form *is* the product:
 
-1. **Every topic's primary surface is an educational concept page.** A conversation script survives only where the spoken format *is* the product (the flagship pitch, the personal cold open) — and even then it should point to the educational pages for the substance.
-2. **The model pattern** is [what_is_a_voting_method.md](../topics/what_is_a_voting_method.md): a concept page ([voting_method_ballot_and_count.md](../topics/voting_method_ballot_and_count.md)) is primary, and the script opens by saying it is the spoken/video companion.
-3. **Status of the dialogue-format pages:**
+| Script | Why it stays a script |
+|---|---|
+| [What's so good about STAR Voting?](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) | the flagship recording script — the whole pitch in one arc. The substance lives in [STAR — start here](../../01_STAR/concepts/STAR_start_here.md) and [the benefits](../../01_STAR/concepts/getting_started/STAR_benefits.md). |
+| [Why do you love STAR Voting?](../../01_STAR/concepts/reference/why_do_you_love_STAR_Voting.md) | the personal cold open — the warmth *is* the content. Episode 0, the warm-up before the flagship. |
+| [What is a voting method?](../topics/what_is_a_voting_method.md) | the primer, and the model pattern: an educational page ([a ballot and a count](../topics/voting_method_ballot_and_count.md)) is primary, and the script opens by saying it is the spoken/video companion. |
 
-| Page | Verdict | State |
-|---|---|---|
-| [are_equal_score_votes_discounted.md](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md) | convert | **✔ converted** to an educational page (2026-07) |
-| [what_is_a_voting_method.md](../topics/what_is_a_voting_method.md) | keep as companion | ✔ has its concept-page twin (the model) |
-| [whats_so_good_about_STAR_Voting.md](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) | keep as script | the flagship recording script; substance lives in [STAR — start here](../../01_STAR/concepts/STAR_start_here.md) & [benefits](../../01_STAR/concepts/getting_started/STAR_benefits.md) |
-| [why_do_you_love_STAR_Voting.md](../../01_STAR/concepts/reference/why_do_you_love_STAR_Voting.md) | keep as script | a personal cold open — the warmth *is* the content |
-| [our_voting_system_is_broken.md](../topics/our_voting_system_is_broken.md) | convert | **✔ done (2026-07)** — converted to an educational "problem with plurality" page (dialogue → prose; demos as links) |
-| [favorite_betrayal_voting_301.md](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) | convert | **✔ done (2026-07)** — educational reference body; §7 recast from a Larry↔Adam recording script into an **RCV-advocate ↔ STAR-advocate debate** (debate-prep, not a presenter artifact) |
-| [RCV_or_IRV_whats_the_right_word.md](../../06_Other/RCV_IRV/concepts/RCV_or_IRV_whats_the_right_word.md) | convert | **✔ done (2026-07)** — now a short concept page (dialogue → prose) that defers the full taxonomy to canonical [TIPS_terminology](../tips/TIPS_terminology.md) |
-| [exhausted_ballots_301.md](../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md) | convert | **✔ done (2026-07)** — reference body kept; §7 recast from a Larry↔Adam script into an **RCV-advocate ↔ STAR-advocate debate** (matches favorite_betrayal_301) |
+Everything else that was once a dialogue has been converted to an educational page — that conversion finished in 2026-07 and the tracker is retired. Two of the converted pages keep a debate section at the end ([favorite betrayal](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md), ["exhausted ballots"](../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)), but those are an **RCV-advocate ↔ STAR-advocate** debate written for debate prep, not a recording script.
+
+---
+
+## Format policy — scripts are for presenters; readers get educational pages
+
+The Larry↔Adam dialogue format exists **for recording**. It is a presenter artifact, not the reading surface: a visitor landing on a topic should meet a normal educational page, not a screenplay. So:
+
+1. **Every topic's primary surface is an educational concept page.** A conversation script survives only where the spoken format *is* the product — the flagship pitch, the personal cold open, the primer — and even then it points to the educational pages for the substance.
+2. **The model pattern** is [what_is_a_voting_method.md](../topics/what_is_a_voting_method.md): the concept page is primary and the script announces itself as the companion.
+3. **Don't add new dialogue pages** for a topic that needs an explainer. Write the concept page; add a script only if someone is actually going to record it.
 
 ---
 
@@ -35,28 +38,30 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 
 ### Proposed episode roadmap
 
+Slides are named by **short name** — look the deck up in [LINKS.md](../LINKS.md), never by raw URL or slide number.
+
 | # | Episode (clip) | Core question | Repo demo | Source slides |
 |---|----------------|---------------|-----------|---------------|
-| 00 | What is a voting method? (the foundation) | ballot vs count; plurality vs majority | `split_voting/00_plurality_vs_majority` | "Rating vs Ranking", "Plurality vs Majority" |
+| 00 | What is a voting method? (the foundation) | ballot vs count; plurality vs majority | [`00_plurality_vs_majority`](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) | "Rating vs Ranking", "Plurality vs Majority" |
 | 0 | Why do you love STAR? (cold open) | the personal "why" | — | Full Deck title + dilemma |
 | 1 | What's so good about STAR? | the whole pitch in one arc | flagship file's demos | Full Deck (all) |
-| 1.5 | Is our voting system broken? (Problem with Plurality) | is it broken — frequent? serious? worsening? | `split_voting/01*`, `04*` | "Problem: Vote-Splitting", "The Voting Dilemma" |
-| 2 | The spoiler effect | why Choose-One breaks with 3+ | `split_voting/01*`, `03*` | "Vote-Splitting", "Domino Effect" |
-| 3 | Ranks vs Scores | why scores carry more info | (whiteboard) + `00a` | "Rating vs Ranking" |
+| 1.5 | Is our voting system broken? (Problem with Plurality) | is it broken — frequent? serious? worsening? | [`01_political_left_split`](../../method_comparisons/split_voting/_main/_main_pages/01_political_left_split.md), [`04_star_wars_vote_split`](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) | "Problem: Vote-Splitting", "The Voting Dilemma" |
+| 2 | The spoiler effect | why Choose-One breaks with 3+ | [`02_icecream_chocolate_split`](../../method_comparisons/split_voting/_main/_main_pages/02_icecream_chocolate_split.md), [`03_lunch_veggie_vs_meat`](../../method_comparisons/split_voting/_main/_main_pages/03_lunch_veggie_vs_meat.md) | "Vote-Splitting", "Domino Effect" |
+| 3 | Ranks vs Scores | why scores carry more info | (whiteboard) + [`01a_c2_b1_two-candidates`](../../01_STAR/silly_two_cand_STAR/cases/cases_pages/01a_c2_b1_two-candidates.md) | "Scores vs Rankings", "Rating vs Ranking" |
 | 4 | The STAR ballot | how do I vote? | — | "Instructions" / 5-star ballot |
-| 5 | The two rounds | why Score *then* Runoff? | `00a_c2_b1`, `vote_splitting2` | "How STAR Works", Dual-Nature doc |
+| 5 | The two rounds | why Score *then* Runoff? | [`vote_splitting2`](../../01_STAR/_main/cases/cases_pages/vote_splitting2.md) | "How STAR Works", Automatic Runoff, Dual-Nature doc |
 | 6 | Benefits of STAR | Simple/Honest/Expressive/Accurate/Equal | accuracy demos | "What do we want", accuracy chart |
 | 7 | STAR vs RCV-IRV | pros & cons, honestly | 4-cand `show_irv` divergence | Scorecard, Burlington, Alaska |
 | 7.5 | RCV or IRV? (nomenclature, **201**) | which word, and why | — | "About Ranked Choice" |
 | 8 | Counting & trust | summability, audits | any file's matrix | "Summability" slides |
-| 9 | Multi-winner & proportional | electing several seats | `02_Multi_winner/*` | "Proportional Representation" |
+| 9 | Multi-winner & proportional | electing several seats | [`02_STAR_Bloc/`](../../02_STAR_Bloc/README.md), [`03_STAR_PR/`](../../03_STAR_PR/README.md) | "Proportional Representation" |
 | 10 | The honest limits | "resistant, not proof" | — | "Voting Theory Facts" |
-| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | `01_Single_winner/equal_support_runoff_demo.yaml` | "No-Preference Votes in the Runoff" |
+| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | [`equal_support_runoff_demo`](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md) | "No-Preference Votes in the Runoff" |
 | 12 | Favorite betrayal (Voting 301) | does *only* RCV avoid it? | — | "RCV Common False Claims", "Alaska '22", pass/fail criteria |
-| 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
+| 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | [`equal_support_runoff_demo`](../../01_STAR/_main/cases/cases_pages/equal_support_runoff_demo.md) (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |
 
-Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md), now an educational page — build the clip's Q&A from its sections) is debate-prep — deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
+Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 ([are_equal_score_votes_discounted.md](../../01_STAR/concepts/reference/are_equal_score_votes_discounted.md), now an educational page — build the clip's Q&A from its sections) is debate-prep: deploy it only when a skeptic raises the FairVote "discounted votes" line; don't lead with it.
 
 ### Suggested additional topics (good standalone clips)
 - "Equal Preference / no-preference in the runoff" — what an equal score does. <!-- terminology-ok: names the aka under discussion -->
@@ -66,71 +71,23 @@ Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 
 
 ---
 
-## Cross-referencing the presentations
-
-You have four decks/docs in play. Treat them as **source slides**, not as the script — pull individual slides into the relevant segment.
-
-| Short name | What it's best for | Link |
-|------------|--------------------|------|
-| **Full Deck 2025** | the canonical slide library; nearly every segment | docs.google.com/presentation/d/1wyR_1aSlATkOzcbGhWCD0_mRtRK60PDS3INIazhQl1w |
-| **Automatic Runoff** | deep-dive visuals for Segment 5 (the runoff) | docs.google.com/presentation/d/1DNJg5kbsNbNQFV3bosm4KZmgJtNfIbQdpirhm5XlCqY |
-| **Torrance LWV (Arend)** | the cleanest single-talk flow + the scorecard table | docs.google.com/presentation/d/1xPVPWnqJJPrkdm68uuZ9dYKqCsPqV1zgOcRnRBhZaAM |
-| **Dual Nature (doc)** | the "strength vs numbers" framing for Segment 5 | docs.google.com/document/d/1n3pkr_S9MBucJMg7ANhk5ZZ00OLTW3Kj5Bp-vruW10k |
-
-**Turning Arend's Torrance deck into Q&A:** it already moves in a teachable order (problem → spoiler → alternatives → RCV facts → STAR → scorecard). The best approach is to **keep his slide order as the spine and convert each slide title into Larry's question**:
-- "PROBLEM: VOTE-SPLITTING" → *Larry: "What actually goes wrong with more than two candidates?"*
-- "ABOUT RANKED CHOICE" → *"People love RCV — what does it get right, and where does it fall down?"*
-- "Single-Winner Voting Method Scorecard" → *"Can you put STAR, RCV, and Choose-One side by side?"* (then show the table as the answer). Each slide becomes one Q→A→[show slide] beat. His scorecard slide is the single strongest asset you have for Segment 7 — lead the comparison with it.
-
-**For the "Dual Nature" doc you need to turn into a presentation:** it's already structured as an argument (cardinal phase / ordinal phase / why it matters / strategy). Convert each bold heading into one slide and one Larry question:
-- "Scoring Phase (Cardinal)" → slide: *strength of support*.
-- "Runoff Phase (Ordinal)" → slide: *number of supporters*.
-- "Why This Matters" → slide: *cardinal is expressive but gameable; ordinal resists gaming but splits votes; STAR uses each to cover the other's weakness*.
-- Close on the Tim Peters quote — it's a great mic-drop slide. This is Segment 5's deck; build it once and reuse it.
-
-### Suggested changes / new presentations
-- **New: a 5-slide "Scores vs Ranks" micro-deck** (Segment 3). None of the existing decks isolate this cleanly, and it's the conceptual hinge.
-- **New: a "Live Demo" deck** that is mostly blank frames cueing you to switch to the STAR engine — so the recording cuts cleanly between slide and terminal.
-- **Change to the Full Deck:** it has several near-duplicate "vote-splitting" slides with identical speaker notes. For the recordings, make a trimmed *recording cut* that keeps one of each, so you're not paging past repeats.
-- **Add a Burlington + Alaska "real failures" two-slide pair** to the front of Segment 7 — concrete beats abstract.
-
----
-
-## Keeping presentations & Google Doc links in sync
-
-Google Slides/Docs don't auto-sync with this repo, so don't try to mirror their *content* here. Instead keep a **single source-of-truth link registry** and a **mapping**, and let each live in its own home:
-
-1. **One `LINKS.md`** (I can create it) listing every deck/doc: short name, URL, one-line purpose, and "last reviewed" date. Every script links by *short name*, never by raw URL — so when a URL changes you fix it in one place.
-2. **Map, don't copy.** Scripts reference slides as `[SLIDE] Full Deck — "title"`. That survives slide reordering far better than slide-number links.
-3. **Stable anchors.** In Slides, give key slides a short, searchable title (you already do). Searching the title is more durable than a `#slide=id…` deep link, which breaks on copy/duplicate.
-4. **One-way canonical direction.** Pick the canonical artifact per topic (e.g. Arend's deck is canonical for the scorecard) and have others *point to it* rather than duplicating it.
-5. **Review cadence.** When you edit a deck, bump its "last reviewed" date in `LINKS.md` and grep the scripts for its short name to catch stale references.
-
-The repo's own files (engine output, example YAMLs) *are* canonical and version- controlled — so prefer them for anything you want to stay exactly in sync (the live demos), and treat the Google decks as the visual layer on top.
-
----
-
 ## Demo software: BetterVoting vs the STAR engine
-
-(From your "pros and cons" note — summarized with a recommendation.)
 
 **Use both, in this order:**
 
 1. **Drive the teaching with the STAR engine in this repo** (the `starvote_…` fork). It's *dynamic*: you can change a ballot on the fly to make a scenario land, the reporting options show exactly what you want (Condorcet, RCV-IRV, Approval, the vote-splitting check), and every example is a saved, repeatable file. That's perfect for "watch what happens when I move this one score."
-2. **Send the audience to BetterVoting.com to *participate*.** Beautiful graphics, a real shareable ballot link, and audience engagement (have them vote on their phones). That's the call-to-action moment.
+2. **Send the audience to BetterVoting.com to *participate*.** Beautiful graphics, a real shareable ballot link, and audience engagement — have them vote on their phones. That's the call-to-action moment.
 
-**Why not BetterVoting for the teaching demos:** casting each ballot one-by-one is slow and error-prone on camera, you can't tweak scores live, the sandbox's reporting is incomplete, and (per your notes) it mishandles ties — which is exactly the kind of edge case a teaching demo wants to be correct about.
+**Why not BetterVoting for the teaching demos:** casting each ballot one-by-one is slow and error-prone on camera, you can't tweak scores live, the sandbox's reporting is incomplete, and it mishandles ties — which is exactly the kind of edge case a teaching demo wants to be correct about.
 
 **Make the engine demos better for recording:**
 - Pre-stage the exact files (see the flagship's demo index) so you never type ballots live.
-- Turn on only the output you'll narrate (`options: { show_matrix: t, show_condorcet: t, show_irv: t }`) and hide the rest, so the screen isn't busy.
+- Turn on only the output you'll narrate and hide the rest, so the screen isn't busy.
 - Keep a blank "Live Demo" slide to cut to, so the video editor has a clean seam.
 - For the spoiler beat, the `[Vote-splitting check]` block gives you the punchline in numbers — read it out loud.
 
-**Honest caveat from your own note:** after the engine demo you'll still point people to BetterVoting to actually try it — so frame the engine as *your* teaching instrument and BetterVoting as *their* hands-on tool. They're complementary, not competing.
+**Honest caveat:** after the engine demo you'll still point people to BetterVoting to actually try it — so frame the engine as *your* teaching instrument and BetterVoting as *their* hands-on tool. They're complementary, not competing.
 
 ---
 
-## Files in this folder
-- `whats_so_good_about_STAR_Voting.md` — the flagship Larry↔Adam script.
-- `README.md` — this plan (roadmap, slide map, sync strategy, demo software).
+**Slides and decks:** every deck and Google doc lives in [LINKS.md](../LINKS.md) — short name, URL, purpose, last-reviewed date. Reference a slide as `[SLIDE] <Short name> — "slide title"`; searching the title survives reordering, a `#slide=id…` deep link does not.
