@@ -68,6 +68,12 @@ theme:
 extra_css:
   - 07_Concepts/about_this_repo/site_extra.css
 
+# Local build-time fixes that would otherwise need a plugin (and therefore a new
+# pinned dependency). Currently: acronym casing in the auto-generated sidebar
+# labels, which MkDocs derives from folder names — see the module docstring.
+hooks:
+  - mkdocs_hooks.py
+
 plugins:
   - search
   - same-dir
@@ -384,6 +390,7 @@ exclude_docs: |
   .*
   /site
   /AGENTS.md
+  /mkdocs_hooks.py
   /ballots.pdf
   /_notes
   _demo_dropbox/

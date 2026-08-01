@@ -256,6 +256,11 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   Adding a plugin means updating **two** places: `mkdocs.yml` plugins and the `docs`
   dependency group in `pyproject.toml` (then `uv lock`). CI and the local preview both
   resolve from `uv.lock`, so there is no separate install command to keep in sync.
+  **Prefer a hook over a plugin** for small build-time fixes: `hooks:` in `mkdocs.yml`
+  loads a plain repo file (`mkdocs_hooks.py`) with no dependency and no lock churn.
+  It already carries the sidebar acronym casing (`rr_tiebreaks` → "RR tiebreaks"),
+  which is fixed at build time precisely *because* renaming the folder would move
+  permanent URLs.
 - **Companion repo — research-paper topics live OUTSIDE this repo.**
   <https://github.com/masiarek/star-voting-research-topics> (**private**) holds the
   vetted research-paper prospectuses that use this library as their reproducibility
