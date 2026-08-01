@@ -24,6 +24,17 @@ goes live). Correcting the label at build time changes no URL and needs no
 Keep `TERMS` narrow. It rewrites whole words only, so `STARVote` and `starvote`
 are safe, but a folder whose name genuinely contains one of these as an English
 word would be shouted at too.
+
+## Underscore-prefixed folders
+
+The same `_` → space step turns the house `_main` folders (one per method, the
+core case set, underscored so it sorts to the top of a file listing) into a
+label that *starts with a space* — and `.capitalize()` then lands on that space
+and does nothing, so the sidebar shipped a blank-looking " main" indented out of
+line with its siblings. Stripping the padding and applying MkDocs' own
+capitalize-if-all-lowercase rule to what's left gives "Main", which is what the
+folder would have rendered as without the prefix. The prefix keeps doing its
+sorting job on disk; only the label changes.
 """
 
 from __future__ import annotations
@@ -57,6 +68,15 @@ _TERM_RE = re.compile(
 )
 
 
+def unpad(title: str) -> str:
+    """Drop the padding a leading/trailing `_` leaves behind, then re-apply
+    MkDocs' capitalize-if-all-lowercase rule that the padding defeated."""
+    stripped = title.strip()
+    if stripped == title:
+        return title
+    return stripped.capitalize() if stripped.islower() else stripped
+
+
 def fix_acronyms(title: str) -> str:
     """Return `title` with known acronyms and proper nouns cased canonically."""
     title = _PHRASE_RE.sub(lambda m: PHRASES[m.group(0).lower()], title)
@@ -66,7 +86,8 @@ def fix_acronyms(title: str) -> str:
 def _retitle(items) -> None:
     for item in items:
         if item.is_section:
-            item.title = fix_acronyms(item.title)
+            # unpad first: it can expose a lowercase acronym at the front.
+            item.title = fix_acronyms(unpad(item.title))
             _retitle(item.children)
 
 
