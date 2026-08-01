@@ -1,0 +1,33 @@
+# Run the full pytest suite (engine + wrapper + the ~430 YAML election cases'
+# winner assertions) on every push and pull request. This is the regression net
+# that keeps every published tabulation honest — see
+# 07_Concepts/about_this_repo/repository_guide.md for what the suite covers.
+
+name: tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The floor and ceiling of pyproject's requires-python (>=3.10,<3.14);
+        # .python-version pins 3.13 locally.
+        python-version: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+      - run: uv sync
+      - run: uv run pytest -q

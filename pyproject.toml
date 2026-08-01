@@ -19,8 +19,10 @@ dev = [
     "pytest>=8.0",
 ]
 
-[tool.mypy]
-strict = true
+[tool.pytest.ini_options]
+# One canonical suite, collected identically from any cwd (the content tree
+# holds hundreds of directories pytest would otherwise walk).
+testpaths = ["STARVote_LH_tabulation_engine/tests"]
 
 [tool.uv.workspace]
 members = [
