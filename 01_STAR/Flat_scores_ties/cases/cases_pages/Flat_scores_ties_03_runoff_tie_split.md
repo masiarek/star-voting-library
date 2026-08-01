@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Flat scores 03 — runoff tie, an even 1-1 split
 
 *Generated from [`Flat_scores_ties_03_runoff_tie_split.yaml`](../Flat_scores_ties_03_runoff_tie_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

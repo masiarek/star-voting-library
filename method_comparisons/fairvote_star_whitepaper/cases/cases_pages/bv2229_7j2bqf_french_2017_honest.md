@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # FairVote white paper — French 2017 (HONEST): STAR elects the centrist Macron
 
 *Generated from [`bv2229_7j2bqf_french_2017_honest.yaml`](../bv2229_7j2bqf_french_2017_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

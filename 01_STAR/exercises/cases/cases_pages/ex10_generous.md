@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 10 — Later-no-harm: the generous ballots
 
 *Generated from [`ex10_generous.yaml`](../ex10_generous.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

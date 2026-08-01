@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots)
 
 *Generated from [`bv15_4h89vj_plurality_abstain.yaml`](../bv15_4h89vj_plurality_abstain.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

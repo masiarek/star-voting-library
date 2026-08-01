@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak
 
 *Generated from [`bv2142_4gfwdq_clone_cycle_pre.yaml`](../bv2142_4gfwdq_clone_cycle_pre.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

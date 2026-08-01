@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Same winner, very different counts — STAR adds, IRV eliminates
 
 *Generated from [`count_simplicity_star_vs_irv.yaml`](../count_simplicity_star_vs_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

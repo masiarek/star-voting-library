@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR mono-raise-delete — part 1: baseline, X wins
 
 *Generated from [`mono_raise_delete_before.yaml`](../mono_raise_delete_before.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 11 — Recruit a spoiler: Axl enters the race
 
 *Generated from [`ex11_spoiler_added.yaml`](../ex11_spoiler_added.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

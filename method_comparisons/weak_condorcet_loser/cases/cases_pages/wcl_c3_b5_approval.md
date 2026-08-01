@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Weak Condorcet loser — the same five voters, on Approval ballots
 
 *Generated from [`wcl_c3_b5_approval.yaml`](../wcl_c3_b5_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win
 
 *Generated from [`bv2228_bgcmxx_betray_irv.yaml`](../bv2228_bgcmxx_betray_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

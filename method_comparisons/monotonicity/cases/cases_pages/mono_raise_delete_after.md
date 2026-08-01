@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses
 
 *Generated from [`mono_raise_delete_after.yaml`](../mono_raise_delete_after.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

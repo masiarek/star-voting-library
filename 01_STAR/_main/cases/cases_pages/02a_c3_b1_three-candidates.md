@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Three candidates, one ballot - single-winner STAR
 
 *Generated from [`02a_c3_b1_three-candidates.yaml`](../02a_c3_b1_three-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)
 
 *Generated from [`bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../bv2157_mmcmpy_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

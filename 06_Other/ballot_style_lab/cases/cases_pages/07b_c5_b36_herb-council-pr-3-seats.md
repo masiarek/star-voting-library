@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone)
 
 *Generated from [`07b_c5_b36_herb-council-pr-3-seats.yaml`](../07b_c5_b36_herb-council-pr-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

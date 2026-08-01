@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV parity — STAR_PR (Allocated Score): basic two-seat allocation
 
 *Generated from [`BV_Library_star_pr_basic_two_seats.yaml`](../BV_Library_star_pr_basic_two_seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

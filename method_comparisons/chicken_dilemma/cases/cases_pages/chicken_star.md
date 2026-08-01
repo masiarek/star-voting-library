@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly)
 
 *Generated from [`chicken_star.yaml`](../chicken_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

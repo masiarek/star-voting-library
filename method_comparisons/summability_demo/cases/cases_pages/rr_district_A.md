@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Summability demo — District A, counted by Ranked Robin
 
 *Generated from [`rr_district_A.yaml`](../rr_district_A.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

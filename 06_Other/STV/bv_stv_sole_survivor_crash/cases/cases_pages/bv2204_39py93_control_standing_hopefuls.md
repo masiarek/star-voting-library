@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)
 
 *Generated from [`bv2204_39py93_control_standing_hopefuls.yaml`](../bv2204_39py93_control_standing_hopefuls.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

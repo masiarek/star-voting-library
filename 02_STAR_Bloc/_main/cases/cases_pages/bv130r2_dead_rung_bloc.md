@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk)
 
 *Generated from [`bv130r2_dead_rung_bloc.yaml`](../bv130r2_dead_rung_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

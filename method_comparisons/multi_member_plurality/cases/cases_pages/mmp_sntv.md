@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Multi-member plurality — SNTV (3 seats): the minority tops the poll
 
 *Generated from [`mmp_sntv.yaml`](../mmp_sntv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

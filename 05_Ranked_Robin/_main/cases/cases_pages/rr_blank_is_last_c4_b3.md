@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin — a blank is ranked LAST (and rank numbers don't matter)
 
 *Generated from [`rr_blank_is_last_c4_b3.yaml`](../rr_blank_is_last_c4_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

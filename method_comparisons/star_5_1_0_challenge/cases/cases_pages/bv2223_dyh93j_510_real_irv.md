@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # RCV-IRV, real moderate base — still squeezes the center (→ Ana)
 
 *Generated from [`bv2223_dyh93j_510_real_irv.yaml`](../bv2223_dyh93j_510_real_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

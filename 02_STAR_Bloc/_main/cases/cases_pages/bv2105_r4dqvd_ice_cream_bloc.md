@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention
 
 *Generated from [`bv2105_r4dqvd_ice_cream_bloc.yaml`](../bv2105_r4dqvd_ice_cream_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

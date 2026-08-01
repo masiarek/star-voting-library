@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Fishburn Ex.14 — Choose-One: A wins on first choices
 
 *Generated from [`bv2160_r6qc8h_plurality.yaml`](../bv2160_r6qc8h_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

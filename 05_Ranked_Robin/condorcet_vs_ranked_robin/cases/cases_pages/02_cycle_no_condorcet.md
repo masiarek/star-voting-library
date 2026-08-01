@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet winner (a cycle) — Ranked Robin still elects one
 
 *Generated from [`02_cycle_no_condorcet.yaml`](../02_cycle_no_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

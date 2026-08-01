@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pets Governance — Council by Bloc STAR (3 seats): majority sweeps
 
 *Generated from [`pets_gov_bloc_star.yaml`](../pets_gov_bloc_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

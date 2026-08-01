@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Bloc STAR Voting: 2-Seat Committee Election
 
 *Generated from [`01_c4_b2_bloc-star-2-seats.yaml`](../01_c4_b2_bloc-star-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

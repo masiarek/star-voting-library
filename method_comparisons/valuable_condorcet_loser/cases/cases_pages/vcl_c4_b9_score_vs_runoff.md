@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The valuable Condorcet loser — Score elects her, the runoff rejects her
 
 *Generated from [`vcl_c4_b9_score_vs_runoff.yaml`](../vcl_c4_b9_score_vs_runoff.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

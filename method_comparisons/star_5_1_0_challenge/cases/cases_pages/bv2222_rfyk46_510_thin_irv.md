@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # RCV-IRV on the same electorate — also squeezes the center (→ Ana)
 
 *Generated from [`bv2222_rfyk46_510_thin_irv.yaml`](../bv2222_rfyk46_510_thin_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

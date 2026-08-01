@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2262 — nine candidates, a nine-way dead heat: the recorded tiebreak still pins the winner
 
 *Generated from [`bv2262_2gvwr9_nine_way_dead_heat.yaml`](../bv2262_2gvwr9_nine_way_dead_heat.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

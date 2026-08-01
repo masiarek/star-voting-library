@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 15b — a 0–5 score profile (which method is this?)
 
 *Generated from [`ex15_score_profile.yaml`](../ex15_score_profile.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

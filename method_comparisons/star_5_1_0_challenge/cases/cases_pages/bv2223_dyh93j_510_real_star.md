@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW
 
 *Generated from [`bv2223_dyh93j_510_real_star.yaml`](../bv2223_dyh93j_510_real_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

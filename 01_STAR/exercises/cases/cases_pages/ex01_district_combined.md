@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 1 — Two districts, one mayor: the COMBINED city
 
 *Generated from [`ex01_district_combined.yaml`](../ex01_district_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

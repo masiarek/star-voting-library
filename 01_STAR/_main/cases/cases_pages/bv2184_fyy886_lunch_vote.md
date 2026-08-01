@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2184 — The team lunch vote
 
 *Generated from [`bv2184_fyy886_lunch_vote.yaml`](../bv2184_fyy886_lunch_vote.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

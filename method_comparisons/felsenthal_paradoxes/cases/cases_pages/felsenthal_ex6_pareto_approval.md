@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only)
 
 *Generated from [`felsenthal_ex6_pareto_approval.yaml`](../felsenthal_ex6_pareto_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR vs RR divergence -- 3 cands, 15 voters, darkhorse (STAR A, RR C)
 
 *Generated from [`darkhorse_C03_fewV15_noise_1.yaml`](../darkhorse_C03_fewV15_noise_1.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

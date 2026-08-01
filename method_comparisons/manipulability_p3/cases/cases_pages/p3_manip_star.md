@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # P3 manipulated — two voters bury their 4th choice and STAR elects their favourite
 
 *Generated from [`p3_manip_star.yaml`](../p3_manip_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV215 — None of the Above wins (STAR) — with a null abstention
 
 *Generated from [`bv215_26khr3_nota_wins.yaml`](../bv215_26khr3_nota_wins.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

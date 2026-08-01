@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity
 
 *Generated from [`split_cycle_schulze_spoiler_c5_b40.yaml`](../split_cycle_schulze_spoiler_c5_b40.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

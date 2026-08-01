@@ -129,6 +129,15 @@ def check_links():
                     os.path.join(dirpath, unquote(target).replace("/", os.sep)))
                 if not os.path.exists(p):
                     broken.append((rel, raw))
+                elif os.path.isdir(p) and not (
+                    os.path.exists(os.path.join(p, "README.md"))
+                    or os.path.exists(os.path.join(p, "index.md"))
+                ):
+                    # Fine on GitHub (tree view), but the published site emits
+                    # no index.html for a README-less folder → the link 404s.
+                    broken.append((rel, raw + "  [folder link, but the folder "
+                                              "has no README.md — 404s on the "
+                                              "published site]"))
     return sorted(set(broken))
 
 
@@ -276,6 +285,63 @@ def _find_key(node, keys):
             if r:
                 return r
     return None
+
+
+# The documented top-level schema for election YAMLs (field reference:
+# 07_Concepts/about_this_repo/YAML_authoring_template.md). A key outside this
+# set is almost always a typo — and a typo in a load-bearing key (say
+# `expected_winers:`) silently removes the file from test discovery, which is
+# exactly the failure class this check exists to catch.
+ELECTION_KEYS = {
+    "election_title", "title",
+    "scenario_description", "election_description", "race_description",
+    "voting_method", "num_winners", "ballots",
+    "expected_winners", "expected_results",
+    "options", "lot_numbers", "eligible_voters", "quorum", "blocs",
+    "paradoxes", "video_script",
+    "election",  # the nested BetterVoting export schema
+    "bv_election_id", "bv_results_url", "bv_test_id", "bv_github_issue",
+    "lh_only_reason",
+}
+
+
+def unknown_top_level_keys(data):
+    """The keys of `data` outside the documented election schema, each paired
+    with a did-you-mean suggestion (or None)."""
+    import difflib
+    out = []
+    for k in data:
+        if k in ELECTION_KEYS:
+            continue
+        hint = difflib.get_close_matches(str(k), sorted(ELECTION_KEYS), n=1)
+        out.append((str(k), hint[0] if hint else None))
+    return out
+
+
+def check_top_level_keys():
+    """Return [(file, problem)] for election YAMLs carrying unrecognized
+    top-level keys."""
+    try:
+        import yaml as _yaml
+    except ImportError:  # pragma: no cover
+        return []
+    bad = []
+    for path in _yaml_teaching_files():
+        rel = os.path.relpath(path, REPO)
+        try:
+            data = _yaml.safe_load(open(path, encoding="utf-8").read())
+        except Exception:
+            continue        # malformed YAML is the negative suite's business
+        if not isinstance(data, dict):
+            continue
+        if "ballots" not in data and "election" not in data:
+            continue        # not an election file
+        for key, hint in unknown_top_level_keys(data):
+            msg = f"unknown top-level key `{key}:`"
+            if hint:
+                msg += f" — did you mean `{hint}:`?"
+            bad.append((rel, msg))
+    return sorted(bad)
 
 
 def check_descriptions():
@@ -491,6 +557,15 @@ def main(argv):
         for rel, raw, suggestion in bad_anchors:
             fix = f"  → did you mean #{suggestion}?" if suggestion else ""
             print(f"   • {rel}  →  ({raw}){fix}")
+    bad_keys = check_top_level_keys()
+    if not bad_keys:
+        print("repo-hygiene: ✓ every election YAML uses only documented top-level keys.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  unknown top-level YAML keys ({len(bad_keys)}) — "
+              "a typo here silently un-tests the case:")
+        for rel, msg in bad_keys:
+            print(f"   • {rel}\n       {msg}")
     weak = check_descriptions()
     if not weak:
         print("repo-hygiene: ✓ every teaching YAML has a real description.")

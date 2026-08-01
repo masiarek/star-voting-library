@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Proportional STAR — Sequentially Spent Score
 
 *Generated from [`02b_c5_b63_proportional-sss.yaml`](../02b_c5_b63_proportional-sss.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

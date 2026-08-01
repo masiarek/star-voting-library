@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose
 
 *Generated from [`monotonicity_irv_after.yaml`](../monotonicity_irv_after.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

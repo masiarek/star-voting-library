@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Five defensible answers, one three-ballot election (tournament solutions)
 
 *Generated from [`five_answers_one_election_c4_b3.yaml`](../five_answers_one_election_c4_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

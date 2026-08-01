@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2)
 
 *Generated from [`bv830_vb3xv2_no_condorcet_tie_score.yaml`](../bv830_vb3xv2_no_condorcet_tie_score.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

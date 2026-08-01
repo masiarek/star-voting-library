@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak)
 
 *Generated from [`bv1815_bloc_3c2s_basic.yaml`](../bv1815_bloc_3c2s_basic.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

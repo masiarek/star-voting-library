@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.5 — Approval: the Condorcet winner loses the approval count
 
 *Generated from [`bv2152_r6ctvy_approval.yaml`](../bv2152_r6ctvy_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dead rung — scoring round, dead five-star rung, cap 4
 
 *Generated from [`dead_rung_scoring_dead_cap4.yaml`](../dead_rung_scoring_dead_cap4.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

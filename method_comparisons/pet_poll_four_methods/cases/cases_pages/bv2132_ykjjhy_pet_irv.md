@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish
 
 *Generated from [`bv2132_ykjjhy_pet_irv.yaml`](../bv2132_ykjjhy_pet_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

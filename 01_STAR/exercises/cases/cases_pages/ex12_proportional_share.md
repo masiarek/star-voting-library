@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 12 — Two seats, one neighborhood: Allocated Score shares
 
 *Generated from [`ex12_proportional_share.yaml`](../ex12_proportional_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

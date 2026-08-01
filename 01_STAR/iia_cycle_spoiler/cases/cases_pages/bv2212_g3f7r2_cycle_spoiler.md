@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR's runoff is spoiler-sensitive under a Condorcet cycle — a losing candidate (Ben) flips Alice vs Carla (BV2212, g3f7r2)
 
 *Generated from [`bv2212_g3f7r2_cycle_spoiler.yaml`](../bv2212_g3f7r2_cycle_spoiler.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

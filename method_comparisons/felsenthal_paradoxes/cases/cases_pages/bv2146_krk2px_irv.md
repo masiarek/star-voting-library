@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support
 
 *Generated from [`bv2146_krk2px_irv.yaml`](../bv2146_krk2px_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

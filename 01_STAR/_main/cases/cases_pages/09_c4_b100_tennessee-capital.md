@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Tennessee Capital — classic STAR example
 
 *Generated from [`09_c4_b100_tennessee-capital.yaml`](../09_c4_b100_tennessee-capital.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

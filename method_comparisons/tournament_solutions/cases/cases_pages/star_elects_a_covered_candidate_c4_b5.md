@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR elects a covered candidate — five ballots, four cities
 
 *Generated from [`star_elects_a_covered_candidate_c4_b5.yaml`](../star_elects_a_covered_candidate_c4_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

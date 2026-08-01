@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada
 
 *Generated from [`bv2146_krk2px_star.yaml`](../bv2146_krk2px_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

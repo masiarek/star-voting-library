@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV1570 — undecided plurality election still declares a winner
 
 *Generated from [`bv1570_6hv7jf_undecided_plurality.yaml`](../bv1570_6hv7jf_undecided_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

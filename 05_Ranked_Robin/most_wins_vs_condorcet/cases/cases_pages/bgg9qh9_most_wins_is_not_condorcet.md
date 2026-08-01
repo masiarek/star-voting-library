@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin — winning the most matchups does NOT make you the Condorcet winner
 
 *Generated from [`bgg9qh9_most_wins_is_not_condorcet.yaml`](../bgg9qh9_most_wins_is_not_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

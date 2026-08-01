@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole
 
 *Generated from [`bv2149_byk9v2_irv.yaml`](../bv2149_byk9v2_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV131 — Guido example (Bloc STAR): seat 1 is a hidden lot-decided tie
 
 *Generated from [`bv131_guido_bloc.yaml`](../bv131_guido_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

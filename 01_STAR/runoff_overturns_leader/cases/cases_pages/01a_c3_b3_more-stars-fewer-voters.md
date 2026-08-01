@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # More stars, fewer voters — the runoff overturns the score leader
 
 *Generated from [`01a_c3_b3_more-stars-fewer-voters.yaml`](../01a_c3_b3_more-stars-fewer-voters.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

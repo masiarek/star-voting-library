@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reversal symmetry — RCV-IRV, original: A wins (best)
 
 *Generated from [`reversal_irv_original.yaml`](../reversal_irv_original.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

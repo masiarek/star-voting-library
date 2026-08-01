@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family)
 
 *Generated from [`bv750_tie_breaking_bloc.yaml`](../bv750_tie_breaking_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway)
 
 *Generated from [`vote_splitting_scenario2_bloc_leads.yaml`](../vote_splitting_scenario2_bloc_leads.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff reversal, the jarring case — the near-consensus favorite loses a 51–49 runoff to a polarizing rival
 
 *Generated from [`reversal_jarring_c3_b100.yaml`](../reversal_jarring_c3_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

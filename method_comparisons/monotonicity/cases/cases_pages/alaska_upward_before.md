@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Upward monotonicity (Alaska 2022) — BEFORE: Peltola wins
 
 *Generated from [`alaska_upward_before.yaml`](../alaska_upward_before.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

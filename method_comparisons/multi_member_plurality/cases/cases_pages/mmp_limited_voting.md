@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1
 
 *Generated from [`mmp_limited_voting.yaml`](../mmp_limited_voting.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

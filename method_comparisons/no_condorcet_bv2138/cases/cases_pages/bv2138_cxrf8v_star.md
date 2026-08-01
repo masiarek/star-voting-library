@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet Winner — STAR (ranks→scores): Brad wins the runoff
 
 *Generated from [`bv2138_cxrf8v_star.yaml`](../bv2138_cxrf8v_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

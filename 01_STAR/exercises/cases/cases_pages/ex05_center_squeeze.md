@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 5 — The squeezed bridge-builder (IRV vs STAR)
 
 *Generated from [`ex05_center_squeeze.yaml`](../ex05_center_squeeze.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

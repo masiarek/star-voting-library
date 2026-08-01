@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Plurality vs Majority — most votes isn't more than half
 
 *Generated from [`00_plurality_vs_majority.yaml`](../00_plurality_vs_majority.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

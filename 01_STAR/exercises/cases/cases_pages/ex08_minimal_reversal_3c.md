@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 8 — a small runoff reversal (sample solution, three candidates)
 
 *Generated from [`ex08_minimal_reversal_3c.yaml`](../ex08_minimal_reversal_3c.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

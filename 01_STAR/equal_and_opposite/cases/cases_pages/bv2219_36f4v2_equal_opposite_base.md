@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Equal & opposite — the base election (Comet wins)
 
 *Generated from [`bv2219_36f4v2_equal_opposite_base.yaml`](../bv2219_36f4v2_equal_opposite_base.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

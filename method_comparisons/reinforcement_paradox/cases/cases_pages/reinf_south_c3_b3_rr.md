@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reinforcement — South district alone (3 voters, Ada is the clear Condorcet winner)
 
 *Generated from [`reinf_south_c3_b3_rr.yaml`](../reinf_south_c3_b3_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

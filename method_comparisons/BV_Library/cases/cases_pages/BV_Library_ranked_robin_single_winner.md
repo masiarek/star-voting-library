@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV parity — Ranked Robin: Condorcet winner (equal ranks allowed)
 
 *Generated from [`BV_Library_ranked_robin_single_winner.yaml`](../BV_Library_ranked_robin_single_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

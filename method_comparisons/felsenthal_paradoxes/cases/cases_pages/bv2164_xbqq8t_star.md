@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff
 
 *Generated from [`bv2164_xbqq8t_star.yaml`](../bv2164_xbqq8t_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

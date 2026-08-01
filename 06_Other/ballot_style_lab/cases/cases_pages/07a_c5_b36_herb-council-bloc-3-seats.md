@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep)
 
 *Generated from [`07a_c5_b36_herb-council-bloc-3-seats.yaml`](../07a_c5_b36_herb-council-bloc-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

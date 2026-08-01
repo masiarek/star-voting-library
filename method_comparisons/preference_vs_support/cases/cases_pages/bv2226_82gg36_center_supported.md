@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Preference vs Support — the center SUPPORTED (wings score Blair 4)
 
 *Generated from [`bv2226_82gg36_center_supported.yaml`](../bv2226_82gg36_center_supported.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Traditional voting style — one mark each (BV2256, c8h3tb)
 
 *Generated from [`bv2256_c8h3tb_traditional_style.yaml`](../bv2256_c8h3tb_traditional_style.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

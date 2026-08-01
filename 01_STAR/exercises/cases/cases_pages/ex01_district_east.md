@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 1 — Two districts, one mayor: EAST district
 
 *Generated from [`ex01_district_east.yaml`](../ex01_district_east.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

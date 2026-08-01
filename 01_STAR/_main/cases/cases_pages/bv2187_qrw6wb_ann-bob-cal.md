@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ann, Bob, Cal - the canonical leading example (single-winner STAR)
 
 *Generated from [`bv2187_qrw6wb_ann-bob-cal.yaml`](../bv2187_qrw6wb_ann-bob-cal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

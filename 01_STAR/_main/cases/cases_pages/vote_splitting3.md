@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Vote splitting — two chocolates split the majority
 
 *Generated from [`vote_splitting3.yaml`](../vote_splitting3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

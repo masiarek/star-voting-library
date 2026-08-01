@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pets Governance — Delegates by STV (3 seats): proportional again
 
 *Generated from [`pets_gov_stv.yaml`](../pets_gov_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Borda SCC Ex.15 — Choose-One: C wins on first choices
 
 *Generated from [`bv2161_q3h4fk_plurality.yaml`](../bv2161_q3h4fk_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

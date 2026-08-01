@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Unanimous ballots (five candidates)
 
 *Generated from [`05a_c5_b3_unanimous-ballots.yaml`](../05a_c5_b3_unanimous-ballots.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pets Governance — Neighborhood Reps by Bloc Plurality / SNTV (2 seats): one of each
 
 *Generated from [`pets_gov_bloc_plurality.yaml`](../pets_gov_bloc_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

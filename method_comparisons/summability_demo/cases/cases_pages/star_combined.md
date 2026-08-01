@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Summability demo — STAR combined A+B (Oak; precinct subtotals add up)
 
 *Generated from [`star_combined.yaml`](../star_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

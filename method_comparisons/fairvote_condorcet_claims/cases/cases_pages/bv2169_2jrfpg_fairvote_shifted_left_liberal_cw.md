@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner
 
 *Generated from [`bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml`](../bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

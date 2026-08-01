@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq)
 
 *Generated from [`bv2215_2p33qq_minority_winner.yaml`](../bv2215_2p33qq_minority_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

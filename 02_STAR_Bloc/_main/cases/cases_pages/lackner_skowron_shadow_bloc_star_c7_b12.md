@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4)
 
 *Generated from [`lackner_skowron_shadow_bloc_star_c7_b12.yaml`](../lackner_skowron_shadow_bloc_star_c7_b12.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

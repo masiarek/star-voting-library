@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Display options demo
 
 *Generated from [`display_options_demo.yaml`](../display_options_demo.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

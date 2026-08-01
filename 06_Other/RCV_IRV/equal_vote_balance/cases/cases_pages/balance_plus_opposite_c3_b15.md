@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada)
 
 *Generated from [`balance_plus_opposite_c3_b15.yaml`](../balance_plus_opposite_c3_b15.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

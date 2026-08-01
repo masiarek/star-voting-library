@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reinforcement — North district alone (6 voters, a perfect cycle)
 
 *Generated from [`reinf_north_c3_b6_rr.yaml`](../reinf_north_c3_b6_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

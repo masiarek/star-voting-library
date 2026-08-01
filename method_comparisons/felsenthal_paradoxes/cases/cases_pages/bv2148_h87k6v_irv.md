@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.3 District II — Runoff/IRV: Bruno wins in round one
 
 *Generated from [`bv2148_h87k6v_irv.yaml`](../bv2148_h87k6v_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

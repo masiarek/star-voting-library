@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2)
 
 *Generated from [`bv2180_fp62p2_ice_cream_ladder.yaml`](../bv2180_fp62p2_ice_cream_ladder.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

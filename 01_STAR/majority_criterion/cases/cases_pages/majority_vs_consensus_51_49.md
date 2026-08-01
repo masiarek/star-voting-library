@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Majority criterion vs. the consensus candidate — the 51/49 polarized electorate
 
 *Generated from [`majority_vs_consensus_51_49.yaml`](../majority_vs_consensus_51_49.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

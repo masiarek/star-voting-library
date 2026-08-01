@@ -121,6 +121,14 @@ Full rundown of the whole block, option by option: **[LH reporting options](../.
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |
 | `blocs` | optional | Named candidate groups for the vote-splitting analysis. |
+| `paradoxes` | optional, but **the paradox index sees nothing else** | List of paradox tags (valid tags: the pages under [`07_Concepts/voting_paradoxes/`](../voting_paradoxes/README.md)). The sole input to the auto-generated [voting-paradoxes index](../voting_paradoxes/README.md) (`build_paradox_index.py`) — a case demonstrating a paradox without this key is invisible there. |
+| `bv_election_id`, `bv_results_url`, `bv_test_id` | required for BV-backed cases | BetterVoting provenance: the live election id, its `/results` URL, and the assigned Test ID. These feed the auto-generated [BV registry](../YAML_test_case_index/BV_registry.md) (`build_bv_registry.py`) and the case page's live-results lead line. Hand-written LH-only cases omit all three. |
+
+A key outside this table fails the schema lint (`check_repo_hygiene.py` /
+`tests/test_yaml_keys.py`) with a did-you-mean hint — that lint is what keeps a
+typo like `expected_winers:` from silently removing a case from the test suite.
+Adding a genuinely new key means updating both this table and `ELECTION_KEYS`
+in the lint.
 
 > **Richer, converter-produced files.** Elections imported from BetterVoting (via the [JSON→YAML converter](../../YAML_library/1_positive/01_convert_json_yaml.py)) carry a fuller shape than a hand-written case: candidates as objects with **explicit IDs** (not just a name row), more `election_*` context, and an **`expected_results:`** block that pins per-round detail. You don't hand-write these — the converter emits them — but the flat, hand-authored fields above are all you need to write a case yourself.
 

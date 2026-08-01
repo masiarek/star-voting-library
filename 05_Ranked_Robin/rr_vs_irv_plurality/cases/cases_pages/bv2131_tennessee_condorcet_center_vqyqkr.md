@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville)
 
 *Generated from [`bv2131_tennessee_condorcet_center_vqyqkr.yaml`](../bv2131_tennessee_condorcet_center_vqyqkr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

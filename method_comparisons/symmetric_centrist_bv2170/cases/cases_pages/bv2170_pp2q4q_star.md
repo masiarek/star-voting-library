@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Symmetric centrist (47/47/3/3) — STAR: elects Casey, the Condorcet winner
 
 *Generated from [`bv2170_pp2q4q_star.yaml`](../bv2170_pp2q4q_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

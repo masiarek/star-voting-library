@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut
 
 *Generated from [`bv2213_k3fmwv_alaska_2022.yaml`](../bv2213_k3fmwv_alaska_2022.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

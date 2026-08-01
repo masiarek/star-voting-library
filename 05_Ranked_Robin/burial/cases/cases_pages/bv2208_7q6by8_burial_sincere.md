@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2208 — Burial in Ranked Robin (1/2): sincere ballots, Beryl beats everyone
 
 *Generated from [`bv2208_7q6by8_burial_sincere.yaml`](../bv2208_7q6by8_burial_sincere.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Summability demo — Combined (A+B), counted by Ranked Robin
 
 *Generated from [`rr_combined.yaml`](../rr_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

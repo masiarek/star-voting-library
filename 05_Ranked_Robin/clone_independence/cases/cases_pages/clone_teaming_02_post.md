@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win
 
 *Generated from [`clone_teaming_02_post.yaml`](../clone_teaming_02_post.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

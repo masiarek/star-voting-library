@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Bullet Storm — a bullet-voting electorate and the few who spread
 
 *Generated from [`03_c4_b33_bullet-storm.yaml`](../03_c4_b33_bullet-storm.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

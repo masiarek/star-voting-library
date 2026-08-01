@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Bloc Approval — 2 seats, majority sweep
 
 *Generated from [`approval_bloc_2seats_c4_b6.yaml`](../approval_bloc_2seats_c4_b6.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

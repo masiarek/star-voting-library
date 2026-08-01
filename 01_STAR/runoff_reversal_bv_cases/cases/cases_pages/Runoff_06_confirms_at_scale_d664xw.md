@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff 06 — the runoff confirms the leader at scale (control)
 
 *Generated from [`Runoff_06_confirms_at_scale_d664xw.yaml`](../Runoff_06_confirms_at_scale_d664xw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Copeland picks one, composition-consistency demands all five (tournament solutions)
 
 *Generated from [`copeland_vs_clones_c5_b3.yaml`](../copeland_vs_clones_c5_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held
 
 *Generated from [`bv2176_p8dp28_star.yaml`](../bv2176_p8dp28_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

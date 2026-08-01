@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner
 
 *Generated from [`p3_manip_reversal_rr.yaml`](../p3_manip_reversal_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

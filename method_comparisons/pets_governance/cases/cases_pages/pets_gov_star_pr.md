@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pets Governance — Council by STAR-PR (3 seats): minority earns a seat
 
 *Generated from [`pets_gov_star_pr.yaml`](../pets_gov_star_pr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

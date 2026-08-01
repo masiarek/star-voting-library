@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2132 — Pet poll (STAR): the consensus center Cat wins
 
 *Generated from [`bv2132_ykjjhy_pet_star.yaml`](../bv2132_ykjjhy_pet_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

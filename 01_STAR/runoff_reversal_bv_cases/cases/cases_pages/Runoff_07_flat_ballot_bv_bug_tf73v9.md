@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff 07 (WIP) — flat ballot exposes the BV abstention bug
 
 *Generated from [`Runoff_07_flat_ballot_bv_bug_tf73v9.yaml`](../Runoff_07_flat_ballot_bv_bug_tf73v9.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)
 
 *Generated from [`08_c6_b29_quota-circus-pr-2-seats.yaml`](../08_c6_b29_quota-circus-pr-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

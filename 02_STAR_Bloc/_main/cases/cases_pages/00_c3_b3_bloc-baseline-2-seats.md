@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak)
 
 *Generated from [`00_c3_b3_bloc-baseline-2-seats.yaml`](../00_c3_b3_bloc-baseline-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

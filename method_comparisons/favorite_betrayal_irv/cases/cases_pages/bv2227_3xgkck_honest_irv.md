@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins
 
 *Generated from [`bv2227_3xgkck_honest_irv.yaml`](../bv2227_3xgkck_honest_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

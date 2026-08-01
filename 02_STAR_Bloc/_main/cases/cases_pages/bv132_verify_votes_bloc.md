@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV132 — verify number of votes cast (Bloc STAR, 2 seats)
 
 *Generated from [`bv132_verify_votes_bloc.yaml`](../bv132_verify_votes_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

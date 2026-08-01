@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.7 — IRV: the majority favorite wins round one
 
 *Generated from [`bv2153_pcttmr_irv.yaml`](../bv2153_pcttmr_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

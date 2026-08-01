@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only)
 
 *Generated from [`dead_heat_lot_tiebreak.yaml`](../dead_heat_lot_tiebreak.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

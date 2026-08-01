@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada
 
 *Generated from [`bv2173_gmfv4c_edelman_saari_cancellation.yaml`](../bv2173_gmfv4c_edelman_saari_cancellation.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

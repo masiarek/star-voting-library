@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser
 
 *Generated from [`bv2167_f3dxq9_star.yaml`](../bv2167_f3dxq9_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

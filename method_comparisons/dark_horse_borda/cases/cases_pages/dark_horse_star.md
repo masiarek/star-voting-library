@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D)
 
 *Generated from [`dark_horse_star.yaml`](../dark_horse_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

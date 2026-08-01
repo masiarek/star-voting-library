@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Noise Soup — weak factions, cross-winds, flat-liners and static
 
 *Generated from [`04_c4_b47_noise-soup.yaml`](../04_c4_b47_noise-soup.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Hamlin & Hua §4.1 — the approval count as printed: B wins with 100%
 
 *Generated from [`hh41_01_approval_as_printed.yaml`](../hh41_01_approval_as_printed.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

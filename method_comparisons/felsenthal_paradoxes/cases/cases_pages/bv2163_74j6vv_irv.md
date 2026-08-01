@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better
 
 *Generated from [`bv2163_74j6vv_irv.yaml`](../bv2163_74j6vv_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

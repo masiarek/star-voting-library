@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Brams Example 3 — two candidates: two loud fans vs three mild preferences
 
 *Generated from [`brams_ex3_two_candidates_c2_b5.yaml`](../brams_ex3_two_candidates_c2_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

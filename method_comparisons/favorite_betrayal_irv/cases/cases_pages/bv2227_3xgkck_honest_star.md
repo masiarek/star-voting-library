@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Favorite betrayal — the fix: STAR & Ranked Robin elect Center from the HONEST ballots
 
 *Generated from [`bv2227_3xgkck_honest_star.yaml`](../bv2227_3xgkck_honest_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

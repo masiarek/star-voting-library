@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Condorcet centrist, minimal form (8 voters) — STAR elects Casey
 
 *Generated from [`bv2171_h93tm4_star.yaml`](../bv2171_h93tm4_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

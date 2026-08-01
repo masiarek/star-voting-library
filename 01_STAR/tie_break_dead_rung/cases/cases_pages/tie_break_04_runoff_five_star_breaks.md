@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Tie-break 04 — runoff tie, score tied, FIVE-STAR breaks it (a 5 exists)
 
 *Generated from [`tie_break_04_runoff_five_star_breaks.yaml`](../tie_break_04_runoff_five_star_breaks.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

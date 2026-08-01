@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Spoiler — a split coalition hands the seat to the minority
 
 *Generated from [`01_political_left_split.yaml`](../01_political_left_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

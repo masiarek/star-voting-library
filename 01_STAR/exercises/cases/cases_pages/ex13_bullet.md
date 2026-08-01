@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 13 — Where do you draw the line? Favorites only
 
 *Generated from [`ex13_bullet.yaml`](../ex13_bullet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

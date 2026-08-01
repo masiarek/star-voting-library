@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 15a, second look — the same Yes/No ballots read pairwise
 
 *Generated from [`ex15_approval_pairwise.yaml`](../ex15_approval_pairwise.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

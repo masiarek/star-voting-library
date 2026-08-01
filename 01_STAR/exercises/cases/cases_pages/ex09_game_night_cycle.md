@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 9 — Game night: nobody is unbeatable (a Ranked Robin ladder drill)
 
 *Generated from [`ex09_game_night_cycle.yaml`](../ex09_game_night_cycle.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

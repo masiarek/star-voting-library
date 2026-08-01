@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # FairVote white paper — Washington 2010 (HONEST): STAR elects the moderate Berkey
 
 *Generated from [`bv2231_b4yr3v_wa_2010_honest.yaml`](../bv2231_b4yr3v_wa_2010_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

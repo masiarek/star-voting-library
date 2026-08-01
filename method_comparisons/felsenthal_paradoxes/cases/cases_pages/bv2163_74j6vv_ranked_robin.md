@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B
 
 *Generated from [`bv2163_74j6vv_ranked_robin.yaml`](../bv2163_74j6vv_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

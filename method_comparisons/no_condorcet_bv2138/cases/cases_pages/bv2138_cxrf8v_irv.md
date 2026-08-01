@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet Winner — IRV (Hare): Dave wins by elimination
 
 *Generated from [`bv2138_cxrf8v_irv.yaml`](../bv2138_cxrf8v_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 10 — Later-no-harm: the reticent ballots
 
 *Generated from [`ex10_reticent.yaml`](../ex10_reticent.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

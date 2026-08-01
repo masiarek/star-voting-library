@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2205 — The smallest sole-survivor STV election (1 seat, 6 voters)
 
 *Generated from [`bv2205_8xwx43_minimal_sole_survivor.yaml`](../bv2205_8xwx43_minimal_sole_survivor.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

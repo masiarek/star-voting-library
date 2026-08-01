@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Tennessee capital by 3-2-1 Voting (blank = Bad)
 
 *Generated from [`321_tennessee_blank_encoding_c4_b100.yaml`](../321_tennessee_blank_encoding_c4_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

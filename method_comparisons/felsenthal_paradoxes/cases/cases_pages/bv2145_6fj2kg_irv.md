@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first
 
 *Generated from [`bv2145_6fj2kg_irv.yaml`](../bv2145_6fj2kg_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

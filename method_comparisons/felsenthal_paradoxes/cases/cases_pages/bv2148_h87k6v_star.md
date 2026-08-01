@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.3 District II — STAR: also Bruno
 
 *Generated from [`bv2148_h87k6v_star.yaml`](../bv2148_h87k6v_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

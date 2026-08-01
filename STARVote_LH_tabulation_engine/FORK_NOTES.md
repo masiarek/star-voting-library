@@ -60,6 +60,14 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **Why upstream:** it's the voting algorithm's allocation mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Offer it to Larry via issue #17.
 - **Regression guard:** `tests/test_verbosity_invariance.py` asserts verbosity-invariant winners for `sss` / `allocated` / `rrv` / `bloc` plus the exact proportional SSS outcome.
 
+> **Note on `example.py` and the vendored README's transcripts.** `example.py`
+> here is NOT upstream's 3-ballot Amy/Brian/Chuck example — it was repurposed as
+> a single-ballot **tiebreak-cascade demo** (scoring tie → head-to-head →
+> five-star → Hashed Ballots). The vendored `README.md` still shows the upstream
+> example and transcripts with averages/"Maximum score" lines that the fork's
+> `print_averages=False` / `print_maximum_score=False` defaults now suppress —
+> the README is kept as upstream wrote it; trust this file for what differs.
+
 > **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-these-documented-edits is deliberate: it makes re-pulling a future upstream release trivial.
 
 To regenerate this list precisely at any time, run the `git diff` commands above and compare the `def`/`class` inventory of the two versions.

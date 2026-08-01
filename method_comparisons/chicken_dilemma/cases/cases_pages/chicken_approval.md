@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Chicken / Burr dilemma — Approval, honest: A and B tie 60-60 (the trap)
 
 *Generated from [`chicken_approval.yaml`](../chicken_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

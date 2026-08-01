@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)
 
 *Generated from [`reinf_combined_c3_b9_star.yaml`](../reinf_combined_c3_b9_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

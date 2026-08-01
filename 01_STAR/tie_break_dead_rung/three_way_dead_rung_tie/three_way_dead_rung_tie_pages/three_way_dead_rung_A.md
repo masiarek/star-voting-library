@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Three-way dead-rung tie — published order A,B,C elects A
 
 *Generated from [`three_way_dead_rung_A.yaml`](../three_way_dead_rung_A.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

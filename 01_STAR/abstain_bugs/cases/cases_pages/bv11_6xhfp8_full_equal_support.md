@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV11 — full & equal support (5,5) counted as abstentions
 
 *Generated from [`bv11_6xhfp8_full_equal_support.yaml`](../bv11_6xhfp8_full_equal_support.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

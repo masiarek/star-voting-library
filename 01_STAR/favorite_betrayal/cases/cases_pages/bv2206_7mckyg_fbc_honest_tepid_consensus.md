@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff
 
 *Generated from [`bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

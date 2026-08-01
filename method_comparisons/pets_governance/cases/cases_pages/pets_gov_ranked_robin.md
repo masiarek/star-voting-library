@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner
 
 *Generated from [`pets_gov_ranked_robin.yaml`](../pets_gov_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

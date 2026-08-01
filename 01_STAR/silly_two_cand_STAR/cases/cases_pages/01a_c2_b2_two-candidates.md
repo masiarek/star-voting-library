@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Same as before - but this time two ballots
 
 *Generated from [`01a_c2_b2_two-candidates.yaml`](../01a_c2_b2_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

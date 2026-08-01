@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STV — 3 seats, 7 candidates (proportional RCV)
 
 *Generated from [`03a_stv_3seats.yaml`](../03a_stv_3seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

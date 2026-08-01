@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count (BV2155)
 
 *Generated from [`bv2155_cphxpt_tennessee_four_ways.yaml`](../bv2155_cphxpt_tennessee_four_ways.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

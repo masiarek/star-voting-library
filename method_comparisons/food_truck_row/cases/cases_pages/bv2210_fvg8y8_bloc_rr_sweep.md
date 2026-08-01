@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too
 
 *Generated from [`bv2210_fvg8y8_bloc_rr_sweep.yaml`](../bv2210_fvg8y8_bloc_rr_sweep.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

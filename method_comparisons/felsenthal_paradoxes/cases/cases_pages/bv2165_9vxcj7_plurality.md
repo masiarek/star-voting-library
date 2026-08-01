@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Coombs Ex.19 full — Choose-One: Cass on first choices
 
 *Generated from [`bv2165_9vxcj7_plurality.yaml`](../bv2165_9vxcj7_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

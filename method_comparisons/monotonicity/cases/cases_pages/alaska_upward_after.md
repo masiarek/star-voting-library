@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses
 
 *Generated from [`alaska_upward_after.yaml`](../alaska_upward_after.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

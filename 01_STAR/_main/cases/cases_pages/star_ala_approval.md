@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot
 
 *Generated from [`star_ala_approval.yaml`](../star_ala_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

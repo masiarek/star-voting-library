@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Margins matter — STAR on the same twelve ballots (rank converted 5/3/0)
 
 *Generated from [`margins_star.yaml`](../margins_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

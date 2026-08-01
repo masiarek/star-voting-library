@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2182 — why the automatic runoff (and Equal Support)
 
 *Generated from [`bv2182_tg4779_faq_runoff_reversal.yaml`](../bv2182_tg4779_faq_runoff_reversal.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

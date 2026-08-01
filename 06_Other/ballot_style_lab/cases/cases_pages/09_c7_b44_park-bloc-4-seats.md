@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards
 
 *Generated from [`09_c7_b44_park-bloc-4-seats.yaml`](../09_c7_b44_park-bloc-4-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

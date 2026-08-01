@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap)
 
 *Generated from [`bv2183_dfw8rj_forced_exhaustion_ceiling.yaml`](../bv2183_dfw8rj_forced_exhaustion_ceiling.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

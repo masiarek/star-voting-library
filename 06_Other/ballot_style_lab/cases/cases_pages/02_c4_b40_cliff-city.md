@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Cliff City food trucks — everyone scores 0 or 3-5, nothing between
 
 *Generated from [`02_c4_b40_cliff-city.yaml`](../02_c4_b40_cliff-city.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

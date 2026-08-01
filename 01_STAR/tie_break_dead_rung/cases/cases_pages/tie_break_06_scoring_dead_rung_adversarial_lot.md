@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dead rung 02 — same tie, but nobody scored a 5
 
 *Generated from [`tie_break_06_scoring_dead_rung_adversarial_lot.yaml`](../tie_break_06_scoring_dead_rung_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

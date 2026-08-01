@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2261 race 2 — a Condorcet cycle: every pair has a winner, and the tiebreak is still recorded
 
 *Generated from [`bv2261_y2fbpc_tiebreak_recorded_cycle.yaml`](../bv2261_y2fbpc_tiebreak_recorded_cycle.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

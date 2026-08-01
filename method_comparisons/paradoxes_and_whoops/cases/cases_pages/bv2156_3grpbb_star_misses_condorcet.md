@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR misses the Condorcet winner — STAR's own signature failure (BV2156)
 
 *Generated from [`bv2156_3grpbb_star_misses_condorcet.yaml`](../bv2156_3grpbb_star_misses_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

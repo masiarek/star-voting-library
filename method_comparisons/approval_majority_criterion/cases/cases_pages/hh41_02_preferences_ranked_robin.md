@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Hamlin & Hua §4.1 — the assumed preferences, counted pairwise: A is the Condorcet winner
 
 *Generated from [`hh41_02_preferences_ranked_robin.yaml`](../hh41_02_preferences_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

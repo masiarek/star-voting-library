@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts
 
 *Generated from [`bv2149_byk9v2_star.yaml`](../bv2149_byk9v2_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV126 — ties at every step (single-winner STAR); #1052
 
 *Generated from [`bv126_ties_every_step_8fvd2x.yaml`](../bv126_ties_every_step_8fvd2x.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

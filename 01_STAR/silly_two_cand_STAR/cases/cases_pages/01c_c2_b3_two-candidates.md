@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Equal support example ("I like both flavors")
 
 *Generated from [`01c_c2_b3_two-candidates.yaml`](../01c_c2_b3_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

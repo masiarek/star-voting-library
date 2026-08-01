@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Five candidates — the score leader is overturned in the runoff
 
 *Generated from [`02_c5_b5_leader-overturned.yaml`](../02_c5_b5_leader-overturned.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

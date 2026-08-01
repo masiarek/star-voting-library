@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.4 after two no-shows — STAR: unmoved, still Beth
 
 *Generated from [`bv2151_97hbpw_star.yaml`](../bv2151_97hbpw_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

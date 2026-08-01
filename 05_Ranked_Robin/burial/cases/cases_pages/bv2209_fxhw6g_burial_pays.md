@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank the leader last, and it pays
 
 *Generated from [`bv2209_fxhw6g_burial_pays.yaml`](../bv2209_fxhw6g_burial_pays.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

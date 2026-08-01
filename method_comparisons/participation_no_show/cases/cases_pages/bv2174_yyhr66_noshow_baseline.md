@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno
 
 *Generated from [`bv2174_yyhr66_noshow_baseline.yaml`](../bv2174_yyhr66_noshow_baseline.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

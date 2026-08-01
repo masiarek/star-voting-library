@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff 08 — CA Governor, a real STAR field of 61 (BV2181, gvdy42)
 
 *Generated from [`Runoff_08_ca_governor_reversal_gvdy42.yaml`](../Runoff_08_ca_governor_reversal_gvdy42.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

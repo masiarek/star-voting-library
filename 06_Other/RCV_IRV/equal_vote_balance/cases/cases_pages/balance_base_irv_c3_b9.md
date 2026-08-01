@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)
 
 *Generated from [`balance_base_irv_c3_b9.yaml`](../balance_base_irv_c3_b9.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

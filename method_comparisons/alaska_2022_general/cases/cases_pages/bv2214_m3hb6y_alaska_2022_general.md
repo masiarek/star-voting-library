@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola
 
 *Generated from [`bv2214_m3hb6y_alaska_2022_general.yaml`](../bv2214_m3hb6y_alaska_2022_general.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

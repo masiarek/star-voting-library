@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # What Makes the Best Pet?
 
 *Generated from [`best_pet_c7_b461.yaml`](../best_pet_c7_b461.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

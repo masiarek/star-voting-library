@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Voting Dilemma — Skywalker & Leia split the Rebel vote
 
 *Generated from [`04_star_wars_vote_split.yaml`](../04_star_wars_vote_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

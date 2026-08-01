@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Team lunch on a choose-one ballot — a dead tie (BV2257, q2rkfm)
 
 *Generated from [`lunch_choose_one_dead_tie.yaml`](../lunch_choose_one_dead_tie.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

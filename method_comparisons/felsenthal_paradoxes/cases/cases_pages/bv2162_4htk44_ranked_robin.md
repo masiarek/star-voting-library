@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Nurmi Ex.16 sincere — Ranked Robin: the Condorcet winner B
 
 *Generated from [`bv2162_4htk44_ranked_robin.yaml`](../bv2162_4htk44_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

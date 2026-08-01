@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Food-Truck Row — STAR-PR / Allocated Score: one seat per side
 
 *Generated from [`bv2210_fvg8y8_star_pr_share.yaml`](../bv2210_fvg8y8_star_pr_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Nurmi Ex.16 sincere — RCV-IRV: full rankings elect A, not the Condorcet winner
 
 *Generated from [`bv2162_4htk44_irv.yaml`](../bv2162_4htk44_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

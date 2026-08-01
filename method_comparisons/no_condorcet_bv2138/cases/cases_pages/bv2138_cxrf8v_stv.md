@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet Winner — STV (1 seat = IRV single-winner): Dave
 
 *Generated from [`bv2138_cxrf8v_stv.yaml`](../bv2138_cxrf8v_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

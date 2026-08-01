@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Margins matter — the textbook profile at its printed size (304 ballots, LH-only)
 
 *Generated from [`margins_paper_exact_304.yaml`](../margins_paper_exact_304.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact
 
 *Generated from [`edelman_perfect_component_c3_b30.yaml`](../edelman_perfect_component_c3_b30.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)
 
 *Generated from [`reversal_star_reversed.yaml`](../reversal_star_reversed.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

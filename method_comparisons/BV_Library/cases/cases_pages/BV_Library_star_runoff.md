@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV parity — STAR: runoff, lower total wins the runoff
 
 *Generated from [`BV_Library_star_runoff.yaml`](../BV_Library_star_runoff.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

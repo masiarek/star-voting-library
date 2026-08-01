@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff
 
 *Generated from [`bv2147_9gdrqg_irv.yaml`](../bv2147_9gdrqg_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

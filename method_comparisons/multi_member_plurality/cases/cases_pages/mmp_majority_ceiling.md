@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%
 
 *Generated from [`mmp_majority_ceiling.yaml`](../mmp_majority_ceiling.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6
 
 *Generated from [`bv2170_pp2q4q_plurality.yaml`](../bv2170_pp2q4q_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158)
 
 *Generated from [`bv2158_gr72hd_ossipoff_centrist_irv.yaml`](../bv2158_gr72hd_ossipoff_centrist_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

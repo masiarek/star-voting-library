@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Food-Truck Row — STV: one seat per side
 
 *Generated from [`bv2210_fvg8y8_stv_share.yaml`](../bv2210_fvg8y8_stv_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

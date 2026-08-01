@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 4 — Lillehammer 1994: nine judges, three skaters, two winners
 
 *Generated from [`ex04_olympics_1994.yaml`](../ex04_olympics_1994.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

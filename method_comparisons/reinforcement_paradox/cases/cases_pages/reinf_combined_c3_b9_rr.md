@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)
 
 *Generated from [`reinf_combined_c3_b9_rr.yaml`](../reinf_combined_c3_b9_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

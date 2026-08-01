@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # P3 sincere — Ranked Robin elects Edinburgh (the baseline every manipulation attacks)
 
 *Generated from [`p3_sincere_ranked_robin.yaml`](../p3_sincere_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

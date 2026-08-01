@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR vs RR divergence -- 7 cands, 598 voters, darkhorse (STAR E, RR G)
 
 *Generated from [`darkhorse_C07_largeV598_bloc_2.yaml`](../darkhorse_C07_largeV598_bloc_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals
 
 *Generated from [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../bv95b_7pdq3r_favorite_loses_two_rivals.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

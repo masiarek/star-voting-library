@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise
 
 *Generated from [`reversal_convincing_c3_b100.yaml`](../reversal_convincing_c3_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

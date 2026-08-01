@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2130 — Presidential Board: party alignment (Plurality)
 
 *Generated from [`bv2130_bvhchj_party_plurality.yaml`](../bv2130_bvhchj_party_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

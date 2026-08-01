@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder
 
 *Generated from [`cycle_copeland_ties_c4_b21.yaml`](../cycle_copeland_ties_c4_b21.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

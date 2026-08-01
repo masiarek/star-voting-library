@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Range / Score Voting — Sullivan's Example 5.2 (0–10 scale)
 
 *Generated from [`range_sullivan_score_c4_b10.yaml`](../range_sullivan_score_c4_b10.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

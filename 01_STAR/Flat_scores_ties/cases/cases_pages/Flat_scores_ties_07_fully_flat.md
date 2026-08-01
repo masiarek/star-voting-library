@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Flat scores 07 — fully flat ballots (the maximal tie + abstention trap)
 
 *Generated from [`Flat_scores_ties_07_fully_flat.yaml`](../Flat_scores_ties_07_fully_flat.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

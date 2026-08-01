@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # P3 manipulated — the mild version: three adjacent swaps, no burial, same result
 
 *Generated from [`p3_manip_compromise_rr.yaml`](../p3_manip_compromise_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

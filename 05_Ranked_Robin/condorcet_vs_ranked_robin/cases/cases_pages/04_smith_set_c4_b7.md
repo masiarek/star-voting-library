@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Smith set — the smallest club that beats everyone outside it
 
 *Generated from [`04_smith_set_c4_b7.yaml`](../04_smith_set_c4_b7.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

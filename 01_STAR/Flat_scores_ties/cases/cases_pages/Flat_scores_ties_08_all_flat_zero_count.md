@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Flat scores 08 — every ballot flat (BetterVoting counts 0)
 
 *Generated from [`Flat_scores_ties_08_all_flat_zero_count.yaml`](../Flat_scores_ties_08_all_flat_zero_count.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

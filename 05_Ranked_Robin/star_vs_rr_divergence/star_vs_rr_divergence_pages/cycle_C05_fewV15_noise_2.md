@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR vs RR divergence -- 5 cands, 15 voters, cycle (STAR A, RR E)
 
 *Generated from [`cycle_C05_fewV15_noise_2.yaml`](../cycle_C05_fewV15_noise_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

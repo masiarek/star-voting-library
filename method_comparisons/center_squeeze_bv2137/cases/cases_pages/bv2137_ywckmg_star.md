@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV
 
 *Generated from [`bv2137_ywckmg_star.yaml`](../bv2137_ywckmg_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

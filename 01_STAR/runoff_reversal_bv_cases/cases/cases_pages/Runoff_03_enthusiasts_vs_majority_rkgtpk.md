@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Runoff 03 — two enthusiasts vs the majority
 
 *Generated from [`Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml`](../Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

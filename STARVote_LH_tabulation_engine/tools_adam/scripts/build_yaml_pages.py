@@ -268,6 +268,16 @@ def render(yaml_path, siblings):
     has_markers = bool(re.search(r"[~&?%]|(^|,)\s*-\s*(,|$)", ballots_text, re.M))
 
     L = []
+    # Keep generated case dumps out of the site's search index: they were 44%
+    # of a 9 MB search_index.json and crowded the teaching pages out of
+    # results. The pages stay fully published and linkable — just unindexed.
+    # (Material for MkDocs reads this front matter; GitHub renders it as a
+    # small metadata box, which is acceptable on a generated page.)
+    L.append("---")
+    L.append("search:")
+    L.append("  exclude: true")
+    L.append("---")
+    L.append("")
     L.append(f"# {title}")
     L.append("")
     L.append(f"*Generated from [`{os.path.basename(yaml_path)}`](../{os.path.basename(yaml_path)}) "

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Again, very similar - this time second ballot is 5 and 0
 
 *Generated from [`01b_c2_b2_two-candidates.yaml`](../01b_c2_b2_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

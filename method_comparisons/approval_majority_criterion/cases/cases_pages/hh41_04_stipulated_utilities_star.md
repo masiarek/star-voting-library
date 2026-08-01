@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Hamlin & Hua §4.1 — their own utility stipulation, on a 0-5 ballot: A 380, B 370, A wins
 
 *Generated from [`hh41_04_stipulated_utilities_star.yaml`](../hh41_04_stipulated_utilities_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

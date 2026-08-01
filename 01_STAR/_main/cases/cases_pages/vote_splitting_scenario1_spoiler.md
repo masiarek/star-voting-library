@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Vote splitting — scenario 1 of 3 — the spoiler strikes
 
 *Generated from [`vote_splitting_scenario1_spoiler.yaml`](../vote_splitting_scenario1_spoiler.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

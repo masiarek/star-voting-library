@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference
 
 *Generated from [`hh41_03_marks_read_pairwise.yaml`](../hh41_03_marks_read_pairwise.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

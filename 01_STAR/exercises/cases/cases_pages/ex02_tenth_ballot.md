@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 2 — The tenth ballot: all ten ballots
 
 *Generated from [`ex02_tenth_ballot.yaml`](../ex02_tenth_ballot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

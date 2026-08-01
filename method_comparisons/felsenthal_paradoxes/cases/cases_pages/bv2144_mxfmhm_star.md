@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner
 
 *Generated from [`bv2144_mxfmhm_star.yaml`](../bv2144_mxfmhm_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives
 
 *Generated from [`bv2137_ywckmg_ranked_robin.yaml`](../bv2137_ywckmg_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

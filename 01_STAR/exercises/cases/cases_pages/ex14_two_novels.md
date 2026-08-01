@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 14 — The transfer machine: a book club buys two novels (STV)
 
 *Generated from [`ex14_two_novels.yaml`](../ex14_two_novels.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

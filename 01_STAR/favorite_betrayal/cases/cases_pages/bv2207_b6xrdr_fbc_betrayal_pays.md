@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays
 
 *Generated from [`bv2207_b6xrdr_fbc_betrayal_pays.yaml`](../bv2207_b6xrdr_fbc_betrayal_pays.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

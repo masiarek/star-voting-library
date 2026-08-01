@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV95a — Majority Criterion: favorite survives when the majority backs ONE rival
 
 *Generated from [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](../bv95a_9m6rxr_favorite_survives_one_rival.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # A 41% winner that nothing spoiled — sub-majority is not the same as split
 
 *Generated from [`06_sub_majority_not_spoiled.yaml`](../06_sub_majority_not_spoiled.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

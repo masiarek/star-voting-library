@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Condorcet winner exists — Ranked Robin elects it
 
 *Generated from [`01_condorcet_winner.yaml`](../01_condorcet_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

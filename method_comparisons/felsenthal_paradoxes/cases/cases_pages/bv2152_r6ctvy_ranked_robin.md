@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.5 — Ranked Robin: the Condorcet winner Bert
 
 *Generated from [`bv2152_r6ctvy_ranked_robin.yaml`](../bv2152_r6ctvy_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

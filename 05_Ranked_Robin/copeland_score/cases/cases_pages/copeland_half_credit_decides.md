@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin — the half-point for a draw decides the election (LH-only)
 
 *Generated from [`copeland_half_credit_decides.yaml`](../copeland_half_credit_decides.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

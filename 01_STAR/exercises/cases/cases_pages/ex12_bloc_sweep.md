@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps
 
 *Generated from [`ex12_bloc_sweep.yaml`](../ex12_bloc_sweep.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

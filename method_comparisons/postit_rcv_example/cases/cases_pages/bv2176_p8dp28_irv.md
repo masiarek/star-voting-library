@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Post-it RCV example (20 voters) — RCV-IRV: Purple wins the video's whiteboard count
 
 *Generated from [`bv2176_p8dp28_irv.yaml`](../bv2176_p8dp28_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

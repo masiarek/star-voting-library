@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dead rung 03 — runoff tie broken by five-star
 
 *Generated from [`tie_break_07_runoff_five_star_vs_adversarial_lot.yaml`](../tie_break_07_runoff_five_star_vs_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

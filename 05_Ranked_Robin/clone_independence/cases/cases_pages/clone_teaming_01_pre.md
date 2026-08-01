@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Clone independence (1/2) — before cloning: A, B, C tie in a cycle
 
 *Generated from [`clone_teaming_01_pre.yaml`](../clone_teaming_01_pre.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

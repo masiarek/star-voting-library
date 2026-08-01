@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Condorcet's 1788 rebuttal to Borda — RCV-IRV agrees here
 
 *Generated from [`condorcet_1788_irv.yaml`](../condorcet_1788_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

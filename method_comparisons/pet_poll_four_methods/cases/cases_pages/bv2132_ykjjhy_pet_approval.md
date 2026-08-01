@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2132 — Pet poll (Approval): broad support elects Cat
 
 *Generated from [`bv2132_ykjjhy_pet_approval.yaml`](../bv2132_ykjjhy_pet_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

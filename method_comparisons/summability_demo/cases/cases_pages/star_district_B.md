@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Summability demo — STAR district B (Oak wins — a runoff reversal)
 
 *Generated from [`star_district_B.yaml`](../star_district_B.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

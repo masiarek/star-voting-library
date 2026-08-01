@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # STAR vs RR divergence -- 7 cands, 598 voters, cycle (STAR C, RR E)
 
 *Generated from [`cycle_C07_largeV598_bloc_1.yaml`](../cycle_C07_largeV598_bloc_1.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

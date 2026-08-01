@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2261 race 1 — a perfectly balanced electorate: every pair draws, the tiebreak is recorded
 
 *Generated from [`bv2261_y2fbpc_tiebreak_recorded_draws.yaml`](../bv2261_y2fbpc_tiebreak_recorded_draws.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

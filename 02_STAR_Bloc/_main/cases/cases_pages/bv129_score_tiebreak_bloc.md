@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker
 
 *Generated from [`bv129_score_tiebreak_bloc.yaml`](../bv129_score_tiebreak_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

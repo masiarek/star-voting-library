@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Brams' grading paradox — the grade leader loses the runoff
 
 *Generated from [`brams_grading_paradox_c3_b3.yaml`](../brams_grading_paradox_c3_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

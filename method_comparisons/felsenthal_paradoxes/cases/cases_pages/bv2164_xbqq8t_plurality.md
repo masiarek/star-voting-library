@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Coombs Ex.17 — Choose-One: Bree on first choices
 
 *Generated from [`bv2164_xbqq8t_plurality.yaml`](../bv2164_xbqq8t_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

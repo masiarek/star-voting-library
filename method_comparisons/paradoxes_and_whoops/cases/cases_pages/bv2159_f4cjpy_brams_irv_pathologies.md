@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159)
 
 *Generated from [`bv2159_f4cjpy_brams_irv_pathologies.yaml`](../bv2159_f4cjpy_brams_irv_pathologies.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

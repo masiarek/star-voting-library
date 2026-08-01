@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate
 
 *Generated from [`hh41_05_majority_bullet_votes.yaml`](../hh41_05_majority_bullet_votes.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

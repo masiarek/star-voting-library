@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both
 
 *Generated from [`cycle_schulze_vs_ranked_pairs_c4_b40.yaml`](../cycle_schulze_vs_ranked_pairs_c4_b40.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

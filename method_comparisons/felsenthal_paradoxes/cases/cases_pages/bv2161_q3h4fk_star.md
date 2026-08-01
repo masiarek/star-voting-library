@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits)
 
 *Generated from [`bv2161_q3h4fk_star.yaml`](../bv2161_q3h4fk_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

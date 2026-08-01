@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp
 
 *Generated from [`01_c3_b31_graders-divide.yaml`](../01_c3_b31_graders-divide.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

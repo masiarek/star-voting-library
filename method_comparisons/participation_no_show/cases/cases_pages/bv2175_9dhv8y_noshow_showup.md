@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice
 
 *Generated from [`bv2175_9dhv8y_noshow_showup.yaml`](../bv2175_9dhv8y_noshow_showup.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

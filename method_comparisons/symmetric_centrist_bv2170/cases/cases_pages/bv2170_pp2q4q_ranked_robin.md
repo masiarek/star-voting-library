@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Symmetric centrist (47/47/3/3) — Ranked Robin: elects Casey, beats everyone head-to-head
 
 *Generated from [`bv2170_pp2q4q_ranked_robin.yaml`](../bv2170_pp2q4q_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

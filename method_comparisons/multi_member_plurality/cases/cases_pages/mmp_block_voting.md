@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Multi-member plurality — Block Voting (3 seats): majority sweeps
 
 *Generated from [`mmp_block_voting.yaml`](../mmp_block_voting.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

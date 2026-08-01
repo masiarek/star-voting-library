@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Spoiler — chocolate's majority splits, vanilla steals the win
 
 *Generated from [`02_icecream_chocolate_split.yaml`](../02_icecream_chocolate_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated)
 
 *Generated from [`center_squeeze_irv.yaml`](../center_squeeze_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

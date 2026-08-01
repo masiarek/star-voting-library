@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 3 — One electorate, five verdicts (the snack vote)
 
 *Generated from [`ex03_five_verdicts.yaml`](../ex03_five_verdicts.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

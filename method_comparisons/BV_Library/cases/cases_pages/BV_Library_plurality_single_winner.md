@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV parity — Plurality (choose-one): most first-marks wins
 
 *Generated from [`BV_Library_plurality_single_winner.yaml`](../BV_Library_plurality_single_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

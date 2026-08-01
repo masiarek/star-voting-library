@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 11 — Recruit a spoiler: the two-way base race
 
 *Generated from [`ex11_two_way_base.yaml`](../ex11_two_way_base.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

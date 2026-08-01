@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The control case — here the runoff CONFIRMS the score leader
 
 *Generated from [`04_c4_b3_runoff-confirms-leader.yaml`](../04_c4_b3_runoff-confirms-leader.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

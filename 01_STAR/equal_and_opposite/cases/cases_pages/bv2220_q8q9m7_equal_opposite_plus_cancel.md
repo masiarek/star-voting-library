@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Equal & opposite — add two mirror ballots, Comet still wins
 
 *Generated from [`bv2220_q8q9m7_equal_opposite_plus_cancel.yaml`](../bv2220_q8q9m7_equal_opposite_plus_cancel.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

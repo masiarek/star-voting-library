@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2133 — Pet poll II (Approval): broad support elects Bird
 
 *Generated from [`bv2133_dyxrbr_pet2_approval.yaml`](../bv2133_dyxrbr_pet2_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

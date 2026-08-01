@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees (electowiki)
 
 *Generated from [`bv2141_3r3yf7_four_degree_tie.yaml`](../bv2141_3r3yf7_four_degree_tie.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

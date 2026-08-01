@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Center squeeze — STAR elects the consensus (Center)
 
 *Generated from [`center_squeeze_star.yaml`](../center_squeeze_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

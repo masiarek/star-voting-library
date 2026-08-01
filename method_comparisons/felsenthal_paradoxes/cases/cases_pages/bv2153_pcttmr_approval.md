@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.7 — Approval: a majority's first choice loses
 
 *Generated from [`bv2153_pcttmr_approval.yaml`](../bv2153_pcttmr_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

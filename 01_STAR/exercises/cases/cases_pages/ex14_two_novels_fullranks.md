@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 14 — The transfer machine, fully ranked (BV probe variant)
 
 *Generated from [`ex14_two_novels_fullranks.yaml`](../ex14_two_novels_fullranks.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

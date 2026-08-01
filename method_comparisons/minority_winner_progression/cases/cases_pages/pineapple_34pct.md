@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Pineapple progression (1/3) — 34% wins Choose-One, but Cheese is the real choice
 
 *Generated from [`pineapple_34pct.yaml`](../pineapple_34pct.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Same matrix, different plurality — electorate P3: Choose-One
 
 *Generated from [`same_matrix_p3_plurality.yaml`](../same_matrix_p3_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

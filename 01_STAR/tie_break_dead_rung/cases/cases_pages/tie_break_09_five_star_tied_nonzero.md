@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dead rung 05 — five-star rung alive but non-separating
 
 *Generated from [`tie_break_09_five_star_tied_nonzero.yaml`](../tie_break_09_five_star_tied_nonzero.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

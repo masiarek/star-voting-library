@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1)
 
 *Generated from [`bv1525_condorcet_loser_bloc.yaml`](../bv1525_condorcet_loser_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

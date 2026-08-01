@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Post-it election, seven ways — Choose-One: Purple on 7 first choices
 
 *Generated from [`bv2177_v8r66y_plurality.yaml`](../bv2177_v8r66y_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

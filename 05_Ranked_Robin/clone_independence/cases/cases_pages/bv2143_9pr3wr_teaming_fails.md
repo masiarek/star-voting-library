@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV
 
 *Generated from [`bv2143_9pr3wr_teaming_fails.yaml`](../bv2143_9pr3wr_teaming_fails.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

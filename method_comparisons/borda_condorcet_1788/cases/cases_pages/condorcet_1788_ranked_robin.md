@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise
 
 *Generated from [`condorcet_1788_ranked_robin.yaml`](../condorcet_1788_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

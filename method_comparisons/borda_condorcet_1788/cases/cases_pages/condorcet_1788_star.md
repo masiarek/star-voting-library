@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Condorcet's 1788 rebuttal to Borda — STAR elects the Condorcet winner
 
 *Generated from [`condorcet_1788_star.yaml`](../condorcet_1788_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

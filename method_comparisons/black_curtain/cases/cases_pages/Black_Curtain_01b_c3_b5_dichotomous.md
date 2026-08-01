@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Black Curtain
 
 *Generated from [`Black_Curtain_01b_c3_b5_dichotomous.yaml`](../Black_Curtain_01b_c3_b5_dichotomous.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Village Council by SNTV — a concentrated minority wins a seat
 
 *Generated from [`sntv_village_council.yaml`](../sntv_village_council.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)
 
 *Generated from [`burlington_2009_irv.yaml`](../burlington_2009_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

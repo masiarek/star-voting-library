@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 13 — Where do you draw the line? The honest opinions (STAR)
 
 *Generated from [`ex13_opinions.yaml`](../ex13_opinions.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

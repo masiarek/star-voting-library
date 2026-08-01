@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731)
 
 *Generated from [`bv130_bloc_pagination_731.yaml`](../bv130_bloc_pagination_731.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

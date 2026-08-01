@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.4 after two no-shows — Ranked Robin: unmoved, still Beth
 
 *Generated from [`bv2151_97hbpw_ranked_robin.yaml`](../bv2151_97hbpw_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Exercise 7 — The vanishing votes that never vanished (a park-tree ballot drill)
 
 *Generated from [`ex07_vanishing_votes.yaml`](../ex07_vanishing_votes.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

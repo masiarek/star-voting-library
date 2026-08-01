@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D
 
 *Generated from [`bv2167_f3dxq9_plurality.yaml`](../bv2167_f3dxq9_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

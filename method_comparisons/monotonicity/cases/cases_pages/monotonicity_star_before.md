@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Monotonicity — STAR counterpart (BEFORE — X wins)
 
 *Generated from [`monotonicity_star_before.yaml`](../monotonicity_star_before.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

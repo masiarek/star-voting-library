@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # The Post-it election, seven ways — Approval: Pink, if approving means any support
 
 *Generated from [`bv2177_v8r66y_approval.yaml`](../bv2177_v8r66y_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin vs Consensus Choice — the same cycle, two different winners
 
 *Generated from [`rr_vs_mwsl_cycle_c3_b32.yaml`](../rr_vs_mwsl_cycle_c3_b32.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

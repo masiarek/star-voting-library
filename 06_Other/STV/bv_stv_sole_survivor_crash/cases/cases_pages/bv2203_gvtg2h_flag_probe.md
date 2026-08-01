@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)
 
 *Generated from [`bv2203_gvtg2h_flag_probe.yaml`](../bv2203_gvtg2h_flag_probe.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

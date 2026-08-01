@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Ranked Robin (RCV-RR) — the consensus center wins the round-robin
 
 *Generated from [`ranked_robin_consensus_center.yaml`](../ranked_robin_consensus_center.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

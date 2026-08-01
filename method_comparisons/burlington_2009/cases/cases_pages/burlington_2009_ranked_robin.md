@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner
 
 *Generated from [`burlington_2009_ranked_robin.yaml`](../burlington_2009_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

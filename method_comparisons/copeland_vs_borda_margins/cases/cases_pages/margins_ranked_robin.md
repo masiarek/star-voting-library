@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Margins matter — Ranked Robin (Copeland) ties all three
 
 *Generated from [`margins_ranked_robin.yaml`](../margins_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

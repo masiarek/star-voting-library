@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Narrow Bands — a paint-swatch election scored in slivers of the scale
 
 *Generated from [`06_c4_b24_narrow-bands.yaml`](../06_c4_b24_narrow-bands.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

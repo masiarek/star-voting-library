@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Brams Example 6 — three counts, three winners (STAR sides with head-to-head)
 
 *Generated from [`brams_ex6_three_winners_c3_b9.yaml`](../brams_ex6_three_winners_c3_b9.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

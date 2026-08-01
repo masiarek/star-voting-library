@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Preference vs Support — the center TOLERATED (wings score Blair 1)
 
 *Generated from [`bv2225_ywx39y_center_tolerated.yaml`](../bv2225_ywx39y_center_tolerated.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

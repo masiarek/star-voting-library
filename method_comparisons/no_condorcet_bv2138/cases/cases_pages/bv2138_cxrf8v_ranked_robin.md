@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently
 
 *Generated from [`bv2138_cxrf8v_ranked_robin.yaml`](../bv2138_cxrf8v_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2133 — Pet poll II (Plurality): the front-runner Dog wins
 
 *Generated from [`bv2133_dyxrbr_pet2_plurality.yaml`](../bv2133_dyxrbr_pet2_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

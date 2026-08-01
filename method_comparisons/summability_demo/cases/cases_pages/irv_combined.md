@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Summability demo — RCV-IRV combined A+B (B eliminated; not summable)
 
 *Generated from [`irv_combined.yaml`](../irv_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

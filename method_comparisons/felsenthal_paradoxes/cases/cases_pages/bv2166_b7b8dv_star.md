@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too)
 
 *Generated from [`bv2166_b7b8dv_star.yaml`](../bv2166_b7b8dv_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

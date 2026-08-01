@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Felsenthal Ex.8 — IRV: a third winner, Clara
 
 *Generated from [`bv2154_wq6yv7_irv.yaml`](../bv2154_wq6yv7_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

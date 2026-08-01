@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Does the squeeze survive noise? Two poles, one consensus middle
 
 *Generated from [`05_c3_b38_squeeze-survives.yaml`](../05_c3_b38_squeeze-survives.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

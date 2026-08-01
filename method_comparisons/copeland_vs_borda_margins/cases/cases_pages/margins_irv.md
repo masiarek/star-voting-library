@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Margins matter — RCV-IRV elects the third answer (Cocoa)
 
 *Generated from [`margins_irv.yaml`](../margins_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Large field (9 candidates) — the runoff OVERTURNS the score leader
 
 *Generated from [`06b_c9_runoff-overturns-leader.yaml`](../06b_c9_runoff-overturns-leader.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

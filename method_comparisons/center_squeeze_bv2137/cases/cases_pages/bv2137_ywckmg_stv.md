@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Center Squeeze — STV (1 seat = IRV single-winner): same squeeze
 
 *Generated from [`bv2137_ywckmg_stv.yaml`](../bv2137_ywckmg_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0)
 
 *Generated from [`p3_sincere_star.yaml`](../p3_sincere_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

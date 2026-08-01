@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Range / Score Voting 101 — highest total score wins
 
 *Generated from [`range_101_c3_b5.yaml`](../range_101_c3_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*

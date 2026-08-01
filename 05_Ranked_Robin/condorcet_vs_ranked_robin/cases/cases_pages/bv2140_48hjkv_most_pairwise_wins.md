@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki)
 
 *Generated from [`bv2140_48hjkv_most_pairwise_wins.yaml`](../bv2140_48hjkv_most_pairwise_wins.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
