@@ -25,7 +25,17 @@ ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
 LIB_POS = REPO_ROOT / "YAML_library" / "1_positive"
 CONVERTER = LIB_POS / "01_convert_json_yaml.py"
-SOURCE_JSON = LIB_POS / "S_W1_N_BV001a_UnderstandingStarBallotFullSelection_q83qj6.json"
+# The frozen real BetterVoting export used as converter input: jfk7pd, the
+# live dead-rung-tie election (drawn perm [Ben, Ada] certified Ben). Also
+# exercised — via the separate two_way_import tool — by
+# test_lot_number_tiebreak.py; here it feeds the YAML_library converter.
+SOURCE_JSON = (
+    REPO_ROOT
+    / "01_STAR"
+    / "tie_break_dead_rung"
+    / "lot_random_vs_published_jfk7pd"
+    / "lot_random_vs_published_jfk7pd_bv_export.json"
+)
 
 sys.path.insert(0, str(ENGINE_DIR))
 sys.path.insert(0, str(ENGINE_DIR / "tools_adam"))
@@ -41,10 +51,16 @@ def _load_converter():
 
 
 @pytest.mark.skipif(
-    not (CONVERTER.exists() and SOURCE_JSON.exists()),
-    reason="converter or source BetterVoting JSON not present",
+    not CONVERTER.exists(),
+    reason="converter not present",
 )
 def test_bettervoting_json_converts_to_tabulating_yaml(tmp_path):
+    # A missing fixture must FAIL, not skip: this test silently skipped for
+    # weeks when its original fixture was never committed.
+    assert SOURCE_JSON.exists(), (
+        f"frozen converter fixture missing: {SOURCE_JSON} — "
+        "the converter's end-to-end regression guard cannot run"
+    )
     conv = _load_converter()
 
     # Run on an isolated copy so the repo's files are never touched.
@@ -74,5 +90,6 @@ def test_bettervoting_json_converts_to_tabulating_yaml(tmp_path):
     assert sorted(winners) == sorted(embedded), (
         f"produced file tabulates {winners}, but its embedded winners are {embedded}"
     )
-    # Known answer for BV001a (candidate id A = Andre scores 5).
-    assert embedded == ["A"], f"unexpected winners for BV001a: {embedded}"
+    # Known answer for jfk7pd: BV's certified winner Ben, reconstructed from
+    # the export's recorded drawn tiebreak order (perm [Ben, Ada]).
+    assert embedded == ["Ben"], f"unexpected winners for jfk7pd: {embedded}"

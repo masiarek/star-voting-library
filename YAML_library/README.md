@@ -5,7 +5,9 @@ Two jobs live here. **Teaching elections do not** — those live in [`01_STAR/`]
 ## `1_positive/` — the BetterVoting import pipeline
 
 - `01_convert_json_yaml.py` — converts a real BetterVoting JSON export into a canonical election YAML (real candidate names, aligned columns, the election's official lot order, embedded `expected_results`).
-- `S_W1_N_*.json` — frozen real exports used as converter inputs.
+- Converter input: the frozen real BetterVoting export lives at
+  `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/…_bv_export.json`
+  (the test copies it into a temp dir; nothing here is mutated).
 - `_generated/` + `_generated_tabulated/` — converter output and its tabulation mirror.
 
 Guarded by `tests/test_json_to_yaml_conversion.py` and `tests/test_lot_number_tiebreak.py` (converter → YAML → engine, end to end).
