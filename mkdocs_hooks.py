@@ -35,6 +35,20 @@ line with its siblings. Stripping the padding and applying MkDocs' own
 capitalize-if-all-lowercase rule to what's left gives "Main", which is what the
 folder would have rendered as without the prefix. The prefix keeps doing its
 sorting job on disk; only the label changes.
+
+## Folders that already carry a capital
+
+The capitalize step is all-or-nothing: MkDocs applies it only when the *whole*
+folder name is lowercase. So one capital anywhere suppresses it for the entire
+label, and `reporting_BV` / `silly_two_cand_STAR` shipped with a lowercase first
+word standing under sentence-cased siblings. `capitalize_first()` raises just
+that first character; the deliberate capitals further in are left alone.
+
+## Labels no casing rule can reach
+
+`SECTIONS` maps a derived title to a replacement outright — the escape hatch for
+folder names that aren't a cased version of what the reader should see, like the
+generated SCREAMING_SNAKE divergence buckets.
 """
 
 from __future__ import annotations
@@ -58,6 +72,23 @@ TERMS = {
     "stv": "STV",
     "bv": "BV",
     "condorcet": "Condorcet",
+    "borda": "Borda",
+    "iia": "IIA",
+    "sntv": "SNTV",
+}
+
+# Whole labels that no casing rule can reach, keyed by the title MkDocs derives.
+# The five divergence buckets are SCREAMING_SNAKE folders written by
+# build_divergence_index.py, so MkDocs leaves them shouting; these are the same
+# human names that generator already prints for them (its BUCKET_TITLE), copied
+# rather than imported because the docs build must not depend on the engine's
+# tooling being importable. tests/test_nav_labels.py fails if the two drift.
+SECTIONS = {
+    "APPROVAL OR MINOR": "Only Approval differs",
+    "CYCLE OR THREE WAY": "Cycle / three-way split",
+    "IRV DIFFERS ARTIFACT": "RCV-IRV differs — tie-break artifact",
+    "IRV OUTLIER RR WITH STAR": "RCV-IRV is the outlier (center squeeze)",
+    "STAR OUTLIER RR WITH IRV": "STAR is the outlier",
 }
 
 _PHRASE_RE = re.compile(
@@ -83,11 +114,30 @@ def fix_acronyms(title: str) -> str:
     return _TERM_RE.sub(lambda m: TERMS[m.group(0).lower()], title)
 
 
+def capitalize_first(title: str) -> str:
+    """Uppercase a leading lowercase letter, leaving the rest alone.
+
+    MkDocs skips its capitalize step for any folder name that already carries a
+    capital anywhere, so `reporting_BV` and `silly_two_cand_STAR` ship with a
+    lowercase first word under siblings that are all sentence-cased. Only the
+    first character moves — the deliberate capitals further in must survive.
+    """
+    return title[:1].upper() + title[1:] if title[:1].islower() else title
+
+
+def clean(title: str) -> str:
+    """The whole label pipeline for one section, in order."""
+    # unpad first: it can expose a lowercase acronym at the front.
+    title = unpad(title)
+    if title in SECTIONS:
+        return SECTIONS[title]
+    return capitalize_first(fix_acronyms(title))
+
+
 def _retitle(items) -> None:
     for item in items:
         if item.is_section:
-            # unpad first: it can expose a lowercase acronym at the front.
-            item.title = fix_acronyms(unpad(item.title))
+            item.title = clean(item.title)
             _retitle(item.children)
 
 
