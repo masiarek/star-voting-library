@@ -100,7 +100,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 ```
 
-Sources: [bv2206_7mckyg_fbc_honest_tepid_consensus.yaml](cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) · [bv2207_b6xrdr_fbc_betrayal_pays.yaml](cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml). Full mirrors: [`favorite_betrayal_tabulated/`](cases/cases_tabulated/).
+Sources: [bv2206_7mckyg_fbc_honest_tepid_consensus.yaml](cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) · [bv2207_b6xrdr_fbc_betrayal_pays.yaml](cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml). Full mirrors: [honest ballots](cases/cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt) · [betrayal pays](cases/cases_tabulated/bv2207_b6xrdr_fbc_betrayal_pays_tabulated.txt).
 
 ---
 

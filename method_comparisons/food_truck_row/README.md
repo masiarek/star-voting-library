@@ -86,7 +86,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/food_truck_row/cases/bv2210_fvg8y8_stv_share.yaml
 ```
 
-Full mirrors: [`food_truck_row_tabulated/`](cases/cases_tabulated/).
+Full mirrors: [Bloc STAR sweep](cases/cases_tabulated/bv2210_fvg8y8_bloc_star_sweep_tabulated.txt) · [Bloc RR sweep](cases/cases_tabulated/bv2210_fvg8y8_bloc_rr_sweep_tabulated.txt) · [SNTV split](cases/cases_tabulated/bv2210_fvg8y8_sntv_split_tabulated.txt) · [STAR-PR share](cases/cases_tabulated/bv2210_fvg8y8_star_pr_share_tabulated.txt) · [STV share](cases/cases_tabulated/bv2210_fvg8y8_stv_share_tabulated.txt).
 
 ---
 

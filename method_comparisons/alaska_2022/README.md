@@ -111,7 +111,7 @@ Blank Votes  12  Rejected  # ballots that exhausted when Begich was eliminated
 
 Peltola's 96 is only **48% of the 200 ballots cast** — a "majority" of the *surviving* ballots, on a denominator shrunk by exhaustion (the paper's *majoritarian failure*).
 
-Full engine detail: [`alaska_2022_tabulated/`](cases/cases_tabulated/) · run it: [`bv2213_k3fmwv_alaska_2022.yaml`](cases/bv2213_k3fmwv_alaska_2022.yaml).
+Full engine detail: [STAR report](cases/cases_tabulated/bv2213_k3fmwv_alaska_2022_tabulated.txt) · [RCV-IRV report](cases/cases_tabulated/bv2213_k3fmwv_alaska_2022_RCV-IRV_tabulated.txt) · run it: [`bv2213_k3fmwv_alaska_2022.yaml`](cases/bv2213_k3fmwv_alaska_2022.yaml).
 
 ---
 

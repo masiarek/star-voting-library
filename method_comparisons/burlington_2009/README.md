@@ -72,7 +72,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml
 ```
 
-Full mirrors: [`burlington_2009_tabulated/`](cases/cases_tabulated/). LH-only (no BetterVoting election — 8,974 weighted ballots across 378 patterns; the value here is fidelity to the record, not castability).
+Full mirrors: [IRV](cases/cases_tabulated/burlington_2009_irv_tabulated.txt) · [Ranked Robin](cases/cases_tabulated/burlington_2009_ranked_robin_tabulated.txt) · [the non-monotonicity replay](cases/cases_tabulated/burlington_2009_raise_kiss_nonmono_tabulated.txt). LH-only (no BetterVoting election — 8,974 weighted ballots across 378 patterns; the value here is fidelity to the record, not castability).
 
 ---
 

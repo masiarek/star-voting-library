@@ -98,7 +98,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/burial/cases/bv2209_fxhw6g_burial_pays.yaml
 ```
 
-Sources: [bv2208_7q6by8_burial_sincere.yaml](cases/bv2208_7q6by8_burial_sincere.yaml) · [bv2209_fxhw6g_burial_pays.yaml](cases/bv2209_fxhw6g_burial_pays.yaml). Full mirrors: [`burial_tabulated/`](cases/cases_tabulated/).
+Sources: [bv2208_7q6by8_burial_sincere.yaml](cases/bv2208_7q6by8_burial_sincere.yaml) · [bv2209_fxhw6g_burial_pays.yaml](cases/bv2209_fxhw6g_burial_pays.yaml). Full mirrors: [sincere ballots](cases/cases_tabulated/bv2208_7q6by8_burial_sincere_tabulated.txt) · [burial pays](cases/cases_tabulated/bv2209_fxhw6g_burial_pays_tabulated.txt).
 
 ---
 

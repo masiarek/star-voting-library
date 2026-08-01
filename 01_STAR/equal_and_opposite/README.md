@@ -52,7 +52,7 @@ Automatic Runoff
    Comet  -- 3 -- First place   vs   Echo -- 2        → Comet wins
 ```
 
-Every score total rose by exactly **5**; the runoff went **3–2** instead of 2–1 — the two ballots put one vote on *each* side and cancelled. **Same winner, Comet.** The two voters had maximal, perfectly-opposed opinions, and their combined effect on the outcome was *zero*. (Full detail in the [`_tabulated` mirrors](cases/cases_tabulated/).)
+Every score total rose by exactly **5**; the runoff went **3–2** instead of 2–1 — the two ballots put one vote on *each* side and cancelled. **Same winner, Comet.** The two voters had maximal, perfectly-opposed opinions, and their combined effect on the outcome was *zero*. (Full detail in the `_tabulated` mirrors: [base election](cases/cases_tabulated/bv2219_36f4v2_equal_opposite_base_tabulated.txt) · [with the opposed pair](cases/cases_tabulated/bv2220_q8q9m7_equal_opposite_plus_cancel_tabulated.txt).)
 
 ## Why a clear-winner base, and not just the two ballots?
 
