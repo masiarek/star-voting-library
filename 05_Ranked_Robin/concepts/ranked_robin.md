@@ -194,7 +194,7 @@ Every claim on this page has a runnable election behind it. The case folders liv
 
 | Case folder | What it shows |
 |---|---|
-| [The worked intro](../_main/) | the election above: the consensus center wins 3–0 over the two poles that hold more first choices |
+| [The worked intro](../_main/cases/cases_pages/ranked_robin_consensus_center.md) | the election above: the consensus center wins 3–0 over the two poles that hold more first choices |
 | [Condorcet vs. Ranked Robin](../condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record |
 | [RR vs. IRV vs. plurality](../rr_vs_irv_plurality/) | one ranked ballot set, three different winners — the Tennessee center squeeze, where RR and IRV genuinely part ways |
 | [The Copeland score — a draw is worth half a win](../copeland_score/) | why "most head-to-head wins" is a shorthand: the ½-credit elects a candidate who *lost* a matchup |

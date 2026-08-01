@@ -12,6 +12,17 @@
 
 They're at *different levels of generality* — a category, a specific method in it, and a brand name for a tweaked version of that method. Say "Condorcet" or "round-robin" when you mean the family; say "Ranked Robin" only for the specific branded method.
 
+## The names stack like sports leagues
+
+Round-robin is a tournament *format*: everyone plays everyone, best record tops the table. Every league that uses the format has its own name and its own tiebreak fine print. These names work exactly that way (the map below links each one — this list is the spoken version):
+
+- **Condorcet** — the *format*, i.e. the family. Any rule that elects the candidate who beats all others head-to-head, whenever one exists. Members include Copeland, Schulze, Ranked Pairs, Minimax.
+- **Copeland** — one member: rank candidates by head-to-head wins. With the margins tiebreak the technical full name is *Copeland//Borda*.
+- **Ranked Robin** — a *campaign name* (Equal Vote, 2021) for Condorcet voting on a ranked ballot. Their recommended count as of 2026 is Copeland plus the margins tiebreak — a current default, which they say is under review, not a definition.
+- **Consensus Choice** — a *different campaign's* name (Better Choices for Democracy) for the same family, with a different cycle rule ("Most Wins, Smallest Loss"). Same tournament, different fine print.
+
+Spoken aloud in ten seconds: *Condorcet is the format, Copeland is the standings rule, Ranked Robin is the league we play under.* The members only disagree when nobody goes undefeated — otherwise they all crown the same winner.
+
 ## The map
 
 | Term | What level | Who uses it | Defined at |
@@ -29,6 +40,16 @@ Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked 
 
 > **"RR" ≠ "round robin" — the abbreviation collision.** In this repo **RR** always abbreviates **Ranked Robin**, one branded method. **Round robin** is the tournament *format* (everyone plays everyone) and, as "round-robin voting," a name for the **whole family**. So *every* Condorcet method is a round-robin count; only one of them is Ranked Robin. Using "RR" for "round robin" silently promotes a brand to the family name — the exact error this page exists to prevent. (And `RCV-RR` is **house** shorthand, built to parallel `RCV-IRV`; say **Ranked Robin** to people and **Copeland** to academics and the engine.)
 
+## Where the name came from — and what its coiner says it means
+
+**Equal Vote's own wording has moved.** Their [current Ranked Robin page](https://www.equal.vote/ranked_robin) now opens by calling it "a modern name for one of the oldest voting methods out there. First described in the literature in 1299" — wording their [previous version](https://www.equal.vote/ranked_robin_old) did not have; that page never mentioned Copeland or 1299 at all.
+
+**The coiner says it is a rebrand of the family, not one fixed count.** On electowiki's [talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) in 2025, Sara Wolk — who coined the term — wrote that she "always intended the name Ranked Robin to be a rebrand of Condorcet," leading with the takeaway *"Ranked Robin is a synonym for Condorcet on a ranked ballot."* So Copeland-plus-margins is Equal Vote's **default recommendation**, which she notes is under review — not the whole meaning of the name. That is exactly why this page files *Ranked Robin* at the species level and *Condorcet* at the genus, and why a page that says "Ranked Robin **is** Copeland" is describing today's recommended count, not a definition.
+
+**And the objection is as old as the name.** That same talk page opens with Markus Schulze objecting in **2021** that the title is misleading, since "round robin" has long covered Condorcet methods generally — the abbreviation collision flagged above, raised at the moment of coining rather than in hindsight.
+
+*(Sourcing: both points come from [electowiki's Ranked Robin page](https://electowiki.org/wiki/Ranked_Robin) and its talk page — a community wiki, Equal-Vote-adjacent. That is the right tier for **what a branded name means**, and the wrong tier for a verdict on the method; see [the leans, below](#read-the-sources-knowing-where-they-lean).)*
+
 ## The tier the brands never mention (C1 / C2 / C3)
 
 The table above maps the *marketing* names. The academic literature sorts the same family a different way — by **how much of the pairwise data a rule actually needs** — and knowing this one scheme, from [Fishburn (1977)](../../07_Concepts/topics/condorcet/condorcet_reading_list.md), stops most cross-talk before it starts:
@@ -43,12 +64,12 @@ Two things fall out of it. **"Tournament solution" means the C1 tier specificall
 
 ## The word "consensus" carries three different jobs
 
-The table above lists *Consensus Voting* as a brand. But the word shows up in this repo, and across the web, in **three senses at different altitudes** — and sliding between them is the single most common source of confusion in this family:
+The table above strikes *Consensus Voting* as an unsourced phantom. But the word itself shows up in this repo, and across the web, in **three senses at different altitudes** — and sliding between them is the single most common source of confusion in this family:
 
 | Sense | What it means | Careful |
 |---|---|---|
 | **Technical** | "consensus winner" = the **Condorcet winner** — beats every other candidate head-to-head | A *definition*, not a description. It's a stipulated label for a pairwise-majority fact. |
-| **Brand** | **Consensus Voting** = Equal Vote's alias for Ranked Robin; **Consensus Choice** = *Better Choices for Democracy*'s sibling brand (same family, different cycle rule) | Two different organizations, two different tiebreaks. Not interchangeable at the byte level. |
+| **Brand** | **Consensus Choice** = *Better Choices for Democracy*'s brand for the family; Equal Vote's is **Ranked Robin**. ("Consensus Voting" is neither — see the struck row above.) | Two different organizations, two different tiebreaks. Not interchangeable at the byte level. |
 | **Ordinary English** | broad, warm, genuinely-shared agreement — everyone is *content* | **Condorcet methods cannot see this.** A ranked ballot carries order, not intensity, so the count can't tell a warm second choice from grudging tolerance — see [honest limits](RCV_RR_honest_limits.md). |
 
 **The claim to watch for**, common on advocacy sites and forums:

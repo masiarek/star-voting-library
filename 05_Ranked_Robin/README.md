@@ -14,20 +14,9 @@
 | Ties broken by summing win margins | **Copeland//Borda** — a standard, long-known construction | — | no |
 | The words *"Ranked Robin"* | **Equal Vote's branding**, coined by Sara Wolk | **2021** | **yes — the name is the only new part** |
 
-**The names stack like sports leagues.** Round-robin is a tournament *format*: everyone plays everyone, best record tops the table. Every league that uses the format has its own name and its own tiebreak fine print. These names work exactly that way:
-
-- **Condorcet** — the *format*, i.e. the family. Any rule that elects the candidate who beats all others head-to-head, whenever one exists. Members include Copeland, Schulze, Ranked Pairs, Minimax.
-- **Copeland** — one member: rank candidates by head-to-head wins. With the margins tiebreak the technical full name is *Copeland//Borda*.
-- **Ranked Robin** — a *campaign name* (Equal Vote, 2021) for Condorcet voting on a ranked ballot. Their recommended count as of 2026 is Copeland plus the margins tiebreak — a current default, which they say is under review, not a definition.
-- **Consensus Choice** — a *different campaign's* name (Better Choices for Democracy) for the same family, with a different cycle rule ("Most Wins, Smallest Loss"). Same tournament, different fine print.
-
-Spoken aloud in ten seconds: *Condorcet is the format, Copeland is the standings rule, Ranked Robin is the league we play under.* The members only disagree when nobody goes undefeated — otherwise they all crown the same winner.
-
-**Equal Vote says so too, now.** Their current page opens by calling it "a modern name for one of the oldest voting methods out there. First described in the literature in 1299" — wording their [previous version](https://www.equal.vote/ranked_robin_old) did not have; that page never mentioned Copeland or 1299 at all. And on electowiki's talk page in 2025 Sara Wolk, who coined the term, wrote that she "always intended the name Ranked Robin to be a rebrand of Condorcet," with the first takeaway: *"Ranked Robin is a synonym for Condorcet on a ranked ballot."* The Copeland-plus-margins procedure is Equal Vote's *default recommendation*, not the whole meaning of the name — and she notes it is under review. That same talk page opens with Markus Schulze objecting in 2021 that the title is misleading, since "round robin" has long covered Condorcet methods generally.
-
 What it *does* is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
 
-*Sources: [Ranked Robin (electowiki)](https://electowiki.org/wiki/Ranked_Robin) — the canonical definition of the name — and [its talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) for the exchange above. Both are a community wiki and Equal-Vote-adjacent: good for definitions, weak for verdicts. The same method has a sibling brand in **Consensus Choice** (a different organisation, different cycle rule) and sits in the **Condorcet** / round-robin family. Which word means what → [the naming decoder](concepts/condorcet_naming_decoder.md); which one we ought to lead with, argued both ways → [What should we call this method?](concepts/what_to_call_this_method.md).*
+**Which name means what** — Condorcet the family, Copeland the count, Ranked Robin and Consensus Choice two campaigns' brands for it — has a page of its own: [the naming decoder](concepts/condorcet_naming_decoder.md), which also carries where the name came from, what its coiner says it means, and how Equal Vote's own wording has moved. Which one we *ought* to lead with, argued both ways → [What should we call this method?](concepts/what_to_call_this_method.md).
 
 This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
 
@@ -96,7 +85,7 @@ Runnable elections, each isolating one idea. Tabulate any of them yourself.
 
 | Where | What |
 |---|---|
-| [The worked intro — the consensus center wins](_main/) | the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices |
+| [The worked intro — the consensus center wins](_main/cases/cases_pages/ranked_robin_consensus_center.md) | the full report for the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices ([folder](_main/)) |
 | [Condorcet vs. Ranked Robin — worked examples](condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
 | [RR vs. IRV vs. plurality — same ballots](rr_vs_irv_plurality/) | one ranked ballot set, three winners — the Tennessee center-squeeze (BV-backed, triple-checked: LH / BetterVoting / pref_voting) |
 | [Tiebreaks — dead heat → lot](rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](concepts/rr_tiebreak_lh_vs_bv.md) |
