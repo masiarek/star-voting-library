@@ -36,11 +36,17 @@ PHRASES = {
     "ranked robin": "Ranked Robin",
 }
 
-# Acronyms that folder names spell in lowercase.
+# Acronyms and proper nouns that folder names spell in lowercase. Whole words
+# only, which is what keeps the election-ID folders intact: `bv2138` never
+# matches `bv`, so "No condorcet bv2138" becomes "No Condorcet bv2138".
 TERMS = {
     "rr": "RR",
     "irv": "IRV",
     "star": "STAR",
+    "rcv": "RCV",
+    "stv": "STV",
+    "bv": "BV",
+    "condorcet": "Condorcet",
 }
 
 _PHRASE_RE = re.compile(
