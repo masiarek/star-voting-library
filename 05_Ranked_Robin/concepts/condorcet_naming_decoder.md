@@ -17,7 +17,7 @@ They're at *different levels of generality* — a category, a specific method in
 Round-robin is a tournament *format*: everyone plays everyone, best record tops the table. Every league that uses the format has its own name and its own tiebreak fine print. These names work exactly that way (the map below links each one — this list is the spoken version):
 
 - **Condorcet** — the *format*, i.e. the family. Any rule that elects the candidate who beats all others head-to-head, whenever one exists. Members include Copeland, Schulze, Ranked Pairs, Minimax.
-- **Copeland** — one member: rank candidates by head-to-head wins. With the margins tiebreak the technical full name is *Copeland//Borda*.
+- **Copeland** — one member: rank candidates by head-to-head wins. With the margins tiebreak it is often written *Copeland//Borda* — but whether "Borda" belongs in that name is [contested](#is-the-margins-tiebreak-borda--contested), including by the person who proposed the tiebreak.
 - **Ranked Robin** — a *campaign name* (Equal Vote, 2021) for Condorcet voting on a ranked ballot. Their recommended count as of 2026 is Copeland plus the margins tiebreak — a current default, which they say is under review, not a definition.
 - **Consensus Choice** — a *different campaign's* name (Better Choices for Democracy) for the same family, with a different cycle rule ("Most Wins, Smallest Loss"). Same tournament, different fine print.
 
@@ -48,7 +48,17 @@ Other members of the *round-robin / Condorcet* family — **Minimax**, **Ranked 
 
 **And the objection is as old as the name.** That same talk page opens with Markus Schulze objecting in **2021** that the title is misleading, since "round robin" has long covered Condorcet methods generally — the abbreviation collision flagged above, raised at the moment of coining rather than in hindsight.
 
-*(Sourcing: both points come from [electowiki's Ranked Robin page](https://electowiki.org/wiki/Ranked_Robin) and its talk page — a community wiki, Equal-Vote-adjacent. That is the right tier for **what a branded name means**, and the wrong tier for a verdict on the method; see [the leans, below](#read-the-sources-knowing-where-they-lean).)*
+*(Sourcing: these points come from [electowiki's Ranked Robin page](https://electowiki.org/wiki/Ranked_Robin) and its talk page — a community wiki, Equal-Vote-adjacent. That is the right tier for **what a branded name means**, and the wrong tier for a verdict on the method; see [the leans, below](#read-the-sources-knowing-where-they-lean).)*
+
+## Is the margins tiebreak "Borda"? — contested
+
+Sources that call Ranked Robin *Copeland//Borda* and sources that reject the label are both easy to find, so this page names the dispute instead of picking a winner.
+
+**For the label.** On the talk page's [Black's-method thread](https://electowiki.org/wiki/Talk:Ranked_Robin#Comparison_to_Black%27s_method), Kristomun derives it in January 2022: a finalist's sum of margins over the other finalists is, on a complete ballot, linearly related to that candidate's rank position — which is what a weighted positional system *is*, i.e. Borda. On that reading *Copeland//Borda* is just the technical name, and Ranked Robin sits beside [Black's method](https://en.wikipedia.org/wiki/Black%27s_method) (Condorcet//Borda) with Copeland swapped in at the first stage. Note the hedging in the original — "I seem to recall," "I think" — this is a wiki contributor reasoning in public, not a settled citation.
+
+**Against it.** Sass, who proposed the tiebreak, [edited the article in June 2024](https://electowiki.org/w/index.php?title=Ranked_Robin&diff=20138&oldid=18548) to say the step after finding the finalists is "NOT Borda" — on the grounds that Borda carries contested rules about explicit ranks, ballot-completion requirements and skipped ranks that Ranked Robin does not inherit. That edit summary grants the arithmetic, calling it mathematically equivalent to *tournament-style* Borda, while denying the name and describing it as a novel application of the metric.
+
+**How to use this.** The two sides barely disagree about the arithmetic; they disagree about whether a method name drags its parent's fine print along with it — the same species of question this entire page exists to answer. Safe phrasing: call the tiebreak the **sum of win margins**, which nobody disputes, and reach for *Copeland//Borda* only when locating the method in the academic taxonomy — noting that Equal Vote itself does not use that term.
 
 ## The tier the brands never mention (C1 / C2 / C3)
 
