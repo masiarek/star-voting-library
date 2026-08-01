@@ -2677,9 +2677,9 @@ def sequentially_spent_score(
                     one_minus_weight_reduction_ratio = 1 - weight_reduction_ratio
                     have_surplus = weight_reduction_ratio < 1
 
+                    counts = defaultdict(int)
+                    modified = 0
                     if options.verbosity:
-                        counts = defaultdict(int)
-                        modified = 0
                         if have_surplus:
                             giving_back_surplus = "giving back surplus"
                             # no need to normalize this for presentation via split_fraction_or_int,
@@ -2699,74 +2699,76 @@ def sequentially_spent_score(
                             f"Reducing each ballot's stars by their vote{reduction}."
                         )
 
-                        remaining_decorated_ballots = []
-                        remaining_weighted_ballots = []
+                    # Fork fix (BUG_sss_verbosity.md / upstream issue #17): ballot
+                    # allocation must run at every verbosity, not only when printing.
+                    remaining_decorated_ballots = []
+                    remaining_weighted_ballots = []
 
-                        allocated = 0
-                        for t in decorated_ballots:
-                            weighted_ballot, ballot, stars, weight = t
+                    allocated = 0
+                    for t in decorated_ballots:
+                        weighted_ballot, ballot, stars, weight = t
 
-                            score = weighted_ballot.get(first, 0)
+                        score = weighted_ballot.get(first, 0)
 
-                            if score:
-                                starting_stars = stars
-                                star_reduction = score
-                                if have_surplus:
-                                    star_reduction = _fraction_or_int(
-                                        star_reduction * weight_reduction_ratio
-                                    )
+                        if score:
+                            starting_stars = stars
+                            star_reduction = score
+                            if have_surplus:
+                                star_reduction = _fraction_or_int(
+                                    star_reduction * weight_reduction_ratio
+                                )
 
-                                stars = max(stars - star_reduction, 0)
-                                if stars != starting_stars:
-                                    if not stars:
-                                        # remove, uh I mean "allocate", ballot
-                                        # (don't append to remaining_decorated_ballots)
-                                        allocated += 1
-                                        continue
+                            stars = max(stars - star_reduction, 0)
+                            if stars != starting_stars:
+                                if not stars:
+                                    # remove, uh I mean "allocate", ballot
+                                    # (don't append to remaining_decorated_ballots)
+                                    allocated += 1
+                                    continue
 
-                                    t[INDEX_STARS] = stars
+                                t[INDEX_STARS] = stars
 
-                                    weight = _fraction_or_int(stars, maximum_score)
-                                    t[INDEX_WEIGHT] = weight
+                                weight = _fraction_or_int(stars, maximum_score)
+                                t[INDEX_WEIGHT] = weight
 
-                                    for c, s in ballot.items():
-                                        weighted_ballot[c] = s * weight
+                                for c, s in ballot.items():
+                                    weighted_ballot[c] = s * weight
 
-                                    if options.verbosity:
-                                        key = (score, weight, starting_stars, stars)
-                                        counts[key] += 1
-                                        modified += 1
+                                if options.verbosity:
+                                    key = (score, weight, starting_stars, stars)
+                                    counts[key] += 1
+                                    modified += 1
 
-                                remaining_decorated_ballots.append(t)
-                                remaining_weighted_ballots.append(weighted_ballot)
+                            remaining_decorated_ballots.append(t)
+                            remaining_weighted_ballots.append(weighted_ballot)
 
+                    if allocated:
+                        decorated_ballots = remaining_decorated_ballots
+                        weighted_ballots = remaining_weighted_ballots
+
+                    if options.verbosity:
                         if allocated:
-                            decorated_ballots = remaining_decorated_ballots
-                            weighted_ballots = remaining_weighted_ballots
+                            options.print(
+                                f"Allocated {allocated} ballot{pluralizer(allocated)}."
+                            )
 
-                        if options.verbosity:
-                            if allocated:
-                                options.print(
-                                    f"Allocated {allocated} ballot{pluralizer(allocated)}."
-                                )
+                        # convert counts to list,
+                        counts = list(counts.items())
+                        if len(counts) == 1:
+                            prefix = ""
+                        else:  # pragma: no cover
+                            options.print(
+                                f"Reweighted {modified} ballot{pluralizer(modified)}:"
+                            )
+                            prefix = "   "
+                            # then sort by count then key, highest first.
+                            counts.sort(key=lambda t: (t[1], t[0]), reverse=True)
 
-                            # convert counts to list,
-                            counts = list(counts.items())
-                            if len(counts) == 1:
-                                prefix = ""
-                            else:  # pragma: no cover
-                                options.print(
-                                    f"Reweighted {modified} ballot{pluralizer(modified)}:"
-                                )
-                                prefix = "   "
-                                # then sort by count then key, highest first.
-                                counts.sort(key=lambda t: (t[1], t[0]), reverse=True)
-
-                            for key, count in counts:
-                                score, weight, starting_stars, stars = key
-                                options.print(
-                                    f"{prefix}{count} ballot{pluralizer(count)} voted {score}, stars reduced from {starting_stars} to {stars}, reweighted to {weight}."
-                                )
+                        for key, count in counts:
+                            score, weight, starting_stars, stars = key
+                            options.print(
+                                f"{prefix}{count} ballot{pluralizer(count)} voted {score}, stars reduced from {starting_stars} to {stars}, reweighted to {weight}."
+                            )
 
         _attempt_to_sort(winners)
         tie = None

@@ -37,7 +37,7 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 
 ## Current divergence from upstream 2.1.6
 
-**The engine algorithm is essentially unchanged.** `git diff --stat` against the tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost entirely **line-reflow** (signatures and long calls re-wrapped): the two files are ~97 % character-identical once whitespace is removed, `__version__` is still `2.1.6`, no functions were removed, and exactly **one** helper was added (`bool_converter`). The *functional* edits are two optional output toggles plus one small tiebreak **bug fix** (see below):
+**The engine algorithm is essentially unchanged.** `git diff --stat` against the tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost entirely **line-reflow** (signatures and long calls re-wrapped): the two files are ~97 % character-identical once whitespace is removed, `__version__` is still `2.1.6`, no functions were removed, and exactly **one** helper was added (`bool_converter`). The *functional* edits are two optional output toggles plus two **bug fixes** (see below):
 
 - **`print_averages`** option (default `False`) + CLI flag `-a` / `--print-averages` and config key `print averages = <bool>`. Suppresses the averages line unless asked.
 - **`print_maximum_score`** option (default `False`) + CLI flag `-M` / `--print-maximum-score` and config key `print maximum score = <bool>`. Suppresses the "Maximum score is …" line unless asked.
@@ -52,7 +52,15 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Consider offering it to Larry.
 - **Regression guard:** the four `01_STAR/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
 
-> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-the-two-toggles is deliberate: it makes re-pulling a future upstream release trivial.
+### Bug fix — SSS ballot allocation gated on verbosity (2026-08)
+
+- **File/location:** `starvote/__init__.py`, `sequentially_spent_score()`, the "Ballot allocation round" block.
+- **What changed:** the ballot-allocation machinery (building `remaining_decorated_ballots` / `remaining_weighted_ballots`, the star-spending/reweighting loop, and the `decorated_ballots = remaining_decorated_ballots` reassignment) was nested inside `if options.verbosity:`; it is now dedented so it runs at every verbosity, with only the printing still guarded.
+- **Effect:** at the engine's default `verbosity=0`, no ballots were ever spent or reweighted, so SSS silently degenerated into repeated bloc score voting and could return **different winners** than the same election run verbosely — the defining proportionality of the method vanished in quiet runs. Reported upstream as [larryhastings/starvote#17](https://github.com/larryhastings/starvote/issues/17) (open; latest release 2.1.6 affected). Full analysis: [BUG_sss_verbosity.md](BUG_sss_verbosity.md).
+- **Why upstream:** it's the voting algorithm's allocation mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Offer it to Larry via issue #17.
+- **Regression guard:** `tests/test_verbosity_invariance.py` asserts verbosity-invariant winners for `sss` / `allocated` / `rrv` / `bloc` plus the exact proportional SSS outcome.
+
+> **Correction (do not repeat the old claim):** the **`No Preference` → `Equal Support`** relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent` are **NOT** engine edits — they all live in our wrapper `starvote_larry_hastings.py`. The vendored `starvote/` package still prints "No Preference" internally. Keeping the engine pristine-but-for-these-documented-edits is deliberate: it makes re-pulling a future upstream release trivial.
 
 To regenerate this list precisely at any time, run the `git diff` commands above and compare the `def`/`class` inventory of the two versions.
 

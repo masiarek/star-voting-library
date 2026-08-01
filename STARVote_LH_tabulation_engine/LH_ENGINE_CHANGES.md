@@ -14,13 +14,14 @@ Scope note — three related docs feed this one; this page is the union:
 
 ## 1. Edits to the vendored upstream algorithm (`starvote/`) — kept minimal
 
-The vendored `starvote 2.1.6` package is ~97% character-identical to PyPI (the rest is line-reflow). Only three functional edits exist; all are candidates to offer upstream:
+The vendored `starvote 2.1.6` package is ~97% character-identical to PyPI (the rest is line-reflow). Only four functional edits exist; all are candidates to offer upstream:
 
 | Change | Where | Note |
 |--------|-------|------|
 | `print_averages` toggle (default off) + CLI `-a` / config `print averages` | `starvote/__init__.py` | Suppresses the averages line unless asked. |
 | `print_maximum_score` toggle (default off) + CLI `-M` / config `print maximum score` | `starvote/__init__.py` | Suppresses the "Maximum score is …" line. |
 | **Five-star tiebreak default-score fix** (`ballot_get(candidate1, 1)` → `…, 0`) | `starvote/__init__.py`, `_maximum_score_count_round()` 2-candidate fast path | Latent correctness bug: a ballot omitting candidate1 contributed a phantom score of 1. Dormant for 0–5 STAR; now agrees with the general path. Guard: `01_STAR/tie_break_dead_rung/`. |
+| **SSS verbosity fix** — ballot allocation dedented out of `if options.verbosity:` | `starvote/__init__.py`, `sequentially_spent_score()` "Ballot allocation round" | Real correctness bug (upstream [issue #17](https://github.com/larryhastings/starvote/issues/17), still open): at the default `verbosity=0` no ballots were ever spent/reweighted, so SSS degenerated into repeated bloc score voting and returned different winners than verbose runs. Only the printing stays guarded now. Details: [BUG_sss_verbosity.md](BUG_sss_verbosity.md). Guard: `tests/test_verbosity_invariance.py`. |
 
 Everything else people call "the LH engine's improvements" is **not** an algorithm edit — it's the wrapper (§2–§4).
 

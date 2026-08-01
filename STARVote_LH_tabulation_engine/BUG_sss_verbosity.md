@@ -1,5 +1,20 @@
 # Bug: Sequentially Spent Score (SSS) returns different winners depending on `verbosity`
 
+> **STATUS: FIXED in this fork (2026-08-01) — still open upstream ([larryhastings/starvote#17](https://github.com/larryhastings/starvote/issues/17), latest release 2.1.6 affected).**
+> The verified root cause is **not** the tiebreaker hypothesis below (kept for the record): in
+> `sequentially_spent_score()`, the entire ballot-allocation step — building
+> `remaining_decorated_ballots` / `remaining_weighted_ballots`, the star-spending/reweighting
+> loop, and the `decorated_ballots = remaining_decorated_ballots` reassignment — was nested
+> inside `if options.verbosity:`. At `verbosity=0` no ballots were ever spent, so SSS silently
+> degenerated into repeated bloc score voting and the minority bloc lost its proportional seat
+> (`['Alice', 'Ben', 'Cara']` instead of `['Alice', 'Ben', 'Dan']` in the repro below). The
+> tiebreaker is initialized unconditionally (`Options.initialize`), so that lead was a red herring.
+> **Fix:** the allocation machinery is dedented out of the verbosity guard; only the printing
+> stays guarded. **Regression guard:** `tests/test_verbosity_invariance.py` asserts
+> `election(..., verbosity=0) == election(..., verbosity=1) == election(..., verbosity=2)` for
+> `sss` / `allocated` / `rrv` / `bloc`, plus the exact proportional SSS outcome. Ledger row:
+> [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md).
+
 ## Summary
 
 `starvote.election(starvote.sss, ...)` returns a **different set of winners** for the *same ballots, seats, and maximum_score* depending solely on the `verbosity` argument. With `verbosity=0` one candidate wins; with `verbosity>=1` a different candidate wins. `verbosity` is a presentation/logging option and must never affect the computed result.
@@ -52,7 +67,7 @@ verbosity=1 -> [...]   # identical
 verbosity=2 -> [...]   # identical
 ```
 
-## Key observation / likely cause
+## Key observation / likely cause (superseded — see STATUS box at top)
 
 The only structural difference between the `verbosity=0` and `verbosity>=1` traces is that the verbose runs print, right after the quota line:
 
