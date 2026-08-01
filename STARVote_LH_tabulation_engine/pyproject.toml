@@ -1,6 +1,6 @@
 [build-system]
-requires = ["flit"]
-build-backend = "flit.buildapi"
+requires = ["flit_core>=3.2,<4"]
+build-backend = "flit_core.buildapi"
 
 [project]
 name = "starvote"
@@ -8,15 +8,13 @@ authors = [
     {name = "Larry Hastings", email = "larry@hastings.org"},
     ]
 readme = "README.md"
-requires-python = ">=3.6"
+# Upstream 2.1.6 declares >=3.6; the fork tracks the workspace floor (nothing
+# below 3.10 is ever tested here).
+requires-python = ">=3.10"
 classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -27,10 +25,10 @@ dynamic = [
     'version',
     'description',
     ]
-dependencies = [
-    "pyyaml>=6.0.1",
-    "faker",
-]
+# Upstream starvote is stdlib-only; the workspace root supplies pyyaml etc.
+# for the wrapper and tools. Keep this list empty so the engine's metadata
+# matches the pristine upstream claim in FORK_NOTES.md.
+dependencies = []
 
 [project.urls]
 Source = "https://github.com/larryhastings/starvote/"

@@ -4,8 +4,13 @@ Copyright (c) 2025-2026 Adam Masiarek
 
 Portions of this repository are derived from the "starvote" project,
 Copyright 2023-2024 by Larry Hastings, also under the MIT License. See
-STARVote_LH_tabulation_engine/LICENSE for that notice. Third-party
-dependencies are documented in THIRD_PARTY_LICENSES.md.
+STARVote_LH_tabulation_engine/LICENSE for that notice. Portions under
+06_Other/RCV_IRV/ are derived from "pyrankvote", Copyright (c) 2019
+Jon Tingvold, MIT License (see the LICENSE.txt in its directory), and
+include a vendored copy of "tabulate", Copyright (c) 2011-2020 Sergey
+Astanin and contributors, MIT License (see the LICENSE in its
+directory). Third-party dependencies are documented in
+THIRD_PARTY_LICENSES.md.
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

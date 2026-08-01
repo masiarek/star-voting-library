@@ -1,6 +1,10 @@
 # Build the MkDocs Material site (see mkdocs.yml at repo root) and deploy it to
 # GitHub Pages on every push to master.
 #
+# The docs toolchain is pinned in pyproject.toml's [dependency-groups].docs and
+# resolved by uv.lock — CI and local preview run the exact same versions. To
+# change a docs dependency, edit pyproject.toml and run `uv lock`.
+#
 # One-time repo setup: Settings → Pages → Build and deployment → Source: "GitHub Actions".
 
 name: docs
@@ -24,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.12"
-      - run: pip install "mkdocs-material>=9.5" mkdocs-same-dir mkdocs-redirects
-      - run: mkdocs build
+          enable-cache: true
+      - run: uv sync --group docs
+      - run: uv run mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

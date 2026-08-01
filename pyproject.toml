@@ -1,22 +1,38 @@
 [project]
-name = "yaml"
+name = "star-voting-library"
 version = "0.1.0"
 description = "STAR Voting education & test-case library: a vendored STAR / RCV-IRV tabulation engine, example elections, a BetterVoting JSON->YAML converter, and a pytest suite."
 readme = "readme.md"
 requires-python = ">=3.10,<3.14"
 dependencies = [
-    "faker>=40.19.1",
-    "mypy>=2.0.0",
-    "playwright>=1.60.0",
-    "pref-voting>=1.14.0",
+    "pref-voting>=1.18",
     "pyyaml>=6.0.3",
-    "segno>=1.6.0",
     "starvote",
 ]
 
 [dependency-groups]
 dev = [
     "pytest>=8.0",
+    "abcvoting>=2.0",
+    "mypy>=2.0.0",
+]
+# BV tooling extras, imported lazily by tools_adam scripts only: ballot-sheet
+# PDFs (playwright, segno) and candidate-name generation (faker).
+# Install on demand:  uv sync --group tools
+tools = [
+    "faker>=40.19.1",
+    "playwright>=1.60.0",
+    "segno>=1.6.0",
+]
+# The MkDocs site build, pinned here so uv.lock governs both CI (docs.yml) and
+# the local preview (uv run --group docs mkdocs serve). mkdocs-same-dir and
+# mkdocs-redirects are capped at the last releases that do not pull in the
+# MkDocs-impersonating "properdocs" package — verify what that is before ever
+# raising these pins.
+docs = [
+    "mkdocs-material>=9.5",
+    "mkdocs-same-dir==0.1.3",
+    "mkdocs-redirects==1.2.2",
 ]
 
 [tool.pytest.ini_options]

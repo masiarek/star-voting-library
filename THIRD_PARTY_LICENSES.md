@@ -1,6 +1,33 @@
 # Third-Party Licenses
 
 This project depends on third-party packages. Their licenses are recorded below.
+Everything — runtime, tooling, and vendored code — is permissive (MIT / BSD / Apache-2.0).
+
+## Vendored code (copied into this repository)
+
+| Project | Where | License | Notice file |
+|---------|-------|---------|-------------|
+| `starvote` (Larry Hastings) | `STARVote_LH_tabulation_engine/starvote/` | MIT | [`STARVote_LH_tabulation_engine/LICENSE`](STARVote_LH_tabulation_engine/LICENSE) |
+| `pyrankvote` (Jon Tingvold) | `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/pyrankvote/` | MIT | [`LICENSE.txt`](06_Other/RCV_IRV/RCV_IRV_tabulation_engine/pyrankvote/LICENSE.txt) in its directory |
+| `tabulate` (Sergey Astanin and contributors) | `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/tabulate/` | MIT | [`LICENSE`](06_Other/RCV_IRV/RCV_IRV_tabulation_engine/tabulate/LICENSE) in its directory |
+
+## Installed dependencies
+
+| Package | Used for | License |
+|---------|----------|---------|
+| `pyyaml` (runtime) | reading the election YAML files | MIT (full text below) |
+| `pref-voting` (runtime) | independent cross-check of ranked/Condorcet tabulations | MIT |
+| `pytest` (dev) | the test suite | MIT |
+| `abcvoting` (dev) | independent cross-check of multi-winner Approval (ABC) rules | MIT |
+| `mypy` (dev) | optional type checking | MIT |
+| `faker` (tools) | candidate-name generation | MIT |
+| `playwright` (tools) | ballot-sheet PDF rendering | Apache-2.0 |
+| `segno` (tools) | QR codes on printable ballots | BSD-3-Clause |
+| `mkdocs` / `mkdocs-material` / `mkdocs-same-dir` / `mkdocs-redirects` (docs) | the website build | BSD-2-Clause / MIT / MIT / MIT |
+
+All of these are downloaded from PyPI at install time (none are redistributed
+here), so shipping their license texts is not required; the vendored copies
+above do ship their notices in-tree.
 
 ## PyYAML
 

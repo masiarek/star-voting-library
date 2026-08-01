@@ -238,9 +238,11 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   and deployed by `.github/workflows/docs.yml` on every push to master. Folder
   `README.md`s become the site's section index pages (one more reason that naming rule
   matters), and links keep GitHub's file-relative semantics (`use_directory_urls:
-  false` — don't flip it). Local preview: `uvx --with mkdocs-same-dir --with
-  "mkdocs-material>=9.5" --with mkdocs-redirects mkdocs serve`. `site/` is generated
-  output — never commit.
+  false` — don't flip it). Local preview: `uv run --group docs mkdocs serve` (the
+  docs toolchain is pinned in `pyproject.toml`'s `docs` dependency group + `uv.lock`;
+  `mkdocs-same-dir`/`mkdocs-redirects` are capped at the last releases free of the
+  MkDocs-impersonating `properdocs` package — investigate before raising those pins).
+  `site/` is generated output — never commit.
   Details + known nits: `07_Concepts/about_this_repo/website_build.md`.
   **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
   They replace the *built* page at a URL while leaving the `.md` on disk intact, so
@@ -251,9 +253,9 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   redirect, **move or mirror whatever the source said onto the destination** (here the
   case index is mirrored under "Worked examples" on `ranked_robin.md`) and leave a
   maintainer note in the redirected README — otherwise edits there silently never ship.
-  Adding a plugin means updating **four** places: `mkdocs.yml` plugins, the preview
-  command in its header comment, `.github/workflows/docs.yml`'s `pip install`, and
-  `website_build.md`.
+  Adding a plugin means updating **two** places: `mkdocs.yml` plugins and the `docs`
+  dependency group in `pyproject.toml` (then `uv lock`). CI and the local preview both
+  resolve from `uv.lock`, so there is no separate install command to keep in sync.
 - **Companion repo — research-paper topics live OUTSIDE this repo.**
   <https://github.com/masiarek/star-voting-research-topics> (**private**) holds the
   vetted research-paper prospectuses that use this library as their reproducibility
@@ -460,11 +462,12 @@ reproduce loop is in the **`bettervoting` skill**.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)
-  rules via Martin Lackner's `abcvoting` (optional `pip install abcvoting`;
-  everything guards on it). `av` doubles as an independent cross-check of the
-  LH bloc-Approval count; `seqpav` / `pav` / `seqphragmen` add the proportional
-  rules the LH engine doesn't have. Tested by `tests/test_abcvoting_crosscheck.py`
-  (skips if the library is absent).
+  rules via Martin Lackner's `abcvoting` (in the `dev` dependency group since
+  2026-08, so `uv sync` brings it in and the cross-check actually runs — locally
+  and in CI). `av` doubles as an independent cross-check of the LH bloc-Approval
+  count; `seqpav` / `pav` / `seqphragmen` add the proportional rules the LH
+  engine doesn't have. Tested by `tests/test_abcvoting_crosscheck.py` (still
+  guards on the import for bare-pip environments).
 - **Score / range voting & the 0–5 cap (don't misstate this).** Larry's underlying
   `starvote` engine is *range-parametric*: `starvote.election(starvote.star, rows,
   maximum_score=N)` tabulates any range (verified at 0–10 → C). The **0–5 limit is the

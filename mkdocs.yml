@@ -1,7 +1,8 @@
 # MkDocs Material site for the whole repo — publishes every Markdown page (teaching
 # docs + the generated per-election pages) as a searchable website on GitHub Pages.
 #
-#   Local preview:  uvx --with mkdocs-same-dir --with mkdocs-material --with mkdocs-redirects mkdocs serve
+#   Local preview:  uv run --group docs mkdocs serve
+#                   (toolchain pinned in pyproject.toml [dependency-groups].docs + uv.lock)
 #   Deploy:         .github/workflows/docs.yml builds on every push to master
 #                   (one-time setup: repo Settings → Pages → Source: GitHub Actions)
 #

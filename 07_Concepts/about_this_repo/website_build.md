@@ -11,10 +11,10 @@ There is **no separate docs source**. The site is built from the repo root itsel
 ## Local preview
 
 ```sh
-uvx --with mkdocs-same-dir --with "mkdocs-material>=9.5" --with mkdocs-redirects mkdocs serve
+uv run --group docs mkdocs serve
 ```
 
-(or `mkdocs build`, which writes the static site into `site/` — gitignored, never commit it). No project dependency is involved; `uvx` runs the doc tools in their own isolated environment.
+(or `... mkdocs build`, which writes the static site into `site/` — gitignored, never commit it). The docs toolchain is pinned in `pyproject.toml`'s `docs` dependency group and resolved by `uv.lock`, so the preview and CI run the exact same versions. Note: `mkdocs-same-dir` and `mkdocs-redirects` are deliberately capped at the last releases that don't pull in the MkDocs-impersonating `properdocs` package — investigate before raising those pins.
 
 ## The conventions that make it work
 
