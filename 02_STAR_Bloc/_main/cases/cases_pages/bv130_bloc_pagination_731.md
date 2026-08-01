@@ -21,6 +21,19 @@ Winners (both engines): Someone I Like, Santa Claus, The Lesser Evil.
 NOTE: do not confuse this with BV130-r2 (election 9ff9jk), a separate 4-ballot
 retest built around a dead-rung lot tie — see bv130r2_dead_rung_bloc.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 3
+expected_winners:
+- Someone I Like
+- Santa Claus
+- The Lesser Evil
+bv_election_id: yhxy7q
+bv_test_id: BV130
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

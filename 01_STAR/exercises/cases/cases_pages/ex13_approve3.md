@@ -18,6 +18,17 @@ sits decides the election. Exercise: ex13_draw_the_line.md.
 Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
 — this is the "approve 3 and up" race; BV agrees: Ash 7.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Ash
+bv_election_id: qdtqf2
+bv_test_id: BV2200
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

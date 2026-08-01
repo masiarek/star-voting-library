@@ -16,6 +16,23 @@ Note what this does NOT depend on. There is not a single drawn matchup in the pr
 Second lesson, free with the first: Cora has ZERO first-choice votes. The three blocs lead with Blake, Amy and Diego, so first choices split 6-6-6-0-0. Cora is the broadly-acceptable second choice nobody puts first, which is precisely why Cora wins the round robin — and precisely why Choose-One and RCV-IRV cannot even produce an answer here without a coin flip (both deadlock three ways at 6). That is also why this is a single Ranked Robin race on BetterVoting rather than a method line-up: the other methods' results here are not reproducible.
 Live results: https://bettervoting.com/gg9qh9/results (election gg9qh9, BV2260). Triple-checked — the LH engine, BetterVoting's RankedRobin.ts (see the frozen _bv_export.json) and pref_voting's independent Copeland all elect Cora.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Cora
+lot_numbers:
+- Amy
+- Blake
+- Cora
+- Diego
+- Erin
+bv_election_id: gg9qh9
+bv_test_id: BV2260
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

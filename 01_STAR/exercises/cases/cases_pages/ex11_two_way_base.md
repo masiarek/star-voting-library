@@ -19,6 +19,17 @@ Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
 — with a Choose-One race (also Alba: two names, one verdict).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Alba
+bv_election_id: ggg7hd
+bv_test_id: BV2197
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

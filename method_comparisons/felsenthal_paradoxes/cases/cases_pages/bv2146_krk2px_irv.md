@@ -12,6 +12,17 @@ Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bv
 Identical to BV2145 except one datum, ceteris paribus: the two Cleo>Ben>Ada voters RAISE Ben to first (Ben>Cleo>Ada) — strictly more support for Ben, nothing else changes. First choices become Ada 5, Ben 8, Cleo 4, so the runoff procedure (IRV; identical for three candidates) now eliminates CLEO instead of Ada — and Ada beats Ben 9–8. Ben, who won BV2145, loses precisely because two voters moved him UP: the lack-of-monotonicity (more-is-less) paradox, Felsenthal's model CONDITIONAL paradox. Confirmed live on BetterVoting.
 Live results: https://bettervoting.com/krk2px/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: krk2px
+bv_test_id: BV2146
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

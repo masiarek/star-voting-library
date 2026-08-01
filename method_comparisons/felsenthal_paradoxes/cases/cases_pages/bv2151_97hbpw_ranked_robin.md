@@ -12,6 +12,17 @@ Race 2 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-co
 The same 9 ranked ballots counted by Ranked Robin (Copeland): Beth still wins both head-to-heads (Andy 6–3, Carl 5–4) — the Condorcet winner, elected directly. Ranked Robin elects Beth with 11 voters (BV2150) and with 9: in this pair, showing up never hurt the Andy voters under a pairwise count. (Condorcet methods are not participation-proof in general — Moulin's theorem — but this electorate doesn't trigger it.)
 Live results: https://bettervoting.com/97hbpw/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: 97hbpw
+bv_test_id: BV2151
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

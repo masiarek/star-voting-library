@@ -15,6 +15,19 @@ The lot order deliberately favors Cara: if the engine skipped the five-star
 rung and went straight to the lot, Cara would advance and ANN would win.
 The expected winner (Ben) therefore proves the rung was consulted.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ben
+lot_numbers:
+- Cara
+- Ann
+- Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

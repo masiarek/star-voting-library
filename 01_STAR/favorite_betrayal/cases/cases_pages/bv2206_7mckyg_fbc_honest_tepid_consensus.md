@@ -28,6 +28,17 @@ Live on BetterVoting (Test ID BV2206): https://bettervoting.com/7mckyg
 Live results: https://bettervoting.com/7mckyg/results (BV agrees:
 Clover, no tiebreaks).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Clover
+bv_election_id: 7mckyg
+bv_test_id: BV2206
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

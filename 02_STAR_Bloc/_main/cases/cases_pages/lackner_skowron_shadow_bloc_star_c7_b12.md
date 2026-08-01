@@ -22,6 +22,26 @@ Allocated Score) at 03_STAR_PR/_main/lackner_skowron_shadow_star_pr_c7_b12.yaml,
 which is the STAR-family parallel to the book's PAV. lot_numbers [A..G] pins any
 ties to alphabetical priority (matching the approval file's D-over-F choice).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 4
+expected_winners:
+- A
+- B
+- C
+- D
+lot_numbers:
+- A
+- B
+- C
+- D
+- E
+- F
+- G
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

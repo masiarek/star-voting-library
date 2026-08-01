@@ -21,6 +21,20 @@ voters 2 and 3, yet he is treated identically (dead last) in every head-to-head:
 he loses all three pairwise contests 3–0. Ada beats everyone (the Condorcet
 winner), so Ada wins outright.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+lot_numbers:
+- Ada
+- Ben
+- Cara
+- Dan
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

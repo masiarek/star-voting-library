@@ -16,6 +16,18 @@ whereas BetterVoting's random draw elected Ben from the identical ballots. Same
 votes, different winner, decided entirely by which lot order you follow — the
 argument for deterministic lot numbers (BV #1063). See the lesson md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+lot_numbers:
+- Ada
+- Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

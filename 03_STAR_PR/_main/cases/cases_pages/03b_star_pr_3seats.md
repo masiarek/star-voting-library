@@ -16,6 +16,17 @@ would let the 58% majority sweep all 3). Switch voting_method between `sss`,
 `allocated`, and `rrv` to compare; `bloc` shows the majoritarian contrast.
 STV counterpart: 03a_stv_3seats.yaml. See 07_Concepts/proportional_stv_vs_star.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: sss
+num_winners: 3
+expected_winners:
+- Housing
+- Schools
+- SmallBiz
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

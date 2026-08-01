@@ -1,0 +1,16 @@
+=== Tennessee capital by 3-2-1 Voting (blank = Bad) ===
+
+--- 3-2-1 Voting ---
+ Tabulating 4 candidates, Good=2 / OK=1 / Bad=0 (blank = Bad).
+
+Ratings tally (Good / OK / Bad):
+   Memphis        Good   42 | OK    0 | Bad   58
+   Nashville      Good   26 | OK   74 | Bad    0
+   Chattanooga    Good   15 | OK   43 | Bad   42
+   Knoxville      Good   17 | OK   41 | Bad   42
+
+Step 1 — Semifinalists (most Good): Memphis (42), Nashville (26), Knoxville (17)
+Step 2 — Finalists (fewest Bad): Nashville (Bad 0), Knoxville (Bad 42)
+Step 3 — Runoff: Nashville 68 vs Knoxville 17 (15 rated equal)
+
+Winner — 3-2-1 Voting: Nashville

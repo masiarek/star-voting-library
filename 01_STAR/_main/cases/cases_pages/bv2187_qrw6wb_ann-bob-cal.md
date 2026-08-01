@@ -33,6 +33,17 @@ PROCEDURE is the whole lesson. (Bob is also the Condorcet winner.)
 CANONICAL = FROZEN: never edit these ballots. A lesson needing different
 ballots gets a new scenario with a new cast of names.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bob
+bv_election_id: qrw6wb
+bv_test_id: BV2187
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

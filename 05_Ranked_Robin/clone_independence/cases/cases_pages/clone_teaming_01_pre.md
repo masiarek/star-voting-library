@@ -10,6 +10,22 @@
 
 The electowiki Ranked Robin clone-independence example, part 1 of 2 (the "before"). 33 voters, six candidates; A, B, C sit in a top cycle (A beats B, B beats C, C beats A) and tie for the most pairwise wins (4 each). Ranked Robin's tiebreak looks at total win margin: A and B tie there too (+101 each), C is lower (+95), so C is dropped and the A-vs-B tie is settled by lot — a coin flip. This file pins the lot to A. The point of the pair is what a faction can do about that coin flip: see part 2, clone_teaming_02_post, where the A-faction runs clones to convert this 50/50 into a certain win. This is a clone-independence (teaming) FAILURE, and it can only happen when there is no Condorcet winner. Companion: clone_teaming_02_post.yaml · lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- A
+lot_numbers:
+- A
+- B
+- C
+- D
+- E
+- F
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

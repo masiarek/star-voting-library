@@ -26,6 +26,17 @@ realrcv.equal.vote/alaska22general. Live results (BV2214, all four races):
 https://bettervoting.com/m3hb6y/results
 Lesson: README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Peltola
+bv_election_id: m3hb6y
+bv_test_id: BV2214
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

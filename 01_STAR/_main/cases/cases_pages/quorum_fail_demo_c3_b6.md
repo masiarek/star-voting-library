@@ -22,6 +22,14 @@ vote" and "being elected" are different things when a quorum isn't met.
 → Concept: 07_Concepts/topics/quorum.md
 → The same ballots that DO reach quorum: 01_Single_winner/quorum_demo_c3_b6.yaml
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+eligible_voters: 12
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

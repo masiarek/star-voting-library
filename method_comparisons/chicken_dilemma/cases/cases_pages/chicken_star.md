@@ -19,6 +19,15 @@ in the scoring round (A 275, B 265, C 200), and A — the honest pairwise winner
 the runoff 35-25. Honesty is safe. The [Divergence from STAR] block confirms Ranked
 Robin also elects A. Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

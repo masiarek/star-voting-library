@@ -28,6 +28,17 @@ Exercise page: ../ex15_read_the_ballot.md
 Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 1 of 2 —
 BetterVoting's own Approval count agrees: Blair.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Blair
+bv_election_id: d4v2dh
+bv_test_id: BV2258
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

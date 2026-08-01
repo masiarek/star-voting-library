@@ -22,6 +22,17 @@ real base, Alex. Flip the wings' Blair score to 4 (the companion) and STAR alone
 moves to Blair. That is the whole preference-vs-support lesson as a live election.
 Live results: https://bettervoting.com/ywx39y/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Alex
+bv_election_id: ywx39y
+bv_test_id: BV2225
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

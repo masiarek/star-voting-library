@@ -36,6 +36,20 @@ LH-only (no BetterVoting election): LH and BV break a Copeland tie differently
 on BV. The companion case where the refined rules DISAGREE:
 cycle_schulze_vs_ranked_pairs_c4_b40.yaml
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Alder
+lot_numbers:
+- Alder
+- Birch
+- Cedar
+- Dogwood
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

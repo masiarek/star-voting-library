@@ -27,6 +27,17 @@ Live on BetterVoting (Test ID BV2198): https://bettervoting.com/93gjx6/results
 — four races: Choose-One falls for the clone (Brett); RCV-IRV, STAR,
 and Ranked Robin all hold (Alba).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Alba
+bv_election_id: 93gjx6
+bv_test_id: BV2198
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

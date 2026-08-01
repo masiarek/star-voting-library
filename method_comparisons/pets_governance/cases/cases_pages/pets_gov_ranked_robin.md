@@ -18,6 +18,24 @@ the minority, Dog beats every rival head-to-head — the Condorcet winner. So th
 executive (Mayor) goes to the majority's choice even as the proportional Council
 races (STAR-PR, STV) seat the minority.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Dog
+lot_numbers:
+- Dog
+- Cat
+- Fish
+- Bird
+- Rabbit
+- Hamster
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

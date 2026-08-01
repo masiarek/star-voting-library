@@ -10,6 +10,17 @@
 
 The same twelve gelato voters, with each ranking converted to scores on an even 5/3/0 spacing so a SCORE method can run on a RANKED profile. Under a uniform spacing the STAR scoring round IS a Borda count, so round one reproduces Borda's answer — Berry first — and then the automatic runoff runs the head-to-head Borda never runs: Almond beats Berry 7-5, and Almond wins. Honest caveat, stated on the page: unlike Condorcet's 1788 profile, this outcome is NOT robust to the spacing. 5/3/0, 5/4/0, 5/2/0 and 4/2/0 all give Almond, but a polarized 5/1/0 makes Cocoa a finalist instead of Berry and elects Cocoa. With no Condorcet winner to anchor it (the pairwise contests cycle), the rank-to-score mapping is doing real work — which is exactly the objection the Borda page raises against inventing intensities.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Almond
+bv_election_id: kdjjkq
+bv_test_id: BV2251
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

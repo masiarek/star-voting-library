@@ -19,6 +19,16 @@ SAME ballots (SPAV, PAV, seq-Phragmén — run them via
 giving the minority its seat; see
 04_Approval/concepts/approval_multiwinner.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval_Multi_Winner
+num_winners: 2
+expected_winners:
+- Amy
+- Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

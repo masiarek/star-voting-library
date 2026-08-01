@@ -28,6 +28,17 @@ Three teaching points in one ballot set:
 3. **BV vs LH agree.** Both elect None of the Above with identical score/runoff
    numbers.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- None of the Above
+bv_election_id: 26khr3
+bv_test_id: BV215
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

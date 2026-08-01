@@ -12,6 +12,17 @@ Race 1 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6c
 47 voters, rankings 18×(Anna>Bert>Carla), 6×(Bert>Carla>Anna), 8×(Bert>Anna>Carla), 2×(Carla>Anna>Bert), 13×(Carla>Bert>Anna). Bert is the Condorcet winner (beats Anna 27–20, Carla 32–15; social ordering Bert>Anna>Carla). But each voter approves only the candidates the text marks in parentheses — 18×{Anna}, 6×{Bert,Carla}, 8×{Bert,Anna}, 2×{Carla,Anna}, 13×{Carla} — and the approval totals are Anna 28, Bert 14, Carla 21: APPROVAL ELECTS ANNA. The Condorcet winner paradox under Approval: where a voter draws the approval cutoff decides the election, and the pairwise favorite can fall below it.
 Live results: https://bettervoting.com/r6ctvy/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Anna
+bv_election_id: r6ctvy
+bv_test_id: BV2152
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

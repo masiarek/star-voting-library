@@ -18,6 +18,7 @@ fails if a page drifts from its YAML/mirror. Regenerate with:
 
     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py
 """
+import glob
 import os
 import re
 import sys
@@ -131,7 +132,17 @@ HOW_TO_READ = {
 def _mirror_path(yaml_path):
     d = os.path.dirname(yaml_path)
     stem = os.path.splitext(os.path.basename(yaml_path))[0]
-    return os.path.join(d, os.path.basename(d) + "_tabulated", stem + "_tabulated.txt")
+    mirror_dir = os.path.join(d, os.path.basename(d) + "_tabulated")
+    primary = os.path.join(mirror_dir, stem + "_tabulated.txt")
+    if os.path.exists(primary):
+        return primary
+    # Non-STAR engines write method-tagged mirrors (<stem>_RANGE_tabulated.txt,
+    # <stem>_321_tabulated.txt, ...) so they never collide with a STAR mirror.
+    # When no primary exists, the tagged mirror IS the engine report.
+    tagged = sorted(
+        glob.glob(os.path.join(glob.escape(mirror_dir), glob.escape(stem) + "_*_tabulated.txt"))
+    )
+    return tagged[0] if tagged else primary
 
 
 def _mirror_report(yaml_path):
@@ -285,6 +296,24 @@ def render(yaml_path, siblings):
         L.append("## Scenario")
         L.append("")
         L.append(str(desc).strip())
+        L.append("")
+    # Machine-readable parameters, verbatim from the YAML — the page's whole
+    # point is "one file a person reads and the engine runs", so show the exact
+    # keys the engine reads (ballots have their own section below).
+    params = {}
+    if isinstance(data, dict):
+        for key in ("voting_method", "num_winners", "expected_winners",
+                    "lot_numbers", "eligible_voters", "quorum", "blocs",
+                    "bv_election_id", "bv_test_id"):
+            if key in data:
+                params[key] = data[key]
+    if params:
+        L.append("## Parameters (from the YAML)")
+        L.append("")
+        L.append("```yaml")
+        L.append(yaml.safe_dump(params, sort_keys=False, allow_unicode=True,
+                                default_flow_style=False).rstrip())
+        L.append("```")
         L.append("")
     L.append("## Ballots")
     L.append("")

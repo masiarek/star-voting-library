@@ -10,6 +10,17 @@ Same majority/minority ballots as the Allocated Score example, tabulated with
 Sequentially Spent Score (SSS), a modern proportional-score method. The
 minority bloc again earns a seat that Bloc STAR would deny.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: sss
+num_winners: 3
+expected_winners:
+- Alice
+- Ben
+- Dan
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

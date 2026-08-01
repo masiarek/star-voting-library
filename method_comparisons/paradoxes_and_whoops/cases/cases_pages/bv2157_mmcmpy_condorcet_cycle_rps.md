@@ -16,6 +16,13 @@ Paper. Sincere ballots. The whole point is that 'majority rule' can be intransit
 Level 301. Lesson: bv2157_mmcmpy_condorcet_cycle_rps.md
 Live on BetterVoting: https://bettervoting.com/mmcmpy/results (BV-confirmed; STAR is race 1).
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: mmcmpy
+bv_test_id: BV2157
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

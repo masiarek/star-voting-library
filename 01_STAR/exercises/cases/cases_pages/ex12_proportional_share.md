@@ -26,6 +26,18 @@ echoes the elected pair as "tied" with no round detail on every
 STAR_PR election, e.g. the older jwxr3j; the underlying scores here
 are a clean 30, then 20/16/4.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 2
+expected_winners:
+- Asa
+- Cleo
+bv_election_id: 89wwvr
+bv_test_id: BV2199
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -15,6 +15,18 @@ approves their own party's pets). Bloc Approval is MAJORITARIAN: the two most-
 approved are Dog and Cat (13 each), both majority — the minority is shut out
 again. Compare with the proportional STAR-PR / STV races on the same electorate.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval_Multi_Winner
+num_winners: 2
+expected_winners:
+- Dog
+- Cat
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

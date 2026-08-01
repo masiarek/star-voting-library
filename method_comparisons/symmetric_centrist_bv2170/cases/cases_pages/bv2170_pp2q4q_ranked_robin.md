@@ -16,6 +16,21 @@ Live results: https://bettervoting.com/pp2q4q/results
 Companion races: bv2170_pp2q4q_star.yaml, bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_plurality.yaml.
 Overview page: bv2170_pp2q4q_symmetric_centrist.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Casey
+lot_numbers:
+- Avery
+- Casey
+- Blake
+bv_election_id: pp2q4q
+bv_test_id: BV2170
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

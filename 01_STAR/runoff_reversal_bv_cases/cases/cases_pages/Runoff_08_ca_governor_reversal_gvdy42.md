@@ -22,6 +22,13 @@ ballots; fixed by coercing skipped scores to 0 in PR #1431. Winner: Tom Steyer (
 Live results: https://bettervoting.com/gvdy42/results
 Lesson: Runoff_08_ca_governor_reversal_gvdy42.md
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: gvdy42
+bv_test_id: BV2181
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

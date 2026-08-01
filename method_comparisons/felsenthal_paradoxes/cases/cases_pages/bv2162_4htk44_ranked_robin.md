@@ -12,6 +12,17 @@ Race 3 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV
 The same 103 full rankings counted by Ranked Robin (Copeland): B wins every head-to-head (A 70–33, C 62–41, D 86–17) — the Condorcet winner, elected directly, agreeing with STAR and disagreeing with the IRV race's A.
 Live results: https://bettervoting.com/4htk44/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- B
+bv_election_id: 4htk44
+bv_test_id: BV2162
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

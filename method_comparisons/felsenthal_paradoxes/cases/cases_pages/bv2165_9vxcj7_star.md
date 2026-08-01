@@ -12,6 +12,17 @@ Race 1 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-con
 The full electorate: 15 voters — 4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone), 2×(Cass>Boone>Amy). Coombs (worked on the case page; no tabulator on BV or in LH): Amy is ranked last by the most voters (6) and is deleted; Boone then holds a majority — Boone wins. This STAR race (5/3/1 map): Amy 41, Boone 43, Cass 51 — Cass tops the scores, but Boone wins the automatic runoff 8–7. Part 2 (BV2166): the two Cass>Boone>Amy voters stay home, and BOTH Coombs and STAR flip to Cass, their favorite. Pairwise is a cycle (Amy>Boone 9–6, Boone>Cass 8–7, Cass>Amy 11–4) — no RR race; IRV's first elimination is a random Amy/Boone tie — no IRV race.
 Live results: https://bettervoting.com/9vxcj7/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Boone
+bv_election_id: 9vxcj7
+bv_test_id: BV2165
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

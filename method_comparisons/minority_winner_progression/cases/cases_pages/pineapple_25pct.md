@@ -15,6 +15,17 @@ Cheese is still everybody's happy second, still the Condorcet winner, and STAR /
 Ranked Robin / Approval still elect it. Same story, more toppings, smaller mandate.
 Lesson: README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cheese
+bv_election_id: mvxbxr
+bv_test_id: BV2217
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

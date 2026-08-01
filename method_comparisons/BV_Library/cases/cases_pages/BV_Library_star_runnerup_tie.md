@@ -9,6 +9,15 @@
 Ported from BetterVoting's tabulator unit tests (Star.test.ts :: "Runnerup tie").
 Allison wins; Bill is the runner-up after tie handling.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Allison
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

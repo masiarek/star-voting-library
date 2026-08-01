@@ -21,6 +21,19 @@ automatic runoff elects Leia — the broad consensus Rebel, and the candidate wh
 beats every other head-to-head (the Condorcet winner). The one you actually
 preferred wins. Watch the [Vote-splitting check] confirm it.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Leia
+blocs:
+  Rebellion:
+  - Skywalker
+  - Leia
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

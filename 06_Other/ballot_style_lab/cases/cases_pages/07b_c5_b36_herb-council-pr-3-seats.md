@@ -46,6 +46,19 @@ then rendered through each voter's ballot style. Per
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit herb_council
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 3
+expected_winners:
+- Anise
+- Basil
+- Chive
+bv_election_id: pmrq4q
+bv_test_id: BV2245
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

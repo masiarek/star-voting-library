@@ -16,6 +16,17 @@ Live results: https://bettervoting.com/pp2q4q/results
 Companion races: bv2170_pp2q4q_star.yaml, bv2170_pp2q4q_ranked_robin.yaml, bv2170_pp2q4q_plurality.yaml.
 Overview page: bv2170_pp2q4q_symmetric_centrist.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Avery
+bv_election_id: pp2q4q
+bv_test_id: BV2170
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

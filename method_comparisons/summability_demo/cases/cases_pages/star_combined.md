@@ -15,6 +15,19 @@ subtotals. No central ballot pile, no recount: precincts report, totals add.
 That is summability; the irv_* trio shows RCV-IRV failing exactly this
 test.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Oak
+lot_numbers:
+- Maple
+- Oak
+- Pine
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

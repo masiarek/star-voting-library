@@ -13,6 +13,18 @@ exactly one 5 — but 1-1 separates nobody, so the tie still falls to the
 lot (Ben). A rung can run, count real votes, and still decide nothing.
 Compare case 03 (rung separates) and case 04 (rung dead).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ben
+lot_numbers:
+- Ben
+- Ann
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

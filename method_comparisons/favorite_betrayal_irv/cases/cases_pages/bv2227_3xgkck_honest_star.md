@@ -18,6 +18,17 @@ their favorite second to get a good outcome (fb_irv_betray); under STAR and Rank
 Robin they simply vote their honest preferences and the compromise wins. Honesty is
 the best ballot. Concept: favorite_betrayal_voting_301.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Center
+bv_election_id: 3xgkck
+bv_test_id: BV2227
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

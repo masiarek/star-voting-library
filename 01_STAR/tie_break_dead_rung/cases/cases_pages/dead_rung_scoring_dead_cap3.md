@@ -10,6 +10,19 @@
 
 Generated dead-rung scenario (scoring round, 'dead' five-star rung). no 5 anywhere (capped at 3) -> five-star 0-0 -> the LOT picks the 2nd finalist. STAR's second rung counts only score-5 votes and never steps down to 4s; when it can't separate the tied candidates the lot decides. See 01_STAR/tie_break_dead_rung/README.md and 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ann
+lot_numbers:
+- Ann
+- Ben
+- Cara
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

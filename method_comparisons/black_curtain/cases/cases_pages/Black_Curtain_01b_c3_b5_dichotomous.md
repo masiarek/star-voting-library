@@ -36,6 +36,15 @@ Teaching page: ../condorcet_compression.md
 Original video source: https://www.youtube.com/watch?v=5_ZMruwOZgw
 See README.md in this folder.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bob
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -14,6 +14,17 @@ over Echo, 2–1. This is the "before" half of the Equally Weighted Vote
 demonstration: its twin adds two voters with exact-opposite ballots and shows
 the winner never moves. See the lesson: equal_and_opposite/README.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Comet
+bv_election_id: 36f4v2
+bv_test_id: BV2219
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -20,6 +20,19 @@ The cure is in their hands — see 05b_residual_split_expressive-fix.yaml, where
 SAME factions score their ally even a 3 and STAR elects the majority side.
 Deep dive: 07_Concepts/residual_vote_splitting.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cara
+blocs:
+  Allies:
+  - Ada
+  - Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

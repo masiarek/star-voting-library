@@ -35,6 +35,13 @@ tie randomly) — this case ships STAR-only, like BV830.
 Live results: https://bettervoting.com/g3f7r2/results
 Lesson: bv2212_g3f7r2_cycle_spoiler.md
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: g3f7r2
+bv_test_id: BV2212
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -15,6 +15,16 @@ This is the core Allocated Score mechanic: elect the top scorer, then allocate u
 quota of the ballots that supported them before the next round. LH's `allocated` method
 reproduces BetterVoting's committee {Allison, Doug}.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 2
+expected_winners:
+- Allison
+- Doug
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

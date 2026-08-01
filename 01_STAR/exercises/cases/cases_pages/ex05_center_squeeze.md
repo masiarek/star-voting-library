@@ -20,6 +20,17 @@ Live on BetterVoting (Test ID BV2192): https://bettervoting.com/6bry7c/results
 — three races on the same opinions: STAR (Brook), RCV-IRV (Avi — the
 squeeze, live), Ranked Robin (Brook).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Brook
+bv_election_id: 6bry7c
+bv_test_id: BV2192
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -25,6 +25,17 @@ _ranked_robin.yaml (identical ballots to the BV2177 STAR/IRV/RR/STV races)
 and bv2177_v8r66y_approval.yaml.
 Overview page: bv2177_v8r66y_seven_methods.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Purple
+bv_election_id: v8r66y
+bv_test_id: BV2177
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

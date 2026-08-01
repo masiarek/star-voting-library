@@ -21,6 +21,15 @@ their natural Approval ballots elect Cole too (6-5-7) — but a uniform
 any-non-zero cut elects Amos (9-5-7). Where the 0/1 line falls decides
 the approval winner; no cut is canonical.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cole
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -15,6 +15,19 @@ here it is [B, C, A], so B wins. Same ballots as _A (which elects A) and _C
 (which elects C) — the winner is entirely a function of the lot order, which
 under a random tie-break is a 1-in-3 draw. See the lesson md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- B
+lot_numbers:
+- B
+- C
+- A
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

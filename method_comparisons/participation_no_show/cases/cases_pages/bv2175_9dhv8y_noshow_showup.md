@@ -31,6 +31,17 @@ margin tiebreak: April, +6 — shown in this file's mirror).
 LIVE on BetterVoting as BV2175 (three races: STAR, RCV-IRV, Choose-One).
 Live results: https://bettervoting.com/9dhv8y/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- April
+bv_election_id: 9dhv8y
+bv_test_id: BV2175
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

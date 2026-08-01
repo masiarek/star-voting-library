@@ -12,6 +12,17 @@ Race 2 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Sourc
 The same 7 voters under Choose-One: first choices A 2, B 2, C 3 → C. All three live counts (STAR, Plurality) and Borda's paper count pick C; the paradox on the case page is Borda's SCC instability — B's exit flips Borda (and, honestly, any two-candidate count, since A beats C 4–3) to A.
 Live results: https://bettervoting.com/q3h4fk/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- C
+bv_election_id: q3h4fk
+bv_test_id: BV2161
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

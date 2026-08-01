@@ -26,6 +26,15 @@ Worked as a 301 lesson in
 07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md (see also
 Curriculum 301.8).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Orange5
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -12,6 +12,17 @@ Race 1 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-c
 100 voters, rankings 51×(Amos>Bella>Chad), 48×(Bella>Chad>Amos), 1×(Chad>Bella>Amos). Amos is ranked FIRST by an absolute majority (51 of 100) and is the Condorcet winner. But when every voter approves their top TWO preferences, the approval totals are Amos 51, Bella 100, Chad 49 — APPROVAL ELECTS BELLA, approved by literally everyone, over a candidate an absolute majority ranked first. Felsenthal's Absolute Majority paradox. The companion ranked races (IRV, Ranked Robin) elect Amos.
 Live results: https://bettervoting.com/pcttmr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Bella
+bv_election_id: pcttmr
+bv_test_id: BV2153
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

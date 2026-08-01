@@ -19,6 +19,20 @@ RANDOM (the BV2142 caveat), so a frozen BV result cannot exist.
 Exercise: ex09_game_night_cycle.md. Ballots and cast are this repo's
 own.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Azul
+lot_numbers:
+- Azul
+- Boggle
+- Catan
+- Dominion
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

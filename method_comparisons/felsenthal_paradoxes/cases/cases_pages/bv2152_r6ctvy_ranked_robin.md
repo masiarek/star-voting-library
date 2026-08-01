@@ -12,6 +12,17 @@ Race 2 of 2 in the Felsenthal & Maoz Approval-paradox election (BV2152, bvid r6c
 The same 47 voters' full rankings counted by Ranked Robin (Copeland): Bert wins both head-to-heads (Anna 27–20, Carla 32–15) — the Condorcet winner, elected directly. The approval race loses him because 18 Anna-only and 13 Carla-only voters draw their approval line above Bert even while ranking him second.
 Live results: https://bettervoting.com/r6ctvy/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Bert
+bv_election_id: r6ctvy
+bv_test_id: BV2152
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

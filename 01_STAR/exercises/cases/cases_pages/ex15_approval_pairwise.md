@@ -32,6 +32,17 @@ the same 35 ballots as race 1, cast as 5/0 scores; BV's STAR count agrees:
 Blair. The frozen export sits beside the sibling yaml,
 ex15_approval_yes_no_bv_export.json — one export covers both races.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Blair
+bv_election_id: d4v2dh
+bv_test_id: BV2258
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

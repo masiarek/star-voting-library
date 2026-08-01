@@ -14,6 +14,17 @@ flow to Ana, who wins 65–35. IRV fails the Condorcet winner regardless of
 moderate base — because it only ever counts first choices. Contrast s4: the
 SAME electorate under strategic-5-1-0 STAR elects Beth, the Condorcet winner.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Ana
+bv_election_id: dyh93j
+bv_test_id: BV2223
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

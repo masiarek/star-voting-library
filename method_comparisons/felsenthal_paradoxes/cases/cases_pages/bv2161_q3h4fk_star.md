@@ -12,6 +12,17 @@ Race 1 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Sourc
 7 voters, three candidates: 2×(A>C>B), 2×(B>A>C), 3×(C>B>A). NOTE: the paper prints the third bloc as C>A>B, but its own Borda totals (6/7/8, summing to 21) are only consistent with C>B>A — this case uses the arithmetic-consistent profile. The Borda paradox lives on the case page: Borda elects C (8 points), but if B — a LOSING candidate — drops out, Borda on the remaining pair elects A 4–3: SCC violated. This STAR race (5/3/1 map) scores A 19, B 21, C 23; C beats B 5–2 in the runoff — STAR agrees with Borda's initial pick. Honest note: if B exits, A beats C head-to-head 4–3, so a two-candidate contest elects A under ANY method, STAR included — on a cyclic profile (B>A 5–2, A>C 4–3, C>B 5–2) every method's winner is exit-sensitive; Felsenthal's charge is that Borda's POINT COUNT did the flipping. The cycle is also why no Ranked Robin or IRV race exists here (random ties on BV).
 Live results: https://bettervoting.com/q3h4fk/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- C
+bv_election_id: q3h4fk
+bv_test_id: BV2161
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

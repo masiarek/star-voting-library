@@ -18,6 +18,17 @@ See the companion fb_irv_betray (2 of those Left voters rank Center first and Ce
 wins) and fb_star_honest (STAR/Ranked Robin elect Center from these same honest
 preferences — no betrayal needed). Concept: favorite_betrayal_voting_301.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Right
+bv_election_id: 3xgkck
+bv_test_id: BV2227
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

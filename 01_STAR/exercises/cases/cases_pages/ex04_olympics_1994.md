@@ -20,6 +20,15 @@ single judge ranks Kerrigan above her (Pareto dominance). The exercise
 is ex04_olympics_1994.md. Ordinals as reproduced in Brendan W. Sullivan,
 "An Introduction to the Math of Voting Methods" (2022), ch. 5.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Baiul
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

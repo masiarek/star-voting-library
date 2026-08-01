@@ -22,6 +22,17 @@ Live on BetterVoting (Test ID BV2194): https://bettervoting.com/7f4f7q/results
 — with RCV-IRV and Ranked Robin races: on the bullet ballots all three
 methods elect Cash.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cash
+bv_election_id: 7f4f7q
+bv_test_id: BV2194
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

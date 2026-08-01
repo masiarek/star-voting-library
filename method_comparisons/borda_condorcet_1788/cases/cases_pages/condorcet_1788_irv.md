@@ -28,6 +28,17 @@ not squeezed, he leads the first-choice count among the two finalists' bloc
 and simply starts second. Citing this election as an IRV failure would be
 wrong, and the repo says so on the folder page.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Peter
+bv_election_id: khcwm4
+bv_test_id: BV2250
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

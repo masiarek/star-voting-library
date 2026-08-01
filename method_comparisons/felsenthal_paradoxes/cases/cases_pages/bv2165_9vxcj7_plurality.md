@@ -12,6 +12,17 @@ Race 2 of 2 in the Coombs No-Show pair, part 1 of 2 (BV2165, bvid 9vxcj7; BV-con
 The same 15 voters under Choose-One: first choices Amy 4, Boone 4, Cass 7 → Cass (a plurality, not a majority). Plurality picks Cass with or without the two Cass>Boone>Amy voters (BV2166) — the no-show drama belongs to the elimination and runoff stages of Coombs and STAR, not to the first-choice count.
 Live results: https://bettervoting.com/9vxcj7/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Cass
+bv_election_id: 9vxcj7
+bv_test_id: BV2165
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

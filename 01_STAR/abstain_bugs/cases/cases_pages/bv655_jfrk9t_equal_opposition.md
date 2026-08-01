@@ -30,6 +30,17 @@ elect Option 1, but they disagree on the count — and LH's treatment matches th
 that an explicit 0 is a cast vote, not a non-vote (the heart of the bettervoting#884
 dispute; the UI/export mislabel is bettervoting#1090).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Option 1
+bv_election_id: jfrk9t
+bv_test_id: BV655
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

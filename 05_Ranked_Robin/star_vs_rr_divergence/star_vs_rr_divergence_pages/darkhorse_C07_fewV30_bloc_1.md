@@ -8,6 +8,15 @@
 
 Auto-generated STAR-vs-Ranked-Robin divergence. 7 candidates, 30 voters, grouped (a few voter factions/blocs). STAR elects D; Ranked Robin elects C. CAUSE = DARK HORSE: C is the Condorcet winner (beats every rival head-to-head) but only #3 of 7 by score total (96 vs leader D 114) -- a broadly-liked, low-intensity compromise that misses STAR's score finalists (D, A). STAR elects runoff winner D; RR elects the Condorcet winner C. Preference-vs-support: RR rewards ORDER, STAR rewards SUPPORT strength. See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- D
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

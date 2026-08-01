@@ -21,6 +21,19 @@ Note the [Divergence from STAR] block: Choose-One (Plurality) still elects Cara 
 first-choices (Ada 35, Ben 25, Cara 40) — STAR diverges and fixes the split.
 Deep dive: 07_Concepts/residual_vote_splitting.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+blocs:
+  Allies:
+  - Ada
+  - Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

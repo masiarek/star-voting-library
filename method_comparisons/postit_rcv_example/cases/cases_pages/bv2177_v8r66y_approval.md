@@ -28,6 +28,17 @@ _ranked_robin.yaml (identical ballots to the BV2177 STAR/IRV/RR/STV races)
 and bv2177_v8r66y_plurality.yaml.
 Overview page: bv2177_v8r66y_seven_methods.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Pink
+bv_election_id: v8r66y
+bv_test_id: BV2177
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

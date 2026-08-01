@@ -24,6 +24,18 @@ engine's (BV errors until fixed).
 Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
 — results page errors by design of the probe.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STV
+num_winners: 2
+expected_winners:
+- Austen
+- Camus
+bv_election_id: gvtg2h
+bv_test_id: BV2203
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

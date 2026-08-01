@@ -46,6 +46,18 @@ buggy summaryData (nTallyVotes 2 / nAbstentions 2), and this LH reference pins
 the correct count (4 ballots, 1 abstention, 3 tallied) so a re-export can be
 checked against it if the miscount ever returns.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 2
+expected_winners:
+- Chocolate
+- Strawberry
+bv_election_id: r4dqvd
+bv_test_id: BV2105
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

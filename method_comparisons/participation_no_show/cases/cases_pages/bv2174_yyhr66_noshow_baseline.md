@@ -27,6 +27,17 @@ Live results: https://bettervoting.com/yyhr66/results
 Matched file: bv2175_9dhv8y_noshow_showup.yaml (the 8 fans vote — and
 RCV-IRV hands them their LAST choice).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bruno
+bv_election_id: yyhr66
+bv_test_id: BV2174
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

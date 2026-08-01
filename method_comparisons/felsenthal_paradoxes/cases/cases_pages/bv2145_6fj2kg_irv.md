@@ -12,6 +12,17 @@ Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bv
 17 voters, three candidates. Ada is the Condorcet winner (beats Ben 9–8 and Cleo 9–8; social ordering Ada>Ben>Cleo) but has the FEWEST first choices (Ada 5, Ben 6, Cleo 6). Plurality-with-runoff — run here as IRV, which is identical for three candidates — eliminates Ada first, and Ben beats Cleo 9–8. The Condorcet winner paradox, plus Felsenthal's SCC note: had Cleo withdrawn, Ada would have won the first round outright (9 of 17). The non-monotonicity half of the lesson is the paired election BV2146.
 Live results: https://bettervoting.com/6fj2kg/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Ben
+bv_election_id: 6fj2kg
+bv_test_id: BV2145
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

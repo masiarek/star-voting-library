@@ -29,6 +29,18 @@ narrative: ex14_transfer_machine.md.
 Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
 — the vote page works; /results currently errors (the bug above).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STV
+num_winners: 2
+expected_winners:
+- Austen
+- Camus
+bv_election_id: bj8dfc
+bv_test_id: BV2202
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

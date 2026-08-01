@@ -26,6 +26,20 @@ Two BV issues together:
      elects a different pair. The winners are unaffected by the dropped ballots
      (identical ballots can't separate anyone) — it's the lot order that decides.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 2
+expected_winners:
+- c
+- a
+lot_numbers:
+- c
+- a
+- b
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -22,6 +22,15 @@ Reproduced on BetterVoting (election 9m6rxr): BV also elects Ada
 bv95a_9m6rxr_favorite_survives_one_rival_bv_export.json. Live:
 https://bettervoting.com/9m6rxr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

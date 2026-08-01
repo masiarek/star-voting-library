@@ -18,6 +18,15 @@ change the result.
 instead of a 1 adds more weight in the score round relative to other voters'
 ballots.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Almond
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

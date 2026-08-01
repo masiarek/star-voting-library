@@ -16,6 +16,17 @@ both finalists 5 (Equal Support) — counted, but expressing no preference betwe
 the two, so it lands in neither finalist's runoff column.
 Live results: https://bettervoting.com/tg4779/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Almond
+bv_election_id: tg4779
+bv_test_id: BV2182
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

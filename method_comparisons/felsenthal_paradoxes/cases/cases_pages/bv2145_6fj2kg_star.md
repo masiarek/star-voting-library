@@ -12,6 +12,17 @@ Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bv
 The same 17 voters with ranks mapped to 0–5 scores (house map, N=3: top=5, mid=3, bottom=1). Scores: Ada 53, Ben 51, Cleo 49 — Ada and Ben advance, and Ada wins the automatic runoff 9–8. STAR elects the Condorcet winner that the runoff procedure (the IRV race) eliminated first.
 Live results: https://bettervoting.com/6fj2kg/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: 6fj2kg
+bv_test_id: BV2145
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

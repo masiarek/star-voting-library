@@ -32,6 +32,26 @@ winners, but the tied pair's seats swap. The result is therefore
 non-reproducible (cf. #1063 / #1417), and BV's top-level tieBreakType is
 reported as "none" even though a seat was decided by the lot.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 3
+expected_winners:
+- Dan
+- Ada
+- Eve
+lot_numbers:
+- Finn
+- Ben
+- Dan
+- Eve
+- Ada
+- Cara
+bv_election_id: 9ff9jk
+bv_test_id: BV130-r2
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

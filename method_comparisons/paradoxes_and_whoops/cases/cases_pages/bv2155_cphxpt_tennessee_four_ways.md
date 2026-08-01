@@ -17,6 +17,13 @@ Live results: https://bettervoting.com/cphxpt/results (all races LH<->BV confirm
 Lesson: bv2155_cphxpt_tennessee_four_ways.md
 Live on BetterVoting: https://bettervoting.com/cphxpt/results (BV-confirmed; STAR is race 1).
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: cphxpt
+bv_test_id: BV2155
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

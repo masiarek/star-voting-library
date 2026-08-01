@@ -16,6 +16,17 @@ the scoring round (310) and wins the runoff — STAR elects the Condorcet
 winner. The strategic-5-1-0 twin (s2) shows what happens when voters min-max
 instead. Part of the rb-j "does STAR collapse to IRV under 5-1-0?" claim-check.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: 2kcwbw
+bv_test_id: BV2221
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

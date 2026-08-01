@@ -23,6 +23,17 @@ Live on BetterVoting (Test ID BV2190): https://bettervoting.com/923q3d/results
 — the election carries a second, Ranked Robin race on the same opinions
 (equal ranks allowed): Elena, the citywide Condorcet winner, wins it 4-0.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Carmen
+bv_election_id: 923q3d
+bv_test_id: BV2190
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

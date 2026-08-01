@@ -17,6 +17,19 @@ chocolate — already wins, so there is nothing for STAR to "fix" here.
 The [Vote-splitting check] reports: the bloc's own front-runner also wins
 Choose-One overall, so no spoiler occurred.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- DarkChoco
+blocs:
+  Chocolate:
+  - DarkChoco
+  - MilkChoco
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

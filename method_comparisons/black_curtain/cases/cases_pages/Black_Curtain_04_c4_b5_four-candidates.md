@@ -19,6 +19,15 @@ BetterVoting template: https://bettervoting.com/p9gwc3/vote
 This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
 Original 0–9 video scores mapped to 0–5: 0→0, 1→1, 4→2, 5→3, 8→4, 9→5.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cal
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

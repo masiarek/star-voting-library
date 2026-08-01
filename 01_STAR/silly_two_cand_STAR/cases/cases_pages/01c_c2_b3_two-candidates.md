@@ -10,6 +10,15 @@ Now we add a third ballot, from Julia, who likes both flavors equally (both 5 st
 Because she scores the two finalists the same, her ballot counts as
 "Equal Support = 1" in the Automatic Runoff Round.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Choco
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

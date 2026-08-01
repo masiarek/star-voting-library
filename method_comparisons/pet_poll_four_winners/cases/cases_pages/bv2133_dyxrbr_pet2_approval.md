@@ -10,6 +10,17 @@
 
 One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr). This is the Approval race (approve any pet, 1 = approve). Bird is approved by the 9 Bird-first voters and the 10 Fish-first voters (who approve Cat, Fish, Bird) = 19 approvals — more than Dog (13) or Cat (10) or Fish (10) — so Approval elects Bird. Same electorate as the Plurality race (Dog), RCV-IRV race (Fish) and STAR race (Cat): four methods, four winners. BV also elects Bird. Live results: https://bettervoting.com/dyxrbr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Bird
+bv_election_id: dyxrbr
+bv_test_id: BV2133
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

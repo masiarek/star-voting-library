@@ -12,6 +12,17 @@ Race 1 of 2 in District II of the Felsenthal Reinforcement-paradox trio (BV2148,
 District II: 15 voters — 6×(Alma>Cora>Bruno), 8×(Bruno>Cora>Alma), 1×(Cora>Alma>Bruno). Bruno is ranked first by an absolute majority (8 of 15) and wins in the first round; no runoff is needed. Bruno is also this district's Condorcet winner (beats Alma 8–7, Cora 8–7). Bruno wins District I too (BV2147) — yet the amalgamated electorate (BV2149) elects Alma under the same procedure.
 Live results: https://bettervoting.com/h87k6v/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Bruno
+bv_election_id: h87k6v
+bv_test_id: BV2148
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -17,6 +17,17 @@ takes it with 34% — even though 65 of 99 diners would happily eat Cheese and o
 ballot and pick Cheese, the Condorcet winner (it beats every topping head-to-head).
 Next rung adds a topping and the winner's share shrinks. Lesson: README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cheese
+bv_election_id: ht2c3g
+bv_test_id: BV2216
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -39,6 +39,19 @@ BetterVoting breaks ties at RANDOM, so a BV result here could not be frozen.
 
 Companion: tilted_cycle_c3_b5_irv.yaml (same ballots, RCV-IRV → Cara).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+lot_numbers:
+- Ada
+- Ben
+- Cara
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

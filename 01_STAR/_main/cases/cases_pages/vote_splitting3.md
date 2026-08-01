@@ -13,6 +13,19 @@ head-to-head 14-7. The blocs: entry makes the engine quantify the Chocolate
 split explicitly ([Vote-Splitting Check]). For versions where splitting
 actually flips a Choose-One winner, see method_comparisons/split_voting/.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- DarkChoco
+blocs:
+  Chocolate:
+  - DarkChoco
+  - MilkChoco
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -12,6 +12,17 @@ Race 1 of 2 in District I of the Felsenthal Reinforcement-paradox trio (BV2147, 
 District I: 17 voters. No first-round majority (Alma 4, Bruno 6, Cora 7), so plurality-with-runoff — run as IRV, identical for three candidates — deletes Alma, and Bruno beats Cora 10–7. Note the district's pairwise preferences form a Condorcet CYCLE (Alma>Bruno 10–7, Bruno>Cora 10–7, Cora>Alma 12–5): no Condorcet winner exists here. Bruno also wins District II (BV2148) outright — yet the amalgamated electorate (BV2149) elects Alma under the same procedure.
 Live results: https://bettervoting.com/9gdrqg/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Bruno
+bv_election_id: 9gdrqg
+bv_test_id: BV2147
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

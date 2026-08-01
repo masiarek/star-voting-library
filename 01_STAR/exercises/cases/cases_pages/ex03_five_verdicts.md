@@ -23,6 +23,17 @@ Live on BetterVoting (Test ID BV2191): https://bettervoting.com/ywqhq4/results
 — one election, five races (Choose-One, RCV-IRV, Approval, STAR, Ranked
 Robin), all five verdicts live; BV agrees with LH on every race.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cherry
+bv_election_id: ywqhq4
+bv_test_id: BV2191
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

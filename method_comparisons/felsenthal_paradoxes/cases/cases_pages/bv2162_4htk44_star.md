@@ -12,6 +12,17 @@ Race 1 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV
 103 voters, four candidates, everyone ranking all four: 33×(A>B>C>D), 29×(B>A>C>D), 24×(C>B>A>D), 17×(D>C>B>A). B is the Condorcet winner (beats A 70–33, C 62–41, D 86–17). This STAR race (ranks mapped 5/4/2/1) scores A 346, B 407, C 312, D 171 — B wins the automatic runoff 70–33. The IRV race elects A instead (a Condorcet winner failure); part 2 (BV2163) shows 17 voters improving their result by TRUNCATING.
 Live results: https://bettervoting.com/4htk44/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- B
+bv_election_id: 4htk44
+bv_test_id: BV2162
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

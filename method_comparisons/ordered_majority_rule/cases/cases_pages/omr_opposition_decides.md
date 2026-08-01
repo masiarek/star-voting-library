@@ -8,6 +8,15 @@
 
 An abstract counterexample (bare A/B/C, because the mechanism is the whole lesson) to the plain-English selling point of "ordered majority rule" — the criterion the arXiv paper "A Majority Rule Philosophy for Instant Runoff Voting" (arXiv:2308.08430) uses to defend IRV. That summary claims IRV "ensures the election of a candidate from the majority coalition while PREVENTING opposition voters from influencing the choice of candidate from the faction they oppose." Here C is a third bloc that ranks A and B last; A leads on first choices (35 to B's 33). IRV eliminates C, and C's second preferences hand the A-vs-B contest to B (65-35). So the opposition voters DID decide which of the two frontrunners won — contradicting the sentence as worded. (Note: B is also the Condorcet winner here, so IRV is not misfiring on the outcome; the point is narrow and about the marketing claim, not a center-squeeze. The technical criterion permits this because C is "minor" — which is exactly the circularity cfrank flagged: minor/major is defined by the very ordering the criterion is supposed to justify.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- B
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -19,6 +19,16 @@ no candidate's score, but their presence made the election valid.
 
 → Concept: 07_Concepts/topics/quorum.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Anna
+eligible_voters: 10
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

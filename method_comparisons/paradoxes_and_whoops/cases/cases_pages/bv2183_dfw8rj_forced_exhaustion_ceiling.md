@@ -24,6 +24,17 @@ in single-winner IRV, the forced exhaustion vanishes entirely — this is a
 property of the ballot design, not the voters. See forced_vs_voluntary
 exhaustion.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: dfw8rj
+bv_test_id: BV2183
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

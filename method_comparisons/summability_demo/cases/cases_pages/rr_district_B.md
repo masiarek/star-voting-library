@@ -11,6 +11,15 @@ Same ranked ballots as irv_district_B. B again beats both A and C head-to-head
 (the Condorcet winner). Its pairwise matrix ADDS to District A's to give the
 combined result (rr_combined) — no ballot pooling required.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- B
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -12,6 +12,17 @@ Race 1 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-con
 Ceteris paribus, the two Cass>Boone>Amy voters do NOT participate: 13 voters — 4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone). Coombs (on the case page): now BOONE is ranked last by the most voters (5) and is deleted; Cass — the abstainers' TOP preference — wins: Felsenthal's No-Show paradox (same flip via truncation). HONEST BONUS, live: STAR flips here too. With all 15 ballots STAR elects Boone (BV2165: 41/43/51, runoff 8–7); on these 13 it scores Amy 39, Boone 37, Cass 41 and CASS beats Amy 9–4 in the runoff. The absent pair's sincere ballots (scoring Boone 3) had helped Boone reach and win the runoff — staying home gets them their favorite: a genuine STAR participation failure on this profile. The mechanism is STAR's runoff stage (which costs it Moulin-style participation guarantees); score-only methods cannot do this. First live score-family entry in the no-show group — the honest-limits pledge in action.
 Live results: https://bettervoting.com/b7b8dv/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cass
+bv_election_id: b7b8dv
+bv_test_id: BV2166
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -14,6 +14,15 @@ the note at expected_winners). No district subtotal can produce this result:
 IRV needs every ballot in one pile. Compare the star_* trio, where
 subtotals simply add.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

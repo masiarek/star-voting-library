@@ -12,6 +12,17 @@ Race 2 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm;
 The same 7 voters, rankings mapped to 0–5 scores with the house map (N=3: top=5, mid=3, bottom=1). Scores: Bo 25, Ana 19, Cal 19 — a scoring-round tie for the second finalist slot, broken head-to-head (Cal beats Ana 4–3, so Cal advances); Bo then wins the automatic runoff 5–2. STAR elects the Condorcet winner Bo, while Choose-One (race 1) elects Ana, the Condorcet-and-absolute loser. The tabulation, not the ballot, decides.
 Live results: https://bettervoting.com/mxfmhm/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bo
+bv_election_id: mxfmhm
+bv_test_id: BV2144
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

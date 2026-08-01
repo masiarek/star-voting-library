@@ -13,6 +13,15 @@ recommended — if your one pick doesn't reach the runoff, your ballot has no
 say in the final head-to-head, so you forfeit influence. Vanilla wins here
 either way.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Vanilla
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

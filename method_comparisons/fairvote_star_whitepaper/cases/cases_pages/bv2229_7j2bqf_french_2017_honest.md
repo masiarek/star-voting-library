@@ -21,6 +21,17 @@ which STAR concedes is possible, but which requires implausible coordinated dish
 and is not STAR's sincere behavior. Simplified 100-voter model of the ~20%-each field.
 Concept: ../README.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Macron
+bv_election_id: 7j2bqf
+bv_test_id: BV2229
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

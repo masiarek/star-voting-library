@@ -12,6 +12,17 @@ Race 2 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV
 The same 103 full rankings under instant runoff: no first-count majority (33/29/24/17), D is eliminated and transfers to C (41), then B (29) is eliminated — and A wins 62. Sincere, complete ballots elect A over the Condorcet winner B; and part 2 (BV2163) shows the 17 D-first voters doing BETTER by ranking only D. Their reward for ranking honestly and fully is their third choice.
 Live results: https://bettervoting.com/4htk44/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- A
+bv_election_id: 4htk44
+bv_test_id: BV2162
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -2,7 +2,7 @@
 
 *Generated from [`321_tennessee_blank_encoding_c4_b100.yaml`](../321_tennessee_blank_encoding_c4_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [3-2-1](../../../../07_Concepts) · **1 seat**
+**Method:** [3-2-1](../../../../07_Concepts) · **1 seat** · **Expected winner:** Nashville
 
 ## Scenario
 
@@ -16,6 +16,14 @@ Memphis has the most first-choice support (42) and would win Choose-One. But
 eliminated at the finalist step. The consensus capital, Nashville — never
 rated Bad by anyone — wins the runoff. This is the same "centrist consensus
 winner" result most non-plurality methods give on this electorate.
+
+## Parameters (from the YAML)
+
+```yaml
+voting_method: 3-2-1
+expected_winners:
+- Nashville
+```
 
 ## Ballots
 
@@ -31,7 +39,24 @@ Memphis,Nashville,Chattanooga,Knoxville
 
 ## What the engine says
 
-*(No `_tabulated` mirror found — run the file once to generate it.)*
+Full report from the [`_tabulated` mirror](../cases_tabulated/321_tennessee_blank_encoding_c4_b100_321_tabulated.txt) (regenerated on every run; every analysis forced on):
+
+```text
+--- 3-2-1 Voting ---
+ Tabulating 4 candidates, Good=2 / OK=1 / Bad=0 (blank = Bad).
+
+Ratings tally (Good / OK / Bad):
+   Memphis        Good   42 | OK    0 | Bad   58
+   Nashville      Good   26 | OK   74 | Bad    0
+   Chattanooga    Good   15 | OK   43 | Bad   42
+   Knoxville      Good   17 | OK   41 | Bad   42
+
+Step 1 — Semifinalists (most Good): Memphis (42), Nashville (26), Knoxville (17)
+Step 2 — Finalists (fewest Bad): Nashville (Bad 0), Knoxville (Bad 42)
+Step 3 — Runoff: Nashville 68 vs Knoxville 17 (15 rated equal)
+
+Winner — 3-2-1 Voting: Nashville
+```
 
 Run it yourself:
 

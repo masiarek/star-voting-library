@@ -16,6 +16,15 @@ THE WINNER MORE FIRST-PLACE SUPPORT — and Peltola then LOSES. Ranking the winn
 higher turns her into a loser: the upward monotonicity paradox (Graham-Squire &
 McCune, arXiv:2301.12075). Companion page: upward_monotonicity_alaska.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Peltola
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

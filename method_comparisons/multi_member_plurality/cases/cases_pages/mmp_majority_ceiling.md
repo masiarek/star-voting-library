@@ -28,6 +28,23 @@ bare majority sweeps every seat (see mmp_block_voting.yaml, 60/40 -> 3-0).
 The point is narrower and cuts both ways — the sub-majority test is blind
 here, missing the actual pathology while flagging consensus as a failure.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 3
+expected_winners:
+- Alice
+- Bruno
+- Cleo
+lot_numbers:
+- Alice
+- Bruno
+- Cleo
+- Dev
+- Esme
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

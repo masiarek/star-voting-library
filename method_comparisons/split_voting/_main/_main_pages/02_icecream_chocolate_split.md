@@ -18,6 +18,20 @@ STAR lets chocolate lovers give all three chocolates high scores, so the
 majority isn't split. The runoff elects MilkChoco — the chocolate everyone in
 the bloc can live with — over the spoiler Vanilla.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- MilkChoco
+blocs:
+  Chocolate:
+  - DarkChoco
+  - MilkChoco
+  - ChocoChip
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

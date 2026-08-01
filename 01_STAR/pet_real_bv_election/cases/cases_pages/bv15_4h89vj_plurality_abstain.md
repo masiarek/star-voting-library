@@ -40,6 +40,13 @@ path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
 accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
 preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: 4h89vj
+bv_test_id: BV15
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

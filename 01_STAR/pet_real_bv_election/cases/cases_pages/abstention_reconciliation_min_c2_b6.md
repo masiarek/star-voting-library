@@ -34,6 +34,15 @@ all-zero (0,0), and a blank/abstention (-,-). Only the last is an *abstention*.
 Tabulators differ in how they file these (see the README and the GitHub
 reconciliation note), which is the entire 461-vs-455 gap in the pet race.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Dog
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

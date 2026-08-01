@@ -18,6 +18,19 @@ and elect B and C from the identical ballots: three candidates, three possible
 winners. A random tie-break (BetterVoting's tieBreakType) would pick one of the
 three; a deterministic published lot fixes it. See the lesson md and BV #1063.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- A
+lot_numbers:
+- A
+- B
+- C
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

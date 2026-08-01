@@ -24,6 +24,18 @@ quota — and acquits the shape and every config key. Full lab notebook:
 README.md in this folder.
 Live on BetterVoting (Test ID BV2204): https://bettervoting.com/39py93
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STV
+num_winners: 2
+expected_winners:
+- Angelou
+- Cummings
+bv_election_id: 39py93
+bv_test_id: BV2204
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

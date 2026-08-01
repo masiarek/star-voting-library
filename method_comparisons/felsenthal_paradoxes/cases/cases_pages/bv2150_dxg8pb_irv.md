@@ -12,6 +12,17 @@ Race 1 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-co
 The full electorate: 11 voters — 4×(Andy>Beth>Carl), 3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), 3×(Carl>Beth>Andy). No first-round majority (Andy 4, Beth 3, Carl 4), so plurality-with-runoff (run as IRV; identical for three candidates) deletes BETH — and Carl beats Andy 7–4. Carl is the WORST outcome for the four Andy>Beth>Carl voters, and Beth is the Condorcet winner (beats Andy 6–5, Carl 7–4), so this race also exhibits the Condorcet winner paradox. Part 2 (BV2151): two of the Andy voters stay home and their side does BETTER — the No-Show paradox.
 Live results: https://bettervoting.com/dxg8pb/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Carl
+bv_election_id: dxg8pb
+bv_test_id: BV2150
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

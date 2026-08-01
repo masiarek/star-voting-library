@@ -29,6 +29,26 @@ would be Condorcet Loser, First, Second, Third — the ONLY other valid ordering
 A pre-published lot makes which of the two happens reproducible; a random draw
 (as in STAR Vote 2.0) does not, and picks different winners on each run.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 4
+expected_winners:
+- First
+- Second
+- Third
+- Fourth
+lot_numbers:
+- First
+- Condorcet Loser
+- Second
+- Third
+- Fourth
+bv_election_id: dkj9dx
+bv_test_id: BV1525
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

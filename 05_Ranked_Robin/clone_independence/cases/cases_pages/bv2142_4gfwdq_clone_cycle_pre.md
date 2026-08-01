@@ -12,6 +12,24 @@
 
 The electowiki clone-independence example, part 1 (before cloning), BV-backed. 33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C is lower (+95) — so LH drops C and coin-flips A/B by lot (this file pins A). But BetterVoting has no margin rung for a 3-way tie: it picks at RANDOM among A, B, C, and its log says so ("C picked in random tie-breaker, more robust tiebreaker not yet implemented") — this draw elected C, a candidate LH's margin rung would eliminate. Part 2 (BV2143) adds the clones. LH-only clean pair: clone_teaming_01_pre.yaml. Lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md Live results: https://bettervoting.com/4gfwdq/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- A
+lot_numbers:
+- A
+- B
+- C
+- D
+- E
+- F
+bv_election_id: 4gfwdq
+bv_test_id: BV2142
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

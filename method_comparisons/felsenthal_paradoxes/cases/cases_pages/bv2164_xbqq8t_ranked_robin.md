@@ -12,6 +12,17 @@ Race 3 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-co
 The same 33 rankings counted by Ranked Robin (Copeland): Arlo wins every head-to-head (Bree 19–14, Cole 17–16, Dana 17–16) — the Condorcet winner, elected directly. The irony this case teaches: Coombs deletes candidates for being ranked LAST by many, and Arlo — everyone's pairwise favorite — is also the most-frequent last choice (12 ballots), so Coombs deletes the Condorcet winner FIRST. Felsenthal conjectures four candidates are the minimum for this failure.
 Live results: https://bettervoting.com/xbqq8t/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Arlo
+bv_election_id: xbqq8t
+bv_test_id: BV2164
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

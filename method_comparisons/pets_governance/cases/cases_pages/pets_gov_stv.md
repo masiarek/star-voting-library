@@ -16,6 +16,19 @@ quota = floor(22/4)+1 = 6). The majority (13) meets two quotas and the minority
 proportional. Like STAR-PR (Bird, Dog, Fish) it seats the minority; the two
 proportional methods differ only on the majority's third pick (Cat vs Fish).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STV
+num_winners: 3
+expected_winners:
+- Dog
+- Bird
+- Cat
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

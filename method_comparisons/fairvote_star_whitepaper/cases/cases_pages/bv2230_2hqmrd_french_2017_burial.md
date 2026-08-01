@@ -20,6 +20,17 @@ honest STAR elects Macron; and RCV-IRV on these same strategic ballots elects Le
 (the far right) — a worse miss. STAR squeezes the center only under STRATEGY; IRV
 center-squeezes under HONESTY (Burlington, Alaska). Concept: ../README.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Melenchon
+bv_election_id: 2hqmrd
+bv_test_id: BV2230
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

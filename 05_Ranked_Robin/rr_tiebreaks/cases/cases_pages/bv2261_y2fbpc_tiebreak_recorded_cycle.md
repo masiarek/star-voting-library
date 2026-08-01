@@ -15,6 +15,21 @@ THE POINT OF THE PAIR is that BetterVoting's rung of last resort is deterministi
 Note what the raceId term in that seed buys: this race and race 1 have identical candidates and identical ballot counts, yet BV drew a DIFFERENT order — [Anika, Cleo, Beto] here against [Anika, Beto, Cleo] there. Without the per-race offset every race on a multi-method poll would share one tiebreak order.
 This file pins lot_numbers to this race's recorded perm, so LH's lot rung replays BV's draw exactly. Companion race (every pair draws): bv2261_y2fbpc_tiebreak_recorded_draws.yaml. Lesson: 05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md Live results: https://bettervoting.com/y2fbpc/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Anika
+lot_numbers:
+- Anika
+- Cleo
+- Beto
+bv_election_id: y2fbpc
+bv_test_id: BV2261
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

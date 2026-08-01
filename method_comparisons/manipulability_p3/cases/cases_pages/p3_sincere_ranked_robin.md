@@ -12,6 +12,23 @@
 
 Zwicker's profile P3 (Handbook of Computational Social Choice ch. 2, Definition 2.3), 7 voters and 5 candidates, cast SINCERELY. Edinburgh goes 3-1 head-to-head and is the Copeland/Ranked Robin winner with a symmetric Copeland score of +2; Bergen is -2 and the rest are 0, exactly the numbers the book prints. There is NO Condorcet winner (Dublin beats Edinburgh 5-2, so nobody beats everybody). This is the baseline: the two Athens-first voters are about to see their LAST choice, Edinburgh, win — which is precisely the pressure the book uses to define single-voter manipulability. The manipulated counterparts are p3_manip_reversal_rr.yaml and p3_manip_compromise_rr.yaml.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Edinburgh
+lot_numbers:
+- Athens
+- Bergen
+- Cork
+- Dublin
+- Edinburgh
+bv_election_id: 4w96tr
+bv_test_id: BV2253
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

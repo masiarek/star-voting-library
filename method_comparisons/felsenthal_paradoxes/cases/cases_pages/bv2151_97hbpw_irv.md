@@ -12,6 +12,17 @@ Race 1 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-co
 Ceteris paribus, TWO of the four Andy>Beth>Carl voters stay home: 9 voters — 2×(Andy>Beth>Carl), 3×(Beth>Carl>Andy), 1×(Carl>Andy>Beth), 3×(Carl>Beth>Andy). First choices are now Andy 2, Beth 3, Carl 4, so the runoff procedure (IRV; identical for three candidates) deletes ANDY — and Beth beats Carl 5–4. The two abstainers get Beth (their second choice) instead of Carl (their last, BV2150): staying home served them better than voting — the No-Show paradox. Read in reverse it is the weak TWIN paradox: add two voters identical to the Andy pair, and the twins' arrival elects their common worst choice.
 Live results: https://bettervoting.com/97hbpw/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: 97hbpw
+bv_test_id: BV2151
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

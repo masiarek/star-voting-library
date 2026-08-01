@@ -10,6 +10,23 @@
 
 The electowiki Ranked Robin clone-independence example, part 2 of 2 (the "after"). Same election as part 1, but the A-faction now runs two clones, A1 and A2 (voters rank them together, A1>A2, in A's old slot). This "teaming" reshapes the margins: A1's total win margin jumps to +134, and by absorbing votes it pushes B out of the top tier (B falls to 4 wins while A1 and C reach 5). A1 now beats C on margin outright — no lot needed — so A1 wins deterministically. The A-faction converted part 1's 50/50 coin flip (A or B) into a guaranteed A1 win by "sacrificing" A2 to crowd out B. That is a clone-independence (teaming) failure: running clones changed the winner in the cloning faction's favor. It works only because there is no Condorcet winner (a top cycle). NOTE the tiebreak sensitivity: this failure is specific to a MARGIN tiebreak (LH here, and the Equal Vote protocol). An engine that breaks a 2-way tie by head-to-head instead (BetterVoting) elects C, not A1 — the attack fails there. Companion: clone_teaming_01_pre.yaml · lesson: 05_Ranked_Robin/concepts/rr_clone_independence.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- A1
+lot_numbers:
+- A1
+- A2
+- B
+- C
+- D
+- E
+- F
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

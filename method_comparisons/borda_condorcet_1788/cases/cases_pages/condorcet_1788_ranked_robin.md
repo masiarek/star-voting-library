@@ -27,6 +27,17 @@ cannot be led astray by positional points the way Borda is. That distinction —
 same ranked ballot, different tabulation — is the whole reason "RCV" names a
 ballot and not a count.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Peter
+bv_election_id: khcwm4
+bv_test_id: BV2250
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

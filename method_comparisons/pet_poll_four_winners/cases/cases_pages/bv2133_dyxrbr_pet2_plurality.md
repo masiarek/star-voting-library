@@ -10,6 +10,17 @@
 
 One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr). Choose-one Plurality: Dog has the most first choices (13 of 32) and wins — even though the other 19 voters rank Dog LAST. Classic first-past-the-post: a polarizing plurality beats broadly-liked rivals. Same electorate as the RCV-IRV race (Fish), Approval race (Bird) and STAR race (Cat): four methods, four winners. BV also elects Dog. Live results: https://bettervoting.com/dyxrbr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Dog
+bv_election_id: dyxrbr
+bv_test_id: BV2133
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

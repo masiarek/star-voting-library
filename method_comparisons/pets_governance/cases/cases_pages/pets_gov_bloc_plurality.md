@@ -19,6 +19,25 @@ Bird — one of each. SNTV lands ~proportional here because each faction rallies
 behind a single champion (contrast Bloc Approval, which gave the majority both
 seats). BV also elects Dog, Bird.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 2
+expected_winners:
+- Dog
+- Bird
+lot_numbers:
+- Dog
+- Cat
+- Fish
+- Bird
+- Rabbit
+- Hamster
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

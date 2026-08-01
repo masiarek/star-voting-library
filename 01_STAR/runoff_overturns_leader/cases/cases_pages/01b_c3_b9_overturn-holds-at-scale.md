@@ -11,6 +11,15 @@ fluke. Three Almond superfans (5 stars) against six who prefer Brownie. Almond
 still leads the scoring round (39 to 33), and Brownie still wins the automatic
 runoff — now 6-3, a clean 67% to 33%. The pattern doesn't depend on small numbers.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Brownie
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

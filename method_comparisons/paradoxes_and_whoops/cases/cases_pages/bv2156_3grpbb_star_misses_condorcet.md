@@ -17,6 +17,13 @@ Rare (STAR is ~98% Condorcet-efficient in spatial models) but structural. Level 
 Cross-ref: STAR_three_winner_notions. Lesson: bv2156_3grpbb_star_misses_condorcet.md
 Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STAR is race 1).
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: 3grpbb
+bv_test_id: BV2156
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

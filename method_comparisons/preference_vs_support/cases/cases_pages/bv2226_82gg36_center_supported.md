@@ -20,6 +20,17 @@ Blair (supported). Two elections, identical ranks, and only the score-reading me
 can tell that in one Blair is merely tolerated and in the other he is genuinely backed.
 Live results: https://bettervoting.com/82gg36/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Blair
+bv_election_id: 82gg36
+bv_test_id: BV2226
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

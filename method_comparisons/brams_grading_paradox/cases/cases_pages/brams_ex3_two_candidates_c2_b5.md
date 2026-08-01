@@ -16,6 +16,15 @@ finalist-selection step to muddy it. STAR's automatic runoff is the
 whole story at two candidates: Beth wins it 3-2. Pure score summation
 elects Alan.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Beth
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

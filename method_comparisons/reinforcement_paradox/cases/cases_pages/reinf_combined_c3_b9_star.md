@@ -25,6 +25,17 @@ winner. The engine's divergence block also reports Choose-One = Ada and
 Approval = Ada — the additive methods that keep the reinforcement promise here.
 Full discussion: the folder README.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cara
+bv_election_id: t4by6x
+bv_test_id: BV2254
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

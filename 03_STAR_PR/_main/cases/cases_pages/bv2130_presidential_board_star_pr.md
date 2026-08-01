@@ -19,6 +19,21 @@ ahead (34.26 vs 34.00 reweighted), yet BV's result carries tieBreakType
 "random" — so seat 7 is either a genuine allocated-implementation difference or
 a near-tie BV broke by chance. Flagged as an LH-vs-BV divergence to investigate.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 7
+expected_winners:
+- Bernie Sanders (Democrat)
+- Al Gore (Democrat)
+- Barack Obama (Democrat)
+- Cornel West (Independent)
+- Chase Oliver (Libertarian)
+- Kamala Harris (Democrat)
+- Claudia De La Cruz (Socialism and Liberation)
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

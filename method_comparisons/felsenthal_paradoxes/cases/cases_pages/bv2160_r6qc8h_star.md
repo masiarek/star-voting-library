@@ -12,6 +12,17 @@ Race 1 of 2 in the Borda-truncation election (BV2160, bvid r6qc8h; BV-confirmed)
 7 voters, four candidates: 3×(A>B>C>D), 1×(B>C>A>D), 1×(B>C>D>A), 2×(C>D>A>B). The Borda paradox lives on the case page (no Borda tabulator on BetterVoting or in the LH engine): Borda awards A 19, B 19, C 20, D 12 → C, but if the three A>B>C>D voters TRUNCATE C, Borda gives 16/16/14/12 — a truncation flips the winner away from C. This STAR race (ranks mapped 5/4/2/1) scores A 22, B 24, C 24, D 14: B and C take both finalist seats and B wins the automatic runoff 5–2. The pairwise preferences are a CYCLE (A>B 5–2, B>C 5–2, C>A 4–3), which is why no Ranked Robin or IRV race exists here (both would hit random ties on BetterVoting).
 Live results: https://bettervoting.com/r6qc8h/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- B
+bv_election_id: r6qc8h
+bv_test_id: BV2160
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

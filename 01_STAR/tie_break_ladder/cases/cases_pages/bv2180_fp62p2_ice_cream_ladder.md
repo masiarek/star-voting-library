@@ -21,6 +21,13 @@ the result is fully reproducible (unlike the 3-way dead heat in BV555/xmyf7k,
 which reaches the random floor). Live results: https://bettervoting.com/fp62p2/results
 Lesson: bv2180_fp62p2_ice_cream_ladder.md
 
+## Parameters (from the YAML)
+
+```yaml
+bv_election_id: fp62p2
+bv_test_id: BV2180
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

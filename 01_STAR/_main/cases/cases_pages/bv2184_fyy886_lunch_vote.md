@@ -18,6 +18,17 @@ Pizza tops the Scoring Round (17) and wins the runoff 3-2. The compromise
 everyone can live with wins, and no one had to vote strategically. (Choose-One
 and RCV-IRV both elect Sushi here; STAR elects Pizza.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Pizza
+bv_election_id: fyy886
+bv_test_id: BV2184
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

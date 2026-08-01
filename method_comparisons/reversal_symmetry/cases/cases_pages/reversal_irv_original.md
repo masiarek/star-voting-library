@@ -16,6 +16,15 @@ symmetry criterion, which RCV-IRV and plurality fail but additive methods (Range
 Approval) and some Condorcet methods (Ranked Pairs, Schulze) satisfy. See ../README.md;
 STAR and Ranked Robin do NOT reproduce the winner=loser on this example.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -10,6 +10,22 @@ A single-winner race that turns on the preference matrix (finalists only) and
 the Condorcet line while hiding the score-distribution table — to show how the
 `options:` block controls what gets printed.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: star
+num_winners: 1
+expected_winners:
+- Don
+blocs:
+  faction1:
+  - Ann
+  - Don
+  faction2:
+  - Bob
+  - Cal
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

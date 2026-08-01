@@ -34,6 +34,17 @@ Live results: https://bettervoting.com/gmfv4c/results
 Companion LH-only file: edelman_perfect_component_c3_b30.yaml (the
 30-voter "Condorcet component" on its own — everything ties).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: gmfv4c
+bv_test_id: BV2173
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

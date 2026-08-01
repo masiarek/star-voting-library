@@ -12,6 +12,17 @@ Race 2 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-c
 The same 100 voters' full rankings under instant runoff: Amos holds 51 first choices — an absolute majority — and wins in the first round. The contrast with the approval race (Bella, 100 approvals) is the whole point: a top-two approval cutoff erases the majority's first-vs-second distinction.
 Live results: https://bettervoting.com/pcttmr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Amos
+bv_election_id: pcttmr
+bv_test_id: BV2153
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

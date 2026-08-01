@@ -12,6 +12,15 @@ round with 22 stars. But Boston is the broad compromise and the real majority pi
 three of the five prefer Boston to Austin, so Boston takes the automatic runoff 3-2.
 Chicago, Denver and Erie are genuine options that simply don't reach the final two.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Boston
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

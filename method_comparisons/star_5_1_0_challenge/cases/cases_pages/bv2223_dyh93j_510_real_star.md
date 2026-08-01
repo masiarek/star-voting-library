@@ -16,6 +16,17 @@ strategic ballot, STAR elects the CW here while RCV-IRV does not (s5): the "1"s
 carry real weight, so 5-1-0 STAR is strictly more moderate-friendly than IRV.
 So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: dyh93j
+bv_test_id: BV2223
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

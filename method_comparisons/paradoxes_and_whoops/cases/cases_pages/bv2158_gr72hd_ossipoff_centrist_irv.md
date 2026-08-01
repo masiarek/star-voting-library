@@ -18,6 +18,15 @@ Live results: https://bettervoting.com/gr72hd/results (all races LH<->BV confirm
 Lesson: bv2158_gr72hd_ossipoff_centrist_irv.md
 Live on BetterVoting: https://bettervoting.com/gr72hd/results (BV-confirmed; STAR is race 1).
 
+## Parameters (from the YAML)
+
+```yaml
+expected_winners:
+- D
+bv_election_id: gr72hd
+bv_test_id: BV2158
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

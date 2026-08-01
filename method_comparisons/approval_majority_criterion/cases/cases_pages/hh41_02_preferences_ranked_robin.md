@@ -29,6 +29,19 @@ own example.
 Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
 Set overview: ../README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- A
+lot_numbers:
+- A
+- B
+- C
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

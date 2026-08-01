@@ -35,6 +35,17 @@ automatic runoff runs exactly the direct majority contest Condorcet demanded,
 and Peter wins it 6-5. STAR is Borda's scoring step followed by Condorcet's
 check, and on Condorcet's own counterexample it returns Condorcet's answer.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Peter
+bv_election_id: khcwm4
+bv_test_id: BV2250
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

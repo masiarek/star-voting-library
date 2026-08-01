@@ -22,6 +22,15 @@ lands on Bob: it uses scores to FIND the finalists, then a majority runoff to CH
 between them. (Ann is shut out only because she's edged for second place in the
 scoring round — a reminder STAR is not a Condorcet method, by design.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bob
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

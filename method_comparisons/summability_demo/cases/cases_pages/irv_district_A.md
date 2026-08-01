@@ -12,6 +12,15 @@ districts. See irv_combined.yaml: no fixed set of district-level IRV
 subtotals can be added into the combined answer, because who gets eliminated
 depends on ALL ballots at once.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- B
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

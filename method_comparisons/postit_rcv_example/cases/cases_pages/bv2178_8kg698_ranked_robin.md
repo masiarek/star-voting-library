@@ -27,6 +27,22 @@ Live results: https://bettervoting.com/8kg698/results
 Companion races: bv2178_8kg698_star.yaml, bv2178_8kg698_irv.yaml.
 Overview page: bv2178_8kg698_switch_made_real.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Blue
+lot_numbers:
+- Purple
+- Green
+- Blue
+- Pink
+bv_election_id: 8kg698
+bv_test_id: BV2178
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

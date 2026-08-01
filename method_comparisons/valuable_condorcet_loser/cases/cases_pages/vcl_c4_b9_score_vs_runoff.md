@@ -23,6 +23,15 @@ welfare candidate. One election, two defensible verdicts — the
 majoritarian one (Ben) and the utilitarian one (Amy) — and which is
 "right" is the values question, not arithmetic.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

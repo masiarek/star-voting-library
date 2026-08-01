@@ -14,6 +14,15 @@ Begich; RCV-IRV alone eliminates him first (fewest first-choices) and elects
 Peltola. The burial twin shows rb-j's strategy: 20 Peltola voters rank Begich
 last, manufacturing a cycle. See the write-up: condorcet_burial_alaska/README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Peltola
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

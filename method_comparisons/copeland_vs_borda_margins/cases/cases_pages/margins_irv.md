@@ -10,6 +10,17 @@
 
 The same twelve gelato ballots, counted by instant runoff. First choices are Almond 5, Cocoa 4, Berry 3, so Berry — the BORDA winner and the margin-weighted Copeland winner — is eliminated FIRST. All three of Berry's ballots rank Cocoa next, so they transfer intact and Cocoa wins 7-5. This is the fourth distinct answer the same electorate produces: Plurality says Almond, RCV-IRV says Cocoa, Borda says Berry, and Copeland says nobody (a three-way tie). Not a center-squeeze case — there is no Condorcet winner for IRV to miss, because the pairwise contests form a cycle.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Cocoa
+bv_election_id: kdjjkq
+bv_test_id: BV2251
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

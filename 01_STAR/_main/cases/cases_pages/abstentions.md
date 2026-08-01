@@ -13,6 +13,15 @@ among voters WITH a preference, and the two-line runoff summary
 (show_runoff_percent) reconciles 5 cast = 3 decided + 2 Equal Support, so
 the percentages never look like votes went missing.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Dog
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

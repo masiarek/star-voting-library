@@ -21,6 +21,26 @@ Uma, Val, Wren (4 each) and the majority SWEEPS all three seats, 3-0. The 40%
 minority is shut out entirely. Contrast SNTV and Limited Voting (same electorate),
 where the minority earns a seat.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 3
+expected_winners:
+- Ada
+- Ben
+- Cal
+lot_numbers:
+- Ada
+- Ben
+- Cal
+- Uma
+- Val
+- Wren
+bv_election_id: 3x4vrv
+bv_test_id: BV2135
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

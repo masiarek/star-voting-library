@@ -23,6 +23,17 @@ Live on BetterVoting (Test ID BV2196): https://bettervoting.com/yyhj9x/results
 — with an RCV-IRV race (still Amir: IRV keeps later-no-harm precisely
 by center-squeezing the Condorcet winner Bess).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bess
+bv_election_id: yyhj9x
+bv_test_id: BV2196
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -10,6 +10,15 @@ What if you dislike all the candidates? You can still vote: even low scores
 register a relative preference, and STAR will count them. Here every voter
 scores only 0s and 1s, yet a winner still emerges (Almond) from the 1s.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Almond
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

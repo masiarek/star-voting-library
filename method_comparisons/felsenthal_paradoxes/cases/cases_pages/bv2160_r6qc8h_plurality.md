@@ -12,6 +12,17 @@ Race 2 of 2 in the Borda-truncation election (BV2160, bvid r6qc8h; BV-confirmed)
 The same 7 voters under Choose-One: first choices A 3, B 2, C 2 → A. So this tiny cyclic electorate splits three ways across counts: Plurality → A, STAR → B, Borda (on paper) → C — and Borda's C evaporates into an A/B tie if three voters merely truncate. The tabulation, not the ballot, decides.
 Live results: https://bettervoting.com/r6qc8h/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- A
+bv_election_id: r6qc8h
+bv_test_id: BV2160
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

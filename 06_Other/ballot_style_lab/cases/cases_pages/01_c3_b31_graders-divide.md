@@ -41,6 +41,17 @@ then rendered through each voter's ballot style. Per
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit graders_divide
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Clara
+bv_election_id: 4jmgrd
+bv_test_id: BV2234
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

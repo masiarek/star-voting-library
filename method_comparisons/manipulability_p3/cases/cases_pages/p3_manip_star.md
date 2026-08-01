@@ -8,6 +8,15 @@
 
 STAR's turn to fail, on the same profile and cheaply. The two sincere Edinburgh>Cork>Athens>Dublin>Bergen voters score their 4th choice Dublin a 0 instead of a 2 — one number each, on one candidate, with their own favourite still a 5 and no favourite betrayal anywhere. Dublin's total drops 23 to 19, which knocks Dublin out of the finalists entirely; the runoff becomes Edinburgh vs Cork and Edinburgh wins 5-2. The two manipulators have replaced Dublin with Edinburgh, their FAVOURITE. This is burial, and it is the honest counterweight to the Copeland and Borda manipulations on this page: Gibbard-Satterthwaite guarantees every reasonable method is manipulable, and that includes both methods this library advocates.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Edinburgh
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

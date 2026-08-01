@@ -12,6 +12,17 @@ Race 2 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). S
 The same 15 voters' full rankings under instant runoff: first choices April 6, Bruce 4, Clara 5, so BRUCE — the Condorcet winner — is deleted first, and Clara beats April 9–6. IRV elects Clara: neither the approval race's April (the absolute loser) nor the pairwise winner Bruce. One electorate, three winners across the three races.
 Live results: https://bettervoting.com/wq6yv7/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Clara
+bv_election_id: wq6yv7
+bv_test_id: BV2154
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -18,6 +18,17 @@ The companion wa_2010_strategic shows the burial FairVote describes (Harper vote
 score Harper 5, Rieger 4, Berkey 0) squeezing Berkey out under STAR — conceded — while,
 notably, RCV-IRV on those same strategic ballots STILL elects Berkey. Concept: ../README.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Berkey
+bv_election_id: b4yr3v
+bv_test_id: BV2231
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

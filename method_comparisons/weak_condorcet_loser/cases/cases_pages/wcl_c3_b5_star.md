@@ -43,6 +43,17 @@ tie between the two finalists, which is vanishingly rare in any electorate
 large enough to matter. Read it as "the criterion is failed" (a possibility
 result), not as "this happens in practice."
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ben
+bv_election_id: c73pfw
+bv_test_id: BV2249
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

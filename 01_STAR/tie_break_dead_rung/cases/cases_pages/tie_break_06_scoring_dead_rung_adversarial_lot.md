@@ -17,6 +17,19 @@ One point of enthusiasm is the whole difference: case 01 is decided by
 ballots (five-star), case 02 by the pre-drawn lot. See
 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ann
+lot_numbers:
+- Cara
+- Ann
+- Ben
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

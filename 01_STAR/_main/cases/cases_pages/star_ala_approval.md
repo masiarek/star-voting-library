@@ -13,6 +13,15 @@ all-zero ballot, and a max-everything 5,5,5,5 — all tabulating as documented
 (markers count 0 and are reported honestly). D wins. For real Approval
 counting (most approvals wins), see 04_Approval/.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- D
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

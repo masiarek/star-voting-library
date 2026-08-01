@@ -10,6 +10,17 @@
 
 One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy). This is the RCV-IRV race (ranked ballots, instant runoff). Cat is the Condorcet winner (beats Dog 13-9 and Fish 15-7), but has the fewest first choices (6), so IRV eliminates Cat FIRST; its ballots transfer to Fish, which then beats Dog 13-9. So IRV elects Fish — a textbook center squeeze: the compromise candidate is dropped before the final round. Same electorate as the Plurality race (Dog) and the Approval/STAR races (Cat). BV also elects Fish. Live results: https://bettervoting.com/ykjjhy/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Fish
+bv_election_id: ykjjhy
+bv_test_id: BV2132
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

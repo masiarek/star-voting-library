@@ -12,6 +12,17 @@ Race 1 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (
 The amalgamated electorate: the 32 voters of Districts I (BV2147) and II (BV2148) together, ceteris paribus. No first-round majority (Alma 10, Bruno 14, Cora 8), so CORA is deleted — and Alma beats Bruno 17–15 in the runoff. Bruno won BOTH districts separately; amalgamating two electorates that each chose Bruno makes plurality-with-runoff (run as IRV, identical for three candidates) elect Alma. That violates the Reinforcement postulate — the multiple-districts / inconsistency paradox, live on BetterVoting. The combined pairwise preferences form a Condorcet CYCLE (Alma>Bruno 17–15, Bruno>Cora 18–14, Cora>Alma 21–11), so no Condorcet argument rescues the flip: the procedure simply disagrees with itself.
 Live results: https://bettervoting.com/byk9v2/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Alma
+bv_election_id: byk9v2
+bv_test_id: BV2149
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

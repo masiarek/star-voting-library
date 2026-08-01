@@ -25,6 +25,20 @@ A,B,C,F — its random draw broke the D/F tie for F, the book's other AV
 committee. Two-view page: bv27_jt6r76_lackner_approval_committee.md.
 Live results: https://bettervoting.com/jt6r76/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval_Multi_Winner
+num_winners: 4
+expected_winners:
+- A
+- B
+- C
+- D
+bv_election_id: jt6r76
+bv_test_id: BV27
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

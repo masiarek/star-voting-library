@@ -14,6 +14,21 @@ Six voters, three candidates, and the most evenly balanced electorate that can e
 THE POINT OF THIS CASE is what that last rung leaves behind. BetterVoting calls its rung "random", and it is unpredictable from the ballots — but it is NOT lost and it is NOT re-rolled. shuffleCandidatesForRandomTiebreak.ts seeds a deterministic PRNG (TinyRand) with (rawVoteCount + hash(raceId)) >>> 0, shuffles the candidates ONCE, and writes each candidate's position back as tieBreakOrder; the shuffled order ships in the results JSON as `perm`. So the export publishes the WHOLE tiebreak sequence — winner and runners-up — and a re-tally returns the same answer (verified: re-fetched, perm and tieBreakOrder byte-identical).
 BV recorded perm [Anika, Beto, Cleo] for this race and elected Anika. This file pins lot_numbers to that recorded order, so LH's own lot rung replays BV's draw exactly — same winner, same full ordering. Companion race (a Condorcet cycle, different perm): bv2261_y2fbpc_tiebreak_recorded_cycle.yaml. Lesson: 05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md Live results: https://bettervoting.com/y2fbpc/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Anika
+lot_numbers:
+- Anika
+- Beto
+- Cleo
+bv_election_id: y2fbpc
+bv_test_id: BV2261
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

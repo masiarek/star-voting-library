@@ -21,6 +21,16 @@ no rung of the tie-break ladder is ever consulted. This is the control the
 Bloc tie probes vary from. Bloc is majoritarian: a cohesive majority can take
 every seat.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 2
+expected_winners:
+- Alice
+- Bruno
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -19,6 +19,16 @@ BetterVoting agrees on the result (elected Carmen, Andre; round-1 tieBreakType
 "score"). BV129's "Failed" is the method-name label, not the count: the export
 reports votingMethod "STAR" rather than "Bloc STAR" (#1086, same family as #904).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 2
+expected_winners:
+- Carmen
+- Andre
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

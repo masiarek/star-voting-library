@@ -13,6 +13,21 @@ Alice finishes 2-1-1 — winning two head-to-heads, DRAWING one, and outright LO
 Two lessons ride on that. First, "most head-to-head wins" is a shorthand, not the rule — the rule is the Copeland score, and the two come apart the moment any matchup is drawn. Second, Ranked Robin does not promise to elect someone who beat everybody; when nobody beats everybody, it elects the best overall round-robin record, and that winner may well have lost a match.
 LH-ONLY ON PURPOSE. Nothing here is un-freezable — the result is fully deterministic (Alice is the unique Copeland leader, so no tiebreak is reached) — but the case is a pure engine-mechanics illustration with no BetterVoting election behind it. Compare the sibling case dead_heat_lot_tiebreak, where the half-credit produces a TIE and the lot ladder has to finish the job; here it produces a decisive, outright winner.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Alice
+lot_numbers:
+- Alice
+- Bruno
+- Carmen
+- Dmitri
+- Elena
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

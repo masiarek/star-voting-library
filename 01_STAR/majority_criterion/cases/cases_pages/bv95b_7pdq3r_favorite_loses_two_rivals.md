@@ -28,6 +28,15 @@ Reproduced on BetterVoting (election 7pdq3r): BV also elects Bruno
 bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
 https://bettervoting.com/7pdq3r/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bruno
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

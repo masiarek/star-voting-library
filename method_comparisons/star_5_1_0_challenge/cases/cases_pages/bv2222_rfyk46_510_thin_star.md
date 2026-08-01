@@ -15,6 +15,17 @@ pole) wins. STAR fails to elect the Condorcet winner, exactly as rb-j argues:
 under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes like
 IRV. Confirmed identical to RCV-IRV on this electorate (s3).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ana
+bv_election_id: rfyk46
+bv_test_id: BV2222
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

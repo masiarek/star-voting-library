@@ -12,6 +12,17 @@ Race 2 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dx
 The same 11 voters under Choose-One: first choices D 5, C 3, A 2, B 1 → D — the candidate who loses every head-to-head 5–6 and whom a majority (6 of 11) rank dead last. Choose-One and Minimax (worked on the case page) agree on the absolute loser, for opposite reasons: Choose-One sees only D's five committed fans; Minimax sees only that D's defeats are narrow.
 Live results: https://bettervoting.com/f3dxq9/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- D
+bv_election_id: f3dxq9
+bv_test_id: BV2167
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

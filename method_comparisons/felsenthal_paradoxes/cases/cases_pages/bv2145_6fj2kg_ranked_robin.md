@@ -12,6 +12,17 @@ Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bv
 The same 17 ranked ballots counted by Ranked Robin (Copeland): Ada wins both her head-to-heads (Ben 9–8, Cleo 9–8) — 2 pairwise wins, the Condorcet winner, elected directly. What the runoff procedure's elimination order threw away, the round-robin count keeps.
 Live results: https://bettervoting.com/6fj2kg/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: 6fj2kg
+bv_test_id: BV2145
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

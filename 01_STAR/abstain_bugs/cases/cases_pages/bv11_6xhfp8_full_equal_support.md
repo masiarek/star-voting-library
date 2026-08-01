@@ -22,6 +22,17 @@ reasoning: BetterVoting says "everyone abstained," LH says "everyone tied." LH's
 treatment matches the view that full, equal support is a cast vote, not an
 abstention — the #884 dispute.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ann
+bv_election_id: 6xhfp8
+bv_test_id: BV11
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -14,6 +14,15 @@ Plurality file on this same electorate returns Cal, and the three electorates
 give three different plurality winners. That is what it means for plurality to sit
 outside the pairwise matrix (Fishburn C3).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ben
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

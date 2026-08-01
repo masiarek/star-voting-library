@@ -12,6 +12,17 @@ Race 3 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bv
 The same 17 voters after the raise, ranks mapped 5/3/1. Ben's two raised ballots move him 51 → 55 and Cleo 49 → 45; Ada stays 53. Finalists are now Ben and Ada — and Ada still wins the automatic runoff 9–8, exactly as in BV2145. Giving Ben more support changed STAR's finalist pair but not its winner: no more-is-less here, while the same raise flips the IRV race.
 Live results: https://bettervoting.com/krk2px/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: krk2px
+bv_test_id: BV2146
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

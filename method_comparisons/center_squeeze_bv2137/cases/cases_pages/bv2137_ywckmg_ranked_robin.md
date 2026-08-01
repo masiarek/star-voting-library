@@ -12,6 +12,21 @@
 
 One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confirmed). 100 voters, three candidates, ONE ranked electorate tabulated four ways. Anderson is the Condorcet winner (beats Reagan 55–45, Carter 65–35) but holds the fewest first-choices (20). Ranked Robin counts head-to-heads: Anderson beats BOTH rivals, so RR → Anderson — the Condorcet winner IRV threw away.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Anderson
+lot_numbers:
+- Anderson
+- Carter
+- Reagan
+bv_election_id: ywckmg
+bv_test_id: BV2137
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

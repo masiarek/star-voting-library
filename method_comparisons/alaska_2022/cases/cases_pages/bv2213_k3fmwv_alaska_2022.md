@@ -25,6 +25,17 @@ the paper above; Equal Vote's Real RCV visualizer: realrcv.equal.vote/alaska22.
 Live results (BV2213, all four races): https://bettervoting.com/k3fmwv/results
 Lesson: README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Begich
+bv_election_id: k3fmwv
+bv_test_id: BV2213
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

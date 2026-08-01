@@ -16,6 +16,17 @@ automatic runoff. STAR still elects Comet: an equally weighted vote,
 demonstrated — any ballot can be perfectly cancelled by its exact opposite,
 which is why STAR has no forced vote-splitting. See equal_and_opposite/README.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Comet
+bv_election_id: q8q9m7
+bv_test_id: BV2220
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

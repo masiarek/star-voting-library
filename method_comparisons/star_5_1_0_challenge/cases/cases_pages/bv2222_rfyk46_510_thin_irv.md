@@ -14,6 +14,17 @@ wins 53–47. IRV fails to elect the Condorcet winner (Beth). This matches the
 strategic-5-1-0 STAR result (s2): under 5-1-0 with a thin moderate base, STAR
 and IRV fail the SAME way — rb-j's core point, confirmed.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Ana
+bv_election_id: rfyk46
+bv_test_id: BV2222
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

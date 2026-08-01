@@ -37,6 +37,17 @@ winner).
 Full claim-by-claim reading of the article:
 07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Moderate
+bv_election_id: 6w2gq7
+bv_test_id: BV2168
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

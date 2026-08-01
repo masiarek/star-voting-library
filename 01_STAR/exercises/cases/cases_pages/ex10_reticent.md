@@ -23,6 +23,17 @@ Live on BetterVoting (Test ID BV2195): https://bettervoting.com/g6q42v/results
 the rank conversion of these sparse ballots yields a Condorcet cycle
 whose 3-way tie BV resolves at random — not freezable.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Amir
+bv_election_id: g6q42v
+bv_test_id: BV2195
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

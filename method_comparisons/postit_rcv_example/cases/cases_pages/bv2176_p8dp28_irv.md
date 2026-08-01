@@ -24,6 +24,17 @@ Live results: https://bettervoting.com/p8dp28/results
 Companion races: bv2176_p8dp28_star.yaml, bv2176_p8dp28_ranked_robin.yaml.
 Overview page: bv2176_p8dp28_postit_rcv_example.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: IRV
+num_winners: 1
+expected_winners:
+- Purple
+bv_election_id: p8dp28
+bv_test_id: BV2176
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

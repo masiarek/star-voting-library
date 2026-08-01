@@ -12,6 +12,17 @@ Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bv
 The raise (2× Cleo>Ben>Ada → Ben>Cleo>Ada) only swaps Ben and Cleo on those ballots; Ada's position against each rival is untouched, so the pairwise table barely moves: Ada still beats Ben 9–8 and Cleo 9–8 and stays the Condorcet winner. Ranked Robin elects Ada before and after — monotone where the runoff procedure (the IRV race) flips.
 Live results: https://bettervoting.com/krk2px/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+bv_election_id: krk2px
+bv_test_id: BV2146
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

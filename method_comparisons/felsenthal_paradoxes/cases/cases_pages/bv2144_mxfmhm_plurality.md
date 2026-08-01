@@ -14,6 +14,21 @@ Race 1 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm;
 7 voters, three candidates (Ana=a, Bo=b, Cal=c); rankings 3×(Ana>Bo>Cal), 2×(Bo>Cal>Ana), 2×(Cal>Bo>Ana). Bo is the Condorcet winner (beats Ana 4–3, Cal 5–2). Ana is both the Condorcet LOSER and the ABSOLUTE loser — a majority (4 of 7) rank Ana dead last. Yet Choose-One elects Ana 3–2–2 on first choices; and if Cal dropped out, Bo would beat Ana 4–3 — Felsenthal's SCC (the spoiler effect). Four paradoxes in one 7-voter election.
 Live results: https://bettervoting.com/mxfmhm/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Ana
+lot_numbers:
+- Ana
+- Cal
+- Bo
+bv_election_id: mxfmhm
+bv_test_id: BV2144
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

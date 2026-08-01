@@ -20,6 +20,15 @@ engine-independent demonstration. The real election's figure is ~6,000 Palin-onl
 ballots, which crosses the threshold comfortably. Companion page:
 upward_monotonicity_alaska.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Begich
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

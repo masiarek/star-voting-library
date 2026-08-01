@@ -11,6 +11,20 @@
 LH-only reference (no BetterVoting election ON PURPOSE: the paradox turns on a RANDOM Aria/Beau tie, and a random BV result can't be frozen — compare the RR tiebreak study). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 6 — due to Felsenthal & Maoz (1988: 123, Example 4).
 3 voters, four candidates, rankings: Aria>Beau>Cole>Dean; Cole>Aria>Beau>Dean; Dean>Aria>Beau>Cole. EVERY voter prefers Aria to Beau (Aria Pareto-dominates Beau), and Aria is the Condorcet winner. But if each voter approves their top THREE, the approval totals are Aria 3, Beau 3, Cole 2, Dean 1 — a tie between Aria and Beau. Broken randomly, there is a 0.5 chance BEAU is elected: a Pareto-dominated candidate can win under Approval. This file pins the lot order adversarially (Beau first) to exhibit exactly that branch; the companion felsenthal_ex6_ranked_robin.yaml shows the same voters' rankings electing Aria.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Beau
+lot_numbers:
+- Beau
+- Aria
+- Cole
+- Dean
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

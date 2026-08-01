@@ -10,6 +10,19 @@
 
 5 ranked ballots, 3 candidates. Ada beats both Ben and Cara head-to-head, so Ada is the Condorcet winner — and Ranked Robin (most pairwise wins) elects Ada. When a Condorcet winner exists, Ranked Robin and "the Condorcet winner" are the SAME answer.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+lot_numbers:
+- Ada
+- Ben
+- Cara
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

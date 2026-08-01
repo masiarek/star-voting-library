@@ -8,6 +8,15 @@
 
 The smallest election that makes the whole tournament-solutions literature necessary. Three voters, four candidates, ballots that are just one ranking rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties), so the pairwise results form a genuine TOURNAMENT — a complete directed graph. There is no Condorcet winner: D beats A, so the top of the graph cycles. Now the famous C1 rules, which read ONLY that graph, split five ways: Top cycle / Schwartz = {A, B, C, D} (everyone); Uncovered set = Banks set = Bipartisan set = {A, B, D} (C is COVERED — B beats C and beats everyone C beats, so C is strictly redundant); Copeland set = {A, B} (both win 2, C and D win 1); Slater set = Markov set = {A}. Five different answers to "who should win," each with a published defense, from three ballots. Ranked Robin is the Copeland set, so the LH engine lands on {A, B} and must break the tie — by TOTAL MARGIN, electing B (+3 vs A's +1). That step is the lesson: margins are not in the tournament. The moment Ranked Robin consults them it has left C1 and is reading C2 information, and it elects B where Slater and Markov both elect A. This is Figure 3.3 of Brandt, Brill & Harrenstein, "Tournament Solutions" (Handbook of Computational Social Choice, 2016, ch. 3), turned back into ballots — the chapter gives the graph, and McGarvey's theorem guarantees some profile produces it; this three-voter rotation is one. Candidate labels are kept as bare A/B/C/D deliberately, matching the figure, so the book can be read side by side with the tabulation. Verified two ways: the LH engine's Ranked Robin below, and pref_voting's independent C1 module via tournament_solutions_report.py. LH-only by necessity — the winner turns on a Copeland tiebreak, and BetterVoting breaks Ranked Robin ties at random, so this result is not freezable on BV.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- B
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

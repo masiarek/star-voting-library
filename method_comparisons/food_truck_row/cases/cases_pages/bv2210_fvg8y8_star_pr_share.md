@@ -10,6 +10,18 @@
 
 One 100-voter electorate, two food-truck spots, five counts — this file is the STAR-PR / Allocated Score count (score ballots, quota-allocated seats). The savory side is a 57-voter OUTRIGHT MAJORITY split across three trucks (Arepa 20 first choices, Bao 19, Churro 18); the sweet side is a disciplined 43-voter minority on two (Donut 22, Eclair 21). Same opinions on every ballot; only the counting rule changes: SNTV hands the majority ZERO seats (Donut+Eclair), Bloc STAR and Bloc Ranked Robin hand it BOTH (Arepa+Bao), STAR-PR and STV share them one per side (Arepa+Donut). THE HEADLINE HERE: the proportional count. Arepa wins the first seat; the quota of voters who elected him is spent; the remaining weight is majority-sweet, and Donut takes the second seat. 57/43 room, 1/1 seats. NOTE a BV display quirk on this race: BetterVoting banners the elected pair as 'Tied!' with tieBreakType random and no tie anywhere — the same STAR_PR serializer quirk first seen on 89wwvr (ex12) and jwxr3j; this election is the third confirming instance. The seats themselves are correct and agree with LH. Full lesson: README.md in this folder. Live on BetterVoting (Test ID BV2210): https://bettervoting.com/fvg8y8 — all five races agree with the LH engine, no genuine tie anywhere. Live results: https://bettervoting.com/fvg8y8/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 2
+expected_winners:
+- Arepa
+- Donut
+bv_election_id: fvg8y8
+bv_test_id: BV2210
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

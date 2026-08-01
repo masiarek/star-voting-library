@@ -40,6 +40,17 @@ The cutoff caveat applies as always: "approve everything 3 or higher" is one
 modeling choice among several, and a different threshold gives a different
 election. That is Approval's standing ambiguity, not a quirk of this case.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Ben
+bv_election_id: c73pfw
+bv_test_id: BV2249
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

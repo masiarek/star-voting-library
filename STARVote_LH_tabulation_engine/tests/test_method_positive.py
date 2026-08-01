@@ -97,6 +97,11 @@ def _cases():
             # (test_range_tabulation.py, pref_voting), not the LH engine — skip.
             if method in ("range", "score"):
                 continue
+            # 3-2-1 is tabulated by its own clean-room tool
+            # (06_Other/three_two_one/three_two_one_tabulation.py), not the LH
+            # engine — skip here; its own tool asserts expected_winners.
+            if method in ("3-2-1", "321"):
+                continue
             # Leave plain single-winner STAR files in the covered folders to
             # test_single_winner_positive.py.
             if method == "star" and seats in (1, None) and p.parent in STAR_COVERED:

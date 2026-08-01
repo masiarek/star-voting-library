@@ -31,6 +31,17 @@ Live on BetterVoting (Test ID BV2207): https://bettervoting.com/b6xrdr
 Live results: https://bettervoting.com/b6xrdr/results (BV agrees:
 Bluebell, no tiebreaks).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bluebell
+bv_election_id: b6xrdr
+bv_test_id: BV2207
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

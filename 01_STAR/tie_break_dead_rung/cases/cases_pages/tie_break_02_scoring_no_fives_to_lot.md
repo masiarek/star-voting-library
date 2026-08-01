@@ -16,6 +16,19 @@ lot_numbers pins the order, so Ben advances by lot priority (not by five-star).
 The eventual winner is still Alice; what changed is WHICH rung chose the second
 finalist. See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Alice
+lot_numbers:
+- Alice
+- Ben
+- Cara
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

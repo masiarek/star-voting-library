@@ -28,6 +28,21 @@ scoring round leads Ada, but the runoff flips to Cara — STAR's runoff catches
 the same pairwise flip). Additive methods (Score/Approval/Plurality) instead
 keep Ada and show no paradox — see the folder README.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Cara
+lot_numbers:
+- Ada
+- Ben
+- Cara
+bv_election_id: t4by6x
+bv_test_id: BV2254
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

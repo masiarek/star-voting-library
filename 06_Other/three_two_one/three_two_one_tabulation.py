@@ -45,6 +45,7 @@ USAGE
 
 import sys
 import re
+from pathlib import Path
 
 GOOD, OK, BAD = 2, 1, 0
 _MARKERS = set("-~&?%")
@@ -188,9 +189,9 @@ def _load_yaml(path):
         mb = re.search(r"^ballots:\s*\|-?\s*\n((?:[ \t]+.*\n?)+)", raw, re.M)
         if mb:
             data["ballots"] = "\n".join(l.strip() for l in mb.group(1).splitlines())
-        me = re.search(r"^expected_winner:\s*(.+)$", raw, re.M)
+        me = re.search(r"^expected_winners:\s*\n\s*-\s*(.+)$", raw, re.M)
         if me:
-            data["expected_winner"] = me.group(1).strip()
+            data["expected_winners"] = [me.group(1).strip()]
         return data
 
 
@@ -232,10 +233,23 @@ def main(argv):
         return 1
     names, ballots = parse_ballots_block(data["ballots"])
     res = tabulate_321(ballots)
-    print(_report(data, res, names))
-    exp = data.get("expected_winner")
+    report = _report(data, res, names)
+    print(report)
+    # Mirror the report next to the source, method-tagged so it never collides
+    # with a STAR mirror (same convention as the Range engine); the page
+    # generator picks it up for the "What the engine says" section.
+    src = Path(argv[1]).resolve()
+    out = src.parent / (src.parent.name + "_tabulated") / (src.stem + "_321_tabulated.txt")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(report + "\n", encoding="utf-8")
+    print(f"\n[mirror] {out}")
+    # House schema: a plural expected_winners list (3-2-1 is single-winner, so
+    # one entry).
+    exp = data.get("expected_winners")
+    if isinstance(exp, (list, tuple)):
+        exp = exp[0] if exp else None
     if exp and exp != names[res["winner"]]:
-        print(f"\n*** expected_winner={exp!r} but engine says "
+        print(f"\n*** expected_winners={exp!r} but engine says "
               f"{names[res['winner']]!r} ***")
         return 1
     return 0

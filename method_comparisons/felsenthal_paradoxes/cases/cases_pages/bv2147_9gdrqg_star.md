@@ -12,6 +12,17 @@ Race 2 of 2 in District I of the Felsenthal Reinforcement-paradox trio (BV2147, 
 The same 17 ballots with ranks mapped to 0–5 scores (5/3/1). Scores: Alma 47, Bruno 51, Cora 55 — Cora and Bruno advance, Bruno wins the automatic runoff 10–7. Same winner as the runoff procedure in this district; the reinforcement contrast appears at the combined stage (BV2149), where STAR stays with Bruno and the runoff procedure flips to Alma.
 Live results: https://bettervoting.com/9gdrqg/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bruno
+bv_election_id: 9gdrqg
+bv_test_id: BV2147
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

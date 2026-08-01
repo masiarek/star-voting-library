@@ -23,6 +23,15 @@ different candidate than Copeland's margins tiebreak (Ada) and than leximin
 (Ada), and agrees with Nanson (Cara). Five voters, four defensible answers:
 that is what a cycle costs. See the folder README.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV-IRV
+num_winners: 1
+expected_winners:
+- Cara
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

@@ -17,6 +17,15 @@ Burr in 1800), so this case is LH/pref_voting-verified rather than frozen from a
 BetterVoting tie-break. STAR removes the slope entirely — see chicken_star.yaml.
 Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

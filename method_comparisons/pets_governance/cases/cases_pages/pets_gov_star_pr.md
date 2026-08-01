@@ -17,6 +17,19 @@ result is Bird, Dog, Fish — 2 majority + 1 minority. Same ballots as Bloc STAR
 (which swept all three for the majority): proportional vs majoritarian, side by
 side.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 3
+expected_winners:
+- Bird
+- Dog
+- Fish
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

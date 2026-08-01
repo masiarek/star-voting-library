@@ -17,6 +17,19 @@ with 38.9% even though 61% wanted chocolate — that is the spoiler effect.
 STAR lets chocolate lovers score BOTH chocolates, so the bloc is not split and
 DarkChoco wins. Watch the [Vote-splitting check] confirm it.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- DarkChoco
+blocs:
+  Chocolate:
+  - DarkChoco
+  - MilkChoco
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

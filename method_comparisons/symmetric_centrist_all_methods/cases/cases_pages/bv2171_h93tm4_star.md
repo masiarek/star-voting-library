@@ -15,6 +15,17 @@ Seven methods, one electorate. Whole-ballot methods — STAR, STAR-PR (1 seat), 
 Live results: https://bettervoting.com/h93tm4/results
 Overview: bv2171_h93tm4_all_methods.md · Full 100-voter version: bv2172_bkwfjr_star.yaml (BV2172) · Original 4-method cut: ../symmetric_centrist_bv2170/
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Casey
+bv_election_id: h93tm4
+bv_test_id: BV2171
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -14,6 +14,16 @@ second seat. Represents the fractional-surplus family of BetterVoting's Allocate
 (the "single vote" and "lower split" variants elect the same committee, {Allison, Doug}).
 LH's `allocated` method matches BetterVoting.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 2
+expected_winners:
+- Allison
+- Doug
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

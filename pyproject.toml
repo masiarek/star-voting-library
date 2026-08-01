@@ -37,8 +37,11 @@ docs = [
 
 [tool.pytest.ini_options]
 # One canonical suite, collected identically from any cwd (the content tree
-# holds hundreds of directories pytest would otherwise walk).
+# holds hundreds of directories pytest would otherwise walk). site/ is the
+# generated MkDocs output — it contains a full copy of the tests and must
+# never be collected.
 testpaths = ["STARVote_LH_tabulation_engine/tests"]
+norecursedirs = [".*", "site", "node_modules", "__pycache__"]
 
 [tool.uv.workspace]
 members = [

@@ -10,6 +10,17 @@
 
 One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Ranks mapped to 0–5 scores. Abby tops the score round (2836) but Brad wins the automatic runoff head-to-head (463–458) → STAR → Brad (agreeing with BV's Ranked Robin, not LH's).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Brad
+bv_election_id: cxrf8v
+bv_test_id: BV2138
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

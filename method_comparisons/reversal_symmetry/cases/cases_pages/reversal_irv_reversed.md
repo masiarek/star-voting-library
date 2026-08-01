@@ -14,6 +14,15 @@ its "worst" candidate are the same — a reversal symmetry FAILURE. This is a re
 defect (concede it). Caveats on ../README.md: the electorate is a Condorcet cycle, so there is no
 "correct" winner; STAR gives B then A (no winner=loser); source is Range-advocacy (lean disclosed).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

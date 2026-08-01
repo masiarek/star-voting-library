@@ -17,6 +17,15 @@ lines below show Choose-One = Left, RCV-IRV = Left, STAR = Center = Condorcet
 winner (also what Ranked Robin would elect).
 See 07_Concepts/center_squeeze.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Center
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

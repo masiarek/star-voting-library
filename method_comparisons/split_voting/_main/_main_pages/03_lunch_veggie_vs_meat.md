@@ -19,6 +19,20 @@ STAR lets veggie voters score all three vegetarian dishes, so the majority
 isn't split. The runoff elects VeggieCurry — the dish the most veggie voters
 can agree on — instead of the spoiler BeefBurger.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- VeggieCurry
+blocs:
+  Veggie:
+  - VeggieCurry
+  - TofuStirFry
+  - GardenSalad
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -8,6 +8,15 @@
 
 The companion case: where Ranked Robin's simple count and the literature's favourite structural axiom flatly disagree. Three voters, five candidates: A>B>C>E>D, D>C>A>B>E, E>D>B>C>A. Again every head-to-head is decided, so this is a genuine tournament, and again there is no Condorcet winner. The graph has a shape worth seeing: A, B and C form a rock-paper-scissors 3-cycle; D beats all three of them; E beats D; and A, B, C all beat E. So the whole thing is one big cycle at a higher level — {A,B,C} -> E -> D -> {A,B,C}. Because {A,B,C} is a COMPONENT (all three stand in the same relation to D and to E), the tournament decomposes into {A,B,C}, {D}, {E} with a 3-cycle summary. Composition-consistency — "choose the best from the best components" — then forces a solution to select ALL FIVE candidates, since nonemptiness and neutrality make a 3-cycle unsplittable. The uncovered, Banks and bipartisan sets duly return all five. Copeland does not. D has the most wins (3, over A, B and C) so the Copeland set is {D} alone, and Ranked Robin elects D outright with no tiebreak. That is not a bug in the engine — it is Copeland failing composition-consistency, a known and published limit of the rule (chapter Section 3.3.1), and the same arithmetic behind Ranked Robin's one clone-independence weakness, teaming (see 05_Ranked_Robin/concepts/rr_clone_independence.md). This is Figure 3.1 / 3.2 of Brandt, Brill & Harrenstein, "Tournament Solutions" (Handbook of Computational Social Choice, 2016, ch. 3) — their own three-voter profile, run through this repo's engines. Bare A-E labels match the figure on purpose. Verified two ways: LH's Ranked Robin below, and pref_voting's C1 module via tournament_solutions_report.py. LH-only: nothing here needs a live BetterVoting election, and the teaching point is the disagreement between two published rules, not a live tally.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- D
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

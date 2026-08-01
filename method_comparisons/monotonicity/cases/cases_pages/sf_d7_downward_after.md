@@ -18,6 +18,15 @@ the paradox works by changing the ORDER of elimination. The Melgar/Nguyen Round-
 gap is just 3 votes — this is a genuine knife-edge, which is why the real, full-scale
 counts (not a reduced model) are used. Companion page: downward_monotonicity_sf.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Engardio
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

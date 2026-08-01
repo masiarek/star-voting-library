@@ -15,6 +15,19 @@ MAJORITARIAN method. The majority's top three sweep every seat: Dog, Fish, Cat.
 The minority gets nothing. Contrast with the STAR-PR and STV races on the same
 ballots, where the minority earns a seat (proportional).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 3
+expected_winners:
+- Dog
+- Fish
+- Cat
+bv_election_id: kcf8vf
+bv_test_id: BV2134
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

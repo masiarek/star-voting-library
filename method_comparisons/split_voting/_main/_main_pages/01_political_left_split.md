@@ -19,6 +19,20 @@ three progressive parties. The two highest totals advance, and the automatic
 runoff elects Labour — the coalition's broad consensus pick — not the minority
 Conservative. Watch the [Vote-splitting check] confirm it.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Labour
+blocs:
+  Coalition:
+  - Green
+  - Labour
+  - SocialDem
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

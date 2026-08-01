@@ -12,6 +12,21 @@
 
 Twelve gelato voters, three flavours, a rock-paper-scissors cycle: Almond beats Berry 7-5, Berry beats Cocoa 8-4, Cocoa beats Almond 7-5. Copeland counts WINS and throws the margins away, so every flavour goes 1-1-0 and the Copeland winning set is all three. That is the whole point of the profile: the same tournament, WEIGHTED by those margins, is the Borda count — and Borda separates them (Berry +2, Almond 0, Cocoa -2). LH breaks the Copeland tie by total margin (Berry +2) and elects Berry, which is exactly the margin-weighted answer; BetterVoting falls past its head-to-head rung on a 3-way tie and picks at RANDOM, so BV's crowned winner is a coin flip and only its pairwise matrix is freezable. Structural twin of the 304-ballot textbook profile in margins_paper_exact_304.yaml.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Berry
+lot_numbers:
+- Almond
+- Berry
+- Cocoa
+bv_election_id: kdjjkq
+bv_test_id: BV2251
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

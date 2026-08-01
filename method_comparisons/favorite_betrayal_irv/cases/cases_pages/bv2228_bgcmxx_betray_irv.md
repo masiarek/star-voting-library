@@ -19,6 +19,17 @@ first is only safe when they're either very strong or have no chance at all. STA
 Ranked Robin remove the incentive: see fb_star_honest, where the HONEST ballots already
 elect Center. Concept: favorite_betrayal_voting_301.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RCV_IRV
+num_winners: 1
+expected_winners:
+- Center
+bv_election_id: bgcmxx
+bv_test_id: BV2228
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

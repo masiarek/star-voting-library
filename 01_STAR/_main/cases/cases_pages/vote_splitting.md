@@ -22,6 +22,15 @@ all three 0–5, so a chocolate lover can give BOTH chocolates a high score
 instead of choosing between them. The two highest totals advance to an
 automatic runoff, and the winner has majority support head-to-head.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- DarkChoco
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

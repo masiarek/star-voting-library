@@ -8,6 +8,15 @@
 
 13 ranked ballots, 4 candidates. Ben beats every rival head-to-head (the Condorcet / Copeland winner) and wins Ranked Robin 3-0 — even though Ada and Dan each have more first-choices. Tabulate with STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ben
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

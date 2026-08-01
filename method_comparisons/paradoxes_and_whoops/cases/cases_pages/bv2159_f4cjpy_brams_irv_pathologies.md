@@ -18,6 +18,15 @@ Live results: https://bettervoting.com/f4cjpy/results (all races LH<->BV confirm
 Lesson: bv2159_f4cjpy_brams_irv_pathologies.md
 Live on BetterVoting: https://bettervoting.com/f4cjpy/results (BV-confirmed; STAR is race 1).
 
+## Parameters (from the YAML)
+
+```yaml
+expected_winners:
+- B
+bv_election_id: f4cjpy
+bv_test_id: BV2159
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

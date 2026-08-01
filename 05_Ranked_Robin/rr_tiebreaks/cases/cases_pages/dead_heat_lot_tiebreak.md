@@ -11,6 +11,19 @@
 4 score ballots, 3 candidates. Ada and Ben are a perfect head-to-head TIE: two voters score them EQUAL (Equal Support — no preference), the other two split one each, so the matchup is 1-1. Both beat Cara outright. So Ada and Ben each go 1-0-1 (Copeland 1.5) AND their total margins are identical (+4). Ranked Robin walks the FULL tiebreak ladder — most wins (tie) -> total margin (tie) -> lot order — and only the pre-published lot [Ada, Ben, Cara] settles it, in Ada's favor. Showcases the Equal Support column and the +1/2 Copeland credit that no other case in the set exercises.
 LH-ONLY ON PURPOSE. This case is exactly where the LH and BetterVoting tiebreak rules DIVERGE. LH: most wins -> margin -> lot (fully deterministic). BetterVoting RankedRobin.ts: most wins -> head-to-head (2-way only) -> RANDOM. Here the two leaders tie each other head-to-head too, so BV would fall through to a random pick — un-freezable — which is why there is no BV election for this case. See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ada
+lot_numbers:
+- Ada
+- Ben
+- Cara
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

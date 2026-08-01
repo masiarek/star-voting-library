@@ -23,6 +23,26 @@ PAV's {A,B,C,F} in the book (Example 2.4).
 Approval original: 04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml
 Majoritarian shadow (Bloc STAR): 02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 4
+expected_winners:
+- A
+- B
+- C
+- D
+lot_numbers:
+- A
+- B
+- C
+- D
+- E
+- F
+- G
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

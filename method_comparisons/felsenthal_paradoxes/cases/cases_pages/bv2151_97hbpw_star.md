@@ -12,6 +12,17 @@ Race 3 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-co
 The same 9 voters with ranks mapped 5/3/1. Scores: Andy 19, Beth 31, Carl 31 — Beth and Carl both clear Andy and advance (no advancement tie), and Beth wins the automatic runoff 5–4. STAR elects Beth with 11 voters (BV2150: 29/37/33, runoff 7–4) and with 9: same winner either way, so the Andy voters' participation never backfired under STAR in this pair.
 Live results: https://bettervoting.com/97hbpw/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: 97hbpw
+bv_test_id: BV2151
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

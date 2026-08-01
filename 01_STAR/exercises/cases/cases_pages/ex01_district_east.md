@@ -21,6 +21,17 @@ Live on BetterVoting (Test ID BV2189): https://bettervoting.com/rhbfj7/results
 — the election carries a second, Ranked Robin race on the same opinions
 (equal ranks allowed): Elena, the district's Condorcet winner, wins it 4-0.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Avery
+bv_election_id: rhbfj7
+bv_test_id: BV2189
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

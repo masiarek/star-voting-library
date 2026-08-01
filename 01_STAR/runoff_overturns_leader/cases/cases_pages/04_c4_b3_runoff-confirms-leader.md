@@ -14,6 +14,15 @@ This is why STAR's runoff isn't "rigged against front-runners." It only overturn
 the leader when the star total and the head-to-head majority disagree (01a-03);
 when the leader really is the most-preferred candidate, the leader wins.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Blue
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

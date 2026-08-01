@@ -39,6 +39,21 @@ and verified with pref_voting (it is NOT a profile from the literature — an
 earlier draft mis-attributed a 100-voter version to Heitzig; this replaces it
 with a real, reproducible one). Companion: cycle_schulze_vs_ranked_pairs_c4_b40.yaml.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Ava
+lot_numbers:
+- Ava
+- Ben
+- Cole
+- Dana
+- Ezra
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

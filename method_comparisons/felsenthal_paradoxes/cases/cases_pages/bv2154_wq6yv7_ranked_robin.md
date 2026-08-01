@@ -12,6 +12,17 @@ Race 3 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). S
 The same 15 voters' full rankings counted by Ranked Robin (Copeland): Bruce wins both head-to-heads (April 8–7, Clara 10–5) — the Condorcet winner, elected. The three races of this election return three different winners (Approval → April, IRV → Clara, Ranked Robin → Bruce): the tabulation, not the ballot, decides.
 Live results: https://bettervoting.com/wq6yv7/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Bruce
+bv_election_id: wq6yv7
+bv_test_id: BV2154
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

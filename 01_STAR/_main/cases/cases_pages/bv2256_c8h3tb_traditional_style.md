@@ -32,6 +32,17 @@ the choose-one ballot it is imitating.
 Live results (BV2256): https://bettervoting.com/c8h3tb/results
 Lesson: 01_STAR/concepts/voting_styles/traditional.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Ella
+bv_election_id: c8h3tb
+bv_test_id: BV2256
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

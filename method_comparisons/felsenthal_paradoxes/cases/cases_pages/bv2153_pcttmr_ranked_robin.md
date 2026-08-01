@@ -12,6 +12,17 @@ Race 3 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-c
 The same 100 voters' full rankings counted by Ranked Robin (Copeland): Amos wins both head-to-heads (Bella 51–49, Chad 51–49) — the Condorcet winner, elected. A majority's first choice survives any pairwise count; it is the approval cutoff, not the ballots, that loses him.
 Live results: https://bettervoting.com/pcttmr/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Amos
+bv_election_id: pcttmr
+bv_test_id: BV2153
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

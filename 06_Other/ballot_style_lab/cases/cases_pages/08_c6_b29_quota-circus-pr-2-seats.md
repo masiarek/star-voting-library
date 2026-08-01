@@ -46,6 +46,18 @@ then rendered through each voter's ballot style. Per
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit quota_circus
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: allocated
+num_winners: 2
+expected_winners:
+- Amir
+- Bree
+bv_election_id: qdh9qp
+bv_test_id: BV2246
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

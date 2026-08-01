@@ -21,6 +21,17 @@ More Approval cases: method_comparisons/BV_Library (a real BetterVoting
 approval election) and method_comparisons/black_curtain (the same five
 voters counted by Approval vs STAR vs RCV-IRV).
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- Bob
+bv_election_id: ff6mk3
+bv_test_id: BV135
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

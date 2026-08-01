@@ -19,6 +19,16 @@ Winners: A, C. BetterVoting agrees (tieBreakType: "score", elected A, C) — thi
 case Passes; it's the Bloc analog of a runoff decided by the score tiebreaker.
 (Aside: the BV export labels votingMethod "STAR" rather than "Bloc STAR" — #904.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Bloc STAR
+num_winners: 2
+expected_winners:
+- A
+- C
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

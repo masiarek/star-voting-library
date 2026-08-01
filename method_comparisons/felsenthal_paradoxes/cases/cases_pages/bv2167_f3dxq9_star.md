@@ -12,6 +12,17 @@ Race 1 of 2 in the Minimax-elects-the-absolute-loser election (BV2167, bvid f3dx
 11 voters, four candidates: 2×(D>A>C>B), 3×(D>B>A>C), 3×(C>B>A>D), 1×(B>A>C>D), 2×(A>C>B>D). A, B, C form a top cycle (B>A 7–4, A>C 8–3, C>B 7–4); D loses every matchup 5–6 — the Condorcet loser AND absolute loser (6 of 11 rank D last). Minimax — worked on the case page; no tabulator on BV or in LH — elects D, whose worst loss (6) is the smallest (A/B/C: 7/7/8). This STAR race (ranks mapped 5/4/2/1): A 34, B 35, C 32, D 31 — B and A advance, B wins the automatic runoff 7–4. No RR race (the A/B/C Copeland tie → BV random) and no IRV race (random transfer tie).
 Live results: https://bettervoting.com/f3dxq9/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- B
+bv_election_id: f3dxq9
+bv_test_id: BV2167
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -12,6 +12,17 @@ Race 3 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV
 The same rankings with the 17 truncated ballots (only D ranked; the unranked candidates count as tied-last, Equal Support among themselves): B still wins every head-to-head (A 53–33 among voters with a preference, C 62–24, D 86–17) — the Condorcet winner, elected with full ballots and with truncated ones. Pairwise counting gives these 17 voters no truncation incentive; the elimination order (the IRV race) is what their truncation exploits.
 Live results: https://bettervoting.com/74j6vv/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- B
+bv_election_id: 74j6vv
+bv_test_id: BV2163
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

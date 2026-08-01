@@ -30,6 +30,21 @@ is the honest state of a tied choose-one election, not an engine disagreement.
 Live results (BV2257): https://bettervoting.com/q2rkfm/results
 Lesson: 06_Other/Plurality/README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Sushi
+lot_numbers:
+- Sushi
+- Tacos
+- Pizza
+bv_election_id: q2rkfm
+bv_test_id: BV2257
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

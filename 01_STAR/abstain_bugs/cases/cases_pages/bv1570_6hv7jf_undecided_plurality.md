@@ -22,6 +22,17 @@ nTallyVotes = 2, nAbstentions = 1, a 0-0 tie, resolved to Approve by lot. Same
 winner, different count — LH counts an explicit 0 as a cast vote, per the #884
 dispute.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Approve
+bv_election_id: 6hv7jf
+bv_test_id: BV1570
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

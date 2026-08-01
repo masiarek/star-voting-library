@@ -14,6 +14,27 @@ The scale check on BV2261. Nine club members sit around a table and all nine are
 So every deterministic rung ties, and BetterVoting's head-to-head rung cannot even apply (it is 2-way only, and nine are tied). Both engines reach their rung of last resort, and the question is what survives in the export. Answer: the whole nine-deep order. BV recorded tieBreakType "random", a nine-long `perm`, tieBreakOrder 0..8 on the nine tied candidates, and `other[]` listing the eight losers in that same order. Its winner, Boris, is sixth in the candidate list — this shuffle is not a no-op.
 This file pins lot_numbers to that recorded perm, so LH's lot rung replays BV's draw and elects Boris too. Independently, tools_adam/bv_replay_tiebreak.py recomputes the same perm from (9 ballots + raceId) alone — no ballot content — which is the sharp version of the point: BV's order is RECORDED and reproducible, but never DERIVABLE from how anyone voted. Companion at three candidates: bv2261_y2fbpc_tiebreak_recorded_{draws,cycle}.yaml. Lesson: 05_Ranked_Robin/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md Live results: https://bettervoting.com/2gvwr9/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Boris
+lot_numbers:
+- Boris
+- Felix
+- Greta
+- Dmitri
+- Carmen
+- Alice
+- Ivan
+- Elena
+- Hugo
+bv_election_id: 2gvwr9
+bv_test_id: BV2262
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

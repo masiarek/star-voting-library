@@ -12,6 +12,23 @@
 
 One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Copeland ties Abby and Brad. LH breaks the tie by total margin → Abby; BetterVoting breaks it head-to-head (Brad beats Abby 463–458) → Brad. A documented LH-vs-BV tiebreak DIVERGENCE: expected_winners is LH's Abby; BV's live result is Brad.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Abby
+lot_numbers:
+- Dave
+- Cora
+- Abby
+- Brad
+- Erin
+bv_election_id: cxrf8v
+bv_test_id: BV2138
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

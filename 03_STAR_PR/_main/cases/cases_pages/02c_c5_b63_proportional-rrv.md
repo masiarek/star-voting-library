@@ -10,6 +10,17 @@ Same majority/minority ballots as the other proportional examples, tabulated
 with Reweighted Range Voting (RRV). Older and not part of STAR's score-then-
 runoff family, but it also seats the minority bloc — included for comparison.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: rrv
+num_winners: 3
+expected_winners:
+- Alice
+- Ben
+- Dan
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

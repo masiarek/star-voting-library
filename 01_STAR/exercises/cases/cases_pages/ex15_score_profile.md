@@ -34,6 +34,17 @@ Exercise page: ../ex15_read_the_ballot.md
 Live results: https://bettervoting.com/tfm64p/results (BV2259 — BetterVoting's
 own STAR count agrees: Clara.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Clara
+bv_election_id: tfm64p
+bv_test_id: BV2259
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

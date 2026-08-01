@@ -12,6 +12,17 @@ Race 1 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). S
 15 voters, rankings 6×(April>Bruce>Clara), 4×(Bruce>Clara>April), 1×(Clara>April>Bruce), 4×(Clara>Bruce>April). The social ordering is Bruce>Clara>April: April is the Condorcet LOSER and the ABSOLUTE loser (an absolute majority — 8 of 15 — rank April dead last). But if the single Clara>April>Bruce voter approves the top two while everyone else bullet-votes, the approval totals are April 7, Bruce 4, Clara 5 — APPROVAL ELECTS APRIL: the Condorcet-loser and Absolute-loser paradoxes under Approval, triggered by one voter's cutoff choice.
 Live results: https://bettervoting.com/wq6yv7/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Approval
+num_winners: 1
+expected_winners:
+- April
+bv_election_id: wq6yv7
+bv_test_id: BV2154
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

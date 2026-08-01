@@ -21,6 +21,19 @@ check] confirm the 60-vote coalition. ("Most votes" and "over half" are differen
 bars; the gap only appears with 3+ candidates — that gap is where vote splitting
 lives.)
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Blake
+blocs:
+  Coalition:
+  - Blake
+  - Carmen
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

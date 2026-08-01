@@ -20,6 +20,24 @@ each — Uma plus two Home candidates win, 2-1. The 40% minority earns a seat
 because SNTV rewards concentrating votes (and punishes over-nominating). This is
 the majoritarian sweep of Block Voting turned into rough proportionality.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 3
+expected_winners:
+- Uma
+- Ada
+- Ben
+lot_numbers:
+- Ada
+- Ben
+- Cal
+- Uma
+- Val
+- Wren
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

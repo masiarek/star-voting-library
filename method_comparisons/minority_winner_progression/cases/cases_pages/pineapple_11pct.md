@@ -16,6 +16,17 @@ Condorcet winner, and STAR / Ranked Robin / Approval still find it. The more cro
 the menu, the sillier Choose-One's winner looks — and the more it matters that a
 method read the whole ballot. Lesson: README.md
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Cheese
+bv_election_id: h34pp9
+bv_test_id: BV2218
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

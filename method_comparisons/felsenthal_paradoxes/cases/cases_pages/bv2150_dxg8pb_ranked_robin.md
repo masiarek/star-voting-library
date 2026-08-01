@@ -12,6 +12,17 @@ Race 2 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-co
 The same 11 ranked ballots counted by Ranked Robin (Copeland): Beth wins both her head-to-heads (Andy 6–5, Carl 7–4) — the Condorcet winner, elected directly. No cycle here, so the count is fully deterministic on BetterVoting too.
 Live results: https://bettervoting.com/dxg8pb/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: RankedRobin
+num_winners: 1
+expected_winners:
+- Beth
+bv_election_id: dxg8pb
+bv_test_id: BV2150
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

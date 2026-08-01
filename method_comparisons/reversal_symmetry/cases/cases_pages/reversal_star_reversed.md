@@ -12,6 +12,15 @@ RCV-IRV (which elects A both ways), STAR's "best" and "worst" here are not the s
 Scope note per ../README.md: this demonstrates STAR avoiding the winner=loser on this example,
 not a general reversal-symmetry proof. Condorcet cycle electorate.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- A
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

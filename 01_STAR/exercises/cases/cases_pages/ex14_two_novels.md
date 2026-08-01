@@ -33,6 +33,18 @@ bisection (BV2203-2205) and ready-to-file issue:
 engine's; BV STV races whose endgame leaves a hopeful standing
 (ywckmg, kcf8vf, 39py93) compute fine.
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STV
+num_winners: 2
+expected_winners:
+- Austen
+- Camus
+bv_election_id: tk776t
+bv_test_id: BV2201
+```
+
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

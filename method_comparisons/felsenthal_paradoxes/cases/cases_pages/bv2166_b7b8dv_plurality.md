@@ -12,6 +12,17 @@ Race 2 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-con
 The 13 remaining voters under Choose-One: first choices Amy 4, Boone 4, Cass 5 → Cass, exactly as with all 15 (BV2165). The first-choice count never wavers; the no-show flips live in Coombs' elimination (on paper) and STAR's runoff (live).
 Live results: https://bettervoting.com/b7b8dv/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: Plurality
+num_winners: 1
+expected_winners:
+- Cass
+bv_election_id: b7b8dv
+bv_test_id: BV2166
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

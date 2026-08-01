@@ -12,6 +12,17 @@ Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (
 The same 32 ballots with ranks mapped 5/3/1. Scores: Alma 88, Bruno 98, Cora 102 — Cora and Bruno advance, and Bruno wins the automatic runoff 18–14. STAR elects Bruno in District I, District II, AND the combined electorate — consistent where the runoff procedure flips to Alma. (Honesty note: STAR is consistent in THIS election, but methods with a runoff stage are not reinforcement-proof in general.)
 Live results: https://bettervoting.com/byk9v2/results
 
+## Parameters (from the YAML)
+
+```yaml
+voting_method: STAR
+num_winners: 1
+expected_winners:
+- Bruno
+bv_election_id: byk9v2
+bv_test_id: BV2149
+```
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
