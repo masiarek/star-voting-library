@@ -1,5 +1,5 @@
 election_title: "No Condorcet winner (a cycle) — Ranked Robin still elects one"
-election_description: >-
+scenario_description: >-
   7 ranked ballots, 3 candidates, in a rock-paper-scissors cycle: Ada beats Ben, Ben beats
   Cara, Cara beats Ada. NO candidate beats both others, so there is NO Condorcet winner.
   Ranked Robin still produces a winner: everyone has a 1-1 record, so it breaks the tie by

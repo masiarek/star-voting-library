@@ -1,5 +1,5 @@
 election_title: "BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV"
-election_description: >-
+scenario_description: >-
   The electowiki clone-independence example, part 2 (teaming), BV-backed. Same
   election as BV2142 but the A-faction runs clones A1, A2. The two engines reach
   OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by

@@ -1,5 +1,5 @@
 election_title: "BV2140 — Ranked Robin worked example: most pairwise wins, no Condorcet winner (electowiki)"
-election_description: >-
+scenario_description: >-
   The electowiki Ranked Robin worked example (electowiki.org/wiki/Ranked_Robin),
   and the first repo case built on EQUAL-RANK ballots. 35 voters, five candidates
   (Ava, Bianca, Cedric, Deegan, Eli); several ballots tie candidates (e.g.

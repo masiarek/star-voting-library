@@ -1,5 +1,5 @@
 election_title: "BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak"
-election_description: >-
+scenario_description: >-
   The electowiki clone-independence example, part 1 (before cloning), BV-backed.
   33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The
   engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C

@@ -1,5 +1,5 @@
 election_title: "Ranked Robin — winning the most matchups does NOT make you the Condorcet winner"
-election_description: >-
+scenario_description: >-
   18 ranked ballots, 5 candidates, three equal blocs. A counterexample to a claim
   that circulates in voting-reform discussion: "if you win head-to-head against
   more candidates than anyone else, you must be the Condorcet winner."

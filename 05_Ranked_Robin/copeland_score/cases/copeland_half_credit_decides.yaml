@@ -1,5 +1,5 @@
 election_title: "Ranked Robin — the half-point for a draw decides the election (LH-only)"
-election_description: >-
+scenario_description: >-
   30 ranked ballots, 5 candidates: the chess club elects its president. This case
   isolates the ONE thing that separates the Copeland score from a raw win count —
   the half-credit a drawn matchup earns.

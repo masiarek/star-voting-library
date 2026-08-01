@@ -115,7 +115,8 @@ Full rundown of the whole block, option by option: **[LH reporting options](../.
 | `expected_winners` | **yes, for a test case** | Top-level list of winner name(s). This is the key the automated test suite discovers and asserts. |
 | `expected_results` | optional | Richer answer key — per-round scores, the runoff, turnout/quorum figures — beyond the bare winner. Emitted by the BetterVoting converter; the engine reads it the same way. |
 | `election_title` | optional | One-line human title, printed as the report header. |
-| `scenario_description` | optional | Printable context (shown only if `show_description: true`; always in `_tabulated`). |
+| `scenario_description` | optional | Printable context — the teaching text (shown only if `show_description: true`; always in `_tabulated`). |
+| `election_description` | BV-backed cases only | The BetterVoting election's own live blurb (results link, agreement note), kept distinct from the teaching text above. Don't use it as a synonym for `scenario_description` — that older usage was normalized away 2026-08. |
 | `video_script` | optional (discouraged) | Free-text authoring note; never shown on screen. Keep it a terse factual note if used at all — **do not** write scripted "SAY / HOW / WHY / POINT OUT / TRANSITION" presenter copy (that style was removed repo-wide, 2026-07-23). |
 | `options` | optional | On-screen display flags (see template comments). The `_tabulated` copy ignores them and always shows everything. |
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |

@@ -1,5 +1,5 @@
 election_title: "No Condorcet winner and Ranked Robin"
-election_description: >-
+scenario_description: >-
   STAR elects B; so does Ranked Robin. But NO candidate beats all five rivals head-to-head, so there is no Condorcet winner (the Condorcet column in the sweep CSV is blank). 
   
   Ranked Robin still produces a winner —  whoever wins the most matchups — and that is B.

@@ -1,5 +1,5 @@
 election_title: "BV2133 — Pet poll II (RCV-IRV): transfers elect Fish"
-election_description: >-
+scenario_description: >-
   One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr).
   RCV-IRV (ranked, instant runoff). Round 1: Dog 13, Fish 10, Bird 9 — eliminate
   Bird; Bird > Cat, so Cat rises. Then Cat (fewest) is eliminated and its ballots

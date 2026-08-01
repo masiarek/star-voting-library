@@ -1,5 +1,5 @@
 election_title: "BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville)"
-election_description: >-
+scenario_description: >-
   The textbook Tennessee example, and the first BV-backed Ranked Robin case.
   Four cities; each voter ranks by geographic distance; blocs weighted by
   population (Memphis 42, Nashville 26, Chattanooga 15, Knoxville 17). On ONE

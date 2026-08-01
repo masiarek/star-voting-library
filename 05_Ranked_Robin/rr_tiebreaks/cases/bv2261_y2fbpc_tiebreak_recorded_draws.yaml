@@ -1,5 +1,5 @@
 election_title: "BV2261 race 1 — a perfectly balanced electorate: every pair draws, the tiebreak is recorded"
-election_description: >-
+scenario_description: >-
   Six voters, three candidates, and the most evenly balanced electorate that can
   exist: all six possible rankings of Anika, Beto and Cleo appear exactly once. Every
   head-to-head therefore draws 3-3, every candidate goes 0-0-2 for a Copeland score of

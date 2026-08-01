@@ -1,5 +1,5 @@
 election_title: "BV2261 race 2 — a Condorcet cycle: every pair has a winner, and the tiebreak is still recorded"
-election_description: >-
+scenario_description: >-
   The same six voters and the same three candidates as race 1, arranged the other way.
   Here nothing draws: Anika beats Beto 4-2, Beto beats Cleo 4-2, and Cleo beats Anika
   4-2 — a textbook Condorcet cycle. Every candidate goes 1-1-0 for a Copeland score of

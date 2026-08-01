@@ -2,7 +2,7 @@ election_title: "BV2209 — Burial in Ranked Robin (2/2): fifteen voters rank th
 bv_test_id: BV2209
 bv_election_id: fxhw6g
 bv_results_url: https://bettervoting.com/fxhw6g/results
-election_description: >-
+scenario_description: >-
   The burial. Same 42 voters as part 1 (bv2208_7q6by8_burial_sincere.yaml),
   except the 15 Amber-first voters now rank Amber>Coral>Diamond>Beryl —
   burying Beryl, their honest SECOND choice, below two gems they like less.

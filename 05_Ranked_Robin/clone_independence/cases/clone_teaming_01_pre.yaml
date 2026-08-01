@@ -1,5 +1,5 @@
 election_title: "Clone independence (1/2) — before cloning: A, B, C tie in a cycle"
-election_description: >-
+scenario_description: >-
   The electowiki Ranked Robin clone-independence example, part 1 of 2 (the
   "before"). 33 voters, six candidates; A, B, C sit in a top cycle (A beats B,
   B beats C, C beats A) and tie for the most pairwise wins (4 each). Ranked

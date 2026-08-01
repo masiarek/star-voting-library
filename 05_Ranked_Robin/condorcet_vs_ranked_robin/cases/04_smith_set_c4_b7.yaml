@@ -1,5 +1,5 @@
 election_title: "The Smith set — the smallest club that beats everyone outside it"
-election_description: >-
+scenario_description: >-
   The 02_cycle election (Ada beats Ben, Ben beats Cara, Cara beats Ada — no
   Condorcet winner) with ONE change: a fourth candidate, Dave, whom every voter
   ranks last. All three cycle members beat Dave 7-0, and no smaller group beats

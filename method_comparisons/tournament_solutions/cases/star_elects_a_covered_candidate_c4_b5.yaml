@@ -1,5 +1,5 @@
 election_title: "STAR elects a covered candidate — five ballots, four cities"
-election_description: >-
+scenario_description: >-
   A candidate is COVERED when someone beats them AND beats everyone they beat:
   strictly redundant, on the pairwise evidence alone. The uncovered set — the
   candidates nobody covers — is the weakest structural filter in the

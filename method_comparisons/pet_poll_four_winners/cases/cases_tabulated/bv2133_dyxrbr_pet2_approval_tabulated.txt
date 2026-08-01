@@ -4,7 +4,7 @@ TABULATED FILE:  bv2133_dyxrbr_pet2_approval_tabulated.txt
 ======================================================================
 
 election_title: "BV2133 — Pet poll II (Approval): broad support elects Bird"
-election_description: >-
+scenario_description: >-
   One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr).
   This is the Approval race (approve any pet, 1 = approve). Bird is approved by the
   9 Bird-first voters and the 10 Fish-first voters (who approve Cat, Fish, Bird) =

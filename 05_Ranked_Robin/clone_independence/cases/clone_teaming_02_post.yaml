@@ -1,5 +1,5 @@
 election_title: "Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win"
-election_description: >-
+scenario_description: >-
   The electowiki Ranked Robin clone-independence example, part 2 of 2 (the
   "after"). Same election as part 1, but the A-faction now runs two clones,
   A1 and A2 (voters rank them together, A1>A2, in A's old slot). This "teaming"

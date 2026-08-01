@@ -3,7 +3,7 @@ SOURCE FILE:     vcl_c4_b9_score_vs_runoff.yaml
 TABULATED FILE:  vcl_c4_b9_score_vs_runoff_tabulated.txt
 ======================================================================
 
-title: The valuable Condorcet loser — Score elects her, the runoff rejects her
+election_title: The valuable Condorcet loser — Score elects her, the runoff rejects her
 voting_method: STAR
 num_winners: 1
 

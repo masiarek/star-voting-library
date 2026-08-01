@@ -293,8 +293,12 @@ def _find_key(node, keys):
 # `expected_winers:`) silently removes the file from test discovery, which is
 # exactly the failure class this check exists to catch.
 ELECTION_KEYS = {
-    "election_title", "title",
-    "scenario_description", "election_description", "race_description",
+    "election_title",
+    # scenario_description = the teaching text; election_description = the
+    # BetterVoting election's own live blurb (only meaningful in BV-backed
+    # cases, where both may appear). The old use of election_description as a
+    # synonym for the teaching text was normalized away 2026-08-01.
+    "scenario_description", "election_description",
     "voting_method", "num_winners", "ballots",
     "expected_winners", "expected_results",
     "options", "lot_numbers", "eligible_voters", "quorum", "blocs",

@@ -1,5 +1,5 @@
 election_title: "Five defensible answers, one three-ballot election (tournament solutions)"
-election_description: >-
+scenario_description: >-
   The smallest election that makes the whole tournament-solutions literature
   necessary. Three voters, four candidates, ballots that are just one ranking
   rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties),
