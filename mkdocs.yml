@@ -33,6 +33,7 @@ use_directory_urls: false
 # (whose content already IS the homepage — index.md inlines it at build time).
 not_in_nav: |
   /CLAUDE.md
+  /CONTRIBUTING.md
   /THIRD_PARTY_LICENSES.md
   /readme.md
 

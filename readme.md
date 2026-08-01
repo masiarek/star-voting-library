@@ -43,7 +43,7 @@ Under the hood it does three things:
 
 Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.
 
-> **Contributors / running it locally →** the [**Repository & Engine Guide**](07_Concepts/about_this_repo/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](07_Concepts/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
+> **Contributors / running it locally →** start at [**CONTRIBUTING.md**](CONTRIBUTING.md) (setup + the edit-regenerate-test loop). The [**Repository & Engine Guide**](07_Concepts/about_this_repo/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. Guided tour: [Start Here](07_Concepts/00_START_HERE.md). House conventions: [CLAUDE.md](CLAUDE.md).
 
 ---
 
@@ -57,7 +57,7 @@ Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larr
 - [Scored (rated) vs. ranked ballots](07_Concepts/topics/scoring-methods-vs-ranked-voting.md) — the distinction people most often conflate
 - [Concepts — deep-dive pages for the important terms](07_Concepts/) — center squeeze, monotonicity, tie-breaking, STAR vs IRV…
 - [Repository & Engine Guide](07_Concepts/about_this_repo/repository_guide.md) — repository map, quick-start commands, method dispatch, validation, the vendored engine
-- [CLAUDE.md — working guidance for this repo](CLAUDE.md) — house conventions for contributing consistently
+- [CONTRIBUTING.md](CONTRIBUTING.md) — setup and the contributor loop · [CLAUDE.md](CLAUDE.md) — the house conventions in full
 
 ---
 

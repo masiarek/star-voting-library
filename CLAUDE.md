@@ -1,45 +1,14 @@
 # CLAUDE.md — working guidance for this repo
 
-Standing instructions for Claude when working in this project. 
+Standing instructions for Claude when working in this project — and the house
+conventions for anyone contributing (human front door: [CONTRIBUTING.md](CONTRIBUTING.md)).
+The Claude-only operational grants live at the [bottom of this file](#agent-operations-claude-specific).
 
 ## What this is
 A **STAR Voting education** repo built on a fork of Larry Hastings' `starvote`
 (single-winner STAR engine + extra reporting), plus a vendored RCV-IRV engine,
 example YAML elections, teaching docs, and Larry↔Adam conversation scripts.
 Audience: voters, presenters, and debaters learning/teaching STAR.
-
----
-
-## File access (standing permission from Adam)
-
-Adam grants Claude permission to **read, edit, and delete** files anywhere under
-`/Volumes/T7/Voting/Larry Hastings/YAML` (this repo). No need to ask before
-modifying or removing files here as part of a requested task. (Note: file
-*deletion* is also gated by the app's permission layer, so a new session may
-still prompt once to enable it — approve and proceed.)
-
----
-
-## Working autonomy (standing instruction from Adam — 2026-07-24)
-
-**Be self-driven. Don't wait for approval.** Adam's words: *"You have very good
-sense of direction — I agree with 99%, and even if we go the wrong direction these
-are educational materials, mostly. This is not critical code that must be carefully
-reviewed. I am reading these pages and coming back to you if I find something
-questionable. So please be more self-driven, no need to wait for my approvals."*
-
-So: when you've analyzed a task and have a clear, sensible direction, **just do it** —
-build the page, write the case, make the edit, commit, and push. Don't stop to ask
-"want me to build this?" or offer a menu of options and wait. **Tell Adam what you
-did** (a short summary + what changed), and flag anything genuinely uncertain so he
-can spot-check while reading. Adam is the reviewer-after-the-fact, not a gate you
-wait at.
-
-Still confirm for the genuinely irreversible / outward-facing (per the safety rules):
-creating **permanent public BetterVoting elections** (they can't be deleted — lock
-the ballot set first), sending anything on Adam's behalf, or a destructive action you
-can't undo. Everything internal to this repo — edits, new pages, deletions, commits,
-pushes (standing auth) — proceeds without asking.
 
 ---
 
@@ -527,3 +496,41 @@ reproduce loop is in the **`bettervoting` skill**.
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention
 question isn't covered by the `07_Concepts/` docs, ask rather than guess.
+
+---
+
+## Agent operations (Claude-specific)
+
+*Everything below is operational instruction from Adam to Claude — human
+contributors can stop reading here.*
+
+### File access (standing permission from Adam)
+
+Adam grants Claude permission to **read, edit, and delete** files anywhere in
+this repo's working copy — whether that's the T7 checkout
+(`/Volumes/T7/Voting/Larry Hastings/YAML`) or a fresh clone of
+`masiarek/star-voting-library`. No need to ask before modifying or removing
+files here as part of a requested task. (Note: file *deletion* is also gated by
+the app's permission layer, so a new session may still prompt once to enable
+it — approve and proceed.)
+
+### Working autonomy (standing instruction from Adam — 2026-07-24)
+
+**Be self-driven. Don't wait for approval.** Adam's words: *"You have very good
+sense of direction — I agree with 99%, and even if we go the wrong direction these
+are educational materials, mostly. This is not critical code that must be carefully
+reviewed. I am reading these pages and coming back to you if I find something
+questionable. So please be more self-driven, no need to wait for my approvals."*
+
+So: when you've analyzed a task and have a clear, sensible direction, **just do it** —
+build the page, write the case, make the edit, commit, and push. Don't stop to ask
+"want me to build this?" or offer a menu of options and wait. **Tell Adam what you
+did** (a short summary + what changed), and flag anything genuinely uncertain so he
+can spot-check while reading. Adam is the reviewer-after-the-fact, not a gate you
+wait at.
+
+Still confirm for the genuinely irreversible / outward-facing (per the safety rules):
+creating **permanent public BetterVoting elections** (they can't be deleted — lock
+the ballot set first), sending anything on Adam's behalf, or a destructive action you
+can't undo. Everything internal to this repo — edits, new pages, deletions, commits,
+pushes (standing auth) — proceeds without asking.
