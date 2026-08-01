@@ -2,7 +2,7 @@
 
 *rb-j (Robert Bristow-Johnson), arguing the Condorcet case on r/EndFPTP, walked through a **burial** attack on the real [Alaska 2022](../alaska_2022/) numbers: a bloc of Peltola voters insincerely rank the Condorcet winner **Begich** last, manufacturing a cycle to knock him out. His own honest finding — which this page reproduces and verifies — is that **the attack's success depends entirely on the completion method.** Margin-based Condorcet methods (MinMax, Schulze, Ranked Pairs) shrug it off; a runoff/Hare completion falls for it. The deeper lesson is the even-handed one this repo keeps landing on: **no method is strategy-proof — not even Condorcet.***
 
-→ Related: [Alaska 2022 (the honest case)](../alaska_2022/) · [the 5-1-0 challenge](../star_5_1_0_challenge/) (STAR's strategy edge) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · [Condorcet](../../07_Concepts/topics/condorcet/) · [burial vs Ranked Robin](../../05_Ranked_Robin/burial/).
+→ **Topic hub: [Burial](../../07_Concepts/topics/burial/)** (the cross-method view — Copeland, Borda, STAR and IRV side by side). Related: [Alaska 2022 (the honest case)](../alaska_2022/) · [the 5-1-0 challenge](../star_5_1_0_challenge/) (STAR's strategy edge) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · [Condorcet](../../07_Concepts/topics/condorcet/) · [burial vs Ranked Robin](../../05_Ranked_Robin/burial/).
 
 ---
 

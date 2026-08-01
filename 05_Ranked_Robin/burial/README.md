@@ -1,6 +1,6 @@
 # 05_Ranked_Robin/burial — the worked burial pair
 
-**Burial is to Condorcet methods what [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) is to IRV: the signature strategic wart.** Rank the frontrunner *last* — below candidates you honestly like less — manufacture a cycle, and win on the record. This repo shows IRV's wart loudly and often, so it shows Ranked Robin's the same way: a sincere election a compromise wins cleanly, and the coordinated lie that takes it from her. Live, triple-checked, deterministic on every engine.
+**Burial is to Condorcet methods what [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) is to IRV: the signature strategic wart.** Rank the frontrunner *last* — below candidates you honestly like less — manufacture a cycle, and win on the record. (Signature, not exclusive: burial works on Borda and STAR too, and only IRV largely escapes it. All four, side by side → the [Burial topic hub](../../07_Concepts/topics/burial/README.md).) This repo shows IRV's wart loudly and often, so it shows Ranked Robin's the same way: a sincere election a compromise wins cleanly, and the coordinated lie that takes it from her. Live, triple-checked, deterministic on every engine.
 
 **▶ Live on BetterVoting:**
 - Part 1, sincere: [vote](https://bettervoting.com/7q6by8) · **[results ↗](https://bettervoting.com/7q6by8/results)** (election `7q6by8`, Test ID BV2208)
