@@ -3302,14 +3302,14 @@ if __name__ == "__main__":
     # election file is open in the editor is the one that gets tabulated. Open
     # the next file, hit Run again.
     #
-    #   python starvote_larry_hastings.py elections_illustrations/99_01 tennessee_capital.yaml
+    #   python starvote_larry_hastings.py 01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml
     #
     # A .yaml/.yml file also supplies its own num_winners -> SEATS,
     # voting_method -> METHOD, and an optional `options:` block (see below).
     #
     # Add  --save  to write the result back into the YAML as an
     # `expected_results:` block (winners + plain-text report):
-    #   python starvote_larry_hastings.py elections_illustrations/99_01 tennessee_capital.yaml --save
+    #   python starvote_larry_hastings.py 01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml --save
     args = [a for a in sys.argv[1:]]
     SAVE_RESULTS = "--save" in args
     positional = [a for a in args if not a.startswith("-")]

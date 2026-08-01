@@ -11,8 +11,9 @@ Examples:
     python generate_names_candidates.py -o myvote.yaml    # write to a file
     python generate_names_candidates.py --seats 2         # multi-winner (Bloc)
 
-By default the YAML is printed AND written into ../elections_illustrations/ with a
-generated filename. Use --no-write to only print.
+By default the YAML is printed AND written into the repo root's _generated/
+(gitignored scratch) with a generated filename — move it into the right
+method folder's cases/ when you keep it. Use --no-write to only print.
 """
 
 import argparse
@@ -307,8 +308,8 @@ if __name__ == "__main__":
             stamp = datetime.datetime.now().strftime("%H%M%S")
             suffix = secrets.token_hex(2)
             out = (
-                Path(__file__).resolve().parent.parent
-                / "elections_illustrations"
+                Path(__file__).resolve().parent.parent.parent
+                / "_generated"
                 / f"gen_{theme}_{stamp}_{suffix}.yaml"
             )
         out.parent.mkdir(parents=True, exist_ok=True)

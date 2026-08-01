@@ -2,10 +2,11 @@
 """
 add_expected_winners.py
 =======================
-One-time / refresh helper: tabulate every election file under
-elections_illustrations/ and embed an `expected_winners:` list into each YAML
+One-time / refresh helper: tabulate every election file under --root (default:
+the repo's teaching dirs) and embed an `expected_winners:` list into each YAML
 (unless it already has one, or --force is given). The test suite asserts the
-engine still elects exactly these winners.
+engine still elects exactly these winners. Negative fixtures
+(YAML_library/2_negative) and generated/_tabulated trees are skipped.
 
 Only the winners are recorded — no verbatim report text — so the expectations
 stay robust to display/formatting changes.
@@ -32,8 +33,15 @@ def scenario_files(root):
     out = []
     for p in sorted(root.rglob("*")):
         if p.is_file() and p.suffix.lower() in YAML_EXTS:
-            if not any(part.endswith("_tabulated") for part in p.relative_to(root).parts):
-                out.append(p)
+            parts = p.relative_to(root).parts
+            if any(part.endswith(("_tabulated", "_generated", "_pages"))
+                   or part.endswith("_tabulation_engine")
+                   or part in ("2_negative", "site", ".venv", ".git",
+                               "__pycache__", "test_elections",
+                               "STARVote_LH_tabulation_engine")
+                   for part in parts):
+                continue
+            out.append(p)
     return out
 
 
@@ -55,7 +63,8 @@ def strip_existing_block(text):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--root", default=str(ENGINE_DIR / "elections_illustrations"))
+    ap.add_argument("--root", default=str(ENGINE_DIR.parent),
+                    help="folder to scan (default: the whole repo's teaching dirs)")
     ap.add_argument("--force", action="store_true", help="rewrite even if present")
     args = ap.parse_args(argv)
 

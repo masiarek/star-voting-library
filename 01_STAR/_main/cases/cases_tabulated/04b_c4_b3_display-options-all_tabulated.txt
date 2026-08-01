@@ -4,8 +4,8 @@ TABULATED FILE:  04b_c4_b3_display-options-all_tabulated.txt
 ======================================================================
 
 # Single-race demo exercising EVERY supported field and `options:` flag.
-# Run:  python starvote_larry_hastings.py \
-#         "elections_illustrations/01_Single_winner/04b_c4_b3_display-options-all.yaml"
+# Run:  python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
+#         "01_STAR/_main/cases/04b_c4_b3_display-options-all.yaml"
 
 # election_title + scenario_description print as a header above the results.
 election_title: All options demo

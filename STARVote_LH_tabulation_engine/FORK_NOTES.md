@@ -15,7 +15,7 @@ This directory contains a **vendored fork** of Larry Hastings' STAR Voting engin
 
 **Rule of thumb:** "Would Larry want this in the engine for everyone?" → it goes in `starvote/`. "Is this about *my* analysis, display, or workflow?" → it goes in our script/tools.
 
-> Our wrapper script (`starvote_larry_hastings.py`), its display options, the `_tabulated` output format, and the `tools_adam/tabulate_all.py` batch runner are documented in **[starvote_larry_hastings.py — presentation wrapper](README_larry_hastings.md)**.
+> Our wrapper script (`starvote_larry_hastings.py`), its display options, and the `_tabulated` output format are documented in **[starvote_larry_hastings.py — presentation wrapper](README_larry_hastings.md)**.
 
 ## Upstream baseline
 

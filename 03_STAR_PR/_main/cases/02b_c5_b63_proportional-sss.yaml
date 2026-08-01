@@ -1,6 +1,6 @@
 # Proportional multi-winner example: Sequentially Spent Score (SSS).
-# Run: python starvote_larry_hastings.py \
-#        "elections_illustrations/02_Multi_winner/02b_c5_b21_proportional-sss.yaml"
+# Run: python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
+#        "03_STAR_PR/_main/cases/02b_c5_b63_proportional-sss.yaml"
 #
 # SSS is a modern proportional-score method with strong monotonicity behaviour.
 # After each seat, the ballots that elected the winner have score "spent" in

@@ -4,8 +4,8 @@ TABULATED FILE:  02a_c5_b63_proportional-allocated-score_tabulated.txt
 ======================================================================
 
 # Proportional multi-winner example: Allocated Score Voting (Proportional STAR).
-# Run: python starvote_larry_hastings.py \
-#        "elections_illustrations/02_Multi_winner/02a_c5_b21_proportional-allocated-score.yaml"
+# Run: python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
+#        "03_STAR_PR/_main/cases/02a_c5_b63_proportional-allocated-score.yaml"
 #
 # Unlike Bloc STAR (where a cohesive majority can sweep every seat),
 # proportional methods reweight ("spend") ballots after each seat is filled,

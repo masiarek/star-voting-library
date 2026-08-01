@@ -2,16 +2,14 @@
 
 A thin presentation/automation layer over the vendored `starvote` engine (see `FORK_NOTES.md`). The engine does the tabulation; this script handles how elections are **loaded, run, displayed, and saved**. It never duplicates engine logic — it `import starvote` and feeds it ballots.
 
-Use it to run a single election file, or use `tools_adam/tabulate_all.py` to run every illustration at once.
+Use it to run a single election file; every run also refreshes that file's committed `_tabulated` mirror.
 
 ## Quick start
 
 ```bash
-# Run one election file (YAML or starvote CSV)
-python starvote_larry_hastings.py "elections_illustrations/99_01 tennessee_capital.yaml"
-
-# Run every election under elections_illustrations/ and write results
-python tools_adam/tabulate_all.py
+# Run one election file (YAML or starvote CSV), from the repo root
+uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
+    01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml
 ```
 
 Color is shown automatically in a real terminal and in PyCharm's run console. Set `NO_COLOR=1` to force plain output anywhere.
@@ -92,10 +90,8 @@ Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendo
 Every run of a file also writes a plain-text copy into a sibling **mirror folder** whose name is the source folder + `_tabulated`, with the file itself also suffixed `_tabulated`:
 
 ```
-elections_illustrations/Multi_winner/foo.yaml
-  -> elections_illustrations/Multi_winner_tabulated/foo_tabulated.txt
-elections_illustrations/bar.yaml
-  -> elections_illustrations_tabulated/bar_tabulated.txt
+03_STAR_PR/_main/cases/foo.yaml
+  -> 03_STAR_PR/_main/cases/cases_tabulated/foo_tabulated.txt
 ```
 
 Each `_tabulated.txt` contains:
@@ -117,17 +113,18 @@ Each `_tabulated.txt` contains:
 
 Add `--save` to additionally embed an `expected_results:` block (winners + plain-text report) back into the source YAML.
 
-## Batch runner — `tools_adam/tabulate_all.py`
+## Keeping mirrors fresh
 
-```bash
-python tools_adam/tabulate_all.py            # scans elections_illustrations/
-python tools_adam/tabulate_all.py --root other/folder
-```
+There is deliberately no wipe-everything batch runner anymore (the old
+`tabulate_all.py` predates the per-`cases/` mirror layout and was retired
+2026-08). Re-run the file(s) you changed — each run rewrites its own mirror —
+and `tests/test_tabulated_mirrors_current.py` fails naming any mirror whose
+source YAML changed without a re-run. Pages/index regeneration:
+`tools_adam/scripts/regen_all.py`.
 
-It finds every election file (skipping `*_tabulated` mirrors), **wipes** the `_tabulated` mirror folders so output always reflects current inputs, then runs each file (each writing its full `_tabulated.txt`). Wiping is best-effort: on filesystems that block deletion it warns instead of crashing and overwrites in place.
+## Example library
 
-## Example library (`elections_illustrations/`)
-
-- `Single_winner/` — STAR basics (1–3 candidates / ballots), voting styles (bullet vote, protest vote).
-- `Multi_winner/` — minimal Bloc STAR, and proportional examples (`allocated`, `sss`, `rrv`) sharing the same ballots so you can compare how a cohesive minority earns a seat that Bloc STAR would deny.
-- Top level — the Tennessee classic, plus display-option demos (`with_options.yaml`, `with_options2.yaml`).
+The example elections live in the repo's method folders (`01_STAR/` …
+`06_Other/`, `method_comparisons/`), each under a `cases/` directory with its
+`cases_tabulated/` mirrors and generated `cases_pages/`. Browse them all by
+method in the [YAML test-case index](../07_Concepts/YAML_test_case_index/README.md).

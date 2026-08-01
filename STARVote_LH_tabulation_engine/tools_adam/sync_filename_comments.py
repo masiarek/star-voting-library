@@ -7,9 +7,8 @@ Ensure every scenario file ends with a trailing comment naming itself:
     # file: 01a_c2_b1_two-candidates.yaml
 
 A comment can't update itself when you rename the file, so run this after a
-rename (or as part of tabulate_all.py) and it rewrites that last line to match
-the file's CURRENT name. Any previous '# file:' trailer is replaced, so it never
-accumulates or goes stale.
+rename and it rewrites that last line to match the file's CURRENT name. Any
+previous '# file:' trailer is replaced, so it never accumulates or goes stale.
 
 Usage:
     python tools_adam/sync_filename_comments.py            # apply to all
@@ -21,14 +20,30 @@ import sys
 from pathlib import Path
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
-ROOT = ENGINE_DIR / "elections_illustrations"
+REPO_ROOT = ENGINE_DIR.parent
+# The content dirs that hold teaching YAMLs (same roots the hygiene checker
+# polices); generated/_tabulated/engine dirs are skipped below.
+TEACHING_ROOTS = ["01_STAR", "02_STAR_Bloc", "03_STAR_PR", "04_Approval",
+                  "05_Ranked_Robin", "method_comparisons", "06_Other",
+                  "07_Concepts", "YAML_library"]
 PREFIX = "# file:"
 
 
 def scenario_files():
-    for p in sorted(ROOT.rglob("*")):
-        if p.is_file() and p.suffix.lower() in (".yaml", ".yml"):
-            if not any(part.endswith("_tabulated") for part in p.relative_to(ROOT).parts):
+    for root in TEACHING_ROOTS:
+        base = REPO_ROOT / root
+        if not base.is_dir():
+            continue
+        for p in sorted(base.rglob("*")):
+            if p.is_file() and p.suffix.lower() in (".yaml", ".yml"):
+                parts = p.relative_to(REPO_ROOT).parts
+                if any(part.endswith(("_tabulated", "_generated", "_pages"))
+                       or part.endswith("_tabulation_engine")
+                       # 2_negative fixtures are deliberately malformed —
+                       # appending a trailer could change what they test.
+                       or part in ("__pycache__", "2_negative")
+                       for part in parts):
+                    continue
                 yield p
 
 
@@ -53,7 +68,7 @@ def main(argv=None):
         if new_text == p.read_text(encoding="utf-8"):
             continue
         changed += 1
-        rel = p.relative_to(ROOT)
+        rel = p.relative_to(REPO_ROOT)
         if args.dry_run:
             print(f"  would update {rel}")
         else:
