@@ -23,7 +23,7 @@ The engine marks the tied rows and says so in words, then resolves them by the t
 **Reporting detail:** on an **exact runoff tie** the one-line runoff-percentage summary (`Voters with a preference: …`) is **suppressed** — a 50/50 split has no "winner vs other" to state, so the **tie-break chain explains the result instead**. The percentage line returns only for a decided runoff.
 
 <!-- Screenshot slot — LH engine tie report.
-     Source: run election `02b_c3_b2_three-candidates` (in 01_Single_winner/) and
+     Source: run election `02b_c3_b2_three-candidates` (in `01_STAR/_main/cases/`) and
      screenshot the colored terminal output. Save as: img/REPLACE_02b_c3_b2_lh_tie.png
 ![LH engine report of a runoff tie, resolved by the score round](img/REPLACE_02b_c3_b2_lh_tie.png) -->
 

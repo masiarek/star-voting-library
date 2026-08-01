@@ -104,8 +104,8 @@ Here the methods agree, and Carmen even led the first round — but **the first-
 ## Run it yourself
 
 ```
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_Single_winner/count_simplicity_star_vs_irv.yaml
-python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/count_simplicity_star_vs_irv.yaml
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml
 ```
 
 ---

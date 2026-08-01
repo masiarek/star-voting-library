@@ -1,6 +1,6 @@
 # Conversation scripts — index
 
-A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../../01_STAR/concepts/), RCV-IRV episodes in [`RCV_IRV/`](../../06_Other/RCV_IRV/concepts/), and the foundational ones here in `07_Concepts/` — and this page indexes them. The demos come from `07_Concepts/`, `01_Single_winner/`, and `split_voting/`.
+A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../../01_STAR/concepts/), RCV-IRV episodes in [`RCV_IRV/`](../../06_Other/RCV_IRV/concepts/), and the foundational ones here in `07_Concepts/` — and this page indexes them. The demos come from `07_Concepts/` and the method folders' `cases/` directories (mostly `01_STAR/` and `method_comparisons/`).
 
 Start here: [whats_so_good_about_STAR_Voting.md](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
 
@@ -51,7 +51,7 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | 8 | Counting & trust | summability, audits | any file's matrix | "Summability" slides |
 | 9 | Multi-winner & proportional | electing several seats | `02_Multi_winner/*` | "Proportional Representation" |
 | 10 | The honest limits | "resistant, not proof" | — | "Voting Theory Facts" |
-| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | `01_Single_winner/equal_support_runoff_demo.yaml` | "No-Preference Votes in the Runoff" |
+| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | `01_STAR/_main/cases/equal_support_runoff_demo.yaml` | "No-Preference Votes in the Runoff" |
 | 12 | Favorite betrayal (Voting 301) | does *only* RCV avoid it? | — | "RCV Common False Claims", "Alaska '22", pass/fail criteria |
 | 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |

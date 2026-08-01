@@ -108,8 +108,8 @@ What those ignored ranks would have said: **Center beats Left head-to-head 15–
 STAR (and Ranked Robin) read every ballot: STAR elects **Center**, and the engine prints `[Condorcet Winner] = Center`. Run both to see it:
 
 ```
-python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    01_Single_winner/center_squeeze_star.yaml   # Left wins; Center out in round 1
-python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_Single_winner/center_squeeze_star.yaml   # Center wins; Condorcet = Center
+python3 06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py    method_comparisons/center_squeeze/cases/center_squeeze_star.yaml   # Left wins; Center out in round 1
+python3 STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/center_squeeze/cases/center_squeeze_star.yaml   # Center wins; Condorcet = Center
 ```
 
 ---
@@ -136,7 +136,7 @@ This is why STAR sidesteps the entire mess: **STAR counts every ballot in both r
 
 That distinction — *declared tie* (STAR) vs *lost voice* (IRV exhaustion) — is the hinge, and it's developed in full in the companion episode.
 
-> [REPO] `01_STAR/concepts/reference/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_Single_winner/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
+> [REPO] `01_STAR/concepts/reference/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_STAR/_main/cases/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
 
 ---
 

@@ -84,8 +84,7 @@ Design docs: [tie-breaking lot numbers / scenarios](https://docs.google.com/docu
 ## Run them yourself
 
 ```
-cd STARVote_LH_tabulation_engine
-python starvote_larry_hastings.py "../01_Single_winner/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml"
+uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py "01_STAR/Flat_scores_ties/cases/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml"
 ```
 
 Every file writes a full audit copy to its `Flat_scores_ties_tabulated/` sibling. All seven also live as flat-schema positive test cases in `YAML_library/1_positive/` (deterministic winner A via the published lot order).

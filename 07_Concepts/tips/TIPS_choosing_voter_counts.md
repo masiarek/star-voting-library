@@ -76,9 +76,9 @@ A deliberate large/small **pair** earns its own page only when scale-invariance 
 
 ## Worked feel for each style
 
-- `01_Single_winner/00a_c2_b1_two-candidates.yaml` — **1 ballot**, individual. The gears, nothing else.
+- `01_STAR/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml` — **2 ballots**, two candidates. The gears, nothing else.
 - `split_voting/01_political_left_split.yaml` — **100 voters**, weighted, counts 24/22/20/34 (all ≥ 6). Percentages are obvious; the spoiler story needs them.
-- `01_Single_winner/equal_support_runoff_demo.yaml` — **100 voters** (40/35/25). Easy percentages; the trade-off is the `375` scoring total you don't ask the audience to verify.
+- `01_STAR/_main/cases/equal_support_runoff_demo.yaml` — **100 voters** (40/35/25). Easy percentages; the trade-off is the `375` scoring total you don't ask the audience to verify.
 - `split_voting/00_plurality_vs_majority.yaml` — **100 voters** (40/35/25). The textbook "proportions / majority story": the whole lesson is "40% wins the plurality but a 60% majority opposed," so the counts *are* the percentages. Large scoring totals (`Blake 275`) you read past — the point is the divergence, not the sums.
 
 See also: [CURRICULUM.md](../CURRICULUM.md) · [GLOSSARY.md](../GLOSSARY.md).

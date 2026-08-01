@@ -7,7 +7,7 @@
 ## Scenario
 
 The SAME 34-voter profile as the RCV-IRV monotonicity demo
-(01_Single_winner/monotonicity_irv_before.yaml), translated to 0–5 scores
+(method_comparisons/monotonicity/cases/monotonicity_irv_before.yaml), translated to 0–5 scores
 (1st → 5, 2nd → 3, unranked → 0). STAR elects X.
 
 In the _after file, 4 voters RAISE X to the top. RCV-IRV flips X from winner to

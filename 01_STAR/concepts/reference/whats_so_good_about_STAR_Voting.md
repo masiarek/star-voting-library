@@ -111,7 +111,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** The smallest election possible.
 
-> [DEMO] `01_Single_winner/00a_c2_b1_two-candidates.yaml` — one voter, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then `01_Single_winner/vote_splitting2.yaml` (or `split_voting/02…`) — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] `07_Concepts/00_START_HERE.md` — "Why TWO rounds and not just scores?"
+> [DEMO] `01_STAR/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml` — two voters, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then `01_STAR/_main/cases/vote_splitting2.yaml` — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] `07_Concepts/00_START_HERE.md` — "Why TWO rounds and not just scores?"
 
 **Adam (tie-in):** There's a lovely way the core Python developer Tim Peters put it: STAR treats your scores as *numbers* to pick the finalists, then treats the same scores as mere *order* to decide the runoff. The big "5" is decisive in step one and irrelevant in step two — and that's exactly what makes it hard to game.
 
@@ -199,8 +199,8 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 |------|------|-------|
 | Spoiler | `split_voting/01_political_left_split.yaml` | majority split → minority wins Choose-One; STAR fixes |
 | Spoiler (food) | `split_voting/03_lunch_veggie_vs_meat.yaml` | same effect, lighter theme |
-| Two rounds | `01_Single_winner/00a_c2_b1_two-candidates.yaml` | gears visible, no surprise |
-| Compromise | `01_Single_winner/vote_splitting2.yaml` | 3rd candidate → consensus winner |
+| Two rounds | `01_STAR/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml` | gears visible, no surprise |
+| Compromise | `01_STAR/_main/cases/vote_splitting2.yaml` | 3rd candidate → consensus winner |
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 

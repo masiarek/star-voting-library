@@ -9,7 +9,7 @@ file the watcher runs the standard repo pipeline and echoes the result to screen
                     ->  ECHO results  ->  archive everything into processed/
 
 Nothing here is part of the test suite — _demo_dropbox/ lives outside the tested
-paths (01_Single_winner/, split_voting/, YAML_library/1_positive/), so dropping
+paths (the method folders' cases/ dirs, YAML_library/1_positive/), so dropping
 throwaway demo elections here never touches `pytest`.
 
 Run it:

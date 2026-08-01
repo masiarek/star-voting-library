@@ -531,8 +531,8 @@ def tabulated_output_path(src_path):
     The copy goes into a '<folder>_tabulated' subfolder NESTED INSIDE the source
     file's own folder, and the file itself also gets a '_tabulated' suffix.
     Example:
-        .../01_Single_winner/black_curtain/foo.yaml
-        -> .../01_Single_winner/black_curtain/black_curtain_tabulated/foo_tabulated.txt
+        .../method_comparisons/black_curtain/cases/foo.yaml
+        -> .../method_comparisons/black_curtain/cases/cases_tabulated/foo_tabulated.txt
     """
     p = Path(src_path).resolve()
     out_dir = p.parent / (p.parent.name + "_tabulated")

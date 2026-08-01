@@ -4,7 +4,7 @@ scenario_description: |-
   Y>Z to X>Y, i.e. scores 0,5,3 → 5,3,0). X gained support.
 
   STAR still elects X — raising the winner did not hurt them. Compare the RCV-IRV
-  twin (01_Single_winner/monotonicity_irv_after.yaml), where the same change makes
+  twin (method_comparisons/monotonicity/cases/monotonicity_irv_after.yaml), where the same change makes
   X LOSE to Z. The [Divergence from STAR] block below shows RCV-IRV electing Z on
   these very ballots: STAR is monotone, RCV-IRV is not.
   See 07_Concepts/monotonicity.md.

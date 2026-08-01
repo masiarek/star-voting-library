@@ -23,7 +23,7 @@ uv run --group docs mkdocs serve
 - **The homepage** is [`index.md`](../../index.md): a **site-only graphical hero** (big headline, CTA buttons, the official EVC ballot image — attributed, styled by the `.star-hero` rules in `site_extra.css`), followed by everything below `readme.md`'s own text hero, inlined at build time via the snippet-**section** markers inside `readme.md` (`<!-- --8<-- [start:below-hero] -->` … `[end:below-hero]`). GitHub ignores `index.md` and renders `readme.md` whole; MkDocs doesn't recognize the lowercase `readme.md` as an index. One source for the shared body, two front doors — **don't delete the invisible comment markers in `readme.md`**, the homepage include depends on them.
 - **The homepage's "New to STAR?" card row** is a `<div class="star-path" markdown="1">` in `readme.md`, styled by `site_extra.css` (a 2×2 card grid on the site). On GitHub the class is ignored and it degrades to a plain stacked list — that's intentional; keep any future hero markup dual-renderable the same way.
 - **Hidden from the sidebar, still built** (`not_in_nav` in `mkdocs.yml`): `CLAUDE.md`, `THIRD_PARTY_LICENSES.md`, and `readme.md` (its content is already the homepage). Links to them keep working; they just no longer appear in the left nav ahead of the teaching content.
-- **Excluded from the site**: dot-dirs, `site/`, `AGENTS.md` (agent-facing duplicate of `CLAUDE.md`), `_demo_dropbox/` staging, and generated ballot printouts — see `exclude_docs` in `mkdocs.yml`.
+- **Excluded from the site**: dot-dirs, `site/`, `AGENTS.md` (a three-line pointer to `CLAUDE.md` — kept off the site), `_demo_dropbox/` staging, and generated ballot printouts — see `exclude_docs` in `mkdocs.yml`.
 
 ## Known nits (accepted for v1)
 

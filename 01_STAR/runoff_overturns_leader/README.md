@@ -85,10 +85,10 @@ Often enough to matter — but the exact rate depends entirely on your modelling
 
 ## Run them yourself
 
-From the engine directory:
+From the repo root:
 
 ```
-python starvote_larry_hastings.py "01_Single_winner/runoff_overturns_leader/03_c7_b3_ice-cream-live.yaml"
+uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py "01_STAR/runoff_overturns_leader/cases/03_c7_b3_ice-cream-live.yaml"
 ```
 
 Watch for the engine's **Majority Preference** note — it prints exactly which candidate earned the highest score and which one won the runoff, whenever the two differ.

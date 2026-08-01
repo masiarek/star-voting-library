@@ -384,9 +384,8 @@ exclude_docs: |
   .*
   /site
   /AGENTS.md
-  /pets.html
   /ballots.pdf
-  /todo-*.md
+  /_notes
   _demo_dropbox/
   _generated/
   __pycache__/

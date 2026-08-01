@@ -15,12 +15,11 @@ Runnable elections behind the **[Summability topic hub](../../07_Concepts/topics
 ## Run them
 
 ```bash
-# STAR (summable) — score totals + matrix
-cd STARVote_LH_tabulation_engine
-python starvote_larry_hastings.py ../01_Single_winner/summability_demo/star_combined.yaml
+# STAR (summable) — score totals + matrix (from the repo root)
+uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/summability_demo/cases/star_combined.yaml
 
 # RCV-IRV (not summable) — B eliminated when districts merge
-python starvote_larry_hastings.py ../01_Single_winner/summability_demo/irv_combined.yaml
+uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/summability_demo/cases/irv_combined.yaml
 
 # Ranked Robin on the SAME ballots — the summable pairwise matrix (LH engine)
 python starvote_larry_hastings.py ../method_comparisons/summability_demo/cases/rr_combined.yaml

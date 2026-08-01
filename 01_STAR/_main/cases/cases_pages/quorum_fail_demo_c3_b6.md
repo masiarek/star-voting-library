@@ -20,7 +20,7 @@ invalid for lack of turnout, so the engine declares NO WINNER. "Winning the
 vote" and "being elected" are different things when a quorum isn't met.
 
 → Concept: 07_Concepts/topics/quorum.md
-→ The same ballots that DO reach quorum: 01_Single_winner/quorum_demo_c3_b6.yaml
+→ The same ballots that DO reach quorum: 01_STAR/_main/cases/quorum_demo_c3_b6.yaml
 
 ## Parameters (from the YAML)
 
