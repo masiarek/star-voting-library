@@ -27,6 +27,7 @@ Ties: a rule may return SEVERAL tied committees; all are reported.
 """
 import argparse
 import os
+import re
 import sys
 
 import yaml
@@ -63,9 +64,20 @@ def load_approval_election(path):
                          f"Approval method; this engine reads approval ballots only.")
     rows = [r.strip() for r in d["ballots"].splitlines() if r.strip()]
     names = [c.strip() for c in rows[0].split(",")]
+    # The first header cell may carry a "Count" label documenting the
+    # colon-weight prefix (e.g. "Count:Ada") — same convention as the LH engine.
+    if names and re.match(r"(?i)^count\s*:", names[0]):
+        names[0] = names[0].split(":", 1)[1].strip()
     voters = []
     for row in rows[1:]:
         cells = row.split("#", 1)[0].split(",")
+        # "Weight x Score" repetition on the first cell, e.g. "9:1", "9x1",
+        # "9 × 1" — the LH engine's syntax; each row stands for N ballots.
+        weight = 1
+        wmatch = re.match(r"\s*(\d+)\s*[:xX×]\s*(.*)", cells[0])
+        if wmatch:
+            weight = int(wmatch.group(1))
+            cells[0] = wmatch.group(2)
         if len(cells) != len(names):
             raise ValueError(f"{path}: row {row!r} has {len(cells)} cells, "
                              f"expected {len(names)}.")
@@ -78,7 +90,7 @@ def load_approval_election(path):
                 raise ValueError(f"{path}: invalid Approval mark {mark!r} in row "
                                  f"{row!r} (only 0/1/markers allowed).")
             approved.add(i)
-        voters.append(approved)
+        voters.extend([set(approved) for _ in range(weight)])
     seats = int(d.get("num_winners", 1))
     return names, voters, seats
 

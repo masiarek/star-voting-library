@@ -71,7 +71,7 @@ def test_proportional_rules_break_the_sweep():
     """The multiwinner demo: av ties {Amy,Ben} with {Amy,Cora} (the LH engine
     breaks that tie for Ben by priority order); every proportional rule must
     DECISIVELY seat the minority's Cora alongside Amy."""
-    path = REPO_ROOT / "04_Approval/multiwinner/approval_bloc_2seats_c4_b6.yaml"
+    path = REPO_ROOT / "04_Approval/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml"
     result = tabulate_abc(path, rules=("av", "seqpav", "pav", "seqphragmen"))
     assert {frozenset(c) for c in result["av"]} == {
         frozenset({"Amy", "Ben"}), frozenset({"Amy", "Cora"})}
