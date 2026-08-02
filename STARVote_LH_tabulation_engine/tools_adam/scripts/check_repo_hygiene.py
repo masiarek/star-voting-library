@@ -498,32 +498,81 @@ def check_bv_case_md():
 # Deliberately an ALLOWLIST, not every folder: most READMEs are narrative and
 # link a representative subset by design. Add a folder here only when its README
 # is a complete index. Paths are repo-relative POSIX.
+#
+# Value = the README that indexes the folder, when that is NOT the folder's own
+# README.md. 02_STAR_Bloc/_main is the standing example: its own page says the
+# index "lives one level up … That's the single source of truth", so the gate has
+# to read the parent's table or it would police the wrong file.
 # --------------------------------------------------------------------------- #
-INDEX_COMPLETE_DIRS = [
-    "01_STAR/_main",
-]
+INDEX_COMPLETE_DIRS = {
+    "01_STAR/_main": None,
+    "02_STAR_Bloc/_main": "02_STAR_Bloc/README.md",
+    "03_STAR_PR/_main": None,
+    "04_Approval/_main": None,
+    "05_Ranked_Robin/_main": None,
+    "method_comparisons/_main": None,
+}
+
+
+def _cases_pages_dir(folder):
+    """The folder's generated-pages directory, or None. Two layouts exist: the
+    current house one (`<folder>/cases/cases_pages/`) and an older sibling form
+    (`<folder>/<basename>_pages/`) still used by a handful of folders."""
+    for cand in (os.path.join(folder, "cases", "cases_pages"),
+                 os.path.join(folder, os.path.basename(folder) + "_pages")):
+        if os.path.isdir(cand):
+            return cand
+    return None
 
 
 def check_pages_indexed():
-    """Return [(readme_rel, unlisted_page)] for pages under an INDEX_COMPLETE_DIRS
-    folder's `<folder>_pages/` that its README.md never links."""
+    """Return [(readme_rel, problem)] for cases under an INDEX_COMPLETE_DIRS
+    folder that its indexing README never links.
+
+    A case counts as indexed if the README links EITHER its generated page
+    (`<stem>.md`) OR its source (`<stem>.yaml`). Both are legitimate index
+    styles in this repo — 02_STAR_Bloc's table links the yaml for its teaching
+    rows and the page for its BV rows — and the question this gate asks is
+    "did you forget the case exists?", not "which artifact did you link?".
+
+    An allowlisted folder whose README or pages directory cannot be resolved is
+    reported as a FAILURE, never skipped: this check spent its whole life inert
+    because it looked for `01_STAR/_main/_main_pages/` while the actual layout
+    is `01_STAR/_main/cases/cases_pages/`, so a missing directory silently meant
+    "✓ nothing to check". A gate that cannot find its target is broken, not clean.
+    """
     missing = []
-    for rel_folder in INDEX_COMPLETE_DIRS:
+    for rel_folder, rel_index in sorted(INDEX_COMPLETE_DIRS.items()):
         folder = os.path.join(REPO, rel_folder.replace("/", os.sep))
-        readme = os.path.join(folder, "README.md")
-        pages_dir = os.path.join(folder, os.path.basename(folder) + "_pages")
-        if not (os.path.isfile(readme) and os.path.isdir(pages_dir)):
+        readme = (os.path.join(REPO, rel_index.replace("/", os.sep)) if rel_index
+                  else os.path.join(folder, "README.md"))
+        rel_readme = os.path.relpath(readme, REPO)
+        pages_dir = _cases_pages_dir(folder)
+        if pages_dir is None:
+            missing.append((rel_folder, "no generated-pages directory found "
+                                        "(looked for cases/cases_pages/ and "
+                                        f"{os.path.basename(folder)}_pages/) — "
+                                        "drop it from INDEX_COMPLETE_DIRS or fix "
+                                        "the path"))
             continue
         try:
             text = open(readme, encoding="utf-8").read()
         except OSError:
+            missing.append((rel_folder, f"indexing README {rel_readme} is "
+                                        "unreadable or missing"))
             continue
         text = _INLINE_CODE.sub("", _FENCED.sub("", text))
         linked = {os.path.basename(m.group(1).split("#")[0].strip())
                   for m in MD_LINK.finditer(text)}
         for fn in sorted(os.listdir(pages_dir)):
-            if fn.endswith(".md") and fn not in linked:
-                missing.append((os.path.relpath(readme, REPO), fn))
+            if not fn.endswith(".md"):
+                continue
+            stem = fn[:-3]
+            if linked & {fn, stem + ".yaml", stem + ".yml"}:
+                continue
+            missing.append((rel_readme, f"{fn} — case in {rel_folder} is not "
+                                        "linked from the index (neither its page "
+                                        "nor its .yaml)"))
     return sorted(missing)
 
 
@@ -596,13 +645,14 @@ def main(argv):
             print(f"   • {rel}\n       {msg}")
     unlisted = check_pages_indexed()
     if not unlisted:
-        print("repo-hygiene: ✓ every index-complete README lists all its pages.")
+        print(f"repo-hygiene: ✓ all {len(INDEX_COMPLETE_DIRS)} index-complete "
+              "READMEs list every case in their folder.")
     else:
         rc = 1
-        print(f"repo-hygiene: ⚠️  pages missing from an index README ({len(unlisted)}) — "
+        print(f"repo-hygiene: ⚠️  cases missing from an index README ({len(unlisted)}) — "
               "add them to the README (or move the folder off INDEX_COMPLETE_DIRS):")
-        for rel, page in unlisted:
-            print(f"   • {rel}  ←  {page} not linked")
+        for rel, msg in unlisted:
+            print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.
     return rc

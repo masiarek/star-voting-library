@@ -1,6 +1,6 @@
 # 03_STAR_PR / _main — proportional STAR worked examples
 
-The proportional STAR (STAR-PR) cases: the same 0–5 score ballot, counted so seats reflect the electorate's *proportions* rather than handing every seat to the largest bloc. Read the reader-friendly **pages** (`_main_pages/`); the `.yaml` beside each is the tabulatable source, and the always-full audit copy is in `_main_tabulated/`.
+The proportional STAR (STAR-PR) cases: the same 0–5 score ballot, counted so seats reflect the electorate's *proportions* rather than handing every seat to the largest bloc. Read the reader-friendly **pages** (`cases/cases_pages/`); the `.yaml` beside each is the tabulatable source, and the always-full audit copy is in `cases/cases_tabulated/`.
 
 Concept first: [STAR-PR — the three methods](../concepts/STAR_PR/README.md) · [the math behind proportional STAR](../concepts/STAR_PR/the_math_behind_proportional_star.md) · [STV vs STAR-PR](../concepts/stv/proportional_stv_vs_star.md). Parent folder: [`03_STAR_PR`](../README.md).
 
@@ -24,6 +24,9 @@ The `02a/02b/02c` files count the **same** 5-candidate, 63-ballot election three
 
 ## Real BetterVoting election
 
+One BetterVoting election (`bvhchj`), two races — the board seats and a party-alignment poll counted alongside them:
+
 - [BV2130 — Presidential Board (Allocated Score, 7 seats)](cases/cases_pages/bv2130_presidential_board_star_pr.md) — a real BetterVoting STAR-PR election (`bvhchj`), 51 candidates, 102 ballots, cross-checked against the LH engine · [`.yaml`](cases/bv2130_presidential_board_star_pr.yaml) · [results ↗](https://bettervoting.com/bvhchj/results)
+- [BV2130 — party alignment (Plurality)](cases/cases_pages/bv2130_bvhchj_party_plurality.md) — the same election's second race, a choose-one poll over 8 parties: Democrat leads on 39 of 102 first choices and wins. The choose-one companion to the proportional board race above · [`.yaml`](cases/bv2130_bvhchj_party_plurality.yaml)
 
 # file: README.md
