@@ -55,10 +55,15 @@ from __future__ import annotations
 
 import re
 
-# Multi-word names first, so "ranked robin" is settled before the single-word
-# pass looks at "rr". Keys are matched case-insensitively as whole words.
+# Runs before TERMS, so "ranked robin" is settled before the single-word pass
+# looks at "rr". This is also where punctuation a folder name cannot carry gets
+# put back — every value here matches the H1 of the folder's own README, which
+# is the naming authority. Keys match case-insensitively as whole words.
 PHRASES = {
     "ranked robin": "Ranked Robin",
+    "split cycle": "Split Cycle",
+    "hands on": "Hands-on",
+    "postit": "Post-it",
 }
 
 # Acronyms and proper nouns that folder names spell in lowercase. Whole words

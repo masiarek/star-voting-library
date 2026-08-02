@@ -57,6 +57,12 @@ def test_bucket_labels_match_the_generator():
         ("Dark horse borda", "Dark horse Borda"),
         ("Iia cycle spoiler", "IIA cycle spoiler"),
         ("Sntv village council", "SNTV village council"),
+        # Punctuation a folder name cannot carry, restored from the README H1.
+        ("Split cycle", "Split Cycle"),
+        ("Postit rcv example", "Post-it RCV example"),
+        ("Hands on", "Hands-on"),
+        # ...and not applied where the words are not that name.
+        ("Split voting", "Split voting"),
         # A leading underscore becomes a leading space, and .capitalize() then
         # lands on the space and does nothing.
         (" main", "Main"),
