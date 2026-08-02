@@ -511,6 +511,12 @@ INDEX_COMPLETE_DIRS = {
     "04_Approval/_main": None,
     "05_Ranked_Robin/_main": None,
     "method_comparisons/_main": None,
+    # Two-tier: the README's 20 rows are one per ELECTION, and each row's YAML
+    # column links every method that election was counted under — which is how
+    # its 49 generated per-method pages are all covered. Counting a `.yaml` link
+    # as indexed (see above) is what makes this folder gateable without
+    # flattening that structure into 49 rows.
+    "method_comparisons/felsenthal_paradoxes": None,
 }
 
 
