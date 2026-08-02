@@ -504,10 +504,14 @@ def check_bv_case_md():
 # representative subset must be dropped from this dict, deliberately, rather
 # than drifting. Paths are repo-relative POSIX.
 #
-# The eight NOT enrolled, and why (re-check before adding):
+# The nine NOT enrolled, and why (re-check before adding):
 #   summability_demo, tie_break_dead_rung  — name their cases in `inline code`,
 #       not links; enrolling means converting those spans to real links first
 #       (worth doing on its own merits — those filenames aren't clickable today)
+#   pet_real_bv_election  — two-tier: the README is a narrative walkthrough that
+#       links its lesson write-ups, and those link the cases. Reachable, but not
+#       from the README, and flattening that into the walkthrough would cost more
+#       than the gate is worth here
 #   symmetric_centrist_all_methods  — two-tier, but the write-up stem
 #       (bv2171_h93tm4_all_methods) doesn't match the page stem
 #       (bv2171_h93tm4_star), so no artifact rule bridges it; needs 2 explicit links
@@ -546,6 +550,7 @@ INDEX_COMPLETE_DIRS = {
     "05_Ranked_Robin/_main": None,
     "05_Ranked_Robin/burial": None,
     "05_Ranked_Robin/clone_independence": None,
+    "05_Ranked_Robin/condorcet_vs_ranked_robin": None,
     "05_Ranked_Robin/consensus_choice_divergence": None,
     "05_Ranked_Robin/copeland_score": None,
     "05_Ranked_Robin/most_wins_vs_condorcet": None,

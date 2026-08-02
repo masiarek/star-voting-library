@@ -70,6 +70,7 @@ BetterVoting reports this race as **6 abstentions, 455 ballots tallied**; the en
 - Write-up & GitHub issue → [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](LH_BV_reconciliation_issue.md)
 - Even-simpler 2-candidate lesson + synthetic illustration: [The minimal case](small_abstention_c2_b5_lesson.md) · [`abstention_reconciliation_min_c2_b6.yaml`](cases/abstention_reconciliation_min_c2_b6.yaml)
 - Reproduce it on BetterVoting yourself: [Small case — reproduce the abstention mislabel on BetterVoting](SMALL_CASE_reproduce_on_BV.md)
+- The mirror-image defect, on **Plurality**: [BV15 — Plurality + abstentions: the turnout undercount](bv15_4h89vj_plurality_abstain.md) ([`.yaml`](cases/bv15_4h89vj_plurality_abstain.yaml)) — real BV election `4h89vj`. Here BV elects the right winner but *drops* fully-abstained ballots from the headline turnout ([bettervoting#740](https://github.com/Equal-Vote/bettervoting/issues/740)); above, it counts real Equal Support votes *as* abstentions. Same accounting seam, opposite directions
 - Concept: [BetterVoting and the LH engine — when the reports differ](../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support)
 
 ## Run it yourself

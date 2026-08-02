@@ -1,6 +1,6 @@
 # Condorcet vs. Ranked Robin — worked examples
 
-*Four runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, a real 6-candidate case, plus the cycle with a dominated fourth candidate — the **Smith set** demo.*
+*Five runnable Ranked Robin (RCV-RR / Copeland) elections showing the one distinction that trips everyone up: **Ranked Robin and "the Condorcet winner" are the same answer — until there's a cycle.** Same three candidates, two electorates, a real 6-candidate case, the cycle with a dominated fourth candidate — the **Smith set** demo — and the live electowiki example on equal-rank ballots.*
 
 → **Full lesson (the teaching write-up):** [Ranked Robin vs. Condorcet](../concepts/ranked_robin_vs_condorcet.md) · deeper math: [the math behind Condorcet](../concepts/the_math_behind_condorcet.md)
 
@@ -10,6 +10,7 @@
 | [02 — cycle, no Condorcet](cases/cases_pages/02_cycle_no_condorcet.md) | a rock-paper-scissors **cycle** → they part ways | *(none)* | **Ada** | [`.yaml`](cases/02_cycle_no_condorcet.yaml) |
 | [03 — real 6-cand sweep](cases/cases_pages/03_real_record0_c6_b5.md) | real 6-cand sweep case — no Condorcet winner | *(none)* | **B** | [`.yaml`](cases/03_real_record0_c6_b5.yaml) |
 | [04 — the Smith set](cases/cases_pages/04_smith_set_c4_b7.md) | the 02 cycle + a dominated 4th → **Smith set** = {Ada, Ben, Cara} | *(none)* | **Ada** | [`.yaml`](cases/04_smith_set_c4_b7.yaml) |
+| [BV2140 — most wins, no Condorcet winner](bv2140_48hjkv_most_pairwise_wins.md) | the electowiki worked example, live — and the repo's first **equal-rank** ballots: Ava wins 3 of her 4 matchups, yet loses to Bianca 15–14 | *(none)* | **Ava** | [`.yaml`](cases/bv2140_48hjkv_most_pairwise_wins.yaml) |
 
 ---
 
@@ -100,6 +101,12 @@ Winner — Ranked Robin (RCV-RR): Ada
 ```
 
 (LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie randomly, so this deliberate three-way tie isn't freezable there.) Full report: [`…_tabulated/04_smith_set_c4_b7_tabulated.txt`](cases/cases_tabulated/04_smith_set_c4_b7_tabulated.txt) · full lesson: [The Smith set — the smallest club that beats everyone outside it](../../07_Concepts/topics/smith_set.md)
+
+## 5. The live one — most matchups won, on equal-rank ballots
+
+The [electowiki Ranked Robin worked example](https://electowiki.org/wiki/Ranked_Robin), run end-to-end as a real BetterVoting election (`48hjkv`) and the repo's first case built on **equal-rank** ballots — voters tie candidates outright (`Ava=Bianca=Cedric`), which RCV-IRV's ballot cannot express. 35 voters, five candidates. **Ava wins 3 of her 4 matchups and is elected**, yet she is not the Condorcet winner: Bianca beats her 15–14, and Ava/Bianca/Cedric form a three-cycle. Sections 1–4 above make the point on constructed ballots; this makes it on a live election.
+
+Full walkthrough, pairwise grid and BV screenshots: [BV2140 — most pairwise wins, no Condorcet winner](bv2140_48hjkv_most_pairwise_wins.md) · [`.yaml`](cases/bv2140_48hjkv_most_pairwise_wins.yaml) · [results ↗](https://bettervoting.com/48hjkv/results)
 
 ---
 
