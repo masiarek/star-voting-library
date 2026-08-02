@@ -490,14 +490,30 @@ def check_bv_case_md():
 # --------------------------------------------------------------------------- #
 # Index completeness: some folders keep a README that is meant to be an
 # EXHAUSTIVE index of their generated pages (the teaching progression's front
-# door). A new page added to `<folder>_pages/` but forgotten in that README goes
+# door). A new case added to the folder but forgotten in that README goes
 # silently missing — the exact bug that dropped bv2184_fyy886_lunch_vote from
-# 01_STAR/_main. This gate makes that impossible: for each listed folder, every
-# `<folder>_pages/*.md` must be referenced (by href) somewhere in its README.md.
+# 01_STAR/_main, rr_blank_is_last_c4_b3 from 05_Ranked_Robin/_main, and
+# bv2130_bvhchj_party_plurality from 03_STAR_PR/_main. This gate makes that
+# impossible: for each listed folder, every generated page must be referenced
+# (by href) somewhere in its index README.
 #
-# Deliberately an ALLOWLIST, not every folder: most READMEs are narrative and
-# link a representative subset by design. Add a folder here only when its README
-# is a complete index. Paths are repo-relative POSIX.
+# An ALLOWLIST, and near-total: a 2026-08-02 survey of all 89 folders carrying
+# generated pages found 81 whose README already indexes every case, so they are
+# all enrolled here. Enrolling turns "complete today" into "must stay complete",
+# which is the point — but it means a README that later wants to link only a
+# representative subset must be dropped from this dict, deliberately, rather
+# than drifting. Paths are repo-relative POSIX.
+#
+# The eight NOT enrolled, and why (re-check before adding):
+#   summability_demo, tie_break_dead_rung  — name their cases in `inline code`,
+#       not links; enrolling means converting those spans to real links first
+#       (worth doing on its own merits — those filenames aren't clickable today)
+#   symmetric_centrist_all_methods  — two-tier, but the write-up stem
+#       (bv2171_h93tm4_all_methods) doesn't match the page stem
+#       (bv2171_h93tm4_star), so no artifact rule bridges it; needs 2 explicit links
+#   split_voting/_main  — has generated pages and NO README at all
+#   the four `<folder>/cases` dirs  — an artifact of _cases_pages_dir's legacy
+#       branch matching `cases/cases_pages`; the same pages as the parent folder
 #
 # Value = the README that indexes the folder, when that is NOT the folder's own
 # README.md. 02_STAR_Bloc/_main is the standing example: its own page says the
@@ -505,18 +521,94 @@ def check_bv_case_md():
 # to read the parent's table or it would police the wrong file.
 # --------------------------------------------------------------------------- #
 INDEX_COMPLETE_DIRS = {
+    # --- 01_STAR
+    "01_STAR/Flat_scores_ties": None,
     "01_STAR/_main": None,
-    "02_STAR_Bloc/_main": "02_STAR_Bloc/README.md",
+    "01_STAR/abstain_bugs": None,
+    "01_STAR/equal_and_opposite": None,
+    "01_STAR/exercises": None,
+    "01_STAR/favorite_betrayal": None,
+    "01_STAR/iia_cycle_spoiler": None,
+    "01_STAR/majority_criterion": None,
+    "01_STAR/none_of_the_above": None,
+    "01_STAR/runoff_overturns_leader": None,
+    "01_STAR/runoff_reversal_bv_cases": None,
+    "01_STAR/silly_two_cand_STAR": None,
+    "01_STAR/tie_break_ladder": None,
+    # --- 02_STAR_Bloc
+    "02_STAR_Bloc/_main": "02_STAR_Bloc/README.md",   # index lives in the parent table
+    # --- 03_STAR_PR
     "03_STAR_PR/_main": None,
+    # --- 04_Approval
     "04_Approval/_main": None,
+    "04_Approval/multiwinner": None,
+    # --- 05_Ranked_Robin
     "05_Ranked_Robin/_main": None,
+    "05_Ranked_Robin/burial": None,
+    "05_Ranked_Robin/clone_independence": None,
+    "05_Ranked_Robin/consensus_choice_divergence": None,
+    "05_Ranked_Robin/copeland_score": None,
+    "05_Ranked_Robin/most_wins_vs_condorcet": None,
+    "05_Ranked_Robin/rr_tiebreaks": None,
+    "05_Ranked_Robin/rr_vs_irv_plurality": None,
+    "05_Ranked_Robin/star_vs_rr_divergence": None,
+    # --- 06_Other
+    "06_Other/Plurality": None,
+    "06_Other/RCV_IRV": None,
+    "06_Other/RCV_IRV/equal_vote_balance": None,
+    "06_Other/Range": None,
+    "06_Other/STV": None,
+    "06_Other/STV/bv_stv_sole_survivor_crash": None,
+    "06_Other/ballot_style_lab": None,
+    "06_Other/three_two_one": None,
+    # --- method_comparisons
+    "method_comparisons/BV_Library": None,
     "method_comparisons/_main": None,
-    # Two-tier: the README's 20 rows are one per ELECTION, and each row's YAML
-    # column links every method that election was counted under — which is how
-    # its 49 generated per-method pages are all covered. Counting a `.yaml` link
-    # as indexed (see above) is what makes this folder gateable without
-    # flattening that structure into 49 rows.
-    "method_comparisons/felsenthal_paradoxes": None,
+    "method_comparisons/alaska_2022": None,
+    "method_comparisons/alaska_2022_general": None,
+    "method_comparisons/approval_majority_criterion": None,
+    "method_comparisons/black_curtain": None,
+    "method_comparisons/borda_condorcet_1788": None,
+    "method_comparisons/brams_grading_paradox": None,
+    "method_comparisons/burlington_2009": None,
+    "method_comparisons/center_squeeze": None,
+    "method_comparisons/center_squeeze_bv2137": None,
+    "method_comparisons/chicken_dilemma": None,
+    "method_comparisons/condorcet_burial_alaska": None,
+    "method_comparisons/copeland_vs_borda_margins": None,
+    "method_comparisons/cycle_resolution": None,
+    "method_comparisons/dark_horse_borda": None,
+    "method_comparisons/edelman_condorcet_myth": None,
+    "method_comparisons/fairvote_condorcet_claims": None,
+    "method_comparisons/fairvote_star_whitepaper": None,
+    "method_comparisons/favorite_betrayal_irv": None,
+    "method_comparisons/felsenthal_paradoxes": None,   # 2-tier: rows are elections, each linking every method yaml
+    "method_comparisons/food_truck_row": None,   # indexes via _tabulated.txt links
+    "method_comparisons/manipulability_p3": None,
+    "method_comparisons/minimal_tilted_cycle": None,
+    "method_comparisons/minority_winner": None,
+    "method_comparisons/minority_winner_progression": None,
+    "method_comparisons/monotonicity": None,
+    "method_comparisons/multi_member_plurality": None,
+    "method_comparisons/no_condorcet_bv2138": None,
+    "method_comparisons/ordered_majority_rule": None,
+    "method_comparisons/paradoxes_and_whoops": None,
+    "method_comparisons/participation_no_show": None,
+    "method_comparisons/pet_poll_four_methods": None,
+    "method_comparisons/pet_poll_four_winners": None,
+    "method_comparisons/pets_governance": None,
+    "method_comparisons/postit_rcv_example": None,
+    "method_comparisons/preference_vs_support": None,
+    "method_comparisons/reinforcement_paradox": None,
+    "method_comparisons/reversal_symmetry": None,
+    "method_comparisons/same_matrix_different_plurality": None,
+    "method_comparisons/sntv_village_council": None,
+    "method_comparisons/split_cycle": None,
+    "method_comparisons/star_5_1_0_challenge": None,
+    "method_comparisons/symmetric_centrist_bv2170": None,
+    "method_comparisons/tournament_solutions": None,
+    "method_comparisons/valuable_condorcet_loser": None,
+    "method_comparisons/weak_condorcet_loser": None,
 }
 
 
@@ -535,11 +627,13 @@ def check_pages_indexed():
     """Return [(readme_rel, problem)] for cases under an INDEX_COMPLETE_DIRS
     folder that its indexing README never links.
 
-    A case counts as indexed if the README links EITHER its generated page
-    (`<stem>.md`) OR its source (`<stem>.yaml`). Both are legitimate index
-    styles in this repo — 02_STAR_Bloc's table links the yaml for its teaching
-    rows and the page for its BV rows — and the question this gate asks is
-    "did you forget the case exists?", not "which artifact did you link?".
+    A case counts as indexed if the README links ANY of its three artifacts:
+    the generated page (`<stem>.md`), the source (`<stem>.yaml`), or the audit
+    mirror (`<stem>_tabulated.txt`). All three are legitimate index styles in
+    this repo — 02_STAR_Bloc's table links the yaml for its teaching rows and
+    the page for its BV rows; food_truck_row links the tabulated mirror — and
+    the question this gate asks is "did you forget the case exists?", not
+    "which artifact did you link?".
 
     An allowlisted folder whose README or pages directory cannot be resolved is
     reported as a FAILURE, never skipped: this check spent its whole life inert
@@ -574,11 +668,12 @@ def check_pages_indexed():
             if not fn.endswith(".md"):
                 continue
             stem = fn[:-3]
-            if linked & {fn, stem + ".yaml", stem + ".yml"}:
+            if linked & {fn, stem + ".yaml", stem + ".yml",
+                         stem + "_tabulated.txt"}:
                 continue
             missing.append((rel_readme, f"{fn} — case in {rel_folder} is not "
-                                        "linked from the index (neither its page "
-                                        "nor its .yaml)"))
+                                        "linked from the index (not its page, "
+                                        "its .yaml, or its _tabulated.txt)"))
     return sorted(missing)
 
 
